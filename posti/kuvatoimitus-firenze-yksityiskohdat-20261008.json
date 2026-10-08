@@ -1,0 +1,489 @@
+{
+  "task": "firenze-yksityiskohdat-20261008",
+  "routedTaskNumber": 16,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-firenze-yksityiskohdat-20261008.md",
+    "commit": "8008ae65c42a263eab32c3fa61e108db41372852",
+    "blob": "43b2960c07b7540fdaaf99c56db735d4a7d991d4"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 8,
+  "imageCount": 3,
+  "generationCalls": 4,
+  "generationLimit": 8,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 4,
+      "qid": "Q191739",
+      "id": "hautaloyto-1972",
+      "file": "firenze-Q191739-hautaloyto-1972.png",
+      "filename": "firenze-Q191739-hautaloyto-1972.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/04-hautaloyto-1972/firenze-Q191739-hautaloyto-1972.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a72-ceb2-7e41-821a-0f88d5b956c8/exec-c4dfe370-fe74-499a-a9fb-f4cda0c90c1f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/04-hautaloyto-1972/original-generation.png",
+      "sha256": "61ff5db75347fd36e861d1841f450f961871d5bdf6c5d6bf772de48f39767ffa",
+      "originalSHA256": "4247f34b4f910c45e39178d81c758d1bf2e8fd4aa98ffcac73ab16511b2b6396",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Firenzen kaupunkioppaan yksityiskohtainen historiallinen havainnekuva.\nPrimary request: Generate one completely new text-only image: a restrained, real-camera photorealistic visual interpretation of an archaeological excavation beneath Florence Cathedral in 1972, in the old Santa Reparata foundations, contextualizing the rediscovery of a Renaissance architect's grave. Depict a generic excavation setting, not an exact replica of the actual grave slab, any museum object, any historical photograph, or any named person's likeness.\nScene/backdrop: A below-floor archaeological trench inside a dim underground space beneath the cathedral, sandy earth, exposed old brick and rough stone foundation walls. A plain weathered grey rectangular stone slab partly uncovered in the earth, with a completely unmarked surface and no letters, names, symbols or numbers. No human remains or open burial contents.\nSubjects: Exactly two anonymous fictional adult archaeologists in ordinary early-1970s plain work clothes. They kneel or crouch beside the slab and carefully brush soil with small simple hand tools. Both are seen from behind with heads angled down and faces completely hidden, relatively small within the environment; neither is a portrait or a named archaeologist.\nComposition/framing: Landscape 3:2, native 1536 x 1024 pixels. Medium-distance view looking diagonally down from the edge of the excavation. The trench, old walls and stone slab are the principal visual subject; the two workers provide scale. Physically coherent underground construction, one uninterrupted believable camera view.\nStyle/medium: Actual camera-shot appearance, modest low-exposure documentary photograph, natural surface texture and quiet imperfections, sharp enough to read the excavation context, subdued colour. Original scene invented from textual historical facts.\nLighting/mood: Dim realistic ambient light diffused down from a nearby stairwell outside the frame, supplemented by one plain unbranded early-1970s incandescent work lamp on a simple stand. Naturally subdued light, ordinary white balance, no dramatic shafts, no staged theatrical glow.\nMaterials/textures: Dusty sand and soil, irregular aged brick masonry, worn matte grey stone, a plain hand brush and small trowel, simple work clothing.\nConstraints: Opaque RGB sRGB PNG, exactly1536x1024. No readable text or numbers anywhere, no inscriptions even illegible decorative lettering, no logo, sign, label, watermark, border or frame. No modern museum installation, tourist, display case or plaque. No recognizable faces, no named real historical or living person, no actual-person likeness. No sculpture or collection-artwork reproduction. No blood, violence, corpse, human bones or remains.\nAvoid: HDR, oversaturation, cinematic colour grading, painting, illustration brushwork, fantasy archaeology, LED or digital equipment, modern high-visibility uniforms, modern museum signage, the actual Brunelleschi epitaph, exact unique tomb design.",
+      "viitteet": [
+        {
+          "publisher": "Opera di Santa Maria del Fiore",
+          "title": "Tomba di Filippo Brunelleschi",
+          "url": "https://duomo.firenze.it/it/scopri/museo-dell-opera-del-duomo/le-sale/sala-del-paradiso/9191/bottega-fiorentina-tomba-di-filippo-brunelleschi-1446",
+          "type": "textResearchOnly",
+          "notes": "Virallinen tekstilähde vahvistaa haudan uudelleenlöydön vuonna1972 tuomiokirkon alla. Kohteen kuvaa, epitaafia tai ainutkertaista esinemuotoa ei käytetty eikä jäljennetty.",
+          "access": "2026-10-08, web text read; no source image pixels"
+        },
+        {
+          "publisher": "Opera di Santa Maria del Fiore",
+          "title": "Ancient basilica of Santa Reparata",
+          "url": "https://duomo.firenze.it/en/discover/crypt-of-santa-reparata",
+          "type": "textResearchOnly",
+          "notes": "Virallinen tekstilähde vahvistaa kirkon alapuolisen kaivausalueen ja kaivauskampanjan1965–1973 sekä eri rakennusvaiheiden muurijäännökset. Yleinen kaivauskonteksti, ei tarkka1972paikkarekonstruktio.",
+          "access": "2026-10-08, web text read; no source image pixels"
+        }
+      ],
+      "kuvateksti": "Yleinen kaivaustilanne Firenzen tuomiokirkon alla vuoden 1972 hautalöydön yhteydessä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "8008ae65c42a263eab32c3fa61e108db41372852",
+      "sourceBlob": "43b2960c07b7540fdaaf99c56db735d4a7d991d4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": {
+        "added": [
+          "sRGB ICC profile",
+          "PNG Description",
+          "PNG Source"
+        ],
+        "RGBPixelsUnchanged": true,
+        "originalPNGPreserved": true,
+        "IDATBytesUnchanged": true,
+        "noCrop": true,
+        "noResize": true,
+        "qaPreviewOnlyResize": [
+          480,
+          320
+        ],
+        "independentlyVerifiedAddedChunks": [
+          "iCCP",
+          "tEXt:Description",
+          "tEXt:Source"
+        ]
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tarkistettu alkuperäisessä 1536 × 1024 koossa ja koko ruudun 480 × 320 esikatselussa.",
+          "Kaksi selin olevaa arkeologia; kasvot eivät näy.",
+          "Vanha tiili- ja kivimuuri, hiekkaista maata, työvalaisin ja täysin merkitön yleinen kivilaatta.",
+          "Luonnollinen himmeä valokuvamainen valaistus ja hillityt värit.",
+          "Ei luettavaa tekstiä, numeroita, logoja, kylttejä, kehyksiä, tunnistettavia museoteoksia, verta, väkivaltaa tai ihmisjäänteitä."
+        ],
+        "limitations": [
+          "Vuosi 1972 ja kirkon alapuolinen kaivauskonteksti on vahvistettu virallisista tekstilähteistä.",
+          "Yleinen kaivaustilanne, kaksi selin nähtyä anonyymiä arkeologia.",
+          "Varsinaisen hautalaatan kirjoitusta ja ainutkertaista esinemuotoa ei kuvata; laatta on yleinen ja täysin merkitön.",
+          "Työvälineet, vaatetus ja työvalo ovat kuvituksellisia aikakausitulkintoja, eivät nimettyjä tai dokumentoituja esineitä."
+        ]
+      },
+      "state": "local-QA-approved-candidate",
+      "uploadedToR2": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "firenze-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q191739",
+        "file": "firenze-Q191739-hautaloyto-1972.png",
+        "sha256": "61ff5db75347fd36e861d1841f450f961871d5bdf6c5d6bf772de48f39767ffa",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Merkitön yleinen kivilaatta ja kaksi selin nähtyä arkeologia vanhassa maanalaisessa tiili/kivitilassa. Ei ihmisjäänteitä, tekstiä, tunnistettavia kokoelmaesineitä tai kasvoja. Hämärä valokuvamainen työvalo."
+        ],
+        "limitations": [
+          "Vuosi 1972 ja kirkon alapuolinen kaivauskonteksti on vahvistettu virallisista tekstilähteistä.",
+          "Yleinen kaivaustilanne, kaksi selin nähtyä anonyymiä arkeologia.",
+          "Varsinaisen hautalaatan kirjoitusta ja ainutkertaista esinemuotoa ei kuvata; laatta on yleinen ja täysin merkitön.",
+          "Työvälineet, vaatetus ja työvalo ovat kuvituksellisia aikakausitulkintoja, eivät nimettyjä tai dokumentoituja esineitä."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:19:37.845039+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tarkistettu alkuperäisessä 1536 × 1024 koossa ja koko ruudun 480 × 320 esikatselussa.",
+          "Kaksi selin olevaa arkeologia; kasvot eivät näy.",
+          "Vanha tiili- ja kivimuuri, hiekkaista maata, työvalaisin ja täysin merkitön yleinen kivilaatta.",
+          "Luonnollinen himmeä valokuvamainen valaistus ja hillityt värit.",
+          "Ei luettavaa tekstiä, numeroita, logoja, kylttejä, kehyksiä, tunnistettavia museoteoksia, verta, väkivaltaa tai ihmisjäänteitä."
+        ],
+        "limitations": [
+          "Vuosi 1972 ja kirkon alapuolinen kaivauskonteksti on vahvistettu virallisista tekstilähteistä.",
+          "Yleinen kaivaustilanne, kaksi selin nähtyä anonyymiä arkeologia.",
+          "Varsinaisen hautalaatan kirjoitusta ja ainutkertaista esinemuotoa ei kuvata; laatta on yleinen ja täysin merkitön.",
+          "Työvälineet, vaatetus ja työvalo ovat kuvituksellisia aikakausitulkintoja, eivät nimettyjä tai dokumentoituja esineitä."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "r2Key": "julisteet/firenze-yksityiskohdat/20261008/firenze-Q191739-hautaloyto-1972.png",
+      "url": "https://media.matkakirja.app/julisteet/firenze-yksityiskohdat/20261008/firenze-Q191739-hautaloyto-1972.png",
+      "bytes": 2997322,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q208633",
+      "id": "ponte-vecchio-kauppiaat",
+      "file": "firenze-Q208633-ponte-vecchio-kauppiaat.png",
+      "filename": "firenze-Q208633-ponte-vecchio-kauppiaat.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/05-ponte-vecchio-kauppiaat/firenze-Q208633-ponte-vecchio-kauppiaat.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a72-ceb2-7e41-821a-0f88d5b956c8/exec-ddce2ae2-3b47-46b3-b3ce-f630e9d2b959.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/05-ponte-vecchio-kauppiaat/original-generation.png",
+      "sha256": "274687aa2681366f14fbc07a371dbafc5cabc5b3a3b0fcec9294335d8a00471e",
+      "originalSHA256": "0aac8189e29ec6429fa3fa8b761ed23de597eaf4850e2d8743b3bc0cc1d05f5f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "format": "PNG",
+      "opaque": true,
+      "colorSpace": "sRGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Firenzen kaupunkioppaan historiallinen yksityiskohtahavainnekuva.\nPrimary request: Generate one wholly new text-only, real-camera photorealistic visual interpretation of the food and hide merchants' wooden stalls on the deck of Ponte Vecchio over the Arno in Florence during the late1400s, after1442. This is an original historical market scene based on textual facts, not a copy of a painting, historical photograph or current tourist view.\nScene/backdrop: A narrow gently rising stone-paved bridge street receding into the distance between modest period wooden shops and stalls built along the sides of the bridge, with irregular low terracotta rooflines and plain weathered masonry. A small opening between the shops and the low solid stone bridge parapet gives a believable glimpse of the Arno water below and the distant opposite riverbank. The scene is open to the sky.\nSubjects/details: Clearly recognizable non-graphic market goods: several clean brown dry-cured whole hams and small preserved sausage bundles suspended from wooden stall beams, no wet raw cuts or exposed flesh. Across the street, neatly rolled finished dry hides and folded leather skins in muted brown and tan on a wooden table, a few dry hides draped on a rail. Two or three anonymous fictional merchants in plain late-medieval tunics and simple aprons are seen from behind, relatively small within the scene with no faces visible. One small loaded pack mule with plain canvas sacks moves away from the camera along the street. Keep the hams and hides visible enough to distinguish the two trades.\nComposition/framing: One uninterrupted physically plausible street-level camera view from ON TOP of the stone bridge, medium-distance looking along the narrow street toward the far end. Landscape3:2, exactly1536x1024 native. Wooden market stalls are the principal subject. The camera cannot see the bridge's three arches underneath its own feet: do not depict any underside arch view, cutaway, split view, second bridge, impossible geometry or elevated overview. Show only the deck, low parapet and a little river through a side gap.\nStyle/medium: Ordinary real camera-shot appearance, candid documentary texture, believable scale, subtle material wear, natural modest depth of field. Muted earthy colours, natural daylight, no staged drama.\nLighting/mood: Soft natural daytime light under a lightly hazy sky, simple real exposure, moderate contrast, no theatrical glow.\nMaterials/textures: Rough period wood planks, stone paving, plain linen and wool clothing, terracotta tile, clean preserved food and matte dry leather.\nConstraints: Native1536x1024 opaque RGB sRGB PNG. No readable words, letters, numbers, price labels, packaging, logos, shop signs, watermarks, border or frame. No recognizable human faces, portraits or real historical person's likeness. No goldsmith shops, jewelry or display windows. No slaughter, bloody meat, raw viscera, gore, exposed carcass, animal heads, violence or blood. No modern objects, plastic, tourist railings, electrical items or contemporary clothing.\nTime constraints: Late15th-century scene. ABSOLUTELY NO Vasari Corridor or continuous upper enclosed walkway; that was built in1565. No modern enlarged viewing windows or monument, no17th-century elaborate bracketed shop extensions, no Renaissance palace facade dominating the scene. Avoid painterly style, illustration brushwork, HDR, cinematic colour grading and oversaturation.",
+      "viitteet": [
+        {
+          "publisher": "Visit Tuscany — Tuscany official tourism website",
+          "title": "Ponte Vecchio",
+          "url": "https://www.visittuscany.com/en/attractions/ponte-vecchio/",
+          "type": "textResearchOnly",
+          "notes": "Virallinen Toscanan matkailusivu: nykyinen kivisilta rakennettiin1345kolmella matalalla kaarella, lihamyyjät siirrettiin sillalle1442, kalakauppiaat/teurastajat/nahkurit korvattiin kultasepillä1593. Näkymä rajataan1400-luvun lopun katutasoon; kolmea alapuolista kaarta ei voida näyttää samasta sillanpäältä otetusta kameranäkymästä. Siistit säilötyt lihatuotteet ja kuivat vuodat ovat ei-graafinen kuvituksellinen rajaus.",
+          "access": "2026-10-08, web text read; no source image pixels"
+        },
+        {
+          "publisher": "Gallerie degli Uffizi",
+          "title": "History | Corridoio Vasariano",
+          "url": "https://www.uffizi.it/en/corridoio-vasariano/history",
+          "type": "textResearchOnly",
+          "notes": "Virallinen teksti vahvistaa Vasarin käytävän rakennuttamisen1565. Käytävä jätetään kokonaan pois1400-luvun kuvasta.",
+          "access": "2026-10-08, web text read; no source image pixels"
+        }
+      ],
+      "kuvateksti": "Ponte Vecchion liha- ja nahkakauppiaiden kojuja 1400-luvun lopun Firenzessä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "8008ae65c42a263eab32c3fa61e108db41372852",
+      "sourceBlob": "43b2960c07b7540fdaaf99c56db735d4a7d991d4",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": {
+        "added": [
+          "sRGB ICC profile",
+          "PNG Description",
+          "PNG Source"
+        ],
+        "RGBPixelsUnchanged": true,
+        "originalPNGPreserved": true,
+        "IDATBytesUnchanged": true,
+        "noCrop": true,
+        "noResize": true,
+        "qaPreviewOnlyResize": [
+          480,
+          320
+        ],
+        "independentlyVerifiedAddedChunks": [
+          "iCCP",
+          "tEXt:Description",
+          "tEXt:Source"
+        ]
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tarkistettu alkuperäisessä 1536 × 1024 koossa ja koko ruudun 480 × 320 esikatselussa.",
+          "Pääkohtaus on sillan kannen kivikadulla: puiset kojut, vasemmalla kuivia kinkkuja ja säilöttyjä makkaroita, oikealla kuivia ja rullattuja nahkoja.",
+          "Lähimmät kauppiaat ja kuormajuhta takaapäin; taustahahmot pieniä eikä tunnistettavia kasvoja erotu.",
+          "Arno näkyy oikean puolen aukosta matalan kivikaiteen takaa; sillan alapuoliset kaaret eivät näy, eikä kuvassa ole mahdotonta leikkausta.",
+          "Ei Vasarin ylempää käytävää, kultasepänliikkeitä, koruja, teurastusta, raakaa sisälmyslihaa, verta tai graafisia ruhoja.",
+          "Luonnollinen päivänvalo, valokuvamainen materiaalituntu ja vaimeat värit. Ei luettavaa tekstiä, numeroita, logoja, kylttejä, moderneja pakkauksia, vesileimaa tai kehystä."
+        ],
+        "limitations": [
+          "Myöhäinen 1400-luku: sillan lihamyyntitoiminta vuoden 1442 jälkeen; nahkureita ennen vuoden 1593 korvaamista kultasepillä.",
+          "Katutason kojunäkymä sillan päältä; sama kamera ei voi näyttää kolmea alapuolista kaarta. Tämä ankkuriyksityiskohta jätetään näkyvistä, eikä kuvaan tehdä mahdotonta leikkausta.",
+          "Kolmikaarinen kivisilta on kohteen konteksti, kuva ei esitä sen mittatarkkaa kokonaisarkkitehtuuria.",
+          "Vasarin vuoden 1565 ylempi käytävä ja 1600-luvun nykyilmeeseen kuuluvat ulokkeet jätetään pois.",
+          "Vain siistejä kuivattuja ja säilöttyjä lihatuotteita sekä kuivia ja rullattuja vuotia; ei teurastusprosessia, verta, sisälmyksiä tai graafisia ruhoja.",
+          "Kojut, vaatetus, kuormajuhta ja tuotteiden asettelu ovat tekstifaktoihin perustuvaa alkuperäistä kuvitusta, eivät dokumentaarinen rekonstruktio."
+        ]
+      },
+      "state": "local-QA-approved-candidate",
+      "uploadedToR2": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "firenze-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q208633",
+        "file": "firenze-Q208633-ponte-vecchio-kauppiaat.png",
+        "sha256": "274687aa2681366f14fbc07a371dbafc5cabc5b3a3b0fcec9294335d8a00471e",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Katutason kojut, siistit kuivatut lihatuotteet ja vuodat, anonyymit selin olevat kauppiaat sekä kuormajuhta. Arno näkyy sivuaukosta; ei mahdotonta sillan alapuolen leikkausta, Vasarin ylempää käytävää, verta tai teurastusta."
+        ],
+        "limitations": [
+          "Myöhäinen 1400-luku: sillan lihamyyntitoiminta vuoden 1442 jälkeen; nahkureita ennen vuoden 1593 korvaamista kultasepillä.",
+          "Katutason kojunäkymä sillan päältä; sama kamera ei voi näyttää kolmea alapuolista kaarta. Tämä ankkuriyksityiskohta jätetään näkyvistä, eikä kuvaan tehdä mahdotonta leikkausta.",
+          "Kolmikaarinen kivisilta on kohteen konteksti, kuva ei esitä sen mittatarkkaa kokonaisarkkitehtuuria.",
+          "Vasarin vuoden 1565 ylempi käytävä ja 1600-luvun nykyilmeeseen kuuluvat ulokkeet jätetään pois.",
+          "Vain siistejä kuivattuja ja säilöttyjä lihatuotteita sekä kuivia ja rullattuja vuotia; ei teurastusprosessia, verta, sisälmyksiä tai graafisia ruhoja.",
+          "Kojut, vaatetus, kuormajuhta ja tuotteiden asettelu ovat tekstifaktoihin perustuvaa alkuperäistä kuvitusta, eivät dokumentaarinen rekonstruktio."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:19:37.845039+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tarkistettu alkuperäisessä 1536 × 1024 koossa ja koko ruudun 480 × 320 esikatselussa.",
+          "Pääkohtaus on sillan kannen kivikadulla: puiset kojut, vasemmalla kuivia kinkkuja ja säilöttyjä makkaroita, oikealla kuivia ja rullattuja nahkoja.",
+          "Lähimmät kauppiaat ja kuormajuhta takaapäin; taustahahmot pieniä eikä tunnistettavia kasvoja erotu.",
+          "Arno näkyy oikean puolen aukosta matalan kivikaiteen takaa; sillan alapuoliset kaaret eivät näy, eikä kuvassa ole mahdotonta leikkausta.",
+          "Ei Vasarin ylempää käytävää, kultasepänliikkeitä, koruja, teurastusta, raakaa sisälmyslihaa, verta tai graafisia ruhoja.",
+          "Luonnollinen päivänvalo, valokuvamainen materiaalituntu ja vaimeat värit. Ei luettavaa tekstiä, numeroita, logoja, kylttejä, moderneja pakkauksia, vesileimaa tai kehystä."
+        ],
+        "limitations": [
+          "Myöhäinen 1400-luku: sillan lihamyyntitoiminta vuoden 1442 jälkeen; nahkureita ennen vuoden 1593 korvaamista kultasepillä.",
+          "Katutason kojunäkymä sillan päältä; sama kamera ei voi näyttää kolmea alapuolista kaarta. Tämä ankkuriyksityiskohta jätetään näkyvistä, eikä kuvaan tehdä mahdotonta leikkausta.",
+          "Kolmikaarinen kivisilta on kohteen konteksti, kuva ei esitä sen mittatarkkaa kokonaisarkkitehtuuria.",
+          "Vasarin vuoden 1565 ylempi käytävä ja 1600-luvun nykyilmeeseen kuuluvat ulokkeet jätetään pois.",
+          "Vain siistejä kuivattuja ja säilöttyjä lihatuotteita sekä kuivia ja rullattuja vuotia; ei teurastusprosessia, verta, sisälmyksiä tai graafisia ruhoja.",
+          "Kojut, vaatetus, kuormajuhta ja tuotteiden asettelu ovat tekstifaktoihin perustuvaa alkuperäistä kuvitusta, eivät dokumentaarinen rekonstruktio."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "r2Key": "julisteet/firenze-yksityiskohdat/20261008/firenze-Q208633-ponte-vecchio-kauppiaat.png",
+      "url": "https://media.matkakirja.app/julisteet/firenze-yksityiskohdat/20261008/firenze-Q208633-ponte-vecchio-kauppiaat.png",
+      "bytes": 2807771,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q271928",
+      "id": "neuvostosali-1495",
+      "file": "firenze-Q271928-neuvostosali-1495.png",
+      "filename": "firenze-Q271928-neuvostosali-1495.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/06-neuvostosali-1495/firenze-Q271928-neuvostosali-1495.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a73-71dc-73f2-8936-12ab8a50bb48/exec-4bec07d6-3453-4748-862d-63f4bf03e5e8.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/06-neuvostosali-1495/original-generation.png",
+      "sha256": "e25d72bacd3ce14e03565adccbd38cf1f5f3d4bf26bbd9a600c7461a5e5cbc68",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene.\nAsset type: a local Matkakirja historical detail illustration, visibly like an actual camera photograph.\nPrimary request: an ORIGINAL spatial interpretation of the large republican council hall of Palazzo Vecchio, Florence, around 1496–1500, soon after its late-fifteenth-century construction and before all later ducal decoration. Use no reference images or existing artwork compositions.\nScene and materials: a very long rectangular Tuscan civic chamber with bare lime-plaster walls and occasional small areas of exposed masonry; a substantial but austere unpainted timber ceiling with visible beams and restrained flat wood panels, clearly lower in proportion than today's much taller Salone dei Cinquecento. Daylight enters simple tall windows along the side walls and at the far end, consistent with the original hall having windows on every side. Plain worn stone or brick flooring. Curving rows of simple wooden benches on low timber tiers, narrow wooden steps and aisles for a republican civic assembly. Leave the room predominantly empty, with only a few tiny fictional citizens in subdued fifteenth-century wool cloaks, seated far away and seen only from behind.\nComposition: landscape 3:2, exactly 1536 by 1024 pixels, opaque RGB sRGB PNG. An eye-level, wide but optically plausible photograph from one end, looking lengthwise down the hall. Rectilinear lens perspective, coherent architectural proportions, detailed grain of real timber and soft imperfections in plaster. Do not simulate an impossible panorama.\nLighting and style: ordinary natural window daylight, soft shadows, muted beige, grey and brown colours, plausible camera exposure and focus. Authentic photographic surface texture; no drawing, painting, illustration texture, CGI look, cinematic drama, HDR or exaggerated saturation.\nCritical exclusions: no frescoes, murals, paintings, ornate painted or gilded ceiling panels, statues, present-day museum furnishings, modern lights, museum displays or barriers. Do not copy today's hall or any Vasari decoration. No portraits, Savonarola, historical person likenesses, recognizable human faces, or claim of an exact attendance count. No readable text, writing, letters, numbers, insignia, logos, signs, frame, watermark, blood or violence.",
+      "viitteet": [
+        {
+          "publisher": "Comune di Firenze — Musei Civici Fiorentini",
+          "title": "Primo piano e mezzanino — Salone dei Cinquecento",
+          "url": "https://cultura.comune.fi.it/riscossioneonline/pagina/musei-civici-fiorentini-museo-di-palazzo-vecchio-visita-il-museo/primo-piano-e-mezzanino",
+          "type": "textResearchOnly",
+          "notes": "Original late-fifteenth-century hall about7m lower, windows on every side; later ducal paintings and furnishings excluded.",
+          "access": "2026-10-08; official page text read via web; no image pixels opened, downloaded or used."
+        },
+        {
+          "publisher": "Università degli Studi di Firenze / Comune di Firenze scientific reconstruction project",
+          "title": "Dalla storia al museo",
+          "url": "https://flore.unifi.it/retrieve/e398c37f-aa78-179a-e053-3705fe0a4cff/132_ID_1198852_Dalla%20storia%20al%20museo.pdf",
+          "type": "textResearchOnly",
+          "notes": "Scientific project described as collaborative with Comune di Firenze; text places republican hall construction1495–1496 and later Vasari restructuring1563–1572.",
+          "access": "2026-10-08; indexed scholarly text used only, no PDF image pixels viewed or used."
+        }
+      ],
+      "kuvateksti": "Oma tulkinta Palazzo Vecchion suuresta neuvostosalista noin vuosina 1496–1500, ennen myöhempiä korotuksia ja maalauskoristelua. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Only PNG ancillary metadata replaced with sRGBICC and exact Description/Source marking; original IHDR and IDAT retained byte for byte.",
+        "Full-frame480x320 QA preview created separately without cropping."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Bare plaster and timber beam ceiling; no later paintings, statues or museum furniture.",
+          "Bench rows, steps and a central aisle remain readable at480px.",
+          "Five fictional cloaked figures are rear-facing or distant; no recognizable faces or actual-person likenesses.",
+          "Natural muted daylight and photographic material detail; no readable words, numbers, logos, signs, watermarks, blood or violence."
+        ],
+        "limitations": [
+          "Original spatial interpretation, not an exact archaeological reconstruction.",
+          "Benches, window spacing, floor materials and timber details are approximate; actual original hall was about7m lower than the present room.",
+          "Figure count is incidental and does not represent historical council attendance."
+        ]
+      },
+      "status": "local-candidate-QA-pass",
+      "sourceCommit": "8008ae65c42a263eab32c3fa61e108db41372852",
+      "sourceBlob": "43b2960c07b7540fdaaf99c56db735d4a7d991d4",
+      "sourceImagePixelsUsed": false,
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/06-neuvostosali-1495/generation-prompt.txt",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/06-neuvostosali-1495/qa-preview-480.png",
+      "RGBPixelsUnchanged": true,
+      "IDATChunksUnchanged": true,
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "firenze-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q271928",
+        "file": "firenze-Q271928-neuvostosali-1495.png",
+        "sha256": "e25d72bacd3ce14e03565adccbd38cf1f5f3d4bf26bbd9a600c7461a5e5cbc68",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Paljaat rapatut seinät ja puinen matalampi kattorakenne, penkkirivit ja keskikäytävä ennen myöhempää maalauskoristelua. Henkilöt anonyymejä selin tai kaukana. Ei kirjoitusta tai kokoelmateosten kopioita."
+        ],
+        "limitations": [
+          "Original spatial interpretation, not an exact archaeological reconstruction.",
+          "Benches, window spacing, floor materials and timber details are approximate; actual original hall was about7m lower than the present room.",
+          "Figure count is incidental and does not represent historical council attendance."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:19:37.845039+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Bare plaster and timber beam ceiling; no later paintings, statues or museum furniture.",
+          "Bench rows, steps and a central aisle remain readable at480px.",
+          "Five fictional cloaked figures are rear-facing or distant; no recognizable faces or actual-person likenesses.",
+          "Natural muted daylight and photographic material detail; no readable words, numbers, logos, signs, watermarks, blood or violence."
+        ],
+        "limitations": [
+          "Original spatial interpretation, not an exact archaeological reconstruction.",
+          "Benches, window spacing, floor materials and timber details are approximate; actual original hall was about7m lower than the present room.",
+          "Figure count is incidental and does not represent historical council attendance."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/firenze-yksityiskohdat/20261008/firenze-Q271928-neuvostosali-1495.png",
+      "url": "https://media.matkakirja.app/julisteet/firenze-yksityiskohdat/20261008/firenze-Q271928-neuvostosali-1495.png",
+      "bytes": 2396941,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q388448",
+      "id": "donatellon-david",
+      "generationCalls": 0,
+      "reason": "Specific Donatello David museum-collection sculpture replica conflicts with no-museum-reproduction condition."
+    },
+    {
+      "number": 2,
+      "qid": "Q844337",
+      "id": "miniaksen-legenda",
+      "generationCalls": 0,
+      "reason": "Photoreal detached-head/headless-martyr depiction conflicts with the shared no-violence constraint. No alternative symbolic subject authorised."
+    },
+    {
+      "number": 3,
+      "qid": "Q10855544",
+      "id": "david-puulaatikossa",
+      "generationCalls": 0,
+      "reason": "Specific Michelangelo David statue visibly inside the crate remains a museum-collection artwork reproduction; no closed-crate substitute authorised."
+    },
+    {
+      "number": 7,
+      "qid": "Q849846",
+      "id": "haakoristelu-1565",
+      "generationCalls": 0,
+      "reason": "Primary Comune/MUS.E texts place the wedding/unveiling on18Dec1565 and already include the central stone Neptune; the requested spring wooden/stucco-only stage without Neptune is unsupported. No new substitute authorised."
+    },
+    {
+      "number": 8,
+      "qid": "Q51252",
+      "id": "tribuna-aarrekammio",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/firenze-yksityiskohdat-20261008/production/08-tribuna-aarrekammio/firenze-Q51252-tribuna-aarrekammio.png",
+      "sha256": "5959ad73ac36e0819881d4eaff0d13910dffbf336782ad705a498454fee32125",
+      "reason": "Tilauksen olennainen kupolin avoin lyhty jää kuvarajauksen ulkopuolelle. Kupolin huippua ja päivänvalolyhtyä ei voi todeta kuvasta; punainen aarrekammio näkyy mutta tätä olennaista ominaisuutta ei toimiteta puutteellisena.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/firenze-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/firenze-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "bfb377590ba96826acacd1ff46aca392243440ec6e95b5fadc55ca5b58406142",
+    "bytes": 173990,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:20:47.758092+00:00"
+}

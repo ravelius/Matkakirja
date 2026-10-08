@@ -1,0 +1,528 @@
+{
+  "task": "madrid-yksityiskohdat-20261008",
+  "routedTaskNumber": 14,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-madrid-yksityiskohdat-20261008.md",
+    "commit": "78ff7bc5540e8f740208ccf0246dfaaaa824e08a",
+    "blob": "7ddf32653b1254c60ff5e86dadbad84210d84073"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 4,
+  "generationCalls": 4,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q171517",
+      "id": "alcazar-palo-1734",
+      "file": "madrid-Q171517-alcazar-palo-1734.png",
+      "filename": "madrid-Q171517-alcazar-palo-1734.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/01-alcazar-palo-1734/madrid-Q171517-alcazar-palo-1734.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a5f-f857-75a2-bc2b-1542e65302e5/exec-48e03e6d-375f-435b-9180-ca1ac5b15512.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/01-alcazar-palo-1734/original-generation.png",
+      "sha256": "12399c3ad0f0dd442ff434fd079578ae2dcbc98f38b38bf45a784a743133437c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational illustration for a Madrid city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference photographs.\nScene: the courtyard of Madrid's OLD Royal Alcázar at night on Christmas Eve 1734, during the historic building fire. The architecture is the earlier irregular Habsburg-era palace-fortress: weathered heavy stone lower walls, restrained brick-and-stone upper facades with rows of rectangular windows, a bulky old masonry tower topped by a dark slate spire. Use the earlier palace's sober historical stone-and-brick massing, NOT the modern Royal Palace, and no fanciful Moorish arches. Flames show in several windows and along sections of roof; smoky winter night sky with a few dim stars.\nPrimary subject: a very large anonymous framed stretched canvas is being rescued through an upper-floor window. It is descending diagonally just outside that window toward the courtyard. The ENTIRE face visible to the camera is ONLY its plain WOODEN BACK: unpainted dark wooden stretcher and rear support braces, with plain dull unpainted canvas reverse. The rear timber surface and rectangular frame are unmistakable. Absolutely NONE of the painted front is visible, including at edges or through holes. There is no depicted painting, portrait, face, artistic image or artwork anywhere on the canvas. No named artwork, specific composition or artist influence.\nPeople: three SMALL fictional adult servants below, entirely rear-facing toward the wall with arms raised to receive the large canvas. They wear generic early-1700s long coats, breeches and stockings in dull dark natural fabric, no crests or insignia. They occupy only about a seventh of image height. At the window, at most a small dim anonymous silhouette behind the wooden canvas; no visible facial details. No recognizable historic or living individual.\nComposition: wide courtyard-level camera angle looking somewhat upward. Large wooden canvas back prominent in mid-foreground near the upper window, small receiving servants below it, burning old facade and tower behind. Spatially plausible scale and clear rescue action. Keep the main 4:3-shaped composition inside the full 3:2 landscape canvas, extending the historic courtyard naturally to the sides. No frame/border around the image.\nMedium and lighting: convincing camera-captured photograph-like reconstruction, natural low-level firelight and candle glow, quiet dark brown and muted gray-blue tones, realistic stone, worn timber and textile texture, restrained flame brightness and exposure. No HDR, no glossy CGI, no cinematic grading, no oversaturated disaster spectacle.\nAvoid: painted canvas front or any copied art, named artwork imagery, real person likeness, close-up faces, present-day palace architecture, modern objects, readable words/numbers, signs, logos, symbols, plaques, watermark, captions or image borders. No casualties, injury, blood, bodies or graphic violence.",
+      "viitteet": [
+        {
+          "publisher": "Patrimonio Nacional",
+          "title": "Cuaderno profesorado Palacio Real",
+          "url": "https://www.patrimonionacional.es/sites/default/files/documents/cuaderno_profesorado_palacio_real_0.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text confirms Christmas Eve 1734 fire and earlier Habsburg renovations including stone/brick palace massing and Torre Dorada with slate spire. No drawings or image pixels used; exact courtyard and window remain fictional.",
+          "access": "2026-10-08; official indexed text excerpts read. Direct PDF open timed out; no PDF pages/images viewed."
+        },
+        {
+          "publisher": "Museo Nacional del Prado",
+          "title": "Alcázar de Madrid, Real",
+          "url": "https://www.museodelprado.es/en/learn/encyclopedia/voice/alcazar-de-madrid-real/cd2eb3b7-3aa7-45f9-9ce5-0ed711622f08",
+          "type": "textResearchOnly",
+          "notes": "Institutional encyclopedia text confirms 1734 fire and historical palace collections. Used only as event context. No artwork names, painted composition, images or artist imagery passed to generation.",
+          "access": "2026-10-08; official indexed text accessed only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen pelastuskohtaus Madridin vanhan Alcázarin jouluyön 1734 tulipalossa. Arkkitehtuuri on tarkennettu Habsburg-kauden vanhaksi kivi- ja tiilijulkisivuksi; suuren kankaan puinen selkä näkyy kameraan. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and separate full-frame 480x320 preview viewed.",
+          "Large framed canvas shows only unpainted wooden rear braces and dull reverse canvas; no painted front or copied artwork visible.",
+          "Three receiving ground figures are fully rear-facing with generic early-1700s clothing; small upper-window figure has no identifiable human face or actual person likeness.",
+          "Old stone/brick facade and slate-topped tower; no modern Royal Palace, modern objects, words, numerals, logos, injury, blood or bodies observed.",
+          "Natural fire-lit stone, timber and textile materials, restrained dark color palette; scene remains legible at 480px."
+        ],
+        "limitations": [
+          "Tilauksen maurilaistyylisiä muureja koskeva ilmaisu tarkennettu päätekijän päätöksellä 2026-10-08 virallisen tekstilähteen perusteella Habsburg-kauden vuoden 1734 vanhaksi Alcázariksi.",
+          "Fictional courtyard/window/canvas rescue arrangement, not a verified reconstruction of a specific artwork rescue or exact architecture.",
+          "Receiving figures appear about one quarter of frame height, larger than the prompt target, but entirely rear-facing; upper-window silhouette is small and shadowed."
+        ]
+      },
+      "architectureClarification": {
+        "status": "approved-by-root",
+        "decision": "Use the old Habsburg-era stone/brick Alcázar facade and old tower; no current palace or unsubstantiated Moorish detail.",
+        "received": "2026-10-08",
+        "reason": "Historical architecture timing clarified from Patrimonio Nacional text."
+      },
+      "sourceCommit": "78ff7bc5540e8f740208ccf0246dfaaaa824e08a",
+      "sourceBlob": "7ddf32653b1254c60ff5e86dadbad84210d84073",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "57e56edcbee286b5d050aeb9ac3a176ea3e712024f3d249d32a3383be0807a80",
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/01-alcazar-palo-1734/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "madrid-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q171517",
+        "file": "madrid-Q171517-alcazar-palo-1734.png",
+        "sha256": "12399c3ad0f0dd442ff434fd079578ae2dcbc98f38b38bf45a784a743133437c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Suuren kankaan maalauksen puoli ei näy, vain puinen selkä. Vastaanottajat ovat selin ja yläikkunan hahmo pieni/varjossa; ei tunnistettavaa oikeaa henkilöä, vammoja tai tekstiä. Valokuvamainen palovalo ja vanha kivi/tiiliarkkitehtuuri."
+        ],
+        "limitations": [
+          "Tilauksen maurilaistyylisiä muureja koskeva ilmaisu tarkennettu päätekijän päätöksellä 2026-10-08 virallisen tekstilähteen perusteella Habsburg-kauden vuoden 1734 vanhaksi Alcázariksi.",
+          "Fictional courtyard/window/canvas rescue arrangement, not a verified reconstruction of a specific artwork rescue or exact architecture.",
+          "Receiving figures appear about one quarter of frame height, larger than the prompt target, but entirely rear-facing; upper-window silhouette is small and shadowed."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.148462+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and separate full-frame 480x320 preview viewed.",
+          "Large framed canvas shows only unpainted wooden rear braces and dull reverse canvas; no painted front or copied artwork visible.",
+          "Three receiving ground figures are fully rear-facing with generic early-1700s clothing; small upper-window figure has no identifiable human face or actual person likeness.",
+          "Old stone/brick facade and slate-topped tower; no modern Royal Palace, modern objects, words, numerals, logos, injury, blood or bodies observed.",
+          "Natural fire-lit stone, timber and textile materials, restrained dark color palette; scene remains legible at 480px."
+        ],
+        "limitations": [
+          "Tilauksen maurilaistyylisiä muureja koskeva ilmaisu tarkennettu päätekijän päätöksellä 2026-10-08 virallisen tekstilähteen perusteella Habsburg-kauden vuoden 1734 vanhaksi Alcázariksi.",
+          "Fictional courtyard/window/canvas rescue arrangement, not a verified reconstruction of a specific artwork rescue or exact architecture.",
+          "Receiving figures appear about one quarter of frame height, larger than the prompt target, but entirely rear-facing; upper-window silhouette is small and shadowed."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/madrid-yksityiskohdat/20261008/madrid-Q171517-alcazar-palo-1734.png",
+      "url": "https://media.matkakirja.app/julisteet/madrid-yksityiskohdat/20261008/madrid-Q171517-alcazar-palo-1734.png",
+      "bytes": 2363016,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1324163",
+      "id": "telefonican-vauriot-1936",
+      "file": "madrid-Q1324163-telefonican-vauriot-1936.png",
+      "filename": "madrid-Q1324163-telefonican-vauriot-1936.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/02-telefonican-vauriot-1936/madrid-Q1324163-telefonican-vauriot-1936.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a5f-f857-75a2-bc2b-1542e65302e5/exec-ca768d63-634a-4311-be50-afdd713b7414.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/02-telefonican-vauriot-1936/original-generation.png",
+      "sha256": "d507ba6b97b642ec829959f1fd5c47dd04fcf67573b297d2d806283d61f3bd3c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational illustration for a Madrid city introduction.\nCreate ONE entirely new text-only image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference photographs.\nScene: Madrid's Gran Vía in winter 1936–1937 during the siege. An empty street seen from ground level, looking upward diagonally toward the Telefónica skyscraper on the right side of the frame. The building is the early 1930s stone skyscraper: tall rectangular mass, orderly rows of windows, a narrower upper tower, the recognizable ornate Spanish Baroque crown around a round clock dial. The clock dial is indistinct and has NO numerals, lettering or logos. Retain the building's overall vertical silhouette and stepped upper massing.\nStory: exterior shell-impact damage only. A modest dusty smoke plume drifts from some upper windows and the base of the tower, with small chips of plaster falling away, broken window panes and dark localized scars. The building remains standing. Foreground: a few scattered pieces of stone rubble and a low improvised barricade of plain sandbags and stones; surrounding period stone street facades. No people, casualties, weapons or vehicles.\nComposition: street-level wide photographic view with the skyscraper diagonally on the right, foreground low rubble and barricade, gray winter sky and smoke above. Keep the primary 4:3-shaped subject grouping comfortably inside the full 3:2 landscape canvas; fill the entire canvas naturally without borders.\nMedium and lighting: convincing real-camera documentary appearance, optically plausible stone texture, natural soft overcast light and restrained atmospheric haze. Mild monochrome photographic toning, gray with a faint sepia cast, subtle film grain; soft tonal range, no HDR, no cinematic grading, no overdramatic explosion.\nConstraints: every wall and shopfront has no signs, notices, ads, inscriptions, logos, coats of arms or readable symbols. No words or numbers anywhere. No modern cars, antennas, street signs, advertising boards. No identifiable faces, no real-person likeness, no injuries, no bodies, no blood, no violence shown. No museum-artwork reproduction. No watermark, captions, frame or decorative border.",
+      "viitteet": [
+        {
+          "publisher": "Fundación Telefónica",
+          "title": "El edificio Telefónica y la Guerra Civil",
+          "url": "https://espacio.fundaciontelefonica.com/el-edificio-telefonica-y-la-guerra-civil/",
+          "type": "textResearchOnly",
+          "notes": "Official text confirms artillery damage and siege from autumn 1936. Architectural damage arrangement is illustrative, not reconstruction of a particular photograph.",
+          "access": "2026-10-08; web text accessed, linked images not opened or supplied to generation"
+        },
+        {
+          "publisher": "Telefónica",
+          "title": "Telefónica celebra los 90 años de su emblemática sede de Gran Vía 28 con un libro sobre la historia del edificio",
+          "url": "https://www.telefonica.com/es/sala-comunicacion/prensa/telefonica-celebra-los-90-anos-de-su-emblematica-sede-de-gran-via-28-con-un-libro-sobre-la-historia-del-edificio/",
+          "type": "textResearchOnly",
+          "notes": "Official text supports construction 1926–1929, approximately ninety metres tall, granite and limestone facade with Baroque entrance.",
+          "access": "2026-10-08; web text accessed only"
+        }
+      ],
+      "kuvateksti": "Madridin Telefónican rakennus ja sen ulkoiset vauriot talven 1936–1937 piirityksen aikana. Kohtaus on tekstilähteisiin perustuva kuvitteellinen rekonstruktio. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Both 1536x1024 native image and full-frame 480x320 preview viewed.",
+          "Standing stone skyscraper, tower, regular windows, localized upper facade damage and smoke read clearly.",
+          "Empty period street and low sandbag/stone barricade; no people, injuries, blood, modern vehicles, readable text, clock numerals or logos observed.",
+          "Restrained sepia-gray photographic toning is accepted by source; numeric RGB channel equality is not required."
+        ],
+        "limitations": [
+          "Fictional reconstruction of exterior damage; exact impact locations and surrounding facade condition are illustrative.",
+          "Approximate historic architecture inferred from official text; no source-photo pixels or documentary photograph composition used."
+        ]
+      },
+      "sourceCommit": "78ff7bc5540e8f740208ccf0246dfaaaa824e08a",
+      "sourceBlob": "7ddf32653b1254c60ff5e86dadbad84210d84073",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "09b373568e9019d5a7ffcbd2e27fa21d2b0ba912c2cd3230a0a93985f69642b7",
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/02-telefonican-vauriot-1936/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "madrid-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1324163",
+        "file": "madrid-Q1324163-telefonican-vauriot-1936.png",
+        "sha256": "d507ba6b97b642ec829959f1fd5c47dd04fcf67573b297d2d806283d61f3bd3c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä vanha katu, barrikadi ja rakennuksen yläkerrosten ulkoisia vaurioita; hillitty sävytys. Ei uhreja, ihmisiä, liikennemerkkejä tai luettavia kellon numeroita. Tapahtuman vauriopaikat ovat kuvitteellisia."
+        ],
+        "limitations": [
+          "Fictional reconstruction of exterior damage; exact impact locations and surrounding facade condition are illustrative.",
+          "Approximate historic architecture inferred from official text; no source-photo pixels or documentary photograph composition used."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.151044+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Both 1536x1024 native image and full-frame 480x320 preview viewed.",
+          "Standing stone skyscraper, tower, regular windows, localized upper facade damage and smoke read clearly.",
+          "Empty period street and low sandbag/stone barricade; no people, injuries, blood, modern vehicles, readable text, clock numerals or logos observed.",
+          "Restrained sepia-gray photographic toning is accepted by source; numeric RGB channel equality is not required."
+        ],
+        "limitations": [
+          "Fictional reconstruction of exterior damage; exact impact locations and surrounding facade condition are illustrative.",
+          "Approximate historic architecture inferred from official text; no source-photo pixels or documentary photograph composition used."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/madrid-yksityiskohdat/20261008/madrid-Q1324163-telefonican-vauriot-1936.png",
+      "url": "https://media.matkakirja.app/julisteet/madrid-yksityiskohdat/20261008/madrid-Q1324163-telefonican-vauriot-1936.png",
+      "bytes": 2551284,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q1537446",
+      "id": "cibeles-kaulaliinajuhla",
+      "file": "madrid-Q1537446-cibeles-kaulaliinajuhla.png",
+      "filename": "madrid-Q1537446-cibeles-kaulaliinajuhla.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/03-cibeles-kaulaliinajuhla/madrid-Q1537446-cibeles-kaulaliinajuhla.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a5f-f857-75a2-bc2b-1542e65302e5/exec-59650efb-ebbc-4789-8db0-c674d0601208.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/03-cibeles-kaulaliinajuhla/original-generation.png",
+      "sha256": "275d77b939553b6201de6f1ac0dde226b5e8d882eb89ede2d461e0f8ea7f6f8b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational illustration of a Madrid celebration tradition.\nCreate ONE entirely new text-only image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference photographs.\nScene: a fictional football championship celebration at Madrid's Plaza de Cibeles on a spring evening at dusk. The old public Cibeles fountain monument is the central subject: weathered pale marble goddess seated upright on a wheeled stone chariot pulled by TWO sculpted stone lions. Show the characteristic lions, chariot wheels and the stone goddess, with the broad white Palacio de Comunicaciones / Palacio de Cibeles and its ornate towers in the background. This is a historic public stone monument, not a living person.\nAction: one anonymous FICTIONAL adult celebrant in entirely plain white short-sleeve shirt and plain white shorts stands on a small temporary platform beside the chariot, back turned completely to camera, tying a PLAIN WHITE unmarked scarf around the stone goddess's neck. The figure occupies about a quarter of the image height. Its posture and body are generic and do not identify any actual footballer. No face visible; no distinctive tattoos, hairstyle, or recognisable real-person physique.\nSurroundings: a celebratory crowd in plain white clothing is distant beyond the fountain, mostly backs and small silhouettes with indistinct faces, waving ONLY blank plain white flags. Restrained wisps of ambient distant haze among the crowd, no handheld flames or flares. Visible illuminated fountain water and wet stone pool. All shirts, shorts, flags and scarf are fully unmarked: no logos, club crests, numbers, sponsors or text.\nComposition: wide landscape, low plaza-level camera looking slightly upward, fountain and scarf action centered, historic palace behind. Keep the main 4:3-shaped subject group comfortably within the full 3:2 canvas. Realistic distances, coherent platform and stable pose, full-frame scene.\nMedium and lighting: convincing photograph-like camera capture, natural stone and fabric texture, soft blue-gray dusk with modest warm streetlight reflections and illuminated water. Muted natural colors, restrained contrast, no HDR, no cinematic grading, no saturated sports advertising.\nAvoid: real player likeness or identifiable human faces; any badges, labels, readable words or numbers, clocks with numerals, billboards or signs; burning flares near faces, violence, blood, injuries; reproduced museum collection artwork, modern sculptural additions, watermark, captions, frame or border.",
+      "viitteet": [
+        {
+          "publisher": "Turismo Madrid / Ayuntamiento de Madrid",
+          "title": "Fuente de Cibeles",
+          "url": "https://www.esmadrid.com/informacion-turistica/fuente-de-la-cibeles",
+          "type": "textResearchOnly",
+          "notes": "Official text supports historic monument, goddess in chariot pulled by two lions, material and square context. Depicted celebration is fictional and not a claim of a current event.",
+          "access": "2026-10-08; web text accessed; images not opened or supplied to generation"
+        },
+        {
+          "publisher": "Real Madrid CF",
+          "title": "El madridismo celebró la Decimoquinta en Cibeles",
+          "url": "https://www.realmadrid.com/es-ES/noticias/futbol/primer-equipo/actualidad/el-madridismo-celebro-la-decimoquinta-en-cibeles-02-06-2024",
+          "type": "textResearchOnly",
+          "notes": "Official event text confirms scarf/flag ritual at fountain. No real participant identity, event signage or image composition is used.",
+          "access": "2026-10-08; web text accessed; gallery images not opened or supplied"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen mestaruusjuhla Cibeleen suihkulähteellä: selin oleva juhlahahmo kietoo patsaan kaulaan valkoisen kaulaliinan. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and full-frame 480x320 preview viewed; facade frieze additionally inspected at native-pixel detail.",
+          "Historic public stone goddess, two stone lions and chariot wheels visible; stone face is monument detail and is not human identity.",
+          "Main anonymous fictional figure is fully rear-facing in plain white garments and ties an unmarked white scarf; flags are blank white.",
+          "No actual player face/identity, visible club crests, sponsors, numbers, readable words, blood, violence or flares observed.",
+          "Palace context and illuminated fountain water read at 480px."
+        ],
+        "limitations": [
+          "Fictional celebration and approximate architecture; no specific real championship event or player is claimed.",
+          "Tiny letter-like decorative marks appear on background palace frieze; no readable word or number was discerned during native-detail inspection, and none is legible at 480px.",
+          "Crowd includes small distant heads/faces without identifiable detail; not every crowd member is rear-facing."
+        ]
+      },
+      "sourceCommit": "78ff7bc5540e8f740208ccf0246dfaaaa824e08a",
+      "sourceBlob": "7ddf32653b1254c60ff5e86dadbad84210d84073",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "57ac64da3f53c93b0e029806b38aba760bfd96b54312cab02b0a1e047deab8c3",
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/03-cibeles-kaulaliinajuhla/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "madrid-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q1537446",
+        "file": "madrid-Q1537446-cibeles-kaulaliinajuhla.png",
+        "sha256": "275d77b939553b6201de6f1ac0dde226b5e8d882eb89ede2d461e0f8ea7f6f8b",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Selin oleva anonyymi juhlahahmo, merkitön valkoinen kaulaliina ja liput, kivinen julkinen monumentti ja kaksi leijonaa. Taustan koristeissa ei luettavaa sanaa tai numeroa; väkijoukon ihmiset pieniä. Kuvitteellinen nykyjuhla, ei nimetty pelaaja."
+        ],
+        "limitations": [
+          "Fictional celebration and approximate architecture; no specific real championship event or player is claimed.",
+          "Tiny letter-like decorative marks appear on background palace frieze; no readable word or number was discerned during native-detail inspection, and none is legible at 480px.",
+          "Crowd includes small distant heads/faces without identifiable detail; not every crowd member is rear-facing."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.153224+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and full-frame 480x320 preview viewed; facade frieze additionally inspected at native-pixel detail.",
+          "Historic public stone goddess, two stone lions and chariot wheels visible; stone face is monument detail and is not human identity.",
+          "Main anonymous fictional figure is fully rear-facing in plain white garments and ties an unmarked white scarf; flags are blank white.",
+          "No actual player face/identity, visible club crests, sponsors, numbers, readable words, blood, violence or flares observed.",
+          "Palace context and illuminated fountain water read at 480px."
+        ],
+        "limitations": [
+          "Fictional celebration and approximate architecture; no specific real championship event or player is claimed.",
+          "Tiny letter-like decorative marks appear on background palace frieze; no readable word or number was discerned during native-detail inspection, and none is legible at 480px.",
+          "Crowd includes small distant heads/faces without identifiable detail; not every crowd member is rear-facing."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/madrid-yksityiskohdat/20261008/madrid-Q1537446-cibeles-kaulaliinajuhla.png",
+      "url": "https://media.matkakirja.app/julisteet/madrid-yksityiskohdat/20261008/madrid-Q1537446-cibeles-kaulaliinajuhla.png",
+      "bytes": 2594115,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1537446",
+      "id": "kultaholvin-leikkaus",
+      "file": "madrid-Q1537446-kultaholvin-leikkaus.png",
+      "filename": "madrid-Q1537446-kultaholvin-leikkaus.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/04-kultaholvin-leikkaus/madrid-Q1537446-kultaholvin-leikkaus.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a5f-f857-75a2-bc2b-1542e65302e5/exec-51ba4ca6-bfcf-4719-b646-4aa67b594e6a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/04-kultaholvin-leikkaus/original-generation.png",
+      "sha256": "3fdfd548090416a568afe73995414036826a7380260bce79384debe234ce3a65",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: scientific-educational\nAsset type: photorealistic fictional educational cutaway illustrating the concept of gold stored deep underground in Madrid.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference photographs. This must be a FICTIONAL, NON-OPERATIONAL material cutaway; it must not portray any actual bank vault layout or security arrangement.\nScene: a convincing camera-photographed architectural material model with a broad pale late-19th/early-20th-century classical stone bank facade and a neutral empty street at ground level near the top edge. The facade provides Madrid bank context only, with repeated windows and restrained classical cornices. NO logo, crest, sign or lettering. Beneath the street, a substantial exposed section of rough earth and concrete conveys great depth.\nSubject: deep below, one abstract generic gold-storage chamber, visible in a clean lateral cutaway. Straight neat stacks of gold ingots on simple shelves are the educational focus. Every bar is completely plain and smooth, WITHOUT any stamps, letters, numerals, logos or serial marks. A thick featureless generic steel vault door slab appears alongside the chamber, with no visible locking mechanism, dial, bolts, wheel, keypad or security hardware.\nDepth: an ABSTRACT dark vertical shaft-like void in the material section provides a strong feeling of depth. It is merely a visual depth cue and does not connect to an entry route, floor plan, stair system or elevator system. Do not show how to access the chamber. The levels are not to scale, and there are no measurable dimensions, labels, depth numbers, arrows or construction markings.\nComposition: wide lateral view, pale stone building and ground surface along the upper portion, broad dark earth/concrete material section in the middle, generic cut-open chamber and gold stacks in the lower portion. Readable as a spatial educational material cutaway, not a blueprint. Keep the core 4:3-shaped arrangement inside the full 3:2 landscape canvas, no borders.\nStyle/lighting: highly convincing real-camera photograph of physical stone, earth, concrete and metal materials, with dim neutral soft illumination on the gold and soft natural daylight at street level. Restrained gold color, muted palette, realistic optical texture, no HDR or glossy cinematic render.\nAvoid: humans, guards, cameras, surveillance maps, security-system details, access paths, actual floor plans, locking mechanisms, code panels, measuring marks, readable signs, text, numbers, stamps on gold, logos or crests. No museum collection photograph or artwork reproduction. No watermark, caption, frame or border.",
+      "viitteet": [
+        {
+          "publisher": "Banco de España",
+          "title": "Informe Institucional 2019, capítulo 3, recuadro 3.2: La Cámara del Oro",
+          "url": "https://www.bde.es/f/webbde/INF/MenuHorizontal/Publicaciones/PublicacionesAnuales/InformeInstitucional/2019/Capitulo_3_La_interaccion_del_Banco_de_Espana_con_los_ciudadanos.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text confirms 35 metre depth. Only that public-context fact is used. Security, dimensions, layout and access detail are excluded from the fictional non-operational depiction.",
+          "access": "2026-10-08; official PDF indexed text snippet accessed; pages and images not viewed"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen materiaalileikkaus havainnollistaa Espanjan keskuspankin syvällä maan alla säilyttämää kultaa. Kuvan tilajärjestely ei esitä todellista holvia eikä sisäänpääsyreittiä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and separate full-frame 480x320 preview viewed.",
+          "Pale generic classical bank facade above substantial earth section, abstract shaft void and deep generic chamber read clearly.",
+          "Gold ingots are plain, without stamps, words or numbers.",
+          "Featureless steel slab without locking hardware; no access route, stairs, elevator mechanism, camera, surveillance map, guards, people, code panels or security details.",
+          "Muted camera-like material texture and restrained lighting."
+        ],
+        "limitations": [
+          "Fictional NON-OPERATIONAL cutaway, approximate materials and neutral facade; not a depiction of any actual bank vault or floor plan.",
+          "Public 35 metre depth is research context only; image is not to scale and contains no measurement marks."
+        ]
+      },
+      "sourceCommit": "78ff7bc5540e8f740208ccf0246dfaaaa824e08a",
+      "sourceBlob": "7ddf32653b1254c60ff5e86dadbad84210d84073",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "4fc96b510bb31a9175f8a6d61d516a889a13f7e8bfb8cea52c9ee8e031d4d305",
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/madrid-yksityiskohdat-20261008/production/04-kultaholvin-leikkaus/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "madrid-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1537446",
+        "file": "madrid-Q1537446-kultaholvin-leikkaus.png",
+        "sha256": "3fdfd548090416a568afe73995414036826a7380260bce79384debe234ce3a65",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Maanalainen kuvitteellinen materiaalileikkaus, merkitsemättömät kultaharkot ja yksinkertainen teräslevy. Ei todellista pohjapiirrosta, kulkureittiä, turvalaitteita, ihmisiä tai tekstiä; syvyys on havainnollinen."
+        ],
+        "limitations": [
+          "Fictional NON-OPERATIONAL cutaway, approximate materials and neutral facade; not a depiction of any actual bank vault or floor plan.",
+          "Public 35 metre depth is research context only; image is not to scale and contains no measurement marks."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.155582+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and separate full-frame 480x320 preview viewed.",
+          "Pale generic classical bank facade above substantial earth section, abstract shaft void and deep generic chamber read clearly.",
+          "Gold ingots are plain, without stamps, words or numbers.",
+          "Featureless steel slab without locking hardware; no access route, stairs, elevator mechanism, camera, surveillance map, guards, people, code panels or security details.",
+          "Muted camera-like material texture and restrained lighting."
+        ],
+        "limitations": [
+          "Fictional NON-OPERATIONAL cutaway, approximate materials and neutral facade; not a depiction of any actual bank vault or floor plan.",
+          "Public 35 metre depth is research context only; image is not to scale and contains no measurement marks."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/madrid-yksityiskohdat/20261008/madrid-Q1537446-kultaholvin-leikkaus.png",
+      "url": "https://media.matkakirja.app/julisteet/madrid-yksityiskohdat/20261008/madrid-Q1537446-kultaholvin-leikkaus.png",
+      "bytes": 2836005,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-4.jpg",
+    "r2Key": "julisteet/madrid-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/madrid-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "sha256": "e51b5b6445e21f3aab49ffe73aad735360fca44336ffdc4d32b1b6cf9b4c386b",
+    "bytes": 236070,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:14:11.316142+00:00"
+}

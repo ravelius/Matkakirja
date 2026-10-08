@@ -1,0 +1,852 @@
+{
+  "task": "barcelona-yksityiskohdat-20261008",
+  "routedTaskNumber": 11,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-barcelona-yksityiskohdat-20261008.md",
+    "commit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+    "blob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 8,
+  "imageCount": 6,
+  "generationCalls": 8,
+  "generationLimit": 8,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q48435",
+      "id": "raitiovaunu-1926",
+      "file": "barcelona-Q48435-raitiovaunu-1926.png",
+      "filename": "barcelona-Q48435-raitiovaunu-1926.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/01-raitiovaunu-1926/barcelona-Q48435-raitiovaunu-1926.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a4a-057b-7662-b6c8-d85e069b2a73/exec-f6fbd7d2-6be0-4dc5-b573-5bb04044ca08.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/01-raitiovaunu-1926/original-generation.png",
+      "originalSha256": "b2fb697f6d15c964ea75dd570eb021d5e1cc2b1f454cf2111b62955281e8b7b7",
+      "sha256": "cbdd29a242e99e9ecdecb5c95b4dcc3aaf8d815506da2c3fc5bb94c2f0cc71fb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationMethod": "built-in image_gen; one complete new text-only generation",
+      "generationPrompt": "Use case: historical-scene\nAsset type: original historical illustrative image for a Barcelona city guide, made from text only.\nCreate exactly one completely new image, native 1536 × 1024 pixels, landscape 3:2, opaque RGB sRGB PNG. Natural photorealism, as if photographed by a real camera, restrained colour, ordinary texture and natural late-afternoon light. No HDR, cinematic grading, painting or vintage filter.\nScene: a broad paved Barcelona Eixample street near the Gran Via and Bailèn junction in June 1926. Eye-level view from roughly twelve metres away, slightly side-on. Entire old electric streetcar at centre-right, stone apartment blocks receding behind it, cobbled road, iron streetlamp and overhead electric wire. Original period reconstruction, not a copy of a photograph.\nSubject: the streetcar has stopped. It has a wooden body, muted dark brown and cream paint, rectangular windows, a roof-mounted trolley pole contacting the overhead wire, a small open driver's end platform and steel wheels on rails. All surfaces and destination panels are completely blank.\nOn the left, safely separated from the wheels, three small rear-facing bystanders in ordinary 1920s hats, jackets and long skirt quietly bend to assist a seated older man wearing a worn long dark coat. The older man is almost completely obscured by helpers; only his back, coat and trouser leg are visible. Heads turned entirely away. No face, beard, bodily injury or identity cues; every person is fictional and anonymous. No depiction of a collision, impact, injury, blood, violent motion or wheel contact. The stopped tram is the main subject; assistance is understated and distant.\nMuted stone grey, dusty brown and low-saturation cream palette. Natural documentary calm, plausible period clothing and ordinary diffuse early-evening light.\nStrict constraints: no recognizable actual historical or living person and no resemblance to any named architect; no portraits. No Sagrada Família towers or church silhouette, no modern skyline or modern vehicles. No letters, readable text, numbers, logos, advertisements, signs, inscriptions, watermark, frame or border. No modern objects. Full-frame landscape composition with no crop or overlay.",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "publisher": "Basílica de la Sagrada Família",
+          "title": "How much of the Sagrada Família did Gaudí leave behind when he died?",
+          "url": "https://blog.sagradafamilia.org/en/how-much-of-the-sagrada-familia-did-gaudi/",
+          "type": "textResearchOnly",
+          "notes": "Official text places the tram accident at Gran Via/Bailèn on 7 June 1926. Barnabas tower was complete in November 1925; three other Nativity towers were nearly finished. No person's likeness or photographic composition used.",
+          "access": "2026-10-08; official publisher's text read through web; no linked image opened, downloaded or supplied to generation."
+        },
+        {
+          "publisher": "Basílica de la Sagrada Família",
+          "title": "History of the Temple",
+          "url": "https://sagradafamilia.org/en/history-of-the-temple",
+          "type": "textResearchOnly",
+          "notes": "Official chronology confirms Barnabas tower completion in 1925 and Gaudí's death in 1926. Sagrada skyline is omitted because the exact street sightline was not established.",
+          "access": "2026-10-08; official publisher's text read through web; no linked image opened, downloaded or supplied to generation."
+        }
+      ],
+      "kuvateksti": "Pysähtynyt aikakauden raitiovaunu ja auttavat sivulliset Barcelonassa kesäkuussa 1926. Hahmot ovat kuvitteellisia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": {
+        "finalOnly": "Embedded sRGB ICC plus exact Description and Source; stripped all other ancillary metadata.",
+        "decodedRgbPixelsUnchanged": true,
+        "originalNativeMode": "RGB",
+        "originalAncillaryChunksRemoved": [
+          "caBX"
+        ],
+        "nativeDimensionsRetained": true,
+        "crop": false,
+        "resizeOfFinal": false,
+        "preservedOriginalByteExact": true,
+        "qaPreview": "Separate full-frame 480x320 PNG; Lanczos reduction only for QA."
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native generated full frame and final PNG inspected; final RGB pixels verified identical to native generation.",
+          "Pysähtynyt puukorinen raitiovaunu, virroitinsauva, mukulakivet ja aikakauden katuympäristö näkyvät selkeästi.",
+          "Kolme avustajaa selin, kohdemies peitossa; ei näkyviä kasvoja, partatunnisteita, vammoja tai verta.",
+          "Ei havaittua luettavaa tekstiä, numeroita, logoja, kehystä tai nykyajan ajoneuvoja; taustan pienet vaaleat pintalaikut eivät ole luettavia.",
+          "Luonnollinen valo ja vaimeat värit; täyskuvainen 480x320 esikatselu säilyttää pääaiheen."
+        ],
+        "limitations": [
+          "Raitiovaunu on aikakauden yleinen tulkinta, ei varmennettu yksilö tai tarkka vaunumalli.",
+          "Onnettomuuden jälkeinen auttamistilanne on suuntaa antava rekonstruktio; todellista Gaudín hahmoa ei esitetä.",
+          "Sagrada Família jätetty pois: yksi torni oli valmis ja kolme lähes valmiita vuonna 1926, mutta näkymälinjaa ei varmistettu."
+        ],
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/01-raitiovaunu-1926/qa-fullframe-480.png"
+      },
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "status": "approved-local-qa",
+      "visualReview": {
+        "task": "barcelona-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q48435",
+        "file": "barcelona-Q48435-raitiovaunu-1926.png",
+        "sha256": "cbdd29a242e99e9ecdecb5c95b4dcc3aaf8d815506da2c3fc5bb94c2f0cc71fb",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Stopped period tram and rear-facing helpers; victim mostly obscured, no injury or identity traits. Sagrada omitted as noted."
+        ],
+        "limitations": [
+          "Raitiovaunu on aikakauden yleinen tulkinta, ei varmennettu yksilö tai tarkka vaunumalli.",
+          "Onnettomuuden jälkeinen auttamistilanne on suuntaa antava rekonstruktio; todellista Gaudín hahmoa ei esitetä.",
+          "Sagrada Família jätetty pois: yksi torni oli valmis ja kolme lähes valmiita vuonna 1926, mutta näkymälinjaa ei varmistettu."
+        ],
+        "reviewedAt": "2026-10-08T07:01:03.808557+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native generated full frame and final PNG inspected; final RGB pixels verified identical to native generation.",
+          "Pysähtynyt puukorinen raitiovaunu, virroitinsauva, mukulakivet ja aikakauden katuympäristö näkyvät selkeästi.",
+          "Kolme avustajaa selin, kohdemies peitossa; ei näkyviä kasvoja, partatunnisteita, vammoja tai verta.",
+          "Ei havaittua luettavaa tekstiä, numeroita, logoja, kehystä tai nykyajan ajoneuvoja; taustan pienet vaaleat pintalaikut eivät ole luettavia.",
+          "Luonnollinen valo ja vaimeat värit; täyskuvainen 480x320 esikatselu säilyttää pääaiheen."
+        ],
+        "limitations": [
+          "Raitiovaunu on aikakauden yleinen tulkinta, ei varmennettu yksilö tai tarkka vaunumalli.",
+          "Onnettomuuden jälkeinen auttamistilanne on suuntaa antava rekonstruktio; todellista Gaudín hahmoa ei esitetä.",
+          "Sagrada Família jätetty pois: yksi torni oli valmis ja kolme lähes valmiita vuonna 1926, mutta näkymälinjaa ei varmistettu."
+        ],
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/01-raitiovaunu-1926/qa-fullframe-480.png"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q48435-raitiovaunu-1926.png",
+      "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q48435-raitiovaunu-1926.png",
+      "bytes": 2810042,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q461371",
+      "id": "talo-ennen-remonttia",
+      "file": "barcelona-Q461371-talo-ennen-remonttia.png",
+      "filename": "barcelona-Q461371-talo-ennen-remonttia.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/02-talo-ennen-remonttia/barcelona-Q461371-talo-ennen-remonttia.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a4a-057b-7662-b6c8-d85e069b2a73/exec-8c49d95c-9359-4f65-99bf-b42a6f97683a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/02-talo-ennen-remonttia/original-generation.png",
+      "originalSha256": "56a867c8a3342afe61fa524b0e35cf69662996e88a4c96b624f303bf78ec37d7",
+      "sha256": "f71be3b7f2232b5fb9483d0e0229881133cdd27207a2b840a33462aab4fabe6f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationMethod": "built-in image_gen; one complete new text-only generation",
+      "generationPrompt": "Use case: historical-scene\nAsset type: original text-based historical reconstruction for a Barcelona city guide.\nCreate exactly one completely new native 1536 × 1024 pixel, landscape 3:2 opaque RGB sRGB PNG. Real-camera natural photorealism, restrained colours and unstyled daylight. No HDR, cinematic saturation, drawing or painterly effect.\nScene: Passeig de Gràcia, Barcelona, around 1898, before the 1904 renovation of the ordinary nineteenth-century apartment house. View from the opposite side of the avenue, slightly oblique, with the entire main facade and narrow edges of adjoining ordinary period buildings included. This is an original plausible historical interpretation from text, not an exact surveyed facade and not a copy of a photograph.\nSubject: a respectable, conventional pale cream stucco apartment building built in the 1870s, with ground floor plus four regular upper storeys. Balanced symmetrical facade, straight horizontal mouldings, tall rectangular regularly spaced windows and modest individual balconies with plain iron railings. Flat roof concealed by a straight cornice and low parapet. No undulating architectural forms, colourful mosaic, dragon-like roof or bone-shaped columns. It must read as the restrained original house before its transformation, never today's Casa Batlló.\nForeground: leafy street tree at the edge and a simple period gas lamp. Two modest horse-drawn carriages on the broad street and a few very small, distant, rear-facing pedestrians in late nineteenth-century hats, coats and long skirts. People have no visible facial details, no recognizable real person. Pale stone paving and modest soft shadows. All doors and shop-front panels blank.\nNatural materials: slightly weathered stucco, stone trim, dark wood shutters and uncomplicated iron railings; calm dusty cream, grey, soft brown and muted green.\nStrict constraints: no letters, text, numbers, street addresses, logos, signs, posters, inscriptions, watermark, frame or border. No automobiles, modern clothes, electric modern fixtures or tourist objects. No actual current Casa Batlló facade or modern neighbouring signature artworks. Full-frame landscape, no crop or overlay.",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "publisher": "Casa Batlló",
+          "title": "The history",
+          "url": "https://www.casabatllo.es/en/antoni-gaudi/casa-batllo/history/",
+          "type": "textResearchOnly",
+          "notes": "Official text dates the original Emili Sala Cortés building to 1877, purchase to 1903 and complete renovation to 1904–1906. It describes nineteenth-century Passeig de Gràcia as a promenade for pedestrians and horse-drawn carriages. No linked imagery used.",
+          "access": "2026-10-08; official publisher's text read through web; no linked image opened, downloaded or supplied to generation."
+        }
+      ],
+      "kuvateksti": "Passeig de Gràcian alkuperäisen 1870-luvun kerrostalon suuntaa antava rekonstruktio ennen vuosien 1904–1906 muutostöitä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": {
+        "finalOnly": "Embedded sRGB ICC plus exact Description and Source; stripped all other ancillary metadata.",
+        "decodedRgbPixelsUnchanged": true,
+        "originalNativeMode": "RGB",
+        "originalAncillaryChunksRemoved": [
+          "caBX"
+        ],
+        "nativeDimensionsRetained": true,
+        "crop": false,
+        "resizeOfFinal": false,
+        "preservedOriginalByteExact": true,
+        "qaPreview": "Separate full-frame 480x320 PNG; Lanczos reduction only for QA."
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 full frame and final PNG inspected; final decoded RGB verified identical to generation.",
+          "Vaalea symmetrinen suoraviivainen kerrostalo, säännölliset korkeat ikkunat ja pienet rautaparvekkeet.",
+          "Ei nykyisen Casa Batllón aaltoilevaa julkisivua, mosaiikkia, lohikäärmekattoa tai luumaisia pylväitä.",
+          "Hevosvaunut ja kaasulyhty sekä pienet etäiset aikakauden hahmot tukevat ajoitusta; kasvojen henkilöpiirteet eivät ole tunnistettavia.",
+          "Ei havaittua luettavaa tekstiä, numeroita tai logoja. Luonnollinen valo, vaimeat värit. Täyskuvainen 480x320 QA katsottu."
+        ],
+        "limitations": [
+          "Julkisivun tarkkaa ikkuna-, parveke- ja listoitusjärjestystä ei varmennettu tekstilähteestä; kuva on oma historiallinen tulkinta.",
+          "Naapuritalot ja katutilan sommittelu ovat yleisiä aikakauden tulkintoja.",
+          "Rootin kerroslukutarkistus odottaa ratkaisua; historiallista mittatarkkuutta ei ole varmennettu. Mahdollinen lähteen 4–5 kerroksen rajauksen ylitys tulee ratkaista ennen toimitusta."
+        ],
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/02-talo-ennen-remonttia/qa-fullframe-480.png",
+        "deliveryReview": "root-floor-count-review-pending",
+        "floorCountReview": {
+          "rootObservation": "Mahdollinen pohjakerros ja viisi ikkunakerrosta (kuusi yhteensä); root pyysi tarkistusta.",
+          "agentReinspection": "Keskitalossa neljä ikkunariviä pohjakerroksen yläpuolella. Keskimmäisen ikkunan arvioidut keskipisteet y=208,350,489,651; pohjakerroksen ovi y noin830. Katon ylin kaistale näyttää umpinaiselta koristefrisiltä/parapetilta, ei ikkunoilta.",
+          "resolved": false
+        }
+      },
+      "status": "awaiting-root-floor-count-review",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "barcelona-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q461371",
+        "file": "barcelona-Q461371-talo-ennen-remonttia.png",
+        "sha256": "f71be3b7f2232b5fb9483d0e0229881133cdd27207a2b840a33462aab4fabe6f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Roof detail inspected: upper band is solid ornamental frieze/parapet, not an extra window storey. Four upper window rows plus ground storey fit source4–5 requirement."
+        ],
+        "limitations": [
+          "Julkisivun tarkkaa ikkuna-, parveke- ja listoitusjärjestystä ei varmennettu tekstilähteestä; kuva on oma historiallinen tulkinta.",
+          "Naapuritalot ja katutilan sommittelu ovat yleisiä aikakauden tulkintoja.",
+          "Rootin kerroslukutarkistus odottaa ratkaisua; historiallista mittatarkkuutta ei ole varmennettu. Mahdollinen lähteen 4–5 kerroksen rajauksen ylitys tulee ratkaista ennen toimitusta."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAt": "2026-10-08T07:25:21.727467+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 full frame and final PNG inspected; final decoded RGB verified identical to generation.",
+          "Vaalea symmetrinen suoraviivainen kerrostalo, säännölliset korkeat ikkunat ja pienet rautaparvekkeet.",
+          "Ei nykyisen Casa Batllón aaltoilevaa julkisivua, mosaiikkia, lohikäärmekattoa tai luumaisia pylväitä.",
+          "Hevosvaunut ja kaasulyhty sekä pienet etäiset aikakauden hahmot tukevat ajoitusta; kasvojen henkilöpiirteet eivät ole tunnistettavia.",
+          "Ei havaittua luettavaa tekstiä, numeroita tai logoja. Luonnollinen valo, vaimeat värit. Täyskuvainen 480x320 QA katsottu."
+        ],
+        "limitations": [
+          "Julkisivun tarkkaa ikkuna-, parveke- ja listoitusjärjestystä ei varmennettu tekstilähteestä; kuva on oma historiallinen tulkinta.",
+          "Naapuritalot ja katutilan sommittelu ovat yleisiä aikakauden tulkintoja.",
+          "Rootin kerroslukutarkistus odottaa ratkaisua; historiallista mittatarkkuutta ei ole varmennettu. Mahdollinen lähteen 4–5 kerroksen rajauksen ylitys tulee ratkaista ennen toimitusta."
+        ],
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/02-talo-ennen-remonttia/qa-fullframe-480.png",
+        "deliveryReview": "root-floor-count-review-pending",
+        "floorCountReview": {
+          "rootObservation": "Mahdollinen pohjakerros ja viisi ikkunakerrosta (kuusi yhteensä); root pyysi tarkistusta.",
+          "agentReinspection": "Keskitalossa neljä ikkunariviä pohjakerroksen yläpuolella. Keskimmäisen ikkunan arvioidut keskipisteet y=208,350,489,651; pohjakerroksen ovi y noin830. Katon ylin kaistale näyttää umpinaiselta koristefrisiltä/parapetilta, ei ikkunoilta.",
+          "resolved": false
+        }
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q461371-talo-ennen-remonttia.png",
+      "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q461371-talo-ennen-remonttia.png",
+      "bytes": 3217352,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q207870",
+      "id": "flyygeli-kaarevassa-salissa",
+      "file": "barcelona-Q207870-flyygeli-kaarevassa-salissa.png",
+      "filename": "barcelona-Q207870-flyygeli-kaarevassa-salissa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/04-flyygeli-kaarevassa-salissa/barcelona-Q207870-flyygeli-kaarevassa-salissa.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a4a-057b-7662-b6c8-d85e069b2a73/exec-beb506ad-4bb0-4c11-8b32-f277445aa01f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/04-flyygeli-kaarevassa-salissa/original-generation.png",
+      "originalSha256": "4041ee38af287df549b92f5e2c0b04211f560b20e7ea848c25a650ff91945643",
+      "sha256": "6063aa5327ed8813945eed87fb59e2c94e15938278ae029556abce7508052689",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationMethod": "built-in image_gen; one complete new text-only generation",
+      "generationPrompt": "Use case: historical-scene\nAsset type: original spatial illustration for a Barcelona city-guide anecdote.\nGenerate exactly one completely new text-only image at native 1536 × 1024 pixels, landscape 3:2, opaque RGB sRGB PNG. Natural photorealism with real-camera material texture, modest contrast, restrained colours and ordinary daylight. No HDR, stylised 3D look, cinematic grading, painting or vintage filter.\nScene: an original plausible upper-floor Barcelona apartment sitting room around 1911, inspired only by the general idea of curving interior partitions. This is NOT a reconstruction or copy of any specific current museum room, historic photograph or collection object. Broad eye-level view across the room. Walls are softly curved plain cream lime plaster, clearly concave and convex along the rear wall, with no square corner. Unornamented gently curved ceiling, simple dark wood parquet floor, tall period window on the right and one modest generic upholstered early-twentieth-century armchair.\nSubject: a complete ordinary black grand piano, with no maker's markings anywhere, occupies the left foreground. Its long straight keyboard edge has been set obliquely against the concave wall, leaving an obvious awkward uneven wedge-shaped gap between the piano case and curved wall. The gap is clearly visible near the back of the piano; the piano is placed close enough to the wall that the failed fit is the central visual idea. Lid closed to emphasize the outline; all keys and cabinet surfaces unbranded and blank.\nTwo modest fictional figures stand well behind the piano in the background near the right-hand window, viewed entirely from behind, quietly looking toward the gap: a woman in a plain long skirt and fitted jacket, and a man in a plain dark suit. Their heads are turned away and softly shadowed. They occupy a small part of the image and have no visible face, beard or recognizable identity cues. They must not resemble any actual architect, owner or other real historical or living person.\nNatural pale window light, soft truthful shadows, restrained cream walls, black piano and muted warm-brown timber. No copies of decorative ceilings, murals or museum furnishings; generic original furnishings only.\nNo letters, text, numbers, logos, brand name, signage, sheet music, inscriptions, wall art, readable markings, watermark, border or frame. No museum cases, ropes or contemporary objects. Full-frame landscape with entire piano and clearly visible curve/gap.",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "viitteet": [
+        {
+          "publisher": "Fundació Catalunya La Pedrera / La Pedrera – Casa Milà",
+          "title": "Highlights of the main floor",
+          "url": "https://www.lapedrera.com/en/casa-mila/fun-facts/highlights-of-the-main-floor/",
+          "type": "textResearchOnly",
+          "notes": "Official text dates the owner's residence from 1911, describes an open floor plan supported by columns and curving plaster ceilings. It does not establish the piano anecdote or a precise original piano placement. Image therefore uses a generic original room to illustrate the commissioned joke, with fictional rear-facing figures and an unbranded piano; no linked imagery used.",
+          "access": "2026-10-08; official publisher's text read through web; no linked image opened, downloaded or supplied to generation."
+        }
+      ],
+      "kuvateksti": "Merkitön flyygeli ja kaarevan seinän väliin jäävä hankala rako noin vuoden 1911 yleisessä barcelonalaisessa salissa. Tila ja hahmot ovat kuvitteellisia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": {
+        "finalOnly": "Embedded sRGB ICC plus exact Description and Source; stripped all other ancillary metadata.",
+        "decodedRgbPixelsUnchanged": true,
+        "originalNativeMode": "RGB",
+        "originalAncillaryChunksRemoved": [
+          "caBX"
+        ],
+        "nativeDimensionsRetained": true,
+        "crop": false,
+        "resizeOfFinal": false,
+        "preservedOriginalByteExact": true,
+        "qaPreview": "Separate full-frame 480x320 PNG; Lanczos reduction only for QA."
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 full frame and final PNG inspected; final decoded RGB verified identical to generation.",
+          "Merkitön musta flyygeli vasemmalla, pehmeästi kaareva rapattu seinä ja näkyvä epätasainen rako flyygelin vasemman/takaosan kohdalla.",
+          "Luonnollinen ikkunavalo, vaimea väritys, puulattia ja yleinen aikakauden nojatuoli; tila ei jäljittele nykyistä museohuonetta.",
+          "Kaksi kuvitteellista selin olevaa hahmoa; ei Gaudín näköistä henkilöä, näkyviä kasvoja tai partatunnisteita.",
+          "Ei havaittua luettavaa tekstiä, merkintöjä, numeroita, Steinway- tai muita logoja; 480x320 täyskuva säilyttää pääaiheen."
+        ],
+        "limitations": [
+          "Pianoanekdoottia tai flyygelin historiallista sijoitusta ei vahvistettu virallisesta tekstilähteestä; kuva havainnollistaa tilauksen ajatusta.",
+          "Huone on oma yleinen tilatulkinta, ei Casa Milàn nykyisen museohuoneen kopio.",
+          "Hahmot ovat kuvitteellisia, eivät Gaudí tai Milà-Segimon.",
+          "Hahmot suuntautuvat enemmän ikkunalle kuin näkyvästi flyygelin rakoon; lähdebriifin katse-ele toteutuu vain osittain."
+        ],
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/04-flyygeli-kaarevassa-salissa/qa-fullframe-480.png"
+      },
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "status": "approved-local-qa",
+      "visualReview": {
+        "task": "barcelona-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q207870",
+        "file": "barcelona-Q207870-flyygeli-kaarevassa-salissa.png",
+        "sha256": "6063aa5327ed8813945eed87fb59e2c94e15938278ae029556abce7508052689",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Merkitön flyygeli ja kaarevan seinän epätasainen rako näkyvät sekä natiivissa että 480-esikatselussa. Kaksi kuvitteellista hahmoa näkyy selin. Katseen suunta ei kohdistu selvästi rakoon, mikä kirjataan rajaksi."
+        ],
+        "limitations": [
+          "Pianoanekdoottia tai flyygelin historiallista sijoitusta ei vahvistettu virallisesta tekstilähteestä; kuva havainnollistaa tilauksen ajatusta.",
+          "Huone on oma yleinen tilatulkinta, ei Casa Milàn nykyisen museohuoneen kopio.",
+          "Hahmot ovat kuvitteellisia, eivät Gaudí tai Milà-Segimon.",
+          "Hahmot suuntautuvat enemmän ikkunalle kuin näkyvästi flyygelin rakoon; lähdebriifin katse-ele toteutuu vain osittain."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:11:41.906443+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 full frame and final PNG inspected; final decoded RGB verified identical to generation.",
+          "Merkitön musta flyygeli vasemmalla, pehmeästi kaareva rapattu seinä ja näkyvä epätasainen rako flyygelin vasemman/takaosan kohdalla.",
+          "Luonnollinen ikkunavalo, vaimea väritys, puulattia ja yleinen aikakauden nojatuoli; tila ei jäljittele nykyistä museohuonetta.",
+          "Kaksi kuvitteellista selin olevaa hahmoa; ei Gaudín näköistä henkilöä, näkyviä kasvoja tai partatunnisteita.",
+          "Ei havaittua luettavaa tekstiä, merkintöjä, numeroita, Steinway- tai muita logoja; 480x320 täyskuva säilyttää pääaiheen."
+        ],
+        "limitations": [
+          "Pianoanekdoottia tai flyygelin historiallista sijoitusta ei vahvistettu virallisesta tekstilähteestä; kuva havainnollistaa tilauksen ajatusta.",
+          "Huone on oma yleinen tilatulkinta, ei Casa Milàn nykyisen museohuoneen kopio.",
+          "Hahmot ovat kuvitteellisia, eivät Gaudí tai Milà-Segimon.",
+          "Hahmot suuntautuvat enemmän ikkunalle kuin näkyvästi flyygelin rakoon; lähdebriifin katse-ele toteutuu vain osittain."
+        ],
+        "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/04-flyygeli-kaarevassa-salissa/qa-fullframe-480.png"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q207870-flyygeli-kaarevassa-salissa.png",
+      "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q207870-flyygeli-kaarevassa-salissa.png",
+      "bytes": 2156076,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q850593",
+      "id": "tulostaulu-1930",
+      "file": "barcelona-Q850593-tulostaulu-1930.png",
+      "filename": "barcelona-Q850593-tulostaulu-1930.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/05-tulostaulu-1930/barcelona-Q850593-tulostaulu-1930.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a4f-9861-7231-a76c-4dba34519d3a/exec-2d97259f-7519-4a7d-a314-ef03f978778f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/05-tulostaulu-1930/original-generation.png",
+      "sha256": "5281dffa115fbc4d1eec52e4bf8a6abfd5877c4f39ed96bc84fb3e4ce85b96ba",
+      "originalSha256": "8aea16da436f1e8e10bc84fc6e163f35e082f028938f263721292343dd836491",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMethod": "built-in image_gen",
+      "generationIntent": "wholly-new-text-only",
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja educational detail illustration; entirely new text-only generation.\nPrimary request: one photorealistic BLACK-AND-WHITE reconstruction of football supporters gathered around a freestanding chalkboard near the Canaletes fountain, La Rambla, Barcelona, circa 1930. Exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG.\nScene: period Barcelona street with old masonry facades and the plane trees of La Rambla. A modest wooden easel blackboard outside an anonymous newspaper office is at the left side of the group. The characteristic dark cast-iron Canaletes drinking fountain with its slender central column and four lamp branches stands clearly visible behind the group to the right. Thin period tram overhead wires cross high in the scene. No modern vehicles or street furniture.\nComposition: natural eye-level documentary camera view, slightly from the side, wide enough that the entire group is 8–12 metres away. Around eight anonymous adult men in 1930s hats and coats stand together looking at the board; ALL men seen from behind, faces completely hidden. Blackboard and group occupy the middle foreground, fountain and plane trees behind. Board shows only short soft blurred irregular white chalk rows, strokes and smudges suggesting information from afar. NONE of these marks form any recognizable letter, name, numeral, score, symbol, logo or word; never render writing even at native resolution.\nStyle: real camera appearance, period monochrome silver-gelatin photographic tonality, natural diffuse daylight, believable old stone, wood, iron and wool textures, subtle grain. Full frame without border. Not illustration, drawing, painting, CGI, cinematic lighting, HDR or high contrast spectacle.\nConstraints: all people distant and strictly rear-facing; no identifiable historical or living person, no face or profile. No readable words, letters or numbers ANYWHERE, no signs, logos, advertisements, brand marks, watermark or frame. No gore or violence. Original scene inspired only by historical text, not a reproduction of any existing photograph.",
+      "viitteet": [
+        {
+          "publisher": "Barcelona Turisme",
+          "title": "Historic Curiosities of Barcelona — Rambla de Canaletes",
+          "url": "https://professiona2.barcelonaturisme.com/files/8684-476-pdf/bcn003ang.pdf",
+          "type": "textResearchOnly",
+          "notes": "Teksti vahvistaa 1930-luvun perinteen: jalkapallotulokset liitutaululla La Rambla -lehden edessä vastapäätä Canaletesin suihkulähdettä. Taulun kirjoitus esitetään lukukelvottomina liitujälkinä yhteisen tekstikiellon mukaan.",
+          "access": "Official PDF text read with web tool, page 5; no screenshots or source image pixels used."
+        }
+      ],
+      "kuvateksti": "Jalkapallotulosten odottajia liitutaulun luona Canaletesin suihkulähteen lähellä 1930-luvun Barcelonan tulkinnassa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": [
+        "Added sRGB ICC profile and PNG Description/Source marker only; original RGB pixels and original PNG IDAT bytes unchanged.",
+        "Created separate full-frame 480x320 QA preview; production image was not resized or cropped."
+      ],
+      "pixelEqualityVerified": true,
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/05-tulostaulu-1930/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 and full-frame 480x320 preview inspected.",
+          "Photographic period appearance with soft daylight and slight warm monochrome-like toning.",
+          "Chalkboard contains only indistinct strokes and smudges; no legible name, word or numeral observed.",
+          "People are rear-facing; no recognizable face or real-person likeness observed.",
+          "Board, crowd, iron fountain and plane trees remain visible at 480px. No signs, logos, watermark or frame observed."
+        ],
+        "limitations": [
+          "AI reconstruction from historical text; exact crowd, fountain details, surroundings and chalk layout are not documented.",
+          "Warm monochrome-like toning measured: channel means R108.30/G104.06/B100.10, maximum absolute R-G difference12 and G-B difference14. Not neutral grayscale."
+        ],
+        "rejectionReason": "Strict black-and-white requirement: output has slight warm RGB toning rather than neutral grayscale. Pixel correction and regeneration are not authorised."
+      },
+      "deliveryState": "local-only",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "neutralGrayscaleVerified": false,
+      "technicalVerification": {
+        "format": "PNG",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "sRGBICCVerified": true,
+        "metadataExact": true,
+        "originalCopyByteExact": true,
+        "RGBPixelsUnchanged": true,
+        "IDATBytesUnchanged": true,
+        "sha256Verified": true,
+        "previewFullframeDimensions": [
+          480,
+          320
+        ]
+      },
+      "visualReview": {
+        "task": "barcelona-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q850593",
+        "file": "barcelona-Q850593-tulostaulu-1930.png",
+        "sha256": "5281dffa115fbc4d1eec52e4bf8a6abfd5877c4f39ed96bc84fb3e4ce85b96ba",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Visually monochrome photographic scene with unreadable chalk rows and rear-facing spectators. Source black-and-white photographic style does not require exactly identical RGB channel values; slight uniform warm tint retained and disclosed."
+        ],
+        "limitations": [
+          "AI reconstruction from historical text; exact crowd, fountain details, surroundings and chalk layout are not documented.",
+          "Warm monochrome-like toning measured: channel means R108.30/G104.06/B100.10, maximum absolute R-G difference12 and G-B difference14. Not neutral grayscale.",
+          "Uniform slight warm tint, not perfectly neutral equal-channel greyscale; no colour alteration performed."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAt": "2026-10-08T07:25:21.733662+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 and full-frame 480x320 preview inspected.",
+          "Photographic period appearance with soft daylight and slight warm monochrome-like toning.",
+          "Chalkboard contains only indistinct strokes and smudges; no legible name, word or numeral observed.",
+          "People are rear-facing; no recognizable face or real-person likeness observed.",
+          "Board, crowd, iron fountain and plane trees remain visible at 480px. No signs, logos, watermark or frame observed."
+        ],
+        "limitations": [
+          "AI reconstruction from historical text; exact crowd, fountain details, surroundings and chalk layout are not documented.",
+          "Warm monochrome-like toning measured: channel means R108.30/G104.06/B100.10, maximum absolute R-G difference12 and G-B difference14. Not neutral grayscale."
+        ],
+        "rejectionReason": "Strict black-and-white requirement: output has slight warm RGB toning rather than neutral grayscale. Pixel correction and regeneration are not authorised."
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q850593-tulostaulu-1930.png",
+      "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q850593-tulostaulu-1930.png",
+      "bytes": 2866676,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q1334899",
+      "id": "luostari-1830",
+      "file": "barcelona-Q1334899-luostari-1830.png",
+      "filename": "barcelona-Q1334899-luostari-1830.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/06-luostari-1830/barcelona-Q1334899-luostari-1830.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a4f-9861-7231-a76c-4dba34519d3a/exec-8b3ebad3-4762-41f1-85ab-09f19d0af6ef.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/06-luostari-1830/original-generation.png",
+      "sha256": "c166f9254cf4898e1b90cc701594160118fae76af539af2f46874269296133fe",
+      "originalSha256": "0bd8271bd43f695898823c7bb6d6b1b202a88cfe4ce23b4d269bca40001a79df",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMethod": "built-in image_gen",
+      "generationIntent": "wholly-new-text-only",
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja educational detail illustration; entirely new text-only generation.\nPrimary request: one photorealistic historical architectural interpretation of the former Sant Josep convent of the Discalced Carmelites on La Rambla in Barcelona, circa 1830, before the 1835 fire. Exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG.\nScene: an early nineteenth-century Mediterranean convent seen obliquely from the Rambla, modest pale limestone and aged lime-plastered masonry, a low church frontage with restrained stone portal, modest bell towers, adjoining convent wings with regular simple windows, reddish terracotta tiled roofs and a cloister courtyard partly visible behind the front wing. Dense old Barcelona dwellings edge the distant sides. This is an original plausible spatial reconstruction, not a measured replica or copied historical print.\nComposition: slightly elevated street-side camera view, broad facade and church centred, roofscape and a glimpse of the cloister included. A few ordinary trees and the unmodernised Rambla promenade in front; do not reproduce today's avenue. At most four very small distant anonymous pedestrians in circa-1830 long coats, hats or long skirts, all rear-facing with no faces visible. The building is the subject, people provide only scale.\nStyle: believable natural camera-shot appearance, soft morning daylight, restrained warm grey stone and muted terracotta, weathered stone and plaster, real spatial depth, subtle shadows. It must look like a photograph of a built historical scene, despite the pre-photographic date. No drawing, watercolor, engraving, lithograph, illustration, model, CGI, HDR or cinematic saturation.\nConstraints: no present-day Boqueria market, no market hall, no metal canopy or metal roof, no modern equipment, gas lamps, electric lights, overhead tram wires, cars or modern clothes. No readable text, signs, numerals, heraldic lettering, logos, watermark or frame. No recognizable real person or face, no paintings or collection artworks. Do not imply documentary exactness.",
+      "viitteet": [
+        {
+          "publisher": "Mercat de la Boqueria",
+          "title": "History of the Boqueria",
+          "url": "https://www.boqueria.barcelona/history",
+          "type": "textResearchOnly",
+          "notes": "Paljasjalkakarmeliittojen Sant Josepin luostari tuhoutui tulipalossa 1835; kauppiaat muuttivat puretun luostarin paikalle 28.3.1836. Ulkoasua ei mitattu eikä historiallista kuvaa kopioida.",
+          "access": "Official operator page indexed text read with web search; direct page returned no body text. No source pixels used."
+        }
+      ],
+      "kuvateksti": "Sant Josepin paljasjalkakarmeliittojen luostarin historiallinen tulkinta Barcelonan Ramblan varrella noin vuonna 1830, ennen vuoden 1835 tulipaloa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": [
+        "Added sRGB ICC profile and PNG Description/Source marker only; original RGB pixels and original PNG IDAT bytes unchanged.",
+        "Created separate full-frame 480x320 QA preview; production image was not resized or cropped."
+      ],
+      "pixelEqualityVerified": true,
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/06-luostari-1830/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and full-frame 480x320 preview inspected.",
+          "Photorealistic natural-daylight view with restrained limestone and terracotta colours.",
+          "Low church, bell towers, adjoining convent wing and visible cloister included.",
+          "Tiny distant period pedestrians; no recognizable faces observed.",
+          "No current market hall, metal canopy, gas lamps, signs, legible text, logos, watermark or frame observed."
+        ],
+        "limitations": [
+          "AI historical architectural reconstruction; exact facade, towers, cloister layout, dimensions and street planting are not documented."
+        ]
+      },
+      "deliveryState": "local-only",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "technicalVerification": {
+        "format": "PNG",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "sRGBICCVerified": true,
+        "metadataExact": true,
+        "originalCopyByteExact": true,
+        "RGBPixelsUnchanged": true,
+        "IDATBytesUnchanged": true,
+        "sha256Verified": true,
+        "previewFullframeDimensions": [
+          480,
+          320
+        ]
+      },
+      "visualReview": {
+        "task": "barcelona-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q1334899",
+        "file": "barcelona-Q1334899-luostari-1830.png",
+        "sha256": "c166f9254cf4898e1b90cc701594160118fae76af539af2f46874269296133fe",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Valokuvamainen luostarin ja kirkon yleisnäkymä, luonnollinen päivänvalo ja pienet aikakauden hahmot. Ei nykyistä kauppahallia, luettavaa tekstiä tai tunnistettavia ihmiskasvoja. Arkkitehtuurin yksityiskohdat ovat omaa tulkintaa."
+        ],
+        "limitations": [
+          "AI historical architectural reconstruction; exact facade, towers, cloister layout, dimensions and street planting are not documented."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:11:41.912794+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and full-frame 480x320 preview inspected.",
+          "Photorealistic natural-daylight view with restrained limestone and terracotta colours.",
+          "Low church, bell towers, adjoining convent wing and visible cloister included.",
+          "Tiny distant period pedestrians; no recognizable faces observed.",
+          "No current market hall, metal canopy, gas lamps, signs, legible text, logos, watermark or frame observed."
+        ],
+        "limitations": [
+          "AI historical architectural reconstruction; exact facade, towers, cloister layout, dimensions and street planting are not documented."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q1334899-luostari-1830.png",
+      "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q1334899-luostari-1830.png",
+      "bytes": 3386006,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 8,
+      "qid": "Q597051",
+      "id": "kupolin-valoaukot",
+      "file": "barcelona-Q597051-kupolin-valoaukot.png",
+      "filename": "barcelona-Q597051-kupolin-valoaukot.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/08-kupolin-valoaukot/barcelona-Q597051-kupolin-valoaukot.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a4f-9861-7231-a76c-4dba34519d3a/exec-fcba377e-c4f4-4d89-85fa-9162a3e92cf3.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/08-kupolin-valoaukot/original-generation.png",
+      "sha256": "bc1f56e7936b2991273501adfcc5a2f9f45972aceb2184b69f1ca85e2194f739",
+      "originalSha256": "99064ad2afeaeb3ccc498e5e019d2a8dfb963d9e1e47012dd6861e5db8e90fcb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMethod": "built-in image_gen",
+      "generationIntent": "wholly-new-text-only",
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja educational architectural illustration; entirely new text-only generation.\nPrimary request: one photorealistic ORIGINAL architectural interpretation of the nineteenth-century central hall dome of Palau Güell in Barcelona, as a plausible circa-1890s space, seen from the exact centre of the hall looking straight UP. Exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG; a round-looking centred dome subject fully composed within this shared landscape canvas, not a separate square crop.\nSubject: a lofty dark warm-brown PARABOLIC dome resting on four parabolic arches, lined in rows of small crystalline hexagonal limestone pieces that decrease in size towards the central high ventilation aperture. Many small round perforations in individual stone pieces admit restrained points of genuine daylight, giving a starry-sky effect. The bright points are holes in masonry, not lamps or LEDs; slight daylight spill at their edges makes their physical depth apparent. The curved dark surface and height remain intelligible. This is an independent spatial interpretation of the old design from descriptive text, not a traced or replicated modern museum photograph or museum object.\nComposition: camera optic axis vertical, apex exactly centred horizontally and vertically. The main circular/parabolic canopy occupies the centre, four supporting arches and a little peripheral upper gallery framing it towards the corners and wider left/right margins. Peripheral balcony-window wooden latticework is plain, old, unlabelled and restrained. Only dome, structural arches and partial upper gallery visible; no view of paintings, chapel doors, figurative art, marquetry panels, sculpture, museum displays or organ.\nStyle: real architectural-camera appearance and material texture, natural light entering only through real masonry openings and faint peripheral daylight, muted brown and grey limestone with warm aged wood, soft depth and restrained highlights, no lens flare or exaggerated beams. Photo-like, not painting, illustration, graphic star chart, sci-fi ceiling, HDR, CGI or cinematic lighting.\nConstraints: no people, text, letters, numbers, signs, logos, watermark or frame. No modern lamps, electrical fittings, LEDs, museum signage or protected art replicas. Original 1890s architectural interpretation only; do not reproduce an existing interior photograph.",
+      "viitteet": [
+        {
+          "publisher": "Palau Güell / Diputació de Barcelona",
+          "title": "Palau Güell visitor guide — The central hall 1",
+          "url": "https://www.palauguell.cat/sites/palauguell.cat/files/pdf/palauguellangles.pdf",
+          "type": "textResearchOnly",
+          "notes": "Parabolinen kupoli neljän parabolisen kaaren varassa. Kuusikulmaiset kalkkikivikappaleet pienenevät huipun aukkoa kohti, osa rei’itettyjä luonnonvalon tähtitaivasefektiä varten. Suojattuja maalauksia, marquetry-paneeleita ja nykyistä museoasua ei jäljennetä.",
+          "access": "Official PDF text read with web tool, section 14/page 12; no screenshots or source image pixels used."
+        }
+      ],
+      "kuvateksti": "Palau Güellin keskisalin parabolisen kupolin valoaukkojen oma 1890-luvun arkkitehtoninen tulkinta suoraan alhaalta nähtynä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "b55eefb27a9bfd75adb3ced81ed978b8a63835eb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "technicalChanges": [
+        "Added sRGB ICC profile and PNG Description/Source marker only; original RGB pixels and original PNG IDAT bytes unchanged.",
+        "Created separate full-frame 480x320 QA preview; production image was not resized or cropped."
+      ],
+      "pixelEqualityVerified": true,
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/08-kupolin-valoaukot/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and full-frame480x320 preview inspected.",
+          "Direct upward centred view shows the deep dome and four surrounding supporting arches inside shared landscape format.",
+          "Warm-brown hexagonal masonry and numerous small perforations with natural daylight points are visible, including physical edges of the holes.",
+          "Peripheral old wooden gallery latticework; no paintings, marquetry panels, sculpture, organ, museum objects or modern electrical light fittings observed.",
+          "No people, legible text, numbers, labels, logos, watermark or frame observed.",
+          "Natural low-light architectural photo appearance and muted colours; starry effect is readable at480px."
+        ],
+        "limitations": [
+          "Original AI architectural interpretation from descriptive text; exact profile, hole count, perforation positions, dimensions and gallery latticework are not documented. No modern museum photograph or collection art was copied."
+        ]
+      },
+      "deliveryState": "local-only",
+      "r2Uploaded": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "technicalVerification": {
+        "format": "PNG",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "sRGBICCVerified": true,
+        "metadataExact": true,
+        "originalCopyByteExact": true,
+        "RGBPixelsUnchanged": true,
+        "IDATBytesUnchanged": true,
+        "sha256Verified": true,
+        "previewFullframeDimensions": [
+          480,
+          320
+        ]
+      },
+      "visualReview": {
+        "task": "barcelona-yksityiskohdat-20261008",
+        "number": 8,
+        "qid": "Q597051",
+        "file": "barcelona-Q597051-kupolin-valoaukot.png",
+        "sha256": "bc1f56e7936b2991273501adfcc5a2f9f45972aceb2184b69f1ca85e2194f739",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Suoraan alhaalta kuvattu keskitetty parabolinen kupoli: pieniä päivänvaloaukkoja, ruskea kivi, neljä tukikaarta ja puiset sivugalleriat. Pääaihe erottuu 480-esikatselussa eikä tekstiä, ihmisiä tai kopioituja kokoelmateoksia näy."
+        ],
+        "limitations": [
+          "Original AI architectural interpretation from descriptive text; exact profile, hole count, perforation positions, dimensions and gallery latticework are not documented. No modern museum photograph or collection art was copied."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:11:41.925174+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and full-frame480x320 preview inspected.",
+          "Direct upward centred view shows the deep dome and four surrounding supporting arches inside shared landscape format.",
+          "Warm-brown hexagonal masonry and numerous small perforations with natural daylight points are visible, including physical edges of the holes.",
+          "Peripheral old wooden gallery latticework; no paintings, marquetry panels, sculpture, organ, museum objects or modern electrical light fittings observed.",
+          "No people, legible text, numbers, labels, logos, watermark or frame observed.",
+          "Natural low-light architectural photo appearance and muted colours; starry effect is readable at480px."
+        ],
+        "limitations": [
+          "Original AI architectural interpretation from descriptive text; exact profile, hole count, perforation positions, dimensions and gallery latticework are not documented. No modern museum photograph or collection art was copied."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q597051-kupolin-valoaukot.png",
+      "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/barcelona-Q597051-kupolin-valoaukot.png",
+      "bytes": 2531505,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 3,
+      "qid": "Q212867",
+      "id": "vesihuollon-leikkaus",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/03-vesihuollon-leikkaus/barcelona-Q212867-vesihuollon-leikkaus.png",
+      "sha256": "b9da2669cabee8774c0c4dd96b434345040e1f8ae66ec990ef47750e74c7e88e",
+      "reason": "Ylivuotoputken suu on vedenpinnan yläpuolella vaikka liskosta virtaa vettä. Säiliön vedenreitti ei toimi näkyvässä tilanteessa, ja taustassa on aikakauteen sopimaton tornien/nosturien siluetti.",
+      "R2Delivered": false
+    },
+    {
+      "number": 7,
+      "qid": "Q507282",
+      "id": "sant-pau-45astetta",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/barcelona-yksityiskohdat-20261008/production/07-sant-pau-45astetta/barcelona-Q507282-sant-pau-45astetta.png",
+      "sha256": "d73bd5ac8ea3b9ddbab070b22944b531c8b17c5b0deca7c017ff948b54a42d98",
+      "reason": "Sairaala-alueen keskuskatu ja suuri päärakennus seuraavat ympäröivän ruutukaavan suuntaa. Vain paviljongit ovat vinossa. Tilauksen ja kohteen 45 asteen kokonaisasettelu ei toteudu.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-6.jpg",
+    "r2Key": "julisteet/barcelona-yksityiskohdat/20261008/toimitetut-6.jpg",
+    "url": "https://media.matkakirja.app/julisteet/barcelona-yksityiskohdat/20261008/toimitetut-6.jpg",
+    "sha256": "8046dec1c2f01b76505237e3f93161936b25970f37a4023617dc8443cc2c682f",
+    "bytes": 374662,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:12:13.486700+00:00"
+}

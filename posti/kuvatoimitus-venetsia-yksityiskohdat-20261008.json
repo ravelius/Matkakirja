@@ -1,0 +1,809 @@
+{
+  "task": "venetsia-yksityiskohdat-20261008",
+  "routedTaskNumber": 13,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-venetsia-yksityiskohdat-20261008.md",
+    "commit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+    "blob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 8,
+  "imageCount": 6,
+  "generationCalls": 8,
+  "generationLimit": 8,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q189883",
+      "id": "musta-verho",
+      "filename": "venetsia-Q189883-musta-verho.png",
+      "file": "venetsia-Q189883-musta-verho.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/01-musta-verho/venetsia-Q189883-musta-verho.png",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in imagegen, new text-only",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original contextual illustration for a historical city guide.\nGenerate one completely NEW image from text only, without any reference image. Native 1536 x 1024 pixels, horizontal 3:2 opaque RGB sRGB PNG.\nPrimary request: an ORIGINAL distant decorative wall composition suggesting the historical motif of one missing portrait replaced by painted black drapery. This is your own illustrative composition, not the Great Council Chamber or any modern museum room or collection painting.\nScene: upper portion of a restrained dark timber-panelled historic Venetian-style hall wall, seen from the floor roughly ten metres away at an oblique upward angle. Five similarly sized rectangular decorative panels form a high horizontal row, with simple restrained gilt wood surrounds. Center panel shows ONLY an original painted black drapery motif, broad black folds against a very dark ground, entirely blank with no writing. It is a painted image of a drape, not a hanging textile.\nOther panels: only invented indistinct faceless, figureless GENERAL SHADOW SHAPES and dark tonal patches. No identifiable person, no heads with facial details, no actual doge portrait, no human likeness, no copied museum art, no scrolls. Their content is distant and intentionally soft, while the black drapery remains the visual focus.\nComposition: wide landscape canvas includes the full row and some dark wood beneath and above it. Modest off-axis perspective. Central black panel clearly legible as a drapery motif at 480-pixel preview scale.\nStyle: believable ordinary camera photograph appearance of this invented wall, subtle age in timber and quiet gilt, soft natural ambient interior light, muted brown black and old-gold tones, realistic optical falloff, no HDR, no cinematic grading.\nConstraints: absolutely no lettering, Latin, numerals, inscription marks, labels, tourists, real faces, logos, watermark, image border, identifiable artwork replication, famous hall decoration, ceiling paintings or contemporary objects.",
+      "viitteet": [
+        {
+          "publisher": "Fondazione Musei Civici di Venezia",
+          "title": "Doge’s Palace guide, Great Council Chamber",
+          "url": "https://www.visitmuve.it/wp-content/uploads/2025/11/Guida-Ducale-ENG.pdf",
+          "type": "textResearchOnly",
+          "access": "Official PDF searchable text only, lines664–678 read; no screenshots or source pixels.",
+          "notes": "Portrait frieze beneath ceiling, MarinFaliero represented by black cloth. Own distant wallcomposition, no real portrait replication, noLatin."
+        }
+      ],
+      "kuvateksti": "Maalattu musta verhomotiivi omassa etäisessä seinäsommitelmassa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Lossless PNG metadata normalization only: embedded sRGB ICC plus exact Description and Source; all original RGB pixels retained.",
+        "Separate fullframe 480x320 Lanczos preview created for QA; final native image was not resized, cropped or retouched."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and fullframe480x320 viewed. Original upperwall composition shows five decorative panels with a clear central black drapery motif.",
+          "Neighbor panels contain only soft invented landscape-like shadow masses, with no doge, human figure or face. No Latin, other writing, numbers, label, watermark or imageborder visible.",
+          "Drapery uses illusionistic folded shading within a panel; image alone cannot establish painting versus textile material. Scene remains a generic original composition and does not reproduce a present-day hall or collection portrait."
+        ],
+        "limitations": [
+          "Seinän sommittelu ja naapuripaneelien hahmottomat varjot ovat keksittyjä; kuva ei jäljennä nykyistä museosalia tai dogemuotokuvia."
+        ]
+      },
+      "status": "local-candidate-approved-for-delivery",
+      "scope": "local-candidate-only",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a55-a50d-7723-9d11-f341ec55040a/exec-a8927087-06a3-4b51-a9bf-6b3e4b1bf58f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/01-musta-verho/original-generation.png",
+      "originalDimensions": [
+        1536,
+        1024
+      ],
+      "originalMode": "RGB",
+      "sha256": "e251a32730d95e8a148bb98e1b395ff44b8f85e38e5b58e80d7044fab502c4c5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "RGBPixelsUnchanged": true,
+      "originalSha256": "81ebd86d5902309e6e39cc19f2825a98a542e1b1c392e0b0cbf5b2b7ecda539c",
+      "mode": "RGB",
+      "opaque": true,
+      "colourSpace": "sRGB",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/01-musta-verho/qa-preview-480.png",
+      "technicalValidation": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colourSpace": "sRGB",
+        "PNGAncillaryFields": [
+          "icc_profile",
+          "Description",
+          "Source"
+        ],
+        "RGBPixelsUnchanged": true,
+        "originalPreservedByteExact": true,
+        "previewDimensions": [
+          480,
+          320
+        ],
+        "sha256Verified": true,
+        "generationCalls": 1
+      },
+      "visualReview": {
+        "task": "venetsia-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q189883",
+        "file": "venetsia-Q189883-musta-verho.png",
+        "sha256": "e251a32730d95e8a148bb98e1b395ff44b8f85e38e5b58e80d7044fab502c4c5",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Musta verhomotiivi keskellä omaa keksittyä seinäsommitelmaa, viereiset taulupinnat hahmottomia varjomassoja. Ei dogejen tunnistettavia muotokuvia, latinankielistä tekstiä tai kokoelmamaalausten jäljennöksiä."
+        ],
+        "limitations": [
+          "Seinän sommittelu ja naapuripaneelien hahmottomat varjot ovat keksittyjä; kuva ei jäljennä nykyistä museosalia tai dogemuotokuvia."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.160892+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and fullframe480x320 viewed. Original upperwall composition shows five decorative panels with a clear central black drapery motif.",
+          "Neighbor panels contain only soft invented landscape-like shadow masses, with no doge, human figure or face. No Latin, other writing, numbers, label, watermark or imageborder visible.",
+          "Drapery uses illusionistic folded shading within a panel; image alone cannot establish painting versus textile material. Scene remains a generic original composition and does not reproduce a present-day hall or collection portrait."
+        ],
+        "limitations": [
+          "Seinän sommittelu ja naapuripaneelien hahmottomat varjot ovat keksittyjä; kuva ei jäljennä nykyistä museosalia tai dogemuotokuvia."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q189883-musta-verho.png",
+      "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q189883-musta-verho.png",
+      "bytes": 2313575,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q52505",
+      "id": "puusillan-romahdus-1444",
+      "filename": "venetsia-Q52505-puusillan-romahdus-1444.png",
+      "file": "venetsia-Q52505-puusillan-romahdus-1444.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/03-puusillan-romahdus-1444/venetsia-Q52505-puusillan-romahdus-1444.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a57-581f-7a90-b68a-0bb9f8b0482e/exec-84947ee2-ffd4-41e6-b9d2-aefaf6669aac.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/03-puusillan-romahdus-1444/original-generation.png",
+      "sha256": "f0b41addf87f028571f8a827d001fdeb03601677e53cb578c720a62242933491",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja historical detail illustration.\nCreate ONE wholly new text-only image, exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG. An original, natural real-camera-looking reconstruction of the wooden Rialto crossing collapsing on the Grand Canal in Venice in 1444. This is an illustrative invented scene, not a reproduction of an existing painting or museum image.\nScene: wide view from a slightly raised canal-side viewpoint, across a busy mid-fifteenth-century Venetian canal. A substantial weathered wooden bridge spans the frame between two brick-built quays. It has wooden trestle supports, timber railings, a modest raised central movable section, and small plain timber market booths near its two approach ramps. The center deck has just broken and slumps downward into the water: broken timber beams and planks, disturbed green-gray water and a restrained splash clearly communicate structural collapse. The bridge itself is entirely timber, not the later stone Rialto.\nA distant dense crowd in muted medieval robes and hoods remains on the approach ramps and quays. A few tiny anonymous figures are upright in the water immediately beside small wooden rowing boats, being reached toward by people in the boats; nobody is injured and no drowning is depicted in close detail. All people are small background-scale silhouettes, faces unreadable. Period wooden boats gather near the damaged bridge, including a modest distant ceremonial boat group without an identifiable person. Surroundings are original generic Venetian Gothic brick and plaster buildings, timber waterfront structures, irregular low tiled roofs and slender masonry chimneys; roof materials and building geometry are an illustrative interpretation, not documentary precision.\nStyle and light: convincing ordinary camera photograph appearance, approximately 35 mm lens, believable timber grain and joinery, irregular worn masonry, soft cloudy daytime light, restrained earthy colors and dull canal reflections. Balanced exposure, natural contrast; no painterly texture, no illustration outlines, no glossy CGI, no HDR, no cinematic grading, no spectacular storm.\nStrict constraints: no modern objects, no motors, no modern gondola ornament, no stone arch bridge, no readable letters or numbers, no signs, no logos, no watermark, no border or frame, no recognizable faces or likeness of a real living or historical person, no bodies, no blood, no graphic injury, no close-up suffering. Do not put any words in the image.",
+      "viitteet": [
+        {
+          "publisher": "Comune di Venezia",
+          "title": "Rialto Mercato",
+          "url": "https://www.comune.venezia.it/it/content/rialto-mercato",
+          "type": "textResearchOnly",
+          "notes": "Kaupungin oma teksti vahvistaa puisen edeltäjän ja myöhemmän yksikaarisen kivisillan. Tarkka1444-geometria havainnollinen.",
+          "access": "Web-sivun tekstisisältö luettu; ei lähdekuvapikseleitä."
+        },
+        {
+          "publisher": "Mapei",
+          "title": "Rialto Bridge in Venice",
+          "url": "https://www.mapei.com/it/en/realta-mapei/detail/rialto-bridge-in-venice",
+          "type": "textResearchOnly",
+          "notes": "Restaurointiin osallistuneen valmistajan oma tekstiraportti: puusilta romahti 1444 venekulkuetta katsoneen väkijoukon painosta.",
+          "access": "Indeksoitu virallisen julkaisijan teksti luettu; suora avaus palautti virheen. Ei kuvia katsottu."
+        }
+      ],
+      "kuvateksti": "Venetsian puisen Rialton sillan romahdus vuonna 1444, yleinen historiallinen tulkinta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Metadata-only PNG ancillary rewrite: removed original ancillary caBX from delivery PNG, preserved untouched tool original; added sRGB ICC and exactly Description/Source disclosure. Compressed IDAT and decoded RGB pixels unchanged.",
+        "Separate full-frame 480x320 QA preview; native 1536x1024 delivery unchanged."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Luonnollinen kamerannäköinen kuva, vaimeat värit, puinen silta ja keskiosan romahdus selvästi erottuvat.",
+          "Ei modernia kivisiltaa, moottoriajoneuvoja, tekstiä, numeroita, logoa, vesileimaa tai kehystä havaittu.",
+          "Vedessä olevat pienet hahmot tavoittavat veneen auttajaa; ei ruumiita, verta tai lähikärsimystä.",
+          "Veneiden hahmot ovat pieniä yleiskuvan osia, pääosin selin tai kasvot varjossa ja alaspäin; tunnistettavia kasvoja tai todellisen henkilön näköisyyttä ei havaittu."
+        ],
+        "limitations": [
+          "Puusillan tarkka rakenne, rakennukset, kattomateriaalit, väkijoukon sijoittelu ja kulkueryhmä ovat havainnollinen tulkinta. Ei aikalaiskuvan jäljennös.",
+          "Etualan oikean veneen ihmiset ovat muuta väkijoukkoa suurempia; kasvot jäävät lakin, varjon ja alaspäin suunnatun pään alle."
+        ]
+      },
+      "status": "local-candidate-QA-passed",
+      "sourcePath": "posti/sisaltokirjuri-codex-venetsia-yksityiskohdat-20261008.md",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "executionMode": "built-in image_gen; wholly new text-only generation",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "preservedOriginalSHA256": "11ca86cfc0cb31fa991e0f3fd04d9a10685a4350b8d7a7c6c161ecc7ba4274ef",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "RGBPixelsPreserved": true,
+      "editorAcceptance": false,
+      "visualReview": {
+        "task": "venetsia-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q52505",
+        "file": "venetsia-Q52505-puusillan-romahdus-1444.png",
+        "sha256": "f0b41addf87f028571f8a827d001fdeb03601677e53cb578c720a62242933491",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Puinen silta ja keskiosan romahdus, vedessä autettavia pieniä hahmoja ja veneitä. Ei kivistä nyky-Rialtoa, verta, ruumiita tai tunnistettavaa todellista henkilöä. Etualan venehahmot osin suurempia, kasvot lakin ja varjon peittämiä."
+        ],
+        "limitations": [
+          "Puusillan tarkka rakenne, rakennukset, kattomateriaalit, väkijoukon sijoittelu ja kulkueryhmä ovat havainnollinen tulkinta. Ei aikalaiskuvan jäljennös.",
+          "Etualan oikean veneen ihmiset ovat muuta väkijoukkoa suurempia; kasvot jäävät lakin, varjon ja alaspäin suunnatun pään alle."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.164015+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Luonnollinen kamerannäköinen kuva, vaimeat värit, puinen silta ja keskiosan romahdus selvästi erottuvat.",
+          "Ei modernia kivisiltaa, moottoriajoneuvoja, tekstiä, numeroita, logoa, vesileimaa tai kehystä havaittu.",
+          "Vedessä olevat pienet hahmot tavoittavat veneen auttajaa; ei ruumiita, verta tai lähikärsimystä.",
+          "Veneiden hahmot ovat pieniä yleiskuvan osia, pääosin selin tai kasvot varjossa ja alaspäin; tunnistettavia kasvoja tai todellisen henkilön näköisyyttä ei havaittu."
+        ],
+        "limitations": [
+          "Puusillan tarkka rakenne, rakennukset, kattomateriaalit, väkijoukon sijoittelu ja kulkueryhmä ovat havainnollinen tulkinta. Ei aikalaiskuvan jäljennös.",
+          "Etualan oikean veneen ihmiset ovat muuta väkijoukkoa suurempia; kasvot jäävät lakin, varjon ja alaspäin suunnatun pään alle."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q52505-puusillan-romahdus-1444.png",
+      "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q52505-puusillan-romahdus-1444.png",
+      "bytes": 2777392,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q52505",
+      "id": "puupaalu-perustukset",
+      "filename": "venetsia-Q52505-puupaalu-perustukset.png",
+      "file": "venetsia-Q52505-puupaalu-perustukset.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/04-puupaalu-perustukset/venetsia-Q52505-puupaalu-perustukset.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a57-581f-7a90-b68a-0bb9f8b0482e/exec-262fd4e9-4c1d-4610-9f40-5da7ef2720cb.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/04-puupaalu-perustukset/original-generation.png",
+      "sha256": "7c48dfe47bba0540bf0a323452e3714ee99ffeab8107ede47784d541587c7c49",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja historical foundation detail illustration.\nCreate ONE wholly new text-only image, exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG. A convincing PHOTOREAL physical-material cutaway interpretation of the wooden pile foundations of Venice's stone Rialto Bridge around its completion in 1591. Render the same real-camera natural material appearance as a photograph of a full-scale physical architectural cutaway, not a textbook diagram or drawing.\nComposition: wide near-side view with very slight oblique perspective. The recognizable white stone bridge crosses the upper half of the scene in ONE single shallow stone arch from the left bank abutment to the right bank abutment, with its steep stepped ramps, modest rows of stone shop structures and central arched portico. Keep the complete single arch and both banks within the landscape frame. No people. Below, an exposed vertical plane through the two banks and canal bed reveals the real grain of dense waterlogged gray-brown timber piles and wet sediment. The canal's green-gray water surface is a horizontal natural level; the central navigable waterway under the arch is completely open. Its water extends down to a believable muddy canal floor. Do not make a solid dam through the canal.\nSTRUCTURAL REQUIREMENT: there are exactly TWO load-bearing foundation masses, one at each shoreline. Under EACH bank abutment, and strictly under its broad low stepped stone foundation raft, are dense groups of upright timber piles driven downward within waterlogged compact mud. The stone footings sit directly on timber capping beams and the pile heads; their steps spread load into the banks. Piles may vary in length in the adjacent compact sediment. Neither a middle stone pier nor a third pile group exists anywhere in the open central canal. No piles protrude into the central waterway. No piles float unsupported above the ground. Show damp timber and naturally compacted darker sediment around their embedded tips, not an invented deep rock layer. The exposed cut faces of earth look granular, damp and irregular, while the stone surfaces have fine tool marks.\nSoft neutral daylight, believable stone and wet wood textures, restrained limestone cream, mud brown and dull green water. Natural camera exposure and perspective, moderate 35-50 mm lens appearance, no exaggerated depth or dramatic lighting. This is a material-based illustrative cutaway; exact pile counts, spacing and dimensions are not documentary claims.\nStrict constraints: NO text, no readable letters or numbers, no arrows, no measurements, no labels, no infographic layout, no technical linework, no blueprint, no flat illustration, no watercolor, no oil painting, no HDR, no cinematic saturation, no glossy CGI. No people, modern machinery, concrete or steel reinforcements, signs, logos, watermark, border or frame. Do not put any words in the image.",
+      "viitteet": [
+        {
+          "publisher": "Consiglio Nazionale delle Ricerche / Journal of Cultural Heritage",
+          "title": "The wooden foundations of Rialto Bridge (Ponte di Rialto) in Venice: Technological characterisation and dating",
+          "url": "https://iris.cnr.it/handle/20.500.14243/370104",
+          "type": "textResearchOnly",
+          "notes": "Tutkijoiden oma tutkimus: vettä kyllästyneen puun perustukset. Artikkelin indeksoitu teksti kertoo tiheistä paaluryhmistä ja kolmelle tasolle porrastetuista perustuksista; tarkoitus vahvistaa sedimenttiä, ei ulottua syvään jäykkään kerrokseen.",
+          "access": "CNR:n oma indeksoitu tutkimustiivistelmä sekä sama julkaisu ScienceDirectissä indeksoituna luettu tekstinä. Suorat avaukset virhe. Ei kuvia eikä tutkimuksen leikkauskuvaa käytetty.",
+          "researchArticleUrl": "https://www.sciencedirect.com/science/article/pii/S1296207418303868"
+        },
+        {
+          "publisher": "Comune di Venezia",
+          "title": "Rialto Mercato",
+          "url": "https://www.comune.venezia.it/it/content/rialto-mercato",
+          "type": "textResearchOnly",
+          "notes": "Kaupungin oma teksti vahvistaa Rialton kivirakenteen olevan yksikaari. Keskijokeen ei lisätty tukipilaria.",
+          "access": "Web-sivun tekstisisältö luettu; ei lähdekuvapikseleitä."
+        }
+      ],
+      "kuvateksti": "Rialton yksikaarisen kivisillan rantojen puupaaluperustuksia havainnollistava materiaalileikkaus. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Metadata-only PNG ancillary rewrite: removed original ancillary caBX from delivery PNG, preserved untouched tool original; added sRGB ICC and exactly Description/Source disclosure. Compressed IDAT and decoded RGB pixels unchanged.",
+        "Separate full-frame 480x320 QA preview; native 1536x1024 delivery unchanged."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yksi yhtenäinen kivikaari ja vapaa keskivesiaukko; ei keskijokipilaria tai ylimääräistä keskipaaluista pengertä.",
+          "Tiheät paaluryhmät ovat molempien ranta-abutmenttien kivi- ja puisten perustuspalkkien alla; paalujen päät ja kärjet liittyvät kantaviin rakenteisiin ja mutaan.",
+          "Vesi-, maa- ja kivitasot sekä märkä puu erottuvat myös 480pikselin esikatselussa. Luonnonmateriaaleja muistuttava kamerannäköinen leikkaus.",
+          "Ei tekstiä, mittoja, nuolia, ihmisiä, koneita, logoja, vesileimaa tai kehystä."
+        ],
+        "limitations": [
+          "Avoin materiaalileikkaus on kuvallinen havainnollistus, ei toteutettavissa oleva kamera-asetelma eikä mittapiirros. Paalumäärät, tarkka mitoitus ja maakerrokset havainnollisia.",
+          "Paalut näkyvät avatussa leikkauspinnassa tavallista kamera-asetelmaa paljaammin; tämä on tarkoituksellinen havainnollinen materiaalileikkaus."
+        ]
+      },
+      "status": "local-candidate-QA-passed",
+      "sourcePath": "posti/sisaltokirjuri-codex-venetsia-yksityiskohdat-20261008.md",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "executionMode": "built-in image_gen; wholly new text-only generation",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "preservedOriginalSHA256": "383b0846309c7d7ef56569316e6960a5a91c502153c800ab45bffa173d6ba1f0",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "RGBPixelsPreserved": true,
+      "editorAcceptance": false,
+      "visualReview": {
+        "task": "venetsia-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q52505",
+        "file": "venetsia-Q52505-puupaalu-perustukset.png",
+        "sha256": "7c48dfe47bba0540bf0a323452e3714ee99ffeab8107ede47784d541587c7c49",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yksikaarinen kivisilta, avoin vesiaukko ja rantojen alla erilliset tiheät puupaaluperustukset. Ei virheellistä keskijokipilaria, ihmisiä, koneita, mittamerkintöjä tai tekstiä. Materiaalileikkaus erottuu 480-koossa."
+        ],
+        "limitations": [
+          "Avoin materiaalileikkaus on kuvallinen havainnollistus, ei toteutettavissa oleva kamera-asetelma eikä mittapiirros. Paalumäärät, tarkka mitoitus ja maakerrokset havainnollisia.",
+          "Paalut näkyvät avatussa leikkauspinnassa tavallista kamera-asetelmaa paljaammin; tämä on tarkoituksellinen havainnollinen materiaalileikkaus."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.166068+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yksi yhtenäinen kivikaari ja vapaa keskivesiaukko; ei keskijokipilaria tai ylimääräistä keskipaaluista pengertä.",
+          "Tiheät paaluryhmät ovat molempien ranta-abutmenttien kivi- ja puisten perustuspalkkien alla; paalujen päät ja kärjet liittyvät kantaviin rakenteisiin ja mutaan.",
+          "Vesi-, maa- ja kivitasot sekä märkä puu erottuvat myös 480pikselin esikatselussa. Luonnonmateriaaleja muistuttava kamerannäköinen leikkaus.",
+          "Ei tekstiä, mittoja, nuolia, ihmisiä, koneita, logoja, vesileimaa tai kehystä."
+        ],
+        "limitations": [
+          "Avoin materiaalileikkaus on kuvallinen havainnollistus, ei toteutettavissa oleva kamera-asetelma eikä mittapiirros. Paalumäärät, tarkka mitoitus ja maakerrokset havainnollisia.",
+          "Paalut näkyvät avatussa leikkauspinnassa tavallista kamera-asetelmaa paljaammin; tämä on tarkoituksellinen havainnollinen materiaalileikkaus."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q52505-puupaalu-perustukset.png",
+      "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q52505-puupaalu-perustukset.png",
+      "bytes": 3378368,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q223942",
+      "id": "fenice-palo-1836",
+      "filename": "venetsia-Q223942-fenice-palo-1836.png",
+      "file": "venetsia-Q223942-fenice-palo-1836.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/05-fenice-palo-1836/venetsia-Q223942-fenice-palo-1836.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a57-581f-7a90-b68a-0bb9f8b0482e/exec-057d91ba-6e45-407d-a262-75299fced85a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/05-fenice-palo-1836/original-generation.png",
+      "sha256": "5819742ea184dd502907320d48af0a073b93b0a23e5d22e1728f1579931254d5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja historical fire detail illustration.\nCreate ONE wholly new text-only image, exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG. An original camera-looking outdoor reconstruction of the fire at La Fenice opera house in Venice in the early hours of 13 December 1836, viewed from the edge of small Campo San Fantin. Show the theatre as an early nineteenth-century neoclassical Venetian theatre, its pale facade with a small columned entrance and short stone steps partly visible, with closely packed neighboring plaster-and-brick buildings and low terracotta-tiled roofs. Illustrative exterior architecture and fire extent, not a copy of an existing print, painting, modern photograph or exact witness composition.\nA real uncontrolled building fire breaks through the roof farther behind the entrance and glows through some high windows. Natural orange flames, dark uneven smoke and a few sparks rise above the roofline into a deep muted blue-black winter night sky. Foreground paving is wet from firefighting and catches irregular dull reflections of the fire. The exterior facade remains structurally readable. Do not make the scene a vast fantasy inferno.\nSmall distant anonymous adults, all viewed from behind or in unrecognizable dark silhouettes, wear 1830s coats, cloaks and period hats. A restrained bucket line passes plain wooden or metal buckets, and a few figures work a simple period manual hand pump in the midground. People are subordinate to the building and roof fire, never close portraits. No victims or injuries. Hand tools and simple buckets only; nothing mechanized or modern.\nStyle: convincing natural low-light camera photograph appearance, ordinary 35 mm wide view from about eye height; believable limestone, old plaster, irregular roof tiles, wet paving and smoke. Illuminated mainly by the fire, with faint cool ambient night light; natural restrained contrast and slight low-light grain. No oil-painting or lithograph treatment, no illustration outlines, no theatrical spotlight, no cinematic teal-orange grading, no HDR or oversaturated glow.\nStrict constraints: no cars, fire trucks, electric street lighting, modern equipment, modern uniforms, hoses attached to engines, traffic furniture or signs. No readable words, letters or numbers anywhere, including on the theatre facade or clothing; no logos, no watermark, no frame, no recognizable faces or likeness of a real living or historical person, no blood, no bodies, no violence, no suffering in close-up. Do not put any words in the image.",
+      "viitteet": [
+        {
+          "publisher": "Fondazione Teatro La Fenice",
+          "title": "La Fenice & il Teatro Malibran: la storia",
+          "url": "https://www.teatrolafenice.it/fondazione-teatro-la-fenice/storia/",
+          "type": "textResearchOnly",
+          "notes": "Teatterin oma historia: 13.12.1836 noin kolmelta yöllä vartija havaitsi savun ja palon näyttämöllä. Palomiehiä tuli viereisestä korttelista. Ulkoinen havainnollistus ilman modernia sisätilaa tai aikalaiskuvan jäljennöstä.",
+          "access": "Sivun tekstisisältö luettu; ei lähdekuvapikseleitä."
+        }
+      ],
+      "kuvateksti": "La Fenicen oopperatalon paloa joulukuussa 1836 havainnollistava ulkonäkymä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Metadata-only PNG ancillary rewrite: removed original ancillary caBX from delivery PNG, preserved untouched tool original; added sRGB ICC and exactly Description/Source disclosure. Compressed IDAT and decoded RGB pixels unchanged.",
+        "Separate full-frame 480x320 QA preview; native 1536x1024 delivery unchanged."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Luonnollinen yökuvan kameraulkoasu; tuli ja savu katolla, valo korkeissa ikkunoissa sekä heijastukset kosteassa kivipinnassa. Ei litografia- tai maalauksentuntua.",
+          "Ämpärijono ja käsikäyttöinen pumppu erottuvat; henkilöt ovat kasvottomia tummia siluetteja, pääosin selin.",
+          "Ei moderneja ajoneuvoja, koneita, sähkövalaistusta, luettavaa tekstiä, numeroita, logoja, vesileimaa tai kehystä havaittu.",
+          "Ei uhreja, verta, vammoja tai lähikärsimystä. Palon aihe erottuu myös 480pikselin esikatselussa."
+        ],
+        "limitations": [
+          "Julkisivun yksityiskohdat, palon ulkoinen näkyvyys ja pelastustyön sijoittelu ovat havainnollisia.",
+          "Ihmiset kuvan alareunassa suurempia siluetteja, kaikki tunnistamattomia ja pääosin selin; pelastustyön yksityiskohdat havainnollisia."
+        ]
+      },
+      "status": "local-candidate-QA-passed",
+      "sourcePath": "posti/sisaltokirjuri-codex-venetsia-yksityiskohdat-20261008.md",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "executionMode": "built-in image_gen; wholly new text-only generation",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "preservedOriginalSHA256": "900566ba19c5dd270a8982f404d63dbf6551f3498827e06c03005977a4b9e700",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "RGBPixelsPreserved": true,
+      "editorAcceptance": false,
+      "visualReview": {
+        "task": "venetsia-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q223942",
+        "file": "venetsia-Q223942-fenice-palo-1836.png",
+        "sha256": "5819742ea184dd502907320d48af0a073b93b0a23e5d22e1728f1579931254d5",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Palo teatterin katolla, vanhan aukion ämpärijono ja käsipumppu, anonyymit tummat ihmiset pääosin selin. Ei uhreja tai moderneja ajoneuvoja/valaisimia; valokuvamainen hämärä palovalo."
+        ],
+        "limitations": [
+          "Julkisivun yksityiskohdat, palon ulkoinen näkyvyys ja pelastustyön sijoittelu ovat havainnollisia.",
+          "Ihmiset kuvan alareunassa suurempia siluetteja, kaikki tunnistamattomia ja pääosin selin; pelastustyön yksityiskohdat havainnollisia."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:14:01.168195+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Luonnollinen yökuvan kameraulkoasu; tuli ja savu katolla, valo korkeissa ikkunoissa sekä heijastukset kosteassa kivipinnassa. Ei litografia- tai maalauksentuntua.",
+          "Ämpärijono ja käsikäyttöinen pumppu erottuvat; henkilöt ovat kasvottomia tummia siluetteja, pääosin selin.",
+          "Ei moderneja ajoneuvoja, koneita, sähkövalaistusta, luettavaa tekstiä, numeroita, logoja, vesileimaa tai kehystä havaittu.",
+          "Ei uhreja, verta, vammoja tai lähikärsimystä. Palon aihe erottuu myös 480pikselin esikatselussa."
+        ],
+        "limitations": [
+          "Julkisivun yksityiskohdat, palon ulkoinen näkyvyys ja pelastustyön sijoittelu ovat havainnollisia.",
+          "Ihmiset kuvan alareunassa suurempia siluetteja, kaikki tunnistamattomia ja pääosin selin; pelastustyön yksityiskohdat havainnollisia."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q223942-fenice-palo-1836.png",
+      "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q223942-fenice-palo-1836.png",
+      "bytes": 2430285,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q1262248",
+      "id": "arsenaali-1400",
+      "filename": "venetsia-Q1262248-arsenaali-1400.png",
+      "file": "venetsia-Q1262248-arsenaali-1400.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/06-arsenaali-1400/venetsia-Q1262248-arsenaali-1400.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a57-581f-7a90-b68a-0bb9f8b0482e/exec-73017ce9-5d94-4b65-8f7c-1b203e85a9dd.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/06-arsenaali-1400/original-generation.png",
+      "sha256": "58d0524e00da00b5b185d6b7beee545d15e756359b98ca1b42e1f921908bd303",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja historical shipyard detail illustration.\nCreate ONE wholly new text-only image, exactly 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG. An original natural camera-looking illustrative reconstruction of the Venetian Arsenal shipbuilding yard around 1400-1430, showing skilled hand construction of wooden galleys. This is a plausible original early fifteenth-century working-yard scene, not a copy of any historical artwork, museum photograph or exact documented plan.\nScene and composition: wide view slightly elevated from a timber quay. In the foreground a long, narrow unfinished wooden galley sits on simple timber cradle blocks and an inclined slipway beside a green-gray basin. Its curved timber ribs and long keel are clearly visible, some hull planks already fastened, more carefully stacked rough-sawn planks nearby. Include coiled hemp ropes, timber mallets, hand adzes and simple wooden tool benches as unobtrusive work details. Farther back are additional galleys at different building stages, timber-roofed work sheds, modest old brick enclosing walls and one unadorned watchtower. Keep the architecture generic for this early period; do not use the later monumental Renaissance entrance or late industrial structures.\nDistant small adult workers wear muted medieval wool tunics, simple hose and caps. They work on the midground hulls, carry long planks together or pull hemp ropes. All are background-scale, rear-facing or indistinct, with no readable faces and no identifiable real person. A small safely tended pitch pot sends a faint wisp of vapor near a work shed, not a steam engine. One distant red cloth pennant can have a tiny simplified historical heraldic animal motif, but no lettering, numbers, logo or detailed recognizable artwork. Illustrate a busy craft yard without claiming an exact workforce count.\nLight and appearance: soft pale morning daylight, ordinary documentary camera framing, approximately 35 mm lens, subtle atmospheric distance, natural weathered timber grain, dull iron hand-tool surfaces, irregular aged brick, restrained earth colors and dull canal green. Convincing photograph appearance, no painterly brushwork, no illustration outline, no glossy CGI, no HDR, no cinematic lighting or excessive color saturation.\nStrict constraints: no industrial cranes, no steel gantries, no steam machinery, no engines, no modern concrete, no electricity, no motorboats, no contemporary tools or safety clothing, no modern city skyline. No readable words, letters or numbers, no signs, logos, watermark, border or frame. No recognizable faces or likeness of a real living or historical person, no blood, violence or injuries. Do not put any words in the image.",
+      "viitteet": [
+        {
+          "publisher": "Comune di Venezia",
+          "title": "Storia dell’Arsenale di Venezia",
+          "url": "https://www.comune.venezia.it/it/content/storia-dellarsenale-venezia",
+          "type": "textResearchOnly",
+          "notes": "Kaupungin oma historiallinen selvitys: altaan ja suojamuurin ympäröimät kaltevat laivanrakennusslippit, puutavaran saanti, kaleerityypit sekä myöhemmät rakennusvaiheet. Ei 16000työntekijän väitettä eikä myöhempää Porta da Terraa.",
+          "access": "Indeksoitu kaupungin teksti luettu; suora avaus palautti virheen. Ei sivun taideteoskuvia katsottu."
+        }
+      ],
+      "kuvateksti": "Kaleerien käsityövaltaista rakentamista Venetsian Arsenaalissa noin 1400–1430. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Metadata-only PNG ancillary rewrite: removed original ancillary caBX from delivery PNG, preserved untouched tool original; added sRGB ICC and exactly Description/Source disclosure. Compressed IDAT and decoded RGB pixels unchanged.",
+        "Separate full-frame 480x320 QA preview; native 1536x1024 delivery unchanged."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Kaleerin puinen runko, kylkiluut, laudoitus, käsityövälineet, köydet, tiilirakennukset ja rauhallinen aamuvalo vastaavat telakkatyön aihetta.",
+          "Ei modernia teollisuusnosturia, höyrykonetta, betonia, tekstiä, numeroita, logoa, vesileimaa, kehystä, verta tai tunnistettavia kasvoja havaittu.",
+          "Lippu käyttää yksinkertaista historiallista siivekästä eläinmotiivia ilman tekstiä tai nykylogoja.",
+          "HYLÄTTY: kaksi selin olevaa työntekijää ovat liian suurina etualalla; keskimmäinen noin kolmasosa kuvan korkeudesta. Tarkka vain pieniä etäisiä työntekijöitä -ehto ei toteudu, vaikka kasvot eivät näy."
+        ],
+        "limitations": [
+          "Tarkka 1400–1430 telakka-asettelu, rakennusgeometria, kaleerien yksityiskohdat ja työntekijöiden määrä havainnollisia.",
+          "Kandidaattia ei saa käyttää toimituksessa. Ei uusintaa yhden generoinnin rajan jälkeen."
+        ]
+      },
+      "status": "local-candidate-QA-failed",
+      "sourcePath": "posti/sisaltokirjuri-codex-venetsia-yksityiskohdat-20261008.md",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "executionMode": "built-in image_gen; wholly new text-only generation",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "gameIntegrated": false,
+      "published": false,
+      "preservedOriginalSHA256": "26db6be86e593b6be198a21b82142b9ad6bb3a27aff66872df3841b5ae2f1ee7",
+      "mode": "RGB",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "RGBPixelsPreserved": true,
+      "excludedReason": "Kaksi työntekijää liian suurina etualalla; rajaus sallii vain pienet etäiset työntekijät.",
+      "editorAcceptance": false,
+      "visualReview": {
+        "task": "venetsia-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q1262248",
+        "file": "venetsia-Q1262248-arsenaali-1400.png",
+        "sha256": "58d0524e00da00b5b185d6b7beee545d15e756359b98ca1b42e1f921908bd303",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaleerin puurunko ja käsityötä tekevä telakka, tiilimuuri, vanha torni, tekstitön historiallinen eläinmotiivilippu. Lähimmät työntekijät ovat kokonaan selin; taustatyöntekijät pieniä, eikä tunnistettavia kasvoja näy. Työntekijän hylkäys perustui pienten hahmojen vaatimukseen, mutta tilauksen pieninä/kaukaa/selin sallii myös selin näkyvät aikuiset."
+        ],
+        "limitations": [
+          "Telakan sijoittelu, rakennusgeometria, laivojen yksityiskohdat ja työntekijöiden määrä ovat oma historiallinen tulkinta.",
+          "Kaksi lähintä työntekijää näkyy selin noin kolmasosan kuvan korkeudesta. Sallittua pieninä/kaukaa/selin-vaihtoehtoa sovelletaan selin näkyviin hahmoihin, eikä kuvassa ole tunnistettavia kasvoja."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T08:14:01.170039+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Kaleerin puinen runko, kylkiluut, laudoitus, käsityövälineet, köydet, tiilirakennukset ja rauhallinen aamuvalo vastaavat telakkatyön aihetta.",
+          "Ei modernia teollisuusnosturia, höyrykonetta, betonia, tekstiä, numeroita, logoa, vesileimaa, kehystä, verta tai tunnistettavia kasvoja havaittu.",
+          "Lippu käyttää yksinkertaista historiallista siivekästä eläinmotiivia ilman tekstiä tai nykylogoja.",
+          "HYLÄTTY: kaksi selin olevaa työntekijää ovat liian suurina etualalla; keskimmäinen noin kolmasosa kuvan korkeudesta. Tarkka vain pieniä etäisiä työntekijöitä -ehto ei toteudu, vaikka kasvot eivät näy."
+        ],
+        "limitations": [
+          "Tarkka 1400–1430 telakka-asettelu, rakennusgeometria, kaleerien yksityiskohdat ja työntekijöiden määrä havainnollisia.",
+          "Kandidaattia ei saa käyttää toimituksessa. Ei uusintaa yhden generoinnin rajan jälkeen."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q1262248-arsenaali-1400.png",
+      "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q1262248-arsenaali-1400.png",
+      "bytes": 3122332,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 7,
+      "qid": "Q820872",
+      "id": "kullattu-palatsi",
+      "filename": "venetsia-Q820872-kullattu-palatsi.png",
+      "folder": "07-kullattu-palatsi",
+      "generationCalls": 1,
+      "viitteet": [
+        {
+          "publisher": "Ministero della Cultura – Musei Veneto / Galleria Giorgio Franchetti alla Ca’ d’Oro",
+          "title": "Cenni storici sull’edificio e la Galleria – Il Palazzo",
+          "url": "https://museiveneto.cultura.gov.it/sites/default/files/percorso_breve_primo_piani_def_crem_ita2_0.pdf",
+          "type": "textResearchOnly",
+          "access": "Official PDF indexed text read via web search. First open returned PDF text metadata; follow-up direct open timed out. No PDF/image pixels opened or used.",
+          "notes": "States Marino Contarini commissioned 1421–1440; Gothic loggia tracery; Jean Charlier reinforced colored marbles/decorative profiles with red, ultramarine, black, white and gold, including gilding of pinnacle-top ornaments. Exact decorative placements in generated scene are interpretation."
+        },
+        {
+          "publisher": "Galleria Giorgio Franchetti alla Ca’ d’Oro",
+          "title": "Il Museo",
+          "url": "https://www.cadoro.org/il-museo/",
+          "type": "textResearchOnly",
+          "access": "Official museum HTML text read using web tool. No photographs or museum collection pixels viewed or used.",
+          "notes": "Confirms late-Gothic palace and surviving structure of the old Venetian casa fondaco; warns through restoration history that modern appearance is not exact original."
+        }
+      ],
+      "kuvateksti": "Ca’ d’Oron alkuperäisen kullatun ja monivärisen julkisivun tulkinta noin vuosilta 1430–1450. Värien ja kullattujen koristeiden tarkat paikat ovat havainnollisia. Havainnekuva.",
+      "file": "venetsia-Q820872-kullattu-palatsi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/07-kullattu-palatsi/venetsia-Q820872-kullattu-palatsi.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a59-072e-7362-a28b-2a3832d8ccb4/exec-91c73423-f683-47bd-bec8-58993459ebc5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/07-kullattu-palatsi/original-generation.png",
+      "sha256": "ce42779dc7a10ceb70a3190134d7e78a15b868827659d1272621a368ba66487e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja Venice city guide historical detail illustration.\nPrimary request: Create exactly one wholly NEW, text-only-generated photorealistic historical illustration of the exterior of Ca' d'Oro on Venice's Grand Canal in about 1430–1450, shortly after its original construction. This is an original architectural interpretation, not a copied museum photograph or artwork and not a measured reconstruction.\nScene/backdrop: Calm Grand Canal water in foreground, understated neighboring 15th-century Venetian houses framing the palace on both sides. A couple of small simple period wooden canal boats, unoccupied, with plain unornamented wooden bows; discreet timber mooring posts and a small old landing at water level.\nSubject: The complete Ca' d'Oro safely inside the frame from canal edge to full pinnacled roof crest, with air above and visible water below. Keep its distinctive asymmetric Venetian late-Gothic facade: the lace-like open arcades occupy the left portion, and a quieter solid stone wall with paired Gothic windows forms the right portion. Exactly the ground canal-level pointed-arch portico plus TWO upper loggia levels, with delicate quatrefoil stone tracery, fine columns, balustrades, and an ornate pinnacled parapet. Preserve believable architecture and coherent load-bearing stonework.\nMaterials/colors: Predominantly pale and subtly rose-veined stone. Restrained real gold-leaf highlights on selected carved profiles and pinnacled crest details, with modest muted ultramarine and vermilion painted accents on selected carved surfaces. The gold reads as thin gilding, not a solid metal palace, and catches daylight subtly. Historical text supports polychrome decoration; the exact positions are an illustrative interpretation. Subtle broken reflections in green-gray water.\nComposition/framing: Landscape 3:2, 1536 by 1024 pixels. Water-level real-camera view, slightly oblique toward the facade, normal architectural lens and level verticals. Stand far enough back to contain the ENTIRE palace with generous safe margin around every roof pinnacle and side. All three architectural levels legible at small size. No cropping of the palace.\nStyle/medium: A plausible photograph of a carefully reconstructed historical scene, natural material texture, optically realistic perspective, no painted or illustrated look.\nLighting/mood: Natural bright but soft daytime sunlight, restrained warm stone tones, soft shadows, muted realistic color, ordinary camera exposure. No HDR, no cinematic saturation or dramatic grading.\nText: None. No readable writing, letters or numerals anywhere.\nConstraints/Avoid: No input/reference image pixels. No present-day museum exhibits or collection art. No fantasy or fairy-tale palace, no excessive gilding, no modern pier, vaporetto, motorboats, tourists, modern windows, railings, electric objects, signs, logos, text, watermark or frame. No people or faces. Native opaque RGB sRGB PNG, exactly 1536x1024.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourcePath": "posti/sisaltokirjuri-codex-venetsia-yksityiskohdat-20261008.md",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "4af9f30bf55e6b4606d4b7966e5d8e23b05f24b8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "rootDecisionsReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMode": "built-in image_gen, wholly new, text only",
+      "additionalVariantsAuthorised": false,
+      "status": "rejected-after-QA",
+      "technicalChanges": [
+        "PNG ancillary chunks stripped; only sRGB ICC, Description and Source retained.",
+        "Original IDAT image data and decoded RGB pixels preserved byte-for-byte.",
+        "Full-frame480x320QApreview generated from final; no crop or alternate composition."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native1536x1024 ja koko kuva-alan480x320esikatselu katsottu.",
+          "Luonnollinen päivänvalo, vaimeat värit, palatsin epäsymmetrinen julkisivu, kaksi ylempää loggiaa ja canal-level portico erottuvat.",
+          "Ei ihmisiä, luettavaa tekstiä, modernia liikennettä, vesileimaa tai kehystä.",
+          "Korkein vasemman kattokulman pinnakkeli leikkautuu yläreunaan; turvallinen kokorajaus epäonnistuu.",
+          "Kattokoristeiden yksityiskohdat ovat selvästi generatiivisia tulkintoja."
+        ],
+        "limitations": [
+          "Ei mitattu1430–1450rekonstruktio; koristeiden ja värien tarkat sijoitukset havainnollisia.",
+          "Kuva hylätty rajauksen vuoksi; yksi sallittu generointi käytetty, ei lisäkutsuja tai rajauskorjausta."
+        ]
+      },
+      "delivery": {
+        "localCandidate": true,
+        "r2Uploaded": false,
+        "mailboxDelivered": false,
+        "editorAcceptance": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "originalSha256": "bc58f1ddf883984b06a6dd7d28ff790f0d9cb131e657880a83aefc63c8ba6953",
+      "rgbPixelSha256": "b4cf473807978ce9d50f462a5aacff1c8ce5ed8019e10de085e371034777fb5e",
+      "formatVerified": {
+        "format": "PNG",
+        "mode": "RGB",
+        "size": [
+          1536,
+          1024
+        ],
+        "opaque": true,
+        "srgbICC": true,
+        "metadataKeys": [
+          "icc_profile",
+          "Description",
+          "Source"
+        ],
+        "rgbPixelsUnchanged": true
+      },
+      "failureReason": "Korkein vasemman puolen kattopinnakkeli leikkautuu kuvan yläreunaan. Koko palatsi ei mahdu turvallisesti kuva-alaan, joten toimituksen rajausehto ei täyty.",
+      "visualReview": {
+        "task": "venetsia-yksityiskohdat-20261008",
+        "number": 7,
+        "qid": "Q820872",
+        "file": "venetsia-Q820872-kullattu-palatsi.png",
+        "sha256": "ce42779dc7a10ceb70a3190134d7e78a15b868827659d1272621a368ba66487e",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Palatsin koko julkisivun runko, kaksi ylempää loggiaa, kullatut ja sinipunaiset yksityiskohdat sekä vesiraja erottuvat. Yksi korkeimmista vasemman kattokulman koristehuipuista leikkautuu hieman yläreunaan. Hyväksytään käytettäväksi ehdokkaana tämä rajauspuute selvästi kirjattuna; ei väitetä täysin ehjää kokorajausta."
+        ],
+        "limitations": [
+          "Koko julkisivun runko näkyy, mutta vasemman kattokulman korkeimman koristehuipun kärki leikkautuu yläreunaan. Tilauksen täysin ehjä kokorajaus ei toteudu.",
+          "Kullauksen ja värien tarkka sijoitus sekä kattokoristeet ovat omaa havainnollista tulkintaa, eivät mitattu 1430–1450 rekonstruktio."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T08:14:01.171795+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native1536x1024 ja koko kuva-alan480x320esikatselu katsottu.",
+          "Luonnollinen päivänvalo, vaimeat värit, palatsin epäsymmetrinen julkisivu, kaksi ylempää loggiaa ja canal-level portico erottuvat.",
+          "Ei ihmisiä, luettavaa tekstiä, modernia liikennettä, vesileimaa tai kehystä.",
+          "Korkein vasemman kattokulman pinnakkeli leikkautuu yläreunaan; turvallinen kokorajaus epäonnistuu.",
+          "Kattokoristeiden yksityiskohdat ovat selvästi generatiivisia tulkintoja."
+        ],
+        "limitations": [
+          "Ei mitattu1430–1450rekonstruktio; koristeiden ja värien tarkat sijoitukset havainnollisia.",
+          "Kuva hylätty rajauksen vuoksi; yksi sallittu generointi käytetty, ei lisäkutsuja tai rajauskorjausta."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q820872-kullattu-palatsi.png",
+      "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/venetsia-Q820872-kullattu-palatsi.png",
+      "bytes": 3003531,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 2,
+      "qid": "Q189883",
+      "id": "palatsin-ovi-1756",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/02-palatsin-ovi-1756/venetsia-Q189883-palatsin-ovi-1756.png",
+      "sha256": "6acd9462742f2c42d50557297c9ab98268cbf52b9bc68943b5d95fae9b748179",
+      "reason": "Generointi lisäsi tilaukseen kuulumattoman suuren figuratiivisen rintakuvan selkeine kasvopiirteineen, toisen figuratiivisen patsaan ja osan kehyksellisestä maalauksesta. Näiden tunnistettavuuden ja kokoelmateosrajauksen toteutumista ei voida tässä hyväksyä. Kyse ei ole varmennetusta väitteestä tietyn museoesineen kopioinnista.",
+      "R2Delivered": false
+    },
+    {
+      "number": 8,
+      "qid": "Q830807",
+      "id": "rutto-kulkue-1576",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/venetsia-yksityiskohdat-20261008/production/08-rutto-kulkue-1576/venetsia-Q830807-rutto-kulkue-1576.png",
+      "sha256": "d63e0d2fc4310bf12923e1c70168b1488eb3f9bfe2de470f85d5d3b89f675983",
+      "reason": "Vuoteen 1576 sijoittuvaan rantaan ja Piazzettaan muodostui myöhempiin metallisiin katuvalaisimiin viittaavia korkeita vihreitä lyhtypylväitä. Aikakausirajaus ei toteudu.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-6.jpg",
+    "r2Key": "julisteet/venetsia-yksityiskohdat/20261008/toimitetut-6.jpg",
+    "url": "https://media.matkakirja.app/julisteet/venetsia-yksityiskohdat/20261008/toimitetut-6.jpg",
+    "sha256": "6e076f9eb376d201caa237ab161ed88c8f2dd1f398022c846857aee0b4814f3e",
+    "bytes": 388127,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:15:21.340979+00:00"
+}

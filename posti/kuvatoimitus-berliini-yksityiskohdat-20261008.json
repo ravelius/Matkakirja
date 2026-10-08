@@ -1,0 +1,315 @@
+{
+  "task": "berliini-yksityiskohdat-20261008",
+  "routedTaskNumber": 12,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-berliini-yksityiskohdat-20261008.md",
+    "commit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+    "blob": "c98340c3adcf5ad5a8a71eb4e859eef945ebfb9e"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 2,
+  "generationCalls": 2,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 2,
+      "qid": "Q154563",
+      "id": "hautaholvi",
+      "filename": "berliini-Q154563-hautaholvi.png",
+      "file": "berliini-Q154563-hautaholvi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/berliini-yksityiskohdat-20261008/production/02-hautaholvi/berliini-Q154563-hautaholvi.png",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "c98340c3adcf5ad5a8a71eb4e859eef945ebfb9e",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in imagegen, new text-only",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original illustrative scene for a historical city guide.\nGenerate one completely NEW image from text only, without any reference image. Native 1536 x 1024 pixels, horizontal 3:2 opaque RGB sRGB PNG.\nPrimary request: an original generic vaulted burial chamber illustrating the idea of a dynastic crypt beneath a German cathedral. A quiet long aisle extends between anonymous historical closed coffins in stone and metal, seen at eye level along the aisle. This is an invented contextual interpretation, not the actual Hohenzollern crypt floor plan or any collection object.\nScene: low broad stone barrel and cross vaults, subdued grey and slate-blue surfaces, worn stone floor, simple dark oak doors far away. A small varied selection of anonymous closed stone sarcophagi and bronze/metal coffins stands on low bases to either side. Decoration is limited to your own simple abstract geometric moldings and restrained bronze or gilded edging; no identifiable actual coffin, heraldry, sculptures or portraits.\nStyle: convincing ordinary camera photograph appearance, honest material texture, quiet soft practical interior illumination, restrained muted colours. Natural exposure and falloff, no HDR or cinematic grading. The chamber remains readable at 480 pixels wide.\nComposition: horizontal landscape, central clear passage, coherent single-point perspective, no crop of the main coffins, sufficient room for whole architecture.\nConstraints: No people, faces, human remains, death masks, wax figures, child replicas, museum exhibits, identifiable real artwork, labels, readable words or numbers, inscriptions, signs, logos, image border or watermark. Do not reproduce a photograph or real museum object. No gore. The result is an AI illustration rather than documentation of a real arrangement.",
+      "viitteet": [
+        {
+          "publisher": "Berliner Dom",
+          "title": "The ‘Hohenzollern’ crypt",
+          "url": "https://www.berlinerdom.de/en/visiting/about-the-cathedral/the-hohenzollern-crypt/",
+          "type": "textResearchOnly",
+          "access": "Official operator page text read via web; no images opened or passed to generation.",
+          "notes": "91 burials, late16th–early20thcentury; stone/metal/wood coffins; reopened1March2026. Illustration uses invented layout and anonymous objects."
+        }
+      ],
+      "kuvateksti": "Tulkinta tuomiokirkon hautaholvista ja anonyymeistä historiallisista arkuista. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Lossless PNG metadata normalization only: embedded sRGB ICC plus exact Description and Source; all original RGB pixels retained.",
+        "Separate fullframe 480x320 Lanczos preview created for QA; final native image was not resized, cropped or retouched."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and fullframe480x320 viewed. Long vaulted aisle, mixed closed stone and metal coffins, oak enddoor and muted grey/blue stone read clearly.",
+          "No people, remains, masks, childfigures, museum labels, readable writing, logos, imageborder orwatermark visible.",
+          "Coffin decorations appear abstract and anonymous; no identifiable actual collection coffin reproduced. Candle illumination is an illustrative spatial choice, not evidence of the current crypt."
+        ],
+        "limitations": [
+          "Holvitila, arkkumäärä ja esineiden koristeet ovat omia yleisiä tulkintoja; kuva ei dokumentoi todellisen kryptan pohjapiirrosta tai yksittäisiä kokoelma-arkkuja."
+        ]
+      },
+      "status": "local-candidate-approved-for-delivery",
+      "scope": "local-candidate-only",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a55-a50d-7723-9d11-f341ec55040a/exec-3014ad74-e9ad-4e20-b9ad-2a995c89ca77.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/berliini-yksityiskohdat-20261008/production/02-hautaholvi/original-generation.png",
+      "originalDimensions": [
+        1536,
+        1024
+      ],
+      "originalMode": "RGB",
+      "sha256": "1707124384914be6612632a7b964fec717f710fc0491cef44900bed73a78ad60",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "RGBPixelsUnchanged": true,
+      "originalSha256": "188ff0dd16cb4614ba1b9e4c240165113729580d5885af24531c0f87db7dcdcd",
+      "mode": "RGB",
+      "opaque": true,
+      "colourSpace": "sRGB",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/berliini-yksityiskohdat-20261008/production/02-hautaholvi/qa-preview-480.png",
+      "technicalValidation": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colourSpace": "sRGB",
+        "PNGAncillaryFields": [
+          "icc_profile",
+          "Description",
+          "Source"
+        ],
+        "RGBPixelsUnchanged": true,
+        "originalPreservedByteExact": true,
+        "previewDimensions": [
+          480,
+          320
+        ],
+        "sha256Verified": true,
+        "generationCalls": 1
+      },
+      "visualReview": {
+        "task": "berliini-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q154563",
+        "file": "berliini-Q154563-hautaholvi.png",
+        "sha256": "1707124384914be6612632a7b964fec717f710fc0491cef44900bed73a78ad60",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Holvattu krypta, suljettuja anonyymejä kivi- ja metalliarkkuja, luonnollinen hämärä materiaalituntu. Ei jäänteitä, ihmisiä, kirjoitusta tai tunnistettavia yksittäisiä kokoelmaesineitä. Kuvituksellinen valaistus ja pohjaratkaisu kirjataan."
+        ],
+        "limitations": [
+          "Holvitila, arkkumäärä ja esineiden koristeet ovat omia yleisiä tulkintoja; kuva ei dokumentoi todellisen kryptan pohjapiirrosta tai yksittäisiä kokoelma-arkkuja."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:11:41.930957+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and fullframe480x320 viewed. Long vaulted aisle, mixed closed stone and metal coffins, oak enddoor and muted grey/blue stone read clearly.",
+          "No people, remains, masks, childfigures, museum labels, readable writing, logos, imageborder orwatermark visible.",
+          "Coffin decorations appear abstract and anonymous; no identifiable actual collection coffin reproduced. Candle illumination is an illustrative spatial choice, not evidence of the current crypt."
+        ],
+        "limitations": [
+          "Holvitila, arkkumäärä ja esineiden koristeet ovat omia yleisiä tulkintoja; kuva ei dokumentoi todellisen kryptan pohjapiirrosta tai yksittäisiä kokoelma-arkkuja."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/berliini-yksityiskohdat/20261008/berliini-Q154563-hautaholvi.png",
+      "url": "https://media.matkakirja.app/julisteet/berliini-yksityiskohdat/20261008/berliini-Q154563-hautaholvi.png",
+      "bytes": 2556192,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q154563",
+      "id": "sauer-urut",
+      "filename": "berliini-Q154563-sauer-urut.png",
+      "file": "berliini-Q154563-sauer-urut.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/berliini-yksityiskohdat-20261008/production/03-sauer-urut/berliini-Q154563-sauer-urut.png",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "c98340c3adcf5ad5a8a71eb4e859eef945ebfb9e",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in imagegen, new text-only",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original architectural illustration for a historical city guide.\nGenerate one completely NEW image from text only, without any reference image. Native 1536 x 1024 pixels, horizontal 3:2 opaque RGB sRGB PNG.\nPrimary request: your own architectural interpretation of a monumental German late-Romantic church organ façade of the 1905 Wilhelm Sauer era. The tall complete carved wooden organ case and ranks of vertical metal pipes dominate a church end wall. Do not replicate the actual Berlin Cathedral organ design, a museum photograph or any particular artwork.\nSubject details: monumental warm dark oak and walnut case, tiered towers and pipe fields of many graduated heights, pale silvery organ pipes with some restrained warm brass/gold accents, original geometric and foliate wood carving, restrained gilded details. No figurative statues, no portraits or copied ornaments. The console is inconspicuous and is not the focus.\nComposition: Camera in the nave at a modestly low angle but well back, wide horizontal 3:2 frame, generous visible stone wall on either side. Show the ENTIRE organ façade, including all tower tops, base and balcony, within the landscape canvas with clear breathing room. No portrait crop, no vertical image.\nStyle and light: realistic ordinary architectural camera photograph appearance, natural warm church daylight and modest practical ambient light, subdued colours, realistic wood and metal textures, gentle contrast, no HDR, no dramatic cinematic or gold-saturated grading.\nConstraints: No people, player, readable letters or numbers, scores, inscriptions, signs, logos, watermark, image border, exposed modern lighting equipment, identifiable collection art or replicated photograph. Own architectural illustration, not exact measured documentation.",
+      "viitteet": [
+        {
+          "publisher": "Berliner Dom",
+          "title": "Great ‘Sauer’ organ",
+          "url": "https://www.berlinerdom.de/en/visiting/about-the-cathedral/great-sauer-organ/",
+          "type": "textResearchOnly",
+          "access": "Official operator text read via web; no source pixels.",
+          "notes": "Designed with cathedral; inaugurated1905 with7269pipes/113registers. Original contemporary photograph/artwork not copied; own period architectural interpretation."
+        }
+      ],
+      "kuvateksti": "Oma arkkitehtoninen tulkinta vuoden 1905 Sauer-aikakauden puisesta urkufasadista. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Lossless PNG metadata normalization only: embedded sRGB ICC plus exact Description and Source; all original RGB pixels retained.",
+        "Separate fullframe 480x320 Lanczos preview created for QA; final native image was not resized, cropped or retouched."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and fullframe480x320 viewed. Whole monumental wooden organfacade and balcony are visible in landscape framing; central topfinial is close to the upperimageedge but not cropped.",
+          "Pipe ranks, original foliate/architectural woodcase and restrained gilding read clearly at480px. No people, faces, readable writing, logos, watermark orimageborder visible.",
+          "Architecture is an invented interpretation, not measuredSauerfacade documentation or modernphoto replication. Two very small dark blocks on balcony edges are unspecified equipment, not prominent exposed lightfixtures."
+        ],
+        "limitations": [
+          "Fasadin tarkat mitat, pilli- ja koristeasettelu ovat havainnollistavia; kuva ei ole todellisen urun mitattu jäljennös."
+        ]
+      },
+      "status": "local-candidate-approved-for-delivery",
+      "scope": "local-candidate-only",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a55-a50d-7723-9d11-f341ec55040a/exec-2b4d6c33-4e6e-4c65-b733-90ecac3ef2b1.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/berliini-yksityiskohdat-20261008/production/03-sauer-urut/original-generation.png",
+      "originalDimensions": [
+        1536,
+        1024
+      ],
+      "originalMode": "RGB",
+      "sha256": "04fce01059125e81794898d3b2a74496d24ba7c40db65e736c09f7f474f42dfc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "RGBPixelsUnchanged": true,
+      "originalSha256": "6bf02856b013ebc31040ae2d84b2b4ce80752d382409f08bd085f639fd2ae267",
+      "mode": "RGB",
+      "opaque": true,
+      "colourSpace": "sRGB",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/berliini-yksityiskohdat-20261008/production/03-sauer-urut/qa-preview-480.png",
+      "technicalValidation": {
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "opaque": true,
+        "colourSpace": "sRGB",
+        "PNGAncillaryFields": [
+          "icc_profile",
+          "Description",
+          "Source"
+        ],
+        "RGBPixelsUnchanged": true,
+        "originalPreservedByteExact": true,
+        "previewDimensions": [
+          480,
+          320
+        ],
+        "sha256Verified": true,
+        "generationCalls": 1
+      },
+      "visualReview": {
+        "task": "berliini-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q154563",
+        "file": "berliini-Q154563-sauer-urut.png",
+        "sha256": "04fce01059125e81794898d3b2a74496d24ba7c40db65e736c09f7f474f42dfc",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Puinen urkufasadi ja lehteri näkyvät kokonaisina; ylin koriste pysyy kuva-alassa. Pilli- ja puumateriaali erottuu 480-koossa. Ei tekstiä, ihmisiä tai korostettuja modernivalaisimia. Lehterin pienet tummat laitteet ovat näkyvissä, eivät valaisimia."
+        ],
+        "limitations": [
+          "Fasadin tarkat mitat, pilli- ja koristeasettelu ovat havainnollistavia; kuva ei ole todellisen urun mitattu jäljennös.",
+          "Lehterin reunoilla näkyy kaksi pientä tummaa laitetta; historiallinen tulkinta ei dokumentoi laitteiden alkuperää tai koko urun mittoja."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:11:41.936252+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 and fullframe480x320 viewed. Whole monumental wooden organfacade and balcony are visible in landscape framing; central topfinial is close to the upperimageedge but not cropped.",
+          "Pipe ranks, original foliate/architectural woodcase and restrained gilding read clearly at480px. No people, faces, readable writing, logos, watermark orimageborder visible.",
+          "Architecture is an invented interpretation, not measuredSauerfacade documentation or modernphoto replication. Two very small dark blocks on balcony edges are unspecified equipment, not prominent exposed lightfixtures."
+        ],
+        "limitations": [
+          "Fasadin tarkat mitat, pilli- ja koristeasettelu ovat havainnollistavia; kuva ei ole todellisen urun mitattu jäljennös."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/berliini-yksityiskohdat/20261008/berliini-Q154563-sauer-urut.png",
+      "url": "https://media.matkakirja.app/julisteet/berliini-yksityiskohdat/20261008/berliini-Q154563-sauer-urut.png",
+      "bytes": 2544912,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q151963",
+      "id": "amarnan-loyto-1912",
+      "generationCalls": 0,
+      "reason": "Explicit museum-collection-reproduction exclusion conflicts with requested identifiable Nefertiti bust. No substitute authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/berliini-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/berliini-yksityiskohdat/20261008/toimitetut-2.jpg",
+    "sha256": "151202e1de232483b0e941c66f2ef4b07061e99f67dba228338563fcd2b22991",
+    "bytes": 109756,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:12:47.176962+00:00"
+}

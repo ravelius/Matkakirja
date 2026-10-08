@@ -1,0 +1,204 @@
+{
+  "task": "ateena-yksityiskohdat-20261008",
+  "routedTaskNumber": 15,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-ateena-yksityiskohdat-20261008.md",
+    "commit": "8008ae65c42a263eab32c3fa61e108db41372852",
+    "blob": "e9290fb57a484e9677c12386e6385f84131282a5"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 6,
+  "imageCount": 1,
+  "generationCalls": 3,
+  "generationLimit": 6,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 4,
+      "qid": "Q1231816",
+      "id": "anafiotikan-yotyo",
+      "filename": "ateena-Q1231816-anafiotikan-yotyo.png",
+      "file": "ateena-Q1231816-anafiotikan-yotyo.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ateena-yksityiskohdat-20261008/production/04-anafiotikan-yotyo/ateena-Q1231816-anafiotikan-yotyo.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a72-2763-7bd3-bfd8-e73585c02cc4/exec-64f02fca-07c9-4b32-a83b-7823bf610d80.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ateena-yksityiskohdat-20261008/production/04-anafiotikan-yotyo/original-generation.png",
+      "sha256": "da1cf8892eed3fadae4656e2708c8fecd7ebf315eeda44f2e4211cd651170bcb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja Athens detail image; original historical illustration with a photographic appearance, not a documentary photograph.\nPrimary request: Create exactly one entirely new image from this text alone: an imaginative but restrained night-building scene showing anonymous islander craftsmen from Anafi constructing their own tiny stone dwelling beneath the Acropolis in the middle of the nineteenth century. Do not assign an exact year or decade. The scene is our own spatial interpretation, not a replica of present-day Anafiotika houses or any photograph or artwork.\nScene/backdrop: A narrow rough ledge immediately against the large natural limestone cliff of the Acropolis. The cliff itself occupies the whole background, with just an old plain fortification-wall silhouette along its upper edge and a small strip of dark sky. There is NO distant city view, NO horizon of houses, NO modern building, NO finished neoclassical facade: the close cliff physically blocks any view beyond this little building site. A modest moon and only a few faint stars above the cliff, not a fantasy starfield.\nSubject: Exactly six anonymous fully clothed adult island craftsmen seen from behind or far enough away with heads lowered that faces have no readable features. Some carry rough stones and a clay or wooden mortar container, two lay stone and lime mortar into the wall, another bends over a small stone pile. They wear simple traditional nineteenth-century Cycladic island work clothes: off-white linen shirts, dark plain waistcoats, loose baggy trousers, waist sashes, and simple soft caps or headscarves; subdued worn fabric, no modern clothing, brands, uniforms, helmets or identifiable individual likenesses. Their quiet coordinated work is the point; no face portrait.\nHouse: The main foreground subject is one small unfinished low cubic dwelling with rough natural stone and lime-mortar walls, a simple unfinished opening for a door, and no roof yet. The sides are squat and nearly square, intended for a flat roof. A small part of one wall has fresh dull white limewash, most remains bare stone. No glass window grid, decorative balcony, manufactured concrete blocks, modern cement, electrical fitting, roof tiles or modern house exterior. A few plain stones and unmarked clay/wood containers lie beside the work. Two modest oil lamps in simple pre-electric lanterns light the nearby masonry and hands; no electricity or floodlights.\nComposition/framing: Horizontal 3:2 landscape at native 1536x1024. Eye-level three-quarter side view from about eight metres away, six men gathered around the small roofless dwelling in the centre and lower middle. People occupy modest parts of the overall scene and their heads remain back-facing, dark and indistinct. The masonry, lantern light and workers must read clearly in a full-frame 480-pixel preview. The big cliff fills the background, preventing any city architecture from appearing.\nStyle/medium: Believable real-camera appearance of an imagined historical scene, photographic rough stone, linen and lime texture, restrained available-light night exposure. Natural gentle moonlight plus dim practical oil-flame illumination, realistic soft shadows and modest low-light grain. Muted grey limestone, off-white cloth, dark brown waistcoats, tiny warm lamp highlights. Quiet scene, no cinematic blue-orange grading, no HDR, no painting or drawing, no theatrical spotlights, no glossy CGI.\nConstraints: Exactly one opaque RGB sRGB PNG at native 1536x1024. Entirely text-only generation, no reference/source pixels. No readable words, letters, numbers, symbols, inscriptions, logos, signs, watermarks, overlays, label, frame or border. No recognizable faces, no actual historical or living person's likeness, no nude bodies, blood or violence. No modern buildings, vehicles, electricity, electric lights, modern tools, modern scaffolds, plastic buckets, tourists or contemporary clothing.",
+      "viitteet": [
+        {
+          "publisher": "The Official Athens Guide / City of Athens",
+          "title": "10 Must Do Athenian Experiences – Find the Greek islands in Anafiotika",
+          "url": "https://www.thisisathens.org/arts-entertainment/sightseeing/10-must-do-experiences",
+          "type": "textResearchOnly",
+          "notes": "Official text states mid-nineteenth-century foundation by stonemasons from Anafi and that they built whitewashed family dwellings at night. Used as text research only, no pixels.",
+          "access": "2026-10-08; official text opened successfully"
+        },
+        {
+          "publisher": "Visit Greece / Greek National Tourism Organisation",
+          "title": "Anafi",
+          "url": "https://www.visitgreece.gr/en/islands/Cicladi/Anafi",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text states Anafi craftsmen migrated to Athens in the 1860s and built Anafiotika at the foot of the Acropolis. This conflicts with the order’s 1830–1840s; root authorised the broader mid-nineteenth-century interpretation with no exact decade assertion.",
+          "access": "2026-10-08; official full search text returned; direct open timed out. No imagery viewed or used."
+        }
+      ],
+      "kuvateksti": "Anafiotikan 1800-luvun rakentamista havainnollistava yökohtaus Akropoliin kallion juurella. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Final PNG saved losslessly with only sRGB ICC, Description and Source metadata; RGB pixel bytes verified unchanged.",
+        "Separate full-frame 480x320 QA preview created; final not resized or cropped."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 RGB output and full-frame 480x320 preview inspected.",
+          "Six anonymous men wear simple traditional islander-style clothes and are seen from the rear, heads lowered or too indistinct for readable identity features.",
+          "Unfinished low rough-stone cubic house has bare masonry, partial dull whitewash and no roof; workers, masonry and two oil lanterns read at 480px.",
+          "Close limestone cliff and old wall silhouette block any modern city view. No modern building, electric illumination, modern vehicle, signage, readable text, logo, watermark, border, nudity, blood or violence seen.",
+          "Natural available-light night appearance; some detail necessarily remains in shadow at the smaller preview."
+        ],
+        "limitations": [
+          "Original order says 1830–1840s, whereas Visit Greece Anafi text specifies 1860s; Official Athens Guide uses mid-nineteenth century. Root resolved the discrepancy before generation by authorising a general mid-nineteenth-century night-building interpretation without a precise decade.",
+          "Anonymous figures, clothing and unfinished house layout are original illustrative interpretations, not a documented individual night or surviving house replica.",
+          "The exact house plan, six individuals, oil lantern forms, wall silhouette and single moonlit night are illustrative choices; this is not an authenticated historical scene."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "sourceCommit": "8008ae65c42a263eab32c3fa61e108db41372852",
+      "sourceBlob": "e9290fb57a484e9677c12386e6385f84131282a5",
+      "sourceImagePixelsUsed": false,
+      "preflightResolution": {
+        "issue": "Construction dating differs from exact original order",
+        "resolution": "Root authorised broad mid-nineteenth-century night-building interpretation, no 1830–1840 decade assertion",
+        "resolvedBeforeGeneration": true
+      },
+      "originalSha256": "f3c4a4d7c90477c72884e9107e4ed746e6959d9fb9144e102ef1a31af9e161f8",
+      "preservedOriginalSha256": "f3c4a4d7c90477c72884e9107e4ed746e6959d9fb9144e102ef1a31af9e161f8",
+      "rgbPixelsSha256": "af05650a9996e0aa419610d29f6a8a8e76c7f6a784c712e221d6bee5a5a9c220",
+      "mode": "RGB",
+      "preview480Path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ateena-yksityiskohdat-20261008/production/04-anafiotikan-yotyo/preview-480.png",
+      "visualReview": {
+        "task": "ateena-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1231816",
+        "file": "ateena-Q1231816-anafiotikan-yotyo.png",
+        "sha256": "da1cf8892eed3fadae4656e2708c8fecd7ebf315eeda44f2e4211cd651170bcb",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kuutta selin/epäselvästi näkyvää anonyymiä rakentajaa, keskeneräinen matala kivitalo ja kaksi öljylyhtyä kallion juurella. Aikakausi rajattu yleiseksi1800-luvun keskivaiheeksi. Ei modernia kaupunkikuvaa, tekstiä tai tunnistettavia kasvoja."
+        ],
+        "limitations": [
+          "Original order says 1830–1840s, whereas Visit Greece Anafi text specifies 1860s; Official Athens Guide uses mid-nineteenth century. Root resolved the discrepancy before generation by authorising a general mid-nineteenth-century night-building interpretation without a precise decade.",
+          "Anonymous figures, clothing and unfinished house layout are original illustrative interpretations, not a documented individual night or surviving house replica.",
+          "The exact house plan, six individuals, oil lantern forms, wall silhouette and single moonlit night are illustrative choices; this is not an authenticated historical scene."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:19:37.845039+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 RGB output and full-frame 480x320 preview inspected.",
+          "Six anonymous men wear simple traditional islander-style clothes and are seen from the rear, heads lowered or too indistinct for readable identity features.",
+          "Unfinished low rough-stone cubic house has bare masonry, partial dull whitewash and no roof; workers, masonry and two oil lanterns read at 480px.",
+          "Close limestone cliff and old wall silhouette block any modern city view. No modern building, electric illumination, modern vehicle, signage, readable text, logo, watermark, border, nudity, blood or violence seen.",
+          "Natural available-light night appearance; some detail necessarily remains in shadow at the smaller preview."
+        ],
+        "limitations": [
+          "Original order says 1830–1840s, whereas Visit Greece Anafi text specifies 1860s; Official Athens Guide uses mid-nineteenth century. Root resolved the discrepancy before generation by authorising a general mid-nineteenth-century night-building interpretation without a precise decade.",
+          "Anonymous figures, clothing and unfinished house layout are original illustrative interpretations, not a documented individual night or surviving house replica.",
+          "The exact house plan, six individuals, oil lantern forms, wall silhouette and single moonlit night are illustrative choices; this is not an authenticated historical scene."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/ateena-yksityiskohdat/20261008/ateena-Q1231816-anafiotikan-yotyo.png",
+      "url": "https://media.matkakirja.app/julisteet/ateena-yksityiskohdat/20261008/ateena-Q1231816-anafiotikan-yotyo.png",
+      "bytes": 2779291,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q395367",
+      "id": "ostrakon-themistokles",
+      "generationCalls": 0,
+      "reason": "Brief demands a clearly readable Greek personal name on a specific museum ostrakon, conflicting with no-readable-text and no-museum-reproduction conditions."
+    },
+    {
+      "number": 2,
+      "qid": "Q208811",
+      "id": "hopeamitali-1896",
+      "generationCalls": 0,
+      "reason": "Brief demands the specific1896Olympic medal as a museum-collection object replica; no substitute medal authorised."
+    },
+    {
+      "number": 3,
+      "qid": "Q242741",
+      "id": "karyatidin-kampaus",
+      "generationCalls": 0,
+      "reason": "Brief demands recognisable original Caryatid museum sculpture hair-detail reproduction; no generic substitution authorised."
+    },
+    {
+      "number": 5,
+      "qid": "Q1357713",
+      "id": "athene-kallio-varis",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ateena-yksityiskohdat-20261008/production/05-athene-kallio-varis/ateena-Q1357713-athene-kallio-varis.png",
+      "sha256": "972943cc1099bd2962a02ee38e37e6f7029e7ac94e1d70bbddf528df34b06014",
+      "reason": "Akropoliin alapuolelle vasempaan alareunaan muodostui myöhempiä monikerroksisia valkoisia rakennuksia. Antiikin myyttikohtauksen aikakausirajaus ei toteudu.",
+      "R2Delivered": false
+    },
+    {
+      "number": 6,
+      "qid": "Q372717",
+      "id": "triton-tuulilippu",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ateena-yksityiskohdat-20261008/production/06-triton-tuulilippu/ateena-Q372717-triton-tuulilippu.png",
+      "sha256": "ac68b29bcf83aa9ad52ecd40414768e136e667aa8d31d51b9c34da3f7ffa582c",
+      "reason": "Antiikin Tuulien tornin taustalle oikeaan reunaan muodostui uusklassinen monikerroksinen ikkunajulkisivu. Se ei sovi tilattuun antiikin ympäristöön.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-1.jpg",
+    "r2Key": "julisteet/ateena-yksityiskohdat/20261008/toimitetut-1.jpg",
+    "url": "https://media.matkakirja.app/julisteet/ateena-yksityiskohdat/20261008/toimitetut-1.jpg",
+    "sha256": "c13d7aeae2559417fc89ba01f2ac9a1d4a27f9abb3894e6850f421a34801b644",
+    "bytes": 68767,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:19:41.786156+00:00"
+}
