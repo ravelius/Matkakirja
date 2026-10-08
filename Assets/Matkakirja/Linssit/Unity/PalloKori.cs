@@ -694,7 +694,10 @@ namespace Matkakirja.Natiivi
                 liekkiMat = new Material(sh); r.sharedMaterial = liekkiMat;
             }
             bool nakyy = l > 0.01f;
-            if (liekki.activeSelf != nakyy) liekki.SetActive(nakyy);
+            // PT 22.35 (LS2:n kuvapari c104d5aa2): kuvan yläreunan liekki näkyi alas katsottaessa sumeana läiskänä kaupungin päällä.
+            // Poltin on silmän yläpuolella, joten liekki näkyy vain kuvun liekkinä polttimien kohdalla (ylös katsottaessa); ruudun
+            // yläreunan liekkikuva pois. Valo korin reunaan pysyy.
+            if (liekki.activeSelf) liekki.SetActive(false);
             if (kupuLiekki != null && kupuLiekki.activeSelf != nakyy) kupuLiekki.SetActive(nakyy);
             if (!nakyy) return;
             // Liekin juuri kuvan yläreunassa keskellä, kieli nousee kuvan ulkopuolelle (kamera katsoo eteen, poltin on yläpuolella).
@@ -729,7 +732,9 @@ namespace Matkakirja.Natiivi
         bool variKopio; Camera variKopioKamera;
         void PaivitaVareily()
         {
-            bool tarvitaan = poltin.Taso > 0.001 && koosteMat != null && perus != null;
+            // Väreily vain, kun katse on noussut (poltin ja sen yläpuoli näkyvissä); alas katsottaessa ei (PT 22.35).
+            float katseella = Mathf.Clamp01((KatseYlos - 15f) / 20f);
+            bool tarvitaan = poltin.Taso > 0.001 && katseella > 0f && koosteMat != null && perus != null;
             if (tarvitaan != variKopio)
             {
                 if (tarvitaan) { VariKuvanTarve.Pyyda(perus); variKopioKamera = perus; }
@@ -737,7 +742,7 @@ namespace Matkakirja.Natiivi
                 variKopio = tarvitaan;
             }
             // Ensimmäisessä ruudussa kopiota ei vielä ole: väreily alkaa vasta seuraavasta (taso nousee 0,15 s:ssa joka tapauksessa).
-            if (koosteMat != null) koosteMat.SetFloat(IdVareily, variKopio ? (float)poltin.Taso : 0f);
+            if (koosteMat != null) koosteMat.SetFloat(IdVareily, variKopio ? (float)poltin.Taso * katseella : 0f);
         }
 
         void EnnenPiirtoa(ScriptableRenderContext _, Camera c)

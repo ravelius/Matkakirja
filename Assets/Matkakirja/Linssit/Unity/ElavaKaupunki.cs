@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Näkyvillä olevan paketin krediitti (null = ei elävää kaupunkia).</summary>
         public static string Krediitti { get; private set; }
         public static ElavaKaupunki Nykyinen { get; private set; }
-        public const float NakyvaM = 6000f, ParviNakyvaM = 1500f, PallotSadeM = 3500f, PalloLahinM = 120f;
+        public const float NakyvaM = 6000f, ParviNakyvaM = 1500f, PallotSadeM = 3500f, PalloLahinM = 400f;   // PT 22.35: muut pallot vähintään 400 m:n päässä kamerasta
         /// <summary>Paketit (id, origo): lisätään, kun tyokalut/elava_kaupunki.py on ajettu kaupungille.</summary>
         static readonly (string Id, double Lat, double Lon, double SadeM)[] Paketit = { ("tukholma", 59.3299, 18.07382, 15000) };
 
