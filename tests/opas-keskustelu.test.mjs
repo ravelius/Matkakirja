@@ -150,3 +150,38 @@ test('/opas/liiku: väärä sijainti kaupungin kanssa (omistaja TF 152, Sydney +
     assert.ok((await v.json()).kohteet.length >= 2, 'kohteet Venetsian säteeltä, ei Kööpenhaminan');
   });
 });
+
+// KULUSUUNNITELMA K4 (8.10.2026): valmiin kysymyksen vastaus kerran per paikka, kaikille; vapaa teksti aina mallilta.
+const kysymykset = (env) => worker.fetch(new Request('https://pollo.example/opas/kysymykset?paikka=Q1&nimi=Canal%20Grande&kaupunki=Venetsia',
+  { headers: H() }), env, { waitUntil() {} }).then((v) => v.json());
+const kysyMallille = () => mallikutsut.filter((x) => x.includes('Olet Matkakirja-pelin kertoja')).length;   // KESKUSTELU_KEHOTE
+
+test('K4: valmis kysymys → mallille kerran, toinen kysyjä saa saman vastauksen R2:sta (ääni samasta tekstistä)', async () => {
+  await aja(async () => {
+    const { env, r2 } = ymparisto();
+    const lista = (await kysymykset(env)).kysymykset;
+    assert.ok(lista.includes('Mitä sillalta näkee?'));
+    const eka = await kysy(env, 'Mitä sillalta näkee?');
+    assert.equal(kysyMallille(), 1);
+    assert.ok([...r2.keys()].some((k) => decodeURIComponent(k).includes('opas:kysyvastaus:')), 'vastaus talteen');
+    const toka = await kysy(env, '  mitä sillalta NÄKEE? ', { 'cf-connecting-ip': '10.8.0.2' });
+    assert.equal(kysyMallille(), 1, 'toinen kysyjä ei kutsu mallia');
+    assert.equal(toka.status, 200);
+    assert.deepEqual({ ...toka.d, aani: null, aani_pcm: null }, { ...eka.d, aani: null, aani_pcm: null });
+    assert.equal(toka.d.aani, eka.d.aani, 'sama ääni-url (sama teksti → sama tiiviste)');
+  });
+});
+
+test('K4: vapaa kysymys aina mallille; testiliikenne ei kirjoita valmista vastausta', async () => {
+  await aja(async () => {
+    const { env, r2 } = ymparisto();
+    await kysymykset(env);
+    await kysy(env, 'Miksi täällä ei ole autoja?');
+    await kysy(env, 'Miksi täällä ei ole autoja?');
+    assert.equal(kysyMallille(), 2, 'vapaa teksti ei ole valmis kysymys');
+    await kysy(env, 'Kuka rakensi tämän sillan?', { 'x-matkakirja-testitunnus': 'tt' });
+    assert.ok(![...r2.keys()].some((k) => decodeURIComponent(k).includes('opas:kysyvastaus:')), 'testi ei kirjoita');
+    await kysy(env, 'Kuka rakensi tämän sillan?');
+    assert.equal(kysyMallille(), 4);
+  });
+});

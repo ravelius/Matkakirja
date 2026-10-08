@@ -3354,6 +3354,28 @@ async function oppaanRajatYlittyvat(pyynto, env, kors, ctx) {
   return null;
 }
 
+/*
+ * VALMIIN KYSYMYKSEN VASTAUS KAIKILLE (kulusuunnitelma K4, 8.10.2026): Kysy-listan valmis kysymys (esittelyn 5 tai paikan
+ * generoidut, GET /opas/kysymykset) vastataan kerran per paikka ja kehoteversio; vastaus, toiminto ja jatkot R2:ssa 30 vrk
+ * ja ääni samasta tekstistä (opas/<sha>.mp3), joten toinen kysyjä ei maksa mallia eikä ääntä. Vapaa teksti (mikrofoni,
+ * näppäimistö) kysytään aina mallilta. Keskusteluhistoria ei vaikuta valmiin kysymyksen vastaukseen. Testiliikenne lukee
+ * talletetun mutta ei kirjoita (sen vastaus voi olla testimallin).
+ */
+const kysymysNormaali = (t) => String(t ?? '').trim().toLowerCase().replace(/\s+/g, ' ');
+async function valmiinKysymyksenAvain(env, p) {
+  if (!p.kaupunki || !p.paikka?.id || !p.kysymys || !env.PUHE_R2) return null;
+  const haettu = kysymysNormaali(p.kysymys);
+  const valmis = valmisKohde(await oppaanEsittely(env, p.kaupunki), p.paikka.id);
+  let lista = Array.isArray(valmis?.kysymykset) ? valmis.kysymykset : [];
+  if (!lista.some((k) => kysymysNormaali(k) === haettu)) {
+    lista = await pysyvaLue(env.PUHE_R2, kysymysAvain(p.paikka.id)).then((x) => (x ? JSON.parse(x) : [])).catch(() => []);
+  }
+  if (!Array.isArray(lista) || !lista.some((k) => kysymysNormaali(k) === haettu)) return null;
+  const tiiviste = async (t) => sha256Heksa(new TextEncoder().encode(t));
+  const versio = (await tiiviste(KESKUSTELU_KEHOTE)).slice(0, 8);
+  return `opas:kysyvastaus:${versio}:${kysymysNormaali(p.kaupunki)}:${p.paikka.id}:${(await tiiviste(haettu)).slice(0, 16)}`;
+}
+
 /** POST /opas/kysy: oppaan keskustelu (Kysy-siru, mikrofoni, näppäimistö) → vastaus + ääni + toiminto + 2 jatkoa. */
 async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
@@ -3367,6 +3389,17 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
     console.log(`opas: kysy → suodatin (${turva.tyyppi})`);
     return vastaa({ teksti: turva.teksti, aani: null, aani_pcm: null, aani_taajuus: null, kesto_s: null, toiminto: null,
       kysymykset: TURVA_JATKOT }, kors);
+  }
+  const valmisAvain = await valmiinKysymyksenAvain(env, p).catch(() => null);
+  if (valmisAvain) {
+    const talletettu = await pysyvaLue(env.PUHE_R2, valmisAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null);
+    if (talletettu?.teksti) {
+      const aani = await oppaanAani(pyynto, env, ctx, talletettu.teksti, kehittajaOhitus(pyynto, env)).catch(() => null);
+      console.log(`opas: kysy → valmis vastaus (${talletettu.toiminto?.tyyppi ?? 'vastaus'}), ääni ${aani ? 'kyllä' : 'ei'}`);
+      return vastaa({ teksti: talletettu.teksti, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null,
+        aani_taajuus: aani?.aani_taajuus ?? null, kesto_s: aani?.kesto_s ?? null, toiminto: talletettu.toiminto ?? null,
+        kysymykset: talletettu.kysymykset ?? [] }, kors);
+    }
   }
   try {
     const kaupunkiPiste = p.kaupunki ? await kaupunginSijainti(fetch, p.kaupunki).catch(() => null) : null;
@@ -3410,6 +3443,12 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
     } else if (['kierros', 'tauko', 'jatka'].includes(j.toiminto)) toiminto = { tyyppi: j.toiminto };
     const aani = await oppaanAani(pyynto, env, ctx, j.teksti, kehittajaOhitus(pyynto, env)).catch(() => null);
     console.log(`opas: kysy → ${toiminto?.tyyppi ?? 'vastaus'}, ääni ${aani ? 'kyllä' : 'ei'}`);
+    const testi = env.KULU_LUOKKA === 'testi' || pyynto.headers.has(TESTI_OTSAKE) || testitunnusOhitus(pyynto, env);
+    if (valmisAvain && !testi) {
+      const kirjoitus = pysyvaKirjoita(env.PUHE_R2, valmisAvain, JSON.stringify({ teksti: j.teksti, toiminto, kysymykset: j.jatkot }),
+        KESKUSTELU_TTL_S).catch(() => {});
+      if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
+    }
     return vastaa({ teksti: j.teksti, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null,
       aani_taajuus: aani?.aani_taajuus ?? null, kesto_s: aani?.kesto_s ?? null, toiminto, kysymykset: j.jatkot }, kors);
   } catch (virhe) {
