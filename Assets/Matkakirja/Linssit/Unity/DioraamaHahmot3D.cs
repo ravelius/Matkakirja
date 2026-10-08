@@ -103,7 +103,6 @@ namespace Matkakirja.Natiivi
             public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen; public Quaternion IrrallinenKierto = Quaternion.identity;
             /// <summary>Jalat maahan Final IK Grounderilla (seikkailun kävelevät hahmot; omistaja 8.10.).</summary>
             public bool IrrallinenJalat;
-            public float JuuriY = float.NaN, JuuriYNopeus;
         }
 
         /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),

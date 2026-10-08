@@ -58,8 +58,6 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Seikkailun jalat: Grounder vain tätä lähempänä kameraa (iPadin suoritin; kaukana jalat eivät erotu).</summary>
         public const float JalatMaxM = 22f;
-        /// <summary>Kävelijän juuren korkeuden pehmennys (s): NavMeshin korkeusheitto ei näy jaloissa.</summary>
-        public const float JuuriPehmennysS = 0.15f;
 
         /// <summary>
         /// SEIKKAILUN KÄVELIJÖIDEN JALAT (omistaja 8.10. klo 19.1x: jalat maassa portailla ja kivillä; LisaaIrrallinen(jalat: true)):
@@ -69,14 +67,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void IkJalat(Esiintyma e, string leike)
         {
-            if (e.Juuri == null || e.Isa == null) return;
-            // Juuren korkeus pehmennettynä (LS2:n Grounder-testi 8.10.: NavMeshAgentin Y heittelee 7–12 cm tasaisellakin, ja Grounder
-            // veti tukijalan takaisin footSpeed-vauhdilla = ponnahdus keskellä tukivaihetta). Jalat hoitaa Grounder; juuri liukuu.
-            float y = e.Isa.position.y;
-            if (float.IsNaN(e.JuuriY) || Mathf.Abs(e.JuuriY - y) > 1f) { e.JuuriY = y; e.JuuriYNopeus = 0f; }
-            e.JuuriY = Mathf.SmoothDamp(e.JuuriY, y, ref e.JuuriYNopeus, JuuriPehmennysS, Mathf.Infinity, Mathf.Max(Time.deltaTime, 1e-4f));
-            var jp = e.Isa.position; jp.y = e.JuuriY; e.Juuri.transform.position = jp;
-            if (!IkPaalla) return;
+            // Juuren korkeutta ei pehmennetä (LS2:n A/B 8.10.: pehmennetty juuri jäi askelmasta jälkeen, kantapää 3,1 → 10,4 cm).
+            if (!IkPaalla || e.Juuri == null) return;
             var kam = Camera.main;
             if (kam != null && (kam.transform.position - e.Juuri.transform.position).sqrMagnitude > JalatMaxM * JalatMaxM) return;
             if (e.Ik == null)
