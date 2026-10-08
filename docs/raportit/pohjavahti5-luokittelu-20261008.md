@@ -45,3 +45,13 @@ Yleisimmät: paperinvalkoiset rgba(255,250–253,238–245, 0,25–0,9) → tk-p
 #e9faf0 ja #eafff3 → tk-lasi-avaruus-muste (ΔE 2,2–2,9); ruskeanharmaat tekstit (rgb 128–200) → muted, sea-ink tai harmaan teeman
 vakiot (ΔE 5–9). Ehdotus: ΔE < 3 tokeneiksi suoraan (kuulto-tokeneina), 3–10 pinta kerrallaan omistajan katselmoinnilla. Osa voi
 olla tarkoituksellisia (esim. ISS-kyydin punainen piste ja työhuoneen valmis-tagi #e2efdc); merkitse ne, niin siirrän erikoistokeneiksi.
+
+## Päätoimittajan päätös ja pohjavahti 6 (8.10.2026)
+
+Päätoimittaja kuittasi junaan 169 eef13ea8e:n ja PR #4222:n sekä hyväksyi ehdotuksen: ΔE < 3 suoraan tokeneiksi, ΔE 3–10 pinta kerrallaan
+värinäytteillä ennen muutosta.
+
+- Proto e9c9de7a3 (eef13ea8e:n päällä) ja web-PR #4223 (pinottu #4222:n päälle): 54 arvoa / 94 deklaraatiota lähimpään tokeniin omalla
+  alfalla; 34 uutta kuulto-tokenia; pahin ΔE 2,94. Testit 953/419/448, tarkista.sh 0.
+- ΔE 3–10 pinnoittain (kaappaukset/pohjavahti6-20261008/<pinta>.png; arvoja / deklaraatioita): Linssit 15/22, Lehti 14/19, Matkakirja 11/16,
+  Kartta 8/9, Kysymys 3/3, Pulu 3/3, Kohdekartta 2/3, Sahke 1/1, Sahketehtava 1/1.
