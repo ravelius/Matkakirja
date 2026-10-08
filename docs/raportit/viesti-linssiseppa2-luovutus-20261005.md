@@ -35,7 +35,15 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. myöhäisilta (uusin)
+## TILA 8.10. yö (uusin)
+- Kappelin kytkentä 950532c9b MERGETTY (Siirtoseppä teki saumakorjauksen 26f558be); worktreet poistettu.
+- M-OSA: proto linssiseppa2/m-osa 67344b937 (historia-m a2077efce päällä), worktree wt/proto-linssiseppa2-m-osa:
+  b20c18c8d MOsaRajatTestit (12) + 3 Kiipeily-korjausta MOsa.cs:ään; 67344b937 Ydin Pako + Komero (+.meta), PakoJaKomeroTestit (6),
+  SeikkailuPako/SeikkailuKomero kytketty (pakon myöhästymisjumi korjattu). 908/908, tarkistus 0. SHA Siirtosepälle + PT.
+  Avoin rajapinta: SeikkailuVartijat-tapa piilottaa rannan vartijat uudelleen (UusiYritys) — Siirtosepän päätös.
+- ODOTTAA: Linnanrakentajan reitti:pelaaja-21… (pyydetty) → huonesimulaatio huoneille 6–10 (Huonesimulaatio.cs + Thief-ajuri).
+
+## TILA 8.10. myöhäisilta
 - KAPPELIN KYTKENTÄ (Siirtoseppä antoi, juna 165): proto linssiseppa2/kappeli-kytkenta 950532c9b (historia-valot 6f41c3396 + kappeli-vaiheet),
   worktree wt/proto-linssiseppa2-kappeli-kytkenta. SeikkailuKappeli.Arvoitus seuraa vaiheita, Havaitse joka kehys, tallennus + Pulun edistys.
   Malli: kiinni kuten Unityssa. 882/882, tarkistus 0. SHA Siirtosepälle. Löydös: Kynttilat.SaumatNakyvat ei katso alttarikynttilöitä.
