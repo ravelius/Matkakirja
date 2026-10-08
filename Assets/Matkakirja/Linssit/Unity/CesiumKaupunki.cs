@@ -699,7 +699,14 @@ namespace Matkakirja.Natiivi
             {
                 var c = reittikamerat[i];
                 if (c == null || hallinta == null) continue;
-                if (i < maara) { Suuntaa(c, nakymat[i]); if (!hallinta.additionalCameras.Contains(c)) hallinta.additionalCameras.Add(c); }
+                if (i < maara)
+                {
+                    Suuntaa(c, nakymat[i]);
+                    // Puolikas tarkkuus (video2 8.10.: neljä täyttä näkymää eivät latautuneet 30 s:n pysähdyksessä, lähtö 76 %:ssa):
+                    // lennossa riittää karkeampi laatta, kunhan reikiä ei jää.
+                    var r = c.pixelRect; c.pixelRect = new Rect(r.x, r.y, Mathf.Max(8f, r.width * ReittiSkaala), Mathf.Max(8f, r.height * ReittiSkaala));
+                    if (!hallinta.additionalCameras.Contains(c)) hallinta.additionalCameras.Add(c);
+                }
                 else hallinta.additionalCameras.Remove(c);
             }
         }
@@ -711,6 +718,7 @@ namespace Matkakirja.Natiivi
         }
 
         readonly List<Camera> reittikamerat = new List<Camera>();
+        public const float ReittiSkaala = 0.5f;
 
         /// <summary>Piilokamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
         void Suuntaa(Camera kam, Kuvakulma k)

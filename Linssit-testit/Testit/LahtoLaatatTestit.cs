@@ -114,6 +114,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(suurinAskel <= 0.05 / OpasSilmukka.KorostusS + 1e-9, $"ei yhden ruudun sammutusta (askel {suurinAskel:F3})");
         }
 
+        // Video2 8.10.: 1. lento lähti 61 %:ssa samassa ruudussa, jossa seuraava tuli (aste oli vielä edellisen näkymän 100 %).
+        [Testi] static void LatausasteeseenLuotetaanVastaMittausajanJalkeen()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var p = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => p.Add((n, t));
+            s.Aloita("Kööpenhamina");
+            s.LatausEdistys = () => 1.0;
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            double t = 0;
+            for (int i = 0; i < 100 && s.Vaihe != OpasVaihe.Lentaa; i++) { s.Paivita(0.05, _ => 5); t += 0.05; }
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa, "lähti");
+            Oleta.Tosi(t >= OpasSilmukka.LahtoMittausS - 1e-9, $"ei ennen mittausaikaa ({t:F2} s)");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);
@@ -126,8 +141,9 @@ namespace Matkakirja.Linssit.Testit
             // Lennon puolivälissä vain edessä olevat.
             LahtoAika(s);
             while (s.Vaihe == OpasVaihe.Lentaa && s.VaiheAika < s.LentoKestoS * 0.45) s.Paivita(0.05, _ => 5);
-            int m = s.ReittiEsilataus(_ => 5, ulos);
-            Oleta.Tosi(m == 2, $"lennon puolivälissä 2 näkymää edessä ({m})");
+            int m = s.ReittiEsilataus(_ => 5, ulos), edessa = 0;
+            foreach (var t in OpasSilmukka.ReittiNaytteet) if (t > s.VaiheAika / s.LentoKestoS) edessa++;
+            Oleta.Tosi(m == edessa && m < n, $"lennossa vain edessä olevat ({m}/{edessa})");
             // Perillä (puhe) ilman seuraavaa: ei reittiä.
             for (int i = 0; i < 400 && s.Vaihe == OpasVaihe.Lentaa; i++) s.Paivita(0.05, _ => 5);
             Oleta.Sama(0, s.ReittiEsilataus(_ => 5, ulos), "perillä ilman seuraavaa: 0");

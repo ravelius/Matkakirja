@@ -190,7 +190,11 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public const double LahtoValmis = 0.98, LahtoOdotusMaxS = 5, LahtoPelaajaMaxS = 2;
         /// <summary>Reitin esilatausnäkymät lennon osuuksina (0 = lähtö, 1 = perillä; perillä on esikamera).</summary>
-        public static readonly double[] ReittiNaytteet = { 0.15, 0.35, 0.55, 0.75 };
+        public static readonly double[] ReittiNaytteet = { 0.15, 0.4, 0.65 };
+        /// <summary>Latausaste kertoo uusien kameroiden laatoista vasta tämän jälkeen (video2 8.10. 07.5x: 1. lento lähti 61 %:ssa
+        /// samassa ruudussa, jossa seuraava tuli — aste oli vielä edellisen näkymän 100 %).</summary>
+        public const double LahtoMittausS = 0.5;
+        OpasKohde seuraavaMitattu; double seuraavaIka;
         double lahtoOdotusS;
         bool ohitettu;
         /// <summary>
@@ -912,6 +916,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && (Nykyinen ?? edellinen) is OpasKohde nk && !nk.OdottaaValintaa && !Pysaytetty) UusiPyynto();
             }
 
+            if (!ReferenceEquals(Seuraava, seuraavaMitattu)) { seuraavaMitattu = Seuraava; seuraavaIka = 0; } else seuraavaIka += Math.Max(0, dt);
             double korTavoite = KorostusKohteella && !LahtoValmisteilla ? 1 : 0;
             KorostusOsuus = korTavoite > KorostusOsuus ? Math.Min(korTavoite, KorostusOsuus + Math.Max(0, dt) / KorostusS)
                 : Math.Max(korTavoite, KorostusOsuus - Math.Max(0, dt) / (korostusPika ? KorostusPikaS : KorostusS));
@@ -1131,7 +1136,7 @@ namespace Matkakirja.Linssit.Kierros
             if (LatausEdistys == null || PakotaSiirto || Seuraava == null || VapaaTila) return true;
             double matka = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, Seuraava.Lat, Seuraava.Lon);
             if (matka >= SiirtoRajaM || matka < 50) return true;
-            if (LatausEdistys() >= LahtoValmis || lahtoOdotusS >= (ohitettu || toiveesta ? LahtoPelaajaMaxS : LahtoOdotusMaxS)) return true;
+            if ((seuraavaIka >= LahtoMittausS && LatausEdistys() >= LahtoValmis) || lahtoOdotusS >= (ohitettu || toiveesta ? LahtoPelaajaMaxS : LahtoOdotusMaxS)) return true;
             lahtoOdotusS += Math.Max(0, dt);
             return false;
         }

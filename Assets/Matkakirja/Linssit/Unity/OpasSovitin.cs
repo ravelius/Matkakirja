@@ -465,6 +465,12 @@ namespace Matkakirja.Natiivi
             // Reitin välinäkymät (Päätoimittaja 8.10. 07.4x: sumea kortteli lennon alussa); 0 näkymää → reittikamerat pois.
             kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
             EsilataaKortit();
+            // Lähdön valmistelu lokiin kerran sekunnissa (laattaodotuksen säätö).
+            if (silmukka.LahtoValmisteilla && Time.realtimeSinceStartup - lahtoLokiAika >= 1f)
+            {
+                lahtoLokiAika = Time.realtimeSinceStartup;
+                o.Kirjaa($"opas: lähtö valmisteilla {silmukka.Seuraava?.Nimi}, laatat {kaupunki.Latausaste:F0} %, korostus {silmukka.KorostusOsuus:F2}, reittikameroita {silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat)}");
+            }
         }
 
         readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length];
@@ -623,6 +629,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Seuraavan kohteen (lennossa nykyisen) yksityiskohtakuvat tekstuureiksi valmiiksi (YksityiskohtaKortti.Esilataa).</summary>
         string esiKortitId;
+        float lahtoLokiAika;
         void EsilataaKortit()
         {
             var k = silmukka.Vaihe == OpasVaihe.Lentaa ? silmukka.Nykyinen : silmukka.Seuraava;
