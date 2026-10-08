@@ -1,5 +1,5 @@
 // HISTORIAMOOTTORI: PULUN VIHJEPORTAAT (Siirtoseppä 7.10.2026; pelattavuusmalli-olavinlinna.md kohta 5). Tasot 1 katse, 2 lento,
-// 3 näyttö. Pyydettäessä (Pulun reunakuvan napautus) taso nousee heti, enintään 3, napautusten väli ≥ 10 s; vaarassa vain katse.
+// 3 näyttö (omistaja 8.10.: maailman valona, ValoVihje; ei Pulua). Pyydettäessä (vihjepyyntö) taso nousee heti, enintään 3, napautusten väli ≥ 10 s; vaarassa vain katse.
 // Itsestään taso 2, kun edistystä ei ole tullut 180 s:iin (tyrmässä 20 s), kerran jumia kohden, ei vaarassa, keskustelussa eikä huoneen
 // ensimmäisellä minuutilla. Edistys (uusi osa, arvoitusvaihe, avainesine) nollaa tason.
 using System;

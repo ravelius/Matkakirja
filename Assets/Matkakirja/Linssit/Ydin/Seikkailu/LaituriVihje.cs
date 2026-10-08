@@ -1,6 +1,6 @@
-// HISTORIAMOOTTORI: PULUN ENSIVIHJE LAITURILLA (Linssiseppä 2, 8.10.2026; omistajan Olavinlinna-palaute (6) "epäselvää, mitä laiturilla
-// pitää tehdä", Siirtoseppä/PT): ensimmäisellä kerralla Pulu lentää kohti vesiportin porttia (ovi:vesiportti-loppu), kun portinvartijan
-// riita alkaa tai OdotusS laiturille nousun jälkeen. Raamatun vihjeperiaate: ei tekstiä, vain Pulun lento ja ääni (taso 2). Vaarassa
+// HISTORIAMOOTTORI: ENSIVIHJE LAITURILLA (Linssiseppä 2, 8.10.2026; omistajan Olavinlinna-palaute (6) "epäselvää, mitä laiturilla
+// pitää tehdä", Siirtoseppä/PT): ensimmäisellä kerralla vesiportin portilla (ovi:vesiportti-loppu) kimaltaa kuunvalo, kun portinvartijan
+// riita alkaa tai OdotusS laiturille nousun jälkeen. Raamatun vihjeperiaate: ei tekstiä eikä hahmoa (omistaja 8.10.: Pulu pois), vain ValoVihjeen taso 2 ja pieni ääni. Vaarassa
 // odotetaan; jos pelaaja löytää portin itse (alle LoydettyM) tai poistuu laiturilta, vihjettä ei anneta. Kerran pelin aikana.
 namespace Matkakirja.Linssit.Seikkailu
 {
@@ -17,7 +17,7 @@ namespace Matkakirja.Linssit.Seikkailu
         public void RiitaAlkoi() { if (aika >= 0) riita = true; }
 
         /// <summary>Kehys. laiturilla = pelaaja laiturin tai vesiportin osassa (ulkoalue, vesiportti) ennen porttia; porttiinM = vaakaetäisyys
-        /// porttiin. Palauttaa true kerran: Pulu lentää nyt kohti porttia.</summary>
+        /// porttiin. Palauttaa true kerran: portti kimaltaa nyt.</summary>
         public bool Paivita(double dt, bool laiturilla, double porttiinM, bool vaara)
         {
             if (Valmis) return false;
