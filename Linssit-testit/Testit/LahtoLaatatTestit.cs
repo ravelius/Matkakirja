@@ -317,6 +317,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(null, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
         }
 
+        // Juna 166 (Pelikoodarin GET /opas/saa PR #4194): vastaus → Saatila.LiveSaa; LIVE-aika auringosta; hakuväli.
+        [Testi] static void PalloSaaLuetaanJaHakuvaliRajataan()
+        {
+            var j = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"tila\":\"pilvinen\",\"pilvisyys_pct\":70.3,\"sade_mm_h\":0,\"tuuli_ms\":2,\"paiva\":true}");
+            var t = PalloSaaTiedot.Lue(j);
+            Oleta.Tosi(t != null && t.Tila == PalloSaa.Pilvinen && Math.Abs(t.PilvisyysPct - 70.3) < 1e-9 && t.Paiva, "pilvinen luetaan");
+            Oleta.Tosi(PalloSaaTiedot.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"virhe\":\"palvelin\"}")) == null, "502-runko ilman tilaa → null (arvo pysyy)");
+            Oleta.Tosi(PalloSaaTiedot.TilaksiSaa("raekuuro") == null && PalloSaaTiedot.TilaksiSaa("ukkonen") == PalloSaa.Ukkonen, "tuntematon tila → null");
+            Oleta.Tosi(PalloSaaTiedot.AikaAuringosta(new DateTime(2026, 10, 8, 12, 0, 0, DateTimeKind.Utc), 48.86, 2.35) == PalloAika.Paiva, "Pariisi klo 14 → päivä");
+            Oleta.Tosi(PalloSaaTiedot.AikaAuringosta(new DateTime(2026, 10, 8, 23, 0, 0, DateTimeKind.Utc), 48.86, 2.35) == PalloAika.Yo, "Pariisi klo 01 → yö");
+            Oleta.Tosi(!PalloSaaTiedot.Hae(false, "pariisi", null, 1e9), "LIVE pois → ei hakua");
+            Oleta.Tosi(PalloSaaTiedot.Hae(true, "pariisi", "rooma", 10) && !PalloSaaTiedot.Hae(true, "pariisi", "pariisi", 10), "kaupungin vaihto hakee, sama kaupunki ei");
+            Oleta.Tosi(PalloSaaTiedot.Hae(true, "pariisi", "pariisi", PalloSaaTiedot.HakuValiS), "15 min jälkeen uudelleen");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

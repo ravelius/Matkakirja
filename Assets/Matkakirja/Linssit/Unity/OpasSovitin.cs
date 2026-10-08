@@ -481,6 +481,7 @@ namespace Matkakirja.Natiivi
             kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
             EsilataaKortit();
             Telemetria(ennen);
+            SaaLive();
             // Lähdön valmistelu lokiin kerran sekunnissa (laattaodotuksen säätö).
             if (silmukka.LahtoValmisteilla && Time.realtimeSinceStartup - lahtoLokiAika >= 1f)
             {
@@ -645,6 +646,35 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Seuraavan kohteen (lennossa nykyisen) yksityiskohtakuvat tekstuureiksi valmiiksi (YksityiskohtaKortti.Esilataa).</summary>
         string esiKortitId, esiKohdeKaupunki;
+
+        // LIVE-SÄÄ JA -AIKA (omistaja 8.10. 09.1x, Saatila; Pelikoodarin GET /opas/saa PR #4194; juna 166): LiveAika kohteen auringosta
+        // 30 s välein, sää vain LIVEn ollessa päällä kaupungin vaihtuessa ja enintään 15 min välein; 502 → arvo pysyy.
+        /// <summary>Viimeisin onnistunut säähaku (tehosteiden hienosäätö); null ennen ensimmäistä.</summary>
+        public static PalloSaaTiedot SaaTiedot { get; private set; }
+        float saaHaettu = -1e9f, liveAikaTarkistettu = -1e9f; string saaKaupunki; bool saaHaussa;
+        void SaaLive()
+        {
+            if (!Saatila.Live || silmukka == null) return;
+            var a = silmukka.Asento; float nyt = Time.realtimeSinceStartup;
+            if (nyt - liveAikaTarkistettu >= 30f) { liveAikaTarkistettu = nyt; Saatila.LiveAika = PalloSaaTiedot.AikaAuringosta(DateTime.UtcNow, a.Lat, a.Lon); }
+            string kaup = NykyinenKaupunkiId ?? Aloituskaupunki;
+            if (saaHaussa || Testi || !PalloSaaTiedot.Hae(true, kaup, saaKaupunki, nyt - saaHaettu)) return;
+            saaHaussa = true; saaHaettu = nyt; saaKaupunki = kaup;
+            o.StartCoroutine(HaeSaa(a.Lat, a.Lon, kaup));
+        }
+
+        IEnumerator HaeSaa(double lat, double lon, string kaup)
+        {
+            var ic = System.Globalization.CultureInfo.InvariantCulture;
+            using var r = Pyynto($"/opas/saa?lat={lat.ToString("F4", ic)}&lon={lon.ToString("F4", ic)}&kaupunki={UnityWebRequest.EscapeURL(kaup ?? "")}");
+            r.timeout = 10;
+            yield return r.SendWebRequest();
+            saaHaussa = false;
+            var t = r.result == UnityWebRequest.Result.Success ? PalloSaaTiedot.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : null;
+            if (t == null) { o.Kirjaa($"opas: sää {kaup}: ei saatu ({r.responseCode}), pidetään {Saatila.LiveSaa}"); yield break; }
+            SaaTiedot = t; Saatila.LiveSaa = t.Tila;
+            o.Kirjaa($"opas: sää {kaup}: {t.Tila}, pilvisyys {t.PilvisyysPct:F0} %, sade {t.SadeMmH:F1} mm/h, sumu {t.SumuPct:F0} %, tuuli {t.TuuliMs:F0} m/s, {(t.Paiva ? "päivä" : "yö")}");
+        }
 
         // LENNON TELEMETRIA (Päätoimittaja 8.10. 08.3x): ruuduittain kulkunopeus (katsepisteen maajälki m/s), kuvan nopeus
         // (silmän nopeus / katse-etäisyys, rad/s), kääntönopeus (°/s) ja silmän korkeus; perillä yhteenveto (OpasKuvaus.Telemetria).
