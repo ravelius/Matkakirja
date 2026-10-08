@@ -232,7 +232,7 @@ test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET p
   assert.equal('aani_ajat' in d2, false);
 });
 
-test('yksityiskohdat_polut: 6 äänellistä + äänettömät erät 1–4 (Sisältökirjuri 8.10.)', async () => {
+test('yksityiskohdat_polut: 6 äänellistä + äänettömät erät 1–6 (Sisältökirjuri 8.10.)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
@@ -243,7 +243,10 @@ test('yksityiskohdat_polut: 6 äänellistä + äänettömät erät 1–4 (Sisäl
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v1/firenze-yksityiskohdat.json',
     lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
-    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json' });
+    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
+    edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
+    krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
+    oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json' });
 });
 
 test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani_pcm- eikä kesto_s-kenttiä; R2:n ääni soi, jos on', async () => {
