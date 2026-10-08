@@ -45,6 +45,8 @@ namespace Matkakirja.Natiivi
         public string Krediitti => krediitti;
         /// <summary>Veden tekijärivi ruudulle, kun vesi on ladattu (KrediititTiivis: oma rivi Googlen rivien ulkopuolella; ODbL).</summary>
         public static string KrediittiNyt { get; private set; }
+        /// <summary>Vettä piirretään (KaupunkiIlmakeha pitää taivaan arvot ajan tasalla veden heijastukselle, vaikka ilmakehä olisi pois).</summary>
+        public static bool Nakyvissa;
 
         public void Avaa(Transform vanhempi, double lat, double lon, int kerros)
         {
@@ -138,6 +140,11 @@ namespace Matkakirja.Natiivi
         public void Paivita(Camera kamera)
         {
             if (juuri == null || kamera == null || (lahi == null && kauka == null)) return;
+            // Asetus "vesi 0" kesken näkymän: vesi piiloon (ei mustaa pintaa; kuvapari 8.10.).
+            bool nakyy = Pakotettu != false;
+            if (juuri.activeSelf != nakyy) juuri.SetActive(nakyy);
+            if (!nakyy) return;
+            Nakyvissa = true;
             for (int n = 0; n < PalojaKehyksessa && jono.Count > 0; n++)
             {
                 var h = jono.Dequeue();
@@ -178,7 +185,7 @@ namespace Matkakirja.Natiivi
             palat.Clear(); jono.Clear();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             if (mat != null) UnityEngine.Object.Destroy(mat);
-            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null;
+            juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0); KrediittiNyt = null; Nakyvissa = false;
         }
 
         /// <summary>Vesipinnan korkeus juuren paikallisessa kehyksessä (x itä, z pohjoinen → y, nosto mukana); false = ei vettä (LS1:n veneet).</summary>

@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
         {
             Kaupunki(lat, lon);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
-            if (voima <= 0f && !Paalla) return;
+            if (voima <= 0f && !Paalla && !KaupunkiVesi.Nakyvissa) return;   // vesi tarvitsee taivaan arvot heijastukseen
             if (!Lataa()) { voima = 0f; return; }
             float k = aurinkoKorkeusAst * Mathf.Deg2Rad, a = aurinkoAtsimuuttiAst * Mathf.Deg2Rad;
             var s = new Vector3(Mathf.Cos(k) * Mathf.Sin(a), Mathf.Sin(k), Mathf.Cos(k) * Mathf.Cos(a));
