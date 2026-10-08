@@ -1,3 +1,18 @@
+# TILANNE 8.10. klo 10.4x
+
+- **Näyte 6 valmis 10.42** (kuva `kuvapari-talvip-nayte6-20261008.jpg`, näyte 4 | 6): reuna muuttui loivaksi siirtymäksi eikä uusia virheitä tullut. PT:n ehdon mukaan koko ajo on käynnistetty.
+- **AJOSSA: TALVI3 KOKO AJO**, 10.44 alkaen, 2 prosessia irrotettuna:
+  - osa 1: `aja-talvi3-osa.sh 1 27 33` (PGID 96963) → `s2-eurooppa-talvi3-osa1/`
+  - osa 2: `aja-talvi3-osa.sh 2 34 39` (PGID 97016) → `s2-eurooppa-talvi3-osa2/`
+  Liput: TALVI_PKAIKKI, TALVI_PS, TALVI_P6. Node ajetaan lohko kerrallaan. **Pysäytys ilman killiä:** `touch <osa>/STOP` (pysähtyy lohkon jälkeen). Ajo on jatkettava: sama komento uudelleen.
+  Muistivahti `kaudet/vahti-talvi3.sh` (PGID 97234): jos swap > 14 Gt → STOP osaan 2. Loki `s2-eurooppa-talvi3-vahti.log`.
+  Arvio: valmis pe 9.10. noin klo 05–07.
+  **Valmistuttua:** tarkista kaistasauma x = 34 (z6 lohkoraja 33|34), tee yleiskuva (neljännekset), lähetä yksi rivi PT:lle, sitten
+  `kokoa-kausi.py talvi v1 <_valmiit/s2-eurooppa-talvi-vienti-<pvm>> "<osa1/laatat>:<osa2/laatat>" "<kuvaus>"`, LAHTEET.md (pohjana kevät) ja Julkaisija.
+  Jos osa 2 pysähtyi STOPiin: poista STOP ja käynnistä uudelleen, kun muistia on (perl setsid).
+
+---
+
 # TILANNE 8.10. klo 10.0x
 
 - **Näyte 5 valmis 10.04** (kuva `kuvapari-talvip-nayte5-20261008.jpg`, näyte 4 | 5): utu väheni, mutta 27,3° E:n pystyreuna jäi, joten koko ajoa EI käynnistetty.
