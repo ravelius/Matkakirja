@@ -1,0 +1,838 @@
+{
+  "task": "amsterdam-yksityiskohdat-20261008",
+  "routedTaskNumber": 10,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-amsterdam-yksityiskohdat-20261008.md",
+    "commit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+    "blob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 7,
+  "imageCount": 6,
+  "generationCalls": 6,
+  "generationLimit": 7,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 2,
+      "qid": "Q165366",
+      "id": "siirrettava-kirjahylly",
+      "file": "amsterdam-Q165366-siirrettava-kirjahylly.png",
+      "filename": "amsterdam-Q165366-siirrettava-kirjahylly.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/02-siirrettava-kirjahylly/amsterdam-Q165366-siirrettava-kirjahylly.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a49-1c18-7153-a3e0-4fc3da16f808/exec-4f107e34-b849-460a-bfd2-15b31d8d4270.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/02-siirrettava-kirjahylly/original-generation.png",
+      "sha256": "01f76ff75425ce7b230fb1d148b5d65faf45da68a2d09d6e4fb32c8b275acf7d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: a historical illustrative image for a Finnish city guide.\nPrimary request: Create one wholly new, text-only generated 1536 x 1024 landscape PNG. Depict an original imagined Amsterdam office interior in 1942–1944, illustrating the mechanism of a hinged wooden bookcase concealing a narrow entrance to a secret rear annex. This is an original spatial interpretation of wartime office life and the concealment mechanism, not a replica of the Anne Frank House bookcase, a present-day museum room, a museum photograph, or any known image.\nScene: quiet modest early-1940s Dutch company office, worn floorboards and plain warm off-white plaster; a curtained window partly visible at the left supplies gentle daylight. No people.\nSubject: a tall simple dark-stained wooden bookcase at the right, visibly hinged as one whole unit and partly swung outward, holding old plain cloth-bound books and simple cardboard folders. Its side and hinge joint make the pivoting concept clear. Immediately beside and behind it at the centre is a narrow unobstructed doorway with a high wooden threshold; through the doorway, a short glimpse of a very narrow steep wooden stairway ascending into a dim rear space. This is a conceptual period arrangement, not a claim to reconstruct an exact floor plan. Keep the bookcase, doorway and stair glimpse visually coherent and plausible.\nComposition: landscape 3:2, chest-height view from the office side, about 1.5 metres away, slightly oblique; bookcase at the right, dark opening and stairs in the middle; include the complete bookcase without cutting off its top or base. Use the ordinary perspective of a 35mm camera lens, no fisheye.\nStyle and light: natural real-camera photorealism, believable everyday wood grain, modest wear and imperfect plaster, soft warm interior daylight and natural shadow, restrained brown and grey colours, unprocessed photographic appearance. No HDR, no dramatic movie grading, no excessive contrast, no painterly texture.\nStrict constraints: all book spines, folder covers and every other surface are completely blank and contain NO legible letters, NO numbers, NO labels, NO logos, NO symbols pretending to be text. No signs, no watermark, no frame or border. No human figure or human face. No contemporary museum fittings, glass protective cover, exhibit case, spotlights, ceiling light rails, security cameras, modern electrical objects, blood or violence. Render a single opaque RGB image at exactly 1536 x 1024 pixels. Do not include caption text.",
+      "viitteet": [
+        {
+          "publisher": "Anne Frank House / Anne Frank Stichting",
+          "title": "The bookcase",
+          "url": "https://www.annefrank.org/en/museum/collection/conservation-and-management-anne-frank-collection/conserving-anne-frank-collection/bookcase/",
+          "type": "textResearchOnly",
+          "notes": "Virallinen teksti vahvistaa, että Johan Voskuijl rakensi saranoidun kirjahyllyn elokuussa 1942 salaisen liitteen sisäänkäynnin peittämiseksi. Kuvan mekanismi ja aikakausi perustuvat tähän; museoesinettä tai nykyistä museohuonetta ei jäljennetty.",
+          "access": "Web-haku ja web-avaus 8.10.2026; vain HTML-teksti. Ei kuvalinkkien avaamista, kuvapikseleitä, videoita eikä kuvakaappauksia."
+        },
+        {
+          "publisher": "Anne Frank House / Anne Frank Stichting",
+          "title": "The history of the Secret Annex",
+          "url": "https://www.annefrank.org/en/anne-frank/go-in-depth/history-secret-annex/",
+          "type": "textResearchOnly",
+          "notes": "Virallinen teksti vahvistaa yläkerrosten varasto- ja toimistokäytön, kapean rakennuskannan, piilossa asutut ylemmät kerrokset ja hyllylle johtavan portaan. Hyllyn takana kuvassa näkyvän portaan suunta ja toimistokalustus ovat oma havainnollinen tilatulkinta, eivät vahvistettu pohjapiirros.",
+          "access": "Web-haku ja web-avaus 8.10.2026; vain HTML-teksti. Ei sivun valokuvia, pohjapiirrospikseleitä tai kuvakaappauksia."
+        }
+      ],
+      "kuvateksti": "Salaisen liitteen sisäänkäynnin saranoidun kirjahyllyn toimintaperiaate vuoden 1942–1944 amsterdamilaisen toimistotilan vapaana tulkintana. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": {
+        "final": "Vain standardi sRGB ICC -profiili (588 tavua) sekä PNG Description- ja Source-tekstikentät täsmälleen merkinta-kentän sisältönä. PNG uudelleentallennettiin häviöttömästi; lopputulos läpinäkymätön RGB.",
+        "rgbPixelsUnchanged": true,
+        "colourTransformApplied": false,
+        "resized": false,
+        "cropped": false,
+        "retouched": false,
+        "originalMode": "RGB",
+        "finalMode": "RGB",
+        "iccProfile": "Standard sRGB (Pillow ImageCms / LittleCMS createProfile sRGB)",
+        "metadataKeys": [
+          "icc_profile",
+          "Description",
+          "Source"
+        ],
+        "originalBytesPreserved": true,
+        "originalSha256": "05c81919783d5a0c7fd3fdf5b76a964e04cc0b279932b7ff97dee561595e7e6a",
+        "qaPreview": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/02-siirrettava-kirjahylly/qa-preview-480.png",
+          "dimensions": [
+            480,
+            320
+          ],
+          "method": "Koko kuvan tekninen LANCZOS-pienennys esikatselua varten; ei toimitusvariantti eikä rajaus."
+        }
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Saranoitu tummapuinen hylly on kuvan oikealla puolella osittain auki; kapea oviaukko, korkea kynnys ja jyrkkä portaikko ovat keskellä näkyviä.",
+          "Kirjojen ja kansioiden selät ovat vailla luettavia kirjaimia tai numeroita. Kuvassa ei ole ihmisiä, museokylttejä, vitriinejä, turvakameroita tai kuvan reunakehystä.",
+          "Luonnollinen lämmin valo, vaimeat värit ja puun kuluminen ovat fotorealistisia; mekanismi on ymmärrettävä myös koko kuvan 480 x 320 esikatselussa.",
+          "Taustalla on kaksi pientä, geneeristä kehystettyä seinäkuvaa. Niistä ei tunnistettu todellista suojattua teosta; ne eivät ole kuvan reunakehys."
+        ],
+        "limitations": [
+          "Oma vuosien 1942–1944 toimistotilan mekanismitulkinta, ei Anne Frank Huisin nykytilan, museoesineen tai pohjapiirroksen jäljennös.",
+          "Virallinen tekstilähde kuvaa hyllylle johtavaa portaikkoa; tässä kuvassa hyllyn takaisen portaan suunta on havainnollinen sommitteluratkaisu.",
+          "Toimiston kalustus, pinnat ja hyllyn tarkat mittasuhteet ovat fiktiivisiä ja aikakauteen sovitettuja."
+        ]
+      },
+      "generationTool": "built-in image_gen.imagegen",
+      "generationMode": "new-text-only",
+      "sourceImagePixelsUsed": false,
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "scope": "items 02 and 03 only",
+      "createdAt": "2026-10-08T06:57:56.498842+00:00",
+      "deliveryState": {
+        "localProduction": true,
+        "uploadedToR2": false,
+        "mailboxDelivered": false,
+        "editorAcceptance": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "visualReview": {
+        "task": "amsterdam-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q165366",
+        "file": "amsterdam-Q165366-siirrettava-kirjahylly.png",
+        "sha256": "01f76ff75425ce7b230fb1d148b5d65faf45da68a2d09d6e4fb32c8b275acf7d",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Hinged bookshelf and concealed narrow stairs clear; no people or readable book labels. Own mechanism interpretation, not actual museum room."
+        ],
+        "limitations": [
+          "Oma vuosien 1942–1944 toimistotilan mekanismitulkinta, ei Anne Frank Huisin nykytilan, museoesineen tai pohjapiirroksen jäljennös.",
+          "Virallinen tekstilähde kuvaa hyllylle johtavaa portaikkoa; tässä kuvassa hyllyn takaisen portaan suunta on havainnollinen sommitteluratkaisu.",
+          "Toimiston kalustus, pinnat ja hyllyn tarkat mittasuhteet ovat fiktiivisiä ja aikakauteen sovitettuja."
+        ],
+        "reviewedAt": "2026-10-08T07:01:03.801274+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Saranoitu tummapuinen hylly on kuvan oikealla puolella osittain auki; kapea oviaukko, korkea kynnys ja jyrkkä portaikko ovat keskellä näkyviä.",
+          "Kirjojen ja kansioiden selät ovat vailla luettavia kirjaimia tai numeroita. Kuvassa ei ole ihmisiä, museokylttejä, vitriinejä, turvakameroita tai kuvan reunakehystä.",
+          "Luonnollinen lämmin valo, vaimeat värit ja puun kuluminen ovat fotorealistisia; mekanismi on ymmärrettävä myös koko kuvan 480 x 320 esikatselussa.",
+          "Taustalla on kaksi pientä, geneeristä kehystettyä seinäkuvaa. Niistä ei tunnistettu todellista suojattua teosta; ne eivät ole kuvan reunakehys."
+        ],
+        "limitations": [
+          "Oma vuosien 1942–1944 toimistotilan mekanismitulkinta, ei Anne Frank Huisin nykytilan, museoesineen tai pohjapiirroksen jäljennös.",
+          "Virallinen tekstilähde kuvaa hyllylle johtavaa portaikkoa; tässä kuvassa hyllyn takaisen portaan suunta on havainnollinen sommitteluratkaisu.",
+          "Toimiston kalustus, pinnat ja hyllyn tarkat mittasuhteet ovat fiktiivisiä ja aikakauteen sovitettuja."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q165366-siirrettava-kirjahylly.png",
+      "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q165366-siirrettava-kirjahylly.png",
+      "bytes": 2293620,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q224124",
+      "id": "museon-kattovarkaus-2002",
+      "file": "amsterdam-Q224124-museon-kattovarkaus-2002.png",
+      "filename": "amsterdam-Q224124-museon-kattovarkaus-2002.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/03-museon-kattovarkaus-2002/amsterdam-Q224124-museon-kattovarkaus-2002.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a49-1c18-7153-a3e0-4fc3da16f808/exec-cde3ce94-0f9b-45c1-97bf-c233f54c913a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/03-museon-kattovarkaus-2002/original-generation.png",
+      "sha256": "c80e9d306a414132dab4280424330b196aced22775c72701243187f991e3bd95",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene, photorealistic-natural.\nAsset type: a historical illustrative image for a Finnish city guide.\nPrimary request: Create one wholly new, text-only generated 1536 x 1024 landscape PNG, an original broad historical overview illustrating the December 2002 theft at the Van Gogh Museum in Amsterdam. Show two tiny dark anonymous rear-facing human figures high at the edge of the museum roof, one already at the roof edge and the other near the upper end of a long ladder leaning against the wall. A small plain bag may hang at the second figure's side. Keep this a distant overview of the event and architecture, with no instructional or operational detail.\nScene: a cold, dim early-winter night before dawn in 2002, overcast dark sky; wide oblique view from well back and slightly below the grey rectilinear Rietveld main building. A sober modernist museum facade with plain grey masonry and concrete, horizontal bands and dark windows; the wall and flat roof edge occupy most of the image. Historically generic interpretation of the 2002 facade, not a copy of an existing photo. Do not show the modern glass entrance created in 2015, and do not show the Kurokawa wing as the main building.\nSubject and scale: exactly two distant dark silhouettes, both seen from behind, full figures each only about six percent of the total image height; no visible faces or identity features, no resemblance to any real person. One silhouette on the roof edge, the other near the top of a simple ladder. Their clothing is ordinary dark winter clothing appropriate to 2002, with no logos. The distant ladder reads only as a narrow outline at this scale; do not show close-up hand positions, access points, security systems, breaking glass, lockwork, tools, or any diagram of entry.\nComposition: wide landscape 3:2, photographed from around 25 metres away with a normal camera perspective, architecture dominant, roof line and both small figures readable near the upper middle. Allow generous facade and dim sky around them. No close-ups.\nStyle and light: natural real-camera photorealism, subtle masonry texture, weak ordinary street-light illumination at the lower edge, very restrained cool-grey ambient night light, physically plausible soft shadows, muted colours and an unprocessed photographic appearance. No HDR, no cinematic colour grade, no exaggerated blue glow, no spotlight, no action-movie atmosphere.\nStrict constraints: NO legible letters, NO numbers, NO logos, NO signs, NO museum name, NO captions, NO watermark, NO frame or border. No paintings or artworks visible. No recognizable face or real person's likeness, no extra people, no weapons, no blood, no injury or depicted violence, no contemporary security cameras or security-system details. Render one opaque RGB image at exactly 1536 x 1024 pixels.",
+      "viitteet": [
+        {
+          "publisher": "Federal Bureau of Investigation (FBI)",
+          "title": "Van Gogh Museum Robbery",
+          "url": "https://www.fbi.gov/investigate/transnational-organized-crime/art-crime/fbi-top-ten-art-crimes/van-gogh-museum-robbery",
+          "type": "textResearchOnly",
+          "notes": "FBI:n virallisen sivun hakuteksti vahvistaa, että joulukuussa 2002 kaksi varasta kiipesi tikkailla museon katolle. Kuvassa ei esitetä murtautumisen käytännön yksityiskohtia tai maalauksia.",
+          "access": "Virallinen tekstikatkelma web-haussa 8.10.2026; ensimmäinen web-avaus tunnisti 168-rivisen HTML-sivun. Myöhemmät täsmennetyt avaukset epäonnistuivat aikakatkaisuun. Kuvia ei avattu eikä pikseleitä käytetty."
+        },
+        {
+          "publisher": "Van Gogh Museum",
+          "title": "Het gebouw",
+          "url": "https://www.vangoghmuseum.nl/nl/over/organisatie/het-gebouw",
+          "type": "textResearchOnly",
+          "notes": "Museon virallinen rakennushistoria vahvistaa, että Rietveldin päärakennus avattiin 1973, Kurokawan siipi 1999 ja lasinen pääsisäänkäynti vasta 2015. Vuoden 2015 sisäänkäynti jätettiin pois; 2002 julkisivun tarkat mittasuhteet ja tapahtuman asemointi ovat yleisluonteista tulkintaa.",
+          "access": "Museon verkkotunnukseen rajattu web-haku palautti rakennushistorian koko relevantin tekstin 8.10.2026; suora avaus palautti vain sivun teknisen upotteen. Käytetty vain hakutyökalun tekstisisältöä, ei kuva- tai videopikseleitä."
+        }
+      ],
+      "kuvateksti": "Kaksi tummaa hahmoa museon katonrajalla havainnollistaa Van Gogh -museon joulukuun 2002 varkautta. Rakennus ja tapahtumahetki ovat historiallista yleisnäkymätulkintaa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": {
+        "final": "Vain standardi sRGB ICC -profiili (588 tavua) sekä PNG Description- ja Source-tekstikentät täsmälleen merkinta-kentän sisältönä. PNG uudelleentallennettiin häviöttömästi; lopputulos läpinäkymätön RGB.",
+        "rgbPixelsUnchanged": true,
+        "colourTransformApplied": false,
+        "resized": false,
+        "cropped": false,
+        "retouched": false,
+        "originalMode": "RGB",
+        "finalMode": "RGB",
+        "iccProfile": "Standard sRGB (Pillow ImageCms / LittleCMS createProfile sRGB)",
+        "metadataKeys": [
+          "icc_profile",
+          "Description",
+          "Source"
+        ],
+        "originalBytesPreserved": true,
+        "originalSha256": "38fd065fc4695fbcc43ce22b0952e54489d79921544a837401ac04f8368262ce",
+        "qaPreview": {
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/03-museon-kattovarkaus-2002/qa-preview-480.png",
+          "dimensions": [
+            480,
+            320
+          ],
+          "method": "Koko kuvan tekninen LANCZOS-pienennys esikatselua varten; ei toimitusvariantti eikä rajaus."
+        }
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Laajassa rakennusnäkymässä on täsmälleen kaksi pientä tummaa selin olevaa hahmoa katonrajalla; toisella on tikas ja pieni laukku. Kasvoja tai tunnistettavia henkilöllisyyspiirteitä ei näy.",
+          "Harmaa suorakulmainen julkisivu ja katonraja hallitsevat kuvaa; tikas näkyy vain kaukaa eikä murtautumisen menetelmistä ole lähikuvaa.",
+          "Ei maalauksia, aseita, verta, tekstiä, museon nimikylttiä, logoja, vesileimaa, reunakehystä tai valvontakameroita.",
+          "Vaimea talvinen yövalo ja kylmä harmaa yleissävy säilyvät luonnollisina; molemmat hahmot erottuvat 480 x 320 esikatselussa."
+        ],
+        "limitations": [
+          "Rakennuksen julkisivu ja tapahtumahetken asemointi ovat oma historiallinen yleisnäkymätulkinta, eivät dokumentoivan valokuvan kopio tai mitattu vuoden 2002 julkisivu.",
+          "FBI:n virallinen tekstikatkelma vahvistaa joulukuun 2002, kaksi varasta, tikkaat ja katolle kiipeämisen; yön tarkka valotilanne ja hahmojen asennot ovat havainnollistusta.",
+          "Rietveldin rakennushistorian teksti ei vahvista kuvan julkisivun yksityiskohtia tai tapahtuman tarkkaa kiipeämiskohtaa."
+        ]
+      },
+      "generationTool": "built-in image_gen.imagegen",
+      "generationMode": "new-text-only",
+      "sourceImagePixelsUsed": false,
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "scope": "items 02 and 03 only",
+      "createdAt": "2026-10-08T06:57:56.549996+00:00",
+      "deliveryState": {
+        "localProduction": true,
+        "uploadedToR2": false,
+        "mailboxDelivered": false,
+        "editorAcceptance": false,
+        "gameIntegrated": false,
+        "published": false
+      },
+      "visualReview": {
+        "task": "amsterdam-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q224124",
+        "file": "amsterdam-Q224124-museon-kattovarkaus-2002.png",
+        "sha256": "c80e9d306a414132dab4280424330b196aced22775c72701243187f991e3bd95",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Wide night façade, two small rear-facing silhouettes and ladder; no faces, weapons or artwork. Detailed architecture illustrative."
+        ],
+        "limitations": [
+          "Rakennuksen julkisivu ja tapahtumahetken asemointi ovat oma historiallinen yleisnäkymätulkinta, eivät dokumentoivan valokuvan kopio tai mitattu vuoden 2002 julkisivu.",
+          "FBI:n virallinen tekstikatkelma vahvistaa joulukuun 2002, kaksi varasta, tikkaat ja katolle kiipeämisen; yön tarkka valotilanne ja hahmojen asennot ovat havainnollistusta.",
+          "Rietveldin rakennushistorian teksti ei vahvista kuvan julkisivun yksityiskohtia tai tapahtuman tarkkaa kiipeämiskohtaa."
+        ],
+        "reviewedAt": "2026-10-08T07:01:03.803743+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Laajassa rakennusnäkymässä on täsmälleen kaksi pientä tummaa selin olevaa hahmoa katonrajalla; toisella on tikas ja pieni laukku. Kasvoja tai tunnistettavia henkilöllisyyspiirteitä ei näy.",
+          "Harmaa suorakulmainen julkisivu ja katonraja hallitsevat kuvaa; tikas näkyy vain kaukaa eikä murtautumisen menetelmistä ole lähikuvaa.",
+          "Ei maalauksia, aseita, verta, tekstiä, museon nimikylttiä, logoja, vesileimaa, reunakehystä tai valvontakameroita.",
+          "Vaimea talvinen yövalo ja kylmä harmaa yleissävy säilyvät luonnollisina; molemmat hahmot erottuvat 480 x 320 esikatselussa."
+        ],
+        "limitations": [
+          "Rakennuksen julkisivu ja tapahtumahetken asemointi ovat oma historiallinen yleisnäkymätulkinta, eivät dokumentoivan valokuvan kopio tai mitattu vuoden 2002 julkisivu.",
+          "FBI:n virallinen tekstikatkelma vahvistaa joulukuun 2002, kaksi varasta, tikkaat ja katolle kiipeämisen; yön tarkka valotilanne ja hahmojen asennot ovat havainnollistusta.",
+          "Rietveldin rakennushistorian teksti ei vahvista kuvan julkisivun yksityiskohtia tai tapahtuman tarkkaa kiipeämiskohtaa."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q224124-museon-kattovarkaus-2002.png",
+      "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q224124-museon-kattovarkaus-2002.png",
+      "bytes": 2124992,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q50719",
+      "id": "keskusaseman-tekosaaret",
+      "file": "amsterdam-Q50719-keskusaseman-tekosaaret.png",
+      "filename": "amsterdam-Q50719-keskusaseman-tekosaaret.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/04-keskusaseman-tekosaaret/amsterdam-Q50719-keskusaseman-tekosaaret.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a49-8d31-7993-b89f-62b15e935906/exec-2d1819d0-f77d-47fb-b2a1-0e5dc39144b2.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/04-keskusaseman-tekosaaret/original-generation.png",
+      "sha256": "bfd16aec442840326c4c594ebdea0b045594f30e0763ae3d48a827c7303aa066",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photographic-looking historical explanatory image for the Matkakirja Amsterdam city guide.\nPrimary request: Make one wholly NEW image from text only, native 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG in sRGB. Show an original plausible oblique overview of the EARLY GROUNDWORK phase of Amsterdam's Central Station site during the late nineteenth century, around the 1870s–early 1880s, before any finished station. The three artificial fill islands already exist; workers are preparing ground and driving timber foundation piles. Do not imply that original reclamation started in the 1880s. This is an interpretive historical reconstruction, not a surveyed plan.\nScene/backdrop: the wide grey-green water of the IJ immediately north of the old Amsterdam waterfront. Three distinctly separate, flat, elongated roughly rectangular sand-and-earth fill islands lie in a row along the waterfront, left to right across the image, with clear open water channels between them and water along their edges.\nSubject: the THREE construction islands clearly legible as three land masses. Their surfaces are unfinished pale sand and compacted earth. Some timber piles stand in modest organized groups, several tall timber piling frames stand over them. A small period steam engine on a barge emits a faint wisp of smoke. Tiny distant workers and simple hand carts distribute earth; workers in plain nineteenth-century clothes, only small or rear-facing, no faces discernible. Wooden barges and a few small sailing craft sit in the surrounding channels.\nComposition/framing: broad elevated oblique camera-like view from roughly 60 metres above the IJ on the NORTH side, looking SOUTH towards the old city. Water in foreground, the three islands across the lower-middle image, the old city waterfront BEHIND them in the upper background. This coherent orientation puts the city behind the islands. A modest Oude Kerk tower rises from restrained narrow old brick gabled roofs; retain a plausible old northern waterfront, not a copy of a historical artwork or modern photograph. Island geometry is original illustrative approximation.\nStyle/medium: convincing real-camera appearance with natural atmospheric distance and irregular physical materials; NOT a painting, drawing, engraving, miniature, aerial map or glossy CGI.\nLighting/mood: clear but gentle daytime light, subdued beige sand, weathered brown timber, grey-green water and natural muted brick tones, restrained contrast and colour, no HDR or cinematic saturation.\nConstraints: NO completed station building, NO recognizable station facade, NO modern skyline, modern buildings, cars, cranes, excavators, modern boats, modern concrete, signage, logos, text, legible letters or numbers, border or watermark. No close-up people, identifiable faces or any recognisable real historical or living person. No violence or blood. No source-image pixels, no copies of museum artworks. Exactly THREE islands, with clear separate water boundaries, and no fourth land mass resembling a construction island.",
+      "viitteet": [
+        {
+          "publisher": "Stadsarchief Amsterdam",
+          "title": "Centraal Station",
+          "url": "https://www.amsterdam.nl/stadsarchief/stukken/macht/centraal-station/",
+          "type": "textResearchOnly",
+          "notes": "Virallinen arkistoteksti vahvistaa aseman sijainnin kaupungin pohjoispuolella IJ:n rannalla, kolme täyttösaarta, 8 687 paalua ja avauksen 15.10.1889. Kuvan oma geometria ja laitteiden sijoittelu eivät ole mitattu pohjapiirros. Kaupunkitaustan säilyttämiseksi kuvaussuunta muutettu tilauksen ristiriitaisesta kaupungista IJ:lle -suunnasta IJ:ltä etelään kaupunkiin.",
+          "access": "2026-10-08; verkkotyökalun tekstihaku ja tekstisivu luettu. Sivun kuvia ja kokoelmalinkkejä ei avattu, pikseleitä ei välitetty generaattorille"
+        },
+        {
+          "publisher": "Gemeente Amsterdam",
+          "title": "Het Centraal Station, onze trotse stadspoort",
+          "url": "https://www.amsterdam.nl/nieuws/achtergrond/centraal-station-trotse-stadspoort/",
+          "type": "textResearchOnly",
+          "notes": "Kunnan teksti kuvaa vanhaa avointa IJ:n satamarintamaa ja sijoittaa saaren perustamisen 1860–1870-lukujen vaiheeseen. Tämä eroaa tilauksen 1880-luvun täyttövaiheesta. Tuotanto rajattiin kolmen jo olemassa olevan saaren varhaiseen paalutus-/maatyövaiheeseen ennen valmista asemaa; alkuperäisen täytön aloitusvuotta ei väitetä.",
+          "access": "2026-10-08; virallinen tekstisivu luettu kokonaan olennaisilta osilta. Kuvia ei avattu"
+        }
+      ],
+      "kuvateksti": "Keskusaseman kolmen täyttösaaren varhainen rakennusvaihe 1870–1880-lukujen Amsterdamissa, nähtynä IJ:ltä kohti vanhaa kaupunkia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Alkuperäinen työkalun PNG säilytetty muuttamattomana ja kopioitu original-generation.png-tiedostoksi.",
+        "Lopullisen PNG:n RGB-pikselit ja IDAT-data säilytetty tavuntarkasti; vain metatiedot käsitelty.",
+        "Lopulliseen jätetty vain sRGB ICC-profiili sekä Description- ja Source-merkinnät; molemmat täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Erillinen 480 × 320 pikselin täyden kuva-alan tekninen QA-esikatselu; lopulliseen kuvaan ei rajaus-, koon-, terävöinti- tai värimuutoksia."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Kolme työmaasaarta erottuvat, niiden välissä selkeät vesikanavat; paalut ja puiset paalutuskoneet näkyvät.",
+          "Katse IJ:n puolelta vanhaan kaupunkiin, joka jää saarten taustalle; valmista asemarakennusta ei näy.",
+          "Työmiehet pieniä, kasvoja ei tunnista. Purjeveneet, proomut ja höyrykoneen savu tukevat työmaakontekstia.",
+          "Luonnollinen päivänvalo ja vaimeat värit; ei luettavaa tekstiä, kylttejä, moderneja työkoneita tai tunnistettavaa modernia kaupunkimaisemaa."
+        ],
+        "limitations": [
+          "Ajoitustarkennus: lähteen 1880-luvun satamaveden täyttö tulkittu jo olemassa olevien täyttösaarten varhaiseksi maatyö-/paalutusvaiheeksi; alkuperäisen täytön alkamisvuotta ei väitetä.",
+          "Lähteet ajoittavat aseman ja saaren suunnittelun ja toteutuksen vaiheet eri tavoin; kuvateksti käyttää yleistä 1870–1880-lukujen rakennusvaihetta.",
+          "Kamerakorjaus: IJ:n puolelta pohjoisesta etelään kaupunkiin, jotta tilauksen kaupunkisiluetti asettuu saarten taakse.",
+          "Saarien muodot, välit, työvälineet ja kaupungin siluetti ovat oma havainnollistava rekonstruktio, eivät mittatarkka historiallinen kartta.",
+          "Ulompien saarten päädyt jatkuvat natiivikuvan sivureunojen ulkopuolelle; kolme saarta erottuvat välikanavista. Saarien ja kaupunkisiluetin muotoja ei väitetä mittatarkoiksi."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5",
+      "sourceImagePixelsUsed": false,
+      "originalGeneratedSha256": "eda389c55991b7c5b21683eccbeffcc45fed134cffe11792b8f062342a12d506",
+      "nativeGeneratedMode": "RGB",
+      "nativeGeneratedDimensions": [
+        1536,
+        1024
+      ],
+      "pixelSha256": "8d0ea4f108173a0edfd742dac90db46b96e8001678b8c27ed49ae6f366bf0276",
+      "originalRgbPixelsPreserved": true,
+      "IDATPreservedByteForByte": true,
+      "cameraDeviation": "Tilauksen kaupunki→IJ-suunnan sijasta katse IJ:n puolelta pohjoisesta etelään kohti kaupunkia, jotta kaupungin siluetti on saarten taustalla.",
+      "chronologyClarification": "Ei väitettä alkuperäisen täytön alkamisesta 1880-luvulla; kuvataan jo olemassa olevien kolmen saaren varhaista rakennusvaihetta 1870–1880-luvuilla.",
+      "visualReview": {
+        "task": "amsterdam-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q50719",
+        "file": "amsterdam-Q50719-keskusaseman-tekosaaret.png",
+        "sha256": "bfd16aec442840326c4c594ebdea0b045594f30e0763ae3d48a827c7303aa066",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Three distinct fill islands and water channels, period piling machines and boats; no complete station. Outer ends cropped as recorded."
+        ],
+        "limitations": [
+          "Ajoitustarkennus: lähteen 1880-luvun satamaveden täyttö tulkittu jo olemassa olevien täyttösaarten varhaiseksi maatyö-/paalutusvaiheeksi; alkuperäisen täytön alkamisvuotta ei väitetä.",
+          "Lähteet ajoittavat aseman ja saaren suunnittelun ja toteutuksen vaiheet eri tavoin; kuvateksti käyttää yleistä 1870–1880-lukujen rakennusvaihetta.",
+          "Kamerakorjaus: IJ:n puolelta pohjoisesta etelään kaupunkiin, jotta tilauksen kaupunkisiluetti asettuu saarten taakse.",
+          "Saarien muodot, välit, työvälineet ja kaupungin siluetti ovat oma havainnollistava rekonstruktio, eivät mittatarkka historiallinen kartta.",
+          "Ulompien saarten päädyt jatkuvat natiivikuvan sivureunojen ulkopuolelle; kolme saarta erottuvat välikanavista. Saarien ja kaupunkisiluetin muotoja ei väitetä mittatarkoiksi."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAt": "2026-10-08T07:25:21.710928+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Kolme työmaasaarta erottuvat, niiden välissä selkeät vesikanavat; paalut ja puiset paalutuskoneet näkyvät.",
+          "Katse IJ:n puolelta vanhaan kaupunkiin, joka jää saarten taustalle; valmista asemarakennusta ei näy.",
+          "Työmiehet pieniä, kasvoja ei tunnista. Purjeveneet, proomut ja höyrykoneen savu tukevat työmaakontekstia.",
+          "Luonnollinen päivänvalo ja vaimeat värit; ei luettavaa tekstiä, kylttejä, moderneja työkoneita tai tunnistettavaa modernia kaupunkimaisemaa."
+        ],
+        "limitations": [
+          "Ajoitustarkennus: lähteen 1880-luvun satamaveden täyttö tulkittu jo olemassa olevien täyttösaarten varhaiseksi maatyö-/paalutusvaiheeksi; alkuperäisen täytön alkamisvuotta ei väitetä.",
+          "Lähteet ajoittavat aseman ja saaren suunnittelun ja toteutuksen vaiheet eri tavoin; kuvateksti käyttää yleistä 1870–1880-lukujen rakennusvaihetta.",
+          "Kamerakorjaus: IJ:n puolelta pohjoisesta etelään kaupunkiin, jotta tilauksen kaupunkisiluetti asettuu saarten taakse.",
+          "Saarien muodot, välit, työvälineet ja kaupungin siluetti ovat oma havainnollistava rekonstruktio, eivät mittatarkka historiallinen kartta.",
+          "Ulompien saarten päädyt jatkuvat natiivikuvan sivureunojen ulkopuolelle; kolme saarta erottuvat välikanavista. Saarien ja kaupunkisiluetin muotoja ei väitetä mittatarkoiksi."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q50719-keskusaseman-tekosaaret.png",
+      "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q50719-keskusaseman-tekosaaret.png",
+      "bytes": 2939646,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q839050",
+      "id": "amstelin-pato-1270",
+      "file": "amsterdam-Q839050-amstelin-pato-1270.png",
+      "filename": "amsterdam-Q839050-amstelin-pato-1270.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/05-amstelin-pato-1270/amsterdam-Q839050-amstelin-pato-1270.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a49-8d31-7993-b89f-62b15e935906/exec-8f3809b4-3f75-4d8c-a60d-57b289df16f4.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/05-amstelin-pato-1270/original-generation.png",
+      "sha256": "392edec9650fe9ad7e400bcb685f507a81ac190d2d3aa3925394f3e26e761b26",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photographic-looking historical explanatory image for the Matkakirja Amsterdam city guide.\nPrimary request: Make one entirely NEW image from text only, native 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG in sRGB. Imagine a real camera observing an original historical reconstruction of the early Amstel settlement around 1270. This is an illustrative reconstruction, not a claim of an exact surveyed view.\nScene/backdrop: flat, low, marshy peatland at the mouth of the Amstel in medieval Holland. Only three modest timber huts with rough reed thatch stand on the two low river banks; damp grass, muddy earth and reeds.\nSubject: a substantial, simple bank-to-bank wooden pile dam reinforced by compacted earth. Show its solid water-retaining timber face and one narrow timber sluice with a closed upright gate in the middle. The dam is a continuous low barrier, not an open bridge. Upstream water visibly but modestly higher than downstream, with a small trickle at the sluice. Some rough fishing nets dry on timber poles and a pair of small wooden fishing boats rest at the banks.\nComposition/framing: broad oblique elevated view looking down about 30 degrees along the river towards the dam centered in the image. River water occupies foreground, banks visible on both sides, low marsh landscape continues behind. Three tiny distant villagers in simple medieval brown wool and linen clothing are shown only from behind; their faces cannot be seen.\nStyle/medium: convincing real-camera photograph appearance, natural irregular physical textures, not an old painting, drawing, etching, illustration style, miniature, polished 3D render or CGI. Wide normal lens, credible scale and perspective.\nLighting/mood: calm bright overcast daylight, restrained natural colour, damp grey-brown timber, subdued green reeds and grey water. No HDR, no cinematic saturation or orange-teal grading.\nConstraints: original spatial interpretation without source-image pixels or copies of museum works. No buildings of stone, no church tower, no canal houses, no separate bridge, no modern objects, machinery, concrete, electricity, metal handrails, signs, logos, writing, legible letters or numbers, border or watermark. No recognisable real living or historical people, no faces close-up, no violence or blood. The image contains no text at all.",
+      "viitteet": [
+        {
+          "publisher": "Gemeente Amsterdam",
+          "title": "Wandeling rond oeroud Amsterdam",
+          "url": "https://www.amsterdam.nl/nieuws/achtergrond/wandeling-rond-oeroud-amsterdam/",
+          "type": "textResearchOnly",
+          "notes": "Teksti kertoo Amstelin suun molempien rantojen harvoista taloista, noin 1270 rakennetusta padosta sekä puu- ja ruokotaloista ja soistuneesta turvemaasta. Täsmällinen patotekniikka, vesitaso ja kuvakulma ovat oma havainnollistava tulkinta.",
+          "access": "2026-10-08; verkkotyökalun tekstihaku ja tekstisivun avaus; kuvia tai kuva-URL:eja ei avattu eikä välitetty generaattorille"
+        },
+        {
+          "publisher": "Stadsarchief Amsterdam",
+          "title": "1275 Dam",
+          "url": "https://www.amsterdam.nl/stadsarchief/canon/venster/2/",
+          "type": "textResearchOnly",
+          "notes": "Padon rakennus arvioidaan noin 1260:een; yhdisti Amstelin rantojen asutuksen. Noin 1270 on tilauksen suuntaa-antava aikakausi, ei tarkka rakennusvuosi. Teksti tukee puutaloja ja pieniä veneitä. Padon rakenteen mittatarkkuutta ei väitetä.",
+          "access": "2026-10-08; tekstisivu luettu; mediaa ei avattu"
+        }
+      ],
+      "kuvateksti": "Amstelin varhaisen asutuksen puinen pato noin 1270. Rakenteet ja näkökulma ovat historiallista tulkintaa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Alkuperäinen työkalun PNG säilytetty muuttamattomana ja kopioitu original-generation.png-tiedostoksi.",
+        "Lopullisen PNG:n RGB-pikselit ja IDAT-data säilytetty tavuntarkasti; vain metatiedot käsitelty.",
+        "Lopulliseen jätetty vain sRGB ICC-profiili sekä Description- ja Source-merkinnät; molemmat täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Erillinen 480 × 320 pikselin täyden kuva-alan tekninen QA-esikatselu; lopulliseen kuvaan ei rajaus-, koon-, terävöinti- tai värimuutoksia."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Puinen paalupato ja keskellä oleva sulku muodostavat yhtenäisen vesirajan; kolme puu-/ruokomökkiä, verkot ja veneet näkyvät.",
+          "Veden pinnan pieni ero näkyy sulun alla; ihmiset pieniä ja selin eikä kasvoja tunnista.",
+          "Luonnollinen päivänvalo, vaimeat värit ja kamerakuvan näköiset pinnat. Ei luettavaa tekstiä, kylttejä, nykyaikaisia esineitä tai kivi-/kanavakaupunkia."
+        ],
+        "limitations": [
+          "Ei mittatarkka rekonstruktio; padon rakenne ja sulku ovat havainnollistava tulkinta.",
+          "Lähteissä patoa ajoitetaan noin 1260 tai noin 1270; kuva ei väitä tarkkaa rakennusvuotta."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5",
+      "sourceImagePixelsUsed": false,
+      "originalGeneratedSha256": "14da4224208f0c5c59fe261916c7e9ca62eb51c7eef217c4a9a898f559320df6",
+      "nativeGeneratedMode": "RGB",
+      "nativeGeneratedDimensions": [
+        1536,
+        1024
+      ],
+      "pixelSha256": "e5702b69007cc06d77edc35c686c742725fd166d1a77a09eaade3dcfab67d252",
+      "originalRgbPixelsPreserved": true,
+      "IDATPreservedByteForByte": true,
+      "visualReview": {
+        "task": "amsterdam-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q839050",
+        "file": "amsterdam-Q839050-amstelin-pato-1270.png",
+        "sha256": "392edec9650fe9ad7e400bcb685f507a81ac190d2d3aa3925394f3e26e761b26",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Wooden dam, central sluice, thatched cabins and small rear-facing figures; upstream/downstream water level plausible. Approximate chronology."
+        ],
+        "limitations": [
+          "Ei mittatarkka rekonstruktio; padon rakenne ja sulku ovat havainnollistava tulkinta.",
+          "Lähteissä patoa ajoitetaan noin 1260 tai noin 1270; kuva ei väitä tarkkaa rakennusvuotta."
+        ],
+        "reviewedAt": "2026-10-08T07:01:03.806291+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Puinen paalupato ja keskellä oleva sulku muodostavat yhtenäisen vesirajan; kolme puu-/ruokomökkiä, verkot ja veneet näkyvät.",
+          "Veden pinnan pieni ero näkyy sulun alla; ihmiset pieniä ja selin eikä kasvoja tunnista.",
+          "Luonnollinen päivänvalo, vaimeat värit ja kamerakuvan näköiset pinnat. Ei luettavaa tekstiä, kylttejä, nykyaikaisia esineitä tai kivi-/kanavakaupunkia."
+        ],
+        "limitations": [
+          "Ei mittatarkka rekonstruktio; padon rakenne ja sulku ovat havainnollistava tulkinta.",
+          "Lähteissä patoa ajoitetaan noin 1260 tai noin 1270; kuva ei väitä tarkkaa rakennusvuotta."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q839050-amstelin-pato-1270.png",
+      "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q839050-amstelin-pato-1270.png",
+      "bytes": 3294714,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q277316",
+      "id": "konkurssiluettelo-1656",
+      "file": "amsterdam-Q277316-konkurssiluettelo-1656.png",
+      "filename": "amsterdam-Q277316-konkurssiluettelo-1656.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/06-konkurssiluettelo-1656/amsterdam-Q277316-konkurssiluettelo-1656.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a49-8d31-7993-b89f-62b15e935906/exec-a7ee3828-7a0c-49a1-b993-583f39021239.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/06-konkurssiluettelo-1656/original-generation.png",
+      "sha256": "409c80676ad2563d62acdacb8873bfb3bbb21650d06b3652e90b220a7040e243",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photographic-looking explanatory image for the Matkakirja Amsterdam city guide.\nPrimary request: One completely NEW text-only image, native 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG in sRGB. Depict an original plausible interpretation of a seventeenth-century Dutch artist's old working room during a household inventory in Amsterdam in 1656. A reconstruction of the historical context only, not a replica of any present-day museum room.\nScene/backdrop: a broad old room with grey plaster walls, dark oak ceiling beams, uneven timber floor, and tall leaded window admitting mild daylight from the side. Generic open timber shelves display a few shells, old blank earthenware vessels, an empty old helmet and nonrecognisable invented plaster sculptural studies; never copy any existing museum objects.\nSubject: a long rough oak table with pale blank sheets of paper arranged into a long inventory, an inkpot and feather quill. A small seated fictional clerk near the middle of the wide room, several metres from the imagined camera, writes with a quill while facing fully away. Two other fictional officials stand further back near the shelving with backs to camera. All three wear modest black 1650s clothing with small white collars. Faces are entirely hidden; figures occupy a small fraction of the image and no person resembles Rembrandt or any real historical person.\nComposition/framing: horizontal view from the side of the room at eye level; the table and quill are visible in the lower middle foreground, the three rear-facing men remain small and mid-distance, collections extend across the background. Only a few wall canvases, dim and distant, showing indistinct ORIGINAL invented colour and foliage studies, unrecognisable as any actual paintings. No portraits.\nStyle/medium: entirely photographic appearance of an observed physical historical scene, believable candid camera view, natural material flaws, normal lens perspective; no painting style, etching, theatrical tableau, miniature or glossy CGI.\nLighting/mood: soft natural warm daytime side light, unexaggerated shadows, subdued brown, grey and parchment tones, low saturation, no HDR or cinematic lighting.\nConstraints: text research only; no reference-image pixels, no recognisable present-day museum interior or museum collection replicas. No real artworks or copies, no identifiable people or faces, no modern equipment, gallery lighting, display cases, labels, signs, captions, legible writing or numbers anywhere including papers and book spines, no logos, watermark or frame around the image, no violence or blood. Paper remains blank or too oblique and distant for any marks to read. No actual Rembrandt present.",
+      "viitteet": [
+        {
+          "publisher": "Museum Rembrandthuis",
+          "title": "Rembrandt van Rijn | his life, work and house in Amsterdam",
+          "url": "https://www.rembrandthuis.nl/en/rembrandt-van-rijn/",
+          "type": "textResearchOnly",
+          "notes": "Virallinen museoteksti vahvistaa vuoden 1656 talousvaikeudet ja kaupungin virkamiehen laatiman omaisuusluettelon. Kuva käsittelee luettelointia; kolmen henkilön kokoonpano ja vanha työhuone ovat tilauksen pohjalta oma tulkinta. Museo kertoo talon nykykalustuksen perustuvan inventaarioon, joten sitä ei kopioida.",
+          "access": "2026-10-08; virallisen sivun indeksoitu tekstisisältö luettu verkkotyökalun hausta; ensimmäinen avaus palautti sivun metatiedot, myöhempi tekstialueen avaus aikakatkaistiin. Ei kuva-avauksia eikä lähdekuvia generaattoriin"
+        },
+        {
+          "publisher": "Museum Rembrandthuis",
+          "title": "Stappen in de Reconstructie van een Leven",
+          "url": "https://www.rembrandthuis.nl/en/kronieken/stappen-in-de-reconstructie-van-een-leven/",
+          "type": "textResearchOnly",
+          "notes": "Museon tutkimustekstin hakutulos vahvistaa huonekohtaisen inventaarion 25.–26.7.1656 sekä ateljeen historiallisen tulkinnan perustuvan kirjallisiin lähteisiin. Generointi ei toista museon rekonstruktion esineitä tai tilaa.",
+          "access": "2026-10-08; indeksoitu tekstiosa luettu hakutuloksesta; sivun ensimmäinen avaus palautti metatiedot, myöhempi tekstialueen avaus aikakatkaistiin. Mediaa ei avattu"
+        }
+      ],
+      "kuvateksti": "Oma tulkinta Amsterdamin vuoden 1656 omaisuusluettelon laadinnasta vanhassa taiteilijan työhuoneessa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Alkuperäinen työkalun PNG säilytetty muuttamattomana ja kopioitu original-generation.png-tiedostoksi.",
+        "Lopullisen PNG:n RGB-pikselit ja IDAT-data säilytetty tavuntarkasti; vain metatiedot käsitelty.",
+        "Lopulliseen jätetty vain sRGB ICC-profiili sekä Description- ja Source-merkinnät; molemmat täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Erillinen 480 × 320 pikselin täyden kuva-alan tekninen QA-esikatselu; lopulliseen kuvaan ei rajaus-, koon-, terävöinti- tai värimuutoksia."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Kolme inventointiin liittyvää hahmoa selin; kasvoja tai Rembrandtin näköistä hahmoa ei näy.",
+          "Paperien, sulkakynän ja musteen muodostama luettelointikonteksti erottuu; tarkka luettelo ei jäljennä alkuperäistä asiakirjaa.",
+          "Seinäkuvat ovat tunnistamattomia kasvi-/väriaiheita; hyllyillä yleisiä kuvituksellisia kipsiesineitä ja simpukoita, ei tunnistettujen museoteosten kopioita.",
+          "Valo ja pinnat kamerakuvan näköisiä, värit vaimeita. Ei luettavia kirjaimia tai numeroita, opasteita, vitriinejä tai moderneja koneita."
+        ],
+        "limitations": [
+          "Ei nykyisen Rembrandthuis-museon huoneen tai museoesineiden jäljennös; kalustus, tilaratkaisu ja hahmot ovat omia tulkintoja.",
+          "Luettelointitapahtuma ja vuosi perustuvat lähteisiin; henkilömäärä ja työvälineiden asettelu eivät väitä dokumentoitua hetkellistä tilannetta.",
+          "Ei tunnistettavia todellisia henkilöitä tai teoksia.",
+          "Kuvassa listan paikalla on irrallisia papereita; kirjoittavan käden yksityiskohta jää peittoon. Luettelointikonteksti välittyy välineistä ja hahmojen toiminnasta."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5",
+      "sourceImagePixelsUsed": false,
+      "originalGeneratedSha256": "9e384d7cb4918fc0b7f1c0df9b4cafb53a4673ac0f2f1df47dd2be7aa7b2c94d",
+      "nativeGeneratedMode": "RGB",
+      "nativeGeneratedDimensions": [
+        1536,
+        1024
+      ],
+      "pixelSha256": "3bfd855a50d81c0837da9674695e464a6884a71ef9fbedfbca97a9d1de393094",
+      "originalRgbPixelsPreserved": true,
+      "IDATPreservedByteForByte": true,
+      "visualReview": {
+        "task": "amsterdam-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q277316",
+        "file": "amsterdam-Q277316-konkurssiluettelo-1656.png",
+        "sha256": "409c80676ad2563d62acdacb8873bfb3bbb21650d06b3652e90b220a7040e243",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Three rear-facing figures and inventory-paper/quill setting; generic casts and pictures, no identifiable actual artwork or readable list."
+        ],
+        "limitations": [
+          "Ei nykyisen Rembrandthuis-museon huoneen tai museoesineiden jäljennös; kalustus, tilaratkaisu ja hahmot ovat omia tulkintoja.",
+          "Luettelointitapahtuma ja vuosi perustuvat lähteisiin; henkilömäärä ja työvälineiden asettelu eivät väitä dokumentoitua hetkellistä tilannetta.",
+          "Ei tunnistettavia todellisia henkilöitä tai teoksia.",
+          "Kuvassa listan paikalla on irrallisia papereita; kirjoittavan käden yksityiskohta jää peittoon. Luettelointikonteksti välittyy välineistä ja hahmojen toiminnasta."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAt": "2026-10-08T07:25:21.716760+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Kolme inventointiin liittyvää hahmoa selin; kasvoja tai Rembrandtin näköistä hahmoa ei näy.",
+          "Paperien, sulkakynän ja musteen muodostama luettelointikonteksti erottuu; tarkka luettelo ei jäljennä alkuperäistä asiakirjaa.",
+          "Seinäkuvat ovat tunnistamattomia kasvi-/väriaiheita; hyllyillä yleisiä kuvituksellisia kipsiesineitä ja simpukoita, ei tunnistettujen museoteosten kopioita.",
+          "Valo ja pinnat kamerakuvan näköisiä, värit vaimeita. Ei luettavia kirjaimia tai numeroita, opasteita, vitriinejä tai moderneja koneita."
+        ],
+        "limitations": [
+          "Ei nykyisen Rembrandthuis-museon huoneen tai museoesineiden jäljennös; kalustus, tilaratkaisu ja hahmot ovat omia tulkintoja.",
+          "Luettelointitapahtuma ja vuosi perustuvat lähteisiin; henkilömäärä ja työvälineiden asettelu eivät väitä dokumentoitua hetkellistä tilannetta.",
+          "Ei tunnistettavia todellisia henkilöitä tai teoksia.",
+          "Kuvassa listan paikalla on irrallisia papereita; kirjoittavan käden yksityiskohta jää peittoon. Luettelointikonteksti välittyy välineistä ja hahmojen toiminnasta."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q277316-konkurssiluettelo-1656.png",
+      "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q277316-konkurssiluettelo-1656.png",
+      "bytes": 2407994,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 7,
+      "qid": "Q1429748",
+      "id": "hatarahapaja-1672",
+      "file": "amsterdam-Q1429748-hatarahapaja-1672.png",
+      "filename": "amsterdam-Q1429748-hatarahapaja-1672.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/07-hatarahapaja-1672/amsterdam-Q1429748-hatarahapaja-1672.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a49-8d31-7993-b89f-62b15e935906/exec-008fde2f-ba2b-41fd-8b1f-51d4f1c1d84f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/amsterdam-yksityiskohdat-20261008/production/07-hatarahapaja-1672/original-generation.png",
+      "sha256": "1be38dc62bce3999c8f29404a384b62cc13e063c3d5689de519b7bcf2d97cadc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photographic-looking historical explanatory image for the Matkakirja Amsterdam city guide.\nPrimary request: One completely NEW image from text only, native 1536 x 1024 pixels, landscape 3:2, opaque RGB PNG in sRGB. Depict the manual work of a temporary emergency mint in an original plausible seventeenth-century Amsterdam guardhouse interior in 1672, without copying any actual museum room or coin.\nScene/backdrop: a modest old guardroom with rough pale masonry walls, stone flags on the floor, low heavy timber ceiling beams and a small leaded daylight window. A small hearth with faint embers provides secondary warmth, no dramatic fire.\nSubject: a coin-striking workspace: in the lower middle of the scene a heavy timber stump supports a small iron anvil and a lower coin die. On that lower die lies a small round silver blank, and an upright iron upper die sits above it. Two fictional workers in plain seventeenth-century wool clothes and worn leather aprons work in the middle distance, shown strictly from behind. One raises a simple hand hammer above the upper die; the other holds it steady with long iron tongs from the side, away from the strike. Their hands have credible anatomy and safe spacing. Faces are fully hidden.\nComposition/framing: broad horizontal room view from slightly above and to the side, tools and anvil prominent, workers occupy a modest portion of the frame further behind the working block. Foreground wooden bench contains a shallow tray of a few thin irregular silver blanks and small coin-sized discs, a spare hand hammer and tongs. Coin discs are generic blank silver surfaces, smooth or indistinct, ABSOLUTELY NO letters, numbers, words, dates, coats of arms or portrait designs.\nStyle/medium: believable natural real-camera observation of a physical historical reconstruction; photographic texture, normal lens and credible scale. No painterly brushwork, illustration, period engraving, miniature or polished 3D render.\nLighting/mood: soft natural daylight from one side, subdued warm-grey stone, worn brown wood and darkened metal, restrained colour, calm working scene, no HDR, no theatrical cinematic lighting.\nConstraints: this is an original historical interpretation of hand craft, not a claim of the precise layout or equipment of the documented mint. No source image pixels or copies of museum objects. No machinery or modern tools, electric fittings, modern equipment, powered presses, logos, signs, book writing, any legible letters or numbers anywhere, watermark or frame. No recognisable real people or visible faces, no firearms or weapons aimed, no violence, blood or injuries.",
+      "viitteet": [
+        {
+          "publisher": "Stadsarchief Amsterdam",
+          "title": "Munttoren",
+          "url": "https://www.amsterdam.nl/stadsarchief/stukken/grachten-torens/munttoren/",
+          "type": "textResearchOnly",
+          "notes": "Virallisen arkiston teksti vahvistaa, että Munttorenin vieressä säilynyt vanha vartiotupa toimi rahapajana 1672–1674. Nykyinen Muntgebouw on vuodelta 1885 eikä sitä kuvata. Sisätila, käsityövälineet ja kolikkoaihiot ovat tilauksen mukainen oma tulkinta; kuvat eivät toisinna kokoelmakolikoita.",
+          "access": "2026-10-08; tekstihaku, tekstisivun avaus ja 1672-tekstikohta luettu. Kuvaa tai kokoelmalinkkiä ei avattu eikä pikseleitä välitetty generaattorille"
+        }
+      ],
+      "kuvateksti": "Oma tulkinta rahanlyönnistä Amsterdamin väliaikaisessa vartiotuvan rahapajassa vuonna 1672. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Alkuperäinen työkalun PNG säilytetty muuttamattomana ja kopioitu original-generation.png-tiedostoksi.",
+        "Lopullisen PNG:n RGB-pikselit ja IDAT-data säilytetty tavuntarkasti; vain metatiedot käsitelty.",
+        "Lopulliseen jätetty vain sRGB ICC-profiili sekä Description- ja Source-merkinnät; molemmat täsmälleen Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Erillinen 480 × 320 pikselin täyden kuva-alan tekninen QA-esikatselu; lopulliseen kuvaan ei rajaus-, koon-, terävöinti- tai värimuutoksia."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Kaksi työntekijää selin, kasvot eivät näy; käsivasara, pystyleimasin, pihdit ja puutukilla oleva alasin erottuvat.",
+          "Hopeakiekot etualalla yleisiä ja tunnistamattomia, niissä ei ole luettavia kirjaimia tai numeroita.",
+          "Kivitupa, puupalkit ja ikkunan luonnollinen valo tukevat aikakauden käsityötilaa; ei moderneja koneita.",
+          "Seinällä on pystysuora historiallinen vartioase; sitä ei käytetä eikä suunnata keneenkään. Ei väkivaltaa tai verta."
+        ],
+        "limitations": [
+          "Arkistoteksti vahvistaa vartiotuvan rahapajakäytön 1672–1674; tarkka sisustus, vasaralyönnin työjärjestys ja työvälineet ovat havainnollistavia tulkintoja.",
+          "Kolikot ovat tunnistamattomia yleisiä hopeakiekkoja ilman luettavia merkintöjä, eivät museon kokoelmakolikoiden kopioita.",
+          "Ei mittatarkka rekonstruktio tai väite dokumentoidusta hetkestä.",
+          "Kolikkoaihio jää lyöntileimasimen alle, joten työvaihe välittyy välineistä ja hopeakiekoista. Vasaran ja leimasimen asetelma on havainnollistava."
+        ]
+      },
+      "status": "local-candidate-approved",
+      "sourceCommit": "f585d5d84fd066ae41cd3d99d882585492dcdf61",
+      "sourceBlob": "f8f95152f045d8579587d94fc48d8b6a6b0a64d5",
+      "sourceImagePixelsUsed": false,
+      "originalGeneratedSha256": "ce6eb59f60952a11ee31ad3c509ccee6e893a48b835153a9005ed9191a6f485e",
+      "nativeGeneratedMode": "RGB",
+      "nativeGeneratedDimensions": [
+        1536,
+        1024
+      ],
+      "pixelSha256": "a1c683dced2151215998face2fbc70ca44ddbb5951ad626dbb3671867260333e",
+      "originalRgbPixelsPreserved": true,
+      "IDATPreservedByteForByte": true,
+      "visualReview": {
+        "task": "amsterdam-yksityiskohdat-20261008",
+        "number": 7,
+        "qid": "Q1429748",
+        "file": "amsterdam-Q1429748-hatarahapaja-1672.png",
+        "sha256": "1be38dc62bce3999c8f29404a384b62cc13e063c3d5689de519b7bcf2d97cadc",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Rear-facing hand minting workers with dies and hammer, anonymous silver discs, period room. Unused wall polearm not aimed or used."
+        ],
+        "limitations": [
+          "Arkistoteksti vahvistaa vartiotuvan rahapajakäytön 1672–1674; tarkka sisustus, vasaralyönnin työjärjestys ja työvälineet ovat havainnollistavia tulkintoja.",
+          "Kolikot ovat tunnistamattomia yleisiä hopeakiekkoja ilman luettavia merkintöjä, eivät museon kokoelmakolikoiden kopioita.",
+          "Ei mittatarkka rekonstruktio tai väite dokumentoidusta hetkestä.",
+          "Kolikkoaihio jää lyöntileimasimen alle, joten työvaihe välittyy välineistä ja hopeakiekoista. Vasaran ja leimasimen asetelma on havainnollistava."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAt": "2026-10-08T07:25:21.721891+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Natiivikuva ja 480 × 320 täyden kuva-alan esikatselu katsottu erikseen.",
+          "Kaksi työntekijää selin, kasvot eivät näy; käsivasara, pystyleimasin, pihdit ja puutukilla oleva alasin erottuvat.",
+          "Hopeakiekot etualalla yleisiä ja tunnistamattomia, niissä ei ole luettavia kirjaimia tai numeroita.",
+          "Kivitupa, puupalkit ja ikkunan luonnollinen valo tukevat aikakauden käsityötilaa; ei moderneja koneita.",
+          "Seinällä on pystysuora historiallinen vartioase; sitä ei käytetä eikä suunnata keneenkään. Ei väkivaltaa tai verta."
+        ],
+        "limitations": [
+          "Arkistoteksti vahvistaa vartiotuvan rahapajakäytön 1672–1674; tarkka sisustus, vasaralyönnin työjärjestys ja työvälineet ovat havainnollistavia tulkintoja.",
+          "Kolikot ovat tunnistamattomia yleisiä hopeakiekkoja ilman luettavia merkintöjä, eivät museon kokoelmakolikoiden kopioita.",
+          "Ei mittatarkka rekonstruktio tai väite dokumentoidusta hetkestä.",
+          "Kolikkoaihio jää lyöntileimasimen alle, joten työvaihe välittyy välineistä ja hopeakiekoista. Vasaran ja leimasimen asetelma on havainnollistava."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "editorAcceptance": false,
+      "fableReceipt": false,
+      "gameIntegrated": false,
+      "published": false,
+      "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q1429748-hatarahapaja-1672.png",
+      "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/amsterdam-Q1429748-hatarahapaja-1672.png",
+      "bytes": 2532781,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q190804",
+      "id": "yovartion-leikkaus-1715",
+      "generationCalls": 0,
+      "reason": "Explicit museum-collection-reproduction exclusion conflicts with requested identifiable Night Watch painting. No alternative subject authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-6.jpg",
+    "r2Key": "julisteet/amsterdam-yksityiskohdat/20261008/toimitetut-6.jpg",
+    "url": "https://media.matkakirja.app/julisteet/amsterdam-yksityiskohdat/20261008/toimitetut-6.jpg",
+    "sha256": "71c5f4810184a2c83601d430f732781c72fca0cbaac84aa3c6a7ecfc32d7be3d",
+    "bytes": 315155,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T07:28:39.236125+00:00"
+}
