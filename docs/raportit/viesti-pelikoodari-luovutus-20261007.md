@@ -42,6 +42,15 @@
 - Tuotannossa 8.10.: K1–K4 (#4185–#4187), pallo #4189–#4191; kululoki näkyy (kulu: … testi claude-haiku-5-5).
 - TURBO MAKSAA ~0,066 krediittiä/merkki (historia 8.10.), 31 kaupungin erä ≈ 23 000. Creator-vaihto: 30 äänipaikkaa (tilillä
   261) ja ei pcm_44100 API:lla → ei heti; omistajan päätös (Päätoimittaja vie).
+- 8.10. myöhäisilta: ALKUKATKO korjattu ryhmittäin (opas-nimet-alkukatko-vienti-20261008: maat-v2, nimet-v3, kuittaukset-v2;
+  repliikit-v2/v3 ja kohtaukset-v4; _tyo/alkukatko/korjaa.py + korjaa_linna.py). Seuraavassa repliikkiversiossa ajat rajattava kestoon
+  (11 tiedostossa sana-aika > kesto, _tyo/alkukatko/rajaa.py). Esittelyn 7 alkukatkoa 31 kaupungin ääni-erän mukana (lupa puuttuu).
+- SADEÄÄNET aanet-saa-v1 ämpärissä (juna 168, Siirtoseppä kytkee Voima.Saa): 7 saumatonta silmukkaa −23 LUFS, Freesound CC0
+  + Commons PD; _tyo/saa-aanet/rakenna.py + aja-kaikki.sh. Freesound-haku: haara pelikoodari-freesound-haku (id:-haku, vahti 6 min;
+  esikuuntelulataukset jumittuvat välillä → JSON joka äänen jälkeen, artefakti aina).
+- #4217 13 havainnekuvaluetteloa julki; #4088 (Opus-kytkin) suljettu PT:n päätöksellä, haara säilyy.
+- PYSÄHDYKSET: #4219 (data/oppaan-kuvat/kaupungit: Granada, Košice, Knossos, Tampere koordinaatit OSM API 0.6:sta; Nominatimin
+  robots.txt kieltää /search, Overpass oli 504). Vaikuttaa vasta kuvalistassa v8 (Sisältökirjurilla v7 paketissa 20261008c) → sovi kuka rakentaa.
 - Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`; nohup/xargs/timeout/env-ajoissa `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
 
 # Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.4x, VAIHTO NYT)
