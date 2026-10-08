@@ -1,3 +1,19 @@
+# TILANNE 8.10. klo 22.3x
+
+- **LS1:n korkeuslukija** käyttää korkeusdataamme, ja se on junassa 167 (25d32fd39). LS2:n vesi ei aktivoitunut rungossa C: try/catch-kuvapari noin 23.10, ja vesitason korjaus odottaa sitä.
+- **Kaistasauma x = 34 mitattu:**
+  - Alpit ja Saksa: ei näy.
+  - Ruotsi: lievä tasosiirtymä (12,7 vs. sisäinen 9,8).
+  - Lohkosaumat kaistojen sisällä: eivät näy.
+  Kuvat: _tyo/karttaseppa/talvi3-sauma-20261008/.
+- **LÖYDÖS:** Etelä-Ruotsin puolilumen utuverhossa on suorat reunat noin 15° E:ssä. Syy: TALVI_PKAIKKI-haun ruutukohtainen eo:cloud_cover < 80, joten naapuriruuduilla on eri kuvajoukot.
+  Korjaus valmiina **kopiossa** `kaudet/kausimosaiikki-pk2.mjs` (ei pilvirajaa, limit 200). **ÄLÄ muokkaa kausimosaiikki.mjs:ää kesken talvi3-ajon**, koska v2-skripti lukee sen uudelleen joka lohkolle.
+  PT:ltä kysytty: ajetaanko Etelä-Ruotsin noin 10 lohkoa uudelleen pk2:lla ennen pakettia vai viedäänkö paketti sellaisenaan.
+- Taivas-LUT-työkalu on jo valmis (#4221). PT:lle kerrottu.
+- Talvi3: osa1 86/91, osa2 47/78 (22.30). STOP klo 22.40 (ohjaus-talvi3-2240.sh), jatko TF 167:n jälkeen tai 00.00.
+
+---
+
 # TILANNE 8.10. klo 21.2x (PT:n tauko 21.25–22.10, 5 h -raja)
 
 - **Juna 167 siirtyi** (omistaja 21.2x), TF noin 23.30–24.00.
