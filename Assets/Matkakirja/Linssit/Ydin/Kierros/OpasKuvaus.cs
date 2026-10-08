@@ -132,23 +132,16 @@ namespace Matkakirja.Linssit.Kierros
             double ke = (kohtiLon - k.Lon) * R * Math.Cos(k.Lat * A) * A, kn = (kohtiLat - k.Lat) * R * A;
             double de = ke - e.e, dn = kn - e.n, pit = Math.Sqrt(de * de + dn * dn);
             if (pit < 1) return k;
-            double ue = de / pit, un = dn / pit;
-            double se = e.e + ue * dM, sn = e.n + un * dM;   // uusi silmä
-            // Suoraan rajaympyrälle (säde LipumisVaakaKerroin × alkuetäisyys), sitten ympyrää pitkin seuraavan kohteen puolelle:
-            // polku on jatkuva d:n funktio, joten liike ei katkea eikä nyki.
-            double r0 = Math.Sqrt(e.e * e.e + e.n * e.n), rMax = LipumisVaakaKerroin * r0;
-            if (se * se + sn * sn > rMax * rMax && r0 > 1)
-            {
-                double eu = e.e * ue + e.n * un, d1 = -eu + Math.Sqrt(Math.Max(0, eu * eu - (r0 * r0 - rMax * rMax)));
-                double pe = e.e + ue * d1, pn = e.n + un * d1;
-                double te = -pn, tn = pe;   // tangentti (vastapäivään)
-                double merkki = te * ue + tn * un >= 0 ? 1 : -1;
-                // Kaari päättyy ympyrän pisteeseen, joka on lähinnä seuraavaa kohdetta (sen jälkeen liike kääntyisi taaksepäin).
-                double kulmaP = Math.Atan2(pn, pe), kulmaK = Math.Atan2(kn, ke), fiMax = merkki * (kulmaK - kulmaP);
-                fiMax = fiMax - 2 * Math.PI * Math.Floor(fiMax / (2 * Math.PI));   // 0…2π vastapäivään (merkki huomioiden)
-                double fi = merkki * Math.Min((dM - d1) / rMax, fiMax), c = Math.Cos(fi), si = Math.Sin(fi);
-                se = pe * c - pn * si; sn = pe * si + pn * c;
-            }
+            // KAARI SAMALLA ETÄISYYDELLÄ (omistaja 8.10. 18.4x: "Pallo voi siis kiertää samalla etäisyydellä saman kohteen toiselle
+            // puolelle jos se on lähempänä seuraavaa kohdetta mutta muuten ei kannata lähteä kauemmas"): silmä kiertää kohdetta
+            // vaakasäteellä r0 lyhyempää kaarta kohti seuraavan kohteen suuntaa, enintään sen kohdalle (lähin piste); siellä pallo
+            // vain leijuu. Ei säteittäistä liikettä, joten etäisyys kohteeseen pysyy saapumisen etäisyytenä.
+            double r0 = Math.Sqrt(e.e * e.e + e.n * e.n);
+            if (r0 < 1) return k;
+            double ero = Math.Atan2(kn, ke) - Math.Atan2(e.n, e.e);
+            ero = ero - 2 * Math.PI * Math.Floor((ero + Math.PI) / (2 * Math.PI));   // −π…π
+            double fi = Math.Sign(ero) * Math.Min(dM / r0, Math.Abs(ero)), c = Math.Cos(fi), si = Math.Sin(fi);
+            double se = e.e * c - e.n * si, sn = e.e * si + e.n * c;
             double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn), pysty = e.u - k.KatseKorkeusM;
             double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
             return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
@@ -157,12 +150,6 @@ namespace Matkakirja.Linssit.Kierros
         public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
         /// <summary>Lipumisen ryömintä katon jälkeen: osuus lipumisnopeudesta (0,08 × 4 = 0,32 m/s), ettei pallo seiso pitkällä pysähdyksellä.</summary>
         public const double LipumisRyomintaOsuus = 0.08;
-        /// <summary>
-        /// Silmän vaakaetäisyys kohteesta lipuessa enintään tämä kerroin × kehyksen oma (omistaja TF 166, 18.3x "jää välillä liian
-        /// kauas": kun seuraava oli toisella suunnalla, 119 m:n kehys karkasi 283 m:iin). Rajalla lipuminen jatkuu kohteen ympäri
-        /// kaarena (säde rajataan), joten pallo ei seiso eikä loittone.
-        /// </summary>
-        public const double LipumisVaakaKerroin = 1.2;
         /// <summary>Lipumisen nopeus ja katto skaalataan kehyksen etäisyydellä (enintään 1 tällä etäisyydellä): 119 m:n lähikuvassa
         /// 4 m/s vei rajan ja kaaren loppuun puolessa minuutissa, jonka jälkeen pallo seisoi.</summary>
         public const double LipumisVertailuEtM = 350;

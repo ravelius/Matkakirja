@@ -211,7 +211,7 @@ namespace Matkakirja.Linssit.Testit
         /// enintään KarkaaMaxKerroin × saapumisen etäisyys. Ennen korjausta lipuminen kohti seuraavaa vei silmää poispäin kohteesta:
         /// Madeleine 119 → 283 m, Riemukaari 107 → 239 m.
         /// </summary>
-        public const double KarkaaMaxKerroin = 1.3;
+        public const double KarkaaMaxKerroin = 1.05;   // omistaja 8.10. 18.4x: kaari samalla etäisyydellä (toleranssi 5 %)
         [Testi] static void KehysEiKarkaaPysahdyksella()
         {
             var vikoja = new List<string>();
