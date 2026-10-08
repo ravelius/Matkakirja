@@ -21,15 +21,15 @@
     padding: 11px 34px 12px 13px;
     border-width: 1px;
     border-bottom-width: 3px;
-    border-color: rgba(122, 85, 20, 0.34);
-    border-bottom-color: rgba(40, 26, 10, 0.38);
-    border-radius: 9px;
-    background-color: #f7f2e4;
-    color: #211d18;
+    border-color: var(--tk-kuulto-paperi-korostus-34);
+    border-bottom-color: var(--tk-himmennys-kevyt);
+    border-radius: var(--tk-kulma-keski);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
     opacity: 0;
     translate: 0 14px;
     transition-property: opacity, translate;
-    transition-duration: 0.26s;
+    transition-duration: 0.22s; /* UI-siirtymä ≤ 250 ms (pohjavahti 8.10., oli 0.26s) */
     transition-timing-function: ease-out;
 }
 
@@ -51,17 +51,17 @@
     min-height: 30px;
     padding: 0;
     border-width: 0;
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0);
-    color: #7a6a4a;
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--lapinakyva);
+    color: var(--sea-ink);
 }
 
 .mk-sahke-liuska__sulje:active {
-    background-color: rgba(122, 85, 20, 0.12);
+    background-color: var(--map-ink-12);
 }
 
 .mk-sahke-liuska__sulje .mk-nappi__teksti {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     -unity-text-align: middle-center;
 }
 
@@ -76,37 +76,37 @@
     height: 20px;
     flex-shrink: 0;
     margin: 0 7px 0 0;
-    color: #5b4a2c;
+    color: var(--tk-paperi-muste-pehmea);
     --mk-ikoni-viiva: 1.5;
 }
 
 .mk-sahke-liuska__saate {
     flex-shrink: 1;
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: #5b4a2c;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-sahke-liuska__paperi {
     padding: 8px 10px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.4);
-    border-radius: 5px;
-    background-color: #fdfaf0;
+    border-color: var(--tk-kuulto-paperi-korostus-40);
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--tk-paperi-pinta);
 }
 
 .mk-sahke-liuska__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 6px; /* web 0.9px */
     white-space: normal;
-    color: #1b1712;
+    color: var(--tk-tumma-pinta);
 }
 
 .mk-sahke-liuska__alarivi {
     margin-top: 7px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
-    color: #6b5c3e;
+    color: var(--raja-muste);
 }
 
 /* --- 2. apupyyntö liuskassa ------------------------------------------------ */
@@ -117,9 +117,9 @@
 
 .mk-sahke-liuska__kysymys {
     margin: 3px 0 10px 0;
-    font-size: 15.2px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: #1b1712;
+    color: var(--tk-tumma-pinta);
 }
 
 .mk-sahke-liuska__vaihtoehdot {
@@ -132,14 +132,14 @@
     margin-bottom: 6px;
     padding: 5px 9px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.34);
-    border-radius: 6px;
-    background-color: #fffdf6;
-    color: #211d18;
+    border-color: var(--tk-kuulto-paperi-korostus-34);
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--valkoinen);
+    color: var(--tk-paperi-muste);
 }
 
 .mk-sahke-liuska__vaihtoehto:active {
-    background-color: #f3ead2;
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-sahke-liuska__vaihtoehto:disabled {
@@ -147,8 +147,8 @@
 }
 
 .mk-sahke-liuska__vaihtoehto.mk-valittu {
-    border-color: #8a6a1f;
-    background-color: #f0e2bd;
+    border-color: var(--accent-dark);
+    background-color: var(--paper);
 }
 
 .mk-sahke-liuska__kirjain {
@@ -157,17 +157,17 @@
     flex-shrink: 0;
     margin-right: 8px;
     border-radius: 11px;
-    background-color: rgba(122, 85, 20, 0.16);
-    font-size: 12.8px;
+    background-color: var(--map-ink-16);
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-sahke-liuska__vaihtoehtoteksti {
     flex-shrink: 1;
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-sahke-liuska__ohita {
@@ -176,19 +176,19 @@
     margin-top: 9px;
     padding: 5px 11px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.28);
-    border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0);
-    color: #5b4a2c;
+    border-color: var(--tk-kuulto-paperi-korostus-28);
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--lapinakyva);
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-sahke-liuska__ohita:active {
-    background-color: rgba(122, 85, 20, 0.1);
+    background-color: var(--map-ink-07);
 }
 
 .mk-sahke-liuska__ohitateksti {
-    font-size: 13.6px;
-    color: #5b4a2c;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 /* --- 4. retkikuntaosio päävalikossa --------------------------------------- */
@@ -203,14 +203,14 @@
 
 .mk-sahke__teksti {
     margin-bottom: 4px;
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--ink-light);
 }
 
 .mk-sahke__huomio {
     margin-top: 7px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--muted);
 }
@@ -254,7 +254,7 @@
 }
 
 .mk-sahke__siruteksti {
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
 }
 
@@ -270,7 +270,7 @@
 
 .mk-sahke__koodi {
     margin: 6px 0 2px 0;
-    font-size: 16px;
+    font-size: var(--tk-koko-leipa);
     letter-spacing: 18.75px; /* web 3px */
 }
 
@@ -279,7 +279,7 @@
     padding: 4px 10px;
     border-width: 1px;
     border-color: var(--line);
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
     /* Rivin tausta muuttujasta (ei kiinteä musta 25 %): Retkikunta on 1.0.55:stä pergamentilla, jossa tumma pohja
        ja tumma muste eivät erotu (Natiivi-UI 29.9.2026); tummalla paneelilla --rivi-tausta on sama tumma sävy. */
     background-color: var(--rivi-tausta);
@@ -298,7 +298,7 @@
 
 /* Koodi luetaan ruudulta ääneen kaverille: iso ja harva. */
 .mk-sahke__koodiarvo {
-    font-size: 18.4px;
+    font-size: var(--tk-koko-valiotsikko);
     letter-spacing: 21.74px; /* web 4px */
     color: var(--accent);
 }

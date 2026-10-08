@@ -37,8 +37,9 @@ namespace Matkakirja.Natiivi
             public float Peitto;
         }
 
-        /// <summary>RenderTexturen sivu: 64 pt × 1,5 (varjo) × min(pikselisuhde, 2) kuten web (iPhone 3× → 192).</summary>
-        const int Pikselit = 192;
+        /// <summary>RenderTexturen sivu: 64 pt × 1,5 (varjo) × laitteen pikselisuhde (iPhone 3× → 288, iPad 2× → 192;
+        /// web käytti min(pikselisuhde, 2); terävyys, Päätoimittaja 8.10.2026).</summary>
+        static int Pikselit => Mathf.CeilToInt(64f * Kangas * UiKerros.PikseliaPisteessa);
         const float Kangas = 1.5f, VarjonKorkeusAste = 58f;
 
         readonly UiKerros kerros;

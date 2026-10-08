@@ -37,7 +37,7 @@ namespace Matkakirja.Natiivi
         const float Jako = 10f, Sade = 3.6f, Reuna = 9f, SammunutPeitto = 0.13f;
         /// <summary>radio.js NAYTON_MUSTE (--radio-lcd-muste).</summary>
         public static readonly Color Muste = new Color32(0xf2, 0xc0, 0x5e, 255);
-        static readonly Color Hehku = new Color32(242, 183, 90, 255);
+        static readonly Color Hehku = Tyylikirja.Kehys.Kulta;
 
         readonly int merkkeja, riveja, sarakkeita, pisterivit;
         readonly float leveys, korkeus;

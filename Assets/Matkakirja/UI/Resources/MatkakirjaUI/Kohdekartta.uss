@@ -9,9 +9,9 @@
     flex-shrink: 1;
     padding: 12px 16px 16px 16px;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.3);
-    background-color: #f5f0e2;
-    color: rgba(58, 42, 26, 0.95);
+    border-color: var(--tk-paperi-reunus);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--map-ink-95);
 }
 
 .mk-nahtavyydet__yla {
@@ -20,7 +20,7 @@
     flex-shrink: 0;
     padding-bottom: 6px;
     border-bottom-width: 1px;
-    border-bottom-color: rgba(70, 51, 31, 0.25);
+    border-bottom-color: var(--map-ink-25);
 }
 
 .mk-nahtavyydet__yla {
@@ -31,10 +31,10 @@
  * versaalit keskellä, #16130f. */
 .mk-nahtavyydet__otsikko {
     flex-grow: 1;
-    font-size: 19.2px;
+    font-size: 19.2px; /* fonttipoikkeus: 19.2 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 52.08px; /* web 10px */
     -unity-text-align: middle-center;
-    color: #16130f;
+    color: var(--bg);
     margin: 0 36px;
 }
 
@@ -57,19 +57,19 @@
     min-height: 32px;
     padding: 3px 12px;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.45);
-    border-radius: 3px;
-    background-color: rgba(255, 252, 242, 0.5);
-    color: #46331f;
+    border-color: var(--map-ink-45);
+    border-radius: var(--tk-kulma-hius);
+    background-color: var(--tk-kuulto-paperi-pinta-50);
+    color: var(--map-ink);
 }
 
 .mk-nahtavyydet__kokoruutu .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-nahtavyydet__esittely {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
 }
 
@@ -96,16 +96,16 @@
     height: auto;
     padding: 3.2px 9.6px;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
+    border-color: var(--map-ink-35);
     border-radius: var(--tk-kulma-nappi);
-    background-color: rgba(255, 250, 238, 0.6);
-    color: rgba(70, 51, 31, 0.85);
+    background-color: var(--tk-kuulto-paperi-pinta-60);
+    color: var(--map-ink-85);
 }
 
 .mk-kohdekartta__kokoruutu .mk-nappi__teksti {
-    font-size: 10.6px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12px; /* web 0.12em */
-    color: rgba(70, 51, 31, 0.85);
+    color: var(--map-ink-85);
 }
 
 .mk-kohdekartta__kokoruutu .mk-ikoni {
@@ -119,9 +119,9 @@
     overflow: hidden;
     margin: 4.8px 0 8.8px 0;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.4);
-    border-radius: 2px;
-    background-color: #efe6cf;
+    border-color: var(--map-ink-40);
+    border-radius: var(--tk-kulma-hius);
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-kohdekartta__lava {
@@ -139,8 +139,8 @@
 
 .mk-kohdekartta__lahde {
     margin-top: 1.6px;
-    font-size: 9.3px;
-    color: rgba(90, 74, 51, 0.8);
+    font-size: 9.3px; /* fonttipoikkeus: 9.3 px, lähin asteikon koko 12 px (ero 2.7 px näkyisi; Päätoimittaja 8.10.2026) */
+    color: var(--tk-kuulto-paperi-muste-pehmea-80);
 }
 
 /* Piirros 40 × 40 (web .maakartta-piste.kohde-numero.kohde-piirros), keskitetty pisteeseen. */
@@ -176,11 +176,11 @@
     padding: 3.2px 8.8px;
     white-space: nowrap;
     font-size: 15.2px;
-    color: #2c1e07;
-    background-color: #f5f0e2;
+    color: var(--tk-lasi-pinta-peitto);
+    background-color: var(--tk-paperi-pinta);
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.55);
-    border-radius: 3px;
+    border-color: var(--map-ink-55);
+    border-radius: var(--tk-kulma-hius);
 }
 
 .mk-kohdekartta__piirros--valittu .mk-kohdekartta__kyltti {
@@ -193,19 +193,19 @@
     left: 50%;
     width: 104px;
     margin-left: -52px;
-    font-size: 9.6px;
+    font-size: 9.6px; /* fonttipoikkeus: 9.6 px, lähin asteikon koko 12 px (ero 2.4 px näkyisi; Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: upper-center;
-    color: #16130f;
+    color: var(--bg);
     text-shadow: 0 0 3px rgba(247, 239, 220, 0.95);
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 0.35s;
+    transition-duration: 0.22s; /* UI-siirtymä ≤ 250 ms (pohjavahti 8.10., oli 0.35s) */
 }
 
 .mk-kohdekartta--zoomattu .mk-kohdekartta__nimi {
     opacity: 1;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-kohdekartta__ankkuri {
@@ -225,14 +225,14 @@
     align-items: center;
     justify-content: center;
     border-width: 2px;
-    border-color: #2c2318;
+    border-color: var(--panel);
     border-radius: 13px;
-    background-color: #f3e2b8;
+    background-color: var(--paper);
 }
 
 .mk-kohdekartta__numero {
-    font-size: 13px;
-    color: #2c2318;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
+    color: var(--panel);
     -unity-text-align: middle-center;
 }
 
@@ -248,8 +248,8 @@
     border-left-width: 1px;
     border-right-width: 1px;
     border-bottom-width: 1px;
-    border-color: rgb(55, 46, 35);
-    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--panel-2);
+    background-color: var(--lapinakyva);
 }
 
 .mk-kohdekartta__mittajanakaista {
@@ -258,7 +258,7 @@
     right: 0;
     bottom: 0;
     height: 60%;
-    background-color: rgba(247, 240, 222, 0.55);
+    background-color: var(--tk-kuulto-paperi-pinta-55);
 }
 
 .mk-kohdekartta__mittajanateksti {
@@ -268,12 +268,12 @@
     translate: -50% 0;
     padding: 0 3px;
     margin: 0;
-    font-size: 9.3px;
+    font-size: 9.3px; /* fonttipoikkeus: 9.3 px, lähin asteikon koko 12 px (ero 2.7 px näkyisi; Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     -unity-text-align: middle-center;
-    color: rgb(47, 38, 27);
-    background-color: rgba(247, 240, 222, 0.72);
-    border-radius: 2px;
+    color: var(--tk-lasi-pinta-peitto);
+    background-color: var(--tk-kuulto-paperi-pinta-72);
+    border-radius: var(--tk-kulma-hius);
 }
 
 
@@ -290,7 +290,7 @@
     bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: #0b0805;
+    background-color: var(--tk-kuulto-himmennys-tumma-100);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.2s;
@@ -325,22 +325,22 @@
     min-height: 32px;
     padding: 0;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.45);
-    border-radius: 3px;
-    background-color: rgba(247, 240, 222, 0.88);
+    border-color: var(--map-ink-45);
+    border-radius: var(--tk-kulma-hius);
+    background-color: var(--tk-kuulto-paperi-pinta-88);
     align-items: center;
     justify-content: center;
 }
 
 .mk-kohdekartta-kokoruutu__sulku .mk-nappi__teksti {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     -unity-text-align: middle-center;
-    color: #2c2318;
+    color: var(--panel);
 }
 
 .mk-kohdekartta-kokoruutu__sulku:active {
-    background-color: rgba(255, 250, 238, 0.98);
-    border-color: rgba(70, 51, 31, 0.75);
+    background-color: var(--tk-paperi-pinta);
+    border-color: var(--map-ink-75);
 }
 
 /* Web .kartta-suurennos-selitteet: rivitetty keskitetty luettelo (gap 0.3rem 1rem), margin-top 0.45rem, sivut 0.5rem,
@@ -358,30 +358,30 @@
     padding: 1.6px 0;
     border-width: 0;
     border-radius: 0;
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 12.5px;
+    background-color: var(--lapinakyva);
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 3px; /* web 0.03em */
-    color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
+    color: var(--tk-tumma-muste); /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
     white-space: normal;
 }
 
 .mk-kohdekartta-kokoruutu__selite .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 3px; /* web 0.03em */
-    color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
+    color: var(--tk-tumma-muste); /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
 }
 
 .mk-kohdekartta-kokoruutu__selite--nappi:active .mk-nappi__teksti {
-    color: #f0d9a4;
+    color: var(--tk-paperi-pergamentti);
 }
 
 /* Web .postikortti.kulttuuri-suurennos .kuvalahde: 0.6rem, vaalea 0,62, keskitetty, margin-top 0.3rem. */
 .mk-kohdekartta-kokoruutu__lahde {
     margin-top: 4.8px;
-    font-size: 9.6px;
+    font-size: 9.6px; /* fonttipoikkeus: 9.6 px, lähin asteikon koko 12 px (ero 2.4 px näkyisi; Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     white-space: normal;
-    color: #9d978a; /* web rgba(247, 239, 220, 0.62) pohjalla #0b0805 */
+    color: #9d978a; /* väripoikkeus: lämmin sävy, lähin token neutraali harmaa tk-harmaa-reunus (ΔE 8.6) (Päätoimittaja 8.10.2026) */ /* web rgba(247, 239, 220, 0.62) pohjalla #0b0805 */
 }
 
 .mk-kohdekartta-kokoruutu__kortti--levitetty .mk-kohdekartta-kokoruutu__selitteet,
@@ -426,7 +426,7 @@
 .mk-avauskortti__hero {
     flex-shrink: 0;
     overflow: hidden;
-    background-color: #d9ccb0;
+    background-color: var(--tk-paperi-pergamentti);
 }
 
 .mk-avauskortti__herokuva {
@@ -447,8 +447,8 @@
     bottom: 7.2px;
     margin: 0;
     padding: 0;
-    font-size: 30.4px;
-    color: #fff8ec;
+    font-size: 30.4px; /* fonttipoikkeus: 30.4 px, lähin asteikon koko 34 px (ero 3.6 px näkyisi; Päätoimittaja 8.10.2026) */
+    color: var(--tk-paperi-pinta);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
@@ -461,9 +461,9 @@
 .mk-avauskortti__teksti {
     margin: 0;
     padding: 0;
-    font-size: 15.5px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 /* Web .avauskortti-lehti: 0.9rem type-kirjasin #b03a2b, alaviiva 1 px, ei nappipohjaa. */
@@ -473,14 +473,14 @@
     padding: 0 0 1px 0;
     border-width: 0 0 1px 0;
     border-radius: 0;
-    border-color: #b03a2b;
-    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--mark);
+    background-color: var(--lapinakyva);
     justify-content: flex-start;
 }
 
 .mk-avauskortti__lehti .mk-nappi__teksti {
-    font-size: 14.4px;
-    color: #b03a2b;
+    font-size: var(--tk-koko-apuri);
+    color: var(--mark);
 }
 
 /* Web .avauskortti-kartta: margin 0 0.9rem, reuna rgba(122,85,20,.35), kulma 8, korkeus 35svh (Mitoita). */
@@ -489,8 +489,8 @@
     overflow: hidden;
     margin: 0 14.4px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.35);
-    border-radius: 8px;
+    border-color: var(--tk-kuulto-paperi-korostus-35);
+    border-radius: var(--tk-kulma-keski);
 }
 
 /* Pelkkä kartta (web .kaupunkikartta-pelkka): täyttää kaistan, ei kehyksen omaa reunaa, lähde kulmassa kartan päällä. */
@@ -521,9 +521,9 @@
     bottom: 0;
     margin: 0;
     padding: 2.4px 6.4px;
-    font-size: 11.5px;
-    border-top-right-radius: 6px;
-    background-color: rgba(245, 240, 226, 0.85);
+    font-size: var(--tk-koko-kapiteeli);
+    border-top-right-radius: var(--tk-kulma-pieni);
+    background-color: var(--tk-kuulto-paperi-pinta-85);
 }
 
 /* Web .avauskortti-opas: margin 0.65rem 0.9rem 0, padding 0.5rem, #efe1c2, kulma 8, rako 0.65rem. */
@@ -535,8 +535,8 @@
     margin: 10.4px 14.4px 0 14.4px;
     padding: 8px;
     border-width: 0;
-    border-radius: 8px;
-    background-color: #efe1c2;
+    border-radius: var(--tk-kulma-keski);
+    background-color: var(--paper);
 }
 
 .mk-avauskortti__opaskuva {
@@ -544,7 +544,7 @@
     width: 84px;
     height: 84px;
     margin-right: 10.4px;
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     -unity-background-scale-mode: scale-and-crop;
 }
 
@@ -557,25 +557,25 @@
 .mk-avauskortti__oppaanlaji {
     margin: 0;
     padding: 0;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 7.7px; /* web 0.08em */
-    color: #8a6114;
+    color: var(--accent-dark);
 }
 
 .mk-avauskortti__oppaanotsikko {
     margin: 1.6px 0;
     padding: 0;
-    font-size: 15.5px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-avauskortti__oppaanteksti {
     margin: 0;
     padding: 0;
-    font-size: 13.8px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 /* Web .kaupunkipopup-avaus > .kaupunkipopup-sulje: 2.1rem ympyrä rgba(245,240,226,.92), × 1.1rem #3a2f24. */
@@ -589,32 +589,32 @@
     padding: 0;
     border-width: 0;
     border-radius: 16.8px;
-    background-color: rgba(245, 240, 226, 0.92);
+    background-color: var(--tk-kuulto-paperi-pinta-92);
     align-items: center;
     justify-content: center;
 }
 
 .mk-avauskortti__sulku .mk-nappi__teksti {
-    font-size: 22px;
-    color: #3a2f24;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
+    color: var(--panel-2);
 }
 
 /* Suurennos kortista (web .kartta-suurennos-kortista): huntu rgba(29,22,16,.35) (+ KuvaSumea), kortti #f5f0e2
    kulma 14, padding 2.6rem 0.6rem 0.6rem, kartta keskellä; × ympyränä; − + oikeassa alakulmassa. */
 .mk-kohdekartta-kokoruutu--kortista {
-    background-color: rgba(29, 22, 16, 0.35);
+    background-color: var(--tk-himmennys-kevyt);
 }
 
 .mk-kohdekartta-kokoruutu--kortista > .mk-kohdekartta-kokoruutu__kortti {
     justify-content: center;
     padding: 41.6px 9.6px 9.6px 9.6px;
     border-radius: 14px;
-    background-color: #f5f0e2;
+    background-color: var(--tk-paperi-pinta);
     max-width: 94%;
 }
 
 .mk-kohdekartta-kokoruutu--kortista .mk-kohdekartta__kehys {
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
 }
 
 .mk-kohdekartta-kokoruutu--kortista .mk-kohdekartta-kokoruutu__sulku {
@@ -623,9 +623,9 @@
     width: 33.6px;
     height: 33.6px;
     min-height: 33.6px;
-    border-color: rgba(122, 85, 20, 0.3);
+    border-color: var(--tk-kuulto-paperi-korostus-30);
     border-radius: 16.8px;
-    background-color: rgba(245, 240, 226, 0.94);
+    background-color: var(--tk-kuulto-paperi-pinta-94);
 }
 
 .mk-kohdekartta-kokoruutu__tyokalut {
@@ -642,16 +642,16 @@
     margin-left: 6.4px;
     padding: 0;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.35);
-    border-radius: 8px;
-    background-color: #efe1c2;
+    border-color: var(--tk-kuulto-paperi-korostus-35);
+    border-radius: var(--tk-kulma-keski);
+    background-color: var(--paper);
     align-items: center;
     justify-content: center;
 }
 
 .mk-kohdekartta-kokoruutu__zoom .mk-nappi__teksti {
-    font-size: 20px;
-    color: #3a2f24;
+    font-size: var(--tk-koko-otsikko);
+    color: var(--panel-2);
 }
 
 /* --- AVAUSKORTIN KUTSU (web .kaupunkikortin-kutsu, Kutsuminiatyyri.cs) ------------------------------------------- */
@@ -674,9 +674,9 @@
     padding: 0;
     overflow: hidden;
     border-width: 2px;
-    border-color: #f5f0e2;
-    border-radius: 9px;
-    background-color: #d9ccb0;
+    border-color: var(--tk-paperi-pinta);
+    border-radius: var(--tk-kulma-keski);
+    background-color: var(--tk-paperi-pergamentti);
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
@@ -697,9 +697,9 @@
     width: 100%;
     margin: 0;
     padding: 1px 3px 2px 3px;
-    font-size: 10px;
-    color: #fff8ec;
-    background-color: rgba(33, 29, 24, 0.72);
+    font-size: 10px; /* fonttipoikkeus: 10 px, lähin asteikon koko 12 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
+    color: var(--tk-paperi-pinta);
+    background-color: var(--tk-himmennys-tumma);
     -unity-text-align: middle-center;
     white-space: nowrap;
     overflow: hidden;
@@ -727,16 +727,16 @@
 }
 
 .mk-kohdekartta__ihmetahti-varjo {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--tk-himmennys-kevyt);
     translate: 0 1px;
 }
 
 .mk-kohdekartta__ihmetahti-kulta {
-    color: #b8862b;
+    color: var(--tk-erikois-ihme-3);
 }
 
 .mk-kohdekartta__ihmetahti-muste {
-    color: #4b3a1c;
+    color: var(--map-ink);
     --mk-ikoni-viiva: 1.2;
 }
 

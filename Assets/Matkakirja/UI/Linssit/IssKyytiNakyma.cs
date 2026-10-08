@@ -1167,7 +1167,7 @@ namespace Matkakirja.Natiivi
         const float HorisontinLeveys = 0.858f, HorisontinKeskus = 0.39f, PyoreanOsuus = 0.94f;
         const float KuvaL = 1206f, KuvaK = 2622f, YlaikkunaX = 601f, YlaikkunaY = 466f, YlaikkunaL = 450f;
         const float PyoreaX = 603f, PyoreaY = 1322f, PyoreaL = 605f;
-        static readonly Color OhjaamonVari = new Color(0.012f, 0.013f, 0.02f, 1f);
+        static readonly Color OhjaamonVari = (Color)Tyylikirja.Kuulto.Musta100;
         static readonly Color Lampo = new Color(1f, 0.86f, 0.66f), Sini = new Color(0.45f, 0.66f, 1f);
         const float ReunavaloVoima = 0.95f, MaavaloVoima = 0.4f;
         bool rajattu, kupuKaannetty;

@@ -40,10 +40,10 @@
     justify-content: center;
 }
 
-.mk-issohjaamo__varsi--ylos { left: 32px; top: 0; border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-width: 0; }
-.mk-issohjaamo__varsi--alas { left: 32px; top: 64px; border-bottom-left-radius: 9px; border-bottom-right-radius: 9px; border-top-width: 0; }
-.mk-issohjaamo__varsi--vasen { left: 0; top: 32px; border-top-left-radius: 9px; border-bottom-left-radius: 9px; border-right-width: 0; }
-.mk-issohjaamo__varsi--oikea { left: 64px; top: 32px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-left-width: 0; }
+.mk-issohjaamo__varsi--ylos { left: 32px; top: 0; border-top-left-radius: var(--tk-kulma-keski); border-top-right-radius: var(--tk-kulma-keski); border-bottom-width: 0; }
+.mk-issohjaamo__varsi--alas { left: 32px; top: 64px; border-bottom-left-radius: var(--tk-kulma-keski); border-bottom-right-radius: var(--tk-kulma-keski); border-top-width: 0; }
+.mk-issohjaamo__varsi--vasen { left: 0; top: 32px; border-top-left-radius: var(--tk-kulma-keski); border-bottom-left-radius: var(--tk-kulma-keski); border-right-width: 0; }
+.mk-issohjaamo__varsi--oikea { left: 64px; top: 32px; border-top-right-radius: var(--tk-kulma-keski); border-bottom-right-radius: var(--tk-kulma-keski); border-left-width: 0; }
 
 /* Plus-kuvion keskiruutu: varret yhtenäiseksi ristiksi (ei aukkoa navan alla). */
 .mk-issohjaamo__keski {
@@ -100,7 +100,7 @@
     margin: 0 8px;
     padding: 4px 8px;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
     justify-content: center;
@@ -166,7 +166,7 @@
     width: 12px;
     height: 44px;
     margin-top: 2px;
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-hius); /* EI OVAALEJA: kevyt suorakulmio (Päätoimittaja 8.10.) */
     background-color: var(--tk-lcd-pinta-peitto);
     border-width: 1px;
     border-color: var(--tk-reunus);
@@ -185,7 +185,7 @@
     left: -14px;
     width: 40px;
     height: 16px;
-    border-radius: 5px;
+    border-radius: var(--tk-kulma-pieni);
     border-width: 1px;
     border-color: var(--tk-reunus);
     background-color: var(--tk-muste-pehmea);
@@ -245,7 +245,7 @@
     min-width: 160px;
     padding: 0 14px;
     border-width: 1px;
-    border-radius: 10px;
+    border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
     justify-content: center;
@@ -271,7 +271,7 @@
     flex-direction: row;
     padding: 4px; /* TASAISET VÄLIT (omistaja 6.10.): reunaväli = nappien väli 4 pt (IssOhjaamo.LaajennusVali) */
     border-width: 1px;
-    border-radius: 12px;
+    border-radius: var(--tk-kulma-kortti);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
 }
@@ -300,7 +300,7 @@
     margin: 0 0 0 4px;
     padding: 0;
     border-width: 1px;
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
     color: var(--tk-lcd-muste);
