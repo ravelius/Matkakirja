@@ -99,9 +99,10 @@ namespace Matkakirja.Natiivi
             // NOPEA ENSILATAUS (Päätoimittaja 1.10.: TF 91 huippu 93 s ennen kuin maastoa näkyi): ensin kevyt maasto glb:n omalla
             // 2k-kuvalla (≈ 2 Mt, ei erillistä ortoa), sitten horisontti, puut ja aluskasvit, ja lopuksi laitteen oma taso
             // taustalla; se korvaa kevyen vasta valmiina. Puhelimessa huipputason orto on 4k (ruudulla ei eroa 8k:hon,
-            // lataus ~22 Mt vs ~90 Mt); iPad ja Mac ennallaan 8k.
+            // lataus ~22 Mt vs ~90 Mt); iPad ja Mac ennallaan 8k. 8.10.2026 (omistaja 19.5x): puhelimessakin 8k ja täydet lisämallit,
+            // kun linnan muistibudjetti poistaa puhelinkevennykset (LinnaMuisti; DioraamaEsilataus samalla ehdolla).
             string maasto = taso == DioraamaUlkokuori.Laatu.Huippu ? y.Huippu : taso == DioraamaUlkokuori.Laatu.Normaali ? y.Normaali : y.Kevyt;
-            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            bool puhelin = !LinnaMuisti.Nyt.RajoituksetPois;
             string orto = taso == DioraamaUlkokuori.Laatu.Huippu ? (puhelin && !string.IsNullOrEmpty(y.OrtoNormaali) ? y.OrtoNormaali : y.OrtoHuippu)
                 : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
             var esikatselu = new List<UnityEngine.Object>();

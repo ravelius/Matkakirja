@@ -220,6 +220,7 @@ namespace Matkakirja.Natiivi
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
+            LinnaMuisti.Avaus(); // laatu muistibudjetista ennen kuin mikään lataus kysyy tasoa (omistaja 8.10.2026 19.5x)
             aktiivinen = this;
             latausOsuus = 0f;
             DioraamaLevyvalimuisti.NollaaEdistys();
@@ -284,6 +285,7 @@ namespace Matkakirja.Natiivi
         {
             // Nimiruutu jo rakennus.jsonin latauksen ajan (simu 4.10.: ensimmäinen sekunti oli vaalea tyhjä ruutu).
             RakennusLatautuu = avoinna && rakennus == null && latausKaynnissa;
+            if (avoinna) LinnaMuisti.Vahti(); // hätävahti 2 s välein (8.10.2026)
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             aktiivinenSovitin = this;
@@ -542,6 +544,7 @@ namespace Matkakirja.Natiivi
             Linssi = null;
             Vaihtui?.Invoke(null);
             LukitseVaaka(false);
+            LinnaMuisti.Nollaa(); // seuraava avaus laskee budjetin uudelleen
         }
 
         // LINNA AUKEAA VAAKANA (omistaja 4.10. 20.2x): iPhonella poikkileikkaus lukittuu vaaka-asentoon avattaessa (laitteen
@@ -1014,7 +1017,8 @@ namespace Matkakirja.Natiivi
             }
             reitti = Matkakirja.Linssit.Seikkailu.Venesaapuminen.Lyhenna(reitti, VeneMatkaM * kesto / VeneKestoS);
             var ydin = new Matkakirja.Linssit.Seikkailu.Venesaapuminen(reitti, kesto, loppuSuunta);
-            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            // Puhelimessa kevyt vene; 8.10.2026 (omistaja 19.5x): täysi, kun linnan muistibudjetti poistaa puhelinkevennykset.
+            bool puhelin = !LinnaMuisti.Nyt.RajoituksetPois;
             string polku = puhelin ? (vm.Kevyt ?? vm.Huippu) : (vm.Huippu ?? vm.Kevyt);
             linssi.KertojaPois();
             yield return SeikkailuVene.Aloita(peili(paketinJuuri + polku), ydin, nayttamo.transform, DioraamaNayttamo.Kerros, o.Kirjaa,
@@ -2102,7 +2106,9 @@ namespace Matkakirja.Natiivi
         /// muistiltaan iso (silti täysi näyttö turhaa), ja iso näyttö voi olla muistiltaan pieni (silti
         /// vanhempi/halvempi laite). "poikki mittaus" (Mittausraportti) näyttää kumman tämän laite valitsi.</summary>
         // Omistaja 30.9.2026: täyden laadun laitteilla (DioraamaLaatu.Taysi, A17 Proa uudemmat) aina täydet tekstuurit ja 4k-atlakset.
-        internal static bool PieniLaite() => !DioraamaLaatu.Taysi && ((long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000);
+        // 8.10.2026 (omistaja 19.5x): yllä oleva sääntö on laiteluokan alaraja (LinnaMuistibudjetti.Laiteluokka); linnan muistibudjetti
+        // antaa täydet pinnat myös pienelle laitteelle, kun vapaata muistia riittää.
+        internal static bool PieniLaite() => !LinnaMuisti.Nyt.TaydetPinnat;
 
         string Tilaraportti()
         {
@@ -2134,7 +2140,7 @@ namespace Matkakirja.Natiivi
             // Era 2b (tekstuurimuisti): kertoo kumman pintakoon PieniLaite valitsi ja MIKSI (näyttöpikselit,
             // muisti) -- omistajan pyyntö "kertoo kumpi ja muistin".
             long naytonPikselit = (long)Screen.width * Screen.height;
-            string pintakoko = (PieniLaite() ? "puolikas" : "täysi") + ", " + DioraamaLaatu.Kuvaus;
+            string pintakoko = (PieniLaite() ? "puolikas" : "täysi") + ", " + DioraamaLaatu.Kuvaus; // sis. linnamuistin budjetin
             return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {(rakennus3D?.Kolmiot ?? 0) + hahmo3dKolmiot} (3d-hahmot {hahmo3dKolmiot}), " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
                    $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, " +
