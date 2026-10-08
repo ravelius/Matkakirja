@@ -52,6 +52,7 @@ Avoimet työt:
 - SIMUT T7:LLÄ 8.10. alkaen (Natiiviseppä): omien zsh-ajoskriptien alkuun `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`
   (vanhat UDID:t F2D9B022/4CE6C737 käännetään; taulu tyokalut/simusarja-udid.tsv). Ilman sitä xcrun simctl osuu vanhaan sarjaan. MCP-simu
   ei näe T7:ää → napautukset simkosketuksella/todistusajolla. Ajoskriptejä (lokit/linssiseppa2-3d-kattavuus/ajot/) ei vielä päivitetty.
+  nohup/xargs/timeout/env ohittavat funktion: niissä `xcrun simctl --set "$MK_SIMSET" …` ja UDID T7-muodossa (`mk_kaanna <UDID>`).
 - OLAVINLINNA-TESTIT (PT 8.10.): proto linssiseppa2/olavinlinna-testit e4faa4144 (Siirtosepän historia-valot 7d8408f98 päällä),
   worktree wt/proto-linssiseppa2-olavinlinna. Linssit-testit/Testit/Huonesimulaatio.cs (sovittimen säännöt, Kopioi), OlavinlinnaPala-
   Testit (Thief-ajuri reitti 1–20: 173 s / 0 kiinni; valoreitti, harhautus, Pulu 180 s), PelattavuusmalliTestit (Ydin-rajat).
