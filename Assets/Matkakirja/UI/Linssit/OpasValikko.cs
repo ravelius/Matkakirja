@@ -766,6 +766,9 @@ namespace Matkakirja.Natiivi
             {
                 palloNakyy = false;
                 palloNimi = null; palloKuvaNyt = null;
+                palloLiike?.Pause();
+                Latauskuva.AsetaRajaus(siirtymaKuva, null);
+                siirtymaKuva.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
                 siirtymaKuva.style.display = DisplayStyle.None;
                 siirtymaLiuku.style.display = DisplayStyle.None;
                 siirtymaTeksti.style.scale = StyleKeyword.Null;
@@ -789,6 +792,7 @@ namespace Matkakirja.Natiivi
             bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
             siirtymaKuva.style.backgroundImage = new StyleBackground(t);
             siirtymaKuva.style.display = DisplayStyle.Flex;
+            if (!palloNakyy) KaynnistaPalloLiike();
             palloNakyy = true;
             if (myohassa)
             {
@@ -803,6 +807,24 @@ namespace Matkakirja.Natiivi
         }
         float siirtymaAlku;
         int siirtymaKerta;
+
+        // LATAUSKUVA-POHJA STILL-KUVALLE (omistaja 8.10. "latauskuvat kevyesti animoiduiksi"; Päätoimittaja): kunnes pallon kerrokset
+        // (tausta, kupu, kori) tulevat, nykyinen still-kuva lähentyy hitaasti keskeltä (LatausLiike.Lahentyminen 1,00 → 1,04 / 8 s ja
+        // takaisin) taustan rajauksena; 33 ms UI-ajastin, ei täyttä ruudunpäivitystä.
+        IVisualElementScheduledItem palloLiike;
+        float palloLiikeAlku;
+
+        void KaynnistaPalloLiike()
+        {
+            palloLiikeAlku = Time.unscaledTime;
+            if (palloLiike == null)
+                palloLiike = siirtymaKuva.schedule.Execute(() =>
+                {
+                    if (!palloNakyy) return;
+                    Latauskuva.AsetaRajaus(siirtymaKuva, Matkakirja.Linssit.LatausLiike.Lahentyminen(Time.unscaledTime - palloLiikeAlku, 0, 0));
+                }).Every(Latauskuva.PaivitysMs);
+            else palloLiike.Resume();
+        }
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
         public void SiirtymaValmis()
@@ -1273,6 +1295,7 @@ namespace Matkakirja.Natiivi
             if (ohjainRivi.style.right.value.value != riviOikea) ohjainRivi.style.right = riviOikea;
             if (ohjainRivi.style.bottom.value.value != ohjainAla) ohjainRivi.style.bottom = ohjainAla;
 
+            tapit.Vapaa(VapaaTila);
             tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);

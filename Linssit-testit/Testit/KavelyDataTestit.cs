@@ -55,6 +55,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("vene")).KiertoY == 2.1, "kierto_y");
         }
 
+        [Testi] static void PartionLyhtyJaSoihtu()
+        {
+            // v44m: partio:portinvartija-1 lyhty, partio:portaat-1 soihtu (pelattavuusmalli 8.1: valo seinällä ennen kantajaa).
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"partio:portinvartija-1\", \"paikka\": [0, 0, 0], \"lyhty\": true, \"odotus_s\": 8}, " +
+                "{\"nimi\": \"partio:portaat-1\", \"paikka\": [1, 0, 0], \"soihtu\": true}, {\"nimi\": \"partio:piha-1\", \"paikka\": [2, 0, 0]}]");
+            var p = System.Linq.Enumerable.ToList(d.Lajia("partio"));
+            Oleta.Tosi(p[0].Lyhty && !p[0].Soihtu && p[1].Soihtu && !p[1].Lyhty && !p[2].Lyhty && !p[2].Soihtu, "lyhty ja soihtu luetaan, puuttuva = ei");
+            Oleta.Tosi(p[0].OdotaS == 8 && p[1].OdotaS == 0, "odotus_s (v44s) luetaan kuten odota_s");
+        }
+
+        [Testi] static void LeikkausVain1499()
+        {
+            // v44x: leikkaus:vain-1499-b listaa aina leikattavat (bastionit); SeikkailuKavely antaa niille etusijan.
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"leikkaus:vain-1499-b\", \"paikka\": [0, 0, 0], \"leikkaukset\": [\"b1499-a\", \"b1499-b\"]}, {\"nimi\": \"pinta:puu-1\", \"paikka\": [0, 0, 0]}]");
+            var l = System.Linq.Enumerable.First(d.Lajia("leikkaus"));
+            Oleta.Tosi(l.Leikkaukset != null && l.Leikkaukset.Count == 2 && l.Leikkaukset[1] == "b1499-b", "leikkaukset luetaan");
+            Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("pinta")).Leikkaukset == null, "ilman kenttää null");
+        }
+
         [Testi] static void LuukunSarana()
         {
             var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"luukku:koillinen\", \"paikka\": [-12.1, 11.5, -16.6], \"sarana\": [-12.2, 11.5, -16.7], \"glb\": \"esine-luukku.glb\"}, " +
@@ -62,6 +81,8 @@ namespace Matkakirja.Linssit.Testit
             var l = System.Linq.Enumerable.First(d.Lajia("luukku"));
             Oleta.Tosi(l.Sarana != null && l.Sarana[0] == -12.2 && l.Sarana[2] == -16.7 && l.Glb == "esine-luukku.glb", "luukun sarana");
             Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("valo")).Sarana == null, "ilman saranaa null");
+            var k = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"esine:kilpilaatta-tott\", \"paikka\": [0, 0, 0], \"kiintea\": true}, {\"nimi\": \"esine:kivi-1\", \"paikka\": [0, 0, 0]}]");
+            Oleta.Tosi(System.Linq.Enumerable.First(k.Lajia("esine")).Kiintea && !System.Linq.Enumerable.Last(k.Lajia("esine")).Kiintea, "kiinteä esine");
         }
 }
 }

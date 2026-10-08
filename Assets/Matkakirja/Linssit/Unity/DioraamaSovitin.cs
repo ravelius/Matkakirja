@@ -389,8 +389,14 @@ namespace Matkakirja.Natiivi
             if (PelattavaPalaPyydetty && rakennus != null && nayttamo != null && cm != null && SeikkailuVene.Aktiivinen == null && SeikkailuPelaaja.Aktiivinen == null)
             {
                 PelattavaPalaPyydetty = false; pelattavaPala = true;
-                o.StartCoroutine(VenePaalle(VeneKestoS));
-                o.Kirjaa("seikkailu: pelattava pala käynnistyy");
+                // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
+                var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
+                PelattavaPalaJatka = false;
+                SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
+                SeikkailuVihjeet.Luo(nayttamo.transform, o.Kirjaa);
+                if (jatka != null && jatka.OnTarkistus) o.StartCoroutine(JatkaTallennuksesta(jatka));
+                else o.StartCoroutine(VenePaalle(VeneKestoS));
+                o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
             }
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
@@ -454,7 +460,8 @@ namespace Matkakirja.Natiivi
                 ? Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, pr) - PuolilahiVapaaM, 0f, PuolilahiLeikkausMaxM) : 0f;   // enintään 1,2 m: kuulija ei katoa blendissä
             // Kävely: kameran ja pelaajan väliin jäävä lähieste (pylväs, soihtu, oven pieli) jää piirtämättä (Päätoimittaja 7.10. 14.0x:
             // pihakuvassa pylväs peitti kolmanneksen) — leikkaus 1,2 m ennen pelaajaa, ettei hahmo itse katoa.
-            if (SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && nayttamo.Kamera != null)
+            if (SeikkailuPelaaja.Aktiivinen != null && SeikkailuPelaaja.Ensimmainen) nayttamo.LahiLeikkaus = 0f;   // silmistä: ei peittäjiä
+            else if (SeikkailuPelaaja.Aktiivinen is SeikkailuPelaaja sp && nayttamo.Kamera != null)
                 nayttamo.LahiLeikkaus = Mathf.Clamp(Vector3.Distance(nayttamo.Kamera.transform.position, sp.transform.position + Vector3.up * 1.2f) - 1.6f, 0f, KavelyLahiMaxM);   // enintään 2,2 m: lattia ruudun alareunassa ei katoa
             // Rengas piilossa myös 1,5 s puolilähikuvan jälkeen: blendi takaisin lepoon on vielä lähellä kasvoja (eleet-2-ajo 7.10.: kaari kokin yllä).
             if (puolilahiRinta.HasValue) himmennysAsti = Time.unscaledTime + 1.5f;
@@ -495,7 +502,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -669,7 +676,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattavan palan kiinnitetty paketti (Linnanrakentajan v44g: kävely, Fogg, vene, laiturin kansi). Tuotannon osoitin
         /// (uusin.json) ei muutu: pala lukee tämän paketin testiosoittimena (sama hash-juuri ja manifest.json kuin julkaisulla, joten
         /// levyvälimuisti toimii; Päätoimittaja 7.10.: ei 250–400 Mt joka avauksella) ja palauttaa tuotannon, kun linna suljetaan.</summary>
-        public const string PelattavaPalaHash = "42d49bd4b2a86677";   // v44j (v44i + Foggin nousu_laiturille)
+        /// Uusi yhteensopimaton paketti (8.10.): vaihdetaan tässä, ei uusin.json:ssa, joten vanhat appit pysyvät omassa paketissaan.
+        public const string PelattavaPalaHash = Matkakirja.Linssit.Seikkailu.PelattavaPala.Hash;   // Ydin PelattavaPala (v44z; testi sitoo simulaation kultaisiin)
 
         void LataaUudelleen()
         {
@@ -900,6 +908,52 @@ namespace Matkakirja.Natiivi
         string pelaajaKameraTapa;
         /// <summary>Kehittäjävalikon pelattava pala (LinssiOhjain.AvaaPelattavaPala): käynnistyy, kun Olavinlinna on ladattu.</summary>
         public static bool PelattavaPalaPyydetty;
+        /// <summary>Pelattava pala jatkuu tallennuksesta (Natiivi-UI:n Jatka; SeikkailuTallentaja.LueTiedosto kertoo, onko jatkettavaa).</summary>
+        public static bool PelattavaPalaJatka;
+
+        IEnumerator Botti(int alkuN)
+        {
+            var d = SeikkailuKavely.Data; var p = SeikkailuPelaaja.Aktiivinen;
+            if (d == null || p == null) { o.Kirjaa("botti: ei pelaajaa tai kävelydataa"); yield break; }
+            var pisteet = new SortedDictionary<int, Matkakirja.Linssit.Seikkailu.KavelyMerkki>();
+            foreach (var m in d.Lajia("reitti"))
+                if (m.Tunnus.StartsWith("pelaaja-", StringComparison.Ordinal) && int.TryParse(m.Tunnus.Substring(8), out int n) && n >= alkuN) pisteet[n] = m;
+            int kiinni = 0; void Laske(string osa) => kiinni++;
+            SeikkailuVartijat.Kiinnijaatiin += Laske;
+            float alku = Time.unscaledTime;
+            o.Kirjaa($"botti: {pisteet.Count} pistettä (reitti:pelaaja-{alkuN}…)");
+            foreach (var kv in pisteet)
+            {
+                p = SeikkailuPelaaja.Aktiivinen; if (p == null) break;
+                var kohde = new Vector3((float)kv.Value.X, (float)kv.Value.Y, (float)-kv.Value.Z);
+                bool reitti = p.KaveleKohti(kohde);
+                float t0 = Time.unscaledTime;
+                while (p != null && p.Napautuskavely && Time.unscaledTime - t0 < 40f) { yield return null; p = SeikkailuPelaaja.Aktiivinen; }
+                float etaisyys = p != null ? Vector3.Distance(p.transform.position, kohde) : -1;
+                o.Kirjaa($"botti: pelaaja-{kv.Key} {(etaisyys >= 0 && etaisyys < 1.0f ? "OK" : "VIRHE")} {etaisyys:F1} m, {Time.unscaledTime - t0:F1} s{(reitti ? "" : " (ei NavMesh-reittiä)")}, kiinni {kiinni}");
+            }
+            SeikkailuVartijat.Kiinnijaatiin -= Laske;
+            var tv = typeof(DioraamaSovitin).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit")?.GetMethod("Tekstivahti", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            string teksti = tv != null ? tv.Invoke(null, null) as string : "ei Tekstivahtia";
+            o.Kirjaa($"botti: valmis {Time.unscaledTime - alku:F0} s, kiinnijäämisiä {kiinni}, tekstivahti {teksti}");
+        }
+
+        /// <summary>V6 jatko: pelaaja viimeisimpään tarkistuspisteeseen ilman saapumista, armoaika 4 s, vartijat ja kappeli kuten laiturilta.</summary>
+        IEnumerator JatkaTallennuksesta(Matkakirja.Linssit.Seikkailu.SeikkailuTallennus t)
+        {
+            yield return VarmistaKavelyData();
+            if (nayttamo == null || rakennus == null) yield break;
+            SeikkailuKavely.Leikkaukset(true);
+            Physics.SyncTransforms();
+            var alku = new Vector3((float)t.X, (float)t.Y, (float)t.Z);
+            if (Physics.Raycast(alku + Vector3.up * 1.5f, Vector3.down, out var osuma, 4f, 1 << DioraamaNayttamo.Kerros)) alku = osuma.point + Vector3.up * 0.05f;
+            var sp = SeikkailuPelaaja.Luo(nayttamo.transform, alku, 0f, DioraamaNayttamo.Kerros);
+            LisaaPelaajahahmo(sp);
+            SeikkailuVartijat.AlkuArmo = true;
+            o.StartCoroutine(VartijatPaalle());
+            o.StartCoroutine(KappeliPaalle());
+            o.Kirjaa($"seikkailu: jatko tarkistuspisteestä {t.TarkistusOsa} ({alku}), kulunut {t.KulunutS:F0} s");
+        }
         /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
         public static bool KameraVapaa;
         bool pelattavaPala;
@@ -990,6 +1044,24 @@ namespace Matkakirja.Natiivi
             rakennus.Henkilot[id] = new Henkilo { Id = id, Nimi = pm.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Glb, Leikkeet = new Dictionary<string, string>(pm.Leikkeet) } } };
             sp.Malli = pm;
             nayttamo.Hahmot3D.PoistaIrralliset(id);
+            if (SeikkailuPelaaja.Ensimmainen)
+            {
+                // Ensimmäinen persoona: ei vartaloa (omistaja 7.10. 18.5x); leikkeiden kestot (nousu) silti mallista. Kädet hihoineen ja
+                // hanskoineen (18.7x) silmien lapsena, jos paketissa on pelaaja.kadet.
+                if (pm.Kadet != null)
+                {
+                    const string kid = "pelaaja-kadet";
+                    rakennus.Henkilot[kid] = new Henkilo { Id = kid, Nimi = pm.Kadet.Nimi, Malli3d = new Malli3d { Skin = new SkinMalli { Glb = pm.Kadet.Glb, Leikkeet = new Dictionary<string, string>(pm.Kadet.Leikkeet) } } };
+                    nayttamo.Hahmot3D.PoistaIrralliset(kid);
+                    nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, kid, sp.Silmat, sp.KadetLeike, Quaternion.Euler(0f, 180f, 0f));
+                    var h3 = nayttamo.Hahmot3D; sp.KadetSolmu = n => h3 != null ? h3.IrrallisenSolmu(kid, n) : null;
+                    var kg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(kg);
+                    foreach (var glb in kg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                }
+                o.StartCoroutine(EsineetPaalle());
+                o.Kirjaa("seikkailu: ensimmäinen persoona (ei pelaajahahmoa)");
+                return;
+            }
             nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.Hahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
             var glbt = new List<string>();
             nayttamo.Hahmot3D.IrrallistenGlb(glbt);
@@ -1010,7 +1082,7 @@ namespace Matkakirja.Natiivi
         void KokkiKuuleeKolahduksen(Vector3 kohta)
         {
             var r = SeikkailuRepliikit.Aktiivinen;
-            if (r == null || !r.Valmis || Time.unscaledTime < kokkiRepliikkiAsti || HenkilonPaikka("kokki-1500") is not Vector3 kp || (kp - kohta).sqrMagnitude > 144f) return;
+            if (r == null || !r.Valmis || Time.unscaledTime < kokkiRepliikkiAsti || DioraamaHahmot3D.PiilotetutHenkilot.Contains("kokki-1500") || HenkilonPaikka("kokki-1500") is not Vector3 kp || (kp - kohta).sqrMagnitude > 144f) return;   // partioiva kokki kuulee itse (SeikkailuVartijat)
             kokkiRepliikkiAsti = Time.unscaledTime + 8f;
             r.Soita(++kokkiLaskuri % 2 == 0 ? "kokki-harhautus-1" : "kokki-harhautus-2", kp);
         }
@@ -1036,6 +1108,7 @@ namespace Matkakirja.Natiivi
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
             }
             SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
+            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1/manifest.json");   // Pelikoodari: askeleet, kantele (puuttuva ohitetaan)
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
@@ -1050,14 +1123,18 @@ namespace Matkakirja.Natiivi
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
-            if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
-            {
-                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(askel.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
-                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
-                yield return q.SendWebRequest();
-                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
-                o.Kirjaa($"seikkailu: vartijan askeleet {(SeikkailuVartijat.AskelKlippi != null ? "ladattu" : "ei latautunut")} ({askel.Tiedosto})");
-            }
+            // Askeleet (vartijat askel-kivi; pelaajan omat askeleet pinnan mukaan: askel-puu ym. rakennuksen äänistä, olki/sora/vesi aanet-fp-manifestista).
+            if (rakennus.Aanet != null)
+                foreach (var kv in rakennus.Aanet)
+                {
+                    if (!kv.Key.StartsWith("askel-", StringComparison.Ordinal) || string.IsNullOrEmpty(kv.Value?.Tiedosto) || SeikkailuVartijat.AskelKlipit.ContainsKey(kv.Key)) continue;
+                    using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(kv.Value.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
+                    ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                    yield return q.SendWebRequest();
+                    if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlipit[kv.Key] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                    if (kv.Key == "askel-kivi") SeikkailuVartijat.AskelKlippi = SeikkailuVartijat.AskelKlipit.TryGetValue(kv.Key, out var kk) ? kk : null;
+                    o.Kirjaa($"seikkailu: askeleet {kv.Key} {(SeikkailuVartijat.AskelKlipit.ContainsKey(kv.Key) ? "ladattu" : "ei latautunut")} ({kv.Value.Tiedosto})");
+                }
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
             foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
@@ -1586,9 +1663,26 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 if (arvo == "toiminto") { SeikkailuEsineet.ToimintoPyydetty = true; o.Kirjaa($"poikki: toiminto (lähin {SeikkailuEsineet.Aktiivinen?.Lahin ?? "-"}, kädessä {SeikkailuEsineet.Aktiivinen?.Kadessa ?? "-"})"); return; }
+                if (arvo == "fp") { SeikkailuPelaaja.Ensimmainen = osat.Length <= 3 || osat[3] != "0"; o.Kirjaa($"poikki: kävely {(SeikkailuPelaaja.Ensimmainen ? "ensimmäinen persoona" : "olan yli")} (seuraavasta aloituksesta)"); return; }
                 if (arvo == "data") { kavelyKehitysJuuri = osat.Length > 3 ? osat[3].TrimEnd('/') + "/" : null; o.Kirjaa($"poikki: kävelydata {kavelyKehitysJuuri ?? "paketista"}"); return; }
                 string tid = osat.Length > 3 ? osat[3] : Linssi?.NakymaHetkella(YdinAika, false).KohdeTila ?? "laituri";
                 o.StartCoroutine(KavelyPaalle(tid));
+                return;
+            }
+            // "poikki seikkailu botti [alku-N]": vianselvitys (pelattavuusmalli 11, EI ennen junaa/TF:ää) — kävelee reitti:pelaaja-N -merkit
+            // napautuskävelyllä, kirjaa saapumiset, kiinnijäämiset ja ajat sekä lopuksi Natiivi-UI:n Tekstivahdin (ei näkyvää tekstiä).
+            // "poikki valot volumetriset 0|1 | liekit 0|1": laatutaso (PT 7.10.: volumetriset Mac + M-iPad, liekit kaikilla).
+            if (mita == "valot")
+            {
+                bool p1 = osat.Length <= 3 || osat[3] != "0";
+                if (arvo == "volumetriset") SeikkailuValot.Aseta(volumetriset: p1); else if (arvo == "liekit") SeikkailuValot.Aseta(liekit: p1);
+                o.Kirjaa($"poikki: valot volumetriset {SeikkailuValot.Volumetriset}, liekit {SeikkailuValot.Liekit} (seuraavasta avauksesta)");
+                return;
+            }
+            if (mita == "seikkailu" && arvo == "botti")
+            {
+                int alkuN = osat.Length > 3 && int.TryParse(osat[3], out int an) ? an : 1;
+                o.StartCoroutine(Botti(alkuN));
                 return;
             }
             // "poikki vartijat 1 | 0 | tila": historiamoottori V3 — vartijat partioreiteille (merkit partio:*), NavMesh kävelypinnoista.

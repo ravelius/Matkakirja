@@ -31,19 +31,32 @@ namespace Matkakirja.Natiivi
             return a;
         }
 
+        /// <summary>Toinen manifesti samaan pankkiin (8.10.: aanet-fp-v1, pelattavuusmallin kohta 10: askeleet oljella/soralla/vedessä,
+        /// löytömerkki); puuttuva manifesti vain lokiin, tunnukset eivät korvaa jo ladattuja.</summary>
+        public static void LisaaManifest(string manifestUrl)
+        {
+            var a = Aktiivinen; if (a == null || string.IsNullOrEmpty(manifestUrl)) return;
+            a.StartCoroutine(a.Lataa(manifestUrl));
+        }
+
+        static string Lyhyt(string url) { int i = url.LastIndexOf('/'); int k = i > 0 ? url.LastIndexOf('/', i - 1) : -1; return k >= 0 ? url.Substring(k + 1) : url; }
+
         IEnumerator Lataa(string url)
         {
             using var q = UnityWebRequest.Get(url + "?v=1"); q.timeout = 20;
             yield return q.SendWebRequest();
-            if (q.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: tehosteet: manifest ei latautunut ({q.error})"); yield break; }
+            if (q.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: tehosteet: manifest ei latautunut ({q.error}, {Lyhyt(url)})"); yield break; }
+            string pohja = url.Substring(0, url.LastIndexOf('/') + 1);
             object j; try { j = MiniJson.Jasenna(q.downloadHandler.text); } catch (Exception e) { kirjaa?.Invoke("seikkailu: tehosteet: " + e.Message); yield break; }
             foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(j), "aanet")))
             {
                 var o = MiniJson.ObjektiTaiNull(x); string t = MiniJson.Teksti(o, "tunnus");
-                if (!string.IsNullOrEmpty(t)) aanet[t] = new Aani { Tunnus = t, Polku = MiniJson.Teksti(o, "aani"), Silmukka = MiniJson.Kentta(o, "silmukka") is bool b && b };
+                string polku = MiniJson.Teksti(o, "aani");
+                if (!string.IsNullOrEmpty(t) && !aanet.ContainsKey(t) && !string.IsNullOrEmpty(polku))
+                    aanet[t] = new Aani { Tunnus = t, Polku = pohja + polku, Silmukka = MiniJson.Kentta(o, "silmukka") is bool b && b };
             }
             Valmis = true;
-            kirjaa?.Invoke($"seikkailu: tehosteet {aanet.Count}");
+            kirjaa?.Invoke($"seikkailu: tehosteet {aanet.Count} ({Lyhyt(url)})");
             foreach (var a in aanet.Values) StartCoroutine(Hae(a));   // pieni paketti (< 0,5 Mt): kaikki heti muistiin
         }
 
@@ -51,7 +64,7 @@ namespace Matkakirja.Natiivi
         {
             if (a.Klippi != null || a.Haussa || string.IsNullOrEmpty(a.Polku)) yield break;
             a.Haussa = true;
-            using var p = UnityWebRequestMultimedia.GetAudioClip(juuri + a.Polku, AudioType.MPEG);
+            using var p = UnityWebRequestMultimedia.GetAudioClip(a.Polku, AudioType.MPEG);
             var dh = (DownloadHandlerAudioClip)p.downloadHandler; dh.streamAudio = false; dh.compressed = false;
             yield return p.SendWebRequest();
             a.Haussa = false;
@@ -67,8 +80,11 @@ namespace Matkakirja.Natiivi
             Destroy(l.gameObject, a.Klippi.length / Mathf.Max(0.1f, savel) + 0.2f);
         }
 
+        /// <summary>Ladattu klippi tunnuksella tai null (pelaajan askeleet valitsevat pinnan äänitteen).</summary>
+        public static AudioClip Klippi(string tunnus) => Aktiivinen != null && Aktiivinen.aanet.TryGetValue(tunnus, out var a) ? a.Klippi : null;
+
         /// <summary>Silmukka päälle tai pois (sydän, tuuli); paikka päivitetään joka kutsulla.</summary>
-        public static void Silmukka(string tunnus, bool paalla, Vector3 paikka, float voimakkuus = 1f)
+        public static void Silmukka(string tunnus, bool paalla, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
         {
             var s = Aktiivinen; if (s == null) return;
             if (!s.silmukat.TryGetValue(tunnus, out var l) || l == null)
@@ -76,7 +92,7 @@ namespace Matkakirja.Natiivi
                 if (!paalla || !s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return;
                 l = SeikkailuKuulija.Lahde("Silmukka:" + tunnus, 2f, 25f); l.clip = a.Klippi; l.loop = true; s.silmukat[tunnus] = l;
             }
-            SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus;
+            SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus; l.pitch = savel;
             if (paalla && !l.isPlaying) l.Play(); else if (!paalla && l.isPlaying) l.Stop();
         }
 
