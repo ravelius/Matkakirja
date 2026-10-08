@@ -10,7 +10,7 @@ namespace Matkakirja.Linssit.Testit
 {
     public static class ThiefAjuri
     {
-        const double Dt = Huonesimulaatio.Dt, MaxOdotus = 42, OdotusAskel = 0.5, Jalkeen = 0.5, PiiloSade = 5, PukeutuminenS = 2;
+        const double Dt = Huonesimulaatio.Dt, MaxOdotus = 42, LaajaOdotus = 65, OdotusAskel = 0.5, Jalkeen = 0.5, PiiloSade = 5, PukeutuminenS = 2;
         static int loppuK;
 
         sealed class Suunnitelma { public KavelyMerkki Piilo, Esine; public (double X, double Y, double Z) Kohde; public double Odotus; public bool Hiipii; public Huonesimulaatio Tulos; public double Aika; }
@@ -45,12 +45,20 @@ namespace Matkakirja.Linssit.Testit
         }
 
         /// <summary>Kaikki turvalliset tavat päästä reittipisteeseen k: ensimmäinen turvallinen odotus kullekin piilo × tapa × harhautus.</summary>
-        static List<Suunnitelma> Ehdokkaat(Huonesimulaatio w, int k)
+        static List<Suunnitelma> Ehdokkaat(Huonesimulaatio w, int k, bool laaja = false)
         {
+            double maxOdotus = laaja ? LaajaOdotus : MaxOdotus;
             var q = Huonesimulaatio.Reitti[k]; var ulos = new List<Suunnitelma>(); int k0 = w.Kiinni;
             var piilot = new List<KavelyMerkki> { null };
             foreach (var m in Huonesimulaatio.Data.Lajia("piilo"))
                 if (m.Y > Math.Min(w.PY, q.Y) - 1.5 && m.Y < Math.Max(w.PY, q.Y) + 1.5 && (Huonesimulaatio.Etaisyys2(m.X, m.Z, w.PX, w.PZ) < PiiloSade || Huonesimulaatio.Etaisyys2(m.X, m.Z, q.X, q.Z) < PiiloSade)) piilot.Add(m);
+            // Laaja haku (vain jos tavallinen ei löydä): perääntyminen odottamaan, esim. valppaus pois kiinnijäännin jälkeen; kaksi edellistä
+            // reittipistettä samalla tasolla ja odotus 65 s:iin.
+            for (int j = k - 2; laaja && j >= Math.Max(0, k - 3); j--)
+            {
+                var e = Huonesimulaatio.Reitti[j];
+                if (Math.Abs(e.Y - w.PY) < 1.5) piilot.Add(new KavelyMerkki { Nimi = "paluu:" + (j + 1), Laji = "paluu", Tunnus = "paluu-" + (j + 1), X = e.X, Y = e.Y, Z = e.Z });
+            }
             var esineet = new List<(KavelyMerkki E, (double, double, double) Kohde)> { (null, default) };
             foreach (var e in w.Ulottuvilla())
             {
@@ -79,9 +87,9 @@ namespace Matkakirja.Linssit.Testit
                         if (piilo != null && !Kulje(pohja, (piilo.X, piilo.Y, piilo.Z), true, true, k0)) continue;
                         bool odottaaHiipien = hiipii || piilo != null;
                         double viime = double.NegativeInfinity; int loydetty = 0;
-                        for (double odotus = 0; odotus <= MaxOdotus && loydetty < 10; odotus += OdotusAskel)
+                        for (double odotus = 0; odotus <= maxOdotus && loydetty < 10; odotus += OdotusAskel)
                         {
-                            if (odotus - viime < 1.5) { if (!OdotaS(pohja, OdotusAskel, odottaaHiipien, true, k0)) break; continue; }
+                            if (odotus - viime < (laaja ? viime * 0.5 + 1.5 : 1.5)) { if (!OdotaS(pohja, OdotusAskel, odottaaHiipien, true, k0)) break; continue; }
                             var koe = pohja.Kopioi(); koe.Seuraava = k;
                             if (Kulje(koe, q, hiipii, true, k0))
                             {
@@ -108,17 +116,21 @@ namespace Matkakirja.Linssit.Testit
             + (s.Odotus > 0 ? $" odota {s.Odotus:F1} s" : "") + (s.Hiipii ? "" : " kävellen");
 
         static readonly HashSet<(int, int)> kayty = new HashSet<(int, int)>();
-        static Huonesimulaatio Ratkaise(Huonesimulaatio w, int k, List<string> loki, ref int budjetti, ref (int K, Huonesimulaatio W) pisin)
+        static Huonesimulaatio Ratkaise(Huonesimulaatio w, int k, List<string> loki, List<Huonesimulaatio> tilat, ref int budjetti, ref (int K, Huonesimulaatio W) pisin)
         {
             if (k > loppuK) return w;
             if (k > pisin.K) pisin = (k, w);
             if (!kayty.Add((k, (int)Math.Round(w.T * 2)))) return null;   // sama piste samaan aikaan (0,5 s) jo kokeiltu
-            var ehdokkaat = Ehdokkaat(w, k);
-            for (int i = 0; i < ehdokkaat.Count && i < 10 && budjetti > 0; i++)
+            // Ensin tavallinen haku; jos mikään ehdokas ei vie loppuun, laaja (pitkä odotus, perääntyminen).
+            foreach (bool laaja in new[] { false, true })
             {
-                budjetti--;
-                var r = Ratkaise(ehdokkaat[i].Tulos, k + 1, loki, ref budjetti, ref pisin);
-                if (r != null) { loki.Insert(0, Kuvaus(ehdokkaat[i], k)); return r; }
+                var ehdokkaat = Ehdokkaat(w, k, laaja);
+                for (int i = 0; i < ehdokkaat.Count && i < 10 && budjetti > 0; i++)
+                {
+                    budjetti--;
+                    var r = Ratkaise(ehdokkaat[i].Tulos, k + 1, loki, tilat, ref budjetti, ref pisin);
+                    if (r != null) { loki.Insert(0, Kuvaus(ehdokkaat[i], k)); tilat.Insert(0, ehdokkaat[i].Tulos); return r; }
+                }
             }
             return null;
         }
@@ -134,16 +146,17 @@ namespace Matkakirja.Linssit.Testit
         public static void Tulosta(Huonesimulaatio w)
         {
             Console.WriteLine($"      pelaaja ({w.PX:F1}, {w.PY:F1}, {w.PZ:F1}) seuraava {w.Seuraava + 1}, valoisuus {w.Valoisuus():F2}, t {w.T:F0} s");
-            foreach (var h in w.Hahmot) if (h.Aktiivinen) Console.WriteLine($"        {h.Nimi} ({h.X:F1}, {h.Y:F1}, {h.Z:F1}) {h.Aivot.Tila} mittari {h.Aivot.Mittari:F2} yaw {h.Aivot.Yaw:F0} epäily ({h.Aivot.EpailyX:F1}, {h.Aivot.EpailyZ:F1}){(h.Aivot.Torkkuu ? " torkkuu" : "")}{(h.Aivot.Syo ? " syö" : "")}");
+            foreach (var h in w.Hahmot) if (h.Aktiivinen) Console.WriteLine($"        {h.Nimi} ({h.X:F1}, {h.Y:F1}, {h.Z:F1}) {h.Aivot.Tila} mittari {h.Aivot.Mittari:F2} yaw {h.Aivot.Yaw:F0} epäily ({h.Aivot.EpailyX:F1}, {h.Aivot.EpailyZ:F1}) valpas {h.Aivot.Valppaus:F0}{(h.Aivot.Torkkuu ? " torkkuu" : "")}{(h.Aivot.Syo ? " syö" : "")}");
         }
 
-        public sealed class Tulos { public Huonesimulaatio Loppu; public List<string> Loki = new List<string>(); public int Pisin; public Huonesimulaatio PisinTila; }
+        /// <summary>Loppu = tila viimeisessä pisteessä (null = jumi); Tilat[j] = tila pisteessä seuraava + j saapumisen jälkeen.</summary>
+        public sealed class Tulos { public Huonesimulaatio Loppu; public List<string> Loki = new List<string>(); public List<Huonesimulaatio> Tilat = new List<Huonesimulaatio>(); public int Pisin; public Huonesimulaatio PisinTila; }
 
         /// <summary>Ajaa reittipisteet seuraava…loppu (0-pohjaiset, mukaan lukien) Thief-ajurilla; Loppu = null, jos jumi (Pisin, PisinTila).</summary>
         public static Tulos Aja(Huonesimulaatio w, int seuraava, int loppu, int budjetti = 400)
         {
             loppuK = loppu; kayty.Clear(); var t = new Tulos(); (int K, Huonesimulaatio W) pisin = (seuraava, w);
-            t.Loppu = Ratkaise(w, seuraava, t.Loki, ref budjetti, ref pisin);
+            t.Loppu = Ratkaise(w, seuraava, t.Loki, t.Tilat, ref budjetti, ref pisin);
             t.Pisin = pisin.K; t.PisinTila = pisin.W;
             return t;
         }
