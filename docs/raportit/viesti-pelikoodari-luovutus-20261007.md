@@ -16,7 +16,7 @@
   luettelot järjestyksessä venetsia, barcelona, amsterdam, … (tekstit opas/esittely-aaneton-v1); kytke kuten #4183.
 - Worktree wt/pelikoodari-esittely POISTETTU (levy); haara origin/pelikoodari-esittely 90067f28 (työkalut tools/opas/).
   Käytössä wt/pelikoodari-yoportti (haara pelikoodari-kulu-k4).
-- Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`.
+- Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`; nohup/xargs/timeout/env-ajoissa `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
 
 # Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.4x, VAIHTO NYT)
 

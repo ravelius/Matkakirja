@@ -194,6 +194,20 @@
         "/Users/Shared/Claude/wt/pelikoodari-apuraha-periaatteet"
       ],
       "port": 8802
+    },
+    {
+      "name": "pelikoodari-wt",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--bind",
+        "127.0.0.1",
+        "--directory",
+        "/Users/Shared/Claude/wt/pelikoodari-yoportti"
+      ],
+      "port": 8791
     }
   ]
 }
