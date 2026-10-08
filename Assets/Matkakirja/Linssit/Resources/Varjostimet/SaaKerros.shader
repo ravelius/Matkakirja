@@ -1,6 +1,7 @@
 // PALLON SÄÄKERROS (omistaja 8.10.2026, Päätoimittaja: kevyet tehosteet; juna 166): yksi koko ruudun nelikulmio overlay-kamerassa.
 // Sade: kolme kerrosta vinoja juovia (tuuli _Tuuli), lumi: kolme kerrosta pehmeitä huojuvia pisteitä, salama: heikko valkoinen
-// välähdys (_Salama; päävälähdys valotuksena KaupunkiKuvassa). Proseduraalinen (ei tekstuuria), _Aika sekunteina, _Aspect = l/k.
+// välähdys (_Salama; päävälähdys valotuksena KaupunkiKuvassa), utu (_Sumu; juna 166: video 165:ssä Googlen laatat eivät reagoineet
+// Unityn sumuun → utu pystygradienttina, tihein ylhäällä eli kaukana). Proseduraalinen (ei tekstuuria), _Aika s, _Aspect = l/k.
 Shader "Matkakirja/Linssit/SaaKerros"
 {
     Properties
@@ -8,6 +9,7 @@ Shader "Matkakirja/Linssit/SaaKerros"
         _Sade ("Sade", Float) = 0
         _Lumi ("Lumi", Float) = 0
         _Salama ("Salama", Float) = 0
+        _Sumu ("Utu", Float) = 0
         _Tuuli ("Tuuli (vino)", Float) = 0.15
         _Aika ("Aika", Float) = 0
         _Aspect ("Kuvasuhde", Float) = 1.33
@@ -28,7 +30,7 @@ Shader "Matkakirja/Linssit/SaaKerros"
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             CBUFFER_START(UnityPerMaterial)
-            float _Sade; float _Lumi; float _Salama; float _Tuuli; float _Aika; float _Aspect;
+            float _Sade; float _Lumi; float _Salama; float _Sumu; float _Tuuli; float _Aika; float _Aspect;
             CBUFFER_END
             struct A { float4 p : POSITION; float2 uv : TEXCOORD0; };
             struct V { float4 p : SV_POSITION; float2 uv : TEXCOORD0; };
@@ -47,7 +49,7 @@ Shader "Matkakirja/Linssit/SaaKerros"
                     float sar = floor(p.x); p.y += H(float2(sar, i)) * 7.0;
                     float2 c = floor(p), f = frac(p);
                     float x0 = 0.25 + 0.5 * H(c + i * 13.1);
-                    float juova = saturate(1.0 - abs(f.x - x0) / 0.07);
+                    float juova = saturate(1.0 - abs(f.x - x0) / 0.09);
                     float hanta = step(f.y, pituus) * (f.y / pituus);
                     a += juova * hanta * step(0.45, H(c + 7.7)) * (0.55 + 0.25 * i);
                 }
@@ -75,11 +77,13 @@ Shader "Matkakirja/Linssit/SaaKerros"
             half4 frag(V v) : SV_Target
             {
                 float t = _Aika;
-                float s = _Sade > 0.001 ? Sade(v.uv, t) * _Sade * 0.35 : 0;
-                float l = _Lumi > 0.001 ? Lumi(v.uv, t) * _Lumi * 0.85 : 0;
-                float a = saturate(s + l + _Salama * 0.22);
-                half3 c = lerp(half3(0.80, 0.84, 0.90), half3(1, 1, 1), saturate(l + _Salama) / max(a, 1e-3));
-                return half4(c, min(a, 0.85));
+                float s = _Sade > 0.001 ? Sade(v.uv, t) * _Sade * 0.62 : 0;
+                float l = _Lumi > 0.001 ? Lumi(v.uv, t) * _Lumi * 0.95 : 0;
+                float u = _Sumu * (0.22 + 0.55 * smoothstep(0.0, 1.0, v.uv.y));   // utu: alhaalla (lähellä) ohuempi, ylhäällä (kaukana) tiheä
+                float a = saturate(s + l + u + _Salama * 0.22);
+                half3 sadeVari = half3(0.80, 0.84, 0.90), utuVari = half3(0.78, 0.80, 0.84);
+                half3 c = (sadeVari * s + half3(1, 1, 1) * (l + _Salama * 0.22) + utuVari * u) / max(s + l + u + _Salama * 0.22, 1e-3);
+                return half4(c, min(a, 0.9));
             }
             ENDHLSL
         }
