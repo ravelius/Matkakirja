@@ -35,7 +35,21 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. ilta, myöhemmin (uusin)
+## TILA 8.10. klo 20.5x (uusin)
+- GROUNDER (juna 167 B): testi linssiseppa2/grounder-testi-4 f94cf9841 (Editor GrounderTesti, play mode batch, GROUNDER_KOE/NOUSU);
+  final-ik-167 71d34bb97 (maxStep 0,5 + invertFootCenter + Best + heightOffset −0,02): kantapää 30,5 → 3,9, leijunta 11,2 → 4,2–4,6,
+  varpaat 21,6 → 2,6 cm, ponnahdukset 0. Worktree poistettu (Library 6 Gt).
+- VALOVIHJE (omistaja: Pulu pois, juna 168): linssiseppa2/valovihje 44546ee12 (ValoVihje + SeikkailuVihjeet). Pressutesti
+  linssiseppa2/pressu-testi 3abd996af (Siirtoseppä korjaa: oppitunti päättyy veneen perillä).
+- MUISTITESTI: linssiseppa2/muistitesti 2a30d791d (LinnanMuistiTestit, kultainen olavinlinna-v45i-muisti.json, Natiivisepän portaat
+  peilattuina c4c3018ba; vaihda suoraan LinnaMuistibudjettiin BUILD 169:n jälkeen).
+- VERTAILUAJURI: linssiseppa2/grafiikkavertailu 529bf79b1 (tyokalut/grafiikkavertailu, simu UDID Julkaisijalta); tyrmä odottaa palan avausta.
+- ILMAKEHÄ (PT: LS2 tekee maiseman varjostimet): linssiseppa2/ilmakeha-170 5b21bf22c (LS1:n pallo-grafiikka-170 päällä): LUTit +
+  IlmakehaLut (Ydin, testit) + IlmakehaTaivas/IlmakehaLaatat + KaupunkiIlmakeha + 3 liitosta (LS1 katselmoi). SEURAAVAKSI: varjostimien
+  Unity-käännös (Library-klooni + batch) ja kuvapari vertailuajurilla (asetus "ilmakeha 1" kaupunki-kuva-asetukset.txt:hen), sitten vesi
+  Tukholmaan (Karttasepän vesi-tukholma-20261008, 6 m + 16 m LOD).
+
+## TILA 8.10. ilta, myöhemmin
 - m167 kokonaan mergetty (historia-m cc70cf219, e99c36130 asti: tarkistuspistetestit 7–8, piilotarkistuspiste 16fe2b69a, AjaHuone);
   Siirtoseppä vie junaan 167 LR:n v45c:n kanssa (kuittaus erikseen klo 21 jälkeen, jos v45c ei ehdi). Worktreet m-jumi, kevat, m167 poistettu.
 - PARIISIN PALLO (PT kiireellinen, omistajan TF 166): Linssit-testit/Testit/PalloKierrosTestit.cs (linssiseppa2/pallo-pariisi ed7455817,
