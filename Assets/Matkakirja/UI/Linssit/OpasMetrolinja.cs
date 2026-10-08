@@ -43,6 +43,10 @@ namespace Matkakirja.Natiivi
         const float KorostusKoko = 44f;   // KierrosTaulun kohdeotsikon koko (nimi 44 pt)
         const float KorostusVaihto = 0.6f;
         float korostusTaso;
+        /// <summary>Korostetun nimen koko tällä ruudulla: KorostusKoko, tai pienempi, jos nimi ei mahdu yhdelle riville (SovitaKorostus).</summary>
+        float korostusKoko = KorostusKoko;
+        /// <summary>Nimien enimmäisleveys (Paivita, paneelin pt): korostettu nimi sovitetaan tähän yhdelle riville.</summary>
+        float leveysRaja;
         Label selite;
         int seliteAsema = -1;
 
@@ -115,14 +119,37 @@ namespace Matkakirja.Natiivi
             float kaista = Mathf.Max(0f, ala - yla);
             float korkeus = Kompakti ? Mathf.Min(kaista, 3f * VahinRivi + (nimet.Count - 3) * 10f)
                 : Mathf.Max(Mathf.Min(Mathf.Min(maksimi, kaista), AsemaVali * nimet.Count), VahinRivi * nimet.Count);
-            // Korostettu nimi ja selite vievät lisätilaa (nimen kasvu + selitteen rivit), jotta muut asemat eivät litisty.
+            // Korostettu nimi ja selite vievät lisätilaa (nimen kasvu rivikorkeutena + selitteen rivit): alemmat asemat siirtyvät
+            // sen verran alas ja palaavat korostuksen päättyessä. Lisätila ei rajaudu kaistaan, jotta asemat eivät litisty päällekkäin
+            // (Päätoimittaja 8.10.: "Orsayn taidemuseo" rivittyi ja selite osui Eiffel-torniin, video 164 41,5 s).
             if (korostusTaso > 0.001f && selite != null)
-                korkeus = Mathf.Min(kaista, korkeus + korostusTaso * ((KorostusKoko - Tyylikirja.Koko.Valiotsikko) + Mathf.Max(0f, selite.layout.height)));
+                korkeus += korostusTaso * (RiviKerroin * Mathf.Max(0f, korostusKoko - Tyylikirja.Koko.Valiotsikko) + Mathf.Max(0f, selite.layout.height));
             float top = Mathf.Round(Keskita ? yla + (kaista - korkeus) * 0.5f : yla);
             if (juuri.style.top.value.value != top) juuri.style.top = top;
             if (juuri.style.height.value.value != korkeus) juuri.style.height = Mathf.Round(korkeus);
             if (juuri.style.left.value.value != vasen) juuri.style.left = vasen;
             if (juuri.style.maxWidth.value.value != maksimiLeveys) juuri.style.maxWidth = Mathf.Round(maksimiLeveys);
+            leveysRaja = Mathf.Round(maksimiLeveys);
+        }
+
+        /// <summary>Rivikorkeus / fonttikoko (Moderni): nimen kasvun viemä pystytila.</summary>
+        const float RiviKerroin = 1.2f;
+
+        /// <summary>
+        /// Korostetun nimen koko yhdelle riville: KorostusKoko, jos mahtuu leveysRajaan (Dynamic Islandin tasolla IslandKapea), muuten
+        /// pienennetty leveyden mukaan (mitattu nykyisellä koolla ja kirjasimella, leveys skaalautuu koon mukana), vähintään
+        /// väliotsikon koko (sen alle ellipsi kuten muilla asemilla).
+        /// </summary>
+        float SovitaKorostus(Label nimi, VisualElement rivi)
+        {
+            float tila = leveysRaja - rivi.layout.x - nimi.parent.layout.x - nimi.resolvedStyle.marginLeft - nimi.resolvedStyle.marginRight - 2f;
+            if (IslandAlaY > 0f && rivi.worldBound.yMin < IslandAlaY) tila = Mathf.Min(tila, IslandKapea - 20f);
+            float nyt = nimi.resolvedStyle.fontSize;
+            if (tila <= 0f || nyt <= 0f || float.IsNaN(tila)) return korostusKoko;
+            float leveys = nimi.MeasureTextSize(nimi.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined).x;
+            if (leveys <= 0f || float.IsNaN(leveys)) return korostusKoko;
+            float sopiva = Mathf.Floor(tila / (leveys / nyt) * 0.97f);
+            return Mathf.Clamp(sopiva, Tyylikirja.Koko.Valiotsikko, KorostusKoko);
         }
 
         /// <summary>true = kaistan keskelle (iPad), false = kaistan yläreunaan (iPhone: vasen yläkulma).</summary>
@@ -138,6 +165,7 @@ namespace Matkakirja.Natiivi
             bool korostus = Korostus && kohde >= 0 && kohde < n;
             korostusTaso = Mathf.MoveTowards(korostusTaso, korostus ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
             float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
+            if (kohde >= 0 && kohde < n && kt > 0f) korostusKoko = SovitaKorostus(asemat[kohde].Nimi, asemat[kohde].Rivi);
             PaivitaSelite(korostus, kt);
             for (int k = 0; k < n; k++)
             {
@@ -148,10 +176,8 @@ namespace Matkakirja.Natiivi
                 float koko = taso < 1f ? Mathf.Lerp(Tyylikirja.Koko.Kapiteeli, Tyylikirja.Koko.Apuri, taso) : Mathf.Lerp(Tyylikirja.Koko.Apuri, Tyylikirja.Koko.Valiotsikko, taso - 1f);
                 float peitto = taso < 1f ? Mathf.Lerp(0.6f, 0.85f, taso) : Mathf.Lerp(0.85f, 1f, taso - 1f);
                 float piste = taso < 1f ? Mathf.Lerp(6f, 8f, taso) : Mathf.Lerp(8f, 12f, taso - 1f);
-                if (k == kohde && kt > 0f) koko = Mathf.Lerp(koko, KorostusKoko, kt);
-                // Korostettu nimi rivittyy (otsikon koko ei mahdu kapeaan linjaan yhdelle riville); muuten yksi rivi ellipsillä.
-                var ws = k == kohde && kt > 0f ? WhiteSpace.Normal : WhiteSpace.NoWrap;
-                if (nimi.style.whiteSpace != ws) nimi.style.whiteSpace = ws;
+                // Korostettu nimi pysyy yhdellä rivillä; koko sovitetaan leveyteen (SovitaKorostus), ei rivitystä.
+                if (k == kohde && kt > 0f) koko = Mathf.Lerp(koko, korostusKoko, kt);
                 if (Mathf.Abs(nimi.resolvedStyle.fontSize - koko) > 0.05f) nimi.style.fontSize = koko;
                 rivi.style.opacity = peitto;
                 var p = paikka[0];
