@@ -35,6 +35,17 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 08.00 — JUNA 164 = ebd86fc24 (Natiivisepän esirunko 7c73c995c); M-OSA historia-m @ cab21544
+
+- Juna 164: ebd86fc24 = da5fdf62a + Natiivisepän Vefects/VolumetricLights.meta (samat GUIDit, d40ab72ff) + rannan soihtuvartijat piiloon
+  (partio:ranta vain pakon epäonnistumiseen). PT kuittasi, Natiiviseppä ajoi testit esirungossa.
+- M-osa (EI junassa, ei simussa) siirtoseppa/historia-m @ cab21544, 881/881, unity-tarkistus 0: huoneet 6–10 mekaanisesti: naamio, sali
+  (kulho → hiljainen kiista, vouti kääntyy 2 × 6 s, avaimet tai ote ranteesta), lukittu ovi, ote-kiipeily + puuskat + lyhty takakuvassa,
+  komeron tiilet + kilpilukko + kurkistus, pako (kello, köysilasku, 20/45 s, K4, uinti, Katkaise, K5), seisovat hahmot, havainto pois ohjatussa.
+  PUUTTUU: kiistan ja M-osan repliikit (omistajan lupa), Foggin kiipeily/uinti-leikkeet (LR työn alla), arkun kilpien erilliset solmut,
+  tiilien malli, talonpojan kääntyminen 4 s, K3, löytöteksti (paikkamerkki), vesiportin bastionin B-muutos (LR junan 164 jälkeen).
+- LS2: kappelin Ydin KappelinArvoitus 57c4e322 valmis; kytkentä SeikkailuKappeliin LS2:lle junaan 165 (historia-valot 6f41c339 päälle).
+
 ## TILA 8.10. 07.50 — JUNA 164 KUITATTU: historia-valot-juna @ da5fdf62a
 
 - PT kuittasi da5fdf62a (= b91278bf + historia-valot 7aab3f25 + master 062bb439): 897/897, unity-tarkistus 0; merge-pyyntö Natiivisepälle lähetetty.
