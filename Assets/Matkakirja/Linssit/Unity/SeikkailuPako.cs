@@ -145,7 +145,9 @@ namespace Matkakirja.Natiivi
                         if (k5On) p.transform.position = Vector3.Lerp(vene, k5Katse, Mathf.Clamp01(t / (float)Pako.K5S) * 0.15f);
                         return true;
                     case PakoVaihe.Valmis:
-                        ydin.Valmistui = false; SeikkailuNakyvyys.Himmennys = 1f; kirjaa?.Invoke("seikkailu: PAKO VALMIS"); Valmis?.Invoke();
+                        // Nousu nykyiseen linnaan jatkaa K5:stä (SeikkailuKappeli kuuntelee Valmis); ilman kuuntelijaa himmennys.
+                        ydin.Valmistui = false; kirjaa?.Invoke("seikkailu: PAKO VALMIS");
+                        if (Valmis != null) Valmis.Invoke(); else SeikkailuNakyvyys.Himmennys = 1f;
                         return false;
                 }
                 return false;
