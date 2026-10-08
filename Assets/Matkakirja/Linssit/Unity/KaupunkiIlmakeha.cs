@@ -18,7 +18,13 @@ namespace Matkakirja.Natiivi
         public static bool Paalla => Pakotettu ?? kehitys;
         static bool kehitys;
         /// <summary>Nykyinen kaupunki (kameran georeferenssi): kehityskaupungissa oletus päällä.</summary>
-        public static void Kaupunki(double lat, double lon) => kehitys = Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon) != null;
+        public static void Kaupunki(double lat, double lon)
+        {
+            bool k = Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon) != null;
+            if (k != kehitys || !kaupunkiKirjattu) { kaupunkiKirjattu = true; Debug.Log($"MATKAKIRJA kaupunki: ilmakehä kaupunki {lat:F4},{lon:F4} → kehityskaupunki {k}, pakotettu {(Pakotettu?.ToString() ?? "-")}"); }
+            kehitys = k;
+        }
+        static bool kaupunkiKirjattu;
         /// <summary>Valotus (radianssi × valotus ennen sävytystä; Karttaseppä: 10–30), ilmaperspektiivin voima, pilvien varjon voima.</summary>
         public static float Valotus = 20f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = 2000f;
         static float voima;
@@ -49,7 +55,17 @@ namespace Matkakirja.Natiivi
             }
             taivas = Lue3D("taivas", 96, 64, 96); ap = Lue3D("ilmaperspektiivi", 32, 32, 96); apLapaisy = Lue3D("ilmaperspektiivi-lapaisy", 32, 32, 96);
             pilvet = Resources.Load<Texture2D>("Ilmakeha/pilvet-tiheys");
-            if (lapaisy == null || taivas == null || ap == null || apLapaisy == null || pilvet == null) { puuttuu = true; return false; }
+            if (pilvet == null)
+            {
+                // Varana tasainen kenttä (ei pilvien varjoja), ettei koko ilmakehä jää pois kuvan takia.
+                Debug.Log("MATKAKIRJA kaupunki: ilmakehä: pilvet-tiheys puuttuu, pilvien varjot pois");
+                pilvet = new Texture2D(1, 1, TextureFormat.RGBA32, false, true) { name = "Ilmakeha:pilvet-tyhja" }; pilvet.SetPixel(0, 0, Color.clear); pilvet.Apply();
+            }
+            if (lapaisy == null || taivas == null || ap == null || apLapaisy == null)
+            {
+                Debug.Log($"MATKAKIRJA kaupunki: ilmakehä PUUTTUU: läpäisy {(lapaisy != null)}, taivas {(taivas != null)}, ilmaperspektiivi {(ap != null)}/{(apLapaisy != null)} (läpäisy-TextAsset {(l != null ? l.bytes.Length.ToString() : "null")} t)");
+                puuttuu = true; return false;
+            }
             Shader.SetGlobalTexture(IdLapaisy, lapaisy); Shader.SetGlobalTexture(IdTaivas, taivas); Shader.SetGlobalTexture(IdAp, ap);
             Shader.SetGlobalTexture(IdApLapaisy, apLapaisy); Shader.SetGlobalTexture(IdPilvet, pilvet);
             ladattu = true;
