@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "4d339f1cb9352d4c",
-  "kansio": "dioraama/olavinlinna/blender/4d339f1cb9352d4c/",
+  "hash": "c253010d0379987d",
+  "kansio": "dioraama/olavinlinna/blender/c253010d0379987d/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -1455,13 +1455,13 @@
     },
     {
       "polku": "ymparisto/mallit/vene-kevyt.glb",
-      "sha256": "1bd43b1f276a930fa157265ed6192fa0952a709277c0853b1c648505ee35843f",
-      "tavuja": 677476
+      "sha256": "4ed8e120fcc113ba64f44f54a9f67e867eaa62957197cba590fb8f6ff1986849",
+      "tavuja": 680492
     },
     {
       "polku": "ymparisto/mallit/vene.glb",
-      "sha256": "7985944625dc7d333c7ebac57c349b3aa74b47b5272b77b6a85cfacf4cb88050",
-      "tavuja": 835660
+      "sha256": "ffc5f584dd57fab4f712ec8c29fc500c5cc92e1055657641e0cc87cc73067b1e",
+      "tavuja": 840208
     },
     {
       "polku": "ymparisto/puukortit-4x4.astcm",
