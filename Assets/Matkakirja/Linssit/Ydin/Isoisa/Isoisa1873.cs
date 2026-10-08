@@ -190,7 +190,8 @@ namespace Matkakirja.Linssit.Isoisa
             Lyhyt = "Maailma isoisän silmin: vuoden 1873 rajat ja valtakunnat.",
             Jarjestys = 12,
             // Vanha silmälasipari: kaksi linssiä ja nenäsilta.
-            Ikoni = "<circle cx=\"7.5\" cy=\"13\" r=\"4.2\"/><circle cx=\"16.5\" cy=\"13\" r=\"4.2\"/>"
+            // Taskukello ketjulenkillä (ei sekuntikellon nappia; oli kaksi ympyrää, liian lähellä taikalaseja) (Päätoimittaja 8.10.2026: omat viivakuvakkeet, kuvaketaulukko).
+            Ikoni = "<circle cx=\"12\" cy=\"13.6\" r=\"6.8\"/><circle cx=\"12\" cy=\"4.2\" r=\"1.6\"/><path d=\"M12 5.8v1\"/><path d=\"M12 13.6V9.8M12 13.6l2.8 1.6\"/><circle class=\"taytto\" cx=\"12\" cy=\"13.6\" r=\".8\"/>"
                 + "<path d=\"M11.7 13h0.6M3.3 13 4.6 6.4M20.7 13l-1.3-6.6\"/>",
             Lahde = new Lahde
             {
