@@ -2,6 +2,7 @@
 
 Tilaaja Päätoimittaja (20.2x): voiko pallon kaupunkinäkymässä varjostaa Googlen Photorealistic 3D Tiles -laattojen vesipintaa
 omalla vesimaskilla (ESA WorldCover 2021, CC BY 4.0)? **Omistaja päättää.** Tämä on tulkinta, ei juridinen neuvo.
+Omistaja päätti 8.10. 20.2x: B (oma vesipinta). Lisäys 8.10. 20.5x: kohteen leikkaus ja korvaus omalla mallilla (viimeinen osio).
 Ehdot on luettu 8.10.2026. Lainausten sijaan kohdat on kerrottu omin sanoin pykäläviittein; tarkka sanamuoto on lähdelinkeissä.
 
 ## Vastaus lyhyesti
@@ -76,3 +77,39 @@ Emme ole Googlen suora asiakas: laatat tulevat **Cesium ionin** kautta (ion-asse
   [Cesium ion Terms of Service](https://cesium.com/legal/terms-of-service/)
 - [FOX Sports + Cesium (omat pilvet ja vesi Googlen laattojen päällä)](https://community.cesium.com/t/fox-sports-using-cesium-to-orient-and-immerse-football-fans/37315)
 - docs/raportit/3d-google-laatat-eu-20260923.md, docs/raportit/pallo-unreal-vertailu-20261008.md
+
+## Lisäys 8.10. 20.5x: kohteen piilotus tai leikkaus Googlen laatoista ja korvaus omalla mallilla
+
+Kysymys (omistaja 20.4x PT:n kautta): saako Googlen 3D-laatoista piilottaa tai leikata yksittäisen kohteen, esim. Eiffel-tornin
+ristikon, ja piirtää tilalle oman mallin?
+
+**Vastaus: kyllä, ehdoin (pieni riski).**
+
+| Kohta | Mitä sanoo | Merkitys leikkaukselle |
+|---|---|---|
+| Map Tiles -käytännöt, "Geodata overlays with Photorealistic 3D Tiles" | Omia 3D-kohteita saa piirtää laattojen päälle, jos niitä ei ole johdettu laatoista. | Oma malli on sallittu, kun se on tehty muualta kuin Googlen laatoista. |
+| Sama sivu, hybridivisualisointi | Käyttäjän pitää pystyä erottamaan Googlen data omasta (krediitit tai käyttöliittymä). | Krediitteihin malli omalla rivillään. |
+| Map Tiles -käytännöt yleisesti | Leikkausta, piilotusta tai korvausta ei mainita lainkaan. | Ei kieltoa eikä lupaa. |
+| Cesium Appendix B-2 ¶2(a) / Google ToS 3.2.1(a) | Sisältöä ei saa muokata eikä tehdä johdannaista. | Leikkaus on renderöinnin rajaus (osa tiilistä jätetään piirtämättä), eikä Googlen dataa muuteta tai tallenneta. Lähempänä näkymän rajausta kuin muokkausta. |
+| Cesium ToS ja Content Usage Guide | Krediittejä ja Googlen logoa ei saa peittää tai poistaa. | Leikkaus ei saa osua krediitteihin, ja logo pysyy ruudulla. |
+
+**Tärkein tuki:** Cesium (Googlen sopimuskumppani, jonka kautta laatumme tulevat) julkaisee virallisen CesiumJS-ohjeen, jossa
+Googlen Photorealistic 3D Tiles -laatoista leikataan alue leikkauspolygonilla ja tilalle sijoitetaan oma suunnittelumalli.
+Cesium for Unityssä vastaava tehdään polygonirasteripeitteen leikkauksella (CesiumCartographicPolygon + CesiumPolygonRasterOverlay)
+tai CesiumTileExcluderilla.
+
+**Ehdot meille:**
+1. **Oma malli ei saa olla johdettu Googlen laatoista** (ei jäljennöstä, ei mittoja laatoista). Lähteiksi kelpaavat oma mallinnus
+   julkisista mitoista ja piirustuksista, CC- tai PD-mallit (Commons, Sketchfab CC BY) ja OSM-rakennusten jalanjäljet ja korkeudet (ODbL).
+2. **Leikkausalue omasta datasta:** polygoni OSM:n rakennus- tai kohdejalanjäljestä tai mallin omasta jalanjäljestä, ei Googlen laatoista.
+3. **Krediitit:** Googlen logo ja datakrediitit näkyvät muuttumattomina. Oma rivi esim. "Eiffel-torni: malli © <tekijä> (CC BY 4.0)".
+4. **Ei tallennusta:** leikkaus tehdään ajossa, eikä Googlen laattoja tallenneta tai muokata levyllä.
+
+**Riski:** pieni. Google ei kiellä leikkausta eikä mainitse sitä, ja Cesium ohjeistaa sen virallisesti juuri näille laatoille.
+Varovaisin tapa on kysyä Cesiumilta kirjallinen vahvistus ennen julkaisua, jos kohteita tulee paljon.
+
+Lisälähteet (luettu 8.10.2026):
+[Cesium: CesiumJS clipping polygons -opas](https://cesium.com/learn/cesiumjs-learn/cesiumjs-clipping-polygons/) ·
+[Cesium-blogi 2.5.2024: hide regions of 3D Tiles with clipping polygons](https://cesium.com/blog/2024/05/02/new-cesiumjs-tutorial-hide-regions-of-3d-tiles-or-terrain-with-clipping-polygons/) ·
+[Cesium-foorumi: rakennuksen korvaus Googlen laatoissa (Unity, CesiumTileExcluder)](https://community.cesium.com/t/replace-a-building-for-google-photorealistic-3d-tiles/26260) ·
+[Map Tiles API Policies](https://developers.google.com/maps/documentation/tile/policies)
