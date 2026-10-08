@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. ilta (uusin)
+## TILA 8.10. myöhäisilta (uusin)
+- KAPPELIN KYTKENTÄ (Siirtoseppä antoi, juna 165): proto linssiseppa2/kappeli-kytkenta 950532c9b (historia-valot 6f41c3396 + kappeli-vaiheet),
+  worktree wt/proto-linssiseppa2-kappeli-kytkenta. SeikkailuKappeli.Arvoitus seuraa vaiheita, Havaitse joka kehys, tallennus + Pulun edistys.
+  Malli: kiinni kuten Unityssa. 882/882, tarkistus 0. SHA Siirtosepälle. Löydös: Kynttilat.SaumatNakyvat ei katso alttarikynttilöitä.
+  (kappeli-vaiheet-worktree poistettu, haara sisältyy kytkentään.)
+- SEURAAVA (PT): M-osan (historia-m) Ydin-testit + huonesimulaatio 6–10; tarjous Siirtosepälle lähetetty, odottaa vastausta.
+
+## TILA 8.10. ilta
 - e4faa4144 MERGETTY (Siirtoseppä korjasi löydökset 1–5: 7aab3f25). Olavinlinna-worktree poistettu.
 - KAPPELIN VAIHEET: proto linssiseppa2/kappeli-vaiheet 57c4e3220 (7aab3f25 päällä), worktree wt/proto-linssiseppa2-kappeli:
   Ydin/Seikkailu/KappelinArvoitus.cs (+.meta) + KappelinArvoitusTestit (8) + Huonesimulaatio 7aab3f25:n sääntöihin. 881/881, tarkistus 0.
