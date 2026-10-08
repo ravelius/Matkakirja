@@ -37,3 +37,25 @@ Vain deklaraatiot, joiden KOKO arvo on täsmälleen tyylikirjan arvo (ei shortha
 5. OVAALIT (EI OVAALEJA -linja): `.mk-nosto__kahva` (Kartta.uss, 36 × 5, r 3 = kapseli) ja `.mk-issohjaamo__ura` (iss-ohjaamo.uss,
    12 × 44, r 6 = kapseli). Pilleri `.mk-peli__merkki` (lautapeli.uss, kulma-pilleri). Muutos pyöristetyksi suorakulmioksi
    muuttaa ulkoasua → omistajan päätös. Ympyröitä (neliö, r = puolet) 52: ei ovaaleja, ennallaan.
+
+## Päätoimittajan päätökset ja toteutus (8.10. klo 19.xx, proto natiivi-ui/pohjavahti-168c b62e2569d, web-PR #4216)
+
+| Löydös | Kierros 1 | Päätösten jälkeen |
+|---|---|---|
+| Värit (pohjavahti) | 1589 | 1217 |
+| Fonttikoot | 507 | 507 (ennallaan, päätös 2) |
+| UI-siirtymät yli 250 ms | 59 | 0 (20 lyhennetty, 39 ympäristöpoikkeusta) |
+| Kulmat px | 196 | 130 |
+| Ovaalit | 2 | 0 |
+
+1. Uudet tokenit (web-PR #4216): kehys.lapinakyva rgba(0,0,0,0), kehys.map-ink-04 … map-ink-96 (38 nykyistä läpinäkyvyyttä ilman
+   pyöristystä, vain natiivi), kulma.keski 8 ja kulma.hius 2 → 372 väriä ja 65 kulmaa lisää tokeneiksi (ulkoasu ennallaan).
+2. Fonttikoot asteikon ulkopuolella: ennallaan.
+3. UI-siirtymät (paneelit, kortit, napit, ilmoitukset, peitteet: offlineTila, noppa--haipyy, kohdekartta__nimi, kysymys__vaihtoehto,
+   lehti__sivu--liuku, linssipeite--haipyy, linssiselite, aikajana-kertomus__laatikko, aikaselain, vananappi, ilmoitus,
+   saapumiskortti(+teksti), lukija--keskeytetty, pulu, matkakirja, kuvakortti, sahke-liuska, st__himmea, aloitus__ohita) → 0,22 s
+   (häivytykset 0,2 s). Ympäristöanimaatiot (latausnäkymät astroavaus, intro aloitus*, aikajanan näytökset ja kuvat, karuselli,
+   paljastus*, traileri*, syke, ISS-kyyti, kartan sävy, lentosiirtymä, leima, tiimalasi, pillerin laskurit, julistekuva) merkitty
+   `/* ympäristöanimaatio */`; pohjavahti.py ei laske niitä.
+4. EI OVAALEJA: .mk-nosto__kahva ja .mk-issohjaamo__ura → kulma-hius. .mk-peli__merkki pysyy ympyränä (pelinappula, tyylikirjan
+   _poikkeukset LAUTAPELI/merkki).
