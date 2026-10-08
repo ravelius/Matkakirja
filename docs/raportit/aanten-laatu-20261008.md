@@ -56,7 +56,7 @@ Lähteet: boomlibrary.com, krotosaudio.com/products/ultimate-footsteps-sound-eff
 
 # Osa 2: kaikki pelin tehosteäänet (8.10.2026 ilta, PT:n tilaus)
 
-Laajuus 119 ääntä: natiivin masteriin pakatut (pallon kori ja liekki, kävely, radio, Mylly, Tavli, käyttöliittymän efekti-*, Candle) ja ämpärin paketit,
+Laajuus 118 ääntä: natiivin masteriin pakatut (pallon kori ja liekki, kävely, radio, Mylly, Tavli, käyttöliittymän efekti-*, Candle) ja ämpärin paketit,
 joihin master viittaa (Olavinlinna aanet-e3-v1 ja aanet-fp-v1, ukkonen, äänimaisema-v1, ihmisen matka, cupola-humina). Puhe ja musiikki pois.
 Työkalut _tyo/aani-qa/inventaario.py ja kaikki.py (sama AST-luokitin ja mittarit kuin osassa 1; huiput stereona).
 Huom.: alle 0,5 s:n äänissä luokitin on epäluotettava (esim. "puhe 0,15" 0,1 s:n naksussa ei ole puhetta), joten ne arvioitiin vain selvistä virheistä.
