@@ -543,6 +543,27 @@ namespace Matkakirja.Natiivi
             e.style.opacity = peitto;
         }
 
+        /// <summary>
+        /// SYKÄHDYS (omistaja 5.10.2026 klo 16.1x: "pieni maapallo voisi isontua pehmeästi aina hetkeksi kun sijainti vaihtuu"):
+        /// pallo kasvaa 1,4× 0,4 s, pysyy 1,5 s ja palaa 0,6 s (vasen alakulma paikallaan). Ei tartunnan aikana; vähennetty liike: ei.
+        /// </summary>
+        public void Sykahda()
+        {
+            if (selaa || skaala > 1.001f || LinssiUi.VahennettyLiike() || el.style.display == DisplayStyle.None) return;
+            sykahdys?.Pause();
+            Siirtyma(el, 0.4f, "scale");
+            el.style.transitionTimingFunction = new StyleList<EasingFunction>(new List<EasingFunction> { new EasingFunction(EasingMode.EaseOut) });
+            el.style.scale = new Scale(new Vector3(1.4f, 1.4f, 1f));
+            sykahdys = el.schedule.Execute(() =>
+            {
+                if (selaa || skaala > 1.001f) return;   // tartunta kesken: Kasva hoitaa koon
+                Siirtyma(el, 0.6f, "scale");
+                el.style.transitionTimingFunction = new StyleList<EasingFunction>(new List<EasingFunction> { new EasingFunction(EasingMode.EaseInOut) });
+                el.style.scale = new Scale(new Vector3(1f, 1f, 1f));
+            }).StartingIn(1900);
+        }
+        IVisualElementScheduledItem sykahdys;
+
         static void Siirtyma(VisualElement e, float kestoS, params string[] ominaisuudet)
         {
             var o = new List<StylePropertyName>();
