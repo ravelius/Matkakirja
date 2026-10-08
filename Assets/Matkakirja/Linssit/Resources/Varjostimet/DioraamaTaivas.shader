@@ -25,6 +25,7 @@ Shader "Matkakirja/Linssit/DioraamaTaivas"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Dither.hlsl"   // LS2 9.10.: ei vaakaraitoja B10G11R11-puskurissa (PT, TF 167)
 
             half4 _TaivasHorisontti, _TaivasLaki, _TaivasKajo;
             float4 _TaivasAurinko, _TaivasParam;
@@ -55,7 +56,7 @@ Shader "Matkakirja/Linssit/DioraamaTaivas"
                     // myötäpäivään), joten u = (a − suunta) / 360 (_TaivasParam.y = −suunta/360, toisto kiertää).
                     float u = atan2(d.x, d.z) / (2 * PI) + _TaivasParam.y;
                     float v = asin(clamp(d.y, -1, 1)) / PI + 0.5;
-                    return half4(SAMPLE_TEXTURE2D_LOD(_TaivasKuva, sampler_TaivasKuva, float2(u, max(v, 0.5)), 0).rgb, 1);
+                    return half4((half3)IlmDither(SAMPLE_TEXTURE2D_LOD(_TaivasKuva, sampler_TaivasKuva, float2(u, max(v, 0.5)), 0).rgb, i.paikkaH.xy), 1);
                 }
                 half h = (half)saturate(d.y);
                 half3 vari = lerp(_TaivasHorisontti.rgb, _TaivasLaki.rgb, pow(h, 0.45h));
@@ -63,7 +64,7 @@ Shader "Matkakirja/Linssit/DioraamaTaivas"
                 half kohti = (half)saturate(dot(xz, sxz) * 0.5 + 0.5);
                 half kajo = pow(kohti, 3.0h) * exp(-h * 5.0h);
                 vari = lerp(vari, _TaivasKajo.rgb, saturate(kajo * _TaivasKajo.a));
-                return half4(vari, 1);
+                return half4((half3)IlmDither(vari, i.paikkaH.xy), 1);
             }
             ENDHLSL
         }
