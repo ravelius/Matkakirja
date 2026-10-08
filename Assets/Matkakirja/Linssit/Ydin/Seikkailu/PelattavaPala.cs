@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "77acdd6cb36380ee";
-        public const string Versio = "v45f";   // v45d + veneen vesimaski (vene.glb solmu vesimaski) + märkyys (osa.markyys, pinta-merkkien markyys) + vene:alku 20 m ennen muuria (souto ~22 s; LR 8.10.)
+        public const string Hash = "fd269407ada4dea1";
+        public const string Versio = "v45i";   // v45f + Final IK -data (hoitajan kadet, #4006), ranta-1499 törmäys ja kävely, partio:ranta-1 kalliolle, ulkoalueen törmäys harventamatta (LR 8.10.)
     }
 }

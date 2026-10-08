@@ -72,8 +72,8 @@
   "ranta-1499": {
    "kolmiot": {
     "nakyva": 13280,
-    "-tormays": 0,
-    "-kavely": 0
+    "-tormays": 13280,
+    "-kavely": 9944
    },
    "merkit": [
     "leikkaus:vain-1499-b"
@@ -219,7 +219,10 @@
      65.75
     ]
    },
-   "naapurit": [],
+   "naapurit": [
+    "ulkoalue",
+    "vesiportti"
+   ],
    "portaalit": [],
    "kamera_rajat": {
     "katto_y": -0.06
@@ -1529,7 +1532,7 @@
   },
   "ulkoalue": {
    "kolmiot": {
-    "-tormays": 9771,
+    "-tormays": 101452,
     "-kavely": 12000
    },
    "rajat": {
