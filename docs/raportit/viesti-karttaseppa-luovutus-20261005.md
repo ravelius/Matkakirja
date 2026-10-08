@@ -1,3 +1,13 @@
+# TILANNE 9.10. klo 02.0x
+
+- **Notre-Dame ja Riddarholmen -lähdepaketit (LS2)**: _tyo/karttaseppa/{notre-dame,riddarholmen}/ (LUEMINUT.md).
+  - Notre-Dame: orto 2018 (ennen paloa); LiDAR MNS työmaa-aikainen (nosturit), MNT ja RGE ALTI kelpaavat; leikkauspolygoni OSM.
+  - Riddarholmen: leikkauspolygoni ja OSM. Lantmäteriet vaatii Geotorget-tunnuksen (OMISTAJAN toimi, PT:lle kerrottu).
+  - concorde-ign.mjs on yleistetty (--nimi, --orto-kerros, --orto-vuosi).
+- Talvi3 käynnissä.
+
+---
+
 # TILANNE 9.10. klo 01.4x
 
 - **Pohjapiirrokset VALMIIT kaikille 37 kaupungille** (01.32): _tyo/karttaseppa/jalanjaljet-20261009/ (295 kohdetta; Wikidatalla 265). LS1:lle ilmoitettu.
