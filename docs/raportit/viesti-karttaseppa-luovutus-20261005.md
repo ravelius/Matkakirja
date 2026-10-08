@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 20.5x
+# TILANNE 8.10. klo 20.4x
 
 - **Elävä kaupunki (omistaja 20.4x, Linssiseppä tekee suunnitelman docs/raportit/pallo-elava-kaupunki-20261008.md):**
   - Osion C teksti on lähetetty Linssisepälle (OSM-aineisto, ODbL, ehdot C1–C4).
