@@ -236,7 +236,7 @@ namespace Matkakirja.Natiivi
             rakennus = rak;
             SeuraaMuutaPuhetta();
             bool aanimaisemaPaalla = Paalla && Asetukset.Paalla(Kytkin.Aanimaisema);
-            bool kertojaPaalla = Paalla && Asetukset.Paalla(Kytkin.Kertoja);
+            bool kertojaPaalla = Paalla && Asetukset.Paalla(Kytkin.Kertoja) && !Pelissa;
 
             // KUOLLUT SILMUKKAKAHVA -korjaus (löydös, katselmointi 29.9.2026): ensin kerätään KAIKKIEN tila+ääni-
             // parien tavoitetasot (ILMAN duckausta -- duckaus ei saa vaikuttaa siihen, pidetäänkö kahva ylipäätään
@@ -481,12 +481,18 @@ namespace Matkakirja.Natiivi
 
         int viimeJakso = -1;
 
+        /// <summary>Pelattava pala käynnissä (vene, kävely, yö): linnan esittelyn kertoja ei soi eikä katkaise pelin repliikkejä
+        /// (LS2:n botti BUILD 169: kierros alkoi veneessä, "puhevuoro linnalle (muut puheet katkaistu)" kesken pelin; samasta
+        /// kierroksesta PT:n BUILD 169 -still "Erik Akselinpoika Tott").</summary>
+        static bool Pelissa => SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null || SeikkailuYo.Aktiivinen != null;
+
         /// <summary>Kertojan jakso vaihtuu (−1 = ei jaksoa): edellinen puhe katkeaa ja uusi alkaa (tai jää odottamaan latausta).
         /// Kutsujat: Paivita (Ytimen jaksovertailu, timeline pois) ja DioraamaTimelinen KertojaKlippi (TimelineJakso).
         /// t ja lahde vain lokiin (A/B-vertailu: kertojan alut kierroksen ajassa).</summary>
         void KertojanJaksoVaihtuu(int jaksoNyt, Rakennus rak, bool kertojaPaalla, double t, string lahde)
         {
             aanettomat.Clear();
+            if (Pelissa) { viimeJakso = jaksoNyt; odottavaJakso = -1; return; }   // ei kertojaa eikä katkaisua pelin aikana
             if (viimeJakso >= 0)
             {
                 LopetaErillinen();
