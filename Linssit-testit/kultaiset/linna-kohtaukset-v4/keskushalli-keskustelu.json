@@ -1,0 +1,294 @@
+{
+ "huone": "keskushalli",
+ "malli": "eleven_v4",
+ "repliikit": [
+  {
+   "puhuja": "Apulainen",
+   "teksti": "Tietä, tietä! Kalakeittoa Linnantupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota."
+  },
+  {
+   "puhuja": "Vartija 2",
+   "teksti": "Kolme kuutosta! Maksa, kun vielä kehtaat."
+  },
+  {
+   "puhuja": "Vartija",
+   "teksti": "Puhu hiljempaa. Vouti ravaa tänään portaissa kuin päätön kana – jotain on hukassa."
+  },
+  {
+   "puhuja": "Talonpoika",
+   "teksti": "Ja me lämmitellään täällä alhaalla. Hormeja myöten paras lämpö nousee voudin kamariin."
+  }
+ ],
+ "puhujat": [
+  {
+   "puhuja": "Apulainen",
+   "voice_id": "Hd2f1k79HQ5HFaZ0ChVm",
+   "rivi": 0,
+   "alku_s": 0.09,
+   "loppu_s": 7.93,
+   "sanat": [
+    {
+     "sana": "Tietä,",
+     "alku_s": 0.09,
+     "loppu_s": 0.17
+    },
+    {
+     "sana": "tietä!",
+     "alku_s": 0.17,
+     "loppu_s": 0.73
+    },
+    {
+     "sana": "Kalakeittoa",
+     "alku_s": 0.77,
+     "loppu_s": 2.25
+    },
+    {
+     "sana": "Linnantupaan",
+     "alku_s": 2.33,
+     "loppu_s": 2.97
+    },
+    {
+     "sana": "ja",
+     "alku_s": 3.05,
+     "loppu_s": 3.21
+    },
+    {
+     "sana": "voudin",
+     "alku_s": 3.29,
+     "loppu_s": 3.85
+    },
+    {
+     "sana": "pöytään",
+     "alku_s": 3.93,
+     "loppu_s": 4.33
+    },
+    {
+     "sana": "ylös",
+     "alku_s": 4.41,
+     "loppu_s": 4.65
+    },
+    {
+     "sana": "toiseen",
+     "alku_s": 4.73,
+     "loppu_s": 5.09
+    },
+    {
+     "sana": "kerrokseen",
+     "alku_s": 5.13,
+     "loppu_s": 5.77
+    },
+    {
+     "sana": "–",
+     "alku_s": 6.17,
+     "loppu_s": 6.197
+    },
+    {
+     "sana": "kumpikaan",
+     "alku_s": 6.223,
+     "loppu_s": 6.81
+    },
+    {
+     "sana": "ei",
+     "alku_s": 6.89,
+     "loppu_s": 7.05
+    },
+    {
+     "sana": "odota.",
+     "alku_s": 7.13,
+     "loppu_s": 7.93
+    }
+   ]
+  },
+  {
+   "puhuja": "Vartija 2",
+   "voice_id": "xRHBPmRPAGCPeOQJVQ2u",
+   "rivi": 1,
+   "alku_s": 7.93,
+   "loppu_s": 11.77,
+   "sanat": [
+    {
+     "sana": "Kolme",
+     "alku_s": 7.93,
+     "loppu_s": 8.25
+    },
+    {
+     "sana": "kuutosta!",
+     "alku_s": 8.41,
+     "loppu_s": 9.13
+    },
+    {
+     "sana": "Maksa,",
+     "alku_s": 9.53,
+     "loppu_s": 10.09
+    },
+    {
+     "sana": "kun",
+     "alku_s": 10.17,
+     "loppu_s": 10.33
+    },
+    {
+     "sana": "vielä",
+     "alku_s": 10.37,
+     "loppu_s": 10.65
+    },
+    {
+     "sana": "kehtaat.",
+     "alku_s": 10.73,
+     "loppu_s": 11.77
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Vartija",
+   "voice_id": "tueYPmNkZixd2PUS7Wgb",
+   "rivi": 2,
+   "alku_s": 11.77,
+   "loppu_s": 17.93,
+   "sanat": [
+    {
+     "sana": "Puhu",
+     "alku_s": 11.77,
+     "loppu_s": 12.01
+    },
+    {
+     "sana": "hiljempaa.",
+     "alku_s": 12.09,
+     "loppu_s": 12.81
+    },
+    {
+     "sana": "Vouti",
+     "alku_s": 13.29,
+     "loppu_s": 13.61
+    },
+    {
+     "sana": "ravaa",
+     "alku_s": 13.69,
+     "loppu_s": 13.93
+    },
+    {
+     "sana": "tänään",
+     "alku_s": 13.97,
+     "loppu_s": 14.25
+    },
+    {
+     "sana": "portaissa",
+     "alku_s": 14.37,
+     "loppu_s": 14.73
+    },
+    {
+     "sana": "kuin",
+     "alku_s": 14.81,
+     "loppu_s": 14.97
+    },
+    {
+     "sana": "päätön",
+     "alku_s": 15.05,
+     "loppu_s": 15.37
+    },
+    {
+     "sana": "kana",
+     "alku_s": 15.45,
+     "loppu_s": 15.77
+    },
+    {
+     "sana": "–",
+     "alku_s": 16.33,
+     "loppu_s": 16.357
+    },
+    {
+     "sana": "jotain",
+     "alku_s": 16.383,
+     "loppu_s": 16.73
+    },
+    {
+     "sana": "on",
+     "alku_s": 16.77,
+     "loppu_s": 16.81
+    },
+    {
+     "sana": "hukassa.",
+     "alku_s": 16.89,
+     "loppu_s": 17.93
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Talonpoika",
+   "voice_id": "i5MApVdm05SBFn71supu",
+   "rivi": 3,
+   "alku_s": 17.93,
+   "loppu_s": 24.57,
+   "sanat": [
+    {
+     "sana": "Ja",
+     "alku_s": 17.93,
+     "loppu_s": 18.09
+    },
+    {
+     "sana": "me",
+     "alku_s": 18.17,
+     "loppu_s": 18.25
+    },
+    {
+     "sana": "lämmitellään",
+     "alku_s": 18.33,
+     "loppu_s": 18.97
+    },
+    {
+     "sana": "täällä",
+     "alku_s": 19.05,
+     "loppu_s": 19.37
+    },
+    {
+     "sana": "alhaalla.",
+     "alku_s": 19.49,
+     "loppu_s": 20.41
+    },
+    {
+     "sana": "Hormeja",
+     "alku_s": 20.73,
+     "loppu_s": 21.21
+    },
+    {
+     "sana": "myöten",
+     "alku_s": 21.29,
+     "loppu_s": 21.69
+    },
+    {
+     "sana": "paras",
+     "alku_s": 21.85,
+     "loppu_s": 22.17
+    },
+    {
+     "sana": "lämpö",
+     "alku_s": 22.25,
+     "loppu_s": 22.61
+    },
+    {
+     "sana": "nousee",
+     "alku_s": 22.65,
+     "loppu_s": 23.13
+    },
+    {
+     "sana": "voudin",
+     "alku_s": 23.21,
+     "loppu_s": 23.53
+    },
+    {
+     "sana": "kamariin.",
+     "alku_s": 23.61,
+     "loppu_s": 24.57
+    }
+   ],
+   "tauko_s": 0.0
+  }
+ ],
+ "raaka_mean_dB": -16.8,
+ "mean_dB": -17.4,
+ "max_dB": -1.6,
+ "LUFS": -16.7,
+ "kesto_s": 24.49,
+ "esivara_siirto_s": 0.09
+}

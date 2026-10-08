@@ -1,0 +1,305 @@
+{
+ "huone": "muurinharja",
+ "malli": "eleven_v4",
+ "repliikit": [
+  {
+   "puhuja": "Muurin vartija",
+   "teksti": "Tuuli viiltää, ja silti täällä harjalla ei nukuta. Itäraja on lähempänä kuin luulisi."
+  },
+  {
+   "puhuja": "Talonpoika",
+   "teksti": "Minä seisoin tällä samalla harjalla vuonna tuhatneljäsataayhdeksänkymmentäviisi, kun ne tulivat. Kiviä ja nuolia alas, ja piiritysportaat perään."
+  },
+  {
+   "puhuja": "Muurin vartija",
+   "teksti": "Silloin vouti Kylliäinen komensi kuin olisi syntynyt haarniska päällä. Nykyisestä voudista en tiedä – se etsii jotain kaikista kolmesta tornista."
+  }
+ ],
+ "puhujat": [
+  {
+   "puhuja": "Muurin vartija",
+   "voice_id": "tueYPmNkZixd2PUS7Wgb",
+   "rivi": 0,
+   "alku_s": 0.06,
+   "loppu_s": 6.94,
+   "sanat": [
+    {
+     "sana": "Tuuli",
+     "alku_s": 0.06,
+     "loppu_s": 0.38
+    },
+    {
+     "sana": "viiltää,",
+     "alku_s": 0.46,
+     "loppu_s": 1.42
+    },
+    {
+     "sana": "ja",
+     "alku_s": 1.5,
+     "loppu_s": 1.58
+    },
+    {
+     "sana": "silti",
+     "alku_s": 1.66,
+     "loppu_s": 1.94
+    },
+    {
+     "sana": "täällä",
+     "alku_s": 1.98,
+     "loppu_s": 2.26
+    },
+    {
+     "sana": "harjalla",
+     "alku_s": 2.3,
+     "loppu_s": 2.78
+    },
+    {
+     "sana": "ei",
+     "alku_s": 2.86,
+     "loppu_s": 2.94
+    },
+    {
+     "sana": "nukuta.",
+     "alku_s": 2.98,
+     "loppu_s": 4.06
+    },
+    {
+     "sana": "Itäraja",
+     "alku_s": 4.14,
+     "loppu_s": 4.62
+    },
+    {
+     "sana": "on",
+     "alku_s": 4.7,
+     "loppu_s": 4.78
+    },
+    {
+     "sana": "lähempänä",
+     "alku_s": 4.82,
+     "loppu_s": 5.3
+    },
+    {
+     "sana": "kuin",
+     "alku_s": 5.34,
+     "loppu_s": 5.5
+    },
+    {
+     "sana": "luulisi.",
+     "alku_s": 5.58,
+     "loppu_s": 6.94
+    }
+   ]
+  },
+  {
+   "puhuja": "Talonpoika",
+   "voice_id": "i5MApVdm05SBFn71supu",
+   "rivi": 1,
+   "alku_s": 6.94,
+   "loppu_s": 18.06,
+   "sanat": [
+    {
+     "sana": "Minä",
+     "alku_s": 6.94,
+     "loppu_s": 7.18
+    },
+    {
+     "sana": "seisoin",
+     "alku_s": 7.26,
+     "loppu_s": 7.74
+    },
+    {
+     "sana": "tällä",
+     "alku_s": 7.82,
+     "loppu_s": 8.06
+    },
+    {
+     "sana": "samalla",
+     "alku_s": 8.14,
+     "loppu_s": 8.54
+    },
+    {
+     "sana": "harjalla",
+     "alku_s": 8.62,
+     "loppu_s": 9.18
+    },
+    {
+     "sana": "vuonna",
+     "alku_s": 9.26,
+     "loppu_s": 9.5
+    },
+    {
+     "sana": "tuhatneljäsataayhdeksänkymmentäviisi,",
+     "alku_s": 9.58,
+     "loppu_s": 12.22
+    },
+    {
+     "sana": "kun",
+     "alku_s": 12.273,
+     "loppu_s": 12.38
+    },
+    {
+     "sana": "ne",
+     "alku_s": 12.46,
+     "loppu_s": 12.54
+    },
+    {
+     "sana": "tulivat.",
+     "alku_s": 12.58,
+     "loppu_s": 13.82
+    },
+    {
+     "sana": "Kiviä",
+     "alku_s": 13.86,
+     "loppu_s": 14.3
+    },
+    {
+     "sana": "ja",
+     "alku_s": 14.38,
+     "loppu_s": 14.46
+    },
+    {
+     "sana": "nuolia",
+     "alku_s": 14.54,
+     "loppu_s": 15.02
+    },
+    {
+     "sana": "alas,",
+     "alku_s": 15.1,
+     "loppu_s": 15.74
+    },
+    {
+     "sana": "ja",
+     "alku_s": 15.9,
+     "loppu_s": 15.98
+    },
+    {
+     "sana": "piiritysportaat",
+     "alku_s": 16.06,
+     "loppu_s": 17.18
+    },
+    {
+     "sana": "perään.",
+     "alku_s": 17.26,
+     "loppu_s": 18.06
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Muurin vartija",
+   "voice_id": "tueYPmNkZixd2PUS7Wgb",
+   "rivi": 2,
+   "alku_s": 18.06,
+   "loppu_s": 27.98,
+   "sanat": [
+    {
+     "sana": "Silloin",
+     "alku_s": 18.06,
+     "loppu_s": 18.38
+    },
+    {
+     "sana": "vouti",
+     "alku_s": 18.42,
+     "loppu_s": 18.7
+    },
+    {
+     "sana": "Kylliäinen",
+     "alku_s": 18.78,
+     "loppu_s": 19.34
+    },
+    {
+     "sana": "komensi",
+     "alku_s": 19.42,
+     "loppu_s": 19.82
+    },
+    {
+     "sana": "kuin",
+     "alku_s": 19.9,
+     "loppu_s": 20.06
+    },
+    {
+     "sana": "olisi",
+     "alku_s": 20.14,
+     "loppu_s": 20.38
+    },
+    {
+     "sana": "syntynyt",
+     "alku_s": 20.46,
+     "loppu_s": 20.86
+    },
+    {
+     "sana": "haarniska",
+     "alku_s": 20.94,
+     "loppu_s": 21.5
+    },
+    {
+     "sana": "päällä.",
+     "alku_s": 21.58,
+     "loppu_s": 22.06
+    },
+    {
+     "sana": "Nykyisestä",
+     "alku_s": 22.78,
+     "loppu_s": 23.38
+    },
+    {
+     "sana": "voudista",
+     "alku_s": 23.42,
+     "loppu_s": 23.9
+    },
+    {
+     "sana": "en",
+     "alku_s": 23.98,
+     "loppu_s": 24.06
+    },
+    {
+     "sana": "tiedä",
+     "alku_s": 24.14,
+     "loppu_s": 24.46
+    },
+    {
+     "sana": "–",
+     "alku_s": 25.02,
+     "loppu_s": 25.06
+    },
+    {
+     "sana": "se",
+     "alku_s": 25.1,
+     "loppu_s": 25.18
+    },
+    {
+     "sana": "etsii",
+     "alku_s": 25.3,
+     "loppu_s": 25.58
+    },
+    {
+     "sana": "jotain",
+     "alku_s": 25.62,
+     "loppu_s": 25.9
+    },
+    {
+     "sana": "kaikista",
+     "alku_s": 25.98,
+     "loppu_s": 26.46
+    },
+    {
+     "sana": "kolmesta",
+     "alku_s": 26.54,
+     "loppu_s": 26.94
+    },
+    {
+     "sana": "tornista.",
+     "alku_s": 27.02,
+     "loppu_s": 27.98
+    }
+   ],
+   "tauko_s": 0.0
+  }
+ ],
+ "raaka_mean_dB": -16.5,
+ "mean_dB": -17.5,
+ "max_dB": -1.7,
+ "LUFS": -16.9,
+ "kesto_s": 28.54,
+ "esivara_siirto_s": 0.06
+}
