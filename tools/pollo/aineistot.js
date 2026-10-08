@@ -62,7 +62,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     sisilia: 'opas/esittely-aaneton-v3/sisilia.json',
     sofia: 'opas/esittely-aaneton-v3/sofia.json',
     tampere: 'opas/esittely-aaneton-v3/tampere.json',
-    tukholma: 'opas/esittely-aaneton-v3/tukholma.json',
+    tukholma: 'opas/esittely-v2/tukholma.json',   // 8.10. omistaja: kehityskaupunki, kertojan äänet (avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
     valletta: 'opas/esittely-aaneton-v3/valletta.json',
     venetsia: 'opas/esittely-aaneton-v3/venetsia.json',
     vilna: 'opas/esittely-aaneton-v3/vilna.json',
