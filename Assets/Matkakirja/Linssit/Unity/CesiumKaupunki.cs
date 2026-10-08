@@ -88,6 +88,7 @@ namespace Matkakirja.Natiivi
             }
             if (!hallinta.additionalCameras.Contains(karkea)) hallinta.additionalCameras.Add(karkea);
             hallinta.useMainCamera = false;
+            if (lahiKaytossa) AsetaLahikamera(null);   // A3: lennon ajaksi pois
             karkeaKaytossa = true; karkeaAlku = Time.realtimeSinceStartup; tarkkaAlku = -1f;
             PaivitaKarkea();
             kirjaa($"kaupunki: tarkkuus karkea (valinta {NayttoKerroin:F2}, tavoite {SseKerroin:F2}, pikselit ×{KarkeaSkaala:F2})");
@@ -105,6 +106,47 @@ namespace Matkakirja.Natiivi
             }
             karkeaKaytossa = false; tarkkaAlku = Time.realtimeSinceStartup; tarkkaLaski = false;
             kirjaa($"kaupunki: tarkkuus tarkentuu → {SseKerroin:F2} ({(karkeaAlku > 0 ? Time.realtimeSinceStartup - karkeaAlku : 0):F1} s karkeana)");
+        }
+
+        // ---- LÄHITARKKUUS (Linssiseppä 8.10.2026, suunnitelma A3): pysähdyksellä tarkentumisen jälkeen kohdetta kohti suunnattu
+        // kapea lisäkamera Cesiumin laattavalintaan (kenttäkulma / LahiKerroin, sama pikselikorkeus): kohteen ympäriltä valitaan
+        // laatat kuin SSE olisi 16 / LahiKerroin (8–10), muu näkymä ennallaan. Ei tilesetin uudelleenluontia eikä muistipiikkiä koko
+        // näkymästä. Pois lennon ja siirron ajaksi (Karkeaksi) ja kun muistia on vähän (kerroin 1). Komento `opas lahi 0|1`.
+        public static bool LahiSallittu = true;
+        /// <summary>Kerroin laitteen muistista: ≥ 11 Gt 2,0 (SSE 8), ≥ 7 Gt 1,6 (SSE 10), muuten 1 (ei lähikameraa).</summary>
+        public static float LahiKerroin => !LahiSallittu ? 1f : SystemInfo.systemMemorySize >= 11000 ? 2f : SystemInfo.systemMemorySize >= 7000 ? 1.6f : 1f;
+        Camera lahi; bool lahiKaytossa;
+        public bool LahiKaytossa => lahiKaytossa;
+
+        /// <summary>Joka kehys oppaasta: kohde maailmassa (null = pois). Vain tarkentuneena (ei karkeaa valintaa) ja Mac-kuorman alla.</summary>
+        public void AsetaLahikamera(Vector3? kohde)
+        {
+            float k = LahiKerroin;
+            bool paalle = kohde.HasValue && k > 1.01f && auki && hallinta != null && kamera != null && !karkeaKaytossa && !kuormaValinta;
+            if (!paalle)
+            {
+                if (lahiKaytossa && hallinta != null && lahi != null) hallinta.additionalCameras.Remove(lahi);
+                if (lahiKaytossa) kirjaa("kaupunki: lähitarkkuus pois");
+                lahiKaytossa = false;
+                return;
+            }
+            if (lahi == null)
+            {
+                lahi = new GameObject("Kaupunki lähitarkkuus").AddComponent<Camera>();
+                lahi.enabled = false; lahi.cullingMask = 0;
+            }
+            var t = kamera.transform; var suunta = kohde.Value - t.position;
+            if (suunta.sqrMagnitude < 1f) suunta = t.forward;
+            lahi.transform.SetPositionAndRotation(t.position, Quaternion.LookRotation(suunta, Vector3.up));
+            lahi.fieldOfView = kamera.fieldOfView / k;
+            lahi.nearClipPlane = kamera.nearClipPlane; lahi.farClipPlane = kamera.farClipPlane;
+            lahi.pixelRect = kamera.pixelRect; lahi.aspect = kamera.aspect;
+            if (!lahiKaytossa)
+            {
+                if (!hallinta.additionalCameras.Contains(lahi)) hallinta.additionalCameras.Add(lahi);
+                lahiKaytossa = true;
+                kirjaa($"kaupunki: lähitarkkuus päällä (kenttäkulma / {k:F1}, Google-SSE kohteen ympärillä ~{GoogleSse / k:F0})");
+            }
         }
 
         void PaivitaKarkea()
@@ -476,6 +518,8 @@ namespace Matkakirja.Natiivi
         {
             Kaytossa = data;
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            if (hallinta != null && lahi != null) hallinta.additionalCameras.Remove(lahi);
+            lahiKaytossa = false;   // A3: uusi tileset ja hallinta → lisätään seuraavassa kehyksessä uudelleen
             ReittikameratPois();
             omat.Sulje(); vesi.Sulje();
             PoistaAluskerros();
@@ -837,6 +881,9 @@ namespace Matkakirja.Natiivi
             if (hallinta != null) hallinta.useMainCamera = true;
             if (karkea != null) UnityEngine.Object.Destroy(karkea.gameObject);
             karkea = null; karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
+            if (hallinta != null && lahi != null) hallinta.additionalCameras.Remove(lahi);
+            if (lahi != null) UnityEngine.Object.Destroy(lahi.gameObject);
+            lahi = null; lahiKaytossa = false;
             omat.Sulje(); vesi.Sulje();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;

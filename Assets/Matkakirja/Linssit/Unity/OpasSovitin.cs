@@ -481,6 +481,9 @@ namespace Matkakirja.Natiivi
             KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
             // Kohdevalo ja rengas häivyttyvät silmukan korostusosuuden mukaan (sammuvat ennen lähtöä, syttyvät saapumisesta).
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = (float)silmukka.KorostusOsuus;
+            // A3 lähitarkkuus: pysähdyksellä (ei lento eikä siirto) kohteen ympärille tarkemmat laatat, kun valinta on tarkentunut.
+            kaupunki.AsetaLahikamera(yk != null && kh != null && !yk.Kysymys && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Georef != null
+                ? KohdeMaailmassa(yk.Lat, yk.Lon, kh.MaaM + Math.Max(10, yk.KorkeusM * 0.4)) : (Vector3?)null);
             LatausKuvaPaivita();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
@@ -2223,6 +2226,14 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: PCM-virta soittovalmis {Time.realtimeSinceStartup - t0:F1} s:ssa ({virta.PuskuroituS:F1} s puskurissa, nopeus {nopeus:F2} ×, tarve {tarvitaan:F1} s)");
             while (!op.isDone) yield return null;
             o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
+        }
+
+        /// <summary>Paikka (lat, lon, ellipsoidikorkeus) kaupunkinäkymän maailmassa (georeferenssi).</summary>
+        Vector3 KohdeMaailmassa(double lat, double lon, double h)
+        {
+            var ecef = CesiumForUnity.CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, h));
+            var u = kaupunki.Georef.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            return new Vector3((float)u.x, (float)u.y, (float)u.z);
         }
 
         // ---- OMA KORKEUSMALLI (Linssiseppä 8.10., PT: Googlen Map Tiles -ehdot C4 kieltävät korkeuksien lukemisen laatoista) ----
