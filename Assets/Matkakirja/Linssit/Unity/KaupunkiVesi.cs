@@ -2,7 +2,8 @@
 // Googlen varjostimeen). Karttasepän aineisto: <juuri><kohde>-6m.json/.bytes (lähellä) ja -16m (kaukana, LOD), ENU kohteen origossa
 // (ellipsoidikorkeus 0). Paikka CesiumGlobeAnchorilla origoon (paikalliset akselit itä, ylös, pohjoinen), palat 1 km² kameran ympäriltä:
 // lähi alle LahiM 6 m:n verkosta, kauka LahiM–KaukoM 16 m:n verkosta, päivitys kameran siirryttyä yli PaivitysM. Varjostin VesiPinta.
-// Juuri: VesiJuuri (oletus ämpärin vesi/), kehitysajossa Documents/kaupunki-vesi.txt (ensimmäinen rivi, myös file://). Krediitti
+// Juuri: VesiJuuri (oletus ämpärin vesi/), kehitysajossa Documents/kaupunki-vesi.txt (ensimmäinen rivi, myös file://). Kohteet
+// <juuri>index.json:sta (id, lat, lon, sade_km), origo aineiston jsonista (Karttaseppä 8.10.: LS1:n pallo-37-keskipiste). Krediitti
 // (OSM ODbL + ESA WorldCover CC BY 4.0) jsonista Lähteet-näkymään. Kytkin "ilmakeha"-asetuksen rinnalle: "vesi 0|1" (oletus pois).
 using System;
 using System.Collections;
@@ -23,8 +24,6 @@ namespace Matkakirja.Natiivi
         public static string VesiJuuri = "https://media.matkakirja.app/vesi/";
         public const float LahiM = 3000f, KaukoM = 20000f, PaivitysM = 400f;
         public static float NostoM = 0.4f;
-        /// <summary>Kohteet (id, lat, lon, säde km): aineistot, jotka Karttaseppä on tehnyt; Eurooppa ensin.</summary>
-        public static readonly (string Id, double Lat, double Lon, double SadeKm)[] Kohteet = { ("tukholma", 59.3293, 18.0686, 15) };
 
         readonly Action<string> kirjaa;
         GameObject juuri; Material mat; int kerros;
@@ -40,22 +39,11 @@ namespace Matkakirja.Natiivi
         {
             Sulje();
             if (!Paalla || vanhempi == null) return;
-            var k = Kohteet.Where(x => Etaisyys(x.Lat, x.Lon, lat, lon) < x.SadeKm * 1000).Select(x => x.Id).FirstOrDefault();
-            if (k == null) return;
-            this.kerros = kerros;
-            var juuriUrl = Juuri();
-            var x0 = Kohteet.First(x => x.Id == k);
-            juuri = new GameObject("Kaupunki vesi " + k) { layer = kerros };
-            juuri.transform.SetParent(vanhempi, false);
-            var ankkuri = juuri.AddComponent<CesiumGlobeAnchor>();
-            ankkuri.adjustOrientationForGlobeWhenMoving = true;
-            ankkuri.longitudeLatitudeHeight = new double3(x0.Lon, x0.Lat, 0);
-            ankkuri.rotationEastUpNorth = quaternion.identity;
-            var sh = Shader.Find("Matkakirja/Linssit/VesiPinta");
-            if (sh != null) mat = new Material(sh) { name = "KaupunkiVesi" };
+            this.kerros = kerros; vanhempi0 = vanhempi;
             int tama = ++avaus;
-            LinssiOhjain.Instanssi?.StartCoroutine(Lataa(juuriUrl + k, tama));
+            LinssiOhjain.Instanssi?.StartCoroutine(Lataa(Juuri(), lat, lon, tama));
         }
+        Transform vanhempi0;
 
         static string Juuri()
         {
@@ -68,9 +56,23 @@ namespace Matkakirja.Natiivi
             return VesiJuuri;
         }
 
-        IEnumerator Lataa(string pohja, int tama)
+        IEnumerator Lataa(string juuriUrl, double lat, double lon, int tama)
         {
-            VesiVerkko l = null, ka = null;
+            // Kohde indexistä: lähin, jonka säteellä kaupunki on.
+            string k = null;
+            using (var r = UnityWebRequest.Get(juuriUrl + "index.json"))
+            {
+                r.timeout = 15; yield return r.SendWebRequest();
+                if (r.result == UnityWebRequest.Result.Success)
+                {
+                    foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(r.downloadHandler.text)), "kohteet")).Select(MiniJson.Objekti))
+                        if (Etaisyys(MiniJson.Luku(o, "lat") ?? 0, MiniJson.Luku(o, "lon") ?? 0, lat, lon) < (MiniJson.Luku(o, "sade_km") ?? 0) * 1000) { k = MiniJson.Teksti(o, "id"); break; }
+                }
+                else kirjaa?.Invoke($"kaupunki: vesi: index.json ei latautunut ({r.responseCode})");
+            }
+            if (k == null || tama != avaus) yield break;
+            string pohja = juuriUrl + k;
+            VesiVerkko l = null, ka = null; (double Lat, double Lon)? origo = null;
             foreach (var (ruutu, lahiTaso) in new[] { ("6m", true), ("16m", false) })
             {
                 string json = null; byte[] tavut = null;
@@ -78,16 +80,28 @@ namespace Matkakirja.Natiivi
                 using (var r = UnityWebRequest.Get($"{pohja}-{ruutu}.bytes")) { r.timeout = 60; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) tavut = r.downloadHandler.data; }
                 if (tama != avaus) yield break;
                 if (json == null || tavut == null) { kirjaa?.Invoke($"kaupunki: vesi {pohja}-{ruutu} ei latautunut"); continue; }
-                var v = Jasenna(json, tavut);
+                var v = Jasenna(json, tavut, out var o);
+                origo ??= o;
                 if (lahiTaso) l = v; else ka = v;
             }
+            if (origo == null || vanhempi0 == null) yield break;
+            juuri = new GameObject("Kaupunki vesi " + k) { layer = kerros };
+            juuri.transform.SetParent(vanhempi0, false);
+            var ankkuri = juuri.AddComponent<CesiumGlobeAnchor>();
+            ankkuri.adjustOrientationForGlobeWhenMoving = true;
+            ankkuri.longitudeLatitudeHeight = new double3(origo.Value.Lon, origo.Value.Lat, 0);   // ellipsoidikorkeus 0 (aineiston ENU)
+            ankkuri.rotationEastUpNorth = quaternion.identity;
+            var sh = Shader.Find("Matkakirja/Linssit/VesiPinta");
+            if (sh != null) mat = new Material(sh) { name = "KaupunkiVesi" };
             lahi = l; kauka = ka;
             kirjaa?.Invoke($"kaupunki: vesi ladattu ({lahi?.Palat.Length ?? 0} lähi- ja {kauka?.Palat.Length ?? 0} kaukopalaa, nosto {NostoM:F1} m)");
         }
 
-        VesiVerkko Jasenna(string json, byte[] tavut)
+        VesiVerkko Jasenna(string json, byte[] tavut, out (double Lat, double Lon)? origo)
         {
             var j = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var oj = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "origo"));
+            origo = oj != null && MiniJson.Luku(oj, "lat") is double la && MiniJson.Luku(oj, "lon") is double lo ? (la, lo) : ((double, double)?)null;
             krediitti = MiniJson.Teksti(j, "krediitti");
             if (MiniJson.Luku(j, "nosto_m_suositus") is double n) NostoM = (float)n;
             var palat = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "palat")).Select(MiniJson.Objekti).Select(p =>
