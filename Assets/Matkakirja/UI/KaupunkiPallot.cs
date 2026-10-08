@@ -169,7 +169,8 @@ namespace Matkakirja.Natiivi
             var nk = NostoKerros.Instanssi;
             string maa = nk != null ? nk.NykyinenMaa : null;
             bool kaikki = Paavalikko.MaailmaNakyma;   // kehittäjän maailmanäkymä (huntu pois): kaikkien maiden pallot (TF 162)
-            float kesto = nk != null ? nk.syttyminenS : 0.3f;
+            // UI-häivytys enintään Tyylikirja.Kesto.Avaus (0,22 s; pallotilan katselmointi 9.10., oli nostojen 0,3 s).
+            float kesto = Mathf.Min(nk != null ? nk.syttyminenS : 0.3f, Tyylikirja.Kesto.Avaus / 1000f);
             if (maa != edellinenMaa || kaikki != edellinenKaikki)
             {
                 edellinenMaa = maa; edellinenKaikki = kaikki;

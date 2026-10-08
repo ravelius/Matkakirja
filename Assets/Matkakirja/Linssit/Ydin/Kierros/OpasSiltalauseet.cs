@@ -211,12 +211,15 @@ namespace Matkakirja.Linssit.Kierros
     /// pallo-lahto kierroksen ensimmäiseen lähtöön, pallo-kaanto kun suunta muuttuu yli KaantoAst edellisestä osuudesta, pallo-nousu
     /// yli NousuM:n siirtymään, pallo-lasku lennon loppuun ennen kertojaa (vain jos lähdössä ei soinut pallolausetta). Enintään joka
     /// toiseen siirtymään ja kutakin ryhmää enintään RyhmaMax kertaa kierroksella; muuten tavallinen kierros-lause.
+    /// HARVEMMIN (omistaja 9.10.: "kuulostaa puuduttavalta"; Päätoimittaja: noin joka 4. siirtymä, ei peräkkäin, ei toistoja):
+    /// lause vain joka Vali:nteen siirtymään (muissa hiljaa, kertoja jatkaa), muulloin kuin pallon omaan tilanteeseen kierros-lause.
+    /// Sama lause ei toistu kierroksella (OpasSiltalauseet.Valitse: käytetyt).
     /// </summary>
     public sealed class OpasPallolauseet
     {
         public const string Lahto = "pallo-lahto", Nousu = "pallo-nousu", Kaanto = "pallo-kaanto", Lasku = "pallo-lasku";
         public const double NousuM = 800, KaantoAst = 60;
-        public const int RyhmaMax = 3;
+        public const int RyhmaMax = 3, Vali = 4;
         int siirtymia, edellinen = -10; double? edSuunta;
         readonly Dictionary<string, int> kaytetty = new Dictionary<string, int>(StringComparer.Ordinal);
 
@@ -229,23 +232,23 @@ namespace Matkakirja.Linssit.Kierros
             double? muutos = null;
             if (edSuunta is double e) { double d = Math.Abs(suunta - e) % 360; muutos = d > 180 ? 360 - d : d; }
             edSuunta = suunta;
-            if (i - edellinen < 2) return null;   // enintään joka toiseen siirtymään
+            if (i - edellinen < Vali) return null;   // enintään joka Vali:nteen siirtymään
             string r = i == 0 ? Lahto : muutos > KaantoAst ? Kaanto : matkaM > NousuM ? Nousu : null;
-            return Kayta(r, i, onRyhma);
+            return Kayta(r, i, onRyhma) ?? Kayta(OpasSiltalauseet.Kierros, i, onRyhma);
         }
 
         /// <summary>Lennon lopun ryhmä (null = ei lausetta): sama siirtymä kuin viimeisin Lahtoon.</summary>
         public string Laskuun(Func<string, bool> onRyhma = null)
         {
             int i = siirtymia - 1;
-            return i < 0 || i - edellinen < 2 ? null : Kayta(Lasku, i, onRyhma);
+            return i < 0 || i - edellinen < Vali ? null : Kayta(Lasku, i, onRyhma);
         }
 
         string Kayta(string r, int i, Func<string, bool> onRyhma)
         {
             if (r == null || (onRyhma != null && !onRyhma(r))) return null;
             kaytetty.TryGetValue(r, out int n);
-            if (n >= RyhmaMax) return null;
+            if (n >= RyhmaMax && r != OpasSiltalauseet.Kierros) return null;
             kaytetty[r] = n + 1; edellinen = i;
             return r;
         }

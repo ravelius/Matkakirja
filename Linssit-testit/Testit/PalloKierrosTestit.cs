@@ -262,7 +262,7 @@ namespace Matkakirja.Linssit.Testit
         // Lisä (ei saumassa): pysähdyksellä (Puhuu, Odottaa) silmä liikkuu vain lipumisen vauhtia; nykäys = yli LipumisNopeus + 1 m/s.
         [Testi] static void PysahdyksellaEiNykaysta()
         {
-            var vikoja = new List<string>(); double raja = OpasKuvaus.LipumisNopeus + 1;
+            var vikoja = new List<string>(); double raja = OpasKuvaus.KaariNopeusMS + 1;   // kohdekaari 9.10.
             foreach (var verkko in Verkot)
             {
                 var r = Aja(verkko);

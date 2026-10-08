@@ -1190,7 +1190,7 @@
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--paper-dark);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-aikajana-havainne__erotin {
@@ -1207,7 +1207,7 @@
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--paper-dark);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-aikajana-paneeli__kuva {
@@ -1300,7 +1300,7 @@
 .mk-aikajana-kertomus.mk-keskella .mk-aikajana-kertomus__teksti {
     font-size: 24px; /* fonttipoikkeus: 24 px, lähin asteikon koko 26 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--tk-tumma-muste);
-    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     -unity-text-outline-width: 0.8px;
     -unity-text-outline-color: var(--tk-kuulto-musta-60);
 }
@@ -1334,7 +1334,7 @@
     font-size: 19px; /* fonttipoikkeus: 19 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-pergamentti);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.7s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
@@ -1345,7 +1345,7 @@
     font-size: var(--tk-koko-leipa);
     white-space: normal;
     color: var(--tk-erikois-aikajana-3);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     opacity: 0;
     translate: 0 6px;
     transition-property: opacity, translate;
@@ -2047,7 +2047,7 @@
     font-size: 8px; /* fonttipoikkeus: 8 px, lähin asteikon koko 12 px (ero 4 px näkyisi; Päätoimittaja 8.10.2026) */
     letter-spacing: 12.5px; /* web 1px */
     color: var(--tk-kuulto-paper-dark-85);
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-radio--levea .mk-radio__virta {
@@ -2163,7 +2163,7 @@
     overflow: hidden;
     text-overflow: clip;
     color: var(--tk-kuulto-panel-92);
-    text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45);
+    text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     border-radius: var(--tk-kulma-hius);
     transition-property: color, opacity, background-color;
     transition-duration: 0.18s;
@@ -2183,7 +2183,7 @@
 
 .mk-radio__kaupunki--kauka {
     color: var(--tk-kuulto-overlay-card-94);
-    text-shadow: 0 1px 0 rgba(255, 247, 224, 0.55);
+    text-shadow: 0 1px 0 rgba(255, 247, 224, 0.55); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-radio__kaupunki:active {
@@ -2242,7 +2242,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--ink-light);
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-radio__sivu {
@@ -2755,7 +2755,7 @@
     letter-spacing: 6.36px; /* web 0.7px */
     white-space: nowrap;
     color: var(--tk-tumma-muste);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     transition-property: left;
     transition-duration: 0.24s;
 }
@@ -3181,7 +3181,7 @@
     position: absolute;
     font-size: 11px;
     color: var(--tk-kuulto-kulta-72);
-    text-shadow: 0 1px 2px rgba(10, 6, 2, 0.9);
+    text-shadow: 0 1px 2px rgba(10, 6, 2, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     margin: 0;
     padding: 0;
@@ -3379,7 +3379,7 @@
     color: var(--tk-tumma-muste);
     -unity-text-outline-width: 0.8px;
     -unity-text-outline-color: var(--tk-lasi-pinta-peitto);
-    text-shadow: 0 1px 2px rgba(20, 12, 4, 0.8);
+    text-shadow: 0 1px 2px rgba(20, 12, 4, 0.8); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     white-space: nowrap;
 }
 
@@ -3936,7 +3936,7 @@
 .mk-linssivalitsin.mk-linssivalitsin--valikko {
     width: 300px;
     max-width: 94%;
-    --map-ink: #2e2011;
+    --map-ink: #2e2011; /* väripoikkeus: pinnan oma muuttuja (paikallinen teemamäärittely, käyttöpaikat var()-viittauksia) (Päätoimittaja 8.10.2026) */
     /* Leveys vaihtuu ilman siirtymää: välileveydet sovittivat valikkonappien fontit liian pieniksi (1.0.62-savuke). */
 }
 
