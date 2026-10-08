@@ -221,7 +221,7 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Aanet:
                     Takaisin("Äänet");
                     Kytkinrivi(Kytkin.Kertoja, "Kertoja");
-                    Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
+                    Kytkinrivi(Kytkin.Musiikki, "Musiikki");   // sama nimi kuin mikserissä (Päätoimittaja 8.10.2026)
                     Kytkinrivi(Kytkin.Aanimaisema, "Äänimaisema");
                     if (Asetukset.Kehittaja && MikseriPaneeli.Viimeisin != null)
                         Komento("Mikseri", () => MikseriPaneeli.Viimeisin.Avaa(true));
