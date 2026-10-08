@@ -211,9 +211,6 @@ namespace Matkakirja.Linssit.Seikkailu
                 if (Tila != VartijanTila.Partio || Mittari >= Raja) Riita = 0;
                 else { Vauhti = 0; Kaanny(dt, Suunta(riitaX - s.VartijaX, riitaZ - s.VartijaZ)); double vr = NakoVoima(s); if (vr > 0) { Mittari = Math.Min(1, Mittari + vr * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; } else Mittari = Math.Max(0, Mittari - MittariLaskuS * dt); if (Mittari < Raja) return; Riita = 0; }
             }
-            // Valppaus laskee myös torkkuessa ja syödessä (LS2 8.10.: kiinnijäännin jälkeen syövä torkkuja jäi pysyvästi valppaaksi, näkö 12 m
-            // ja epäilyraja 0,2, koska torkkujan haara palasi ennen laskua).
-            if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
             if (Torkkuu)
             {
                 // Torkkuva vartija istuu: syödessä katsejaksot, ääni herättää (nousee NousuS), täysi mittari herättää jahtiin.
