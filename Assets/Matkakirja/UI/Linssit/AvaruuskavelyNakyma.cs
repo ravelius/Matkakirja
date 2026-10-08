@@ -308,7 +308,7 @@ namespace Matkakirja.Natiivi
         static Label Teksti(VisualElement isa)
         {
             var l = Rakenne.Teksti("", "mk-kavely__teksti", isa);
-            l.style.color = new Color(0.93f, 0.9f, 0.84f, 1f);
+            l.style.color = (Color)Tyylikirja.Kehys.InkLight;
             l.style.whiteSpace = WhiteSpace.Normal;
             Kirjasimet.Aseta(l, Kirjasin.Kone);
             return l;

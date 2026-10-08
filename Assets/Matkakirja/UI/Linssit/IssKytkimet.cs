@@ -450,7 +450,7 @@ namespace Matkakirja.Natiivi
                 if (paalla) { Insert(0, Legenda); Legenda.style.flexGrow = 1; } else { Laatta.Add(Legenda); Legenda.style.flexGrow = 0; }
                 Legenda.style.display = paalla && IssPaneeliKuvat.KaiverretutTekstit ? DisplayStyle.None : DisplayStyle.Flex;
             }
-            protected override void OnTila() => Legenda.style.color = NykyTila == Tila.Aktiivinen ? new Color(0.14f, 0.1f, 0.05f) : Teksti;
+            protected override void OnTila() => Legenda.style.color = NykyTila == Tila.Aktiivinen ? (Color)Tyylikirja.Kehys.Panel : Teksti;
             protected override void Paikkamerkki(Painter2D p, Rect r)
             {
                 var c = Laatta.layout.center; if (Laatta.layout.width <= 0) return;

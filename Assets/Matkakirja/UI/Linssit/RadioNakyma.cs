@@ -139,7 +139,7 @@ namespace Matkakirja.Natiivi
             pinnat = RadioPinnat.Kotelo(kotelo);
             if (pinnat) juuri.AddToClassList("mk-radio--pinnat"); else Rakenne.Tausta(kotelo, Puu);
             var varjo = Rakenne.El("mk-radio__varjo", kotelo, PickingMode.Ignore);
-            Rakenne.Tausta(varjo, Kuviot.Pysty("radio-varjo", new Color(0, 0, 0, 0), new Color(0.05f, 0.03f, 0.01f, Pistenaytto.Peitto(0.32f, Color.black, new Color(0.5f, 0.45f, 0.35f)))));
+            Rakenne.Tausta(varjo, Kuviot.Pysty("radio-varjo", (Color)Tyylikirja.Kehys.Lapinakyva, new Color(0.05f, 0.03f, 0.01f, Pistenaytto.Peitto(0.32f, Color.black, new Color(0.5f, 0.45f, 0.35f)))));
             keskio = Rakenne.El("mk-radio__keskio", kotelo, PickingMode.Ignore);
             // Rivi 1: VU | LCD | lamppu (radiouudistus: sama rivi kaikilla leveyksillä).
             var rivi = Rakenne.El("mk-radio__nayttorivi", keskio, PickingMode.Ignore);
@@ -1209,7 +1209,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Asteikon viivat alareunan 16 px:n kaistalla (.radio-asteikko::after).</summary>
         sealed class Asteikkoviivat : VisualElement
         {
-            static readonly Color Viiva = new Color32(58, 42, 23, 255);
+            static readonly Color Viiva = Tyylikirja.Kehys.Panel2;
 
             public Asteikkoviivat() { generateVisualContent += Piirra; }
 

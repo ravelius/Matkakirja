@@ -214,7 +214,7 @@ namespace Matkakirja.Natiivi
             const int N = 420;
             t = Uusi(nimi, N, N);
             t.wrapMode = TextureWrapMode.Repeat;
-            var vari = new Color(0.42f, 0.33f, 0.19f);
+            var vari = (Color)Tyylikirja.Kehys.RajaMuste;
             var rnd = new System.Random(140);
             var hila = new float[N * N];
             for (int i = 0; i < hila.Length; i++) hila[i] = (float)rnd.NextDouble();

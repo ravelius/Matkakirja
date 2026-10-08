@@ -1482,7 +1482,7 @@ namespace Matkakirja.Natiivi
             liviaNimi = new Label { pickingMode = PickingMode.Ignore };
             liviaNimi.style.marginTop = 8;
             liviaNimi.style.fontSize = 13;
-            liviaNimi.style.color = new Color(0.27f, 0.2f, 0.12f);
+            liviaNimi.style.color = (Color)Tyylikirja.Kehys.MapInk;
             liviaNimi.style.backgroundColor = new Color(0.95f, 0.91f, 0.8f, 0.85f);
             liviaNimi.style.paddingLeft = 6; liviaNimi.style.paddingRight = 6;
             liviaKehys.Add(liviaNimi);

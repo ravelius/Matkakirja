@@ -336,7 +336,7 @@ namespace Matkakirja.Natiivi
             StyleLength bottom, StyleLength width, StyleLength height, StyleLength koko, StyleColor vari, StyleEnum<TextAnchor> tasaus, StyleEnum<DisplayStyle> nakyvyys)> tekstit =
             new List<(Label, VisualElement, int, StyleEnum<Position>, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength, StyleColor, StyleEnum<TextAnchor>, StyleEnum<DisplayStyle>)>();
 
-        static readonly Color TarraTausta = new Color(0.07f, 0.07f, 0.08f, 0.94f), TarraTeksti = new Color(0.95f, 0.95f, 0.92f);
+        static readonly Color TarraTausta = (Color)Tyylikirja.Himmennys.Kuva, TarraTeksti = (Color)Tyylikirja.Kehys.Valkoinen;
 
         /// <summary>Tekstin alkuperäinen paikka ja tyyli talteen (PurraKerrokset palauttaa).</summary>
         void Muista(Label l)

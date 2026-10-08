@@ -80,16 +80,16 @@ namespace Matkakirja.Natiivi
         };
 
         // .die-face / .pip / .die-shadow -värit
-        static readonly Color Luu0 = new Color32(249, 241, 218, 255);
-        static readonly Color Luu1 = new Color32(239, 224, 189, 255);
-        static readonly Color Luu2 = new Color32(221, 201, 162, 255);
+        static readonly Color Luu0 = Tyylikirja.Kehys.Kerma;
+        static readonly Color Luu1 = Tyylikirja.Kehys.Paper;
+        static readonly Color Luu2 = Tyylikirja.Kehys.PaperDark;
         static readonly Color SisaVarjo = new Color32(108, 76, 34, 255);
         static readonly Color Reuna = new Color(46 / 255f, 32 / 255f, 17 / 255f, 0.92f);
-        static readonly Color Muste = new Color32(63, 45, 24, 255);
-        static readonly Color MusteKeski = new Color32(84, 60, 33, 255);
-        static readonly Color Kiilto = new Color32(252, 244, 222, 255);
-        static readonly Color Patina = new Color32(44, 27, 10, 255);
-        static readonly Color VarjoVari = new Color32(44, 27, 10, 255);
+        static readonly Color Muste = Tyylikirja.Kehys.MapInk;
+        static readonly Color MusteKeski = Tyylikirja.Kehys.Line;
+        static readonly Color Kiilto = Tyylikirja.Kehys.Kerma;
+        static readonly Color Patina = Tyylikirja.Kehys.Panel;
+        static readonly Color VarjoVari = Tyylikirja.Kehys.Panel;
 
         // Silmien ruudukko: padding 12 %, gap 4 % (sisältölaatikosta) → solun keskikohdat
         // ±0,2633 ja silmä 70 % solusta (0,163 tahkon leveydestä).

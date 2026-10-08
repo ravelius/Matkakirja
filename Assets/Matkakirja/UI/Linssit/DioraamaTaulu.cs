@@ -20,7 +20,7 @@ namespace Matkakirja.Natiivi
         const float PuluMinPt = 56f, PuluMaxPt = 96f, PuluEtaisyysvertailuM = 14f;
         const int AnimaatioMs = 220;
         static readonly Color Pergamentti = new Color(0.9373f, 0.9020f, 0.8235f, 0.94f);
-        static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
+        static readonly Color Teksti = (Color)Tyylikirja.Kehys.Panel2;
 
         readonly VisualElement juuri, lauta, nakyma, lappuKerros;
         /// <summary>Huone, jonka kortin pelaaja on pyytänyt napautuksella (DioraamaSyote); null = ei korttia (omistaja 5.10. 23.0x).</summary>

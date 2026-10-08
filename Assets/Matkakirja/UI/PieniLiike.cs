@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
             (Color vari, float peitto) = aika switch
             {
                 Vuorokaudenaika.Aamu => ((Color)new Color32(120, 150, 200, 255), 0.07f),
-                Vuorokaudenaika.Ilta => ((Color)new Color32(232, 150, 70, 255), 0.09f),
+                Vuorokaudenaika.Ilta => ((Color)Tyylikirja.Tila.Live, 0.09f),
                 Vuorokaudenaika.Yo => ((Color)new Color32(40, 60, 130, 255), 0.12f),
                 _ => (Color.clear, 0f),
             };

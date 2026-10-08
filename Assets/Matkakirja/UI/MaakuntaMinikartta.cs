@@ -16,11 +16,11 @@ namespace Matkakirja.Natiivi
     {
         static readonly Dictionary<string, Texture2D> valimuisti = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
 
-        static readonly Color Maa = new Color(0.90f, 0.83f, 0.68f, 1f);
+        static readonly Color Maa = (Color)Tyylikirja.Kehys.Paper;
         static readonly Color Valittu = new Color(0.70f, 0.30f, 0.20f, 0.55f);
         static readonly Color ValittuReuna = new Color(0.45f, 0.16f, 0.10f, 0.95f);
-        static readonly Color Raja = new Color(0.23f, 0.18f, 0.13f, 0.55f);
-        static readonly Color Ulkoraja = new Color(0.23f, 0.18f, 0.13f, 0.85f);
+        static readonly Color Raja = (Color)Tyylikirja.Kehys.RiviTausta;
+        static readonly Color Ulkoraja = (Color)Tyylikirja.Kehys.MapInk85;
 
         /// <summary>Minikartta avaimella "ISO:tunnus" (leveys pikseleinä); null, jos maakuntien aineisto ei ole ladattu.</summary>
         public static Texture2D Hae(string avain, int leveys = 512)

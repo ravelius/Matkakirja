@@ -647,7 +647,7 @@ namespace Matkakirja.Natiivi
             kamera.orthographicSize = Sade * 1.02f;
             kamera.nearClipPlane = Sade; kamera.farClipPlane = 5f * Sade;
             kamera.clearFlags = CameraClearFlags.SolidColor;
-            kamera.backgroundColor = new Color(0, 0, 0, 0);
+            kamera.backgroundColor = (Color)Tyylikirja.Kehys.Lapinakyva;
             kamera.cullingMask = 1 << Kerros;
             kamera.targetTexture = rt;
             kamera.allowHDR = false; kamera.allowMSAA = true;
