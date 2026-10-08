@@ -77,7 +77,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kuoren leikkaukset kävelytilassa (enintään LeikkauksiaMax; 7.10. datassa 40, ennen otettiin vain 8 ensimmäistä,
         /// jolloin kappelin ja portaiden leikkaukset jäivät pois). Valinta: pelaajan osa, sen naapurit, sitten lähimmät keskipisteet.</summary>
-        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+        /// <summary>Vuoden 1499 näkymä (leikkaus:vain-1499*): päällä kävelyssä, pois K2-dronessa nykyiseen linnaan (LR v44x).</summary>
+        public static bool Vain1499 { get; private set; } = true;
+        public static void AsetaVain1499(bool paalla) { if (Vain1499 == paalla) return; Vain1499 = paalla; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; if (paalla) Vain1499 = true; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
 
         /// <summary>Kutsutaan pelaajan liikkuessa (SeikkailuPelaaja, 0,5 s välein): valinta päivittyy, kun osa vaihtuu.</summary>
         public static void PaivitaLeikkaukset(Vector3? pelaaja, bool pakota = false)
@@ -96,7 +99,9 @@ namespace Matkakirja.Natiivi
                 foreach (var o in Data.Osat.Values)
                     foreach (var l in o.Leikkaukset)
                     {
-                        double arvo = l.Nimi != null && aina.Contains(l.Nimi) ? -1e6 : o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
+                        bool ainaL = l.Nimi != null && aina.Contains(l.Nimi);
+                        if (ainaL && !Vain1499) continue;   // drone nykyiseen linnaan: bastionit näkyvät
+                        double arvo = ainaL ? -1e6 : o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
                         if (pelaaja is Vector3 q) { double dx = l.X - q.x, dy = l.Y - q.y, dz = l.Z + q.z; arvo += Math.Sqrt(dx * dx + dy * dy + dz * dz); }
                         kaikki.Add((l, arvo));
                     }
