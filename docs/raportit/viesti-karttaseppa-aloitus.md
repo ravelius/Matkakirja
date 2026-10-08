@@ -3,8 +3,8 @@
 Olet Karttaseppä, Matkakirjan karttasessio (Opus). Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT".
-2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261005.md`, ylin osio "TILANNE 8.10. klo 02.1x".**
-   Ilman sessiota ajaa talvi2e (28 lohkoa, noin 04). Jatko-ohje osiossa.
+2. **Viimeisin luovutus: `docs/raportit/viesti-karttaseppa-luovutus-20261005.md`, ylin osio "TILANNE 8.10. klo 04.5x".**
+   Ei taustaajoja. Seuraava työ: pikselikohtainen lumitodennäköisyyskooste (suunnitelma osiossa).
    Tarkista `ps` ennen uudelleenkäynnistyksiä; pitkät ajot käynnistetään perl fork+setsid -kaavalla.
 3. Auto-memory `karttaseppa-tila-20261002-ilta` (2.–5.10.), `s2-earth-search-baseline-04-offset`, `heredoc-js-lainaus`, `sonnet-rajattuihin-tehtaviin`, `omistajan-kuvat-rajattuna` ja `kuvapari-merkinnat-kuvaan`.
    Sääntö **JUMI → FABLE**: jumissa yksi viesti Fablelle, ei korttia omistajalle.

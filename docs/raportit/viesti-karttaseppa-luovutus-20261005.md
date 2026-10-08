@@ -1,3 +1,38 @@
+# TILANNE 8.10. klo 04.5x
+
+**TALVI EI VIENTIIN (PT 04.4x).** Talvi2e (03.58) korjasi Itä-Euroopan ruutukuvion ja Mezeninlahden, mutta lumirajalla on MGRS-portaikko
+(Tanska–Puola–Karpaatit), Mustanmeren pohjoispuolella lumi päättyy suoraan vaakaviivaan noin 46° N:ssä, ja Volgan suunnalla on ruskeita suorakulmioita.
+Viemätön talvipaketti on poistettu. Kokeillut, toimimattomat korjaukset (ympäristöliput, oletuksena pois):
+- `TALVI_JATKUVA=1`: lumipaino liukuman mukaan
+- `TALVI_KAKSOIS=1`: 4 lumista + 4 paljasta näkymää
+
+Molemmat jättävät ruuturajat.
+
+## SEURAAVA TYÖ (PT): pikselikohtainen lumitodennäköisyyskooste
+
+Tavoite: luonnollinen, epäsäännöllinen lumiraja ilman ruuturajoja.
+
+1. **Kuvajoukko ruudulle:** kaikki talvien (2022–2025) näkymät, joissa pilviä < 50 %, enintään 16, ilman lumipainotusta. Sama säännöstö kaikkialla (ei lumiRaja- eikä TLUMI-sääntöä).
+2. **Pikselikohtaiset arvot** kelpoista näkymistä:
+   - `p` = lumisten (SCL 11) osuus
+   - paljas väri = alempi mediaani lumettomista
+   - luminen väri = mediaani lumisista
+3. **Kertymä ruutujen yli:** p, paljas RGB ja luminen RGB kertyvät painotettuina samaan A-kertymään kuin nyt (uudet kanavat), joten päällekkäiset ruudut sulautuvat.
+4. **Lohkon kokoamisessa:** p sumennetaan noin 3–5 km:n säteellä (normalisoitu laatikko × 3). Väri = mix(paljas, luminen, smoothstep(0,35; 0,65; p)). Jos toinen väri puuttuu, käytetään toista.
+5. **Säilyvät:** järvijää (NE-järvet, nyt lumiT; vaihdetaan p:hen tai pidetään leveysasteena), Itämeren ja Vienanmeren merijää sekä reikätäyttö, vuonojen rantasääntö.
+
+**Arvio:**
+- Koodi ja testit noin 3–4 h: 3 testilohkoa rajalta (34_20, 36_21, 38_22) sekä pohjoinen (35_16) ja etelä (33_22).
+- Koko talven uusinta 169 lohkoa 16 näkymällä noin 8–10 h. Muisti: keko 6 Gt, sisäistä levyä 36 Gi; yksi prosessi kerrallaan, ja levyvahti STOP alle 30 Gi:n.
+- Ei junakäännöksen aikana: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka`.
+
+Koodi: `kaudet/kausimosaiikki.mjs`. Talvi2e:n versio on tallessa (`-talvi2e-20261008.mjs`). Nykyisessä tiedostossa on lisäksi TALVI_JATKUVA- ja TALVI_KAKSOIS-liput (pois päältä).
+Talven tulokset T7:llä: s2-eurooppa-talvi2(e/d/c/b), yleiskuvat `yleiskuva-talvi2*-z6.jpg`.
+
+- **Valmiit:** syksy v1 ja kevät v1 ovat ämpärissä (kevät junassa 164, LS2). Worldview on tuotannossa.
+
+---
+
 # TILANNE 8.10. klo 02.1x
 
 - **AJOSSA: TALVI2E** (`kaudet/aja-talvi2e.sh`, PGID 23889, 02.09 alkaen, 28 lohkoa, arvio noin 04) → `s2-eurooppa-talvi2e/`. Koodi: `kausimosaiikki-talvi2e-20261008.mjs`.
