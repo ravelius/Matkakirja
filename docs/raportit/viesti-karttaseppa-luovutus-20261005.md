@@ -9,7 +9,9 @@
   1) Poista listan lohkot kunkin osan tila.json:n valmiit-listasta (tai tee uusi ULOS talvi3-uusinta), ja aja LOHKOT=lista kahdella prosessilla pk2-koodilla (noin 3 h).
   2) Kerrokset: uusinta → osa1 → osa2.
   3) Tarkista suorat-reunat.py:llä uudelleen.
-  4) Yksi paketti `kokoa-kausi.py talvi v1`, LAHTEET.md ja Julkaisija.
+  4) **PT 22.4x: ENNEN PAKETTIA yleiskuvat PT:lle: Etelä-Ruotsi, Pommeri ja Baltia ennen ja jälkeen.** Ennen-kuvat: talvi3-tarkistus/esim-*.jpg (osa1/osa2-kerroksista).
+  5) Yksi paketti `kokoa-kausi.py talvi v1`, LAHTEET.md ja Julkaisija.
+- **Vesi:** LS2 testaa Pariisin nostoa (0,4 / 0,8 / 1,2 m) noin 00.15, koska Seinessä näkyy Googlen vesisoikioita. Ratkaisu: vesi/index-v3.json, jossa kohdekohtainen nosto_m (bytes ennallaan, vienti PT:n luvalla). Tukholma 0,4 näytti hyvältä (PT hyväksyi kuvaparin, vesi päällä junassa 167).
 
 ---
 
