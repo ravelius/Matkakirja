@@ -27,6 +27,7 @@ namespace Matkakirja.Linssit
 
         readonly MonoBehaviour o;
         Camera perus, overlay;
+        bool koosteessa;   // TAA (Laatutaso.Ajallinen): Base-kamera KaupunkiKoosteeseen pinon sijaan
         Transform kortti;
         Material mat;
         TextMeshPro teksti;
@@ -147,14 +148,14 @@ namespace Matkakirja.Linssit
                 var d = perus.GetUniversalAdditionalCameraData();
                 if (d != null) d.cameraStack.Remove(overlay);
             }
-            if (overlay != null) Object.Destroy(overlay.gameObject);
+            if (overlay != null) { KaupunkiKooste.Poista(overlay); Object.Destroy(overlay.gameObject); }
             if (mat != null) Object.Destroy(mat);
             overlay = null; perus = null; kortti = null; mat = null; teksti = null;
         }
 
         void Varmista(Camera kamera)
         {
-            if (overlay != null && perus == kamera) return;
+            if (overlay != null && perus == kamera && koosteessa == KaupunkiKooste.Kaytossa) return;
             // JUURISYY (iPad-simu 21.32, NullReferenceException Aja-kohdassa): Sulje → Piilota tuhosi juuri ladatun kuvan ja pysäytti
             // käynnissä olevan ajon ensimmäisellä kerralla; vain kamera puretaan.
             PuraKamera();
@@ -166,9 +167,14 @@ namespace Matkakirja.Linssit
             overlay.cullingMask = 1 << Kerros;
             overlay.fieldOfView = Fov;
             overlay.nearClipPlane = 0.1f; overlay.farClipPlane = 200f;
-            overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
-            var pd = kamera.GetUniversalAdditionalCameraData();
-            if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
+            koosteessa = KaupunkiKooste.Kaytossa;
+            if (koosteessa) KaupunkiKooste.Lisaa(overlay, KaupunkiKooste.Kortti);
+            else
+            {
+                overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
+                var pd = kamera.GetUniversalAdditionalCameraData();
+                if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
+            }
             var sh = Resources.Load<Shader>("Varjostimet/Nostokortti");
             // Kortti piirretään ennen tekstiä (iPad-simu 21.42: molemmat läpinäkyvien jonossa 3000, ja käännetyssä kortissa teksti
             // lajittui etäisyydeltään tason taakse → paperi peitti kuvatekstin).
