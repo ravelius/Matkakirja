@@ -22,18 +22,26 @@ namespace Matkakirja.Natiivi
         static readonly Color Raja = (Color)Tyylikirja.Kehys.RiviTausta;
         static readonly Color Ulkoraja = (Color)Tyylikirja.Kehys.MapInk85;
 
-        /// <summary>Minikartta avaimella "ISO:tunnus" (leveys pikseleinä); null, jos maakuntien aineisto ei ole ladattu.</summary>
-        public static Texture2D Hae(string avain, int leveys = 512)
+        /// <summary>Kylkikartan leveys pikseleinä; viivat on mitoitettu tälle (isompi piirto paksuntaa ne samassa suhteessa).</summary>
+        public const int PerusLeveys = 512;
+
+        /// <summary>Minikartta avaimella "ISO:tunnus" (leveys pikseleinä); null, jos maakuntien aineisto ei ole ladattu.
+        /// Vain perusleveys välimuistiin; isompi (suurennos) on kutsujan vapautettava.</summary>
+        public static Texture2D Hae(string avain, int leveys = PerusLeveys)
         {
             if (string.IsNullOrEmpty(avain)) return null;
-            if (valimuisti.TryGetValue(avain, out var t) && t != null) return t;
+            bool perus = leveys == PerusLeveys;
+            if (perus && valimuisti.TryGetValue(avain, out var t) && t != null) return t;
             var kk = global::Matkakirja.KarttaKerrokset.Instanssi;
             var maa = kk != null && kk.maakunnat != null ? kk.maakunnat.MaanAlueet(avain) : null;
             if (maa == null) return null;
             t = Piirra(maa, avain, leveys);
-            if (t != null) valimuisti[avain] = t;
+            if (t != null && perus) valimuisti[avain] = t;
             return t;
         }
+
+        /// <summary>Avain tekstuurin nimestä ("minikartta-ISO:tunnus"), tai null.</summary>
+        public static string Avain(Texture t) => t != null && t.name.StartsWith("minikartta-", StringComparison.Ordinal) ? t.name.Substring(11) : null;
 
         static Texture2D Piirra(global::Matkakirja.Maakuntajako.MaanAlueet maa, string avain, int leveys)
         {
@@ -78,10 +86,11 @@ namespace Matkakirja.Natiivi
                 if (alue.Id == avain) Tayta(kuva, W, H, sarja, Valittu);
             }
             // Rajat: maakuntien väliset ohuina, ulkoraja vahvempana, valitun reuna korostettuna.
-            Viivat(kuva, W, H, maa.Kaaret, P, 1.1f * ss, Raja);
-            Viivat(kuva, W, H, maa.UlkoKaaret, P, 1.5f * ss, Ulkoraja);
+            float vk = ss * (float)leveys / PerusLeveys; // viivat samassa suhteessa kuvaan kaikilla leveyksillä
+            Viivat(kuva, W, H, maa.Kaaret, P, 1.1f * vk, Raja);
+            Viivat(kuva, W, H, maa.UlkoKaaret, P, 1.5f * vk, Ulkoraja);
             foreach (var alue in maa.Alueet)
-                if (alue.Id == avain) Viivat(kuva, W, H, alue.Renkaat, P, 1.6f * ss, ValittuReuna);
+                if (alue.Id == avain) Viivat(kuva, W, H, alue.Renkaat, P, 1.6f * vk, ValittuReuna);
 
             // 2× → 1× laatikkosuodatin.
             int w1 = W / ss, h1 = H / ss;
