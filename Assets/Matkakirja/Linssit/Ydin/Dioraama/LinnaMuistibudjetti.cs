@@ -78,9 +78,9 @@ namespace Matkakirja.Linssit.Dioraama
         public const int PinnatTaydetMt = 150, PinnatPuolikkaatMt = 70;
         public const int NormaalitMt = 25, VeneMt = 30;
         /// <summary>Ultran 8K-valoatlakset ylimmällä portaalla (LS2 v45o 8.10.: 4 × 8K ASTC 6×6 mipeineen +131 Mt → 135; v45s 9.10.: 8K kaikille
-        /// 10 leivotulle tilalle, yksi ~40 Mt (ämpärissä 39,8) → 400, Siirtoseppä); Siirtoseppä lataa ne vain, kun Laatutaso.Ultra ja budjetti
+        /// 10 leivotulle tilalle; LS2 mittasi 9.10. Ultran pinnat+valoatlakset 432 Mt eli +282 täysien 150:n päälle → 300); Siirtoseppä lataa ne vain, kun Laatutaso.Ultra ja budjetti
         /// valitsi ylimmän portaan. LS2 mittaa.</summary>
-        public const int UltraAtlaksetMt = 400;
+        public const int UltraAtlaksetMt = 300;
 
         /// <summary>Portaat alhaalta ylös (komponentit kasvavat; ks. alkukommentti).</summary>
         public static readonly LinnaLaatu[] Portaat =
