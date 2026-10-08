@@ -232,7 +232,7 @@ test('sana-ajat (LS1 7.10.): aani_ajat vain kun R2:ssa on <sha>.ajat.json; GET p
   assert.equal('aani_ajat' in d2, false);
 });
 
-test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 8.10.)', async () => {
+test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältökirjuri 8.10.; 13 havainnekuvaversiota)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.yksityiskohdat_polut, { pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
     praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
@@ -248,13 +248,13 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
     oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
     bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
-    bergen: 'esittely/bergen-v1/bergen-yksityiskohdat.json', granada: 'esittely/granada-v1/granada-yksityiskohdat.json',
-    tampere: 'esittely/tampere-v2/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v2/vilna-yksityiskohdat.json',
-    ljubljana: 'esittely/ljubljana-v1/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v1/valletta-yksityiskohdat.json',
-    sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
-    luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
-    islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
-    sisilia: 'esittely/sisilia-v3/sisilia-yksityiskohdat.json' });
+    bergen: 'esittely/bergen-v2/bergen-yksityiskohdat.json', granada: 'esittely/granada-v2/granada-yksityiskohdat.json',
+    tampere: 'esittely/tampere-v3/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v3/vilna-yksityiskohdat.json',
+    ljubljana: 'esittely/ljubljana-v2/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v2/valletta-yksityiskohdat.json',
+    sofia: 'esittely/sofia-v2/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v2/bukarest-yksityiskohdat.json',
+    luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
+    islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
+    sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json' });
   // Kaikki 37 esittelykaupunkia (6 äänellistä + 31 äänetöntä) saavat yksityiskohtakuvat.
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.yksityiskohdat_polut).sort(), [...OPAS_AINEISTOT.esittely].sort());
 });
