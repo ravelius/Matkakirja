@@ -4,6 +4,7 @@
   Juurisyy: p lasketaan joka ruudulle eri päivistä (top-32 vähäpilvisintä), joten naapuriruutujen p hyppää. PT:lle on raportoitu.
 - **AJOSSA: näyte 4** (`kaudet/aja-talvip-nayte4.sh`, PGID 41823, 07.25 alkaen, noin 45 min) → `s2-eurooppa-talvip-nayte4/`. Julkaisija antoi vuoron.
   Uusi lippu `TALVI_PKAIKKI=1`: p kaikista talvikuvista (pilvisyys < 80 %, ei top-N:ää), laskurit Uint16, SCL-luku 8 rinnakkain. Edellinen versio on tallessa (`-talvip3-20261008.mjs`).
+  **Juna 164 käännös noin 08.15–08.30: EI uusia ajoja ennen kuin Julkaisija ilmoittaa TF 164:n ladatuksi.**
   Valmistuttua: kuvapari (näyte 3 | 4, `python3 kaudet/vertaa-talvip.py <ulos.jpg> "näyte 3" s2-eurooppa-talvip-nayte3 "näyte 4" s2-eurooppa-talvip-nayte4`), yksi rivi PT:lle ja "valmis" Julkaisijalle. Jos swap > 15 Gt, keskeytä.
 
 ---
