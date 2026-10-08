@@ -1,0 +1,342 @@
+{
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1).",
+ "paivitetty": "2026-10-08",
+ "nimeamiset": [
+  {
+   "lahde": "Freesound",
+   "nimi": "A Harpists Arrangement.wav",
+   "tekija": "Puniho",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://freesound.org/s/165464/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "6_drums_luangprabang.WAV",
+   "tekija": "LukeIRL",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/176134/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Borneo Jungle - Night",
+   "tekija": "RTB45",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/253301/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Kirjoituskone, vanha, mekaaninen / An old manual typewriter, 1970s, typing, bell at the end of the line, typewriter carriage return by hand, manual paper roll (Triumph Matura 300)",
+   "tekija": "YleArkisto",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/271525/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Desert silence at night",
+   "tekija": "Diegolar",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/411774/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Cinematic Kalimba Loopable Am 126 BPM",
+   "tekija": "CarlosCarty",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/466570/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Nature, Cicadas, Night, Forest, Rainforest, Jungle, Malaysia, Penang, Zoom F8n, DPA 4060",
+   "tekija": "FreeToUseSounds",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://freesound.org/s/486437/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Howling Wind",
+   "tekija": "Kostas17",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://freesound.org/s/543449/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Shipandeni_Hippos.wav",
+   "tekija": "noisymichael",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/612318/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "1 Dancing Spirit",
+   "tekija": "MrJmix",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/666866/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Desert Western Soundscape",
+   "tekija": "Metris",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/714271/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Jungle Sounds Howler Monkeys",
+   "tekija": "AlaskanMariner",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/818589/"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Gassen in Caviano, Tessin CH",
+   "tekija": "maboart, ursula bohren magoni + claudio magoni",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_10342_12318"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Amálka in Café Trafika",
+   "tekija": "mkin@cent...",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_10415_12393"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Tallinn, Kopli, park",
+   "tekija": "udo noll",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_10868_12873"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Midday Bells - Earl Street South, Dublin",
+   "tekija": "billy k",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_11063_13080"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Main Square, Kraków",
+   "tekija": "Anna Nacher",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_11573_13626"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "neoscenes: bird along street",
+   "tekija": "John Hopkins",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_1475_2022"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Lossi 3, 50090 Dorpat, Estland - Lossi, Tartu - Male choir singing traditional Estonian songs in the park",
+   "tekija": "Fritz Schlüter",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://archive.org/details/aporee_19813_23018"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Berlin Bürknerstr., backyard window - morning ambience",
+   "tekija": "udo noll",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_2104_67340"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Rahba Kedima, Marrakech, Marokko - Gnawa",
+   "tekija": "udo noll",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://archive.org/details/aporee_21876_25420"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "night streets, Venice - night walk",
+   "tekija": "OR poiesis",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_27844_32090"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Roter Platz - Moskau, Roter Platz",
+   "tekija": "botsch@buero-bot...",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_2952_4003"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Sennoy market, Saint-Petersburg, Russia - Sennoy market",
+   "tekija": "spbsoundmap@gma...",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_30261_34830"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Athens, Dionysiou Areopagitou street - kids chasing hackney cab",
+   "tekija": "maciej janasik",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://archive.org/details/aporee_30592_35195"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "George IV park, Edinburgh, Edinburgh, UK - Blackbird singing to the park",
+   "tekija": "Felicity Ford",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_31550_36244"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Behind Hart Street, Edinburgh, Edinburgh, UK - Watering the gardens behind the house where Catherine Hogarth was born",
+   "tekija": "Felicity Ford",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_31551_36245"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Norrmalm, Stockholm, Suecia - Flower market",
+   "tekija": "Albert Murillo",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://archive.org/details/aporee_33214_38190"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "6534 Thuin, Belgique - Birds in the forest",
+   "tekija": "Vincent Duseigne",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://archive.org/details/aporee_40377_46111"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "1051 København, Denmark - Tourist avenue Nyhavn",
+   "tekija": "Vincent Duseigne",
+   "lisenssi": "CC BY 3.0",
+   "url": "https://archive.org/details/aporee_43901_49961"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "St James Park autumn afternoon: john grzinich - St James Park autumn afternoon",
+   "tekija": "john grzinich",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_5304_6751"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Charles Bridge",
+   "tekija": "milos@skolsk...",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_5354_6805"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Gitschiner Staße/ Lindenstraße, 10969 Berlin, Deutschland - everyday life along gitschner street",
+   "tekija": "sam auinger",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_54966_62839"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "marseille, promenade louis braquier, harbour atmosphere",
+   "tekija": "Frank Schulte",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_5735_7211"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Istanbul Soundscape, Sunday 16:40 Tunel",
+   "tekija": "john grzinich",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_6217_7744"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Åboulevards traffic late at night",
+   "tekija": "Adi W",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_6346_7890"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Reit im Winkl, Landkreis Traunstein, Bayern, 83242, Deutschland - Buzzing alpine pasture",
+   "tekija": "sam auinger",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_68991_80056"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Istanbul, bird market",
+   "tekija": "Adi W",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_8127_9900"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "sassnitz: fischereihafen - the city, the country & me: fishing harbour",
+   "tekija": "henrik schröder",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_8703_10524"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Paris, Rue Montorgueil",
+   "tekija": "Adi W",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_8974_10822"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Lithuania,Vilnius, birds in citys cacophony",
+   "tekija": "alas23/sala",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_9230_11102"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Tram Line 1, Amsterdam",
+   "tekija": "Thijs Geritz",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_9337_11221"
+  },
+  {
+   "lahde": "radio aporee / archive.org",
+   "nimi": "Baltijaam meat market sounds 1, Tallinn",
+   "tekija": "john grzinich",
+   "lisenssi": "CC BY-SA 3.0",
+   "url": "https://archive.org/details/aporee_9779_11715"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "AMBTraf_Calm City traffic.Clean.Distance 100m",
+   "tekija": "newlocknew",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/711130/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Moottorivene, kumivene, ohi / Rubber boat passing",
+   "tekija": "YleArkisto",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/348843/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "ChurchBell from pasture city",
+   "tekija": "klankbeeld",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/269417/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Diesel 080608 (inland barge passing)",
+   "tekija": "LG",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/54940/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "foghorn far MONO 012",
+   "tekija": "klankbeeld",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/627171/"
+  }
+ ]
+}
