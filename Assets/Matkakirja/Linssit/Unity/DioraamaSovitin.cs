@@ -960,6 +960,8 @@ namespace Matkakirja.Natiivi
             {
                 var m = Matkakirja.Linssit.Seikkailu.MTila.Lue(t);
                 es.PalautaM(m); SeikkailuSali.Aktiivinen?.PalautaM(m); SeikkailuKomero.Aktiivinen?.PalautaM(m); SeikkailuPako.Aktiivinen?.PalautaM(m);
+                for (float w = 0; w < 30f && SeikkailuKappeli.Aktiivinen == null; w += Time.unscaledDeltaTime) yield return null;
+                SeikkailuKappeli.Aktiivinen?.Palauta(t);   // ratkaistu kappeli ei toistu jatkossa huoneisiin 6–10
             }
         }
         /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
