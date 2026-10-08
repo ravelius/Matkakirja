@@ -3,6 +3,8 @@
 // taso 1 kujerrus kohteen suunnasta 1,5 m:n päästä, taso 2 kujerrus kohteesta, taso 3 nokkaisu kohteessa. Kohde huoneen ja kappelin
 // vaiheen mukaan; M-osassa (huoneet 6–10, kappelin jälkeen) Ydin MVihjeet edistyksestä (LS2 8.10.), ja sen eteneminen nollaa jumiajastimen.
 // Pulun lento maailmassa (malli) liitetään tähän, kun Linnanrakentajan pulu-glb on paketissa; nyt ääni kertoo suunnan.
+// Ensivihje laiturilla (Ydin LaituriVihje, LS2 8.10., omistajan palaute (6)): kerran taso 2 kohti vesiportin porttia, kun riita alkaa
+// tai 15 s laiturille nousun jälkeen.
 using System;
 using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
@@ -13,6 +15,7 @@ namespace Matkakirja.Natiivi
     {
         public static SeikkailuVihjeet Aktiivinen { get; private set; }
         readonly Vihjeet ydin = new Vihjeet();
+        readonly LaituriVihje laituri = new LaituriVihje();
         Action<string> kirjaa;
         public Vihjeet Ydin => ydin;
 
@@ -25,6 +28,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Tarkistuspiste += v.UusiOsa;
             SeikkailuEsineet.Nostettiin += v.Edistys; SeikkailuEsineet.AsetettiinAlttarille += v.Edistys; SeikkailuEsineet.Raapaistiin += v.Edistys0;
             SeikkailuKynttilat.LuukkuAani += v.EdistysP;
+            SeikkailuVartijat.RiitaAlkoi += v.laituri.RiitaAlkoi;
             v.ydin.UusiHuone(); luukkuNahty = false;
             return v;
         }
@@ -57,6 +61,19 @@ namespace Matkakirja.Natiivi
             bool keskustelu = k != null && k.Nyt == SeikkailuKappeli.Vaihe.Kohtaus;
             if (MOsassa() && MVihjeet.Vaihe(MTila(p)) is int mv && mv > mVaihe) { if (mVaihe >= 0) ydin.Edistys(); mVaihe = mv; }
             if (ydin.Paivita(Time.deltaTime, Vaara(p), keskustelu || p.Eleessa) == 2) Nayta(p, 2, "jumi");
+            Laituri(p);
+        }
+
+        /// <summary>Laiturin ensivihje: pelaaja laiturilla tai vesiportilla huoneissa 1–2 (ei M-osan pakoa rannalla eikä jatkoa myöhemmästä).</summary>
+        void Laituri(SeikkailuPelaaja p)
+        {
+            if (laituri.Valmis) return;
+            var pp = p.transform.position; var d = SeikkailuKavely.Data;
+            if (d == null || !(Merkki(LaituriVihje.Kohde) is Vector3 portti)) return;
+            string osa = Askelaani.Osa(d, pp.x, pp.y, -pp.z);
+            bool laiturilla = (SeikkailuTietokerros.Aktiivinen?.Huone ?? 0) <= 2 && !MOsassa() && (osa == "ulkoalue" || osa == "vesiportti");
+            float porttiin = new Vector2(pp.x - portti.x, pp.z - portti.z).magnitude;
+            if (laituri.Paivita(Time.deltaTime, laiturilla, porttiin, Vaara(p))) Nayta(p, 2, "laituri", portti);
         }
 
         // --- M-osa (huoneet 6–10): edistys pelin tilasta Ydin MVihjeille ---
@@ -111,9 +128,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Vihje heti (anteeksianto: 3. kiinnijäänti samassa huoneessa → taso 2 tarkistuspisteessä).</summary>
         public void Pakota(int taso, string syy) { var p = SeikkailuPelaaja.Aktiivinen; if (p != null) Nayta(p, taso, syy); }
 
-        void Nayta(SeikkailuPelaaja p, int taso, string syy)
+        void Nayta(SeikkailuPelaaja p, int taso, string syy, Vector3? annettu = null)
         {
-            var kohde = Kohde(p);
+            var kohde = annettu ?? Kohde(p);
             if (kohde == null) { kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}): ei kohdetta"); return; }
             var c = p.transform.position + Vector3.up * 1.5f; var q = kohde.Value;
             var suunta = q - c; suunta.y = 0;
@@ -160,6 +177,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Tarkistuspiste -= UusiOsa;
             SeikkailuEsineet.Nostettiin -= Edistys; SeikkailuEsineet.AsetettiinAlttarille -= Edistys; SeikkailuEsineet.Raapaistiin -= Edistys0;
             SeikkailuKynttilat.LuukkuAani -= EdistysP;
+            SeikkailuVartijat.RiitaAlkoi -= laituri.RiitaAlkoi;
         }
     }
 }
