@@ -39,5 +39,39 @@ namespace Matkakirja.Linssit.Kierros
             }
             return (k, valimuisti);
         }
+
+        // ---- LÄHITARKKUUS SAMASTA BUDJETISTA (Linssiseppä 8.10., suunnitelma A3; PT: yksi muistibudjetti) ----
+        // Pysähdyksellä kohdetta kohti suunnattu kapea lisäkamera (kenttäkulma / L) valitsee kohteen ympäriltä laatat kertoimella k / L.
+        // Lisäkamera kattaa ~1/L² kuvasta, joten sen kasvu on Kasvu(k / L) / L² = Kasvu(k) · L^(Eksponentti − 2). Yhteinen valinta: kohteen
+        // ympärillä tavoite TaysiLattia (SSE 8) eli k = L · TaysiLattia, ja L pienin, jolla Kasvu(k) · (1 + L^(e − 2)) mahtuu budjettiin.
+        // L = 1 → ei lisäkameraa (koko kuva jo lattiassa tai budjetti ei riitä). Vain täysi laiteluokka ja tunnettu vapaa muisti;
+        // muuten Valitse sellaisenaan ja L = 1. HUOM: Valitse käyttää jo koko budjetin muun kuvan tarkkuuteen, joten lähikamera mahtuu
+        // vain, jos muu kuva saa karkeutua (karkeneminen = sallittu k / k0). Oletus 1,0 = ei karkene → L = 1 (A3 ei käytössä);
+        // esim. M-iPad 8 Gt tarvitsisi 1,45 (muu SSE 14 → 21, kohde SSE 8). Päätös Päätoimittajalle.
+        public const double LahiMax = 3.0;
+
+        /// <summary>Kasvu (Gt) kertoimella k ja lähikameralla L (1 = ei lähikameraa).</summary>
+        public static double KasvuLahella(double k, double naytto, double lahi) => Kasvu(k, naytto) * (1 + (lahi > 1.0001 ? Math.Pow(lahi, Eksponentti - 2) : 0));
+
+        /// <summary>SSE-kerroin, välimuisti ja lähikameran kerroin L samasta budjetista.</summary>
+        public static double Karkeneminen = 1.0;
+
+        public static (double Kerroin, long Valimuisti, double Lahi) ValitseLahella(double vapaaGt, double naytto, bool taysi, double karkeneminen = -1)
+        {
+            if (karkeneminen <= 0) karkeneminen = Karkeneminen;
+            var (k0, v0) = Valitse(vapaaGt, naytto, taysi);
+            naytto = Math.Max(1.0, naytto);
+            if (!taysi || vapaaGt <= 0 || k0 <= TaysiLattia * 1.05) return (k0, v0, 1.0);
+            double budjetti = vapaaGt - MarginaaliGt;
+            for (double l = 1.1; l <= LahiMax + 1e-9; l += 0.05)
+            {
+                double k = l * TaysiLattia;
+                if (k > naytto) break;
+                if (k < k0 * 0.999) continue;   // muu kuva ei saa tarkentua lähikameran takia (k0 on jo budjetin raja)
+                if (k > k0 * karkeneminen + 1e-9) break;   // eikä karkeutua yli sallitun
+                if (KasvuLahella(k, naytto, l) <= budjetti) return (k, v0, l);
+            }
+            return (k0, v0, 1.0);
+        }
     }
 }

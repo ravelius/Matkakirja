@@ -110,11 +110,13 @@ namespace Matkakirja.Natiivi
 
         // ---- LÄHITARKKUUS (Linssiseppä 8.10.2026, suunnitelma A3): pysähdyksellä tarkentumisen jälkeen kohdetta kohti suunnattu
         // kapea lisäkamera Cesiumin laattavalintaan (kenttäkulma / LahiKerroin, sama pikselikorkeus): kohteen ympäriltä valitaan
-        // laatat kuin SSE olisi 16 / LahiKerroin (8–10), muu näkymä ennallaan. Ei tilesetin uudelleenluontia eikä muistipiikkiä koko
-        // näkymästä. Pois lennon ja siirron ajaksi (Karkeaksi) ja kun muistia on vähän (kerroin 1). Komento `opas lahi 0|1`.
+        // laatat kertoimella SseKerroin / LahiKerroin (tavoite SSE 8), muu näkymä ennallaan. L samasta budjetista kuin SSE-kerroin
+        // (KaupunkiMuistibudjetti.ValitseLahella). Pois lennon ja siirron ajaksi (Karkeaksi). Komento `opas lahi 0|1`.
         public static bool LahiSallittu = true;
-        /// <summary>Kerroin laitteen muistista: ≥ 11 Gt 2,0 (SSE 8), ≥ 7 Gt 1,6 (SSE 10), muuten 1 (ei lähikameraa).</summary>
-        public static float LahiKerroin => !LahiSallittu ? 1f : SystemInfo.systemMemorySize >= 11000 ? 2f : SystemInfo.systemMemorySize >= 7000 ? 1.6f : 1f;
+        /// <summary>Kerroin samasta muistibudjetista kuin SSE (KaupunkiMuistibudjetti.ValitseLahella avauksessa): kohteen ympärillä SSE 8;
+        /// 1 = ei lähikameraa (kevennetty laite, tuntematon muisti, koko kuva jo SSE 8 tai pakotettu kerroin).</summary>
+        public static float LahiKerroin => !LahiSallittu ? 1f : lahiBudjetti;
+        static float lahiBudjetti = 1f;
         Camera lahi; bool lahiKaytossa;
         public bool LahiKaytossa => lahiKaytossa;
 
@@ -145,7 +147,7 @@ namespace Matkakirja.Natiivi
             {
                 if (!hallinta.additionalCameras.Contains(lahi)) hallinta.additionalCameras.Add(lahi);
                 lahiKaytossa = true;
-                kirjaa($"kaupunki: lähitarkkuus päällä (kenttäkulma / {k:F1}, Google-SSE kohteen ympärillä ~{GoogleSse / k:F0})");
+                kirjaa($"kaupunki: lähitarkkuus päällä (kenttäkulma / {k:F2}, Google-SSE kohteen ympärillä ~{GoogleSse * SseKerroin / k:F0}, muu {GoogleSse * SseKerroin:F0})");
             }
         }
 
@@ -457,9 +459,11 @@ namespace Matkakirja.Natiivi
             // Tavoite muistista, alaraja AlarajaKerroin (Päätoimittaja: jos 1,0 ei näytä paremmalta kuin 1,3, 1,3 jää); pakotus ohittaa.
             // Täysi laiteluokka (omistaja 8.10. 19.5x "lisää muistin käyttöä"; juna 170): lattia 0,5 (SSE 8) ja välimuisti ylijäämästä
             // (KaupunkiMuistibudjetti, Ydin; muut laitteet ja tuntematon vapaa täsmälleen ennallaan).
-            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.Valitse(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka);
+            // A3 (Linssiseppä): lähikamera samasta budjetista (KaupunkiMuistibudjetti.ValitseLahella; yksi muistibudjetti, PT 22.4x).
+            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.ValitseLahella(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka);
             kerroin = pakotettu > 0 ? pakotettu : (float)valinta.Kerroin;
             googleValimuisti = valinta.Valimuisti;
+            lahiBudjetti = pakotettu > 0 ? 1f : (float)valinta.Lahi;
 #if UNITY_STANDALONE_OSX
             // Mac: profiilin SSE suoraan (ei näyttö- eikä alarajakerrointa); GoogleSseMin-lattia skaalautuu samalla kertoimella.
             if (Mac && pakotettu <= 0 && Matkakirja.MacLaatu.GoogleSse > 0) kerroin = Matkakirja.MacLaatu.GoogleSse / GoogleSse;
