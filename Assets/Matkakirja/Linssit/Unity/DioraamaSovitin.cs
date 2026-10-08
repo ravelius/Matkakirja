@@ -953,6 +953,14 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(VartijatPaalle());
             o.StartCoroutine(KappeliPaalle());
             o.Kirjaa($"seikkailu: jatko tarkistuspisteestä {t.TarkistusOsa} ({alku}), kulunut {t.KulunutS:F0} s");
+            // M-osa: tila (puettu, avaimet, ovet, kulho, köysi, tiilet, kilvet, arkku, kello) takaisin, kun esineet ja huoneiden 6–10 osat
+            // on luotu (enintään 60 s).
+            for (float w = 0; w < 60f && !(SeikkailuEsineet.Aktiivinen is SeikkailuEsineet es0 && es0.Valmis); w += Time.unscaledDeltaTime) yield return null;
+            if (SeikkailuEsineet.Aktiivinen is SeikkailuEsineet es && es.Valmis)
+            {
+                var m = Matkakirja.Linssit.Seikkailu.MTila.Lue(t);
+                es.PalautaM(m); SeikkailuSali.Aktiivinen?.PalautaM(m); SeikkailuKomero.Aktiivinen?.PalautaM(m); SeikkailuPako.Aktiivinen?.PalautaM(m);
+            }
         }
         /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
         public static bool KameraVapaa;
