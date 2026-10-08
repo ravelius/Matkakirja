@@ -245,7 +245,14 @@
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
    "pinta": "kivi",
-   "markyys": 0.8
+   "markyys": 0.8,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/ranta-1499.jpg",
+    "puoli": "blender/kavely/valot/ranta-1499-512.jpg",
+    "astc": "blender/kavely/valot/ranta-1499-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/ranta-1499-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "porttikaytava-T102": {
    "kolmiot": {
