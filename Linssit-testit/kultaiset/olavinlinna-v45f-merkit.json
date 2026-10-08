@@ -1300,6 +1300,7 @@
    8.100000000000001
   ],
   "kierto_y": -1.1944,
+  "markyys": 0.75,
   "osa": "muurikaytava"
  },
  {
@@ -2259,10 +2260,11 @@
  {
   "nimi": "vene:alku",
   "paikka": [
-   -131.85,
+   -93.05,
    -7.0,
-   110.1
+   64.32
   ],
+  "huom": "8.10. Siirtoseppä: souto noin 22 s (oli 50 s): alku 20 m ennen vene:muuria samalla suoralla (vanha −131,85; 110,1)",
   "osa": "ulkoalue"
  },
  {
@@ -2339,6 +2341,7 @@
    -5.9,
    20.325
   ],
+  "markyys": 0.9,
   "koko": [
    4.1,
    1.2,
@@ -2355,6 +2358,7 @@
    -5.6,
    26.165
   ],
+  "markyys": 0.7,
   "koko": [
    8.0,
    1.2,
@@ -2371,6 +2375,7 @@
    -5.75,
    22.328
   ],
+  "markyys": 0.9,
   "koko": [
    2.4,
    1.2,

@@ -28,6 +28,7 @@ namespace Matkakirja.Natiivi
         readonly GlbAnimaatio soutu;
         readonly float[] t, r, s;
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
+        Material maskiMat;
         public CinemachineCamera Kamera { get; private set; }
         public Transform IstuinSoutaja { get; private set; }
         public double Alku { get; private set; }
@@ -51,7 +52,20 @@ namespace Matkakirja.Natiivi
                 go.transform.localRotation = new Quaternion(g.Rotation[0], g.Rotation[1], g.Rotation[2], g.Rotation[3]);
                 go.transform.localScale = new Vector3(g.Scale[0], g.Scale[1], g.Scale[2]);
                 solmut[i] = go.transform;
-                if (g.Osat.Count > 0 && mat != null)
+                bool maski = g.Nimi == "vesimaski" || (g.Extras != null && g.Extras.TryGetValue("vesimaski", out var vm) && vm is bool vb && vb);
+                if (maski && g.Osat.Count > 0)
+                {
+                    // Vesimaski (LR v45e, omistajan palaute 4): vain syvyys ennen vettä, ettei vesi näy pohjan läpi; ei varjoja.
+                    if (maskiMat == null) { var mv = Shader.Find("Matkakirja/Linssit/DioraamaVesimaski"); if (mv != null) { maskiMat = new Material(mv) { name = "Vesimaski" }; luodut.Add(maskiMat); } }
+                    if (maskiMat != null)
+                    {
+                        var m = Mesh(g); luodut.Add(m);
+                        go.AddComponent<MeshFilter>().sharedMesh = m;
+                        var mr = go.AddComponent<MeshRenderer>(); mr.sharedMaterial = maskiMat;
+                        mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off; mr.receiveShadows = false;
+                    }
+                }
+                else if (g.Osat.Count > 0 && mat != null)
                 {
                     var m = Mesh(g); luodut.Add(m);
                     go.AddComponent<MeshFilter>().sharedMesh = m;
