@@ -162,7 +162,10 @@ namespace Matkakirja.Natiivi
                 if (m <= 0) continue;
                 foreach (var r in rr)
                     foreach (var mat in r.sharedMaterials)
-                        if (mat != null && mat.HasProperty(IdMarkyys) && mat.GetFloat(IdMarkyys) != (float)m) { mat.SetFloat(IdMarkyys, (float)m); n++; }
+                        // Vain tilakohtaiset materiaalit (leivottu tila tai kävelyosan valo-klooni "…@kavely:<osa>"): pintojen jaetut
+                        // materiaalit (DioraamaValaistu, esim. "kivi") kastuisivat muuten myös sisätiloissa.
+                        if (mat != null && mat.HasProperty(IdMarkyys) && (mat.name.StartsWith("Dioraama/Leivottu:", StringComparison.Ordinal) || mat.name.Contains("@"))
+                            && mat.GetFloat(IdMarkyys) != (float)m) { mat.SetFloat(IdMarkyys, (float)m); n++; }
             }
             if (n > 0) Debug.Log($"MATKAKIRJA seikkailu: märät pinnat {n} materiaalia");
         }
