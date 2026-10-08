@@ -7,7 +7,7 @@
 // vapaaMt = −1 (editori, simulaattori, Mac ilman tietoa) → laiteluokan taso täsmälleen ennallaan.
 //
 // PORTAAT (komponentit kasvavat portaittain; tarve = linnan oma lisäys avauksen hetken vapaaseen muistiin):
-//   0 turva   kevyt kuori,    puolikkaat pinnat, puhelinkevennykset, ei detaljinormaaleja   ~530 Mt (LS2 8.10.: mitattu 297)
+//   0 turva   kevyt kuori,    puolikkaat pinnat, puhelinkevennykset, ei detaljinormaaleja   ~540 Mt (LS2 8.10.: mitattu 297)
 //   1         normaali kuori, puolikkaat pinnat, puhelinkevennykset                          ~630 Mt (mitattu 390)
 //   2         normaali kuori, täydet pinnat,     puhelinkevennykset                          ~700 Mt (mitattu 444)
 //   3         huippukuori,    täydet pinnat,     puhelinkevennykset, detaljinormaalit        ~860 Mt (mitattu 510; iPhone 16/17 ennen)
@@ -75,7 +75,7 @@ namespace Matkakirja.Linssit.Dioraama
         public const int PerusMt = 400;
         public const int KuoriKevytMt = 65, KuoriNormaaliMt = 145, KuoriHuippuMt = 350, HuipunYlinMipMt = 67;
         public const int OrtoKevytMt = 6, OrtoNormaaliMt = 22, OrtoHuippuMt = 89;
-        public const int PinnatTaydetMt = 130, PinnatPuolikkaatMt = 60;
+        public const int PinnatTaydetMt = 150, PinnatPuolikkaatMt = 70;
         public const int NormaalitMt = 25, VeneMt = 30;
 
         /// <summary>Portaat alhaalta ylös (komponentit kasvavat; ks. alkukommentti).</summary>
