@@ -407,9 +407,9 @@ namespace Matkakirja.Natiivi
             var kamera = FindKamera();
             if (kamera == null) yield break;
             DioraamaSovitin.KameraVapaa = true;
-            SeikkailuKavely.AsetaVain1499(false);   // K2: drone nykyiseen linnaan, vuoden 1499 leikkaukset pois (bastionit näkyvät)
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuNousu");
             var m = t?.GetMethod("Aloita", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            StartCoroutine(K2Kasvu(m != null ? (float)(NousuReitti.NousuS + NousuReitti.LeijuntaS) : 1f));
             Action valmis = () => { kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)"); SeikkailuTietokerros.Aktiivinen?.Loppu(); SeikkailuTallentaja.Aktiivinen?.Valmis(); };
             if (m != null) { try { m.Invoke(null, new object[] { kamera, kamera.position, valmis }); yield break; } catch (Exception e) { kirjaa?.Invoke("seikkailu: SeikkailuNousu: " + (e.InnerException?.Message ?? e.Message)); } }
             // Varanousu (kunnes LS2:n SeikkailuNousu on mukana): holvin läpi 80 m linnan ylle katse alas keskukseen, 9 s.
@@ -422,6 +422,24 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             valmis();
+        }
+
+        /// <summary>K2-lyhennys (PT 9.10., juna 171): drone-kaaren aikana vuoden 1499 linna kasvaa nykylinnaksi 8 s:ssa
+        /// (Historiajana.K2Lyhyt: 1790-luvun varustukset, sitten ponttonisilta) ilman kertojaa ja tekstiä; nousu ja leijunta
+        /// vielä vuoden 1499 näkymässä.</summary>
+        IEnumerator K2Kasvu(float viive)
+        {
+            yield return new WaitForSecondsRealtime(viive);
+            var k2 = Historiajana.K2Lyhyt;
+            kirjaa?.Invoke($"seikkailu: K2 historia {k2.Kesto:F0} s (1499 → nykylinna)");
+            for (float alku = Time.unscaledTime, t = 0; t < k2.Kesto; t = Time.unscaledTime - alku)
+            {
+                double vuosi = k2.Vuosi(t);
+                SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, Historiajana.Osa(n)));
+                yield return null;
+            }
+            SeikkailuKavely.AsetaKasvu(null);
+            SeikkailuKavely.AsetaVain1499(false);   // nykylinna: vuoden 1499 leikkaukset pois (bastionit näkyvät)
         }
 
         Transform FindKamera()

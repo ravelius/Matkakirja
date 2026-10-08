@@ -484,7 +484,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelattava pala käynnissä (vene, kävely, yö): linnan esittelyn kertoja ei soi eikä katkaise pelin repliikkejä
         /// (LS2:n botti BUILD 169: kierros alkoi veneessä, "puhevuoro linnalle (muut puheet katkaistu)" kesken pelin; samasta
         /// kierroksesta PT:n BUILD 169 -still "Erik Akselinpoika Tott").</summary>
-        static bool Pelissa => SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null || SeikkailuYo.Aktiivinen != null;
+        static bool Pelissa => SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null || SeikkailuYo.Aktiivinen != null
+            || SeikkailuHistoria.Kaynnissa;   // linnan historia ilman kertojaa (juna 171; kertoja omistajan luvalla)
 
         /// <summary>Kertojan jakso vaihtuu (−1 = ei jaksoa): edellinen puhe katkeaa ja uusi alkaa (tai jää odottamaan latausta).
         /// Kutsujat: Paivita (Ytimen jaksovertailu, timeline pois) ja DioraamaTimelinen KertojaKlippi (TimelineJakso).

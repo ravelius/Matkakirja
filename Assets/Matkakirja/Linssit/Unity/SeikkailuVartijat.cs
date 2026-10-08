@@ -26,6 +26,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Heitetty esine tms. (Unity x, z): kuuluu vartijoille seuraavalla ruudulla.</summary>
         public static void Aani(Vector3 paikka, double kuuluvuusM) => jono.Add(new Aanilahde(paikka.x, paikka.z, kuuluvuusM, Askelaani.Osa(SeikkailuKavely.Data, paikka.x, paikka.y, -paikka.z), paikka.y));
 
+        /// <summary>Varusteiden kilinän kuuluvuus (m): vain lähin kävelevä vartija.</summary>
+        const float VarusteetM = 14f;
+
         sealed class V
         {
             public Vartija Aivot; public NavMeshAgent Agentti; public string Osa, Nimi, Henkilo, Leike; public bool NakiViimeksi;
@@ -281,6 +284,7 @@ namespace Matkakirja.Natiivi
             if (!piilossa) piiloPaljastui = false;
             if (piiloPaljastui) piilossa = false;
             double sydan = 0;
+            Vector3? varusteet = null; float varusteM = VarusteetM * VarusteetM;
             if (piilossa != oliPiilossa)
             {
                 kirjaa?.Invoke($"seikkailu: pelaaja {(piilossa ? "piilossa" : "esillä")}");
@@ -359,6 +363,11 @@ namespace Matkakirja.Natiivi
                 }
                 float v2 = new Vector2(ag.velocity.x, ag.velocity.z).magnitude;
                 v.Kavelee = v2 > 0.15f;
+                if (v.Kavelee && p != null && v.Aivot.Profiili == VartijaProfiili.Vartija)
+                {
+                    float dv = (vp - p.transform.position).sqrMagnitude;
+                    if (dv < varusteM) { varusteM = dv; varusteet = vp + Vector3.up; }
+                }
                 // Askeleet vartijan jaloista kuulokehyksessä (kuuluvat vasemmalta/oikealta kameran suunnasta), tahti nopeuden mukaan.
                 var aa = v.Askeleet;
                 if (aa != null)
@@ -374,6 +383,8 @@ namespace Matkakirja.Natiivi
                 if (leike != v.Leike) { v.Leike = leike; v.KavelyAika = 0; }
                 v.KavelyAika += v.Kavelee ? dt * (v2 / Math.Max(0.1, sykliMs)) * 1.0 : dt;
             }
+            // Vartijan varusteiden kilinä (aanet-lapi-v1, Pelikoodari 9.10.): lähin kävelevä vartija VarusteetM:n sisällä, silmukkana.
+            SeikkailuAanet.Silmukka("varusteet", varusteet.HasValue, varusteet ?? Vector3.zero, 0.8f);
             // Sydän (kohta 3.4): vahvin vaara kaikista hahmoista; tempo 70 → 120 sävelkorkeutena, voimakkuus mukana. Kappelin sääntö ohjaa
             // samaa silmukkaa kappelissa, joten tämä koskee vain silloin, kun jokin vartija on vaarassa tai juuri lakkasi.
             if (p != null && (sydan > 0 || sydanPaalla))

@@ -92,7 +92,20 @@ namespace Matkakirja.Natiivi
         /// <summary>Vuoden 1499 näkymä (leikkaus:vain-1499*): päällä kävelyssä, pois K2-dronessa nykyiseen linnaan (LR v44x).</summary>
         public static bool Vain1499 { get; private set; } = true;
         public static void AsetaVain1499(bool paalla) { if (Vain1499 == paalla) return; Vain1499 = paalla; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
-        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; if (paalla) Vain1499 = true; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+        /// <summary>Historia-animaatio (Historiajana, juna 171): vuoden 1499 jälkeiset osat kasvavat korkeuden mukaan — leikkauksen
+        /// nimi → kasvu 0–1 (0 = piilossa kuten Vain1499, 1 = näkyvissä). null = ei kasvua (Vain1499 ratkaisee). Päivitys joka ruutu
+        /// kutsujalta (AsetaKasvu).</summary>
+        static Func<string, double> kasvu;
+        public static void AsetaKasvu(Func<string, double> k) { kasvu = k; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+        public static bool LeikkauksetPaalla => leikkauksetPaalla && Data != null;
+        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; if (paalla) { Vain1499 = true; kasvu = null; } PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+
+        /// <summary>Kasvun leikkauslaatikko: alareuna nousee (osa kasvaa maasta ylös), yläreuna pysyy.</summary>
+        static KavelyLeikkaus Kasvanut(KavelyLeikkaus l, double g)
+        {
+            var (y, puoli) = Matkakirja.Linssit.Dioraama.Historiajana.KasvuLaatikko(l.Y, l.KokoY / 2, g);
+            return new KavelyLeikkaus(l.Nimi, l.X, y, l.Z, l.KokoX, puoli * 2, l.KokoZ, l.KiertoY);
+        }
 
         /// <summary>Kutsutaan pelaajan liikkuessa (SeikkailuPelaaja, 0,5 s välein): valinta päivittyy, kun osa vaihtuu.</summary>
         public static void PaivitaLeikkaukset(Vector3? pelaaja, bool pakota = false)
@@ -112,10 +125,11 @@ namespace Matkakirja.Natiivi
                     foreach (var l in o.Leikkaukset)
                     {
                         bool ainaL = l.Nimi != null && aina.Contains(l.Nimi);
-                        if (ainaL && !Vain1499) continue;   // drone nykyiseen linnaan: bastionit näkyvät
+                        double g = ainaL && kasvu != null ? kasvu(l.Nimi) : 0;
+                        if (ainaL && (kasvu != null ? g >= 0.999 : !Vain1499)) continue;   // drone nykyiseen linnaan: bastionit näkyvät
                         double arvo = ainaL ? -1e6 : o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
                         if (pelaaja is Vector3 q) { double dx = l.X - q.x, dy = l.Y - q.y, dz = l.Z + q.z; arvo += Math.Sqrt(dx * dx + dy * dy + dz * dz); }
-                        kaikki.Add((l, arvo));
+                        kaikki.Add((g > 0 ? Kasvanut(l, g) : l, arvo));
                     }
                 kaikki.Sort((a, b) => a.Arvo.CompareTo(b.Arvo));
                 foreach (var (l, _) in kaikki)

@@ -220,6 +220,7 @@ namespace Matkakirja.Natiivi
         {
             // Pukeutuminen 2 s paikallaan (pää alas -jaksossa, pelattavuusmalli 8.2 huone 6 vaihe 3): esine pois naulakosta.
             pukeutuu = true; p.KasiEle("poiminta");
+            SeikkailuAanet.Soita("viitta", p.transform.position + Vector3.up * 1.2f, 0.7f);   // kankaan kahina (aanet-lapi-v1)
             kirjaa?.Invoke($"seikkailu: pukeutuu ({e.Id})");
             yield return new WaitForSeconds(PukeutuminenS);
             pukeutuu = false;
@@ -468,8 +469,12 @@ namespace Matkakirja.Natiivi
             var akseli = Vector3.Cross(Vector3.up, suunta.sqrMagnitude > 1e-4f ? suunta.normalized : p.Hahmo.forward);
             StartCoroutine(Kaatuu(e, akseli));
             SeikkailuVartijat.Aani(e.Go.transform.position, e.AaniM);
-            SeikkailuAanet.Soita("kivi-kolahdus", e.Go.transform.position, 1f, 0.8f);
-            if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f);
+            if (SeikkailuAanet.Klippi("patapino") != null) SeikkailuAanet.Soita("patapino", e.Go.transform.position);   // aanet-lapi-v1 (Pelikoodari 9.10.)
+            else
+            {
+                SeikkailuAanet.Soita("kivi-kolahdus", e.Go.transform.position, 1f, 0.8f);
+                if (KolahdusKlippi != null) AudioSource.PlayClipAtPoint(KolahdusKlippi, e.Go.transform.position, 0.9f);
+            }
             Kolahti?.Invoke(e.Go.transform.position);
             kirjaa?.Invoke($"seikkailu: kaadettu {e.Id} (kuuluu {e.AaniM:F0} m)");
         }
@@ -1007,6 +1012,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Aani(kohta, KuuluuM);
             Kolahti?.Invoke(kohta);
             if (e.Laji == Laji.Irrotettava || e.Id.StartsWith("kivi", StringComparison.Ordinal)) SeikkailuAanet.Soita("kivi-kolahdus", kohta);
+            else if (e.Id.StartsWith("savipurkki", StringComparison.Ordinal) && SeikkailuAanet.Klippi("savipurkki") != null) SeikkailuAanet.Soita("savipurkki", kohta);   // rikkoutuu (aanet-lapi-v1)
             else if (KolahdusKlippi != null)
             {
                 var a = SeikkailuKuulija.Lahde("Kolahdus:" + e.Id, 2f, 30f);
