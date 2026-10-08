@@ -456,6 +456,7 @@ namespace Matkakirja.Natiivi
                 h.style.display = DisplayStyle.None;
                 h.RegisterCallback<PointerDownEvent>(ev => { if (ev.target == h) Rakenne.Nayta(h, false, 250); });
                 var kortti = new Kortti("mk-tietoja", pohja: true);
+                kortti.AddToClassList("mk-kortti-kehys--tumma");   // KORTTI-pohjan tumma variantti vain videopelissä (omistaja 8.10. 21.2x "A")
                 h.Add(kortti);
                 var vieritys = new ScrollView(ScrollViewMode.Vertical);
                 vieritys.AddToClassList("mk-tietoja__vieritys");

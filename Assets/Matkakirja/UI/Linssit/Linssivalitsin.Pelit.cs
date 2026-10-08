@@ -47,11 +47,12 @@ namespace Matkakirja.Natiivi
         /// kuin lautapelit; Jatka/Alusta tallennuksesta (SeikkailuTapit.AvaaPelattavaPala). Linnakierros jää linsseihin. Valmiina
         /// peli siirtyy omistajan päätöksellä VIDEOPELIT-osioon kaikille (Raamattu KAKSI PELILAJIA).
         /// </summary>
-        /// Kuva ja ikoni (omistaja 8.10.2026 klo 19.1x): Codexin 1499-havainnekuva veneineen (pelin alku) ja linnan siluetti.
+        /// Kuva ja ikoni (omistaja 8.10.2026 klo 19.1x): linnan siluetti ja Codexin 1499-havainnekuva; 21.5x yökuva (yö, sade, usva,
+        /// tyhjä vene lyhtyineen, hehkuva portti; Päätoimittaja: erinomainen) uudella polulla 20261008/peli-yo.jpg (1600 × 900).
         static readonly (string Id, string Nimi, string Selite, string Ikoni, string KuvaUrl, System.Action Avaa)[] Keskeneraiset =
         {
             ("olavinlinna", "Olavinlinna", "1499 · koko seikkailu, noin 25 min", "linna",
-                "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008b/peli.jpg", SeikkailuTapit.AvaaPelattavaPala),
+                "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/peli-yo.jpg", SeikkailuTapit.AvaaPelattavaPala),
         };
 
         /// <summary>Pelit-kategoriassa on jotain (Karttaselitteen Linssit-nappi näkyy myös ilman linssejä).</summary>
