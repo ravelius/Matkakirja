@@ -14,6 +14,7 @@
 // 0,30°/pt vaaka, 0,22°/pt pysty, ei liukumaa, "kuin kuvaa selaisi" (sormi oikealle → katse vasemmalle); Siirtoseppä lukee
 // OtaKatse() joka ruutu. Oikea TAPPI on testikytkin (oletus piilossa). Lyhyt napautus maailmaan (ei UI, ei vetoa) kutsuu
 // SeikkailuPelaaja.Napautus(px) (napautuskävely tai toiminto alle 1,2 m:n esineeseen). Mac: hiiri on Siirtosepän.
+// Pulun vihje myös näppäimellä: Mac P, peliohjain Y (LuePuluNappain → PuluKaappaa).
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -240,6 +241,7 @@ namespace Matkakirja.Natiivi
         {
             PaivitaToiminto();
             LueKosketukset();
+            LuePuluNappain();
             bool oikeaNyt = nakyy && OikeaTappi;
             if (oikeaNyt != oikeaNakyy) { oikeaNakyy = oikeaNyt; oikea.Nayta(oikeaNyt); }
             bool nayta = TestiNakyy ?? PelaajaAktiivinen();
@@ -324,6 +326,22 @@ namespace Matkakirja.Natiivi
             bool kaytetty = puluVihje?.Invoke(null, null) is bool b && b;
             Debug.Log("MATKAKIRJA seikkailutapit: Pulun napautus → " + (kaytetty ? "vihje" : "ei vihjettä"));
             return kaytetty;
+        }
+
+        /// <summary>
+        /// Pulun vihje näppäimellä (pelattavuusmalli kohta 6): Mac P, peliohjain Y (pohjoinen nappi) tekee seikkailun aikana saman
+        /// kuin reunakuvan napautus (PuluKaappaa: tietokerros tai vihje). Ei tekstikentän ollessa kohdistettuna.
+        /// </summary>
+        void LuePuluNappain()
+        {
+            if (!nakyy) return;
+            var kb = UnityEngine.InputSystem.Keyboard.current; var gp = UnityEngine.InputSystem.Gamepad.current;
+            bool p = kb != null && kb.pKey.wasPressedThisFrame;
+            bool y = gp != null && gp.buttonNorth.wasPressedThisFrame;
+            if (!p && !y) return;
+            if (p && vasen.Juuri.panel?.focusController?.focusedElement is TextField) return;
+            Debug.Log("MATKAKIRJA seikkailutapit: Pulun vihje " + (p ? "P" : "Y"));
+            PuluKaappaa();
         }
 
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
