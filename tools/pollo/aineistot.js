@@ -87,14 +87,14 @@ export const OPAS_AINEISTOT = Object.freeze({
     oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
     // erät 7–8 (8.10.)
     bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
-    bergen: 'esittely/bergen-v1/bergen-yksityiskohdat.json', granada: 'esittely/granada-v1/granada-yksityiskohdat.json',
+    bergen: 'esittely/bergen-v2/bergen-yksityiskohdat.json', granada: 'esittely/granada-v2/granada-yksityiskohdat.json',
     // erät 9–10 (8.10.)
-    tampere: 'esittely/tampere-v2/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v2/vilna-yksityiskohdat.json',
-    ljubljana: 'esittely/ljubljana-v1/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v1/valletta-yksityiskohdat.json',
+    tampere: 'esittely/tampere-v3/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v3/vilna-yksityiskohdat.json',
+    ljubljana: 'esittely/ljubljana-v2/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v2/valletta-yksityiskohdat.json',
     // erät 11–13 (8.10.): kaikki 31 äänetöntä valmiina
-    sofia: 'esittely/sofia-v1/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v1/bukarest-yksityiskohdat.json',
-    luxemburg: 'esittely/luxemburg-v1/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v1/kosice-yksityiskohdat.json',
-    islanti: 'esittely/islanti-v1/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v1/kreeta-yksityiskohdat.json',
-    sisilia: 'esittely/sisilia-v3/sisilia-yksityiskohdat.json',
+    sofia: 'esittely/sofia-v2/sofia-yksityiskohdat.json', bukarest: 'esittely/bukarest-v2/bukarest-yksityiskohdat.json',
+    luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
+    islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
+    sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json',
   },
 });
