@@ -26,14 +26,18 @@ namespace Matkakirja.Natiivi
         }
         static bool kaupunkiKirjattu;
         /// <summary>Valotus (radianssi × valotus ennen sävytystä; Karttaseppä: 10–30), ilmaperspektiivin voima, pilvien varjon voima.</summary>
-        public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = 2000f;
+        public static float Valotus = 12f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PohjaM;
+        /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a, PT 23.28): asetus "pilvet 0|1", oletus pois kuvapariin asti.
+        /// Pohja = PilviKorkeusM (sama kuin pilvien varjoilla), paksuus PilviPaksuusM.</summary>
+        public static bool Pilvet;
+        public static float PilviPaksuusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PaksuusM;
         static float voima;
         static Texture2D lapaisy, pilvet; static Texture3D taivas, ap, apLapaisy;
         static bool ladattu, puuttuu;
         static readonly int IdLapaisy = Shader.PropertyToID("_IlmLapaisy"), IdTaivas = Shader.PropertyToID("_IlmTaivas"), IdAp = Shader.PropertyToID("_IlmAp"),
             IdApLapaisy = Shader.PropertyToID("_IlmApLapaisy"), IdPilvet = Shader.PropertyToID("_IlmPilvet"), IdAurinko = Shader.PropertyToID("_IlmAurinko"),
             IdParam = Shader.PropertyToID("_IlmParam"), IdPilviParam = Shader.PropertyToID("_IlmPilviParam"), IdTuuli = Shader.PropertyToID("_IlmTuuli"),
-            IdMaailma = Shader.PropertyToID("_IlmMaailma");
+            IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros");
 
         static Texture3D Lue3D(string nimi, int w, int h, int d)
         {
@@ -88,6 +92,7 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdPilviParam, new Vector4(Mathf.Clamp01(pilvisyys), VarjoVoima * voima, PilviJaksoM, PilviKorkeusM));
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
             Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), 0f, 0f, 0f));
+            Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));
         }
 
         /// <summary>Kupolin materiaali (IlmakehaTaivas), null jos pois tai LUTit puuttuvat (silloin vanha DioraamaTaivas).</summary>
@@ -110,6 +115,6 @@ namespace Matkakirja.Natiivi
         }
         static Material laattaMat;
 
-        public static string Kuvaus() => $"ilmakehä {(Paalla ? "päällä" : "pois")} (voima {voima:F2}, valotus {Valotus:F0}, LUTit {(ladattu ? "ladattu" : puuttuu ? "PUUTTUU" : "ei vielä")})";
+        public static string Kuvaus() => $"ilmakehä {(Paalla ? "päällä" : "pois")} (voima {voima:F2}, valotus {Valotus:F0}, pilvikerros {(Pilvet ? "päällä" : "pois")}, LUTit {(ladattu ? "ladattu" : puuttuu ? "PUUTTUU" : "ei vielä")})";
     }
 }
