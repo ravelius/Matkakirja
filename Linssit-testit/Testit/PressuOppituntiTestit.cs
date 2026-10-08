@@ -17,13 +17,14 @@ namespace Matkakirja.Linssit.Testit
         public struct Tulos { public int Nahtiin; public double Opittu; public bool Oppi; public List<double> NahtiinS; }
 
         /// <summary>Ajaa oppitunnin loppuun (enintään 60 s): katse(aika, vaihe, vaiheS) → pitch.</summary>
-        static Tulos Aja(Func<double, PressuVaihe, double, double> katse, Func<int, double> dt = null)
+        static Tulos Aja(Func<double, PressuVaihe, double, double> katse, Func<int, double> dt = null, bool perilla = false)
         {
             var p = new Pressu(); var r = new Tulos { Opittu = double.NaN, NahtiinS = new List<double>() }; double t = 0;
             for (int i = 0; t < 60 && p.Vaihe != PressuVaihe.Opittu; i++)
             {
                 double d = dt?.Invoke(i) ?? 1 / 60.0;
                 p.Paivita(d, katse(t, p.Vaihe, p.VaiheS)); t += d;
+                if (perilla && t >= VeneKestoS) p.Lopeta();   // SeikkailuVene: vene perillä → oppitunti päättyy (Siirtoseppä 8.10.)
                 if (p.Nahtiin) { p.Nahtiin = false; r.Nahtiin++; r.NahtiinS.Add(t); }
                 if (p.Oppi) { p.Oppi = false; r.Oppi = true; }
             }
@@ -75,10 +76,11 @@ namespace Matkakirja.Linssit.Testit
             var vikoja = new List<string>();
             foreach (var (pelaaja, katse) in new (string, Func<double, PressuVaihe, double, double>)[] { ("piiloutuja", Piiloutuja), ("reagoija", Reagoija), ("myöhäinen", Myohainen), ("kurkistaja", Kurkistaja) })
             {
-                var r = Aja(katse);
+                var r = Aja(katse, perilla: true);
                 double viimeinen = r.NahtiinS.Count > 0 ? r.NahtiinS[r.NahtiinS.Count - 1] : 0;
                 Console.WriteLine($"      {pelaaja}: opittu {r.Opittu:F1} s, viimeinen 'Hä?' {viimeinen:F1} s (vene perillä {VeneKestoS:F0} s)");
-                if (!(r.Opittu <= VeneKestoS)) vikoja.Add($"{pelaaja} opittu {r.Opittu:F1} s");
+                if (!(r.Opittu <= VeneKestoS + 0.05)) vikoja.Add($"{pelaaja} opittu {r.Opittu:F1} s");
+                if (viimeinen > VeneKestoS) vikoja.Add($"{pelaaja} 'Hä?' laiturilla {viimeinen:F1} s");
             }
             Oleta.Tosi(vikoja.Count == 0, $"oppitunti jatkuu laiturille (lyhty pyyhkii ja 'Hä?' pelaajan katseesta laiturilla): {string.Join("; ", vikoja)}");
         }

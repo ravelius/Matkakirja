@@ -153,7 +153,7 @@ namespace Matkakirja.Natiivi
             var (r, g, b) = ValoVihje.Vari(savy); var vari = new Color((float)r, (float)g, (float)b);
             if (kimallus == null) kimallus = SeikkailuValot.Hehku(transform, Vector3.zero, vari, 0f, KimallusKantama, true, DioraamaNayttamo.Kerros);
             if (kimallus != null) { kimallus.transform.position = q + Vector3.up * KimallusNosto; kimallus.color = vari; kimallus.intensity = 0f; }
-            SeikkailuAanet.Soita("hopea-kilahdus", q + Vector3.up * KimallusNosto, taso == 1 ? 0.25f : 0.35f);   // pieni ääni kohteesta
+            SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", q + Vector3.up * KimallusNosto, taso == 1 ? 0.25f : 0.35f);   // oma hento ääni (Pelikoodari), vara löytöääni
             kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}) → {q} ({savy})");
         }
 
