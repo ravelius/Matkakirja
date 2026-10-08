@@ -56,6 +56,42 @@ namespace Matkakirja.Natiivi
             MittaaJalat(e);
         }
 
+        /// <summary>Seikkailun jalat: Grounder vain tätä lähempänä kameraa (iPadin suoritin; kaukana jalat eivät erotu).</summary>
+        public const float JalatMaxM = 22f;
+
+        /// <summary>
+        /// SEIKKAILUN KÄVELIJÖIDEN JALAT (omistaja 8.10. klo 19.1x: jalat maassa portailla ja kivillä; LisaaIrrallinen(jalat: true)):
+        /// sama FBBIK + Grounder kuin huonehahmoilla, säteet kävelyn törmäysmalleihin (SeikkailuKavely kopioi ne IkKerrokseen;
+        /// portaat askelmina). Istuessa (torkku, syo, nousu_istumasta, *istu*) tai lantion ollessa alle 0,65 m maasta Grounder
+        /// häivytetään pois. Kaukana kamerasta (> JalatMaxM) ratkaisija ohitetaan: asento on silloin pelkkä animaatio.
+        /// </summary>
+        void IkJalat(Esiintyma e, string leike)
+        {
+            if (!IkPaalla || e.Juuri == null) return;
+            var kam = Camera.main;
+            if (kam != null && (kam.transform.position - e.Juuri.transform.position).sqrMagnitude > JalatMaxM * JalatMaxM) return;
+            if (e.Ik == null)
+            {
+                if (e.IkYritetty) return;
+                e.IkYritetty = true;
+                e.Ik = LuoIk(e);
+                if (e.Ik == null) return;
+                var g0 = e.Ik.GetComponent<GrounderFBBIK>();
+                if (g0 != null) { g0.solver.maxStep = 0.3f; g0.weight = 0f; }   // askelma 0,17–0,205 m (LR); paino nousee pehmeästi
+            }
+            var g = e.Ik.GetComponent<GrounderFBBIK>();
+            if (g != null)
+            {
+                string l = leike ?? "";
+                bool istuu = l == "torkku" || l == "syo" || l == "nousu_istumasta" || l.Contains("istu");
+                var lantio = e.Ik.references.pelvis;
+                bool matala = Physics.Raycast(lantio.position + Vector3.up * 0.3f, Vector3.down, out var maa, 2f, 1 << IkKerros)
+                    && lantio.position.y - maa.point.y < 0.65f;
+                g.weight = Mathf.MoveTowards(g.weight, istuu || matala ? 0f : 1f, Time.unscaledDeltaTime * 2f);
+            }
+            e.Ik.solver.Update();
+        }
+
         /// <summary>KÄDET ESINEISIIN (Linnanrakentaja 5.10., `kadet[]`): "tartu" vie käden efektorin kahvaan (sijoitettu paikka →
         /// UnityPiste), kun silmukka vastaa `milloin`-ehtoa; paino häivytetään 0,3 s:ssa. Vaihe 1: vain paikka (kämmenen kierto
         /// animaatiosta; kierto vaatii luun ja kämmenkehyksen kalibroinnin). "kanna" (esine luuhun) ei vielä käytössä.</summary>
