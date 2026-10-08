@@ -232,6 +232,7 @@ namespace Matkakirja.Natiivi
         public static IEnumerator Lataa(KavelyData d, string juuri, Func<string, string> url, Transform isa, Action<string> kirjaa)
         {
             Poista();
+            SeikkailuKaukokuva.Nollaa();
             if (d == null) yield break;
             var go = new GameObject("Seikkailu esineet") { layer = DioraamaNayttamo.Kerros };
             go.transform.SetParent(isa, false);
@@ -742,6 +743,7 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
             if (Time.unscaledTime >= huoneTarkistus) { huoneTarkistus = Time.unscaledTime + 1f; HuoneLataus(p.transform.position); }
+            SeikkailuKaukokuva.Paivita(p);   // K3 muurikäytävään tultaessa (pelattavuusmalli 7)
             if (p.Ohjataan)
             {
                 // Ohjattu jakso (pako): toimintonappi vain jakson omalle teolle (Katkaise).
