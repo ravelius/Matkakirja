@@ -12,7 +12,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(p.VarjoTummennus < y.VarjoTummennus && p.KeskiTummennus < y.KeskiTummennus, "päivällä tummennus vahvempi");
             Oleta.Tosi(p.VarjoTummennus < 0 && p.Saturaatio < 0, "tummennus ja maltillinen kylläisyys");
             Oleta.Tosi(p.VarjoB > p.VarjoR && p.ValoR > p.ValoB, "viileät varjot, lämmin valo");
-            Oleta.Tosi(p.Rae > 0 && p.Rae <= 0.3f && p.Vinjetti <= 0.25f && p.Pehmennys, "kevyet rae, vinjetti, pehmennys");
+            Oleta.Tosi(p.Rae > 0 && p.Rae <= 0.3f && p.Vinjetti <= 0.25f && !p.Pehmennys, "kevyet rae ja vinjetti; DoF pois (sumensi koko kuvan)");
             Oleta.Tosi(y.Hehku > p.Hehku, "yöllä valot hehkuvat enemmän");
         }
 

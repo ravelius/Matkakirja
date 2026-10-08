@@ -27,7 +27,9 @@ namespace Matkakirja.Linssit.Kierros
                 Rae = yo ? 0.28f : 0.22f,
                 Hehku = yo ? 0.4f : 0.25f,
                 Vinjetti = yo ? 0.22f : 0.18f,
-                Pehmennys = true,
+                // Kaukainen pehmennys (DoF Gaussian ≥ 4 km) POIS 9.10. 02.1x: kuvaparissa koko kuva sumeni (reunatiheys 16,8 → 2,7 myös
+                // lähellä; pallokameran syvyysalue ei sovi Gaussian-DoF:lle). Pehmeys tulee hehkusta ja rakeesta; kaukoutu LS2:n ilmakehästä.
+                Pehmennys = false,
             };
             if (kuuma) { a.Rae = 0f; a.Hehku = 0f; a.Pehmennys = false; }
             return a;

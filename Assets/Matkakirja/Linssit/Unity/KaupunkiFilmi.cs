@@ -6,10 +6,11 @@
 //  1) tummennus ja sävy: ShadowsMidtonesHighlights (varjot ja keskisävyt hieman tummemmiksi, viileät varjot, lämmin valo) +
 //     ColorAdjustments.saturation maltillisemmaksi; yöllä kevyempi (KaupunkiKuva.Nyt == "yo")
 //  2) kevyt liikkuva filmirae (FilmGrain Medium1) peittää laattojen pakkausjäljet ja sulaneet kohdat
-//  3) hento pehmennys vain kaukana (DepthOfField Gaussian, alku ≥ 4 km: ei tilt-shift-pienoismallia) + kevyt hehku (Bloom)
+//  3) kevyt hehku (Bloom); kaukainen pehmennys (DepthOfField Gaussian ≥ 4 km) kokeiltiin ja otettiin POIS 9.10. 02.1x: pallokameran
+//     syvyysalueella se sumensi koko kuvan (kuvapari) — komponentti jää profiiliin passiivisena (KaupunkiFilmiArvot.Pehmennys = false)
 //  4) kevyt vinjetti
 // Ei sumua eikä ilmaperspektiiviä (LS2:n KaupunkiIlmakeha hoitaa ne) → ei tuplaannu. Lämpö (Lampo.Kuuma): rae, pehmennys ja
-// hehku pois, sävytys ja vinjetti jäävät (halvat). Kameran jälkikäsittely ja syvyystekstuuri kytketään KaupunkiKuvassa
+// hehku pois, sävytys ja vinjetti jäävät (halvat). Kameran jälkikäsittely kytketään KaupunkiKuvassa
 // (Kaytossa), joka myös palauttaa ne. A/B: Documents/kaupunki-filmi-pois.txt → ei filmiä (kuvapari ennen/jälkeen).
 using System.IO;
 using UnityEngine;
