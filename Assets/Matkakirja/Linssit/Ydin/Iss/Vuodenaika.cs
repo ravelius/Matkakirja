@@ -20,9 +20,13 @@ namespace Matkakirja.Linssit.Iss
 
         /// <summary>
         /// Kauden Euroopan S2-mosaiikin versio (Karttaseppä 7.10.2026: s2-eurooppa/<kausi>/v1, sama jako kuin kesän v2):
-        /// syksy "syksy/v1"; null = kesän v2 (kevät ja talvi tulevat, kun ne ovat ämpärissä).
+        /// syksy "syksy/v1", kevät "kevat/v1" (huhti–toukokuu, ämpärissä 7.10. 20.02); null = kesän v2 (talvi tulee, kun se on ämpärissä).
         /// </summary>
-        public static string S2EuroopanVersio(int kausi) => ((kausi % 4) + 4) % 4 == Syksy ? "syksy/v1" : null;
+        public static string S2EuroopanVersio(int kausi)
+        {
+            int k = ((kausi % 4) + 4) % 4;
+            return k == Syksy ? "syksy/v1" : k == Kevat ? "kevat/v1" : null;
+        }
 
         /// <summary>Näkyykö Euroopan S2-mosaiikki tällä kaudella (lumettomat kaudet).</summary>
         public static bool S2Nakyy(int kausi) => kausi != Talvi;
