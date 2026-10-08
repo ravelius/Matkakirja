@@ -369,6 +369,7 @@ namespace Matkakirja.Natiivi
             var kamera = FindKamera();
             if (kamera == null) yield break;
             DioraamaSovitin.KameraVapaa = true;
+            SeikkailuKavely.AsetaVain1499(false);   // K2: drone nykyiseen linnaan, vuoden 1499 leikkaukset pois (bastionit näkyvät)
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuNousu");
             var m = t?.GetMethod("Aloita", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             Action valmis = () => { kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)"); SeikkailuTietokerros.Aktiivinen?.Loppu(); SeikkailuTallentaja.Aktiivinen?.Valmis(); };
