@@ -6,6 +6,15 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 18.5x (JATKA TÄSTÄ)
+
+JUNA 167 (kuitattu, tyojonot.md): natiivi-ui/pallo-kerrokset-167 eaedca9c5 = kaikki NUI-erät yhdessä (⊇ 3f1d9623d tappi+pelit-alarivi
+⊇ 44506c0e1 ⊇ be7fef450 mikseri ⊇ 40e71625b pelit; + 24372c44d Olavinlinnan latauskuva; + pallon kerroksellinen latauskuva:
+tausta 20261008b, kupu/kori 20261008, esilataus). Worktree wt/proto-natiivi-ui-olavpeli.
+JUNA 168 KUITTAUSTA ODOTTAA: natiivi-ui/pohjavahti-168b 7e5f4f527 (pohjavahtikierros, raportti docs/raportit/pohjavahti-kierros-
+20261008.md; jäljelle jääneet päätettäviksi Päätoimittajalle). Muut: wt/proto-natiivi-ui-tkpariteetti (vanha pallo-kerrokset
+61ef45312, korvattu → poista kun 167 TF:ssä).
+
 ## TILA 8.10. klo 18.0x+ (JATKA TÄSTÄ)
 
 KUITTAUSTA ODOTTAA (junaan 167): natiivi-ui/tappi-sivu 44506c0e1 (be7fef450:n päällä; vasen tappi x vapaassa tilassa, kompassi).
