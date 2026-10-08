@@ -1062,7 +1062,8 @@ namespace Matkakirja.Linssit.Kierros
             tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             double matkaM = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             if (matkaM < 150) tulo = Asento.Suuntima;
-            else if (PalloLento) tulo = PalloTulosuunta(Asento.Suuntima, tulo, LennonKesto(matkaM));
+            // Raja koskee lopullista kehyssuuntimaa (tulo + SivuKulma; video6 Louvre: kääntö 13,6 °/s, kun sivukulma jäi rajan ulkopuolelle).
+            else if (PalloLento) tulo = PalloTulosuunta(Asento.Suuntima - OpasKuvaus.SivuKulma, tulo, LennonKesto(matkaM));
             return OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
         }
 

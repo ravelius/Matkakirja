@@ -155,13 +155,16 @@ namespace Matkakirja.Linssit.Testit
                 {
                     double lat0 = 48.853, lon0 = 2.3498, lat1 = lat0 + m / 111320.0 * 0.6, lon1 = lon0 - m / 73000.0 * 0.8;
                     var a = new Kuvakulma(lat0, lon0, 420, 58, 250, 40);
-                    var b = new Kuvakulma(lat1, lon1, 350, 58, 300, 60);
                     double T = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(lat0, lon0, lat1, lon1)), dt = 1 / 60.0;
+                    // Pahin saapumissuunta: kehys katsoisi vastakkaiseen suuntaan → PalloTulosuunta rajaa käännöksen.
+                    var b = new Kuvakulma(lat1, lon1, 350, 58, OpasSilmukka.PalloTulosuunta(250, 70, T), 60);
+                    double kaanto = 0;
                     var v = new List<double>(); var vk = new List<double>(); var et = new List<double>();
                     var e = OpasKuvaus.KameraPaikka(a, lat0, lon0); var edK = a;
                     for (double t = dt; t <= T + 1e-9; t += dt)
                     {
                         var k = OpasKuvaus.Lennossa(a, b, t / T); var p2 = OpasKuvaus.KameraPaikka(k, lat0, lon0);
+                        kaanto = Math.Max(kaanto, Math.Abs(KierrosLento.Kiedo(k.Suuntima - edK.Suuntima)) / dt);
                         v.Add(KierrosLento.EtaisyysM(edK.Lat, edK.Lon, k.Lat, k.Lon) / dt); edK = k;   // kulkunopeus: katsepisteen maajälki
                         vk.Add(Math.Sqrt((p2.e - e.e) * (p2.e - e.e) + (p2.n - e.n) * (p2.n - e.n) + (p2.u - e.u) * (p2.u - e.u)) / dt); et.Add(k.EtaisyysM); e = p2;
                     }
@@ -169,6 +172,7 @@ namespace Matkakirja.Linssit.Testit
                     var (_, _, _, kasvu) = OpasKuvaus.Telemetria(vk, et, dt);   // kuvan nopeus kokonaisliikkeestä
                     Oleta.Tosi(nousu >= 3 && hidastus >= 3, $"{m} m: nousu {nousu:F1} s, hidastus {hidastus:F1} s (≥ 3), huippu {huippu:F0} m/s, kesto {T:F1} s");
                     Oleta.Tosi(kasvu < 0.03, $"{m} m: kuvan nopeus ei kasva huipun jälkeen ({kasvu:P1})");
+                    Oleta.Tosi(kaanto <= OpasSilmukka.PalloKaantoAstS + 0.2, $"{m} m: kääntö {kaanto:F1} °/s (video6 Louvre 13,6)");
                 }
             }
             finally { OpasSilmukka.PalloLento = false; }
@@ -190,6 +194,36 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 600 && s.Vaihe != OpasVaihe.Puhuu; i++) { s.Paivita(0.05, _ => 35); if (s.Vaihe == OpasVaihe.Odottaa) odotti = true; }
             Oleta.Tosi(vaihtui == 1 && !odotti, $"kohde vaihtui lennossa ({vaihtui}), ei pysähdystä välissä ({odotti})");
             Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Notre-Dame", $"perillä kohteessa ({s.Vaihe} {s.Nykyinen?.Id})");
+        }
+
+        // Video6 8.10.: Louvren lennolla kääntö 13,6 °/s — kehyksen SivuKulma (25°) jäi saapumissuunnan rajan ulkopuolelle.
+        [Testi] static void SilmukanPallolentoKaantyyEnintaanKymmenenAstettaSekunnissa()
+        {
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                foreach (double kulma in new[] { 0.0, 90, 180, 270 })
+                {
+                    var s = new OpasSilmukka(new Kuvakulma(48.853, 2.3498, 420, 58, kulma, 40));
+                    var p = new List<(int n, string t)>();
+                    s.Pyyda += (n, t) => p.Add((n, t));
+                    s.Aloita("Pariisi");
+                    s.Vastaus(p[^1].n, K("A", 48.8530, 2.3498));
+                    for (int i = 0; i < 600 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.05, _ => 35);
+                    s.Vastaus(p[^1].n, new OpasKohde { Id = "Louvre", Nimi = "Louvre", Lat = 48.8611, Lon = 2.3358, KokoM = 300, KestoS = 5 });
+                    s.AaniLoppui();
+                    for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.05, _ => 35);
+                    double maks = 0, ed = s.Asento.Suuntima; const double dt = 1 / 60.0;
+                    for (int i = 0; i < 2000 && s.Vaihe == OpasVaihe.Lentaa; i++)
+                    {
+                        s.Paivita(dt, _ => 35);
+                        if (s.Vaihe == OpasVaihe.Lentaa) maks = Math.Max(maks, Math.Abs(KierrosLento.Kiedo(s.Asento.Suuntima - ed)) / dt);
+                        ed = s.Asento.Suuntima;
+                    }
+                    Oleta.Tosi(maks <= OpasSilmukka.PalloKaantoAstS + 0.3, $"lähtösuunta {kulma}°: kääntö enintään {maks:F1} °/s");
+                }
+            }
+            finally { OpasSilmukka.PalloLento = false; }
         }
 
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
