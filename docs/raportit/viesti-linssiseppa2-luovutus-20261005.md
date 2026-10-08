@@ -35,7 +35,13 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. iltapäivä (uusin)
+## TILA 8.10. ilta (uusin)
+- e4faa4144 MERGETTY (Siirtoseppä korjasi löydökset 1–5: 7aab3f25). Olavinlinna-worktree poistettu.
+- KAPPELIN VAIHEET: proto linssiseppa2/kappeli-vaiheet 57c4e3220 (7aab3f25 päällä), worktree wt/proto-linssiseppa2-kappeli:
+  Ydin/Seikkailu/KappelinArvoitus.cs (+.meta) + KappelinArvoitusTestit (8) + Huonesimulaatio 7aab3f25:n sääntöihin. 881/881, tarkistus 0.
+  SHA Siirtosepälle + PT. Kytkentä SeikkailuKappeliin: Siirtoseppä päättää (tarjottu LS2:lle). Poista worktree mergen jälkeen.
+
+## TILA 8.10. iltapäivä
 - SIMUT T7:LLÄ 8.10. alkaen (Natiiviseppä): omien zsh-ajoskriptien alkuun `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`
   (vanhat UDID:t F2D9B022/4CE6C737 käännetään; taulu tyokalut/simusarja-udid.tsv). Ilman sitä xcrun simctl osuu vanhaan sarjaan. MCP-simu
   ei näe T7:ää → napautukset simkosketuksella/todistusajolla. Ajoskriptejä (lokit/linssiseppa2-3d-kattavuus/ajot/) ei vielä päivitetty.
