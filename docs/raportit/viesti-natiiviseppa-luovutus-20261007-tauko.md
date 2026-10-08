@@ -6,7 +6,7 @@ Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpän
 ## TILA 8.10. 22.5x (UUSIN)
 **BUILD 167 = proto master 680acf3eb4be7f1b131ab2b29304d63fd531b203** (runko C natiiviseppa/juna-167-c 02405da71, käännös d625c7cf8 22.43, 0 shader
 erroria; app lokit/natiiviseppa-app-167c-02405da71; muutosloki 278 merkkiä PT:n hyväksymä, Julkaisijalla). AVOINNA: iOS TF 167 alkuaika → Mac TF
--odottaja (`mac-tf-odottaja.sh 680acf3e 167 <alku>`), juna/b13 d78cd0e0?? → TARKISTA nykyinen (0c786156) → 02405da71 Julkaisijan luvalla + juna.log.
+-odottaja (`mac-tf-odottaja.sh 680acf3e 167 <alku>`), juna/b13 0c786156 → 02405da71 Julkaisijan luvalla + juna.log.
 JUNA 168: kaupunki-sse ccdf86105 (KUITATTU, ehdot LS1 tahdistus + LS2 muisti + TF 168 -loki), NUI 37540261e (kuvakkeet + isoisä 1873), LS1 lapipeluu
 cdd0e711e on jo 167:ssä. JUNA 169: NUI 35c3c5312 → 3e6560f4c (pohjavahti 11, ehto #4236). Worktreet: j144 (A), j167b (B), j167c (C), g169, sse.
 
