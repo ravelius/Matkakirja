@@ -18,14 +18,10 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "bateau|bateau mouche|5|120|by"
-          "bateau|tour boat passing river|5|120|by"
-          "bateau|river boat engine passing|5|120|by"
-          "torvi|boat horn river|1|15|by"
-          "torvi|ship horn short|1|15|by"
-          "kyyhky|pigeons flying wings|1|30|by"
-          "kyyhky|pigeons flock take off|1|30|by"
-          "kyyhky|pigeon cooing|3|60|by"
+          "bateau|boat passing|8|90|by"
+          "bateau|barge passing|8|90|by"
+          "bateau|motorboat distant|8|90|by"
+          "bateau|canal boat|8|90|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
