@@ -35,7 +35,16 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. ilta, klo 18 (uusin)
+## TILA 8.10. ilta, myöhemmin (uusin)
+- m167 kokonaan mergetty (historia-m cc70cf219, e99c36130 asti: tarkistuspistetestit 7–8, piilotarkistuspiste 16fe2b69a, AjaHuone);
+  Siirtoseppä vie junaan 167 LR:n v45c:n kanssa (kuittaus erikseen klo 21 jälkeen, jos v45c ei ehdi). Worktreet m-jumi, kevat, m167 poistettu.
+- PARIISIN PALLO (PT kiireellinen, omistajan TF 166): Linssit-testit/Testit/PalloKierrosTestit.cs (linssiseppa2/pallo-pariisi ed7455817,
+  worktree wt/proto-linssiseppa2-pallo-pariisi; LS1 cherry-pickasi haaraansa linssiseppa/ukkonen-saa-167 72a22b17c, siellä 7/7).
+  Toisti viat 768906539:llä (Élysée-kumpu 390 m taakse, hitaalla verkolla 5,8 s seisonta, toisen kehyksen nykäys, lähtö ei levosta).
+  Worktree poistettavissa, kun LS1:n haara on mergetty.
+- AjaHuone(w, huone) LS1:lle: ThiefAjuri.Huoneet 2: 1–8, 3: 8–12, 4: 12–20, 6: 21–64, 7: 64–88, 8: 88–92; AjaHuoneTestit. Jono tyhjä.
+
+## TILA 8.10. ilta, klo 18
 - PT: työjonot /Users/Shared/Claude/Matkakirja-fable/scratchpad/tyojonot.md (oma kohta "Linssiseppä 2"); valmis erä → 1 rivi PT:lle ja heti
   seuraava kohta; [LUPA]/[PT] ohitetaan; tyhjä → "JONO TYHJÄ: Linssiseppä 2". Juna 167: lukitus 21.30, kuittauspyynnöt PT:lle ≤ 21.15.
 - linssiseppa2/m167 (historia-m 12116991c + merge m-jumi), worktree wt/proto-linssiseppa2-m167: df4c36cf7 kultaiset v45a + PelattavaPala v45a
