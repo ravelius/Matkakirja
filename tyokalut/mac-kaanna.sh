@@ -39,7 +39,10 @@ for i in {1..360}; do
 done
 (( oma )) || vika "jono: lukko ei vapautunut tunnissa ($(cat $LUKKO/kuka 2>/dev/null))"
 echo $$ > $LUKKO/pid; echo "mac $REF $(date +%H:%M)" > $LUKKO/kuka
-trap "rm -rf $LUKKO" EXIT
+# BURST-JIT POIS JO ENNEN UNITYÄ (Päätoimittaja 8.10.2026, juurikorjaus junaan 167; ks. proto-3d/tyokalut/burst-jit.sh):
+# EditorPrefs BurstCompilation = 0 vain lukon ajan, palautus EXIT-trapissa → ei JIT-jonoa käynnistyksessä, ei Cancel-kilpaa (mono-segv).
+source /Users/Shared/Claude/proto-3d/tyokalut/burst-jit.sh && burst_jit_pois
+trap "burst_jit_palauta; rm -rf $LUKKO" EXIT
 cd /
 
 if [[ ! -d $KOPIO ]]; then
