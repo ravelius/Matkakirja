@@ -1,5 +1,5 @@
 // M-OSAN VIHJEPORTAAT (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md kohta 5, huoneet 6–10): MVihjeet antaa jokaisessa
-// huoneessa vähintään kaksi peräkkäistä kohdetta, kaikki kohteet ovat v44z-datassa, huone ja vaihe etenevät kurinalaisen M-kulun mukana
+// huoneessa vähintään kaksi peräkkäistä kohdetta, kaikki kohteet ovat PelattavaPala.Versio-datassa, huone ja vaihe etenevät kurinalaisen M-kulun mukana
 // (MOsanJumiTestit.MKulku oikeilla ytimillä), ja muurikäytävän varjo valitaan pelaajan edestä.
 using System;
 using System.Collections.Generic;
