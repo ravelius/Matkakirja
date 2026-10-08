@@ -1620,6 +1620,14 @@ namespace Matkakirja.Natiivi
             var lj = r.result == UnityWebRequest.Result.Success ? MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object> : null;
             kohteet = lj != null ? OpasTaky.Lue(lj) : new List<OpasTaky>();
             kierrosKohteet = OpasTaky.Kierros(lj, kohteet);
+            // Lyhin reitti kehityskaupungeissa (omistaja 9.10.: "liikuttaisiin mahdollisimman lyhyitä reittejä"; Päätoimittaja: kaukaiset
+            // kohteet pois, jos ne venyttävät reittiä): ensimmäinen pysyy (avaus osoittaa sitä), muut lyhimpään järjestykseen.
+            if (OpasSilmukka.PalloLento && kierrosKohteet.Count > 2 && Kehityskaupungit.Lahella(kierrosKohteet[0].Lat, kierrosKohteet[0].Lon) != null)
+            {
+                double ennen = OpasReitti.Pituus(kierrosKohteet, t => (t.Lat, t.Lon));
+                kierrosKohteet = OpasReitti.Lyhin(kierrosKohteet, t => (t.Lat, t.Lon), out var pois);
+                o.Kirjaa($"opas: lyhin reitti {ennen / 1000:F1} → {OpasReitti.Pituus(kierrosKohteet, t => (t.Lat, t.Lon)) / 1000:F1} km{(pois.Count > 0 ? ", pois: " + string.Join(", ", pois.ConvertAll(x => x.Nimi)) : "")}");
+            }
             o.Kirjaa($"opas: liiku-lista {kohteet.Count} ({kaupunki} {aLat:F3}/{aLon:F3}, {(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
         }
 

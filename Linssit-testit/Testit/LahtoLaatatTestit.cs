@@ -289,7 +289,7 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 48.8530, 2.3498) < 1, "katse pysyy nykyisessä kohteessa");
                 // 8.10. ilta (omistaja "jää liian kauas"): lipuminen skaalataan kehyksen koolla ja rajataan 1,2 × vaakaetäisyyteen.
                 Oleta.Tosi(Etaisyys(nyt) < Etaisyys(alku) - 10, $"silmä lähestyi seuraavaa ({Etaisyys(alku):F0} → {Etaisyys(nyt):F0} m)");
-                Oleta.Tosi(maks <= OpasKuvaus.LipumisNopeus + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.LipumisNopeus} m/s ({maks:F1})");
+                Oleta.Tosi(maks <= OpasKuvaus.KaariNopeusMS + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.KaariNopeusMS} m/s ({maks:F1})");
                 s.AaniLoppui();
                 double vauhtiLahtiessa = double.NaN;
                 for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) { vauhtiLahtiessa = s.LipumisVauhti; s.Paivita(0.05, _ => 35); }

@@ -30,6 +30,8 @@ namespace Matkakirja.Linssit.Kierros
         public const double KuvaPystyAst = 50, KuvaSuhde = 1.8, LeveysOsuus = 0.5, KorkeusOsuus = 0.5, KatseAlasOsuus = 0.06;
         public const double KatuEtMinM = 110, KatuEtMaxM = 350, RakennusEtMinM = 100, RakennusEtMaxM = 600, AlueEtMinM = 160, AlueEtMaxM = 350;   // Päätoimittaja 21.3x: Nyhavn/Tivoli/Strøget liian kaukaa → enintään ~350 m
         public const double SivuKulma = 25;
+        public const double PalloMatalampiAst = 6, AukioEtMaxM = 220;
+        static readonly System.Collections.Generic.HashSet<string> AukioLuokat = new System.Collections.Generic.HashSet<string> { "aukio", "tori" };
         // Pysähdys
         // KAKSI KEHYSTÄ (omistaja 5.10. 23.3x: "hidas orbit … saisi olla nopeampi ja näyttää samasta kohteesta myös toisen suunnan"):
         // orbit KiertoAsteS VaiheS:n ajan, sitten pehmeä siirtolento SiirtoS: katu ja alue kohteen toiselle puolelle (+SiirtoKulma),
@@ -69,13 +71,21 @@ namespace Matkakirja.Linssit.Kierros
             switch (l)
             {
                 case Luokka.Katu:
-                    et = Rajaa(tiukka, KatuEtMinM, KatuEtMaxM); kall = KatuKallistus; nosto = Rajaa(korkeus * 0.4, 4, 25); break;
+                    et = Rajaa(tiukka, KatuEtMinM, KatuEtMaxM); kall = KatuKallistus; nosto = Rajaa(korkeus * 0.4, 4, 25);
+                    // Aukio lähempää (Päätoimittaja 9.10.: "Concorde lähempää, niin että obeliski erottuu"): keskusta, ei koko aukio.
+                    if (OpasSilmukka.PalloLento && AukioLuokat.Contains((luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant())) et = Math.Min(et, AukioEtMaxM);
+                    break;
                 case Luokka.Alue:
                     et = Rajaa(tiukka, AlueEtMinM, AlueEtMaxM); kall = AlueKallistus; nosto = Rajaa(korkeus * 0.3, 5, 40); break;
                 default:
                     et = Rajaa(tiukka, RakennusEtMinM, RakennusEtMaxM);
                     kall = RakennusKallistus; nosto = Rajaa((korkeus > 0 ? korkeus : koko * 0.3) * 0.45, 5, 70); break;
             }
+            // MATALAMPI KATSELU (omistaja 9.10.: "kaupunkia olisi kivempi katsella vähän matalempaa ja samalla hieman orbit panoroiden"):
+            // pallossa kehys PalloMatalampiAst viistommin (silmä matalammalla), ja kohdekaari laskee siitä vielä (Spiraali).
+            // Vaakaetäisyys pysyy (silmä samassa kohdassa kartalla, vain matalammalla; Granada Alhambra → Kaarle V 128 m: kauempana
+            // ollut silmä palasi lennolla taaksepäin), joten katse-etäisyys lyhenee.
+            if (OpasSilmukka.PalloLento) { double k2 = Math.Min(80, kall + PalloMatalampiAst); et *= Math.Sin(kall * Math.PI / 180) / Math.Sin(k2 * Math.PI / 180); kall = k2; }
             // KORKEA KOHDE (Päätoimittaja 7.10. 04.3x: Eiffelin huippu leikkautui, Liikun jälkeen kolmannes tornista yli reunan):
             // etäisyys pystysuuntaisen näkökentän mukaan niin, että juuri ja huippu mahtuvat kuvaan marginaalilla.
             double minEt = 0;
@@ -156,6 +166,36 @@ namespace Matkakirja.Linssit.Kierros
             double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
             return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
         }
+        /// <summary>
+        /// Kohdekaaren spiraali (OpasSilmukka.PysahdysAsento): silmä kiertää katsepistettä kulman fi (°; positiivinen vastapäivään
+        /// ylhäältä katsottuna), ja eteneminen q (0…1) pienentää vaakaetäisyyttä SpiraaliLahesty-osuudella ja korkeutta
+        /// SpiraaliLasku-osuudella (vähintään SpiraaliMinKorkeusM katsepisteen yläpuolella); katse pysyy kohteessa.
+        /// </summary>
+        public static Kuvakulma Spiraali(Kuvakulma k, double fi, double q)
+        {
+            const double A = Math.PI / 180;
+            var e = KameraPaikka(k, k.Lat, k.Lon);
+            double c = Math.Cos(fi * A), si = Math.Sin(fi * A), sk = 1 - SpiraaliLahesty * q;
+            double se = (e.e * c - e.n * si) * sk, sn = (e.e * si + e.n * c) * sk;
+            double pysty0 = e.u - k.KatseKorkeusM, pysty = Math.Max(Math.Min(pysty0, SpiraaliMinKorkeusM), pysty0 * (1 - SpiraaliLasku * q));
+            double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn);
+            if (vaaka < 1) return k;
+            double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
+            return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
+        }
+        /// <summary>Kamera kääntyy silmän ympäri kulman d (°): silmä paikallaan, katsepiste kiertää samalla vaakaetäisyydellä.</summary>
+        public static Kuvakulma Panoroi(Kuvakulma k, double d)
+        {
+            if (Math.Abs(d) < 1e-6) return k;
+            const double R = 6371000, A = Math.PI / 180;
+            double h = k.EtaisyysM * Math.Sin(k.Kallistus * A), su = k.Suuntima * A, su2 = (k.Suuntima + d) * A;
+            double de = h * (Math.Sin(su2) - Math.Sin(su)), dn = h * (Math.Cos(su2) - Math.Cos(su));
+            return new Kuvakulma(k.Lat + dn / R / A, k.Lon + de / (R * Math.Cos(k.Lat * A)) / A, k.EtaisyysM, k.Kallistus, KierrosLento.Kiedo(k.Suuntima + d), k.KatseKorkeusM);
+        }
+
+        /// <summary>Kaaren silmänopeus (m/s) kulmanopeuden rajoin (°/s), spiraalin aikavakio (s), lähestyminen ja lasku (osuus).</summary>
+        public const double KaariNopeusMS = 8, KaariMaxAstS = 4, SpiraaliAikaS = 14, SpiraaliLahesty = 0.0, SpiraaliLasku = 0.35, SpiraaliMinKorkeusM = 60, SpiraaliMaxMS = 2.5, KaariOsuusSeuraavaan = 0.5;
+
         /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
         public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
         /// <summary>Lipumisen ryömintä katon jälkeen: osuus lipumisnopeudesta (0,08 × 4 = 0,32 m/s), ettei pallo seiso pitkällä pysähdyksellä.</summary>
