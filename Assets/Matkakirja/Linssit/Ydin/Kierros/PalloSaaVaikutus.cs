@@ -25,7 +25,7 @@ namespace Matkakirja.Linssit.Kierros
             PalloSaa.Pilvinen => new SaaPainot { Harmaus = t != null ? 0.45 + 0.35 * C((t.PilvisyysPct - 70) / 30) : 0.6, Sumu = 0.15 },
             PalloSaa.Sade => new SaaPainot { Harmaus = 0.75, Sumu = 0.35, Sade = t != null ? C(0.35 + t.SadeMmH / 4) : 0.6 },
             PalloSaa.Lumi => new SaaPainot { Harmaus = 0.5, Sumu = 0.4, Lumi = 0.7 },
-            PalloSaa.Sumu => new SaaPainot { Harmaus = 0.45, Sumu = t != null ? Math.Max(0.8, C(t.SumuPct / 100)) : 0.85 },
+            PalloSaa.Sumu => new SaaPainot { Harmaus = 0.6, Sumu = t != null ? Math.Max(0.8, C(t.SumuPct / 100)) : 0.85 },
             PalloSaa.Ukkonen => new SaaPainot { Harmaus = 1, Sumu = 0.4, Sade = 0.9, Ukkonen = 1 },
             _ => default,   // Pois, Selkea
         };
