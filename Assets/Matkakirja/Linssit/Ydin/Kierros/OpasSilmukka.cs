@@ -193,6 +193,20 @@ namespace Matkakirja.Linssit.Kierros
         public static readonly double[] ReittiNaytteet = { 0.15, 0.35, 0.55, 0.75 };
         double lahtoOdotusS;
         bool ohitettu;
+        /// <summary>
+        /// KOHTEEN KOROSTUS (Päätoimittaja 8.10. 07.5x: kohteen valo sammui ja syttyi yhdessä ruudussa lähdössä): 0–1, häivytys
+        /// KorostusS. Syttyy saapumisesta (Puhuu), sammuu lähdön valmistelussa ENNEN liikettä — lento alkaa vasta, kun korostus on
+        /// sammunut (sovitin: yövalojen kohdevalo × osuus, rengas pois valmistelun alussa).
+        /// </summary>
+        public const double KorostusS = 1.0, KorostusPikaS = 0.4;
+        /// <summary>Sammutus kertojan lopputauon aikana (LoppuTaukoS, kamera paikallaan) → automaattinen lähtö ei viivästy; pelaajan
+        /// valinta tai lähtö odotustilasta sammuttaa KorostusPikaS:ssa (painallukseen vastataan heti).</summary>
+        bool korostusPika;
+        public double KorostusOsuus { get; private set; }
+        /// <summary>Lähtö valmisteilla (ehdot täyttyivät; korostus sammuu, laatat latautuvat).</summary>
+        public bool LahtoValmisteilla { get; private set; }
+        /// <summary>Korostus kuuluu nykyiseen kohteeseen: perillä (Puhuu tai Odottaa kehyksessä), ei kysymys.</summary>
+        bool KorostusKohteella => (Vaihe == OpasVaihe.Puhuu || Vaihe == OpasVaihe.Odottaa) && NykyinenKehys != null && Nykyinen != null && !Nykyinen.Kysymys;
         /// <summary>Viimeisimmän lähdön odotus laattoja varten (s; sovitin kirjaa lokiin).</summary>
         public double LahtoOdottiS { get; private set; }
 
@@ -898,6 +912,9 @@ namespace Matkakirja.Linssit.Kierros
                 if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && (Nykyinen ?? edellinen) is OpasKohde nk && !nk.OdottaaValintaa && !Pysaytetty) UusiPyynto();
             }
 
+            double korTavoite = KorostusKohteella && !LahtoValmisteilla ? 1 : 0;
+            KorostusOsuus = korTavoite > KorostusOsuus ? Math.Min(korTavoite, KorostusOsuus + Math.Max(0, dt) / KorostusS)
+                : Math.Max(korTavoite, KorostusOsuus - Math.Max(0, dt) / (korostusPika ? KorostusPikaS : KorostusS));
             switch (Vaihe)
             {
                 case OpasVaihe.Alku:
@@ -912,14 +929,18 @@ namespace Matkakirja.Linssit.Kierros
                         var loppu = new Kuvakulma(a.Lat, a.Lon, a.EtaisyysM * AlkuLiukuKerroin, a.Kallistus + AlkuLiukuKallistus, a.Suuntima + 20, a.KatseKorkeusM);
                         Asento = KierrosLento.Valissa(a, loppu, KierrosLento.Smootherstep(Math.Min(1, VaiheAika / AlkuLiukuS)), 0);
                     }
-                    if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa && LahtoLaatatValmiit(dt)) AloitaLento(maaKorkeus);
+                    bool odotusEhdot = Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta && !OhjausPitaa;
+                    if (LahtoSaa(odotusEhdot, odotusEhdot, true, dt)) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
                     if (!VapaaAsento(dt)) PysahdysAsento(dt);   // vapaassa tilassa kysymyksen vastaus ei palauta kameraa
-                    if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa)
-                    {
-                        if (LahtoLaatatValmiit(dt)) AloitaLento(maaKorkeus);
-                    }
+                    // Valmistelu (korostus sammuu) alkaa jo äänen lopusta, lähtö vasta tauon jälkeen.
+                    // Kosketuksen irrotuksen jälkeinen OhjausTaukoS kuluu samalla (sammutus ei pidennä taukoa).
+                    bool valmistelu = aaniLoppui && Seuraava != null && !PelaajaOhjaa;
+                    bool lahtoEhdot = valmistelu && !OhjausPitaa && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS;
+                    // Tauko jo ohi (seuraava tuli myöhässä) tai pelaajan valinta: nopea sammutus.
+                    if (LahtoSaa(lahtoEhdot, valmistelu, ohitettu || toiveesta || hiljaS >= LoppuTaukoS, dt)) AloitaLento(maaKorkeus);
+                    else if (lahtoEhdot) { }
                     else if (aaniLoppui && Seuraava == null && odotettu == 0 && !esihakuPuheenJalkeen) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:
@@ -1091,6 +1112,19 @@ namespace Matkakirja.Linssit.Kierros
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
         Kuvakulma? alkuAsento;
 
+        /// <summary>Lähdön valmistelu: ehdot täyttyvät → korostus sammuu ja laatat odotetaan; lento, kun molemmat valmiit.</summary>
+        bool LahtoSaa(bool ehdot, bool valmistelu, bool pika, double dt)
+        {
+            // "Kerro lisää" (sama paikka) ei lähde mihinkään: korostus jää palamaan.
+            bool sama = Seuraava != null && NykyinenKehys != null && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, Seuraava.Lat, Seuraava.Lon) < 50;
+            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; return ehdot && sama; }
+            if (!LahtoValmisteilla) korostusPika = pika;   // nopeus valitaan valmistelun alussa
+            LahtoValmisteilla = true;
+            if (!ehdot) return false;
+            bool laatat = LahtoLaatatValmiit(dt);
+            return laatat && KorostusOsuus <= 0;
+        }
+
         /// <summary>Lähteekö lento nyt (LahtoValmis tai odotus täynnä); siirto (kauas tai pakotettu) ja "kerro lisää" lähtevät heti.</summary>
         bool LahtoLaatatValmiit(double dt)
         {
@@ -1136,7 +1170,7 @@ namespace Matkakirja.Linssit.Kierros
         void AloitaLento(Func<OpasKohde, double> maaKorkeus)
         {
             var k = Seuraava; Seuraava = null;
-            LahtoOdottiS = lahtoOdotusS; lahtoOdotusS = 0; ohitettu = false;
+            LahtoOdottiS = lahtoOdotusS; lahtoOdotusS = 0; ohitettu = false; LahtoValmisteilla = false; korostusPika = false;
             // "Kerro lisää" (Pelikoodari #4009): sama paikka uudelleen → kamera jää kiertämään, kappale alkaa heti.
             // Vain, kun nykyinen kehys on oikean kohteen: valinnan ja Liikun välitön lento kehystää arviokohteen (koko 120, ei
             // korkeutta → katu, 143 m), ja juna 156:n VIE-este (Eiffel tornin juurella, simu 7.10. 04.1x) syntyi, kun workerin

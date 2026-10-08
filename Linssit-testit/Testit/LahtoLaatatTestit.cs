@@ -85,6 +85,35 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(t > OpasSilmukka.LahtoOdotusMaxS - 0.1, $"täysi odotus ({t:F2} s)");
         }
 
+        // Päätoimittaja 8.10. 07.5x: kohteen valo sammui ja syttyi yhdessä ruudussa. Häivytys ~1 s; sammunut ennen liikettä,
+        // syttyy vasta saapumisen jälkeen; automaattinen lähtö ei viivästy (sammutus lopputauon aikana).
+        [Testi] static void KorostusHaivyttyyJaSammuuEnnenLiiketta()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var p = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => p.Add((n, t));
+            s.Aloita("Kööpenhamina");
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            double ennenSaapumista = 0;
+            for (int i = 0; i < 600 && s.Vaihe != OpasVaihe.Puhuu; i++) { s.Paivita(0.05, _ => 5); if (s.Vaihe == OpasVaihe.Lentaa) ennenSaapumista = Math.Max(ennenSaapumista, s.KorostusOsuus); }
+            Oleta.Sama(0.0, ennenSaapumista, "lennon aikana ei korostusta");
+            s.Paivita(0.05, _ => 5);
+            Oleta.Tosi(s.KorostusOsuus > 0 && s.KorostusOsuus < 0.2, $"syttyy saapumisesta pehmeästi ({s.KorostusOsuus:F2})");
+            for (int i = 0; i < 30; i++) s.Paivita(0.05, _ => 5);
+            Oleta.Sama(1.0, s.KorostusOsuus, "täysi ~1 s:ssa");
+            s.Vastaus(p[^1].n, K("B", 55.6800, 12.5900));
+            s.AaniLoppui();
+            double edella = s.KorostusOsuus, suurinAskel = 0, lahdossa = -1;
+            for (int i = 0; i < 100 && s.Vaihe != OpasVaihe.Lentaa; i++)
+            {
+                s.Paivita(0.05, _ => 5);
+                suurinAskel = Math.Max(suurinAskel, edella - s.KorostusOsuus); edella = s.KorostusOsuus;
+                if (s.Vaihe == OpasVaihe.Lentaa) lahdossa = s.KorostusOsuus;
+            }
+            Oleta.Sama(0.0, lahdossa, "sammunut, kun liike alkaa");
+            Oleta.Tosi(suurinAskel <= 0.05 / OpasSilmukka.KorostusS + 1e-9, $"ei yhden ruudun sammutusta (askel {suurinAskel:F3})");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

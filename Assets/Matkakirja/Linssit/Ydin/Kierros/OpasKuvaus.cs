@@ -126,7 +126,10 @@ namespace Matkakirja.Linssit.Kierros
             double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
             if (matka >= LahiRajaM) return OpasSilmukka.Lennossa(a, b, t);
             double s = Eteneminen(t, matka);
-            double sp = Math.Sin(Math.PI * t), h = sp * sp;
+            // Nousukaari etenemisen mukaan (Päätoimittaja 8.10. 07.5x, juna 164 -video: lepo → huippu 1–1,5 s ja viimeinen 0,5 s
+            // jyrkkä): ajasta laskettu sin²(πt) aloitti nousun täydellä kiihtyvyydellä (h'' = 2π² hetkellä 0) ja päätti laskun
+            // suoraviivaisesti nollaan; s:stä laskettuna nousu, kallistus ja etäisyys alkavat ja loppuvat samalla S-käyrällä kuin eteneminen.
+            double sp = Math.Sin(Math.PI * s), h = sp * sp;
             double L(double x, double y) => x + (y - x) * s;
             double kall = L(a.Kallistus, b.Kallistus) - KeskiJyrkennys * h;
             double cosK = Math.Max(0.25, Math.Cos(kall * Math.PI / 180));
@@ -184,7 +187,7 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>
         /// Eteneminen 0…1 ajan osuudesta: pehmeä kiihdytys, tasainen matkavauhti ja pehmeä jarrutus (nopeus nousee ja laskee
-        /// smoothstep-rampilla, joten nopeus ja kiihtyvyys ovat jatkuvia). Lyhyellä matkalla ramppi on puolet lennosta (S-käyrä),
+        /// smootherstep-rampilla, joten nopeus, kiihtyvyys ja nykäisy ovat jatkuvia). Lyhyellä matkalla ramppi on puolet lennosta (S-käyrä),
         /// pitkällä (≥ 2 km) neljännes, jolloin keskellä on tasainen vauhti (Päätoimittaja 23.4x).
         /// </summary>
         public static double Eteneminen(double t, double matkaM)
@@ -192,8 +195,10 @@ namespace Matkakirja.Linssit.Kierros
             t = Math.Max(0, Math.Min(1, t));
             double a = matkaM >= 2000 ? 0.25 : matkaM <= 500 ? 0.5 : 0.5 - 0.25 * (matkaM - 500) / 1500;
             double kokonais = 1 - a;   // a·½ + (1 − 2a) + a·½
-            double x = t < a ? a * SmoothstepIntegraali(t / a)
-                : t > 1 - a ? kokonais - a * SmoothstepIntegraali((1 - t) / a)
+            // Nopeusrampit smootherstepinä (Päätoimittaja 8.10. 07.5x): kiihtyvyys alkaa ja loppuu nollasta (ei nykäisyä), rampin
+            // pinta-ala sama a/2 kuin smoothstepillä → huippunopeus ja kesto ennallaan (omistaja).
+            double x = t < a ? a * SmootherstepIntegraali(t / a)
+                : t > 1 - a ? kokonais - a * SmootherstepIntegraali((1 - t) / a)
                 : a * 0.5 + (t - a);
             return x / kokonais;
         }
@@ -260,6 +265,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>∫₀ˣ smoothstep(u) du = x³ − x⁴/2 (x ∈ 0…1; x = 1 → 0,5).</summary>
         /// <summary>∫₀ˣ smoothstep (0 ≤ x ≤ 1; arvo 0,5, kun x = 1): S-käyrän mukaan kiihtyvän liikkeen kuljettu osuus.</summary>
         public static double SmoothstepIntegraali(double x) => x * x * x - 0.5 * x * x * x * x;
+        /// <summary>∫₀ˣ smootherstep = x⁶ − 3x⁵ + 2,5x⁴ (arvo 0,5 kohdassa 1).</summary>
+        public static double SmootherstepIntegraali(double x) { double x4 = x * x * x * x; return x4 * (x * x - 3 * x + 2.5); }
 
         /// <summary>Pysähdyksen kierron nopeus (°/s) ajassa aikaS saapumisesta (S-käyrä KiertoAlkuS:ssa täyteen).</summary>
         public static double KiertoNopeus(double aikaS)

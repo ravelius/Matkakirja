@@ -453,6 +453,8 @@ namespace Matkakirja.Natiivi
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
             KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
+            // Kohdevalo ja rengas häivyttyvät silmukan korostusosuuden mukaan (sammuvat ennen lähtöä, syttyvät saapumisesta).
+            KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = (float)silmukka.KorostusOsuus;
             LatausKuvaPaivita();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
@@ -462,6 +464,7 @@ namespace Matkakirja.Natiivi
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
             // Reitin välinäkymät (Päätoimittaja 8.10. 07.4x: sumea kortteli lennon alussa); 0 näkymää → reittikamerat pois.
             kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
+            EsilataaKortit();
         }
 
         readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length];
@@ -616,6 +619,19 @@ namespace Matkakirja.Natiivi
             yksKaupunki = id;
             yksPolku = id != null && yksPolut.TryGetValue(id, out var p) ? p : null;
             EsilataaYksityiskohdat(id);
+        }
+
+        /// <summary>Seuraavan kohteen (lennossa nykyisen) yksityiskohtakuvat tekstuureiksi valmiiksi (YksityiskohtaKortti.Esilataa).</summary>
+        string esiKortitId;
+        void EsilataaKortit()
+        {
+            var k = silmukka.Vaihe == OpasVaihe.Lentaa ? silmukka.Nykyinen : silmukka.Seuraava;
+            if (k?.Id == null || k.Kysymys || k.Id == esiKortitId || Testi) return;
+            string id = YksKaupunkiId();
+            if (id == null || !yksPolut.TryGetValue(id, out var polku) || !yksValimuisti.TryGetValue(polku, out var l) || l == null) return;
+            esiKortitId = k.Id;
+            foreach (var x in l)
+                if (string.Equals(x.KohdeId, k.Id, StringComparison.OrdinalIgnoreCase)) YksityiskohtaKortti.Esilataa(o, x.Url);
         }
 
         static bool YksPeittaa()
@@ -2143,9 +2159,13 @@ namespace Matkakirja.Natiivi
         }
         IEnumerator KameraLokiMyohemmin(OpasKohde k, float s) { yield return new WaitForSecondsRealtime(s); if (silmukka?.Nykyinen == k) KameraLoki(k, $"{s:F0} s"); }
 
+        public const double SaapumisOrigoRajaM = 3000;
+
         void Saapui(OpasKohde k)
         {
-            kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
+            // Origo vain kauemmas siirryttäessä (Päätoimittaja 8.10. 07.5x, saapumisen nykäys: SetOriginLongitudeLatitudeHeight
+            // päivittää kaikkien ~850 laatan sijainnit samassa ruudussa); kaupungin sisällä float-tarkkuus riittää SaapumisOrigoRajaM:iin.
+            kaupunki.SiirraOrigoTarvittaessa(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45, SaapumisOrigoRajaM);
             if (puhuttu != k) AlkaaPuhua(k);   // ei aloitettu lennon lopussa (esim. sama paikka): nyt
             if (!k.Id?.StartsWith("kysy-") ?? true) PaivitaKysymykset(k);
             saapumisia++;
@@ -2365,6 +2385,7 @@ namespace Matkakirja.Natiivi
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KaupunkiYovalot.Kohde = null;
+            KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = 1f;
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
             Sumenna(false);

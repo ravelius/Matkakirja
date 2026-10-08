@@ -629,6 +629,20 @@ namespace Matkakirja.Natiivi
             if (auki && Kaytossa == Lahde.Google) omat.Paivita(lat, lon);
         }
 
+        /// <summary>Origo kohteeseen vain, jos se on yli rajaM:n päässä nykyisestä (saapumisen nykäys, Päätoimittaja 8.10. 07.5x);
+        /// omat mallit päivitetään joka tapauksessa. true = siirrettiin.</summary>
+        public bool SiirraOrigoTarvittaessa(double lat, double lon, double korkeus, double rajaM)
+        {
+            if (georef == null || !georef.isActiveAndEnabled) return false;
+            if (Matkakirja.Linssit.Kierros.KierrosLento.EtaisyysM(georef.latitude, georef.longitude, lat, lon) < rajaM)
+            {
+                if (auki && Kaytossa == Lahde.Google) omat.Paivita(lat, lon);
+                return false;
+            }
+            SiirraOrigo(lat, lon, korkeus);
+            return true;
+        }
+
         /// <summary>Paikallinen ylös-suunta Unityn maailmassa pisteessä p (ellipsoidin normaali; oppaan lähiluotain).</summary>
         public Vector3 Ylos(Vector3 p)
         {

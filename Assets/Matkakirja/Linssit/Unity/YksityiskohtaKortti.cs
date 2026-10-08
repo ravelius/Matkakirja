@@ -6,6 +6,7 @@
 // URP-overlay-kamera kerroksella 17 kaupunkikameran pinossa (kuten PalloKori). Alakaistassa vain kuvateksti (omistaja 22.5x: tekijät eivät näy kortissa).
 // CC BY / BY-SA -maininta näytetään muualla (Tekijarivi datassa). Yksi kortti kerrallaan; Piilota() vie kortin heti pois (valikko tai chat aukesi).
 using System.Collections;
+using System.Collections.Generic;
 using Matkakirja.Linssit.Kierros;
 using Matkakirja.Natiivi;
 using TMPro;
@@ -34,6 +35,54 @@ namespace Matkakirja.Linssit
         int vuoro;
 
         public YksityiskohtaKortti(MonoBehaviour omistaja) { o = omistaja; }
+
+        // ESILATAUS (Päätoimittaja 8.10. 07.5x, juna 164 -video: Louvren saapumisessa 4 ruutua jähmettyi, kun Pein kortin
+        // 1280×1595-kuva haettiin ja siirtyi näytönohjaimelle juuri saapumishetkellä): seuraavan kohteen kuvat haetaan jo
+        // edellisellä pysähdyksellä (OpasSovitin.EsilataaKortit), ja Aja käyttää valmista tekstuuria. Ilman mipmappeja (kortti
+        // ~40 % ruudusta; vähemmän pääsäikeen työtä). Enintään EsiladattujaMax kuvaa, vanhin pois.
+        public const int EsiladattujaMax = 6;
+        static readonly Dictionary<string, Texture2D> esiladatut = new Dictionary<string, Texture2D>();
+        static readonly Queue<string> esiJarjestys = new Queue<string>();
+        static readonly HashSet<string> esiHaussa = new HashSet<string>();
+
+        public static void Esilataa(MonoBehaviour omistaja, string url)
+        {
+            if (omistaja == null || string.IsNullOrEmpty(url) || esiladatut.ContainsKey(url) || !esiHaussa.Add(url)) return;
+            omistaja.StartCoroutine(EsilataaAjo(url));
+        }
+
+        static UnityWebRequest Pyynto(string url, int timeout)
+        {
+            var par = DownloadedTextureParams.Default;
+            par.readable = false; par.mipmapChain = false;
+            return new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET, new DownloadHandlerTexture(par), null) { timeout = timeout };
+        }
+
+        static IEnumerator EsilataaAjo(string url)
+        {
+            using (var p = Pyynto(url, 15))
+            {
+                yield return p.SendWebRequest();
+                esiHaussa.Remove(url);
+                if (p.result != UnityWebRequest.Result.Success) { Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan esilataus epäonnistui ({p.responseCode}) {url}"); yield break; }
+                var t = DownloadHandlerTexture.GetContent(p);
+                if (t == null) yield break;
+                while (esiJarjestys.Count >= EsiladattujaMax)
+                {
+                    var vanha = esiJarjestys.Dequeue();
+                    if (esiladatut.TryGetValue(vanha, out var vt)) { Object.Destroy(vt); esiladatut.Remove(vanha); }
+                }
+                esiladatut[url] = t; esiJarjestys.Enqueue(url);
+            }
+        }
+
+        /// <summary>Esiladattu tekstuuri omaksi (poistuu välimuistista; kortti tuhoaa sen piilottaessaan), muuten null.</summary>
+        static Texture2D OtaEsiladattu(string url)
+        {
+            if (string.IsNullOrEmpty(url) || !esiladatut.TryGetValue(url, out var t)) return null;
+            esiladatut.Remove(url);
+            return t;
+        }
 
         /// <summary>Kortti näkyvissä (sisääntulosta poistumisen loppuun).</summary>
         public bool Nakyy { get; private set; }
@@ -124,9 +173,11 @@ namespace Matkakirja.Linssit
 
         IEnumerator Aja(Camera kamera, OpasYksityiskohdat.Kuva k, System.Func<bool> peittaa, int v)
         {
-            using (var p = UnityWebRequestTexture.GetTexture(k.Url, true))
+            var esi = OtaEsiladattu(k.Url);
+            if (esi != null) kuva = esi;
+            else
+            using (var p = Pyynto(k.Url, 3))
             {
-                p.timeout = 3;
                 yield return p.SendWebRequest();
                 if (v != vuoro) yield break;
                 if (p.result != UnityWebRequest.Result.Success) { Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva ei latautunut ({p.responseCode}) {k.Url}"); yield break; }
@@ -176,7 +227,7 @@ namespace Matkakirja.Linssit
             kortti.gameObject.SetActive(true);
             teksti.ForceMeshUpdate();
             Debug.Log($"MATKAKIRJA opas: yksityiskohtakuvan teksti {teksti.textInfo.characterCount} merkkiä, {teksti.textInfo.lineCount} riviä, koko {teksti.fontSize:F0}, jono {teksti.fontSharedMaterial?.renderQueue}/{mat.renderQueue}");
-            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva näkyviin {k.KohdeId} \"{k.Ankkuri}\" ({kuva.width}×{kuva.height}), lepo {asettelu.LepoLaatikko} ({w:0}×{h:0}, {napit?.Count ?? 0} nappia väistetty)");
+            Debug.Log($"MATKAKIRJA opas: yksityiskohtakuva näkyviin {k.KohdeId} \"{k.Ankkuri}\" ({kuva.width}×{kuva.height}{(esi != null ? ", esiladattu" : "")}), lepo {asettelu.LepoLaatikko} ({w:0}×{h:0}, {napit?.Count ?? 0} nappia väistetty)");
             // Sisään oikealta kaukaa pienenä, hidastuen; kasvaa lepopaikkaa lähestyessään (KorttiAsettelu.Sisaan).
             for (float t = 0f; t < SisaanS; t += Time.unscaledDeltaTime)
             {
