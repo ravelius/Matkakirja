@@ -11,6 +11,7 @@
 // KOORDINAATIT: paikallinen x poikki siiven (+x = itä-koillinen, ison pihan puoli), z pitkin siipeä (−z = Kirkkotorni,
 // +z = etelä-kaakko), y = maailman korkeus. sijoitus suunta 333 kääntää paikallisen −z:n kompassiin 333 (kohti tornia).
 // Paikallinen origo = siiven keskilinja (maailma −10,56; 5,38). Tornin keskipiste paikallisesti (4,73; −19,62).
+import { kehyksetSeinasta } from './kehykset.js';
 const r3 = (v) => Math.round(v * 1000) / 1000;
 
 const LEV = 7.0, Z0 = -12.3, Z1 = 4.7, ZK = (Z0 + Z1) / 2; // sisämitat
@@ -112,7 +113,7 @@ export const TILA_LINNANTUPA = {
     { paikka: [r3(XW + 0.4), r3(YT + 2.1), -7.0], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
     { paikka: [r3(XE - 0.4), r3(YT + 2.1), -8.5], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
   ],
-  palikat: [TUPA_LATTIA, TUPA_KATTO, ...TUPA_PALKIT, ...TUPA_SEINAT, ...TUPA_AUKOT, ...TUPA_KALUSTEET],
+  palikat: [TUPA_LATTIA, TUPA_KATTO, ...TUPA_PALKIT, ...TUPA_SEINAT, ...TUPA_SEINAT.flatMap((s, i) => kehyksetSeinasta(s, { siemen: 70 + i })), ...TUPA_AUKOT, ...TUPA_KALUSTEET],
 };
 
 /* ==================== Voudin sali (3. krs) ==================== */
@@ -168,5 +169,5 @@ export const TILA_VOUDIN_SALI = {
     { paikka: [r3(XW + 0.4), r3(YS + 2.3), -9.0], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
     { paikka: [r3(XE - 0.4), r3(YS + 2.3), 3.0], sade: 4, voima: 1.0, vari: '#ff9a4a', lepatus: 0.3 },
   ],
-  palikat: [SALI_LATTIA, ...SALI_SEINAT, SALI_HOLVI, ...SALI_AUKOT, ...SALI_KALUSTEET],
+  palikat: [SALI_LATTIA, ...SALI_SEINAT, ...SALI_SEINAT.flatMap((s, i) => kehyksetSeinasta(s, { siemen: 80 + i })), SALI_HOLVI, ...SALI_AUKOT, ...SALI_KALUSTEET],
 };

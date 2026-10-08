@@ -18,6 +18,7 @@
 // 1,0; 13,4) putoaa tulisijan reunalle, esine:savipurkki/lautanen/omena pöydälle (niiden kohdat jätetty tyhjiksi);
 // partio:keittio-1/-2 (z 11,6) kulkee pihan seinän vierustaa hyllyjen (syvyys 0,32) ja pöydän välistä.
 // Lähteet ja arviot: _valmiit/olavinlinna-keittio-g102-v1/LAHTEET.md (kalusteiden paikat arvio A).
+import { kehyksetSeinasta } from './kehykset.js';
 import { TILA as KEITTIO } from './keittio.js';
 import { KOHTAUKSET_V3 } from './kohtaukset-v3.js';
 
@@ -174,6 +175,8 @@ export const TILA = {
   ],
   palikat: [
     ...LATTIA, ...KATTO, ...PALKIT, ...SEINAT,
+    // 9.10. (#4): pihan seinän oven ja ikkunoiden kivikehykset huoneen puolelle.
+    ...kehyksetSeinasta(SEINAT[0], { siemen: 102 }),
 
     // --- Tulisija ja savuhuuva kehämuuria vasten, tuli ja padat, ympärillä halot ja välineet.
     { resepti: 'tulisija', paikka: tl(0, 0), suunta: r3(SA), ...TL, huuva: HUUVA },
