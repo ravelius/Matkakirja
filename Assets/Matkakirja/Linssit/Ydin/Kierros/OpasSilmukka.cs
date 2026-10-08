@@ -173,6 +173,14 @@ namespace Matkakirja.Linssit.Kierros
         public const double LentoMinS = 3.5, LentoMaxS = 14;
         /// <summary>Kertoja aloittaa kappaleen näin monta sekuntia ennen saapumista (nimi kuuluu, kun kamera laskeutuu).</summary>
         public const double PuheEnnenS = 5, PuheAikaisinS = 2;
+        /// <summary>
+        /// Kerronnan alku ennen lennon loppua: pitkillä lennoilla aiemmin, max(PuheEnnenS, kesto − PuheLennonAlkuS) (Päätoimittaja 8.10. ilta,
+        /// PalloKaupungitTestit.PuheJaLento: ~15 s:n lennoilla hiljaisuus 8,3 s). Lennon alku (PuheLennonAlkuS) on lähtölauseen ja nousun aikaa.
+        /// </summary>
+        public static double PuheEnnen(double lentoKestoS) => Math.Max(PuheEnnenS, lentoKestoS - PuheLennonAlkuS);
+        public const double PuheLennonAlkuS = 9;
+        /// <summary>Lähdön laattaodotus käynnissä (s; 0 = ei odoteta): pallon odotusäänet (sovitin, PalloKori).</summary>
+        public double LaattaOdotusS => LahtoValmisteilla ? lahtoOdotusS : 0;
         /// <summary>Avauksen liuku kaupungin ylle odottaessa ensimmäistä kohdetta (s; etäisyys × kerroin, kallistus +).</summary>
         public const double AlkuLiukuS = 14, AlkuLiukuKerroin = 0.5, AlkuLiukuKallistus = 8;
         /// <summary>Puheen jälkeen tauko ennen lentoa (s) ja kierto pysähdyksessä (°/s).</summary>
@@ -1053,7 +1061,7 @@ namespace Matkakirja.Linssit.Kierros
                         Asento = new Kuvakulma(Asento.Lat, Asento.Lon, Asento.EtaisyysM, Asento.Kallistus,
                             KierrosLento.Kiedo(Asento.Suuntima + OpasKuvaus.KierronHiipuminen(kiertoJatko, VaiheAika)), Asento.KatseKorkeusM);
                     // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
-                    if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
+                    if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnen(LentoKestoS))) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
                     // Pallo ei jää lennon loppuun seisomaan (LS2:n PalloKierrosTestit, hidas verkko: 3 s paikallaan kehyksessä): kertoja
                     // alkoi jo PuheEnnenS ennen saapumista, ja pysähdyksen lipuminen alkaa heti laattojen latautuessa.

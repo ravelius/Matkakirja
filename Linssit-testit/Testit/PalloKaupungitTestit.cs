@@ -206,7 +206,7 @@ namespace Matkakirja.Linssit.Testit
                         if (pj < 0) continue;
                         double loppu = e.t + e.kesto, ennen = loppu - tap[pj].t;
                         tu.PuheEnnen = Math.Max(tu.PuheEnnen, ennen);
-                        if (ennen > OpasSilmukka.PuheEnnenS + 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {ennen:F1} s ennen lennon loppua (lennon keskellä)");
+                        if (ennen > OpasSilmukka.PuheEnnen(e.kesto) + 0.5) tu.Viat.Add($"{vk} {k.Nimi}: kerronta alkaa {ennen:F1} s ennen lennon loppua (lennon keskellä)");
                         if (!double.IsNaN(hiljaaAlkoi))
                         {
                             double hiljaisuus = (tap[pj].t - hiljaaAlkoi) - SiltaS;
@@ -221,6 +221,19 @@ namespace Matkakirja.Linssit.Testit
                 }
             }
             return tu;
+        }
+
+        /// <summary>Hitaan verkon laattaodotus ilman kertojaa hyväksytään, kun pallon omat äänet soivat (Päätoimittaja 8.10. ilta): tuuli soi
+        /// äänimaisemassa myös kaupungeissa ilman äänikarttaa (34/37) kaikilla pysähdyskorkeuksilla.</summary>
+        [Testi] static void TuuliSoiOdotuksessaIlmanAanikarttaa()
+        {
+            foreach (double h in new[] { 60.0, 150, 400, 1200 })
+            {
+                var m = new Matkakirja.Linssit.Aanet.KaupunkiAanimaisema();
+                for (int i = 0; i < 120; i++) m.Paivita(new Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.Syote { Painot = null, KorkeusM = h, NopeusMs = 2, Tunti = 12, Paalla = true }, 0.05);
+                double tuuli = m.Tasot[Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.Indeksi(Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.Tuuli)];
+                Oleta.Tosi(tuuli >= Matkakirja.Linssit.Aanet.KaupunkiAanimaisema.TuuliMaa - 1e-9, $"tuuli {tuuli:F2} korkeudella {h} m");
+            }
         }
 
         [Testi] static void PuheJaLentoTahdissaKaikissaKaupungeissa()

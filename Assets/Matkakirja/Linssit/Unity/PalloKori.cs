@@ -409,6 +409,17 @@ namespace Matkakirja.Natiivi
             return xmax > xmin && ymax >= ymin ? new Rect(xmin, ymin, xmax - xmin, ymax - ymin) : default;
         }
 
+        /// <summary>Lähdön laattaodotus (pallo lipuu, kertoja hiljaa): kori narahtaa ja köysi kiristyy hiljaa, enintään NarinaValiS välein
+        /// (omistaja TF 163: narina ×0,25). Ei poltinta (pallo ei nouse).</summary>
+        public void OdotusAani()
+        {
+            float nyt = Time.unscaledTime;
+            if (nyt - viimeNarina <= NarinaValiS) return;
+            viimeNarina = nyt;
+            Soita("korin-narina", 0.5f * NarinaTaso);
+            Soita("koyden-kiristys", 0.35f * NarinaTaso);
+        }
+
         void Aanet(float vaakaKiihtyvyys, float pystyNopeus)
         {
             float nyt = Time.unscaledTime;
