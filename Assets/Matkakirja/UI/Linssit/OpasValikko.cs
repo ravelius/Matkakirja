@@ -16,6 +16,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Kierros;
 using Matkakirja.Peli;
 using UnityEngine;
@@ -266,10 +267,13 @@ namespace Matkakirja.Natiivi
             // Juna 156: tauko siirtyi ohjainriville oikean tapin alle (Seuraavan viereen); ylänurkassa ■ ja ☰.
             kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
-            // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
+            // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila.
+            // SÄÄTILA (omistaja 8.10. 09.1x–09.2x "kumpikin toiminto saman napin alle"; Päätoimittaja): sama nappi avaa listan, jossa
+            // AIKA (päivä | yö) ja SÄÄ (pois | automaatti | käsin); valinta Ydin Saatila-luokkaan (LS1 tehosteet, Pelikoodari säähaku).
             aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
-            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Vuorokaudenaika", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
+            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Aika ja sää", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
+            LueSaatila();
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
             valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja tk-teema-harmaa", kerros.Juuri(kerrosNro));
@@ -1816,37 +1820,109 @@ namespace Matkakirja.Natiivi
         bool? testiLopeta;
         Button aikaNappi;
         string aikaKuvake;
-        static readonly (string Arvo, string Nimi)[] AikaValinnat = { ("auto", "Automaattinen"), ("aamu", "Aamu"), ("paiva", "Päivä"), ("ilta", "Ilta") };
+        static readonly (PalloAika Arvo, string Nimi)[] AikaValinnat = { (PalloAika.Paiva, "Päivä"), (PalloAika.Yo, "Yö") };
+        static readonly (PalloSaa Arvo, string Nimi)[] SaaValinnat =
+        {
+            (PalloSaa.Pois, "Pois"), (PalloSaa.Selkea, "Selkeä"), (PalloSaa.Pilvinen, "Pilvinen"), (PalloSaa.Sade, "Sade"),
+            (PalloSaa.Sumu, "Sumu"), (PalloSaa.Lumi, "Lumi"), (PalloSaa.Ukkonen, "Ukkonen"),
+        };
+        const string SaatilaAvain = "matkakirja-pallo-saatila";
 
-        /// <summary>LS1: KaupunkiKuva.Valinta (auto | aamu | paiva | ilta), pysyy avauksesta toiseen.</summary>
-        static string AikaValinta { get => KaupunkiKuva.Valinta ?? "auto"; set => KaupunkiKuva.Valinta = value; }
+        /// <summary>LS1:n silta (junat 165–166): KaupunkiKuva.Valinta "paiva" | "yo" = voimassa oleva Saatila.Aika.</summary>
+        static string AikaValinta { get => KaupunkiKuva.Valinta ?? "paiva"; set => KaupunkiKuva.Valinta = value; }
 
-        /// <summary>LS1: KaupunkiKuva.Nyt (aamu | paiva | ilta | yo), voimassa oleva tila.</summary>
+        /// <summary>LS1: KaupunkiKuva.Nyt (paiva | yo), voimassa oleva tila.</summary>
         static string AikaNyt => KaupunkiKuva.Nyt ?? "paiva";
 
+        static string Avain(PalloAika a) => a == PalloAika.Yo ? "yo" : "paiva";
+        static string Nimi(PalloAika a) => AikaValinnat.FirstOrDefault(x => x.Arvo == a).Nimi;
+        static string Nimi(PalloSaa s) => SaaValinnat.FirstOrDefault(x => x.Arvo == s).Nimi;
+
+        /// <summary>
+        /// Tallennettu säätila (PlayerPrefs; oletus LIVE pois, päivä, sää pois) Saatila-luokkaan; jokainen muutos tallennetaan ja
+        /// voimassa oleva aika kirjoitetaan LS1:n sillalle.
+        /// </summary>
+        static bool saatilaLuettu;
+        static void LueSaatila()
+        {
+            if (saatilaLuettu) return;
+            saatilaLuettu = true;
+            Saatila.Lue(PlayerPrefs.GetString(SaatilaAvain, ""));
+            AikaValinta = Avain(Saatila.Aika);
+            Saatila.Muuttui += () =>
+            {
+                PlayerPrefs.SetString(SaatilaAvain, Saatila.Tallenne); PlayerPrefs.Save();
+                if (AikaValinta != Avain(Saatila.Aika)) AikaValinta = Avain(Saatila.Aika);
+            };
+        }
+
+        /// <summary>Sään kuvake (Ikonit.Viiva): selkeä = aurinko; null = sää pois.</summary>
+        static string SaaKuvake(PalloSaa s) => s switch
+        {
+            PalloSaa.Selkea => "paiva", PalloSaa.Pilvinen => "pilvi", PalloSaa.Sade => "sade", PalloSaa.Sumu => "sumu",
+            PalloSaa.Lumi => "lumi", PalloSaa.Ukkonen => "ukkonen", _ => null,
+        };
+
+        /// <summary>
+        /// ☾-nappi: LIVE päällä → vain teksti LIVE läpikuultavalla oranssilla pohjalla (omistaja 8.10. 09.1x; tila.live-kuulto, koko ja
+        /// kulma ennallaan); muuten ajan kuvake ja sen kulmassa pieni sääkuvake, kun sää ei ole pois.
+        /// </summary>
         void PaivitaAika()
         {
-            string nyt = AikaNyt, val = AikaValinta;
-            string k = nyt + (val == "auto" ? ":A" : "");
+            string nyt = AikaNyt;
+            string k = nyt + "|" + Saatila.Saa + "|" + Saatila.Live;
             if (k != aikaKuvake && Ikonit.Viiva.TryGetValue(nyt, out var svg))
             {
                 aikaKuvake = k;
                 aikaNappi.Clear();
-                aikaNappi.Add(new SvgIkoni(svg));
-                if (val == "auto") Kirjasimet.Aseta(Rakenne.Teksti("A", "mk-ohjausnappi__merkki", aikaNappi), Kirjasin.ModerniLihava);
-                aikaNappi.tooltip = "Vuorokaudenaika: " + (AikaValinnat.FirstOrDefault(x => x.Arvo == val).Nimi ?? val);
+                aikaNappi.EnableInClassList("mk-ohjausnappi--live", Saatila.Live);
+                if (Saatila.Live) Kirjasimet.Aseta(Rakenne.Teksti("LIVE", "mk-ohjausnappi__live", aikaNappi), Kirjasin.ModerniLihava);
+                else
+                {
+                    aikaNappi.Add(new SvgIkoni(svg));
+                    if (SaaKuvake(Saatila.Saa) is string sk && Ikonit.Viiva.TryGetValue(sk, out var ssvg))
+                    {
+                        var pieni = new SvgIkoni(ssvg);
+                        pieni.AddToClassList("mk-ohjausnappi__saa");
+                        aikaNappi.Add(pieni);
+                    }
+                }
+                aikaNappi.tooltip = (Saatila.Live ? "Live: " : "Aika ja sää: ") + Nimi(Saatila.Aika) + ", sää " + Nimi(Saatila.Saa).ToLowerInvariant();
             }
             if (aikaNappi.parent?.panel != null && Juuri.panel != null) nimilappu.Este = Juuri.WorldToLocal(aikaNappi.parent.worldBound);
         }
 
+        /// <summary>
+        /// ☾-lista (omistaja 8.10.2026 klo 09.1x): ylimpänä LIVE omassa korostetussa laatikossaan (päällä tila-live oranssi, pois
+        /// teeman toiminto-harmaa), sitten AIKA (päivä, yö) ja SÄÄ (pois … ukkonen) ✓-merkein. LIVE kytkee molemmat kohteen
+        /// todellisiin ja palauttaa pois kytkettäessä käsivalinnat; käsivalinta LIVEn aikana sammuttaa LIVEn (Saatila).
+        /// </summary>
         void RakennaAika()
         {
-            Kirjasimet.Aseta(Rakenne.Teksti("VUOROKAUDENAIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
-            string val = AikaValinta;
+            var live = Komento("LIVE", () => { Saatila.Live = !Saatila.Live; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: live " + (Saatila.Live ? "päälle" : "pois")); }, valikko);
+            live.AddToClassList("mk-linssivalikko__live");
+            live.EnableInClassList("mk-valittu", Saatila.Live);
+            live.tooltip = Saatila.Live ? "Live päällä: kohteen kellonaika ja sää" : "Live pois";
+            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
             foreach (var (arvo, nimi) in AikaValinnat)
             {
-                string a = arvo;
-                Komento(nimi + (a == val ? "  ✓" : ""), () => { AikaValinta = a; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: vuorokaudenaika " + a); });
+                var a = arvo;
+                Komento(nimi + (!Saatila.Live && a == Saatila.Aika ? "  ✓" : ""), () =>
+                {
+                    Saatila.AikaValinta = a; aikaKuvake = null;
+                    Debug.Log("MATKAKIRJA opas: aika " + Avain(a));
+                });
+            }
+            Viiva();
+            Kirjasimet.Aseta(Rakenne.Teksti("SÄÄ", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
+            foreach (var (arvo, nimi) in SaaValinnat)
+            {
+                var sv = arvo;
+                Komento(nimi + (!Saatila.Live && sv == Saatila.Saa ? "  ✓" : ""), () =>
+                {
+                    Saatila.SaaValinta = sv; aikaKuvake = null;
+                    Debug.Log("MATKAKIRJA opas: sää " + sv);
+                });
             }
         }
 
@@ -2029,7 +2105,16 @@ namespace Matkakirja.Natiivi
                     testiMika = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: mikä tämä on " + (testiMika == true ? "näkyy (testi)" : "pois");
                 case "aika":
-                    Avaa(Nakyma.Aika); return "opas: vuorokaudenaika " + AikaValinta + " / " + AikaNyt;
+                    // `ui opasvalikko aika [live|paiva|yo|pois|selkea|…]`: lista auki tai valinnat suoraan (live = kytkin).
+                    for (int j = 1; j < o.Length; j++)
+                    {
+                        if (o[j] == "live") Saatila.Live = !Saatila.Live;
+                        else if (o[j] == "paiva" || o[j] == "yo") Saatila.AikaValinta = o[j] == "yo" ? PalloAika.Yo : PalloAika.Paiva;
+                        else if (System.Enum.TryParse(o[j], true, out PalloSaa sv) && System.Enum.IsDefined(typeof(PalloSaa), sv)) Saatila.SaaValinta = sv;
+                        aikaKuvake = null;
+                    }
+                    if (o.Length == 1) Avaa(Nakyma.Aika);
+                    return $"opas: live {(Saatila.Live ? "päällä" : "pois")}, aika {Saatila.Aika} (KaupunkiKuva {AikaValinta} / {AikaNyt}), sää {Saatila.Saa}, tallenne {Saatila.Tallenne}";
                 case "jatka":
                     testiJatka = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");
