@@ -496,7 +496,11 @@ namespace Matkakirja.Linssit.Kierros
         // ---- SIIRTO ILMAN LENTOA (omistaja 6.10. 12.0x) ----
         /// <summary>Kaupungin rajan arvio: tätä pidemmälle ei lennetä, vaan siirrytään latausruudun kautta.</summary>
         // SiirtoMaxS 12 (Päätoimittaja 8.10. 09.0x: peite pois vasta yleiskuva + 1. kohde ≥ 95 %, turvaraja ~12 s).
-        public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 12;
+        // Juna 165 (lupa 09.2x): turvaraja 20 s, kun 1. kohde ladataan yleiskuvan jälkeen.
+        public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 20;
+        /// <summary>Siirron 1. vaihe valmis: yleiskuva ≥ SiirtoValmis (vasta sitten 1. kohteen esilataus).</summary>
+        public bool YleiskuvaValmis { get; private set; }
+        double yleiskuvaAika;
 
         /// <summary>
         /// Workerin pyyntöjen sijainti (omistaja TF 152: natiivi lähetti Ateenalle, Amsterdamille, Pariisille ja Sydneylle Kööpenhaminan
@@ -524,7 +528,7 @@ namespace Matkakirja.Linssit.Kierros
         void AloitaSiirtoJosKaukana(double matkaM, double lat, double lon, string nimi)
         {
             siirto = matkaM >= SiirtoRajaM || PakotaSiirto;
-            PakotaSiirto = false;
+            PakotaSiirto = false; YleiskuvaValmis = false;
             if (!siirto) return;
             SiirtoNimi = nimi; SiirtoEdistys = 0;
             SiirtoAlkaa?.Invoke(lat, lon);
@@ -995,9 +999,14 @@ namespace Matkakirja.Linssit.Kierros
                         // Näyte uudelleen sekunnin välein (video8 8.10.: ensimmäinen pyyntö lähti ennen kuin kaupunki oli auki, hylättiin
                         // hiljaa, ja siirto odotti 90 %:n katossa aina 25 s:n aikarajaan asti).
                         if (maaOdottaa && VaiheAika - maaPyydetty >= 1.0) { maaPyydetty = VaiheAika; MaaTarvitaan?.Invoke(kohdeKehys.Lat, kohdeKehys.Lon); }
-                        SiirtoEdistys = Math.Max(0, Math.Min(maaOdottaa ? SiirtoMaatonEdistys : 1, ed));
+                        double aste = Math.Max(0, Math.Min(maaOdottaa ? SiirtoMaatonEdistys : 1, ed));
                         bool tuore = VaiheAika - maaTunnettu >= SiirtoMaaOdotusS;
-                        if (VaiheAika < SiirtoMinS || ((SiirtoEdistys < SiirtoValmis || !tuore) && VaiheAika < SiirtoMaxS)) break;
+                        // KAKSI VAIHETTA (Päätoimittaja 8.10. 09.2x, video9: 12 s:n rajalla laatat 70 %): ensin vain yleiskuva ≥ SiirtoValmis,
+                        // sitten 1. kohteen esikamera (Esilataus) ja uudelleen ≥ SiirtoValmis LahtoMittausS:n jälkeen; palkki 0–60 % / 60–100 %.
+                        if (!YleiskuvaValmis && aste >= SiirtoValmis && tuore && VaiheAika >= SiirtoMinS) { YleiskuvaValmis = true; yleiskuvaAika = VaiheAika; }
+                        bool kohdeKesken = EsiKohde != null && (!YleiskuvaValmis || VaiheAika - yleiskuvaAika < LahtoMittausS);
+                        SiirtoEdistys = EsiKohde == null ? aste : YleiskuvaValmis ? 0.6 + 0.4 * (VaiheAika - yleiskuvaAika < LahtoMittausS ? 0 : aste) : 0.6 * aste;
+                        if (VaiheAika < SiirtoMinS || ((aste < SiirtoValmis || !tuore || kohdeKesken) && VaiheAika < SiirtoMaxS)) break;
                         siirto = false; VaiheAika = LentoKestoS + SaapumisOdotusS;   // perillä, laatat valmiit
                         avausViive = AvausTaukoS;   // omistaja 16.5x: reilu sekunti ennen kertojaa, ei "hätiköityä" alkua
                     }
@@ -1092,7 +1101,7 @@ namespace Matkakirja.Linssit.Kierros
         public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
         {
             // Linssireitti (omistaja 8.10. ~09.0x): esilataus jatkuu siirron jälkeen kysymysvaiheessa, kunnes kierros alkaa.
-            if (EsiKohde is (string en, double ela, double elo) && (Siirtymassa || (PyynnotSeis && Vaihe != OpasVaihe.Lentaa)
+            if (EsiKohde is (string en, double ela, double elo) && ((Siirtymassa && YleiskuvaValmis) || (PyynnotSeis && Vaihe != OpasVaihe.Lentaa && !Siirtymassa)
                 || (Vaihe == OpasVaihe.Odottaa && Nykyinen == null && Seuraava == null)))
                 return OpasKuvaus.Pysahdyksella(KehysKohteelle(new OpasKohde { Nimi = en, Lat = ela, Lon = elo, KokoM = 120 }, maaKorkeus), 0);
             // Saavuttu (odotetaan laattoja): pääkamera on jo kehyksessä → esikamera pois, latausaste mittaa vain pääkameraa.

@@ -244,6 +244,28 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s.Siirtymassa, "näytteen jälkeen siirto valmistuu ennen aikarajaa");
         }
 
+        // Juna 165 (Päätoimittaja 09.2x, video9: 12 s:ssa 70 %): siirrossa ensin yleiskuva, vasta sitten 1. kohteen esikamera.
+        [Testi] static void SiirtoLataaEnsinYleiskuvanJaSittenKohteen()
+        {
+            var s = new OpasSilmukka(OpasSilmukka.Avauskuva(55.68, 12.57));
+            s.Pyyda += (n, t) => { };
+            s.MaaPisteessa = (la, lo) => 35;
+            double ed = 0.5;
+            s.LatausEdistys = () => ed;
+            s.EsiKohde = ("Notre-Dame", 48.8530, 2.3499);
+            s.PakotaSiirto = true;
+            s.VaihdaPaikka(48.861, 2.351, "Pariisi");
+            for (int i = 0; i < 20; i++) s.Paivita(0.1, _ => 35);
+            bool NotreDamessa(Kuvakulma? k) => k is Kuvakulma kk && KierrosLento.EtaisyysM(kk.Lat, kk.Lon, 48.8530, 2.3499) < 300;
+            Oleta.Tosi(s.Siirtymassa && !s.YleiskuvaValmis && !NotreDamessa(s.Esilataus(_ => 35)), "1. vaihe: vain yleiskuva (esikamera ei Notre-Damessa)");
+            Oleta.Tosi(s.SiirtoEdistys <= 0.6 + 1e-9, $"palkki 1. vaiheessa ≤ 60 % ({s.SiirtoEdistys:P0})");
+            ed = 0.97;
+            for (int i = 0; i < 3; i++) s.Paivita(0.1, _ => 35);
+            Oleta.Tosi(s.Siirtymassa && s.YleiskuvaValmis && NotreDamessa(s.Esilataus(_ => 35)), "2. vaihe: 1. kohde esiladataan, siirto jatkuu");
+            for (int i = 0; i < 10 && s.Siirtymassa; i++) s.Paivita(0.1, _ => 35);
+            Oleta.Tosi(!s.Siirtymassa, "mittausajan jälkeen ≥ 95 % → siirtoruutu pois");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

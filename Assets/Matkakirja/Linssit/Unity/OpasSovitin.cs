@@ -2437,7 +2437,7 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: peite pois {Time.realtimeSinceStartup - t0:F1} s, laatat {kaupunki.Latausaste:F0} %");
         }
         // Päätoimittaja 8.10. 09.0x: peite pois vasta ≥ 95 % (yleiskuva ja 1. kohde), turvaraja ~12 s (oli 35 % / 4 s).
-        const float PeiteRaja = 95f, PeiteMaxS = 12f;
+        const float PeiteRaja = 95f, PeiteMaxS = 20f;   // juna 165: turvaraja 20 s (1. kohde yleiskuvan jälkeen)
 
         public void Sulje()
         {
