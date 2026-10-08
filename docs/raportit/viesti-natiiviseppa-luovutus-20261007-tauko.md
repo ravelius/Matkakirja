@@ -3,7 +3,16 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 02.0x (UUSIN)
+## TILA 9.10. 02.2x (UUSIN)
+JUNA 169 runko natiiviseppa/juna-169 **0f76ca59a** (+ Siirtoseppä b8a0e4133 avainsanat ⊇ 7b8b4353f); testit 453/419/1088, tarkista 0; LS2: linna OK
+käännöksellä cc69414f (saapuminen 26,5 s). Odottaa LS1:n lopullista SHA:ta, TAKARAJA 06.30 (herätys 06.25).
+JUNA 170 kärjet: Siirtoseppä e65d19131 (⊇ 817eb1f3e), NUI b3bb7a460 (⊇ c247d7872), LS1 avaus-170 db9ad39ca, LS2 laivat-170 4b6f0d820 (+ pilvi-SHA tulossa),
+OMA filmi-170 **441d17a94** (DoF POIS: sumensi koko kuvan). Filmi-kuvapari: 1. ajo komennot väärin (`komento opas` → oikein `linssi opas`), 2. ajo paljasti
+DoF-vian → UUSINTA ~03.20 Julkaisijan vuorolla: KÄÄNNÖS NYT filmi-170 (LS2:n käännöksen ja simun väliin), sitten SIMU A2A6FEF2 →
+`zsh proto-3d/tyokalut/natiiviseppa-ajot/filmi-kuvapari.sh` (APP-polku ja --sha päivitettävä uuteen käännökseen) → tarkista kuvat (ennen ≠ jälkeen, terävyys ei romahda) → PT:lle.
+Skenaariot proto-3d/tyokalut/natiiviseppa-ajot/sk-filmi170-{tukholma,pariisi}.txt.
+
+## TILA 9.10. 02.0x
 JUNA 169 runko natiiviseppa/juna-169 **6f193cd9d** (+ Siirtoseppä 7b8b4353f, NUI 351657a2c metro-kyltti ⊇ 2e519d7a7); simukäännös 42d7035ab 01.40 0 shader
 erroria (6f193cd9d = + NUI, vain C#); testit 453/419/1088. LUKITUS: LS1:n lopullinen 169-SHA (⊇ sumennus-169 8aef6a2ff) tai TAKARAJA 06.30 (herätys
 06.25) ilman sitä; muutosloki PT:ltä; TF aamulla. LS2 vahvisti linnan avautuvan (saapuminen 26,5 s).
