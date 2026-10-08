@@ -1,3 +1,18 @@
+# TILANNE 8.10. klo 20.5x
+
+- **Elävä kaupunki (omistaja 20.4x, Linssiseppä tekee suunnitelman docs/raportit/pallo-elava-kaupunki-20261008.md):**
+  - Osion C teksti on lähetetty Linssisepälle (OSM-aineisto, ODbL, ehdot C1–C4).
+  - LS2:lle kanta, että oma materiaali Google-laatoille (ilmaperspektiivi, pilvien varjot) käy.
+  - Ehtolisäys kohteen leikkauksesta: PR https://github.com/ravelius/Matkakirja/pull/4228 (wt/karttaseppa-ehdot-leikkaus).
+- **Tukholman kaupunkiaineisto VALMIS** → /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/kaupunki-tukholma-20261008/ (Linssisepälle ilmoitettu):
+  - reitit-tukholma.json (reitit.mjs, shp)
+  - kohteet-tukholma.json (pbf-kohteet.mjs: lautat 163, vesialueet 175, piiput, aukiot, suihkulähteet)
+  - vesi-tukholma-maski.png (vesipinta.mjs --maski, 8 m)
+  Työkalut ovat T7:llä `vesimaski/` ja PR:ssä #4227 (wt/karttaseppa-vesipinta, f2ed3b672). Ruotsin PBF ja shp-paketit ovat `lahteet/`-kansiossa.
+- Odottaa: LS2:n kuvapari (vesi), PT:n säde-päätös Euroopan ajolle, Linssisepän toiveet muihin kaupunkeihin.
+
+---
+
 # TILANNE 8.10. klo 20.3x
 
 - **OMISTAJA 20.2x: "B"** = oma vesipinta Googlen 3D-laattojen päälle. Rantaviivat OSM:stä, ESA WorldCover täydentää.
