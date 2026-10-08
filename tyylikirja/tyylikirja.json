@@ -95,9 +95,10 @@
     "kuva": "rgba(14, 9, 4, 0.92)"
   },
   "tila": {
-    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana.",
+    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana. live: ☾-listan LIVE-laatikon pohja päällä (oranssi; pois = teeman toiminto-harmaa; omistaja 8.10.2026 klo 09.1x).",
     "onnistuminen": "#2f6b3f",
-    "virhe": "#b03a2b"
+    "virhe": "#b03a2b",
+    "live": "#e8892e"
   },
   "kentta": {
     "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
