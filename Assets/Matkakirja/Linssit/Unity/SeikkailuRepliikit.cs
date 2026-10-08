@@ -80,6 +80,15 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Transform> kiinteat = new Dictionary<string, Transform>(StringComparer.Ordinal);
         public bool On(string tunnus) => repliikit.ContainsKey(tunnus);
 
+        /// <summary>M-osa (8.10.): uusi repliikki, jos se on manifestissa (omistajan luvalla generoitu), muuten vara (olemassa oleva) tai
+        /// hiljaisuus. Aktiivinen puuttuu tai ei valmis → 0.</summary>
+        public static double SoitaTaiVara(string tunnus, string vara, Vector3 paikka)
+        {
+            var r = Aktiivinen; if (r == null || !r.Valmis) return 0;
+            string t = r.On(tunnus) ? tunnus : vara != null && r.On(vara) ? vara : null;
+            return t != null ? r.Soita(t, paikka) : 0;
+        }
+
         /// <summary>Soittaa repliikin puhujan kohdalta (puhuja = Transform, jota ääni seuraa). Palauttaa keston (s) tai 0.</summary>
         public double Soita(string tunnus, Transform puhuja)
         {
@@ -102,7 +111,7 @@ namespace Matkakirja.Natiivi
                 puhujat[avain] = a;
             }
             puhujaT[avain] = puhuja;
-            a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus; a.Play();
+            a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus * Asetukset.Taso(Voima.Repliikit); a.Play();   // ☰-mikseri "Hahmojen repliikit"
             kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ({r.Hahmo}, {r.KestoS:F1} s)");
         }
 

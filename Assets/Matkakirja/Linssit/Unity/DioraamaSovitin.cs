@@ -953,6 +953,16 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(VartijatPaalle());
             o.StartCoroutine(KappeliPaalle());
             o.Kirjaa($"seikkailu: jatko tarkistuspisteestä {t.TarkistusOsa} ({alku}), kulunut {t.KulunutS:F0} s");
+            // M-osa: tila (puettu, avaimet, ovet, kulho, köysi, tiilet, kilvet, arkku, kello) takaisin, kun esineet ja huoneiden 6–10 osat
+            // on luotu (enintään 60 s).
+            for (float w = 0; w < 60f && !(SeikkailuEsineet.Aktiivinen is SeikkailuEsineet es0 && es0.Valmis); w += Time.unscaledDeltaTime) yield return null;
+            if (SeikkailuEsineet.Aktiivinen is SeikkailuEsineet es && es.Valmis)
+            {
+                var m = Matkakirja.Linssit.Seikkailu.MTila.Lue(t);
+                es.PalautaM(m); SeikkailuSali.Aktiivinen?.PalautaM(m); SeikkailuKomero.Aktiivinen?.PalautaM(m); SeikkailuPako.Aktiivinen?.PalautaM(m);
+                for (float w = 0; w < 30f && SeikkailuKappeli.Aktiivinen == null; w += Time.unscaledDeltaTime) yield return null;
+                SeikkailuKappeli.Aktiivinen?.Palauta(t);   // ratkaistu kappeli ei toistu jatkossa huoneisiin 6–10
+            }
         }
         /// <summary>Kamera ulkoisen ohjauksen vallassa (E3 loppu: SeikkailuNousu); Sovitin ei kirjoita kameraan.</summary>
         public static bool KameraVapaa;
@@ -1058,6 +1068,13 @@ namespace Matkakirja.Natiivi
                     var kg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(kg);
                     foreach (var glb in kg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
                 }
+                // Takakuvan hahmo (M-osa: ulkoseinä, köysilasku): Fogg asu v2 piilossa, kunnes pelaaja on takakuvassa.
+                if (sp.TakakuvaHahmo != null)
+                {
+                    nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.TakakuvaHahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
+                    var tg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(tg);
+                    foreach (var glb in tg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                }
                 o.StartCoroutine(EsineetPaalle());
                 o.Kirjaa("seikkailu: ensimmäinen persoona (ei pelaajahahmoa)");
                 return;
@@ -1109,6 +1126,7 @@ namespace Matkakirja.Natiivi
             }
             SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
             SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1/manifest.json");   // Pelikoodari: askeleet, kantele (puuttuva ohitetaan)
+            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v2/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot …
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);

@@ -1566,6 +1566,7 @@
   "raapaisut": 2,
   "irrotettava": true,
   "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
   "huom": "ensimmäinen putoaa aina kalliolle (14 m); muut vedolla: hidas veto komeroon, nopea pudottaa",
   "osa": "muurikaytava"
  },
@@ -1579,6 +1580,7 @@
   "raapaisut": 2,
   "irrotettava": true,
   "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
   "huom": "tiili, 2 raapaisua",
   "osa": "muurikaytava"
  },
@@ -1592,6 +1594,7 @@
   "raapaisut": 2,
   "irrotettava": true,
   "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
   "huom": "tiili, 2 raapaisua",
   "osa": "muurikaytava"
  },
@@ -1605,6 +1608,7 @@
   "raapaisut": 2,
   "irrotettava": true,
   "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
   "huom": "tiili, 2 raapaisua",
   "osa": "muurikaytava"
  },
@@ -1618,6 +1622,7 @@
   "raapaisut": 2,
   "irrotettava": true,
   "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
   "huom": "tiili, 2 raapaisua",
   "osa": "muurikaytava"
  },
@@ -1631,6 +1636,7 @@
   "raapaisut": 2,
   "irrotettava": true,
   "kierto_y": -1.7453,
+  "glb": "esine-tiili-komero.glb",
   "huom": "tiili, 2 raapaisua",
   "osa": "muurikaytava"
  },
@@ -1827,6 +1833,9 @@
    -6.8,
    -22.7
   ],
+  "glb": "esine-koysi-vene.glb",
+  "kierto_y": 0.0,
+  "huom": "köysi vartijan kädestä (+0,9) veneen keulaan (+0,35); solmut koysi-ranta / koysi-vene (katkaisu puolivälistä); glb maailman akseleissa",
   "osa": "muurikaytava"
  },
  {

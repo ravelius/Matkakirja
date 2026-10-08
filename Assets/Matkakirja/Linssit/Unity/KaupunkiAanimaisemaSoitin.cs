@@ -150,9 +150,12 @@ namespace Matkakirja.Natiivi
                 Sade = Sade?.Invoke() ?? 0, Puhe = (tila != null && tila.Voimassa < 0.999) || OpasSovitin.OpasAaniSoi, Paalla = paalla && k.HasValue,
             }, Time.unscaledDeltaTime);
             float kokonais = (float)mikseri.Kokonais * Taso;
+            // ☰-mikseri (Natiivi-UI 8.10.): sade ja tuuli "Sää"-tasolla (Voima.Saa), muu äänimaisema "Äänimaisema"-tasolla (Voima.Tausta).
+            float saa = Asetukset.Taso(Voima.Saa), tausta = Asetukset.Taso(Voima.Tausta);
             for (int i = 0; i < lahteet.Length; i++)
             {
-                float t = (float)mikseri.Tasot[i] * kokonais;
+                string kerros = KaupunkiAanimaisema.Kerrokset[i];
+                float t = (float)mikseri.Tasot[i] * kokonais * (kerros == KaupunkiAanimaisema.Sade || kerros == KaupunkiAanimaisema.Tuuli ? saa : tausta);
                 var l = lahteet[i];
                 if (t > 0.001f && l == null) { Avaa(i); continue; }
                 if (l == null) continue;

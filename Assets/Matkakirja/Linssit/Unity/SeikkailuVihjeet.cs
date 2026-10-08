@@ -1,7 +1,8 @@
 // HISTORIAMOOTTORI: PULUN VIHJEET UNITYSSA (Siirtoseppä 7.10.2026; pelattavuusmalli kohta 5; ydin Seikkailu.Vihjeet). Pulun reunakuvan
 // napautus (Natiivi-UI → SeikkailuPelaaja.PuluVihje → VihjePyydetty) tai jumi (180 s ilman edistystä) antaa vihjeen ilman sanoja:
 // taso 1 kujerrus kohteen suunnasta 1,5 m:n päästä, taso 2 kujerrus kohteesta, taso 3 nokkaisu kohteessa. Kohde huoneen ja kappelin
-// vaiheen mukaan. Pulun lento maailmassa (malli) liitetään tähän, kun Linnanrakentajan pulu-glb on paketissa; nyt ääni kertoo suunnan.
+// vaiheen mukaan; M-osassa (huoneet 6–10, kappelin jälkeen) Ydin MVihjeet edistyksestä (LS2 8.10.), ja sen eteneminen nollaa jumiajastimen.
+// Pulun lento maailmassa (malli) liitetään tähän, kun Linnanrakentajan pulu-glb on paketissa; nyt ääni kertoo suunnan.
 using System;
 using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
@@ -54,7 +55,57 @@ namespace Matkakirja.Natiivi
             var p = SeikkailuPelaaja.Aktiivinen; if (p == null) return;
             var k = SeikkailuKappeli.Aktiivinen;
             bool keskustelu = k != null && k.Nyt == SeikkailuKappeli.Vaihe.Kohtaus;
+            if (MOsassa() && MVihjeet.Vaihe(MTila(p)) is int mv && mv > mVaihe) { if (mVaihe >= 0) ydin.Edistys(); mVaihe = mv; }
             if (ydin.Paivita(Time.deltaTime, Vaara(p), keskustelu || p.Eleessa) == 2) Nayta(p, 2, "jumi");
+        }
+
+        // --- M-osa (huoneet 6–10): edistys pelin tilasta Ydin MVihjeille ---
+        int mVaihe = -1;
+        static bool MOsassa()
+        {
+            var k = SeikkailuKappeli.Aktiivinen;
+            return k != null && k.Arvoitus.Vaihe == KappelinArvoitus.Valmis || (SeikkailuTietokerros.Aktiivinen?.Huone ?? 0) >= 6;
+        }
+
+        static Vector3 U((double X, double Y, double Z) q) => new Vector3((float)q.X, (float)q.Y, (float)-q.Z);
+        static Vector3? Merkki(string nimi) => MVihjeet.Paikka(SeikkailuKavely.Data, nimi) is (double, double, double) q ? U(q) : (Vector3?)null;
+
+        /// <summary>Komeron ydin (SeikkailuKomero.Ydin, tai yksityinen ydin-kenttä heijastuksella, kunnes julkinen on lisätty).</summary>
+        static Komero KomeroYdin()
+        {
+            var k = SeikkailuKomero.Aktiivinen; if (k == null) return null;
+            var t = typeof(SeikkailuKomero);
+            if (t.GetProperty("Ydin")?.GetValue(k) is Komero y) return y;
+            return t.GetField("ydin", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)?.GetValue(k) as Komero;
+        }
+
+        static MEdistys MTila(SeikkailuPelaaja p)
+        {
+            var es = SeikkailuEsineet.Aktiivinen; var pp = p.transform.position; var d = SeikkailuKavely.Data;
+            var komero = KomeroYdin(); var pako = SeikkailuPako.Aktiivinen?.Ydin;
+            bool Lahella(Vector3? a, string merkki, float m) => a is Vector3 v && Merkki(merkki) is Vector3 w && (v - w).sqrMagnitude < m * m;
+            int seuraava = -1; if (komero != null) for (int i = 0; i < komero.Tiilet.Maara; i++) if (!komero.Tiilet.Irti(i)) { seuraava = i; break; }
+            bool komeroAlkanut = komero != null && (seuraava != 0 || komero.Auki);
+            var e = new MEdistys
+            {
+                Naamio = es != null && es.Naamio, KulhoKadessa = es?.Kadessa == "keittokulho",
+                KulhoPoydalla = Lahella(es?.Paikka("keittokulho"), "esine:kulho-poydalle", 1.5f), Avaimet = es != null && es.Avaimet.Contains("avainrengas"),
+                OviAuki = Askelaani.Osa(d, pp.x, pp.y, -pp.z) == "muurikaytava",   // ovi auki ≈ pelaaja muurikäytävän puolella
+                Koysikieppi = es?.Kadessa == SeikkailuEsineet.Koysikieppi, KoysiSakarassa = Lahella(es?.Paikka(SeikkailuEsineet.Koysikieppi), "koysi:sakara", 0.8f),
+                Ote = p.OteKiipeily?.Ote ?? 0, SeuraavaTiili = komero != null ? seuraava : 0,
+                KiipeilyValmis = komeroAlkanut || Lahella(pp, "komero:kellotorni", 2f) || pako != null && pako.Vaihe != PakoVaihe.Odottaa,
+                ArkkuAuki = komero != null && komero.Auki || pako != null && pako.Vaihe != PakoVaihe.Odottaa,
+                Kilpi1 = komero?.Lukko.Kilpi1 ?? 0, Kilpi2 = komero?.Lukko.Kilpi2 ?? 0, KilpiTavoite = komero?.Lukko.TavoiteAste ?? 45, KilpiSallittu = komero?.Lukko.SallittuAste ?? 10,
+                Pako = pako?.Vaihe ?? PakoVaihe.Odottaa,
+            };
+            if (e.KoysiSakarassa) e.Koysikieppi = true;
+            return e;
+        }
+
+        static Vector3? MKohde(SeikkailuPelaaja p)
+        {
+            var e = MTila(p); var pp = p.transform.position;
+            return Merkki(MVihjeet.Kohde(e, SeikkailuKavely.Data, pp.x, pp.y, -pp.z));
         }
 
         /// <summary>Vihje heti (anteeksianto: 3. kiinnijäänti samassa huoneessa → taso 2 tarkistuspisteessä).</summary>
@@ -77,6 +128,7 @@ namespace Matkakirja.Natiivi
         {
             var pp = p.transform.position;
             if (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma ty) return ty.VihjeKohde();
+            if (MOsassa()) return MKohde(p);
             var es = SeikkailuEsineet.Aktiivinen; var ky = SeikkailuKynttilat.Aktiivinen; var k = SeikkailuKappeli.Aktiivinen;
             if (k != null && k.Nyt != SeikkailuKappeli.Vaihe.Odottaa && ky != null)
             {

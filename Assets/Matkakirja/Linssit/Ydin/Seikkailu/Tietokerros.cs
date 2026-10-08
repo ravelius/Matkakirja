@@ -1,7 +1,8 @@
 // HISTORIAMOOTTORI: TIETOKERROS (Siirtoseppä 7.10.2026; Pelikoodarin seikkailu/<rakennus>/tietokerros-v1/tietokerros.json, kortit
 // docs/raportit/olavinlinna-tietokerros-kortit.md). Kortit eivät näy pelin aikana (ei luettavaa); ne avautuvat huoneittain keräiltäviksi
 // (avautuu { tyyppi: "huone", huoneet: [n] }) ja loppukortit pystyleikkeen lopussa ({ tyyppi: "loppu" }). Huoneet numeroina kuten
-// repliikit-v1: 1 Veneyö, 2 Laituri ja portti, 3 Pikkupiha ja keittiö, 4 Kirkkotorni ja portaat, 5 Kappeli.
+// repliikit-v1: 1 Veneyö, 2 Laituri ja portti, 3 Pikkupiha ja keittiö, 4 Kirkkotorni ja portaat, 5 Kappeli; M-osa 6 Linnantupa ja sali,
+// 7 Ampuma- ja muurikäytävä, 8 Muurinharja ja ulkoseinä, 9 Komero, 10 Pako.
 using System;
 using System.Collections.Generic;
 using Matkakirja.Peli;
