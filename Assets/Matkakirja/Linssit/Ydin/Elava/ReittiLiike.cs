@@ -11,26 +11,44 @@ namespace Matkakirja.Linssit.Elava
     public sealed class Reitti
     {
         public readonly double[] X, Z, Matka;   // pisteet ja kertymä (m)
+        /// <summary>Pisteiden korkeus (m; veneillä oma vesipinta, ei Googlen laattoja), tai null.</summary>
+        public readonly double[] Y;
         public readonly bool Kiertava;
         public double Pituus => Matka[Matka.Length - 1];
 
-        public Reitti(IReadOnlyList<(double x, double z)> pisteet, bool kiertava)
+        public Reitti(IReadOnlyList<(double x, double z)> pisteet, bool kiertava, IReadOnlyList<double> korkeudet = null)
         {
             if (pisteet == null || pisteet.Count < 2) throw new ArgumentException("reitissä vähintään kaksi pistettä");
             int n = pisteet.Count + (kiertava ? 1 : 0);
             X = new double[n]; Z = new double[n]; Matka = new double[n];
             for (int i = 0; i < n; i++) { var p = pisteet[i % pisteet.Count]; X[i] = p.x; Z[i] = p.z; if (i > 0) Matka[i] = Matka[i - 1] + Math.Sqrt((X[i] - X[i - 1]) * (X[i] - X[i - 1]) + (Z[i] - Z[i - 1]) * (Z[i] - Z[i - 1])); }
             Kiertava = kiertava;
+            if (korkeudet != null && korkeudet.Count == pisteet.Count) { Y = new double[n]; for (int i = 0; i < n; i++) Y[i] = korkeudet[i % pisteet.Count]; }
         }
 
-        /// <summary>Paikka matkalla s (rajattu tai kiedottu).</summary>
-        public (double x, double z) Paikka(double s)
+        /// <summary>Korkeus matkalla s (lineaarinen pisteiden välillä); 0 ilman korkeuksia.</summary>
+        public double Korkeus(double s)
+        {
+            if (Y == null) return 0;
+            var (lo, u) = Kohta(s);
+            return lo + 1 < Y.Length ? Y[lo] + (Y[lo + 1] - Y[lo]) * u : Y[lo];
+        }
+
+        (int lo, double u) Kohta(double s)
         {
             double L = Pituus;
             s = Kiertava ? ((s % L) + L) % L : Math.Max(0, Math.Min(L, s));
             int lo = 0, hi = Matka.Length - 1;
             while (hi - lo > 1) { int m = (lo + hi) / 2; if (Matka[m] <= s) lo = m; else hi = m; }
-            double seg = Matka[hi] - Matka[lo], u = seg > 1e-9 ? (s - Matka[lo]) / seg : 0;
+            double seg = Matka[hi] - Matka[lo];
+            return (lo, seg > 1e-9 ? (s - Matka[lo]) / seg : 0);
+        }
+
+        /// <summary>Paikka matkalla s (rajattu tai kiedottu).</summary>
+        public (double x, double z) Paikka(double s)
+        {
+            var (lo, u) = Kohta(s);
+            int hi = Math.Min(lo + 1, X.Length - 1);
             return (X[lo] + (X[hi] - X[lo]) * u, Z[lo] + (Z[hi] - Z[lo]) * u);
         }
     }
@@ -40,7 +58,7 @@ namespace Matkakirja.Linssit.Elava
         public sealed class Kulkija
         {
             public int Reitti; public double S, Nopeus, Tauko; public int Suunta = 1;
-            public double X, Z, Suuntima;   // paikka (m) ja suunta (°, 0 = pohjoinen, myötäpäivään)
+            public double X, Y, Z, Suuntima;   // paikka (m; Y reitin korkeudesta) ja suunta (°, 0 = pohjoinen, myötäpäivään)
         }
 
         public readonly List<Reitti> Reitit = new List<Reitti>();
@@ -77,7 +95,7 @@ namespace Matkakirja.Linssit.Elava
         void Paikanna(Kulkija k)
         {
             var r = Reitit[k.Reitti];
-            var p = r.Paikka(k.S); k.X = p.x; k.Z = p.z;
+            var p = r.Paikka(k.S); k.X = p.x; k.Z = p.z; k.Y = r.Korkeus(k.S);
             // Suunta ennakkopisteestä (taaksepäin ja eteenpäin puolikas ennakko): mutkat kääntyvät pehmeästi. Tauolla suunta pysyy.
             if (k.Tauko > 0) return;
             var a = r.Paikka(k.S - k.Suunta * EnnakkoM * 0.5); var b = r.Paikka(k.S + k.Suunta * EnnakkoM * 0.5);
