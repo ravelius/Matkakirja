@@ -1679,6 +1679,10 @@ namespace Matkakirja.Natiivi
                     // Tauko ja kuvat valikon riveinä, tila tekstissä (omistaja 6.10. 12.1x).
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
+                    // MIKSERI (omistaja 9.10.2026 klo 00.5x: "mikseriin pitäisi päästä kun ollaan kuumailmapallossa"): sama Äänentasot-
+                    // paneeli kuin päävalikon Peli › Mikseri (kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää);
+                    // aukeaa pallon päälle (Valikot-kerros), lento jatkuu taustalla.
+                    Komento("Mikseri", () => UiNakymat.Hae()?.Aanentasot?.AvaaOsa(Aanentasot.Osa.Aanet));
                     // LÄHTEET (omistaja 7.10. 22.5x: kuvien tekijät eivät näy kuvissa, vaan täällä; sama alanäkymä kuin linnan Lähteet).
                     Alanakyma("Lähteet", () => Avaa(Nakyma.Lahteet));
                     Viiva();
