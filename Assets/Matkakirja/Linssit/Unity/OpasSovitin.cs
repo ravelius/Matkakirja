@@ -205,6 +205,9 @@ namespace Matkakirja.Natiivi
         readonly PalloKierto kierto;
         readonly CesiumKaupunki kaupunki;
         readonly PalloKori kori = new PalloKori();
+        /// <summary>Katse ylös korista (omistaja 21.1x, PT 22.0x): kupu näkyy vedettäessä.</summary>
+        readonly KoriKatseVeto koriKatse = new KoriKatseVeto();
+        public static string KoriKatseTila => Auki ? Viimeisin.koriKatse.Tila() : "opas ei auki";
         readonly Dictionary<string, double> maaKorkeudet = new Dictionary<string, double>(StringComparer.Ordinal);
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
         ILinssiYmparisto y;
@@ -370,6 +373,7 @@ namespace Matkakirja.Natiivi
             // Kuumailmapallon korinäkymä (Päätoimittaja 7.10. 09.1x) koko oppaassa: omistaja TF 162 tuli linssivalikon kautta
             // (aloitusvalikko → Pariisi, ei kaupunkitilaa) eikä nähnyt koria eikä köysiä.
             kori.Kayta(nakymaAuki, kaupunki.Kamera);
+            koriKatse.Paivita(kori.Nakyy, kaupunki.Kamera, kierto);
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             // Linssireitti (omistaja 8.10. ~09.0x): sama esilataus siirtoruudun aikana (palkki kattaa myös 1. kohteen), ilman avausnäkymän kohdistusta.
@@ -2692,7 +2696,7 @@ namespace Matkakirja.Natiivi
             klipit.Clear();
             pcmVirrat.Clear(); pcmNyt = null;
             maaKorkeudet.Clear();
-            kori.Sulje(); OpasSilmukka.PalloLento = false;
+            kori.Sulje(); koriKatse.Pois(); OpasSilmukka.PalloLento = false;
             AsetaKaupunkitila(null);
             Vaihtui?.Invoke(null);
         }

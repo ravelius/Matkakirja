@@ -44,6 +44,8 @@ namespace Matkakirja.Natiivi
         const float KoysiPuoliLeveys = 0.006f;
         /// <summary>A/B (komento `opas kori 0|1`); kaupunkitilassa oletuksena päällä tässä kokeessa.</summary>
         public static bool Paalla = true;
+        /// <summary>Katseen nosto korista (°, KoriKatseVeto): kori ja köydet kääntyvät saman verran alas, eli pysyvät kehyksen asennossa.</summary>
+        public static float KatseYlos;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
         public static string AaniSarja = "eleven";
         // Omistaja 18.5x: äänet kuuluviin mutta säästeliäästi (TF 161: 0,55 jäi kaupungin äänimaiseman alle).
@@ -770,6 +772,7 @@ namespace Matkakirja.Natiivi
             var kKori = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
             koriKaanto.localRotation = kKori; koysiKaanto.localRotation = kKoysi;
+            juuri.localRotation = Quaternion.Euler(KatseYlos, 0, 0);   // katse ylös: kori laskee kuvasta (kamera nousee piirron ajaksi)
             if (malliKori != null) malliKori.localRotation = kKori * malliKoriAlku;
             VasenKoysiNorm = LaskeVasenKoysi();
             for (int i = 0; i < malliKoydet.Count; i++) if (malliKoydet[i] != null) malliKoydet[i].localRotation = kKoysi * malliKoysiAlku[i];

@@ -2181,6 +2181,7 @@ namespace Matkakirja.Natiivi
                     // Kartan kaupunkielementti (juna 159): opas suoraan kaupunkitilaan sallittujen listan id:llä tai nimellä.
                     else if (osat.Length > 3 && osat[1] == "kori" && osat[2] == "aanet") { PalloKori.AaniSarja = osat[3]; Kirjaa($"opas: kori äänet {PalloKori.AaniSarja}"); }
                     else if (osat.Length > 2 && osat[1] == "kori") { PalloKori.Paalla = osat[2] == "1"; Kirjaa($"opas: kori {(PalloKori.Paalla ? "päällä" : "pois")}"); }
+                    else if (osat.Length > 2 && osat[1] == "katse") { if (osat[2] != "tila") KoriKatseVeto.Kaytossa = osat[2] == "1"; Kirjaa("opas: " + OpasSovitin.KoriKatseTila); }
                     else if (osat.Length > 2 && osat[1] == "korkeus") { OpasSovitin.OmaKorkeusPakko = osat[2] != "google"; Kirjaa($"opas: korkeus {(OpasSovitin.OmaKorkeusPaalla ? "oma malli" : "Google (SampleHeightMostDetailed)")}"); }
                     else if (osat.Length > 2 && osat[1] == "elava") { ElavaKaupunki.Pakko = osat[2] == "1"; Kirjaa($"opas: elävä kaupunki {(ElavaKaupunki.Paalla ? "päällä" : "pois")} (seuraava kaupungin avaus)"); }
                     else if (osat.Length > 3 && osat[1] == "pinta")
