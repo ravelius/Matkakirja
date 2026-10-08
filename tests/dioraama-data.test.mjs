@@ -28,6 +28,8 @@ const RESEPTIT = new Set([
   'oljylamppu', 'vati', 'ruukku', 'pullo', 'luuta', 'hiillospihdit',
   // Erä 3 (dioraama-rajapinnat-era3-20260929.md kohta 2): reseptit-linna.mjs ja reseptit-kalusteet2.mjs.
   'kiekko', 'kierreportaat', 'sakarat', 'paalu', 'laiturikansi', 'vene', 'lippu', 'rako', 'kupoli',
+  // 9.10.2026 (Thief-vertailun #4): aukkojen kivikehys (reseptit-linna.mjs).
+  'kivikehys',
   'alttari', 'vihkimisristi', 'kirkonpenkki', 'kynttilakruunu', 'seinasoihtu', 'arkku', 'keihasteline', 'kilpi',
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
   'jalkajousi', 'nuolitynnyri',

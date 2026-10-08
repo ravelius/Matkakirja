@@ -7,7 +7,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  kiekko, kierreportaat, kierrePiste, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi,
+  kiekko, kierreportaat, kierrePiste, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys,
   RESEPTIT as LINNA, OLETUSPINNAT,
 } from '../tools/dioraama/reseptit-linna.mjs';
 import { RESEPTIT, sijoita } from '../tools/dioraama/reseptit.mjs';
@@ -50,8 +50,9 @@ const OLETUKSET = {
   rako: {},
   kupoli: { sade: 5, korkeus: 2.5 },
   tynnyriholvi: { pituus: 6, leveys: 4, nousu: 1.5, paadyt: true },
+  kivikehys: { leveys: 1.05, korkeus: 2.0, kaari: 0.4, seinan_sade: 3.88, siemen: 300 },
 };
-const FUNKTIOT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi };
+const FUNKTIOT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys };
 
 /* ==================== Kaikille yhteiset ==================== */
 for (const [nimi, param] of Object.entries(OLETUKSET)) {
@@ -69,13 +70,13 @@ for (const [nimi, param] of Object.entries(OLETUKSET)) {
   });
 }
 
-test('reseptit.mjs:n RESEPTIT sisältää kaikki 10 linnareseptiä ja ne ovat samat funktiot', () => {
+test('reseptit.mjs:n RESEPTIT sisältää kaikki 11 linnareseptiä ja ne ovat samat funktiot', () => {
   for (const nimi of Object.keys(FUNKTIOT)) {
     assert.equal(typeof RESEPTIT[nimi], 'function', `puuttuu: ${nimi}`);
     assert.equal(RESEPTIT[nimi], FUNKTIOT[nimi]);
   }
   assert.deepEqual(Object.keys(LINNA).sort(), Object.keys(FUNKTIOT).sort());
-  assert.equal(Object.keys(FUNKTIOT).length, 10);
+  assert.equal(Object.keys(FUNKTIOT).length, 11);
 });
 
 test('OLETUSPINNAT: jokaiselle reseptille kaikki tuotetut roolit on kartoitettu, pinnat speksin mukaiset', () => {
@@ -489,4 +490,17 @@ test('kupoli: suunta siirtää sektoria, segmentit ohjaa tiheyttä, oletus 24', 
 
 test('kupoli: leikkaus-reunat vain kun auki annettu', () => {
   assert.ok(!kupoli(KUPOLI).some((k) => k.rooli === 'leikkaus'));
+});
+
+test('kivikehys: suora kamana ilman kaarta, kaaressa pariton määrä holvikiviä ja kaarevan seinän siirto kasvattaa reunakivien ulkonemaa', () => {
+  const suora = kivikehys({ leveys: 0.9, korkeus: 1.3 });
+  const kaari = kivikehys({ leveys: 1.05, korkeus: 2.0, kaari: 0.4 });
+  assert.ok(suora.length > 0 && kaari.length > suora.length);
+  const ylin = (t) => Math.max(...t.flatMap((k) => k.p.map((p) => p[1])));
+  assert.ok(ylin(kaari) > 2.0 + 0.4, 'kaari nousee pielten yläpuolelle');
+  const etuW = (t) => Math.max(...t.flatMap((k) => k.p.map((p) => p[2])));
+  const tasainen = kivikehys({ leveys: 1.05, korkeus: 2.0, kaari: 0.4, siemen: 7 });
+  const kaareva = kivikehys({ leveys: 1.05, korkeus: 2.0, kaari: 0.4, siemen: 7, seinan_sade: 3.88 });
+  assert.ok(etuW(kaareva) > etuW(tasainen) + 0.05, 'kaarevalla seinällä reunakivet tuodaan seinän pintaan');
+  for (const k of kaari) assert.equal(k.rooli, 'kivi');
 });

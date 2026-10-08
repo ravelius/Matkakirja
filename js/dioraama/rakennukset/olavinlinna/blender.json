@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "c26afa778b604f33",
-  "kansio": "dioraama/olavinlinna/blender/c26afa778b604f33/",
+  "hash": "c30ad9bc54ebb032",
+  "kansio": "dioraama/olavinlinna/blender/c30ad9bc54ebb032/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2395,8 +2395,8 @@
     },
     {
       "polku": "tilat/kappeli.glb",
-      "sha256": "e7b29a596afb8db4043a8fed1bcf6d6286a405fb79a6909da38ac763bc7c42a8",
-      "tavuja": 1240532
+      "sha256": "557ba692454c7168a13988eecad1e8ac95573a187d82a48468844f960e3be4af",
+      "tavuja": 1282804
     },
     {
       "polku": "tilat/keittio-g102.glb",
@@ -2585,63 +2585,63 @@
     },
     {
       "polku": "valot/kappeli-2k-4x4.astcm",
-      "sha256": "093626008d50c074ee080d763504fda4459cd420b05b1f695b8f415c974aa70f",
+      "sha256": "509945540484dcfc2374c314b7e68be4a368368c156de9fb92b4f78b20421b4d",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kappeli-2k.jpg",
-      "sha256": "de783b1eef48909f0b0c532c6729309456131627aea7c42f7c0f1065f6d601fa",
-      "tavuja": 244573
+      "sha256": "378bedb37ffdf29f78dc90ea494dbc950072dee6d3cf52efdd2ae4508b919d87",
+      "tavuja": 238243
     },
     {
       "polku": "valot/kappeli-4x4.astcm",
-      "sha256": "e490301c7cafeed2c87dbadc1ffb144008c96f374153ba4bfee9b90692ed5851",
+      "sha256": "81127ec92b8c579725bede5cd180a641ea3cc136dcdaf8b46c546ef76283ebca",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kappeli-8k-6x6.astcm",
-      "sha256": "2cf326eefaab279b5115ecfd83c2bcc427c8072bc50475f861e7b647ee9f1aae",
+      "sha256": "c5598d00d2d7586b72c51f96758073b42a4511343a234e6552d2b8ec95df47ba",
       "tavuja": 39816848
     },
     {
       "polku": "valot/kappeli-8k.jpg",
-      "sha256": "7b71b4a0336cb3ac3d41d9546f53f36808c894f6c0161b044893a5332c494230",
-      "tavuja": 7989455
+      "sha256": "c926db98498f0cf939a73f2c90747f2e986c7da30e4f583b744f7846c069ea4e",
+      "tavuja": 7894131
     },
     {
       "polku": "valot/kappeli-hamara-2k-4x4.astcm",
-      "sha256": "1ffb6774b3f0c697c25e371e5cb859cbbbddf8f923c0a5ea8fb4a7118a717bc4",
+      "sha256": "023ea94fb33240cccdbfde04ce622a5f8b275f103569c759afaf085a25088651",
       "tavuja": 1398144
     },
     {
       "polku": "valot/kappeli-hamara-2k.jpg",
-      "sha256": "275058276ae9d15833e5f1af18d3be2fda8a3caed68b778d0701696e28be5c19",
-      "tavuja": 229886
+      "sha256": "38f5310281e047ade5980318f098cee599ea19f2756d4699af3643c9d6e0043b",
+      "tavuja": 224639
     },
     {
       "polku": "valot/kappeli-hamara-4x4.astcm",
-      "sha256": "76242f4e3bc91b560ab252f543b6169d85f01d945477caf838f77c2c52811511",
+      "sha256": "9064737f367982aebb54a9224fb297b18ba3ddc799f19b0e4fce0cd2fbb121e8",
       "tavuja": 5592448
     },
     {
       "polku": "valot/kappeli-hamara-8k-6x6.astcm",
-      "sha256": "da9936c227bd37dcb097c614a38455c977e5610291d2a5a1a39b74eacf10669b",
+      "sha256": "d199ae4a7ff7b98b59c1576941de8dad57d8473e7860117b12362ad11e7b6c0c",
       "tavuja": 39816848
     },
     {
       "polku": "valot/kappeli-hamara-8k.jpg",
-      "sha256": "97ca0acf589d9188216399e110a8622c0d4236bd6f3fed8adc9d6cf74f72c2f8",
-      "tavuja": 7731905
+      "sha256": "66b0776f98d4448685533f2a8a2448b878d04723d1909619a4f8b1d46464251c",
+      "tavuja": 7680867
     },
     {
       "polku": "valot/kappeli-hamara.jpg",
-      "sha256": "3ac19f3dc917b2a971b6fdb529b61b290fd931c4073f1cddb20e27fa5b64f97e",
-      "tavuja": 708482
+      "sha256": "7272f28c71793ad632aed10017aaea651283b5b2c8a1c6f3ba3239e5b02cefec",
+      "tavuja": 710793
     },
     {
       "polku": "valot/kappeli.jpg",
-      "sha256": "ae690e96420f12fa464ef2c69ba13107833589b679244295a7d3710de0253a48",
-      "tavuja": 765467
+      "sha256": "51229793aed118fc2ac2010972e5dd6e521573e428c261360f4b9033f02bf181",
+      "tavuja": 761322
     },
     {
       "polku": "valot/keittio-2k-4x4.astcm",

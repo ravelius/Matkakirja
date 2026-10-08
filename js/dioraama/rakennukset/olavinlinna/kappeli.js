@@ -141,10 +141,25 @@ for (const h of [
   { a: 58.7, y: LATTIA + 1.5, leveys: 0.26, korkeus: 0.8, aukko: true }, // koillisikkuna (Aspelin 1875): todellinen aukko
 ]) {
   if (!h.aukko) REIAT.push({ resepti: 'rako', paikka: pol(h.a, SEINA, h.y), suunta: h.a + 180, leveys: h.leveys, korkeus: h.korkeus });
-  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
-  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA - 0.13, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
+  // 9.10.: kynnys ja kamana aukon sisään seinän paksuuteen (ennen 0,13 m huoneen puolella → 0,28 m:n hylly); näkyvä reuna = KEHYKSET.
+  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA + 0.15, h.y), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
+  REIAT.push({ resepti: 'laatta', paikka: pol(h.a, SEINA + 0.15, h.y + h.korkeus + 0.07), suunta: h.a + 180, leveys: h.leveys + 0.3, syvyys: 0.3, paksuus: 0.07, pinnat: KIVI });
   // Rautaluukku on kävelyosan avattava esine (esine-luukku.glb, merkki luukku:koillinen), ei leivottu.
 }
+
+// Kivikehykset (Linnanrakentaja 9.10.2026, Thief-vertailun #4): aukkojen ympärille ulkonevat lohkokivet kaarevalle
+// sisäseinälle (resepti kivikehys, seinan_sade = SEINA). Kaari-ovelle matala kaari, ikkunalle, hagioskoopille ja
+// sivualttarin syvennykselle suora kamana.
+const leveysKulmasta = (puoliAste) => r3(2 * SEINA * Math.sin(puoliAste * RAD));
+const KEHYKSET = [
+  { resepti: 'kivikehys', paikka: pol(KAARIOVI.a, SEINA, LATTIA), suunta: KAARIOVI.a + 180, leveys: leveysKulmasta(KAARIOVI.puoli),
+    korkeus: r3(KAARIOVI.y1 - LATTIA - 0.4), kaari: 0.4, seinan_sade: SEINA, siemen: 300 },
+  { resepti: 'kivikehys', paikka: pol(IKKUNA.a, SEINA, LATTIA + 1.5), suunta: IKKUNA.a + 180, leveys: 0.26, korkeus: 0.8, kivi: 0.2, syvyys: 0.035,
+    seinan_sade: SEINA, siemen: 58 },
+  { resepti: 'kivikehys', paikka: pol(3, SEINA, 10.05), suunta: 183, leveys: 0.24, korkeus: 0.5, kivi: 0.25, syvyys: 0.035, seinan_sade: SEINA, siemen: 3 },
+  { resepti: 'kivikehys', paikka: pol(SYV.a, SEINA, SYV.y0), suunta: SYV.a + 180, leveys: SYV.leveys, korkeus: r3(SYV.y1 - SYV.y0), kivi: 0.2, syvyys: 0.035,
+    seinan_sade: SEINA, siemen: 38 },
+];
 
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
 const KAPPELI_HAHMOT = [
@@ -262,6 +277,7 @@ export const TILA = {
     POLVITUOLI,
     ...RISTIT,
     ...REIAT,
+    ...KEHYKSET,
     // Kynttiläkruunu holvin keskeltä.
     { resepti: 'kynttilakruunu', paikka: [CX, KRUUNU.y, CZ], suunta: 0, sade: KRUUNU.sade, ketju: KRUUNU.ketju, kynttilia: KRUUNU.n },
     // Kirkonpenkit alttaria (itä) kohti: etupuoli w+ = itä (suunta 90).

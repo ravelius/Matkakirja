@@ -461,6 +461,56 @@ export function tynnyriholvi(param) {
   return puhdista(k);
 }
 
+/**
+ * Kivikehys (Linnanrakentaja 9.10.2026, Thief-vertailun #4 geometrian yksityiskohta): aukon (ovi, ikkuna, syvennys)
+ * ympärille ulkonevat lohkokivet seinän pinnalle. paikka = aukon alareunan keskikohta seinän pinnalla, w+ = seinästä
+ * huoneeseen. leveys, korkeus = aukko (korkeus = suorien pielten yläpää eli kaaren lähtö); kaari = kaaren nousu
+ * (0 = suora kamana), kivi = kivikerroksen korkeus (0,28), syvyys = ulkonema (0,06), siemen. Pielikivet vuorotellen
+ * leveä (0,36) ja kapea (0,22) aukon reunasta ulos, kaaressa holvikivet säteittäin (pariton määrä, lakikivi keskellä),
+ * suorassa kamanakivi. Saumarako 8 mm, ulkonema ±20 % kivittäin; takapinta (seinää vasten) jätetään pois.
+ * seinan_sade = kaarevan seinän säde (tornin sisäpinta): kivet ulottuvat seinän pintaan asti myös reunoilla.
+ */
+export function kivikehys(param) {
+  const L = param.leveys, H = param.korkeus, nousu = param.kaari ?? 0, kivi = param.kivi ?? 0.28, D = param.syvyys ?? 0.06;
+  const rnd = mulberry32(param.siemen ?? 1499), sauma = 0.008, k = [];
+  // Kaareva seinä (tornin sisäpinta, säde Rs, w+ kohti keskustaa): seinä on sivulla u huoneen puolella Rs − √(Rs² − u²).
+  const Rs = param.seinan_sade, siirto = (u) => (Rs ? Rs - Math.sqrt(Math.max(0, Rs * Rs - u * u)) : 0);
+  const ulk = () => D * (0.8 + 0.4 * rnd());
+  const kerrokset = Math.max(1, Math.round(H / kivi)), kh = H / kerrokset;
+  for (const s of [-1, 1]) {
+    for (let i = 0; i < kerrokset; i++) {
+      const lev = (i % 2 === 0) ? 0.36 : 0.22, u0 = s * (L / 2), u1 = s * (L / 2 + lev), ws = siirto(Math.max(Math.abs(u0), Math.abs(u1)));
+      k.push(...laatikko({ u0: Math.min(u0, u1) + (s < 0 ? 0 : sauma / 2), u1: Math.max(u0, u1) - (s < 0 ? sauma / 2 : 0),
+        y0: i * kh + sauma / 2, y1: (i + 1) * kh - sauma / 2, w0: 0, w1: ws + ulk() },
+      { yla: 'kivi', ala: 'kivi', etu: 'kivi', vasen: 'kivi', oikea: 'kivi' }));
+    }
+  }
+  if (nousu <= 0.01) {
+    k.push(...laatikko({ u0: -(L / 2 + 0.3), u1: L / 2 + 0.3, y0: H + sauma / 2, y1: H + 0.36, w0: 0, w1: siirto(L / 2 + 0.3) + D * 1.1 },
+      { yla: 'kivi', ala: 'kivi', etu: 'kivi', vasen: 'kivi', oikea: 'kivi' }));
+    return puhdista(k);
+  }
+  // Kaari: ympyränkaari pisteiden (±L/2, H) kautta nousulla h: r = (L²/4 + h²) / 2h, keskipiste y = H + h − r.
+  const h = nousu, r = (L * L / 4 + h * h) / (2 * h), cy = H + h - r;
+  const a0 = Math.atan2(H - cy, -L / 2), a1 = Math.atan2(H - cy, L / 2);   // vasen (> π/2) ja oikea (< π/2) lähtökulma
+  const kaarenPituus = r * (a0 - a1);
+  let n = Math.max(3, Math.round(kaarenPituus / 0.24)); if (n % 2 === 0) n += 1;
+  const P = (rr, a, w) => [rr * Math.cos(a), cy + rr * Math.sin(a), w];
+  for (let i = 0; i < n; i++) {
+    const aa = a0 - (a0 - a1) * i / n - (sauma / 2) / r, ab = a0 - (a0 - a1) * (i + 1) / n + (sauma / 2) / r;
+    const ri = r, ro = r + ((i % 2 === 0) ? 0.36 : 0.28) + (i === (n - 1) / 2 ? 0.06 : 0);
+    const w = siirto(Math.max(Math.abs(ro * Math.cos(aa)), Math.abs(ro * Math.cos(ab)))) + ulk() * (i === (n - 1) / 2 ? 1.3 : 1);
+    const keski = (aa + ab) / 2, ulos = [Math.cos(keski), Math.sin(keski), 0];
+    k.push(...nelioSuuntaan(P(ri, aa, w), P(ro, aa, w), P(ro, ab, w), P(ri, ab, w), 'kivi', [0, 0, 1]));            // etu
+    k.push(...nelioSuuntaan(P(ro, aa, 0), P(ro, ab, 0), P(ro, ab, w), P(ro, aa, w), 'kivi', ulos));                  // ulkokaari
+    k.push(...nelioSuuntaan(P(ri, aa, 0), P(ri, ab, 0), P(ri, ab, w), P(ri, aa, w), 'kivi', ulos.map((x) => -x)));   // sisäkaari
+    const tA = [-Math.sin(aa), Math.cos(aa), 0], tB = [Math.sin(ab), -Math.cos(ab), 0];
+    k.push(...nelioSuuntaan(P(ri, aa, 0), P(ro, aa, 0), P(ro, aa, w), P(ri, aa, w), 'kivi', tA));                    // sivut
+    k.push(...nelioSuuntaan(P(ri, ab, 0), P(ro, ab, 0), P(ro, ab, w), P(ri, ab, w), 'kivi', tB));
+  }
+  return puhdista(k);
+}
+
 // Rooli → oletuspinta. Instanssin oma `pinnat`-kenttä (reseptit.mjs:n sijoita) ohittaa nämä.
 export const OLETUSPINNAT = {
   kiekko: { yla: 'lankku', ala: 'rappaus', sivu: 'leikkaus', leikkaus: 'leikkaus' },
@@ -473,6 +523,7 @@ export const OLETUSPINNAT = {
   rako: { aukko: 'aukko' },
   kupoli: { holvi: 'rappaus', ulko: 'kivi', leikkaus: 'leikkaus' },
   tynnyriholvi: { holvi: 'rappaus', ulko: 'kivi', paaty: 'rappaus' },
+  kivikehys: { kivi: 'kivi' },
 };
 
-export const RESEPTIT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi };
+export const RESEPTIT = { kiekko, kierreportaat, sakarat, paalu, laiturikansi, vene, lippu, rako, kupoli, tynnyriholvi, kivikehys };
