@@ -84,6 +84,90 @@ namespace Matkakirja.Natiivi
         }
         double kasiKiipeilyAika;
 
+        // Ote-kiipeily ulkoseinällä (M-osa huone 8; pelattavuusmalli 2.6 ja 7): takakuva 2,5 m selän takaa ja 0,4 m pään yläpuolelta,
+        // siirtymä silmistä 0,6 s; Ytimen Kiipeily päättää otteet, puuskat, lipsahdukset ja lyhdyn. Pelaaja riippuu otteesta (kädet otteella,
+        // keho 0,35 m seinästä ulos). Foggin malli (asu v2) näkyy vain takakuvassa (TakakuvaHahmo, DioraamaSovitin lisää).
+        public const float TakaM = 2.5f, TakaYlos = 0.4f, TakaSiirtymaS = 0.6f, OteRiippuu = 1.55f, OteIrti = 0.35f;
+        public Transform TakakuvaHahmo { get; private set; }
+        Kiipeily oteKiipeily; List<(Vector3 P, Vector3 Ulos)> otteet; Action<bool> oteValmis;
+        float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi;
+        public Kiipeily OteKiipeily => oteKiipeily;
+        public bool Takakuva => takaPaino > 1e-3f;
+        /// <summary>Lyhdyn valossa liikkui (Kiipeily.Havaittu): sovitin hälyttää (vartijat vetävät köydestä → tyrmä).</summary>
+        public static event Action OteHavaittu;
+
+        /// <summary>Aloita ote-kiipeily (otteet Unityssa, ulospäin = seinän ulkonormaali); valmis(true) perillä komeron kynnyksellä.</summary>
+        public void AloitaOteKiipeily(List<(Vector3 P, Vector3 Ulos)> o, IEnumerable<int> puuskat, Action<bool> valmis)
+        {
+            if (o == null || o.Count == 0) return;
+            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat); oteValmis = valmis;
+            cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear();
+            takaPaikka = olka.position; takaKierto = olka.rotation;
+            NaytaTakakuvaHahmo(true);
+            Debug.Log($"MATKAKIRJA seikkailu: ote-kiipeily alkaa ({o.Count} otetta)");
+        }
+
+        /// <summary>Keskeytä ote-kiipeily (kiinnijäänti lyhdyn valossa): kapseli takaisin, takakuva palaa silmiin.</summary>
+        public void LopetaOteKiipeily()
+        {
+            if (oteKiipeily == null) return;
+            oteKiipeily = null; oteValmis = null; cc.enabled = true; silmaMaailma = float.NaN;
+            if (himmensi) { himmensi = false; SeikkailuNakyvyys.Himmennys = 0f; }
+        }
+
+        /// <summary>Lyhty kulkee yläpuolella (huone 8 vaihe 5): valopiiri seinällä 2 s, sitten 4 s valoa.</summary>
+        public void LyhtyYlla() => oteKiipeily?.LyhtyYlla();
+
+        void NaytaTakakuvaHahmo(bool nayta)
+        {
+            if (TakakuvaHahmo != null) TakakuvaHahmo.gameObject.SetActive(nayta);
+            // Kädet ja kantokohta ovat silmien lapsia: takakuvassa piiloon (muuten ne leijuisivat kameran edessä).
+            foreach (Transform c in olka) c.gameObject.SetActive(!nayta);
+        }
+
+        bool PaivitaOteKiipeily(float dt, in KavelySyote s)
+        {
+            var k = oteKiipeily;
+            if (k == null) return false;
+            int suunta = Math.Abs(s.LiikeY) >= 0.3 ? Math.Sign(s.LiikeY) : Math.Abs(s.LiikeX) >= 0.3 ? Math.Sign(s.LiikeX) : 0;
+            k.Paivita(dt, suunta);
+            if (k.Lipsahti) { k.Lipsahti = false; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
+            if (k.Putosi) { k.Putosi = false; Debug.Log("MATKAKIRJA seikkailu: ote petti, kiipeilyn alkuun"); }
+            if (k.Himmenee != himmensi) { himmensi = k.Himmenee; SeikkailuNakyvyys.Himmennys = himmensi ? 1f : 0f; }
+            if (k.Havaittu) { k.Havaittu = false; Debug.Log("MATKAKIRJA seikkailu: lyhdyn valossa liikkui"); OteHavaittu?.Invoke(); }
+            int i = Mathf.Clamp(k.Ote, 0, otteet.Count - 1), j = Mathf.Clamp(k.Ote + k.Siirtyy, 0, otteet.Count - 1);
+            float u = (float)k.Osuus;
+            var ote = Vector3.Lerp(otteet[i].P, otteet[j].P, u);
+            var ulos = Vector3.Slerp(otteet[i].Ulos, otteet[j].Ulos, u); ulos.y = 0; ulos = ulos.sqrMagnitude > 1e-4f ? ulos.normalized : -hahmo.forward;
+            transform.position = ote + ulos * OteIrti - Vector3.up * OteRiippuu;
+            kavely.HahmoYaw = Mathf.Atan2(-ulos.x, -ulos.z) * Mathf.Rad2Deg;   // kasvot seinään
+            hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
+            takaPaino = Mathf.MoveTowards(takaPaino, 1f, dt / TakaSiirtymaS);
+            var taka = transform.position + ulos * TakaM + Vector3.up * (Korkeus + TakaYlos);
+            takaPaikka = taka; takaKierto = Quaternion.LookRotation(transform.position + Vector3.up * 1.2f - taka);
+            AsetaTakakuva(transform.position + Vector3.up * SilmaY, Quaternion.Euler((float)kavely.KameraPitch, (float)kavely.KameraYaw, 0));
+            if (k.Perilla)
+            {
+                // Komeron kynnys (85 cm, silmiin 0,6 s): viimeisen otteen kohdalle seinän sisäpuolelle; takakuva palaa silmiin.
+                var o = otteet[otteet.Count - 1];
+                oteKiipeily = null; transform.position = o.P - o.Ulos * 0.45f - Vector3.up * 0.1f; viimeMaassa = transform.position; cc.enabled = true;
+                kavely.KameraYaw = kavely.HahmoYaw; silmaMaailma = float.NaN;
+                if (himmensi) { himmensi = false; SeikkailuNakyvyys.Himmennys = 0f; }
+                Debug.Log("MATKAKIRJA seikkailu: ote-kiipeily perillä");
+                var v = oteValmis; oteValmis = null; v?.Invoke(true);
+            }
+            return true;
+        }
+
+        /// <summary>Silmien ja takakuvan sekoitus painolla (pehmeä 0,6 s:n siirtymä kumpaankin suuntaan).</summary>
+        void AsetaTakakuva(Vector3 silmat, Quaternion silmaKierto)
+        {
+            if (takaPaino <= 1e-3f) return;
+            float w = Mathf.SmoothStep(0f, 1f, takaPaino);
+            olka.position = Vector3.Lerp(silmat, takaPaikka, w);
+            olka.rotation = Quaternion.Slerp(silmaKierto, takaKierto, w);
+        }
+
         /// <summary>Napautus ruutuun (pikseleinä, Natiivi-UI:n kosketus tai Macin napsautus): lattia → kävely sinne; esine tai seinä
         /// alle 1,2 m:n päässä → toiminto (SeikkailuEsineet). Palauttaa, osuiko napautus maailmaan.</summary>
         public static bool Napautus(Vector2 ruutu)
@@ -262,6 +346,12 @@ namespace Matkakirja.Natiivi
             p.olka.localPosition = new Vector3(0, Ensimmainen ? SilmaY : 1.55f, 0);
             p.Kasi = new GameObject("kasi").transform;
             if (Ensimmainen) { p.Kasi.SetParent(p.olka, false); p.Kasi.localPosition = new Vector3(0.2f, -0.3f, 0.45f); }
+            if (Ensimmainen)
+            {
+                // Takakuvan hahmo (pelattavuusmalli 7): Fogg asu v2 näkyy vain takakuvassa ja kaukokuvissa.
+                p.TakakuvaHahmo = new GameObject("takakuvan hahmo") { layer = kerros, tag = "Player" }.transform;
+                p.TakakuvaHahmo.SetParent(hs.transform, false); p.TakakuvaHahmo.gameObject.SetActive(false);
+            }
             else { p.Kasi.SetParent(hs.transform, false); p.Kasi.localPosition = new Vector3(0.22f, 1.15f, 0.3f); }
             var cg = new GameObject("CM pelaaja") { layer = kerros };
             cg.transform.SetParent(go.transform, false);
@@ -393,6 +483,8 @@ namespace Matkakirja.Natiivi
             NapautusSyote(ref s, dt);
             if (Time.unscaledTime > leikkausTarkistus) { leikkausTarkistus = Time.unscaledTime + 0.5f; SeikkailuKavely.PaivitaLeikkaukset(transform.position); }
             if (Otteessa) { s.LiikeX = s.LiikeY = 0; s.Juoksu = false; napautusReitti.Clear(); }
+            if (PaivitaOteKiipeily(dt, s)) { PaivitaKadet(dt); return; }
+            if (takaPaino > 0f && oteKiipeily == null) { takaPaino = Mathf.MoveTowards(takaPaino, 0f, dt / TakaSiirtymaS); if (takaPaino <= 1e-3f) { takaPaino = 0f; NaytaTakakuvaHahmo(false); } }
             if (PaivitaKiipeily(dt, s))
             {
                 // Kiipeillessä vain katse kääntyy (keho tikkaisiin päin).
@@ -430,6 +522,7 @@ namespace Matkakirja.Natiivi
                 silmaMaailma = Mathf.SmoothDamp(silmaMaailma, tavoite, ref silmaNopeus, PortaatViive, Mathf.Infinity, dt);
                 silmaMaailma = Mathf.Clamp(silmaMaailma, tavoite - PortaatMaxJalki, tavoite + PortaatMaxJalki);
                 olka.localPosition = new Vector3(0f, silmaMaailma - transform.position.y, 0f);
+                AsetaTakakuva(olka.position, olka.rotation);   // paluu takakuvasta silmiin
             }
             if (cc.isGrounded) viimeMaassa = transform.position;
             else if (transform.position.y < viimeMaassa.y - 6f)

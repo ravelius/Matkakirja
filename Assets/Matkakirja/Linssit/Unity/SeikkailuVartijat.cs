@@ -185,6 +185,7 @@ namespace Matkakirja.Natiivi
                 sv.henkilot.Add(henkilo);
             }
             Aktiivinen = sv;
+            SeikkailuPelaaja.OteHavaittu -= sv.KiipeilijaHavaittu; SeikkailuPelaaja.OteHavaittu += sv.KiipeilijaHavaittu;
             if (AlkuArmo) { AlkuArmo = false; sv.armoAsti = Time.unscaledTime + ArmoS; }
             kirjaa?.Invoke($"seikkailu: vartijat {sv.vartijat.Count} ({string.Join(", ", reitit.Keys)}), NavMesh {(sv.data != null ? "valmis" : "puuttuu")}");
             return sv;
@@ -469,6 +470,13 @@ namespace Matkakirja.Natiivi
                 kirjaa?.Invoke($"seikkailu: irtipääsy ({v.Osa})");
                 yield break;
             }
+            yield return Vie(v, p);
+        }
+
+        /// <summary>Kiinniotto ilman irtipääsyä (himmennys, repliikki, tyrmä tai tarkistuspiste); Ote ja ote-kiipeily (lyhdyn valo).</summary>
+        IEnumerator Vie(V v, SeikkailuPelaaja p)
+        {
+            ote = v;
             SeikkailuNakyvyys.Himmennys = 1f;
             var r = SeikkailuRepliikit.Aktiivinen;
             if (r != null && r.Valmis && v.Agentti != null) r.Soita("vartija-kiinni-2", v.Agentti.transform);
@@ -523,8 +531,24 @@ namespace Matkakirja.Natiivi
             if (a != null) Destroy(a.gameObject);
         }
 
+        /// <summary>Huone 8: liike lyhdyn valossa ulkoseinällä (valopiiri kasvoi 2 s = varoitus) → hälytys, vartijat vetävät köydestä
+        /// (ei näytetä, FIKTIO) → tyrmä. Lähin vartija tekee kiinnioton.</summary>
+        void KiipeilijaHavaittu()
+        {
+            var p = SeikkailuPelaaja.Aktiivinen; if (p == null || ote != null || vartijat.Count == 0) return;
+            V lahin = null; float pd = float.MaxValue;
+            foreach (var x in vartijat) { if (x.Agentti == null) continue; float d = (x.Agentti.transform.position - p.transform.position).sqrMagnitude; if (d < pd) { pd = d; lahin = x; } }
+            if (lahin == null) return;
+            var r = SeikkailuRepliikit.Aktiivinen;
+            if (r != null && r.Valmis) r.Soita("vartija-valpas-1", lahin.Agentti.transform);   // olemassa oleva repliikki (ei uusia ilman lupaa)
+            kirjaa?.Invoke($"seikkailu: kiipeilijä nähtiin lyhdyn valossa ({lahin.Osa})");
+            p.LopetaOteKiipeily();
+            StartCoroutine(Vie(lahin, p));
+        }
+
         void OnDestroy()
         {
+            SeikkailuPelaaja.OteHavaittu -= KiipeilijaHavaittu;
             if (Aktiivinen == this) Aktiivinen = null;
             foreach (var h in henkilot) { hahmot?.PoistaIrralliset(h); DioraamaHahmot3D.PiilotetutHenkilot.Remove(h); }
             foreach (var v in vartijat) if (v.Askeleet != null) Destroy(v.Askeleet.gameObject);

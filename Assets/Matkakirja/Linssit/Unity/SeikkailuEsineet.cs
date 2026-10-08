@@ -56,6 +56,42 @@ namespace Matkakirja.Natiivi
         /// <summary>Avaimet laukussa (avainrengas voudin pöydältä): lukitut ovet merkin avain-kentän mukaan.</summary>
         public readonly HashSet<string> Avaimet = new HashSet<string>(StringComparer.Ordinal);
         sealed class Ovi { public KavelyMerkki M; public GameObject Go; public bool Auki; public Vector3 Paikka; }
+        // Huone 8: köysi sakaraan (koysi:sakara, köysikieppi kädessä) → ote-kiipeily ote:kellotorni-1…N takakuvassa, puuskat tuuli:puuska-N.
+        Vector3? sakara; readonly List<(Vector3 P, Vector3 Ulos)> otteet = new List<(Vector3, Vector3)>(); readonly List<int> puuskat = new List<int>();
+        public const string Koysikieppi = "koysikieppi";
+
+        void LuoKiipeily(KavelyData d)
+        {
+            foreach (var m in d.Lajia("koysi")) if (m.Tunnus == "sakara") sakara = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+            var ot = new List<KavelyMerkki>();
+            foreach (var m in d.Lajia("ote")) ot.Add(m);
+            ot.Sort((a, b) => Numero(a.Tunnus).CompareTo(Numero(b.Tunnus)));
+            foreach (var m in ot)
+            {
+                var n = m.Ulkonormaali ?? new[] { 0.0, 0.0, 1.0 };
+                otteet.Add((new Vector3((float)m.X, (float)m.Y, (float)-m.Z), new Vector3((float)n[0], 0f, (float)-n[2])));
+            }
+            foreach (var m in d.Lajia("tuuli"))
+            {
+                var tp = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
+                for (int i = 0; i < otteet.Count; i++) if ((otteet[i].P - tp).sqrMagnitude < 0.25f) { puuskat.Add(i); break; }
+            }
+            static int Numero(string t) { int i = t.LastIndexOf('-'); return i >= 0 && int.TryParse(t.Substring(i + 1), out int n) ? n : 0; }
+        }
+
+        bool SakaraLahella(SeikkailuPelaaja p) => sakara is Vector3 sk && otteet.Count > 0 && (p.transform.position - sk).sqrMagnitude < 2.5f * 2.5f
+            && Mathf.Abs(p.transform.position.y + 1f - sk.y) < 2f;
+
+        void KiinnitaKoysi(SeikkailuPelaaja p)
+        {
+            // Köysi sakaraan (kädet), sitten kaiteen yli: ote-kiipeily takakuvassa. Köysikieppi jää sakaraan.
+            var e = kadessa; kadessa = null;
+            if (e?.Go != null) { e.Go.transform.SetParent(transform, true); e.Go.transform.position = sakara.Value; e.Rb.isKinematic = true; }
+            p.KasiEle("poiminta");
+            SeikkailuAanet.Soita("lyhty-narina", sakara.Value, 0.6f, 0.8f);
+            kirjaa?.Invoke($"seikkailu: köysi sakaraan → ote-kiipeily ({otteet.Count} otetta, puuskat {string.Join(",", puuskat)})");
+            p.AloitaOteKiipeily(otteet, puuskat, ok => kirjaa?.Invoke("seikkailu: komeron kynnyksellä (huone 9)"));
+        }
         readonly List<Ovi> ovet = new List<Ovi>();
         bool pukeutuu;
 
@@ -146,7 +182,7 @@ namespace Matkakirja.Natiivi
             // Liinanyytin sisältö (kalkki, pateeni, liuskekivi) näkyy vasta, kun nyytti avataan (E3 vaihe 10).
             if (se.esineet.Exists(x => x.Id == Nyytti)) foreach (var x in se.esineet) if (Array.IndexOf(NyytinSisalto, x.Id) >= 0) x.Go.SetActive(false);
             foreach (var x in se.esineet) if (x.Id.StartsWith("avainnippu", StringComparison.Ordinal)) x.Go.SetActive(false);   // tyrmä: Pulu tuo
-            se.LuoOvet(d);
+            se.LuoOvet(d); se.LuoKiipeily(d);
             kirjaa?.Invoke($"seikkailu: esineet {se.esineet.Count} ({string.Join(", ", se.esineet.ConvertAll(x => x.Id))})");
         }
 
@@ -334,7 +370,7 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
-            if (p.Otteessa || pukeutuu) { Toiminto = null; return; }   // vartijan otteessa toiminto = irtipääsy (SeikkailuVartijat lukee)
+            if (p.Otteessa || pukeutuu || p.OteKiipeily != null) { Toiminto = null; return; }   // vartijan otteessa toiminto = irtipääsy (SeikkailuVartijat lukee)
             // Lähin heitettävä (ei kädessä eikä lennossa).
             Esine lahin = null; float pd = float.MaxValue;
             var pp = p.transform.position + Vector3.up * 0.9f;
@@ -364,6 +400,7 @@ namespace Matkakirja.Natiivi
                 ?? (kadessa == null && LahinOvi(p) != null ? "ovi" : null);
             Toiminto = kadessa != null
                 ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? "Avaa"
+                    : kadessa.Id == Koysikieppi && SakaraLahella(p) ? "Kiinnitä"
                     : kadessa.Id == Tarjotin && SeikkailuVartijat.TarjotinVastaanottaja(p.transform.position) ? "Anna"
                     : kadessa.Laji == Laji.Heitettava ? "Heitä" : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? "Aseta" : "Laske")
                 : lahin != null ? (lahin.Laji == Laji.Irrotettava ? "Irrota" : lahin.Laji == Laji.Kaadettava ? "Kaada" : lahin.Laji == Laji.Puettava ? "Pue" : lahin.Id == Nyytti ? "Avaa" : "Poimi")
@@ -376,6 +413,7 @@ namespace Matkakirja.Natiivi
             if (gp != null && gp.buttonWest.wasPressedThisFrame) toiminto = true;
             if (!toiminto) return;
             if (kadessa != null && SeikkailuTyrma.Aktiivinen is SeikkailuTyrma ty && ty.OviLahella(p)) ty.AvaaOvi(p);
+            else if (kadessa != null && kadessa.Id == Koysikieppi && SakaraLahella(p)) KiinnitaKoysi(p);
             else if (kadessa != null && kadessa.Id == Tarjotin && SeikkailuVartijat.AnnaTarjotin(p.transform.position))
             {
                 // Torkkuva vartija herää eväisiin (pelattavuusmalli 8.1 huone 4): tarjotin hänelle, käteen jää kynttilä.

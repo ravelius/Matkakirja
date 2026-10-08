@@ -1057,6 +1057,13 @@ namespace Matkakirja.Natiivi
                     var kg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(kg);
                     foreach (var glb in kg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
                 }
+                // Takakuvan hahmo (M-osa: ulkoseinä, köysilasku): Fogg asu v2 piilossa, kunnes pelaaja on takakuvassa.
+                if (sp.TakakuvaHahmo != null)
+                {
+                    nayttamo.Hahmot3D.LisaaIrrallinen(rakennus, id, sp.TakakuvaHahmo, sp.Leike, Quaternion.Euler(0f, 180f, 0f));
+                    var tg = new List<string>(); nayttamo.Hahmot3D.IrrallistenGlb(tg);
+                    foreach (var glb in tg) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
+                }
                 o.StartCoroutine(EsineetPaalle());
                 o.Kirjaa("seikkailu: ensimmäinen persoona (ei pelaajahahmoa)");
                 return;
