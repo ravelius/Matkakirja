@@ -2,6 +2,17 @@
 
 Omistaja (Päätoimittajan välittämänä 8.10.2026 klo ~08.5x) haluaa latauskuviin kevyen animaation: **pallo heiluu hitaasti**. Siksi PR #4143:n latauskuva (kuumailmapallo, fotorealistinen havainnekuva; kolme rajausta samasta masterista) tehdään uudestaan **kahtena kerroksena**, joiden päällekkäin asettelu antaa saman kuvan kuin #4143:ssa. Tyyli, paletti, sävyt, kuvakulma, valo ja turvavyöhykkeet kuten `posti/sisaltokirjuri-havainnekuva-latauskuva-kuumailmapallo-20261007.md` ja toimitus `posti/codex-fable-latauskuva-kuumailmapallo-20261007.md`. FOTOREALISTINEN, ei tekstiä, ei ihmisiä, ei kehystä; PNG Description/Source: "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."; sRGB. **Vain Eurooppa/yleinen aihe: ei nimikohteita.**
 
+## PÄIVITYS 2, 8.10.2026 (Päätoimittaja, omistajan toive): ANKKURIKÖYSI JA MAASSA NÄKYVÄ KIINNITYSKOHTA
+
+Omistaja haluaa **ankkuriköyden**, joka pitää pallon paikallaan. Köysi piirretään pelissä **vektorina korista maahan**; **kuviin ei piirretä mitään köysiä** (ei ankkuriköyttä eikä korin 4 köyttä; ne piirtää peli). Seuraus **taustakerrokselle (a)**:
+- Taustassa pitää näkyä **maassa luonteva köyden kiinnityskohta**: yksi selvästi erottuva **paalu, rengas (esim. maahan upotettu rautarengas) tai painokivi/säkkipaino** pallon alapuolella, kuvan keskiakselin lähellä (pallon alla tai hieman sivussa), kuvan alaosan **tummenevan vyöhykkeen yläreunassa**, siis noin **72–82 % kuvan korkeudesta** (jotta se ei joudu latausrivin ja palkin alle eikä katoa alimpaan tummaan 15 %:iin). Kiinnityskohdan ympärillä pieni maapinta-alue (esim. niitty, kallio tai kivetty reunus), joka sopii kaupunkinäkymän yläpuolella olevaan korkeaan näkökulmaan; taustan perusilme, valo ja kaupungin siluetti säilyvät. Jos #4143:n kuvassa ei ollut maata tässä kohdassa, rakenna se uskottavasti: matala maapenkka/niitty kuvan alareunaan, jonka reuna sulautuu tummaan alaosaan; älä muuta pallon paikkaa tai taivasta.
+- Kiinnityskohta on **pieni ja siisti** (peittää alle ~4 % kuvan leveydestä), **ei köyttä siinä** (ei roikkuvaa narunpätkää eikä ketjua) — pelkkä paalu/rengas/paino, johon peli kiinnittää viivan.
+- Nämä pysyvät ennallaan: ei tekstiä, ei ihmisiä, ei kylttejä.
+- Manifestiin per rajaus: **maan kiinnityskohdan sijainti pikseleinä** (Sisältökirjuri mittaa sen uudelleen ja muuntaa osuuksiksi 0–1 yhdessä korin 4 yläkulman ja kuvun alareunan 4 köysikiinnityskohdan kanssa).
+- Kolme rajausta (iPhone, iPad pysty, iPad vaaka): kiinnityskohta näkyy kaikissa kolmessa rajauksessa (tarkista turvavyöhyke; jos jokin rajaus leikkaisi sen pois, pidä se keskiakselilla ja vyöhykkeellä 72–82 %).
+
+---
+
 ## PÄIVITYS 8.10.2026 (Päätoimittaja, Natiivi-UI:n tarkennus): KOLME KERROSTA, ei kahta
 
 Kerroksia on **kolme** (kaikki kolme rajausta kuten nykyisissä: iPhone 1290 × 2796, iPad pysty 2048 × 2732, iPad vaaka 2732 × 2048; sama rajaus kuin #4143:ssa, kerrokset osuvat toisiinsa pikselilleen):
