@@ -16,6 +16,8 @@ namespace Matkakirja.Natiivi
     public sealed class KoriKatseVeto
     {
         public static bool Kaytossa = true;
+        /// <summary>Astetta pikselille × kenttäkulma / ruudun korkeus (2 = koko ruudun veto ≈ 2 × kenttäkulma).</summary>
+        public static float Herkkyys = 2f;
         /// <summary>Kuvapari ilman kosketusta: `opas katse <asteet>` pitää nostoa (rajattu +45° horisonttiin), negatiivinen = pois.</summary>
         public static float Pakotettu = -1f;
         readonly KoriKatse katse = new KoriKatse();
@@ -47,7 +49,9 @@ namespace Matkakirja.Natiivi
             }
             else if (!ohita)
             {
-                katse.Liiku(px.y - ed.y, kam.fieldOfView / Mathf.Max(1, Screen.height), kulma);
+                // Herkkyys 2 × kenttäkulma / ruudun korkeus: kehys katsoo alaviistoon (−30…−45°), joten kupuun (+35…45°) pitää päästä
+                // yhdellä vedolla (BUILD 167:n kuvaparissa 1 × vaati 2–3 vetoa).
+                katse.Liiku(px.y - ed.y, Herkkyys * kam.fieldOfView / Mathf.Max(1, Screen.height), kulma);
                 ed = px;
             }
             katse.Paivita(Time.unscaledDeltaTime, kulma);
