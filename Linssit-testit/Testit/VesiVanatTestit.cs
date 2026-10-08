@@ -23,11 +23,11 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void VaahtoPeraanJaKiilaan()
         {
             double pit = 30, n = 6;
-            Oleta.Tosi(VesiVanat.Vaahto(60, 0, pit, n) > 0.5, "keskivana perässä");
-            Oleta.Tosi(VesiVanat.Vaahto(60, 0, pit, n) > VesiVanat.Vaahto(300, 0, pit, n), "häipyy pituuden mukana");
+            Oleta.Tosi(VesiVanat.Vaahto(60, 0, pit, n) > 0.2, "keskivana perässä");
+            Oleta.Tosi(VesiVanat.Vaahto(60, 0, pit, n) > VesiVanat.Vaahto(150, 0, pit, n), "häipyy pituuden mukana");
             Oleta.Sama(0.0, VesiVanat.Vaahto(pit * VesiVanat.PituusKerroin + 1, 0, pit, n), "loppuu");
-            double varsi = VesiVanat.KiilaTan * 150 + Math.Max(2, pit * VesiVanat.LeveysOsuus) * 0.5;
-            Oleta.Tosi(VesiVanat.Vaahto(150, varsi, pit, n) > VesiVanat.Vaahto(150, varsi * 0.6, pit, n), "kiilan harja 19,5°");
+            double varsi = VesiVanat.KiilaTan * 80 + Math.Max(2, pit * VesiVanat.LeveysOsuus) * 0.5;
+            Oleta.Tosi(VesiVanat.Vaahto(80, varsi, pit, n) > VesiVanat.Vaahto(80, varsi * 0.6, pit, n), "kiilan harja 19,5°");
             Oleta.Tosi(VesiVanat.Vaahto(-pit * 0.5, 0, pit, n) > 0.3, "keula-aalto");
             Oleta.Sama(0.0, VesiVanat.Vaahto(60, 0, pit, 0), "paikallaan ei vanaa");
             Oleta.Sama(VesiVanat.Vaahto(80, 7, pit, n), VesiVanat.Vaahto(80, -7, pit, n), "symmetrinen");
@@ -37,8 +37,8 @@ namespace Matkakirja.Linssit.Testit
         {
             string s = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "VesiPinta.shader"));
             Oleta.Tosi(s.Contains("float4 _VesiVana[16]") && VesiVanat.VanojaMax == 16, "16 vanaa");
-            Oleta.Tosi(s.Contains("L = pit * 12.0") && s.Contains("b.x / 6.0") && s.Contains("pit * 0.18") && s.Contains("0.354 * max(0.0, taakse)"), "samat vakiot");
-            Oleta.Tosi(s.Contains("(keski * 0.8 + kaari * 0.35) * haivy + keula * 0.5 * n"), "sama kaava");
+            Oleta.Tosi(s.Contains("L = pit * 6.0") && s.Contains("b.x / 6.0") && s.Contains("pit * 0.18") && s.Contains("0.354 * max(0.0, taakse)"), "samat vakiot");
+            Oleta.Tosi(s.Contains("(keski * 0.6 + kaari * 0.15) * haivy + keula * 0.4 * n"), "sama kaava");
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Matkakirja.Linssit.Ilmakeha
     public sealed class VesiVanat
     {
         public const int VanojaMax = 16;
-        public const double VanhentuuS = 0.5, PituusKerroin = 12, NopeusTaysiMs = 6, KiilaTan = 0.354, LeveysOsuus = 0.18;
+        public const double VanhentuuS = 0.5, PituusKerroin = 6, NopeusTaysiMs = 6, KiilaTan = 0.354, LeveysOsuus = 0.18;
 
         public struct Vana { public double X, Z, Dx, Dz, Nopeus, Pituus, Aika; }
         readonly Dictionary<int, Vana> vanat = new Dictionary<int, Vana>();
@@ -46,9 +46,9 @@ namespace Matkakirja.Linssit.Ilmakeha
             if (taakse < -pituus * 0.6 || taakse > L || n <= 0) return 0;
             double t = Math.Max(0, taakse) / L, haivy = (1 - t) * (1 - t) * n;
             double keski = taakse > 0 ? Math.Exp(-sivu * sivu / (leveys * leveys * (1 + taakse * 0.02))) : 0;
-            double varsi = KiilaTan * Math.Max(0, taakse) + leveys * 0.5, kaari = Math.Exp(-Math.Pow((sivu - varsi) / (1.5 + taakse * 0.03), 2));
+            double varsi = KiilaTan * Math.Max(0, taakse) + leveys * 0.5, kaari = Math.Exp(-Math.Pow((sivu - varsi) / (2.5 + taakse * 0.05), 2));
             double keula = Math.Exp(-Math.Pow((taakse + pituus * 0.5) / (pituus * 0.15), 2)) * Math.Exp(-sivu * sivu / (leveys * leveys));
-            return (keski * 0.8 + kaari * 0.35) * haivy + keula * 0.5 * n;
+            return (keski * 0.6 + kaari * 0.15) * haivy + keula * 0.4 * n;
         }
     }
 }
