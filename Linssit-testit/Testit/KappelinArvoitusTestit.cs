@@ -123,13 +123,28 @@ namespace Matkakirja.Linssit.Testit
             a.KappalainenTulee = false;
             a.Teko(KappeliTeko.AsetaKynttila); a.Teko(KappeliTeko.Raapaise);
             Oleta.Tosi(!a.KappalainenTulee, "raapaisu käynnin aikana ei tuo uutta");
-            a.Teko(KappeliTeko.Kiinni);   // liekki näkyi pääovelle → paluu "pimeä kappeli" -tallennukseen
-            Oleta.Tosi(!a.KappalainenTulossa && !a.KappalainenKaynyt && a.Pimea && a.Raapaisut == 0, "kiinnijäänti palauttaa pimeän kappelin");
-            a.Teko(KappeliTeko.AsetaKynttila); a.Teko(KappeliTeko.Raapaise);
+            a.Teko(KappeliTeko.Kiinni);   // liekki näkyi pääovelle → tallennuspisteeseen, maailma (raapaisut) säilyy
+            Oleta.Tosi(!a.KappalainenTulossa && !a.KappalainenKaynyt && a.Pimea && a.Raapaisut == 1, "kiinnijäänti: käynti keskeytyi, raapaisu säilyi");
+            a.Teko(KappeliTeko.Raapaise);
             Oleta.Tosi(a.KappalainenTulee, "uusi yritys: raapaisu tuo kappalaisen uudelleen");
             a.KappalainenTulee = false; a.Teko(KappeliTeko.KappalainenLahti);
             a.Paivita(500); a.Teko(KappeliTeko.Raapaise);
             Oleta.Tosi(!a.KappalainenTulee && !a.KappalainenTulossa, "käynnin jälkeen ei enää");
+        }
+
+        [Testi] static void HavaintoKynttilatilasta()
+        {
+            // Sovitin (SeikkailuKynttilat) kertoo tilan: kädessä saumoilla ≤ 0,5 m riittää vaiheeseen 6; alttarikynttilä pimeässä vie saumat.
+            var a = new KappelinArvoitus();
+            foreach (var t in new[] { KappeliTeko.KohtausAlkoi, KappeliTeko.VoutiLahti, KappeliTeko.OviLukittu }) a.Teko(t);
+            a.Tallennettiin = false;
+            a.Havaitse(omaPalaa: true, asetettu: false, kasiSaumoilla: true, alttariPalaa: true, luukkuAuki: false);
+            Oleta.Tosi(!a.SaumatNakyvat && a.Vaihe == 3, "alttarikynttilä palaa: saumat eivät näy");
+            a.Havaitse(true, false, true, false, false);
+            Oleta.Tosi(a.SaumatNakyvat && a.Vaihe == 7 && a.Edistyi && a.Tallennettiin, $"kädessä saumoilla: vaihe 7 ({a.Vaihe}), edistys ja tallennus");
+            a.Havaitse(true, false, false, false, false);
+            Oleta.Tosi(!a.SaumatNakyvat && a.SaumatNahty && a.Vaihe == 7, "käsi pois: saumat nähty, vaihe pysyy");
+            Oleta.Tosi(a.Teko(KappeliTeko.KappalainenTuli) && !a.Teko(KappeliTeko.KappalainenTuli), "Unityn paluu (100 s) kerran");
         }
 
         [Testi] static void LoytoAsettuuItse10s()
@@ -148,9 +163,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a.Vaihe == 9 && a.KiviaIrti >= 1, $"vaihe 9, kiviä {a.KiviaIrti} + {a.Raapaisut}");
             var t = new SeikkailuTallennus(); a.Kirjoita(t);
             var b = KappelinArvoitus.Lue(SeikkailuTallennus.Lue(t.Kirjoita()));
-            var c = a.Kopio(); c.Teko(KappeliTeko.Kiinni);   // tallennettu tila = kiinnijäännin palautus
-            Oleta.Sama(c.Avain(), b.Avain());
-            Oleta.Sama(c.Vaihe, b.Vaihe);
+            Oleta.Sama(a.Avain(), b.Avain());
+            Oleta.Sama(a.Vaihe, b.Vaihe);
+            Oleta.Sama(a.Vaihe, t.Arvoitus["kappeli"]);
             Oleta.Tosi(Ratkaistavissa(b, out int n), $"jatkosta loppuun ({n} tekoa)");
             Oleta.Sama(1, KappelinArvoitus.Lue(new SeikkailuTallennus()).Vaihe);
         }
