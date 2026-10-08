@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "85dfe875bb235d64";
-        public const string Versio = "v45o";   // v45n + 8K-atlakset (kappeli, keittio-g102, linnantupa, voudin-sali; Ultra), uudet tilaglb:t (uusi UV1), 34 esineen normaalikartat (LR 8.10.)
+        public const string Hash = "27c1262c20dfd693";
+        public const string Versio = "v45p";   // v45o + rekvisiitta (48 merkkiä, 22 CC0-mallia Poly Havenista; LR 8.10.)
     }
 }
