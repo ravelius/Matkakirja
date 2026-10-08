@@ -1,0 +1,446 @@
+{
+  "task": "edinburgh-yksityiskohdat-20261008",
+  "routedTaskNumber": 21,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-edinburgh-yksityiskohdat-20261008.md",
+    "commit": "e25334cd78327a78ac287682bc677d3750540fe2",
+    "blob": "a3a1f8fed1b60b94b7ac4c75d56b033ad9e7e37f"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 6,
+  "imageCount": 3,
+  "generationCalls": 3,
+  "generationLimit": 6,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q1633842",
+      "id": "elava-dolly",
+      "file": "edinburgh-Q1633842-elava-dolly.png",
+      "filename": "edinburgh-Q1633842-elava-dolly.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/01-elava-dolly/edinburgh-Q1633842-elava-dolly.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab1-2224-7283-b399-41c92fcc641f/exec-bbb730da-32dc-4f51-95a1-6a2dddaaef2d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/01-elava-dolly/original-generation.png",
+      "sha256": "5647d7bcc793917086a59ddabcf2a9722ff3fe7a0f4c4e69625f658fa750025f",
+      "originalSha256": "469626026eb84469a4d456058592cf1c9ef7ea9ef116facf5b330b04e7b84835",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational illustrative image for the Edinburgh city introduction.\nCreate exactly ONE new TEXT-ONLY image. Landscape native 1536 x 1024, 3:2, opaque RGB PNG, natural sRGB. No input images or photograph references.\nSubject: a LIVING young white Finn-Dorset ewe representing Dolly in 1997, quietly standing on green grass in a completely fictional Scottish farm pasture. The sheep is healthy, alert, relaxed and alive, about nine months old, with thick soft cream-white wool, pale white face, natural pinkish muzzle, two ears without any tags, and a calm look slightly sideways. Normal sheep anatomy with all four legs, four hooves, the whole body, head and ears clearly within the frame.\nScene: bright overcast daylight in rural Scotland in 1996–1997; ordinary green pasture, a plain weathered wooden fence and modest farm shed in the softly unfocused background. No institutional, laboratory or museum setting. No other sheep needed.\nComposition: a real camera viewpoint at the sheep's eye level, from the side and a little in front, like a simple documentary photograph taken from several metres away with a normal 50 mm lens. The sheep occupies the central half to two-thirds of frame width, with ample grass below all its feet and generous free space around ears, muzzle and hindquarters. Full body and all four legs remain inside the frame. Mild authentic optical background blur; foreground sheep is clearly in focus. A natural unposed moment, believable weight on the ground, small soft shadow.\nStyle and light: must look like a REAL CAMERA photograph, not artwork, not painting, not a CGI render. Soft natural cloudy Scottish daylight, muted honest greens, warm white wool, no dramatic lighting, no HDR, no cinematic color grading, no high saturation. Visible realistic wool fibres, moist nostrils, subtle normal imperfections in grass and timber, credible everyday photographic exposure.\nConstraints: this is a fictional outdoor living-animal scene, not a replica of museum taxidermy or a recreated museum display. No ear tags, collar, marks, brands, labels, text, letters, numbers, signs, logos, watermarks or image borders. No people, identifiable human faces, researchers, laboratory tools, glass cabinets, stuffed animal appearance, injury, blood or violence. Whole subject and every hoof visible with margins.\n",
+      "viitteet": [
+        {
+          "publisher": "The Roslin Institute, University of Edinburgh",
+          "title": "The Life of Dolly",
+          "url": "https://vet.ed.ac.uk/roslin/about/history/dolly/facts/life-of-dolly",
+          "type": "textResearchOnly",
+          "notes": "Official institutional text confirms Dolly was born 5 July 1996, cloned from an adult Finn Dorset ewe cell; her white face distinguished her from the Scottish Blackface surrogate. Outdoor pasture and animal pose are fictional, with no reference or museum pixels used.",
+          "access": "2026-10-08; web text read only, no images opened"
+        }
+      ],
+      "kuvateksti": "Nuori finnidorset-lammas esittää Dollya kuvitteellisella skotlantilaisella laitumella vuonna 1997. Dolly oli ensimmäinen aikuisen solusta kloonattu nisäkäs. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the native 1536x1024 file and full-frame 480x320 preview.",
+          "Living white-faced ewe, whole body, four separate legs and feet in frame with grass beneath; ears, muzzle and hindquarters have clear margins.",
+          "Plain fictional farm fence and shed, soft overcast light, natural muted photographic colors and credible wool/grass textures.",
+          "No people, ear tags, collars, lettering, numerals, logos, signs, watermark, border, laboratory elements or museum display observed."
+        ],
+        "limitations": [
+          "The pasture, exact animal appearance and pose are fictional; this is not documentary evidence of Dolly at a specific place or time.",
+          "Finn Dorset identity and Dolly context are grounded in institutional text; individual identity cannot be proven by appearance."
+        ]
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "a3a1f8fed1b60b94b7ac4c75d56b033ad9e7e37f",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/01-elava-dolly/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "edinburgh-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q1633842",
+        "file": "edinburgh-Q1633842-elava-dolly.png",
+        "sha256": "5647d7bcc793917086a59ddabcf2a9722ff3fe7a0f4c4e69625f658fa750025f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Elävä valkoinen lammas koko vartaloineen ja neljine jalkoineen, ei korvamerkkiä tai pantaa. Luonnollinen laidunvalo ja valokuvamaiset villa/ruohopinnat. Ei ihmisiä, kirjoitusta tai museoesineen kuvausta."
+        ],
+        "limitations": [
+          "The pasture, exact animal appearance and pose are fictional; this is not documentary evidence of Dolly at a specific place or time.",
+          "Finn Dorset identity and Dolly context are grounded in institutional text; individual identity cannot be proven by appearance."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:59:00.012016+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the native 1536x1024 file and full-frame 480x320 preview.",
+          "Living white-faced ewe, whole body, four separate legs and feet in frame with grass beneath; ears, muzzle and hindquarters have clear margins.",
+          "Plain fictional farm fence and shed, soft overcast light, natural muted photographic colors and credible wool/grass textures.",
+          "No people, ear tags, collars, lettering, numerals, logos, signs, watermark, border, laboratory elements or museum display observed."
+        ],
+        "limitations": [
+          "The pasture, exact animal appearance and pose are fictional; this is not documentary evidence of Dolly at a specific place or time.",
+          "Finn Dorset identity and Dolly context are grounded in institutional text; individual identity cannot be proven by appearance."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/edinburgh-yksityiskohdat/20261008/edinburgh-Q1633842-elava-dolly.png",
+      "url": "https://media.matkakirja.app/julisteet/edinburgh-yksityiskohdat/20261008/edinburgh-Q1633842-elava-dolly.png",
+      "bytes": 2567203,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q1807521",
+      "id": "puunsiirto-1820",
+      "file": "edinburgh-Q1807521-puunsiirto-1820.png",
+      "filename": "edinburgh-Q1807521-puunsiirto-1820.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/03-puunsiirto-1820/edinburgh-Q1807521-puunsiirto-1820.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab1-2224-7283-b399-41c92fcc641f/exec-52d68470-cd25-46fe-a29f-19cdc52a2268.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/03-puunsiirto-1820/original-generation.png",
+      "sha256": "f8964c286b2f885df67c2329ff9a143f49f2b2e6e3ee0c835dbda05ee4cfbc5c",
+      "originalSha256": "772e18937f8aae086f71aaa45410651811a6812f05a3c616b8aa941959619f02",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational illustrative image for the Edinburgh city introduction.\nCreate exactly ONE new TEXT-ONLY image, native landscape 1536 x 1024, 3:2, opaque RGB PNG, sRGB. No reference/input images.\nScene: a fictional reconstruction of a large tree being moved from Leith Walk to Inverleith near Edinburgh in 1820–1822, using William McNab's early tree-transplanting system. A plain broad dirt road crosses open fields. Subtle distant Edinburgh old-town roof silhouettes are blurred on the far horizon, with no conspicuous landmarks and no buildings later than 1822. Quiet bright overcast Scottish daylight.\nPrimary subject and essential count: EXACTLY TWELVE separate draft horses, arranged as SIX successive PAIRS in a SINGLE CONTINUOUS CONNECTED TEAM, two abreast, all twelve hauling the ONE tree-transplant cart toward the right. There are six visible paired ranks extending from the cart at left to the leading pair at right. Every horse must be independently countable, with its own separate head, neck and body visible. The six horses in the far row are offset slightly ahead of their near-row companions so heads and bodies do not hide behind one another. Adequate gaps between paired ranks. No extra horses anywhere. Natural mixed bay/chestnut/grey coats help distinguish individual horses. These are heavy working farm horses with believable anatomy and relaxed steady walking stance, not show horses. Early-1800s plain dark leather collars, harness and traces; all twelve horses physically linked through the six ranks to the cart by taut continuous long traces and a central wooden drawbar. No disconnected rows, no diagram, no parade.\nCart and tree: a heavy low wooden platform cart with four small broad iron-rimmed spoked wheels, simple early-1800s timber framing and iron chains. One substantial living broadleaf tree is transported UPRIGHT. The ENTIRE leafy crown, branches, trunk and large soil-and-root ball are visible. The compact rounded crown stays fully inside the upper left of the frame with sky above it. Rootball wrapped in plain beige linen/matting and securely resting in a timber cradle on the wooden platform. Visible supporting ropes and bracing run from the trunk and rootball down to cart frame, with iron chain and a small hand winch on the frame. Every part of the tree is mechanically supported; nothing floating. Realistic burden and scale. This is a plausible illustrative cart, not an exact copy of a historic drawing.\nComposition: exceptionally wide clear view from the side and slightly elevated, around roof height, with enough downward angle to distinguish both rows of horses and all twelve heads. Cart and whole tree at left, six hevospari ranks stretching diagonally across the lower middle toward the right, leading pair safely inside the right edge. Entire tree, entire cart, all twelve horses and their hooves fit inside the image with comfortable margins. Keep open sky and fields around the scene. Natural perspective like a REAL CAMERA documentary photograph from a hillside, not an engraving or infographic. Balanced large tree and visibly countable team.\nPeople: a few very SMALL fictional anonymous onlookers along the lower road edge, seen only from behind and occupying under one-tenth of image height. Simple early-1820s muted wool coats, plain waistcoats, brimmed or top hats and long dresses. No face is visible, no recognizable historic or living individual, no prominent driver portrait.\nStyle and light: REAL CAMERA appearance with believable optical detail, grass, linen, timber, iron, leather, horse hair and leaf textures; soft natural cloudy daylight and restrained ordinary greens, browns, greys. No HDR, no cinematic lighting, no dramatic glow, no oversaturation, no painting, watercolor, illustration texture, CGI polish or sepia filter.\nAvoid: modern city landmarks, glasshouses, later monuments, modern roads, cars, tractors, motors, modern metal cranes, modern straps, modern clothing, flags, signs, words, letters, numbers, logos, watermark, image border, human facial details, blood, injury or active violence. Count exactly twelve horses as six pairs. No cropped tree canopy or cropped horses.\n",
+      "viitteet": [
+        {
+          "publisher": "Royal Botanic Garden Edinburgh, Sibbaldia",
+          "title": "Robert Brown of Perth and James McNab’s North American Tour of 1834",
+          "url": "https://journals.rbge.org.uk/rbgesib/article/download/131/121/480",
+          "type": "textResearchOnly",
+          "notes": "Official journal indexed text p196 states William McNab developed a tree transplanter for the Leith Walk to Inverleith move between 1820 and 1822; this establishes the scene date.",
+          "access": "2026-10-08; indexed PDF text only; PDF image pages not viewed"
+        },
+        {
+          "publisher": "Royal Botanic Garden Edinburgh Archive",
+          "title": "McNab, William",
+          "url": "https://atom-2.rbge.org.uk/index.php/mcnab-william",
+          "type": "textResearchOnly",
+          "notes": "Institutional archive text confirms McNab adapted a mature-tree transplanting machine, some trees over forty feet; details were published in his 1830 paper on hardy evergreens.",
+          "access": "2026-10-08; HTML text only; no image pixels used"
+        },
+        {
+          "publisher": "Henry Steuart; primary historical text digitised from The Planter’s Guide",
+          "title": "The planter’s guide; A practical essay on transplanting large trees and underwood, p48",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/The_planter%27s_guide%3B_A_practical_essay_on_the_best_method_of_giving_immediate_effect_to_wood%2C_by_the_transplanting_of_large_trees_and_underwood_%28IA_plantersguidepra00steu%29.pdf",
+          "type": "textResearchOnly",
+          "notes": "Primary indexed text confirms intact matted rootballs, upright transport on a platform with four low wheels, and occasional use of ten or twelve horses. Used as historical factual evidence, not as compositional reference.",
+          "access": "2026-10-08; indexed page48 text read only; no PDF page images or drawings opened"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen kohtaus William McNabin puunsiirrosta Leith Walkista Inverleithiin vuosina 1820–1822. Kaksitoista hevosta vetää matalaa puunsiirtovankkuria. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed the native 1536x1024 file and full-frame 480x320 preview.",
+          "Twelve distinct horse heads are countable as six successive pairs connected to one cart; far-row bodies partly overlap companions.",
+          "Upright tree, visible linen-wrapped rootball supported on timber platform, braces, ropes, chains and hand winch are present.",
+          "Anonymous spectators are rear-facing with no visible faces; no words, numbers, logos, modern vehicles, blood or active violence observed.",
+          "Muted natural daylight and photographic textures; horse team remains recognizable at 480px."
+        ],
+        "limitations": [
+          "FAIL: the far-left edge of the tree canopy is cut by the image boundary; the required whole canopy and margin are not satisfied.",
+          "The fictional distant skyline contains ambiguous repeated castle-like masses and spires; exact early-1820s architecture is not verified.",
+          "Spectators are rear-facing and anonymous but foreground figures are larger than the requested small distant figures.",
+          "One authorised generation call exhausted. No retry, variant, recrop, extension, rescale or image edit performed."
+        ]
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "a3a1f8fed1b60b94b7ac4c75d56b033ad9e7e37f",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "excluded-after-generation",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/03-puunsiirto-1820/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "excludedReason": "Whole tree canopy not fully within frame; ambiguous historic skyline and overly large spectators. Preserve as rejected local candidate; no delivery.",
+      "visualReview": {
+        "task": "edinburgh-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q1807521",
+        "file": "edinburgh-Q1807521-puunsiirto-1820.png",
+        "sha256": "f8964c286b2f885df67c2329ff9a143f49f2b2e6e3ee0c835dbda05ee4cfbc5c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kuusi erillistä hevosparia eli12hevosta, yhtenäinen vetojono, puinen vankkuri ja tuettu pellavakääreinen juuripaakku. Lähimmät katsojat selin. Lehvästön vasen reuna rajautuu, mutta tilauksen puu, juuret, kone ja koko12hevosen joukko erottuvat; tämä on kirjattu rajauspuute eikä mekanismi- tai lukumäärävirhe."
+        ],
+        "limitations": [
+          "Lehvästön uloimpia vasemman reunan oksia jää kuva-alan ulkopuolelle. Puu ei näy täysin ehjänä kokonaisrajauksena.",
+          "Taustan kaupungin siluetti ja puunsiirtokoneen yksityiskohdat ovat omaa yleistä historiallista tulkintaa, eivät Edinburghin vuoden1820 mitattu kaupunkinäkymä.",
+          "Katsojat näkyvät selin ja verraten lähellä, ilman tunnistettavia kasvoja.12hevosta ovat kuutena parina; parien taaempien hevosten vartalot osin peittyvät."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T08:59:00.013985+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed the native 1536x1024 file and full-frame 480x320 preview.",
+          "Twelve distinct horse heads are countable as six successive pairs connected to one cart; far-row bodies partly overlap companions.",
+          "Upright tree, visible linen-wrapped rootball supported on timber platform, braces, ropes, chains and hand winch are present.",
+          "Anonymous spectators are rear-facing with no visible faces; no words, numbers, logos, modern vehicles, blood or active violence observed.",
+          "Muted natural daylight and photographic textures; horse team remains recognizable at 480px."
+        ],
+        "limitations": [
+          "FAIL: the far-left edge of the tree canopy is cut by the image boundary; the required whole canopy and margin are not satisfied.",
+          "The fictional distant skyline contains ambiguous repeated castle-like masses and spires; exact early-1820s architecture is not verified.",
+          "Spectators are rear-facing and anonymous but foreground figures are larger than the requested small distant figures.",
+          "One authorised generation call exhausted. No retry, variant, recrop, extension, rescale or image edit performed."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/edinburgh-yksityiskohdat/20261008/edinburgh-Q1807521-puunsiirto-1820.png",
+      "url": "https://media.matkakirja.app/julisteet/edinburgh-yksityiskohdat/20261008/edinburgh-Q1807521-puunsiirto-1820.png",
+      "bytes": 2740093,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q505950",
+      "id": "hirvinaky",
+      "file": "edinburgh-Q505950-hirvinaky.png",
+      "filename": "edinburgh-Q505950-hirvinaky.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/05-hirvinaky/edinburgh-Q505950-hirvinaky.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11ab1-a156-7d10-93d6-4a632b4dd700/exec-9513149e-55ea-4b4b-894e-c09ff0012dd6.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/05-hirvinaky/original-generation.png",
+      "sha256": "dd0e7a9551622eb92aba40dfa204599848717373b9685a10d4b60e2ce21a51b0",
+      "originalSha256": "66465a67ffb9c4ab6965ae489b49c3fb81bb4354ed1383dc11105850e64bee1a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: new photorealistic educational illustration of the Holyrood foundation LEGEND for an Edinburgh city introduction.\nCreate ONE completely new TEXT-ONLY landscape image, exactly 1536 x 1024 pixels, opaque RGB PNG, sRGB. No input or reference images. This is explicitly an imagined story scene, not documentary evidence of a miracle or a portrait of an actual person.\nScene: a quiet natural Scottish woodland clearing below a distant rocky hill, early twelfth century setting. Broad-leaved trees, soft moss, fern, damp fallen leaves and rough gray rock. No buildings, roads, modern objects or ornamental religious art.\nPrimary subject: a large brown RED DEER STAG with anatomically plausible branched antlers, rising briefly on its two hind legs in the middle distance. Show its whole body and hooves. The stag is several metres away from every other subject, with a CLEAR OPEN GAP; it is not touching, striking, chasing or attacking anybody. Between its antlers appears a small luminous plain cross, a restrained warm-white story symbol, readable at thumbnail size without an exaggerated halo, floating over the forehead within the gap between the antlers. The cross has two simple intersecting bars, no crucified body, no decorative artwork.\nSecondary subject: one SMALL FICTIONAL ANONYMOUS adult hunter kneeling upright on one knee in the foreground, facing COMPLETELY AWAY from the camera toward the stag, entire back of head visible and absolutely no face, profile or facial details. His posture is quiet amazement, both hands empty and lowered. He occupies no more than one fifth of the image height. Generic early-1100s wool tunic, plain muted brown cloak, simple leather footwear, no crown, heraldry, armor, jewelry, weapon, hunting staff, bow or spear. Do not depict or resemble King David I or any identifiable living or historical person.\nA single dark brown horse stands UPRIGHT on ALL FOUR LEGS nearby behind the hunter, fully visible, unhurt and without a rider. Simple plain medieval leather bridle and saddle, no heraldic decoration. The horse observes the stag calmly, not falling, jumping or rearing.\nComposition: wide full-frame 3:2 horizontal view from slightly low camera height. Stag, cross, small rear-facing hunter and upright horse each remain visually distinct, with convincing scale and perspective. Keep the stag's antlers and small glowing cross clear against soft shaded green woodland. A distant craggy hill is glimpsed through the trees. Preserve spacious clear separation among all bodies.\nStyle and lighting: convincingly camera-captured photographic appearance, natural soft overcast forest daylight, realistic fur, moss, timber and wool textures, modest depth of field, muted greens, gray stone and earth browns. Restrained exposure; cross glow stays localized. No HDR, blown highlights, cinematic grading, oversaturated fantasy colors, magical beams or glossy CGI.\nConstraints: peaceful nonviolent interpretation of a legend. Every human and animal is UNINJURED. No contact or confrontation, blood, wounds, gore, corpse, fallen horse, fight or attack. No real person likeness or visible human face. No copied work, museum object, coat of arms, insignia or ornamental emblem. No words, numerals, labels, signs, captions, logos, watermark, frame or border anywhere in the image.",
+      "kuvateksti": "Kuvitteellinen ja väkivallaton tulkinta Holyroodin perustamislegendasta: 1100-luvun metsällä nimetön, selin kuvattu metsästäjä kohtaa saksanhirven, jonka sarvien välissä hohtaa risti. Kohtaus ei ole dokumentoitu historiallinen tapahtuma eikä Daavid I:n muotokuva. Havainnekuva.",
+      "viitteet": [
+        {
+          "publisher": "Historic Environment Scotland",
+          "title": "Holyrood Park Statement of Significance",
+          "url": "https://app-hes-pubs-prod-neu-01.azurewebsites.net/api/file/b6581370-090a-4a44-93fe-b07400ccffa2",
+          "type": "textResearchOnly",
+          "notes": "Official text pp. 9–10 calls the account a foundation myth known from an early 15th-century manuscript and assigns the legend to 1128. The order’s 1127 is not asserted as a documented date. Text only, no PDF page/image pixels opened or used. Violence in the source is omitted under the shared nonviolence rule.",
+          "access": "2026-10-08; parsed PDF text accessed only"
+        },
+        {
+          "publisher": "Royal Collection Trust",
+          "title": "Highlights of the Palace of Holyroodhouse — Holyrood Abbey",
+          "url": "https://www.rct.uk/visit/palace-of-holyroodhouse/highlights-of-the-palace-of-holyroodhouse",
+          "type": "textResearchOnly",
+          "notes": "Official text places abbey foundation in 1128 after a vision of a stag with a cross between its antlers in forest below Arthur’s Seat. Used for the legend motif and broad backdrop only. No source image pixels opened or used.",
+          "access": "2026-10-08; HTML text accessed only"
+        }
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview viewed.",
+          "The hunter is entirely rear-facing, with no face or profile, crown, heraldry, real-person likeness or weapon visible.",
+          "Horse stands upright and uninjured. Stag rises on its hind legs several metres away with clear open separation; no contact, attack, blood or injury observed.",
+          "Small luminous plain cross appears within the space between antlers, without a crucified body, artwork imitation or broad fantasy light beams.",
+          "Natural forest, muted earth tones, realistic fur, wool and foliage; no text, logos, watermark, border, modern objects or identifiable human face observed.",
+          "Cross and separate subjects remain legible in the 480px preview."
+        ],
+        "limitations": [
+          "Fictional peaceful visualization of the Holyrood foundation legend, not historical evidence of the reported miracle, a documented hunting scene or a David I portrait.",
+          "Official sources assign the legend/foundation to 1128; the final prompt and caption use the broad early-12th-century setting and make no exact-year claim.",
+          "Hunter occupies about two fifths of frame height, above the prompt’s one-fifth target, but is entirely rear-facing as permitted by the source’s rear-view rule.",
+          "Forest, rocky hill, garments and saddle/bridle are generated illustrative details, not a verified reconstruction of precise 12th-century equipment or topography."
+        ]
+      },
+      "sourceCommit": "e25334cd78327a78ac287682bc677d3750540fe2",
+      "sourceBlob": "a3a1f8fed1b60b94b7ac4c75d56b033ad9e7e37f",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/edinburgh-yksityiskohdat-20261008/production/05-hirvinaky/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "scopeClarification": {
+        "status": "approved-by-root",
+        "decision": "Use an anonymous fictional rear-facing hunter in a broad early-12th-century peaceful legend interpretation, upright uninjured horse, and separated stag/cross motif; no exact 1127 claim.",
+        "received": "2026-10-08"
+      },
+      "parentQAComplete": false,
+      "updatedAt": "2026-10-08T08:50:53.665462+00:00",
+      "visualReview": {
+        "task": "edinburgh-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q505950",
+        "file": "edinburgh-Q505950-hirvinaky.png",
+        "sha256": "dd0e7a9551622eb92aba40dfa204599848717373b9685a10d4b60e2ce21a51b0",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Anonyymi metsästäjä kokonaan selin, hevonen terveenä pystyssä, saksanhirvi erillään ilman osumaa tai vahinkoa. Pieni ristivalo sarvien välissä kuvittaa nimenomaisesti legendaa; luonnollinen metsävalo, ei kasvoja, tekstiä tai verta."
+        ],
+        "limitations": [
+          "Fictional peaceful visualization of the Holyrood foundation legend, not historical evidence of the reported miracle, a documented hunting scene or a David I portrait.",
+          "Official sources assign the legend/foundation to 1128; the final prompt and caption use the broad early-12th-century setting and make no exact-year claim.",
+          "Hunter occupies about two fifths of frame height, above the prompt’s one-fifth target, but is entirely rear-facing as permitted by the source’s rear-view rule.",
+          "Forest, rocky hill, garments and saddle/bridle are generated illustrative details, not a verified reconstruction of precise 12th-century equipment or topography."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:59:00.015778+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 final and separate full-frame 480x320 preview viewed.",
+          "The hunter is entirely rear-facing, with no face or profile, crown, heraldry, real-person likeness or weapon visible.",
+          "Horse stands upright and uninjured. Stag rises on its hind legs several metres away with clear open separation; no contact, attack, blood or injury observed.",
+          "Small luminous plain cross appears within the space between antlers, without a crucified body, artwork imitation or broad fantasy light beams.",
+          "Natural forest, muted earth tones, realistic fur, wool and foliage; no text, logos, watermark, border, modern objects or identifiable human face observed.",
+          "Cross and separate subjects remain legible in the 480px preview."
+        ],
+        "limitations": [
+          "Fictional peaceful visualization of the Holyrood foundation legend, not historical evidence of the reported miracle, a documented hunting scene or a David I portrait.",
+          "Official sources assign the legend/foundation to 1128; the final prompt and caption use the broad early-12th-century setting and make no exact-year claim.",
+          "Hunter occupies about two fifths of frame height, above the prompt’s one-fifth target, but is entirely rear-facing as permitted by the source’s rear-view rule.",
+          "Forest, rocky hill, garments and saddle/bridle are generated illustrative details, not a verified reconstruction of precise 12th-century equipment or topography."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/edinburgh-yksityiskohdat/20261008/edinburgh-Q505950-hirvinaky.png",
+      "url": "https://media.matkakirja.app/julisteet/edinburgh-yksityiskohdat/20261008/edinburgh-Q505950-hirvinaky.png",
+      "bytes": 3009224,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 2,
+      "qid": "Q1633842",
+      "id": "lewisin-shakki",
+      "generationCalls": 0,
+      "reason": "Requested identifiable Lewis museum chess pieces conflict with explicit museum-collection reproduction exclusion; no substitute authorised."
+    },
+    {
+      "number": 4,
+      "qid": "Q852908",
+      "id": "mary-kings-close",
+      "generationCalls": 0,
+      "reason": "The seventeenth-century street was open to the sky. Covering followed partial demolition1753–61, so the requested seventeenth-century pre1750 enclosed low-vault underground scene cannot be a coherent period reconstruction. No different-era substitute authorised."
+    },
+    {
+      "number": 6,
+      "qid": "Q712311",
+      "id": "arthurs-seat-arkut",
+      "generationCalls": 0,
+      "reason": "Requested identifiable Arthur's Seat miniature coffin set is a museum collection object reconstruction. Explicit collection-reproduction exclusion conflicts; no substitute authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/edinburgh-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/edinburgh-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "b975730fa2922ae6ded62faab0f540153ac961476b2032cc5f57e2d006d67b09",
+    "bytes": 206949,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:59:08.282642+00:00"
+}
