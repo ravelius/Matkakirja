@@ -47,21 +47,23 @@ namespace Matkakirja.Natiivi
         public static float Terava = 0f;
 
         // ---- VUOROKAUDENAJAN VALINTA (omistaja 6.10. 19.0x, Natiivi-UI:n nappi vasemmassa yläkulmassa; juna 152) ----
-        /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta", "yo" (Black Marble -valot, 6.10.).
+        /// <summary>Pelaajan valinta "paiva" tai "yo" (Black Marble -valot, 6.10.). OMISTAJA 8.10. 09.1x: "Kuumailmapallo saisi käynnistyä
+        /// oletuksena aina päivä vuorokauden ajassa, eli muutetaan pois se automaattitila" → oletus päivä, ☾ vaihtaa vain päivän ja yön
+        /// (Natiivi-UI kirjoittaa "paiva"/"yo"; vanhat "auto"/"aamu"/"ilta" → päivä). Juna 166: Saatila.Aika (LIVE asettaa LiveAika).
         /// Pysyy, kunnes vaihdetaan (myös seuraavissa avauksissa). Vaihto näkyy heti seuraavassa kehyksessä ilman uudelleenlatausta.</summary>
         public static string Valinta
         {
             get => valinta;
             set
             {
-                var v = value == "aamu" || value == "paiva" || value == "ilta" || value == "yo" ? value : "auto";
+                var v = value == "yo" ? "yo" : "paiva";
                 if (v == valinta) return;
                 valinta = v;
                 Debug.Log($"MATKAKIRJA kaupunki: vuorokausi valittu {v}");
                 Vaihtui?.Invoke(v);
             }
         }
-        static string valinta = "auto";
+        static string valinta = "paiva";
         /// <summary>Valinta tai voimassa oleva tila vaihtui (UI päivittää napin kuvakkeen).</summary>
         public static event System.Action<string> Vaihtui;
         /// <summary>Voimassa oleva tila "aamu" | "paiva" | "ilta" | "yo" (automaattisessa kohteen oman ajan mukaan).</summary>
