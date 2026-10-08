@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. klo 20.5x (uusin)
+## TILA 8.10. klo 22.4x (uusin)
+- JUNA 167: ilmakehä + vesi PÄÄLLÄ kehityskaupungeissa (PT 22.35; rungossa ilmakeha-170 8107c0022). Kuvapari
+  lokit/linssiseppa2-kaupunki-kuvapari2-2226 (OSM-rivi näkyy). HUOM ajoskriptin vanha asennus -virhe korjattu (58e775f5f).
+- JUNAAN 168 valmiina ilmakeha-170 6986c7580: asetukset ennen LuoDataa, try/catch, vesi piiloon, valotus 12.
+- AUKI: Pariisin Seinen vaaleat soikiot (verkko ehjä → Googlen vesi noston läpi?) → testi vesinosto 0,4/0,8/1,2 simuvuorossa ~00.15;
+  samalla pala-FP-kuvat, kävelyosadiagnoosi (PT) ja Natiivi-UI:n UI-stillit (ui-stillit.sh).
+
+## TILA 8.10. klo 20.5x
 - GROUNDER (juna 167 B): testi linssiseppa2/grounder-testi-4 f94cf9841 (Editor GrounderTesti, play mode batch, GROUNDER_KOE/NOUSU);
   final-ik-167 71d34bb97 (maxStep 0,5 + invertFootCenter + Best + heightOffset −0,02): kantapää 30,5 → 3,9, leijunta 11,2 → 4,2–4,6,
   varpaat 21,6 → 2,6 cm, ponnahdukset 0. Worktree poistettu (Library 6 Gt).
