@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
     // vahingossa Matkakirja.NimiLadonta.cs:n omaa V3:a.
     using V3 = Matkakirja.Linssit.Dioraama.V3;
 
-    public sealed class DioraamaHahmot3D
+    public sealed partial class DioraamaHahmot3D
     {
         /// <summary>"poikki hahmot 2d|3d" (DioraamaSovitin.Komento): oletus 3d (tosi). Vaikuttaa SEURAAVIIN
         /// LisaaTila-kutsuihin ("poikki lataa" lataa tilat uudelleen) — sama sopimus kuin DioraamaLiekit.
@@ -90,6 +90,9 @@ namespace Matkakirja.Natiivi
             public float KatseKulma;
             public int PaaIndeksi = -2;
             public Quaternion PaaKierto = Quaternion.identity;
+            public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
+            public bool IkYritetty; public float JalkaMittausT;
+            public string Silmukka; public float KasiPainoR, KasiPainoL; // kädet esineisiin (kadet[].milloin)
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
             // Eleet puheen tahdissa (7.10.): ajoitettu kertaele, kuulijan nyökkäys, puhujan katseen kohde, vakaa siemen.
             public string AjoitettuEle; public double AjoitettuAlku = double.NegativeInfinity; public int EleLaskuri;
@@ -843,6 +846,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(perus) && perus != "idle" && perus != "kavely" && tavoite != perus && !reitilla
                 && e.Malli.Glb.Animaatio(Leike(m3, perus + "_puhe")) != null)
                 tavoite = perus + "_puhe";
+            e.Silmukka = tavoite;
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
@@ -884,6 +888,7 @@ namespace Matkakirja.Natiivi
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
+            IkPalauta(e);
             PaivitaKasvot(e, t);
             var s = e.Sekoitin;
             for (int i = 0; i < e.SolmuT.Length; i++)
@@ -895,6 +900,7 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
+            Ik(e);
             PaaKatse(e, t, e.KuulijaEle != null && e.Sekoitin.Nykyinen == e.KuulijaEle);
         }
 
