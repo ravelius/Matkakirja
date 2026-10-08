@@ -77,6 +77,10 @@ namespace Matkakirja.Natiivi
         internal static float ValinnanTunti => valinta == "aamu" ? 7f : valinta == "paiva" ? 12f : valinta == "ilta" ? 18.5f : valinta == "yo" ? 23f : -1f;
         /// <summary>Pakotettu tunti: asetustiedosto ensin (kuvaparit), sitten pelaajan valinta; −1 = auringon mukaan.</summary>
         internal static float TuntiNyt => Tunti >= 0 ? Tunti : ValinnanTunti;
+        /// <summary>Pallon korin valo (PalloKori, Ydin KoriValaistus): auringon korkeus ja atsimuutti (°), taivaan laki ja horisontti
+        /// sekä kaupunkikameran jälkikäsittelyn valotus (EV) ja suodin; päivittyy joka ruutu vuorokausisävyn mukana.</summary>
+        public static float KoriAurinkoKorkeus = 50f, KoriAtsimuutti = 180f, KoriValotusEV;
+        public static Color KoriLaki = new Color(0.35f, 0.55f, 0.85f), KoriHorisontti = new Color(0.75f, 0.8f, 0.85f), KoriSuodin = Color.white;
         /// <summary>Sävytys käytössä: asetus tai pelaajan oma valinta (nappi kytkee sävyn päälle, vaikka oletus odottaa kuittausta).</summary>
         internal static bool SavyKaytossa => VuorokausiPaalla || valinta != "auto";
         internal static void AsetaNyt(string tila) { if (tila != Nyt) { Nyt = tila; Vaihtui?.Invoke(tila); } }
@@ -362,6 +366,12 @@ namespace Matkakirja.Natiivi
                 KaupunkiKuva.varit.contrast.value += -10f * harmaus;
                 if (KaupunkiKuva.valko != null) KaupunkiKuva.valko.temperature.value += -12f * harmaus;
             }
+            // Pallon kori (Linssiseppä 8.10.): sama valo kuin kaupungissa. Asetuksen tunnilla korkeus kellosta (6–18 → 0–55°).
+            KaupunkiKuva.KoriAurinkoKorkeus = pakko >= 0 ? 55f * Mathf.Sin(Mathf.PI * ((float)tunti - 6f) / 12f) : (float)aurinko;
+            KaupunkiKuva.KoriAtsimuutti = (float)auringonSuunta;
+            KaupunkiKuva.KoriLaki = V(savy.TaivasYla); KaupunkiKuva.KoriHorisontti = horisontti;
+            KaupunkiKuva.KoriValotusEV = KaupunkiKuva.varit != null ? KaupunkiKuva.varit.postExposure.value : 0f;
+            KaupunkiKuva.KoriSuodin = KaupunkiKuva.varit != null ? KaupunkiKuva.varit.colorFilter.value : Color.white;
             if (KaupunkiKuva.jako != null)
             {
                 float lampo = KaupunkiKuva.SavyKaytossa ? Mathf.Clamp01((float)savy.Lampotila / 30f) : 0f;

@@ -55,7 +55,7 @@ namespace Matkakirja.Linssit
         static Transform nelio;
         static Material sumennus;
         static readonly int IdVoima = Shader.PropertyToID("_Voima");
-        static CameraOverrideOption variKuva0; static bool variKuvaAsetettu;
+        static Camera variKuvaKamera; static bool variKuvaAsetettu;
 
         /// <summary>Voima kertoimesta: log10(k) 2,2 → 0 … 3 → 1, pehmeä alku.</summary>
         public static float VoimaKertoimesta(double kerroin)
@@ -97,11 +97,11 @@ namespace Matkakirja.Linssit
         static void Sumennus(Camera kamera)
         {
             bool paalla = Voima > 0f && kamera != null;
-            var data = kamera != null ? kamera.GetUniversalAdditionalCameraData() : null;
-            if (data != null && paalla != variKuvaAsetettu)
+            // Värikopio yhteisellä viitelaskurilla (VariKuvanTarve, 8.10.: pallon lämmön väreily käyttää samaa asetusta).
+            if (kamera != null && paalla != variKuvaAsetettu)
             {
-                if (paalla) { variKuva0 = data.requiresColorOption; data.requiresColorOption = CameraOverrideOption.On; }
-                else data.requiresColorOption = variKuva0;
+                if (paalla) { Matkakirja.Natiivi.VariKuvanTarve.Pyyda(kamera); variKuvaKamera = kamera; }
+                else Matkakirja.Natiivi.VariKuvanTarve.Vapauta(variKuvaKamera);
                 variKuvaAsetettu = paalla;
             }
             if (paalla && nelio == null)

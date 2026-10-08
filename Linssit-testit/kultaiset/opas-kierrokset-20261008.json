@@ -1,0 +1,3251 @@
+{
+ "haettu": "2026-10-08T15:50:01.813Z",
+ "kaupungit": [
+  {
+   "id": "pariisi",
+   "kaupunki": "Pariisi",
+   "lat": 48.86122,
+   "lon": 2.35092,
+   "kohteet": [
+    {
+     "id": "Q2981",
+     "nimi": "Notre-Dame",
+     "lat": 48.853,
+     "lon": 2.3498,
+     "koko_m": 128,
+     "korkeus_m": 96,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q19675",
+     "nimi": "Louvre",
+     "lat": 48.861111111111114,
+     "lon": 2.3358333333333334,
+     "koko_m": 700,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q189503",
+     "nimi": "Concorden aukio",
+     "lat": 48.8656331,
+     "lon": 2.3212357,
+     "koko_m": 360,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q550",
+     "nimi": "Champs-Élysées",
+     "lat": 48.86967,
+     "lon": 2.30786,
+     "koko_m": 1900,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q64436",
+     "nimi": "Riemukaari",
+     "lat": 48.87378,
+     "lon": 2.29504,
+     "koko_m": 50,
+     "korkeus_m": 50,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q243",
+     "nimi": "Eiffel-torni",
+     "lat": 48.858296,
+     "lon": 2.294479,
+     "koko_m": 125,
+     "korkeus_m": 330,
+     "luokka": "torni",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q23402",
+     "nimi": "Orsayn taidemuseo",
+     "lat": 48.859972,
+     "lon": 2.326527,
+     "koko_m": 190,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q28785",
+     "nimi": "Sacré-Cœur",
+     "lat": 48.88665,
+     "lon": 2.34295,
+     "koko_m": 85,
+     "korkeus_m": 83,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "praha",
+   "kaupunki": "Praha",
+   "lat": 50.08636,
+   "lon": 14.42001,
+   "kohteet": [
+    {
+     "id": "Q204871",
+     "nimi": "Kaarlensilta",
+     "lat": 50.086388888889,
+     "lon": 14.411944444444,
+     "koko_m": 516,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q729370",
+     "nimi": "Prahan astronominen kello",
+     "lat": 50.08699,
+     "lon": 14.4207,
+     "koko_m": 40,
+     "korkeus_m": 70,
+     "luokka": "torni",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q421678",
+     "nimi": "Vanhankaupungin aukio",
+     "lat": 50.0875,
+     "lon": 14.421388888889,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q847613",
+     "nimi": "Venceslauksen aukio",
+     "lat": 50.082308,
+     "lon": 14.426141,
+     "koko_m": 750,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q753289",
+     "nimi": "Malá Strana",
+     "lat": 50.088055555556,
+     "lon": 14.403888888889,
+     "koko_m": 1200,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 17
+    },
+    {
+     "id": "Q5949",
+     "nimi": "Pyhän Vituksen katedraali",
+     "lat": 50.090833333333336,
+     "lon": 14.400555555555556,
+     "koko_m": 124,
+     "korkeus_m": 103,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q193369",
+     "nimi": "Prahan linna",
+     "lat": 50.09,
+     "lon": 14.4,
+     "koko_m": 570,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 16
+    },
+    {
+     "id": "Q12256",
+     "nimi": "Petřínin näkötorni",
+     "lat": 50.083544444444,
+     "lon": 14.39505,
+     "koko_m": 20,
+     "korkeus_m": 64,
+     "luokka": "torni",
+     "kesto_s": 17
+    }
+   ]
+  },
+  {
+   "id": "wien",
+   "kaupunki": "Wien",
+   "lat": 48.21437,
+   "lon": 16.37199,
+   "kohteet": [
+    {
+     "id": "Q5943",
+     "nimi": "Stephansdom",
+     "lat": 48.208427,
+     "lon": 16.373256,
+     "koko_m": 107,
+     "korkeus_m": 136,
+     "luokka": "kirkko",
+     "kesto_s": 17
+    },
+    {
+     "id": "Q697578",
+     "nimi": "Wienin Riesenrad",
+     "lat": 48.21683055555555,
+     "lon": 16.395919444444445,
+     "koko_m": 61,
+     "korkeus_m": 65,
+     "luokka": "muu",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q686468",
+     "nimi": "Wienin raatihuone",
+     "lat": 48.2108,
+     "lon": 16.3574,
+     "koko_m": 150,
+     "korkeus_m": 103,
+     "luokka": "rakennus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q702121",
+     "nimi": "Itävallan parlamenttitalo",
+     "lat": 48.20805,
+     "lon": 16.3587,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q46242",
+     "nimi": "Hofburg",
+     "lat": 48.20638888888889,
+     "lon": 16.365277777777777,
+     "koko_m": 550,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q209937",
+     "nimi": "Wienin valtionooppera",
+     "lat": 48.203333333333,
+     "lon": 16.369166666667,
+     "koko_m": 160,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q211818",
+     "nimi": "Belvedere",
+     "lat": 48.1934,
+     "lon": 16.380519444444445,
+     "koko_m": 800,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q131330",
+     "nimi": "Schönbrunnin linna",
+     "lat": 48.18479,
+     "lon": 16.31227,
+     "koko_m": 1200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "rooma",
+   "kaupunki": "Rooma",
+   "lat": 41.89737,
+   "lon": 12.48703,
+   "kohteet": [
+    {
+     "id": "Q180212",
+     "nimi": "Forum Romanum",
+     "lat": 41.8922,
+     "lon": 12.4852,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q185382",
+     "nimi": "Trevin suihkulähde",
+     "lat": 41.90093,
+     "lon": 12.48331,
+     "koko_m": 50,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q848072",
+     "nimi": "Espanjalaiset portaat",
+     "lat": 41.90611,
+     "lon": 12.48278,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 17
+    },
+    {
+     "id": "Q10285",
+     "nimi": "Colosseum",
+     "lat": 41.89028,
+     "lon": 12.49222,
+     "koko_m": 189,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q99309",
+     "nimi": "Pantheon",
+     "lat": 41.89861,
+     "lon": 12.47694,
+     "koko_m": 80,
+     "korkeus_m": 43,
+     "luokka": "kirkko",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q463400",
+     "nimi": "Piazza Navona",
+     "lat": 41.89871,
+     "lon": 12.47316,
+     "koko_m": 260,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q486382",
+     "nimi": "Castel Sant’Angelo",
+     "lat": 41.90304,
+     "lon": 12.46631,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q12512",
+     "nimi": "Pietarinkirkko",
+     "lat": 41.90222,
+     "lon": 12.45342,
+     "koko_m": 220,
+     "korkeus_m": 136,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "lontoo",
+   "kaupunki": "Lontoo",
+   "lat": 51.49754,
+   "lon": -0.12574,
+   "kohteet": [
+    {
+     "id": "Q41225",
+     "nimi": "Big Ben",
+     "lat": 51.50067,
+     "lon": -0.12457,
+     "koko_m": 30,
+     "korkeus_m": 96,
+     "luokka": "torni",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q160659",
+     "nimi": "Lontoon silmä",
+     "lat": 51.50333,
+     "lon": -0.11972,
+     "koko_m": 135,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q42182",
+     "nimi": "Buckinghamin palatsi",
+     "lat": 51.501,
+     "lon": -0.142,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q5933",
+     "nimi": "Westminster Abbey",
+     "lat": 51.4994,
+     "lon": -0.12737,
+     "koko_m": 160,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q62408",
+     "nimi": "Westminsterin palatsi",
+     "lat": 51.49944,
+     "lon": -0.12417,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q83125",
+     "nimi": "Tower Bridge",
+     "lat": 51.50556,
+     "lon": -0.07528,
+     "koko_m": 290,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q62378",
+     "nimi": "Lontoon Tower",
+     "lat": 51.5082,
+     "lon": -0.0762,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q173882",
+     "nimi": "St Paulin katedraali",
+     "lat": 51.51378,
+     "lon": -0.09831,
+     "koko_m": 170,
+     "korkeus_m": 111,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "koopenhamina",
+   "kaupunki": "Kööpenhamina",
+   "lat": 55.67247,
+   "lon": 12.53935,
+   "kohteet": [
+    {
+     "id": "Q110289",
+     "nimi": "Tivoli",
+     "lat": 55.67361,
+     "lon": 12.56833,
+     "koko_m": 350,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q940733",
+     "nimi": "Christiansborgin linna",
+     "lat": 55.67583,
+     "lon": 12.57889,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q943946",
+     "nimi": "Nyhavn",
+     "lat": 55.67987,
+     "lon": 12.59041,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "kanava",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q211053",
+     "nimi": "Amalienborgin linna",
+     "lat": 55.68403,
+     "lon": 12.59333,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q214619",
+     "nimi": "Pieni merenneito",
+     "lat": 55.69286,
+     "lon": 12.59926,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q206101",
+     "nimi": "Rosenborgin linna",
+     "lat": 55.68566,
+     "lon": 12.57748,
+     "koko_m": 80,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1140534",
+     "nimi": "Rundetårn",
+     "lat": 55.68137,
+     "lon": 12.57579,
+     "koko_m": 40,
+     "korkeus_m": 35,
+     "luokka": "torni",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q29157",
+     "nimi": "Vapahtajan kirkko",
+     "lat": 55.67278,
+     "lon": 12.59389,
+     "koko_m": 90,
+     "korkeus_m": 90,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "amsterdam",
+   "kaupunki": "Amsterdam",
+   "lat": 52.3661,
+   "lon": 4.90092,
+   "kohteet": [
+    {
+     "id": "Q277316",
+     "nimi": "Rembrandtin talo",
+     "lat": 52.36944,
+     "lon": 4.90139,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q50719",
+     "nimi": "Amsterdamin keskusrautatieasema",
+     "lat": 52.37895,
+     "lon": 4.90016,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q839050",
+     "nimi": "Dam-aukio",
+     "lat": 52.37306,
+     "lon": 4.89278,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q1056152",
+     "nimi": "Amsterdamin kuninkaallinen palatsi",
+     "lat": 52.37317,
+     "lon": 4.89136,
+     "koko_m": 80,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q165366",
+     "nimi": "Anne Frankin talo",
+     "lat": 52.37515,
+     "lon": 4.88404,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q478707",
+     "nimi": "Amsterdamin kanaalivyöhyke",
+     "lat": 52.36639,
+     "lon": 4.88583,
+     "koko_m": 2500,
+     "korkeus_m": 0,
+     "luokka": "kanava",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q190804",
+     "nimi": "Rijksmuseum",
+     "lat": 52.36,
+     "lon": 4.88528,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q224124",
+     "nimi": "Van Gogh -museo",
+     "lat": 52.35833,
+     "lon": 4.88111,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 18
+    }
+   ]
+  },
+  {
+   "id": "ateena",
+   "kaupunki": "Ateena",
+   "lat": 37.96964,
+   "lon": 23.71825,
+   "kohteet": [
+    {
+     "id": "Q131013",
+     "nimi": "Akropolis",
+     "lat": 37.97167,
+     "lon": 23.72611,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q10288",
+     "nimi": "Parthenon",
+     "lat": 37.97153,
+     "lon": 23.7266,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 16
+    },
+    {
+     "id": "Q1123019",
+     "nimi": "Olympoksen Zeuksen temppeli",
+     "lat": 37.96937,
+     "lon": 23.73308,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q208811",
+     "nimi": "Kallimarmaro (Panathinaïkó-stadion)",
+     "lat": 37.96833,
+     "lon": 23.74111,
+     "koko_m": 260,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q421084",
+     "nimi": "Akropolis-museo",
+     "lat": 37.96842,
+     "lon": 23.72847,
+     "koko_m": 160,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q242741",
+     "nimi": "Erekhtheion",
+     "lat": 37.97208,
+     "lon": 23.72653,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q395367",
+     "nimi": "Antiikin agora",
+     "lat": 37.975,
+     "lon": 23.7225,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q756824",
+     "nimi": "Hefaistoksen temppeli",
+     "lat": 37.97562,
+     "lon": 23.72139,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "barcelona",
+   "kaupunki": "Barcelona",
+   "lat": 41.40325,
+   "lon": 2.15702,
+   "kohteet": [
+    {
+     "id": "Q327940",
+     "nimi": "Palau de la Música Catalana",
+     "lat": 41.38767,
+     "lon": 2.17528,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q631075",
+     "nimi": "Arc de Triomf",
+     "lat": 41.39111,
+     "lon": 2.18056,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q48435",
+     "nimi": "Sagrada Família",
+     "lat": 41.40369,
+     "lon": 2.17433,
+     "koko_m": 150,
+     "korkeus_m": 172,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q212867",
+     "nimi": "Güellin puisto",
+     "lat": 41.41361,
+     "lon": 2.15278,
+     "koko_m": 700,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q207870",
+     "nimi": "Casa Milà",
+     "lat": 41.39528,
+     "lon": 2.16167,
+     "koko_m": 85,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q461371",
+     "nimi": "Casa Batlló",
+     "lat": 41.39158,
+     "lon": 2.16492,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q850593",
+     "nimi": "La Rambla",
+     "lat": 41.38139,
+     "lon": 2.17306,
+     "koko_m": 1200,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q17155",
+     "nimi": "Pyhän Ristin ja Pyhän Eulalian katedraali",
+     "lat": 41.38389,
+     "lon": 2.17639,
+     "koko_m": 95,
+     "korkeus_m": 70,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    }
+   ]
+  },
+  {
+   "id": "bergen",
+   "kaupunki": "Bergen",
+   "lat": 60.38804,
+   "lon": 5.32924,
+   "kohteet": [
+    {
+     "id": "Q153430",
+     "nimi": "Bryggen",
+     "lat": 60.3975,
+     "lon": 5.32333,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1420616",
+     "nimi": "Fløyen",
+     "lat": 60.39839,
+     "lon": 5.34541,
+     "koko_m": 1500,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q571683",
+     "nimi": "Mariankirkko",
+     "lat": 60.39889,
+     "lon": 5.32361,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q583428",
+     "nimi": "Bergenhusin linnake",
+     "lat": 60.39972,
+     "lon": 5.3175,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q117767",
+     "nimi": "Fløibanen",
+     "lat": 60.39636,
+     "lon": 5.32842,
+     "koko_m": 900,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q819531",
+     "nimi": "Bergenin tuomiokirkko",
+     "lat": 60.39389,
+     "lon": 5.33056,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q257558",
+     "nimi": "Fantoftin sauvakirkko",
+     "lat": 60.33917,
+     "lon": 5.35333,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q1291307",
+     "nimi": "Troldhaugen",
+     "lat": 60.3196,
+     "lon": 5.32948,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "berliini",
+   "kaupunki": "Berliini",
+   "lat": 52.52087,
+   "lon": 13.41334,
+   "kohteet": [
+    {
+     "id": "Q151356",
+     "nimi": "Berliinin televisiotorni",
+     "lat": 52.52083,
+     "lon": 13.40944,
+     "koko_m": 60,
+     "korkeus_m": 368,
+     "luokka": "torni",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q151963",
+     "nimi": "Museosaari",
+     "lat": 52.52139,
+     "lon": 13.39556,
+     "koko_m": 1000,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q82425",
+     "nimi": "Brandenburgin portti",
+     "lat": 52.51627,
+     "lon": 13.37772,
+     "koko_m": 65,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q68689",
+     "nimi": "Checkpoint Charlie",
+     "lat": 52.5075,
+     "lon": 13.39028,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q313746",
+     "nimi": "East Side Gallery",
+     "lat": 52.50306,
+     "lon": 13.44472,
+     "koko_m": 1300,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q154563",
+     "nimi": "Berliinin tuomiokirkko",
+     "lat": 52.51917,
+     "lon": 13.40111,
+     "koko_m": 90,
+     "korkeus_m": 98,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q151897",
+     "nimi": "Valtiopäivätalo",
+     "lat": 52.51861,
+     "lon": 13.37611,
+     "koko_m": 140,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q154987",
+     "nimi": "Voitonpylväs",
+     "lat": 52.51451,
+     "lon": 13.35011,
+     "koko_m": 50,
+     "korkeus_m": 67,
+     "luokka": "torni",
+     "kesto_s": 21
+    }
+   ]
+  },
+  {
+   "id": "bryssel",
+   "kaupunki": "Bryssel",
+   "lat": 50.85045,
+   "lon": 4.35292,
+   "kohteet": [
+    {
+     "id": "Q215429",
+     "nimi": "Grand-Place",
+     "lat": 50.84671,
+     "lon": 4.35254,
+     "koko_m": 110,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1491935",
+     "nimi": "Saint-Hubertin kauppakäytävät",
+     "lat": 50.84778,
+     "lon": 4.355,
+     "koko_m": 213,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q269654",
+     "nimi": "Pyhän Mikaelin ja Pyhän Gudulan katedraali",
+     "lat": 50.84778,
+     "lon": 4.36028,
+     "koko_m": 110,
+     "korkeus_m": 64,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q635307",
+     "nimi": "Kuninkaanpalatsi",
+     "lat": 50.84167,
+     "lon": 4.36222,
+     "koko_m": 160,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q850537",
+     "nimi": "Oikeuspalatsi",
+     "lat": 50.83667,
+     "lon": 4.35167,
+     "koko_m": 170,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q152072",
+     "nimi": "Manneken Pis",
+     "lat": 50.84498,
+     "lon": 4.34999,
+     "koko_m": 20,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 17
+    },
+    {
+     "id": "Q1255327",
+     "nimi": "Brysselin kaupungintalo",
+     "lat": 50.84639,
+     "lon": 4.35167,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q180901",
+     "nimi": "Atomium",
+     "lat": 50.895,
+     "lon": 4.34139,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "budapest",
+   "kaupunki": "Budapest",
+   "lat": 47.49105,
+   "lon": 19.06502,
+   "kohteet": [
+    {
+     "id": "Q577122",
+     "nimi": "Gellértinvuori",
+     "lat": 47.48639,
+     "lon": 19.04583,
+     "koko_m": 900,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q46313",
+     "nimi": "Budan linna",
+     "lat": 47.49611,
+     "lon": 19.03972,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q465534",
+     "nimi": "Széchenyin ketjusilta",
+     "lat": 47.49889,
+     "lon": 19.04361,
+     "koko_m": 375,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q338665",
+     "nimi": "Pyhän Tapanin kirkko",
+     "lat": 47.50083,
+     "lon": 19.05389,
+     "koko_m": 90,
+     "korkeus_m": 96,
+     "luokka": "kirkko",
+     "kesto_s": 17
+    },
+    {
+     "id": "Q299973",
+     "nimi": "Sankarien aukio",
+     "lat": 47.51528,
+     "lon": 19.07806,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q11819",
+     "nimi": "Unkarin parlamenttitalo",
+     "lat": 47.50694,
+     "lon": 19.04556,
+     "koko_m": 268,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q493117",
+     "nimi": "Kalastajanlinnake",
+     "lat": 47.50222,
+     "lon": 19.03472,
+     "koko_m": 140,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q493133",
+     "nimi": "Matiaksenkirkko",
+     "lat": 47.50194,
+     "lon": 19.03417,
+     "koko_m": 90,
+     "korkeus_m": 78,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "bukarest",
+   "kaupunki": "Bukarest",
+   "lat": 44.43251,
+   "lon": 26.10329,
+   "kohteet": [
+    {
+     "id": "Q3119683",
+     "nimi": "Stavropoleoksen kirkko",
+     "lat": 44.43174,
+     "lon": 26.09879,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q3390456",
+     "nimi": "Vallankumouksen aukio",
+     "lat": 44.43856,
+     "lon": 26.0975,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q755457",
+     "nimi": "Romanian ateneum",
+     "lat": 44.4413,
+     "lon": 26.0973,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 17
+    },
+    {
+     "id": "Q1319192",
+     "nimi": "Romanian kansallinen taidemuseo",
+     "lat": 44.43978,
+     "lon": 26.09598,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q5010221",
+     "nimi": "CEC-palatsi",
+     "lat": 44.432,
+     "lon": 26.0965,
+     "koko_m": 80,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1514860",
+     "nimi": "Romanian patriarkaalinen katedraali",
+     "lat": 44.42457,
+     "lon": 26.09782,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q164150",
+     "nimi": "Romanian parlamenttitalo",
+     "lat": 44.4275,
+     "lon": 26.0875,
+     "koko_m": 270,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q638278",
+     "nimi": "Riemukaari",
+     "lat": 44.46728,
+     "lon": 26.07836,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 23
+    }
+   ]
+  },
+  {
+   "id": "dublin",
+   "kaupunki": "Dublin",
+   "lat": 53.33259,
+   "lon": -6.25881,
+   "kohteet": [
+    {
+     "id": "Q258464",
+     "nimi": "Trinity College",
+     "lat": 53.3444,
+     "lon": -6.2577,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q1134365",
+     "nimi": "Spire",
+     "lat": 53.34972,
+     "lon": -6.26028,
+     "koko_m": 120,
+     "korkeus_m": 120,
+     "luokka": "torni",
+     "kesto_s": 26
+    },
+    {
+     "id": "Q1034624",
+     "nimi": "Ha'penny-silta",
+     "lat": 53.3461,
+     "lon": -6.263,
+     "koko_m": 43,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q742767",
+     "nimi": "Dublinin linna",
+     "lat": 53.34311,
+     "lon": -6.26739,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1067803",
+     "nimi": "Christ Church -katedraali",
+     "lat": 53.34306,
+     "lon": -6.27139,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q846365",
+     "nimi": "Pyhän Patrickin katedraali",
+     "lat": 53.33944,
+     "lon": -6.27139,
+     "koko_m": 91,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q261012",
+     "nimi": "Guinness Storehouse",
+     "lat": 53.34187,
+     "lon": -6.28671,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1049842",
+     "nimi": "Kilmainhamin vankila",
+     "lat": 53.34167,
+     "lon": -6.30944,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    }
+   ]
+  },
+  {
+   "id": "edinburgh",
+   "kaupunki": "Edinburgh",
+   "lat": 55.93615,
+   "lon": -3.17025,
+   "kohteet": [
+    {
+     "id": "Q712311",
+     "nimi": "Arthur's Seat",
+     "lat": 55.94417,
+     "lon": -3.16194,
+     "koko_m": 1200,
+     "korkeus_m": 251,
+     "luokka": "puisto",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q505950",
+     "nimi": "Holyroodin palatsi",
+     "lat": 55.9527,
+     "lon": -3.17229,
+     "koko_m": 230,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q852908",
+     "nimi": "Royal Mile",
+     "lat": 55.95056,
+     "lon": -3.18556,
+     "koko_m": 1800,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1547466",
+     "nimi": "St Gilesin katedraali",
+     "lat": 55.94944,
+     "lon": -3.19083,
+     "koko_m": 70,
+     "korkeus_m": 44,
+     "luokka": "kirkko",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q2876448",
+     "nimi": "Greyfriars Kirkyard",
+     "lat": 55.947,
+     "lon": -3.19272,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q212065",
+     "nimi": "Edinburghin linna",
+     "lat": 55.9487,
+     "lon": -3.20073,
+     "koko_m": 350,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q2502213",
+     "nimi": "Scottin muistomerkki",
+     "lat": 55.95242,
+     "lon": -3.19328,
+     "koko_m": 40,
+     "korkeus_m": 61,
+     "luokka": "torni",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1199959",
+     "nimi": "Calton Hill",
+     "lat": 55.95528,
+     "lon": -3.18222,
+     "koko_m": 450,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 25
+    }
+   ]
+  },
+  {
+   "id": "firenze",
+   "kaupunki": "Firenze",
+   "lat": 43.76615,
+   "lon": 11.24522,
+   "kohteet": [
+    {
+     "id": "Q271928",
+     "nimi": "Palazzo Vecchio",
+     "lat": 43.76944,
+     "lon": 11.25611,
+     "koko_m": 90,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q51177",
+     "nimi": "Santa Crocen basilika",
+     "lat": 43.76845,
+     "lon": 11.26274,
+     "koko_m": 115,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q191739",
+     "nimi": "Firenzen tuomiokirkko",
+     "lat": 43.77306,
+     "lon": 11.25694,
+     "koko_m": 153,
+     "korkeus_m": 114,
+     "luokka": "kirkko",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q849846",
+     "nimi": "Piazza della Signoria",
+     "lat": 43.76972,
+     "lon": 11.25556,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q51252",
+     "nimi": "Uffizin galleria",
+     "lat": 43.76833,
+     "lon": 11.25528,
+     "koko_m": 160,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q208633",
+     "nimi": "Ponte Vecchio",
+     "lat": 43.76799,
+     "lon": 11.25319,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q29286",
+     "nimi": "Palazzo Pitti",
+     "lat": 43.76515,
+     "lon": 11.25001,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q888825",
+     "nimi": "Bobolin puutarha",
+     "lat": 43.7618,
+     "lon": 11.24661,
+     "koko_m": 700,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "granada",
+   "kaupunki": "Granada",
+   "lat": 37.17095,
+   "lon": -3.6179,
+   "kohteet": [
+    {
+     "id": "Q47476",
+     "nimi": "Alhambra",
+     "lat": 37.17634,
+     "lon": -3.58821,
+     "koko_m": 740,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 26
+    },
+    {
+     "id": "Q2046808",
+     "nimi": "Kaarle V:n palatsi",
+     "lat": 37.17694,
+     "lon": -3.58944,
+     "koko_m": 63,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q5419362",
+     "nimi": "Granadan katedraali",
+     "lat": 37.17599,
+     "lon": -3.59904,
+     "koko_m": 120,
+     "korkeus_m": 57,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q429192",
+     "nimi": "Kuninkaallinen kappeli",
+     "lat": 37.17599,
+     "lon": -3.59904,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q576339",
+     "nimi": "Albayzín",
+     "lat": 37.1817,
+     "lon": -3.5983,
+     "koko_m": 1200,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q2842387",
+     "nimi": "Sacromonte",
+     "lat": 37.18083,
+     "lon": -3.59278,
+     "koko_m": 900,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q4270926",
+     "nimi": "Leijonain piha",
+     "lat": 37.1771,
+     "lon": -3.58927,
+     "koko_m": 35,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q525811",
+     "nimi": "Generalife",
+     "lat": 37.17694,
+     "lon": -3.58528,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "helsinki",
+   "kaupunki": "Helsinki",
+   "lat": 60.19638,
+   "lon": 24.93088,
+   "kohteet": [
+    {
+     "id": "Q1044613",
+     "nimi": "Helsingin päärautatieasema",
+     "lat": 60.17105,
+     "lon": 24.94145,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q1329554",
+     "nimi": "Senaatintori",
+     "lat": 60.16947,
+     "lon": 24.95228,
+     "koko_m": 170,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1355001",
+     "nimi": "Uspenskin katedraali",
+     "lat": 60.16833,
+     "lon": 24.96,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 26
+    },
+    {
+     "id": "Q738015",
+     "nimi": "Helsingin tuomiokirkko",
+     "lat": 60.17039,
+     "lon": 24.95212,
+     "koko_m": 80,
+     "korkeus_m": 62,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q18659999",
+     "nimi": "Oodi",
+     "lat": 60.17382,
+     "lon": 24.93806,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1132809",
+     "nimi": "Temppeliaukion kirkko",
+     "lat": 60.17298,
+     "lon": 24.92524,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q541933",
+     "nimi": "Kauppatori",
+     "lat": 60.167,
+     "lon": 24.955,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1292442",
+     "nimi": "Suomenlinna",
+     "lat": 60.14361,
+     "lon": 24.98444,
+     "koko_m": 1500,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 23
+    }
+   ]
+  },
+  {
+   "id": "islanti",
+   "kaupunki": "Islanti",
+   "lat": 64.14194,
+   "lon": -21.92694,
+   "kohteet": [
+    {
+     "id": "Q271466",
+     "nimi": "Hallgrímskirkja",
+     "lat": 64.14194,
+     "lon": -21.92694,
+     "koko_m": 100,
+     "korkeus_m": 74.5,
+     "luokka": "kirkko",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q1067075",
+     "nimi": "Höfði",
+     "lat": 64.14653,
+     "lon": -21.90637,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1783706",
+     "nimi": "Harpa",
+     "lat": 64.15028,
+     "lon": -21.9325,
+     "koko_m": 130,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q1270853",
+     "nimi": "Reykjavíkin tuomiokirkko",
+     "lat": 64.14666,
+     "lon": -21.93936,
+     "koko_m": 35,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q451045",
+     "nimi": "Alþingishúsið",
+     "lat": 64.14667,
+     "lon": -21.94028,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q794242",
+     "nimi": "Landakotskirkja",
+     "lat": 64.14744,
+     "lon": -21.94855,
+     "koko_m": 50,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q945753",
+     "nimi": "Tjörnin",
+     "lat": 64.14453,
+     "lon": -21.94263,
+     "koko_m": 600,
+     "korkeus_m": 0,
+     "luokka": "vesi",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1367886",
+     "nimi": "Perlan",
+     "lat": 64.12917,
+     "lon": -21.91917,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "kosice",
+   "kaupunki": "Košice",
+   "lat": 48.71823,
+   "lon": 21.25015,
+   "kohteet": [
+    {
+     "id": "Q569428",
+     "nimi": "Pyhän Elisabetin katedraali",
+     "lat": 48.72049,
+     "lon": 21.25759,
+     "koko_m": 80,
+     "korkeus_m": 59,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q1753933",
+     "nimi": "Urbanin torni",
+     "lat": 48.72049,
+     "lon": 21.25759,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "torni",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q3076009",
+     "nimi": "Laulava suihkulähde",
+     "lat": 48.7211,
+     "lon": 21.2576,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q133708",
+     "nimi": "Košicen kansallisteatteri",
+     "lat": 48.7217,
+     "lon": 21.2573,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q787510",
+     "nimi": "Hlavná-katu",
+     "lat": 48.7236,
+     "lon": 21.2565,
+     "koko_m": 1200,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q1186439",
+     "nimi": "Itä-Slovakian museo",
+     "lat": 48.72722,
+     "lon": 21.25333,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q3403979",
+     "nimi": "Miklušin vankila",
+     "lat": 48.7228,
+     "lon": 21.2597,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q3360878",
+     "nimi": "Jakabin palatsi",
+     "lat": 48.7219,
+     "lon": 21.2627,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "krakova",
+   "kaupunki": "Krakova",
+   "lat": 50.05902,
+   "lon": 19.9439,
+   "kohteet": [
+    {
+     "id": "Q18820",
+     "nimi": "Wawelin linna",
+     "lat": 50.0544,
+     "lon": 19.9366,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1143171",
+     "nimi": "Mariankirkko",
+     "lat": 50.06167,
+     "lon": 19.93917,
+     "koko_m": 90,
+     "korkeus_m": 82,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q1363724",
+     "nimi": "Florianin portti",
+     "lat": 50.06472,
+     "lon": 19.94139,
+     "koko_m": 40,
+     "korkeus_m": 34,
+     "luokka": "torni",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q807309",
+     "nimi": "Barbaakani",
+     "lat": 50.06553,
+     "lon": 19.94166,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1072350",
+     "nimi": "Sukiennice (kauppahalli)",
+     "lat": 50.06168,
+     "lon": 19.93738,
+     "koko_m": 108,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q770631",
+     "nimi": "Rynek Główny (Krakovan pääaukio)",
+     "lat": 50.06167,
+     "lon": 19.93722,
+     "koko_m": 220,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q638519",
+     "nimi": "Wawelin katedraali",
+     "lat": 50.05464,
+     "lon": 19.93542,
+     "koko_m": 90,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q93706",
+     "nimi": "Kazimierz",
+     "lat": 50.05167,
+     "lon": 19.94472,
+     "koko_m": 1200,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "kreeta",
+   "kaupunki": "Kreeta",
+   "lat": 35.31443,
+   "lon": 25.13487,
+   "kohteet": [
+    {
+     "id": "Q20127741",
+     "nimi": "Heraklionin venetsialaiset muurit",
+     "lat": 35.33271,
+     "lon": 25.13066,
+     "koko_m": 1500,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q2942217",
+     "nimi": "Pyhän Menaksen tuomiokirkko",
+     "lat": 35.3375,
+     "lon": 25.13083,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q15616490",
+     "nimi": "Morosinin suihkulähde",
+     "lat": 35.33917,
+     "lon": 25.13314,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q4426010",
+     "nimi": "Pyhän Tituksen kirkko",
+     "lat": 35.34012,
+     "lon": 25.13474,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q603920",
+     "nimi": "Koulesin linnoitus",
+     "lat": 35.34457,
+     "lon": 25.13688,
+     "koko_m": 90,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q636972",
+     "nimi": "Iraklionin arkeologinen museo",
+     "lat": 35.33917,
+     "lon": 25.1375,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q7798352",
+     "nimi": "Knossoksen valtaistuinsali",
+     "lat": 35.29804,
+     "lon": 25.16308,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q173527",
+     "nimi": "Knossos",
+     "lat": 35.29796,
+     "lon": 25.16316,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 17
+    }
+   ]
+  },
+  {
+   "id": "lissabon",
+   "kaupunki": "Lissabon",
+   "lat": 38.71282,
+   "lon": -9.14311,
+   "kohteet": [
+    {
+     "id": "Q999002",
+     "nimi": "Praça do Comércio",
+     "lat": 38.7075,
+     "lon": -9.13639,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q432290",
+     "nimi": "Lissabonin tuomiokirkko",
+     "lat": 38.70985,
+     "lon": -9.13298,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q985517",
+     "nimi": "Alfama",
+     "lat": 38.71066,
+     "lon": -9.13238,
+     "koko_m": 600,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q636780",
+     "nimi": "São Jorgen linna",
+     "lat": 38.71389,
+     "lon": -9.13333,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q168001",
+     "nimi": "Santa Justan hissi",
+     "lat": 38.71194,
+     "lon": -9.13917,
+     "koko_m": 30,
+     "korkeus_m": 45,
+     "luokka": "torni",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q272781",
+     "nimi": "Hieronymuksen luostari",
+     "lat": 38.69785,
+     "lon": -9.2056,
+     "koko_m": 300,
+     "korkeus_m": 40,
+     "luokka": "kirkko",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q1133712",
+     "nimi": "Löytöretkien muistomerkki",
+     "lat": 38.69368,
+     "lon": -9.20569,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q215003",
+     "nimi": "Belémin torni",
+     "lat": 38.69139,
+     "lon": -9.21583,
+     "koko_m": 60,
+     "korkeus_m": 30,
+     "luokka": "torni",
+     "kesto_s": 19
+    }
+   ]
+  },
+  {
+   "id": "ljubljana",
+   "kaupunki": "Ljubljana",
+   "lat": 46.05214,
+   "lon": 14.50502,
+   "kohteet": [
+    {
+     "id": "Q1889515",
+     "nimi": "Prešerenin aukio",
+     "lat": 46.05137,
+     "lon": 14.50595,
+     "koko_m": 100,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q12034073",
+     "nimi": "Plečnikin tori",
+     "lat": 46.05143,
+     "lon": 14.50857,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q660029",
+     "nimi": "Lohikäärmesilta",
+     "lat": 46.05194,
+     "lon": 14.51028,
+     "koko_m": 35,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q2075156",
+     "nimi": "Ljubljanan linna",
+     "lat": 46.04871,
+     "lon": 14.50863,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q6438656",
+     "nimi": "Križanke",
+     "lat": 46.0465,
+     "lon": 14.50328,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1236564",
+     "nimi": "Ljubljanan tuomiokirkko",
+     "lat": 46.05071,
+     "lon": 14.50824,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q676315",
+     "nimi": "Tromostovje",
+     "lat": 46.05108,
+     "lon": 14.5062,
+     "koko_m": 45,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q2428528",
+     "nimi": "Tivolin puisto",
+     "lat": 46.0539,
+     "lon": 14.4967,
+     "koko_m": 2000,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "luxemburg",
+   "kaupunki": "Luxemburg",
+   "lat": 49.6132,
+   "lon": 6.12956,
+   "kohteet": [
+    {
+     "id": "Q359872",
+     "nimi": "Guillaume II:n aukio",
+     "lat": 49.61083,
+     "lon": 6.13028,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q585990",
+     "nimi": "Thüngenin linnake",
+     "lat": 49.61639,
+     "lon": 6.13889,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q125561209",
+     "nimi": "Bockin kasematit",
+     "lat": 49.61174,
+     "lon": 6.13715,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 26
+    },
+    {
+     "id": "Q1205254",
+     "nimi": "Suurherttuan palatsi",
+     "lat": 49.61089,
+     "lon": 6.13283,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1348719",
+     "nimi": "Notre Damen katedraali",
+     "lat": 49.60967,
+     "lon": 6.13156,
+     "koko_m": 90,
+     "korkeus_m": 40,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q365643",
+     "nimi": "Adolphe-silta",
+     "lat": 49.60831,
+     "lon": 6.12707,
+     "koko_m": 153,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q950660",
+     "nimi": "Pétrusse",
+     "lat": 49.6,
+     "lon": 6.11667,
+     "koko_m": 1500,
+     "korkeus_m": 0,
+     "luokka": "vesi",
+     "kesto_s": 23
+    }
+   ]
+  },
+  {
+   "id": "madrid",
+   "kaupunki": "Madrid",
+   "lat": 40.4198,
+   "lon": -3.69179,
+   "kohteet": [
+    {
+     "id": "Q1131807",
+     "nimi": "Retiron puisto",
+     "lat": 40.415,
+     "lon": -3.68389,
+     "koko_m": 1400,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 27
+    },
+    {
+     "id": "Q160112",
+     "nimi": "Prado-museo",
+     "lat": 40.41389,
+     "lon": -3.69222,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q427163",
+     "nimi": "Puerta del Sol",
+     "lat": 40.41694,
+     "lon": -3.70361,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1123493",
+     "nimi": "Plaza Mayor",
+     "lat": 40.41546,
+     "lon": -3.70738,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q849711",
+     "nimi": "Almudenan katedraali",
+     "lat": 40.41556,
+     "lon": -3.71444,
+     "koko_m": 105,
+     "korkeus_m": 73,
+     "luokka": "kirkko",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q171517",
+     "nimi": "Kuninkaanlinna",
+     "lat": 40.41795,
+     "lon": -3.71431,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q1324163",
+     "nimi": "Gran Vía",
+     "lat": 40.42,
+     "lon": -3.70361,
+     "koko_m": 1300,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1537446",
+     "nimi": "Cibeleen aukio",
+     "lat": 40.41917,
+     "lon": -3.69306,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "marseille",
+   "kaupunki": "Marseille",
+   "lat": 43.3089,
+   "lon": 5.40263,
+   "kohteet": [
+    {
+     "id": "Q975925",
+     "nimi": "Notre-Dame de la Garde",
+     "lat": 43.28395,
+     "lon": 5.37123,
+     "koko_m": 150,
+     "korkeus_m": 65,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q437959",
+     "nimi": "Marseillen vanha satama",
+     "lat": 43.29472,
+     "lon": 5.37083,
+     "koko_m": 900,
+     "korkeus_m": 0,
+     "luokka": "vesi",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q1419757",
+     "nimi": "Marseillen katedraali",
+     "lat": 43.2998,
+     "lon": 5.36493,
+     "koko_m": 142,
+     "korkeus_m": 70,
+     "luokka": "kirkko",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q2808698",
+     "nimi": "MuCEM",
+     "lat": 43.29694,
+     "lon": 5.36114,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q1464953",
+     "nimi": "Frioulin saaret",
+     "lat": 43.27549,
+     "lon": 5.30665,
+     "koko_m": 2500,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q622500",
+     "nimi": "Ifin linna",
+     "lat": 43.27986,
+     "lon": 5.32514,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1858504",
+     "nimi": "Saint-Victorin luostari",
+     "lat": 43.29028,
+     "lon": 5.36556,
+     "koko_m": 80,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q2600427",
+     "nimi": "Calanquesin kansallispuisto",
+     "lat": 43.20944,
+     "lon": 5.44917,
+     "koko_m": 3000,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "oslo",
+   "kaupunki": "Oslo",
+   "lat": 59.91888,
+   "lon": 10.74747,
+   "kohteet": [
+    {
+     "id": "Q1490775",
+     "nimi": "Karl Johans gate",
+     "lat": 59.91306,
+     "lon": 10.74083,
+     "koko_m": 1300,
+     "korkeus_m": 0,
+     "luokka": "katu",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q373850",
+     "nimi": "Oslon kaupungintalo",
+     "lat": 59.91167,
+     "lon": 10.73361,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q961220",
+     "nimi": "Viikinkilaivamuseo",
+     "lat": 59.90475,
+     "lon": 10.68444,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q644464",
+     "nimi": "Akershusin linnoitus",
+     "lat": 59.90661,
+     "lon": 10.73625,
+     "koko_m": 600,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q43280",
+     "nimi": "Oslon oopperatalo",
+     "lat": 59.90694,
+     "lon": 10.75361,
+     "koko_m": 220,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q863932",
+     "nimi": "Oslon kuninkaanlinna",
+     "lat": 59.91722,
+     "lon": 10.7275,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q1126911",
+     "nimi": "Vigelandin puisto",
+     "lat": 59.92694,
+     "lon": 10.70111,
+     "koko_m": 850,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q33572",
+     "nimi": "Holmenkollbakken",
+     "lat": 59.96389,
+     "lon": 10.66778,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 25
+    }
+   ]
+  },
+  {
+   "id": "sevilla",
+   "kaupunki": "Sevilla",
+   "lat": 37.38158,
+   "lon": -5.99563,
+   "kohteet": [
+    {
+     "id": "Q943873",
+     "nimi": "Torre del Oro",
+     "lat": 37.38246,
+     "lon": -5.9963,
+     "koko_m": 30,
+     "korkeus_m": 36,
+     "luokka": "torni",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q231606",
+     "nimi": "Sevillan katedraali",
+     "lat": 37.38574,
+     "lon": -5.9931,
+     "koko_m": 140,
+     "korkeus_m": 42,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q834479",
+     "nimi": "Giralda",
+     "lat": 37.38614,
+     "lon": -5.99238,
+     "koko_m": 40,
+     "korkeus_m": 104,
+     "luokka": "torni",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q3087671",
+     "nimi": "Metropol Parasol",
+     "lat": 37.39325,
+     "lon": -5.99188,
+     "koko_m": 150,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q2274061",
+     "nimi": "Maestranzan areena",
+     "lat": 37.38596,
+     "lon": -5.99841,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q477051",
+     "nimi": "Intian arkisto",
+     "lat": 37.38478,
+     "lon": -5.99308,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q498261",
+     "nimi": "Sevillan Alcázar",
+     "lat": 37.38443,
+     "lon": -5.99119,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q956018",
+     "nimi": "Plaza de España",
+     "lat": 37.37708,
+     "lon": -5.9869,
+     "koko_m": 300,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 18
+    }
+   ]
+  },
+  {
+   "id": "sisilia",
+   "kaupunki": "Sisilia",
+   "lat": 38.0992,
+   "lon": 13.34633,
+   "kohteet": [
+    {
+     "id": "Q745359",
+     "nimi": "San Giovanni degli Eremiti",
+     "lat": 38.10972,
+     "lon": 13.35472,
+     "koko_m": 60,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q1034853",
+     "nimi": "Palatiinikappeli",
+     "lat": 38.11083,
+     "lon": 13.35361,
+     "koko_m": 35,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1473825",
+     "nimi": "Normannien palatsi",
+     "lat": 38.11128,
+     "lon": 13.35341,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1478407",
+     "nimi": "Palermon katedraali",
+     "lat": 38.11444,
+     "lon": 13.35611,
+     "koko_m": 130,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q2066497",
+     "nimi": "San Cataldon kirkko",
+     "lat": 38.11472,
+     "lon": 13.3625,
+     "koko_m": 25,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q1644597",
+     "nimi": "Martoranan kirkko",
+     "lat": 38.11478,
+     "lon": 13.36287,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1665695",
+     "nimi": "Quattro Canti",
+     "lat": 38.11568,
+     "lon": 13.36149,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q261439",
+     "nimi": "Teatro Massimo",
+     "lat": 38.12028,
+     "lon": 13.35722,
+     "koko_m": 130,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "sofia",
+   "kaupunki": "Sofia",
+   "lat": 42.69789,
+   "lon": 23.33376,
+   "kohteet": [
+    {
+     "id": "Q43282",
+     "nimi": "Aleksanteri Nevskin katedraali",
+     "lat": 42.69584,
+     "lon": 23.33297,
+     "koko_m": 80,
+     "korkeus_m": 51,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q2598073",
+     "nimi": "Pyhän Yrjön rotunda",
+     "lat": 42.69686,
+     "lon": 23.32286,
+     "koko_m": 40,
+     "korkeus_m": 14,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q520753",
+     "nimi": "Sveta Nedelyan kirkko",
+     "lat": 42.69678,
+     "lon": 23.32155,
+     "koko_m": 50,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q942127",
+     "nimi": "Sofian synagoga",
+     "lat": 42.70028,
+     "lon": 23.32101,
+     "koko_m": 50,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q790052",
+     "nimi": "Banja Bashin moskeija",
+     "lat": 42.69951,
+     "lon": 23.32258,
+     "koko_m": 35,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q841581",
+     "nimi": "Sofian yliopisto",
+     "lat": 42.69361,
+     "lon": 23.335,
+     "koko_m": 130,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q3269914",
+     "nimi": "Kansalliskulttuuripalatsi",
+     "lat": 42.68472,
+     "lon": 23.31889,
+     "koko_m": 250,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q276553",
+     "nimi": "Bojanan kirkko",
+     "lat": 42.64467,
+     "lon": 23.26617,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    }
+   ]
+  },
+  {
+   "id": "tampere",
+   "kaupunki": "Tampere",
+   "lat": 61.49193,
+   "lon": 23.75253,
+   "kohteet": [
+    {
+     "id": "Q17319120",
+     "nimi": "Hämeensilta",
+     "lat": 61.49792,
+     "lon": 23.76361,
+     "koko_m": 68,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q222028",
+     "nimi": "Tammerkoski",
+     "lat": 61.49806,
+     "lon": 23.76389,
+     "koko_m": 900,
+     "korkeus_m": 0,
+     "luokka": "vesi",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1236638",
+     "nimi": "Tampereen tuomiokirkko",
+     "lat": 61.5025,
+     "lon": 23.76972,
+     "koko_m": 70,
+     "korkeus_m": 64,
+     "luokka": "kirkko",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q18346706",
+     "nimi": "Museokeskus Vapriikki",
+     "lat": 61.50301,
+     "lon": 23.76036,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q15846380",
+     "nimi": "Finlaysonin tehdasalue",
+     "lat": 61.50168,
+     "lon": 23.75977,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q961917",
+     "nimi": "Särkänniemi",
+     "lat": 61.50528,
+     "lon": 23.74389,
+     "koko_m": 700,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q1190334",
+     "nimi": "Näsinneula",
+     "lat": 61.50479,
+     "lon": 23.74266,
+     "koko_m": 40,
+     "korkeus_m": 168,
+     "luokka": "torni",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q3533268",
+     "nimi": "Pyynikin näkötorni",
+     "lat": 61.49633,
+     "lon": 23.732,
+     "koko_m": 30,
+     "korkeus_m": 26,
+     "luokka": "torni",
+     "kesto_s": 18
+    }
+   ]
+  },
+  {
+   "id": "tukholma",
+   "kaupunki": "Tukholma",
+   "lat": 59.3299,
+   "lon": 18.07382,
+   "kohteet": [
+    {
+     "id": "Q750444",
+     "nimi": "Tukholman kuninkaanlinna",
+     "lat": 59.32667,
+     "lon": 18.07167,
+     "koko_m": 230,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q648483",
+     "nimi": "Tukholman kaupungintalo",
+     "lat": 59.3275,
+     "lon": 18.05472,
+     "koko_m": 130,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q208559",
+     "nimi": "Drottningholmin linna",
+     "lat": 59.32169,
+     "lon": 17.88638,
+     "koko_m": 600,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 27
+    },
+    {
+     "id": "Q657118",
+     "nimi": "Riddarholmenin kirkko",
+     "lat": 59.32472,
+     "lon": 18.06472,
+     "koko_m": 80,
+     "korkeus_m": 90,
+     "luokka": "kirkko",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q579854",
+     "nimi": "Gamla stan",
+     "lat": 59.325,
+     "lon": 18.07083,
+     "koko_m": 800,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q901371",
+     "nimi": "Vasa-museo",
+     "lat": 59.32807,
+     "lon": 18.09139,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q725108",
+     "nimi": "Ulkoilmamuseo Skansen",
+     "lat": 59.32445,
+     "lon": 18.101,
+     "koko_m": 600,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q213988",
+     "nimi": "Skogskyrkogården",
+     "lat": 59.27556,
+     "lon": 18.09944,
+     "koko_m": 1000,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 19
+    }
+   ]
+  },
+  {
+   "id": "valletta",
+   "kaupunki": "Valletta",
+   "lat": 35.88815,
+   "lon": 14.49975,
+   "kohteet": [
+    {
+     "id": "Q613619",
+     "nimi": "Pyhän Johanneksen ko-katedraali",
+     "lat": 35.89778,
+     "lon": 14.51278,
+     "koko_m": 80,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1368885",
+     "nimi": "Suurmestarin palatsi",
+     "lat": 35.89883,
+     "lon": 14.51406,
+     "koko_m": 130,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q110391255",
+     "nimi": "Piirityskello-muistomerkki",
+     "lat": 35.89759,
+     "lon": 14.51828,
+     "koko_m": 30,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q220899",
+     "nimi": "Grand Harbour",
+     "lat": 35.895,
+     "lon": 14.52056,
+     "koko_m": 3000,
+     "korkeus_m": 0,
+     "luokka": "vesi",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q7898477",
+     "nimi": "Yläbarrakan puutarhat",
+     "lat": 35.89498,
+     "lon": 14.51202,
+     "koko_m": 120,
+     "korkeus_m": 0,
+     "luokka": "puisto",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q2499012",
+     "nimi": "Auberge de Castille",
+     "lat": 35.89583,
+     "lon": 14.51139,
+     "koko_m": 80,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q576800",
+     "nimi": "Manoel-teatteri",
+     "lat": 35.89983,
+     "lon": 14.51282,
+     "koko_m": 50,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q1438745",
+     "nimi": "Pyhän Elmon linnake",
+     "lat": 35.90194,
+     "lon": 14.51861,
+     "koko_m": 400,
+     "korkeus_m": 0,
+     "luokka": "linnoitus",
+     "kesto_s": 22
+    }
+   ]
+  },
+  {
+   "id": "venetsia",
+   "kaupunki": "Venetsia",
+   "lat": 45.43566,
+   "lon": 12.33596,
+   "kohteet": [
+    {
+     "id": "Q217527",
+     "nimi": "Pyhän Markuksen tori",
+     "lat": 45.434,
+     "lon": 12.338,
+     "koko_m": 180,
+     "korkeus_m": 0,
+     "luokka": "aukio",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q754194",
+     "nimi": "Pyhän Markuksen kellotorni",
+     "lat": 45.43403,
+     "lon": 12.33903,
+     "koko_m": 40,
+     "korkeus_m": 99,
+     "luokka": "torni",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q189883",
+     "nimi": "Dogen palatsi",
+     "lat": 45.43367,
+     "lon": 12.34042,
+     "koko_m": 110,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 19
+    },
+    {
+     "id": "Q52517",
+     "nimi": "Huokausten silta",
+     "lat": 45.43406,
+     "lon": 12.34086,
+     "koko_m": 20,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q172988",
+     "nimi": "Pyhän Markuksen basilika",
+     "lat": 45.43444,
+     "lon": 12.33972,
+     "koko_m": 77,
+     "korkeus_m": 43,
+     "luokka": "kirkko",
+     "kesto_s": 23
+    },
+    {
+     "id": "Q52505",
+     "nimi": "Rialton silta",
+     "lat": 45.43801,
+     "lon": 12.33564,
+     "koko_m": 48,
+     "korkeus_m": 0,
+     "luokka": "silta",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q309243",
+     "nimi": "Canal Grande",
+     "lat": 45.44222,
+     "lon": 12.32639,
+     "koko_m": 3000,
+     "korkeus_m": 0,
+     "luokka": "kanava",
+     "kesto_s": 18
+    },
+    {
+     "id": "Q52531",
+     "nimi": "Santa Maria della Salute",
+     "lat": 45.43057,
+     "lon": 12.33473,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 25
+    }
+   ]
+  },
+  {
+   "id": "vilna",
+   "kaupunki": "Vilna",
+   "lat": 54.69282,
+   "lon": 25.26939,
+   "kohteet": [
+    {
+     "id": "Q1281237",
+     "nimi": "Vilnan tuomiokirkko",
+     "lat": 54.68589,
+     "lon": 25.28788,
+     "koko_m": 100,
+     "korkeus_m": 57,
+     "luokka": "kirkko",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q1283798",
+     "nimi": "Pyhän Pietarin ja Pyhän Paavalin kirkko",
+     "lat": 54.69417,
+     "lon": 25.30639,
+     "koko_m": 70,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 20
+    },
+    {
+     "id": "Q1497616",
+     "nimi": "Gediminasin torni",
+     "lat": 54.68676,
+     "lon": 25.29068,
+     "koko_m": 120,
+     "korkeus_m": 20,
+     "luokka": "torni",
+     "kesto_s": 21
+    },
+    {
+     "id": "Q445649",
+     "nimi": "Vilnan vanhakaupunki",
+     "lat": 54.68333,
+     "lon": 25.28333,
+     "koko_m": 2000,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 24
+    },
+    {
+     "id": "Q658192",
+     "nimi": "Vilnan yliopisto",
+     "lat": 54.6825,
+     "lon": 25.28722,
+     "koko_m": 200,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q937290",
+     "nimi": "Pyhän Annan kirkko",
+     "lat": 54.68306,
+     "lon": 25.29333,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "kirkko",
+     "kesto_s": 25
+    },
+    {
+     "id": "Q945499",
+     "nimi": "Užupis",
+     "lat": 54.68056,
+     "lon": 25.29694,
+     "koko_m": 800,
+     "korkeus_m": 0,
+     "luokka": "muu",
+     "kesto_s": 22
+    },
+    {
+     "id": "Q937212",
+     "nimi": "Aamuportti",
+     "lat": 54.67444,
+     "lon": 25.28944,
+     "koko_m": 40,
+     "korkeus_m": 0,
+     "luokka": "rakennus",
+     "kesto_s": 20
+    }
+   ]
+  }
+ ]
+}

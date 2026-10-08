@@ -399,6 +399,10 @@ namespace Matkakirja.Natiivi
                     puhuu || (silta != null && silta.isPlaying), silmukka.Seuraava != null, kysyOdotus.Kaynnissa))
             { jatkoVastauksenJalkeen = false; o.Kirjaa("opas: kierros jatkuu vastauksen jälkeen"); JatkaKierrosta(); }
             OpasSilmukka.PalloLento = kori.Nakyy;
+            // Laattaodotus lähdössä (hidas verkko 11–13 s ilman kertojaa, Päätoimittaja 8.10. ilta: hyväksytään, kun pallon omat äänet
+            // soivat): korin narina ja köysi kerran odotuksen alussa; tuuli soi äänimaisemassa korkeuden mukaan (TuuliMaa ≥ 0,08).
+            if (OpasSilmukka.PalloLento && silmukka.LaattaOdotusS > 0.5) { if (!odotusAaniSoi) { odotusAaniSoi = true; kori.OdotusAani(); } }
+            else if (silmukka.LaattaOdotusS <= 0) odotusAaniSoi = false;
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
             bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
             bool loppui = !tauolla && (pcmNyt != null ? (puhe != null && pcmNyt.SoitettuLoppuun(puhe.timeSamples)) || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
@@ -704,8 +708,8 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Kertojan ja siltalauseen taso mikserin Lukija-säätimestä (OpasAanitasot; ennen 8.10. aina 1,0).</summary>
         static float KertojanTaso => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kertoja(Asetukset.Taso(Voima.Lukija));
-        /// <summary>Ukkonen: −3 dB (omistaja TF 166), mikserin Sää, väistö −9 dB kertojan alla (ilman väistöä kumahdus oli hetkellisesti
-        /// kertojan tasolla; PalloKaupungitTestit.Aanitasot junassa 169).</summary>
+        /// <summary>Ukkonen: −3 dB (omistaja TF 166), mikserin Sää, väistö kertojan alla (PalloKaupungitTestit.Aanitasot: ilman väistöä
+        /// kumahdus oli hetkellisesti kertojan tasolla).</summary>
         float UkkosenTavoite() => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Ukkonen(PalloKori.TehosteKerroin, Asetukset.Taso(Voima.Saa), OpasAaniSoi);
         /// <summary>Joka ruutu: mikserin muutokset kuuluvat heti, ukkosen väistö liukuu.</summary>
         void PaivitaAanitasot()
@@ -952,7 +956,7 @@ namespace Matkakirja.Natiivi
         string kysymystenId, kysymystenNimi;
         /// <summary>Kaupunkitilassa kysymyksen vastauksen jälkeen kierros jatkuu tämän tauon jälkeen (s).</summary>
         public const float JatkoViiveS = 2f;
-        bool jatkoVastauksenJalkeen;
+        bool jatkoVastauksenJalkeen, odotusAaniSoi;
         int ilmoitettuIndeksi = -2, ilmoitettuMaara = -1; string[] ilmoitetutKysymykset;
         void IlmoitaKierros()
         {
@@ -1928,7 +1932,7 @@ namespace Matkakirja.Natiivi
         const double PalloLaskuS = 4.5;
         IEnumerator PalloLaskuun(OpasKohde k)
         {
-            double alku = silmukka.LentoKestoS - OpasSilmukka.PuheEnnenS - PalloLaskuS;
+            double alku = silmukka.LentoKestoS - OpasSilmukka.PuheEnnen(silmukka.LentoKestoS) - PalloLaskuS;
             while (silmukka != null && silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.Nykyinen == k && silmukka.VaiheAika < alku) yield return null;
             if (silmukka == null || silmukka.Vaihe != OpasVaihe.Lentaa || silmukka.Nykyinen != k || alku < 3 || silta == null || silta.isPlaying) yield break;
             var r = pallolauseet.Laskuun(siltalauseet.OnRyhma);
