@@ -660,6 +660,7 @@ namespace Matkakirja.Natiivi
             ladatutValoAtlakset.Clear();
             foreach (var dk in ladatutDetaljit) if (dk != null) UnityEngine.Object.Destroy(dk);
             ladatutDetaljit.Clear();
+            Shader.SetGlobalVector("_KuoriLahi", Vector4.zero);   // kuoren lähidetalji pois (tekstuurit tuhottu)
         }
 
         string edellinenPeili = "pois (ämpäri)";
@@ -1628,8 +1629,19 @@ namespace Matkakirja.Natiivi
                 }
                 foreach (var t in new[] { a, n, k, h }) if (t != null) ladatutDetaljit.Add(t);
                 rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima, h, d.SyvyysM);
+                if (d.Pinta == "kuori") AsetaKuorenLahidetalji(a, n, k, d.M, d.Voima);
                 o.Kirjaa($"poikki: detalji {d.Pinta} ({(a != null ? "albedo " : "")}{(n != null ? "normaali " : "")}{(k != null ? "karheus " : "")}m {d.M:F1}, voima {d.Voima:F2})");
             }
+        }
+
+        /// <summary>Kuoren lähidetalji (LR:n "kuori"-alias): globaalit DioraamaKuori-varjostimelle; null = pois.</summary>
+        static void AsetaKuorenLahidetalji(Texture2D a, Texture2D n, Texture2D k, double m, double voima)
+        {
+            bool paalla = a != null || n != null;
+            if (a != null) Shader.SetGlobalTexture("_KuoriLahiAlbedo", a);
+            if (n != null) Shader.SetGlobalTexture("_KuoriLahiNormaali", n);
+            if (k != null) Shader.SetGlobalTexture("_KuoriLahiKarheus", k);
+            Shader.SetGlobalVector("_KuoriLahi", new Vector4(1f / (float)Math.Max(0.05, m), (float)voima, paalla ? 1f : 0f, 0f));
         }
 
         IEnumerator LataaDetaljiKuva(string astc, string jpg, string nimi, Action<Texture2D> valmis)
