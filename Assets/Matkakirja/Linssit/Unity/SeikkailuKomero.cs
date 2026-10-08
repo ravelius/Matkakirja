@@ -167,6 +167,14 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); ArkkuAuki?.Invoke(); }
         }
 
+        /// <summary>Pelaaja komeron luona (huone 9: arkun tai tiilien 2,5 m:n säteellä).</summary>
+        public bool Lahella(Vector3 p)
+        {
+            if (arkku is Vector3 a && (a - p).sqrMagnitude < 2.5f * 2.5f) return true;
+            foreach (var t in tiiliGo) if (t != null && (t.transform.position - p).sqrMagnitude < 2.5f * 2.5f) return true;
+            return false;
+        }
+
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
         void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; SeikkailuKasittely.Poista("kilpi:arkku-1"); SeikkailuKasittely.Poista("kilpi:arkku-2"); }
     }

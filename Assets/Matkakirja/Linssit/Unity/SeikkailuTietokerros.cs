@@ -44,8 +44,13 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return SeikkailuVene.Aktiivinen != null ? 1 : 0;
-            if (SeikkailuKappeli.Aktiivinen != null && SeikkailuKappeli.Aktiivinen.Nyt != SeikkailuKappeli.Vaihe.Odottaa) return 5;
+            // M-osa (8.10.): pako (kellosta veneeseen) 10, ote-kiipeily ulkoseinällä 8.
+            if (SeikkailuPako.Aktiivinen is SeikkailuPako pk && pk.Ydin.Vaihe != PakoVaihe.Odottaa && pk.Ydin.Vaihe != PakoVaihe.Kello) return 10;
+            if (p.OteKiipeily != null) return 8;
             var d = SeikkailuKavely.Data; if (d == null) return 0;
+            var pp = p.transform.position;
+            if (SeikkailuKomero.Aktiivinen is SeikkailuKomero ko && ko.Lahella(pp)) return 9;
+            if (SeikkailuKappeli.Aktiivinen != null && SeikkailuKappeli.Aktiivinen.Nyt != SeikkailuKappeli.Vaihe.Odottaa && pp.y < 12.5f) return 5;
             var pos = p.transform.position; double x = pos.x, y = pos.y, z = -pos.z;
             foreach (var o in d.Osat.Values)
             {
@@ -55,6 +60,10 @@ namespace Matkakirja.Natiivi
                     case "vesiportti": case "porttikaytava-T102": return 2;
                     case "keittio-G102": case "pikkupiha": return 3;
                     case "kirkkotorni-portaat": return y >= 9.0 ? 5 : 4;
+                    case "kappeli-kavely": return y >= 12.5 ? 7 : 5;   // ampumakäytävä kappelin yllä kuuluu huoneeseen 7
+                    case "palatsi": return 6;
+                    case "muurikaytava": return y >= 16.0 ? 8 : 7;     // harja 16,6; käytävä 13,4 (komero ja pako yllä tilasta)
+                    case "tyrma-E101": return 0;                       // tyrmä ei avaa kortteja
                 }
             }
             return 0;
