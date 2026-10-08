@@ -18,7 +18,7 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuEsineet : MonoBehaviour
     {
         public static SeikkailuEsineet Aktiivinen { get; private set; }
-        public const float PoimintaM = 1.2f, HeittoEteen = 7f, HeittoYlos = 3.5f, KuuluuM = 12f, ValitsinAste = 30f;
+        public const float PoimintaM = 1.2f, KuuluuM = 12f, ValitsinAste = 30f;   // heiton nopeus: Heittorata (kantama 3–9 m katseesta)
         static readonly int IdKuva = Shader.PropertyToID("_Kuva"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva"), IdTila = Shader.PropertyToID("_Tila");
         /// <summary>Kolahduksen klippi (rakennus.json aanet pikari-1); Sovitin asettaa.</summary>
         public static AudioClip KolahdusKlippi;
@@ -887,10 +887,15 @@ namespace Matkakirja.Natiivi
             // Katseen suunta, jos kamera on käännetty (heitto sinne, minne pelaaja katsoo).
             var k = Quaternion.Euler(0, (float)p.Tila.KameraYaw, 0) * Vector3.forward;
             if (k.sqrMagnitude > 0.5f) eteen = k;
-            e.Rb.linearVelocity = eteen * HeittoEteen + Vector3.up * HeittoYlos;
+            // Tähtäys (pelattavuusmalli 2.4, juna 170): kantama katseen pystykulmasta 3–9 m (KameraPitch + = alas), rata laskeutuu
+            // lattiaan kantaman päähän esineen todellisesta korkeudesta (kyyryssä matalammalta).
+            double ylos = -p.Tila.KameraPitch, kasi = e.Go.transform.position.y - p.transform.position.y;
+            double kantama = Heittorata.Kantama(ylos);
+            var (vx, vy) = Heittorata.Nopeus(kantama, kasi);
+            e.Rb.linearVelocity = eteen * (float)vx + Vector3.up * (float)vy;
             e.Rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 8f;
             e.Heitetty = true;
-            kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}");
+            kirjaa?.Invoke($"seikkailu: heitetty {e.Id} suuntaan {eteen}, kantama {kantama:F1} m (katse {ylos:F0}°)");
         }
 
         /// <summary>Nostettu (kalkki, pateeni, liuskekivi) lasketaan varovasti eteen (ei heitetä: pyhä esine).</summary>
