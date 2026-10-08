@@ -7,7 +7,8 @@
 // riita 40 s:n välein (pelaaja vesiportilla tai ulkona), torkkuja ottaa tarjottimen myös heränneenä (ei hälytyksessä) ja istuu syömään,
 // M-osa (historia-m): istuvat ja seisovat hahmot (profiilitta linnaväki; linnaväki ja noppa syövät katsejaksoin, vouti valveilla),
 // rannan vartijat odottavat (Aktivoi/Odottamaan), naamio naulakosta (kulkulupa; pukeutuminen 2 s; ei kelpaa hahmoille, joiden merkki on
-// osassa muurikaytava: SeikkailuVartijat.NaamioEiKelpaaOsa, PT 8.10.),
+// osassa muurikaytava: SeikkailuVartijat.NaamioEiKelpaaOsa, PT 8.10.), harjan hahmot uppoutuneina (ei selkäaistia) ja talonpoika
+// kääntyy kerran (kaantyy_s) 5 s pelaajan tultua 8 m:iin, kuulo: yli 2,5 m:n korkeusero puolittaa (Aanilahde.Y),
 // kiinni → tarkistuspiste (portaalin ylitys ilman vaaraa), armo 4 s, kaikki valppaiksi.
 // Yksinkertaistukset: hahmot ja pelaaja kulkevat suoraan (ei NavMeshiä); näkölinja vapaa samassa osassa ja naapuriosaan vain
 // portaalin (ovi:-merkki) kautta, kerrosero ≤ 2 m; mukana vain hahmot, joiden reitti on alle 25 m:n päässä pelaajan reitistä.
@@ -33,6 +34,8 @@ namespace Matkakirja.Linssit.Testit
             public bool Aktiivinen = true; public double AlkuX, AlkuY, AlkuZ;
             /// <summary>Ensimmäisen merkin osa (sovittimen V.Osa): naamio ei kelpaa osassa NaamioEiKelpaaOsa.</summary>
             public string MerkkiOsa;
+            /// <summary>Huone 8: kertakääntö (kaantyy_s) käytävää kohti; 0 ei, 1 odottaa, 2 kääntynyt, 3 tehty (SeikkailuVartijat.Kaantyy).</summary>
+            public double KaantyyS, AlkuYaw, KaantyyAika; public int KaantyyVaihe;
             public List<(double X, double Y, double Z)> Pisteet = new List<(double, double, double)>();
         }
 
@@ -112,7 +115,9 @@ namespace Matkakirja.Linssit.Testit
                     {
                         Profiili = (istuu || seisoo) && eka.Profiili == null ? VartijaProfiili.Linnavaki : VartijaProfiili.Hae(eka.Profiili),
                         Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)),
+                        Uppoutunut = seisoo && eka.Tunnus.StartsWith("harja", StringComparison.Ordinal),
                     } };
+                h.KaantyyS = eka.KaantyyS; h.AlkuYaw = h.Aivot.Yaw;
                 (h.AlkuX, h.AlkuY, h.AlkuZ) = (h.X, h.Y, h.Z); h.MerkkiOsa = eka.Osa ?? kv.Key;
                 foreach (var m in kv.Value) h.Pisteet.Add((m.X, m.Y, m.Z));
                 var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
@@ -240,8 +245,8 @@ namespace Matkakirja.Linssit.Testit
         public void Kayta(KavelyMerkki e, (double X, double Y, double Z) kohde)
         {
             Kaytetyt.Add(e.Nimi);
-            if (e.Kaadettava) Jono.Add(new Aanilahde(e.X, e.Z, e.AaniM > 0 ? e.AaniM : HeittoAaniM, Askelaani.Osa(Data, e.X, e.Y, e.Z)));
-            else Jono.Add(new Aanilahde(kohde.X, kohde.Z, HeittoAaniM, Askelaani.Osa(Data, kohde.X, kohde.Y, kohde.Z)));
+            if (e.Kaadettava) Jono.Add(new Aanilahde(e.X, e.Z, e.AaniM > 0 ? e.AaniM : HeittoAaniM, Askelaani.Osa(Data, e.X, e.Y, e.Z), e.Y));
+            else Jono.Add(new Aanilahde(kohde.X, kohde.Z, HeittoAaniM, Askelaani.Osa(Data, kohde.X, kohde.Y, kohde.Z), kohde.Y));
         }
 
         bool Vaara() { foreach (var h in Hahmot) if (h.Aktiivinen && h.Aivot.Tila != VartijanTila.Partio && h.Aivot.Tila != VartijanTila.Paluu) return true; return false; }
@@ -263,7 +268,7 @@ namespace Matkakirja.Linssit.Testit
             if (osa != null && osa != pelaajanOsa) { if (pelaajanOsa != null && !Vaara()) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; } pelaajanOsa = osa; }
             var aanet = new List<Aanilahde>(Jono); Jono.Clear();
             double sade = Askelaani.Sade(Askelaani.Pinta(d, PX, PY, PZ), Hiipii ? Liiketapa.Hiipiminen : Liiketapa.Kavely);
-            if (vauhti > 0.3 && sade > 0 && !Tarjotin) aanet.Add(new Aanilahde(PX, PZ, sade, osa));   // tarjotin kädessä: palvelijan askeleet (ei juoksua)
+            if (vauhti > 0.3 && sade > 0 && !Tarjotin) aanet.Add(new Aanilahde(PX, PZ, sade, osa, PY));   // tarjotin kädessä: palvelijan askeleet (ei juoksua)
             bool piilossa = Piilossa();
             if (piilossa && !oliPiilossa) foreach (var h in Hahmot) if (h.Aktiivinen && h.Aivot.Mittari >= Vartija.TutkiHuippu && h.NakiViimeksi) { paljastui = true; break; }
             if (!piilossa) paljastui = false;
@@ -285,7 +290,8 @@ namespace Matkakirja.Linssit.Testit
                 if (h.Osa == null || h.OsaX != h.X || h.OsaY != h.Y || h.OsaZ != h.Z) { h.Osa = Askelaani.Osa(d, h.X, h.Y, h.Z) ?? ""; h.OsaX = h.X; h.OsaY = h.Y; h.OsaZ = h.Z; }
                 string hosa = h.Osa.Length == 0 ? null : h.Osa;
                 var kuuluvat = new List<Aanilahde>();
-                foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(d, a.KuuluvuusM, a.Osa, hosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
+                foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(d, a.KuuluvuusKorkeudella(h.Y), a.Osa, hosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa, a.Y)); }
+                if (h.KaantyyS > 0 && h.KaantyyVaihe < 3) Kaantyy(h);
                 var s = new VartijanSyote { VartijaX = h.X, VartijaZ = h.Z, PelaajaX = PX, PelaajaZ = PZ, NakolinjaVapaa = Nakolinja(h, hosa, osa), Piilossa = piilossa || T < ArmoAsti,
                     Valoisuus = valo, Hiipii = Hiipii, PelaajaVauhti = vauhti, Aanet = kuuluvat, Tarjotin = Tarjotin, Naamio = Naamio && h.MerkkiOsa != NaamioEiKelpaaOsa };
                 h.Aivot.Paivita(Dt, s);
@@ -315,6 +321,14 @@ namespace Matkakirja.Linssit.Testit
                 double a = Math.Min(kd, h.Aivot.Vauhti * Dt); h.X += kx / kd * a; h.Z += kz / kd * a; h.Aivot.Yaw = Math.Atan2(kx, kz) * 180 / Math.PI;
                 h.Y = YReitilla(h);
             }
+        }
+
+        /// <summary>SeikkailuVartijat.Kaantyy: 5 s pelaajan tultua 8 m:iin hahmo katsoo kaantyy_s käytävää kohti (ei uppoutunut), sitten palaa.</summary>
+        void Kaantyy(Hahmo h)
+        {
+            if (h.KaantyyVaihe == 0 && Etaisyys3(h.X, h.Y, h.Z, PX, PY, PZ) < 8) { h.KaantyyVaihe = 1; h.KaantyyAika = T + 5; }
+            else if (h.KaantyyVaihe == 1 && T >= h.KaantyyAika) { h.KaantyyVaihe = 2; h.KaantyyAika = T + h.KaantyyS; h.Aivot.Uppoutunut = false; h.Aivot.Yaw = h.AlkuYaw + 180; }
+            else if (h.KaantyyVaihe == 2 && T >= h.KaantyyAika) { h.KaantyyVaihe = 3; h.Aivot.Yaw = h.AlkuYaw; h.Aivot.Uppoutunut = true; }
         }
 
         /// <summary>Hahmon korkeus lähimmältä reittiosuudelta (portaat nousevat tasaisesti).</summary>
