@@ -1,3 +1,11 @@
+# TILANNE 8.10. klo 18.xx
+
+- **Pallo vs. Unreal 5 -raportti VALMIS:** PR https://github.com/ravelius/Matkakirja/pull/4220 (haara karttaseppa-pallo-unreal, worktree /Users/Shared/Claude/wt/karttaseppa-pallo-unreal), docs/raportit/pallo-unreal-vertailu-20261008.md. Pallon osio on Linssisepältä.
+  PT:lle on lähetetty yhteenveto. Odottaa PT:n mergeä ja työnjakoa (ehdotus: Karttaseppä vesimaski, pilviaineisto ja LUT-työkalu). Mergen jälkeen `uusi-worktree.sh --poista karttaseppa-pallo-unreal`.
+- Talvi3 ajossa. Tauko junan 167 ja Laitetestaajan kaappauksen ajaksi 21.45 alkaen, katso alempi osio 10.4x.
+
+---
+
 # TILANNE 8.10. klo 10.4x
 
 - **Näyte 6 valmis 10.42** (kuva `kuvapari-talvip-nayte6-20261008.jpg`, näyte 4 | 6): reuna muuttui loivaksi siirtymäksi eikä uusia virheitä tullut. PT:n ehdon mukaan koko ajo on käynnistetty.
