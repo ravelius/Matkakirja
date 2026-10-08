@@ -35,6 +35,7 @@ namespace Matkakirja.Natiivi
             public float RepliikkiAsti; public int RepliikkiLaskuri;
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
+            public bool Tunnisti;
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
@@ -296,6 +297,9 @@ namespace Matkakirja.Natiivi
                 }
                 else { s.PelaajaX = vp.x + 1000; s.PelaajaZ = vp.z; }
                 v.Aivot.Paivita(dt, s);
+                // Apulainen tunnistaa naamioituneen (M-osa huone 6): "Kuka sinä olet?" (apulainen-kuka-1…3, omistajan luvalla).
+                if (v.Aivot.Tunnisti && !v.Tunnisti) SeikkailuRepliikit.SoitaTaiVara("apulainen-kuka-" + UnityEngine.Random.Range(1, 4), "apulainen-kuka-1", ag.transform.position + Vector3.up * 1.6f);
+                v.Tunnisti = v.Aivot.Tunnisti;
                 v.NakiViimeksi = s.NakolinjaVapaa && !s.Piilossa;
                 if (v.Aivot.Tila != v.EdellinenTila)
                 {
@@ -601,7 +605,7 @@ namespace Matkakirja.Natiivi
             var g = new GameObject("Kurkistuksen lyhty") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false); g.transform.position = paikka;
             var l = g.AddComponent<Light>(); l.type = LightType.Point; l.range = 0.1f; l.color = new Color(1f, 0.62f, 0.3f); l.intensity = 1.4f; l.shadows = LightShadows.None;
             kirjaa?.Invoke("seikkailu: vartija kurkistaa (jähmety)");
-            var r = SeikkailuRepliikit.Aktiivinen; if (r != null && r.Valmis) r.Soita("vartija-epaily-1", g.transform);
+            SeikkailuRepliikit.SoitaTaiVara("vartija-kurkistus-1", "vartija-epaily-1", paikka);
             for (float t = 0; t < s; t += Time.deltaTime)
             {
                 l.range = Mathf.Min(LyhtyM, t / 2f * LyhtyM);   // valopiiri kasvaa 2 s (varoitus), sitten liike näkyy
@@ -621,8 +625,7 @@ namespace Matkakirja.Natiivi
             V lahin = null; float pd = float.MaxValue;
             foreach (var x in vartijat) { if (x.Agentti == null || !x.Agentti.gameObject.activeInHierarchy) continue; float d = (x.Agentti.transform.position - p.transform.position).sqrMagnitude; if (d < pd) { pd = d; lahin = x; } }
             if (lahin == null) return;
-            var r = SeikkailuRepliikit.Aktiivinen;
-            if (r != null && r.Valmis) r.Soita("vartija-valpas-1", lahin.Agentti.transform);   // olemassa oleva repliikki (ei uusia ilman lupaa)
+            SeikkailuRepliikit.SoitaTaiVara("vartija-kiipeilija-1", "vartija-valpas-1", lahin.Agentti.transform.position + Vector3.up * 1.6f);   // "Köydessä joku!"
             kirjaa?.Invoke($"seikkailu: kiipeilijä nähtiin lyhdyn valossa ({lahin.Osa})");
             p.LopetaOteKiipeily();
             StartCoroutine(Vie(lahin, p));

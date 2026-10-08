@@ -41,13 +41,21 @@ namespace Matkakirja.Natiivi
             if (id != "keittokulho" || kiista >= 0f || (paikka - kulhoPaikka).sqrMagnitude > KulhoM * KulhoM) return;
             kiista = 0f;
             kirjaa?.Invoke("seikkailu: kulho voudin pöydällä → vouti syö, kiista aitan hoitajan kanssa alkaa");
+            KiistaAani();
+        }
+
+        void KiistaAani()
+        {
+            // Kiista yhtenä ottona (noin 30 s, vouti ja hoitaja vuorotellen; hoitajan vuorot katseikkunoissa 8–14 s ja 20–26 s).
+            var vh = SeikkailuVartijat.Hahmo(Vouti);
+            SeikkailuRepliikit.SoitaTaiVara("kiista-vouti-hoitaja", null, (vh is (Vector3 vp, double _) ? vp : kulhoPaikka) + Vector3.up * 1.6f);
         }
 
         void Update()
         {
             if (kiista < 0f) return;
             kiista += Time.deltaTime;
-            if (kiista >= KiistaS + KiistaValiS) kiista = 0f;   // kiista toistuu
+            if (kiista >= KiistaS + KiistaValiS) { kiista = 0f; KiistaAani(); }   // kiista toistuu
             bool pois = false;
             foreach (var (a, l) in Ikkunat) if (kiista >= a && kiista < l) pois = true;
             if (pois != KatsooPois)
