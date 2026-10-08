@@ -18,11 +18,14 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "pilli|steam whistle|1|15|by"
-          "pilli|steamboat|2|30|by"
-          "pilli|boat horn|1|15|by"
-          "humina|city ambience distant traffic|30|150|by"
-          "humina|city skyline ambience|30|150|by"
+          "luukku|wooden door creak|1|6|by"
+          "luukku|old door creak|1|6|by"
+          "olki|footsteps hay|3|40|by"
+          "olki|walking on straw|3|40|by"
+          "liina|fabric shake|0.5|3|by"
+          "liina|cloth flap|0.5|3|by"
+          "nappula|chess piece|0.1|1.5|by"
+          "nappula|wooden piece on board|0.1|1.5|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
