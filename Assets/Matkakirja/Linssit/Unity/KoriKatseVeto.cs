@@ -16,10 +16,14 @@ namespace Matkakirja.Natiivi
     public sealed class KoriKatseVeto
     {
         public static bool Kaytossa = true;
+        /// <summary>Astetta pikselille × kenttäkulma / ruudun korkeus (2 = koko ruudun veto ≈ 2 × kenttäkulma).</summary>
+        public static float Herkkyys = 2f;
+        /// <summary>Kuvapari ilman kosketusta: `opas katse <asteet>` pitää nostoa (rajattu +45° horisonttiin), negatiivinen = pois.</summary>
+        public static float Pakotettu = -1f;
         readonly KoriKatse katse = new KoriKatse();
         PalloKierto kierto; Camera kamera;
         bool alhaalla, ohita, vetoAsetettu, kytketty, muutettu;
-        Vector2 ed; Quaternion talteen;
+        Vector2 ed; Quaternion talteen; float pakotettuNyt = -1f;
         public double Ylos => katse.Ylos;
 
         public void Paivita(bool korissa, Camera kam, PalloKierto pk)
@@ -45,12 +49,16 @@ namespace Matkakirja.Natiivi
             }
             else if (!ohita)
             {
-                katse.Liiku(px.y - ed.y, kam.fieldOfView / Mathf.Max(1, Screen.height), kulma);
+                // Herkkyys 2 × kenttäkulma / ruudun korkeus: kehys katsoo alaviistoon (−30…−45°), joten kupuun (+35…45°) pitää päästä
+                // yhdellä vedolla (BUILD 167:n kuvaparissa 1 × vaati 2–3 vetoa).
+                katse.Liiku(px.y - ed.y, Herkkyys * kam.fieldOfView / Mathf.Max(1, Screen.height), kulma);
                 ed = px;
             }
             katse.Paivita(Time.unscaledDeltaTime, kulma);
-            PalloKori.KatseYlos = (float)katse.Ylos;
-            bool tarvitaan = katse.Ylos > 0;
+            float ylos = Pakotettu >= 0f && sallittu ? Mathf.Min(Pakotettu, Mathf.Max(0f, (float)(KoriKatse.YlinAst - kulma))) : (float)katse.Ylos;
+            pakotettuNyt = Pakotettu >= 0f && sallittu ? ylos : -1f;
+            PalloKori.KatseYlos = ylos;
+            bool tarvitaan = ylos > 0;
             if (tarvitaan && !kytketty) { RenderPipelineManager.beginContextRendering += Ennen; RenderPipelineManager.endContextRendering += Jalkeen; kytketty = true; }
             else if (!tarvitaan && kytketty) Irrota();
             if (katse.Vetaa || tarvitaan) Ruudunpaivitys.Herata();
@@ -58,10 +66,11 @@ namespace Matkakirja.Natiivi
 
         void Ennen(ScriptableRenderContext _, List<Camera> __)
         {
-            if (kamera == null || katse.Ylos <= 0) return;
+            float ylos = pakotettuNyt >= 0f ? pakotettuNyt : (float)katse.Ylos;
+            if (kamera == null || ylos <= 0) return;
             var t = kamera.transform;
             talteen = t.rotation;
-            t.rotation = Quaternion.AngleAxis(-(float)katse.Ylos, t.right) * talteen;   // nosto kameran oman sivuakselin ympäri
+            t.rotation = Quaternion.AngleAxis(-ylos, t.right) * talteen;   // nosto kameran oman sivuakselin ympäri
             muutettu = true;
         }
 
@@ -77,7 +86,7 @@ namespace Matkakirja.Natiivi
             kytketty = false;
         }
 
-        public string Tila() => $"katse ylös {(Kaytossa ? "käytössä" : "pois")}, nosto {katse.Ylos:F1}°, {(katse.Vetaa ? "vedetään" : "vapaa")}";
+        public string Tila() => $"katse ylös {(Kaytossa ? "käytössä" : "pois")}, nosto {(pakotettuNyt >= 0 ? pakotettuNyt : katse.Ylos):F1}°{(Pakotettu >= 0 ? " (pakotettu)" : "")}, {(katse.Vetaa ? "vedetään" : "vapaa")}";
 
         public void Pois()
         {

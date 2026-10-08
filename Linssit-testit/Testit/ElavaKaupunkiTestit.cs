@@ -64,7 +64,8 @@ namespace Matkakirja.Linssit.Testit
             var mallit = new List<(string Nimi, VeneVerkko V)>();
             foreach (var t in VeneMallit.Tyypit) mallit.Add((t, VeneMallit.Luo(t)));
             for (int i = 0; i < VeneMallit.PalloVarit.Length; i++) mallit.Add(("pallo" + i, VeneMallit.Pallo(i)));
-            mallit.Add(("lokki", VeneMallit.LokinVartalo())); mallit.Add(("siipi+", VeneMallit.LokinSiipi(1))); mallit.Add(("siipi-", VeneMallit.LokinSiipi(-1)));
+            mallit.Add(("lokki", VeneMallit.LokinVartalo())); mallit.Add(("kyyhky", VeneMallit.KyyhkynVartalo()));
+            mallit.Add(("kyyhkyn siipi", VeneMallit.LokinSiipi(1, true))); mallit.Add(("siipi+", VeneMallit.LokinSiipi(1))); mallit.Add(("siipi-", VeneMallit.LokinSiipi(-1)));
             foreach (var (nimi, v) in mallit)
             {
                 int n = v.Karkia;
@@ -127,6 +128,23 @@ namespace Matkakirja.Linssit.Testit
             for (int j = 0; j < p.Maara; j++) Oleta.Tosi(p.X[j] == q.X[j] && p.Y[j] == q.Y[j], "deterministinen");
             var r = new MuutPallot(1, 50000, 90, 3, 1); double x0 = r.X[0]; for (int i = 0; i < 100; i++) r.Paivita(0.1);
             Oleta.Tosi(r.X[0] > x0 + 20, "tuuli itään siirtää itään");
+        }
+
+        // PARIISI (8.10.): Seinen jokilaivat ja kanavaveneet, vesipinnan korkeus Seinellä ~63–72 m (27 m NGF + geoidi, kaarevuus),
+        // kyyhkyt aukioilla (Concorde, Carrousel) paikkoineen.
+        [Testi] static void PariisinVesiliikenneJaKyyhkyt()
+        {
+            var v = VesiLiikenne.Lue(System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-pariisi.json"), 100, 3);
+            Oleta.Tosi(v.Liike.Kulkijat.Count >= 30, $"veneitä {v.Liike.Kulkijat.Count}");
+            int joki = 0;
+            foreach (var k in v.Liike.Kulkijat)
+            {
+                Oleta.Tosi(k.Y > 60 && k.Y < 100, $"vesi {k.Y:F1} m");
+                if (VeneMallit.Tyypit[v.Tyyppi(k)] == "jokilaiva") { joki++; Oleta.Tosi(k.Y > 60 && k.Y < 73, $"Seine {k.Y:F1} m"); }
+            }
+            Oleta.Tosi(joki >= 5, $"jokilaivoja {joki}");
+            var c = v.Parvet.Find(p => p.Nimi == "Place de la Concorde");
+            Oleta.Tosi(c != null && c.Kyyhky && Math.Abs(c.Lat - 48.8656) < 0.003 && Math.Abs(c.Lon - 2.3212) < 0.004, "Concorden kyyhkyt");
         }
 
         static string TukholmaJson() => System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-tukholma.json");
