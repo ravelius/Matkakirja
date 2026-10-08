@@ -1,5 +1,5 @@
 {
- "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/.",
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi).",
  "paivitetty": "2026-10-08",
  "nimeamiset": [
   {
@@ -302,6 +302,27 @@
    "tekija": "john grzinich",
    "lisenssi": "CC BY-SA 3.0",
    "url": "https://archive.org/details/aporee_9779_11715"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "AMBTraf_Calm City traffic.Clean.Distance 100m",
+   "tekija": "newlocknew",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/711130/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Moottorivene, kumivene, ohi / Rubber boat passing",
+   "tekija": "YleArkisto",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/348843/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "ChurchBell from pasture city",
+   "tekija": "klankbeeld",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/269417/"
   }
  ]
 }
