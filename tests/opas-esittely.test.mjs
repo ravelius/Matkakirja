@@ -177,8 +177,8 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v3:ssa (8.10. avaukseen pallovirke).
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
-  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku esittely-v2.
-  const AANELLISET = { tukholma: 'opas/esittely-v2/tukholma.json' };
+  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3.
+  const AANELLISET = { tukholma: 'opas/esittely-v3/tukholma.json' };
   for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-aaneton-v3/${id}.json`);
 });
 
@@ -291,4 +291,9 @@ test('näyttönimi ≠ tunnus: Reykjavík löytää islanti-esittelyn', async ()
   const urlit = [];
   await oppaanEsittely({}, 'Reykjavík', async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); });
   assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-aaneton-v3/islanti.json']);
+});
+
+test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta polustaan', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.deepEqual(OPAS_AINEISTOT.historia_polut, { tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json' });
 });

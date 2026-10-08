@@ -5,6 +5,7 @@
  *   tiet:       media.matkakirja.app/kartta/tiet-v1/<id>.json tai tiet_polut[id] (yövalot, Linssiseppä)
  *   esittely:   media.matkakirja.app/opas/esittely-v1/<id>.json tai esittely_polut[id] (esigeneroitu kerronta; worker tarjoaa
  *               valmiin, natiivi lukee avauksen)
+ *   historia:   historia_polut[id] (historia- ja arkiosiot lentojen ajaksi, kehityskaupungit 9.10.)
  *   aanikartta: media.matkakirja.app/aanet/aanikartta-v1/<id>.json (kaupunkiäänimaisema, Siirtoseppä; lisätään vasta,
  *               kun kaupungin silmukat ovat ämpärissä)
  * Id: kaupungin nimi pienaakkosin, ä/å → a, ö/ø → o, é → e, välit ja muut merkit → "-" (pariisi, koopenhamina).
@@ -62,7 +63,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     sisilia: 'opas/esittely-aaneton-v3/sisilia.json',
     sofia: 'opas/esittely-aaneton-v3/sofia.json',
     tampere: 'opas/esittely-aaneton-v3/tampere.json',
-    tukholma: 'opas/esittely-v2/tukholma.json',   // 8.10. omistaja: kehityskaupunki, kertojan äänet (avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
+    tukholma: 'opas/esittely-v3/tukholma.json',   // 9.10. omistaja: kohteita lähempää; v2 + 5 lähikohdetta, kierros 14 kohdetta lyhimpänä reittinä (v2: avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
     valletta: 'opas/esittely-aaneton-v3/valletta.json',
     venetsia: 'opas/esittely-aaneton-v3/venetsia.json',
     vilna: 'opas/esittely-aaneton-v3/vilna.json',
@@ -96,5 +97,10 @@ export const OPAS_AINEISTOT = Object.freeze({
     luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json',
+  },
+  // Historia- ja arkiosiot lentojen ajaksi (omistaja 9.10.: vähemmän taukoja ja pelkkiä siirtymiä; kehityskaupungit):
+  // { kaupunki, versio, osiot: [{ tunnus, otsikko, teksti, sha, kesto_s, lahteet }] }, ääni R2 opas/<sha>.mp3|pcm|ajat.json.
+  historia_polut: {
+    tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json',
   },
 });
