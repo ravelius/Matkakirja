@@ -1130,7 +1130,7 @@ namespace Matkakirja.Natiivi
             if (nayttamo == null) return;
             SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             var ennen = SeikkailuAanet.Aktiivinen;
-            var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v2/manifest.json", o.Kirjaa);
+            var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v3/manifest.json", o.Kirjaa);
             if (a != ennen || SeikkailuSade.Aktiivinen == null)
             {
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1b/manifest.json");   // Pelikoodari (v1b 8.10.: askel-porras-1 uusittu): askeleet, kantele (puuttuva ohitetaan)
