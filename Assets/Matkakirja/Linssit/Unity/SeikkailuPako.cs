@@ -2,7 +2,7 @@
 // Kulku: arkku auki → hälytyskello (kaikki valppaiksi) → köysi kramppiin (koysi:krampi-komero) → köysilasku takakuvassa (Ytimen Kiipeily
 // 1 m:n otteina, lyhty pyyhkäisee puolivälissä 2 s:n varoituksella) → kallio ensimmäisessä persoonassa (reitti:pako-1…5) → kamera:K4
 // (sukellus, kaukokuva 4 s) → uinti takakuvassa 12 s veneelle (vene:pako) → rannan vartija pitää kiinnitysköydestä: Katkaise (tai Töytäise,
-// omistajan päätös 1) → K5 (virta vie veneen sumuun, 12 s) → valmis. Aikaraja: kalliolla 20 s kellon alusta rannan soihtuvartijat esiin
+// omistajan päätös 1) → K5 (virta vie veneen sumuun, 12 s) → valmis. Aikaraja: kalliolla 25 s kellon alusta rannan soihtuvartijat esiin
 // (partio:ranta, SeikkailuVartijat.Odottavat), 45 s → kiinni (lähin vartija vie tyrmään). Ohjatut jaksot SeikkailuPelaaja.Ohjattu-kutsulla.
 // Vaiheet ja ajat Ydin Pakossa (LS2 8.10.): uusi kiinnitys myöhästymisen jälkeen aloittaa 45 s:n ikkunan alusta (ennen jokainen uusi
 // yritys myöhästyi heti kalliolle päästessä, koska kello jatkui).

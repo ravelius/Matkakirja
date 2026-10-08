@@ -10,7 +10,7 @@ namespace Matkakirja.Linssit.Seikkailu
 
     public sealed class Pako
     {
-        public const double RantaEsiinS = 20, MyohassaS = 45, K4S = 4, UintiS = 12, KoysiS = 10, K5S = 12, SoutajaEnnenS = 1.5;
+        public const double RantaEsiinS = 25, MyohassaS = 45, K4S = 4, UintiS = 12, KoysiS = 10, K5S = 12, SoutajaEnnenS = 1.5;
 
         public PakoVaihe Vaihe { get; private set; } = PakoVaihe.Odottaa;
         /// <summary>Aika yrityksen alusta (kello tai uusi kiinnitys myöhästymisen jälkeen); −1 ennen kelloa.</summary>

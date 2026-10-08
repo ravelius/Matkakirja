@@ -289,7 +289,7 @@ namespace Matkakirja.Natiivi
                     foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(SeikkailuKavely.Data, a.KuuluvuusM, a.Osa, vosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
                 }
                 var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = kuuluvat, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null,
-                    Tarjotin = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin, Naamio = SeikkailuEsineet.Aktiivinen?.Naamio == true };
+                    Tarjotin = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin, Naamio = SeikkailuEsineet.Aktiivinen?.Naamio == true && v.Osa != NaamioEiKelpaaOsa };
                 if (p != null)
                 {
                     var pp = p.transform.position;
@@ -555,6 +555,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Reitit, jotka luodaan piiloon ja tuodaan esiin vasta tapahtumasta (pelattavuusmalli 8.2 huone 10: kaksi vartijaa
         /// soihtuineen rannassa, jos pako viipyy kellon jälkeen).</summary>
+        /// <summary>Palvelijan naamio ei kelpaa muureilla (huoneet 7–10: muurikäytävä, harja, ranta): siellä palvelijalla ei ole asiaa yöllä,
+        /// ja pelattavuusmalli 8.2 tekee huoneista 7–8 hiivittäviä (LS2:n huonesimulaatio 8.10.: naamiossa käveli lyhtyvartijan ohi).</summary>
+        public const string NaamioEiKelpaaOsa = "muurikaytava";
+
         public static readonly HashSet<string> Odottavat = new HashSet<string>(StringComparer.Ordinal) { "ranta", "seisoo-ranta-vartija" };
 
         /// <summary>Odottava reitti esiin (valppaana).</summary>

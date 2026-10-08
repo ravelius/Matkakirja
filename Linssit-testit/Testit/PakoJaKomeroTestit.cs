@@ -28,7 +28,7 @@ namespace Matkakirja.Linssit.Testit
             Aja(p, 8, false, _ => false); p.LaskuValmis();
             Oleta.Sama(PakoVaihe.Kallio, p.Vaihe);
             double esiin = Aja(p, 30, false, x => x.RantaEsiin);
-            Oleta.Tosi(Math.Abs(10 + esiin - Pako.RantaEsiinS) <= Tol, $"rannan vartijat 20 s kellosta ({10 + esiin:F2})");
+            Oleta.Tosi(Math.Abs(10 + esiin - Pako.RantaEsiinS) <= Tol, $"rannan vartijat 25 s kellosta ({10 + esiin:F2})");
             Aja(p, 1, true, x => x.Sukelsi);
             Oleta.Sama(PakoVaihe.K4, p.Vaihe);
             double k4 = Aja(p, 10, false, x => x.Vaihe == PakoVaihe.Uinti);
@@ -59,7 +59,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(p.Kiinnita() && p.UusiYritys && p.KelloS < Dt, "uusi kiinnitys aloittaa ikkunan alusta (rannan vartijat piiloon)");
             p.LaskuValmis();
             double esiin = Aja(p, 30, false, x => x.RantaEsiin);
-            Oleta.Tosi(Math.Abs(esiin - Pako.RantaEsiinS) <= Tol, $"uudessa yrityksessä vartijat taas 20 s:ssa ({esiin:F2})");
+            Oleta.Tosi(Math.Abs(esiin - Pako.RantaEsiinS) <= Tol, $"uudessa yrityksessä vartijat taas 25 s:ssa ({esiin:F2})");
             Aja(p, 5, true, x => x.Sukelsi);
             Oleta.Sama(PakoVaihe.K4, p.Vaihe);
         }
