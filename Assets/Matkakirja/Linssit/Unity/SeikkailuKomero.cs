@@ -1,5 +1,5 @@
-// HISTORIAMOOTTORI M-OSA HUONE 9: KOMERO JA ARKKU (Siirtoseppä 8.10.2026; pelattavuusmalli-olavinlinna.md 8.2 huone 9; Ydin Tiilet ja
-// Kilpilukko). Tiilet tiili:komero-N (raapaisut 2) paikkamerkkilaatikkoina, kunnes Linnanrakentajan malli tulee: Raavi veitsellä, toinen
+// HISTORIAMOOTTORI M-OSA HUONE 9: KOMERO JA ARKKU (Siirtoseppä 8.10.2026; pelattavuusmalli-olavinlinna.md 8.2 huone 9; Ydin Komero:
+// Tiilet ja Kilpilukko, LS2 8.10.). Tiilet tiili:komero-N (raapaisut 2) paikkamerkkilaatikkoina, kunnes Linnanrakentajan malli tulee: Raavi veitsellä, toinen
 // raapaisu irrottaa; ensimmäinen putoaa aina kalliolle (ääni 14 m, kolahdus 1,7 s myöhemmin), muut: liikkeessä nopea veto pudottaa,
 // paikallaan hidas veto laskee komeroon. Toinen putoava 10 s:n sisällä → vartija kurkistaa (SeikkailuVartijat.Kurkistus 6 s, jähmety).
 // Arkku (esine:arkku-komero, kilpi:arkku-1/2): Käännä kilpeä 15° kerrallaan (−90…90, kiertää), Avaa kokeilee kantta: 45° ±10° → auki,
@@ -18,9 +18,9 @@ namespace Matkakirja.Natiivi
         public static SeikkailuKomero Aktiivinen { get; private set; }
         /// <summary>Arkku auki ja löytö kuitattu (huone 10 alkaa: hälytyskello, SeikkailuPako).</summary>
         public static event Action ArkkuAuki;
-        public const float LahiM = 1.1f, KilpiAskel = 15f, PutoamisS = 1.7f;
-        Tiilet ydin; readonly List<GameObject> tiiliGo = new List<GameObject>();
-        Kilpilukko lukko; Vector3? arkku; readonly Vector3[] kilvet = new Vector3[2]; bool kilpiaOn;
+        public const float LahiM = 1.1f, PutoamisS = 1.7f;
+        Komero ydin; readonly List<GameObject> tiiliGo = new List<GameObject>();
+        Vector3? arkku; readonly Vector3[] kilvet = new Vector3[2]; bool kilpiaOn;
         Vector3 ulos = Vector3.forward;
         Action<string> kirjaa;
 
@@ -35,7 +35,9 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(isa, false);
             var k = go.AddComponent<SeikkailuKomero>(); k.kirjaa = kirjaa; Aktiivinen = k;
             tm.Sort((a, b) => string.CompareOrdinal(a.Tunnus, b.Tunnus));
-            k.ydin = new Tiilet(tm.Count);
+            double tavoite = 45, sallittu = 10; int ki = 0;
+            foreach (var m in d.Lajia("kilpi")) if (ki < 2) { k.kilvet[ki++] = new Vector3((float)m.X, (float)m.Y, (float)-m.Z); if (m.KaantoAste > 0) tavoite = m.KaantoAste; if (m.SallittuAste > 0) sallittu = m.SallittuAste; }
+            k.ydin = new Komero(tm.Count, tavoite, sallittu);
             var sh = Shader.Find("Matkakirja/Linssit/DioraamaValaistu");
             var mat = sh != null ? new Material(sh) { name = "Tiili (paikkamerkki)" } : null;
             if (mat != null) mat.SetColor("_Vari", new Color(0.5f, 0.24f, 0.16f));
@@ -50,25 +52,18 @@ namespace Matkakirja.Natiivi
                 k.tiiliGo.Add(t);
                 if (m.KiertoY is double ku) k.ulos = -new Vector3((float)Math.Sin(ku), 0f, (float)-Math.Cos(ku));
             }
-            if (am != null)
-            {
-                k.arkku = new Vector3((float)am.X, (float)am.Y, (float)-am.Z);
-                int i = 0; double tavoite = 45, sallittu = 10;
-                foreach (var m in d.Lajia("kilpi")) if (i < 2) { k.kilvet[i++] = new Vector3((float)m.X, (float)m.Y, (float)-m.Z); if (m.KaantoAste > 0) tavoite = m.KaantoAste; if (m.SallittuAste > 0) sallittu = m.SallittuAste; }
-                k.kilpiaOn = i == 2;
-                k.lukko = new Kilpilukko(tavoite, sallittu);
-            }
+            if (am != null) { k.arkku = new Vector3((float)am.X, (float)am.Y, (float)-am.Z); k.kilpiaOn = ki == 2; }
             kirjaa?.Invoke($"seikkailu: komero ({tm.Count} tiiltä, arkku {(am != null ? "kyllä" : "ei")}, kilpiä {(k.kilpiaOn ? 2 : 0)})");
         }
 
-        void Update() => ydin?.Paivita(Time.deltaTime);
+        void Update() => ydin?.Tiilet.Paivita(Time.deltaTime);
 
         int LahinTiili(SeikkailuPelaaja p)
         {
             int paras = -1; float pk = SeikkailuEsineet.ValitsinAste;
             for (int i = 0; i < tiiliGo.Count; i++)
             {
-                if (ydin.Irti(i) || tiiliGo[i] == null) continue;
+                if (ydin.Tiilet.Irti(i) || tiiliGo[i] == null) continue;
                 var c = tiiliGo[i].transform.position;
                 if ((c - (p.transform.position + Vector3.up * 1.2f)).sqrMagnitude > LahiM * LahiM * 1.6f) continue;
                 float kulma = p.Silmat != null ? Vector3.Angle(p.Silmat.forward, c - p.Silmat.position) : 0f;
@@ -79,7 +74,7 @@ namespace Matkakirja.Natiivi
 
         int LahinKilpi(SeikkailuPelaaja p)
         {
-            if (!kilpiaOn || lukko == null || lukko.Auki || !(arkku is Vector3 a) || !ydin.KaikkiIrti && tiiliGo.Count > 0) return -1;
+            if (!kilpiaOn || ydin.Auki || !(arkku is Vector3 a) || !ydin.ArkkuUlottuvilla) return -1;
             if ((a - p.transform.position).sqrMagnitude > 1.6f * 1.6f) return -1;
             if (p.Silmat == null) return 0;
             float k0 = Vector3.Angle(p.Silmat.forward, kilvet[0] - p.Silmat.position), k1 = Vector3.Angle(p.Silmat.forward, kilvet[1] - p.Silmat.position);
@@ -107,24 +102,22 @@ namespace Matkakirja.Natiivi
                 kirjaa?.Invoke($"seikkailu: tiili {ti + 1}: {tulos}");
                 if (tulos == TiiliTulos.Putosi) StartCoroutine(Putoaa(go));
                 else if (tulos == TiiliTulos.Komeroon) { SeikkailuAanet.Soita("kivi-lasku", c, 0.6f); go.transform.position = c - ulos * 0.35f + Vector3.down * 0.05f; }
-                if (ydin.Kurkistaa) { ydin.Kurkistaa = false; SeikkailuVartijat.Kurkistus(c + Vector3.up * 2.5f, 6f); }
+                if (ydin.Tiilet.Kurkistaa) { ydin.Tiilet.Kurkistaa = false; SeikkailuVartijat.Kurkistus(c + Vector3.up * 2.5f, 6f); }
                 return true;
             }
             int k = LahinKilpi(p);
             if (k == 0 || k == 1)
             {
-                double nyt = k == 0 ? lukko.Kilpi1 : lukko.Kilpi2;
-                double uusi = nyt + KilpiAskel > 90 ? -90 : nyt + KilpiAskel;
-                lukko.Kaanna(k + 1, uusi - nyt);
+                double uusi = ydin.KaannaKilpea(k + 1);
                 p.KasiEle("raapaisu");
                 SeikkailuAanet.Soita("kivi-irtoaa", kilvet[k], 0.4f, 1.6f);
-                kirjaa?.Invoke($"seikkailu: kilpi {k + 1} → {(k == 0 ? lukko.Kilpi1 : lukko.Kilpi2):F0}°");
+                kirjaa?.Invoke($"seikkailu: kilpi {k + 1} → {uusi:F0}°");
                 return true;
             }
             if (k == 2)
             {
                 var a = arkku.Value;
-                if (lukko.Kokeile() == KilpiTulos.Auki) StartCoroutine(Auki(p, a));
+                if (ydin.Avaa() == KilpiTulos.Auki) StartCoroutine(Auki(p, a));
                 else { SeikkailuAanet.Soita("kivi-kolahdus", a + Vector3.up * 0.4f, 0.6f, 1.2f); SeikkailuVartijat.Aani(a, Kilpilukko.KolahdusM); kirjaa?.Invoke("seikkailu: arkku ei aukea (kolahdus)"); }
                 p.KasiEle("poiminta");
                 return true;
