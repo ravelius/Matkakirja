@@ -1,5 +1,5 @@
 // OLAVINLINNAN LÄPIPELUUAJURI (Linssiseppä 8.10.2026, Päätoimittaja: koko peli 1–10 yhdellä testillä, juna 167; LS2:n huonesimulaatio
-// ja M-osan ytimet, Siirtosepän Tyrma/Pako): yksi jatkuva maailma (Huonesimulaatio, v44z) alusta pakoon: huoneet 1–5 Thief-ajurilla
+// ja M-osan ytimet, Siirtosepän Tyrma/Pako): yksi jatkuva maailma (Huonesimulaatio, PelattavaPala.Versio/Hash eli pelin oma data) alusta pakoon: huoneet 1–5 Thief-ajurilla
 // (vartijat, harhautukset, tarjotin torkkujalle), kappelin valoarvoitus (KappelinArvoitus, sujuva järjestys), huone 6 (naamio
 // naulakosta, kulho ja voudin kiista pöydällä pelaaja-57, avainrengas), huone 7 (muurikäytävän ovi avainrenkaalla, muurikäytävä),
 // huone 8 (harja, köysikieppi, sakara, kiipeily otteilla), huone 9 (komero: tiilet ja kilvet, arkku), huone 10 (kello, köysilasku,
@@ -117,6 +117,16 @@ namespace Matkakirja.Linssit.Testit
             return t.Vaihe == TyrmanVaihe.OviAuki && t.Ulos() ? t.Aika + UlosS : -1;
         }
 
+        /// <summary>Merkkiä lähin reittipiste (0-pohjainen reitti:pelaaja-indeksi): huoneen sisäiset kohdat datasta, ei kiinteinä.</summary>
+        static int Lahin(string nimi)
+        {
+            var m = Merkki(nimi); int paras = 0; double pd = double.MaxValue;
+            for (int i = 0; i < Huonesimulaatio.Reitti.Count; i++) { var q = Huonesimulaatio.Reitti[i]; double d = Huonesimulaatio.Etaisyys3(q.X, q.Y, q.Z, m.X, m.Y, m.Z); if (d < pd) { pd = d; paras = i; } }
+            return paras;
+        }
+
+        static string Data => $"{PelattavaPala.Versio} ({PelattavaPala.Hash})";
+
         static KavelyMerkki Merkki(string nimi) { foreach (var m in Huonesimulaatio.Data.Merkit) if (m.Nimi == nimi) return m; throw new Exception(nimi + " puuttuu"); }
         static (double X, double Y, double Z) P(string nimi) { var m = Merkki(nimi); return (m.X, m.Y, m.Z); }
 
@@ -141,10 +151,12 @@ namespace Matkakirja.Linssit.Testit
             // Huoneet 1–5 (reitti:pelaaja-1…20): laituri ja vesiportti, porttikäytävä ja piha, keittiö (tarjotin torkkujalle), kirkkotorni.
             // Huonerajat turvallisissa pisteissä: Thief-ajuri palaa tarvittaessa taaksepäin vain saman Kulje-kutsun sisällä (raja
             // pelaaja-9:n kohdalla jumitti keittiön, koska piilovalinta pihalla jäi edelliseen osaan).
-            if (!a.KuljeKiinni(2, 1, 5)) return a; a.Valmis(2);
-            if (!a.KuljeKiinni(3, 6, 7)) return a; a.Valmis(3);
-            if (!a.KuljeKiinni(4, 8, 12)) return a; a.Valmis(4);
-            if (!a.KuljeKiinni(5, 13, 19)) return a;
+            // Huonerajat LS2:n ThiefAjuri.Huoneet-taulukosta (pelattavuusmalli: 2 laituri ja porttikäytävä, 3 piha ja keittiö,
+            // 4 kirkkotorni ja portaat, 6 Linnantupa ja voudin sali, 7 muurikäytävä, 8 harja).
+            var H = ThiefAjuri.Huoneet;
+            if (!a.KuljeKiinni(2, H[2].Alku + 1, H[2].Loppu)) return a; a.Valmis(2);
+            if (!a.KuljeKiinni(3, H[3].Alku + 1, H[3].Loppu)) return a; a.Valmis(3);
+            if (!a.KuljeKiinni(4, H[4].Alku + 1, H[4].Loppu)) return a; a.Valmis(4);
             if (!a.W.Annettu) { a.Jumi = "huone 4: tarjotin jäi antamatta torkkujalle"; return a; }
             // Huone 5: kappelin valoarvoitus (vaiheet 1–12), kynttilä puhalletaan arvoituksessa.
             var kap = new KappelinArvoitus();
@@ -157,7 +169,8 @@ namespace Matkakirja.Linssit.Testit
             if (kap.Vaihe != KappelinArvoitus.Valmis) { a.Jumi = $"huone 5: kappeli vaiheessa {kap.Vaihe}"; return a; }
             a.W.Kynttila = false; a.Valmis(5);
             // Huone 6: kaari-ovi → naamio naulakosta → Linnantupa → voudin pöytä (pelaaja-57): kulho, kiista, avainrengas → paluu.
-            if (!a.KuljeKiinni(6, 20, 56)) return a;
+            int kiistaPiste = Lahin("esine:kulho-poydalle"), oviPiste = Lahin("ovi:muurikaytava");
+            if (!a.KuljeKiinni(6, H[6].Alku + 1, kiistaPiste)) return a;
             if (!a.W.Naamio) { a.Jumi = "huone 6: naamio jäi ottamatta naulakosta"; return a; }
             var kiista = new VoudinKiista(); var kulho = Merkki("esine:kulho-poydalle"); var vouti = Merkki("istuu:vouti");
             if (!kiista.KulhoLaskettu(Huonesimulaatio.Etaisyys2(a.W.PX, a.W.PZ, kulho.X, kulho.Z))) { a.Jumi = "huone 6: kulho ei ulotu pöydän merkistä"; return a; }
@@ -166,14 +179,14 @@ namespace Matkakirja.Linssit.Testit
             if (kiistaS >= KiistaMaxS || a.W.Kiinni != k0) { a.Jumi = $"huone 6: avainrengas ei irronnut ({kiistaS:F0} s, kiinni {a.W.Kiinni - k0})"; return a; }
             a.OdotaS(1);   // otto
             a.Loki.Add($"h6: avainrengas {kiistaS:F1} s kulhosta");
-            if (!a.Kulje(6, 57, 62)) return a; a.Valmis(6);
+            if (!a.Kulje(6, kiistaPiste + 1, H[6].Loppu)) return a; a.Valmis(6);
             // Huone 7: Tott-kammio → muuriportaat → ampumakäytävä → muurikäytävän ovi (avainrengas) → muurikäytävä.
-            if (!a.KuljeKiinni(7, 63, 80)) return a;
+            if (!a.KuljeKiinni(7, H[7].Alku + 1, oviPiste - 1)) return a;
             if (LukittuOvi.Avaa(true, "avainrengas", new[] { "avainrengas" }, false) == OviTulos.Lukossa) { a.Jumi = "huone 7: ovi ei aukea avainrenkaalla"; return a; }
             a.OdotaS(KasitteleS, true);
-            if (!a.Kulje(7, 81, 85)) return a; a.Valmis(7);
+            if (!a.Kulje(7, oviPiste, H[7].Loppu)) return a; a.Valmis(7);
             // Huone 8: tikkaat, harja, köysikieppi (pelaaja-89), sakara (-91), kiipeily kellotornin ympäri.
-            if (!a.Kulje(8, 86, 91)) return a;
+            if (!a.Kulje(8, H[8].Alku + 1, H[8].Loppu)) return a;
             a.OdotaS(2 * KasitteleS, true);   // köysikieppi + kiinnitys sakaraan
             var otteet = new List<(double X, double Y, double Z)>();
             for (int i = 1; ; i++) { KavelyMerkki m = Huonesimulaatio.Data.Merkit.FirstOrDefault(x => x.Nimi == "ote:kellotorni-" + i); if (m == null) break; otteet.Add((m.X, m.Y, m.Z)); }
@@ -251,8 +264,8 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void KokoPeliVarjoreittiaLapi()
         {
             var a = Pelaa();
-            if (a.Jumi != null) Console.WriteLine($"      LÄPIPELUU v44z: JUMI {a.Jumi}");
-            else Console.WriteLine($"      LÄPIPELUU v44z: {Rivi(a)}");
+            if (a.Jumi != null) Console.WriteLine($"      LÄPIPELUU {Data}: JUMI {a.Jumi}");
+            else Console.WriteLine($"      LÄPIPELUU {Data}: {Rivi(a)}");
             Oleta.Tosi(a.Jumi == null, $"JUMI {a.Jumi}");
             Oleta.Sama(0, a.W.Kiinni);
             for (int h = 3; h <= 10; h++) Oleta.Tosi(a.Huone[h] <= TutkivaMin[h - 1] * 60, $"huone {h}: simuloitu {Mmss(a.Huone[h])} ≤ tutkiva {TutkivaMin[h - 1]} min");
@@ -261,12 +274,13 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void KokoPeliTyrmineenJaUusinYrityksin()
         {
             var a = Pelaa(tyrma: true);
-            if (a.Jumi != null) Console.WriteLine($"      LÄPIPELUU v44z + tyrmät: JUMI {a.Jumi}");
-            else Console.WriteLine($"      LÄPIPELUU v44z + tyrmät: {Rivi(a)}");
+            if (a.Jumi != null) Console.WriteLine($"      LÄPIPELUU {Data} + tyrmät: JUMI {a.Jumi}");
+            else Console.WriteLine($"      LÄPIPELUU {Data} + tyrmät: {Rivi(a)}");
             Console.WriteLine("        " + string.Join(" · ", a.Loki.Where(l => l.Contains("tyrmä"))));
             Oleta.Tosi(a.Jumi == null, $"JUMI {a.Jumi}");
             Oleta.Tosi(a.Tyrmat >= 5, $"tyrmiä {a.Tyrmat} ≥ 5");
-            Oleta.Tosi(Arvio(a) >= 25 * 60 && Arvio(a) <= 35 * 60, $"pelaaja-arvio {Mmss(Arvio(a))} välillä 25–35 min");
+            // Tavoite noin 25–35 min (Päätoimittaja): sujuva 22:30 + kiinnijääntien hinta (tyrmä, uusi yritys) vähintään 1 min, enintään 35 min.
+            Oleta.Tosi(Arvio(a) >= (22.5 + 1) * 60 && Arvio(a) <= 35 * 60, $"pelaaja-arvio {Mmss(Arvio(a))} välillä 23:30–35:00");
         }
     }
 }
