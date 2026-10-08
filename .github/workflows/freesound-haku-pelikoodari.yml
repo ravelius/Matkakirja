@@ -1,4 +1,4 @@
-# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026, Olavinlinnan aanet-fp-v2; 9.10. läpipeluun puuttuvat äänet #4245). Vain tämän haaran pushista; ei mergetä.
+# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026, Olavinlinnan aanet-fp-v2; 9.10. elävän kaupungin äänet (PT, juna 170)). Vain tämän haaran pushista; ei mergetä.
 name: Freesound-haku (Pelikoodari)
 on:
   push:
@@ -18,33 +18,23 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "sytytys|torch ignite whoosh|0.3|3|by"
-          "sytytys|fire ignition burst|0.3|3|by"
-          "vesisanko|bucket water splash|0.5|4|by"
-          "vesisanko|water bucket pour|0.5|4|by"
-          "viitta|cloak swish|0.2|3|by"
-          "viitta|cloth whoosh movement|0.2|3|by"
-          "hanska|leather glove grab|0.2|3|by"
-          "hanska|leather glove handle object|0.2|3|by"
-          "varusteet|chainmail walking loop|3|60|by"
-          "varusteet|armor movement jingle|2|60|by"
-          "kauha|ladle pot stir|0.5|8|by"
-          "kauha|metal ladle clank|0.3|5|by"
-          "luuta|broom sweeping stone floor|2|30|by"
-          "nauris|vegetable hit thud|0.2|3|by"
-          "nauris|potato throw impact|0.2|3|by"
-          "savipurkki|clay pot break|0.3|4|by"
-          "savipurkki|ceramic pot smash|0.3|4|by"
-          "patapino|pots and pans fall|0.5|6|by"
-          "patapino|cookware crash|0.5|6|by"
-          "kolikot|coins chest|0.5|6|by"
-          "kolikot|silver coins pile|0.5|6|by"
-          "tarjotin|metal tray clatter|0.3|4|by"
-          "tarjotin|tray drop dishes|0.3|4|by"
-          "yolinnut|owl night forest|10|180|by"
-          "yolinnut|night birds summer ambience|10|180|by"
-          "koira|distant dog barking night|5|120|by"
-          "koira|dog barking far village|5|120|by"
+          "hoyrylaiva|steamboat engine chugging|5|120|by"
+          "hoyrylaiva|steam ship engine|5|120|by"
+          "hoyrylaiva|paddle steamer|5|120|by"
+          "lautta|ferry engine passing|5|120|by"
+          "lautta|ferry departure harbour|5|120|by"
+          "moottorivene|motorboat passing distance|5|90|by"
+          "moottorivene|small boat outboard pass by|5|90|by"
+          "lentokone|distant airplane flyover|5|90|by"
+          "lentokone|airliner high altitude|5|90|by"
+          "lentokone|plane passing far sky|5|90|by"
+          "lokit|seagulls flock harbour|5|90|by"
+          "lokit|seagulls calling|5|90|by"
+          "kyyhkyt|pigeons wings flutter|0.5|15|by"
+          "kyyhkyt|pigeons flock take off|0.5|15|by"
+          "kyyhkyt|dove wings flapping|0.5|15|by"
+          "sade|light rain on roof tiles|10|180|by"
+          "ukkonen|distant thunder rumble|5|60|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
