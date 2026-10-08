@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "ebf1c3555cca094e";
-        public const string Versio = "v45s";   // v45r + 8K-atlakset kaikille 10 leivotulle tilalle (Ultra, porras 4), korkeuskartat ja syvyys_m (POM, Ultra; LR 9.10.)
+        public const string Hash = "a451fb0969fce642";
+        public const string Versio = "v45t";   // v45s + hahmojen 2k-kankaat (villa, pellava, nahka, rauta) ja normaalit uudella UV:lla: vartija, portinvartija, vouti, renki, kädet (LR 9.10.)
     }
 }
