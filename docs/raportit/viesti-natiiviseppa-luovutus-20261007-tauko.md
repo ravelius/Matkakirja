@@ -3,7 +3,14 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 02.2x (UUSIN)
+## TILA 9.10. 02.5x (UUSIN)
+**JUNA 169 runko natiiviseppa/juna-169 71dbfba87** (+ LS1 kierros-169 a3ad152f5 ⊇ avaus/sumennus, NUI b58981d4a cherry-pick); testit 453/419/1093,
+simukäännös 6657f002d 02.52 0 shader erroria (app lokit/natiiviseppa-app-169-71dbfba87). ODOTTAA: PT:n muutosloki → BUILD 169 -merge masterin 6a67a9b19
+päälle → SHA Julkaisijalle; takaraja 06.30 (herätys 06.25). TF aamulla.
+FILMI-170 441d17a94: kuvapari OK (terävyys säilyy, tummennus) → PT:lle lähetetty (lokit/todistus-filmi170-{tukholma-…0240,pariisi-…0242}/kuvat).
+JUNA 170 kärjet lisäksi: NUI 570917a6e, Siirtoseppä 28c65e98e, LS2 omat-mallit-korkeus 8a23d6508 (ehto data), LS2 laivat-170 (lopullinen tulossa).
+
+## TILA 9.10. 02.2x
 JUNA 169 runko natiiviseppa/juna-169 **0f76ca59a** (+ Siirtoseppä b8a0e4133 avainsanat ⊇ 7b8b4353f); testit 453/419/1088, tarkista 0; LS2: linna OK
 käännöksellä cc69414f (saapuminen 26,5 s). Odottaa LS1:n lopullista SHA:ta, TAKARAJA 06.30 (herätys 06.25).
 JUNA 170 kärjet: Siirtoseppä e65d19131 (⊇ 817eb1f3e), NUI b3bb7a460 (⊇ c247d7872), LS1 avaus-170 db9ad39ca, LS2 laivat-170 4b6f0d820 (+ pilvi-SHA tulossa),
