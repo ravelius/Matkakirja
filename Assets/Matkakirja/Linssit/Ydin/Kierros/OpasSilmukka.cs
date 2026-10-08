@@ -1117,11 +1117,17 @@ namespace Matkakirja.Linssit.Kierros
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
         Kuvakulma? alkuAsento;
 
+        /// <summary>"Kerro lisää": seuraava on nykyisen oikean kohteen kehyksessä (sama ehto kuin AloitaLennon oikotiellä). Avauksen
+        /// yleiskuva kohteen kohdalla ei ole sama paikka (video3 8.10.: 1. lento lähti 57 %:ssa odottamatta, ilman reitin esilatausta,
+        /// ja pysähtyi kesken odottamaan laattoja — matka katsepisteestä oli alle 50 m).</summary>
+        bool SamaPaikka() => Seuraava != null && NykyinenKehys != null && kehysKohde != null && kehysKohde.Id != null
+            && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, Seuraava.Lat, Seuraava.Lon) < 50;
+
         /// <summary>Lähdön valmistelu: ehdot täyttyvät → korostus sammuu ja laatat odotetaan; lento, kun molemmat valmiit.</summary>
         bool LahtoSaa(bool ehdot, bool valmistelu, bool pika, double dt)
         {
             // "Kerro lisää" (sama paikka) ei lähde mihinkään: korostus jää palamaan.
-            bool sama = Seuraava != null && NykyinenKehys != null && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, Seuraava.Lat, Seuraava.Lon) < 50;
+            bool sama = SamaPaikka();
             if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; return ehdot && sama; }
             if (!LahtoValmisteilla) korostusPika = pika;   // nopeus valitaan valmistelun alussa
             LahtoValmisteilla = true;
@@ -1135,7 +1141,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (LatausEdistys == null || PakotaSiirto || Seuraava == null || VapaaTila) return true;
             double matka = KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, Seuraava.Lat, Seuraava.Lon);
-            if (matka >= SiirtoRajaM || matka < 50) return true;
+            if (matka >= SiirtoRajaM) return true;
             if ((seuraavaIka >= LahtoMittausS && LatausEdistys() >= LahtoValmis) || lahtoOdotusS >= (ohitettu || toiveesta ? LahtoPelaajaMaxS : LahtoOdotusMaxS)) return true;
             lahtoOdotusS += Math.Max(0, dt);
             return false;
@@ -1161,7 +1167,7 @@ namespace Matkakirja.Linssit.Kierros
             {
                 a = Asento;
                 double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, Seuraava.Lat, Seuraava.Lon);
-                if (matka >= SiirtoRajaM || matka < 50) return 0;   // siirto ei lennä; "kerro lisää" jää paikalleen
+                if (matka >= SiirtoRajaM || SamaPaikka()) return 0;   // siirto ei lennä; "kerro lisää" jää paikalleen
                 b = KehysAsento(KehysKohteelle(Seuraava, maaKorkeus), 0);
                 t0 = 0;
             }

@@ -129,6 +129,21 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(t >= OpasSilmukka.LahtoMittausS - 1e-9, $"ei ennen mittausaikaa ({t:F2} s)");
         }
 
+        // Video3 8.10.: avauskuva katsoi 1. kohteen kohdalle (matka < 50 m) → lähtö 57 %:ssa ilman odotusta ja reitin esilatausta.
+        [Testi] static void AvauskuvaKohteenKohdallaEiOleSamaPaikka()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.6760, 12.5700, 1500, 50, 0, 40));
+            var p = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => p.Add((n, t));
+            s.Aloita("Kööpenhamina");
+            s.LatausEdistys = () => 0.5;
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            Oleta.Tosi(s.ReittiEsilataus(_ => 5, new Kuvakulma[4]) > 0, "reitti esiladataan");
+            double t = 0;
+            for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) { s.Paivita(0.05, _ => 5); t += 0.05; }
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && t > OpasSilmukka.LahtoOdotusMaxS - 0.1, $"odotti laattoja ({t:F2} s)");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);
