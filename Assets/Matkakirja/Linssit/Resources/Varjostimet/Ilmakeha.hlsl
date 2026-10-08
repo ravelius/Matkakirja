@@ -118,13 +118,15 @@ float4 IlmPilviKerros(float3 d)
     float3 c = 0; float T = 1;
     [unroll] for (int i = 0; i < 3; i++)
     {
+        // KUMPUPILVET (PT 9.10. "osa kunnon kumpupilviä"): tasainen pohja, ylemmät tasot vain tiheissä ytimissä (peitto pienenee
+        // ylöspäin), joten tiheä pilvi kasvaa korkeaksi ja harva jää ohueksi hattaraksi; yläosa kirkkaampi, pohja varjossa.
         float h = pohja + paksuus * i * 0.5, t = min((h - kamera) / dy, 100000.0);
         float2 xz = kxz + d.xz * t;
-        float paino = i == 1 ? 1.0 : 0.6;
-        float a = saturate(IlmPilviPeitto(xz, _IlmPilviParam.x - (i == 1 ? 0.0 : 0.08)) * paino * 0.85) * ylos;
+        float paino = 1.0;
+        float a = saturate(IlmPilviPeitto(xz, _IlmPilviParam.x - 0.12 * i) * paino * 0.85) * ylos;
         float2 kohti = xz + s.xz / max(s.y, 0.1) * paksuus * 0.5;
         float itse = exp(-2.5 * IlmPilviPeitto(kohti, _IlmPilviParam.x));
-        float3 valo = (IlmLapaisy(h, s.y) * itse * vaihe * 0.32 * paiva + ymparisto * (0.6 + 0.4 * (1.0 - itse))) * (1.0 - _IlmSaa.y);
+        float3 valo = (IlmLapaisy(h, s.y) * itse * vaihe * 0.32 * paiva + ymparisto * (0.6 + 0.4 * (1.0 - itse))) * (1.0 - _IlmSaa.y) * (0.7 + 0.15 * i);
         float3 sironta, lapaisy; IlmIlmaperspektiivi(t, d, sironta, lapaisy);
         valo = valo * lapaisy + sironta;
         float hiipuma = (1.0 - smoothstep(40000.0, 80000.0, t)) * (1.0 - smoothstep(pohja - 600.0, pohja - 300.0, kamera));

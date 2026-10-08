@@ -11,7 +11,7 @@ namespace Matkakirja.Linssit.Ilmakeha
     public static class KaupunkiPilvet
     {
         public const int Tasot = 3;
-        public const double PohjaM = 2000, PaksuusM = 600, HiipumaAlkuM = 40000, HiipumaLoppuM = 80000, KameraVaraM = 300;
+        public const double PohjaM = 1600, PaksuusM = 1000, HiipumaAlkuM = 40000, HiipumaLoppuM = 80000, KameraVaraM = 300;
 
         /// <summary>Tason i (0 = pohja … Tasot−1 = katto) korkeus metreinä maasta.</summary>
         public static double TasonKorkeus(int i, double pohjaM = PohjaM, double paksuusM = PaksuusM) => pohjaM + paksuusM * i / (Tasot - 1);
@@ -31,8 +31,8 @@ namespace Matkakirja.Linssit.Ilmakeha
         /// <summary>Peitto Karttasepän kaavalla (pilvet-tiheys.json): smoothstep(1 − p, 1 − p + 0,2, D − 0,15·(1 − G)).</summary>
         public static double Peitto(double d, double g, double peitto) => Smooth(1 - peitto, 1 - peitto + 0.2, d - 0.15 * (1 - g));
 
-        /// <summary>Tason tiheys: keskitaso täysi, pohja ja katto ohuempia (kumpupilven pyöreä profiili).</summary>
-        public static double TasonPaino(int i) => i == (Tasot - 1) / 2 ? 1.0 : 0.6;
+        /// <summary>Tason peiton vähennys (kumpupilvi: tasainen pohja, ylemmät tasot vain tiheissä ytimissä).</summary>
+        public static double TasonPeittoVahennys(int i) => 0.12 * i;
 
         static double Smooth(double a, double b, double x) { double t = Math.Max(0, Math.Min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
     }
