@@ -6,6 +6,8 @@
 //   HUIPPU   laitteen muisti ≥ 7 Gt (A17 Pro ja uudemmat iPhonet, M-sarjan iPadit)
 //   NORMAALI muisti ≥ 3,5 Gt
 //   KEVYT    muut
+// 8.10.2026 (omistaja 19.5x; Natiiviseppä): yllä oleva on laiteluokan alaraja; taso tulee linnan muistibudjetista (LinnaMuisti),
+// joka nostaa huippuun aina kun vapaata muistia riittää, ja puhelimen 8k-atlaksen ylin mip mukaan, kun kevennykset ovat pois.
 // Kehittäjän valinta ("poikki kuori auto|huippu|normaali|kevyt") ohittaa automaattisen ja muistetaan laitteeseen.
 //
 // LATAUSJÄRJESTYS: ensin nopea taso näkyviin (HUIPPU-laitteella normaali), sitten kevyt kaukotasoksi (LODGroup LOD1,
@@ -49,14 +51,9 @@ namespace Matkakirja.Natiivi
         public static string ValintaTeksti() =>
             "Kuori: " + (Pakotettu.HasValue ? Pakotettu.Value.ToString().ToLowerInvariant() : "auto (" + Automaattinen().ToString().ToLowerInvariant() + ")");
 
-        /// <summary>Laitteen mukainen taso (SystemInfo.systemMemorySize, Mt).</summary>
-        public static Laatu Automaattinen()
-        {
-            // Omistaja 30.9.2026: huippu kaikille A17 Proa uudemmille (DioraamaLaatu.Taysi); iPhone 15 Pro ja heikommat muistin mukaan.
-            if (DioraamaLaatu.Taysi) return Laatu.Huippu;
-            int mt = SystemInfo.systemMemorySize;
-            return mt >= 3500 ? Laatu.Normaali : Laatu.Kevyt;
-        }
+        /// <summary>Linnan muistibudjetin taso (LinnaMuisti; omistaja 8.10.2026 19.5x). Laiteluokka (omistaja 30.9.: huippu A17 Proa
+        /// uudemmille, muuten RAM ≥ 3500 → normaali) on alaraja ja taso sellaisenaan, kun vapaa muisti ei ole tiedossa.</summary>
+        public static Laatu Automaattinen() => (Laatu)(int)LinnaMuisti.Nyt.Kuori;
 
         public static Laatu Valittu => Pakotettu ?? Automaattinen();
 
@@ -164,8 +161,9 @@ namespace Matkakirja.Natiivi
                     var astcTavut = default(Unity.Collections.NativeArray<byte>); // natiivimuistiin (linnan piikit 2.10.)
                     yield return DioraamaLevyvalimuisti.HaeNatiivi(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
                     if (oma != kerta) { if (astcTavut.IsCreated) astcTavut.Dispose(); UnityEngine.Object.Destroy(mesh); yield break; }
-                    // Puhelimessa huipputason 8k-atlas 4k:na (ylin mip ohitetaan; iPad ja Mac 8k), kuten maaston orto.
-                    bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+                    // Puhelimessa huipputason 8k-atlas 4k:na (ylin mip ohitetaan; iPad ja Mac 8k), kuten maaston orto. 8.10.2026: vain kun
+                    // linnan muistibudjetti pitää puhelinkevennykset päällä (LinnaMuisti.Nyt.RajoituksetPois).
+                    bool puhelin = !LinnaMuisti.Nyt.RajoituksetPois;
                     r0 = DioraamaRuutu.Alku();
                     string syy; bool ladattiin = astcTavut.IsCreated;
                     // 8k-atlas kaistoina useaan ruutuun (linnan piikit 2.10.: kertalataus 64–100 ms renderisäikeessä).
