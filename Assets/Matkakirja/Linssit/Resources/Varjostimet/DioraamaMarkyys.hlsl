@@ -23,4 +23,24 @@ half DioraamaMarkyys(inout half3 vari, float markyys, float3 nW, float3 paikkaW)
     return mm;
 }
 
+// Märän pinnan heijastus (juna 169): kuun (päävalo) ja liekkien (lisävalot) peiliheijastus heijastusvektorista; sileä märkä kivi
+// kiiltää terävästi, karhea pehmeämmin. Kutsujalla on oltava inputData (LIGHT_LOOP_BEGIN lukee sitä Forward+:ssa).
+half3 DioraamaMarkaHeijastus(float3 n, float3 paikkaW, half mm, half karheus, InputData inputData)
+{
+    if (mm <= 0.01h) return 0;
+    float3 V = normalize(_WorldSpaceCameraPos - paikkaW);
+    float3 R = reflect(-V, n);
+    float kiilto = lerp(96.0, 20.0, saturate(karheus));
+    Light kuu = GetMainLight();
+    half3 s = kuu.color * (half)pow(saturate(dot(R, kuu.direction)), kiilto) * 0.6h;
+    #if defined(_ADDITIONAL_LIGHTS) || USE_CLUSTER_LIGHT_LOOP
+    uint maara = GetAdditionalLightsCount();
+    LIGHT_LOOP_BEGIN(maara)
+        Light l = GetAdditionalLight(lightIndex, paikkaW, half4(1, 1, 1, 1));
+        s += l.color * l.distanceAttenuation * l.shadowAttenuation * (half)pow(saturate(dot(R, l.direction)), kiilto);
+    LIGHT_LOOP_END
+    #endif
+    return s * mm * 0.8h;
+}
+
 #endif

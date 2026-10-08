@@ -43,6 +43,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             #pragma fragment frag
             // Liekkien varjot leivotulle pinnalle (juna 169): valo on leivottu, mutta varjoa heittävän lisävalon (SeikkailuVarjot,
             // Ultra) varjo tummentaa pintaa — hahmot ja esineet heittävät liekin varjon. Varjottomat valot eivät muuta mitään.
+            #pragma multi_compile _ _ADDITIONAL_LIGHTS
             #pragma multi_compile _ _CLUSTER_LIGHT_LOOP
             #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
             #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
@@ -123,6 +124,9 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             half4 frag(Vali i) : SV_Target
             {
                 if (_Leikattava > 0.5 && _DioraamaLeikkausMin.w > 0.001 && Leikkauksessa(i.paikkaW)) discard;
+                InputData inputData = (InputData)0;   // lisävalosilmukat (LIGHT_LOOP_BEGIN, Forward+)
+                inputData.positionWS = i.paikkaW;
+                inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
                 half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
 
                 // Detalji (DioraamaDetalji.hlsl, juna 169): albedo-overlay ja kohokuvio leivotun valon päälle.
@@ -158,9 +162,6 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
 
                 #if defined(_ADDITIONAL_LIGHT_SHADOWS)
                 {
-                    InputData inputData = (InputData)0;
-                    inputData.positionWS = i.paikkaW;
-                    inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
                     half varjo = 1.0h;
                     uint lisavaloja = GetAdditionalLightsCount();
                     LIGHT_LOOP_BEGIN(lisavaloja)
@@ -171,6 +172,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                     vari *= varjo;
                 }
                 #endif
+                vari += DioraamaMarkaHeijastus(dt.normaali, i.paikkaW, mm, dt.karheus, inputData);   // liekit ja kuu märällä kivellä
 
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));

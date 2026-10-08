@@ -209,7 +209,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                     #endif
                     vari = albedo * (leivottu * varjo + liikkuva);
                 }
-                DioraamaMarkyys(vari, _Markyys, n, i.paikkaW);   // märät pinnat (kävelyosat ulkona)
+                half mmV = DioraamaMarkyys(vari, _Markyys, n, i.paikkaW);   // märät pinnat (kävelyosat ulkona)
+                vari += DioraamaMarkaHeijastus(n, i.paikkaW, mmV, dt.karheus, inputData);
 
                 // Etäisyyssumu (era 1 kohta 6, kuten DioraamaMaalattu/DioraamaHahmo): massa ja keittiö erottuvat.
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
