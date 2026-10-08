@@ -142,6 +142,7 @@ namespace Matkakirja.Natiivi
             // Reitti = merkin nimi ilman loppunumeroa (partio:portinvartija-1, -2 …; v44m: useampi reitti samassa osassa).
             var reitit = new SortedDictionary<string, List<KavelyMerkki>>(StringComparer.Ordinal);
             foreach (var m in d.Lajia("istuu")) if (m.Profiili != null) reitit["istuu-" + m.Tunnus] = new List<KavelyMerkki> { m };   // torkkuva vartija (ei istuu:pelaaja-*)
+            foreach (var m in d.Lajia("seisoo")) if (m.Henkilo != null) reitit["seisoo-" + m.Tunnus] = new List<KavelyMerkki> { m };   // M-osa: harjan vartija ja talonpoika, rannan vartija
             foreach (var m in d.Lajia("partio"))
             {
                 int vi = m.Tunnus.LastIndexOf('-');
@@ -155,9 +156,9 @@ namespace Matkakirja.Natiivi
                 var eka = kv.Value.Find(x => x.Profiili != null || x.Henkilo != null) ?? kv.Value[0];
                 string henkilo = eka.Henkilo ?? Henkilo;
                 if (rakennus?.Henkilot == null || !rakennus.Henkilot.ContainsKey(henkilo)) henkilo = Henkilo;
-                bool istuu = eka.Laji == "istuu";
+                bool istuu = eka.Laji == "istuu", seisoo = eka.Laji == "seisoo";
                 var pisteet = new List<(double X, double Z, double OdotaS)>();
-                foreach (var m in kv.Value) pisteet.Add((m.X, -m.Z, istuu ? 1e9 : m.OdotaS > 0 ? m.OdotaS : 2.0));
+                foreach (var m in kv.Value) pisteet.Add((m.X, -m.Z, istuu || seisoo ? 1e9 : m.OdotaS > 0 ? m.OdotaS : 2.0));
                 var alku = new Vector3((float)kv.Value[0].X, (float)kv.Value[0].Y, (float)-kv.Value[0].Z);
                 if (NavMesh.SamplePosition(alku, out var osuma, 3f, NavMesh.AllAreas)) alku = osuma.position;
                 else { kirjaa?.Invoke($"seikkailu: vartija {kv.Key}: alku ei NavMeshillä ({alku})"); continue; }
@@ -170,7 +171,7 @@ namespace Matkakirja.Natiivi
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
                 // kierto_y kääntää glTF:n +Z:aa; Unityssa z peilattu → katseen yaw = 180° − kierto_y (LS2 8.10.: −kierto_y katsoi väärään suuntaan).
                 double yaw0 = eka.KiertoY is double ky0 ? 180 - ky0 * 180 / Math.PI : 0;
-                var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = VartijaProfiili.Hae(eka.Profiili), Torkkuu = istuu }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
+                var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = seisoo && eka.Profiili == null ? VartijaProfiili.Linnavaki : VartijaProfiili.Hae(eka.Profiili), Torkkuu = istuu }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
                 // Kannettu valo (pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu): oikea pistevalo ilman varjoja,
@@ -224,6 +225,8 @@ namespace Matkakirja.Natiivi
         {
             float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
             var p = SeikkailuPelaaja.Aktiivinen;
+            // Ohjattu jakso (pako) ja ote-kiipeily takakuvassa: tavallinen havainto pois; vaaran tuovat lyhty (Kiipeily) ja Kurkistus.
+            if (p != null && (p.Ohjataan || p.OteKiipeily != null)) p = null;
             if (Time.unscaledTime > hehkuTarkistus) { hehkuTarkistus = Time.unscaledTime + 2f; SeikkailuValot.HehkuIsoihinLiekkeihin(Liekit, DioraamaNayttamo.Kerros); }
             if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
             if (p != null && !riitaKaynnissa && (riitaAsti -= dt) <= 0) { riitaAsti = RiitaValiS; StartCoroutine(Riita(p)); }
@@ -544,7 +547,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Reitit, jotka luodaan piiloon ja tuodaan esiin vasta tapahtumasta (pelattavuusmalli 8.2 huone 10: kaksi vartijaa
         /// soihtuineen rannassa, jos pako viipyy kellon jälkeen).</summary>
-        public static readonly HashSet<string> Odottavat = new HashSet<string>(StringComparer.Ordinal) { "ranta" };
+        public static readonly HashSet<string> Odottavat = new HashSet<string>(StringComparer.Ordinal) { "ranta", "seisoo-ranta-vartija" };
 
         /// <summary>Odottava reitti esiin (valppaana).</summary>
         public static void Aktivoi(string reitti)

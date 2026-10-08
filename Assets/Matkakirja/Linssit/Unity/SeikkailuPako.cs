@@ -107,7 +107,7 @@ namespace Matkakirja.Natiivi
                         // Kaukokuva K4: sukellus salmeen kallion juurelta (hahmo pieni kuvassa).
                         p.Kuva(k4, k4Katse);
                         p.transform.position = Vector3.Lerp(alku, uintiAlku - Vector3.up * 1.4f, Mathf.SmoothStep(0f, 1f, t / K4S));
-                        if (t >= K4S) { vaihe = Vaihe.Uinti; t = 0f; SeikkailuAanet.Soita("vesisanko", p.transform.position, 0.9f, 0.6f); }
+                        if (t >= K4S) { vaihe = Vaihe.Uinti; t = 0f; SeikkailuAanet.Soita("vesisanko", p.transform.position, 0.9f, 0.6f); SeikkailuVartijat.Aktivoi("seisoo-ranta-vartija"); }
                         return true;
                     case Vaihe.Uinti:
                         {
