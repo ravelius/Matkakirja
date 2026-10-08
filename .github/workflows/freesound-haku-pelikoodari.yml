@@ -18,15 +18,13 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "sukellus|dive into water splash|0.5|4"
-          "sukellus|jump into water|0.5|4"
-          "sukellus|splash body water|0.5|4"
-          "koysi-kiinnitys|rope creak|0.5|8"
-          "koysi-kiinnitys|rope tension creak|0.5|8"
-          "koysi-kiinnitys|rope tighten|0.5|8"
-          "koysi-lasku|rope creaking loop|3|30"
-          "koysi-lasku|rope slide friction|1|30"
-          "koysi-lasku|ship rope creak|3|30"
+          "koysi-kiinnitys|creak|0.5|6"
+          "koysi-kiinnitys|rope|0.5|6"
+          "koysi-kiinnitys|creaking wood rope|0.5|20"
+          "koysi-lasku|creaking|3|30"
+          "koysi-lasku|rope|3|30"
+          "sukellus|splash|0.5|3"
+          "sukellus|water splash big|0.5|3"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
