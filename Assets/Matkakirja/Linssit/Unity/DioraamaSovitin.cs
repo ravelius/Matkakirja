@@ -1681,6 +1681,9 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { o.Kirjaa($"poikki: hahmo3d {glbPolku} virhe: {e.Message}"); yield break; }
             // Hahmon kuvat ASTC 6×6:na (juna 169: <glb>-<kuva>-6x6.astcm, vain jos paketin manifestissa), muuten glb:n kuva.
             Texture2D[] astcKuvat = null;
+            // Normaalikartat (LR v45t) puretaan lineaarisina; muut kuvat sRGB:nä.
+            var normaaliKuvat = new HashSet<int>();
+            foreach (var sm in malli.Solmut) foreach (var os in sm.Osat) if (os.NormaaliKuva >= 0) normaaliKuvat.Add(os.NormaaliKuva);
             if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) && DioraamaAstc.AstcTuettu)
                 for (int ki = 0; ki < malli.Kuvat.Count; ki++)
                 {
@@ -1689,7 +1692,7 @@ namespace Matkakirja.Natiivi
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
                     string syy = "ei latautunut";
-                    var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat) : null;
+                    var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat, 0, normaaliKuvat.Contains(ki)) : null;
                     if (k == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} kuva {ki} ASTC ei käytössä ({syy}), glb:n kuva"); continue; }
                     astcKuvat ??= new Texture2D[malli.Kuvat.Count];
                     astcKuvat[ki] = k;

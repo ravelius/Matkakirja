@@ -37,7 +37,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KavelyosienValoatlakset()
         {
-            // LR v45s: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
+            // LR v45u: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0;
             foreach (var o in d.Osat.Values)
@@ -66,7 +66,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void Rekvisiitta()
         {
-            // LR v45s: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
+            // LR v45u: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0; var ohitetut = new System.Collections.Generic.List<string>();
             foreach (var m in d.Lajia("rekvisiitta"))
