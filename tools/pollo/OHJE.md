@@ -353,6 +353,7 @@ uudelleen) tai kun ajetaan `npx wrangler deploy` komentoriviltä.
 | `POLLO_PAIVARAJA` | `30` | Kysymystä per vierailija per vuorokausi. Estää yksittäistä käyttäjää kuluttamasta budjettia. |
 | `POLLO_KUUKAUSIRAJA` | `1500` | **Kova kuukausikatto** koko palvelulle. Kun se täyttyy, pöllö lopettaa vastaamisen kuun loppuun asti. |
 | `POLLO_MALLI` | `claude-haiku-4-5-20251001` | Käytettävä malli. Halvin ja nopein riittää — pöllö vastaa lyhyesti. |
+| `OPAS_TESTI_MALLI` | `claude-haiku-5-5` | Testi- ja kehitysliikenteen malli (proto3d-/kehityskäännökset, node/curl, testiotsakkeet; tools/pollo/kulut.js). `pois` = tuotantomalli kaikille. Jaetut välimuistit (kohteet, Liiku, valmiit kysymykset, suosikit) generoidaan aina tuotantomallilla. Jokaisesta mallikutsusta lokirivi `kulu: <reitti> <testi\|peli> <malli> in= cw= cr= out=`. |
 
 Ylityksestä pelaaja saa siistin viestin ("Pöllö on vastannut sinulle jo
 monta kertaa tänään"), ei virhettä.
