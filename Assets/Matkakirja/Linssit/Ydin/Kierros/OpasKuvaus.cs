@@ -223,6 +223,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             double p = Eteneminen(t, matka);
             var (sv, et) = ZoomPolku(Math.Max(1, a.EtaisyysM), Math.Max(1, b.EtaisyysM), matka, p);
+            et = SumennusNosto(a, b, sv, et);
             double V(double x, double y) => x + (y - x) * sv;
             double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * sv);
             return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, V(a.Kallistus, b.Kallistus), suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
@@ -242,6 +243,44 @@ namespace Matkakirja.Linssit.Kierros
             return (Math.Max(0, Math.Min(1, u / u1)), w);
         }
         static double Asinh(double x) => Math.Sign(x) * Math.Log(Math.Abs(x) + Math.Sqrt(x * x + 1));
+
+        /// <summary>
+        /// GOOGLEN SUMENTAMAT KOHTEET (Päätoimittaja 8.10. 10.3x, video 165: "huurrelasin näköiset läiskät" olivat Googlen 3D-aineiston
+        /// omia sumennuksia, prefektuuri ja Élysée): kun lentolinja kulkee alle SumennusRajaM:n päästä, katse-etäisyys nousee pehmeällä
+        /// kummulla ohituskohdan ympärillä kohti SumennusEtM:ää, jolloin sumennus näkyy pienenä kaukana. Reittiä ja järjestystä ei
+        /// muuteta eikä mitään peitetä omalla kerroksella (Googlen ehdot). Kumpu häviää lennon päissä (kehykset ennallaan). Lisää
+        /// kohteita sitä mukaa kuin niitä löytyy videoista (sama tunnistus: läiskä liikkuu maiseman mukana myös laattojen ollessa 100 %).
+        /// </summary>
+        public static readonly (string nimi, double lat, double lon)[] GoogleSumennukset =
+        {
+            ("Pariisin poliisiprefektuuri", 48.8541, 2.3470),
+            ("Élysée-palatsi", 48.8704, 2.3167),
+        };
+        public const double SumennusRajaM = 400, SumennusTaysiM = 300, SumennusEtM = 1100, SumennusIkkuna = 0.35, SumennusReuna = 0.08;
+        /// <summary>A/B ja testit: false = ei nostoa.</summary>
+        public static bool SumennusNostoPaalla = true;
+
+        /// <summary>Katse-etäisyys nostettuna sumennuksen kohdalla (vaakaosuus sv lennolla a → b).</summary>
+        public static double SumennusNosto(Kuvakulma a, Kuvakulma b, double sv, double et)
+        {
+            if (!SumennusNostoPaalla) return et;
+            const double R = 6371000, A = Math.PI / 180;
+            double cl = Math.Cos(a.Lat * A);
+            double bx = (b.Lon - a.Lon) * R * cl * A, by = (b.Lat - a.Lat) * R * A, l2 = bx * bx + by * by;
+            double nosto = 0;
+            foreach (var (_, la, lo) in GoogleSumennukset)
+            {
+                double sx = (lo - a.Lon) * R * cl * A, sy = (la - a.Lat) * R * A;
+                double k = l2 < 1 ? 0 : Math.Max(0, Math.Min(1, (sx * bx + sy * by) / l2));
+                double dx = sx - k * bx, dy = sy - k * by, d = Math.Sqrt(dx * dx + dy * dy);
+                if (d >= SumennusRajaM) continue;
+                double voima = 1 - KierrosLento.Smootherstep(Math.Max(0, Math.Min(1, (d - SumennusTaysiM) / (SumennusRajaM - SumennusTaysiM))));   // täysi ≤ 300 m, hiipuu 400 m:iin
+                double ikkuna = 1 - KierrosLento.Smootherstep(Math.Min(1, Math.Abs(sv - k) / SumennusIkkuna));
+                double reuna = KierrosLento.Smootherstep(Math.Min(1, Math.Min(sv, 1 - sv) / SumennusReuna));
+                nosto = Math.Max(nosto, voima * ikkuna * reuna);
+            }
+            return nosto <= 0 ? et : et + (Math.Max(et, SumennusEtM) - et) * nosto;
+        }
 
         /// <summary>
         /// Nousukaari 0–1 etenemisestä (Päätoimittaja 8.10. 08.3x: "laskeutuminen myös S-käyrällä ja ennen jarrutusta"): nousu

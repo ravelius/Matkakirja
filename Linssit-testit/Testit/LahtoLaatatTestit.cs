@@ -372,6 +372,51 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        // Päätoimittaja 8.10. 10.3x (video 165): Googlen sumentamien kohteiden (prefektuuri, Élysée) ohi lennetään korkeammalta,
+        // jolloin sumennus näkyy pienenä kaukana; reitti ja päätepisteet ennallaan.
+        [Testi] static void SumennetunKohteenOhiLennetaanKorkeammalta()
+        {
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                // Silmän etäisyys sumennukseen hetkellä, jolloin katsepiste ohittaa sen lähimmältä (läiskä kuvan keskellä).
+                double Lahin(Kuvakulma a, Kuvakulma b, double slat, double slon, out double alkuEro, out double loppuEro)
+                {
+                    double T = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon)), katseLahin = double.MaxValue, silma = 0;
+                    alkuEro = Math.Abs(OpasKuvaus.Lennossa(a, b, 0).EtaisyysM - a.EtaisyysM); loppuEro = Math.Abs(OpasKuvaus.Lennossa(a, b, 1).EtaisyysM - b.EtaisyysM);
+                    for (double t = 0; t <= T + 1e-9; t += 1 / 30.0)
+                    {
+                        var k = OpasKuvaus.Lennossa(a, b, t / T);
+                        double kd = KierrosLento.EtaisyysM(k.Lat, k.Lon, slat, slon);
+                        if (kd < katseLahin) { katseLahin = kd; var e = OpasKuvaus.KameraPaikka(k, slat, slon); silma = Math.Sqrt(e.e * e.e + e.n * e.n + (e.u - 35) * (e.u - 35)); }
+                    }
+                    return silma;
+                }
+                var tapaukset = new[]
+                {
+                    // Prefektuuri on 230 m Notre-Damesta: lähtökehys pysyy, joten parannus vain nousun alussa (≥ 10 %).
+                    ("Notre-Dame → Concorde / prefektuuri", new Kuvakulma(48.8530, 2.3498, 420, 58, 250, 60), new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), 48.8541, 2.3470, 1.1, 0.0),
+                    ("Concorde → Champs-Élysées / Élysée", new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), new Kuvakulma(48.8697, 2.3079, 380, 58, 290, 40), 48.8704, 2.3167, 1.4, 600.0),
+                };
+                foreach (var (nimi, a, b, slat, slon, kerroin, vahintaan) in tapaukset)
+                {
+                    OpasKuvaus.SumennusNostoPaalla = false;
+                    double ennen = Lahin(a, b, slat, slon, out _, out _);
+                    OpasKuvaus.SumennusNostoPaalla = true;
+                    double jalkeen = Lahin(a, b, slat, slon, out double ae, out double le);
+                    Console.WriteLine($"      {nimi}: lähin etäisyys lennon aikana {ennen:F0} → {jalkeen:F0} m");
+                    Oleta.Tosi(jalkeen >= ennen * kerroin && jalkeen >= vahintaan, $"{nimi}: lähin etäisyys sumennukseen {ennen:F0} → {jalkeen:F0} m");
+                    Oleta.Tosi(ae < 1e-6 && le < 1e-6, $"{nimi}: päätepisteet ennallaan");
+                }
+                var kaukana = OpasKuvaus.Lennossa(new Kuvakulma(48.8606, 2.3376, 400, 58, 0, 40), new Kuvakulma(48.8600, 2.3265, 400, 58, 0, 40), 0.5);
+                OpasKuvaus.SumennusNostoPaalla = false;
+                var kaukanaIlman = OpasKuvaus.Lennossa(new Kuvakulma(48.8606, 2.3376, 400, 58, 0, 40), new Kuvakulma(48.8600, 2.3265, 400, 58, 0, 40), 0.5);
+                OpasKuvaus.SumennusNostoPaalla = true;
+                Oleta.Tosi(Math.Abs(kaukana.EtaisyysM - kaukanaIlman.EtaisyysM) < 1e-9, "kaukana sumennuksista (Louvre → Orsay) ei nostoa");
+            }
+            finally { OpasSilmukka.PalloLento = false; OpasKuvaus.SumennusNostoPaalla = true; }
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);
