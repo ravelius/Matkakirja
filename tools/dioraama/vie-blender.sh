@@ -96,6 +96,8 @@ for f in "$LAHDE"/kavely/*.(glb|json|astcm)(N); do lisaa "kavely/${f:t}" "kavely
 for f in "$LAHDE"/kavely/valot/*.(jpg|astcm)(N); do lisaa "kavely/valot/${f:t}" "kavely/valot/${f:t}"; done
 # Skinnatut hahmot (omistaja 2.10. 18.0x, Quaternius CC0; tools/dioraama/blender/hahmo_skin.py): hahmot/<henkilo>.glb, jos lähteessä.
 for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
+# Hahmojen tekstuurit ASTC 6×6 -mipketjuina (8.10.2026, Siirtoseppä: RGBA32 66 Mt): hahmot/<glb>-<kuvaindeksi>-6x6.astcm.
+for f in "$LAHDE"/hahmot/*.astcm(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do
