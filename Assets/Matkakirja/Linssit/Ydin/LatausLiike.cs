@@ -92,6 +92,24 @@ namespace Matkakirja.Linssit
         }
 
         /// <summary>
+        /// Peittävä sovitus (aspect-fill, omistaja 8.10.: kierrossa ei mustia palkkeja): kuva (kuvasuhde l/k) peittää ruudun w × h
+        /// kokonaan; vaakasuunnassa keskitetty, pystysuunnassa keskitetty tai, jos ylaOsuus ≥ 0, kuvan yläreuna −ylaOsuus × korkeus
+        /// (leveä vaakaruutu: pallon kupu näkyviin), kuitenkin niin, ettei alareuna nouse ruudun alareunan yläpuolelle.
+        /// </summary>
+        public static (double X, double Y, double L, double K) Peita(double w, double h, double kuvasuhde, double ylaOsuus = -1)
+        {
+            w = Math.Max(1, w); h = Math.Max(1, h);
+            if (!(kuvasuhde > 0) || double.IsInfinity(kuvasuhde)) kuvasuhde = w / h;
+            double l = Math.Max(w, h * kuvasuhde), k = l / kuvasuhde;
+            double y = ylaOsuus >= 0 ? Math.Max(-ylaOsuus * k, h - k) : (h - k) / 2;
+            return ((w - l) / 2, y, l, k);
+        }
+
+        /// <summary>Latauskuvan rajaus ruudulle: 0 = puhelin pysty, 1 = iPad pysty, 2 = vaaka (myös puhelin vaaka).</summary>
+        public static int Rajausindeksi(double w, double h) =>
+            w > h ? 2 : Math.Min(w, h) / Math.Max(Math.Max(w, h), 1) >= 0.6 ? 1 : 0;
+
+        /// <summary>
         /// Köyden neliöllisen Bézier-käyrän ohjauspiste: päiden puoliväli siirrettynä alas riippuma × köyden pituus (y alas).
         /// Riippuma 0 = suora viiva.
         /// </summary>

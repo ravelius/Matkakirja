@@ -109,6 +109,30 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(maksSiirto > 0.5 && maksSiirto < 5, $"yläpää liikkuu korin mukana vähäeleisesti: {maksSiirto:F2} pt");
         }
 
+        static void OletaPeittaa((double X, double Y, double L, double K) r, double w, double h, string mika)
+        {
+            Oleta.Tosi(r.X <= 1e-9 && r.Y <= 1e-9 && r.X + r.L >= w - 1e-9 && r.Y + r.K >= h - 1e-9,
+                $"{mika}: {r.X:F1},{r.Y:F1} {r.L:F1}×{r.K:F1} ei peitä {w}×{h} (mustia palkkeja)");
+        }
+
+        [Testi] static void KiertoVaihtaaRajauksenJaPeittaa()
+        {
+            // iPad 11 (834 × 1194 pt) ja iPhone (393 × 852 pt) pysty ↔ vaaka: oikea rajaus ja peittävä sovitus ilman palkkeja.
+            foreach (var (w, h, pysty) in new[] { (834.0, 1194.0, 1), (393.0, 852.0, 0) })
+            {
+                Oleta.Sama(pysty, LatausLiike.Rajausindeksi(w, h), $"pysty {w}×{h}");
+                Oleta.Sama(2, LatausLiike.Rajausindeksi(h, w), $"vaaka {h}×{w}");
+                // Kuvat: iPhone 9:19,5, iPad pysty 3:4, vaaka 4:3 (ylaOsuus 0,12 kuten pallo).
+                double[] suhde = { 9 / 19.5, 3 / 4.0, 4 / 3.0 };
+                OletaPeittaa(LatausLiike.Peita(w, h, suhde[pysty]), w, h, "pysty oma rajaus");
+                OletaPeittaa(LatausLiike.Peita(h, w, suhde[2], 0.12), h, w, "vaaka oma rajaus");
+                // Kierron hetki: vanha kuva uuteen kokoon, kunnes uusi rajaus on muistissa; sekin peittää.
+                OletaPeittaa(LatausLiike.Peita(h, w, suhde[pysty], 0.12), h, w, "vaaka vanhalla kuvalla");
+                OletaPeittaa(LatausLiike.Peita(w, h, suhde[2]), w, h, "pysty vanhalla kuvalla");
+            }
+            OletaPeittaa(LatausLiike.Peita(1366, 1024, double.NaN), 1366, 1024, "tuntematon kuvasuhde");
+        }
+
         [Testi] static void KoydenRiippuma()
         {
             var s = LatausLiike.Ohjauspiste(0, 0, 100, 0, 0);
