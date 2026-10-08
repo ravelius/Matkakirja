@@ -29,6 +29,10 @@
 - YKSITYISKOHTAKUVAT KAIKKI 37 ESITTELYKAUPUNKIA tuotannossa (#4200–#4205; 31 äänetöntä Sisältökirjurilta, v2/v3:t
   oikeustarkistuksista: berliini, helsinki, tampere, vilna, firenze v2, sisilia v3). Tarkistin: _tyo/yksityiskohdat-31/valmiit.txt +
   scratchpad ankkurit-v3.mjs (ankkurit v3-teksteistä + media_url 200). Codex-havainnekuvien v2-luettelot tulevat kaupunki kerrallaan.
+- OLAVINLINNA aanet-fp-v2 (M-osa, huoneet 6–10): 18 CC0/PD-tehostetta, paketti _valmiit/olavinlinna-fp-aanet-v2-vienti-20261008
+  (Julkaisija vie), rakennus _tyo/olavinlinna-fp-aanet-v2/rakenna.py (vaiheet perus/lisat/freesound), agentin EHDOKKAAT.md raaka/-kansiossa.
+  Freesound: secret FREESOUND_API, haku haarassa pelikoodari-freesound-haku (push-työnkulku, ei mergetä). Natiivikytkijä Päätoimittajalta.
+  Työjonot: /Users/Shared/Claude/Matkakirja-fable/scratchpad/tyojonot.md (Päätoimittaja 8.10. SITOVA; valmis → rivi PT:lle → seuraava).
 - UKKONEN: aanet/tehosteet/ukkonen/ukkonen-01…04.mp3 (Commons PD, _tyo/ukkonen/tee.sh), Linssiseppä kuittasi (juna 166).
 - Tuotannossa 8.10.: K1–K4 (#4185–#4187), pallo #4189–#4191; kululoki näkyy (kulu: … testi claude-haiku-5-5).
 - TURBO MAKSAA ~0,066 krediittiä/merkki (historia 8.10.), 31 kaupungin erä ≈ 23 000. Creator-vaihto: 30 äänipaikkaa (tilillä
