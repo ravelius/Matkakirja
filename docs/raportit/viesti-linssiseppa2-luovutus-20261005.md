@@ -35,7 +35,11 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. aamu (uusin)
+## TILA 8.10. aamu, myöhemmin (uusin)
+- huonesim-m2 MERGETTY (historia-m 1de1d6ad, 944/944): SeikkailuSali käyttää VoudinKiistaa, KiistaValiS 20 s (pisin odotus 32 s).
+  Worktree poistettu. ODOTTAA LR:n muurikäytävän hashia (tulee suoraan LS2:lle) → uusi worktree historia-m:n kärjestä, kultaiset päivitys.
+
+## TILA 8.10. aamu
 - huonesim-m 6c3ad3865 MERGETTY; PT:n päätökset historia-m 80095efaa (naamio ei muurilla, RantaEsiinS 25; LR:ltä piilot muurikäytävään).
 - linssiseppa2/huonesim-m2 4fff570f6 (80095efaa päällä), worktree wt/proto-linssiseppa2-huonesim-m2: Huonesimulaatio naamiosääntö,
   M-testi jaettu (muurikäytävä odottaa LR:n piilo:muurikaytava-* → päivitä kultaiset hashista), VoudinKiista Ydin + 3 testiä
