@@ -1158,17 +1158,21 @@ namespace Matkakirja.Linssit.Kierros
         /// aukeaa vasta, kun myös ne laatat ovat valmiit (latausaste kattaa kaikki kamerat). Kierroksen alku tyhjentää.</summary>
         public (string nimi, double lat, double lon)? EsiKohde;
 
+        /// <summary>Esikameran asento kehykselle: sama kuin saapumisasento (katon ja kallistuksen rajat, OpasOhjaus.Rajoita), jotta esiladatut
+        /// laatat ovat juuri saapumisnäkymän (PalloKaupungitTestit.LaatatValmiina: 110 m:n kehyksissä ero oli 15 m).</summary>
+        static Kuvakulma EsiAsento(Pysahdys p) => OpasOhjaus.Rajoita(OpasKuvaus.Pysahdyksella(p, 0), p.MaaM);
+
         public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
         {
             // Linssireitti (omistaja 8.10. ~09.0x): esilataus jatkuu siirron jälkeen kysymysvaiheessa, kunnes kierros alkaa.
             if (EsiKohde is (string en, double ela, double elo) && ((Siirtymassa && YleiskuvaValmis) || (PyynnotSeis && Vaihe != OpasVaihe.Lentaa && !Siirtymassa)
                 || (Vaihe == OpasVaihe.Odottaa && Nykyinen == null && Seuraava == null)))
-                return OpasKuvaus.Pysahdyksella(KehysKohteelle(new OpasKohde { Nimi = en, Lat = ela, Lon = elo, KokoM = 120 }, maaKorkeus), 0);
+                return EsiAsento(KehysKohteelle(new OpasKohde { Nimi = en, Lat = ela, Lon = elo, KokoM = 120 }, maaKorkeus));
             // Saavuttu (odotetaan laattoja): pääkamera on jo kehyksessä → esikamera pois, latausaste mittaa vain pääkameraa.
-            if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null : OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
-            if (Seuraava != null && !Seuraava.Kysymys) return OpasKuvaus.Pysahdyksella(KehysKohteelle(Seuraava, maaKorkeus), 0);
+            if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null : EsiAsento(kohdeKehys);
+            if (Seuraava != null && !Seuraava.Kysymys) return EsiAsento(KehysKohteelle(Seuraava, maaKorkeus));
             if (OdotettuPaikka is (double, double) op)
-                return OpasKuvaus.Pysahdyksella(KehysKohteelle(new OpasKohde { Lat = op.lat, Lon = op.lon, KokoM = 120 }, maaKorkeus), 0);
+                return EsiAsento(KehysKohteelle(new OpasKohde { Lat = op.lat, Lon = op.lon, KokoM = 120 }, maaKorkeus));
             return null;
         }
 

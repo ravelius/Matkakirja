@@ -41,7 +41,7 @@ namespace Matkakirja.Linssit.Testit
 
         static OpasKohde Kopio(OpasKohde k) => new OpasKohde { Id = k.Id, Nimi = k.Nimi, Lat = k.Lat, Lon = k.Lon, KokoM = k.KokoM, KorkeusM = k.KorkeusM, Luokka = k.Luokka, KestoS = k.KestoS, Kierros = true };
 
-        static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null)
+        static List<Ruutu> Aja(Kaupunki c, bool hidas, List<(double t, string laji, string kohde, double kesto)> tap = null, List<(double t, Kuvakulma? esi, Kuvakulma asento, string kohde)> esit = null)
         {
             bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
             try
@@ -72,6 +72,7 @@ namespace Matkakirja.Linssit.Testit
                     s.Paivita(Dt, _ => 35, laatat);
                     var e = OpasKuvaus.KameraPaikka(s.Asento, c.Lat, c.Lon);
                     int kohde = s.Nykyinen == null ? -1 : Array.FindIndex(c.Kohteet, k => k.Id == s.Nykyinen.Id);
+                    esit?.Add((t, s.Esilataus(_ => 35), s.Asento, s.Vaihe == OpasVaihe.Puhuu ? s.Nykyinen?.Id : null));
                     r.Add(new Ruutu { T = t, E = e.e, N = e.n, U = e.u, EtM = s.Asento.EtaisyysM, Suunta = s.Asento.Suuntima, Vaihe = s.Vaihe, Kohde = kohde, Leijuu = s.Leijuu });
                     if (kohde == c.Kohteet.Length - 1 && hiljaa.Count == 0 && s.Vaihe != OpasVaihe.Puhuu && !s.KierrosKaynnissa) break;
                 }
@@ -230,6 +231,58 @@ namespace Matkakirja.Linssit.Testit
             var viat = tulokset.Where(t => t.Viat.Count > 0).Select(t => $"{t.Kaupunki}: {string.Join("; ", t.Viat.Take(3))}{(t.Viat.Count > 3 ? $" (+{t.Viat.Count - 3})" : "")}").ToList();
             foreach (var v in viat) Console.WriteLine("      VIKA " + v);
             Oleta.Tosi(viat.Count == 0, $"{viat.Count} kaupungissa tahdistusvikoja");
+        }
+
+        /// <summary>
+        /// LAATAT VALMIINA SAAPUESSA (Päätoimittaja 8.10. ilta, juna 168/169): esikamera (OpasSilmukka.Esilataus) pitää ennustaa
+        /// saapumisasento ajoissa. Laattamalli: näkymän laatat ovat valmiit, kun samankaltainen näkymä (silmä alle 10 % katse-
+        /// etäisyydestä ja suunta alle 15°) on ollut pyydettynä LatausS ennen saapumista. Mitataan ennakko per pysähdys.
+        /// </summary>
+        public const double LatausS = 3;
+        static bool Sama(Kuvakulma a, Kuvakulma b, double lat0, double lon0)
+        {
+            var ea = OpasKuvaus.KameraPaikka(a, lat0, lon0); var eb = OpasKuvaus.KameraPaikka(b, lat0, lon0);
+            double d = Math.Sqrt(Math.Pow(ea.e - eb.e, 2) + Math.Pow(ea.n - eb.n, 2) + Math.Pow(ea.u - eb.u, 2));
+            return d < 0.1 * Math.Max(50, b.EtaisyysM) && Math.Abs(KierrosLento.Kiedo(a.Suuntima - b.Suuntima)) < 15;
+        }
+        public sealed class Laatat { public string Kaupunki; public double PieninEnnakko = double.MaxValue; public int Pysahdyksia; public List<string> Viat = new List<string>(); }
+        public static Laatat MittaaLaatat(Kaupunki c)
+        {
+            var tu = new Laatat { Kaupunki = c.Nimi };
+            foreach (bool hidas in new[] { false, true })
+            {
+                var esit = new List<(double t, Kuvakulma? esi, Kuvakulma asento, string kohde)>(); string vk = hidas ? "Hidas" : "Nopea";
+                Aja(c, hidas, null, esit);
+                for (int i = 1; i < esit.Count; i++)
+                {
+                    if (esit[i].kohde == null || esit[i - 1].kohde == esit[i].kohde) continue;   // saapuminen: Puhuu alkaa uudelle kohteelle
+                    int ki = Array.FindIndex(c.Kohteet, x => x.Id == esit[i].kohde);
+                    if (ki <= 0) continue;   // ensimmäinen (avaus) ja samassa paikassa jatkuva ohitetaan
+                    double hyppy = KierrosLento.EtaisyysM(c.Kohteet[ki - 1].Lat, c.Kohteet[ki - 1].Lon, c.Kohteet[ki].Lat, c.Kohteet[ki].Lon);
+                    if (hyppy >= OpasSilmukka.SiirtoRajaM || hyppy < 50) continue;   // siirto tai sama paikka (ei lentoa)
+                    var loppu = esit[i].asento; int j = i - 1;
+                    while (j >= 0 && esit[j].esi == null && esit[i].t - esit[j].t < 1) j--;   // perillä: esikamera pois, pääkamera kehyksessä
+                    int alku = j;
+                    while (j >= 0 && esit[j].esi is Kuvakulma e && Sama(e, loppu, c.Lat, c.Lon)) j--;
+                    if (j == alku) { var x = esit[alku].esi; if (x is Kuvakulma xe) { var ea = OpasKuvaus.KameraPaikka(xe, c.Lat, c.Lon); var eb = OpasKuvaus.KameraPaikka(loppu, c.Lat, c.Lon);
+                        tu.Viat.Add($"{vk} {c.Kohteet[ki].Nimi}: ero saapuessa {Math.Sqrt(Math.Pow(ea.e - eb.e, 2) + Math.Pow(ea.n - eb.n, 2) + Math.Pow(ea.u - eb.u, 2)):F0} m / et {loppu.EtaisyysM:F0}, suunta {xe.Suuntima:F0} vs {loppu.Suuntima:F0}"); } }
+                    double ennakko = esit[i].t - esit[j + 1 < esit.Count ? j + 1 : i].t;
+                    tu.Pysahdyksia++;
+                    if (ennakko < tu.PieninEnnakko) tu.PieninEnnakko = ennakko;
+                    if (ennakko < LatausS) tu.Viat.Add($"{vk} {c.Kohteet[ki].Nimi}: esikamera saapumisasennossa vain {ennakko:F1} s ennen saapumista");
+                }
+            }
+            return tu;
+        }
+
+        [Testi] static void LaatatValmiinaSaapuessaKaikissaKaupungeissa()
+        {
+            var tulokset = Lue().Select(MittaaLaatat).ToList();
+            Console.WriteLine("      | Kaupunki | pysähdyksiä | pienin ennakko s | viat |");
+            foreach (var t in tulokset) Console.WriteLine($"      | {t.Kaupunki} | {t.Pysahdyksia} | {(t.PieninEnnakko == double.MaxValue ? 0 : t.PieninEnnakko):F1} | {t.Viat.Count} |");
+            var viat = tulokset.Where(t => t.Viat.Count > 0).Select(t => $"{t.Kaupunki}: {string.Join("; ", t.Viat.Take(3))}{(t.Viat.Count > 3 ? $" (+{t.Viat.Count - 3})" : "")}").ToList();
+            foreach (var v in viat) Console.WriteLine("      VIKA " + v);
+            Oleta.Tosi(viat.Count == 0, $"{viat.Count} kaupungissa laatat eivät ehdi");
         }
 
         [Testi] static void PallokierrosKaikissaKaupungeissa()
