@@ -211,7 +211,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(20, 16, 10, 0.96);
+    background-color: var(--tk-himmennys-kuva);
 }
 
 .mk-linssipeite--haipyy {
@@ -297,7 +297,7 @@
     margin-right: 6px;
     flex-shrink: 0;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.35);
+    border-color: var(--tk-himmennys-kevyt);
     border-radius: 3px;
 }
 
@@ -641,7 +641,7 @@
     border-width: 1px;
     border-color: var(--map-ink-45);
     border-radius: var(--tk-kulma-kortti);
-    background-color: rgba(247, 237, 216, 0.94);
+    background-color: var(--tk-tumma-muste);
     color: var(--map-ink);
 }
 
@@ -1189,7 +1189,7 @@
     font-size: var(--tk-koko-leipa);
     white-space: normal;
     -unity-text-align: middle-center;
-    color: #d7bd88;
+    color: var(--paper-dark);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
@@ -1206,7 +1206,7 @@
     font-size: 12.5px;
     white-space: normal;
     -unity-text-align: middle-center;
-    color: #d7bd88;
+    color: var(--paper-dark);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
 }
 
@@ -1233,7 +1233,7 @@
     margin-top: 2px;
     font-size: 13px;
     white-space: normal;
-    color: #c9b58f;
+    color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-aikajana-paneeli__teksti {
@@ -1270,7 +1270,7 @@
     border-width: 1px;
     border-color: var(--tk-tumma-reunus);
     border-radius: 4px;
-    background-color: rgba(16, 12, 8, 0.72);
+    background-color: var(--tk-himmennys-tumma);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.22s; /* UI-siirtymä ≤ 250 ms (pohjavahti 8.10., oli 0.38s) */
@@ -1299,7 +1299,7 @@
  * tumma kehä tekstin ympärillä ääriviivana (löydös 74 d2: teksti luki heikosti vaalean pallon päällä). */
 .mk-aikajana-kertomus.mk-keskella .mk-aikajana-kertomus__teksti {
     font-size: 24px;
-    color: #f7eeda;
+    color: var(--tk-tumma-muste);
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
     -unity-text-outline-width: 0.8px;
     -unity-text-outline-color: rgba(0, 0, 0, 0.6);
@@ -1431,7 +1431,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: var(--tk-himmennys-kevyt);
 }
 
 /* Keksinnöt: täysmusta peite (web .aikajana-avaus.musta .aikajana-avaus-peite #000). */
@@ -1500,7 +1500,7 @@
 /* Web .aikajana-avaus-teksti: 0,98rem, rivi 1,58, vasen liehu, #2b2116. */
 .mk-aikajana-avaus__kappale {
     font-size: 15.7px;
-    color: #2b2116;
+    color: var(--panel);
     -unity-text-align: upper-left;
     white-space: normal;
     margin: 0;
@@ -2661,12 +2661,12 @@
 }
 
 .mk-karuselli__kortti--paalu {
-    background-color: #2a2119;
+    background-color: var(--panel);
 }
 
 .mk-karuselli__kuva {
     width: 100%;
-    background-color: #2a2119;
+    background-color: var(--panel);
     -unity-background-scale-mode: scale-and-crop;
 }
 
@@ -2715,7 +2715,7 @@
 }
 
 .mk-aikaselain--vedossa {
-    background-color: rgba(45, 33, 22, 0.88);
+    background-color: var(--overlay-card);
 }
 
 .mk-aikaselain__viivat {
@@ -3128,7 +3128,7 @@
     border-width: 1px;
     border-color: rgba(120, 88, 34, 0.55);
     border-radius: var(--tk-kulma-nappi);
-    color: #2a1f12;
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 .mk-vanalappu__otsikko {
@@ -3141,7 +3141,7 @@
 .mk-vanalappu__teksti {
     font-size: 14.5px;
     white-space: normal;
-    color: #2a1f12;
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 /* Tiedeliitteen sisällys listana (web .tiedeliite-sisallys.lista) ja alkusanat. */
@@ -3157,7 +3157,7 @@
     margin-bottom: 12px;
     font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: #5a4a33;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 /* --- radion napit pallolla (RadioNapit, web .pallolauta-radionappi) --------- */
@@ -3376,9 +3376,9 @@
     position: absolute;
     font-size: 15px;
     letter-spacing: 6.67px; /* web 1px */
-    color: #f3e9d2;
+    color: var(--tk-tumma-muste);
     -unity-text-outline-width: 0.8px;
-    -unity-text-outline-color: #2a1c10;
+    -unity-text-outline-color: var(--tk-lasi-pinta-peitto);
     text-shadow: 0 1px 2px rgba(20, 12, 4, 0.8);
     white-space: nowrap;
 }
@@ -3398,7 +3398,7 @@
     border-radius: 14px;
     border-color: rgba(239, 230, 210, 0.18);
     background-color: rgba(12, 16, 26, 0.72);
-    color: #efe6d2;
+    color: var(--tk-tumma-muste);
     font-size: 15px;
     letter-spacing: 0;
 }
@@ -3419,7 +3419,7 @@
 .mk-vuosi__ikoni {
     width: 14px;
     height: 14px;
-    color: #efe6d2;
+    color: var(--tk-tumma-muste);
 }
 
 .mk-vuosi .mk-saadin {
@@ -3434,7 +3434,7 @@
     padding: 0;
     font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 3.33px; /* web 0.4px */
-    color: #efe6d2;
+    color: var(--tk-tumma-muste);
     -unity-text-align: middle-right;
 }
 
@@ -3455,7 +3455,7 @@
     border-radius: var(--tk-kulma-keski);
     border-color: rgba(239, 230, 210, 0.25);
     background-color: rgba(239, 230, 210, 0.1);
-    color: #efe6d2;
+    color: var(--tk-tumma-muste);
 }
 
 .mk-vuosi__valinta .unity-base-popup-field__text {
@@ -3463,14 +3463,14 @@
     min-width: 0;
     font-size: 15px;
     letter-spacing: 0;
-    color: #efe6d2;
+    color: var(--tk-tumma-muste);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
 .mk-vuosi__valinta .unity-base-popup-field__arrow {
-    -unity-background-image-tint-color: #efe6d2;
+    -unity-background-image-tint-color: var(--tk-tumma-muste);
 }
 
 .mk-vuosi__peitto:disabled {
@@ -3484,7 +3484,7 @@
     font-size: 11px;
     letter-spacing: 0;
     opacity: 0.6;
-    color: #efe6d2;
+    color: var(--tk-tumma-muste);
     white-space: normal;
     -unity-text-align: middle-center;
 }
@@ -4058,7 +4058,7 @@
     max-height: 70%;
     padding: 10px;
     border-radius: var(--tk-kulma-nappi);
-    color: #2e2011;
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 .mk-linssivalitsin__esivieritys {
@@ -4097,7 +4097,7 @@
 .mk-linssivalitsin__esiikoni {
     width: 46%;
     height: 60%;
-    color: #2e2011;
+    color: var(--tk-lasi-pinta-peitto);
     --mk-ikoni-viiva: 1.3;
 }
 
@@ -4111,7 +4111,7 @@
     margin-top: 4px;
     font-size: 13px;
     white-space: normal;
-    color: #2e2011;
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 /* Linssit (omistaja 29.9.2026, 1.0.50 palaute 6): linssin nimen kohta muuttuu oranssiksi Aktivoi-napiksi (sama kulta kuin

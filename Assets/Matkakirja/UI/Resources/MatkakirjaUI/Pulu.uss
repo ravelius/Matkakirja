@@ -170,7 +170,7 @@
     flex-shrink: 0;
     margin-right: 11px;
     border-radius: 4.8px;
-    background-color: rgba(90, 62, 31, 0.08);
+    background-color: var(--map-ink-07);
     -unity-background-scale-mode: scale-and-crop;
 }
 
@@ -429,7 +429,7 @@
     height: 42px;
     margin: 0 5.6px 5.6px 0;
     border-width: 2px;
-    border-color: #f7f1e2;
+    border-color: var(--tk-paperi-pinta);
     border-radius: 3px;
     background-color: #ded5c2;
     -unity-background-scale-mode: scale-and-crop;
@@ -446,7 +446,7 @@
     background-color: rgba(244, 231, 202, 0.86);
     border-width: 0;
     border-radius: var(--tk-kulma-pieni);
-    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    -unity-background-image-tint-color: var(--lapinakyva);
 }
 
 .mk-matkakirja--pieni.mk-matkakirja--puhelin {
@@ -604,7 +604,7 @@
 
 .mk-kuvakortti__teksti {
     font-size: 11.5px;
-    color: #3a2a1c;
+    color: var(--panel-2);
     white-space: normal;
     -unity-text-align: middle-center;
     padding: 5px 4px 6px 4px;
@@ -768,7 +768,7 @@
     align-self: stretch;
     padding: 5.6px 8px;
     border-radius: var(--tk-kulma-keski);
-    background-color: #ece2c8;
+    background-color: var(--tk-tumma-muste);
     color: var(--tk-paperi-muste);
     font-size: 13.6px;
 }
@@ -1059,7 +1059,7 @@
     border-width: 1px;
     border-color: var(--tk-paperi-reunus);
     border-radius: var(--tk-kulma-kortti);
-    background-color: #efe5cf;
+    background-color: var(--tk-tumma-muste);
     color: var(--tk-paperi-muste);
 }
 
@@ -1152,13 +1152,13 @@
 .mk-chat__mikki--kuuntelee {
     background-color: var(--tk-paperi-korostus);
     border-color: var(--tk-paperi-korostus);
-    color: #f7f1e2;
+    color: var(--tk-paperi-pinta);
 }
 
 .mk-chat__mikkiteksti {
     margin-left: 6px;
     font-size: 12.5px;
-    color: #f7f1e2;
+    color: var(--tk-paperi-pinta);
 }
 
 /* Matkakirjalinkit vastauksen alla (web .pollo-matkakirja: pienempi ja himmeämpi kuin puhe). */
@@ -1243,7 +1243,7 @@
 .mk-chat__valmislahde {
     margin-right: 4px;
     font-size: var(--tk-koko-kapiteeli);
-    color: #5a4a33;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-chat__valmislinkki {

@@ -24,7 +24,7 @@
     padding: 11.2px 13.6px 12px 13.6px;
     background-color: rgba(247, 239, 219, 0.94);
     border-width: 1px;
-    border-color: rgba(74, 52, 33, 0.55);
+    border-color: var(--map-ink-55);
 }
 
 .mk-kartuscha--tabletti.mk-auki {
@@ -39,7 +39,7 @@
     right: 4px;
     bottom: 4px;
     border-width: 1px;
-    border-color: rgba(74, 52, 33, 0.22);
+    border-color: var(--map-ink-22);
 }
 
 .mk-kartuscha.mk-auki .mk-kartuscha__kehys {
@@ -116,7 +116,7 @@
     width: 20px;
     margin-left: 4px;
     border-width: 1px;
-    border-color: rgba(74, 52, 33, 0.45);
+    border-color: var(--map-ink-45);
     -unity-background-scale-mode: stretch-to-fill;
 }
 
@@ -134,7 +134,7 @@
     height: 1px;
     align-self: stretch;
     margin: 3.5px 0 3.2px 0;
-    background-color: rgba(74, 52, 33, 0.55);
+    background-color: var(--map-ink-55);
 }
 
 .mk-kartuscha__alarivi {
@@ -214,7 +214,7 @@
     right: 0;
     top: 1px;
     height: 1px;
-    color: rgba(74, 52, 33, 0.45);
+    color: var(--map-ink-45);
 }
 
 .mk-kartuscha__vertailupalkki {
@@ -275,7 +275,7 @@
 .mk-tervehdys__tarkenne {
     margin-left: 3px;
     font-size: 8.74px;
-    color: rgba(74, 52, 33, 0.6);
+    color: var(--map-ink-60);
 }
 
 /* Aiheet (web .maapaneeli-otsikkorivi: flex-wrap, väli 0,3rem × 0,85rem; aihe 12 px, 0,12 em, pisteviiva). */
@@ -298,7 +298,7 @@
 }
 
 .mk-kartuscha__aihe:active {
-    background-color: rgba(74, 52, 33, 0.08);
+    background-color: var(--map-ink-08);
 }
 
 .mk-kartuscha__aihe .mk-nappi__teksti {
@@ -321,7 +321,7 @@
     margin-bottom: 5.6px;
     padding-bottom: 4.8px;
     border-bottom-width: 1px;
-    border-color: rgba(74, 52, 33, 0.22);
+    border-color: var(--map-ink-22);
 }
 
 .mk-kartuscha__maakunnat {
@@ -342,7 +342,7 @@
     height: 22px;
     margin-right: 8px;
     border-width: 1px;
-    border-color: rgba(74, 52, 33, 0.6);
+    border-color: var(--map-ink-60);
     background-color: rgb(233, 219, 186);
     -unity-background-scale-mode: scale-and-crop;
     rotate: -2deg;
@@ -381,7 +381,7 @@
 
 .mk-kartuscha__pisteluku {
     font-size: 10.56px;
-    color: rgba(74, 52, 33, 0.85);
+    color: var(--map-ink-85);
 }
 
 /* Käsialanimet kartalla (MaakuntanimetKartalla): nimi keskitetty maakunnan pisteeseen, kallistettu kuin kynällä
@@ -407,7 +407,7 @@
     white-space: nowrap;
     -unity-text-align: middle-center;
     font-size: 24px;
-    color: rgba(40, 28, 16, 0.88);
+    color: var(--overlay-card);
     text-shadow: 0 0 4px rgb(244, 232, 205);
 }
 
@@ -911,7 +911,7 @@
    sisään 220 ms, ulos 200 ms. Kerroksen oma opacity pysyy 1:nä, jottei se kerro kortin läpinäkyvyyttä. */
 .mk-himmennys.mk-maakuntaKortti__kerros {
     opacity: 1;
-    background-color: rgba(18, 12, 4, 0);
+    background-color: var(--lapinakyva);
     transition-property: background-color;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
@@ -979,7 +979,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(18, 12, 4, 0);
+    background-color: var(--lapinakyva);
 }
 
 .mk-maakuntaKortti__karttaiso {
@@ -1307,7 +1307,7 @@
     /* rgba(122, 85, 20, 0.45) ja rgba(250, 246, 235, 0.96) kortin päällä sRGB:ssä (lineaarinen alfa vaalentaisi). */
     border-color: rgb(190, 170, 133);
     border-radius: var(--tk-kulma-keski);
-    background-color: rgb(250, 246, 235);
+    background-color: var(--tk-paperi-pinta);
     color: rgb(92, 63, 14);
 }
 
@@ -1353,7 +1353,7 @@
     padding: 0.8px 6.4px;
     border-radius: var(--tk-kulma-pieni);
     background-color: rgba(18, 12, 4, 0.55);
-    color: rgb(246, 240, 224);
+    color: var(--tk-paperi-pinta);
     font-size: 10.88px;
     letter-spacing: 4.04px; /* web 0.44px */
 }
@@ -1495,9 +1495,9 @@
     max-width: 640px;
     padding: 9px;
     border-width: 1px;
-    border-color: rgba(58, 38, 16, 0.35);
+    border-color: var(--map-ink-35);
     border-radius: var(--tk-kulma-hius);
-    background-color: #f8f3e6;
+    background-color: var(--tk-paperi-pinta);
 }
 
 .mk-nosto__suurennoskuva {
@@ -1575,7 +1575,7 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.34);
     border-radius: 3px;
-    background-color: #efe7d3;
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-nosto__liiteotsake {
@@ -1594,7 +1594,7 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.3);
     border-radius: 0;
-    background-color: #f7f2e4;
+    background-color: var(--tk-paperi-pinta);
 }
 
 .mk-nosto__liitekuva {
@@ -1851,7 +1851,7 @@
     height: 11px;
     margin-bottom: 3px;
     border-width: 1px;
-    border-color: rgba(74, 52, 33, 0.45);
+    border-color: var(--map-ink-45);
     border-radius: var(--tk-kulma-pieni);
     background-color: rgba(120, 96, 78, 0.28);
 }
@@ -1985,7 +1985,7 @@
 
 /* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98) (lineaarisena 1,0). */
 .mk-nosto-merkki__nimio--taso1 {
-    color: rgb(46, 30, 14);
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 /* Web .nostosym-nimio-meri: versaali, harvennus 0,28 em (C#), rgba(120, 108, 84, 0,72) (merellä lineaarisena 0,8). */

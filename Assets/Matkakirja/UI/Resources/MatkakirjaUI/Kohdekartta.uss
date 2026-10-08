@@ -121,7 +121,7 @@
     border-width: 1px;
     border-color: var(--map-ink-40);
     border-radius: var(--tk-kulma-hius);
-    background-color: #efe6cf;
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-kohdekartta__lava {
@@ -227,7 +227,7 @@
     border-width: 2px;
     border-color: #2c2318;
     border-radius: 13px;
-    background-color: #f3e2b8;
+    background-color: var(--paper);
 }
 
 .mk-kohdekartta__numero {
@@ -602,7 +602,7 @@
 /* Suurennos kortista (web .kartta-suurennos-kortista): huntu rgba(29,22,16,.35) (+ KuvaSumea), kortti #f5f0e2
    kulma 14, padding 2.6rem 0.6rem 0.6rem, kartta keskellä; × ympyränä; − + oikeassa alakulmassa. */
 .mk-kohdekartta-kokoruutu--kortista {
-    background-color: rgba(29, 22, 16, 0.35);
+    background-color: var(--tk-himmennys-kevyt);
 }
 
 .mk-kohdekartta-kokoruutu--kortista > .mk-kohdekartta-kokoruutu__kortti {

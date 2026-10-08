@@ -8,7 +8,7 @@
     bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgba(14, 9, 4, 0.34);
+    background-color: var(--tk-himmennys-kevyt);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.22s;
@@ -310,9 +310,9 @@
     white-space: nowrap;
     -unity-text-align: middle-center;
     border-width: 1px;
-    border-color: #c4b290;
+    border-color: var(--tk-tumma-muste-pehmea);
     border-radius: 4px;
-    background-color: #eae0ca;
+    background-color: var(--tk-tumma-muste);
     color: var(--map-ink);
 }
 
@@ -469,7 +469,7 @@
 .mk-maa__luvut {
     margin-top: 7.2px;
     padding: 0 8.8px 6.4px 8.8px;
-    background-color: rgba(120, 96, 60, 0.05);
+    background-color: var(--map-ink-04);
     color: #4a3c28;
     font-size: 15.2px;
 }
@@ -582,7 +582,7 @@
 .mk-maa__tervehdykset {
     margin-bottom: 13.6px;
     padding: 6.4px 8.8px 0 8.8px;
-    background-color: rgba(120, 96, 60, 0.05);
+    background-color: var(--map-ink-04);
     border-top-width: 1px;
     border-top-color: var(--map-ink-22);
     color: #4a3c28;
@@ -622,7 +622,7 @@
 /* Maan pääkirjoitus (web .dialog.lehti #arrival-maa-intro: 1,02rem, riviväli 1,62, #2d2010). */
 .mk-maa__esittely .mk-lehti__esittely {
     font-size: 16.3px;
-    color: #2d2010;
+    color: var(--tk-lasi-pinta-peitto);
 }
 
 /* --- minitehtävä (webin .fokusvirta-visa lehdessä) --------------------------------- */
@@ -635,7 +635,7 @@
     padding: 13.6px 16.8px 14.4px 16.8px;
     border-width: 3px;
     border-color: rgb(134, 122, 106);
-    background-color: rgb(238, 229, 207);
+    background-color: var(--tk-tumma-muste);
 }
 
 /* Web .minitehtava-otsikko: AT 700 10,56 px, harvennus 3,168, rgba(60, 44, 26, 0.78) → rgb(99, 85, 66),
@@ -670,8 +670,8 @@
     margin-top: 11px;
     padding: 8px 11px;
     border-left-width: 4px;
-    border-left-color: rgba(60, 44, 26, 0.55);
-    background-color: rgba(60, 44, 26, 0.07);
+    border-left-color: var(--map-ink-55);
+    background-color: var(--map-ink-08);
     font-size: 15px;
     white-space: normal;
     color: var(--tk-paperi-muste);
@@ -708,7 +708,7 @@
 .mk-lehti__julistekuva {
     height: 165px;
     border-width: 1px;
-    border-color: rgba(60, 44, 26, 0.55);
+    border-color: var(--map-ink-55);
     -unity-background-scale-mode: scale-to-fit;
     opacity: 0.5;
     -unity-background-image-tint-color: rgb(200, 190, 175);
@@ -880,7 +880,7 @@
     max-height: 76%;
     padding: 12px 17.6px 16px 17.6px;
     overflow: hidden;
-    background-color: rgba(247, 240, 224, 0.98);
+    background-color: var(--tk-paperi-pinta);
     border-top-width: 1px;
     border-color: var(--map-ink-35);
     border-top-left-radius: 11.2px;
@@ -1041,7 +1041,7 @@
     bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgba(14, 9, 4, 0.34);
+    background-color: var(--tk-himmennys-kevyt);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.22s;
@@ -1083,7 +1083,7 @@
     flex-shrink: 1;
     font-size: 24px;
     white-space: normal;
-    color: #3a2a1a;
+    color: var(--panel-2);
 }
 
 .mk-nahtavyys__kaiutin {
@@ -1291,7 +1291,7 @@
 .mk-opas__kainalo {
     margin: 3px 0 14px 0;
     border-width: 1px;
-    border-color: rgba(58, 42, 21, 0.22);
+    border-color: var(--map-ink-24);
     border-radius: 3px;
     overflow: hidden;
 }
@@ -1323,7 +1323,7 @@
     padding: 5px 0;
     border-width: 0;
     border-top-width: 1px;
-    border-top-color: rgba(58, 42, 21, 0.13);
+    border-top-color: var(--map-ink-14);
     border-radius: 0;
     background-color: var(--lapinakyva);
 }
@@ -1341,7 +1341,7 @@
 
 .mk-opas__vyonappi .mk-opas__vyonimi {
     border-bottom-width: 1px;
-    border-bottom-color: rgba(58, 42, 21, 0.3);
+    border-bottom-color: var(--map-ink-30);
 }
 
 .mk-opas__vyonappi.mk-auki .mk-opas__vyonimi {
@@ -1352,7 +1352,7 @@
     flex-shrink: 0;
     margin-left: 8px;
     font-size: 12.8px;
-    color: #7f570b;
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-opas__nosto {
@@ -1375,7 +1375,7 @@
     padding: 14px 16px 15px 16px;
     border-width: 1px;
     border-left-width: 5px;
-    border-color: rgba(58, 42, 21, 0.18);
+    border-color: var(--map-ink-20);
     border-left-color: #a53a22;
     border-radius: 3px;
     background-color: #f2e5c8;
@@ -1500,7 +1500,7 @@
     border-width: 0;
     border-radius: 0;
     background-color: #b3775f;
-    color: #f2e4d0;
+    color: var(--ink-light);
     rotate: 45deg;
 }
 
@@ -1660,7 +1660,7 @@
     margin-top: 13px;
     padding-top: 10px;
     border-top-width: 1px;
-    border-top-color: rgba(60, 44, 26, 0.38);
+    border-top-color: var(--map-ink-40);
 }
 
 .mk-fokus__pullanappi {
@@ -1688,7 +1688,7 @@
 .mk-fokus__pullanappi--varmistus,
 .mk-fokus__pullanappi--varmistus:hover {
     border-color: rgba(122, 85, 20, 0.75);
-    background-color: #e6b650;
+    background-color: var(--kulta);
     color: #2c1e07;
 }
 
@@ -1699,7 +1699,7 @@
 /* Tyhjä kassa: nappi näkyy mutta ei ota napautusta vastaan. */
 .mk-fokus__pullanappi--koyha,
 .mk-fokus__pullanappi--koyha:hover {
-    border-color: rgba(60, 44, 26, 0.35);
+    border-color: var(--map-ink-35);
     background-color: var(--lapinakyva);
     color: rgba(33, 29, 24, 0.55);
 }
@@ -1753,7 +1753,7 @@
     border-width: 0;
     border-radius: 0;
     background-color: var(--lapinakyva);
-    color: #3a2a1a;
+    color: var(--panel-2);
 }
 
 .mk-nahtavyys__valikkorivi.mk-valittu {
@@ -1767,7 +1767,7 @@
     border-width: 1.5px;
     border-color: #2c2318;
     border-radius: 11px;
-    background-color: #f3e2b8;
+    background-color: var(--paper);
     font-size: 11px;
     -unity-text-align: middle-center;
     color: #2c2318;
@@ -2177,7 +2177,7 @@
 }
 
 .mk-tyohuone__tagi--kesken {
-    background-color: #f7ecd2;
+    background-color: var(--tk-tumma-muste);
     color: #7a5a12;
 }
 
@@ -2266,7 +2266,7 @@
 }
 
 .mk-tyohuone__chip--tyossa {
-    background-color: #f7ecd2;
+    background-color: var(--tk-tumma-muste);
     color: #7a5a12;
 }
 
@@ -2450,7 +2450,7 @@
 }
 
 .mk-tilastot__rivi--otsikko {
-    background-color: #f0e6cd;
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-tilastot__rivi--manner {
@@ -2482,7 +2482,7 @@
 }
 
 .mk-tilastot__nimi--tuore-tyossa {
-    background-color: #f7ecd2;
+    background-color: var(--tk-tumma-muste);
 }
 
 .mk-tilastot__nimirivi {
@@ -2572,7 +2572,7 @@
 }
 
 .mk-tilastot__num--kesken {
-    background-color: #f7ecd2;
+    background-color: var(--tk-tumma-muste);
     color: #7a5a12;
 }
 

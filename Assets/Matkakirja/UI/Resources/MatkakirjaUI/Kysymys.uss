@@ -553,7 +553,7 @@
     height: 104px;
     border-radius: var(--tk-kulma-kortti);
     border-width: 1px;
-    border-color: rgba(52, 36, 16, 0.28);
+    border-color: var(--map-ink-30);
     background-color: var(--map-ink-08);
     -unity-background-scale-mode: scale-and-crop;
 }
@@ -838,7 +838,7 @@
     -unity-font-style: italic;
     white-space: normal;
     -unity-text-align: middle-center;
-    color: #cbb992;
+    color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-paljastus--paikallis .mk-paljastus__nimi {
@@ -857,7 +857,7 @@
     -unity-font-style: italic;
     white-space: normal;
     -unity-text-align: middle-center;
-    color: #cbb992;
+    color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-paljastus--paikallis .mk-paljastus__fakta,
