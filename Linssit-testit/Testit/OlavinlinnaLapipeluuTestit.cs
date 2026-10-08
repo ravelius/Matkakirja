@@ -5,7 +5,10 @@
 // huone 8 (harja, köysikieppi, sakara, kiipeily otteilla), huone 9 (komero: tiilet ja kilvet, arkku), huone 10 (kello, köysilasku,
 // kallio kävellen K4:lle, rannan vartijat esiin). Tulos yhdellä rivillä: läpi ja aika huoneittain, tai "JUMI huone N: …".
 // Aika: Huonesimulaatio.T (kävely, odotukset, kiista, ovi, kallio) + paikattomat teot (kappeli, kiipeily, komero, köysilasku).
-// Vertailu pelattavuusmalli-olavinlinna.md 9 (sujuva ja tutkiva min huoneittain); pelaaja-arvio = Σ max(simuloitu, sujuva).
+// Vertailu pelattavuusmalli-olavinlinna.md 9 (sujuva ja tutkiva min huoneittain); pelaaja-arvio = Σ max(simuloitu − kiinni, sujuva) + kiinni.
+// Tyrmäajo: jokaisessa huoneessa, jossa kiinniottava vartija on 30 m:n päässä, pelaaja kävelee tahallaan kiinni huoneen lopussa,
+// ratkaisee tyrmän (muunnelmat 1–3 vuorotellen), ja huone kuljetaan uudelleen tarkistuspisteestä; pakossa kiinni köysilaskussa.
+// Kärsivällinen pelaaja: jos Thief-ajuri ei löydä reittiä, odotus lähimmässä piilossa 5 s kerrallaan (≤ 180 s) ennen JUMIa.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +22,7 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>pelattavuusmalli 9: huoneet 1…10 (min).</summary>
         static readonly double[] SujuvaMin = { 1, 2, 2.5, 1.5, 3.5, 3.5, 2, 3, 2, 1.5 }, TutkivaMin = { 1.5, 3, 4, 2.5, 5, 5, 3, 4, 3, 2 };
         /// <summary>Kappelin teon kesto (s; liike ja käsittely, ei pohdintaa) ja raapaisun kesto.</summary>
-        const double KappeliTekoS = 3, RaapaisuS = 2, KasitteleS = 2, KiistaMaxS = 60;
+        const double KarsivallisyysS = 180, KappeliTekoS = 3, RaapaisuS = 2, KasitteleS = 2, KiistaMaxS = 60;
 
         static readonly KappeliTeko[] KappeliSujuva =
         {
@@ -34,8 +37,9 @@ namespace Matkakirja.Linssit.Testit
         /// <summary>Läpipeluun tila: jatkuva maailma, paikattomien tekojen lisäaika, huoneiden ajat ja jumi.</summary>
         sealed class Ajo
         {
-            public Huonesimulaatio W; public double Lisa; public string Jumi;
-            public readonly double[] Huone = new double[11]; double alku;
+            public Huonesimulaatio W; public double Lisa; public string Jumi; public bool TyrmaAjo; public int Tyrmat, Muunnelma;
+            /// <summary>Huone: simuloitu aika huoneittain; KiinniLisa: siitä kiinnijäännin osuus (virhe, tyrmä, uusi yritys).</summary>
+            public readonly double[] Huone = new double[11], KiinniLisa = new double[11]; double alku;
             public readonly List<string> Loki = new List<string>();
             public double T => W.T + Lisa;
             public void Aloita() => alku = T;
@@ -43,12 +47,74 @@ namespace Matkakirja.Linssit.Testit
             public bool Kulje(int huone, int seuraava, int loppu)
             {
                 if (Jumi != null) return false;
-                var t = ThiefAjuri.Aja(W, seuraava, loppu, budjetti: 600);
-                if (t.Loppu == null) { Jumi = $"huone {huone}: Thief-ajuri jäi pisteeseen pelaaja-{t.Pisin + 1} (tavoite {loppu + 1})"; ThiefAjuri.Tulosta(t.PisinTila); return false; }
-                W = t.Loppu; Loki.Add($"h{huone}: {string.Join(", ", t.Loki)}");
+                // Kärsivällinen pelaaja: jos Thief-ajuri (odotus ≤ 42 s per piste) ei löydä reittiä, pelaaja odottaa viimeisessä
+                // turvallisessa pisteessä (lähimmässä piilossa ≤ 6 m, muuten paikallaan) hiipien 5 s kerrallaan (enintään KarsivallisyysS)
+                // ja yrittää uudelleen.
+                var t = ThiefAjuri.Aja(W, seuraava, loppu, budjetti: 600); double odotettu = 0; var pisin = t;
+                KavelyMerkki piilo = null; double pd = 6;
+                if (t.Loppu == null) foreach (var m in Huonesimulaatio.Data.Lajia("piilo")) { double e = Huonesimulaatio.Etaisyys3(m.X, m.Y, m.Z, W.PX, W.PY, W.PZ); if (e < pd) { pd = e; piilo = m; } }
+                while (t.Loppu == null && odotettu < KarsivallisyysS)
+                {
+                    int k0 = W.Kiinni;
+                    if (piilo != null) for (int n = 0; n < 600 && !W.Askel((piilo.X, piilo.Y, piilo.Z), true); n++) { }
+                    for (double x = 0; x < 5 - 1e-9; x += Dt) W.Odota(true); odotettu += 5;
+                    if (W.Kiinni != k0) { Jumi = $"huone {huone}: kiinni odottaessa pisteessä pelaaja-{seuraava} ({odotettu:F0} s)"; return false; }
+                    t = ThiefAjuri.Aja(W, seuraava, loppu, budjetti: 600); if (t.Pisin > pisin.Pisin) pisin = t;
+                }
+                if (t.Loppu == null) { Jumi = $"huone {huone}: Thief-ajuri jäi pisteeseen pelaaja-{pisin.Pisin + 1} (tavoite {loppu + 1}, odotettu {odotettu:F0} s)"; ThiefAjuri.Tulosta(pisin.PisinTila); return false; }
+                W = t.Loppu; Loki.Add($"h{huone}: {(odotettu > 0 ? $"lisäodotus {odotettu:F0} s pelaaja-{seuraava}, " : "")}{string.Join(", ", t.Loki)}");
                 return true;
             }
             public void OdotaS(double s, bool hiipii = false) { for (double t = 0; t < s - 1e-9; t += Dt) W.Odota(hiipii); }
+            /// <summary>Tyrmäajossa huone kuljetaan ensin läpi, sitten kävellään suoraan lähimmän kiinniottavan vartijan luo, tyrmä
+            /// ratkaistaan ja koko huone kuljetaan uudelleen tarkistuspisteestä (W.Seuraava); muuten tavallinen Kulje. Huonetta ei
+            /// katkaista keskeltä, koska Thief-ajuri palaa tarvittaessa taaksepäin huoneen sisällä.</summary>
+            public bool KuljeKiinni(int huone, int seuraava, int loppu)
+            {
+                if (!TyrmaAjo) return Kulje(huone, seuraava, loppu);
+                int puoli = loppu;
+                if (!Kulje(huone, seuraava, loppu)) return false;
+                double t0 = T; var ennen = W.Kopioi(); bool naamio = W.Naamio; W.Naamio = false; int k0 = W.Kiinni;
+                for (double t = 0; t < 90 && W.Kiinni == k0; t += Dt)
+                {
+                    Huonesimulaatio.Hahmo lahin = null; double d = 30;
+                    foreach (var h in W.Hahmot) { if (!h.Aktiivinen || !h.Aivot.Profiili.Ottaa || !h.Aivot.Profiili.Havaitsee) continue; double e = Huonesimulaatio.Etaisyys3(h.X, h.Y, h.Z, W.PX, W.PY, W.PZ); if (e < d) { d = e; lahin = h; } }
+                    if (lahin == null) break;
+                    W.Askel((lahin.X, lahin.Y, lahin.Z), false);
+                }
+                W.Naamio = naamio;
+                if (W.Kiinni == k0)
+                {
+                    // Huoneessa ei kiinniottajaa kävelymatkan päässä (keittiö: kokki ei ota kiinni) → jatketaan ilman tyrmää.
+                    W = ennen; Loki.Add($"h{huone}: tyrmä ohitettu (ei kiinniottavaa vartijaa 30 m:n päässä pelaaja-{puoli + 1})");
+                    return true;
+                }
+                double ty = Tyrmassa(Muunnelma++ % 3 + 1);
+                if (ty < 0) { Jumi = $"huone {huone}: tyrmästä ei pääse ulos (muunnelma {(Muunnelma - 1) % 3 + 1})"; return false; }
+                // Maailma jatkuu tyrmän ajan (valppaus 60 s laskee), pelaaja poissa näkyvistä: armo koko tyrmän ajaksi.
+                W.ArmoAsti = W.T + ty + Huonesimulaatio.ArmoS; OdotaS(ty); Tyrmat++;
+                // Uusi yritys tarkistuspisteestä: Thief-ajuri (ja kärsivällinen odotus piilossa) hoitaa valppaat vartijat.
+                Loki.Add($"h{huone}: kiinni pelaaja-{puoli + 1}, tyrmä {ty:F0} s, uusi yritys pelaaja-{W.Seuraava}");
+                bool ok = Kulje(huone, W.Seuraava, loppu); KiinniLisa[huone] += T - t0;
+                return ok;
+            }
+        }
+
+        /// <summary>Tyrmä (Siirtoseppä): 1 Pulu pudottaa avaimet → poimi, avaa; 2 vesipoika avaa; 3 irtokivi tutkimisen jälkeen.
+        /// Palauttaa ajan ulos käytävälle (s) tai −1.</summary>
+        static double Tyrmassa(int muunnelma)
+        {
+            const double KatseleS = 8, TekoS = 2, UlosS = 4;
+            var t = new Tyrma(muunnelma); double edellinen = 0;
+            while (t.Aika < 120 && t.Vaihe != TyrmanVaihe.OviAuki)
+            {
+                t.Paivita(Dt);
+                if (t.Aika - edellinen < TekoS) continue;
+                if (t.Vaihe == TyrmanVaihe.AvaimetOlissa && t.Poimi()) edellinen = t.Aika;
+                else if (t.Vaihe == TyrmanVaihe.AvaimetKadessa && t.AvaaOvi()) edellinen = t.Aika;
+                else if (muunnelma == 3 && t.Aika >= KatseleS && t.KiviIrti()) edellinen = t.Aika;
+            }
+            return t.Vaihe == TyrmanVaihe.OviAuki && t.Ulos() ? t.Aika + UlosS : -1;
         }
 
         static KavelyMerkki Merkki(string nimi) { foreach (var m in Huonesimulaatio.Data.Merkit) if (m.Nimi == nimi) return m; throw new Exception(nimi + " puuttuu"); }
@@ -69,14 +135,16 @@ namespace Matkakirja.Linssit.Testit
         }
 
         /// <summary>Koko peli varjoreittiä (kurinalainen pelaaja, ei kiinnijääntejä).</summary>
-        static Ajo Pelaa()
+        static Ajo Pelaa(bool tyrma = false)
         {
-            var a = new Ajo { W = Huonesimulaatio.Uusi() }; a.Aloita();
+            var a = new Ajo { W = Huonesimulaatio.Uusi(), TyrmaAjo = tyrma }; a.Aloita();
             // Huoneet 1–5 (reitti:pelaaja-1…20): laituri ja vesiportti, porttikäytävä ja piha, keittiö (tarjotin torkkujalle), kirkkotorni.
-            if (!a.Kulje(2, 1, 5)) return a; a.Valmis(2);
-            if (!a.Kulje(3, 6, 8)) return a; a.Valmis(3);
-            if (!a.Kulje(4, 9, 12)) return a; a.Valmis(4);
-            if (!a.Kulje(5, 13, 19)) return a;
+            // Huonerajat turvallisissa pisteissä: Thief-ajuri palaa tarvittaessa taaksepäin vain saman Kulje-kutsun sisällä (raja
+            // pelaaja-9:n kohdalla jumitti keittiön, koska piilovalinta pihalla jäi edelliseen osaan).
+            if (!a.KuljeKiinni(2, 1, 5)) return a; a.Valmis(2);
+            if (!a.KuljeKiinni(3, 6, 7)) return a; a.Valmis(3);
+            if (!a.KuljeKiinni(4, 8, 12)) return a; a.Valmis(4);
+            if (!a.KuljeKiinni(5, 13, 19)) return a;
             if (!a.W.Annettu) { a.Jumi = "huone 4: tarjotin jäi antamatta torkkujalle"; return a; }
             // Huone 5: kappelin valoarvoitus (vaiheet 1–12), kynttilä puhalletaan arvoituksessa.
             var kap = new KappelinArvoitus();
@@ -89,7 +157,7 @@ namespace Matkakirja.Linssit.Testit
             if (kap.Vaihe != KappelinArvoitus.Valmis) { a.Jumi = $"huone 5: kappeli vaiheessa {kap.Vaihe}"; return a; }
             a.W.Kynttila = false; a.Valmis(5);
             // Huone 6: kaari-ovi → naamio naulakosta → Linnantupa → voudin pöytä (pelaaja-57): kulho, kiista, avainrengas → paluu.
-            if (!a.Kulje(6, 20, 56)) return a;
+            if (!a.KuljeKiinni(6, 20, 56)) return a;
             if (!a.W.Naamio) { a.Jumi = "huone 6: naamio jäi ottamatta naulakosta"; return a; }
             var kiista = new VoudinKiista(); var kulho = Merkki("esine:kulho-poydalle"); var vouti = Merkki("istuu:vouti");
             if (!kiista.KulhoLaskettu(Huonesimulaatio.Etaisyys2(a.W.PX, a.W.PZ, kulho.X, kulho.Z))) { a.Jumi = "huone 6: kulho ei ulotu pöydän merkistä"; return a; }
@@ -100,7 +168,7 @@ namespace Matkakirja.Linssit.Testit
             a.Loki.Add($"h6: avainrengas {kiistaS:F1} s kulhosta");
             if (!a.Kulje(6, 57, 62)) return a; a.Valmis(6);
             // Huone 7: Tott-kammio → muuriportaat → ampumakäytävä → muurikäytävän ovi (avainrengas) → muurikäytävä.
-            if (!a.Kulje(7, 63, 80)) return a;
+            if (!a.KuljeKiinni(7, 63, 80)) return a;
             if (LukittuOvi.Avaa(true, "avainrengas", new[] { "avainrengas" }, false) == OviTulos.Lukossa) { a.Jumi = "huone 7: ovi ei aukea avainrenkaalla"; return a; }
             a.OdotaS(KasitteleS, true);
             if (!a.Kulje(7, 81, 85)) return a; a.Valmis(7);
@@ -127,6 +195,16 @@ namespace Matkakirja.Linssit.Testit
             int laskuOtteita = (int)Math.Ceiling(Huonesimulaatio.Etaisyys3(krampi.X, krampi.Y, krampi.Z, p1.X, p1.Y + 1.55, p1.Z)) + 1;
             var (lasku, lPutosi, lHavaittu) = Kiipea(laskuOtteita, null);
             if (lasku < 0 || lPutosi || lHavaittu) { a.Jumi = $"huone 10: köysilasku ({laskuOtteita} otetta) ei mennyt läpi"; return a; }
+            if (tyrma)
+            {
+                // Kiinni köysilaskun puolivälissä (soihtu alhaalla): tyrmä → T10a laskun alku, köysi uudelleen kramppiin.
+                pako.Paivita(lasku / 2, false); a.Lisa += lasku / 2;
+                if (!pako.Kiinni()) { a.Jumi = "huone 10: kiinnijäänti köysilaskussa ei palauta laskun alkuun"; return a; }
+                double ty = Tyrmassa(a.Muunnelma++ % 3 + 1);
+                if (ty < 0) { a.Jumi = "huone 10: tyrmästä ei pääse ulos"; return a; }
+                a.Lisa += ty; a.Tyrmat++; a.Loki.Add($"h10: kiinni köysilaskussa, tyrmä {ty:F0} s, uusi lasku"); a.KiinniLisa[10] += lasku / 2 + ty + lasku;
+                if (!pako.Kiinnita()) { a.Jumi = "huone 10: köysi ei kiinnity uudelleen tyrmän jälkeen"; return a; }
+            }
             pako.Paivita(lasku, false); pako.LaskuValmis(); a.Lisa += lasku;
             (a.W.PX, a.W.PY, a.W.PZ) = p1; a.W.Naamio = false;
             var k4 = P("kamera:K4"); int kk = a.W.Kiinni;
@@ -150,14 +228,24 @@ namespace Matkakirja.Linssit.Testit
 
         static string Rivi(Ajo a)
         {
-            var huoneet = new List<string>(); double arvio = 0;
+            // Pelaaja-arvio: huone kestää vähintään suunnitelman sujuvan ajan (lukeminen, katselu, pohdinta ei ole simulaatiossa),
+            // ja kiinnijäännin hinta (kävely vartijalle, tyrmä, uusi yritys) tulee päälle simuloituna.
+            var huoneet = new List<string>(); double arvio = 0, kiinni = 0;
             for (int h = 2; h <= 10; h++)
             {
                 double sujuva = (h == 2 ? SujuvaMin[0] + SujuvaMin[1] : SujuvaMin[h - 1]) * 60;
                 huoneet.Add($"{(h == 2 ? "1–2" : h.ToString())} {Mmss(a.Huone[h])}");
-                arvio += Math.Max(a.Huone[h], sujuva);
+                arvio += Math.Max(a.Huone[h] - a.KiinniLisa[h], sujuva) + a.KiinniLisa[h]; kiinni += a.KiinniLisa[h];
             }
-            return $"läpi {Mmss(a.T)} simuloitua (pelaaja-arvio {Mmss(arvio)}, suunnitelma sujuva 22:30 / tutkiva 33:00), kiinni {a.W.Kiinni} | {string.Join(" · ", huoneet)}";
+            return $"läpi {Mmss(a.T)} simuloitua, pelaaja-arvio {Mmss(Arvio(a))} (kiinnijäänneistä {Mmss(kiinni)}; suunnitelma sujuva 22:30, tutkiva 33:00), "
+                + $"kiinni {a.W.Kiinni + (a.TyrmaAjo ? 1 : 0)}, tyrmä {a.Tyrmat} | {string.Join(" · ", huoneet)}";
+        }
+
+        static double Arvio(Ajo a)
+        {
+            double arvio = 0;
+            for (int h = 2; h <= 10; h++) arvio += Math.Max(a.Huone[h] - a.KiinniLisa[h], (h == 2 ? SujuvaMin[0] + SujuvaMin[1] : SujuvaMin[h - 1]) * 60) + a.KiinniLisa[h];
+            return arvio;
         }
 
         [Testi] static void KokoPeliVarjoreittiaLapi()
@@ -168,6 +256,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a.Jumi == null, $"JUMI {a.Jumi}");
             Oleta.Sama(0, a.W.Kiinni);
             for (int h = 3; h <= 10; h++) Oleta.Tosi(a.Huone[h] <= TutkivaMin[h - 1] * 60, $"huone {h}: simuloitu {Mmss(a.Huone[h])} ≤ tutkiva {TutkivaMin[h - 1]} min");
+        }
+
+        [Testi] static void KokoPeliTyrmineenJaUusinYrityksin()
+        {
+            var a = Pelaa(tyrma: true);
+            if (a.Jumi != null) Console.WriteLine($"      LÄPIPELUU v44z + tyrmät: JUMI {a.Jumi}");
+            else Console.WriteLine($"      LÄPIPELUU v44z + tyrmät: {Rivi(a)}");
+            Console.WriteLine("        " + string.Join(" · ", a.Loki.Where(l => l.Contains("tyrmä"))));
+            Oleta.Tosi(a.Jumi == null, $"JUMI {a.Jumi}");
+            Oleta.Tosi(a.Tyrmat >= 5, $"tyrmiä {a.Tyrmat} ≥ 5");
+            Oleta.Tosi(Arvio(a) >= 25 * 60 && Arvio(a) <= 35 * 60, $"pelaaja-arvio {Mmss(Arvio(a))} välillä 25–35 min");
         }
     }
 }
