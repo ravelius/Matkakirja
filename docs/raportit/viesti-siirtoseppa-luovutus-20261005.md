@@ -35,6 +35,16 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 18.06 — JUNA 167 KUITTAUSPYYNTÖ: siirtoseppa/historia-juna167 @ 06a79a48f (wt/proto-siirtoseppa-kello)
+
+- = historia-m 138fb8d70 + master BUILD 166. Olavinlinna 1–10: PelattavaPala.Hash 6a4e9cadc388f51a (LR v45a, kultaiset v45a), M-osa (naamio,
+  sali, ovet, ote-kiipeily, komero + kääntyvät kilvet, pako + köysi), aanet-fp-v2 18 ääntä, MTila-tallennus + jatko (ratkaistu kappeli ei
+  toistu, tarkistuspiste myös piiloon), kappeli → huone 6 ja K2 pakon jälkeen; LS2 m167 (jumitestit, vihjeportaat 6–10, simulaatio v45a),
+  LS1 läpipeluuajuri (22,5 min / tyrmineen 26 min); NUI mikseri be7fef45 (Voima.Repliikit, Voima.Saa). 1001/1001, unity-tarkistus 0.
+- Juna 167 kääntyy 22.00 (runko lukitaan 21.30, kuittauspyynnöt 21.15 mennessä). Juna 166 = BUILD 166 bdd0e8c5 (0d5c33250, pala v44z).
+- Avoin: LS2 todentaa piilo-tarkistuspisteen muuriportailla (70 → 66). Repliikit vara-äänillä omistajan lupaan asti.
+- Työjono: /Users/Shared/Claude/Matkakirja-fable/scratchpad/tyojonot.md (Siirtoseppä: NYT M-osa → 1 koko peli 1–10 → 2 [PT] seuraava kohde).
+
 ## TILA 8.10. 09.54 — JUNA 165 = becd20404 (BUILD 8adddd2c, varjostin Metal OK); JUNA 166 -EHDOKAS historia-valot @ 0d5c33250
 
 - Juna 166: PelattavaPalaHash = 92f6029878e2011b (v44z, vuoden 1499 linna) Ydin PelattavaPala-vakiosta + PelattavaPalaTestit (sitoo
