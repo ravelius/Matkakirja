@@ -13,6 +13,10 @@ while (( $# )); do
   esac
 done
 [[ -n $JUNA && -n $UDID && -n $APP && -n $SHA ]] || { sed -n 5p $0; exit 2; }
+# T7-LAITESARJA (omistaja 7.10.2026; Natiiviseppä 8.10.): xcrun simctl → T7-sarja (simusarja.sh), vanha sisäinen UDID → saman
+# nimisen T7-laitteen UDID. T7 puuttuu → virhe, ei paluuta sisäiseen sarjaan.
+source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2
+UDID=$(mk_kaanna $UDID)
 S=/Users/Shared/Claude/proto-3d/lokit/sarja-$JUNA-$(date +%Y%m%d-%H%M); mkdir -p $S
 print -r -- "# Vakiosarja $JUNA ${SHA:0:8} ($(date '+%d.%m. %H.%M'))" > $S/SARJA.md; print >> $S/SARJA.md
 puutteita=0

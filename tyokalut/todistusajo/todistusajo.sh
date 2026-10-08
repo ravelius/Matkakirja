@@ -53,6 +53,10 @@ while (( $# )); do
 done
 [[ -n $ERA && -n $UDID && -n $APP && -n $SHA && -f $SKEN ]] || { sed -n 13,17p $0; exit 2; }
 [[ -d $APP ]] || { echo "ei .appia: $APP"; exit 2; }
+# T7-LAITESARJA (omistaja 7.10.2026; Natiiviseppä 8.10.): xcrun simctl → T7-sarja (simusarja.sh), vanha sisäinen UDID → saman
+# nimisen T7-laitteen UDID. T7 puuttuu → virhe, ei paluuta sisäiseen sarjaan.
+source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2
+UDID=$(mk_kaanna $UDID)
 # Skenaarion oma aloitus: "alku <peli-komennot ;-eroteltuina>" korvaa --peli-oletuksen (esim. aloitusnäkymä ilman uutta peliä).
 alku=$(grep -m1 -E '^alku ' $SKEN | cut -d' ' -f2-); [[ -n $alku ]] && PELI=$alku
 

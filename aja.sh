@@ -25,8 +25,10 @@ case "$1" in
     ls -d Build/dd-sim/Build/Products/Release-iphonesimulator/*.app ;;
   asenna-sim)
     APP=$(ls -d Build/dd-sim/Build/Products/Release-iphonesimulator/*.app | head -1)
-    xcrun simctl install "$2" "$APP"
-    xcrun simctl launch "$2" app.matkakirja.proto3d ;;
+    # T7-laitesarja (Natiiviseppä 8.10.): simulaattorit vain T7:llä, vanha UDID käännetään (simusarja.sh)
+    SIMUSARJA=/Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh
+    zsh $SIMUSARJA simctl install "$2" "$APP"
+    zsh $SIMUSARJA simctl launch "$2" app.matkakirja.proto3d ;;
   kaikki)
     "$0" luo && "$0" sim && "$0" xcode-sim && "$0" asenna-sim "$2" ;;
   *) echo "käyttö: $0 luo | sim | xcode-sim | asenna-sim <UDID> | kaikki <UDID>"; exit 1 ;;
