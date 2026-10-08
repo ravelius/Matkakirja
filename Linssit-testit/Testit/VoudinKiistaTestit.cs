@@ -1,5 +1,5 @@
 // VOUDIN KIISTA (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md 8.2 huone 6 vaiheet 5–6): katseikkunat 8–14 s ja 20–26 s,
-// toisto 40 s kiistan jälkeen, kulho ≤ 1,5 m, SaaOttaa (katse hoitajaan tai kulma > 50° tai matka > 5 m) v44v-datan voudilla ja
+// toisto 20 s kiistan jälkeen, kulho ≤ 1,5 m, SaaOttaa (katse hoitajaan tai kulma > 50° tai matka > 5 m) v44v-datan voudilla ja
 // avainrenkaalla, ja huonesimulaatiossa: naamioitu pelaaja ottaa renkaan katseikkunassa ilman epäilyä.
 using System;
 using Matkakirja.Linssit.Seikkailu;
@@ -20,12 +20,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k.KulhoLaskettu(1.0) && k.Alkoi && !k.KulhoLaskettu(1.0), "kulho pöydälle → kiista kerran");
             k.Alkoi = false;
             var vaihdot = new System.Collections.Generic.List<double>(); int alkoi = 0;
-            for (double t = 0; t < 150; t += Dt) { k.Paivita(Dt); if (k.Kaantyi) { k.Kaantyi = false; vaihdot.Add(t + Dt); } if (k.Alkoi) { k.Alkoi = false; alkoi++; } }
-            var odotetut = new[] { 8, 14, 20, 26, 78, 84, 90, 96, 148 };
+            for (double t = 0; t < 140; t += Dt) { k.Paivita(Dt); if (k.Kaantyi) { k.Kaantyi = false; vaihdot.Add(t + Dt); } if (k.Alkoi) { k.Alkoi = false; alkoi++; } }
+            var odotetut = new[] { 8, 14, 20, 26, 58, 64, 70, 76, 108, 114, 120, 126 };
             Oleta.Sama(odotetut.Length, vaihdot.Count, string.Join(", ", vaihdot.ConvertAll(x => x.ToString("F2"))));
             for (int i = 0; i < odotetut.Length; i++) Oleta.Tosi(Math.Abs(vaihdot[i] - odotetut[i]) <= Tol, $"vaihto {i}: {vaihdot[i]:F2} s ≠ {odotetut[i]} s");
-            Oleta.Sama(2, alkoi, "kiista toistuu 70 s:n välein (30 s + 40 s)");
-            Oleta.Sama(52.0, VoudinKiista.PisinOdotus, "pisin odotus ikkunaan (26 s → 78 s)");
+            Oleta.Sama(2, alkoi, "kiista toistuu 50 s:n välein (30 s + 20 s)");
+            Oleta.Sama(32.0, VoudinKiista.PisinOdotus, "pisin odotus ikkunaan (26 s → 58 s)");
         }
 
         [Testi] static void SaaOttaaDatanVoudilla()

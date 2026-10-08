@@ -1,6 +1,6 @@
 // HISTORIAMOOTTORI M-OSA HUONE 6: VOUDIN KIISTA JA AVAINRENGAS (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md 8.2 huone 6
 // vaiheet 5–6; Unity SeikkailuSali). Keittokulho voudin pöydälle (≤ 1,5 m esine:kulho-poydalle-merkistä) aloittaa kiistan aitan hoitajan
-// kanssa: 30 s, jonka aikana vouti kääntyy kahdesti 6 s:ksi hoitajaan (8–14 s ja 20–26 s); kiista alkaa uudelleen 40 s sen päättymisestä.
+// kanssa: 30 s, jonka aikana vouti kääntyy kahdesti 6 s:ksi hoitajaan (8–14 s ja 20–26 s); kiista alkaa uudelleen 20 s sen päättymisestä (Siirtoseppä 8.10.: LS2:n huomio, 40 s:llä pisin odotus ikkunaan 52 s → nyt 32 s).
 // Avainrenkaan saa ottaa, kun vouti katsoo hoitajaan tai pelaaja on yli 50°:n kulmassa tai yli 5 m:n päässä hänen katseestaan; muuten ote
 // ranteesta (Vartija.OtaKiinni, irtipääsy tai tyrmä). Kertalaukaisut sovittimelle (nollaa itse).
 using System;
@@ -9,7 +9,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public sealed class VoudinKiista
     {
-        public const double KulhoM = 1.5, KiistaS = 30, KiistaValiS = 40, NakeeKulma = 50, NakeeM = 5;
+        public const double KulhoM = 1.5, KiistaS = 30, KiistaValiS = 20, NakeeKulma = 50, NakeeM = 5;
         public static readonly (double Alku, double Loppu)[] Ikkunat = { (8, 14), (20, 26) };
 
         /// <summary>Aika kiistan alusta (−1 = kulho ei vielä pöydällä).</summary>
