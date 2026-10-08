@@ -105,6 +105,9 @@ namespace Matkakirja.Natiivi
             p.AloitaOteKiipeily(otteet, puuskat, ok => kirjaa?.Invoke("seikkailu: komeron kynnyksellä (huone 9)"));
         }
         bool koysiKiinni;
+        readonly Dictionary<string, Transform> solmut = new Dictionary<string, Transform>(StringComparer.Ordinal);
+        /// <summary>Esineen erillinen solmu (arkku-komero/kilpi-1 …) tai null.</summary>
+        public Transform Solmu(string esine, string nimi) => solmut.TryGetValue(esine + "/" + nimi, out var t) ? t : null;
         /// <summary>Kaikki esineet ladattu ja huoneiden 6–10 osat luotu (jatko tallennuksesta odottaa tätä).</summary>
         public bool Valmis { get; private set; }
 
@@ -222,7 +225,10 @@ namespace Matkakirja.Natiivi
             foreach (var m in d.Lajia("esine"))
             {
                 GameObject eg = null;
-                if (!string.IsNullOrEmpty(m.Glb)) yield return LataaMalli(m, go.transform, se.luodut, g => eg = g, kirjaa);
+                // Arkku (v45a): kansi ja kilvet erillisinä solmuina (kilpilukko kääntää kilpiä, kansi aukeaa).
+                string[] erilliset = m.Tunnus.StartsWith("arkku", StringComparison.Ordinal) ? new[] { "kansi", "kilpi-1", "kilpi-2" } : null;
+                var mid = m.Tunnus;
+                if (!string.IsNullOrEmpty(m.Glb)) yield return LataaMalli(m, go.transform, se.luodut, g => eg = g, kirjaa, erilliset, (n, t) => se.solmut[mid + "/" + n] = t);
                 // Paikkamerkki (Päätoimittaja 7.10.: puuttuvat mallit merkein, vaihdetaan kun peili päivittyy): tarjotin ja patapino.
                 if (eg == null && se != null && (m.Kannettava || m.Kaadettava || m.Tunnus.StartsWith("avainnippu", StringComparison.Ordinal))) eg = se.Paikkamerkki(m, go.transform);
                 if (eg == null || se == null) continue;
@@ -255,7 +261,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Merkin glb-malli (Linnanrakentajan kavely-kansio) maailmaan merkin paikkaan ja kiertoon DioraamaMaasto-varjostimella;
         /// myös kappelin luukku ja ikuinen valo (SeikkailuKynttilat). Odottaa enintään 30 s, että esineiden lataus on asettanut juuren.</summary>
-        public static IEnumerator LataaMalli(KavelyMerkki m, Transform isa, List<UnityEngine.Object> luodut, Action<GameObject> valmis, Action<string> kirjaa)
+        public static IEnumerator LataaMalli(KavelyMerkki m, Transform isa, List<UnityEngine.Object> luodut, Action<GameObject> valmis, Action<string> kirjaa,
+            string[] erilliset = null, Action<string, Transform> solmuValmis = null)
         {
             for (float t = 0; malliUrl == null && t < 30f; t += Time.unscaledDeltaTime) yield return null;
             if (malliUrl == null || string.IsNullOrEmpty(m.Glb)) yield break;
@@ -286,11 +293,65 @@ namespace Matkakirja.Natiivi
                 else if (kuva != null) mat.SetTexture(IdKuva, kuva);
                 luodut.Add(mat);
             }
-            var mesh = Mesh(malli); luodut.Add(mesh);
-            if (valaistu != null) { var vc = new Color[mesh.vertexCount]; for (int i = 0; i < vc.Length; i++) vc[i] = new Color(1f, 0f, 0.5f, 1f); mesh.colors = vc; }
-            eg.AddComponent<MeshFilter>().sharedMesh = mesh;
-            var mr = eg.AddComponent<MeshRenderer>(); mr.sharedMaterial = mat; mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            // Erilliset solmut (8.10., LR v45a: arkun kansi ja kilvet, veneen köyden puolikkaat) omiksi GameObjecteikseen solmun paikkaan ja
+            // kiertoon, jotta niitä voi kääntää tai irrottaa; muu malli yhtenä meshinä kuten ennen.
+            var omistaja = Omistajat(malli, erilliset);
+            void Piirra(GameObject g, int juuri)
+            {
+                var me = Mesh(malli, juuri, omistaja); luodut.Add(me);
+                if (valaistu != null) { var vc = new Color[me.vertexCount]; for (int i = 0; i < vc.Length; i++) vc[i] = new Color(1f, 0f, 0.5f, 1f); me.colors = vc; }
+                g.AddComponent<MeshFilter>().sharedMesh = me;
+                var r = g.AddComponent<MeshRenderer>(); r.sharedMaterial = mat; r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            }
+            Piirra(eg, -1);
+            if (erilliset != null)
+            {
+                var gos = new Dictionary<int, Transform>();
+                for (int si = 0; si < malli.Solmut.Count; si++)
+                {
+                    if (omistaja[si] != si) continue;   // vain erillisten juuret
+                    var g = new GameObject("Solmu:" + malli.Solmut[si].Nimi) { layer = DioraamaNayttamo.Kerros };
+                    gos[si] = g.transform;
+                }
+                foreach (var kv in gos)
+                {
+                    // Vanhempi = lähin erillinen esivanhempi (kilvet kannen lapsina), muuten esine; paikallinen = vanhemman käänteinen × oma.
+                    int v = malli.Solmut[kv.Key].Vanhempi; while (v >= 0 && omistaja[v] != v) v = malli.Solmut[v].Vanhempi;
+                    var vm = v >= 0 ? SolmuMaailma(malli, v) : Matrix4x4.identity;
+                    var lm = vm.inverse * SolmuMaailma(malli, kv.Key);
+                    kv.Value.SetParent(v >= 0 && gos.ContainsKey(v) ? gos[v] : eg.transform, false);
+                    kv.Value.localPosition = lm.GetColumn(3); kv.Value.localRotation = lm.rotation;
+                    Piirra(kv.Value.gameObject, kv.Key);
+                    solmuValmis?.Invoke(malli.Solmut[kv.Key].Nimi, kv.Value);
+                }
+            }
             valmis(eg);
+        }
+
+        /// <summary>Kunkin solmun "omistaja": lähin erillinen solmu (itse tai esivanhempi) tai −1 (päämesh).</summary>
+        static int[] Omistajat(GlbMalli malli, string[] erilliset)
+        {
+            var o = new int[malli.Solmut.Count];
+            for (int i = 0; i < o.Length; i++)
+            {
+                o[i] = -1;
+                if (erilliset == null) continue;
+                for (int j = i, n = 0; j >= 0 && n < 64; j = malli.Solmut[j].Vanhempi, n++)
+                    if (Array.IndexOf(erilliset, malli.Solmut[j].Nimi) >= 0) { o[i] = j; break; }
+            }
+            return o;
+        }
+
+        static Matrix4x4 SolmuMaailma(GlbMalli malli, int i)
+        {
+            var m = Matrix4x4.identity;
+            for (int n = 0; i >= 0 && i < malli.Solmut.Count && n < 64; n++)
+            {
+                var g = malli.Solmut[i];
+                m = Matrix4x4.TRS(new Vector3(g.Translation[0], g.Translation[1], g.Translation[2]), new Quaternion(g.Rotation[0], g.Rotation[1], g.Rotation[2], g.Rotation[3]), new Vector3(g.Scale[0], g.Scale[1], g.Scale[2])) * m;
+                i = g.Vanhempi == i ? -1 : g.Vanhempi;
+            }
+            return m;
         }
 
         /// <summary>Esineen paikka (näkyvä, ei kädessä) tai null; vihjeet (pelattavuusmalli 5).</summary>
@@ -398,8 +459,12 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke($"seikkailu: {id} pois");
         }
 
-        static Mesh Mesh(GlbMalli malli)
+        static Mesh Mesh(GlbMalli malli) => Mesh(malli, -1, null);
+
+        /// <summary>Mesh solmuista, joiden omistaja on juuri (−1 = päämesh), juuren paikallisessa kehyksessä.</summary>
+        static Mesh Mesh(GlbMalli malli, int juuri, int[] omistaja)
         {
+            var kaanteinen = juuri >= 0 ? SolmuMaailma(malli, juuri).inverse : Matrix4x4.identity;
             var p = new List<Vector3>(); var nr = new List<Vector3>(); var uv = new List<Vector2>(); var kol = new List<int>();
             // Solmujen maailmamatriisit vanhempiketjusta (7.10.: monisolmuiset mallit, tarjotin ja patapino, kasautuivat origoon).
             var mat = new Matrix4x4[malli.Solmut.Count]; var valmis = new bool[malli.Solmut.Count];
@@ -414,7 +479,8 @@ namespace Matkakirja.Natiivi
             for (int si = 0; si < malli.Solmut.Count; si++)
                 foreach (var o in malli.Solmut[si].Osat)
                 {
-                    var sm = Maailma(si);
+                    if (omistaja != null && omistaja[si] != juuri) continue;
+                    var sm = kaanteinen * Maailma(si);
                     int a = p.Count, k = (o.Paikat?.Length ?? 0) / 3;
                     for (int i = 0; i < k; i++)
                     {

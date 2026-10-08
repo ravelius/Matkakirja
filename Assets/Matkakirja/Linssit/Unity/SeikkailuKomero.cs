@@ -75,7 +75,25 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke($"seikkailu: komero ({tm.Count} tiiltä, arkku {(am != null ? "kyllä" : "ei")}, kilpiä {(k.kilpiaOn ? 2 : 0)})");
         }
 
-        void Update() => ydin?.Tiilet.Paivita(Time.deltaTime);
+        // Kilvet ja kansi mallissa (LR v45a: arkku-komero.glb kansi → kilpi-1 / kilpi-2, kääntö paikallisen Y:n ympäri, kansi −X).
+        Transform kilpi1, kilpi2, kansi; Quaternion kilpi1Perus, kilpi2Perus, kansiPerus; float kansiAuki;
+        void Update()
+        {
+            ydin?.Tiilet.Paivita(Time.deltaTime);
+            var es = SeikkailuEsineet.Aktiivinen;
+            if (kilpi1 == null && es != null)
+            {
+                kilpi1 = es.Solmu("arkku-komero", "kilpi-1"); kilpi2 = es.Solmu("arkku-komero", "kilpi-2"); kansi = es.Solmu("arkku-komero", "kansi");
+                if (kilpi1 != null) kilpi1Perus = kilpi1.localRotation;
+                if (kilpi2 != null) kilpi2Perus = kilpi2.localRotation;
+                if (kansi != null) kansiPerus = kansi.localRotation;
+            }
+            if (ydin == null) return;
+            // Kilvet kääntyvät toisiaan kohti (Kilpi1 myötä, Kilpi2 vastaan; TULKINTA, kunnes LR:n extras kaantoakseli luetaan).
+            if (kilpi1 != null) kilpi1.localRotation = kilpi1Perus * Quaternion.Euler(0f, (float)ydin.Lukko.Kilpi1, 0f);
+            if (kilpi2 != null) kilpi2.localRotation = kilpi2Perus * Quaternion.Euler(0f, -(float)ydin.Lukko.Kilpi2, 0f);
+            if (kansi != null) { kansiAuki = Mathf.MoveTowards(kansiAuki, ydin.Auki ? 1f : 0f, Time.deltaTime / 1.2f); kansi.localRotation = kansiPerus * Quaternion.Euler(-100f * Mathf.SmoothStep(0f, 1f, kansiAuki), 0f, 0f); }
+        }
 
         int LahinTiili(SeikkailuPelaaja p)
         {
