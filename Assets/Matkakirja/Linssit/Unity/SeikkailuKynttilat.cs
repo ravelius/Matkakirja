@@ -152,12 +152,14 @@ namespace Matkakirja.Natiivi
             return eka != null ? new Vector3((float)eka.X, (float)eka.Y, (float)-eka.Z) : (Vector3?)null;
         }
 
-        /// <summary>Saumat erottuvat viistovalossa: palava kynttilä asetettuna ≤ 0,9 m ontosta kohdasta tai kädessä ≤ 0,5 m (käsikirjoitus kohta 6).</summary>
+        /// <summary>Saumat erottuvat viistovalossa: palava kynttilä asetettuna ≤ 0,9 m ontosta kohdasta tai kädessä ≤ 0,5 m (käsikirjoitus kohta 6),
+        /// kun yksikään tilan kynttilä ei pala.</summary>
         public bool SaumatNakyvat
         {
             get
             {
-                if (!ydin.OmaPalaa || !(OnttoPaikka() is Vector3 o)) return false;
+                // Alttarikynttilä (yksikin lisäliekki) häivyttää saumat tasaiseen valoon (käsikirjoitus E3 rivi 110; LS2:n löydös 8.10.).
+                if (!ydin.OmaPalaa || ydin.Palavia > 0 || !(OnttoPaikka() is Vector3 o)) return false;
                 if (OmaAsetettu is Vector3 a) return Vector3.Distance(a, o) <= AsetusM;
                 var p = SeikkailuPelaaja.Aktiivinen;
                 return p != null && Vector3.Distance(p.Kasi.position, o) <= KasiSaumaM;

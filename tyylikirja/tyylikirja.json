@@ -95,9 +95,11 @@
     "kuva": "rgba(14, 9, 4, 0.92)"
   },
   "tila": {
-    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana.",
+    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana. live: ☾-listan LIVE-laatikon pohja päällä (oranssi; pois = teeman toiminto-harmaa; omistaja 8.10.2026 klo 09.1x).",
     "onnistuminen": "#2f6b3f",
-    "virhe": "#b03a2b"
+    "virhe": "#b03a2b",
+    "live": "#e8892e",
+    "live-kuulto": "rgba(232, 137, 46, 0.65)"
   },
   "kentta": {
     "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
@@ -179,6 +181,7 @@
     "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)", "variantit": ["SIRURIVI IRRALLAAN (.mk-chat__sirut--irrallaan; omistaja 5.10.2026 klo 19.0x, elävä opas): samat Pulun sirut ilman chat-paneelia, kullakin lasipinnan tausta (--tk-lasi-pinta, reunus --tk-lasi-reunus); kaksi vaihtoehtoa rinnakkain alareunan keskellä ja vieressä pieni puhu/kirjoita-siru (mikki), joka avaa Pulu-chatin syöttöineen ja käynnistää sanelun; häivytys --tk-kesto-sulku"] },
     "PINNATTU PALKKI": { "osa": true, "teemat": ["paperi"], "_selite": "PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026 klo 23.3x): ikkunan (nosto, Pulu-chat ym.) ylärivin pin-kuvake rivin muiden kuvakkeiden koossa; pinnattu ikkuna pienenee kartan liikkeestä yhden rivin palkiksi oikeaan yläreunaan nappien alle: pin-merkki, otsikko (apuri, ellipsi), tauko/jatka 34 pt ja ohut EDISTYMINEN-viiva; napautus palauttaa ikkunan, ei ✕:ää; vain yksi kerrallaan" },
     "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus", "tumma"], "kulma": "0 (ohut terävä viiva; Päätoimittaja 5.10.2026: ei kapselipäitä)", "variantit": ["LATAUSPALKKI (odotusruudun nimen alla, 140 × 3 pt, arvo 0–1, häivytys; omistaja 5.10.2026: linnan ja vastaavien lataukset)"] },
+    "LATAUSKUVA": { "teemat": ["tumma"], "koostuu": ["tausta (still-kuva)", "1–2 liikkuvaa kerrosta alfalla", "köydet vektoriviivoina kiintopisteestä liikkuvaan kerrokseen: riippuköydet (kori → kupu, kevyt riippuma) ja ankkuriköysi korista maahan (pieni kaari; omistaja 8.10.2026 klo 08.4x)", "nimi ja EDISTYMINEN/LATAUSPALKKI ennallaan päällä"], "liike": "vähäeleinen (omistaja 8.10.2026 klo 08.4x): sinimuotoinen heilahdus ±0,5–0,75° kääntöpisteen ympäri ja nousu–lasku enintään 4 pt neljännesjakson edellä, jakso 7–8 s; ei nykimistä; päivitys 30 fps ilman täyttä ruudunpäivitystä", "valokuva": "hidas lähentyminen ja siirto (Ken Burns) 1,00 → 1,04 / 8 s ja pehmeästi takaisin, ei hyppyä; nipistyszoom keskeyttää (oppaan latauskuva)", "esiin": "heti tai häivyttäen liike.avaus (alle liike.maksimi)", "ilman kerroksia": "nykyinen still-kuva", "_selite": "Kevyesti animoitu latauskuva (omistaja 8.10.2026 ~08.5x: 'Lataus kuvista pitää tehdä kevyesti animoituja. Esim ilmapallo kuva pitää tehdä kahdesta osasta uudestaan niin että pallo heiluu hitaasti ruudulla ja köysi piirretään vektorina'; Päätoimittaja: uusi pohja). Vain natiivi: UI/Latauskuva.cs, liike Linssit/Ydin/LatausLiike.cs." },
     "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
     "LAUTAPELI": {
       "koostuu": ["KUVANÄKYMÄ (lauta)", "PANEELI (ohjaimet)", "KORTTI (valinta ja voitto)"],
@@ -205,6 +208,8 @@
       "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
       "kontekstikuvakkeet": "seikkailun toimintonappi (omistaja 7.10.2026 klo 20.3x): käsi = poimi, käytä, avaa, aseta, laske; kaari = heitä; liekki = sytytä, puhalla, sammuta. Natiivin omat 24-ruudukon viivakuvakkeet (Ikonit.Kasi, Ikonit.Heittokaari, Ikonit.Liekki), viiva 1,75, ei tekstiä",
+      "saakuvakkeet": "pallon säätila ☾-napissa ja -listassa (omistaja 8.10.2026 klo 09.1x \"Saa tottakai piirtää\"): pilvi, sade, sumu, lumi, ukkonen; selkeä = paiva (aurinko). Natiivin omat 24×24-viivakuvakkeet (Ikonit.Viiva) samassa tyylissä kuin kontekstikuvakkeet: sama pilvi ylhäällä, alla sade (3 vinoviivaa), sumu (2 vaakaviivaa), lumi (2 kuusisakaraista hiutaletta) tai salama. Napissa aika ja sen kulmassa pieni sääkuvake, kun sää ei ole pois.",
+      "live": "☾-nappi LIVE-tilassa (omistaja 8.10.2026 klo 09.1x): napissa vain teksti LIVE (kapiteeli, lihava) ja pohja tila.live-kuulto (läpikuultava oranssi); koko, paikka ja kulma ennallaan (pyöristetty neliö, ei ovaalia).",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
       "linssivalikot": {
