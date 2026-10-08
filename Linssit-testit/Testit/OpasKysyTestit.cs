@@ -417,6 +417,58 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s.Siirtymassa && !s.KohdistaAvausKohteeseen("Pantheon", 41.8986, 12.4769), "siirron jälkeen ei kohdisteta");
         }
 
+        [Testi] static void ValmiinEsittelynKaupungissaEiReitinMiettimista()
+        {
+            // Omistaja TF 163 (Pariisi): "miksi lukija sanoo että mietin sopivan reitin? eikö se pitäisi olla jo valmiiksi mietittynä?"
+            Oleta.Sama(OpasSiltalauseet.OdotusValmis, OpasSiltalauseet.ValmiillaReitilla(OpasSiltalauseet.Odotus));
+            Oleta.Sama(null, OpasSiltalauseet.ValmiillaReitilla(OpasSiltalauseet.OdotusPaikalla), "paikallaan ei odotuslausetta");
+            Oleta.Sama(OpasSiltalauseet.Kierros, OpasSiltalauseet.ValmiillaReitilla(OpasSiltalauseet.Kierros), "muut ryhmät ennallaan");
+            var (ryhma, ehto) = OpasSiltalauseet.Rajaus(OpasSiltalauseet.OdotusValmis);
+            Oleta.Sama(OpasSiltalauseet.Odotus, ryhma);
+            foreach (var t in new[] { "Hetkinen, katson karttaa.", "Etsin meille parhaan reitin.", "Hetki vain, tarkistan suunnan." })
+                Oleta.Tosi(!ehto(new Siltalause { Teksti = t }), "reitin miettiminen pois: " + t);
+            foreach (var t in OpasSiltalauseet.LennonOdotukset) Oleta.Tosi(ehto(new Siltalause { Teksti = t }), "lennon odotus sallittu: " + t);
+        }
+
+        [Testi] static void KiertoHiipuuLennonAlussaSKayrana()
+        {
+            // Omistaja 23.4x: "kaikki kiihdytykset S-käyriä mukaillen": pysähdyksen kierto (0,9°/s) ei pysähdy kerralla lennon alkaessa,
+            // vaan kääntönopeus muuttuu jatkuvasti; pallo: suunta kääntyy etenemisen mukana.
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                var (s, p, puhe) = Pysahdyksella();
+                for (int i = 0; i < 100; i++) s.Paivita(0.05, _ => 5);   // kierto täydessä nopeudessa
+                s.AaniLoppui();
+                double ed = s.Asento.Suuntima, edNopeus = double.NaN, hyppy = 0, nopeusEnnen = 0;
+                bool lento = false; int lentoAskeleita = 0;
+                s.Esita(K("B", 55.6790, 12.5750));
+                for (int i = 0; i < 400 && lentoAskeleita < 80; i++)
+                {
+                    s.Paivita(0.05, _ => 5);
+                    double nopeus = KierrosLento.Kiedo(s.Asento.Suuntima - ed) / 0.05; ed = s.Asento.Suuntima;
+                    if (s.Vaihe == OpasVaihe.Lentaa) { lento = true; lentoAskeleita++; } else if (!lento) nopeusEnnen = nopeus;
+                    if (!double.IsNaN(edNopeus) && (lento || s.Vaihe == OpasVaihe.Lentaa)) hyppy = Math.Max(hyppy, Math.Abs(nopeus - edNopeus));
+                    edNopeus = nopeus;
+                }
+                Oleta.Tosi(lento, "lento alkoi");
+                // Omistaja 8.10.: pallon pysähdys ei kierrä kohteen ympäri (lipuminen kohti seuraavaa) → kääntö ennen lentoa pieni.
+                Oleta.Tosi(Math.Abs(nopeusEnnen) < 1.0, $"kääntö ennen lentoa {nopeusEnnen:F2}°/s (ei kiertoa)");
+                Oleta.Tosi(hyppy < 0.3, $"kääntönopeus muuttuu jatkuvasti lennon alussa (suurin hyppy {hyppy:F2}°/s / 50 ms)");
+            }
+            finally { OpasSilmukka.PalloLento = false; }
+        }
+
+        [Testi] static void KierronHiipuminenJatkuva()
+        {
+            double w = OpasKuvaus.KiertoAsteS, r = OpasKuvaus.KiertoAlkuS;
+            Oleta.Tosi(Math.Abs(OpasKuvaus.KierronHiipuminen(w, 0) + w * r / 2) < 1e-9, "alussa −nopeus·R/2 (lähtöasento siirretty +nopeus·R/2)");
+            Oleta.Tosi(Math.Abs(OpasKuvaus.KierronHiipuminen(w, r)) < 1e-9 && Math.Abs(OpasKuvaus.KierronHiipuminen(w, 2 * r)) < 1e-9, "R:n jälkeen 0");
+            double d0 = (OpasKuvaus.KierronHiipuminen(w, 0.001) - OpasKuvaus.KierronHiipuminen(w, 0)) / 0.001;
+            double d1 = (OpasKuvaus.KierronHiipuminen(w, r) - OpasKuvaus.KierronHiipuminen(w, r - 0.001)) / 0.001;
+            Oleta.Tosi(Math.Abs(d0 - w) < 0.01 && Math.Abs(d1) < 0.01, $"nopeus alussa {d0:F3} (= kierto), lopussa {d1:F3} (= 0)");
+        }
+
         [Testi] static void PelaajanToimintaHylkaaLykatynKysymyksen()
         {
             var (s, p, puhe) = Pysahdyksella();

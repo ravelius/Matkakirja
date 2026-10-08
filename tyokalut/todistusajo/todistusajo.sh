@@ -53,6 +53,10 @@ while (( $# )); do
 done
 [[ -n $ERA && -n $UDID && -n $APP && -n $SHA && -f $SKEN ]] || { sed -n 13,17p $0; exit 2; }
 [[ -d $APP ]] || { echo "ei .appia: $APP"; exit 2; }
+# T7-LAITESARJA (omistaja 7.10.2026; Natiiviseppä 8.10.): xcrun simctl → T7-sarja (simusarja.sh), vanha sisäinen UDID → saman
+# nimisen T7-laitteen UDID. T7 puuttuu → virhe, ei paluuta sisäiseen sarjaan. HUOM: nohup/xargs/timeout ohittavat xcrun-funktion → niissä --set "$MK_SIMSET" itse.
+source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2
+UDID=$(mk_kaanna $UDID)
 # Skenaarion oma aloitus: "alku <peli-komennot ;-eroteltuina>" korvaa --peli-oletuksen (esim. aloitusnäkymä ilman uutta peliä).
 alku=$(grep -m1 -E '^alku ' $SKEN | cut -d' ' -f2-); [[ -n $alku ]] && PELI=$alku
 
@@ -257,7 +261,7 @@ VERTAA
       else napautus_kirjaus "  määrä: ${selite:-$luokka}" "PUUTE: $saatu ≠ $n"; tulos 2 PUUTE "${selite:-$luokka}: $saatu kpl, odotettiin $n"; fi ;;
     video-alku)
       # Video simulaattorin ruudusta (ei ääntä; testimykistys). video-loppu lopettaa.
-      nohup xcrun simctl io $UDID recordVideo --codec=h264 --force "$L/${loput:-video}.mp4" > $L/video.log 2>&1 &
+      nohup xcrun simctl --set "$MK_SIMSET" io $UDID recordVideo --codec=h264 --force "$L/${loput:-video}.mp4" > $L/video.log 2>&1 &
       VIDEO_PID=$!; sleep 1.5; kirjaa "video alkoi: ${loput:-video}.mp4" ;;
     video-loppu)
       [[ -n ${VIDEO_PID:-} ]] && { kill -INT $VIDEO_PID; sleep 3; kirjaa "video valmis"; VIDEO_PID=""; } ;;

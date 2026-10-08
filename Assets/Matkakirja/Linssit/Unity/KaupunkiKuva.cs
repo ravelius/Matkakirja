@@ -47,21 +47,28 @@ namespace Matkakirja.Natiivi
         public static float Terava = 0f;
 
         // ---- VUOROKAUDENAJAN VALINTA (omistaja 6.10. 19.0x, Natiivi-UI:n nappi vasemmassa yläkulmassa; juna 152) ----
-        /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta", "yo" (Black Marble -valot, 6.10.).
+        /// <summary>Pelaajan valinta "paiva" tai "yo" (Black Marble -valot, 6.10.). OMISTAJA 8.10. 09.1x: "Kuumailmapallo saisi käynnistyä
+        /// oletuksena aina päivä vuorokauden ajassa, eli muutetaan pois se automaattitila" → oletus päivä, ☾ vaihtaa vain päivän ja yön
+        /// (Natiivi-UI kirjoittaa "paiva"/"yo"; vanhat "auto"/"aamu"/"ilta" → päivä). Juna 166: Saatila.Aika (LIVE asettaa LiveAika).
         /// Pysyy, kunnes vaihdetaan (myös seuraavissa avauksissa). Vaihto näkyy heti seuraavassa kehyksessä ilman uudelleenlatausta.</summary>
         public static string Valinta
         {
             get => valinta;
             set
             {
-                var v = value == "aamu" || value == "paiva" || value == "ilta" || value == "yo" ? value : "auto";
+                var v = value == "yo" ? "yo" : "paiva";
                 if (v == valinta) return;
                 valinta = v;
                 Debug.Log($"MATKAKIRJA kaupunki: vuorokausi valittu {v}");
                 Vaihtui?.Invoke(v);
             }
         }
-        static string valinta = "auto";
+        static string valinta = "paiva";
+        /// <summary>Pallon säätehosteiden painot ja salama (OpasSovitin joka kehys, PalloSaaVaikutus; juna 166): harmaus laskee valotusta,
+        /// saturaatiota ja kontrastia ja viilentää, horisontti harmaantuu, sumu tihenee; salama nostaa valotusta hetkeksi.</summary>
+        public static Matkakirja.Linssit.Kierros.SaaPainot Saa;
+        public static double Salama;
+        internal static readonly Color SaaHarmaa = new Color(0.60f, 0.63f, 0.68f, 1f);
         /// <summary>Valinta tai voimassa oleva tila vaihtui (UI päivittää napin kuvakkeen).</summary>
         public static event System.Action<string> Vaihtui;
         /// <summary>Voimassa oleva tila "aamu" | "paiva" | "ilta" | "yo" (automaattisessa kohteen oman ajan mukaan).</summary>
@@ -335,6 +342,8 @@ namespace Matkakirja.Natiivi
             KaupunkiYovalot.Paivita(this, georef0, kamera, yoOsuus);
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
+            float harmaus = Mathf.SmoothStep(0f, 1f, (float)KaupunkiKuva.Saa.Harmaus);
+            horisontti = Color.Lerp(horisontti, KaupunkiKuva.SaaHarmaa, 0.7f * harmaus);
             kamera.backgroundColor = horisontti;
             if (KaupunkiKuva.varit != null)
             {
@@ -344,6 +353,15 @@ namespace Matkakirja.Natiivi
                 KaupunkiKuva.varit.saturation.value = KaupunkiKuva.SavyKaytossa ? (float)savy.Saturaatio : KaupunkiKuva.Saturaatio;
             }
             if (KaupunkiKuva.valko != null) { KaupunkiKuva.valko.temperature.value = (float)savy.Lampotila; KaupunkiKuva.valko.tint.value = (float)savy.Savytys; }
+            // Sää (juna 166): harmaus ja salama sävyn päälle.
+            if (KaupunkiKuva.varit != null && (harmaus > 0.001f || KaupunkiKuva.Salama > 0.001))
+            {
+                // Juna 166 (video 165: liian vaisu): −1 EV, saturaatio −45, kontrasti −10, viileys −12.
+                KaupunkiKuva.varit.postExposure.value += -1.0f * harmaus + 2.2f * (float)KaupunkiKuva.Salama;
+                KaupunkiKuva.varit.saturation.value += -45f * harmaus;
+                KaupunkiKuva.varit.contrast.value += -10f * harmaus;
+                if (KaupunkiKuva.valko != null) KaupunkiKuva.valko.temperature.value += -12f * harmaus;
+            }
             if (KaupunkiKuva.jako != null)
             {
                 float lampo = KaupunkiKuva.SavyKaytossa ? Mathf.Clamp01((float)savy.Lampotila / 30f) : 0f;
@@ -374,14 +392,23 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA kaupunki: vuorokausi {(KaupunkiKuva.SavyKaytossa ? "päällä" : "pois")} ({KaupunkiKuva.Valinta}) tunti {tunti:F1}{(pakko >= 0 ? " (pakotettu)" : $", aurinko {aurinko:F0}°")}, valotus {savy.Valotus:F2} EV, lämpötila {savy.Lampotila:F0}, kupoli {(kupoli != null ? "päällä" : "pois")}");
             }
             RenderSettings.fogColor = horisontti;
-            if (!KaupunkiKuva.Sumu) { RenderSettings.fog = false; return; }
+            float saaSumu = Mathf.SmoothStep(0f, 1f, (float)KaupunkiKuva.Saa.Sumu);
+            if (!KaupunkiKuva.Sumu && saaSumu < 0.01f) { RenderSettings.fog = false; return; }
             var georef = kaupunki.Georef;
             float mitta = georef != null ? georef.transform.lossyScale.x : 1f;
             float korkeusM = georef != null ? Mathf.Max(30f, (kamera.transform.position.y - georef.transform.position.y) / Mathf.Max(1e-6f, mitta)) : 300f;
             RenderSettings.fog = true;
             RenderSettings.fogMode = FogMode.Linear;
-            RenderSettings.fogStartDistance = Mathf.Max(KaupunkiKuva.AlkuMinM, korkeusM * KaupunkiKuva.AlkuKerroin) * mitta;
-            RenderSettings.fogEndDistance = Mathf.Max(KaupunkiKuva.LoppuMinM, korkeusM * KaupunkiKuva.LoppuKerroin) * mitta;
+            float alku = KaupunkiKuva.Sumu ? Mathf.Max(KaupunkiKuva.AlkuMinM, korkeusM * KaupunkiKuva.AlkuKerroin) : float.MaxValue;
+            float loppu = KaupunkiKuva.Sumu ? Mathf.Max(KaupunkiKuva.LoppuMinM, korkeusM * KaupunkiKuva.LoppuKerroin) : float.MaxValue;
+            // Sääsumu (juna 166): tiheä sumu alkaa lähes kamerasta, kevyt pilvisellä kaukana; tiheämpi kahdesta.
+            if (saaSumu >= 0.01f)
+            {
+                alku = Mathf.Min(alku, Mathf.Max(60f, korkeusM * Mathf.Lerp(40f, 0.8f, saaSumu)));
+                loppu = Mathf.Min(loppu, Mathf.Max(400f, korkeusM * Mathf.Lerp(200f, 6f, saaSumu)));
+            }
+            RenderSettings.fogStartDistance = alku * mitta;
+            RenderSettings.fogEndDistance = loppu * mitta;
         }
     }
 }

@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde a9fe6aaa4951. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 7185ab2dba8a. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "a9fe6aaa4951";
+        public const string Lahde = "7185ab2dba8a";
 
         public static class Kehys
         {
@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
         {
             public static readonly Color32 Onnistuminen = new Color32(47, 107, 63, 255);
             public static readonly Color32 Virhe = new Color32(176, 58, 43, 255);
+            public static readonly Color32 Live = new Color32(232, 137, 46, 255);
+            public static readonly Color32 LiveKuulto = new Color32(232, 137, 46, 166);
         }
 
         public static class Kentta
@@ -190,6 +192,6 @@ namespace Matkakirja.Natiivi
             public static readonly (string Perhe, string Tyyli)[] ModerniLihava = { ("SF Pro Display", "Semibold"), ("SF Pro", "Semibold"), (".SF UI Display", "Semibold"), ("Helvetica Neue", "Medium"), ("Helvetica Neue", "Bold"), ("Helvetica", "Bold") };
         }
 
-        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "PINNATTU PALKKI", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT", "ISS-OHJAAMO" };
+        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "PINNATTU PALKKI", "EDISTYMINEN", "LATAUSKUVA", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT", "ISS-OHJAAMO" };
     }
 }

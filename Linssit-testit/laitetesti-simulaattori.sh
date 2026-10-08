@@ -15,7 +15,9 @@
 #
 # UDID=<simulaattorin UDID> (oletus: booted-laite)
 set -e
+source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2   # T7-laitesarja (Natiiviseppä 8.10.): xcrun simctl → T7
 UDID=${UDID:-$(xcrun simctl list devices booted -j | python3 -c 'import json,sys; d=json.load(sys.stdin)["devices"]; print(next(v["udid"] for k in d for v in d[k]))' 2>/dev/null)}
+UDID=$(mk_kaanna $UDID)
 ID=app.matkakirja.proto3d
 D=$(xcrun simctl get_app_container $UDID $ID data)/Documents
 ULOS=${2:-/tmp/linssit-laitetesti-$(date +%Y%m%d-%H%M%S)}

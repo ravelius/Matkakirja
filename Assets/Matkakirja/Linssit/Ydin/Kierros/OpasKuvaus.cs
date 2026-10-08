@@ -90,14 +90,17 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Pysähdyksen asento hetkellä aikaS saapumisesta: pehmeästi alkava hidas kierto ja kevyt dolly sisään.
         /// aikaS = 0 antaa täsmälleen kehyksen (lennon loppu), joten saapuminen on jatkuva.</summary>
-        public static Kuvakulma Pysahdyksella(Pysahdys p, double aikaS)
+        public static Kuvakulma Pysahdyksella(Pysahdys p, double aikaS) => Pysahdyksella(p, aikaS, true);
+
+        public static Kuvakulma Pysahdyksella(Pysahdys p, double aikaS, bool kiertaa)
         {
             double t = Math.Max(0, aikaS);
             // Kierto: kiihtyy KiertoAlkuS:ssa täyteen nopeuteen (integroitu smoothstep → kulma jatkuva ja derivaatta jatkuva).
             double kierto = t < KiertoAlkuS
                 ? KiertoAsteS * KiertoAlkuS * SmoothstepIntegraali(t / KiertoAlkuS)
                 : KiertoAsteS * (KiertoAlkuS * 0.5 + (t - KiertoAlkuS));
-            double dolly = 1 - DollyOsuus * (1 - Math.Exp(-t / DollyAikaS));
+            // Dolly S-käyränä (omistaja 23.4x): nopeus alkaa nollasta (1 − e^(−(t/τ)²)), ei täydellä nopeudella saapumishetkellä.
+            double dolly = 1 - DollyOsuus * (1 - Math.Exp(-(t / DollyAikaS) * (t / DollyAikaS)));
             // Toinen kehys: siirtolento VaiheS → VaiheS + SiirtoS (smootherstep), kaarena hieman ulos (ei läpi kohteen).
             double s = t <= VaiheS ? 0 : t >= VaiheS + SiirtoS ? 1 : KierrosLento.Smootherstep((t - VaiheS) / SiirtoS);
             bool lahemmas = Math.Abs(p.Kallistus - RakennusKallistus) < 0.5;   // rakennus/torni: yksityiskohta lähempää
@@ -109,8 +112,30 @@ namespace Matkakirja.Linssit.Kierros
             // (kattoraja hoitaa lisäksi OpasOhjaus.Sovella).
             if (lahemmas) et = Math.Max(et, Math.Min(p.EtaisyysM, RakennusEtMinM));
             if (p.MinEtM > 0) et = Math.Max(et, p.MinEtM);   // korkea kohde: koko kohde kuvassa myös lähemmäs-vaiheessa ja dollyssa
+            if (!kiertaa) { kierto = 0; lisaSuunta = 0; }   // pallo: ei kiertoa kohteen ympäri (Lipuminen hoitaa liikkeen)
             return new Kuvakulma(p.Lat, p.Lon, et, kall, KierrosLento.Kiedo(p.Suuntima + kierto + lisaSuunta), p.KatseKorkeusM);
         }
+
+        /// <summary>
+        /// LIPUMINEN (omistaja 8.10. 08.3x: "kun ollaan katsomassa kohdetta, [pallo] valmiiksi lipuu siihen suuntaan, missä seuraava kohde
+        /// on, pitäen kuitenkin kameran suunnan siihen päin, missä nykyinen kohde on"): silmä siirtyy vaakasuunnassa matkan d kohti
+        /// pistettä (lat, lon), katsepiste ja silmän korkeus pysyvät; suuntima, kallistus ja etäisyys lasketaan uudesta silmästä.
+        /// </summary>
+        public static Kuvakulma Lipunut(Kuvakulma k, double kohtiLat, double kohtiLon, double dM)
+        {
+            if (dM <= 0.01) return k;
+            var e = KameraPaikka(k, k.Lat, k.Lon);
+            const double R = 6371000, A = Math.PI / 180;
+            double ke = (kohtiLon - k.Lon) * R * Math.Cos(k.Lat * A) * A, kn = (kohtiLat - k.Lat) * R * A;
+            double de = ke - e.e, dn = kn - e.n, pit = Math.Sqrt(de * de + dn * dn);
+            if (pit < 1) return k;
+            double se = e.e + de / pit * dM, sn = e.n + dn / pit * dM;   // uusi silmä
+            double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn), pysty = e.u - k.KatseKorkeusM;
+            double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
+            return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
+        }
+        /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
+        public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
 
         /// <summary>
         /// Lento a → b osuudella t (0…1). PEHMEÄ KAARI (omistaja 6.10. 23.4x: "kamera liikkuu välillä turhan nopeasti ja tekee turhan
@@ -124,20 +149,160 @@ namespace Matkakirja.Linssit.Kierros
             t = Math.Max(0, Math.Min(1, t));
             double matka = KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon);
             if (matka >= LahiRajaM) return OpasSilmukka.Lennossa(a, b, t);
+            if (OpasSilmukka.PalloLento) return PalloLennossa(a, b, t, matka);
             double s = Eteneminen(t, matka);
-            double sp = Math.Sin(Math.PI * t), h = sp * sp;
+            // Nousukaari etenemisen mukaan (Päätoimittaja 8.10. 07.5x, juna 164 -video: lepo → huippu 1–1,5 s ja viimeinen 0,5 s
+            // jyrkkä): ajasta laskettu sin²(πt) aloitti nousun täydellä kiihtyvyydellä (h'' = 2π² hetkellä 0) ja päätti laskun
+            // suoraviivaisesti nollaan; s:stä laskettuna nousu, kallistus ja etäisyys alkavat ja loppuvat samalla S-käyrällä kuin eteneminen.
+            double h = Kaari(s);
             double L(double x, double y) => x + (y - x) * s;
             double kall = L(a.Kallistus, b.Kallistus) - KeskiJyrkennys * h;
             double cosK = Math.Max(0.25, Math.Cos(kall * Math.PI / 180));
             double perus = L(a.EtaisyysM, b.EtaisyysM);
             double nousu = Rajaa((matka < 1000 ? LahiKaariOsuus : KaariOsuus) * matka, 0, KaariMaxM);   // pystysuunnassa (m)
+            // KUVAN NOPEUS (Päätoimittaja / Laitetestaaja 8.10. 08.3x: Louvreen tultaessa näennäinen nopeus kasvoi laskeutuessa):
+            // vaakaliike etenee nykyisen korkeuden suhteessa (vaakanopeus ∝ korkeus), joten maan näennäinen nopeus kuvassa seuraa
+            // suoraan etenemisen S-käyrää eikä kasva matalalla; korkealla vauhti on suurempi, matalalla pienempi.
+            double kMid = Math.Max(0.25, Math.Cos(((a.Kallistus + b.Kallistus) / 2 - KeskiJyrkennys) * Math.PI / 180));
+            double pMid = (a.EtaisyysM + b.EtaisyysM) / 2;
+            double sv = VaakaOsuus(s, pMid, Math.Min(nousu / kMid, pMid));   // painotus enintään 2 × (huippunopeus ei karkaa)
+            double V(double x, double y) => x + (y - x) * sv;
             double et = perus + nousu / cosK * h;
             et = Math.Max(et, perus + (MinKorkeusM / cosK - perus) * h);   // kesken lennon vähintään MinKorkeusM kohteen yläpuolella
-            double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
-            double w1 = KierrosLento.Smootherstep(Math.Min(1, t * 3)), w2 = KierrosLento.Smootherstep(Math.Max(0, t * 3 - 2));
-            double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(lento - a.Suuntima) * w1);
-            suunta = KierrosLento.Kiedo(suunta + KierrosLento.Kiedo(b.Suuntima - suunta) * w2);
-            return new Kuvakulma(L(a.Lat, b.Lat), L(a.Lon, b.Lon), et, kall, suunta, L(a.KatseKorkeusM, b.KatseKorkeusM));
+            double suunta;
+            if (OpasSilmukka.PalloLento)
+                // Pallo (omistaja 23.4x: "nopeat käännökset heti kun kohde vaihtuu, ennen kuin siirtyminen alkaa, ovat kaikkein
+                // epärealistisimpia; kaikki kiihdytykset S-käyriä mukaillen"): suunta kääntyy suoraan etenemisen mukana (s, ei aika t),
+                // joten paikallaan ei käännytä, ja kääntönopeus seuraa lentonopeuden S-käyrää (alkaa ja loppuu nollasta, huippu 2Δ/T).
+                suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * sv);   // vaakaliikkeen mukana
+            else
+            {
+                double lento = matka < 50 ? b.Suuntima : OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
+                double w1 = KierrosLento.Smootherstep(Math.Min(1, t * 3)), w2 = KierrosLento.Smootherstep(Math.Max(0, t * 3 - 2));
+                suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(lento - a.Suuntima) * w1);
+                suunta = KierrosLento.Kiedo(suunta + KierrosLento.Kiedo(b.Suuntima - suunta) * w2);
+            }
+            return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, kall, suunta, L(a.KatseKorkeusM, b.KatseKorkeusM));
+        }
+
+        /// <summary>
+        /// LENNON TELEMETRIA (Päätoimittaja 8.10. 08.3x): silmän nopeusnäytteistä (m/s, tasainen väli dt) nousun ja hidastuksen
+        /// kesto 10 % → 90 % huipusta (s) sekä kuvan nopeuden (nopeus / katse-etäisyys) suurin kasvu huipun jälkeen (osuutena).
+        /// </summary>
+        public static (double nousuS, double hidastusS, double huippu, double kuvaKasvu) Telemetria(IReadOnlyList<double> nopeus, IReadOnlyList<double> etaisyys, double dt)
+        {
+            int n = nopeus.Count;
+            if (n < 3) return (0, 0, 0, 0);
+            double huippu = 0; int ih = 0;
+            for (int i = 0; i < n; i++) if (nopeus[i] > huippu) { huippu = nopeus[i]; ih = i; }
+            int Eka(double raja) { for (int i = 0; i < n; i++) if (nopeus[i] >= raja) return i; return 0; }
+            int Vika(double raja) { for (int i = n - 1; i >= 0; i--) if (nopeus[i] >= raja) return i; return n - 1; }
+            double nousu = (Eka(0.9 * huippu) - Eka(0.1 * huippu)) * dt, hidastus = (Vika(0.1 * huippu) - Vika(0.9 * huippu)) * dt;
+            // Kuvan nopeus kuvan huipusta loppuun: suurin nousu edellisestä minimistä (0 = ei kasva).
+            double kuvaHuippu = 0; int ik = 0;
+            for (int i = 0; i < n; i++) { double w = nopeus[i] / Math.Max(1, etaisyys[i]); if (w > kuvaHuippu) { kuvaHuippu = w; ik = i; } }
+            double kasvu = 0, min = double.MaxValue;
+            for (int i = ik; i < n; i++)
+            {
+                double w = nopeus[i] / Math.Max(1, etaisyys[i]);
+                min = Math.Min(min, w);
+                if (kuvaHuippu > 0) kasvu = Math.Max(kasvu, (w - min) / kuvaHuippu);
+            }
+            return (nousu, hidastus, huippu, kasvu);
+        }
+
+        /// <summary>
+        /// PALLOLENTO OPTIMAALISELLA ZOOMAUS- JA PANOROINTIPOLULLA (van Wijk & Nuij 2003; juna 166, video 165:n telemetria: pitkillä
+        /// hypyillä kuvan nopeudella oli kaksi kumpua, nousu ja laskeutuminen, Concorde +69 % huipun jälkeen): näkymän leveys w ∝
+        /// katse-etäisyys ja vaakamatka u kulkevat geodeesia pitkin, jolla koettu nopeus on vakio polun parametrissa s; s = S·p, missä
+        /// p on etenemisen S-käyrä (rampit PalloProfiili) → kuvan nopeudella on yksi kumpu, ja se alkaa ja loppuu nollasta. Suunta ja
+        /// kallistus seuraavat vaakaosuutta (ei kääntymistä paikallaan). ZoomRho: pienempi = matalampi kaari.
+        /// </summary>
+        public const double ZoomRho = 0.6;   // 2,5 km: et 420 → ~600 m → 350 m (ennen ~1 500 m)
+        static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka)
+        {
+            double p = Eteneminen(t, matka);
+            var (sv, et) = ZoomPolku(Math.Max(1, a.EtaisyysM), Math.Max(1, b.EtaisyysM), matka, p);
+            et = SumennusNosto(a, b, sv, et);
+            double V(double x, double y) => x + (y - x) * sv;
+            double suunta = KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * sv);
+            return new Kuvakulma(V(a.Lat, b.Lat), V(a.Lon, b.Lon), et, V(a.Kallistus, b.Kallistus), suunta, V(a.KatseKorkeusM, b.KatseKorkeusM));
+        }
+
+        /// <summary>van Wijk–Nuij: leveydestä w0 leveyteen w1 vaakamatkan u1 yli; p 0…1 → (vaakaosuus 0…1, leveys).</summary>
+        public static (double osuus, double leveys) ZoomPolku(double w0, double w1, double u1, double p)
+        {
+            p = Math.Max(0, Math.Min(1, p));
+            if (u1 < 1e-3 * Math.Max(w0, w1)) return (p, w0 * Math.Exp(Math.Log(w1 / w0) * p));   // pelkkä zoomaus
+            double r = ZoomRho, r2 = r * r, r4 = r2 * r2;
+            double b0 = (w1 * w1 - w0 * w0 + r4 * u1 * u1) / (2 * w0 * r2 * u1), b1 = (w1 * w1 - w0 * w0 - r4 * u1 * u1) / (2 * w1 * r2 * u1);
+            double q0 = -Asinh(b0), q1 = -Asinh(b1);   // ln(−b + √(b² + 1)) = −asinh(b), ilman kumoutumista
+            double S = (q1 - q0) / r, s = S * p;
+            double u = w0 / r2 * (Math.Cosh(q0) * Math.Tanh(r * s + q0) - Math.Sinh(q0));
+            double w = w0 * Math.Cosh(q0) / Math.Cosh(r * s + q0);
+            return (Math.Max(0, Math.Min(1, u / u1)), w);
+        }
+        static double Asinh(double x) => Math.Sign(x) * Math.Log(Math.Abs(x) + Math.Sqrt(x * x + 1));
+
+        /// <summary>
+        /// GOOGLEN SUMENTAMAT KOHTEET (Päätoimittaja 8.10. 10.3x, video 165: "huurrelasin näköiset läiskät" olivat Googlen 3D-aineiston
+        /// omia sumennuksia, prefektuuri ja Élysée): kun lentolinja kulkee alle SumennusRajaM:n päästä, katse-etäisyys nousee pehmeällä
+        /// kummulla ohituskohdan ympärillä kohti SumennusEtM:ää, jolloin sumennus näkyy pienenä kaukana. Reittiä ja järjestystä ei
+        /// muuteta eikä mitään peitetä omalla kerroksella (Googlen ehdot). Kumpu häviää lennon päissä (kehykset ennallaan). Lisää
+        /// kohteita sitä mukaa kuin niitä löytyy videoista (sama tunnistus: läiskä liikkuu maiseman mukana myös laattojen ollessa 100 %).
+        /// </summary>
+        public static readonly (string nimi, double lat, double lon)[] GoogleSumennukset =
+        {
+            ("Pariisin poliisiprefektuuri", 48.8541, 2.3470),
+            ("Élysée-palatsi", 48.8704, 2.3167),
+        };
+        public const double SumennusRajaM = 400, SumennusTaysiM = 300, SumennusEtM = 1100, SumennusIkkuna = 0.35, SumennusReuna = 0.08;
+        /// <summary>A/B ja testit: false = ei nostoa.</summary>
+        public static bool SumennusNostoPaalla = true;
+
+        /// <summary>Katse-etäisyys nostettuna sumennuksen kohdalla (vaakaosuus sv lennolla a → b).</summary>
+        public static double SumennusNosto(Kuvakulma a, Kuvakulma b, double sv, double et)
+        {
+            if (!SumennusNostoPaalla) return et;
+            const double R = 6371000, A = Math.PI / 180;
+            double cl = Math.Cos(a.Lat * A);
+            double bx = (b.Lon - a.Lon) * R * cl * A, by = (b.Lat - a.Lat) * R * A, l2 = bx * bx + by * by;
+            double nosto = 0;
+            foreach (var (_, la, lo) in GoogleSumennukset)
+            {
+                double sx = (lo - a.Lon) * R * cl * A, sy = (la - a.Lat) * R * A;
+                double k = l2 < 1 ? 0 : Math.Max(0, Math.Min(1, (sx * bx + sy * by) / l2));
+                double dx = sx - k * bx, dy = sy - k * by, d = Math.Sqrt(dx * dx + dy * dy);
+                if (d >= SumennusRajaM) continue;
+                double voima = 1 - KierrosLento.Smootherstep(Math.Max(0, Math.Min(1, (d - SumennusTaysiM) / (SumennusRajaM - SumennusTaysiM))));   // täysi ≤ 300 m, hiipuu 400 m:iin
+                double ikkuna = 1 - KierrosLento.Smootherstep(Math.Min(1, Math.Abs(sv - k) / SumennusIkkuna));
+                double reuna = KierrosLento.Smootherstep(Math.Min(1, Math.Min(sv, 1 - sv) / SumennusReuna));
+                nosto = Math.Max(nosto, voima * ikkuna * reuna);
+            }
+            return nosto <= 0 ? et : et + (Math.Max(et, SumennusEtM) - et) * nosto;
+        }
+
+        /// <summary>
+        /// Nousukaari 0–1 etenemisestä (Päätoimittaja 8.10. 08.3x: "laskeutuminen myös S-käyrällä ja ennen jarrutusta"): nousu
+        /// smootherstepinä 0–KaariNousuLoppu, huippu, lasku KaariLaskuAlku–KaariLaskuLoppu; loppumatka loppukorkeudella, jolloin
+        /// jarrutuksen viimeinen osa on vaakaliikettä eikä laskeutuminen kasvata kuvan nopeutta.
+        /// </summary>
+        public const double KaariNousuLoppu = 0.4, KaariLaskuAlku = 0.45, KaariLaskuLoppu = 0.85;
+        public static double Kaari(double p)
+        {
+            if (p <= 0 || p >= KaariLaskuLoppu) return 0;
+            if (p < KaariNousuLoppu) return KierrosLento.Smootherstep(p / KaariNousuLoppu);
+            if (p <= KaariLaskuAlku) return 1;
+            return KierrosLento.Smootherstep((KaariLaskuLoppu - p) / (KaariLaskuLoppu - KaariLaskuAlku));
+        }
+
+        /// <summary>Vaakaosuus etenemisestä p, kun korkeus on perus + kaari·Kaari(p): ∫₀ᵖ H / ∫₀¹ H (kaari 0 → p); Simpson 48 väliä.</summary>
+        public static double VaakaOsuus(double p, double perus, double kaari)
+        {
+            p = Math.Max(0, Math.Min(1, p));
+            if (kaari <= 1e-9 || perus + kaari <= 1e-9) return p;
+            double I(double x) { const int n = 48; double hx = x / n, sum = 0; for (int i = 0; i <= n; i++) { double w = i == 0 || i == n ? 1 : (i % 2 == 1 ? 4 : 2); sum += w * (perus + kaari * Kaari(i * hx)); } return sum * hx / 3; }
+            return I(p) / I(1);
         }
 
         /// <summary>Kameran paikka (m) paikallisessa ENU:ssa pisteestä (lat0, lon0): katsekohde − katsesuunta × etäisyys.</summary>
@@ -174,16 +339,21 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>
         /// Eteneminen 0…1 ajan osuudesta: pehmeä kiihdytys, tasainen matkavauhti ja pehmeä jarrutus (nopeus nousee ja laskee
-        /// smoothstep-rampilla, joten nopeus ja kiihtyvyys ovat jatkuvia). Lyhyellä matkalla ramppi on puolet lennosta (S-käyrä),
+        /// smootherstep-rampilla, joten nopeus, kiihtyvyys ja nykäisy ovat jatkuvia). Lyhyellä matkalla ramppi on puolet lennosta (S-käyrä),
         /// pitkällä (≥ 2 km) neljännes, jolloin keskellä on tasainen vauhti (Päätoimittaja 23.4x).
         /// </summary>
+        /// <summary>Rampin osuus lennosta matkan mukaan: ≤ 500 m puolet (S-käyrä), ≥ 2 km neljännes.</summary>
+        public static double RamppiOsuus(double matkaM) => matkaM >= 2000 ? 0.25 : matkaM <= 500 ? 0.5 : 0.5 - 0.25 * (matkaM - 500) / 1500;
+
         public static double Eteneminen(double t, double matkaM)
         {
             t = Math.Max(0, Math.Min(1, t));
-            double a = matkaM >= 2000 ? 0.25 : matkaM <= 500 ? 0.5 : 0.5 - 0.25 * (matkaM - 500) / 1500;
+            double a = OpasSilmukka.PalloLento ? OpasSilmukka.PalloProfiili(matkaM).osuus : RamppiOsuus(matkaM);
             double kokonais = 1 - a;   // a·½ + (1 − 2a) + a·½
-            double x = t < a ? a * SmoothstepIntegraali(t / a)
-                : t > 1 - a ? kokonais - a * SmoothstepIntegraali((1 - t) / a)
+            // Nopeusrampit smootherstepinä (Päätoimittaja 8.10. 07.5x): kiihtyvyys alkaa ja loppuu nollasta (ei nykäisyä), rampin
+            // pinta-ala sama a/2 kuin smoothstepillä → huippunopeus ja kesto ennallaan (omistaja).
+            double x = t < a ? a * SmootherstepIntegraali(t / a)
+                : t > 1 - a ? kokonais - a * SmootherstepIntegraali((1 - t) / a)
                 : a * 0.5 + (t - a);
             return x / kokonais;
         }
@@ -248,6 +418,27 @@ namespace Matkakirja.Linssit.Kierros
         static double Rajaa(double x, double min, double max) => Math.Max(min, Math.Min(max, x));
 
         /// <summary>∫₀ˣ smoothstep(u) du = x³ − x⁴/2 (x ∈ 0…1; x = 1 → 0,5).</summary>
-        static double SmoothstepIntegraali(double x) => x * x * x - 0.5 * x * x * x * x;
+        /// <summary>∫₀ˣ smoothstep (0 ≤ x ≤ 1; arvo 0,5, kun x = 1): S-käyrän mukaan kiihtyvän liikkeen kuljettu osuus.</summary>
+        public static double SmoothstepIntegraali(double x) => x * x * x - 0.5 * x * x * x * x;
+        /// <summary>∫₀ˣ smootherstep = x⁶ − 3x⁵ + 2,5x⁴ (arvo 0,5 kohdassa 1).</summary>
+        public static double SmootherstepIntegraali(double x) { double x4 = x * x * x * x; return x4 * (x * x - 3 * x + 2.5); }
+
+        /// <summary>Pysähdyksen kierron nopeus (°/s) ajassa aikaS saapumisesta (S-käyrä KiertoAlkuS:ssa täyteen).</summary>
+        public static double KiertoNopeus(double aikaS)
+        {
+            double x = Math.Max(0, Math.Min(1, aikaS / KiertoAlkuS));
+            return KiertoAsteS * x * x * (3 - 2 * x);
+        }
+
+        /// <summary>
+        /// Kierron jatko lennon alussa (omistaja 23.4x: "kaikki kiihdytykset S-käyriä mukaillen"): lähtöhetken kiertonopeus nopeus
+        /// hiipuu S-käyrää pitkin KiertoAlkuS:ssa nollaan. Palauttaa kulman (°) suhteessa lopulliseen jatkoon (nopeus × KiertoAlkuS / 2):
+        /// alussa −nopeus·R/2, R:n jälkeen 0, joten lähtöasentoa siirretään +nopeus·R/2 ja kulma on jatkuva molemmissa päissä.
+        /// </summary>
+        public static double KierronHiipuminen(double nopeus, double aikaS)
+        {
+            double r = KiertoAlkuS, x = Math.Max(0, Math.Min(1, aikaS / r));
+            return nopeus * r * (x - SmoothstepIntegraali(x) - 0.5);
+        }
     }
 }
