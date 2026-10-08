@@ -1,0 +1,421 @@
+{
+ "kaupunki": "monaco",
+ "kaupunkiQ": "Q235",
+ "kohteet": [
+  {
+   "q": "Q1779905",
+   "nimi": "Monte Carlon kasino",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 43.73917,
+   "lon": 7.42796,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "( 1865 ) Casino Royale (53384828306).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(_1865_)_Casino_Royale_(53384828306).jpg?width=1280",
+     "tekija": "Thank You (25 Millions ) views from Fresno, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(_1865_)_Casino_Royale_(53384828306).jpg",
+     "selite": "Charles Garnierin suunnittelema kasino on Monte Carlon tunnetuin rakennus.",
+     "leveys": 5161,
+     "korkeus": 3441,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Le casino de Monte-Carlo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_casino_de_Monte-Carlo.JPG?width=1280",
+     "tekija": "Fruitpunchline",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_casino_de_Monte-Carlo.JPG",
+     "selite": "Kasinon runsaasti koristeltu julkisivu avautuu puutarhaan ja palmuihin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "( 1865 ) Casino Royale (53769805241).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(_1865_)_Casino_Royale_(53769805241).jpg?width=1280",
+     "tekija": "Thank You (25 Millions ) views from Fresno, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(_1865_)_Casino_Royale_(53769805241).jpg",
+     "selite": "Kasinon edustan suihkulähteet kuuluvat Monte Carlon tunnetuimpiin näkymiin.",
+     "leveys": 6000,
+     "korkeus": 3728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "2016 Casino de Monte Carlo 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Casino_de_Monte_Carlo_01.jpg?width=1280",
+     "tekija": "Jordiferrer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Casino_de_Monte_Carlo_01.jpg",
+     "selite": "Kasinon sisäänkäynnin lasikatos ja tornit hallitsevat Casino-aukiota.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1164788",
+   "nimi": "Monacon ruhtinaallinen palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 43.73142,
+   "lon": 7.42028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palais Princier de Monaco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_Princier_de_Monaco.jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_Princier_de_Monaco.jpg",
+     "selite": "Palatsi on Grimaldien ruhtinassuvun asuinpaikka Kalliolla.",
+     "leveys": 6016,
+     "korkeus": 3384,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55115",
+   "nimi": "Monaco-Ville",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 43.73097,
+   "lon": 7.42481,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Le rocher de Monaco (33746809898).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_rocher_de_Monaco_(33746809898).jpg?width=1280",
+     "tekija": "Jean-Pierre Dalbéra from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_rocher_de_Monaco_(33746809898).jpg",
+     "selite": "Monaco-Villen vanha kaupunki sijaitsee kallioniemellä meren yläpuolella.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monaco Jardin botanique Vue sur le Rocher de Monaco 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco_Jardin_botanique_Vue_sur_le_Rocher_de_Monaco_5.jpg?width=1280",
+     "tekija": "Zairon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monaco_Jardin_botanique_Vue_sur_le_Rocher_de_Monaco_5.jpg",
+     "selite": "Kalliolla palatsi ja vanhankaupungin talot kohoavat jyrkkien muurien päällä.",
+     "leveys": 4553,
+     "korkeus": 3237,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q45240",
+   "nimi": "Monte Carlo",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 43.73894,
+   "lon": 7.42524,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monaco Monte Carlo 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco_Monte_Carlo_1.jpg?width=1280",
+     "tekija": "Martinp1",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monaco_Monte_Carlo_1.jpg",
+     "selite": "Monte Carlon kaupunginosa kohoaa terasseina satamaa ympäröivillä rinteillä.",
+     "leveys": 4680,
+     "korkeus": 2684,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q667450",
+   "nimi": "Monacon katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 43.73021,
+   "lon": 7.42266,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral of Our Lady Immaculate, Monaco (front).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_Our_Lady_Immaculate%2C_Monaco_(front).jpg?width=1280",
+     "tekija": "Uhooep",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Our_Lady_Immaculate%2C_Monaco_(front).jpg",
+     "selite": "Valkoinen romaaninen katedraali on ruhtinaiden hautapaikka.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedrale de Monaco-Trois quarts.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedrale_de_Monaco-Trois_quarts.JPG?width=1280",
+     "tekija": "Original uploader was DarioSpagnolo at fr.wikipedia",
+     "lisenssi": "CC BY-SA 1.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/1.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedrale_de_Monaco-Trois_quarts.JPG",
+     "selite": "Katedraali rakennettiin 1800-luvun lopulla La Turbie -kalkkikivestä.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathedral of Our Lady Immaculate, Monaco, 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_Our_Lady_Immaculate%2C_Monaco%2C_2010.jpg?width=1280",
+     "tekija": "Workhorse.investor",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Our_Lady_Immaculate%2C_Monaco%2C_2010.jpg",
+     "selite": "Katedraalin julkisivua reunustavat palmut ja pinjat.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q851527",
+   "nimi": "Monacon merimuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 43.73083,
+   "lon": 7.42528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monaco BW 2011-06-07 17-50-43.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco_BW_2011-06-07_17-50-43.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monaco_BW_2011-06-07_17-50-43.jpg",
+     "selite": "Merimuseo avautui 1910 ruhtinas Albert I:n perustamana merentutkimuksen keskuksena.",
+     "leveys": 8358,
+     "korkeus": 5066,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monaco - Ozeanografisches Museum - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco_-_Ozeanografisches_Museum_-_panoramio_(1).jpg?width=1280",
+     "tekija": "giggel",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monaco_-_Ozeanografisches_Museum_-_panoramio_(1).jpg",
+     "selite": "Museorakennus kohoaa suoraan jyrkältä kalliolta Välimeren yllä.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Monaco - panoramio (129).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco_-_panoramio_(129).jpg?width=1280",
+     "tekija": "avu-edm",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monaco_-_panoramio_(129).jpg",
+     "selite": "Ylhäältä näkee museon sijainnin Kallion juurella merenrannalla.",
+     "leveys": 2816,
+     "korkeus": 1872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55095",
+   "nimi": "La Condamine",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 43.73461,
+   "lon": 7.42155,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monaco City 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monaco_City_001.jpg?width=1280",
+     "tekija": "Mайкл Гиммельфарб",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monaco_City_001.jpg",
+     "selite": "La Condamine on Herkuleen sataman ympärille kasvanut ruhtinaskunnan vanha satamakaupunginosa.",
+     "leveys": 6843,
+     "korkeus": 2176,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "La Condamine - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Condamine_-_panoramio.jpg?width=1280",
+     "tekija": "Alistair Cunningham",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Condamine_-_panoramio.jpg",
+     "selite": "Satamakaupunginosan punakattoiset talot ja vuoret muodostavat Monacon tyypillisen kaupunkikuvan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55098",
+   "nimi": "Fontvieille",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 43.7277,
+   "lon": 7.41816,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fontvieille - 54848315283.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fontvieille_-_54848315283.jpg?width=1280",
+     "tekija": "Alexandre Prevot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fontvieille_-_54848315283.jpg",
+     "selite": "Fontvieille on mereen täytetylle maalle 1970-luvulla rakennettu kaupunginosa.",
+     "leveys": 3000,
+     "korkeus": 2003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fontveille - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fontveille_-_panoramio.jpg?width=1280",
+     "tekija": "Alistair Cunningham",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fontveille_-_panoramio.jpg",
+     "selite": "Fontvieillen pieni satama sijaitsee Kallion eteläpuolella.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55088",
+   "nimi": "Larvotto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 43.74678,
+   "lon": 7.43333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Larvotto Monaco IMG 1138.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Larvotto_Monaco_IMG_1138.jpg?width=1280",
+     "tekija": "Alexander Migl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Larvotto_Monaco_IMG_1138.jpg",
+     "selite": "Larvotto on Monacon itäinen rantakaupunginosa, jossa on ruhtinaskunnan julkinen ranta.",
+     "leveys": 5721,
+     "korkeus": 3814,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Larvotto - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Larvotto_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Mister No",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Larvotto_-_panoramio_(1).jpg",
+     "selite": "Larvotton hiekkaranta jatkuu Ranskan rajalle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1279896",
+   "nimi": "Hôtel de Paris",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 43.73911,
+   "lon": 7.42739,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monte Carlo Monaco February 2013 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monte_Carlo_Monaco_February_2013_-_panoramio.jpg?width=1280",
+     "tekija": "Bengt Nyman",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monte_Carlo_Monaco_February_2013_-_panoramio.jpg",
+     "selite": "Belle Époque -ajan Hôtel de Paris on Monte Carlon arvostetuin hotelli.",
+     "leveys": 7731,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hôtel de Paris Monte-Carlo 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%B4tel_de_Paris_Monte-Carlo_001.jpg?width=1280",
+     "tekija": "Arnaud 25",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_Paris_Monte-Carlo_001.jpg",
+     "selite": "Hotelli seisoo kasinon vieressä Casino-aukion laidalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama von Monaco-La Turbie.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_von_Monaco-La_Turbie.jpg?width=1280",
+   "tekija": "Tobi 87",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_von_Monaco-La_Turbie.jpg",
+   "selite": "Monaco on maailman toiseksi pienin valtio ja tiheimmin asuttu.",
+   "leveys": 6869,
+   "korkeus": 3511,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama of Port Hercule (50326133393).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Port_Hercule_(50326133393).jpg?width=1280",
+   "tekija": "Jorge Láscar from Australia",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Port_Hercule_(50326133393).jpg",
+   "selite": "Herkuleen satama ja Kallio muodostavat ruhtinaskunnan tunnistettavimman maiseman.",
+   "leveys": 7220,
+   "korkeus": 4246,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

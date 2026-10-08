@@ -1,0 +1,216 @@
+{
+ "kaupunki": "vaduz",
+ "kaupunkiQ": "Q1844",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q694782",
+   "nimi": "Vaduzin linna",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 47.13944,
+   "lon": 9.52444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "5222-Vaduz (3447543342).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5222-Vaduz_(3447543342).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5222-Vaduz_(3447543342).jpg",
+     "selite": "Vaduzin linna kohoaa kaupungin yläpuolella ja on Liechtensteinin ruhtinasperheen asuinpaikka.",
+     "leveys": 4357,
+     "korkeus": 2358,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "583-SchlossVaduz.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/583-SchlossVaduz.jpg?width=1280",
+     "tekija": "FkMohr",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:583-SchlossVaduz.jpg",
+     "selite": "Linnan vanha torni on Liechtensteinin tunnetuin maamerkki.",
+     "leveys": 4240,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018-10-05 Liechtenstein, Vaduz, Burg (KPFC) 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-10-05_Liechtenstein%2C_Vaduz%2C_Burg_(KPFC)_01.jpg?width=1280",
+     "tekija": "Rafael P. D. Suppmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-10-05_Liechtenstein%2C_Vaduz%2C_Burg_(KPFC)_01.jpg",
+     "selite": "Linna näkyy kauas Reinin laakson yläpuolella vuorten edessä.",
+     "leveys": 6016,
+     "korkeus": 4010,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q156427",
+   "nimi": "Vaduzin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 47.1362,
+   "lon": 9.5227,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018-10-05 Liechtenstein, Vaduz, St. Florin (KPFC) 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-10-05_Liechtenstein%2C_Vaduz%2C_St._Florin_(KPFC)_10.jpg?width=1280",
+     "tekija": "Rafael P. D. Suppmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-10-05_Liechtenstein%2C_Vaduz%2C_St._Florin_(KPFC)_10.jpg",
+     "selite": "Pyhän Florinin katedraali on uusgoottilainen kirkko Vaduzin keskustassa.",
+     "leveys": 5032,
+     "korkeus": 3813,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"St. Florin\", Ostseite der Kathedrale in Vaduz (2018).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22St._Florin%22%2C_Ostseite_der_Kathedrale_in_Vaduz_(2018).jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22St._Florin%22%2C_Ostseite_der_Kathedrale_in_Vaduz_(2018).jpg",
+     "selite": "Katedraalin korkea kellotorni näkyy kaupungin yli.",
+     "leveys": 3500,
+     "korkeus": 4900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q111628657",
+   "nimi": "Städtle",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 47.13865,
+   "lon": 9.52253,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vaduz Städtle east end.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vaduz_St%C3%A4dtle_east_end.jpg?width=1280",
+     "tekija": "Ymblanter",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vaduz_St%C3%A4dtle_east_end.jpg",
+     "selite": "Städtle on Vaduzin pääkatu, jonka yläpuolella linna näkyy.",
+     "leveys": 4008,
+     "korkeus": 5361,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2137745",
+   "nimi": "Hallintorakennus",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 120,
+   "lat": 47.13722,
+   "lon": 9.52278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Edificio gubernamental, Vaduz, Liechtenstein, 2022-10-23, DD 49.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_gubernamental%2C_Vaduz%2C_Liechtenstein%2C_2022-10-23%2C_DD_49.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificio_gubernamental%2C_Vaduz%2C_Liechtenstein%2C_2022-10-23%2C_DD_49.jpg",
+     "selite": "Uusrenessanssityylinen hallintorakennus toimii Liechtensteinin hallituksen toimitalona.",
+     "leveys": 7610,
+     "korkeus": 4349,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018-06-17 Das Regierungsgebäude in Vaduz FL.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-06-17_Das_Regierungsgeb%C3%A4ude_in_Vaduz_FL.jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-06-17_Das_Regierungsgeb%C3%A4ude_in_Vaduz_FL.jpg",
+     "selite": "Rakennus seisoo Vaduzin hallintokorttelin laidalla.",
+     "leveys": 4640,
+     "korkeus": 2900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q436158",
+   "nimi": "Vanha Reinin silta",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 47.13253,
+   "lon": 9.51193,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alte Rheinbrücke Vaduz – Sevelen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Rheinbr%C3%BCcke_Vaduz_%E2%80%93_Sevelen.jpg?width=1280",
+     "tekija": "AuHaidhausen",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alte_Rheinbr%C3%BCcke_Vaduz_%E2%80%93_Sevelen.jpg",
+     "selite": "Katettu puusilta yhdistää Liechtensteinin ja Sveitsin Reinin yli.",
+     "leveys": 7624,
+     "korkeus": 5152,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alte Rheinbrücke Vaduz.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alte_Rheinbr%C3%BCcke_Vaduz.jpg?width=1280",
+     "tekija": "Jess & Peter from Suva, Fiji",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alte_Rheinbr%C3%BCcke_Vaduz.jpg",
+     "selite": "Silta on nykyään jalankulkijoille ja pyöräilijöille tarkoitettu puinen ylitys.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View of Vaduz.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Vaduz.jpg?width=1280",
+   "tekija": "Lucas Kendall",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Vaduz.jpg",
+   "selite": "Vaduz on Liechtensteinin pääkaupunki Reinin laaksossa Alppien reunalla.",
+   "leveys": 4272,
+   "korkeus": 2848,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vaduz, Liechtenstein. Schweize Gebirge im Hintergrund - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vaduz%2C_Liechtenstein._Schweize_Gebirge_im_Hintergrund_-_panoramio.jpg?width=1280",
+   "tekija": "zpunout",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vaduz%2C_Liechtenstein._Schweize_Gebirge_im_Hintergrund_-_panoramio.jpg",
+   "selite": "Kaupungin takana kohoavat Alppien lumiset huiput.",
+   "leveys": 1920,
+   "korkeus": 1080,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
