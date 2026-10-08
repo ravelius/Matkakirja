@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. aamuyö (uusin)
+## TILA 8.10. aamu (uusin)
+- huonesim-m 6c3ad3865 MERGETTY; PT:n päätökset historia-m 80095efaa (naamio ei muurilla, RantaEsiinS 25; LR:ltä piilot muurikäytävään).
+- linssiseppa2/huonesim-m2 4fff570f6 (80095efaa päällä), worktree wt/proto-linssiseppa2-huonesim-m2: Huonesimulaatio naamiosääntö,
+  M-testi jaettu (muurikäytävä odottaa LR:n piilo:muurikaytava-* → päivitä kultaiset hashista), VoudinKiista Ydin + 3 testiä
+  (kytkentä Siirtosepälle, SeikkailuSali lukossa). 944/944, tarkistus 0. SHA Siirtosepälle.
+- ODOTTAA: LR:n muurikäytävän piilomerkit + heitettävä kivi (hash Siirtosepältä/LR:ltä) → kultaiset v44w, MuurikaytavaJaHarjaHiipien ajetaan.
+
+## TILA 8.10. aamuyö
 - HUONESIMULAATIO 6–10: proto linssiseppa2/huonesim-m 6c3ad3865 (historia-m a04573945 päällä), worktree wt/proto-linssiseppa2-huonesim-m.
   Kultaiset v44v (LR 89d543ae), ThiefAjuri.cs erotettu, OlavinlinnaMOsaTestit (reitti 21→92 212 s, kiipeily 19,5 s, komero, pako K4 22,1 s).
   940/940, tarkistus 0. SHA Siirtosepälle + PT. Löydökset: naamio kelpaa muurilla/harjalla; ilman naamiota muurikäytävä mahdoton
