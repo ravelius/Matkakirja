@@ -1166,6 +1166,8 @@ namespace Matkakirja.Linssit.Kierros
         public double LipumisVauhti { get; private set; }
         /// <summary>Lipumisen jarrutus lähdön valmistelussa (s): pelaajan valinta nopeammin.</summary>
         double LipumisJarru => korostusPika ? 0.5 : 1.0;
+        /// <summary>Lipumisen jarrutuksen aika (s): kuluu vasta, kun lähtö on muuten valmis (laatat).</summary>
+        double jarruAika;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
         public bool KameraSeis;
         /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
@@ -1195,7 +1197,7 @@ namespace Matkakirja.Linssit.Kierros
                     // Vauhti S-käyrällä ylös (LipumisAlkuS) ja lähdön valmistelussa S-käyrällä nollaan ennen lentoa (lento alkaa levosta).
                     lipumisAika += dt;
                     double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.LipumisAlkuS));
-                    LipumisVauhti = OpasKuvaus.LipumisNopeus * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, valmisteluAika / LipumisJarru)));
+                    LipumisVauhti = OpasKuvaus.LipumisNopeus * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, jarruAika / LipumisJarru)));
                     lipumisRaaka += LipumisVauhti * dt;
                 }
                 double d = lipumisKatto > 0 ? lipumisKatto * Math.Tanh(lipumisRaaka / lipumisKatto) : 0;
@@ -1222,14 +1224,17 @@ namespace Matkakirja.Linssit.Kierros
         {
             // "Kerro lisää" (sama paikka) ei lähde mihinkään: korostus jää palamaan.
             bool sama = SamaPaikka();
-            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; valmisteluAika = 0; return ehdot && sama; }
-            if (!LahtoValmisteilla) { korostusPika = pika; valmisteluAika = 0; }   // nopeus valitaan valmistelun alussa
+            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; valmisteluAika = 0; jarruAika = 0; return ehdot && sama; }
+            if (!LahtoValmisteilla) { korostusPika = pika; valmisteluAika = 0; jarruAika = 0; }   // nopeus valitaan valmistelun alussa
             LahtoValmisteilla = true;
             valmisteluAika += Math.Max(0, dt);
             if (!ehdot) return false;
             bool laatat = LahtoLaatatValmiit(dt);
-            // Pallo: lipuminen on pysähtynyt ennen lentoa (ei nopeushyppyä).
-            bool lipuminenSeis = lipumisKohti == null || valmisteluAika >= LipumisJarru;
+            // Pallo: lipuminen pysähtyy ennen lentoa (ei nopeushyppyä), mutta vasta kun laatat ovat valmiit: laattaodotuksen ajan pallo
+            // lipuu edelleen (omistaja TF 166, 18.3x: "jää välillä aivan liikaa paikalleen"; TF-lokissa lähtö odotti laattoja 5,0 s
+            // joka kerta, ja pallo seisoi jarrutuksen jälkeen koko odotuksen).
+            if (laatat) jarruAika += Math.Max(0, dt);
+            bool lipuminenSeis = lipumisKohti == null || jarruAika >= LipumisJarru;
             return laatat && KorostusOsuus <= 0 && lipuminenSeis;
         }
 
