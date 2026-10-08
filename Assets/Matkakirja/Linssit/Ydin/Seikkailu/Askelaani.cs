@@ -21,6 +21,17 @@ namespace Matkakirja.Linssit.Seikkailu
             return tapa == Liiketapa.Hiipiminen ? p.Hiivinta : tapa == Liiketapa.Juoksu ? p.Juoksu : p.Kavely;
         }
 
+        /// <summary>Pelaajan oma askel (pelattavuusmalli 2.2, Askelääni-sarake): äänitteen tunnukset etusijajärjestyksessä (pinnan oma,
+        /// varana kivi) ja voimakkuus 0…1. Hiivintä kuuluu itselle hiljaa, vaikka vartija ei sitä kuule; äänekäs pinta on kovempi.</summary>
+        public static (string[] Tunnukset, float Voimakkuus) OmaAskel(string pinta, Liiketapa tapa)
+        {
+            if (pinta == null || !Pinnat.ContainsKey(pinta)) pinta = "kivi";
+            var tunnukset = pinta == "kivi" ? new[] { "askel-kivi" } : pinta == "porras" ? new[] { "askel-porras-1", "askel-kivi" } : new[] { "askel-" + pinta, "askel-kivi" };
+            float perus = tapa == Liiketapa.Hiipiminen ? 0.2f : tapa == Liiketapa.Juoksu ? 0.8f : 0.45f;
+            float pintaK = (float)Math.Min(1.25, Math.Max(0.7, 0.45 + 0.17 * Pinnat[pinta].Kavely));   // olki 0,7 · kivi 0,88 · puu 1,05 · vesi 1,25
+            return (tunnukset, Math.Min(1f, perus * pintaK));
+        }
+
         /// <summary>Osa, jonka rajojen sisällä piste on (pienin tilavuus voittaa; 0,3 m vara vaakatasossa, 1 m pystyssä); null = ei mikään.</summary>
         public static string Osa(KavelyData d, double x, double y, double z)
         {
