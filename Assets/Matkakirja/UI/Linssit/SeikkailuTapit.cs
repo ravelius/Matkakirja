@@ -389,6 +389,27 @@ namespace Matkakirja.Natiivi
             PuluKaappaa();
         }
 
+        /// <summary>Seikkailu käynnissä (SeikkailuPelaaja.Aktiivinen; linnan ☰-valikon Vihje-rivi näkyy vain silloin).</summary>
+        public static bool SeikkailuKaynnissa => PelaajaAktiivinen();
+
+        /// <summary>
+        /// VIHJEEN PYYNTÖ ILMAN PULUA (omistaja 8.10.: videopeleissä ei Pulua; Päätoimittaja: linnan ☰ → Vihje): sama vihjereitti kuin
+        /// P/Y-näppäimellä, mutta ilman tietokerroksen tarjousta. Siirtosepän maailmavihje (kimallus + ääni) tulee SeikkailuPelaaja.
+        /// PuluVihje()/VihjePyydetty-koukkuun (rajapinnan nimi sovitaan junan 167 jälkeen). true = vihje annettiin.
+        /// </summary>
+        public static bool PyydaVihje(string lahde)
+        {
+            if (!vihjeHaettu)
+            {
+                vihjeHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                puluVihje = tp?.GetMethod("PuluVihje", BindingFlags.Public | BindingFlags.Static, null, System.Type.EmptyTypes, null);
+            }
+            bool annettu = puluVihje?.Invoke(null, null) is bool b && b;
+            Debug.Log($"MATKAKIRJA seikkailutapit: vihje pyydetty ({lahde}) → " + (annettu ? "annettu" : "ei vihjettä"));
+            return annettu;
+        }
+
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
         static void PoistaTietokerros()
         {
