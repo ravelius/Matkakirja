@@ -1295,6 +1295,7 @@ namespace Matkakirja.Natiivi
             if (ohjainRivi.style.right.value.value != riviOikea) ohjainRivi.style.right = riviOikea;
             if (ohjainRivi.style.bottom.value.value != ohjainAla) ohjainRivi.style.bottom = ohjainAla;
 
+            tapit.Vapaa(VapaaTila);
             tapit.Paivita((pysahdys || VapaaTila) && !Auki && !(chat?.Auki ?? false), tappiAla, sivu);
             // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
             nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
