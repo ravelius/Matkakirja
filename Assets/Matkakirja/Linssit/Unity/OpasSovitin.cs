@@ -1798,8 +1798,8 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
-        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v2/nimet.json",   // v2 (Pelikoodari 6.10.): suomi pakotettuna + 38 uutta jatkoa
-            MaatOsoite = "https://media.matkakirja.app/aanet/opas/maat-v1/maat.json";
+        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v3/nimet.json",   // v3 (Pelikoodari 8.10. ilta, omistaja TF 166 alkukatko): puhe ≥ 120 ms   // v2 (Pelikoodari 6.10.): suomi pakotettuna + 38 uutta jatkoa
+            MaatOsoite = "https://media.matkakirja.app/aanet/opas/maat-v2/maat.json";   // v2: puhe ≥ 120 ms (TF 166 alkukatko)
         static OpasNimiaanet nimiaanet;
         static bool nimiaLadataan;
         static readonly Dictionary<string, AudioClip> nimiKlipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
@@ -1853,7 +1853,7 @@ namespace Matkakirja.Natiivi
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
         public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v4/siltalauseet.json";   // v4 (Pelikoodari 8.10. ilta, omistaja TF 166 "siirtymälauseista jää pätkä alusta pois"): v3b + puhe aikaisintaan 120 ms:n kohdalla, 30 ms:n sisäänhäivytys   // v3b (Pelikoodari 8.10.): v2 + pallo-lahto/-nousu/-kaanto/-lasku (pallo-lasku-04 pois)   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
-        public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
+        public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v2/kuittaukset.json";   // v2: puhe ≥ 120 ms (TF 166 alkukatko)
         /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
         readonly KysyOdotus kysyOdotus = new KysyOdotus();
         const float OdotusLauseS = 6f, SiltaOdotusS = 5f;
