@@ -44,6 +44,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public string Henkilo, Profiili;
         /// <summary>partio: kantaa lyhtyä tai soihtua (v44m; pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu).</summary>
         public bool Lyhty, Soihtu;
+        /// <summary>leikkaus:vain-1499(-b) (v44r/v44x): aina leikattavien kuorileikkausten nimet (vuoden 1499 näkymä kävelyssä); null jos puuttuu.</summary>
+        public List<string> Leikkaukset;
         /// <summary>koko [x, y, z] (piilo, pinta), null jos kenttä on luku tai puuttuu.</summary>
         public double[] KokoV;
         public double X, Y, Z, Leveys, Korkeus, Koko, OdotaS;
@@ -129,6 +131,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
                 Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
                 Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
+                Leikkaukset = MiniJson.Kentta(o, "leikkaukset") is List<object> lk ? lk.ConvertAll(x => x as string) : null,
                 Lyhty = MiniJson.Kentta(o, "lyhty") is bool lyb && lyb, Soihtu = MiniJson.Kentta(o, "soihtu") is bool sob && sob,
                 KokoV = MiniJson.Kentta(o, "koko") is List<object> kl && kl.Count == 3 ? Vektori(kl) : null,
             };

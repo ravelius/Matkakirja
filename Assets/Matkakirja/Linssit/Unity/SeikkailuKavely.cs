@@ -72,7 +72,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kuoren leikkaukset päälle/pois (kävelytila).</summary>
-        public const int LeikkauksiaMax = 16;
+        public const int LeikkauksiaMax = 32;
         static bool leikkauksetPaalla; static string leikkausOsa;
 
         /// <summary>Kuoren leikkaukset kävelytilassa (enintään LeikkauksiaMax; 7.10. datassa 40, ennen otettiin vain 8 ensimmäistä,
@@ -89,11 +89,14 @@ namespace Matkakirja.Natiivi
                 if (!pakota && osa == leikkausOsa) return;
                 leikkausOsa = osa;
                 Data.Osat.TryGetValue(osa ?? "", out var oma);
+                // Vuoden 1499 linna (omistaja 8.10.): merkkien leikkaus:vain-1499* listaamat leikkaukset (bastionit, Kellobastioni) aina ensin.
+                var aina = new HashSet<string>(StringComparer.Ordinal);
+                foreach (var m in Data.Lajia("leikkaus")) if (m.Tunnus.StartsWith("vain-1499", StringComparison.Ordinal) && m.Leikkaukset != null) foreach (var nm in m.Leikkaukset) if (nm != null) aina.Add(nm);
                 var kaikki = new List<(KavelyLeikkaus L, double Arvo)>();
                 foreach (var o in Data.Osat.Values)
                     foreach (var l in o.Leikkaukset)
                     {
-                        double arvo = o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
+                        double arvo = l.Nimi != null && aina.Contains(l.Nimi) ? -1e6 : o.Id == osa ? 0 : oma != null && (oma.Naapurit.Contains(o.Id) || o.Naapurit.Contains(osa)) ? 1000 : 2000;
                         if (pelaaja is Vector3 q) { double dx = l.X - q.x, dy = l.Y - q.y, dz = l.Z + q.z; arvo += Math.Sqrt(dx * dx + dy * dy + dz * dz); }
                         kaikki.Add((l, arvo));
                     }
