@@ -52,11 +52,15 @@ namespace Matkakirja.Natiivi
             var a = Aktiivinen; if (a == null) return false;
             foreach (var v in a.vartijat)
             {
+                if (v.Agentti == null || !v.Agentti.gameObject.activeInHierarchy) continue;   // odottava reitti (pako: ranta)
                 if (v.Aivot.Tila != VartijanTila.Partio && v.Aivot.Tila != VartijanTila.Paluu) return true;
                 var ag = v.Agentti; if (ag != null && (ag.transform.position - p).sqrMagnitude < sade * sade) return true;
             }
             return false;
         }
+
+        /// <summary>Reitit, jotka luodaan piiloon (v44r partio:ranta: kaksi vartijaa soihtuineen rannassa vain, jos pako viipyy; M-osa).</summary>
+        public static readonly HashSet<string> Odottavat = new HashSet<string>(StringComparer.Ordinal) { "ranta" };
 
         /// <summary>Torkkuva vartija alle 1,6 m:n päässä ja vielä ilman eväitä (toimintonapin verbi "Anna").</summary>
         public static bool TarjotinVastaanottaja(Vector3 p)
@@ -184,6 +188,7 @@ namespace Matkakirja.Natiivi
                     SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
                 }
                 sv.vartijat.Add(v);
+                if (Odottavat.Contains(kv.Key)) vg.SetActive(false);   // pako (M-osa): rannan soihtuvartijat vain epäonnistumisessa
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
                 hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika));
                 DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
@@ -304,7 +309,7 @@ namespace Matkakirja.Natiivi
                     if (r != null && r.Valmis && huuto != null) r.Soita(huuto, ag.transform);
                     int tulee = 0;
                     foreach (var x in vartijat)
-                        if (x != v && tulee < 2 && x.Agentti != null && (x.Agentti.transform.position - vp).sqrMagnitude < HuutoM * HuutoM) { x.Aivot.Kutsu(v.Aivot.EpailyX, v.Aivot.EpailyZ); tulee++; }
+                        if (x != v && tulee < 2 && x.Agentti != null && x.Agentti.isOnNavMesh && (x.Agentti.transform.position - vp).sqrMagnitude < HuutoM * HuutoM) { x.Aivot.Kutsu(v.Aivot.EpailyX, v.Aivot.EpailyZ); tulee++; }
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} huusi, {tulee} tulee");
                 }
                 sydan = Math.Max(sydan, v.Aivot.SydanTempo);
