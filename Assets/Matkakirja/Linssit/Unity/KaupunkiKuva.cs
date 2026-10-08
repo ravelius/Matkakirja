@@ -217,6 +217,9 @@ namespace Matkakirja.Natiivi
                         case "sumu": Sumu = v != 0; break;
                         case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
+                        case "pilvet": KaupunkiIlmakeha.Pilvet = v != 0; break;   // LS2 8.10.: pallon pilvikerros (kohta 6a), oletus pois
+                        case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
+                        case "pilvipaksuus": KaupunkiIlmakeha.PilviPaksuusM = v; break;
                         case "vesi": KaupunkiVesi.Pakotettu = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
                         case "vesinosto": KaupunkiVesi.NostoM = v; KaupunkiVesi.NostoAsetettu = true; break;
                         case "sumualku": AlkuKerroin = v; break;
