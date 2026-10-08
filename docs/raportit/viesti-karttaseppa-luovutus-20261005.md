@@ -8,7 +8,7 @@
   Muistivahti `kaudet/vahti-talvi3.sh` (PGID 97234): jos swap > 14 Gt → STOP osaan 2. Loki `s2-eurooppa-talvi3-vahti.log`.
   **Vahti v2** `kaudet/vahti-talvi3-v2.sh` (PGID 98135, PT 10.4x): kun junakäännöksen lukko on päällä, se asettaa STOPin molempiin osiin (merkki STOP.lukko). Kun lukko vapautuu, se poistaa STOPin ja käynnistää osan uudelleen (`aja-talvi3-osa-v2.sh`, ohittaa valmiit lohkot).
   Juna 166 tulee 9.10. ajon aikana, joten tauko ja jatko hoituvat automaattisesti. PT haluaa valmistumisesta ja kaistasaumasta yhden rivin.
-  Arvio: valmis pe 9.10. noin klo 05–07.
+  Arvio (17.13: osa1 24/91, osa2 25/78): valmis pe 9.10. noin klo 08–11. Työjono: /Users/Shared/Claude/Matkakirja-fable/scratchpad/tyojonot.md (Karttaseppä); erä valmis → 1 rivi PT:lle ja seuraava kohta heti, [PT]/[LUPA] ohitetaan.
   **Valmistuttua:** tarkista kaistasauma x = 34 (z6 lohkoraja 33|34), tee yleiskuva (neljännekset), lähetä yksi rivi PT:lle, sitten
   `kokoa-kausi.py talvi v1 <_valmiit/s2-eurooppa-talvi-vienti-<pvm>> "<osa1/laatat>:<osa2/laatat>" "<kuvaus>"`, LAHTEET.md (pohjana kevät) ja Julkaisija.
   Jos osa 2 pysähtyi STOPiin: poista STOP ja käynnistä uudelleen, kun muistia on (perl setsid).
