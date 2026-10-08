@@ -47,6 +47,9 @@ export function muuttujat(tk) {
   for (const [k, v] of julkiset(tk.himmennys)) m.push([`tk-himmennys-${k}`, v, 'wn']);
   // Tilavärit (omistaja 1.10.2026: visan onnistuminen ja virhe) ja lomakekenttä (tk-kentta, uusi pohjaosa).
   for (const [k, v] of julkiset(tk.tila || {})) m.push([`tk-tila-${k}`, v, 'wn']);
+  // Pohjavahti 5 (Päätoimittaja 8.10.2026): tokenien läpikuultavuudet ja tarkoitukselliset erikoisvärit, vain natiivi.
+  for (const [k, v] of julkiset(tk.kuulto || {})) m.push([`tk-kuulto-${k}`, v, 'n']);
+  for (const [k, v] of julkiset(tk.erikois || {})) m.push([`tk-erikois-${k}`, v, 'n']);
   for (const [k, v] of julkiset(tk.kentta || {})) m.push([`tk-kentta-${k}`, typeof v === 'number' ? px(v) : v, 'wn']);
   for (const [k, v] of julkiset(tk.typografia)) {
     if (typeof v === 'number') m.push([`tk-koko-${k}`, px(v), 'wn']);
@@ -113,6 +116,8 @@ export function csTiedosto(tk, tunniste) {
   r.push('');
   ryhma('Himmennys', julkiset(tk.himmennys).map(([k, v]) => `public static readonly Color32 ${cs(k)} = ${c32(v)};`));
   if (tk.tila) ryhma('Tila', julkiset(tk.tila).map(([k, v]) => `public static readonly Color32 ${cs(k)} = ${c32(v)};`));
+  if (tk.kuulto) ryhma('Kuulto', julkiset(tk.kuulto).map(([k, v]) => `public static readonly Color32 ${cs(k)} = ${c32(v)};`));
+  if (tk.erikois) ryhma('Erikois', julkiset(tk.erikois).map(([k, v]) => `public static readonly Color32 ${cs(k)} = ${c32(v)};`));
   if (tk.kentta) ryhma('Kentta', julkiset(tk.kentta).map(([k, v]) => typeof v === 'number'
     ? `public const float ${cs(k)} = ${v}f;` : `public static readonly Color32 ${cs(k)} = ${c32(v)};`));
   ryhma('Koko', julkiset(tk.typografia).map(([k, v]) => `public const float ${cs(k)} = ${typeof v === 'number' ? v : v.koko}f;`));
