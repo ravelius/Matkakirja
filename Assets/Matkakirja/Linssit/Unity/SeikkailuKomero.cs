@@ -16,6 +16,8 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuKomero : MonoBehaviour
     {
         public static SeikkailuKomero Aktiivinen { get; private set; }
+        /// <summary>Arkku auki ja löytö kuitattu (huone 10 alkaa: hälytyskello, SeikkailuPako).</summary>
+        public static event Action ArkkuAuki;
         public const float LahiM = 1.1f, KilpiAskel = 15f, PutoamisS = 1.7f;
         Tiilet ydin; readonly List<GameObject> tiiliGo = new List<GameObject>();
         Kilpilukko lukko; Vector3? arkku; readonly Vector3[] kilvet = new Vector3[2]; bool kilpiaOn;
@@ -149,10 +151,10 @@ namespace Matkakirja.Natiivi
             SeikkailuAanet.Soita("loyto-kantele", p.transform.position + Vector3.up * 1.6f, 0.8f);
             var t = typeof(SeikkailuKomero).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); yield break; }
+            if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); ArkkuAuki?.Invoke(); yield break; }
             // Teksti on paikkamerkki (M-osan käsikirjoitus ja Sisältökirjurin tarkistus puuttuvat).
-            try { m.Invoke(null, new object[] { "Kellotornin arkku", "Arkun pohjalla kuunvalossa hopea välkkyy.", null, null, (Action)(() => kirjaa?.Invoke("seikkailu: arkun löytö kuitattu")) }); }
-            catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); }
+            try { m.Invoke(null, new object[] { "Kellotornin arkku", "Arkun pohjalla kuunvalossa hopea välkkyy.", null, null, (Action)(() => { kirjaa?.Invoke("seikkailu: arkun löytö kuitattu"); ArkkuAuki?.Invoke(); }) }); }
+            catch (Exception e) { kirjaa?.Invoke("seikkailu: löytö: " + (e.InnerException?.Message ?? e.Message)); ArkkuAuki?.Invoke(); }
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }

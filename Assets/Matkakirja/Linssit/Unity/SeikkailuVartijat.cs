@@ -52,6 +52,7 @@ namespace Matkakirja.Natiivi
             var a = Aktiivinen; if (a == null) return false;
             foreach (var v in a.vartijat)
             {
+                if (v.Agentti == null || !v.Agentti.gameObject.activeInHierarchy) continue;   // odottava reitti (pako: ranta)
                 if (v.Aivot.Tila != VartijanTila.Partio && v.Aivot.Tila != VartijanTila.Paluu) return true;
                 var ag = v.Agentti; if (ag != null && (ag.transform.position - p).sqrMagnitude < sade * sade) return true;
             }
@@ -184,6 +185,7 @@ namespace Matkakirja.Natiivi
                     SeikkailuValot.Hehku(vg.transform, kasi + Vector3.up * 0.08f, new Color(1f, 0.62f, 0.3f), soihtu ? 1.6f : 1.1f, v.ValoM, true, DioraamaNayttamo.Kerros);
                 }
                 sv.vartijat.Add(v);
+                if (Odottavat.Contains(kv.Key)) vg.SetActive(false);   // pako: rannan soihtuvartijat vasta kellon jälkeen (SeikkailuPako)
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
                 hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika));
                 DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
@@ -305,7 +307,7 @@ namespace Matkakirja.Natiivi
                     if (r != null && r.Valmis && huuto != null) r.Soita(huuto, ag.transform);
                     int tulee = 0;
                     foreach (var x in vartijat)
-                        if (x != v && tulee < 2 && x.Agentti != null && (x.Agentti.transform.position - vp).sqrMagnitude < HuutoM * HuutoM) { x.Aivot.Kutsu(v.Aivot.EpailyX, v.Aivot.EpailyZ); tulee++; }
+                        if (x != v && tulee < 2 && x.Agentti != null && x.Agentti.isOnNavMesh && (x.Agentti.transform.position - vp).sqrMagnitude < HuutoM * HuutoM) { x.Aivot.Kutsu(v.Aivot.EpailyX, v.Aivot.EpailyZ); tulee++; }
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} huusi, {tulee} tulee");
                 }
                 sydan = Math.Max(sydan, v.Aivot.SydanTempo);
@@ -539,6 +541,33 @@ namespace Matkakirja.Natiivi
             if (a != null) Destroy(a.gameObject);
         }
 
+        /// <summary>Reitit, jotka luodaan piiloon ja tuodaan esiin vasta tapahtumasta (pelattavuusmalli 8.2 huone 10: kaksi vartijaa
+        /// soihtuineen rannassa, jos pako viipyy kellon jälkeen).</summary>
+        public static readonly HashSet<string> Odottavat = new HashSet<string>(StringComparer.Ordinal) { "ranta" };
+
+        /// <summary>Odottava reitti esiin (valppaana).</summary>
+        public static void Aktivoi(string reitti)
+        {
+            var a = Aktiivinen; if (a == null) return;
+            foreach (var v in a.vartijat)
+                if (v.Nimi == reitti && v.Agentti != null && !v.Agentti.gameObject.activeSelf)
+                {
+                    v.Agentti.gameObject.SetActive(true);
+                    var vp = v.Agentti.transform.position; v.Aivot.Nollaa(vp.x, vp.z, valpas: true); v.EdellinenTila = VartijanTila.Partio;
+                    a.kirjaa?.Invoke($"seikkailu: reitti {reitti} esiin");
+                }
+        }
+
+        /// <summary>Hälytyskello (huone 10 vaihe 1): kaikki vartijat valppaiksi (60 s).</summary>
+        public static void Valpastu()
+        {
+            var a = Aktiivinen; if (a == null) return;
+            foreach (var x in a.vartijat) if (x.Agentti != null) { var xp = x.Agentti.transform.position; x.Aivot.Nollaa(xp.x, xp.z, valpas: true); x.EdellinenTila = VartijanTila.Partio; }
+        }
+
+        /// <summary>Kiinniotto ilman jahtia (pako myöhästyi): lähin näkyvä vartija vie tyrmään.</summary>
+        public static void Halyta() => Aktiivinen?.KiipeilijaHavaittu();
+
         /// <summary>Huone 9: vartija kurkistaa sakaran yli lyhty koholla (toinen tiili putosi 10 s:n sisällä): valo paikkaan s sekuntia;
         /// pelaaja jähmettyy, liike (vauhti > 0,3) → kiinni kuten kiipeilijä lyhdyn valossa.</summary>
         public static void Kurkistus(Vector3 paikka, float s) { var a = Aktiivinen; if (a != null) a.StartCoroutine(a.Kurkista(paikka, s)); }
@@ -566,7 +595,7 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen; if (p == null || ote != null || vartijat.Count == 0) return;
             V lahin = null; float pd = float.MaxValue;
-            foreach (var x in vartijat) { if (x.Agentti == null) continue; float d = (x.Agentti.transform.position - p.transform.position).sqrMagnitude; if (d < pd) { pd = d; lahin = x; } }
+            foreach (var x in vartijat) { if (x.Agentti == null || !x.Agentti.gameObject.activeInHierarchy) continue; float d = (x.Agentti.transform.position - p.transform.position).sqrMagnitude; if (d < pd) { pd = d; lahin = x; } }
             if (lahin == null) return;
             var r = SeikkailuRepliikit.Aktiivinen;
             if (r != null && r.Valmis) r.Soita("vartija-valpas-1", lahin.Agentti.transform);   // olemassa oleva repliikki (ei uusia ilman lupaa)

@@ -184,6 +184,7 @@ namespace Matkakirja.Natiivi
             foreach (var x in se.esineet) if (x.Id.StartsWith("avainnippu", StringComparison.Ordinal)) x.Go.SetActive(false);   // tyrmä: Pulu tuo
             se.LuoOvet(d); se.LuoKiipeily(d);
             SeikkailuKomero.Luo(d, go.transform, kirjaa);   // huone 9: tiilet ja arkun kilpilukko
+            SeikkailuPako.Luo(d, go.transform, kirjaa);     // huone 10: kello, köysilasku, sukellus, uinti, vene
             kirjaa?.Invoke($"seikkailu: esineet {se.esineet.Count} ({string.Join(", ", se.esineet.ConvertAll(x => x.Id))})");
         }
 
@@ -371,6 +372,15 @@ namespace Matkakirja.Natiivi
         {
             var p = SeikkailuPelaaja.Aktiivinen;
             if (p == null) return;
+            if (p.Ohjataan)
+            {
+                // Ohjattu jakso (pako): toimintonappi vain jakson omalle teolle (Katkaise).
+                Toiminto = SeikkailuPako.OhjattuVerbi;
+                bool tp = ToimintoPyydetty; ToimintoPyydetty = false;
+                var kbo = Keyboard.current; var gpo = Gamepad.current;
+                if (Toiminto != null && (tp || kbo != null && kbo.eKey.wasPressedThisFrame || gpo != null && gpo.buttonWest.wasPressedThisFrame)) SeikkailuPako.OhjattuToimi?.Invoke();
+                return;
+            }
             if (p.Otteessa || pukeutuu || p.OteKiipeily != null) { Toiminto = null; return; }   // vartijan otteessa toiminto = irtipääsy (SeikkailuVartijat lukee)
             // Lähin heitettävä (ei kädessä eikä lennossa).
             Esine lahin = null; float pd = float.MaxValue;
@@ -399,7 +409,8 @@ namespace Matkakirja.Natiivi
                 ?? (kadessa == null && OnttoLahella(p) ? "koputa" : null)
                 ?? (kadessa == null && Tikkaat(p) != null ? "tikkaat" : null)
                 ?? (kadessa == null && LahinOvi(p) != null ? "ovi" : null)
-                ?? (kadessa == null && SeikkailuKomero.Aktiivinen?.Verbi(p) != null ? "komero" : null);
+                ?? (kadessa == null && SeikkailuKomero.Aktiivinen?.Verbi(p) != null ? "komero" : null)
+                ?? (kadessa == null && SeikkailuPako.Aktiivinen?.Verbi(p) != null ? "pako" : null);
             Toiminto = kadessa != null
                 ? (SeikkailuTyrma.Aktiivinen is SeikkailuTyrma tyv && tyv.OviLahella(p) ? "Avaa"
                     : kadessa.Id == Koysikieppi && SakaraLahella(p) ? "Kiinnitä"
@@ -407,7 +418,7 @@ namespace Matkakirja.Natiivi
                     : kadessa.Laji == Laji.Heitettava ? "Heitä" : Alttari is Vector3 alt && Vector3.Distance(p.transform.position, alt) < 1.6f ? "Aseta" : "Laske")
                 : lahin != null ? (lahin.Laji == Laji.Irrotettava ? "Irrota" : lahin.Laji == Laji.Kaadettava ? "Kaada" : lahin.Laji == Laji.Puettava ? "Pue" : lahin.Id == Nyytti ? "Avaa" : "Poimi")
                 : Lahin == "kynttila" ? kynttilat.ToimintoVerbi(p)
-                : Lahin == "koputa" ? "Koputa" : Lahin == "tikkaat" ? "Kiipeä" : Lahin == "ovi" ? "Avaa" : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : null;
+                : Lahin == "koputa" ? "Koputa" : Lahin == "tikkaat" ? "Kiipeä" : Lahin == "ovi" ? "Avaa" : Lahin == "komero" ? SeikkailuKomero.Aktiivinen.Verbi(p) : Lahin == "pako" ? SeikkailuPako.Aktiivinen.Verbi(p) : null;
             bool toiminto = ToimintoPyydetty;
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
@@ -445,6 +456,7 @@ namespace Matkakirja.Natiivi
             else if (Tikkaat(p) is (Vector3 tAla, Vector3 tYla, Vector3 tSuunta, bool tYlh)) p.AloitaKiipeily(tAla, tYla, tSuunta, tYlh);
             else if (LahinOvi(p) is Ovi ov) AvaaOvi(p, ov);
             else if (SeikkailuKomero.Aktiivinen is SeikkailuKomero ko && ko.Toimi(p)) { }
+            else if (SeikkailuPako.Aktiivinen is SeikkailuPako pk && pk.Toimi(p)) { }
         }
 
         void Poimi(SeikkailuPelaaja p, Esine e)
