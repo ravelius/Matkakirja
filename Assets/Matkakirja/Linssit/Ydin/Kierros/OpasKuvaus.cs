@@ -408,6 +408,24 @@ namespace Matkakirja.Linssit.Kierros
             return I(p) / I(1);
         }
 
+        /// <summary>
+        /// Suora laskeutuminen a → b (OpasSilmukka.AvausSuoraS): silmä ja katsepiste kulkevat suoria janoja pitkin samalla
+        /// smootherstep-käyrällä (kiihtyvyys ja nopeus alkavat ja loppuvat nollasta), suunta ja kallistus silmästä katsepisteeseen.
+        /// </summary>
+        public static Kuvakulma SuoraLasku(Kuvakulma a, Kuvakulma b, double t)
+        {
+            double s = KierrosLento.Smootherstep(Math.Max(0, Math.Min(1, t)));
+            if (s <= 0) return a;
+            if (s >= 1) return b;
+            const double R = 6371000, A = Math.PI / 180;
+            var ea = KameraPaikka(a, a.Lat, a.Lon); var eb = KameraPaikka(b, a.Lat, a.Lon);
+            double ke = (b.Lon - a.Lon) * R * Math.Cos(a.Lat * A) * A * s, kn = (b.Lat - a.Lat) * R * A * s, ku = a.KatseKorkeusM + (b.KatseKorkeusM - a.KatseKorkeusM) * s;
+            double se = ea.e + (eb.e - ea.e) * s, sn = ea.n + (eb.n - ea.n) * s, su = ea.u + (eb.u - ea.u) * s;
+            double de = ke - se, dn = kn - sn, du = su - ku, vaaka = Math.Sqrt(de * de + dn * dn), et = Math.Sqrt(vaaka * vaaka + du * du);
+            double suunta = vaaka > 1 ? KierrosLento.Kiedo(Math.Atan2(de, dn) / A) : KierrosLento.Kiedo(a.Suuntima + KierrosLento.Kiedo(b.Suuntima - a.Suuntima) * s);
+            return new Kuvakulma(a.Lat + (b.Lat - a.Lat) * s, a.Lon + (b.Lon - a.Lon) * s, et, Math.Atan2(vaaka, du) / A, suunta, ku);
+        }
+
         /// <summary>Kameran paikka (m) paikallisessa ENU:ssa pisteestä (lat0, lon0): katsekohde − katsesuunta × etäisyys.</summary>
         public static (double e, double n, double u) KameraPaikka(Kuvakulma k, double lat0, double lon0)
         {
