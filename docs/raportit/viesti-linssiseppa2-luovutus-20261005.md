@@ -35,7 +35,18 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. klo 22.4x (uusin)
+## TILA 8.10. klo 23.3x (uusin)
+- MUISTITESTI v45o (junan 168 ehto, PT kuittasi 23.28): proto linssiseppa2/muistitesti-168 9a43856fc (pallo-168 + pinnat 150/70 +
+  Natiivisepän UltraAtlaksetMt 135 1b755328f); kultainen olavinlinna-v45o-muisti.json; Ultra 665 → 838, muut +42 Mt, ei ylityksiä.
+  Auki LR:lle: esine-glb:iden upotetut normaali-PNG:t (+21 Mt keko).
+- PILVIKERROS (PT 23.28, kohta 6a, juna 169/170): ilmakeha-170 8e9ad7fa4, kytkin "pilvet 0|1" oletus pois; SEURAAVAKSI TF 167:n
+  jälkeen VarjostinTarkistus (Unity batch) ja kuvapari kaupunki-vertailu.sh "p0=pilvet 0" "p1=pilvet 1" (käännös tarvitaan).
+- SIMUVUORO ~00.15 (Julkaisijan SIMULAATTORI NYT, tarkista 167c): Seine nosto KAUPUNGIT=pariisi "n04=vesinosto 0.4;vesijuuri
+  file://<scratchpad>/vesi-t2/" … 0.8 / 1.2 (vesi-t2 = Karttasepän vesi-koe-b pariisi2 + tukholma2 id-nimillä, 167-appi lukee index-v2),
+  tulos Karttasepälle; Tukholma A/B samalla juurella vs ilman; pala-FP + kävelyosadiagnoosi (PT); UI-stillit (Natiivi-UI).
+  Skripti grafiikkavertailu 1fd00b4e3 (vesijuuri-asetus).
+
+## TILA 8.10. klo 22.4x
 - JUNA 167: ilmakehä + vesi PÄÄLLÄ kehityskaupungeissa (PT 22.35; rungossa ilmakeha-170 8107c0022). Kuvapari
   lokit/linssiseppa2-kaupunki-kuvapari2-2226 (OSM-rivi näkyy). HUOM ajoskriptin vanha asennus -virhe korjattu (58e775f5f).
 - JUNAAN 168 valmiina ilmakeha-170 6986c7580: asetukset ennen LuoDataa, try/catch, vesi piiloon, valotus 12.
