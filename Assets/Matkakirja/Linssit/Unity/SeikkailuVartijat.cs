@@ -59,6 +59,7 @@ namespace Matkakirja.Natiivi
             return false;
         }
 
+
         /// <summary>Torkkuva vartija alle 1,6 m:n päässä ja vielä ilman eväitä (toimintonapin verbi "Anna").</summary>
         public static bool TarjotinVastaanottaja(Vector3 p)
         {
