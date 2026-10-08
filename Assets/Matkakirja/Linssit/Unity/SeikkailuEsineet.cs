@@ -238,6 +238,17 @@ namespace Matkakirja.Natiivi
             var se = go.AddComponent<SeikkailuEsineet>();
             se.kirjaa = kirjaa; Aktiivinen = se;
             malliJuuri = juuri; malliUrl = url;
+            // Huonekohtainen lataus alusta asti (LS2 9.10.: muuten lataushetken huippu = kaikki): aloitusosa pelaajasta tai laiturin
+            // noususta (veneessä pelaajaa ei vielä ole); muiden osien mallien ASTC-kuvat jätetään lataamatta (HuoneLataus hakee ne).
+            aloitusOsat = null;
+            Vector3? alku = SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null;
+            if (alku == null) foreach (var nm in d.Merkit) if (nm.Nimi == "nousu:laituri") { alku = new Vector3((float)nm.X, (float)nm.Y, (float)-nm.Z); break; }
+            if (alku is Vector3 ap0 && Askelaani.Osa(d, ap0.x, ap0.y, -ap0.z) is string ao)
+            {
+                aloitusOsat = new HashSet<string>(StringComparer.Ordinal);
+                d.AktiivisetOsat(ao, aloitusOsat);
+                kirjaa?.Invoke($"seikkailu: huonelataus alusta: {string.Join(", ", aloitusOsat)}");
+            }
             foreach (var m in d.Lajia("esine"))
             {
                 GameObject eg = null;
@@ -319,7 +330,8 @@ namespace Matkakirja.Natiivi
             // Välimuisti glb:tä kohden (LR 8.10.: 87,9 Mt esineitä, kun jokainen merkki purki oman kuvansa): malli, kuva ja materiaali
             // jaetaan saman glb:n merkeille (tiilet, kivet …); kuva ensin ASTC:nä (<glb>-4x4.astcm, v45c) ja varalla glb:n JPEG.
             MalliVarasto v = null;
-            yield return Varastosta(m.Glb, kirjaa, x => v = x);
+            bool lykkaa = aloitusOsat != null && SeikkailuKavely.Data is KavelyData kd0 && Askelaani.Osa(kd0, m.X, m.Y, m.Z) is string mo && !aloitusOsat.Contains(mo);
+            yield return Varastosta(m.Glb, kirjaa, x => v = x, lykkaa);
             if (v == null || isa == null) yield break;
             var malli = v.Malli; var mat = v.Mat; bool valaistu = v.Valaistu;
             var eg = new GameObject("Esine:" + m.Tunnus) { layer = DioraamaNayttamo.Kerros };
@@ -366,6 +378,7 @@ namespace Matkakirja.Natiivi
                     solmuValmis?.Invoke(malli.Solmut[kv.Key].Nimi, kv.Value);
                 }
             }
+            if (!v.Ladattu) foreach (var mr in eg.GetComponentsInChildren<MeshRenderer>(true)) mr.enabled = false;   // kuvat haetaan huoneen lähestyessä
             valmis(eg);
         }
 
@@ -517,7 +530,8 @@ namespace Matkakirja.Natiivi
         public static (int Glb, int Astc, int Osumia) VarastoTila { get { int a = 0; foreach (var v in varasto.Values) if (v.Astc) a++; return (varasto.Count, a, varastoOsumia); } }
         static int varastoOsumia;
 
-        static IEnumerator Varastosta(string glb, Action<string> kirjaa, Action<MalliVarasto> valmis)
+        static HashSet<string> aloitusOsat;
+        static IEnumerator Varastosta(string glb, Action<string> kirjaa, Action<MalliVarasto> valmis, bool lykkaa = false)
         {
             if (varasto.TryGetValue(glb, out var v))
             {
@@ -538,12 +552,13 @@ namespace Matkakirja.Natiivi
                 {
                     string astcUrl = malliUrl(malliJuuri + astc);
                     if (DioraamaLevyvalimuisti.Manifestissa(astcUrl) != true) continue;
+                    if (lykkaa) { v.KuvaUrl = astcUrl; v.Astc = true; v.Ladattu = false; break; }   // ladataan, kun huone tulee lähelle
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(astcUrl, 60, t => a = t);
                     if (a != null) { v.Kuva = DioraamaAstc.Lue(a, "Esine:" + glb, out var syy, TextureWrapMode.Clamp); v.Astc = v.Kuva != null; if (v.Kuva == null) kirjaa?.Invoke($"seikkailu: {astc} ei käytössä ({syy}), JPEG"); }
                     if (v.Kuva != null) { v.KuvaUrl = astcUrl; break; }
                 }
-                if (v.Kuva == null && v.Malli.Kuvat.Count > 0 && v.Malli.Kuvat[0] != null)
+                if (v.Kuva == null && v.Ladattu && v.Malli.Kuvat.Count > 0 && v.Malli.Kuvat[0] != null)
                 {
                     var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + glb };
                     if (k.LoadImage(v.Malli.Kuvat[0], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
@@ -554,6 +569,7 @@ namespace Matkakirja.Natiivi
                 {
                     string nUrl = malliUrl(malliJuuri + nAstc);
                     if (DioraamaLevyvalimuisti.Manifestissa(nUrl) != true) continue;
+                    if (lykkaa && !v.Ladattu) { v.NormaaliUrl = nUrl; break; }
                     byte[] a = null;
                     yield return DioraamaLevyvalimuisti.Hae(nUrl, 60, t => a = t);
                     if (a != null) { v.Normaali = DioraamaAstc.Lue(a, "EsineN:" + glb, out var syyN, TextureWrapMode.Clamp, 0, true); if (v.Normaali == null) kirjaa?.Invoke($"seikkailu: {nAstc} ei käytössä ({syyN})"); }
