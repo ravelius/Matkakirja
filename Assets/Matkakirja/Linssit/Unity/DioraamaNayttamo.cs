@@ -175,7 +175,13 @@ namespace Matkakirja.Natiivi
             kameraData.volumeLayerMask = 1 << Kerros;
 
             LuoSyvyysvolyymi();
+            // Ajallinen reunanpehmennys (Natiiviseppä, juna 169): TAA High Ultra/Huippu-laitteilla, kun ei kuuma; Laatutaso vaihtaa sen
+            // lennossa. TAA on jälkikäsittelyä, joten PaivitaDofTila pitää renderPostProcessingin päällä sen ajan.
+            Laatutaso.KaytaAjallista(Kamera, Laatutaso.Ajallinen);
+            ajallinenTilaus = () => { if (Kamera != null) { Laatutaso.KaytaAjallista(Kamera, Laatutaso.Ajallinen); PaivitaDofTila(); } };
+            Laatutaso.Muuttui += ajallinenTilaus;
         }
+        System.Action ajallinenTilaus;
 
         /// <summary>
         /// Ajonaikainen Volume + DepthOfField (Gaussian) kerroksessa Kerros, Filmipinon (Kartta/Filmipino.cs) tapaan
@@ -355,7 +361,7 @@ namespace Matkakirja.Natiivi
         void PaivitaDofTila()
         {
             bool dofPaalla = DofPaalla;
-            bool jokinPaalla = dofPaalla || hehku || SeikkailuYo.Aktiivinen != null;   // seikkailun yö: bloom, sävytys, vinjetti
+            bool jokinPaalla = dofPaalla || hehku || SeikkailuYo.Aktiivinen != null || Laatutaso.Ajallinen;   // TAA on jälkikäsittelyä   // seikkailun yö: bloom, sävytys, vinjetti
             if (syvyys != null) syvyys.active = dofPaalla;
             if (hehkuBloom != null) hehkuBloom.active = hehku;
             if (volyymi != null) volyymi.enabled = jokinPaalla;
@@ -369,6 +375,7 @@ namespace Matkakirja.Natiivi
 
         public void Tuhoa()
         {
+            if (ajallinenTilaus != null) { Laatutaso.Muuttui -= ajallinenTilaus; ajallinenTilaus = null; }
             VapautaKuva();
             NykyinenKuva = null;
             KuvaVaihtui?.Invoke(null);
