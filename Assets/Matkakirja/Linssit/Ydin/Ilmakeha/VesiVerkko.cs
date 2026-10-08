@@ -56,6 +56,29 @@ namespace Matkakirja.Linssit.Ilmakeha
             return l;
         }
 
+        /// <summary>Vesipinnan korkeus (ENU u, ilman nostoa) pisteessä (e, n): kolmio, jonka sisällä piste on, barysentrisesti; false = ei vettä
+        /// (LS1:n veneet: korkeus samasta aineistosta, ei Googlesta).</summary>
+        public bool Korkeus(double e, double n, out double u)
+        {
+            u = 0;
+            for (int pi = 0; pi < Palat.Length; pi++)
+            {
+                var p = Palat[pi];
+                const double V = 0.05;   // bbox jsonissa senttimetrin tarkkuudella
+                if (e < p.MinE - V || e > p.MaxE + V || n < p.MinN - V || n > p.MaxN + V) continue;
+                for (int i = 0; i + 2 < p.In; i += 3)
+                {
+                    var a = Karki(p.K0 + Indeksi(p.I0 + i)); var b = Karki(p.K0 + Indeksi(p.I0 + i + 1)); var c = Karki(p.K0 + Indeksi(p.I0 + i + 2));
+                    double d = (b.N - c.N) * (a.E - c.E) + (c.E - b.E) * (a.N - c.N);
+                    if (Math.Abs(d) < 1e-12) continue;
+                    double l1 = ((b.N - c.N) * (e - c.E) + (c.E - b.E) * (n - c.N)) / d, l2 = ((c.N - a.N) * (e - c.E) + (a.E - c.E) * (n - c.N)) / d, l3 = 1 - l1 - l2;
+                    if (l1 < -1e-6 || l2 < -1e-6 || l3 < -1e-6) continue;
+                    u = l1 * a.U + l2 * b.U + l3 * c.U; return true;
+                }
+            }
+            return false;
+        }
+
         /// <summary>Rannan alfa (Karttaseppä: smoothstep(0, 3, d)).</summary>
         public static double RantaAlfa(double d) { double t = Math.Max(0, Math.Min(1, d / 3)); return t * t * (3 - 2 * t); }
     }

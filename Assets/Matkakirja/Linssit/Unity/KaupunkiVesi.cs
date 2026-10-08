@@ -24,6 +24,13 @@ namespace Matkakirja.Natiivi
         public static string VesiJuuri = "https://media.matkakirja.app/vesi/";
         public const float LahiM = 3000f, KaukoM = 20000f, PaivitysM = 400f;
         public static float NostoM = 0.4f;
+        /// <summary>Asetus "vesinosto" annettu: jsonin nosto_m_suositus ei ohita sitä (LS1:n katselmointi).</summary>
+        public static bool NostoAsetettu;
+        /// <summary>Uusia paloja enintään näin monta kehyksessä (ei nykäystä pallon lennossa; LS1:n katselmointi).</summary>
+        public const int PalojaKehyksessa = 2;
+        readonly Queue<(bool, int)> jono = new Queue<(bool, int)>();
+        /// <summary>Veden juuri (paikalliset akselit itä, ylös, pohjoinen; m), null ennen latausta (LS1:n veneet).</summary>
+        public Transform Juuri => juuri != null ? juuri.transform : null;
 
         readonly Action<string> kirjaa;
         GameObject juuri; Material mat; int kerros;
@@ -41,11 +48,11 @@ namespace Matkakirja.Natiivi
             if (!Paalla || vanhempi == null) return;
             this.kerros = kerros; vanhempi0 = vanhempi;
             int tama = ++avaus;
-            LinssiOhjain.Instanssi?.StartCoroutine(Lataa(Juuri(), lat, lon, tama));
+            LinssiOhjain.Instanssi?.StartCoroutine(Lataa(JuuriUrl(), lat, lon, tama));
         }
         Transform vanhempi0;
 
-        static string Juuri()
+        static string JuuriUrl()
         {
             try
             {
@@ -103,7 +110,7 @@ namespace Matkakirja.Natiivi
             var oj = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "origo"));
             origo = oj != null && MiniJson.Luku(oj, "lat") is double la && MiniJson.Luku(oj, "lon") is double lo ? (la, lo) : ((double, double)?)null;
             krediitti = MiniJson.Teksti(j, "krediitti");
-            if (MiniJson.Luku(j, "nosto_m_suositus") is double n) NostoM = (float)n;
+            if (!NostoAsetettu && MiniJson.Luku(j, "nosto_m_suositus") is double n) NostoM = (float)n;
             var palat = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "palat")).Select(MiniJson.Objekti).Select(p =>
             {
                 double[] L(string k) => MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(p, k)).Select(Convert.ToDouble).ToArray();
@@ -117,6 +124,11 @@ namespace Matkakirja.Natiivi
         public void Paivita(Camera kamera)
         {
             if (juuri == null || kamera == null || (lahi == null && kauka == null)) return;
+            for (int n = 0; n < PalojaKehyksessa && jono.Count > 0; n++)
+            {
+                var h = jono.Dequeue();
+                if (!palat.ContainsKey(h)) palat[h] = LuoPala(h.Item1 ? lahi : kauka, h.Item2, h.Item1);
+            }
             var p = juuri.transform.InverseTransformPoint(kamera.transform.position);   // paikallinen: x itä, y ylös, z pohjoinen (m)
             if (!float.IsNaN(edellinen.x) && (p - edellinen).sqrMagnitude < PaivitysM * PaivitysM) return;
             edellinen = p;
@@ -124,7 +136,9 @@ namespace Matkakirja.Natiivi
             if (lahi != null) foreach (var i in lahi.Valitse(p.x, p.z, 0, LahiM)) halutut.Add((true, i));
             if (kauka != null) foreach (var i in kauka.Valitse(p.x, p.z, lahi != null ? LahiM : 0, KaukoM)) halutut.Add((false, i));
             foreach (var kv in palat.Where(kv => !halutut.Contains(kv.Key)).ToList()) { UnityEngine.Object.Destroy(kv.Value.GetComponent<MeshFilter>().sharedMesh); UnityEngine.Object.Destroy(kv.Value); palat.Remove(kv.Key); }
-            foreach (var h in halutut) if (!palat.ContainsKey(h)) palat[h] = LuoPala(h.Item1 ? lahi : kauka, h.Item2, h.Item1);
+            // Uudet jonoon lähimmästä alkaen (luodaan PalojaKehyksessa kehyksessä); vanha jono hylätään.
+            jono.Clear();
+            foreach (var h in halutut.Where(h => !palat.ContainsKey(h)).OrderBy(h => (h.Item1 ? lahi : kauka).Etaisyys(h.Item2, p.x, p.z))) jono.Enqueue(h);
         }
 
         GameObject LuoPala(VesiVerkko v, int i, bool lahiTaso)
@@ -147,10 +161,19 @@ namespace Matkakirja.Natiivi
         {
             avaus++;
             foreach (var g in palat.Values) if (g != null) { UnityEngine.Object.Destroy(g.GetComponent<MeshFilter>().sharedMesh); UnityEngine.Object.Destroy(g); }
-            palat.Clear();
+            palat.Clear(); jono.Clear();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             if (mat != null) UnityEngine.Object.Destroy(mat);
             juuri = null; mat = null; lahi = kauka = null; edellinen = new Vector3(float.NaN, 0, 0);
+        }
+
+        /// <summary>Vesipinnan korkeus juuren paikallisessa kehyksessä (x itä, z pohjoinen → y, nosto mukana); false = ei vettä (LS1:n veneet).</summary>
+        public bool VedenKorkeus(float x, float z, out float y)
+        {
+            y = 0;
+            var v = lahi ?? kauka; if (v == null) return false;
+            if (!v.Korkeus(x, z, out var u) && !(kauka != null && v != kauka && kauka.Korkeus(x, z, out u))) return false;
+            y = (float)u + NostoM; return true;
         }
 
         static double Etaisyys(double la1, double lo1, double la2, double lo2)

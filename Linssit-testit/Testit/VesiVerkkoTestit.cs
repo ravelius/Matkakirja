@@ -58,6 +58,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(p.All(x => Math.Abs(x.Y - (23.2f + 0.4f)) < 25f), "nosto lisätty (vesitaso ≈ geoidi 23,2 m + 0,4)");
         }
 
+        [Testi] static void KorkeusKarjessaJaVedenUlkopuolella()
+        {
+            var v = Lue("vesi-tukholma-16m-ote"); var p = v.Palat[0];
+            var k = v.Karki(p.K0 + v.Indeksi(p.I0));
+            Oleta.Tosi(v.Korkeus(k.E, k.N, out var u) && Math.Abs(u - k.U) < 1e-3, $"kärjessä korkeus {u:F3} = {k.U:F3}");
+            var a = v.Karki(p.K0 + v.Indeksi(p.I0)); var b = v.Karki(p.K0 + v.Indeksi(p.I0 + 1)); var c = v.Karki(p.K0 + v.Indeksi(p.I0 + 2));
+            Oleta.Tosi(v.Korkeus((a.E + b.E + c.E) / 3, (a.N + b.N + c.N) / 3, out var uk) && Math.Abs(uk - (a.U + b.U + c.U) / 3) < 1e-3, "kolmion keskellä keskiarvo");
+            Oleta.Tosi(!v.Korkeus(p.MinE - 5000, p.MinN - 5000, out _), "vedestä kaukana ei korkeutta");
+        }
+
         [Testi] static void RantaAlfaJaValinta()
         {
             Oleta.Sama(0.0, VesiVerkko.RantaAlfa(0), "rannalla 0"); Oleta.Sama(1.0, VesiVerkko.RantaAlfa(3), "3 m:n päässä 1");
