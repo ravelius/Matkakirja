@@ -97,7 +97,7 @@ namespace Matkakirja.Natiivi
                     // Omistaja 4.10. 22.5x: "Mylly saisi näkyä yhtenä pelinä valikossa. Ei kolmena eri lautana" → yksi rivi per peli;
                     // lauta valitaan valintakortin lautavalinnasta (kehittäjällä kaikki laudat auki siellä).
                     AarreRivi("peli:" + m.Id, m.Nimi, null, string.Join(" · ", laudat.Select(l => l.Nimi)),
-                        () => { Sulje(); avaa(m.Id); }, pelit, Ikonit.Viiva["noppa"]);
+                        () => { Sulje(); avaa(m.Id); }, pelit, Ikonit.Viiva.TryGetValue(m.Id, out var pk) ? pk : Ikonit.Viiva["noppa"]);
                 }
             }
             if (Asetukset.Kehittaja)
@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
                     var avaa = v.Avaa;
                     AarreRivi("peli:" + v.Id, v.Nimi, v.KuvaUrl, v.Selite, () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: keskeneräinen " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
                 }
-                AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["kone"]);
+                AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["lentopeli"]);
             }
             if (lauta.Count == 0 && !Asetukset.Kehittaja)
                 Rakenne.Teksti("Ei vielä pelejä.", "mk-linssivalitsin__tyhja", pelit);
