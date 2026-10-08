@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
         static readonly (string Id, string Nimi, string Selite, string Ikoni, string KuvaUrl, System.Action Avaa)[] Keskeneraiset =
         {
             ("olavinlinna", "Olavinlinna", "1499 · koko seikkailu, noin 25 min", "linna",
-                "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/peli.jpg", SeikkailuTapit.AvaaPelattavaPala),
+                "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008b/peli.jpg", SeikkailuTapit.AvaaPelattavaPala),
         };
 
         /// <summary>Pelit-kategoriassa on jotain (Karttaselitteen Linssit-nappi näkyy myös ilman linssejä).</summary>
