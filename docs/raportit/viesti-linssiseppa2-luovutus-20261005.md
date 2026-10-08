@@ -35,7 +35,13 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. yö, myöhemmin (uusin)
+## TILA 8.10. aamuyö (uusin)
+- HUONESIMULAATIO 6–10: proto linssiseppa2/huonesim-m 6c3ad3865 (historia-m a04573945 päällä), worktree wt/proto-linssiseppa2-huonesim-m.
+  Kultaiset v44v (LR 89d543ae), ThiefAjuri.cs erotettu, OlavinlinnaMOsaTestit (reitti 21→92 212 s, kiipeily 19,5 s, komero, pako K4 22,1 s).
+  940/940, tarkistus 0. SHA Siirtosepälle + PT. Löydökset: naamio kelpaa muurilla/harjalla; ilman naamiota muurikäytävä mahdoton
+  (partio koko käytävä, ei piiloja); RantaEsiinS 20 < sujuva 22 s (malli 25). Poista worktree mergen jälkeen.
+
+## TILA 8.10. yö, myöhemmin
 - m-osa 67344b937 MERGETTY (historia-m a04573945, 938/938); Siirtoseppä lisäsi SeikkailuVartijat.Odottamaan(reitti) UusiYritys-kohtaan.
   m-osa-worktree poistettu. Jäljellä vain wt/proto-linssiseppa2-kevat (juna 164).
 - SEURAAVA: LR:n v44v (reitti:pelaaja-21…94, huoneet 6–10) → LR ilmoittaa hashin → huonesimulaatio 6–10 historia-m:n päälle
