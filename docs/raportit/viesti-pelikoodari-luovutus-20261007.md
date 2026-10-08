@@ -26,6 +26,10 @@
   + Lähteet-rivi, Linssiseppä tehosteet, junaan 166. #4195 Haiku 5.5 -testimallin ajattelu pois (katto kului ajatteluun).
 - KIERROSJÄRJESTYS: #4196 pieninKiertoReitti (Linssisepän malli, 37/37 sama; Giza 363° → 189°). Tekstit eivät viittaa
   järjestykseen (221 osumaa, historialliset), ei uusia ääniä. Odottaa Päätoimittajan kuittausta → Julkaisija.
+- YKSITYISKOHTAKUVAT KAIKKI 37 ESITTELYKAUPUNKIA tuotannossa (#4200–#4205; 31 äänetöntä Sisältökirjurilta, v2/v3:t
+  oikeustarkistuksista: berliini, helsinki, tampere, vilna, firenze v2, sisilia v3). Tarkistin: _tyo/yksityiskohdat-31/valmiit.txt +
+  scratchpad ankkurit-v3.mjs (ankkurit v3-teksteistä + media_url 200). Codex-havainnekuvien v2-luettelot tulevat kaupunki kerrallaan.
+- UKKONEN: aanet/tehosteet/ukkonen/ukkonen-01…04.mp3 (Commons PD, _tyo/ukkonen/tee.sh), Linssiseppä kuittasi (juna 166).
 - Tuotannossa 8.10.: K1–K4 (#4185–#4187), pallo #4189–#4191; kululoki näkyy (kulu: … testi claude-haiku-5-5).
 - TURBO MAKSAA ~0,066 krediittiä/merkki (historia 8.10.), 31 kaupungin erä ≈ 23 000. Creator-vaihto: 30 äänipaikkaa (tilillä
   261) ja ei pcm_44100 API:lla → ei heti; omistajan päätös (Päätoimittaja vie).
