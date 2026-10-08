@@ -16,6 +16,8 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuKomero : MonoBehaviour
     {
         public static SeikkailuKomero Aktiivinen { get; private set; }
+        /// <summary>Komeron ydin vain luettavaksi (LS2:n vihjeportaat 6–10).</summary>
+        public Komero Ydin => ydin;
         /// <summary>Arkku auki ja löytö kuitattu (huone 10 alkaa: hälytyskello, SeikkailuPako).</summary>
         public static event Action ArkkuAuki;
         public const float LahiM = 1.1f, PutoamisS = 1.7f;

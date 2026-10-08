@@ -30,7 +30,10 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Kiinnita()
         {
             if (Vaihe != PakoVaihe.Kello) return false;
-            if (Myohastynyt) { Myohastynyt = false; KelloS = 0; rantaEsiin = false; UusiYritys = true; }
+            if (Myohastynyt) { Myohastynyt = false; rantaEsiin = false; UusiYritys = true; }
+            // Aikaikkuna alkaa köyden kiinnityksestä (Siirtoseppä 8.10.): kellosta laskettuna komerossa viipynyt pelaaja myöhästyi heti
+            // kalliolle päästyään, ja jatko tallennuksesta alkoi kellon jälkeen. Sujuvalla pelaajalla kello → kiinnitys on muutama sekunti.
+            KelloS = 0;
             Vaihe = PakoVaihe.Lasku; return true;
         }
 

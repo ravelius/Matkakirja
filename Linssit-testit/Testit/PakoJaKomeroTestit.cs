@@ -28,7 +28,7 @@ namespace Matkakirja.Linssit.Testit
             Aja(p, 8, false, _ => false); p.LaskuValmis();
             Oleta.Sama(PakoVaihe.Kallio, p.Vaihe);
             double esiin = Aja(p, 30, false, x => x.RantaEsiin);
-            Oleta.Tosi(Math.Abs(10 + esiin - Pako.RantaEsiinS) <= Tol, $"rannan vartijat 25 s kellosta ({10 + esiin:F2})");
+            Oleta.Tosi(Math.Abs(8 + esiin - Pako.RantaEsiinS) <= Tol, $"rannan vartijat 25 s kiinnityksestä ({8 + esiin:F2}; ikkuna alkaa kiinnityksestä, Siirtoseppä 8.10.)");
             Aja(p, 1, true, x => x.Sukelsi);
             Oleta.Sama(PakoVaihe.K4, p.Vaihe);
             double k4 = Aja(p, 10, false, x => x.Vaihe == PakoVaihe.Uinti);
@@ -111,7 +111,7 @@ namespace Matkakirja.Linssit.Testit
                 }
                 Oleta.Sama(PakoVaihe.Valmis, p.Vaihe, $"ajo {ajo}: jumi");
             }
-            Oleta.Tosi(myohastyi > 10, $"myöhästymisiä syntyi ({myohastyi})");
+            Oleta.Tosi(myohastyi > 0, $"myöhästymisiä syntyi ({myohastyi}; ikkuna kiinnityksestä → harvemmin kuin kellosta)");
         }
 
         [Testi] static void KomeroArkkuVastaTiiltenJalkeenJaKilpiKiertaa()
