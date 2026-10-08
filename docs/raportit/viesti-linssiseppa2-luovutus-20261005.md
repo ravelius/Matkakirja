@@ -36,7 +36,7 @@ Avoimet työt:
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
 ## TILA 8.10. aamu, myöhemmin (uusin)
-- huonesim-m2 MERGETTY (historia-m 1de1d6ad, 944/944): SeikkailuSali käyttää VoudinKiistaa, KiistaValiS 20 s (pisin odotus 32 s).
+- huonesim-m2 MERGETTY (historia-m 3cd1e87e3, 944/944): SeikkailuSali käyttää VoudinKiistaa, KiistaValiS 20 s (pisin odotus 32 s).
   Worktree poistettu. ODOTTAA LR:n muurikäytävän hashia (tulee suoraan LS2:lle) → uusi worktree historia-m:n kärjestä, kultaiset päivitys.
 
 ## TILA 8.10. aamu
