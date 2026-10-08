@@ -1,0 +1,24 @@
+# Kertaluonteinen kuluhaku kustannussuunnitelmaa varten (Pelikoodari 8.10.2026).
+# Käynnistyy vain tämän haaran pushista; haaraa ei mergetä.
+name: Hae kulut
+on:
+  push:
+    branches: [pelikoodari-kustannus]
+permissions:
+  contents: read
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - env:
+          ANTHROPIC_ADMIN_KEY: ${{ secrets.ANTHROPIC_ADMIN_KEY }}
+          OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
+        run: node tools/kulut/hae-kulut.mjs /tmp/kulut
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kulut
+          path: /tmp/kulut/
