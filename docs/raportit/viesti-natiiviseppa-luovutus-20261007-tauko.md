@@ -12,6 +12,12 @@ Proto-haara natiiviseppa/t7-simusarja 77a806aa7 (todistusajo, sarja.sh, simkoske
 palvelu-kopio). Todennus Julkaisijan vuorolla: lokit/natiiviseppa-t7-todennus/t7-tyokalut-20261008.png. Roolien ohje Postivahdille.
 Avoinna: MCP-simutyökalu näkee vain sisäisen sarjan; vanhojen sarjojen poisto omistajan Run-rivillä päivän käytön jälkeen.
 
+**BUILD 164 = proto master df24a24d63e953c2edb189d6cbd280a62950afae** (runko f5c5f0ed3 = esirunko + LS1 e9207b4cc; käännös a129f4d80
+KÄÄNNETTY 09.13; app lokit/natiiviseppa-app-164-f5c5f0ed3; muutosloki a8d599d4 mergetty). SEURAAVAKSI: (1) Julkaisija ajaa iOS TF 164
+LS1:n videon jälkeen ~09.30 → lähettää ajon alkuajan → `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV'
+proto-3d/lokit/natiiviseppa-skriptit/mac-tf-odottaja.sh df24a24d 164 <alku UTC>` (Julkaisijan lupa 09.2x); (2) kun Julkaisija ilmoittaa
+LS1-simun vapaaksi: `git update-ref refs/heads/juna/b13 f5c5f0ed3… d78cd0e00…` + juna.log-rivi → junavahti asentaa 4 T7-simuun.
+
 **JUNA 165 (ilta, iltapäivän työt; NUI:n mukaan Päätoimittaja kuittasi 08.0x):** NUI metro-kaksirivi 0484007f2 (⊇ 69e0b05ae) +
 NUI kasittely-veto cf66d2088 (⊇ 24d40fb9c, KUITATTU NUI:n mukaan; uusi Ydin/Seikkailu/KasittelyVeto.cs; Siirtosepän kytkentä historia-valot 10294000f erillisenä SHA:na) + NUI latauskuva 39d43932a (⊇ 7d366ce92; LATAUSKUVA-pohja, LatausLiike.cs, tyylikirja #4188; KUITATTU NUI:n mukaan); molemmat yhdistyvät
 juna-164:ään ilman ristiriitoja. JUNA 164 AIKAISTUI AAMUPÄIVÄÄN (Päätoimittaja 08.0x): esirunko ae7523be8 (+ Siirtoseppä ebd86fc24 ⊇ da5fdf62a, + T7 nohup-korjaus 09cdc7680,
