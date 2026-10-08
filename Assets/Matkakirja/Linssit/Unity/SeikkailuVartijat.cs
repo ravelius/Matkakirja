@@ -197,11 +197,14 @@ namespace Matkakirja.Natiivi
                 sv.vartijat.Add(v);
                 if (Odottavat.Contains(kv.Key)) vg.SetActive(false);   // pako: rannan soihtuvartijat vasta kellon jälkeen (SeikkailuPako)
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
-                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika));
+                // Skin-hahmo katsoo Unityssa paikallista −z:aa → 180° kuten pelaajalla ja kappelin hahmoilla (omistaja 8.10.: laiturin hahmot
+                // kävelivät takaperin kuin moonwalkissa, koska kääntö puuttui).
+                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika), Quaternion.Euler(0f, 180f, 0f));
                 DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
                 sv.henkilot.Add(henkilo);
             }
             Aktiivinen = sv;
+            sv.PortinValo(d, false);   // portti hehkuu heti hiukan (tehtävä näkyy laiturilta)
             SeikkailuPelaaja.OteHavaittu -= sv.KiipeilijaHavaittu; SeikkailuPelaaja.OteHavaittu += sv.KiipeilijaHavaittu;
             if (AlkuArmo) { AlkuArmo = false; sv.armoAsti = Time.unscaledTime + ArmoS; }
             kirjaa?.Invoke($"seikkailu: vartijat {sv.vartijat.Count} ({string.Join(", ", reitit.Keys)}), NavMesh {(sv.data != null ? "valmis" : "puuttuu")}");
@@ -466,6 +469,7 @@ namespace Matkakirja.Natiivi
             var d = SeikkailuKavely.Data; Vector3 vene = pv.Agentti.transform.position + pv.Agentti.transform.forward * 6f;
             if (d != null) foreach (var m in d.Merkit) if (m.Nimi == "vene:laituri") vene = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
             riitaKaynnissa = true;
+            PortinValo(d, true);
             var r = SeikkailuRepliikit.Aktiivinen;
             double k1 = r != null && r.Valmis ? r.Soita("soutaja-2", vene) : 0;
             yield return new WaitForSecondsRealtime((float)Math.Max(1.0, k1));
@@ -477,6 +481,7 @@ namespace Matkakirja.Natiivi
             while (pv.Aivot.Riita > 0) yield return null;
             if (pv.Aivot.Tila == VartijanTila.Partio && r != null && r.Valmis && pv.Agentti != null) r.Soita("portinvartija-paluu-5", pv.Agentti.transform);
             riitaKaynnissa = false;
+            PortinValo(d, false);
         }
 
         V ote; bool tyrmassa;
@@ -568,6 +573,34 @@ namespace Matkakirja.Natiivi
         {
             var a = Aktiivinen; Aktiivinen = null;
             if (a != null) Destroy(a.gameObject);
+        }
+
+        // Omistaja 8.10. (6): "epäselväksi, mitä laiturilla pitää tehdä" → portti (ovi:vesiportti-loppu) hehkuu lämpimänä aina hiukan ja
+        // riidan aikana kirkkaasti: tehtävä näkyy ilman tekstiä (Pulun ensivihje LS2). Valo ei vaikuta havaintoon (valoisuus liekeistä).
+        Light portinValo; Coroutine portinHaivytys;
+        void PortinValo(KavelyData d, bool riita)
+        {
+            if (portinValo == null && d != null)
+                foreach (var m in d.Merkit)
+                    if (m.Nimi == "ovi:vesiportti-loppu")
+                    {
+                        var g = new GameObject("Portin valo") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false);
+                        g.transform.position = new Vector3((float)m.X, (float)m.Y + 1.8f, (float)-m.Z);
+                        portinValo = g.AddComponent<Light>(); portinValo.type = LightType.Point; portinValo.range = 6f; portinValo.color = new Color(1f, 0.66f, 0.34f);
+                        portinValo.shadows = LightShadows.None; portinValo.intensity = PortinValoLepo;
+                        SeikkailuValot.Liekki(g.transform, DioraamaNayttamo.Kerros);
+                        break;
+                    }
+            if (portinValo == null) return;
+            if (portinHaivytys != null) StopCoroutine(portinHaivytys);
+            portinHaivytys = StartCoroutine(Haivyta(portinValo, riita ? PortinValoRiita : PortinValoLepo, riita ? 1f : 2f));
+        }
+        const float PortinValoLepo = 0.5f, PortinValoRiita = 1.8f;
+        static IEnumerator Haivyta(Light l, float tavoite, float s)
+        {
+            float alku = l.intensity;
+            for (float t = 0; t < s && l != null; t += Time.deltaTime) { l.intensity = Mathf.Lerp(alku, tavoite, t / s); yield return null; }
+            if (l != null) l.intensity = tavoite;
         }
 
         /// <summary>Reitit, jotka luodaan piiloon ja tuodaan esiin vasta tapahtumasta (pelattavuusmalli 8.2 huone 10: kaksi vartijaa

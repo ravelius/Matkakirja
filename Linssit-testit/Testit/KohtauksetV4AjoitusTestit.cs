@@ -54,8 +54,8 @@ namespace Matkakirja.Linssit.Testit
                     foreach (var s in sanat)
                     {
                         double a = MiniJson.Luku(s, "alku_s") ?? -1, l = MiniJson.Luku(s, "loppu_s") ?? -1;
-                        Oleta.Tosi(a >= ed && a <= l && l <= vl + 0.25 && l <= kesto + 0.1,   // v4: viimeisen sanan loppu voi olla ≤ 0,08 s äänitteen yli (siirto)
-                             $"{Path.GetFileName(f)}: sana {MiniJson.Teksti(s, "sana")} {a:F2}–{l:F2} (vuoro {va:F2}–{vl:F2})");
+                        Oleta.Tosi(a >= ed && a <= l && l <= vl + 0.25 && l <= kesto + 1e-6,   // Pelikoodari 8.10.: ajat rajattu mp3:n kestoon
+                            $"{Path.GetFileName(f)}: sana {MiniJson.Teksti(s, "sana")} {a:F2}–{l:F2} (vuoro {va:F2}–{vl:F2})");
                         ed = a;
                     }
                     // Kohdistus merkeittäin vuoron alusta (sana kerrallaan, välilyönnit edellisen sanan loppuun) → eleajoitus vuoron sisään.

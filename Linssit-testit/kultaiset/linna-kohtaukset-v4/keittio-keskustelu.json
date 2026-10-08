@@ -309,7 +309,7 @@
    "voice_id": "MZvBk0qJWqOzeRt8hTt6",
    "rivi": 3,
    "alku_s": 25.08,
-   "loppu_s": 31.24,
+   "loppu_s": 31.16,
    "sanat": [
     {
      "sana": "Kokki,",
@@ -369,7 +369,7 @@
     {
      "sana": "kappelissa.",
      "alku_s": 30.24,
-     "loppu_s": 31.24
+     "loppu_s": 31.16
     }
    ],
    "tauko_s": 0.0
