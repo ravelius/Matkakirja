@@ -993,7 +993,7 @@ namespace Matkakirja.Natiivi
             if (vm.Id == null) { o.Kirjaa("poikki: vene: rekvisiitta vene puuttuu (ymparisto.mallit, maailmaan: false)"); yield break; }
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v2/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
             SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
@@ -1119,7 +1119,7 @@ namespace Matkakirja.Natiivi
                 var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
                 if (ky != null) ky.Ydin.OmaKynttila = true;
             }
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v2/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
             AudioClip klippi = null;
             if (rakennus.Aanet != null && rakennus.Aanet.TryGetValue("kappeli-keskustelu", out var ka) && !string.IsNullOrEmpty(ka.Tiedosto))
             {
@@ -1141,7 +1141,7 @@ namespace Matkakirja.Natiivi
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v2/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);

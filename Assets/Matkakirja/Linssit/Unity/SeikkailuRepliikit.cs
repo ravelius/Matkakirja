@@ -1,5 +1,5 @@
 // HISTORIAMOOTTORI: PYSTYLEIKKEEN REPLIIKIT (Siirtoseppä 7.10.2026; omistajan päätös 13.3x: 31 repliikkiä huoneisiin 1–5;
-// Pelikoodarin manifest media.matkakirja.app/seikkailu/<rakennus>/repliikit-v2/manifest.json { repliikit[] { tunnus, hahmo, huone,
+// Pelikoodarin manifest media.matkakirja.app/seikkailu/<rakennus>/repliikit-v3/manifest.json { repliikit[] { tunnus, hahmo, huone,
 // tilanne, teksti, aani, kesto_s } }, äänet tasoitettu −17,2 dB:iin). Ei tekstiä ruudulle (omistaja: pelin aikana ei luettavaa).
 // - Manifest kerran, ääni haetaan ensimmäisellä soitolla (mp3 → PCM-klippi) ja pidetään muistissa.
 // - Soitto lähietäisyyden 3D-äänenä kuulokehyksessä (SeikkailuKuulija), puhujan pään kohdalta, yksi repliikki kerrallaan per puhuja.
