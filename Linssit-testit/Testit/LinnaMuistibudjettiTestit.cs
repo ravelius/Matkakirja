@@ -109,5 +109,19 @@ namespace Matkakirja.Linssit.Testit
                 if (p > 0) Oleta.Tosi(Vahintaan(portaat[p], portaat[p - 1]), "portaat kasvavat");
             }
         }
+
+        [Testi] static void UltraAtlaksetVainYlimmallePortaalle()
+        {
+            var p = LinnaMuistibudjetti.Portaat;
+            Oleta.Sama(LinnaMuistibudjetti.Tarve(p[4]) + LinnaMuistibudjetti.UltraAtlaksetMt, LinnaMuistibudjetti.Tarve(p[4], true), "porras 4 Ultralla");
+            Oleta.Sama(LinnaMuistibudjetti.Tarve(p[3]), LinnaMuistibudjetti.Tarve(p[3], true), "porras 3 ilman 8K:ta");
+            // M-iPad, budjetti juuri portaalle 4 ilman 8K:ta: Ultralla jää portaalle 3 (8K ei mahdu), ilman Ultraa porras 4.
+            int tarve4 = LinnaMuistibudjetti.Tarve(p[4]);
+            int vapaa = tarve4 + 700;   // marginaali 700 (vapaa < 4667)
+            var ei = LinnaMuistibudjetti.Laske(vapaa, "iPad14,3", 8192, true, 2360L * 1640);
+            var on = LinnaMuistibudjetti.Laske(vapaa, "iPad14,3", 8192, true, 2360L * 1640, ultra: true);
+            Oleta.Tosi(ei.SamaLaatu(p[4]), "ilman Ultraa porras 4: " + ei);
+            Oleta.Tosi(!on.SamaLaatu(p[4]), "Ultralla 8K ei mahdu → ei porrasta 4: " + on);
+        }
     }
 }

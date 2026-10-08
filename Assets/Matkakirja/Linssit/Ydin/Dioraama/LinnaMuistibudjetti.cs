@@ -77,6 +77,9 @@ namespace Matkakirja.Linssit.Dioraama
         public const int OrtoKevytMt = 6, OrtoNormaaliMt = 22, OrtoHuippuMt = 89;
         public const int PinnatTaydetMt = 150, PinnatPuolikkaatMt = 70;
         public const int NormaalitMt = 25, VeneMt = 30;
+        /// <summary>Ultran 8K-valoatlakset ylimmällä portaalla (LS2 v45o 8.10.: 4 × 8K ASTC 6×6 mipeineen +131 Mt → 135); Siirtoseppä lataa
+        /// ne vain, kun Laatutaso.Ultra ja budjetti valitsi ylimmän portaan (siirtoseppa/juna168-v45o 2406bf795).</summary>
+        public const int UltraAtlaksetMt = 135;
 
         /// <summary>Portaat alhaalta ylös (komponentit kasvavat; ks. alkukommentti).</summary>
         public static readonly LinnaLaatu[] Portaat =
@@ -91,7 +94,7 @@ namespace Matkakirja.Linssit.Dioraama
         public static int Marginaali(int vapaaMt) => Math.Max(MarginaaliMinMt, (int)Math.Round(vapaaMt * MarginaaliOsuus));
 
         /// <summary>Arvioitu muistitarve (Mt) laatuvalinnoille.</summary>
-        public static int Tarve(LinnaLaatu l)
+        public static int Tarve(LinnaLaatu l, bool ultra = false)
         {
             int t = PerusMt;
             t += l.Kuori == KuoriTaso.Huippu ? KuoriHuippuMt - (l.RajoituksetPois ? 0 : HuipunYlinMipMt)
@@ -100,6 +103,7 @@ namespace Matkakirja.Linssit.Dioraama
                : l.Kuori == KuoriTaso.Normaali ? OrtoNormaaliMt : OrtoKevytMt;
             t += l.TaydetPinnat ? PinnatTaydetMt : PinnatPuolikkaatMt;
             if (l.Taysi) t += NormaalitMt;
+            if (ultra && l.SamaLaatu(Portaat[Portaat.Length - 1])) t += UltraAtlaksetMt;
             if (l.RajoituksetPois) t += VeneMt;
             return t;
         }
@@ -119,28 +123,28 @@ namespace Matkakirja.Linssit.Dioraama
             new LinnaLaatu((KuoriTaso)Math.Max((int)a.Kuori, (int)b.Kuori), a.TaydetPinnat || b.TaydetPinnat, a.RajoituksetPois || b.RajoituksetPois, a.Taysi || b.Taysi);
 
         /// <summary>Linnan laatu vapaan muistin mukaan. vapaaMt −1 = ei tiedossa → laiteluokka sellaisenaan.</summary>
-        public static LinnaLaatu Laske(int vapaaMt, string malli, int ramMt, bool nykyinenTaysi, long naytonPikselit)
+        public static LinnaLaatu Laske(int vapaaMt, string malli, int ramMt, bool nykyinenTaysi, long naytonPikselit, bool ultra = false)
         {
             var luokka = Laiteluokka(malli, ramMt, nykyinenTaysi, naytonPikselit);
-            if (vapaaMt < 0) return Tulos(luokka, -1, -1, "laiteluokka (vapaa muisti ei tiedossa)");
+            if (vapaaMt < 0) return Tulos(luokka, -1, -1, ultra, "laiteluokka (vapaa muisti ei tiedossa)");
             int budjetti = vapaaMt - Marginaali(vapaaMt);
-            if (Tarve(luokka) <= budjetti)
+            if (Tarve(luokka, ultra) <= budjetti)
             {
                 // Laiteluokka mahtuu: suurin porras, jonka ja laiteluokan yhdistelmä mahtuu (porras 0 + luokka = luokka → aina löytyy).
                 for (int p = Portaat.Length - 1; p >= 0; p--)
                 {
                     var ehdokas = Max(luokka, Portaat[p]);
-                    if (Tarve(ehdokas) <= budjetti)
-                        return Tulos(ehdokas, vapaaMt, budjetti, ehdokas.SamaLaatu(luokka) ? "laiteluokan taso" : $"nosto (porras {p})");
+                    if (Tarve(ehdokas, ultra) <= budjetti)
+                        return Tulos(ehdokas, vapaaMt, budjetti, ultra, ehdokas.SamaLaatu(luokka) ? "laiteluokan taso" : $"nosto (porras {p})");
                 }
             }
             // Jetsam-vaara: laiteluokan taso ei mahdu → suurin mahtuva porras, viimeisenä turvataso.
             for (int p = Portaat.Length - 1; p >= 1; p--)
-                if (Tarve(Portaat[p]) <= budjetti) return Tulos(Portaat[p], vapaaMt, budjetti, $"vähän muistia (porras {p})");
-            return Tulos(Portaat[0], vapaaMt, budjetti, "HÄTÄ: turvataso");
+                if (Tarve(Portaat[p], ultra) <= budjetti) return Tulos(Portaat[p], vapaaMt, budjetti, ultra, $"vähän muistia (porras {p})");
+            return Tulos(Portaat[0], vapaaMt, budjetti, ultra, "HÄTÄ: turvataso");
         }
 
-        static LinnaLaatu Tulos(LinnaLaatu l, int vapaa, int budjetti, string peruste) =>
-            new LinnaLaatu(l.Kuori, l.TaydetPinnat, l.RajoituksetPois, l.Taysi, vapaa, budjetti, Tarve(l), peruste);
+        static LinnaLaatu Tulos(LinnaLaatu l, int vapaa, int budjetti, bool ultra, string peruste) =>
+            new LinnaLaatu(l.Kuori, l.TaydetPinnat, l.RajoituksetPois, l.Taysi, vapaa, budjetti, Tarve(l, ultra), peruste);
     }
 }
