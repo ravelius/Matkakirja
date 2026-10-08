@@ -240,6 +240,7 @@ namespace Matkakirja.Natiivi
                     omaValo = g.AddComponent<Light>();
                     omaValo.type = LightType.Point; omaValo.range = (float)Kynttilat.OmaValoM; omaValo.color = new Color(1f, 0.72f, 0.42f);
                     omaValo.shadows = LightShadows.None;
+                    SeikkailuValot.MerkitseLiikkuvaksi(omaValo);
                 }
                 omaValo.transform.position = kasi; omaValo.intensity = 1.4f * lepatus * (OmaSuojattu ? 0.6f : 1f); omaValo.range = sade; omaValo.enabled = true;
                 // Näkyvä liekki kädessä (DioraamaLiekit.LuoLyhty: sama 3D-liekki kuin hahmojen lyhdyissä), joka kallistuu vedossa.

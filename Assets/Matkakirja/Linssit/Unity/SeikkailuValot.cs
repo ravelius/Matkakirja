@@ -39,6 +39,16 @@ namespace Matkakirja.Natiivi
         static bool OletusVolumetriset() => Laitetaso.OnkoMSarja(SystemInfo.deviceModel, SystemInfo.processorType,
             Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor);
 
+        /// <summary>Liikkuvan valon renderöintikerros (juna 169): kävelyosien leivottu valo (LR: liikkuu-valoja ei leivota) ottaa
+        /// reaaliaikaisesti vain nämä valot (DioraamaValaistu _ValoVain), jotta paikallaan olevat liekit eivät tuplaannu.</summary>
+        public const uint LiikkuvaKerros = 1u << 7;
+        public static void MerkitseLiikkuvaksi(Light l)
+        {
+            if (l == null) return;
+            var d = l.GetUniversalAdditionalLightData();
+            if (d != null) d.renderingLayers = 1u | LiikkuvaKerros;
+        }
+
         static bool kuumaPois;
         /// <summary>Lämpö (Natiiviseppä 8.10.): kuumana volumetriset pois linnan ajaksi, viileänä takaisin, jos ne olivat päällä.
         /// Kysellään näyttämön päivityksestä (Lampo.Muuttui nollautuu domain-latauksessa).</summary>

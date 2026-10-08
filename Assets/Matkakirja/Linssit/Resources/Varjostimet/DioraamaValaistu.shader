@@ -180,7 +180,20 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                         LIGHT_LOOP_END
                     }
                     #endif
-                    vari = albedo * leivottu * varjo;
+                    // Liikkuvat valot (kantajien lyhdyt ja soihdut, Foggin kynttilä; SeikkailuValot.LiikkuvaKerros = bitti 7) eivät
+                    // ole atlaksessa: ne valaisevat reaaliaikaisesti.
+                    half3 liikkuva = 0;
+                    #if defined(_ADDITIONAL_LIGHTS) || USE_CLUSTER_LIGHT_LOOP
+                    {
+                        uint lisavalojaL = GetAdditionalLightsCount();
+                        LIGHT_LOOP_BEGIN(lisavalojaL)
+                            Light ll = GetAdditionalLight(lightIndex, i.paikkaW, half4(1, 1, 1, 1));
+                            if ((ll.layerMask & 128u) != 0u)
+                                liikkuva += ll.color * ll.distanceAttenuation * ll.shadowAttenuation * WrapLambert(dot(n, ll.direction), 0.3h);
+                        LIGHT_LOOP_END
+                    }
+                    #endif
+                    vari = albedo * (leivottu * varjo + liikkuva);
                 } // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
 
                 // Etäisyyssumu (era 1 kohta 6, kuten DioraamaMaalattu/DioraamaHahmo): massa ja keittiö erottuvat.

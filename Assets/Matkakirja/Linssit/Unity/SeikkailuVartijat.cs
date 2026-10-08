@@ -589,7 +589,7 @@ namespace Matkakirja.Natiivi
                     {
                         var g = new GameObject("Portin valo") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false);
                         g.transform.position = new Vector3((float)m.X, (float)m.Y + 1.8f, (float)-m.Z);
-                        portinValo = g.AddComponent<Light>(); portinValo.type = LightType.Point; portinValo.range = 6f; portinValo.color = new Color(1f, 0.66f, 0.34f);
+                        portinValo = g.AddComponent<Light>(); portinValo.type = LightType.Point; portinValo.range = 6f; portinValo.color = new Color(1f, 0.66f, 0.34f); SeikkailuValot.MerkitseLiikkuvaksi(portinValo);
                         portinValo.shadows = LightShadows.None; portinValo.intensity = PortinValoLepo;
                         SeikkailuValot.Liekki(g.transform, DioraamaNayttamo.Kerros);
                         break;
@@ -684,7 +684,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Kurkista(Vector3 paikka, float s)
         {
             var g = new GameObject("Kurkistuksen lyhty") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false); g.transform.position = paikka;
-            var l = g.AddComponent<Light>(); l.type = LightType.Point; l.range = 0.1f; l.color = new Color(1f, 0.62f, 0.3f); l.intensity = 1.4f; l.shadows = LightShadows.None;
+            var l = g.AddComponent<Light>(); l.type = LightType.Point; l.range = 0.1f; l.color = new Color(1f, 0.62f, 0.3f); l.intensity = 1.4f; l.shadows = LightShadows.None; SeikkailuValot.MerkitseLiikkuvaksi(l);
             kirjaa?.Invoke("seikkailu: vartija kurkistaa (jähmety)");
             SeikkailuRepliikit.SoitaTaiVara("vartija-kurkistus-1", "vartija-epaily-1", paikka);
             for (float t = 0; t < s; t += Time.deltaTime)

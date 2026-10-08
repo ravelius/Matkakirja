@@ -436,6 +436,7 @@ namespace Matkakirja.Natiivi
             var valo = vg.AddComponent<Light>();
             valo.type = LightType.Point; valo.range = 7.5f; valo.intensity = 1.6f; valo.color = new Color(1f, 0.86f, 0.68f);
             valo.shadows = LightShadows.None; valo.renderMode = LightRenderMode.ForcePixel;
+            SeikkailuValot.MerkitseLiikkuvaksi(valo);
         }
 
         // Kertaele juurisiirrolla (v44j nousu_laiturille: veneestä kannelle). Kapseli paikallaan ja törmäys pois leikkeen ajan; viimeisellä
