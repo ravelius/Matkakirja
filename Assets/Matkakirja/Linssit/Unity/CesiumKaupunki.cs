@@ -454,6 +454,7 @@ namespace Matkakirja.Natiivi
             esikamera.enabled = false;
             esikamera.cullingMask = 0;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure += LatausVirhe;
+            reiat.Nollaa(); Application.logMessageReceivedThreaded -= LokiRivi; Application.logMessageReceivedThreaded += LokiRivi;
             // Pelaajan laitteella tunnus haetaan ensin Pöllöstä; tilesetit luodaan vasta sitten (ei 401-latausvirhettä).
             if (haettava) kierto.StartCoroutine(HaeTunnus(data));
             else LuoData(data);
@@ -469,6 +470,7 @@ namespace Matkakirja.Natiivi
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
             ReittikameratPois();
             omat.Sulje();
+            PoistaAluskerros();
             if (maasto != null) UnityEngine.Object.Destroy(maasto.gameObject);
             if (rakennukset != null) UnityEngine.Object.Destroy(rakennukset.gameObject);
             maasto = null; rakennukset = null;
@@ -506,6 +508,42 @@ namespace Matkakirja.Natiivi
             }
             if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuistiNyt : MaastoValimuisti))
                 maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuistiNyt : MaastoValimuisti;
+        }
+
+        // GOOGLEN TIILIREIÄT (Varsova 7.10.; Päätoimittaja 8.10. junaan 166): Cesiumin natiivi loki "status code 404 for tile content
+        // https://tile.googleapis.com/…" → GoogleTiiliReiat; kun kaupungissa on ≥ Raja reikää, aluskerros täyttää reiät: pelkkä
+        // maastomuoto (Cesium World Terrain, karkea, AluskerrosSyvyysM Googlen pinnan alla) yhdellä tasaisella horisontin/sumun
+        // sävyllä (Varjostimet/ReikaTayte). EI karttakuvaa (Päätoimittaja 8.10.: ei Bingiä Googlen laattojen kanssa, Raamatun
+        // kaupunkinäkymälinja ja Map Tiles -ehdot). Ei vaikuta latausasteeseen; vain Googlen datalla.
+        readonly Matkakirja.Linssit.Kierros.GoogleTiiliReiat reiat = new Matkakirja.Linssit.Kierros.GoogleTiiliReiat();
+        Cesium3DTileset aluskerros;
+        Material aluskerrosMat;
+        static readonly int IdVari = Shader.PropertyToID("_Vari");
+        public const float AluskerrosSse = 24f, AluskerrosSyvyysM = 15f;
+        public bool AluskerrosPaalla => aluskerros != null;
+        void LokiRivi(string viesti, string pino, LogType tyyppi) => reiat.Kirjaa(viesti);
+
+        /// <summary>Joka kehys (OpasSovitin): aluskerros päälle, kun reikiä on kertynyt.</summary>
+        public void TarkistaReiat()
+        {
+            if (aluskerrosMat != null && kamera != null) aluskerrosMat.SetColor(IdVari, RenderSettings.fog ? RenderSettings.fogColor : kamera.backgroundColor);
+            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !reiat.AluskerrosTarvitaan) return;
+            var sh = Resources.Load<Shader>("Varjostimet/ReikaTayte");
+            if (sh == null) { kirjaa("kaupunki: reikätäytteen varjostin puuttuu"); return; }
+            aluskerrosMat = new Material(sh) { name = "ReikaTayte" };
+            aluskerros = LuoTileset("Kaupunki aluskerros (Googlen reiät)", 1, AluskerrosSse, MaastoValimuisti);
+            aluskerros.forbidHoles = false;
+            aluskerros.opaqueMaterial = aluskerrosMat;   // vain muoto, tasainen sävy, ei kuvaa
+            aluskerros.transform.localPosition = new Vector3(0f, -AluskerrosSyvyysM, 0f);   // georeferenssin paikallinen ylös = y origossa
+            aluskerros.gameObject.SetActive(true);
+            kirjaa($"kaupunki: Googlen 404-tiiliä {reiat.Maara} → aluskerros (maastomuoto ilman kuvaa, sumun sävy, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
+        }
+
+        void PoistaAluskerros()
+        {
+            if (aluskerros != null) UnityEngine.Object.Destroy(aluskerros.gameObject);
+            if (aluskerrosMat != null) UnityEngine.Object.Destroy(aluskerrosMat);
+            aluskerros = null; aluskerrosMat = null;
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
@@ -623,6 +661,8 @@ namespace Matkakirja.Natiivi
         public void SiirraOrigo(double lat, double lon, double korkeus)
         {
             if (georef == null || !georef.isActiveAndEnabled) return;
+            // Toinen kaupunki (siirto yli 30 km): reiät lasketaan alusta, aluskerros pois.
+            if (Matkakirja.Linssit.Kierros.KierrosLento.EtaisyysM(georef.latitude, georef.longitude, lat, lon) > 30000) { reiat.Nollaa(); PoistaAluskerros(); }
             georef.Initialize();
             georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
             PaivitaKorkeusKerroin();
@@ -774,6 +814,8 @@ namespace Matkakirja.Natiivi
             Suljettu?.Invoke(this);
             auki = false;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
+            Application.logMessageReceivedThreaded -= LokiRivi;
+            PoistaAluskerros();
             avausAika = -1f; AsetaAvausLatautuu(false);
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
             ReittikameratPois(); reittikamerat.Clear();   // tuhoutuvat juuren mukana

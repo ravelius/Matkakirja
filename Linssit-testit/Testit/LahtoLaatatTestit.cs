@@ -357,6 +357,89 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(PalloSaaVaikutus.Valahdys(0.04) > 0.95 && PalloSaaVaikutus.Valahdys(0.5) == 0, "välähdyksen muoto");
         }
 
+        // Juna 166 (video 165 Concorde: kuvan nopeudella kaksi kumpua): van Wijk–Nuij-polku alkaa ja loppuu oikeaan leveyteen,
+        // vaakaosuus on monotoninen ja kaari maltillinen.
+        [Testi] static void ZoomPolkuPaatepisteetJaKaari()
+        {
+            foreach (var (w0, w1, u) in new[] { (420.0, 350.0, 2518.0), (350.0, 900.0, 700.0), (500.0, 500.0, 0.0) })
+            {
+                var alku = OpasKuvaus.ZoomPolku(w0, w1, u, 0); var loppu = OpasKuvaus.ZoomPolku(w0, w1, u, 1);
+                Oleta.Tosi(Math.Abs(alku.osuus) < 1e-9 && Math.Abs(alku.leveys - w0) < 1e-6 && Math.Abs(loppu.osuus - 1) < 1e-6 && Math.Abs(loppu.leveys - w1) < 1e-3,
+                    $"{u} m: päätepisteet ({alku.leveys:F1} → {loppu.leveys:F1})");
+                double ed = -1, maks = 0;
+                for (int i = 0; i <= 100; i++) { var x = OpasKuvaus.ZoomPolku(w0, w1, u, i / 100.0); Oleta.Tosi(x.osuus >= ed - 1e-12, "vaakaosuus monotoninen"); ed = x.osuus; maks = Math.Max(maks, x.leveys); }
+                Oleta.Tosi(maks <= Math.Max(w0, w1) * 1.6 + 1, $"{u} m: kaari maltillinen (huippu {maks:F0} m)");
+            }
+        }
+
+        // Päätoimittaja 8.10. 10.3x (video 165): Googlen sumentamien kohteiden (prefektuuri, Élysée) ohi lennetään korkeammalta,
+        // jolloin sumennus näkyy pienenä kaukana; reitti ja päätepisteet ennallaan.
+        [Testi] static void SumennetunKohteenOhiLennetaanKorkeammalta()
+        {
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                // Silmän etäisyys sumennukseen hetkellä, jolloin katsepiste ohittaa sen lähimmältä (läiskä kuvan keskellä).
+                double Lahin(Kuvakulma a, Kuvakulma b, double slat, double slon, out double alkuEro, out double loppuEro)
+                {
+                    double T = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(a.Lat, a.Lon, b.Lat, b.Lon)), katseLahin = double.MaxValue, silma = 0;
+                    alkuEro = Math.Abs(OpasKuvaus.Lennossa(a, b, 0).EtaisyysM - a.EtaisyysM); loppuEro = Math.Abs(OpasKuvaus.Lennossa(a, b, 1).EtaisyysM - b.EtaisyysM);
+                    for (double t = 0; t <= T + 1e-9; t += 1 / 30.0)
+                    {
+                        var k = OpasKuvaus.Lennossa(a, b, t / T);
+                        double kd = KierrosLento.EtaisyysM(k.Lat, k.Lon, slat, slon);
+                        if (kd < katseLahin) { katseLahin = kd; var e = OpasKuvaus.KameraPaikka(k, slat, slon); silma = Math.Sqrt(e.e * e.e + e.n * e.n + (e.u - 35) * (e.u - 35)); }
+                    }
+                    return silma;
+                }
+                var tapaukset = new[]
+                {
+                    // Prefektuuri on 230 m Notre-Damesta: lähtökehys pysyy, joten parannus vain nousun alussa (≥ 10 %).
+                    ("Notre-Dame → Concorde / prefektuuri", new Kuvakulma(48.8530, 2.3498, 420, 58, 250, 60), new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), 48.8541, 2.3470, 1.1, 0.0),
+                    ("Concorde → Champs-Élysées / Élysée", new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), new Kuvakulma(48.8697, 2.3079, 380, 58, 290, 40), 48.8704, 2.3167, 1.4, 600.0),
+                };
+                foreach (var (nimi, a, b, slat, slon, kerroin, vahintaan) in tapaukset)
+                {
+                    OpasKuvaus.SumennusNostoPaalla = false;
+                    double ennen = Lahin(a, b, slat, slon, out _, out _);
+                    OpasKuvaus.SumennusNostoPaalla = true;
+                    double jalkeen = Lahin(a, b, slat, slon, out double ae, out double le);
+                    Console.WriteLine($"      {nimi}: lähin etäisyys lennon aikana {ennen:F0} → {jalkeen:F0} m");
+                    Oleta.Tosi(jalkeen >= ennen * kerroin && jalkeen >= vahintaan, $"{nimi}: lähin etäisyys sumennukseen {ennen:F0} → {jalkeen:F0} m");
+                    Oleta.Tosi(ae < 1e-6 && le < 1e-6, $"{nimi}: päätepisteet ennallaan");
+                }
+                var kaukana = OpasKuvaus.Lennossa(new Kuvakulma(48.8606, 2.3376, 400, 58, 0, 40), new Kuvakulma(48.8600, 2.3265, 400, 58, 0, 40), 0.5);
+                OpasKuvaus.SumennusNostoPaalla = false;
+                var kaukanaIlman = OpasKuvaus.Lennossa(new Kuvakulma(48.8606, 2.3376, 400, 58, 0, 40), new Kuvakulma(48.8600, 2.3265, 400, 58, 0, 40), 0.5);
+                OpasKuvaus.SumennusNostoPaalla = true;
+                Oleta.Tosi(Math.Abs(kaukana.EtaisyysM - kaukanaIlman.EtaisyysM) < 1e-9, "kaukana sumennuksista (Louvre → Orsay) ei nostoa");
+            }
+            finally { OpasSilmukka.PalloLento = false; OpasKuvaus.SumennusNostoPaalla = true; }
+        }
+
+        // Varsova 7.10. (Päätoimittaja 8.10.: juna 166): Googlen 404-tiilet → aluskerros. Toisto oikealla lokilla (b-ajo, 38 riviä).
+        [Testi] static void VarsovanTiiliReiatTunnistetaan()
+        {
+            var rivit = System.IO.File.ReadAllLines(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "varsova-404-20261007.log"));
+            var r = new GoogleTiiliReiat();
+            int reikia = 0;
+            foreach (var x in rivit) if (r.Kirjaa(x)) reikia++;
+            Oleta.Sama(38, reikia, "kaikki Varsovan 404-tiilet tunnistetaan");
+            Oleta.Tosi(r.AluskerrosTarvitaan, "Varsovassa aluskerros tarvitaan");
+            var y = new GoogleTiiliReiat();
+            y.Kirjaa(rivit[0]); y.Kirjaa("MATKAKIRJA valmisluennat: manifesti ei saatavilla (404) → palavirta");
+            y.Kirjaa("[error] Received status code 404 for tile content https://assets.ion.cesium.com/x.b3dm");
+            Oleta.Tosi(y.Maara == 1 && !y.AluskerrosTarvitaan, "yksittäinen 404 tai muu 404 ei riitä");
+            r.Nollaa();
+            Oleta.Tosi(!r.AluskerrosTarvitaan, "kaupungin vaihto nollaa");
+            // Päätoimittaja 8.10.: aluskerroksessa ei karttakuvaa (vain Googlen laatat näkymässä) → ei rasterikerrosta TarkistaReiat-lohkossa.
+            var lahde = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            int i0 = lahde.IndexOf("public void TarkistaReiat()", StringComparison.Ordinal), i1 = lahde.IndexOf("void PoistaAluskerros()", i0, StringComparison.Ordinal);
+            Oleta.Tosi(i0 > 0 && i1 > i0, "TarkistaReiat löytyy");
+            var lohko = lahde.Substring(i0, i1 - i0);
+            Oleta.Tosi(!lohko.Contains("RasterOverlay") && lohko.Contains("ReikaTayte"), "aluskerros: ei karttakuvaa, tasainen sävy");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

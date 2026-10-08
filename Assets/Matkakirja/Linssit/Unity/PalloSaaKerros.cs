@@ -15,12 +15,12 @@ namespace Matkakirja.Linssit
         Transform tasko;
         Material mat;
         static readonly int IdSade = Shader.PropertyToID("_Sade"), IdLumi = Shader.PropertyToID("_Lumi"), IdSalama = Shader.PropertyToID("_Salama"),
-            IdTuuli = Shader.PropertyToID("_Tuuli"), IdAika = Shader.PropertyToID("_Aika"), IdAspect = Shader.PropertyToID("_Aspect");
+            IdTuuli = Shader.PropertyToID("_Tuuli"), IdAika = Shader.PropertyToID("_Aika"), IdAspect = Shader.PropertyToID("_Aspect"), IdSumu = Shader.PropertyToID("_Sumu");
 
         /// <summary>Joka kehys: painot (PalloSaaVaikutus), salama 0–1, tuuli m/s ja aika s.</summary>
         public void Aseta(Camera kamera, SaaPainot w, double salama, double tuuliMs, float aika)
         {
-            bool tarvitaan = kamera != null && (w.Sade > 0.005 || w.Lumi > 0.005 || salama > 0.001);
+            bool tarvitaan = kamera != null && (w.Sade > 0.005 || w.Lumi > 0.005 || w.Sumu > 0.005 || salama > 0.001);
             if (!tarvitaan) { if (tasko != null) tasko.gameObject.SetActive(false); return; }
             Varmista(kamera);
             if (mat == null) return;
@@ -31,6 +31,7 @@ namespace Matkakirja.Linssit
             mat.SetFloat(IdSade, Mathf.SmoothStep(0f, 1f, (float)w.Sade));
             mat.SetFloat(IdLumi, Mathf.SmoothStep(0f, 1f, (float)w.Lumi));
             mat.SetFloat(IdSalama, (float)salama);
+            mat.SetFloat(IdSumu, Mathf.SmoothStep(0f, 1f, (float)w.Sumu));
             mat.SetFloat(IdTuuli, 0.08f + Mathf.Clamp((float)tuuliMs / 40f, 0f, 0.35f));
             mat.SetFloat(IdAika, aika);
             mat.SetFloat(IdAspect, Mathf.Max(0.1f, kamera.aspect));

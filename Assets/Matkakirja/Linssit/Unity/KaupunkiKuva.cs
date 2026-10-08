@@ -356,10 +356,11 @@ namespace Matkakirja.Natiivi
             // Sää (juna 166): harmaus ja salama sävyn päälle.
             if (KaupunkiKuva.varit != null && (harmaus > 0.001f || KaupunkiKuva.Salama > 0.001))
             {
-                KaupunkiKuva.varit.postExposure.value += -0.7f * harmaus + 2.2f * (float)KaupunkiKuva.Salama;
-                KaupunkiKuva.varit.saturation.value += -35f * harmaus;
-                KaupunkiKuva.varit.contrast.value += -8f * harmaus;
-                if (KaupunkiKuva.valko != null) KaupunkiKuva.valko.temperature.value += -8f * harmaus;
+                // Juna 166 (video 165: liian vaisu): −1 EV, saturaatio −45, kontrasti −10, viileys −12.
+                KaupunkiKuva.varit.postExposure.value += -1.0f * harmaus + 2.2f * (float)KaupunkiKuva.Salama;
+                KaupunkiKuva.varit.saturation.value += -45f * harmaus;
+                KaupunkiKuva.varit.contrast.value += -10f * harmaus;
+                if (KaupunkiKuva.valko != null) KaupunkiKuva.valko.temperature.value += -12f * harmaus;
             }
             if (KaupunkiKuva.jako != null)
             {

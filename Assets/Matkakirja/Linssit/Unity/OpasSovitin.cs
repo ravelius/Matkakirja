@@ -483,6 +483,7 @@ namespace Matkakirja.Natiivi
             Telemetria(ennen);
             SaaLive();
             SaaTehosteet();
+            kaupunki.TarkistaReiat();   // Googlen 404-tiilet → aluskerros (Varsova)
             // Lähdön valmistelu lokiin kerran sekunnissa (laattaodotuksen säätö).
             if (silmukka.LahtoValmisteilla && Time.realtimeSinceStartup - lahtoLokiAika >= 1f)
             {
