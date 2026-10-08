@@ -377,6 +377,11 @@ namespace Matkakirja.Natiivi
             // (aloitusvalikko → Pariisi, ei kaupunkitilaa) eikä nähnyt koria eikä köysiä.
             kori.Kayta(nakymaAuki, kaupunki.Kamera);
             koriKatse.Paivita(kori.Nakyy, kaupunki.Kamera, kierto);
+            // Kompassin merkki: lennolla kohti määränpäätä, pysähdyksellä kohti seuraavaa kohdetta (katsepisteestä).
+            {
+                var mk = silmukka.Vaihe == OpasVaihe.Lentaa ? silmukka.Nykyinen : silmukka.Seuraava; var asento = silmukka.Asento;
+                PalloKori.SeuraavaSuunta = mk != null && !mk.Kysymys ? OpasSilmukka.Suunta(asento.Lat, asento.Lon, mk.Lat, mk.Lon) : (double?)null;
+            }
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             // Linssireitti (omistaja 8.10. ~09.0x): sama esilataus siirtoruudun aikana (palkki kattaa myös 1. kohteen), ilman avausnäkymän kohdistusta.
