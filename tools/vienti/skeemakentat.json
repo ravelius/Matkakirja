@@ -36,10 +36,11 @@
   "1.55": "f05f6f25a4435881",
   "1.56": "f05f6f25a4435881",
   "1.57": "1e8ff1cd389b1f53",
-  "1.58": "aee33ab3c2cba5aa"
+  "1.58": "aee33ab3c2cba5aa",
+  "1.59": "5e17497c5f6372ab"
  },
  "uusin": {
-  "skeemaversio": "1.58",
+  "skeemaversio": "1.59",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -784,6 +785,7 @@
   },
   "manifest": [
    "$skeema",
+   "asetukset",
    "kaupunkilehdetKaupungeittain",
    "kokoelmat",
    "kuvaus",
