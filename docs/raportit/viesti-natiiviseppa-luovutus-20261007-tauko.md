@@ -3,6 +3,20 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
+## TILA 8.10. 07.4x (UUSIN)
+
+**T7-TYÖKALUVAIHTO VALMIS JA TODENNETTU** (Päätoimittaja hyväksyi). Elävät: proto-3d/tyokalut/simusarja.sh (kääre: `source … || exit 2`
+→ `xcrun simctl` → --set T7, vanha sisäinen UDID → samannimisen T7-laitteen UDID; `simusarja.sh simctl|udid|lista|luo`),
+proto-kaanna.sh, juna-ajo.sh (junavahdin 4 laitetta T7:ltä), siivoa-pariteettisimut.sh (varmuuskopiot *.ennen-t7-20261008).
+Proto-haara natiiviseppa/t7-simusarja 77a806aa7 (todistusajo, sarja.sh, simkosketus deviceSetWithPath/MK_SIMSET, aja.sh, savukkeet,
+palvelu-kopio). Todennus Julkaisijan vuorolla: lokit/natiiviseppa-t7-todennus/t7-tyokalut-20261008.png. Roolien ohje Postivahdille.
+Avoinna: MCP-simutyökalu näkee vain sisäisen sarjan; vanhojen sarjojen poisto omistajan Run-rivillä päivän käytön jälkeen.
+
+**JUNA 164 = ILLAN JUNA** (Päätoimittaja 07.4x): ESIRUNKO natiiviseppa/juna-164 **b85458f10** (wt/proto-natiiviseppa-j144) = 062bb439 +
+Siirtoseppä välikärki 844b24ac1 + NUI f25875292 (⊇ 8aa55e02) + 8b4659e98 + LS2 08a6891a0 + 7d66739d0 + 77a806aa7; testit 448/419/882,
+unity 0, ei ristiriitoja. EI KÄÄNNETÄ ennen Siirtosepän Olavinlinna-palan kuittausta (iltapäivä; lopullinen kärki korvaa 844b:n).
+LS1 eec1a9283 lisätään vasta Päätoimittajan videokatselmuksen jälkeen (koeyhdistelmä ok, Linssit 885).
+
 ## ALOITUS TILINVAIHDON JÄLKEEN (7.10. ilta) — LUE TÄMÄ ENSIN
 
 Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md (erit. testaus-kevyemmin-20261007, mac-gui-automaatio-omistajan-naytolla)
