@@ -323,6 +323,19 @@ namespace Matkakirja.Linssit.Dioraama
         public Reitti Reitti;
         public List<Repliikki> Repliikit = new List<Repliikki>();
         public Repliikki Reaktio;
+        /// <summary>Final IK (Linnanrakentaja 5.10.2026): kädet esineisiin (`kadet`), tyhjä = ei käsi-IK:ta.</summary>
+        public List<KasiKohde> Kadet = new List<KasiKohde>();
+    }
+
+    /// <summary>Käden kohde (`kadet[]`): "tartu" = kämmen kiinteään kahvaan (Paikka ja Kierto sijoitettuina kuten hahmon paikka),
+    /// "kanna" = esine kiinni käden luussa (Siirto ja Kierto käden paikallisessa). Kasi "r" | "l"; Milloin "aina" | "tyo" |
+    /// "puhe" | "idle" (silmukka); Paino 0–1. Kierto = kämmenen kehys (kämmen −Y, sormet +Z), [x, y, z, w]; null = ei annettu.</summary>
+    public sealed class KasiKohde
+    {
+        public string Tyyppi = "tartu", Esine, Kasi = "r", Milloin = "aina";
+        public V3 Paikka, Siirto;
+        public double[] Kierto;
+        public double Paino = 1;
     }
 
     /// <summary>Yksi huone/tila rakennuksessa (kohta 1: TILA), täydennettynä rakennuskoneen glb-tiedoilla.</summary>
@@ -1412,6 +1425,24 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var reaktio = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "reaktio"));
             if (reaktio != null) h.Reaktio = LueRepliikki(reaktio);
+            foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "kadet")))
+            {
+                var k = MiniJson.ObjektiTaiNull(rivi);
+                if (k == null) continue;
+                var kk = new KasiKohde
+                {
+                    Tyyppi = MiniJson.Teksti(k, "tyyppi") ?? "tartu",
+                    Esine = MiniJson.Teksti(k, "esine"),
+                    Kasi = MiniJson.Teksti(k, "kasi") == "l" ? "l" : "r",
+                    Milloin = MiniJson.Teksti(k, "milloin") ?? "aina",
+                    Paino = Math.Clamp(MiniJson.Luku(k, "paino") ?? 1, 0, 1),
+                    Paikka = LueV3(MiniJson.Kentta(k, "paikka")),
+                    Siirto = LueV3(MiniJson.Kentta(k, "siirto")),
+                };
+                var q = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "kierto"));
+                if (q.Count == 4 && q.TrueForAll(x => x is double)) kk.Kierto = new[] { (double)q[0], (double)q[1], (double)q[2], (double)q[3] };
+                h.Kadet.Add(kk);
+            }
             return h;
         }
 

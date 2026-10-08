@@ -120,12 +120,26 @@ while IFS="$SARKAIN" read -r NIMI KANSIO EIENGINE VIITTEET; do
   fi
 done < "$ULOS/jarjestys.txt"
 
+# Assets/Plugins (asmdefitön, esim. RootMotion Final IK, Siirtoseppä 8.10.) → Assembly-CSharp-firstpass kuten Unityssä;
+# polut response-tiedostoon (välilyönnit, "Shared Scripts"). Assembly-CSharp viittaa siihen.
+FP_RSP="$ULOS/firstpass.rsp"
+: > "$FP_RSP"
+[ -d "$ASSETS/../Plugins" ] && find "$ASSETS/../Plugins" -name '*.cs' -not -path '*/Editor/*' | while IFS= read -r f; do printf '"%s"\n' "$f" >> "$FP_RSP"; done
+FP_IOS=""; FP_EDI=""
+if [ -s "$FP_RSP" ]; then
+  kaanna "firstpass (ios)" "$ULOS/firstpass-ios.log" $YHTEISET $NETSTD $IOS -define:"$DEF_IOS" -nowarn:0618,0414,0649,0169 \
+    -out:"$ULOS/Assembly-CSharp-firstpass-ios.dll" @"$FP_RSP"
+  kaanna "firstpass (editori)" "$ULOS/firstpass-editori.log" $YHTEISET $NETSTD $EDI -define:"$DEF_EDI" -nowarn:0618,0414,0649,0169 \
+    -out:"$ULOS/Assembly-CSharp-firstpass-editori.dll" @"$FP_RSP"
+  FP_IOS="-r:$ULOS/Assembly-CSharp-firstpass-ios.dll"; FP_EDI="-r:$ULOS/Assembly-CSharp-firstpass-editori.dll"
+fi
+
 # Assembly-CSharp viittaa kaikkiin omiin (autoReferenced).
 KAIKKI=$(cut -f1 "$ULOS/jarjestys.txt" | tr '\n' ',' | sed 's/,$//')
 SKRIPTIT=$(cat "$LISTAT/Assembly-CSharp.lst")
-kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT $(viitteet "$KAIKKI" ios) \
+kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT $FP_IOS $(viitteet "$KAIKKI" ios) \
   -define:"$DEF_IOS" -out:"$ULOS/Assembly-CSharp-ios.dll" $SKRIPTIT
-kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT $(viitteet "$KAIKKI" editori) \
+kaanna "Assembly-CSharp (editori)" "$ULOS/editori.log" $YHTEISET $NETSTD $EDI $PAKETIT $FP_EDI $(viitteet "$KAIKKI" editori) \
   -define:"$DEF_EDI" -out:"$ULOS/Assembly-CSharp-editori.dll" $SKRIPTIT
 
 echo "unity-tarkistus: $(echo "$SKRIPTIT" | grep -c . || true) Assembly-CSharp-skriptiä + $TIEDOSTOJA asmdef-tiedostoa ($(cut -f1 "$ULOS/jarjestys.txt" | tr '\n' ' ')), virheitä yhteensä $VIRHEITA"

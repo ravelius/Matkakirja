@@ -199,7 +199,7 @@ namespace Matkakirja.Natiivi
                 // Torkkuja: leikkeet torkku / syo, jos skinissä (LR pyydetty), muuten idle (Hahmot3D:n varaketju).
                 // Skin-hahmo katsoo Unityssa paikallista −z:aa → 180° kuten pelaajalla ja kappelin hahmoilla (omistaja 8.10.: laiturin hahmot
                 // kävelivät takaperin kuin moonwalkissa, koska kääntö puuttui).
-                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika), Quaternion.Euler(0f, 180f, 0f));
+                hahmot?.LisaaIrrallinen(rakennus, henkilo, vg.transform, () => (v.Leike ?? "idle", v.KavelyAika), Quaternion.Euler(0f, 180f, 0f), jalat: true);   // jalat maahan (Final IK Grounder)
                 DioraamaHahmot3D.PiilotetutHenkilot.Add(henkilo);   // kohtauksen sama henkilö pois (ei kahta kokkia)
                 sv.henkilot.Add(henkilo);
             }
