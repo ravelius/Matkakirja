@@ -1,6 +1,6 @@
 # Pulun taustaohjeen läpikäynti (8.10.2026, Pelikoodari)
 
-Omistajan lupa ("joo teetä") Päätoimittajan kautta. Läpi käytiin tools/pollo/worker.js:n JARJESTELMAKEHOTE (23 145 merkkiä, 3 194 sanaa) sekä KASITEKEHOTE, JATKOKEHOTE, PAIKKAKEHOTE, PUHETAGIKEHOTE ja AANIKESKUSTELUKEHOTE. Ehdotus on tiedostossa **tools/pollo/pulu-kehote-ehdotus.js** (`JARJESTELMAKEHOTE_EHDOTUS`). **EI KÄYTÖSSÄ**: worker käyttää yhä vanhaa tekstiä. Puhetta ei generoitu.
+Omistajan lupa ("joo teetä") Päätoimittajan kautta. Läpi käytiin tools/pollo/worker.js:n JARJESTELMAKEHOTE (23 145 merkkiä, 3 194 sanaa) sekä KASITEKEHOTE, JATKOKEHOTE, PAIKKAKEHOTE, PUHETAGIKEHOTE ja AANIKESKUSTELUKEHOTE. **OTETTU KÄYTTÖÖN 8.10.2026 klo 23.4x (omistaja: "ota käyttöön")**: siivottu teksti on nyt worker.js:n JARJESTELMAKEHOTE (ehdotustiedosto poistettu). Puhetta ei generoitu.
 
 ## Tulos lyhyesti
 - **Uusi pituus 17 654 merkkiä ja 2 393 sanaa (−24 %).** Kolmiosainen vastauskaava (alustus, ydinvastaus kirjakielellä, loppukommentti) säilyy sellaisenaan. Raamatun mukaan "kaavaa muutetaan vain omistajan luvalla" (PULUN VASTAUSKAAVA 26.9.), ja ehdotus poistaa vain toistot ja vanhentuneen. Kaikki sisältösäännöt ja esimerkkiäänet ovat tallella.
