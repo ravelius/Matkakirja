@@ -15,6 +15,9 @@
 // OtaKatse() joka ruutu. Oikea TAPPI on testikytkin (oletus piilossa). Lyhyt napautus maailmaan (ei UI, ei vetoa) kutsuu
 // SeikkailuPelaaja.Napautus(px) (napautuskävely tai toiminto alle 1,2 m:n esineeseen). Mac: hiiri on Siirtosepän.
 // Pulun vihje myös näppäimellä: Mac P, peliohjain Y (LuePuluNappain → PuluKaappaa).
+// KÄSITTELY KÄSIN (pelattavuusmalli kohta 6, Päätoimittaja 8.10.): kosketus, joka alkaa käsin käsiteltävän esineen päältä
+// (KasittelyAlkaa(px) = true; Siirtoseppä asettaa), ei käännä katsetta: napautusrajan ylittävä veto syötetään Kasittely-vetoon
+// (Ydin KasittelyVeto: asteet ja kulmanopeus °/s, alle 30°/s hiljainen). Lyhyt napautus samaan esineeseen pysyy napautuksena.
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -69,7 +72,7 @@ namespace Matkakirja.Natiivi
         const float NapautusPt = 10f;   // sama raja kuin PalloKierto.napautusLiike / CupolaVeto
         const double NapautusS = 0.35;
 
-        sealed class Sormi { public Vector2 Alku, Edellinen; public double AlkuT; public bool Ui, Veto, Oikealla; }
+        sealed class Sormi { public Vector2 Alku, Edellinen; public double AlkuT; public bool Ui, Veto, Oikealla, Kasittely; }
         static readonly Dictionary<int, Sormi> sormet = new Dictionary<int, Sormi>();
         static readonly HashSet<int> nahdyt = new HashSet<int>();
         static Vector2 katseKertyma;
@@ -79,6 +82,17 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Katseen veto asteina edellisestä lukukerrasta (x kääntö + oikealle, y nosto + ylös); lukeminen nollaa.</summary>
         public static Vector2 OtaKatse() { var k = katseKertyma; katseKertyma = Vector2.zero; return k; }
+
+        /// <summary>
+        /// Käsittelyn alku (Siirtoseppä asettaa): true = sormen alla (näytön pikselit, Input System, y ylös) on ulottuvilla oleva käsin
+        /// käsiteltävä esine (ovi, arkun kilpi). null = ei käsittelyä (kaikki vedot katseeksi kuten ennen).
+        /// </summary>
+        public static System.Func<Vector2, bool> KasittelyAlkaa;
+        /// <summary>Käsittelyveto: Kaynnissa, NopeusAsteS, Hiljainen, Narahdukset, AsteetX/Y (vedon alusta).</summary>
+        public static readonly Matkakirja.Linssit.Seikkailu.KasittelyVeto Kasittely = new Matkakirja.Linssit.Seikkailu.KasittelyVeto();
+        /// <summary>Käsittelyn asteet edellisestä lukukerrasta (x + oikealle, y + ylös, sormen suuntaan); lukeminen nollaa.</summary>
+        public static Vector2 OtaKasittely() { var (x, y) = Kasittely.Ota(); return new Vector2((float)x, (float)y); }
+        static int kasittelySormi = -1;
         readonly VisualElement toimintoRivi;
         readonly Button toimintoNappi;
         string toimintoTila;   // null = piilossa, "poimi" tai "heita"
@@ -185,7 +199,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kosketukset joka ruutu (vain seikkailussa): oikean puoliskon veto katseeksi, lyhyt napautus maailmaan.</summary>
         void LueKosketukset()
         {
-            if (!nakyy) { sormet.Clear(); katseKertyma = Vector2.zero; return; }
+            if (!nakyy) { sormet.Clear(); katseKertyma = Vector2.zero; LopetaKasittely(); return; }
             float lev = kerros.Juuri(kerrosNro).layout.width;
             float k = lev > 1f && !float.IsNaN(lev) ? Screen.width / lev : 1f;   // pikseliä pisteessä
             nahdyt.Clear();
@@ -197,9 +211,29 @@ namespace Matkakirja.Natiivi
                 if (t.phase == KosketusVaihe.Began || !sormet.TryGetValue(id, out var s))
                 {
                     s = new Sormi { Alku = px, Edellinen = px, AlkuT = t.startTime, Ui = UiKerros.Peittaa(px), Oikealla = px.x >= Screen.width * 0.5f };
+                    // Vain yksi käsittely kerrallaan; esineen tunnistus Siirtosepältä.
+                    s.Kasittely = !s.Ui && kasittelySormi < 0 && KasittelyAlkaa != null && KasittelyAlkaa(px);
+                    if (s.Kasittely) kasittelySormi = id;
                     sormet[id] = s;
                 }
-                if (!s.Ui)
+                if (s.Kasittely)
+                {
+                    // Napautusrajan ylitys aloittaa vedon koko matkalla alusta (ei hukkaa ensimmäisiä pisteitä); sitten kehys kerrallaan.
+                    if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt)
+                    {
+                        s.Veto = true;
+                        Kasittely.Aloita();
+                        var d0 = (px - s.Alku) / k;
+                        Kasittely.Liiku(d0.x, d0.y, t.time - s.AlkuT);
+                    }
+                    else if (s.Veto)
+                    {
+                        var d = (px - s.Edellinen) / k;
+                        Kasittely.Liiku(d.x, d.y, Time.unscaledDeltaTime);
+                    }
+                    if (s.Veto) Ruudunpaivitys.Herata();
+                }
+                else if (!s.Ui)
                 {
                     if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt) s.Veto = true;
                     if (s.Veto && s.Oikealla && !OikeaTappi)
@@ -214,11 +248,20 @@ namespace Matkakirja.Natiivi
                 if (t.phase == KosketusVaihe.Ended || t.phase == KosketusVaihe.Canceled)
                 {
                     if (t.phase == KosketusVaihe.Ended && !s.Ui && !s.Veto && t.time - s.AlkuT <= NapautusS) Napauta(px);
+                    if (s.Kasittely) LopetaKasittely();
                     sormet.Remove(id);
                 }
             }
             if (sormet.Count > nahdyt.Count)
-                foreach (var id in new List<int>(sormet.Keys)) if (!nahdyt.Contains(id)) sormet.Remove(id);
+                foreach (var id in new List<int>(sormet.Keys)) if (!nahdyt.Contains(id)) { if (id == kasittelySormi) LopetaKasittely(); sormet.Remove(id); }
+        }
+
+        static void LopetaKasittely()
+        {
+            if (kasittelySormi < 0 && !Kasittely.Kaynnissa) return;
+            if (Kasittely.Kaynnissa) Debug.Log($"MATKAKIRJA seikkailutapit: käsittely loppui ({Kasittely.AsteetX:0.0}°, {Kasittely.AsteetY:0.0}°), huippu {Kasittely.HuippuAsteS:0} °/s, narahdukset {Kasittely.Narahdukset}");
+            Kasittely.Lopeta();
+            kasittelySormi = -1;
         }
 
         /// <summary>Napautus maailmaan: SeikkailuPelaaja.Napautus(Vector2 px) (Siirtoseppä, historia-fp) heijastuksella.</summary>
@@ -457,7 +500,8 @@ namespace Matkakirja.Natiivi
             return $"seikkailutapit {(viimeisin.nakyy ? "näkyvät" : "piilossa")}, vasen {Vasen.x:0.00},{Vasen.y:0.00} @ {a.xMin:0},{a.yMin:0} {a.width:0}×{a.height:0}, "
                  + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}, "
                  + $"oikea tappi {(OikeaTappi ? "päällä" : "piilossa (veto)")}, veto {(VetoSuora ? "suora" : "selaus")}, sormia {sormet.Count}, napautus {viimeNapautus}, "
-                 + $"toiminto {viimeisin.toimintoTila ?? "piilossa"} @ {viimeisin.toimintoNappi.worldBound.center.x:0},{viimeisin.toimintoNappi.worldBound.center.y:0}";
+                 + $"toiminto {viimeisin.toimintoTila ?? "piilossa"} @ {viimeisin.toimintoNappi.worldBound.center.x:0},{viimeisin.toimintoNappi.worldBound.center.y:0}, "
+                 + $"käsittely {(KasittelyAlkaa == null ? "ei kytketty" : Kasittely.Kaynnissa ? $"käynnissä {Kasittely.AsteetX:0.0}°,{Kasittely.AsteetY:0.0}° {Kasittely.NopeusAsteS:0} °/s {(Kasittely.Hiljainen ? "hiljainen" : "narahtaa")}" : "odottaa")}";
         }
     }
 }
