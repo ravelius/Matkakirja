@@ -35,6 +35,18 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 09.44 — JUNA 165 KUITTAUSPYYNTÖ: siirtoseppa/historia-juna165 @ becd20404 (wt/proto-siirtoseppa-kello)
+
+- Juna 164 masterissa (df24a24d BUILD 164). Juna 165 = historia-valot 71af4648 + master: LS2 kappeli-Ydin + kytkentä, saumat/alttarikynttilä,
+  NUI Käsittele käsin + SeikkailuKasittely (tyrmän ovi), vuoden 1499 linna koodissa (kuorileikkaukset 32 DioraamaKuori.shader, vain-1499
+  etusija, pois K2-dronessa). 928/928, unity-tarkistus 0. OSOITINVAIHTO v44z (LR 92f60298) VASTA tämän junan kanssa (vanha 16-paikkainen
+  varjostin pudottaisi bastionileikkauksia).
+- OMISTAJA 08.4x: vuoden 1499 linna (bastioni B). LR: v44x (B), v44y (harjan hahmot 5 m itään), v44z (silta laiturin itäkyljestä portinvartijan
+  selän takaa, ranta-1499 leikkauksia 9). LS2 todensi v44z: pala 1–5 134 s 0 kiinni; M (huone 6, muurikäytävä, harja HarjaKorjattu=true,
+  kiipeily, pako, avainrengas) läpi.
+- M-osa historia-m @ 633be971 (947/947): + naamio ei muureilla, ranta 25 s, VoudinKiista-ydin (väli 20 s), Uppoutunut harjan hahmot +
+  talonpojan kertakääntö, kuulon korkeusraja 2,5 m, Odottamaan (pako uusi yritys), LS2:n Ydin Pako/Komero + rajatestit.
+
 ## TILA 8.10. 08.14 — JUNA 165 -EHDOKAS historia-valot @ 10294000f; M-OSA historia-m @ b50de441
 
 - Juna 165 (kuittauspyyntö kun 164 mennyt): LS2 kappelin Ydin KappelinArvoitus + kytkentä 950532c9, saumat piiloon kun alttarikynttilä palaa
