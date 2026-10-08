@@ -1,6 +1,6 @@
 # Olavinlinnan historia-animaatio: faktatarkistus ja kertojan tekstit (Sisältökirjuri 9.10.2026)
 
-Tilaus: Päätoimittaja (Siirtosepän suunnitelma, hyväksytty). Vain raportti; **ääntä ei ole generoitu** (omistajan lupa tarvitaan; PT tarkistaa tekstit ensin). Faktat tarkistettiin verkosta 9.10.2026 (fi/sv/en-Wikipedia, Museovirasto KYPPI ja RKY, Aspelin 1875, Savon historia, SBL, EBIDAT, Rekola 1950, Lyytinen/Hakanpää 2019); täysi lähdeluettelo ja per vaihe "varmat/epävarmat" ovat liitteessä (§4). Lähdenumerot [n] viittaavat liitteen luetteloon.
+**HYVÄKSYTTY 9.10.2026 (PT) kahdella korjauksella (rivit 1 ja 9, tehty alla).** Tilaus: Päätoimittaja (Siirtosepän suunnitelma, hyväksytty). Vain raportti; **ääntä ei ole generoitu** (omistajan lupa tarvitaan; PT tarkistaa tekstit ensin). Faktat tarkistettiin verkosta 9.10.2026 (fi/sv/en-Wikipedia, Museovirasto KYPPI ja RKY, Aspelin 1875, Savon historia, SBL, EBIDAT, Rekola 1950, Lyytinen/Hakanpää 2019); täysi lähdeluettelo ja per vaihe "varmat/epävarmat" ovat liitteessä (§4). Lähdenumerot [n] viittaavat liitteen luetteloon.
 
 ## 1. Tärkeimmät korjaukset PT:n aikajanaan
 
@@ -19,13 +19,13 @@ Tilaus: Päätoimittaja (Siirtosepän suunnitelma, hyväksytty). Vain raportti; 
 
 Avoimet epävarmuudet (ei käytetä teksteissä): Paksun tornin räjähdysvuosi (1791 / ennen 1788), 1600-luvun linnanpalo (1631 / 1654), 1499 piirityksen kuukausi, varuskunnan lähtö (1847 / 1836), Pyhän Eerikin tornin purun vuosi (1714 / myöhemmin), restaurointi 1912–16 (vain RKY).
 
-## 2. Kertojan tekstit (9 riviä, yhteensä 1059 merkkiä)
+## 2. Kertojan tekstit (9 riviä, yhteensä 1065 merkkiä)
 
 Sävy: rauhallinen, konkreettinen kertoja; 13+ ja aikuisille; ei kaanonmuutoksia (ei Foggia, isoisää eikä tarinan henkilöitä); vain tarkistetut faktat (varmat tai kahdesta lähteestä), epävarmat vuodet jätetty pois.
 
 | # | vaihe | kertojan teksti | merkkiä |
 |---|---|---|---|
-| 1 | Jääkausi ja Kyrönsalmi | Kun jää suli, Saimaa nousi esiin, ja sen vedet kulkevat yhä Kyrönsalmen ahtaan salmen läpi. | 91 |
+| 1 | Jääkausi ja Kyrönsalmi | Kun jää suli, Saimaa nousi esiin, ja sen vedet kulkevat yhä ahtaan Kyrönsalmen läpi. | 84 |
 | 2 | Kivikautinen asutus | Rannoilla asui ihmisiä jo kivikaudella; he jättivät maahan saviastioiden palasia ja palanutta luuta. | 100 |
 | 3 | 1475 Tott ja rakennustyö | Vuonna 1475 Erik Akselinpoika Tott alkoi rakentaa salmen kalliolle linnaa Pyhän Olavin nimiin. Ensin nousi puuvarustus, kivi vasta 1477. | 136 |
 | 4 | 1480-luvun päälinna ja tornit | Kun ulkomaiset muurarit olivat tehneet työnsä, kolme tornia ja niiden väliset muurit seisoivat valmiina 1480-luvun puolivälin tienoilla. | 136 |
@@ -33,7 +33,7 @@ Sävy: rauhallinen, konkreettinen kertoja; 13+ ja aikuisille; ei kaanonmuutoksia
 | 6 | 1500–1600-luvut | Kustaa Vaasan aikana tornit korotettiin ja esilinna vahvistui, ja 1600-luvun alussa rakennettiin uusi esilinna ja Kijlin torni. | 127 |
 | 7 | 1700-luvun venäläinen kausi | Pikkuvihan jälkeen Turun rauha 1743 liitti linnan Venäjään, ja 1750-luvulla sen ympärille nousivat bastionit. | 109 |
 | 8 | 1800-luvun palo ja rapistuminen | Venäläinen varuskunta lähti 1847, ja linna autioitui. Palot 1868 ja 1869 tuhosivat sen puuosia ja esilinnan rakennuksia. | 120 |
-| 9 | Restaurointi ja oopperajuhlat | Korjaukset alkoivat 1870-luvulla, ja suuri restaurointi 1961–1975 avasi linnan yleisölle. Vuodesta 1967 sen pihalla on soinut ooppera joka kesä. | 144 |
+| 9 | Restaurointi ja oopperajuhlat | Korjaukset alkoivat 1870-luvulla, ja suuri restaurointi 1961–1975 avasi linnan yleisölle. Vuodesta 1967 linnan pihalla on järjestetty oopperajuhlat kesäisin. | 157 |
 
 ## 3. Rivikohtaiset faktaperusteet
 
