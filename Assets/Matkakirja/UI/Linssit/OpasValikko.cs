@@ -199,6 +199,7 @@ namespace Matkakirja.Natiivi
             }
         }
         readonly VisualElement kuvaKortti, kuvaEl;
+        readonly OpasKuvanosto kuvanosto;
         readonly Label kuvaLaskuri;
         Kuvasuurennos suurennos;
         OpasKuva naytettyKuva;
@@ -378,6 +379,13 @@ namespace Matkakirja.Natiivi
             kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
             kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += PaivitaKuva;
+            // KUVANOSTO (omistaja TF 168): yksityiskohtakuva pienenä reunaan, napautuksesta suurena (LS1:n ajoitus).
+            kuvanosto = new OpasKuvanosto(Juuri);
+            kerros.JokaRuutu += () =>
+            {
+                var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+                kuvanosto.Este = !nakyy || Auki || (chat?.Auki ?? false) || (siirtyma != null && siirtyma.style.display != DisplayStyle.None);
+            };
             kerros.JokaRuutu += PaivitaTauko;
             // TÄKYLUETTELO (omistaja 5.10.2026 klo 23.5x): opas alkaa täkyillä ja odottaa valintaa (Linssiseppä 3bbb18d2).
             OpasSovitin.TakyAvaus = true;
@@ -2433,6 +2441,19 @@ namespace Matkakirja.Natiivi
             switch (k)
             {
                 case "sulje": Sulje(); return "opas: valikko kiinni";
+                case "kuvanosto":
+                {
+                    // ui opasvalikko kuvanosto [url|suureksi|pois]: kuvanoston koe ilman kierrosta.
+                    string a = o.Length > 1 ? o[1] : "";
+                    if (a == "pois") kuvanosto.Piilota();
+                    else if (a == "suureksi") kuvanosto.GetType().GetMethod("Suureksi", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)?.Invoke(kuvanosto, null);
+                    else kuvanosto.Nayta(new Matkakirja.Linssit.Kierros.OpasYksityiskohdat.Kuva
+                    {
+                        Url = a.StartsWith("http") ? a : "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/esittely.jpg",
+                        Kuvateksti = "Kuvanoston koe", Ankkuri = "koe",
+                    });
+                    return "opas: " + kuvanosto.Kuvaus();
+                }
                 case "teksti": NaytaTeksti(); return "opas: teksti auki";
                 case "kuvatesti":
                     testiKuva = new OpasKuva
