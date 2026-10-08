@@ -18,12 +18,15 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "tippuminen-muuri|water drip|8|120"
-          "tippuminen-muuri|dripping water field recording|8|120"
-          "tippuminen-muuri|drips tunnel|8|120"
-          "tippuminen-muuri|dripping cellar|8|120"
-          "tippuminen-raystas|dripping eaves|8|120"
-          "tippuminen-raystas|drips after rain|8|120"
+          "sukellus|dive into water splash|0.5|4"
+          "sukellus|jump into water|0.5|4"
+          "sukellus|splash body water|0.5|4"
+          "koysi-kiinnitys|rope creak|0.5|8"
+          "koysi-kiinnitys|rope tension creak|0.5|8"
+          "koysi-kiinnitys|rope tighten|0.5|8"
+          "koysi-lasku|rope creaking loop|3|30"
+          "koysi-lasku|rope slide friction|1|30"
+          "koysi-lasku|ship rope creak|3|30"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
