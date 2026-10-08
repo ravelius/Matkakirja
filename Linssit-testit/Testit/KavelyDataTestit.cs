@@ -65,6 +65,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(p[0].OdotaS == 8 && p[1].OdotaS == 0, "odotus_s (v44s) luetaan kuten odota_s");
         }
 
+        [Testi] static void LeikkausVain1499()
+        {
+            // v44x: leikkaus:vain-1499-b listaa aina leikattavat (bastionit); SeikkailuKavely antaa niille etusijan.
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"leikkaus:vain-1499-b\", \"paikka\": [0, 0, 0], \"leikkaukset\": [\"b1499-a\", \"b1499-b\"]}, {\"nimi\": \"pinta:puu-1\", \"paikka\": [0, 0, 0]}]");
+            var l = System.Linq.Enumerable.First(d.Lajia("leikkaus"));
+            Oleta.Tosi(l.Leikkaukset != null && l.Leikkaukset.Count == 2 && l.Leikkaukset[1] == "b1499-b", "leikkaukset luetaan");
+            Oleta.Tosi(System.Linq.Enumerable.First(d.Lajia("pinta")).Leikkaukset == null, "ilman kenttää null");
+        }
+
         [Testi] static void LuukunSarana()
         {
             var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"luukku:koillinen\", \"paikka\": [-12.1, 11.5, -16.6], \"sarana\": [-12.2, 11.5, -16.7], \"glb\": \"esine-luukku.glb\"}, " +
