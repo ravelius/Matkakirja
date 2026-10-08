@@ -90,7 +90,7 @@ namespace Matkakirja.Natiivi
         public const float TakaM = 2.5f, TakaYlos = 0.4f, TakaSiirtymaS = 0.6f, OteRiippuu = 1.55f, OteIrti = 0.35f;
         public Transform TakakuvaHahmo { get; private set; }
         Kiipeily oteKiipeily; List<(Vector3 P, Vector3 Ulos)> otteet; Action<bool> oteValmis;
-        float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi;
+        float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi, lyhtyKayty;
         public Kiipeily OteKiipeily => oteKiipeily;
         public bool Takakuva => takaPaino > 1e-3f;
         /// <summary>Lyhdyn valossa liikkui (Kiipeily.Havaittu): sovitin hälyttää (vartijat vetävät köydestä → tyrmä).</summary>
@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
         public void AloitaOteKiipeily(List<(Vector3 P, Vector3 Ulos)> o, IEnumerable<int> puuskat, Action<bool> valmis)
         {
             if (o == null || o.Count == 0) return;
-            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat); oteValmis = valmis;
+            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat); oteValmis = valmis; lyhtyKayty = false;
             cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear();
             takaPaikka = olka.position; takaKierto = olka.rotation;
             NaytaTakakuvaHahmo(true);
@@ -131,6 +131,9 @@ namespace Matkakirja.Natiivi
             if (k == null) return false;
             int suunta = Math.Abs(s.LiikeY) >= 0.3 ? Math.Sign(s.LiikeY) : Math.Abs(s.LiikeX) >= 0.3 ? Math.Sign(s.LiikeX) : 0;
             k.Paivita(dt, suunta);
+            // Lyhty kulkee yläpuolella kerran (huone 8 vaihe 5), kun pelaaja on puolivälissä (myös uudella yrityksellä pudotuksen jälkeen).
+            if (k.Ote == 0) lyhtyKayty = false;
+            if (!lyhtyKayty && k.Ote >= otteet.Count / 2 && k.Siirtyy == 0) { lyhtyKayty = true; k.LyhtyYlla(); Debug.Log("MATKAKIRJA seikkailu: lyhty yllä"); }
             if (k.Lipsahti) { k.Lipsahti = false; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
             if (k.Putosi) { k.Putosi = false; Debug.Log("MATKAKIRJA seikkailu: ote petti, kiipeilyn alkuun"); }
             if (k.Himmenee != himmensi) { himmensi = k.Himmenee; SeikkailuNakyvyys.Himmennys = himmensi ? 1f : 0f; }
