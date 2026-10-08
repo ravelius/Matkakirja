@@ -13,7 +13,7 @@ import { OPAS_SALLITUT, sallittuId } from './sallitut.js';
 
 // Ämpärin objektit ovat muuttumattomia (vie-paketti.sh ei ylikirjoita, Cache-Control immutable 1 v): jokainen kuvaerä
 // saa oman polun (kuvat-v2, kuvat-v3 …). Polku vaihdetaan wranglerin muuttujalla OPAS_KUVALISTA_URL ilman koodimuutosta.
-export const KUVALISTA_URL = 'https://media.matkakirja.app/opas/kuvat-v4/kuvat.json';
+export const KUVALISTA_URL = 'https://media.matkakirja.app/opas/kuvat-v5/kuvat.json';
 const KUVALISTA_TUORE_MS = 10 * 60 * 1000;
 const UUSINTA_VIRHEESTA_MS = 60 * 1000;
 export const KUVIA_ENINTAAN = 5;
