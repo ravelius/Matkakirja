@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "7fcdc5998f34d4e0",
-  "kansio": "dioraama/olavinlinna/blender/7fcdc5998f34d4e0/",
+  "hash": "c26afa778b604f33",
+  "kansio": "dioraama/olavinlinna/blender/c26afa778b604f33/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -2145,8 +2145,8 @@
     },
     {
       "polku": "materiaalit/detaljit.json",
-      "sha256": "19dbdf93fd5fe9cc56b57233d3556d394e513c45f546a2678afd5382298144dd",
-      "tavuja": 6379
+      "sha256": "965b68da1ac5395e8a9cecf412e9485fe6cee3e3b46e4aa2784051b36c08448f",
+      "tavuja": 8630
     },
     {
       "polku": "materiaalit/kivi-albedo-6x6.astcm",
@@ -2229,6 +2229,46 @@
       "tavuja": 339288
     },
     {
+      "polku": "materiaalit/olki-albedo-6x6.astcm",
+      "sha256": "fd585fa2f8c4bfaf8a28eae3d90b3447a6f1a0707f590e0e2fc90dfeadde623f",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/olki-albedo.jpg",
+      "sha256": "837c95d3b196a0ff87b1b12c3b68bd7a02c0b2ddf58adfaae0c07b537e58d8c2",
+      "tavuja": 630922
+    },
+    {
+      "polku": "materiaalit/olki-karheus-6x6.astcm",
+      "sha256": "8e02a9814a253e90785d43962016904e99848ab4aef21be8b179c878198a8445",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/olki-karheus.jpg",
+      "sha256": "49df7f3b7135dcae344323058e53a7ac26cc11eb183d7b3b8b64222675c8aac9",
+      "tavuja": 589562
+    },
+    {
+      "polku": "materiaalit/olki-korkeus-6x6.astcm",
+      "sha256": "64154b03939ce15a97b4da3cba19431fadddc560b88220372def4440cfd242d9",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/olki-korkeus.jpg",
+      "sha256": "51e4467979fb5a40cb29be7e43d72bac47f0425402e1cbf9f2bc2609584be8b5",
+      "tavuja": 186928
+    },
+    {
+      "polku": "materiaalit/olki-normaali-6x6.astcm",
+      "sha256": "2c110b3b2f8d44bce9e5d5c15e630b9070aa098511b31faf6a239700be9816ad",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/olki-normaali.jpg",
+      "sha256": "71fd670bee98848aec38ea9f25e0d73502b95aa5e3bb50be9a6809c2f315ee99",
+      "tavuja": 310761
+    },
+    {
       "polku": "materiaalit/puu-albedo-6x6.astcm",
       "sha256": "50b046562cc1666cc285fff51c6bb65a39d107f3d5f12b43b2b6579c93776a98",
       "tavuja": 626304
@@ -2307,6 +2347,46 @@
       "polku": "materiaalit/rappaus-normaali.jpg",
       "sha256": "b1757e1bb03eb7938735e362a665b7d1af89f196251d97b7b78766e2d5652533",
       "tavuja": 442311
+    },
+    {
+      "polku": "materiaalit/rauta-albedo-6x6.astcm",
+      "sha256": "4a4ee772842aaf5b6c02e4ee51c923d92abc63cac29d877e25aea4c11cb75987",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rauta-albedo.jpg",
+      "sha256": "2ef59fe2c8531f374867675836ec182cd34fcbeb5dfeb011049d037b56c23daf",
+      "tavuja": 296026
+    },
+    {
+      "polku": "materiaalit/rauta-karheus-6x6.astcm",
+      "sha256": "989c794935b1b2691f33fdc85adee0607e90177806b78f8eabdc44b244f5f979",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rauta-karheus.jpg",
+      "sha256": "d5bc2ccb279dcf3da773ce417e878d7d9978079084c3a3df5e18c5a74314c5d5",
+      "tavuja": 112242
+    },
+    {
+      "polku": "materiaalit/rauta-korkeus-6x6.astcm",
+      "sha256": "f8241fa853eea9cff33f56cfe60f4bd9a9e6a352bf1d778d87edef72989eb8a3",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rauta-korkeus.jpg",
+      "sha256": "f1fd0844987afd8b5b43632fe4aff7f4e704451d2b88a5f237f7347e69bbe268",
+      "tavuja": 205277
+    },
+    {
+      "polku": "materiaalit/rauta-normaali-6x6.astcm",
+      "sha256": "71cd8309de0664c4356fc437cbfd8f5ced06eb37c3e8dbff6055bfb8fab5d5ca",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rauta-normaali.jpg",
+      "sha256": "9d9371f08c83b611fcca131b707511b3e0196387b982f9ed07db481164e59d48",
+      "tavuja": 189996
     },
     {
       "polku": "tilat/fatabuuri.glb",
