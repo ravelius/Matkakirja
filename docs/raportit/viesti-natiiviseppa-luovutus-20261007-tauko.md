@@ -10,6 +10,12 @@ final-ik-167 71d34bb97 (Final IK + Grounder, Peli-testien unity-tarkistus kään
 Runko A = natiiviseppa/juna-167 3c6377160 (wt/proto-natiiviseppa-j144) = BUILD 166 + Siirtoseppä 96b04efb3 + LS1 7df28c8c4 + NUI 896d6b823 (⊇ eaedca9c5,
 24372c44d) + ce9d0c4d5 (burst) + e70e9a65e. KÄÄNNÖS 22.00 (Julkaisijan NYT varattu) muutosloki B:llä (273 merkkiä, PT hyväksyi). B kaatuu
 IL2CPP/RootMotion → käännä A kysymättä. 21.15 asti kuittaukset molempiin (tyojonot.md JUNA 167). Herätys 21.25 ajastettu.
+RUNKO B nyt 58ca707ab (+ LS1 mikseri-167 2c157e79d); runko A cd20157b1.
+JUNA 169 (omistaja 19.5x grafiikka + muisti; kuittaus pyydetty): proto natiiviseppa/grafiikka-169 c40e6228c (wt/proto-natiiviseppa-g169) =
+Ultra 773372d34 (Ultra_RPAsset/Renderer, Laitetaso/Laatutaso, kuumana MSAA pois) + linnan muistibudjetti c0558d09c/c40e6228c (LinnaMuisti,
+Ydin LinnaMuistibudjetti, Mac ennallaan). Siirtoseppä siirtoseppa/grafiikka-169 f09dc4728 ⊇ tämä (valot, KuvaSkaala, Forward+-silmukka).
+NUI defbce8e8 (pohjavahti4, korvaa 88646b2f6/b62e2569d) junaan 169; eef13ea8e odottaa. Jono 169/170: pallon laattojen SSE/välimuisti
+budjetista, STP/TAA (vs. MSAA). LS1 pallo-grafiikka-170 c0ab01481 (väreily tapa (a)).
 JUNA 168 -ehdokkaat: NUI 4758e5316 (⊇ 0426a8f26; EHTO Siirtosepän c15eb5b8a samaan junaan) + NUI pohjavahti-168c b62e2569d.
 
 ## TILA 8.10. 17.3x
