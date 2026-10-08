@@ -1,3 +1,17 @@
+# TILANNE 8.10. klo 20.1x (2)
+
+- **PT:n korjaukset tehty** (#4221 head 058aedd2d, Julkaisija mergeää):
+  - taivas 96×64×96 UE SkyViewLut -mappauksella
+  - ilmaperspektiivi 200 km, tiheä auringon suuntaan
+  - pilvien toistonesto: kolmen mittakaavan yhdistelmä jsonissa
+  Tiedostot päivitetty kansioon `_tyo/karttaseppa/ilmakeha-20261008/`, ja LS2:lle on kerrottu.
+- **VESIMASKI:** LS2 valitsi rasteripeitteen (A).
+  Koeaineisto: `/Volumes/T7 4TB/Matkakirja-karttaseppa/vesimaski/vesimaski.mjs` (ESA WorldCover 2021 luokka 80, z14 XYZ PNG, säde 15 km). Ajettu Tukholmalle (koe-tukholma/, 534 laattaa, 4,2 Mt, 15 s), ja LS2:lle on kerrottu.
+  **ODOTTAA PT:n linjausta**: sopiiko oma vesimaski Googlen 3D-laattojen päälle Map Tiles -ehtoihin (kysytty 20.1x).
+  Linjauksen jälkeen: työkalu repoon (tools/vesimaski/), Euroopan keskustat keskustat.json-tiedostosta 15 km säteellä, ämpäri Julkaisijan kautta (vie-paketti + LAHTEET.md, CC BY 4.0).
+
+---
+
 # TILANNE 8.10. klo 20.1x
 
 - **PT 20.1x:** #4220 mergetty. Pallon maiseman työnjako:
