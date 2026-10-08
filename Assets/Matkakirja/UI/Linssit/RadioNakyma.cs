@@ -1385,7 +1385,7 @@ namespace Matkakirja.Natiivi
             float vs = lasiR * 0.52f;
             p.lineWidth = Mathf.Max(1.4f, lasiR * 0.17f);
             p.lineCap = LineCap.Round;
-            p.strokeColor = new Color(1f, 0.95f, 0.86f, 0.92f);
+            p.strokeColor = (Color)Tyylikirja.Kuulto.TummaMuste94;
             p.BeginPath();
             p.Arc(c, vs, Angle.Degrees(-55f), Angle.Degrees(235f));
             p.Stroke();

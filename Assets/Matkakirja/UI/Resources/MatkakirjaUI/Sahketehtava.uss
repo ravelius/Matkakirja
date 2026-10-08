@@ -175,7 +175,7 @@
     padding: 0 3px 0 3px;
     border-width: 2px;
     border-radius: 28px;
-    border-color: rgba(72, 74, 116, 0.62);
+    border-color: var(--tk-erikois-leima-1-a62);
     rotate: -11deg;
 }
 
@@ -184,14 +184,14 @@
     letter-spacing: 4.44px; /* web 0.4px */
     -unity-text-align: middle-center;
     white-space: normal;
-    color: rgba(72, 74, 116, 0.62);
+    color: var(--tk-erikois-leima-1-a62);
 }
 
 .mk-st__leima-asema {
     margin-top: 1px;
     font-size: 6.5px;
     -unity-text-align: middle-center;
-    color: rgba(72, 74, 116, 0.62);
+    color: var(--tk-erikois-leima-1-a62);
 }
 
 /* Liimatut liuskat (.fokusvirta-sahkerivi): vaalea paperi, pieni kallistus. */
@@ -223,7 +223,7 @@
 .mk-st__rivi--kysymys {
     padding-left: 9px;
     border-left-width: 3px;
-    border-left-color: rgba(122, 85, 20, 0.8);
+    border-left-color: var(--tk-kuulto-paperi-korostus-80);
     border-bottom-color: var(--map-ink-30);
     background-color: var(--paper);
     color: var(--tk-lasi-pinta-peitto);
@@ -387,7 +387,7 @@
 }
 
 .mk-st__tulos--vaarin {
-    color: #9a2b21;
+    color: var(--tk-erikois-tila-6);
 }
 
 .mk-st__tulos--odotus {
@@ -447,7 +447,7 @@
 }
 
 .mk-nappi.mk-st__pullanappi--varmistus {
-    border-color: rgba(122, 85, 20, 0.75);
+    border-color: var(--tk-kuulto-paperi-korostus-75);
     background-color: var(--kulta);
     color: var(--tk-lasi-pinta-peitto);
 }
@@ -524,7 +524,7 @@
 }
 
 .mk-nappi.mk-st__toissijainen:active {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--tk-kuulto-valkoinen-60);
 }
 
 .mk-nappi.mk-st__ensisijainen {
@@ -554,7 +554,7 @@
     align-items: center;
     justify-content: center;
     padding: 24px 14px 24px 14px;
-    background-color: rgba(14, 9, 4, 0.45);
+    background-color: var(--tk-kuulto-himmennys-tumma-45);
     /* Avaus ja sulku animoiden: tausta häivyttää (Rakenne.Nayta), laatikko Ponnahduksella. */
     opacity: 0;
     transition-property: opacity;
@@ -618,7 +618,7 @@
 }
 
 .mk-nappi.mk-st__vaihtoehto--valittu {
-    background-color: rgba(217, 161, 59, 0.28);
+    background-color: var(--tk-kuulto-accent-28);
 }
 
 .mk-st__valitsin-tyhja {

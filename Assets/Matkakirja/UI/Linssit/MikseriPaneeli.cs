@@ -40,7 +40,7 @@ namespace Matkakirja.Natiivi
         public static IMikseriLahde Lahde;
         public const int Kerros = 39; // LinssiUi.SulkuKerros 38:n yläpuolella, Valikot 40:n alla
 
-        static readonly Color Lasi = new Color(0.07f, 0.06f, 0.05f, 0.86f);
+        static readonly Color Lasi = (Color)Tyylikirja.Kuulto.Bg85;
         static readonly Color Kulta = (Color)Tyylikirja.Kehys.Kulta;
         static readonly Color Paperi = (Color)Tyylikirja.Kehys.InkLight;
 

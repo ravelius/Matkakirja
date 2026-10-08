@@ -96,7 +96,7 @@
 }
 
 .mk-lehti__ikoninappi.mk-valittu {
-    background-color: rgba(217, 161, 59, 0.3);
+    background-color: var(--tk-kuulto-accent-30);
 }
 
 .mk-lehti__sivupaikka {
@@ -353,7 +353,7 @@
     right: 0;
     bottom: -2.4px;
     height: 1px;
-    color: rgba(122, 85, 20, 0.45);
+    color: var(--tk-kuulto-paperi-korostus-45);
 }
 
 /* --- kuvat ---------------------------------------------------------------------- */
@@ -389,7 +389,7 @@
 .mk-lehti__kuvateksti {
     font-size: 13px;
     white-space: normal;
-    color: rgba(33, 29, 24, 0.78);
+    color: var(--tk-kuulto-paperi-muste-78);
     margin-bottom: 2px;
 }
 
@@ -426,8 +426,8 @@
     margin-top: 8px;
     padding: 12px 14px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.35);
-    background-color: rgba(214, 190, 140, 0.18);
+    border-color: var(--tk-kuulto-paperi-korostus-35);
+    background-color: var(--tk-kuulto-paper-dark-18);
 }
 
 .mk-lehti__lista {
@@ -662,7 +662,7 @@
     font-size: 13px;
     -unity-font-style: italic;
     white-space: normal;
-    color: rgba(33, 29, 24, 0.65);
+    color: var(--tk-kuulto-paperi-muste-65);
     margin-bottom: 6px;
 }
 
@@ -678,13 +678,13 @@
 }
 
 .mk-lehti__tehtavatulos.mk-oikein {
-    border-left-color: rgba(74, 124, 58, 0.9);
-    background-color: rgba(106, 158, 84, 0.2);
+    border-left-color: var(--tk-erikois-tila-4-a90);
+    background-color: var(--tk-erikois-tila-8-a20);
 }
 
 .mk-lehti__tehtavatulos.mk-vaarin {
-    border-left-color: rgba(74, 124, 58, 0.85);
-    background-color: rgba(106, 158, 84, 0.1);
+    border-left-color: var(--tk-erikois-tila-4-a85);
+    background-color: var(--tk-erikois-tila-8-a10);
 }
 
 /* Palkintojuliste tehtävälaatikon kyljessä (web .minitehtava-palkinnollinen, .juliste-palkinto). */
@@ -1012,7 +1012,7 @@
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 14px;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: var(--tk-kuulto-valkoinen-35);
     color: var(--map-ink);
 }
 
@@ -1301,11 +1301,11 @@
 }
 
 .mk-opas__vyo--lammin {
-    background-color: #f6ddc8;
+    background-color: var(--tk-erikois-saa-2);
 }
 
 .mk-opas__vyo--viilea {
-    background-color: #e0eae7;
+    background-color: var(--tk-erikois-saa-3);
 }
 
 .mk-opas__vyootsikko {
@@ -1446,7 +1446,7 @@
 
 .mk-opas__kausilampo {
     font-size: 13.8px;
-    color: #1d5a5e;
+    color: var(--tk-erikois-opas-1);
 }
 
 .mk-opas__kausikuvaus {
@@ -1456,11 +1456,11 @@
 }
 
 .mk-opas__suunnittele {
-    border-left-color: #1d5a5e;
+    border-left-color: var(--tk-erikois-opas-1);
 }
 
 .mk-opas__suunnittele .mk-opas__laatikkootsikko {
-    color: #1d5a5e;
+    color: var(--tk-erikois-opas-1);
 }
 
 .mk-opas__linkki {
@@ -1470,10 +1470,10 @@
     padding: 2px 0;
     border-width: 0;
     border-bottom-width: 1px;
-    border-bottom-color: #1d5a5e;
+    border-bottom-color: var(--tk-erikois-opas-1);
     border-radius: 0;
     background-color: var(--lapinakyva);
-    color: #1d5a5e;
+    color: var(--tk-erikois-opas-1);
 }
 
 .mk-opas__linkki .mk-nappi__teksti {
@@ -1499,7 +1499,7 @@
     padding: 8px 0;
     border-width: 0;
     border-radius: 0;
-    background-color: #b3775f;
+    background-color: var(--tk-erikois-opas-3);
     color: var(--ink-light);
     rotate: 45deg;
 }
@@ -1517,10 +1517,10 @@
     padding: 0;
     border-width: 0;
     border-bottom-width: 1px;
-    border-bottom-color: #1c6f6b;
+    border-bottom-color: var(--tk-erikois-opas-2);
     border-radius: 0;
     background-color: var(--lapinakyva);
-    color: #1c6f6b;
+    color: var(--tk-erikois-opas-2);
 }
 
 .mk-lehti__opaslinkki .mk-nappi__teksti {
@@ -1599,7 +1599,7 @@
 }
 
 .mk-numerot__silloinvuosi {
-    color: rgba(138, 97, 20, 0.9);
+    color: var(--tk-kuulto-accent-dark-90);
 }
 
 .mk-numerot__ika {
@@ -1611,7 +1611,7 @@
     margin: 5px 0 0 0;
     font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: rgba(33, 29, 24, 0.88);
+    color: var(--tk-kuulto-paperi-muste-88);
 }
 
 /* "Silloin ja nyt" — isoisän päiväkirjan ääni käyrän alla. */
@@ -1619,14 +1619,14 @@
     margin: 4px 0 0 0;
     font-size: 13px;
     white-space: normal;
-    color: rgba(138, 97, 20, 0.95);
+    color: var(--tk-kuulto-accent-dark-95);
 }
 
 .mk-numerot__vdem {
     margin: 4px 0 0 0;
     font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: rgba(33, 29, 24, 0.88);
+    color: var(--tk-kuulto-paperi-muste-88);
 }
 
 .mk-numerot__lahde {
@@ -1687,7 +1687,7 @@
 /* Varmistus on eri nappi kuin tarjous: umpireuna ja lämmin kulta. */
 .mk-fokus__pullanappi--varmistus,
 .mk-fokus__pullanappi--varmistus:hover {
-    border-color: rgba(122, 85, 20, 0.75);
+    border-color: var(--tk-kuulto-paperi-korostus-75);
     background-color: var(--kulta);
     color: var(--tk-lasi-pinta-peitto);
 }
@@ -1858,7 +1858,7 @@
     margin-left: 6.4px;
     font-size: 10.9px;
     letter-spacing: 10.09px; /* web 1.1px */
-    color: rgba(122, 85, 20, 0.95);
+    color: var(--tk-kuulto-paperi-korostus-95);
 }
 
 /* Maan uutiset (web .arrival-uutiset, .uutinen-rivi, .uutinen-kortti). */
@@ -1928,7 +1928,7 @@
     min-height: 28px;
     padding: 2px 10px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.5);
+    border-color: var(--tk-kuulto-paperi-korostus-50);
     border-radius: var(--tk-kulma-nappi);
     background-color: rgba(255, 250, 238, 0.7);
     color: var(--tk-paperi-korostus);
@@ -2002,16 +2002,16 @@
 }
 
 .mk-lehti__kuuntele--soi {
-    background-color: rgba(234, 184, 78, 0.28);
+    background-color: var(--tk-kuulto-kulta-28);
 }
 
 .mk-lehti__kuuntele--vanha {
-    background-color: rgba(244, 233, 210, 0.75);
+    background-color: var(--tk-kuulto-tumma-muste-75);
     border-color: var(--map-ink-35);
 }
 
 .mk-lehti__kuuntele--vanha.mk-lehti__kuuntele--soi {
-    background-color: rgba(234, 184, 78, 0.28);
+    background-color: var(--tk-kuulto-kulta-28);
 }
 
 .mk-lehti__kuuntele-merkki {
@@ -2066,7 +2066,7 @@
     margin-top: 3px;
     font-size: 10px;
     white-space: normal;
-    color: rgba(90, 74, 51, 0.8);
+    color: var(--tk-kuulto-paperi-muste-pehmea-80);
 }
 
 /* Noston kuuntelu- ja musiikkinapit (web .kulttuuri-kuuntele, .kulttuuri-musiikkilinkki) otsikon alla. */
@@ -2173,7 +2173,7 @@
 
 .mk-tyohuone__tagi--valmis {
     background-color: #e2efdc;
-    color: #2c5e2a;
+    color: var(--tk-erikois-tila-2);
 }
 
 .mk-tyohuone__tagi--kesken {
@@ -2219,7 +2219,7 @@
     padding: 0 14px;
     border-width: 1px;
     border-radius: var(--tk-kulma-keski);
-    border-color: rgba(122, 85, 20, 0.55);
+    border-color: var(--tk-kuulto-paperi-korostus-55);
     background-color: rgba(255, 252, 240, 0.7);
     color: var(--tk-paperi-korostus);
 }
@@ -2262,7 +2262,7 @@
 
 .mk-tyohuone__chip--valmis {
     background-color: #e2efdc;
-    color: #2c5e2a;
+    color: var(--tk-erikois-tila-2);
 }
 
 .mk-tyohuone__chip--tyossa {
@@ -2317,11 +2317,11 @@
 }
 
 .mk-tyohuone__raitatila--olemassa {
-    color: #2c5e2a;
+    color: var(--tk-erikois-tila-2);
 }
 
 .mk-tyohuone__raitatila--puuttuu {
-    color: #8a2c1c;
+    color: var(--tk-erikois-tila-3);
 }
 
 .mk-tyohuone__polku {
@@ -2412,7 +2412,7 @@
     padding: 0 10px;
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
-    border-color: rgba(122, 85, 20, 0.4);
+    border-color: var(--tk-kuulto-paperi-korostus-40);
     background-color: rgba(255, 252, 240, 0.6);
 }
 
@@ -2422,8 +2422,8 @@
 }
 
 .mk-tilastot__vipunappi.mk-valittu {
-    border-color: rgba(176, 138, 60, 0.95);
-    background-color: rgba(217, 161, 59, 0.25);
+    border-color: var(--tk-erikois-tila-7-a95);
+    background-color: var(--tk-kuulto-accent-25);
 }
 
 .mk-tilastot__vieri {
@@ -2454,7 +2454,7 @@
 }
 
 .mk-tilastot__rivi--manner {
-    background-color: rgba(217, 161, 59, 0.1);
+    background-color: var(--tk-kuulto-accent-10);
 }
 
 .mk-tilastot__rivi--maa {
@@ -2531,7 +2531,7 @@
 
 .mk-tilastot__palkkitayte {
     height: 100%;
-    background-color: #8fb886;
+    background-color: var(--tk-erikois-tila-11);
 }
 
 .mk-tilastot__tuoremerkki {
@@ -2539,7 +2539,7 @@
     padding: 1px 6px;
     border-radius: var(--tk-kulma-pieni);
     font-size: 9.5px;
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: var(--tk-kuulto-valkoinen-65);
 }
 
 .mk-tilastot__kaikki {
@@ -2548,7 +2548,7 @@
     padding: 0 6px;
     border-width: 1px;
     border-radius: var(--tk-kulma-pieni);
-    border-color: rgba(122, 85, 20, 0.35);
+    border-color: var(--tk-kuulto-paperi-korostus-35);
     background-color: rgba(255, 252, 240, 0.6);
 }
 
@@ -2568,7 +2568,7 @@
 
 .mk-tilastot__num--valmis {
     background-color: #e2efdc;
-    color: #2c5e2a;
+    color: var(--tk-erikois-tila-2);
 }
 
 .mk-tilastot__num--kesken {
@@ -2629,7 +2629,7 @@
 }
 
 .mk-tilastot__kiintiotayte--vihrea {
-    background-color: #8fb886;
+    background-color: var(--tk-erikois-tila-11);
 }
 
 .mk-tilastot__kiintiotayte--keltainen {
@@ -2637,7 +2637,7 @@
 }
 
 .mk-tilastot__kiintiotayte--punainen {
-    background-color: #c0533a;
+    background-color: var(--tk-erikois-tila-9);
 }
 
 /* Web minitehtävän vaihtoehto (button, mitattu 24.9. b11): ei pohjaa, ylhäällä 1 px rgba(60, 44, 26, 0.28) → rgb(188, 177, 156)

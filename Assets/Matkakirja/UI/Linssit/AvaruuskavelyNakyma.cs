@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
             ohje.style.left = Length.Percent(6); ohje.style.right = Length.Percent(6); ohje.style.bottom = Length.Percent(5);
             ohje.style.unityTextAlign = TextAnchor.MiddleCenter;
             ohje.style.color = Color.white; ohje.style.fontSize = 17;
-            ohje.style.backgroundColor = new Color(0, 0, 0, 0.5f);
+            ohje.style.backgroundColor = (Color)Tyylikirja.Kuulto.Musta50;
             ohje.style.paddingLeft = ohje.style.paddingRight = 12; ohje.style.paddingTop = ohje.style.paddingBottom = 8;
             ohje.style.borderTopLeftRadius = ohje.style.borderTopRightRadius = ohje.style.borderBottomLeftRadius = ohje.style.borderBottomRightRadius = 14;
             Kirjasimet.Aseta(ohje, Kirjasin.Kone);
@@ -97,7 +97,7 @@ namespace Matkakirja.Natiivi
             korttiJuuri = Rakenne.El("mk-kavely__korttijuuri", juuri, PickingMode.Ignore);
             Tayta(korttiJuuri);
             korttiJuuri.style.alignItems = Align.Center; korttiJuuri.style.justifyContent = Justify.Center;
-            korttiJuuri.style.backgroundColor = new Color(0, 0, 0, 0.45f);
+            korttiJuuri.style.backgroundColor = (Color)Tyylikirja.Kuulto.HimmennysTumma45;
             kortti = Rakenne.El("mk-kavely__kortti", korttiJuuri, PickingMode.Ignore);
             var kk = KavelyKerrokset.KortinKangas;
             oma = Alue(kortti, KavelyKerrokset.KuvaVasen, kk);

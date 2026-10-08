@@ -21,7 +21,7 @@
     padding: 11px 34px 12px 13px;
     border-width: 1px;
     border-bottom-width: 3px;
-    border-color: rgba(122, 85, 20, 0.34);
+    border-color: var(--tk-kuulto-paperi-korostus-34);
     border-bottom-color: var(--tk-himmennys-kevyt);
     border-radius: 9px;
     background-color: var(--tk-paperi-pinta);
@@ -90,7 +90,7 @@
 .mk-sahke-liuska__paperi {
     padding: 8px 10px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.4);
+    border-color: var(--tk-kuulto-paperi-korostus-40);
     border-radius: 5px;
     background-color: var(--tk-paperi-pinta);
 }
@@ -132,7 +132,7 @@
     margin-bottom: 6px;
     padding: 5px 9px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.34);
+    border-color: var(--tk-kuulto-paperi-korostus-34);
     border-radius: var(--tk-kulma-pieni);
     background-color: var(--valkoinen);
     color: var(--tk-paperi-muste);
@@ -176,7 +176,7 @@
     margin-top: 9px;
     padding: 5px 11px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.28);
+    border-color: var(--tk-kuulto-paperi-korostus-28);
     border-radius: var(--tk-kulma-pieni);
     background-color: var(--lapinakyva);
     color: var(--tk-paperi-muste-pehmea);

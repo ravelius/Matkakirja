@@ -64,8 +64,8 @@ namespace Matkakirja.Natiivi
 
         // ---- Paikkamerkkien värit (Cupolan tumma ohjaamo: kulunut anodisoitu metalli, lämmin valo) ----
         static readonly Color Metalli = new Color(0.22f, 0.23f, 0.25f), MetalliVaalea = new Color(0.36f, 0.37f, 0.40f),
-            Reuna = new Color(0.08f, 0.08f, 0.09f), Ruuvi = new Color(0.55f, 0.56f, 0.58f), Teksti = new Color(0.86f, 0.84f, 0.78f),
-            Valo = new Color(1f, 0.72f, 0.32f), Vihrea = new Color(0.35f, 0.95f, 0.45f), Lcd = new Color(0.05f, 0.09f, 0.07f),
+            Reuna = (Color)Tyylikirja.Kuulto.Musta100, Ruuvi = new Color(0.55f, 0.56f, 0.58f), Teksti = new Color(0.86f, 0.84f, 0.78f),
+            Valo = new Color(1f, 0.72f, 0.32f), Vihrea = new Color(0.35f, 0.95f, 0.45f), Lcd = (Color)Tyylikirja.Kuulto.LasiAvaruusPinta100,
             LcdTeksti = new Color(0.55f, 0.95f, 0.6f), Suoja = new Color(0.72f, 0.16f, 0.12f, 0.85f);
 
         /// <summary>Kytkinmoduulin pohja: tila, kuva tai paikkamerkki.</summary>

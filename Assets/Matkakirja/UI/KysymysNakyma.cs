@@ -945,7 +945,7 @@ namespace Matkakirja.Natiivi
                 // Kiilto.
                 p.BeginPath();
                 p.MoveTo(P(12.5f, 9.4f)); p.LineTo(P(18.5f, 9.4f)); p.LineTo(P(22, 30));
-                p.strokeColor = new Color(1, 1, 1, 0.5f);
+                p.strokeColor = (Color)Tyylikirja.Kuulto.Valkoinen50;
                 p.lineWidth = 1.4f * s;
                 p.Stroke();
             }

@@ -19,7 +19,7 @@ namespace Matkakirja.Natiivi
         // Minipulu (lintu rajattuna, 58 × 70): kokopulun kuvassa lintu jäi 64 pt:n laatikossa liian pieneksi (savuke 29.9.).
         const float PuluMinPt = 56f, PuluMaxPt = 96f, PuluEtaisyysvertailuM = 14f;
         const int AnimaatioMs = 220;
-        static readonly Color Pergamentti = new Color(0.9373f, 0.9020f, 0.8235f, 0.94f);
+        static readonly Color Pergamentti = (Color)Tyylikirja.Kuulto.TummaMuste94;
         static readonly Color Teksti = (Color)Tyylikirja.Kehys.Panel2;
 
         readonly VisualElement juuri, lauta, nakyma, lappuKerros;
@@ -179,7 +179,7 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.position = Position.Absolute;
             // Oikeaan yläkulmaan sulkunapin alle (Päätoimittaja 30.9.: vasemmassa alakulmassa se peitti kertojan laatikon ja infotaulun).
             kuoriNappi.style.right = 14; kuoriNappi.style.top = 110;
-            kuoriNappi.style.backgroundColor = new Color(0.1f, 0.08f, 0.06f, 0.6f);
+            kuoriNappi.style.backgroundColor = (Color)Tyylikirja.Kuulto.PaperiMuste60;
             kuoriNappi.style.color = Color.white;
             kuoriNappi.style.fontSize = 12;
             kuoriNappi.style.paddingLeft = 10; kuoriNappi.style.paddingRight = 10; kuoriNappi.style.paddingTop = 6; kuoriNappi.style.paddingBottom = 6;

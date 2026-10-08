@@ -1483,7 +1483,7 @@ namespace Matkakirja.Natiivi
             liviaNimi.style.marginTop = 8;
             liviaNimi.style.fontSize = 13;
             liviaNimi.style.color = (Color)Tyylikirja.Kehys.MapInk;
-            liviaNimi.style.backgroundColor = new Color(0.95f, 0.91f, 0.8f, 0.85f);
+            liviaNimi.style.backgroundColor = (Color)Tyylikirja.Kuulto.TummaMuste85;
             liviaNimi.style.paddingLeft = 6; liviaNimi.style.paddingRight = 6;
             liviaKehys.Add(liviaNimi);
             UiKerros.Hae().Turva(UiKerros.Valikot).Add(liviaKehys);

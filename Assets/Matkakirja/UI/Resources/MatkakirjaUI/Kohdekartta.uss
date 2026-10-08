@@ -140,7 +140,7 @@
 .mk-kohdekartta__lahde {
     margin-top: 1.6px;
     font-size: 9.3px;
-    color: rgba(90, 74, 51, 0.8);
+    color: var(--tk-kuulto-paperi-muste-pehmea-80);
 }
 
 /* Piirros 40 × 40 (web .maakartta-piste.kohde-numero.kohde-piirros), keskitetty pisteeseen. */
@@ -258,7 +258,7 @@
     right: 0;
     bottom: 0;
     height: 60%;
-    background-color: rgba(247, 240, 222, 0.55);
+    background-color: var(--tk-kuulto-paperi-pinta-55);
 }
 
 .mk-kohdekartta__mittajanateksti {
@@ -272,7 +272,7 @@
     white-space: nowrap;
     -unity-text-align: middle-center;
     color: var(--tk-lasi-pinta-peitto);
-    background-color: rgba(247, 240, 222, 0.72);
+    background-color: var(--tk-kuulto-paperi-pinta-72);
     border-radius: var(--tk-kulma-hius);
 }
 
@@ -290,7 +290,7 @@
     bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: #0b0805;
+    background-color: var(--tk-kuulto-himmennys-tumma-100);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.2s;
@@ -327,7 +327,7 @@
     border-width: 1px;
     border-color: var(--map-ink-45);
     border-radius: 3px;
-    background-color: rgba(247, 240, 222, 0.88);
+    background-color: var(--tk-kuulto-paperi-pinta-88);
     align-items: center;
     justify-content: center;
 }
@@ -489,7 +489,7 @@
     overflow: hidden;
     margin: 0 14.4px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.35);
+    border-color: var(--tk-kuulto-paperi-korostus-35);
     border-radius: var(--tk-kulma-keski);
 }
 
@@ -523,7 +523,7 @@
     padding: 2.4px 6.4px;
     font-size: 11.5px;
     border-top-right-radius: 6px;
-    background-color: rgba(245, 240, 226, 0.85);
+    background-color: var(--tk-kuulto-paperi-pinta-85);
 }
 
 /* Web .avauskortti-opas: margin 0.65rem 0.9rem 0, padding 0.5rem, #efe1c2, kulma 8, rako 0.65rem. */
@@ -589,7 +589,7 @@
     padding: 0;
     border-width: 0;
     border-radius: 16.8px;
-    background-color: rgba(245, 240, 226, 0.92);
+    background-color: var(--tk-kuulto-paperi-pinta-92);
     align-items: center;
     justify-content: center;
 }
@@ -623,9 +623,9 @@
     width: 33.6px;
     height: 33.6px;
     min-height: 33.6px;
-    border-color: rgba(122, 85, 20, 0.3);
+    border-color: var(--tk-kuulto-paperi-korostus-30);
     border-radius: 16.8px;
-    background-color: rgba(245, 240, 226, 0.94);
+    background-color: var(--tk-kuulto-paperi-pinta-94);
 }
 
 .mk-kohdekartta-kokoruutu__tyokalut {
@@ -642,7 +642,7 @@
     margin-left: 6.4px;
     padding: 0;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.35);
+    border-color: var(--tk-kuulto-paperi-korostus-35);
     border-radius: var(--tk-kulma-keski);
     background-color: var(--paper);
     align-items: center;
@@ -732,7 +732,7 @@
 }
 
 .mk-kohdekartta__ihmetahti-kulta {
-    color: #b8862b;
+    color: var(--tk-erikois-ihme-3);
 }
 
 .mk-kohdekartta__ihmetahti-muste {

@@ -72,7 +72,7 @@
     margin-top: 8px;
     padding: 8px 11px 8px 11px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
+    border-color: var(--tk-kuulto-paperi-korostus-32);
     border-radius: 9.6px;
     background-color: var(--tk-tumma-muste);
     color: var(--tk-paperi-muste);
@@ -149,7 +149,7 @@
     background-color: var(--tk-tumma-muste);
     border-right-width: 1px;
     border-bottom-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
+    border-color: var(--tk-kuulto-paperi-korostus-32);
 }
 
 .mk-kupla.mk-kupla--viimeinen .mk-kupla__hanta {
@@ -192,7 +192,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-    background-color: rgba(20, 16, 10, 0.55);
+    background-color: var(--tk-kuulto-himmennys-tumma-55);
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.2s;
@@ -207,7 +207,7 @@
     max-width: 640px;
     padding: 9.6px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
+    border-color: var(--tk-kuulto-paperi-korostus-32);
     border-radius: var(--tk-kulma-keski);
     background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-muste);
@@ -258,7 +258,7 @@
      * KermaValo), jonka läpi kartta kuultaa; tekstien alla vaalea varjo. Pehmuste 0,2 / 0,35 rem kuten webissä. */
     padding: 3.2px 5.6px 5.6px 5.6px;
     border-width: 0;
-    border-color: rgba(122, 85, 20, 0.32);
+    border-color: var(--tk-kuulto-paperi-korostus-32);
     border-radius: var(--tk-kulma-kortti);
     background-color: var(--lapinakyva);
     text-shadow: 0 1px 2px rgba(247, 237, 216, 0.9);
@@ -384,7 +384,7 @@
     min-height: 0;
     border-width: 0;
     border-bottom-width: 1px;
-    border-color: rgba(122, 85, 20, 0.4); /* löydös 139: vaalealla pohjalla */
+    border-color: var(--tk-kuulto-paperi-korostus-40); /* löydös 139: vaalealla pohjalla */
     background-color: var(--lapinakyva);
     font-size: 12.5px;
     color: var(--muted);
@@ -618,7 +618,7 @@
     min-height: 34px;
     padding: 4px 16px;
     border-color: var(--map-ink-50);
-    background-color: rgba(247, 241, 226, 0.92);
+    background-color: var(--tk-kuulto-paperi-pinta-92);
     color: var(--map-ink);
 }
 
@@ -664,7 +664,7 @@
     min-height: 224px;
     padding: 0;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
+    border-color: var(--tk-kuulto-paperi-korostus-32);
     border-radius: var(--tk-kulma-kortti);
     background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-muste);
@@ -738,7 +738,7 @@
 }
 
 .mk-chat--linssi .mk-chat__syote {
-    border-color: rgba(93, 255, 168, 0.2);
+    border-color: var(--tk-kuulto-lasi-avaruus-korostus-20);
 }
 
 /* Tuore keskustelu: korkeus sisällön mukaan (webin .pollo-alku). */
@@ -775,13 +775,13 @@
 
 .mk-chat__odottaa {
     -unity-font-style: italic;
-    color: rgba(33, 29, 24, 0.6);
+    color: var(--tk-kuulto-paperi-muste-60);
     font-size: 13.5px;
 }
 
 .mk-chat__paikkarivi {
     -unity-font-style: italic;
-    color: rgba(33, 29, 24, 0.6);
+    color: var(--tk-kuulto-paperi-muste-60);
     font-size: 13px;
 }
 
@@ -805,7 +805,7 @@
     min-height: 34px;
     margin-bottom: 6px;
     padding: 5px 11px 5px 11px;
-    border-color: rgba(122, 85, 20, 0.45);
+    border-color: var(--tk-kuulto-paperi-korostus-45);
     border-radius: 16px;
     background-color: var(--lapinakyva);
     color: var(--tk-paperi-korostus);
@@ -825,7 +825,7 @@
     align-items: center;
     padding: 8px 8px 9px 8px;
     border-top-width: 1px;
-    border-color: rgba(122, 85, 20, 0.25);
+    border-color: var(--tk-kuulto-paperi-korostus-25);
 }
 
 .mk-chat__kentta {
@@ -839,7 +839,7 @@
     min-height: 38px;
     padding: 4px 10px 4px 10px;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.35);
+    border-color: var(--tk-kuulto-paperi-korostus-35);
     border-radius: var(--tk-kulma-nappi);
     background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-muste);
@@ -851,7 +851,7 @@
     min-height: 38px;
     padding: 0;
     margin-left: 4px;
-    border-color: rgba(122, 85, 20, 0.45);
+    border-color: var(--tk-kuulto-paperi-korostus-45);
     background-color: var(--lapinakyva);
     color: var(--tk-paperi-korostus);
 }
@@ -867,7 +867,7 @@
     min-height: 34px;
     padding: 4px 12px 4px 12px;
     border-color: var(--map-ink-50);
-    background-color: rgba(247, 241, 226, 0.94);
+    background-color: var(--tk-kuulto-paperi-pinta-94);
     color: var(--map-ink);
 }
 
@@ -1082,7 +1082,7 @@
     flex-shrink: 0;
     padding: 8px 8px 9px 8px;
     border-top-width: 1px;
-    border-color: rgba(122, 85, 20, 0.25);
+    border-color: var(--tk-kuulto-paperi-korostus-25);
 }
 
 .mk-chat__syote > .mk-chat__rivi {
@@ -1093,7 +1093,7 @@
 .mk-chat__sanelutila {
     margin-bottom: 6px;
     font-size: 13px;
-    color: rgba(33, 29, 24, 0.62);
+    color: var(--tk-kuulto-paperi-muste-62);
     -unity-text-align: middle-center;
     white-space: normal;
 }
@@ -1132,7 +1132,7 @@
     justify-content: center;
     align-items: center;
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.45);
+    border-color: var(--tk-kuulto-paperi-korostus-45);
     border-radius: var(--tk-kulma-keski);
     background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-korostus);
@@ -1165,7 +1165,7 @@
 .mk-chat__matkakirja {
     margin-top: -4px;
     font-size: 13px;
-    color: rgba(33, 29, 24, 0.85);
+    color: var(--tk-kuulto-paperi-muste-85);
     white-space: normal;
 }
 
@@ -1223,7 +1223,7 @@
     padding: 0 12px;
     border-width: 1px;
     border-radius: var(--tk-kulma-keski);
-    border-color: rgba(122, 85, 20, 0.55);
+    border-color: var(--tk-kuulto-paperi-korostus-55);
     background-color: rgba(255, 252, 240, 0.7);
 }
 
