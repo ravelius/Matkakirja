@@ -59,3 +59,11 @@ z on vesitaso ilman nostoa; nosto (suositus 0,4 m) tehdään ajossa.
   `ign` = IGN LiDAR HD MNS (data.geopf.fr WMS-R, Etalab 2.0) + RAF20; `glo` = Copernicus GLO-30 + EGM2008.
 - `rakennukset.mjs <kaupunki-id> --pbf <maa.osm.pbf>` → OSM-rakennukset korkeuksineen lähiruudun rasterointiin.
 - Raportti: docs/raportit/pallo-korkeusdata-20261008.md.
+
+## Pariisi (8.10.): relaatiot ja liukuva jokitaso
+
+- `vesirelaatiot.mjs <maa.osm.pbf> <ulos.json> <lon0> <lat0> <lon1> <lat1>`: OSM-vesien monikulmiorelaatiot (Seine, Marne), jotka Geofabrikin
+  aluepaketin free-shp pudottaa rajalla. Syötetään `vesipinta.mjs --lisa <json>`.
+- Jokien taso (OSM river, ESA) on liukuva: 1 km:n lohkojen persentiili, tasoitus 3 × 3 ja bilineaarinen interpolointi (sulut eivät tee portaita).
+- `--tasokorkeus korkeus-<id>.json`: vesitasot lähiruudun pintamallista (Pariisi: IGN LiDAR HD, 20 %:n persentiili; vedestä heijastuneet pulssit).
+  Tarkistus: LiDAR − vesi sisävesillä p10 0,02 m, p25 0,29 m.

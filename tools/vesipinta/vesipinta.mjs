@@ -89,7 +89,14 @@ if (meriPolku) { tasot.push({ lahde: 'meri', H: 0 }); const mp = lueShp(meriPolk
 if (sisaPolku) {
   const fcl = lueDbfKentta(sisaPolku.replace(/\.shp$/, '.dbf'), 'fclass'), OK = new Set(['water', 'reservoir', 'river', 'dock']);
   const sp = lueShp(sisaPolku, (i) => OK.has(fcl(i))); loki('sisävedet: polygoneja', sp.length);
-  for (const p of sp) { tasot.push({ lahde: 'osm-' + fcl(p.nro), H: null }); rasteroi(p.renkaat, tasot.length - 1); }
+  for (const p of sp) { const f2 = fcl(p.nro); tasot.push({ lahde: f2 === 'river' ? 'osm-river-shp' : 'osm-' + f2, H: null }); rasteroi(p.renkaat, tasot.length - 1); }
+}
+if (opt('lisa')) { // vesirelaatiot.mjs: monikulmiorelaatiot (Seine, Marne), joita free-shp:ssä ei ole
+  const L = JSON.parse(fs.readFileSync(opt('lisa'), 'utf8')).polygonit; let n = 0;
+  for (const pg of L) { const rr = pg.renkaat.map((r) => { const f = new Float64Array(r.length * 2); r.forEach(([lo, la], k) => { f[2 * k] = eLon(lo); f[2 * k + 1] = nLat(la); }); return f; });
+    if (!rr.some((f) => { for (let k = 0; k < f.length; k += 2) if (Math.abs(f[k]) <= S * 1.05 && Math.abs(f[k + 1]) <= S * 1.05) return true; return false; })) continue;
+    tasot.push({ lahde: pg.lahde, H: null, nimi: pg.nimi }); rasteroi(rr, tasot.length - 1); n++; }
+  loki('relaatiopolygoneja', n);
 }
 let vettaOsm = 0; for (let c = 0; c < W * H; c++) if (peitto[c] >= 8) vettaOsm++;
 loki('OSM-vettä', (vettaOsm * C * C / 1e6).toFixed(2), 'km²');
@@ -165,6 +172,41 @@ loki('rantaetäisyys valmis');
   for (let t = 0; t < tasot.length; t++) if (tasot[t].H === null) { const a = nayt[t].sort((x, y) => x - y); tasot[t].H = a.length ? +a[Math.floor(a.length * 0.1)].toFixed(2) : 0; tasot[t].n = a.length; } // alakantti: liian korkea vesi peittäisi laiturit, liian matala vain paljastaa Googlen veden
 }
 
+// --- tarkka tasolähde (--tasokorkeus korkeus-<id>.json): Pariisin LiDAR-pinta vesialueilla (vedestä heijastuneet pulssit) ---
+let tasoLahde = demH, tasoP = 0.1, tasoNimi = 'GLO-30';
+if (opt('tasokorkeus')) {
+  const KJ = JSON.parse(fs.readFileSync(opt('tasokorkeus'), 'utf8')), osa = KJ.osat.find((o) => o.osa === 'lahi');
+  const kp = PNG.sync.read(fs.readFileSync(path.join(path.dirname(opt('tasokorkeus')), osa.tiedosto)), { skipRescale: true }), KW = osa.koko[0], KH = osa.koko[1];
+  const kanavia = kp.data.length / (KW * KH), dk = kp.data;
+  const kOff = { x: eLon(KJ.origo.lon) * 0, y: 0 }; // sama origo tarkistetaan alla
+  if (Math.abs(KJ.origo.lat - lat0) > 1e-6 || Math.abs(KJ.origo.lon - lon0) > 1e-6) throw new Error('tasokorkeus: eri origo');
+  tasoLahde = (lon, lat) => { const x = eLon(lon), y = nLat(lat), i = Math.floor((x - osa.kulma.x) / osa.ruutu_m), r = KH - 1 - Math.floor((y - osa.kulma.y) / osa.ruutu_m);
+    if (i < 0 || r < 0 || i >= KW || r >= KH) return demH(lon, lat); const v = dk[(r * KW + i) * kanavia]; return v ? osa.pohja_m + v / 10 - geoidi(lon, lat) : demH(lon, lat); };
+  tasoP = 0.2; tasoNimi = 'IGN LiDAR HD (korkeus-' + KJ.kohde + '-lahi), muualla GLO-30';
+  // järvien tasot uudelleen samasta lähteestä
+  const nayt = tasot.map(() => []);
+  for (let j = 0; j < H; j += 2) for (let i = 0; i < W; i += 2) { const c = j * W + i, t = taso[c]; if (t > 0 && peitto[c] >= 12 && nayt[t].length < 4000 && DIST[c] >= Math.min(DCAP, 2 * C)) { const v = tasoLahde(lonC[i], latR[j]); if (Number.isFinite(v)) nayt[t].push(v); } }
+  for (let t = 1; t < tasot.length; t++) if (nayt[t].length >= 10) { const a2 = nayt[t].sort((x, y) => x - y); tasot[t].H = +a2[Math.floor(a2.length * tasoP)].toFixed(2); tasot[t].n = a2.length; }
+  loki('vesitasot lähteestä', tasoNimi);
+}
+// --- jokien liukuva vesitaso (Pariisi 8.10.: Seine laskee sulkujen kohdalla; yksi taso per polygoni teki portaita) ---
+const JOKI = (t) => t >= 0 && (tasot[t].lahde === 'osm-river' || tasot[t].lahde === 'osm-river-shp' || tasot[t].lahde === 'esa');
+const LB = 1000, LW = Math.ceil(2 * S / LB), lohkoTaso = new Float32Array(LW * LW).fill(NaN);
+{
+  const nayt = Array.from({ length: LW * LW }, () => []);
+  for (let j = 0; j < H; j += 3) for (let i = 0; i < W; i += 3) { const c = j * W + i, t = taso[c]; if (!JOKI(t) || peitto[c] < 12 || DIST[c] < Math.min(DCAP, 2 * C)) continue;
+    const v = tasoLahde(lonC[i], latR[j]); if (!Number.isFinite(v)) continue; const b2 = Math.floor((j * C) / LB) * LW + Math.floor((i * C) / LB); if (nayt[b2].length < 2000) nayt[b2].push(v); }
+  const raaka = new Float32Array(LW * LW).fill(NaN);
+  for (let k = 0; k < LW * LW; k++) if (nayt[k].length >= 15) { const a2 = nayt[k].sort((x, y) => x - y); raaka[k] = a2[Math.floor(a2.length * tasoP)]; }
+  for (let bj = 0; bj < LW; bj++) for (let bi = 0; bi < LW; bi++) { let s2 = 0, w2 = 0;
+    for (let dj = -1; dj <= 1; dj++) for (let di = -1; di <= 1; di++) { const a2 = bi + di, b3 = bj + dj; if (a2 < 0 || b3 < 0 || a2 >= LW || b3 >= LW) continue; const v = raaka[b3 * LW + a2]; if (Number.isNaN(v)) continue; const w = di || dj ? 0.5 : 1; s2 += v * w; w2 += w; }
+    if (w2) lohkoTaso[bj * LW + bi] = s2 / w2; }
+}
+const jokiTaso = (e, n, t) => { // lohkokeskusten bilineaarinen interpolointi, puuttuvat ohitetaan
+  const x = (e - X0) / LB - 0.5, y = (n - Y0) / LB - 0.5, x0 = Math.floor(x), y0 = Math.floor(y); let s2 = 0, w2 = 0;
+  for (const [a2, b3, w] of [[x0, y0, (1 - (x - x0)) * (1 - (y - y0))], [x0 + 1, y0, (x - x0) * (1 - (y - y0))], [x0, y0 + 1, (1 - (x - x0)) * (y - y0)], [x0 + 1, y0 + 1, (x - x0) * (y - y0)]]) {
+    if (a2 < 0 || b3 < 0 || a2 >= LW || b3 >= LW) continue; const v = lohkoTaso[b3 * LW + a2]; if (Number.isNaN(v) || w <= 0) continue; s2 += v * w; w2 += w; }
+  return w2 > 0 ? s2 / w2 : tasot[t].H; };
 // --- kulmat: peitto 0–1 (4 ruudun keskiarvo), etäisyys (4 ruudun keskiarvo) ---
 const CW = W + 1;
 const kulmaP = (i, j) => { let s = 0, n = 0; for (const [a, b] of [[i - 1, j - 1], [i, j - 1], [i - 1, j], [i, j]]) { if (a < 0 || b < 0 || a >= W || b >= H) continue; s += peitto[b * W + a]; n++; } return n ? s / (16 * n) : 0; };
@@ -187,7 +229,7 @@ for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) { const a = KP[j * CW + 
 for (let pj = 0; pj < H; pj += PALA) for (let pi = 0; pi < W; pi += PALA) {
   const V = [], I = [], kartta = new Map();
   const karki = (avain, e, n, d, t) => { const k = avain * 4096 + t; let ix = kartta.get(k); if (ix !== undefined) return ix;
-    const lat = latN(n), lon = lonE(e, lat), h = tasot[t].H + geoidi(lon, lat), p = enu(lat, lon, h); ix = V.length / 4; V.push(p[0], p[1], p[2], d); kartta.set(k, ix); return ix; };
+    const lat = latN(n), lon = lonE(e, lat), h = (JOKI(t) ? jokiTaso(e, n, t) : tasot[t].H) + geoidi(lon, lat), p = enu(lat, lon, h); ix = V.length / 4; V.push(p[0], p[1], p[2], d); kartta.set(k, ix); return ix; };
   const kulmaK = (i, j, t) => karki((j * CW + i) * 2, X0 + i * C, Y0 + j * C, kulmaD(i, j), t);
   const reunaK = (i, j, suunta, tt, t) => { // suunta 0: vaaka (i,j)→(i+1,j), 1: pysty (i,j)→(i,j+1)
     const e = X0 + (i + (suunta === 0 ? tt : 0)) * C, n = Y0 + (j + (suunta === 1 ? tt : 0)) * C;
@@ -260,6 +302,7 @@ fs.writeFileSync(path.join(ULOS, `vesi-${NIMI}.json`), JSON.stringify({
   ranta: 'alfa = smoothstep(0, 3, d) pehmentää rannan; d = 0 rantaviivalla',
   tasot: tasot.map((t, i) => ({ id: i, lahde: t.lahde, H_egm2008_m: t.H, naytteita: t.n })).filter((t) => t.id === 0 || t.naytteita > 0 || t.lahde === 'esa'),
   geoidi_keskusta_m: +geoidi(lon0, lat0).toFixed(3),
+  tasolahde: tasoNimi, tasopersentiili: tasoP, jokitaso: { lohko_m: LB, lohkoja: Array.from(lohkoTaso).filter((v) => !Number.isNaN(v)).length, selitys: 'joet (OSM river, ESA) liukuvalla tasolla: 10 %:n persentiili 1 km:n lohkoissa, tasoitus 3 × 3, bilineaarinen' },
   krediitti: 'Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)',
   lahteet: ['OSM water-polygons-split-4326 (osmdata.openstreetmap.de)', 'Geofabrik gis_osm_water_a_free_1', 'ESA WorldCover 2021 v200', 'Copernicus GLO-30 (vesitasot)', 'NGA EGM2008 2,5′ (PROJ us_nga_egm08_25)'],
   luotu: new Date().toISOString(),
