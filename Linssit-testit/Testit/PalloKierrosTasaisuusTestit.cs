@@ -16,7 +16,7 @@ namespace Matkakirja.Linssit.Testit
             ("Riemukaari", 48.8738, 2.2950), ("Eiffel-torni", 48.8584, 2.2945),
         };
 
-        public sealed class Mittaus { public double PisinSeisonta, Seisonta; public int Nykayksia; public List<string> Loki = new List<string>(); public double T; }
+        public sealed class Mittaus { public string PisinKohta; public double PisinSeisonta, Seisonta; public int Nykayksia; public List<string> Loki = new List<string>(); public double T; }
 
         public static Mittaus Aja(double latausaste, double kestoS = 8)
         {
@@ -32,7 +32,7 @@ namespace Matkakirja.Linssit.Testit
                 var jono = new List<(string, double, double)>(Pariisi);
                 s.AloitaKierros(jono);
                 const double dt = 1 / 30.0; var m = new Mittaus();
-                var paikat = new List<(double e, double n)>(); int vastattu = 0; double seisoo = 0;
+                var paikat = new List<(double e, double n)>(); var korkeudet = new List<double>(); int vastattu = 0; double seisoo = 0;
                 for (; t < 150 && s.Nykyinen?.Id != "Eiffel-torni"; t += dt)
                 {
                     while (vastattu < pyynnot.Count)
@@ -43,14 +43,15 @@ namespace Matkakirja.Linssit.Testit
                     }
                     s.Paivita(dt, _ => 35);
                     if (s.Vaihe == OpasVaihe.Puhuu && puheAlkoi >= 0 && t - puheAlkoi > kestoS) { s.AaniLoppui(); puheAlkoi = -1; }
-                    var p = OpasKuvaus.KameraPaikka(s.Asento, 48.8566, 2.3522); paikat.Add((p.e, p.n));
+                    var p = OpasKuvaus.KameraPaikka(s.Asento, 48.8566, 2.3522); paikat.Add((p.e, p.n)); korkeudet.Add(p.u);
                     int i = paikat.Count - 1;
                     if (i >= 1)
                     {
-                        double v = Math.Sqrt(Math.Pow(paikat[i].e - paikat[i - 1].e, 2) + Math.Pow(paikat[i].n - paikat[i - 1].n, 2)) / dt;
+                        // Silmän 3D-nopeus: pystysuora laskeutuminen (zoomaus pystysuunnassa, juna 168) on liikettä eikä seisontaa.
+                        double v = Math.Sqrt(Math.Pow(paikat[i].e - paikat[i - 1].e, 2) + Math.Pow(paikat[i].n - paikat[i - 1].n, 2) + Math.Pow(korkeudet[i] - korkeudet[i - 1], 2)) / dt;
                         seisoo = v < 0.3 && s.Nykyinen != null && !s.Leijuu ? seisoo + dt : 0;
                         if (seisoo > 0) m.Seisonta += dt;
-                        m.PisinSeisonta = Math.Max(m.PisinSeisonta, seisoo);
+                        if (seisoo > m.PisinSeisonta) { m.PisinSeisonta = seisoo; m.PisinKohta = $"{t:F1} s {s.Vaihe} {s.Nykyinen?.Id} va {s.VaiheAika:F1} lei {s.Leijuu} v {v:F2}"; }
                     }
                     int w = 15;   // 0,5 s
                     if (i >= 2 * w && i % 3 == 0)
@@ -71,12 +72,12 @@ namespace Matkakirja.Linssit.Testit
             // Laatat eivät täyty (TF 166: lähtö odotti laattoja 5,0 s joka kerta): ennen korjausta seisonta 30 s (pisin 6,0 s) ja
             // 10 taaksepäin nykäisyä sumennusnostosta (Notre-Dame/prefektuuri, Concorde ja Champs-Élysées/Élysée).
             var m = Aja(0.9);
-            Console.WriteLine($"      pallokierros: {m.T:F0} s, seisonta yht. {m.Seisonta:F1} s (pisin {m.PisinSeisonta:F1} s), taaksepäin {m.Nykayksia}: {string.Join(" | ", m.Loki)}");
+            Console.WriteLine($"      pallokierros: {m.T:F0} s, seisonta yht. {m.Seisonta:F1} s (pisin {m.PisinSeisonta:F1} s @ {m.PisinKohta}), taaksepäin {m.Nykayksia}: {string.Join(" | ", m.Loki)}");
             Oleta.Sama(0, m.Nykayksia, "ei taaksepäin nykäisyjä");
-            Oleta.Tosi(m.PisinSeisonta <= 3, $"pisin seisonta {m.PisinSeisonta:F1} s ≤ 3 s (lipuminen jatkuu laattaodotuksen ajan; raja kuten PalloKierrosTestit)");
+            Oleta.Tosi(m.PisinSeisonta <= 2, $"pisin seisonta {m.PisinSeisonta:F1} s ≤ 2 s (lipuminen jatkuu laattaodotuksen ajan; silmän 3D-nopeus, leijunta kaaren päässä ohitetaan)");
             Oleta.Tosi(m.Seisonta <= 15, $"seisonta yhteensä {m.Seisonta:F1} s ≤ 15 s");
             var v = Aja(1.0);
-            Oleta.Tosi(v.Nykayksia == 0 && v.PisinSeisonta <= 3, $"laatat valmiina: taaksepäin {v.Nykayksia}, pisin seisonta {v.PisinSeisonta:F1} s");
+            Oleta.Tosi(v.Nykayksia == 0 && v.PisinSeisonta <= 2, $"laatat valmiina: taaksepäin {v.Nykayksia}, pisin seisonta {v.PisinSeisonta:F1} s");
         }
     }
 }
