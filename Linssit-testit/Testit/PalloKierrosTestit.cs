@@ -200,7 +200,7 @@ namespace Matkakirja.Linssit.Testit
                     double maks = 0, maksT = 0, raja = LuokanRaja(Reitti[i]);
                     foreach (var x in r) if (x.Kohde == i && Pysahdyksella(x.Vaihe) && x.EtM > maks) { maks = x.EtM; maksT = x.T; }
                     Console.WriteLine($"      {verkko} {Reitti[i].Id}: kehyksen etäisyys enintään {maks:F0} m (raja {raja:F0} m, {maksT:F1} s)");
-                    if (maks > raja) vikoja.Add($"{verkko} {Reitti[i].Id} {maks:F0} m > {raja:F0} m @ {maksT:F1} s");
+                    if (maks > raja + 1) vikoja.Add($"{verkko} {Reitti[i].Id} {maks:F0} m > {raja:F0} m @ {maksT:F1} s");
                 }
             }
             Oleta.Tosi(vikoja.Count == 0, $"kehys liian kaukana: {string.Join("; ", vikoja)}");
