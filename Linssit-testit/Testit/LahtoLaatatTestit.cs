@@ -226,6 +226,24 @@ namespace Matkakirja.Linssit.Testit
             finally { OpasSilmukka.PalloLento = false; }
         }
 
+        // Video8 8.10.: siirron maanäyte pyydettiin ennen kuin kaupunki oli auki (hylättiin hiljaa) → siirto aina aikarajaan.
+        [Testi] static void SiirtoPyytaaMaanNaytteenUudelleen()
+        {
+            var s = new OpasSilmukka(OpasSilmukka.Avauskuva(55.68, 12.57));
+            s.Pyyda += (n, t) => { };
+            double maa = double.NaN; int pyyntoja = 0;
+            s.MaaPisteessa = (la, lo) => maa;
+            s.MaaTarvitaan += (la, lo) => pyyntoja++;
+            s.LatausEdistys = () => 1.0;
+            s.PakotaSiirto = true;
+            s.VaihdaPaikka(48.861, 2.351, "Pariisi");
+            for (int i = 0; i < 25; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(s.Siirtymassa && pyyntoja >= 3, $"näyte pyydetään uudelleen ({pyyntoja} pyyntöä 2,5 s:ssa)");
+            maa = 35;
+            for (int i = 0; i < 40 && s.Siirtymassa; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(!s.Siirtymassa, "näytteen jälkeen siirto valmistuu ennen aikarajaa");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

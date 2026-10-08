@@ -290,7 +290,7 @@ namespace Matkakirja.Linssit.Kierros
         public const double MaaArvioM = 45, KehysVaihtoS = 1.0, SiirtoMaaOdotusS = 0.5, SiirtoMaatonEdistys = 0.9;
         bool kehysArvio; OpasKohde kehysKohde; double kehysTulo, kehysVaihto = 1, maaTunnettu = -10;
         Kuvakulma? kehysVanha;
-        double kehysVaihtoS = KehysVaihtoS;
+        double kehysVaihtoS = KehysVaihtoS, maaPyydetty;
         /// <summary>
         /// AVAUKSEN LASKEUTUMINEN (omistaja 8.10. ~09.0x: "ei odoteta yläilmoissa vaan ladataan kumpikin näkymä etukäteen ja pallo
         /// laskeutuu rauhallisesti ensimmäiseen kohteeseen alkuesittelyn aikana"): yleiskuvasta (≥ AvausKorkeaM) lähtevä kierroksen
@@ -304,7 +304,7 @@ namespace Matkakirja.Linssit.Kierros
         void AsetaKohdeKehys(Pysahdys p, bool arvio, OpasKohde k, double tulo)
         {
             kohdeKehys = p; kehysArvio = arvio; kehysKohde = k; kehysTulo = tulo;
-            kehysVanha = null; kehysVaihto = 1; maaTunnettu = -10; kehysVaihtoS = KehysVaihtoS;
+            kehysVanha = null; kehysVaihto = 1; maaTunnettu = -10; kehysVaihtoS = KehysVaihtoS; maaPyydetty = 0;
             if (arvio) MaaTarvitaan?.Invoke(p.Lat, p.Lon);
         }
 
@@ -495,7 +495,8 @@ namespace Matkakirja.Linssit.Kierros
 
         // ---- SIIRTO ILMAN LENTOA (omistaja 6.10. 12.0x) ----
         /// <summary>Kaupungin rajan arvio: tätä pidemmälle ei lennetä, vaan siirrytään latausruudun kautta.</summary>
-        public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 25;
+        // SiirtoMaxS 12 (Päätoimittaja 8.10. 09.0x: peite pois vasta yleiskuva + 1. kohde ≥ 95 %, turvaraja ~12 s).
+        public const double SiirtoRajaM = 30000, SiirtoValmis = 0.95, SiirtoMinS = 1.0, SiirtoMaxS = 12;
 
         /// <summary>
         /// Workerin pyyntöjen sijainti (omistaja TF 152: natiivi lähetti Ateenalle, Amsterdamille, Pariisille ja Sydneylle Kööpenhaminan
@@ -991,6 +992,9 @@ namespace Matkakirja.Linssit.Kierros
                         // Näkymä ei aukea maa-arviolla: edistys enintään SiirtoMaatonEdistys ennen näytettä, ja korjatun kehyksen
                         // laatoille SiirtoMaaOdotusS (latausaste lasketaan uudesta kamerasta).
                         bool maaOdottaa = kehysArvio && MaaPisteessa != null;
+                        // Näyte uudelleen sekunnin välein (video8 8.10.: ensimmäinen pyyntö lähti ennen kuin kaupunki oli auki, hylättiin
+                        // hiljaa, ja siirto odotti 90 %:n katossa aina 25 s:n aikarajaan asti).
+                        if (maaOdottaa && VaiheAika - maaPyydetty >= 1.0) { maaPyydetty = VaiheAika; MaaTarvitaan?.Invoke(kohdeKehys.Lat, kohdeKehys.Lon); }
                         SiirtoEdistys = Math.Max(0, Math.Min(maaOdottaa ? SiirtoMaatonEdistys : 1, ed));
                         bool tuore = VaiheAika - maaTunnettu >= SiirtoMaaOdotusS;
                         if (VaiheAika < SiirtoMinS || ((SiirtoEdistys < SiirtoValmis || !tuore) && VaiheAika < SiirtoMaxS)) break;
