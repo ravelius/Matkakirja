@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 22.4x
+# TILANNE 8.10. klo 22.3x (2)
 
 - **PT 22.3x: korjaus ennen pakettia, yksi paketti.**
   - pk2-suodatus (kaikki kuvat, SCL pikseleittäin) KOPIOITU kausimosaiikki.mjs:ään 22.31. Vanha versio: `kausimosaiikki-talvi3-pk1-20261008.mjs`.
