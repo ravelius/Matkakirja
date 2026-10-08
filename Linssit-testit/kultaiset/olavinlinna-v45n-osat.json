@@ -66,13 +66,21 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.85,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/vesiportti.jpg",
+    "puoli": "blender/kavely/valot/vesiportti-512.jpg",
+    "astc": "blender/kavely/valot/vesiportti-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/vesiportti-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "ranta-1499": {
    "kolmiot": {
     "nakyva": 13280,
-    "-tormays": 0,
-    "-kavely": 0
+    "-tormays": 13280,
+    "-kavely": 9944
    },
    "merkit": [
     "leikkaus:vain-1499-b"
@@ -218,7 +226,10 @@
      65.75
     ]
    },
-   "naapurit": [],
+   "naapurit": [
+    "ulkoalue",
+    "vesiportti"
+   ],
    "portaalit": [],
    "kamera_rajat": {
     "katto_y": -0.06
@@ -233,7 +244,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.8,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/ranta-1499.jpg",
+    "puoli": "blender/kavely/valot/ranta-1499-512.jpg",
+    "astc": "blender/kavely/valot/ranta-1499-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/ranta-1499-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "porttikaytava-T102": {
    "kolmiot": {
@@ -313,7 +332,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.25,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/porttikaytava-T102.jpg",
+    "puoli": "blender/kavely/valot/porttikaytava-T102-512.jpg",
+    "astc": "blender/kavely/valot/porttikaytava-T102-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/porttikaytava-T102-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "keittio-G102": {
    "kolmiot": {
@@ -390,7 +417,8 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "puu"
+   "pinta": "puu",
+   "markyys": 0.0
   },
   "pikkupiha": {
    "kolmiot": {
@@ -433,7 +461,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.7,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/pikkupiha.jpg",
+    "puoli": "blender/kavely/valot/pikkupiha-512.jpg",
+    "astc": "blender/kavely/valot/pikkupiha-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/pikkupiha-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "kirkkotorni-portaat": {
    "kolmiot": {
@@ -743,7 +779,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "porras"
+   "pinta": "porras",
+   "markyys": 0.0,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/kirkkotorni-portaat.jpg",
+    "puoli": "blender/kavely/valot/kirkkotorni-portaat-512.jpg",
+    "astc": "blender/kavely/valot/kirkkotorni-portaat-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/kirkkotorni-portaat-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "kappeli-kavely": {
    "kolmiot": {
@@ -1014,7 +1058,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.0,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/kappeli-kavely.jpg",
+    "puoli": "blender/kavely/valot/kappeli-kavely-512.jpg",
+    "astc": "blender/kavely/valot/kappeli-kavely-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/kappeli-kavely-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "muurikaytava": {
    "kolmiot": {
@@ -1242,7 +1294,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.0,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/muurikaytava.jpg",
+    "puoli": "blender/kavely/valot/muurikaytava-512.jpg",
+    "astc": "blender/kavely/valot/muurikaytava-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/muurikaytava-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "tyrma-E101": {
    "kolmiot": {
@@ -1352,7 +1412,15 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.15,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/tyrma-E101.jpg",
+    "puoli": "blender/kavely/valot/tyrma-E101-512.jpg",
+    "astc": "blender/kavely/valot/tyrma-E101-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/tyrma-E101-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "palatsi": {
    "kolmiot": {
@@ -1515,11 +1583,19 @@
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
-   "pinta": "puu"
+   "pinta": "puu",
+   "markyys": 0.0,
+   "valoatlas": {
+    "tiedosto": "blender/kavely/valot/palatsi.jpg",
+    "puoli": "blender/kavely/valot/palatsi-512.jpg",
+    "astc": "blender/kavely/valot/palatsi-4x4.astcm",
+    "astcPuoli": "blender/kavely/valot/palatsi-512-4x4.astcm",
+    "sisalto": "valo × 0,5 sRGB (natiivi: lineaarinen × 2), ei väriä; leivo_kavely.py"
+   }
   },
   "ulkoalue": {
    "kolmiot": {
-    "-tormays": 9771,
+    "-tormays": 101452,
     "-kavely": 12000
    },
    "rajat": {
@@ -1540,7 +1616,8 @@
    "varmuus": "kuori (mitattu)",
    "merkit": [],
    "leikkaukset": [],
-   "pinta": "kivi"
+   "pinta": "kivi",
+   "markyys": 0.75
   }
  }
 }

@@ -21,6 +21,11 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
         _Kirkkaus ("Kirkkaus", Float) = 1
         _Heilunta ("Lipun heilunta", Float) = 0
         _Leikattava ("Kuoren leikkaus koskee tätä", Float) = 0
+        _Markyys ("Märkyys 0–1 (kävelydata, LR v45f)", Float) = 0
+        _Detalji ("Detalji (x = 1 / toistoväli m, y = voima, z = päällä)", Vector) = (0.6667, 0.6, 0, 0)
+        _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
+        _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
+        _DetaljiKarheus ("Detalji: karheus (R)", 2D) = "white" {}
     }
     SubShader
     {
@@ -36,7 +41,17 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            // Liekkien varjot leivotulle pinnalle (juna 169): valo on leivottu, mutta varjoa heittävän lisävalon (SeikkailuVarjot,
+            // Ultra) varjo tummentaa pintaa — hahmot ja esineet heittävät liekin varjon. Varjottomat valot eivät muuta mitään.
+            #pragma multi_compile _ _ADDITIONAL_LIGHTS
+            #pragma multi_compile _ _CLUSTER_LIGHT_LOOP
+            #pragma multi_compile_fragment _ _ADDITIONAL_LIGHT_SHADOWS
+            #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+            #include "DioraamaUsva.hlsl"
+            #include "DioraamaMarkyys.hlsl"
+            #include "DioraamaDetalji.hlsl"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
@@ -55,6 +70,8 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 half _Kirkkaus;
                 float _Heilunta;
                 float _Leikattava;
+                float _Markyys;
+                float4 _Detalji;
             CBUFFER_END
 
             // Sama leikkaustilavuus kuin DioraamaKuori.shaderissa (globaalit DioraamaUlkokuori.PaivitaLeikkaus): tilat, joita
@@ -85,7 +102,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             }
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; };
-            struct Vali { float4 paikka : SV_POSITION; float2 uv1 : TEXCOORD0; float3 paikkaW : TEXCOORD1; };
+            struct Vali { float4 paikka : SV_POSITION; float2 uv1 : TEXCOORD0; float3 paikkaW : TEXCOORD1; float3 normaaliW : TEXCOORD2; };
 
             Vali vert(Syote i)
             {
@@ -100,13 +117,25 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 o.paikka = TransformWorldToHClip(maailma);
                 o.paikkaW = maailma;
                 o.uv1 = i.uv1;
+                o.normaaliW = TransformObjectToWorldNormal(i.normaali);
                 return o;
             }
 
             half4 frag(Vali i) : SV_Target
             {
                 if (_Leikattava > 0.5 && _DioraamaLeikkausMin.w > 0.001 && Leikkauksessa(i.paikkaW)) discard;
+                InputData inputData = (InputData)0;   // lisävalosilmukat (LIGHT_LOOP_BEGIN, Forward+)
+                inputData.positionWS = i.paikkaW;
+                inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
                 half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
+
+                // Detalji (DioraamaDetalji.hlsl, juna 169): albedo-overlay ja kohokuvio leivotun valon päälle.
+                float3 nW = normalize(i.normaaliW);
+                DetaljiTulos dt = DioraamaDetalji(_Detalji, i.paikkaW, nW);
+                vari *= dt.albedo * dt.valo;
+                // Märkyys (DioraamaMarkyys.hlsl) detaljinormaalilla; liekkien lämpö kiiltää märällä, sileällä pinnalla enemmän.
+                half mm = DioraamaMarkyys(vari, _Markyys, dt.normaali, i.paikkaW);
+                half kiilto = 1.0h + mm * 0.8h * (1.25h - 0.5h * dt.karheus);
 
                 half lisa = 0;
                 int maara = (int)min(_DioraamaLiekkiMaara, 8.0);
@@ -121,7 +150,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                     lisa += (half)(lahella * (0.08 + 0.22 * aalto));
                 }
                 // Vähennetty liike: _DioraamaLepatus = 1 tasaisena → lepatus jää pieneksi vakiolämmöksi.
-                vari += vari * lisa * _DioraamaLepatus * half3(1.0h, 0.62h, 0.30h);
+                vari += vari * lisa * kiilto * _DioraamaLepatus * half3(1.0h, 0.62h, 0.30h);
                 if (_DioraamaKantoValo.w > 0.01)
                 {
                     // Atlaksen perusväri (leivottu valo täysillä) skaalattuna kynttilän etäisyydellä: tumma huone valaistuu lähellä.
@@ -131,9 +160,24 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                     vari += pohja * (half)(kv * _DioraamaKantoVari.a) * (half3)_DioraamaKantoVari.rgb;
                 }
 
+                #if defined(_ADDITIONAL_LIGHT_SHADOWS)
+                {
+                    half varjo = 1.0h;
+                    uint lisavaloja = GetAdditionalLightsCount();
+                    LIGHT_LOOP_BEGIN(lisavaloja)
+                        Light lv = GetAdditionalLight(lightIndex, i.paikkaW, half4(1, 1, 1, 1));
+                        half osuus = (half)saturate(lv.distanceAttenuation * 1.5) * (half)saturate(dot(nW, lv.direction) * 2.0 + 0.3);
+                        varjo *= lerp(1.0h, lv.shadowAttenuation, osuus * 0.75h);
+                    LIGHT_LOOP_END
+                    vari *= varjo;
+                }
+                #endif
+                vari += DioraamaMarkaHeijastus(dt.normaali, i.paikkaW, mm, dt.karheus, inputData);   // liekit ja kuu märällä kivellä
+
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 vari = lerp(vari, _DioraamaSumuVari.rgb, sumu);
+                vari = DioraamaUsva(vari, i.paikkaW);
                 return half4(vari, 1);
             }
             ENDHLSL

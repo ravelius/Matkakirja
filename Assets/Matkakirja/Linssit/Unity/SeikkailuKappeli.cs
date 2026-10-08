@@ -386,7 +386,6 @@ namespace Matkakirja.Natiivi
             if (es != null && !alttarilla.Contains("liuskekivi")) es.AsetaAlttarille("liuskekivi");
             yield return new WaitForSeconds(1.2f);
             var p = SeikkailuPelaaja.Aktiivinen;
-            SeikkailuAanet.Soita("pulu-kujerrus", (p != null ? p.transform.position : alttari) + Vector3.up * 1.7f, 0.9f);
             // M-osa (huoneet 6–10) mukana: kappeli ei pääty dronekuvaan, vaan pala jatkuu huoneeseen 6 ja K2-nousu siirtyy pakon loppuun
             // (K5 → drone nykyiseen linnaan, SeikkailuPako.Valmis).
             if (SeikkailuPako.Aktiivinen != null)

@@ -29,6 +29,7 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "DioraamaUsva.hlsl"
 
             half4 _DioraamaSumuVari;
             float4 _DioraamaSumu;
@@ -153,7 +154,7 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
                 vari += Kiilto((half3)n, Lk, V, lerp(0.035h, 0.09h, tuuli)) * _VesiAurinko.rgb * (half)_VesiKiiltoSuunta.w;
 
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
-                return half4(lerp(vari, _DioraamaSumuVari.rgb, sumu), 1);
+                return half4(DioraamaUsva(lerp(vari, _DioraamaSumuVari.rgb, sumu), i.paikkaW + float3(0, 0.02, 0)), 1);
             }
             ENDHLSL
         }

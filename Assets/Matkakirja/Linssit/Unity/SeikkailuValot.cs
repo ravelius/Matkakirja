@@ -34,16 +34,28 @@ namespace Matkakirja.Natiivi
         /// <summary>Render feature lisätty (jokin volumetrinen säde käytössä): dioraaman kamera pyytää syvyyden vain silloin.</summary>
         public static bool Kaytossa => lisatyt.Count > 0;
 
-        static bool OletusVolumetriset()
+        /// <summary>Oletus: M-sarjan iPad tai Apple silicon -Mac (Natiivisepän Laitetaso.OnkoMSarja 8.10.: vanha sääntö luki A16-iPadin ja
+        /// mini A17 Pron M-sarjaksi).</summary>
+        static bool OletusVolumetriset() => Laitetaso.OnkoMSarja(SystemInfo.deviceModel, SystemInfo.processorType,
+            Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor);
+
+        /// <summary>Liikkuvan valon renderöintikerros (juna 169): kävelyosien leivottu valo (LR: liikkuu-valoja ei leivota) ottaa
+        /// reaaliaikaisesti vain nämä valot (DioraamaValaistu _ValoVain), jotta paikallaan olevat liekit eivät tuplaannu.</summary>
+        public const uint LiikkuvaKerros = 1u << 7;
+        public static void MerkitseLiikkuvaksi(Light l)
         {
-            if (Application.platform == RuntimePlatform.OSXPlayer || Application.platform == RuntimePlatform.OSXEditor) return true;
-            string m = SystemInfo.deviceModel ?? "";
-            if (!m.StartsWith("iPad", StringComparison.Ordinal)) return false;
-            // iPad13,4–13,11 (Pro M1), 13,16/17 (Air M1), 14,x (M2), 15+ ja 16,x (M3/M4); ei 13,1/2 (Air A14) eikä 13,18/19 (10. sukup.).
-            var osat = m.Substring(4).Split(',');
-            if (osat.Length < 2 || !int.TryParse(osat[0], out int a) || !int.TryParse(osat[1], out int b)) return false;
-            if (a >= 14) return a != 14 || b < 1 || b > 2;   // iPad14,1/2 = mini 6 (A15)
-            return a == 13 && (b >= 4 && b <= 11 || b == 16 || b == 17);
+            if (l == null) return;
+            var d = l.GetUniversalAdditionalLightData();
+            if (d != null) d.renderingLayers = 1u | LiikkuvaKerros;
+        }
+
+        static bool kuumaPois;
+        /// <summary>Lämpö (Natiiviseppä 8.10.): kuumana volumetriset pois linnan ajaksi, viileänä takaisin, jos ne olivat päällä.
+        /// Kysellään näyttämön päivityksestä (Lampo.Muuttui nollautuu domain-latauksessa).</summary>
+        public static void LampoTarkistus()
+        {
+            if (Lampo.Kuuma && Volumetriset) { kuumaPois = true; Aseta(volumetriset: false); Debug.Log("MATKAKIRJA seikkailu: lämpö → volumetriset pois"); }
+            else if (!Lampo.Kuuma && kuumaPois) { kuumaPois = false; Aseta(volumetriset: true); Debug.Log("MATKAKIRJA seikkailu: lämpö normaali → volumetriset takaisin"); }
         }
 
         public static void Aseta(bool? liekit = null, bool? volumetriset = null)

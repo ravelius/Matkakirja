@@ -27,7 +27,7 @@ namespace Matkakirja.Linssit.Seikkailu
         public static int Huone(in MEdistys e) =>
             !e.Avaimet ? 6 : !e.Koysikieppi && !e.KoysiSakarassa ? 7 : !e.KiipeilyValmis ? 8 : !e.ArkkuAuki ? 9 : 10;
 
-        /// <summary>Edistyksen järjestysluku (kasvaa jokaisesta uudesta askeleesta; sovitin nollaa Pulun jumiajastimen sen kasvaessa).</summary>
+        /// <summary>Edistyksen järjestysluku (kasvaa jokaisesta uudesta askeleesta; sovitin nollaa vihjeen jumiajastimen sen kasvaessa).</summary>
         public static int Vaihe(in MEdistys e)
         {
             int n = 0;

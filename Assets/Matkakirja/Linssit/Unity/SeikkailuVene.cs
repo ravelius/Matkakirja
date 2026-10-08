@@ -28,6 +28,7 @@ namespace Matkakirja.Natiivi
         readonly GlbAnimaatio soutu;
         readonly float[] t, r, s;
         readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
+        Material maskiMat;
         public CinemachineCamera Kamera { get; private set; }
         public Transform IstuinSoutaja { get; private set; }
         public double Alku { get; private set; }
@@ -51,7 +52,20 @@ namespace Matkakirja.Natiivi
                 go.transform.localRotation = new Quaternion(g.Rotation[0], g.Rotation[1], g.Rotation[2], g.Rotation[3]);
                 go.transform.localScale = new Vector3(g.Scale[0], g.Scale[1], g.Scale[2]);
                 solmut[i] = go.transform;
-                if (g.Osat.Count > 0 && mat != null)
+                bool maski = g.Nimi == "vesimaski" || (g.Extras != null && g.Extras.TryGetValue("vesimaski", out var vm) && vm is bool vb && vb);
+                if (maski && g.Osat.Count > 0)
+                {
+                    // Vesimaski (LR v45e, omistajan palaute 4): vain syvyys ennen vettä, ettei vesi näy pohjan läpi; ei varjoja.
+                    if (maskiMat == null) { var mv = Shader.Find("Matkakirja/Linssit/DioraamaVesimaski"); if (mv != null) { maskiMat = new Material(mv) { name = "Vesimaski" }; luodut.Add(maskiMat); } }
+                    if (maskiMat != null)
+                    {
+                        var m = Mesh(g); luodut.Add(m);
+                        go.AddComponent<MeshFilter>().sharedMesh = m;
+                        var mr = go.AddComponent<MeshRenderer>(); mr.sharedMaterial = maskiMat;
+                        mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off; mr.receiveShadows = false;
+                    }
+                }
+                else if (g.Osat.Count > 0 && mat != null)
                 {
                     var m = Mesh(g); luodut.Add(m);
                     go.AddComponent<MeshFilter>().sharedMesh = m;
@@ -80,11 +94,52 @@ namespace Matkakirja.Natiivi
             {
                 // Huone 1 (pelattavuusmalli 8.1): silmät pressun alla 0,7 m vedestä (kamera_pera on 1,2 m), katse ±40° vaaka, −10…+35° pysty.
                 cg.transform.localPosition += Vector3.down * 0.5f; kameraPerus = cg.transform.localRotation = (kp != null ? Quaternion.identity : Quaternion.LookRotation(Vector3.back));
+                kameraPerusPaikka = cg.transform.localPosition;
+                Oppitunti = new Pressu();   // omistaja 8.10.: veneyöhön tekemistä (pressu, kurkistus, lyhdyn pyyhkäisy)
                 var fl = Kamera.Lens; fl.FieldOfView = SeikkailuPelaaja.FpFov; fl.NearClipPlane = 0.05f; Kamera.Lens = fl;
             }
         }
 
         Transform kameraGo; Quaternion kameraPerus; float katseYaw, katsePitch;
+        Vector3 kameraPerusPaikka; Light lyhty; float lyhtyNyt;
+        /// <summary>Veneyön oppitunti (Ydin Pressu): kurkistus nostaa päätä, portinvartijan lyhty pyyhkäisee venettä.</summary>
+        public Pressu Oppitunti { get; private set; }
+
+        /// <summary>Lyhdyn pyyhkäisy portinvartijalta (partio:portinvartija-1, vara portti): varoituksessa valopiiri kasvaa veneen reunalla,
+        /// valossa osuu veneeseen; nähty → "Hä?" (portinvartija-epaily-3), opittu → hiljaisuus. Ei rangaistusta.</summary>
+        void PaivitaOppitunti(float dt)
+        {
+            var o = Oppitunti; if (o == null) return;
+            o.Paivita(dt, katsePitch);
+            if (kameraGo != null) kameraGo.localPosition = kameraPerusPaikka + Vector3.up * (float)(o.Silma - Pressu.SilmaAlla);
+            if (lyhty == null)
+            {
+                Vector3? lahde = null;
+                var d = SeikkailuKavely.Data;
+                if (d != null) foreach (var m in d.Merkit) if (m.Nimi == "partio:portinvartija-1" || lahde == null && m.Nimi == "ovi:vesiportti-loppu") lahde = new Vector3((float)m.X, (float)m.Y + 1.6f, (float)-m.Z);
+                if (lahde == null) return;
+                var g = new GameObject("Portinvartijan lyhty (pyyhkäisy)") { layer = juuri.layer }; g.transform.SetParent(juuri.transform.parent, false); luodut.Add(g);   // Poista tuhoaa (LS2 8.10.: muuten valo jäi palamaan)
+                g.transform.position = lahde.Value;
+                lyhty = g.AddComponent<Light>(); lyhty.type = LightType.Spot; lyhty.spotAngle = 14f; lyhty.range = 60f; lyhty.color = new Color(1f, 0.68f, 0.38f);
+                lyhty.shadows = LightShadows.None; lyhty.intensity = 0f;
+                SeikkailuValot.Hehku(g.transform, Vector3.zero, new Color(1f, 0.62f, 0.3f), 0.8f, 3f, true, juuri.layer);
+            }
+            // Varoitus: piiri kasvaa veneen edessä vedessä (2 m keulan edestä kohti venettä); valo: suoraan veneeseen.
+            var vene = juuri.transform.position + Vector3.up * 0.6f;
+            var tahti = o.Vaihe == PressuVaihe.Varoitus ? (float)(o.VaiheS / Pressu.VaroitusS) : o.Vaihe == PressuVaihe.Valo ? 1f : 0f;
+            var kohde = Vector3.Lerp(vene + (lyhty.transform.position - vene).normalized * 6f + Vector3.down * 0.6f, vene, tahti);
+            lyhty.transform.rotation = Quaternion.LookRotation(kohde - lyhty.transform.position);
+            float tavoite = o.Vaihe == PressuVaihe.Varoitus ? 0.4f + 1.2f * tahti : o.Vaihe == PressuVaihe.Valo ? 2.2f : 0f;
+            lyhtyNyt = Mathf.MoveTowards(lyhtyNyt, tavoite, dt * 3f); lyhty.intensity = lyhtyNyt;
+            if (o.Nahtiin)
+            {
+                o.Nahtiin = false;
+                SeikkailuRepliikit.SoitaTaiVara("portinvartija-epaily-3", "vartija-epaily-1", lyhty.transform.position);
+                SeikkailuAanet.Soita("sydan", juuri.transform.position + Vector3.up, 0.7f);
+                Debug.Log("MATKAKIRJA seikkailu: veneyö: lyhty näki kurkistajan (pyyhkäisy toistuu)");
+            }
+            if (o.Oppi) { o.Oppi = false; Debug.Log("MATKAKIRJA seikkailu: veneyö: pressun alla lyhdyn ohi (oppitunti)"); }
+        }
         public const float VeneKatseVaaka = 40f, VeneKatseAlas = -10f, VeneKatseYlos = 35f;
 
         Transform Solmu(string nimi) { for (int i = 0; i < solmut.Length; i++) if (malli.Solmut[i].Nimi == nimi) return solmut[i]; return null; }
@@ -141,12 +196,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Asettaa veneen ja airot ajan mukaan. Palauttaa Ytimen tilan.</summary>
         public VeneTila Paivita(bool vahennettyLiike)
         {
-            if (SeikkailuPelaaja.Ensimmainen && kameraGo != null)
+            // Perillä (laiturilla Sovitin kutsuu yhä Paivitaa): oppitunti loppuu eikä veneen kamera syö pelaajan katsesyötettä (LS2 8.10.).
+            bool perilla = ydin.Tila(Aika).Perilla;
+            if (perilla) Oppitunti?.Lopeta();
+            if (perilla && lyhty != null && lyhtyNyt > 0f) { lyhtyNyt = Mathf.MoveTowards(lyhtyNyt, 0f, Time.unscaledDeltaTime * 3f); lyhty.intensity = lyhtyNyt; }
+            if (SeikkailuPelaaja.Ensimmainen && kameraGo != null && !perilla)
             {
                 var k = SeikkailuPelaaja.KatseSyote(Time.unscaledDeltaTime);
                 katseYaw = Mathf.Clamp(katseYaw + k.x, -VeneKatseVaaka, VeneKatseVaaka);
                 katsePitch = Mathf.Clamp(katsePitch + k.y, VeneKatseAlas, VeneKatseYlos);
                 kameraGo.localRotation = kameraPerus * Quaternion.Euler(-katsePitch, katseYaw, 0f);
+                PaivitaOppitunti(Time.unscaledDeltaTime);
             }
             double aika = Aika;
             var tila = ydin.Tila(aika);
