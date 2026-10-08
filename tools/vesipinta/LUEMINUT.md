@@ -1,0 +1,39 @@
+# Vesipinta (Karttaseppä 8.10.2026)
+
+Oma vesipinta pallon kaupunkinäkymään Googlen 3D-laattojen päälle (omistaja 8.10. 20.2x, linja "B";
+ehdot: docs/raportit/vesimaski-google-ehdot-20261008.md). Varjostin: Linssiseppä 2.
+
+## Ajo
+
+Riippuvuudet `geotiff` ja `pngjs` (eivät repon package.jsonissa; peli on riippuvuudeton).
+Aja kansiossa, jossa ne ovat (Mac Studiolla T7:llä `/Volumes/T7 4TB/Matkakirja-karttaseppa/vesimaski/`,
+node_modules linkkinä kausimosaiikin kansioon), tai `npm i --no-save geotiff pngjs`.
+
+    node --max-old-space-size=8000 vesipinta.mjs tukholma 59.3293 18.0686 15 6 \
+      --meri lahteet/meri/water-polygons-split-4326/water_polygons.shp \
+      --sisa lahteet/ruotsi/gis_osm_water_a_free_1.shp \
+      --glo /Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem/copernicus-glo30 \
+      --geoidi lahteet/us_nga_egm08_25.tif --ulos koe-vesi-6 [--dkatto 8]
+
+Noin 10 s ja 2 Gt muistia per kaupunki (15 km, 6 m).
+
+## Lähteet
+
+| Aineisto | Mistä | Lisenssi |
+|---|---|---|
+| Meri | osmdata.openstreetmap.de `water-polygons-split-4326.zip` | ODbL (© OpenStreetMap contributors) |
+| Sisävedet | Geofabrik `<maa>-latest-free.shp.zip`, `gis_osm_water_a_free_1` (fclass water, reservoir, river, dock) | ODbL |
+| Täydennys | ESA WorldCover 2021 v200, luokka 80 (AWS `esa-worldcover`), komponentti ≥ 5000 m² ilman OSM-vettä | CC BY 4.0 |
+| Järvien taso | Copernicus GLO-30 (10 %:n persentiili sisäruuduista: alakantti) | Copernicus DEM -lisenssi |
+| Geoidi | NGA EGM2008 2,5′ (PROJ `us_nga_egm08_25.tif`) | julkinen |
+
+Overpass API:a ei käytetä (robots.txt kieltää /api/). Googlen laatoista ei mitata mitään.
+
+Krediitti (☰ › Lähteet): "Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)".
+
+## Tulos
+
+`vesi-<nimi>.bytes` + `.json`: kolmioverkko paikallisessa ENU:ssa (origo keskusta, ellipsoidikorkeus 0) 1 km:n paloina.
+Kärki on float32 x itä, y pohjoinen, z ylös ja d rantaetäisyys (m). Indeksit ovat uint32 ja palan sisäisiä. Kolmiot ovat CCW ylhäältä katsottuna.
+Rannat: marching squares (4 × 4 -alinäytteistetty peitto) ja satulatapaukset kahtena palana. Avovesi: nelipuu enintään 64 ruutua.
+z on vesitaso ilman nostoa; nosto (suositus 0,4 m) tehdään ajossa.
