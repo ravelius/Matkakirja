@@ -35,7 +35,13 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. yö (uusin)
+## TILA 8.10. yö, myöhemmin (uusin)
+- m-osa 67344b937 MERGETTY (historia-m a04573945, 938/938); Siirtoseppä lisäsi SeikkailuVartijat.Odottamaan(reitti) UusiYritys-kohtaan.
+  m-osa-worktree poistettu. Jäljellä vain wt/proto-linssiseppa2-kevat (juna 164).
+- SEURAAVA: LR:n v44v (reitti:pelaaja-21…94, huoneet 6–10) → LR ilmoittaa hashin → huonesimulaatio 6–10 historia-m:n päälle
+  (kultaiset v44v, Huonesimulaatio laajennus: naamio, linnaväki, muurikäytävän lyhty, kiipeily/pako ohjattuina jaksoina).
+
+## TILA 8.10. yö
 - Kappelin kytkentä 950532c9b MERGETTY (Siirtoseppä teki saumakorjauksen 26f558be); worktreet poistettu.
 - M-OSA: proto linssiseppa2/m-osa 67344b937 (historia-m a2077efce päällä), worktree wt/proto-linssiseppa2-m-osa:
   b20c18c8d MOsaRajatTestit (12) + 3 Kiipeily-korjausta MOsa.cs:ään; 67344b937 Ydin Pako + Komero (+.meta), PakoJaKomeroTestit (6),
