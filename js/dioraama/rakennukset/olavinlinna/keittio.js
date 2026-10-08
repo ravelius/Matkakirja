@@ -33,7 +33,10 @@ const KEITTIO_HAHMOT = [
     reaktio: { id: 'pulu-kokki-r1', teksti: 'Kuulitteko? Tässä linnassa padallakin on oma tahto.', aani: 'pulu-kokki-r1' },
   },
   {
-    id: 'apulainen', henkilo: 'apulainen-1500', paikka: [10.5, 0, 8.3], suunta: 180, peilattu: false,
+    // 6.10. (omistaja: lakaisu ilman lisäosaa): apulainen lakaisee pöydän koillispuolella taikinan levätessä; luuta on hänen
+    // glb:ssään (tools/dioraama/blender/hahmo_esineet.py, tyo + tyo_puhe). Harja pyyhkii 0,7 m edessä ±0,3 m: pöydän
+    // reunaan ≥ 0,3 m, kokkiin 2 m. Ennen [10.5, 0, 8.3] suunta 180 pöydän ääressä.
+    id: 'apulainen', henkilo: 'apulainen-1500', paikka: [11.7, 0, 7.5], suunta: 215, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'apulainen-1', teksti: 'Leipätaikina lepää vielä hetken, ennen kuin se uuniin kelpaa.', aani: 'apulainen-1' },

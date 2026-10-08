@@ -534,6 +534,12 @@ async function ajaLista({
 
   const rivit = [];
   let virheita = 0;
+  /*
+   * SAMA ÄÄNI VAIN KERRAN (Pelikoodari 5.10.2026, Tavlin kuiva ajo: noppa-2 ja noppa-3 valitsivat saman Freesound-äänen):
+   * listan muunnelmat ovat eri tiedostoja, joten jo valittu ehdokas (sivu tai nimi+lähde) ohitetaan seuraavilla tunnuksilla.
+   */
+  const kaytetyt = new Set();
+  const ehdokkaanTunniste = (x) => x.ehdokas.sivu || `${x.ehdokas.lahde}:${x.ehdokas.nimi}`;
   try {
     for (const tehoste of tehosteet) {
       const lahteet = tehosteenLahteet(tehoste, { sallitut: SALLITUT, lista });
@@ -546,8 +552,9 @@ async function ajaLista({
       const osumat = await haeEhdokkaat(tehoste, {
         lahteet, avain: AVAIN, loki: (rivi) => console.error(rivi),
       });
-      const kelpaavat = jarjestaEhdokkaat(osumat, tehoste);
+      const kelpaavat = jarjestaEhdokkaat(osumat, tehoste).filter((x) => !kaytetyt.has(ehdokkaanTunniste(x)));
       const valinta = kelpaavat[0];
+      if (valinta) kaytetyt.add(ehdokkaanTunniste(valinta));
       if (!valinta) {
         console.error(`   VIRHE: ei yhtään kelvollista osumaa (${osumat.length} haettua).`);
         virheita += 1;

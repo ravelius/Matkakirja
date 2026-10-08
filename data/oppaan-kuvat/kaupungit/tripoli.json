@@ -1,0 +1,313 @@
+{
+ "kaupunki": "tripoli",
+ "kaupunkiQ": "Q3579",
+ "kohteet": [
+  {
+   "q": "Q2498401",
+   "nimi": "Punainen linna",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "aliakset": [
+    "Q11283904"
+   ],
+   "lat": 32.89583,
+   "lon": 13.18028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Redcastle museum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Redcastle_museum.JPG?width=1280",
+     "tekija": "SashaCoachman",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Redcastle_museum.JPG",
+     "selite": "Punainen linna eli Assaraya al-Hamra hallitsee Tripolin vanhaakaupunkia satamansa vieressä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tripoli - Eingang zum Nationalmuseum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tripoli_-_Eingang_zum_Nationalmuseum.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tripoli_-_Eingang_zum_Nationalmuseum.jpg",
+     "selite": "Linnan sisällä toimii Libyan kansallismuseo.",
+     "leveys": 2593,
+     "korkeus": 3129,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q848472",
+   "nimi": "Marttyyrien aukio",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 32.895,
+   "lon": 13.1811,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Green Square Tripoli.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Green_Square_Tripoli.jpg?width=1280",
+     "tekija": "David Holt",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Green_Square_Tripoli.jpg",
+     "selite": "Marttyyrien aukio eli entinen Vihreä aukio on Tripolin keskeinen kaupunkiaukio.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Green square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Green_square.jpg?width=1280",
+     "tekija": "Корниенко Виктор",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Green_square.jpg",
+     "selite": "Aukion laidalla seisovat italialaisaikaiset rakennukset ja vanha kaupunki.",
+     "leveys": 2207,
+     "korkeus": 1471,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3621785",
+   "nimi": "Marcus Aureliuksen riemukaari",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 32.8999,
+   "lon": 13.1757,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marcus Aurelius Arch Tripoli Libya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marcus_Aurelius_Arch_Tripoli_Libya.jpg?width=1280",
+     "tekija": "Daniel and Kate Pett",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Arch_Tripoli_Libya.jpg",
+     "selite": "Marcus Aureliuksen marmorinen riemukaari on Tripolin vanhimpia säilyneitä roomalaisia monumentteja.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1010 Kreuzfahrt A 802 (5127110096).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1010_Kreuzfahrt_A_802_(5127110096).jpg?width=1280",
+     "tekija": "Tauralbus",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1010_Kreuzfahrt_A_802_(5127110096).jpg",
+     "selite": "Kaari seisoo vanhankaupungin kujien keskellä moskeijan minareetin vieressä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1555175",
+   "nimi": "Gurgin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 32.89953,
+   "lon": 13.17542,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gurgi Mosque Exterior Tripoli Libya.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gurgi_Mosque_Exterior_Tripoli_Libya.JPG?width=1280",
+     "tekija": "Abdul-Jawad Elhusuni (عبدالجواد الحسوني)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gurgi_Mosque_Exterior_Tripoli_Libya.JPG",
+     "selite": "Gurgin moskeija on 1800-luvun ottomaanimoskeija Tripolin vanhassakaupungissa.",
+     "leveys": 3472,
+     "korkeus": 2604,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tripoli - Gurgi-Moschee 1833 bis 34 erbaut, Eingangstor.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tripoli_-_Gurgi-Moschee_1833_bis_34_erbaut%2C_Eingangstor.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tripoli_-_Gurgi-Moschee_1833_bis_34_erbaut%2C_Eingangstor.jpg",
+     "selite": "Moskeijan sisäänkäyntiä koristavat tunisialaistyyliset kaakelit.",
+     "leveys": 2942,
+     "korkeus": 3817,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12204327",
+   "nimi": "Darghutin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 32.89881,
+   "lon": 13.17711,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Darghut Mosque Exterior Tripoli Libya.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Darghut_Mosque_Exterior_Tripoli_Libya.JPG?width=1280",
+     "tekija": "Abdul-Jawad Elhusuni (عبدالجواد الحسوني)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Darghut_Mosque_Exterior_Tripoli_Libya.JPG",
+     "selite": "Darghutin moskeija on valkoinen 1500-luvun rakennus vanhankaupungin laidalla.",
+     "leveys": 3472,
+     "korkeus": 2604,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17636705",
+   "nimi": "Karamanlin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 32.8953,
+   "lon": 13.1796,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1010 Kreuzfahrt A 851 (5130003628).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1010_Kreuzfahrt_A_851_(5130003628).jpg?width=1280",
+     "tekija": "Tauralbus",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1010_Kreuzfahrt_A_851_(5130003628).jpg",
+     "selite": "Karamanlin moskeijan minareetti kohoaa valkoisen sisäpihan yllä Tripolin vanhassakaupungissa.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1010 Kreuzfahrt A 850 (5129401801).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1010_Kreuzfahrt_A_850_(5129401801).jpg?width=1280",
+     "tekija": "Tauralbus",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1010_Kreuzfahrt_A_850_(5129401801).jpg",
+     "selite": "Moskeijan hautakammio on koristeltu runsaalla kaakelityöllä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12204299",
+   "nimi": "Al-Naqahin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 32.8954,
+   "lon": 13.1787,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2 Tripoli En-Naga mosque (51791288947).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2_Tripoli_En-Naga_mosque_(51791288947).jpg?width=1280",
+     "tekija": "Libyan Studies",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2_Tripoli_En-Naga_mosque_(51791288947).jpg",
+     "selite": "Al-Naqahin moskeijan pylväikkö on rakennettu vanhankaupungin kapeiden kujien varrelle.",
+     "leveys": 2496,
+     "korkeus": 1664,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Naga Mosque Exterior Tripoli Libya.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naga_Mosque_Exterior_Tripoli_Libya.JPG?width=1280",
+     "tekija": "Abdul-Jawad Elhusuni (عبدالجواد الحسوني)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Naga_Mosque_Exterior_Tripoli_Libya.JPG",
+     "selite": "Moskeijan matala torni näkyy vanhankaupungin valkoisten seinien takaa.",
+     "leveys": 2604,
+     "korkeus": 3472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1492859",
+   "nimi": "Tripolin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 32.89061,
+   "lon": 13.18603,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tripoli center.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tripoli_center.jpg?width=1280",
+     "tekija": "Ziad Fhema",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tripoli_center.jpg",
+     "selite": "Italialaisaikainen katedraali kohoaa Tripolin keskustassa Marttyyrien aukion lähellä.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Inbound8456773044139201967.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inbound8456773044139201967.jpg?width=1280",
+     "tekija": "Moha2212",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inbound8456773044139201967.jpg",
+     "selite": "Kupolirakennus on yhdistelmä romaanista ja arabialaista tyyliä.",
+     "leveys": 6928,
+     "korkeus": 6928,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tripoli aerial view.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tripoli_aerial_view.jpg?width=1280",
+   "tekija": "Moomkenb3",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tripoli_aerial_view.jpg",
+   "selite": "Tripolin rannikolle on noussut nykyaikaisia hotelli- ja toimistotorneja.",
+   "leveys": 4056,
+   "korkeus": 3040,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "TRIPOLI.TRABLUS CITY - panoramio.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TRIPOLI.TRABLUS_CITY_-_panoramio.jpg?width=1280",
+   "tekija": "Kayhan ERTUGRUL",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TRIPOLI.TRABLUS_CITY_-_panoramio.jpg",
+   "selite": "Tripoli sijaitsee Libyan Välimeren rannikolla niemen ja sataman ympärillä.",
+   "leveys": 4352,
+   "korkeus": 3264,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

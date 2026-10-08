@@ -224,6 +224,13 @@ jobs:
             --originit "$POLLO_ORIGINIT"
           echo "POLLO_ASETUS=tools/pollo/wrangler.ci.json" >> "$GITHUB_ENV"
 
+      # ELÄVÄN OPPAAN AINEISTO (Päätoimittaja 5.10.2026): isoisän merkinnät ja kaupunkilehdet pelin sisältöpaketeista
+      # taustatiedoksi. Repossa on tynkä; täysi aineisto (~1,7 Mt) generoidaan tässä juuri ennen deployta.
+      - name: Generoi oppaan aineisto
+        run: |
+          set -euo pipefail
+          node tools/pollo/tee-opas-aineisto.mjs
+
       - name: Julkaise worker
         run: |
           set -euo pipefail
@@ -338,21 +345,68 @@ jobs:
           fi
           printf '%s' "$POLLO_KEHITTAJAKOODI" | "$WRANGLER" secret put POLLO_KEHITTAJAKOODI --config "$POLLO_ASETUS"
 
-      # PUHEMOOTTORIN TARKISTUS (Fable 27.9.2026): kun xAI-avain on
-      # asetettu, julkaistun workerin on vastattava puheeseen xAI:lla
-      # (x-puhe-moottori: xai) — muuten luenta on hiljaa pudonnut
-      # OpenAI:lle eikä sitä kuulisi kukaan. Ilman avainta ohitetaan.
-      - name: Tarkista puhemoottori (xai)
+      # CESIUM ION -TUNNUS (Päätoimittaja 5.10.2026, elävä opas juna 144): GET /opas/tunnus antaa sen natiiville kerran
+      # istunnossa, jotta tunnus ei ole käännöksessä eikä repossa. VAIN RAJATTU TUNNUS (assets:read, assetit 1, 2,
+      # 96188 ja 2275207); omistaja asettaa GitHubin salaisuuden. Vapaaehtoinen: ilman sitä reitti vastaa 503.
+      # TESTITUNNUS (Päätoimittaja 5.10.2026, juna 146): roolien simut ja todistusajot ohittavat per-IP-päivärajat
+      # (opas, Pulu-chat, puhe, sähke) ja oppaan minuuttiraja nousee; kustannuskatot pysyvät. Vapaaehtoinen.
+      - name: Aseta testitunnus workerin salaisuudeksi (jos on)
         env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          POLLO_TESTITUNNUS: ${{ secrets.POLLO_TESTITUNNUS }}
         run: |
           set -euo pipefail
-          if [ -z "${XAI_API_KEY:-}" ] || [ -z "${POLLO_OSOITE:-}" ]; then
-            echo "XAI_API_KEY tai workerin osoite puuttuu — ohitetaan."
+          set +x
+          if [ -z "${POLLO_TESTITUNNUS:-}" ]; then
+            echo "POLLO_TESTITUNNUS ei ole asetettu — ohitetaan."
+            exit 0
+          fi
+          printf '%s' "$POLLO_TESTITUNNUS" | "$WRANGLER" secret put POLLO_TESTITUNNUS --config "$POLLO_ASETUS"
+
+      # Äänilupalippu (omistaja 6.10.2026): testitunnus/testiotsake ei tuota ääntä ilman tätä. Käytetään vain omistajan luvalla
+      # tarkalle määrälle; ilman salaisuutta testit eivät koskaan generoi ääntä.
+      - name: Aseta äänilupalippu workerin salaisuudeksi (jos on)
+        env:
+          POLLO_AANILUPA: ${{ secrets.POLLO_AANILUPA }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${POLLO_AANILUPA:-}" ]; then
+            echo "POLLO_AANILUPA ei ole asetettu — testit eivät tuota ääntä."
+            exit 0
+          fi
+          printf '%s' "$POLLO_AANILUPA" | "$WRANGLER" secret put POLLO_AANILUPA --config "$POLLO_ASETUS"
+
+      - name: Aseta Cesium ion -tunnus workerin salaisuudeksi (jos on)
+        env:
+          CESIUM_ION_TOKEN: ${{ secrets.CESIUM_ION_TOKEN }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${CESIUM_ION_TOKEN:-}" ]; then
+            echo "CESIUM_ION_TOKEN ei ole asetettu — ohitetaan (/opas/tunnus vastaa 503)."
+            exit 0
+          fi
+          printf '%s' "$CESIUM_ION_TOKEN" | "$WRANGLER" secret put CESIUM_ION_TOKEN --config "$POLLO_ASETUS"
+
+      # PUHEMOOTTORIN TARKISTUS (Fable 27.9.2026; omistaja 5.10.2026 klo 13.2x: lukijat ElevenLabsin Williamilla, xAI vain
+      # varapolkuna, #3996): kun ElevenLabs-avain on asetettu, julkaistun workerin on vastattava kertojan puheeseen
+      # ElevenLabsilla (x-puhe-moottori: eleven) — muuten luenta on hiljaa pudonnut xAI-varapolulle. Ilman avainta ohitetaan.
+      - name: Tarkista puhemoottori (eleven)
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${ELEVEN_API_KEY:-}" ] || [ -z "${POLLO_OSOITE:-}" ]; then
+            echo "ELEVEN_API_KEY tai workerin osoite puuttuu — ohitetaan."
             exit 0
           fi
           origin=$(printf '%s' "$POLLO_ORIGINIT" | cut -d, -f1)
-          node tools/pollo/tarkista-puhemoottori.mjs "$POLLO_OSOITE" "$origin" xai
+          node tools/pollo/tarkista-puhemoottori.mjs "$POLLO_OSOITE" "$origin" eleven
+
+      # KV:n päiväkiintiö (6.10.2026, Cloudflaren hälytys): tämän päivän operaatiot lajeittain ajon yhteenvetoon. Ei kaada.
+      - name: KV-operaatiot tänään
+        continue-on-error: true
+        run: node tools/pollo/kv-kaytto.mjs
 
       - name: Kerro mitä julkaistiin
         if: success()

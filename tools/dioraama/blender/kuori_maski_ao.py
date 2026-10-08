@@ -98,7 +98,7 @@ leivo('_rgb', 'EMIT', emis.outputs[0], 1)
 leivo('_kallio', 'EMIT', alfa_emis.outputs[0], 1)
 nt.links.new(alkup, out.inputs['Surface'])
 sc.world = bpy.data.worlds.new('ao')
-sc.world.light_settings.distance = 3.0
+sc.world.light_settings.distance = float(A[A.index('--ao-etaisyys') + 1]) if '--ao-etaisyys' in A else 3.0  # 5.10.: kontakti-AO 0,5 m
 leivo(f'kuori-ao-{KOKO // 1024}k', 'AO', None, AO_N)
 
 # Yhdistetään RGB + kallio (A) yhdeksi RGBA-maskiksi.

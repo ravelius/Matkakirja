@@ -1,0 +1,313 @@
+{
+ "kaupunki": "portvila",
+ "kaupunkiQ": "Q37806",
+ "kohteet": [
+  {
+   "q": "Q1072369",
+   "nimi": "Roi Matan perintö",
+   "peruste": "UNESCO",
+   "koko_m": 4000,
+   "lat": -17.69364,
+   "lon": 168.23399,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lelepa cliffs, Vanuatu, 2006 - Flickr - PhillipC.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lelepa_cliffs%2C_Vanuatu%2C_2006_-_Flickr_-_PhillipC.jpg?width=1280",
+     "tekija": "Phillip Capper from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lelepa_cliffs%2C_Vanuatu%2C_2006_-_Flickr_-_PhillipC.jpg",
+     "selite": "Lelepan saaren valkoiset kalliot kuuluvat päällikkö Roi Matan kuolinpaikan ja hautausmaan maisemaan.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fels Cave Drawings 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fels_Cave_Drawings_1.jpg?width=1280",
+     "tekija": "Phillip Capper from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fels_Cave_Drawings_1.jpg",
+     "selite": "Luolan seinillä on vanhoja kalliopiirroksia, jotka kuuluvat Roi Matan perinnön maisemaan.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q266594",
+   "nimi": "Efate",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": -17.66667,
+   "lon": 168.41667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toniliu village, Efate, Vanuatu, November 2006 - Flickr - PhillipC.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toniliu_village%2C_Efate%2C_Vanuatu%2C_November_2006_-_Flickr_-_PhillipC.jpg?width=1280",
+     "tekija": "Phillip Capper from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toniliu_village%2C_Efate%2C_Vanuatu%2C_November_2006_-_Flickr_-_PhillipC.jpg",
+     "selite": "Toniliun kylän tiellä liekkipuu kukkii punaisena Efaten rannikolla.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Round Efate trip, 26 Nov. 2006 - Mele Village and Bay - Flickr - PhillipC.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Round_Efate_trip%2C_26_Nov._2006_-_Mele_Village_and_Bay_-_Flickr_-_PhillipC.jpg?width=1280",
+     "tekija": "Phillip Capper from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Round_Efate_trip%2C_26_Nov._2006_-_Mele_Village_and_Bay_-_Flickr_-_PhillipC.jpg",
+     "selite": "Mele-kylä ja lahti Efaten saaren tuulisella pohjoisrannalla.",
+     "leveys": 3232,
+     "korkeus": 2130,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Pango village nakamal, Efate, Vanuatu, April 2008 - Flickr - PhillipC (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pango_village_nakamal%2C_Efate%2C_Vanuatu%2C_April_2008_-_Flickr_-_PhillipC_(1).jpg?width=1280",
+     "tekija": "Phillip Capper from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pango_village_nakamal%2C_Efate%2C_Vanuatu%2C_April_2008_-_Flickr_-_PhillipC_(1).jpg",
+     "selite": "Pangon kylän nakamal on perinteinen kokoontumistalo, jossa päälliköt neuvottelevat.",
+     "leveys": 3442,
+     "korkeus": 2355,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q392766",
+   "nimi": "Yasur-tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -19.53333,
+   "lon": 169.44167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Yasur eruption 2006, Tanna Island, Vanuatu, VAN 0516.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Yasur_eruption_2006%2C_Tanna_Island%2C_Vanuatu%2C_VAN_0516.jpg?width=1280",
+     "tekija": "Rolf Cosar",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Yasur_eruption_2006%2C_Tanna_Island%2C_Vanuatu%2C_VAN_0516.jpg",
+     "selite": "Yasurin harmaa tuhkakartio savuaa Tannan saarella, ja se purkautuu lähes yhtäjaksoisesti.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yasur 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yasur_1.jpg?width=1280",
+     "tekija": "Stefan Heinrich",
+     "lisenssi": "CC BY-SA 2.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yasur_1.jpg",
+     "selite": "Tulivuoren kraatterin reunalla tuhkatasanko jatkuu tummana laavan jäljiltä.",
+     "leveys": 2256,
+     "korkeus": 1496,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "TannaVolcano.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TannaVolcano.JPG?width=1280",
+     "tekija": "Andrew J Swann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TannaVolcano.JPG",
+     "selite": "Illan pimeässä kraatterista sinkoaa hehkuvia laavasuihkuja.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q459948",
+   "nimi": "Ambrym",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": -16.33333,
+   "lon": 168.33333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marum sept 2009.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marum_sept_2009.jpg?width=1280",
+     "tekija": "Geophile71",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marum_sept_2009.jpg",
+     "selite": "Ambrymin Marum-kraatterissa on laavajärvi, jonka punainen hehku näkyy yöllä taivaalle.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vue du volcan Benbow depuis la plaine de cendres, île d'Ambrym.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vue_du_volcan_Benbow_depuis_la_plaine_de_cendres%2C_%C3%AEle_d'Ambrym.JPG?width=1280",
+     "tekija": "T.BOYER",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vue_du_volcan_Benbow_depuis_la_plaine_de_cendres%2C_%C3%AEle_d'Ambrym.JPG",
+     "selite": "Benbow-tulivuori kohoaa Ambrymin laajan tuhkatasangon yläpuolelle.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ambrym Vanuatu (179716709).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ambrym_Vanuatu_(179716709).jpeg?width=1280",
+     "tekija": "Mickael Foucaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ambrym_Vanuatu_(179716709).jpeg",
+     "selite": "Tuhkainen laakso johtaa Ambrymin tulivuorten rinteille pilvisen taivaan alla.",
+     "leveys": 2048,
+     "korkeus": 1363,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q337524",
+   "nimi": "Espiritu Santo",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": -15.41667,
+   "lon": 166.9,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Champagne Beach Espiritu Santo (28660966453).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Champagne_Beach_Espiritu_Santo_(28660966453).jpg?width=1280",
+     "tekija": "Simon_sees from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Champagne_Beach_Espiritu_Santo_(28660966453).jpg",
+     "selite": "Champagne Beachin valkoinen hiekka ja kirkas turkoosi vesi ovat Espiritu Santon tunnetuin ranta.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Champagne Beach.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Champagne_Beach.jpg?width=1280",
+     "tekija": "Jae Lee",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Champagne_Beach.jpg",
+     "selite": "Rannan metsäinen niemeke ja valkohiekkainen lahti kuuluvat Vanuatun postikorttimaisemiin.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q764201",
+   "nimi": "Vanuatun parlamentti",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -17.74553,
+   "lon": 168.31567,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vanuatu Parliament, Port Vila - Flickr - PhillipC.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vanuatu_Parliament%2C_Port_Vila_-_Flickr_-_PhillipC.jpg?width=1280",
+     "tekija": "Phillip Capper from Wellington, New Zealand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vanuatu_Parliament%2C_Port_Vila_-_Flickr_-_PhillipC.jpg",
+     "selite": "Parlamenttitalon kolmiomainen julkisivu ja punainen katto sijaitsevat Port Vilan keskustassa.",
+     "leveys": 3167,
+     "korkeus": 2009,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Parliament and Conference Centre (22922406413).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_and_Conference_Centre_(22922406413).jpg?width=1280",
+     "tekija": "Michael Coghlan from Adelaide, Australia",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parliament_and_Conference_Centre_(22922406413).jpg",
+     "selite": "Parlamenttitalo ja kokouskeskus jakavat laajan nurmikon, jonka laidalla kasvaa palmuja.",
+     "leveys": 1526,
+     "korkeus": 1199,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1835725",
+   "nimi": "Vanuatun kulttuurikeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -17.74521,
+   "lon": 168.31747,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Cultural Centre, Vanuatu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Cultural_Centre%2C_Vanuatu.jpg?width=1280",
+     "tekija": "PhillipC",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Cultural_Centre%2C_Vanuatu.jpg",
+     "selite": "Kulttuurikeskuksen olkikattoinen talo seisoo suuren puun varjossa Port Vilassa.",
+     "leveys": 3192,
+     "korkeus": 2172,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Port Vila Vanuatu Harbour.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_Vila_Vanuatu_Harbour.JPG?width=1280",
+   "tekija": "Steffen Wurzel",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_Vila_Vanuatu_Harbour.JPG",
+   "selite": "Port Vilan satamalahdella purjeveneet ankkuroivat metsäisen niemen ja rantamökkien edessä.",
+   "leveys": 3648,
+   "korkeus": 2432,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "(Aerial view of Port Vila, Vanuatu) - DPLA - bb18f7a761c4014eeacc1faaea5aa0e4.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(Aerial_view_of_Port_Vila%2C_Vanuatu)_-_DPLA_-_bb18f7a761c4014eeacc1faaea5aa0e4.jpg?width=1280",
+   "tekija": "Carlquist, Sherwin John, 1930-2021",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(Aerial_view_of_Port_Vila%2C_Vanuatu)_-_DPLA_-_bb18f7a761c4014eeacc1faaea5aa0e4.jpg",
+   "selite": "Ilmasta näkyy Port Vilan kaupunki lahden rannalla ja Iririkin pieni saari.",
+   "leveys": 1500,
+   "korkeus": 1014,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

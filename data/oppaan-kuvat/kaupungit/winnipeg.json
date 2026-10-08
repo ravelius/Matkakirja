@@ -1,0 +1,411 @@
+{
+ "kaupunki": "winnipeg",
+ "kaupunkiQ": "Q2135",
+ "kohteet": [
+  {
+   "q": "Q630212",
+   "nimi": "Kanadan ihmisoikeusmuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 49.89064,
+   "lon": -97.13109,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Canadian Museum for Human Rights at night, Winnipeg, Manitoba, Canada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canadian_Museum_for_Human_Rights_at_night%2C_Winnipeg%2C_Manitoba%2C_Canada.jpg?width=1280",
+     "tekija": "Ethan Sahagun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canadian_Museum_for_Human_Rights_at_night%2C_Winnipeg%2C_Manitoba%2C_Canada.jpg",
+     "selite": "Ihmisoikeusmuseon lasinen torni valaistuna illalla Winnipegin The Forksin kohdalla.",
+     "leveys": 3593,
+     "korkeus": 3415,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017-08-03 - Marc Nedelec Festival (3) (36406730315).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017-08-03_-_Marc_Nedelec_Festival_(3)_(36406730315).jpg?width=1280",
+     "tekija": "2017 Canada Summer Games",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017-08-03_-_Marc_Nedelec_Festival_(3)_(36406730315).jpg",
+     "selite": "Museon kaareva lasi- ja kalkkikivirakennus nousee puiston yllä.",
+     "leveys": 5392,
+     "korkeus": 3549,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6750086",
+   "nimi": "Manitoban parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 49.88444,
+   "lon": -97.14694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parliamentwinnipeg manitoba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliamentwinnipeg_manitoba.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Canucks4ever83~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parliamentwinnipeg_manitoba.jpg",
+     "selite": "Manitoban parlamenttitalon uusklassinen julkisivu ja kupoli.",
+     "leveys": 1998,
+     "korkeus": 1499,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Assemblée législative du Manitoba01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Assembl%C3%A9e_l%C3%A9gislative_du_Manitoba01.JPG?width=1280",
+     "tekija": "Eminoro & Simon Villeneuve",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Assembl%C3%A9e_l%C3%A9gislative_du_Manitoba01.JPG",
+     "selite": "Parlamenttitalo seisoo laajan nurmikon takana Assiniboine-joen lähellä.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Friday Evening in Winnipeg (52122877860).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Friday_Evening_in_Winnipeg_(52122877860).jpg?width=1280",
+     "tekija": "Dennis Sylvester Hurd from Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Friday_Evening_in_Winnipeg_(52122877860).jpg",
+     "selite": "Rakennuksen kupolin huipulla seisoo kullattu patsas.",
+     "leveys": 4928,
+     "korkeus": 2899,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5419566",
+   "nimi": "Pörssikortteli",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 49.8985,
+   "lon": -97.1403,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Albert Street, Exchange District, Winnipeg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Street%2C_Exchange_District%2C_Winnipeg.jpg?width=1280",
+     "tekija": "Interlaker",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albert_Street%2C_Exchange_District%2C_Winnipeg.jpg",
+     "selite": "Pörssikorttelin vanhat tiilitalot ovat Winnipegin viljakauppa-ajan perintöä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Banks row Main Street.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Banks_row_Main_Street.jpg?width=1280",
+     "tekija": "Wpg guy",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Banks_row_Main_Street.jpg",
+     "selite": "Main Streetin pankkirivin kivijulkisivut ovat korttelin edustavimpia.",
+     "leveys": 1684,
+     "korkeus": 1097,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bannatyne Ave.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bannatyne_Ave.jpg?width=1280",
+     "tekija": "Krazytea",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bannatyne_Ave.jpg",
+     "selite": "Bannatyne Avenue kulkee punatiilisten varastotalojen välissä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3080046",
+   "nimi": "The Forks",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 49.88694,
+   "lon": -97.13056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Forks at dusk, Winnipeg, Manitoba, Canada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Forks_at_dusk%2C_Winnipeg%2C_Manitoba%2C_Canada.jpg?width=1280",
+     "tekija": "Ethan Sahagun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Forks_at_dusk%2C_Winnipeg%2C_Manitoba%2C_Canada.jpg",
+     "selite": "Punainen ja Assiniboine-joki yhtyvät The Forksin vanhalla kohtaamispaikalla.",
+     "leveys": 10350,
+     "korkeus": 5518,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2005 Winnipeg Flood.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2005_Winnipeg_Flood.JPG?width=1280",
+     "tekija": "Original uploader was Northwest at en.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2005_Winnipeg_Flood.JPG",
+     "selite": "Tulvivan joen yllä näkyy The Forksin satama-alue ylhäältä.",
+     "leveys": 1632,
+     "korkeus": 1232,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942774",
+   "nimi": "Saint-Bonifacen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 49.8893,
+   "lon": -97.122,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Boniface.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Boniface.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Dondon83~commonswiki assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Boniface.jpg",
+     "selite": "Saint-Bonifacen katedraalin julkisivu on jäänyt pystyyn palon jälkeen.",
+     "leveys": 2004,
+     "korkeus": 2892,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BC trip (9535951252).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BC_trip_(9535951252).jpg?width=1280",
+     "tekija": "Guillaume Blum",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BC_trip_(9535951252).jpg",
+     "selite": "Palaneen katedraalin pyöreän ikkunan läpi näkyy taivas.",
+     "leveys": 3194,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3095569",
+   "nimi": "Union Station",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 49.88889,
+   "lon": -97.13417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Union Station (Winnipeg).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Union_Station_(Winnipeg).jpg?width=1280",
+     "tekija": "Quintin Soloviev",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Union_Station_(Winnipeg).jpg",
+     "selite": "Union Stationin kupolillinen rautatieasema seisoo vastapäätä ihmisoikeusmuseota.",
+     "leveys": 7756,
+     "korkeus": 4653,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrance to Union Station in Winnipeg, Manitoba.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_Union_Station_in_Winnipeg%2C_Manitoba.JPG?width=1280",
+     "tekija": "Ccyyrree",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_to_Union_Station_in_Winnipeg%2C_Manitoba.JPG",
+     "selite": "Aseman suuri kaarisisäänkäynti on 1900-luvun alun ajalta.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Central hall of Winnipeg Union Station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_hall_of_Winnipeg_Union_Station.jpg?width=1280",
+     "tekija": "Milorad Dimic, Nis, Serbia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_hall_of_Winnipeg_Union_Station.jpg",
+     "selite": "Aseman keskushalli on korkea ja valkoinen.",
+     "leveys": 2592,
+     "korkeus": 1936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3285980",
+   "nimi": "Manitoba Hydro Place",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 49.89204,
+   "lon": -97.1463,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manitoba Hydro building 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manitoba_Hydro_building_1.JPG?width=1280",
+     "tekija": "Krazytea",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manitoba_Hydro_building_1.JPG",
+     "selite": "Manitoba Hydro Place on lasinen toimistotorni Winnipegin keskustassa.",
+     "leveys": 3672,
+     "korkeus": 4896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Manitoba hydro place May 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manitoba_hydro_place_May_2022.jpg?width=1280",
+     "tekija": "ElatedCoder",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manitoba_hydro_place_May_2022.jpg",
+     "selite": "Tornin kaareva lasikylki heijastaa kaupungin valoa.",
+     "leveys": 2160,
+     "korkeus": 2880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Manitoba Hydro 2012.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manitoba_Hydro_2012.jpg?width=1280",
+     "tekija": "ajbatac from Canada",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manitoba_Hydro_2012.jpg",
+     "selite": "Rakennus kohoaa aurinkoista taivasta vasten.",
+     "leveys": 4268,
+     "korkeus": 2663,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2264019",
+   "nimi": "Manitoban museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 49.9001,
+   "lon": -97.13642,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Manitoba Museum and Planetarium, Winnipeg, Manitoba.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Manitoba_Museum_and_Planetarium%2C_Winnipeg%2C_Manitoba.JPG?width=1280",
+     "tekija": "Ccyyrree",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Manitoba_Museum_and_Planetarium%2C_Winnipeg%2C_Manitoba.JPG",
+     "selite": "Museon ja planetaarion betonirakennus on Winnipegin keskustassa.",
+     "leveys": 2523,
+     "korkeus": 1894,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bison Diorama - Manitoba Museum (6879423051).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bison_Diorama_-_Manitoba_Museum_(6879423051).jpg?width=1280",
+     "tekija": "Thomas Quine",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bison_Diorama_-_Manitoba_Museum_(6879423051).jpg",
+     "selite": "Biisonidiorama esittelee preerian eläimistöä.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5000839",
+   "nimi": "Burton Cummings -teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 49.8958,
+   "lon": -97.1436,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Winnipeg - Walker Theatre 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winnipeg_-_Walker_Theatre_2.JPG?width=1280",
+     "tekija": "Amqui",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Winnipeg_-_Walker_Theatre_2.JPG",
+     "selite": "Burton Cummings -teatterin julkisivu ja pystysuuntainen kyltti Winnipegin keskustassa.",
+     "leveys": 2591,
+     "korkeus": 2710,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Burton Cummings Theatre in Winnipeg, Manitoba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burton_Cummings_Theatre_in_Winnipeg%2C_Manitoba.jpg?width=1280",
+     "tekija": "Ccyyrree",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burton_Cummings_Theatre_in_Winnipeg%2C_Manitoba.jpg",
+     "selite": "Teatterin markiisi ja kiviseinä katunäkymässä.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Evening glow at Downtown Winnipeg.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Evening_glow_at_Downtown_Winnipeg.jpg?width=1280",
+   "tekija": "ParsonsPhotographyNL",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Evening_glow_at_Downtown_Winnipeg.jpg",
+   "selite": "Winnipegin keskusta, joki ja ihmisoikeusmuseo ilta-auringossa ilmasta nähtynä.",
+   "leveys": 7965,
+   "korkeus": 4224,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Skyline of Winnipeg.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Winnipeg.jpg?width=1280",
+   "tekija": "Quintin Soloviev",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Winnipeg.jpg",
+   "selite": "Winnipegin keskustan tornit ja ratapiha ilmasta katsottuna.",
+   "leveys": 5057,
+   "korkeus": 3540,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

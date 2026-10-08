@@ -1,0 +1,353 @@
+{
+ "kaupunki": "asuncion",
+ "kaupunkiQ": "Q2933",
+ "kohteet": [
+  {
+   "q": "Q3298842",
+   "nimi": "López-palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -25.27764,
+   "lon": -57.63757,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 3819 Asunción - Paraguay (Südamerika).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_3819_Asunci%C3%B3n_-_Paraguay_(S%C3%BCdamerika).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_3819_Asunci%C3%B3n_-_Paraguay_(S%C3%BCdamerika).jpg",
+     "selite": "López-palatsi on Paraguayn presidentin virka-asunto, jota ei koskaan käytetty rakennuttajansa asuntona.",
+     "leveys": 4273,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Lopez from above.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Lopez_from_above.jpg?width=1280",
+     "tekija": "Cmasi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Lopez_from_above.jpg",
+     "selite": "Ilmasta näkyy palatsin puutarha, lipputanko ja Paraguay-joen ranta aivan palatsin takana.",
+     "leveys": 1985,
+     "korkeus": 1217,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3500546",
+   "nimi": "Sankarien kansallispanteoni",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -25.28223,
+   "lon": -57.63518,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gedenkstätte für Kiegsopfer in Asuncion 3030.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gedenkst%C3%A4tte_f%C3%BCr_Kiegsopfer_in_Asuncion_3030.JPG?width=1280",
+     "tekija": "Jerry Fischer",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gedenkst%C3%A4tte_f%C3%BCr_Kiegsopfer_in_Asuncion_3030.JPG",
+     "selite": "Sankarien panteoni on kupolikirkko, jonne on haudattu Paraguayn sotasankareita.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ASUNCION PANTEON NACIONAL DE LOS HÉROES.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ASUNCION_PANTEON_NACIONAL_DE_LOS_H%C3%89ROES.jpg?width=1280",
+     "tekija": "Felipe Antonio",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ASUNCION_PANTEON_NACIONAL_DE_LOS_H%C3%89ROES.jpg",
+     "selite": "Panteonin valkoinen kupoli ja pylväikköjulkisivu erottuvat kaupungin keskustassa lippujen keskeltä.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "El Gran Panteón de Asunción.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Gran_Pante%C3%B3n_de_Asunci%C3%B3n.jpg?width=1280",
+     "tekija": "FF MM",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Gran_Pante%C3%B3n_de_Asunci%C3%B3n.jpg",
+     "selite": "Panteonin kupoli kohoaa palmujen ja puiston yläpuolelle.",
+     "leveys": 1206,
+     "korkeus": 1731,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q23890126",
+   "nimi": "Asunciónin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -25.2816,
+   "lon": -57.6324,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral de Asunción Paraguay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Asunci%C3%B3n_Paraguay.jpg?width=1280",
+     "tekija": "FF MM",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Asunci%C3%B3n_Paraguay.jpg",
+     "selite": "Asunciónin katedraalin vaalea julkisivu ja torni sijaitsevat kaupungin vanhassa keskustassa.",
+     "leveys": 3125,
+     "korkeus": 2412,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de Asunción (8039931293).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Asunci%C3%B3n_(8039931293).jpg?width=1280",
+     "tekija": "Leandro Neumann Ciuffo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Asunci%C3%B3n_(8039931293).jpg",
+     "selite": "Katedraalin julkisivu valaistaan illalla Paraguayn lipun väreihin.",
+     "leveys": 2601,
+     "korkeus": 1736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Asuncion Cathedral.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asuncion_Cathedral.JPG?width=1280",
+     "tekija": "Jan Pešula User:Sapfan",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asuncion_Cathedral.JPG",
+     "selite": "Katedraalin kaksi tornia ja vaaleanpunainen julkisivu erottuvat katukuvassa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3300187",
+   "nimi": "Itsenäisyyden talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -25.28057,
+   "lon": -57.63622,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Asuncion - Casa de la Independencia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asuncion_-_Casa_de_la_Independencia.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asuncion_-_Casa_de_la_Independencia.jpg",
+     "selite": "Itsenäisyyden talon valkoinen siirtomaa-ajan talo oli paikka, jossa vuoden 1811 itsenäisyyskapina valmisteltiin.",
+     "leveys": 6048,
+     "korkeus": 4024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Casa de la Independencia, Asunción, Paraguay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_de_la_Independencia%2C_Asunci%C3%B3n%2C_Paraguay.jpg?width=1280",
+     "tekija": "Chipachyryry",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Independencia%2C_Asunci%C3%B3n%2C_Paraguay.jpg",
+     "selite": "Talon tiilikatto ja paksut valkoiset seinät ovat säilyneet Asunciónin keskustassa.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Callejon Historico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Callejon_Historico.jpg?width=1280",
+     "tekija": "Mil va",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Callejon_Historico.jpg",
+     "selite": "Talon vieressä kulkee kapea historiallinen kuja.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q367297",
+   "nimi": "Defensores del Chacon stadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -25.29207,
+   "lon": -57.65738,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio Defensores del Chaco en 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Defensores_del_Chaco_en_2019.jpg?width=1280",
+     "tekija": "Hazaña17",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Defensores_del_Chaco_en_2019.jpg",
+     "selite": "Defensores del Chaco on Paraguayn jalkapallomaajoukkueen kotistadion Asunciónissa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estadio Defensores del Chaco (5579872121).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Defensores_del_Chaco_(5579872121).jpg?width=1280",
+     "tekija": "yonolatengo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Defensores_del_Chaco_(5579872121).jpg",
+     "selite": "Stadionin punasinivalkoiset katsomot kaartuvat nurmikentän ympärille.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1369223",
+   "nimi": "General Pablo Rojasin stadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -25.3,
+   "lon": -57.6375,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio General Pablo Rojas.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_General_Pablo_Rojas.jpg?width=1280",
+     "tekija": "Jamedenp",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_General_Pablo_Rojas.jpg",
+     "selite": "Pablo Rojasin stadion on Cerro Porteñon kotistadion Asunciónin eteläosassa.",
+     "leveys": 4864,
+     "korkeus": 3136,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9082167",
+   "nimi": "Ignacio A. Panen kaupunginteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -25.28106,
+   "lon": -57.63492,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Municipal Ignacio A. Pane.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Municipal_Ignacio_A._Pane.jpg?width=1280",
+     "tekija": "Patty P",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Municipal_Ignacio_A._Pane.jpg",
+     "selite": "Teatro Municipal on Asunciónin vanha kaupunginteatteri, jonka sisäänkäyntiä suojaa lasikatos.",
+     "leveys": 2048,
+     "korkeus": 1360,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8239902",
+   "nimi": "Asunciónin lahti",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": -25.26667,
+   "lon": -57.61667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bahía De Asunción (43639068).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bah%C3%ADa_De_Asunci%C3%B3n_(43639068).jpeg?width=1280",
+     "tekija": "Anibal Ovelar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bah%C3%ADa_De_Asunci%C3%B3n_(43639068).jpeg",
+     "selite": "Asunciónin lahden ranta hohtaa illan auringonlaskussa, ja kaupungin siluetti peilautuu veteen.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Barco saliendo de la bahía de Asunción - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barco_saliendo_de_la_bah%C3%ADa_de_Asunci%C3%B3n_-_panoramio.jpg?width=1280",
+     "tekija": "Marcelo Ramirez",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barco_saliendo_de_la_bah%C3%ADa_de_Asunci%C3%B3n_-_panoramio.jpg",
+     "selite": "Laiva lähtee Asunciónin lahdelta Paraguay-joen puolelle.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Costanera Asunción.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Costanera_Asunci%C3%B3n.png?width=1280",
+   "tekija": "Overkill53",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Costanera_Asunci%C3%B3n.png",
+   "selite": "Asunciónin rantabulevardi Costanera kulkee Paraguay-joen rantaa pitkin kaupungin keskustan vierellä.",
+   "leveys": 1516,
+   "korkeus": 882,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama nuevo centro de Asunción.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_nuevo_centro_de_Asunci%C3%B3n.png?width=1280",
+   "tekija": "Overkill53",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_nuevo_centro_de_Asunci%C3%B3n.png",
+   "selite": "Asunciónin uudemman keskustan korkeat rakennukset nousevat vihreiden puiden yläpuolelle.",
+   "leveys": 1497,
+   "korkeus": 582,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q9046865",
+   "nimi": "Museo Memoria de la Ciudad",
+   "peruste": "pelin nosto",
+   "lat": -25.2782,
+   "lon": -57.6375,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q123337857",
+   "nimi": "Ateneo Paraguayo",
+   "peruste": "pelin nosto",
+   "lat": -25.28623,
+   "lon": -57.63722,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

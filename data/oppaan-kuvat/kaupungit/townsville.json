@@ -1,0 +1,289 @@
+{
+ "kaupunki": "townsville",
+ "kaupunkiQ": "Q190021",
+ "kohteet": [
+  {
+   "q": "Q5050127",
+   "nimi": "Castle Hill",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -19.2584,
+   "lon": 146.801,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castle Hill, Viewed From Townsville Breakwater..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castle_Hill%2C_Viewed_From_Townsville_Breakwater..jpg?width=1280",
+     "tekija": "TheDinosaurMan08",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castle_Hill%2C_Viewed_From_Townsville_Breakwater..jpg",
+     "selite": "Castle Hillin paljas graniittikallio kohoaa Townsvillen keskustan taakse Cleveland Bayn rannalla.",
+     "leveys": 5152,
+     "korkeus": 3864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hills Behind Townsville - panoramio (7).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hills_Behind_Townsville_-_panoramio_(7).jpg?width=1280",
+     "tekija": "Lobster1",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hills_Behind_Townsville_-_panoramio_(7).jpg",
+     "selite": "Punertava kallio on kaupungin tunnusmerkki ja näkyy kauas merelle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Castle Hill Townsville.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castle_Hill_Townsville.jpg?width=1280",
+     "tekija": "ROxBo",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castle_Hill_Townsville.jpg",
+     "selite": "Ilmasta katsottuna Castle Hill erottuu tasaisen rannikon yllä, kaukana siintää Magnetic Island.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q765710",
+   "nimi": "Magnetic Island",
+   "peruste": "pelin nosto",
+   "koko_m": 5000,
+   "lat": -19.13333,
+   "lon": 146.83333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arcadia Lookout, Magnetic Island, Queensland, Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arcadia_Lookout%2C_Magnetic_Island%2C_Queensland%2C_Australia.jpg?width=1280",
+     "tekija": "Joshua Tagicakibau",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arcadia_Lookout%2C_Magnetic_Island%2C_Queensland%2C_Australia.jpg",
+     "selite": "Magnetic Islandin metsäiset niemet ja lahdet näkyvät Arcadian näköalapaikalta.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20161007171559 - Horseshoe Bay on Magnetic Island (30156254422).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20161007171559_-_Horseshoe_Bay_on_Magnetic_Island_(30156254422).jpg?width=1280",
+     "tekija": "Felix Dance",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20161007171559_-_Horseshoe_Bay_on_Magnetic_Island_(30156254422).jpg",
+     "selite": "Horseshoe Bayn hiekkaranta ja palmut ovat saaren suosituimpia rantoja.",
+     "leveys": 2304,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Balding Bay (4299243275).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balding_Bay_(4299243275).jpg?width=1280",
+     "tekija": "Peter Shanks from Hobart, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Balding_Bay_(4299243275).jpg",
+     "selite": "Balding Bayn kallioinen ranta on yksi saaren eristyneistä lahdista.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q24189874",
+   "nimi": "Great Northern Hotel",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -19.263,
+   "lon": 146.8147,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Great Northern Hotel, Townsville, Australia in April 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Northern_Hotel%2C_Townsville%2C_Australia_in_April_2025.jpg?width=1280",
+     "tekija": "Ridiculopathy",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Northern_Hotel%2C_Townsville%2C_Australia_in_April_2025.jpg",
+     "selite": "Great Northern Hotel on kaksikerroksinen kulmahotelli, jonka kiertävät varjoisat verannat.",
+     "leveys": 4608,
+     "korkeus": 2128,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Townsville (2050342294).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Townsville_(2050342294).jpg?width=1280",
+     "tekija": "Phil Whitehouse from London, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Townsville_(2050342294).jpg",
+     "selite": "Illalla hotellin kulma valaistuu puoliksi varjoon jäävällä risteyksellä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7830284",
+   "nimi": "Vanha postitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -19.2581,
+   "lon": 146.818,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Brewery, Flinders Street, Townsville.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Brewery%2C_Flinders_Street%2C_Townsville.jpg?width=1280",
+     "tekija": "Jan Smith",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Brewery%2C_Flinders_Street%2C_Townsville.jpg",
+     "selite": "Entinen posti- ja lennätintalo Flinders Streetillä on kellotornillinen 1800-luvun rakennus.",
+     "leveys": 3337,
+     "korkeus": 2224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Post and Telegraph Offices, Flinders Street, Townsville, circa 1890.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Post_and_Telegraph_Offices%2C_Flinders_Street%2C_Townsville%2C_circa_1890.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Post_and_Telegraph_Offices%2C_Flinders_Street%2C_Townsville%2C_circa_1890.jpg",
+     "selite": "Vanhassa valokuvassa kellotorni hallitsee Flinders Streetin kulmaa.",
+     "leveys": 1400,
+     "korkeus": 1058,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6941039",
+   "nimi": "Tropiikin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -19.2574,
+   "lon": 146.822,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of Tropical Queensland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Tropical_Queensland.jpg?width=1280",
+     "tekija": "Rabs003",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Tropical_Queensland.jpg",
+     "selite": "Museum esittelee Queenslandin trooppisen pohjoisen luontoa ja haaksirikkoja.",
+     "leveys": 5534,
+     "korkeus": 3689,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Museum of Tropical Queensland from Ross Creek.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Tropical_Queensland_from_Ross_Creek.jpg?width=1280",
+     "tekija": "User:WikiTownsvillian",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Tropical_Queensland_from_Ross_Creek.jpg",
+     "selite": "Museon kaareva katto näkyy Ross Creekin ja venesataman toiselta puolelta.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7811740",
+   "nimi": "Tobruk Memorial Baths",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -19.2534,
+   "lon": 146.82,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tobruk Memorial Baths, Townsville, circa 1953.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tobruk_Memorial_Baths%2C_Townsville%2C_circa_1953.jpg?width=1280",
+     "tekija": "Unknown authorUnknown author",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tobruk_Memorial_Baths%2C_Townsville%2C_circa_1953.jpg",
+     "selite": "Tobrukin muistouimala rakennettiin sotaveteraanien muistoksi Townsvillen rantaan.",
+     "leveys": 1400,
+     "korkeus": 1094,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view of Townsville.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Townsville.jpg?width=1280",
+   "tekija": "Hanek45 at English Wikipedia",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Townsville.jpg",
+   "selite": "Ilmakuvassa Townsvillen keskusta, satamakanavat ja Castle Hill nousevat rannikon tasangolta.",
+   "leveys": 1600,
+   "korkeus": 1200,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "TownsvilleCBD.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TownsvilleCBD.jpg?width=1280",
+   "tekija": "Sean",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TownsvilleCBD.jpg",
+   "selite": "Townsvillen keskustan tornit ja Castle Hill näkyvät Ross Creekin yli.",
+   "leveys": 1400,
+   "korkeus": 937,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q7270766",
+   "nimi": "Queens Gardens",
+   "peruste": "pelin nosto",
+   "lat": -19.253,
+   "lon": 146.81,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q24189505",
+   "nimi": "Vanha tullitalo",
+   "peruste": "pelin nosto",
+   "lat": -19.2556,
+   "lon": 146.8219,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q24189523",
+   "nimi": "School of Arts",
+   "peruste": "pelin nosto",
+   "lat": -19.2603,
+   "lon": 146.8137,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

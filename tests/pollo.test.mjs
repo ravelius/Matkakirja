@@ -720,7 +720,7 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
   // äänikeskustelun kokeelle), ja chat antaa sille pyynnön kehyslajin.
   assert.ok(/kehysOhje\(kehysLaji\(kehys\)\)/.test(kehote),
     'kehyslajia ei liitetä järjestelmäkehotteeseen');
-  assert.ok(/pulunKehote\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
+  assert.ok(/pulunKehote(?:Osat)?\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
     'chat ei välitä kehyslajia kehotteelle');
 });
 
@@ -2233,8 +2233,16 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {},
   const lokit = [];
   const kertavastaukset = Array.isArray(kerta) ? [...kerta] : [kerta ?? malliVastaus('')];
   let kertaNro = 0;
+  const taydennykset = [];
   globalThis.fetch = async (osoite, asetukset) => {
     const pyydetty = JSON.parse(asetukset.body);
+    // Jatkokysymysten täydennys (tasan 2, 5.10.2026) on oma pieni kutsunsa: erikseen, ei kuluta kertavastauksia.
+    if (JSON.stringify(pyydetty.system ?? '').includes('Keksi täsmälleen kaksi lyhyttä jatkokysymystä')) {
+      taydennykset.push(pyydetty);
+      return new Response(JSON.stringify(malliVastaus('Mikä täydennys yksi?\nMikä täydennys kaksi?')), {
+        status: 200, headers: { 'content-type': 'application/json' },
+      });
+    }
     kutsut.push(pyydetty);
     if (pyydetty.stream) {
       return new Response(sseVirta(virta ?? []), {
@@ -2258,6 +2266,7 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {},
       tapahtumat: sse ? lueSse(teksti) : [],
       data: sse ? null : JSON.parse(teksti),
       kutsut,
+      taydennykset,
       lokit,
       otsakkeet: vastaus.headers,
     };
@@ -2326,7 +2335,8 @@ test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async (
 
   assert.deepEqual(loppu(ajo), {
     vastaus: 'Sparta oli Lakonian kaupunkivaltio.',
-    jatkot: ['Kuka oli Lykurgos?'],
+    // Tasan kaksi jatkoa (5.10.2026): mallin yksi + täydennys.
+    jatkot: ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?'],
     syy: null,
   });
 });
@@ -2385,7 +2395,7 @@ test('kertavastauspolku käsittelee tyhjän samalla tavalla', async () => {
   });
   assert.equal(onnistui.kutsut.length, 2, 'tyhjää kertavastausta ei yritetty uudelleen');
   assert.deepEqual(onnistui.data, {
-    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: [], syy: null,
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: ['Mikä täydennys yksi?', 'Mikä täydennys kaksi?'], syy: null,
   });
 
   // Kaksi tyhjää peräkkäin: rehellinen teksti, ei osaamattomuutta.
@@ -2686,6 +2696,8 @@ test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', asy
   assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
   assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Haiku 5.5 (testimalli, kulut.js): ajattelu pois, muuten 700 tokenin katto kuluu ajatteluun (8.10.2026).
+  assert.deepEqual(ajatteluKentat('claude-haiku-5-5'), { thinking: { type: 'disabled' } });
   // Sonnet 5.5: `disabled` = 400, pienin tila on ajattelu vain työkalujen välissä.
   assert.deepEqual(ajatteluKentat('claude-sonnet-5-5'), { thinking: { type: 'between_tools' } });
   // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
@@ -2835,7 +2847,7 @@ test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eik
   const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
     method: 'POST', headers: o, body: JSON.stringify(runko),
   }), env, {});
-  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime', 'kaynti', 'kaynnit']);
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime', 'kaynti', 'kaynnit', 'opas', 'opaskysy']);
   assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
   for (const tehtava of ['kuva', 'tila']) {
     const v = await pyynto({ tehtava });
@@ -2950,15 +2962,15 @@ test('worker: puhevastaus kertoo moottorin ja lähteen otsakkeissa (xai, varapol
   }
 });
 
-test('julkaisun puhemoottoritarkistus: vaatii xai:n, uusii kunnes salaisuus on levinnyt', async () => {
+test('julkaisun puhemoottoritarkistus: vaatii elevenin (oletus 5.10.2026), uusii kunnes salaisuus on levinnyt', async () => {
   const { tarkistaPuhemoottori } = await import('../tools/pollo/tarkista-puhemoottori.mjs');
   const vastaus = (moottori) => new Response(new Uint8Array([1]), { status: 200, headers: { 'x-puhe-moottori': moottori } });
-  const jono = ['openai', 'xai'];
-  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
+  const jono = ['xai', 'eleven'];
+  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', undefined, { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
   assert.equal(ok.ok, true);
-  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('openai') });
+  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'eleven', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('xai') });
   assert.equal(ei.ok, false);
-  assert.equal(ei.moottori, 'openai');
+  assert.equal(ei.moottori, 'xai', 'xAI-varapolku ei kelpaa julkaisun tarkistukseen');
 });
 
 test('worker: lukijan xAI-ääni on pelaajan valinta ilman kehittäjäkoodia (omistaja 27.9.2026)', async () => {
@@ -2999,11 +3011,12 @@ test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimu
   const alkuperainen = globalThis.fetch;
   globalThis.fetch = async (_osoite, asetukset) => {
     rungot.push(JSON.parse(asetukset.body));
-    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Tuota niin. Pariisi on kaupunki.' }] }),
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Tuota niin. Pariisi on kaupunki.\nJATKOT:\nMissä Pariisi on?\nKuka asui Pariisissa?' }] }),
       { status: 200, headers: { 'content-type': 'application/json' } });
   };
   try {
-    for (const runko of [{ kysymys: 'Mikä on Pariisi?' }, { kysymys: 'Mikä on Pariisi?', luetaan: 1 }]) {
+    for (const runko of [{ kysymys: 'Mikä on Pariisi?' }, { kysymys: 'Mikä on Pariisi?', luetaan: 1 },
+      { kysymys: 'Entä Louvre?', kehys: 'jatko' }]) {
       const v = await worker.fetch(new Request('https://pollo.example/', {
         method: 'POST',
         headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7', origin: 'https://matkakirja.app' },
@@ -3014,10 +3027,64 @@ test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimu
   } finally {
     globalThis.fetch = alkuperainen;
   }
-  const [kirjoitettu, luettava] = rungot.map((r) => r.system);
-  assert.equal(kirjoitettu.length, 1, 'kirjoitettu: yksi lohko kuten ennen');
-  assert.deepEqual(kirjoitettu[0].cache_control, { type: 'ephemeral' });
-  // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje omana lohkonaan sen jälkeen.
-  assert.deepEqual(luettava[0], kirjoitettu[0]);
-  assert.deepEqual(luettava[1], { type: 'text', text: LUETTAVAN_ALKU });
+  const [kirjoitettu, luettava, jatko] = rungot.map((r) => r.system);
+  // K3 (8.10.2026): pohja + äänitagit välimuistilohkoina, kehyslaji (ja alkuohje) rajan jälkeen ilman välimuistia.
+  assert.equal(kirjoitettu.length, 3, 'pohja, äänitagit, kehys');
+  assert.deepEqual(kirjoitettu.map((l) => Boolean(l.cache_control)), [true, true, false]);
+  assert.match(kirjoitettu[2].text, /VASTAUKSEN LAJI: UUDEN AIHEEN/);
+  // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje kehyksen perässä rajan jälkeen.
+  assert.deepEqual(luettava.slice(0, 2), kirjoitettu.slice(0, 2));
+  assert.ok(luettava[2].text.endsWith(LUETTAVAN_ALKU) && !luettava[2].cache_control);
+  // Kehyslajin vaihto (uusi → jatko) ei muuta välimuistilohkoja: ei uutta 14 k:n kirjoitusta.
+  assert.deepEqual(jatko.slice(0, 2), kirjoitettu.slice(0, 2));
+  assert.match(jatko[2].text, /VASTAUKSEN LAJI: JATKOKYSYMYS/);
+});
+
+test('Pulun taustatieto: valmis vastaus kontekstiin, ei näytettäväksi (omistaja 5.10.2026 klo 16.4x)', async () => {
+  const ajo = await ajaChat({
+    runko: {
+      kysymys: 'Mikä on Etna?',
+      taustatieto: [{ teksti: 'Etna on Euroopan aktiivisin tulivuori.', lahde: { url: 'https://fi.wikipedia.org/wiki/Etna', title: 'Wikipedia' } },
+        { teksti: 'Toinen', lahde: { url: 'javascript:alert(1)' } }],
+    },
+    kerta: malliVastaus('Etna on Sisilian tulivuori.\nJATKOT:\nKuinka korkea Etna on?\nMilloin Etna purkautui viimeksi?'),
+  });
+  assert.equal(ajo.tila, 200);
+  const konteksti = ajo.kutsut[0].messages[0].content;
+  assert.match(konteksti, /PULUN TAUSTATIETO/);
+  assert.match(konteksti, /Etna on Euroopan aktiivisin tulivuori\./);
+  assert.match(konteksti, /Lähde: Wikipedia, https:\/\/fi\.wikipedia\.org\/wiki\/Etna/);
+  assert.doesNotMatch(konteksti, /javascript:/, 'vain https-lähde kelpaa');
+  assert.equal(ajo.data.vastaus, 'Etna on Sisilian tulivuori.');
+  assert.deepEqual(ajo.data.jatkot, ['Kuinka korkea Etna on?', 'Milloin Etna purkautui viimeksi?']);
+  assert.equal(ajo.taydennykset.length, 0, 'kaksi jatkoa: ei täydennystä');
+});
+
+test('jatkokysymyksiä tasan kaksi: vajaa lohko täydennetään, ylimääräiset karsitaan (5.10.2026)', async () => {
+  const vajaa = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?' },
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.\nJATKOT:\nKuka oli Lykurgos?'),
+  });
+  assert.deepEqual(vajaa.data.jatkot, ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?']);
+  assert.equal(vajaa.taydennykset.length, 1);
+  const ilman = await ajaChat({ runko: { kysymys: 'Mikä oli Sparta?' }, kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.') });
+  assert.deepEqual(ilman.data.jatkot, ['Mikä täydennys yksi?', 'Mikä täydennys kaksi?']);
+  const liikaa = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?' },
+    kerta: malliVastaus('Sparta oli valtio.\nJATKOT:\nKuka oli Lykurgos?\nMikä oli helootti?\nMissä Sparta oli?'),
+  });
+  assert.deepEqual(liikaa.data.jatkot, ['Kuka oli Lykurgos?', 'Mikä oli helootti?']);
+  assert.equal(liikaa.taydennykset.length, 0);
+  // Striimissä sama takuu loppu-tapahtumassa.
+  const virta = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?', striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      ...['Sparta oli valtio.\n', 'JATKOT:\n', 'Kuka oli Lykurgos?\n'].map((teksti) => ({
+        laji: 'content_block_delta', data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+      })),
+      { laji: 'message_stop', data: { type: 'message_stop' } },
+    ],
+  });
+  assert.deepEqual(loppu(virta).jatkot, ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?']);
 });

@@ -1,0 +1,414 @@
+{
+ "kaupunki": "kongo",
+ "kaupunkiQ": "Q3503",
+ "kohteet": [
+  {
+   "q": "Q3838",
+   "nimi": "Kinshasa",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -4.32194,
+   "lon": 15.31194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2010-03-07-Kinshasa depuis Brazzaville.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-03-07-Kinshasa_depuis_Brazzaville.jpg?width=1280",
+     "tekija": "Karin Lakeman",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010-03-07-Kinshasa_depuis_Brazzaville.jpg",
+     "selite": "Kinshasan pilvenpiirtäjät erottuvat Kongojoen toisella rannalla Brazzavillesta katsottuna.",
+     "leveys": 2977,
+     "korkeus": 1985,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q559340",
+   "nimi": "Livingstonen putoukset",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -4.32194,
+   "lon": 15.20778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chutes Livingstone.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chutes_Livingstone.jpg?width=1280",
+     "tekija": "User:Vberger",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chutes_Livingstone.jpg",
+     "selite": "Livingstonen putoukset ovat Kongojoen alajuoksun koskijakso, joka estää laivaliikenteen merelle.",
+     "leveys": 1279,
+     "korkeus": 853,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Livingstone Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Livingstone_Falls.jpg?width=1280",
+     "tekija": "Henry M. Stanley",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Livingstone_Falls.jpg",
+     "selite": "Vanha piirros esittää putousten pyöreitä kivenlohkareita ja pauhaavaa vettä.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q38417",
+   "nimi": "Boyoman putoukset",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 0.49111,
+   "lon": 25.20639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fishing at the falls - Julien Harneis - February 28, 2007 - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fishing_at_the_falls_-_Julien_Harneis_-_February_28%2C_2007_-_1.jpg?width=1280",
+     "tekija": "Julien Harneis from Conakry, Guinea",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fishing_at_the_falls_-_Julien_Harneis_-_February_28%2C_2007_-_1.jpg",
+     "selite": "Boyoman koskissa kalastajat pyytävät kalaa puisilla pyydystelineillä kuohuvan veden päällä.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fishing at the falls - Julien Harneis - February 28, 2007 - 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fishing_at_the_falls_-_Julien_Harneis_-_February_28%2C_2007_-_2.jpg?width=1280",
+     "tekija": "Julien Harneis from Conakry, Guinea",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fishing_at_the_falls_-_Julien_Harneis_-_February_28%2C_2007_-_2.jpg",
+     "selite": "Pyydystelineet ulottuvat kuohuviin koskiin Kisanganin lähellä.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19558",
+   "nimi": "Ingan putoukset",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -5.5,
+   "lon": 13.625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Inga Falls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inga_Falls.jpg?width=1280",
+     "tekija": "Χρίστος Ιμμανοελ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inga_Falls.jpg",
+     "selite": "Ingan koskissa Kongojoki ryöppyää vihreiden kukkuloiden välissä, ja virtaus on tässä maailman voimakkaimpia.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Inga Falls 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inga_Falls_2.jpg?width=1280",
+     "tekija": "Χρίστος Ιμμανοελ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inga_Falls_2.jpg",
+     "selite": "Ingan putousten alue sijaitsee alajuoksulla, missä joki kapenee kallioiden väliin.",
+     "leveys": 2800,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q750025",
+   "nimi": "Malebon allas",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": -4.28194,
+   "lon": 15.48861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rive nord du Pool Malebo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rive_nord_du_Pool_Malebo.JPG?width=1280",
+     "tekija": "Bsm15",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rive_nord_du_Pool_Malebo.JPG",
+     "selite": "Malebon altaassa Kongojoki levenee järveksi, jonka rannoilla ovat Kinshasa ja Brazzaville.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Congo River with upstream half of Pool Malebo and Mbamu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Congo_River_with_upstream_half_of_Pool_Malebo_and_Mbamu.jpg?width=1280",
+     "tekija": "Dicklyon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Congo_River_with_upstream_half_of_Pool_Malebo_and_Mbamu.jpg",
+     "selite": "Ilmakuvassa näkyy Malebon altaan yläpää ja Mbamun saari.",
+     "leveys": 2740,
+     "korkeus": 1413,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q211073",
+   "nimi": "Matadi",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -5.81667,
+   "lon": 13.48333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Matadi Bridge DR Congo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matadi_Bridge_DR_Congo.jpg?width=1280",
+     "tekija": "Χρίστος Ιμμανοελ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Matadi_Bridge_DR_Congo.jpg",
+     "selite": "Matadin riippusilta ylittää Kongojoen vuorten välissä ja yhdistää kaupungin muuhun maahan.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pont Marechal, Matadi, Congo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pont_Marechal%2C_Matadi%2C_Congo.jpg?width=1280",
+     "tekija": "3nigma",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pont_Marechal%2C_Matadi%2C_Congo.jpg",
+     "selite": "Marsalkka Mobutun silta kaartuu Kongojoen yli Matadin lähellä.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q223917",
+   "nimi": "Boma",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -5.85,
+   "lon": 13.05,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Boma cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boma_cathedral.jpg?width=1280",
+     "tekija": "radiookapi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boma_cathedral.jpg",
+     "selite": "Boman tiilikatedraali kohoaa kaupungissa, joka oli vuoteen 1926 asti Kongon vapaavaltion pääkaupunki.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q223589",
+   "nimi": "Virungan kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 20000,
+   "lat": -0.5,
+   "lon": 29.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bukima Patrol Post.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bukima_Patrol_Post.jpg?width=1280",
+     "tekija": "Cai Tjeenk Willink",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bukima_Patrol_Post.jpg",
+     "selite": "Mikeno-tulivuori kohoaa Virungan kansallispuiston suojelualueen yllä olkikattoisten majojen takana.",
+     "leveys": 5120,
+     "korkeus": 3413,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Virunga National Park Landscape.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Virunga_National_Park_Landscape.jpg?width=1280",
+     "tekija": "User: (WT-shared) Cai at wts wikivoyage",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Virunga_National_Park_Landscape.jpg",
+     "selite": "Tulivuoren siluetti erottuu iltataivasta vasten Virungan vuoristossa.",
+     "leveys": 2398,
+     "korkeus": 2433,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214696",
+   "nimi": "Nyiragongon tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": -1.51667,
+   "lon": 29.25,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lava Lake Nyiragongo 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lava_Lake_Nyiragongo_2.jpg?width=1280",
+     "tekija": "Cai Tjeenk Willink (Caitjeenk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lava_Lake_Nyiragongo_2.jpg",
+     "selite": "Nyiragongon kraaterissa kiehuu yksi maailman suurimmista laavajärvistä.",
+     "leveys": 4324,
+     "korkeus": 2820,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "An aerial view of the towering volcanic peak of Mt. Nyiragongo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/An_aerial_view_of_the_towering_volcanic_peak_of_Mt._Nyiragongo.jpg?width=1280",
+     "tekija": "MONUSCO / Neil Wetmore",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:An_aerial_view_of_the_towering_volcanic_peak_of_Mt._Nyiragongo.jpg",
+     "selite": "Nyiragongon kraateri ilmasta nähtynä, huipulta nousee höyrypatsas.",
+     "leveys": 2928,
+     "korkeus": 1680,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q457324",
+   "nimi": "Kahuzi-Biegan kansallispuisto",
+   "peruste": "UNESCO",
+   "koko_m": 15000,
+   "lat": -2.31481,
+   "lon": 28.75867,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kahuzi-Biega National Park (39423247252).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kahuzi-Biega_National_Park_(39423247252).jpg?width=1280",
+     "tekija": "Forest Service, USDA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kahuzi-Biega_National_Park_(39423247252).jpg",
+     "selite": "Kahuzi-Biegan sademetsää halkoo vesiputous, ja suojelualue on tunnettu tasankogorilloistaan.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180531 View from the top of Mt. Kahuzi in Kahuzi-Biega National Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180531_View_from_the_top_of_Mt._Kahuzi_in_Kahuzi-Biega_National_Park.jpg?width=1280",
+     "tekija": "Forest Service, USDA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180531_View_from_the_top_of_Mt._Kahuzi_in_Kahuzi-Biega_National_Park.jpg",
+     "selite": "Kahuzi-vuoren huipulta avautuu näköala metsäisille harjanteille.",
+     "leveys": 4898,
+     "korkeus": 3265,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q457304",
+   "nimi": "Okapin eläintensuojelualue",
+   "peruste": "UNESCO",
+   "koko_m": 15000,
+   "lat": 2,
+   "lon": 28.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Epulu Okapi Reserve.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Epulu_Okapi_Reserve.jpg?width=1280",
+     "tekija": "J. Doremus",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Epulu_Okapi_Reserve.jpg",
+     "selite": "Epulu-joki virtaa Ituri-sademetsän halki okapien suojelualueen sydämessä.",
+     "leveys": 1800,
+     "korkeus": 1350,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Okapi Reserve bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Okapi_Reserve_bridge.jpg?width=1280",
+     "tekija": "J. Doremus",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Okapi_Reserve_bridge.jpg",
+     "selite": "Rungoista rakennettu silta ylittää purot Ituri-sademetsässä.",
+     "leveys": 1800,
+     "korkeus": 1350,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view of the Congo River near Kisangani.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_Congo_River_near_Kisangani.jpg?width=1280",
+   "tekija": "MONUSCO/Myriam Asmani",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Congo_River_near_Kisangani.jpg",
+   "selite": "Kongojoki jakautuu lukuisiksi haaroiksi ja saariksi Kisanganin lähellä.",
+   "leveys": 9000,
+   "korkeus": 5544,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Sunrise near Mossaka (Congo).JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise_near_Mossaka_(Congo).JPG?width=1280",
+   "tekija": "Bsm15",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunrise_near_Mossaka_(Congo).JPG",
+   "selite": "Aamuaurinko nousee Kongojoen yllä Mossakan lähellä.",
+   "leveys": 2816,
+   "korkeus": 2112,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q328488",
+   "nimi": "Salongan kansallispuisto",
+   "peruste": "UNESCO",
+   "lat": -2,
+   "lon": 21,
+   "syy": "ei vapaata kuvaa >= 1200 px, jossa kohde on tunnistettavasti"
+  }
+ ]
+}

@@ -1,0 +1,326 @@
+{
+ "kaupunki": "orjarannikko",
+ "kaupunkiQ": "Q1360692",
+ "kohteet": [
+  {
+   "q": "Q1969968",
+   "nimi": "São João Baptista de Ajudán linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 6.35889,
+   "lon": 2.09,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20131010-DSC 3150 (10309548016).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20131010-DSC_3150_(10309548016).jpg?width=1280",
+     "tekija": "jbdodane",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20131010-DSC_3150_(10309548016).jpg",
+     "selite": "Portugalilaislinnake Ouidahissa oli vuosisatoja Euroopan tukikohta Orjarannikolla.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20131010-DSC 3153 (10309819943).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20131010-DSC_3153_(10309819943).jpg?width=1280",
+     "tekija": "jbdodane",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20131010-DSC_3153_(10309819943).jpg",
+     "selite": "Linnakkeen valkoinen kuvernöörin asuinrakennus toimii nykyään Ouidahin historiallisena museona.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cour du Fort Portugais.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cour_du_Fort_Portugais.jpg?width=1280",
+     "tekija": "Rachad sanoussi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cour_du_Fort_Portugais.jpg",
+     "selite": "Linnakkeen pihaa ympäröivät matalat valkoiseksi kalkitut rakennukset ja suuret puut.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18467833",
+   "nimi": "Ovi jolta ei ole paluuta",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 6.324,
+   "lon": 2.0894,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Door of no return.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Door_of_no_return.jpg?width=1280",
+     "tekija": "Francisco Anzola",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Door_of_no_return.jpg",
+     "selite": "Rannalle johtavan hiekkatien päässä seisova portti muistuttaa orjakaupan viimeisestä taipaleesta Ouidahissa.",
+     "leveys": 5909,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Door of No Return Sign Ouidah (218406275).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Door_of_No_Return_Sign_Ouidah_(218406275).jpg?width=1280",
+     "tekija": "Brian Kelley from Auggen, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Door_of_No_Return_Sign_Ouidah_(218406275).jpg",
+     "selite": "Rannan vanha opaste nimeää paikan, jonka kautta orjia lähetettiin Atlantin yli.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q36698317",
+   "nimi": "Pyhän käärmeen temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 6.35997,
+   "lon": 2.08504,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Temple des Pythons de Ouidah 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_des_Pythons_de_Ouidah_02.jpg?width=1280",
+     "tekija": "Gildaskiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_des_Pythons_de_Ouidah_02.jpg",
+     "selite": "Temppelin värikäs sisäänkäynti on Ouidahin vodun-uskonnon keskeisimpiä paikkoja.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrée du Temple des Pythons (Ouidah).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entr%C3%A9e_du_Temple_des_Pythons_(Ouidah).jpg?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_du_Temple_des_Pythons_(Ouidah).jpg",
+     "selite": "Pythonkäärmeitä pidetään temppelissä pyhinä, ja sisäänkäynnin vieressä myydään vodun-veistoksia.",
+     "leveys": 2652,
+     "korkeus": 2061,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ouidah-Temple des Pythons-Petite case ronde (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ouidah-Temple_des_Pythons-Petite_case_ronde_(2).jpg?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ouidah-Temple_des_Pythons-Petite_case_ronde_(2).jpg",
+     "selite": "Temppelin pihalla on pieniä pyöreitä majoja, joissa käärmeitä säilytetään.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2091236",
+   "nimi": "Ouidahin basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 6.36065,
+   "lon": 2.08473,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Façade principale de la basilique de ouidah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fa%C3%A7ade_principale_de_la_basilique_de_ouidah.jpg?width=1280",
+     "tekija": "houaito affo daniel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_principale_de_la_basilique_de_ouidah.jpg",
+     "selite": "Ouidahin harmaa basilika seisoo vodun-temppelin naapurina, ja kaksi uskontoa elää kaupungissa rinnakkain.",
+     "leveys": 2736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "10eme station de la Basilique de l'Immaculée-Conception de Ouidah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/10eme_station_de_la_Basilique_de_l'Immacul%C3%A9e-Conception_de_Ouidah.jpg?width=1280",
+     "tekija": "Rachad sanoussi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:10eme_station_de_la_Basilique_de_l'Immacul%C3%A9e-Conception_de_Ouidah.jpg",
+     "selite": "Basilikan muuria kiertää ristin tie, jonka kultaiset reliefit kuvaavat Kristuksen kärsimystä.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q111469133",
+   "nimi": "Zoungbodjin muistomerkki",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 6.34,
+   "lon": 2.08917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mémorial de Zoungbodji (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A9morial_de_Zoungbodji_(2).jpg?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:M%C3%A9morial_de_Zoungbodji_(2).jpg",
+     "selite": "Zoungbodjin muistomerkki on orjuutettujen ihmisten joukkohaudan paikka, ja patsas kuvaa kahlittua polvistunutta naista.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1493703",
+   "nimi": "Ganvie",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 6.46769,
+   "lon": 2.39125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ganvie2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ganvie2.jpg?width=1280",
+     "tekija": "Manu25 at French Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ganvie2.jpg",
+     "selite": "Ganvie on Nokoué-järveen paaluille rakennettu kylä, jonka asukkaat perustivat suojaan orjakauppiailta.",
+     "leveys": 2000,
+     "korkeus": 1334,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20170319-2017 A630415 (33592536061).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20170319-2017_A630415_(33592536061).jpg?width=1280",
+     "tekija": "Dan Sloan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20170319-2017_A630415_(33592536061).jpg",
+     "selite": "Kylän talot seisovat korkeilla puupaaluilla keskellä vettä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20170319-2017 A630398 (32908197663).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20170319-2017_A630398_(32908197663).jpg?width=1280",
+     "tekija": "Dan Sloan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20170319-2017_A630398_(32908197663).jpg",
+     "selite": "Kylän vesikatu kulkee talojen välistä, ja kulkuneuvoina ovat veneet.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q798812",
+   "nimi": "Badagry",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 6.41667,
+   "lon": 2.88333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "First storey building in Nigeria in Badagry Lagos State- Nigeria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_storey_building_in_Nigeria_in_Badagry_Lagos_State-_Nigeria.jpg?width=1280",
+     "tekija": "Omoeko Media",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:First_storey_building_in_Nigeria_in_Badagry_Lagos_State-_Nigeria.jpg",
+     "selite": "Badagryssa seisoo Nigerian ensimmäisenä pidetty kaksikerroksinen talo, jonka lähetyssaarnaajat rakensivat.",
+     "leveys": 2250,
+     "korkeus": 1500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "231108321 Point of No Return, Badagry.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/231108321_Point_of_No_Return%2C_Badagry.jpg?width=1280",
+     "tekija": "Solasly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:231108321_Point_of_No_Return%2C_Badagry.jpg",
+     "selite": "Badagryn pitkä hiekkaranta oli orjakaupan lähtöpaikkoja Atlantin rannalla.",
+     "leveys": 3015,
+     "korkeus": 2997,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Point of no return, Badagry.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Point_of_no_return%2C_Badagry.jpg?width=1280",
+     "tekija": "Ei'eke",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Point_of_no_return%2C_Badagry.jpg",
+     "selite": "Rannan muistomerkki Badagryssa muistuttaa orjuutettujen viimeisestä askeleesta Afrikan maalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Plage de Ouidah Benin.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plage_de_Ouidah_Benin.jpg?width=1280",
+   "tekija": "jbdodane",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plage_de_Ouidah_Benin.jpg",
+   "selite": "Orjarannikon pitkä hiekkaranta Ouidahin edustalla aukeaa suoraan Atlantille.",
+   "leveys": 4928,
+   "korkeus": 3264,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Plage de Ouidah.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plage_de_Ouidah.jpg?width=1280",
+   "tekija": "jbdodane",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plage_de_Ouidah.jpg",
+   "selite": "Rannan hiekalla seisoo yksinäinen ruokokattoinen maja Benininlahden äärellä.",
+   "leveys": 4865,
+   "korkeus": 3222,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

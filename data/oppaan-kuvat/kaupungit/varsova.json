@@ -1,0 +1,581 @@
+{
+ "kaupunki": "varsova",
+ "kaupunkiQ": "Q270",
+ "kohteet": [
+  {
+   "q": "Q756098",
+   "nimi": "Varsovan linna",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 52.24778,
+   "lon": 21.01417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Warszawa-Zamek Królewski.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warszawa-Zamek_Kr%C3%B3lewski.jpg?width=1280",
+     "tekija": "Marcin Białek",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warszawa-Zamek_Kr%C3%B3lewski.jpg",
+     "selite": "Varsovan kuninkaanlinna on punainen barokkipalatsi Linnantorin laidalla ja entinen Puolan kuninkaiden asuinpaikka.",
+     "leveys": 6616,
+     "korkeus": 4461,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Royal Castle, Warsaw, 2006 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Castle%2C_Warsaw%2C_2006_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Castle%2C_Warsaw%2C_2006_(01).jpg",
+     "selite": "Linnan kellotorni kohoaa Linnantorin yläpuolelle.",
+     "leveys": 2825,
+     "korkeus": 1882,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Castle Square with Royal Castle in Warsaw (165454751).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castle_Square_with_Royal_Castle_in_Warsaw_(165454751).jpg?width=1280",
+     "tekija": "Thomas Roessler",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castle_Square_with_Royal_Castle_in_Warsaw_(165454751).jpg",
+     "selite": "Illalla linnan julkisivu ja Vanhankaupungin talot valaistaan.",
+     "leveys": 1920,
+     "korkeus": 1282,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2712497",
+   "nimi": "Vanhankaupungin tori",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 52.2497,
+   "lon": 21.0122,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Market Square Warsaw (22594p).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Market_Square_Warsaw_(22594p).jpg?width=1280",
+     "tekija": "Rhododendrites",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Market_Square_Warsaw_(22594p).jpg",
+     "selite": "Vanhankaupungin tori on Varsovan historiallisen keskustan sydän, jota reunustavat värikkäät kaupunkitalot.",
+     "leveys": 7214,
+     "korkeus": 3448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Town Market Square in Warsaw, 2022, 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Market_Square_in_Warsaw%2C_2022%2C_01.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Market_Square_in_Warsaw%2C_2022%2C_01.jpg",
+     "selite": "Torin kahvilat ja talot rakennettiin uudelleen sodan tuhojen jälkeen.",
+     "leveys": 4032,
+     "korkeus": 2361,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Old Town Market Place (9629526733).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Market_Place_(9629526733).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Market_Place_(9629526733).jpg",
+     "selite": "Tori on suorakaiteen muotoinen ja kivetty.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q167566",
+   "nimi": "Kulttuurin ja tieteen palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 52.23167,
+   "lon": 21.00639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pałac Kultury i Nauki 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pa%C5%82ac_Kultury_i_Nauki_2019.jpg?width=1280",
+     "tekija": "Adrian Grycuk",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pa%C5%82ac_Kultury_i_Nauki_2019.jpg",
+     "selite": "Kulttuurin ja tieteen palatsi on Varsovan korkein rakennus ja Neuvostoliiton lahjoittama sosialistinen klassismi.",
+     "leveys": 4533,
+     "korkeus": 7019,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "000 Palac kultury.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/000_Palac_kultury.jpg?width=1280",
+     "tekija": "Cezary p",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:000_Palac_kultury.jpg",
+     "selite": "Palatsin porrastettu torni kohoaa keskustan yläpuolelle.",
+     "leveys": 1664,
+     "korkeus": 2500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "13N 799+788 Jana Pawła II PKiN Warszawa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/13N_799%2B788_Jana_Paw%C5%82a_II_PKiN_Warszawa.jpg?width=1280",
+     "tekija": "Kris Duda",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:13N_799%2B788_Jana_Paw%C5%82a_II_PKiN_Warszawa.jpg",
+     "selite": "Palatsin ympärillä on nykyään uudempia lasi- ja teräsrakennuksia.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q345279",
+   "nimi": "Łazienkin puisto",
+   "peruste": "sitelinks",
+   "koko_m": 700,
+   "lat": 52.21278,
+   "lon": 21.03278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palace on the Isle (21895p).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_on_the_Isle_(21895p).jpg?width=1280",
+     "tekija": "Rhododendrites",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_on_the_Isle_(21895p).jpg",
+     "selite": "Łazienkin puisto on Varsovan tunnetuin kuninkaallinen puisto, jossa Vedelle rakennettu palatsi hohtaa valkoisena.",
+     "leveys": 7407,
+     "korkeus": 3666,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Warszawa - Pałac Łazienkowski (13).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warszawa_-_Pa%C5%82ac_%C5%81azienkowski_(13).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warszawa_-_Pa%C5%82ac_%C5%81azienkowski_(13).jpg",
+     "selite": "Palatsi kohoaa keinotekoisen lammen rannalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Poland Warsaw Łazienki Palace 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Poland_Warsaw_%C5%81azienki_Palace_2.jpg?width=1280",
+     "tekija": "Wojsyl",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Poland_Warsaw_%C5%81azienki_Palace_2.jpg",
+     "selite": "Klassistisen palatsin julkisivua koristavat pylväät ja patsaat.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q47473",
+   "nimi": "Wilanówin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 52.16528,
+   "lon": 21.09028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018-07-06 Pałac w Wilanowie 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-07-06_Pa%C5%82ac_w_Wilanowie_01.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-07-06_Pa%C5%82ac_w_Wilanowie_01.jpg",
+     "selite": "Wilanówin palatsi on keltainen barokkipalatsi, joka kuului Puolan kuningas Jan III Sobieskille.",
+     "leveys": 5079,
+     "korkeus": 2209,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018-07-06 Pałac w Wilanowie 15.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-07-06_Pa%C5%82ac_w_Wilanowie_15.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-07-06_Pa%C5%82ac_w_Wilanowie_15.jpg",
+     "selite": "Palatsia ympäröivät muotopuutarhat.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "31-08-2015 Pałac w Wilanowie (Warszawa) (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/31-08-2015_Pa%C5%82ac_w_Wilanowie_(Warszawa)_(2).jpg?width=1280",
+     "tekija": "Kapsuglan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:31-08-2015_Pa%C5%82ac_w_Wilanowie_(Warszawa)_(2).jpg",
+     "selite": "Julkisivua koristavat runsaat reliefit ja pylväät.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q648754",
+   "nimi": "Pyhän Johanneksen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 52.24889,
+   "lon": 21.01361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bazylika archikatedralna św. Jana Chrzciciela w Warszawie 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazylika_archikatedralna_%C5%9Bw._Jana_Chrzciciela_w_Warszawie_2020.jpg?width=1280",
+     "tekija": "Adrian Grycuk",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bazylika_archikatedralna_%C5%9Bw._Jana_Chrzciciela_w_Warszawie_2020.jpg",
+     "selite": "Pyhän Johanneksen katedraali on goottilainen tiilikirkko Vanhassakaupungissa.",
+     "leveys": 2664,
+     "korkeus": 3370,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Warszawa, ul. Świętojańska 8 20170516 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warszawa%2C_ul._%C5%9Awi%C4%99toja%C5%84ska_8_20170516_002.jpg?width=1280",
+     "tekija": "Tilman2007",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warszawa%2C_ul._%C5%9Awi%C4%99toja%C5%84ska_8_20170516_002.jpg",
+     "selite": "Kirkon kellotorni kohoaa kapean Vanhankaupungin kadun päässä.",
+     "leveys": 4003,
+     "korkeus": 5996,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1108269",
+   "nimi": "Barbakaani",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 52.2506,
+   "lon": 21.01,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Barbakan w Warszawie - 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbakan_w_Warszawie_-_03.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barbakan_w_Warszawie_-_03.jpg",
+     "selite": "Barbakaani on punatiilinen puolustusrakennelma Vanhankaupungin muurin edessä.",
+     "leveys": 3417,
+     "korkeus": 2278,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Warsaw Barbican - Warsaw (53113599140).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Barbican_-_Warsaw_(53113599140).jpg?width=1280",
+     "tekija": "Haydn Blackey from Cardiff, Wales",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_Barbican_-_Warsaw_(53113599140).jpg",
+     "selite": "Linnoituksen kartiomaiset tornit on peitetty punaisella tiilikatolla.",
+     "leveys": 2992,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Warsaw Barbican - Warsaw (53113599390).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Barbican_-_Warsaw_(53113599390).jpg?width=1280",
+     "tekija": "Haydn Blackey from Cardiff, Wales",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_Barbican_-_Warsaw_(53113599390).jpg",
+     "selite": "Muurin vieressä kulkee polku nurmikon halki.",
+     "leveys": 2000,
+     "korkeus": 2992,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q958585",
+   "nimi": "Sigismundin pylväs",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 52.24725,
+   "lon": 21.01339,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kolumna Zygmunta III Wazy 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kolumna_Zygmunta_III_Wazy_2020.jpg?width=1280",
+     "tekija": "Adrian Grycuk",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kolumna_Zygmunta_III_Wazy_2020.jpg",
+     "selite": "Sigismundin pylväs on Linnantorin keskellä seisova pylväsmuistomerkki.",
+     "leveys": 3834,
+     "korkeus": 5869,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Warsaw 2023 012 Zygmunt Column and Tower Tops.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_2023_012_Zygmunt_Column_and_Tower_Tops.jpg?width=1280",
+     "tekija": "Scotch Mist",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_2023_012_Zygmunt_Column_and_Tower_Tops.jpg",
+     "selite": "Pylvään huipulla on kuningas Sigismund III Vaasa miekka ja risti kädessään.",
+     "leveys": 2804,
+     "korkeus": 4220,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1440735",
+   "nimi": "Pyhän ristin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 52.23861,
+   "lon": 21.01667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bazylika Świętego Krzyża w Warszawie 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bazylika_%C5%9Awi%C4%99tego_Krzy%C5%BCa_w_Warszawie_2021.jpg?width=1280",
+     "tekija": "Adrian Grycuk",
+     "lisenssi": "CC BY-SA 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bazylika_%C5%9Awi%C4%99tego_Krzy%C5%BCa_w_Warszawie_2021.jpg",
+     "selite": "Pyhän ristin kirkko on barokkinen kaksitorninen kirkko Krakowskie Przedmieście -kadun varrella.",
+     "leveys": 3892,
+     "korkeus": 3728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ulica Krakowskie Przedmieście, Warsaw 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulica_Krakowskie_Przedmie%C5%9Bcie%2C_Warsaw_11.jpg?width=1280",
+     "tekija": "Simon Burchell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulica_Krakowskie_Przedmie%C5%9Bcie%2C_Warsaw_11.jpg",
+     "selite": "Kirkko erottuu kapeasta katukuilusta valkoisena ja keltaisena.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q153306",
+   "nimi": "Varsovan kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 52.23167,
+   "lon": 21.02472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Facade of the National Museum in Warsaw 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_of_the_National_Museum_in_Warsaw_07.jpg?width=1280",
+     "tekija": "Artinpl",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_of_the_National_Museum_in_Warsaw_07.jpg",
+     "selite": "Kansallismuseon moderni julkisivu on pylväiden rytmittämä ja porttien suojaama.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Facade of the National Museum in Warsaw 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_of_the_National_Museum_in_Warsaw_03.jpg?width=1280",
+     "tekija": "Artinpl",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_of_the_National_Museum_in_Warsaw_03.jpg",
+     "selite": "Rakennuksen julkisivua rytmittävät korkeat pylväät.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1138064",
+   "nimi": "Kopernikuksen tiedekeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 180,
+   "lat": 52.24194,
+   "lon": 21.02833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Warszawa Centrum Nauki Kopernik (dron).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warszawa_Centrum_Nauki_Kopernik_(dron).jpg?width=1280",
+     "tekija": "Kapitel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warszawa_Centrum_Nauki_Kopernik_(dron).jpg",
+     "selite": "Kopernikuksen tiedekeskus on moderni tiedemuseo Veikselin rannalla vihreine kattoineen.",
+     "leveys": 3756,
+     "korkeus": 2504,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q179693",
+   "nimi": "Varsovan kansallisstadion",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 52.23944,
+   "lon": 21.04556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stadion narodowy panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stadion_narodowy_panorama.jpg?width=1280",
+     "tekija": "XEvansGambitx",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stadion_narodowy_panorama.jpg",
+     "selite": "Kansallisstadion on Veikselin rannalla sijaitseva jalkapallostadion, jonka julkisivu on punavalkoinen.",
+     "leveys": 5015,
+     "korkeus": 2821,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "National Stadium Warsaw aerial view (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Stadium_Warsaw_aerial_view_(cropped).jpg?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Stadium_Warsaw_aerial_view_(cropped).jpg",
+     "selite": "Stadion Pragan puolella kohoaa Veikselin itärannalla.",
+     "leveys": 2631,
+     "korkeus": 1756,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q574328",
+   "nimi": "Varsovan kansannousun museo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 52.23222,
+   "lon": 20.98083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Observation Tower of the Warsaw Uprising Museum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Observation_Tower_of_the_Warsaw_Uprising_Museum.JPG?width=1280",
+     "tekija": "Ivanevian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Observation_Tower_of_the_Warsaw_Uprising_Museum.JPG",
+     "selite": "Kansannousun museon näkötornissa on Varsovan kansannousun Kotwica-tunnus.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Warsaw Uprising Museum, Skyline, 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Uprising_Museum%2C_Skyline%2C_2.jpg?width=1280",
+     "tekija": "Wistula",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_Uprising_Museum%2C_Skyline%2C_2.jpg",
+     "selite": "Museo toimii entisessä sähkölaitoksen punatiilirakennuksessa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Warsaw Uprising Museum, Skyline, 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Warsaw_Uprising_Museum%2C_Skyline%2C_1.jpg?width=1280",
+     "tekija": "Wistula",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Warsaw_Uprising_Museum%2C_Skyline%2C_1.jpg",
+     "selite": "Museorakennuksen takana kohoaa nykyaikaisen Varsovan pilvenpiirtäjiä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyline of Warsaw, Poland (cropped).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Warsaw%2C_Poland_(cropped).jpg?width=1280",
+   "tekija": "Quintin Soloviev",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Warsaw%2C_Poland_(cropped).jpg",
+   "selite": "Varsovan siluettia hallitsevat pilvenpiirtäjät ja Kulttuurin ja tieteen palatsin torni.",
+   "leveys": 7341,
+   "korkeus": 4408,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Plac Narutowicza Warsaw 2023 skyline aerial.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plac_Narutowicza_Warsaw_2023_skyline_aerial.jpg?width=1280",
+   "tekija": "Emptywords",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plac_Narutowicza_Warsaw_2023_skyline_aerial.jpg",
+   "selite": "Ilmasta näkyvät keskustan korttelit ja uudet pilvenpiirtäjät.",
+   "leveys": 3967,
+   "korkeus": 2975,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

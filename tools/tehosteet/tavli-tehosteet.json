@@ -1,0 +1,129 @@
+{
+  "kuvaus": "Tavlin (backgammon) äänet. Päätoimittaja hyväksyi Siirtosepän suunnitelman 5.10.2026 (docs/raportit/tavli-suunnitelma-20261005.md); Siirtosepän tilaus Pelikoodarille. Vain CC0; ei generointia. Peli soittaa klipit omalla iskullaan (Aanet.RekisteroiTehoste omaIsku), joten natiiviin viedään WAV, isku 0–5 ms ja huippu −6 dBFS (jälkikäsittely paikallisesti tästä ajosta).",
+  "amparinKansio": "aanet/tehosteet/tavli",
+  "manifesti": "manifesti.json",
+  "tavoiteLufs": -14,
+  "peliavainEtuliite": "tavli",
+  "tehosteet": [
+    {
+      "tunnus": "tavli-noppa-1",
+      "peliavain": "tavli.noppa1",
+      "kuvaus": "Kaksi noppaa heitetään puulaudalle: kolina ja pysähdys",
+      "hakusanat": [
+        "dice roll wood board",
+        "dice throw table",
+        "two dice roll"
+      ],
+      "kestoMin": 0.3,
+      "kestoMax": 2.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-noppa-2",
+      "peliavain": "tavli.noppa2",
+      "kuvaus": "Nopat laudalle, toinen muunnelma",
+      "hakusanat": [
+        "dice rolling",
+        "dice tumble wood",
+        "dice cup throw"
+      ],
+      "kestoMin": 0.3,
+      "kestoMax": 2.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-noppa-3",
+      "peliavain": "tavli.noppa3",
+      "kuvaus": "Nopat laudalle, kolmas muunnelma",
+      "hakusanat": [
+        "dice throw wood",
+        "dice landing table",
+        "dice thrown board"
+      ],
+      "kestoMin": 0.3,
+      "kestoMax": 2.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-siirto",
+      "peliavain": "tavli.siirto",
+      "kuvaus": "Nappula liukuu ja napsahtaa paikalleen: lyhyt kuiva napsahdus",
+      "hakusanat": [
+        "checker piece click",
+        "game piece wood click",
+        "board game piece place"
+      ],
+      "kestoMin": 0.05,
+      "kestoMax": 0.6,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-lyonti",
+      "peliavain": "tavli.lyonti",
+      "kuvaus": "Nappula lyödään palkille: terävämpi kopsahdus kuin siirrossa",
+      "hakusanat": [
+        "wood knock hit",
+        "piece hit wood",
+        "wooden tap hard"
+      ],
+      "kestoMin": 0.05,
+      "kestoMax": 0.8,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-poisto",
+      "peliavain": "tavli.poisto",
+      "kuvaus": "Nappula pois laudalta: pehmeä nosto ja kopsahdus laatikkoon",
+      "hakusanat": [
+        "wooden piece drop",
+        "wood token drop",
+        "game piece drop wood"
+      ],
+      "kestoMin": 0.05,
+      "kestoMax": 1.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-voitto",
+      "peliavain": "tavli.voitto",
+      "kuvaus": "Lyhyt voiton merkki: kirkas nouseva kilahdus, ei fanfaaria",
+      "hakusanat": [
+        "confirmation",
+        "success chime short",
+        "positive bell short"
+      ],
+      "kestoMin": 0.4,
+      "kestoMax": 2.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "tavli-havio",
+      "peliavain": "tavli.havio",
+      "kuvaus": "Lyhyt häviön merkki: pehmeä laskeva sävel, ei pilkkaava",
+      "hakusanat": [
+        "lose game short",
+        "failure tone soft",
+        "game over short"
+      ],
+      "kestoMin": 0.4,
+      "kestoMax": 2.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    }
+  ]
+}

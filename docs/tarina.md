@@ -77,6 +77,13 @@ Aikalaiset pitivät **Aarnin luetteloa** satukirjana. Nimi ei ole
 sattumaa: kansanperinteessä *aarnivalkea* on liekki, joka palaa kätketyn
 aarteen päällä, ja *aarnihauta* on aarrekumpu.
 
+**Aarnin luettelon aarnivalkeat** *(kaanonin lisäys, omistaja 7.10.2026)*: luettelonsa loppuun Aarni
+kirjasi myös aarnivalkeat, eli paikat, joissa kansan mukaan liekki palaa kätketyn aarteen päällä.
+Videopelien historiakohteet (Olavinlinna, Kielletty kaupunki, Gizan pyramidit) ovat aarnivalkeita.
+Luettelossa on paikka, ei tapahtuma: pelaaja astuu videopelissä paikan historialliseen hetkeen, ja
+löydetty aarre kirjataan Aarnin luetteloon ja tuo diplomin. Maanosien unohdetut aarteet pysyvät
+ennallaan, eikä aarnivalkeita rinnasteta niihin pelaajalle näkyvissä teksteissä.
+
 **Isoisä uskoi luetteloon.** Hän lähti 1873 matkalleen Aarnin luettelo
 taskussaan, ja hänen matkansa jäi aarteiden osalta kesken. Matkakirjan
 revitty viimeinen sivu ("…voinut uskoa, siellä olikin…") vihjaa, että

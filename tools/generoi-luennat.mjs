@@ -396,6 +396,7 @@ for (const tyo of tyot) {
         body: JSON.stringify({
           inputs: [{ text: tyo.luenta + LOPPUTAUKO, voice_id: AANI }],
           model_id: MALLI,
+          ...(String(MALLI).includes('multilingual') ? {} : { language_code: 'fi' }),   // suomi pakotettuna (omistaja 6.10.)
           settings: { stability: STABILITY },
         }),
         signal: AbortSignal.timeout(180000),

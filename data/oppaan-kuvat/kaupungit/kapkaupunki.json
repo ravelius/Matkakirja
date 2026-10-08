@@ -1,0 +1,640 @@
+{
+ "kaupunki": "kapkaupunki",
+ "kaupunkiQ": "Q5465",
+ "kohteet": [
+  {
+   "q": "Q213360",
+   "nimi": "Pöytävuori",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -33.96216,
+   "lon": 18.41352,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cape Town, Table Mountain - panoramio (3).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Town%2C_Table_Mountain_-_panoramio_(3).jpg?width=1280",
+     "tekija": "scott marsland",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Town%2C_Table_Mountain_-_panoramio_(3).jpg",
+     "selite": "Pöytävuoren litteä huippu kohoaa Kapkaupungin yllä, usein pilvipeitteen kruunaamana.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Table Mountain Aerial Cableway 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Table_Mountain_Aerial_Cableway_2016.jpg?width=1280",
+     "tekija": "Fazielah Williams",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Table_Mountain_Aerial_Cableway_2016.jpg",
+     "selite": "Köysirata kuljettaa vierailijat vuoren huipulle.",
+     "leveys": 1382,
+     "korkeus": 922,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "View from Table Mountain, Cape Town, South Africa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Table_Mountain%2C_Cape_Town%2C_South_Africa.jpg?width=1280",
+     "tekija": "Romain Pontida",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_from_Table_Mountain%2C_Cape_Town%2C_South_Africa.jpg",
+     "selite": "Huipulta aukeaa laaja näkymä kaupunkiin, Leijonanpäähän ja Atlantille.",
+     "leveys": 11929,
+     "korkeus": 3974,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q192493",
+   "nimi": "Robben Island",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -33.805,
+   "lon": 18.37,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Maximum Security Prison, Robben Island (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maximum_Security_Prison%2C_Robben_Island_(02).jpg?width=1280",
+     "tekija": "Moheen Reeyad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maximum_Security_Prison%2C_Robben_Island_(02).jpg",
+     "selite": "Robben Islandin vankila, jossa Nelson Mandela oli vangittuna, on nykyään museo.",
+     "leveys": 3872,
+     "korkeus": 2574,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "B-Section courtyard, Maximum Security Prison, Robben Island (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B-Section_courtyard%2C_Maximum_Security_Prison%2C_Robben_Island_(01).jpg?width=1280",
+     "tekija": "Moheen Reeyad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B-Section_courtyard%2C_Maximum_Security_Prison%2C_Robben_Island_(01).jpg",
+     "selite": "Korkeiden muurien ympäröimä piha kuului vankilan B-osastoon.",
+     "leveys": 3872,
+     "korkeus": 2574,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2166975",
+   "nimi": "V&A Waterfront",
+   "peruste": "pelin nosto",
+   "koko_m": 1200,
+   "lat": -33.90306,
+   "lon": 18.42278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Waterfront panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterfront_panorama.jpg?width=1280",
+     "tekija": "Damien du Toit",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Waterfront_panorama.jpg",
+     "selite": "V&A Waterfront on Kapkaupungin satama-alue ravintoloineen ja kauppoineen Pöytävuoren juurella.",
+     "leveys": 1735,
+     "korkeus": 800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cape Town, assorted - CapeTown4035.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Town%2C_assorted_-_CapeTown4035.jpg?width=1280",
+     "tekija": "lumoplank",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Town%2C_assorted_-_CapeTown4035.jpg",
+     "selite": "Satamakorttelin nykyaikaiset rakennukset ja vuori muodostavat kaupungin tunnetun maiseman.",
+     "leveys": 4882,
+     "korkeus": 3254,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cape Town (ZA), Waterfront, Victoria & Alfred Hotel Cape Town -- 2024 -- 2892.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Town_(ZA)%2C_Waterfront%2C_Victoria_%26_Alfred_Hotel_Cape_Town_--_2024_--_2892.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Town_(ZA)%2C_Waterfront%2C_Victoria_%26_Alfred_Hotel_Cape_Town_--_2024_--_2892.jpg",
+     "selite": "Vanhat satamarakennukset on kunnostettu hotelleiksi ja liiketiloiksi.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1049562",
+   "nimi": "Hyväntoivonlinnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -33.92591,
+   "lon": 18.42772,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AHI Treasures of Southern Africa 3-07 0282 N (555994706).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AHI_Treasures_of_Southern_Africa_3-07_0282_N_(555994706).jpg?width=1280",
+     "tekija": "Joe Ross from Lansing, Michigan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AHI_Treasures_of_Southern_Africa_3-07_0282_N_(555994706).jpg",
+     "selite": "Hyväntoivonlinnoitus on Etelä-Afrikan vanhin säilynyt rakennus, ja sen vallihauta ympäröi tähtimuurit.",
+     "leveys": 1600,
+     "korkeus": 1060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castle of Good Hope Entrance (1682).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castle_of_Good_Hope_Entrance_(1682).jpg?width=1280",
+     "tekija": "Martinvl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castle_of_Good_Hope_Entrance_(1682).jpg",
+     "selite": "Linnoituksen portti ja kellotorni on rakennettu hollantilaisaikana 1600-luvulla.",
+     "leveys": 3204,
+     "korkeus": 5135,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "At Cape Town (MP) 2018 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Cape_Town_(MP)_2018_003.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Cape_Town_(MP)_2018_003.jpg",
+     "selite": "Linnoituksen muurit ja vallihauta sijaitsevat aivan kaupungin keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q173559",
+   "nimi": "Kapkaupungin stadion",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -33.90346,
+   "lon": 18.41115,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2011-02-06 14-57-32 South Africa - Bakoven.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-02-06_14-57-32_South_Africa_-_Bakoven.jpg?width=1280",
+     "tekija": "Hansueli Krapf This file was uploaded with Commonist.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011-02-06_14-57-32_South_Africa_-_Bakoven.jpg",
+     "selite": "Kapkaupungin stadion rakennettiin vuoden 2010 jalkapallon MM-kisoja varten Green Pointiin.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cape Town 2012 05 15 0175 (7365148808).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Town_2012_05_15_0175_(7365148808).jpg?width=1280",
+     "tekija": "Harvey Barrison from Massapequa, NY, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Town_2012_05_15_0175_(7365148808).jpg",
+     "selite": "Stadion sijaitsee meren rannalla ja Pöytävuoren juurella.",
+     "leveys": 2738,
+     "korkeus": 1825,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cape Town Stadium Inside 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Town_Stadium_Inside_02.jpg?width=1280",
+     "tekija": "Nkansahrexford",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Town_Stadium_Inside_02.jpg",
+     "selite": "Katsomosta näkyy Pöytävuori kentän yli.",
+     "leveys": 5248,
+     "korkeus": 3936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2418250",
+   "nimi": "Bo-Kaap",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -33.92083,
+   "lon": 18.4125,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bo-Kaap from roof of Strand South hotel, Cape Town.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bo-Kaap_from_roof_of_Strand_South_hotel%2C_Cape_Town.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bo-Kaap_from_roof_of_Strand_South_hotel%2C_Cape_Town.jpg",
+     "selite": "Bo-Kaapin värikkäät talot ovat Kapkaupungin tunnetuimpia kaupunginosan tunnusmerkkejä.",
+     "leveys": 6048,
+     "korkeus": 3420,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Birds eye view on the Bo-kaap.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Birds_eye_view_on_the_Bo-kaap.jpg?width=1280",
+     "tekija": "Witstinkhout",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Birds_eye_view_on_the_Bo-kaap.jpg",
+     "selite": "Kaupunginosa on perinteinen kapkaupunkilaisten malaijiyhteisön asuinalue.",
+     "leveys": 4322,
+     "korkeus": 2454,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Berg Lane, Bo-Kaap, Cape Town.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berg_Lane%2C_Bo-Kaap%2C_Cape_Town.jpg?width=1280",
+     "tekija": "André Krüger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berg_Lane%2C_Bo-Kaap%2C_Cape_Town.jpg",
+     "selite": "Päällystetyt kujat ja pastellisävyiset seinät luovat alueen ilmeen.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q289277",
+   "nimi": "Kirstenboschin kasvitieteellinen puutarha",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -33.9875,
+   "lon": 18.4325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kirstenbosch - View from the Botanical Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirstenbosch_-_View_from_the_Botanical_Gardens.jpg?width=1280",
+     "tekija": "Didier B (Sam67fr)",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kirstenbosch_-_View_from_the_Botanical_Gardens.jpg",
+     "selite": "Kirstenboschin kasvitieteellinen puutarha levittäytyy Pöytävuoren itärinteelle.",
+     "leveys": 2100,
+     "korkeus": 900,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Table Mountain over Kirstenbosch Botanical Garden ... (32813885282).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Table_Mountain_over_Kirstenbosch_Botanical_Garden_..._(32813885282).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Table_Mountain_over_Kirstenbosch_Botanical_Garden_..._(32813885282).jpg",
+     "selite": "Puutarhan takana kohoavat Pöytävuoren jyrkät kalliot.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kirstenbosch Botanical Garden-3130.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirstenbosch_Botanical_Garden-3130.jpg?width=1280",
+     "tekija": "Rainer Halama",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kirstenbosch_Botanical_Garden-3130.jpg",
+     "selite": "Puutarhassa kasvaa Etelä-Afrikan omaa kasvilajistoa, kuten proteoja.",
+     "leveys": 5526,
+     "korkeus": 3653,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1718867",
+   "nimi": "Leijonanpää",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -33.93472,
+   "lon": 18.38917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lion's Head, South Africa 2011-02-06 16-11-16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lion's_Head%2C_South_Africa_2011-02-06_16-11-16.jpg?width=1280",
+     "tekija": "Hansueli Krapf This file was uploaded with Commonist.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lion's_Head%2C_South_Africa_2011-02-06_16-11-16.jpg",
+     "selite": "Leijonanpää on suosittu vaelluskohde Kapkaupungin rannikon vieressä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Table Mountain 02 (3449650287).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Table_Mountain_02_(3449650287).jpg?width=1280",
+     "tekija": "michael clarke stuff",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Table_Mountain_02_(3449650287).jpg",
+     "selite": "Leijonanpään kartiomainen huippu erottuu Pöytävuoren rinnalla.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2094786",
+   "nimi": "Signal Hill",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -33.91778,
+   "lon": 18.40278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SignallHill.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SignallHill.JPG?width=1280",
+     "tekija": "en:User:Zaian",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SignallHill.JPG",
+     "selite": "Signal Hill on kaupungin yllä kohoava harjanne, jolta näkee Atlantille ja Pöytälahdelle.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beacon Of Hope.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beacon_Of_Hope.jpg?width=1280",
+     "tekija": "Barry haynes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beacon_Of_Hope.jpg",
+     "selite": "Harjanteella seisoo Beacon of Hope -tähtiveistos.",
+     "leveys": 2500,
+     "korkeus": 1669,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2616757",
+   "nimi": "District Six -museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -33.9277,
+   "lon": 18.4237,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "At Cape Town (MP) 2018 029.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Cape_Town_(MP)_2018_029.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Cape_Town_(MP)_2018_029.jpg",
+     "selite": "District Six -museo muistuttaa kaupunginosasta, jonka asukkaat häädettiin apartheidin aikana.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Cape Town (MP) 2018 030.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Cape_Town_(MP)_2018_030.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Cape_Town_(MP)_2018_030.jpg",
+     "selite": "Museo toimii entisessä metodistikirkossa kaupungin keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4817466",
+   "nimi": "Kapkaupungin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -33.92528,
+   "lon": 18.42389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CapeTown CityHall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CapeTown_CityHall.jpg?width=1280",
+     "tekija": "Martinvl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CapeTown_CityHall.jpg",
+     "selite": "Kapkaupungin kaupungintalo on edvardiaaninen rakennus, jonka kellotorni nousee Pöytävuoren edessä.",
+     "leveys": 4639,
+     "korkeus": 3419,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ayuntamiento, Ciudad del Cabo, Sudáfrica, 2018-07-19, DD 06-07 PAN.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayuntamiento%2C_Ciudad_del_Cabo%2C_Sud%C3%A1frica%2C_2018-07-19%2C_DD_06-07_PAN.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ayuntamiento%2C_Ciudad_del_Cabo%2C_Sud%C3%A1frica%2C_2018-07-19%2C_DD_06-07_PAN.jpg",
+     "selite": "Rakennuksen parvekkeelta Nelson Mandela piti puheen vapautumisensa jälkeen.",
+     "leveys": 7345,
+     "korkeus": 5159,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6102031",
+   "nimi": "Iziko Etelä-Afrikan museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -33.92864,
+   "lon": 18.41522,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iziko SA museum CT jeh HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iziko_SA_museum_CT_jeh_HDR.jpg?width=1280",
+     "tekija": "Jim.henderson",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iziko_SA_museum_CT_jeh_HDR.jpg",
+     "selite": "Iziko Etelä-Afrikan museo on maan vanhimpia luonnonhistoriallisia museoita.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "South African Museum & Planeterium.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_African_Museum_%26_Planeterium.JPG?width=1280",
+     "tekija": "Josephou",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:South_African_Museum_%26_Planeterium.JPG",
+     "selite": "Museon yhteydessä toimii planetaario Company's Gardenin vieressä.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5604316",
+   "nimi": "Greenmarket Square",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -33.9228,
+   "lon": 18.42,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20130208 190223 WLM Greenmarket Square, Cape Town.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130208_190223_WLM_Greenmarket_Square%2C_Cape_Town.jpg?width=1280",
+     "tekija": "StevenMorrow",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130208_190223_WLM_Greenmarket_Square%2C_Cape_Town.jpg",
+     "selite": "Greenmarket Square on Kapkaupungin vanhimpia kaupunkiaukioita ja ulkomarkkinoiden paikka.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20981944",
+   "nimi": "Slave Lodge",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -33.92506,
+   "lon": 18.42039,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Slave Lodge museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Slave_Lodge_museum.jpg?width=1280",
+     "tekija": "HelenOnline",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Slave_Lodge_museum.jpg",
+     "selite": "Slave Lodge toimi alun perin orjien majoituspaikkana ja on nykyään museo.",
+     "leveys": 4994,
+     "korkeus": 3329,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Capetown Old Slave Lodge front exterior.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Capetown_Old_Slave_Lodge_front_exterior.JPG?width=1280",
+     "tekija": "Suzi-k",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Capetown_Old_Slave_Lodge_front_exterior.JPG",
+     "selite": "Rakennus on yksi kaupungin vanhimpia säilyneitä.",
+     "leveys": 1280,
+     "korkeus": 847,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q116448",
+   "nimi": "Muizenberg",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -34.10556,
+   "lon": 18.46806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AHI Treasures of Southern Africa 3-07 0740 N (664294379).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AHI_Treasures_of_Southern_Africa_3-07_0740_N_(664294379).jpg?width=1280",
+     "tekija": "Joe Ross from Lansing, Michigan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AHI_Treasures_of_Southern_Africa_3-07_0740_N_(664294379).jpg",
+     "selite": "Muizenbergin pitkä hiekkaranta on yksi Kapkaupungin tunnetuimmista surffauspaikoista.",
+     "leveys": 1600,
+     "korkeus": 1060,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Muizenberg with Zandvlei.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muizenberg_with_Zandvlei.jpg?width=1280",
+     "tekija": "Hilton Teper",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muizenberg_with_Zandvlei.jpg",
+     "selite": "Rantakaupunki sijaitsee False Bayn rannalla Kapin niemimaalla.",
+     "leveys": 5184,
+     "korkeus": 3157,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "CT - Table Mountain and Cape Town cityscape, South Africa, 2017.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CT_-_Table_Mountain_and_Cape_Town_cityscape%2C_South_Africa%2C_2017.jpg?width=1280",
+   "tekija": "Josep M. Gracia",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CT_-_Table_Mountain_and_Cape_Town_cityscape%2C_South_Africa%2C_2017.jpg",
+   "selite": "Kapkaupunki levittäytyy Pöytävuoren ja meren väliin.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "A view of Cape Town from Table Mountain.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Cape_Town_from_Table_Mountain.jpg?width=1280",
+   "tekija": "Chris Koerner from St. Louis, USA",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_of_Cape_Town_from_Table_Mountain.jpg",
+   "selite": "Pöytävuorelta näkee kaupungin keskustan, sataman ja Pöytälahden.",
+   "leveys": 6829,
+   "korkeus": 4558,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

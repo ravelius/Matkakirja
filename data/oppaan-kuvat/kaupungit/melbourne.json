@@ -1,0 +1,601 @@
+{
+ "kaupunki": "melbourne",
+ "kaupunkiQ": "Q3141",
+ "kohteet": [
+  {
+   "q": "Q330136",
+   "nimi": "Melbourne Cricket Ground",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": -37.81994,
+   "lon": 144.98345,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AFL Grand Final 2010 on the Melbourne Cricket Ground.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AFL_Grand_Final_2010_on_the_Melbourne_Cricket_Ground.jpg?width=1280",
+     "tekija": "Alexander Sheko",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AFL_Grand_Final_2010_on_the_Melbourne_Cricket_Ground.jpg",
+     "selite": "MCG on Melbournen suuri urheilustadion, jossa pelataan krikettiä ja australialaista jalkapalloa.",
+     "leveys": 1600,
+     "korkeus": 1071,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017 AFL Grand Final panorama during national anthem.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_AFL_Grand_Final_panorama_during_national_anthem.jpg?width=1280",
+     "tekija": "Flickerd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_AFL_Grand_Final_panorama_during_national_anthem.jpg",
+     "selite": "Katsomot kaartuvat laajan nurmikentän ympärille.",
+     "leveys": 7386,
+     "korkeus": 3918,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q260986",
+   "nimi": "Flinders Streetin asema",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -37.81808,
+   "lon": 144.96681,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1 flinders st station melb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1_flinders_st_station_melb.jpg?width=1280",
+     "tekija": "Adam.J.W.C.",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1_flinders_st_station_melb.jpg",
+     "selite": "Keltainen kupolirakennus on Melbournen tunnetuin rautatieasema.",
+     "leveys": 1859,
+     "korkeus": 1183,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Flinders Street Station Main Building, May 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flinders_Street_Station_Main_Building%2C_May_2019.jpg?width=1280",
+     "tekija": "Medelam",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flinders_Street_Station_Main_Building%2C_May_2019.jpg",
+     "selite": "Aseman pääjulkisivu avautuu Flinders Streetin ja Swanston Streetin risteykseen.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "AUS Melbourne, Central Business District, Flinders Street 017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Melbourne%2C_Central_Business_District%2C_Flinders_Street_017.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Melbourne%2C_Central_Business_District%2C_Flinders_Street_017.jpg",
+     "selite": "Aseman takaa kohoavat keskustan pilvenpiirtäjät.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q695935",
+   "nimi": "Royal Exhibition Building",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -37.80472,
+   "lon": 144.97139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Royal exhibition building tulips straight.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_exhibition_building_tulips_straight.jpg?width=1280",
+     "tekija": "Photograph taken by Diliff and straightened by Ian Fieggen",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_exhibition_building_tulips_straight.jpg",
+     "selite": "Vuoden 1880 maailmannäyttelyä varten rakennettu kupolihalli seisoo Carlton Gardensissa.",
+     "leveys": 1856,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Melbourne, Melbourne, Royal Exhibition Building 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Melbourne%2C_Melbourne%2C_Royal_Exhibition_Building_003.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Melbourne%2C_Melbourne%2C_Royal_Exhibition_Building_003.jpg",
+     "selite": "Rakennuksen edessä on suihkulähde, ja julkisivu on kuvattu puutarhasta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q923304",
+   "nimi": "Federation Square",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": -37.8178,
+   "lon": 144.96871,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ACMI, aerial view (photo by Phoebe Powell).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ACMI%2C_aerial_view_(photo_by_Phoebe_Powell).jpg?width=1280",
+     "tekija": "Ravalight",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ACMI%2C_aerial_view_(photo_by_Phoebe_Powell).jpg",
+     "selite": "Federation Square on keskustan aukio, jonka rakennukset muodostavat sirpaleisen kuvion.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fed Square August 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fed_Square_August_2007.jpg?width=1280",
+     "tekija": "AussieNickuss at en.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fed_Square_August_2007.jpg",
+     "selite": "Ilmasta näkyy aukion kolmiomainen julkisivupinta ja viereiset rautatiealueet.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q270407",
+   "nimi": "Eureka Tower",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -37.82167,
+   "lon": 144.96444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AUS Melbourne, Central Business District, Flinders Walk, View 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Melbourne%2C_Central_Business_District%2C_Flinders_Walk%2C_View_002.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Melbourne%2C_Central_Business_District%2C_Flinders_Walk%2C_View_002.jpg",
+     "selite": "Eureka Tower kohoaa Yarra-joen eteläpuolella ja on Melbournen korkeimpia rakennuksia.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Melbourne, Central Business District, Flinders Walk, View 003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Melbourne%2C_Central_Business_District%2C_Flinders_Walk%2C_View_003.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Melbourne%2C_Central_Business_District%2C_Flinders_Walk%2C_View_003.jpg",
+     "selite": "Tornin kultainen yläosa erottuu muiden pilvenpiirtäjien joukosta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1200052",
+   "nimi": "Victorian osavaltionkirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -37.8098,
+   "lon": 144.965,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Melbourne State Library.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_State_Library.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Donaldytong assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Melbourne_State_Library.jpg",
+     "selite": "Kirjaston klassinen pylväsjulkisivu avautuu Swanston Streetille.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aussie Tour 2007 (1576340039).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aussie_Tour_2007_(1576340039).jpg?width=1280",
+     "tekija": "cogdogblog",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aussie_Tour_2007_(1576340039).jpg",
+     "selite": "Edessä seisoo patsas, ja kirjaston portaikko on kaupungin kokoontumispaikka.",
+     "leveys": 1800,
+     "korkeus": 1350,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1138670",
+   "nimi": "Pyhän Patrickin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": -37.8101,
+   "lon": 144.976,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Patrick's Cathedral - Gothic Revival Style.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Patrick's_Cathedral_-_Gothic_Revival_Style.jpg?width=1280",
+     "tekija": "Donaldytong",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Patrick's_Cathedral_-_Gothic_Revival_Style.jpg",
+     "selite": "Katolinen katedraali on uusgoottilaista tyyliä ja sen kärkitorni kohoaa idän puistojen yli.",
+     "leveys": 7772,
+     "korkeus": 6347,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ac.stpats2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ac.stpats2.JPG?width=1280",
+     "tekija": "Adam Carr at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ac.stpats2.JPG",
+     "selite": "Sinikivinen julkisivu ja torni puiston laidalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ac.stpats3.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ac.stpats3.JPG?width=1280",
+     "tekija": "Adam Carr at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ac.stpats3.JPG",
+     "selite": "Katedraalin sivuseinän ikkunat ja tukipilarit erottuvat tummasta kivestä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1353869",
+   "nimi": "Melbournen museo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -37.80334,
+   "lon": 144.97144,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AUS Melbourne, Melbourne, Carlton Gardens 018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Melbourne%2C_Melbourne%2C_Carlton_Gardens_018.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Melbourne%2C_Melbourne%2C_Carlton_Gardens_018.jpg",
+     "selite": "Moderni museorakennus sijaitsee Carlton Gardensin vieressä Royal Exhibition Buildingin kupeessa.",
+     "leveys": 4032,
+     "korkeus": 2121,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Entrance to the Melbourne Museum (6768078685).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_the_Melbourne_Museum_(6768078685).jpg?width=1280",
+     "tekija": "Alex Proimos from Sydney, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Entrance_to_the_Melbourne_Museum_(6768078685).jpg",
+     "selite": "Sisäänkäynnin katos tarjoaa varjoa aukion laidalla.",
+     "leveys": 4236,
+     "korkeus": 2824,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1369544",
+   "nimi": "Shrine of Remembrance",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -37.83056,
+   "lon": 144.97344,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "043ShrineMelbourne.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/043ShrineMelbourne.JPG?width=1280",
+     "tekija": "Robert Schediwy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:043ShrineMelbourne.JPG",
+     "selite": "Sotamuistomerkki kohoaa St Kilda Roadin varrella Kings Domainin puistossa.",
+     "leveys": 1572,
+     "korkeus": 1160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"The Call to Arms\", Shrine of Remembrance, Melbourne 2017-10-28.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22The_Call_to_Arms%22%2C_Shrine_of_Remembrance%2C_Melbourne_2017-10-28.jpg?width=1280",
+     "tekija": "Crisco 1492",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22The_Call_to_Arms%22%2C_Shrine_of_Remembrance%2C_Melbourne_2017-10-28.jpg",
+     "selite": "Pylväikön reliefi on koristeena Shrinen julkisivulla.",
+     "leveys": 10402,
+     "korkeus": 3135,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1464314",
+   "nimi": "Victorian parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -37.8111,
+   "lon": 144.973,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parliament House Melbourne 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_House_Melbourne_2010.jpg?width=1280",
+     "tekija": "Elekhh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parliament_House_Melbourne_2010.jpg",
+     "selite": "Parlamenttitalo kohoaa Spring Streetin päässä, ja sen edessä kulkee raitiovaunu.",
+     "leveys": 2400,
+     "korkeus": 1344,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Melbourne, Melbourne, Parliament House 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Melbourne%2C_Melbourne%2C_Parliament_House_001.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Melbourne%2C_Melbourne%2C_Parliament_House_001.jpg",
+     "selite": "Pylväikön portaat ovat parlamentin tunnetuin osa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2018436",
+   "nimi": "Old Melbourne Gaol",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -37.80806,
+   "lon": 144.96528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old Melbourne Gaol - www.joyofmuseums.com - exterior 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Melbourne_Gaol_-_www.joyofmuseums.com_-_exterior_2.jpg?width=1280",
+     "tekija": "Joyofmuseums",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Melbourne_Gaol_-_www.joyofmuseums.com_-_exterior_2.jpg",
+     "selite": "Vanha vankila rakennettiin siniharmaasta kivestä 1800-luvun puolivälissä.",
+     "leveys": 5392,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Melbourne Gaol - www.joyofmuseums.com - exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Melbourne_Gaol_-_www.joyofmuseums.com_-_exterior.jpg?width=1280",
+     "tekija": "Joyofmuseums",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Melbourne_Gaol_-_www.joyofmuseums.com_-_exterior.jpg",
+     "selite": "Vankila on nykyään museo, jonka sisäänkäynti on keskustan laidalla.",
+     "leveys": 5495,
+     "korkeus": 3443,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7373836",
+   "nimi": "Melbournen kuninkaallinen kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": -37.83036,
+   "lon": 144.97961,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Botanik Garden - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Botanik_Garden_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Korkut Tas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Botanik_Garden_-_panoramio_(1).jpg",
+     "selite": "Puutarhan lammet ja puut tarjoavat vehreän keitaan Yarran rannalla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Botanic Garden,.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Botanic_Garden%2C.jpg?width=1280",
+     "tekija": "John Torcasio",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Botanic_Garden%2C.jpg",
+     "selite": "Suihkulähde ja nurmikot ovat keskeisiä kohtia puutarhan puistomaisessa osassa.",
+     "leveys": 4958,
+     "korkeus": 3339,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5167700",
+   "nimi": "Coop's Shot Tower",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -37.8103,
+   "lon": 144.963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coop's Shot Tower in Melbourne Australia in February 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coop's_Shot_Tower_in_Melbourne_Australia_in_February_2015.jpg?width=1280",
+     "tekija": "Tim Adams",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coop's_Shot_Tower_in_Melbourne_Australia_in_February_2015.jpg",
+     "selite": "Lyijyhaulien valmistukseen rakennettu tiilitorni on nykyään lasikatteisen ostoskeskuksen sisällä.",
+     "leveys": 4792,
+     "korkeus": 3188,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Coop's Shot Tower, Melbourne Central 09.06.18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coop's_Shot_Tower%2C_Melbourne_Central_09.06.18.jpg?width=1280",
+     "tekija": "FotesEtc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coop's_Shot_Tower%2C_Melbourne_Central_09.06.18.jpg",
+     "selite": "Lasikartio kohoaa tiilitornin ympärille.",
+     "leveys": 4000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7244850",
+   "nimi": "Princess Theatre",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -37.81072,
+   "lon": 144.97235,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Melbourne Princess Theatre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_Princess_Theatre.jpg?width=1280",
+     "tekija": "Donaldytong",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Melbourne_Princess_Theatre.jpg",
+     "selite": "Koristeellinen ranskalaistyylinen teatteri erottuu pilvenpiirtäjien joukosta.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "East Melbourne VIC 3002, Australia - panoramio (14).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/East_Melbourne_VIC_3002%2C_Australia_-_panoramio_(14).jpg?width=1280",
+     "tekija": "trungydang",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:East_Melbourne_VIC_3002%2C_Australia_-_panoramio_(14).jpg",
+     "selite": "Teatterin julkisivu on Spring Streetin varrella.",
+     "leveys": 3072,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6811781",
+   "nimi": "Melbournen pääposti",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -37.8138,
+   "lon": 144.963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Melbourne GPO (11546609565).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_GPO_(11546609565).jpg?width=1280",
+     "tekija": "Chris Phutully from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Melbourne_GPO_(11546609565).jpg",
+     "selite": "Pääpostin kellotorni on valaistu illalla, ja rakennus on Bourke Streetin kauppakadun solmukohta.",
+     "leveys": 3678,
+     "korkeus": 2454,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GPO (6077752538).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GPO_(6077752538).jpg?width=1280",
+     "tekija": "Rexness",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GPO_(6077752538).jpg",
+     "selite": "Rakennuksen julkisivu on italialaistyylinen ja kolmikerroksinen.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial panorama of Melbourne city taken from Flagstaff Gardens.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_panorama_of_Melbourne_city_taken_from_Flagstaff_Gardens.jpg?width=1280",
+   "tekija": "Bob T",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_panorama_of_Melbourne_city_taken_from_Flagstaff_Gardens.jpg",
+   "selite": "Melbournen keskustan pilvenpiirtäjät ja puistot näkyvät Flagstaff Gardensin kohdalta.",
+   "leveys": 7513,
+   "korkeus": 2808,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Melbourne (AU), Northbank -- 2019 -- 1422-7.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melbourne_(AU)%2C_Northbank_--_2019_--_1422-7.jpg?width=1280",
+   "tekija": "Dietmar Rabich",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Melbourne_(AU)%2C_Northbank_--_2019_--_1422-7.jpg",
+   "selite": "Yarra-joen pohjoisranta ja keskustan tornit rajaavat jokinäkymää.",
+   "leveys": 11881,
+   "korkeus": 6542,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

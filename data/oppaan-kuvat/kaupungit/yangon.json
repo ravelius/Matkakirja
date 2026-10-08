@@ -1,0 +1,424 @@
+{
+ "kaupunki": "yangon",
+ "kaupunkiQ": "Q37995",
+ "kohteet": [
+  {
+   "q": "Q464535",
+   "nimi": "Shwedagon-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 16.79833,
+   "lon": 96.14944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20160813 Shwedagon Pagoda 9949 DxO.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20160813_Shwedagon_Pagoda_9949_DxO.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20160813_Shwedagon_Pagoda_9949_DxO.jpg",
+     "selite": "Shwedagonin kultainen stupa on Myanmarin pyhin pagodi ja Yangonin tunnetuin maamerkki.",
+     "leveys": 3224,
+     "korkeus": 4120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shwedagon Zedi Daw Yangon 6.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shwedagon_Zedi_Daw_Yangon_6.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shwedagon_Zedi_Daw_Yangon_6.jpg",
+     "selite": "Stupaa ympäröivät lukuisat pienemmät pagodit ja pyhäköt.",
+     "leveys": 3500,
+     "korkeus": 5020,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Shwedagon Zedi Daw Yangon 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shwedagon_Zedi_Daw_Yangon_11.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shwedagon_Zedi_Daw_Yangon_11.jpg",
+     "selite": "Illan hämärässä pagodin kulta hehkuu violetin taivaan edessä.",
+     "leveys": 3500,
+     "korkeus": 5180,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Shwedagon Zedi Daw Yangon 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shwedagon_Zedi_Daw_Yangon_3.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shwedagon_Zedi_Daw_Yangon_3.jpg",
+     "selite": "Pagodin terassilla kohoavat kullatut ja valkoiset tornit sinisen taivaan alla.",
+     "leveys": 4800,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1209410",
+   "nimi": "Sule-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 16.77439,
+   "lon": 96.15878,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Rangun, Pagoda Sule (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Rangun%2C_Pagoda_Sule_(01).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Rangun%2C_Pagoda_Sule_(01).jpg",
+     "selite": "Sule-pagodi seisoo Yangonin keskustan liikenneympyrässä ja on kaupungin ruutukaavan keskus.",
+     "leveys": 4746,
+     "korkeus": 3459,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Rangun, Pagoda Sule (08).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Rangun%2C_Pagoda_Sule_(08).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Rangun%2C_Pagoda_Sule_(08).jpg",
+     "selite": "Pagodin kultainen stupa kohoaa matalien pyhäkköjen yläpuolelle.",
+     "leveys": 3190,
+     "korkeus": 3167,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Rangun, Pagoda Sule (06).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Rangun%2C_Pagoda_Sule_(06).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Rangun%2C_Pagoda_Sule_(06).jpg",
+     "selite": "Pagodin koristeelliset tornit ja pyhäkköjen kattoveistokset ovat tyypillistä burmalaista rakennustaidetta.",
+     "leveys": 4726,
+     "korkeus": 3466,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20683398",
+   "nimi": "Chaukhtatgyin temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 16.81176,
+   "lon": 96.16381,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Porch of Chaukhtatgyi Buddha Temple.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Porch_of_Chaukhtatgyi_Buddha_Temple.jpg?width=1280",
+     "tekija": "Ladybesttruthful",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Porch_of_Chaukhtatgyi_Buddha_Temple.jpg",
+     "selite": "Chaukhtatgyin temppelin sisäänkäynti on koristeltu kullatuin kattoveistoksin ja leijonin.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Reclining Buddha statue in Chaukhtatgyi Buddha temple Yangon Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reclining_Buddha_statue_in_Chaukhtatgyi_Buddha_temple_Yangon_Myanmar.jpg?width=1280",
+     "tekija": "Arttantra",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Reclining_Buddha_statue_in_Chaukhtatgyi_Buddha_temple_Yangon_Myanmar.jpg",
+     "selite": "Temppelin suuri makaava Buddha on maalattu valkoiseksi, ja sen kasvot ovat sirot.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q385991",
+   "nimi": "Kandawgyi-järvi ja Karaweik",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 16.79549,
+   "lon": 96.16656,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karaweik Boat (restaurant).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karaweik_Boat_(restaurant).JPG?width=1280",
+     "tekija": "Maung Maung San",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karaweik_Boat_(restaurant).JPG",
+     "selite": "Karaweik on kuninkaallista proomua muistuttava kultainen rakennus Kandawgyi-järven rannalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Karaweik at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karaweik_at_night.jpg?width=1280",
+     "tekija": "Thrillseekr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karaweik_at_night.jpg",
+     "selite": "Illalla valaistu Karaweik heijastuu järveen.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q8048610",
+   "nimi": "Yangonin keskusasema",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 16.7817,
+   "lon": 96.1611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yangon Central railway station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yangon_Central_railway_station.jpg?width=1280",
+     "tekija": "Shin Khant Maung",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yangon_Central_railway_station.jpg",
+     "selite": "Yangonin keskusasema on Myanmarin rautateiden tärkein asema, ja sen pitkien laiturikatosten alle saapuvat junat.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yangon Central Station Lobby.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yangon_Central_Station_Lobby.jpg?width=1280",
+     "tekija": "Shin Khant Maung",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yangon_Central_Station_Lobby.jpg",
+     "selite": "Aseman aulan teräsrungot ja penkit palvelevat päivittäin tuhansia matkustajia.",
+     "leveys": 3068,
+     "korkeus": 2301,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q870075",
+   "nimi": "Bogyoken markkinat",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 16.78038,
+   "lon": 96.1556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Rangun, Market Bogyoke (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Rangun%2C_Market_Bogyoke_(02).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Rangun%2C_Market_Bogyoke_(02).jpg",
+     "selite": "Bogyoken markkinat ovat vuonna 1926 avattu kauppahalli, joka tunnettiin aiemmin nimellä Scott Market.",
+     "leveys": 3984,
+     "korkeus": 2656,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yangon, Scott Market.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yangon%2C_Scott_Market.jpg?width=1280",
+     "tekija": "Stefan Fussan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yangon%2C_Scott_Market.jpg",
+     "selite": "Markkinahallin siirtomaa-ajan julkisivu seisoo Yangonin keskustan kadun varrella.",
+     "leveys": 4893,
+     "korkeus": 3163,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6866494",
+   "nimi": "Sihteeristö",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 16.77556,
+   "lon": 96.16583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Secretariat in Rangun, Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Secretariat_in_Rangun%2C_Myanmar.jpg?width=1280",
+     "tekija": "Myrmux",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Secretariat_in_Rangun%2C_Myanmar.jpg",
+     "selite": "Sihteeristö eli Ministerirakennus oli Britti-Burman hallinnon punatiilinen keskus Yangonissa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ministers' Office Building Yangon 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ministers'_Office_Building_Yangon_4.jpg?width=1280",
+     "tekija": "Paingpeace",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ministers'_Office_Building_Yangon_4.jpg",
+     "selite": "Rakennuksen pitkä punainen julkisivu ulottuu nurmikoiden taakse.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ministers' Office Yangon Ground.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ministers'_Office_Yangon_Ground.jpg?width=1280",
+     "tekija": "Paingpeace",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ministers'_Office_Yangon_Ground.jpg",
+     "selite": "Kompleksin siivet ympäröivät laajaa pihaa.",
+     "leveys": 4275,
+     "korkeus": 2479,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7621231",
+   "nimi": "Strand-hotelli",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 16.7696,
+   "lon": 96.1626,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yangon, Strand Hotel, Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yangon%2C_Strand_Hotel%2C_Myanmar.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yangon%2C_Strand_Hotel%2C_Myanmar.jpg",
+     "selite": "Strand-hotelli on Yangonin vanhimpia ja arvostetuimpia hotelleja, avattu 1901 jokirannassa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Strand IMG 20180407 125255 strand road yangon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Strand_IMG_20180407_125255_strand_road_yangon.jpg?width=1280",
+     "tekija": "Bjoertvedt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Strand_IMG_20180407_125255_strand_road_yangon.jpg",
+     "selite": "Hotellin valkoinen julkisivu ja pylväskäytävä avautuvat Strand Roadin suuntaan.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4948533",
+   "nimi": "Botataung-pagodi",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 16.76849,
+   "lon": 96.17198,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Rangun, Pagoda Botahtaung (52).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Rangun%2C_Pagoda_Botahtaung_(52).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Rangun%2C_Pagoda_Botahtaung_(52).jpg",
+     "selite": "Botataung-pagodi seisoo Yangon-joen rannalla keskustan itäpäässä.",
+     "leveys": 3760,
+     "korkeus": 3116,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Botataung Pagoda (10424863093).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Botataung_Pagoda_(10424863093).jpg?width=1280",
+     "tekija": "ReflectedSerendipity from United Kingdom",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Botataung_Pagoda_(10424863093).jpg",
+     "selite": "Pagodin kullattu stupa hohtaa kirkkaan sinistä taivasta vasten.",
+     "leveys": 3075,
+     "korkeus": 4100,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Botataung Pagoda stupa with flags Yangon Myanmar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Botataung_Pagoda_stupa_with_flags_Yangon_Myanmar.jpg?width=1280",
+     "tekija": "Jasoneppink",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Botataung_Pagoda_stupa_with_flags_Yangon_Myanmar.jpg",
+     "selite": "Rukouslippujen ympäröimä stupa on pagodin sisäpihan keskipiste.",
+     "leveys": 3391,
+     "korkeus": 5087,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Yangon Skyline from Olympic Tower.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yangon_Skyline_from_Olympic_Tower.jpg?width=1280",
+   "tekija": "Yangonite",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yangon_Skyline_from_Olympic_Tower.jpg",
+   "selite": "Yangonin matalat keskustakorttelit ulottuvat kohti joen suistoa.",
+   "leveys": 3502,
+   "korkeus": 1914,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Myanmar - Yangon (30107882544).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Myanmar_-_Yangon_(30107882544).jpg?width=1280",
+   "tekija": "Thomas Woodtli from Zürich, Switzerland",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Myanmar_-_Yangon_(30107882544).jpg",
+   "selite": "Ylhäältä Yangon levittäytyy joen mutkien ympärille Irrawaddyn suistoalueelle.",
+   "leveys": 3412,
+   "korkeus": 1920,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

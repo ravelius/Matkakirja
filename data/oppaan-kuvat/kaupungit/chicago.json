@@ -1,0 +1,641 @@
+{
+ "kaupunki": "chicago",
+ "kaupunkiQ": "Q1297",
+ "kohteet": [
+  {
+   "q": "Q29294",
+   "nimi": "Willis Tower",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 41.87861,
+   "lon": -87.63583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chicago Sears Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Sears_Tower.jpg?width=1280",
+     "tekija": "Daniel Schwen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Sears_Tower.jpg",
+     "selite": "Willis Tower on Chicagon tunnetuin pilvenpiirtäjä, jonka kaksi antennia erottuvat kauas.",
+     "leveys": 2000,
+     "korkeus": 3075,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Willis Tower, Chicago September 2016-26.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Willis_Tower%2C_Chicago_September_2016-26.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Willis_Tower%2C_Chicago_September_2016-26.jpg",
+     "selite": "Tumma, porrastettu runko nousee Loopin yläpuolelle.",
+     "leveys": 4242,
+     "korkeus": 6604,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1130516",
+   "nimi": "Millennium Park",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 41.8825,
+   "lon": -87.6225,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jay Pritzker Pavilion, Chicago, Illinois, Estados Unidos, 2012-10-20, DD 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jay_Pritzker_Pavilion%2C_Chicago%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_08.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jay_Pritzker_Pavilion%2C_Chicago%2C_Illinois%2C_Estados_Unidos%2C_2012-10-20%2C_DD_08.jpg",
+     "selite": "Millennium Parkin Pritzker Pavilion on Frank Gehryn suunnittelema esiintymislava keskustan tornien edessä.",
+     "leveys": 4399,
+     "korkeus": 2629,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Millennium Park from Nichols Bridgeway, Chicago, Illinois (9179499913).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Millennium_Park_from_Nichols_Bridgeway%2C_Chicago%2C_Illinois_(9179499913).jpg?width=1280",
+     "tekija": "Ken Lund from Reno, Nevada, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Millennium_Park_from_Nichols_Bridgeway%2C_Chicago%2C_Illinois_(9179499913).jpg",
+     "selite": "Puistoa voi katsoa Nichols Bridgewayn sillalta kohti lavan teräskaaria.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q239303",
+   "nimi": "Chicagon taideinstituutti",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 41.87944,
+   "lon": -87.62389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2014 Chicago Art Institute 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Chicago_Art_Institute_02.jpg?width=1280",
+     "tekija": "Nicholas Hartmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Chicago_Art_Institute_02.jpg",
+     "selite": "Taideinstituutin pääsisäänkäyntiä vartioivat pronssileijonat Michigan Avenuella.",
+     "leveys": 3005,
+     "korkeus": 2253,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Art Institute of Chicago from across Michigan Avenue.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Art_Institute_of_Chicago_from_across_Michigan_Avenue.jpg?width=1280",
+     "tekija": "Beyond My Ken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Art_Institute_of_Chicago_from_across_Michigan_Avenue.jpg",
+     "selite": "Klassistinen julkisivu avautuu Michigan Avenuelle leveällä portaikolla.",
+     "leveys": 1925,
+     "korkeus": 1563,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q217727",
+   "nimi": "John Hancock Center",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 41.89889,
+   "lon": -87.62306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "875 North Michigan Avenue, formerly John Hancock Center, Chicago.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/875_North_Michigan_Avenue%2C_formerly_John_Hancock_Center%2C_Chicago.jpg?width=1280",
+     "tekija": "Spatms",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:875_North_Michigan_Avenue%2C_formerly_John_Hancock_Center%2C_Chicago.jpg",
+     "selite": "John Hancock Centerin ristikkomaiset teräsdiagonaalit kapenevat kohti huippua.",
+     "leveys": 4000,
+     "korkeus": 2915,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "John Hancock Center 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Hancock_Center_2.jpg?width=1280",
+     "tekija": "Joe Ravi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:John_Hancock_Center_2.jpg",
+     "selite": "Tumma torni erottuu pohjoisen Michigan Avenuen yllä.",
+     "leveys": 2633,
+     "korkeus": 3950,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q642866",
+   "nimi": "Chicago Theatre",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 41.88528,
+   "lon": -87.62778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chicago Theatre blend.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Theatre_blend.jpg?width=1280",
+     "tekija": "Daniel Schwen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Theatre_blend.jpg",
+     "selite": "Chicago Theatren pystysuora kyltti ja valokehäinen markiisi ovat State Streetin tunnetuin näky.",
+     "leveys": 3992,
+     "korkeus": 2998,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chicago Theatre 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Theatre_2.jpg?width=1280",
+     "tekija": "Daniel Schwen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Theatre_2.jpg",
+     "selite": "Iltaisin kyltti hohtaa punaisena Loopin hämärässä.",
+     "leveys": 2561,
+     "korkeus": 3464,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q862890",
+   "nimi": "Chicagon vesitorni",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 41.89716,
+   "lon": -87.62442,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chicago-Water-Tower-September-2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago-Water-Tower-September-2014.jpg?width=1280",
+     "tekija": "Acediscovery",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago-Water-Tower-September-2014.jpg",
+     "selite": "Kalkkikivinen vesitorni selvisi vuoden 1871 suurpalosta ja seisoo nyt korkeiden rakennusten välissä.",
+     "leveys": 2736,
+     "korkeus": 3584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Water Tower - Chicago Nov 2004.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Water_Tower_-_Chicago_Nov_2004.jpg?width=1280",
+     "tekija": "Didier B (Sam67fr)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Water_Tower_-_Chicago_Nov_2004.jpg",
+     "selite": "Goottilaistyylinen torni näkyy Michigan Avenuen varrella.",
+     "leveys": 1500,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2143136",
+   "nimi": "Tribune Tower",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 41.89039,
+   "lon": -87.62369,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tribune Tower 2 (31225198913).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tribune_Tower_2_(31225198913).jpg?width=1280",
+     "tekija": "daryl_mitchell from Saskatoon, Saskatchewan, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tribune_Tower_2_(31225198913).jpg",
+     "selite": "Tribune Towerin goottilaistyylinen kruunu kohoaa Michigan Avenuen varrella.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tribune Tower, Chicago, Illinois (9181667444) (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tribune_Tower%2C_Chicago%2C_Illinois_(9181667444)_(cropped).jpg?width=1280",
+     "tekija": "Ken Lund from Reno, Nevada, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tribune_Tower%2C_Chicago%2C_Illinois_(9181667444)_(cropped).jpg",
+     "selite": "Tornin seinissä on kiviä kaukaisista maailmankolkista.",
+     "leveys": 1553,
+     "korkeus": 3821,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2224700",
+   "nimi": "Chicago Board of Trade Building",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 41.87812,
+   "lon": -87.63225,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chicago Board Of Trade Building.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Board_Of_Trade_Building.jpg?width=1280",
+     "tekija": "Joe Ravi (Shutterstock iStock Dreamstime)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Board_Of_Trade_Building.jpg",
+     "selite": "Board of Trade Buildingin art deco -torni päättää LaSalle Streetin kanjonin.",
+     "leveys": 1871,
+     "korkeus": 3778,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chicago Board of Trade Building (6038512299).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Board_of_Trade_Building_(6038512299).jpg?width=1280",
+     "tekija": "Teemu008 from Palatine, Illinois",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Board_of_Trade_Building_(6038512299).jpg",
+     "selite": "Huipulla on Ceres-patsas, ja julkisivua koristavat kellotaulu ja reliefit.",
+     "leveys": 1704,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q158989",
+   "nimi": "Buckingham Fountain",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 41.87579,
+   "lon": -87.61894,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Buckingham Fountain & Chicago skyline, Aug 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Fountain_%26_Chicago_skyline%2C_Aug_10.jpg?width=1280",
+     "tekija": "An Errant Knight",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_%26_Chicago_skyline%2C_Aug_10.jpg",
+     "selite": "Buckingham Fountain on Grant Parkin suuri suihkulähde, jonka takana kohoaa Loopin siluetti.",
+     "leveys": 3296,
+     "korkeus": 2472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Buckingham Fountain - Chicago (957256405).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buckingham_Fountain_-_Chicago_(957256405).jpg?width=1280",
+     "tekija": "Josh Hallett from Winter Haven, FL, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buckingham_Fountain_-_Chicago_(957256405).jpg",
+     "selite": "Lähteen reunojen merihevoset on tehty vihreästä patinoidusta pronssista.",
+     "leveys": 2896,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1052807",
+   "nimi": "Wrigley Field",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 41.94806,
+   "lon": -87.65556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wrigley Field 2018 - 42195054760.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wrigley_Field_2018_-_42195054760.jpg?width=1280",
+     "tekija": "Ryan Dickey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wrigley_Field_2018_-_42195054760.jpg",
+     "selite": "Wrigley Field on Chicago Cubsin kotistadion, joka on vanhimpia pesäpallokenttiä Yhdysvalloissa.",
+     "leveys": 7607,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nuveen sign at Wrigley Field, Chicago Cubs, 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nuveen_sign_at_Wrigley_Field%2C_Chicago_Cubs%2C_2017.jpg?width=1280",
+     "tekija": "Jholtgrewe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nuveen_sign_at_Wrigley_Field%2C_Chicago_Cubs%2C_2017.jpg",
+     "selite": "Katsomot ja pelikenttä näkyvät illalla stadionin sisältä.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1122595",
+   "nimi": "Field Museum",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 41.86628,
+   "lon": -87.61704,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Field Museum of Natural History.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Field_Museum_of_Natural_History.jpg?width=1280",
+     "tekija": "Joe Ravi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Field_Museum_of_Natural_History.jpg",
+     "selite": "Field Museumin kreikkalaistyylinen pylväsjulkisivu avautuu Lake Michiganin rannalla Grant Parkin eteläpuolella.",
+     "leveys": 3675,
+     "korkeus": 2450,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Stanley Field Hall Field Museum Chicago 2022-7578.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stanley_Field_Hall_Field_Museum_Chicago_2022-7578.jpg?width=1280",
+     "tekija": "Paul Burley",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stanley_Field_Hall_Field_Museum_Chicago_2022-7578.jpg",
+     "selite": "Stanley Field Hallin kaarten alla ovat museon suurimmat fossiilit.",
+     "leveys": 6240,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1414079",
+   "nimi": "Tiede- ja teollisuusmuseo",
+   "peruste": "sitelinks",
+   "koko_m": 350,
+   "lat": 41.79056,
+   "lon": -87.58278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum of Science and Industry.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_of_Science_and_Industry.jpg?width=1280",
+     "tekija": "Knarfol at de.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_of_Science_and_Industry.jpg",
+     "selite": "Museum of Science and Industry toimii vuoden 1893 maailmannäyttelyn vanhassa palatsissa Jackson Parkissa.",
+     "leveys": 3604,
+     "korkeus": 1666,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20200811 Museum of Science and Industry and Jackson Park (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20200811_Museum_of_Science_and_Industry_and_Jackson_Park_(1).jpg?width=1280",
+     "tekija": "TonyTheTiger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20200811_Museum_of_Science_and_Industry_and_Jackson_Park_(1).jpg",
+     "selite": "Ylhäältä museo ja sitä ympäröivä puisto avautuvat järven rannalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q358052",
+   "nimi": "Adler-planetaario",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 41.86615,
+   "lon": -87.60667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Adler external 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adler_external_1.jpg?width=1280",
+     "tekija": "Adler Planetarium",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adler_external_1.jpg",
+     "selite": "Adler Planetarium on kupolirakennus Lake Michiganin rannalla.",
+     "leveys": 2451,
+     "korkeus": 1500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Adler Planetarium E.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Adler_Planetarium_E.jpg?width=1280",
+     "tekija": "Sea Cow",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Adler_Planetarium_E.jpg",
+     "selite": "Ilmasta planetaarion kehä ja sisäänkäynti näkyvät saaren kärjessä.",
+     "leveys": 3931,
+     "korkeus": 2211,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Chicago - Sundial \"Men enters the Cosmos\" - vor dem Adler Planetarium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_-_Sundial_%22Men_enters_the_Cosmos%22_-_vor_dem_Adler_Planetarium.jpg?width=1280",
+     "tekija": "HaSt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_-_Sundial_%22Men_enters_the_Cosmos%22_-_vor_dem_Adler_Planetarium.jpg",
+     "selite": "Planetaarion edessä oleva aurinkokello katsoo keskustan siluettia kohti.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2398614",
+   "nimi": "Chicago Cultural Center",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 41.88389,
+   "lon": -87.62501,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tiffany Dome, Chicago Cultural Center.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiffany_Dome%2C_Chicago_Cultural_Center.JPG?width=1280",
+     "tekija": "Amerique",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tiffany_Dome%2C_Chicago_Cultural_Center.JPG",
+     "selite": "Kulttuurikeskuksen Tiffany-kupoli on maailman suurimpia lasimaalauskupoleita.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tiffany Glass Dome - Chicago Cultural Center.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tiffany_Glass_Dome_-_Chicago_Cultural_Center.jpg?width=1280",
+     "tekija": "Grant Henninger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tiffany_Glass_Dome_-_Chicago_Cultural_Center.jpg",
+     "selite": "Kristallikruunu roikkuu kupolin keskellä Preston Bradley Hallissa.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1921426",
+   "nimi": "Merchandise Mart",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 41.8886,
+   "lon": -87.6355,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Merchandise Mart 080405.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Merchandise_Mart_080405.jpg?width=1280",
+     "tekija": "User:JeremyA",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Merchandise_Mart_080405.jpg",
+     "selite": "Merchandise Mart on valtava kauppatalo Chicago-joen rannalla.",
+     "leveys": 2725,
+     "korkeus": 1785,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Merchandise Mart 2023-05-28.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Merchandise_Mart_2023-05-28.jpg?width=1280",
+     "tekija": "Masterpineapple421",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Merchandise_Mart_2023-05-28.jpg",
+     "selite": "Rakennuksen tiilimäinen kiviseinä muodostaa koko korttelin mittaisen julkisivun.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1582905",
+   "nimi": "Hull House",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 41.87203,
+   "lon": -87.64725,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hull House, Chicago, IL.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hull_House%2C_Chicago%2C_IL.jpg?width=1280",
+     "tekija": "Elisa.rolle",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hull_House%2C_Chicago%2C_IL.jpg",
+     "selite": "Hull House oli Jane Addamsin perustama siirtolaisten setlementti, ja talo on nykyään museo.",
+     "leveys": 3673,
+     "korkeus": 2459,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jane Addams Hull House Museum - Exterior 1 (7541050386).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jane_Addams_Hull_House_Museum_-_Exterior_1_(7541050386).jpg?width=1280",
+     "tekija": "Chicago Architecture Today",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jane_Addams_Hull_House_Museum_-_Exterior_1_(7541050386).jpg",
+     "selite": "Tiilitalon kuisti ja valkoiset pylväät ovat 1850-luvun alkuperäistä rakennusta.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Chicago Skyline in April 2024.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Skyline_in_April_2024.jpg?width=1280",
+   "tekija": "xiquinhosilva",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Skyline_in_April_2024.jpg",
+   "selite": "Chicagon siluetti kohoaa Lake Michiganin rannalla.",
+   "leveys": 2446,
+   "korkeus": 981,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Chicago Aerial (50924320382).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chicago_Aerial_(50924320382).jpg?width=1280",
+   "tekija": "formulanone",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chicago_Aerial_(50924320382).jpg",
+   "selite": "Ilmasta Loopin tornit ja korttelit muodostavat tiheän ruudukon.",
+   "leveys": 3600,
+   "korkeus": 2400,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q589099",
+   "nimi": "Cloud Gate",
+   "peruste": "sitelinks",
+   "lat": 41.8827,
+   "lon": -87.6233,
+   "syy": "ei vapaata kuvaa jossa veistos on pääosassa; löydetyt kuvat ovat ihmispainotteisia"
+  },
+  {
+   "q": "Q6772574",
+   "nimi": "Marquette Building",
+   "peruste": "pelin nosto",
+   "lat": 41.8795,
+   "lon": -87.63007,
+   "syy": "ei kelvollista vapaata kuvaa (löytynyt kuva ilman käyttökelpoista lisenssitietoa)"
+  }
+ ]
+}

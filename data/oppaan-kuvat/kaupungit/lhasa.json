@@ -1,0 +1,421 @@
+{
+ "kaupunki": "lhasa",
+ "kaupunkiQ": "Q5869",
+ "kohteet": [
+  {
+   "q": "Q71229",
+   "nimi": "Potalan palatsi",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 29.65778,
+   "lon": 91.11694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Potala.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Potala.jpg?width=1280",
+     "tekija": "Ondřej Žváček",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Potala.jpg",
+     "selite": "Potalan palatsi kohoaa Punaisella kukkulalla Lhasan yllä, ja se oli dalai-lamojen talvipalatsi.",
+     "leveys": 2592,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lhasa-Potala-04-Suedseite-2014-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-Potala-04-Suedseite-2014-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-Potala-04-Suedseite-2014-gje.jpg",
+     "selite": "Palatsin valkoiset ja punaiset rakennukset ulottuvat kukkulan rinteeltä huipulle.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lhasa-Potala-16-Roter Palast-2014-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-Potala-16-Roter_Palast-2014-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-Potala-16-Roter_Palast-2014-gje.jpg",
+     "selite": "Punainen palatsi on palatsikompleksin uskonnollinen keskus ja korkein osa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Palacio de Potala - 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Potala_-_02.JPG?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Potala_-_02.JPG",
+     "selite": "Paksut kallistuvat seinät ja pitkät portaat johtavat palatsin sisäänkäynnille.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q735914",
+   "nimi": "Jokhang-temppeli",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 29.65306,
+   "lon": 91.13222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jokhang Temple frontal view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jokhang_Temple_frontal_view.jpg?width=1280",
+     "tekija": "Rene Heise",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jokhang_Temple_frontal_view.jpg",
+     "selite": "Jokhang on tiibetinbuddhalaisuuden pyhin temppeli ja Lhasan vanhan kaupungin sydän.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jokhang-1235.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jokhang-1235.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jokhang-1235.jpg",
+     "selite": "Temppelin kultaiset katot ja rukouslippujen kirjavat värit erottuvat kirkasta taivasta vasten.",
+     "leveys": 3660,
+     "korkeus": 2439,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Buddhist icons on the roof of the Jokhang temple in Lhasa, Tibet.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buddhist_icons_on_the_roof_of_the_Jokhang_temple_in_Lhasa%2C_Tibet.jpg?width=1280",
+     "tekija": "Jan Kranendonk (https://www.jankranendonk.nl)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buddhist_icons_on_the_roof_of_the_Jokhang_temple_in_Lhasa%2C_Tibet.jpg",
+     "selite": "Katolla koristavat kultaiset symbolit ja Potala näkyy taustalla.",
+     "leveys": 3364,
+     "korkeus": 2281,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q867537",
+   "nimi": "Norbulingka",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 29.65234,
+   "lon": 91.09532,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "JARDINES DE NORGBULINKA - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/JARDINES_DE_NORGBULINKA_-_panoramio.jpg?width=1280",
+     "tekija": "Manuel Velazquez",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:JARDINES_DE_NORGBULINKA_-_panoramio.jpg",
+     "selite": "Norbulingka on dalai-lamojen kesäpalatsi ja laaja puistoalue Lhasan länsilaidalla.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tibet-5540 (2624909770).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tibet-5540_(2624909770).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tibet-5540_(2624909770).jpg",
+     "selite": "Uusi kesäpalatsi kukkaistutuksineen on rakennettu 1950-luvulla puiston keskelle.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q241937",
+   "nimi": "Drepungin luostari",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 29.67671,
+   "lon": 91.04699,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lhasa-Drepung-32-Klostergebaeude-2014-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-Drepung-32-Klostergebaeude-2014-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-Drepung-32-Klostergebaeude-2014-gje.jpg",
+     "selite": "Drepung on yksi Tiibetin suurimmista luostareista, ja sen valkoiset rakennukset peittävät vuoren rinnettä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Drepung monastery outside Lhasa, Tibet.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drepung_monastery_outside_Lhasa%2C_Tibet.jpg?width=1280",
+     "tekija": "Jan Kranendonk (https://www.jankranendonk.nl)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drepung_monastery_outside_Lhasa%2C_Tibet.jpg",
+     "selite": "Luostari näkyy kaukaa valkoisena rakennusryhmänä Lhasan laakson reunalla.",
+     "leveys": 2780,
+     "korkeus": 1886,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lhasa-Drepung-40-Tuermchen-2014-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-Drepung-40-Tuermchen-2014-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-Drepung-40-Tuermchen-2014-gje.jpg",
+     "selite": "Kultaiset kattokoristeet ja tummanpunaiset seinät kuuluvat tiibetiläiseen luostariarkkitehtuuriin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q124848",
+   "nimi": "Seran luostari",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 29.69679,
+   "lon": 91.13275,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sera Monastery4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sera_Monastery4.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sera_Monastery4.jpg",
+     "selite": "Sera on gelug-koulukunnan suuri luostari Lhasan pohjoispuolella, tunnettu munkkien väittelyistä.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lhasa - Sera Monastery - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa_-_Sera_Monastery_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Pavel Špindler",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa_-_Sera_Monastery_-_panoramio_(1).jpg",
+     "selite": "Luostarin valkoiset kivirakennukset nojaavat kallioiseen rinteeseen.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q932446",
+   "nimi": "Gandenin luostari",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 29.75852,
+   "lon": 91.47632,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tibet 06 - 040 - Ganden Monastery 1 (150277595).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tibet_06_-_040_-_Ganden_Monastery_1_(150277595).jpg?width=1280",
+     "tekija": "McKay Savage from London, UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tibet_06_-_040_-_Ganden_Monastery_1_(150277595).jpg",
+     "selite": "Ganden on gelug-koulukunnan ensimmäinen luostari, ja se sijaitsee vuoren rinteellä Lhasan itäpuolella.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1853679",
+   "nimi": "Ramoche-temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.65861,
+   "lon": 91.13056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ramoche-Tempel Schuh 2007.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramoche-Tempel_Schuh_2007.JPG?width=1280",
+     "tekija": "Dieter Schuh 18:55, 30. Sep. 2009 (CEST)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ramoche-Tempel_Schuh_2007.JPG",
+     "selite": "Ramoche on Lhasan vanhan kaupungin temppeli, jossa on tiibetiläiselle arkkitehtuurille tyypillinen punainen julkisivu.",
+     "leveys": 1504,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lhasa-Ramoche-10-Wohnhof-2014-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-Ramoche-10-Wohnhof-2014-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-Ramoche-10-Wohnhof-2014-gje.jpg",
+     "selite": "Temppelin sisäpiha on ympäröity puisilla parvekkeilla ja värikkäillä ikkunoilla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1557987",
+   "nimi": "Lhasan suuri moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.65082,
+   "lon": 91.1367,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mosques in Lhasa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosques_in_Lhasa.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosques_in_Lhasa.jpg",
+     "selite": "Lhasan moskeija yhdistää islamilaisia minareetteja ja tiibetiläistä koristelua.",
+     "leveys": 2389,
+     "korkeus": 2846,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mosques in Lhasa2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosques_in_Lhasa2.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosques_in_Lhasa2.jpg",
+     "selite": "Vihreäkupoliset minareetit kohoavat moskeijan julkisivun yläpuolelle.",
+     "leveys": 1918,
+     "korkeus": 3872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1139682",
+   "nimi": "Tiibetin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 29.65115,
+   "lon": 91.09728,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tibet Museum Lhasa Tibet China 西藏 拉萨 西藏博物館 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tibet_Museum_Lhasa_Tibet_China_%E8%A5%BF%E8%97%8F_%E6%8B%89%E8%90%A8_%E8%A5%BF%E8%97%8F%E5%8D%9A%E7%89%A9%E9%A4%A8_-_panoramio.jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tibet_Museum_Lhasa_Tibet_China_%E8%A5%BF%E8%97%8F_%E6%8B%89%E8%90%A8_%E8%A5%BF%E8%97%8F%E5%8D%9A%E7%89%A9%E9%A4%A8_-_panoramio.jpg",
+     "selite": "Tiibetin museo esittelee alueen historiaa, taidetta ja kulttuuria Lhasan länsiosassa.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "TibetanMuseum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/TibetanMuseum.jpg?width=1280",
+     "tekija": "Fanghong",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:TibetanMuseum.jpg",
+     "selite": "Museorakennuksen portaat ja julkisivu mukailevat tiibetiläistä tyyliä.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17031797",
+   "nimi": "Chagpori-kukkula",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 29.65556,
+   "lon": 91.11,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lhasa-von Yakhotel-06-beschneite Berge-Chagpori Ri-2014-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-von_Yakhotel-06-beschneite_Berge-Chagpori_Ri-2014-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-von_Yakhotel-06-beschneite_Berge-Chagpori_Ri-2014-gje.jpg",
+     "selite": "Chagpori on Lhasan keskustan kukkula, jolla oli aikoinaan tiibetiläisen lääketieteen oppilaitos.",
+     "leveys": 5184,
+     "korkeus": 3125,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Lhasa seen from Drepung Temple.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa_seen_from_Drepung_Temple.jpg?width=1280",
+   "tekija": "GrandCeres",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa_seen_from_Drepung_Temple.jpg",
+   "selite": "Lhasa levittyy Kyichun laaksoon vuorten ympäröimänä.",
+   "leveys": 4096,
+   "korkeus": 3072,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Lhasa-from-Sera4.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lhasa-from-Sera4.JPG?width=1280",
+   "tekija": "ignat",
+   "lisenssi": "CC BY 2.5",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lhasa-from-Sera4.JPG",
+   "selite": "Näkymä Lhasan kaupunkiin Potalan palatsin kohotessa taustalla.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

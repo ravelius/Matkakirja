@@ -1,0 +1,186 @@
+{
+ "kaupunki": "birdsville",
+ "kaupunkiQ": "Q865118",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q179970",
+  "Q211839",
+  "Q432278",
+  "Q1208608"
+ ],
+ "kohteet": [
+  {
+   "q": "Q179970",
+   "nimi": "Eyrejärvi",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -28.406,
+   "lon": 137.2963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of dried Lake Eyre, April 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_dried_Lake_Eyre%2C_April_2013.jpg?width=1280",
+     "tekija": "rheins",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_dried_Lake_Eyre%2C_April_2013.jpg",
+     "selite": "Eyrejärvi on Australian suurin suolajärvi, joka täyttyy vedellä vain harvoin ja kuivuu nopeasti.",
+     "leveys": 3147,
+     "korkeus": 2820,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alan T Kati Thanda 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alan_T_Kati_Thanda_03.jpg?width=1280",
+     "tekija": "MisterT42",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alan_T_Kati_Thanda_03.jpg",
+     "selite": "Ilmasta näkyy, kuinka sisämaan joet kuivuvat suolaiseen järvenpohjaan.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q211839",
+   "nimi": "Simpsonin aavikko",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -24.57,
+   "lon": 137.42,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Andado swamp2 - Christopher Watson.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andado_swamp2_-_Christopher_Watson.jpg?width=1280",
+     "tekija": "Christopher Watson (http://www.comebirdwatching.blogspot.com/)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andado_swamp2_-_Christopher_Watson.jpg",
+     "selite": "Simpsonin aavikon punaiset dyynit kohoavat tasangon yllä, ja sateen jälkeen alanteisiin kertyy vettä.",
+     "leveys": 1600,
+     "korkeus": 806,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Andado - Christopher Watson.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andado_-_Christopher_Watson.jpg?width=1280",
+     "tekija": "Christopher Watson (http://www.comebirdwatching.blogspot.com/)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andado_-_Christopher_Watson.jpg",
+     "selite": "Aavikon pitkät, yhdensuuntaiset hiekkadyynit ovat tunnusomaisia koko Simpsonin aavikolle.",
+     "leveys": 1329,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q432278",
+   "nimi": "Cooper Creek",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -28.38333,
+   "lon": 137.68333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Coopers Creek Bullah waterhole.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coopers_Creek_Bullah_waterhole.JPG?width=1280",
+     "tekija": "Peterdownunder",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coopers_Creek_Bullah_waterhole.JPG",
+     "selite": "Cooper Creek on kuivan sisämaan joki, jonka vesialtaat kantavat elämää aavikon läpi.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "XingCooperCreek.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/XingCooperCreek.jpg?width=1280",
+     "tekija": "Kdliss - Klaus-Dieter Liss",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:XingCooperCreek.jpg",
+     "selite": "Maastoauto ylittää Cooper Creekin vettä roiskuttaen, kun joki on tulvillaan.",
+     "leveys": 1278,
+     "korkeus": 564,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1208608",
+   "nimi": "Diamantina-joki",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -26.91667,
+   "lon": 139.18333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Diamantina.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diamantina.JPG?width=1280",
+     "tekija": "Yeti Hunter (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Diamantina.JPG",
+     "selite": "Diamantina-joki virtaa Birdsvillen ohi ruskeana ja laiskana, keskellä kuivaa Channel Countrya.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Diamantina Channel and Coolabahs (20918518819).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diamantina_Channel_and_Coolabahs_(20918518819).jpg?width=1280",
+     "tekija": "David Elliott from UK",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Diamantina_Channel_and_Coolabahs_(20918518819).jpg",
+     "selite": "Joen uomat ja koolabapuut tekevät aavikon keskelle vihreän vyöhykkeen, jonka varrella karjaa on laidunnettu.",
+     "leveys": 4560,
+     "korkeus": 3395,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Birdsville Hotel.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Birdsville_Hotel.jpg?width=1280",
+   "tekija": "Stuart Edwards",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Birdsville_Hotel.jpg",
+   "selite": "Birdsvillen hotelli seisoo autiomaakylän pääkadun varrella ja on kylän tunnetuin rakennus.",
+   "leveys": 3584,
+   "korkeus": 2560,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Birdsville Pub (34616985520).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Birdsville_Pub_(34616985520).jpg?width=1280",
+   "tekija": "NomadicPics(go to album) from cairns, australia",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Birdsville_Pub_(34616985520).jpg",
+   "selite": "Hotellin veranta hehkuu illan hämärässä täysikuun alla keskellä aavikkoa.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

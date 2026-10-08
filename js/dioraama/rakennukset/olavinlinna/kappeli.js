@@ -103,7 +103,10 @@ for (const h of [
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
 const KAPPELI_HAHMOT = [
   {
-    id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.35, LATTIA + 0.22, -20.8], suunta: 90 /* 2.10.: korokkeen pinta (tila-glb) */, peilattu: false,
+    // 5.10. (Päätoimittaja, Siirtosepän video): [3.35, LATTIA + 0.22, -20.8] oli polvituolin (penkki 0,22) päällä, joten
+    // kappalainen seisoi puhuessaan jakkaralla. Nyt lattialla polvituolin vieressä kameran puolella (polvituolin kehyksessä
+    // u −0,75, w 0,98), jossa sekä seisova puhe että polvirukous (tyo) mahtuvat. Lähin lattiakynttilä 0,75 m.
+    id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.597, LATTIA, -19.873], suunta: 90, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'kappalainen-1', aani: 'kappeli-kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
@@ -169,7 +172,8 @@ export const TILA = {
   // Tumma yleisvalo; kynttiläkruunu ja alttarikynttilät kantavat tunnelman (jalkojen .valo tulee reseptistä).
   valot: [
     { paikka: [0, 12.1, -20], sade: 8, voima: 1.8, vari: '#ffb070', lepatus: 0.3 }, // kruunun ja penkkien alue
-    { paikka: [3.6, 10.9, -20.8], sade: 4.5, voima: 1.5, vari: '#ff9a4a', lepatus: 0.25 }, // pääalttari ja kappalainen
+    // 5.10.: y 10,9 → 12,1. Matalalla valo oli kappalaisen rinnan korkeudella 0,25 m:n päässä, ja iho hehkui keltaisena.
+    { paikka: [3.6, 12.1, -20.8], sade: 4.5, voima: 1.5, vari: '#ff9a4a', lepatus: 0.25 }, // pääalttari ja kappalainen
     { paikka: [0, 11.0, -22.9], sade: 4.5, voima: 0.9, vari: '#ffb070', lepatus: 0.2 }, // pohjaseinän ristit ja hagioskooppi
     // Itäisen ikkunaraon (59°) aamuaurinko: keila alkaa seinäpinnasta ja osuu lattialle penkkien ja pulpetin väliin.
     {

@@ -1,0 +1,477 @@
+{
+ "kaupunki": "moskova",
+ "kaupunkiQ": "Q649",
+ "kohteet": [
+  {
+   "q": "Q133274",
+   "nimi": "Moskovan Kreml",
+   "peruste": "pelin nosto",
+   "koko_m": 700,
+   "lat": 55.75167,
+   "lon": 37.61778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista general del Kremlin, Moscú, Rusia, 2016-10-03, DD 18-19 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_general_del_Kremlin%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_18-19_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_general_del_Kremlin%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_18-19_HDR.jpg",
+     "selite": "Kreml on Moskovan muurein ympäröity linnoitus, joka kohoaa Moskva-joen rannalla.",
+     "leveys": 7062,
+     "korkeus": 3460,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand Kremlin Palace in summer sunset light 2025-8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Kremlin_Palace_in_summer_sunset_light_2025-8.jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Kremlin_Palace_in_summer_sunset_light_2025-8.jpg",
+     "selite": "Suuri Kremlin palatsi on yksi linnoituksen edustavimmista rakennuksista.",
+     "leveys": 6256,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q41116",
+   "nimi": "Punainen tori",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 55.75417,
+   "lon": 37.62,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Red Square in Moscow (general view in 2025).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Square_in_Moscow_(general_view_in_2025).jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Red_Square_in_Moscow_(general_view_in_2025).jpg",
+     "selite": "Punainen tori on Venäjän tunnetuin aukio, jota reunustavat Kremlin muuri ja Historiallinen museo.",
+     "leveys": 8205,
+     "korkeus": 5206,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow - 2025 - Red Square 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_2025_-_Red_Square_01.jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_-_2025_-_Red_Square_01.jpg",
+     "selite": "Aukion laidalla kohoaa Kremlin muuriin liittyvä Nikolskajan torni.",
+     "leveys": 5214,
+     "korkeus": 4954,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q129846",
+   "nimi": "Pyhän Vasilin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 55.7525,
+   "lon": 37.62306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Moscow - 2025 - Daytime view of St. Basil's Cathedral from Vasilyevsky Spusk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_2025_-_Daytime_view_of_St._Basil's_Cathedral_from_Vasilyevsky_Spusk.jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_-_2025_-_Daytime_view_of_St._Basil's_Cathedral_from_Vasilyevsky_Spusk.jpg",
+     "selite": "Pyhän Vasilin katedraalin värikkäät sipulikupolit ovat Venäjän tunnetuin maamerkki.",
+     "leveys": 6266,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de San Basilio, Moscú, Rusia, 2016-10-03, DD 05-06 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_San_Basilio%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_05-06_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_San_Basilio%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_05-06_HDR.jpg",
+     "selite": "Iltavalaistuksessa katedraalin takaa erottuu Mininin ja Pozharskin muistomerkki.",
+     "leveys": 5789,
+     "korkeus": 4991,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q194474",
+   "nimi": "Kristus Vapahtajan katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 55.74444,
+   "lon": 37.60556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Moscow July 2011-7a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_July_2011-7a.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_July_2011-7a.jpg",
+     "selite": "Kristus Vapahtajan katedraali on Venäjän ortodoksisen kirkon suurin kirkko, jonka kullatut kupolit loistavat Moskva-joen rannalla.",
+     "leveys": 4940,
+     "korkeus": 4516,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow - Cathedral of Christ the Saviour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_Cathedral_of_Christ_the_Saviour.jpg?width=1280",
+     "tekija": "Voytek S",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_-_Cathedral_of_Christ_the_Saviour.jpg",
+     "selite": "Katedraali purettiin neuvostoaikana ja rakennettiin uudelleen 1990-luvulla.",
+     "leveys": 1825,
+     "korkeus": 2322,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q138908",
+   "nimi": "Bolšoi-teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 55.76028,
+   "lon": 37.61861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Moscow - 2025 - Facade of Big Theatre (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_2025_-_Facade_of_Big_Theatre_(1).jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_-_2025_-_Facade_of_Big_Theatre_(1).jpg",
+     "selite": "Bolšoi-teatteri on Venäjän tunnetuin ooppera- ja balettitalo, jonka pylväikön päällä seisoo Apollon vaunut.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Teatro Bolshói, Moscú, Rusia, 2016-10-03, DD 42-43 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Bolsh%C3%B3i%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_42-43_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Bolsh%C3%B3i%2C_Mosc%C3%BA%2C_Rusia%2C_2016-10-03%2C_DD_42-43_HDR.jpg",
+     "selite": "Illalla teatterin julkisivu valaistaan, ja pylväät hohtavat lämpimänä.",
+     "leveys": 7397,
+     "korkeus": 4931,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q270725",
+   "nimi": "Novodevitšin luostari",
+   "peruste": "UNESCO",
+   "koko_m": 400,
+   "lat": 55.72597,
+   "lon": 37.55658,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Novodevichy Convent Night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novodevichy_Convent_Night.jpg?width=1280",
+     "tekija": "This photo was taken by Anton Zelenov. Please credit this with : Photo : Anton Zelenov in the immediate vicinity of the image. If you use one of my photos, please email me (account needed) or leave me a short message on my discussion page. It would be greatly appreciated. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me to negotiate terms.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Novodevichy_Convent_Night.jpg",
+     "selite": "Novodevitšin luostari on 1500-luvulla perustettu linnoitettu luostari, joka heijastuu lammen pintaan.",
+     "leveys": 2500,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow 05-2012 Novodevichy 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_05-2012_Novodevichy_22.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_05-2012_Novodevichy_22.jpg",
+     "selite": "Luostarin muuria vahvistavat punavalkoiset tornit.",
+     "leveys": 2868,
+     "korkeus": 4206,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13164",
+   "nimi": "Moskovan valtionyliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 55.7025,
+   "lon": 37.53056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Moscow State University crop.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_State_University_crop.jpg?width=1280",
+     "tekija": "Dmitry A. Mottl (cropped by King of Hearts)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_State_University_crop.jpg",
+     "selite": "Yliopiston pääkorkea rakennus Varpuskukkuloilla on yksi Moskovan seitsemästä stalinistisesta pilvenpiirtäjästä.",
+     "leveys": 3500,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow. Main building of Moscow State University P4131808 2600.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow._Main_building_of_Moscow_State_University_P4131808_2600.jpg?width=1280",
+     "tekija": "Alexxx1979",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow._Main_building_of_Moscow_State_University_P4131808_2600.jpg",
+     "selite": "Rakennuksen keskitorni nousee yli 200 metriin ja sen edessä on puistoaukio.",
+     "leveys": 3900,
+     "korkeus": 2600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q183334",
+   "nimi": "Tretjakovin galleria",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 55.74139,
+   "lon": 37.62086,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tretyakov and his gallery.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tretyakov_and_his_gallery.jpg?width=1280",
+     "tekija": "Andrey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tretyakov_and_his_gallery.jpg",
+     "selite": "Tretjakovin galleria on Venäjän taiteen keskeisin museo, jonka satumainen julkisivu suunniteltiin venäläiseen tyyliin.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q652464",
+   "nimi": "Kolomenskoje",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 55.66767,
+   "lon": 37.66657,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Moscow. Kolomenskoye. Church of the Ascension P5183117 2600.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow._Kolomenskoye._Church_of_the_Ascension_P5183117_2600.jpg?width=1280",
+     "tekija": "Alexxx1979",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow._Kolomenskoye._Church_of_the_Ascension_P5183117_2600.jpg",
+     "selite": "Kolomenskoje oli tsaarien kesäpaikka, jonka valkoinen telttakattoinen Taivaaseenastumisen kirkko on 1500-luvulta.",
+     "leveys": 3900,
+     "korkeus": 2600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow - 2026 - Church of the Ascension in Kolomenskoe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_2026_-_Church_of_the_Ascension_in_Kolomenskoe.jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_-_2026_-_Church_of_the_Ascension_in_Kolomenskoe.jpg",
+     "selite": "Kirkon korkea suippo torni nousee Moskva-joen jyrkän rannan päällä.",
+     "leveys": 8490,
+     "korkeus": 10034,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q181324",
+   "nimi": "Ostankinon televisiotorni",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 55.81972,
+   "lon": 37.61167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ostankino Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ostankino_Tower.jpg?width=1280",
+     "tekija": "Sergey Pesterev",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ostankino_Tower.jpg",
+     "selite": "Ostankinon televisiotorni on yli 500 metriä korkea ja kuuluu Euroopan korkeimpiin rakennelmiin.",
+     "leveys": 4000,
+     "korkeus": 6001,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q211560",
+   "nimi": "Moskova-City",
+   "peruste": "sitelinks",
+   "koko_m": 900,
+   "lat": 55.74667,
+   "lon": 37.53694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Moscow Business Center 5073-84.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_Business_Center_5073-84.jpg?width=1280",
+     "tekija": "Ludvig14",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_Business_Center_5073-84.jpg",
+     "selite": "Moskova-City on Moskovan nykyaikainen pilvenpiirtäjäkeskusta Moskva-joen rannalla.",
+     "leveys": 5125,
+     "korkeus": 3889,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow International Business Center-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_International_Business_Center-1.jpg?width=1280",
+     "tekija": "Dzasohovich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_International_Business_Center-1.jpg",
+     "selite": "Lasitornit erottuvat jo kaukaa vanhemman kaupungin yläpuolelle.",
+     "leveys": 5474,
+     "korkeus": 3650,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q147875",
+   "nimi": "Tsaarin kello",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 55.75083,
+   "lon": 37.61833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 4841 Tsar Bell - Moscow Kremlin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_4841_Tsar_Bell_-_Moscow_Kremlin.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_4841_Tsar_Bell_-_Moscow_Kremlin.jpg",
+     "selite": "Tsaarin kello on maailman suurin kello, mutta se ei koskaan soinut, koska siitä murtui pala valun jälkeen.",
+     "leveys": 1867,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "MoscowKremlin TsarBell.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MoscowKremlin_TsarBell.jpg?width=1280",
+     "tekija": "Ludvig14",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MoscowKremlin_TsarBell.jpg",
+     "selite": "Kello seisoo jalustalla Kremlin alueella Ivan Suuren kellotornin vieressä.",
+     "leveys": 2333,
+     "korkeus": 2536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1140429",
+   "nimi": "Valtion historiallinen museo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 55.755,
+   "lon": 37.61806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "State Historical Museum, 2024-8.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/State_Historical_Museum%2C_2024-8.jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:State_Historical_Museum%2C_2024-8.jpg",
+     "selite": "Punatiilinen historiallinen museo sulkee Punaisen torin pohjoispään venäläiseen tyyliin.",
+     "leveys": 5538,
+     "korkeus": 4098,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Moscow - 2025 - Details of the facade of the Historical Museum1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_-_2025_-_Details_of_the_facade_of_the_Historical_Museum1.jpg?width=1280",
+     "tekija": "Юрий Д.К.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Moscow_-_2025_-_Details_of_the_facade_of_the_Historical_Museum1.jpg",
+     "selite": "Julkisivua koristavat suippokattoiset tornit ja runsas koristelu.",
+     "leveys": 7144,
+     "korkeus": 4384,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panoramic view of Moscow4.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Moscow4.jpg?width=1280",
+   "tekija": "mos.ru",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Moscow4.jpg",
+   "selite": "Ilmasta Moskova avautuu laajana kaupunkina Moskva-joen mutkien ympärillä.",
+   "leveys": 1600,
+   "korkeus": 800,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panoramic view of Moscow3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Moscow3.jpg?width=1280",
+   "tekija": "mos.ru",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Moscow3.jpg",
+   "selite": "Auringonlaskussa kaupungin siluetti ja joki hohtavat ilmasta nähtynä.",
+   "leveys": 1600,
+   "korkeus": 804,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

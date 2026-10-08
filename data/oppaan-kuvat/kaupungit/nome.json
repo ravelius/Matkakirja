@@ -1,0 +1,190 @@
+{
+ "kaupunki": "nome",
+ "kaupunkiQ": "Q79996",
+ "kohteet": [
+  {
+   "q": "Q11769",
+   "nimi": "Beringinsalmi",
+   "peruste": "sitelinks",
+   "koko_m": 30000,
+   "lat": 65.75,
+   "lon": -168.97694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Big Diomede 1 2014-08-17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Diomede_1_2014-08-17.jpg?width=1280",
+     "tekija": "Ansgar Walk",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Diomede_1_2014-08-17.jpg",
+     "selite": "Beringinsalmi erottaa Alaskan Siperiasta, ja salmen keskellä kohoavat Diomedesaaret.",
+     "leveys": 2125,
+     "korkeus": 1417,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1224996",
+   "nimi": "Pieni-Diomede",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 65.75466,
+   "lon": -168.92437,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Little Diomede Island 2018 Drone Photo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Diomede_Island_2018_Drone_Photo.jpg?width=1280",
+     "tekija": "Walter Holt Rose",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Little_Diomede_Island_2018_Drone_Photo.jpg",
+     "selite": "Pieni-Diomeden pieni kylä on rakennettu jyrkän, kalliisen saaren rinteen juurelle Beringinsalmessa.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q79723",
+   "nimi": "Shishmaref",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 66.25556,
+   "lon": -166.07222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shishmaref- Erin (53) edit (15653586503).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shishmaref-_Erin_(53)_edit_(15653586503).jpg?width=1280",
+     "tekija": "Bering Land Bridge National Preserve",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shishmaref-_Erin_(53)_edit_(15653586503).jpg",
+     "selite": "Shishmaref on inupiat-kylä kapealla hiekkasaarella Seward-niemimaan pohjoisrannalla.",
+     "leveys": 3460,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q79856",
+   "nimi": "Teller",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": 65.2572,
+   "lon": -166.354,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teller- IMG 6325edit (15653564733).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teller-_IMG_6325edit_(15653564733).jpg?width=1280",
+     "tekija": "Bering Land Bridge National Preserve",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teller-_IMG_6325edit_(15653564733).jpg",
+     "selite": "Teller on pieni rannikkokylä Seward-niemimaan länsiosassa Port Clarencen lahden rannalla.",
+     "leveys": 3199,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q79812",
+   "nimi": "Unalakleet",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 63.87891,
+   "lon": -160.78967,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Unalakleet aerial 2010 (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Unalakleet_aerial_2010_(cropped).jpg?width=1280",
+     "tekija": "Dr. John Cloud, NOAA Central Library",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Unalakleet_aerial_2010_(cropped).jpg",
+     "selite": "Unalakleet sijaitsee Unalakleet-joen suulla Nortoninlahden etelärannalla.",
+     "leveys": 5184,
+     "korkeus": 2823,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1973692",
+   "nimi": "Nortoninlahti",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 63.84917,
+   "lon": -164.26889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Norton Sound sunrise.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Norton_Sound_sunrise.jpg?width=1280",
+     "tekija": "ra64 from nome, usa",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Norton_Sound_sunrise.jpg",
+     "selite": "Nortoninlahden jäätyvä rannikko Nomen edustalla Beringinmerellä.",
+     "leveys": 2256,
+     "korkeus": 1496,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nome Alaska front street snow.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nome_Alaska_front_street_snow.jpg?width=1280",
+   "tekija": "ra64 from nome, usa",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nome_Alaska_front_street_snow.jpg",
+   "selite": "Nomen Front Street talvella lumivallien reunustamana.",
+   "leveys": 3008,
+   "korkeus": 2000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Nome Alaska salmon lake.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nome_Alaska_salmon_lake.jpg?width=1280",
+   "tekija": "ra64 from nome, usa",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nome_Alaska_salmon_lake.jpg",
+   "selite": "Nomen ympäristön tundraa ja lumihuippuisia vuoria Seward-niemimaalla.",
+   "leveys": 2256,
+   "korkeus": 1496,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q971586",
+   "nimi": "Seward-niemimaa",
+   "peruste": "sitelinks",
+   "lat": 65.41667,
+   "lon": -163.71667,
+   "syy": "ei kelvollista maisemakuvaa (vain satelliittikuva, kartta tai arkistokuva)"
+  },
+  {
+   "q": "Q126043",
+   "nimi": "King Island",
+   "peruste": "sitelinks",
+   "lat": 64.96667,
+   "lon": -168.08333,
+   "syy": "autioitunut ja rappeutunut kylä, ei soveltuva"
+  }
+ ]
+}

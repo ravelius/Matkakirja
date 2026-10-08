@@ -1,0 +1,382 @@
+{
+ "kaupunki": "ulanbator",
+ "kaupunkiQ": "Q23430",
+ "kohteet": [
+  {
+   "q": "Q965633",
+   "nimi": "Gandantegchinlenin luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 47.92306,
+   "lon": 106.895,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gandantegchinlen Monastery (2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gandantegchinlen_Monastery_(2024).jpg?width=1280",
+     "tekija": "Chongkian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gandantegchinlen_Monastery_(2024).jpg",
+     "selite": "Gandan on Mongolian tärkein elävä buddhalainen luostari ja Ulan Batorin sydän.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gandantegchinlen Monastery - Gandan - Ulan Bator Ulaanbaatar Mongolia (6248610169).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gandantegchinlen_Monastery_-_Gandan_-_Ulan_Bator_Ulaanbaatar_Mongolia_(6248610169).jpg?width=1280",
+     "tekija": "David Berkowitz from New York, NY, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gandantegchinlen_Monastery_-_Gandan_-_Ulan_Bator_Ulaanbaatar_Mongolia_(6248610169).jpg",
+     "selite": "Pyhäkön pihalla kyyhkyset ja temppelirakennukset muodostavat tunnistettavan maiseman.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1348864",
+   "nimi": "Sükhbaatarin aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 47.9189,
+   "lon": 106.918,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2024-10-18 Ulaanbaatar, Sükhbaatar Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2024-10-18_Ulaanbaatar%2C_S%C3%BCkhbaatar_Square.jpg?width=1280",
+     "tekija": "Alexkom000",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2024-10-18_Ulaanbaatar%2C_S%C3%BCkhbaatar_Square.jpg",
+     "selite": "Sükhbaatarin aukio on Ulan Batorin keskus ja valtion hallinnon näyttämö.",
+     "leveys": 5086,
+     "korkeus": 3390,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Panorama Ulan Bator 13.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Ulan_Bator_13.JPG?width=1280",
+     "tekija": "Brücke-Osteuropa",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Ulan_Bator_13.JPG",
+     "selite": "Aukion keskellä on Damdin Sükhbaatarin ratsastajapatsas.",
+     "leveys": 3328,
+     "korkeus": 1872,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2093410",
+   "nimi": "Choijin Laman temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 47.915,
+   "lon": 106.91833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Choijin Lama Museum, Ulaanbaatar, Mongolia (48788604416).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Choijin_Lama_Museum%2C_Ulaanbaatar%2C_Mongolia_(48788604416).jpg?width=1280",
+     "tekija": "Dan Nevill from Seattle, WA, United States",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Choijin_Lama_Museum%2C_Ulaanbaatar%2C_Mongolia_(48788604416).jpg",
+     "selite": "Choijin Laman temppeli on museoksi muutettu luostari pilvenpiirtäjien keskellä.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The temple museum of CHOIJIN LAMA picture -1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_temple_museum_of_CHOIJIN_LAMA_picture_-1.jpg?width=1280",
+     "tekija": "TuguldurJ",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_temple_museum_of_CHOIJIN_LAMA_picture_-1.jpg",
+     "selite": "Temppelin kiinalaistyyliset katot ja värikkäät koristeet ovat 1900-luvun alusta.",
+     "leveys": 1600,
+     "korkeus": 1064,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1579833",
+   "nimi": "Bogd Khanin talvipalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 47.8975,
+   "lon": 106.90667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Winter Palace of the Bogd Khan 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Palace_of_the_Bogd_Khan_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Winter_Palace_of_the_Bogd_Khan_01.jpg",
+     "selite": "Bogd Khanin talvipalatsi oli Mongolian viimeisen hallitsijan asuinpaikka.",
+     "leveys": 3679,
+     "korkeus": 2206,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Winter Palace of the Bogd Khan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Winter_Palace_of_the_Bogd_Khan.jpg?width=1280",
+     "tekija": "Chongkian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Winter_Palace_of_the_Bogd_Khan.jpg",
+     "selite": "Alueella on myös perinteisiä mongolialaistyylisiä rakennuksia.",
+     "leveys": 3377,
+     "korkeus": 2533,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q144444",
+   "nimi": "Zaisanin muistomerkki",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 47.88417,
+   "lon": 106.91583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zaisan Memorial in Ulaanbaatar, Mongolia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaisan_Memorial_in_Ulaanbaatar%2C_Mongolia.jpg?width=1280",
+     "tekija": "Quintin Soloviev",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaisan_Memorial_in_Ulaanbaatar%2C_Mongolia.jpg",
+     "selite": "Zaisanin muistomerkki kohoaa kukkulalla Ulan Batorin eteläpuolella.",
+     "leveys": 8007,
+     "korkeus": 5719,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Zaisan Memorial 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zaisan_Memorial_04.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zaisan_Memorial_04.jpg",
+     "selite": "Muistomerkin kehämosaiikki kertoo Neuvostoliiton ja Mongolian ystävyydestä.",
+     "leveys": 4905,
+     "korkeus": 3061,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1165021",
+   "nimi": "Tšingis-kaanin ratsastajapatsas",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 47.80808,
+   "lon": 107.52981,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Genghis Khan Equestrian Statue.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Genghis_Khan_Equestrian_Statue.jpg?width=1280",
+     "tekija": "Martin Vorel",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Genghis_Khan_Equestrian_Statue.jpg",
+     "selite": "Tšingis-kaanin ratsastajapatsas on yksi maailman suurimpia ratsastajapatsaita.",
+     "leveys": 3500,
+     "korkeus": 2334,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Genghis Khan Equestrian Statue, photo by Vaiz Ha.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Genghis_Khan_Equestrian_Statue%2C_photo_by_Vaiz_Ha.jpg?width=1280",
+     "tekija": "Vaiz Ha",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Genghis_Khan_Equestrian_Statue%2C_photo_by_Vaiz_Ha.jpg",
+     "selite": "Teräspatsas seisoo kukkulalla kokoelmarakennuksen päällä.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1266074",
+   "nimi": "Gorkhi-Terelj",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 48.1502,
+   "lon": 107.57601,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Krajobraz w Parku Narodowym Gorchi-Tereldż 56.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krajobraz_w_Parku_Narodowym_Gorchi-Tereld%C5%BC_56.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krajobraz_w_Parku_Narodowym_Gorchi-Tereld%C5%BC_56.JPG",
+     "selite": "Gorkhi-Terelj on Ulan Batorin lähellä oleva kansallispuisto, jossa on kallioita ja ger-leirejä.",
+     "leveys": 3436,
+     "korkeus": 2292,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Krajobraz w Parku Narodowym Gorchi-Tereldż 63.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krajobraz_w_Parku_Narodowym_Gorchi-Tereld%C5%BC_63.JPG?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krajobraz_w_Parku_Narodowym_Gorchi-Tereld%C5%BC_63.JPG",
+     "selite": "Puiston laaksoissa on mongolialaisia nomadileirejä.",
+     "leveys": 3440,
+     "korkeus": 2292,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q654413",
+   "nimi": "Bogd Khan -vuori",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 47.80389,
+   "lon": 106.98639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bogd Khan Mountain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bogd_Khan_Mountain.jpg?width=1280",
+     "tekija": "Chongkian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bogd_Khan_Mountain.jpg",
+     "selite": "Bogd Khan -vuori on Ulan Batorin eteläpuolella oleva suojeltu vuori.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2154176",
+   "nimi": "Mongolian kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 47.9208,
+   "lon": 106.915,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chinggis Khaan National Museum Mongolia - 54510006332.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chinggis_Khaan_National_Museum_Mongolia_-_54510006332.jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chinggis_Khaan_National_Museum_Mongolia_-_54510006332.jpg",
+     "selite": "Mongolian kansallismuseo on Tšingis-kaanin nimeä kantava museo Ulan Batorin keskustassa.",
+     "leveys": 3000,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chinggis Khaan National Museum front 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chinggis_Khaan_National_Museum_front_2023.jpg?width=1280",
+     "tekija": "Chinneeb",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chinggis_Khaan_National_Museum_front_2023.jpg",
+     "selite": "Museon julkisivua koristavat kultaiset koristeet.",
+     "leveys": 4624,
+     "korkeus": 3472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q800161",
+   "nimi": "Ulan Batorin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 47.9083,
+   "lon": 106.884,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ulaanbaatar railway station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulaanbaatar_railway_station.jpg?width=1280",
+     "tekija": "Lawsonstu",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulaanbaatar_railway_station.jpg",
+     "selite": "Ulan Batorin asema on Trans-Mongolian-radan pääasema.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ulaanbaatar Railway Station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulaanbaatar_Railway_Station.jpg?width=1280",
+     "tekija": "Chongkian",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulaanbaatar_Railway_Station.jpg",
+     "selite": "Asemalta lähtevät junat Venäjälle ja Kiinaan.",
+     "leveys": 3667,
+     "korkeus": 2750,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ulaanbaatar skyline from Sukhbaatar square in 2025.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulaanbaatar_skyline_from_Sukhbaatar_square_in_2025.jpg?width=1280",
+   "tekija": "Zboogie31",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulaanbaatar_skyline_from_Sukhbaatar_square_in_2025.jpg",
+   "selite": "Ulan Batorin keskustan uudet pilvenpiirtäjät kohoavat Sükhbaatarin aukion yllä.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Ulaanbaatar skyline.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulaanbaatar_skyline.jpg?width=1280",
+   "tekija": "Devigard",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ulaanbaatar_skyline.jpg",
+   "selite": "Ulan Bator on laaksossa vuorten ympäröimänä.",
+   "leveys": 4160,
+   "korkeus": 2340,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

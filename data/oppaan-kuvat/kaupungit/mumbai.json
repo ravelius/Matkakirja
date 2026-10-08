@@ -1,0 +1,676 @@
+{
+ "kaupunki": "mumbai",
+ "kaupunkiQ": "Q1156",
+ "kohteet": [
+  {
+   "q": "Q864862",
+   "nimi": "Gateway of India",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 18.92184,
+   "lon": 72.8347,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beauty of pigeons on gateway of India.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beauty_of_pigeons_on_gateway_of_India.jpg?width=1280",
+     "tekija": "Vishnubullet123",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beauty_of_pigeons_on_gateway_of_India.jpg",
+     "selite": "Keltainen basalttiportti kohoaa Mumbain satamalaiturilla Arabianmeren rannalla.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Gateway of India Along with the Taj Palace Hotel from the Sea.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Gateway_of_India_Along_with_the_Taj_Palace_Hotel_from_the_Sea.JPG?width=1280",
+     "tekija": "HoneyB (Agra)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Gateway_of_India_Along_with_the_Taj_Palace_Hotel_from_the_Sea.JPG",
+     "selite": "Mereltä katsottuna portti ja Taj-hotelli muodostavat Mumbain tunnetuimman kaupunkikuvan.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gateway of India and Taj Mahal Palace Hotel Mumbai IMG 20230918 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gateway_of_India_and_Taj_Mahal_Palace_Hotel_Mumbai_IMG_20230918_07.jpg?width=1280",
+     "tekija": "Dr. Raju Kasambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gateway_of_India_and_Taj_Mahal_Palace_Hotel_Mumbai_IMG_20230918_07.jpg",
+     "selite": "Portti rakennettiin muistoksi kuningas Yrjö V:n ja kuningatar Maryn vierailusta 1911.",
+     "leveys": 3264,
+     "korkeus": 1468,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q235884",
+   "nimi": "Chhatrapati Shivaji Maharaj Terminus",
+   "peruste": "UNESCO",
+   "koko_m": 250,
+   "lat": 18.9398,
+   "lon": 72.8355,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chatrapati Shivaji Terminus Pano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chatrapati_Shivaji_Terminus_Pano.jpg?width=1280",
+     "tekija": "Rangan Datta Wiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chatrapati_Shivaji_Terminus_Pano.jpg",
+     "selite": "Entinen Victoria Terminus on Unescon maailmanperintökohde ja viktoriaanisen uusgoottilaisuuden mestariteos Intiassa.",
+     "leveys": 6400,
+     "korkeus": 2585,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Close-up of Chhatrapati Shivaji Terminus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Close-up_of_Chhatrapati_Shivaji_Terminus.jpg?width=1280",
+     "tekija": "Joe Ravi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Close-up_of_Chhatrapati_Shivaji_Terminus.jpg",
+     "selite": "Aseman keskikupoli kohoaa koristeellisten kivitornien ja kellotaulun yläpuolelle.",
+     "leveys": 2654,
+     "korkeus": 4138,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cstm mumbai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cstm_mumbai.jpg?width=1280",
+     "tekija": "Yash parmar123",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cstm_mumbai.jpg",
+     "selite": "Aseman rikkaasti veistetty julkisivu yhdistää gotiikkaa ja intialaista rakennustaidetta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q649384",
+   "nimi": "Elephantan luolat",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 18.96333,
+   "lon": 72.93139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Elegant Elephanta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elegant_Elephanta.jpg?width=1280",
+     "tekija": "Aslam2510",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Elegant_Elephanta.jpg",
+     "selite": "Elephantan saaren luolatemppelit on hakattu suoraan Mumbain edustan saaren kallioon.",
+     "leveys": 3072,
+     "korkeus": 4080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Trimurti Elephanta Caves.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Trimurti_Elephanta_Caves.jpg?width=1280",
+     "tekija": "Ricardo Martins",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Trimurti_Elephanta_Caves.jpg",
+     "selite": "Trimurti-veistos kuvaa Shivaa kolmipäisenä luolatemppelin päänäyttämönä.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Main mandapa and pillars in Cave 1 of Elephanta Caves.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_mandapa_and_pillars_in_Cave_1_of_Elephanta_Caves.jpg?width=1280",
+     "tekija": "Saankav",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_mandapa_and_pillars_in_Cave_1_of_Elephanta_Caves.jpg",
+     "selite": "Ensimmäisen luolan pylväshalli on veistetty kalliosta pylväiden ja holvien täyttämäksi saliksi.",
+     "leveys": 3472,
+     "korkeus": 4640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Cave temple on Elephanta Island (2808746967).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cave_temple_on_Elephanta_Island_(2808746967).jpg?width=1280",
+     "tekija": "Kristina D.C. Hoeppner from Wellington, New Zealand",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cave_temple_on_Elephanta_Island_(2808746967).jpg",
+     "selite": "Luolatemppelin sisäänkäynti avautuu metsäisen saaren rinteeseen.",
+     "leveys": 1408,
+     "korkeus": 1056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19104",
+   "nimi": "Taj Mahal Palace -hotelli",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 18.92259,
+   "lon": 72.83315,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Taj Mahal Palace Hotel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Mahal_Palace_Hotel.jpg?width=1280",
+     "tekija": "Joe Ravi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Palace_Hotel.jpg",
+     "selite": "Taj Mahal Palace on punakupolinen luksushotelli Colabassa Gateway of Indian vieressä.",
+     "leveys": 3989,
+     "korkeus": 2719,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Taj Mahal Palace Hotel at Colaba, Mumbai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Mahal_Palace_Hotel_at_Colaba%2C_Mumbai.jpg?width=1280",
+     "tekija": "Brihaspati",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Palace_Hotel_at_Colaba%2C_Mumbai.jpg",
+     "selite": "Hotellin kupolit ja parvekkeet yhdistävät intialaista ja eurooppalaista rakennustyyliä.",
+     "leveys": 4147,
+     "korkeus": 2765,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Taj Hotel Mumbai Marine Drive Photo by Chirag Lad.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Hotel_Mumbai_Marine_Drive_Photo_by_Chirag_Lad.jpg?width=1280",
+     "tekija": "Chiragslad",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Taj_Hotel_Mumbai_Marine_Drive_Photo_by_Chirag_Lad.jpg",
+     "selite": "Iltavalossa hotellin julkisivu hohtaa satamaveden äärellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q985828",
+   "nimi": "Marine Drive",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 18.944,
+   "lon": 72.823,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Seksaria (left) and other Art Deco buildings at Marine Drive, Mumbai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seksaria_(left)_and_other_Art_Deco_buildings_at_Marine_Drive%2C_Mumbai.jpg?width=1280",
+     "tekija": "DesiBoy101",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seksaria_(left)_and_other_Art_Deco_buildings_at_Marine_Drive%2C_Mumbai.jpg",
+     "selite": "Marine Driven varrella on Intian suurin art deco -rakennusten joukko.",
+     "leveys": 3997,
+     "korkeus": 2248,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mumbai Skyline from Marine Drive.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mumbai_Skyline_from_Marine_Drive.JPG?width=1280",
+     "tekija": "Livelikerw",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mumbai_Skyline_from_Marine_Drive.JPG",
+     "selite": "Rantabulevardi kaartuu Arabianmeren rannalla kohti kaupungin pilvenpiirtäjiä.",
+     "leveys": 4912,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q542756",
+   "nimi": "Haji Alin dargah",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 18.9825,
+   "lon": 72.8088,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dome of Haji Ali Dargah, Mumbai, Maharashtra, India.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_Haji_Ali_Dargah%2C_Mumbai%2C_Maharashtra%2C_India.jpg?width=1280",
+     "tekija": "Craftofolio.media",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_Haji_Ali_Dargah%2C_Mumbai%2C_Maharashtra%2C_India.jpg",
+     "selite": "Haji Alin valkoinen dargah kupoleineen sijaitsee merellä pienellä saarella lähellä Worlia.",
+     "leveys": 3456,
+     "korkeus": 2957,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "95514-Mumbai (51628582370).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/95514-Mumbai_(51628582370).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:95514-Mumbai_(51628582370).jpg",
+     "selite": "Marmoriset kuvut ja kojut koristavat pyhäkön sisäänkäyntiä.",
+     "leveys": 3000,
+     "korkeus": 1996,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1071500",
+   "nimi": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 18.92667,
+   "lon": 72.83222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prince of Wales Museum, Mumbai 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince_of_Wales_Museum%2C_Mumbai_01.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Museum%2C_Mumbai_01.jpg",
+     "selite": "Entinen Prince of Wales -museo on Mumbain suuri taidemuseo valkoisen kupolin alla palmupuutarhassa.",
+     "leveys": 4580,
+     "korkeus": 3005,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ceiling slab depicting Brahma from Hucchappaiya Gudi Temple, Aihole Karnataka, circa 7th century CE, Chatrapati Shivaji Maharaj Vastu Sanghralaya, Mumbai, Maharashtra.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceiling_slab_depicting_Brahma_from_Hucchappaiya_Gudi_Temple%2C_Aihole_Karnataka%2C_circa_7th_century_CE%2C_Chatrapati_Shivaji_Maharaj_Vastu_Sanghralaya%2C_Mumbai%2C_Maharashtra.jpg?width=1280",
+     "tekija": "SpeakingArch",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ceiling_slab_depicting_Brahma_from_Hucchappaiya_Gudi_Temple%2C_Aihole_Karnataka%2C_circa_7th_century_CE%2C_Chatrapati_Shivaji_Maharaj_Vastu_Sanghralaya%2C_Mumbai%2C_Maharashtra.jpg",
+     "selite": "Museon kokoelmiin kuuluu Intian muinaisten temppeleiden kivireliefejä.",
+     "leveys": 1200,
+     "korkeus": 714,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q314572",
+   "nimi": "Bandra–Worli Sea Link",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 19.03648,
+   "lon": 72.81725,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mumbai Bandra-Worli Sea Link.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mumbai_Bandra-Worli_Sea_Link.jpg?width=1280",
+     "tekija": "Rutiknatekar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mumbai_Bandra-Worli_Sea_Link.jpg",
+     "selite": "Vinoköysisilta yhdistää Bandran ja Worlin Mahimin lahden yli.",
+     "leveys": 3751,
+     "korkeus": 2812,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q695852",
+   "nimi": "Bombayn korkein oikeus",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 18.93118,
+   "lon": 72.83046,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bombay High Court and Rajabai Clock Tower from Oval Maidan, Mumbai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bombay_High_Court_and_Rajabai_Clock_Tower_from_Oval_Maidan%2C_Mumbai.jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bombay_High_Court_and_Rajabai_Clock_Tower_from_Oval_Maidan%2C_Mumbai.jpg",
+     "selite": "Uusgoottilainen oikeustalo kohoaa Oval Maidanin nurmikon takana.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bombay High Court and Rajabai Clock Tower- Lit up at night - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bombay_High_Court_and_Rajabai_Clock_Tower-_Lit_up_at_night_-_1.jpg?width=1280",
+     "tekija": "Ronakshah1990",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bombay_High_Court_and_Rajabai_Clock_Tower-_Lit_up_at_night_-_1.jpg",
+     "selite": "Iltavalaistuksessa oikeustalon siluetti erottuu Maidanin puiden yllä.",
+     "leveys": 4795,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7285587",
+   "nimi": "Rajabain kellotorni",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 18.92964,
+   "lon": 72.82999,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rajabai Clock Tower, Mumbai (31 August 2008).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rajabai_Clock_Tower%2C_Mumbai_(31_August_2008).jpg?width=1280",
+     "tekija": "Nikkul (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rajabai_Clock_Tower%2C_Mumbai_(31_August_2008).jpg",
+     "selite": "Rajabain kellotorni on Mumbain yliopiston kampuksen korkea maamerkki.",
+     "leveys": 1532,
+     "korkeus": 2098,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A break from cricket.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_break_from_cricket.jpg?width=1280",
+     "tekija": "Satish Krishnamurthy",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_break_from_cricket.jpg",
+     "selite": "Torni kohoaa krikettikenttien yllä Oval Maidanilla.",
+     "leveys": 1280,
+     "korkeus": 959,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q13115097",
+   "nimi": "Siddhivinayakin temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 19.01692,
+   "lon": 72.83041,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shree Siddhivinayak Mandir.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shree_Siddhivinayak_Mandir.jpg?width=1280",
+     "tekija": "User:L1CENSET0K1LL",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shree_Siddhivinayak_Mandir.jpg",
+     "selite": "Siddhivinayak on Ganeshalle omistettu temppeli Prabhadevissa.",
+     "leveys": 2576,
+     "korkeus": 1932,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shree Siddhivinayak Temple Mumbai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shree_Siddhivinayak_Temple_Mumbai.jpg?width=1280",
+     "tekija": "Darwininan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shree_Siddhivinayak_Temple_Mumbai.jpg",
+     "selite": "Temppelin pyöreä kultakupoli kohoaa asuintalojen seasta.",
+     "leveys": 2410,
+     "korkeus": 3214,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1356198",
+   "nimi": "Kanherin luolat",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 19.2083,
+   "lon": 72.9064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "@KanheriCaves2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%40KanheriCaves2.jpg?width=1280",
+     "tekija": "ShubhamRJ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%40KanheriCaves2.jpg",
+     "selite": "Kanherin buddhalaiset luolaluostarit on hakattu basalttikallioon metsäisessä kukkulassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "028 Chaitya Dome (32850264454).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/028_Chaitya_Dome_(32850264454).jpg?width=1280",
+     "tekija": "Photo Dharma from Sadao, Thailand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:028_Chaitya_Dome_(32850264454).jpg",
+     "selite": "Chaitya-salin stupa-kupoli on yksi luolaluostarin vanhimmista pyhistä rakenteista.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Borivali national park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Borivali_national_park.jpg?width=1280",
+     "tekija": "Vaibhav Santosh Naik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Borivali_national_park.jpg",
+     "selite": "Luolan veistetty julkisivu avautuu portaikon ylle Kanherin kukkulalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q648907",
+   "nimi": "Sanjay Gandhin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 19.25,
+   "lon": 72.9167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beautiful Evening at the Sanjay Gandhi National Park, Mumbai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_Evening_at_the_Sanjay_Gandhi_National_Park%2C_Mumbai.jpg?width=1280",
+     "tekija": "Savalkar46",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beautiful_Evening_at_the_Sanjay_Gandhi_National_Park%2C_Mumbai.jpg",
+     "selite": "Sanjay Gandhin kansallispuisto on metsäinen luonnonsuojelualue keskellä miljoonakaupunkia.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sanjay Gandhi National Park.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanjay_Gandhi_National_Park.JPG?width=1280",
+     "tekija": "Patrice78500",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sanjay_Gandhi_National_Park.JPG",
+     "selite": "Rinteet ovat vehreän lehtimetsän peitossa.",
+     "leveys": 9032,
+     "korkeus": 2603,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5182895",
+   "nimi": "Crawford Market",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 18.94741,
+   "lon": 72.83471,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mahatma Jyotiba Phule Mandai.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahatma_Jyotiba_Phule_Mandai.jpg?width=1280",
+     "tekija": "Saarang Rajguru (सारंग राजगुरू)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mahatma_Jyotiba_Phule_Mandai.jpg",
+     "selite": "Crawford Market on punatiilinen siirtomaa-ajan kauppahalli kellotorneineen Etelä-Mumbaissa.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Crawford Market 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crawford_Market_03.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Crawford_Market_03.jpg",
+     "selite": "Hallin kellotorni on koristeltu veistoksin ja punaisin tiilikattoin.",
+     "leveys": 3048,
+     "korkeus": 4424,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4120540",
+   "nimi": "David Sassoon -kirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 18.92798,
+   "lon": 72.8311,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "David Sassoon Library.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Sassoon_Library.jpg?width=1280",
+     "tekija": "Joe Ravi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:David_Sassoon_Library.jpg",
+     "selite": "Venetsialaisgoottilainen kirjasto kellotorneineen on keltaisen basaltin värinen rakennus Fortin alueella.",
+     "leveys": 2448,
+     "korkeus": 2503,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "David Sasoon Library, Mumbai 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Sasoon_Library%2C_Mumbai_1.jpg?width=1280",
+     "tekija": "Rangan Datta Wiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:David_Sasoon_Library%2C_Mumbai_1.jpg",
+     "selite": "Sinisessä taivaassa kohoava julkisivu kuuluu Mumbain vanhimpiin kirjastoihin.",
+     "leveys": 4452,
+     "korkeus": 3180,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4058307",
+   "nimi": "Asiatic Society ja kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 18.93217,
+   "lon": 72.83622,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Asiatic Society Library.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asiatic_Society_Library.jpg?width=1280",
+     "tekija": "Pratham Bordikar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asiatic_Society_Library.jpg",
+     "selite": "Doorilaispylväinen Town Hall on vuodelta 1804 ja siinä toimii Asiatic Societyn kirjasto.",
+     "leveys": 2700,
+     "korkeus": 2160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Asiatic Society of Mumbai 1804.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Asiatic_Society_of_Mumbai_1804.jpg?width=1280",
+     "tekija": "Gnoeee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Asiatic_Society_of_Mumbai_1804.jpg",
+     "selite": "Valkoinen uusklassinen rakennus avautuu laajan portaikon yläpuolelle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Coastal Road, Mumbai, November 2025.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coastal_Road%2C_Mumbai%2C_November_2025.jpg?width=1280",
+   "tekija": "Qiw007",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coastal_Road%2C_Mumbai%2C_November_2025.jpg",
+   "selite": "Mumbain pilvenpiirtäjät kohoavat meren ja rantatien taakse.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Coastal road, Mumbai, in the evening light. November 2025.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coastal_road%2C_Mumbai%2C_in_the_evening_light._November_2025.jpg?width=1280",
+   "tekija": "Qiw007",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Coastal_road%2C_Mumbai%2C_in_the_evening_light._November_2025.jpg",
+   "selite": "Illan valossa kaupungin siluetti piirtyy Arabianmeren rannalle.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

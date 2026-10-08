@@ -1,0 +1,199 @@
+{
+ "kaupunki": "exmouth",
+ "kaupunkiQ": "Q1383990",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q1541665",
+  "Q586786",
+  "Q2000895",
+  "Q1383990"
+ ],
+ "kohteet": [
+  {
+   "q": "Q1541665",
+   "nimi": "Ningaloon rannikko",
+   "peruste": "UNESCO",
+   "koko_m": 3000,
+   "lat": -22.739,
+   "lon": 113.628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 0865 Ningaloo Reef, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_0865_Ningaloo_Reef%2C_Western_Australia.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_0865_Ningaloo_Reef%2C_Western_Australia.jpg",
+     "selite": "Valkoiset dyynit laskevat Ningaloon turkoosiin veteen, jonka takana kulkee maailmanperintökohteena suojeltu riutta.",
+     "leveys": 4500,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "00 1870 Ningaloo Reef - Westaustralien.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1870_Ningaloo_Reef_-_Westaustralien.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1870_Ningaloo_Reef_-_Westaustralien.jpg",
+     "selite": "Ningaloon riutta kulkee aivan rannan tuntumassa, joten snorklaamaan pääsee suoraan hiekalta.",
+     "leveys": 4200,
+     "korkeus": 2800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dugong family (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dugong_family_(cropped).jpg?width=1280",
+     "tekija": "Nicocolll",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dugong_family_(cropped).jpg",
+     "selite": "Ningaloon matalat laguunit ovat merilehmien eli dugongien tärkeitä ruokailuvesiä.",
+     "leveys": 1227,
+     "korkeus": 1364,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q586786",
+   "nimi": "Cape Rangen kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -22.1233,
+   "lon": 113.921,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1867 Cape Range National Park Westaustralien.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1867_Cape_Range_National_Park_Westaustralien.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1867_Cape_Range_National_Park_Westaustralien.jpg",
+     "selite": "Kansallispuisto ulottuu karuilta kalkkikiviharjanteilta Ningaloon turkoosille rannalle.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cape Range National Park (Mandu Mandu trail).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Range_National_Park_(Mandu_Mandu_trail).jpg?width=1280",
+     "tekija": "Gfievet",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Range_National_Park_(Mandu_Mandu_trail).jpg",
+     "selite": "Cape Rangen kuivat rotkot ovat uurtuneet muinaisesta, merenpohjasta kohonneesta kalkkikivestä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cape Range Nat Pk WA.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cape_Range_Nat_Pk_WA.jpg?width=1280",
+     "tekija": "Kevin Greenaway",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cape_Range_Nat_Pk_WA.jpg",
+     "selite": "Kansallispuiston syvät kanjonit avautuvat kohti Intian valtamerta.",
+     "leveys": 4594,
+     "korkeus": 2433,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2000895",
+   "nimi": "North West Cape",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": -22.23,
+   "lon": 113.96,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "North West Cape (2051684369).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_West_Cape_(2051684369).jpg?width=1280",
+     "tekija": "Phil Whitehouse from London, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:North_West_Cape_(2051684369).jpg",
+     "selite": "North West Capen punaiset rotkot laskeutuvat kohti merta Australian länsirannikon kärjessä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Phare à Exmouth WA.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phare_%C3%A0_Exmouth_WA.JPG?width=1280",
+     "tekija": "Dinkum",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Phare_%C3%A0_Exmouth_WA.JPG",
+     "selite": "Vlamingh Headin majakka seisoo niemen kärjessä ja valvoo laivaväylää Intian valtamerellä.",
+     "leveys": 2197,
+     "korkeus": 1479,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1383990",
+   "nimi": "Exmouth",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -21.93306,
+   "lon": 114.12806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Australia exmouth sandy bay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Australia_exmouth_sandy_bay.jpg?width=1280",
+     "tekija": "User: (WT-shared) Inas at wts wikivoyage",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Australia_exmouth_sandy_bay.jpg",
+     "selite": "Exmouthin lähirannat ovat pitkiä ja hiekkaisia, ja matalan veden takana siintää riutta.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Big Prawn in Exmouth, Western Australia, 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Big_Prawn_in_Exmouth%2C_Western_Australia%2C_2024.jpg?width=1280",
+     "tekija": "Aliceinthealice",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Big_Prawn_in_Exmouth%2C_Western_Australia%2C_2024.jpg",
+     "selite": "Jättiläiskatkarapu muistuttaa Exmouthin kalastuksesta, joka on yksi pikkukaupungin elinkeinoista.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "ISS006-E-15621 - View of Western Australia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS006-E-15621_-_View_of_Western_Australia.jpg?width=1280",
+   "tekija": "Earth Science and Remote Sensing Unit, Lyndon B. Johnson Space Center",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS006-E-15621_-_View_of_Western_Australia.jpg",
+   "selite": "Avaruudesta näkyy, kuinka North West Cape työntyy kuivaan rannikkoon ja Exmouthin lahden ympärille.",
+   "leveys": 3032,
+   "korkeus": 2064,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

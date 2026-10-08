@@ -1,0 +1,519 @@
+{
+ "kaupunki": "dakar",
+ "kaupunkiQ": "Q3718",
+ "kohteet": [
+  {
+   "q": "Q244347",
+   "nimi": "Gorée",
+   "peruste": "UNESCO",
+   "koko_m": 1200,
+   "lat": 14.66694,
+   "lon": -17.39833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Côtes de l'île de Gorée au Sénégal 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%B4tes_de_l'%C3%AEle_de_Gor%C3%A9e_au_S%C3%A9n%C3%A9gal_11.jpg?width=1280",
+     "tekija": "Fawaz.tairou",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:C%C3%B4tes_de_l'%C3%AEle_de_Gor%C3%A9e_au_S%C3%A9n%C3%A9gal_11.jpg",
+     "selite": "Gorée on pieni saari Dakarin edustalla, ja sen värikkäät talot katsovat mantereelle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Côtes de l'île de Gorée au Sénégal 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%B4tes_de_l'%C3%AEle_de_Gor%C3%A9e_au_S%C3%A9n%C3%A9gal_05.jpg?width=1280",
+     "tekija": "Fawaz.tairou",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:C%C3%B4tes_de_l'%C3%AEle_de_Gor%C3%A9e_au_S%C3%A9n%C3%A9gal_05.jpg",
+     "selite": "Saaren rannalla on linnoitus ja palmujen reunustama satama.",
+     "leveys": 3888,
+     "korkeus": 2916,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2007-02-13 Ile de Goree D Bruyere.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007-02-13_Ile_de_Goree_D_Bruyere.JPG?width=1280",
+     "tekija": "Delphine Bruyère",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007-02-13_Ile_de_Goree_D_Bruyere.JPG",
+     "selite": "Gorée oli osa Atlantin orjakauppaa ja on nykyään rauhallinen muistopaikka.",
+     "leveys": 2751,
+     "korkeus": 1404,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "A beautiful scene with a \"pirogue\" in the forefront at Gorée Island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_beautiful_scene_with_a_%22pirogue%22_in_the_forefront_at_Gor%C3%A9e_Island.jpg?width=1280",
+     "tekija": "Ruth Zurielly Jennings",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_beautiful_scene_with_a_%22pirogue%22_in_the_forefront_at_Gor%C3%A9e_Island.jpg",
+     "selite": "Värikkäät pirogit odottavat rannassa saaren satamassa.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q470763",
+   "nimi": "Afrikan renessanssin monumentti",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 14.72222,
+   "lon": -17.495,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The African Renaissance Monument.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_African_Renaissance_Monument.jpg?width=1280",
+     "tekija": "Richard N Horne",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_African_Renaissance_Monument.jpg",
+     "selite": "Pronssipatsas kohoaa kukkulalla ja esittää miestä, naista ja lasta kohti tulevaisuutta.",
+     "leveys": 3022,
+     "korkeus": 2654,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "African Renaissance Monument (5502494604).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/African_Renaissance_Monument_(5502494604).jpg?width=1280",
+     "tekija": "Jeff Attaway",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:African_Renaissance_Monument_(5502494604).jpg",
+     "selite": "Monumentti hallitsee Dakarin laitakaupungin yläpuolella olevaa kukkulaa.",
+     "leveys": 3041,
+     "korkeus": 2281,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dakar belle vue.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakar_belle_vue.jpg?width=1280",
+     "tekija": "Djibfall",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakar_belle_vue.jpg",
+     "selite": "Portaikko johtaa patsaan juurelle ja kaupungin yli avautuvaan näköalaan.",
+     "leveys": 3072,
+     "korkeus": 4096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2581624",
+   "nimi": "Almadiesin niemi",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 14.7408,
+   "lon": -17.53,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pointe des Almadies - Senegal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pointe_des_Almadies_-_Senegal.jpg?width=1280",
+     "tekija": "Jeff Attaway",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pointe_des_Almadies_-_Senegal.jpg",
+     "selite": "Almadiesin niemi on Afrikan mantereen läntisin kohta ja kaupungin rantalomailualue.",
+     "leveys": 3543,
+     "korkeus": 2648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130504-IMG 2265 (8746106236).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130504-IMG_2265_(8746106236).jpg?width=1280",
+     "tekija": "jbdodane",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130504-IMG_2265_(8746106236).jpg",
+     "selite": "Tienviitta kertoo etäisyyksistä maailman eri kaupunkeihin Atlantin rannalla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1522557",
+   "nimi": "Retba-järvi",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 14.83889,
+   "lon": -17.23444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20130506-DSC 8467 (8749802676).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130506-DSC_8467_(8749802676).jpg?width=1280",
+     "tekija": "jbdodane",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130506-DSC_8467_(8749802676).jpg",
+     "selite": "Retban eli Vaaleanpunaisen järven vesi saa värinsä suolapitoisuudesta ja leville.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "RetbaLakeShore.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RetbaLakeShore.jpg?width=1280",
+     "tekija": "Jjm2311",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RetbaLakeShore.jpg",
+     "selite": "Järven matala ranta on hiekkaa, ja vesi näyttää usein punertavalta.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bateaux au lac rose.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bateaux_au_lac_rose.jpg?width=1280",
+     "tekija": "Pitele",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bateaux_au_lac_rose.jpg",
+     "selite": "Värikkäät pirogit seisovat punertavassa vedessä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1670193",
+   "nimi": "Afrikkalaisen muiston katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 14.66528,
+   "lon": -17.43778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "4-Cathédrale du Souvenir africain de Dakar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/4-Cath%C3%A9drale_du_Souvenir_africain_de_Dakar.jpg?width=1280",
+     "tekija": "Photowalk",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:4-Cath%C3%A9drale_du_Souvenir_africain_de_Dakar.jpg",
+     "selite": "Katedraalin kaksi tornia ja keltainen kupoli on rakennettu 1900-luvun alkupuolella.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dakar-cathedrale.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakar-cathedrale.JPG?width=1280",
+     "tekija": "No machine-readable author provided. Vincent Ricci assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakar-cathedrale.JPG",
+     "selite": "Katedraalin vaalea julkisivu kohoaa kaupungin keskustassa.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "3-Cathédrale du Souvenir africain de Dakar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3-Cath%C3%A9drale_du_Souvenir_africain_de_Dakar.jpg?width=1280",
+     "tekija": "Photowalk",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3-Cath%C3%A9drale_du_Souvenir_africain_de_Dakar.jpg",
+     "selite": "Sisäänkäynnin yläpuolella pyhimysveistokset katsovat alas aukiolle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2477297",
+   "nimi": "Dakarin suuri moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 14.67822,
+   "lon": -17.44219,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grande mosquée de Dakar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grande_mosqu%C3%A9e_de_Dakar.jpg?width=1280",
+     "tekija": "M.GADJ!",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grande_mosqu%C3%A9e_de_Dakar.jpg",
+     "selite": "Valkoinen moskeija ja sen minareetti hallitsevat Médinan kaupunginosan kulmaa.",
+     "leveys": 4032,
+     "korkeus": 2468,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Institut Islamque de la grande mosquée de Dakar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Institut_Islamque_de_la_grande_mosqu%C3%A9e_de_Dakar.jpg?width=1280",
+     "tekija": "M.GADJ!",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Institut_Islamque_de_la_grande_mosqu%C3%A9e_de_Dakar.jpg",
+     "selite": "Moskeijan yhteydessä toimivan islamilaisen instituutin sisäpiha on avara ja kaareva.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1567959",
+   "nimi": "Mamellesin majakka",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 14.72381,
+   "lon": -17.50177,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "PhareMamelles4.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PhareMamelles4.JPG?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PhareMamelles4.JPG",
+     "selite": "Majakka seisoo Mamellesin kukkulalla Dakarin länsipuolella.",
+     "leveys": 2304,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mamelles lighthouse - Dakar - 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mamelles_lighthouse_-_Dakar_-_2.jpg?width=1280",
+     "tekija": "Jeff Attaway",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mamelles_lighthouse_-_Dakar_-_2.jpg",
+     "selite": "Ilmasta näkyy majakan valkoiset rakennukset ja sen alla oleva rantakaupunki.",
+     "leveys": 3290,
+     "korkeus": 2467,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mamelles lighthouse - Dakar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mamelles_lighthouse_-_Dakar.jpg?width=1280",
+     "tekija": "Jeff Attaway uploaded and derivative work: MrPanyGoff",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mamelles_lighthouse_-_Dakar.jpg",
+     "selite": "Kallioinen niemi ja Atlantti ympäröivät majakkaa.",
+     "leveys": 2751,
+     "korkeus": 1740,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3096341",
+   "nimi": "Dakarin rautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 14.67544,
+   "lon": -17.43325,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gare de Dakar - Soir.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gare_de_Dakar_-_Soir.jpg?width=1280",
+     "tekija": "Zythème",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gare_de_Dakar_-_Soir.jpg",
+     "selite": "Siirtomaa-aikana rakennettu asema on yksi Dakarin kauneimmista rakennuksista.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dakar railway station.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakar_railway_station.jpg?width=1280",
+     "tekija": "Image © Adil Dalbai",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakar_railway_station.jpg",
+     "selite": "Aseman kaarikatot ja kellotorni muistuttavat siirtomaa-ajan Dakarista.",
+     "leveys": 1536,
+     "korkeus": 864,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q671363",
+   "nimi": "Cheikh Anta Diopin yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 14.68695,
+   "lon": -17.46334,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BU Université Chekh Anta Diop de Dakar.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BU_Universit%C3%A9_Chekh_Anta_Diop_de_Dakar.JPG?width=1280",
+     "tekija": "Rignese",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BU_Universit%C3%A9_Chekh_Anta_Diop_de_Dakar.JPG",
+     "selite": "Yliopisto on nimetty senegalilaisen historioitsijan mukaan ja on yksi Länsi-Afrikan suurimmista.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3098136",
+   "nimi": "Yoff",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 14.75583,
+   "lon": -17.47453,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20130513-DSC 8542 (8750088974).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130513-DSC_8542_(8750088974).jpg?width=1280",
+     "tekija": "jbdodane",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130513-DSC_8542_(8750088974).jpg",
+     "selite": "Yoffin kalastajaranta täyttyy maalatuista pirogeista.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20130513-DSC 8543 (8748967575).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20130513-DSC_8543_(8748967575).jpg?width=1280",
+     "tekija": "jbdodane",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20130513-DSC_8543_(8748967575).jpg",
+     "selite": "Rannalta näkyy Yoffin saari ja sadat rannalle vedetyt veneet.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2629758",
+   "nimi": "IFANin afrikkalaisen taiteen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 14.66331,
+   "lon": -17.43807,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DakarMusée.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DakarMus%C3%A9e.jpg?width=1280",
+     "tekija": "Ji-Elle",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DakarMus%C3%A9e.jpg",
+     "selite": "Museo esittelee länsiafrikkalaisia naamioita ja esineitä Art Deco -tyylisessä rakennuksessa.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Célébration des moissons chez les Gourounsi du Burkina Fasso - Masque de phacochère - musée Théodore Monod - Dakar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A9l%C3%A9bration_des_moissons_chez_les_Gourounsi_du_Burkina_Fasso_-_Masque_de_phacoch%C3%A8re_-_mus%C3%A9e_Th%C3%A9odore_Monod_-_Dakar.jpg?width=1280",
+     "tekija": "fr.zil",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:C%C3%A9l%C3%A9bration_des_moissons_chez_les_Gourounsi_du_Burkina_Fasso_-_Masque_de_phacoch%C3%A8re_-_mus%C3%A9e_Th%C3%A9odore_Monod_-_Dakar.jpg",
+     "selite": "Kokoelman naamiot ja asut kertovat alueen seremonioista.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3527875",
+   "nimi": "Daniel Sorano -kansallisteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 14.66639,
+   "lon": -17.43972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Théâtre Daniel Sorano.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Th%C3%A9%C3%A2tre_Daniel_Sorano.jpg?width=1280",
+     "tekija": "PaulAxelKOUASSI",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Th%C3%A9%C3%A2tre_Daniel_Sorano.jpg",
+     "selite": "Senegalin kansallisteatterin julkisivu on nimetty näyttelijä Daniel Soranon mukaan.",
+     "leveys": 1360,
+     "korkeus": 766,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Dakar - Panorama urbain.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakar_-_Panorama_urbain.jpg?width=1280",
+   "tekija": "Initsogan",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakar_-_Panorama_urbain.jpg",
+   "selite": "Dakarin keskustan korttelit levittäytyvät niemelle Atlantin rannalle.",
+   "leveys": 1280,
+   "korkeus": 960,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Dakar - Anse.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dakar_-_Anse.JPG?width=1280",
+   "tekija": "HaguardDuNord",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dakar_-_Anse.JPG",
+   "selite": "Niemen kallioranta ja Atlantin vesi rajaavat Dakarin rantaa.",
+   "leveys": 3968,
+   "korkeus": 2976,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

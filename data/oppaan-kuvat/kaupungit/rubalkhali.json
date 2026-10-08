@@ -1,0 +1,245 @@
+{
+ "kaupunki": "rubalkhali",
+ "kaupunkiQ": "Q229269",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q118468",
+   "nimi": "Suitsukepolku",
+   "peruste": "UNESCO",
+   "koko_m": 2000,
+   "lat": 18.25333,
+   "lon": 53.64759,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Oman, Wadi Dawkah, Land of Frankincense.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oman%2C_Wadi_Dawkah%2C_Land_of_Frankincense.jpg?width=1280",
+     "tekija": "Dr. Thomas Liptak",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oman%2C_Wadi_Dawkah%2C_Land_of_Frankincense.jpg",
+     "selite": "Wadi Dawkahin laaksossa kasvaa suitsukepuita, joiden pihka teki Etelä-Arabiasta rikkaan.",
+     "leveys": 4910,
+     "korkeus": 2762,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boswellia sacra in Wadi Dowkah (Dhofar).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boswellia_sacra_in_Wadi_Dowkah_(Dhofar).JPG?width=1280",
+     "tekija": "Mauro Raffaelli",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boswellia_sacra_in_Wadi_Dowkah_(Dhofar).JPG",
+     "selite": "Boswellia sacra on suitsukepuu, jonka pihkaa on käytetty tuhansia vuosia.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Wadi Dawkah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wadi_Dawkah.jpg?width=1280",
+     "tekija": "Armatus1995",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wadi_Dawkah.jpg",
+     "selite": "Wadi Dawkahin kuivalla tasangolla suitsukepuut kasvavat hajallaan kivikkoisessa maastossa.",
+     "leveys": 2304,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q21994709",
+   "nimi": "Uruq Bani Ma'arid",
+   "peruste": "UNESCO",
+   "koko_m": 5000,
+   "lat": 19.33694,
+   "lon": 45.90389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Uruq Bani Ma'arid Reserve, Saudi Arabia (2025).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uruq_Bani_Ma'arid_Reserve%2C_Saudi_Arabia_(2025).jpg?width=1280",
+     "tekija": "Saudi Press Agency (SPA)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uruq_Bani_Ma'arid_Reserve%2C_Saudi_Arabia_(2025).jpg",
+     "selite": "Uruq Bani Ma'aridin suojelualueella arabianoryksit liikkuvat Tyhjän neljänneksen dyynien reunalla.",
+     "leveys": 7680,
+     "korkeus": 4691,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Uruq Bani Ma'arid Reserve, Saudi Arabia, 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uruq_Bani_Ma'arid_Reserve%2C_Saudi_Arabia%2C_2025.jpg?width=1280",
+     "tekija": "Saudi Press Agency (SPA)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uruq_Bani_Ma'arid_Reserve%2C_Saudi_Arabia%2C_2025.jpg",
+     "selite": "Suojelualueen punertavilla dyyneillä elää gaselleja ja muita aavikon lajeja.",
+     "leveys": 8640,
+     "korkeus": 5760,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q615949",
+   "nimi": "Liwan keidas",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 23.13333,
+   "lon": 53.78333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Liwa Oasis - panoramio (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Liwa_Oasis_-_panoramio_(2).jpg?width=1280",
+     "tekija": "Xiaotong Gao",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Liwa_Oasis_-_panoramio_(2).jpg",
+     "selite": "Liwan keitaalla puut ja kylät nojaavat Tyhjän neljänneksen jättimäisiin dyyneihin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tilal Liwa Desert Reclamation.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tilal_Liwa_Desert_Reclamation.jpg?width=1280",
+     "tekija": "Clémence Jacqueri",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tilal_Liwa_Desert_Reclamation.jpg",
+     "selite": "Punaiset dyynit kohoavat Liwan keitaan eteläpuolella, ja tie kiemurtelee niiden lomassa.",
+     "leveys": 2419,
+     "korkeus": 1815,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Liwa Desert Dune.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Liwa_Desert_Dune.jpg?width=1280",
+     "tekija": "JSPhotography2016",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Liwa_Desert_Dune.jpg",
+     "selite": "Liwan aavikkotie halkoo hiekkadyynien reunaa Abu Dhabin eteläosassa.",
+     "leveys": 5760,
+     "korkeus": 3840,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14912328",
+   "nimi": "Shisr eli Ubar",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "aliakset": [
+    "Q25406595"
+   ],
+   "lat": 18.2551,
+   "lon": 53.6489,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shisr (Ubar)9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shisr_(Ubar)9.jpg?width=1280",
+     "tekija": "The original uploader was 9591353082 at English Wikipedia.",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shisr_(Ubar)9.jpg",
+     "selite": "Shisrin raunioilla paikka kantaa legendaa hiekkojen Atlantiksesta, Ubarista.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ubar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubar.jpg?width=1280",
+     "tekija": "Armatus1995",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ubar.jpg",
+     "selite": "Shisrin kaivon luona seisovat muurinjäänteet ovat muinaisen karavaanireitin asema.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q27174",
+   "nimi": "Najran",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 17.4917,
+   "lon": 44.1322,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Imarah Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Imarah_Palace.jpg?width=1280",
+     "tekija": "Richard Mortel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Imarah_Palace.jpg",
+     "selite": "Najranin Imaran palatsin mutatiilitornit ja valkoiset harjat kuuluvat alueen perinteiseen rakennustapaan.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wadi najran dam.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wadi_najran_dam.jpg?width=1280",
+     "tekija": "Retlaw Snellac Photography",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wadi_najran_dam.jpg",
+     "selite": "Najranin laakso työntyy vuoristosta kohti Tyhjää neljännestä ja sen hiekkamerta.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ar-Rub' Al-Khali (Oman) kz01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ar-Rub'_Al-Khali_(Oman)_kz01.jpg?width=1280",
+   "tekija": "Krzysztof Ziarnek, Kenraiz",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ar-Rub'_Al-Khali_(Oman)_kz01.jpg",
+   "selite": "Rub al-Khalin hiekkamerellä dyynien aallot jatkuvat horisonttiin asti.",
+   "leveys": 7749,
+   "korkeus": 5812,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Ar-Rub' Al-Khali (Oman) kz03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ar-Rub'_Al-Khali_(Oman)_kz03.jpg?width=1280",
+   "tekija": "Krzysztof Ziarnek, Kenraiz",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ar-Rub'_Al-Khali_(Oman)_kz03.jpg",
+   "selite": "Dyynin harjanne piirtää terävän viivan aavikon iltavaloon.",
+   "leveys": 8032,
+   "korkeus": 6024,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

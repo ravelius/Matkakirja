@@ -133,6 +133,22 @@ jobs:
       SAVUKE_RINNAKKAIN: '2'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
+      # VIIVÄSTYNYT YÖAJO POIS PÄIVÄLLÄ (Päätoimittaja 5.10.2026): cron 03.00 UTC käynnistyi 5.10.
+      # vasta klo 12.51, ja omistaja kuuli Macin ulostulosta ISS-kuvaselitteen luennan samaan aikaan
+      # kuin savuke-astro-pulu (12.51) ja savuke-astro-aani (13.15) pyörivät. Ajastettu ajo ei aja
+      # klo 07–22 Helsingin aikaa. Käsiajo (workflow_dispatch) ajaa yhä.
+      - name: Ohita ajastettu ajo päivällä
+        if: github.event_name == 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          tunti=$(TZ=Europe/Helsinki date +%H)
+          if [ "$tunti" -ge 7 ] && [ "$tunti" -lt 22 ]; then
+            echo "::notice::Ajastettu savukeajo käynnistyi klo $tunti (Helsinki) — päivällä ei ajeta, ajo peruu itsensä."
+            gh run cancel "${{ github.run_id }}" --repo "${{ github.repository }}"
+            sleep 120
+          fi
       # VANHENTUNUT PR-AJO POIS (omistaja hyväksyi 28.9.2026): savukerunneri on
       # yksi, ja mergettyjen/suljettujen PR:ien ajot jonottivat tunteja
       # TF-viennin edellä. Jos PR ei ole enää auki, ajo peruu itsensä heti.

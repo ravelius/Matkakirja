@@ -1,0 +1,385 @@
+{
+ "kaupunki": "varanasi",
+ "kaupunkiQ": "Q79980",
+ "kohteet": [
+  {
+   "q": "Q3630402",
+   "nimi": "Dashashwamedh Ghat",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 25.30717,
+   "lon": 83.01034,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DASHASHWAMEDH GHAT, VARANASI.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DASHASHWAMEDH_GHAT%2C_VARANASI.jpg?width=1280",
+     "tekija": "Sulagna Halder",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DASHASHWAMEDH_GHAT%2C_VARANASI.jpg",
+     "selite": "Dashashwamedh on Varanasin vilkkain ghat, jolla pidetään iltaisin Ganga aarti -rituaali.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dashashwamedh Ghat Varanasi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dashashwamedh_Ghat_Varanasi.jpg?width=1280",
+     "tekija": "Kasyap",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dashashwamedh_Ghat_Varanasi.jpg",
+     "selite": "Veneet ja portaikko Gangesin rannalla aamun sarastaessa.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3675",
+   "nimi": "Kashi Vishwanath -temppeli",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 25.31077,
+   "lon": 83.01061,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ganga Dwar, Gateway of Corridor of Kashi Vishwanath Temple, Varanasi 2.webp",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ganga_Dwar%2C_Gateway_of_Corridor_of_Kashi_Vishwanath_Temple%2C_Varanasi_2.webp?width=1280",
+     "tekija": "Ashvin Kaitabhya, clicked by Abhishek Pandey",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ganga_Dwar%2C_Gateway_of_Corridor_of_Kashi_Vishwanath_Temple%2C_Varanasi_2.webp",
+     "selite": "Kashi Vishwanath on Shivalle omistettu temppeli ja yksi hindulaisuuden tärkeimmistä pyhäköistä.",
+     "leveys": 1280,
+     "korkeus": 881,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shri Kashi Vishwanath Temple 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri_Kashi_Vishwanath_Temple_2.jpg?width=1280",
+     "tekija": "Gannu03",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shri_Kashi_Vishwanath_Temple_2.jpg",
+     "selite": "Temppelin tummasta kivestä veistetty torni nousee tiheään rakennetun vanhankaupungin ylle.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Shri Kashi Vishwanath Temple 7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shri_Kashi_Vishwanath_Temple_7.jpg?width=1280",
+     "tekija": "Gannu03",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shri_Kashi_Vishwanath_Temple_7.jpg",
+     "selite": "Temppelikäytävän rakennukset avautuvat Gangesin rannalle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3630417",
+   "nimi": "Manikarnika Ghat",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.31087,
+   "lon": 83.01409,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Manikarnika Cremation Ghat, Varanasi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manikarnika_Cremation_Ghat%2C_Varanasi.jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manikarnika_Cremation_Ghat%2C_Varanasi.jpg",
+     "selite": "Manikarnika on Varanasin tärkein polttopaikka, jossa hindut polttavat vainajiaan Gangesin rannalla.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4808835",
+   "nimi": "Assi Ghat",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.28865,
+   "lon": 83.00676,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Assi ghat banaras mandiro ka seher.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Assi_ghat_banaras_mandiro_ka_seher.jpg?width=1280",
+     "tekija": "Akshay8090",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Assi_ghat_banaras_mandiro_ka_seher.jpg",
+     "selite": "Assi Ghat on Varanasin eteläisin suuri ghat ja temppeleiden täyttämä rantakohde.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Assi Ghat (46848).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Assi_Ghat_(46848).jpg?width=1280",
+     "tekija": "Sonalyadav1234",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Assi_Ghat_(46848).jpg",
+     "selite": "Gangesin ranta Assi Ghatilla näkyy laajana joenäkymänä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1985137",
+   "nimi": "Dhamek-stupa",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 25.3808,
+   "lon": 83.0245,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dhamek Stupa, Sarnath and surroundings - IRCTC 2017 (100).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dhamek_Stupa%2C_Sarnath_and_surroundings_-_IRCTC_2017_(100).jpg?width=1280",
+     "tekija": "Vinayaraj",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dhamek_Stupa%2C_Sarnath_and_surroundings_-_IRCTC_2017_(100).jpg",
+     "selite": "Dhamek-stupa Sarnathissa merkitsee paikkaa, jossa Buddha piti ensimmäisen opetuksensa.",
+     "leveys": 3456,
+     "korkeus": 4608,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dhamek Stupa, 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dhamek_Stupa%2C_2025.jpg?width=1280",
+     "tekija": "Hardy Explorer",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dhamek_Stupa%2C_2025.jpg",
+     "selite": "Tiilinen ja kivinen stupa kohoaa Sarnathin nurmikon yllä.",
+     "leveys": 3072,
+     "korkeus": 4096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1131206",
+   "nimi": "Chaukhandi-stupa",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 25.3741,
+   "lon": 83.02366,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chaukhandi Stupa on a hill, Sarnath.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaukhandi_Stupa_on_a_hill%2C_Sarnath.jpg?width=1280",
+     "tekija": "Christopher Walker",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaukhandi_Stupa_on_a_hill%2C_Sarnath.jpg",
+     "selite": "Chaukhandi-stupa on kumpuun rakennettu tiilinen buddhalainen muistomerkki Sarnathissa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chaukhandi Stupa, Saranath.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaukhandi_Stupa%2C_Saranath.jpg?width=1280",
+     "tekija": "MaximusPrasad",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaukhandi_Stupa%2C_Saranath.jpg",
+     "selite": "Kahdeksankulmainen torni on myöhempi lisäys vanhan stupan huipulle.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Chaukhandi Stupa, Sarnath 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chaukhandi_Stupa%2C_Sarnath_2.jpg?width=1280",
+     "tekija": "Rangan Datta Wiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chaukhandi_Stupa%2C_Sarnath_2.jpg",
+     "selite": "Stupan porrastetut tiilikerrokset nousevat nurmikon keskeltä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4492020",
+   "nimi": "Ramnagarin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 25.26972,
+   "lon": 83.02472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ramnagar Fort, Ramnagar, Varanasi, Uttar Pradesh 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramnagar_Fort%2C_Ramnagar%2C_Varanasi%2C_Uttar_Pradesh_05.jpg?width=1280",
+     "tekija": "Paramanu Sarkar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ramnagar_Fort%2C_Ramnagar%2C_Varanasi%2C_Uttar_Pradesh_05.jpg",
+     "selite": "Ramnagarin linnoitus on Varanasin maharadjojen hiekkakivilinnoitus Gangesin itärannalla.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Main Entrance of Ramnagar Fort, Varanasi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_Entrance_of_Ramnagar_Fort%2C_Varanasi.jpg?width=1280",
+     "tekija": "Sujay25",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Main_Entrance_of_Ramnagar_Fort%2C_Varanasi.jpg",
+     "selite": "Linnoituksen vaaleanpunainen pääportti ja parvekkeet.",
+     "leveys": 3733,
+     "korkeus": 2499,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "The Ganga River and Ramnagar bridge from Ramnagar fort, Vyasa kasi, Varanasi, U.P.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Ganga_River_and_Ramnagar_bridge_from_Ramnagar_fort%2C_Vyasa_kasi%2C_Varanasi%2C_U.P.jpg?width=1280",
+     "tekija": "K.Venkataramana",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Ganga_River_and_Ramnagar_bridge_from_Ramnagar_fort%2C_Vyasa_kasi%2C_Varanasi%2C_U.P.jpg",
+     "selite": "Linnoituksen muureilta näkyy Ganges ja joen ylittävä silta.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q806116",
+   "nimi": "Varanasin hinduyliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 25.26772,
+   "lon": 82.99119,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vishwanath Temple Banaras Hindu University Varanasi India - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vishwanath_Temple_Banaras_Hindu_University_Varanasi_India_-_panoramio.jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vishwanath_Temple_Banaras_Hindu_University_Varanasi_India_-_panoramio.jpg",
+     "selite": "Yliopiston kampuksella on uusi Vishwanath-temppeli, jonka vaalea torni erottuu kaukaa.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "New Vishwanath Temple inside Banaras Hindu University, Varanasi - IRCTC 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/New_Vishwanath_Temple_inside_Banaras_Hindu_University%2C_Varanasi_-_IRCTC_2017.jpg?width=1280",
+     "tekija": "Vinayaraj",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:New_Vishwanath_Temple_inside_Banaras_Hindu_University%2C_Varanasi_-_IRCTC_2017.jpg",
+     "selite": "Kampuksen portit ja vaaleanpunaiset rakennukset muodostavat yliopiston tunnistettavan ilmeen.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3595955",
+   "nimi": "Ashokan leijonapylväs",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 25.3811,
+   "lon": 83.0214,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lion Capital of Ashoka 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lion_Capital_of_Ashoka_3.jpg?width=1280",
+     "tekija": "Apurv013",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lion_Capital_of_Ashoka_3.jpg",
+     "selite": "Sarnathin leijonapylvään pää on Intian kansallinen tunnus ja Ashokan ajan taidetta.",
+     "leveys": 2704,
+     "korkeus": 2028,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lion capital of Ashoka, Sarnath.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lion_capital_of_Ashoka%2C_Sarnath.jpg?width=1280",
+     "tekija": "lisa bat",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lion_capital_of_Ashoka%2C_Sarnath.jpg",
+     "selite": "Neljä selkä selkää vasten istuvaa leijonaa kantaa pylvään huippua.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ganges River in Varanasi 04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ganges_River_in_Varanasi_04.jpg?width=1280",
+   "tekija": "Antoine Taveneaux",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ganges_River_in_Varanasi_04.jpg",
+   "selite": "Varanasin ghatit ja temppelit reunustavat Gangesin länsirantaa.",
+   "leveys": 3872,
+   "korkeus": 2592,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Varanasi, India, Boats, Ganges River.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Varanasi%2C_India%2C_Boats%2C_Ganges_River.jpg?width=1280",
+   "tekija": "Vyacheslav Argenberg",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Varanasi%2C_India%2C_Boats%2C_Ganges_River.jpg",
+   "selite": "Veneet odottavat matkailijoita Gangesin rannassa Varanasissa.",
+   "leveys": 3072,
+   "korkeus": 2048,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

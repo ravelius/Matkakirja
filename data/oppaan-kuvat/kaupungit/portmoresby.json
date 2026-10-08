@@ -1,0 +1,198 @@
+{
+ "kaupunki": "portmoresby",
+ "kaupunkiQ": "Q36526",
+ "kohteet": [
+  {
+   "q": "Q109236300",
+   "nimi": "Kansallinen parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -9.42806,
+   "lon": 147.19167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Papua New Guinea 1991-039 Parliament House, Port Moresby (33351725760).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_1991-039_Parliament_House%2C_Port_Moresby_(33351725760).jpg?width=1280",
+     "tekija": "Brian ireland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_1991-039_Parliament_House%2C_Port_Moresby_(33351725760).jpg",
+     "selite": "Parlamenttitalon jyrkkä katto muistuttaa perinteistä kokoontumistaloa, ja sen edustalla on allas.",
+     "leveys": 6544,
+     "korkeus": 4272,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1088438",
+   "nimi": "Jacksonsin kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -9.44333,
+   "lon": 147.22,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Port Moresby Intl Airport 2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_Moresby_Intl_Airport_2008.jpg?width=1280",
+     "tekija": "Jialiang Gao (peace-on-earth.org)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_Moresby_Intl_Airport_2008.jpg",
+     "selite": "Jacksonsin kenttä on Papua-Uuden-Guinean pääportti, jonka takana kohoavat kuivat kukkulat.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5352538",
+   "nimi": "Ela Beach",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -9.47965,
+   "lon": 147.15616,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ela Beach May 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ela_Beach_May_2015.jpg?width=1280",
+     "tekija": "Nick-D",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ela_Beach_May_2015.jpg",
+     "selite": "Ela Beach on Port Moresbyn keskustan hiekkaranta Paapuanlahden rannalla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55628557",
+   "nimi": "Papua-Uuden-Guinean kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -9.42561,
+   "lon": 147.19011,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Papua New Guinea National Museum May 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Papua_New_Guinea_National_Museum_May_2015.jpg?width=1280",
+     "tekija": "Nick-D",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_National_Museum_May_2015.jpg",
+     "selite": "Museon puutarhassa kohoaa perinteiseen tyyliin tehty talo, jossa säilytetään maan kulttuuriesineitä.",
+     "leveys": 3780,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5651329",
+   "nimi": "Hanuabada",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -9.45639,
+   "lon": 147.15417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hanuabada, coastal village, Port Moresby, PNG (9605673456).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hanuabada%2C_coastal_village%2C_Port_Moresby%2C_PNG_(9605673456).jpg?width=1280",
+     "tekija": "Special Collections from Callaghan NSW, Australia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hanuabada%2C_coastal_village%2C_Port_Moresby%2C_PNG_(9605673456).jpg",
+     "selite": "Hanuabada on motu-kansan paalutalokylä, jonka talot seisovat meren päällä.",
+     "leveys": 3052,
+     "korkeus": 1956,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1633327",
+   "nimi": "Sir Hubert Murrayn stadion",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -9.46694,
+   "lon": 147.15667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sir Hubert Murray Stadium (1993, cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Hubert_Murray_Stadium_(1993%2C_cropped).jpg?width=1280",
+     "tekija": "lindsaybridge",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sir_Hubert_Murray_Stadium_(1993%2C_cropped).jpg",
+     "selite": "Stadion sijaitsee Konedobun rinteen alla, ja sen takana avautuu Port Moresbyn lahti.",
+     "leveys": 1900,
+     "korkeus": 1052,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Port moresby (5986697553).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_moresby_(5986697553).jpg?width=1280",
+   "tekija": "eGuide Travel",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_moresby_(5986697553).jpg",
+   "selite": "Port Moresbyn keskusta nousee niemekkeelle ja Paapuanlahden sininen meri ympäröi sitä.",
+   "leveys": 4928,
+   "korkeus": 3264,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Port Moresby Town Mschlauch.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_Moresby_Town_Mschlauch.JPG?width=1280",
+   "tekija": "Mschlauch",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Port_Moresby_Town_Mschlauch.JPG",
+   "selite": "Keskustan tornit ja satama näkyvät kukkulalta Port Moresbyn illassa.",
+   "leveys": 1600,
+   "korkeus": 1200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q2289928",
+   "nimi": "Sir John Guisen stadion",
+   "peruste": "pelin nosto",
+   "lat": -9.44,
+   "lon": 147.18361,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q106322306",
+   "nimi": "Hohola-moskeija",
+   "peruste": "pelin nosto",
+   "lat": -9.4585,
+   "lon": 147.17725,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  },
+  {
+   "q": "Q4746418",
+   "nimi": "Amini Park",
+   "peruste": "pelin nosto",
+   "lat": -9.47333,
+   "lon": 147.20167,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

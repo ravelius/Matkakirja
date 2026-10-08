@@ -1,0 +1,405 @@
+{
+ "kaupunki": "brisbane",
+ "kaupunkiQ": "Q34932",
+ "kohteet": [
+  {
+   "q": "Q905910",
+   "nimi": "Brisbanejoki",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -27.4,
+   "lon": 153.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "18-08-2013,panorama story bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/18-08-2013%2Cpanorama_story_bridge.jpg?width=1280",
+     "tekija": "bertknot",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:18-08-2013%2Cpanorama_story_bridge.jpg",
+     "selite": "Brisbanejoki mutkittelee keskustan ympäri, ja Story Bridge ylittää sen idässä.",
+     "leveys": 12304,
+     "korkeus": 4372,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20161026182354 - Arriving at Brisbane River at twilight (30075541044).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20161026182354_-_Arriving_at_Brisbane_River_at_twilight_(30075541044).jpg?width=1280",
+     "tekija": "Felix Dance",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20161026182354_-_Arriving_at_Brisbane_River_at_twilight_(30075541044).jpg",
+     "selite": "Illan hämärässä keskustan tornit heijastuvat joen veteen.",
+     "leveys": 2214,
+     "korkeus": 1476,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2462392",
+   "nimi": "The Gabba",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -27.48583,
+   "lon": 153.03806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Gabba Panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Gabba_Panorama.jpg?width=1280",
+     "tekija": "Rae Allen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Gabba_Panorama.jpg",
+     "selite": "Gabba on Brisbanen krikettistadion, jossa pelataan myös australialaista jalkapalloa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4968552",
+   "nimi": "Brisbanen kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -27.4688,
+   "lon": 153.024,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "King George Square in 12.2013 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/King_George_Square_in_12.2013_07.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:King_George_Square_in_12.2013_07.jpg",
+     "selite": "Kaupungintalon kellotorni kohoaa King George Squaren laidalla.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "202406210841 IMG 2504.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202406210841_IMG_2504.jpg?width=1280",
+     "tekija": "ウィ貴公子",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202406210841_IMG_2504.jpg",
+     "selite": "Hiekkakivinen talo ja kellotorni erottuvat lasisten pilvenpiirtäjien keskellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q153825",
+   "nimi": "Queenslandin parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -27.4754,
+   "lon": 153.027,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christmas tree in 2019 at Parliament House, Brisbane, Queensland 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christmas_tree_in_2019_at_Parliament_House%2C_Brisbane%2C_Queensland_01.jpg?width=1280",
+     "tekija": "Kgbo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christmas_tree_in_2019_at_Parliament_House%2C_Brisbane%2C_Queensland_01.jpg",
+     "selite": "Ranskalaistyylinen parlamenttitalo seisoo puutarhan laidalla keskustan reunalla.",
+     "leveys": 3744,
+     "korkeus": 2808,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Brisbane City 12078.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brisbane_City_12078.jpg?width=1280",
+     "tekija": "User:E",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brisbane_City_12078.jpg",
+     "selite": "Rakennuksen kupoli ja kaarikäytävät on kuvattu aidan takaa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7836792",
+   "nimi": "Brisbanen valtiovarainministeriön talo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -27.4717,
+   "lon": 153.024,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AUS Brisbane, Central Business District, Reddacliff Place 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Brisbane%2C_Central_Business_District%2C_Reddacliff_Place_002.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Brisbane%2C_Central_Business_District%2C_Reddacliff_Place_002.jpg",
+     "selite": "Renessanssityylinen talo on nykyään kasino, ja sen julkisivu on George Streetin varrella.",
+     "leveys": 3968,
+     "korkeus": 2802,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Brisbane, Central Business District, Reddacliff Place 005.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Brisbane%2C_Central_Business_District%2C_Reddacliff_Place_005.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Brisbane%2C_Central_Business_District%2C_Reddacliff_Place_005.jpg",
+     "selite": "Rakennuksen kulma avautuu Reddacliff Placen aukiolle.",
+     "leveys": 3929,
+     "korkeus": 2947,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q917681",
+   "nimi": "City Botanic Gardens",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": -27.4747,
+   "lon": 153.03,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "'Plant Form' by Rob Juniper.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/'Plant_Form'_by_Rob_Juniper.jpg?width=1280",
+     "tekija": "Brisbane City Council",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:'Plant_Form'_by_Rob_Juniper.jpg",
+     "selite": "Joenmutkan puutarhan nurmikolla seisoo teräsveistos.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3492231",
+   "nimi": "South Bank Parklands",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -27.4787,
+   "lon": 153.023,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "28 - South Bank Parklands (4741163759).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/28_-_South_Bank_Parklands_(4741163759).jpg?width=1280",
+     "tekija": "Brisbane City Council",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:28_-_South_Bank_Parklands_(4741163759).jpg",
+     "selite": "South Bankin puisto levittäytyy joen etelärannalle, ja taustalla kohoaa maailmanpyörä.",
+     "leveys": 3445,
+     "korkeus": 1807,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "South Bank Parkland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_Bank_Parkland.jpg?width=1280",
+     "tekija": "misaochan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:South_Bank_Parkland.jpg",
+     "selite": "Nepalilainen pagodi valaistuna illalla muistuttaa vuoden 1988 maailmannäyttelystä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1566208",
+   "nimi": "Pyhän Johanneksen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -27.464,
+   "lon": 153.03,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St John's Cathedral, Brisbane, 2009.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_John's_Cathedral%2C_Brisbane%2C_2009.JPG?width=1280",
+     "tekija": "Masalai (talk)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_John's_Cathedral%2C_Brisbane%2C_2009.JPG",
+     "selite": "Uusgoottilaisen katedraalin kaksi tornia kohoavat keskustan korkeiden talojen väliin.",
+     "leveys": 3296,
+     "korkeus": 2472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Brisbain - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brisbain_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Tanya Dedyukhina",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brisbain_-_panoramio_(1).jpg",
+     "selite": "Katedraali erottuu tiiviin keskustan rakennusten keskellä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5152612",
+   "nimi": "Commissariat Store",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -27.47327,
+   "lon": 153.02425,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Commissariat Store, Brisbane 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Commissariat_Store%2C_Brisbane_10.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Commissariat_Store%2C_Brisbane_10.jpg",
+     "selite": "Siirtokunnan varastotalo on Brisbanen vanhimpia säilyneitä rakennuksia.",
+     "leveys": 2844,
+     "korkeus": 2366,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Commissariat Store Queens Wharf Rd Brisbane P1230062.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Commissariat_Store_Queens_Wharf_Rd_Brisbane_P1230062.jpg?width=1280",
+     "tekija": "John Robert McPherson",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Commissariat_Store_Queens_Wharf_Rd_Brisbane_P1230062.jpg",
+     "selite": "Hiekkakivestä tehty talo on nykyään museo Queens Wharf Roadilla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2018368",
+   "nimi": "Old Government House",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -27.4773,
+   "lon": 153.029,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old Government House, Brisbane 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Government_House%2C_Brisbane_02.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Government_House%2C_Brisbane_02.jpg",
+     "selite": "Entinen kuvernöörin talo seisoo puiston laidalla Brisbanejoen lähellä.",
+     "leveys": 3001,
+     "korkeus": 2173,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AUS Brisbane, Central Business District, Queensland University of Technology 004.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AUS_Brisbane%2C_Central_Business_District%2C_Queensland_University_of_Technology_004.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AUS_Brisbane%2C_Central_Business_District%2C_Queensland_University_of_Technology_004.jpg",
+     "selite": "Illalla rakennuksen kuistit ja ikkunat valaistaan.",
+     "leveys": 3997,
+     "korkeus": 2997,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5532113",
+   "nimi": "Brisbanen pääposti",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -27.46805,
+   "lon": 153.02816,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "General Post Office central facade seen from Post Office Square, Brisbane.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/General_Post_Office_central_facade_seen_from_Post_Office_Square%2C_Brisbane.jpg?width=1280",
+     "tekija": "Chris Olszewski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:General_Post_Office_central_facade_seen_from_Post_Office_Square%2C_Brisbane.jpg",
+     "selite": "Pääpostin keskusjulkisivu ja torni avautuvat Post Office Squarelle.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Brisbane GPO Queen St Brisbane DSCF3084 enhanced.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brisbane_GPO_Queen_St_Brisbane_DSCF3084_enhanced.jpg?width=1280",
+     "tekija": "John Robert McPherson",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brisbane_GPO_Queen_St_Brisbane_DSCF3084_enhanced.jpg",
+     "selite": "Rakennuksen Queen Streetin puoleinen julkisivu on kolmikerroksinen.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Brisbane CBD seen from Kangaroo Point, 2024, 02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brisbane_CBD_seen_from_Kangaroo_Point%2C_2024%2C_02.jpg?width=1280",
+   "tekija": "Chris Olszewski",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brisbane_CBD_seen_from_Kangaroo_Point%2C_2024%2C_02.jpg",
+   "selite": "Brisbanen keskusta kohoaa joen mutkassa, ja Kangaroo Pointin kallio on kuvauspaikka.",
+   "leveys": 4001,
+   "korkeus": 2999,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Skyline of Brisbane from Kangaroo Point Cliffs Park, Nov 2020, 05.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Brisbane_from_Kangaroo_Point_Cliffs_Park%2C_Nov_2020%2C_05.jpg?width=1280",
+   "tekija": "Chris Olszewski",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Brisbane_from_Kangaroo_Point_Cliffs_Park%2C_Nov_2020%2C_05.jpg",
+   "selite": "Keskustan tornit ja joki erottuvat Kangaroo Point Cliffs -puistosta nähtynä.",
+   "leveys": 3884,
+   "korkeus": 2913,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

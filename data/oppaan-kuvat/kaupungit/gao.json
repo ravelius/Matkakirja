@@ -1,0 +1,118 @@
+{
+ "kaupunki": "gao",
+ "kaupunkiQ": "Q188904",
+ "pieniAlue": true,
+ "kohteet": [
+  {
+   "q": "Q503823",
+   "nimi": "Askian hauta",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": 16.28972,
+   "lon": -0.04444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tombeau askia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tombeau_askia.jpg?width=1280",
+     "tekija": "Gio53",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tombeau_askia.jpg",
+     "selite": "Askian hauta on savesta rakennettu portaikkopyramidi, Songhain valtakunnan tunnetuin muistomerkki.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tombeau dAskia in Gao by David Sessoms.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tombeau_dAskia_in_Gao_by_David_Sessoms.jpg?width=1280",
+     "tekija": "David Sessoms from Fribourg, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tombeau_dAskia_in_Gao_by_David_Sessoms.jpg",
+     "selite": "Hautamoskeijan savimuurit ja pyramidin piikit kohoavat hiekkaisen aukion yllä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14628925",
+   "nimi": "Wabarian silta",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 16.1946,
+   "lon": -0.02841,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pontgao.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pontgao.JPG?width=1280",
+     "tekija": "Taguelmoust",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pontgao.JPG",
+     "selite": "Wabarian silta vie Nigerin yli Gaossa, jossa joen ylitys oli ennen lauttojen varassa.",
+     "leveys": 2907,
+     "korkeus": 1842,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3083185",
+   "nimi": "Gaon lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 16.24833,
+   "lon": -0.00583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Boeing C-17 landing at Gao Airport, Mali.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boeing_C-17_landing_at_Gao_Airport%2C_Mali.jpg?width=1280",
+     "tekija": "Ministerie van Defensie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boeing_C-17_landing_at_Gao_Airport%2C_Mali.jpg",
+     "selite": "Raskas rahtikone laskeutuu pölyävälle kiitotielle Gaon aavikkoreunan lentokentällä.",
+     "leveys": 2100,
+     "korkeus": 1400,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "The ferry of Gao city (Mali).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_ferry_of_Gao_city_(Mali).jpg?width=1280",
+   "tekija": "Komalick",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_ferry_of_Gao_city_(Mali).jpg",
+   "selite": "Lautta ylittää Nigerjoen Gaon kohdalla, jossa kaupunki sijaitsee joen mutkassa.",
+   "leveys": 1280,
+   "korkeus": 960,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Gao Mali 2006.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gao_Mali_2006.jpg?width=1280",
+   "tekija": "David Sessoms",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gao_Mali_2006.jpg",
+   "selite": "Gaon matalat savitalot ja hiekkaiset kadut Sahelin vyöhykkeellä.",
+   "leveys": 2592,
+   "korkeus": 1944,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

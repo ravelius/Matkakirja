@@ -1,0 +1,480 @@
+{
+ "kaupunki": "luxor",
+ "kaupunkiQ": "Q130514",
+ "kohteet": [
+  {
+   "q": "Q522862",
+   "nimi": "Karnakin temppeli",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": 25.71833,
+   "lon": 32.65833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karnak Temples.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karnak_Temples.jpg?width=1280",
+     "tekija": "Ahmed Bahloul Khier Galal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karnak_Temples.jpg",
+     "selite": "Karnakin laaja temppelialue levittäytyy Luxorin pohjoispuolelle ja sisältää pyhän järven.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Corridor of Sphinxes leading to the first pylon Karnak Temple Complex (14230699633).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Corridor_of_Sphinxes_leading_to_the_first_pylon_Karnak_Temple_Complex_(14230699633).jpg?width=1280",
+     "tekija": "Jorge Láscar from Melbourne, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Corridor_of_Sphinxes_leading_to_the_first_pylon_Karnak_Temple_Complex_(14230699633).jpg",
+     "selite": "Oinaspäisten sfinksien rivi johtaa Amun-Ren temppelin ensimmäiselle pylonille.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "First pylon of the Amun-Re temple entrance - Karnak Temple (14187552886).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/First_pylon_of_the_Amun-Re_temple_entrance_-_Karnak_Temple_(14187552886).jpg?width=1280",
+     "tekija": "Jorge Láscar from Melbourne, Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:First_pylon_of_the_Amun-Re_temple_entrance_-_Karnak_Temple_(14187552886).jpg",
+     "selite": "Ensimmäinen pylon avaa pääsyn Karnakin suureen temppelialueeseen.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q319841",
+   "nimi": "Luxorin temppeli",
+   "peruste": "UNESCO",
+   "koko_m": 260,
+   "lat": 25.7,
+   "lon": 32.63917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pylons and obelisk Luxor temple.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pylons_and_obelisk_Luxor_temple.JPG?width=1280",
+     "tekija": "Ad Meskens",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pylons_and_obelisk_Luxor_temple.JPG",
+     "selite": "Luxorin temppelin pylon ja obeliski seisovat keskellä nykyaikaista kaupunkia.",
+     "leveys": 3604,
+     "korkeus": 2045,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1550 bis 1070 v. Chr. ca. wurde der Tempel von Luxor erbaut. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1550_bis_1070_v._Chr._ca._wurde_der_Tempel_von_Luxor_erbaut._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1550_bis_1070_v._Chr._ca._wurde_der_Tempel_von_Luxor_erbaut._03.jpg",
+     "selite": "Illalla temppeli valaistaan kullanhohtoisena Niilin rannalla.",
+     "leveys": 5906,
+     "korkeus": 2847,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q133423",
+   "nimi": "Kuninkaiden laakso",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 25.74025,
+   "lon": 32.60236,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1550 bis 1070 v. Chr. ca. diente das Tal der Könige als Begräbnisstätte für die Pharaonen. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1550_bis_1070_v._Chr._ca._diente_das_Tal_der_K%C3%B6nige_als_Begr%C3%A4bnisst%C3%A4tte_f%C3%BCr_die_Pharaonen._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1550_bis_1070_v._Chr._ca._diente_das_Tal_der_K%C3%B6nige_als_Begr%C3%A4bnisst%C3%A4tte_f%C3%BCr_die_Pharaonen._02.jpg",
+     "selite": "Kuninkaiden laakson kallioon louhittiin uuden valtakunnan faaraoiden hautoja.",
+     "leveys": 5906,
+     "korkeus": 3936,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1550 bis 1070 v. Chr. ca. diente das Tal der Könige als Begräbnisstätte für die Pharaonen. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1550_bis_1070_v._Chr._ca._diente_das_Tal_der_K%C3%B6nige_als_Begr%C3%A4bnisst%C3%A4tte_f%C3%BCr_die_Pharaonen._04.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1550_bis_1070_v._Chr._ca._diente_das_Tal_der_K%C3%B6nige_als_Begr%C3%A4bnisst%C3%A4tte_f%C3%BCr_die_Pharaonen._04.jpg",
+     "selite": "Kuiva laakso Niilin länsirannalla kätkee kymmeniä kuninkaallisia hautakammioita.",
+     "leveys": 5906,
+     "korkeus": 3700,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q660692",
+   "nimi": "Hatshepsutin ruumistemppeli",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 25.73806,
+   "lon": 32.60694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Templo funerario de Hatshepsut, Luxor, Egipto, 2022-04-03, DD 13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_funerario_de_Hatshepsut%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_13.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_funerario_de_Hatshepsut%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_13.jpg",
+     "selite": "Hatshepsutin portaikkoterassein rakennettu temppeli nojaa Deir el-Bahrin jyrkkään kalliojyrkänteeseen.",
+     "leveys": 6856,
+     "korkeus": 4288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Millionenjahrhaus\" - Totentempel der Hatshepsut. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Millionenjahrhaus%22_-_Totentempel_der_Hatshepsut._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Millionenjahrhaus%22_-_Totentempel_der_Hatshepsut._02.jpg",
+     "selite": "Pitkä luiska johtaa temppelin ylemmille terasseille.",
+     "leveys": 5906,
+     "korkeus": 5301,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q750209",
+   "nimi": "Memnonin kolossit",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 25.72056,
+   "lon": 32.61056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Colossi of Memnon May 2015 2.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colossi_of_Memnon_May_2015_2.JPG?width=1280",
+     "tekija": "MusikAnimal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colossi_of_Memnon_May_2015_2.JPG",
+     "selite": "Kaksi jättiläispatsasta on jäänyt jäljelle Amenhotep III:n kadonneesta ruumistemppelistä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colossi of Memnon R02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colossi_of_Memnon_R02.jpg?width=1280",
+     "tekija": "Marc Ryckaert (MJJR)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colossi_of_Memnon_R02.jpg",
+     "selite": "Patsaat seisovat Niilin länsirannan viljelysmaiden laidalla.",
+     "leveys": 3268,
+     "korkeus": 2684,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "21 Meter waren die Memnonskolosse ursprünglich hoch. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21_Meter_waren_die_Memnonskolosse_urspr%C3%BCnglich_hoch._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21_Meter_waren_die_Memnonskolosse_urspr%C3%BCnglich_hoch._01.jpg",
+     "selite": "Patsaiden alkuperäinen korkeus oli noin 21 metriä.",
+     "leveys": 5906,
+     "korkeus": 2967,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3775633",
+   "nimi": "Karnakin suuri pylvässali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 25.7186,
+   "lon": 32.6579,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "134 Säulen in 16 Reihen geordnet trugen das Dach der Halle. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/134_S%C3%A4ulen_in_16_Reihen_geordnet_trugen_das_Dach_der_Halle._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:134_S%C3%A4ulen_in_16_Reihen_geordnet_trugen_das_Dach_der_Halle._01.jpg",
+     "selite": "Suuren pylvässalin jättimäiset pylväät kantoivat aikoinaan temppelin kattoa.",
+     "leveys": 4060,
+     "korkeus": 5142,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "134 Säulen in 16 Reihen geordnet trugen das Dach der Halle. 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/134_S%C3%A4ulen_in_16_Reihen_geordnet_trugen_das_Dach_der_Halle._03.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:134_S%C3%A4ulen_in_16_Reihen_geordnet_trugen_das_Dach_der_Halle._03.jpg",
+     "selite": "Salin pylväät on koristeltu reliefeillä ja hieroglyfeillä.",
+     "leveys": 3816,
+     "korkeus": 5906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q311581",
+   "nimi": "Ramesseum",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 25.72778,
+   "lon": 32.61056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ramesseum, Luxor, Egipto, 2022-04-03, DD 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ramesseum%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_08.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ramesseum%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_08.jpg",
+     "selite": "Ramesseum on Ramses II:n ruumistemppeli Niilin länsirannalla.",
+     "leveys": 8002,
+     "korkeus": 3747,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aegypten1959-078 hg.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aegypten1959-078_hg.jpg?width=1280",
+     "tekija": "H. Grobe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aegypten1959-078_hg.jpg",
+     "selite": "Temppelin sisäpihan osirispilarit esittävät faaraota Osiriksena.",
+     "leveys": 4067,
+     "korkeus": 2608,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q932622",
+   "nimi": "Medinet Habu",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 25.72,
+   "lon": 32.60083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Thebes, Medinet Habu, Egypt, Temple of Ramesses III, First Pylon 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thebes%2C_Medinet_Habu%2C_Egypt%2C_Temple_of_Ramesses_III%2C_First_Pylon_2.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Thebes%2C_Medinet_Habu%2C_Egypt%2C_Temple_of_Ramesses_III%2C_First_Pylon_2.jpg",
+     "selite": "Medinet Habun temppeli on Ramses III:n ruumistemppeli, jonka seinät peittävät taistelukuvat.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q260386",
+   "nimi": "Kuningattarien laakso",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 25.7275,
+   "lon": 32.59306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valle de las Reinas, Luxor, Egipto, 2022-04-03, DD 17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valle_de_las_Reinas%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_17.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valle_de_las_Reinas%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_17.jpg",
+     "selite": "Kuningattarien laaksoon haudattiin faaraoiden puolisoita ja lapsia, muun muassa Nefertari.",
+     "leveys": 8357,
+     "korkeus": 5571,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1904 wurde das Grab von Titi im Tal der Königinnen entdeckt. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1904_wurde_das_Grab_von_Titi_im_Tal_der_K%C3%B6niginnen_entdeckt._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1904_wurde_das_Grab_von_Titi_im_Tal_der_K%C3%B6niginnen_entdeckt._01.jpg",
+     "selite": "Hautakammiot on louhittu laakson vaaleaan kallioon.",
+     "leveys": 5906,
+     "korkeus": 3939,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1878362",
+   "nimi": "Luxorin museo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 25.70772,
+   "lon": 32.64449,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Luxor Museum 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxor_Museum_2010.jpg?width=1280",
+     "tekija": "Michiel1972",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxor_Museum_2010.jpg",
+     "selite": "Luxorin museo esittelee Theeban alueen esineistöä.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1975 wurde das Luxor-Museum eröffnet. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1975_wurde_das_Luxor-Museum_er%C3%B6ffnet._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1975_wurde_das_Luxor-Museum_er%C3%B6ffnet._01.jpg",
+     "selite": "Museon rakennus avattiin vuonna 1975 Niilin rannalle.",
+     "leveys": 5906,
+     "korkeus": 3941,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6811142",
+   "nimi": "Sfinksikuja",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 25.708,
+   "lon": 32.648,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1300 Sphinxen säumten ursprünglich die Allee. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1300_Sphinxen_s%C3%A4umten_urspr%C3%BCnglich_die_Allee._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1300_Sphinxen_s%C3%A4umten_urspr%C3%BCnglich_die_Allee._02.jpg",
+     "selite": "Sfinksikuja yhdistää Luxorin temppelin Karnakiin.",
+     "leveys": 5906,
+     "korkeus": 3121,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1300 Sphinxen säumten ursprünglich die Allee. 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1300_Sphinxen_s%C3%A4umten_urspr%C3%BCnglich_die_Allee._06.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1300_Sphinxen_s%C3%A4umten_urspr%C3%BCnglich_die_Allee._06.jpg",
+     "selite": "Illalla sfinksien reunustama kuja valaistaan.",
+     "leveys": 5906,
+     "korkeus": 3937,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q750212",
+   "nimi": "Deir el-Medina",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 25.72833,
+   "lon": 32.60139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Deir el-Medina, Luxor, Egipto, 2022-04-03, DD 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Deir_el-Medina%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_18.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Deir_el-Medina%2C_Luxor%2C_Egipto%2C_2022-04-03%2C_DD_18.jpg",
+     "selite": "Deir el-Medina oli hautojen kaivajien ja taiteilijoiden työläiskylä.",
+     "leveys": 7599,
+     "korkeus": 5066,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "+Deir el-Medina - Das Dorf der Künstler und Handwerker. 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%2BDeir_el-Medina_-_Das_Dorf_der_K%C3%BCnstler_und_Handwerker._01.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%2BDeir_el-Medina_-_Das_Dorf_der_K%C3%BCnstler_und_Handwerker._01.jpg",
+     "selite": "Kylän talojen perustukset näkyvät edelleen kalliorinteen alla.",
+     "leveys": 5906,
+     "korkeus": 3939,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Luxor West Bank R01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxor_West_Bank_R01.jpg?width=1280",
+   "tekija": "Marc Ryckaert",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxor_West_Bank_R01.jpg",
+   "selite": "Luxor sijaitsee Niilin itärannalla, ja vastarannan kalliot kätkevät muinaisen hautausmaan.",
+   "leveys": 3404,
+   "korkeus": 2712,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Luxor Nile R09.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luxor_Nile_R09.jpg?width=1280",
+   "tekija": "Marc Ryckaert",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luxor_Nile_R09.jpg",
+   "selite": "Felukat purjehtivat Niilillä Luxorin kohdalla auringonlaskun aikaan.",
+   "leveys": 4853,
+   "korkeus": 3235,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

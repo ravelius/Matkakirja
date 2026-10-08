@@ -1,0 +1,444 @@
+{
+ "kaupunki": "bergen",
+ "kaupunkiQ": "Q26793",
+ "kohteet": [
+  {
+   "q": "Q153430",
+   "nimi": "Bryggen",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 60.3975,
+   "lon": 5.32333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bryggen, Old Wharf of Bergen - 2013.08 - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bryggen%2C_Old_Wharf_of_Bergen_-_2013.08_-_panoramio.jpg?width=1280",
+     "tekija": "rheins",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bryggen%2C_Old_Wharf_of_Bergen_-_2013.08_-_panoramio.jpg",
+     "selite": "Bryggenin värikkäät puutalot ovat hansakauppiaiden vanhaa satamakorttelia Bergenin Vågen-satamassa.",
+     "leveys": 4483,
+     "korkeus": 3362,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bryggen waterfront reflections at night Bergen Norway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bryggen_waterfront_reflections_at_night_Bergen_Norway.jpg?width=1280",
+     "tekija": "Smtunli",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bryggen_waterfront_reflections_at_night_Bergen_Norway.jpg",
+     "selite": "Illalla terävät päätyjulkisivut heijastuvat kosteasta kadusta.",
+     "leveys": 2500,
+     "korkeus": 1667,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bryggen Hanseatic wharf at night Bergen Norway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bryggen_Hanseatic_wharf_at_night_Bergen_Norway.jpg?width=1280",
+     "tekija": "Smtunli",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bryggen_Hanseatic_wharf_at_night_Bergen_Norway.jpg",
+     "selite": "Kapeat kujat ja talojen rivi kuuluvat Unescon maailmanperintökohteeseen.",
+     "leveys": 2500,
+     "korkeus": 1667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q583428",
+   "nimi": "Bergenhusin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 60.39972,
+   "lon": 5.3175,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bergenhus festning og Sverresborg sett fra Vindeggen på Fløyfjellet - 2020.12.06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bergenhus_festning_og_Sverresborg_sett_fra_Vindeggen_p%C3%A5_Fl%C3%B8yfjellet_-_2020.12.06.jpg?width=1280",
+     "tekija": "Svein Harkestad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bergenhus_festning_og_Sverresborg_sett_fra_Vindeggen_p%C3%A5_Fl%C3%B8yfjellet_-_2020.12.06.jpg",
+     "selite": "Bergenhusin linnake kohoaa sataman suulla Bergenin vanhimmalla kuninkaallisella paikalla.",
+     "leveys": 4032,
+     "korkeus": 1992,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Håkonshallen, Bergen, Noruega, 2019-09-08, DD 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A5konshallen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_05.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%A5konshallen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_05.jpg",
+     "selite": "Linnakkeen Håkonshallen on keskiaikainen kuninkaallinen juhlasali.",
+     "leveys": 5722,
+     "korkeus": 5004,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1420616",
+   "nimi": "Fløyen",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 60.39839,
+   "lon": 5.34541,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista de Bergen desde la montaña Fløyen, Noruega, 2019-09-08, DD 48.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_48.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_48.jpg",
+     "selite": "Fløyen-vuoren näköalapaikalta Bergen ja sen satama avautuvat kokonaisuudessaan.",
+     "leveys": 5900,
+     "korkeus": 3942,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vista de Bergen desde la montaña Fløyen, Noruega, 2019-09-08, DD 34.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_34.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_34.jpg",
+     "selite": "Kaupunki ympäröi Vågen-satamaa, ja kauempana siintävät vuonot.",
+     "leveys": 7572,
+     "korkeus": 5048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q117767",
+   "nimi": "Fløibanen",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 60.39636,
+   "lon": 5.32842,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Floeibanen-2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Floeibanen-2021.jpg?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Floeibanen-2021.jpg",
+     "selite": "Fløibanen on köysirata, joka nousee kaupungin keskustasta Fløyenin huipulle.",
+     "leveys": 5053,
+     "korkeus": 3256,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bergen Fløibanen 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bergen_Fl%C3%B8ibanen_08.jpg?width=1280",
+     "tekija": "[[User:Ad Meskens|Ad Meskens You are free to use this picture for any purpose as long as you credit its author, Ad Meskens. Example: © Ad Meskens / Wikimedia Commons If you use this work outside of the Wikimedia projects, a message or a copy is very much appreciated. This image is not in the public domain. A statement such as \"From Wikimedia Commons\" or similar is not by itself sufficient. If you do not provide clear attribution to the author you do not comply with the terms of the file's license and you may not use this file. If you are unable or unwilling to provide attribution you should contact Ad Meskens to negotiate a different license. ]]",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bergen_Fl%C3%B8ibanen_08.jpg",
+     "selite": "Vaunu kulkee jyrkän rinteen metsän läpi satamaa kohti.",
+     "leveys": 3888,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q571683",
+   "nimi": "Mariankirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 60.39889,
+   "lon": 5.32361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bergen Mariakirken RK 84395 IMG 5137.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bergen_Mariakirken_RK_84395_IMG_5137.jpg?width=1280",
+     "tekija": "Bjoertvedt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bergen_Mariakirken_RK_84395_IMG_5137.jpg",
+     "selite": "Mariankirkko on Bergenin vanhin säilynyt rakennus, ja sen kaksi tornia ovat romaanista aikaa.",
+     "leveys": 4572,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bergen Mariakirken RK 84395 IMG 5059.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bergen_Mariakirken_RK_84395_IMG_5059.jpg?width=1280",
+     "tekija": "Bjoertvedt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bergen_Mariakirken_RK_84395_IMG_5059.jpg",
+     "selite": "Kirkko seisoo Bryggenin takana Øvregatenin yläpuolella.",
+     "leveys": 3206,
+     "korkeus": 4322,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q819531",
+   "nimi": "Bergenin tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 60.39389,
+   "lon": 5.33056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral, Bergen, Noruega, 2019-09-08, DD 50.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_50.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_50.jpg",
+     "selite": "Bergenin tuomiokirkon valkoinen torni ja vihreä kupari näkyvät kaupungin keskustassa.",
+     "leveys": 6580,
+     "korkeus": 5104,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral, Bergen, Noruega, 2019-09-08, DD 112.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_112.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_112.jpg",
+     "selite": "Kirkon pääty ja torni kohoavat kivimuurien yläpuolelle.",
+     "leveys": 4673,
+     "korkeus": 7424,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q257558",
+   "nimi": "Fantoftin sauvakirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 60.33917,
+   "lon": 5.35333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fantoft stavkirke, Bergen, Noruega, 2019-09-08, DD 91.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fantoft_stavkirke%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_91.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fantoft_stavkirke%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_91.jpg",
+     "selite": "Fantoftin sauvakirkko on Norjan perinteistä puuarkkitehtuuria, jossa lohikäärmeen päät koristavat kattoa.",
+     "leveys": 6385,
+     "korkeus": 5053,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fantoft Stavkirke stavechurch bergen autumn tunliweb.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fantoft_Stavkirke_stavechurch_bergen_autumn_tunliweb.jpg?width=1280",
+     "tekija": "Svein-Magne Tunli - tunliweb.no",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fantoft_Stavkirke_stavechurch_bergen_autumn_tunliweb.jpg",
+     "selite": "Kirkko on rakennettu uudelleen 1990-luvulla tulipalon jälkeen.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fantoft-church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fantoft-church.jpg?width=1280",
+     "tekija": "Erniee_jo (talk · contribs)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fantoft-church.jpg",
+     "selite": "Tummaksi tervattu puukirkko seisoo metsäisellä kukkulalla Bergenin ulkopuolella.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1291307",
+   "nimi": "Troldhaugen",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 60.3196,
+   "lon": 5.32948,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1885 bis 1907 lebte hier der Komponist Edvard Grieg. 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1885_bis_1907_lebte_hier_der_Komponist_Edvard_Grieg._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1885_bis_1907_lebte_hier_der_Komponist_Edvard_Grieg._02.jpg",
+     "selite": "Troldhaugen oli säveltäjä Edvard Griegin koti, ja nykyään siellä on museo.",
+     "leveys": 4840,
+     "korkeus": 3245,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Troldhaugen in Bergen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Troldhaugen_in_Bergen.jpg?width=1280",
+     "tekija": "Andreas Sandberg",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Troldhaugen_in_Bergen.jpg",
+     "selite": "Vaaleanvihreä puuvilla seisoo Hop-järven rannalla.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1341892",
+   "nimi": "Grieghallen",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 60.38886,
+   "lon": 5.32818,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grieghallen, Bergen, Noruega, 2019-09-08, DD 65.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grieghallen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_65.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grieghallen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_65.jpg",
+     "selite": "Grieghallen on Bergenin suuri konserttitalo, joka on nimetty säveltäjä Griegin mukaan.",
+     "leveys": 7423,
+     "korkeus": 3863,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grieghallen, Bergen, Noruega, 2019-09-08, DD 66-67 PAN.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grieghallen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_66-67_PAN.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grieghallen%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_66-67_PAN.jpg",
+     "selite": "Rakennus on 1970-luvun betonia ja puuta.",
+     "leveys": 9438,
+     "korkeus": 3842,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q386192",
+   "nimi": "Ulriken",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 60.3775,
+   "lon": 5.3869,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of cable car and Bergen from Mount Ulriken 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_cable_car_and_Bergen_from_Mount_Ulriken_02.jpg?width=1280",
+     "tekija": "Ciara Ní Riain",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_cable_car_and_Bergen_from_Mount_Ulriken_02.jpg",
+     "selite": "Ulriken on Bergenin seitsemästä vuoresta korkein, ja köysirata kuljettaa huipulle.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view of Bergen from Mount Ulriken 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Bergen_from_Mount_Ulriken_03.jpg?width=1280",
+     "tekija": "Ciara Ní Riain",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Bergen_from_Mount_Ulriken_03.jpg",
+     "selite": "Huipulta näkyvät kaupunki, vuonot ja kaukaiset saaret.",
+     "leveys": 3264,
+     "korkeus": 1836,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1779494",
+   "nimi": "Nykirken",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 60.39707,
+   "lon": 5.31337,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nykirken-Bergen-Norway-April-2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nykirken-Bergen-Norway-April-2011.jpg?width=1280",
+     "tekija": "Acediscovery",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nykirken-Bergen-Norway-April-2011.jpg",
+     "selite": "Nykirken on valkoinen kirkko Nordnesin niemimaan juurella.",
+     "leveys": 2736,
+     "korkeus": 3603,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Bergen Bryggen 1017.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bergen_Bryggen_1017.jpg?width=1280",
+   "tekija": "Anna Anichkova",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bergen_Bryggen_1017.jpg",
+   "selite": "Bergen levittäytyy vuorten ja Vågen-sataman väliin, ja Ulriken kohoaa taustalla.",
+   "leveys": 3756,
+   "korkeus": 2353,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Torget in Bergen with Fløyen in the background (30824571222).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torget_in_Bergen_with_Fl%C3%B8yen_in_the_background_(30824571222).jpg?width=1280",
+   "tekija": "TimOve from Norway",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torget_in_Bergen_with_Fl%C3%B8yen_in_the_background_(30824571222).jpg",
+   "selite": "Sataman rannan talot ja Fløyen-vuori muodostavat kaupungin tutun maiseman.",
+   "leveys": 3456,
+   "korkeus": 5184,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

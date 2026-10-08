@@ -1,0 +1,257 @@
+{
+ "kaupunki": "aden",
+ "kaupunkiQ": "Q131694",
+ "jarjestys": [
+  "Q2263449",
+  "Q5122310",
+  "Q16207731",
+  "Q3497757",
+  "Q12246934",
+  "Q4905083",
+  "Q12192234"
+ ],
+ "kohteet": [
+  {
+   "q": "Q2263449",
+   "nimi": "Crater",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 12.7775,
+   "lon": 45.0328,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aden Crater.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aden_Crater.jpg?width=1280",
+     "tekija": "Christina Hecker @ Deutsch-Jemenitische Gesellschaft",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aden_Crater.jpg",
+     "selite": "Crater on Adenin vanhin kaupunginosa sammuneen tulivuoren kraatterissa, vuorten ympäröimänä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old Town Aden Yemen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Aden_Yemen.jpg?width=1280",
+     "tekija": "Jialiang Gao www.peace-on-earth.org",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Aden_Yemen.jpg",
+     "selite": "Kraatterin kaupunginosaa ympäröivät jyrkät vuorenrinteet, joiden alla kohoavat moskeijoiden minareetit.",
+     "leveys": 1258,
+     "korkeus": 828,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5122310",
+   "nimi": "Tawilan altaat",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 12.7743,
+   "lon": 45.029,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cisterns of Tawila.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisterns_of_Tawila.jpg?width=1280",
+     "tekija": "العمري",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cisterns_of_Tawila.jpg",
+     "selite": "Tawilan altaat on louhittu rotkoon sadeveden keräämiseksi kuivassa Adenissa.",
+     "leveys": 1280,
+     "korkeus": 887,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "24 Aden (3) cisterne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/24_Aden_(3)_cisterne.jpg?width=1280",
+     "tekija": "Ljuba brank",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:24_Aden_(3)_cisterne.jpg",
+     "selite": "Kallioon hakatut altaat ja portaat johdattivat tulvaveden kaupungin käyttöön.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "24 Aden (5) cisterne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/24_Aden_(5)_cisterne.jpg?width=1280",
+     "tekija": "Ljuba brank",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:24_Aden_(5)_cisterne.jpg",
+     "selite": "Rotkon seinämiä pitkin kulkevat portaat yhdistävät altaita toisiinsa.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16207731",
+   "nimi": "Aidrus-moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 12.7724,
+   "lon": 45.0364,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aidarous Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aidarous_Mosque.jpg?width=1280",
+     "tekija": "Manfred Steffen @ Deutsch-Jemenitische Gesellschaft",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aidarous_Mosque.jpg",
+     "selite": "Aidrus-moskeijan kupoli ja minareetti hallitsevat Craterin vanhaa kaupunginosaa.",
+     "leveys": 2048,
+     "korkeus": 1846,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3497757",
+   "nimi": "Steamer Point",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 12.7915,
+   "lon": 44.9814,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aden. Steamer Point. Aug 2013 (9723800114).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aden._Steamer_Point._Aug_2013_(9723800114).jpg?width=1280",
+     "tekija": "Brian Harrington Spier from Shanghai, China",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aden._Steamer_Point._Aug_2013_(9723800114).jpg",
+     "selite": "Steamer Point oli Adenin höyrylaivojen satama ja hiiliasema, kun vanha satama Craterissa mataloitui.",
+     "leveys": 2782,
+     "korkeus": 1352,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "P & O Arcadia in Steamer Point Aden, taken from the roof of the Crescent Hotel in 1964.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P_%26_O_Arcadia_in_Steamer_Point_Aden%2C_taken_from_the_roof_of_the_Crescent_Hotel_in_1964.jpg?width=1280",
+     "tekija": "Cthornborough",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:P_%26_O_Arcadia_in_Steamer_Point_Aden%2C_taken_from_the_roof_of_the_Crescent_Hotel_in_1964.jpg",
+     "selite": "Steamer Pointin satamaan saapui valtamerilaivoja matkalla Suezin kanavasta Intiaan.",
+     "leveys": 1801,
+     "korkeus": 1220,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12246934",
+   "nimi": "Adenin satama",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 12.81111,
+   "lon": 44.9932,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Big Ben Aden View from the inner roadstead.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big_Ben_Aden_View_from_the_inner_roadstead.jpg?width=1280",
+     "tekija": "Грищук ЮН",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big_Ben_Aden_View_from_the_inner_roadstead.jpg",
+     "selite": "Adenin luonnonsatama on yksi maailman suurimmista, ja se on palvellut laivoja vuosisatoja.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4905083",
+   "nimi": "Big Ben Aden",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 12.78333,
+   "lon": 44.98333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Big-Ben Aden 20 of March 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Big-Ben_Aden_20_of_March_2010.jpg?width=1280",
+     "tekija": "Грищук ЮН",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Big-Ben_Aden_20_of_March_2010.jpg",
+     "selite": "Big Ben Aden on brittiläisen siirtomaa-ajan kellotorni Tawahin satamakaupunginosassa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12192234",
+   "nimi": "Adenin kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 12.77901,
+   "lon": 45.0429,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National museum of Yemen aden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_museum_of_Yemen_aden.jpg?width=1280",
+     "tekija": "Janina Mitwalli @ Deutsch-Jemenitische Gesellschaft",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_museum_of_Yemen_aden.jpg",
+     "selite": "Adenin kansallismuseo on Craterin vanhassa rakennuksessa ja esittelee Etelä-Jemenin historiaa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aden, Yemen Port.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aden%2C_Yemen_Port.jpg?width=1280",
+   "tekija": "T3n60",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aden%2C_Yemen_Port.jpg",
+   "selite": "Aden on Jemenin eteläinen satamakaupunki, jota vuoret ympäröivät Arabianmeren rannalla.",
+   "leveys": 1800,
+   "korkeus": 1200,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aden - panorama of crater from Tawila Tunks (8739851148).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aden_-_panorama_of_crater_from_Tawila_Tunks_(8739851148).jpg?width=1280",
+   "tekija": "JamesGardinerCollection",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aden_-_panorama_of_crater_from_Tawila_Tunks_(8739851148).jpg",
+   "selite": "Adenin vanha kaupunki sijaitsee sammuneen tulivuoren kraatterin pohjalla.",
+   "leveys": 3307,
+   "korkeus": 2143,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

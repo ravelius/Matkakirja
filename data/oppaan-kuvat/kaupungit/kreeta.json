@@ -1,0 +1,717 @@
+{
+ "kaupunki": "kreeta",
+ "kaupunkiQ": "Q34374",
+ "jarjestys": [
+  "Q173527",
+  "Q7798352",
+  "Q636972",
+  "Q603920",
+  "Q2942217",
+  "Q4426010",
+  "Q15616490",
+  "Q20127741",
+  "Q632418",
+  "Q3321879",
+  "Q473766",
+  "Q2707725",
+  "Q2097291"
+ ],
+ "kohteet": [
+  {
+   "q": "Q173527",
+   "nimi": "Knossos",
+   "peruste": "UNESCO",
+   "koko_m": 250,
+   "aliakset": [
+    "Q9054457",
+    "Q1091243"
+   ],
+   "lat": 35.29796,
+   "lon": 25.16316,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Knossos North entrance bull fresco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_North_entrance_bull_fresco.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_North_entrance_bull_fresco.jpg",
+     "selite": "Knossos oli minolaisen sivilisaation suuri palatsikeskus, jonka pohjoisen sisäänkäynnin seinää koristaa härkäfriisi.",
+     "leveys": 4315,
+     "korkeus": 2872,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Knossos - North Portico 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_-_North_Portico_02.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_-_North_Portico_02.jpg",
+     "selite": "Pohjoinen portiikki punaisine pylväineen on yksi palatsialueen tunnetuimmista näkymistä.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Knossos, Sept. 2019e.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos%2C_Sept._2019e.jpg?width=1280",
+     "tekija": "Cayambe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos%2C_Sept._2019e.jpg",
+     "selite": "Palatsin uudelleenrakennetut punaiset pylväät kapenevat alaspäin, kuten minolaisessa arkkitehtuurissa.",
+     "leveys": 5975,
+     "korkeus": 3707,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Knossos in Crete west court.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Knossos_in_Crete_west_court.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Knossos_in_Crete_west_court.jpg",
+     "selite": "Palatsin läntinen esipiha on kivetty kuninkaan tien varrelle.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 5,
+     "tiedosto": "Theatral area Knossos palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatral_area_Knossos_palace.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatral_area_Knossos_palace.jpg",
+     "selite": "Teatterialueen leveät kiviportaat johtivat palatsin vanhaa kuninkaan tietä pitkin.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7798352",
+   "nimi": "Knossoksen valtaistuinsali",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 35.29804,
+   "lon": 25.16308,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Throne room of the Minoan Palace in Knossos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_room_of_the_Minoan_Palace_in_Knossos.jpg?width=1280",
+     "tekija": "Annatsach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_room_of_the_Minoan_Palace_in_Knossos.jpg",
+     "selite": "Valtaistuinsali on punaisin kukkamaalauksin koristeltu huone, jossa on kivinen istuin ja matala vesiastia.",
+     "leveys": 4512,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Throne of Minos at Knossos Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Throne_of_Minos_at_Knossos_Palace.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Throne_of_Minos_at_Knossos_Palace.jpg",
+     "selite": "Kivinen valtaistuin seisoo seinää vasten ja sitä pidetään Euroopan vanhimpana säilyneenä valtaistuimena.",
+     "leveys": 3056,
+     "korkeus": 4090,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q636972",
+   "nimi": "Iraklionin arkeologinen museo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 35.33917,
+   "lon": 25.1375,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "202610 Archaeological Museum of Heraklion 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_03.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_03.jpg",
+     "selite": "Museon uudistetun rakennuksen punaiset pylväät reunustavat sisäänkäyntiä ja pihaa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "202610 Archaeological Museum of Heraklion 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Archaeological_Museum_of_Heraklion_01.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Archaeological_Museum_of_Heraklion_01.jpg",
+     "selite": "Sisäänkäyntihalli avaa tien Euroopan vanhimman sivilisaation aarteisiin.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bull leaping minoan fresco archmus Heraklion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bull_leaping_minoan_fresco_archmus_Heraklion.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bull_leaping_minoan_fresco_archmus_Heraklion.jpg",
+     "selite": "Härkähyppyfresko Knossoksen palatsista on yksi museon tunnetuimmista esineistä.",
+     "leveys": 4305,
+     "korkeus": 2640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Phaistos Disc - Heraklion Archaeological Museum by Joy of Museums.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg?width=1280",
+     "tekija": "Joyofmuseums",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Phaistos_Disc_-_Heraklion_Archaeological_Museum_by_Joy_of_Museums.jpg",
+     "selite": "Faistoksen levy on museon salaperäisin esine, eikä sen kuvamerkkejä ole saatu luettua.",
+     "leveys": 3129,
+     "korkeus": 2758,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q603920",
+   "nimi": "Koulesin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 90,
+   "lat": 35.34457,
+   "lon": 25.13688,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20090415 Hrakleio Krhth Limani Koules 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090415_Hrakleio_Krhth_Limani_Koules_2.jpg?width=1280",
+     "tekija": "Γεώργιος Γιαννόπουλος",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090415_Hrakleio_Krhth_Limani_Koules_2.jpg",
+     "selite": "Venetsialaisten rakentama Koulesin linnoitus vartioi Heraklionin vanhan sataman suuta.",
+     "leveys": 1300,
+     "korkeus": 865,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20090415 Hrakleio Krhth Limani Koules 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090415_Hrakleio_Krhth_Limani_Koules_1.jpg?width=1280",
+     "tekija": "Γεώργιος Γιαννόπουλος",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090415_Hrakleio_Krhth_Limani_Koules_1.jpg",
+     "selite": "Linnoituksen vahvat muurit nousevat suoraan merestä kalastajaveneiden yllä.",
+     "leveys": 1300,
+     "korkeus": 858,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "202610 Koules Fortress 32.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Koules_Fortress_32.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Koules_Fortress_32.jpg",
+     "selite": "Pitkä aallonmurtaja johtaa linnoitukselle ja on suosittu kävelyreitti.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "202610 Koules Fortress 28.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202610_Koules_Fortress_28.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202610_Koules_Fortress_28.jpg",
+     "selite": "Aallot iskevät linnoituksen perustuksiin Heraklionin satamalaiturin päässä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2942217",
+   "nimi": "Pyhän Menaksen tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 35.3375,
+   "lon": 25.13083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "01.Agios Minas Kathedrale Heraklion Westfassade.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01.Agios_Minas_Kathedrale_Heraklion_Westfassade.JPG?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01.Agios_Minas_Kathedrale_Heraklion_Westfassade.JPG",
+     "selite": "Pyhän Menaksen tuomiokirkko on Heraklionin kaupunginpyhimyksen suuri 1800-luvun kirkko.",
+     "leveys": 3236,
+     "korkeus": 2427,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "23. Agios Minas Cathedral Heraklion-view from the Martinengo Bastion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/23._Agios_Minas_Cathedral_Heraklion-view_from_the_Martinengo_Bastion.JPG?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:23._Agios_Minas_Cathedral_Heraklion-view_from_the_Martinengo_Bastion.JPG",
+     "selite": "Kupolit ja kellotornit kohoavat vanhan kaupungin kattojen yläpuolelle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "29.Agios Minas Cathedral Heraklion Westfassade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/29.Agios_Minas_Cathedral_Heraklion_Westfassade.jpg?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:29.Agios_Minas_Cathedral_Heraklion_Westfassade.jpg",
+     "selite": "Kirkon länsijulkisivua koristavat kaarikäytävät ja ikkunaryhmät.",
+     "leveys": 1914,
+     "korkeus": 1439,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4426010",
+   "nimi": "Pyhän Tituksen kirkko",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 60,
+   "lat": 35.34012,
+   "lon": 25.13474,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Outside church Hagios Titos Heraklion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Outside_church_Hagios_Titos_Heraklion.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Outside_church_Hagios_Titos_Heraklion.jpg",
+     "selite": "Pyhä Titus on Kreetan ensimmäinen piispa, ja hänen nimikirkkonsa on Heraklionin vanhan keskustan sydämessä.",
+     "leveys": 4590,
+     "korkeus": 2850,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agios Titos (Heracleion).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agios_Titos_(Heracleion).jpg?width=1280",
+     "tekija": "PawełMM",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agios_Titos_(Heracleion).jpg",
+     "selite": "Kirkon vaalea julkisivu palmuineen on yksi kaupungin tunnetuimmista näkymistä.",
+     "leveys": 2984,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "27.Agios Titos Backside.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/27.Agios_Titos_Backside.jpg?width=1280",
+     "tekija": "J.hagelüken",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:27.Agios_Titos_Backside.jpg",
+     "selite": "Kirkon sivussa ja takana näkyvät kaarevat ikkunat ja rakennuksen monikerroksinen historia.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15616490",
+   "nimi": "Morosinin suihkulähde",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 30,
+   "lat": 35.33917,
+   "lon": 25.13314,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016-07-25 Heraklion 063.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016-07-25_Heraklion_063.jpg?width=1280",
+     "tekija": "Goosi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016-07-25_Heraklion_063.jpg",
+     "selite": "Venetsialaisten rakentama leijonasuihkulähde on Heraklionin vilkkaan Leijonatorin keskus.",
+     "leveys": 4919,
+     "korkeus": 3279,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Morozini Fontein Heraklion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morozini_Fontein_Heraklion.jpg?width=1280",
+     "tekija": "Danbu14",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Morozini_Fontein_Heraklion.jpg",
+     "selite": "Altaan reunaa koristavat veistetyt reliefit ja keskellä kohoavat leijonat.",
+     "leveys": 3696,
+     "korkeus": 2536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "File by Alexander Baranov - . (7366670856).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/File_by_Alexander_Baranov_-_._(7366670856).jpg?width=1280",
+     "tekija": "Alexander Baranov from Montpellier, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:File_by_Alexander_Baranov_-_._(7366670856).jpg",
+     "selite": "Kaivon yläaltaan kantava kivileijona on suihkulähteen tunnetuin yksityiskohta.",
+     "leveys": 2544,
+     "korkeus": 1696,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q20127741",
+   "nimi": "Heraklionin venetsialaiset muurit",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 600,
+   "lat": 35.33271,
+   "lon": 25.13066,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "5313043walls of Herakleion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5313043walls_of_Herakleion.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5313043walls_of_Herakleion.JPG",
+     "selite": "Venetsialaiset muurit ympäröivät vanhaa kaupunkia, ja niiden bastionit kuuluvat Euroopan vahvimpiin.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "5313048walls of Herakleion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5313048walls_of_Herakleion.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5313048walls_of_Herakleion.JPG",
+     "selite": "Betlehemin bastionin paksu kiviseinä kaartuu kaupungin eteläreunalla.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "5313045walls of Herakleion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/5313045walls_of_Herakleion.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:5313045walls_of_Herakleion.JPG",
+     "selite": "Muuria kiertävä vallihauta on nykyään puistoa ja leikkikenttää.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Iraklio, tomba di Nikos Kazantzakis 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg?width=1280",
+     "tekija": "Syrio",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iraklio%2C_tomba_di_Nikos_Kazantzakis_02.jpg",
+     "selite": "Kirjailija Nikos Kazantzakisin hauta on Martinengon bastionin laella ja sen ristissä on vain yksinkertainen kirjoitus.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q632418",
+   "nimi": "Archánes",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 35.23667,
+   "lon": 25.16361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Αρχάνες 7928.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%91%CF%81%CF%87%CE%AC%CE%BD%CE%B5%CF%82_7928.jpg",
+     "selite": "Archánes on viinitarhojen ympäröimä kaupunki Kreetan sisämaassa Iraklionin eteläpuolella.",
+     "leveys": 4203,
+     "korkeus": 3153,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Agios Nikolaos Archanes 915-6141.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agios_Nikolaos_Archanes_915-6141.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agios_Nikolaos_Archanes_915-6141.JPG",
+     "selite": "Agios Nikolaosin kaksilaivainen valkoinen kirkko kuuluu Archánesin vanhaan ytimeen.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Agia Triada, Archanes 915-6221.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agia_Triada%2C_Archanes_915-6221.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Agia_Triada%2C_Archanes_915-6221.JPG",
+     "selite": "Agia Triadan kirkossa on pyöreä apsis ja pieni kellotapuli.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3321879",
+   "nimi": "Gioúchtas-vuori",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 35.23994,
+   "lon": 25.14414,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Afendis Christos (Mount Juktas), Crete 02(js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Afendis_Christos_(Mount_Juktas)%2C_Crete_02(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Afendis_Christos_(Mount_Juktas)%2C_Crete_02(js).jpg",
+     "selite": "Gioúchtas-vuoren huipulla on pieni valkoinen kirkko, ja alla minolaisten vuoristouhrikenttä.",
+     "leveys": 7900,
+     "korkeus": 5207,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mt. Juktas-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mt._Juktas-1.jpg?width=1280",
+     "tekija": "Handydad",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mt._Juktas-1.jpg",
+     "selite": "Gioúchtas kohoaa Archánesin ja Heraklionin yläpuolelle, ja sen profiilia sanotaan nukkuvan jumalan kasvoiksi.",
+     "leveys": 2020,
+     "korkeus": 1385,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Ψηλή Κορφή Γιούχτα 329.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A8%CE%B7%CE%BB%CE%AE_%CE%9A%CE%BF%CF%81%CF%86%CE%AE_%CE%93%CE%B9%CE%BF%CF%8D%CF%87%CF%84%CE%B1_329.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A8%CE%B7%CE%BB%CE%AE_%CE%9A%CE%BF%CF%81%CF%86%CE%AE_%CE%93%CE%B9%CE%BF%CF%8D%CF%87%CF%84%CE%B1_329.JPG",
+     "selite": "Polku nousee vuoren harjannetta pitkin huipulle.",
+     "leveys": 4104,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q473766",
+   "nimi": "Amnisos",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 35.33083,
+   "lon": 25.20611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Έπαυλη των Κρίνων - Αμνισός 3273.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%88%CF%80%CE%B1%CF%85%CE%BB%CE%B7_%CF%84%CF%89%CE%BD_%CE%9A%CF%81%CE%AF%CE%BD%CF%89%CE%BD_-_%CE%91%CE%BC%CE%BD%CE%B9%CF%83%CF%8C%CF%82_3273.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%88%CF%80%CE%B1%CF%85%CE%BB%CE%B7_%CF%84%CF%89%CE%BD_%CE%9A%CF%81%CE%AF%CE%BD%CF%89%CE%BD_-_%CE%91%CE%BC%CE%BD%CE%B9%CF%83%CF%8C%CF%82_3273.jpg",
+     "selite": "Amnisos oli Knossoksen satamakaupunki, ja Liljojen huvilan kiviperustukset ovat merenrannalla.",
+     "leveys": 4632,
+     "korkeus": 3464,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amnisos 923.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amnisos_923.JPG?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amnisos_923.JPG",
+     "selite": "Muinaisen satamapaikan edustalla avautuu matala lahti ja Kreetan pohjoisrannikko.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2707725",
+   "nimi": "Týlisos",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 35.29583,
+   "lon": 25.01628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ancient Tylissos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ancient_Tylissos.jpg?width=1280",
+     "tekija": "Shadowgate",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ancient_Tylissos.jpg",
+     "selite": "Týlisoksen minolaisten talojen jäännökset ovat mäntyjen varjossa kylän laidalla.",
+     "leveys": 3088,
+     "korkeus": 2056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ναός Αγίου Νικολάου, Τύλισσος 4459.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9D%CE%B1%CF%8C%CF%82_%CE%91%CE%B3%CE%AF%CE%BF%CF%85_%CE%9D%CE%B9%CE%BA%CE%BF%CE%BB%CE%AC%CE%BF%CF%85%2C_%CE%A4%CF%8D%CE%BB%CE%B9%CF%83%CF%83%CE%BF%CF%82_4459.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9D%CE%B1%CF%8C%CF%82_%CE%91%CE%B3%CE%AF%CE%BF%CF%85_%CE%9D%CE%B9%CE%BA%CE%BF%CE%BB%CE%AC%CE%BF%CF%85%2C_%CE%A4%CF%8D%CE%BB%CE%B9%CF%83%CF%83%CE%BF%CF%82_4459.jpg",
+     "selite": "Pyhän Nikolaoksen kirkko kuuluu kylän keskustaan.",
+     "leveys": 4213,
+     "korkeus": 3184,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Παλιά κρήνη Τυλίσσου 4442.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%A0%CE%B1%CE%BB%CE%B9%CE%AC_%CE%BA%CF%81%CE%AE%CE%BD%CE%B7_%CE%A4%CF%85%CE%BB%CE%AF%CF%83%CF%83%CE%BF%CF%85_4442.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%A0%CE%B1%CE%BB%CE%B9%CE%AC_%CE%BA%CF%81%CE%AE%CE%BD%CE%B7_%CE%A4%CF%85%CE%BB%CE%AF%CF%83%CF%83%CE%BF%CF%85_4442.jpg",
+     "selite": "Vanha kivikaivo muistuttaa kylän vuosisataisesta historiasta.",
+     "leveys": 3442,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2097291",
+   "nimi": "Gázi",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 35.32528,
+   "lon": 25.06694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Γάζι 0017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%93%CE%AC%CE%B6%CE%B9_0017.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%93%CE%AC%CE%B6%CE%B9_0017.jpg",
+     "selite": "Gázi on Heraklionin länsipuolella oleva kylä, jota ympäröivät pellot ja meren rannikko.",
+     "leveys": 3689,
+     "korkeus": 2459,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gazi - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gazi_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Jan M",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gazi_-_panoramio_(1).jpg",
+     "selite": "Kylän kirkon kellotorni kohoaa rantatien yläpuolelle.",
+     "leveys": 3072,
+     "korkeus": 1728,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Iraklio Luftbild 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iraklio_Luftbild_03.jpg?width=1280",
+   "tekija": "Olaf Tausch",
+   "lisenssi": "CC BY 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iraklio_Luftbild_03.jpg",
+   "selite": "Heraklion levittyy ilmasta katsottuna Kreetan pohjoisrannikolle meren ja kukkuloiden väliin.",
+   "leveys": 4861,
+   "korkeus": 3643,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "City walls at sunset, Heraklion, Crete, Greece julesvernex2-2.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/City_walls_at_sunset%2C_Heraklion%2C_Crete%2C_Greece_julesvernex2-2.jpg?width=1280",
+   "tekija": "Jules Verne Times Two",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:City_walls_at_sunset%2C_Heraklion%2C_Crete%2C_Greece_julesvernex2-2.jpg",
+   "selite": "Heraklionin venetsialaiset muurit nousevat suoraan Kreetanmeren rannalla.",
+   "leveys": 4832,
+   "korkeus": 3211,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

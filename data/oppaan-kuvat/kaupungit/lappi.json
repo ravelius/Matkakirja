@@ -1,0 +1,506 @@
+{
+ "kaupunki": "lappi",
+ "kaupunkiQ": "Q5700",
+ "kohteet": [
+  {
+   "q": "Q135379",
+   "nimi": "Joulupukin Pajakylä",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 66.54354,
+   "lon": 25.84651,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arctic Circle marker Santa Claus Village Rovaniemi 2022-09-15 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_Circle_marker_Santa_Claus_Village_Rovaniemi_2022-09-15_05.jpg?width=1280",
+     "tekija": "Leonhard Lenz",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arctic_Circle_marker_Santa_Claus_Village_Rovaniemi_2022-09-15_05.jpg",
+     "selite": "Joulupukin Pajakylä sijaitsee Rovaniemellä napapiirin kohdalla, ja alueen halki kulkee merkitty napapiirin viiva.",
+     "leveys": 8384,
+     "korkeus": 5612,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arctic Circle marker Santa Claus Village Rovaniemi 2022-09-15 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arctic_Circle_marker_Santa_Claus_Village_Rovaniemi_2022-09-15_04.jpg?width=1280",
+     "tekija": "Leonhard Lenz",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arctic_Circle_marker_Santa_Claus_Village_Rovaniemi_2022-09-15_04.jpg",
+     "selite": "Torneineen ja tukkirakennuksineen kylä on Lapin tunnetuin matkailukohde.",
+     "leveys": 8384,
+     "korkeus": 5612,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q103717",
+   "nimi": "Rovaniemi",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 66.50279,
+   "lon": 25.72848,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rovaniemi 06101999 rescanned.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rovaniemi_06101999_rescanned.jpg?width=1280",
+     "tekija": "MattiKSinisalo at Finnish Wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rovaniemi_06101999_rescanned.jpg",
+     "selite": "Rovaniemi on Lapin pääkaupunki, joka sijaitsee Kemijoen ja Ounasjoen yhtymäkohdassa.",
+     "leveys": 3141,
+     "korkeus": 2094,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rovaniemi 3585 adjusted.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rovaniemi_3585_adjusted.jpg?width=1280",
+     "tekija": "Mikko Holck Colors adjusted by User:Skies",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rovaniemi_3585_adjusted.jpg",
+     "selite": "Ounasvaaran rinteet kohoavat kaupungin pohjoispuolella joen toisella rannalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q262837",
+   "nimi": "Levi",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 67.79917,
+   "lon": 24.82139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sirkka from Levi, Finland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sirkka_from_Levi%2C_Finland.jpg?width=1280",
+     "tekija": "DanielMichaelPerry",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sirkka_from_Levi%2C_Finland.jpg",
+     "selite": "Levi on Kittilän Sirkan kylän yhteydessä sijaitseva laskettelukeskus ja yksi Lapin suosituimpia matkailualueita.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gentle but wide green aurora display over Levi, Kittilä, Lapland, Finland, 2023 September - 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gentle_but_wide_green_aurora_display_over_Levi%2C_Kittil%C3%A4%2C_Lapland%2C_Finland%2C_2023_September_-_2.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gentle_but_wide_green_aurora_display_over_Levi%2C_Kittil%C3%A4%2C_Lapland%2C_Finland%2C_2023_September_-_2.jpg",
+     "selite": "Pohjoisessa revontulet näkyvät taivaalla kirkkaina öinä syksystä kevääseen.",
+     "leveys": 4200,
+     "korkeus": 2806,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Torikuja, Levi, Finland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torikuja%2C_Levi%2C_Finland.jpg?width=1280",
+     "tekija": "DanielMichaelPerry",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torikuja%2C_Levi%2C_Finland.jpg",
+     "selite": "Levin keskustan kävelykadut ovat talvella lumen peitossa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q83232",
+   "nimi": "Kiiruna",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 67.84889,
+   "lon": 20.30278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 2786 Kiruna, a town in Norrbotten, Sweden.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_2786_Kiruna%2C_a_town_in_Norrbotten%2C_Sweden.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_2786_Kiruna%2C_a_town_in_Norrbotten%2C_Sweden.jpg",
+     "selite": "Kiirunan kaupungin yllä kohoaa Kiirunavaaran rautamalmikaivos, jonka vuoksi kaupunki perustettiin.",
+     "leveys": 5250,
+     "korkeus": 3500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kiruna stadshus 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiruna_stadshus_1.JPG?width=1280",
+     "tekija": "Dag Lindgren",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiruna_stadshus_1.JPG",
+     "selite": "Kiirunan kaupungintalon kellotorni on Ruotsin Lapin tunnetuimpia rakennuksia.",
+     "leveys": 2427,
+     "korkeus": 1700,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4069",
+   "nimi": "Nordkap",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 71.1725,
+   "lon": 25.78444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "North Cape seen from Knivskjelvika.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_Cape_seen_from_Knivskjelvika.jpg?width=1280",
+     "tekija": "Frankemann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:North_Cape_seen_from_Knivskjelvika.jpg",
+     "selite": "Nordkapin jyrkkä kallioniemi kohoaa Pohjoisen jäämeren rannalla Magerøyan saarella.",
+     "leveys": 4896,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cabo Norte, Noruega, 2019-09-03, DD 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabo_Norte%2C_Noruega%2C_2019-09-03%2C_DD_16.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabo_Norte%2C_Noruega%2C_2019-09-03%2C_DD_16.jpg",
+     "selite": "Kalliolla seisova pallomonumentti merkitsee Euroopan pohjoisimpana pidettyä matkailukohdetta.",
+     "leveys": 5149,
+     "korkeus": 7598,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q953092",
+   "nimi": "Abiskon kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 68.3243,
+   "lon": 18.68073,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Abisko Lapporten.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abisko_Lapporten.jpg?width=1280",
+     "tekija": "Ellen Lundkvist",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Abisko_Lapporten.jpg",
+     "selite": "Abiskon kansallispuisto on Torneträsk-järven rannalla, ja kaukana siintää U:n muotoinen Lapporten-laakso.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lapporten winter.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lapporten_winter.jpg?width=1280",
+     "tekija": "oskar karlin from stockholm, sweden",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lapporten_winter.jpg",
+     "selite": "Lapporten eli Lapin portti avautuu talvella kirkkaana vuoristomaisemana.",
+     "leveys": 1795,
+     "korkeus": 1204,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aurora in Abisko near Torneträsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aurora_in_Abisko_near_Tornetr%C3%A4sk.jpg?width=1280",
+     "tekija": "Pavel.shyshkouski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aurora_in_Abisko_near_Tornetr%C3%A4sk.jpg",
+     "selite": "Abisko on tunnettu poikkeuksellisen kirkkaista revontulista.",
+     "leveys": 5442,
+     "korkeus": 3628,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1851195",
+   "nimi": "Pallas-Yllästunturin kansallispuisto",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": 68.0931,
+   "lon": 24.01989,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pallastunturi and Hanhijärvi in Muonio, Lapland, Finland, 2023 September.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pallastunturi_and_Hanhij%C3%A4rvi_in_Muonio%2C_Lapland%2C_Finland%2C_2023_September.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pallastunturi_and_Hanhij%C3%A4rvi_in_Muonio%2C_Lapland%2C_Finland%2C_2023_September.jpg",
+     "selite": "Pallas-Yllästunturin kansallispuisto on Suomen suosituimpia retkeilyalueita ja tunturijonon halki kulkee vaellusreitti.",
+     "leveys": 4120,
+     "korkeus": 2435,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pallastunturi from the east, Kittilä, Finland, 2019 January.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pallastunturi_from_the_east%2C_Kittil%C3%A4%2C_Finland%2C_2019_January.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pallastunturi_from_the_east%2C_Kittil%C3%A4%2C_Finland%2C_2019_January.jpg",
+     "selite": "Talvella tunturit ja lumikuuset peittyvät paksun lumen alle.",
+     "leveys": 4500,
+     "korkeus": 2180,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Pallastunturi and Hanhijärvi in Muonio, Lapland, Finland, 2021 June.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pallastunturi_and_Hanhij%C3%A4rvi_in_Muonio%2C_Lapland%2C_Finland%2C_2021_June.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pallastunturi_and_Hanhij%C3%A4rvi_in_Muonio%2C_Lapland%2C_Finland%2C_2021_June.jpg",
+     "selite": "Kesällä tunturien väliset suot ja järvet vihertyvät.",
+     "leveys": 3600,
+     "korkeus": 2398,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q203137",
+   "nimi": "Inarijärvi",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 68.95965,
+   "lon": 27.60171,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Inari lake.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Inari_lake.jpg?width=1280",
+     "tekija": "MyName (Vberger)",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Inari_lake.jpg",
+     "selite": "Inarijärvi on Suomen kolmanneksi suurin järvi ja saamelaisten pyhä paikka, jossa on tuhansia saaria.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lake Inari.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Inari.jpg?width=1280",
+     "tekija": "Karlis Strazdins",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Inari.jpg",
+     "selite": "Järven rannat ovat harvaan asuttua erämaata.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1637507",
+   "nimi": "Saana",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 69.04377,
+   "lon": 20.85521,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saana at Kilpisjärvi, 2012 March.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saana_at_Kilpisj%C3%A4rvi%2C_2012_March.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saana_at_Kilpisj%C3%A4rvi%2C_2012_March.jpg",
+     "selite": "Saana on Kilpisjärven kylän vieressä kohoava tasalakinen tunturi ja yksi Suomen pyhistä tuntureista.",
+     "leveys": 2550,
+     "korkeus": 1700,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Saana 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saana_5.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saana_5.jpg",
+     "selite": "Rinteen jyrkänteeltä näkyvät Kilpisjärvi ja Skandien tunturit.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214011",
+   "nimi": "Kebnekaise",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 67.88333,
+   "lon": 18.55,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kebnekaise view of the tops from the south.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kebnekaise_view_of_the_tops_from_the_south.jpg?width=1280",
+     "tekija": "Carl Månsson",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kebnekaise_view_of_the_tops_from_the_south.jpg",
+     "selite": "Kebnekaise on Ruotsin korkein vuori, ja sen huipulle johtaa suosittu vaellusreitti.",
+     "leveys": 3852,
+     "korkeus": 2582,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kebnekaise Mountain Lodge.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kebnekaise_Mountain_Lodge.JPG?width=1280",
+     "tekija": "Antti Leppänen",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kebnekaise_Mountain_Lodge.JPG",
+     "selite": "Vuoren juurella sijaitsee tunturiasema retkeilijöitä varten.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1815690",
+   "nimi": "Saariselkä",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 68.42083,
+   "lon": 27.41717,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hiking trail in Saariselkä.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hiking_trail_in_Saariselk%C3%A4.jpg?width=1280",
+     "tekija": "JIP",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hiking_trail_in_Saariselk%C3%A4.jpg",
+     "selite": "Saariselkä on tunturijono ja matkailukeskus Inarin eteläosassa, jonka erämaassa kulkee runsaasti vaellusreittejä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Young reindeer on Kaunispää fell in Saariselkä, Inari, Lapland, Finland, 2021 September.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Young_reindeer_on_Kaunisp%C3%A4%C3%A4_fell_in_Saariselk%C3%A4%2C_Inari%2C_Lapland%2C_Finland%2C_2021_September.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Young_reindeer_on_Kaunisp%C3%A4%C3%A4_fell_in_Saariselk%C3%A4%2C_Inari%2C_Lapland%2C_Finland%2C_2021_September.jpg",
+     "selite": "Kaunispään rinteillä laiduntaa poroja.",
+     "leveys": 5000,
+     "korkeus": 3333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q673871",
+   "nimi": "Arktikum",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 66.5076,
+   "lon": 25.72541,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arktikum Rovaniemi 2022-09-15 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arktikum_Rovaniemi_2022-09-15_01.jpg?width=1280",
+     "tekija": "Leonhard Lenz",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arktikum_Rovaniemi_2022-09-15_01.jpg",
+     "selite": "Arktikum on Rovaniemellä sijaitseva tiedekeskus ja museo, jonka lasinen käytävä työntyy Ounasjoen rantaan.",
+     "leveys": 8384,
+     "korkeus": 5612,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arktikum 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arktikum_2024.jpg?width=1280",
+     "tekija": "Guillermo Ramos Flamerich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arktikum_2024.jpg",
+     "selite": "Rakennuksessa esitellään Lapin ja arktisen alueen luontoa ja kulttuuria.",
+     "leveys": 3464,
+     "korkeus": 4414,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "View to Äkäslompolo and Ylläs fell in Kolari, Lapland, Finland, 2018 September.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_to_%C3%84k%C3%A4slompolo_and_Yll%C3%A4s_fell_in_Kolari%2C_Lapland%2C_Finland%2C_2018_September.jpg?width=1280",
+   "tekija": "Ximonic (Simo Räsänen)",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_to_%C3%84k%C3%A4slompolo_and_Yll%C3%A4s_fell_in_Kolari%2C_Lapland%2C_Finland%2C_2018_September.jpg",
+   "selite": "Lapin ruska värjää tunturien ja järvien maiseman syksyllä.",
+   "leveys": 5000,
+   "korkeus": 2388,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Landscape from Kultakero, Pyhätunturi, Pelkosenniemi, Lapland, Finland, 2021 September.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Landscape_from_Kultakero%2C_Pyh%C3%A4tunturi%2C_Pelkosenniemi%2C_Lapland%2C_Finland%2C_2021_September.jpg?width=1280",
+   "tekija": "Ximonic (Simo Räsänen)",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Landscape_from_Kultakero%2C_Pyh%C3%A4tunturi%2C_Pelkosenniemi%2C_Lapland%2C_Finland%2C_2021_September.jpg",
+   "selite": "Lappi on avaraa tunturien, soiden ja metsien maata.",
+   "leveys": 5000,
+   "korkeus": 3394,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -31,7 +31,7 @@ const ODOTETUT_MAARAT = {
   BIH: 18,
   MKD: 8,
   ALB: 12,
-  CYP: 5,
+  CYP: 6, // +1: Kyproksen pohjoisosa (worldview 7.10.2026)
   MDA: 39,
   UKR: 27, // +2: Krim (Crimea) ja Sevastopol Ukrainalle 30.9.2026 (tools/krim-ukrainalle.mjs)
   BLR: 7,
