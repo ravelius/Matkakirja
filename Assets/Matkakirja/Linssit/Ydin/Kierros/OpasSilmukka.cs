@@ -7,6 +7,7 @@
 // ja seuraava valmis) → Lento → … Toive: keskeneräinen esihaku hylätään, puhe katkeaa ja pyydetään toiveen mukainen kohde.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Matkakirja.Linssit.Kierros
 {
@@ -806,6 +807,12 @@ namespace Matkakirja.Linssit.Kierros
         void PelaajaValitsi() { KierrosKeskeytetty = false; jatkoKohde = null; VapaaTila = false; lykattyKysymys = null; esihakuPuheenJalkeen = false; }
 
         /// <summary>Kaupunkikierros: kohteet järjestyksessä; ensimmäiseen heti, seuraava esihaetaan kerronnan aikana.</summary>
+        public const int PalloNopeitaLentoja = 2;
+        public const double PalloNopeaMinM = 1200, PalloRauhallinenKerroin = 1.3;
+        readonly HashSet<string> nopeatKohteet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        /// <summary>Lento on kierroksen nopea lento (tai ei pallokierrosta).</summary>
+        public bool NopeaLento { get; private set; }
+
         public void AloitaKierros(IList<(string nimi, double lat, double lon)> kohteet)
         {
             if (kohteet == null || kohteet.Count == 0 || Vaihe == OpasVaihe.Valmis) return;
@@ -813,6 +820,13 @@ namespace Matkakirja.Linssit.Kierros
             PelaajaValitsi();
             kierrosJono.Clear(); kierrosJono.AddRange(kohteet);
             kierrosIndeksi = 0;
+            // Nopeat lennot (Päätoimittaja 9.10., omistaja: "metkan oloista kun pallo kiihdyttää kovaan vauhtiin, joten niitä voisi
+            // kyllä muutaman säästää"): kierroksen PalloNopeitaLentoja pisintä yli PalloNopeaMinM:n väliä nykyisellä profiililla,
+            // muut rauhallisemmin (kesto × PalloRauhallinenKerroin).
+            nopeatKohteet.Clear();
+            var valit = new List<(double m, string nimi)>();
+            for (int i = 1; i < kierrosJono.Count; i++) valit.Add((KierrosLento.EtaisyysM(kierrosJono[i - 1].lat, kierrosJono[i - 1].lon, kierrosJono[i].lat, kierrosJono[i].lon), kierrosJono[i].nimi));
+            foreach (var v in valit.Where(x => x.m >= PalloNopeaMinM && x.m < SiirtoRajaM).OrderByDescending(x => x.m).Take(PalloNopeitaLentoja)) nopeatKohteet.Add(v.nimi);
             KierrosKaynnissa = true;
             var e = kierrosJono[kierrosIndeksi++];
             KierrosTieto = (1, kierrosJono.Count);
@@ -1323,7 +1337,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (!Ohjaus.Aktiivinen && !KameraSeis)
                 {
                     lipumisAika += dt;
-                    double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.LipumisAlkuS));
+                    double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.KaariAlkuS));
                     double vauhti = ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, jarruAika / LipumisJarru)));
                     double r0 = Math.Max(50, NykyinenKehys.EtaisyysM * Math.Sin(NykyinenKehys.Kallistus * Math.PI / 180));
                     double w = Math.Min(OpasKuvaus.KaariMaxAstS, OpasKuvaus.KaariNopeusMS / r0 * 180 / Math.PI);
@@ -1343,8 +1357,21 @@ namespace Matkakirja.Linssit.Kierros
             // Pallon avausnäkymä (kehys ilman kohdetta; omistaja TF 168: "parin kertojan lauseen jälkeen kip kääntyy kovalla vauhdilla
             // 180 astetta"): vanha pysähdys kiersi ja hyppäsi 13 s:n kohdalla toiseen kehykseen (> 1 000 m/s) kesken avauksen. Pallo
             // pysyy avauksen ajan rauhassa kehyksessä (ohjaus toimii), ensimmäinen lento lähtee levosta.
+            if (PalloLento && NykyinenKehys.EtaisyysM < AvausKorkeaM)
+            {
+                // ALUN HIDAS KIERTO (Päätoimittaja 9.10.: "alun pyörähdys hitaaksi kierroksi koko aloituksen ajalle + lähestyminen"):
+                // avauskehys kiertää katsepistettä PalloAvausKiertoAst ja lähestyy PalloAvausLahesty-osuuden yhdellä S-käyrällä
+                // PalloAvausKiertoS:ssä (alkaa ja loppuu levosta, joten ensimmäinen lento lähtee levosta).
+                double p = KierrosLento.Smootherstep(Math.Min(1, kierto / PalloAvausKiertoS));
+                var k0 = OpasKuvaus.Pysahdyksella(NykyinenKehys, 0, false);
+                var k1 = new Kuvakulma(k0.Lat, k0.Lon, k0.EtaisyysM * (1 - PalloAvausLahesty * p), k0.Kallistus, KierrosLento.Kiedo(k0.Suuntima + PalloAvausKiertoAst * p), k0.KatseKorkeusM);
+                Asento = Ohjaus.Sovella(k1, NykyinenKehys.MaaM);
+                return;
+            }
             Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto, !PalloLento), NykyinenKehys.MaaM);
         }
+        /// <summary>Avausnäkymän kierto (°), lähestyminen (osuus etäisyydestä) ja kesto (s; avaus + tauko on yleensä pidempi).</summary>
+        public const double PalloAvausKiertoAst = 14, PalloAvausLahesty = 0.15, PalloAvausKiertoS = 16;
 
         /// <summary>
         /// Lennon suunta kohteeseen (Linssiseppä 9.10., omistaja TF 168: "matkaa seinen puolelta toiselle ihan turhaan"): normaalisti
@@ -1478,6 +1505,8 @@ namespace Matkakirja.Linssit.Kierros
                     KierrosLento.Kiedo(lahto.Suuntima + kiertoJatko * OpasKuvaus.KiertoAlkuS * 0.5), lahto.KatseKorkeusM);
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon);
             LentoKestoS = LennonKesto(matka);
+            NopeaLento = !(PalloLento && KierrosKaynnissa) || nopeatKohteet.Contains(k.Nimi ?? "");
+            if (!NopeaLento) LentoKestoS *= PalloRauhallinenKerroin;
             AloitaSiirtoJosKaukana(matka, k.Lat, k.Lon, k.Nimi);
             AsetaSuoraLasku();
             panSuunta = -panSuunta; panLento = PalloLento && !siirto && LentoKestoS > 8;

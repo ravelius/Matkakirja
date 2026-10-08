@@ -87,7 +87,7 @@ namespace Matkakirja.Linssit.Testit
         /// KOHDEKAARI (omistaja 9.10., Päätoimittaja: "selvästi enemmän kiertoa, ja kiertäessä pallo laskeutuu ja lähestyy (spiraali)"):
         /// pysähdyksittäin silmän kiertokulma kohteen ympäri (°), katse-etäisyyden ja silmän korkeuden muutos saapumisesta lähtöön (osuus).
         /// </summary>
-        public sealed class Kaari { public string Kaupunki; public double KiertoKa, KiertoMax, EtMuutos, KorkeusMuutos; public int Pysahdyksia; }
+        public sealed class Kaari { public string Kaupunki; public double KiertoKa, KiertoMax, EtMuutos, KorkeusMuutos, NousuMax; public string NousuKohta; public int Pysahdyksia; }
         public static Kaari MittaaKaari(Kaupunki c)
         {
             var r = Aja(c, false); var tu = new Kaari { Kaupunki = c.Nimi };
@@ -108,16 +108,55 @@ namespace Matkakirja.Linssit.Testit
                 et += 1 - r[b].EtM / Math.Max(1, r[a].EtM);
                 double u0 = r[a].U - 35, u1 = r[b].U - 35; kork += 1 - u1 / Math.Max(1, u0);
             }
+            (tu.NousuMax, tu.NousuKohta) = LennonNousu(c, r);
             if (tu.Pysahdyksia > 0) { tu.KiertoKa = kierto / tu.Pysahdyksia; tu.EtMuutos = et / tu.Pysahdyksia; tu.KorkeusMuutos = kork / tu.Pysahdyksia; }
             return tu;
         }
 
+        /// <summary>
+        /// Lennon nousu (Päätoimittaja 9.10.: "siirtymälento matalammaksi, Notre-Dame → Concorde liian korkealla"): silmän korkein kohta
+        /// lennolla lähtö- ja tulokorkeuden yläpuolella (m), ei siirtoja eikä avauksen laskeutumista (lähtö yli 2 km).
+        /// </summary>
+        public static (double nousu, string kohta) LennonNousu(Kaupunki c) => LennonNousu(c, Aja(c, false));
+        static (double, string) LennonNousu(Kaupunki c, List<Ruutu> r)
+        {
+            double paras = 0; string kohta = null;
+            for (int k = 1; k < r.Count; k++)
+            {
+                if (r[k].Vaihe != OpasVaihe.Lentaa || r[k - 1].Vaihe == OpasVaihe.Lentaa || r[k].Kohde < 1) continue;
+                int j = k; double maks = r[k].U; while (j + 1 < r.Count && r[j + 1].Vaihe == OpasVaihe.Lentaa) { j++; maks = Math.Max(maks, r[j].U); }
+                if (r[k - 1].U > 2000) { k = j; continue; }
+                var ed = c.Kohteet[r[k].Kohde - 1]; var kk = c.Kohteet[r[k].Kohde];
+                if (KierrosLento.EtaisyysM(ed.Lat, ed.Lon, kk.Lat, kk.Lon) >= OpasSilmukka.SiirtoRajaM) { k = j; continue; }
+                double nousu = maks - Math.Max(r[k - 1].U, r[Math.Min(r.Count - 1, j + 1)].U);
+                if (nousu > paras) { paras = nousu; kohta = $"{ed.Nimi} → {kk.Nimi}"; }
+                k = j;
+            }
+            return (paras, kohta);
+        }
+
+        [Testi] static void SpiraaliLaskeeJaLahestyy()
+        {
+            var k = new Kuvakulma(48.86, 2.34, 400, 64, 120, 40);
+            var e0 = OpasKuvaus.KameraPaikka(k, k.Lat, k.Lon); var s1 = OpasKuvaus.Spiraali(k, 30, 1); var e1 = OpasKuvaus.KameraPaikka(s1, k.Lat, k.Lon);
+            Oleta.Tosi(Math.Abs(Math.Abs(KierrosLento.Kiedo(s1.Suuntima - k.Suuntima)) - 30) < 0.5, $"kaari 30° ({KierrosLento.Kiedo(s1.Suuntima - k.Suuntima):F1})");
+            Oleta.Tosi(e1.u - 40 < (e0.u - 40) * (1 - OpasKuvaus.SpiraaliLasku) + 1, $"lasku {e0.u:F0} → {e1.u:F0} m");
+            Oleta.Tosi(s1.EtaisyysM < k.EtaisyysM - 20, $"lähestyy {k.EtaisyysM:F0} → {s1.EtaisyysM:F0} m");
+            Oleta.Tosi(Math.Abs(s1.Lat - k.Lat) < 1e-12 && Math.Abs(s1.KatseKorkeusM - k.KatseKorkeusM) < 1e-9, "katse pysyy kohteessa");
+        }
+
         [Testi] static void KohdekaariSpiraali()
         {
-            foreach (var c in Lue().Where(x => x.Id == "pariisi" || x.Id == "tukholma"))
+            foreach (var c0 in Lue().Where(x => x.Id == "pariisi" || x.Id == "tukholma"))
             {
+                // Kehityskaupungeissa sovitin järjestää kierroksen lyhimmäksi (OpasReitti), joten mitataan samassa järjestyksessä.
+                var c = new Kaupunki { Id = c0.Id, Nimi = c0.Nimi, Lat = c0.Lat, Lon = c0.Lon, Kohteet = OpasReitti.Lyhin(c0.Kohteet, k => (k.Lat, k.Lon), out _).ToArray() };
                 var m = MittaaKaari(c);
-                Console.WriteLine($"      {m.Kaupunki}: {m.Pysahdyksia} pysähdystä, kierto ka {m.KiertoKa:F0}° (max {m.KiertoMax:F0}°), etäisyys −{100 * m.EtMuutos:F0} %, korkeus −{100 * m.KorkeusMuutos:F0} %");
+                Console.WriteLine($"      {m.Kaupunki}: {m.Pysahdyksia} pysähdystä, kierto ka {m.KiertoKa:F0}° (max {m.KiertoMax:F0}°), etäisyys −{100 * m.EtMuutos:F0} %, korkeus −{100 * m.KorkeusMuutos:F0} %, lennon nousu enintään {m.NousuMax:F0} m ({m.NousuKohta})");
+                // Ennen 9.10. (juna 168): kierto ka 4–9° (max 6–16°), ei laskua; lennon nousu Pariisissa 1 320 m (sumennusnosto).
+                Oleta.Tosi(m.KiertoMax >= 15, $"{m.Kaupunki}: pisin kohdekaari {m.KiertoMax:F0}° (≥ 15°)");
+                Oleta.Tosi(m.KorkeusMuutos > 0, $"{m.Kaupunki}: pallo laskeutuu pysähdyksellä ({100 * m.KorkeusMuutos:F1} %)");
+                Oleta.Tosi(m.NousuMax <= 150, $"{m.Kaupunki}: lennon nousu enintään {m.NousuMax:F0} m ({m.NousuKohta}; ≤ 150)");
             }
         }
         static (double e, double n) Enu(Kaupunki c, OpasKohde k) =>

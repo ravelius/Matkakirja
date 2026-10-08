@@ -151,6 +151,7 @@ namespace Matkakirja.Linssit.Testit
             OpasSilmukka.PalloLento = true;
             try
             {
+                OpasKuvaus.SumennusNostoPaalla = false;   // rampit ilman sumennusnostoa (700 m:n lento ohittaa prefektuurin; nosto: oma testi)
                 foreach (double m in new[] { 700.0, 1363, 3000 })
                 {
                     double lat0 = 48.853, lon0 = 2.3498, lat1 = lat0 + m / 111320.0 * 0.6, lon1 = lon0 - m / 73000.0 * 0.8;
@@ -175,7 +176,7 @@ namespace Matkakirja.Linssit.Testit
                     Oleta.Tosi(kaanto <= OpasSilmukka.PalloKaantoAstS + 0.2, $"{m} m: kääntö {kaanto:F1} °/s (video6 Louvre 13,6)");
                 }
             }
-            finally { OpasSilmukka.PalloLento = false; }
+            finally { OpasSilmukka.PalloLento = false; OpasKuvaus.SumennusNostoPaalla = true; }
         }
 
         // Omistaja 8.10. ~09.0x: kierroksen aloitus yleiskuvasta laskeutuu rauhallisesti suoraan 1. kohteeseen (ei pysähdystä arviokehyksessä).
@@ -394,9 +395,10 @@ namespace Matkakirja.Linssit.Testit
                 }
                 var tapaukset = new[]
                 {
-                    // Prefektuuri on 230 m Notre-Damesta: lähtökehys pysyy, joten parannus vain nousun alussa (≥ 10 %).
-                    ("Notre-Dame → Concorde / prefektuuri", new Kuvakulma(48.8530, 2.3498, 420, 58, 250, 60), new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), 48.8541, 2.3470, 1.1, 0.0),
-                    ("Concorde → Champs-Élysées / Élysée", new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), new Kuvakulma(48.8697, 2.3079, 380, 58, 290, 40), 48.8704, 2.3167, 1.4, 600.0),
+                    // Prefektuuri on 230 m Notre-Damesta: päätepisteen vieressä ei nostoa (SumennusPaateM, omistaja 9.10. lennot matalammiksi). Nosto 9.10. matalammaksi
+                    // (omistaja: lennot matalammalla; SumennusEtM 1 100 → 500 m), joten rajat 1,1/1,4 → 1,0/1,0 ja vähintään 600 → 450 m (Élysée ohitetaan jo ilman nostoa 533 m:stä).
+                    ("Notre-Dame → Concorde / prefektuuri", new Kuvakulma(48.8530, 2.3498, 420, 58, 250, 60), new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), 48.8541, 2.3470, 1.0, 0.0),
+                    ("Concorde → Champs-Élysées / Élysée", new Kuvakulma(48.8656, 2.3212, 400, 58, 300, 40), new Kuvakulma(48.8697, 2.3079, 380, 58, 290, 40), 48.8704, 2.3167, 1.0, 450.0),
                 };
                 foreach (var (nimi, a, b, slat, slon, kerroin, vahintaan) in tapaukset)
                 {

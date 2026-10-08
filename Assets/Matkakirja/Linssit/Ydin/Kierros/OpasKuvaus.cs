@@ -194,7 +194,7 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Kaaren silmänopeus (m/s) kulmanopeuden rajoin (°/s), spiraalin aikavakio (s), lähestyminen ja lasku (osuus).</summary>
-        public const double KaariNopeusMS = 8, KaariMaxAstS = 4, SpiraaliAikaS = 14, SpiraaliLahesty = 0.0, SpiraaliLasku = 0.35, SpiraaliMinKorkeusM = 60, SpiraaliMaxMS = 2.5, KaariOsuusSeuraavaan = 0.5;
+        public const double KaariNopeusMS = 10, KaariAlkuS = 3, KaariMaxAstS = 5, SpiraaliAikaS = 14, SpiraaliLahesty = 0.0, SpiraaliLasku = 0.35, SpiraaliMinKorkeusM = 60, SpiraaliMaxMS = 2.5, KaariOsuusSeuraavaan = 0.5;
 
         /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
         public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
@@ -287,7 +287,8 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         // Omistaja TF 167 (9.10.): "lentää siirtymissä matalammalla" → 0,6 → 0,42 (2,5 km:n lennon huippu ~600 → ~470 m); lipumisen
         // kaari samalla etäisyydellä ennallaan, sumennusten ohitus nostaa yhä tarvittaessa (SumennusRho).
-        public const double ZoomRho = 0.42;
+        // Päätoimittaja 9.10. (omistaja: "siirtymälento matalammaksi, nousu vain esteiden yli") → 0,42 → 0,3.
+        public const double ZoomRho = 0.3;
         static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka)
         {
             double p = Eteneminen(t, matka);
@@ -369,7 +370,7 @@ namespace Matkakirja.Linssit.Kierros
             ("Yhdysvaltain suurlähetystö ja Hôtel de Pontalba", 48.8687, 2.3196),
             ("Tukholman poliisitalo (Kronoberg)", 59.3326, 18.0373),
         };
-        public const double SumennusRajaM = 400, SumennusTaysiM = 300, SumennusEtM = 1100, SumennusIkkuna = 0.35, SumennusReuna = 0.08;
+        public const double SumennusRajaM = 250, SumennusTaysiM = 150, SumennusEtM = 500, SumennusPaateM = 400, SumennusIkkuna = 0.35, SumennusReuna = 0.08;
         /// <summary>A/B ja testit: false = ei nostoa.</summary>
         public static bool SumennusNostoPaalla = true;
 
@@ -421,6 +422,9 @@ namespace Matkakirja.Linssit.Kierros
                 double k = l2 < 1 ? 0 : Math.Max(0, Math.Min(1, (sx * bx + sy * by) / l2));
                 double dx = sx - k * bx, dy = sy - k * by, d = Math.Sqrt(dx * dx + dy * dy);
                 if (d >= SumennusRajaM) continue;
+                // Päätepisteen vieressä (alle SumennusPaateM; prefektuuri 230 m Notre-Damesta) ei nostoa: kehys pysyy kuitenkin, ja nosto
+                // vei lennon 430 m ylös (omistaja 9.10.: "Notre-Dame → Concorde liian korkealla").
+                if (Math.Sqrt(sx * sx + sy * sy) < SumennusPaateM || Math.Sqrt((sx - bx) * (sx - bx) + (sy - by) * (sy - by)) < SumennusPaateM) continue;
                 double voima = 1 - KierrosLento.Smootherstep(Math.Max(0, Math.Min(1, (d - SumennusTaysiM) / (SumennusRajaM - SumennusTaysiM))));   // täysi ≤ 300 m, hiipuu 400 m:iin
                 double ikkuna = 1 - KierrosLento.Smootherstep(Math.Min(1, Math.Abs(sv - k) / SumennusIkkuna));
                 double reuna = KierrosLento.Smootherstep(Math.Min(1, Math.Min(sv, 1 - sv) / SumennusReuna));
