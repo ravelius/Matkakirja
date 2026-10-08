@@ -15,6 +15,7 @@ ei alle 18 pt) ja natiivi-ui/kasittely-veto 24d40fb9c (syötepuoli, Ydin Kasitte
 Kasittely/OtaKasittely). SEURAAVAKSI: junan 164 lähdettyä kytkentä Siirtosepän esineluokkiin (ovi, arkun kilvet) junaan 165.
 Simut: T7-sarja 8.10. alkaen — omissa zsh-skripteissä `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`;
 uudet UDID:t iPhone 17 96044270-…, natiivi-ui-iPad11 F7513985-… (tyokalut/simusarja-udid.tsv).
+  nohup/xargs/timeout/env ohittavat funktion → niissä `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
 
 ## TILA 8.10. klo 07.4x (JATKA TÄSTÄ)
 
