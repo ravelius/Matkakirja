@@ -64,6 +64,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "DioraamaKuviot.hlsl"
+            #include "DioraamaUsva.hlsl"
 
             // Globaalit: DioraamaNayttamo.cs (sumu+lepatus, kaikki dioraaman varjostimet) ja DioraamaValot.cs
             // (taivas, RAKENNUS.valaistus.taivas-datasta, vain tämä varjostin lukee näitä kahta).
@@ -186,6 +187,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 vari = lerp(vari, _DioraamaSumuVari.rgb, sumu);
+                vari = DioraamaUsva(vari, i.paikkaW);
                 return half4(vari, 1);
             }
             ENDHLSL

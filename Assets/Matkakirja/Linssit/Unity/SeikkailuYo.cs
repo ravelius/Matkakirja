@@ -35,6 +35,7 @@ namespace Matkakirja.Natiivi
             var vi = y.yoProfiili.Add<Vignette>(true);
             vi.intensity.Override(0.3f); vi.smoothness.Override(0.45f);
             y.yo.profile = y.yoProfiili;
+            AsetaUsva();
             y.musta = go.AddComponent<Volume>(); y.musta.isGlobal = true; y.musta.priority = 130f;
             y.mustaProfiili = ScriptableObject.CreateInstance<VolumeProfile>(); y.mustaProfiili.name = "SeikkailuAlkuMusta";
             y.mustaProfiili.Add<ColorAdjustments>(true).postExposure.Override(-12f);
@@ -59,7 +60,13 @@ namespace Matkakirja.Natiivi
             musta.weight = mustaPaino * mustaPaino * (3f - 2f * mustaPaino);
         }
 
-        public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
+        public static void Poista() { var a = Aktiivinen; Aktiivinen = null; Shader.SetGlobalVector(IdUsva, Vector4.zero); if (a != null) Destroy(a.gameObject); }
+
+        // Usva (juna 169, DioraamaUsva.hlsl): pinta vedenpinnan yllä (Saimaa y ≈ 0), paksuus 1,6 m, tiheys 0,05/m, kuunvalon harmaa.
+        static readonly int IdUsva = Shader.PropertyToID("_DioraamaUsva"), IdUsvaVari = Shader.PropertyToID("_DioraamaUsvaVari");
+        public static Vector4 Usva = new Vector4(1.2f, 1.6f, 0.05f, 0.55f);
+        public static Color UsvaVari = new Color(0.10f, 0.12f, 0.16f);
+        static void AsetaUsva() { Shader.SetGlobalVector(IdUsva, Usva); Shader.SetGlobalVector(IdUsvaVari, (Vector4)UsvaVari.linear); }
 
         void OnDestroy()
         {

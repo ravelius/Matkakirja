@@ -395,6 +395,7 @@ namespace Matkakirja.Natiivi
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
                 SeikkailuVihjeet.Luo(nayttamo.transform, o.Kirjaa);
+                SeikkailuYo.Usva.x = (float)(rakennus.Ulkokuori?.VesiY ?? 0) + 1.2f;   // usvan pinta 1,2 m vedenpinnan yllä
                 SeikkailuYo.Luo(nayttamo.transform, mustaAlku: true);   // omistaja 8.10.: pimeämpi yö, ei lintuperspektiiviä ennen venettä
                 if (jatka != null && jatka.OnTarkistus) o.StartCoroutine(JatkaTallennuksesta(jatka));
                 else o.StartCoroutine(VenePaalle(VeneKestoS));

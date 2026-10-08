@@ -44,6 +44,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             #pragma multi_compile_fragment _ _SHADOWS_SOFT _SHADOWS_SOFT_LOW _SHADOWS_SOFT_MEDIUM _SHADOWS_SOFT_HIGH
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+            #include "DioraamaUsva.hlsl"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
@@ -179,6 +180,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 vari = lerp(vari, _DioraamaSumuVari.rgb, sumu);
+                vari = DioraamaUsva(vari, i.paikkaW);
                 return half4(vari, 1);
             }
             ENDHLSL
