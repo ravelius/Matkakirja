@@ -40,8 +40,25 @@ namespace Matkakirja.Natiivi
             (Peliluettelo.Tavli, TavliNakyma.AvaaPeli),
         };
 
+        /// <summary>
+        /// VIDEOPELIT (Raamattu KAKSI PELILAJIA, omistaja 7.10. klo 09.1x; omistaja 8.10. klo 17.4x "Sen voisi laittaa sitten pelien
+        /// puolelle ja jättää esittelyn taas linssien puolelle"): Olavinlinnan pelattava osa Pelit-puolelle samalla rivipohjalla kuin
+        /// lautapelit; Jatka/Alusta tallennuksesta (SeikkailuTapit.AvaaPelattavaPala). Linnan esittely (linnakierros) jää linsseihin.
+        /// </summary>
+        static readonly (string Id, string Nimi, string Selite, string Ikoni, System.Action Avaa)[] Videopelit =
+        {
+            ("olavinlinna", "Olavinlinna", "1499 · ensimmäinen osa", "taikalasit", SeikkailuTapit.AvaaPelattavaPala),
+        };
+
+        /// <summary>
+        /// Videopelit kaikille pelaajille (false = vain kehittäjätilassa kuten ennen ☰ → kokeet; Päätoimittajan päätös, kun pala
+        /// avataan pelaajille: silloin myös kartan Linssit-nappi näkyy alusta asti, koska Pelit-kategoriassa on aina jotain).
+        /// </summary>
+        public static bool VideopelitKaikille = false;
+        static bool VideopelitNakyvat => VideopelitKaikille || Asetukset.Kehittaja;
+
         /// <summary>Pelit-kategoriassa on jotain (Karttaselitteen Linssit-nappi näkyy myös ilman linssejä).</summary>
-        public static bool PelejaAvattu => Asetukset.Kehittaja || Lautapelit.Any(l => PelinLaudat(l.Peli).Count > 0);
+        public static bool PelejaAvattu => Asetukset.Kehittaja || (VideopelitNakyvat && Videopelit.Length > 0) || Lautapelit.Any(l => PelinLaudat(l.Peli).Count > 0);
 
         static bool LinssejaOn => LinssiUi.Rekisteri?.Valittavat.Count > 0;
 
@@ -66,27 +83,36 @@ namespace Matkakirja.Natiivi
             valilehtiPelit.EnableInClassList("mk-valittu", n == Nakyma.Pelit);
         }
 
+        /// <summary>
+        /// Pelivalikko kahtena osiona (Raamattu KAKSI PELILAJIA): LAUTAPELIT (Mylly, Tavli; laudat-laskuri osion otsikossa) ja
+        /// VIDEOPELIT (Olavinlinna; kehittäjälle Lentopeli); tyhjää osiota ei näytetä.
+        /// </summary>
         void RakennaPelit()
         {
             pelit.Clear();
-            bool jotain = false;
-            foreach (var (m, avaa) in Lautapelit)
+            var lauta = Lautapelit.Select(l => (l.Peli, l.Avaa, Laudat: PelinLaudat(l.Peli))).Where(l => l.Laudat.Count > 0).ToList();
+            if (lauta.Count > 0)
             {
-                var laudat = PelinLaudat(m);
-                if (laudat.Count == 0) continue;
-                jotain = true;
-                Osio(m.Nimi, laudat.Count, m.Laudat.Length, pelit);
-                // Omistaja 4.10. 22.5x: "Mylly saisi näkyä yhtenä pelinä valikossa. Ei kolmena eri lautana" → yksi rivi per peli;
-                // lauta valitaan valintakortin lautavalinnasta (kehittäjällä kaikki laudat auki siellä).
-                AarreRivi("peli:" + m.Id, m.Nimi, null, string.Join(" · ", laudat.Select(l => l.Nimi)),
-                    () => { Sulje(); avaa(m.Id); }, pelit, Ikonit.Viiva["noppa"]);
+                Osio("Lautapelit", lauta.Sum(l => l.Laudat.Count), lauta.Sum(l => l.Peli.Laudat.Length), pelit);
+                foreach (var (m, avaa, laudat) in lauta)
+                {
+                    // Omistaja 4.10. 22.5x: "Mylly saisi näkyä yhtenä pelinä valikossa. Ei kolmena eri lautana" → yksi rivi per peli;
+                    // lauta valitaan valintakortin lautavalinnasta (kehittäjällä kaikki laudat auki siellä).
+                    AarreRivi("peli:" + m.Id, m.Nimi, null, string.Join(" · ", laudat.Select(l => l.Nimi)),
+                        () => { Sulje(); avaa(m.Id); }, pelit, Ikonit.Viiva["noppa"]);
+                }
             }
-            if (Asetukset.Kehittaja)
+            if (VideopelitNakyvat)
             {
-                Osio("Lentopeli", -1, -1, pelit);
-                AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["kone"]);
+                Osio("Videopelit", -1, -1, pelit);
+                foreach (var v in Videopelit)
+                {
+                    var avaa = v.Avaa;
+                    AarreRivi("peli:" + v.Id, v.Nimi, null, v.Selite, () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: videopeli " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
+                }
+                if (Asetukset.Kehittaja) AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["kone"]);
             }
-            if (!jotain && !Asetukset.Kehittaja)
+            if (lauta.Count == 0 && !VideopelitNakyvat)
                 Rakenne.Teksti("Ei vielä pelejä.", "mk-linssivalitsin__tyhja", pelit);
         }
 
