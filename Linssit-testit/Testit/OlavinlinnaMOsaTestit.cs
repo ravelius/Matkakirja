@@ -13,17 +13,37 @@ namespace Matkakirja.Linssit.Testit
     {
         public const int MAlku = 20, KiipeilyAlku = 91, Komero = 92, Koysilasku = 93;   // reitti:pelaaja-21, -92, -93, -94 (0-pohjaiset)
 
-        [Testi] static void VarjoreittiHuoneet6_8()
+        public const int Ovi = 81;   // reitti:pelaaja-82 muurikäytävän ovi (0-pohjainen)
+
+        [Testi] static void VarjoreittiHuone6JaMuuriportaat()
         {
             Oleta.Tosi(Huonesimulaatio.Reitti.Count > Koysilasku, $"reitti:pelaaja-21…94 ({Huonesimulaatio.Reitti.Count})");
             var w = Huonesimulaatio.UusiM();
-            var tulos = ThiefAjuri.Aja(w, MAlku + 1, KiipeilyAlku, budjetti: 600); var loppu = tulos.Loppu;
-            double sujuva = ThiefAjuri.Sujuva(MAlku, KiipeilyAlku, Kavely.HiipiminenMs);
+            var tulos = ThiefAjuri.Aja(w, MAlku + 1, Ovi, budjetti: 600); var loppu = tulos.Loppu;
+            double sujuva = ThiefAjuri.Sujuva(MAlku, Ovi, Kavely.HiipiminenMs);
             if (loppu == null) { Console.WriteLine($"      jumissa pisteessä {tulos.Pisin + 1}:"); ThiefAjuri.Tulosta(tulos.PisinTila); }
-            else Console.WriteLine($"      M-reitti {loppu.T:F0} s (sujuva {sujuva:F0} s), kiinni {loppu.Kiinni}, naamio {loppu.Naamio}: {string.Join(", ", tulos.Loki)}");
-            Oleta.Tosi(loppu != null, $"ajuri pääsi pisteeseen {tulos.Pisin + 1}/{KiipeilyAlku + 1} ilman epäilyä");
+            else Console.WriteLine($"      huone 6–7 ovelle {loppu.T:F0} s (sujuva {sujuva:F0} s), kiinni {loppu.Kiinni}, naamio {loppu.Naamio}: {string.Join(", ", tulos.Loki)}");
+            Oleta.Tosi(loppu != null, $"ajuri pääsi pisteeseen {tulos.Pisin + 1}/{Ovi + 1} ilman epäilyä");
             Oleta.Tosi(loppu.Kiinni == 0 && loppu.Naamio, $"0 kiinnijääntiä ({loppu.Kiinni}), naamio puettu ({loppu.Naamio})");
             Oleta.Tosi(loppu.T <= 2 * sujuva, $"aika {loppu.T:F0} s ≤ 2 × sujuva {sujuva:F0} s");
+        }
+
+        /// <summary>Huoneet 7–8 muurilla (naamio ei kelpaa osassa muurikaytava, PT 8.10.): muurikäytävän ovelta kiipeilyn alkuun hiipien.
+        /// Odottaa LR:n piilomerkkejä muurikäytävään (piilo:muurikaytava-*); ilman niitä lyhtyvartija partioi koko käytävän eikä ohitusta ole.</summary>
+        [Testi] static void MuurikaytavaJaHarjaHiipien()
+        {
+            bool piilot = false; foreach (var m in Huonesimulaatio.Data.Lajia("piilo")) if (m.Osa == "muurikaytava") piilot = true;
+            if (!piilot) { Console.WriteLine("      muurikäytävä: ODOTTAA LR:n piilo:muurikaytava-* -merkkejä (Siirtosepän pyyntö 8.10.), ei ajettu"); return; }
+            var w = Huonesimulaatio.UusiM();
+            var ennen = ThiefAjuri.Aja(w, MAlku + 1, Ovi, budjetti: 600).Loppu;
+            Oleta.Tosi(ennen != null, "muurikäytävän ovelle");
+            double t0 = ennen.T;
+            var tulos = ThiefAjuri.Aja(ennen, Ovi + 1, KiipeilyAlku, budjetti: 600); var loppu = tulos.Loppu;
+            double sujuva = ThiefAjuri.Sujuva(Ovi, KiipeilyAlku, Kavely.HiipiminenMs);
+            if (loppu == null) { Console.WriteLine($"      jumissa pisteessä {tulos.Pisin + 1}:"); ThiefAjuri.Tulosta(tulos.PisinTila); }
+            else Console.WriteLine($"      muuri ja harja {loppu.T - t0:F0} s (sujuva {sujuva:F0} s), kiinni {loppu.Kiinni}: {string.Join(", ", tulos.Loki)}");
+            Oleta.Tosi(loppu != null && loppu.Kiinni == 0, $"hiipien pisteeseen {tulos.Pisin + 1}/{KiipeilyAlku + 1}");
+            Oleta.Tosi(loppu.T - t0 <= 2 * sujuva + 30, $"aika {loppu.T - t0:F0} s ≤ 2 × sujuva + 30 s (lyhdyn kierros)");
         }
 
         /// <summary>Kiipeily (huone 8): otteet ote:kellotorni-1…10, puuskat tuuli:-merkkien otteilla, lyhty yllä puolivälissä kerran
@@ -81,7 +101,7 @@ namespace Matkakirja.Linssit.Testit
                     if (perilla) break;
                 }
             }
-            Console.WriteLine($"      pako: köysilasku {lasku:F1} s, kalliolle {kalliolla:F1} s kellosta, K4 {pako.KelloS:F1} s kellosta (vartijat esiin 20 s: {esiin}), kiinni {w.Kiinni}");
+            Console.WriteLine($"      pako: köysilasku {lasku:F1} s, kalliolle {kalliolla:F1} s kellosta, K4 {pako.KelloS:F1} s kellosta (vartijat esiin {Pako.RantaEsiinS:F0} s: {esiin}), kiinni {w.Kiinni}");
             Oleta.Tosi(pako.Vaihe == PakoVaihe.K4 && !pako.Myohastynyt && w.Kiinni == 0, $"sukellus ennen myöhästymistä ({pako.Vaihe}, {pako.KelloS:F1} s, kiinni {w.Kiinni})");
             foreach (var h in w.Hahmot) if (h.Aktiivinen && (h.Nimi == "ranta" || h.Nimi.StartsWith("seisoo-harja", StringComparison.Ordinal))) Oleta.Tosi(h.Aivot.Mittari < 0.3, $"{h.Nimi} ei epäile ({h.Aivot.Mittari:F2})");
         }

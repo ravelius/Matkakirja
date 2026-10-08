@@ -6,7 +6,8 @@
 // piiloon meno ei suojaa), askeleet pinnan mukaan seinäsäännöllä (tarjotin kädessä vain juoksu kuuluu), huuto kutsuu 2 lähintä 20 m:stä,
 // riita 40 s:n välein (pelaaja vesiportilla tai ulkona), torkkuja ottaa tarjottimen myös heränneenä (ei hälytyksessä) ja istuu syömään,
 // M-osa (historia-m): istuvat ja seisovat hahmot (profiilitta linnaväki; linnaväki ja noppa syövät katsejaksoin, vouti valveilla),
-// rannan vartijat odottavat (Aktivoi/Odottamaan), naamio naulakosta (kulkulupa; pukeutuminen 2 s),
+// rannan vartijat odottavat (Aktivoi/Odottamaan), naamio naulakosta (kulkulupa; pukeutuminen 2 s; ei kelpaa hahmoille, joiden merkki on
+// osassa muurikaytava: SeikkailuVartijat.NaamioEiKelpaaOsa, PT 8.10.),
 // kiinni → tarkistuspiste (portaalin ylitys ilman vaaraa), armo 4 s, kaikki valppaiksi.
 // Yksinkertaistukset: hahmot ja pelaaja kulkevat suoraan (ei NavMeshiä); näkölinja vapaa samassa osassa ja naapuriosaan vain
 // portaalin (ovi:-merkki) kautta, kerrosero ≤ 2 m; mukana vain hahmot, joiden reitti on alle 25 m:n päässä pelaajan reitistä.
@@ -30,6 +31,8 @@ namespace Matkakirja.Linssit.Testit
             public string Osa; public double OsaX, OsaY, OsaZ;   // osan välimuisti (Askelaani.Osa vain liikkuessa)
             /// <summary>Piilossa odottava hahmo (SeikkailuVartijat.Odottavat: rannan vartijat) ei päivity eikä valaise.</summary>
             public bool Aktiivinen = true; public double AlkuX, AlkuY, AlkuZ;
+            /// <summary>Ensimmäisen merkin osa (sovittimen V.Osa): naamio ei kelpaa osassa NaamioEiKelpaaOsa.</summary>
+            public string MerkkiOsa;
             public List<(double X, double Y, double Z)> Pisteet = new List<(double, double, double)>();
         }
 
@@ -71,6 +74,7 @@ namespace Matkakirja.Linssit.Testit
         public bool Tarjotin, Annettu, Kynttila, Hiipii, Naamio;
         /// <summary>SeikkailuVartijat.Odottavat: rannan soihtuvartijat vasta pakon kellon jälkeen.</summary>
         public static readonly string[] Odottavat = { "ranta", "seisoo-ranta-vartija" };
+        public const string NaamioEiKelpaaOsa = "muurikaytava";
         public int Kiinni, Seuraava = 1, TarkistusSeuraava = 1;
         public bool VaroitusRikki;
         public (double X, double Y, double Z) Tarkistus;
@@ -109,7 +113,7 @@ namespace Matkakirja.Linssit.Testit
                         Profiili = (istuu || seisoo) && eka.Profiili == null ? VartijaProfiili.Linnavaki : VartijaProfiili.Hae(eka.Profiili),
                         Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)),
                     } };
-                (h.AlkuX, h.AlkuY, h.AlkuZ) = (h.X, h.Y, h.Z);
+                (h.AlkuX, h.AlkuY, h.AlkuZ) = (h.X, h.Y, h.Z); h.MerkkiOsa = eka.Osa ?? kv.Key;
                 foreach (var m in kv.Value) h.Pisteet.Add((m.X, m.Y, m.Z));
                 var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
                 if (kantaja != null) h.ValoM = kantaja.Soihtu ? SoihtuM : LyhtyM;
@@ -283,7 +287,7 @@ namespace Matkakirja.Linssit.Testit
                 var kuuluvat = new List<Aanilahde>();
                 foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(d, a.KuuluvuusM, a.Osa, hosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
                 var s = new VartijanSyote { VartijaX = h.X, VartijaZ = h.Z, PelaajaX = PX, PelaajaZ = PZ, NakolinjaVapaa = Nakolinja(h, hosa, osa), Piilossa = piilossa || T < ArmoAsti,
-                    Valoisuus = valo, Hiipii = Hiipii, PelaajaVauhti = vauhti, Aanet = kuuluvat, Tarjotin = Tarjotin, Naamio = Naamio };
+                    Valoisuus = valo, Hiipii = Hiipii, PelaajaVauhti = vauhti, Aanet = kuuluvat, Tarjotin = Tarjotin, Naamio = Naamio && h.MerkkiOsa != NaamioEiKelpaaOsa };
                 h.Aivot.Paivita(Dt, s);
                 h.NakiViimeksi = s.NakolinjaVapaa && !s.Piilossa;
                 if (EnsiHavainto < 0 && h.Aivot.Tila != VartijanTila.Partio && h.Aivot.Tila != VartijanTila.Paluu) EnsiHavainto = T;
