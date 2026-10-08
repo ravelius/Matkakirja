@@ -1,21 +1,34 @@
 # Latauskuvat ja kevyt liike (Natiivi-UI 8.10.2026)
 
-Omistaja 8.10. ~08.5x: latauskuvat kevyesti animoiduiksi; pallo kahdesta osasta, pallo heiluu hitaasti ja köysi vektorina.
-Pohja LATAUSKUVA (web-PR #4188, proto natiivi-ui/latauskuva f27294f3f): tausta + 1–2 liikkuvaa kerrosta alfalla + köysi
-vektorina; heilahdus ±1–2°, nousu ≤ 8 pt, jakso 6–8 s; nimi ja latauspalkki ennallaan; ilman kerroksia still.
+Omistaja 8.10.: latauskuvat kevyesti animoiduiksi ("heilunnaksi riittää hyvin vähäeleinen liike"). Pohja LATAUSKUVA (tyylikirja
+pohjat.LATAUSKUVA; UI/Latauskuva.cs, Linssit/Ydin/LatausLiike.cs): tausta + 1–2 liikkuvaa kerrosta alfalla + köydet vektoreina;
+heilahdus ±0,5–0,75°, nousu ≤ 4 pt, jakso 7–8 s; valokuvissa hidas lähentyminen (Ken Burns) 1,00 → 1,04 / 8 s ja takaisin; nimi ja
+latauspalkki ennallaan; ilman kerroksia still. Päivitys 33 ms UI-ajastimella (ei täyttä ruudunpäivitystä).
 
-## Latausnäkymät, joissa on kuva (yksi rivi = ehdotus)
+## Kaikki latausnäkymät (yksi rivi = tila ja ehdotus)
 
-| # | Näkymä (koodi) | Kuva nyt | Ehdotettu kevyt liike |
-|---|---|---|---|
-| 1 | Kuumailmapallon latauskuva (OpasValikko siirtymaKuva, R2 julisteet/latauskuva-kuumailmapallo, 3 rajausta) | yksi still koko ruudulla | Kupu ja kori omiksi kerroksikseen (kupu: kääntöpiste yläosassa, ±1,5°, nousu 4 pt, jakso 7 s; kori ±1°, eri vaihe tai paikallaan); 4 köyttä korin kulmista kuvun alareunaan vektorina; tausta still. Codexilta 3 kuvaa per rajaus: tausta ilman palloa, kupu alfalla, kori alfalla. |
-| 2 | Oppaan latauskuva (OpasSovitin.LatausKuva, kohteen 1. valokuva 80 % Kuvasuurennoksessa, ≤ 8 s) | valokuva + lähderivi | Ei kerroksia (valokuva, lähde); suositus: ennallaan. Vaihtoehto omistajalle: AvausTausta-pohjan hidas lähentyminen (Ken Burns) 1,00 → 1,03 / 8 s. |
-| 3 | Sovelluksen aloitusverho (Kartta/Aloitusverho, valkoinen Matkakirja-logo 30 %, 1–8 s) | logo mustalla | Ei liikettä (tunnus, lyhyt, iOS-käynnistysruudun jatke); suositus: ennallaan. |
-| 4 | Saapumistraileri (Pulu/Saapumistraileri, kaupungin 1–3 avauskuvaa) | kuvat liukuvat jo | Ei latausnäkymä, liikkuu jo; ei muutosta. |
+| # | Näkymä (koodi) | Nyt | Liike LATAUSKUVA-pohjalla | Tila |
+|---|---|---|---|---|
+| 1 | Kuumailmapallon latauskuva (OpasValikko siirtymaKuva, 3 rajausta R2:ssa) | still koko ruudulla | Nyt: still lähentyy (Ken Burns keskeltä). Kerroksin: kupu ±0,6° / 3 pt / 7,5 s kääntö kuvun yläosasta, kori ±0,5° eri vaiheessa, 4 riippuköyttä korista kupuun ja ankkuriköysi korista maahan vektoreina, tausta still | KYTKETTY still (a7953991e, juna 166); kerrokset Codexilta (tilattu) → LS1 kytkee |
+| 2 | Oppaan latauskuva (kohteen 1. valokuva Kuvasuurennoksessa, ≤ 8 s) | valokuva | Ken Burns 1,00 → 1,04 / 8 s, suunta kuvan tunnisteesta; nipistys keskeyttää | KYTKETTY (39d43932a, juna 165) |
+| 3 | Olavinlinnan nimiruutu (DioraamaTaulu, mk-astroavaus, 2–9 s, palkki) | musta + nimi | Tausta (linna 1499, salmi) Ken Burns; VENE kerroksena ±0,6°, nousu 2–3 pt, 7–8 s kääntö kölistä; valinnainen usva ±0,5° / 3 pt / 8 s; valinnainen 1499-viiri taustassa (ei sinikeltaista eikä Suomen lippua) | Codex-tilaus Sisältökirjurilla; kytken kun polut tulevat (omistaja hyväksyi 10.5x) |
+| 4 | Cupolan avaus (AstronautinNakyma, LCD-teksti mustalla, 2–4 s) | musta + LCD | Tausta: Maa kiertoradalta (Ken Burns); kerros: Cupolan ikkunakehys alfalla ±0,5°, nousu 2 pt, 8 s (leijunta painottomassa tilassa); LCD-teksti päällä ennallaan | Codex-määritys Sisältökirjurille (alla); omistajan hyväksyntä uudelle kuvalle Päätoimittajan kautta |
+| 5 | Astronautin kameran avaus (AstronautinNakyma, "ASTRONAUTIN KAMERA", 1,8–12 s) | musta + otsikko | Tausta: NASA:n PD-kuva Maasta (Commons), Ken Burns; ei kerroksia | Uusi kuva (PD, ei generointia) → omistajan hyväksyntä Päätoimittajan kautta |
+| 6 | Sovelluksen aloitusverho (logo mustalla, 1–8 s) | logo | Ei liikettä (tunnus, iOS-käynnistysruudun jatke) | Ennallaan (Päätoimittaja 8.10.) |
+| 7 | Kielletty kaupunki -nimiruutu (DioraamaTaulu) | musta + nimi | Kuten #3 | EI tilata: VAIN EUROOPPA (omistaja 27.9.) |
+| 8 | Lontoo-pilotti (KierrosTaulu, mk-astroavaus) | musta + nimi | – | Ennallaan (kehityspilotti, opas korvasi) |
+| 9 | Ajattelijat (prologin pimeä) | tarkoituksellinen pimeä | – | Ennallaan (kerronnallinen pimeä) |
+| 10 | LinssiPeite / Odotuspeite / Mustaverho (väripeitteet < 1–2 s) | väri | – | Ennallaan (lyhyitä, ei kuvaa) |
+| 11 | Saapumistraileri (kaupungin avauskuvat liukuvat) | liikkuu jo | – | Ei latausnäkymä, ei muutosta |
 
-## Odotusnäkymät ilman kuvaa (musta tai peite)
+## Codex-kerrosmääritykset (Sisältökirjurille)
 
-Linnan nimiruutu (DioraamaTaulu: Olavinlinna, Kielletty kaupunki; 2–9 s, latauspalkki), astronautin kameran avaus, Cupolan
-avaus (LCD-teksti), Lontoo-pilotti (KierrosTaulu), Ajattelijat (prologin pimeä), LinssiPeite/Odotuspeite, Mustaverho.
-Ehdotus: linnan nimiruutu on pisin odotus. Jos omistaja haluaa, sille sopisi LATAUSKUVA (linnan siluetti stillinä + lippu
-kerroksena ±1°, lipputangon naru köytenä); vaatii uudet kuvat (generointi omistajan luvalla). Muut ennallaan (lyhyitä, tekstiä).
+Kaikki PNG, sama rajaus kerroksittain, kolme rajausta: iPhone pysty 1290×2796, iPad pysty 2048×2732, vaaka 2732×2048. Fotorealistinen,
+merkintä "havainnekuva". Kääntöpisteet ja kiinnityspisteet pikseleinä taustan koordinaateissa.
+
+- #1 Pallo: (a) tausta ilman palloa, (b) kupu alfalla, (c) kori alfalla; pisteet: kuvun kääntöpiste (yläosa), korin 4 kulmaa ja
+  kuvun alareunan 4 köysipistettä, ankkuriköyden maapiste.
+- #3 Olavinlinna 1499: (a) tausta (linna, Kyrönsalmi, taivas, tumma alaosa ~25 %, ei venettä; valinnainen 1499-viiri), (b) vene alfalla,
+  (c) valinnainen usvakaistale; piste: veneen kölin keskikohta.
+- #4 Cupola: (a) tausta: Maa ISS:n korkeudelta (Eurooppa näkyvissä), tumma alaosa LCD-tekstille, (b) Cupolan ikkunakehys alfalla (ikkunat
+  läpinäkyviä); piste: kehyksen keskikohta (kääntö).
