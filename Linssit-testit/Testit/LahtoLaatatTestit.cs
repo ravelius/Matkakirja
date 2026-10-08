@@ -432,6 +432,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(y.Maara == 1 && !y.AluskerrosTarvitaan, "yksittäinen 404 tai muu 404 ei riitä");
             r.Nollaa();
             Oleta.Tosi(!r.AluskerrosTarvitaan, "kaupungin vaihto nollaa");
+            // Päätoimittaja 8.10.: aluskerroksessa ei karttakuvaa (vain Googlen laatat näkymässä) → ei rasterikerrosta TarkistaReiat-lohkossa.
+            var lahde = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            int i0 = lahde.IndexOf("public void TarkistaReiat()", StringComparison.Ordinal), i1 = lahde.IndexOf("void PoistaAluskerros()", i0, StringComparison.Ordinal);
+            Oleta.Tosi(i0 > 0 && i1 > i0, "TarkistaReiat löytyy");
+            var lohko = lahde.Substring(i0, i1 - i0);
+            Oleta.Tosi(!lohko.Contains("RasterOverlay") && lohko.Contains("ReikaTayte"), "aluskerros: ei karttakuvaa, tasainen sävy");
         }
 
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()

@@ -1,8 +1,8 @@
 // GOOGLEN TIILIREIÄT (Varsova 7.10.2026: tumma neliö = Googlen 404 tiilen sisällölle, b-ajossa 38 kpl kaikilla etäisyyksillä; Cesium
 // käsittelee epäonnistuneen tiilen tyhjänä, joten forbidHoles ei auta; Päätoimittaja 8.10.: korjaa junaan 166).
 // Cesiumin natiivi loki "[TilesetJsonLoader…] Received status code 404 for tile content https://tile.googleapis.com/…" kulkee Unityn
-// lokiin; kun kaupungissa on vähintään Raja tällaista riviä, CesiumKaupunki kytkee aluskerroksen (Cesiumin maasto + Bing-kuva hieman
-// Googlen pinnan alle), joka täyttää reiät. Kaupungin vaihto nollaa. Säieturvallinen (lokikutsu voi tulla taustasäikeestä).
+// lokiin; kun kaupungissa on vähintään Raja tällaista riviä, CesiumKaupunki kytkee aluskerroksen (pelkkä maastomuoto tasaisella
+// sumun sävyllä, ei karttakuvaa; hieman Googlen pinnan alla), joka täyttää reiät. Kaupungin vaihto nollaa. Säieturvallinen.
 using System;
 using System.Threading;
 

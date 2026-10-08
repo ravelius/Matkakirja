@@ -511,10 +511,14 @@ namespace Matkakirja.Natiivi
         }
 
         // GOOGLEN TIILIREIÄT (Varsova 7.10.; Päätoimittaja 8.10. junaan 166): Cesiumin natiivi loki "status code 404 for tile content
-        // https://tile.googleapis.com/…" → GoogleTiiliReiat; kun kaupungissa on ≥ Raja reikää, aluskerros (Cesium World Terrain + Bing,
-        // karkea, AluskerrosSyvyysM Googlen pinnan alla) täyttää reiät. Ei vaikuta latausasteeseen; vain Googlen datalla.
+        // https://tile.googleapis.com/…" → GoogleTiiliReiat; kun kaupungissa on ≥ Raja reikää, aluskerros täyttää reiät: pelkkä
+        // maastomuoto (Cesium World Terrain, karkea, AluskerrosSyvyysM Googlen pinnan alla) yhdellä tasaisella horisontin/sumun
+        // sävyllä (Varjostimet/ReikaTayte). EI karttakuvaa (Päätoimittaja 8.10.: ei Bingiä Googlen laattojen kanssa, Raamatun
+        // kaupunkinäkymälinja ja Map Tiles -ehdot). Ei vaikuta latausasteeseen; vain Googlen datalla.
         readonly Matkakirja.Linssit.Kierros.GoogleTiiliReiat reiat = new Matkakirja.Linssit.Kierros.GoogleTiiliReiat();
         Cesium3DTileset aluskerros;
+        Material aluskerrosMat;
+        static readonly int IdVari = Shader.PropertyToID("_Vari");
         public const float AluskerrosSse = 24f, AluskerrosSyvyysM = 15f;
         public bool AluskerrosPaalla => aluskerros != null;
         void LokiRivi(string viesti, string pino, LogType tyyppi) => reiat.Kirjaa(viesti);
@@ -522,20 +526,25 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka kehys (OpasSovitin): aluskerros päälle, kun reikiä on kertynyt.</summary>
         public void TarkistaReiat()
         {
+            if (aluskerrosMat != null && kamera != null) aluskerrosMat.SetColor(IdVari, RenderSettings.fog ? RenderSettings.fogColor : kamera.backgroundColor);
             if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !reiat.AluskerrosTarvitaan) return;
+            var sh = Resources.Load<Shader>("Varjostimet/ReikaTayte");
+            if (sh == null) { kirjaa("kaupunki: reikätäytteen varjostin puuttuu"); return; }
+            aluskerrosMat = new Material(sh) { name = "ReikaTayte" };
             aluskerros = LuoTileset("Kaupunki aluskerros (Googlen reiät)", 1, AluskerrosSse, MaastoValimuisti);
             aluskerros.forbidHoles = false;
-            var bing = aluskerros.gameObject.AddComponent<CesiumIonRasterOverlay>();
-            bing.ionAssetID = 2; bing.ionAccessToken = tunnus;
+            aluskerros.showCreditsOnScreen = false;
+            aluskerros.opaqueMaterial = aluskerrosMat;   // vain muoto, tasainen sävy, ei kuvaa
             aluskerros.transform.localPosition = new Vector3(0f, -AluskerrosSyvyysM, 0f);   // georeferenssin paikallinen ylös = y origossa
             aluskerros.gameObject.SetActive(true);
-            kirjaa($"kaupunki: Googlen 404-tiiliä {reiat.Maara} → aluskerros (maasto + Bing, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
+            kirjaa($"kaupunki: Googlen 404-tiiliä {reiat.Maara} → aluskerros (maastomuoto ilman kuvaa, sumun sävy, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
         }
 
         void PoistaAluskerros()
         {
             if (aluskerros != null) UnityEngine.Object.Destroy(aluskerros.gameObject);
-            aluskerros = null;
+            if (aluskerrosMat != null) UnityEngine.Object.Destroy(aluskerrosMat);
+            aluskerros = null; aluskerrosMat = null;
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
