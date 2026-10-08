@@ -18,15 +18,10 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "sade-vesi|id:399281,626171,680681|15|180"
-          "sade-pressu|id:534551,592996,457594|15|180"
-          "sade-puu|id:547927,849790|15|180"
-          "tippuminen-raystas|dripping gutter|15|180"
-          "tippuminen-raystas|rain drips roof|15|180"
           "tippuminen-muuri|cave drips|15|180"
           "tippuminen-muuri|cellar dripping|15|180"
-          "sade-puu|rain porch|15|180"
-          "sade-puu|rain deck|15|180"
+          "tippuminen-muuri|water drops echo|15|180"
+          "tippuminen-raystas|rain drips roof|15|180"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
