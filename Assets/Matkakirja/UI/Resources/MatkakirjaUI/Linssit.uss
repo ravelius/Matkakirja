@@ -329,7 +329,7 @@
 
 .mk-astroavaus__otsikko {
     align-items: center;
-    color: rgb(232, 237, 245);
+    color: var(--tk-erikois-astro-valkoinen);
 }
 
 .mk-astroavaus__otsikko--haipyy {
@@ -342,20 +342,20 @@
     font-size: 17px;
     letter-spacing: 31.76px; /* web 5.4px */
     padding-left: 5.4px;
-    color: rgb(232, 237, 245);
+    color: var(--tk-erikois-astro-valkoinen);
 }
 
 .mk-astroavaus__viiva {
     width: 51px;
     height: 1px;
     margin: 11px 0;
-    background-color: rgba(232, 237, 245, 0.5);
+    background-color: var(--tk-erikois-astro-valkoinen-a50);
 }
 
 .mk-astroavaus__lahde {
     font-size: 12.5px;
     letter-spacing: 12px; /* web 1.5px */
-    color: rgba(232, 237, 245, 0.72);
+    color: var(--tk-erikois-astro-valkoinen-a72);
 }
 
 /* PUHUJAKUVA (Puhujakuva.cs, omistaja 5.10.2026 klo 14.3x): kehyksetön muotokuva puhujan pään yläpuolella; pehmeä
@@ -432,7 +432,7 @@
     border-color: var(--tk-lasi-avaruus-reunus);
     border-radius: var(--tk-kulma-nappi);
     background-color: var(--tk-kuulto-lasi-avaruus-pinta-72);
-    color: rgba(233, 250, 240, 0.92);
+    color: var(--tk-kuulto-lasi-avaruus-muste-92);
 }
 
 /* Löydös 97 (web .satelliitti-selite-kiinni: width auto, katto ennen ✕:ää): kelattu nimilaatikko tekstin kokoinen. */
@@ -508,7 +508,7 @@
 .mk-astrokuva__teksti {
     font-size: 13px;
     white-space: normal;
-    color: rgba(233, 250, 240, 0.92);
+    color: var(--tk-kuulto-lasi-avaruus-muste-92);
 }
 
 .mk-astrokuva__vakasenRivi {
@@ -1399,7 +1399,7 @@
     right: -8%;
     bottom: -8%;
     -unity-background-scale-mode: scale-and-crop;
-    -unity-background-image-tint-color: rgb(140, 138, 134);
+    -unity-background-image-tint-color: rgb(140, 138, 134); /* väripoikkeus: lämmin sävy, lähin token neutraali harmaa tk-harmaa-pinta (ΔE 3.7) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-avaustausta__vinjetti {
@@ -1539,7 +1539,7 @@
     min-height: 44px;
     padding: 9.9px 33.6px;
     border-width: 1.5px;
-    border-color: rgba(214, 168, 84, 0.92);
+    border-color: var(--tk-kuulto-accent-92);
     border-radius: var(--tk-kulma-nappi);
     background-color: var(--lapinakyva);
     -unity-background-scale-mode: stretch-to-fill;
@@ -1749,7 +1749,7 @@
     border-color: var(--tk-lasi-avaruus-reunus);
     border-radius: var(--tk-kulma-kortti);
     background-color: var(--tk-kuulto-lasi-avaruus-pinta-80);
-    color: rgba(233, 250, 240, 0.92);
+    color: var(--tk-kuulto-lasi-avaruus-muste-92);
     overflow: hidden;
 }
 
@@ -1814,7 +1814,7 @@
     margin: 0;
     padding: 0;
     font-size: 15px;
-    color: rgba(233, 250, 240, 0.92);
+    color: var(--tk-kuulto-lasi-avaruus-muste-92);
     -unity-text-align: middle-left;
 }
 
@@ -1874,7 +1874,7 @@
 
 .mk-astroNakymat .mk-nappi__teksti {
     font-size: var(--tk-koko-apuri);
-    color: rgba(233, 250, 240, 0.9);
+    color: var(--tk-kuulto-lasi-avaruus-muste-90);
 }
 
 .mk-aikajana-nappi,
@@ -2046,7 +2046,7 @@
     padding: 0;
     font-size: 8px;
     letter-spacing: 12.5px; /* web 1px */
-    color: rgba(236, 206, 150, 0.85);
+    color: var(--tk-kuulto-paper-dark-85);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
 }
 
@@ -2162,7 +2162,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
-    color: rgba(34, 22, 8, 0.92);
+    color: var(--tk-kuulto-panel-92);
     text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45);
     border-radius: 3px;
     transition-property: color, opacity, background-color;
@@ -2550,7 +2550,7 @@
     width: 36px;
     height: 40px;
     border-radius: var(--tk-kulma-nappi);
-    background-color: rgba(246, 236, 198, 0.85);
+    background-color: var(--tk-kuulto-kerma-85);
     color: var(--map-ink);
 }
 
@@ -2676,7 +2676,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #d9ccb4;
+    color: var(--tk-tumma-muste);
 }
 
 /* Ihmisen matkan löytökuva (web .aikajana-kertomuskuva): kehyksetön, reunoiltaan häipyvä
@@ -2894,14 +2894,14 @@
     margin-top: 3px;
     font-size: 10.5px;
     white-space: normal;
-    color: #9b8b6e;
+    color: var(--muted);
 }
 
 .mk-ihmisnosto__lahde {
     margin-bottom: 8px;
     font-size: 11px;
     white-space: normal;
-    color: #857657;
+    color: var(--map-ink-soft);
 }
 
 .mk-ihmisnosto__lue {
@@ -2964,7 +2964,7 @@
 .mk-ihmisnosto__kysyotsikko {
     margin-bottom: 5px;
     font-size: 12.5px;
-    color: #c9a15a;
+    color: var(--accent);
 }
 
 .mk-ihmisnosto__kysymys {
@@ -3007,7 +3007,7 @@
 .mk-ihmisnosto__lahdeteksti {
     margin-right: 4px;
     font-size: 11.5px;
-    color: #9b8b6e;
+    color: var(--muted);
 }
 
 .mk-ihmisnosto__lahdelinkki {
@@ -3020,7 +3020,7 @@
 
 .mk-ihmisnosto__lahdelinkki .mk-nappi__teksti {
     font-size: 11.5px;
-    color: #c9a15a;
+    color: var(--accent);
 }
 
 /* ------------------------------------------------------------------------ *
@@ -3626,7 +3626,7 @@
     height: 7px;
     border-radius: 3.5px;
     margin-right: 6px;
-    background-color: rgb(255, 86, 86);
+    background-color: var(--tk-lcd-vaara);
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.9s; /* ympäristöanimaatio (pohjavahdin poikkeus 8.10.) */
@@ -3836,7 +3836,7 @@
 .mk-isskyyti__ylilento {
     font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
-    color: rgba(233, 250, 240, 0.9);
+    color: var(--tk-kuulto-lasi-avaruus-muste-90);
 }
 
 /* Olosuhteet: otsikkorivi nimi · arvo, alla ura (slider-track 46) ja nuppi (slider-thumb 36). */

@@ -408,7 +408,7 @@
 }
 
 .mk-matkakirja__kuva:hover {
-    color: #a0701c; /* löydös 139: vaalealla pohjalla */
+    color: var(--accent-dark); /* löydös 139: vaalealla pohjalla */
 }
 
 .mk-matkakirja__kuvaikoni {
@@ -885,7 +885,7 @@
     bottom: 0;
     align-items: center;
     justify-content: center;
-    background-color: rgba(8, 12, 18, 0.72);
+    background-color: var(--tk-kuulto-musta-72);
     opacity: 1;
     transition-property: opacity;
     transition-duration: 0.2s;
@@ -1194,7 +1194,7 @@
     border-width: 1px;
     border-color: var(--map-ink-35);
     border-radius: 14px;
-    background-color: rgba(255, 252, 244, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     color: var(--overlay-card);
 }
 

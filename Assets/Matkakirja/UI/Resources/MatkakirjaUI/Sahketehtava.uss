@@ -431,7 +431,7 @@
     border-width: 1px;
     border-radius: 4px;
     border-color: var(--map-ink-60);
-    background-color: rgba(255, 253, 245, 0.72);
+    background-color: var(--tk-kuulto-paperi-pinta-72);
     color: var(--tk-paperi-muste);
 }
 

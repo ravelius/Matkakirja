@@ -675,7 +675,7 @@
 
 .mk-selite__valilehti.mk-valittu {
     border-color: var(--tk-paperi-reunus);
-    background-color: rgba(255, 252, 242, 0.85);
+    background-color: var(--tk-kuulto-paperi-pinta-85);
     color: var(--map-ink-96);
 }
 
@@ -1308,13 +1308,13 @@
     border-color: var(--tk-tumma-muste-pehmea);
     border-radius: var(--tk-kulma-keski);
     background-color: var(--tk-paperi-pinta);
-    color: rgb(92, 63, 14);
+    color: rgb(92, 63, 14); /* väripoikkeus: oma sävy, ΔE 8.1 ≥ 7 lähimpään (tk-paperi-muste-pehmea) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-nosto__lisaa .mk-nappi__teksti {
     font-size: 13.76px;
     letter-spacing: 7.99px; /* web 1.1px */
-    color: rgb(92, 63, 14);
+    color: rgb(92, 63, 14); /* väripoikkeus: oma sävy, ΔE 8.1 ≥ 7 lähimpään (tk-paperi-muste-pehmea) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-nosto__selaa {
@@ -1583,7 +1583,7 @@
     padding-bottom: 3px;
     border-bottom-width: 1px;
     border-bottom-color: var(--tk-kuulto-paperi-korostus-26);
-    color: rgba(94, 66, 16, 0.85);
+    color: rgba(94, 66, 16, 0.85); /* väripoikkeus: oma sävy, ΔE 7.6 ≥ 7 lähimpään (tk-paperi-muste-pehmea) (Päätoimittaja 8.10.2026) */
     font-size: 10.5px;
     letter-spacing: 12.38px; /* web 1.3px */
 }
@@ -1665,7 +1665,7 @@
    Lehtipalstat (mk-palstat__kylki). */
 .mk-nosto__kuvakehys--nyky {
     border-width: 1px;
-    border-color: rgb(204, 196, 180);
+    border-color: rgb(204, 196, 180); /* väripoikkeus: lämmin sävy, lähin token neutraali harmaa tk-harmaa-muste-pehmea (ΔE 7.8) (Päätoimittaja 8.10.2026) */
     border-radius: var(--tk-kulma-keski);
 }
 
@@ -1679,7 +1679,7 @@
     padding: 0;
     font-size: 10.88px;
     white-space: normal;
-    color: rgb(80, 75, 68);
+    color: rgb(80, 75, 68); /* väripoikkeus: oma sävy, ΔE 8.7 ≥ 7 lähimpään (tk-paperi-muste-pehmea) (Päätoimittaja 8.10.2026) */
 }
 
 .mk-nosto__leikekirja {
@@ -1990,7 +1990,7 @@
 
 /* Web .nostosym-nimio-meri: versaali, harvennus 0,28 em (C#), rgba(120, 108, 84, 0,72) (merellä lineaarisena 0,8). */
 .mk-nosto-merkki__nimio--meri {
-    color: rgba(120, 108, 84, 0.8);
+    color: var(--tk-kuulto-sea-ink-80);
 }
 
 /* Viuhka (web .pallolauta-viuhka-pohja, VIUHKAN_POHJAN_VYOT): kehyksetön paperipohja, reuna pehmennetty
@@ -2101,7 +2101,7 @@
     letter-spacing: 7.99px; /* web 0.73px */
     color: var(--sea-ink);
     border-width: 1px;
-    border-color: rgb(196, 187, 171);
+    border-color: rgb(196, 187, 171); /* väripoikkeus: oma sävy, ΔE 7.6 ≥ 7 lähimpään (tk-tumma-muste-pehmea) (Päätoimittaja 8.10.2026) */
     border-radius: 3px;
     -unity-text-align: middle-center;
     white-space: nowrap;
@@ -2146,7 +2146,7 @@
     right: 0;
     bottom: 0;
     -unity-background-scale-mode: scale-and-crop;
-    -unity-background-image-tint-color: rgb(102, 96, 88);
+    -unity-background-image-tint-color: var(--sea-ink);
 }
 
 .mk-suurennos--kokoruutu .mk-nosto__suurennoskehys {

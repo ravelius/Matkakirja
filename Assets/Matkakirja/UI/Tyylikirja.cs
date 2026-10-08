@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde fc1c969a9232. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde f715b5ee07c0. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "fc1c969a9232";
+        public const string Lahde = "f715b5ee07c0";
 
         public static class Kehys
         {
@@ -114,23 +114,28 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Accent28 = new Color32(217, 161, 59, 71);
             public static readonly Color32 Accent30 = new Color32(217, 161, 59, 77);
             public static readonly Color32 Accent55 = new Color32(217, 161, 59, 140);
+            public static readonly Color32 Accent60 = new Color32(217, 161, 59, 153);
             public static readonly Color32 Accent75 = new Color32(217, 161, 59, 191);
             public static readonly Color32 Accent90 = new Color32(217, 161, 59, 230);
+            public static readonly Color32 Accent92 = new Color32(217, 161, 59, 235);
+            public static readonly Color32 Accent95 = new Color32(217, 161, 59, 242);
             public static readonly Color32 AccentDark14 = new Color32(138, 97, 20, 36);
             public static readonly Color32 AccentDark60 = new Color32(138, 97, 20, 153);
+            public static readonly Color32 AccentDark75 = new Color32(138, 97, 20, 191);
             public static readonly Color32 AccentDark90 = new Color32(138, 97, 20, 230);
             public static readonly Color32 AccentDark95 = new Color32(138, 97, 20, 242);
             public static readonly Color32 Bg85 = new Color32(29, 22, 16, 217);
             public static readonly Color32 HarmaaPinta100 = new Color32(130, 130, 130, 255);
-            public static readonly Color32 HimmennysTumma100 = new Color32(14, 9, 4, 255);
             public static readonly Color32 HimmennysTumma45 = new Color32(14, 9, 4, 115);
             public static readonly Color32 HimmennysTumma55 = new Color32(14, 9, 4, 140);
             public static readonly Color32 HimmennysTumma60 = new Color32(14, 9, 4, 153);
+            public static readonly Color32 HimmennysTumma100 = new Color32(14, 9, 4, 255);
             public static readonly Color32 InkLight18 = new Color32(243, 230, 208, 46);
             public static readonly Color32 InkLight35 = new Color32(243, 230, 208, 89);
             public static readonly Color32 InkLight50 = new Color32(243, 230, 208, 128);
             public static readonly Color32 Kerma55 = new Color32(250, 244, 214, 140);
             public static readonly Color32 Kerma70 = new Color32(250, 244, 214, 179);
+            public static readonly Color32 Kerma85 = new Color32(250, 244, 214, 217);
             public static readonly Color32 Kerma90 = new Color32(250, 244, 214, 230);
             public static readonly Color32 Kerma92 = new Color32(250, 244, 214, 235);
             public static readonly Color32 Kulta12 = new Color32(234, 184, 78, 31);
@@ -156,31 +161,39 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 LasiAvaruusMuste65 = new Color32(223, 246, 232, 166);
             public static readonly Color32 LasiAvaruusMuste70 = new Color32(223, 246, 232, 179);
             public static readonly Color32 LasiAvaruusMuste85 = new Color32(223, 246, 232, 217);
-            public static readonly Color32 LasiAvaruusPinta100 = new Color32(4, 12, 9, 255);
+            public static readonly Color32 LasiAvaruusMuste90 = new Color32(223, 246, 232, 230);
+            public static readonly Color32 LasiAvaruusMuste92 = new Color32(223, 246, 232, 235);
             public static readonly Color32 LasiAvaruusPinta25 = new Color32(4, 12, 9, 64);
             public static readonly Color32 LasiAvaruusPinta60 = new Color32(4, 12, 9, 153);
             public static readonly Color32 LasiAvaruusPinta72 = new Color32(4, 12, 9, 184);
             public static readonly Color32 LasiAvaruusPinta80 = new Color32(4, 12, 9, 204);
             public static readonly Color32 LasiAvaruusPinta86 = new Color32(4, 12, 9, 219);
+            public static readonly Color32 LasiAvaruusPinta100 = new Color32(4, 12, 9, 255);
             public static readonly Color32 LcdPinta92 = new Color32(12, 34, 20, 235);
+            public static readonly Color32 MapInkSoft60 = new Color32(138, 108, 70, 153);
             public static readonly Color32 Mark12 = new Color32(176, 58, 43, 31);
             public static readonly Color32 Mark22 = new Color32(176, 58, 43, 56);
             public static readonly Color32 Mark30 = new Color32(176, 58, 43, 77);
             public static readonly Color32 Mark45 = new Color32(176, 58, 43, 115);
-            public static readonly Color32 Musta100 = new Color32(0, 0, 0, 255);
             public static readonly Color32 Musta25 = new Color32(0, 0, 0, 64);
             public static readonly Color32 Musta50 = new Color32(0, 0, 0, 128);
             public static readonly Color32 Musta60 = new Color32(0, 0, 0, 153);
+            public static readonly Color32 Musta72 = new Color32(0, 0, 0, 184);
+            public static readonly Color32 Musta100 = new Color32(0, 0, 0, 255);
             public static readonly Color32 OverlayCard60 = new Color32(46, 33, 20, 153);
             public static readonly Color32 OverlayCard65 = new Color32(46, 33, 20, 166);
             public static readonly Color32 OverlayCard80 = new Color32(46, 33, 20, 204);
             public static readonly Color32 OverlayCard94 = new Color32(46, 33, 20, 240);
             public static readonly Color32 Panel294 = new Color32(53, 39, 26, 240);
             public static readonly Color32 Panel82 = new Color32(42, 31, 22, 209);
+            public static readonly Color32 Panel92 = new Color32(42, 31, 22, 235);
             public static readonly Color32 Paper62 = new Color32(239, 220, 180, 158);
             public static readonly Color32 Paper82 = new Color32(239, 220, 180, 209);
             public static readonly Color32 Paper90 = new Color32(239, 220, 180, 230);
             public static readonly Color32 PaperDark18 = new Color32(220, 192, 143, 46);
+            public static readonly Color32 PaperDark62 = new Color32(220, 192, 143, 158);
+            public static readonly Color32 PaperDark70 = new Color32(220, 192, 143, 179);
+            public static readonly Color32 PaperDark85 = new Color32(220, 192, 143, 217);
             public static readonly Color32 PaperiKorostus25 = new Color32(122, 85, 20, 64);
             public static readonly Color32 PaperiKorostus26 = new Color32(122, 85, 20, 66);
             public static readonly Color32 PaperiKorostus28 = new Color32(122, 85, 20, 71);
@@ -223,6 +236,7 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 PaperiPinta65 = new Color32(245, 240, 226, 166);
             public static readonly Color32 PaperiPinta70 = new Color32(245, 240, 226, 179);
             public static readonly Color32 PaperiPinta72 = new Color32(245, 240, 226, 184);
+            public static readonly Color32 PaperiPinta75 = new Color32(245, 240, 226, 191);
             public static readonly Color32 PaperiPinta80 = new Color32(245, 240, 226, 204);
             public static readonly Color32 PaperiPinta82 = new Color32(245, 240, 226, 209);
             public static readonly Color32 PaperiPinta85 = new Color32(245, 240, 226, 217);
@@ -230,6 +244,7 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 PaperiPinta90 = new Color32(245, 240, 226, 230);
             public static readonly Color32 PaperiPinta92 = new Color32(245, 240, 226, 235);
             public static readonly Color32 PaperiPinta94 = new Color32(245, 240, 226, 240);
+            public static readonly Color32 SeaInk80 = new Color32(110, 99, 80, 204);
             public static readonly Color32 TilaOnnistuminen16 = new Color32(47, 107, 63, 41);
             public static readonly Color32 TummaMuste10 = new Color32(241, 230, 208, 26);
             public static readonly Color32 TummaMuste18 = new Color32(241, 230, 208, 46);
@@ -256,12 +271,16 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Aikajana1A90 = new Color32(214, 96, 72, 230);
             public static readonly Color32 Aikajana2 = new Color32(240, 198, 118, 255);
             public static readonly Color32 Aikajana3 = new Color32(221, 208, 182, 255);
+            public static readonly Color32 AktiivinenOranssi = new Color32(168, 116, 26, 255);
             public static readonly Color32 Astro1A85 = new Color32(10, 24, 18, 217);
             public static readonly Color32 Astro1A90 = new Color32(10, 24, 18, 230);
             public static readonly Color32 Astro2A72 = new Color32(12, 16, 26, 184);
             public static readonly Color32 Astro3 = new Color32(150, 170, 160, 255);
             public static readonly Color32 Astro4 = new Color32(233, 199, 123, 255);
             public static readonly Color32 Astro4A60 = new Color32(233, 199, 123, 153);
+            public static readonly Color32 AstroValkoinen = new Color32(232, 237, 245, 255);
+            public static readonly Color32 AstroValkoinenA50 = new Color32(232, 237, 245, 128);
+            public static readonly Color32 AstroValkoinenA72 = new Color32(232, 237, 245, 184);
             public static readonly Color32 Elama1 = new Color32(168, 86, 26, 255);
             public static readonly Color32 Elama1A45 = new Color32(168, 86, 26, 115);
             public static readonly Color32 Elama2 = new Color32(217, 122, 43, 255);

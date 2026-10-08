@@ -53,7 +53,7 @@
     border-width: 0;
     border-radius: var(--tk-kulma-pieni);
     background-color: var(--lapinakyva);
-    color: #7a6a4a;
+    color: var(--sea-ink);
 }
 
 .mk-sahke-liuska__sulje:active {

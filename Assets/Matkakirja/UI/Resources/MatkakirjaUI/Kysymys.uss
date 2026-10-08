@@ -440,7 +440,7 @@
 
 .mk-kysymys__lahdelinkki {
     border-bottom-width: 1px;
-    border-color: rgba(122, 96, 57, 0.6);
+    border-color: var(--tk-kuulto-map-ink-soft-60);
 }
 
 /* --- hetkellinen viesti ja napit (menu, .lifeline, .primary) ---------------- */
@@ -921,7 +921,7 @@
     min-height: 48px;
     padding: 10.88px 35.2px;
     border-width: 1px;
-    border-color: rgba(228, 196, 128, 0.62);
+    border-color: var(--tk-kuulto-paper-dark-62);
     border-radius: 3px;
     background-color: var(--tk-kuulto-accent-16);
     color: var(--paper);
@@ -944,7 +944,7 @@
 
 .mk-paljastus--paikallis .mk-paljastus__jatka {
     background-color: var(--map-ink);
-    border-color: rgba(228, 196, 128, 0.7);
+    border-color: var(--tk-kuulto-paper-dark-70);
 }
 
 /* --- kaveriapu (web css/sahke.css 3: .sahke-apukortti, .quiz-option.sahke-veikattu) ------- */

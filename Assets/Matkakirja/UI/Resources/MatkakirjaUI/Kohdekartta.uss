@@ -381,7 +381,7 @@
     font-size: 9.6px;
     -unity-text-align: middle-center;
     white-space: normal;
-    color: #9d978a; /* web rgba(247, 239, 220, 0.62) pohjalla #0b0805 */
+    color: #9d978a; /* väripoikkeus: lämmin sävy, lähin token neutraali harmaa tk-harmaa-reunus (ΔE 8.6) (Päätoimittaja 8.10.2026) */ /* web rgba(247, 239, 220, 0.62) pohjalla #0b0805 */
 }
 
 .mk-kohdekartta-kokoruutu__kortti--levitetty .mk-kohdekartta-kokoruutu__selitteet,
@@ -426,7 +426,7 @@
 .mk-avauskortti__hero {
     flex-shrink: 0;
     overflow: hidden;
-    background-color: #d9ccb0;
+    background-color: var(--tk-paperi-pergamentti);
 }
 
 .mk-avauskortti__herokuva {
@@ -676,7 +676,7 @@
     border-width: 2px;
     border-color: var(--tk-paperi-pinta);
     border-radius: 9px;
-    background-color: #d9ccb0;
+    background-color: var(--tk-paperi-pergamentti);
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
