@@ -13,7 +13,7 @@ palvelu-kopio). Todennus Julkaisijan vuorolla: lokit/natiiviseppa-t7-todennus/t7
 Avoinna: MCP-simutyökalu näkee vain sisäisen sarjan; vanhojen sarjojen poisto omistajan Run-rivillä päivän käytön jälkeen.
 
 **JUNA 165 (ilta, iltapäivän työt; NUI:n mukaan Päätoimittaja kuittasi 08.0x):** NUI metro-kaksirivi 0484007f2 (⊇ 69e0b05ae) +
-NUI kasittely-veto cf66d2088 (⊇ 24d40fb9c, KUITATTU NUI:n mukaan; uusi Ydin/Seikkailu/KasittelyVeto.cs; Siirtosepän kytkentä historia-valot 10294000f erillisenä SHA:na); molemmat yhdistyvät
+NUI kasittely-veto cf66d2088 (⊇ 24d40fb9c, KUITATTU NUI:n mukaan; uusi Ydin/Seikkailu/KasittelyVeto.cs; Siirtosepän kytkentä historia-valot 10294000f erillisenä SHA:na) + NUI latauskuva 39d43932a (⊇ 7d366ce92; LATAUSKUVA-pohja, LatausLiike.cs, tyylikirja #4188; KUITATTU NUI:n mukaan); molemmat yhdistyvät
 juna-164:ään ilman ristiriitoja. JUNA 164 AIKAISTUI AAMUPÄIVÄÄN (Päätoimittaja 08.0x): esirunko ae7523be8 (+ Siirtoseppä ebd86fc24 ⊇ da5fdf62a, + T7 nohup-korjaus 09cdc7680,
 + kansio-.metat Vefects/VolumetricLights); odottaa LS1 611ea1781 -kuittausta → Julkaisijan NYT → käännös → TF sisäisille.
 
