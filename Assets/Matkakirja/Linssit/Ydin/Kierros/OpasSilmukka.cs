@@ -1168,6 +1168,7 @@ namespace Matkakirja.Linssit.Kierros
         public double LipumisVauhti { get; private set; }
         /// <summary>Lipumisen jarrutus lähdön valmistelussa (s): pelaajan valinta nopeammin.</summary>
         double LipumisJarru => korostusPika ? 0.5 : 1.0;
+        double LipumisSkaala => NykyinenKehys == null ? 1 : Math.Min(1, NykyinenKehys.EtaisyysM / OpasKuvaus.LipumisVertailuEtM);
         /// <summary>Lipumisen jarrutuksen aika (s): kuluu vasta, kun lähtö on muuten valmis (laatat).</summary>
         double jarruAika;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
@@ -1192,14 +1193,14 @@ namespace Matkakirja.Linssit.Kierros
                 if (kohti is (double klat, double klon) && lipumisKohti == null)
                 {
                     lipumisKohti = (klat, klon);   // suunta ja katto lukitaan ensimmäisestä tiedosta (esihaun vaihdos ei hyppää)
-                    lipumisKatto = Math.Min(OpasKuvaus.LipumisMaxM, OpasKuvaus.LipumisOsuus * KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, klat, klon));
+                    lipumisKatto = Math.Min(OpasKuvaus.LipumisMaxM, OpasKuvaus.LipumisOsuus * KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, klat, klon)) * LipumisSkaala;
                 }
                 if (lipumisKohti != null && !Ohjaus.Aktiivinen && !KameraSeis)
                 {
                     // Vauhti S-käyrällä ylös (LipumisAlkuS) ja lähdön valmistelussa S-käyrällä nollaan ennen lentoa (lento alkaa levosta).
                     lipumisAika += dt;
                     double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.LipumisAlkuS));
-                    LipumisVauhti = OpasKuvaus.LipumisNopeus * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, jarruAika / LipumisJarru)));
+                    LipumisVauhti = OpasKuvaus.LipumisNopeus * LipumisSkaala * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, jarruAika / LipumisJarru)));
                     lipumisRaaka += LipumisVauhti * dt;
                 }
                 // Katto tanh-käyränä + hidas ryömintä (LS2:n PalloKierrosTestit: pitkällä pysähdyksellä tanh vei vauhdin alle 0,2 m/s,

@@ -206,6 +206,30 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(vikoja.Count == 0, $"kehys liian kaukana: {string.Join("; ", vikoja)}");
         }
 
+        /// <summary>
+        /// 5 KEHYS EI KARKAA (omistaja TF 166, 18.3x "jää välillä liian kauas"; Linssiseppä): pysähdyksellä silmän etäisyys katsepisteeseen
+        /// enintään KarkaaMaxKerroin × saapumisen etäisyys. Ennen korjausta lipuminen kohti seuraavaa vei silmää poispäin kohteesta:
+        /// Madeleine 119 → 283 m, Riemukaari 107 → 239 m.
+        /// </summary>
+        public const double KarkaaMaxKerroin = 1.3;
+        [Testi] static void KehysEiKarkaaPysahdyksella()
+        {
+            var vikoja = new List<string>();
+            foreach (var verkko in Verkot)
+            {
+                var r = Aja(verkko);
+                for (int i = 0; i < Reitti.Length; i++)
+                {
+                    double alku = -1, maks = 0, maksT = 0;
+                    foreach (var x in r) if (x.Kohde == i && Pysahdyksella(x.Vaihe)) { if (alku < 0) alku = x.EtM; if (x.EtM > maks) { maks = x.EtM; maksT = x.T; } }
+                    if (alku < 0) continue;
+                    Console.WriteLine($"      {verkko} {Reitti[i].Id}: saapuessa {alku:F0} m, pysähdyksellä enintään {maks:F0} m (×{maks / alku:F2})");
+                    if (maks > KarkaaMaxKerroin * alku + 1) vikoja.Add($"{verkko} {Reitti[i].Id} {alku:F0} → {maks:F0} m @ {maksT:F1} s");
+                }
+            }
+            Oleta.Tosi(vikoja.Count == 0, $"kehys karkaa pysähdyksellä yli ×{KarkaaMaxKerroin}: {string.Join("; ", vikoja)}");
+        }
+
         static (double, double, double) V(List<Ruutu> r, int k) => ((r[k].E - r[k - 1].E) / Dt, (r[k].N - r[k - 1].N) / Dt, (r[k].U - r[k - 1].U) / Dt);
         static double Pit((double a, double b, double c) v) => Math.Sqrt(v.a * v.a + v.b * v.b + v.c * v.c);
         static (double, double, double) Ero((double a, double b, double c) x, (double a, double b, double c) y) => (x.a - y.a, x.b - y.b, x.c - y.c);
