@@ -124,13 +124,12 @@ namespace Matkakirja.Linssit.Testit
             foreach (var h in w.Hahmot) if (h.Aktiivinen && (h.Nimi == "ranta" || h.Nimi.StartsWith("seisoo-harja", StringComparison.Ordinal))) Oleta.Tosi(h.Aivot.Mittari < 0.3, $"{h.Nimi} ei epäile ({h.Aivot.Mittari:F2})");
         }
 
-        /// <summary>Kiinnijäänti eri kohdissa huonetta 6 (T6a…T6c; kohta 4.3): pelaaja palaa viimeisimpään tarkistuspisteeseen (portaalin
-        /// ylitys), kaikki ovat valppaina 60 s, ja ajuri pääsee silti kiipeilyn alkuun ilman uutta kiinnijääntiä. AVOIN (8.10.): kiinni
-        /// muuriportailla paluumatkalla (pelaaja-70 → tarkistus Tott-kammioon 66) jää jumiin torkkujan viereen (piiloton kammio, syöjän katse ja
-        /// vastaantulija); selvitetään, onko kyse ajurin rajasta vai tarkistuspisteen paikasta.</summary>
+        /// <summary>Kiinnijäänti eri kohdissa huoneita 6–8 (T6a…T8a; kohta 4.3): pelaaja palaa viimeisimpään tarkistuspisteeseen (portaalin
+        /// ylitys), kaikki ovat valppaina 60 s, ja ajuri pääsee silti kiipeilyn alkuun ilman uutta kiinnijääntiä (tarvittaessa odottaa
+        /// valppauden pois piilossa tai perääntyen: ThiefAjurin laaja haku).</summary>
         [Testi] static void KiinniTarkistuspisteeseenJaLoppuun()
         {
-            var kohdat = new[] { 44, 56 };   // Tott-kammio (torkkujan vieressä), voudin sali (huone 6)
+            var kohdat = new[] { 44, 56, 69, 83, 88 };   // Tott-kammio (torkkujan vieressä), voudin sali, muuriportaat, muurikäytävä, harja
             Oleta.Tosi(Koko().Loppu != null && Koko().Tilat.Count == KiipeilyAlku - MAlku, $"koko reitti ({Koko().Tilat.Count} tilaa)");
             foreach (int k in kohdat)
             {
