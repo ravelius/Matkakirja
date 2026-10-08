@@ -32,18 +32,18 @@ namespace Matkakirja.Natiivi
         public static ElavaKaupunki Nykyinen { get; private set; }
         public const float NakyvaM = 6000f, ParviNakyvaM = 1500f, PallotSadeM = 3500f, PalloLahinM = 400f;   // PT 22.35: muut pallot vähintään 400 m:n päässä kamerasta
         /// <summary>Paketit (id, origo): lisätään, kun tyokalut/elava_kaupunki.py on ajettu kaupungille.</summary>
-        static readonly (string Id, double Lat, double Lon, double SadeM)[] Paketit = { ("tukholma", 59.3299, 18.07382, 15000) };
+        static readonly (string Id, double Lat, double Lon, double SadeM)[] Paketit = { ("tukholma", 59.3299, 18.07382, 15000), ("pariisi", 48.86122, 2.35092, 15000) };
 
         static Material kohdeMat, vanaMat;
         static readonly Dictionary<int, Mesh> veneVerkot = new Dictionary<int, Mesh>(), vanaVerkot = new Dictionary<int, Mesh>();
-        static Mesh lokki, siipiO, siipiV;
+        static Mesh lokki, siipiO, siipiV, kyyhky, kSiipiO, kSiipiV;
         static readonly Dictionary<int, Mesh> palloVerkot = new Dictionary<int, Mesh>();
         MuutPallot pallot; Transform[] palloT; float maaM;
 
         VesiLiikenne liikenne;
         sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe; }
         readonly List<VeneOlio> veneet = new List<VeneOlio>();
-        sealed class ParviOlio { public Parvi P; public VesiLiikenne.ParviPaikka Paikka; public GameObject Juuri; public Transform[] Lokit, Vasen, Oikea; }
+        sealed class ParviOlio { public Parvi P; public VesiLiikenne.ParviPaikka Paikka; public GameObject Juuri; public Transform[] Lokit, Vasen, Oikea; public double Pinta = double.NaN; public float Haettu = -9f; }
         readonly List<ParviOlio> parvet = new List<ParviOlio>();
         Camera kamera;
         int kerros;
@@ -121,6 +121,7 @@ namespace Matkakirja.Natiivi
             kohdeMat = new Material(a != null ? a : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Elävä kohde", enableInstancing = true };
             vanaMat = b != null ? new Material(b) { name = "Elävä vana" } : null;
             lokki = Verkko(VeneMallit.LokinVartalo(), "Lokki"); siipiO = Verkko(VeneMallit.LokinSiipi(1), "Lokin siipi O"); siipiV = Verkko(VeneMallit.LokinSiipi(-1), "Lokin siipi V");
+            kyyhky = Verkko(VeneMallit.KyyhkynVartalo(), "Kyyhky"); kSiipiO = Verkko(VeneMallit.LokinSiipi(1, true), "Kyyhkyn siipi O"); kSiipiV = Verkko(VeneMallit.LokinSiipi(-1, true), "Kyyhkyn siipi V");
         }
 
         GameObject Olio(string nimi, Transform v, Mesh m, Material mat)
@@ -161,17 +162,19 @@ namespace Matkakirja.Natiivi
             int s = 1;
             foreach (var pp in liikenne.Parvet)
             {
-                var po = new ParviOlio { Paikka = pp, P = new Parvi(pp.Maara, pp.X, pp.Z, pp.Alue, 18 + 6 * (s % 3), 35 + 10 * (s % 2), 7 * s++) };
+                // Lokit vesien yllä 18–30 m:ssä; kyyhkyt aukioilla 6–12 m:ssä tiukemmissa kaarissa (maa omasta korkeusmallista, B2).
+                var po = new ParviOlio { Paikka = pp, P = pp.Kyyhky ? new Parvi(pp.Maara, pp.X, pp.Z, pp.Alue, 6 + 3 * (s % 3), 12 + 4 * (s % 2), 7 * s++)
+                    : new Parvi(pp.Maara, pp.X, pp.Z, pp.Alue, 18 + 6 * (s % 3), 35 + 10 * (s % 2), 7 * s++), Pinta = pp.Kyyhky ? double.NaN : pp.Vesi };
                 po.Juuri = new GameObject("lokit " + pp.Nimi) { layer = kerros };
                 po.Juuri.transform.SetParent(transform, false);
                 po.Lokit = new Transform[pp.Maara]; po.Vasen = new Transform[pp.Maara]; po.Oikea = new Transform[pp.Maara];
                 for (int j = 0; j < pp.Maara; j++)
                 {
-                    var g = Olio("lokki", po.Juuri.transform, lokki, kohdeMat);
+                    var g = Olio(pp.Kyyhky ? "kyyhky" : "lokki", po.Juuri.transform, pp.Kyyhky ? kyyhky : lokki, kohdeMat);
                     g.transform.localScale = Vector3.one * 1.6f;   // pallon etäisyydeltä erottuva (~1 m siipien kärkiväli × 1,6)
                     po.Lokit[j] = g.transform;
-                    po.Vasen[j] = Olio("siipi", g.transform, siipiV, kohdeMat).transform;
-                    po.Oikea[j] = Olio("siipi", g.transform, siipiO, kohdeMat).transform;
+                    po.Vasen[j] = Olio("siipi", g.transform, pp.Kyyhky ? kSiipiV : siipiV, kohdeMat).transform;
+                    po.Oikea[j] = Olio("siipi", g.transform, pp.Kyyhky ? kSiipiO : siipiO, kohdeMat).transform;
                 }
                 po.Juuri.SetActive(false);
                 parvet.Add(po);
@@ -233,12 +236,21 @@ namespace Matkakirja.Natiivi
             {
                 float dx = (float)p.Paikka.X - c.x, dz = (float)p.Paikka.Z - c.z;
                 bool nakyy = dx * dx + dz * dz < (ParviNakyvaM + (float)p.Paikka.Alue) * (ParviNakyvaM + (float)p.Paikka.Alue);
+                // Kyyhkyt: aukion maa omasta korkeusmallista (OpasSovitin.OmaMaa, ellipsoidi → paikallinen ENU: kaarevuuden lasku
+                // d²/2R); kunnes malli on muistissa, parvi on piilossa (haku kerran sekunnissa).
+                if (p.Paikka.Kyyhky && double.IsNaN(p.Pinta) && nakyy && Time.unscaledTime - p.Haettu > 1f)
+                {
+                    p.Haettu = Time.unscaledTime;
+                    double h = OpasSovitin.OmaMaa(p.Paikka.Lat, p.Paikka.Lon);
+                    if (!double.IsNaN(h)) p.Pinta = h - (p.Paikka.X * p.Paikka.X + p.Paikka.Z * p.Paikka.Z) / (2 * 6371000.0);
+                }
+                nakyy &= !double.IsNaN(p.Pinta);
                 if (p.Juuri.activeSelf != nakyy) p.Juuri.SetActive(nakyy);
                 if (!nakyy) continue;
                 p.P.Paivita(dt);
                 for (int j = 0; j < p.Lokit.Length; j++)
                 {
-                    p.Lokit[j].localPosition = new Vector3((float)p.P.X[j], (float)(p.Paikka.Vesi + p.P.Y[j]) + nosto, (float)p.P.Z[j]);
+                    p.Lokit[j].localPosition = new Vector3((float)p.P.X[j], (float)(p.Pinta + p.P.Y[j]) + (p.Paikka.Kyyhky ? 0f : nosto), (float)p.P.Z[j]);
                     p.Lokit[j].localRotation = Quaternion.Euler(0, (float)p.P.Suuntima[j], 0);
                     // Liito (Siipi 0,25) loivassa V:ssä 6°, lyönnit −20…+32°.
                     float siipi = 6f + 26f * Mathf.Sin(2f * Mathf.PI * ((float)p.P.Siipi[j] - 0.25f));

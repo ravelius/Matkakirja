@@ -18,7 +18,7 @@ namespace Matkakirja.Linssit.Elava
     public static class VeneMallit
     {
         public const float Syvays = 0.3f;
-        public static readonly string[] Tyypit = { "lautta", "pendelbat", "saaristolaiva", "hoyrylaiva", "kiertoajelu", "autolautta", "pikkulautta", "vene" };
+        public static readonly string[] Tyypit = { "lautta", "pendelbat", "saaristolaiva", "hoyrylaiva", "kiertoajelu", "autolautta", "pikkulautta", "vene", "jokilaiva" };
 
         static readonly byte[] Valkoinen = { 236, 236, 230, 255 }, Merensininen = { 28, 42, 70, 255 }, Musta = { 30, 30, 32, 255 },
             Ikkuna = { 40, 52, 62, 255 }, Kansi = { 150, 140, 125, 255 }, Puu = { 140, 98, 60, 255 }, Kelta = { 214, 170, 70, 255 },
@@ -147,6 +147,15 @@ namespace Matkakirja.Linssit.Elava
                     r.Laatikko(-5.6f, 2f, 0f, 1.6f, 2.6f, 34f, Kelta);
                     Rakennus(r, 4.6f, 0f, 12.8f, 2.6f, 4f, Valkoinen);
                     return r.Valmis(50, 13, 7.2f);
+                case "jokilaiva":   // Seinen jokilaiva (bateau-mouche, ~50 m): matala lasikatteinen salonki ja avoin yläkansi penkkiriveineen
+                    Runko(r, 50, 9, 1.2f, Valkoinen, Merensininen, Kansi);
+                    // Salonki vain rungon täyden leveyden kohdalla (keula kapenee t > 0,55 eli z > 2,5 m): z −22 … +8.
+                    r.Laatikko(0, 1.2f, -7f, 8.2f, 0.6f, 30f, Valkoinen);
+                    r.Laatikko(0, 1.8f, -7f, 8.26f, 1.4f, 30.06f, Ikkuna);
+                    r.Laatikko(0, 3.2f, -7f, 8.3f, 0.2f, 30.4f, Valkoinen);
+                    for (int i = 0; i < 7; i++) r.Laatikko(0, 3.4f, -19f + i * 4f, 7.2f, 0.5f, 0.8f, Punainen);   // penkkirivit
+                    r.Laatikko(0, 1.2f, 11f, 3.4f, 2.2f, 3f, Valkoinen);   // ohjaamo salongin edessä
+                    return r.Valmis(50, 9, 5.0f);
                 case "pikkulautta":   // pieni lautta tai yhteysvene (~16 m)
                     Runko(r, 16, 5, 1.2f, Valkoinen, Merensininen, Kansi);
                     Rakennus(r, 1.2f, -0.5f, 4f, 2.2f, 8f, Valkoinen);
@@ -240,6 +249,25 @@ namespace Matkakirja.Linssit.Elava
             r.Laatikko(0, -0.06f, 0, 0.12f, 0.12f, 0.45f, Valkoinen);
             r.Laatikko(0, 0.06f, 0.02f, 0.1f, 0.02f, 0.3f, Harmaa);
             return r.Valmis(0.45f, 0.12f, 0.14f);
+        }
+
+        /// <summary>Kyyhky (0,32 m, sinertävänharmaa, tummempi selkä); siivet LokinSiipi(puoli, true).</summary>
+        public static VeneVerkko KyyhkynVartalo()
+        {
+            var r = new Rakentaja();
+            byte[] harmaa = { 120, 128, 140, 255 }, tumma = { 80, 86, 96, 255 };
+            r.Laatikko(0, -0.05f, 0, 0.11f, 0.1f, 0.32f, harmaa);
+            r.Laatikko(0, 0.05f, 0.02f, 0.09f, 0.02f, 0.2f, tumma);
+            return r.Valmis(0.32f, 0.11f, 0.12f);
+        }
+
+        public static VeneVerkko LokinSiipi(int puoli, bool kyyhky)
+        {
+            if (!kyyhky) return LokinSiipi(puoli);
+            var r = new Rakentaja();
+            r.Laatikko(puoli * 0.25f, 0, 0, 0.5f, 0.015f, 0.13f, new byte[] { 110, 118, 130, 255 });
+            r.Laatikko(puoli * 0.45f, 0.016f, -0.02f, 0.1f, 0.004f, 0.08f, Musta);
+            return r.Valmis(0.5f, 0.13f, 0.02f);
         }
 
         public static VeneVerkko LokinSiipi(int puoli)

@@ -107,6 +107,43 @@ class Vesi:
         return None if paras is None else (paras[1], math.sqrt(paras[0]), paras[2])
 
 
+class Maski:
+    """Karttasepän vesimaski (8-bit PNG, 0 = maa): onko piste vedellä (3 × 3 naapurusto). Maan alla kulkevat kanavat (Pariisin
+    Voûte Richard Lenoir) ja laiturien yhdysviivat jäävät pois."""
+    def __init__(self, jsonp, pngp):
+        import zlib
+        j = json.load(open(jsonp))
+        self.ruutu = j["ruutu_m"]; self.w = j["leveys"]; self.h = j["korkeus"]; self.x0 = j["kulma_enu"]["x"]; self.y0 = j["kulma_enu"]["y"]
+        b = open(pngp, "rb").read(); i = 8; idat = b""
+        while i < len(b):
+            n = struct.unpack(">I", b[i:i + 4])[0]; t = b[i + 4:i + 8]
+            if t == b"IDAT": idat += b[i + 8:i + 8 + n]
+            i += 12 + n
+        raaka = zlib.decompress(idat); w = self.w; ed = bytearray(w); self.rivit = []
+        for y in range(self.h):
+            o = y * (w + 1); f = raaka[o]; rv = bytearray(raaka[o + 1:o + 1 + w])
+            if f == 1:
+                for x in range(1, w): rv[x] = (rv[x] + rv[x - 1]) & 255
+            elif f == 2:
+                for x in range(w): rv[x] = (rv[x] + ed[x]) & 255
+            elif f == 3:
+                for x in range(w): rv[x] = (rv[x] + ((rv[x - 1] if x else 0) + ed[x]) // 2) & 255
+            elif f == 4:
+                for x in range(w):
+                    a = rv[x - 1] if x else 0; c = ed[x - 1] if x else 0; u = ed[x]; pp = a + u - c
+                    pa, pb, pc = abs(pp - a), abs(pp - u), abs(pp - c)
+                    rv[x] = (rv[x] + (a if pa <= pb and pa <= pc else u if pb <= pc else c)) & 255
+            self.rivit.append(rv); ed = rv
+
+    def vesi(self, x, y):
+        i = int((x - self.x0) / self.ruutu); r = self.h - 1 - int((y - self.y0) / self.ruutu)
+        for dr in (-1, 0, 1):
+            for di in (-1, 0, 1):
+                rr, ii = r + dr, i + di
+                if 0 <= rr < self.h and 0 <= ii < self.w and self.rivit[rr][ii] > 0: return True
+        return False
+
+
 def main():
     kohde, osm, vesik, ulos = sys.argv[1:5]
     vesi = Vesi(f"{vesik}/{kohde}-6m.json", f"{vesik}/{kohde}-6m.bytes")
@@ -114,16 +151,34 @@ def main():
     reitit = json.load(open(f"{osm}/reitit-{kohde}.json"))
     o_osm = (kohteet["origo"]["lat"], kohteet["origo"]["lon"])
     m = muunnin(o_osm, vesi.origo)
+    maski = Maski(f"{osm}/vesi-{kohde}-maski.json", f"{osm}/vesi-{kohde}-maski.png")
+    mo = json.load(open(f"{osm}/vesi-{kohde}-maski.json"))["origo"]
+    mm = muunnin(vesi.origo, (mo["lat"], mo["lon"]))   # vesipinnan ENU → maskin ENU (yleensä sama origo)
     tulos, ohi = [], {"maalla": 0}
 
     def lisaa(t, nimi, p, kiertava=False):
         p = [m(x, y)[:2] for x, y in p]
-        for osa in leikkaa(tihenna(p), SADE_M):
+        # Vain vedellä olevat pätkät (maski): maan alla kulkevat kanavat ja laiturien yhdysviivat pois.
+        pp, osat = tihenna(p), []
+        nyt = []
+        for q in pp:
+            kk = vesi.korkeus(q[0], q[1])
+            # Vedellä: maski JA vesipinnan kärki lähellä (≤ 150 m) tai kärki avovedellä (rantaetäisyys ≥ 25 m); katettu kanava ei.
+            if maski.vesi(*mm(q[0], q[1])[:2]) and kk is not None and (kk[1] <= 150 or kk[2] >= 25): nyt.append(q)
+            elif nyt: osat.append(nyt); nyt = []
+        if nyt: osat.append(nyt)
+        for osa in [o2 for o in osat for o2 in leikkaa(o, SADE_M)]:
             if pituus(osa) < MIN_PITUUS_M: continue
             pisteet = []
             for x, y in osa:
                 k = vesi.korkeus(x, y)
                 pisteet.append([round(x, 1), round(y, 1), None if k is None else round(k[0], 2)])
+            # Vesipinnan virhekohdat (Pariisin kanavissa ~40 m liian matalalla): yli 8 m reitin mediaanista → ei tunnettu (sulut 2–3 m).
+            tk = sorted(q[2] for q in pisteet if q[2] is not None)
+            if tk:
+                med = tk[len(tk) // 2]
+                for q in pisteet:
+                    if q[2] is not None and abs(q[2] - med) > 8: q[2] = None; ohi["virhe"] = ohi.get("virhe", 0) + 1
             tunnetut = [q[2] for q in pisteet if q[2] is not None]
             if len(tunnetut) < len(pisteet) * 0.6: ohi["maalla"] += 1; continue
             # Laiturin päät ja kapeat kohdat: puuttuva korkeus lähimmästä tunnetusta.
@@ -142,7 +197,9 @@ def main():
         if t: lisaa(t, l.get("n"), l["p"])
     for w in reitit["kerrokset"].get("vesivaylat", []):
         if min(math.hypot(*q) for q in w["p"]) > KANAVA_SADE_M: continue
-        lisaa("vene", w.get("n"), w["p"])
+        n = w.get("n") or ""
+        # Pariisi: Seinellä jokilaivat (bateaux-mouches), kanavissa pikkuveneet.
+        lisaa("jokilaiva" if n.startswith("La Seine") and "Bras" not in n else "vene", w.get("n"), w["p"])
 
     # Lokkiparvet: nimetyt vesialueet keskustan lähellä (rengas: keskipiste) ja reittien varret satamissa.
     parvet = []
@@ -160,6 +217,23 @@ def main():
         if koko < 120: continue   # lammet ja suihkualtaat pois
         parvet.append({"nimi": a.get("n"), "x": round(x, 1), "z": round(y, 1), "vesi": round(k[0], 2),
                        "alue": round(min(400, koko * 0.8)), "maara": 10 if koko > 300 else 6})
+    # Kyyhkyt (B2): suurimmat nimetyt aukiot 5 km:n sisällä (ei pysäköintejä); maa ajonaikana omasta korkeusmallista (lat, lon).
+    aukiot = []
+    for a in kohteet["kerrokset"].get("aukiot", []):
+        pts = a.get("rengas"); n = a.get("n") or ""
+        if not pts or not n or "arking" in n: continue
+        ala = abs(sum(x1 * y2 - x2 * y1 for (x1, y1), (x2, y2) in zip(pts, pts[1:]))) / 2
+        cx = sum(q[0] for q in pts) / len(pts); cy = sum(q[1] for q in pts) / len(pts)
+        x, y, _ = m(cx, cy)
+        if ala < 5000 or math.hypot(x, y) > 5000: continue
+        aukiot.append((ala, n, x, y))
+    aukiot.sort(reverse=True)
+    lat0, lon0 = vesi.origo
+    for ala, n, x, y in aukiot[:14]:
+        if any(math.hypot(x - q["x"], y - q["z"]) < 250 for q in parvet if q.get("laji") == "kyyhky"): continue
+        parvet.append({"nimi": n, "laji": "kyyhky", "x": round(x, 1), "z": round(y, 1),
+                       "lat": round(lat0 + y / 111132.0, 6), "lon": round(lon0 + x / (111320.0 * math.cos(math.radians(lat0))), 6),
+                       "alue": round(min(80, math.sqrt(ala) * 0.4)), "maara": 12 if ala > 15000 else 8})
     json.dump({"kohde": kohde, "origo": {"lat": vesi.origo[0], "lon": vesi.origo[1], "ellipsoidikorkeus_m": 0},
                "koordinaatit": "ENU metreinä origossa [x itä, z pohjoinen, y vesipinnan korkeus]; y omasta vesipinnasta, ei Googlen laatoista",
                "krediitti": "© OpenStreetMap contributors (ODbL); vesi: ESA WorldCover 2021 (CC BY 4.0)",

@@ -2259,6 +2259,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Ladatun mallin krediitti (Lähteet): viimeksi käytetyn kaupungin.</summary>
         public static string OmaKorkeusKrediitti { get; private set; }
 
+        /// <summary>Pinnan ellipsoidikorkeus ladatusta omasta mallista (elävän kaupungin kyyhkyt); NaN, jos mallia ei ole muistissa.</summary>
+        public static double OmaMaa(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && korkeusMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
+        }
+
         static string KorkeusId(double lat, double lon)
         {
             string paras = null; double lahin = double.MaxValue;

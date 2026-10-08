@@ -16,9 +16,11 @@ namespace Matkakirja.Linssit.Elava
         {
             ["lautta"] = (4.5, 700), ["pendelbat"] = (6.5, 2500), ["saaristolaiva"] = (6.5, 3500), ["hoyrylaiva"] = (5.0, 6000),
             ["kiertoajelu"] = (3.5, 900), ["autolautta"] = (4.0, 2500), ["pikkulautta"] = (3.5, 1500), ["vene"] = (4.0, 450),
+            ["jokilaiva"] = (3.5, 1100),
         };
 
-        public sealed class ParviPaikka { public string Nimi; public double X, Z, Vesi, Alue; public int Maara; }
+        /// <summary>Parven paikka: lokit vesillä (Vesi = pinnan korkeus), kyyhkyt aukioilla (Laji "kyyhky", maa ajonaikana Lat/Lon:sta).</summary>
+        public sealed class ParviPaikka { public string Nimi, Laji; public double X, Z, Vesi, Alue, Lat, Lon; public int Maara; public bool Kyyhky => Laji == "kyyhky"; }
 
         public readonly ReittiLiike Liike = new ReittiLiike();
         /// <summary>Reitin (Liike.Reitit-indeksi) tyyppi VeneMallit.Tyypit-indeksinä.</summary>
@@ -70,7 +72,8 @@ namespace Matkakirja.Linssit.Elava
             foreach (var po in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "parvet")))
             {
                 var p = MiniJson.Objekti(po);
-                v.Parvet.Add(new ParviPaikka { Nimi = MiniJson.Teksti(p, "nimi"), X = MiniJson.Luku(p, "x") ?? 0, Z = MiniJson.Luku(p, "z") ?? 0,
+                v.Parvet.Add(new ParviPaikka { Nimi = MiniJson.Teksti(p, "nimi"), Laji = MiniJson.Teksti(p, "laji") ?? "lokki", Lat = MiniJson.Luku(p, "lat") ?? double.NaN,
+                    Lon = MiniJson.Luku(p, "lon") ?? double.NaN, X = MiniJson.Luku(p, "x") ?? 0, Z = MiniJson.Luku(p, "z") ?? 0,
                     Vesi = MiniJson.Luku(p, "vesi") ?? 0, Alue = MiniJson.Luku(p, "alue") ?? 200, Maara = (int)(MiniJson.Luku(p, "maara") ?? 8) });
             }
             return v;
