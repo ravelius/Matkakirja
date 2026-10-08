@@ -35,6 +35,19 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 08.14 — JUNA 165 -EHDOKAS historia-valot @ 10294000f; M-OSA historia-m @ b50de441
+
+- Juna 165 (kuittauspyyntö kun 164 mennyt): LS2 kappelin Ydin KappelinArvoitus + kytkentä 950532c9, saumat piiloon kun alttarikynttilä palaa
+  (E3 rivi 110), NUI Käsittele käsin -syöte 24d40fb9 + SeikkailuKasittely (tyrmän ovi vedolla 60°, nopea narahtaa; Mac vasen + hiiri,
+  peliohjain X + oikea sauva; lyhyt painallus = napautus). 912/912, unity-tarkistus 0.
+- M-osa b50de441: + käsittely muurikäytävän oveen ja arkun kilpiin, repliikkipaikat SoitaTaiVara-kutsuin (lista PT:lle 37006d6a:sta:
+  kiista-vouti-hoitaja, apulainen-kuka-1…3, vartija-kello-1, vartija-kiipeilija-1, vartija-kurkistus-1, ranta-soihtu-1, ranta-vartija-1,
+  soutaja-pako-1/2; kappelin valinnaiset vouti-epaily-1, vouti-ote-1 kytkemättä). PT teettää käsikirjoituksen 12.10 jälkeen.
+- Omistaja: linna nykyasussaan → bastioni B ja Kellobastionin rajaus PERUTTU; huone 2 ennallaan; pakon köysilaskun kohta voi siirtyä (LR kertoo).
+- LS2 tekee M-ytimien satunnais- ja rajatestit ja SeikkailuPako-ytimen (saa muuttaa SeikkailuPako.cs ja SeikkailuKomero.cs).
+- Siivous 8.10.: worktreet aani ja l149 poistettu, lokien vanhat .app-kopiot pois (~1,9 Gt). Simuohje: T7-sarja (simusarja.sh), omia
+  ajoskriptejä (tyokalut/siirtoseppa-ajot, 83 kpl xcrun simctl) EI vielä päivitetty, koska simua ei ajeta ennen junaa; päivitä ennen seuraavaa ajoa.
+
 ## TILA 8.10. 08.00 — JUNA 164 = ebd86fc24 (Natiivisepän esirunko 7c73c995c); M-OSA historia-m @ cab21544
 
 - Juna 164: ebd86fc24 = da5fdf62a + Natiivisepän Vefects/VolumetricLights.meta (samat GUIDit, d40ab72ff) + rannan soihtuvartijat piiloon
