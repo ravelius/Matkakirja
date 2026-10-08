@@ -1,0 +1,295 @@
+{
+ "huone": "laituri",
+ "malli": "eleven_v4",
+ "repliikit": [
+  {
+   "puhuja": "Soutaja",
+   "teksti": "Kaikki tulee vesitse: kivi, kalkki, kala ja vouti. Ilman venettä tämä linna olisi pelkkä kivikasa saaressa."
+  },
+  {
+   "puhuja": "Renki",
+   "teksti": "Isoisä souti kiveä, kun linnaa rakennettiin. Proomuissa istui toista kymmentä haarniskamiestä vahdissa."
+  },
+  {
+   "puhuja": "Soutaja",
+   "teksti": "Ja tänään vouti kysyi, onko joku vienyt jotain veneellä yli salmen. Kukaan ei ole vienyt mitään – paitsi minun hermoni."
+  }
+ ],
+ "puhujat": [
+  {
+   "puhuja": "Soutaja",
+   "voice_id": "wocshSIDGCqslHrj4bVd",
+   "rivi": 0,
+   "alku_s": 0.03,
+   "loppu_s": 9.55,
+   "sanat": [
+    {
+     "sana": "Kaikki",
+     "alku_s": 0.03,
+     "loppu_s": 0.43
+    },
+    {
+     "sana": "tulee",
+     "alku_s": 0.51,
+     "loppu_s": 0.75
+    },
+    {
+     "sana": "vesitse:",
+     "alku_s": 0.83,
+     "loppu_s": 1.95
+    },
+    {
+     "sana": "kivi,",
+     "alku_s": 2.03,
+     "loppu_s": 2.67
+    },
+    {
+     "sana": "kalkki,",
+     "alku_s": 2.71,
+     "loppu_s": 3.55
+    },
+    {
+     "sana": "kala",
+     "alku_s": 3.59,
+     "loppu_s": 3.95
+    },
+    {
+     "sana": "ja",
+     "alku_s": 4.11,
+     "loppu_s": 4.19
+    },
+    {
+     "sana": "vouti.",
+     "alku_s": 4.27,
+     "loppu_s": 4.83
+    },
+    {
+     "sana": "Ilman",
+     "alku_s": 5.47,
+     "loppu_s": 5.79
+    },
+    {
+     "sana": "venettä",
+     "alku_s": 5.91,
+     "loppu_s": 6.27
+    },
+    {
+     "sana": "tämä",
+     "alku_s": 6.31,
+     "loppu_s": 6.51
+    },
+    {
+     "sana": "linna",
+     "alku_s": 6.59,
+     "loppu_s": 6.83
+    },
+    {
+     "sana": "olisi",
+     "alku_s": 6.91,
+     "loppu_s": 7.15
+    },
+    {
+     "sana": "pelkkä",
+     "alku_s": 7.23,
+     "loppu_s": 7.55
+    },
+    {
+     "sana": "kivikasa",
+     "alku_s": 7.63,
+     "loppu_s": 8.27
+    },
+    {
+     "sana": "saaressa.",
+     "alku_s": 8.31,
+     "loppu_s": 9.55
+    }
+   ]
+  },
+  {
+   "puhuja": "Renki",
+   "voice_id": "M5M01S43Sb00tnajCRvZ",
+   "rivi": 1,
+   "alku_s": 9.55,
+   "loppu_s": 16.75,
+   "sanat": [
+    {
+     "sana": "Isoisä",
+     "alku_s": 9.55,
+     "loppu_s": 10.03
+    },
+    {
+     "sana": "souti",
+     "alku_s": 10.11,
+     "loppu_s": 10.43
+    },
+    {
+     "sana": "kiveä,",
+     "alku_s": 10.47,
+     "loppu_s": 10.99
+    },
+    {
+     "sana": "kun",
+     "alku_s": 11.043,
+     "loppu_s": 11.15
+    },
+    {
+     "sana": "linnaa",
+     "alku_s": 11.27,
+     "loppu_s": 11.55
+    },
+    {
+     "sana": "rakennettiin.",
+     "alku_s": 11.59,
+     "loppu_s": 12.91
+    },
+    {
+     "sana": "Proomuissa",
+     "alku_s": 13.03,
+     "loppu_s": 13.47
+    },
+    {
+     "sana": "istui",
+     "alku_s": 13.55,
+     "loppu_s": 13.87
+    },
+    {
+     "sana": "toista",
+     "alku_s": 13.95,
+     "loppu_s": 14.19
+    },
+    {
+     "sana": "kymmentä",
+     "alku_s": 14.27,
+     "loppu_s": 14.67
+    },
+    {
+     "sana": "haarniskamiestä",
+     "alku_s": 14.75,
+     "loppu_s": 15.51
+    },
+    {
+     "sana": "vahdissa.",
+     "alku_s": 15.55,
+     "loppu_s": 16.75
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Soutaja",
+   "voice_id": "wocshSIDGCqslHrj4bVd",
+   "rivi": 2,
+   "alku_s": 16.75,
+   "loppu_s": 26.11,
+   "sanat": [
+    {
+     "sana": "Ja",
+     "alku_s": 16.75,
+     "loppu_s": 16.83
+    },
+    {
+     "sana": "tänään",
+     "alku_s": 16.91,
+     "loppu_s": 17.23
+    },
+    {
+     "sana": "vouti",
+     "alku_s": 17.31,
+     "loppu_s": 17.63
+    },
+    {
+     "sana": "kysyi,",
+     "alku_s": 17.71,
+     "loppu_s": 18.51
+    },
+    {
+     "sana": "onko",
+     "alku_s": 18.59,
+     "loppu_s": 18.83
+    },
+    {
+     "sana": "joku",
+     "alku_s": 18.91,
+     "loppu_s": 19.07
+    },
+    {
+     "sana": "vienyt",
+     "alku_s": 19.15,
+     "loppu_s": 19.47
+    },
+    {
+     "sana": "jotain",
+     "alku_s": 19.55,
+     "loppu_s": 19.87
+    },
+    {
+     "sana": "veneellä",
+     "alku_s": 19.95,
+     "loppu_s": 20.51
+    },
+    {
+     "sana": "yli",
+     "alku_s": 20.55,
+     "loppu_s": 20.75
+    },
+    {
+     "sana": "salmen.",
+     "alku_s": 20.83,
+     "loppu_s": 21.47
+    },
+    {
+     "sana": "Kukaan",
+     "alku_s": 22.11,
+     "loppu_s": 22.51
+    },
+    {
+     "sana": "ei",
+     "alku_s": 22.55,
+     "loppu_s": 22.59
+    },
+    {
+     "sana": "ole",
+     "alku_s": 22.67,
+     "loppu_s": 22.83
+    },
+    {
+     "sana": "vienyt",
+     "alku_s": 22.883,
+     "loppu_s": 23.15
+    },
+    {
+     "sana": "mitään",
+     "alku_s": 23.23,
+     "loppu_s": 23.71
+    },
+    {
+     "sana": "–",
+     "alku_s": 24.27,
+     "loppu_s": 24.31
+    },
+    {
+     "sana": "paitsi",
+     "alku_s": 24.35,
+     "loppu_s": 24.75
+    },
+    {
+     "sana": "minun",
+     "alku_s": 24.83,
+     "loppu_s": 25.07
+    },
+    {
+     "sana": "hermoni.",
+     "alku_s": 25.15,
+     "loppu_s": 26.11
+    }
+   ],
+   "tauko_s": 0.0
+  }
+ ],
+ "raaka_mean_dB": -17.7,
+ "mean_dB": -17.5,
+ "max_dB": -1.0,
+ "LUFS": -16.9,
+ "kesto_s": 26.03,
+ "esivara_siirto_s": 0.03
+}

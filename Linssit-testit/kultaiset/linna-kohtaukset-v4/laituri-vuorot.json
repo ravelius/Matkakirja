@@ -1,0 +1,26 @@
+{
+ "huone": "laituri",
+ "tiedosto": "laituri-keskustelu.mp3",
+ "kesto_s": 26.03,
+ "vuorot": [
+  {
+   "puhuja": "soutaja",
+   "alku_s": 0.03,
+   "loppu_s": 8.98,
+   "teksti": "Kaikki tulee vesitse: kivi, kalkki, kala ja vouti. Ilman venettä tämä linna olisi pelkkä kivikasa saaressa."
+  },
+  {
+   "puhuja": "renki",
+   "alku_s": 9.6,
+   "loppu_s": 16.14,
+   "teksti": "Isoisä souti kiveä, kun linnaa rakennettiin. Proomuissa istui toista kymmentä haarniskamiestä vahdissa."
+  },
+  {
+   "puhuja": "soutaja",
+   "alku_s": 16.78,
+   "loppu_s": 25.76,
+   "teksti": "Ja tänään vouti kysyi, onko joku vienyt jotain veneellä yli salmen. Kukaan ei ole vienyt mitään – paitsi minun hermoni."
+  }
+ ],
+ "esivara_siirto_s": 0.03
+}

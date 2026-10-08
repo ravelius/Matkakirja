@@ -1,0 +1,26 @@
+{
+ "huone": "muurinharja",
+ "tiedosto": "muurinharja-keskustelu.mp3",
+ "kesto_s": 28.54,
+ "vuorot": [
+  {
+   "puhuja": "vartija",
+   "alku_s": 0.06,
+   "loppu_s": 6.11,
+   "teksti": "Tuuli viiltää, ja silti täällä harjalla ei nukuta. Itäraja on lähempänä kuin luulisi."
+  },
+  {
+   "puhuja": "talonpoika",
+   "alku_s": 6.99,
+   "loppu_s": 17.72,
+   "teksti": "Minä seisoin tällä samalla harjalla vuonna tuhatneljäsataayhdeksänkymmentäviisi, kun ne tulivat. Kiviä ja nuolia alas, ja piiritysportaat perään."
+  },
+  {
+   "puhuja": "vartija",
+   "alku_s": 18.65,
+   "loppu_s": 28.28,
+   "teksti": "Silloin vouti Kylliäinen komensi kuin olisi syntynyt haarniska päällä. Nykyisestä voudista en tiedä – se etsii jotain kaikista kolmesta tornista."
+  }
+ ],
+ "esivara_siirto_s": 0.06
+}
