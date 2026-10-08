@@ -39,6 +39,7 @@ Shader "Matkakirja/Linssit/IlmakehaTaivas"
                 // Pallon pilvikerros (raportin kohta 6a, kytkin "pilvet"): esikerrottu radianssi kiekon ja taivaan päälle.
                 float4 pilvi = IlmPilviKerros(d);
                 L = L * (1.0 - pilvi.a) + pilvi.rgb;
+                L += IlmSateenkaari(d) * (1.0 - pilvi.a);   // kuuron jälkeen, pilvien takana ei näy
                 float3 c = IlmSavytys(L * _IlmParam.y);
                 half3 vanha = lerp(_TaivasHorisontti.rgb, _TaivasLaki.rgb, (half)saturate(d.y * 2.0));
                 float3 ulos = lerp((float3)vanha, c, _IlmParam.w);

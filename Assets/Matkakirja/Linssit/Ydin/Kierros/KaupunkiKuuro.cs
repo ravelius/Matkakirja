@@ -25,6 +25,16 @@ namespace Matkakirja.Linssit.Kierros
         public static double Peitto(double perus) => perus + (0.95 - perus) * Math.Max(0, Math.Min(1, Voima));
         /// <summary>Pilvien tummuus 0–1 (valo kertoimella 1 − 0,6 × tummuus).</summary>
         public static double Tummuus => 0.6 * Math.Max(0, Math.Min(1, Voima));
+        /// <summary>Sateenkaaren voimakkuus 0–1 (omistaja 9.10.: "pala sateenkaarta jonnekin, säästeliäästi"): vain kuuron jälkeen (sade
+        /// loppunut, kadut vielä märät) ja auringon ollessa 3–40° (kaari 42° vastapäätä aurinkoa jää muuten horisontin alle).</summary>
+        public static double Sateenkaari(double aurinkoAst)
+        {
+            double v = Math.Max(0, Math.Min(1, Voima));
+            if (v >= 0.15 || Markyys < 0.25) return 0;
+            return S(0.25, 0.6, Markyys) * (1 - v / 0.15) * S(3, 6, aurinkoAst) * (1 - S(35, 40, aurinkoAst));
+        }
+        static double S(double a, double b, double x) { double t = Math.Max(0, Math.Min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
+
         /// <summary>Kuvapareille (asetus "markyys 0–1"): märkyys suoraan.</summary>
         public static void AsetaMarkyys(double m) => Markyys = Math.Max(0, Math.Min(1, m));
         /// <summary>Testeille ja kaupungin vaihtoon: kuiva ja ei kuuroa.</summary>

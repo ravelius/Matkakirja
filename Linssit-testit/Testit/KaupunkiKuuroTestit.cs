@@ -58,5 +58,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Contains("kipina"), "välke");
             Oleta.Tosi(V("IlmakehaLaatat.shader").Contains("_IlmSaa.x"), "märät kadut");
         }
+
+        [Testi] static void SateenkaariVainKuuronJalkeen()
+        {
+            KaupunkiKuuro.Nollaa();
+            Oleta.Sama(0.0, KaupunkiKuuro.Sateenkaari(20), "kuiva: ei kaarta");
+            KaupunkiKuuro.Voima = 1; KaupunkiKuuro.AsetaMarkyys(1);
+            Oleta.Sama(0.0, KaupunkiKuuro.Sateenkaari(20), "sataa vielä: ei kaarta");
+            KaupunkiKuuro.Voima = 0;
+            Oleta.Sama(1.0, KaupunkiKuuro.Sateenkaari(20), "sade loppui, märkää, aurinko 20°");
+            Oleta.Sama(0.0, KaupunkiKuuro.Sateenkaari(45), "aurinko liian korkealla: kaari horisontin alla");
+            Oleta.Sama(0.0, KaupunkiKuuro.Sateenkaari(1), "aurinko laskee");
+            KaupunkiKuuro.AsetaMarkyys(0.2);
+            Oleta.Sama(0.0, KaupunkiKuuro.Sateenkaari(20), "kuivunut: ei kaarta");
+            KaupunkiKuuro.Nollaa();
+            string t = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "IlmakehaTaivas.shader"));
+            Oleta.Tosi(t.Contains("IlmSateenkaari(d)"), "taivas piirtää kaaren");
+        }
 }
 }

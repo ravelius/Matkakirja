@@ -16,7 +16,7 @@ float4 _IlmPilviParam;  // x peitto 0–1, y varjon voima, z jakso m (uv1), w pi
 float4 _IlmTuuli;       // xy pilvikentän siirtymä m (tuuli × aika)
 float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala), y kauko-udun kerroin (≥ 1; KaupunkiIlmakeha.KaukoUtu)
 float4 _IlmPilviKerros; // x pilvikerros 0/1 (KaupunkiIlmakeha.Pilvet), y pohja m, z paksuus m (pallon pilvet, raportin kohta 6a)
-float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot), z aamusumu veden yllä 0–1
+float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot), z aamusumu veden yllä 0–1, w sateenkaari 0–1
 
 static const float IlmR = 6360.0, IlmRT = 6460.0, IlmApKm = 200.0;
 
@@ -137,5 +137,21 @@ float4 IlmPilviKerros(float3 d)
 }
 
 float3 IlmSavytys(float3 x) { return 1.0 - exp(-x); }
+
+/// SATEENKAARI (Ydin KaupunkiKuuro.Sateenkaari, _IlmSaa.w): pääkaari 40,6–42,4° vastapäätä aurinkoa, punainen ulkona, violetti sisällä;
+/// vain pala kaaresta (kulma kaaren ympäri), hento, horisontin yläpuolella. Palauttaa radianssin lisäyksen (auringon irradianssi 1).
+float3 IlmSateenkaari(float3 d)
+{
+    if (_IlmSaa.w <= 0.001) return 0;
+    float3 anti = -_IlmAurinko.xyz;
+    float kulma = degrees(acos(clamp(dot(d, anti), -1.0, 1.0)));
+    float b = (kulma - 40.6) / 1.8;   // 0 violetti … 1 punainen
+    float maski = smoothstep(0.0, 0.15, b) * (1.0 - smoothstep(0.85, 1.0, b));
+    float3 vari = float3(smoothstep(0.45, 0.95, b), 1.0 - abs(b - 0.5) * 2.0, 1.0 - smoothstep(0.05, 0.55, b));
+    float3 oikea = normalize(cross(anti, float3(0, 1, 0)) + 1e-5), ylos = cross(oikea, anti);
+    float ymp = atan2(dot(d, ylos), dot(d, oikea));   // kulma kaaren ympäri
+    float pala = smoothstep(0.15, 0.55, sin(ymp * 0.9 + 0.8));
+    return vari * maski * pala * step(0.0, d.y) * _IlmSaa.w * 0.06;
+}
 
 #endif
