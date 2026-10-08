@@ -8,10 +8,11 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 ## 8.10. klo 11.0x: OLAVINLINNAN LATAUSKUVA (omistaja hyväksyi 10.5x) — ODOTTAA KUVIA
 
-Sisältökirjuri tilaa Codexilta kerrokset (tausta linna 1499 ilman lippua, lippu alfalla, valinnainen usva; 3 rajausta; lipun
-kiinnityspiste ja tangon nuppi/juuri pikseleinä). Kun polut tulevat: DioraamaTaulu nimiruutu (mk-astroavaus) → Latauskuva-pohja
-nimiOtsikon alle (Juuri ensimmäiseksi lapseksi), tausta TaustaLahentyy (Ken Burns), lippu Kerros ±0,6° / 7,5 s kääntö tangon
-juuresta, naru Koysi (Riippuma ~0,03); sovitus LatausLiike.Peita + kierto kuten pallossa. Ilman kuvia musta kuten nyt.
+Sisältökirjuri tilaa Codexilta kerrokset (PÄIVITETTY Päätoimittaja 8.10.): tausta (linna 1499, salmi, ilman venettä; valinnainen
+1499-viiri taustassa, EI sinikeltaista eikä Suomen lippua), VENE alfalla (kääntöpiste kölin keskeltä pikseleinä), valinnainen usva;
+3 rajausta. Kun polut tulevat: DioraamaTaulu nimiruutu (mk-astroavaus) → Latauskuva-pohja nimiOtsikon alle, tausta TaustaLahentyy
+(Ken Burns), vene Kerros keinunta ±0,6° ja nousu 2–3 pt, jakso 7–8 s (kääntö kölistä), usva ±0,5° / 3 pt / 8 s; sovitus
+LatausLiike.Peita + kierto kuten pallossa. Ilman kuvia musta kuten nyt.
 Omistaja: mustat palkit korjautuneet ainakin iPhonessa (39d43932a).
 
 ## TILA 8.10. klo 10.xx (JATKA TÄSTÄ)
