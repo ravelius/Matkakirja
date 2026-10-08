@@ -66,6 +66,19 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 // Pilvien varjot: kenttä auringon suunnassa pisteen yllä, häipyy auringon laskiessa.
                 float varjo = IlmPilvi(v.w * m) * _IlmPilviParam.y * saturate(_IlmAurinko.y * 4.0);
                 c *= 1.0 - varjo;
+                // MÄRÄT KADUT (Ydin KaupunkiKuuro.Markyys; omistaja TF 168): ylöspäin osoittavat pinnat (geometrian normaali derivaatoista,
+                // Googlen laatoissa ei normaaleja) tummuvat ja heijastavat taivasta Fresnelillä; lätäköt kohinasta 3 m:n mittakaavassa.
+                if (_IlmSaa.x > 0.001)
+                {
+                    float3 n = normalize(cross(ddy(v.w), ddx(v.w))); n *= sign(n.y + 1e-4);
+                    float ylos = smoothstep(0.8, 0.95, n.y);
+                    float2 lc = floor(v.w.xz * m / 3.0); float latakko = frac(sin(dot(lc, float2(12.9898, 78.233))) * 43758.5453);
+                    float mark = _IlmSaa.x * ylos * (0.6 + 0.4 * latakko);
+                    float3 dv = kohti / max(1e-4, length(kohti)), r = reflect(dv, float3(0, 1, 0));
+                    float fres = 0.02 + 0.98 * pow(1.0 - saturate(-dv.y), 5.0);
+                    c *= 1.0 - 0.35 * mark;
+                    c = lerp(c, IlmSavytys(IlmTaivas(r) * _IlmParam.y), saturate(fres * mark * 0.8));
+                }
                 // Ilmaperspektiivi: läpäisy kanavittain ja sironta (valotus ja sävytys kuten taivaassa), voimalla A/B.
                 float3 sironta, lapaisy; IlmIlmaperspektiivi(etM, kohti / max(1e-4, length(kohti)), sironta, lapaisy);
                 float3 ap = c * lapaisy + IlmSavytys(sironta * _IlmParam.y);

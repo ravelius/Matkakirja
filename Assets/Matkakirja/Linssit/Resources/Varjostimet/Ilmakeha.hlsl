@@ -16,6 +16,7 @@ float4 _IlmPilviParam;  // x peitto 0–1, y varjon voima, z jakso m (uv1), w pi
 float4 _IlmTuuli;       // xy pilvikentän siirtymä m (tuuli × aika)
 float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala)
 float4 _IlmPilviKerros; // x pilvikerros 0/1 (KaupunkiIlmakeha.Pilvet), y pohja m, z paksuus m (pallon pilvet, raportin kohta 6a)
+float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot)
 
 static const float IlmR = 6360.0, IlmRT = 6460.0, IlmApKm = 200.0;
 
@@ -122,7 +123,7 @@ float4 IlmPilviKerros(float3 d)
         float a = saturate(IlmPilviPeitto(xz, _IlmPilviParam.x - (i == 1 ? 0.0 : 0.08)) * paino * 0.85) * ylos;
         float2 kohti = xz + s.xz / max(s.y, 0.1) * paksuus * 0.5;
         float itse = exp(-2.5 * IlmPilviPeitto(kohti, _IlmPilviParam.x));
-        float3 valo = IlmLapaisy(h, s.y) * itse * vaihe * 0.32 * paiva + ymparisto * (0.6 + 0.4 * (1.0 - itse));
+        float3 valo = (IlmLapaisy(h, s.y) * itse * vaihe * 0.32 * paiva + ymparisto * (0.6 + 0.4 * (1.0 - itse))) * (1.0 - _IlmSaa.y);
         float3 sironta, lapaisy; IlmIlmaperspektiivi(t, d, sironta, lapaisy);
         valo = valo * lapaisy + sironta;
         float hiipuma = (1.0 - smoothstep(40000.0, 80000.0, t)) * (1.0 - smoothstep(pohja - 600.0, pohja - 300.0, kamera));

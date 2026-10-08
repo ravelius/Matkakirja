@@ -30,6 +30,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pallon pilvikerros taivaskupolissa (raportin kohta 6a, PT 23.28): asetus "pilvet 0|1", oletus pois kuvapariin asti.
         /// Pohja = PilviKorkeusM (sama kuin pilvien varjoilla), paksuus PilviPaksuusM.</summary>
         public static bool Pilvet;
+        /// <summary>Tuuli (m/s, x itä, y pohjoinen): pilvikentän ja pilvien varjojen siirtymä sekä laivojen savu (VeneSavu).</summary>
+        public static Vector2 TuuliMs = new Vector2(6f, 2f);
         public static float PilviPaksuusM = (float)Matkakirja.Linssit.Ilmakeha.KaupunkiPilvet.PaksuusM;
         static float voima;
         static Texture2D lapaisy, pilvet; static Texture3D taivas, ap, apLapaisy;
@@ -37,7 +39,7 @@ namespace Matkakirja.Natiivi
         static readonly int IdLapaisy = Shader.PropertyToID("_IlmLapaisy"), IdTaivas = Shader.PropertyToID("_IlmTaivas"), IdAp = Shader.PropertyToID("_IlmAp"),
             IdApLapaisy = Shader.PropertyToID("_IlmApLapaisy"), IdPilvet = Shader.PropertyToID("_IlmPilvet"), IdAurinko = Shader.PropertyToID("_IlmAurinko"),
             IdParam = Shader.PropertyToID("_IlmParam"), IdPilviParam = Shader.PropertyToID("_IlmPilviParam"), IdTuuli = Shader.PropertyToID("_IlmTuuli"),
-            IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros");
+            IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros"), IdSaa = Shader.PropertyToID("_IlmSaa");
 
         static Texture3D Lue3D(string nimi, int w, int h, int d)
         {
@@ -89,7 +91,11 @@ namespace Matkakirja.Natiivi
             var s = new Vector3(Mathf.Cos(k) * Mathf.Sin(a), Mathf.Sin(k), Mathf.Cos(k) * Mathf.Cos(a));
             Shader.SetGlobalVector(IdAurinko, new Vector4(s.x, s.y, s.z, 90f - aurinkoKorkeusAst));
             Shader.SetGlobalVector(IdParam, new Vector4(Mathf.Max(0f, korkeusM), Valotus, ApVoima * voima, voima));
-            Shader.SetGlobalVector(IdPilviParam, new Vector4(Mathf.Clamp01(pilvisyys), VarjoVoima * voima, PilviJaksoM, PilviKorkeusM));
+            // Kuuro (LS1): peitto lähes täyteen, pilvet tummuvat, varjot vahvistuvat; märkyys laattoihin (Ydin KaupunkiKuuro).
+            pilvisyys = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Peitto(Mathf.Clamp01(pilvisyys));
+            float tumma = (float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Tummuus;
+            Shader.SetGlobalVector(IdPilviParam, new Vector4(pilvisyys, VarjoVoima * voima * (1f + tumma), PilviJaksoM, PilviKorkeusM));
+            Shader.SetGlobalVector(IdSaa, new Vector4((float)Matkakirja.Linssit.Kierros.KaupunkiKuuro.Markyys * voima, tumma, 0f, 0f));
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
             Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), 0f, 0f, 0f));
             Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));

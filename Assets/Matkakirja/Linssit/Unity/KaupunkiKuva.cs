@@ -414,8 +414,9 @@ namespace Matkakirja.Natiivi
             {
                 var gr = kaupunki.Georef; float mt = gr != null ? gr.transform.lossyScale.x : 1f;
                 float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
+                Matkakirja.Linssit.Kierros.KaupunkiKuuro.Paivita(Time.deltaTime);
                 KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.35f, 0.95f, harmaus),
-                    new Vector2(6f, 2f) * Time.time, mt);
+                    KaupunkiIlmakeha.TuuliMs * Time.time, mt);
                 kaupunki.Vesi?.Paivita(kamera);
             }
             if (KaupunkiKuva.jako != null)
