@@ -1,6 +1,6 @@
 // OLAVINLINNAN ENSIMMÄINEN PALA (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md kohta 11, huonesimulaatio): koko reitti
 // laituri → keittiö → Kirkkotorni → kappelin ovi (reitti:pelaaja-1…20) Thief-ajurilla ja valossa kävellen, harhautus 6 m:stä ja
-// Pulun automaattinen vihje 180 s:n jumissa. Maailma: Huonesimulaatio.cs (v44s-data, sovittimen säännöt).
+// Pulun automaattinen vihje 180 s:n jumissa. Maailma: Huonesimulaatio.cs (v44z-data, sovittimen säännöt).
 // Thief-ajuri: ennen jokaista reittipistettä se kokeilee kopiolla odotusta (0,5 s:n askelin) paikallaan tai lähimmässä piilossa,
 // hiipien (tarjotin kädessä myös kävellen) ja tarvittaessa heittoa tai patapinon kaatoa; valitsee nopeimman turvallisen (kukaan ei
 // epäile: mittari < 0,15, ei epäilyä eikä hälytystä) ja palaa taaksepäin, jos seuraava piste ei onnistu.
@@ -12,6 +12,7 @@ namespace Matkakirja.Linssit.Testit
 {
     public static class OlavinlinnaPalaTestit
     {
+        const int PalaPisteita = 20;   // reitti:pelaaja-1…20 (v44v+ jatkuu M-osaan)
         const double Dt = Huonesimulaatio.Dt, MaxOdotus = 42, OdotusAskel = 0.5, Jalkeen = 0.5, PiiloSade = 5;
 
         sealed class Suunnitelma { public KavelyMerkki Piilo, Esine; public (double X, double Y, double Z) Kohde; public double Odotus; public bool Hiipii; public Huonesimulaatio Tulos; public double Aika; }
@@ -108,7 +109,7 @@ namespace Matkakirja.Linssit.Testit
         static readonly HashSet<(int, int)> kayty = new HashSet<(int, int)>();
         static Huonesimulaatio Ratkaise(Huonesimulaatio w, int k, List<string> loki, ref int budjetti, ref (int K, Huonesimulaatio W) pisin)
         {
-            if (k >= Huonesimulaatio.Reitti.Count) return w;
+            if (k >= PalaPisteita) return w;
             if (k > pisin.K) pisin = (k, w);
             if (!kayty.Add((k, (int)Math.Round(w.T * 2)))) return null;   // sama piste samaan aikaan (0,5 s) jo kokeiltu
             var ehdokkaat = Ehdokkaat(w, k);
@@ -124,7 +125,7 @@ namespace Matkakirja.Linssit.Testit
         static double Sujuva(double nopeus)
         {
             var r = Huonesimulaatio.Reitti; double s = 0;
-            for (int i = 1; i < r.Count; i++) s += Huonesimulaatio.Etaisyys2(r[i].X, r[i].Z, r[i - 1].X, r[i - 1].Z);
+            for (int i = 1; i < PalaPisteita; i++) s += Huonesimulaatio.Etaisyys2(r[i].X, r[i].Z, r[i - 1].X, r[i - 1].Z);
             return s / nopeus;
         }
 
@@ -142,7 +143,7 @@ namespace Matkakirja.Linssit.Testit
             double sujuva = Sujuva(Kavely.HiipiminenMs);
             if (loppu == null) { Console.WriteLine($"      jumissa pisteessä {pisin.K + 1}:"); Tulosta(pisin.W); }
             else Console.WriteLine($"      varjoreitti {loppu.T:F0} s (sujuva {sujuva:F0} s, 2 × {2 * sujuva:F0} s), kiinni {loppu.Kiinni}: {string.Join(", ", loki)}");
-            Oleta.Tosi(loppu != null, $"ajuri pääsi pisteeseen {pisin.K + 1}/{Huonesimulaatio.Reitti.Count} ilman epäilyä");
+            Oleta.Tosi(loppu != null, $"ajuri pääsi pisteeseen {pisin.K + 1}/{PalaPisteita} ilman epäilyä");
             Oleta.Tosi(loppu.Kiinni == 0 && loppu.Annettu, $"0 kiinnijääntiä ({loppu.Kiinni}), tarjotin annettu ({loppu.Annettu})");
             Oleta.Tosi(loppu.T <= 2 * sujuva, $"aika {loppu.T:F0} s ≤ 2 × sujuva {sujuva:F0} s");
         }
@@ -151,7 +152,7 @@ namespace Matkakirja.Linssit.Testit
         {
             // Sama reitti kävellen pysähtymättä: ensimmäinen kiinniotto ≤ 10 s ensimmäisestä epäilystä, aina varoituksen jälkeen.
             var w = Huonesimulaatio.Uusi(); double kiinniT = -1;
-            for (int k = 1; k < Huonesimulaatio.Reitti.Count && kiinniT < 0 && w.T < 300; k++)
+            for (int k = 1; k < PalaPisteita && kiinniT < 0 && w.T < 300; k++)
                 for (int i = 0; i < 6000 && kiinniT < 0; i++) { if (w.Askel(Huonesimulaatio.Reitti[k], false)) break; if (w.Kiinni > 0) kiinniT = w.T; }
             Console.WriteLine($"      valoreitti: ensimmäinen epäily {w.EnsiHavainto:F1} s, kiinni {kiinniT:F1} s");
             Oleta.Tosi(kiinniT > 0 && w.EnsiHavainto >= 0, "valossa kävellen jää kiinni");
