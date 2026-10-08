@@ -18,6 +18,10 @@ namespace Matkakirja.Linssit.Seikkailu
         public List<KavelyMerkki> Portaalit = new List<KavelyMerkki>();
         public List<KavelyLeikkaus> Leikkaukset = new List<KavelyLeikkaus>();
         public double? KattoY;
+        /// <summary>Märkyys 0–1 (LR v45f: sateen jälkeinen yö; vesiportti 0,85, ulkoalue 0,75, sisätilat 0).</summary>
+        public double Markyys;
+        /// <summary>Leivottu valoatlas (LR 8.10., juna 169; `valoatlas` kuten tiloissa, polut paketin juuresta); null = ei atlasta.</summary>
+        public Dictionary<string, object> ValoAtlas;
         /// <summary>Osan oletuspinta askelille (pelattavuusmalli 2.2: kivi, porras, puu, olki, sora, vesi); null = kivi.</summary>
         public string Pinta;
     }
@@ -69,6 +73,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Puettava, Lukko;
         public string Avain;
         public double AaniNopeaM, Raapaisut, KestoS, KaantoAste, SallittuAste;
+        /// <summary>pinta: märkyys 0–1 (LR v45f: laiturin kansi puu-1 0,9).</summary>
+        public double Markyys;
         /// <summary>seisoo: kääntyy kerran näin moneksi sekunniksi taaksepäin (v44q seisoo:harja-talonpoika kaantyy_s 4).</summary>
         public double KaantyyS;
         public double[] Ulkonormaali;
@@ -78,6 +84,16 @@ namespace Matkakirja.Linssit.Seikkailu
 
     public sealed class KavelyData
     {
+        /// <summary>Rekvisiitta peittää poimittavan esineen (alle 0,25 m vaakatasossa ja 0,5 m pystyssä; LR v45p: kulho tarjottimen päällä):
+        /// silloin sitä ei piirretä, jottei koriste estä esineen napautusta.</summary>
+        public const double RekvisiittaVaraM = 0.25;
+        public bool RekvisiittaPeittaa(KavelyMerkki r)
+        {
+            foreach (var e in Lajia("esine"))
+                if ((r.X - e.X) * (r.X - e.X) + (r.Z - e.Z) * (r.Z - e.Z) < RekvisiittaVaraM * RekvisiittaVaraM && System.Math.Abs(r.Y - e.Y) < 0.5) return true;
+            return false;
+        }
+
         public int Versio;
         public Dictionary<string, KavelyOsa> Osat = new Dictionary<string, KavelyOsa>(StringComparer.Ordinal);
         public Dictionary<string, string> Esineet = new Dictionary<string, string>(StringComparer.Ordinal);
@@ -100,6 +116,8 @@ namespace Matkakirja.Linssit.Seikkailu
                         Id = pari.Key, Nakyva = MiniJson.Teksti(t, "nakyva"), Tormays = MiniJson.Teksti(t, "tormays"),
                         Kavely = MiniJson.Teksti(t, "kavely"), Varmuus = MiniJson.Teksti(v, "varmuus"),
                         KattoY = MiniJson.Luku(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "kamera_rajat")), "katto_y"), Pinta = MiniJson.Teksti(v, "pinta"),
+                        Markyys = MiniJson.Luku(v, "markyys") ?? 0,
+                        ValoAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "valoatlas")),
                     };
                     var r = MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "rajat"));
                     osa.RajatMin = Vektori(MiniJson.Kentta(r, "min")); osa.RajatMax = Vektori(MiniJson.Kentta(r, "max"));
@@ -144,7 +162,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 Puettava = MiniJson.Kentta(o, "puettava") is bool pub && pub, Lukko = MiniJson.Kentta(o, "lukko") is bool lub && lub, Avain = MiniJson.Teksti(o, "avain"),
                 AaniNopeaM = MiniJson.Luku(o, "aani_nopea_m") ?? 0, Raapaisut = MiniJson.Luku(o, "raapaisut") ?? 0, KestoS = MiniJson.Luku(o, "kesto_s") ?? 0,
                 KaantoAste = MiniJson.Luku(o, "kaanto_aste") ?? 0, KaantyyS = MiniJson.Luku(o, "kaantyy_s") ?? 0, SallittuAste = MiniJson.Luku(o, "sallittu_aste") ?? 0,
-                Ulkonormaali = MiniJson.Kentta(o, "ulkonormaali") is object un ? Vektori(un) : null,
+                Ulkonormaali = MiniJson.Kentta(o, "ulkonormaali") is object un ? Vektori(un) : null, Markyys = MiniJson.Luku(o, "markyys") ?? 0,
                 Katse = MiniJson.Kentta(o, "katse") is object ka ? Vektori(ka) : null,
                 Leikkaukset = MiniJson.Kentta(o, "leikkaukset") is List<object> lk ? lk.ConvertAll(x => x as string) : null,
                 Lyhty = MiniJson.Kentta(o, "lyhty") is bool lyb && lyb, Soihtu = MiniJson.Kentta(o, "soihtu") is bool sob && sob,

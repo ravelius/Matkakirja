@@ -183,6 +183,7 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Texture2D> ladatutLiekkiAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         /// <summary>Olavinlinna: tilojen leivotut valoatlakset (avain tilan id), sama omistus kuin pinnoilla.</summary>
         readonly Dictionary<string, Texture2D> ladatutValoAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
+        readonly List<Texture2D> ladatutDetaljit = new List<Texture2D>();   // juna 169: detaljikartat (DioraamaRakennus.AsetaDetalji)
         string peiliKuvaus = "pois (ämpäri)";
         Func<string, string> peili = s => s;
         bool peiliPaalla;
@@ -220,6 +221,7 @@ namespace Matkakirja.Natiivi
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
+            LinnaMuisti.Avaus(); // laatu muistibudjetista ennen kuin mikään lataus kysyy tasoa (omistaja 8.10.2026 19.5x)
             aktiivinen = this;
             latausOsuus = 0f;
             DioraamaLevyvalimuisti.NollaaEdistys();
@@ -273,6 +275,7 @@ namespace Matkakirja.Natiivi
             {
                 linssi.Avaa(rakennus, ymparisto.Aika, SaapuminenNahty);
                 TaydennaPinnatJaLiekit();
+                o.StartCoroutine(LataaDetaljit());
                 LataaUlkokuori();
                 AloitaKuoriOdotus(ymparisto.Aika);
                 TaydennaLataamattomat();
@@ -284,6 +287,7 @@ namespace Matkakirja.Natiivi
         {
             // Nimiruutu jo rakennus.jsonin latauksen ajan (simu 4.10.: ensimmäinen sekunti oli vaalea tyhjä ruutu).
             RakennusLatautuu = avoinna && rakennus == null && latausKaynnissa;
+            if (avoinna) LinnaMuisti.Vahti(); // hätävahti 2 s välein (8.10.2026)
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             aktiivinenSovitin = this;
@@ -395,6 +399,7 @@ namespace Matkakirja.Natiivi
                 PelattavaPalaJatka = false;
                 SeikkailuTallentaja.Luo(nayttamo.transform, "olavinlinna", PelattavaPalaHash, jatka, o.Kirjaa);
                 SeikkailuVihjeet.Luo(nayttamo.transform, o.Kirjaa);
+                SeikkailuYo.Usva.x = (float)(rakennus.Ulkokuori?.VesiY ?? 0) + 1.2f;   // usvan pinta 1,2 m vedenpinnan yllä
                 SeikkailuYo.Luo(nayttamo.transform, mustaAlku: true);   // omistaja 8.10.: pimeämpi yö, ei lintuperspektiiviä ennen venettä
                 if (jatka != null && jatka.OnTarkistus) o.StartCoroutine(JatkaTallennuksesta(jatka));
                 else o.StartCoroutine(VenePaalle(VeneKestoS));
@@ -505,7 +510,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuYo.Poista(); SeikkailuSade.Poista(); SeikkailuVarjot.Palauta(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -542,6 +547,7 @@ namespace Matkakirja.Natiivi
             Linssi = null;
             Vaihtui?.Invoke(null);
             LukitseVaaka(false);
+            LinnaMuisti.Nollaa(); // seuraava avaus laskee budjetin uudelleen
         }
 
         // LINNA AUKEAA VAAKANA (omistaja 4.10. 20.2x): iPhonella poikkileikkaus lukittuu vaaka-asentoon avattaessa (laitteen
@@ -652,6 +658,8 @@ namespace Matkakirja.Natiivi
             ladatutLiekkiAtlakset.Clear();
             foreach (var vanhaKuva in ladatutValoAtlakset.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
             ladatutValoAtlakset.Clear();
+            foreach (var dk in ladatutDetaljit) if (dk != null) UnityEngine.Object.Destroy(dk);
+            ladatutDetaljit.Clear();
         }
 
         string edellinenPeili = "pois (ämpäri)";
@@ -757,6 +765,7 @@ namespace Matkakirja.Natiivi
                 linssi.Avaa(rakennus, YdinAika, SaapuminenNahty);
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaPinnatJaLiekit();
+                o.StartCoroutine(LataaDetaljit());
                 LataaUlkokuori();
                 AloitaKuoriOdotus(YdinAika);
                 TaydennaLataamattomat();
@@ -981,7 +990,8 @@ namespace Matkakirja.Natiivi
             if (SeikkailuKavely.Ladattu) yield break;
             string osatUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null;
             string merkitUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null;
-            if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa);
+            if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa, kt => o.StartCoroutine(LataaValoAtlas(kt)));
+            SeikkailuKavely.AsetaMarkyys(rakennus3D);
         }
 
         // HISTORIAMOOTTORI V2: venesaapuminen. Reitti merkeistä vene:* (järjestyksessä; vene:laituri kierto_y = keulan suunta), muuten
@@ -994,7 +1004,8 @@ namespace Matkakirja.Natiivi
             if (vm.Id == null) { o.Kirjaa("poikki: vene: rekvisiitta vene puuttuu (ymparisto.mallit, maailmaan: false)"); yield break; }
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            AanetPaalle();
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
@@ -1014,7 +1025,8 @@ namespace Matkakirja.Natiivi
             }
             reitti = Matkakirja.Linssit.Seikkailu.Venesaapuminen.Lyhenna(reitti, VeneMatkaM * kesto / VeneKestoS);
             var ydin = new Matkakirja.Linssit.Seikkailu.Venesaapuminen(reitti, kesto, loppuSuunta);
-            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            // Puhelimessa kevyt vene; 8.10.2026 (omistaja 19.5x): täysi, kun linnan muistibudjetti poistaa puhelinkevennykset.
+            bool puhelin = !LinnaMuisti.Nyt.RajoituksetPois;
             string polku = puhelin ? (vm.Kevyt ?? vm.Huippu) : (vm.Huippu ?? vm.Kevyt);
             linssi.KertojaPois();
             yield return SeikkailuVene.Aloita(peili(paketinJuuri + polku), ydin, nayttamo.transform, DioraamaNayttamo.Kerros, o.Kirjaa,
@@ -1111,6 +1123,23 @@ namespace Matkakirja.Natiivi
         float kokkiRepliikkiAsti; int kokkiLaskuri;
 
         /// <summary>E3a: kappelin kohtaus ja pimeys (SeikkailuKappeli); kynttilät ensin, keskustelun ääni rakennuksen äänistä.</summary>
+        /// <summary>Seikkailun äänet ja repliikit (kerran; jo veneessä, Siirtoseppä 8.10.: veneyön "Hä?" ja sydän sekä sade soivat
+        /// vasta laiturilla luotuina). Toinen kutsu ei lataa manifesteja uudelleen.</summary>
+        void AanetPaalle()
+        {
+            if (nayttamo == null) return;
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
+            var ennen = SeikkailuAanet.Aktiivinen;
+            var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v3/manifest.json", o.Kirjaa);
+            if (a != ennen || SeikkailuSade.Aktiivinen == null)
+            {
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1b/manifest.json");   // Pelikoodari (v1b 8.10.: askel-porras-1 uusittu): askeleet, kantele (puuttuva ohitetaan)
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v3/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot … (v3: sukellus ja köysi uusittu, Pelikoodari 8.10.)
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v3/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen, märät askeleet, vihje-kimallus
+                SeikkailuSade.Luo(nayttamo.transform);
+            }
+        }
+
         IEnumerator KappeliPaalle()
         {
             if (nayttamo == null || rakennus == null) yield break;
@@ -1120,7 +1149,7 @@ namespace Matkakirja.Natiivi
                 var ky = SeikkailuKynttilat.Luo(nayttamo.transform, "kappeli", nayttamo.Liekit, rakennus3D, o.Kirjaa);
                 if (ky != null) ky.Ydin.OmaKynttila = true;
             }
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            AanetPaalle();
             AudioClip klippi = null;
             if (rakennus.Aanet != null && rakennus.Aanet.TryGetValue("kappeli-keskustelu", out var ka) && !string.IsNullOrEmpty(ka.Tiedosto))
             {
@@ -1129,9 +1158,6 @@ namespace Matkakirja.Natiivi
                 yield return q.SendWebRequest();
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
             }
-            SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
-            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1/manifest.json");   // Pelikoodari: askeleet, kantele (puuttuva ohitetaan)
-            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v3/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot … (v3: sukellus, köysi-kiinnitys ja köysi-lasku uusittu, Pelikoodari 8.10.)
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
@@ -1142,10 +1168,11 @@ namespace Matkakirja.Natiivi
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
+            SeikkailuKavely.AsetaMarkyys(rakennus3D);   // myöhemmin ladatut tilat (laituri, piha) märiksi
             // Askeleet (vartijat askel-kivi; pelaajan omat askeleet pinnan mukaan: askel-puu ym. rakennuksen äänistä, olki/sora/vesi aanet-fp-manifestista).
             if (rakennus.Aanet != null)
                 foreach (var kv in rakennus.Aanet)
@@ -1516,9 +1543,14 @@ namespace Matkakirja.Natiivi
             string atlas = hamara ? tila.HamaraAtlas : tila.ValoAtlas, atlasPuoli = hamara ? tila.HamaraAtlasPuoli : tila.ValoAtlasPuoli;
             string astcTaysi = hamara ? tila.HamaraAtlasAstc : tila.ValoAtlasAstc, astcPuoliP = hamara ? tila.HamaraAtlasAstcPuoli : tila.ValoAtlasAstcPuoli;
             bool puoli = PieniLaite() && !string.IsNullOrEmpty(atlasPuoli);
-            string polku = puoli ? atlasPuoli : atlas;
-            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli), JPEG varalla.
-            string astcPolku = puoli ? astcPuoliP : astcTaysi;
+            // 8K (LR v45o, juna 168): vain Ultra-tasolla JA linnan muistibudjetin ylimmällä portaalla (LS2:n muistitesti 8.10.: 4 × 8K
+            // = +131 Mt; portailla 2–3 Ultrakin jää 2k:hon), jos viety; muuten kuten ennen (2k / puolikas).
+            string astcIso = hamara ? tila.HamaraAtlasAstcIso : tila.ValoAtlasAstcIso, jpgIso = hamara ? tila.HamaraAtlasIso : tila.ValoAtlasIso;
+            var ylin = LinnaMuistibudjetti.Portaat[LinnaMuistibudjetti.Portaat.Length - 1];
+            bool iso = !puoli && Laatutaso.Ultra && LinnaMuisti.Nyt.SamaLaatu(ylin) && !string.IsNullOrEmpty(astcIso);
+            string polku = iso && !string.IsNullOrEmpty(jpgIso) ? jpgIso : puoli ? atlasPuoli : atlas;
+            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli / astcIso), JPEG varalla.
+            string astcPolku = iso ? astcIso : puoli ? astcPuoliP : astcTaysi;
             if (!string.IsNullOrEmpty(astcPolku))
             {
                 // Linnan piikit (iPad 2.10.): 8 valoatlasta (4096² ASTC, ~22 Mt) latautui peräkkäin kukin yhdessä ruudussa →
@@ -1557,6 +1589,61 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({kuva.width}x{kuva.height}{(puoli ? ", puolikas" : "")})");
         }
 
+        /// <summary>
+        /// DETALJIKARTAT (LR 8.10., juna 169): detaljitiedosto (osoitin rakennus.json:ssa) ja kunkin pinnan albedo, normaali ja karheus
+        /// — ASTC ensin, JPEG varalla, kaikki LINEAARISINA (LR: albedo on 0,5-pohjainen overlay). Valmiit kartat
+        /// DioraamaRakennus.AsetaDetalji:lle; ilman detaljeja ei mitään.
+        /// </summary>
+        IEnumerator LataaDetaljit()
+        {
+            int kerta = avauskerta;
+            var r = rakennus; if (r == null) yield break;
+            if (!string.IsNullOrEmpty(r.DetaljitTiedosto) && r.Detaljit.Count == 0)
+            {
+                string json = null;
+                yield return HaeTeksti(peili(paketinJuuri + r.DetaljitTiedosto), t => json = t);
+                if (json == null) { o.Kirjaa($"poikki: detaljit {r.DetaljitTiedosto} ei latautunut"); yield break; }
+                try { DioraamaData.LueDetaljitTiedosto(json, r); }
+                catch (Exception e) { o.Kirjaa("poikki: detaljit jäsennys: " + e.Message); yield break; }
+            }
+            foreach (var d in new List<Detalji>(r.Detaljit.Values))
+            {
+                Texture2D a = null, n = null, k = null;
+                yield return LataaDetaljiKuva(d.AstcAlbedo, d.Albedo, "Detalji:" + d.Pinta + ":albedo", t => a = t);
+                yield return LataaDetaljiKuva(d.AstcNormaali, d.Normaali, "Detalji:" + d.Pinta + ":normaali", t => n = t);
+                yield return LataaDetaljiKuva(d.AstcKarheus, d.Karheus, "Detalji:" + d.Pinta + ":karheus", t => k = t);
+                if (kerta != avauskerta || rakennus3D == null)
+                {
+                    foreach (var t in new[] { a, n, k }) if (t != null) UnityEngine.Object.Destroy(t);
+                    yield break;
+                }
+                foreach (var t in new[] { a, n, k }) if (t != null) ladatutDetaljit.Add(t);
+                rakennus3D.AsetaDetalji(d.Pinta, a, n, k, d.M, d.Voima);
+                o.Kirjaa($"poikki: detalji {d.Pinta} ({(a != null ? "albedo " : "")}{(n != null ? "normaali " : "")}{(k != null ? "karheus " : "")}m {d.M:F1}, voima {d.Voima:F2})");
+            }
+        }
+
+        IEnumerator LataaDetaljiKuva(string astc, string jpg, string nimi, Action<Texture2D> valmis)
+        {
+            if (!string.IsNullOrEmpty(astc))
+            {
+                byte[] tavut = null;
+                yield return HaeTavut(peili(paketinJuuri + astc), t => tavut = t);
+                string syy = "ei latautunut";
+                var kuva = tavut != null ? DioraamaAstc.Lue(tavut, nimi, out syy, TextureWrapMode.Repeat, 0, true) : null;
+                if (kuva != null) { kuva.anisoLevel = 4; valmis(kuva); yield break; }
+                o.Kirjaa($"poikki: {nimi} ASTC ei käytössä ({syy}), JPEG varalla");
+            }
+            if (string.IsNullOrEmpty(jpg)) yield break;
+            byte[] jt = null;
+            yield return HaeTavut(peili(paketinJuuri + jpg), t => jt = t);
+            if (jt == null) { o.Kirjaa($"poikki: {nimi} ei latautunut"); yield break; }
+            var j = new Texture2D(2, 2, TextureFormat.RGBA32, true, true) { name = nimi, wrapMode = TextureWrapMode.Repeat, filterMode = FilterMode.Trilinear, anisoLevel = 4 };
+            if (!j.LoadImage(jt, false)) { UnityEngine.Object.Destroy(j); yield break; }
+            j.Compress(false); j.Apply(false, true);
+            valmis(j);
+        }
+
         IEnumerator LataaAtlas(string atlasPolku)
         {
             int kerta = avauskerta;
@@ -1583,8 +1670,23 @@ namespace Matkakirja.Natiivi
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); }
             catch (Exception e) { o.Kirjaa($"poikki: hahmo3d {glbPolku} virhe: {e.Message}"); yield break; }
-            if (kerta != avauskerta || nayttamo?.Hahmot3D == null) yield break; // ks. LataaTila-kommentti
-            nayttamo.Hahmot3D.AsetaGlb(glbPolku, malli);
+            // Hahmon kuvat ASTC 6×6:na (juna 169: <glb>-<kuva>-6x6.astcm, vain jos paketin manifestissa), muuten glb:n kuva.
+            Texture2D[] astcKuvat = null;
+            if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase))
+                for (int ki = 0; ki < malli.Kuvat.Count; ki++)
+                {
+                    string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
+                    if (DioraamaLevyvalimuisti.Manifestissa(url) != true) continue;
+                    byte[] a = null;
+                    yield return DioraamaLevyvalimuisti.Hae(url, 60, t => a = t);
+                    string syy = "ei latautunut";
+                    var k = a != null ? DioraamaAstc.Lue(a, "Hahmo3D:" + glbPolku + ":" + ki, out syy, TextureWrapMode.Repeat) : null;
+                    if (k == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} kuva {ki} ASTC ei käytössä ({syy}), glb:n kuva"); continue; }
+                    astcKuvat ??= new Texture2D[malli.Kuvat.Count];
+                    astcKuvat[ki] = k;
+                }
+            if (kerta != avauskerta || nayttamo?.Hahmot3D == null) { if (astcKuvat != null) foreach (var k in astcKuvat) if (k != null) UnityEngine.Object.Destroy(k); yield break; } // ks. LataaTila-kommentti
+            nayttamo.Hahmot3D.AsetaGlb(glbPolku, malli, astcKuvat);
             o.Kirjaa($"poikki: hahmo3d {glbPolku} valmis ({malli.Solmut.Count} solmua"
                 + (malli.Skinit.Count > 0 ? $", skin {malli.Skinit[0].Nivelet.Length} luuta, leikkeet {string.Join(",", malli.Animaatiot.ConvertAll(a => a.Nimi))}" : "") + ")");
         }
@@ -2102,7 +2204,9 @@ namespace Matkakirja.Natiivi
         /// muistiltaan iso (silti täysi näyttö turhaa), ja iso näyttö voi olla muistiltaan pieni (silti
         /// vanhempi/halvempi laite). "poikki mittaus" (Mittausraportti) näyttää kumman tämän laite valitsi.</summary>
         // Omistaja 30.9.2026: täyden laadun laitteilla (DioraamaLaatu.Taysi, A17 Proa uudemmat) aina täydet tekstuurit ja 4k-atlakset.
-        internal static bool PieniLaite() => !DioraamaLaatu.Taysi && ((long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000);
+        // 8.10.2026 (omistaja 19.5x): yllä oleva sääntö on laiteluokan alaraja (LinnaMuistibudjetti.Laiteluokka); linnan muistibudjetti
+        // antaa täydet pinnat myös pienelle laitteelle, kun vapaata muistia riittää.
+        internal static bool PieniLaite() => !LinnaMuisti.Nyt.TaydetPinnat;
 
         string Tilaraportti()
         {
@@ -2134,7 +2238,7 @@ namespace Matkakirja.Natiivi
             // Era 2b (tekstuurimuisti): kertoo kumman pintakoon PieniLaite valitsi ja MIKSI (näyttöpikselit,
             // muisti) -- omistajan pyyntö "kertoo kumpi ja muistin".
             long naytonPikselit = (long)Screen.width * Screen.height;
-            string pintakoko = (PieniLaite() ? "puolikas" : "täysi") + ", " + DioraamaLaatu.Kuvaus;
+            string pintakoko = (PieniLaite() ? "puolikas" : "täysi") + ", " + DioraamaLaatu.Kuvaus; // sis. linnamuistin budjetin
             return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {(rakennus3D?.Kolmiot ?? 0) + hahmo3dKolmiot} (3d-hahmot {hahmo3dKolmiot}), " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
                    $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, " +

@@ -1,8 +1,10 @@
-// HISTORIAMOOTTORI: PULUN VIHJEET UNITYSSA (Siirtoseppä 7.10.2026; pelattavuusmalli kohta 5; ydin Seikkailu.Vihjeet). Pulun reunakuvan
-// napautus (Natiivi-UI → SeikkailuPelaaja.PuluVihje → VihjePyydetty) tai jumi (180 s ilman edistystä) antaa vihjeen ilman sanoja:
-// taso 1 kujerrus kohteen suunnasta 1,5 m:n päästä, taso 2 kujerrus kohteesta, taso 3 nokkaisu kohteessa. Kohde huoneen ja kappelin
+// HISTORIAMOOTTORI: VIHJEET MAAILMAN VALONA UNITYSSA (Siirtoseppä 7.10.2026; pelattavuusmalli kohta 5; ydin Seikkailu.Vihjeet).
+// OMISTAJAN PÄÄTÖS 8.10. 19.0x: Pulu pois pelistä. Vihjepyyntö (Natiivi-UI → SeikkailuPelaaja.VihjePyydetty) tai jumi (180 s ilman
+// edistystä) antaa vihjeen ilman sanoja ja hahmoa: kohteessa hento kimallus (Ydin ValoVihje; ulkona kuunvalo, sisällä liekin sävy) ja
+// pieni hopean kilahdus; taso 1 himmeä ja lyhyt, taso 2 kirkkaampi, taso 3 sykkii, kunnes pelaaja on kohteella. Kohde huoneen ja kappelin
 // vaiheen mukaan; M-osassa (huoneet 6–10, kappelin jälkeen) Ydin MVihjeet edistyksestä (LS2 8.10.), ja sen eteneminen nollaa jumiajastimen.
-// Pulun lento maailmassa (malli) liitetään tähän, kun Linnanrakentajan pulu-glb on paketissa; nyt ääni kertoo suunnan.
+// Ensivihje laiturilla (Ydin LaituriVihje, LS2 8.10., omistajan palaute (6)): kerran taso 2 vesiportin portilla, kun riita alkaa
+// tai 15 s laiturille nousun jälkeen.
 using System;
 using Matkakirja.Linssit.Seikkailu;
 using UnityEngine;
@@ -13,6 +15,11 @@ namespace Matkakirja.Natiivi
     {
         public static SeikkailuVihjeet Aktiivinen { get; private set; }
         readonly Vihjeet ydin = new Vihjeet();
+        readonly LaituriVihje laituri = new LaituriVihje();
+        readonly ValoVihje valo = new ValoVihje();
+        Light kimallus;
+        /// <summary>Kimalluksen perusvoimakkuus ja kantama (ValoVihje.Kirkkaus 1 = liekin hehku, SeikkailuValot.Hehku).</summary>
+        const float KimallusVoima = 1.6f, KimallusKantama = 2.2f, KimallusNosto = 0.35f;
         Action<string> kirjaa;
         public Vihjeet Ydin => ydin;
 
@@ -25,6 +32,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Tarkistuspiste += v.UusiOsa;
             SeikkailuEsineet.Nostettiin += v.Edistys; SeikkailuEsineet.AsetettiinAlttarille += v.Edistys; SeikkailuEsineet.Raapaistiin += v.Edistys0;
             SeikkailuKynttilat.LuukkuAani += v.EdistysP;
+            SeikkailuVartijat.RiitaAlkoi += v.laituri.RiitaAlkoi;
             v.ydin.UusiHuone(); luukkuNahty = false;
             return v;
         }
@@ -57,6 +65,30 @@ namespace Matkakirja.Natiivi
             bool keskustelu = k != null && k.Nyt == SeikkailuKappeli.Vaihe.Kohtaus;
             if (MOsassa() && MVihjeet.Vaihe(MTila(p)) is int mv && mv > mVaihe) { if (mVaihe >= 0) ydin.Edistys(); mVaihe = mv; }
             if (ydin.Paivita(Time.deltaTime, Vaara(p), keskustelu || p.Eleessa) == 2) Nayta(p, 2, "jumi");
+            Laituri(p);
+            Kimallus(p);
+        }
+
+        /// <summary>Kimalluksen valo seuraa ValoVihjeen kirkkautta; pelaajan etäisyys kohteeseen sammuttaa tason 3 sykkeen.</summary>
+        void Kimallus(SeikkailuPelaaja p)
+        {
+            if (!valo.Kaynnissa && (kimallus == null || kimallus.intensity <= 0f)) return;
+            var q = valo.Kohde; var pp = p.transform.position;
+            float etaisyys = new Vector2(pp.x - (float)q.X, pp.z + (float)q.Z).magnitude;   // Kohde glTF-kehyksessä (z etelä)
+            valo.Paivita(Time.deltaTime, etaisyys);
+            if (kimallus != null) kimallus.intensity = KimallusVoima * (float)valo.Kirkkaus;
+        }
+
+        /// <summary>Laiturin ensivihje: pelaaja laiturilla tai vesiportilla huoneissa 1–2 (ei M-osan pakoa rannalla eikä jatkoa myöhemmästä).</summary>
+        void Laituri(SeikkailuPelaaja p)
+        {
+            if (laituri.Valmis) return;
+            var pp = p.transform.position; var d = SeikkailuKavely.Data;
+            if (d == null || !(Merkki(LaituriVihje.Kohde) is Vector3 portti)) return;
+            string osa = Askelaani.Osa(d, pp.x, pp.y, -pp.z);
+            bool laiturilla = (SeikkailuTietokerros.Aktiivinen?.Huone ?? 0) <= 2 && !MOsassa() && (osa == "ulkoalue" || osa == "vesiportti");
+            float porttiin = new Vector2(pp.x - portti.x, pp.z - portti.z).magnitude;
+            if (laituri.Paivita(Time.deltaTime, laiturilla, porttiin, Vaara(p))) Nayta(p, 2, "laituri", portti);
         }
 
         // --- M-osa (huoneet 6–10): edistys pelin tilasta Ydin MVihjeille ---
@@ -111,16 +143,18 @@ namespace Matkakirja.Natiivi
         /// <summary>Vihje heti (anteeksianto: 3. kiinnijäänti samassa huoneessa → taso 2 tarkistuspisteessä).</summary>
         public void Pakota(int taso, string syy) { var p = SeikkailuPelaaja.Aktiivinen; if (p != null) Nayta(p, taso, syy); }
 
-        void Nayta(SeikkailuPelaaja p, int taso, string syy)
+        void Nayta(SeikkailuPelaaja p, int taso, string syy, Vector3? annettu = null)
         {
-            var kohde = Kohde(p);
+            var kohde = annettu ?? Kohde(p);
             if (kohde == null) { kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}): ei kohdetta"); return; }
-            var c = p.transform.position + Vector3.up * 1.5f; var q = kohde.Value;
-            var suunta = q - c; suunta.y = 0;
-            var paikka = taso == 1 ? c + (suunta.sqrMagnitude > 1e-4f ? suunta.normalized : p.Hahmo.forward) * 1.5f : q + Vector3.up * 0.3f;
-            SeikkailuAanet.Soita(taso == 3 ? "pulu-nokka" : "pulu-kujerrus", paikka, 0.8f);
-            if (taso == 3) SeikkailuAanet.Soita("pulu-kujerrus", paikka, 0.5f);
-            kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}) → {q}");
+            var q = kohde.Value; var d = SeikkailuKavely.Data;
+            var savy = ValoVihje.SavyOsassa(d != null ? Askelaani.Osa(d, q.x, q.y, -q.z) : null, q.y);
+            valo.Aloita(taso, (q.x, q.y, -q.z), savy);
+            var (r, g, b) = ValoVihje.Vari(savy); var vari = new Color((float)r, (float)g, (float)b);
+            if (kimallus == null) kimallus = SeikkailuValot.Hehku(transform, Vector3.zero, vari, 0f, KimallusKantama, true, DioraamaNayttamo.Kerros);
+            if (kimallus != null) { kimallus.transform.position = q + Vector3.up * KimallusNosto; kimallus.color = vari; kimallus.intensity = 0f; }
+            SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", q + Vector3.up * KimallusNosto, taso == 1 ? 0.25f : 0.35f);   // oma hento ääni (Pelikoodari), vara löytöääni
+            kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}) → {q} ({savy})");
         }
 
         /// <summary>Vihjeen kohde (pelattavuusmalli 5, huoneet 2–5): kappelissa käsikirjoituksen järjestys, muualla seuraava ovi tai heitettävä.</summary>
@@ -160,6 +194,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Tarkistuspiste -= UusiOsa;
             SeikkailuEsineet.Nostettiin -= Edistys; SeikkailuEsineet.AsetettiinAlttarille -= Edistys; SeikkailuEsineet.Raapaistiin -= Edistys0;
             SeikkailuKynttilat.LuukkuAani -= EdistysP;
+            SeikkailuVartijat.RiitaAlkoi -= laituri.RiitaAlkoi;
         }
     }
 }

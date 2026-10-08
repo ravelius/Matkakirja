@@ -336,12 +336,14 @@ namespace Matkakirja
             // Myös normaalilämmössä perusarvo, jottei jäähtyminen kesken sumennuksen jätä kuumaa 0,7:ää (Natiiviseppä 25.9.).
             PalloSumennus.PerusSkaala = kuuma ? KuumaSkaala : (perusSkaala > 0f ? perusSkaala : (float?)null);
             if (asetus != null && skaala > 0f && !PalloKierto.PorttiSumea && !PalloKierto.KuvaSumea) asetus.renderScale = skaala;
+            // Ultra (Natiiviseppä 8.10.2026, juna 169): kuumana MSAA 4× → pois (tasoa ei vaihdeta ajon aikana, ks. Laatutaso.cs).
+            if (asetus != null && Laatutaso.Ultra) asetus.msaaSampleCount = kuuma ? 1 : 4;
             if (bloom == null && Filmipino.Instanssi != null && Filmipino.Instanssi.volyymi != null
                 && Filmipino.Instanssi.volyymi.profile != null && Filmipino.Instanssi.volyymi.profile.TryGet(out bloom))
                 bloomAlussa = bloom.active;
             if (bloom != null) bloom.active = !kuuma && bloomAlussa;
             Debug.Log($"MATKAKIRJA ruutu: lämpö {Lampo.Taso} → katto {(Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : kuuma ? KuumaFps : Naytto)} fps, " +
-                      $"renderScale {skaala:0.##}, bloom {(bloom != null ? (bloom.active ? "päällä" : "pois") : "-")}");
+                      $"renderScale {skaala:0.##}{(Laatutaso.Ultra ? $", MSAA {asetus?.msaaSampleCount}" : "")}, bloom {(bloom != null ? (bloom.active ? "päällä" : "pois") : "-")}");
         }
 
         /// <summary>Tila testikomennolle `ruutu`.</summary>

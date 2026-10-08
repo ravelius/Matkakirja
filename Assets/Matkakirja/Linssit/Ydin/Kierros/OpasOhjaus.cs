@@ -14,8 +14,9 @@ namespace Matkakirja.Linssit.Kierros
 {
     public sealed class OpasOhjaus
     {
-        public const double KiertoMaxAstS = 50, KallistusMaxAstS = 28, EtaisyysMaxS = 0.9;   // täysi tappi (etäisyys log-asteikolla /s)
-        public const double SyoteAikaS = 0.18, HiipumaAikaS = 0.45, PaluuS = 1.5, KuollutAlue = 0.12;
+        // Omistaja TF 167 (9.10.): manuaaliohjaus alle puoleen (ennen 50 / 28 / 0,9) ja pehmeämpi tapin vaste (ennen 0,18 s).
+        public const double KiertoMaxAstS = 22, KallistusMaxAstS = 12, EtaisyysMaxS = 0.4;   // täysi tappi (etäisyys log-asteikolla /s)
+        public const double SyoteAikaS = 0.3, HiipumaAikaS = 0.45, PaluuS = 1.5, KuollutAlue = 0.12;
         public const double KallistusMin = 25, KallistusMax = 78, EtMinM = 110, EtMaxM = 2200, KattoYlaM = 55, YlaKerroin = 1.5;
 
         /// <summary>Pelaajan siirtymät automaattiseen kehykseen: kierto (°), jyrkkyys (°, + = vaakaan) ja etäisyyskerroin (log).</summary>
@@ -64,6 +65,23 @@ namespace Matkakirja.Linssit.Kierros
             Kallistus = kall - perus.Kallistus;
             EtaisyysLog = Math.Log(et / Math.Max(1e-6, perus.EtaisyysM));
             return new Kuvakulma(perus.Lat, perus.Lon, et, kall, KierrosLento.Kiedo(perus.Suuntima + Kierto), perus.KatseKorkeusM);
+        }
+
+        /// <summary>
+        /// Rajat ilman pelaajan ohjausta (kallistus KallistusMin…KallistusMax, kamera vähintään KattoYlaM maan yläpuolella): lennon
+        /// kohdekehys on sama kuin pysähdyksen Sovella-asento levossa (Linssiseppä 8.10., PalloKaupungitTestit: matalilla kehyksillä
+        /// kamera hyppäsi saapuessa 1,5–14,5 m, kun raja tuli voimaan vasta pysähdyksellä).
+        /// </summary>
+        public static Kuvakulma Rajoita(Kuvakulma perus, double maaM)
+        {
+            double kall = Rajaa(perus.Kallistus, KallistusMin, KallistusMax), et = perus.EtaisyysM;
+            double tarve = (maaM + KattoYlaM - perus.KatseKorkeusM) / Math.Max(1e-6, et);
+            if (tarve > 0)
+            {
+                if (tarve >= 1) et = Math.Max(et, maaM + KattoYlaM - perus.KatseKorkeusM);
+                kall = Math.Min(kall, Math.Acos(Math.Min(1, tarve)) * 180 / Math.PI);
+            }
+            return new Kuvakulma(perus.Lat, perus.Lon, et, kall, perus.Suuntima, perus.KatseKorkeusM);
         }
 
         /// <summary>Lennon alussa: siirtymät pois (lento alkaa nykyisestä asennosta, joten mikään ei hyppää).</summary>

@@ -271,7 +271,7 @@ namespace Matkakirja.Natiivi
                 // askeleet herättivät torkkujan ennen kuin tarjotinta ehti antaa). Juoksu kuuluu silti.
                 bool lupa = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin && p.Tila.Tapa != Liiketapa.Juoksu;
                 if (p.Tila.Vauhti > 0.3 && sade > 0 && !lupa) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z), pp0.y));
-                OmatAskeleet(p, pinta, pp0);
+                OmatAskeleet(p, pinta, pp0, Askelaani.Markyys(kd, pp0.x, pp0.y, -pp0.z));
             }
             bool piilossa = p != null && Piilossa(p);
             // Nähty piiloon meno (pelattavuusmalli 2.5): jos jonkin mittari ≥ 0,6 ja näkölinja vapaa piiloon mentäessä, piilo ei suojaa
@@ -365,7 +365,7 @@ namespace Matkakirja.Natiivi
                 {
                     SeikkailuKuulija.Aseta(aa, ag.transform.position + Vector3.up * 0.1f);
                     if (aa.clip == null && AskelKlippi != null) aa.clip = AskelKlippi;
-                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); if (!aa.isPlaying) aa.Play(); }
+                    if (v.Kavelee && aa.clip != null) { aa.pitch = Mathf.Clamp(0.85f + 0.25f * v2, 0.85f, 1.25f); aa.volume = 0.9f * Asetukset.Taso(Voima.Tehosteet); if (!aa.isPlaying) aa.Play(); }
                     else if (aa.isPlaying) aa.Stop();
                 }
                 // Kävelytahti nopeuden mukaan (silmukka on mitoitettu sykliMs:iin), ei liukuvia jalkoja.
@@ -431,10 +431,10 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Pelaajan omat askeleet (pelattavuusmalli 2.2): pinnan äänite (aanet-fp-manifestista tai rakennuksesta, varana kivi)
         /// silmukkana jalkojen kohdalta, voimakkuus pinnan ja liiketavan mukaan, tahti nopeudesta. Hiivintä kuuluu itselle hiljaa.</summary>
-        void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat)
+        void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat, double markyys = 0)
         {
             if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; }
-            var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa);
+            var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa, markyys);
             AudioClip klippi = null;
             foreach (var t in tunnukset) { klippi = SeikkailuAanet.Klippi(t) ?? (AskelKlipit.TryGetValue(t, out var k) ? k : null); if (klippi != null) break; }
             klippi ??= AskelKlippi;
@@ -442,7 +442,7 @@ namespace Matkakirja.Natiivi
             bool liikkuu = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa && klippi != null;
             if (!liikkuu) { if (omatAskeleet.isPlaying) omatAskeleet.Stop(); return; }
             if (omatAskeleet.clip != klippi) { omatAskeleet.clip = klippi; omatAskeleet.Play(); }
-            omatAskeleet.volume = voima; omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
+            omatAskeleet.volume = voima * Asetukset.Taso(Voima.Tehosteet); omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
 
@@ -461,6 +461,8 @@ namespace Matkakirja.Natiivi
         // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): soutaja-2 veneestä → portinvartija-riita-1 → -2, portinvartija 12 s selin porttiin
         // (näkö 4 m, ±35°) → portinvartija-paluu-5. Ensimmäinen 20 s pelaajan tultua, sitten 40 s:n välein, kun pelaaja on laiturilla tai portilla.
         const float RiitaValiS = 40f; float riitaAsti = 20f; bool riitaKaynnissa;
+        /// <summary>Riita alkoi (portinvartija selin porttiin): Pulun ensivihje laiturilla (SeikkailuVihjeet, LS2 8.10.).</summary>
+        public static event Action RiitaAlkoi;
         System.Collections.IEnumerator Riita(SeikkailuPelaaja p)
         {
             var pv = vartijat.Find(x => x.Aivot.Profiili == VartijaProfiili.Portinvartija && x.Agentti != null);
@@ -475,6 +477,7 @@ namespace Matkakirja.Natiivi
             yield return new WaitForSecondsRealtime((float)Math.Max(1.0, k1));
             pv.Aivot.AloitaRiita(vene.x, vene.z);
             kirjaa?.Invoke("seikkailu: riita alkaa (portinvartija selin porttiin 12 s)");
+            RiitaAlkoi?.Invoke();
             double k2 = r != null && r.Valmis && pv.Agentti != null ? r.Soita("portinvartija-riita-1", pv.Agentti.transform) : 0;
             yield return new WaitForSecondsRealtime((float)Math.Max(2.0, k2 + 0.3));
             if (pv.Aivot.Riita > 0 && r != null && r.Valmis && pv.Agentti != null) r.Soita("portinvartija-riita-2", pv.Agentti.transform);
@@ -586,7 +589,7 @@ namespace Matkakirja.Natiivi
                     {
                         var g = new GameObject("Portin valo") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false);
                         g.transform.position = new Vector3((float)m.X, (float)m.Y + 1.8f, (float)-m.Z);
-                        portinValo = g.AddComponent<Light>(); portinValo.type = LightType.Point; portinValo.range = 6f; portinValo.color = new Color(1f, 0.66f, 0.34f);
+                        portinValo = g.AddComponent<Light>(); portinValo.type = LightType.Point; portinValo.range = 6f; portinValo.color = new Color(1f, 0.66f, 0.34f); SeikkailuValot.MerkitseLiikkuvaksi(portinValo);
                         portinValo.shadows = LightShadows.None; portinValo.intensity = PortinValoLepo;
                         SeikkailuValot.Liekki(g.transform, DioraamaNayttamo.Kerros);
                         break;
@@ -681,7 +684,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Kurkista(Vector3 paikka, float s)
         {
             var g = new GameObject("Kurkistuksen lyhty") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false); g.transform.position = paikka;
-            var l = g.AddComponent<Light>(); l.type = LightType.Point; l.range = 0.1f; l.color = new Color(1f, 0.62f, 0.3f); l.intensity = 1.4f; l.shadows = LightShadows.None;
+            var l = g.AddComponent<Light>(); l.type = LightType.Point; l.range = 0.1f; l.color = new Color(1f, 0.62f, 0.3f); l.intensity = 1.4f; l.shadows = LightShadows.None; SeikkailuValot.MerkitseLiikkuvaksi(l);
             kirjaa?.Invoke("seikkailu: vartija kurkistaa (jähmety)");
             SeikkailuRepliikit.SoitaTaiVara("vartija-kurkistus-1", "vartija-epaily-1", paikka);
             for (float t = 0; t < s; t += Time.deltaTime)

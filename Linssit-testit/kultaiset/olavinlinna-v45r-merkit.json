@@ -1300,6 +1300,7 @@
    8.100000000000001
   ],
   "kierto_y": -1.1944,
+  "markyys": 0.75,
   "osa": "muurikaytava"
  },
  {
@@ -1841,9 +1842,9 @@
  {
   "nimi": "partio:ranta-1",
   "paikka": [
-   -64.95,
-   0.7,
-   1.494
+   -66.0,
+   -1.4,
+   -2.0
   ],
   "profiili": "vartija",
   "henkilo": "vartija-1500",
@@ -2259,10 +2260,11 @@
  {
   "nimi": "vene:alku",
   "paikka": [
-   -131.85,
+   -93.05,
    -7.0,
-   110.1
+   64.32
   ],
+  "huom": "8.10. Siirtoseppä: souto noin 22 s (oli 50 s): alku 20 m ennen vene:muuria samalla suoralla (vanha −131,85; 110,1)",
   "osa": "ulkoalue"
  },
  {
@@ -2339,6 +2341,7 @@
    -5.9,
    20.325
   ],
+  "markyys": 0.9,
   "koko": [
    4.1,
    1.2,
@@ -2355,6 +2358,7 @@
    -5.6,
    26.165
   ],
+  "markyys": 0.7,
   "koko": [
    8.0,
    1.2,
@@ -2371,6 +2375,7 @@
    -5.75,
    22.328
   ],
+  "markyys": 0.9,
   "koko": [
    2.4,
    1.2,
@@ -3526,5 +3531,511 @@
   ],
   "osa": "muurikaytava",
   "huom": "köysilaskun alku (huone 10)"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wine_barrel_01-1",
+  "paikka": [
+   -17.65,
+   -2.651,
+   13.15
+  ],
+  "kierto_y": -2.1374,
+  "glb": "rekvisiitta-wine_barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wine_barrel_01-2",
+  "paikka": [
+   -22.85,
+   -2.647,
+   14.95
+  ],
+  "kierto_y": -0.5872,
+  "glb": "rekvisiitta-wine_barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-Barrel_01-1",
+  "paikka": [
+   -18.45,
+   -2.653,
+   13.15
+  ],
+  "kierto_y": 1.7359,
+  "glb": "rekvisiitta-Barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-Barrel_01-2",
+  "paikka": [
+   -19.85,
+   -2.648,
+   14.15
+  ],
+  "kierto_y": 3.0434,
+  "glb": "rekvisiitta-Barrel_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bucket_01-1",
+  "paikka": [
+   -17.05,
+   -2.65,
+   15.95
+  ],
+  "kierto_y": 0.645,
+  "glb": "rekvisiitta-wooden_bucket_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bucket_01-2",
+  "paikka": [
+   -18.85,
+   -2.651,
+   14.75
+  ],
+  "kierto_y": 1.7975,
+  "glb": "rekvisiitta-wooden_bucket_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wicker_basket_01-1",
+  "paikka": [
+   -20.45,
+   -2.647,
+   13.95
+  ],
+  "kierto_y": 1.7731,
+  "glb": "rekvisiitta-wicker_basket_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-ceramic_pot-1",
+  "paikka": [
+   -20.85,
+   -2.653,
+   15.75
+  ],
+  "kierto_y": -0.59,
+  "glb": "rekvisiitta-ceramic_pot.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_crate_01-1",
+  "paikka": [
+   -16.25,
+   -2.648,
+   15.75
+  ],
+  "kierto_y": 0.3244,
+  "glb": "rekvisiitta-wooden_crate_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bowl_01-1",
+  "paikka": [
+   -21.25,
+   -1.71,
+   14.35
+  ],
+  "kierto_y": -0.7507,
+  "glb": "rekvisiitta-wooden_bowl_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bowl_02-1",
+  "paikka": [
+   -16.85,
+   -1.75,
+   13.75
+  ],
+  "kierto_y": 1.0226,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_bowl_02-2",
+  "paikka": [
+   -24.05,
+   -1.8,
+   12.55
+  ],
+  "kierto_y": -0.8328,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-wooden_spoon-1",
+  "paikka": [
+   -24.05,
+   -1.8,
+   11.75
+  ],
+  "kierto_y": -1.3957,
+  "glb": "rekvisiitta-wooden_spoon.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-yellow_onion-1",
+  "paikka": [
+   -15.45,
+   -1.75,
+   13.35
+  ],
+  "kierto_y": -2.056,
+  "glb": "rekvisiitta-yellow_onion.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-yellow_onion-2",
+  "paikka": [
+   -20.25,
+   -1.75,
+   12.35
+  ],
+  "kierto_y": 0.7723,
+  "glb": "rekvisiitta-yellow_onion.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-yellow_onion-3",
+  "paikka": [
+   -16.45,
+   -1.75,
+   12.95
+  ],
+  "kierto_y": -1.4279,
+  "glb": "rekvisiitta-yellow_onion.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-food_apple_01-1",
+  "paikka": [
+   -15.45,
+   -1.75,
+   12.95
+  ],
+  "kierto_y": 1.5167,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-food_apple_01-2",
+  "paikka": [
+   -23.85,
+   -1.8,
+   12.35
+  ],
+  "kierto_y": -2.1137,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-food_apple_01-3",
+  "paikka": [
+   -23.65,
+   -1.8,
+   11.75
+  ],
+  "kierto_y": 1.0188,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:keittio-brass_pot_01-1",
+  "paikka": [
+   -22.85,
+   -1.71,
+   13.95
+  ],
+  "kierto_y": -0.9313,
+  "glb": "rekvisiitta-brass_pot_01.glb",
+  "osa": "keittio-G102"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_stool_01-1",
+  "paikka": [
+   -12.36,
+   3.4,
+   -4.67
+  ],
+  "kierto_y": -1.1372,
+  "glb": "rekvisiitta-wooden_stool_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_stool_01-2",
+  "paikka": [
+   -11.36,
+   3.4,
+   4.13
+  ],
+  "kierto_y": 0.5357,
+  "glb": "rekvisiitta-wooden_stool_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wine_barrel_01-1",
+  "paikka": [
+   -16.76,
+   3.4,
+   -0.47
+  ],
+  "kierto_y": 1.7573,
+  "glb": "rekvisiitta-wine_barrel_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_bucket_02-1",
+  "paikka": [
+   -9.16,
+   3.4,
+   3.33
+  ],
+  "kierto_y": -0.9845,
+  "glb": "rekvisiitta-wooden_bucket_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-brass_goblets-1",
+  "paikka": [
+   -9.36,
+   4.4,
+   -1.27
+  ],
+  "kierto_y": -0.4465,
+  "glb": "rekvisiitta-brass_goblets.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-1",
+  "paikka": [
+   -11.56,
+   4.18,
+   1.33
+  ],
+  "kierto_y": 0.0474,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-2",
+  "paikka": [
+   -14.16,
+   4.18,
+   2.53
+  ],
+  "kierto_y": 2.075,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-3",
+  "paikka": [
+   -15.96,
+   4.4,
+   4.53
+  ],
+  "kierto_y": -1.6448,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-4",
+  "paikka": [
+   -6.56,
+   4.25,
+   7.13
+  ],
+  "kierto_y": 2.8628,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-metal_jug-1",
+  "paikka": [
+   -10.96,
+   4.18,
+   0.93
+  ],
+  "kierto_y": -1.8708,
+  "glb": "rekvisiitta-metal_jug.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-jug_01-1",
+  "paikka": [
+   -12.16,
+   4.18,
+   1.73
+  ],
+  "kierto_y": -1.1304,
+  "glb": "rekvisiitta-jug_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_bowl_02-1",
+  "paikka": [
+   -13.56,
+   4.18,
+   2.33
+  ],
+  "kierto_y": 2.0169,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-wooden_bowl_02-2",
+  "paikka": [
+   -10.36,
+   4.18,
+   1.13
+  ],
+  "kierto_y": -2.0426,
+  "glb": "rekvisiitta-wooden_bowl_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-food_apple_01-1",
+  "paikka": [
+   -10.36,
+   4.16,
+   8.33
+  ],
+  "kierto_y": 3.0024,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:linnantupa-food_apple_01-2",
+  "paikka": [
+   -12.36,
+   4.18,
+   2.13
+  ],
+  "kierto_y": 0.1767,
+  "glb": "rekvisiitta-food_apple_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-GothicCabinet_01-1",
+  "paikka": [
+   -8.36,
+   7.51,
+   4.13
+  ],
+  "kierto_y": -1.0799,
+  "glb": "rekvisiitta-GothicCabinet_01.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-wooden_crate_02-1",
+  "paikka": [
+   -11.16,
+   7.51,
+   -1.87
+  ],
+  "kierto_y": -1.158,
+  "glb": "rekvisiitta-wooden_crate_02.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-wooden_candlestick-1",
+  "paikka": [
+   -10.16,
+   8.4,
+   -4.27
+  ],
+  "kierto_y": -0.615,
+  "glb": "rekvisiitta-wooden_candlestick.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-wooden_candlestick-2",
+  "paikka": [
+   -5.76,
+   8.4,
+   3.93
+  ],
+  "kierto_y": 0.4567,
+  "glb": "rekvisiitta-wooden_candlestick.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-brass_goblets-1",
+  "paikka": [
+   -14.56,
+   8.2,
+   6.53
+  ],
+  "kierto_y": -2.112,
+  "glb": "rekvisiitta-brass_goblets.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-metal_jug-1",
+  "paikka": [
+   -10.56,
+   8.3,
+   7.93
+  ],
+  "kierto_y": -2.6526,
+  "glb": "rekvisiitta-metal_jug.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-carved_wooden_plate-1",
+  "paikka": [
+   -10.96,
+   8.4,
+   -4.27
+  ],
+  "kierto_y": -1.2211,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:voudin-sali-carved_wooden_plate-2",
+  "paikka": [
+   -9.36,
+   8.3,
+   7.73
+  ],
+  "kierto_y": 0.4824,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "palatsi"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-wooden_bucket_02-1",
+  "paikka": [
+   -12.83,
+   -3.8,
+   -3.94
+  ],
+  "kierto_y": -1.1369,
+  "glb": "rekvisiitta-wooden_bucket_02.glb",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-jug_01-1",
+  "paikka": [
+   -12.43,
+   -3.8,
+   -4.94
+  ],
+  "kierto_y": 1.6769,
+  "glb": "rekvisiitta-jug_01.glb",
+  "osa": "tyrma-E101"
+ },
+ {
+  "nimi": "rekvisiitta:tyrma-carved_wooden_plate-1",
+  "paikka": [
+   -10.43,
+   -3.8,
+   -0.94
+  ],
+  "kierto_y": 1.8784,
+  "glb": "rekvisiitta-carved_wooden_plate.glb",
+  "osa": "tyrma-E101"
  }
 ]

@@ -217,6 +217,14 @@ namespace Matkakirja.Natiivi
             if (siirretty > 0) kirjaa?.Invoke($"poikki: välimuisti: vanhasta muodosta siirretty {siirretty} tiedostoa ({tavuja / 1048576f:F0} Mt) sisältövarastoon");
         }
 
+        /// <summary>Onko url nykyisen paketin manifestissa; null = manifestia ei ole (peili tai välimuisti pois).</summary>
+        public static bool? Manifestissa(string url)
+        {
+            if (juuri == null || manifesti == null) return null;
+            if (url == null || !url.StartsWith(juuri, StringComparison.Ordinal)) return false;
+            return manifesti.ContainsKey(url.Substring(juuri.Length));
+        }
+
         /// <summary>Paikallinen polku ja odotettu sha256 url:lle, tai (null, null), jos url ei ole nykyisen paketin manifestin tiedosto.</summary>
         static (string Paikka, string Sha) Paikka(string url)
         {

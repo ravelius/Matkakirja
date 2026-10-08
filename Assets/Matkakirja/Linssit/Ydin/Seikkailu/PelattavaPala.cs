@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "2adaa1e6c374bb36";
-        public const string Versio = "v45b";   // v45a (vuoden 1499 linna 1–10, tiilet ja veneen köysi) + tekstuurien kevennys (LR 8.10.: esineet 87,9 → 61,9 Mt, Fogg 16 → 4 Mt), merkit ja reitit samat
+        public const string Hash = "1fb40fb0eefb6f36";
+        public const string Versio = "v45r";   // v45p + esine-glb:t ilman upotettua normaali-PNG:tä (−21 Mt), pöytärekvisiitta ≥ r + 0,3 m esineistä (46 merkkiä; LR 8.10.)
     }
 }

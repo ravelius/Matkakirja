@@ -436,6 +436,7 @@ namespace Matkakirja.Natiivi
             var valo = vg.AddComponent<Light>();
             valo.type = LightType.Point; valo.range = 7.5f; valo.intensity = 1.6f; valo.color = new Color(1f, 0.86f, 0.68f);
             valo.shadows = LightShadows.None; valo.renderMode = LightRenderMode.ForcePixel;
+            SeikkailuValot.MerkitseLiikkuvaksi(valo);
         }
 
         // Kertaele juurisiirrolla (v44j nousu_laiturille: veneestä kannelle). Kapseli paikallaan ja törmäys pois leikkeen ajan; viimeisellä
@@ -660,14 +661,16 @@ namespace Matkakirja.Natiivi
             return k;
         }
 
-        /// <summary>Pulun reunakuvan napautus (Natiivi-UI: Pulu.NapautusKaappaa) pyytää vihjettä. Palauttaa, otettiinko napautus
-        /// käyttöön. Vihjeportaat (pelattavuusmalli kohta 5) tulevat tähän; siihen asti false (Natiivi-UI:n oletus jatkuu).</summary>
-        public static bool PuluVihje()
+        /// <summary>Vihjepyyntö (Natiivi-UI: ☰-valikon "Vihje" seikkailun aikana; Mac P, ohjain Y). Vihje näkyy maailmassa valona
+        /// ja äänenä (SeikkailuVihjeet, ei Pulua: omistaja 8.10.). Palauttaa, annettiinko vihje.</summary>
+        public static bool PyydaVihje()
         {
             var p = Aktiivinen; if (p == null) return false;
-            Debug.Log("MATKAKIRJA seikkailu: Pulun vihje pyydetty");
+            Debug.Log("MATKAKIRJA seikkailu: vihje pyydetty");
             return VihjePyydetty != null && VihjePyydetty();
         }
+        /// <summary>Vanha nimi (Natiivi-UI junaan 167 asti): sama kuin PyydaVihje.</summary>
+        public static bool PuluVihje() => PyydaVihje();
         /// <summary>Vihjeportaiden koukku (SeikkailuVihjeet asettaa); true = vihje annettiin.</summary>
         public static Func<bool> VihjePyydetty;
 

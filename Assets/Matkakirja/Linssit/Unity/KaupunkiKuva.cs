@@ -77,6 +77,10 @@ namespace Matkakirja.Natiivi
         internal static float ValinnanTunti => valinta == "aamu" ? 7f : valinta == "paiva" ? 12f : valinta == "ilta" ? 18.5f : valinta == "yo" ? 23f : -1f;
         /// <summary>Pakotettu tunti: asetustiedosto ensin (kuvaparit), sitten pelaajan valinta; −1 = auringon mukaan.</summary>
         internal static float TuntiNyt => Tunti >= 0 ? Tunti : ValinnanTunti;
+        /// <summary>Pallon korin valo (PalloKori, Ydin KoriValaistus): auringon korkeus ja atsimuutti (°), taivaan laki ja horisontti
+        /// sekä kaupunkikameran jälkikäsittelyn valotus (EV) ja suodin; päivittyy joka ruutu vuorokausisävyn mukana.</summary>
+        public static float KoriAurinkoKorkeus = 50f, KoriAtsimuutti = 180f, KoriValotusEV;
+        public static Color KoriLaki = new Color(0.35f, 0.55f, 0.85f), KoriHorisontti = new Color(0.75f, 0.8f, 0.85f), KoriSuodin = Color.white;
         /// <summary>Sävytys käytössä: asetus tai pelaajan oma valinta (nappi kytkee sävyn päälle, vaikka oletus odottaa kuittausta).</summary>
         internal static bool SavyKaytossa => VuorokausiPaalla || valinta != "auto";
         internal static void AsetaNyt(string tila) { if (tila != Nyt) { Nyt = tila; Vaihtui?.Invoke(tila); } }
@@ -187,6 +191,10 @@ namespace Matkakirja.Natiivi
                         case "rakennus": RakennusSse = v; break;
                         case "msaa": Msaa = (int)v; break;
                         case "sumu": Sumu = v != 0; break;
+                        case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
+                        case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
+                        case "vesi": KaupunkiVesi.Pakotettu = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
+                        case "vesinosto": KaupunkiVesi.NostoM = v; KaupunkiVesi.NostoAsetettu = true; break;
                         case "sumualku": AlkuKerroin = v; break;
                         case "sumuloppu": LoppuKerroin = v; break;
                         case "sumualkumin": AlkuMinM = v; break;
@@ -256,7 +264,7 @@ namespace Matkakirja.Natiivi
     {
         CesiumKaupunki kaupunki;
         bool vanhaSumu; FogMode vanhaMoodi; Color vanhaVari, vanhaTausta; float vanhaAlku, vanhaLoppu;
-        GameObject kupoli; Material kupoliMat; Mesh kupoliMesh;
+        GameObject kupoli; Material kupoliMat; Mesh kupoliMesh; bool kupoliIlmakeha;
         float edellinenLoki = -999f, luettu;
         static readonly int IdHorisontti = Shader.PropertyToID("_TaivasHorisontti"), IdLaki = Shader.PropertyToID("_TaivasLaki"),
             IdKajo = Shader.PropertyToID("_TaivasKajo"), IdAurinko = Shader.PropertyToID("_TaivasAurinko"), IdParam = Shader.PropertyToID("_TaivasParam");
@@ -283,9 +291,14 @@ namespace Matkakirja.Natiivi
         /// Kaupungin kerroksella 15, koska pääkamera piirtää kaupunkinäkymässä vain sen.</summary>
         void LuoKupoli()
         {
-            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaTaivas");
-            if (varjostin == null) { Debug.Log("MATKAKIRJA kaupunki: taivasvarjostin puuttuu, kupoli pois"); return; }
-            kupoliMat = new Material(varjostin) { name = "KaupunkiKuva:taivas" };
+            kupoliIlmakeha = KaupunkiIlmakeha.Paalla;
+            kupoliMat = KaupunkiIlmakeha.TaivasMateriaali();   // fysikaalinen taivas (LS2 8.10.), muuten DioraamaTaivas
+            if (kupoliMat == null)
+            {
+                var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaTaivas");
+                if (varjostin == null) { Debug.Log("MATKAKIRJA kaupunki: taivasvarjostin puuttuu, kupoli pois"); return; }
+                kupoliMat = new Material(varjostin) { name = "KaupunkiKuva:taivas" };
+            }
             const int S = 32, K = 16;
             var p = new System.Collections.Generic.List<Vector3>(); var t = new System.Collections.Generic.List<int>();
             for (int k = 0; k <= K; k++)
@@ -329,8 +342,10 @@ namespace Matkakirja.Natiivi
             if (KaupunkiKuva.SavyKaytossa) KaupunkiKuva.VarmistaVolyymi(kamera);
             // Kupoli asetuksen mukaan myös kesken näkymän (stillit 19.10: avattiin kupoli 0 → myöhempi "kupoli 1" ei luonut sitä,
             // ja taivas näkyi yhtenä horisontin värinä).
-            if ((KaupunkiKuva.Kupoli || KaupunkiKuva.SavyKaytossa) && kupoli == null) LuoKupoli();
-            else if (!(KaupunkiKuva.Kupoli || KaupunkiKuva.SavyKaytossa) && kupoli != null) { Destroy(kupoli); kupoli = null; if (kupoliMat != null) Destroy(kupoliMat); if (kupoliMesh != null) Destroy(kupoliMesh); kupoliMat = null; kupoliMesh = null; }
+            // Ilmakehän kupoli (LS2 8.10.): päälle/pois vaihtaa kupolin materiaalin (kupoli luodaan uudelleen).
+            if (kupoli != null && kupoliIlmakeha != KaupunkiIlmakeha.Paalla) { Destroy(kupoli); kupoli = null; if (kupoliMat != null) Destroy(kupoliMat); if (kupoliMesh != null) Destroy(kupoliMesh); kupoliMat = null; kupoliMesh = null; }
+            if ((KaupunkiKuva.Kupoli || KaupunkiKuva.SavyKaytossa || KaupunkiIlmakeha.Paalla) && kupoli == null) LuoKupoli();
+            else if (!(KaupunkiKuva.Kupoli || KaupunkiKuva.SavyKaytossa || KaupunkiIlmakeha.Paalla) && kupoli != null) { Destroy(kupoli); kupoli = null; if (kupoliMat != null) Destroy(kupoliMat); if (kupoliMesh != null) Destroy(kupoliMesh); kupoliMat = null; kupoliMesh = null; }
             // Oletus: auringon todellinen korkeus kohteessa; pelaajan valinta tai asetuksen tunti avainkuvista.
             var savy = !KaupunkiKuva.SavyKaytossa ? KaupunkiValo.Paiva
                 : pakko >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
@@ -361,6 +376,20 @@ namespace Matkakirja.Natiivi
                 KaupunkiKuva.varit.saturation.value += -45f * harmaus;
                 KaupunkiKuva.varit.contrast.value += -10f * harmaus;
                 if (KaupunkiKuva.valko != null) KaupunkiKuva.valko.temperature.value += -12f * harmaus;
+            }
+            // Pallon kori (Linssiseppä 8.10.): sama valo kuin kaupungissa. Asetuksen tunnilla korkeus kellosta (6–18 → 0–55°).
+            KaupunkiKuva.KoriAurinkoKorkeus = pakko >= 0 ? 55f * Mathf.Sin(Mathf.PI * ((float)tunti - 6f) / 12f) : (float)aurinko;
+            KaupunkiKuva.KoriAtsimuutti = (float)auringonSuunta;
+            KaupunkiKuva.KoriLaki = V(savy.TaivasYla); KaupunkiKuva.KoriHorisontti = horisontti;
+            KaupunkiKuva.KoriValotusEV = KaupunkiKuva.varit != null ? KaupunkiKuva.varit.postExposure.value : 0f;
+            KaupunkiKuva.KoriSuodin = KaupunkiKuva.varit != null ? KaupunkiKuva.varit.colorFilter.value : Color.white;
+            // Ilmakehä (LS2 8.10.): sama aurinko kuin korilla; pilvisyys säästä, pilvikenttä liikkuu tuulen mukana.
+            {
+                var gr = kaupunki.Georef; float mt = gr != null ? gr.transform.lossyScale.x : 1f;
+                float kork = gr != null ? Mathf.Max(30f, (kamera.transform.position.y - gr.transform.position.y) / Mathf.Max(1e-6f, mt)) : 300f;
+                KaupunkiIlmakeha.Paivita(lat, lon, kork, KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, Mathf.Lerp(0.35f, 0.95f, harmaus),
+                    new Vector2(6f, 2f) * Time.time, mt);
+                kaupunki.Vesi?.Paivita(kamera);
             }
             if (KaupunkiKuva.jako != null)
             {

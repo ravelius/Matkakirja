@@ -14,3 +14,7 @@
 2. Paketti ei koskaan päädy julkiseen web-repoon (ravelius/Matkakirja) eikä ämpäriin lähdemuodossa; käännetyssä appissa sallittu.
 3. **Jos proto-repon näkyvyyttä muutetaan julkiseksi, tuotu paketti poistetaan ensin, myös historiasta.**
 4. Demot ja esimerkkikohtaukset eivät tule repoon.
+
+## Muutokset (Siirtoseppä 8.10.2026)
+
+- URP 17 (Unity 6.1+): vanhentunut `_FORWARD_PLUS` / `USE_FORWARD_PLUS` / `FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK` korvattu nimillä `_CLUSTER_LIGHT_LOOP` / `USE_CLUSTER_LIGHT_LOOP` / `CLUSTER_LIGHT_LOOP_SUBTRACTIVE_LIGHT_CHECK` viidessä varjostimessa (Candle VFX URP: Wax, Wax_VC, Wick, Glass, Extra Grid), jotta vaha ja lasi saavat lisävalot Forward+-renderöijissä (Ultra, Mac PC_Renderer). Ei muita muutoksia.
