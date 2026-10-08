@@ -496,7 +496,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (string.IsNullOrWhiteSpace(t.text) || !Nakyva(t, w, h)) return;
                     for (var e = (VisualElement)t; e != null; e = e.parent)
-                        if (e.ClassListContains("mk-paljastus") || e == tkHimmennys) return;
+                        if (e.ClassListContains("mk-paljastus") || e.ClassListContains("mk-alkuvalinta") || e == tkHimmennys) return;
                     loydot.Add($"\"{(t.text.Length > 30 ? t.text.Substring(0, 30) + "…" : t.text)}\" @ {nro}/{t.parent?.GetClasses().FirstOrDefault() ?? t.parent?.name ?? "-"}");
                 });
             }

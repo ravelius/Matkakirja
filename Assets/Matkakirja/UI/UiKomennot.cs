@@ -529,6 +529,9 @@ namespace Matkakirja.Natiivi
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
+                case "olavinlinna":
+                    // "ui olavinlinna alku|loppu|nollaa|sulje|tila": Olavinlinnan alun valinta (OlavinlinnaAlku, juna 171).
+                    return "=" + OlavinlinnaAlku.Testi(loput.Trim().Length > 0 ? loput.Trim() : "tila");
                 case "seikkailutapit":
                     // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
                     if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
