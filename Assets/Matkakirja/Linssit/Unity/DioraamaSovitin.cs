@@ -981,6 +981,7 @@ namespace Matkakirja.Natiivi
             string osatUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "osat.json" : !string.IsNullOrEmpty(rakennus.KavelyOsat) ? paketinJuuri + rakennus.KavelyOsat : null;
             string merkitUrl = kavelyKehitysJuuri != null ? kavelyKehitysJuuri + "merkit.json" : !string.IsNullOrEmpty(rakennus.KavelyMerkit) ? paketinJuuri + rakennus.KavelyMerkit : null;
             if (osatUrl != null) yield return SeikkailuKavely.Lataa(osatUrl, merkitUrl, peili, rakennus3D, rakennus, nayttamo.transform, o.Kirjaa);
+            SeikkailuKavely.AsetaMarkyys(rakennus3D);
         }
 
         // HISTORIAMOOTTORI V2: venesaapuminen. Reitti merkeistä vene:* (järjestyksessä; vene:laituri kierto_y = keulan suunta), muuten
@@ -1145,6 +1146,7 @@ namespace Matkakirja.Natiivi
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
+            SeikkailuKavely.AsetaMarkyys(rakennus3D);   // myöhemmin ladatut tilat (laituri, piha) märiksi
             // Askeleet (vartijat askel-kivi; pelaajan omat askeleet pinnan mukaan: askel-puu ym. rakennuksen äänistä, olki/sora/vesi aanet-fp-manifestista).
             if (rakennus.Aanet != null)
                 foreach (var kv in rakennus.Aanet)

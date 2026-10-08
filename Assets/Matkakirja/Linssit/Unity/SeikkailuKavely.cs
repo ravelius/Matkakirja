@@ -116,8 +116,48 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVectorArray(IdLeikkaus, c); Shader.SetGlobalVectorArray(IdKoko, k); Shader.SetGlobalFloat(IdN, n);
         }
 
+        static readonly int IdMarkyys = Shader.PropertyToID("_Markyys");
+
+        /// <summary>
+        /// MÄRÄT PINNAT (omistajan palaute 8.10. (2), LR v45f): tilan leivotun materiaalin _Markyys kävelydatasta — kävelyosan
+        /// osa.markyys (kavely:&lt;osa&gt; tai samanniminen tila) tai pinta-merkin markyys (merkin osa = tila, tai kävelyosaton tila,
+        /// esim. laituri, jonka rajoihin merkki osuu); suurin voittaa. Seikkailun ajan globaali kytkin päälle ja kiilto kuunvalona.
+        /// Kutsutaan latauksen jälkeen ja uudelleen, kun tiloja on tullut lisää (kevyt).
+        /// </summary>
+        public static void AsetaMarkyys(DioraamaRakennus r3d)
+        {
+            var d = Data; if (d == null || r3d == null) return;
+            Shader.SetGlobalFloat("_DioraamaMarkyysPaalla", 1f);
+            Shader.SetGlobalVector("_DioraamaMarkyysKiilto", new Vector4(0.50f, 0.58f, 0.72f, 1f));
+            int n = 0;
+            foreach (var kv in r3d.Tilat)
+            {
+                if (kv.Value == null) continue;
+                string id = kv.Key.StartsWith("kavely:", StringComparison.Ordinal) ? kv.Key.Substring(7) : kv.Key;
+                bool onOsa = d.Osat.TryGetValue(id, out var osa);
+                double m = onOsa ? osa.Markyys : 0;
+                var rr = kv.Value.GetComponentsInChildren<MeshRenderer>(true);
+                if (rr.Length == 0) continue;
+                var rajat = rr[0].bounds; foreach (var r in rr) rajat.Encapsulate(r.bounds);
+                rajat.Expand(0.5f);
+                foreach (var p in d.Merkit)
+                {
+                    if (p.Laji != "pinta" || p.Markyys <= 0) continue;
+                    bool kuuluu = p.Osa != null ? string.Equals(p.Osa, id, StringComparison.OrdinalIgnoreCase)
+                        : !onOsa && rajat.Contains(new Vector3((float)p.X, (float)p.Y, (float)-p.Z));
+                    if (kuuluu && p.Markyys > m) m = p.Markyys;
+                }
+                if (m <= 0) continue;
+                foreach (var r in rr)
+                    foreach (var mat in r.sharedMaterials)
+                        if (mat != null && mat.HasProperty(IdMarkyys) && mat.GetFloat(IdMarkyys) != (float)m) { mat.SetFloat(IdMarkyys, (float)m); n++; }
+            }
+            if (n > 0) Debug.Log($"MATKAKIRJA seikkailu: märät pinnat {n} materiaalia");
+        }
+
         public static void Pura()
         {
+            Shader.SetGlobalFloat("_DioraamaMarkyysPaalla", 0f);
             foreach (var go in tormaykset) if (go != null) UnityEngine.Object.Destroy(go);
             tormaykset.Clear();
             foreach (var m in KavelyPinnat) if (m != null) UnityEngine.Object.Destroy(m);

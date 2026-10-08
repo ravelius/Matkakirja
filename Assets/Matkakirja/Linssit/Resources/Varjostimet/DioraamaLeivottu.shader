@@ -21,6 +21,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
         _Kirkkaus ("Kirkkaus", Float) = 1
         _Heilunta ("Lipun heilunta", Float) = 0
         _Leikattava ("Kuoren leikkaus koskee tätä", Float) = 0
+        _Markyys ("Märkyys 0–1 (kävelydata, LR v45f)", Float) = 0
     }
     SubShader
     {
@@ -47,6 +48,10 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             // ja sen väri (rgb) · voimakkuus (a). Oletus nolla: ei vaikutusta esittelyyn.
             float4 _DioraamaKantoValo;
             float4 _DioraamaKantoVari;
+            // Märät pinnat (omistajan palaute 8.10. (2), Siirtoseppä): seikkailu asettaa päälle (0 = esittely ennallaan) ja kiillon
+            // värin (kuunvalo, rgb; a ei käytössä). Materiaalin _Markyys tulee kävelydatasta (osa.markyys / pinta-merkit).
+            float _DioraamaMarkyysPaalla;
+            float4 _DioraamaMarkyysKiilto;
 
             TEXTURE2D(_ValoAtlas); SAMPLER(sampler_ValoAtlas);
 
@@ -55,6 +60,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 half _Kirkkaus;
                 float _Heilunta;
                 float _Leikattava;
+                float _Markyys;
             CBUFFER_END
 
             // Sama leikkaustilavuus kuin DioraamaKuori.shaderissa (globaalit DioraamaUlkokuori.PaivitaLeikkaus): tilat, joita
@@ -85,7 +91,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             }
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; };
-            struct Vali { float4 paikka : SV_POSITION; float2 uv1 : TEXCOORD0; float3 paikkaW : TEXCOORD1; };
+            struct Vali { float4 paikka : SV_POSITION; float2 uv1 : TEXCOORD0; float3 paikkaW : TEXCOORD1; float3 normaaliW : TEXCOORD2; };
 
             Vali vert(Syote i)
             {
@@ -100,6 +106,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 o.paikka = TransformWorldToHClip(maailma);
                 o.paikkaW = maailma;
                 o.uv1 = i.uv1;
+                o.normaaliW = TransformObjectToWorldNormal(i.normaali);
                 return o;
             }
 
@@ -107,6 +114,22 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             {
                 if (_Leikattava > 0.5 && _DioraamaLeikkausMin.w > 0.001 && Leikkauksessa(i.paikkaW)) discard;
                 half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
+
+                // Märkyys: märkä pinta tummuu (vaakapinnat eniten, hento laikukkuus), ja kiilto heijastaa kuunvaloa
+                // loivassa kulmassa (Fresnel). Liekkien lämpö kiiltää märällä pinnalla enemmän (lisa × kiilto).
+                half mm = 0, kiilto = 1;
+                float3 nW = normalize(i.normaaliW);
+                if (_Markyys * _DioraamaMarkyysPaalla > 0.001)
+                {
+                    half yla = (half)saturate(nW.y);
+                    half kuvio = 0.78h + 0.22h * (half)sin(i.paikkaW.x * 1.7 + sin(i.paikkaW.z * 2.3) * 1.3);
+                    mm = (half)(_Markyys * _DioraamaMarkyysPaalla) * lerp(0.45h, 1.0h, yla) * kuvio;
+                    vari *= lerp(1.0h, 0.58h, mm);
+                    float3 v = normalize(_WorldSpaceCameraPos - i.paikkaW);
+                    half fres = (half)pow(1.0 - saturate(dot(nW, v)), 5.0);
+                    vari += (half3)_DioraamaMarkyysKiilto.rgb * fres * mm * yla * 0.6h;
+                    kiilto = 1.0h + mm * 0.8h;
+                }
 
                 half lisa = 0;
                 int maara = (int)min(_DioraamaLiekkiMaara, 8.0);
@@ -121,7 +144,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                     lisa += (half)(lahella * (0.08 + 0.22 * aalto));
                 }
                 // Vähennetty liike: _DioraamaLepatus = 1 tasaisena → lepatus jää pieneksi vakiolämmöksi.
-                vari += vari * lisa * _DioraamaLepatus * half3(1.0h, 0.62h, 0.30h);
+                vari += vari * lisa * kiilto * _DioraamaLepatus * half3(1.0h, 0.62h, 0.30h);
                 if (_DioraamaKantoValo.w > 0.01)
                 {
                     // Atlaksen perusväri (leivottu valo täysillä) skaalattuna kynttilän etäisyydellä: tumma huone valaistuu lähellä.
