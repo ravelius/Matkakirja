@@ -244,6 +244,79 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s.Siirtymassa, "näytteen jälkeen siirto valmistuu ennen aikarajaa");
         }
 
+        // Juna 165 (Päätoimittaja 09.2x, video9: 12 s:ssa 70 %): siirrossa ensin yleiskuva, vasta sitten 1. kohteen esikamera.
+        [Testi] static void SiirtoLataaEnsinYleiskuvanJaSittenKohteen()
+        {
+            var s = new OpasSilmukka(OpasSilmukka.Avauskuva(55.68, 12.57));
+            s.Pyyda += (n, t) => { };
+            s.MaaPisteessa = (la, lo) => 35;
+            double ed = 0.5;
+            s.LatausEdistys = () => ed;
+            s.EsiKohde = ("Notre-Dame", 48.8530, 2.3499);
+            s.PakotaSiirto = true;
+            s.VaihdaPaikka(48.861, 2.351, "Pariisi");
+            for (int i = 0; i < 20; i++) s.Paivita(0.1, _ => 35);
+            bool NotreDamessa(Kuvakulma? k) => k is Kuvakulma kk && KierrosLento.EtaisyysM(kk.Lat, kk.Lon, 48.8530, 2.3499) < 300;
+            Oleta.Tosi(s.Siirtymassa && !s.YleiskuvaValmis && !NotreDamessa(s.Esilataus(_ => 35)), "1. vaihe: vain yleiskuva (esikamera ei Notre-Damessa)");
+            Oleta.Tosi(s.SiirtoEdistys <= 0.6 + 1e-9, $"palkki 1. vaiheessa ≤ 60 % ({s.SiirtoEdistys:P0})");
+            ed = 0.97;
+            for (int i = 0; i < 3; i++) s.Paivita(0.1, _ => 35);
+            Oleta.Tosi(s.Siirtymassa && s.YleiskuvaValmis && NotreDamessa(s.Esilataus(_ => 35)), "2. vaihe: 1. kohde esiladataan, siirto jatkuu");
+            for (int i = 0; i < 10 && s.Siirtymassa; i++) s.Paivita(0.1, _ => 35);
+            Oleta.Tosi(!s.Siirtymassa, "mittausajan jälkeen ≥ 95 % → siirtoruutu pois");
+        }
+
+        // Omistaja 8.10. 08.3x (liikemalli): esittelyn aikana pallo lipuu kohti seuraavaa, kamera pysyy nykyisessä kohteessa;
+        // lipuminen pysähtyy pehmeästi ennen lentoa (lento alkaa levosta).
+        [Testi] static void PalloLipuuKohtiSeuraavaaKatseNykyisessa()
+        {
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                var s = new OpasSilmukka(new Kuvakulma(48.853, 2.3498, 420, 58, 0, 40));
+                var p = new List<(int n, string t)>();
+                s.Pyyda += (n, t) => p.Add((n, t));
+                s.Aloita("Pariisi");
+                s.Vastaus(p[^1].n, K("A", 48.8530, 2.3498));
+                for (int i = 0; i < 800 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.05, _ => 35);
+                s.Vastaus(p[^1].n, K("B", 48.8611, 2.3358));
+                var alku = OpasKuvaus.KameraPaikka(s.Asento, 48.8530, 2.3498);
+                double bE = (2.3358 - 2.3498) * 6371000 * Math.Cos(48.853 * Math.PI / 180) * Math.PI / 180, bN = (48.8611 - 48.8530) * 6371000 * Math.PI / 180;
+                double Etaisyys((double e, double n, double u) x) => Math.Sqrt((x.e - bE) * (x.e - bE) + (x.n - bN) * (x.n - bN));
+                double maks = 0;
+                for (int i = 0; i < 300; i++) { s.Paivita(0.05, _ => 35); maks = Math.Max(maks, s.LipumisVauhti); }   // 15 s esittelyä
+                var nyt = OpasKuvaus.KameraPaikka(s.Asento, 48.8530, 2.3498);
+                Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 48.8530, 2.3498) < 1, "katse pysyy nykyisessä kohteessa");
+                Oleta.Tosi(Etaisyys(nyt) < Etaisyys(alku) - 20, $"silmä lähestyi seuraavaa ({Etaisyys(alku):F0} → {Etaisyys(nyt):F0} m)");
+                Oleta.Tosi(maks <= OpasKuvaus.LipumisNopeus + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.LipumisNopeus} m/s ({maks:F1})");
+                s.AaniLoppui();
+                double vauhtiLahtiessa = double.NaN;
+                for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) { vauhtiLahtiessa = s.LipumisVauhti; s.Paivita(0.05, _ => 35); }
+                Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && vauhtiLahtiessa < 0.05, $"lipuminen pysähtyi ennen lentoa ({vauhtiLahtiessa:F2} m/s)");
+            }
+            finally { OpasSilmukka.PalloLento = false; }
+        }
+
+        // Pelikoodari 8.10. (pallosanasto, siltalauseet-v3b): pallolauseiden valinta kierroksella.
+        [Testi] static void PallolauseetValitaanSaannoin()
+        {
+            var p = new OpasPallolauseet();
+            Oleta.Sama(OpasPallolauseet.Lahto, p.Lahtoon(0, 500), "1. lähtö: pallo-lahto");
+            Oleta.Sama(null, p.Lahtoon(90, 1500), "heti seuraava: ei (enintään joka toinen)");
+            Oleta.Sama(OpasPallolauseet.Kaanto, p.Lahtoon(170, 500), "suunta muuttui 80° → pallo-kaanto");
+            Oleta.Sama(null, p.Lahtoon(175, 1500), "joka toinen");
+            Oleta.Sama(OpasPallolauseet.Nousu, p.Lahtoon(180, 1500), "pitkä, suunta sama → pallo-nousu");
+            Oleta.Sama(null, p.Laskuun(), "lähdössä soi pallolause → ei laskua samaan siirtymään");
+            Oleta.Sama(null, p.Lahtoon(185, 300), "viereinen siirtymä: ei");
+            Oleta.Sama(null, p.Laskuun(), "viereinen siirtymä: ei laskuakaan");
+            Oleta.Sama(null, p.Lahtoon(186, 300), "lyhyt, suora → tavallinen lähtö");
+            Oleta.Sama(OpasPallolauseet.Lasku, p.Laskuun(), "lennon loppuun pallo-lasku (lähtö tavallinen, edellinen pallo kaksi siirtymää sitten)");
+            var q = new OpasPallolauseet(); int kaannot = 0;
+            for (int i = 0; i < 20; i++) if (q.Lahtoon(i % 2 == 0 ? 0 : 120, 300) == OpasPallolauseet.Kaanto) kaannot++;
+            Oleta.Sama(OpasPallolauseet.RyhmaMax, kaannot, "ryhmää enintään kolmesti kierroksella");
+            Oleta.Sama(null, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

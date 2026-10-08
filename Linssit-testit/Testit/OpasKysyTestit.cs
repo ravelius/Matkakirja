@@ -452,7 +452,8 @@ namespace Matkakirja.Linssit.Testit
                     edNopeus = nopeus;
                 }
                 Oleta.Tosi(lento, "lento alkoi");
-                Oleta.Tosi(Math.Abs(nopeusEnnen - OpasKuvaus.KiertoAsteS) < 0.05, $"kierto ennen lentoa {nopeusEnnen:F2}°/s");
+                // Omistaja 8.10.: pallon pysähdys ei kierrä kohteen ympäri (lipuminen kohti seuraavaa) → kääntö ennen lentoa pieni.
+                Oleta.Tosi(Math.Abs(nopeusEnnen) < 1.0, $"kääntö ennen lentoa {nopeusEnnen:F2}°/s (ei kiertoa)");
                 Oleta.Tosi(hyppy < 0.3, $"kääntönopeus muuttuu jatkuvasti lennon alussa (suurin hyppy {hyppy:F2}°/s / 50 ms)");
             }
             finally { OpasSilmukka.PalloLento = false; }

@@ -649,19 +649,19 @@ namespace Matkakirja.Natiivi
         // LENNON TELEMETRIA (Päätoimittaja 8.10. 08.3x): ruuduittain kulkunopeus (katsepisteen maajälki m/s), kuvan nopeus
         // (silmän nopeus / katse-etäisyys, rad/s), kääntönopeus (°/s) ja silmän korkeus; perillä yhteenveto (OpasKuvaus.Telemetria).
         readonly List<double> telV = new List<double>(), telVk = new List<double>(), telEt = new List<double>();
-        Kuvakulma? telEd; (double e, double n, double u) telSilma; double telKaanto, telAika; string telKohde;
+        Kuvakulma? telEd; (double e, double n, double u) telSilma; double telKaanto, telKierto, telAika; string telKohde;
         void Telemetria(OpasVaihe ennen)
         {
             bool lentaa = silmukka.Vaihe == OpasVaihe.Lentaa && !silmukka.Siirtymassa && !silmukka.AvausTauolla;
             var a = silmukka.Asento; float dt = Time.unscaledDeltaTime;
             if (lentaa && dt > 0)
             {
-                if (telEd == null) { telV.Clear(); telVk.Clear(); telEt.Clear(); telKaanto = 0; telAika = 0; telKohde = silmukka.Nykyinen?.Nimi; telSilma = OpasKuvaus.KameraPaikka(a, a.Lat, a.Lon); telEd = a; telLat0 = a.Lat; telLon0 = a.Lon; return; }
+                if (telEd == null) { telV.Clear(); telVk.Clear(); telEt.Clear(); telKaanto = 0; telKierto = 0; telAika = 0; telKohde = silmukka.Nykyinen?.Nimi; telSilma = OpasKuvaus.KameraPaikka(a, a.Lat, a.Lon); telEd = a; telLat0 = a.Lat; telLon0 = a.Lon; return; }
                 var ed = telEd.Value; var silma = OpasKuvaus.KameraPaikka(a, telLat0, telLon0);
                 double v = KierrosLento.EtaisyysM(ed.Lat, ed.Lon, a.Lat, a.Lon) / dt;
                 double de = silma.e - telSilma.e, dn = silma.n - telSilma.n, du = silma.u - telSilma.u;
                 double vk = Math.Sqrt(de * de + dn * dn + du * du) / dt, k = Math.Abs(KierrosLento.Kiedo(a.Suuntima - ed.Suuntima)) / dt;
-                telAika += dt; telV.Add(v); telVk.Add(vk); telEt.Add(a.EtaisyysM); telKaanto = Math.Max(telKaanto, k);
+                telAika += dt; telV.Add(v); telVk.Add(vk); telEt.Add(a.EtaisyysM); telKaanto = Math.Max(telKaanto, k); telKierto += k * dt;
                 o.Kirjaa($"opas: telemetria {telAika:F2} s kulku {v:F1} m/s kuva {vk / Math.Max(1, a.EtaisyysM):F3} rad/s kääntö {k:F1} °/s korkeus {silma.u:F0} m");
                 telSilma = silma; telEd = a;
             }
@@ -673,7 +673,7 @@ namespace Matkakirja.Natiivi
                     var (nousu, hidastus, huippu, _) = OpasKuvaus.Telemetria(telV, telEt, telAika / telV.Count);
                     var (_, _, huippuK, kasvu) = OpasKuvaus.Telemetria(telVk, telEt, telAika / telV.Count);
                     o.Kirjaa($"opas: telemetria yhteenveto {telKohde}: kesto {telAika:F1} s, kulku huippu {huippu:F0} m/s, nousu 10→90 % {nousu:F1} s, hidastus 90→10 % {hidastus:F1} s, "
-                        + $"silmä huippu {huippuK:F0} m/s, kuvan nopeuden kasvu huipun jälkeen {kasvu:P1}, kääntö enintään {telKaanto:F1} °/s");
+                        + $"silmä huippu {huippuK:F0} m/s, kuvan nopeuden kasvu huipun jälkeen {kasvu:P1}, kääntö enintään {telKaanto:F1} °/s, kokonaiskierto {telKierto:F0}°");
                 }
             }
         }
@@ -1759,7 +1759,7 @@ namespace Matkakirja.Natiivi
         }
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
-        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v2/siltalauseet.json";   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
+        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v3b/siltalauseet.json";   // v3b (Pelikoodari 8.10.): v2 + pallo-lahto/-nousu/-kaanto/-lasku (pallo-lasku-04 pois)   // v2 (Pelikoodari 7.10.): v1 + "ei-sallittu" (omistaja hyväksyi 09.4x)
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10.): kysymys, odotus5, odotus12, virhe; yhdistetään siltalauseisiin.</summary>
         public const string KuittauksetOsoite = "https://media.matkakirja.app/aanet/opas/kuittaukset-v1/kuittaukset.json";
         /// <summary>Kysymyksen odotusportaat (juna 150): 5 s / 12 s / 25 s, myöhäinen vastaus hylätään.</summary>
@@ -1804,11 +1804,29 @@ namespace Matkakirja.Natiivi
                 for (int i = 0; i < jono.Count; i++)
                     if (string.Equals(jono[i].nimi, k.Nimi, StringComparison.OrdinalIgnoreCase) || KierrosLento.EtaisyysM(jono[i].lat, jono[i].lon, k.Lat, k.Lon) < 80) { seur = i; break; }
                 if (seur >= 0) { int nyk = seur - 1; o.Kirjaa($"opas: kierros lähtee {nyk} → {seur}"); KierrosLahtee?.Invoke(nyk, seur, (float)silmukka.LentoKestoS); }
+                if (seur == 1) pallolauseet.Nollaa();   // kierroksen ensimmäinen lähtö
             }
             kaupunki.Karkeaksi();   // kaksivaiheinen tarkkuus (juna 153): lento ja saapuminen karkealla valinnalla
             o.Kirjaa($"opas: lento {k.Nimi} {matkaM:F0} m, kesto {silmukka.LentoKestoS:F1} s, suurin kiihtyvyys {silmukka.LentoMittari.kiihtyvyys:F1} m/s², suurin lasku {silmukka.LentoMittari.lasku:F1} m/s");
             kaupunki.YritaGoogleUudelleen();   // ion-varalla: Google uudelleen seuraavassa kohteessa (laatat lennon aikana)
-            if (!toiveesta) Silta(matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros, false);
+            if (toiveesta) return;
+            // Pallolauseet (Pelikoodari 8.10., juna 165): kierroksen siirtymässä pallon oma ryhmä, muuten tavallinen.
+            bool pallo = OpasSilmukka.PalloLento && silmukka.KierrosKaynnissa && matkaM <= 20000 && siltalauseet != null;
+            string pr = pallo ? pallolauseet.Lahtoon(OpasSilmukka.Suunta(silmukka.Asento.Lat, silmukka.Asento.Lon, k.Lat, k.Lon), matkaM, siltalauseet.OnRyhma) : null;
+            Silta(pr ?? (matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros), false);
+            if (pallo && pr == null) o.StartCoroutine(PalloLaskuun(k));
+        }
+
+        readonly OpasPallolauseet pallolauseet = new OpasPallolauseet();
+        /// <summary>pallo-lasku lennon loppuun ennen kertojaa (PuheEnnenS): ~PalloLaskuS ennen kertojan alkua, jos siltalause ei soi.</summary>
+        const double PalloLaskuS = 4.5;
+        IEnumerator PalloLaskuun(OpasKohde k)
+        {
+            double alku = silmukka.LentoKestoS - OpasSilmukka.PuheEnnenS - PalloLaskuS;
+            while (silmukka != null && silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.Nykyinen == k && silmukka.VaiheAika < alku) yield return null;
+            if (silmukka == null || silmukka.Vaihe != OpasVaihe.Lentaa || silmukka.Nykyinen != k || alku < 3 || silta == null || silta.isPlaying) yield break;
+            var r = pallolauseet.Laskuun(siltalauseet.OnRyhma);
+            if (r != null) Silta(r, false);
         }
 
         IEnumerator SoitaSillanJalkeen(OpasKohde k)
@@ -2437,7 +2455,7 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"opas: peite pois {Time.realtimeSinceStartup - t0:F1} s, laatat {kaupunki.Latausaste:F0} %");
         }
         // Päätoimittaja 8.10. 09.0x: peite pois vasta ≥ 95 % (yleiskuva ja 1. kohde), turvaraja ~12 s (oli 35 % / 4 s).
-        const float PeiteRaja = 95f, PeiteMaxS = 12f;
+        const float PeiteRaja = 95f, PeiteMaxS = 20f;   // juna 165: turvaraja 20 s (1. kohde yleiskuvan jälkeen)
 
         public void Sulje()
         {
