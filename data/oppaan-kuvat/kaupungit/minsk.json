@@ -1,0 +1,369 @@
+{
+ "kaupunki": "minsk",
+ "kaupunkiQ": "Q2280",
+ "kohteet": [
+  {
+   "q": "Q1742825",
+   "nimi": "Pyhien Simonin ja Helenan kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 53.89652,
+   "lon": 27.54748,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Belarus-Minsk-Church of Simon and Helena-3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Belarus-Minsk-Church_of_Simon_and_Helena-3.jpg?width=1280",
+     "tekija": "Hanna Zelenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Belarus-Minsk-Church_of_Simon_and_Helena-3.jpg",
+     "selite": "Punatiilinen neogoottilainen kirkko valmistui vuonna 1910 ja on Minskin tunnetuimpia maamerkkejä.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Church of Saints Simon and Helena, Minsk 20190502-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_Saints_Simon_and_Helena%2C_Minsk_20190502-1.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_Saints_Simon_and_Helena%2C_Minsk_20190502-1.jpg",
+     "selite": "Kirkon tornit ja tiilijulkisivu kohoavat Itsenäisyyden aukion laidalla.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kirche des Heiligen Simon und der Heiligen Helena Niezaliežnasci Square Minsk.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirche_des_Heiligen_Simon_und_der_Heiligen_Helena_Niezalie%C5%BEnasci_Square_Minsk.JPG?width=1280",
+     "tekija": "Herbert wie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kirche_des_Heiligen_Simon_und_der_Heiligen_Helena_Niezalie%C5%BEnasci_Square_Minsk.JPG",
+     "selite": "Katolinen kirkko seisoo puiden ympäröimänä keskustan aukion kupeessa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2588857",
+   "nimi": "Pyhän Hengen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 53.905,
+   "lon": 27.55611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Holy Spirit Cathedral in Minsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Spirit_Cathedral_in_Minsk.jpg?width=1280",
+     "tekija": "Insider",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holy_Spirit_Cathedral_in_Minsk.jpg",
+     "selite": "Valkoinen barokkikatedraali on Valko-Venäjän ortodoksisen kirkon pääkirkko Minskin Yläkaupungissa.",
+     "leveys": 4662,
+     "korkeus": 3384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Belarus-Minsk-Cathedral of Holy Spirit-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Belarus-Minsk-Cathedral_of_Holy_Spirit-1.jpg?width=1280",
+     "tekija": "Hanna Zelenko",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Belarus-Minsk-Cathedral_of_Holy_Spirit-1.jpg",
+     "selite": "Entisen basilialaisluostarin kirkon kaksi tornia hallitsevat Yläkaupungin siluettia.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "4408 Cathedral of Holy Spirit in Minsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/4408_Cathedral_of_Holy_Spirit_in_Minsk.jpg?width=1280",
+     "tekija": "Rakoon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:4408_Cathedral_of_Holy_Spirit_in_Minsk.jpg",
+     "selite": "Vihreäkattoiset luostarirakennukset liittyvät katedraaliin Yläkaupungin aukiolla.",
+     "leveys": 5520,
+     "korkeus": 3680,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1995558",
+   "nimi": "Itsenäisyyden aukio",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 53.89556,
+   "lon": 27.54778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Miensk - Plac Niezaležnaści.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miensk_-_Plac_Niezale%C5%BEna%C5%9Bci.jpg?width=1280",
+     "tekija": "Zedlik",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miensk_-_Plac_Niezale%C5%BEna%C5%9Bci.jpg",
+     "selite": "Minskin keskusaukio on kaupungin suurin ja sen reunoilla on stalinistisen ajan kortteleita.",
+     "leveys": 6913,
+     "korkeus": 3889,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": ".41. 60 1c 170 5f - Minsk, Belarus 2009 (3902609140).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/.41._60_1c_170_5f_-_Minsk%2C_Belarus_2009_(3902609140).jpg?width=1280",
+     "tekija": "EuroAsia Vizion from New York",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:.41._60_1c_170_5f_-_Minsk%2C_Belarus_2009_(3902609140).jpg",
+     "selite": "Aukion laajalla kivetyksellä on maanalaisen ostoskeskuksen lasikupoleita.",
+     "leveys": 3584,
+     "korkeus": 2016,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1637149",
+   "nimi": "Neitsyt Marian katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 53.90313,
+   "lon": 27.55461,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Minsk Catholic Mary church.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minsk_Catholic_Mary_church.jpg?width=1280",
+     "tekija": "A.Savin",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minsk_Catholic_Mary_church.jpg",
+     "selite": "Minskin roomalaiskatolinen arkkikatedraali on kaksitorninen barokkikirkko Vapauden aukion lähellä.",
+     "leveys": 2164,
+     "korkeus": 3432,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q445830",
+   "nimi": "Minskin kaupungintalo",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 70,
+   "lat": 53.90355,
+   "lon": 27.55612,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Miensk - Ratuša.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miensk_-_Ratu%C5%A1a.jpg?width=1280",
+     "tekija": "Zedlik",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miensk_-_Ratu%C5%A1a.jpg",
+     "selite": "Valkoinen uusklassinen kaupungintalo kellotorneineen sijaitsee Vapauden aukiolla Yläkaupungissa.",
+     "leveys": 3666,
+     "korkeus": 2558,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Belarus Minsk Archcathedral Virgin Mary.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Belarus_Minsk_Archcathedral_Virgin_Mary.jpg?width=1280",
+     "tekija": "User:Monk",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Belarus_Minsk_Archcathedral_Virgin_Mary.jpg",
+     "selite": "Kaupungintalon ja Neitsyt Marian katedraalin välissä kulkee Yläkaupungin kävelyalue.",
+     "leveys": 1772,
+     "korkeus": 1268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2579175",
+   "nimi": "Kolminaisuuden esikaupunki",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 53.90853,
+   "lon": 27.55598,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bahdanoviča street — Trajeckaje suburb (Minsk) 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahdanovi%C4%8Da_street_%E2%80%94_Trajeckaje_suburb_(Minsk)_1.jpg?width=1280",
+     "tekija": "Homoatrox",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahdanovi%C4%8Da_street_%E2%80%94_Trajeckaje_suburb_(Minsk)_1.jpg",
+     "selite": "Svislatš-joen rannalla sijaitsevan vanhan kaupunginosan värikkäät talot on kunnostettu 1800-luvun ilmeeseen.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bahdanoviča street — Trajeckaje suburb (Minsk) 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahdanovi%C4%8Da_street_%E2%80%94_Trajeckaje_suburb_(Minsk)_2.jpg?width=1280",
+     "tekija": "Homoatrox",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahdanovi%C4%8Da_street_%E2%80%94_Trajeckaje_suburb_(Minsk)_2.jpg",
+     "selite": "Matalat pastellinsävyiset kerrostalot muistuttavat Minskin vanhasta kauppiaskaupungista.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2635425",
+   "nimi": "Voiton aukio",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 53.90853,
+   "lon": 27.57478,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Victory square, Minsk 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victory_square%2C_Minsk_01.jpg?width=1280",
+     "tekija": "User:Redline",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Victory_square%2C_Minsk_01.jpg",
+     "selite": "Aukion keskellä kohoaa toisen maailmansodan voittomonumentti, jota ympäröivät stalinistiset kerrostalot.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2561905",
+   "nimi": "Valko-Venäjän kansallisooppera ja -baletti",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 53.91028,
+   "lon": 27.56139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Нацыянальны акадэмічны Вялікі тэатар опэры і балету г. Менск 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9D%D0%B0%D1%86%D1%8B%D1%8F%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B_%D0%B0%D0%BA%D0%B0%D0%B4%D1%8D%D0%BC%D1%96%D1%87%D0%BD%D1%8B_%D0%92%D1%8F%D0%BB%D1%96%D0%BA%D1%96_%D1%82%D1%8D%D0%B0%D1%82%D0%B0%D1%80_%D0%BE%D0%BF%D1%8D%D1%80%D1%8B_%D1%96_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D1%83_%D0%B3._%D0%9C%D0%B5%D0%BD%D1%81%D0%BA_2.jpg?width=1280",
+     "tekija": "Антон Алегавіч Макоўскі",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B0%D1%86%D1%8B%D1%8F%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B_%D0%B0%D0%BA%D0%B0%D0%B4%D1%8D%D0%BC%D1%96%D1%87%D0%BD%D1%8B_%D0%92%D1%8F%D0%BB%D1%96%D0%BA%D1%96_%D1%82%D1%8D%D0%B0%D1%82%D0%B0%D1%80_%D0%BE%D0%BF%D1%8D%D1%80%D1%8B_%D1%96_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D1%83_%D0%B3._%D0%9C%D0%B5%D0%BD%D1%81%D0%BA_2.jpg",
+     "selite": "Vuonna 1939 valmistunut suuri teatterirakennus seisoo suihkulähteellä kaunistetun puiston reunalla.",
+     "leveys": 3386,
+     "korkeus": 2712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17611440",
+   "nimi": "Kaupungin portit",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 53.8918,
+   "lon": 27.5517,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Babrujskaja, Minsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Babrujskaja%2C_Minsk.jpg?width=1280",
+     "tekija": "Viktar Palstsiuk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Babrujskaja%2C_Minsk.jpg",
+     "selite": "Rautatieaseman edustan kaksi vuonna 1954 valmistunutta tornitaloa muodostavat Minskin portin.",
+     "leveys": 3727,
+     "korkeus": 2795,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2025.08.07 Minsk Tower Kirava street 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025.08.07_Minsk_Tower_Kirava_street_1.jpg?width=1280",
+     "tekija": "Tess Mattew",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025.08.07_Minsk_Tower_Kirava_street_1.jpg",
+     "selite": "Stalinistisen ajan tornitalon koristeellinen huippu erottuu Kiravan kadun yllä.",
+     "leveys": 2899,
+     "korkeus": 3906,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2384518",
+   "nimi": "Itsenäisyydenkatu",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 300,
+   "lat": 53.91667,
+   "lon": 27.58583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Minsk Unabhängigkeitsprospekt 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minsk_Unabh%C3%A4ngigkeitsprospekt_1.JPG?width=1280",
+     "tekija": "Julian Nyča",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minsk_Unabh%C3%A4ngigkeitsprospekt_1.JPG",
+     "selite": "Minskin pääkatu kulkee keskustasta koilliseen ja sen varrella on sodanjälkeisiä edustuskortteleita.",
+     "leveys": 2100,
+     "korkeus": 1400,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Minsk. A view of Svislach river.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minsk._A_view_of_Svislach_river.jpg?width=1280",
+   "tekija": "Vadim Sazanovich",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minsk._A_view_of_Svislach_river.jpg",
+   "selite": "Svislatš-joki kiertää Kolminaisuuden esikaupungin saarta Minskin vanhassa keskustassa.",
+   "leveys": 3264,
+   "korkeus": 1836,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Svislach and upper town in Minsk.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Svislach_and_upper_town_in_Minsk.jpg?width=1280",
+   "tekija": "Monk - Ihar Mahaniok",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Svislach_and_upper_town_in_Minsk.jpg",
+   "selite": "Svislatš-joen vesiallas ja Yläkaupungin tornit muodostavat Minskin tunnistettavan yleisnäkymän.",
+   "leveys": 4318,
+   "korkeus": 2879,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

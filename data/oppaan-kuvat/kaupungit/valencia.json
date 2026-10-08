@@ -1,0 +1,464 @@
+{
+ "kaupunki": "valencia",
+ "kaupunkiQ": "Q8818",
+ "kohteet": [
+  {
+   "q": "Q588009",
+   "nimi": "Lonja de la Seda",
+   "peruste": "UNESCO",
+   "koko_m": 100,
+   "lat": 39.47444,
+   "lon": -0.37833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "057 Llotja de la Seda, pl. del Mercat 31 (València).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/057_Llotja_de_la_Seda%2C_pl._del_Mercat_31_(Val%C3%A8ncia).jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:057_Llotja_de_la_Seda%2C_pl._del_Mercat_31_(Val%C3%A8ncia).jpg",
+     "selite": "Myöhäisgoottilainen silkkiauktion talo on Valencian kaupankäynnin kultakauden muistomerkki.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Consulado del Mar y Lonja de la Seda en Valencia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Consulado_del_Mar_y_Lonja_de_la_Seda_en_Valencia.jpg?width=1280",
+     "tekija": "Juan Mayordomo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Consulado_del_Mar_y_Lonja_de_la_Seda_en_Valencia.jpg",
+     "selite": "Lonjan hammaslaitaiset muurit ja goottilaiset ikkunat avautuvat Torin laidalle.",
+     "leveys": 5471,
+     "korkeus": 3157,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1466926",
+   "nimi": "Valencian katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 39.47561,
+   "lon": -0.37514,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral de Valencia, Valencia, España, 2014-06-30, DD 160.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Valencia%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_160.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Valencia%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_160.JPG",
+     "selite": "Katedraalin goottilainen portti ja apsiksen kaarikäytävä avautuvat Plaza de la Virgenille.",
+     "leveys": 3708,
+     "korkeus": 2634,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "047 Catedral de València, façana oest, c. del Micalet.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/047_Catedral_de_Val%C3%A8ncia%2C_fa%C3%A7ana_oest%2C_c._del_Micalet.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:047_Catedral_de_Val%C3%A8ncia%2C_fa%C3%A7ana_oest%2C_c._del_Micalet.jpg",
+     "selite": "Katedraalin sinikupolit ja kellotorni erottuvat kapean kadun päästä.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2975344",
+   "nimi": "Micalet-torni",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 60,
+   "lat": 39.47497,
+   "lon": -0.3755,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "El Miguelete clue169.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Miguelete_clue169.jpg?width=1280",
+     "tekija": "16:9clue",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Miguelete_clue169.jpg",
+     "selite": "Katedraalin kahdeksankulmainen kellotorni on Valencian vanhan kaupungin tunnusmerkki.",
+     "leveys": 2781,
+     "korkeus": 1564,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "063 Catedral de València, amb el Miquelet, pl. de la Reina.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/063_Catedral_de_Val%C3%A8ncia%2C_amb_el_Miquelet%2C_pl._de_la_Reina.JPG?width=1280",
+     "tekija": "Enfo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:063_Catedral_de_Val%C3%A8ncia%2C_amb_el_Miquelet%2C_pl._de_la_Reina.JPG",
+     "selite": "Micalet kohoaa katedraalin yläpuolelle Plaza de la Reinan suunnasta nähtynä.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2455550",
+   "nimi": "Serranosin tornit",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 39.4793,
+   "lon": -0.37593,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torres serrans abril.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torres_serrans_abril.jpg?width=1280",
+     "tekija": "Felivet",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torres_serrans_abril.jpg",
+     "selite": "Keskiaikaisen kaupunginmuurin vankka porttirakennus kaksine torneineen on yksi Euroopan parhaiten säilyneitä.",
+     "leveys": 2752,
+     "korkeus": 2156,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2343754",
+   "nimi": "Quartin tornit",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 39.47569,
+   "lon": -0.38398,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "185 Torres de Quart (València), des del c. Guillem de Castro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/185_Torres_de_Quart_(Val%C3%A8ncia)%2C_des_del_c._Guillem_de_Castro.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:185_Torres_de_Quart_(Val%C3%A8ncia)%2C_des_del_c._Guillem_de_Castro.jpg",
+     "selite": "Pyöreät tornit vartioivat vanhaa kaupunginporttia 1400-luvulta.",
+     "leveys": 2112,
+     "korkeus": 2816,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "184 Torres de Quart (València), des del c. Guillem de Castro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/184_Torres_de_Quart_(Val%C3%A8ncia)%2C_des_del_c._Guillem_de_Castro.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:184_Torres_de_Quart_(Val%C3%A8ncia)%2C_des_del_c._Guillem_de_Castro.jpg",
+     "selite": "Tornien muuriin on jäänyt jälkiä piirityksistä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2197068",
+   "nimi": "Mercat Central",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 39.4735,
+   "lon": -0.37894,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "056 Mercat Central de València, accés est, pl. del Mercat.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/056_Mercat_Central_de_Val%C3%A8ncia%2C_acc%C3%A9s_est%2C_pl._del_Mercat.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:056_Mercat_Central_de_Val%C3%A8ncia%2C_acc%C3%A9s_est%2C_pl._del_Mercat.jpg",
+     "selite": "Jugend-tyylinen tori on yksi Euroopan suurimmista tuoretorihalleista.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "067 Mercat Central de València, accés nord-oest, c. Vell de la Palla - pl. Ciutat de Bruges.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/067_Mercat_Central_de_Val%C3%A8ncia%2C_acc%C3%A9s_nord-oest%2C_c._Vell_de_la_Palla_-_pl._Ciutat_de_Bruges.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:067_Mercat_Central_de_Val%C3%A8ncia%2C_acc%C3%A9s_nord-oest%2C_c._Vell_de_la_Palla_-_pl._Ciutat_de_Bruges.jpg",
+     "selite": "Hallin kupolit ja värikkäät laatat näkyvät kadulta.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1102684",
+   "nimi": "Estación del Norte",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 39.46699,
+   "lon": -0.37712,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estación del Norte, Valencia, España, 2014-06-30, DD 122.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_122.JPG",
+     "selite": "Jugend-tyylinen päärautatieasema on koristeltu appelsiinikukilla ja keraamisilla laatoilla.",
+     "leveys": 4758,
+     "korkeus": 2253,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estación del Norte, Valencia, España, 2014-06-30, DD 123.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_123.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_del_Norte%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_123.JPG",
+     "selite": "Aseman julkisivu avautuu laajalle aukiolle keskustan tuntumassa.",
+     "leveys": 4512,
+     "korkeus": 2709,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q526528",
+   "nimi": "Valencian härkätaisteluareena",
+   "peruste": "sitelinks",
+   "koko_m": 130,
+   "lat": 39.46667,
+   "lon": -0.37625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Plaza de toros, Valencia, España, 2014-06-30, DD 126.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_toros%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_126.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_toros%2C_Valencia%2C_Espa%C3%B1a%2C_2014-06-30%2C_DD_126.JPG",
+     "selite": "Tiilinen areena on rakennettu antiikin roomalaisten amfiteatterien mallin mukaan.",
+     "leveys": 4262,
+     "korkeus": 2990,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Plaza de toros de Valencia 5.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_toros_de_Valencia_5.JPG?width=1280",
+     "tekija": "Dorieo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Plaza_de_toros_de_Valencia_5.JPG",
+     "selite": "Areenan kaarisarjat nousevat aseman viereen vanhan kaupungin kupeeseen.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3393221",
+   "nimi": "Generalitatin palatsi",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 39.4767,
+   "lon": -0.37669,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palau de la Generalitat- Valencia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palau_de_la_Generalitat-_Valencia.jpg?width=1280",
+     "tekija": "Anual",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palau_de_la_Generalitat-_Valencia.jpg",
+     "selite": "Goottilais-renessanssipalatsi toimii Valencian alueen hallituksen kotina.",
+     "leveys": 3712,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "043 Palau de la Generalitat Valenciana, angle nord-oest, pl. de Manises.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/043_Palau_de_la_Generalitat_Valenciana%2C_angle_nord-oest%2C_pl._de_Manises.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:043_Palau_de_la_Generalitat_Valenciana%2C_angle_nord-oest%2C_pl._de_Manises.jpg",
+     "selite": "Palatsin torni hohtaa kultaisena iltavalossa.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1993940",
+   "nimi": "Dos Aguasin palatsi",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 70,
+   "lat": 39.47264,
+   "lon": -0.37472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Valencia, palazzo de marchese di Dos Aigües, esterno 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valencia%2C_palazzo_de_marchese_di_Dos_Aig%C3%BCes%2C_esterno_01.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valencia%2C_palazzo_de_marchese_di_Dos_Aig%C3%BCes%2C_esterno_01.jpg",
+     "selite": "Rokokoopalatsi on tunnettu runsaasti veistetystä alabasteriportistaan.",
+     "leveys": 4302,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1779244",
+   "nimi": "Plaza de la Virgen",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 39.47636,
+   "lon": -0.37529,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "031 Plaça de la Mare de Déu (València), amb la basílica dels Desemparats i la Catedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/031_Pla%C3%A7a_de_la_Mare_de_D%C3%A9u_(Val%C3%A8ncia)%2C_amb_la_bas%C3%ADlica_dels_Desemparats_i_la_Catedral.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:031_Pla%C3%A7a_de_la_Mare_de_D%C3%A9u_(Val%C3%A8ncia)%2C_amb_la_bas%C3%ADlica_dels_Desemparats_i_la_Catedral.jpg",
+     "selite": "Vanhan kaupungin pääaukion laidoilla ovat basilika ja katedraali.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20151120 067 Valencia - Placa de la Verge (23304976746).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20151120_067_Valencia_-_Placa_de_la_Verge_(23304976746).jpg?width=1280",
+     "tekija": "Sjaak Kempe from Groningen, The Netherlands",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20151120_067_Valencia_-_Placa_de_la_Verge_(23304976746).jpg",
+     "selite": "Illalla aukio hohtaa kultaisena valaistuna.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2713406",
+   "nimi": "Turian puisto",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 400,
+   "lat": 39.4801,
+   "lon": -0.38611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "154 Jardí del Túria (València), des del pont dels Serrans, al fons el Museu de Belles Arts.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/154_Jard%C3%AD_del_T%C3%BAria_(Val%C3%A8ncia)%2C_des_del_pont_dels_Serrans%2C_al_fons_el_Museu_de_Belles_Arts.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:154_Jard%C3%AD_del_T%C3%BAria_(Val%C3%A8ncia)%2C_des_del_pont_dels_Serrans%2C_al_fons_el_Museu_de_Belles_Arts.jpg",
+     "selite": "Entiseen jokiuomaan rakennettu puisto kiertää vanhan kaupungin laitaa.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "168 Museu de Belles Arts i jardí del Túria, des del pont de la Trinitat (València).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/168_Museu_de_Belles_Arts_i_jard%C3%AD_del_T%C3%BAria%2C_des_del_pont_de_la_Trinitat_(Val%C3%A8ncia).jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:168_Museu_de_Belles_Arts_i_jard%C3%AD_del_T%C3%BAria%2C_des_del_pont_de_la_Trinitat_(Val%C3%A8ncia).jpg",
+     "selite": "Puiston nurmikoiden takaa kohoavat kuvataidemuseon siniset kupolit.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q84165268",
+   "nimi": "Albufera",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 800,
+   "lat": 39.33167,
+   "lon": -0.35222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Albufera de Valencia 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albufera_de_Valencia_1.jpg?width=1280",
+     "tekija": "Pepe Serrador",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albufera_de_Valencia_1.jpg",
+     "selite": "Valencian eteläpuolinen laguuni on tunnettu auringonlaskuistaan ja riisipelloistaan.",
+     "leveys": 4206,
+     "korkeus": 2804,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Albufera embarcadero.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albufera_embarcadero.jpg?width=1280",
+     "tekija": "Iforner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Albufera_embarcadero.jpg",
+     "selite": "Matala laguuni on tärkeä lintualue ja kalastuspaikka.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vue sur la ville depuis la Tour du Miguelete (8277318710).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vue_sur_la_ville_depuis_la_Tour_du_Miguelete_(8277318710).jpg?width=1280",
+   "tekija": "Nicolas Vollmer from Munich [Allemagne]",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vue_sur_la_ville_depuis_la_Tour_du_Miguelete_(8277318710).jpg",
+   "selite": "Valencian vanhan kaupungin kattojen yli näkyy kaupunki Micaletin tornista.",
+   "leveys": 4272,
+   "korkeus": 2848,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

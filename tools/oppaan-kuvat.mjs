@@ -190,12 +190,18 @@ export function hylkaysSyy(x) {
   return null;
 }
 
+// Vaihe 1 (pelin 266 paikkaa) ja vaihe 2 (162 kaupunkia) samassa listassa (Sisältökirjuri 8.10.2026).
+function kaupunkiLista() {
+  const lue = (n) => (existsSync(join(DATA, n)) ? JSON.parse(readFileSync(join(DATA, n), 'utf8')) : []);
+  return [...lue('kaupungit-vaihe1.json'), ...lue('kaupungit-vaihe2.json')];
+}
+
 // --- pelin omat ainekset ------------------------------------------------------------------------------------------
 
 async function seed(id) {
   const kk = (await import(join(JUURI, 'js/packs/kulttuuri-kategoriat.js'))).KULTTUURI_KATEGORIAT;
   const kartat = (await import(join(JUURI, 'js/packs/maakartat.js'))).KAUPUNKIKARTAT;
-  const lista = JSON.parse(readFileSync(join(DATA, 'kaupungit-vaihe1.json'), 'utf8'));
+  const lista = kaupunkiLista();
   const kaupunki = lista.find((k) => k.id === id);
   if (!kaupunki) throw new Error(`Tuntematon kaupunki-id ${id}`);
   const tiedostot = new Map();
@@ -351,7 +357,7 @@ async function rakenna(tiedosto) {
 function kokoa() {
   const kohteet = {};
   const kaupungit = {};
-  const pohja = JSON.parse(readFileSync(join(DATA, 'kaupungit-vaihe1.json'), 'utf8'));
+  const pohja = kaupunkiLista();
   let kuvia = 0;
   const eiKuvaa = [];
   for (const f of readdirSync(KAUPUNGIT).filter((x) => x.endsWith('.json')).sort()) {

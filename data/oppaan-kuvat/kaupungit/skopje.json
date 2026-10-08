@@ -1,0 +1,323 @@
+{
+ "kaupunki": "skopje",
+ "kaupunkiQ": "Q384",
+ "kohteet": [
+  {
+   "q": "Q1780883",
+   "nimi": "Kivisilta",
+   "peruste": "sitelinks",
+   "koko_m": 220,
+   "lat": 41.99699,
+   "lon": 21.43307,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "04138-Skopje (27869206536).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04138-Skopje_(27869206536).jpg?width=1280",
+     "tekija": "xiquinhosilva from Cacau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04138-Skopje_(27869206536).jpg",
+     "selite": "Vardar-joen ylittävä kaarisilta on ottomaanien ajalta ja Skopjen tunnetuin symboli.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1262367",
+   "nimi": "Skopjen linnoitus Kale",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 42,
+   "lon": 21.43444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "KaleFortress-Skopje1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/KaleFortress-Skopje1.JPG?width=1280",
+     "tekija": "Yemc",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:KaleFortress-Skopje1.JPG",
+     "selite": "Kale-linnoituksen muurit kohoavat kukkulalla Vardar-joen yllä vanhan kaupungin vieressä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "(picture made by mobile) Skopje, R. of Macedonia , Скопје, Р. Македонија - panoramio (20).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/(picture_made_by_mobile)_Skopje%2C_R._of_Macedonia_%2C_%D0%A1%D0%BA%D0%BE%D0%BF%D1%98%D0%B5%2C_%D0%A0._%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%98%D0%B0_-_panoramio_(20).jpg?width=1280",
+     "tekija": "METOKARA",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:(picture_made_by_mobile)_Skopje%2C_R._of_Macedonia_%2C_%D0%A1%D0%BA%D0%BE%D0%BF%D1%98%D0%B5%2C_%D0%A0._%D0%9C%D0%B0%D0%BA%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%98%D0%B0_-_panoramio_(20).jpg",
+     "selite": "Linnoituksen pitkä muuri näkyy joen toiselle puolelle asti.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "-i---i- (41324176580).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(41324176580).jpg?width=1280",
+     "tekija": "aiva.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(41324176580).jpg",
+     "selite": "Muurien kivitornit ovat vartioineet kaupunkia satojen vuosien ajan.",
+     "leveys": 2592,
+     "korkeus": 4132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q387",
+   "nimi": "Skopjen vanha basaari",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 42.00076,
+   "lon": 21.43696,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skopje OldBazaar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skopje_OldBazaar.jpg?width=1280",
+     "tekija": "Nikkyb",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skopje_OldBazaar.jpg",
+     "selite": "Čaršijan vanha basaari on yksi Balkanin suurimmista ja säilyneimmistä ottomaanien aikaisista kauppakortteleista.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "04258-Skopje (27827576541).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/04258-Skopje_(27827576541).jpg?width=1280",
+     "tekija": "xiquinhosilva from Cacau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:04258-Skopje_(27827576541).jpg",
+     "selite": "Basaarin kapeiden katujen yllä kohoavat moskeijoiden minareetit.",
+     "leveys": 2592,
+     "korkeus": 3872,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "-i---i- (43318365891).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(43318365891).jpg?width=1280",
+     "tekija": "aiva.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(43318365891).jpg",
+     "selite": "Kivetyt kujat ja pienet liikkeet tekevät basaarista kävelijän kaupunginosan.",
+     "leveys": 3124,
+     "korkeus": 4132,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2278990",
+   "nimi": "Matkan kanjoni",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 41.94,
+   "lon": 21.3,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Matka2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matka2.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Matka2.jpg",
+     "selite": "Matkan kanjoni on Treska-joen kaivertama kallioinen rotko Skopjen läheisyydessä.",
+     "leveys": 5200,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Canyon Matka 12.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canyon_Matka_12.JPG?width=1280",
+     "tekija": "Делфина",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canyon_Matka_12.JPG",
+     "selite": "Jyrkät kalliorinteet ja vihreä vesi tekevät kanjonista suositun retkikohteen.",
+     "leveys": 4368,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Canyon Matka 10.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canyon_Matka_10.JPG?width=1280",
+     "tekija": "Делфина",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canyon_Matka_10.JPG",
+     "selite": "Kanjonin järvellä pääsee melomaan kalliojyrkänteiden välissä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1267418",
+   "nimi": "Mustafa Pashan moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 42.00194,
+   "lon": 21.43542,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Blue dome and sky (28449231727).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_dome_and_sky_(28449231727).jpg?width=1280",
+     "tekija": "aiva.",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_dome_and_sky_(28449231727).jpg",
+     "selite": "Mustafa Pashan moskeija on 1400-luvun lopun ottomaanien rakennus vanhan basaarin kupeessa.",
+     "leveys": 3565,
+     "korkeus": 2236,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Macedonia (5881756742).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Macedonia_(5881756742).jpg?width=1280",
+     "tekija": "Antti T. Nissinen from Finland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Macedonia_(5881756742).jpg",
+     "selite": "Moskeijan kupoli ja korkea minareetti hallitsevat Čaršijan kaupunginosan siluettia.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1273251",
+   "nimi": "Kuršumli An",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 42.00306,
+   "lon": 21.43694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kurshumli-An-Skopje-MK.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kurshumli-An-Skopje-MK.JPG?width=1280",
+     "tekija": "Македонец",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kurshumli-An-Skopje-MK.JPG",
+     "selite": "Kuršumli An oli ottomaanien ajan karavaanisaarai, jonka kaarikäytävät ympäröivät sisäpihaa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q862032",
+   "nimi": "Skopjen akvedukti",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 42.02361,
+   "lon": 21.41861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Skopje Aqueduct 9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skopje_Aqueduct_9.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skopje_Aqueduct_9.jpg",
+     "selite": "Tiilikaarinen akvedukti kuljetti vettä vuorilta kaupunkiin Skopjen pohjoispuolella.",
+     "leveys": 8530,
+     "korkeus": 3300,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Akvadukt (12).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akvadukt_(12).JPG?width=1280",
+     "tekija": "Tamara Saveska",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Akvadukt_(12).JPG",
+     "selite": "Pitkän akveduktin kaaret jatkuvat peltojen yli horisonttiin.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2121610",
+   "nimi": "Sultan Muradin moskeija ja kellotorni",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 42.00155,
+   "lon": 21.44144,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saat kula i Sultan-muratova dzamija, Skopje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saat_kula_i_Sultan-muratova_dzamija%2C_Skopje.jpg?width=1280",
+     "tekija": "Ilievski Vladimir",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saat_kula_i_Sultan-muratova_dzamija%2C_Skopje.jpg",
+     "selite": "Sultan Muradin moskeija ja vanha kellotorni sijaitsevat basaarin laidalla.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skopje view from Kale 3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skopje_view_from_Kale_3.jpg?width=1280",
+   "tekija": "kallerna",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skopje_view_from_Kale_3.jpg",
+   "selite": "Skopje levittäytyy Vardar-joen laaksoon Vodno-vuoren juurelle.",
+   "leveys": 8075,
+   "korkeus": 3000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Vodno, 41.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vodno%2C_41.JPG?width=1280",
+   "tekija": "Bijonse",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vodno%2C_41.JPG",
+   "selite": "Vodno-vuorelta avautuu näkymä koko Skopjen laaksoon ja kaupunkiin.",
+   "leveys": 4320,
+   "korkeus": 3240,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
