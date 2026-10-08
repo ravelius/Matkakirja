@@ -35,7 +35,12 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. keskipäivä (uusin)
+## TILA 8.10. iltapäivä (uusin)
+- v44z (LR 92f60298: harja 5 m liitoksesta + silta itäkyljestä) TODENNETTU: P linssiseppa2/v44x-p aba56d9f9 (historia-valot b73018ba5,
+  913/913, pala 1–5 134 s, rajattu 20 pisteeseen) ja M linssiseppa2/v44x-m 4ac32a5df (historia-m f4286888c, 947/947, HarjaKorjattu=true).
+  SHAt Siirtosepälle. Poista worktreet wt/proto-linssiseppa2-v44x-p ja -v44x-m mergen jälkeen.
+
+## TILA 8.10. keskipäivä
 - v44x (LR B, d1695f96) AJETTU: worktreet wt/proto-linssiseppa2-v44x-p (historia-valot b73018ba5, haara linssiseppa2/v44x-p) ja
   -v44x-m (historia-m f4286888c, linssiseppa2/v44x-m), kultaiset v44x vaihdettu, EI COMMITTIA (pala kaatuu). Tulos: P 912/913, M 946/947:
   VarjoreittiKokoPala jumissa 3/20 — silta alkaa laiturin juuresta 1,2–1,3 m portinvartijasta hänen riitakatseensa sektorissa (25°),
