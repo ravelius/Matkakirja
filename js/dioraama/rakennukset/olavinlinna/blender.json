@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "f445bb3e88394510",
-  "kansio": "dioraama/olavinlinna/blender/f445bb3e88394510/",
+  "hash": "a2ea5dcce7246380",
+  "kansio": "dioraama/olavinlinna/blender/a2ea5dcce7246380/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1280,8 +1280,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "6e0496350fb6076c17815ce7612e601abd50b22c8d2bc1cf14d9c0fd12f12e1c",
-      "tavuja": 67304
+      "sha256": "1f1ec1f2f9e5dcf9703d289180bee21fddf65650b659c00c205347fbf03b378e",
+      "tavuja": 66915
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
