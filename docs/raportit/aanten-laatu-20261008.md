@@ -240,3 +240,19 @@ Kaupunkien äänimaisemissa puhe ja liikenne kuuluvat asiaan (tori, kahvila, rai
 - repo: proto-haara pelikoodari/tehoste-korvaukset f059db199 (efekti-laiva, efekti-voitto, Candle, korin narina).
 - kirjasto-liekin-humahdus (ajoneuvo 0,24, kohinapohja −13 dBFS) jää paikalleen: sitä soitetaan vain debug-sarjassa "kirjasto", oletus on eleven-sarja.
 Työkalut: _tyo/tehoste-korjaus/ (tekniset.py, korvaukset.py, paketoi.py).
+
+# Osa 5: äänikirjastot ja lisenssit julkisille URL:eille (8.10.2026 21.2x, Sonnet-agentin selvitys, Pelikoodari tarkisti)
+
+[V] = virallisen sivun teksti, [S] = hakutulosote (sivu 403), [E] = epävarma. Ääniä ei ladattu.
+
+| kirjasto | hinta | kattavuus | jakelukohta | julkiset mp3-URL:t |
+|---|---|---|---|---|
+| Sonniss GDC (2015–2026) | 0 € [V] | laaja ammattikirjasto (sisältö tarkistamatta) | "may not … supply the sound effects as sound effects"; ei "supplying the sound effects themselves, whether as files" [V]; peli tai sovellus sallittu | epäselvä, kallistuu ei → salattu/paketoitu toimitus |
+| Pixabay Sounds | 0 € [V] | satunnainen | ei "Standalone"-jakelua (ilman luovaa työtä) [V] | epäselvä |
+| Zapsplat | ilmainen attribuutiolla, Gold n. 5 £/kk [E] | laaja | "Redistribute our sounds in any form (… apps …)" kielletty [S] | ei |
+| Unity Asset Store (Standard EULA) | 5–18 € / aihepaketti [V] | aihekohtainen | vain "incorporated and embedded"; ei loppukäyttäjän erikseen ladattavaksi (UKK) [V] | ei |
+| Soundsnap | n. 199–299 $/v [E] | kaikki aiheet | §3 ei "extracted or reused separately from a Creative Work"; §5 ladatut ikuisesti [V] | ei |
+| Krotos Ultimate Footsteps | 179 € alv 0 [V] | askeleet: märkä betoni, lätäköt, puu; ei kiveä, ovia, tulta, tuulta [V] | UKK: "not made available for end-users to access or download" [V] | ei |
+
+**Suositus:** ensin ilmainen Sonniss GDC (tuulet, ovet, tuli, askeleet) ja ennen käyttöä kirjallinen vahvistus Sonnissilta pelin omasta palvelimesta. Ostetut äänet toimitetaan appiin paketoituina tai salattuina tai allekirjoitetuilla lyhytikäisillä URL:eilla, ei nykyisellä avoimella ämpäripolulla. Nykyiset CC0-, PD- ja CC BY -äänet eivät koske tätä rajoitusta.
+Lähteet: sonniss.com/gdc-bundle-license, pixabay.com/service/license-summary, zapsplat.com/license-type/standard-license, unity.com/legal/as-terms, assetstore.unity.com/browse/eula-faq, soundsnap.com/licence, krotosaudio.com (ultimate-footsteps, FAQ, terms-conditions).
