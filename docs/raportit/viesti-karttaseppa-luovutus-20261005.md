@@ -1,3 +1,12 @@
+# TILANNE 9.10. klo 02.3x
+
+- **Giza (LS2, juna 170: omien mallien korkeus omasta korkeusmallista):** _tyo/karttaseppa/giza-korkeudet-20261009.json (vesimaski/giza-korkeudet.mjs).
+  - EGM2008 N = 15,35 m (arvio 15,6 → −0,25 m).
+  - GLO-30-renkaat harhaisia; suositus: pidä nykyiset EGM-korkeudet ja vaihda vain N. FABDEM ei käy (CC BY-NC-SA).
+- Talvi3: osa2 ja uusinta käynnissä, odotus taustalla (ilmoitus valmistumisesta, swap-STOPista tai virheestä).
+
+---
+
 # TILANNE 9.10. klo 02.0x
 
 - **Notre-Dame ja Riddarholmen -lähdepaketit (LS2)**: _tyo/karttaseppa/{notre-dame,riddarholmen}/ (LUEMINUT.md).
