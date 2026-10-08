@@ -167,5 +167,15 @@ namespace Matkakirja.Linssit.Testit
             }
             Oleta.Tosi(kiinni > 30, $"kiinniottoja syntyi ({kiinni})");
         }
+
+        // Kohta 3.3 / 4.1: kiinnijäännin jälkeinen valppaus (60 s) laskee myös torkkuvalla ja syövällä (Tott-kammion torkkuja).
+        [Testi] static void TorkkujanValppausLaskee()
+        {
+            var v = new Vartija(Paikallaan, yaw: 0) { Profiili = VartijaProfiili.Torkku, Torkkuu = true, Syo = true };
+            v.Nollaa(0, 0, valpas: true);
+            double x = 0, z = 0;
+            Aja(v, ref x, ref z, _ => Pelaaja(50, 50, 0.25, 0, nakyy: false), Vartija.ValppausS + 0.5);
+            Oleta.Tosi(v.Torkkuu && v.Valppaus == 0, $"torkkuja edelleen syömässä, valppaus ohi ({v.Valppaus:F1} s)");
+        }
     }
 }
