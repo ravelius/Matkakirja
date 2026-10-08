@@ -100,7 +100,8 @@ namespace Matkakirja.Natiivi
                 Juuri.RegisterCallback<PointerMoveEvent>(Liiku);
                 Juuri.RegisterCallback<PointerUpEvent>(e => Ylos(e.pointerId));
                 Juuri.RegisterCallback<PointerCancelEvent>(e => Ylos(e.pointerId));
-                Juuri.RegisterCallback<PointerCaptureOutEvent>(e => Ylos(osoitin));
+                // Vain oma sormi: toisen tapin kaappaus tai irrotus ei nollaa tätä (moniosuma, juna 170).
+                Juuri.RegisterCallback<PointerCaptureOutEvent>(e => Ylos(e.pointerId));
             }
 
             public void Nayta(bool nayta)
