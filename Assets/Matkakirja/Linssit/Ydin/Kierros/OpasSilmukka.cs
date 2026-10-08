@@ -306,6 +306,23 @@ namespace Matkakirja.Linssit.Kierros
         /// lopulliseen kehykseen AvausVaihtoS:n liu'ulla samassa lennossa (ei pysähdystä arviokehyksessä eikä toista lentoa).
         /// </summary>
         public const double AvausLaskuS = 18, AvausKorkeaM = 2000, AvausVaihtoS = 3;
+        /// <summary>
+        /// SUORA LASKEUTUMINEN AVAUSNÄKYMÄSTÄ (omistaja TF 168, 9.10.: "siirtymässä ei ole mitään hidasta kiihdytystä vaan vauhti
+        /// alkaa ja loppuu melkein seinään"; PalloAvausTestit: zoomauspolulla avausnäkymän (1 100 m / 50°) ja kohteen välinen
+        /// vaakaosuus kasautui lennon loppuun, silmä seisoi ensin ja syöksyi sitten 700 → 175 m kaartaen, kiihtyvyys 37 m/s²):
+        /// kaupungin avauskehyksestä (ei kohdetta, alle AvausKorkeaM) lähtevä pallolento laskeutuu suoraan silmän ja katsepisteen
+        /// janoja pitkin yhdellä S-käyrällä, ja kestää vähintään AvausSuoraS.
+        /// </summary>
+        public const double AvausSuoraS = 24;
+        bool suoraLasku;
+
+        void AsetaSuoraLasku()
+        {
+            suoraLasku = PalloLento && !siirto && NykyinenKehys != null && NykyinenKehys.Id == null && lahto.EtaisyysM < AvausKorkeaM
+                && kohdeKehys != null && lahto.EtaisyysM > 1.5 * kohdeKehys.EtaisyysM;
+            if (suoraLasku) LentoKestoS = Math.Max(LentoKestoS, AvausSuoraS);
+        }
+
         /// <summary>Lennon kohdekehys on yhä maa-arviolla (ei näytettä).</summary>
         public bool KehysArviolla => kehysArvio && Vaihe == OpasVaihe.Lentaa;
 
@@ -629,6 +646,7 @@ namespace Matkakirja.Linssit.Kierros
             LentoKestoS = LennonKesto(matka);
             if (KierrosKaynnissa && lahto.EtaisyysM >= AvausKorkeaM) LentoKestoS = Math.Max(LentoKestoS, AvausLaskuS);   // avauksen laskeutuminen
             AloitaSiirtoJosKaukana(matka, lat, lon, nimi);
+            AsetaSuoraLasku();
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
             puheAloitettu = true; siirtyma = true;   // perillä odotetaan workerin pysähdystä (sama paikka → kerronta heti)
         }
@@ -1053,12 +1071,14 @@ namespace Matkakirja.Linssit.Kierros
                         if (PalloLento) { kTulo = KierrosLento.Kiedo(vanha.Suuntima - OpasKuvaus.SivuKulma); kehys = OpasKuvaus.Kehysta(k, kehys.MaaM, kTulo); }
                         AsetaKohdeKehys(kehys, kArvio, k, kTulo);
                         kehysVanha = vanha; kehysVaihto = 0; kehysVaihtoS = AvausVaihtoS;
+                        // Suora laskeutuminen: vaihto liukuu lennon loppuun asti (3 s:n liuku nosti kiihtyvyyden 4,5 → 9 m/s²).
+                        if (suoraLasku) kehysVaihtoS = Math.Max(AvausVaihtoS, LentoKestoS - VaiheAika - 1);
                         Nykyinen = k; edellinen = null; siirtyma = false; puheAloitettu = false; toiveesta = false;
                         LentoKohdeVaihtui?.Invoke(k);
                     }
                     kehysVaihto = Math.Min(1, kehysVaihto + Math.Max(0, dt) / kehysVaihtoS);
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
-                    Asento = OpasKuvaus.Lennossa(lahto, KohdeAsento(), t);
+                    Asento = suoraLasku ? OpasKuvaus.SuoraLasku(lahto, KohdeAsento(), t) : OpasKuvaus.Lennossa(lahto, KohdeAsento(), t);
                     if (kiertoJatko > 0 && VaiheAika < OpasKuvaus.KiertoAlkuS)
                         Asento = new Kuvakulma(Asento.Lat, Asento.Lon, Asento.EtaisyysM, Asento.Kallistus,
                             KierrosLento.Kiedo(Asento.Suuntima + OpasKuvaus.KierronHiipuminen(kiertoJatko, VaiheAika)), Asento.KatseKorkeusM);
@@ -1416,6 +1436,7 @@ namespace Matkakirja.Linssit.Kierros
             double matka = KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon);
             LentoKestoS = LennonKesto(matka);
             AloitaSiirtoJosKaukana(matka, k.Lat, k.Lon, k.Nimi);
+            AsetaSuoraLasku();
             LentoMittari = siirto ? (0, 0) : OpasKuvaus.Mittari(lahto, KohdeAsento(), LentoKestoS);
             LentoAlkaa?.Invoke(k, matka, toiveesta);
             toiveesta = false;

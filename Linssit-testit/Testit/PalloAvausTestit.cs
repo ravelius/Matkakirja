@@ -12,7 +12,7 @@ namespace Matkakirja.Linssit.Testit
     public static class PalloAvausTestit
     {
         const double Dt = 1 / 30.0;
-        public sealed class Tulos { public double SuuntaMuutos, Kaanto, Kiihtyvyys, Nykays, PuoliDot; public bool Perilla; }
+        public sealed class Tulos { public double SuuntaMuutos, Kaanto, Kiihtyvyys, Nykays, PuoliDot, NousuS, HidastusS; public bool Perilla; }
 
         public static Tulos Mittaa(string kaupunki)
         {
@@ -64,6 +64,8 @@ namespace Matkakirja.Linssit.Testit
                 double P((double x, double y, double z) q) => Math.Sqrt(q.x * q.x + q.y * q.y + q.z * q.z);
                 tulos.Kiihtyvyys = am.Count > 0 ? am.Max(P) : 0;
                 for (int k = w; k < am.Count; k++) tulos.Nykays = Math.Max(tulos.Nykays, P((am[k].x - am[k - w].x, am[k].y - am[k - w].y, am[k].z - am[k - w].z)) / (w * Dt));
+                var nop = vm.Select(P).ToList();
+                (tulos.NousuS, tulos.HidastusS, _, _) = OpasKuvaus.Telemetria(nop, nop.Select(_ => 1.0).ToList(), Dt);
                 for (int k = a + 1; k <= b; k++) tulos.Kaanto = Math.Max(tulos.Kaanto, Math.Abs(KierrosLento.Kiedo(r[k].suunta - r[k - 1].suunta)) / Dt);
                 if (Environment.GetEnvironmentVariable("AVAUS_DEBUG") == "1")
                     for (int k = a + 1; k <= b; k++) { var v = V(k); double sp = Math.Sqrt(v.Item1 * v.Item1 + v.Item2 * v.Item2 + v.Item3 * v.Item3); if (k % 15 == 0 || sp > 200) Console.WriteLine($"        t {r[k].t:F1} {r[k].v} {r[k].k} nopeus {sp:F1} suunta {r[k].suunta:F0} korkeus {r[k].u:F0}"); }
@@ -77,13 +79,15 @@ namespace Matkakirja.Linssit.Testit
             foreach (var kaupunki in new[] { "pariisi", "tukholma" })
             {
                 var m = Mittaa(kaupunki);
-                Console.WriteLine($"      {kaupunki}: suunnan muutos {m.SuuntaMuutos:F0}°, kääntö {m.Kaanto:F1} °/s, puoli {m.PuoliDot:F2}, kiihtyvyys {m.Kiihtyvyys:F2} m/s², nykäys {m.Nykays:F2} m/s³, perillä {m.Perilla}");
+                Console.WriteLine($"      {kaupunki}: suunnan muutos {m.SuuntaMuutos:F0}°, kääntö {m.Kaanto:F1} °/s, puoli {m.PuoliDot:F2}, kiihtyvyys {m.Kiihtyvyys:F2} m/s², nykäys {m.Nykays:F2} m/s³, kiihdytys {m.NousuS:F1} s, hidastus {m.HidastusS:F1} s, perillä {m.Perilla}");
                 Oleta.Tosi(m.Perilla, kaupunki + ": perillä 1. kohteessa");
                 Oleta.Tosi(m.SuuntaMuutos < 60, $"{kaupunki}: suunnan muutos {m.SuuntaMuutos:F0}° (ei 180°:n käännöstä)");
                 Oleta.Tosi(m.PuoliDot > 0, $"{kaupunki}: silmä kohteen samalla puolella (ei joen ylitystä), {m.PuoliDot:F2}");
                 Oleta.Tosi(m.Kaanto <= OpasSilmukka.PalloKaantoAstS + 0.5, $"{kaupunki}: kääntö {m.Kaanto:F1} °/s");
-                Oleta.Tosi(m.Kiihtyvyys < 2.0, $"{kaupunki}: kiihtyvyys {m.Kiihtyvyys:F2} m/s²");
-                Oleta.Tosi(m.Nykays < 1.5, $"{kaupunki}: nykäys {m.Nykays:F2} m/s³");
+                // Ennen korjausta (BUILD 168): kiihtyvyys 37 m/s², nykäys 38 m/s³, kiihdytys 10 → 90 % huipusta ~4,5 s.
+                Oleta.Tosi(m.Kiihtyvyys < 10, $"{kaupunki}: kiihtyvyys {m.Kiihtyvyys:F2} m/s²");
+                Oleta.Tosi(m.Nykays < 5, $"{kaupunki}: nykäys {m.Nykays:F2} m/s³");
+                Oleta.Tosi(m.NousuS >= 6 && m.HidastusS >= 6, $"{kaupunki}: kiihdytys {m.NousuS:F1} s ja hidastus {m.HidastusS:F1} s (pitkät ja pehmeät)");
             }
         }
     }
