@@ -9,7 +9,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## TILA 8.10. klo 10.xx (JATKA TÄSTÄ)
 
 PALLON SÄÄTILA (omistaja 8.10. 09.1x–09.2x, juna 166): proto natiivi-ui/saatila 9417aa6ae (worktree wt/proto-natiivi-ui-tkpariteetti;
-⊇ 39d43932a + 0484007f2) — KUITATTU JUNAAN 166, SHA Natiivisepälle ja LS1:lle (pohja 9417aa6ae). Ydin Saatila (LIVE, AikaValinta/SaaValinta, LiveAika ← LS1, LiveSaa ← LS1:n
+⊇ 39d43932a + 0484007f2) — KUITATTU, menee JUNAAN 165 (Päätoimittaja: LS1:n osuus valmistui ennen käännöstä); SHA Natiivisepällä ja LS1:llä. Ydin Saatila (LIVE, AikaValinta/SaaValinta, LiveAika ← LS1, LiveSaa ← LS1:n
 /opas/saa-haku, Muuttui, Tallenne) + SaaVihje (ensikerran vihje 15 s / 5 s); OpasValikko ☾-lista (LIVE-laatikko, AIKA, SÄÄ),
 napin LIVE-tila (tila.live-kuulto) ja sääkulma; Ikonit.Viiva pilvi/sade/sumu/lumi/ukkonen; Lähteet: MET Norway CC BY 4.0.
 Web-PR #4193 mergetty (75bb6a745), proton kopio = main 7185ab2dba8a.
