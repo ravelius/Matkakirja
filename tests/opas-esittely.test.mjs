@@ -84,14 +84,14 @@ test('puhe_teksti: näytölle kirjoitusasu, äänen tunniste ääntämisversiost
   assert.ok(String(d.aani).includes(sha), `ääni ${d.aani}`);
 });
 
-test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros LS1:n järjestyksessä', async () => {
+test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros pienimmän kierron järjestyksessä (8.10.)', async () => {
   const { omatKohteet } = await import('../tools/pollo/opas-esittely.js');
   const { sallittuKaupunki, sallitutPyynnolle } = await import('../tools/pollo/sallitut.js');
   const kok = { OPAS_KOKEILU: ['giza'], OPAS_SALLITUT_ESTO: '1' };
   assert.equal(omatKohteet('Gizan pyramidit'), null, 'TF-appit eivät näe Gizaa');
   assert.equal(sallittuKaupunki('Gizan pyramidit', { OPAS_SALLITUT_ESTO: '1' }), null);
   assert.ok(!sallitutPyynnolle({}).some((x) => x.id === 'giza'));
-  assert.deepEqual(omatKohteet('Gizan pyramidit', kok).kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
+  assert.deepEqual(omatKohteet('Gizan pyramidit', kok).kierros, ['Q130958', 'Q37200', 'Q208358', 'Q238623']);
   assert.equal(sallittuKaupunki('Gizan pyramidit', kok)?.id, 'giza');
   assert.ok(sallitutPyynnolle(kok).some((x) => x.id === 'giza'));
   const vanha = globalThis.fetch; globalThis.fetch = async () => new Response('{}');
@@ -101,7 +101,7 @@ test('omat kohteet (Giza): vain kokeilu-otsakkeella; Liiku kierros LS1:n järjes
     assert.equal(ilman.status, 403, 'ilman otsaketta ei-sallittu');
     const d = await (await worker.fetch(new Request('https://pollo.example/opas/liiku?kaupunki=Gizan%20pyramidit',
       { headers: { ...H, 'x-matkakirja-kokeilu': 'giza' } }), e, {})).json();
-    assert.deepEqual(d.kierros, ['Q130958', 'Q208358', 'Q238623', 'Q37200']);
+    assert.deepEqual(d.kierros, ['Q130958', 'Q37200', 'Q208358', 'Q238623']);
     assert.deepEqual(d.kohteet.map((k) => k.nimi), ['Gizan suuri sfinksi', 'Khefrenin pyramidi', 'Mykerinoksen pyramidi', 'Kheopsin pyramidi']);
     const a = await (await worker.fetch(new Request('https://pollo.example/opas/aineistot', { headers: { origin: 'https://matkakirja.app', 'x-matkakirja-kokeilu': 'giza' } }),
       { POLLO_ORIGINIT: 'https://matkakirja.app' }, {})).json();
