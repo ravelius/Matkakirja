@@ -243,7 +243,7 @@ test('yksityiskohdat_polut: 6 äänellistä + äänettömät erät 1–4 (Sisäl
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v1/firenze-yksityiskohdat.json',
     lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
-    helsinki: 'esittely/helsinki-v1/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json' });
+    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json' });
 });
 
 test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani_pcm- eikä kesto_s-kenttiä; R2:n ääni soi, jos on', async () => {

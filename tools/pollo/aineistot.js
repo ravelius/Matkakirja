@@ -80,6 +80,6 @@ export const OPAS_AINEISTOT = Object.freeze({
     firenze: 'esittely/firenze-v1/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
     lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
-    helsinki: 'esittely/helsinki-v1/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
+    helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
   },
 });
