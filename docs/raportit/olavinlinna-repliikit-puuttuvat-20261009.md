@@ -1,10 +1,10 @@
 # Olavinlinna: puuttuvat repliikit, muurikäytävä ja tyrmä (Sisältökirjuri 9.10.2026)
 
-Tilaus: Päätoimittaja (läpipeluuraportin docs/raportit/olavinlinna-lapipeluu-20261009.md "Repliikit (UUSI)"). Vain tekstit; **ääntä ei ole generoitu** (omistajan lupa aamulla). Pelattavuusmalli: docs/raportit/pelattavuusmalli-olavinlinna.md kohdat 3.3 (epäilyn vaiheet) ja 3.6 (huudahdukset vaiheittain), tyrmä kohta 4.1. Sävy ja muoto kuten docs/raportit/olavinlinna-pystyleike-repliikit.md (repliikit-v1…v4): lyhyt, luonteva puhe, vuosi 1499, 13+, ei kiroilua eikä väkivaltaa, ei kaanonmuutoksia (ei Foggia nimeltä, ei uusia hahmoja: vartija, vesipoika, vartijan kello ovat jo mallissa).
+**PT tarkistanut 9.10.: hyväksytty; yksi korjaus (muuri-vartija-etsinta-2) tehty.** Tilaus: Päätoimittaja (läpipeluuraportin docs/raportit/olavinlinna-lapipeluu-20261009.md "Repliikit (UUSI)"). Vain tekstit; **ääntä ei ole generoitu** (omistajan lupa aamulla). Pelattavuusmalli: docs/raportit/pelattavuusmalli-olavinlinna.md kohdat 3.3 (epäilyn vaiheet) ja 3.6 (huudahdukset vaiheittain), tyrmä kohta 4.1. Sävy ja muoto kuten docs/raportit/olavinlinna-pystyleike-repliikit.md (repliikit-v1…v4): lyhyt, luonteva puhe, vuosi 1499, 13+, ei kiroilua eikä väkivaltaa, ei kaanonmuutoksia (ei Foggia nimeltä, ei uusia hahmoja: vartija, vesipoika, vartijan kello ovat jo mallissa).
 
 ## 1. Repliikit
 
-**16 repliikkiä, yhteensä 542 merkkiä: muurikäytävän ja kellon vartijat 12 kpl (403 merkkiä), tyrmä 4 kpl (139 merkkiä).** Tavoite oli noin 16 kpl / 560 merkkiä. Tyrmän repliikit ovat yksi otto per rivi, eleven_v4_turbo.
+**16 repliikkiä, yhteensä 552 merkkiä: muurikäytävän ja kellon vartijat 12 kpl (413 merkkiä), tyrmä 4 kpl (139 merkkiä).** Tavoite oli noin 16 kpl / 560 merkkiä. Tyrmän repliikit ovat yksi otto per rivi, eleven_v4_turbo.
 
 | id | puhuja / huone | vaihe ja tilanne | repliikki | äänen ohje | merkkiä |
 |---|---|---|---|---|---|
@@ -13,7 +13,7 @@ Tilaus: Päätoimittaja (läpipeluuraportin docs/raportit/olavinlinna-lapipeluu-
 | muuri-vartija-epaily-1 | 7 muurikäytävä | 1 Epäily: pysähtyy ja nostaa lyhdyn | Mitä tuo oli? Kuuluiko tuolta jotain? | Kysyvä, hiljainen, terävöityvä | 37 |
 | muuri-vartija-epaily-2 | 7 muurikäytävä | 1 Epäily (vaihtoehto) | Hetkinen… liikkuiko tuolla joku? | Epävarma, puoliääneen | 32 |
 | muuri-vartija-etsinta-1 | 7 muurikäytävä | 2 Tutkii: kävelee kohti ääntä | Käyn katsomassa tuon aukon. | Keskittynyt, matala | 27 |
-| muuri-vartija-etsinta-2 | 7 muurikäytävä | 3 Etsii: tökkii keihäällä komeroita | Tulehan esiin. Tämä muuri on pieni. | Bluffaava, hidas, kuiskaava | 35 |
+| muuri-vartija-etsinta-2 | 7 muurikäytävä | 3 Etsii: tökkii keihäällä komeroita | Tulehan esiin. Ei täällä ole minne piiloutua. | Bluffaava, hidas, kuiskaava | 45 |
 | muuri-vartija-halytys-1 | 7 muurikäytävä / 8 ulkoseinä | 4 Hälytys: näkee ja jahtaa | Kello soimaan! Linnassa on tunkeilija! | Huutava, kantava, käskevä | 38 |
 | muuri-vartija-halytys-2 | 7 muurikäytävä | 4 Hälytys: jahti jatkuu | Täällä hän on! Pysäytä hänet! | Huutava, hengästynyt | 29 |
 | muuri-vartija-kiinni-1 | 7 muurikäytävä | 5 Kiinniotto: ote olasta | Seis! Muurilla ei kuljeta öisin. | Kova, jyrkkä, nopea | 32 |
