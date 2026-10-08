@@ -18,18 +18,14 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "lokit|seagulls harbour|20|180|by"
-          "lokit|gulls city|20|180|by"
-          "moottori|motorboat passing|10|120|by"
-          "moottori|boat engine idle harbour|15|180|by"
           "pilli|steam whistle ship|2|20|by"
           "pilli|ship horn steam|2|20|by"
-          "kellot-tukholma|stockholm church bells|15|180|by"
-          "kellot-pariisi|paris church bells|15|180|by"
-          "kellot|church bells city|15|180|by"
-          "humina-tukholma|stockholm city ambience|30|300|by"
-          "humina-pariisi|paris city ambience|30|300|by"
-          "humina|distant city hum|30|300|by"
+          "kellot-tukholma|stockholm church bells|15|120|by"
+          "kellot-pariisi|paris church bells|15|120|by"
+          "kellot|church bells city|15|120|by"
+          "humina-tukholma|stockholm city ambience|30|150|by"
+          "humina-pariisi|paris city ambience|30|150|by"
+          "humina|distant city hum|30|150|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
