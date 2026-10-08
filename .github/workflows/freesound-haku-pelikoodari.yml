@@ -18,14 +18,12 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "vihje|soft sparkle chime|0.3|3"
-          "vihje|magic twinkle|0.3|3"
-          "vihje|glass chime soft|0.3|3"
-          "askel-markakivi|footsteps wet stone|5|90"
-          "askel-markapuu|footsteps wet wood|5|90"
-          "askel-markapuu|footsteps wooden dock rain|5|90"
-          "askel-markakivi|footsteps puddle|5|90"
-          "askel-markakivi|walking rain wet|5|90"
+          "tippuminen-muuri|water drip|8|120"
+          "tippuminen-muuri|dripping water field recording|8|120"
+          "tippuminen-muuri|drips tunnel|8|120"
+          "tippuminen-muuri|dripping cellar|8|120"
+          "tippuminen-raystas|dripping eaves|8|120"
+          "tippuminen-raystas|drips after rain|8|120"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
