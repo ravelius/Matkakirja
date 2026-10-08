@@ -7,6 +7,7 @@
   - IGN-ortokuva 2021 0,2 m/px (vuoden 2024 kuvassa olympiarakennelmat)
   - RGE ALTI 1 m ja LiDAR HD MNT/MNS 0,5 m (concorde-ign.mjs); RAF20 N = 43,799 m
 - Talvi3 käynnissä.
+- **Työkalut:** #4227 mergetty; jatko-PR https://github.com/ravelius/Matkakirja/pull/4242 (wt/karttaseppa-tyokalut2: jalanjaljet, alue-osm, concorde-ign). Worktreet vesipinta ja korkeusdata on poistettu. Auki: #4228 (wt/karttaseppa-ehdot-leikkaus).
 - **Odottaa:** LS1 paketoi pohjapiirrokset; LR:n malli.
 
 ---
