@@ -297,6 +297,26 @@ namespace Matkakirja.Linssit.Testit
             finally { OpasSilmukka.PalloLento = false; }
         }
 
+        // Pelikoodari 8.10. (pallosanasto, siltalauseet-v3b): pallolauseiden valinta kierroksella.
+        [Testi] static void PallolauseetValitaanSaannoin()
+        {
+            var p = new OpasPallolauseet();
+            Oleta.Sama(OpasPallolauseet.Lahto, p.Lahtoon(0, 500), "1. lähtö: pallo-lahto");
+            Oleta.Sama(null, p.Lahtoon(90, 1500), "heti seuraava: ei (enintään joka toinen)");
+            Oleta.Sama(OpasPallolauseet.Kaanto, p.Lahtoon(170, 500), "suunta muuttui 80° → pallo-kaanto");
+            Oleta.Sama(null, p.Lahtoon(175, 1500), "joka toinen");
+            Oleta.Sama(OpasPallolauseet.Nousu, p.Lahtoon(180, 1500), "pitkä, suunta sama → pallo-nousu");
+            Oleta.Sama(null, p.Laskuun(), "lähdössä soi pallolause → ei laskua samaan siirtymään");
+            Oleta.Sama(null, p.Lahtoon(185, 300), "viereinen siirtymä: ei");
+            Oleta.Sama(null, p.Laskuun(), "viereinen siirtymä: ei laskuakaan");
+            Oleta.Sama(null, p.Lahtoon(186, 300), "lyhyt, suora → tavallinen lähtö");
+            Oleta.Sama(OpasPallolauseet.Lasku, p.Laskuun(), "lennon loppuun pallo-lasku (lähtö tavallinen, edellinen pallo kaksi siirtymää sitten)");
+            var q = new OpasPallolauseet(); int kaannot = 0;
+            for (int i = 0; i < 20; i++) if (q.Lahtoon(i % 2 == 0 ? 0 : 120, 300) == OpasPallolauseet.Kaanto) kaannot++;
+            Oleta.Sama(OpasPallolauseet.RyhmaMax, kaannot, "ryhmää enintään kolmesti kierroksella");
+            Oleta.Sama(null, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);
