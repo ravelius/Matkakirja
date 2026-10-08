@@ -1,7 +1,8 @@
 // LATAUSKUVAN LIIKE (Natiivi-UI 8.10.2026; omistaja 8.10. ~08.5x "Lataus kuvista pitää tehdä kevyesti animoituja … pallo heiluu
 // hitaasti ruudulla ja köysi piirretään vektorina", Päätoimittaja: uusi pohja LATAUSKUVA). Puhdas ydin UI:n Latauskuva-pohjalle:
-// liikkuvan kerroksen asento ajan funktiona (sinimuotoinen heilahdus ±1–2° ja pieni nousu–lasku neljännesjakson edellä, jakso
-// 6–8 s, ei nykimistä) ja köyden pisteet (kiintopiste → kerroksen mukana liikkuva kiinnityspiste, kevyt riippuma).
+// liikkuvan kerroksen asento ajan funktiona (sinimuotoinen heilahdus ja pieni nousu–lasku neljännesjakson edellä, ei nykimistä;
+// omistaja 8.10. 08.4x "heilunnaksi riittää hyvin vähäeleinen liike": ±0,5–0,75°, nousu ≤ 4 pt, jakso 7–8 s) ja köyden pisteet
+// (kiintopiste → kerroksen mukana liikkuva kiinnityspiste, riippuma; myös ankkuriköysi korista maahan).
 // Koordinaatit UI Toolkitin mukaan: y alas, positiivinen kulma myötäpäivään (style.rotate), nousu ylös (translate −y).
 using System;
 
@@ -9,16 +10,17 @@ namespace Matkakirja.Linssit
 {
     public static class LatausLiike
     {
-        /// <summary>Pohjan rajat (tyylikirja pohjat.LATAUSKUVA): heilahdus ±1–2°, jakso 6–8 s, nousu 0–8 pt.</summary>
-        public const double KulmaMin = 1, KulmaMax = 2, JaksoMin = 6, JaksoMax = 8, NousuMax = 8;
+        /// <summary>Pohjan rajat (tyylikirja pohjat.LATAUSKUVA; omistaja 8.10. 08.4x vähäeleinen): heilahdus ±0,5–0,75°, jakso 7–8 s,
+        /// nousu 0–4 pt.</summary>
+        public const double KulmaMin = 0.5, KulmaMax = 0.75, JaksoMin = 7, JaksoMax = 8, NousuMax = 4;
 
         public struct Profiili
         {
             /// <summary>Heilahduksen amplitudi (°), nousun amplitudi (pt), jakso (s) ja vaihe (rad; kerrokset eri tahtiin).</summary>
             public double KulmaAste, NousuPt, JaksoS, Vaihe;
 
-            /// <summary>Oletus: ±1,5°, nousu 4 pt, jakso 7 s.</summary>
-            public static Profiili Oletus => new Profiili { KulmaAste = 1.5, NousuPt = 4, JaksoS = 7 };
+            /// <summary>Oletus: ±0,6°, nousu 3 pt, jakso 7,5 s.</summary>
+            public static Profiili Oletus => new Profiili { KulmaAste = 0.6, NousuPt = 3, JaksoS = 7.5 };
 
             /// <summary>Arvot pohjan rajoihin (ulkopuoliset tai puuttuvat arvot eivät tee liikkeestä nykivää tai pysähtynyttä).</summary>
             public Profiili Rajattu() => new Profiili
@@ -46,7 +48,7 @@ namespace Matkakirja.Linssit
             return new Asento { KulmaAste = q.KulmaAste * Math.Sin(v), NousuPt = q.NousuPt * Math.Cos(v) };
         }
 
-        /// <summary>Suurin kulmanopeus (°/s) profiililla: 2π·A/T (pohjan rajoilla enintään noin 2,1 °/s).</summary>
+        /// <summary>Suurin kulmanopeus (°/s) profiililla: 2π·A/T (pohjan rajoilla enintään noin 0,67 °/s).</summary>
         public static double SuurinKulmanopeus(Profiili p) { var q = p.Rajattu(); return 2 * Math.PI * q.KulmaAste / q.JaksoS; }
 
         /// <summary>
@@ -58,6 +60,35 @@ namespace Matkakirja.Linssit
             double r = a.KulmaAste * Math.PI / 180, c = Math.Cos(r), s = Math.Sin(r);
             double dx = x - kaantoX, dy = y - kaantoY;
             return (kaantoX + dx * c - dy * s, kaantoY + dx * s + dy * c - a.NousuPt);
+        }
+
+        /// <summary>Valokuvan hidas lähentyminen (Ken Burns, Päätoimittaja 8.10.): 1,00 → 1,04 / 8 s, sitten pehmeästi takaisin.</summary>
+        public const double LahentyminenMaks = 1.04, LahentyminenS = 8;
+
+        public struct Rajaus
+        {
+            /// <summary>Kuvan skaala (≥ 1) ja rajauksen ankkuri 0–1 (CSS background-position -prosentti: 0,5 = keskellä).</summary>
+            public double Skaala, AnkkuriX, AnkkuriY;
+        }
+
+        /// <summary>
+        /// Lähentyminen hetkellä t: u = (1 − cos(π t / 8 s)) / 2 kulkee 0 → 1 → 0 ilman hyppyä (jatkuva derivaatta); skaala 1 + 0,04·u ja
+        /// ankkuri keskeltä suuntaan (sx, sy ∈ −1…1) u:n mukana, jolloin kuva liukuu ylimenevän 4 %:n verran.
+        /// </summary>
+        public static Rajaus Lahentyminen(double t, double sx, double sy)
+        {
+            double u = (1 - Math.Cos(Math.PI * Math.Max(0, t) / LahentyminenS)) / 2;
+            sx = Math.Max(-1, Math.Min(1, double.IsNaN(sx) ? 0 : sx)); sy = Math.Max(-1, Math.Min(1, double.IsNaN(sy) ? 0 : sy));
+            return new Rajaus { Skaala = 1 + (LahentyminenMaks - 1) * u, AnkkuriX = 0.5 + 0.5 * sx * u, AnkkuriY = 0.5 + 0.5 * sy * u };
+        }
+
+        /// <summary>Liikkeen suunta kuvan tunnisteesta (sama kuva → sama suunta): yksi neljästä vinosuunnasta.</summary>
+        public static (double X, double Y) Suunta(string tunniste)
+        {
+            int h = 17;
+            if (tunniste != null) foreach (char c in tunniste) h = unchecked(h * 31 + c);
+            int i = (h & 0x7fffffff) % 4;
+            return (i % 2 == 0 ? 0.8 : -0.8, i < 2 ? 0.6 : -0.6);
         }
 
         /// <summary>

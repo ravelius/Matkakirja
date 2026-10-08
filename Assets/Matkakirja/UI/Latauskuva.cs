@@ -2,8 +2,13 @@
 // osasta uudestaan niin että pallo heiluu hitaasti ruudulla ja köysi piirretään vektorina"; Päätoimittaja: uusi hyväksytty pohja,
 // tyylikirja pohjat.LATAUSKUVA). Yksi yhteinen kerroksellinen latauskuva odotusruuduille:
 //   tausta      still-kuva (nykyinen latauskuva; isäntä antaa kuvan alan ruudulla, esim. peittävä rajaus)
-//   köydet      vektoriviivat (Painter2D) kiintopisteestä liikkuvan kerroksen kiinnityspisteeseen, kevyt riippuma
-//   kerrokset   1–2 liikkuvaa kuvaa alfalla; hidas sinimuotoinen heilahdus ja nousu (Ydin LatausLiike, ±1–2°, jakso 6–8 s)
+//   köydet      vektoriviivat (Painter2D) kiintopisteestä liikkuvan kerroksen kiinnityspisteeseen riippumalla: riippuköydet
+//               (kori → kupu) ja ankkuriköysi korista maan kiinnityspisteeseen taustassa (omistaja 8.10. 08.4x: "köysi, joka pitää
+//               pallon paikallaan"; isompi riippuma, pieni kaari)
+//   kerrokset   1–2 liikkuvaa kuvaa alfalla; vähäeleinen sinimuotoinen heilahdus ja nousu (Ydin LatausLiike, ±0,5–0,75°,
+//               nousu ≤ 4 pt, jakso 7–8 s)
+//   valokuva   taustan hidas lähentyminen ja siirto (Ken Burns 1,00 → 1,04 / 8 s ja takaisin; TaustaLahentyy, Päätoimittaja 8.10.);
+//              sama liike oppaan latauskuvan valokuvalle Kuvasuurennoksessa (Kuvasuurennos.Lahentyy → Latauskuva.AsetaRajaus).
 // Latauspalkki ja nimi pysyvät isännän nykyisessä pohjassa (Latauspalkki, mk-astroavaus) tämän päällä. Ilman kerroksia näkyy
 // pelkkä still-kuva (ei ajastinta). Esiin heti tai häivyttäen Tyylikirja.Kesto.Avaus (alle 250 ms). Päivitys 30 fps:n tahdissa
 // UI:n omalla ajastimella; ei Ruudunpaivitys.Herata-kutsua (hidas liike ei tarvitse täyttä taajuutta, lämpö).
@@ -25,7 +30,10 @@ namespace Matkakirja.Natiivi
             public LatausLiike.Profiili Liike = LatausLiike.Profiili.Oletus;
         }
 
-        /// <summary>Köysi: kiintopiste taustakuvan osuuksina → kerroksen (indeksi) kiinnityspiste kerroksen osuuksina.</summary>
+        /// <summary>
+        /// Köysi: kiintopiste taustakuvan osuuksina → kerroksen (indeksi) kiinnityspiste kerroksen osuuksina. Riippuköysi (kori →
+        /// kupu) Riippuma ~0,02–0,03; ankkuriköysi (maa → kori) Ankkuri()-oletuksilla.
+        /// </summary>
         public sealed class Koysi
         {
             public Vector2 Kiinto;
@@ -35,6 +43,10 @@ namespace Matkakirja.Natiivi
             public Color Vari = Tyylikirja.Kehys.MapInk;
             /// <summary>Riippuma köyden pituudesta (0 = suora).</summary>
             public float Riippuma = 0.03f;
+
+            /// <summary>Ankkuriköysi maasta (taustan osuus) korin kerrokseen: hieman paksumpi, roikkuu pienellä kaarella.</summary>
+            public static Koysi Ankkuri(Vector2 maa, int koriKerros, Vector2 kiinnitys) =>
+                new Koysi { Kiinto = maa, Kerros = koriKerros, Kiinnitys = kiinnitys, LeveysPt = 2f, Riippuma = 0.06f };
         }
 
         public const int PaivitysMs = 33;
@@ -65,6 +77,29 @@ namespace Matkakirja.Natiivi
             e.style.position = Position.Absolute;
             e.style.left = 0; e.style.right = 0; e.style.top = 0; e.style.bottom = 0;
             return e;
+        }
+
+        /// <summary>Taustakuva lähentyy hitaasti (valokuvat); suunta tunnisteesta (LatausLiike.Suunta).</summary>
+        public bool TaustaLahentyy;
+        public string TaustaTunniste;
+
+        /// <summary>
+        /// Lähentymisen rajaus elementin taustakuvaan (background-size ja -position, ei muunnosta eikä asettelua): kuva rajautuu
+        /// elementin alaan. null = poista inline-arvot (elementin oma tyyli palaa).
+        /// </summary>
+        public static void AsetaRajaus(VisualElement e, LatausLiike.Rajaus? r)
+        {
+            if (r == null)
+            {
+                e.style.backgroundSize = StyleKeyword.Null;
+                e.style.backgroundPositionX = StyleKeyword.Null; e.style.backgroundPositionY = StyleKeyword.Null;
+                return;
+            }
+            var q = r.Value;
+            float s = (float)(q.Skaala * 100);
+            e.style.backgroundSize = new BackgroundSize(Length.Percent(s), Length.Percent(s));
+            e.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left, Length.Percent((float)(q.AnkkuriX * 100)));
+            e.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent((float)(q.AnkkuriY * 100)));
         }
 
         /// <summary>Kerroksia näkyvissä (0 = still-kuva).</summary>
@@ -146,7 +181,8 @@ namespace Matkakirja.Natiivi
 
         void Kaynnista()
         {
-            bool liikkuu = nakyy && kerrokset.Count > 0;
+            bool liikkuu = nakyy && (kerrokset.Count > 0 || TaustaLahentyy);
+            if (!TaustaLahentyy) AsetaRajaus(tausta, new LatausLiike.Rajaus { Skaala = 1, AnkkuriX = 0.5, AnkkuriY = 0.5 });
             if (!liikkuu) { ajastin?.Pause(); return; }
             if (ajastin == null) ajastin = Juuri.schedule.Execute(Paivita).Every(PaivitysMs);
             else ajastin.Resume();
@@ -155,8 +191,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kerrosten asento hetkellä nyt − alku (UITK rotate/translate, ei asettelua) ja köysien uudelleenpiirto.</summary>
         void Paivita()
         {
-            if (kerrokset.Count == 0) return;
             double t = Time.unscaledTime - alku;
+            if (TaustaLahentyy) { var (sx, sy) = LatausLiike.Suunta(TaustaTunniste); AsetaRajaus(tausta, LatausLiike.Lahentyminen(t, sx, sy)); }
+            if (kerrokset.Count == 0) return;
             foreach (var (el, k) in kerrokset)
             {
                 var a = LatausLiike.Tila(k.Liike, t);

@@ -1438,7 +1438,7 @@ namespace Matkakirja.Natiivi
         {
             if (k == null) { if (latausSuurennos?.Auki ?? false) { latausSuurennos.Sulje(); Debug.Log("MATKAKIRJA opas: latauskuva suljettu"); } return; }
             if (!nakyy || !KuvatPaalla || (suurennos?.Auki ?? false)) return;
-            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus };
+            latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus, Lahentyy = true };
             latausSuurennos.Avaa(new[] { Lehtikuvaksi(k, OpasSovitin.Viimeisin?.Silmukka?.Nykyinen?.Nimi) }, 0);
             Debug.Log("MATKAKIRJA opas: latauskuva näkyviin " + k.Url);
         }
