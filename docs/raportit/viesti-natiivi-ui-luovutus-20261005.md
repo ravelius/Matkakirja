@@ -14,7 +14,7 @@ JUNA 165 KUITATTU ja SHA:t Natiivisepälle: natiivi-ui/metro-kaksirivi 0484007f2
 ei alle 18 pt) ja natiivi-ui/kasittely-veto 24d40fb9c (syötepuoli, Ydin KasittelyVeto + 6 testiä; SeikkailuTapit.KasittelyAlkaa/
 Kasittely/OtaKasittely). Siirtoseppä kytki (historia-valot 10294000f, SeikkailuKasittely: tyrmän ovi). Ajoitusvika korjattu:
   kasittely-veto cf66d2088 (Aloita heti kosketuksesta) korvaa 24d40fb9c:n junassa 165 — KUITATTU, Natiivisepällä.
-  Kysytty Siirtosepältä: kosketuksen lyhyt napautus käsiteltävään 1,2–1,6 m:ssä = kävely, ei toiminto (Mac antaa toiminnon).
+  Napautus käsiteltävään = aina toiminto (Siirtoseppä historia-valot 5626b2bf8, SeikkailuKasittely.Alla). Ei avoimia eriä.
 Simut: T7-sarja 8.10. alkaen — omissa zsh-skripteissä `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`;
 uudet UDID:t iPhone 17 96044270-…, natiivi-ui-iPad11 F7513985-… (tyokalut/simusarja-udid.tsv).
   nohup/xargs/timeout/env ohittavat funktion → niissä `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
