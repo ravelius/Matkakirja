@@ -207,6 +207,8 @@ namespace Matkakirja.Natiivi
         readonly PalloKori kori = new PalloKori();
         /// <summary>Katse ylös korista (omistaja 21.1x, PT 22.0x): kupu näkyy vedettäessä.</summary>
         readonly KoriKatseVeto koriKatse = new KoriKatseVeto();
+        /// <summary>Pallon äänimaisema kehityskaupungeissa (Pelikoodari 8.10., Tausta-säädin).</summary>
+        readonly PalloAanimaisemaSoitin palloAanet = new PalloAanimaisemaSoitin();
         public static string KoriKatseTila => Auki ? Viimeisin.koriKatse.Tila() : "opas ei auki";
         readonly Dictionary<string, double> maaKorkeudet = new Dictionary<string, double>(StringComparer.Ordinal);
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
@@ -718,6 +720,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka ruutu: mikserin muutokset kuuluvat heti, ukkosen väistö liukuu.</summary>
         void PaivitaAanitasot()
         {
+            {
+                var g = kaupunki.Georef; var kam = kaupunki.Kamera;
+                float mt = g != null ? Mathf.Max(1e-6f, g.transform.lossyScale.x) : 1f;
+                double kork = g != null && kam != null ? (kam.transform.position.y - g.transform.position.y) / mt : 300;
+                palloAanet.Paivita(o, nakymaAuki ? NykyinenKaupunkiId : null, kork);
+            }
             if (puhe != null) puhe.volume = KertojanTaso;
             if (silta != null) silta.volume = KertojanTaso;
             if (ukkosLahde != null) ukkosLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(ukkosLahde.volume, UkkosenTavoite(), Time.unscaledDeltaTime);
@@ -2696,7 +2704,7 @@ namespace Matkakirja.Natiivi
             klipit.Clear();
             pcmVirrat.Clear(); pcmNyt = null;
             maaKorkeudet.Clear();
-            kori.Sulje(); koriKatse.Pois(); OpasSilmukka.PalloLento = false;
+            kori.Sulje(); koriKatse.Pois(); palloAanet.Sulje(); OpasSilmukka.PalloLento = false;
             AsetaKaupunkitila(null);
             Vaihtui?.Invoke(null);
         }
