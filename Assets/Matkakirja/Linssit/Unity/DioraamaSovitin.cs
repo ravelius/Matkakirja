@@ -1002,7 +1002,7 @@ namespace Matkakirja.Natiivi
             yield return VarmistaKavelyData();
             SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); cm?.SeikkailuPois(); veneLaituriin = false; veneRepliikki = 0;
             AanetPaalle();
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             SeikkailuTietokerros.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/tietokerros-v1/tietokerros.json", RakennusId, o.Kirjaa);
             double vesi = rakennus.Ulkokuori?.VesiY ?? 0;
             var reitti = new List<(double X, double Y, double Z)>(); double? loppuSuunta = null;
@@ -1124,7 +1124,7 @@ namespace Matkakirja.Natiivi
         void AanetPaalle()
         {
             if (nayttamo == null) return;
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             var ennen = SeikkailuAanet.Aktiivinen;
             var a = SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v2/manifest.json", o.Kirjaa);
             if (a != ennen || SeikkailuSade.Aktiivinen == null)
@@ -1164,7 +1164,7 @@ namespace Matkakirja.Natiivi
         {
             if (nayttamo == null || rakennus == null) { o.Kirjaa("poikki: vartijat: linssi ei auki"); yield break; }
             yield return VarmistaKavelyData();
-            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v3/manifest.json", o.Kirjaa);
+            SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
