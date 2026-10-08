@@ -247,6 +247,7 @@ namespace Matkakirja.Natiivi
             cm.Nollaa();
             AktiivinenKamera = nayttamo.Kamera;
             if (rakennus3D == null) rakennus3D = new DioraamaRakennus(nayttamo.transform);
+            DioraamaHahmot3D.TilanMalli = id => rakennus3D != null && rakennus3D.Tilat.TryGetValue(id, out var tg) ? tg : null; // Final IK -lattiat
             if (hahmot3D == null) hahmot3D = new DioraamaHahmot(nayttamo.transform);
             if (syote == null) syote = new DioraamaSyote(this, nayttamo);
             jousi.Nollaa();
@@ -1962,6 +1963,12 @@ namespace Matkakirja.Natiivi
                 var odotettu = viimeNakyma.HasValue && syote != null ? syote.Sovita(jousi.Sovella(viimeNakyma.Value.Kamera, false)) : default;
                 o.Kirjaa("poikki: " + (cm != null && nayttamo != null ? cm.Tila(nayttamo.Kamera, odotettu)
                     : $"cinemachine {(DioraamaCinemachine.Paalla ? "päällä" : "pois")}, kohina {(DioraamaCinemachine.Kohina ? "päällä" : "pois")} (linssi kiinni)"));
+                return;
+            }
+            if (mita == "ik")
+            {
+                DioraamaHahmot3D.IkPaalla = arvo != "0";
+                o.Kirjaa("poikki: ik " + (DioraamaHahmot3D.IkPaalla ? "päällä" : "pois"));
                 return;
             }
             if (mita == "orbit")

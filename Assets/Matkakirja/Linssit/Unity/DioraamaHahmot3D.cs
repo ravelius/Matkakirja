@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
     // vahingossa Matkakirja.NimiLadonta.cs:n omaa V3:a.
     using V3 = Matkakirja.Linssit.Dioraama.V3;
 
-    public sealed class DioraamaHahmot3D
+    public sealed partial class DioraamaHahmot3D
     {
         /// <summary>"poikki hahmot 2d|3d" (DioraamaSovitin.Komento): oletus 3d (tosi). Vaikuttaa SEURAAVIIN
         /// LisaaTila-kutsuihin ("poikki lataa" lataa tilat uudelleen) — sama sopimus kuin DioraamaLiekit.
@@ -90,6 +90,9 @@ namespace Matkakirja.Natiivi
             public float KatseKulma;
             public int PaaIndeksi = -2;
             public Quaternion PaaKierto = Quaternion.identity;
+            public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
+            public bool IkYritetty; public float JalkaMittausT;
+            public string Silmukka; public float KasiPainoR, KasiPainoL; // kädet esineisiin (kadet[].milloin)
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
             // Eleet puheen tahdissa (7.10.): ajoitettu kertaele, kuulijan nyökkäys, puhujan katseen kohde, vakaa siemen.
             public string AjoitettuEle; public double AjoitettuAlku = double.NegativeInfinity; public int EleLaskuri;
@@ -98,15 +101,17 @@ namespace Matkakirja.Natiivi
             public int Siemen = int.MinValue;
             // Irrallinen hahmo (historiamoottori V2c: soutaja veneessä): vanhempi, leike ja ulkoinen kello; ei tilan paikkaa eikä eleitä.
             public Transform Isa; public Func<(string Leike, double Aika)> IrrallinenTila; public GlbAnimaatio IrrallinenEdellinen; public Quaternion IrrallinenKierto = Quaternion.identity;
+            /// <summary>Jalat maahan Final IK Grounderilla (seikkailun kävelevät hahmot; omistaja 8.10.).</summary>
+            public bool IrrallinenJalat;
         }
 
         /// <summary>Irrallinen hahmo (V2c): henkilön glb, vanhempana isa (esim. veneen istuin_soutaja, ilman omaa siirtoa tai kiertoa),
         /// leike soi kellon ajasta (soutu.json: veneen ja soutajan leikkeet samasta kellosta). Glb latautuu IrrallistenGlb-listan kautta.</summary>
-        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila, Quaternion? kierto = null)
+        public void LisaaIrrallinen(Rakennus rakennus, string henkiloId, Transform isa, Func<(string Leike, double Aika)> tila, Quaternion? kierto = null, bool jalat = false)
         {
             if (rakennus?.Henkilot == null || !rakennus.Henkilot.TryGetValue(henkiloId, out var henkilo) || string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb)) return;
             var e = new Esiintyma { TilaId = "irrallinen", HahmoId = henkiloId, Hahmo = new Hahmo { Id = henkiloId, HenkiloId = henkiloId }, Henkilo = henkilo,
-                Isa = isa, IrrallinenTila = tila, IrrallinenKierto = kierto ?? Quaternion.identity };
+                Isa = isa, IrrallinenTila = tila, IrrallinenKierto = kierto ?? Quaternion.identity, IrrallinenJalat = jalat };
             esiintymat.Add(e);
             if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
         }
@@ -161,6 +166,7 @@ namespace Matkakirja.Natiivi
                 foreach (var k in e.IrrallinenEdellinen.Kanavat) { int i = k.Solmu; var g = e.Malli.Glb.Solmut[i];
                     Array.Copy(g.Translation, 0, sk.T, i * 3, 3); Array.Copy(g.Rotation, 0, sk.R, i * 4, 4); Array.Copy(g.Scale, 0, sk.S, i * 3, 3); }
             e.IrrallinenEdellinen = anim;
+            if (e.IrrallinenJalat) IkPalauta(e);
             DioraamaSekoitin.Nayte(anim, anim.Kesto > 0 ? (float)(aika % anim.Kesto) : 0f, sk.T, sk.R, sk.S);
             foreach (var k in anim.Kanavat)
             {
@@ -170,6 +176,7 @@ namespace Matkakirja.Natiivi
                 else if (k.Polku == 1) tr.localRotation = new Quaternion(sk.R[i * 4], sk.R[i * 4 + 1], sk.R[i * 4 + 2], sk.R[i * 4 + 3]);
                 else tr.localScale = new Vector3(sk.S[i * 3], sk.S[i * 3 + 1], sk.S[i * 3 + 2]);
             }
+            if (e.IrrallinenJalat) IkJalat(e, leike);
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -843,6 +850,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(perus) && perus != "idle" && perus != "kavely" && tavoite != perus && !reitilla
                 && e.Malli.Glb.Animaatio(Leike(m3, perus + "_puhe")) != null)
                 tavoite = perus + "_puhe";
+            e.Silmukka = tavoite;
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
@@ -884,6 +892,7 @@ namespace Matkakirja.Natiivi
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
+            IkPalauta(e);
             PaivitaKasvot(e, t);
             var s = e.Sekoitin;
             for (int i = 0; i < e.SolmuT.Length; i++)
@@ -895,6 +904,7 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
+            Ik(e);
             PaaKatse(e, t, e.KuulijaEle != null && e.Sekoitin.Nykyinen == e.KuulijaEle);
         }
 
