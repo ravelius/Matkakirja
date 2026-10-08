@@ -18,6 +18,7 @@
 // KÄSITTELY KÄSIN (pelattavuusmalli kohta 6, Päätoimittaja 8.10.): kosketus, joka alkaa käsin käsiteltävän esineen päältä
 // (KasittelyAlkaa(px) = true; Siirtoseppä asettaa), ei käännä katsetta: napautusrajan ylittävä veto syötetään Kasittely-vetoon
 // (Ydin KasittelyVeto: asteet ja kulmanopeus °/s, alle 30°/s hiljainen). Lyhyt napautus samaan esineeseen pysyy napautuksena.
+// Veto on Kaynnissa kosketuksen alusta (Siirtosepän SeikkailuKasittely pitää kohteen aktiivisena), liike vasta napautusrajan jälkeen.
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -211,9 +212,11 @@ namespace Matkakirja.Natiivi
                 if (t.phase == KosketusVaihe.Began || !sormet.TryGetValue(id, out var s))
                 {
                     s = new Sormi { Alku = px, Edellinen = px, AlkuT = t.startTime, Ui = UiKerros.Peittaa(px), Oikealla = px.x >= Screen.width * 0.5f };
-                    // Vain yksi käsittely kerrallaan; esineen tunnistus Siirtosepältä.
-                    s.Kasittely = !s.Ui && kasittelySormi < 0 && KasittelyAlkaa != null && KasittelyAlkaa(px);
-                    if (s.Kasittely) kasittelySormi = id;
+                    // Vain yksi käsittely kerrallaan (ei Macin/ohjaimen käynnissä olevan päälle); esineen tunnistus Siirtosepältä.
+                    // Veto käynnistyy heti kosketuksesta (Kaynnissa: kohde pysyy aktiivisena ja katse paikallaan), mutta liike
+                    // syötetään vasta napautusrajan jälkeen; lyhyt napautus päättää käsittelyn ilman kääntöä.
+                    s.Kasittely = !s.Ui && kasittelySormi < 0 && !Kasittely.Kaynnissa && KasittelyAlkaa != null && KasittelyAlkaa(px);
+                    if (s.Kasittely) { kasittelySormi = id; Kasittely.Aloita(); }
                     sormet[id] = s;
                 }
                 if (s.Kasittely)
@@ -222,7 +225,6 @@ namespace Matkakirja.Natiivi
                     if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt)
                     {
                         s.Veto = true;
-                        Kasittely.Aloita();
                         var d0 = (px - s.Alku) / k;
                         Kasittely.Liiku(d0.x, d0.y, t.time - s.AlkuT);
                     }
