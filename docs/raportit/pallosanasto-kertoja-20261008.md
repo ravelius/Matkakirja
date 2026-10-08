@@ -28,6 +28,14 @@ pelaajalle sinä-muodossa ja lennosta me-muodossa (”nostetaan”, ”laskeudum
 kääntyy hakeutumalla korkeuteen, jossa tuuli puhaltaa toiseen suuntaan. Siksi:
 - *vauhti* = ”nostetaan hieman korkeutta, ylempänä tuuli on reippaampi”
 - *kääntyminen* = ”laskeudutaan hieman, alempana tuuli kääntyy”
+**Kaksi fysiikkasääntöä kaikille pallo-teksteille** (Päätoimittaja 8.10.; sitovat esittelyjä, siltalauseita ja kertojan kehotetta):
+1. **Noste syntyy kuvun ja ympäröivän ilman lämpötilaerosta.** Lämmin tai kuuma ympäröivä ilma *heikentää* nostetta,
+   eikä se kanna palloa. Kuumassa ilmassa poltin saa tehdä enemmän töitä, ja viileässä noste on helpompi.
+   Ohuessa ylätasangon ilmassa poltin saa myös tehdä töitä.
+2. **Poltin vain nostaa. Vaakaliike tulee aina tuulesta.** Tyynessä ilmassa poltin ei vie eteenpäin, vaan noustaan
+   ylempään tuuleen. ”Tuuli kantaa koria” on oikein, ”lämmin ilma kantaa” ja ”annetaan poltinta ja lähdetään liikkeelle”
+   eivät ole.
+
 Kun pallo liikkuu pelissä tuulta nopeammin tai suoraan kohteeseen, se on Raamatun sallimaa ”pientä fysiikan lakien
 ylitystä”, eikä kertoja selitä sitä.
 
@@ -70,7 +78,7 @@ Muissa siirtymissä soivat nykyiset kierros- ja lento-ryhmät.
 | Kohta | Mitä | Kuka |
 |---|---|---|
 | **Siltalauseet** (4 uutta ryhmää, 16 lausetta) | `aanet/opas/siltalauseet-v2`: ryhmät `pallo-lahto`, `pallo-nousu`, `pallo-kaanto` ja `pallo-lasku`. Natiivi valitsee ryhmän lennon profiilista: ensimmäinen siirtymä = lähtö; nouseva tai pitkä siirtymä (yli ~800 m) = nousu; suunta muuttuu yli 60° = kääntö; lennon loppu = lasku. | Pelikoodari tekee JSONin ja äänet, natiivi (Natiivi-UI/LS1) tekee valinnan; Päätoimittaja jakaa |
-| **31 äänettömän kaupungin avaus** (`opas/esittely-aaneton-v1`) | Yksi pallovirke avauksen loppuun ennen ”Kierros alkaa …” -virkettä, kaupunkikohtainen ja vaihteleva. Esim. Venetsia: ”Kori keinahtaa, kun poltin puhaltaa, ja laguunin tuuli kantaa meidät kohti Pyhän Markuksen toria.” | Pelikoodari, voi tehdä heti hyväksynnän jälkeen (ei ääniä, ankkurit säilyvät, koska kohteiden teksteihin ei kosketa) |
+| **31 äänettömän kaupungin avaus** (toteutettu `opas/esittely-aaneton-v3`, #4190; v2 korvattu fysiikkakorjauksin) | Yksi pallovirke avauksen loppuun ennen ”Kierros alkaa …” -virkettä, kaupunkikohtainen ja vaihteleva. Esim. Venetsia: ”Kori keinahtaa, kun poltin puhaltaa, ja laguunin tuuli kantaa meidät kohti Pyhän Markuksen toria.” | Pelikoodari, voi tehdä heti hyväksynnän jälkeen (ei ääniä, ankkurit säilyvät, koska kohteiden teksteihin ei kosketa) |
 | **Live-kertoja** (OPAS_KEHOTE, KESKUSTELU_KEHOTE) | Lyhyt PALLO-osio: sanasto yllä, enintään yksi pallomaininta kolmea pysähdystä kohden, ei koskaan kohteen kuvauksen keskelle. Kustannus noin 150 tokenia välimuistissa, eli lähes nolla. | Pelikoodari, junaan |
 | **6 äänellistä kaupunkia** | Avauksia ei muuteta, koska ääni pitäisi tehdä uudelleen. Niissä pallo kuuluu siltalauseista. | – |
 
