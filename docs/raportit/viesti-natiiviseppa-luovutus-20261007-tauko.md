@@ -3,7 +3,15 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 8.10. 22.5x (UUSIN)
+## TILA 8.10. 23.2x (UUSIN)
+**LOPULLINEN BUILD 167 = proto master 7f0dcae51785f0b5b924288976d8853f4e68e843** (runko 51b873a22 = C 02405da71 + Siirtoseppä dbb374284 repliikit-v4
++ LS1 aanimaisema-167 a84f1d97e + NUI 95ab08f29; käännös 32197b326 23.12; app lokit/natiiviseppa-app-167c-51b873a22). Aiemmat BUILD 167 -mergit
+680acf3eb ja 4cd403df1 jäivät historiaan (TF 37834556090 peruttiin). TF 167 37837955397 (20:14Z), Mac-odottaja käynnissä, juna/b13 = 51b873a2.
+JUNA 168: natiiviseppa/kaupunki-sse 1b755328f (SSE+välimuisti ccdf86105 KUITATTU ehdoin + pinnat 150/70 + UltraAtlaksetMt 135; c30631fed:n päällä
+→ yhdistä BUILD 167:ään), NUI fa18d88de (⊇ 37540261e), LS1 korostus-168/pallo-168, Siirtoseppä juna168-v45o 2406bf795, LS1 2cdb87923.
+JUNA 169: ajallinen-169 95577f871 (TAA; kuittaus pyydetty; dioraama Siirtoseppä, kaupunki estyy kamerapinoon → LS1), NUI 84f67b536.
+
+## TILA 8.10. 22.5x
 **BUILD 167 = proto master 680acf3eb4be7f1b131ab2b29304d63fd531b203** (runko C natiiviseppa/juna-167-c 02405da71, käännös d625c7cf8 22.43, 0 shader
 erroria; app lokit/natiiviseppa-app-167c-02405da71; muutosloki 278 merkkiä PT:n hyväksymä, Julkaisijalla). AVOINNA: iOS TF 167 alkuaika → Mac TF
 -odottaja (`mac-tf-odottaja.sh 680acf3e 167 <alku>`), juna/b13 0c786156 → 02405da71 Julkaisijan luvalla + juna.log.
