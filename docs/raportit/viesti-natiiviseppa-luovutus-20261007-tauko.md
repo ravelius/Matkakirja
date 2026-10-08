@@ -3,7 +3,16 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## JUNALISTAT 8.10. 20.4x (UUSIN)
+## JUNA 167 = RUNKO C 8.10. 21.3x (UUSIN; omistaja: "julkaistaan kun valmis", "viivytä junaa jotta kaikki ehtii")
+natiiviseppa/juna-167-c **c30631fed** (wt/proto-natiiviseppa-j167c) = B 46bb3721d + Siirtoseppä 4447fbfe7 (⊇ 7f14020fb ⊇ ab25fd73f ⊇ historia-m
+5330ca53f; v45n) + c4c3018ba (Ultra + budjetti) + NUI a9cffd2a0, fecc37c10, c60be8514 (thief-hud) + LS1 376d59705 (kupu) + cdd0e711e + LS2
+ab8b8a06e (ilmakehä/vesi, ODbL) + Pelikoodari cd3f3c770 + e49be4764 (LS1 katselmoi). OpasSovitin-kommenttiristiriita → LS1:n versio.
+POIS: LS1 d8e4f69e6 (tuplaluokka Kehityskaupungit; LS1 hylkäsi). Simukäännös 2384e555f 21.31 0 shader erroria (app lokit/natiiviseppa-app-167c-2384e555f).
+LOPULLINEN LUKITUS 23.00 (herätys ajastettu): uudet testatut kärjet → testit → simukäännös → muutosloki PT:lle 23.10 → BUILD-merge
+(`git merge --no-ff <C> -m "BUILD 167 (TF 1.1 (167)): …"` masterissa, master nyt bdd0e8c5) → SHA Julkaisijalle + Laitetestaajalle (.app) →
+juna/b13 → C (Julkaisijan luvalla) → Mac TF -odottaja. Muutosloki C hyväksytty 275 merkkiä (päivitettävä uusilla asioilla).
+
+## JUNALISTAT 8.10. 20.4x
 - JUNA 167 = RUNKO B natiiviseppa/juna-167-ik **46bb3721d** (+ Siirtoseppä 2b4d59890 aanet-fp-v3); A cd20157b1 varalla. Lukitus 21.30, käännös 22.00.
 - JUNA 168: LS1 dbc488776 + cdd0e711e (⊇ juna-167-ik d9ca9d63c); NUI 4758e5316 (EHTO Siirtoseppä c15eb5b8a) → NUI f0b94520e (harmaat pallot,
   ⊇ 4758e5316, KUITATTU); NUI a9cffd2a0 (äänilähteet) odottaa kuittausta + Pelikoodarin NC-korjaus samaan junaan.
