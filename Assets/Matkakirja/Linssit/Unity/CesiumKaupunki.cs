@@ -43,6 +43,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Käytössä oleva kerroin: avauksessa vapaan muistin mukaan valittu (ValitseKerroin), muuten näytön kerroin.</summary>
         public static float SseKerroin => kerroin > 0f ? kerroin : NayttoKerroin;
         static float kerroin = -1f;
+        /// <summary>Googlen välimuisti tälle avaukselle (KaupunkiMuistibudjetti; oletus GoogleValimuisti 256 Mt).</summary>
+        static long googleValimuisti = GoogleValimuisti;
 
         // ---- KAKSIVAIHEINEN TARKKUUS (Päätoimittaja 6.10. 19.3x, juna 153: TF 151 ajaa omistajan iPad Prolla kertoimella ~1,0, ja
         // simussa 1,00 latautui ~3× hitaammin kuin 1,71) ----
@@ -59,11 +61,11 @@ namespace Matkakirja.Natiivi
 #if UNITY_STANDALONE_OSX
         static bool Mac => Matkakirja.MacLaatu.Kaytossa;
         static float MacKuorma => Mac ? Mathf.Max(1f, Matkakirja.MacLaatu.Kuorma) : 1f;
-        static long GoogleValimuistiNyt => Mac && Matkakirja.MacLaatu.Valimuisti > 0 ? Matkakirja.MacLaatu.Valimuisti : GoogleValimuisti;
+        static long GoogleValimuistiNyt => Mac && Matkakirja.MacLaatu.Valimuisti > 0 ? Matkakirja.MacLaatu.Valimuisti : googleValimuisti;
 #else
         static bool Mac => false;
         static float MacKuorma => 1f;
-        static long GoogleValimuistiNyt => GoogleValimuisti;
+        static long GoogleValimuistiNyt => googleValimuisti;
 #endif
         public const float KuormaRaja = 1.05f, KuormaPois = 1.02f;
         bool kuormaValinta;
@@ -411,14 +413,18 @@ namespace Matkakirja.Natiivi
             long vapaa = VapaaMuisti();
             float pakotettu = PakotettuKerroin();
             // Tavoite muistista, alaraja AlarajaKerroin (Päätoimittaja: jos 1,0 ei näytä paremmalta kuin 1,3, 1,3 jää); pakotus ohittaa.
-            kerroin = pakotettu > 0 ? pakotettu : Mathf.Min(NayttoKerroin, Mathf.Max(AlarajaKerroin, KerroinMuistille(vapaa / 1e9, NayttoKerroin)));
+            // Täysi laiteluokka (omistaja 8.10. 19.5x "lisää muistin käyttöä"; juna 170): lattia 0,5 (SSE 8) ja välimuisti ylijäämästä
+            // (KaupunkiMuistibudjetti, Ydin; muut laitteet ja tuntematon vapaa täsmälleen ennallaan).
+            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.Valitse(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka);
+            kerroin = pakotettu > 0 ? pakotettu : (float)valinta.Kerroin;
+            googleValimuisti = valinta.Valimuisti;
 #if UNITY_STANDALONE_OSX
             // Mac: profiilin SSE suoraan (ei näyttö- eikä alarajakerrointa); GoogleSseMin-lattia skaalautuu samalla kertoimella.
             if (Mac && pakotettu <= 0 && Matkakirja.MacLaatu.GoogleSse > 0) kerroin = Matkakirja.MacLaatu.GoogleSse / GoogleSse;
 #endif
             karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
             hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
-            kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
+            kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}, välimuisti {GoogleValimuistiNyt >> 20} Mt{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
             palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
