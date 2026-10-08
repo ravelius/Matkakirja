@@ -45,5 +45,18 @@ namespace Matkakirja.Linssit.Testit
             string m = u.Substring(i, j - i);
             Oleta.Tosi(!m.Contains("localPosition") && !m.Contains("longitudeLatitudeHeight =") && !u.Contains("KorjausRajaM"), "ei korkeuskorjausta Googlen pinnasta");
         }
+
+        // Kohdekohtainen krediitti (Concorde 9.10.: IGN + OSM) paketin tekijän rinnalla, kukin kerran.
+        [Testi] static void KohteenOmaKrediitti()
+        {
+            var p = OmatMallit.Lue("{\"tekija\":\"Pyramidien 3D-malli: Matkakirja\",\"kohteet\":[" +
+                "{\"id\":\"khufu\",\"lat\":29.979,\"lon\":31.134,\"korkeus\":80,\"leikkaus\":[[29.98,31.13],[29.98,31.14],[29.97,31.14]],\"tileset\":\"khufu/tileset.json\"}," +
+                "{\"id\":\"concorde\",\"lat\":48.8656,\"lon\":2.3212,\"korkeus\":76.8,\"tekija\":\"Concorde: © IGN, © OSM\",\"leikkaus\":[[48.866,2.32],[48.866,2.323],[48.865,2.323]],\"tileset\":\"concorde/tileset.json\"}]}");
+            Oleta.Sama(2, p.Kohteet.Count);
+            Oleta.Sama("Concorde: © IGN, © OSM", p.Kohteet[1].Tekija);
+            Oleta.Sama("Pyramidien 3D-malli: Matkakirja · Concorde: © IGN, © OSM", OmatMallit.Tekijat(p, p.Kohteet));
+            Oleta.Sama("Concorde: © IGN, © OSM", OmatMallit.Tekijat(p, new[] { p.Kohteet[1] }));
+            Oleta.Sama(null, OmatMallit.Tekijat(p, new OmatMallit.Kohde[0]));
+        }
 }
 }

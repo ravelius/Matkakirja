@@ -16,6 +16,8 @@ namespace Matkakirja.Linssit.Kierros
         public sealed class Kohde
         {
             public string Id, Tileset;
+            /// <summary>Kohteen oma tekijä-/krediittirivi (Concorde 9.10.: IGN- ja OSM-lähteet); null = paketin Tekija.</summary>
+            public string Tekija;
             public double Lat, Lon, KorkeusM;
             public List<(double lat, double lon)> Leikkaus = new List<(double, double)>();
         }
@@ -47,7 +49,7 @@ namespace Matkakirja.Linssit.Kierros
                 {
                     Id = MiniJson.Teksti(k, "id"), Tileset = MiniJson.Teksti(k, "tileset"),
                     Lat = MiniJson.Luku(k, "lat") ?? double.NaN, Lon = MiniJson.Luku(k, "lon") ?? double.NaN,
-                    KorkeusM = MiniJson.Luku(k, "korkeus") ?? 0,
+                    KorkeusM = MiniJson.Luku(k, "korkeus") ?? 0, Tekija = MiniJson.Teksti(k, "tekija"),
                 };
                 foreach (var pt in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "leikkaus")))
                     if (pt is List<object> l && l.Count >= 2 && l[0] is double la && l[1] is double lo) kohde.Leikkaus.Add((la, lo));
@@ -56,6 +58,14 @@ namespace Matkakirja.Linssit.Kierros
                 p.Kohteet.Add(kohde);
             }
             return p;
+        }
+
+        /// <summary>Ladattujen kohteiden krediittirivi: kohteiden omat tai paketin tekijä, kukin kerran, " · " välissä.</summary>
+        public static string Tekijat(Paketti p, IEnumerable<Kohde> ladatut)
+        {
+            var l = new List<string>();
+            foreach (var k in ladatut) { string t = string.IsNullOrEmpty(k.Tekija) ? p?.Tekija : k.Tekija; if (!string.IsNullOrEmpty(t) && !l.Contains(t)) l.Add(t); }
+            return l.Count == 0 ? null : string.Join(" · ", l);
         }
 
         /// <summary>Kohteet enintään rM:n päässä pisteestä.</summary>

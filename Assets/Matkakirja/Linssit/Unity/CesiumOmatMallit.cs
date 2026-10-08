@@ -33,7 +33,7 @@ namespace Matkakirja.Linssit
         Cesium3DTileset google;
         CesiumPolygonRasterOverlay leikkaus;
         readonly List<(OmatMallit.Kohde kohde, Cesium3DTileset tileset, CesiumCartographicPolygon polygoni)> mallit = new();
-        string tekija;
+        OmatMallit.Paketti paketti;
 
         public CesiumOmatMallit(Action<string> kirjaa) { this.kirjaa = kirjaa; VerkkoSaapui += Saapui; }
 
@@ -123,7 +123,7 @@ namespace Matkakirja.Linssit
             var lahella = OmatMallit.Lahella(paketti, lat, lon);
             if (lahella.Count == 0) return;
             avattu = string.Join(",", lahella.ConvertAll(k => k.Id));
-            google = googleTileset; tekija = paketti.Tekija;
+            google = googleTileset; this.paketti = paketti;
             juuri = new GameObject("Omat mallit") { layer = kerros };
             juuri.transform.SetParent(vanhempi, false);
             foreach (var k in lahella)
@@ -180,7 +180,7 @@ namespace Matkakirja.Linssit
         {
             if (google == null || juuri == null) return;
             if (laatta != null) laatta.layer = juuri.layer;
-            Tekijat = tekija;
+            Tekijat = OmatMallit.Tekijat(paketti, mallit.ConvertAll(m => m.kohde));
             if (!Leikkaa) return;   // oletuksena pois (Päätoimittaja 7.10.); testi Documents/omat-mallit/leikkaus-paalle
             if (leikkaus == null)
             {
