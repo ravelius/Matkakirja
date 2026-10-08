@@ -13,8 +13,8 @@ palvelu-kopio). Todennus Julkaisijan vuorolla: lokit/natiiviseppa-t7-todennus/t7
 Avoinna: MCP-simutyökalu näkee vain sisäisen sarjan; vanhojen sarjojen poisto omistajan Run-rivillä päivän käytön jälkeen.
 
 **JUNA 165 (ilta, iltapäivän työt; NUI:n mukaan Päätoimittaja kuittasi 08.0x):** NUI metro-kaksirivi 0484007f2 (⊇ 69e0b05ae) +
-NUI kasittely-veto 24d40fb9c (uusi Ydin/Seikkailu/KasittelyVeto.cs; Siirtosepän kytkentä erillisenä SHA:na); molemmat yhdistyvät
-juna-164:ään ilman ristiriitoja. JUNA 164 AIKAISTUI AAMUPÄIVÄÄN (Päätoimittaja 08.0x): esirunko d40ab72ff (+ Siirtoseppä da5fdf62a,
+NUI kasittely-veto cf66d2088 (⊇ 24d40fb9c, KUITATTU NUI:n mukaan; uusi Ydin/Seikkailu/KasittelyVeto.cs; Siirtosepän kytkentä historia-valot 10294000f erillisenä SHA:na); molemmat yhdistyvät
+juna-164:ään ilman ristiriitoja. JUNA 164 AIKAISTUI AAMUPÄIVÄÄN (Päätoimittaja 08.0x): esirunko ae7523be8 (+ Siirtoseppä ebd86fc24 ⊇ da5fdf62a, + T7 nohup-korjaus 09cdc7680,
 + kansio-.metat Vefects/VolumetricLights); odottaa LS1 611ea1781 -kuittausta → Julkaisijan NYT → käännös → TF sisäisille.
 
 **JUNA 164 = ILLAN JUNA** (Päätoimittaja 07.4x): ESIRUNKO natiiviseppa/juna-164 **29817f360** (myöh. + NUI 67727816f, b529268aa, 69e0b05ae ⊇ 8b4659e98, 7d366ce92 tyylikirja-pariteetti — kaikki KUITATTU; tyylikirjan ristiriita ratkaistu 7d366ce92:n generoiduilla; testit 448/419/882, unity 0); alkuperäinen b85458f10 (wt/proto-natiiviseppa-j144) = 062bb439 +
