@@ -4,6 +4,8 @@
 // kiertävät vesillä (Ydin Parvi). Mallit Ydin VeneMalleista (oma proseduraalinen geometria), varjostimet ElavaKohde ja ElavaVana.
 // Paikka: CesiumGlobeAnchor paketin origoon (paikalliset akselit itä, ylös, pohjoinen), korkeus paketista = oma vesipinta (Map Tiles
 // C4: ei korkeuksia Googlen laatoista) + VesiNostoM (Linssiseppä 2:n oma vesipinta nostaa veden; liitetään, kun molemmat ovat mainissa).
+// MUUT PALLOT (B3, kaikissa kaupungeissa, myös ilman pakettia): Ydin MuutPallot 2/4/6 palloa 300–800 m:n korkeudella
+// georeferenssin maan korkeudesta, ajelehtivat tuulen mukana PallotSadeM:n alueella; piilossa alle PalloLahinM:n päässä kamerasta.
 // Näkyvyys: veneet NakyvaM ja parvet ParviNakyvaM kameran ympäriltä. Määrä muistin mukaan (15 / 40 / 100). Krediitti: Krediitti
 // (© OpenStreetMap contributors, ODbL) Lähteet-näkymään. Kytkin: asetukset.json "elava.Paalla" (oletus 1), komento `opas elava 0|1`.
 using System.Collections.Generic;
@@ -26,13 +28,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Näkyvillä olevan paketin krediitti (null = ei elävää kaupunkia).</summary>
         public static string Krediitti { get; private set; }
         public static ElavaKaupunki Nykyinen { get; private set; }
-        public const float NakyvaM = 6000f, ParviNakyvaM = 1500f;
+        public const float NakyvaM = 6000f, ParviNakyvaM = 1500f, PallotSadeM = 3500f, PalloLahinM = 120f;
         /// <summary>Paketit (id, origo): lisätään, kun tyokalut/elava_kaupunki.py on ajettu kaupungille.</summary>
         static readonly (string Id, double Lat, double Lon, double SadeM)[] Paketit = { ("tukholma", 59.3299, 18.07382, 15000) };
 
         static Material kohdeMat, vanaMat;
         static readonly Dictionary<int, Mesh> veneVerkot = new Dictionary<int, Mesh>(), vanaVerkot = new Dictionary<int, Mesh>();
         static Mesh lokki, siipiO, siipiV;
+        static readonly Dictionary<int, Mesh> palloVerkot = new Dictionary<int, Mesh>();
+        MuutPallot pallot; Transform[] palloT; float maaM;
 
         VesiLiikenne liikenne;
         sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe; }
@@ -60,28 +64,36 @@ namespace Matkakirja.Natiivi
             Sulje(k);
             var gr = k?.Georef;
             if (!Paalla || gr == null) return;
-            string id = null; double lat = 0, lon = 0;
+            string id = null;
             foreach (var p in Paketit)
-                if (Etaisyys(p.Lat, p.Lon, gr.latitude, gr.longitude) < p.SadeM) { id = p.Id; lat = p.Lat; lon = p.Lon; break; }
-            if (id == null) return;
-            var ta = Resources.Load<TextAsset>("Elava/elava-" + id);
-            if (ta == null) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: paketti puuttuu"); return; }
-            int raja = SystemInfo.systemMemorySize >= 7000 ? 100 : SystemInfo.systemMemorySize >= 5000 ? 40 : 15;
-            VesiLiikenne l;
-            try { l = VesiLiikenne.Lue(ta.text, raja, 20261008); }
-            catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: paketti virheellinen ({e.Message})"); return; }
-            finally { Resources.UnloadAsset(ta); }
-            var go = new GameObject("Elävä kaupunki " + id) { layer = CesiumKaupunki.Kerros };
+                if (Etaisyys(p.Lat, p.Lon, gr.latitude, gr.longitude) < p.SadeM) { id = p.Id; break; }
+            int taso = SystemInfo.systemMemorySize >= 7000 ? 2 : SystemInfo.systemMemorySize >= 5000 ? 1 : 0;
+            int raja = new[] { 15, 40, 100 }[taso];
+            VesiLiikenne l = null;
+            var ta = id != null ? Resources.Load<TextAsset>("Elava/elava-" + id) : null;
+            if (id != null && ta == null) Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: paketti puuttuu");
+            if (ta != null)
+            {
+                try { l = VesiLiikenne.Lue(ta.text, raja, 20261008); }
+                catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: paketti virheellinen ({e.Message})"); }
+                finally { Resources.UnloadAsset(ta); }
+            }
+            double lat = l != null ? l.Lat : gr.latitude, lon = l != null ? l.Lon : gr.longitude;
+            var go = new GameObject("Elävä kaupunki " + (id ?? "")) { layer = CesiumKaupunki.Kerros };
             go.transform.SetParent(gr.transform, false);
             var ankkuri = go.AddComponent<CesiumGlobeAnchor>();
             ankkuri.adjustOrientationForGlobeWhenMoving = true;
-            ankkuri.longitudeLatitudeHeight = new double3(l.Lon, l.Lat, 0);
+            ankkuri.longitudeLatitudeHeight = new double3(lon, lat, 0);
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var e2 = go.AddComponent<ElavaKaupunki>();
             e2.liikenne = l; e2.kerros = CesiumKaupunki.Kerros;
+            // Muiden pallojen korkeus georeferenssin origon korkeudesta (kohteen maa, ei luettu Googlen laatoista tässä).
+            e2.maaM = (float)gr.height;
+            int siemen = Mathf.Abs((int)(lat * 1000) * 31 + (int)(lon * 1000));
+            e2.pallot = new MuutPallot(new[] { 2, 4, 6 }[taso], PallotSadeM, siemen % 360, 3.0, siemen);
             e2.Rakenna();
-            Nykyinen = e2; Krediitti = l.Krediitti;
-            Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: {l.Liike.Kulkijat.Count} venettä {l.Reitteja} reitillä (raja {raja}), {l.Parvet.Count} lokkiparvea");
+            Nykyinen = e2; Krediitti = l?.Krediitti;
+            Debug.Log($"MATKAKIRJA kaupunki: elävä {id ?? "-"}: {l?.Liike.Kulkijat.Count ?? 0} venettä {l?.Reitteja ?? 0} reitillä (raja {raja}), {l?.Parvet.Count ?? 0} lokkiparvea, {e2.pallot.Maara} muuta palloa");
         }
 
         static Mesh Verkko(VeneVerkko v, string nimi)
@@ -121,6 +133,14 @@ namespace Matkakirja.Natiivi
         void Rakenna()
         {
             Materiaalit();
+            palloT = new Transform[pallot.Maara];
+            for (int j = 0; j < pallot.Maara; j++)
+            {
+                int pv = pallot.Paletti[j];
+                if (!palloVerkot.TryGetValue(pv, out var pm)) palloVerkot[pv] = pm = Verkko(VeneMallit.Pallo(pv), "Muu pallo " + pv);
+                palloT[j] = Olio("muu pallo", transform, pm, kohdeMat).transform;
+            }
+            if (liikenne == null) return;
             int i = 0;
             foreach (var k in liikenne.Liike.Kulkijat)
             {
@@ -171,12 +191,25 @@ namespace Matkakirja.Natiivi
 
         void LateUpdate()
         {
-            if (liikenne == null) return;
             if (kamera == null || !kamera.isActiveAndEnabled) kamera = Camera.main;
             float dt = Time.deltaTime, t = Time.time;
-            liikenne.Liike.Paivita(dt);
             AsetaValo();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
+            if (pallot != null)
+            {
+                pallot.Paivita(dt);
+                for (int j = 0; j < pallot.Maara; j++)
+                {
+                    var p = new Vector3((float)pallot.X[j], maaM + (float)pallot.Y[j], (float)pallot.Z[j]);
+                    bool nakyy = (p - c).sqrMagnitude > PalloLahinM * PalloLahinM;
+                    if (palloT[j].gameObject.activeSelf != nakyy) palloT[j].gameObject.SetActive(nakyy);
+                    // Kori heilahtaa hieman (köysien varassa), kuori kiertyy hitaasti.
+                    palloT[j].localPosition = p;
+                    palloT[j].localRotation = Quaternion.Euler(0.8f * Mathf.Sin(t * 0.5f + j), (float)pallot.Kierto[j], 0.8f * Mathf.Sin(t * 0.4f + 2 * j));
+                }
+            }
+            if (liikenne == null) return;
+            liikenne.Liike.Paivita(dt);
             float nosto = VesiNostoM;
             foreach (var v in veneet)
             {
@@ -203,7 +236,8 @@ namespace Matkakirja.Natiivi
                 {
                     p.Lokit[j].localPosition = new Vector3((float)p.P.X[j], (float)(p.Paikka.Vesi + p.P.Y[j]) + nosto, (float)p.P.Z[j]);
                     p.Lokit[j].localRotation = Quaternion.Euler(0, (float)p.P.Suuntima[j], 0);
-                    float siipi = 32f * Mathf.Sin(2f * Mathf.PI * (float)p.P.Siipi[j]);
+                    // Liito (Siipi 0,25) loivassa V:ssä 6°, lyönnit −20…+32°.
+                    float siipi = 6f + 26f * Mathf.Sin(2f * Mathf.PI * ((float)p.P.Siipi[j] - 0.25f));
                     p.Vasen[j].localRotation = Quaternion.Euler(0, 0, -siipi);
                     p.Oikea[j].localRotation = Quaternion.Euler(0, 0, siipi);
                 }

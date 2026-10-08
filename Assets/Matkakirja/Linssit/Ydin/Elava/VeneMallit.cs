@@ -187,6 +187,52 @@ namespace Matkakirja.Linssit.Elava
             return r.Valmis(l, b, 0);
         }
 
+        /// <summary>Muiden pallojen kuoren värit (raita A, raita B), yleisiä kuumailmapallojen sävyjä.</summary>
+        public static readonly byte[][][] PalloVarit =
+        {
+            new[] { new byte[] { 196, 52, 44, 255 }, new byte[] { 240, 236, 226, 255 } },
+            new[] { new byte[] { 232, 186, 48, 255 }, new byte[] { 38, 70, 140, 255 } },
+            new[] { new byte[] { 40, 120, 70, 255 }, new byte[] { 236, 232, 214, 255 } },
+            new[] { new byte[] { 226, 120, 40, 255 }, new byte[] { 244, 206, 70, 255 } },
+            new[] { new byte[] { 54, 110, 180, 255 }, new byte[] { 240, 240, 240, 255 } },
+            new[] { new byte[] { 120, 60, 130, 255 }, new byte[] { 236, 200, 70, 255 } },
+        };
+
+        /// <summary>Kuoren profiili (säde, korkeus suusta) suulta laelle; halkaisija 16 m, korkeus 21 m (kuten Linnanrakentajan kupu).</summary>
+        static readonly (float R, float Y)[] Profiili = { (2.1f, 0f), (4.5f, 3f), (6.8f, 6.5f), (7.9f, 10f), (8f, 13f), (7.2f, 16.5f), (5.3f, 19f), (3f, 20.4f), (0.01f, 21f) };
+
+        /// <summary>
+        /// Muu kuumailmapallo (suunnitelma B3): pyörähdyspintakuori 24 kaistana kahdella raitavärillä (paletti PalloVarit), suu
+        /// 6,6 m korin pohjan yläpuolella, punottu kori ja neljä köyttä. Origo korin pohjan keskellä. Normaalit pinnan muodosta.
+        /// </summary>
+        public static VeneVerkko Pallo(int paletti)
+        {
+            var r = new Rakentaja(); var vari = PalloVarit[((paletti % PalloVarit.Length) + PalloVarit.Length) % PalloVarit.Length];
+            const int K = 24; const float Suu = 6.6f;
+            for (int k = 0; k < K; k++)
+            {
+                double a0 = 2 * Math.PI * k / K, a1 = 2 * Math.PI * (k + 1) / K;
+                var v = vari[k % 2];
+                for (int i = 0; i + 1 < Profiili.Length; i++)
+                {
+                    var (r0, y0) = Profiili[i]; var (r1, y1) = Profiili[i + 1];
+                    // Normaali kaistan ja renkaan keskeltä: säteittäinen osa ja profiilin kaltevuus.
+                    float dr = r1 - r0, dy = y1 - y0, l = (float)Math.Sqrt(dr * dr + dy * dy);
+                    float nr = dy / l, ny = -dr / l;
+                    int Karki(double a, float rr, float yy) => r.Karki((float)Math.Sin(a) * rr, Suu + yy, (float)Math.Cos(a) * rr,
+                        (float)Math.Sin(a) * nr, ny, (float)Math.Cos(a) * nr, v);
+                    int p00 = Karki(a0, r0, y0), p01 = Karki(a1, r0, y0), p10 = Karki(a0, r1, y1), p11 = Karki(a1, r1, y1);
+                    // Ulospäin (Unity: Cross(p1 − p0, p2 − p0)): kulma kasvaa +z:stä +x:ään, joten järjestys p00, p11, p10.
+                    r.Kolmio(p00, p11, p10); r.Kolmio(p00, p01, p11);
+                }
+            }
+            r.Laatikko(0, 0, 0, 1.5f, 1.1f, 1.5f, Puu);
+            r.Laatikko(0, 1.1f, 0, 1.56f, 0.12f, 1.56f, Kansi);
+            foreach (var (sx, sz) in new[] { (1, 1), (1, -1), (-1, 1), (-1, -1) })
+                r.Laatikko(sx * 0.95f, 1.2f, sz * 0.95f, 0.06f, Suu - 1.2f, 0.06f, Musta);
+            return r.Valmis(16f, 16f, Suu + 21f);
+        }
+
         /// <summary>Lokin vartalo (0,45 m, valkoinen, harmaa selkä) ja yksi siipi (+x, 0,65 m) tyveltä origosta.</summary>
         public static VeneVerkko LokinVartalo()
         {

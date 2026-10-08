@@ -63,6 +63,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var mallit = new List<(string Nimi, VeneVerkko V)>();
             foreach (var t in VeneMallit.Tyypit) mallit.Add((t, VeneMallit.Luo(t)));
+            for (int i = 0; i < VeneMallit.PalloVarit.Length; i++) mallit.Add(("pallo" + i, VeneMallit.Pallo(i)));
             mallit.Add(("lokki", VeneMallit.LokinVartalo())); mallit.Add(("siipi+", VeneMallit.LokinSiipi(1))); mallit.Add(("siipi-", VeneMallit.LokinSiipi(-1)));
             foreach (var (nimi, v) in mallit)
             {
@@ -103,6 +104,29 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(uz * wx - ux * wz > 0, "vana näkyy ylhäältä");
             }
             Oleta.Tosi(vana.Varit[3] > 100 && vana.Varit[vana.Varit.Length - 1] < 10, "vanan alfa häipyy");
+        }
+
+        // MUUT PALLOT (8.10., B3): pysyvät alueella ja korkeusvälillä, ajelehtivat tuulen suuntaan, poltin vain nousussa, toistuvat.
+        [Testi] static void MuutPallotAjelehtivatAlueella()
+        {
+            var p = new MuutPallot(6, 3000, 90, 3, 5); var q = new MuutPallot(6, 3000, 90, 3, 5);
+            var alku = (double[])p.X.Clone(); int poltin = 0, nousussa = 0;
+            double[] edY = (double[])p.Y.Clone();
+            for (int i = 0; i < 20 * 600; i++)
+            {
+                p.Paivita(0.05); q.Paivita(0.05);
+                for (int j = 0; j < p.Maara; j++)
+                {
+                    Oleta.Tosi(p.X[j] * p.X[j] + p.Z[j] * p.Z[j] <= 3000.0 * 3000 + 1, "alueella");
+                    Oleta.Tosi(p.Y[j] >= MuutPallot.AlinM - 61 && p.Y[j] <= MuutPallot.YlinM, $"korkeus {p.Y[j]:F0}");
+                    if (p.Poltin[j] > 0) { poltin++; if (p.Y[j] > edY[j]) nousussa++; }
+                    edY[j] = p.Y[j];
+                }
+            }
+            Oleta.Tosi(poltin > 0 && nousussa == poltin, $"poltin vain nousussa ({nousussa}/{poltin})");
+            for (int j = 0; j < p.Maara; j++) Oleta.Tosi(p.X[j] == q.X[j] && p.Y[j] == q.Y[j], "deterministinen");
+            var r = new MuutPallot(1, 50000, 90, 3, 1); double x0 = r.X[0]; for (int i = 0; i < 100; i++) r.Paivita(0.1);
+            Oleta.Tosi(r.X[0] > x0 + 20, "tuuli itään siirtää itään");
         }
 
         static string TukholmaJson() => System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-tukholma.json");
