@@ -88,5 +88,8 @@ export const OPAS_AINEISTOT = Object.freeze({
     // erät 7–8 (8.10.)
     bryssel: 'esittely/bryssel-v1/bryssel-yksityiskohdat.json', marseille: 'esittely/marseille-v1/marseille-yksityiskohdat.json',
     bergen: 'esittely/bergen-v1/bergen-yksityiskohdat.json', granada: 'esittely/granada-v1/granada-yksityiskohdat.json',
+    // erät 9–10 (8.10.)
+    tampere: 'esittely/tampere-v1/tampere-yksityiskohdat.json', vilna: 'esittely/vilna-v1/vilna-yksityiskohdat.json',
+    ljubljana: 'esittely/ljubljana-v1/ljubljana-yksityiskohdat.json', valletta: 'esittely/valletta-v1/valletta-yksityiskohdat.json',
   },
 });
