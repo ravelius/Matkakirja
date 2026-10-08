@@ -42,6 +42,20 @@ namespace Matkakirja.Natiivi
             t.ydin = new Tyrma(mu1);
             SeikkailuEsineet.Irrotettiin += t.KiviIrti; SeikkailuEsineet.Raapaistiin += t.Yritys;
             Aktiivinen = t;
+            // Käsittely käsin (pelattavuusmalli 6): oven veto avaimet kädessä; 60° = auki, nopea veto narahtaa (4 m). Napautus avaa kuten ennen.
+            float kertyma = 0f;
+            SeikkailuKasittely.Lisaa(new SeikkailuKasittely.Kasiteltava
+            {
+                Nimi = "tyrma-ovi", Paikka = () => t.ovi + Vector3.up, Tarjolla = pl => t != null && t.OviLahella(pl),
+                Kaanna = (pl, asteet, narahti) =>
+                {
+                    if (t == null) return;
+                    kertyma += Mathf.Abs((float)asteet);
+                    if (narahti) { SeikkailuAanet.Soita("luukku-narahdus", t.ovi + Vector3.up, 0.8f); SeikkailuVartijat.Aani(t.ovi, 4); }
+                    if (kertyma >= 60f) { kertyma = 0f; t.AvaaOvi(pl); }
+                },
+                Loppui = () => kertyma = 0f,
+            });
             // Kuunvalo ilmaraosta (valo:tyrma-rako): volumetrinen säde lattialle laatutason salliessa.
             if (M("valo:tyrma-rako") is KavelyMerkki mv) SeikkailuValot.Saede(go.transform, U(mv), (t.istuin - U(mv)) + Vector3.down * 0.5f, new Color(0.62f, 0.7f, 0.85f), 0.9f, 6f, 30f, DioraamaNayttamoKerros());
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 10;
@@ -121,6 +135,7 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == this) Aktiivinen = null;
             SeikkailuEsineet.Irrotettiin -= KiviIrti; SeikkailuEsineet.Raapaistiin -= Yritys;
+            SeikkailuKasittely.Poista("tyrma-ovi");
         }
     }
 }

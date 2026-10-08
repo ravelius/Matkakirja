@@ -136,7 +136,8 @@ namespace Matkakirja.Linssit.Testit
             Aja(s, 3);   // pysähdys A (esihaku kesken, ei aikakatkaisua)
             s.VaihdaPaikka(52.352, 4.915);
             s.Vastaus(p[^1].n, new OpasKohde { Id = "q", Nimi = "q", Kysymys = true, Vaihtoehdot = new[] { "Kanavat", "Museot" } });
-            Oleta.Tosi(s.OdottaaVastausta, $"heti vastauksen jälkeen ({p.Count} pyyntöä, viimeinen {p[^1].t})");
+            // TF 162: siirtymän (yli 30 km) aikana kysymys odottaa latausruudun loppuun, muuten se esitetään heti.
+            Oleta.Tosi(s.Siirtymassa ? s.KysymysOdottaaPuhetta && !s.OdottaaVastausta : s.OdottaaVastausta, $"vastauksen jälkeen ({p.Count} pyyntöä, viimeinen {p[^1].t}, siirto {s.Siirtymassa})");
             for (int i = 0; i < 300; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 52.352, 4.915) < 3000, $"kamera Amsterdamissa ({s.Asento.Lat:F2}, {s.Asento.Lon:F2})");
             Oleta.Tosi(s.OdottaaVastausta, "kysymys odottaa valintaa");

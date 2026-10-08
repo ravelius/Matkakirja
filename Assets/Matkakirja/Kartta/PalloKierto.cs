@@ -1264,6 +1264,19 @@ namespace Matkakirja
         double2 macNopeus;
         float2 macZoomPiste;
 
+        /// <summary>
+        /// Mac-ohjauslevyn diagnostiikka (omistaja 7.10.2026, Mac TF 160: kaikki eleet lakkasivat, kunnes klikkasi karttaa;
+        /// Matkakirja oli aktiivinen): pallon eletila, kun ele ei liikuttanut karttaa (MacSyote kirjaa lokiin).
+        /// </summary>
+        public string EleTila()
+        {
+            var cam = GetComponent<Camera>();
+            return $"syöte estetty {syoteEstetty}, eleet muualla {EleetMuualla}, ele UI:lla {eleUilla}, sormia {edellinenSormia}, " +
+                   $"ajo {(ajo != null)}, seuranta {Seurataan}, palautuu {Palautuu}, pohjoiseen {pohjoiseen}, " +
+                   $"liuku {math.length(liuku):0.###}, maan raja {maanLaatikko.HasValue}, peitetty {Peitetty}, " +
+                   $"kamera {(cam != null && cam.enabled)}, sijainti {pituus:0.###}/{leveys:0.###}/{korkeus:0}";
+        }
+
         void MacKosketus()
         {
             ajo = null;

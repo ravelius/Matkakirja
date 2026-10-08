@@ -426,7 +426,7 @@ namespace Matkakirja.Natiivi
             ToimintoPyydetty = false;
             var kb = Keyboard.current; var gp = Gamepad.current;
             if (kb != null && kb.eKey.wasPressedThisFrame) toiminto = true;
-            if (gp != null && gp.buttonWest.wasPressedThisFrame) toiminto = true;
+            if (gp != null && gp.buttonWest.wasPressedThisFrame && !SeikkailuKasittely.KeskellaKohde()) toiminto = true;   // X käsiteltävän päällä: veto tai napautus
             if (!toiminto) return;
             if (kadessa != null && SeikkailuTyrma.Aktiivinen is SeikkailuTyrma ty && ty.OviLahella(p)) ty.AvaaOvi(p);
             else if (kadessa != null && kadessa.Id == Koysikieppi && SakaraLahella(p)) KiinnitaKoysi(p);

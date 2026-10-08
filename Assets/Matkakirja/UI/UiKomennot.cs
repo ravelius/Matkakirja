@@ -529,6 +529,26 @@ namespace Matkakirja.Natiivi
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
+                case "seikkailutapit":
+                    // "ui seikkailutapit [on|off|auto]": seikkailun kävelytapit (SeikkailuTapit) ilman SeikkailuPelaajaa testiin.
+                    if (loput.Trim() == "on") SeikkailuTapit.TestiNakyy = true;
+                    else if (loput.Trim() == "off") SeikkailuTapit.TestiNakyy = false;
+                    else if (loput.Trim() == "auto") SeikkailuTapit.TestiNakyy = null;
+                    // "ui seikkailutapit toiminto poimi|heita|laske|kynttila|koputa|irrota|nosta|pois|auto": toimintonapin tila ilman SeikkailuEsineitä.
+                    else if (loput.Trim().StartsWith("toiminto ")) SeikkailuTapit.TestiToiminto = loput.Trim().Substring(9).Trim();
+                    // "ui seikkailutapit loyto": seikkailun löytö pergamenttipohjalla (testiteksti).
+                    // "ui seikkailutapit tietokerros|tietokortti": tietokerros tarjolle (3 testikorttia) tai tietokortin merkki.
+                    else if (loput.Trim() == "tietokerros") { SeikkailuTapit.NaytaTietokerros(new[] { "Pyhä Olavi", "Kappeli", "Torni" }, new[] { "Testiteksti 1.", "Testiteksti 2.", "Testiteksti 3." }, new[] { "Lyhyt 1", null, "Lyhyt 3" }); return "=seikkailutapit: tietokerros tarjolla (napauta Pulua)"; }
+                    // "ui seikkailutapit oikeatappi on|off" (testikytkin) ja "veto suora|selaus" (katseen vetosuunta).
+                    else if (loput.Trim().StartsWith("oikeatappi ")) SeikkailuTapit.OikeaTappi = loput.Trim().EndsWith("on");
+                    else if (loput.Trim().StartsWith("veto ")) SeikkailuTapit.VetoSuora = loput.Trim().EndsWith("suora");
+                    // "ui seikkailutapit teksti": tekstivahti (seikkailussa ei näkyvää tekstiä paitsi löytö ja tietokerros).
+                    // "ui seikkailutapit pala": pelattavan palan avaus Jatka/Alusta-valinnalla (tallennuksen mukaan).
+                    else if (loput.Trim() == "pala") { SeikkailuTapit.AvaaPelattavaPala(); return "=seikkailutapit: pala avataan"; }
+                    else if (loput.Trim() == "teksti") return "=seikkailutapit: teksti " + SeikkailuTapit.Tekstivahti();
+                    else if (loput.Trim() == "tietokortti") { SeikkailuTapit.TietokorttiAvautui("testi"); return "=seikkailutapit: tietokortin merkki"; }
+                    else if (loput.Trim() == "loyto") { SeikkailuTapit.NaytaLoyto("Liinanyytti", "Kalkki, pateeni ja liuskekivi kääritty liinaan."); return "=seikkailutapit: löytö näytetty"; }
+                    return "=" + SeikkailuTapit.Kuvaus();
                 case "matka": ui.Esimerkkimatka(); return null;
                 case "pulu":
                 {
@@ -781,7 +801,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "mac":
                 {
-                    // Mac-syöte (MacSyote.cs): ui mac tila | pakota | veto dx dy [x y] | rulla dy [x y] | nipistys s [x y]
+                    // Mac-syöte (MacSyote.cs): ui mac tila | pakota | paikka | hiiri pohjaan|irti | veto dx dy [x y] | rulla dy [x y] | nipistys s [x y]
                     // (pikselit, UIKitin suunta: y alas, osoitin yläkulmasta; ilman osoitinta ruudun keskeltä).
                     var m = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                     float L(int i, float oletus) => m.Length > i && float.TryParse(m[i], System.Globalization.NumberStyles.Float,
@@ -789,6 +809,29 @@ namespace Matkakirja.Natiivi
                     string laji = m.Length > 0 ? m[0] : "tila";
                     if (laji == "tila") { Kirjaa("mac: " + MacSyote.Tila()); return null; }
                     if (laji == "pakota") { Kirjaa("mac pakota: " + MacSyote.Pakota()); return null; }
+                    // Ohjauslevyvian toisto (omistaja 7.10.2026, Mac TF 160: eleet lakkasivat, kunnes klikkasi karttaa):
+                    // ui mac paikka → pallon pituus/leveys/korkeus ja hiiren napin tila; ui mac hiiri pohjaan|irti → Input Systemin
+                    // hiiren vasen nappi tilatapahtumana (kursori ei liiku).
+                    if (laji == "paikka")
+                    {
+                        var pk = Object.FindAnyObjectByType<PalloKierto>();
+                        var hiiri = UnityEngine.InputSystem.Mouse.current;
+                        Kirjaa(pk == null ? "mac paikka: ei palloa" : string.Format(CultureInfo.InvariantCulture,
+                            "mac paikka: pituus {0:0.0000} leveys {1:0.0000} korkeus {2:0} hiiri {3} fokus {4} lukko [{5}] eleet muualla {6}",
+                            pk.pituus, pk.leveys, pk.korkeus, hiiri == null ? "ei" : hiiri.leftButton.isPressed ? "pohjassa" : "ylhäällä",
+                            Application.isFocused, SyoteLukko.Kuvaus, pk.EleetMuualla));
+                        return null;
+                    }
+                    if (laji == "hiiri" && m.Length > 1)
+                    {
+                        var hiiri = UnityEngine.InputSystem.Mouse.current;
+                        if (hiiri == null) { Kirjaa("mac hiiri: ei hiirtä"); return null; }
+                        var tila = new UnityEngine.InputSystem.LowLevel.MouseState { position = hiiri.position.ReadValue() }
+                            .WithButton(UnityEngine.InputSystem.LowLevel.MouseButton.Left, m[1] == "pohjaan");
+                        UnityEngine.InputSystem.InputSystem.QueueStateEvent(hiiri, tila);
+                        Kirjaa($"mac hiiri {m[1]} jonoon");
+                        return null;
+                    }
                     int o = laji == "veto" ? 3 : 2;
                     var os = new Vector2(L(o, Screen.width / 2f), L(o + 1, Screen.height / 2f));
                     string tulos = laji == "veto" ? MacSyote.Testi(new Vector2(L(1, 0), L(2, 0)), Vector2.zero, 1f, os)
@@ -901,12 +944,13 @@ namespace Matkakirja.Natiivi
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.Avaa(); return null;
                         case "loppuun": ap.VieritaLoppuun(); return null;
+                        case "nappi": return "nappi " + (ap.ToimintoNappi() ?? "ei");
                         case "kuva":
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
                         case "sulje": ap.Sulje(); return null;
                         case "linssit":
-                            return $"esittelylinssit {LinssiOhjain.EsittelylinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
+                            return $"valmiit linssit {LinssiOhjain.ValmiitLinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
                                 + string.Join(", ", LinssiUi.Rekisteri?.Valittavat.Select(l => l.Tiedot.Id) ?? Enumerable.Empty<string>());
                         case "tiedosto":
                         {
@@ -1276,6 +1320,18 @@ namespace Matkakirja.Natiivi
                     if (en[0] == "kipsi" && en.Length > 3)
                         return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
+                }
+                case "hiiri":
+                {
+                    // "ui hiiri klikkaa x y | pallo <id> | poimi x y": sovelluksen sisäinen hiiriklikkaus Input Systemin kautta (HiiriTesti).
+                    var h = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    float H(int i) => h.Length > i && float.TryParse(h[i], NumberStyles.Float, CultureInfo.InvariantCulture, out var v) ? v : float.NaN;
+                    if (h.Length > 1 && h[0] == "pallo")
+                        return "=" + (ui.KaupunkiPallot.KuorenKeskus(h[1]) is Vector2 kp ? HiiriTesti.Klikkaa(UiKerros.Hae(), kp) : "hiiri: palloa " + h[1] + " ei näy");
+                    if (h.Length > 2 && h[0] == "poimi") return "=hiiri: " + HiiriTesti.Poimi(UiKerros.Hae(), new Vector2(H(1), H(2)));
+                    if (h.Length > 2 && h[0] == "klikkaa") return "=" + HiiriTesti.Klikkaa(UiKerros.Hae(), new Vector2(H(1), H(2)));
+                    if (h.Length > 2 && (h[0] == "paina" || h[0] == "vapauta")) return "=" + HiiriTesti.Nappi(UiKerros.Hae(), new Vector2(H(1), H(2)), h[0] == "paina");
+                    return "=käyttö: ui hiiri klikkaa x y | pallo <id> | poimi x y | paina x y | vapauta x y";
                 }
                 case "kaupunkipallot":
                 {

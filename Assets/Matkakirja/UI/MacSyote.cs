@@ -29,6 +29,7 @@ namespace Matkakirja.Natiivi
         bool kaytossa, pakotettu;
         int yrityksia;
         bool vetoUnitylle, rullaUnitylle;
+        string peittaja, kirjattuPeittaja, kirjattuEsto;
         string viimeKohde = "–";
         int tapahtumia;
         readonly float[] luku = new float[8];
@@ -70,7 +71,8 @@ namespace Matkakirja.Natiivi
 
         public static string Tila() => instanssi == null ? "ei luotu"
             : $"käytössä {instanssi.kaytossa} (pakotettu {instanssi.pakotettu}), tapahtumia {instanssi.tapahtumia}, " +
-              $"teksti Unitylle: veto {instanssi.vetoUnitylle}, rulla {instanssi.rullaUnitylle}, viimeksi {instanssi.viimeKohde}";
+              $"teksti Unitylle: veto {instanssi.vetoUnitylle}, rulla {instanssi.rullaUnitylle}, viimeksi {instanssi.viimeKohde}, " +
+              $"peittäjä {instanssi.peittaja ?? "-"}";
 
         void Asenna()
         {
@@ -153,6 +155,23 @@ namespace Matkakirja.Natiivi
             bool unityRullaa = Mouse.current != null && Mouse.current.scroll.ReadValue().sqrMagnitude > 0f;
             bool uiPeittaa = UiKerros.Peittaa(ruutu);
             var kierto = uiPeittaa ? null : FindAnyObjectByType<PalloKierto>();
+            var ennen = kierto != null ? new double3(kierto.pituus, kierto.leveys, kierto.korkeus) : double3.zero;
+            // Diagnostiikka (Mac TF 160: eleet lakkasivat, kunnes klikkasi karttaa): kirjataan, kun ele menee UI:lle uuden
+            // peittäjän takia (Player.log, testikomento "ui mac tila").
+            peittaja = uiPeittaa ? UiKerros.Hae().PeittajaPisteessa(ruutu) : null;
+            // Kartta hylkäsi eleen (PalloKierto.MacPanoroi/MacZoomaa false): syy lokiin kerran per syy.
+            string esto = !uiPeittaa && kierto != null && (kierto.SyoteEstetty || kierto.EleetMuualla)
+                ? $"syöte lukittu ({SyoteLukko.Kuvaus}), eleet muualla {kierto.EleetMuualla}" : null;
+            if (esto != kirjattuEsto)
+            {
+                kirjattuEsto = esto;
+                Debug.Log("MATKAKIRJA mac-syöte: kartta " + (esto == null ? "vapaa" : "estetty: " + esto));
+            }
+            if (peittaja != kirjattuPeittaja)
+            {
+                kirjattuPeittaja = peittaja;
+                Debug.Log("MATKAKIRJA mac-syöte: ele " + (peittaja == null ? "kartalle" : "UI:lle, peittäjä " + peittaja));
+            }
 
             if (veto != Vector2.zero)
             {
@@ -183,6 +202,31 @@ namespace Matkakirja.Natiivi
             if (nipistys > 0f && nipistys != 1f)
                 viimeKohde = uiPeittaa ? "nipistys: UI (ohitettu)"
                     : kierto != null && kierto.MacZoomaa(nipistys, ruutu, dt, nipistys: true) ? $"nipistys: zoomi {nipistys:0.###}" : "nipistys: kartta estetty";
+            Diagnoosi(veto, nipistys, uiPeittaa, kierto, ennen);
+        }
+
+        // DIAGNOOSI (omistaja 7.10.2026, Mac TF 160: "kaikki lakkaa", veto ja zoomaus, Matkakirja aktiivinen; klikkaus palauttaa):
+        // kun ohjauslevyn ele ei liikuttanut karttaa (UI:lle, estetty tai pallo ei muuttunut), lokiin enintään kerran 2 s:ssa
+        // kohde, peittäjä, osoittimen kaappaajat, pallon eletila, hiiren nappi, fokus ja ruudunpäivitys. Player.log:
+        // ~/Library/Containers/fi.matkakirja.peli/Data/Library/Logs/Matkakirja/Matkakirja 3D/Player.log (TF).
+        float diagnoosiAika = -10f;
+        int diagnooseja;
+
+        void Diagnoosi(Vector2 veto, float nipistys, bool uiPeittaa, PalloKierto kierto, double3 ennen)
+        {
+            if (veto == Vector2.zero && (nipistys <= 0f || nipistys == 1f)) return;
+            var pk = kierto != null ? kierto : FindAnyObjectByType<PalloKierto>();
+            bool liikkui = pk != null && !uiPeittaa && math.any(math.abs(new double3(pk.pituus, pk.leveys, pk.korkeus) - ennen) > 1e-9);
+            if (liikkui || Time.unscaledTime - diagnoosiAika < 2f || diagnooseja >= 200) return;
+            diagnoosiAika = Time.unscaledTime;
+            diagnooseja++;
+            var r = Ruudunpaivitys.Instanssi;
+            var hiiri = Mouse.current;
+            Debug.Log($"MATKAKIRJA mac-syöte DIAGNOOSI #{diagnooseja}: {viimeKohde}; peittäjä {peittaja ?? "-"}; kaappaajat " +
+                      $"{UiKerros.Hae().Kaappaajat()}; lukko [{SyoteLukko.Kuvaus}]; pallo {(pk != null ? pk.EleTila() : "puuttuu")}; " +
+                      $"hiiri {(hiiri == null ? "ei" : hiiri.leftButton.isPressed ? "pohjassa" : "ylhäällä")}, fokus {Application.isFocused}; " +
+                      $"ruutu {(r != null ? r.Nyt + " (" + r.Syy + ")" : "-")}, fps {Application.targetFrameRate}, " +
+                      $"piirtoväli {UnityEngine.Rendering.OnDemandRendering.renderFrameInterval}");
         }
 
         /// <summary>Osoittimen alla olevan ScrollViewn vieritys: sisältö seuraa sormia (UIKitin y alas).</summary>

@@ -502,7 +502,7 @@ namespace Matkakirja.Natiivi
             kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             // Historiamoottori: seikkailu pois (näyttämön lapset tuhoutuvat; globaalit kuoren leikkaukset ja kävelydata nollataan).
-            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuKavely.Pura();
+            SeikkailuVartijat.Poista(); SeikkailuVene.Poista(); SeikkailuPelaaja.Poista(); SeikkailuRepliikit.Poista(); SeikkailuEsineet.Poista(); SeikkailuKynttilat.Poista(); SeikkailuKappeli.Poista(); SeikkailuAanet.Poista(); SeikkailuTallentaja.Poista(); SeikkailuVihjeet.Poista(); SeikkailuValot.Poista(); SeikkailuKasittely.Tyhjenna(); SeikkailuKavely.Pura();
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen;
             cm?.SeikkailuPois(); PelattavaPalaPyydetty = false; KameraVapaa = false;
             if (DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash)
@@ -702,7 +702,7 @@ namespace Matkakirja.Natiivi
                 {
                     o.Kirjaa("poikki: osoitin tyhjä, uusin.json uudelleen");
                     string u2 = null;
-                    yield return HaeTeksti(AmpariJuuri + "uusin.json?t=" + DateTime.UtcNow.Ticks, t => u2 = t);
+                    if (!DioraamaLevyvalimuisti.EstaOsoitin) yield return HaeTeksti(AmpariJuuri + "uusin.json?t=" + DateTime.UtcNow.Ticks, t => u2 = t);
                     try { if (u2 != null && Matkakirja.Peli.MiniJson.Jasenna(u2) is Dictionary<string, object> uo && uo.TryGetValue("polku", out var up)) osoitin = up as string; }
                     catch (Exception e) { o.Kirjaa("poikki: uusin.json: " + e.Message); }
                     if (string.IsNullOrEmpty(osoitin))
@@ -1779,6 +1779,8 @@ namespace Matkakirja.Natiivi
             // (esilataus ja linssi); "poikki välimuisti": välimuistin tila ja levynkäyttö lokiin.
             if (mita == "osoitin")
             {
+                // "poikki osoitin esta 1|0": uusin.json-haku epäonnistuu (verkko pois / väärä osoite) toistoajoa varten (Päätoimittaja 7.10.).
+                if (arvo == "esta") { DioraamaLevyvalimuisti.EstaOsoitin = osat.Length > 3 && osat[3] == "1"; o.Kirjaa("poikki: osoitin esto " + (DioraamaLevyvalimuisti.EstaOsoitin ? "päällä" : "pois")); return; }
                 DioraamaLevyvalimuisti.TestiOsoitin = arvo == null || arvo == "pois" ? null : arvo.Trim('/');
                 o.Kirjaa("poikki: testiosoitin " + (DioraamaLevyvalimuisti.TestiOsoitin ?? "pois (uusin.json)"));
                 return;

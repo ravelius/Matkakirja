@@ -45,15 +45,22 @@ namespace Matkakirja.Natiivi
 
         readonly VisualElement himmennys, lista, paivitys, paivitysLista;
         readonly Action avaaKehittaja;
+        readonly Button kehittajaNappi;
+
+        /// <summary>Napin teksti tilan mukaan (avattaessa).</summary>
+        void PaivitaKehittajaNappi() =>
+            kehittajaNappi.Q<Label>().text = Asetukset.Kehittaja ? "Kehittäjätila päällä" : Asetukset.Testaaja ? "Testaajatila päällä" : "Kehittäjätila";
         public bool Auki { get; private set; }
 
         public MitaUutta(UiKerros kerros, Action avaaKehittaja)
         {
             this.avaaKehittaja = avaaKehittaja;
             (himmennys, lista) = Dialogi(kerros.Juuri(UiKerros.Valikot), "Mitä uutta", out var napit);
-            var kehittaja = Rakenne.Nappi("Kehittäjä", "mk-nappi--toiminto", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
-            kehittaja.tooltip = "Kehittäjätila";
-            if (avaaKehittaja == null) kehittaja.style.display = DisplayStyle.None;
+            // KEHITTÄJÄTILA-nappi (omistaja 7.10. 12.5x): versionumero → Mitä uutta → tämä nappi → koodi-ikkuna; nappi kertoo tilan
+            // (kehittäjä / testaaja) ja koodi-ikkuna kytkee sen pois. Kaikissa käännöksissä, myös App Storessa.
+            kehittajaNappi = Rakenne.Nappi("Kehittäjätila", "mk-nappi--toiminto", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
+            kehittajaNappi.tooltip = "Kehittäjätila";
+            if (avaaKehittaja == null) kehittajaNappi.style.display = DisplayStyle.None;
             Nappi(napit, "Sulje", Sulje);
 
             // Päivitysilmoitus kaiken päälle (myös aloitusnäkymän, joka on Traileri-kerroksessa).
@@ -141,6 +148,7 @@ namespace Matkakirja.Natiivi
             if (Auki) return;
             Auki = true;
             PaivitaVersio();
+            PaivitaKehittajaNappi();
             Lataa(() => Tayta(lista, loki));
             Rakenne.Nayta(himmennys, true, 320);
             SyoteLukko.Esta(this);
