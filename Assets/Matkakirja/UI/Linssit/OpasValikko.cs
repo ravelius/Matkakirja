@@ -513,6 +513,8 @@ namespace Matkakirja.Natiivi
             // iPad (omistaja 7.10. 13.3x): ihan vasempaan reunaan pienellä marginaalilla (turva-alueen ulkopuolelle), köyden
             // vasemmalle puolelle; pystysuunnassa ennallaan.
             if (LeveaRuutu && Juuri.panel != null) vasen = ReunaPt - UiKerros.Hae().Reunat(kerrosNro).x;
+            // Omistaja 9.10.2026: "aavistuksen irti vasemmasta reunasta lisää ainakin ipadilla vaakamuodossa".
+            if (LeveaRuutu && w > h) vasen += IpadVaakaLisaPt;
             metro.Kompakti = false; metro.IslandAlaY = 0f;
             if (!LeveaRuutu && Juuri.panel != null) { PuhelinMetro(nayta, w, h); return; }
             // Omistaja 14.2x: iPadilla vasempaan yläkulmaan 6 pt reunasta, linja ja kaikki nimet köyden päällä (ei rajausta).
@@ -562,7 +564,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pyöristetyn kulman vara (pt) ja Dynamic Islandin pituus (pt) iPhonella.</summary>
         /// <summary>iPadin metrolinjan marginaali ruudun vasemmasta reunasta (pt).</summary>
-        const float ReunaPt = 6f;
+        const float ReunaPt = 6f, IpadVaakaLisaPt = 12f;
         const float KulmaVaraPt = 22f, IslandLeveysPt = 126f, IslandOikeaPt = 48f;
 
         VisualElement esitysRivi;
