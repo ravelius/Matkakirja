@@ -5,7 +5,7 @@ import json, sys, os, re
 KAUPUNKI = sys.argv[1]            # esim. praha
 TYO = sys.argv[2]                 # kansio, jossa osa*.json; tulos yhdistetty.json samaan
 SP = TYO
-REPO = os.environ.get("REPO", "/Users/Shared/Claude/wt/sisaltokirjuri-praha-wien-kuvat")
+REPO = os.environ.get("REPO", "/Users/Shared/Claude/wt/sisaltokirjuri-esittely-aaneton")
 AVAUSLISTAT = ["/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/praha-wien/avaus-lista.json",
                "/Users/Shared/Claude/proto-3d/_tyo/opas-esittely/kolme/avaus-lista.json"]
 AVAUS = None
@@ -18,6 +18,12 @@ for AVAUSLISTA in AVAUSLISTAT:
         pass
 if os.environ.get("AVAUS_TEKSTI"):
     AVAUS = os.environ["AVAUS_TEKSTI"]
+if not AVAUS:
+    try:
+        _a = json.load(open(f"{os.environ.get('REPO', '/Users/Shared/Claude/wt/sisaltokirjuri-esittely-aaneton')}/esittely-tyo/malli/{KAUPUNKI}.json"))["avaus"]
+        AVAUS = _a["teksti"] if isinstance(_a, dict) else _a
+    except Exception:
+        pass
 assert AVAUS, "avausteksti puuttuu (AVAUS_TEKSTI)"
 
 SALLITUT_LISENSSIT = re.compile(
