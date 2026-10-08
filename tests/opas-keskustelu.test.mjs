@@ -3,13 +3,13 @@
 import test, { beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
 import worker from '../tools/pollo/worker.js';
-import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
+import { tyhjennaReunamuisti, pysyvaKirjoita } from '../tools/pollo/reuna.js';
 import { jasennaKeskustelu, poimiKysymykset, jasennaLiiku, kysymysAvain } from '../tools/pollo/opaskeskustelu.js';
 
 beforeEach(() => tyhjennaReunamuisti());
 const PAIKAT = { 'Rialto Bridge': [45.438, 12.336], 'Venice': [45.4371, 12.3326], 'Verona': [45.438, 10.992],
   'Grand Canal (Venice)': [45.437, 12.333], "St Mark's Basilica": [45.4345, 12.3397], 'Venetsia': [45.4371, 12.3326] };
-let mallikutsut = [], aanikutsut = 0;
+let mallikutsut = [], aanikutsut = 0, jarjestelmat = [];
 function vastausMallilta(jarjestelma, sisalto) {
   if (jarjestelma.includes('valmiita kysymyksiä')) return 'Kuka rakensi tämän sillan?\nMiksi silta on katettu?\nMitä kaupoissa myydään?\nMilloin silta valmistui?\nMiksi siltaa sanotaan Rialtoksi?\nMitä sillalta näkee?';
   if (jarjestelma.includes('tärkeimmät kohteet')) return Array.from({ length: 12 }, (_, i) => `KOHDE: Kohde ${i} | ${i % 2 ? 'Rialto Bridge' : "St Mark's Basilica"} ${i} | kuvaus | rakennus`).join('\n')
@@ -23,7 +23,7 @@ const verkko = async (u, init) => {
   const s = decodeURIComponent(String(u));
   if (s.includes('api.anthropic.com')) {
     const b = JSON.parse(init.body); const jarjestelma = JSON.stringify(b.system); const sisalto = JSON.stringify(b.messages);
-    mallikutsut.push(jarjestelma.slice(0, 60));
+    mallikutsut.push(jarjestelma.slice(0, 60)); jarjestelmat.push(jarjestelma);
     return new Response(JSON.stringify({ content: [{ type: 'text', text: vastausMallilta(jarjestelma, sisalto) }], stop_reason: 'end_turn' }));
   }
   if (s.includes('api.elevenlabs.io')) { aanikutsut += 1; return new Response(new Uint8Array(8000)); }
@@ -42,7 +42,7 @@ function ymparisto() {
 }
 const H = (lisa = {}) => ({ 'content-type': 'application/json', origin: 'https://matkakirja.app', 'cf-connecting-ip': '10.8.0.1', ...lisa });
 async function aja(fn) {
-  const vanha = globalThis.fetch; globalThis.fetch = verkko; mallikutsut = []; aanikutsut = 0;
+  const vanha = globalThis.fetch; globalThis.fetch = verkko; mallikutsut = []; aanikutsut = 0; jarjestelmat = [];
   try { return await fn(); } finally { globalThis.fetch = vanha; }
 }
 const kysy = (env, kysymys, lisa = {}) => worker.fetch(new Request('https://pollo.example/opas/kysy', { method: 'POST', headers: H(lisa),
@@ -148,5 +148,63 @@ test('/opas/liiku: väärä sijainti kaupungin kanssa (omistaja TF 152, Sydney +
       { headers: H({ 'cf-connecting-ip': '10.8.0.11' }) }), env, {});
     assert.equal(v.status, 200);
     assert.ok((await v.json()).kohteet.length >= 2, 'kohteet Venetsian säteeltä, ei Kööpenhaminan');
+  });
+});
+
+// KULUSUUNNITELMA K4 (8.10.2026): valmiin kysymyksen vastaus kerran per paikka, kaikille; vapaa teksti aina mallilta.
+const kysymykset = (env) => worker.fetch(new Request('https://pollo.example/opas/kysymykset?paikka=Q1&nimi=Canal%20Grande&kaupunki=Venetsia',
+  { headers: H() }), env, { waitUntil() {} }).then((v) => v.json());
+const kysyMallille = () => mallikutsut.filter((x) => x.includes('Olet Matkakirja-pelin kertoja')).length;   // KESKUSTELU_KEHOTE
+
+test('K4: valmis kysymys → mallille kerran, toinen kysyjä saa saman vastauksen R2:sta (ääni samasta tekstistä)', async () => {
+  await aja(async () => {
+    const { env, r2 } = ymparisto();
+    const lista = (await kysymykset(env)).kysymykset;
+    assert.ok(lista.includes('Mitä sillalta näkee?'));
+    const eka = await kysy(env, 'Mitä sillalta näkee?');
+    assert.equal(kysyMallille(), 1);
+    assert.ok([...r2.keys()].some((k) => decodeURIComponent(k).includes('opas:kysyvastaus:')), 'vastaus talteen');
+    const toka = await kysy(env, '  mitä sillalta NÄKEE? ', { 'cf-connecting-ip': '10.8.0.2' });
+    assert.equal(kysyMallille(), 1, 'toinen kysyjä ei kutsu mallia');
+    assert.equal(toka.status, 200);
+    assert.deepEqual({ ...toka.d, aani: null, aani_pcm: null }, { ...eka.d, aani: null, aani_pcm: null });
+    assert.equal(toka.d.aani, eka.d.aani, 'sama ääni-url (sama teksti → sama tiiviste)');
+  });
+});
+
+test('K4: vapaa kysymys aina mallille; testiliikenne ei kirjoita valmista vastausta', async () => {
+  await aja(async () => {
+    const { env, r2 } = ymparisto();
+    await kysymykset(env);
+    await kysy(env, 'Miksi täällä ei ole autoja?');
+    await kysy(env, 'Miksi täällä ei ole autoja?');
+    assert.equal(kysyMallille(), 2, 'vapaa teksti ei ole valmis kysymys');
+    await kysy(env, 'Kuka rakensi tämän sillan?', { 'x-matkakirja-testitunnus': 'tt' });
+    assert.ok(![...r2.keys()].some((k) => decodeURIComponent(k).includes('opas:kysyvastaus:')), 'testi ei kirjoita');
+    await kysy(env, 'Kuka rakensi tämän sillan?');
+    assert.equal(kysyMallille(), 4);
+  });
+});
+
+test('K4 turvaprofiili (ehto b): jaettu vastaus tuotetaan alaikäisprofiililla; suodatin ennen välimuistia', async () => {
+  await aja(async () => {
+    const { env, r2 } = ymparisto();
+    await kysymykset(env);
+    await kysy(env, 'Mitä sillalta näkee?');
+    // Jaetun vastauksen tuottanut mallikutsu käytti alaikäisten turvaosiota (#4168), ja profiili on avaimessa.
+    const kysyKehote = jarjestelmat.find((x) => x.includes('Olet Matkakirja-pelin kertoja'));
+    assert.match(kysyKehote, /TURVALLISUUS\. Osa kuulijoista on alaikäisiä\./);
+    const avaimet = [...r2.keys()].map(decodeURIComponent).filter((k) => k.includes('opas:kysyvastaus:'));
+    assert.equal(avaimet.length, 1);
+    assert.match(avaimet[0], /opas:kysyvastaus:alaikainen:[0-9a-f]{8}:fi:venetsia:Q1:[0-9a-f]{16}/);
+    // Sopimaton kysymys valmiiden listalla: syötesuodatin vastaa ennen välimuistia, ei mallia, ei luku- eikä kirjoitusta.
+    await pysyvaKirjoita(env.PUHE_R2, kysymysAvain('Q2'), JSON.stringify(['Missä voi olla alasti?']), 3600);
+    const ennen = mallikutsut.length;
+    const v = await worker.fetch(new Request('https://pollo.example/opas/kysy', { method: 'POST', headers: H(), body: JSON.stringify({
+      kaupunki: 'Venetsia', paikka: { id: 'Q2', nimi: 'Lido', lat: 45.4, lon: 12.36 }, kysymys: 'Missä voi olla alasti?', historia: [] }) }),
+    env, { waitUntil() {} }).then((x) => x.json());
+    assert.equal(v.aani, null); assert.equal(v.toiminto, null);
+    assert.equal(mallikutsut.length, ennen, 'suodatettu kysymys ei kutsu mallia');
+    assert.equal([...r2.keys()].map(decodeURIComponent).filter((k) => k.includes('opas:kysyvastaus:')).length, 1, 'ei jaettua vastausta');
   });
 });
