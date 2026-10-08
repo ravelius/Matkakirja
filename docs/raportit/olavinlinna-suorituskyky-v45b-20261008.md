@@ -46,3 +46,17 @@ Kolmioita ja piirtoja on kohtuullisesti (kuoren 1,4 M ja tilojen 183 k rinnalla)
 
 ## Mittaamatta (vaatii laitteen, ei ennen junaa omistajan linjan mukaan)
 - fps (mediaani ja 1 %:n alin) ja muistihuippu iPadilla v45b:llä verrattuna junaan 142.
+
+## Päivitys v45i (8.10. ilta): automaattinen muistiarvio, kun esineet ladataan ASTC:nä (Siirtoseppä, juna 168)
+Uutta junan 142 jälkeen, M-iPad täysi laatu (4k-valoatlakset, yksi tunnelma kerrallaan):
+| Erä | Mt |
+|---|---|
+| Esineet ASTC 4×4 + mipit (34 glb, glb-välimuisti, JPEG vapautetaan) | 21,3 |
+| Fogg (512²) + kädet (1024²) RGBA32 | 4,0 + 5,3 |
+| Faceit-muodot 8 henkilölle (glb +0,6 Mt/hlö; Unityssä arviolta ×1,5) | ~8 |
+| Uudet tilat: linnantupa, voudin-sali, keittio-g102 (valoatlas 4k ASTC 5,3 kukin) | 15,9 |
+| Geometria ja törmäys: kävelyosat, ranta-1499 (13 k + 13 k), ulkoalueen törmäys 101 k (v45i), palatsin tilat 17 k | ~8 |
+| **Yhteensä** | **~62** |
+- Tulos: M-iPadilla noin raja-arvo (+60 Mt) ±5 Mt. Kevennetyillä laitteilla (2k-atlakset 1,3 Mt) noin 50 Mt, budjetin alla.
+- Ilman ASTC-lukijaa (juna 167, esineet JPEG → RGBA32 61,9 Mt) noin 103 Mt.
+- Lisäsäästöt ulkoasua muuttamatta: huonekohtainen esineiden ja hahmojen lataus (ehdotus 3), ulkoalueen törmäys kävelyalueille rajattuna.
