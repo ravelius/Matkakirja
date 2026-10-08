@@ -73,7 +73,7 @@
     padding: 8px 11px 8px 11px;
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-32);
-    border-radius: 9.6px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: var(--tk-tumma-muste);
     color: var(--tk-paperi-muste);
     opacity: 0;
@@ -105,7 +105,7 @@
 }
 
 .mk-kupla--avaus .mk-kupla__kappale {
-    font-size: 14.08px;
+    font-size: var(--tk-koko-apuri);
     margin-bottom: 0;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .mk-kupla__ohita > .mk-nappi__teksti {
-    font-size: 12.48px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-paperi-muste);
     letter-spacing: 0;
 }
@@ -300,20 +300,20 @@
 .mk-matkakirja__otsikko {
     flex-grow: 1;
     flex-shrink: 1;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 9.6px; /* web 1.2px */
     color: var(--accent);
     white-space: normal;
 }
 
 .mk-matkakirja__otsikko--paikka {
-    font-size: 13.76px;
+    font-size: var(--tk-koko-apuri);
     letter-spacing: 2px; /* web 0.02em */
     color: var(--accent);
 }
 
 .mk-matkakirja--puhelin .mk-matkakirja__otsikko--paikka {
-    font-size: 12.16px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-matkakirja__lyhyt {
@@ -321,7 +321,7 @@
 }
 
 .mk-matkakirja__tunnelma {
-    font-size: 11.84px;
+    font-size: var(--tk-koko-kapiteeli);
     -unity-font-style: italic;
     letter-spacing: 1px; /* web 0.01em */
     color: var(--muted);
@@ -335,13 +335,13 @@
 }
 
 .mk-matkakirja__teksti {
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     color: var(--ink-light);
     white-space: normal;
 }
 
 .mk-matkakirja--puhelin .mk-matkakirja__teksti {
-    font-size: 12.48px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-matkakirja .mk-matkakirja__piilo {
@@ -373,7 +373,7 @@
 }
 
 .mk-matkakirja__lahde {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--muted);
     white-space: normal;
 }
@@ -386,7 +386,7 @@
     border-bottom-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-40); /* löydös 139: vaalealla pohjalla */
     background-color: var(--lapinakyva);
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--muted);
 }
 
@@ -430,7 +430,7 @@
     margin: 0 5.6px 5.6px 0;
     border-width: 2px;
     border-color: var(--tk-paperi-pinta);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
     background-color: var(--tk-tumma-muste);
     -unity-background-scale-mode: scale-and-crop;
 }
@@ -603,7 +603,7 @@
 }
 
 .mk-kuvakortti__teksti {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--panel-2);
     white-space: normal;
     -unity-text-align: middle-center;
@@ -623,7 +623,7 @@
 }
 
 .mk-ohita .mk-nappi__teksti {
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
     letter-spacing: 7.41px; /* web 1px */
 }
 
@@ -755,7 +755,7 @@
 
 .mk-chat__viesti {
     margin-bottom: 9px;
-    font-size: 14.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
 }
 
@@ -770,13 +770,13 @@
     border-radius: var(--tk-kulma-keski);
     background-color: var(--tk-tumma-muste);
     color: var(--tk-paperi-muste);
-    font-size: 13.6px;
+    font-size: var(--tk-koko-apuri);
 }
 
 .mk-chat__odottaa {
     -unity-font-style: italic;
     color: var(--tk-kuulto-paperi-muste-60);
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
 }
 
 .mk-chat__paikkarivi {
@@ -936,7 +936,7 @@
 .mk-traileri__nimi {
     flex-direction: row;
     justify-content: center;
-    font-size: 48px;
+    font-size: 48px; /* fonttipoikkeus: 48 px, lähin asteikon koko 34 px (ero 14 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--valkoinen);
 }
 
@@ -1072,7 +1072,7 @@
 }
 
 .mk-chat__poimintatila {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-paperi-muste);
     opacity: 0.8;
 }
@@ -1157,7 +1157,7 @@
 
 .mk-chat__mikkiteksti {
     margin-left: 6px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-paperi-pinta);
 }
 
@@ -1228,7 +1228,7 @@
 }
 
 .mk-minipopup__poista .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-paperi-korostus);
 }
 

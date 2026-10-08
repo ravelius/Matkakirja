@@ -58,13 +58,13 @@
     padding: 3px 12px;
     border-width: 1px;
     border-color: var(--map-ink-45);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
     background-color: var(--tk-kuulto-paperi-pinta-50);
     color: var(--map-ink);
 }
 
 .mk-nahtavyydet__kokoruutu .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-nahtavyydet__esittely {
@@ -139,7 +139,7 @@
 
 .mk-kohdekartta__lahde {
     margin-top: 1.6px;
-    font-size: 9.3px;
+    font-size: 9.3px; /* fonttipoikkeus: 9.3 px, lähin asteikon koko 12 px (ero 2.7 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--tk-kuulto-paperi-muste-pehmea-80);
 }
 
@@ -180,7 +180,7 @@
     background-color: var(--tk-paperi-pinta);
     border-width: 1px;
     border-color: var(--map-ink-55);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
 }
 
 .mk-kohdekartta__piirros--valittu .mk-kohdekartta__kyltti {
@@ -193,7 +193,7 @@
     left: 50%;
     width: 104px;
     margin-left: -52px;
-    font-size: 9.6px;
+    font-size: 9.6px; /* fonttipoikkeus: 9.6 px, lähin asteikon koko 12 px (ero 2.4 px näkyisi; Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: upper-center;
     color: var(--bg);
@@ -205,7 +205,7 @@
 
 .mk-kohdekartta--zoomattu .mk-kohdekartta__nimi {
     opacity: 1;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-kohdekartta__ankkuri {
@@ -268,7 +268,7 @@
     translate: -50% 0;
     padding: 0 3px;
     margin: 0;
-    font-size: 9.3px;
+    font-size: 9.3px; /* fonttipoikkeus: 9.3 px, lähin asteikon koko 12 px (ero 2.7 px näkyisi; Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     -unity-text-align: middle-center;
     color: var(--tk-lasi-pinta-peitto);
@@ -326,7 +326,7 @@
     padding: 0;
     border-width: 1px;
     border-color: var(--map-ink-45);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
     background-color: var(--tk-kuulto-paperi-pinta-88);
     align-items: center;
     justify-content: center;
@@ -359,14 +359,14 @@
     border-width: 0;
     border-radius: 0;
     background-color: var(--lapinakyva);
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 3px; /* web 0.03em */
     color: var(--tk-tumma-muste); /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
     white-space: normal;
 }
 
 .mk-kohdekartta-kokoruutu__selite .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 3px; /* web 0.03em */
     color: var(--tk-tumma-muste); /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
 }
@@ -378,7 +378,7 @@
 /* Web .postikortti.kulttuuri-suurennos .kuvalahde: 0.6rem, vaalea 0,62, keskitetty, margin-top 0.3rem. */
 .mk-kohdekartta-kokoruutu__lahde {
     margin-top: 4.8px;
-    font-size: 9.6px;
+    font-size: 9.6px; /* fonttipoikkeus: 9.6 px, lähin asteikon koko 12 px (ero 2.4 px näkyisi; Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     white-space: normal;
     color: #9d978a; /* väripoikkeus: lämmin sävy, lähin token neutraali harmaa tk-harmaa-reunus (ΔE 8.6) (Päätoimittaja 8.10.2026) */ /* web rgba(247, 239, 220, 0.62) pohjalla #0b0805 */
@@ -447,7 +447,7 @@
     bottom: 7.2px;
     margin: 0;
     padding: 0;
-    font-size: 30.4px;
+    font-size: 30.4px; /* fonttipoikkeus: 30.4 px, lähin asteikon koko 34 px (ero 3.6 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--tk-paperi-pinta);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
@@ -461,7 +461,7 @@
 .mk-avauskortti__teksti {
     margin: 0;
     padding: 0;
-    font-size: 15.5px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -479,7 +479,7 @@
 }
 
 .mk-avauskortti__lehti .mk-nappi__teksti {
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     color: var(--mark);
 }
 
@@ -521,8 +521,8 @@
     bottom: 0;
     margin: 0;
     padding: 2.4px 6.4px;
-    font-size: 11.5px;
-    border-top-right-radius: 6px;
+    font-size: var(--tk-koko-kapiteeli);
+    border-top-right-radius: var(--tk-kulma-pieni);
     background-color: var(--tk-kuulto-paperi-pinta-85);
 }
 
@@ -557,7 +557,7 @@
 .mk-avauskortti__oppaanlaji {
     margin: 0;
     padding: 0;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 7.7px; /* web 0.08em */
     color: var(--accent-dark);
 }
@@ -565,7 +565,7 @@
 .mk-avauskortti__oppaanotsikko {
     margin: 1.6px 0;
     padding: 0;
-    font-size: 15.5px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -573,7 +573,7 @@
 .mk-avauskortti__oppaanteksti {
     margin: 0;
     padding: 0;
-    font-size: 13.8px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -675,7 +675,7 @@
     overflow: hidden;
     border-width: 2px;
     border-color: var(--tk-paperi-pinta);
-    border-radius: 9px;
+    border-radius: var(--tk-kulma-keski);
     background-color: var(--tk-paperi-pergamentti);
     flex-direction: column;
     justify-content: flex-end;
@@ -697,7 +697,7 @@
     width: 100%;
     margin: 0;
     padding: 1px 3px 2px 3px;
-    font-size: 10px;
+    font-size: 10px; /* fonttipoikkeus: 10 px, lähin asteikon koko 12 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--tk-paperi-pinta);
     background-color: var(--tk-himmennys-tumma);
     -unity-text-align: middle-center;

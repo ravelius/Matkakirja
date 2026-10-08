@@ -298,7 +298,7 @@
     flex-shrink: 0;
     border-width: 1px;
     border-color: var(--tk-himmennys-kevyt);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
 }
 
 .mk-linssiselite__teksti {
@@ -353,7 +353,7 @@
 }
 
 .mk-astroavaus__lahde {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12px; /* web 1.5px */
     color: var(--tk-erikois-astro-valkoinen-a72);
 }
@@ -647,7 +647,7 @@
 
 .mk-vertailupalkki__ohje {
     margin: 6px 4px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--map-ink-80);
@@ -717,7 +717,7 @@
 }
 
 .mk-vertailuarkki__otsikko {
-    font-size: 23px;
+    font-size: 23px; /* fonttipoikkeus: 23 px, lähin asteikon koko 21 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     margin-bottom: 6px;
     color: var(--map-ink);
 }
@@ -884,7 +884,7 @@
 }
 
 .mk-aikajana-ylarivi__otsikko {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 10.43px; /* web 1.2px */
     color: var(--accent);
     white-space: nowrap;
@@ -914,7 +914,7 @@
 
 /* Luku (web .aikajana-kello font-size clamp(1.35rem, 3.4vw, 1.9rem): koko AikajanaNakymasta palkin leveydestä). */
 .mk-aikajana-kello__luku {
-    font-size: 24px;
+    font-size: 24px; /* fonttipoikkeus: 24 px, lähin asteikon koko 26 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-right;
     white-space: nowrap;
 }
@@ -942,7 +942,7 @@
 
 .mk-matkamittari__rulla {
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
     margin-right: 2px;
     -unity-background-scale-mode: stretch-to-fill;
 }
@@ -1203,7 +1203,7 @@
 
 .mk-aikajana-havainne__kuvateksti {
     margin-top: 2px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--paper-dark);
@@ -1218,7 +1218,7 @@
 }
 
 .mk-aikajana-paneeli__vuosi {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 10.43px; /* web 1.2px */
     color: var(--tk-paperi-korostus);
 }
@@ -1238,7 +1238,7 @@
 
 .mk-aikajana-paneeli__teksti {
     margin-top: 6px;
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--tk-tumma-muste);
 }
@@ -1289,7 +1289,7 @@
 
 .mk-aikajana-kertomus__teksti {
     align-self: center;
-    font-size: 16.3px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--tk-tumma-muste);
@@ -1298,7 +1298,7 @@
 /* Web text-shadow: 0 2px 14px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.8). UITK ottaa yhden varjon; toinen, tiivis
  * tumma kehä tekstin ympärillä ääriviivana (löydös 74 d2: teksti luki heikosti vaalean pallon päällä). */
 .mk-aikajana-kertomus.mk-keskella .mk-aikajana-kertomus__teksti {
-    font-size: 24px;
+    font-size: 24px; /* fonttipoikkeus: 24 px, lähin asteikon koko 26 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     color: var(--tk-tumma-muste);
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
     -unity-text-outline-width: 0.8px;
@@ -1342,7 +1342,7 @@
 
 .mk-aikajana-valinaytos__rivi {
     margin-bottom: 7px;
-    font-size: 16.5px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     color: var(--tk-erikois-aikajana-3);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
@@ -1463,7 +1463,7 @@
 
 /* Web .aikajana-avaus-otsikko: 1,46rem, 600, small-caps, 0,09 em (UITK em/100 → 9), #3a2812. */
 .mk-aikajana-avaus__otsikko {
-    font-size: 23.4px;
+    font-size: 23.4px; /* fonttipoikkeus: 23.4 px, lähin asteikon koko 21 px (ero 2.4 px näkyisi; Päätoimittaja 8.10.2026) */
     letter-spacing: 38.46px; /* web 9px */
     color: var(--map-ink);
     -unity-text-align: upper-center;
@@ -1499,7 +1499,7 @@
 
 /* Web .aikajana-avaus-teksti: 0,98rem, rivi 1,58, vasen liehu, #2b2116. */
 .mk-aikajana-avaus__kappale {
-    font-size: 15.7px;
+    font-size: var(--tk-koko-leipa);
     color: var(--panel);
     -unity-text-align: upper-left;
     white-space: normal;
@@ -1578,7 +1578,7 @@
 }
 
 .mk-minipuluKortti__otsikko {
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
     color: var(--tk-lasi-avaruus-korostus);
 }
 
@@ -1659,7 +1659,7 @@
     border-color: var(--tk-kuulto-lasi-avaruus-korostus-35);
     border-radius: 12px 12px 12px 4px;
     background-color: var(--tk-kuulto-lcd-pinta-92);
-    font-size: 14.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
 }
 
@@ -1939,8 +1939,8 @@
     border-bottom-width: 1px;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: var(--tk-kulma-keski);
+    border-bottom-right-radius: var(--tk-kulma-keski);
 }
 
 /* Kotelon varjo kartalle (web box-shadow 0 -3px 14px). */
@@ -2024,7 +2024,7 @@
     top: 3px;
     right: 3px;
     bottom: 3px;
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
 }
 
 .mk-radio__lamppualue {
@@ -2044,14 +2044,14 @@
 .mk-radio__virta {
     margin: 1px 0 0 0;
     padding: 0;
-    font-size: 8px;
+    font-size: 8px; /* fonttipoikkeus: 8 px, lähin asteikon koko 12 px (ero 4 px näkyisi; Päätoimittaja 8.10.2026) */
     letter-spacing: 12.5px; /* web 1px */
     color: var(--tk-kuulto-paper-dark-85);
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
 }
 
 .mk-radio--levea .mk-radio__virta {
-    font-size: 9px;
+    font-size: 9px; /* fonttipoikkeus: 9 px, lähin asteikon koko 12 px (ero 3 px näkyisi; Päätoimittaja 8.10.2026) */
 }
 
 .mk-radio__asteikkokehys {
@@ -2067,7 +2067,7 @@
 
 .mk-radio__naytto {
     flex-grow: 1;
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
     background-color: var(--panel);
     overflow: hidden;
 }
@@ -2116,7 +2116,7 @@
     bottom: 0;
     border-width: 2px;
     border-color: var(--tk-kuulto-bg-85);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
 }
 
 /* Merkkivalo: painettava 44 × 44, lamppu 22 (leveällä 26) keskellä; näkyvä
@@ -2156,7 +2156,7 @@
     min-width: 0;
     margin: 3px 1px 0 1px;
     padding: 1px 2px;
-    font-size: 10px;
+    font-size: 10px; /* fonttipoikkeus: 10 px, lähin asteikon koko 12 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
     letter-spacing: 2px; /* web 0.2px */
     -unity-text-align: upper-center;
     white-space: nowrap;
@@ -2164,7 +2164,7 @@
     text-overflow: clip;
     color: var(--tk-kuulto-panel-92);
     text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45);
-    border-radius: 3px;
+    border-radius: var(--tk-kulma-hius);
     transition-property: color, opacity, background-color;
     transition-duration: 0.18s;
 }
@@ -2253,7 +2253,7 @@
 }
 
 .mk-radio__sivu .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 /* --- vertailun maakäyrät (Maakayrakuva.cs): webin .maakayrat, .maakayra-otsikko,
@@ -2272,7 +2272,7 @@
 
 .mk-maakayrat__otsikko {
     margin: 0 0 5px 0;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -2286,7 +2286,7 @@
 
 .mk-maakayrat__lahde {
     margin: 0 0 8px 0;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--map-ink-68);
 }
@@ -2306,7 +2306,7 @@
 }
 
 .mk-aikajana-kahva .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -2471,14 +2471,14 @@
 }
 
 .mk-tiedeliite__henkilo {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 17.39px; /* web 2px */
     color: var(--tk-paperi-korostus);
     margin-bottom: 8px;
 }
 
 .mk-tiedeliite__ingressi {
-    font-size: 15.5px;
+    font-size: var(--tk-koko-leipa);
     -unity-font-style: italic;
     white-space: normal;
     margin-bottom: 8px;
@@ -2496,7 +2496,7 @@
 }
 
 .mk-tiedeliite__kappale {
-    font-size: 14.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     margin-bottom: 8px;
 }
@@ -2534,7 +2534,7 @@
 
 .mk-tiedeliite__kuvateksti {
     margin-top: 4px;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-himmennys-tumma);
     white-space: normal;
 }
@@ -2762,7 +2762,7 @@
 
 .mk-aikaselain--puhelin .mk-aikaselain__vuosi {
     bottom: 34px;
-    font-size: 10px;
+    font-size: 10px; /* fonttipoikkeus: 10 px, lähin asteikon koko 12 px (ero 2 px näkyisi; Päätoimittaja 8.10.2026) */
 }
 
 /* ------------------------------------------------------------------------ *
@@ -2855,7 +2855,7 @@
 
 .mk-ihmisnosto__paikka {
     margin-bottom: 8px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--tk-tumma-muste-pehmea);
 }
@@ -2916,13 +2916,13 @@
 }
 
 .mk-ihmisnosto__lue .mk-nappi__teksti {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--paper-dark);
 }
 
 .mk-ihmisnosto__teksti {
     margin-bottom: 8px;
-    font-size: 14.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--tk-tumma-muste);
 }
@@ -2963,7 +2963,7 @@
 
 .mk-ihmisnosto__kysyotsikko {
     margin-bottom: 5px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--accent);
 }
 
@@ -3006,7 +3006,7 @@
 
 .mk-ihmisnosto__lahdeteksti {
     margin-right: 4px;
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--muted);
 }
 
@@ -3019,7 +3019,7 @@
 }
 
 .mk-ihmisnosto__lahdelinkki .mk-nappi__teksti {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--accent);
 }
 
@@ -3070,7 +3070,7 @@
 }
 
 .mk-vananappi__nimi {
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: nowrap;
     color: var(--tk-tumma-muste);
 }
@@ -3133,13 +3133,13 @@
 
 .mk-vanalappu__otsikko {
     margin-bottom: 4px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 11.2px; /* web 1.4px */
     color: var(--tk-paperi-korostus);
 }
 
 .mk-vanalappu__teksti {
-    font-size: 14.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--tk-lasi-pinta-peitto);
 }
@@ -3270,13 +3270,13 @@
 
 .mk-valikkorivi--yhtenainen > .mk-valikkonappi--eka {
     border-left-width: 1px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: var(--tk-kulma-nappi);
+    border-bottom-left-radius: var(--tk-kulma-nappi);
 }
 
 .mk-valikkorivi--yhtenainen > .mk-valikkonappi--vika {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: var(--tk-kulma-nappi);
+    border-bottom-right-radius: var(--tk-kulma-nappi);
 }
 
 .mk-valikkonappi__ikoni {
@@ -3290,7 +3290,7 @@
 .mk-valikkonappi__nimi {
     /* 3 nappia rivissä; pitkä nimi ("Äänimaisema") pienenee mahtuakseen (Linssivalitsin.ValikkoNappi). Teksti tummempi
        (omistaja 29.9.2026 klo 23.0x, 1.0.56). */
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--panel);
     white-space: nowrap;
     /* Ei katkaisupisteitä (1.0.56-laitekuvat: UI Toolkit katkaisi "Äänimaise…" vaikka tilaa oli): nimi on aina kokonainen,
@@ -3983,7 +3983,7 @@
 }
 
 .mk-linssivalitsin__runko .mk-linssirivi__nimi {
-    font-size: 13.76px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
 }
 

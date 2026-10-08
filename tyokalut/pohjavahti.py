@@ -5,7 +5,8 @@
 #   - USS: kovakoodatut värit (#hex, rgb/rgba) ja fonttikoot (font-size: Npx) Tyylikirja.uss:n ulkopuolella
 #   - USS: UI-siirtymät yli 250 ms (transition-duration; tarkennus 11.37: koskee vain UI-siirtymiä, ei jatkuvia
 #     sisältöanimaatioita, joita USS ei aja); rivi, jonka perässä on /* ympäristöanimaatio … */, on hyväksytty poikkeus
-#   - väri, jonka deklaraation perässä on /* väripoikkeus: syy */, on hyväksytty poikkeus (Päätoimittaja 8.10.2026)
+#   - väri, jonka deklaraation perässä on /* väripoikkeus: syy */, on hyväksytty poikkeus (Päätoimittaja 8.10.2026);
+#     samoin fonttikoko, jonka perässä on /* fonttipoikkeus: syy */
 #   - C# (Assets/Matkakirja/UI): uudet värivakiot (new Color(…), new Color32(…), ColorUtility) muualla kuin Tyylikirja.cs:ssä
 #   python3 tyokalut/pohjavahti.py            tarkista (exit 1, jos jokin tiedosto ylittää lähtötasonsa)
 #   python3 tyokalut/pohjavahti.py --kirjaa   kirjoita lähtötaso (vain omistajan päätöksellä: uusi poikkeus tai siirron jälkeen)
@@ -32,6 +33,8 @@ def laske():
         raaka = re.sub(r'transition-duration:[^;]*;[ \t]*/\*\s*ympäristöanimaatio[^*]*\*/', '', raaka)
         # Hyväksytyt väripoikkeukset perusteluineen (Päätoimittaja 8.10., pohjavahti 7): deklaraatio + /* väripoikkeus: syy */.
         raaka = re.sub(r'[-a-z]+:[^;{}]*;[ \t]*/\*\s*väripoikkeus:[^*]*\*/', '', raaka)
+        # Hyväksytyt fonttikokopoikkeukset (Päätoimittaja 8.10., pohjavahti 8): font-size: Npx; /* fonttipoikkeus: syy */.
+        raaka = re.sub(r'font-size:[^;{}]*;[ \t]*/\*\s*fonttipoikkeus:[^*]*\*/', '', raaka)
         s = re.sub(r'/\*.*?\*/', '', raaka, flags=re.S)
         t[p] = {'vari': len(VARI.findall(s)), 'fontti': len(FONTTI.findall(s)),
                 'siirtyma': sum(1 for a in SIIRTYMA.findall(s) if kesto_yli(a))}

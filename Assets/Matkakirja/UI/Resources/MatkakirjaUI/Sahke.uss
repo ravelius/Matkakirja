@@ -23,7 +23,7 @@
     border-bottom-width: 3px;
     border-color: var(--tk-kuulto-paperi-korostus-34);
     border-bottom-color: var(--tk-himmennys-kevyt);
-    border-radius: 9px;
+    border-radius: var(--tk-kulma-keski);
     background-color: var(--tk-paperi-pinta);
     color: var(--tk-paperi-muste);
     opacity: 0;
@@ -82,7 +82,7 @@
 
 .mk-sahke-liuska__saate {
     flex-shrink: 1;
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--tk-paperi-muste-pehmea);
 }
@@ -91,7 +91,7 @@
     padding: 8px 10px;
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-40);
-    border-radius: 5px;
+    border-radius: var(--tk-kulma-pieni);
     background-color: var(--tk-paperi-pinta);
 }
 
@@ -104,7 +104,7 @@
 
 .mk-sahke-liuska__alarivi {
     margin-top: 7px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--raja-muste);
 }
@@ -165,7 +165,7 @@
 
 .mk-sahke-liuska__vaihtoehtoteksti {
     flex-shrink: 1;
-    font-size: 14.4px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -187,7 +187,7 @@
 }
 
 .mk-sahke-liuska__ohitateksti {
-    font-size: 13.6px;
+    font-size: var(--tk-koko-apuri);
     color: var(--tk-paperi-muste-pehmea);
 }
 
@@ -203,14 +203,14 @@
 
 .mk-sahke__teksti {
     margin-bottom: 4px;
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--ink-light);
 }
 
 .mk-sahke__huomio {
     margin-top: 7px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--muted);
 }
@@ -254,7 +254,7 @@
 }
 
 .mk-sahke__siruteksti {
-    font-size: 13.5px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
 }
 
@@ -298,7 +298,7 @@
 
 /* Koodi luetaan ruudulta ääneen kaverille: iso ja harva. */
 .mk-sahke__koodiarvo {
-    font-size: 18.4px;
+    font-size: var(--tk-koko-valiotsikko);
     letter-spacing: 21.74px; /* web 4px */
     color: var(--accent);
 }

@@ -87,7 +87,7 @@
     min-height: 32px;
     padding: 0 var(--tk-vali-m);
     border-color: var(--tk-lasi-toiminto);
-    border-radius: 9px;
+    border-radius: var(--tk-kulma-keski);
     background-color: initial;
 }
 
