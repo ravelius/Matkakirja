@@ -35,6 +35,22 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 20.01 — JUNA 167 = historia-juna167 96b04efb3 (A) / final-ik-167 71d34bb97 (B, PT päättää 21.30); JUNA 168 -EHDOKAS historia-m @ 9fdd1f49d
+
+- Juna 167 KUITATTU (PT): siirtoseppa/historia-juna167 @ 96b04efb3 (wt/proto-siirtoseppa-kello) = 1e7415270 + Pulun reunakuva piiloon
+  seikkailussa (SeikkailuTapit.PuluPiiloon; omistaja 19.0x "Pulu pois videopelistä"). Pulun ensivihjettä EI tuotu. Paketti v45b (PT).
+  iPadilla ei vihjettä junassa 167 (P/Y vain näppäimistö/ohjain) — PT hyväksyi.
+- Runko B: siirtoseppa/final-ik-167 @ 71d34bb97 (wt/proto-siirtoseppa-fik) = A + Final IK 2.5 (Assets/Plugins/RootMotion, firstpass) +
+  Grounder seikkailun kävelijöille (LisaaIrrallinen jalat:true; maxStep 0,5, quality Best, heightOffset −0,02, invertFootCenter;
+  maa = törmäysmallit IkKerrokseen 30). LS2:n testi: kantapää 30,5→3,9, leijunta 11,2→4,2, varpaat 21,6→2,6 cm, ponnahdukset 0.
+  Linssit- ja Peli-testien unity-tarkistus kääntävät Assets/Plugins:n (firstpass). Natiiviseppä: runko B d9ca9d63c, käännös 22.00.
+- Juna 168 -ehdokas siirtoseppa/historia-m @ 9fdd1f49d (1028/1028, tarkista.sh 0): v45i fd269407ada4dea1, Final IK (merge),
+  vesimaski (DioraamaVesimaski), märät pinnat (DioraamaLeivottu _Markyys + SeikkailuKavely.AsetaMarkyys), sade (SeikkailuSade,
+  aanet-saa-v2) + märät askeleet, valovihje (LS2) + vihje-kimallus, Pulu pois tyrmästä/kappelista, PyydaVihje (NUI ☰ Vihje),
+  veneoppitunti päättyy perillä + äänet jo veneessä (AanetPaalle). Junahaara masterin päälle, kun 167 on masterissa → kuittaus PT:ltä.
+- Juna 169 (sovittu): LR valoatlas kävelyosille (osa.valoatlas, UV1, valo×0,5) → minä varjostintila "valo"; esineiden ja hahmojen
+  huonekohtainen lataus (minä); seikkailun valot/varjostimet (minä), URP Ultra + muisti (Natiiviseppä; ei tasonvaihtoa linnan auki).
+
 ## TILA 8.10. 18.06 — JUNA 167 KUITTAUSPYYNTÖ: siirtoseppa/historia-juna167 @ 06a79a48f (wt/proto-siirtoseppa-kello)
 
 - = historia-m 138fb8d70 + master BUILD 166. Olavinlinna 1–10: PelattavaPala.Hash 6a4e9cadc388f51a (LR v45a, kultaiset v45a), M-osa (naamio,
