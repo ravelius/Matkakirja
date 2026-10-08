@@ -194,6 +194,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public void Paivita(double dt, VartijanSyote s)
         {
             kello += dt;
+            // Valppaus vähenee kaikissa tiloissa (LS1:n läpipeluuajuri 8.10.: torkkuvilla ja syövillä se jäi pysyväksi, raja 0,2 ikuisesti).
+            if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
             if (Profiili.TunnistaaM > 0)
             {
                 double tx = s.PelaajaX - s.VartijaX, tz = s.PelaajaZ - s.VartijaZ;
@@ -227,7 +229,6 @@ namespace Matkakirja.Linssit.Seikkailu
                 Torkkuu = false; Syo = false; horjahdus = NousuS; AloitaVaihe(VartijanTila.Etsinta); merkki = true; rauhaS = 0;
                 return;
             }
-            if (Valppaus > 0) Valppaus = Math.Max(0, Valppaus - dt);
             double voima = NakoVoima(s);
             double dp = Etaisyys(s.VartijaX, s.VartijaZ, s.PelaajaX, s.PelaajaZ);
             if (voima > 0) { Mittari = Math.Min(1, Mittari + voima * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; rauhaS = 0; eiNaeS = 0; }
