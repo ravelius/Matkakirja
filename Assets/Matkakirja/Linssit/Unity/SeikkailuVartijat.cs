@@ -269,7 +269,7 @@ namespace Matkakirja.Natiivi
                     foreach (var a in aanet) { double r = Askelaani.Kuuluvuus(SeikkailuKavely.Data, a.KuuluvuusM, a.Osa, vosa); if (r > 0) kuuluvat.Add(new Aanilahde(a.X, a.Z, r, a.Osa)); }
                 }
                 var s = new VartijanSyote { VartijaX = vp.x, VartijaZ = vp.z, Valoisuus = PelaajanValoisuus(p), Aanet = kuuluvat, PelaajaVauhti = p != null ? p.Tila.Vauhti : (double?)null,
-                    Tarjotin = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin };
+                    Tarjotin = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin, Naamio = SeikkailuEsineet.Aktiivinen?.Naamio == true };
                 if (p != null)
                 {
                     var pp = p.transform.position;

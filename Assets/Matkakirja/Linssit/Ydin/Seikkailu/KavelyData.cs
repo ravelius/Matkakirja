@@ -62,6 +62,12 @@ namespace Matkakirja.Linssit.Seikkailu
         public double[] Sarana;
         /// <summary>kiipeily: yläpää (v44q kiipeily:tikkaat-*), glTF; null jos puuttuu.</summary>
         public double[] Yla;
+        /// <summary>M-osa (v44q–s): esine puettava (esiliina, myssy); ovi lukko + avain + aani_nopea_m; ote ulkonormaali (glTF);
+        /// raapaisut (tiili); kesto_s (tuuli:puuska); kaanto_aste ja sallittu_aste (kilpi:arkku-N).</summary>
+        public bool Puettava, Lukko;
+        public string Avain;
+        public double AaniNopeaM, Raapaisut, KestoS, KaantoAste, SallittuAste;
+        public double[] Ulkonormaali;
     }
 
     public sealed class KavelyData
@@ -129,6 +135,10 @@ namespace Matkakirja.Linssit.Seikkailu
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
                 Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
                 Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
+                Puettava = MiniJson.Kentta(o, "puettava") is bool pub && pub, Lukko = MiniJson.Kentta(o, "lukko") is bool lub && lub, Avain = MiniJson.Teksti(o, "avain"),
+                AaniNopeaM = MiniJson.Luku(o, "aani_nopea_m") ?? 0, Raapaisut = MiniJson.Luku(o, "raapaisut") ?? 0, KestoS = MiniJson.Luku(o, "kesto_s") ?? 0,
+                KaantoAste = MiniJson.Luku(o, "kaanto_aste") ?? 0, SallittuAste = MiniJson.Luku(o, "sallittu_aste") ?? 0,
+                Ulkonormaali = MiniJson.Kentta(o, "ulkonormaali") is object un ? Vektori(un) : null,
                 Lyhty = MiniJson.Kentta(o, "lyhty") is bool lyb && lyb, Soihtu = MiniJson.Kentta(o, "soihtu") is bool sob && sob,
                 KokoV = MiniJson.Kentta(o, "koko") is List<object> kl && kl.Count == 3 ? Vektori(kl) : null,
             };
