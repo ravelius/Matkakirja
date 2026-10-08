@@ -59,7 +59,7 @@
     border-width: 1px;
     border-color: var(--map-ink-45);
     border-radius: 3px;
-    background-color: rgba(255, 252, 242, 0.5);
+    background-color: var(--tk-kuulto-paperi-pinta-50);
     color: var(--map-ink);
 }
 
@@ -98,7 +98,7 @@
     border-width: 1px;
     border-color: var(--map-ink-35);
     border-radius: var(--tk-kulma-nappi);
-    background-color: rgba(255, 250, 238, 0.6);
+    background-color: var(--tk-kuulto-paperi-pinta-60);
     color: var(--map-ink-85);
 }
 

@@ -343,7 +343,7 @@
 }
 
 .mk-ylapalkki--kelluva .mk-pilleri:active {
-    background-color: rgba(225, 204, 160, 0.95);
+    background-color: var(--tk-kuulto-paperi-pergamentti-95);
 }
 
 .mk-ylapalkki--kelluva .mk-pilleri > .mk-ikoni {
@@ -364,7 +364,7 @@
 }
 
 .mk-ylapalkki--kelluva .mk-ikoninappi:active {
-    background-color: rgba(225, 204, 160, 0.95);
+    background-color: var(--tk-kuulto-paperi-pergamentti-95);
 }
 
 /* Saaririvi (omistaja 24.9.2026): pilleri ja napit Dynamic Islandin korkeudelle (37 pt) sen kummallekin
@@ -946,7 +946,7 @@
     border-width: 1.2px;
     border-radius: var(--tk-kulma-keski);
     background-color: var(--rivi-tausta);
-    color: rgba(230, 214, 184, 0.62);
+    color: var(--tk-kuulto-paper-62);
 }
 
 .mk-kytkinrivi > .mk-ikoni {
@@ -1702,8 +1702,8 @@
 }
 
 .mk-elamapalkki__lohko--kulunut {
-    background-color: rgba(192, 57, 43, 0.12);
-    border-color: rgba(158, 44, 33, 0.45);
+    background-color: var(--tk-kuulto-mark-12);
+    border-color: var(--tk-kuulto-mark-45);
 }
 
 /* Viisi oikeanpuoleista oransseina (web #3443 v2335): palava #d97a2b / #a8561a, sammunut .12 / .45. */
@@ -1905,7 +1905,7 @@
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-30);
     border-radius: var(--tk-kulma-keski);
-    background-color: rgba(255, 252, 242, 0.5);
+    background-color: var(--tk-kuulto-paperi-pinta-50);
 }
 
 .mk-laukku__julistenimio {
@@ -2495,7 +2495,7 @@
     border-width: 1px;
     border-color: var(--tk-paperi-reunus);
     border-radius: var(--tk-kulma-pieni);
-    background-color: rgba(255, 252, 242, 0.45);
+    background-color: var(--tk-kuulto-paperi-pinta-45);
     color: var(--map-ink);
 }
 
@@ -2639,7 +2639,7 @@
 .mk-laukku__linssi--ei {
     border-width: 1.5px;
     border-color: var(--map-ink-55);
-    background-color: rgba(252, 241, 212, 0.55);
+    background-color: var(--tk-kuulto-kerma-55);
 }
 
 .mk-laukku__linssi--ei > .mk-ikoni {
@@ -2648,7 +2648,7 @@
 }
 
 .mk-laukku__linssi:active {
-    background-color: rgba(252, 241, 212, 0.9);
+    background-color: var(--tk-kuulto-kerma-90);
 }
 
 .mk-laukku__linssi.mk-esikatselu {
@@ -2662,7 +2662,7 @@
 }
 
 .mk-laukku__linssi--ei.mk-paalla {
-    background-color: rgba(252, 241, 212, 0.9);
+    background-color: var(--tk-kuulto-kerma-90);
 }
 
 .mk-laukku__linssi--kesken {
@@ -2725,12 +2725,12 @@
     padding: 5px 19px;
     border-color: var(--tk-kuulto-paperi-korostus-65);
     border-radius: var(--tk-kulma-keski);
-    background-color: rgba(250, 238, 208, 0.7);
+    background-color: var(--tk-kuulto-kerma-70);
     color: var(--tk-paperi-korostus);
 }
 
 .mk-laukku__aktivoi:active {
-    background-color: rgba(255, 250, 238, 0.9);
+    background-color: var(--tk-kuulto-paperi-pinta-90);
     color: #9c6f1e;
 }
 
@@ -2741,7 +2741,7 @@
 }
 
 .mk-laukku__aktivoi.mk-pois {
-    background-color: rgba(236, 222, 196, 0.5);
+    background-color: var(--tk-kuulto-ink-light-50);
     color: var(--map-ink-85);
 }
 
@@ -2970,7 +2970,7 @@
 .mk-saa {
     width: 100%;
     flex-shrink: 0;
-    background-color: rgba(255, 250, 238, 0.65);
+    background-color: var(--tk-kuulto-paperi-pinta-65);
     border-width: 1px;
     border-color: var(--map-ink-35);
     border-radius: var(--tk-kulma-pieni);
@@ -3551,7 +3551,7 @@
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
     border-color: var(--map-ink-22);
-    background-color: rgba(255, 252, 244, 0.6);
+    background-color: var(--tk-kuulto-paperi-pinta-60);
     color: var(--map-ink);
     font-size: 13.1px;
     letter-spacing: 0;
@@ -3559,7 +3559,7 @@
 
 /* Web: napin oma tausta voittaa yleisen button:active-tumman (#43331f), painettuna tausta pysyy vaaleana. */
 .mk-lukija-valikko__kelausnappi:active {
-    background-color: rgba(255, 252, 244, 0.6);
+    background-color: var(--tk-kuulto-paperi-pinta-60);
 }
 
 .mk-lukija-valikko__ryhma > .mk-lukija-valikko__kelausnappi:last-child {
@@ -3810,7 +3810,7 @@
 
 .mk-reaktio__vaihtoehto:active,
 .mk-reaktio__nappi:active {
-    background-color: rgba(156, 107, 23, 0.14);
+    background-color: var(--tk-kuulto-accent-dark-14);
 }
 
 .mk-reaktio__vaihtoehto .mk-nappi__teksti {
@@ -3926,7 +3926,7 @@
     border-width: 1px;
     border-radius: var(--tk-kulma-keski);
     border-color: var(--tk-kuulto-paperi-korostus-45);
-    background-color: rgba(255, 252, 240, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     font-size: 14.5px;
     color: var(--map-ink);
 }
@@ -3939,7 +3939,7 @@
 
 .mk-palaute__kentta:focus > .unity-base-text-field__input {
     border-color: rgba(176, 138, 60, 0.95);
-    background-color: rgba(255, 252, 240, 0.9);
+    background-color: var(--tk-kuulto-paperi-pinta-90);
 }
 
 /* Rasti (.periaate-rasti): ruutu + teksti, koko rivi napautettava. */
@@ -3960,7 +3960,7 @@
     border-width: 1px;
     border-radius: 4px;
     border-color: var(--tk-kuulto-paperi-korostus-60);
-    background-color: rgba(255, 252, 240, 0.8);
+    background-color: var(--tk-kuulto-paperi-pinta-80);
 }
 
 .mk-palaute__ruksi {
@@ -4013,7 +4013,7 @@
     margin-top: 6px;
     padding: 6px 12px;
     border-color: var(--tk-kuulto-paperi-korostus-45);
-    background-color: rgba(255, 252, 240, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     color: var(--raja-muste);
 }
 
@@ -4091,7 +4091,7 @@
     border-width: 1px;
     border-radius: var(--tk-kulma-keski);
     border-color: var(--tk-kuulto-paperi-korostus-45);
-    background-color: rgba(255, 252, 240, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     color: var(--map-ink);
 }
 

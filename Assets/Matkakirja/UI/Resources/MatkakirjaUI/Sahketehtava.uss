@@ -519,7 +519,7 @@
     border-top-right-radius: 9px;
     border-bottom-right-radius: 14px;
     border-bottom-left-radius: 8px;
-    background-color: rgba(255, 252, 243, 0.42);
+    background-color: var(--tk-kuulto-paperi-pinta-42);
     color: var(--map-ink);
 }
 

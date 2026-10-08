@@ -22,7 +22,7 @@
 .mk-kartuscha.mk-auki {
     max-width: none;
     padding: 11.2px 13.6px 12px 13.6px;
-    background-color: rgba(247, 239, 219, 0.94);
+    background-color: var(--tk-kuulto-tumma-muste-94);
     border-width: 1px;
     border-color: var(--map-ink-55);
 }
@@ -431,7 +431,7 @@
 }
 
 .mk-seliteNappi:active {
-    background-color: rgba(225, 204, 160, 0.95);
+    background-color: var(--tk-kuulto-paperi-pergamentti-95);
 }
 
 .mk-seliteNappi.mk-valittu {
@@ -638,7 +638,7 @@
     border-radius: 12.5px;
     border-width: 1px;
     border-color: var(--map-ink-45);
-    background-color: rgba(255, 252, 240, 0.9);
+    background-color: var(--tk-kuulto-paperi-pinta-90);
     align-items: center;
     justify-content: center;
 }
@@ -888,7 +888,7 @@
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-32);
     border-radius: 15px;
-    background-color: rgba(255, 252, 242, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     color: var(--map-ink-85);
     align-items: center;
     justify-content: center;
@@ -1012,7 +1012,7 @@
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-28);
     border-radius: var(--tk-kulma-keski);
-    background-color: rgba(255, 252, 242, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     color: var(--map-ink-95);
 }
 
@@ -1466,7 +1466,7 @@
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-60);
     border-radius: 4px;
-    background-color: rgba(214, 168, 62, 0.18);
+    background-color: var(--tk-kuulto-accent-18);
     color: var(--tk-paperi-korostus);
     justify-content: center;
 }
@@ -1691,7 +1691,7 @@
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-60);
     border-radius: 4px;
-    background-color: rgba(214, 168, 62, 0.18);
+    background-color: var(--tk-kuulto-accent-18);
     color: var(--tk-paperi-muste);
 }
 

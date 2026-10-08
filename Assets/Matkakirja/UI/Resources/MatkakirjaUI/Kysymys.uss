@@ -158,8 +158,8 @@
 .mk-kysymys__kuvakehys--lippu .mk-kysymys__kuva {
     height: 150px;
     border-width: 8px;
-    border-color: rgba(252, 241, 212, 0.92);
-    background-color: rgba(252, 241, 212, 0.92);
+    border-color: var(--tk-kuulto-kerma-92);
+    background-color: var(--tk-kuulto-kerma-92);
     -unity-background-scale-mode: scale-to-fit;
 }
 
@@ -192,12 +192,12 @@
     margin: -3px 0 12px 0;
     padding: 8px 12px;
     border-width: 1px;
-    border-color: rgba(120, 90, 40, 0.5);
+    border-color: var(--tk-kuulto-paperi-korostus-50);
     border-top-left-radius: 12px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 13px;
     border-bottom-left-radius: 7px;
-    background-color: rgba(240, 220, 170, 0.35);
+    background-color: var(--tk-kuulto-paperi-pergamentti-35);
 }
 
 .mk-kysymys__vihjemerkki {
@@ -235,7 +235,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 16px;
     border-bottom-left-radius: 9px;
-    background-color: rgba(255, 252, 243, 0.5);
+    background-color: var(--tk-kuulto-paperi-pinta-50);
     color: var(--map-ink);
     opacity: 1;
     translate: 0 0;
@@ -489,7 +489,7 @@
     border-top-right-radius: 9px;
     border-bottom-right-radius: 14px;
     border-bottom-left-radius: 8px;
-    background-color: rgba(255, 252, 243, 0.42);
+    background-color: var(--tk-kuulto-paperi-pinta-42);
     color: var(--map-ink);
 }
 
@@ -923,7 +923,7 @@
     border-width: 1px;
     border-color: rgba(228, 196, 128, 0.62);
     border-radius: 3px;
-    background-color: rgba(214, 168, 62, 0.16);
+    background-color: var(--tk-kuulto-accent-16);
     color: var(--paper);
     opacity: 0;
     transition-property: opacity;
@@ -984,7 +984,7 @@
     border-width: 1px;
     border-color: var(--tk-kuulto-paperi-korostus-45);
     border-radius: var(--tk-kulma-nappi);
-    background-color: rgba(255, 252, 242, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
     color: var(--map-ink);
 }
 

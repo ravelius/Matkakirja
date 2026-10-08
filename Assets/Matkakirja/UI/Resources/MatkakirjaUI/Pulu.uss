@@ -443,7 +443,7 @@
 .mk-matkakirja.mk-matkakirja--pieni {
     padding: 3.2px 6.4px 3.2px 6.4px;
     max-height: none;
-    background-color: rgba(244, 231, 202, 0.86);
+    background-color: var(--tk-kuulto-tumma-muste-86);
     border-width: 0;
     border-radius: var(--tk-kulma-pieni);
     -unity-background-image-tint-color: var(--lapinakyva);
@@ -676,12 +676,12 @@
 .mk-chat.mk-chat--linssi {
     border-color: var(--tk-lasi-avaruus-reunus);
     background-color: var(--tk-lasi-avaruus-pinta);
-    color: #eafff3;
+    color: var(--tk-lasi-avaruus-muste);
 }
 
 .mk-chat--linssi .mk-chat__viesti,
 .mk-chat--linssi .mk-chat__livia {
-    color: #eafff3;
+    color: var(--tk-lasi-avaruus-muste);
 }
 
 /* ISS-CHATIN LAATIKOT ILMAN TÄYTTÖÄ (omistaja 4.10.2026 klo 13.54: "Poista laatikoiden vihreä pohjaväri. Riittää että teksti ja
@@ -695,12 +695,12 @@
 
 .mk-chat--linssi .mk-chat__odottaa,
 .mk-chat--linssi .mk-chat__paikkarivi {
-    color: rgba(234, 255, 243, 0.65);
+    color: var(--tk-kuulto-lasi-avaruus-muste-65);
 }
 
 /* Valmiin vastauksen lähderivi lasiteemoissa (laite 4.10.: paperin ruskea ja korostus hukkuivat tummaan lasiin). */
 .mk-chat--linssi .mk-chat__valmislahde {
-    color: rgba(234, 255, 243, 0.65);
+    color: var(--tk-kuulto-lasi-avaruus-muste-65);
 }
 
 .mk-chat--linssi .mk-chat__valmislinkki .mk-nappi__teksti {
@@ -726,7 +726,7 @@
 }
 
 .mk-chat--linssi .mk-chat__kentta {
-    color: #eafff3;
+    color: var(--tk-lasi-avaruus-muste);
 }
 
 /* Alarivin napit ja kenttä lasille (1.10. simulaattorikuva: napit jäivät paperinvärisiksi). */
@@ -1206,7 +1206,7 @@
 /* Laitteen oma pari (web .pollo-pilleri.oma: katkoviiva; UI Toolkitissa ei dashed-reunaa → himmeämpi, läpinäkyvä). */
 .mk-poiminnat__pilleri--oma {
     border-color: var(--map-ink-22);
-    background-color: rgba(255, 252, 244, 0.25);
+    background-color: var(--tk-kuulto-paperi-pinta-25);
 }
 
 /* Kehittäjän poistorivi minipopupissa (web .minipopup-poistorivi). */
@@ -1224,7 +1224,7 @@
     border-width: 1px;
     border-radius: var(--tk-kulma-keski);
     border-color: var(--tk-kuulto-paperi-korostus-55);
-    background-color: rgba(255, 252, 240, 0.7);
+    background-color: var(--tk-kuulto-paperi-pinta-70);
 }
 
 .mk-minipopup__poista .mk-nappi__teksti {
