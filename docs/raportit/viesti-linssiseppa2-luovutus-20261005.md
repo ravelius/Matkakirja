@@ -35,7 +35,19 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. klo 23.3x (uusin)
+## TILA 9.10. klo 00.4x (uusin)
+- TAIVAAN RAIDAT (PT kuittasi junaan 168): proto linssiseppa2/ilmakeha-168 989685f09 (= 911f772d8 + dither eca114064 + vanha
+  DioraamaTaivas 989685f09, Dither.hlsl); syy B10G11R11-HDR-puskurin 5-bittinen sininen. Ennen-kuva lokit/linssiseppa2-taivas-ennen-0015
+  (Sacré-Cœur, JALKEEN="opas kamera 48.8867 2.3431 700 76 350 175"); JÄLKEEN-kuva junan 168 simukäännöksestä samalla ajolla.
+  Sama dither myös ilmakeha-170:ssä (ccd7d3594, cdeb31829). Varjostimia ei ole Unity-käännetty (simukäännös todentaa).
+- SEINE: nosto 2,0 m (pariisi2), tukholma2 0,4 m → Karttaseppä vei index-v3:n Julkaisijalle.
+- MUISTI: muistitesti-168 80c4e0ade: v45r (rekvisiitta 112 Mt) OK; juna 169 v45s + huonelataus (Ultra keittiö 1041 / tupa 1039 /
+  tyrmä 994), UltraAtlaksetMt 300 (Natiiviseppä 9747db7f4) riittää. Siirtosepälle: lataushetken huippu, linnantupa ei kävelyosa.
+- UUSITTAVA seuraavassa simuvuorossa: pala-kuvat (aja.sh) ja UI-stillit (ui-stillit.sh) – korjattu 96d1e43db (odottaa latauspalkki
+  100 %); kävelyosadiagnoosi vaatii buildin, jossa "poikki kavely 0" on (167c:ssä ei ole). Pilvikerroksen kuvapari ilmakeha-170:n
+  käännöksestä (pilvet 0 vs 1).
+
+## TILA 8.10. klo 23.3x
 - MUISTITESTI v45o (junan 168 ehto, PT kuittasi 23.28): proto linssiseppa2/muistitesti-168 9a43856fc (pallo-168 + pinnat 150/70 +
   Natiivisepän UltraAtlaksetMt 135 1b755328f); kultainen olavinlinna-v45o-muisti.json; Ultra 665 → 838, muut +42 Mt, ei ylityksiä.
   Auki LR:lle: esine-glb:iden upotetut normaali-PNG:t (+21 Mt keko).
