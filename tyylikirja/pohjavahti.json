@@ -109,17 +109,17 @@
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Kartta.uss": {
    "fontti": 2,
    "siirtyma": 0,
-   "vari": 4
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Kohdekartta.uss": {
    "fontti": 1,
    "siirtyma": 0,
-   "vari": 2
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Kysymys.uss": {
    "fontti": 0,
    "siirtyma": 0,
-   "vari": 5
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Lehti.uss": {
    "fontti": 5,
@@ -129,12 +129,12 @@
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Linssit.uss": {
    "fontti": 3,
    "siirtyma": 0,
-   "vari": 13
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
    "fontti": 2,
    "siirtyma": 0,
-   "vari": 12
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/ajattelija.uss": {
    "fontti": 0,
@@ -259,7 +259,7 @@
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pulu.uss": {
    "fontti": 0,
    "siirtyma": 0,
-   "vari": 7
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Sahke.uss": {
    "fontti": 0,
