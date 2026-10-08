@@ -50,6 +50,31 @@
     margin-right: 0;
 }
 
+/* PALLON SÄÄTILA (omistaja 8.10.2026 klo 09.1x; tyylikirja pohjat.OHJAUSNAPPI.saakuvakkeet ja live). Sääkuvake ajan kuvakkeen
+ * oikeassa alakulmassa (kuten tilamerkki), pieni; LIVE: vain teksti läpikuultavalla oranssilla pohjalla, koko ja kulma ennallaan. */
+.mk-ohjausnappi > .mk-ohjausnappi__saa {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    width: 14px;
+    height: 14px;
+    margin-right: 0;
+}
+
+.mk-ohjausnappi.mk-ohjausnappi--live {
+    background-color: var(--tk-tila-live-kuulto);
+}
+
+.mk-ohjausnappi__live {
+    font-size: var(--tk-koko-kapiteeli);
+    -unity-font-style: bold;
+    letter-spacing: 6px; /* web 0.06em */
+    color: var(--tk-korostus);
+    -unity-text-outline-width: 0.6px;
+    -unity-text-outline-color: var(--tk-himmennys-tumma);
+    -unity-text-align: middle-center;
+}
+
 .mk-ohjausnappi:active {
     border-color: var(--tk-korostus);
     background-color: var(--tk-toiminto);

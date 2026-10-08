@@ -101,6 +101,13 @@ namespace Matkakirja.Natiivi
             ["paiva"] = "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M5.6 18.4l1.7-1.7M16.7 7.3l1.7-1.7\"/>",
             ["ilta"] = "<path d=\"M3 17.5h18\"/><path d=\"M7.5 17.5a4.5 4.5 0 0 1 9 0\"/><path d=\"M12 9.5v-5M9.6 7.1 12 9.5l2.4-2.4\"/>",
             ["yo"] = "<path d=\"M19 14.6A7.6 7.6 0 1 1 9.4 5a6 6 0 0 0 9.6 9.6z\"/>",
+            // SÄÄ (omistaja 8.10.2026 klo 09.1x "Saa tottakai piirtää"; pallon säätila ☾-napissa): sama pilvi, alla sade, sumu, lumi
+            // tai salama; selkeä = paiva. Tyylikirja pohjat.OHJAUSNAPPI.saakuvakkeet.
+            ["pilvi"] = "<path d=\"M7.2 18.5h10.3a3.6 3.6 0 0 0 .5-7.2 5.2 5.2 0 0 0-9.9-1.4 4.3 4.3 0 0 0-.9 8.6z\"/>",
+            ["sade"] = "<path d=\"M7.2 14.5h10.3a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.5-1.3 4 4 0 0 0-1.3 8.1z\"/><path d=\"M8.6 17.2l-1 2.6M12.6 17.2l-1 2.6M16.6 17.2l-1 2.6\"/>",
+            ["sumu"] = "<path d=\"M7.2 14.5h10.3a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.5-1.3 4 4 0 0 0-1.3 8.1z\"/><path d=\"M4.5 17.6h15M7 20.6h10\"/>",
+            ["lumi"] = "<path d=\"M7.2 14.5h10.3a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.5-1.3 4 4 0 0 0-1.3 8.1z\"/><path d=\"M9.0 17.0L9.0 21.0M7.3 18.0L10.7 20.0M10.7 18.0L7.3 20.0M15.0 17.0L15.0 21.0M13.3 18.0L16.7 20.0M16.7 18.0L13.3 20.0\"/>",
+            ["ukkonen"] = "<path d=\"M7.2 14.5h10.3a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.5-1.3 4 4 0 0 0-1.3 8.1z\"/><path d=\"M13.4 14.6 10.4 18.6h3.4l-2.2 3.6\"/>",
             // PIN (omistaja 5.10.2026 klo 23.3x, PIN-KUVAKE JA PINNATTU PALKKI): nuppineula, pinnattuna täytetty pää (mk-valittu).
             ["pin"] = "<path d=\"M9 3.6h6M10.2 3.6v6.2L7 13.4h10l-3.2-3.6V3.6M12 13.4v7\"/>",
             ["saapas"] = "<path d=\"M7 3.5h4.4v8.2c0 .9.6 1.7 1.5 2l4.8 1.6c1.4.5 2.3 1.3 2.3 2.4 0 .8-.6 1.4-1.4 1.4H8.6c-.9 0-1.6-.7-1.6-1.6z\"/><path d=\"M7 6h4.4M7 8.2h4.4M4 20.6h16.5\"/>",
