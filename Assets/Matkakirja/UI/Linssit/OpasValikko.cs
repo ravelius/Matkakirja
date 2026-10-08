@@ -287,7 +287,6 @@ namespace Matkakirja.Natiivi
             // pystyvedosta, ja sitä pienempi liike on napautus.
             Kosketusvieritys.Liita(valikko, () => aloitus && aloitusSuosikit != null && aloitusSuosikit.worldBound.Contains(viimeKohta) ? aloitusSuosikit : rivit);
             kerros.JokaRuutu += TarkistaOhiNapautus;
-            kerros.JokaRuutu += TarkistaAikaKierto;
             kerros.JokaRuutu += PaivitaYoTeema;
 
             // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
@@ -2097,6 +2096,8 @@ namespace Matkakirja.Natiivi
             if (saatilaLuettu) return;
             saatilaLuettu = true;
             Saatila.Lue(PlayerPrefs.GetString(SaatilaAvain, ""));
+            // Säävalinnat poistuivat listasta (9.10.2026): tallennettu käsisää (esim. ukkonen) ei saa jäädä päälle → selkeä (pois).
+            if (Saatila.SaaValinta != PalloSaa.Pois) Saatila.Lue((Saatila.Live ? "1" : "0") + "|" + Saatila.AikaValinta + "|" + PalloSaa.Pois);
             AikaValinta = Avain(Saatila.Aika);
             Saatila.Muuttui += () =>
             {
@@ -2231,29 +2232,10 @@ namespace Matkakirja.Natiivi
             live.AddToClassList("mk-linssivalikko__live");
             live.EnableInClassList("mk-valittu", Saatila.Live);
             live.tooltip = Saatila.Live ? "Live päällä: kohteen kellonaika ja sää" : "Live pois";
-            // VAAKA (omistaja TF 167, 9.10.2026 klo 00.0x: "Valikko näyttää vaaka tilassa pystyvalikon asettelun"): samat rivit
-            // sarakkeina LIVEn alla (AIKA | SÄÄ 1–4 | SÄÄ 5–7), jotta lista mahtuu korkeuteen (iPhone vaaka ~393 pt) ja peitto pysyy
-            // pienenä; pystyssä yksi sarake kuten ennen.
-            bool vaaka = Screen.width > Screen.height;
-            aikaVaaka = vaaka;
-            VisualElement Sarake(VisualElement rivi)
-            {
-                var s = Rakenne.El(null, rivi, PickingMode.Ignore);
-                s.style.flexDirection = FlexDirection.Column;
-                s.style.minWidth = SarakeLeveys;
-                s.style.marginRight = Tyylikirja.Vali.S;
-                return s;
-            }
-            VisualElement sarakkeet = null, aikaSarake = valikko, saa1 = valikko, saa2 = valikko;
-            if (vaaka)
-            {
-                sarakkeet = Rakenne.El(null, valikko, PickingMode.Ignore);
-                sarakkeet.style.flexDirection = FlexDirection.Row;
-                sarakkeet.style.alignItems = Align.FlexStart;
-                aikaSarake = Sarake(sarakkeet); saa1 = Sarake(sarakkeet); saa2 = Sarake(sarakkeet);
-                saa2.style.marginRight = 0;
-            }
-            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", aikaSarake), Kirjasin.ModerniLihava);
+            // SÄÄVALINNAT POIS (omistaja 9.10.2026: "en ole varma tarvitaanko eri säätiloja, tosin jonkun verran ukkosta ja sadetta voisi
+            // tulla jossain kohdissa itsestään"; Päätoimittaja, juna 170): vain LIVE ja vuorokaudenaika; sää tulee itsestään (LS1, LS2).
+            // Lista on niin lyhyt, että sama asettelu käy pystyyn ja vaakaan (ei sarakkeita).
+            Kirjasimet.Aseta(Rakenne.Teksti("AIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
             foreach (var (arvo, nimi) in AikaValinnat)
             {
                 var a = arvo;
@@ -2261,25 +2243,10 @@ namespace Matkakirja.Natiivi
                 {
                     Saatila.AikaValinta = a; aikaKuvake = null;
                     Debug.Log("MATKAKIRJA opas: aika " + Avain(a));
-                }, aikaSarake);
-            }
-            if (!vaaka) Viiva();
-            Kirjasimet.Aseta(Rakenne.Teksti("SÄÄ", "mk-linssivalitsin__valiotsikko", saa1), Kirjasin.ModerniLihava);
-            // Toisen säädesarakkeen otsikkorivi tyhjänä, jotta rivit ovat samalla korkeudella.
-            if (vaaka) Kirjasimet.Aseta(Rakenne.Teksti(" ", "mk-linssivalitsin__valiotsikko", saa2), Kirjasin.ModerniLihava);
-            int i = 0, puoli = (SaaValinnat.Length + 1) / 2;
-            foreach (var (arvo, nimi) in SaaValinnat)
-            {
-                var sv = arvo;
-                Komento(nimi + (!Saatila.Live && sv == Saatila.Saa ? "  ✓" : ""), () =>
-                {
-                    Saatila.SaaValinta = sv; aikaKuvake = null;
-                    Debug.Log("MATKAKIRJA opas: sää " + sv);
-                }, i++ < puoli ? saa1 : saa2);
+                });
             }
         }
 
-        bool aikaVaaka;
         bool yoTeema;
 
         /// <summary>Yöllä listat tummalla teemalla (omistaja 9.10.2026 "Tee vain niin"), päivällä harmaalla.</summary>
@@ -2292,14 +2259,6 @@ namespace Matkakirja.Natiivi
             valikko.EnableInClassList("tk-teema-tumma", yo);
         }
 
-        /// <summary>Kierto ☀-listan ollessa auki: lista rakennetaan uudelleen uuden asennon asettelulla (katselmointi 9.10.).</summary>
-        void TarkistaAikaKierto()
-        {
-            if (Auki && nakyma == Nakyma.Aika && aikaVaaka != (Screen.width > Screen.height)) Avaa(Nakyma.Aika);
-        }
-
-        /// <summary>Vaakatilan sarakkeen vähimmäisleveys (pisin rivi "Ukkonen  ✓" mahtuu; LINSSIN VALIKON rivi).</summary>
-        const float SarakeLeveys = 132f;
 
         void LopetaKierros()
         {
