@@ -35,7 +35,21 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
-## TILA 8.10. 20.01 — JUNA 167 = historia-juna167 96b04efb3 (A) / final-ik-167 71d34bb97 (B, PT päättää 21.30); JUNA 168 -EHDOKAS historia-m @ 9fdd1f49d
+## TILA 8.10. 21.0x — JUNA 167 B = final-ik-167 2b4d59890 (fp-v3); JUNA 168 historia-m 96e47e994; JUNA 169 grafiikka-169 f13c72a85
+
+- Juna 167: PT kuittasi Final IK:n (runko B). Kärki siirtoseppa/final-ik-167 @ 2b4d59890 = 71d34bb97 + aanet-fp-v3 (PT/Julkaisija);
+  Natiiviseppä kääntää 22.00. HUOM PT:n viestissä luki 6f1e48ad8 — väärä (tarkista.sh kaatuu), oikea 71d34bb97/2b4d59890.
+- Juna 168: siirtoseppa/historia-m @ 96e47e994 (wt/proto-siirtoseppa-kello; + aanet-saa-v3, fp-v3, Final IK merge). Kuittaus PT:ltä
+  junan 167 jälkeen; junahaara masterin päälle, kun 167 on masterissa.
+- Juna 169: siirtoseppa/grafiikka-169 @ f13c72a85 (wt/proto-siirtoseppa-face; ⊇ historia-m + natiiviseppa/grafiikka-169 773372d34):
+  liekkien pehmeät varjot (SeikkailuVarjot 3/Ultra 6) myös leivotuille pinnoille, yövolyymi bloom + split toning + vinjetti,
+  DioraamaValaistu Forward+ (_CLUSTER_LIGHT_LOOP) + lisävalojen varjot, Candle VFX _FORWARD_PLUS → _CLUSTER_LIGHT_LOOP (LAHTEET.md),
+  Laitetaso.OnkoMSarja, lämpö → volumetriset pois / KuvaSkaala 0,7, usva (DioraamaUsva.hlsl), märkyys yhteinen (DioraamaMarkyys.hlsl)
+  myös Valaistuun, kävelyosien valoatlas (ValoVain + valo-kloonit, liikkuvat valot kerros 7), hahmojen ASTC 6×6, detaljikartat
+  (DioraamaDetalji.hlsl, detaljit.json), v45l 09c782fadd922e86. Varjostimien Metal-käännös todentuu vasta junassa 169.
+  Huonekohtainen lataus ehdotettu siirrettäväksi (PT:n oletus: myöhemmäksi). Kuvaparit PT:lle junan 169 käännöksestä.
+
+ — JUNA 167 = historia-juna167 96b04efb3 (A) / final-ik-167 71d34bb97 (B, PT päättää 21.30); JUNA 168 -EHDOKAS historia-m @ 9fdd1f49d
 
 - Juna 167 KUITATTU (PT): siirtoseppa/historia-juna167 @ 96b04efb3 (wt/proto-siirtoseppa-kello) = 1e7415270 + Pulun reunakuva piiloon
   seikkailussa (SeikkailuTapit.PuluPiiloon; omistaja 19.0x "Pulu pois videopelistä"). Pulun ensivihjettä EI tuotu. Paketti v45b (PT).
