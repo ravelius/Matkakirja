@@ -104,5 +104,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(OviTulos.AukiNarahtaa, LukittuOvi.Avaa(true, "avainrengas", ovi, true));
             Oleta.Sama(OviTulos.AukiHiljaa, LukittuOvi.Avaa(false, null, null, false));
         }
+
+        [Testi] static void OteRanteestaIrtipaasy()
+        {
+            // Huone 6: vouti tarttuu ranteeseen (OtaKiinni) → irtipääsyn ikkuna 1 s kuten jahdin jälkeen.
+            var v = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Linnavaki };
+            v.OtaKiinni();
+            Oleta.Sama(VartijanTila.Kiinni, v.Tila);
+            Oleta.Tosi(v.Irrottaudu() && v.Tila == VartijanTila.Halytys, "irtipääsy ikkunan aikana");
+            var w = new Vartija(Reitti, yaw: 0); w.OtaKiinni(); w.Paivita(1.2, new VartijanSyote());
+            Oleta.Tosi(!w.Irrottaudu(), "ikkuna 1 s ohi: ei irtipääsyä");
+        }
     }
 }

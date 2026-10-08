@@ -119,6 +119,9 @@ namespace Matkakirja.Linssit.Seikkailu
         /// <summary>Horjuu tai nousee (irtipääsy, torkkujan herääminen): sovitin soittaa nousu_istumasta torkkujalle.</summary>
         public bool Horjuu => horjahdus > 0;
 
+        /// <summary>Ote ilman jahtia (huone 6: vouti tarttuu ranteeseen, kun avaimia otetaan hänen katsoessaan): irtipääsyn ikkuna alkaa.</summary>
+        public void OtaKiinni() { Tila = VartijanTila.Kiinni; OteS = 0; Vauhti = 0; }
+
         /// <summary>Pelaaja kiertyy irti otteesta: onnistuu ikkunan aikana kerran 60 s:ssa. Hahmo horjahtaa (3 s) ja jatkaa jahtia.</summary>
         public bool Irrottaudu()
         {

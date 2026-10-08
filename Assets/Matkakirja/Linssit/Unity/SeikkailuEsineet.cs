@@ -35,6 +35,8 @@ namespace Matkakirja.Natiivi
         public static event Action Raapaistiin;
         /// <summary>Syvennyksen esine (kalkki, pateeni, liuskekivi) nostettiin (E3 vaihe 10: löytö).</summary>
         public static event Action<string> Nostettiin;
+        /// <summary>Esine laskettiin (id, paikka): huone 6 keittokulho voudin pöytään (SeikkailuSali).</summary>
+        public static event Action<string, Vector3> Laskettiin;
         public const int IrrotusNapautukset = 3;
         /// <summary>Koputuksen ääni (ontto kohta); Sovitin asettaa.</summary>
         public static AudioClip OnttoKlippi;
@@ -185,6 +187,7 @@ namespace Matkakirja.Natiivi
             se.LuoOvet(d); se.LuoKiipeily(d);
             SeikkailuKomero.Luo(d, go.transform, kirjaa);   // huone 9: tiilet ja arkun kilpilukko
             SeikkailuPako.Luo(d, go.transform, kirjaa);     // huone 10: kello, köysilasku, sukellus, uinti, vene
+            SeikkailuSali.Luo(d, go.transform, kirjaa);     // huone 6: kulho voudin pöytään, kiista, avaimet
             kirjaa?.Invoke($"seikkailu: esineet {se.esineet.Count} ({string.Join(", ", se.esineet.ConvertAll(x => x.Id))})");
         }
 
@@ -471,6 +474,12 @@ namespace Matkakirja.Natiivi
                 Nostettiin?.Invoke(e.Id);
                 return;
             }
+            if (e.Id == "avainrengas" && SeikkailuSali.Aktiivinen is SeikkailuSali sali && !sali.SaaOttaa(p))
+            {
+                // Vouti katsoo pöytää: ote ranteesta (irtipääsy tai tyrmä), avaimet jäävät.
+                SeikkailuVartijat.OteRanteesta(SeikkailuSali.Vouti);
+                return;
+            }
             if (e.Id == "avainrengas")
             {
                 // Avainrengas laukkuun (huone 6 vaihe 6), kädet jäävät vapaiksi; muurikäytävän ovi aukeaa sillä (huone 7).
@@ -531,6 +540,7 @@ namespace Matkakirja.Natiivi
                 if (!p.KahvaKiinni) e.Go.transform.position = p.transform.position + p.Hahmo.forward * 0.5f + Vector3.up * 0.9f;
                 e.Rb.isKinematic = false; e.Rb.linearVelocity = Vector3.zero; e.Heitetty = false;
                 kirjaa?.Invoke($"seikkailu: laskettu {e.Id}");
+                Laskettiin?.Invoke(e.Id, e.Go.transform.position);
             }));
         }
 
