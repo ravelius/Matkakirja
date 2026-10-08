@@ -1,47 +1,50 @@
 [
  {
-  "nimi": "ovi:vesiportti-alku",
-  "paikka": [
-   -56.3,
-   -5.95,
-   15.4
-  ],
-  "leveys": 2.4,
-  "korkeus": 2.6,
-  "osa": "vesiportti"
- },
- {
   "nimi": "ovi:vesiportti-loppu",
   "paikka": [
-   -53.7,
-   -5.85,
-   12.5
-  ],
-  "leveys": 2.4,
-  "korkeus": 2.6,
-  "osa": "vesiportti"
- },
- {
-  "nimi": "ovi:vesiportti-2-alku",
-  "paikka": [
-   -54.3,
-   -5.85,
-   12.2
-  ],
-  "leveys": 2.4,
-  "korkeus": 2.6,
-  "osa": "vesiportti"
- },
- {
-  "nimi": "ovi:vesiportti-2-loppu",
-  "paikka": [
-   -41.0,
+   -40.851,
    -5.6,
-   21.6
+   24.015
   ],
   "leveys": 2.4,
   "korkeus": 2.6,
+  "kierto_y": -2.1763,
+  "huom": "etuvarustuksen portti länsikyljessä (1499, L1 s. 99 + TULKINTA); silta laiturilta",
   "osa": "vesiportti"
+ },
+ {
+  "nimi": "ovi:vesiportti-alku",
+  "paikka": [
+   -58.381,
+   -5.9,
+   20.926
+  ],
+  "leveys": 2.4,
+  "korkeus": 2.6,
+  "kierto_y": 1.4085,
+  "huom": "sillan alku laiturin itäkyljessä s 4,5 (1499: silta etuvarustuksen porttiin; portinvartijan selän takana > 5 m); nousun jälkeen katse tänne",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "leikkaus:vain-1499-b",
+  "paikka": [
+   -45.0,
+   -4.0,
+   30.0
+  ],
+  "leikkaukset": [
+   "b1499-vesiportin-bastioni-l",
+   "b1499-vesiportin-bastioni-e",
+   "b1499-vesiportin-bastioni-fw",
+   "b1499-porttikurtiini-s101",
+   "b1499-s201-rakennus",
+   "b1499-kellobastioni",
+   "b1499-vesiportin-bastioni-itakylki",
+   "b1499-ponttonisilta",
+   "b1499-kellobastioni-lounas"
+  ],
+  "huom": "B (omistaja 8.10.): 1790-luvun länsivarustukset ja ponttonisilta pois vuoden 1499 näkymästä; tilalle kallioranta (oma geometria tässä osassa) ja etuvarustus + silta (osa vesiportti). Drone-näkymässä (K2) nykylinna normaalisti.",
+  "osa": "ranta-1499"
  },
  {
   "nimi": "ovi:porttikaytava-T102-alku",
@@ -1302,22 +1305,22 @@
  {
   "nimi": "seisoo:harja-vartija",
   "paikka": [
-   -38.196,
+   -33.546,
    16.6,
-   -8.942
+   -10.78
   ],
   "henkilo": "vartija-1500",
   "profiili": "vartija",
   "kierto_y": -2.7652,
-  "huom": "katsoo järvelle tornin liitoksessa (valmis Muurinharja-kohtaus alkaa 8 m:stä)",
+  "huom": "katsoo järvelle harjalla 5 m tornin liitoksesta (valmis Muurinharja-kohtaus alkaa 8 m:stä)",
   "osa": "muurikaytava"
  },
  {
   "nimi": "seisoo:harja-talonpoika",
   "paikka": [
-   -37.396,
+   -32.746,
    16.6,
-   -9.366
+   -11.204
   ],
   "henkilo": "talonpoika-1500",
   "kierto_y": -2.7652,
@@ -2339,17 +2342,33 @@
  {
   "nimi": "pinta:sora-1",
   "paikka": [
-   -55.457,
-   -5.95,
-   14.59
+   -36.867,
+   -5.6,
+   26.165
   ],
   "koko": [
-   5.0,
+   8.0,
    1.2,
-   2.2
+   15.0
   ],
-  "kierto_y": -0.7156,
-  "huom": "portin edusta laiturin juurella (A)",
+  "kierto_y": -0.6055,
+  "huom": "etuvarustuksen piha (1499, TULKINTA: sora ja kivet)",
+  "osa": "vesiportti"
+ },
+ {
+  "nimi": "pinta:puu-silta",
+  "paikka": [
+   -49.82,
+   -5.75,
+   22.328
+  ],
+  "koko": [
+   2.4,
+   1.2,
+   17.0
+  ],
+  "kierto_y": 1.4085,
+  "huom": "puusilta laiturilta etuvarustukseen",
   "osa": "vesiportti"
  },
  {
@@ -2424,7 +2443,7 @@
   "lyhty": true,
   "odotus_s": 8,
   "kierto_y": -0.7156,
-  "huom": "portilla laiturin juurella, katse laiturille; riidassa kääntyy veneeseen (selin porttiin)",
+  "huom": "laiturin juurella (1499), katse laiturille; riidassa kääntyy veneeseen; silta lähtee hänen selkänsä takaa itäkyljestä > 5 m",
   "osa": "vesiportti"
  },
  {
@@ -2454,11 +2473,12 @@
  {
   "nimi": "partio:renki-2",
   "paikka": [
-   -57.615,
-   -5.9,
-   16.158
+   -39.782,
+   -5.6,
+   24.755
   ],
   "odotus_s": 3,
+  "huom": "etuvarustuksen portin sisäpuoli (säkit sillan yli)",
   "osa": "vesiportti"
  },
  {
@@ -2590,45 +2610,45 @@
  {
   "nimi": "reitti:pelaaja-2",
   "paikka": [
-   -57.228,
+   -60.193,
    -5.9,
-   16.627
+   21.867
   ],
   "osa": "vesiportti"
  },
  {
   "nimi": "reitti:pelaaja-3",
   "paikka": [
-   -56.3,
-   -5.95,
-   15.4
+   -58.381,
+   -5.9,
+   20.926
   ],
   "osa": "vesiportti"
  },
  {
   "nimi": "reitti:pelaaja-4",
   "paikka": [
-   -53.7,
-   -5.85,
-   12.5
+   -49.82,
+   -5.75,
+   22.328
   ],
   "osa": "vesiportti"
  },
  {
   "nimi": "reitti:pelaaja-5",
   "paikka": [
-   -54.3,
-   -5.85,
-   12.2
+   -40.851,
+   -5.6,
+   24.015
   ],
   "osa": "vesiportti"
  },
  {
   "nimi": "reitti:pelaaja-6",
   "paikka": [
-   -41.0,
+   -37.152,
    -5.6,
-   21.6
+   26.576
   ],
   "osa": "vesiportti"
  },
