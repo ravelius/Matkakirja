@@ -531,6 +531,27 @@ namespace Matkakirja.Natiivi
             if (a != null) Destroy(a.gameObject);
         }
 
+        /// <summary>Huone 9: vartija kurkistaa sakaran yli lyhty koholla (toinen tiili putosi 10 s:n sisällä): valo paikkaan s sekuntia;
+        /// pelaaja jähmettyy, liike (vauhti > 0,3) → kiinni kuten kiipeilijä lyhdyn valossa.</summary>
+        public static void Kurkistus(Vector3 paikka, float s) { var a = Aktiivinen; if (a != null) a.StartCoroutine(a.Kurkista(paikka, s)); }
+
+        IEnumerator Kurkista(Vector3 paikka, float s)
+        {
+            var g = new GameObject("Kurkistuksen lyhty") { layer = DioraamaNayttamo.Kerros }; g.transform.SetParent(transform, false); g.transform.position = paikka;
+            var l = g.AddComponent<Light>(); l.type = LightType.Point; l.range = 0.1f; l.color = new Color(1f, 0.62f, 0.3f); l.intensity = 1.4f; l.shadows = LightShadows.None;
+            kirjaa?.Invoke("seikkailu: vartija kurkistaa (jähmety)");
+            var r = SeikkailuRepliikit.Aktiivinen; if (r != null && r.Valmis) r.Soita("vartija-epaily-1", g.transform);
+            for (float t = 0; t < s; t += Time.deltaTime)
+            {
+                l.range = Mathf.Min(LyhtyM, t / 2f * LyhtyM);   // valopiiri kasvaa 2 s (varoitus), sitten liike näkyy
+                var p = SeikkailuPelaaja.Aktiivinen;
+                if (t > 2f && p != null && p.Tila.Vauhti > 0.3) { Destroy(g); KiipeilijaHavaittu(); yield break; }
+                yield return null;
+            }
+            Destroy(g);
+            kirjaa?.Invoke("seikkailu: vartija palasi");
+        }
+
         /// <summary>Huone 8: liike lyhdyn valossa ulkoseinällä (valopiiri kasvoi 2 s = varoitus) → hälytys, vartijat vetävät köydestä
         /// (ei näytetä, FIKTIO) → tyrmä. Lähin vartija tekee kiinnioton.</summary>
         void KiipeilijaHavaittu()
