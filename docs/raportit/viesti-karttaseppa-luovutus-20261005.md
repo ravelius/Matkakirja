@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 20.3x
+# TILANNE 8.10. klo 20.1x
 
 - **PT 20.1x:** #4220 mergetty. Pallon maiseman työnjako:
   - Karttaseppä: vesimaski, pilviaineisto ja LUT-työkalu
