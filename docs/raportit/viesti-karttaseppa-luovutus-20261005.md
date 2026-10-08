@@ -1,3 +1,15 @@
+# TILANNE 8.10. klo 07.1x (tilinvaihto)
+
+- **Näyte 2 VALMIS 06.51** (`s2-eurooppa-talvip-nayte2/`, kuva `kuvapari-talvip-nayte2-20261008.jpg`): p SCL-kaistasta kaikista talvikuvista. PT hyväksyi linjan 06.xx.
+  Muutama suorakulmio jäi. Syy: kun ruudun 12 näkymästä puuttui joko luminen tai lumeton näkymä, väri pakotettiin.
+- **Korjaus tehty** `kausimosaiikki.mjs`:ään: puuttuva väri täydennetään ympäristöstä (normalisoitu sumennus r 40 × 2), ja sekoitus tehdään aina p:n mukaan.
+  Testi (3 lohkoa: 36_21, 37_21, 37_20) oli ajossa tilinvaihdossa ilman setsidiä → todennäköisesti katkesi.
+  **Aja uudelleen irrotettuna** (noin 40 min; tarkista lukko, ei junakäännöksen aikana):
+  `TALVI2=1 TALVI_P=1 TALVI_ITA=1 KAUSI=talvi ULOS=<T7>/iss-eurooppa-s2/s2-eurooppa-talvip-nayte3 LOHKOT=36_21,37_21,37_20` (tila.json kopiona talvi2:sta, valmiit tyhjänä).
+  Vertaa näyte 2:een (sama alue), lähetä yksi rivi PT:lle, ja koko ajo (169 lohkoa, noin 13 min/lohko → arvioi uudelleen, ehkä 20+ h; harkitse rinnakkaisuutta tai ovS-kerrointa) vasta kuittauksen jälkeen ja junien väliin.
+
+---
+
 # TILANNE 8.10. klo 05.4x
 
 - **TALVI_P (lumitodennäköisyys) toteutettu** `kausimosaiikki.mjs`:ään lipun TALVI_P=1 taakse. Kopiot: `-talvip-20261008.mjs` (näyte 1) ja `-talvip2-20261008.mjs` (näyte 2).
