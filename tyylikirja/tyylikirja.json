@@ -433,7 +433,7 @@
     "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",
     "NOSTOKORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
     "LUKUARKKI": { "teemat": ["paperi"], "kuvat": "vapaa", "sulku": "POISTU, Esc, veto oikealle" },
-    "KORTTI": { "teemat": ["paperi"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc" },
+    "KORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc", "_tumma": "TUMMA vain videopeleissä (seikkailun tietokortit ja löytö, natiivi .mk-kortti-kehys--tumma ja .mk-paljastus--tumma, tk-tumma-*-tokenit): omistaja 8.10.2026 klo 21.2x \"A\", koska pimeässä pelissä kirkas paperi häikäisee (Thiefin taso); muualla KORTTI paperisena." },
     "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
