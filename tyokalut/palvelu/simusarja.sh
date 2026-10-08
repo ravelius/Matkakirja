@@ -8,6 +8,8 @@
 #     source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2
 # → jokainen `xcrun simctl …` menee T7-sarjaan (funktio xcrun lisää --set) ja vanhat sisäiset UDID:t käännetään saman nimisen
 #   T7-laitteen UDID:ksi (simusarja-udid.tsv). Lisäksi MK_SIMSET, simctl (= xcrun simctl), mk_udid <laitenimi>.
+#   HUOM (LS1 8.10.): nohup/xargs/timeout/env ajavat oikean xcrunin funktion ohi → niissä `xcrun simctl --set "$MK_SIMSET" …`
+#   ja UDID valmiiksi käännettynä (mk_kaanna).
 # sh/bash/python: `zsh /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh simctl <simctl-argumentit>` (sama kääntö).
 #   simusarja.sh luo   → luo roolien laitteet samoilla nimillä (simusarja-laitteet-sisainen-20261007.tsv) T7-sarjaan, jos puuttuvat,
 #                        ja kirjoittaa UDID-taulun simusarja-udid.tsv (nimi<TAB>UDID<TAB>(vanha sisäinen UDID))
