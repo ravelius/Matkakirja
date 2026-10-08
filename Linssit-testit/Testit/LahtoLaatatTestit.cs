@@ -266,6 +266,37 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!s.Siirtymassa, "mittausajan jälkeen ≥ 95 % → siirtoruutu pois");
         }
 
+        // Omistaja 8.10. 08.3x (liikemalli): esittelyn aikana pallo lipuu kohti seuraavaa, kamera pysyy nykyisessä kohteessa;
+        // lipuminen pysähtyy pehmeästi ennen lentoa (lento alkaa levosta).
+        [Testi] static void PalloLipuuKohtiSeuraavaaKatseNykyisessa()
+        {
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                var s = new OpasSilmukka(new Kuvakulma(48.853, 2.3498, 420, 58, 0, 40));
+                var p = new List<(int n, string t)>();
+                s.Pyyda += (n, t) => p.Add((n, t));
+                s.Aloita("Pariisi");
+                s.Vastaus(p[^1].n, K("A", 48.8530, 2.3498));
+                for (int i = 0; i < 800 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.05, _ => 35);
+                s.Vastaus(p[^1].n, K("B", 48.8611, 2.3358));
+                var alku = OpasKuvaus.KameraPaikka(s.Asento, 48.8530, 2.3498);
+                double bE = (2.3358 - 2.3498) * 6371000 * Math.Cos(48.853 * Math.PI / 180) * Math.PI / 180, bN = (48.8611 - 48.8530) * 6371000 * Math.PI / 180;
+                double Etaisyys((double e, double n, double u) x) => Math.Sqrt((x.e - bE) * (x.e - bE) + (x.n - bN) * (x.n - bN));
+                double maks = 0;
+                for (int i = 0; i < 300; i++) { s.Paivita(0.05, _ => 35); maks = Math.Max(maks, s.LipumisVauhti); }   // 15 s esittelyä
+                var nyt = OpasKuvaus.KameraPaikka(s.Asento, 48.8530, 2.3498);
+                Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 48.8530, 2.3498) < 1, "katse pysyy nykyisessä kohteessa");
+                Oleta.Tosi(Etaisyys(nyt) < Etaisyys(alku) - 20, $"silmä lähestyi seuraavaa ({Etaisyys(alku):F0} → {Etaisyys(nyt):F0} m)");
+                Oleta.Tosi(maks <= OpasKuvaus.LipumisNopeus + 1e-9 && maks > 1, $"vauhti enintään {OpasKuvaus.LipumisNopeus} m/s ({maks:F1})");
+                s.AaniLoppui();
+                double vauhtiLahtiessa = double.NaN;
+                for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Lentaa; i++) { vauhtiLahtiessa = s.LipumisVauhti; s.Paivita(0.05, _ => 35); }
+                Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && vauhtiLahtiessa < 0.05, $"lipuminen pysähtyi ennen lentoa ({vauhtiLahtiessa:F2} m/s)");
+            }
+            finally { OpasSilmukka.PalloLento = false; }
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

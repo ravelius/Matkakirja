@@ -90,7 +90,9 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Pysähdyksen asento hetkellä aikaS saapumisesta: pehmeästi alkava hidas kierto ja kevyt dolly sisään.
         /// aikaS = 0 antaa täsmälleen kehyksen (lennon loppu), joten saapuminen on jatkuva.</summary>
-        public static Kuvakulma Pysahdyksella(Pysahdys p, double aikaS)
+        public static Kuvakulma Pysahdyksella(Pysahdys p, double aikaS) => Pysahdyksella(p, aikaS, true);
+
+        public static Kuvakulma Pysahdyksella(Pysahdys p, double aikaS, bool kiertaa)
         {
             double t = Math.Max(0, aikaS);
             // Kierto: kiihtyy KiertoAlkuS:ssa täyteen nopeuteen (integroitu smoothstep → kulma jatkuva ja derivaatta jatkuva).
@@ -110,8 +112,30 @@ namespace Matkakirja.Linssit.Kierros
             // (kattoraja hoitaa lisäksi OpasOhjaus.Sovella).
             if (lahemmas) et = Math.Max(et, Math.Min(p.EtaisyysM, RakennusEtMinM));
             if (p.MinEtM > 0) et = Math.Max(et, p.MinEtM);   // korkea kohde: koko kohde kuvassa myös lähemmäs-vaiheessa ja dollyssa
+            if (!kiertaa) { kierto = 0; lisaSuunta = 0; }   // pallo: ei kiertoa kohteen ympäri (Lipuminen hoitaa liikkeen)
             return new Kuvakulma(p.Lat, p.Lon, et, kall, KierrosLento.Kiedo(p.Suuntima + kierto + lisaSuunta), p.KatseKorkeusM);
         }
+
+        /// <summary>
+        /// LIPUMINEN (omistaja 8.10. 08.3x: "kun ollaan katsomassa kohdetta, [pallo] valmiiksi lipuu siihen suuntaan, missä seuraava kohde
+        /// on, pitäen kuitenkin kameran suunnan siihen päin, missä nykyinen kohde on"): silmä siirtyy vaakasuunnassa matkan d kohti
+        /// pistettä (lat, lon), katsepiste ja silmän korkeus pysyvät; suuntima, kallistus ja etäisyys lasketaan uudesta silmästä.
+        /// </summary>
+        public static Kuvakulma Lipunut(Kuvakulma k, double kohtiLat, double kohtiLon, double dM)
+        {
+            if (dM <= 0.01) return k;
+            var e = KameraPaikka(k, k.Lat, k.Lon);
+            const double R = 6371000, A = Math.PI / 180;
+            double ke = (kohtiLon - k.Lon) * R * Math.Cos(k.Lat * A) * A, kn = (kohtiLat - k.Lat) * R * A;
+            double de = ke - e.e, dn = kn - e.n, pit = Math.Sqrt(de * de + dn * dn);
+            if (pit < 1) return k;
+            double se = e.e + de / pit * dM, sn = e.n + dn / pit * dM;   // uusi silmä
+            double ve = -se, vn = -sn, vaaka = Math.Sqrt(ve * ve + vn * vn), pysty = e.u - k.KatseKorkeusM;
+            double suunta = Math.Atan2(ve, vn) / A, kall = Math.Atan2(vaaka, Math.Max(1, pysty)) / A;
+            return new Kuvakulma(k.Lat, k.Lon, Math.Sqrt(vaaka * vaaka + pysty * pysty), kall, KierrosLento.Kiedo(suunta), k.KatseKorkeusM);
+        }
+        /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>
+        public const double LipumisNopeus = 4, LipumisAlkuS = 6, LipumisOsuus = 0.25, LipumisMaxM = 200;
 
         /// <summary>
         /// Lento a → b osuudella t (0…1). PEHMEÄ KAARI (omistaja 6.10. 23.4x: "kamera liikkuu välillä turhan nopeasti ja tekee turhan

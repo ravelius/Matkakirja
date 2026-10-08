@@ -1040,13 +1040,13 @@ namespace Matkakirja.Linssit.Kierros
                     {
                         // Siirtymälento perillä: kaupungin yleiskuva kiertää; ei saapumista, puhetta eikä esihakua.
                         siirtyma = false;
-                        NykyinenKehys = kohdeKehys; kierto = 0;
+                        NykyinenKehys = kohdeKehys; kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0;
                         Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
                         break;
                     }
                     if (t >= 1)
                     {
-                        NykyinenKehys = kohdeKehys; kierto = 0;
+                        NykyinenKehys = kohdeKehys; kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0;
                         Vaihe = OpasVaihe.Puhuu; VaiheAika = 0;
                         if (VapaaTila) vapaaKehyksessa = true;   // vapaassa tilassa lennetty kohde: kehys kerronnan ajan
                         if (!puheAloitettu) aaniLoppui = false;
@@ -1153,6 +1153,11 @@ namespace Matkakirja.Linssit.Kierros
             return true;
         }
         public bool PelaajaOhjaa;
+        double lipumisAika, lipumisKatto, lipumisRaaka, valmisteluAika; (double lat, double lon)? lipumisKohti;
+        /// <summary>Lipumisen nykyinen vauhti (m/s; telemetria ja testit).</summary>
+        public double LipumisVauhti { get; private set; }
+        /// <summary>Lipumisen jarrutus lähdön valmistelussa (s): pelaajan valinta nopeammin.</summary>
+        double LipumisJarru => korostusPika ? 0.5 : 1.0;
         /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
         public bool KameraSeis;
         /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
@@ -1167,6 +1172,28 @@ namespace Matkakirja.Linssit.Kierros
             Ohjaus.Paivita(dt, Tapit.kierto, Tapit.korkeus, Tapit.etaisyys);
             if (!Ohjaus.Aktiivinen && !KameraSeis) kierto += dt;   // kuvasuurennoksen ajan kamera seis (omistaja 12.1x)   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa
             // Ohjauksen etäisyysrajat ovat perusasennon suhteisia (Siirtoseppä bfd0b8af), joten kaupungin 5 km:n yläkuva säilyy.
+            if (PalloLento && NykyinenKehys.Id != null)
+            {
+                // Pallo (omistaja 8.10.): ei kiertoa kohteen ympäri; lipuu kohti seuraavaa, kamera pysyy nykyisessä kohteessa.
+                var perus = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto, false);
+                var kohti = Seuraava != null && !Seuraava.Kysymys ? ((double, double)?)(Seuraava.Lat, Seuraava.Lon) : OdotettuPaikka;
+                if (kohti is (double klat, double klon) && lipumisKohti == null)
+                {
+                    lipumisKohti = (klat, klon);   // suunta ja katto lukitaan ensimmäisestä tiedosta (esihaun vaihdos ei hyppää)
+                    lipumisKatto = Math.Min(OpasKuvaus.LipumisMaxM, OpasKuvaus.LipumisOsuus * KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, klat, klon));
+                }
+                if (lipumisKohti != null && !Ohjaus.Aktiivinen && !KameraSeis)
+                {
+                    // Vauhti S-käyrällä ylös (LipumisAlkuS) ja lähdön valmistelussa S-käyrällä nollaan ennen lentoa (lento alkaa levosta).
+                    lipumisAika += dt;
+                    double ylos = KierrosLento.Smootherstep(Math.Min(1, lipumisAika / OpasKuvaus.LipumisAlkuS));
+                    LipumisVauhti = OpasKuvaus.LipumisNopeus * ylos * (1 - KierrosLento.Smootherstep(Math.Min(1, valmisteluAika / LipumisJarru)));
+                    lipumisRaaka += LipumisVauhti * dt;
+                }
+                double d = lipumisKatto > 0 ? lipumisKatto * Math.Tanh(lipumisRaaka / lipumisKatto) : 0;
+                Asento = Ohjaus.Sovella(lipumisKohti is (double la, double lo) ? OpasKuvaus.Lipunut(perus, la, lo, d) : perus, NykyinenKehys.MaaM);
+                return;
+            }
             Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto), NykyinenKehys.MaaM);
         }
 
@@ -1187,12 +1214,15 @@ namespace Matkakirja.Linssit.Kierros
         {
             // "Kerro lisää" (sama paikka) ei lähde mihinkään: korostus jää palamaan.
             bool sama = SamaPaikka();
-            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; return ehdot && sama; }
-            if (!LahtoValmisteilla) korostusPika = pika;   // nopeus valitaan valmistelun alussa
+            if (!valmistelu || sama) { LahtoValmisteilla = false; korostusPika = false; valmisteluAika = 0; return ehdot && sama; }
+            if (!LahtoValmisteilla) { korostusPika = pika; valmisteluAika = 0; }   // nopeus valitaan valmistelun alussa
             LahtoValmisteilla = true;
+            valmisteluAika += Math.Max(0, dt);
             if (!ehdot) return false;
             bool laatat = LahtoLaatatValmiit(dt);
-            return laatat && KorostusOsuus <= 0;
+            // Pallo: lipuminen on pysähtynyt ennen lentoa (ei nopeushyppyä).
+            bool lipuminenSeis = lipumisKohti == null || valmisteluAika >= LipumisJarru;
+            return laatat && KorostusOsuus <= 0 && lipuminenSeis;
         }
 
         /// <summary>Lähteekö lento nyt (LahtoValmis tai odotus täynnä); siirto (kauas tai pakotettu) ja "kerro lisää" lähtevät heti.</summary>
@@ -1261,6 +1291,7 @@ namespace Matkakirja.Linssit.Kierros
             Nykyinen = k; edellinen = null;
             // Pysähdyksen kierto hiipuu lennon alussa S-käyränä (ei pysähdy kerralla): lähtöhetken nopeus talteen.
             kiertoJatko = (Vaihe == OpasVaihe.Puhuu || Vaihe == OpasVaihe.Odottaa) && NykyinenKehys != null && !Ohjaus.Aktiivinen && !KameraSeis
+                && !(PalloLento && NykyinenKehys.Id != null)   // pallon pysähdys ei kierrä (lipuminen), joten jatkoa ei ole
                 ? OpasKuvaus.KiertoNopeus(kierto) : 0;
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
             lahto = Asento;

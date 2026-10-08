@@ -649,19 +649,19 @@ namespace Matkakirja.Natiivi
         // LENNON TELEMETRIA (Päätoimittaja 8.10. 08.3x): ruuduittain kulkunopeus (katsepisteen maajälki m/s), kuvan nopeus
         // (silmän nopeus / katse-etäisyys, rad/s), kääntönopeus (°/s) ja silmän korkeus; perillä yhteenveto (OpasKuvaus.Telemetria).
         readonly List<double> telV = new List<double>(), telVk = new List<double>(), telEt = new List<double>();
-        Kuvakulma? telEd; (double e, double n, double u) telSilma; double telKaanto, telAika; string telKohde;
+        Kuvakulma? telEd; (double e, double n, double u) telSilma; double telKaanto, telKierto, telAika; string telKohde;
         void Telemetria(OpasVaihe ennen)
         {
             bool lentaa = silmukka.Vaihe == OpasVaihe.Lentaa && !silmukka.Siirtymassa && !silmukka.AvausTauolla;
             var a = silmukka.Asento; float dt = Time.unscaledDeltaTime;
             if (lentaa && dt > 0)
             {
-                if (telEd == null) { telV.Clear(); telVk.Clear(); telEt.Clear(); telKaanto = 0; telAika = 0; telKohde = silmukka.Nykyinen?.Nimi; telSilma = OpasKuvaus.KameraPaikka(a, a.Lat, a.Lon); telEd = a; telLat0 = a.Lat; telLon0 = a.Lon; return; }
+                if (telEd == null) { telV.Clear(); telVk.Clear(); telEt.Clear(); telKaanto = 0; telKierto = 0; telAika = 0; telKohde = silmukka.Nykyinen?.Nimi; telSilma = OpasKuvaus.KameraPaikka(a, a.Lat, a.Lon); telEd = a; telLat0 = a.Lat; telLon0 = a.Lon; return; }
                 var ed = telEd.Value; var silma = OpasKuvaus.KameraPaikka(a, telLat0, telLon0);
                 double v = KierrosLento.EtaisyysM(ed.Lat, ed.Lon, a.Lat, a.Lon) / dt;
                 double de = silma.e - telSilma.e, dn = silma.n - telSilma.n, du = silma.u - telSilma.u;
                 double vk = Math.Sqrt(de * de + dn * dn + du * du) / dt, k = Math.Abs(KierrosLento.Kiedo(a.Suuntima - ed.Suuntima)) / dt;
-                telAika += dt; telV.Add(v); telVk.Add(vk); telEt.Add(a.EtaisyysM); telKaanto = Math.Max(telKaanto, k);
+                telAika += dt; telV.Add(v); telVk.Add(vk); telEt.Add(a.EtaisyysM); telKaanto = Math.Max(telKaanto, k); telKierto += k * dt;
                 o.Kirjaa($"opas: telemetria {telAika:F2} s kulku {v:F1} m/s kuva {vk / Math.Max(1, a.EtaisyysM):F3} rad/s kääntö {k:F1} °/s korkeus {silma.u:F0} m");
                 telSilma = silma; telEd = a;
             }
@@ -673,7 +673,7 @@ namespace Matkakirja.Natiivi
                     var (nousu, hidastus, huippu, _) = OpasKuvaus.Telemetria(telV, telEt, telAika / telV.Count);
                     var (_, _, huippuK, kasvu) = OpasKuvaus.Telemetria(telVk, telEt, telAika / telV.Count);
                     o.Kirjaa($"opas: telemetria yhteenveto {telKohde}: kesto {telAika:F1} s, kulku huippu {huippu:F0} m/s, nousu 10→90 % {nousu:F1} s, hidastus 90→10 % {hidastus:F1} s, "
-                        + $"silmä huippu {huippuK:F0} m/s, kuvan nopeuden kasvu huipun jälkeen {kasvu:P1}, kääntö enintään {telKaanto:F1} °/s");
+                        + $"silmä huippu {huippuK:F0} m/s, kuvan nopeuden kasvu huipun jälkeen {kasvu:P1}, kääntö enintään {telKaanto:F1} °/s, kokonaiskierto {telKierto:F0}°");
                 }
             }
         }
