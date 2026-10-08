@@ -1,3 +1,18 @@
+# TILANNE 8.10. klo 22.4x
+
+- **PT 22.3x: korjaus ennen pakettia, yksi paketti.**
+  - pk2-suodatus (kaikki kuvat, SCL pikseleittäin) KOPIOITU kausimosaiikki.mjs:ään 22.31. Vanha versio: `kausimosaiikki-talvi3-pk1-20261008.mjs`.
+  - pk1:llä tehdyt 133 lohkoa: `s2-eurooppa-talvi3-pk1-lohkot.json`. Loput tehdään pk2:lla.
+- **Tarkistus:** `kaudet/suorat-reunat.py` (z8, suorien reunojen haku) → `talvi3-tarkistus/`, kuvat myös _tyo/karttaseppa/talvi3-sauma-20261008/.
+  **UUSINTALISTA** `talvi3-tarkistus/uudelleenajo.json` (20 lohkoa): 33_17 33_18 34_17 34_18 34_19 35_17 35_18 35_19 36_18 36_19 37_18 37_19 34_20 35_20 36_20 37_20 36_21 37_21 38_21 39_22.
+- **KUN TALVI3 VALMIS (pe):**
+  1) Poista listan lohkot kunkin osan tila.json:n valmiit-listasta (tai tee uusi ULOS talvi3-uusinta), ja aja LOHKOT=lista kahdella prosessilla pk2-koodilla (noin 3 h).
+  2) Kerrokset: uusinta → osa1 → osa2.
+  3) Tarkista suorat-reunat.py:llä uudelleen.
+  4) Yksi paketti `kokoa-kausi.py talvi v1`, LAHTEET.md ja Julkaisija.
+
+---
+
 # TILANNE 8.10. klo 22.3x
 
 - **LS1:n korkeuslukija** käyttää korkeusdataamme, ja se on junassa 167 (25d32fd39). LS2:n vesi ei aktivoitunut rungossa C: try/catch-kuvapari noin 23.10, ja vesitason korjaus odottaa sitä.
