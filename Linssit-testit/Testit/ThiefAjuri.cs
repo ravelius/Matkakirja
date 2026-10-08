@@ -15,7 +15,7 @@ namespace Matkakirja.Linssit.Testit
 
         sealed class Suunnitelma { public KavelyMerkki Piilo, Esine; public (double X, double Y, double Z) Kohde; public double Odotus; public bool Hiipii; public Huonesimulaatio Tulos; public double Aika; }
 
-        static bool Turvallinen(Huonesimulaatio w, int kiinni0)
+        public static bool Turvallinen(Huonesimulaatio w, int kiinni0)
         {
             if (w.Kiinni != kiinni0) return false;
             foreach (var h in w.Hahmot)
@@ -153,6 +153,32 @@ namespace Matkakirja.Linssit.Testit
         public sealed class Tulos { public Huonesimulaatio Loppu; public List<string> Loki = new List<string>(); public List<Huonesimulaatio> Tilat = new List<Huonesimulaatio>(); public int Pisin; public Huonesimulaatio PisinTila; }
 
         /// <summary>Ajaa reittipisteet seuraava…loppu (0-pohjaiset, mukaan lukien) Thief-ajurilla; Loppu = null, jos jumi (Pisin, PisinTila).</summary>
+        /// <summary>
+        /// Kävelyhuoneiden rajat (pelattavuusmalli kohta 8, 0-pohjaiset reitti:pelaaja-indeksit; Linssiseppä 8.10.: rajapisteet turvallisia,
+        /// ei pelaaja-9:n pikkupihalla vaan keittiö 8–12). Huone alkaa edellisen loppupisteestä. Huoneet 1 (vene), 5 (kappelin arvoitus,
+        /// KappelinArvoitusTestit) ja 9–10 (komero, pako: Komero/Pako-ytimet) eivät ole reittikävelyä; huone 8 = harjan kävely
+        /// kiipeilyn alkuun (kiipeily: Kiipeily-ydin).
+        /// </summary>
+        public static readonly IReadOnlyDictionary<int, (int Alku, int Loppu)> Huoneet = new Dictionary<int, (int, int)>
+        {
+            [2] = (0, 7),     // laituri → porttikäytävän yläpää (pelaaja-1 → -8)
+            [3] = (7, 11),    // pikkupiha ja keittiö: tarjotin (-8 → -12)
+            [4] = (11, 19),   // Kirkkotorni ja portaat (-12 → -20)
+            [6] = (20, 63),   // kaari-ovi → Linnantupa ja voudin sali → Tott-kammion eteläovi (-21 → -64)
+            [7] = (63, 87),   // muuriportaat, ampuma- ja muurikäytävä → harja tikkaiden yläpäässä (-64 → -88)
+            [8] = (87, 91),   // harja: köysikieppi, sakara, kiipeilyn alku (-88 → -92)
+        };
+
+        /// <summary>Yhteinen läpipeluurajapinta (Linssiseppä 8.10.): ajaa huoneen tilasta w sen loppupisteeseen. w:n on oltava huoneessa:
+        /// seuraava kohde on w.Seuraava, jos se on huoneen sisällä, muuten huoneen ensimmäinen piste alun jälkeen.</summary>
+        public static Tulos AjaHuone(Huonesimulaatio w, int huone, int budjetti = 600)
+        {
+            if (!Huoneet.TryGetValue(huone, out var r))
+                throw new ArgumentOutOfRangeException(nameof(huone), huone, "ei kävelyhuone (1 vene, 5 kappelin arvoitus, 9 komero, 10 pako: ytimien omat testit)");
+            int seuraava = w.Seuraava > r.Alku && w.Seuraava <= r.Loppu ? w.Seuraava : r.Alku + 1;
+            return Aja(w, seuraava, r.Loppu, budjetti);
+        }
+
         public static Tulos Aja(Huonesimulaatio w, int seuraava, int loppu, int budjetti = 400)
         {
             loppuK = loppu; kayty.Clear(); var t = new Tulos(); (int K, Huonesimulaatio W) pisin = (seuraava, w);

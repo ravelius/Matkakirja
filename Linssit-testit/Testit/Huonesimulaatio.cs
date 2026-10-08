@@ -85,6 +85,7 @@ namespace Matkakirja.Linssit.Testit
         public (double X, double Y, double Z) Tarkistus;
         public HashSet<string> Kaytetyt = new HashSet<string>();
         public List<Aanilahde> Jono = new List<Aanilahde>();
+        public const double TarkistusPiiloM = 6;
         bool oliPiilossa, paljastui, riitaKaynnissa; double riitaAsti = 20, riitaAlkaa = -1; string pelaajanOsa;
 
         public static Huonesimulaatio Uusi()
@@ -280,6 +281,8 @@ namespace Matkakirja.Linssit.Testit
             if (piilossa && !oliPiilossa) foreach (var h in Hahmot) if (h.Aktiivinen && h.Aivot.Mittari >= Vartija.TutkiHuippu && h.NakiViimeksi) { paljastui = true; break; }
             if (!piilossa) paljastui = false;
             if (paljastui) piilossa = false;
+            // Tarkistuspiste myös piiloon menosta (SeikkailuVartijat, Siirtoseppä juna 167): kukaan ei epäile ja edellisestä yli 6 m.
+            if (piilossa && !oliPiilossa && !Vaara() && Etaisyys3(PX, PY, PZ, Tarkistus.X, Tarkistus.Y, Tarkistus.Z) > TarkistusPiiloM) { Tarkistus = (PX, PY, PZ); TarkistusSeuraava = Seuraava; }
             oliPiilossa = piilossa;
             double valo = Valoisuus();
             foreach (var h in Hahmot)
