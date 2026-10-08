@@ -378,6 +378,11 @@ namespace Matkakirja.Natiivi
             {
                 esiKohdeKaupunki = Aloituskaupunki;
                 silmukka.EsiKohde = (lk[0].Nimi, lk[0].Lat, lk[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {lk[0].Nimi} (linssireitti, siirron aikana)");
+                // Yksityiskohtaluettelo (JSON pääsäikeessä) ja kortin esilämmitys tumman siirtoruudun alla, ei laskeutumisen aikana
+                // (video7 13,9 s: 83 ms:n ruutu, kun molemmat käynnistyivät vasta kertojan alkaessa).
+                EsilataaYksityiskohdat(YksKaupunkiId());
+                kortti ??= new YksityiskohtaKortti(o);
+                if (kaupunki?.Kamera != null) kortti.Lammita(kaupunki.Kamera);
             }
             if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             {
@@ -681,7 +686,8 @@ namespace Matkakirja.Natiivi
             if (id == null || !yksPolut.TryGetValue(id, out var polku) || !yksValimuisti.TryGetValue(polku, out var l) || l == null) return;
             esiKortitId = k.Id;
             kortti ??= new YksityiskohtaKortti(o);
-            if (kaupunki?.Kamera != null) kortti.Lammita(kaupunki.Kamera);
+            // Esilämmitys vain paikallaan tai siirtoruudun alla (ensimmäinen piirto voi viedä ruudun).
+            if (kaupunki?.Kamera != null && (silmukka.Siirtymassa || silmukka.Vaihe != OpasVaihe.Lentaa)) kortti.Lammita(kaupunki.Kamera);
             foreach (var x in l)
                 if (string.Equals(x.KohdeId, k.Id, StringComparison.OrdinalIgnoreCase)) YksityiskohtaKortti.Esilataa(o, x.Url);
         }
