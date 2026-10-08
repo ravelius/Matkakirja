@@ -1,0 +1,404 @@
+{
+  "task": "olavinlinna-peli-kortti-20261008",
+  "taskNumber": 43,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+    "commit": "2b7447a5f68bbe2d4a94334d3fb654208dfc4b84",
+    "blob": "c03f6fc51f16672c96e93a77cbcef54b74f6319e"
+  },
+  "sourceReadInFull": true,
+  "sourceVersions": [
+    {
+      "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+      "commit": "e3210d900392806a8600ac6604eb826131f72590",
+      "blob": "9cbb7a7f05e6ca82775c0c5dd92cd87244c7cf8b",
+      "localSnapshot": "sources/01-tilaus.md",
+      "usedForGeneration": true
+    },
+    {
+      "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+      "commit": "2b7447a5f68bbe2d4a94334d3fb654208dfc4b84",
+      "blob": "c03f6fc51f16672c96e93a77cbcef54b74f6319e",
+      "localSnapshot": "sources/02-korjattu-tilaus.md",
+      "usedForGeneration": false,
+      "technicalDimensionCorrectionOnly": true
+    }
+  ],
+  "technicalSizeCorrection": {
+    "inputDimensions": [
+      1600,
+      1000
+    ],
+    "outputDimensions": [
+      1600,
+      900
+    ],
+    "cropXYXY": [
+      0,
+      70,
+      1600,
+      970
+    ],
+    "removedTopPixels": 70,
+    "removedBottomPixels": 30,
+    "resampledFor16x9Correction": false,
+    "additionalGenerations": 0
+  },
+  "imageCount": 2,
+  "generationCalls": 2,
+  "generationLimit": 2,
+  "generationMode": "built-in image_gen; two independent new reference-based generations",
+  "sourceImagePixelsUsed": true,
+  "referenceImages": [
+    {
+      "role": "source explicitly approved loading background; GEOMETRY reference, not edit target or night light reference",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/accepted-loading-background.png",
+      "sha256": "8abec7d8dd0c7a559b44ba1de97bf23b260ed85927c1a85b966e4403a9179a91",
+      "currentReadbackHTTP": 200,
+      "byteExactReadback": true,
+      "acceptedBySourceBlob": "9cbb7a7f05e6ca82775c0c5dd92cd87244c7cf8b"
+    },
+    {
+      "role": "owner provided1499game3Dgeometry-reference",
+      "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+      "blob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+      "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516"
+    },
+    {
+      "role": "owner provided1499game3Dgeometry-reference",
+      "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+      "blob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+      "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0"
+    }
+  ],
+  "assets": [
+    {
+      "id": "nelio",
+      "filename": "olavinlinna-kortti-nelio-1024.png",
+      "file": "olavinlinna-kortti-nelio-1024.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/final/olavinlinna-kortti-nelio-1024.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-231bcee7-564b-442c-a0fa-6bee3b29aba6.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/originals/nelio-tool-original.png",
+      "originalSHA256": "72267b109b33c45d37d34f4f6a1b7491bd16e021d198297a79bb5135848e2f93",
+      "sha256": "fd2367ef586b8063b5679e787a3c2cf89b07a1a1ef5bac134e13ed2a33cb1c0d",
+      "nativeGeneratedSize": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMode": "built-in image_gen; independent new reference-based generation",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: a NEW photorealistic card image for the Olavinlinna game, not an edit of an existing image.\nInput images: Image1 is the source-approved loading background, used ONLY for CASTLE GEOMETRY and tower/wall proportions. Image2 and Image3 are owner-provided v44z game3D shape renders, used ONLY as supplementary geometry references. Do not copy their sunset/daylight, graphic surfaces, black placeholder blocks, brown placeholder mounds, bridge, flags, or dark UI footer. Generate a completely new real-camera-looking NIGHT scene.\n\nSubject: Olavinlinna on Kyrönsalmi lake in its OWNER-SPECIFIED1499 form. Match the approved background's THREE main round towers and long main west stone wall: Clock Tower is tallest and leftmost; Church Tower is behind the wall near the middle, shorter; St Erik Tower is smallest at the right, partly behind the wall. Dark conical period roofs and round upper openings, natural irregular granite masonry. Low and modest medieval eastern forecastle at right. Preserve these height relations and overall silhouette from the references; do not improvise a later fortress. Replace every rough model placeholder with natural shoreline granite and a low stone wall. NO bridge, dock, jetty, east battery, Clock Bastion, Water Gate Bastion, seventeenth-century additions, modern castle structures, modern lights, flags or signs. Exactly these three main towers, no extra new tower.\n\nThe main courtyard gate/arched passage in the low front wall visibly glows with modest warm candle/fire light from inside; two or three narrow windows can carry a faint warm glow. The doorway is EMPTY, no humanlike silhouette, guard or figure. The light reflects faintly on wet stone and nearby water. No bright spotlight, floodlight, torch rows, building fire, flames outside the doorway or exaggerated orange blaze.\n\nForeground: ONE traditional fifteenth-century narrow wooden rowing boat, weathered dark clinker planks, curved raised bow, open interior with bare cross benches. The boat is visibly EMPTY: no person, face, figure, dummy, bundled coat, blanket, sack or animal. A SMALL old iron/brass candle lantern is fixed at its forward bow, which points slightly toward the castle. Warm light touches the bow's wet wood and water immediately below it. No other boat lamp. Optional plain oars rest on its sides, never held by hands. No engine, sail, modern safetygear, plastic, branded fittings or writings. Entire boat and both ends inside the frame, with space around it.\n\nWeather and light: midnight BLUE-GRAY twilight, light gentle rain with delicate narrow streaks and small circular raindrop ripples on the lake, low mist at water level around the castle's base. Mist softens the shore but does NOT cover the three-tower silhouette or whole wall. Dark cloudy lavender/slate-blue sky, no stars, no moon, no sunset colors, no sun rays. The ONLY warm sources are the gate, a few narrow windows and the single boat lantern. Natural muted photographic exposure: dark but readable, real wet stone/wood/water texture, no black empty graphic block, no fake UI gradient. Calm, expectant, mildly mysterious and welcoming, NOT frightening or cinematic horror.\n\nPhotographic style: convincing real-camera night photograph of a physical scene, natural lens perspective and depth, both castle and boat readable, believable light rain and subdued reflections. Not a painting, model render, miniature, CGI, fantasy game screenshot, HDR, orange-teal grading, oversaturated colors or glossy artificial texture. No text, letters, numbers, logos, signs, watermarks, border or caption pixels. No humans or faces ANYWHERE, no animals or birds, no violence. ONE image, no collage, no variants.\nComposition: SQUARE, output1024 x1024 opaque RGB PNG, sRGB. Entire main castle including all three roof tips and long main wall in the BACKGROUND CENTER, roughly y22-55percent, with generous margins. Calm cloudy sky at top12percent. Empty boat in foreground slightly LEFT OF CENTER, about24percent of image width, hull centered near x35percent and y64percent; boat stays roughly in y55-70percent, not large across the bottom. Bow lantern clearly visible, gate glow clearly visible. The very bottom12percent is quiet open lake water with no important object, rather than an artificial black UI footer. Low normal water-level camera, quiet balanced square composition. Do not crop the castle or enlarge boat beyond30percentwidth.\n",
+      "viitteet": [
+        {
+          "role": "source explicitly approved loading background; GEOMETRY reference, not edit target or night light reference",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/accepted-loading-background.png",
+          "sha256": "8abec7d8dd0c7a559b44ba1de97bf23b260ed85927c1a85b966e4403a9179a91",
+          "currentReadbackHTTP": 200,
+          "byteExactReadback": true,
+          "acceptedBySourceBlob": "9cbb7a7f05e6ca82775c0c5dd92cd87244c7cf8b"
+        },
+        {
+          "role": "owner provided1499game3Dgeometry-reference",
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "blob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516"
+        },
+        {
+          "role": "owner provided1499game3Dgeometry-reference",
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "blob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0"
+        }
+      ],
+      "source": {
+        "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+        "commit": "2b7447a5f68bbe2d4a94334d3fb654208dfc4b84",
+        "blob": "c03f6fc51f16672c96e93a77cbcef54b74f6319e"
+      },
+      "kuvateksti": "Kuvitteellinen sateinen yö vuoden 1499 Olavinlinnan edustalla: tyhjä soutuvene ja sen keulalyhty odottavat lämpimästi hehkuvan portin edessä. Havainnekuva.",
+      "technicalProcessing": "Whole-frame Lanczos resize to requested finaldimensions, no crop or visual retouch; standard sRGB ICC and required metadata added; tooloriginal preserved byte-exact.",
+      "originalByteExact": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationSource": {
+        "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+        "commit": "e3210d900392806a8600ac6604eb826131f72590",
+        "blob": "9cbb7a7f05e6ca82775c0c5dd92cd87244c7cf8b"
+      },
+      "deliverySource": {
+        "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+        "commit": "2b7447a5f68bbe2d4a94334d3fb654208dfc4b84",
+        "blob": "c03f6fc51f16672c96e93a77cbcef54b74f6319e"
+      },
+      "r2Key": "julisteet/olavinlinna-kortti/20261008/olavinlinna-kortti-nelio-1024.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/olavinlinna-kortti-nelio-1024.png",
+      "bytes": 1592468,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1024,
+        1024
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "visualReview": {
+        "taskNumber": 43,
+        "approvedForDelivery": true,
+        "nativeFinalsAnd480Viewed": true,
+        "enlargedGateDetailsViewed": true,
+        "generationCalls": 2,
+        "independentGenerations": true,
+        "observations": [
+          "Three round main towers and long west wall retain supplied height/order; low eastern forecastle and granite shoreline.",
+          "Both whole main-castle silhouettes and empty rowboats remain in frame, including lanterns at raised forward bows.",
+          "No humans, faces, animals, text, signs, logos, flags, bridges, docks, modern lights or later bastions observed.",
+          "Gate details show candle/firelight and its supports, without visible person or guard. Warm gate/lantern glows and reflections readable at480.",
+          "Cool blue-gray cloudy night, delicate rain streaks and rain rings, low shore mist; no moon/stars, bright sunlight, sunset grading or black graphic footer."
+        ],
+        "limitations": [
+          "Original invented photographic illustrations based on supplied geometry; not measured architecture or authentic1499 photographs.",
+          "Square roof begins about12percent down the frame, higher than indicative22percent band; all three roofs/mainwall remain whole with calm top sky.",
+          "Square boat centre is approximately31percent across and69percent down; slightly right of indicative18-30percent horizontal placement.",
+          "Wide source-v2technical correction crops70top/30bottom pixels; tallest roof retains about46pixel top margin and wholeboat remains above quietlower12percent.",
+          "Tool native sizes1254x1254 and1586x992; whole-frame technical resize produces requested1024x1024 and1600x900, without creative retouch or cropping."
+        ],
+        "assets": [
+          {
+            "file": "olavinlinna-kortti-nelio-1024.png",
+            "sha256": "fd2367ef586b8063b5679e787a3c2cf89b07a1a1ef5bac134e13ed2a33cb1c0d"
+          },
+          {
+            "file": "olavinlinna-kortti-vaaka-1600x900.png",
+            "sha256": "85aede66ed7831493df694ffa826755792f3ddb7da81993c927d0c22a261a3ab"
+          }
+        ],
+        "reviewedAtUTC": "2026-10-08T17:53:23.731571+00:00"
+      }
+    },
+    {
+      "id": "vaaka",
+      "filename": "olavinlinna-kortti-vaaka-1600x900.png",
+      "file": "olavinlinna-kortti-vaaka-1600x900.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/final/olavinlinna-kortti-vaaka-1600x900.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-542f75e0-4df2-47c3-9a00-81c21257781f.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/originals/vaaka-tool-original.png",
+      "originalSHA256": "6de3d83d67d03ae7e9cee9342c4d9763f7c5fe47dda3437434add8df6706eb55",
+      "sha256": "85aede66ed7831493df694ffa826755792f3ddb7da81993c927d0c22a261a3ab",
+      "nativeGeneratedSize": [
+        1586,
+        992
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationMode": "built-in image_gen; independent new reference-based generation",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: a NEW photorealistic card image for the Olavinlinna game, not an edit of an existing image.\nInput images: Image1 is the source-approved loading background, used ONLY for CASTLE GEOMETRY and tower/wall proportions. Image2 and Image3 are owner-provided v44z game3D shape renders, used ONLY as supplementary geometry references. Do not copy their sunset/daylight, graphic surfaces, black placeholder blocks, brown placeholder mounds, bridge, flags, or dark UI footer. Generate a completely new real-camera-looking NIGHT scene.\n\nSubject: Olavinlinna on Kyrönsalmi lake in its OWNER-SPECIFIED1499 form. Match the approved background's THREE main round towers and long main west stone wall: Clock Tower is tallest and leftmost; Church Tower is behind the wall near the middle, shorter; St Erik Tower is smallest at the right, partly behind the wall. Dark conical period roofs and round upper openings, natural irregular granite masonry. Low and modest medieval eastern forecastle at right. Preserve these height relations and overall silhouette from the references; do not improvise a later fortress. Replace every rough model placeholder with natural shoreline granite and a low stone wall. NO bridge, dock, jetty, east battery, Clock Bastion, Water Gate Bastion, seventeenth-century additions, modern castle structures, modern lights, flags or signs. Exactly these three main towers, no extra new tower.\n\nThe main courtyard gate/arched passage in the low front wall visibly glows with modest warm candle/fire light from inside; two or three narrow windows can carry a faint warm glow. The doorway is EMPTY, no humanlike silhouette, guard or figure. The light reflects faintly on wet stone and nearby water. No bright spotlight, floodlight, torch rows, building fire, flames outside the doorway or exaggerated orange blaze.\n\nForeground: ONE traditional fifteenth-century narrow wooden rowing boat, weathered dark clinker planks, curved raised bow, open interior with bare cross benches. The boat is visibly EMPTY: no person, face, figure, dummy, bundled coat, blanket, sack or animal. A SMALL old iron/brass candle lantern is fixed at its forward bow, which points slightly toward the castle. Warm light touches the bow's wet wood and water immediately below it. No other boat lamp. Optional plain oars rest on its sides, never held by hands. No engine, sail, modern safetygear, plastic, branded fittings or writings. Entire boat and both ends inside the frame, with space around it.\n\nWeather and light: midnight BLUE-GRAY twilight, light gentle rain with delicate narrow streaks and small circular raindrop ripples on the lake, low mist at water level around the castle's base. Mist softens the shore but does NOT cover the three-tower silhouette or whole wall. Dark cloudy lavender/slate-blue sky, no stars, no moon, no sunset colors, no sun rays. The ONLY warm sources are the gate, a few narrow windows and the single boat lantern. Natural muted photographic exposure: dark but readable, real wet stone/wood/water texture, no black empty graphic block, no fake UI gradient. Calm, expectant, mildly mysterious and welcoming, NOT frightening or cinematic horror.\n\nPhotographic style: convincing real-camera night photograph of a physical scene, natural lens perspective and depth, both castle and boat readable, believable light rain and subdued reflections. Not a painting, model render, miniature, CGI, fantasy game screenshot, HDR, orange-teal grading, oversaturated colors or glossy artificial texture. No text, letters, numbers, logos, signs, watermarks, border or caption pixels. No humans or faces ANYWHERE, no animals or birds, no violence. ONE image, no collage, no variants.\nComposition: WIDE LANDSCAPE16:10, output1600 x1000 opaque RGB PNG, sRGB. A NEW independent wide composition of the same subject and castle geometry. Entire three-tower/main-wall silhouette in BACKGROUND CENTER-RIGHT, approximately x38-91percent across the frame, leaving space at right and above every roof. Low modest eastern wall can fade toward right mist. Foreground empty boat on LEFT, about22percent of frame width, centered near x24percent and y69percent, in the lower third; bow points gently toward the warmly glowing empty gate. Lake and low mist extend to BOTH side edges. Entire boat and three main towers remain inside frame. Bottom12percent is quiet lake water without important details; no artificial black UI footer. Natural low35mm-like camera perspective, slightly wider than square, dark but both lantern/boat and castle silhouette readable.\n",
+      "viitteet": [
+        {
+          "role": "source explicitly approved loading background; GEOMETRY reference, not edit target or night light reference",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/accepted-loading-background.png",
+          "sha256": "8abec7d8dd0c7a559b44ba1de97bf23b260ed85927c1a85b966e4403a9179a91",
+          "currentReadbackHTTP": 200,
+          "byteExactReadback": true,
+          "acceptedBySourceBlob": "9cbb7a7f05e6ca82775c0c5dd92cd87244c7cf8b"
+        },
+        {
+          "role": "owner provided1499game3Dgeometry-reference",
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "blob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516"
+        },
+        {
+          "role": "owner provided1499game3Dgeometry-reference",
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "blob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0"
+        }
+      ],
+      "source": {
+        "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+        "commit": "2b7447a5f68bbe2d4a94334d3fb654208dfc4b84",
+        "blob": "c03f6fc51f16672c96e93a77cbcef54b74f6319e"
+      },
+      "kuvateksti": "Kuvitteellinen sateinen yö vuoden 1499 Olavinlinnan edustalla: tyhjä soutuvene ja keulalyhty hehkuvan portin edessä. Vaakakuva 16:9. Havainnekuva.",
+      "technicalProcessing": "Whole-frame Lanczos resize to requested finaldimensions, no crop or visual retouch; standard sRGB ICC and required metadata added; tooloriginal preserved byte-exact. Then source-v2authorised crop removes70top and30bottom pixels from1600x1000 to1600x900; no resampling in that correction, no new generation.",
+      "originalByteExact": true,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "generationSource": {
+        "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+        "commit": "e3210d900392806a8600ac6604eb826131f72590",
+        "blob": "9cbb7a7f05e6ca82775c0c5dd92cd87244c7cf8b"
+      },
+      "deliverySource": {
+        "path": "posti/sisaltokirjuri-codex-olavinlinna-peli-kortti-20261008.md",
+        "commit": "2b7447a5f68bbe2d4a94334d3fb654208dfc4b84",
+        "blob": "c03f6fc51f16672c96e93a77cbcef54b74f6319e"
+      },
+      "previous1600x1000LocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-peli-kortti-20261008/pre-correction/olavinlinna-kortti-vaaka-1600x1000.png",
+      "previous1600x1000SHA256": "e54d94c220ea9bd8dd89c81f5ba6a690c8f700dfaa50c43aef1c604c50f95694",
+      "technicalCorrection": {
+        "inputDimensions": [
+          1600,
+          1000
+        ],
+        "outputDimensions": [
+          1600,
+          900
+        ],
+        "cropXYXY": [
+          0,
+          70,
+          1600,
+          970
+        ],
+        "removedTopPixels": 70,
+        "removedBottomPixels": 30,
+        "resampledFor16x9Correction": false,
+        "additionalGenerations": 0
+      },
+      "r2Key": "julisteet/olavinlinna-kortti/20261008/olavinlinna-kortti-vaaka-1600x900.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/olavinlinna-kortti-vaaka-1600x900.png",
+      "bytes": 2102569,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "mitat": [
+        1600,
+        900
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "visualReview": {
+        "taskNumber": 43,
+        "approvedForDelivery": true,
+        "nativeFinalsAnd480Viewed": true,
+        "enlargedGateDetailsViewed": true,
+        "generationCalls": 2,
+        "independentGenerations": true,
+        "observations": [
+          "Three round main towers and long west wall retain supplied height/order; low eastern forecastle and granite shoreline.",
+          "Both whole main-castle silhouettes and empty rowboats remain in frame, including lanterns at raised forward bows.",
+          "No humans, faces, animals, text, signs, logos, flags, bridges, docks, modern lights or later bastions observed.",
+          "Gate details show candle/firelight and its supports, without visible person or guard. Warm gate/lantern glows and reflections readable at480.",
+          "Cool blue-gray cloudy night, delicate rain streaks and rain rings, low shore mist; no moon/stars, bright sunlight, sunset grading or black graphic footer."
+        ],
+        "limitations": [
+          "Original invented photographic illustrations based on supplied geometry; not measured architecture or authentic1499 photographs.",
+          "Square roof begins about12percent down the frame, higher than indicative22percent band; all three roofs/mainwall remain whole with calm top sky.",
+          "Square boat centre is approximately31percent across and69percent down; slightly right of indicative18-30percent horizontal placement.",
+          "Wide source-v2technical correction crops70top/30bottom pixels; tallest roof retains about46pixel top margin and wholeboat remains above quietlower12percent.",
+          "Tool native sizes1254x1254 and1586x992; whole-frame technical resize produces requested1024x1024 and1600x900, without creative retouch or cropping."
+        ],
+        "assets": [
+          {
+            "file": "olavinlinna-kortti-nelio-1024.png",
+            "sha256": "fd2367ef586b8063b5679e787a3c2cf89b07a1a1ef5bac134e13ed2a33cb1c0d"
+          },
+          {
+            "file": "olavinlinna-kortti-vaaka-1600x900.png",
+            "sha256": "85aede66ed7831493df694ffa826755792f3ddb7da81993c927d0c22a261a3ab"
+          }
+        ],
+        "reviewedAtUTC": "2026-10-08T17:53:23.731571+00:00"
+      }
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-2.jpg",
+    "r2Key": "julisteet/olavinlinna-kortti/20261008/toimitetut-2.jpg",
+    "url": "https://media.matkakirja.app/julisteet/olavinlinna-kortti/20261008/toimitetut-2.jpg",
+    "sha256": "6985fb8b73632b806fccbf19378fca502576657e098ff1024f677175f1aca73a",
+    "bytes": 188724,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "generationPrompts": [
+    {
+      "id": "nelio",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: a NEW photorealistic card image for the Olavinlinna game, not an edit of an existing image.\nInput images: Image1 is the source-approved loading background, used ONLY for CASTLE GEOMETRY and tower/wall proportions. Image2 and Image3 are owner-provided v44z game3D shape renders, used ONLY as supplementary geometry references. Do not copy their sunset/daylight, graphic surfaces, black placeholder blocks, brown placeholder mounds, bridge, flags, or dark UI footer. Generate a completely new real-camera-looking NIGHT scene.\n\nSubject: Olavinlinna on Kyrönsalmi lake in its OWNER-SPECIFIED1499 form. Match the approved background's THREE main round towers and long main west stone wall: Clock Tower is tallest and leftmost; Church Tower is behind the wall near the middle, shorter; St Erik Tower is smallest at the right, partly behind the wall. Dark conical period roofs and round upper openings, natural irregular granite masonry. Low and modest medieval eastern forecastle at right. Preserve these height relations and overall silhouette from the references; do not improvise a later fortress. Replace every rough model placeholder with natural shoreline granite and a low stone wall. NO bridge, dock, jetty, east battery, Clock Bastion, Water Gate Bastion, seventeenth-century additions, modern castle structures, modern lights, flags or signs. Exactly these three main towers, no extra new tower.\n\nThe main courtyard gate/arched passage in the low front wall visibly glows with modest warm candle/fire light from inside; two or three narrow windows can carry a faint warm glow. The doorway is EMPTY, no humanlike silhouette, guard or figure. The light reflects faintly on wet stone and nearby water. No bright spotlight, floodlight, torch rows, building fire, flames outside the doorway or exaggerated orange blaze.\n\nForeground: ONE traditional fifteenth-century narrow wooden rowing boat, weathered dark clinker planks, curved raised bow, open interior with bare cross benches. The boat is visibly EMPTY: no person, face, figure, dummy, bundled coat, blanket, sack or animal. A SMALL old iron/brass candle lantern is fixed at its forward bow, which points slightly toward the castle. Warm light touches the bow's wet wood and water immediately below it. No other boat lamp. Optional plain oars rest on its sides, never held by hands. No engine, sail, modern safetygear, plastic, branded fittings or writings. Entire boat and both ends inside the frame, with space around it.\n\nWeather and light: midnight BLUE-GRAY twilight, light gentle rain with delicate narrow streaks and small circular raindrop ripples on the lake, low mist at water level around the castle's base. Mist softens the shore but does NOT cover the three-tower silhouette or whole wall. Dark cloudy lavender/slate-blue sky, no stars, no moon, no sunset colors, no sun rays. The ONLY warm sources are the gate, a few narrow windows and the single boat lantern. Natural muted photographic exposure: dark but readable, real wet stone/wood/water texture, no black empty graphic block, no fake UI gradient. Calm, expectant, mildly mysterious and welcoming, NOT frightening or cinematic horror.\n\nPhotographic style: convincing real-camera night photograph of a physical scene, natural lens perspective and depth, both castle and boat readable, believable light rain and subdued reflections. Not a painting, model render, miniature, CGI, fantasy game screenshot, HDR, orange-teal grading, oversaturated colors or glossy artificial texture. No text, letters, numbers, logos, signs, watermarks, border or caption pixels. No humans or faces ANYWHERE, no animals or birds, no violence. ONE image, no collage, no variants.\nComposition: SQUARE, output1024 x1024 opaque RGB PNG, sRGB. Entire main castle including all three roof tips and long main wall in the BACKGROUND CENTER, roughly y22-55percent, with generous margins. Calm cloudy sky at top12percent. Empty boat in foreground slightly LEFT OF CENTER, about24percent of image width, hull centered near x35percent and y64percent; boat stays roughly in y55-70percent, not large across the bottom. Bow lantern clearly visible, gate glow clearly visible. The very bottom12percent is quiet open lake water with no important object, rather than an artificial black UI footer. Low normal water-level camera, quiet balanced square composition. Do not crop the castle or enlarge boat beyond30percentwidth.\n"
+    },
+    {
+      "id": "vaaka",
+      "generationPrompt": "Use case: historical-scene.\nAsset type: a NEW photorealistic card image for the Olavinlinna game, not an edit of an existing image.\nInput images: Image1 is the source-approved loading background, used ONLY for CASTLE GEOMETRY and tower/wall proportions. Image2 and Image3 are owner-provided v44z game3D shape renders, used ONLY as supplementary geometry references. Do not copy their sunset/daylight, graphic surfaces, black placeholder blocks, brown placeholder mounds, bridge, flags, or dark UI footer. Generate a completely new real-camera-looking NIGHT scene.\n\nSubject: Olavinlinna on Kyrönsalmi lake in its OWNER-SPECIFIED1499 form. Match the approved background's THREE main round towers and long main west stone wall: Clock Tower is tallest and leftmost; Church Tower is behind the wall near the middle, shorter; St Erik Tower is smallest at the right, partly behind the wall. Dark conical period roofs and round upper openings, natural irregular granite masonry. Low and modest medieval eastern forecastle at right. Preserve these height relations and overall silhouette from the references; do not improvise a later fortress. Replace every rough model placeholder with natural shoreline granite and a low stone wall. NO bridge, dock, jetty, east battery, Clock Bastion, Water Gate Bastion, seventeenth-century additions, modern castle structures, modern lights, flags or signs. Exactly these three main towers, no extra new tower.\n\nThe main courtyard gate/arched passage in the low front wall visibly glows with modest warm candle/fire light from inside; two or three narrow windows can carry a faint warm glow. The doorway is EMPTY, no humanlike silhouette, guard or figure. The light reflects faintly on wet stone and nearby water. No bright spotlight, floodlight, torch rows, building fire, flames outside the doorway or exaggerated orange blaze.\n\nForeground: ONE traditional fifteenth-century narrow wooden rowing boat, weathered dark clinker planks, curved raised bow, open interior with bare cross benches. The boat is visibly EMPTY: no person, face, figure, dummy, bundled coat, blanket, sack or animal. A SMALL old iron/brass candle lantern is fixed at its forward bow, which points slightly toward the castle. Warm light touches the bow's wet wood and water immediately below it. No other boat lamp. Optional plain oars rest on its sides, never held by hands. No engine, sail, modern safetygear, plastic, branded fittings or writings. Entire boat and both ends inside the frame, with space around it.\n\nWeather and light: midnight BLUE-GRAY twilight, light gentle rain with delicate narrow streaks and small circular raindrop ripples on the lake, low mist at water level around the castle's base. Mist softens the shore but does NOT cover the three-tower silhouette or whole wall. Dark cloudy lavender/slate-blue sky, no stars, no moon, no sunset colors, no sun rays. The ONLY warm sources are the gate, a few narrow windows and the single boat lantern. Natural muted photographic exposure: dark but readable, real wet stone/wood/water texture, no black empty graphic block, no fake UI gradient. Calm, expectant, mildly mysterious and welcoming, NOT frightening or cinematic horror.\n\nPhotographic style: convincing real-camera night photograph of a physical scene, natural lens perspective and depth, both castle and boat readable, believable light rain and subdued reflections. Not a painting, model render, miniature, CGI, fantasy game screenshot, HDR, orange-teal grading, oversaturated colors or glossy artificial texture. No text, letters, numbers, logos, signs, watermarks, border or caption pixels. No humans or faces ANYWHERE, no animals or birds, no violence. ONE image, no collage, no variants.\nComposition: WIDE LANDSCAPE16:10, output1600 x1000 opaque RGB PNG, sRGB. A NEW independent wide composition of the same subject and castle geometry. Entire three-tower/main-wall silhouette in BACKGROUND CENTER-RIGHT, approximately x38-91percent across the frame, leaving space at right and above every roof. Low modest eastern wall can fade toward right mist. Foreground empty boat on LEFT, about22percent of frame width, centered near x24percent and y69percent, in the lower third; bow points gently toward the warmly glowing empty gate. Lake and low mist extend to BOTH side edges. Entire boat and three main towers remain inside frame. Bottom12percent is quiet lake water without important details; no artificial black UI footer. Natural low35mm-like camera perspective, slightly wider than square, dark but both lantern/boat and castle silhouette readable.\n"
+    }
+  ],
+  "visualReview": {
+    "taskNumber": 43,
+    "approvedForDelivery": true,
+    "nativeFinalsAnd480Viewed": true,
+    "enlargedGateDetailsViewed": true,
+    "generationCalls": 2,
+    "independentGenerations": true,
+    "observations": [
+      "Three round main towers and long west wall retain supplied height/order; low eastern forecastle and granite shoreline.",
+      "Both whole main-castle silhouettes and empty rowboats remain in frame, including lanterns at raised forward bows.",
+      "No humans, faces, animals, text, signs, logos, flags, bridges, docks, modern lights or later bastions observed.",
+      "Gate details show candle/firelight and its supports, without visible person or guard. Warm gate/lantern glows and reflections readable at480.",
+      "Cool blue-gray cloudy night, delicate rain streaks and rain rings, low shore mist; no moon/stars, bright sunlight, sunset grading or black graphic footer."
+    ],
+    "limitations": [
+      "Original invented photographic illustrations based on supplied geometry; not measured architecture or authentic1499 photographs.",
+      "Square roof begins about12percent down the frame, higher than indicative22percent band; all three roofs/mainwall remain whole with calm top sky.",
+      "Square boat centre is approximately31percent across and69percent down; slightly right of indicative18-30percent horizontal placement.",
+      "Wide source-v2technical correction crops70top/30bottom pixels; tallest roof retains about46pixel top margin and wholeboat remains above quietlower12percent.",
+      "Tool native sizes1254x1254 and1586x992; whole-frame technical resize produces requested1024x1024 and1600x900, without creative retouch or cropping."
+    ],
+    "assets": [
+      {
+        "file": "olavinlinna-kortti-nelio-1024.png",
+        "sha256": "fd2367ef586b8063b5679e787a3c2cf89b07a1a1ef5bac134e13ed2a33cb1c0d"
+      },
+      {
+        "file": "olavinlinna-kortti-vaaka-1600x900.png",
+        "sha256": "85aede66ed7831493df694ffa826755792f3ddb7da81993c927d0c22a261a3ab"
+      }
+    ],
+    "reviewedAtUTC": "2026-10-08T17:53:23.731571+00:00"
+  },
+  "productionComplete": true,
+  "allR2ReadbacksByteExact": true,
+  "deliveryStatus": "Two requested card PNGs and comparison R2 verified; mailbox push pending.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-08T17:53:23.731571+00:00"
+}
