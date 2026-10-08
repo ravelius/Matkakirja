@@ -1,0 +1,2102 @@
+{
+  "task": "olavinlinna-latauskuva-20261008",
+  "taskNumber": 34,
+  "source": {
+    "path": "../sources/01-korjattu-tilaus.md",
+    "originalMailboxPath": "posti/sisaltokirjuri-codex-olavinlinna-latauskuva-kerrokset-20261008.md",
+    "sourceCommit": "556d6222308e8a79b2aec4090bc8b3c893ad286c",
+    "sourceBlob": "8face6ba06be9948dfa7461512ff59cae7acbfe2",
+    "sha256": "3ccda10c715478bcc2dd5cb1c90633df7b29f68c7138afa2a15ddc5846ad73be"
+  },
+  "sourceReadInFull": true,
+  "productionComplete": true,
+  "selectedLayerPNGCount": 9,
+  "previewResourceCount": 12,
+  "generationCalls": 3,
+  "generationLimit": 3,
+  "generationMode": "built-in image_gen: one new background plus two transparent components; no additional generation for technical exports",
+  "sourceImagePixelsUsed": true,
+  "referenceImages": [
+    {
+      "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+      "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+      "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+      "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+      "role": "owner-providedgame3Dshape-reference"
+    },
+    {
+      "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+      "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+      "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+      "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+      "role": "owner-providedgame3Dshape-reference"
+    }
+  ],
+  "referenceRole": "Owner-supplied game3D shape renders, not photographs or edit targets",
+  "assets": [
+    {
+      "path": "technical/exports/iphone-portrait-background.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/iphone-portrait-background.png",
+      "sha256": "64f29681f1f2768050e877c02e0c5e32bf60092d90755e69c0c9cbb1daecab76",
+      "width": 1290,
+      "height": 2796,
+      "mode": "RGB",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "iphone-portrait",
+      "role": "background",
+      "file": "iphone-portrait-background.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-background.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-background.png",
+      "bytes": 2538582,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        1290,
+        2796
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/iphone-portrait-boat.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/iphone-portrait-boat.png",
+      "sha256": "49dde364a149891f2e6668369afaef8f672270ef27b74da5458419cdad329afe",
+      "width": 1290,
+      "height": 2796,
+      "mode": "RGBA",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "iphone-portrait",
+      "role": "boat",
+      "file": "iphone-portrait-boat.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-boat.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-boat.png",
+      "bytes": 22616,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        1290,
+        2796
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/iphone-portrait-mist.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/iphone-portrait-mist.png",
+      "sha256": "83e625fd972b4aef98851468727323034b976c8e22ec6fc72ea6b31a2742d679",
+      "width": 1290,
+      "height": 2796,
+      "mode": "RGBA",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "iphone-portrait",
+      "role": "mist",
+      "file": "iphone-portrait-mist.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-mist.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-mist.png",
+      "bytes": 226429,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        1290,
+        2796
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/ipad-portrait-background.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-portrait-background.png",
+      "sha256": "9984eff8d6fefd67f875cbc1a7485d69f2907793d1f0fed6397cb216d9ee2c09",
+      "width": 2048,
+      "height": 2732,
+      "mode": "RGB",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "ipad-portrait",
+      "role": "background",
+      "file": "ipad-portrait-background.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-background.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-background.png",
+      "bytes": 3706454,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        2048,
+        2732
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/ipad-portrait-boat.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-portrait-boat.png",
+      "sha256": "1410058fe35c4f1b75c6b613d0c6f9e6e39104517c8e043c8c185104f025d908",
+      "width": 2048,
+      "height": 2732,
+      "mode": "RGBA",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "ipad-portrait",
+      "role": "boat",
+      "file": "ipad-portrait-boat.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-boat.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-boat.png",
+      "bytes": 40462,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        2048,
+        2732
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/ipad-portrait-mist.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-portrait-mist.png",
+      "sha256": "0fc8c2364c2aa329f8abac8ddeccbb4ea2cdc5a945b785e33ccc40cb8fd1e17c",
+      "width": 2048,
+      "height": 2732,
+      "mode": "RGBA",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "ipad-portrait",
+      "role": "mist",
+      "file": "ipad-portrait-mist.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-mist.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-mist.png",
+      "bytes": 346123,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        2048,
+        2732
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/ipad-landscape-background.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-background.png",
+      "sha256": "8abec7d8dd0c7a559b44ba1de97bf23b260ed85927c1a85b966e4403a9179a91",
+      "width": 2732,
+      "height": 2048,
+      "mode": "RGB",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "ipad-landscape",
+      "role": "background",
+      "file": "ipad-landscape-background.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+      "bytes": 3992464,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        2732,
+        2048
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/ipad-landscape-boat.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-boat.png",
+      "sha256": "b183b2c8b1544700fb79b2e9e15e314fe1132b9e9ae52d2ed09d7591e787fc06",
+      "width": 2732,
+      "height": 2048,
+      "mode": "RGBA",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "ipad-landscape",
+      "role": "boat",
+      "file": "ipad-landscape-boat.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-boat.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-boat.png",
+      "bytes": 52658,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        2732,
+        2048
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    },
+    {
+      "path": "technical/exports/ipad-landscape-mist.png",
+      "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-mist.png",
+      "sha256": "ce78555ff7afe4514573940e938acf7156078ce81c1eebae4ffc7857b6776007",
+      "width": 2732,
+      "height": 2048,
+      "mode": "RGBA",
+      "mimeType": "image/png",
+      "sRGB": true,
+      "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kind": "layer",
+      "view": "ipad-landscape",
+      "role": "mist",
+      "file": "ipad-landscape-mist.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-mist.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-mist.png",
+      "bytes": 313236,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+      "viitteet": [
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+          "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+          "role": "owner-providedgame3Dshape-reference"
+        },
+        {
+          "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+          "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+          "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+          "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+          "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+          "role": "owner-providedgame3Dshape-reference"
+        }
+      ],
+      "mitat": [
+        2732,
+        2048
+      ],
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+    }
+  ],
+  "views": [
+    {
+      "id": "iphone-portrait",
+      "mitat": [
+        1290,
+        2796
+      ],
+      "layers": {
+        "background": {
+          "path": "technical/exports/iphone-portrait-background.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/iphone-portrait-background.png",
+          "sha256": "64f29681f1f2768050e877c02e0c5e32bf60092d90755e69c0c9cbb1daecab76",
+          "width": 1290,
+          "height": 2796,
+          "mode": "RGB",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "iphone-portrait",
+          "role": "background",
+          "file": "iphone-portrait-background.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-background.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-background.png",
+          "bytes": 2538582,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            1290,
+            2796
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        },
+        "boat": {
+          "path": "technical/exports/iphone-portrait-boat.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/iphone-portrait-boat.png",
+          "sha256": "49dde364a149891f2e6668369afaef8f672270ef27b74da5458419cdad329afe",
+          "width": 1290,
+          "height": 2796,
+          "mode": "RGBA",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "iphone-portrait",
+          "role": "boat",
+          "file": "iphone-portrait-boat.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-boat.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-boat.png",
+          "bytes": 22616,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            1290,
+            2796
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        },
+        "mist": {
+          "path": "technical/exports/iphone-portrait-mist.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/iphone-portrait-mist.png",
+          "sha256": "83e625fd972b4aef98851468727323034b976c8e22ec6fc72ea6b31a2742d679",
+          "width": 1290,
+          "height": 2796,
+          "mode": "RGBA",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "iphone-portrait",
+          "role": "mist",
+          "file": "iphone-portrait-mist.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-mist.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/iphone-portrait-mist.png",
+          "bytes": 226429,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            1290,
+            2796
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        }
+      },
+      "boatKeelPivot": [
+        670.6536076662909,
+        1789.1025930101466
+      ],
+      "boatBBoxXYWH": [
+        618,
+        1759,
+        105,
+        31
+      ],
+      "boatBBoxAlphaThreshold": 16,
+      "boatAlphaNonzeroBBoxXYWH": [
+        616,
+        1753,
+        109,
+        43
+      ],
+      "mistBBoxXYWH": [
+        129,
+        1391,
+        1032,
+        125
+      ],
+      "backgroundTransform": {
+        "type": "centered-cover-crop",
+        "inputSize": [
+          2048,
+          2048
+        ],
+        "scale": 1.365234375,
+        "resizedSize": [
+          2796,
+          2796
+        ],
+        "cropXYXY": [
+          753,
+          0,
+          2043,
+          2796
+        ],
+        "matrixFromRawMaster": [
+          [
+            1.365234375,
+            0,
+            -753
+          ],
+          [
+            0,
+            1.365234375,
+            0
+          ]
+        ]
+      },
+      "boatTransform": {
+        "sourceSize": [
+          1774,
+          887
+        ],
+        "sourceSemanticBBoxXYWH": [
+          46,
+          217,
+          1687,
+          492
+        ],
+        "sourceKeelPivot": [
+          889.5,
+          708
+        ],
+        "semanticAlphaThreshold": 16,
+        "targetViewportWidthFraction": 0.08,
+        "actualSemanticWidthFraction": 0.08139534883720931,
+        "requestedKeelPivot": [
+          671,
+          1789
+        ],
+        "keelPivot": [
+          670.6536076662909,
+          1789.1025930101466
+        ],
+        "semanticBBoxXYWH": [
+          618,
+          1759,
+          105,
+          31
+        ],
+        "actualAlphaNonzeroBBoxXYWH": [
+          616,
+          1753,
+          109,
+          43
+        ],
+        "resizedWholeSourceCanvas": [
+          109,
+          54
+        ],
+        "sourceScaleXY": [
+          0.06144306651634724,
+          0.060879368658399095
+        ],
+        "placementOffsetXY": [
+          616,
+          1746
+        ],
+        "matrixFromSource": [
+          [
+            0.06144306651634724,
+            0,
+            616
+          ],
+          [
+            0,
+            0.060879368658399095,
+            1746
+          ]
+        ],
+        "reflectionIncluded": false,
+        "outsideBottom25": true,
+        "outerEdgeAlpha": {
+          "top": [
+            0,
+            0
+          ],
+          "bottom": [
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0
+          ]
+        },
+        "resampling": "Pillow RGBa premultiplied Lanczos; full source canvas retained; alpha never thresholded or keyed.",
+        "responsiveComponentScaling": true,
+        "responsiveDisclosure": "Boat is rescaled from the same generated source after background cover crop to 8% of each viewport width; it is not a uniform flat crop of the master boat layer."
+      },
+      "mistTransform": {
+        "sourceSize": [
+          2172,
+          724
+        ],
+        "sourceSemanticBBoxXYWH": [
+          87,
+          265,
+          2007,
+          177
+        ],
+        "semanticAlphaThreshold": 16,
+        "semanticBBoxXYWH": [
+          129,
+          1391,
+          1032,
+          125
+        ],
+        "actualAlphaNonzeroBBoxXYWH": [
+          95,
+          1252,
+          1091,
+          373
+        ],
+        "requestedSemanticCenter": [
+          645.0,
+          1453.92
+        ],
+        "actualSemanticCenter": [
+          645.0,
+          1453.5
+        ],
+        "targetWidthFraction": 0.8,
+        "targetHeightFraction": 0.045,
+        "actualSemanticWidthFraction": 0.8,
+        "actualSemanticHeightFraction": 0.044706723891273246,
+        "resizedWholeSourceCanvas": [
+          1117,
+          515
+        ],
+        "sourceScaleXY": [
+          0.5142725598526704,
+          0.7113259668508287
+        ],
+        "placementOffsetXY": [
+          84,
+          1202
+        ],
+        "matrixFromSource": [
+          [
+            0.5142725598526704,
+            0,
+            84
+          ],
+          [
+            0,
+            0.7113259668508287,
+            1202
+          ]
+        ],
+        "outerEdgeAlpha": {
+          "top": [
+            0,
+            0
+          ],
+          "bottom": [
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0
+          ]
+        },
+        "optional": true,
+        "resampling": "Pillow RGBa premultiplied Lanczos; responsive width and height scaling, actual alpha unchanged except resampling; no opacity edit or thresholded mask.",
+        "placementDisclosure": "Semantic low mist spans roughly 49.75-54.25% of viewport height at the castle base; tower and main-wall silhouettes remain above its appreciable alpha."
+      },
+      "UIFade": {
+        "type": "deterministic-code-native-UI-matte",
+        "colour": "#1d1610",
+        "startY": 2097.0,
+        "fullOpacityY": 2376.6,
+        "curve": "a=round(255*smoothstep(clamp((y/H-0.75)/0.10,0,1)))",
+        "bottom15MeanLstar": 7.88071870758258,
+        "passesLstarAtMost12": true,
+        "rawGeneratedBackgroundPreserved": true,
+        "disclosure": "UI matte is baked into delivered background layer per viewport; audit PNGs preserve the pre-matte background and separate overlay."
+      },
+      "previews": [
+        {
+          "angleDegrees": -2,
+          "kind": "preview",
+          "view": "iphone-portrait",
+          "role": -2,
+          "file": "iphone-portrait-boat-minus2-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-minus2-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-minus2-native.png",
+          "sha256": "43dc2984a744c391a45953da251d7112b772d15680ae35d0f98e491f21377c89",
+          "bytes": 2535545,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        },
+        {
+          "angleDegrees": 0,
+          "kind": "preview",
+          "view": "iphone-portrait",
+          "role": 0,
+          "file": "iphone-portrait-boat-zero-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-zero-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-zero-native.png",
+          "sha256": "9556b82ba8ca14033460c7401c9761af0c58dd1e9c2ab1bb12ef00191c833c1d",
+          "bytes": 2535549,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        },
+        {
+          "angleDegrees": 2,
+          "kind": "preview",
+          "view": "iphone-portrait",
+          "role": 2,
+          "file": "iphone-portrait-boat-plus2-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-plus2-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-plus2-native.png",
+          "sha256": "00c6e4542bb65ade66a4961f4c99b653e0a41ce6fbed199ef9edb0f7f5780442",
+          "bytes": 2535539,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        }
+      ]
+    },
+    {
+      "id": "ipad-portrait",
+      "mitat": [
+        2048,
+        2732
+      ],
+      "layers": {
+        "background": {
+          "path": "technical/exports/ipad-portrait-background.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-portrait-background.png",
+          "sha256": "9984eff8d6fefd67f875cbc1a7485d69f2907793d1f0fed6397cb216d9ee2c09",
+          "width": 2048,
+          "height": 2732,
+          "mode": "RGB",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "ipad-portrait",
+          "role": "background",
+          "file": "ipad-portrait-background.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-background.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-background.png",
+          "bytes": 3706454,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            2048,
+            2732
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        },
+        "boat": {
+          "path": "technical/exports/ipad-portrait-boat.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-portrait-boat.png",
+          "sha256": "1410058fe35c4f1b75c6b613d0c6f9e6e39104517c8e043c8c185104f025d908",
+          "width": 2048,
+          "height": 2732,
+          "mode": "RGBA",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "ipad-portrait",
+          "role": "boat",
+          "file": "ipad-portrait-boat.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-boat.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-boat.png",
+          "bytes": 40462,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            2048,
+            2732
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        },
+        "mist": {
+          "path": "technical/exports/ipad-portrait-mist.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-portrait-mist.png",
+          "sha256": "0fc8c2364c2aa329f8abac8ddeccbb4ea2cdc5a945b785e33ccc40cb8fd1e17c",
+          "width": 2048,
+          "height": 2732,
+          "mode": "RGBA",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "ipad-portrait",
+          "role": "mist",
+          "file": "ipad-portrait-mist.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-mist.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-portrait-mist.png",
+          "bytes": 346123,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            2048,
+            2732
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        }
+      },
+      "boatKeelPivot": [
+        1065.2423900789177,
+        1747.6448703494927
+      ],
+      "boatBBoxXYWH": [
+        983,
+        1700,
+        164,
+        48
+      ],
+      "boatBBoxAlphaThreshold": 16,
+      "boatAlphaNonzeroBBoxXYWH": [
+        981,
+        1690,
+        168,
+        69
+      ],
+      "mistBBoxXYWH": [
+        205,
+        1359,
+        1638,
+        123
+      ],
+      "backgroundTransform": {
+        "type": "centered-cover-crop",
+        "inputSize": [
+          2048,
+          2048
+        ],
+        "scale": 1.333984375,
+        "resizedSize": [
+          2732,
+          2732
+        ],
+        "cropXYXY": [
+          342,
+          0,
+          2390,
+          2732
+        ],
+        "matrixFromRawMaster": [
+          [
+            1.333984375,
+            0,
+            -342
+          ],
+          [
+            0,
+            1.333984375,
+            0
+          ]
+        ]
+      },
+      "boatTransform": {
+        "sourceSize": [
+          1774,
+          887
+        ],
+        "sourceSemanticBBoxXYWH": [
+          46,
+          217,
+          1687,
+          492
+        ],
+        "sourceKeelPivot": [
+          889.5,
+          708
+        ],
+        "semanticAlphaThreshold": 16,
+        "targetViewportWidthFraction": 0.08,
+        "actualSemanticWidthFraction": 0.080078125,
+        "requestedKeelPivot": [
+          1065,
+          1748
+        ],
+        "keelPivot": [
+          1065.2423900789177,
+          1747.6448703494927
+        ],
+        "semanticBBoxXYWH": [
+          983,
+          1700,
+          164,
+          48
+        ],
+        "actualAlphaNonzeroBBoxXYWH": [
+          981,
+          1690,
+          168,
+          69
+        ],
+        "resizedWholeSourceCanvas": [
+          172,
+          86
+        ],
+        "sourceScaleXY": [
+          0.09695603156708005,
+          0.09695603156708005
+        ],
+        "placementOffsetXY": [
+          979,
+          1679
+        ],
+        "matrixFromSource": [
+          [
+            0.09695603156708005,
+            0,
+            979
+          ],
+          [
+            0,
+            0.09695603156708005,
+            1679
+          ]
+        ],
+        "reflectionIncluded": false,
+        "outsideBottom25": true,
+        "outerEdgeAlpha": {
+          "top": [
+            0,
+            0
+          ],
+          "bottom": [
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0
+          ]
+        },
+        "resampling": "Pillow RGBa premultiplied Lanczos; full source canvas retained; alpha never thresholded or keyed.",
+        "responsiveComponentScaling": true,
+        "responsiveDisclosure": "Boat is rescaled from the same generated source after background cover crop to 8% of each viewport width; it is not a uniform flat crop of the master boat layer."
+      },
+      "mistTransform": {
+        "sourceSize": [
+          2172,
+          724
+        ],
+        "sourceSemanticBBoxXYWH": [
+          87,
+          265,
+          2007,
+          177
+        ],
+        "semanticAlphaThreshold": 16,
+        "semanticBBoxXYWH": [
+          205,
+          1359,
+          1638,
+          123
+        ],
+        "actualAlphaNonzeroBBoxXYWH": [
+          151,
+          1195,
+          1735,
+          402
+        ],
+        "requestedSemanticCenter": [
+          1024.0,
+          1420.64
+        ],
+        "actualSemanticCenter": [
+          1024.0,
+          1420.5
+        ],
+        "targetWidthFraction": 0.8,
+        "targetHeightFraction": 0.045,
+        "actualSemanticWidthFraction": 0.7998046875,
+        "actualSemanticHeightFraction": 0.045021961932650074,
+        "resizedWholeSourceCanvas": [
+          1773,
+          503
+        ],
+        "sourceScaleXY": [
+          0.8162983425414365,
+          0.6947513812154696
+        ],
+        "placementOffsetXY": [
+          134,
+          1175
+        ],
+        "matrixFromSource": [
+          [
+            0.8162983425414365,
+            0,
+            134
+          ],
+          [
+            0,
+            0.6947513812154696,
+            1175
+          ]
+        ],
+        "outerEdgeAlpha": {
+          "top": [
+            0,
+            0
+          ],
+          "bottom": [
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0
+          ]
+        },
+        "optional": true,
+        "resampling": "Pillow RGBa premultiplied Lanczos; responsive width and height scaling, actual alpha unchanged except resampling; no opacity edit or thresholded mask.",
+        "placementDisclosure": "Semantic low mist spans roughly 49.75-54.25% of viewport height at the castle base; tower and main-wall silhouettes remain above its appreciable alpha."
+      },
+      "UIFade": {
+        "type": "deterministic-code-native-UI-matte",
+        "colour": "#1d1610",
+        "startY": 2049.0,
+        "fullOpacityY": 2322.2,
+        "curve": "a=round(255*smoothstep(clamp((y/H-0.75)/0.10,0,1)))",
+        "bottom15MeanLstar": 7.8807187077442595,
+        "passesLstarAtMost12": true,
+        "rawGeneratedBackgroundPreserved": true,
+        "disclosure": "UI matte is baked into delivered background layer per viewport; audit PNGs preserve the pre-matte background and separate overlay."
+      },
+      "previews": [
+        {
+          "angleDegrees": -2,
+          "kind": "preview",
+          "view": "ipad-portrait",
+          "role": -2,
+          "file": "ipad-portrait-boat-minus2-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-minus2-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-minus2-native.png",
+          "sha256": "fa40710d2e27746f88b6a1b1af53f81a5768daf81913ccbfdd695748ff6da179",
+          "bytes": 3706262,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        },
+        {
+          "angleDegrees": 0,
+          "kind": "preview",
+          "view": "ipad-portrait",
+          "role": 0,
+          "file": "ipad-portrait-boat-zero-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-zero-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-zero-native.png",
+          "sha256": "1b62d9800d91aaaab7aa9868818b935f7a9892b56131e54cf08f930a7c809f35",
+          "bytes": 3706443,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        },
+        {
+          "angleDegrees": 2,
+          "kind": "preview",
+          "view": "ipad-portrait",
+          "role": 2,
+          "file": "ipad-portrait-boat-plus2-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-plus2-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-plus2-native.png",
+          "sha256": "2e25f462c87f1a66f5fa098fcb9b648e5c5b6346dc5fae808e03fbedfe0590c8",
+          "bytes": 3706277,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        }
+      ]
+    },
+    {
+      "id": "ipad-landscape",
+      "mitat": [
+        2732,
+        2048
+      ],
+      "layers": {
+        "background": {
+          "path": "technical/exports/ipad-landscape-background.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-background.png",
+          "sha256": "8abec7d8dd0c7a559b44ba1de97bf23b260ed85927c1a85b966e4403a9179a91",
+          "width": 2732,
+          "height": 2048,
+          "mode": "RGB",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "ipad-landscape",
+          "role": "background",
+          "file": "ipad-landscape-background.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-background.png",
+          "bytes": 3992464,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            2732,
+            2048
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        },
+        "boat": {
+          "path": "technical/exports/ipad-landscape-boat.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-boat.png",
+          "sha256": "b183b2c8b1544700fb79b2e9e15e314fe1132b9e9ae52d2ed09d7591e787fc06",
+          "width": 2732,
+          "height": 2048,
+          "mode": "RGBA",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "ipad-landscape",
+          "role": "boat",
+          "file": "ipad-landscape-boat.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-boat.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-boat.png",
+          "bytes": 52658,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            2732,
+            2048
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        },
+        "mist": {
+          "path": "technical/exports/ipad-landscape-mist.png",
+          "absolutePath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/generated-layers/technical/exports/ipad-landscape-mist.png",
+          "sha256": "ce78555ff7afe4514573940e938acf7156078ce81c1eebae4ffc7857b6776007",
+          "width": 2732,
+          "height": 2048,
+          "mode": "RGBA",
+          "mimeType": "image/png",
+          "sRGB": true,
+          "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kind": "layer",
+          "view": "ipad-landscape",
+          "role": "mist",
+          "file": "ipad-landscape-mist.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-mist.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/ipad-landscape-mist.png",
+          "bytes": 313236,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true,
+          "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+          "viitteet": [
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-a.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "a74c91b1626ccf25c2780105aa5d06e74f774d62",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-a.jpg",
+              "sha256": "dbca41bec1e4e5a62951b1a2c48158b164496be83015387f7067e49a033f1516",
+              "role": "owner-providedgame3Dshape-reference"
+            },
+            {
+              "path": "posti/liitteet/olavinlinna-latauskuva-v44z-b.jpg",
+              "sourceCommit": "543f8dda77b67b3cef5405b4b6cc1a485768a234",
+              "sourceBlob": "0180fcb7d8eeb55489a2db5f6d0e179caa6bf866",
+              "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/olavinlinna-latauskuva-20261008/sources/olavinlinna-latauskuva-v44z-b.jpg",
+              "sha256": "bf19dd823d9f5a3b7112732863c06ccf7ac8b335436cc113710005819ce167a0",
+              "role": "owner-providedgame3Dshape-reference"
+            }
+          ],
+          "mitat": [
+            2732,
+            2048
+          ],
+          "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+          "kuvateksti": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva."
+        }
+      },
+      "boatKeelPivot": [
+        1421.3241262683202,
+        1310.7925591882752
+      ],
+      "boatBBoxXYWH": [
+        1312,
+        1247,
+        219,
+        64
+      ],
+      "boatBBoxAlphaThreshold": 16,
+      "boatAlphaNonzeroBBoxXYWH": [
+        1309,
+        1234,
+        224,
+        92
+      ],
+      "mistBBoxXYWH": [
+        275,
+        1019,
+        2183,
+        92
+      ],
+      "backgroundTransform": {
+        "type": "centered-cover-crop",
+        "inputSize": [
+          2048,
+          2048
+        ],
+        "scale": 1.333984375,
+        "resizedSize": [
+          2732,
+          2732
+        ],
+        "cropXYXY": [
+          0,
+          342,
+          2732,
+          2390
+        ],
+        "matrixFromRawMaster": [
+          [
+            1.333984375,
+            0,
+            0
+          ],
+          [
+            0,
+            1.333984375,
+            -342
+          ]
+        ]
+      },
+      "boatTransform": {
+        "sourceSize": [
+          1774,
+          887
+        ],
+        "sourceSemanticBBoxXYWH": [
+          46,
+          217,
+          1687,
+          492
+        ],
+        "sourceKeelPivot": [
+          889.5,
+          708
+        ],
+        "semanticAlphaThreshold": 16,
+        "targetViewportWidthFraction": 0.08,
+        "actualSemanticWidthFraction": 0.0801610541727672,
+        "requestedKeelPivot": [
+          1421,
+          1311
+        ],
+        "keelPivot": [
+          1421.3241262683202,
+          1310.7925591882752
+        ],
+        "semanticBBoxXYWH": [
+          1312,
+          1247,
+          219,
+          64
+        ],
+        "actualAlphaNonzeroBBoxXYWH": [
+          1309,
+          1234,
+          224,
+          92
+        ],
+        "resizedWholeSourceCanvas": [
+          230,
+          115
+        ],
+        "sourceScaleXY": [
+          0.12965050732807215,
+          0.12965050732807215
+        ],
+        "placementOffsetXY": [
+          1306,
+          1219
+        ],
+        "matrixFromSource": [
+          [
+            0.12965050732807215,
+            0,
+            1306
+          ],
+          [
+            0,
+            0.12965050732807215,
+            1219
+          ]
+        ],
+        "reflectionIncluded": false,
+        "outsideBottom25": true,
+        "outerEdgeAlpha": {
+          "top": [
+            0,
+            0
+          ],
+          "bottom": [
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0
+          ]
+        },
+        "resampling": "Pillow RGBa premultiplied Lanczos; full source canvas retained; alpha never thresholded or keyed.",
+        "responsiveComponentScaling": true,
+        "responsiveDisclosure": "Boat is rescaled from the same generated source after background cover crop to 8% of each viewport width; it is not a uniform flat crop of the master boat layer."
+      },
+      "mistTransform": {
+        "sourceSize": [
+          2172,
+          724
+        ],
+        "sourceSemanticBBoxXYWH": [
+          87,
+          265,
+          2007,
+          177
+        ],
+        "semanticAlphaThreshold": 16,
+        "semanticBBoxXYWH": [
+          275,
+          1019,
+          2183,
+          92
+        ],
+        "actualAlphaNonzeroBBoxXYWH": [
+          202,
+          896,
+          2314,
+          295
+        ],
+        "requestedSemanticCenter": [
+          1366.0,
+          1064.96
+        ],
+        "actualSemanticCenter": [
+          1366.5,
+          1065.0
+        ],
+        "targetWidthFraction": 0.8,
+        "targetHeightFraction": 0.045,
+        "actualSemanticWidthFraction": 0.7990483162518301,
+        "actualSemanticHeightFraction": 0.044921875,
+        "resizedWholeSourceCanvas": [
+          2365,
+          377
+        ],
+        "sourceScaleXY": [
+          1.0888581952117864,
+          0.5207182320441989
+        ],
+        "placementOffsetXY": [
+          179,
+          881
+        ],
+        "matrixFromSource": [
+          [
+            1.0888581952117864,
+            0,
+            179
+          ],
+          [
+            0,
+            0.5207182320441989,
+            881
+          ]
+        ],
+        "outerEdgeAlpha": {
+          "top": [
+            0,
+            0
+          ],
+          "bottom": [
+            0,
+            0
+          ],
+          "left": [
+            0,
+            0
+          ],
+          "right": [
+            0,
+            0
+          ]
+        },
+        "optional": true,
+        "resampling": "Pillow RGBa premultiplied Lanczos; responsive width and height scaling, actual alpha unchanged except resampling; no opacity edit or thresholded mask.",
+        "placementDisclosure": "Semantic low mist spans roughly 49.75-54.25% of viewport height at the castle base; tower and main-wall silhouettes remain above its appreciable alpha."
+      },
+      "UIFade": {
+        "type": "deterministic-code-native-UI-matte",
+        "colour": "#1d1610",
+        "startY": 1536.0,
+        "fullOpacityY": 1740.8,
+        "curve": "a=round(255*smoothstep(clamp((y/H-0.75)/0.10,0,1)))",
+        "bottom15MeanLstar": 7.88071870774488,
+        "passesLstarAtMost12": true,
+        "rawGeneratedBackgroundPreserved": true,
+        "disclosure": "UI matte is baked into delivered background layer per viewport; audit PNGs preserve the pre-matte background and separate overlay."
+      },
+      "previews": [
+        {
+          "angleDegrees": -2,
+          "kind": "preview",
+          "view": "ipad-landscape",
+          "role": -2,
+          "file": "ipad-landscape-boat-minus2-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-minus2-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-minus2-native.png",
+          "sha256": "ef759fb1682d1774ac75b564da978cb3c1900df8c3a4155d300b884fa9f3f8e1",
+          "bytes": 3980471,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        },
+        {
+          "angleDegrees": 0,
+          "kind": "preview",
+          "view": "ipad-landscape",
+          "role": 0,
+          "file": "ipad-landscape-boat-zero-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-zero-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-zero-native.png",
+          "sha256": "ed46e92f478eb94d0eb3657dd51f600f00a7f4f744040f4f58c824d53289aaf3",
+          "bytes": 3981053,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        },
+        {
+          "angleDegrees": 2,
+          "kind": "preview",
+          "view": "ipad-landscape",
+          "role": 2,
+          "file": "ipad-landscape-boat-plus2-native.png",
+          "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-plus2-native.png",
+          "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-plus2-native.png",
+          "sha256": "152ee6dbbc0bd41d7d106524ba91cadcb5841f95a0029ced29b7868e71fe7d1f",
+          "bytes": 3980662,
+          "http": 200,
+          "mime": "image/png",
+          "cors": "https://matkakirja.app",
+          "byteExactReadback": true
+        }
+      ]
+    }
+  ],
+  "previewResources": [
+    {
+      "kind": "preview",
+      "view": "master",
+      "role": 0,
+      "file": "master-boat-zero-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/master-boat-zero-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/master-boat-zero-native.png",
+      "sha256": "1abfe1204cb862d16a30683afd1bfbf240d19c44cd145550810ff93bbccf9dd2",
+      "bytes": 3083442,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "master",
+      "role": -2,
+      "file": "master-boat-minus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/master-boat-minus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/master-boat-minus2-native.png",
+      "sha256": "5232962e95fbd2b72d55be8e2f34c19f7c074f7751b99998612c3745ea31acd4",
+      "bytes": 3083433,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "master",
+      "role": 2,
+      "file": "master-boat-plus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/master-boat-plus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/master-boat-plus2-native.png",
+      "sha256": "a154f17dd7e6f9dc6c443e016dc08da4fb142d0a9451203569f09a30f4a53f8f",
+      "bytes": 3083496,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "iphone-portrait",
+      "role": 0,
+      "file": "iphone-portrait-boat-zero-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-zero-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-zero-native.png",
+      "sha256": "9556b82ba8ca14033460c7401c9761af0c58dd1e9c2ab1bb12ef00191c833c1d",
+      "bytes": 2535549,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "ipad-portrait",
+      "role": -2,
+      "file": "ipad-portrait-boat-minus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-minus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-minus2-native.png",
+      "sha256": "fa40710d2e27746f88b6a1b1af53f81a5768daf81913ccbfdd695748ff6da179",
+      "bytes": 3706262,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "iphone-portrait",
+      "role": -2,
+      "file": "iphone-portrait-boat-minus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-minus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-minus2-native.png",
+      "sha256": "43dc2984a744c391a45953da251d7112b772d15680ae35d0f98e491f21377c89",
+      "bytes": 2535545,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "iphone-portrait",
+      "role": 2,
+      "file": "iphone-portrait-boat-plus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-plus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/iphone-portrait-boat-plus2-native.png",
+      "sha256": "00c6e4542bb65ade66a4961f4c99b653e0a41ce6fbed199ef9edb0f7f5780442",
+      "bytes": 2535539,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "ipad-portrait",
+      "role": 0,
+      "file": "ipad-portrait-boat-zero-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-zero-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-zero-native.png",
+      "sha256": "1b62d9800d91aaaab7aa9868818b935f7a9892b56131e54cf08f930a7c809f35",
+      "bytes": 3706443,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "ipad-portrait",
+      "role": 2,
+      "file": "ipad-portrait-boat-plus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-plus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-portrait-boat-plus2-native.png",
+      "sha256": "2e25f462c87f1a66f5fa098fcb9b648e5c5b6346dc5fae808e03fbedfe0590c8",
+      "bytes": 3706277,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "ipad-landscape",
+      "role": -2,
+      "file": "ipad-landscape-boat-minus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-minus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-minus2-native.png",
+      "sha256": "ef759fb1682d1774ac75b564da978cb3c1900df8c3a4155d300b884fa9f3f8e1",
+      "bytes": 3980471,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "ipad-landscape",
+      "role": 0,
+      "file": "ipad-landscape-boat-zero-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-zero-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-zero-native.png",
+      "sha256": "ed46e92f478eb94d0eb3657dd51f600f00a7f4f744040f4f58c824d53289aaf3",
+      "bytes": 3981053,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "kind": "preview",
+      "view": "ipad-landscape",
+      "role": 2,
+      "file": "ipad-landscape-boat-plus2-native.png",
+      "r2Key": "julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-plus2-native.png",
+      "url": "https://media.matkakirja.app/julisteet/olavinlinna-latauskuva/20261008/qa/ipad-landscape-boat-plus2-native.png",
+      "sha256": "152ee6dbbc0bd41d7d106524ba91cadcb5841f95a0029ced29b7868e71fe7d1f",
+      "bytes": 3980662,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "caption": "Olavinlinna Kyrönsalmessa elokuun iltana vuonna 1499. Havainnekuva.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "sourceNativeBackgroundSize": [
+    1254,
+    1254
+  ],
+  "masterSize": [
+    2048,
+    2048
+  ],
+  "componentStrategy": "Background uses centered cover crop from one 2048 raw master. Boat and optional mist are responsive transforms from the same generated component sources after cropping. UI matte is applied per viewport.",
+  "compositionOrder": [
+    "background-with-UI-matte",
+    "optional-mist",
+    "boat"
+  ],
+  "alphaPolicy": "Genuine generated alpha retained and resampled in premultiplied RGBa. Alpha>=16 is used only for semantic measurements; no matte extraction, keying, cleanup, or thresholded mask.",
+  "rotationConvention": "Pillow positive degrees counterclockwise; all rotation previews use the exact recorded keel pivot. Angles -2, 0, +2 only.",
+  "sourceAssets": [
+    {
+      "name": "background",
+      "generationPrompt": "Use case: historical-scene\nAsset type: one new square photorealistic background layer for a layered game title/loading image; requested target 2048 x 2048 pixels.\nPrimary request: Create a NEW natural camera-shot scene of Olavinlinna in Kyrönsalmi, Savonlinna, Finland, on a calm August evening in the year 1499. Do not edit or reproduce the reference render. Render historical stonework, wood and landscape as convincing real photographed materials.\nInput images: Image 1 (olavinlinna-latauskuva-v44z-a.jpg) is an OWNER-PROVIDED game 3D SHAPE REFERENCE, the authoritative southwest view around bearing 215 degrees, looking northeast from about 180 metres at two metres above water. Image 2 (olavinlinna-latauskuva-v44z-b.jpg) is a closer SHAPE REFERENCE around 228 degrees, showing the west wall. Their purpose is castle geometry and relative proportions only; their synthetic rendering, placeholders and oversized later eastern structures must not be copied.\nSubject and historical shape: Exactly three main cylindrical stone towers in this order: the TALLEST Clock tower on the LEFT, Church tower in the MIDDLE behind the main west wall, St Erik tower on the RIGHT and appreciably lower in this perspective. Keep their reference proportions and conical dark timber/shingle roofs, circular openings beneath the roofs, sparse small irregular wall openings, thick connected west wall and rough grey natural-stone masonry. Preserve the distinctive stepped height ordering and connected main-castle silhouette. The medieval forecastle on the right is allowed but LOW and modest for 1499, lower than in the render, receding into a little natural low haze. No east battery of the 1560s, no Clock bastion or Water Gate bastion, no seventeenth-century additions.\nPlaceholder correction: The brown mounds in the references become low, irregular, naturally weathered GRANITE bedrock along the waterline, not soil heaps. The black blocks/band and foreground rectangular placeholder become a LOW simple stone wall and modest rough TIMBER bridge, believable for 1499. No black geometric blocks. The small timber bridge must not look like a modern pedestrian bridge or pier.\nComposition/framing: A square, spacious, water-level southwest camera view. The complete THREE-TOWER MAIN CASTLE and WEST WALL must fit wholly inside the central 40-43 percent of the canvas width (roughly x=29%-71%); their vertical silhouette lies within y=28%-60%. Do not enlarge the castle to fill the frame. The optional low right forecastle may extend outside this central group and gently dissolve into haze. Leave the top 8 percent calm empty sky. Calm open water occupies the lower half, with subtle castle reflections around its base. No foreground subject or boat.\nLighting/mood: Low, soft warm late-August dusk light from the NORTHWEST, camera-left and slightly behind camera; the left stone surfaces catch gentle warm grazing light, other faces stay naturally subdued. Pale rose-grey and lavender dusk sky, muted saturation, quiet water, restrained natural contrast. Photorealistic unprocessed camera appearance, detailed authentic rough masonry and weathered timber, no painting, no stylised 3D look, no HDR or dramatic fantasy light.\nBottom UI area: Across the bottom 25 percent of the square, the natural water smoothly deepens into nearly detail-free very dark brown-black, blending naturally toward #1d1610 at the lower edge. The bottom 15 percent should average CIELAB L* at most 12. This is still dark water with a seamless tonal falloff, not an opaque added panel, hard gradient band, vignette frame, or visible graphic overlay. No bright reflection, waves, rock or object in this lower UI zone.\nConstraints: BACKGROUND ONLY. No boat, no people, no animals, no modern buildings, no cars, no signs, no tourist equipment, no modern bridge or dock. Omit all flags and pennants. No Finland flag, no Swedish flag, no blue-yellow cross flag. No lettering, caption, logo, watermark, border or frame anywhere. One square scene only, no collage or alternate views.\n",
+      "originalSha256": "4f0ce90c3e2f24dfec72e4f301eb55ba1698306c37db5ae55da36e20f7bfa2a5",
+      "assetSha256": "b9c180185882a87901ea8b9f5b005d37ace3185852c30ded7f4958c0018273a4",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "actualMode": "RGB"
+    },
+    {
+      "name": "boat",
+      "generationPrompt": "Use case: historical-scene\nAsset type: one NEW isolated photorealistic medieval wooden rowboat source asset with genuine transparent RGBA background, intended to be technically reduced and placed in the existing square loading-image master. Source-canvas target 2048 x 1024 pixels, landscape.\nInput image: master-background.png is a LIGHTING AND CAMERA-PERSPECTIVE REFERENCE ONLY. It is not an edit target or a background to reproduce. Do not output the castle, landscape, sky, water or any scene from it. Generate a completely new boat-only asset on genuine transparency.\nPrimary request: A large, fully visible, EMPTY traditional late-fourteenth/fifteenth-century Finnish wooden rowing boat, appropriate to Kyrönsalmi in 1499. A modest open clinker-built wooden boat with overlapping weathered planks, curved sides, simple timber ribs and transverse wooden seating thwarts, convincingly handmade and used, subtly uneven wood grain and darkened seams. No person. No sail or mast. No engine, steering wheel, modern metal fittings, logo, writing, paint decoration, or modern manufactured components. No extra equipment or detached oars.\nComposition/framing: Nearly SIDE-ON with a slight three-quarter angle, photographed from about two metres above the water, consistent with the supplied background's calm water-level view. Show a little of the empty interior and the far gunwale. A shallow traditional hull, one end slightly closer to camera, the full hull and both ends clearly visible, long axis close to horizontal. Use the SOURCE canvas efficiently: the boat itself fills roughly 85-90 percent of its width, centered with clear transparent space around every edge, never cropped. This is a high-detail large source asset; do NOT render it as a tiny boat at its eventual scene scale. It will later be reduced to 6-9 percent of the separate master width.\nLighting/mood: Match the reference's restrained natural August dusk light: soft low warm light from the northwest, the viewer's LEFT and slightly behind camera, with subdued brown wood and cool muted shadows. Real camera appearance and physically believable wood texture; no illustration, no stylised 3D, no studio glints, no HDR.\nTransparency: TRUE generated transparent background and natural clean antialiased boat edges. Preserve fine gunwale detail, no white or black halo. The transparent area includes the empty space around the boat; gaps inside the boat must show the proper visible interior surfaces. No opaque background, no painted checkerboard, no coloured key background, no water rectangle, no ground plane, no cast shadow on a surface.\nReflection decision: OMIT the water reflection entirely, as explicitly allowed by the brief. Also omit wake, splash, water ripples and surrounding painted water. This deliverable is the boat only.\nConstraints: One isolated empty medieval wooden rowboat only. No castle, scenery, sky, water surface, mist, people, animals, modern object, national flag, caption, text, logo, watermark, border or frame. One asset, no variants or collage.\n",
+      "originalSha256": "da26e6dc260232ea38fd91f700ee9b6115a4ae59cd26316a3624620eeff7004f",
+      "assetSha256": "8815e0b981c956e6202aa5ca5f4ed4457ee4c5871cc62cd4003c0f29a06cc4cc",
+      "actualSize": [
+        1774,
+        887
+      ],
+      "actualMode": "RGBA"
+    },
+    {
+      "name": "mist",
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one NEW isolated soft LOW water-mist strip, genuine generated RGBA transparency, for later technical placement at the castle's waterline. Landscape source-canvas target 1536 x 512 pixels.\nInput image: master-background.png is a LIGHT COLOUR REFERENCE ONLY. It is not an edit target or a scene to reproduce. Do not render any pixel of the castle, sky, landscape, boat or water surface. Generate only suspended mist on true transparency.\nPrimary request: A thin, quiet, horizontal ribbon of natural low water vapour on a calm Finnish August dusk, like subtle mist drifting just above lake water. It is light rose-grey with a restrained lavender shadow tint and a slight warm blush from soft low light at viewer LEFT. Physically delicate, translucent, diffuse and irregular, with small soft horizontal wisps. Fine realistic atmosphere, no stylised graphic or cotton-like storm cloud.\nComposition/framing: One long shallow low mist strip across roughly 80-85 percent of the source width, centered with generous transparent space on all sides. Keep its visual mass horizontal and LOW; no tall rising plume. It will be technically placed near the castle's base, so it must not be a dense wall capable of obscuring tower silhouettes. Softly and smoothly fade both ends and every edge into zero alpha, without a rectangular boundary.\nTransparency: Genuine transparent RGBA background. The mist itself must remain translucent, with varying gentle generated alpha and subtle open gaps. No opaque white core, no hard white outline, no halo, no opaque rectangle, no painted checkerboard, no key-colour background or backing surface. Soft alpha is intrinsic to the vapor, not a fake background.\nConstraints: ONLY the low mist ribbon. No castle, building, boat, person, animal, sky, horizon, water surface, ripples, reflections, ground, cast shadow, lettering, logo, watermark, border or frame. One source asset, no variants or collage.\n",
+      "originalSha256": "53e2bcf33e4cfab91aef0959bd63f444aff0dd885d27bc909bf488356d08c84d",
+      "assetSha256": "6a5f0251207f3fad15997a1ee59f5020fe3266bd81b887951fe8c6a50177afa7",
+      "actualSize": [
+        2172,
+        724
+      ],
+      "actualMode": "RGBA"
+    }
+  ],
+  "visualReview": {
+    "task": "olavinlinna-latauskuva-20261008",
+    "approvedForDelivery": true,
+    "reviewedAtUTC": "2026-10-08T12:41:05.005033+00:00",
+    "nativeWholeZeroPoseViews": [
+      "iphone-portrait",
+      "ipad-portrait",
+      "ipad-landscape"
+    ],
+    "nativeBoatRotationEdgeProofsViewed": true,
+    "nativeDarkLightAlphaProofsViewed": true,
+    "allTwelveFullframeSmallCompositesViewed": true,
+    "rawSourceBackgroundAndBoatViewed": true,
+    "observations": [
+      "Three main towers retain supplied left-to-right height/order; core castle remains within phone framing.",
+      "Empty wooden boat matches warm left light; generated alpha and premultiplied technical transforms show no visible coloured halo.",
+      "Low mist stays at the shore below towers; boat is clear of dark naming/loading area in all three poses.",
+      "Natural dusk/material appearance, no people, writing, logos, nationalflags, visible modern motorcraft or bastions."
+    ],
+    "limitations": [
+      "Background native generation1254x1254; larger master/exports are technical interpolations, not new native detail.",
+      "Tallest roof begins near22.3percent in square source, above approximate28percent brief band; all requested main towers remain whole.",
+      "Boat/mist receive disclosed responsive component scales after backgroundcrop; exports are from one layered master, not uniform crops of a flat composite.",
+      "Boat reflection omitted as expressly permitted; no game animation/integration/publication or editorial acceptance verified."
+    ],
+    "assets": [
+      {
+        "file": "iphone-portrait-background.png",
+        "sha256": "64f29681f1f2768050e877c02e0c5e32bf60092d90755e69c0c9cbb1daecab76"
+      },
+      {
+        "file": "iphone-portrait-boat.png",
+        "sha256": "49dde364a149891f2e6668369afaef8f672270ef27b74da5458419cdad329afe"
+      },
+      {
+        "file": "iphone-portrait-mist.png",
+        "sha256": "83e625fd972b4aef98851468727323034b976c8e22ec6fc72ea6b31a2742d679"
+      },
+      {
+        "file": "ipad-portrait-background.png",
+        "sha256": "9984eff8d6fefd67f875cbc1a7485d69f2907793d1f0fed6397cb216d9ee2c09"
+      },
+      {
+        "file": "ipad-portrait-boat.png",
+        "sha256": "1410058fe35c4f1b75c6b613d0c6f9e6e39104517c8e043c8c185104f025d908"
+      },
+      {
+        "file": "ipad-portrait-mist.png",
+        "sha256": "0fc8c2364c2aa329f8abac8ddeccbb4ea2cdc5a945b785e33ccc40cb8fd1e17c"
+      },
+      {
+        "file": "ipad-landscape-background.png",
+        "sha256": "8abec7d8dd0c7a559b44ba1de97bf23b260ed85927c1a85b966e4403a9179a91"
+      },
+      {
+        "file": "ipad-landscape-boat.png",
+        "sha256": "b183b2c8b1544700fb79b2e9e15e314fe1132b9e9ae52d2ed09d7591e787fc06"
+      },
+      {
+        "file": "ipad-landscape-mist.png",
+        "sha256": "ce78555ff7afe4514573940e938acf7156078ce81c1eebae4ffc7857b6776007"
+      }
+    ],
+    "independentTechnicalChecks": [
+      {
+        "view": "iphone-portrait",
+        "size": [
+          1290,
+          2796
+        ],
+        "bottom15MeanLstar": 7.8807187075955305,
+        "RGBAOuterEdgesZero": true,
+        "boatOutsideBottom25InAllThreePoses": true
+      },
+      {
+        "view": "ipad-portrait",
+        "size": [
+          2048,
+          2732
+        ],
+        "bottom15MeanLstar": 7.8807187075955305,
+        "RGBAOuterEdgesZero": true,
+        "boatOutsideBottom25InAllThreePoses": true
+      },
+      {
+        "view": "ipad-landscape",
+        "size": [
+          2732,
+          2048
+        ],
+        "bottom15MeanLstar": 7.88071870759553,
+        "RGBAOuterEdgesZero": true,
+        "boatOutsideBottom25InAllThreePoses": true
+      }
+    ]
+  },
+  "limitations": [
+    "Background native generation1254x1254; larger master/exports are technical interpolations, not new native detail.",
+    "Tallest roof begins near22.3percent in square source, above approximate28percent brief band; all requested main towers remain whole.",
+    "Boat/mist receive disclosed responsive component scales after backgroundcrop; exports are from one layered master, not uniform crops of a flat composite.",
+    "Boat reflection omitted as expressly permitted; no game animation/integration/publication or editorial acceptance verified."
+  ],
+  "allSelectedReadbacksByteExact": true,
+  "deliveryStatus": "R2 verified; normal mailbox push pending. Review candidates only.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-08T12:41:21.201501+00:00"
+}
