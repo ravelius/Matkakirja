@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 5.–7.10.2026 — LOPULLINEN 7.10. KLO 23.30, TILINVAIHTO (Opus 5.5, high)
+# Siirtosepän luovutus 5.–8.10.2026 (Opus 5.5, high; 8.10. TILA alla aloitusviestin jälkeen)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
@@ -34,6 +34,20 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   (Ydin + huonesimulaatio ilman Unityä); simu vain vianselvitykseen. Kohdan 13 omistajan päätettävät toteutetaan suositusten mukaan.
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
+
+## TILA 8.10. (uusi tili, Opus 5.5 high) — JUNA 164 = OLAVINLINNAN 1. PERSOONAN PALA
+
+- Kehityskärki siirtoseppa/historia-valot @ b4c7b451 (wt/proto-siirtoseppa-face): + e01175df kannetut valot (portinvartijan lyhty 4 m,
+  portaiden soihtu 6 m, oikeat pistevalot ilman varjoja → valo seinällä ennen kantajaa) + volumetrinen hehku (kannetut + soihdut/tulisijat
+  koko ≥ 1,4, laatutason takana); b4c7b451 pelaajan omat askeleet pinnan mukaan (Askelaani.OmaAskel), aanet-fp-v1-manifesti (Pelikoodari,
+  puuttuva ohitetaan), kanteleen löytömerkki loyto-kantele. 861/861, unity-tarkistus 0.
+- Junahaara siirtoseppa/historia-valot-juna @ 86a5509e (wt/proto-siirtoseppa-kello) = b91278bf + historia-valot + master 062bb439 (BUILD 163):
+  885/885, unity-tarkistus 0. Varmuuskopiot natiivi-backup peili/proto/… ajan tasalla. Vara historia-fp-juna-2 8b071c07 EI sisällä 8.10. työtä.
+- Kohta 12: 3.4 varoitus, 4.1 tyrmä, 7 kappeli (ei pakotettuja kamerasiirtoja; käännössääntö oven valolle), 4.3 tallennus olivat jo 7d8408f9:ssä.
+  K1 pois (PT hyväksyi; Pulun malli puuttuu).
+- LS2 tekee kohdan 11 testit (koko palan huonesimulaatio fiksulla ajurilla, harhautus, kappeli 1–11, Pulu 2) historia-valot-kärjen päälle;
+  jos keittiö jää kiinni, korjaan kokin profiilin/ajoituksen. Sen jälkeen merge → junahaara → 1 rivin kuittauspyyntö PT:lle.
+- Pelikoodarille: aanet-fp-v1-tunnukset askel-olki/-sora/-vesi/-porras-1 + loyto-kantele.
 
 ## TILA 7.10. 09.2x
 
