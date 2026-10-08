@@ -56,7 +56,20 @@ fs.writeFileSync(path.join(ULOS, 'pilvet-tiheys.json'), JSON.stringify({
   tyokalu: 'tools/ilmakeha/pilvet.mjs', luotu: new Date().toISOString(), koko: [N, N], siemen: SIEMEN, saumaton: true,
   kanavat: { R: 'isot kumpupilvet (Worley 4/8/16/32 + gradientti 4–64), venytetty 1–99 %', G: 'yksityiskohta (gradientti 16–256), venytetty 1–99 %', B: '0 (ei käytössä)' },
   tuonti: 'Linear (ei sRGB), Repeat, mipit päällä, muoto R8G8 tai ASTC 6×6',
-  peitto: 'pilvi = smoothstep(1 − peitto, 1 − peitto + 0,15, R − 0,25·(1 − G)); peitto 0–1 sääkerroksesta',
-  mittakaava_ehdotus: 'yksi jakso noin 40 km maassa (isot solut 10 km, pienimmät noin 150 m)',
+  yhdistelma: 'TOISTON ESTO (PT 8.10.): näytteistä R kolmesti eri mittakaavoissa ja kulmissa: uv1 = uv; uv2 = rot(37°)·uv·0,413 + (0,31, 0,17); uv3 = rot(−61°)·uv·0,137 + (0,71, 0,43); D = 0,55·R(uv1) + 0,25·R(uv2) + 0,2·R(uv3). Mittakaavat eivät ole rationaalisessa suhteessa, joten kuvio ei toistu näkyvästi.',
+  peitto: 'pilvi = smoothstep(1 − peitto, 1 − peitto + 0,2, D − 0,15·(1 − G(uv·2,3))); peitto 0–1 sääkerroksesta',
+  mittakaava_ehdotus: 'uv1:n jakso noin 30 km maassa (uv3:n jakso noin 220 km)',
 }, null, 2));
+if (args.includes('--esikatselu')) { // 4 × 4 jaksoa yhdistelmällä, peitto 0,5 → pilvet-yhdistelma.rgb (1024², L8 RGB:nä)
+  const nayte = (A, u, v) => { u -= Math.floor(u); v -= Math.floor(v); const x = u * N - 0.5, y = v * N - 0.5, x0 = Math.floor(x), y0 = Math.floor(y), fx = x - x0, fy = y - y0, i = (a, b) => A[((b + N) % N) * N + ((a + N) % N)];
+    return (i(x0, y0) * (1 - fx) + i(x0 + 1, y0) * fx) * (1 - fy) + (i(x0, y0 + 1) * (1 - fx) + i(x0 + 1, y0 + 1) * fx) * fy; };
+  const RR = Float32Array.from(R, vr), GG = Float32Array.from(Gk, vg), rot = (a, u, v, k, ox, oy) => { const c = Math.cos(a), s2 = Math.sin(a); return [(c * u - s2 * v) * k + ox, (s2 * u + c * v) * k + oy]; };
+  const M = 1024, E = Buffer.alloc(M * M * 3), ss = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+  for (let j = 0; j < M; j++) for (let i = 0; i < M; i++) {
+    const u = (i / M) * 4, v = (j / M) * 4, [u2, v2] = rot(37 * Math.PI / 180, u, v, 0.413, 0.31, 0.17), [u3, v3] = rot(-61 * Math.PI / 180, u, v, 0.137, 0.71, 0.43);
+    const D = 0.55 * nayte(RR, u, v) + 0.25 * nayte(RR, u2, v2) + 0.2 * nayte(RR, u3, v3), g = nayte(GG, u * 2.3, v * 2.3), p = ss(0.45, 0.65, D - 0.15 * (1 - g)) * 255;
+    E[(j * M + i) * 3] = E[(j * M + i) * 3 + 1] = E[(j * M + i) * 3 + 2] = p;
+  }
+  fs.writeFileSync(path.join(ULOS, 'pilvet-yhdistelma.rgb'), E);
+}
 console.log('valmis', path.join(ULOS, 'pilvet-tiheys.rgb'), N);
