@@ -28,6 +28,13 @@ namespace Matkakirja.Natiivi
         public const float PehmennysAlkuM = 4000f, PehmennysLoppuM = 25000f;
 
         static GameObject go;
+        static Volume volyymi;
+        /// <summary>Kuvapari ennen/jälkeen kesken näkymän (komento `opas filmi pois|paalle`): Volume-paino 0/1.</summary>
+        public static bool Nakyy
+        {
+            get => volyymi != null && volyymi.weight > 0f;
+            set { if (volyymi != null) volyymi.weight = value ? 1f : 0f; }
+        }
         static VolumeProfile profiili;
         static ShadowsMidtonesHighlights smh;
         static ColorAdjustments varit;
@@ -42,7 +49,7 @@ namespace Matkakirja.Natiivi
         {
             if (go != null) return;
             go = new GameObject("KaupunkiFilmi Volume");
-            var v = go.AddComponent<Volume>();
+            var v = volyymi = go.AddComponent<Volume>();
             v.isGlobal = true;
             v.priority = Prioriteetti;
             profiili = ScriptableObject.CreateInstance<VolumeProfile>();
@@ -78,10 +85,10 @@ namespace Matkakirja.Natiivi
             Matkakirja.Lampo.Muuttui -= LampoMuuttui;
             if (go != null) Object.Destroy(go);
             if (profiili != null) Object.Destroy(profiili);
-            go = null; profiili = null; smh = null; varit = null; rae = null; pehmennys = null; hehku = null; vinjetti = null;
+            go = null; volyymi = null; profiili = null; smh = null; varit = null; rae = null; pehmennys = null; hehku = null; vinjetti = null;
         }
 
-        static void Vaihtui(string _) { bool y = KaupunkiKuva.Nyt == "yo"; if (y != yo) { yo = y; Sovella(); } }
+        static void Vaihtui(string v) { bool y = v == "yo"; if (y != yo) { yo = y; Sovella(); } }
         static void LampoMuuttui(Matkakirja.Lampotaso _) { bool k = Matkakirja.Lampo.Kuuma; if (k != kuuma) { kuuma = k; Sovella(); } }
 
         /// <summary>Profiilin arvot päivä/yö ja lämmön mukaan (puhdas arvovalinta: KaupunkiFilmiArvot, Ydin-testit).</summary>
