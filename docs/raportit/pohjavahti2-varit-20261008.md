@@ -161,3 +161,9 @@ Täysi lista: pohjavahti2-varit-20261008-liite.json (pinta, arvo, määrä, läh
   paperilla ja tummalla): kaappaukset/pohjavahti3-20261008/{Lehti,Matkakirja,Kartta,Linssit,Sahketehtava}.jpg. Värinäytteitä, ei
   pelin ruutukaappauksia (ne vaatisivat käännöksen).
 - Pohjavahti: värit 1072 → 684. ΔE ≥ 5 (422 USS) ja C#-/shorthand-värit ennallaan listana.
+
+## Rajaus (Päätoimittaja 8.10.): alfa ei muutu yli 0,05
+
+Läpikuultavuus on pinnan ominaisuus eikä sävy, joten vaihdot vain tokeneihin, joiden alfa on ±0,05 sisällä. Kierros ajettiin uudelleen
+b62e2569d:n tilasta: ΔE < 2 144 ja ΔE 2–5 320 vaihtoa; 40 jätetty listalle (39 ΔE 2–5 ja 1 ΔE < 2). Lasi-avaruus 23 ja --valkoinen 6
+ennallaan. Proto natiivi-ui/pohjavahti3-169 88646b2f6 (korvaa f0bccb721:n ja c1c202a0b:n). Pohjavahdin värit 1217 → 724.

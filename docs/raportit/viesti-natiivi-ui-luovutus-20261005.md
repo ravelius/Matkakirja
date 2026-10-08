@@ -9,7 +9,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## TILA 8.10. klo 19.4x (JATKA TÄSTÄ)
 
 Juna 168 KUITATTU ja Natiivisepällä: natiivi-ui/tietoa-valikko 4758e5316 (⊇ 0426a8f26 vihje-valikko; ☰ → Tietoa).
-Juna 169: KUITTAUSPYYNTÖ natiivi-ui/pohjavahti3-169 c1c202a0b (⊇ f0bccb721 kuitattu; lasi-avaruus ISS, --valkoinen #4218 mergetty, ΔE 2–5 359; värit 684).
+Juna 169: natiivi-ui/pohjavahti3-169 88646b2f6 (b62e2569d:n päällä; korvaa f0bccb721 ja c1c202a0b; PT hyväksyi rajauksella alfa ≤ 0,05; värit 724). Lähetä Natiivisepälle, kun PT on merkinnyt tyojonot.md:hen.
 Aiempi: natiivi-ui/pohjavahti2-169 f0bccb721 (⊇ b62e2569d; 145 ΔE<2-väriä tokeneiksi), raportti
 docs/raportit/pohjavahti2-varit-20261008.md (+ liite.json); päätettävät: lasi-avaruus-osumat ISS-pinnoissa, valkoinen-token.
 Skriptit lokit/natiivi-ui-1035/skriptit/ (pohjavahti_korjaa.py, pohjavahti2.py <skriptikansio>, de2000.py, ovaalit.py; aja proto-worktreen juuresta).
