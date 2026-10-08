@@ -1,3 +1,19 @@
+# TILANNE 8.10. klo 20.3x
+
+- **PT 20.1x:** #4220 mergetty. Pallon maiseman työnjako:
+  - Karttaseppä: vesimaski, pilviaineisto ja LUT-työkalu
+  - LS2: varjostimet
+  - Natiiviseppä: SSE ja välimuisti sekä STP/TAA
+  - LS1: pallo
+  Järjestys: ensin kohdat 1–3, sitten 4 ja 7, sitten 5, 6a ja 8. Altos vain PT:n kautta.
+- **VALMIS: ilmakehä-LUTit ja pilvitiheys**, PR https://github.com/ravelius/Matkakirja/pull/4221 (haara karttaseppa-ilmakeha, worktree /Users/Shared/Claude/wt/karttaseppa-ilmakeha).
+  Tiedostot: /Users/Shared/Claude/proto-3d/_tyo/karttaseppa/ilmakeha-20261008/. LS2:n rajapinta: Assets/Matkakirja/Linssit/Resources/Ilmakeha/*.bytes + .json, ja LS2 kopioi ne itse. LS2 ja PT on ilmoitettu.
+- **SEURAAVAKSI: vesimaski (kohta 5).** Ehdotettu muoto: GeoJSON per kaupunkikohde (OSM-vesi + rantaviiva, paikallinen ENU). Sovi LS2:n kanssa ennen tekoa.
+  Kohteet: kaupunkikierroksen ja oppaan kohteet (CesiumKaupunki).
+- Talvi3 ajossa, tauko klo 21.45 (katso alempi osio).
+
+---
+
 # TILANNE 8.10. klo 20.0x
 
 - **Pallo vs. Unreal 5 -raportti VALMIS:** PR https://github.com/ravelius/Matkakirja/pull/4220 (haara karttaseppa-pallo-unreal, worktree /Users/Shared/Claude/wt/karttaseppa-pallo-unreal), docs/raportit/pallo-unreal-vertailu-20261008.md. Pallon osio on Linssisepältä.
