@@ -1,7 +1,7 @@
 // HUONESIMULAATIO (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md kohta 11): Olavinlinnan ensimmäinen pala (huoneet 1–5,
-// reitti:pelaaja-1…20) ilman Unityä. Ydin-luokat (Vartija, Askelaani) v44s-datalla (kultaiset/olavinlinna-v44s-*.json) ja
+// reitti:pelaaja-1…20) ilman Unityä. Ydin-luokat (Vartija, Askelaani) v44z-datalla (kultaiset/olavinlinna-v44z-*.json) ja
 // SeikkailuVartijat-sovittimen säännöt (7aab3f25): partioreitit merkeistä (odotus 2 s, jos odota_s/odotus_s puuttuu), valoisuus = tilojen
-// liekit (DioraamaLiekit: perus 0,25, 1 − d / 5 m, piste 1 m jalkojen yllä; kultaiset/olavinlinna-v44s-liekit.json) + valo:-merkit (sade,
+// liekit (DioraamaLiekit: perus 0,25, 1 − d / 5 m, piste 1 m jalkojen yllä; kultaiset/olavinlinna-v44z-liekit.json) + valo:-merkit (sade,
 // voima) + lyhdyn (4 m) tai soihdun (6 m) kantaja + palava kynttilä ≥ 0,9 (kyyryssä 0,45), piilo 0,7 m (kyykky vain hiipien; nähty
 // piiloon meno ei suojaa), askeleet pinnan mukaan seinäsäännöllä (tarjotin kädessä vain juoksu kuuluu), huuto kutsuu 2 lähintä 20 m:stä,
 // riita 40 s:n välein (pelaaja vesiportilla tai ulkona), torkkuja ottaa tarjottimen myös heränneenä (ei hälytyksessä) ja istuu syömään,
@@ -41,15 +41,15 @@ namespace Matkakirja.Linssit.Testit
         static void Lataa()
         {
             if (data != null) return;
-            data = KavelyData.Lue(Lue("olavinlinna-v44s-osat.json"), Lue("olavinlinna-v44s-merkit.json"));
+            data = KavelyData.Lue(Lue("olavinlinna-v44z-osat.json"), Lue("olavinlinna-v44z-merkit.json"));
             valot = new List<(double, double, double, double, double)>();
-            foreach (var l in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(Lue("olavinlinna-v44s-liekit.json"))), "liekit")))
+            foreach (var l in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(Lue("olavinlinna-v44z-liekit.json"))), "liekit")))
             {
                 var o = MiniJson.ObjektiTaiNull(l); var p = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "paikka"));
                 valot.Add(((double)p[0], (double)p[1], (double)p[2], Math.Clamp(2.5 + 2.5 * (MiniJson.Luku(o, "koko") ?? 1), 2.5, 6), 1));
             }
             // valo:-merkit, joilla on säde (hiilipannu, takka, raot); KavelyMerkki ei pidä kenttiä sade/voima, joten luetaan raakana.
-            foreach (var m in MiniJson.TaulukkoTaiTyhja(MiniJson.Jasenna(Lue("olavinlinna-v44s-merkit.json"))))
+            foreach (var m in MiniJson.TaulukkoTaiTyhja(MiniJson.Jasenna(Lue("olavinlinna-v44z-merkit.json"))))
             {
                 var o = MiniJson.ObjektiTaiNull(m); string nimi = MiniJson.Teksti(o, "nimi") ?? "";
                 if (!nimi.StartsWith("valo:", StringComparison.Ordinal) || !(MiniJson.Luku(o, "sade") is double sade) || MiniJson.Kentta(o, "liikkuu") is bool lb && lb) continue;
