@@ -35,7 +35,13 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. aamupäivä (uusin)
+## TILA 8.10. aamupäivä, myöhemmin (uusin)
+- muuri-v44w MERGETTY; Siirtosepän harjakorjaus 00ddd3c12 (Uppoutunut, talonpojan kääntö, kuulon korkeus).
+- proto linssiseppa2/harja 64a1fc4ca (00ddd3c12 päällä), worktree wt/proto-linssiseppa2-harja: klooni päivitetty; harja pääsee 90:een,
+  sakara (91) 0,83 m vartijan edessä 17° katseesta valossa 0,81 → HarjaKorjattu=false. Luvut + vaihtoehdot Siirtosepälle.
+- ODOTTAA: Siirtosepän/LR:n sakarakorjaus → todenna, HarjaKorjattu=true.
+
+## TILA 8.10. aamupäivä
 - LR v44w (f8aa682f): proto linssiseppa2/muuri-v44w 8aa45baf4 (historia-m 3cd1e87e3 päällä), worktree wt/proto-linssiseppa2-muuri.
   Kultaiset v44w, MuurikaytavaHiipien OK (30 s), HarjaHiipien tiedoksi (HarjaKorjattu=false): tikkaiden yläpää 0,9/1,5 m harjan
   hahmoista soihdun valossa → epäily. Kuulo ilman pystyrajaa (osa muurikaytava = käytävä+harja+ranta). SHA Siirtosepälle, kopio LR:lle.
