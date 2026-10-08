@@ -3,7 +3,7 @@
   "versio": 1,
   "kehys": {
     "_selite": "Sovelluksen kehyksen ja kartan värit. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
-    "_vainNatiivi": ["kulta", "kulta-kuulto", "rivi-tausta"],
+    "_vainNatiivi": ["kulta", "kulta-kuulto", "rivi-tausta", "lapinakyva", "map-ink-04", "map-ink-06", "map-ink-07", "map-ink-08", "map-ink-10", "map-ink-12", "map-ink-14", "map-ink-15", "map-ink-16", "map-ink-18", "map-ink-20", "map-ink-22", "map-ink-24", "map-ink-25", "map-ink-26", "map-ink-28", "map-ink-30", "map-ink-32", "map-ink-35", "map-ink-40", "map-ink-45", "map-ink-50", "map-ink-55", "map-ink-60", "map-ink-62", "map-ink-65", "map-ink-66", "map-ink-68", "map-ink-70", "map-ink-72", "map-ink-75", "map-ink-78", "map-ink-80", "map-ink-85", "map-ink-90", "map-ink-92", "map-ink-95", "map-ink-96"],
     "_vainNatiiviSyy": "Webissä --kulta on määrittelemätön (käyttöpaikat var(--kulta, #eab84e), var(--kulta, #d9a13b) ja ilman varaa); määrittely muuttaisi niitä. Yhtenäistetään KORTTI-pohjan siirrossa.",
     "bg": "#1d1610",
     "panel": "#2a1f16",
@@ -18,7 +18,46 @@
     "danger": "#ff9b8a",
     "rivi-tausta": "rgba(53, 39, 26, 0.55)",
     "overlay-card": "rgba(46, 33, 20, 0.88)",
-    "overlay-line": "rgba(217, 161, 59, 0.45)"
+    "overlay-line": "rgba(217, 161, 59, 0.45)",
+    "lapinakyva": "rgba(0, 0, 0, 0)",
+    "map-ink-04": "rgba(70, 51, 31, 0.04)",
+    "map-ink-06": "rgba(70, 51, 31, 0.06)",
+    "map-ink-07": "rgba(70, 51, 31, 0.07)",
+    "map-ink-08": "rgba(70, 51, 31, 0.08)",
+    "map-ink-10": "rgba(70, 51, 31, 0.1)",
+    "map-ink-12": "rgba(70, 51, 31, 0.12)",
+    "map-ink-14": "rgba(70, 51, 31, 0.14)",
+    "map-ink-15": "rgba(70, 51, 31, 0.15)",
+    "map-ink-16": "rgba(70, 51, 31, 0.16)",
+    "map-ink-18": "rgba(70, 51, 31, 0.18)",
+    "map-ink-20": "rgba(70, 51, 31, 0.2)",
+    "map-ink-22": "rgba(70, 51, 31, 0.22)",
+    "map-ink-24": "rgba(70, 51, 31, 0.24)",
+    "map-ink-25": "rgba(70, 51, 31, 0.25)",
+    "map-ink-26": "rgba(70, 51, 31, 0.26)",
+    "map-ink-28": "rgba(70, 51, 31, 0.28)",
+    "map-ink-30": "rgba(70, 51, 31, 0.3)",
+    "map-ink-32": "rgba(70, 51, 31, 0.32)",
+    "map-ink-35": "rgba(70, 51, 31, 0.35)",
+    "map-ink-40": "rgba(70, 51, 31, 0.4)",
+    "map-ink-45": "rgba(70, 51, 31, 0.45)",
+    "map-ink-50": "rgba(70, 51, 31, 0.5)",
+    "map-ink-55": "rgba(70, 51, 31, 0.55)",
+    "map-ink-60": "rgba(70, 51, 31, 0.6)",
+    "map-ink-62": "rgba(70, 51, 31, 0.62)",
+    "map-ink-65": "rgba(70, 51, 31, 0.65)",
+    "map-ink-66": "rgba(70, 51, 31, 0.66)",
+    "map-ink-68": "rgba(70, 51, 31, 0.68)",
+    "map-ink-70": "rgba(70, 51, 31, 0.7)",
+    "map-ink-72": "rgba(70, 51, 31, 0.72)",
+    "map-ink-75": "rgba(70, 51, 31, 0.75)",
+    "map-ink-78": "rgba(70, 51, 31, 0.78)",
+    "map-ink-80": "rgba(70, 51, 31, 0.8)",
+    "map-ink-85": "rgba(70, 51, 31, 0.85)",
+    "map-ink-90": "rgba(70, 51, 31, 0.9)",
+    "map-ink-92": "rgba(70, 51, 31, 0.92)",
+    "map-ink-95": "rgba(70, 51, 31, 0.95)",
+    "map-ink-96": "rgba(70, 51, 31, 0.96)"
   },
   "kartta": {
     "_selite": "Kartan paperi ja muste. raja-muste: maiden rajojen yksi sävy (karttauudistuksen PÄÄTÖKSET 15 kohta 3, 14.9.2026); kerma: kartan vaalein paperi (PÄÄTÖKSET 4 ja 7). Perustelut css/styles.css:n kommenteissa.",
@@ -151,9 +190,9 @@
     }
   },
   "mitat": {
-    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake); galleria = GALLERIA-ruudukon sarakkeen vähimmäisleveys ja väli.",
+    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake); galleria = GALLERIA-ruudukon sarakkeen vähimmäisleveys ja väli. kulma.hius 2 ohuille elementeille (kahvat, urat; EI OVAALEJA, omistaja 2.10.2026: kevyet suorakulmiot pyöristetyin kulmin, Päätoimittaja 8.10.2026) ja kulma.keski 8 nykyiselle käytölle (pohjavahtikierros 8.10.2026, ulkoasu ennallaan).",
     "vali": { "xs": 4, "s": 8, "m": 12, "l": 16, "xl": 24 },
-    "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
+    "kulma": { "hius": 2, "pieni": 6, "keski": 8, "nappi": 10, "kortti": 12, "pilleri": 999 },
     "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64, "ohjaus": 40, "ohjaus-kuvake": 22, "ohjaus-iso": 56 },
     "galleria": { "sarake": 92, "vali": 10 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
@@ -243,6 +282,6 @@
       "kuvapino": "uusi elementti (omistaja 4.10.2026 klo 15.2x): vasemmassa alareunassa ohjaamopaneelin yläpuolella 10 pt, pikkukuva 52 × 65 pt (4:5), 2 pt reuna tumma-muste, kulma pieni; uusin päällimmäisenä, kaksi vanhempaa alla vinossa (−7° ja 6°); napautus avaa uusimman isoon ikkunaan",
       "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
     },
-    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
+    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)", "LAUTAPELI/merkki": "pelinappula (Mylly, Tavli) ympyränä: pelivälineen muoto, ei UI-pinta, joten EI OVAALEJA ei koske sitä (Päätoimittaja 8.10.2026)" }
   }
 }

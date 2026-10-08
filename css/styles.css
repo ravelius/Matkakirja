@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 4c92ddd28e4b */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde d75d90be605b */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -204,7 +204,9 @@ body.paivittyy .app { visibility: hidden; }
   --tk-vali-m: 12px;
   --tk-vali-l: 16px;
   --tk-vali-xl: 24px;
+  --tk-kulma-hius: 2px;
   --tk-kulma-pieni: 6px;
+  --tk-kulma-keski: 8px;
   --tk-kulma-nappi: 10px;
   --tk-kulma-kortti: 12px;
   --tk-kulma-pilleri: 999px;
