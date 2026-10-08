@@ -1,0 +1,32 @@
+{
+ "huone": "keskushalli",
+ "tiedosto": "keskushalli-keskustelu.mp3",
+ "kesto_s": 24.49,
+ "vuorot": [
+  {
+   "puhuja": "apulainen",
+   "alku_s": 0.09,
+   "loppu_s": 7.51,
+   "teksti": "Tietä, tietä! Kalakeittoa Linnantupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota."
+  },
+  {
+   "puhuja": "vartija2",
+   "alku_s": 7.98,
+   "loppu_s": 11.43,
+   "teksti": "Kolme kuutosta! Maksa, kun vielä kehtaat."
+  },
+  {
+   "puhuja": "vartija",
+   "alku_s": 11.83,
+   "loppu_s": 17.47,
+   "teksti": "Puhu hiljempaa. Vouti ravaa tänään portaissa kuin päätön kana – jotain on hukassa."
+  },
+  {
+   "puhuja": "talonpoika",
+   "alku_s": 18.0,
+   "loppu_s": 24.28,
+   "teksti": "Ja me lämmitellään täällä alhaalla. Hormeja myöten paras lämpö nousee voudin kamariin."
+  }
+ ],
+ "esivara_siirto_s": 0.09
+}

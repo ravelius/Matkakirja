@@ -1,0 +1,32 @@
+{
+ "huone": "kappeli",
+ "tiedosto": "kappeli-keskustelu.mp3",
+ "kesto_s": 29.3,
+ "vuorot": [
+  {
+   "puhuja": "kappalainen",
+   "alku_s": 0.1,
+   "loppu_s": 8.88,
+   "teksti": "Dominus vobiscum… Herra vouti, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien."
+  },
+  {
+   "puhuja": "vouti",
+   "alku_s": 9.5,
+   "loppu_s": 16.18,
+   "teksti": "Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina."
+  },
+  {
+   "puhuja": "kappalainen",
+   "alku_s": 16.75,
+   "loppu_s": 24.71,
+   "teksti": "Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat näkevänsä alttarin."
+  },
+  {
+   "puhuja": "vouti",
+   "alku_s": 25.27,
+   "loppu_s": 29.09,
+   "teksti": "Fatabuurin avain… missä minä sitä pitelinkään?"
+  }
+ ],
+ "esivara_siirto_s": 0.1
+}

@@ -1,0 +1,384 @@
+{
+ "huone": "keittio",
+ "malli": "eleven_v4",
+ "repliikit": [
+  {
+   "puhuja": "Kokki",
+   "teksti": "Kalaa ja naurista, naurista ja kalaa! Jos vouti vielä kerran kysyy, mitä tänään syödään, sanon: samaa mitä järvi ja pelto antaa."
+  },
+  {
+   "puhuja": "Vesipoika",
+   "teksti": "Kaksi sankoa lisää. Tuli on palanu aamusta asti – kohta tää keittiö kiehuu itekin."
+  },
+  {
+   "puhuja": "Kokki",
+   "teksti": "Vie tää vati Linnantupaan sotilaille. Yläsaliin mä vien itse – siellä ei kelpaa sankonkantajan likaiset sormet."
+  },
+  {
+   "puhuja": "Vouti",
+   "teksti": "Kokki, en ehdi aterioimaan. Iltarukous alkaa, ja minun on vielä pistäydyttävä kappelissa."
+  }
+ ],
+ "puhujat": [
+  {
+   "puhuja": "Kokki",
+   "voice_id": "NF0saj4MVqmAOV5CcTKo",
+   "rivi": 0,
+   "alku_s": 0.04,
+   "loppu_s": 10.28,
+   "sanat": [
+    {
+     "sana": "Kalaa",
+     "alku_s": 0.04,
+     "loppu_s": 0.52
+    },
+    {
+     "sana": "ja",
+     "alku_s": 0.6,
+     "loppu_s": 0.68
+    },
+    {
+     "sana": "naurista,",
+     "alku_s": 0.76,
+     "loppu_s": 1.56
+    },
+    {
+     "sana": "naurista",
+     "alku_s": 1.64,
+     "loppu_s": 2.2
+    },
+    {
+     "sana": "ja",
+     "alku_s": 2.28,
+     "loppu_s": 2.36
+    },
+    {
+     "sana": "kalaa!",
+     "alku_s": 2.52,
+     "loppu_s": 3.08
+    },
+    {
+     "sana": "Jos",
+     "alku_s": 3.56,
+     "loppu_s": 3.72
+    },
+    {
+     "sana": "vouti",
+     "alku_s": 3.8,
+     "loppu_s": 4.08
+    },
+    {
+     "sana": "vielä",
+     "alku_s": 4.12,
+     "loppu_s": 4.36
+    },
+    {
+     "sana": "kerran",
+     "alku_s": 4.4,
+     "loppu_s": 4.76
+    },
+    {
+     "sana": "kysyy,",
+     "alku_s": 4.84,
+     "loppu_s": 5.2
+    },
+    {
+     "sana": "mitä",
+     "alku_s": 5.24,
+     "loppu_s": 5.4
+    },
+    {
+     "sana": "tänään",
+     "alku_s": 5.48,
+     "loppu_s": 5.8
+    },
+    {
+     "sana": "syödään,",
+     "alku_s": 5.88,
+     "loppu_s": 6.52
+    },
+    {
+     "sana": "sanon:",
+     "alku_s": 6.6,
+     "loppu_s": 7.2
+    },
+    {
+     "sana": "samaa",
+     "alku_s": 7.48,
+     "loppu_s": 7.88
+    },
+    {
+     "sana": "mitä",
+     "alku_s": 7.96,
+     "loppu_s": 8.2
+    },
+    {
+     "sana": "järvi",
+     "alku_s": 8.24,
+     "loppu_s": 8.6
+    },
+    {
+     "sana": "ja",
+     "alku_s": 8.68,
+     "loppu_s": 8.76
+    },
+    {
+     "sana": "pelto",
+     "alku_s": 8.84,
+     "loppu_s": 9.16
+    },
+    {
+     "sana": "antaa.",
+     "alku_s": 9.24,
+     "loppu_s": 10.28
+    }
+   ]
+  },
+  {
+   "puhuja": "Vesipoika",
+   "voice_id": "dxjs8crcOOSSbPPSdf15",
+   "rivi": 1,
+   "alku_s": 10.28,
+   "loppu_s": 17.16,
+   "sanat": [
+    {
+     "sana": "Kaksi",
+     "alku_s": 10.28,
+     "loppu_s": 10.76
+    },
+    {
+     "sana": "sankoa",
+     "alku_s": 10.84,
+     "loppu_s": 11.24
+    },
+    {
+     "sana": "lisää.",
+     "alku_s": 11.32,
+     "loppu_s": 12.0
+    },
+    {
+     "sana": "Tuli",
+     "alku_s": 12.28,
+     "loppu_s": 12.52
+    },
+    {
+     "sana": "on",
+     "alku_s": 12.6,
+     "loppu_s": 12.68
+    },
+    {
+     "sana": "palanu",
+     "alku_s": 12.76,
+     "loppu_s": 13.08
+    },
+    {
+     "sana": "aamusta",
+     "alku_s": 13.16,
+     "loppu_s": 13.64
+    },
+    {
+     "sana": "asti",
+     "alku_s": 13.72,
+     "loppu_s": 14.04
+    },
+    {
+     "sana": "–",
+     "alku_s": 14.52,
+     "loppu_s": 14.56
+    },
+    {
+     "sana": "kohta",
+     "alku_s": 14.6,
+     "loppu_s": 14.84
+    },
+    {
+     "sana": "tää",
+     "alku_s": 14.92,
+     "loppu_s": 15.0
+    },
+    {
+     "sana": "keittiö",
+     "alku_s": 15.08,
+     "loppu_s": 15.52
+    },
+    {
+     "sana": "kiehuu",
+     "alku_s": 15.56,
+     "loppu_s": 15.92
+    },
+    {
+     "sana": "itekin.",
+     "alku_s": 15.96,
+     "loppu_s": 17.16
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Kokki",
+   "voice_id": "NF0saj4MVqmAOV5CcTKo",
+   "rivi": 2,
+   "alku_s": 17.16,
+   "loppu_s": 25.08,
+   "sanat": [
+    {
+     "sana": "Vie",
+     "alku_s": 17.16,
+     "loppu_s": 17.32
+    },
+    {
+     "sana": "tää",
+     "alku_s": 17.4,
+     "loppu_s": 17.56
+    },
+    {
+     "sana": "vati",
+     "alku_s": 17.64,
+     "loppu_s": 17.88
+    },
+    {
+     "sana": "Linnantupaan",
+     "alku_s": 17.96,
+     "loppu_s": 18.6
+    },
+    {
+     "sana": "sotilaille.",
+     "alku_s": 18.68,
+     "loppu_s": 19.52
+    },
+    {
+     "sana": "Yläsaliin",
+     "alku_s": 19.72,
+     "loppu_s": 20.28
+    },
+    {
+     "sana": "mä",
+     "alku_s": 20.32,
+     "loppu_s": 20.44
+    },
+    {
+     "sana": "vien",
+     "alku_s": 20.52,
+     "loppu_s": 20.68
+    },
+    {
+     "sana": "itse",
+     "alku_s": 20.76,
+     "loppu_s": 21.0
+    },
+    {
+     "sana": "–",
+     "alku_s": 21.4,
+     "loppu_s": 21.44
+    },
+    {
+     "sana": "siellä",
+     "alku_s": 21.48,
+     "loppu_s": 21.8
+    },
+    {
+     "sana": "ei",
+     "alku_s": 21.84,
+     "loppu_s": 21.88
+    },
+    {
+     "sana": "kelpaa",
+     "alku_s": 21.96,
+     "loppu_s": 22.36
+    },
+    {
+     "sana": "sankonkantajan",
+     "alku_s": 22.44,
+     "loppu_s": 23.32
+    },
+    {
+     "sana": "likaiset",
+     "alku_s": 23.4,
+     "loppu_s": 23.88
+    },
+    {
+     "sana": "sormet.",
+     "alku_s": 23.96,
+     "loppu_s": 25.08
+    }
+   ],
+   "tauko_s": 0.0
+  },
+  {
+   "puhuja": "Vouti",
+   "voice_id": "MZvBk0qJWqOzeRt8hTt6",
+   "rivi": 3,
+   "alku_s": 25.08,
+   "loppu_s": 31.24,
+   "sanat": [
+    {
+     "sana": "Kokki,",
+     "alku_s": 25.08,
+     "loppu_s": 25.8
+    },
+    {
+     "sana": "en",
+     "alku_s": 25.88,
+     "loppu_s": 26.04
+    },
+    {
+     "sana": "ehdi",
+     "alku_s": 26.12,
+     "loppu_s": 26.28
+    },
+    {
+     "sana": "aterioimaan.",
+     "alku_s": 26.36,
+     "loppu_s": 27.16
+    },
+    {
+     "sana": "Iltarukous",
+     "alku_s": 27.56,
+     "loppu_s": 28.12
+    },
+    {
+     "sana": "alkaa,",
+     "alku_s": 28.2,
+     "loppu_s": 28.84
+    },
+    {
+     "sana": "ja",
+     "alku_s": 28.88,
+     "loppu_s": 28.92
+    },
+    {
+     "sana": "minun",
+     "alku_s": 29.0,
+     "loppu_s": 29.16
+    },
+    {
+     "sana": "on",
+     "alku_s": 29.24,
+     "loppu_s": 29.32
+    },
+    {
+     "sana": "vielä",
+     "alku_s": 29.36,
+     "loppu_s": 29.52
+    },
+    {
+     "sana": "pistäydyttävä",
+     "alku_s": 29.56,
+     "loppu_s": 30.2
+    },
+    {
+     "sana": "kappelissa.",
+     "alku_s": 30.24,
+     "loppu_s": 31.24
+    }
+   ],
+   "tauko_s": 0.0
+  }
+ ],
+ "raaka_mean_dB": -17.2,
+ "mean_dB": -17.5,
+ "max_dB": -1.1,
+ "LUFS": -16.5,
+ "kesto_s": 31.16,
+ "esivara_siirto_s": 0.04
+}
