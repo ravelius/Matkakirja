@@ -2500,6 +2500,10 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuvasarja (3)";
                 case "peitto": return Peitto();
                 case "tapit": return "opas: " + tapit.Kuvaus();
+                case "vipu":
+                    // ui opasvalikko vipu [asento −2…1]: vapaan lennon nopeusvipu (OpasTapit, juna 170).
+                    return "opas: " + tapit.VipuKuvaus(o.Length > 1 && float.TryParse(o[1], System.Globalization.NumberStyles.Float,
+                        System.Globalization.CultureInfo.InvariantCulture, out var va) ? va : (float?)null);
                 case "moniosuma":
                     // ui opasvalikko moniosuma [tulos]: kaksi Input System -sormea tappeihin yhtä aikaa (MoniosumaTesti, juna 170).
                     if (o.Length > 1 && o[1] == "tulos") return "opas: moniosuma " + MoniosumaTesti.Viimeisin;

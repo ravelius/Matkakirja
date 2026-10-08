@@ -1157,6 +1157,38 @@
     background-color: var(--lapinakyva);
 }
 
+/* Pystyasento (vapaan lennon nopeusvipu, omistaja 9.10.2026, juna 170; Päätoimittaja: sama pohja pystyyn): sama ura 8, nuppi 16 ja
+   kosketusala 26, korkeus 120; Unity asettaa nupin top-arvon itse, joten vaakasäätimen top/margin-top nollataan. */
+.mk-saadin.mk-saadin--pysty {
+    flex-grow: 0;
+    width: 26px;
+    height: 120px;
+    margin: 0;
+}
+
+.mk-saadin.mk-saadin--pysty .unity-base-slider__input,
+.mk-saadin.mk-saadin--pysty #unity-drag-container {
+    width: 26px;
+    height: 120px;
+}
+
+.mk-saadin.mk-saadin--pysty #unity-tracker {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 8px;
+    height: auto;
+    margin-top: 0;
+    margin-left: -4px;
+}
+
+.mk-saadin.mk-saadin--pysty #unity-dragger {
+    left: 50%;
+    margin-top: 0;
+    margin-left: -8px;
+}
+
 /* --- offline-lataus ------------------------------------------------------ */
 
 .mk-offline {
