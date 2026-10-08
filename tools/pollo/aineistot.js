@@ -81,5 +81,9 @@ export const OPAS_AINEISTOT = Object.freeze({
     // erät 3–4 (8.10.)
     lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v1/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
+    // erät 5–6 (8.10.)
+    edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
+    krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
+    oslo: 'esittely/oslo-v1/oslo-yksityiskohdat.json',
   },
 });
