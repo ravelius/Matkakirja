@@ -6,6 +6,15 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 07.4x (JATKA TÄSTÄ)
+
+Junaan 164 Natiivisepälle: seikkailu-pulu-nappain f2587529 (KUITATTU, korvaa 8aa55e02), astrokuva-tauko-164 67727816f ja
+giza-tekijat-164 b529268aa (KUITATTU; pudonneet erät poimittu BUILD 163:n päälle, Natiivisepän esirungossa juna-164 482f65f7f),
+metro-otsikko 69e0b05ae (8b4659e9:n päällä, korvaa sen; KUITTAUSTA ODOTTAA; SHA myös Linssisepälle videokäännökseen ~10.00).
+metro-otsikko: korostettu nimi yhdellä rivillä (SovitaKorostus, 44 pt → leveyteen, väh. väliotsikko), lisätila ei rajaudu kaistaan.
+Web: #4070 mergetty (4a69d8db4), #4035 suljettu (sisältyi), #3832 → #4180 mergetty (98a4bb82e), #3832 suljettu. Worktree
+wt/natiivi-ui-lautapeli-paperi poistetaan (tools/uusi-worktree.sh --poista natiivi-ui-lautapeli-paperi).
+
 ## 8.10. klo 07.3x: PULUN VIHJE NÄPPÄIMELLÄ (pelattavuusmalli kohta 6), kuittausta odottaa
 
 natiivi-ui/seikkailu-pulu-nappain f2587529 (8aa55e02:n päällä, worktree wt/proto-natiivi-ui-seikkailutoiminto): Mac P ja
