@@ -17,11 +17,13 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "airot|rowing boat oars|3|40"
-          "airot|oars rowing water|3|40"
-          "koysi|rope creak tension|1|20"
-          "koysi|rope slide hands friction|1|20"
-          "kello-halytys|church bell alarm tolling single bell|5|60"
+          "sade-vesi|rain on lake water surface|15|180"
+          "sade-vesi|rain falling on water river pond|15|180"
+          "sade-pressu|rain on tarp canvas tent|15|180"
+          "sade-vene|rain on wooden boat|10|180"
+          "sade-kivi|rain on stone pavement courtyard|15|180"
+          "sade-laituri|rain on wooden dock pier|10|180"
+          "tippuminen|dripping water drops gutter eaves|10|120"
       - uses: actions/upload-artifact@v4
         with:
           name: freesound
