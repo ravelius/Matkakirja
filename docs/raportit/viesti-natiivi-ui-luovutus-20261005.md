@@ -8,9 +8,9 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
 ## TILA 8.10. klo 18.0x (JATKA TÄSTÄ)
 
-Juna 167 (Natiiviseppä kirjannut): linna-latauskuva 24372c44d. KUITTAUSTA ODOTTAA: natiivi-ui/olavinlinna-peli dcbaf72d3
-(juna-166:n päällä, worktree wt/proto-natiivi-ui-olavpeli): Pelit-välilehti LAUTAPELIT + VIDEOPELIT, Olavinlinna-rivi →
-SeikkailuTapit.AvaaPelattavaPala; kysymys VideopelitKaikille (nyt vain kehittäjä). Pallon kerroksellinen latauskuva: MINÄ kytken
+Juna 167 (Natiiviseppä kirjannut): linna-latauskuva 24372c44d. JUNA 167 KUITATTU ja SHA Natiivisepälle: natiivi-ui/olavinlinna-peli 40e71625b (korvaa dcbaf72d3; LAUTAPELIT kaikille + kehittäjälle KESKENERÄISET, omistaja 17.4x)
+(juna-166:n päällä, worktree wt/proto-natiivi-ui-olavpeli): Olavinlinna-rivi →
+SeikkailuTapit.AvaaPelattavaPala; VIDEOPELIT-osio kaikille vasta omistajan päätöksellä (huoneet 1–10 valmiit). Pallon kerroksellinen latauskuva: MINÄ kytken
 (LS1 sopi 17.5x, Kuvat.Hae R2:sta, juna 167) kun Codexin kerrokset tulevat. #4208 testit ajossa uudelleen (peruuntuivat) → mergeä.
 
 ## TILA 8.10. klo 17.3x (JATKA TÄSTÄ)
