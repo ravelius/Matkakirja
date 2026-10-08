@@ -458,6 +458,8 @@ namespace Matkakirja.Natiivi
         // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): soutaja-2 veneestä → portinvartija-riita-1 → -2, portinvartija 12 s selin porttiin
         // (näkö 4 m, ±35°) → portinvartija-paluu-5. Ensimmäinen 20 s pelaajan tultua, sitten 40 s:n välein, kun pelaaja on laiturilla tai portilla.
         const float RiitaValiS = 40f; float riitaAsti = 20f; bool riitaKaynnissa;
+        /// <summary>Riita alkoi (portinvartija selin porttiin): Pulun ensivihje laiturilla (SeikkailuVihjeet, LS2 8.10.).</summary>
+        public static event Action RiitaAlkoi;
         System.Collections.IEnumerator Riita(SeikkailuPelaaja p)
         {
             var pv = vartijat.Find(x => x.Aivot.Profiili == VartijaProfiili.Portinvartija && x.Agentti != null);
@@ -471,6 +473,7 @@ namespace Matkakirja.Natiivi
             yield return new WaitForSecondsRealtime((float)Math.Max(1.0, k1));
             pv.Aivot.AloitaRiita(vene.x, vene.z);
             kirjaa?.Invoke("seikkailu: riita alkaa (portinvartija selin porttiin 12 s)");
+            RiitaAlkoi?.Invoke();
             double k2 = r != null && r.Valmis && pv.Agentti != null ? r.Soita("portinvartija-riita-1", pv.Agentti.transform) : 0;
             yield return new WaitForSecondsRealtime((float)Math.Max(2.0, k2 + 0.3));
             if (pv.Aivot.Riita > 0 && r != null && r.Valmis && pv.Agentti != null) r.Soita("portinvartija-riita-2", pv.Agentti.transform);
