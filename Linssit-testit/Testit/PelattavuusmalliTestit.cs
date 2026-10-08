@@ -1,6 +1,6 @@
 // PELATTAVUUSMALLIN RAJAT (Linssiseppä 2, 8.10.2026; pelattavuusmalli-olavinlinna.md kohta 11, Ydin-taso): valo edestä 5 m → epäily
 // ≤ 0,6 s; pimeä 0,1 kyyryssä 4 m → ei epäilyä 30 s:ssa; 3 m selän takana → ei havaintoa; pinnat × tila (18 arvoa, kohta 2.2); kivellä
-// kävely 2,4 m → tutkii, 2,6 m → ei, eri osa ei kuule (v44v-osat); vaiheiden kestot ±0,1 s (kohta 3.3) ja valppaus 60 s; varoitus
+// kävely 2,4 m → tutkii, 2,6 m → ei, eri osa ei kuule (v44w-osat); vaiheiden kestot ±0,1 s (kohta 3.3) ja valppaus 60 s; varoitus
 // ennen jokaista kiinniottoa kaikilla profiileilla (1 000 siemenajoa). Täydentää VartijaTestit- ja AskelaaniTestit-tiedostoja.
 using System;
 using System.Collections.Generic;

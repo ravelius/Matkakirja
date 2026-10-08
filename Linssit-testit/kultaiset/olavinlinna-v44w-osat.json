@@ -900,11 +900,15 @@
   },
   "muurikaytava": {
    "kolmiot": {
-    "nakyva": 610,
-    "-tormays": 340,
-    "-kavely": 190
+    "nakyva": 794,
+    "-tormays": 524,
+    "-kavely": 198
    },
    "merkit": [
+    "piilo:muurikaytava-komero-1",
+    "piilo:muurikaytava-komero-2",
+    "piilo:muurikaytava-komero-3",
+    "piilo:muurikaytava-komero-4",
     "aukko:muuri-1",
     "valo:kuu-muuri-1",
     "aukko:muuri-2",
@@ -916,6 +920,10 @@
     "ovi:muurikaytava",
     "partio:muurikaytava-1",
     "partio:muurikaytava-2",
+    "piilo:muurikaytava-vali-1",
+    "piilo:muurikaytava-vali-2",
+    "piilo:muurikaytava-vali-3",
+    "esine:kivi-muurikaytava",
     "ovi:kellotorni",
     "pinta:kivi-muuri",
     "kiipeily:tikkaat-harja",
@@ -1112,7 +1120,7 @@
     "kavely": "muurikaytava-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 610,
+    "kolmiot_nakyva": 794,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },

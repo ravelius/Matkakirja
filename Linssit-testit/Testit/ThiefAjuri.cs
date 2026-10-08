@@ -25,8 +25,8 @@ namespace Matkakirja.Linssit.Testit
                 // Tutkii tai etsii pelaajan luota (askeleet, herännyt torkkuja); harhautuksen kolahdus muualla on sallittu.
                 // Tarjotin kädessä kävelevää kulkuluvan hahmo ei näe, vaikka tulisi askelten luo (Vartija.NakoVoima), joten se sallitaan.
                 bool lupa = !w.Hiipii && h.Aivot.Profiili != VartijaProfiili.Torkku   // herännyt torkkuja ei ota eväitä
-                    && (w.Tarjotin && h.Aivot.Profiili.TarjotinLupa || w.Naamio && h.Aivot.Profiili.NaamioLupa && !h.Aivot.Tunnisti);
-                if (!lupa && (h.Aivot.Tila == VartijanTila.Etsinta || h.Aivot.Tila == VartijanTila.Etsii) && Huonesimulaatio.Etaisyys2(h.Aivot.EpailyX, h.Aivot.EpailyZ, w.PX, w.PZ) < 3 && Math.Abs(h.Y - w.PY) < 2.5) return false;
+                    && (w.Tarjotin && h.Aivot.Profiili.TarjotinLupa || w.Naamio && h.Aivot.Profiili.NaamioLupa && !h.Aivot.Tunnisti && h.MerkkiOsa != Huonesimulaatio.NaamioEiKelpaaOsa);
+                if (!lupa && (h.Aivot.Tila == VartijanTila.Etsinta || h.Aivot.Tila == VartijanTila.Etsii) && Huonesimulaatio.Etaisyys2(h.Aivot.EpailyX, h.Aivot.EpailyZ, w.PX, w.PZ) < 3 && Math.Abs(h.Y - w.PY) < 4) return false;
             }
             return true;
         }
@@ -134,7 +134,7 @@ namespace Matkakirja.Linssit.Testit
         public static void Tulosta(Huonesimulaatio w)
         {
             Console.WriteLine($"      pelaaja ({w.PX:F1}, {w.PY:F1}, {w.PZ:F1}) seuraava {w.Seuraava + 1}, valoisuus {w.Valoisuus():F2}, t {w.T:F0} s");
-            foreach (var h in w.Hahmot) if (h.Aktiivinen) Console.WriteLine($"        {h.Nimi} ({h.X:F1}, {h.Y:F1}, {h.Z:F1}) {h.Aivot.Tila} mittari {h.Aivot.Mittari:F2} yaw {h.Aivot.Yaw:F0}{(h.Aivot.Torkkuu ? " torkkuu" : "")}{(h.Aivot.Syo ? " syö" : "")}");
+            foreach (var h in w.Hahmot) if (h.Aktiivinen) Console.WriteLine($"        {h.Nimi} ({h.X:F1}, {h.Y:F1}, {h.Z:F1}) {h.Aivot.Tila} mittari {h.Aivot.Mittari:F2} yaw {h.Aivot.Yaw:F0} epäily ({h.Aivot.EpailyX:F1}, {h.Aivot.EpailyZ:F1}){(h.Aivot.Torkkuu ? " torkkuu" : "")}{(h.Aivot.Syo ? " syö" : "")}");
         }
 
         public sealed class Tulos { public Huonesimulaatio Loppu; public List<string> Loki = new List<string>(); public int Pisin; public Huonesimulaatio PisinTila; }

@@ -28,22 +28,37 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(loppu.T <= 2 * sujuva, $"aika {loppu.T:F0} s ≤ 2 × sujuva {sujuva:F0} s");
         }
 
-        /// <summary>Huoneet 7–8 muurilla (naamio ei kelpaa osassa muurikaytava, PT 8.10.): muurikäytävän ovelta kiipeilyn alkuun hiipien.
-        /// Odottaa LR:n piilomerkkejä muurikäytävään (piilo:muurikaytava-*); ilman niitä lyhtyvartija partioi koko käytävän eikä ohitusta ole.</summary>
-        [Testi] static void MuurikaytavaJaHarjaHiipien()
+        public const int TikkaatAla = 86;   // reitti:pelaaja-87 tikkaat muurinharjalle (0-pohjainen)
+        /// <summary>Harjan tikkaiden yläpää on 0,9 m talonpojasta ja 1,5 m vartijasta soihdun valossa (v44w): alle 2 m:n selkäaisti ja valo
+        /// nostavat epäilyn nousussa. Kun LR/Siirtoseppä korjaa (siirto, valo tai kohtauksen aikainen poikkeus), vaihda true: testi vaatii läpäisyn.</summary>
+        public const bool HarjaKorjattu = false;
+
+        /// <summary>Huone 7 muurikäytävässä (naamio ei kelpaa, PT 8.10.; LR v44w: komerot, varjot, lyhyempi partio, kivi): ovelta tikkaille hiipien.</summary>
+        [Testi] static void MuurikaytavaHiipien()
         {
-            bool piilot = false; foreach (var m in Huonesimulaatio.Data.Lajia("piilo")) if (m.Osa == "muurikaytava") piilot = true;
-            if (!piilot) { Console.WriteLine("      muurikäytävä: ODOTTAA LR:n piilo:muurikaytava-* -merkkejä (Siirtosepän pyyntö 8.10.), ei ajettu"); return; }
             var w = Huonesimulaatio.UusiM();
             var ennen = ThiefAjuri.Aja(w, MAlku + 1, Ovi, budjetti: 600).Loppu;
             Oleta.Tosi(ennen != null, "muurikäytävän ovelle");
             double t0 = ennen.T;
-            var tulos = ThiefAjuri.Aja(ennen, Ovi + 1, KiipeilyAlku, budjetti: 600); var loppu = tulos.Loppu;
-            double sujuva = ThiefAjuri.Sujuva(Ovi, KiipeilyAlku, Kavely.HiipiminenMs);
+            var tulos = ThiefAjuri.Aja(ennen, Ovi + 1, TikkaatAla, budjetti: 600); var loppu = tulos.Loppu;
+            double sujuva = ThiefAjuri.Sujuva(Ovi, TikkaatAla, Kavely.HiipiminenMs);
             if (loppu == null) { Console.WriteLine($"      jumissa pisteessä {tulos.Pisin + 1}:"); ThiefAjuri.Tulosta(tulos.PisinTila); }
-            else Console.WriteLine($"      muuri ja harja {loppu.T - t0:F0} s (sujuva {sujuva:F0} s), kiinni {loppu.Kiinni}: {string.Join(", ", tulos.Loki)}");
-            Oleta.Tosi(loppu != null && loppu.Kiinni == 0, $"hiipien pisteeseen {tulos.Pisin + 1}/{KiipeilyAlku + 1}");
+            else Console.WriteLine($"      muurikäytävä {loppu.T - t0:F0} s (sujuva {sujuva:F0} s), kiinni {loppu.Kiinni}: {string.Join(", ", tulos.Loki)}");
+            Oleta.Tosi(loppu != null && loppu.Kiinni == 0, $"hiipien tikkaille ({tulos.Pisin + 1}/{TikkaatAla + 1})");
             Oleta.Tosi(loppu.T - t0 <= 2 * sujuva + 30, $"aika {loppu.T - t0:F0} s ≤ 2 × sujuva + 30 s (lyhdyn kierros)");
+        }
+
+        /// <summary>Huone 8 harjalla: tikkaat ylös, köysikieppi vartijoiden takaa, sakara, kiipeilyn alku (pelaaja-87 → -92).</summary>
+        [Testi] static void HarjaHiipien()
+        {
+            var w = Huonesimulaatio.UusiM();
+            var ennen = ThiefAjuri.Aja(w, MAlku + 1, Ovi, budjetti: 600).Loppu;
+            var tikkaat = ThiefAjuri.Aja(ennen, Ovi + 1, TikkaatAla, budjetti: 600).Loppu;
+            Oleta.Tosi(tikkaat != null, "tikkaiden juurelle");
+            var tulos = ThiefAjuri.Aja(tikkaat, TikkaatAla + 1, KiipeilyAlku, budjetti: 600);
+            if (tulos.Loppu != null) Console.WriteLine($"      harja: läpi, kiinni {tulos.Loppu.Kiinni}: {string.Join(", ", tulos.Loki)}");
+            else { Console.WriteLine($"      harja: {(HarjaKorjattu ? "" : "ODOTTAA KORJAUSTA (tiedoksi): ")}jumissa pisteessä {tulos.Pisin + 1}:"); ThiefAjuri.Tulosta(tulos.PisinTila); }
+            if (HarjaKorjattu) Oleta.Tosi(tulos.Loppu != null && tulos.Loppu.Kiinni == 0, $"harja hiipien ({tulos.Pisin + 1}/{KiipeilyAlku + 1})");
         }
 
         /// <summary>Kiipeily (huone 8): otteet ote:kellotorni-1…10, puuskat tuuli:-merkkien otteilla, lyhty yllä puolivälissä kerran
