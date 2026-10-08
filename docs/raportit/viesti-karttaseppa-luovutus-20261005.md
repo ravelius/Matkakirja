@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 18.xx
+# TILANNE 8.10. klo 20.0x
 
 - **Pallo vs. Unreal 5 -raportti VALMIS:** PR https://github.com/ravelius/Matkakirja/pull/4220 (haara karttaseppa-pallo-unreal, worktree /Users/Shared/Claude/wt/karttaseppa-pallo-unreal), docs/raportit/pallo-unreal-vertailu-20261008.md. Pallon osio on Linssisepältä.
   PT:lle on lähetetty yhteenveto. Odottaa PT:n mergeä ja työnjakoa (ehdotus: Karttaseppä vesimaski, pilviaineisto ja LUT-työkalu). Mergen jälkeen `uusi-worktree.sh --poista karttaseppa-pallo-unreal`.
