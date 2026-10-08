@@ -44,6 +44,9 @@ namespace Matkakirja.Linssit.Seikkailu
             }
         }
 
+        /// <summary>Vene perillä (LS2 8.10.: kolmas pyyhkäisy osui 24–28,5 s:iin, vene on laiturissa 22 s): oppitunti päättyy, lyhty sammuu.</summary>
+        public void Lopeta() { if (Vaihe != PressuVaihe.Opittu) Siirry(PressuVaihe.Opittu); Nahtiin = false; }
+
         void Siirry(PressuVaihe v) { Vaihe = v; VaiheS = 0; }
     }
 }

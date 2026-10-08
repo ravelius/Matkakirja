@@ -104,7 +104,7 @@ namespace Matkakirja.Natiivi
                 var d = SeikkailuKavely.Data;
                 if (d != null) foreach (var m in d.Merkit) if (m.Nimi == "partio:portinvartija-1" || lahde == null && m.Nimi == "ovi:vesiportti-loppu") lahde = new Vector3((float)m.X, (float)m.Y + 1.6f, (float)-m.Z);
                 if (lahde == null) return;
-                var g = new GameObject("Portinvartijan lyhty (pyyhkäisy)") { layer = juuri.layer }; g.transform.SetParent(juuri.transform.parent, false);
+                var g = new GameObject("Portinvartijan lyhty (pyyhkäisy)") { layer = juuri.layer }; g.transform.SetParent(juuri.transform.parent, false); luodut.Add(g);   // Poista tuhoaa (LS2 8.10.: muuten valo jäi palamaan)
                 g.transform.position = lahde.Value;
                 lyhty = g.AddComponent<Light>(); lyhty.type = LightType.Spot; lyhty.spotAngle = 14f; lyhty.range = 60f; lyhty.color = new Color(1f, 0.68f, 0.38f);
                 lyhty.shadows = LightShadows.None; lyhty.intensity = 0f;
@@ -182,7 +182,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Asettaa veneen ja airot ajan mukaan. Palauttaa Ytimen tilan.</summary>
         public VeneTila Paivita(bool vahennettyLiike)
         {
-            if (SeikkailuPelaaja.Ensimmainen && kameraGo != null)
+            // Perillä (laiturilla Sovitin kutsuu yhä Paivitaa): oppitunti loppuu eikä veneen kamera syö pelaajan katsesyötettä (LS2 8.10.).
+            bool perilla = ydin.Tila(Aika).Perilla;
+            if (perilla) Oppitunti?.Lopeta();
+            if (perilla && lyhty != null && lyhtyNyt > 0f) { lyhtyNyt = Mathf.MoveTowards(lyhtyNyt, 0f, Time.unscaledDeltaTime * 3f); lyhty.intensity = lyhtyNyt; }
+            if (SeikkailuPelaaja.Ensimmainen && kameraGo != null && !perilla)
             {
                 var k = SeikkailuPelaaja.KatseSyote(Time.unscaledDeltaTime);
                 katseYaw = Mathf.Clamp(katseYaw + k.x, -VeneKatseVaaka, VeneKatseVaaka);

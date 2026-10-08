@@ -29,5 +29,15 @@ namespace Matkakirja.Linssit.Testit
             Aja(q, 7, 30); for (int i = 0; i < 3; i++) Aja(q, 2 + 2.5 + 4, 30);
             Oleta.Tosi(q.Vaihe == PressuVaihe.Opittu && !q.Oppi && q.Yritys == 3, $"3 yritystä kurkistaen → läpi ilman jumia ({q.Vaihe}, {q.Yritys})");
         }
+
+        [Testi] static void VenePerillaLopettaa()
+        {
+            // LS2 8.10.: kurkistajan kolmas pyyhkäisy (24–28,5 s) osui laiturille; vene on perillä 22 s → Lopeta, ei enää "Hä?":tä.
+            var p = new Pressu();
+            Aja(p, 22, 30); p.Nahtiin = false;
+            p.Lopeta();
+            Aja(p, 8, 30);
+            Oleta.Tosi(p.Vaihe == PressuVaihe.Opittu && !p.Nahtiin, $"perillä: oppitunti päättyi ({p.Vaihe}, nähtiin {p.Nahtiin})");
+        }
     }
 }
