@@ -637,6 +637,8 @@ namespace Matkakirja.Natiivi
             string id = YksKaupunkiId();
             if (id == null || !yksPolut.TryGetValue(id, out var polku) || !yksValimuisti.TryGetValue(polku, out var l) || l == null) return;
             esiKortitId = k.Id;
+            kortti ??= new YksityiskohtaKortti(o);
+            if (kaupunki?.Kamera != null) kortti.Lammita(kaupunki.Kamera);
             foreach (var x in l)
                 if (string.Equals(x.KohdeId, k.Id, StringComparison.OrdinalIgnoreCase)) YksityiskohtaKortti.Esilataa(o, x.Url);
         }

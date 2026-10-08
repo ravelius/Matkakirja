@@ -1178,7 +1178,8 @@ namespace Matkakirja.Linssit.Kierros
             Kuvakulma a, b; double t0;
             if (Vaihe == OpasVaihe.Lentaa)
             {
-                if (siirto || siirtyma || kohdeKehys == null || avausViive > 0 || VaiheAika >= LentoKestoS) return 0;
+                // Myös siirtymälento (kierroksen aloitus yleiskuvasta arviokehykseen, video4 5–12 s karkeana).
+                if (siirto || kohdeKehys == null || avausViive > 0 || VaiheAika >= LentoKestoS) return 0;
                 a = lahto; b = KohdeAsento(); t0 = VaiheAika / Math.Max(0.01, LentoKestoS);
             }
             else if (Seuraava != null && !Seuraava.Kysymys && !PakotaSiirto)

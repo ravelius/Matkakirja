@@ -76,6 +76,32 @@ namespace Matkakirja.Linssit
             }
         }
 
+        // ESILÄMMITYS (video4 8.10.: istunnon ensimmäinen kortti jähmetti kuvan 67 ms — overlay-kamera, Nostokortti-varjostin ja
+        // TMP-materiaali otettiin käyttöön samassa ruudussa): kortti piirretään kerran näkymättömänä (alfa 0) jo ennen ensimmäistä kuvaa.
+        bool lammitetty;
+        public void Lammita(Camera kamera)
+        {
+            if (lammitetty || kamera == null || Nakyy || ajo != null) return;
+            lammitetty = true;
+            o.StartCoroutine(LammitaAjo(kamera));
+        }
+
+        IEnumerator LammitaAjo(Camera kamera)
+        {
+            Varmista(kamera);
+            if (Nakyy || ajo != null || kortti == null) yield break;
+            overlay.aspect = kamera.aspect;
+            mat.SetTexture("_MainTex", Texture2D.whiteTexture);
+            kortti.localScale = Vector3.one; kortti.localPosition = new Vector3(0f, 0f, Etaisyys); kortti.localRotation = Quaternion.identity;
+            mat.SetFloat("_Alfa", 0f);
+            teksti.text = "Åa"; teksti.alpha = 0f;
+            kortti.gameObject.SetActive(true);
+            teksti.ForceMeshUpdate();
+            yield return null; yield return null;
+            if (!Nakyy && ajo == null && kortti != null) kortti.gameObject.SetActive(false);
+            Debug.Log("MATKAKIRJA opas: yksityiskohtakortti esilämmitetty");
+        }
+
         /// <summary>Esiladattu tekstuuri omaksi (poistuu välimuistista; kortti tuhoaa sen piilottaessaan), muuten null.</summary>
         static Texture2D OtaEsiladattu(string url)
         {
