@@ -1,0 +1,484 @@
+{
+  "task": "budapest-yksityiskohdat-20261008",
+  "routedTaskNumber": 20,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-budapest-yksityiskohdat-20261008.md",
+    "commit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+    "blob": "87425c782e41c80bf28fb1e26ebc78a0767c0cd0"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 4,
+  "imageCount": 3,
+  "generationCalls": 4,
+  "generationLimit": 4,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q194783",
+      "id": "allas-shakkipelaajat",
+      "file": "budapest-Q194783-allas-shakkipelaajat.png",
+      "filename": "budapest-Q194783-allas-shakkipelaajat.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a96-27a4-73e0-bcb0-918ecdec094b/exec-4186d28e-35ce-4817-bee4-bb49e494ffc2.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/01-allas-shakkipelaajat/original-generation.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/01-allas-shakkipelaajat/budapest-Q194783-allas-shakkipelaajat.png",
+      "sha256": "278b89ae54b0b5418b27026dc25ccfdd649dc624077209ef78c113626c9c6b0c",
+      "originalSha256": "7f86e6734851135a740e9c63e86df851721e2472b52863cf1f1096e36ea03b37",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/01-allas-shakkipelaajat/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational detail image for Budapest city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG in sRGB. No input photographs and no references to any existing photograph or artwork. Convincing photorealistic camera-shot appearance with realistic material textures and ordinary imperfections, natural muted light and restrained colors. No HDR, cinematic grading, oversaturation, painterly effect, engraving, illustration strokes, CGI sheen, image border or watermark. Absolutely no letters, words, numerals, board coordinates, inscriptions, labels, signs, logos or emblems anywhere. All living human figures are fictional anonymous adults, viewed entirely from behind; no human faces, real-person likenesses or portraits.\nScene: present-day outdoor thermal pool of Széchenyi Baths, Budapest. Soft cool overcast morning with delicate steam rising above pale turquoise warm water. The background is an ochre-yellow Neo-Baroque bath wing with arched windows, columns and restrained greenish domes, recognizably a historic Budapest bath courtyard. No modern adverts or bright tourist clutter.\nSubject: exactly TWO separate water-resistant wooden chessboards, each clearly an 8-by-8 grid, with recognizable dark and ivory chess pieces arranged for games in progress. Both boards are close to the pool edge on two low plain stone supports just above the water, not levitating. TWO fictional elderly male bathers with gray hair and modest ordinary dark swimming trunks stand waist-deep in the warm water beside the boards. They are viewed FULLY FROM BEHIND, head and shoulders facing away toward their boards; the camera sees ONLY backs of heads and backs, never their faces. One wet hand reaches naturally to a chess piece. Their visible bodies occupy approximately a fifth of image height and remain well within the broad pool scene. At most two tiny rear-facing spectators stand at the far pool edge in subdued plain bathrobes.\nComposition: wide landscape from the pool edge slightly above water level, about 7 meters from the men. Two chessboards and rear-facing bathers in the lower-middle of the image, pool steam and yellow historic bath wing behind. Waterline visibly at the men's waists. Clear object separation, realistic water reflections, ripples and damp stone. No crowd of swimmers.\nAvoid: front or profile human faces, portraits, board labels or lettering, logos, any readable text, busy tourist crowds, invented fantasy architecture, submerged or unsupported chessboards, extra limbs or fingers.",
+      "viitteet": [
+        {
+          "publisher": "Széchenyi Thermal Bath / Budapest Spas cPlc.",
+          "title": "Past and present",
+          "url": "https://www.szechenyibath.hu/past-and-present",
+          "type": "textResearchOnly",
+          "notes": "Bath operator confirms the 1913 Czigler design and 1927 outdoor expansion; no source photographs or pixels opened.",
+          "access": "2026-10-08; text read"
+        },
+        {
+          "publisher": "Budapest Info / Budapest tourism organization",
+          "title": "Budapest by bike in 13 stages",
+          "url": "https://www.budapestinfo.hu/en/budapest-by-bike-in-13-stages",
+          "type": "textResearchOnly",
+          "notes": "Official tourism text describes steaming outdoor pools in winter and older gentlemen playing chess in the water. Scene arrangement and two boards are fictional.",
+          "access": "2026-10-08; official indexed text read; direct page text unavailable"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen shakkikohtaus Széchenyin kylpylän lämpimässä ulkoaltaassa. Kylpylässä pelataan shakkia veden äärellä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; equality verified against generation.",
+        "Preserved original-generation.png byte-exactly; source and preserved SHA-256 verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and separate full-frame 480x320 preview visually inspected.",
+          "Exactly two chessboards with dark/ivory pieces, two elderly fictional male bathers at waist-deep water, steam and muted ochre Neo-Baroque bath courtyard are legible.",
+          "Both main men fully rear-facing, only backs of heads and ears visible; two tiny bathrobe spectators in background also rear-facing.",
+          "No readable text, board coordinates, logos, watermark, crowd or violence observed.",
+          "Photographic material textures and subdued overcast light; key chess theme readable at 480px."
+        ],
+        "limitations": [
+          "Kuvitteellinen nykypäivän henkilö-, lautajärjestely ja kamerapaikka; ei todellinen valokuva eikä tarkka pohjapiirustus.",
+          "Pelaajat ovat noin kolmasosan kuvan korkuisia, tavoitetta suurempia mutta selin. Lautojen kivitukien kiinnittymistä altaan pohjaan/reunaan ei voi kuvasta todentaa."
+        ],
+        "limits": [
+          "Kuvitteellinen nykypäivän henkilö-, lautajärjestely ja kamerapaikka; ei todellinen valokuva eikä tarkka pohjapiirustus.",
+          "Pelaajat ovat noin kolmasosan kuvan korkuisia, tavoitetta suurempia mutta selin. Lautojen kivitukien kiinnittymistä altaan pohjaan/reunaan ei voi kuvasta todentaa."
+        ],
+        "parentQAStatus": "pending"
+      },
+      "sourceCommit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+      "sourceBlob": "87425c782e41c80bf28fb1e26ebc78a0767c0cd0",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only; no reference images",
+      "generationToolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/01-allas-shakkipelaajat/generation-tool-output.txt",
+      "status": "local-candidate-approved",
+      "excludedReason": null,
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "budapest-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q194783",
+        "file": "budapest-Q194783-allas-shakkipelaajat.png",
+        "sha256": "278b89ae54b0b5418b27026dc25ccfdd649dc624077209ef78c113626c9c6b0c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kaksi shakkilautaa veden äärellä ja kaksi selin olevaa vanhempaa anonyymiä mieskylpijää vyötärösyvyydessä. Höyry, keltainen kylpylä ja hillitty päivänvalo. Ei kasvojen tunnistettavia piirteitä, tekstiä, koordinaatteja tai logoja. Kivitukien vedenalainen kiinnitys ei näy ja kirjataan rajaksi."
+        ],
+        "limitations": [
+          "Kuvitteellinen nykypäivän henkilö-, lautajärjestely ja kamerapaikka; ei todellinen valokuva eikä tarkka pohjapiirustus.",
+          "Pelaajat ovat noin kolmasosan kuvan korkuisia, tavoitetta suurempia mutta selin. Lautojen kivitukien kiinnittymistä altaan pohjaan/reunaan ei voi kuvasta todentaa."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:27:05.667660+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and separate full-frame 480x320 preview visually inspected.",
+          "Exactly two chessboards with dark/ivory pieces, two elderly fictional male bathers at waist-deep water, steam and muted ochre Neo-Baroque bath courtyard are legible.",
+          "Both main men fully rear-facing, only backs of heads and ears visible; two tiny bathrobe spectators in background also rear-facing.",
+          "No readable text, board coordinates, logos, watermark, crowd or violence observed.",
+          "Photographic material textures and subdued overcast light; key chess theme readable at 480px."
+        ],
+        "limitations": [
+          "Kuvitteellinen nykypäivän henkilö-, lautajärjestely ja kamerapaikka; ei todellinen valokuva eikä tarkka pohjapiirustus.",
+          "Pelaajat ovat noin kolmasosan kuvan korkuisia, tavoitetta suurempia mutta selin. Lautojen kivitukien kiinnittymistä altaan pohjaan/reunaan ei voi kuvasta todentaa."
+        ],
+        "limits": [
+          "Kuvitteellinen nykypäivän henkilö-, lautajärjestely ja kamerapaikka; ei todellinen valokuva eikä tarkka pohjapiirustus.",
+          "Pelaajat ovat noin kolmasosan kuvan korkuisia, tavoitetta suurempia mutta selin. Lautojen kivitukien kiinnittymistä altaan pohjaan/reunaan ei voi kuvasta todentaa."
+        ],
+        "parentQAStatus": "pending"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/budapest-yksityiskohdat/20261008/budapest-Q194783-allas-shakkipelaajat.png",
+      "url": "https://media.matkakirja.app/julisteet/budapest-yksityiskohdat/20261008/budapest-Q194783-allas-shakkipelaajat.png",
+      "bytes": 2173595,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q338665",
+      "id": "kellon-lasku-1944",
+      "file": "budapest-Q338665-kellon-lasku-1944.png",
+      "filename": "budapest-Q338665-kellon-lasku-1944.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a96-27a4-73e0-bcb0-918ecdec094b/exec-83efb346-4c05-43fa-8b49-a60e1173dfd1.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/02-kellon-lasku-1944/original-generation.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/02-kellon-lasku-1944/budapest-Q338665-kellon-lasku-1944.png",
+      "sha256": "d46a5e436194dee59b602de61db526bd42080ec9f7538769d4067ae67074712b",
+      "originalSha256": "ee205a86afb386596a8aaeffd2da6c690e3a68a48e652a5fb15a21f4f8893cdb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/02-kellon-lasku-1944/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational detail image for Budapest city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG in sRGB. No input photographs and no references to any existing photograph or artwork. Convincing photorealistic camera-shot appearance with realistic material textures and ordinary imperfections, natural muted light and restrained colors. No HDR, cinematic grading, oversaturation, painterly effect, engraving, illustration strokes, CGI sheen, image border or watermark. Absolutely no letters, words, numerals, board coordinates, inscriptions, labels, signs, logos or emblems anywhere. All living human figures are fictional anonymous adults, viewed entirely from behind; no human faces, real-person likenesses or portraits.\nScene: a fictional reconstruction inside the south bell tower of St Stephen's Basilica, Budapest, in May 1944, as the old great bronze bell is removed. The moment is careful manual lowering, with no combat. Thick old masonry walls, a modest arched tower window giving weak natural daylight, worn wooden bell frame, heavy plain timber beams, period steel cables and iron pulley blocks. No electric tools or modern equipment.\nSubject: a very large plain uninscribed dark patinated bronze bell, suspended by taut steel cables and a visibly plausible sling from a timber lifting frame, being lowered a short distance from the wooden bell support. Wide skirt and heavy crown visible. The bronze surface has ONLY metal texture and simple smooth ridges, absolutely NO numbers, writing, saints, relief portraits, coat of arms or emblems.\nPeople: three fictional anonymous adult workmen in generic plain 1940s dark work trousers, rough jackets and simple unmarked cloth caps. Every worker is viewed ENTIRELY FROM BEHIND, heads turned fully away, no profiles or faces. One on a timber platform steadies a guide rope; another beside a wooden ladder guides the cable; one farther back operates a hand winch. These are generic laborers, no identifiable military affiliation, no badges, no uniform insignia, no helmets. They are small subordinate parts of the frame and do not obscure the bell.\nComposition: landscape interior documentary camera view from slightly below, looking upward toward the bell and rigging. Bell dominates center; wooden frame and three rear-facing workers show scale, stone wall and dim window behind. Realistic mechanical structure, material weight and low-contrast muted brown-gray exposure. Color is softly faded but remains naturally photograph-like; not an old print.\nAvoid: Nazi symbols or swastikas, any military or political emblems, text or numerals, readable bell inscriptions, weapons, combat, injuries, blood, active violence, modern machinery, faces or portraits.",
+      "viitteet": [
+        {
+          "publisher": "Életünk / Országos Széchényi Könyvtár Electronic Periodical Archive",
+          "title": "Életünk, 22. évf. 9. sz. (1990. szeptember): A pesti Bazilika új harangja",
+          "url": "https://epa.oszk.hu/04000/04031/00471/pdf/EPA04031_eletunk_1990_09.pdf",
+          "type": "textResearchOnly",
+          "notes": "Primary 1990 report about the new bell quotes its commemorative inscription dating the previous bell's removal for war purposes to 20 May 1944. Read extracted/indexed text only, no PDF screenshots or source image pixels.",
+          "access": "2026-10-08; extracted PDF text and indexed excerpt read"
+        },
+        {
+          "publisher": "Magyar Kurír / Hungarian Catholic Bishops' Conference",
+          "title": "Csak a háborúkban hallgattak el... – Látogatóban a Szent István-bazilika harangtornyaiban",
+          "url": "https://www.magyarkurir.hu/hirek/latogatoban-szent-istvan-bazilika-harangtornyaiban",
+          "type": "textResearchOnly",
+          "notes": "On-site primary interview with basilica chaplain Norbert Varga states removal on 20 May 1944; article transcribes the current bell's inscription. Source image links not opened.",
+          "access": "2026-10-08; text read"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen rekonstruktio Pyhän Tapanin basilikan vanhan suurkellon irrottamisesta toukokuussa 1944. Päivämäärä 20.5.1944 mainitaan nykyisen kellon muistokirjoituksessa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; equality verified against generation.",
+        "Preserved original-generation.png byte-exactly; source and preserved SHA-256 verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and separate full-frame 480x320 preview visually inspected.",
+          "Large plain patinated bronze bell, timber lifting frame, pulley blocks, cables/ropes and hand winch visible.",
+          "Three anonymous workmen are rear-facing with generic plain caps and work clothes, no human faces or military affiliation visible.",
+          "Bell contains no writing, numerals, portrait reliefs or emblems; no Nazi symbols, weapons, injury or modern equipment observed.",
+          "Natural low-contrast tower daylight and realistic timber/bronze/masonry texture; theme readable at 480px."
+        ],
+        "limitations": [
+          "Kellohuoneen geometria, nostotapa ja työmiehet ovat kuvitteellisia; ei aikalaisvalokuvaa.",
+          "Tilauksen sotilasvaatetuksen sijasta sovitusti geneeriset 1940-luvun työmiehet ilman tunnuksia; kellon historialliset kirjoitukset ja reliefit jätetty pois tekstikiellon vuoksi.",
+          "Työmiehet ovat tavoitetta suurempia mutta selin; nostossa näkyy sekä köysiä että vaijereita. Ulkoikkunan kaukotausta on yleisluonteinen."
+        ],
+        "limits": [
+          "Kellohuoneen geometria, nostotapa ja työmiehet ovat kuvitteellisia; ei aikalaisvalokuvaa.",
+          "Tilauksen sotilasvaatetuksen sijasta sovitusti geneeriset 1940-luvun työmiehet ilman tunnuksia; kellon historialliset kirjoitukset ja reliefit jätetty pois tekstikiellon vuoksi.",
+          "Työmiehet ovat tavoitetta suurempia mutta selin; nostossa näkyy sekä köysiä että vaijereita. Ulkoikkunan kaukotausta on yleisluonteinen."
+        ],
+        "parentQAStatus": "pending"
+      },
+      "sourceCommit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+      "sourceBlob": "87425c782e41c80bf28fb1e26ebc78a0767c0cd0",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only; no reference images",
+      "generationToolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/02-kellon-lasku-1944/generation-tool-output.txt",
+      "status": "local-candidate-approved",
+      "excludedReason": null,
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "budapest-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q338665",
+        "file": "budapest-Q338665-kellon-lasku-1944.png",
+        "sha256": "d46a5e436194dee59b602de61db526bd42080ec9f7538769d4067ae67074712b",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Suuri merkitön pronssikello irrotettuna puisen tuennan, köysien/vaijerien ja taljojen varassa. Kolme selin olevaa anonyymiä työläistä, ei sotilas- tai natsisymboleja, aseita, vammoja tai tekstiä. Nostomenetelmä ja tila kuvituksellisia."
+        ],
+        "limitations": [
+          "Kellohuoneen geometria, nostotapa ja työmiehet ovat kuvitteellisia; ei aikalaisvalokuvaa.",
+          "Tilauksen sotilasvaatetuksen sijasta sovitusti geneeriset 1940-luvun työmiehet ilman tunnuksia; kellon historialliset kirjoitukset ja reliefit jätetty pois tekstikiellon vuoksi.",
+          "Työmiehet ovat tavoitetta suurempia mutta selin; nostossa näkyy sekä köysiä että vaijereita. Ulkoikkunan kaukotausta on yleisluonteinen."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:27:05.669283+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and separate full-frame 480x320 preview visually inspected.",
+          "Large plain patinated bronze bell, timber lifting frame, pulley blocks, cables/ropes and hand winch visible.",
+          "Three anonymous workmen are rear-facing with generic plain caps and work clothes, no human faces or military affiliation visible.",
+          "Bell contains no writing, numerals, portrait reliefs or emblems; no Nazi symbols, weapons, injury or modern equipment observed.",
+          "Natural low-contrast tower daylight and realistic timber/bronze/masonry texture; theme readable at 480px."
+        ],
+        "limitations": [
+          "Kellohuoneen geometria, nostotapa ja työmiehet ovat kuvitteellisia; ei aikalaisvalokuvaa.",
+          "Tilauksen sotilasvaatetuksen sijasta sovitusti geneeriset 1940-luvun työmiehet ilman tunnuksia; kellon historialliset kirjoitukset ja reliefit jätetty pois tekstikiellon vuoksi.",
+          "Työmiehet ovat tavoitetta suurempia mutta selin; nostossa näkyy sekä köysiä että vaijereita. Ulkoikkunan kaukotausta on yleisluonteinen."
+        ],
+        "limits": [
+          "Kellohuoneen geometria, nostotapa ja työmiehet ovat kuvitteellisia; ei aikalaisvalokuvaa.",
+          "Tilauksen sotilasvaatetuksen sijasta sovitusti geneeriset 1940-luvun työmiehet ilman tunnuksia; kellon historialliset kirjoitukset ja reliefit jätetty pois tekstikiellon vuoksi.",
+          "Työmiehet ovat tavoitetta suurempia mutta selin; nostossa näkyy sekä köysiä että vaijereita. Ulkoikkunan kaukotausta on yleisluonteinen."
+        ],
+        "parentQAStatus": "pending"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/budapest-yksityiskohdat/20261008/budapest-Q338665-kellon-lasku-1944.png",
+      "url": "https://media.matkakirja.app/julisteet/budapest-yksityiskohdat/20261008/budapest-Q338665-kellon-lasku-1944.png",
+      "bytes": 2455504,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q493133",
+      "id": "mariapatsaan-legenda-1686",
+      "file": "budapest-Q493133-mariapatsaan-legenda-1686.png",
+      "filename": "budapest-Q493133-mariapatsaan-legenda-1686.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11a96-27a4-73e0-bcb0-918ecdec094b/exec-13ccb31a-7d24-4e78-911a-b16c1efb66bc.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/04-mariapatsaan-legenda-1686/original-generation.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/04-mariapatsaan-legenda-1686/budapest-Q493133-mariapatsaan-legenda-1686.png",
+      "sha256": "6260ca7ae10feeab990c62d42432f9af0056f7c3eda423985fe22367000c3139",
+      "originalSha256": "445993eea995aae7c9545cdaa2af33760848bea0a428c5516a9edd59768e224f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/04-mariapatsaan-legenda-1686/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva."
+      },
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational detail image for Budapest city introduction, a fictional visualization of an attributed religious legend.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG in sRGB. No input photographs and no references to any existing photograph or artwork. Convincing photorealistic camera-shot appearance with realistic material textures and ordinary imperfections, natural muted light and restrained colors. No HDR, cinematic grading, oversaturation, painterly effect, engraving, illustration strokes, CGI sheen, image border or watermark. Absolutely no letters, words, numerals, board coordinates, inscriptions, labels, signs, logos or emblems anywhere. All living human figures are fictional anonymous adults, viewed entirely from behind; no human faces, real-person likenesses or portraits.\nScene: fictional interior of the medieval Matthias Church at Buda while adapted as an Ottoman mosque, associated with the 1686 siege legend. This is a QUIET AFTERMATH well after a wall has broken, NOT an image of an impact or attack. Thick pale whitewashed masonry, plain medieval Gothic columns and pointed arches, a few undecorated woven prayer rugs. Rubble rests still on the floor by a breached inner partition; soft suspended plaster dust and restrained late-afternoon natural light enter through a damaged gap.\nSubject: the fallen partition reveals in a recessed wall niche an ORIGINAL GENERIC old pale stone statue of the Virgin Mary with lowered head, modest draped veil and simple robe, hands gathered quietly in front. It is newly invented traditional stone carving, not the present Matthias Church Madonna, not a copy of any existing statue, museum object, church fresco, painting or named artwork. Plain rough limestone with subtle age and worn carving, no crown, jewelry, text or emblem. The statue is an inanimate carved religious figure, not a living person or realistic human portrait. No glowing miracle aura: ordinary natural dusty daylight reveals it.\nPeople: three SMALL fictional anonymous Ottoman adult worshippers in generic modest 17th-century long robes and plain white turbans, kneeling quietly on prayer rugs several meters from the rubble. ALL are viewed FULLY FROM BEHIND, heads facing the niche, no faces or profiles. Calm respectful poses. These figures remain safe and distant from the damaged wall; no distress, mockery or humiliation.\nComposition: wide horizontal real-camera-like reconstruction from inside the room toward the breached partition, stone statue near center clearly legible inside the niche, still rubble below, whitewashed Gothic arches framing the room, small rear-facing kneeling men in lower-middle distance. Soft natural light catches the dusty stone; muted beige, limestone gray and subdued textile brown. Photograph-like material texture and ordinary lens perspective, no painting or engraving aesthetics.\nAvoid: cannon, cannonballs, projectile, explosion, active impact, flying rubble, battlefield, weapons, soldier attack, human injury, blood, bodies, panic or faith mockery; also no copied religious art, existing statue replica, supernatural beams, inscriptions or modern objects.",
+      "viitteet": [
+        {
+          "publisher": "Mátyás Templom / Matthias Church",
+          "title": "Official English audioguide: Nave and the legendary Madonna statue",
+          "url": "https://audioguide.matyas-templom.hu/audioguide-enmatyasen/",
+          "type": "textResearchOnly",
+          "notes": "Church's own text attributes the walled-up statue and wall destruction to legend. It explicitly dates the current Madonna to the 1700s, after Ottoman rule, so the generated carving is original and generic rather than a copy of the current statue or nave frescos. No source artwork or photographs opened.",
+          "access": "2026-10-08; text read"
+        },
+        {
+          "publisher": "Mátyás Templom / Matthias Church",
+          "title": "Templom története",
+          "url": "https://matyas-templom.hu/templom-tortenete-2/",
+          "type": "textResearchOnly",
+          "notes": "Official church chronology confirms mosque conversion in 1541 and Buda's retaking on 2 September 1686. Date is contextual; no miracle independently verified.",
+          "access": "2026-10-08; official indexed text read"
+        }
+      ],
+      "kuvateksti": "Oma kuvitteellinen tulkinta Matiaksenkirkon vuoden 1686 legendasta: sortuneen seinän takaa paljastuu Marian patsas. Kirkon opastus kertoo tarinan perimätietona; ihmettä tai patsaan tarkkaa ulkoasua ei ole varmennettu. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; equality verified against generation.",
+        "Preserved original-generation.png byte-exactly; source and preserved SHA-256 verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and separate full-frame 480x320 preview visually inspected.",
+          "Original generic pale stone Madonna carving revealed beside broken whitewashed partition; still rubble and natural dusty light, Gothic columns and arches.",
+          "Three modestly dressed anonymous adult Ottoman worshippers kneel fully rear-facing on prayer rugs; no human faces visible.",
+          "No cannon, projectile, impact, flying debris, weapon, blood, injury, bodies, panic, mockery, readable text or modern objects observed.",
+          "Camera-like muted beige/gray materials and natural daylight; wall/statue and calm figures remain legible at 480px."
+        ],
+        "limitations": [
+          "Kuva esittää kirkon omaan opastukseen kirjattua legendaa, ei varmennettua ihmettä tai tapahtumahetken dokumenttia.",
+          "Patsas on oma yleisluonteinen kiviveistos; tilan tarkka rakenne, seinän rikkoutuminen ja henkilöiden asettelu ovat kuvitteellisia.",
+          "Tilauksen painotaide/historiamaalaus-ilmaisu väistyy yhteisen valokuvamaisen tyylivaatimuksen tieltä; kuva näyttää jälkitilanteen ilman väkivaltaa.",
+          "Kuva esittää jälkitilanteen; sortuminen on viitteellinen ja patsaan esiin tulemisen täsmällistä mekanismia ei ole rekonstruoitu."
+        ],
+        "limits": [
+          "Kuva esittää kirkon omaan opastukseen kirjattua legendaa, ei varmennettua ihmettä tai tapahtumahetken dokumenttia.",
+          "Patsas on oma yleisluonteinen kiviveistos; tilan tarkka rakenne, seinän rikkoutuminen ja henkilöiden asettelu ovat kuvitteellisia.",
+          "Tilauksen painotaide/historiamaalaus-ilmaisu väistyy yhteisen valokuvamaisen tyylivaatimuksen tieltä; kuva näyttää jälkitilanteen ilman väkivaltaa.",
+          "Kuva esittää jälkitilanteen; sortuminen on viitteellinen ja patsaan esiin tulemisen täsmällistä mekanismia ei ole rekonstruoitu."
+        ],
+        "parentQAStatus": "pending"
+      },
+      "sourceCommit": "920c79f437aa1a5a4623a17276ac4f5fc7323df8",
+      "sourceBlob": "87425c782e41c80bf28fb1e26ebc78a0767c0cd0",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only; no reference images",
+      "generationToolOutputPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/04-mariapatsaan-legenda-1686/generation-tool-output.txt",
+      "status": "local-candidate-approved",
+      "excludedReason": null,
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "budapest-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q493133",
+        "file": "budapest-Q493133-mariapatsaan-legenda-1686.png",
+        "sha256": "6260ca7ae10feeab990c62d42432f9af0056f7c3eda423985fe22367000c3139",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kirkon legendan oma jälkitilannetulkinta: murtuneen seinän vierellä yleinen Marian kivipatsas ja kolme selin polvistunutta anonyymiä aikuista. Ei osumia, tykkiä, lentäviä kiviä, verta, ruumiita, tunnistettavia ihmisiä tai tekstiä. Kuvateksti kertoo legendasta, ei varmennetusta ihmeestä tai nykyisen patsaan kopiosta."
+        ],
+        "limitations": [
+          "Kuva esittää kirkon omaan opastukseen kirjattua legendaa, ei varmennettua ihmettä tai tapahtumahetken dokumenttia.",
+          "Patsas on oma yleisluonteinen kiviveistos; tilan tarkka rakenne, seinän rikkoutuminen ja henkilöiden asettelu ovat kuvitteellisia.",
+          "Tilauksen painotaide/historiamaalaus-ilmaisu väistyy yhteisen valokuvamaisen tyylivaatimuksen tieltä; kuva näyttää jälkitilanteen ilman väkivaltaa.",
+          "Kuva esittää jälkitilanteen; sortuminen on viitteellinen ja patsaan esiin tulemisen täsmällistä mekanismia ei ole rekonstruoitu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T08:27:05.671611+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and separate full-frame 480x320 preview visually inspected.",
+          "Original generic pale stone Madonna carving revealed beside broken whitewashed partition; still rubble and natural dusty light, Gothic columns and arches.",
+          "Three modestly dressed anonymous adult Ottoman worshippers kneel fully rear-facing on prayer rugs; no human faces visible.",
+          "No cannon, projectile, impact, flying debris, weapon, blood, injury, bodies, panic, mockery, readable text or modern objects observed.",
+          "Camera-like muted beige/gray materials and natural daylight; wall/statue and calm figures remain legible at 480px."
+        ],
+        "limitations": [
+          "Kuva esittää kirkon omaan opastukseen kirjattua legendaa, ei varmennettua ihmettä tai tapahtumahetken dokumenttia.",
+          "Patsas on oma yleisluonteinen kiviveistos; tilan tarkka rakenne, seinän rikkoutuminen ja henkilöiden asettelu ovat kuvitteellisia.",
+          "Tilauksen painotaide/historiamaalaus-ilmaisu väistyy yhteisen valokuvamaisen tyylivaatimuksen tieltä; kuva näyttää jälkitilanteen ilman väkivaltaa.",
+          "Kuva esittää jälkitilanteen; sortuminen on viitteellinen ja patsaan esiin tulemisen täsmällistä mekanismia ei ole rekonstruoitu."
+        ],
+        "limits": [
+          "Kuva esittää kirkon omaan opastukseen kirjattua legendaa, ei varmennettua ihmettä tai tapahtumahetken dokumenttia.",
+          "Patsas on oma yleisluonteinen kiviveistos; tilan tarkka rakenne, seinän rikkoutuminen ja henkilöiden asettelu ovat kuvitteellisia.",
+          "Tilauksen painotaide/historiamaalaus-ilmaisu väistyy yhteisen valokuvamaisen tyylivaatimuksen tieltä; kuva näyttää jälkitilanteen ilman väkivaltaa.",
+          "Kuva esittää jälkitilanteen; sortuminen on viitteellinen ja patsaan esiin tulemisen täsmällistä mekanismia ei ole rekonstruoitu."
+        ],
+        "parentQAStatus": "pending"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/budapest-yksityiskohdat/20261008/budapest-Q493133-mariapatsaan-legenda-1686.png",
+      "url": "https://media.matkakirja.app/julisteet/budapest-yksityiskohdat/20261008/budapest-Q493133-mariapatsaan-legenda-1686.png",
+      "bytes": 2322450,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 3,
+      "qid": "Q465534",
+      "id": "siltamaksu-1873",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/budapest-yksityiskohdat-20261008/production/03-siltamaksu-1873/budapest-Q465534-siltamaksu-1873.png",
+      "sha256": "4605e40570368152692ff28be59c5f28f1dddebe85074121a2caa43ebc3d9ae2",
+      "reason": "Vuoden1873 taustassa näkyy selvä myöhempi Unkarin parlamenttitalon siluetti. Tilauksen aikakausi ei toteudu, sillä rakentaminen alkoi vasta1885. Ei korjausta tai lisäkutsua.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/budapest-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/budapest-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "8f9d2cd16638c42a4ac67d13ed0b8606bfbc018c1102b37f13fd49b41f6157dd",
+    "bytes": 163197,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T08:27:15.272977+00:00"
+}
