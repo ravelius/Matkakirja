@@ -1857,7 +1857,7 @@ async function kutsuRajapintaa(env, {
        * JÄLKEEN: välimuistissa oleva etuliite pysyy tavu tavulta samana
        * kirjoitetulle ja luettavalle vastaukselle.
        */
-      // Taulukko = useampi välimuistilohko peräkkäin (oppaan kehote + kaupungin aineisto, K2); jokainen lohko on välimuistiraja.
+      // Taulukko = useampi välimuistilohko peräkkäin (Pulun pohja + äänitagit, K3); jokainen lohko on välimuistiraja.
       system: [
         ...(Array.isArray(jarjestelma) ? jarjestelma : [jarjestelma]).map((text) => ({ type: 'text', text, cache_control: { type: 'ephemeral' } })),
         ...(lisaohje ? [{ type: 'text', text: lisaohje }] : []),
