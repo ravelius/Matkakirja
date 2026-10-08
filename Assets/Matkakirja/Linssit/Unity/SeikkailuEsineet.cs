@@ -594,13 +594,7 @@ namespace Matkakirja.Natiivi
         {
             var d = SeikkailuKavely.Data; if (d == null) return;
             string osa = Askelaani.Osa(d, pp.x, pp.y, -pp.z);
-            aktiivisetOsat.Clear();
-            if (osa != null)
-            {
-                aktiivisetOsat.Add(osa);
-                if (d.Osat.TryGetValue(osa, out var o)) foreach (var n in o.Naapurit) aktiivisetOsat.Add(n);
-                foreach (var kv in d.Osat) if (kv.Value.Naapurit.Contains(osa)) aktiivisetOsat.Add(kv.Key);
-            }
+            d.AktiivisetOsat(osa, aktiivisetOsat);
             foreach (var kv in varasto)
             {
                 var v = kv.Value;

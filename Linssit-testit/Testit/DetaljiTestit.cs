@@ -51,6 +51,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(9, n);
         }
 
+        [Testi] static void HuonekohtainenLataus()
+        {
+            // PT 9.10.: keittiössä ladattuina keittiö ja sen naapurit, ei tyrmää eikä palatsia; tuntematon osa = ei rajausta.
+            var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
+            var a = new System.Collections.Generic.HashSet<string>();
+            d.AktiivisetOsat("keittio-G102", a);
+            Oleta.Tosi(a.Contains("keittio-G102") && a.Count >= 2, "keittiö ja naapuri(t): " + string.Join(", ", a));
+            Oleta.Tosi(!a.Contains("tyrma-E101"), "tyrmä ei keittiön naapuri");
+            foreach (var n in a) Oleta.Tosi(n == "keittio-G102" || d.Osat["keittio-G102"].Naapurit.Contains(n) || d.Osat[n].Naapurit.Contains("keittio-G102"), n + " on naapuri");
+            d.AktiivisetOsat(null, a);
+            Oleta.Sama(0, a.Count);
+        }
+
         [Testi] static void Rekvisiitta()
         {
             // LR v45r: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
