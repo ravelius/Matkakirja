@@ -1,3 +1,23 @@
+# Pelikoodarin tila 8.10.2026 (lue ensin; alla 7.10. luovutus)
+
+## 8.10. aamupäivä (uusi tili, omistaja opettaa: kysymykset vain Päätoimittajalle)
+- KUSTANNUSSUUNNITELMA valmis ja Päätoimittajan kuittaama: #4182 (docs/raportit/kustannussuunnitelma-20261008.md
+  + tools/kulut/hae-kulut.mjs + Actions "Hae kulut", workflow_dispatch). Omistajalle kaksi päätöstä (Päätoimittaja vie):
+  ElevenLabs Pro → Creator, oma API-avain työkaluille.
+- TOTEUTUS: #4185 K1+K3 (testiliikenne Haikulle + kululoki `kulu: <reitti> <testi|peli> <malli> in cw cr out`; Pulun kehys
+  välimuistirajan jälkeen), #4186 K2 (oppaan aineisto välimuistiin, −49 %), #4187 K4 (valmiin kysymyksen vastaus kerran per
+  paikka). Kaikissa TF 163 -todennus (scratchpad tfvert/aja.mjs: samat TF-pyynnöt main vs haara). Julkaisijan junassa.
+  SEURAAVAKSI: kun #4185 on julki, tarkista kululokirivit Cloudflaren observabilitystä (telemetry/query, CLOUDFLARE_API_TOKEN
+  `source ~/.zshrc`) ja raportoi Päätoimittajalle viikon jako. K1b (valmisvastaus savukkeille ilman mallia) ei vielä tehty.
+- OLAVINLINNAN FP-ÄÄNET julki: seikkailu/olavinlinna/aanet-fp-v1 (askel-olki/-sora/-vesi/-porras-1, loyto-kantele; CC0,
+  rakennus _tyo/olavinlinna-fp-aanet/rakenna.py). Siirtoseppä kuitannut junaan 164. Olavinlinnan ElevenLabs-äänet (≤ 10 000
+  krediittiä) yhä odottamassa tarkistettuja tekstejä.
+- YKSITYISKOHDAT: #4183 mergetty (Rooma v5, Lontoo v2, Kööpenhamina v3). Sisältökirjuri tekee 31 äänettömän kaupungin
+  luettelot järjestyksessä venetsia, barcelona, amsterdam, … (tekstit opas/esittely-aaneton-v1); kytke kuten #4183.
+- Worktree wt/pelikoodari-esittely POISTETTU (levy); haara origin/pelikoodari-esittely 90067f28 (työkalut tools/opas/).
+  Käytössä wt/pelikoodari-yoportti (haara pelikoodari-kulu-k4).
+- Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`.
+
 # Pelikoodarin luovutus 7.10.2026 (päivitetty klo 23.4x, VAIHTO NYT)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
