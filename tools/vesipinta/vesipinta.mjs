@@ -170,9 +170,21 @@ loki('rantaetäisyys valmis');
 {
   const nayt = tasot.map(() => []);
   for (let j = 0; j < H; j += 3) for (let i = 0; i < W; i += 3) { const c = j * W + i, t = taso[c]; if (t > 0 && peitto[c] >= 12 && nayt[t].length < 4000 && DIST[c] >= Math.min(DCAP, 2 * C)) { const v = demH(lonC[i], latR[j]); if (Number.isFinite(v)) nayt[t].push(v); } }
-  for (let t = 0; t < tasot.length; t++) if (tasot[t].H === null) { const a = nayt[t].sort((x, y) => x - y); tasot[t].H = a.length ? +a[Math.floor(a.length * 0.1)].toFixed(2) : 0; tasot[t].n = a.length; } // alakantti: liian korkea vesi peittäisi laiturit, liian matala vain paljastaa Googlen veden
+  { // varapolku: tasot ilman sisänäytteitä → kaikki tason ruudut (joka ruutu), sitten naapuritaso
+    const puuttuvat = new Set(); for (let t = 1; t < tasot.length; t++) if (tasot[t].H === null && !nayt[t].length) puuttuvat.add(t);
+    if (puuttuvat.size) for (let j2 = 0; j2 < H; j2++) for (let i2 = 0; i2 < W; i2++) { const c = j2 * W + i2, t = taso[c]; if (t > 0 && puuttuvat.has(t) && peitto[c] >= 8 && nayt[t].length < 500) { const v = demH(lonC[i2], latR[j2]); if (Number.isFinite(v)) nayt[t].push(v); } }
+  }
+  for (let t = 0; t < tasot.length; t++) if (tasot[t].H === null) { const a = nayt[t].sort((x, y) => x - y); tasot[t].H = a.length ? +a[Math.floor(a.length * 0.1)].toFixed(2) : null; tasot[t].n = a.length; } // alakantti: liian korkea vesi peittäisi laiturit, liian matala vain paljastaa Googlen veden
 }
 
+{ // naapuritaso tasoille, joilla ei yhtään DEM-näytettä (H yhä null)
+  const vailla = new Set(); for (let t = 0; t < tasot.length; t++) if (tasot[t].H === null) vailla.add(t);
+  if (vailla.size) { const laskuri = new Map();
+    for (let j2 = 1; j2 < H - 1; j2++) for (let i2 = 1; i2 < W - 1; i2++) { const c = j2 * W + i2, t = taso[c]; if (!vailla.has(t)) continue;
+      for (const q of [c - 1, c + 1, c - W, c + W]) { const u = taso[q]; if (u >= 0 && u !== t && !vailla.has(u)) { const m = laskuri.get(t) || new Map(); m.set(u, (m.get(u) || 0) + 1); laskuri.set(t, m); } } }
+    for (const t of vailla) { const m = laskuri.get(t); let paras = -1, pn = 0; if (m) for (const [u, n] of m) if (n > pn) { pn = n; paras = u; } tasot[t].H = paras >= 0 ? tasot[paras].H : 0; tasot[t].naapurista = paras; }
+    loki('tasoja naapurista', vailla.size); }
+}
 // --- kansallinen geoidi ja kiinteät tasot (--geoidi2 <tif> --meri-h <H> --nimitaso "Mälaren=0.7;…"; H geoidi2:n järjestelmässä) ---
 // PT 8.10. 22.49: Tukholma Ruotsin geoidilla (SWEN17/RH2000): meri noin −0,2 m ja Mälaren noin +0,5 m nykyisestä (EGM2008 + GLO-30).
 let geoidi2 = null; const KIINTEA = new Map();
@@ -189,6 +201,7 @@ if (opt('geoidi2')) {
 }
 // --- tarkka tasolähde (--tasokorkeus korkeus-<id>.json): Pariisin LiDAR-pinta vesialueilla (vedestä heijastuneet pulssit) ---
 let tasoLahde = demH, tasoP = 0.1, tasoNimi = 'GLO-30';
+const JOKI_ESI = (t) => t >= 0 && (tasot[t].lahde === 'osm-river' || tasot[t].lahde === 'osm-river-shp');
 if (opt('tasokorkeus')) {
   const KJ = JSON.parse(fs.readFileSync(opt('tasokorkeus'), 'utf8')), osa = KJ.osat.find((o) => o.osa === 'lahi');
   const kp = PNG.sync.read(fs.readFileSync(path.join(path.dirname(opt('tasokorkeus')), osa.tiedosto)), { skipRescale: true }), KW = osa.koko[0], KH = osa.koko[1];
@@ -201,8 +214,16 @@ if (opt('tasokorkeus')) {
   // järvien tasot uudelleen samasta lähteestä
   const nayt = tasot.map(() => []);
   for (let j = 0; j < H; j += 2) for (let i = 0; i < W; i += 2) { const c = j * W + i, t = taso[c]; if (t > 0 && peitto[c] >= 12 && nayt[t].length < 4000 && DIST[c] >= Math.min(DCAP, 2 * C)) { const v = tasoLahde(lonC[i], latR[j]); if (Number.isFinite(v)) nayt[t].push(v); } }
-  for (let t = 1; t < tasot.length; t++) if (nayt[t].length >= 10 && !tasot[t].geoidi2) { const a2 = nayt[t].sort((x, y) => x - y); tasot[t].H = +a2[Math.floor(a2.length * tasoP)].toFixed(2); tasot[t].n = a2.length; }
+  for (let t = 1; t < tasot.length; t++) if (nayt[t].length < 10) { nayt[t].length = 0; } // varapolku alla
+  for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) { const c2 = j * W + i, t = taso[c2]; if (t > 0 && !nayt[t].length && peitto[c2] >= 8 && (nayt[t].vara = (nayt[t].vara || 0) + 1) <= 500) { const v = tasoLahde(lonC[i], latR[j]); if (Number.isFinite(v)) (nayt[t].lisa ||= []).push(v); } }
+  for (let t = 1; t < tasot.length; t++) if (!nayt[t].length && nayt[t].lisa && nayt[t].lisa.length >= 3) nayt[t].push(...nayt[t].lisa);
+  for (let t = 1; t < tasot.length; t++) if (nayt[t].length >= 3 && !tasot[t].geoidi2) { const a2 = nayt[t].sort((x, y) => x - y); tasot[t].H = +a2[Math.floor(a2.length * tasoP)].toFixed(2); tasot[t].n = a2.length; }
   loki('vesitasot lähteestä', tasoNimi);
+  { // katetut vedet (Voûte Richard Lenoir) ja siltojen alustat: LiDAR-pinta yli 3 m vesitason yläpuolella → ei vettä (Googlen kansi näkyy joka tapauksessa)
+    let pois = 0;
+    for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) { const c2 = j * W + i, t = taso[c2]; if (t < 0 || peitto[c2] < 1 || tasot[t].H === null) continue;
+      const pinta = tasoLahde(lonC[i], latR[j]); if (Number.isFinite(pinta) && pinta > tasot[t].H + 3 && !(JOKI_ESI(t))) { peitto[c2] = 0; pois++; } }
+    loki('katettuja vesiruutuja pois', pois, '(' + (pois * C * C / 1e4).toFixed(1) + ' ha)'); }
 }
 // --- jokien liukuva vesitaso (Pariisi 8.10.: Seine laskee sulkujen kohdalla; yksi taso per polygoni teki portaita) ---
 const JOKI = (t) => t >= 0 && (tasot[t].lahde === 'osm-river' || tasot[t].lahde === 'osm-river-shp' || tasot[t].lahde === 'esa');
