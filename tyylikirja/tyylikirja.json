@@ -3,7 +3,7 @@
   "versio": 1,
   "kehys": {
     "_selite": "Sovelluksen kehyksen ja kartan värit. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
-    "_vainNatiivi": ["kulta", "rivi-tausta"],
+    "_vainNatiivi": ["kulta", "kulta-kuulto", "rivi-tausta"],
     "_vainNatiiviSyy": "Webissä --kulta on määrittelemätön (käyttöpaikat var(--kulta, #eab84e), var(--kulta, #d9a13b) ja ilman varaa); määrittely muuttaisi niitä. Yhtenäistetään KORTTI-pohjan siirrossa.",
     "bg": "#1d1610",
     "panel": "#2a1f16",
@@ -14,6 +14,7 @@
     "accent": "#d9a13b",
     "accent-dark": "#8a6114",
     "kulta": "#eab84e",
+    "kulta-kuulto": "rgba(234, 184, 78, 0.4)",
     "danger": "#ff9b8a",
     "rivi-tausta": "rgba(53, 39, 26, 0.55)",
     "overlay-card": "rgba(46, 33, 20, 0.88)",
@@ -83,7 +84,9 @@
       "muste-pehmea": "rgba(132, 255, 160, 0.62)",
       "korostus": "#84ffa0",
       "reunus": "rgba(124, 255, 158, 0.28)",
-      "toiminto": "#84ffa0"
+      "toiminto": "#84ffa0",
+      "varoitus": "#ffb347",
+      "vaara": "#ff5a4a"
     }
   },
   "himmennys": {
@@ -174,6 +177,7 @@
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
     "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)", "variantit": ["SIRURIVI IRRALLAAN (.mk-chat__sirut--irrallaan; omistaja 5.10.2026 klo 19.0x, elävä opas): samat Pulun sirut ilman chat-paneelia, kullakin lasipinnan tausta (--tk-lasi-pinta, reunus --tk-lasi-reunus); kaksi vaihtoehtoa rinnakkain alareunan keskellä ja vieressä pieni puhu/kirjoita-siru (mikki), joka avaa Pulu-chatin syöttöineen ja käynnistää sanelun; häivytys --tk-kesto-sulku"] },
+    "PINNATTU PALKKI": { "osa": true, "teemat": ["paperi"], "_selite": "PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026 klo 23.3x): ikkunan (nosto, Pulu-chat ym.) ylärivin pin-kuvake rivin muiden kuvakkeiden koossa; pinnattu ikkuna pienenee kartan liikkeestä yhden rivin palkiksi oikeaan yläreunaan nappien alle: pin-merkki, otsikko (apuri, ellipsi), tauko/jatka 34 pt ja ohut EDISTYMINEN-viiva; napautus palauttaa ikkunan, ei ✕:ää; vain yksi kerrallaan" },
     "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus", "tumma"], "kulma": "0 (ohut terävä viiva; Päätoimittaja 5.10.2026: ei kapselipäitä)", "variantit": ["LATAUSPALKKI (odotusruudun nimen alla, 140 × 3 pt, arvo 0–1, häivytys; omistaja 5.10.2026: linnan ja vastaavien lataukset)"] },
     "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
     "LAUTAPELI": {
@@ -200,6 +204,7 @@
       "teemat": ["harmaa", "paperi", "lasi", "lasi-avaruus"],
       "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
+      "kontekstikuvakkeet": "seikkailun toimintonappi (omistaja 7.10.2026 klo 20.3x): käsi = poimi, käytä, avaa, aseta, laske; kaari = heitä; liekki = sytytä, puhalla, sammuta. Natiivin omat 24-ruudukon viivakuvakkeet (Ikonit.Kasi, Ikonit.Heittokaari, Ikonit.Liekki), viiva 1,75, ei tekstiä",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
       "linssivalikot": {
