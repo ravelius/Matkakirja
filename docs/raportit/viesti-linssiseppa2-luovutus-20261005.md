@@ -35,7 +35,16 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. 07.2x (uusin)
+## TILA 8.10. iltapäivä (uusin)
+- OLAVINLINNA-TESTIT (PT 8.10.): proto linssiseppa2/olavinlinna-testit e4faa4144 (Siirtosepän historia-valot 7d8408f98 päällä),
+  worktree wt/proto-linssiseppa2-olavinlinna. Linssit-testit/Testit/Huonesimulaatio.cs (sovittimen säännöt, Kopioi), OlavinlinnaPala-
+  Testit (Thief-ajuri reitti 1–20: 173 s / 0 kiinni; valoreitti, harhautus, Pulu 180 s), PelattavuusmalliTestit (Ydin-rajat).
+  Kultaiset v44s + liekit (tee-olavinlinna-liekit.mjs). 870/870, tarkistus 0. SHA Siirtosepälle (yhdistää junaan 164) + PT.
+  Löydökset Siirtosepälle: odotus_s ei luettu (KavelyData), tarjottimen askeleet herättävät/tutkituttavat, yaw0-merkki, Pinta ilman
+  kiertoa, lyhty kaikista, kappeli 1–11 vain Unityssä (odottaa Ydin-luokkaa → LS2 kirjoittaa jumitestin).
+  Poista worktree, kun haara on masterissa.
+
+## TILA 8.10. 07.2x
 - Uusi sessio aloitti (PT local_593b89a1-2514-4d74-b956-2a73db862382). Mergetyt worktreet poistettu (e3nousu, hiiri, hiiri160, kaudet,
   paikannimet, pallo-puoli, pallot-maailma, swe-rajat; haarat jäävät). Jäljellä wt/proto-linssiseppa2-kevat (08a6891a0, juna 164).
 - Talvi odottaa Karttasepän uutta näytettä (lumitodennäköisyys). Merkkiä "nakyma:kellotorni-kaari" ei vielä masterissa.
