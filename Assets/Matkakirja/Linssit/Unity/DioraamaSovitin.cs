@@ -1790,6 +1790,14 @@ namespace Matkakirja.Natiivi
             }
             // "poikki kavely 1 [tila] | 0 | tapit lx ly kx ky s": historiamoottori V1 — pelaaja vapaaseen kävelyyn tilan kohteeseen (tai nykyiseen),
             // törmäykset tilojen mesheistä (väliaikaiset), kamera olan yli; tapit = testisyöte s sekuntia (simulaattori ilman kosketusta).
+            if (mita == "kavelyosat")
+            {
+                // "poikki kavelyosat 0|1": kävelyosien näkyvät meshit (tilat "kavely:<osa>") pois tai päälle — vianselvitys (LS2 9.10.).
+                bool nayta = arvo != "0"; int n = 0;
+                if (rakennus3D != null) foreach (var kv in rakennus3D.Tilat) if (kv.Key.StartsWith("kavely:", StringComparison.Ordinal) && kv.Value != null) { kv.Value.SetActive(nayta); n++; }
+                o.Kirjaa($"poikki: kävelyosat {(nayta ? "näkyviin" : "piiloon")} ({n})");
+                return;
+            }
             if (mita == "kavely")
             {
                 if (arvo == "0") { SeikkailuPelaaja.Poista(); SeikkailuVene.Poista(); SeikkailuVartijat.Poista(); SeikkailuKavely.Leikkaukset(false); cm?.SeikkailuPois(); o.Kirjaa("poikki: kävely pois"); return; }

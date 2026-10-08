@@ -558,10 +558,14 @@ namespace Matkakirja.Natiivi
                     if (a != null) { v.Kuva = DioraamaAstc.Lue(a, "Esine:" + glb, out var syy, TextureWrapMode.Clamp); v.Astc = v.Kuva != null; if (v.Kuva == null) kirjaa?.Invoke($"seikkailu: {astc} ei käytössä ({syy}), JPEG"); }
                     if (v.Kuva != null) { v.KuvaUrl = astcUrl; break; }
                 }
-                if (v.Kuva == null && v.Ladattu && v.Malli.Kuvat.Count > 0 && v.Malli.Kuvat[0] != null)
+                // Varakuva: materiaalin baseColorTexture-indeksi (LS2 9.10.: rekvisiitan glb:ssä Kuvat[0] on normaalikartta → sinivioletti).
+                int perus = -1;
+                foreach (var sm in v.Malli.Solmut) { foreach (var os in sm.Osat) if (os.Kuva >= 0) { perus = os.Kuva; break; } if (perus >= 0) break; }
+                if (perus < 0 && v.Malli.Kuvat.Count > 0) perus = 0;
+                if (v.Kuva == null && v.Ladattu && perus >= 0 && perus < v.Malli.Kuvat.Count && v.Malli.Kuvat[perus] != null)
                 {
                     var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + glb };
-                    if (k.LoadImage(v.Malli.Kuvat[0], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
+                    if (k.LoadImage(v.Malli.Kuvat[perus], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
                 }
                 // Normaalikartta (LR v45o): <glb>-normaali-4x4.astcm (esineet) tai <glb>-normaali-6x6.astcm (rekvisiitta v45p);
                 // lineaarinen, sama UV0 ja v-suunta kuin perusvärillä.
