@@ -22,6 +22,11 @@
   junaan 165 (osoite siltalauseet-v3b). Työkalut _tyo/siltalauseet-v3/ ja _tyo/esittely-aaneton-v2/lisaa-pallo.mjs.
   ODOTTAA: Linssisepän uudet kierrosjärjestykset → tarkista "Kierros alkaa …" -virkkeet ja äänitetyt tekstit; ääni → krediitit
   Päätoimittajalle ennen tekoa. Worktree wt/pelikoodari-pallosanasto poistetaan #4191:n mergen jälkeen.
+- SÄÄ: #4194 GET /opas/saa (MET Norway, CC BY 4.0, 15 min välimuisti, tila selkea|pilvinen|sade|sumu|lumi|ukkonen); Natiivi-UI nappi
+  + Lähteet-rivi, Linssiseppä tehosteet, junaan 166. #4195 Haiku 5.5 -testimallin ajattelu pois (katto kului ajatteluun).
+- KIERROSJÄRJESTYS: #4196 pieninKiertoReitti (Linssisepän malli, 37/37 sama; Giza 363° → 189°). Tekstit eivät viittaa
+  järjestykseen (221 osumaa, historialliset), ei uusia ääniä. Odottaa Päätoimittajan kuittausta → Julkaisija.
+- Tuotannossa 8.10.: K1–K4 (#4185–#4187), pallo #4189–#4191; kululoki näkyy (kulu: … testi claude-haiku-5-5).
 - TURBO MAKSAA ~0,066 krediittiä/merkki (historia 8.10.), 31 kaupungin erä ≈ 23 000. Creator-vaihto: 30 äänipaikkaa (tilillä
   261) ja ei pcm_44100 API:lla → ei heti; omistajan päätös (Päätoimittaja vie).
 - Simulaattorit 8.10. alkaen T7-sarjassa: `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2`; nohup/xargs/timeout/env-ajoissa `xcrun simctl --set "$MK_SIMSET" …` ja UDID `mk_kaanna <UDID>`.
