@@ -1,5 +1,5 @@
 {
- "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi).",
+ "kuvaus": "Pelin kenttä-äänitysten nimeämiset (CC BY ja CC BY-SA), jotka näytetään ☰ › Lähteet -näkymässä. Pelikoodari 8.10.2026: lisenssit Freesound-API:sta ja archive.orgin metadatasta; kaikki js/aani-ehdokkaat.js:n ja oletuskorien ulkoiset äänet (154: 108 CC0/PD, 43 CC BY/BY-SA, 3 CC BY-NC poistettu). Äänet soivat omasta peilistä media.matkakirja.app/aanet/. 8.10. ilta: + pallon äänimaisema (aanet/pallo-aanimaisema-v1, Tukholma ja Pariisi). + Seinen äänet (aanet/pariisi-seine-v1).",
  "paivitetty": "2026-10-08",
  "nimeamiset": [
   {
@@ -323,6 +323,20 @@
    "tekija": "klankbeeld",
    "lisenssi": "CC BY 4.0",
    "url": "https://freesound.org/s/269417/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "Diesel 080608 (inland barge passing)",
+   "tekija": "LG",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/54940/"
+  },
+  {
+   "lahde": "Freesound",
+   "nimi": "foghorn far MONO 012",
+   "tekija": "klankbeeld",
+   "lisenssi": "CC BY 4.0",
+   "url": "https://freesound.org/s/627171/"
   }
  ]
 }
