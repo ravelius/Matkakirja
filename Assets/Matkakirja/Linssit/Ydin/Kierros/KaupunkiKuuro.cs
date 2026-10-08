@@ -25,6 +25,8 @@ namespace Matkakirja.Linssit.Kierros
         public static double Peitto(double perus) => perus + (0.95 - perus) * Math.Max(0, Math.Min(1, Voima));
         /// <summary>Pilvien tummuus 0–1 (valo kertoimella 1 − 0,6 × tummuus).</summary>
         public static double Tummuus => 0.6 * Math.Max(0, Math.Min(1, Voima));
+        /// <summary>Kuvapareille (asetus "markyys 0–1"): märkyys suoraan.</summary>
+        public static void AsetaMarkyys(double m) => Markyys = Math.Max(0, Math.Min(1, m));
         /// <summary>Testeille ja kaupungin vaihtoon: kuiva ja ei kuuroa.</summary>
         public static void Nollaa() { Voima = 0; Markyys = 0; }
     }

@@ -219,6 +219,10 @@ namespace Matkakirja.Natiivi
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
                         case "pilvet": KaupunkiIlmakeha.PilvetPakotettu = v != 0; break;   // LS2: pallon pilvikerros (kohta 6a), oletus kehityskaupungeissa
                         case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
+                        case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.Voima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot asettavat muuten)
+                        case "markyys": Matkakirja.Linssit.Kierros.KaupunkiKuuro.AsetaMarkyys(v); break;
+                        case "kaukoutu": KaupunkiIlmakeha.KaukoUtu = v; break;
+                        case "aamusumu": KaupunkiIlmakeha.Aamusumu = v; break;
                         case "pilvipaksuus": KaupunkiIlmakeha.PilviPaksuusM = v; break;
                         case "vesi": KaupunkiVesi.Pakotettu = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
                         case "vesinosto": KaupunkiVesi.NostoM = v; KaupunkiVesi.NostoAsetettu = true; break;
