@@ -174,10 +174,10 @@ test('Kerro lisää: ei maksullista generointia – ääni vain R2:sta, muuten n
 test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.esittely.slice(0, 6), ['pariisi', 'praha', 'wien', 'rooma', 'lontoo', 'koopenhamina']);
-  // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v1:ssä.
+  // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v2:ssa (8.10. avaukseen pallovirke).
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
-  for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], `opas/esittely-aaneton-v1/${id}.json`);
+  for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], `opas/esittely-aaneton-v2/${id}.json`);
 });
 
 test('avauksen lupaama alku: kierros alkaa esittelyn kierros[0]:sta, ei kameraa lähimmästä (Rooma: Forum, ei Trevi)', async () => {
@@ -269,5 +269,5 @@ test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani
 test('näyttönimi ≠ tunnus: Reykjavík löytää islanti-esittelyn', async () => {
   const urlit = [];
   await oppaanEsittely({}, 'Reykjavík', async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); });
-  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-aaneton-v1/islanti.json']);
+  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-aaneton-v2/islanti.json']);
 });
