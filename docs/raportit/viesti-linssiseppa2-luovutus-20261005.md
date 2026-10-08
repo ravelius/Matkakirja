@@ -35,7 +35,18 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 01.3x (uusin)
+## TILA 9.10. klo 03.0x (uusin)
+- JUNA 170 (PT kuittasi ehdoin): proto linssiseppa2/laivat-170 (kärki git logista; avaus-170 + ilmakeha-170 + master): vanat (VesiVanat,
+  hillitty e5edd5e60), savu (VeneSavu), TarkatVeneet (saaristolaiva, höyrylaiva, lautta, pendelbat) + ElavaKaupunki-kytkentä (LS1 sovittu),
+  KaupunkiKuuro (LS1 asettaa Voiman; märät kadut, pilvien tummuus, sateenkaari), kauko-utu 1,4, aamusumu, välke, pilvet oletuksena
+  kehityskaupungeissa + tuuheus (f50d2980e), loppuilta yötilassa (−7°), IlmakehaLaatat-LEIKKAUSKORJAUS fa5efa25c (oli käänteinen!).
+- OMAT MALLIT: linssiseppa2/omat-mallit-korkeus 8a23d6508 (ei Googlen pintakorjausta; kohdekohtainen krediitti; tileset --lisaa).
+  Vienti _tyo/linssiseppa2/concorde-putki/vienti3 (Giza N 15,35 + LR:n helmat, Concorde v2). Ämpäriin vasta PT:n kuittauksen jälkeen.
+- SEURAAVA SIMU: scratchpad aja-170b.sh (käännös laivat-170 + omat-mallit-korkeus → app-kopio lokit/linssiseppa2-app-170b).
+- AUKI: botin uusinta junalla 170 (Siirtoseppä 290f5d4ae); Riddarholmen/Notre-Dame odottavat PT:n päätöstä (spiira purettu / apsis);
+  Geotorget-tunnus omistajalta (Lantmäteriet).
+
+## TILA 9.10. klo 01.3x
 - TAIVAS: jälkeen-kuva junasta 168 OK (PT kuittasi); lokit/linssiseppa2-taivas-jalkeen-0100/kuvapari-*.png.
 - PILVIKERROS: käännös 694b0077 (ilmakeha-170 masterin päälle; app-kopio lokit/linssiseppa2-app-170-694b00776), pilvet 1 näkyy
   (lokit/linssiseppa2-pilvet-0115/pilvet1); pilvet0-ajo epäonnistui (app ei käynnistynyt), vertailukohtana jalkeen168. Kytkin pois.
