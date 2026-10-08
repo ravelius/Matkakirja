@@ -1,3 +1,13 @@
+# TILANNE 8.10. klo 07.2x
+
+- **Näyte 3 valmis 07.23** (`s2-eurooppa-talvip-nayte3/`, kuva `kuvapari-talvip-nayte3-20261008.jpg`): suorakulmiot jäivät lähes ennalleen.
+  Juurisyy: p lasketaan joka ruudulle eri päivistä (top-32 vähäpilvisintä), joten naapuriruutujen p hyppää. PT:lle on raportoitu.
+- **AJOSSA: näyte 4** (`kaudet/aja-talvip-nayte4.sh`, PGID 41823, 07.25 alkaen, noin 45 min) → `s2-eurooppa-talvip-nayte4/`. Julkaisija antoi vuoron.
+  Uusi lippu `TALVI_PKAIKKI=1`: p kaikista talvikuvista (pilvisyys < 80 %, ei top-N:ää), laskurit Uint16, SCL-luku 8 rinnakkain. Edellinen versio on tallessa (`-talvip3-20261008.mjs`).
+  Valmistuttua: kuvapari (näyte 3 | 4, skripti scratchpadissa: `vertaa.py`, sama z8-rajaus), yksi rivi PT:lle ja "valmis" Julkaisijalle. Jos swap > 15 Gt, keskeytä.
+
+---
+
 # TILANNE 8.10. klo 07.1x (tilinvaihto)
 
 - **Näyte 2 VALMIS 06.51** (`s2-eurooppa-talvip-nayte2/`, kuva `kuvapari-talvip-nayte2-20261008.jpg`): p SCL-kaistasta kaikista talvikuvista. PT hyväksyi linjan 06.xx.
