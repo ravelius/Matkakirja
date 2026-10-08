@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "c253010d0379987d",
-  "kansio": "dioraama/olavinlinna/blender/c253010d0379987d/",
+  "hash": "f5066037051d1fe1",
+  "kansio": "dioraama/olavinlinna/blender/f5066037051d1fe1/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -160,8 +160,8 @@
     },
     {
       "polku": "kavely/esine-esiliina.glb",
-      "sha256": "9afb0438ef9f1b8fb79a042aebecf4a6aebd7c99c9ebd79c001e05b46e2ee5b7",
-      "tavuja": 178992
+      "sha256": "12b8e2bf81d078f5d1b46a1d3082ae7f5984aeecb84d4325f4d403523dec7824",
+      "tavuja": 227400
     },
     {
       "polku": "kavely/esine-hiilipannu-4x4.astcm",
@@ -170,8 +170,8 @@
     },
     {
       "polku": "kavely/esine-hiilipannu.glb",
-      "sha256": "513df1cbf65b0de331c4b6ee519a06ee73e668e0b082dd43d36cd812cea1f82e",
-      "tavuja": 336128
+      "sha256": "a1ba07c67c48b5d01cb283e01e59994102caea693e6f331731d1b0223c3f75d0",
+      "tavuja": 429800
     },
     {
       "polku": "kavely/esine-ikuinen-valo-4x4.astcm",
@@ -300,8 +300,8 @@
     },
     {
       "polku": "kavely/esine-koysi-vene.glb",
-      "sha256": "a58f86b0a0743d023497776fd97a5322b5ed63a725baeb1ef6657303c8dac103",
-      "tavuja": 346808
+      "sha256": "7a3035c7be24605ad7c50ec6b1ef923e5fa00bb42e7d547f707818a3b123e662",
+      "tavuja": 419348
     },
     {
       "polku": "kavely/esine-koysikieppi-4x4.astcm",
@@ -310,8 +310,8 @@
     },
     {
       "polku": "kavely/esine-koysikieppi.glb",
-      "sha256": "063e0d2f6752454f2512cbb216ca3c3c6dcb571c61954f5787ace70896fd4dc3",
-      "tavuja": 350560
+      "sha256": "ac336df83066bf1be9153a3d5dc62e4de331f470395979d8af5b7eb4bf3dbcd9",
+      "tavuja": 407084
     },
     {
       "polku": "kavely/esine-kuppi-4x4.astcm",
@@ -400,8 +400,8 @@
     },
     {
       "polku": "kavely/esine-patapino.glb",
-      "sha256": "f100cce5f9d10b010bb2a65d43a0b11199e919dea8b5dfc05a70ac7db24e333d",
-      "tavuja": 239572
+      "sha256": "d08f386de35253072a65524b3a8ea9f47c71c1f5f53f229b1d534ffed270756b",
+      "tavuja": 270456
     },
     {
       "polku": "kavely/esine-pateeni-4x4.astcm",
@@ -460,8 +460,8 @@
     },
     {
       "polku": "kavely/esine-tiili-komero.glb",
-      "sha256": "6370a89216ed87718c201bebe41b4843587d7287e2f4f43a154d829b82157395",
-      "tavuja": 28448
+      "sha256": "7f6fdff907a51576ba2888aa6790675342f873a612edb1bb5c45ca7d67bf4c5c",
+      "tavuja": 33120
     },
     {
       "polku": "kavely/kappeli-kavely-kavely.glb",
@@ -510,8 +510,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "cda3e786b694af2c9d126a64eb9f1ee4e1fd843ae20b59d3d0ba1bb25d7fbe89",
-      "tavuja": 57828
+      "sha256": "51e35a93142c86036d37f1ea2b20eb20a3b1cb3a9f31188fe359d4cc3550e124",
+      "tavuja": 58031
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -530,8 +530,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "4b9ed45f1c5c533f428d4419cc3b4f6b271ca26c23aa603f1189394b303501ec",
-      "tavuja": 25589
+      "sha256": "363fa2b0ad89d1af061ee626c5d97cd1e693067dc9d9758e3169f53317da1173",
+      "tavuja": 25802
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
