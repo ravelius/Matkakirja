@@ -1,5 +1,5 @@
 // HISTORIAMOOTTORI (Siirtoseppä 7.10.2026): pelattavuusmalli kohta 11 — huonesimulaatio ilman Unityä. Ydin-luokat (Vartija, Askelaani,
-// KavelyData) ajetaan Olavinlinnan v44w-datalla (kultaiset/olavinlinna-v44w-*.json): partiot, torkkuja, pinnat, osat. Näkölinja
+// KavelyData) ajetaan Olavinlinnan v44z-datalla (kultaiset/olavinlinna-v44z-*.json): partiot, torkkuja, pinnat, osat. Näkölinja
 // yksinkertaistettuna: sama tai naapuriosa ja kerrosero alle 2 m (seinät osien rajoista). Testiajuri hiipii reitti:pelaaja-N -merkit
 // odottaen, ettei vartija ole 5 m:n sisällä seuraavasta pisteestä (pimeä, valoisuus 0,25), tai kävelee valossa (1,0).
 using System;
@@ -16,7 +16,7 @@ namespace Matkakirja.Linssit.Testit
         static KavelyData Data()
         {
             string Lue(string n) => File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", n));
-            return KavelyData.Lue(Lue("olavinlinna-v44w-osat.json"), Lue("olavinlinna-v44w-merkit.json"));
+            return KavelyData.Lue(Lue("olavinlinna-v44z-osat.json"), Lue("olavinlinna-v44z-merkit.json"));
         }
 
         static List<Simuvartija> Vartijat(KavelyData d)

@@ -31,7 +31,7 @@ namespace Matkakirja.Linssit.Testit
         public const int TikkaatAla = 86;   // reitti:pelaaja-87 tikkaat muurinharjalle (0-pohjainen)
         /// <summary>Harjan tikkaiden yläpää on 0,9 m talonpojasta ja 1,5 m vartijasta soihdun valossa (v44w): alle 2 m:n selkäaisti ja valo
         /// nostavat epäilyn nousussa. Kun LR/Siirtoseppä korjaa (siirto, valo tai kohtauksen aikainen poikkeus), vaihda true: testi vaatii läpäisyn.</summary>
-        public const bool HarjaKorjattu = false;
+        public const bool HarjaKorjattu = true;   // v44y: harjan hahmot 5 m liitoksesta (LS2 todensi v44z:llä)
 
         /// <summary>Huone 7 muurikäytävässä (naamio ei kelpaa, PT 8.10.; LR v44w: komerot, varjot, lyhyempi partio, kivi): ovelta tikkaille hiipien.</summary>
         [Testi] static void MuurikaytavaHiipien()
