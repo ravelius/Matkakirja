@@ -654,6 +654,11 @@ namespace Matkakirja.Natiivi
             siirtymaAlku = Time.realtimeSinceStartup;
             siirtymaKerta++;
             AsetaPalloKuva(OpasSovitin.Kaupunkitila);
+            // Kaupunkitila voi alkaa hetken siirtymän jälkeen (BUILD 167 -ajo 9.10.: Pariisi ja Tukholma mustina 20 s): kuva pyydetään,
+            // kun tila alkaa, vaikka kiertoa tai PalloTekstuuriValmista ei tule.
+            int pk = siirtymaKerta;
+            siirtyma.schedule.Execute(() => { if (pk == siirtymaKerta && siirtyma.style.display != DisplayStyle.None && OpasSovitin.Kaupunkitila && palloNimi == null && !palloKerroksetNakyy) AsetaPalloKuva(true); })
+                .Every(150).Until(() => pk != siirtymaKerta || siirtyma.style.display == DisplayStyle.None || palloNimi != null || palloKerroksetNakyy);
             // Ion-logo vain siirtymän omana (tasavälein, omistaja 15.3x); krediittikerroksen oma logo piiloon siirtymän ajaksi
             // (PaivitaAvausIon: IonOmaPiirto), muuten se piirtyi kiinteästi 10 pt vasemmalle krediittirivien päälle.
             AsetaSiirtymaIon();
@@ -793,11 +798,18 @@ namespace Matkakirja.Natiivi
             var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
             // Kääreen marginaali (ei ruudun pehmuste: absoluuttinen ion-logo mitataan ruudun reunasta).
             siirtymaTeksti.style.marginBottom = Mathf.Max(koko.y, 1f) * 0.07f;
+            // Kerrokset haetaan heti, stillistä riippumatta (BUILD 167 -ajo 9.10.: kuormassa vaakastillin purku ei valmistunut
+            // siirtymän aikana, ja kerrokset odottivat sitä → musta ruutu). Kumpi ehtii ensin, näkyy.
+            HaePalloKerrokset(n);
             var t = OpasSovitin.PalloTekstuuri(n);
-            if (t == null) { OpasSovitin.PalloTekstuuriMuistiin(n); return; }   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+            if (t == null)
+            {
+                Debug.Log($"MATKAKIRJA opas: pallon latauskuva purkuun {n} ({Time.realtimeSinceStartup - siirtymaAlku:F1} s siirtymästä)");
+                OpasSovitin.PalloTekstuuriMuistiin(n);   // valmistuessa PalloTekstuuriValmis → tänne uudelleen
+                return;
+            }
             SovitaPalloKuva(t);
             palloNimi = n; palloKuvaNyt = t;
-            HaePalloKerrokset(n);
             siirtymaTeksti.style.scale = UiKerros.Tabletti ? new Scale(new Vector3(IpadIsonnus, IpadIsonnus, 1f)) : (StyleScale)StyleKeyword.Null;
             // Kierron rajausvaihto (kuva jo näkyvissä) vaihtaa suoraan ilman häivytystä mustasta.
             bool myohassa = !palloNakyy && siirtyma.resolvedStyle.opacity > 0.5f && Time.realtimeSinceStartup - siirtymaAlku > 0.3f;
@@ -868,7 +880,7 @@ namespace Matkakirja.Natiivi
                 int j = i;
                 Kuvat.Hae(PalloKerrosUrl(r, nimet[i]), t =>
                 {
-                    if (kerta != palloKerrosKerta || !palloNakyy) return;
+                    if (kerta != palloKerrosKerta || siirtyma.style.display == DisplayStyle.None) return;
                     if (palloKerrosKuvat[j] != null && palloKerrosKuvat[j] != t) Kuvat.Vapauta(palloKerrosKuvat[j]);
                     palloKerrosKuvat[j] = t;
                     if (t != null) Kuvat.Kiinnita(t);
