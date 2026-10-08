@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 7185ab2dba8a. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde d75d90be605b. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "7185ab2dba8a";
+        public const string Lahde = "d75d90be605b";
 
         public static class Kehys
         {
@@ -24,6 +24,45 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 RiviTausta = new Color32(53, 39, 26, 140);
             public static readonly Color32 OverlayCard = new Color32(46, 33, 20, 224);
             public static readonly Color32 OverlayLine = new Color32(217, 161, 59, 115);
+            public static readonly Color32 Lapinakyva = new Color32(0, 0, 0, 0);
+            public static readonly Color32 MapInk04 = new Color32(70, 51, 31, 10);
+            public static readonly Color32 MapInk06 = new Color32(70, 51, 31, 15);
+            public static readonly Color32 MapInk07 = new Color32(70, 51, 31, 18);
+            public static readonly Color32 MapInk08 = new Color32(70, 51, 31, 20);
+            public static readonly Color32 MapInk10 = new Color32(70, 51, 31, 26);
+            public static readonly Color32 MapInk12 = new Color32(70, 51, 31, 31);
+            public static readonly Color32 MapInk14 = new Color32(70, 51, 31, 36);
+            public static readonly Color32 MapInk15 = new Color32(70, 51, 31, 38);
+            public static readonly Color32 MapInk16 = new Color32(70, 51, 31, 41);
+            public static readonly Color32 MapInk18 = new Color32(70, 51, 31, 46);
+            public static readonly Color32 MapInk20 = new Color32(70, 51, 31, 51);
+            public static readonly Color32 MapInk22 = new Color32(70, 51, 31, 56);
+            public static readonly Color32 MapInk24 = new Color32(70, 51, 31, 61);
+            public static readonly Color32 MapInk25 = new Color32(70, 51, 31, 64);
+            public static readonly Color32 MapInk26 = new Color32(70, 51, 31, 66);
+            public static readonly Color32 MapInk28 = new Color32(70, 51, 31, 71);
+            public static readonly Color32 MapInk30 = new Color32(70, 51, 31, 77);
+            public static readonly Color32 MapInk32 = new Color32(70, 51, 31, 82);
+            public static readonly Color32 MapInk35 = new Color32(70, 51, 31, 89);
+            public static readonly Color32 MapInk40 = new Color32(70, 51, 31, 102);
+            public static readonly Color32 MapInk45 = new Color32(70, 51, 31, 115);
+            public static readonly Color32 MapInk50 = new Color32(70, 51, 31, 128);
+            public static readonly Color32 MapInk55 = new Color32(70, 51, 31, 140);
+            public static readonly Color32 MapInk60 = new Color32(70, 51, 31, 153);
+            public static readonly Color32 MapInk62 = new Color32(70, 51, 31, 158);
+            public static readonly Color32 MapInk65 = new Color32(70, 51, 31, 166);
+            public static readonly Color32 MapInk66 = new Color32(70, 51, 31, 168);
+            public static readonly Color32 MapInk68 = new Color32(70, 51, 31, 173);
+            public static readonly Color32 MapInk70 = new Color32(70, 51, 31, 179);
+            public static readonly Color32 MapInk72 = new Color32(70, 51, 31, 184);
+            public static readonly Color32 MapInk75 = new Color32(70, 51, 31, 191);
+            public static readonly Color32 MapInk78 = new Color32(70, 51, 31, 199);
+            public static readonly Color32 MapInk80 = new Color32(70, 51, 31, 204);
+            public static readonly Color32 MapInk85 = new Color32(70, 51, 31, 217);
+            public static readonly Color32 MapInk90 = new Color32(70, 51, 31, 230);
+            public static readonly Color32 MapInk92 = new Color32(70, 51, 31, 235);
+            public static readonly Color32 MapInk95 = new Color32(70, 51, 31, 242);
+            public static readonly Color32 MapInk96 = new Color32(70, 51, 31, 245);
             public static readonly Color32 Paper = new Color32(239, 220, 180, 255);
             public static readonly Color32 PaperDark = new Color32(220, 192, 143, 255);
             public static readonly Color32 MapInk = new Color32(70, 51, 31, 255);
@@ -119,7 +158,9 @@ namespace Matkakirja.Natiivi
 
         public static class Kulma
         {
+            public const float Hius = 2f;
             public const float Pieni = 6f;
+            public const float Keski = 8f;
             public const float Nappi = 10f;
             public const float Kortti = 12f;
             public const float Pilleri = 999f;

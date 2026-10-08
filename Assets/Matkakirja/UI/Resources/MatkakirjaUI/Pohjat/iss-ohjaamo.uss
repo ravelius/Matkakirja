@@ -100,7 +100,7 @@
     margin: 0 8px;
     padding: 4px 8px;
     border-width: 1px;
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
     justify-content: center;
@@ -166,7 +166,7 @@
     width: 12px;
     height: 44px;
     margin-top: 2px;
-    border-radius: var(--tk-kulma-pieni);
+    border-radius: var(--tk-kulma-hius); /* EI OVAALEJA: kevyt suorakulmio (Päätoimittaja 8.10.) */
     background-color: var(--tk-lcd-pinta-peitto);
     border-width: 1px;
     border-color: var(--tk-reunus);

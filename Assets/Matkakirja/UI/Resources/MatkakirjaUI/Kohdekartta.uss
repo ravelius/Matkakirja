@@ -20,7 +20,7 @@
     flex-shrink: 0;
     padding-bottom: 6px;
     border-bottom-width: 1px;
-    border-bottom-color: rgba(70, 51, 31, 0.25);
+    border-bottom-color: var(--map-ink-25);
 }
 
 .mk-nahtavyydet__yla {
@@ -57,7 +57,7 @@
     min-height: 32px;
     padding: 3px 12px;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.45);
+    border-color: var(--map-ink-45);
     border-radius: 3px;
     background-color: rgba(255, 252, 242, 0.5);
     color: var(--map-ink);
@@ -96,16 +96,16 @@
     height: auto;
     padding: 3.2px 9.6px;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
+    border-color: var(--map-ink-35);
     border-radius: var(--tk-kulma-nappi);
     background-color: rgba(255, 250, 238, 0.6);
-    color: rgba(70, 51, 31, 0.85);
+    color: var(--map-ink-85);
 }
 
 .mk-kohdekartta__kokoruutu .mk-nappi__teksti {
     font-size: 10.6px;
     letter-spacing: 12px; /* web 0.12em */
-    color: rgba(70, 51, 31, 0.85);
+    color: var(--map-ink-85);
 }
 
 .mk-kohdekartta__kokoruutu .mk-ikoni {
@@ -119,8 +119,8 @@
     overflow: hidden;
     margin: 4.8px 0 8.8px 0;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.4);
-    border-radius: 2px;
+    border-color: var(--map-ink-40);
+    border-radius: var(--tk-kulma-hius);
     background-color: #efe6cf;
 }
 
@@ -179,7 +179,7 @@
     color: #2c1e07;
     background-color: var(--tk-paperi-pinta);
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.55);
+    border-color: var(--map-ink-55);
     border-radius: 3px;
 }
 
@@ -200,7 +200,7 @@
     text-shadow: 0 0 3px rgba(247, 239, 220, 0.95);
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 0.35s;
+    transition-duration: 0.22s; /* UI-siirtymä ≤ 250 ms (pohjavahti 8.10., oli 0.35s) */
 }
 
 .mk-kohdekartta--zoomattu .mk-kohdekartta__nimi {
@@ -249,7 +249,7 @@
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-color: rgb(55, 46, 35);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--lapinakyva);
 }
 
 .mk-kohdekartta__mittajanakaista {
@@ -273,7 +273,7 @@
     -unity-text-align: middle-center;
     color: rgb(47, 38, 27);
     background-color: rgba(247, 240, 222, 0.72);
-    border-radius: 2px;
+    border-radius: var(--tk-kulma-hius);
 }
 
 
@@ -325,7 +325,7 @@
     min-height: 32px;
     padding: 0;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.45);
+    border-color: var(--map-ink-45);
     border-radius: 3px;
     background-color: rgba(247, 240, 222, 0.88);
     align-items: center;
@@ -340,7 +340,7 @@
 
 .mk-kohdekartta-kokoruutu__sulku:active {
     background-color: rgba(255, 250, 238, 0.98);
-    border-color: rgba(70, 51, 31, 0.75);
+    border-color: var(--map-ink-75);
 }
 
 /* Web .kartta-suurennos-selitteet: rivitetty keskitetty luettelo (gap 0.3rem 1rem), margin-top 0.45rem, sivut 0.5rem,
@@ -358,7 +358,7 @@
     padding: 1.6px 0;
     border-width: 0;
     border-radius: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--lapinakyva);
     font-size: 12.5px;
     letter-spacing: 3px; /* web 0.03em */
     color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
@@ -474,7 +474,7 @@
     border-width: 0 0 1px 0;
     border-radius: 0;
     border-color: var(--mark);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--lapinakyva);
     justify-content: flex-start;
 }
 
@@ -490,7 +490,7 @@
     margin: 0 14.4px;
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.35);
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
 }
 
 /* Pelkkä kartta (web .kaupunkikartta-pelkka): täyttää kaistan, ei kehyksen omaa reunaa, lähde kulmassa kartan päällä. */
@@ -535,7 +535,7 @@
     margin: 10.4px 14.4px 0 14.4px;
     padding: 8px;
     border-width: 0;
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
     background-color: #efe1c2;
 }
 
@@ -643,7 +643,7 @@
     padding: 0;
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.35);
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
     background-color: #efe1c2;
     align-items: center;
     justify-content: center;

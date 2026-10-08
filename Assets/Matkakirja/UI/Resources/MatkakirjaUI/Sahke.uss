@@ -29,7 +29,7 @@
     opacity: 0;
     translate: 0 14px;
     transition-property: opacity, translate;
-    transition-duration: 0.26s;
+    transition-duration: 0.22s; /* UI-siirtymä ≤ 250 ms (pohjavahti 8.10., oli 0.26s) */
     transition-timing-function: ease-out;
 }
 
@@ -52,7 +52,7 @@
     padding: 0;
     border-width: 0;
     border-radius: var(--tk-kulma-pieni);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--lapinakyva);
     color: #7a6a4a;
 }
 
@@ -178,7 +178,7 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.28);
     border-radius: var(--tk-kulma-pieni);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--lapinakyva);
     color: #5b4a2c;
 }
 
@@ -279,7 +279,7 @@
     padding: 4px 10px;
     border-width: 1px;
     border-color: var(--line);
-    border-radius: 8px;
+    border-radius: var(--tk-kulma-keski);
     /* Rivin tausta muuttujasta (ei kiinteä musta 25 %): Retkikunta on 1.0.55:stä pergamentilla, jossa tumma pohja
        ja tumma muste eivät erotu (Natiivi-UI 29.9.2026); tummalla paneelilla --rivi-tausta on sama tumma sävy. */
     background-color: var(--rivi-tausta);
