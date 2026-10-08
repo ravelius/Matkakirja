@@ -35,7 +35,16 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. ilta (uusin)
+## TILA 8.10. ilta, klo 18 (uusin)
+- PT: työjonot /Users/Shared/Claude/Matkakirja-fable/scratchpad/tyojonot.md (oma kohta "Linssiseppä 2"); valmis erä → 1 rivi PT:lle ja heti
+  seuraava kohta; [LUPA]/[PT] ohitetaan; tyhjä → "JONO TYHJÄ: Linssiseppä 2". Juna 167: lukitus 21.30, kuittauspyynnöt PT:lle ≤ 21.15.
+- linssiseppa2/m167 (historia-m 12116991c + merge m-jumi), worktree wt/proto-linssiseppa2-m167: df4c36cf7 kultaiset v45a + PelattavaPala v45a
+  (Huonesimulaatio lukee Versio-vakiosta), db2ce3883 MTila jumimalliin + SeikkailuKomero.PalautaM-arkkukorjaus. 959/959, tarkistus 0.
+  SHAt Siirtosepälle (hän pyytää PT:n kuittauksen junaan 167), 1 rivi PT:lle. Vanha worktree wt/proto-linssiseppa2-m-jumi poistettavissa kun m167 mergetty.
+- Jonon kohta 1: yhteinen rajapinta LS1:n läpipeluuajurin kanssa — ehdotettu ThiefAjuri.AjaHuone(w, huone); odottaa LS1:n vastausta.
+- AVOIN: muuriportaiden tarkistuspiste (70 → 66).
+
+## TILA 8.10. ilta
 - Juna 167 M-osa, Siirtosepän jako: minulle (1) jumitestit T6a–T10a + valppaus + anteeksianto, (2) vihjeportaat 6–10 (SeikkailuVihjeet vapaa).
   Lukossa Siirtosepällä: SeikkailuEsineet/Vartijat/Pelaaja/Sali/Kappeli/Tietokerros/Tallennus/Tallentaja; SeikkailuPako/Komero jaettuja (kerro ensin).
 - linssiseppa2/m-jumi (e0c46d263 päällä), worktree wt/proto-linssiseppa2-m-jumi: 5f0f19943 MOsanJumiTestit + Pako.Kiinni;
