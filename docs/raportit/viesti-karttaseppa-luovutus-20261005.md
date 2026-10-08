@@ -1,3 +1,21 @@
+# TILANNE 8.10. klo 21.1x
+
+- **Kehityskaupungit TUKHOLMA ja PARIISI** (omistaja 20.4x) tehdään ensin mahdollisimman hyviksi. Muu Eurooppa odottaa omistajan päätöstä.
+- **KORKEUSDATA (PT:n kärkityö):** Googlen SampleHeightMostDetailed on ehtojen vastaista, joten tilalle on tehty oma data. Raportti PR https://github.com/ravelius/Matkakirja/pull/4230.
+  Kansio: _tyo/karttaseppa/korkeus-20261008/ (37 kaupunkia, LS1:n muoto, origo `pallo-37-kaupunkia.json`), LS1 vaihtaa lukijan junaan 169/170.
+  - Pariisi: IGN LiDAR HD 2 m + 10 m
+  - Tukholma: GLO + OSM-rakennukset 2 m. Lantmäteriet = omistajan Geotorget-tunnus.
+  - Muut: GLO-30 30 m.
+- **VESI (LS2:n nimet):** _tyo/karttaseppa/vesi/ (index.json, tukholma-6m/16m, pariisi-6m/16m). LS2 kytki veden (ilmakeha-170, oletus pois).
+  Pariisi: Seine OSM-relaatioista (vesirelaatiot.mjs), liukuva jokitaso, taso LiDARista (p10 0,02 m).
+- **KAUPUNKIAINEISTO:** _tyo/karttaseppa/kaupunki-{tukholma,pariisi}-20261008/ (reitit, kohteet, maski).
+  Tukholma on ajettu uudelleen LS1:n origolla (59.3299, 18.07382).
+- **Työkalut** T7 `vesimaski/`: vesipinta, vesirelaatiot, reitit, pbf-kohteet, rakennukset ja korkeus → PR #4227 (wt/karttaseppa-vesipinta, 596bcf91c; PT kuittasi).
+- **Muut avoimet PR:t:** #4228 (ehtolisäys: leikkaus) ja #4230 (korkeusraportti). Mergen jälkeen worktreet pois (`uusi-worktree.sh --poista`).
+- **Odottaa:** LS2:n kuvapari (vesi), LS1:n lukijanvaihto, omistajan Lantmäteriet-tunnus.
+
+---
+
 # TILANNE 8.10. klo 20.4x
 
 - **Elävä kaupunki (omistaja 20.4x, Linssiseppä tekee suunnitelman docs/raportit/pallo-elava-kaupunki-20261008.md):**
