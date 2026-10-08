@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "b53f54af2b527c1c",
-  "kansio": "dioraama/olavinlinna/blender/b53f54af2b527c1c/",
+  "hash": "ed9069299bfced6b",
+  "kansio": "dioraama/olavinlinna/blender/ed9069299bfced6b/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1280,8 +1280,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "1deb27cec7a8c01430d95aacd2e922b91d20097d6297544c5ee118636f9b70b8",
-      "tavuja": 58030
+      "sha256": "6e0496350fb6076c17815ce7612e601abd50b22c8d2bc1cf14d9c0fd12f12e1c",
+      "tavuja": 67304
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -1362,6 +1362,431 @@
       "polku": "kavely/ranta-1499.glb",
       "sha256": "16a84e46232f524251475eb0104d4b4f6c14004ab6fafb7df8842b0b92757c1b",
       "tavuja": 1129316
+    },
+    {
+      "polku": "kavely/rekvisiitta-Barrel_01-normaali-6x6.astcm",
+      "sha256": "4f04f66041681de04459074091645f16ff859ec76ceabe75477dca5f212ca65d",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-Barrel_01-orm-6x6.astcm",
+      "sha256": "8b9862c4ec6215c5128870ed162046f3df40c1638404bb2dc5e9c9d221dea6c7",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-Barrel_01-vari-6x6.astcm",
+      "sha256": "d9bf2b5ea4f2df1d72dbec384b1284fd5b7ccd4d30ebdd762ca35095d6e799e0",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-Barrel_01.glb",
+      "sha256": "223a2f2187862402806e349fe3a2da0aa41c5444cc986adbc0e2ee7ff821efee",
+      "tavuja": 501064
+    },
+    {
+      "polku": "kavely/rekvisiitta-GothicCabinet_01-normaali-6x6.astcm",
+      "sha256": "983080ceb84a6c846b31693d8fbbf5f6b077fa77e4517396c9c38693dc18b0c9",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-GothicCabinet_01-orm-6x6.astcm",
+      "sha256": "bb1a69e2735f49ace230e36694ab6a2992f837e0805999947e4c7dff1218d598",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-GothicCabinet_01-vari-6x6.astcm",
+      "sha256": "517ab90d320dde6361eff6e0864f0529e373a12898d3642feefecb4ef5fca65c",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-GothicCabinet_01.glb",
+      "sha256": "0d9ea59f7b35f5d0ec9f7c02f8ab94a76c7a7ac83cac77510c3c4ec0cc706f6f",
+      "tavuja": 864568
+    },
+    {
+      "polku": "kavely/rekvisiitta-brass_goblets.glb",
+      "sha256": "a53bd7bea6e98f169973a275179b40c42b1b6c508bc20b4b5d2f7eee169c2947",
+      "tavuja": 1229176
+    },
+    {
+      "polku": "kavely/rekvisiitta-brass_pot_01-normaali-6x6.astcm",
+      "sha256": "5f736357cfd8c824dfa620700cb63438b0282f3b7072f3c0d19db10152b0eb00",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-brass_pot_01-orm-6x6.astcm",
+      "sha256": "7087eb823e9cc9716632ae8616751b240131a4a705cc52fc5bc3f87661605a40",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-brass_pot_01-vari-6x6.astcm",
+      "sha256": "386e05d8023f7007ac4a6268ae93b3cd51ff3bfc58378f4c7faaefcc40e20dba",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-brass_pot_01.glb",
+      "sha256": "0e3e4fbf5a7ccda37face9ca42b819a75c98cd5a6da63042e94dcb4f26105ce5",
+      "tavuja": 328140
+    },
+    {
+      "polku": "kavely/rekvisiitta-carved_wooden_plate-normaali-6x6.astcm",
+      "sha256": "10c2bb5ecf501495ec012fc2a3e5d9692d84c00ca419a1d6c4bdcdeba41d3301",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-carved_wooden_plate-orm-6x6.astcm",
+      "sha256": "94be3efbf66b681f09bfc7a0ea4a3e770e63516100c65725ed5f7816802d3cf6",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-carved_wooden_plate-vari-6x6.astcm",
+      "sha256": "2ca59221ca71f32b00d8fa17ba001cfc831884cb08835a211fc8a078bfc7ce5c",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-carved_wooden_plate.glb",
+      "sha256": "e22c22ad3ab72c04d7c5b42839c9cc1559010daf21011cb7325af6487b9a0a40",
+      "tavuja": 300064
+    },
+    {
+      "polku": "kavely/rekvisiitta-ceramic_pot-normaali-6x6.astcm",
+      "sha256": "b23a09d2ab4367db4ebd8ec2b2bd8d1e6fd03786df81c03813fb743fdb66768b",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-ceramic_pot-orm-6x6.astcm",
+      "sha256": "39cf26fd2c404f4857a6b0024abdf551cda286aaed5f7326207a9b74c3cfc082",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-ceramic_pot-vari-6x6.astcm",
+      "sha256": "c31476876b590549fc133305ac2e6b31ec094467e791c73aa5a43805e15299b3",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-ceramic_pot.glb",
+      "sha256": "7d7b63d2b5ce7f2f07267bd9a4f16e7a8a718e00bf3188b023b1de70d134a476",
+      "tavuja": 397556
+    },
+    {
+      "polku": "kavely/rekvisiitta-food_apple_01-normaali-6x6.astcm",
+      "sha256": "12827e614961169757ce149e307b2bc83b1fac4a08f2dbb3a7e5d4dfab7c0322",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-food_apple_01-orm-6x6.astcm",
+      "sha256": "6e97ae4f079a03eb997a05ec4a43fe778006f2f21a5e9617f1ec8ad58761cf51",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-food_apple_01-vari-6x6.astcm",
+      "sha256": "3a37a848876c23271295a72dfa0c22346a59f1caf1f19da1f728e8082a02997e",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-food_apple_01.glb",
+      "sha256": "96e186599171646783dd284e6cdbf7f0767157a0475be22c67e714272f76fb3e",
+      "tavuja": 386992
+    },
+    {
+      "polku": "kavely/rekvisiitta-jug_01-normaali-6x6.astcm",
+      "sha256": "b70dd76887049ee7b08c10bf705f86d4942a94f6000a421187a85c5028d7bb15",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-jug_01-orm-6x6.astcm",
+      "sha256": "8627eae26bb7e21c3151f2e2f73af07a2820c6ea7f27077316238d5c4f1ed9ad",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-jug_01-vari-6x6.astcm",
+      "sha256": "f68e7d4bf9cd96d8ea8a103b5ae4cca16602b70117524b5d516288051e00a70b",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-jug_01.glb",
+      "sha256": "a8ab5cf9d99e6625e1962794d26473f018d4014fc0f6a544c699a4b7cfe8e03e",
+      "tavuja": 289412
+    },
+    {
+      "polku": "kavely/rekvisiitta-metal_jug-normaali-6x6.astcm",
+      "sha256": "c8d9253050b20d17262092f56af581704082e9a3e774da6f48a38217721882cc",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-metal_jug-orm-6x6.astcm",
+      "sha256": "f305eb065348210d66e63378ed20afb2781eefd644625d4b26c815d644e82a69",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-metal_jug-vari-6x6.astcm",
+      "sha256": "c4c3fe0fea566443c19f5426f6da57bdfa9e81772801a5b9f340186316b8b475",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-metal_jug.glb",
+      "sha256": "9223ee5b5e608bf259453b223490c956f18c0beec195e5a45efb95a9f38d4254",
+      "tavuja": 396744
+    },
+    {
+      "polku": "kavely/rekvisiitta-wicker_basket_01-normaali-6x6.astcm",
+      "sha256": "7d4231511a840de135bf18d7c2aa325b0a9e72aa21a4da538360fee82e547c9f",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wicker_basket_01-orm-6x6.astcm",
+      "sha256": "b10f11660b6b8a664654b007a175c52efc0f171991288843f1ad5b5b4f059ed4",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wicker_basket_01-vari-6x6.astcm",
+      "sha256": "cf36cb7618dc97f3d088853ddbbb0872a70ab1a45dea1e93691f634ca7645da4",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wicker_basket_01.glb",
+      "sha256": "f50027d2e1437e889bae04f36894636c41dcc41a1edf75ba3d21d841599a022e",
+      "tavuja": 774916
+    },
+    {
+      "polku": "kavely/rekvisiitta-wine_barrel_01-normaali-6x6.astcm",
+      "sha256": "895d207305140fbe525da941254dad91b1907f2d2a29a3f67d68eaa107c19bc5",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wine_barrel_01-orm-6x6.astcm",
+      "sha256": "a0535898633b53e8ff7d56b367e6fcd3f26b49a53aeb3fe46e81897d2bfc9a16",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wine_barrel_01-vari-6x6.astcm",
+      "sha256": "f914e7ca961e1e1fc49e0b1064b4dce599c9dd7655c8387a686d2e81b4ac4ac0",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wine_barrel_01.glb",
+      "sha256": "ab82fd349b5e5be6f774d410983361a59097ef1de2b110b370dfe4fd47b8c80d",
+      "tavuja": 794844
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_01-normaali-6x6.astcm",
+      "sha256": "444c1b4be31d5b32d47cf6ad2c08238795bacdcb61e8bfab3647a62837c5f703",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_01-orm-6x6.astcm",
+      "sha256": "2bf7a5e0b87051c11142bfa7dca1eb7f8fe914b9dd8e71347812702245d2e86c",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_01-vari-6x6.astcm",
+      "sha256": "8d744cdf7701ad3ca50ca660132feaafa2b728fb415ed3c34738baae7c34ebb5",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_01.glb",
+      "sha256": "963e4b8ec41ef8c9ac7ca2b03d6d1ae899edcf327f42bcde1ef6999e16b5f511",
+      "tavuja": 558384
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_02-normaali-6x6.astcm",
+      "sha256": "5945414d4f5c54d17ff963f63d7602fe97d4006ee68e2ecb7836a5a07d9a885c",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_02-orm-6x6.astcm",
+      "sha256": "224df57e6108fc8d1bb5864391311f6cd86a65e687ec4db50f869a14ed812eb3",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_02-vari-6x6.astcm",
+      "sha256": "c8e14362c2bcf75d7a2f076cb862e6cbcedea2a3541a2e29ada581b946c49945",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bowl_02.glb",
+      "sha256": "84ba6ccb1d47f4c4dffc08f0e2b863a5061e1b54bfced6649adf9f300326e1cd",
+      "tavuja": 585452
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_01-normaali-6x6.astcm",
+      "sha256": "bd45e719eed32367bd12434d2e0ec3e41c33f46d40351c522259a71a111aed6c",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_01-orm-6x6.astcm",
+      "sha256": "0d8974a6e94ae9bb071353aa48c00343da937b613573ca424507306035afef53",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_01-vari-6x6.astcm",
+      "sha256": "09144a1b3b4a30529f64f6ec626275c37e7430e7094d8594980141a1398ef10d",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_01.glb",
+      "sha256": "41c7f7fe8943d917240e53301c100fd2f281bea5c914299b18dff8bc93e33e58",
+      "tavuja": 547432
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_02-normaali-6x6.astcm",
+      "sha256": "7efeb233b28677d19e3aedde2557602adaec0e95b72aa66cfdb35783be353448",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_02-orm-6x6.astcm",
+      "sha256": "530f7d66cd4d0b5545e88f228c4ba9c410b879642cb144dbac14030627f8e42c",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_02-vari-6x6.astcm",
+      "sha256": "044a5ce225bc91f2d428d10e28643b021c7af3d04363c1decf0a9277d9606c99",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_bucket_02.glb",
+      "sha256": "dc176fee680196ac9d1155624ee60d9ff6a2f844b50b52a08bc4dd595383c378",
+      "tavuja": 666264
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_candlestick-normaali-6x6.astcm",
+      "sha256": "a7548ec8d2b27a1734d5b8c8e20d885a853ec5a0675bef283918e6d55cecc9da",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_candlestick-orm-6x6.astcm",
+      "sha256": "ab06eaca3a43c7f30ad589f646bbe35cbef6c5811bd29ffb8b8ea6426ee4996e",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_candlestick-vari-6x6.astcm",
+      "sha256": "27daff3bce1e58dad88543eb9e2a9ba98a370af1feee7cbe08373dc32c7bedc8",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_candlestick.glb",
+      "sha256": "90454fb30e60828f2959b906657ff024e0d9cee0810d740a009e6a7b10d56c8e",
+      "tavuja": 780380
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_01-normaali-6x6.astcm",
+      "sha256": "2c9fcd3abf7daa2782bd874c0836f92728020506250d54878ce291f5d4c65dd9",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_01-orm-6x6.astcm",
+      "sha256": "028d11c77c09db555df1e80054c5998d55038188914f232059b2db266f4669f0",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_01-vari-6x6.astcm",
+      "sha256": "45a5ec084e63b0c389fb6906dae4c43fa51d9bd166b96e087a23386994f65ff6",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_01.glb",
+      "sha256": "fb45ab01b152d6da514524d34bc00e088823c95364181ac4d2670c3b9ad03e27",
+      "tavuja": 565056
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_02-normaali-6x6.astcm",
+      "sha256": "7fab175829ef263393e7fa8807224f3f9d5188af7b89e86696a46ded01314c4e",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_02-orm-6x6.astcm",
+      "sha256": "d3a1b72717750a23f981192c72bd5102c0982330124e835a375c55138a1f2fef",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_02-vari-6x6.astcm",
+      "sha256": "ba01d7fed0ec9282688875a8cbe46b686f8dd52a8411055653d9c578c9ce3955",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_crate_02.glb",
+      "sha256": "b6c900bac61afe3530bb48a663a3955fc6dc1c27915eb3caa9ddb37d909f38ce",
+      "tavuja": 544836
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_cutting_board-normaali-6x6.astcm",
+      "sha256": "7abc81b90a37d5f4c73aa4072b192a8fc4813e3819d51645b835aa124969da64",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_cutting_board-orm-6x6.astcm",
+      "sha256": "f41a2d2f511fae60f28e2e8089d671677d41ce17d3ac25bcb8929c81906c6c54",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_cutting_board-vari-6x6.astcm",
+      "sha256": "956c41e4e610660ddedc863c985c75d918378cf697c2675206ac9d70fd4f331d",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_cutting_board.glb",
+      "sha256": "f2933ff72a2a65dd5420c0d0d26a6db9c1644924972f156347f424c15090a113",
+      "tavuja": 406000
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_spoon-normaali-6x6.astcm",
+      "sha256": "71b7c6a43fa8c131f5426766e7674afa077a59ada974a9fadcbf0834653414c2",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_spoon-orm-6x6.astcm",
+      "sha256": "f540db4b9bb286e20b387207078e196a1297159dc488191e6c92a28f9e81d770",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_spoon-vari-6x6.astcm",
+      "sha256": "faa13390f54e61931831fc7b37b8ed9335a906223f2b5178e83a6504c537a09b",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_spoon.glb",
+      "sha256": "13c89ef3bd0d0405dcb6a4c7c4a342f9f993f9bd1e2b2c5fc88adf40ae3d8307",
+      "tavuja": 483880
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_stool_01-normaali-6x6.astcm",
+      "sha256": "2a63acc999099f3903b183745af0c11e7e34ca13ff7bd5431afa233bd0a1911f",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_stool_01-orm-6x6.astcm",
+      "sha256": "4da13d6748239ac4b898c54dfda057d4ba642cdb743be072b22f837187f72874",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_stool_01-vari-6x6.astcm",
+      "sha256": "cb487c8dcbaa58a364fbd5d0c47917524f8b4bbf174942ab6c8b5cf622b3deea",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-wooden_stool_01.glb",
+      "sha256": "3cde147b2974e9ebe30a03de62b974e7130fb0bb023d4d17cc0984dd94c1349c",
+      "tavuja": 749924
+    },
+    {
+      "polku": "kavely/rekvisiitta-yellow_onion-normaali-6x6.astcm",
+      "sha256": "a191fc5b6c06087800f12b30c61a22c92878fb14a71d64b73c2b3ec29b10073e",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-yellow_onion-orm-6x6.astcm",
+      "sha256": "6cf95fe5d432b33b0678d055e4106800a00b079a3444236f1f5902589cc4217e",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-yellow_onion-vari-6x6.astcm",
+      "sha256": "b78fcc33ff8d845803731acaefbe20d520c3b3afa0a989f0992781fd520dc329",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "kavely/rekvisiitta-yellow_onion.glb",
+      "sha256": "e773c793e82c1660c9eee7830ea368370f1a7f6aeba5a3ab08811403fe0c901d",
+      "tavuja": 405200
     },
     {
       "polku": "kavely/tyrma-E101-kavely.glb",
