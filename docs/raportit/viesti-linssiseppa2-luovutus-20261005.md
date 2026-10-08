@@ -35,7 +35,18 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. iltapäivä, myöhemmin (uusin)
+## TILA 8.10. ilta (uusin)
+- Juna 167 M-osa, Siirtosepän jako: minulle (1) jumitestit T6a–T10a + valppaus + anteeksianto, (2) vihjeportaat 6–10 (SeikkailuVihjeet vapaa).
+  Lukossa Siirtosepällä: SeikkailuEsineet/Vartijat/Pelaaja/Sali/Kappeli/Tietokerros/Tallennus/Tallentaja; SeikkailuPako/Komero jaettuja (kerro ensin).
+- linssiseppa2/m-jumi (e0c46d263 päällä), worktree wt/proto-linssiseppa2-m-jumi: 5f0f19943 MOsanJumiTestit + Pako.Kiinni;
+  568bb9651 tarkistuspisteet huoneessa 6 + anteeksianto + Vartija-valppauskorjaus (torkkuja) + ThiefAjuri laaja varahaku/Tilat/KiinniAlkaa;
+  bf80a22ae MVihjeet + SeikkailuVihjeet-kytkentä + testit. 957/957, tarkistus 0. SHAt Siirtosepälle; Linssiseppä (LS1) tekee läpipeluuajurin
+  haaraan linssiseppa/lapipeluu-167 m-jumin päälle.
+- AVOIN: kiinni muuriportailla (70) → tarkistus Tott-kammio 66 → ajuri jumissa (ehdotettu T7a muuriporras-komeroon).
+- ODOTTAA: (3) Siirtosepän M-tallennusrajapinta → Kirjoita/Lue-testi; SeikkailuKomero.Ydin (nyt heijastus); LR v45a (6a4e9cad: tiili+köysi-esineet) kultaisiin seuraavassa erässä.
+- Kone kuormitettu (load ~86) → testiajat moninkertaiset.
+
+## TILA 8.10. iltapäivä, myöhemmin
 - v44z-haarat MERGETTY (historia-m e0c46d263), worktreet poistettu. PT: M-osa junaan 167; työnjako Siirtosepän kanssa:
   (1) huonesimulaatio LR:n 1499-M-geometrialla, kun hash tulee; (2) M-jumitestit; (3) SeikkailuTallennuksen M-tila → Kirjoita/Lue-testi.
 - (2) VALMIS: linssiseppa2/m-jumi 5f0f19943 (e0c46d263 päällä), worktree wt/proto-linssiseppa2-m-jumi: MOsanJumiTestit (3) + JUMI KORJATTU
