@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 21.1x
+# TILANNE 8.10. klo 21.0x
 
 - **Kehityskaupungit TUKHOLMA ja PARIISI** (omistaja 20.4x) tehdään ensin mahdollisimman hyviksi. Muu Eurooppa odottaa omistajan päätöstä.
 - **KORKEUSDATA (PT:n kärkityö):** Googlen SampleHeightMostDetailed on ehtojen vastaista, joten tilalle on tehty oma data. Raportti PR https://github.com/ravelius/Matkakirja/pull/4230.
