@@ -21,7 +21,9 @@ using UnityEngine;
 namespace Matkakirja.Natiivi
 {
     public enum Kytkin { Kertoja, Musiikki, Aanimaisema, PieniLiike, KuljettuReitti }
-    public enum Voima { Tehosteet, Pulu, Lukija, Musiikki, Tausta }
+    /// <summary>Äänentasot (MIKSERI, omistaja 8.10.2026 klo 17.5x: kertoja ja puhe, hahmojen repliikit, musiikki, tehosteet,
+    /// äänimaisema, sää, Pulu). Repliikit ja Saa luetaan soittavassa koodissa Asetukset.Taso(Voima.Repliikit / Voima.Saa).</summary>
+    public enum Voima { Tehosteet, Pulu, Lukija, Musiikki, Tausta, Repliikit, Saa }
 
     public static class Asetukset
     {
@@ -178,15 +180,26 @@ namespace Matkakirja.Natiivi
             Voima.Pulu => "pulu",
             Voima.Lukija => "lukija",
             Voima.Musiikki => "musiikki",
+            Voima.Repliikit => "repliikit",
+            Voima.Saa => "saa",
             _ => "tausta",
         };
 
-        public static float Oletus(Voima v) => v switch
+        /// <summary>Mikserin avain asetukset.jsonissa: "aanet.mikseri.&lt;nimi&gt;" (0–1).</summary>
+        public static string MikseriAvain(Voima v) => v switch
+        {
+            Voima.Tehosteet => "tehosteet", Voima.Pulu => "pulu", Voima.Lukija => "lukija", Voima.Musiikki => "musiikki",
+            Voima.Repliikit => "repliikit", Voima.Saa => "saa", _ => "tausta",
+        };
+
+        /// <summary>Koodin oletus; sisältöpaketin kokoelmat/asetukset.json "aanet.mikseri.&lt;nimi&gt;" ohittaa (omistajan säätö
+        /// kaikkien oletukseksi: kehittäjän Tallenna oletuksiksi → vienti).</summary>
+        public static float Oletus(Voima v) => Mathf.Clamp01(Matkakirja.Peli.Asetus.Luku("aanet.mikseri." + MikseriAvain(v), v switch
         {
             Voima.Lukija => 0.9f,
             Voima.Musiikki => 0.35f,
             _ => 1f,
-        };
+        }));
 
         public static bool Paalla(Kytkin k)
         {
@@ -260,13 +273,30 @@ namespace Matkakirja.Natiivi
 
         public static string Nimi(Voima v) => v switch
         {
-            Voima.Tehosteet => "Äänitehosteet",
-            Voima.Pulu => "Pulun ääni",
-            Voima.Lukija => "Lukija",
-            Voima.Musiikki => "Taustamusiikki",
-            _ => "Taustaäänet",
+            Voima.Tehosteet => "Tehosteet",
+            Voima.Pulu => "Pulu",
+            Voima.Lukija => "Kertoja ja puhe",
+            Voima.Musiikki => "Musiikki",
+            Voima.Repliikit => "Hahmojen repliikit",
+            Voima.Saa => "Sää",
+            _ => "Äänimaisema",
         };
 
-        public static readonly IReadOnlyList<Voima> VoimaJarjestys = new[] { Voima.Tehosteet, Voima.Pulu, Voima.Lukija, Voima.Musiikki, Voima.Tausta };
+        /// <summary>Mikserin järjestys (omistaja 8.10. 17.5x): kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää, Pulu.</summary>
+        public static readonly IReadOnlyList<Voima> VoimaJarjestys = new[] { Voima.Lukija, Voima.Repliikit, Voima.Musiikki, Voima.Tehosteet, Voima.Tausta, Voima.Saa, Voima.Pulu };
+
+        /// <summary>Nykyiset tasot asetukset.json-palana { "aanet": { "mikseri": { … } } } (kehittäjän Tallenna oletuksiksi).</summary>
+        public static string MikseriJson()
+        {
+            var sb = new System.Text.StringBuilder("{ \"aanet\": { \"mikseri\": { ");
+            bool eka = true;
+            foreach (var v in VoimaJarjestys)
+            {
+                if (!eka) sb.Append(", ");
+                eka = false;
+                sb.Append('"').Append(MikseriAvain(v)).Append("\": ").Append(Taso(v).ToString("0.##", CultureInfo.InvariantCulture));
+            }
+            return sb.Append(" } } }").ToString();
+        }
     }
 }
