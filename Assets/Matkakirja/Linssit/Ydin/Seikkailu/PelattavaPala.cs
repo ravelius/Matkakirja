@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "fd269407ada4dea1";
-        public const string Versio = "v45i";   // v45f + Final IK -data (hoitajan kadet, #4006), ranta-1499 törmäys ja kävely, partio:ranta-1 kalliolle, ulkoalueen törmäys harventamatta (LR 8.10.)
+        public const string Hash = "09c782fadd922e86";
+        public const string Versio = "v45l";   // v45i + kävelyosien valoatlakset (blender/kavely/valot), detaljit.json (kivi), hahmojen ASTC 6×6 (LR 8.10.)
     }
 }
