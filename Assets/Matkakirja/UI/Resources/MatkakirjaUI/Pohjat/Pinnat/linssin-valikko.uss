@@ -381,3 +381,40 @@
     right: var(--tk-vali-xs);
     bottom: var(--tk-vali-xs);
 }
+
+/* YÖ (omistaja 9.10.2026 "Tee vain niin"; Päätoimittaja): pallotilan ☰-, ☀- ja Kysy-listat yöllä olemassa olevalla tummalla
+ * teemalla (tk-teema-tumma, kuten videopelien tummat kortit), päivällä harmaa ennallaan. OpasValikko vaihtaa teemaluokan
+ * Saatila.Aika:n mukaan. Tummassa teemassa ei ole pinta-peittoa: pinta on jo peittävä. LIVE pois = teeman reunus, päällä tila-live. */
+.mk-linssivalikko.mk-linssivalikko--pohja.tk-teema-tumma {
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+}
+
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__kohta,
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__kohta .mk-nappi__teksti,
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__nimi {
+    color: var(--tk-muste);
+}
+
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__komento {
+    border-color: var(--tk-reunus);
+}
+
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__kohta.mk-linssivalikko__live {
+    margin-bottom: var(--tk-vali-s);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-reunus);
+}
+
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__kohta.mk-linssivalikko__live.mk-valittu {
+    background-color: var(--tk-tila-live);
+}
+
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__tila,
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__lahde {
+    color: var(--tk-muste-pehmea);
+}
+
+.tk-teema-tumma.mk-linssivalikko--pohja .mk-linssivalikko__viiva {
+    background-color: var(--tk-reunus);
+}

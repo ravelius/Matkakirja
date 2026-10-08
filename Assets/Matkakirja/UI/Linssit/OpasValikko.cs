@@ -288,6 +288,7 @@ namespace Matkakirja.Natiivi
             Kosketusvieritys.Liita(valikko, () => aloitus && aloitusSuosikit != null && aloitusSuosikit.worldBound.Contains(viimeKohta) ? aloitusSuosikit : rivit);
             kerros.JokaRuutu += TarkistaOhiNapautus;
             kerros.JokaRuutu += TarkistaAikaKierto;
+            kerros.JokaRuutu += PaivitaYoTeema;
 
             // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
             sirurivi = Rakenne.El("tk-teema-harmaa mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
@@ -659,6 +660,8 @@ namespace Matkakirja.Natiivi
             siirtymaAlku = Time.realtimeSinceStartup;
             siirtymaKerta++;
             AsetaPalloKuva(OpasSovitin.Kaupunkitila);
+            // Taustaäänet hiljaisiksi latauskuvan ajaksi (omistaja TF 168: "saisiko äänet pois taustalta kun kip latautuu?").
+            AaniVaimennus.Aseta(true, "pallon latauskuva");
             // Kaupunkitila voi alkaa hetken siirtymän jälkeen (BUILD 167 -ajo 9.10.: Pariisi ja Tukholma mustina 20 s): kuva pyydetään,
             // kun tila alkaa, vaikka kiertoa tai PalloTekstuuriValmista ei tule.
             int pk = siirtymaKerta;
@@ -957,6 +960,7 @@ namespace Matkakirja.Natiivi
             if (siirtyma.style.display == DisplayStyle.None) return;
             siirtymaKierros?.Pause();
             siirtymaPalkki.Arvo = 1f;
+            AaniVaimennus.Aseta(false, "kierros alkaa");
             siirtyma.AddToClassList("mk-astroavaus--haipyy");
             siirtyma.schedule.Execute(() => siirtyma.style.opacity = 0f).ExecuteLater(16);
             // Kertalaskuri (NUI 7.10. 15.4x): häivytyksen jälkeen piiloon aina, ellei uusi siirtymä alkanut välissä (peiton tarkistus
@@ -979,6 +983,7 @@ namespace Matkakirja.Natiivi
             siirtyma.RemoveFromClassList("mk-astroavaus--haipyy");
             siirtyma.style.display = DisplayStyle.None;
             AsetaPalloKuva(false);
+            AaniVaimennus.Aseta(false, "siirtymä peruttu");
             testiEdistyminen = null;
             KrediititTiivis.CesiumNakyviin = false;
             Debug.Log("MATKAKIRJA opas: siirtymä peruttu (opas suljettu)");
@@ -2226,6 +2231,17 @@ namespace Matkakirja.Natiivi
         }
 
         bool aikaVaaka;
+        bool yoTeema;
+
+        /// <summary>Yöllä listat tummalla teemalla (omistaja 9.10.2026 "Tee vain niin"), päivällä harmaalla.</summary>
+        void PaivitaYoTeema()
+        {
+            bool yo = Saatila.Aika == PalloAika.Yo;
+            if (yo == yoTeema) return;
+            yoTeema = yo;
+            valikko.EnableInClassList("tk-teema-harmaa", !yo);
+            valikko.EnableInClassList("tk-teema-tumma", yo);
+        }
 
         /// <summary>Kierto ☀-listan ollessa auki: lista rakennetaan uudelleen uuden asennon asettelulla (katselmointi 9.10.).</summary>
         void TarkistaAikaKierto()
