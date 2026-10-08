@@ -38,6 +38,9 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Askeläänen klippi (rakennus.json aanet askel-kivi); SeikkailuVartijat.Askeleet asettaa.</summary>
         public static AudioClip AskelKlippi;
+        /// <summary>Rakennuksen askeläänitteet tunnuksella (askel-kivi, askel-puu; DioraamaSovitin lataa). Pelaajan omat askeleet.</summary>
+        public static readonly Dictionary<string, AudioClip> AskelKlipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
+        AudioSource omatAskeleet;
         /// <summary>Tilojen liekit valoisuuden lähteenä (Sovitin asettaa).</summary>
         public static DioraamaLiekit Liekit;
 
@@ -239,8 +242,10 @@ namespace Matkakirja.Natiivi
             {
                 // Askeleet pinnan mukaan (pelattavuusmalli 2.2: kivi 0 / 2,5 / 6 m, puu 1 / 3,5 / 8 m, ...), osa seinäsääntöä varten.
                 var pp0 = p.transform.position; var kd = SeikkailuKavely.Data;
-                double sade = Askelaani.Sade(Askelaani.Pinta(kd, pp0.x, pp0.y, -pp0.z), p.Tila.Tapa);
+                string pinta = Askelaani.Pinta(kd, pp0.x, pp0.y, -pp0.z);
+                double sade = Askelaani.Sade(pinta, p.Tila.Tapa);
                 if (p.Tila.Vauhti > 0.3 && sade > 0) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z)));
+                OmatAskeleet(p, pinta, pp0);
             }
             bool piilossa = p != null && Piilossa(p);
             // Nähty piiloon meno (pelattavuusmalli 2.5): jos jonkin mittari ≥ 0,6 ja näkölinja vapaa piiloon mentäessä, piilo ei suojaa
@@ -381,6 +386,23 @@ namespace Matkakirja.Natiivi
             }
             return false;
         }
+        /// <summary>Pelaajan omat askeleet (pelattavuusmalli 2.2): pinnan äänite (aanet-fp-manifestista tai rakennuksesta, varana kivi)
+        /// silmukkana jalkojen kohdalta, voimakkuus pinnan ja liiketavan mukaan, tahti nopeudesta. Hiivintä kuuluu itselle hiljaa.</summary>
+        void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat)
+        {
+            if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; }
+            var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa);
+            AudioClip klippi = null;
+            foreach (var t in tunnukset) { klippi = SeikkailuAanet.Klippi(t) ?? (AskelKlipit.TryGetValue(t, out var k) ? k : null); if (klippi != null) break; }
+            klippi ??= AskelKlippi;
+            SeikkailuKuulija.Aseta(omatAskeleet, jalat + Vector3.up * 0.05f);
+            bool liikkuu = p.Tila.Vauhti > 0.3 && !p.Eleessa && !p.Otteessa && klippi != null;
+            if (!liikkuu) { if (omatAskeleet.isPlaying) omatAskeleet.Stop(); return; }
+            if (omatAskeleet.clip != klippi) { omatAskeleet.clip = klippi; omatAskeleet.Play(); }
+            omatAskeleet.volume = voima; omatAskeleet.pitch = Mathf.Clamp(0.8f + 0.2f * (float)p.Tila.Vauhti, 0.8f, 1.45f);
+            if (!omatAskeleet.isPlaying) omatAskeleet.Play();
+        }
+
         const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f;
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
@@ -506,6 +528,7 @@ namespace Matkakirja.Natiivi
             if (Aktiivinen == this) Aktiivinen = null;
             foreach (var h in henkilot) { hahmot?.PoistaIrralliset(h); DioraamaHahmot3D.PiilotetutHenkilot.Remove(h); }
             foreach (var v in vartijat) if (v.Askeleet != null) Destroy(v.Askeleet.gameObject);
+            if (omatAskeleet != null) Destroy(omatAskeleet.gameObject);
             if (navi.valid) NavMesh.RemoveNavMeshData(navi);
             if (data != null) Destroy(data);
         }

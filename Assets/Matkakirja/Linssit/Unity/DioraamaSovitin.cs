@@ -1107,6 +1107,7 @@ namespace Matkakirja.Natiivi
                 if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
             }
             SeikkailuAanet.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-e3-v1/manifest.json", o.Kirjaa);
+            SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v1/manifest.json");   // Pelikoodari: askeleet, kantele (puuttuva ohitetaan)
             SeikkailuKappeli.Luo(nayttamo.transform, rakennus, nayttamo.Hahmot3D, klippi, o.Kirjaa);
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
@@ -1121,14 +1122,18 @@ namespace Matkakirja.Natiivi
             SeikkailuEsineet.Kolahti -= KokkiKuuleeKolahduksen; SeikkailuEsineet.Kolahti += KokkiKuuleeKolahduksen;
             SeikkailuVartijat.Liekit = nayttamo.Liekit;
             SeikkailuVartijat.Luo(nayttamo.transform, rakennus, SeikkailuKavely.Data, nayttamo.Hahmot3D, o.Kirjaa);
-            if (SeikkailuVartijat.AskelKlippi == null && rakennus.Aanet != null && rakennus.Aanet.TryGetValue("askel-kivi", out var askel) && !string.IsNullOrEmpty(askel.Tiedosto))
-            {
-                using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(askel.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
-                ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
-                yield return q.SendWebRequest();
-                if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlippi = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
-                o.Kirjaa($"seikkailu: vartijan askeleet {(SeikkailuVartijat.AskelKlippi != null ? "ladattu" : "ei latautunut")} ({askel.Tiedosto})");
-            }
+            // Askeleet (vartijat askel-kivi; pelaajan omat askeleet pinnan mukaan: askel-puu ym. rakennuksen äänistä, olki/sora/vesi aanet-fp-manifestista).
+            if (rakennus.Aanet != null)
+                foreach (var kv in rakennus.Aanet)
+                {
+                    if (!kv.Key.StartsWith("askel-", StringComparison.Ordinal) || string.IsNullOrEmpty(kv.Value?.Tiedosto) || SeikkailuVartijat.AskelKlipit.ContainsKey(kv.Key)) continue;
+                    using var q = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniUrl(kv.Value.Tiedosto), AudioType.MPEG);   // äänet rakennuksen juuressa (E1-ajo: hash-juuri 404)
+                    ((UnityEngine.Networking.DownloadHandlerAudioClip)q.downloadHandler).streamAudio = false;
+                    yield return q.SendWebRequest();
+                    if (q.result == UnityEngine.Networking.UnityWebRequest.Result.Success) SeikkailuVartijat.AskelKlipit[kv.Key] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(q);
+                    if (kv.Key == "askel-kivi") SeikkailuVartijat.AskelKlippi = SeikkailuVartijat.AskelKlipit.TryGetValue(kv.Key, out var kk) ? kk : null;
+                    o.Kirjaa($"seikkailu: askeleet {kv.Key} {(SeikkailuVartijat.AskelKlipit.ContainsKey(kv.Key) ? "ladattu" : "ei latautunut")} ({kv.Value.Tiedosto})");
+                }
             var glbt = new List<string>();
             nayttamo.Hahmot3D?.IrrallistenGlb(glbt);
             foreach (var glb in glbt) if (hahmoGlbJonossaTaiValmiit.Add(glb)) o.StartCoroutine(LataaHahmoGlb(glb));
