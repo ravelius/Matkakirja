@@ -166,7 +166,7 @@
     width: 12px;
     height: 44px;
     margin-top: 2px;
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     background-color: var(--tk-lcd-pinta-peitto);
     border-width: 1px;
     border-color: var(--tk-reunus);
@@ -245,7 +245,7 @@
     min-width: 160px;
     padding: 0 14px;
     border-width: 1px;
-    border-radius: 10px;
+    border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
     justify-content: center;
@@ -271,7 +271,7 @@
     flex-direction: row;
     padding: 4px; /* TASAISET VÄLIT (omistaja 6.10.): reunaväli = nappien väli 4 pt (IssOhjaamo.LaajennusVali) */
     border-width: 1px;
-    border-radius: 12px;
+    border-radius: var(--tk-kulma-kortti);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
 }
@@ -300,7 +300,7 @@
     margin: 0 0 0 4px;
     padding: 0;
     border-width: 1px;
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     border-color: var(--tk-lcd-reunus);
     background-color: var(--tk-lcd-pinta);
     color: var(--tk-lcd-muste);

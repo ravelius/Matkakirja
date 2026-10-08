@@ -25,7 +25,7 @@
     border-bottom-color: rgba(40, 26, 10, 0.38);
     border-radius: 9px;
     background-color: #f7f2e4;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
     opacity: 0;
     translate: 0 14px;
     transition-property: opacity, translate;
@@ -51,7 +51,7 @@
     min-height: 30px;
     padding: 0;
     border-width: 0;
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     background-color: rgba(0, 0, 0, 0);
     color: #7a6a4a;
 }
@@ -133,9 +133,9 @@
     padding: 5px 9px;
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.34);
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     background-color: #fffdf6;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-sahke-liuska__vaihtoehto:active {
@@ -160,14 +160,14 @@
     background-color: rgba(122, 85, 20, 0.16);
     font-size: 12.8px;
     -unity-text-align: middle-center;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-sahke-liuska__vaihtoehtoteksti {
     flex-shrink: 1;
     font-size: 14.4px;
     white-space: normal;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-sahke-liuska__ohita {
@@ -177,7 +177,7 @@
     padding: 5px 11px;
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.28);
-    border-radius: 6px;
+    border-radius: var(--tk-kulma-pieni);
     background-color: rgba(0, 0, 0, 0);
     color: #5b4a2c;
 }
@@ -270,7 +270,7 @@
 
 .mk-sahke__koodi {
     margin: 6px 0 2px 0;
-    font-size: 16px;
+    font-size: var(--tk-koko-leipa);
     letter-spacing: 18.75px; /* web 3px */
 }
 

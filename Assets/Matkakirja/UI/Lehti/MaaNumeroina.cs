@@ -395,7 +395,7 @@ namespace Matkakirja.Natiivi
     {
         const float Vasen = 36f, Oikea = 290f, Yla = 12f;
         static readonly Color Suomi = new Color32(70, 51, 31, 97);          // 0.38
-        static readonly Color Silloin = new Color32(138, 97, 20, 255);      // #8a6114
+        static readonly Color Silloin = Tyylikirja.Kehys.AccentDark;      // #8a6114
         const float EnnusteAlfa = 0.45f;
 
         readonly NumeroSarja sarja, suomi;

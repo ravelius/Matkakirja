@@ -49,7 +49,7 @@
     padding: 0 6px 0 var(--tk-vali-m);
     border-width: 1px;
     border-color: var(--tk-lasi-reunus);
-    border-radius: 12px;
+    border-radius: var(--tk-kulma-kortti);
     background-color: var(--tk-lasi-pinta);
     overflow: hidden;
 }
