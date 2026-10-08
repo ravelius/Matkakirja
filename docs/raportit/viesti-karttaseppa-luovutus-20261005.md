@@ -12,8 +12,8 @@
   Tukholma on ajettu uudelleen LS1:n origolla (59.3299, 18.07382).
 - **Työkalut** T7 `vesimaski/`: vesipinta, vesirelaatiot, reitit, pbf-kohteet, rakennukset ja korkeus → PR #4227 (wt/karttaseppa-vesipinta, 596bcf91c; PT kuittasi).
 - **Muut avoimet PR:t:** #4228 (ehtolisäys: leikkaus) ja #4230 (korkeusraportti). Mergen jälkeen worktreet pois (`uusi-worktree.sh --poista`).
-- **VIENTI (PT:n lupa Julkaisijan kautta):** _valmiit/vesi-vienti-20261008 (vain Tukholma, vesi/index.json pysyvä) on Julkaisijalla.
-  Pariisin paketti _valmiit/vesi-pariisi-vienti-20261008 (vesi/index-v2.json): PT:n LUPA 21.1x, Julkaisijalla. Junassa 167 vesi on päällä vain Tukholmassa; LS2 vaihtaa index-v2:een ja Pariisin päälle seuraavaan junaan. LS2:lle kerrottu, että index-v2 luetaan ensin.
+- **VIENTI (PT:n lupa Julkaisijan kautta):** _valmiit/vesi-vienti-20261008 (vain Tukholma, vesi/index.json pysyvä) ÄMPÄRISSÄ 21.10 (todennettu 200).
+  Pariisin paketti _valmiit/vesi-pariisi-vienti-20261008 (vesi/index-v2.json): PT:n LUPA 21.1x, ÄMPÄRISSÄ 21.11 (todennettu 200). Junassa 167 vesi on päällä vain Tukholmassa; LS2 vaihtaa index-v2:een ja Pariisin päälle seuraavaan junaan. LS2:lle kerrottu, että index-v2 luetaan ensin.
 - **Odottaa:** LS2:n kuvapari (vesi), LS1:n lukijanvaihto, omistajan Lantmäteriet-tunnus.
 
 ---
