@@ -3,7 +3,14 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 00.0x (UUSIN)
+## TILA 9.10. 00.4x (UUSIN)
+**BUILD 168 = proto master 6a67a9b19273488b811e530272b8be27d6ffae79** (runko natiiviseppa/juna-168 4d13b1e3e = 7f0dcae51 + Siirtoseppä d4c3bf1f4 (v45r)
++ LS1 pallo-168 9f6ac8bfe + tf167-168 6265a62ac + NUI 901b20232 + LS2 989685f09 + kaupunki-sse; simukäännös 6a67a9b19 00.35 0 shader erroria,
+app lokit/natiiviseppa-app-168-4d13b1e3e; muutosloki 268 PT:n). Julkaisijalle lähetetty; AVOINNA: iOS-alkuaika → Mac-odottaja, juna/b13 51b873a2 → 4d13b1e3.
+JUNA 169: natiiviseppa/budjetti-169 9747db7f4 (UltraAtlaksetMt 300, LS2 mittaus), Siirtoseppä juna169 1630e8ef1 (v45s + TAA-dioraama), LS1 ajallinen-169
+df7c7d41a (kaupunki-TAA oletus pois + ylöskatsekorjaus), NUI kaupunkikooste 311bb35ac; LS1 katuliikenne-170 7c479ff82 odottaa PT:tä.
+
+## TILA 9.10. 00.0x
 BUILD 167 7f0dcae51: iOS TF 37837955397, Mac TF 37840129681 (23.31), junavahti asensi 3 T7-simuun 23.30 (3622D89D ohitettu, LT:n video).
 **JUNA 168 RUNKO = natiiviseppa/juna-168 f3fea94b5** (wt/proto-natiiviseppa-j168) = 7f0dcae51 + Siirtoseppä a8e1c0b12 (⊇ kaupunki-sse 1b755328f) +
 LS1 pallo-168 9f6ac8bfe + NUI fa18d88de + LS2 911f772d8; testit 452/419/1081, unity 0, tarkista 0; simukäännös 7e2269a18 00.03 0 shader erroria
