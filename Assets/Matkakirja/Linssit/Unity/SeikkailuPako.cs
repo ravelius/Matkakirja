@@ -47,6 +47,10 @@ namespace Matkakirja.Natiivi
             if (mk5 != null) { s.k5 = U(mk5); s.k5Katse = mk5.Katse != null ? new Vector3((float)mk5.Katse[0], (float)mk5.Katse[1], (float)-mk5.Katse[2]) : s.k5 + Vector3.forward; s.k5On = true; }
             if (mv != null) { s.vene = U(mv); s.veneOn = true; }
             s.koysi = mko != null ? U(mko) : s.vene;
+            // LR v45a: esine-koysi-vene.glb kahtena solmuna (koysi-ranta vartijan kädestä puoliväliin, koysi-vene puolivälistä keulaan).
+            if (mko != null && !string.IsNullOrEmpty(mko.Glb))
+                s.StartCoroutine(SeikkailuEsineet.LataaMalli(mko, go.transform, s.luodut, g => s.koysiMalli = g, kirjaa, new[] { "koysi-ranta", "koysi-vene" },
+                    (n, t) => { if (n == "koysi-vene") s.koysiVene = t; }));
             SeikkailuKomero.ArkkuAuki -= s.Halytyskello; SeikkailuKomero.ArkkuAuki += s.Halytyskello;
             SeikkailuVartijat.Kiinnijaatiin -= s.Kiinni; SeikkailuVartijat.Kiinnijaatiin += s.Kiinni;
             kirjaa?.Invoke($"seikkailu: pako (K4 {(s.k4On ? "kyllä" : "ei")}, vene {(s.veneOn ? "kyllä" : "ei")})");
@@ -56,7 +60,7 @@ namespace Matkakirja.Natiivi
         {
             if (ydin.Vaihe != PakoVaihe.Odottaa) return;
             ydin.ArkkuAuki(); ydin.KelloSoi = false;
-            SeikkailuAanet.Soita("kello", krampi + Vector3.up * 6f, 1f);   // hälytyskello Kellotornissa (TULKINTA; ääni aanet-fp:hen tarvittaessa)
+            SeikkailuAanet.SoitaTaiVara("kello-halytys", "kello", krampi + Vector3.up * 6f, 1f);   // hälytyskello Kellotornissa (TULKINTA; ääni aanet-fp:hen tarvittaessa)
             SeikkailuVartijat.Valpastu();
             SeikkailuRepliikit.SoitaTaiVara("vartija-kello-1", "vartija-valpas-1", krampi + Vector3.up * 3f);   // "Kello soimaan!"
             kirjaa?.Invoke("seikkailu: hälytyskello soi, vartijat valppaina");
@@ -76,7 +80,7 @@ namespace Matkakirja.Natiivi
             var otteet = new List<(Vector3 P, Vector3 Ulos)>();
             for (int i = 0; i <= n; i++) otteet.Add((Vector3.Lerp(krampi, ala, i / (float)n), ulos));
             p.KasiEle("poiminta");
-            SeikkailuAanet.Soita("lyhty-narina", krampi, 0.6f, 0.7f);
+            SeikkailuAanet.SoitaTaiVara("koysi-kiinnitys", "lyhty-narina", krampi, 0.6f, 0.7f);
             ydin.Kiinnita();
             if (ydin.UusiYritys)
             {
@@ -103,6 +107,7 @@ namespace Matkakirja.Natiivi
         void AloitaSukellus(SeikkailuPelaaja p)
         {
             kirjaa?.Invoke("seikkailu: K4 sukellus");
+            SeikkailuAanet.SoitaTaiVara("sukellus", null, p.transform.position, 0.9f);
             var alku = p.transform.position; sukellusAlku = alku;
             var vesi = veneOn ? vene.y : alku.y - 1f;
             uintiAlku = new Vector3(k4Katse.x, vesi, k4Katse.z);
@@ -111,7 +116,10 @@ namespace Matkakirja.Natiivi
             {
                 ydin.Paivita(dt, false);
                 float t = (float)ydin.VaiheS;
-                if (ydin.UintiAlkoi) { ydin.UintiAlkoi = false; SeikkailuAanet.Soita("vesisanko", p.transform.position, 0.9f, 0.6f); SeikkailuVartijat.Aktivoi("seisoo-ranta-vartija"); }
+                // Silmukat (aanet-fp-v2): uinti uidessa, airot K5:ssä; puuttuessa hiljaa.
+                SeikkailuAanet.Silmukka("uinti", ydin.Vaihe == PakoVaihe.Uinti, p.transform.position + Vector3.up * 1.4f, 0.8f);
+                SeikkailuAanet.Silmukka("airot", ydin.Vaihe == PakoVaihe.K5, vene, 0.8f);
+                if (ydin.UintiAlkoi) { ydin.UintiAlkoi = false; SeikkailuAanet.SoitaTaiVara("molskahdus", "vesisanko", p.transform.position, 0.9f, 0.6f); SeikkailuVartijat.Aktivoi("seisoo-ranta-vartija"); }
                 if (ydin.SoutajaHuutaa) { ydin.SoutajaHuutaa = false; SeikkailuRepliikit.SoitaTaiVara("soutaja-pako-1", null, vene + Vector3.up * 1.2f); }   // "Tänne!"
                 if (ydin.Veneessa) { ydin.Veneessa = false; AsetaKoysi(true); kirjaa?.Invoke("seikkailu: veneellä, vartija pitää köydestä"); }
                 if (ydin.Katkaistu) Katkaistu();
@@ -147,6 +155,7 @@ namespace Matkakirja.Natiivi
                     case PakoVaihe.Valmis:
                         // Nousu nykyiseen linnaan jatkaa K5:stä (SeikkailuKappeli kuuntelee Valmis); ilman kuuntelijaa himmennys.
                         ydin.Valmistui = false; kirjaa?.Invoke("seikkailu: PAKO VALMIS");
+                        SeikkailuAanet.Silmukka("uinti", false, vene); SeikkailuAanet.Silmukka("airot", false, vene);
                         if (Valmis != null) Valmis.Invoke(); else SeikkailuNakyvyys.Himmennys = 1f;
                         return false;
                 }
@@ -166,8 +175,9 @@ namespace Matkakirja.Natiivi
         {
             ydin.Katkaistu = false;
             AsetaKoysi(false);
-            SeikkailuAanet.Soita("raapaisu", koysi, 0.9f, 0.8f);
+            SeikkailuAanet.SoitaTaiVara("koysi-katkeaa", "raapaisu", koysi, 0.9f, 0.8f);
             SeikkailuAanet.Soita("vesisanko", koysi, 0.7f, 0.9f);   // vartija istahtaa matalaan veteen vahingoittumatta (omistajan päätös 1)
+            if (koysiVene != null) StartCoroutine(KoysiVajoaa(koysiVene));
             kirjaa?.Invoke("seikkailu: köysi katkaistu → K5");
             SeikkailuRepliikit.SoitaTaiVara("ranta-vartija-1", null, koysi + Vector3.up * 1.2f);   // istahtaa matalaan veteen
             SeikkailuRepliikit.SoitaTaiVara("soutaja-pako-2", null, vene + Vector3.up * 1.2f);
@@ -183,6 +193,15 @@ namespace Matkakirja.Natiivi
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); OhjattuVerbi = null; OhjattuToimi = null; }
-        void OnDestroy() { SeikkailuKomero.ArkkuAuki -= Halytyskello; SeikkailuVartijat.Kiinnijaatiin -= Kiinni; if (Aktiivinen == this) { Aktiivinen = null; OhjattuVerbi = null; OhjattuToimi = null; } }
+        readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
+        GameObject koysiMalli; Transform koysiVene;
+        /// <summary>Katkaistu veneen puolikas vajoaa veteen 1,5 s ja katoaa (vartijan puolikas jää käteen).</summary>
+        System.Collections.IEnumerator KoysiVajoaa(Transform t)
+        {
+            var alku = t.position;
+            for (float s = 0; s < 1.5f && t != null; s += Time.deltaTime) { t.position = alku + Vector3.down * (0.6f * s / 1.5f); yield return null; }
+            if (t != null) t.gameObject.SetActive(false);
+        }
+        void OnDestroy() { foreach (var o in luodut) if (o != null) Destroy(o); SeikkailuKomero.ArkkuAuki -= Halytyskello; SeikkailuVartijat.Kiinnijaatiin -= Kiinni; if (Aktiivinen == this) { Aktiivinen = null; OhjattuVerbi = null; OhjattuToimi = null; } }
     }
 }

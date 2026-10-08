@@ -90,7 +90,8 @@ namespace Matkakirja.Natiivi
         public const float TakaM = 2.5f, TakaYlos = 0.4f, TakaSiirtymaS = 0.6f, OteRiippuu = 1.55f, OteIrti = 0.35f;
         public Transform TakakuvaHahmo { get; private set; }
         Kiipeily oteKiipeily; List<(Vector3 P, Vector3 Ulos)> otteet; Action<bool> oteValmis;
-        string oteLeike; float lipsahdusAsti;
+        string oteLeike; float lipsahdusAsti; bool puuskaKuului;
+        static void KiipeilyAanetPois(Vector3 p) { SeikkailuAanet.Silmukka("koysi-lasku", false, p); SeikkailuAanet.Silmukka("tuuli-muuri", false, p); }
         float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi, lyhtyKayty;
         public Kiipeily OteKiipeily => oteKiipeily;
         public bool Takakuva => takaPaino > 1e-3f;
@@ -112,6 +113,7 @@ namespace Matkakirja.Natiivi
         public void LopetaOteKiipeily()
         {
             if (oteKiipeily == null) return;
+            KiipeilyAanetPois(transform.position);
             oteKiipeily = null; oteValmis = null; cc.enabled = true; silmaMaailma = float.NaN;
             if (himmensi) { himmensi = false; SeikkailuNakyvyys.Himmennys = 0f; }
         }
@@ -147,6 +149,12 @@ namespace Matkakirja.Natiivi
             // Lyhty kulkee yläpuolella kerran (huone 8 vaihe 5), kun pelaaja on puolivälissä (myös uudella yrityksellä pudotuksen jälkeen).
             if (k.Ote == 0) lyhtyKayty = false;
             if (!lyhtyKayty && k.Ote >= otteet.Count / 2 && k.Siirtyy == 0) { lyhtyKayty = true; k.LyhtyYlla(); Debug.Log("MATKAKIRJA seikkailu: lyhty yllä"); }
+            // Äänet (aanet-fp-v2): köysilaskussa köysi liikkeessä, ulkoseinällä tuuli; puuskan varoitus kerran.
+            bool lasku = oteLeike == "koysilasku";
+            SeikkailuAanet.Silmukka("koysi-lasku", lasku && k.Siirtyy != 0, transform.position + Vector3.up * OteRiippuu, 0.7f);
+            SeikkailuAanet.Silmukka("tuuli-muuri", !lasku, transform.position + Vector3.up * 1.5f, k.Puuska ? 1f : 0.5f);
+            if (k.PuuskaVaroittaa && !puuskaKuului) SeikkailuAanet.Soita("tuuli-puuska", transform.position + Vector3.up * 1.5f, 0.9f);
+            puuskaKuului = k.PuuskaVaroittaa;
             if (k.Lipsahti) { k.Lipsahti = false; lipsahdusAsti = Time.time + (float)Kiipeily.ToipuminenS; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
             if (k.Putosi) { k.Putosi = false; Debug.Log("MATKAKIRJA seikkailu: ote petti, kiipeilyn alkuun"); }
             if (k.Himmenee != himmensi) { himmensi = k.Himmenee; SeikkailuNakyvyys.Himmennys = himmensi ? 1f : 0f; }
@@ -170,6 +178,7 @@ namespace Matkakirja.Natiivi
             {
                 // Komeron kynnys (85 cm, silmiin 0,6 s): viimeisen otteen kohdalle seinän sisäpuolelle; takakuva palaa silmiin.
                 var o = otteet[otteet.Count - 1];
+                KiipeilyAanetPois(transform.position);
                 oteKiipeily = null; transform.position = o.P - o.Ulos * 0.45f - Vector3.up * 0.1f; viimeMaassa = transform.position; cc.enabled = true;
                 kavely.KameraYaw = kavely.HahmoYaw; silmaMaailma = float.NaN;
                 if (himmensi) { himmensi = false; SeikkailuNakyvyys.Himmennys = 0f; }

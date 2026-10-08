@@ -52,6 +52,8 @@ namespace Matkakirja.Natiivi
                 t.transform.localScale = new Vector3(0.27f, 0.07f, 0.13f);
                 if (mat != null) t.GetComponent<MeshRenderer>().sharedMaterial = mat;
                 k.tiiliGo.Add(t);
+                // LR v45a: esine-tiili-komero.glb merkin glb-kentästä paikkamerkin tilalle (sama paikka ja kierto).
+                if (!string.IsNullOrEmpty(m.Glb)) { int ti = k.tiiliGo.Count - 1; k.StartCoroutine(SeikkailuEsineet.LataaMalli(m, go.transform, k.luodut, g => k.VaihdaTiili(ti, g), kirjaa)); }
                 if (m.KiertoY is double ku) k.ulos = -new Vector3((float)Math.Sin(ku), 0f, (float)-Math.Cos(ku));
             }
             if (am != null) { k.arkku = new Vector3((float)am.X, (float)am.Y, (float)-am.Z); k.kilpiaOn = ki == 2; }
@@ -134,12 +136,12 @@ namespace Matkakirja.Natiivi
             {
                 var go = tiiliGo[ti]; var c = go.transform.position;
                 p.KasiEle("raapaisu");
-                SeikkailuAanet.Soita("raapaisu", c, 0.8f, UnityEngine.Random.Range(0.92f, 1.08f));
+                SeikkailuAanet.SoitaTaiVara(ti % 2 == 0 ? "tiili-raapaisu" : "tiili-raapaisu-2", "raapaisu", c, 0.8f, UnityEngine.Random.Range(0.92f, 1.08f));
                 var tulos = ydin.Raavi(ti, p.Tila.Vauhti);
                 kirjaa?.Invoke($"seikkailu: tiili {ti + 1}: {tulos}");
                 if (tulos == TiiliTulos.Putosi || tulos == TiiliTulos.Komeroon) SeikkailuTallentaja.Aktiivinen?.Tallenna("m: tiili " + (ti + 1));
                 if (tulos == TiiliTulos.Putosi) StartCoroutine(Putoaa(go));
-                else if (tulos == TiiliTulos.Komeroon) { SeikkailuAanet.Soita("kivi-lasku", c, 0.6f); go.transform.position = c - ulos * 0.35f + Vector3.down * 0.05f; }
+                else if (tulos == TiiliTulos.Komeroon) { SeikkailuAanet.SoitaTaiVara("tiili-lasku", "kivi-lasku", c, 0.6f); go.transform.position = c - ulos * 0.35f + Vector3.down * 0.05f; }
                 if (ydin.Tiilet.Kurkistaa) { ydin.Tiilet.Kurkistaa = false; SeikkailuVartijat.Kurkistus(c + Vector3.up * 2.5f, 6f); }
                 return true;
             }
@@ -169,7 +171,7 @@ namespace Matkakirja.Natiivi
             var rb = go.AddComponent<Rigidbody>(); rb.mass = 2f; rb.linearVelocity = ulos * 1.2f; rb.angularVelocity = UnityEngine.Random.insideUnitSphere * 4f;
             yield return new WaitForSeconds(PutoamisS);
             var c = go != null ? go.transform.position : transform.position;
-            SeikkailuAanet.Soita("kivi-kolahdus", c, 1f, 0.7f); SeikkailuVartijat.Aani(c, Tiilet.PutoaaM);
+            SeikkailuAanet.SoitaTaiVara("tiili-putoaa", "kivi-kolahdus", c, 1f, 0.7f); SeikkailuVartijat.Aani(c, Tiilet.PutoaaM);
             if (go != null) Destroy(go, 2f);
         }
 
@@ -215,6 +217,15 @@ namespace Matkakirja.Natiivi
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }
-        void OnDestroy() { if (Aktiivinen == this) Aktiivinen = null; SeikkailuKasittely.Poista("kilpi:arkku-1"); SeikkailuKasittely.Poista("kilpi:arkku-2"); }
+        readonly List<UnityEngine.Object> luodut = new List<UnityEngine.Object>();
+        void VaihdaTiili(int i, GameObject g)
+        {
+            if (i < 0 || i >= tiiliGo.Count || g == null) return;
+            var vanha = tiiliGo[i];
+            if (vanha != null) { g.SetActive(vanha.activeSelf); Destroy(vanha); }
+            g.name = "Tiili:" + i;
+            tiiliGo[i] = g;
+        }
+        void OnDestroy() { foreach (var o in luodut) if (o != null) Destroy(o); if (Aktiivinen == this) Aktiivinen = null; SeikkailuKasittely.Poista("kilpi:arkku-1"); SeikkailuKasittely.Poista("kilpi:arkku-2"); }
     }
 }

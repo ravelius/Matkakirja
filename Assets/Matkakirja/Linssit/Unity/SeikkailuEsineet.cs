@@ -92,7 +92,7 @@ namespace Matkakirja.Natiivi
             if (e?.Go != null) KieppiSakaraan(e);
             koysiKiinni = true;
             p.KasiEle("poiminta");
-            SeikkailuAanet.Soita("lyhty-narina", sakara.Value, 0.6f, 0.8f);
+            SeikkailuAanet.SoitaTaiVara("koysi-kiinnitys", "lyhty-narina", sakara.Value, 0.6f, 0.8f);
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: köysi sakarassa");
             AloitaSeinakiipeily(p);
         }
@@ -163,7 +163,7 @@ namespace Matkakirja.Natiivi
                     {
                         if (LukittuOvi.Avaa(ovi.M.Lukko, ovi.M.Avain, Avaimet, false) == OviTulos.Lukossa) { if (!kolahti) { kolahti = true; AvaaOvi(pl, ovi, false); } return; }
                         kertyma += Mathf.Abs((float)asteet);
-                        if (narahti) { SeikkailuAanet.Soita("luukku-narahdus", ovi.Paikka + Vector3.up, 0.9f); SeikkailuVartijat.Aani(ovi.Paikka, ovi.M.AaniNopeaM > 0 ? ovi.M.AaniNopeaM : 4); }
+                        if (narahti) { SeikkailuAanet.SoitaTaiVara("ovi-narahdus", "luukku-narahdus", ovi.Paikka + Vector3.up, 0.9f); SeikkailuVartijat.Aani(ovi.Paikka, ovi.M.AaniNopeaM > 0 ? ovi.M.AaniNopeaM : 4); }
                         if (kertyma >= 60f) { kertyma = 0f; AvaaOvi(pl, ovi, false); }
                     },
                     Loppui = () => { kertyma = 0f; kolahti = false; },
@@ -194,7 +194,7 @@ namespace Matkakirja.Natiivi
             }
             o.Auki = true; if (o.Go != null) o.Go.SetActive(false);
             SeikkailuAanet.Soita("avain-lukko", c, 0.8f);
-            if (tulos == OviTulos.AukiNarahtaa) { SeikkailuAanet.Soita("luukku-narahdus", c, 0.9f); SeikkailuVartijat.Aani(c, o.M.AaniNopeaM > 0 ? o.M.AaniNopeaM : 4); }
+            if (tulos == OviTulos.AukiNarahtaa) { SeikkailuAanet.SoitaTaiVara("ovi-narahdus", "luukku-narahdus", c, 0.9f); SeikkailuVartijat.Aani(c, o.M.AaniNopeaM > 0 ? o.M.AaniNopeaM : 4); }
             p.KasiEle("poiminta");
             kirjaa?.Invoke($"seikkailu: ovi {o.M.Tunnus} auki ({(tulos == OviTulos.AukiNarahtaa ? "nopeasti, narahti" : "hitaasti, hiljaa")})");
             SeikkailuTallentaja.Aktiivinen?.Tallenna("m: ovi " + o.M.Tunnus);
@@ -610,6 +610,7 @@ namespace Matkakirja.Natiivi
             {
                 // Avainrengas laukkuun (huone 6 vaihe 6), kädet jäävät vapaiksi; muurikäytävän ovi aukeaa sillä (huone 7).
                 e.Go.SetActive(false); Avaimet.Add(e.Id); p.KasiEle("poiminta");
+                SeikkailuAanet.SoitaTaiVara("avainnippu", "hopea-kilahdus", e.Go.transform.position, 0.7f);
                 kirjaa?.Invoke("seikkailu: avainrengas laukkuun");
                 SeikkailuTallentaja.Aktiivinen?.Tallenna("m: avainrengas");
                 return;
@@ -625,6 +626,7 @@ namespace Matkakirja.Natiivi
                 e.Go.transform.localPosition = p.KahvaKiinni ? Vector3.zero : SeikkailuPelaaja.Ensimmainen ? new Vector3(0.02f, -0.05f, 0.05f) : new Vector3(0.03f, -0.1f, 0f);
             }));
             kirjaa?.Invoke($"seikkailu: poimittu {e.Id}");
+            if (e.Id == Koysikieppi) SeikkailuAanet.SoitaTaiVara("koysi-otto", null, e.Go.transform.position, 0.8f);
             if (e.Laji == Laji.Nostettava) Nostettiin?.Invoke(e.Id);
         }
 

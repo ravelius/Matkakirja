@@ -71,6 +71,13 @@ namespace Matkakirja.Natiivi
             if (p.result == UnityWebRequest.Result.Success) { a.Klippi = DownloadHandlerAudioClip.GetContent(p); a.Klippi.name = "Tehoste:" + a.Tunnus; }
         }
 
+        /// <summary>M-osa (aanet-fp-v2): uusi tunnus, jos ladattu, muuten vara (olemassa oleva ääni).</summary>
+        public static void SoitaTaiVara(string tunnus, string vara, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
+        {
+            if (Klippi(tunnus) != null) Soita(tunnus, paikka, voimakkuus);
+            else if (vara != null) Soita(vara, paikka, voimakkuus, savel);
+        }
+
         /// <summary>Kertaääni paikassa (Unity, dioraaman koordinaatit). Puuttuva tai lataamaton tunnus ohitetaan hiljaa.</summary>
         public static void Soita(string tunnus, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
         {
@@ -81,7 +88,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Ladattu klippi tunnuksella tai null (pelaajan askeleet valitsevat pinnan äänitteen).</summary>
-        public static AudioClip Klippi(string tunnus) => Aktiivinen != null && Aktiivinen.aanet.TryGetValue(tunnus, out var a) ? a.Klippi : null;
+        public static AudioClip Klippi(string tunnus) => tunnus != null && Aktiivinen != null && Aktiivinen.aanet.TryGetValue(tunnus, out var a) ? a.Klippi : null;
 
         /// <summary>Silmukka päälle tai pois (sydän, tuuli); paikka päivitetään joka kutsulla.</summary>
         public static void Silmukka(string tunnus, bool paalla, Vector3 paikka, float voimakkuus = 1f, float savel = 1f)
