@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "732fc33e6dc72bbc",
-  "kansio": "dioraama/olavinlinna/blender/732fc33e6dc72bbc/",
+  "hash": "a8dd2a37a0cf50c3",
+  "kansio": "dioraama/olavinlinna/blender/a8dd2a37a0cf50c3/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1130,8 +1130,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "7b475dfbff8085190d78649861a59011bc008e10b50e08f22863b25cfccdc9be",
-      "tavuja": 28716
+      "sha256": "a68ea45d8945a5b9e4707ff354b21d71798930eadc2a83c2d891f00ce4f2bd97",
+      "tavuja": 29065
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -1190,8 +1190,8 @@
     },
     {
       "polku": "kavely/ranta-1499.glb",
-      "sha256": "7040e646c2b62d24d083884836035100170a34dfcdc548b3bce1d16f6ac73015",
-      "tavuja": 908696
+      "sha256": "16a84e46232f524251475eb0104d4b4f6c14004ab6fafb7df8842b0b92757c1b",
+      "tavuja": 1129316
     },
     {
       "polku": "kavely/tyrma-E101-kavely.glb",
@@ -1337,6 +1337,26 @@
       "polku": "kavely/valot/porttikaytava-T102.jpg",
       "sha256": "dc025b0c05e63a1bb19c8395d817a16a8c4779e1151c09d7595e64ecc6b271b1",
       "tavuja": 120728
+    },
+    {
+      "polku": "kavely/valot/ranta-1499-4x4.astcm",
+      "sha256": "420c25f60a1b6b438af7ce46ad0fb81dac884b6d3870fcf33c489fba510df41b",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/ranta-1499-512-4x4.astcm",
+      "sha256": "32007534f1cc29bbb58564645e36f4c0aff0297dbe4430225f58c8d7ff8ab825",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/ranta-1499-512.jpg",
+      "sha256": "159e4a3b35b0f4e61ccaf593bbf4d3b3d59dc1de92ac50328c376a097f071732",
+      "tavuja": 147106
+    },
+    {
+      "polku": "kavely/valot/ranta-1499.jpg",
+      "sha256": "1ee1189ebbbd4f3d52320ee256b412df2876c14e8594bfe34bd0afaa5dd56133",
+      "tavuja": 560159
     },
     {
       "polku": "kavely/valot/tyrma-E101-4x4.astcm",
