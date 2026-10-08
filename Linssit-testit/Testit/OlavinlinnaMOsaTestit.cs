@@ -136,6 +136,11 @@ namespace Matkakirja.Linssit.Testit
                 var tila = Tila(k);
                 var koe = tila.Kopioi(); var tarkistus = koe.Tarkistus; double t0 = koe.T;
                 koe.Kiinnijaanti();
+                // Muuriportailla (70) tarkistuspiste on ampuma-aukkokomero (piiloon meno ilman epäilyä, Siirtoseppä juna 167).
+                var komero = MVihjeet.Paikka(Huonesimulaatio.Data, "piilo:muuriporras-2-komero").Value;
+                double komeroon = Math.Sqrt((tarkistus.X - komero.X) * (tarkistus.X - komero.X) + (tarkistus.Z - komero.Z) * (tarkistus.Z - komero.Z));
+                Console.WriteLine($"      kiinni {k + 1}: tarkistus ({tarkistus.X:F1}, {tarkistus.Y:F1}, {tarkistus.Z:F1}), komeroon {komeroon:F1} m");
+                if (k == 69) Oleta.Tosi(komeroon <= 2 && Math.Abs(tarkistus.Y - komero.Y) <= 2, $"kiinni 70: tarkistuspiste komerossa ({komeroon:F1} m)");
                 Oleta.Tosi(koe.PX == tarkistus.X && koe.PZ == tarkistus.Z && koe.Seuraava <= k + 1, $"kiinni {k + 1}: tarkistuspisteeseen (seuraava {koe.Seuraava + 1})");
                 foreach (var h in koe.Hahmot) if (h.Aktiivinen && !h.Aivot.Torkkuu) Oleta.Tosi(h.Aivot.Valppaus > 59, $"{h.Nimi} valppaana");
                 var tulos = ThiefAjuri.Aja(koe, koe.Seuraava, KiipeilyAlku, budjetti: 600); var loppu = tulos.Loppu;
@@ -143,6 +148,22 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      kiinni pisteessä {k + 1} → tarkistus pisteeseen {koe.Seuraava + 1}: {(loppu != null ? $"loppuun {loppu.T - t0:F0} s, kiinni {loppu.Kiinni}" : "JUMI")}");
                 Oleta.Tosi(loppu != null && loppu.Kiinni == 1, $"kiinni {k + 1}: tarkistuspisteestä kiipeilyn alkuun ilman uutta kiinnijääntiä");
             }
+        }
+
+        /// <summary>Piiloon meno tekee tarkistuspisteen (SeikkailuVartijat, Siirtoseppä juna 167): muuriportailla (69, tarkistus vielä
+        /// Tott-kammiossa 66) ampuma-aukkokomeroon samassa osassa kukaan ei epäile → tarkistuspiste komeroon, kiinni → komeroon.</summary>
+        [Testi] static void PiiloonMenoTekeeTarkistuspisteen()
+        {
+            var w = Tila(68); var d = Huonesimulaatio.Data;
+            var komero = MVihjeet.Paikka(d, "piilo:muuriporras-2-komero").Value;
+            string osa = Askelaani.Osa(d, w.PX, w.PY, w.PZ); var ennen = w.Tarkistus;
+            Oleta.Tosi(osa == Askelaani.Osa(d, komero.X, komero.Y, komero.Z), $"komero samassa osassa ({osa})");
+            for (int i = 0; i < 600 && !w.Piilossa(); i++) w.Askel(komero, true);
+            Oleta.Tosi(w.Piilossa() && Askelaani.Osa(d, w.PX, w.PY, w.PZ) == osa, "piilossa komerossa, ei osan vaihtoa");
+            double siirto = Math.Sqrt((w.Tarkistus.X - ennen.X) * (w.Tarkistus.X - ennen.X) + (w.Tarkistus.Y - ennen.Y) * (w.Tarkistus.Y - ennen.Y) + (w.Tarkistus.Z - ennen.Z) * (w.Tarkistus.Z - ennen.Z));
+            Oleta.Tosi(siirto > Huonesimulaatio.TarkistusPiiloM && w.Tarkistus.X == w.PX && w.Tarkistus.Z == w.PZ, $"tarkistuspiste komeroon ({siirto:F1} m)");
+            int seuraava = w.Seuraava; w.Kiinnijaanti();
+            Oleta.Tosi(w.Piilossa() && w.Seuraava == seuraava, $"kiinni → komeroon (seuraava {w.Seuraava + 1})");
         }
 
         /// <summary>Anteeksianto (pelattavuusmalli 4.2): 2. kiinnijäänti samassa osassa helpottaa kaikkia (näkö −15 %, raja 0,4), 3. antaa Pulun
