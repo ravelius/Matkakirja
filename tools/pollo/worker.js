@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { kuluKentat, valitseMalli, kuluRivi } from './kulut.js';
 import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
 import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
 import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
@@ -1072,11 +1073,23 @@ export function pulunKehote({
       + `\n\n${kehysOhje('aloitus')}`
       + (konteksti ? `\n\nPELAAJAN TILANNE KESKUSTELUN ALKAESSA\n${konteksti}` : '');
   }
-  return `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`
-    + `\n\n${PAIKKAKEHOTE}`
-    // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
-    + (!natiivi || puhetagit ? `\n\n${PUHETAGIKEHOTE}` : '')
-    + `\n\n${kehysOhje(kehysLaji(kehys))}`;
+  const { lohkot, loppu } = pulunKehoteOsat({ natiivi, puhetagit, kehys });
+  return [...lohkot, loppu].join('\n\n');
+}
+
+/*
+ * PULUN KEHOTE VÄLIMUISTIN LOHKOINA (kulusuunnitelma K3, mitattu 8.10.2026): kehyslaji (3) ja äänitagit (2) olivat samassa
+ * välimuistilohkossa kuin 14 k:n pohja, joten jokainen yhdistelmä oli oma merkintänsä ja lajin vaihto (uusi → jatko)
+ * kirjoitti koko kehotteen uudelleen (cw 14 438, cr 0). Nyt pohja ja äänitagit ovat välimuistilohkoja (etuliite pysyy
+ * samana) ja kehyslaji tulee välimuistirajan jälkeen — yhä viimeisenä ohjeena ennen kirjoittamista.
+ */
+export function pulunKehoteOsat({ natiivi = false, puhetagit = false, kehys = null } = {}) {
+  return {
+    lohkot: [`${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}\n\n${PAIKKAKEHOTE}`,
+      // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
+      ...(!natiivi || puhetagit ? [PUHETAGIKEHOTE] : [])],
+    loppu: kehysOhje(kehysLaji(kehys)),
+  };
 }
 
 /*
@@ -1831,9 +1844,10 @@ async function hoidaRealtime(pyynto, env, kors, runko) {
 
 /** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
 async function kutsuRajapintaa(env, {
-  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null, lisaohje = null, malliOhitus = null,
+  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null, lisaohje = null, malliOhitus = null, jaettu = false,
 }) {
-  const malli = malliOhitus || env.POLLO_MALLI || MALLI_OLETUS;
+  // Testiliikenteelle testimalli, paitsi jaetuille välimuisteille (kulut.js, kulusuunnitelma K1).
+  const malli = valitseMalli(env, { malliOhitus, jaettu, oletus: MALLI_OLETUS });
   return fetch(RAJAPINTA, {
     method: 'POST',
     headers: {
@@ -1857,8 +1871,9 @@ async function kutsuRajapintaa(env, {
        * JÄLKEEN: välimuistissa oleva etuliite pysyy tavu tavulta samana
        * kirjoitetulle ja luettavalle vastaukselle.
        */
+      // Taulukko = useampi välimuistilohko peräkkäin (Pulun pohja + äänitagit, K3); jokainen lohko on välimuistiraja.
       system: [
-        { type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } },
+        ...(Array.isArray(jarjestelma) ? jarjestelma : [jarjestelma]).map((text) => ({ type: 'text', text, cache_control: { type: 'ephemeral' } })),
         ...(lisaohje ? [{ type: 'text', text: lisaohje }] : []),
       ],
       messages: viestit,
@@ -1879,10 +1894,10 @@ async function kutsuRajapintaa(env, {
  * tyhjanSyy).
  */
 async function kysyMallitiedot(env, {
-  jarjestelma, viestit, maxTokens, lampotila = null, lisaohje = null, malliOhitus = null,
+  jarjestelma, viestit, maxTokens, lampotila = null, lisaohje = null, malliOhitus = null, jaettu = false,
 }) {
   const vastaus = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, lampotila, lisaohje, malliOhitus,
+    jarjestelma, viestit, maxTokens, lampotila, lisaohje, malliOhitus, jaettu,
   });
   if (!vastaus.ok) {
     /*
@@ -1896,6 +1911,7 @@ async function kysyMallitiedot(env, {
     throw virhe;
   }
   const data = await vastaus.json();
+  console.log(kuluRivi(env, data?.model ?? valitseMalli(env, { malliOhitus, jaettu, oletus: MALLI_OLETUS }), data?.usage));
   return {
     teksti: (data?.content ?? [])
       .filter((lohko) => lohko?.type === 'text')
@@ -2006,8 +2022,10 @@ function striimiPala(rivi) {
       // ei vapaata tekstiä — se saa mennä lokiin.
       return { virhe: String(tieto?.error?.type ?? 'tuntematon') };
     }
-    if (tieto?.type === 'message_delta' && tieto?.delta?.stop_reason) {
-      return { stop: String(tieto.delta.stop_reason) };
+    // Kululoki (K1): syötteen käyttö message_startissa, tulosteen message_deltassa.
+    if (tieto?.type === 'message_start') return { kaytto: tieto?.message?.usage ?? {}, malli: tieto?.message?.model ?? null };
+    if (tieto?.type === 'message_delta') {
+      return { ...(tieto?.delta?.stop_reason ? { stop: String(tieto.delta.stop_reason) } : {}), kaytto: tieto?.usage ?? {} };
     }
   } catch {
     /* rikkinäinen rivi ohitetaan: virta jatkuu seuraavasta */
@@ -2091,6 +2109,8 @@ async function striimaaVastaus(env, kors, {
     // Virran omat havainnot: virhetapahtuma ja mallin lopetussyy.
     let virtaVirhe = null;
     let stop = null;
+    const kaytto = {};
+    let striiminMalli = null;
     try {
       for (;;) {
         const { value, done } = await lukija.read();
@@ -2110,9 +2130,12 @@ async function striimaaVastaus(env, kors, {
           } else if (pala?.stop) {
             stop = pala.stop;
           }
+          if (pala?.kaytto) Object.assign(kaytto, Object.fromEntries(Object.entries(pala.kaytto).filter(([, v]) => v != null)));
+          if (pala?.malli) striiminMalli = pala.malli;
           i = jono.indexOf('\n');
         }
       }
+      console.log(kuluRivi(env, striiminMalli ?? valitseMalli(env, { oletus: MALLI_OLETUS }), kaytto));
       // Sanarajaan pysähtynyt vastaus saa yhden jatkon samaan kuplaan.
       let kesken = stop === 'max_tokens';
       if (kesken) {
@@ -3026,7 +3049,7 @@ async function maailmanSuosikit(env) {
   if (suosikitKaynnissa) return suosikitKaynnissa;
   suosikitKaynnissa = (async () => {
     const v = await kysyMallitiedot(env, { jarjestelma: MAAILMAN_SUOSIKIT_KEHOTE, viestit: [{ role: 'user', content: 'Koko maailma.' }],
-      maxTokens: 4000, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+      maxTokens: 4000, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS, jaettu: true });
     const ehdokkaat = jasennaKohteet(v.teksti, 70);
     const kohteet = (await kohteetErana(fetch, ehdokkaat)).slice(0, MAAILMAN_SUOSIKKEJA).map((k) => ({
       id: k.id, nimi: k.nimi, koukku: k.koukku, kaupunki: k.kaupunki, iso: k.iso, lat: k.lat, lon: k.lon, alarivi: k.alarivi, kuva: k.kuva,
@@ -3122,7 +3145,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
     const ehdokkaat = jasennaKohteet((await kysyMallitiedot(env, {
       jarjestelma: KOHTEET_KEHOTE,
       viestit: [{ role: 'user', content: kohteidenViesti({ kaupunki, eiNaita: (eilinen?.kohteet ?? []).map((k) => k.nimi) }) }],
-      maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
+      maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS, jaettu: true,
     })).teksti);
     // Erähaku (6.10.): yksittäiset haut per kohde (2–6 alipyyntöä kukin) ylittivät Cloudflaren 50 alipyynnön rajan.
     const kohteet = (await kohteetErana(fetch, ehdokkaat))
@@ -3212,7 +3235,7 @@ async function oppaanKysymykset(env, { paikka, nimi, kaupunki }) {
   if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi */ } }
   try {
     const v = await kysyMallitiedot(env, { jarjestelma: KYSYMYKSET_KEHOTE, viestit: [{ role: 'user', content: kysymystenViesti({ nimi, kaupunki }) }],
-      maxTokens: 300, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+      maxTokens: 300, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS, jaettu: true });
     const kysymykset = poimiKysymykset(v.teksti);
     if (kysymykset.length >= 5) await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kysymykset), KESKUSTELU_TTL_S);
     return kysymykset;
@@ -3269,7 +3292,7 @@ async function oppaanLiikuLista(env, kaupunki, viite) {
     for (let yritys = 0; yritys < 2; yritys += 1) {
       try {
         const v = await kysyMallitiedot(env, { jarjestelma: LIIKU_KEHOTE, viestit: [{ role: 'user', content: `Kaupunki: ${kaupunki}.` }],
-          maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+          maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS, jaettu: true });
         const ehdokkaat = jasennaLiiku(v.teksti);
         // Erähaku (6.10., Ateena 502 14.32): yksittäiset haut ylittivät Cloudflaren 50 alipyynnön rajan; kauempana kuin
         // kaupungin säde oleva samanniminen paikka pois.
@@ -3691,6 +3714,9 @@ export default {
     // Kokeilukohteet vain kehityskäännöksille (x-matkakirja-kokeilu: giza; Päätoimittaja 7.10.).
     const kokeilu = kokeilut(pyynto.headers.get('x-matkakirja-kokeilu'));
     if (kokeilu.length) env = { ...env, OPAS_KOKEILU: kokeilu };
+    // Kulusuunnitelma K1 (8.10.): testi-/kehitysliikenteen luokka ja testimalli, reitti kululokiin (kulut.js).
+    env = { ...env, ...kuluKentat(env, { ua: pyynto.headers.get('user-agent'), testi: pyynto.headers.has(TESTI_OTSAKE),
+      testitunnus: pyynto.headers.has(TESTITUNNUS_OTSAKE), reitti: new URL(pyynto.url).pathname }) };
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -3918,11 +3944,13 @@ export default {
        * pelaajan kysymys pysyy pelaajan kysymyksenä, ja ohje pysyy
        * palvelimen omistamana (sama periaate kuin muullakin kehotteella).
        */
-      const kehote = pulunKehote({
+      // Pohja ja äänitagit välimuistilohkoina, kehyslaji rajan jälkeen (K3; pulunKehoteOsat).
+      const osat = pulunKehoteOsat({
         natiivi, puhetagit: runko?.puhetagit === 1, kehys: runko?.kehys,
       });
+      const kehote = osat.lohkot;
       // Ääneen luettava vastaus alkaa lyhyellä virkkeellä (ks. LUETTAVAN_ALKU).
-      const lisaohje = runko?.luetaan === 1 ? LUETTAVAN_ALKU : null;
+      const lisaohje = [osat.loppu, runko?.luetaan === 1 ? LUETTAVAN_ALKU : null].filter(Boolean).join('\n\n');
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
        * varalle: jos asiakas ei osaa lukea SSE:tä tai virta ei aukea,
