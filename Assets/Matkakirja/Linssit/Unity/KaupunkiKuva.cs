@@ -148,6 +148,8 @@ namespace Matkakirja.Natiivi
         // (jälkikäsittely päälle; overlayt KaupunkiKoosteessa, joten pinoa ei ole); muuten MSAA Msaa× kuten ennen. Muuttui (lämpö,
         // pakotus) vaihtaa kesken näkymän; kori, sää ja kortti siirtyvät koosteen ja pinon välillä omalla tarkistuksellaan.
         static Camera kameraNyt;
+        /// <summary>Komento `opas ajallinen`: reunanpehmennys heti kesken näkymän (overlayt vaihtavat tilaa omalla tarkistuksellaan).</summary>
+        public static void PaivitaReunat() => AsetaReunat();
         static void AsetaReunat()
         {
             var kamera = kameraNyt;

@@ -14,8 +14,13 @@ namespace Matkakirja.Linssit
     public static class KaupunkiKooste
     {
         public const int Kori = 0, Saa = 1, Kortti = 2;
-        /// <summary>Käytetäänkö koostetta pinon sijaan (Natiivisepän laatutaso; kuumana pois).</summary>
-        public static bool Kaytossa => Laatutaso.Ajallinen;
+        /// <summary>
+        /// Käytetäänkö koostetta pinon sijaan: Natiivisepän laatutaso (kuumana pois) JA kaupunkinäkymän kytkin. PT 8.10. 23.4x: junassa 169
+        /// OLETUS POIS (asetukset.json "kaupunki.Ajallinen" 0); kuvapari junan 169 käännöksestä, päälle seuraavassa junassa.
+        /// Komento `opas ajallinen paalle|pois` ohittaa (Pakko).
+        /// </summary>
+        public static bool Kaytossa => Laatutaso.Ajallinen && (Pakko ?? Matkakirja.Peli.Asetus.Luku("kaupunki.Ajallinen", 0) != 0);
+        public static bool? Pakko;
         /// <summary>Suoran alfan kuva UI:lle; null, kun yksikään koosteen kamera ei piirrä.</summary>
         public static RenderTexture Kuva { get; private set; }
 
