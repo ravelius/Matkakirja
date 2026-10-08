@@ -198,7 +198,7 @@ namespace Matkakirja.Natiivi
         {
             var c = Leike(nimi);
             if (c == null || aani == null) return;
-            aani.PlayOneShot(c, Voimakkuus * taso * TehosteKerroin);
+            aani.PlayOneShot(c, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kori(Voimakkuus, taso, TehosteKerroin, Asetukset.Taso(Voima.Tehosteet), OpasSovitin.OpasAaniSoi));   // mikserin Tehosteet ja väistö kertojan alla (8.10.)
             Debug.Log($"MATKAKIRJA kaupunki: kori ääni {nimi} ({AaniSarja}, {taso:F2})");
         }
 
