@@ -6,6 +6,13 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 19.2x (JATKA TÄSTÄ)
+
+KUITTAUSTA ODOTTAA junaan 167: natiivi-ui/olavinlinna-kortti 5c991410e (eaedca9c5:n päällä, korvaa sen): Ikonit.Viiva["linna"],
+linssin havainnekuva ja Pelit-rivin kuva R2 julisteet/olavinlinna-kortti/20261008/{esittely,peli}.jpg — vientipaketti
+_valmiit/olavinlinna-kortti-vienti-20261008 Julkaisijalla (tarkista 200 ?t=). Kuvaparit docs/raportit/kaappaukset/olavinlinna-kortti-20261008/.
+Juna 168: pohjavahti-168c b62e2569d (eaedca9c5-linjasta erillinen haara, ⊇ 7e5f4f527). Codexin yökuva pelille → Sisältökirjuri, juna 168.
+
 ## TILA 8.10. klo 18.5x (JATKA TÄSTÄ)
 
 JUNA 167 (kuitattu, tyojonot.md): natiivi-ui/pallo-kerrokset-167 eaedca9c5 = kaikki NUI-erät yhdessä (⊇ 3f1d9623d tappi+pelit-alarivi
