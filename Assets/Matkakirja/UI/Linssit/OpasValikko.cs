@@ -1543,6 +1543,8 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Lahteet:
                     Takaisin("Lähteet", Nakyma.Paa);
                     Komento("Kartta- ja maastoaineistot", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: kartta-aineistot"); });
+                    // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
+                    Kirjasimet.Aseta(Rakenne.Teksti(SaaLahde, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
@@ -1837,6 +1839,8 @@ namespace Matkakirja.Natiivi
             (PalloSaa.Sumu, "Sumu"), (PalloSaa.Lumi, "Lumi"), (PalloSaa.Ukkonen, "Ukkonen"),
         };
         const string SaatilaAvain = "matkakirja-pallo-saatila";
+        /// <summary>Säätietojen lähderivi (CC BY 4.0 -ehto; Pelikoodarin worker /opas/saa).</summary>
+        const string SaaLahde = "Säätiedot: MET Norway (Norjan ilmatieteen laitos), CC BY 4.0";
 
         /// <summary>LS1:n silta (junat 165–166): KaupunkiKuva.Valinta "paiva" | "yo" = voimassa oleva Saatila.Aika.</summary>
         static string AikaValinta { get => KaupunkiKuva.Valinta ?? "paiva"; set => KaupunkiKuva.Valinta = value; }
