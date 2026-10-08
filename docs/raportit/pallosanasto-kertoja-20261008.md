@@ -1,4 +1,4 @@
-# Pallosanasto kertojalle (luonnos 8.10.2026, Pelikoodari)
+# Pallosanasto kertojalle (8.10.2026, Pelikoodari; Päätoimittaja kuitannut korjauksin)
 
 Omistaja 8.10. 08.3x: kertoja voisi viitata kuumailmapalloon ja sen liikkeisiin oikealla sanastolla, esimerkiksi
 ”lisätäänpä vauhtia ja nostetaan hieman korkeutta”. Termejä on hauska kuulla aina välillä. Päätoimittajan tilaus:
@@ -15,8 +15,8 @@ pelaajalle sinä-muodossa ja lennosta me-muodossa (”nostetaan”, ”laskeudum
 | **poltin**, polttimen puhallus, liekki | Kaasupoltin korin yläpuolella lämmittää kuvun ilmaa | Nousun alussa: ”annetaan poltinta”, ”poltin puhaltaa” |
 | **kupu** | Pallon kangasosa, jossa lämmin ilma on | Nousu ja lähtö: ”kupu täyttyy lämpimällä ilmalla” |
 | **kori** | Punottu kori, jossa seisotaan | Liikkeen tuntu: ”kori keinahtaa”, ”pidä kiinni korin reunasta” |
-| **köydet** | Kuvun ja korin väliset köydet sekä kiinnitysköydet | Lähtö: ”köydet irti” |
-| **yläventtiili** | Kuvun huipun venttiili, josta lämmintä ilmaa päästetään ulos | Laskeutuminen: ”avataan yläventtiiliä hetkeksi”. (Lajin oma sana on *laskuvarjoventtiili*. Se tarkistetaan ennen äänitystä, ja siihen asti käytetään kuvailevaa *yläventtiiliä*.) |
+| **köydet** | Kuvun ja korin väliset köydet sekä kiinnitysköydet | Liikkeen tuntu: ”köydet kiristyvät”. Köydet irti vain, jos lähdetään maasta (kierros alkaa jo ilmasta). |
+| **yläventtiili** | Kuvun huipun venttiili, josta lämmintä ilmaa päästetään ulos | Laskeutuminen: ”avataan yläventtiiliä hetkeksi”. Päätoimittaja 8.10.: yläventtiili on pelaajalle ymmärrettävämpi kuin lajin oma *laskuvarjoventtiili*. |
 | **noste**, lämmin ilma | Lämmin ilma on kevyempää kuin ympäröivä ilma | Selitys kerran kierroksella: ”lämmin ilma nostaa meitä” |
 | **tuulikerros**, ylempi tuuli, ilmavirta | Tuulen suunta ja nopeus vaihtelevat korkeuden mukaan | Vauhti ja kääntyminen (ks. alla) |
 | **ajelehtiminen**, ajelehtia | Pallo kulkee tuulen mukana | Rauhalliset siirtymät: ”annetaan pallon ajelehtia” |
@@ -34,9 +34,9 @@ ylitystä”, eikä kertoja selitä sitä.
 ## 2. Siltalauseet (yksi virke, sinä-puhuttelu, ei toistoa kierroksella)
 
 **Lähtö** (`pallo-lahto`, kierroksen ensimmäinen siirtymä avauksen jälkeen)
-1. Pidä kiinni korin reunasta, poltin puhaltaa ja köydet irtoavat.
+1. Pidä kiinni korin reunasta, poltin puhaltaa ja lähdemme liikkeelle.
 2. Kuuletko polttimen huminan, kun kupu täyttyy lämpimällä ilmalla?
-3. Köydet irti, ja lähdetään tuulen mukaan.
+3. Annetaan tuulen viedä, seuraava paikka odottaa.
 4. Lämmin ilma nostaa meidät hiljaa liikkeelle, katso kun katot jäävät alle.
 
 **Nousu ja vauhti** (`pallo-nousu`, pitkä siirtymä tai nouseva lento)
