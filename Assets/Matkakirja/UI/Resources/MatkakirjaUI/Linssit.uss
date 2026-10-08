@@ -71,7 +71,7 @@
 }
 
 .mk-linssiSulje .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 3.85px; /* web 0.5px */
 }
 
@@ -118,7 +118,7 @@
 
 .mk-linssivalitsin__tyhja {
     padding: 10px 8px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink-soft);
     white-space: normal;
 }
@@ -182,14 +182,14 @@
 }
 
 .mk-linssirivi__tila {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 9.09px; /* web 1px */
     color: var(--accent-dark);
 }
 
 .mk-linssirivi__lyhyt {
     margin-top: 2px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink-85);
 }
@@ -339,7 +339,7 @@
 }
 
 .mk-astroavaus__nimi {
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 31.76px; /* web 5.4px */
     padding-left: 5.4px;
     color: var(--tk-erikois-astro-valkoinen);
@@ -488,7 +488,7 @@
 }
 
 .mk-astrokuva__selite.mk-kiinni .mk-astrokuva__otsikko {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -506,7 +506,7 @@
 }
 
 .mk-astrokuva__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-kuulto-lasi-avaruus-muste-92);
 }
@@ -534,7 +534,7 @@
 }
 
 .mk-astrokuva__vakanen .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     color: var(--tk-lasi-avaruus-muste);
 }
@@ -682,7 +682,7 @@
 }
 
 .mk-vertailulappu__nimi {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink);
 }
 
@@ -738,7 +738,7 @@
 }
 
 .mk-vertailuarkki__muuta .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-vertailuarkki__vieritys {
@@ -779,7 +779,7 @@
 
 .mk-vertailukortti__nimi {
     flex-shrink: 1;
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink);
 }
@@ -794,7 +794,7 @@
 }
 
 .mk-vertailukortti__nimio {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 9.09px; /* web 1px */
     color: var(--map-ink-soft);
 }
@@ -805,7 +805,7 @@
 }
 
 .mk-vertailukortti__tyhja {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink-soft);
 }
 
@@ -843,7 +843,7 @@
 }
 
 .mk-maakyltti__nimi {
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 10px; /* web 0.1em */
     color: var(--map-ink-92);
 }
@@ -994,7 +994,7 @@
 }
 
 .mk-aikajana-nappi--teksti .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 3.85px; /* web 0.5px */
 }
 
@@ -1062,7 +1062,7 @@
 }
 
 .mk-aikajana-nappi .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     color: var(--tk-tumma-muste);
 }
@@ -1108,7 +1108,7 @@
 
 .mk-linssivalikko__kohta .mk-nappi__teksti,
 .mk-linssivalikko__nimi {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 3.85px; /* web 0.5px */
     -unity-text-align: middle-left;
     color: var(--accent);
@@ -1231,7 +1231,7 @@
 
 .mk-aikajana-paneeli__alarivi {
     margin-top: 2px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-tumma-muste-pehmea);
 }
@@ -1307,7 +1307,7 @@
 
 /* Web @media (max-width: 600px): avausteksti 1,25rem puhelimessa. */
 .mk-aikajana-kertomus--kapea.mk-keskella .mk-aikajana-kertomus__teksti {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
 }
 
 /* Välinäytös (web .aikajana-valinaytos-teksti): ei korttia, teksti kartan päällä varjolla; vaakanäytöllä
@@ -1331,7 +1331,7 @@
 
 .mk-aikajana-valinaytos__otsikko {
     margin-bottom: 11px;
-    font-size: 19px;
+    font-size: 19px; /* fonttipoikkeus: 19 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-pergamentti);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
@@ -1416,7 +1416,7 @@
 }
 
 .mk-aikajana-laatikko__otsikko {
-    font-size: 22px;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 4.55px; /* web 1px */
     color: var(--map-ink);
 }
@@ -1552,7 +1552,7 @@
 
 /* 1,06rem small-caps (C# Kapiteelit), 0,17 em (UITK 17). */
 .mk-aikajana-avausnappi .mk-nappi__teksti {
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 100px; /* web 17px */
     color: var(--paper);
 }
@@ -1646,7 +1646,7 @@
     border-color: var(--tk-kuulto-lasi-avaruus-korostus-22);
     border-radius: 12px 12px 4px 12px;
     background-color: var(--tk-erikois-astro-1-a90);
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -1678,7 +1678,7 @@
     flex-grow: 1;
     flex-shrink: 1;
     margin: 0 6px 0 0;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-minipuluKortti__kentta > .unity-base-text-field__input {
@@ -1763,7 +1763,7 @@
 .mk-astroTaulu__otsikko {
     margin: 0;
     padding: 0;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-kuulto-lasi-avaruus-muste-60);
     -unity-text-align: middle-left;
 }
@@ -1813,7 +1813,7 @@
 .mk-astroTaulu__riviOtsikko {
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-kuulto-lasi-avaruus-muste-92);
     -unity-text-align: middle-left;
 }
@@ -1848,7 +1848,7 @@
 .mk-astroTaulu__linkkiTeksti {
     margin: 0;
     padding: 0;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-kuulto-lasi-avaruus-muste-60);
 }
 
@@ -2237,7 +2237,7 @@
     flex-shrink: 1;
     min-width: 0;
     margin-right: 8px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2325,7 +2325,7 @@
 }
 
 .mk-aikajana-lue .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-tumma-muste);
 }
 
@@ -2386,7 +2386,7 @@
 }
 
 .mk-tiedeliite__nimio {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 20px; /* web 3px */
 }
 
@@ -2456,7 +2456,7 @@
 
 .mk-tiedeliite__sisallysnimi {
     flex-shrink: 1;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -2615,7 +2615,7 @@
 }
 
 .mk-tiedeliite__navinappi .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-tiedeliite__navinappi:disabled {
@@ -2819,7 +2819,7 @@
 }
 
 .mk-ihmisnosto__sulje .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     color: var(--tk-tumma-muste);
 }
@@ -2892,14 +2892,14 @@
 
 .mk-ihmisnosto__kuvateksti {
     margin-top: 3px;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--muted);
 }
 
 .mk-ihmisnosto__lahde {
     margin-bottom: 8px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--map-ink-soft);
 }
@@ -2978,7 +2978,7 @@
 }
 
 .mk-ihmisnosto__kysymys .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-left;
     color: var(--paper-dark);
@@ -3188,7 +3188,7 @@
 }
 
 .mk-radiomerkki__nimi--soi {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-erikois-radio-2);
 }
 
@@ -3320,7 +3320,7 @@
 }
 
 .mk-valikkonappi--toiminto .mk-valikkonappi__nimi {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 /* NAVIGOINTI: kuvake + nimi + › (avaa näkymän). */
@@ -3350,20 +3350,20 @@
 }
 
 .mk-valikkonappi--rivi > .mk-valikkonappi__nimi {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-selite__sulje.mk-linssivalitsin__takaisin {
     width: auto;
     padding: 0 6px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* Valikon linssiosan väliotsikko viivan alla (pelin rivit yläpuolella). */
 /* Osioiden otsikot kaikissa valikkonäkymissä: vasen reuna, pienet kapiteelit (versaali pienellä ja harvennuksella). */
 .mk-linssivalitsin__valiotsikko {
     margin: 4px 2px 8px 2px;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12px; /* web 0.12em (natiivi ensin, em/100) */
     color: var(--tk-kuulto-overlay-card-80);
     -unity-text-align: middle-left;
@@ -3374,7 +3374,7 @@
    kerman täyttö #f3e9d2 ja tumma ääriviiva, hämärän kartan päällä. Webissä vastinetta ei ole (▶-napit). */
 .mk-radio-mastonimi {
     position: absolute;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 6.67px; /* web 1px */
     color: var(--tk-tumma-muste);
     -unity-text-outline-width: 0.8px;
@@ -3399,7 +3399,7 @@
     border-color: var(--tk-kuulto-tumma-muste-18);
     background-color: var(--tk-erikois-astro-2-a72);
     color: var(--tk-tumma-muste);
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
 }
 
@@ -3461,7 +3461,7 @@
 .mk-vuosi__valinta .unity-base-popup-field__text {
     flex-shrink: 1;
     min-width: 0;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
     color: var(--tk-tumma-muste);
     overflow: hidden;
@@ -3481,7 +3481,7 @@
 .mk-vuosi__lahde {
     margin: 0;
     padding: 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 0;
     opacity: 0.6;
     color: var(--tk-tumma-muste);
@@ -3612,7 +3612,7 @@
 }
 
 .mk-isskyyti__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     flex-shrink: 1;
     overflow: hidden;
@@ -3638,7 +3638,7 @@
 }
 
 .mk-isskyyti__live {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-font-style: bold;
     white-space: nowrap;
     margin-right: 5px;
@@ -3860,7 +3860,7 @@
 }
 
 .mk-issohjaus__paa {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-kuulto-lasi-avaruus-muste-65);
 }
 
@@ -4004,7 +4004,7 @@
 
 .mk-linssivalitsin__vakanen {
     margin-left: auto;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--accent-dark);
 }
 
@@ -4042,7 +4042,7 @@
 
 .mk-linssivalitsin__aarreluku {
     margin-right: 5.6px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--accent-dark);
 }
 
@@ -4069,7 +4069,7 @@
     -unity-text-align: middle-center;
     min-height: 44px;
     margin: 8px 0 0 0;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     border-radius: var(--tk-kulma-keski);
     color: var(--tk-paperi-muste);
     background-color: var(--tk-kuulto-accent-90);
@@ -4102,14 +4102,14 @@
 }
 
 .mk-linssivalitsin__esiotsikko {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
 
 .mk-linssivalitsin__esiteksti {
     margin-top: 4px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-lasi-pinta-peitto);
 }

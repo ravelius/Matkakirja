@@ -93,7 +93,7 @@
 }
 
 .mk-kupla__kappale {
-    font-size: 14.7px;
+    font-size: 14.7px; /* fonttipoikkeus: 14.7 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     margin-bottom: 4px;
 }
@@ -222,7 +222,7 @@
 
 .mk-pulukuva__teksti {
     margin-top: 8px;
-    font-size: 13.1px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--raja-muste);
 }
@@ -237,7 +237,7 @@
     border-radius: var(--tk-kulma-keski);
     background-color: var(--lapinakyva);
     color: var(--tk-paperi-korostus);
-    font-size: 13.1px;
+    font-size: var(--tk-koko-apuri);
 }
 
 .mk-pulukuva__nappi:hover,
@@ -331,7 +331,7 @@
 }
 
 .mk-matkakirja--puhelin .mk-matkakirja__tunnelma {
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-matkakirja__teksti {
@@ -350,7 +350,7 @@
 
 /* Tavallinen paikkarivi (web .fact-place): kaupunki tai "Matkalla — X", ei kursiivia. */
 .mk-matkakirja__tunnelma.mk-matkakirja__tunnelma--paikka {
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-font-style: bold;
     letter-spacing: 3.91px; /* web 0.5px */
     margin: 0 0 4px 0;
@@ -365,7 +365,7 @@
 }
 
 .mk-matkakirja__lahdeotsikko {
-    font-size: 10.9px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 11.93px; /* web 1.3px */
     color: var(--muted);
     opacity: 0.75;
@@ -500,7 +500,7 @@
 .mk-matkakirja--pieni .mk-matkakirja__lyhyt {
     display: flex;
     flex-grow: 1;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     min-height: 19.2px;
     letter-spacing: 2px; /* web h2 0.02em */
     -unity-text-align: middle-left;
@@ -511,7 +511,7 @@
 }
 
 .mk-matkakirja--pieni.mk-matkakirja--puhelin .mk-matkakirja__lyhyt {
-    font-size: 11.2px;
+    font-size: var(--tk-koko-kapiteeli);
     min-height: 16.8px;
 }
 
@@ -642,7 +642,7 @@
 .mk-suurennos__teksti {
     max-width: 520px;
     margin-top: 12px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--ink-light);
     white-space: normal;
     -unity-text-align: middle-center;
@@ -650,7 +650,7 @@
 
 .mk-suurennos__lahde {
     margin-top: 6px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--muted);
     -unity-text-align: middle-center;
 }
@@ -760,7 +760,7 @@
 }
 
 .mk-chat__livia {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* Löydös 91 (web .pollo-kayttaja): koko levyinen lohko, --pollo-paperi-2, 8 px, Kone 0,85rem. */
@@ -782,7 +782,7 @@
 .mk-chat__paikkarivi {
     -unity-font-style: italic;
     color: var(--tk-kuulto-paperi-muste-60);
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-chat__sirut {
@@ -816,7 +816,7 @@
 }
 
 .mk-chat__siru .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -872,7 +872,7 @@
 }
 
 .mk-chat__palaa .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* --- saapumistraileri (webin css/saapumistraileri.css) ------------------- */
@@ -966,7 +966,7 @@
 .mk-traileri__iskulause {
     margin-top: 10px;
     max-width: 92%;
-    font-size: 19px;
+    font-size: 19px; /* fonttipoikkeus: 19 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 5.26px; /* web 1px */
     color: var(--valkoinen);
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
@@ -1092,7 +1092,7 @@
 
 .mk-chat__sanelutila {
     margin-bottom: 6px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-kuulto-paperi-muste-62);
     -unity-text-align: middle-center;
     white-space: normal;
@@ -1164,7 +1164,7 @@
 /* Matkakirjalinkit vastauksen alla (web .pollo-matkakirja: pienempi ja himmeämpi kuin puhe). */
 .mk-chat__matkakirja {
     margin-top: -4px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-kuulto-paperi-muste-85);
     white-space: normal;
 }
@@ -1182,7 +1182,7 @@
 
 .mk-poiminnat__nimio {
     margin-right: 6px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 9.09px; /* web 1px */
     color: var(--map-ink-62);
 }
@@ -1199,7 +1199,7 @@
 }
 
 .mk-poiminnat__pilleri .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 

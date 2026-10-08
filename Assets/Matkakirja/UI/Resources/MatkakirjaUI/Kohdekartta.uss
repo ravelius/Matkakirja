@@ -31,7 +31,7 @@
  * versaalit keskellä, #16130f. */
 .mk-nahtavyydet__otsikko {
     flex-grow: 1;
-    font-size: 19.2px;
+    font-size: 19.2px; /* fonttipoikkeus: 19.2 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 52.08px; /* web 10px */
     -unity-text-align: middle-center;
     color: var(--bg);
@@ -103,7 +103,7 @@
 }
 
 .mk-kohdekartta__kokoruutu .mk-nappi__teksti {
-    font-size: 10.6px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12px; /* web 0.12em */
     color: var(--map-ink-85);
 }
@@ -231,7 +231,7 @@
 }
 
 .mk-kohdekartta__numero {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--panel);
     -unity-text-align: middle-center;
 }
@@ -333,7 +333,7 @@
 }
 
 .mk-kohdekartta-kokoruutu__sulku .mk-nappi__teksti {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     -unity-text-align: middle-center;
     color: var(--panel);
 }
@@ -595,7 +595,7 @@
 }
 
 .mk-avauskortti__sulku .mk-nappi__teksti {
-    font-size: 22px;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--panel-2);
 }
 
@@ -650,7 +650,7 @@
 }
 
 .mk-kohdekartta-kokoruutu__zoom .mk-nappi__teksti {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     color: var(--panel-2);
 }
 

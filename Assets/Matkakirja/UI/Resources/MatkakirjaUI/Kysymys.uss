@@ -59,7 +59,7 @@
     border-width: 1px;
     border-radius: var(--tk-kulma-pieni);
     border-color: var(--map-ink-55);
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 18.18px; /* web 2px */
     color: var(--map-ink);
     rotate: -1.5deg;
@@ -130,7 +130,7 @@
 
 .mk-kysymys__selite {
     margin: -3px 0 8px 0;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     opacity: 0.75;
     color: var(--map-ink);
@@ -173,7 +173,7 @@
 /* --- kehys, kysymys ja vihje ---------------------------------------------- */
 
 .mk-kysymys__kehys {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--mk-kysymys-kaupunki);
     margin-bottom: 6px;
@@ -203,14 +203,14 @@
 .mk-kysymys__vihjemerkki {
     flex-shrink: 0;
     margin-right: 8px;
-    font-size: 14.7px;
+    font-size: 14.7px; /* fonttipoikkeus: 14.7 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     opacity: 0.7;
     color: var(--raja-muste);
 }
 
 .mk-kysymys__vihjeteksti {
     flex-shrink: 1;
-    font-size: 14.7px;
+    font-size: 14.7px; /* fonttipoikkeus: 14.7 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--raja-muste);
 }
@@ -297,7 +297,7 @@
     border-width: 2px;
     border-radius: 15px;
     border-color: var(--map-ink);
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     color: var(--map-ink);
 }
@@ -311,7 +311,7 @@
 }
 
 .mk-kysymys__vaihtoehdot--tiivis .mk-kysymys__vaihtoehtoteksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-nappi.mk-kysymys__vaihtoehto.mk-kysymys__vaihtoehto--oikea {
@@ -388,7 +388,7 @@
 }
 
 .mk-kysymys__tuomio {
-    font-size: 22px;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 3.64px; /* web 0.8px */
     white-space: normal;
     color: var(--map-ink);
@@ -426,7 +426,7 @@
 
 .mk-kysymys__lahdeotsikko {
     margin-right: 5px;
-    font-size: 10.9px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 10.09px; /* web 1.1px */
     opacity: 0.75;
     color: var(--mk-kysymys-kaupunki);
@@ -567,7 +567,7 @@
 
 .mk-kysymys__muotokuvaselite {
     margin-right: 6px;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink-90);
 }
@@ -580,7 +580,7 @@
 
 .mk-kysymys__tervehdys {
     margin: 5px 0 9px 0;
-    font-size: 15.2px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     color: var(--map-ink-95);
 }
@@ -597,7 +597,7 @@
 }
 
 .mk-kysymys__varoitusteksti {
-    font-size: 14.7px;
+    font-size: 14.7px; /* fonttipoikkeus: 14.7 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-erikois-tila-1-a95);
 }
@@ -662,7 +662,7 @@
 
 .mk-kysymys__repliikki {
     margin-top: 5px;
-    font-size: 14.7px;
+    font-size: 14.7px; /* fonttipoikkeus: 14.7 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink);
 }
@@ -818,7 +818,7 @@
 }
 
 .mk-paljastus__nimi {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     letter-spacing: 5px; /* web 1px */
     white-space: normal;
     -unity-text-align: middle-center;
@@ -902,7 +902,7 @@
 }
 
 .mk-paljastus__leimateksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 20px; /* web 3px */
     -unity-text-align: middle-center;
     color: var(--tk-erikois-leima-3);
@@ -937,7 +937,7 @@
 
 /* Web .reveal-jatka: 14,72 px, letter-spacing 0,2 em (2,944) ja yhtä suuri text-indent. */
 .mk-paljastus__jatka .mk-nappi__teksti {
-    font-size: 14.72px;
+    font-size: 14.72px; /* fonttipoikkeus: 14.72 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 20px; /* web 2.944px */
     padding-left: 2.944px;
 }
@@ -965,7 +965,7 @@
 
 .mk-kysymys__apuveikkaus {
     margin-top: 5px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 

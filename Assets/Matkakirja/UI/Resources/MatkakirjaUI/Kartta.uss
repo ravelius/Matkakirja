@@ -96,7 +96,7 @@
    maltillinen ero (iPadin ruutu on 1,3–1,5 × iPhonen leveys), ja nimi pysyy iPhonen 20,8:aa selvästi isompana.
    Harvennus on em/100, joten se skaalautuu mukana. Avattu kortti pitää webin koon (ks. .mk-auki alla). */
 .mk-kartuscha--tabletti .mk-kartuscha__nimi {
-    font-size: 26.8px;
+    font-size: 26.8px; /* fonttipoikkeus: 26.8 px, asteikossa pienempi 26 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 20px; /* web 6.08px */
 }
 
@@ -186,7 +186,7 @@
 .mk-kartuscha__sija {
     display: none;
     margin-left: 4px;
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-70);
 }
 
@@ -353,7 +353,7 @@
     flex-shrink: 1;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--overlay-card);
 }
 
@@ -380,7 +380,7 @@
 }
 
 .mk-kartuscha__pisteluku {
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-85);
 }
 
@@ -496,7 +496,7 @@
 }
 
 .mk-selite__otsikko {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 18.18px; /* web 2px */
     color: var(--map-ink);
     padding-bottom: 2px;
@@ -669,7 +669,7 @@
 }
 
 .mk-selite__valilehti .mk-nappi__teksti {
-    font-size: 10.88px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 8px; /* web 0.87px */
 }
 
@@ -805,7 +805,7 @@
 }
 
 .mk-maakunnat__lnimi {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 11.82px; /* web 1.3px */
     color: var(--map-ink-75);
     margin-bottom: 4px;
@@ -858,7 +858,7 @@
 }
 
 .mk-maakunnat--tabletti .mk-maakunnat__lnimi {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 16.25px; /* web 1.3px, sama suhde kuin ennen */
     margin-bottom: 5px;
 }
@@ -952,7 +952,7 @@
 }
 
 .mk-maakuntaKortti__otsikko {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     margin: 4px 40px 10px 2px;
     white-space: normal;
     color: var(--tk-paperi-muste);
@@ -1165,7 +1165,7 @@
 .mk-nosto__ylarivi {
     /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px.
        Löydös 133: oikealla ei enää ✕:n varausta (40 px). */
-    font-size: 10.88px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 13.97px; /* web 1.52px */
     color: var(--tk-paperi-korostus);
     margin: 2px 0 1.92px 0;
@@ -1193,7 +1193,7 @@
 }
 
 .mk-nosto__paivaysteksti {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 16.36px; /* web 1.8px */
     -unity-text-align: middle-center;
     white-space: normal;
@@ -1354,7 +1354,7 @@
     border-radius: var(--tk-kulma-pieni);
     background-color: var(--tk-kuulto-himmennys-tumma-55);
     color: var(--tk-paperi-pinta);
-    font-size: 10.88px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 4.04px; /* web 0.44px */
 }
 
@@ -1368,7 +1368,7 @@
 }
 
 .mk-nosto__visaotsikko {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 13.64px; /* web 1.5px */
     color: var(--tk-paperi-korostus);
     margin-bottom: 4px;
@@ -1438,7 +1438,7 @@
 
 .mk-nosto__kysyotsikko {
     margin: 10px 0 6px 0;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink);
 }
 
@@ -1584,7 +1584,7 @@
     border-bottom-width: 1px;
     border-bottom-color: var(--tk-kuulto-paperi-korostus-26);
     color: rgba(94, 66, 16, 0.85); /* väripoikkeus: oma sävy, ΔE 7.6 ≥ 7 lähimpään (tk-paperi-muste-pehmea) (Päätoimittaja 8.10.2026) */
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12.38px; /* web 1.3px */
 }
 
@@ -1639,7 +1639,7 @@
 }
 
 .mk-nosto__kohdenappi .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-korostus);
 }
@@ -1655,7 +1655,7 @@
 }
 
 .mk-nosto__lunastus .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* Säilyneen ihmekohteen nykykuva tekstin kyljessä (web .fokuskohde-teksti > .fokuskohde-nykykuva, omistaja
@@ -1677,7 +1677,7 @@
 .mk-nosto__nykyteksti {
     margin: 4.8px 1.6px 6.4px 1.6px;
     padding: 0;
-    font-size: 10.88px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: rgb(80, 75, 68); /* väripoikkeus: oma sävy, ΔE 8.7 ≥ 7 lähimpään (tk-paperi-muste-pehmea) (Päätoimittaja 8.10.2026) */
 }
@@ -1697,7 +1697,7 @@
 
 .mk-nosto__leikekirjaotsake {
     margin-bottom: 2px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 13.64px; /* web 1.5px */
     color: var(--tk-paperi-korostus);
 }
@@ -1815,7 +1815,7 @@
 }
 
 .mk-leima__teksti {
-    font-size: 16.8px;
+    font-size: 16.8px; /* fonttipoikkeus: 16.8 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--ink-light);
 }
@@ -2020,7 +2020,7 @@
 
 .mk-nosto-viuhka__nimi {
     margin-left: 4px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: nowrap;
     color: var(--map-ink-92);
 }
@@ -2245,7 +2245,7 @@
 }
 
 .mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lnimi {
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     margin-bottom: 8px;
 }
 

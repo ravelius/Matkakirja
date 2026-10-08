@@ -166,7 +166,7 @@
 }
 
 .mk-lehti__paivaysteksti {
-    font-size: 11.2px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 16.07px; /* web 1.8px */
     -unity-text-align: middle-center;
     color: var(--map-ink-85);
@@ -264,7 +264,7 @@
 }
 
 .mk-lehti__osasto {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 20px; /* web 2.2px */
     color: var(--tk-paperi-korostus);
     margin: 6px 0 8px 0;
@@ -331,7 +331,7 @@
 }
 
 .mk-lehti__linkki .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* E9 (web .wiki-btn): 0,78rem, välistys 0,05em, #7a5514, pisteviiva rgba(122,85,20,.45) 4 px tekstin alla. */
@@ -387,7 +387,7 @@
 }
 
 .mk-lehti__kuvateksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-kuulto-paperi-muste-78);
     margin-bottom: 2px;
@@ -400,7 +400,7 @@
 }
 
 .mk-lehti__lahde {
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--raja-muste);
     margin-bottom: 8px;
@@ -471,7 +471,7 @@
     padding: 0 8.8px 6.4px 8.8px;
     background-color: var(--map-ink-04);
     color: var(--line);
-    font-size: 15.2px;
+    font-size: var(--tk-koko-leipa);
 }
 
 /* Web border: 3px double → kaksi 1 px:n viivaa 1 px:n välein. */
@@ -490,7 +490,7 @@
 .mk-maa__otsake {
     width: 100%;
     margin-bottom: 2.4px;
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 23.67px; /* web 2.5px */
     color: var(--map-ink-55);
 }
@@ -508,7 +508,7 @@
     min-width: 0;
     padding: 1.6px 0;
     margin-bottom: 1.6px;
-    font-size: 15.2px;
+    font-size: var(--tk-koko-leipa);
 }
 
 .mk-maa__ruudukko--kaksi > .mk-maa__tunnus {
@@ -546,7 +546,7 @@
 
 .mk-maa__alleviiva > * {
     flex-grow: 1;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-78);
 }
 
@@ -567,7 +567,7 @@
     height: 7.6px;
     margin-top: 6px;
     margin-right: 6.8px;
-    font-size: 15.2px;
+    font-size: var(--tk-koko-leipa);
     color: var(--map-ink-50);
 }
 
@@ -601,7 +601,7 @@
 }
 
 .mk-maa__tervehdysteksti {
-    font-size: 16.7px;
+    font-size: 16.7px; /* fonttipoikkeus: 16.7 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--line);
 }
 
@@ -641,7 +641,7 @@
 /* Web .minitehtava-otsikko: AT 700 10,56 px, harvennus 3,168, rgba(60, 44, 26, 0.78) → rgb(99, 85, 66),
    alla 1 px rgba(60, 44, 26, 0.35) → rgb(176, 164, 144), täyte 0 16,8 5,12, laatikon reunasta reunaan. */
 .mk-lehti__tehtavaotsake {
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 30px; /* web 3.168px */
     color: var(--raja-muste);
     margin: 0 -16.8px 8.8px -16.8px;
@@ -659,7 +659,7 @@
 }
 
 .mk-lehti__tehtavavihje {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-font-style: italic;
     white-space: normal;
     color: var(--tk-kuulto-paperi-muste-65);
@@ -672,7 +672,7 @@
     border-left-width: 4px;
     border-left-color: var(--map-ink-55);
     background-color: var(--map-ink-08);
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -838,7 +838,7 @@
 
 /* Web .alanappi-suunta 13,12 px ja .alanappi-aihe 10,56 px opacity 0,72 → rgb(119, 104, 86), max 17ch. */
 .mk-lehti__selaussuunta {
-    font-size: 13.12px;
+    font-size: var(--tk-koko-apuri);
     letter-spacing: 9.51px; /* web 1.248px */
     color: var(--map-ink);
     -unity-text-align: middle-center;
@@ -868,7 +868,7 @@
 }
 
 .mk-lehti__liite .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* Sisällyslevy (web .sisallys-levy, .sisallys-levy.ylhaalla, .sisallys, .sisallys-rivi; 1rem = 16 px). */
@@ -927,7 +927,7 @@
 }
 
 .mk-lehti__sisallyssulje .mk-nappi__teksti {
-    font-size: 22.4px;
+    font-size: 22.4px; /* fonttipoikkeus: 22.4 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-lehti__sisallysvieritys {
@@ -978,14 +978,14 @@
 
 .mk-lehti__sisallysrivinimi {
     margin-bottom: 2.4px;
-    font-size: 13.44px;
+    font-size: var(--tk-koko-apuri);
     letter-spacing: 4.02px; /* web 0.54px */
     white-space: normal;
     color: var(--map-ink);
 }
 
 .mk-lehti__sisallysingressi {
-    font-size: 13.12px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: var(--map-ink-78);
 }
@@ -1126,7 +1126,7 @@
 }
 
 .mk-nahtavyys__lainausteksti {
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -1236,7 +1236,7 @@
     padding-bottom: 14px;
     border-bottom-width: 1px;
     border-bottom-color: var(--tk-kuulto-mark-30);
-    font-size: 19.8px;
+    font-size: var(--tk-koko-otsikko);
     white-space: normal;
     color: var(--map-ink);
 }
@@ -1310,7 +1310,7 @@
 
 .mk-opas__vyootsikko {
     margin-bottom: 5px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 18.18px; /* web 2px */
     color: var(--raja-muste);
 }
@@ -1334,7 +1334,7 @@
 
 .mk-opas__vyonimi {
     flex-shrink: 1;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink);
 }
@@ -1351,7 +1351,7 @@
 .mk-opas__tahdet {
     flex-shrink: 0;
     margin-left: 8px;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--tk-paperi-korostus);
 }
 
@@ -1383,7 +1383,7 @@
 
 .mk-opas__laatikkootsikko {
     margin-bottom: 9px;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 20.31px; /* web 2.6px */
     color: var(--mark);
 }
@@ -1429,7 +1429,7 @@
 }
 
 .mk-opas__kausisana {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink);
 }
 
@@ -1450,7 +1450,7 @@
 }
 
 .mk-opas__kausikuvaus {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink);
 }
@@ -1505,7 +1505,7 @@
 }
 
 .mk-lehti__opasnauha .mk-nappi__teksti {
-    font-size: 11.2px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 16.07px; /* web 1.8px */
     -unity-text-align: middle-center;
 }
@@ -1524,7 +1524,7 @@
 }
 
 .mk-lehti__opaslinkki .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 /* --- Maa numeroina (MaaNumeroina.cs): webin .maakayrat, .maakayra-*, .pyramidi-* ja
@@ -1550,7 +1550,7 @@
 
 /* Yleisluonnehdinta isolla ennen käyriä (web 1.18rem). */
 .mk-numerot__ingressi {
-    font-size: 19px;
+    font-size: 19px; /* fonttipoikkeus: 19 px, asteikossa pienempi 18 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     margin: 3px 0 6px 0;
     color: var(--tk-paperi-muste);
@@ -1617,7 +1617,7 @@
 /* "Silloin ja nyt" — isoisän päiväkirjan ääni käyrän alla. */
 .mk-numerot__silloin {
     margin: 4px 0 0 0;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-kuulto-accent-dark-95);
 }
@@ -1645,7 +1645,7 @@
 
 .mk-fokus__vihje {
     margin: -2px 0 9px 0;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: upper-center;
     color: var(--map-ink-72);
@@ -1674,7 +1674,7 @@
 }
 
 .mk-fokus__pullanappi .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-center;
 }
@@ -1707,7 +1707,7 @@
 .mk-fokus__pullahuomio,
 .mk-fokus__pullatehty {
     margin-top: 7px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: upper-center;
     color: var(--map-ink-72);
@@ -1775,7 +1775,7 @@
 
 .mk-nahtavyys__valikkonimi {
     flex-shrink: 1;
-    font-size: 14.7px;
+    font-size: 14.7px; /* fonttipoikkeus: 14.7 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -1816,7 +1816,7 @@
 }
 
 .mk-lehti__maalinkki .mk-nappi__teksti {
-    font-size: 11.2px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 14.29px; /* web 1.6px */
     color: var(--map-ink-85);
 }
@@ -1856,7 +1856,7 @@
 .mk-lehti__saavihje {
     flex-shrink: 0;
     margin-left: 6.4px;
-    font-size: 10.9px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 10.09px; /* web 1.1px */
     color: var(--tk-kuulto-paperi-korostus-95);
 }
@@ -1942,7 +1942,7 @@
 
 .mk-uutinen__otsikko {
     margin: 4px 0 8px 0;
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -1977,7 +1977,7 @@
 
 .mk-lehti__aanirooli {
     margin-bottom: 3px;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 19.05px; /* web 2px */
     color: var(--map-ink-80);
 }
@@ -2107,7 +2107,7 @@
 /* ── TYÖHUONE KEHITTÄJÄN LIITTEINÄ (Tyohuone.cs; web .kehittajalehti-rivi, .raamattu-kentta, .tuore-chip,
    .poimintavienti-*, .periaate-teksti/-huomio). Vain kehittäjätilassa. */
 .mk-tyohuone__periaate {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     margin-bottom: 8px;
     color: var(--map-ink-95);
@@ -2167,7 +2167,7 @@
     margin: -4px 0 10px 0;
     padding: 2px 9px;
     border-radius: var(--tk-kulma-pieni);
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 9.09px; /* web 1px */
 }
 
@@ -2248,7 +2248,7 @@
 
 .mk-tyohuone__tuoreetotsikko {
     margin-right: 6px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 5.45px; /* web 0.6px */
     color: var(--map-ink-70);
 }
@@ -2257,7 +2257,7 @@
     margin: 2px 5px 2px 0;
     padding: 2px 9px;
     border-radius: var(--tk-kulma-nappi);
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-tyohuone__chip--valmis {
@@ -2325,7 +2325,7 @@
 }
 
 .mk-tyohuone__polku {
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--map-ink-60);
 }
@@ -2359,7 +2359,7 @@
 
 .mk-tyohuone__solu {
     padding: 5px 7px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink-95);
 }
@@ -2396,7 +2396,7 @@
 
 .mk-tilastot__ohjausnimi {
     margin: 0 6px 0 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 5.45px; /* web 0.6px */
     color: var(--map-ink-70);
 }
@@ -2493,7 +2493,7 @@
 
 .mk-tilastot__nuoli {
     margin-right: 4px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-60);
 }
 
@@ -2503,14 +2503,14 @@
 
 .mk-tilastot__nimiteksti {
     flex-shrink: 1;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink-95);
 }
 
 .mk-tilastot__osuus {
     margin-left: 6px;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-70);
 }
 
@@ -2722,7 +2722,7 @@
     border-top-width: 1px;
     border-bottom-width: 1px;
     border-color: var(--map-ink-60);
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 13.5px; /* web 0.14em */
     -unity-text-align: middle-center;
     color: var(--tk-paperi-muste);
@@ -2781,7 +2781,7 @@
     flex-shrink: 0;
     margin: 0 5px;
     padding: 0;
-    font-size: 13.2px;
+    font-size: var(--tk-koko-apuri);
     color: var(--map-ink-45);
 }
 

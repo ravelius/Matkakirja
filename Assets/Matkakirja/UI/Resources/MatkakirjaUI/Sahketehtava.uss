@@ -52,7 +52,7 @@
 }
 
 .mk-st__otsikko {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     white-space: normal;
     color: var(--map-ink);
 }
@@ -207,7 +207,7 @@
     border-color: var(--map-ink-08);
     border-bottom-color: var(--map-ink-24);
     background-color: var(--tk-paperi-pinta);
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 2.67px; /* web 0.4px */
     white-space: normal;
     color: var(--map-ink);
@@ -381,7 +381,7 @@
 
 .mk-st__tulos {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -396,7 +396,7 @@
 
 .mk-st__vinkki {
     margin-top: 13px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--tk-paperi-muste);
 }
@@ -441,7 +441,7 @@
 }
 
 .mk-st__pullanappi .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     white-space: normal;
 }
@@ -466,7 +466,7 @@
 .mk-st__pullahuomio,
 .mk-st__pullatehty {
     margin-top: 6px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     white-space: normal;
     color: var(--map-ink-72);

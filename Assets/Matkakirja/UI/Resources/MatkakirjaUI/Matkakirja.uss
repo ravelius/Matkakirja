@@ -13,7 +13,7 @@
 
 .mk-juuri {
     -unity-font-definition: url("../../../Fontit/EBGaramond.ttf");
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--ink-light);
 }
 
@@ -68,7 +68,7 @@
 }
 
 .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-left;
     white-space: nowrap;
 }
@@ -339,7 +339,7 @@
     border-color: var(--map-ink-35);
     background-color: var(--tk-kuulto-paper-82);
     color: var(--map-ink);
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-ylapalkki--kelluva .mk-pilleri:active {
@@ -436,7 +436,7 @@
 }
 
 .mk-ilmoitus__teksti {
-    font-size: 16.8px;
+    font-size: 16.8px; /* fonttipoikkeus: 16.8 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--ink-light);
@@ -629,7 +629,7 @@
 }
 
 .mk-valintarivi__nimi {
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--ink-light);
 }
 
@@ -882,7 +882,7 @@
 }
 
 .mk-paavalikko--pergamentti .mk-pudotus__otsikko {
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12px; /* web 0.12em (natiivi ensin, em/100) */
     color: var(--map-ink-70);
     -unity-text-align: middle-left;
@@ -1307,7 +1307,7 @@
 }
 
 .mk-masto__maa {
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 30.48px; /* web 3.2px */
     color: var(--map-ink-70);
 }
@@ -1342,7 +1342,7 @@
 }
 
 .mk-kansikuva__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink-soft);
     margin-top: 5px;
@@ -1573,7 +1573,7 @@
 
 .mk-tietoja__kappale {
     margin-bottom: 7px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-tietoja__alaotsikko {
@@ -1587,7 +1587,7 @@
     padding-top: 10px;
     border-top-width: 1px;
     border-color: var(--map-ink-45);
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 7.69px; /* web 1px */
 }
 
@@ -1600,7 +1600,7 @@
 
 .mk-tietoja__johdanto {
     margin-bottom: 6px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-font-style: italic;
     color: var(--map-ink-70);
     white-space: normal;
@@ -1618,7 +1618,7 @@
 }
 
 .mk-tietoja__nimi {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-tietoja__tekija {
@@ -1681,7 +1681,7 @@
     border-width: 1px;
     border-color: var(--map-ink-45);
     border-radius: var(--tk-kulma-keski);
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--panel-2);
     white-space: normal;
     -unity-text-align: middle-center;
@@ -1812,7 +1812,7 @@
 
 .mk-laukku__seuraava {
     -unity-text-align: middle-right;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     -unity-font-style: italic;
     color: var(--map-ink-60);
     margin-bottom: 4px;
@@ -1869,7 +1869,7 @@
 }
 
 .mk-laukku__aarretila {
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 11.43px; /* web 1.2px */
     color: var(--map-ink-70);
 }
@@ -1978,12 +1978,12 @@
 }
 
 .mk-juliste__yla {
-    font-size: 22px;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 22.73px; /* web 5px */
 }
 
 .mk-juliste__ala {
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 23.53px; /* web 4px */
 }
 
@@ -2009,7 +2009,7 @@
 
 .mk-juliste__osa {
     margin-top: 6px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 42.31px; /* web 5.5px */
     color: var(--mark);
 }
@@ -2071,7 +2071,7 @@
     max-width: 480px;
     margin: 0 16px;
     color: var(--map-ink);
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-center;
     transition-property: opacity;
@@ -2118,7 +2118,7 @@
 
 .mk-aloitus__intro--lento .mk-aloitus__paikka {
     margin-bottom: 6px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-aloitus__intro--lento .mk-aloitus__runko {
@@ -2170,7 +2170,7 @@
 }
 
 .mk-aloitus__valinta .mk-nappi__teksti {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 26.67px; /* web 4px */
 }
 
@@ -2271,7 +2271,7 @@
     width: 86%;
     max-width: 480px;
     margin-top: 4px;
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--map-ink);
@@ -2463,7 +2463,7 @@
 
 .mk-apuraha__kokoteksti {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     -unity-text-align: middle-center;
     color: var(--paper);
@@ -2519,12 +2519,12 @@
 }
 
 .mk-aloitus__kohdenimi {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink);
 }
 
 .mk-aloitus__kohdemaa {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-65);
 }
 
@@ -2712,7 +2712,7 @@
 }
 
 .mk-laukku__linssilyhyt {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--map-ink-85);
     white-space: normal;
     -unity-text-align: middle-center;
@@ -2783,7 +2783,7 @@
 }
 
 .mk-seloste-nappi .mk-nappi__teksti {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     -unity-text-align: middle-center;
 }
 
@@ -2803,7 +2803,7 @@
 }
 
 .mk-pikkuseloste__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
@@ -2871,7 +2871,7 @@
 }
 
 .mk-minipopup__sulje .mk-nappi__teksti {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
 }
 
 .mk-minipopup__vieritys {
@@ -2954,14 +2954,14 @@
 }
 
 .mk-tietaja__nimi {
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink);
     white-space: normal;
     -unity-text-align: upper-center;
 }
 
 .mk-tietaja__raja {
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-70);
 }
 
@@ -3017,7 +3017,7 @@
 
 .mk-saa__selite {
     margin: 8px 0 0 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     color: var(--map-ink-75);
 }
@@ -3157,7 +3157,7 @@
 
 .mk-lippu__valinta {
     margin: 4px 0 10px 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 14.55px; /* web 1.6px */
     -unity-text-align: upper-center;
     color: var(--map-ink-65);
@@ -3179,7 +3179,7 @@
 
 .mk-lippu__versiotyhdys {
     margin: 10px 0 8px 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 16.36px; /* web 1.8px */
     color: var(--map-ink);
 }
@@ -3202,7 +3202,7 @@
 
 .mk-lippu__versionimi {
     margin-top: 3px;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     white-space: normal;
     -unity-text-align: upper-center;
     color: var(--map-ink);
@@ -3243,7 +3243,7 @@
    0,6rem välein; rivissä kuva 4,2rem vasemmalla, nimi (0,8rem Kone) ja selite (0,83rem / 1,45) oikealla. */
 .mk-lippu__tunnusotsikko {
     margin: 9.6px 0 5.6px 0;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 5px; /* web 0,05 em */
     white-space: normal;
     color: var(--map-ink);
@@ -3283,7 +3283,7 @@
 
 .mk-lippu__tunnusnimi {
     margin: 0;
-    font-size: 12.8px;
+    font-size: 12.8px; /* fonttipoikkeus: 12.8 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 4px; /* web 0,04 em */
     white-space: normal;
     color: var(--map-ink);
@@ -3291,7 +3291,7 @@
 
 .mk-lippu__tunnusselite {
     margin: 2.4px 0 0 0;
-    font-size: 13.3px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
     color: rgb(57, 53, 47); /* väripoikkeus: oma sävy, ΔE 7.6 ≥ 7 lähimpään (tk-paperi-muste) (Päätoimittaja 8.10.2026) */ /* web rgba(33, 29, 24, 0.88) paperilla; UITK:n alfa sekoittuu lineaarisesti ja vaalenee */
 }
@@ -3327,7 +3327,7 @@
 
 .mk-aloitus__oikeudet {
     margin-top: 10px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--map-ink-60);
 }
 
@@ -3553,7 +3553,7 @@
     border-color: var(--map-ink-22);
     background-color: var(--tk-kuulto-paperi-pinta-60);
     color: var(--map-ink);
-    font-size: 13.1px;
+    font-size: var(--tk-koko-apuri);
     letter-spacing: 0;
 }
 
@@ -3606,7 +3606,7 @@
     border-radius: var(--tk-kulma-keski);
     border-color: var(--tk-kuulto-paperi-korostus-30);
     background-color: var(--tk-tumma-muste);
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
     color: var(--tk-paperi-muste);
 }
@@ -3620,7 +3620,7 @@
 .mk-lukija-saadot__nimi {
     width: 56px;
     flex-shrink: 0;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
 }
 
@@ -3638,7 +3638,7 @@
 .mk-lukija-saadot__arvo {
     width: 46px;
     flex-shrink: 0;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
     -unity-text-align: middle-right;
 }
@@ -3659,7 +3659,7 @@
 }
 
 .mk-lukija-saadot__valinta .unity-base-popup-field__text {
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
     color: var(--tk-paperi-muste);
 }
@@ -3767,12 +3767,12 @@
 
 .mk-reaktiot__luku {
     margin-left: 3px;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 .mk-reaktiot__kuittaus {
     display: none;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 5.45px; /* web 0.6px */
     color: var(--map-ink-72);
 }
@@ -3814,7 +3814,7 @@
 }
 
 .mk-reaktio__vaihtoehto .mk-nappi__teksti {
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
 }
 
 .mk-reaktio__kentta {
@@ -3829,13 +3829,13 @@
     border-radius: 4px;
     background-color: var(--tk-kuulto-paperi-pinta-75);
     color: var(--tk-kuulto-panel-2-94);
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
 }
 
 .mk-reaktio__livia {
     margin-bottom: 8px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink-85);
 }
@@ -3892,14 +3892,14 @@
 
 .mk-palaute__teksti {
     margin-bottom: 8px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink);
 }
 
 .mk-palaute__nimio {
     margin-top: 11px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--raja-muste);
 }
@@ -3978,7 +3978,7 @@
 .mk-palaute__rastiteksti {
     flex-shrink: 1;
     margin-left: 9px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--raja-muste);
 }
@@ -4155,7 +4155,7 @@
 }
 
 .mk-wiki__nuoli .mk-nappi__teksti {
-    font-size: 22px;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     -unity-text-align: middle-center;
     color: var(--tk-tumma-muste);
 }
@@ -4175,7 +4175,7 @@
     padding: 1px 6px;
     border-radius: var(--tk-kulma-pieni);
     background-color: var(--tk-kuulto-himmennys-tumma-60);
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
     color: var(--tk-tumma-muste);
 }
 
@@ -4188,14 +4188,14 @@
 
 .mk-wiki__p {
     margin-bottom: 9px;
-    font-size: 15px;
+    font-size: 15px; /* fonttipoikkeus: 15 px, asteikossa pienempi 14 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--panel);
 }
 
 .mk-wiki__h2 {
     margin: 8px 0 5px 0;
-    font-size: 17px;
+    font-size: 17px; /* fonttipoikkeus: 17 px, asteikossa pienempi 16 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     white-space: normal;
     color: var(--map-ink);
 }
@@ -4240,7 +4240,7 @@
 
 .mk-lukijaaani__nimi {
     margin: 8px 0 4px 2px;
-    font-size: 13px;
+    font-size: 13px; /* fonttipoikkeus: 13 px, asteikossa pienempi 12 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     color: var(--muted);
 }
 
@@ -4353,7 +4353,7 @@
 .mk-pelikello__kello {
     margin: 0;
     padding: 0;
-    font-size: 22px;
+    font-size: 22px; /* fonttipoikkeus: 22 px, asteikossa pienempi 21 px; tekstiä ei pienennetä luettavuuden takia (Päätoimittaja 8.10.2026) */
     letter-spacing: 0;
     color: var(--tk-tumma-muste);
     -unity-text-align: middle-right;
@@ -4362,7 +4362,7 @@
 .mk-pelikello__paiva {
     margin: 1px 0 0 0;
     padding: 0;
-    font-size: 10.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 114.29px; /* web 12px */
     color: var(--tk-kuulto-kulta-95);
     -unity-text-align: middle-right;
@@ -4411,7 +4411,7 @@
 
 .mk-pilleri--kaksirivinen .mk-pilleri__kello {
     margin-left: 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli);
 }
 
 /* iPad: sama järjestys yhdellä rivillä (ikoni, päiväys, rahat oikealla). */
