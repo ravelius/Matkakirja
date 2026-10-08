@@ -1,0 +1,385 @@
+{
+ "kaupunki": "angola",
+ "kaupunkiQ": "Q916",
+ "kohteet": [
+  {
+   "q": "Q3897",
+   "nimi": "Luanda",
+   "peruste": "sitelinks",
+   "koko_m": 6000,
+   "lat": -8.83833,
+   "lon": 13.23444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marginal de Luanda HD Dji Mavic 3 Classic - By Délcio Geovany Borges.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marginal_de_Luanda_HD_Dji_Mavic_3_Classic_-_By_D%C3%A9lcio_Geovany_Borges.jpg?width=1280",
+     "tekija": "Iamdelcioborges",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marginal_de_Luanda_HD_Dji_Mavic_3_Classic_-_By_D%C3%A9lcio_Geovany_Borges.jpg",
+     "selite": "Luanda kasvaa Atlantin lahden ympärille, ja São Miguelin linnoitus vartioi satamaa rannan tuntumassa.",
+     "leveys": 5280,
+     "korkeus": 3956,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Baia de Luanda.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Baia_de_Luanda.jpg?width=1280",
+     "tekija": "vanessa lollipop",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Baia_de_Luanda.jpg",
+     "selite": "Palmujen reunustama rantakatu kulkee lahden rannalla kohti keskustan pilvenpiirtäjiä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Luanda feb09 ost01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luanda_feb09_ost01.jpg?width=1280",
+     "tekija": "Lars Rohwer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luanda_feb09_ost01.jpg",
+     "selite": "Angolan pääkaupunki on yli kolmesataa vuotta vanha satama, ja nykyään se levittäytyy kauas rannikolta.",
+     "leveys": 2256,
+     "korkeus": 1496,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q940305",
+   "nimi": "Kalandulan putoukset",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -9.07583,
+   "lon": 16.00333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kalandula Falls C.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalandula_Falls_C.jpg?width=1280",
+     "tekija": "Zorglub",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalandula_Falls_C.jpg",
+     "selite": "Kalandulan putoukset syöksyvät Lucala-joessa leveänä vesiverhona ja ovat Afrikan suurimpia putouksia.",
+     "leveys": 3296,
+     "korkeus": 2472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kalandula waterfalls of the Lucala-River in Malange, Angola.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalandula_waterfalls_of_the_Lucala-River_in_Malange%2C_Angola.JPG?width=1280",
+     "tekija": "Paulo César Santos",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kalandula_waterfalls_of_the_Lucala-River_in_Malange%2C_Angola.JPG",
+     "selite": "Putouksen yllä leijuu vesisumu, ja reunan metsä kasvaa aivan kallion partaalla.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Quedas-Kalandula 07 queda LWS-2011-08 QD18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quedas-Kalandula_07_queda_LWS-2011-08_QD18.jpg?width=1280",
+     "tekija": "L.Willms",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quedas-Kalandula_07_queda_LWS-2011-08_QD18.jpg",
+     "selite": "Vesi putoaa usealle kallioportaalle ennen kuin se jatkaa matkaansa alavirtaan.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q500189",
+   "nimi": "M'banza Kongo",
+   "peruste": "UNESCO",
+   "koko_m": 2500,
+   "lat": -6.26667,
+   "lon": 14.25,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Bansa, or residence of the King of Kongo, called St. Salvador (M'Banza Kongo), Astley 1745.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Bansa%2C_or_residence_of_the_King_of_Kongo%2C_called_St._Salvador_(M'Banza_Kongo)%2C_Astley_1745.jpg?width=1280",
+     "tekija": "Thomas Astley",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Bansa%2C_or_residence_of_the_King_of_Kongo%2C_called_St._Salvador_(M'Banza_Kongo)%2C_Astley_1745.jpg",
+     "selite": "M'banza Kongo oli Kongon kuningaskunnan pääkaupunki, ja vanha piirros näyttää sen kukkulalla joen yläpuolella.",
+     "leveys": 1406,
+     "korkeus": 936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q122044",
+   "nimi": "Lubango",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": -14.91667,
+   "lon": 13.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lubango.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lubango.jpg?width=1280",
+     "tekija": "Erik Cleves Kristensen",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lubango.jpg",
+     "selite": "Lubango levittyy Huílan ylängölle, jossa ilmasto on viileämpi kuin rannikolla.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Statue of Christ the King, Lubango - panoramio - Mehrdad Sarhangi.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_Christ_the_King%2C_Lubango_-_panoramio_-_Mehrdad_Sarhangi.jpg?width=1280",
+     "tekija": "Mehrdad Sarhangi",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Christ_the_King%2C_Lubango_-_panoramio_-_Mehrdad_Sarhangi.jpg",
+     "selite": "Kristus Kuningas -patsas seisoo kalliolla kaupungin yllä ja näkyy kauas.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Canyon in the Huila Plateau.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canyon_in_the_Huila_Plateau.jpg?width=1280",
+     "tekija": "Dguendel",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canyon_in_the_Huila_Plateau.jpg",
+     "selite": "Huílan ylängön jyrkät rotkot ja seinämät avautuvat aivan Lubangon läheisyydessä.",
+     "leveys": 2409,
+     "korkeus": 1681,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214248",
+   "nimi": "Benguela",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": -12.55,
+   "lon": 13.41667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Igreja Benguela, Angola.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_Benguela%2C_Angola.jpg?width=1280",
+     "tekija": "F H Mira",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_Benguela%2C_Angola.jpg",
+     "selite": "Benguelan siirtomaa-ajan kirkko hohtaa keltaisena, ja kaupunki on yksi Angolan vanhimmista rannikkokaupungeista.",
+     "leveys": 1805,
+     "korkeus": 1317,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q207322",
+   "nimi": "Huambo",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": -12.76667,
+   "lon": 15.73333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cenral Square, Huambo.Angola - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cenral_Square%2C_Huambo.Angola_-_panoramio.jpg?width=1280",
+     "tekija": "Michael Walsh",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cenral_Square%2C_Huambo.Angola_-_panoramio.jpg",
+     "selite": "Huambon keskusaukion obeliski kohoaa kaupungin sydämessä, jossa on säilynyt siirtomaa-ajan rakennuksia.",
+     "leveys": 2724,
+     "korkeus": 1813,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Huambo, Jardim da Cultura.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Huambo%2C_Jardim_da_Cultura.jpg?width=1280",
+     "tekija": "Abanul",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Huambo%2C_Jardim_da_Cultura.jpg",
+     "selite": "Kulttuuripuisto avaa vehreän tilan keskustan rakennusten väliin ylängön kaupungissa.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q221914",
+   "nimi": "Moçâmedes (Namibe)",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -15.19528,
+   "lon": 12.15083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Marginal of Namibe.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marginal_of_Namibe.JPG?width=1280",
+     "tekija": "Paulo César Santos",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marginal_of_Namibe.JPG",
+     "selite": "Moçâmedesin rantakatu kaartuu lahden mukaan Namibin aavikon reunalla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estação Moçâmedes dos Caminhos de Ferro de Moçâmedes.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Esta%C3%A7%C3%A3o_Mo%C3%A7%C3%A2medes_dos_Caminhos_de_Ferro_de_Mo%C3%A7%C3%A2medes.jpg?width=1280",
+     "tekija": "Armando Chicoca/VOA Português",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Esta%C3%A7%C3%A3o_Mo%C3%A7%C3%A2medes_dos_Caminhos_de_Ferro_de_Mo%C3%A7%C3%A2medes.jpg",
+     "selite": "Siirtomaa-ajan rautatieasema kertoo radasta, joka vei rannikolta sisämaahan.",
+     "leveys": 1597,
+     "korkeus": 898,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3123422",
+   "nimi": "Ionan kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": -16.66667,
+   "lon": 12.33333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parque nacional do lona 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_nacional_do_lona_14.jpg?width=1280",
+     "tekija": "Edward Middleton",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parque_nacional_do_lona_14.jpg",
+     "selite": "Ionan kansallispuisto on Angolan suurin ja ulottuu rannikon aavikolta kohti sisämaata.",
+     "leveys": 4319,
+     "korkeus": 2959,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Imbondeiro Tree.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Imbondeiro_Tree.jpg?width=1280",
+     "tekija": "Alfred Weidinger from Vienna, Austria",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Imbondeiro_Tree.jpg",
+     "selite": "Baobab eli imbondeiro on Angolan savannien ja aavikon reunojen tunnuspuu.",
+     "leveys": 2079,
+     "korkeus": 1381,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Parque Nacional do lona 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_Nacional_do_lona_2.jpg?width=1280",
+     "tekija": "Edward Middleton",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parque_Nacional_do_lona_2.jpg",
+     "selite": "Puiston hiekkatasangot jatkuvat Namibin aavikon pohjoispäätä kohti Namibian rajaa.",
+     "leveys": 4329,
+     "korkeus": 2197,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q213840",
+   "nimi": "Cuanza-joki",
+   "peruste": "pelin nosto",
+   "koko_m": 5000,
+   "lat": -13.68093,
+   "lon": 17.4301,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kwanza River.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kwanza_River.jpg?width=1280",
+     "tekija": "Patyfessora",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kwanza_River.jpg",
+     "selite": "Cuanza on Angolan pisin joki, joka kulkee kokonaan maan sisällä ylängöltä Atlantille.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bridge over Kwanza River.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bridge_over_Kwanza_River.jpg?width=1280",
+     "tekija": "Patyfessora",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bridge_over_Kwanza_River.jpg",
+     "selite": "Silta ylittää leveän Cuanza-joen, joka on tärkeä liikenneväylä ja vesivoiman lähde.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tundavala Gap.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tundavala_Gap.jpg?width=1280",
+   "tekija": "tim kubacki",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tundavala_Gap.jpg",
+   "selite": "Tundavalan rotko kuuluu Angolan jylhimpiin näkymiin ja avautuu Huílan ylängön reunalla.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Pungo Andongo, Malange, Angola, 2008.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pungo_Andongo%2C_Malange%2C_Angola%2C_2008.JPG?width=1280",
+   "tekija": "Paulo César Santos",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pungo_Andongo%2C_Malange%2C_Angola%2C_2008.JPG",
+   "selite": "Pungo Andongon mustat kallionlohkareet kohoavat Angolan sisämaan vehreästä savannista.",
+   "leveys": 2272,
+   "korkeus": 1704,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

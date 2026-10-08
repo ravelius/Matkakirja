@@ -1,0 +1,421 @@
+{
+ "kaupunki": "lagos",
+ "kaupunkiQ": "Q8673",
+ "kohteet": [
+  {
+   "q": "Q605583",
+   "nimi": "Lagosin saari",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 6.45,
+   "lon": 3.4,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "LAGOS ISLAND 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LAGOS_ISLAND_3.jpg?width=1280",
+     "tekija": "Sir Demo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LAGOS_ISLAND_3.jpg",
+     "selite": "Lagosin saari on kaupungin historiallinen ydin, ja sitä yhdistävät mantereeseen sillat ja nousutiet.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2014 Tinubu Square Lagos Nigeria 14640600637.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014_Tinubu_Square_Lagos_Nigeria_14640600637.jpg?width=1280",
+     "tekija": "Jeremy Weate from Abuja, Nigeria",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014_Tinubu_Square_Lagos_Nigeria_14640600637.jpg",
+     "selite": "Tinubun aukion ympärillä kohoavat saaren liike-elämän tornit.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6739858",
+   "nimi": "Makoko",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 6.49527,
+   "lon": 3.39297,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of Makoko area of lagos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Makoko_area_of_lagos.jpg?width=1280",
+     "tekija": "Olusegun Aderogba",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Makoko_area_of_lagos.jpg",
+     "selite": "Makokon kalastajakylä on rakennettu paalujen päälle Lagosin laguunin reunalle.",
+     "leveys": 3992,
+     "korkeus": 2242,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2010 Lagos Nigeria by Rainer Wozny 5342608955.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2010_Lagos_Nigeria_by_Rainer_Wozny_5342608955.jpg?width=1280",
+     "tekija": "Heinrich-Böll-Stiftung from Berlin, Deutschland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2010_Lagos_Nigeria_by_Rainer_Wozny_5342608955.jpg",
+     "selite": "Kylän talot nousevat suoraan vedestä, ja kulkuvälineenä ovat kanootit.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "A work space in makoko, Lagos state-Nigeria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_work_space_in_makoko%2C_Lagos_state-Nigeria.jpg?width=1280",
+     "tekija": "Omoeko Media",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_work_space_in_makoko%2C_Lagos_state-Nigeria.jpg",
+     "selite": "Paaluille rakennettu työtila ja pienet veneet kuuluvat Makokon arkeen.",
+     "leveys": 2250,
+     "korkeus": 1500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q567962",
+   "nimi": "Third Mainland Bridge",
+   "peruste": "pelin nosto",
+   "koko_m": 1000,
+   "lat": 6.5,
+   "lon": 3.40139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "3mb 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/3mb_001.jpg?width=1280",
+     "tekija": "Solasly",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:3mb_001.jpg",
+     "selite": "Silta kulkee laguunin yli Lagosin saarelta mantereelle.",
+     "leveys": 2362,
+     "korkeus": 1890,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A long Exposure of the Third Mainland bridge in front of University of lagos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_long_Exposure_of_the_Third_Mainland_bridge_in_front_of_University_of_lagos.jpg?width=1280",
+     "tekija": "Johnbrainyvisuals",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_long_Exposure_of_the_Third_Mainland_bridge_in_front_of_University_of_lagos.jpg",
+     "selite": "Illan valot heijastuvat laguunin vedestä sillan reunalla.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2014-04-02 09-57-53 Nigeria Lagos State - Iwaya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014-04-02_09-57-53_Nigeria_Lagos_State_-_Iwaya.jpg?width=1280",
+     "tekija": "Hansueli Krapf",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2014-04-02_09-57-53_Nigeria_Lagos_State_-_Iwaya.jpg",
+     "selite": "Siltaa pitkin näkyy laguunin ja kaupungin siluetti.",
+     "leveys": 4670,
+     "korkeus": 2625,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1311732",
+   "nimi": "Nigerian kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 6.44283,
+   "lon": 3.40286,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Statue of a woman carrying a baby in National Museum Centre-Lagos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_a_woman_carrying_a_baby_in_National_Museum_Centre-Lagos.jpg?width=1280",
+     "tekija": "Omoeko Media",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_a_woman_carrying_a_baby_in_National_Museum_Centre-Lagos.jpg",
+     "selite": "Museon puutarhassa on veistoksia, ja sisällä säilytetään Nigerian taidetta ja arkeologiaa.",
+     "leveys": 3845,
+     "korkeus": 5820,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bronze ceremonial vessel in form of a snail shell, 9th century, Igbo-Ukwu, Nigeria.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bronze_ceremonial_vessel_in_form_of_a_snail_shell%2C_9th_century%2C_Igbo-Ukwu%2C_Nigeria.JPG?width=1280",
+     "tekija": "Ochiwar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bronze_ceremonial_vessel_in_form_of_a_snail_shell%2C_9th_century%2C_Igbo-Ukwu%2C_Nigeria.JPG",
+     "selite": "Igbo-Ukwun pronssiesineet kuuluvat Länsi-Afrikan varhaisimpiin hienoihin metallitöihin.",
+     "leveys": 2372,
+     "korkeus": 1371,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17003559",
+   "nimi": "Kristuksen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 6.4508,
+   "lon": 3.3902,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral Church of Christ, CMS, Lagos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_Church_of_Christ%2C_CMS%2C_Lagos.jpg?width=1280",
+     "tekija": "Sho photography",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_Church_of_Christ%2C_CMS%2C_Lagos.jpg",
+     "selite": "Lagosin anglikaaninen katedraali kohoaa Marinan liike-elämän korttelien keskellä.",
+     "leveys": 4421,
+     "korkeus": 2955,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedral Church of Christ Lagos.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_Church_of_Christ_Lagos.jpg?width=1280",
+     "tekija": "Beendy234",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_Church_of_Christ_Lagos.jpg",
+     "selite": "Goottilaistyylisen kirkon tornit ja kuvioidut ikkunat hallitsevat sivukatua.",
+     "leveys": 4032,
+     "korkeus": 2482,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathedral Church of Christ Architectural Photography.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_Church_of_Christ_Architectural_Photography.jpg?width=1280",
+     "tekija": "Mo Rufy",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_Church_of_Christ_Architectural_Photography.jpg",
+     "selite": "Kirkon kellotorni erottuu taivasta vasten.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q60775381",
+   "nimi": "Lagosin keskusmoskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 6.4574,
+   "lon": 3.3882,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "LAGOS CENTRAL MOSQUE.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LAGOS_CENTRAL_MOSQUE.jpg?width=1280",
+     "tekija": "Sir Demo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LAGOS_CENTRAL_MOSQUE.jpg",
+     "selite": "Keskusmoskeijan neljä minarettia nousevat Lagosin saaren vilkkaan kauppakadun ylle.",
+     "leveys": 4878,
+     "korkeus": 3779,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "LAGOS ISLAND 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LAGOS_ISLAND_1.jpg?width=1280",
+     "tekija": "Sir Demo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LAGOS_ISLAND_1.jpg",
+     "selite": "Ylhäältä näkyy moskeijan kultainen kupoli ja ympäröivä markkinakortteli.",
+     "leveys": 4192,
+     "korkeus": 2793,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q25042466",
+   "nimi": "Tafawa Balewan aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 6.44722,
+   "lon": 3.40139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tafawa Balewa Square Onikan Lagos - 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tafawa_Balewa_Square_Onikan_Lagos_-_2024.jpg?width=1280",
+     "tekija": "Isaacayodele32",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tafawa_Balewa_Square_Onikan_Lagos_-_2024.jpg",
+     "selite": "Itsenäisyyden jälkeen rakennettu valtava seremoniakenttä on yksi Lagosin suurimmista aukioista.",
+     "leveys": 5464,
+     "korkeus": 3070,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tafawa Balewa Square Image.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tafawa_Balewa_Square_Image.jpg?width=1280",
+     "tekija": "Sidhant Bendre",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tafawa_Balewa_Square_Image.jpg",
+     "selite": "Aukion portin kotkapatsaat ja teräsrakenteet ovat sen tunnusmerkkejä.",
+     "leveys": 3172,
+     "korkeus": 1723,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q25203190",
+   "nimi": "Vapauden puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 6.4489,
+   "lon": 3.3965,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Freedom Park Obelisk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Park_Obelisk.jpg?width=1280",
+     "tekija": "Folu Oyefeso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Park_Obelisk.jpg",
+     "selite": "Vapauden puisto on rakennettu entisen siirtomaavankilan paikalle kulttuuri- ja muistopuistoksi.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beautiful Freedom park walk way.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beautiful_Freedom_park_walk_way.jpg?width=1280",
+     "tekija": "Afternoon Archer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beautiful_Freedom_park_walk_way.jpg",
+     "selite": "Kivetyt polut kiertävät puiston veistosten ja puiden välissä.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q25041855",
+   "nimi": "Lekkin luonnonsuojelukeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 6.43639,
+   "lon": 3.53556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "LEKKI CONSERVATION CENTRE (LCC) 10.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LEKKI_CONSERVATION_CENTRE_(LCC)_10.jpg?width=1280",
+     "tekija": "Ashinze",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LEKKI_CONSERVATION_CENTRE_(LCC)_10.jpg",
+     "selite": "Latvuskävelysilta kulkee metsän yläpuolella pitkin kantavia köysiä.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A pathway in the Lekki Convention Center.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_pathway_in_the_Lekki_Convention_Center.jpg?width=1280",
+     "tekija": "Obiazi Emefile",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_pathway_in_the_Lekki_Convention_Center.jpg",
+     "selite": "Puiset kävelypolut kulkevat suoalueen metsän läpi.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q499414",
+   "nimi": "Lagosin laguuni",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": 6.50158,
+   "lon": 3.52249,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ebute Metta coast of the Lagos Lagoon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ebute_Metta_coast_of_the_Lagos_Lagoon.jpg?width=1280",
+     "tekija": "NestedBeing",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ebute_Metta_coast_of_the_Lagos_Lagoon.jpg",
+     "selite": "Laguunin rannan matalat korttelit ja Third Mainland Bridge näkyvät taustalla.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ikoyi, Lagos, Nigeria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ikoyi%2C_Lagos%2C_Nigeria.jpg?width=1280",
+   "tekija": "Reginald Bassey",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ikoyi%2C_Lagos%2C_Nigeria.jpg",
+   "selite": "Lagosin rannikkokaupunki levittäytyy laguunin ja Atlantin väliin.",
+   "leveys": 5464,
+   "korkeus": 3640,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Lagos Island Nigeria.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lagos_Island_Nigeria.jpg?width=1280",
+   "tekija": "Subomi07",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lagos_Island_Nigeria.jpg",
+   "selite": "Lagosin saaren keskusta ja rantatie ylhäältä nähtyinä.",
+   "leveys": 4000,
+   "korkeus": 2250,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

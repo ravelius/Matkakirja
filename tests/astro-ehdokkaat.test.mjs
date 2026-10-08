@@ -70,3 +70,10 @@ test('hakunimet: ilman diakriittejä ja hallintoliitettä, vanhat nimet', () => 
   assert.deepEqual(hakunimet('Tromsø Municipality', 'tromssa'), ['Tromsø Municipality', 'Tromsø', 'Tromso']);
   assert.ok(hakunimet('Kyiv', 'kiova').includes('Kiev'));
 });
+
+test('Gatewayn ruutunumerossa ei etunollaa: STS062-85-021 on kuvakirjaston tunnus (Sisältökirjurin löydös 4.10.)', () => {
+  assert.equal(gatewayTunnus('STS062-85-021'), null);
+  assert.equal(gatewayTunnus('STS099-706-090'), null);
+  assert.deepEqual(gatewayTunnus('STS062-85-21'), { mission: 'STS062', roll: '85', frame: '21' });
+  assert.equal(vertailuTunnus('STS062-85-021'), vertailuTunnus('STS062-85-21'));
+});

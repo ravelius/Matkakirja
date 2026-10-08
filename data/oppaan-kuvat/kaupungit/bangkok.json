@@ -1,0 +1,836 @@
+{
+ "kaupunki": "bangkok",
+ "kaupunkiQ": "Q1861",
+ "kohteet": [
+  {
+   "q": "Q873769",
+   "nimi": "Suurpalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 13.75014,
+   "lon": 100.49203,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Palace, Bangkok 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Palace%2C_Bangkok_3.jpg?width=1280",
+     "tekija": "Slyronit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Palace%2C_Bangkok_3.jpg",
+     "selite": "Suurpalatsi oli Siamin kuninkaiden virallinen asuinpaikka ja hallinnon keskus Chao Phrayan rannalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand Palace, Bangkok 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Palace%2C_Bangkok_4.jpg?width=1280",
+     "tekija": "Slyronit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Palace%2C_Bangkok_4.jpg",
+     "selite": "Suurpalatsin salit yhdistävät thaimaalaista kattoarkkitehtuuria ja eurooppalaista julkisivua.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "202307 Grand Palace of Bangkok 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/202307_Grand_Palace_of_Bangkok_01.jpg?width=1280",
+     "tekija": "Jonashtand",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:202307_Grand_Palace_of_Bangkok_01.jpg",
+     "selite": "Suurpalatsin portit ja kultaiset chedit kohoavat punaisten kattojen yllä.",
+     "leveys": 3840,
+     "korkeus": 2160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1045876",
+   "nimi": "Wat Phra Kaew",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 13.75139,
+   "lon": 100.49278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Temple of the Emerald Buddha.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_the_Emerald_Buddha.jpg?width=1280",
+     "tekija": "Nawit science",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Emerald_Buddha.jpg",
+     "selite": "Wat Phra Kaew eli Smaragdibuddhan temppeli on Thaimaan pyhin temppeli Suurpalatsin alueella.",
+     "leveys": 4705,
+     "korkeus": 3141,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wat Phra Kaew by Ninara TSP edit crop.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Phra_Kaew_by_Ninara_TSP_edit_crop.jpg?width=1280",
+     "tekija": "Original image: Ninara from Helsinki, Finland. Edit: TSP",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Phra_Kaew_by_Ninara_TSP_edit_crop.jpg",
+     "selite": "Temppelialuetta ympäröi valkoinen muuri, jonka takaa kohoavat kultaiset ja kirjaillut tornit.",
+     "leveys": 3395,
+     "korkeus": 1867,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Statues of Yaksha supporting one of the Two Golden Chedi of Wat Phra Kaew, Bangkok, Thailand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statues_of_Yaksha_supporting_one_of_the_Two_Golden_Chedi_of_Wat_Phra_Kaew%2C_Bangkok%2C_Thailand.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statues_of_Yaksha_supporting_one_of_the_Two_Golden_Chedi_of_Wat_Phra_Kaew%2C_Bangkok%2C_Thailand.jpg",
+     "selite": "Mosaiikkipukuiset yaksha-jättiläiset kantavat kultaisen chedin juuria.",
+     "leveys": 6220,
+     "korkeus": 3499,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q724970",
+   "nimi": "Wat Arun",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 13.74369,
+   "lon": 100.48892,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Templo Wat Arun, Bangkok, Tailandia, 2013-08-22, DD 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_05.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_05.jpg",
+     "selite": "Wat Arunin korkea khmer-tyylinen prang kohoaa Chao Phrayan länsirannalla.",
+     "leveys": 4035,
+     "korkeus": 3391,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Templo Wat Arun, Bangkok, Tailandia, 2013-08-22, DD 37.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_37.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Templo_Wat_Arun%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_37.jpg",
+     "selite": "Illalla valaistu Wat Arun hohtaa kultaisena joen yllä.",
+     "leveys": 4109,
+     "korkeus": 3174,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "The sculptures of two mythical giant demons, Thotsakan and Sahatsadecha, guarding the eastern gate of the main chapel of Wat Arun, Bangkok.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_sculptures_of_two_mythical_giant_demons%2C_Thotsakan_and_Sahatsadecha%2C_guarding_the_eastern_gate_of_the_main_chapel_of_Wat_Arun%2C_Bangkok.jpg?width=1280",
+     "tekija": "BerryJ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_sculptures_of_two_mythical_giant_demons%2C_Thotsakan_and_Sahatsadecha%2C_guarding_the_eastern_gate_of_the_main_chapel_of_Wat_Arun%2C_Bangkok.jpg",
+     "selite": "Jättiläisdemonit vartioivat temppelin pääsalin porttia.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1059910",
+   "nimi": "Wat Pho",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 13.74639,
+   "lon": 100.49361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wat Pho, Bangkok, Tailandia, 2013-08-22, DD 37.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Pho%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_37.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Pho%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_37.jpg",
+     "selite": "Wat Pho on laaja temppelialue, jonka pihoja kiertävät kuvioidut katokset.",
+     "leveys": 4886,
+     "korkeus": 3055,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wat Pho, Bangkok, Tailandia, 2013-08-22, DD 30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Pho%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_30.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Pho%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_30.jpg",
+     "selite": "Wat Phon pihalla kohoaa koristeellisia keraamisia chedejä.",
+     "leveys": 3186,
+     "korkeus": 4784,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Wat Pho, Bangkok, Tailandia, 2013-08-22, DD 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Pho%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_02.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Pho%2C_Bangkok%2C_Tailandia%2C_2013-08-22%2C_DD_02.jpg",
+     "selite": "Wat Phon kuuluisa makaava Buddha on kullattu ja täyttää koko salin.",
+     "leveys": 3634,
+     "korkeus": 5451,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2063818",
+   "nimi": "Wat Saket ja Kultainen vuori",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 13.75383,
+   "lon": 100.50679,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wat Saket, Golden Mount, Bangkok, Thailand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Saket%2C_Golden_Mount%2C_Bangkok%2C_Thailand.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Saket%2C_Golden_Mount%2C_Bangkok%2C_Thailand.jpg",
+     "selite": "Wat Saketin Kultainen vuori on keinotekoinen kukkula, jonka huipulta näkee yli vanhan Bangkokin.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wat Saket, Golden Stupa, Bangkok, Thailand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Saket%2C_Golden_Stupa%2C_Bangkok%2C_Thailand.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Saket%2C_Golden_Stupa%2C_Bangkok%2C_Thailand.jpg",
+     "selite": "Kukkulan huipulla seisoo kultainen stupa.",
+     "leveys": 2048,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q767544",
+   "nimi": "Sanam Luang",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 13.755,
+   "lon": 100.49306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sanam Luang Bangkok.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanam_Luang_Bangkok.jpg?width=1280",
+     "tekija": "Adbar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sanam_Luang_Bangkok.jpg",
+     "selite": "Sanam Luang on laaja nurmikenttä Suurpalatsin vieressä, jota on käytetty kuninkaallisiin seremonioihin.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1279344",
+   "nimi": "Sao Ching Cha",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 13.75183,
+   "lon": 100.50127,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Giant Swing, Bangkok.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant_Swing%2C_Bangkok.jpg?width=1280",
+     "tekija": "Preecha.MJ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Giant_Swing%2C_Bangkok.jpg",
+     "selite": "Sao Ching Cha eli Jättiläiskeinu on punainen tiikkinen portti vanhan kaupungin liikenneympyrässä.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Giant Swing Bangkok Thailand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Giant_Swing_Bangkok_Thailand.jpg?width=1280",
+     "tekija": "KOSIN SUKHUM",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Giant_Swing_Bangkok_Thailand.jpg",
+     "selite": "Keinun vieressä seisoo Wat Suthat, jonka seremonioissa keinua käytettiin.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1518029",
+   "nimi": "Yaowarat",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 13.7388,
+   "lon": 100.51218,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Bangkok, Dystrykt Samphanthawong, Ulica Yaowarat (05).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Samphanthawong%2C_Ulica_Yaowarat_(05).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Samphanthawong%2C_Ulica_Yaowarat_(05).jpg",
+     "selite": "Yaowarat on Bangkokin Chinatownin pääkatu, jota reunustavat kiinalaiskyltit ja vanhat kauppatalot.",
+     "leveys": 5097,
+     "korkeus": 2842,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yaowarat at night (32455695783).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaowarat_at_night_(32455695783).jpg?width=1280",
+     "tekija": "Ninara from Helsinki, Finland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yaowarat_at_night_(32455695783).jpg",
+     "selite": "Iltaisin Yaowaratin neonkyltit ja katukeittiöt täyttävät kadun.",
+     "leveys": 3007,
+     "korkeus": 1995,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "China Town Thanon Yaowarat Bangkok Thailand by Don Ramey Logan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/China_Town_Thanon_Yaowarat_Bangkok_Thailand_by_Don_Ramey_Logan.jpg?width=1280",
+     "tekija": "Don Ramey Logan",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:China_Town_Thanon_Yaowarat_Bangkok_Thailand_by_Don_Ramey_Logan.jpg",
+     "selite": "Kadun varrella nousevat punaiset kauppatalot kuuluvat Bangkokin kiinalaiskaupunginosaan.",
+     "leveys": 2568,
+     "korkeus": 1636,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125929",
+   "nimi": "Hua Lamphongin asema",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 13.7389,
+   "lon": 100.5167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gare Hua Lamphong.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gare_Hua_Lamphong.jpg?width=1280",
+     "tekija": "KarlDubost",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gare_Hua_Lamphong.jpg",
+     "selite": "Hua Lamphong on Bangkokin vanha päärautatieasema, jonka kaarihalli on kaupungin tunnetuimpia.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hua Lamphong railway station 20240915-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hua_Lamphong_railway_station_20240915-2.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hua_Lamphong_railway_station_20240915-2.jpg",
+     "selite": "Aseman julkisivu on italialaisvaikutteista varhaista 1900-lukua.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Unfolding Bangkok -- Light show & exhibitions at Hua Lamphong Station (2023 March) 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Unfolding_Bangkok_--_Light_show_%26_exhibitions_at_Hua_Lamphong_Station_(2023_March)_05.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Unfolding_Bangkok_--_Light_show_%26_exhibitions_at_Hua_Lamphong_Station_(2023_March)_05.jpg",
+     "selite": "Aseman rautarunkoinen laituri-halli kaartuu raiteiden yllä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1186076",
+   "nimi": "Demokratian muistomerkki",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 13.75667,
+   "lon": 100.50167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "010-Democracy Monument.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/010-Democracy_Monument.jpg?width=1280",
+     "tekija": "Nawit science",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:010-Democracy_Monument.jpg",
+     "selite": "Demokratian muistomerkki muistuttaa Siamin vuoden 1932 muutoksesta kuningaskunnan perustuslailliseksi.",
+     "leveys": 5099,
+     "korkeus": 3404,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Bangkok, Dystrykt Phra Nakhon, Pomnik Demokracji (03).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Pomnik_Demokracji_(03).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Pomnik_Demokracji_(03).jpg",
+     "selite": "Muistomerkin neljä siipeä kohoavat Ratchadamnoen-kadun liikenneympyrän keskellä.",
+     "leveys": 4448,
+     "korkeus": 3462,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Bangkok, Dystrykt Phra Nakhon, Pomnik Demokracji (05).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Pomnik_Demokracji_(05).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Pomnik_Demokracji_(05).jpg",
+     "selite": "Muistomerkki on Bangkokin vanhan kaupungin keskeisiä maamerkkejä.",
+     "leveys": 4896,
+     "korkeus": 3497,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2165719",
+   "nimi": "Wat Benchamabophit",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 13.76611,
+   "lon": 100.51417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "วัดเบญจมบพิตรดุสิตวนารามราชวรวิหาร Thai Marble Temple - Wat Benchamabophit.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%9A%E0%B8%8D%E0%B8%88%E0%B8%A1%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3_Thai_Marble_Temple_-_Wat_Benchamabophit.JPG?width=1280",
+     "tekija": "Chusak Vijakkhana - Chusak50",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%9A%E0%B8%8D%E0%B8%88%E0%B8%A1%E0%B8%9A%E0%B8%9E%E0%B8%B4%E0%B8%95%E0%B8%A3%E0%B8%94%E0%B8%B8%E0%B8%AA%E0%B8%B4%E0%B8%95%E0%B8%A7%E0%B8%99%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%A3%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3_Thai_Marble_Temple_-_Wat_Benchamabophit.JPG",
+     "selite": "Marmoritemppeli Wat Benchamabophit on rakennettu valkoisesta marmorista ja se kuuluu Bangkokin kauneimpiin temppeleihin.",
+     "leveys": 4000,
+     "korkeus": 2248,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wat Benchamabophit Temple, the marble temple (8284763657).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Benchamabophit_Temple%2C_the_marble_temple_(8284763657).jpg?width=1280",
+     "tekija": "Ian Gratton from Sutton-n-Craven, North Yorkshire, England",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Benchamabophit_Temple%2C_the_marble_temple_(8284763657).jpg",
+     "selite": "Temppelin porrastetut oranssit katot ja kultaiset koristeet ovat tyypillistä thai-arkkitehtuuria.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Wat Benchamabophit Temple, the marble temple (8285850338).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Benchamabophit_Temple%2C_the_marble_temple_(8285850338).jpg?width=1280",
+     "tekija": "Ian Gratton from Sutton-n-Craven, North Yorkshire, England",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_Benchamabophit_Temple%2C_the_marble_temple_(8285850338).jpg",
+     "selite": "Pääsalin edessä on valkoinen marmoripiha.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1479428",
+   "nimi": "Vimanmekin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 13.77389,
+   "lon": 100.51278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vimanmek Mansion.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vimanmek_Mansion.JPG?width=1280",
+     "tekija": "Gisling",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vimanmek_Mansion.JPG",
+     "selite": "Vimanmek on suuri kultatiikkirakennus Dusitin kaupunginosassa, kuninkaallinen kesäasunto.",
+     "leveys": 3000,
+     "korkeus": 1822,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "VimanmekMansion.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/VimanmekMansion.jpg?width=1280",
+     "tekija": "Peerawat Buranapanit",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:VimanmekMansion.jpg",
+     "selite": "Palatsin laajat siivet ympäröivät nurmikkopihaa.",
+     "leveys": 3144,
+     "korkeus": 1698,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q977437",
+   "nimi": "Lumphinin puisto",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 13.73111,
+   "lon": 100.54167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lumphini Park (I).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lumphini_Park_(I).jpg?width=1280",
+     "tekija": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lumphini_Park_(I).jpg",
+     "selite": "Lumphinin puisto on Bangkokin keskustan vihreä keidas, jonka lampi peilaa pilvenpiirtäjiä.",
+     "leveys": 6542,
+     "korkeus": 3680,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lumphini Park 2025 by Don Ramey Logan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lumphini_Park_2025_by_Don_Ramey_Logan.jpg?width=1280",
+     "tekija": "WPPilot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lumphini_Park_2025_by_Don_Ramey_Logan.jpg",
+     "selite": "Puiston suihkulähteet ja nurmet ovat vastapaino ympäröiville korkeille rakennuksille.",
+     "leveys": 11532,
+     "korkeus": 8544,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Aerial view of Lumphini Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Lumphini_Park.jpg?width=1280",
+     "tekija": "Terence Ong",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Lumphini_Park.jpg",
+     "selite": "Ilmasta puisto erottuu tiheästi rakennetun keskustan vihreänä alueena.",
+     "leveys": 1362,
+     "korkeus": 920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1203550",
+   "nimi": "Khaosan Road",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 13.75889,
+   "lon": 100.49722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Khaosan Road, 2018 (08).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khaosan_Road%2C_2018_(08).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khaosan_Road%2C_2018_(08).jpg",
+     "selite": "Khaosan Road on Bangkokin tunnetuin reppumatkailijoiden katu.",
+     "leveys": 5836,
+     "korkeus": 3996,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Bangkok, Dystrykt Phra Nakhon, Ulica Khaosan (08).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Ulica_Khaosan_(08).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Ulica_Khaosan_(08).jpg",
+     "selite": "Kadun varrella on majataloja, kojuja ja ravintoloita.",
+     "leveys": 4974,
+     "korkeus": 3316,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1640197",
+   "nimi": "King Power Mahanakhon",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 13.72361,
+   "lon": 100.52833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bangkok - King Power Mahanakhon คิง เพาเวอร์ มหานคร 2021 May.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_-_King_Power_Mahanakhon_%E0%B8%84%E0%B8%B4%E0%B8%87_%E0%B9%80%E0%B8%9E%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_2021_May.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_-_King_Power_Mahanakhon_%E0%B8%84%E0%B8%B4%E0%B8%87_%E0%B9%80%E0%B8%9E%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_2021_May.jpg",
+     "selite": "Mahanakhon on pikselimäisesti kaiverretun julkisivunsa vuoksi tunnistettava Bangkokin pilvenpiirtäjä.",
+     "leveys": 2110,
+     "korkeus": 3753,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mahanakhon 2019 Novembre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mahanakhon_2019_Novembre.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mahanakhon_2019_Novembre.jpg",
+     "selite": "Tornin huipulla on näköalatasanne koko Bangkokin yllä.",
+     "leveys": 2443,
+     "korkeus": 3258,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1092231",
+   "nimi": "Rama VIII -silta",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 13.76917,
+   "lon": 100.49681,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bangkok - Rama VIII Bridge at sunrise Jan 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_-_Rama_VIII_Bridge_at_sunrise_Jan_2024.jpg?width=1280",
+     "tekija": "Dominic Nelson",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_-_Rama_VIII_Bridge_at_sunrise_Jan_2024.jpg",
+     "selite": "Rama VIII -silta on vinoköysisilta, jonka yksi korkea pylonin ylittää Chao Phrayan.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rama VIII Bridge from the Bank of Thailand Learning Center, December 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rama_VIII_Bridge_from_the_Bank_of_Thailand_Learning_Center%2C_December_2024.jpg?width=1280",
+     "tekija": "Paul_012",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rama_VIII_Bridge_from_the_Bank_of_Thailand_Learning_Center%2C_December_2024.jpg",
+     "selite": "Sillan kaarevat köydet muodostavat tunnistettavan siluetin joen yllä.",
+     "leveys": 3788,
+     "korkeus": 2526,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2166761",
+   "nimi": "Wat Suthat",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 13.75105,
+   "lon": 100.50107,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Bangkok, Dystrykt Phra Nakhon, Wat Suthat (34).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Wat_Suthat_(34).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Wat_Suthat_(34).jpg",
+     "selite": "Wat Suthat on kuninkaallinen temppeli, jonka valtava sali on Bangkokin suurimpia.",
+     "leveys": 4478,
+     "korkeus": 3213,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wat suthud.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_suthud.jpg?width=1280",
+     "tekija": "BerryJ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wat_suthud.jpg",
+     "selite": "Illan sinisessä hämärässä temppelin sali hohtaa valaistuna.",
+     "leveys": 7360,
+     "korkeus": 4912,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Bangkok, Dystrykt Phra Nakhon, Wat Suthat (15).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Wat_Suthat_(15).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Phra_Nakhon%2C_Wat_Suthat_(15).jpg",
+     "selite": "Temppelin pihaa kiertävät katetut kuvagalleriat.",
+     "leveys": 4925,
+     "korkeus": 3283,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2529957",
+   "nimi": "Kultainen Buddha (Wat Traimit)",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 13.73807,
+   "lon": 100.51392,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Bangkok, Dystrykt Samphanthawong, Wat Traimit Witthayaram (17).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Samphanthawong%2C_Wat_Traimit_Witthayaram_(17).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Samphanthawong%2C_Wat_Traimit_Witthayaram_(17).jpg",
+     "selite": "Wat Traimitin kultainen Buddha on massiivisesta kullasta valettu istuva patsas Chinatownin laidalla.",
+     "leveys": 2928,
+     "korkeus": 4698,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Bangkok, Dystrykt Samphanthawong, Wat Traimit Witthayaram (22).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Bangkok%2C_Dystrykt_Samphanthawong%2C_Wat_Traimit_Witthayaram_(22).jpg?width=1280",
+     "tekija": "Marcin Konsek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Bangkok%2C_Dystrykt_Samphanthawong%2C_Wat_Traimit_Witthayaram_(22).jpg",
+     "selite": "Patsaan säteilevä kultapinta tekee siitä yhden Bangkokin tunnetuimmista pyhistä esineistä.",
+     "leveys": 2688,
+     "korkeus": 4405,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1255815",
+   "nimi": "Bangkokin kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 13.75783,
+   "lon": 100.49231,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bangkok National Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_National_Museum.jpg?width=1280",
+     "tekija": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and may send me a message. (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_National_Museum.jpg",
+     "selite": "Kansallismuseo säilyttää Thaimaan historian ja taiteen aarteita entisessä etupalatsissa.",
+     "leveys": 5616,
+     "korkeus": 3744,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bangkok National Museum 2018-12-21 (33).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_National_Museum_2018-12-21_(33).jpg?width=1280",
+     "tekija": "Index Librorum Permissorum",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_National_Museum_2018-12-21_(33).jpg",
+     "selite": "Museon kuninkaallinen ruumisvaunu on koristeellista puuveistotaidetta.",
+     "leveys": 3954,
+     "korkeus": 2122,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Bangkok skytrain sunset.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_skytrain_sunset.jpg?width=1280",
+   "tekija": "User:Diliff",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_skytrain_sunset.jpg",
+   "selite": "Bangkokin keskustan pilvenpiirtäjät ja kohotettu BTS-rata auringonlaskussa.",
+   "leveys": 3072,
+   "korkeus": 2048,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Bangkok skyline September 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bangkok_skyline_September_2022.jpg?width=1280",
+   "tekija": "Bigcitydata",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bangkok_skyline_September_2022.jpg",
+   "selite": "Bangkokin tiheä pilvenpiirtäjäkeskusta näkyy korkealta kuvattuna kilometrien päähän.",
+   "leveys": 3959,
+   "korkeus": 1714,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -2,6 +2,121 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (165)",
+   "paiva": "2026-10-08",
+   "teksti": "Olavinlinnan kappelissa ratkaistaan valoarvoitus ja esineitä käännetään vetämällä. Kuumailmapallo lipuu kohti seuraavaa kohdetta, ja ☾-napista valitaan päivä tai yö ja sää tai LIVE eli kaupungin todellinen aika ja sää. Latauskuva täyttää ruudun myös laitetta käännettäessä."
+  },
+  {
+   "versio": "1.1 (164)",
+   "paiva": "2026-10-08",
+   "teksti": "Olavinlinnan ensimmäinen pelattava pala: hiivi omin silmin veneestä kappeliin ja vältä vartijat, tai päädyt tyrmään. Kuumailmapallo lentää ja laskeutuu pehmeästi, ja kuvien tekijät ovat uudella Lähteet-sivulla. ISS-kyydissä on Euroopan kevään satelliittikuvat."
+  },
+  {
+   "versio": "1.1 (163)",
+   "paiva": "2026-10-07",
+   "teksti": "Korjauksia edelliseen: kuumailmapallon kori ja köydet näkyvät koko oppaan ajan, ja kaupungin kerronta alkaa vasta latauksen jälkeen. Rakennukset tarkentuvat pysähdyksissä, kirkonkello lyö oikein ja yksityiskohtakuvien tekstit ja asettelu on korjattu."
+  },
+  {
+   "versio": "1.1 (162)",
+   "paiva": "2026-10-07",
+   "teksti": "Kuumailmapallo on valmis: kaupunkiin siirryttäessä näkyy latauskuva, kerronnassa yksityiskohtakuvia ja 31 kaupungissa äänetön esitys. Aloituslento alkaa pehmeästi ilman yöpuolta, ja ISS-kyydissä Eurooppa näkyy syksyn värein. Apurahakortissa on kuvat ja Valmiit linssit -nappi."
+  },
+  {
+   "versio": "1.1 (161)",
+   "paiva": "2026-10-07",
+   "teksti": "Kuumailmapalloja voi taas napauttaa kosketuksella ja Macilla, ja niitä näkyy vain nykyisessä maassa. Introssa kuuluu kirjoituskone, ja metrolinja on vasemmassa yläreunassa. Macilla kuva ei repeile ja peli lepää taustalla; kehittäjä- ja testaajatila avautuvat koodilla."
+  },
+  {
+   "versio": "1.1 (160)",
+   "paiva": "2026-10-07",
+   "teksti": "Kaupungeissa kuuluu nyt oma äänimaisema, ja kirkonkellot lyövät tasatunnein. Elävän oppaan nimi on nyt Kuumailmapallo, ja apurahakortti kertoo hankkeesta ja kuvien tekijöistä. ISS-ohjaamon näytössä paikannimet ovat suomeksi, ja iPadin vaakanäkymässä paneeli seisoo jalan päällä."
+  },
+  {
+   "versio": "1.1 (159)",
+   "paiva": "2026-10-07",
+   "teksti": "Kartalla on kuumailmapallo jokaisessa kaupungissa, josta on tarkka 3D-näkymä. Napauta palloa, niin opas avaa suoraan sen kaupungin. Kaupungissa opas liikkuu vain kaupungin sisällä, eikä valikossa ole Vaihda kohde -kohtaa."
+  },
+  {
+   "versio": "1.1 (158)",
+   "paiva": "2026-10-07",
+   "teksti": "Oppaalta voi nyt pyytää kohdetta toisesta kaupungista, ja se lentää suoraan perille. Kuvakortti vaihtuu kaupungin mukana. Varsova jäi pois, koska sen 3D-kartasta puuttuu paloja."
+  },
+  {
+   "versio": "1.1 (157)",
+   "paiva": "2026-10-07",
+   "teksti": "Elävä opas vie nyt vain kaupunkeihin, joissa on tarkka 3D-malli, ja paikan valinta näyttää ne Euroopan maittain. Suosikeissa on vain näiden kaupunkien kohteita. Jos pyydät muuhun kaupunkiin, opas kertoo, ettei paikkaa ole vielä kuvattu tarpeeksi tarkasti."
+  },
+  {
+   "versio": "1.1 (156)",
+   "paiva": "2026-10-07",
+   "teksti": "Linnan hahmot elehtivät puheen tahdissa, ja kuulijat nyökkäävät. Oppaassa on Seuraava-nappi, latauksen ajan näkyy kuva, iPadin ohjaimet ovat lähempänä peukaloita ja lennot ovat pehmeämmät. Eiffel-torni ja muut korkeat kohteet näkyvät kokonaan, ja illalla kaupunki valaistuu."
+  },
+  {
+   "versio": "1.1 (155)",
+   "paiva": "2026-10-07",
+   "teksti": "Kiinnitetyn noston luenta jatkuu nyt oikeasta kohdasta, ja kiinnitetty palkki näyttää koko otsikon suurennuslasin vieressä. Noston yläriville tuli kategoriarivi ja etenemispalkki koko nostolle. Avaruudesta katsottuna pilvet ja merisumu ovat pehmeämmät."
+  },
+  {
+   "versio": "1.1 (154)",
+   "paiva": "2026-10-06",
+   "teksti": "Linssivalikossa on nyt kuvat, ja kaupunkinäkymän sävy seuraa paikallista vuorokaudenaikaa. Oppaan nappirivi piiloutuu väkäsen alle, kuvanappi on pienempi ja noston ylärivi on selkeämpi. Opas puhuu ilman katkoja, ja ISS-ikkunan meri on yhtenäisen sininen."
+  },
+  {
+   "versio": "1.1 (153)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas vastaa nyt kysymyksiin ja löytää kohteet kaikissa kaupungeissa; uutena ”Mikä tämä on?” ja vuorokausinappi. Kaupunki näkyy saapuessa nopeasti ja tarkentuu, eikä karttalähteiden rivi enää välähdä. Peli alkaa mustalla ruudulla ilman ylisuurta logoa."
+  },
+  {
+   "versio": "1.1 (152)",
+   "paiva": "2026-10-06",
+   "teksti": "ISS-kameran juliste on uudistettu: uusi ikkunakehys, logo avaruudessa, pilvet sivuilla ja sinisemmät sävyt. iPadin ohjaamon ikkunassa näkyy enemmän kehystä, ja satelliittikuvien virheitä on korjattu. Opas lataa kaupunkikuvan uudelleen, jos Googlen palvelu ruuhkautuu."
+  },
+  {
+   "versio": "1.1 (151)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas puhuu loppuun asti, näyttää kohteet lähempää ja keskeyttää kierroksen vastatakseen kysymykseesi; kierroksen voi jatkaa tai lopettaa. Peli alkaa mustalla ruudulla ja logolla. Maakunnat avautuvat nostokorttina, ja kuvien tekijät näkyvät korteissa."
+  },
+  {
+   "versio": "1.1 (150)",
+   "paiva": "2026-10-06",
+   "teksti": "Peli saa suurilla iPadeilla käyttöönsä enemmän muistia, mikä vähentää kaatumisia raskaissa näkymissä."
+  },
+  {
+   "versio": "1.1 (149)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas käyttää suurilla iPadeilla selvästi vähemmän muistia. Nostojen Kysy avaa Pulun chatin matalana kohteen omiin kysymyksiin, pin nostaa chatin yläreunaan, ja Pulun luennan voi pysäyttää. Noston tekstiä voi napauttaa ilman, että kortti sulkeutuu."
+  },
+  {
+   "versio": "1.1 (148)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävän oppaan kanssa voi nyt jutella puhumalla tai kirjoittamalla, ja toiseen kaupunkiin siirrytään latausruudun kautta. Kysy tarjoaa valmiita kysymyksiä, ja Liiku näyttää kaupungin tärkeimmät kohteet ja kaupunkikierroksen. ISS-ohjaamossa on uusi paneeli ja portaaton nopeus."
+  },
+  {
+   "versio": "1.1 (146)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas tarjoaa kohteita heti, sanoo nimet Williamin äänellä, lentää nopeammin ja pysähtyy tauolle. Kohteista on useita kuvia, kaupunki vaihtuu yhdellä napautuksella, eikä kartalle jää tummaa vyötä. Pin kiinnittää luennan, nimikyltit häviävät, ja ISS-sauva ei vedä vasemmalle."
+  },
+  {
+   "versio": "1.1 (145)",
+   "paiva": "2026-10-05",
+   "teksti": "Elävää opasta ohjataan nyt ruudun kulmien ohjaimilla: kierrä kohdetta, nouse tai tule lähemmäs. Kohde korostuu renkaalla tai reitillä. Olavinlinnan kappelissa puhujan kasvot näkyvät ja hahmot elehtivät, ja ISS-kuvissa on oikeat pilvet."
+  },
+  {
+   "versio": "1.1 (144)",
+   "paiva": "2026-10-05",
+   "teksti": "Uutta: elävä opas, joka esittelee kaupunkeja kaikkialla maailmassa reaaliajassa, ensimmäisenä Kööpenhaminan. Ohjaa sitä vastausnapeilla tai puheella. ISS-ohjaamo on uudistettu, lukijana on William ja Olavinlinna latautuu latauspalkin kanssa."
+  },
+  {
+   "versio": "1.1 (143)",
+   "paiva": "2026-10-05",
+   "teksti": "Uusi minipeli Tavli kolmella laudalla. Olavinlinna latautuu nopeammin, kertoja ja äänet soivat ilman katkoja, ja valaistus ja rantametsä ovat uudet. Linssivalikko on selkeämpi, ja auringon kiilto näkyy vain vedessä."
+  },
+  {
+   "versio": "1.1 (142)",
+   "paiva": "2026-10-05",
+   "teksti": "Jatka matkaa -napin jälkeen Pulu ei enää lue, ja lukijan äänen voi vaihtaa kesken lukemisen. ISS-kameraan tuli 15 eurooppalaista kohdetta, ja suuret kuvat avautuvat luotettavasti. Olavinlinnan kamera liikkuu pehmeästi, kertoja kuuluu selvästi ja Myllyssä on äänet."
+  },
+  {
    "versio": "1.1 (141)",
    "paiva": "2026-10-04",
    "teksti": "Olavinlinna aukeaa iPhonella vaakana. Huoneiden nimilaput ja kortit ovat nyt keskiaikaisia käsikirjoituksia: laput tulevat näkyviin kohteiden kohdalle sitä mukaa kuin lähestyt, ja kortti avautuu selitettävän kohteen viereen. Huoneet-valikko mahtuu vaakaruudulle."

@@ -1,0 +1,464 @@
+{
+ "kaupunki": "houston",
+ "kaupunkiQ": "Q16555",
+ "kohteet": [
+  {
+   "q": "Q208371",
+   "nimi": "Johnsonin avaruuskeskus",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 29.55833,
+   "lon": -95.08889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial View of the Johnson Space Center - GPN-2000-001112.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_View_of_the_Johnson_Space_Center_-_GPN-2000-001112.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_the_Johnson_Space_Center_-_GPN-2000-001112.jpg",
+     "selite": "Johnsonin avaruuskeskus on NASAn miehitettyjen avaruuslentojen ohjauskeskus Houstonin kaakkoispuolella.",
+     "leveys": 3000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ant's-Eye View of Chamber A's Massive Door (38515689712).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ant's-Eye_View_of_Chamber_A's_Massive_Door_(38515689712).jpg?width=1280",
+     "tekija": "Chris Gunn",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ant's-Eye_View_of_Chamber_A's_Massive_Door_(38515689712).jpg",
+     "selite": "Johnsonin avaruuskeskuksen valtavan tyhjiökammion ovessa on NASAn tunnus.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1025406",
+   "nimi": "Astrodome",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 29.685,
+   "lon": -95.40778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Reliant Astrodome in January 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reliant_Astrodome_in_January_2014.jpg?width=1280",
+     "tekija": "EricEnfermero",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Reliant_Astrodome_in_January_2014.jpg",
+     "selite": "Astrodome oli maailman ensimmäinen kupolilla katettu urheilustadion, ja se seisoo edelleen Houstonissa.",
+     "leveys": 3015,
+     "korkeus": 1696,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Astrodome scoreboard 1969.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astrodome_scoreboard_1969.jpg?width=1280",
+     "tekija": "Bill Wilson from Oklahoma City, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astrodome_scoreboard_1969.jpg",
+     "selite": "Astrodomen sisällä 1960-luvun valtava tulostaulu hallitsi katsomoa kentän yllä.",
+     "leveys": 2047,
+     "korkeus": 1327,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1058864",
+   "nimi": "NRG Stadium",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 29.68472,
+   "lon": -95.41083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Reliantstadium.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reliantstadium.jpg?width=1280",
+     "tekija": "User eschipul on Flickr",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Reliantstadium.jpg",
+     "selite": "NRG Stadium on Houston Texansin jalkapallostadion, jossa on avattava katto.",
+     "leveys": 2560,
+     "korkeus": 1422,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "170131-H-NI589-0597.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/170131-H-NI589-0597.jpg?width=1280",
+     "tekija": "CBP Photography",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:170131-H-NI589-0597.jpg",
+     "selite": "Stadionin julkisivulla näkyy suuri NRG-logo ja Super Bowlin mainos.",
+     "leveys": 5016,
+     "korkeus": 3365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q935919",
+   "nimi": "JPMorgan Chase Tower",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 29.76056,
+   "lon": -95.36389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bayou Place in Downtown Houston 3.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bayou_Place_in_Downtown_Houston_3.JPG?width=1280",
+     "tekija": "Agsftw",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bayou_Place_in_Downtown_Houston_3.JPG",
+     "selite": "JPMorgan Chase Tower kohoaa Houstonin keskustassa Texasin korkeimpana rakennuksena.",
+     "leveys": 6016,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ChaseTower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ChaseTower.jpg?width=1280",
+     "tekija": "iodine127",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ChaseTower.jpg",
+     "selite": "Tornin lasikuoren ja kulmikkaan pylvään alta katsottuna se näyttää loputtomalta.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q104844896",
+   "nimi": "Buffalo Bayoun puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 29.761,
+   "lon": -95.384,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Houston May 2022 13 (Buffalo Bayou Park and skyline).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Houston_May_2022_13_(Buffalo_Bayou_Park_and_skyline).jpg?width=1280",
+     "tekija": "Michael Barera",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houston_May_2022_13_(Buffalo_Bayou_Park_and_skyline).jpg",
+     "selite": "Buffalo Bayoun puiston kautta kulkeva puro vie kaupungin keskustan siluetin juurelle.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Buffalo Bayou looking towards Downtown Houston.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Buffalo_Bayou_looking_towards_Downtown_Houston.jpg?width=1280",
+     "tekija": "LithiumAneurysm",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Buffalo_Bayou_looking_towards_Downtown_Houston.jpg",
+     "selite": "Bayoun vihreän rannan takaa avautuu näkymä Houstonin keskustaan.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3134180",
+   "nimi": "Hermann Park",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 29.71826,
+   "lon": -95.39093,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sam Houston monument, Hermann Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sam_Houston_monument%2C_Hermann_Park.jpg?width=1280",
+     "tekija": "Another Believer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sam_Houston_monument%2C_Hermann_Park.jpg",
+     "selite": "Hermann Parkin sisäänkäynnillä seisoo Sam Houstonin ratsastajapatsas valtavan kaaren päällä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "'Atropos Key', sculpture by Hannah Holliday Stewart.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/'Atropos_Key'%2C_sculpture_by_Hannah_Holliday_Stewart.jpg?width=1280",
+     "tekija": "Brandon Price (Flickr user BPPrice)",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:'Atropos_Key'%2C_sculpture_by_Hannah_Holliday_Stewart.jpg",
+     "selite": "Hermann Parkin nurmikentällä seisoo Atropos Key -veistos sinistä taivasta vasten.",
+     "leveys": 5704,
+     "korkeus": 3808,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1357650",
+   "nimi": "Williams Tower",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 29.73722,
+   "lon": -95.46139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Archive williams tower - Flickr - mRio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Archive_williams_tower_-_Flickr_-_mRio.jpg?width=1280",
+     "tekija": "mario",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Archive_williams_tower_-_Flickr_-_mRio.jpg",
+     "selite": "Williams Towerin sinertävä lasipinta kimaltaa Galleria-alueen yllä.",
+     "leveys": 2500,
+     "korkeus": 1804,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Balloon In City1 Bill Jacobus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Balloon_In_City1_Bill_Jacobus.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Billjacobus1 assumed (based on copyright claims).",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Balloon_In_City1_Bill_Jacobus.jpg",
+     "selite": "Williams Tower erottuu Houstonin siluetista kapeana lasitornina.",
+     "leveys": 2003,
+     "korkeus": 1480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1193671",
+   "nimi": "Daikin Park",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 29.75694,
+   "lon": -95.35556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Astros at Minutemaid Park (131467422).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Astros_at_Minutemaid_Park_(131467422).jpg?width=1280",
+     "tekija": "Ed Schipul from Houston, TX, US",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Astros_at_Minutemaid_Park_(131467422).jpg",
+     "selite": "Daikin Parkin baseball-stadionin vanha asemarakennus ja suljettava katto näkyvät Houstonin keskustassa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Minute Maid Park 2010.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minute_Maid_Park_2010.JPG?width=1280",
+     "tekija": "Delaywaves",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minute_Maid_Park_2010.JPG",
+     "selite": "Stadionin kenttä ja katsomo avautuvat vanhan asemarakennuksen julkisivun edessä.",
+     "leveys": 2681,
+     "korkeus": 2011,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1888308",
+   "nimi": "Menil Collection",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 29.73734,
+   "lon": -95.39851,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "MenilCollection.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/MenilCollection.JPG?width=1280",
+     "tekija": "WhisperToMe",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:MenilCollection.JPG",
+     "selite": "Menil Collectionin matala teräsrunkoinen museorakennus seisoo vehreällä nurmikolla Montrosen kaupunginosassa.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1166157",
+   "nimi": "Toyota Center",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 29.75083,
+   "lon": -95.36222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Toyota Center entr.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Center_entr.jpg?width=1280",
+     "tekija": "Ed Uthman from Houston, TX, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Toyota_Center_entr.jpg",
+     "selite": "Toyota Centerin sisäänkäynti on Houston Rocketsin kotihallin ja suurten konserttien pääovi.",
+     "leveys": 6048,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7407645",
+   "nimi": "Sam Houston Park",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 29.76,
+   "lon": -95.372,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nichols-Rice-Cherry House.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nichols-Rice-Cherry_House.jpg?width=1280",
+     "tekija": "little black spot on the sun today",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nichols-Rice-Cherry_House.jpg",
+     "selite": "Sam Houston Parkissa säilytetään vanhoja Houstonin taloja, kuten tämä pylväsparvekkeinen Nichols-Rice-Cherry-talo.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "FourthWardCottageSamHoustonParkHoustonTX.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FourthWardCottageSamHoustonParkHoustonTX.jpg?width=1280",
+     "tekija": "WhisperToMe",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FourthWardCottageSamHoustonParkHoustonTX.jpg",
+     "selite": "Puiston pieni hirsimökki on 1800-luvun asukkaiden asuinpaikka pilvenpiirtäjien alla.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6306479",
+   "nimi": "Julia Ideson -rakennus",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 29.75889,
+   "lon": -95.36917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Houston May 2022 33 (Houston Public Library Julia Ideson Building).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Houston_May_2022_33_(Houston_Public_Library_Julia_Ideson_Building).jpg?width=1280",
+     "tekija": "Michael Barera",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houston_May_2022_33_(Houston_Public_Library_Julia_Ideson_Building).jpg",
+     "selite": "Julia Ideson -rakennus on Houstonin vanha kirjastotalo keskustassa pilvenpiirtäjien keskellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "HPLIdesonBuilding0.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HPLIdesonBuilding0.JPG?width=1280",
+     "tekija": "WhisperToMe",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HPLIdesonBuilding0.JPG",
+     "selite": "Kirjastotalon espanjalaistyylinen julkisivu avautuu puiden takaa.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5543614",
+   "nimi": "George R. Brown -kongressikeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 29.75222,
+   "lon": -95.35778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "George R. Brown Convention Center 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/George_R._Brown_Convention_Center_2.jpg?width=1280",
+     "tekija": "Brian Reading",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:George_R._Brown_Convention_Center_2.jpg",
+     "selite": "Brownin kongressikeskus on Houstonin keskustan laaja tapahtumakeskus Discovery Greenin vieressä.",
+     "leveys": 8696,
+     "korkeus": 2239,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Downtown Houston, TX Skyline - 2018.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Downtown_Houston%2C_TX_Skyline_-_2018.jpg?width=1280",
+   "tekija": "David Daniel Turner",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Downtown_Houston%2C_TX_Skyline_-_2018.jpg",
+   "selite": "Houstonin keskustan pilvenpiirtäjät erottuvat kirkasta taivasta vasten matalan esikaupungin takaa.",
+   "leveys": 4320,
+   "korkeus": 2160,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Houston, Texas Skyline 2017.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Houston%2C_Texas_Skyline_2017.jpg?width=1280",
+   "tekija": "Jason Villanueva",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Houston%2C_Texas_Skyline_2017.jpg",
+   "selite": "Houstonin siluetti kohoaa asuinalueiden yli selkeänä päivänä.",
+   "leveys": 3840,
+   "korkeus": 2560,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

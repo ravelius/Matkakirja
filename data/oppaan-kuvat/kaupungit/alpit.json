@@ -1,0 +1,486 @@
+{
+ "kaupunki": "alpit",
+ "kaupunkiQ": "Q1286",
+ "kohteet": [
+  {
+   "q": "Q1374",
+   "nimi": "Matterhorn",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 45.97639,
+   "lon": 7.65861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Matterhorn, March 2019 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn%2C_March_2019_(01).jpg?width=1280",
+     "tekija": "Liridon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Matterhorn%2C_March_2019_(01).jpg",
+     "selite": "Matterhorn on Sveitsin ja Italian rajalla kohoava, helposti tunnistettava pyramidinmuotoinen vuori.",
+     "leveys": 5827,
+     "korkeus": 3885,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Matterhorn Riffelsee 2005-06-11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn_Riffelsee_2005-06-11.jpg?width=1280",
+     "tekija": "Dirk Beyer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Matterhorn_Riffelsee_2005-06-11.jpg",
+     "selite": "Riffelsee-järven pinnassa Matterhornin terävä huippu heijastuu tyynellä säällä.",
+     "leveys": 1352,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Matterhorn sunset 2016 (Unsplash).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matterhorn_sunset_2016_(Unsplash).jpg?width=1280",
+     "tekija": "Sam Ferrara samferrara",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Matterhorn_sunset_2016_(Unsplash).jpg",
+     "selite": "Auringonlaskun väreissä vuoren huippua ympäröi usein pilvi.",
+     "leveys": 3840,
+     "korkeus": 2560,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Aerial image of Matterhorn (view from the south).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_image_of_Matterhorn_(view_from_the_south).jpg?width=1280",
+     "tekija": "Carsten Steger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_image_of_Matterhorn_(view_from_the_south).jpg",
+     "selite": "Etelästä katsottuna vuoren jyrkät kallioseinät näkyvät lähietäisyydeltä.",
+     "leveys": 5400,
+     "korkeus": 3500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q583",
+   "nimi": "Mont Blanc",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 45.83278,
+   "lon": 6.865,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Massif du Mont Blanc.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Massif_du_Mont_Blanc.JPG?width=1280",
+     "tekija": "Ymaup",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Massif_du_Mont_Blanc.JPG",
+     "selite": "Mont Blanc on Alppien korkein huippu Ranskan ja Italian rajalla.",
+     "leveys": 2816,
+     "korkeus": 1584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Massif du Mont-Blanc from Lac de Joux Plane 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Massif_du_Mont-Blanc_from_Lac_de_Joux_Plane_03.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Massif_du_Mont-Blanc_from_Lac_de_Joux_Plane_03.jpg",
+     "selite": "Jäätiköiden peittämä Mont Blancin massiivi heijastuu Joux Plane -järveen.",
+     "leveys": 6478,
+     "korkeus": 2798,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mont-Blanc, Mont Tondu, Aiguille des Glaciers.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mont-Blanc%2C_Mont_Tondu%2C_Aiguille_des_Glaciers.jpg?width=1280",
+     "tekija": "Yann Forget",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mont-Blanc%2C_Mont_Tondu%2C_Aiguille_des_Glaciers.jpg",
+     "selite": "Massiivin huiput ja jäätiköt nousevat jyrkkinä kallioseininä.",
+     "leveys": 2441,
+     "korkeus": 1654,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15312",
+   "nimi": "Jungfrau",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 46.53694,
+   "lon": 7.9625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "JungfrauSwissAlps.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/JungfrauSwissAlps.jpg?width=1280",
+     "tekija": "Jasper.tm",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:JungfrauSwissAlps.jpg",
+     "selite": "Jungfrau on Bernin Alppien tunnettu lumihuippu Sveitsissä.",
+     "leveys": 3840,
+     "korkeus": 2560,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Swiss Skyline(Eiger, Monch and Jungfrau), Birg, Schilthorn (Ank Kumar) 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swiss_Skyline(Eiger%2C_Monch_and_Jungfrau)%2C_Birg%2C_Schilthorn_(Ank_Kumar)_01.jpg?width=1280",
+     "tekija": "Ank kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Swiss_Skyline(Eiger%2C_Monch_and_Jungfrau)%2C_Birg%2C_Schilthorn_(Ank_Kumar)_01.jpg",
+     "selite": "Jungfrau muodostaa Eigerin ja Mönchin kanssa Bernin Alppien kuuluisan vuoritrion.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4425",
+   "nimi": "Eiger",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 46.57761,
+   "lon": 8.00529,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 3442 Grindelwald - Eiger (Schweiz).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_3442_Grindelwald_-_Eiger_(Schweiz).jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_3442_Grindelwald_-_Eiger_(Schweiz).jpg",
+     "selite": "Eigerin pohjoisseinämä kohoaa Grindelwaldin laakson yläpuolelle.",
+     "leveys": 2667,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grosse Scheidegg, polygonum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grosse_Scheidegg%2C_polygonum.JPG?width=1280",
+     "tekija": "[mailto: compostar@outlook.com.com Tinelot Wittermans]",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grosse_Scheidegg%2C_polygonum.JPG",
+     "selite": "Eiger näkyy kukkivan alppiniityn takana Grosse Scheideggin suunnalta.",
+     "leveys": 1569,
+     "korkeus": 1074,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "048 Eiger at end of Sunset Photo by Giles Laurent.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/048_Eiger_at_end_of_Sunset_Photo_by_Giles_Laurent.jpg?width=1280",
+     "tekija": "Giles Laurent",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:048_Eiger_at_end_of_Sunset_Photo_by_Giles_Laurent.jpg",
+     "selite": "Auringonlaskun jälkeen vuoren seinämä hehkuu violetinpunaisena.",
+     "leveys": 7952,
+     "korkeus": 5304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q27494",
+   "nimi": "Zermatt",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 46.0193,
+   "lon": 7.7461,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View of the Matterhorn from Zermatt village.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_the_Matterhorn_from_Zermatt_village.jpg?width=1280",
+     "tekija": "TiagoSanchez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_the_Matterhorn_from_Zermatt_village.jpg",
+     "selite": "Zermatt on autoton vuoristokylä Matterhornin juurella.",
+     "leveys": 3999,
+     "korkeus": 5346,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Matterhorn from Zermatt village, Valais, Switzerland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Matterhorn_from_Zermatt_village%2C_Valais%2C_Switzerland.jpg?width=1280",
+     "tekija": "Alltheswissthings",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Matterhorn_from_Zermatt_village%2C_Valais%2C_Switzerland.jpg",
+     "selite": "Kylän puutalojen yli kohoaa Matterhorn.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q83236",
+   "nimi": "Chamonix",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 45.92222,
+   "lon": 6.86889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vallée de Chamonix vue du col de Voza (juin 2019).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vall%C3%A9e_de_Chamonix_vue_du_col_de_Voza_(juin_2019).JPG?width=1280",
+     "tekija": "Florian Pépellin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vall%C3%A9e_de_Chamonix_vue_du_col_de_Voza_(juin_2019).JPG",
+     "selite": "Chamonixin laakso avautuu Mont Blancin vuoriston juurella Ranskan Alpeilla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arveyron, railway line Chemin de fer du Montenvers, Signal Forbes, Grand Balcon Nord and Montagne de Blaitière, Les Praz-de-Chamonix (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arveyron%2C_railway_line_Chemin_de_fer_du_Montenvers%2C_Signal_Forbes%2C_Grand_Balcon_Nord_and_Montagne_de_Blaiti%C3%A8re%2C_Les_Praz-de-Chamonix_(cropped).jpg?width=1280",
+     "tekija": "Tangopaso, photocropper (and text for the cropped photo): Ludwig Sebastian Micheler",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arveyron%2C_railway_line_Chemin_de_fer_du_Montenvers%2C_Signal_Forbes%2C_Grand_Balcon_Nord_and_Montagne_de_Blaiti%C3%A8re%2C_Les_Praz-de-Chamonix_(cropped).jpg",
+     "selite": "Chamonixin kaupunki ja rautatie näkyvät laakson pohjalla jyrkkien vuorten välissä.",
+     "leveys": 3995,
+     "korkeus": 2047,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1283",
+   "nimi": "Dolomiitit",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 46.61306,
+   "lon": 12.16306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Drei Zinnen Tre Cime di Lavaredo Dolomites.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Drei_Zinnen_Tre_Cime_di_Lavaredo_Dolomites.jpg?width=1280",
+     "tekija": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Drei_Zinnen_Tre_Cime_di_Lavaredo_Dolomites.jpg",
+     "selite": "Dolomiitit ovat Koillis-Italian vaaleista kalliohuipuista tunnettu vuoristo.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Valle della Rienza and Tre Cime di Lavaredo from Alpe Specie, Val Pusteria, Trentino-Alto Adige, Italy, 2025 October.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valle_della_Rienza_and_Tre_Cime_di_Lavaredo_from_Alpe_Specie%2C_Val_Pusteria%2C_Trentino-Alto_Adige%2C_Italy%2C_2025_October.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Valle_della_Rienza_and_Tre_Cime_di_Lavaredo_from_Alpe_Specie%2C_Val_Pusteria%2C_Trentino-Alto_Adige%2C_Italy%2C_2025_October.jpg",
+     "selite": "Tre Cime di Lavaredon kolme huippua ovat Dolomiittien tunnetuimpia maamerkkejä.",
+     "leveys": 5460,
+     "korkeus": 3030,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Croda dei Toni and Tre Cime di Lavaredo from Monte Specie, Val Pusteria, Trentino-Alto Adige, Italy, 2025 October.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Croda_dei_Toni_and_Tre_Cime_di_Lavaredo_from_Monte_Specie%2C_Val_Pusteria%2C_Trentino-Alto_Adige%2C_Italy%2C_2025_October.jpg?width=1280",
+     "tekija": "Ximonic (Simo Räsänen)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Croda_dei_Toni_and_Tre_Cime_di_Lavaredo_from_Monte_Specie%2C_Val_Pusteria%2C_Trentino-Alto_Adige%2C_Italy%2C_2025_October.jpg",
+     "selite": "Jyrkät dolomiittiseinät nousevat laaksojen yläpuolelle.",
+     "leveys": 5500,
+     "korkeus": 2735,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q204658",
+   "nimi": "Aletschjäätikkö",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 46.44222,
+   "lon": 8.07722,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grosser Aletschgletscher 3196.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grosser_Aletschgletscher_3196.JPG?width=1280",
+     "tekija": "Dirk Beyer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grosser_Aletschgletscher_3196.JPG",
+     "selite": "Aletschjäätikkö on Alppien pisin jäätikkö, ja se kiemurtelee Sveitsin Valais'n vuorten välissä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aletschgletscher mit Pinus cembra1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aletschgletscher_mit_Pinus_cembra1.jpg?width=1280",
+     "tekija": "Jo Simon on Flickr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aletschgletscher_mit_Pinus_cembra1.jpg",
+     "selite": "Jäätikön reunalla kasvaa arolehtikuusia ja havupuita.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Glacier d'Aletsch - 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glacier_d'Aletsch_-_2021.jpg?width=1280",
+     "tekija": "Christian David",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glacier_d'Aletsch_-_2021.jpg",
+     "selite": "Jäätikön rungossa näkyvät pitkät moreeniraidat.",
+     "leveys": 5249,
+     "korkeus": 3499,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3388",
+   "nimi": "Grossglockner",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": 47.07453,
+   "lon": 12.69385,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kaiser-Frans-Josefs-Höhe view.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kaiser-Frans-Josefs-H%C3%B6he_view.JPG?width=1280",
+     "tekija": "Iamthestig",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kaiser-Frans-Josefs-H%C3%B6he_view.JPG",
+     "selite": "Grossglockner on Itävallan korkein vuori, ja sen juurella virtaa Pasterze-jäätikkö.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "30.10.2021 - Der traurige Rest des Gletschers am Großglockner. 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/30.10.2021_-_Der_traurige_Rest_des_Gletschers_am_Gro%C3%9Fglockner._05.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:30.10.2021_-_Der_traurige_Rest_des_Gletschers_am_Gro%C3%9Fglockner._05.jpg",
+     "selite": "Pasterzen jäätikkö on vetäytynyt vuosikymmenten aikana huomattavasti.",
+     "leveys": 6295,
+     "korkeus": 3177,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q34713",
+   "nimi": "Salzburg",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 47.8,
+   "lon": 13.045,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old Town Salzburg across the Salzach river.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Salzburg_across_the_Salzach_river.jpg?width=1280",
+     "tekija": "Jiuguang Wang",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Salzburg_across_the_Salzach_river.jpg",
+     "selite": "Salzburgin vanhakaupunki ja Hohensalzburgin linna kohoavat Salzach-joen yllä Alppien reunalla.",
+     "leveys": 5538,
+     "korkeus": 3692,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Salzburg town from Salzburg Fortress.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Salzburg_town_from_Salzburg_Fortress.jpg?width=1280",
+     "tekija": "mendhak",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Salzburg_town_from_Salzburg_Fortress.jpg",
+     "selite": "Linnoitukselta avautuu näkymä vanhankaupungin kattojen ja kirkkojen ylle.",
+     "leveys": 4278,
+     "korkeus": 2674,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "SalzburgerAltstadt01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SalzburgerAltstadt01.JPG?width=1280",
+     "tekija": "Thomas Pintaric (= Pintaric)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SalzburgerAltstadt01.JPG",
+     "selite": "Illan hämärässä vanhakaupunki ja sen kapeat kadut valaistaan.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama vom Gornergrat-Zermatt.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_vom_Gornergrat-Zermatt.jpg?width=1280",
+   "tekija": "Tobi 87",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_vom_Gornergrat-Zermatt.jpg",
+   "selite": "Alpit ovat Euroopan korkein vuoristo, jonka lumihuippuja ja jäätiköitä on Sveitsistä Itävaltaan.",
+   "leveys": 5000,
+   "korkeus": 2271,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "2011-11-17 13-35-51 Switzerland Canton de Vaud Morges St-Jean.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011-11-17_13-35-51_Switzerland_Canton_de_Vaud_Morges_St-Jean.jpg?width=1280",
+   "tekija": "Hansueli Krapf This file was uploaded with Commonist.",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011-11-17_13-35-51_Switzerland_Canton_de_Vaud_Morges_St-Jean.jpg",
+   "selite": "Ilmasta katsottuna Alppien huiput kohoavat Geneven järven takana.",
+   "leveys": 4214,
+   "korkeus": 1846,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

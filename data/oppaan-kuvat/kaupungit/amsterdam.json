@@ -1,0 +1,640 @@
+{
+ "kaupunki": "amsterdam",
+ "kaupunkiQ": "Q727",
+ "kohteet": [
+  {
+   "q": "Q190804",
+   "nimi": "Rijksmuseum",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 52.36,
+   "lon": 4.88528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "South facade of the Rijksmuseum Amsterdam 20180702.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_facade_of_the_Rijksmuseum_Amsterdam_20180702.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:South_facade_of_the_Rijksmuseum_Amsterdam_20180702.jpg",
+     "selite": "Rijksmuseum on Alankomaiden kansallismuseo, jonka tiilinen uusrenessanssirakennus avattiin 1885.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "South facade of the Rijksmuseum Amsterdam (DSCF0528).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/South_facade_of_the_Rijksmuseum_Amsterdam_(DSCF0528).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:South_facade_of_the_Rijksmuseum_Amsterdam_(DSCF0528).jpg",
+     "selite": "Rakennuksen keskellä kulkee kaarevan portin läpi pyöräilytie.",
+     "leveys": 4291,
+     "korkeus": 3123,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q165366",
+   "nimi": "Anne Frankin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 52.37515,
+   "lon": 4.88404,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amsterdam (NL), Anne-Frank-Huis -- 2015 -- 7185.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_(NL)%2C_Anne-Frank-Huis_--_2015_--_7185.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL)%2C_Anne-Frank-Huis_--_2015_--_7185.jpg",
+     "selite": "Anne Frankin talo on Prinsengrachtin varrella, ja sen takaosassa perhe piileskeli toisen maailmansodan aikana.",
+     "leveys": 4073,
+     "korkeus": 3176,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AnneFrankHouseAmsterdamtheNetherlands.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AnneFrankHouseAmsterdamtheNetherlands.jpg?width=1280",
+     "tekija": "Massimo Catarinella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AnneFrankHouseAmsterdamtheNetherlands.jpg",
+     "selite": "Talo on nykyään museo, joka kertoo Anne Frankin tarinan.",
+     "leveys": 2562,
+     "korkeus": 3936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q224124",
+   "nimi": "Van Gogh -museo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 52.35833,
+   "lon": 4.88111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Van Gogh Museum, Kurokawa wing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Van_Gogh_Museum%2C_Kurokawa_wing.jpg?width=1280",
+     "tekija": "Sebastian Koppehel",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Van_Gogh_Museum%2C_Kurokawa_wing.jpg",
+     "selite": "Van Gogh -museossa on maailman suurin Vincent van Goghin teosten kokoelma.",
+     "leveys": 5238,
+     "korkeus": 3492,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Van Gogh Museum 7206 rt HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Van_Gogh_Museum_7206_rt_HDR.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Van_Gogh_Museum_7206_rt_HDR.jpg",
+     "selite": "Museon soikea siipirakennus on valaistu illalla Museumpleinin nurmikon laidalla.",
+     "leveys": 4632,
+     "korkeus": 3464,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1056152",
+   "nimi": "Amsterdamin kuninkaallinen palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 52.37317,
+   "lon": 4.89136,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Real, Ámsterdam, Países Bajos, 2016-05-30, DD 07-09 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Real%2C_%C3%81msterdam%2C_Pa%C3%ADses_Bajos%2C_2016-05-30%2C_DD_07-09_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Real%2C_%C3%81msterdam%2C_Pa%C3%ADses_Bajos%2C_2016-05-30%2C_DD_07-09_HDR.jpg",
+     "selite": "Kuninkaanpalatsi on 1600-luvun kaupungintalo, josta tuli myöhemmin kuninkaallinen palatsi.",
+     "leveys": 7846,
+     "korkeus": 5634,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amsterdam Royal Palace 7299.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Royal_Palace_7299.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Royal_Palace_7299.jpg",
+     "selite": "Palatsi kohoaa Dam-aukion laidalla ja sen katolla on kupolitorni.",
+     "leveys": 4071,
+     "korkeus": 3053,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Amsterdam Royal Palace 7303.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Royal_Palace_7303.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Royal_Palace_7303.jpg",
+     "selite": "Hallitseva kupolitorni nousee julkisivun keskeltä.",
+     "leveys": 3184,
+     "korkeus": 4425,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q50719",
+   "nimi": "Amsterdamin keskusrautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 52.37895,
+   "lon": 4.90016,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amsterdam Centraal 2024 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_2024_02.jpg?width=1280",
+     "tekija": "Ibex73",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Centraal_2024_02.jpg",
+     "selite": "Amsterdamin keskusasema on uusrenessanssiaikainen tiilirakennus Amsterdamin vanhan kaupungin reunalla.",
+     "leveys": 5290,
+     "korkeus": 3527,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amsterdam (NL), Centraal Station -- 2015 -- 7269.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_(NL)%2C_Centraal_Station_--_2015_--_7269.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL)%2C_Centraal_Station_--_2015_--_7269.jpg",
+     "selite": "Asema on rakennettu keinotekoisille saarille IJ-lahden rannalle.",
+     "leveys": 4259,
+     "korkeus": 3190,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Amsterdam Centraal 2016-09-13.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Centraal_2016-09-13.jpg?width=1280",
+     "tekija": "Slaunger",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Centraal_2016-09-13.jpg",
+     "selite": "Asemarakennuksen symmetrinen pääjulkisivu avautuu kanaalin yli.",
+     "leveys": 10513,
+     "korkeus": 5029,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q478707",
+   "nimi": "Amsterdamin kanaalivyöhyke",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 52.36639,
+   "lon": 4.88583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Herengracht, Amsterdam in the Blue Hour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Herengracht%2C_Amsterdam_in_the_Blue_Hour.jpg?width=1280",
+     "tekija": "Anne Dirkse (www.annedirkse.com)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Herengracht%2C_Amsterdam_in_the_Blue_Hour.jpg",
+     "selite": "Amsterdamin 1600-luvun kanaalivyöhyke kuuluu UNESCOn maailmanperintöön.",
+     "leveys": 1920,
+     "korkeus": 1252,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amsterdam - canal houses (3416160482).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_-_canal_houses_(3416160482).jpg?width=1280",
+     "tekija": "Ernest McGray, Jr.",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_canal_houses_(3416160482).jpg",
+     "selite": "Kanaalit ja kapeat tiilitalot ovat Amsterdamin tunnusmerkki.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q839050",
+   "nimi": "Dam-aukio",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 52.37306,
+   "lon": 4.89278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dam Amsterdam 7308.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dam_Amsterdam_7308.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dam_Amsterdam_7308.jpg",
+     "selite": "Dam on Amsterdamin keskusaukio, jonka vieressä ovat kuninkaanpalatsi ja Nieuwe Kerk.",
+     "leveys": 4375,
+     "korkeus": 3281,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amsterdam Royal Palace 1699.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Royal_Palace_1699.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Royal_Palace_1699.jpg",
+     "selite": "Aukion kivetyksen yllä kohoaa palatsin julkisivu ja sen torni.",
+     "leveys": 4056,
+     "korkeus": 3074,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q277316",
+   "nimi": "Rembrandtin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 52.36944,
+   "lon": 4.90139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amsterdam Jodenbreestraat 4 top.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Jodenbreestraat_4_top.jpg?width=1280",
+     "tekija": "Spider",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Jodenbreestraat_4_top.jpg",
+     "selite": "Rembrandtin talossa Jodenbreestraatilla taiteilija asui ja työskenteli 1600-luvulla.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amsterdam Jodenbreestraat 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_Jodenbreestraat_4.jpg?width=1280",
+     "tekija": "Spider",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_Jodenbreestraat_4.jpg",
+     "selite": "Talo on nykyään museo, jossa on esillä Rembrandtin grafiikkaa.",
+     "leveys": 1728,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1130722",
+   "nimi": "Westerkerk",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 52.3745,
+   "lon": 4.8839,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Amsterdam (NL), Westerkerk -- 2015 -- 7186.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_(NL)%2C_Westerkerk_--_2015_--_7186.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL)%2C_Westerkerk_--_2015_--_7186.jpg",
+     "selite": "Westerkerk on 1600-luvun protestanttinen kirkko, jonka torni on Amsterdamin korkein kirkontorni.",
+     "leveys": 3249,
+     "korkeus": 4714,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Westerkerk tower, Amsterdam 2505.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Westerkerk_tower%2C_Amsterdam_2505.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Westerkerk_tower%2C_Amsterdam_2505.jpg",
+     "selite": "Tornin huipulla on keisarillinen kruunu.",
+     "leveys": 3456,
+     "korkeus": 4608,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Amsterdam (NL), Westerkerk -- 2015 -- 7179.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_(NL)%2C_Westerkerk_--_2015_--_7179.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL)%2C_Westerkerk_--_2015_--_7179.jpg",
+     "selite": "Kirkko seisoo Prinsengrachtin rannalla Anne Frankin talon lähellä.",
+     "leveys": 2526,
+     "korkeus": 4613,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1344400",
+   "nimi": "Magere Brug",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 52.36359,
+   "lon": 4.90236,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Magere Brug.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Magere_Brug.jpg?width=1280",
+     "tekija": "S Sepp",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Magere_Brug.jpg",
+     "selite": "Magere Brug on Amstel-joen valkoinen puinen nostosilta.",
+     "leveys": 2676,
+     "korkeus": 1631,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Magere Brug at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Magere_Brug_at_night.jpg?width=1280",
+     "tekija": "APK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Magere_Brug_at_night.jpg",
+     "selite": "Illalla silta valaistaan valoketjuin ja se heijastuu veteen.",
+     "leveys": 2191,
+     "korkeus": 1204,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1429748",
+   "nimi": "Munttoren",
+   "peruste": "sitelinks",
+   "koko_m": 30,
+   "lat": 52.36694,
+   "lon": 4.89333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Munttoren Amsterdam.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Munttoren_Amsterdam.jpg?width=1280",
+     "tekija": "Massimo Catarinella",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Munttoren_Amsterdam.jpg",
+     "selite": "Munttoren on keskiaikaisen kaupunginportin jäännökseen rakennettu torni Muntpleinillä.",
+     "leveys": 2593,
+     "korkeus": 5000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amsterdam, de Munttoren RM3729 IMG 3346 2024-06-24 11.41.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam%2C_de_Munttoren_RM3729_IMG_3346_2024-06-24_11.41.jpg?width=1280",
+     "tekija": "Michielverbeek",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam%2C_de_Munttoren_RM3729_IMG_3346_2024-06-24_11.41.jpg",
+     "selite": "Torni erottuu Muntpleinin yllä Amstel-joen ja kanaalien risteyksessä.",
+     "leveys": 3080,
+     "korkeus": 4884,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Amsterdam (NL), Munttoren -- 2015 -- 7236.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amsterdam_(NL)%2C_Munttoren_--_2015_--_7236.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amsterdam_(NL)%2C_Munttoren_--_2015_--_7236.jpg",
+     "selite": "Torni kohoaa tiilirakennuksen yläpuolelle kellotaulunsa kanssa.",
+     "leveys": 2643,
+     "korkeus": 3780,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q623558",
+   "nimi": "Oude Kerk",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 52.37417,
+   "lon": 4.89806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Canal houses and Oude Kerk at blue hour with water reflection in Damrak Amsterdam Netherlands.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canal_houses_and_Oude_Kerk_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg?width=1280",
+     "tekija": "Basile Morin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Canal_houses_and_Oude_Kerk_at_blue_hour_with_water_reflection_in_Damrak_Amsterdam_Netherlands.jpg",
+     "selite": "Oude Kerk on Amsterdamin vanhin säilynyt rakennus, ja sen torni kohoaa Punaisten lyhtyjen alueen yllä.",
+     "leveys": 4705,
+     "korkeus": 4131,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Oude Kerk tower 2136.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oude_Kerk_tower_2136.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oude_Kerk_tower_2136.jpg",
+     "selite": "Tornin vanhat kellot soivat illan hämärtyessä.",
+     "leveys": 4092,
+     "korkeus": 3144,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tower of Oude Kerk, Amsterdam 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tower_of_Oude_Kerk%2C_Amsterdam_02.jpg?width=1280",
+     "tekija": "John Samuel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tower_of_Oude_Kerk%2C_Amsterdam_02.jpg",
+     "selite": "Kirkon torni nousee tiivisti rakennettujen talojen yläpuolelle.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1422000",
+   "nimi": "NEMO-tiedekeskus",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 52.37411,
+   "lon": 4.91239,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018 - NEMO Science Museum, Amsterdam, Netherlands ( Ank Kumar ) 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_-_NEMO_Science_Museum%2C_Amsterdam%2C_Netherlands_(_Ank_Kumar_)_03.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_-_NEMO_Science_Museum%2C_Amsterdam%2C_Netherlands_(_Ank_Kumar_)_03.jpg",
+     "selite": "NEMO on Renzo Pianon suunnittelema tiedekeskus, jonka vihreä rakennus muistuttaa laivan keulaa.",
+     "leveys": 3862,
+     "korkeus": 2896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2018 - NEMO Science Museum, Amsterdam, Netherlands ( Ank Kumar ) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_-_NEMO_Science_Museum%2C_Amsterdam%2C_Netherlands_(_Ank_Kumar_)_02.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_-_NEMO_Science_Museum%2C_Amsterdam%2C_Netherlands_(_Ank_Kumar_)_02.jpg",
+     "selite": "Rakennus kohoaa suoraan veden äärestä IJ-lahden rannalla.",
+     "leveys": 2670,
+     "korkeus": 3560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1419691",
+   "nimi": "Vondelpark",
+   "peruste": "sitelinks",
+   "koko_m": 500,
+   "lat": 52.35694,
+   "lon": 4.86639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vondelpark in Amsterdam met Vondelkerk op de achtergrond.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vondelpark_in_Amsterdam_met_Vondelkerk_op_de_achtergrond.jpg?width=1280",
+     "tekija": "Choinowski",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vondelpark_in_Amsterdam_met_Vondelkerk_op_de_achtergrond.jpg",
+     "selite": "Vondelpark on Amsterdamin suosituin kaupunkipuisto lampineen ja nurmikkoineen.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pavilion in Vondelpark Amsterdam.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pavilion_in_Vondelpark_Amsterdam.jpg?width=1280",
+     "tekija": "Expatiatrix",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pavilion_in_Vondelpark_Amsterdam.jpg",
+     "selite": "Puiston saarella oleva paviljonki on suosittu konserttipaikka.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q713124",
+   "nimi": "Artis-eläintarha",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 52.36611,
+   "lon": 4.91667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2008-06-21 Artis 35.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-06-21_Artis_35.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-06-21_Artis_35.jpg",
+     "selite": "Artis on vuonna 1838 perustettu Amsterdamin eläintarha ja Euroopan vanhimpia.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2008-06-21 Artis 34 Panthera leo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2008-06-21_Artis_34_Panthera_leo.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2008-06-21_Artis_34_Panthera_leo.jpg",
+     "selite": "Eläintarhan leijonat oleilevat kivisessä aitauksessa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial photograph of Amsterdam Central Station and the surrounding area.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photograph_of_Amsterdam_Central_Station_and_the_surrounding_area.jpg?width=1280",
+   "tekija": "RubenVanKuik",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_photograph_of_Amsterdam_Central_Station_and_the_surrounding_area.jpg",
+   "selite": "Amsterdam levittäytyy IJ-lahden rannalle, ja keskusasema ja vanha kaupunki ovat kuvan keskiössä.",
+   "leveys": 7449,
+   "korkeus": 4969,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Colorful canal houses at golden hour in Damrak avenue Amsterdam the Netherlands.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colorful_canal_houses_at_golden_hour_in_Damrak_avenue_Amsterdam_the_Netherlands.jpg?width=1280",
+   "tekija": "Basile Morin",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colorful_canal_houses_at_golden_hour_in_Damrak_avenue_Amsterdam_the_Netherlands.jpg",
+   "selite": "Kapeat tiilitalot ja Oude Kerkin torni reunustavat Damrakin vesiväylää.",
+   "leveys": 5546,
+   "korkeus": 3697,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

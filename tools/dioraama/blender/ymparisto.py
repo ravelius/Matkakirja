@@ -17,6 +17,7 @@ KOLMIOT = [int(x) for x in (A[A.index('--kolmiot') + 1] if '--kolmiot' in A else
 # (lähemmät puut ovat kortteja; 1.10.). Latvuspinta = 0,85 × latvuskorkeus 4 m:n maksimi + tasoitus.
 LATVUS = A[A.index('--latvus') + 1] if '--latvus' in A else None
 LATVUS_R = float(A[A.index('--latvus-r') + 1]) if '--latvus-r' in A else 520.0
+LATVUS_K = float(A[A.index('--latvus-k') + 1]) if '--latvus-k' in A else 0.8  # latvuspinnan reunan kaltevuus (tan)
 N1500 = A[A.index('--n1500') + 1] if '--n1500' in A else None  # ymparisto_n1500.py: kaupunki metsäksi
 # --avoin R --niitty <kuva>: linnan lähirannat R m:n säteellä niittyä (Päätoimittaja 1.10.: linnan ympäristö pidettiin
 # puuttomana puolustuksen, polttopuun ja laidunten vuoksi); siirtymä 100 m, kalliot (MTK 34100) säilyvät.
@@ -89,7 +90,15 @@ if LATVUS:
         q = np.pad(C, 1, mode='edge'); C = sum(q[a:a + C.shape[0], b:b + C.shape[1]] for a in range(3) for b in range(3)) / 9
     C = C[::-1]; C = np.pad(C, ((0, max(0, ny - C.shape[0])), (0, max(0, nx - C.shape[1]))), mode='edge')[:ny, :nx]  # rivi 0 = pohjoinen
     et = np.hypot(X, Y); paino = np.clip((et - LATVUS_R) / 60.0, 0, 1)
-    z = np.where(maa, z + 0.85 * np.where(C > 3, C, 0) * paino, z)
+    H = np.where(maa, 0.85 * np.where(C > 3, C, 0) * paino, 0.0).astype(np.float32)
+    # 5.10. (Päätoimittajan havainto 1475-näkymästä): vesirajassa ja aukeiden reunoilla latvuspinta nousi yhdellä 2 m:n
+    # ruudulla 13–17 m:n pystyseinäksi, jolle ylhäältä projisoitu ortokuva venyi pystyraidoiksi. Kaltevuusraja: ruutu on
+    # enintään naapuriensa minimi + LATVUS_K × RES (vedessä 0), joten metsän reuna nousee enintään atan(LATVUS_K):n kulmassa.
+    ennen = H.copy(); askel = LATVUS_K * RES
+    for _ in range(int(np.ceil(H.max() / askel)) + 1):
+        q = np.pad(H, 1, mode='edge'); H = np.minimum(H, np.min([q[a:a + ny, b:b + nx] for a in range(3) for b in range(3)], 0) + askel)
+    print(f'YMP: latvuksen kaltevuusraja {LATVUS_K:.2f}: madallettu {int((ennen - H > 0.5).sum())} ruutua, enintään {float((ennen - H).max()):.1f} m')
+    z = z + H
     print(f'YMP: latvuspinta yli {LATVUS_R:.0f} m, keskikorkeus metsässä {np.mean(C[(C > 3) & maa]):.1f} m')
 print(f'YMP: DEM {nx}×{ny} ruutua ({RES} m), maata {maa.mean():.2f}, korkeus {Z.max() - VESI_H:.1f} m vedestä')
 

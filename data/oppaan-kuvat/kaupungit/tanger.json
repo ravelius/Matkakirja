@@ -1,0 +1,306 @@
+{
+ "kaupunki": "tanger",
+ "kaupunkiQ": "Q126148",
+ "kohteet": [
+  {
+   "q": "Q5221954",
+   "nimi": "Kasbahin palatsi (Dar el Makhzen)",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "aliakset": [
+    "Q3330628"
+   ],
+   "lat": 35.78861,
+   "lon": -5.81278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Intérieur Palais du Sultan.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Int%C3%A9rieur_Palais_du_Sultan.jpg?width=1280",
+     "tekija": "Bpcorps",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_Palais_du_Sultan.jpg",
+     "selite": "Kasbahin vanha sulttaanin palatsi toimii nykyään museona, ja sen sisäpiha on valkoisten kaarien reunustama.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bab Kasbah Place du Tabor Tangier Marokko.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Kasbah_Place_du_Tabor_Tangier_Marokko.jpg?width=1280",
+     "tekija": "Herbert wie",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Kasbah_Place_du_Tabor_Tangier_Marokko.jpg",
+     "selite": "Bab Kasbah on vanhan linnoituskorttelin portti Tangerin medinan yläreunassa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Andalucia-01-0129 (8086325252).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andalucia-01-0129_(8086325252).jpg?width=1280",
+     "tekija": "Andrei Dimofte from Stuttgart, Germany",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Andalucia-01-0129_(8086325252).jpg",
+     "selite": "Palatsin seinää peittävät perinteiset marokkolaiset kaakelikoristeet.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12244393",
+   "nimi": "Herkuleen luolat",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 35.76028,
+   "lon": -5.93917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cuevas de Hércules, Cabo Espartel, Marruecos, 2015-12-11, DD 22-24 HDR.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cuevas_de_H%C3%A9rcules%2C_Cabo_Espartel%2C_Marruecos%2C_2015-12-11%2C_DD_22-24_HDR.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cuevas_de_H%C3%A9rcules%2C_Cabo_Espartel%2C_Marruecos%2C_2015-12-11%2C_DD_22-24_HDR.JPG",
+     "selite": "Luolan seiniä ovat muokanneet vuosisatojen aikana myllynkivien louhijat, ja pyöreät jäljet ovat yhä näkyvissä.",
+     "leveys": 8542,
+     "korkeus": 5240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "12YB.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/12YB.jpg?width=1280",
+     "tekija": "Yogesh Bisht",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:12YB.jpg",
+     "selite": "Luolan merelle aukeava suu muistuttaa muodoltaan Afrikan karttaa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q772975",
+   "nimi": "Spartelin niemi",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "aliakset": [
+    "Q38217997"
+   ],
+   "lat": 35.80056,
+   "lon": -5.90611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cap Spartel Morocco - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_Spartel_Morocco_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Hiroki Ogawa",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cap_Spartel_Morocco_-_panoramio_(1).jpg",
+     "selite": "Majakka seisoo Afrikan luoteiskulmassa, missä Atlantti kohtaa Gibraltarinsalmen.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cabo Espartel, Marruecos, 2015-12-11, DD 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cabo_Espartel%2C_Marruecos%2C_2015-12-11%2C_DD_03.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cabo_Espartel%2C_Marruecos%2C_2015-12-11%2C_DD_03.JPG",
+     "selite": "Niemen kallioiset rannat kohtaavat turkoosin Atlantin.",
+     "leveys": 8239,
+     "korkeus": 4485,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cap Spartel de Tanger - Entrée Sud de Détroit de Gibraltar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_Spartel_de_Tanger_-_Entr%C3%A9e_Sud_de_D%C3%A9troit_de_Gibraltar.jpg?width=1280",
+     "tekija": "Froh Belfakir",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cap_Spartel_de_Tanger_-_Entr%C3%A9e_Sud_de_D%C3%A9troit_de_Gibraltar.jpg",
+     "selite": "Majakka toimii merimiesten merkkinä Gibraltarinsalmen Atlantin puoleisessa suussa.",
+     "leveys": 3926,
+     "korkeus": 1801,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5017239",
+   "nimi": "Café Hafa",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 35.7915,
+   "lon": -5.8218,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Café Hafa, Tangier.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caf%C3%A9_Hafa%2C_Tangier.jpg?width=1280",
+     "tekija": "Ideophagous",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Hafa%2C_Tangier.jpg",
+     "selite": "Kahvila kerrostuu terasseina kalliolle, ja kaakelipöydiltä avautuu näköala Gibraltarinsalmelle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Café Hafa, Tangier (11935).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caf%C3%A9_Hafa%2C_Tangier_(11935).jpg?width=1280",
+     "tekija": "Ideophagous",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Hafa%2C_Tangier_(11935).jpg",
+     "selite": "Rinneterassien kukkaistutusten takaa avautuu loputon meri.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q468574",
+   "nimi": "Amerikan lähetystö",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.78386,
+   "lon": -5.81088,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo del Antiguo Legado Estadounidense, Tánger, Marruecos, 2015-12-11, DD 44-46 HDR.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_del_Antiguo_Legado_Estadounidense%2C_T%C3%A1nger%2C_Marruecos%2C_2015-12-11%2C_DD_44-46_HDR.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_del_Antiguo_Legado_Estadounidense%2C_T%C3%A1nger%2C_Marruecos%2C_2015-12-11%2C_DD_44-46_HDR.JPG",
+     "selite": "Medinan sisällä oleva entinen lähetystörakennus on Yhdysvaltain vanhin ulkomainen diplomaattikiinteistö.",
+     "leveys": 5086,
+     "korkeus": 6966,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q111944671",
+   "nimi": "Mendoubian palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 35.78493,
+   "lon": -5.81379,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Morocco Tangier Mendoubia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morocco_Tangier_Mendoubia.jpg?width=1280",
+     "tekija": "Boubloub",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Morocco_Tangier_Mendoubia.jpg",
+     "selite": "Mendoubia oli sulttaanin edustajan, mendoubin, asuinpalatsi Tangerin Grand Soccon laidalla.",
+     "leveys": 3024,
+     "korkeus": 2356,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Morocco Tangier Mendoubia Interior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Morocco_Tangier_Mendoubia_Interior.jpg?width=1280",
+     "tekija": "Boubloub",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Morocco_Tangier_Mendoubia_Interior.jpg",
+     "selite": "Rakennuksen sisäpiha on koristeltu kaarilla ja ruutulattialla.",
+     "leveys": 3024,
+     "korkeus": 3210,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3825748",
+   "nimi": "Gran Teatro Cervantes",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.782,
+   "lon": -5.8107,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gran Teatro Cervantes, Tánger, Marruecos, 2015-12-11, DD 50.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gran_Teatro_Cervantes%2C_T%C3%A1nger%2C_Marruecos%2C_2015-12-11%2C_DD_50.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gran_Teatro_Cervantes%2C_T%C3%A1nger%2C_Marruecos%2C_2015-12-11%2C_DD_50.JPG",
+     "selite": "Vuonna 1913 avattu espanjalainen teatteri on koristeltu värikkäin laatoin.",
+     "leveys": 7322,
+     "korkeus": 5072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Gran Teatro Cervantes1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gran_Teatro_Cervantes1.jpg?width=1280",
+     "tekija": "Cosmo45",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gran_Teatro_Cervantes1.jpg",
+     "selite": "Teatterin julkisivu seisoo kaupungin keskustassa odottamassa kunnostusta.",
+     "leveys": 2304,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Tangier - 44699733295.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tangier_-_44699733295.jpg?width=1280",
+   "tekija": "Mike McBey",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tangier_-_44699733295.jpg",
+   "selite": "Tangerin valkoinen medina ja satama kohoavat rinteeseen Gibraltarinsalmen rannalla.",
+   "leveys": 5230,
+   "korkeus": 2311,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Panorama Tanger Bay Tangier Marokko.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_Tanger_Bay_Tangier_Marokko.jpg?width=1280",
+   "tekija": "Herbert wie",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_Tanger_Bay_Tangier_Marokko.jpg",
+   "selite": "Näkymä Tangerin lahdelle ja kaupungin katoille.",
+   "leveys": 2048,
+   "korkeus": 1536,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

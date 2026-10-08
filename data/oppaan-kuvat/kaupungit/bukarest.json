@@ -1,0 +1,591 @@
+{
+ "kaupunki": "bukarest",
+ "kaupunkiQ": "Q19660",
+ "kohteet": [
+  {
+   "q": "Q164150",
+   "nimi": "Romanian parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 44.4275,
+   "lon": 26.0875,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palace of the Parliament in Bucharest (51878975552).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_the_Parliament_in_Bucharest_(51878975552).jpg?width=1280",
+     "tekija": "William John Gauthier from Denmark",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palace_of_the_Parliament_in_Bucharest_(51878975552).jpg",
+     "selite": "Parlamenttipalatsi on yksi maailman suurimmista hallintorakennuksista, ja se kohoaa Bukarestin keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Avenida de la Unión, Bucarest, Rumanía, 2016-05-29, DD 58.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_58.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_58.jpg",
+     "selite": "Palatsiin johtavan Unirii-bulevardin suihkulähteet muodostavat pitkän aksiaalisen näkymän.",
+     "leveys": 8390,
+     "korkeus": 5593,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fountains in front of the Romanian Palace of Parliament in Bucharest (47981521036).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountains_in_front_of_the_Romanian_Palace_of_Parliament_in_Bucharest_(47981521036).jpg?width=1280",
+     "tekija": "dronepicr",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fountains_in_front_of_the_Romanian_Palace_of_Parliament_in_Bucharest_(47981521036).jpg",
+     "selite": "Illalla valaistu palatsi näkyy bulevardin päässä suihkulähteiden takana.",
+     "leveys": 3996,
+     "korkeus": 2664,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q755457",
+   "nimi": "Romanian ateneum",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 44.4413,
+   "lon": 26.0973,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 73.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ateneo_Rumano%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_73.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ateneo_Rumano%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_73.jpg",
+     "selite": "Romanian ateneum on pyöreäkupolinen konserttitalo ja yksi Bukarestin tunnetuimmista rakennuksista.",
+     "leveys": 6592,
+     "korkeus": 4963,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ateneo Rumano, Bucarest, Rumanía, 2016-05-29, DD 74.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ateneo_Rumano%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_74.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ateneo_Rumano%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_74.jpg",
+     "selite": "Julkisivun doorilaiset pylväät kantavat kolmiopäätyä.",
+     "leveys": 6233,
+     "korkeus": 3937,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bucharest - Romanian Athenaeum (29009706076).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_-_Romanian_Athenaeum_(29009706076).jpg?width=1280",
+     "tekija": "Ștefan Jurcă from Munich, Germany",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_-_Romanian_Athenaeum_(29009706076).jpg",
+     "selite": "Rakennus seisoo puistoalueen keskellä Calea Victorieilla.",
+     "leveys": 4568,
+     "korkeus": 3045,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3390456",
+   "nimi": "Vallankumouksen aukio",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 44.43856,
+   "lon": 26.0975,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019 Revolution Square, Bucharest (47555248382).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_Revolution_Square%2C_Bucharest_(47555248382).jpg?width=1280",
+     "tekija": "Noah Meyerhans from Seattle, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_Revolution_Square%2C_Bucharest_(47555248382).jpg",
+     "selite": "Vallankumouksen aukiolla seisoo Jälleensyntymän muistomerkki vuoden 1989 vallankumouksen uhrien muistoksi.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Revolution Square (AP4K1406-1PSP) (29213730282).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Revolution_Square_(AP4K1406-1PSP)_(29213730282).jpg?width=1280",
+     "tekija": "Alexandru Panoiu from Bucharest, Romania",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Revolution_Square_(AP4K1406-1PSP)_(29213730282).jpg",
+     "selite": "Muistomerkki valaistaan illalla aukion keskeisenä kohteena.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Revolution Square, Bucharest ( DSC6305).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Revolution_Square%2C_Bucharest_(_DSC6305).jpg?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Revolution_Square%2C_Bucharest_(_DSC6305).jpg",
+     "selite": "Aukiolla seisoo myös kuningas Carol I:n ratsastajapatsas.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1319192",
+   "nimi": "Romanian kansallinen taidemuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 44.43978,
+   "lon": 26.09598,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The National Museum of Art of Romania (11321261983).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_National_Museum_of_Art_of_Romania_(11321261983).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_National_Museum_of_Art_of_Romania_(11321261983).jpg",
+     "selite": "Kansallinen taidemuseo toimii entisessä kuninkaanlinnassa Vallankumouksen aukion laidalla.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Centre part of the façade of the Royal Palace in Bucharest (Romania), now the National Museum of Art of Romania.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Centre_part_of_the_fa%C3%A7ade_of_the_Royal_Palace_in_Bucharest_(Romania)%2C_now_the_National_Museum_of_Art_of_Romania.jpg?width=1280",
+     "tekija": "Neoclassicism Enthusiast",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Centre_part_of_the_fa%C3%A7ade_of_the_Royal_Palace_in_Bucharest_(Romania)%2C_now_the_National_Museum_of_Art_of_Romania.jpg",
+     "selite": "Entisen kuninkaanlinnan julkisivun keskiosa katsoo aukiolle.",
+     "leveys": 3969,
+     "korkeus": 2154,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1514860",
+   "nimi": "Romanian patriarkaalinen katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 44.42457,
+   "lon": 26.09782,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bucharest Patriarchal Cathedral of St Constantine and Helena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_Patriarchal_Cathedral_of_St_Constantine_and_Helena.jpg?width=1280",
+     "tekija": "falco",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_Patriarchal_Cathedral_of_St_Constantine_and_Helena.jpg",
+     "selite": "Patriarkaalinen katedraali on Romanian ortodoksisen kirkon pääkirkko.",
+     "leveys": 1920,
+     "korkeus": 1204,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedrala Patriarhală, București (2023) - IMG 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedrala_Patriarhal%C4%83%2C_Bucure%C8%99ti_(2023)_-_IMG_02.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedrala_Patriarhal%C4%83%2C_Bucure%C8%99ti_(2023)_-_IMG_02.jpg",
+     "selite": "Kirkko seisoo Dealul Mitropolieillä korkealla kukkulalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q638278",
+   "nimi": "Riemukaari",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 44.46728,
+   "lon": 26.07836,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arcul de Triumf.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arcul_de_Triumf.JPG?width=1280",
+     "tekija": "Vaivoda Vlad",
+     "lisenssi": "CC BY-SA 3.0 ro",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arcul_de_Triumf.JPG",
+     "selite": "Riemukaari seisoo Kiseleff-bulevardin päässä pohjoisen Bukarestin puistoalueen laidalla.",
+     "leveys": 3408,
+     "korkeus": 2272,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5010221",
+   "nimi": "CEC-palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 44.432,
+   "lon": 26.0965,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio CEC, Bucarest, Rumanía, 2016-05-29, DD 65.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_CEC%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_65.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_CEC%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_65.jpg",
+     "selite": "CEC-palatsi on eklektisen tyylin pankkirakennus Calea Victorieilla.",
+     "leveys": 6386,
+     "korkeus": 3830,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio CEC, Bucarest, Rumanía, 2016-05-29, DD 91-93 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_CEC%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_91-93_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_CEC%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_91-93_HDR.jpg",
+     "selite": "Illalla valaistu lasikupoli ja kivijulkisivu loistavat kullanvärisinä.",
+     "leveys": 7007,
+     "korkeus": 4038,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio CEC, Bucarest, Rumanía, 2016-05-29, DD 64.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_CEC%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_64.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_CEC%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_64.jpg",
+     "selite": "Rakennuksen valtava pääsisäänkäynti on koristeltu kaarella ja pylväillä.",
+     "leveys": 4819,
+     "korkeus": 3841,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3119683",
+   "nimi": "Stavropoleoksen kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 44.43174,
+   "lon": 26.09879,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "4, Strada Stavropoleos, Bucharest (Romania).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/4%2C_Strada_Stavropoleos%2C_Bucharest_(Romania).jpg?width=1280",
+     "tekija": "Neoclassicism Enthusiast",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:4%2C_Strada_Stavropoleos%2C_Bucharest_(Romania).jpg",
+     "selite": "Stavropoleoksen kirkko on pieni brancovenilaistyylinen kirkko Bukarestin vanhassakaupungissa.",
+     "leveys": 3883,
+     "korkeus": 2319,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "4, Strada Stavropoleos, Bucharest (Romania) 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/4%2C_Strada_Stavropoleos%2C_Bucharest_(Romania)_1.jpg?width=1280",
+     "tekija": "Neoclassicism Enthusiast",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:4%2C_Strada_Stavropoleos%2C_Bucharest_(Romania)_1.jpg",
+     "selite": "Kirkon pylväsportiikki on koristeltu hienolla kivikaiverruksella.",
+     "leveys": 3580,
+     "korkeus": 3011,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1855757",
+   "nimi": "Vanha ruhtinaanhovi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 44.43014,
+   "lon": 26.10094,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Curtea Veche Church with garden, Bucharest, 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Curtea_Veche_Church_with_garden%2C_Bucharest%2C_2017.jpg?width=1280",
+     "tekija": "DimiTalen",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Curtea_Veche_Church_with_garden%2C_Bucharest%2C_2017.jpg",
+     "selite": "Vanha ruhtinaanhovi oli Bukarestin ruhtinaiden palatsi, ja sen vieressä seisoo kirkko.",
+     "leveys": 5846,
+     "korkeus": 3887,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bucharest Day 1 - Curtea Veche (9330338582).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_Day_1_-_Curtea_Veche_(9330338582).jpg?width=1280",
+     "tekija": "Stefan Jurca from Munich, Germany",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_Day_1_-_Curtea_Veche_(9330338582).jpg",
+     "selite": "Palatsin raunioista näkyy tiiliholveja ja pylväitä.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2074133",
+   "nimi": "Herăstrău-puisto",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 44.47921,
+   "lon": 26.08169,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "An island on Lake Herăstrău (5133458363).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/An_island_on_Lake_Her%C4%83str%C4%83u_(5133458363).jpg?width=1280",
+     "tekija": "Alexandru Panoiu from Bucharest, Romania",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:An_island_on_Lake_Her%C4%83str%C4%83u_(5133458363).jpg",
+     "selite": "Herăstrău on Bukarestin suurin puisto, ja sen järvessä on saaria.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lake Herăstrău (AP4P1019 1PS) (29510654861).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Her%C4%83str%C4%83u_(AP4P1019_1PS)_(29510654861).jpg?width=1280",
+     "tekija": "Alexandru Panoiu from Bucharest, Romania",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lake_Her%C4%83str%C4%83u_(AP4P1019_1PS)_(29510654861).jpg",
+     "selite": "Järven toisella rannalla näkyy kaupungin rakennuksia.",
+     "leveys": 3600,
+     "korkeus": 2400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1850614",
+   "nimi": "Yliopiston aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 44.43555,
+   "lon": 26.10235,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bucharest University Square (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_University_Square_(cropped).jpg?width=1280",
+     "tekija": "Madalin Pentelie",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_University_Square_(cropped).jpg",
+     "selite": "Yliopiston aukio on Bukarestin keskustan liikenneristeys ja kokoontumispaikka.",
+     "leveys": 2048,
+     "korkeus": 1235,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bucharest - Sunset on University Square (28566269572).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_-_Sunset_on_University_Square_(28566269572).jpg?width=1280",
+     "tekija": "Ștefan Jurcă from Munich, Germany",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_-_Sunset_on_University_Square_(28566269572).jpg",
+     "selite": "Aukion laidalla seisoo Bukarestin yliopiston päärakennus.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Bucharest University Square - Mihai Bravu statue (2023).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_University_Square_-_Mihai_Bravu_statue_(2023).jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_University_Square_-_Mihai_Bravu_statue_(2023).jpg",
+     "selite": "Aukion keskellä seisoo Mikael Urhean ratsastajapatsas.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2933758",
+   "nimi": "Calea Victoriei",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 44.44286,
+   "lon": 26.09347,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hotel Continental - Calea Victoriei.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hotel_Continental_-_Calea_Victoriei.jpg?width=1280",
+     "tekija": "Mihai Petre",
+     "lisenssi": "CC BY-SA 3.0 ro",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hotel_Continental_-_Calea_Victoriei.jpg",
+     "selite": "Calea Victoriei eli Voitonkatu on Bukarestin vanhin ja tunnetuin pääkatu.",
+     "leveys": 1920,
+     "korkeus": 1080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017 Calea Victoriei noiembie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_Calea_Victoriei_noiembie.jpg?width=1280",
+     "tekija": "Babu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_Calea_Victoriei_noiembie.jpg",
+     "selite": "Kadun varrella on jugend- ja art deco -rakennuksia.",
+     "leveys": 4032,
+     "korkeus": 2199,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1956214",
+   "nimi": "Kansallinen kylämuseo",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 44.47336,
+   "lon": 26.07656,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bucharest - Village Museum 6.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_-_Village_Museum_6.JPG?width=1280",
+     "tekija": "Pudelek (Marcin Szala)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_-_Village_Museum_6.JPG",
+     "selite": "Kylämuseo esittelee Herăstrău-puistossa romanialaisten kylien perinteisiä taloja.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "RO B Village museum Dumbraveni homestead 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RO_B_Village_museum_Dumbraveni_homestead_2.jpg?width=1280",
+     "tekija": "Andrei Stroe",
+     "lisenssi": "CC BY-SA 3.0 ro",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:RO_B_Village_museum_Dumbraveni_homestead_2.jpg",
+     "selite": "Olkikattoiset talot on siirretty museoon eri puolilta maata.",
+     "leveys": 3832,
+     "korkeus": 2546,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q959632",
+   "nimi": "Cișmigiun puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 44.437,
+   "lon": 26.09073,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cismigiu Park, Bucharest (55026876178).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cismigiu_Park%2C_Bucharest_(55026876178).jpg?width=1280",
+     "tekija": "Jocelyn Erskine-Kellie from London, UK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cismigiu_Park%2C_Bucharest_(55026876178).jpg",
+     "selite": "Cișmigiun puutarha on Bukarestin keskustan vanhin puisto ja sen järvellä soudetaan.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bucharest - evening on Lacul Lebedelor.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_-_evening_on_Lacul_Lebedelor.jpg?width=1280",
+     "tekija": "Joe Mabel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_-_evening_on_Lacul_Lebedelor.jpg",
+     "selite": "Illalla puiston järvi heijastaa puita ja valoja.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Bucharest-Skyline-01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest-Skyline-01.jpg?width=1280",
+   "tekija": "seisdeagosto",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest-Skyline-01.jpg",
+   "selite": "Bukarestin keskustan rakennukset ja liikenneristeys avautuvat korkealta katsottuna.",
+   "leveys": 3840,
+   "korkeus": 2160,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Bucharest from Palace of the Parliament on April 25th, 2015.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucharest_from_Palace_of_the_Parliament_on_April_25th%2C_2015.JPG?width=1280",
+   "tekija": "Choi2451",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bucharest_from_Palace_of_the_Parliament_on_April_25th%2C_2015.JPG",
+   "selite": "Parlamenttipalatsin ikkunasta avautuu näkymä Unirii-bulevardille ja kaupungin keskustaan.",
+   "leveys": 3264,
+   "korkeus": 2448,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

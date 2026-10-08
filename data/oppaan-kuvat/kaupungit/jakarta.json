@@ -1,0 +1,552 @@
+{
+ "kaupunki": "jakarta",
+ "kaupunkiQ": "Q3630",
+ "kohteet": [
+  {
+   "q": "Q145151",
+   "nimi": "Kansallismonumentti Monas",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": -6.17539,
+   "lon": 106.82714,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Around Monas Jakarta (2025) (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Around_Monas_Jakarta_(2025)_(cropped).jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Around_Monas_Jakarta_(2025)_(cropped).jpg",
+     "selite": "Monas on Merdeka-aukion keskellä kohoava itsenäisyysmonumentti, jonka huipulla on kullattu liekki.",
+     "leveys": 3211,
+     "korkeus": 2141,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Monumen Nasional, Jakarta, Indonesia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg?width=1280",
+     "tekija": "Ramayoni",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg",
+     "selite": "Monumentti ja sitä ympäröivä laaja Merdeka-aukio ylhäältä katsottuna.",
+     "leveys": 4160,
+     "korkeus": 2352,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q475379",
+   "nimi": "Istiqlal-moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -6.16972,
+   "lon": 106.83083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Masjid Istiqlal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Istiqlal.jpg?width=1280",
+     "tekija": "Michael Coghlan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Istiqlal.jpg",
+     "selite": "Istiqlal on Kaakkois-Aasian suurimpia moskeijoja, ja sen valkoinen kupoli kohoaa marmoriseinän takaa.",
+     "leveys": 2553,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Masjid Istiqlal Jakarta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Istiqlal_Jakarta.jpg?width=1280",
+     "tekija": "AR El Syarif",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Istiqlal_Jakarta.jpg",
+     "selite": "Moskeijan sisäänkäynti ja kerroksittain nouseva julkisivu.",
+     "leveys": 1280,
+     "korkeus": 855,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jakarta - Istiqlal Mosque, interior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta_-_Istiqlal_Mosque%2C_interior.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jakarta_-_Istiqlal_Mosque%2C_interior.jpg",
+     "selite": "Rukoussalin kiillotetut teräspylväät kannattavat suurta kupolia.",
+     "leveys": 6048,
+     "korkeus": 4024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55519",
+   "nimi": "Jakartan katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -6.16925,
+   "lon": 106.83312,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cathedral of Jakarta - exterior (2025) - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_Jakarta_-_exterior_(2025)_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Jakarta_-_exterior_(2025)_-_img_01.jpg",
+     "selite": "Neogoottilainen katedraali kohottaa kaksi teräväkärkistä tornia Merdeka-aukion tuntumassa.",
+     "leveys": 2268,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedral of Jakarta - exterior (2025) - img 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_Jakarta_-_exterior_(2025)_-_img_05.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_Jakarta_-_exterior_(2025)_-_img_05.jpg",
+     "selite": "Katedraalin julkisivu ja tornit kaiteiden takaa katsottuna.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q25053359",
+   "nimi": "Fatahillah-aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -6.1347,
+   "lon": 106.8133,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Batavia Fatahillah Square, Kota Tua Jakarta 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batavia_Fatahillah_Square%2C_Kota_Tua_Jakarta_01.jpg?width=1280",
+     "tekija": "Aisha Tanduk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Batavia_Fatahillah_Square%2C_Kota_Tua_Jakarta_01.jpg",
+     "selite": "Fatahillah-aukio on Batavian vanhan kaupungin keskus, jota reunustavat siirtomaa-ajan rakennukset.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Batavia Fatahillah Square, Kota Tua Jakarta 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batavia_Fatahillah_Square%2C_Kota_Tua_Jakarta_06.jpg?width=1280",
+     "tekija": "Aisha Tanduk",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Batavia_Fatahillah_Square%2C_Kota_Tua_Jakarta_06.jpg",
+     "selite": "Aukion laaja kivetty avautuu entisen kaupungintalon edessä.",
+     "leveys": 4080,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1356004",
+   "nimi": "Jakartan historiamuseo",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -6.13506,
+   "lon": 106.81329,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Batavia City Hall (Jakarta History Museum) Fatahillah Square (2025) - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batavia_City_Hall_(Jakarta_History_Museum)_Fatahillah_Square_(2025)_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Batavia_City_Hall_(Jakarta_History_Museum)_Fatahillah_Square_(2025)_-_img_01.jpg",
+     "selite": "Entinen Batavian kaupungintalo on valkoinen punakattoinen rakennus, jonka katolla on pieni torni.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Batavia City Hall (Jakarta History Museum) Fatahillah Square (2025) - img 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Batavia_City_Hall_(Jakarta_History_Museum)_Fatahillah_Square_(2025)_-_img_05.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Batavia_City_Hall_(Jakarta_History_Museum)_Fatahillah_Square_(2025)_-_img_05.jpg",
+     "selite": "Rakennus on nykyisin museo Fatahillah-aukion laidalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1286686",
+   "nimi": "Sunda Kelapan satama",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -6.12387,
+   "lon": 106.80861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sunda Kelapa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunda_Kelapa.jpg?width=1280",
+     "tekija": "Pocsywe",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunda_Kelapa.jpg",
+     "selite": "Sunda Kelapa on Jakartan vanha satama, jossa purjelaivat ovat laiturissa yhä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Collectie NMvWereldculturen, TM-20019904, Dia, 'Buginese prauwen in de haven Sunda Kelapa', fotograaf Boy Lawson, 1977.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Collectie_NMvWereldculturen%2C_TM-20019904%2C_Dia%2C_'Buginese_prauwen_in_de_haven_Sunda_Kelapa'%2C_fotograaf_Boy_Lawson%2C_1977.jpg?width=1280",
+     "tekija": "Boy Lawson",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Collectie_NMvWereldculturen%2C_TM-20019904%2C_Dia%2C_'Buginese_prauwen_in_de_haven_Sunda_Kelapa'%2C_fotograaf_Boy_Lawson%2C_1977.jpg",
+     "selite": "Buginilaiset pinisi-purjealukset ovat Sunda Kelapan tunnusmerkki.",
+     "leveys": 1500,
+     "korkeus": 968,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Boats in Dock - Old City Port - Jakarta - Indonesia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boats_in_Dock_-_Old_City_Port_-_Jakarta_-_Indonesia.jpg?width=1280",
+     "tekija": "Adam Jones, Ph.D.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boats_in_Dock_-_Old_City_Port_-_Jakarta_-_Indonesia.jpg",
+     "selite": "Puisten purjealusten rungot nousevat satamaveden yläpuolelle.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2030607",
+   "nimi": "Merenkulkumuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -6.12698,
+   "lon": 106.8083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museum Bahari Pintu Masuk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_Bahari_Pintu_Masuk.jpg?width=1280",
+     "tekija": "Haryo Sutanto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museum_Bahari_Pintu_Masuk.jpg",
+     "selite": "Merenkulkumuseo toimii entisessä siirtomaa-ajan varastorakennuksessa Sunda Kelapan lähellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Building - panoramio (31).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Building_-_panoramio_(31).jpg?width=1280",
+     "tekija": "michiel1972",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Building_-_panoramio_(31).jpg",
+     "selite": "Pitkä valkoinen varastorakennus punaisine kattoineen.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Collectie NMvWereldculturen, TM-20022106, Dia, 'Museum Bahari, het scheepvaartmuseum op Jl. Pasar Ikan', fotograaf Jaap de Jonge, 1986.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Collectie_NMvWereldculturen%2C_TM-20022106%2C_Dia%2C_'Museum_Bahari%2C_het_scheepvaartmuseum_op_Jl._Pasar_Ikan'%2C_fotograaf_Jaap_de_Jonge%2C_1986.jpg?width=1280",
+     "tekija": "Jacob Derk de Jonge",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Collectie_NMvWereldculturen%2C_TM-20022106%2C_Dia%2C_'Museum_Bahari%2C_het_scheepvaartmuseum_op_Jl._Pasar_Ikan'%2C_fotograaf_Jaap_de_Jonge%2C_1986.jpg",
+     "selite": "Museon sisäpiha ja sen vanhat kivirakennukset.",
+     "leveys": 1500,
+     "korkeus": 969,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2370202",
+   "nimi": "Kota Intanin nostosilta",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -6.13126,
+   "lon": 106.811,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20226-Jakarta (35893838382).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20226-Jakarta_(35893838382).jpg?width=1280",
+     "tekija": "xiquinhosilva from Cacau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20226-Jakarta_(35893838382).jpg",
+     "selite": "Kota Intanin hollantilaistyylinen nostosilta ylittää Kali Besar -kanavan vanhassa kaupungissa.",
+     "leveys": 1417,
+     "korkeus": 1063,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jembatan Kota Intan 2017-08-22 (13).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jembatan_Kota_Intan_2017-08-22_(13).jpg?width=1280",
+     "tekija": "Magul",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jembatan_Kota_Intan_2017-08-22_(13).jpg",
+     "selite": "Silta ylhäältä: puiset nostopylväät ja ketjut ovat tunnistettava piirre.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7813650",
+   "nimi": "Toko Merah",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -6.13595,
+   "lon": 106.811,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jakarta - Toko Merah (2025) - img 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta_-_Toko_Merah_(2025)_-_img_02.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jakarta_-_Toko_Merah_(2025)_-_img_02.jpg",
+     "selite": "Toko Merah on Kali Besarin varrella oleva punertava kauppiastalo, joka on peräisin 1700-luvulta.",
+     "leveys": 3709,
+     "korkeus": 2781,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dubbelpand Toko Merah aan de westzijde van de Kali Besar - 20653021 - RCE.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubbelpand_Toko_Merah_aan_de_westzijde_van_de_Kali_Besar_-_20653021_-_RCE.jpg?width=1280",
+     "tekija": "Coenraad Liebrecht Temminck Groll",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dubbelpand_Toko_Merah_aan_de_westzijde_van_de_Kali_Besar_-_20653021_-_RCE.jpg",
+     "selite": "Vanha mustavalkoinen kuva Toko Merahin kaksoistalosta kanavan rannalla.",
+     "leveys": 3162,
+     "korkeus": 3171,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1975437",
+   "nimi": "Jakarta Kotan asema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -6.13758,
+   "lon": 106.81463,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Stasiun Jakartakota 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stasiun_Jakartakota_2018.jpg?width=1280",
+     "tekija": "Ardzun",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stasiun_Jakartakota_2018.jpg",
+     "selite": "Jakarta Kotan asema on art deco -tyylinen päärautatieasema, joka valmistui 1920-luvun lopulla.",
+     "leveys": 4098,
+     "korkeus": 2678,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "DJI 0127 - Kota Tua Jakarta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DJI_0127_-_Kota_Tua_Jakarta.jpg?width=1280",
+     "tekija": "IndoDroneMan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DJI_0127_-_Kota_Tua_Jakarta.jpg",
+     "selite": "Asema ja ratapihat vanhan kaupungin keskellä ilmasta katsottuna.",
+     "leveys": 8064,
+     "korkeus": 6048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2025537",
+   "nimi": "Kim Tek Ie -temppeli",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -6.14389,
+   "lon": 106.81278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Klenteng Jin De Yuan, Glodok, Jakarta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klenteng_Jin_De_Yuan%2C_Glodok%2C_Jakarta.jpg?width=1280",
+     "tekija": "Gunawan Kartapranata",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klenteng_Jin_De_Yuan%2C_Glodok%2C_Jakarta.jpg",
+     "selite": "Kim Tek Ie eli Jin De Yuan on Glodokin kiinalaiskorttelin vanhimpia temppeleitä.",
+     "leveys": 2268,
+     "korkeus": 1367,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "025 Vihara Dharma Bhakti (22859449654).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/025_Vihara_Dharma_Bhakti_(22859449654).jpg?width=1280",
+     "tekija": "Photo Dharma from Sadao, Thailand",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:025_Vihara_Dharma_Bhakti_(22859449654).jpg",
+     "selite": "Temppelin portti ja punaiset seinät Jakartan Chinatownissa.",
+     "leveys": 2916,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1068044",
+   "nimi": "Gelora Bung Karnon stadion",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": -6.21858,
+   "lon": 106.80251,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BungKarno-indonoob.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BungKarno-indonoob.JPG?width=1280",
+     "tekija": "Original uploader was Indonoob at en.wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BungKarno-indonoob.JPG",
+     "selite": "Gelora Bung Karno on Indonesian suurin urheilustadion ja kansallinen jalkapallon näyttämö.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GBK -2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GBK_-2.jpg?width=1280",
+     "tekija": "Joe Sampouw",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GBK_-2.jpg",
+     "selite": "Stadionin renkaanmuotoinen katto ja valaistu kenttä yöllä.",
+     "leveys": 3144,
+     "korkeus": 1186,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q685790",
+   "nimi": "Taman Mini Indonesia Indah",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": -6.30167,
+   "lon": 106.89667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tongkonan - South Sulawesi Pavilion TMII (2025) - img 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tongkonan_-_South_Sulawesi_Pavilion_TMII_(2025)_-_img_01.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tongkonan_-_South_Sulawesi_Pavilion_TMII_(2025)_-_img_01.jpg",
+     "selite": "Taman Mini esittelee Indonesian maakuntien rakennuksia pienoiskoossa, kuten Sulawesin tongkonan-taloja.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2361543",
+   "nimi": "Wisma 46",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": -6.20361,
+   "lon": 106.82,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wisma 46 (Januari 2025).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wisma_46_(Januari_2025).jpg?width=1280",
+     "tekija": "Medelam",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wisma_46_(Januari_2025).jpg",
+     "selite": "Wisma 46 on Jakartan liikekeskustan pilvenpiirtäjä, jonka latvaa koristaa sininen lasikupu.",
+     "leveys": 2955,
+     "korkeus": 3940,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Jakarta Panorama.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta_Panorama.jpg?width=1280",
+   "tekija": "Gunawan Kartapranata",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jakarta_Panorama.jpg",
+   "selite": "Jakartan keskustan siluetti, jota hallitsee Monas-torni.",
+   "leveys": 2772,
+   "korkeus": 1355,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Jakarta, Capital City of Indonesia.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jakarta%2C_Capital_City_of_Indonesia.jpg?width=1280",
+   "tekija": "Jakartadunia",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jakarta%2C_Capital_City_of_Indonesia.jpg",
+   "selite": "Pilvenpiirtäjät nousevat Jakartan tiheästi rakennetusta kaupunkirakenteesta.",
+   "leveys": 2449,
+   "korkeus": 1635,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

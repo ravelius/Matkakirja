@@ -1,0 +1,418 @@
+{
+ "kaupunki": "vancouver",
+ "kaupunkiQ": "Q24639",
+ "kohteet": [
+  {
+   "q": "Q1126258",
+   "nimi": "Stanley Park",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": 49.3,
+   "lon": -123.14,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Seaplane ride from Victoria to Vancouver (7716918320).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seaplane_ride_from_Victoria_to_Vancouver_(7716918320).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Annecy, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seaplane_ride_from_Victoria_to_Vancouver_(7716918320).jpg",
+     "selite": "Stanley Park on sademetsän peittämä niemi aivan Vancouverin keskustan vieressä.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Stanley Park SqueakyMarmot December 17, 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stanley_Park_SqueakyMarmot_December_17%2C_2006.jpg?width=1280",
+     "tekija": "squeakymarmot",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Stanley_Park_SqueakyMarmot_December_17%2C_2006.jpg",
+     "selite": "Puiston rantaa kiertää seawall-reitti, ja kaukana häämöttää keskusta.",
+     "leveys": 1920,
+     "korkeus": 2560,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q124352",
+   "nimi": "Lions Gate -silta",
+   "peruste": "sitelinks",
+   "koko_m": 1800,
+   "lat": 49.31528,
+   "lon": -123.13833,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lions Gate Bridge, Vancouver, Canada.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lions_Gate_Bridge%2C_Vancouver%2C_Canada.jpg?width=1280",
+     "tekija": "ThomasLendt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lions_Gate_Bridge%2C_Vancouver%2C_Canada.jpg",
+     "selite": "Lions Gate -silta ylittää Burrard Inletin suuaukon ja yhdistää Stanley Parkin pohjoisrannikkoon.",
+     "leveys": 2706,
+     "korkeus": 4059,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lions Gate Bridge, Vancouver (2012) - 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lions_Gate_Bridge%2C_Vancouver_(2012)_-_1.JPG?width=1280",
+     "tekija": "Another Believer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lions_Gate_Bridge%2C_Vancouver_(2012)_-_1.JPG",
+     "selite": "Kaukaa silta erottuu vuoristoisen North Shoren edessä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q867340",
+   "nimi": "Harbour Centre",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 49.28478,
+   "lon": -123.11206,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vancouver (BC, Canada), Harbour Centre -- 2022 -- 1840.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_(BC%2C_Canada)%2C_Harbour_Centre_--_2022_--_1840.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC%2C_Canada)%2C_Harbour_Centre_--_2022_--_1840.jpg",
+     "selite": "Harbour Centren päällä on pyörivä näköalatasanne, josta näkee koko kaupungin.",
+     "leveys": 5877,
+     "korkeus": 4408,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vancouver (BC, Canada), Harbour Centre -- 2022 -- 1843.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_(BC%2C_Canada)%2C_Harbour_Centre_--_2022_--_1843.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC%2C_Canada)%2C_Harbour_Centre_--_2022_--_1843.jpg",
+     "selite": "Torni kohoaa lähikorttelien yläpuolelle Hastings Streetin päässä.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1495636",
+   "nimi": "Gastown",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 49.2847,
+   "lon": -123.111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vancouver (BC, Canada), Gastown Steam Clock -- 2022 -- 1824.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_(BC%2C_Canada)%2C_Gastown_Steam_Clock_--_2022_--_1824.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC%2C_Canada)%2C_Gastown_Steam_Clock_--_2022_--_1824.jpg",
+     "selite": "Gastownin höyrykello seisoo Water Streetin kulmassa vanhan kaupunginosan keskellä.",
+     "leveys": 3780,
+     "korkeus": 6720,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vancouver (BC, Canada), Gastown Steam Clock -- 2022 -- 1833.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_(BC%2C_Canada)%2C_Gastown_Steam_Clock_--_2022_--_1833.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC%2C_Canada)%2C_Gastown_Steam_Clock_--_2022_--_1833.jpg",
+     "selite": "Kello puhaltaa höyryä ja soittaa Westminster-kellopeliä.",
+     "leveys": 3167,
+     "korkeus": 6334,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q371960",
+   "nimi": "Vancouverin taidegalleria",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 49.2829,
+   "lon": -123.12,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vancouver Art Gallery.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_Art_Gallery.jpg?width=1280",
+     "tekija": "GoToVan",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_Art_Gallery.jpg",
+     "selite": "Taidegalleria toimii entisessä oikeustalossa Robson Squaren laidalla.",
+     "leveys": 5715,
+     "korkeus": 3810,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vancouver (BC, Canada), Art Gallery -- 2022 -- 1923.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_(BC%2C_Canada)%2C_Art_Gallery_--_2022_--_1923.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC%2C_Canada)%2C_Art_Gallery_--_2022_--_1923.jpg",
+     "selite": "Robson Squaren puolelta galleria ja taustan Hotel Vancouver erottuvat korttelissa.",
+     "leveys": 5865,
+     "korkeus": 4399,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q612227",
+   "nimi": "BC Place",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 49.27667,
+   "lon": -123.11194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BC Place Opening Day 2011-09-30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BC_Place_Opening_Day_2011-09-30.jpg?width=1280",
+     "tekija": "Yvrphoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BC_Place_Opening_Day_2011-09-30.jpg",
+     "selite": "BC Place on False Creekin rannalla oleva stadion, jonka katto on kiinnitetty kaarevien mastojen varaan.",
+     "leveys": 2855,
+     "korkeus": 2328,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BC Place Stadium (2015).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BC_Place_Stadium_(2015).jpg?width=1280",
+     "tekija": "Mike",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BC_Place_Stadium_(2015).jpg",
+     "selite": "Illalla stadionin rakenteita valaistaan värikkäästi.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q930702",
+   "nimi": "Hotel Vancouver",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 49.28384,
+   "lon": -123.12096,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vancouver (BC, Canada), Hotel Vancouver -- 2022 -- 1924.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_(BC%2C_Canada)%2C_Hotel_Vancouver_--_2022_--_1924.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_(BC%2C_Canada)%2C_Hotel_Vancouver_--_2022_--_1924.jpg",
+     "selite": "Hotel Vancouverin vihreä kuparikatto erottuu keskustan lasitorneista.",
+     "leveys": 5694,
+     "korkeus": 4271,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hotel vanc 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hotel_vanc_2007.jpg?width=1280",
+     "tekija": "Ken Walker kgw@lunar.ca",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hotel_vanc_2007.jpg",
+     "selite": "Linnamainen rautatiehotelli kohoaa Burrard Streetin ja Georgia Streetin kulmassa.",
+     "leveys": 2514,
+     "korkeus": 3487,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1514655",
+   "nimi": "Pyhän ruusukon katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 49.28194,
+   "lon": -123.11472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Holy Rosary Cathedral, Vancouver 2023b.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Rosary_Cathedral%2C_Vancouver_2023b.jpg?width=1280",
+     "tekija": "Greenknight dv",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holy_Rosary_Cathedral%2C_Vancouver_2023b.jpg",
+     "selite": "Pyhän ruusukon katedraali on goottilaistyylinen kirkko keskustan korkeiden rakennusten lomassa.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Holy Rosary Cathedral, Vancouver 2023c.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Rosary_Cathedral%2C_Vancouver_2023c.jpg?width=1280",
+     "tekija": "Greenknight dv",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Holy_Rosary_Cathedral%2C_Vancouver_2023c.jpg",
+     "selite": "Illalla valaistu julkisivu ja kaksi tornia erottuvat tummaa taivasta vasten.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7103961",
+   "nimi": "Orpheum-teatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 49.27993,
+   "lon": -123.12057,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Orpheum Theatre Vancouver 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Orpheum_Theatre_Vancouver_02.JPG?width=1280",
+     "tekija": "Xicotencatl",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Orpheum_Theatre_Vancouver_02.JPG",
+     "selite": "Orpheumin pystykyltti on Granville Streetin tunnettuja maamerkkejä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vancouver - Orpheum Theatre 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vancouver_-_Orpheum_Theatre_03.jpg?width=1280",
+     "tekija": "Joe Mabel",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vancouver_-_Orpheum_Theatre_03.jpg",
+     "selite": "Vanha teatteri kohoaa kapeana julkisivuna uudempien rakennusten väliin.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q741730",
+   "nimi": "Sun Yat-senin puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 49.27966,
+   "lon": -123.10397,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dr. Sun Yat-Sen Park and Classical Chinese Garden 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr._Sun_Yat-Sen_Park_and_Classical_Chinese_Garden_01.jpg?width=1280",
+     "tekija": "Ɱ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dr._Sun_Yat-Sen_Park_and_Classical_Chinese_Garden_01.jpg",
+     "selite": "Sun Yat-senin puutarha on Ming-ajan hengessä rakennettu kiinalainen puutarha Chinatownissa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dr. Sun Yat-Sen Classical Chinese Garden 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dr._Sun_Yat-Sen_Classical_Chinese_Garden_07.jpg?width=1280",
+     "tekija": "Ɱ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dr._Sun_Yat-Sen_Classical_Chinese_Garden_07.jpg",
+     "selite": "Kiviryhmät, lampi ja paviljongit muodostavat puutarhan sydämen.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5911472",
+   "nimi": "Hotel Europe",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 49.2834,
+   "lon": -123.104,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hotel Europe 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hotel_Europe_01.jpg?width=1280",
+     "tekija": "Xicotencatl",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hotel_Europe_01.jpg",
+     "selite": "Hotel Europe on kapea, kolmion muotoinen rakennus Gastownin Alexander Streetin ja Powell Streetin kulmassa.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyline of Vancouver, Canada.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Vancouver%2C_Canada.jpg?width=1280",
+   "tekija": "Quintin Soloviev",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_of_Vancouver%2C_Canada.jpg",
+   "selite": "Vancouverin keskusta sijaitsee niemellä lahden ja vuorten välissä.",
+   "leveys": 7302,
+   "korkeus": 4381,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "False Creek, Vancouver (2025).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/False_Creek%2C_Vancouver_(2025).jpg?width=1280",
+   "tekija": "Northwest",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:False_Creek%2C_Vancouver_(2025).jpg",
+   "selite": "False Creekin venesatama ja keskustan tornit kohtaavat North Shoren vuorten edessä.",
+   "leveys": 6247,
+   "korkeus": 1818,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,558 @@
+{
+ "kaupunki": "montevideo",
+ "kaupunkiQ": "Q1335",
+ "kohteet": [
+  {
+   "q": "Q283417",
+   "nimi": "Palacio Legislativo",
+   "peruste": "sitelinks",
+   "koko_m": 180,
+   "lat": -34.89107,
+   "lon": -56.18726,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palaciolegislativouruguay.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palaciolegislativouruguay.JPG?width=1280",
+     "tekija": "Coolcaesar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palaciolegislativouruguay.JPG",
+     "selite": "Palacio Legislativo on Uruguayn kansanedustuslaitoksen kotipaikka, ja sen neoklassinen julkisivu hallitsee Avenida de las Leyesin päätä.",
+     "leveys": 3492,
+     "korkeus": 2436,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio Legislativo (30401067518).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Legislativo_(30401067518).jpg?width=1280",
+     "tekija": "Marcelo Campi from Costa de Oro, Uruguay",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Legislativo_(30401067518).jpg",
+     "selite": "Ilmasta näkyy rakennuksen symmetrinen asemakaava ja sitä ympäröivät kadut.",
+     "leveys": 2560,
+     "korkeus": 1440,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio Legislativo al atardecer.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Legislativo_al_atardecer.JPG?width=1280",
+     "tekija": "Gabboe",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Legislativo_al_atardecer.JPG",
+     "selite": "Illan valossa palatsin kivinen julkisivu hohtaa lämpimänä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q498245",
+   "nimi": "Estadio Centenario",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": -34.89444,
+   "lon": -56.15278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio Centenario (vista aérea).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Centenario_(vista_a%C3%A9rea).jpg?width=1280",
+     "tekija": "Marcelo Campi from Costa de Oro, Uruguay",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Centenario_(vista_a%C3%A9rea).jpg",
+     "selite": "Estadio Centenario rakennettiin vuoden 1930 ensimmäisiä jalkapallon maailmanmestaruuskisoja varten.",
+     "leveys": 2560,
+     "korkeus": 1438,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017 Montevideo Karting Grand Prix - Exterior de la Tribuna América del Estadio Centenario 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_Montevideo_Karting_Grand_Prix_-_Exterior_de_la_Tribuna_Am%C3%A9rica_del_Estadio_Centenario_02.jpg?width=1280",
+     "tekija": "NaBUru38",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_Montevideo_Karting_Grand_Prix_-_Exterior_de_la_Tribuna_Am%C3%A9rica_del_Estadio_Centenario_02.jpg",
+     "selite": "Stadionin ulkopuolella kohoaa Torre de los Homenajes -torni.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Actividades conmemorativas de las Instrucciones Año XIII 17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Actividades_conmemorativas_de_las_Instrucciones_A%C3%B1o_XIII_17.jpg?width=1280",
+     "tekija": "Santiago Barreiro",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Actividades_conmemorativas_de_las_Instrucciones_A%C3%B1o_XIII_17.jpg",
+     "selite": "Katsomon rakenteet kiertävät kenttää kaarena.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q786149",
+   "nimi": "Estadio Gran Parque Central",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": -34.8845,
+   "lon": -56.159,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio Gran Parque Central 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Gran_Parque_Central_2022.jpg?width=1280",
+     "tekija": "YonytecuentoCNF",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Gran_Parque_Central_2022.jpg",
+     "selite": "Gran Parque Central on Club Nacionalin kotistadion, ja siellä on pelattu jalkapalloa yli sata vuotta.",
+     "leveys": 1985,
+     "korkeus": 1179,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estadio Gran Parque Central - 6.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Gran_Parque_Central_-_6.png?width=1280",
+     "tekija": "Charrúa Fever",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Gran_Parque_Central_-_6.png",
+     "selite": "Kentän vieressä on vanha katsomo, jonka penkit on maalattu seuran väreillä.",
+     "leveys": 4000,
+     "korkeus": 2649,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Estadio Gran Parque Central - 3.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Gran_Parque_Central_-_3.png?width=1280",
+     "tekija": "Charrúa Fever",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Gran_Parque_Central_-_3.png",
+     "selite": "Katsomojen yli näkyy pelikenttä ja ympäröivä kaupunginosa.",
+     "leveys": 4000,
+     "korkeus": 2649,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1050600",
+   "nimi": "Montevideon katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 90,
+   "lat": -34.907,
+   "lon": -56.20411,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Montevidéu - Uruguai - panoramio (28).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montevid%C3%A9u_-_Uruguai_-_panoramio_(28).jpg?width=1280",
+     "tekija": "Ricardo Freitas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montevid%C3%A9u_-_Uruguai_-_panoramio_(28).jpg",
+     "selite": "Montevideon katedraali on kaupungin vanhimpia kirkkoja, ja se seisoo Plaza Constituciónin laidalla.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Montevidéu - Uruguai - panoramio (29).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montevid%C3%A9u_-_Uruguai_-_panoramio_(29).jpg?width=1280",
+     "tekija": "Ricardo Freitas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montevid%C3%A9u_-_Uruguai_-_panoramio_(29).jpg",
+     "selite": "Julkisivun valkoinen väri ja kellotorni tekevät kirkosta tunnistettavan.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "At Montevideo 2023 523.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Montevideo_2023_523.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Montevideo_2023_523.jpg",
+     "selite": "Vanhan kaupungin kujalta näkyy kirkon torni talojen takaa.",
+     "leveys": 4640,
+     "korkeus": 6960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1892879",
+   "nimi": "Palacio Estévez",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -34.9071,
+   "lon": -56.19949,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2016 Palacio Estévez en Montevido.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Palacio_Est%C3%A9vez_en_Montevido.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Palacio_Est%C3%A9vez_en_Montevido.jpg",
+     "selite": "Palacio Estévez on Plaza Independencian laidalla seisova entinen presidentinpalatsi.",
+     "leveys": 5057,
+     "korkeus": 3793,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "At Montevideo 2023 441.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Montevideo_2023_441.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Montevideo_2023_441.jpg",
+     "selite": "Pylväsjulkisivu katsoo aukiolle ja Artigaksen patsaalle.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Edificio Independencia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificio_Independencia.jpg?width=1280",
+     "tekija": "Leandro Neumann Ciuffo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificio_Independencia.jpg",
+     "selite": "Iltavalossa rakennus hehkuu keltaisena kaupungin yössä.",
+     "leveys": 2896,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3308862",
+   "nimi": "Uruguayn kansalliskirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -34.90266,
+   "lon": -56.17751,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Biblioteca Nacional 96.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca_Nacional_96.jpg?width=1280",
+     "tekija": "JacobinoWunsh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Biblioteca_Nacional_96.jpg",
+     "selite": "Uruguayn kansalliskirjaston pylväikköinen julkisivu hallitsee rakennuksen sisäänkäyntiä.",
+     "leveys": 3056,
+     "korkeus": 2640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3816749",
+   "nimi": "Alkuperäiskansojen taiteen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -34.90752,
+   "lon": -56.21028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo de Arte Precolombino e Indígena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_de_Arte_Precolombino_e_Ind%C3%ADgena.jpg?width=1280",
+     "tekija": "Museo MAPI",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_de_Arte_Precolombino_e_Ind%C3%ADgena.jpg",
+     "selite": "Esikolumbiaanisen ja alkuperäiskansojen taiteen museo toimii vanhassa kaupunkitalossa Ciudad Viejassa.",
+     "leveys": 1440,
+     "korkeus": 2160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1121513",
+   "nimi": "Sodren auditorio",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -34.90434,
+   "lon": -56.19905,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Auditorio Nacional del Sodre doctora Adela Reta.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Auditorio_Nacional_del_Sodre_doctora_Adela_Reta.jpg?width=1280",
+     "tekija": "Estudiante1969",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Auditorio_Nacional_del_Sodre_doctora_Adela_Reta.jpg",
+     "selite": "Sodren kansallinen auditorio on Montevideon uusi konsertti- ja oopperatalo, jota ympäröi lasijulkisivu.",
+     "leveys": 1858,
+     "korkeus": 1012,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Calle Rincón - panoramio (13).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Calle_Rinc%C3%B3n_-_panoramio_(13).jpg?width=1280",
+     "tekija": "Andrés Franchi Ugart…",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Calle_Rinc%C3%B3n_-_panoramio_(13).jpg",
+     "selite": "Lasi- ja kivijulkisivu heijastaa ympäröivän kaupungin kortteleita.",
+     "leveys": 2816,
+     "korkeus": 1880,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sodre Auditorio AndesesqMercedes 100521 056ht.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sodre_Auditorio_AndesesqMercedes_100521_056ht.jpg?width=1280",
+     "tekija": "Héctor Tierno",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sodre_Auditorio_AndesesqMercedes_100521_056ht.jpg",
+     "selite": "Illalla valaistu sisäänkäynti houkuttelee yleisöä konsertteihin.",
+     "leveys": 1333,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1574280",
+   "nimi": "Palacio Municipal",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -34.90639,
+   "lon": -56.18611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Intendencia de Montevideo y alrededores.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Intendencia_de_Montevideo_y_alrededores.jpg?width=1280",
+     "tekija": "Bicentenario Uruguay",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Intendencia_de_Montevideo_y_alrededores.jpg",
+     "selite": "Palacio Municipal eli Intendencia on Montevideon kaupungintalo, jonka tiilitorni on Avenida 18 de Julion varrella.",
+     "leveys": 4256,
+     "korkeus": 2832,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 columnas de la Intendencia de Montevideo - Uruguay.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_columnas_de_la_Intendencia_de_Montevideo_-_Uruguay.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_columnas_de_la_Intendencia_de_Montevideo_-_Uruguay.jpg",
+     "selite": "Julkisivun korkeat pylväät ja tiilipinnat ovat 1930-luvun funktionalismia.",
+     "leveys": 5041,
+     "korkeus": 3641,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Uruguay edificio de la Intendencia de Montevideo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Uruguay_edificio_de_la_Intendencia_de_Montevideo.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Uruguay_edificio_de_la_Intendencia_de_Montevideo.jpg",
+     "selite": "Kaupungintalon kulmikas torni erottuu keskustan matalampien talojen yläpuolelle.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1570412",
+   "nimi": "Torres Garcían museo",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": -34.90644,
+   "lon": -56.20131,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo Torres García.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Torres_Garc%C3%ADa.jpg?width=1280",
+     "tekija": "Priscilla Jordão",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Torres_Garc%C3%ADa.jpg",
+     "selite": "Torres Garcían museo toimii kaupunkitalossa Ciudad Viejan ja keskustan rajalla.",
+     "leveys": 2848,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2016 Montevideo museo Torres García.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Montevideo_museo_Torres_Garc%C3%ADa.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Montevideo_museo_Torres_Garc%C3%ADa.jpg",
+     "selite": "Rakennuksen koristeellinen julkisivu kertoo vanhan kaupunginosan kaupunkitalojen tyylistä.",
+     "leveys": 3888,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1516703",
+   "nimi": "Keskusasema",
+   "peruste": "pelin nosto",
+   "koko_m": 180,
+   "lat": -34.89897,
+   "lon": -56.19381,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estación Central General Artigas 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n_Central_General_Artigas_2011.jpg?width=1280",
+     "tekija": "Willy Rey",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_Central_General_Artigas_2011.jpg",
+     "selite": "General Artigasin keskusasema on vanha rautatieasema, jonka tiilijulkisivu on 1800-luvun lopun rautatiearkkitehtuuria.",
+     "leveys": 1200,
+     "korkeus": 778,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Central Train Station General Artigas (140759045).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Train_Station_General_Artigas_(140759045).jpg?width=1280",
+     "tekija": "Marcelo Campi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Train_Station_General_Artigas_(140759045).jpg",
+     "selite": "Julkisivun kaaret ja koristeet kuuluvat 1800-luvun lopun rautatiearkkitehtuuriin.",
+     "leveys": 2048,
+     "korkeus": 1366,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Edificio Estación Artigas Montevideo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Edificio_Estaci%C3%B3n_Artigas_Montevideo.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Edificio_Estaci%C3%B3n_Artigas_Montevideo.jpg",
+     "selite": "Aseman kellotorni kohoaa kattojen yläpuolelle.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1133967",
+   "nimi": "Palacio Lapido",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -34.90639,
+   "lon": -56.19611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "18 de Julio 950 y Río Branco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/18_de_Julio_950_y_R%C3%ADo_Branco.jpg?width=1280",
+     "tekija": "ViviAC",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:18_de_Julio_950_y_R%C3%ADo_Branco.jpg",
+     "selite": "Palacio Lapido on art deco -tyylinen toimistotalo Montevideon keskustassa.",
+     "leveys": 1591,
+     "korkeus": 2386,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "PALACIO LAPIDO.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PALACIO_LAPIDO.JPG?width=1280",
+     "tekija": "Eduardo Ruggieri",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PALACIO_LAPIDO.JPG",
+     "selite": "Rakennuksen pyöristetyt kulmat ja vaakasuorat linjat ovat aikakauden tunnusmerkkejä.",
+     "leveys": 2048,
+     "korkeus": 1361,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2016 Montevideo Palacio de la Tribuna Popular Edificio Lapido.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2016_Montevideo_Palacio_de_la_Tribuna_Popular_Edificio_Lapido.jpg?width=1280",
+     "tekija": "Felipe Restrepo Acosta",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2016_Montevideo_Palacio_de_la_Tribuna_Popular_Edificio_Lapido.jpg",
+     "selite": "Torni kapenee ylöspäin ja sen julkisivu kaartuu kadun kulmassa.",
+     "leveys": 3680,
+     "korkeus": 4907,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Ciudad Vieja de Montevideo aéreo.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ciudad_Vieja_de_Montevideo_a%C3%A9reo.jpg?width=1280",
+   "tekija": "Fedaro",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ciudad_Vieja_de_Montevideo_a%C3%A9reo.jpg",
+   "selite": "Montevideon vanha kaupunki ulottuu niemelle Río de la Platan rannalla, ja sen takana kohoaa uusi keskusta.",
+   "leveys": 5277,
+   "korkeus": 2966,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Montevideo aerial.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Montevideo_aerial.jpg?width=1280",
+   "tekija": "Rabble",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Montevideo_aerial.jpg",
+   "selite": "Kaupunki levittäytyy matalana laajalle Río de la Platan pohjoisrannalle.",
+   "leveys": 4000,
+   "korkeus": 3000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

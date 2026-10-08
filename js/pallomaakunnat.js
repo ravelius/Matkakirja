@@ -46,7 +46,7 @@ import { kolmiulotteinen, pallonPiste } from './pallo.js';
 /** Pelin ämpäri (sama osoite kuin js/pallo.js:ssä). */
 const R2 = 'https://media.matkakirja.app/';
 /** Aineiston versio = tools/tee-maakuntavektorit.mjs:n ajon kansio. */
-export const PALLOMAAKUNNAT_VERSIO = '2026-09-30a'; // Krim ja Sevastopol UKR:lle (30.9.2026)
+export const PALLOMAAKUNNAT_VERSIO = '2026-10-07a'; // Pohjois-Kypros CYP:n alueeksi "Kyproksen pohjoisosa" (worldview, 7.10.2026); muut maat = 2026-09-30a
 export const PALLOMAAKUNNAT_JUURI = `${R2}julisteet/pallo/maakunnat/${PALLOMAAKUNNAT_VERSIO}/`;
 export const PALLOMAAKUNNAT_OLETUS = false;
 export const PALLOMAAKUNNAT_AVAIN = 'matkakirja-pallomaakunnat';

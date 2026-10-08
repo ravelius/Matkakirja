@@ -1,0 +1,374 @@
+[
+ {
+  "q": "Q3244627",
+  "nimi": "Adelaiden eläintarha",
+  "kaupunki": "adelaide",
+  "syy": "ei kelvollista vapaata kuvaa >= 1200 px (vain vanhoja mustavalkokuvia ja eläinkuvia)"
+ },
+ {
+  "q": "Q262120",
+  "nimi": "Olive Pinkin kasvitieteellinen puutarha",
+  "kaupunki": "alicesprings",
+  "syy": "Commonsissa vain opastaulukuvia, ei kelvollista näkymää"
+ },
+ {
+  "q": "Q72151744",
+  "nimi": "Stuart Town Gaol",
+  "kaupunki": "alicesprings",
+  "syy": "ei vapaata kuvaa Commonsissa"
+ },
+ {
+  "q": "Q41307",
+  "nimi": "Rebianan hiekkameri",
+  "kaupunki": "alkufra",
+  "syy": "ei vapaata kuvaa >= 1200 px, jonka kohde on varmistettu Rebianaksi"
+ },
+ {
+  "q": "Q284251",
+  "nimi": "Jaghbub",
+  "kaupunki": "alkufra",
+  "syy": "ei vapaata kuvaa >= 1200 px (vain elokuvakuvia)"
+ },
+ {
+  "q": "Q9046865",
+  "nimi": "Museo Memoria de la Ciudad",
+  "kaupunki": "asuncion",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q123337857",
+  "nimi": "Ateneo Paraguayo",
+  "kaupunki": "asuncion",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q589099",
+  "nimi": "Cloud Gate",
+  "kaupunki": "chicago",
+  "syy": "ei vapaata kuvaa jossa veistos on pääosassa; löydetyt kuvat ovat ihmispainotteisia"
+ },
+ {
+  "q": "Q6772574",
+  "nimi": "Marquette Building",
+  "kaupunki": "chicago",
+  "syy": "ei kelvollista vapaata kuvaa (löytynyt kuva ilman käyttökelpoista lisenssitietoa)"
+ },
+ {
+  "q": "Q28183785",
+  "nimi": "Hotel Darwin",
+  "kaupunki": "darwin",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q21956604",
+  "nimi": "Lameroo Beach",
+  "kaupunki": "darwin",
+  "syy": "ei tunnistettavaa kelvollista kuvaa"
+ },
+ {
+  "q": "Q1063366",
+  "nimi": "Charles Darwinin kansallispuisto",
+  "kaupunki": "darwin",
+  "syy": "ei tunnistettavaa kelvollista kuvaa"
+ },
+ {
+  "q": "Q1432488",
+  "nimi": "Presidentti Nicolau Lobaton kansainvälinen lentoasema",
+  "kaupunki": "dili",
+  "syy": "vain 1971 sisäkuvia, joissa ihmiset pääosassa; ei vapaata ulkokuvaa"
+ },
+ {
+  "q": "Q737602",
+  "nimi": "Aspire Tower",
+  "kaupunki": "doha",
+  "syy": "ei sopivaa vapaata ulkokuvaa >= 1200 px"
+ },
+ {
+  "q": "Q772988",
+  "nimi": "Khalifa International Stadium",
+  "kaupunki": "doha",
+  "syy": "vain yleisökuvia ja sisätiloja, ei ulkokuvaa"
+ },
+ {
+  "q": "Q1048774",
+  "nimi": "Kampusalueen stadion",
+  "kaupunki": "doha",
+  "syy": "vain ottelukuvia ja yleisöä, ei ulkokuvaa"
+ },
+ {
+  "q": "Q1134439",
+  "nimi": "Stadium 974",
+  "kaupunki": "doha",
+  "syy": "ei kelvollista kuvaa stadionista"
+ },
+ {
+  "q": "Q7108347",
+  "nimi": "Otagon museo",
+  "kaupunki": "dunedin",
+  "syy": "ei vapaata ulkokuvaa >= 1200 px (vain esine- ja luentokuvia)"
+ },
+ {
+  "q": "Q38164557",
+  "nimi": "Batavian haaksirikkopaikka",
+  "kaupunki": "geraldton",
+  "syy": "ei vapaata kuvaa kohteesta >= 1200 px"
+ },
+ {
+  "q": "Q12184769",
+  "nimi": "Arghunin sairaala",
+  "kaupunki": "halab",
+  "syy": "ei vapaata kuvaa kohteesta, vain nimikyltti"
+ },
+ {
+  "q": "Q1709336",
+  "nimi": "Saha-teatteri",
+  "kaupunki": "jakutsk",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q2393709",
+  "nimi": "Pul-e Khishti -moskeija",
+  "kaupunki": "kabul",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q109265005",
+  "nimi": "Kofar Matan värjäämöt",
+  "kaupunki": "kano",
+  "syy": "vain vesileimallisia tai ihmispainotteisia kuvia"
+ },
+ {
+  "q": "Q5101061",
+  "nimi": "Chini-Bagh",
+  "kaupunki": "kashgar",
+  "syy": "ei vapaata kuvaa >= 1 200 px, vain vanha karkea piirros ja valokuva ihmisjoukosta"
+ },
+ {
+  "q": "Q3457358",
+  "nimi": "Singha Durbar",
+  "kaupunki": "kathmandu",
+  "syy": "ei vapaata kuvaa, jossa itse palatsi näkyy kunnolla"
+ },
+ {
+  "q": "Q328488",
+  "nimi": "Salongan kansallispuisto",
+  "kaupunki": "kongo",
+  "syy": "ei vapaata kuvaa >= 1200 px, jossa kohde on tunnistettavasti"
+ },
+ {
+  "q": "Q3403979",
+  "nimi": "Miklušin vankila",
+  "kaupunki": "kosice",
+  "syy": "vain sisätilakuvia museonäyttelystä, ei tunnistettavaa ulkokuvaa"
+ },
+ {
+  "q": "Q7398110",
+  "nimi": "Sadu House",
+  "kaupunki": "kuwait",
+  "syy": "ei kelvollista vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q6448876",
+  "nimi": "Kuwaitin tiedekeskus",
+  "kaupunki": "kuwait",
+  "syy": "ei kelvollista ulkokuvaa, vain kuvia keskuksesta ulos"
+ },
+ {
+  "q": "Q1507060",
+  "nimi": "Lake Melville",
+  "kaupunki": "labrador",
+  "syy": "ei vapaata sopivaa kuvaa >= 1200 px (vain karttoja)"
+ },
+ {
+  "q": "Q1539726",
+  "nimi": "Smallwoodin tekojärvi",
+  "kaupunki": "labrador",
+  "syy": "ei kelvollista kuvaa"
+ },
+ {
+  "q": "Q7170179",
+  "nimi": "Pershing Square",
+  "kaupunki": "losangeles",
+  "syy": "ei kelvollista vapaata kuvaa >= 1 200 px löytynyt tarkistetuista ehdokkaista"
+ },
+ {
+  "q": "Q1147168",
+  "nimi": "La Brean tervahaudat",
+  "kaupunki": "losangeles",
+  "syy": "ei ulkokuvaa tervahaudoista; löydetyt kuvat ovat museon sisätiloista"
+ },
+ {
+  "q": "Q68118772",
+  "nimi": "Amazonasin maantieteellinen ja historiallinen instituutti",
+  "kaupunki": "manaus",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q1788735",
+  "nimi": "Muzdalifah",
+  "kaupunki": "mekka",
+  "syy": "ei kelvollista kuvaa (vain yksi huonolaatuinen, ei tunnistettava)"
+ },
+ {
+  "q": "Q5776873",
+  "nimi": "Colegio Civil",
+  "kaupunki": "monterrey",
+  "syy": "ei vapaata kuvaa Commonsissa"
+ },
+ {
+  "q": "Q12204304",
+  "nimi": "Nabi Yunusin moskeija",
+  "kaupunki": "mosul",
+  "syy": "tuhottu 2014, ei kelvollista nykykuvaa pystyssä olevasta rakennuksesta"
+ },
+ {
+  "q": "Q971586",
+  "nimi": "Seward-niemimaa",
+  "kaupunki": "nome",
+  "syy": "ei kelvollista maisemakuvaa (vain satelliittikuva, kartta tai arkistokuva)"
+ },
+ {
+  "q": "Q126043",
+  "nimi": "King Island",
+  "kaupunki": "nome",
+  "syy": "autioitunut ja rappeutunut kylä, ei soveltuva"
+ },
+ {
+  "q": "Q586302",
+  "nimi": "Phillip-saari",
+  "kaupunki": "norfolk",
+  "syy": "ei vapaata maisemakuvaa >= 1200 px (vain lintukuvia)"
+ },
+ {
+  "q": "Q1636644",
+  "nimi": "Nepean-saari",
+  "kaupunki": "norfolk",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q1361458",
+  "nimi": "Mount Bates",
+  "kaupunki": "norfolk",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q6349986",
+  "nimi": "Kalaaliaraq-tori",
+  "kaupunki": "nuuk",
+  "syy": "vain ihmis- ja lihakuvia, ei kelvollista ulkonäkymää"
+ },
+ {
+  "q": "Q178065",
+  "nimi": "Pompidou-keskus",
+  "kaupunki": "pariisi",
+  "syy": "ei hyvää vapaata ulkokuvaa: löytyneet kuvat ovat joko kaukaa, ihmispainotteisia tai väärä kohde"
+ },
+ {
+  "q": "Q2289928",
+  "nimi": "Sir John Guisen stadion",
+  "kaupunki": "portmoresby",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q106322306",
+  "nimi": "Hohola-moskeija",
+  "kaupunki": "portmoresby",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q4746418",
+  "nimi": "Amini Park",
+  "kaupunki": "portmoresby",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q2956553",
+  "nimi": "Nosso Senhor dos Passosin kappeli",
+  "kaupunki": "portoalegre",
+  "syy": "vain sisätilakuvia"
+ },
+ {
+  "q": "Q10333525",
+  "nimi": "Joaquim Felizardon museo",
+  "kaupunki": "portoalegre",
+  "syy": "ei kelvollista vapaata kuvaa"
+ },
+ {
+  "q": "Q47157",
+  "nimi": "Kuningas Khalidin kansainvälinen lentoasema",
+  "kaupunki": "riad",
+  "syy": "ei sopivaa vapaata kuvaa, vain henkilökuvia"
+ },
+ {
+  "q": "Q3029318",
+  "nimi": "Dique do Tororó",
+  "kaupunki": "salvador",
+  "syy": "ei kelvollista vapaata kuvaa (kaikki ehdokkaat ihmispainotteisia mielenosoituskuvia)"
+ },
+ {
+  "q": "Q8502697",
+  "nimi": "Keltainen linnake",
+  "kaupunki": "sarajevo",
+  "syy": "ei kelvollista kuvaa: vain kaupunkipanoraamoja ja yksityiskohtia"
+ },
+ {
+  "q": "Q2735712",
+  "nimi": "Orchard Road",
+  "kaupunki": "singapore",
+  "syy": "ei vapaata ulkokuvaa ilman ihmispääosaa; vain ostoskeskuksia ja väkijoukkoja"
+ },
+ {
+  "q": "Q12217059",
+  "nimi": "Sanganebin kansallispuisto",
+  "kaupunki": "suakin",
+  "syy": "ei vapaata kuvaa >= 1200 px, jossa kohde on tunnistettavasti"
+ },
+ {
+  "q": "Q1003130",
+  "nimi": "Imam Khomeinin aukio",
+  "kaupunki": "teheran",
+  "syy": "ei sopivaa vapaata kuvaa (vesileima, historiallisia väkijoukkokuvia)"
+ },
+ {
+  "q": "Q7270766",
+  "nimi": "Queens Gardens",
+  "kaupunki": "townsville",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q24189505",
+  "nimi": "Vanha tullitalo",
+  "kaupunki": "townsville",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q24189523",
+  "nimi": "School of Arts",
+  "kaupunki": "townsville",
+  "syy": "ei vapaata kuvaa >= 1200 px"
+ },
+ {
+  "q": "Q84446338",
+  "nimi": "Paholaisen allas",
+  "kaupunki": "viktorianputoukset",
+  "syy": "vapaat kuvat esittävät uimareita pääosassa"
+ },
+ {
+  "q": "Q9292226",
+  "nimi": "Wellingtonin museo",
+  "kaupunki": "wellington",
+  "syy": "ei vapaata ulkokuvaa; vapaat kuvat vain sisätiloista ja esineistä"
+ },
+ {
+  "q": "Q910180",
+  "nimi": "Qin Shi Huangdin hauta",
+  "kaupunki": "xian",
+  "syy": "ei vapaata kelvollista kuvaa (haudan kumpu hämärä, vain heikkoja kuvia)"
+ },
+ {
+  "q": "Q956110",
+  "nimi": "West Yellowstone",
+  "kaupunki": "yellowstone",
+  "syy": "ei sopivaa kaupunkikuvaa (vain linja-autoja ja katukuvaa)"
+ }
+]

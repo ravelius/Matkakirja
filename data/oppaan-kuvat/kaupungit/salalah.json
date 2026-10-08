@@ -1,0 +1,236 @@
+{
+ "kaupunki": "salalah",
+ "kaupunkiQ": "Q1294439",
+ "pieniAlue": true,
+ "jarjestys": [
+  "Q12184607",
+  "Q826118",
+  "Q66134031",
+  "Q125676954",
+  "Q6852243"
+ ],
+ "kohteet": [
+  {
+   "q": "Q12184607",
+   "nimi": "Al-Baleedin arkeologinen puisto",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 17.00892,
+   "lon": 54.13456,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al Balid Archeological Park 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Balid_Archeological_Park_5.jpg?width=1280",
+     "tekija": "https://www.flickr.com/photos/pukomuko/",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Balid_Archeological_Park_5.jpg",
+     "selite": "Al-Baleedin raunioissa seisoi keskiajan suitsukesatama Zafar, jonka muurit nousevat lagunan rannalta.",
+     "leveys": 4177,
+     "korkeus": 2660,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al Baleed Archaeological Park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Baleed_Archaeological_Park.jpg?width=1280",
+     "tekija": "Juozas Šalna",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Baleed_Archaeological_Park.jpg",
+     "selite": "Muinaisen satamakaupungin perustukset ja rauniot ovat nykyään avoin arkeologinen puisto meren rannalla.",
+     "leveys": 4428,
+     "korkeus": 3073,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Al Baleed park famous Fortress in Oman.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al_Baleed_park_famous_Fortress_in_Oman.jpg?width=1280",
+     "tekija": "Mohthearthlover",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al_Baleed_park_famous_Fortress_in_Oman.jpg",
+     "selite": "Puiston linnoituksen jäänteet muistuttavat suitsukekaupan vauraasta satamasta.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q826118",
+   "nimi": "Khor Rori",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 17.039,
+   "lon": 54.4344,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dunst Oman scan0329 - Samhuram.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dunst_Oman_scan0329_-_Samhuram.jpg?width=1280",
+     "tekija": "Bernhard Dunst",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dunst_Oman_scan0329_-_Samhuram.jpg",
+     "selite": "Khor Rorin laguunin rannalla sijaitsi muinainen suitsukesatama Sumhuram.",
+     "leveys": 6820,
+     "korkeus": 4456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Across Khor Rori inlet (51274805169).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Across_Khor_Rori_inlet_(51274805169).jpg?width=1280",
+     "tekija": "Scott Edmunds",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Across_Khor_Rori_inlet_(51274805169).jpg",
+     "selite": "Khor Rorin merenlahti oli aikoinaan suitsukkeen vientisatama Arabianmeren rannalla.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q66134031",
+   "nimi": "Wadi Dawkah",
+   "peruste": "UNESCO",
+   "koko_m": 1000,
+   "lat": 17.35,
+   "lon": 54.0667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Boswellia sacra in Wadi Dowkah (Dhofar).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boswellia_sacra_in_Wadi_Dowkah_(Dhofar).JPG?width=1280",
+     "tekija": "Mauro Raffaelli",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boswellia_sacra_in_Wadi_Dowkah_(Dhofar).JPG",
+     "selite": "Wadi Dawkahin suitsukepuut kasvavat aavikon laidalla ja niistä kerätään suitsukehartsia.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boswellia sacra kz03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boswellia_sacra_kz03.jpg?width=1280",
+     "tekija": "Krzysztof Ziarnek, Kenraiz",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boswellia_sacra_kz03.jpg",
+     "selite": "Boswellia sacra on suitsukepuu, jonka hartsi teki Dhofarista muinaisen kauppamaan.",
+     "leveys": 8160,
+     "korkeus": 6039,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q125676954",
+   "nimi": "Al-Husnin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 16.99892,
+   "lon": 54.09671,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Oman, Salalah, Qasr al-Hosn Palace.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oman%2C_Salalah%2C_Qasr_al-Hosn_Palace.jpg?width=1280",
+     "tekija": "Dr. Thomas Liptak",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oman%2C_Salalah%2C_Qasr_al-Hosn_Palace.jpg",
+     "selite": "Al-Husnin palatsi on Omanin sulttaanin palatsi Salalahissa.",
+     "leveys": 4826,
+     "korkeus": 2715,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "OM-Salalah-palast-aussen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/OM-Salalah-palast-aussen.jpg?width=1280",
+     "tekija": "Balou46",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:OM-Salalah-palast-aussen.jpg",
+     "selite": "Palatsin muurit ja kellotorni sijaitsevat kaupungin keskustassa meren lähellä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6852243",
+   "nimi": "Suitsukemaan museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 17.00936,
+   "lon": 54.13611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Salalah, museo della terra degli incensi, entrata.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah%2C_museo_della_terra_degli_incensi%2C_entrata.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah%2C_museo_della_terra_degli_incensi%2C_entrata.jpg",
+     "selite": "Suitsukemaan museo kertoo Dhofarin suitsukekaupan historiasta Al-Baleedin vieressä.",
+     "leveys": 5805,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Salalah, museo della terra degli incensi, cortile 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah%2C_museo_della_terra_degli_incensi%2C_cortile_01.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah%2C_museo_della_terra_degli_incensi%2C_cortile_01.jpg",
+     "selite": "Museon sisäpihalla kasvaa suitsukepuu, ja ympäröivissä saleissa esitellään alueen perintöä.",
+     "leveys": 6720,
+     "korkeus": 4480,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Khareef season,salalah,Oman.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khareef_season%2Csalalah%2COman.jpg?width=1280",
+   "tekija": "MURSHID THALI PARAMBAN",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khareef_season%2Csalalah%2COman.jpg",
+   "selite": "Salalah on Omanin eteläinen rannikkokaupunki, jonka ympäristö vihertyy khareef-monsuunin aikaan.",
+   "leveys": 4032,
+   "korkeus": 3024,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Salalah Beach 3.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Salalah_Beach_3.jpg?width=1280",
+   "tekija": "https://www.flickr.com/photos/fromthevo1d/",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Salalah_Beach_3.jpg",
+   "selite": "Salalahin pitkä hiekkaranta ja palmut kuuluvat kaupungin Arabianmeren rantaan.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

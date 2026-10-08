@@ -1,0 +1,781 @@
+{
+ "kaupunki": "jerusalem",
+ "kaupunkiQ": "Q1218",
+ "kohteet": [
+  {
+   "q": "Q213274",
+   "nimi": "Jerusalemin vanhakaupunki",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 31.77667,
+   "lon": 35.23417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem- Old City (5720199730).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-_Old_City_(5720199730).jpg?width=1280",
+     "tekija": "Jean & Nathalie",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-_Old_City_(5720199730).jpg",
+     "selite": "Muurien ympäröimä vanhakaupunki kokoaa kaupungin pyhät paikat ja kirkontornit tiiviiksi kivimereksi.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "WikiAir IL-13-06 035 - Old City (Jerusalem).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WikiAir_IL-13-06_035_-_Old_City_(Jerusalem).JPG?width=1280",
+     "tekija": "Neukoln",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:WikiAir_IL-13-06_035_-_Old_City_(Jerusalem).JPG",
+     "selite": "Ylhäältä näkyy, kuinka vanhakaupungin tiheä rakennuskanta tiivistyy Temppelivuoren ympärille.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jerusalem-2013(2)-Aerial-Temple Mount-(south exposure).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-2013(2)-Aerial-Temple_Mount-(south_exposure).jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-2013(2)-Aerial-Temple_Mount-(south_exposure).jpg",
+     "selite": "Etelästä katsottuna Temppelivuoren laaja tasanne erottuu vanhankaupungin kaakkoiskulmassa.",
+     "leveys": 7500,
+     "korkeus": 5632,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q172077",
+   "nimi": "Kalliomoskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 31.77806,
+   "lon": 35.23528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem-2013(2)-Temple Mount-Dome of the Rock (SE exposure).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-2013(2)-Temple_Mount-Dome_of_the_Rock_(SE_exposure).jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-2013(2)-Temple_Mount-Dome_of_the_Rock_(SE_exposure).jpg",
+     "selite": "Kalliomoskeijan kultakupoli ja sinisin laatoin kuorrettu kahdeksankulmio hallitsevat Temppelivuoren tasannetta.",
+     "leveys": 7500,
+     "korkeus": 5425,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jerusalem-2013-Temple Mount-Dome of the Rock & Chain.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-2013-Temple_Mount-Dome_of_the_Rock_%26_Chain.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-2013-Temple_Mount-Dome_of_the_Rock_%26_Chain.jpg",
+     "selite": "Kalliomoskeijan kupoli näkyy kaarien läpi Temppelivuoren aukiolta.",
+     "leveys": 10264,
+     "korkeus": 6833,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jerusalem-2013-Temple Mount-Dome of the Rock-Detail 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-2013-Temple_Mount-Dome_of_the_Rock-Detail_01.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-2013-Temple_Mount-Dome_of_the_Rock-Detail_01.jpg",
+     "selite": "Moskeijan seiniä peittävät värikkäät laatat ja kirjoitusnauhat.",
+     "leveys": 5000,
+     "korkeus": 3460,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Jerusalem Dome of the rock BW 14.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Dome_of_the_rock_BW_14.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Dome_of_the_rock_BW_14.JPG",
+     "selite": "Öljymäeltä katsottuna Kalliomoskeijan kupoli kohoaa vanhankaupungin muurin takaa.",
+     "leveys": 3812,
+     "korkeus": 2540,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 5,
+     "tiedosto": "Dome of the Rock, South Facade (2008) 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_the_Rock%2C_South_Facade_(2008)_06.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_the_Rock%2C_South_Facade_(2008)_06.jpg",
+     "selite": "Kalliomoskeijan eteläjulkisivu ja kullattu kupoli vasten kirkasta taivasta.",
+     "leveys": 3439,
+     "korkeus": 2431,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q134821",
+   "nimi": "Länsimuuri",
+   "peruste": "pelin nosto",
+   "lat": 31.77695,
+   "lon": 35.23425,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Western Wall Plaza - Jerusalem (1291829327).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Western_Wall_Plaza_-_Jerusalem_(1291829327).jpg?width=1280",
+     "tekija": "David King from Haifa, Israel",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Western_Wall_Plaza_-_Jerusalem_(1291829327).jpg",
+     "selite": "Länsimuuri on Temppelivuoren tukimuurin säilynyt osa, jonka edustalla on laaja aukio.",
+     "leveys": 3008,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome of the rock-Wailing wall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_the_rock-Wailing_wall.jpg?width=1280",
+     "tekija": "Sustructu stitched by Marku1988 This image was created with Hugin.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_the_rock-Wailing_wall.jpg",
+     "selite": "Länsimuurin aukiolta näkyy Temppelivuoren kultainen kupoli muurin takana.",
+     "leveys": 5400,
+     "korkeus": 2305,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Western Wall Plaza evacuated 13 June 2025.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Western_Wall_Plaza_evacuated_13_June_2025.jpg?width=1280",
+     "tekija": "Y",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Western_Wall_Plaza_evacuated_13_June_2025.jpg",
+     "selite": "Tyhjä Länsimuurin aukio kuvaa hyvin muurin massiiviset kivikerrokset.",
+     "leveys": 2000,
+     "korkeus": 1126,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Western Wall at night 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Western_Wall_at_night_2022.jpg?width=1280",
+     "tekija": "DGtal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Western_Wall_at_night_2022.jpg",
+     "selite": "Illalla Länsimuuri hohtaa valaistuna ja aukio täyttyy hiljaa kävijöistä.",
+     "leveys": 3984,
+     "korkeus": 1840,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q187702",
+   "nimi": "Pyhän haudan kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 31.77844,
+   "lon": 35.22975,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem Holy Sepulchre BW 19.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Holy_Sepulchre_BW_19.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Holy_Sepulchre_BW_19.JPG",
+     "selite": "Pyhän haudan kirkon julkisivu ja kellotorni avautuvat vanhankaupungin sisäpihalle.",
+     "leveys": 4730,
+     "korkeus": 3990,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Church of the Holy Sepulchre, Jerusalem, Israel.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Church_of_the_Holy_Sepulchre%2C_Jerusalem%2C_Israel.jpg?width=1280",
+     "tekija": "Mohammad Shad Siddiqui",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Church_of_the_Holy_Sepulchre%2C_Jerusalem%2C_Israel.jpg",
+     "selite": "Kirkon pihalta näkyvät julkisivun kaksoiskaaret ja ristiretkiajan kellotorni.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Church of the Holy Sepulchre, Jerusalem, 43.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_the_Holy_Sepulchre%2C_Jerusalem%2C_43.jpg?width=1280",
+     "tekija": "Hoshvilim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_the_Holy_Sepulchre%2C_Jerusalem%2C_43.jpg",
+     "selite": "Julkisivun romaaniset kaarikkaat ikkunat ovat ristiretkiajalta.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Church of the Holy Sepulchre, Jerusalem 2018 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_the_Holy_Sepulchre%2C_Jerusalem_2018_03.jpg?width=1280",
+     "tekija": "Montanabw",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_the_Holy_Sepulchre%2C_Jerusalem_2018_03.jpg",
+     "selite": "Kirkon sisällä Edikula-kappeli on paikka, jonka perinne tunnistaa Jeesuksen haudaksi.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12192963",
+   "nimi": "Al-Aqsa",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 31.77611,
+   "lon": 35.23583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem Al-Aqsa Mosque BW 2010-09-21 06-38-12.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Al-Aqsa_Mosque_BW_2010-09-21_06-38-12.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Al-Aqsa_Mosque_BW_2010-09-21_06-38-12.JPG",
+     "selite": "Al-Aqsa-moskeija sijaitsee Temppelivuoren eteläreunalla, ja sen harmaa kupoli näkyy kauas.",
+     "leveys": 3662,
+     "korkeus": 1786,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al-Aqsa Mosque, Jerusalem - Exterior - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Aqsa_Mosque%2C_Jerusalem_-_Exterior_-_panoramio.jpg?width=1280",
+     "tekija": "Eassa",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Aqsa_Mosque%2C_Jerusalem_-_Exterior_-_panoramio.jpg",
+     "selite": "Al-Aqsan julkisivun kaariaukot avautuvat aukiolle.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Dome of the Al-Aqsa Mosque (20160).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_of_the_Al-Aqsa_Mosque_(20160).jpg?width=1280",
+     "tekija": "Rhododendrites",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_of_the_Al-Aqsa_Mosque_(20160).jpg",
+     "selite": "Al-Aqsan harmaa kupoli kohoaa moskeijan katon yläpuolelle.",
+     "leveys": 4433,
+     "korkeus": 2783,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1177765",
+   "nimi": "Daavidin torni",
+   "peruste": "sitelinks",
+   "lat": 31.77611,
+   "lon": 35.22778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem-Tower-of-David-V2-348.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-Tower-of-David-V2-348.jpg?width=1280",
+     "tekija": "Bukvoed",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-Tower-of-David-V2-348.jpg",
+     "selite": "Daavidin tornin linnoituksen minareetti on vanhankaupungin tunnetuimpia siluetteja.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jerusalem-Tower-of-David-0568.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-Tower-of-David-0568.jpg?width=1280",
+     "tekija": "Bukvoed",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-Tower-of-David-0568.jpg",
+     "selite": "Linnoituksen pihalta aukeaa näkymä vanhankaupungin ylle ja kaivauksille.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jerusalem-Tower-of-David-0710.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-Tower-of-David-0710.jpg?width=1280",
+     "tekija": "Bukvoed",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-Tower-of-David-0710.jpg",
+     "selite": "Linnoituksen muurit ja torni kertovat kaupungin puolustuksen vuosisadoista.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q205976",
+   "nimi": "Öljymäki",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 31.77795,
+   "lon": 35.24569,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2013-Aerial-Mount of Olives.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-Aerial-Mount_of_Olives.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-Aerial-Mount_of_Olives.jpg",
+     "selite": "Öljymäki kohoaa vanhankaupungin itäpuolella, ja sen rinteitä peittää vanha hautausmaa.",
+     "leveys": 5000,
+     "korkeus": 2767,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mount of Olives - Panorama -9389.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_of_Olives_-_Panorama_-9389.jpg?width=1280",
+     "tekija": "Raimond Spekking",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_of_Olives_-_Panorama_-9389.jpg",
+     "selite": "Öljymäen rinteeltä avautuu laaja näkymä vanhankaupungin muurien ja moskeijan suuntaan.",
+     "leveys": 9492,
+     "korkeus": 2261,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sunset over Jerusalem from the Mount of Olives 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_over_Jerusalem_from_the_Mount_of_Olives_01.jpg?width=1280",
+     "tekija": "Davide Mauro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset_over_Jerusalem_from_the_Mount_of_Olives_01.jpg",
+     "selite": "Öljymäen näköalapaikalta Jerusalemin siluetti hohtaa auringonlaskun aikaan.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q947597",
+   "nimi": "Damaskoksen portti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 31.78164,
+   "lon": 35.2305,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Damascus Gate IMG 3146.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Damascus_Gate_IMG_3146.jpg?width=1280",
+     "tekija": "بدارين",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Damascus_Gate_IMG_3146.jpg",
+     "selite": "Damaskoksen portti on vanhankaupungin pohjoisin ja koristeellisin portti, ja sen torneja kruunaavat harjat.",
+     "leveys": 5184,
+     "korkeus": 3888,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jerusalem Damaskustor BW 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Damaskustor_BW_1.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Damaskustor_BW_1.jpg",
+     "selite": "Portin edustan portaat johtavat vanhankaupungin vilkkaaseen katuverkkoon.",
+     "leveys": 3784,
+     "korkeus": 2521,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q312812",
+   "nimi": "Jaffan portti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 31.77653,
+   "lon": 35.22769,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem-Jaffa-Gate-RIH-0618.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem-Jaffa-Gate-RIH-0618.jpg?width=1280",
+     "tekija": "Bukvoed",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem-Jaffa-Gate-RIH-0618.jpg",
+     "selite": "Jaffan portti on vanhankaupungin länsiportti, jonka kautta tie kulkee kohti rannikkoa.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old City Walls and Tower of David in Jerusalem (2019) 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_City_Walls_and_Tower_of_David_in_Jerusalem_(2019)_03.jpg?width=1280",
+     "tekija": "Pudelek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_City_Walls_and_Tower_of_David_in_Jerusalem_(2019)_03.jpg",
+     "selite": "Muurin kävelykäytävältä näkyy Daavidin tornin minareetti kaupungin yllä.",
+     "leveys": 4080,
+     "korkeus": 2720,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jerusalem Jaffa Gate BW 1.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Jaffa_Gate_BW_1.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Jaffa_Gate_BW_1.JPG",
+     "selite": "Jaffan portin kulmikas torni ja holvattu aukko kuuluvat 1500-luvun muuriin.",
+     "leveys": 2406,
+     "korkeus": 2599,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q205333",
+   "nimi": "Getsemane",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 31.77942,
+   "lon": 35.23942,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Оld Olive trees in the Garden of Gethsemane, 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9Eld_Olive_trees_in_the_Garden_of_Gethsemane%2C_01.jpg?width=1280",
+     "tekija": "Beko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9Eld_Olive_trees_in_the_Garden_of_Gethsemane%2C_01.jpg",
+     "selite": "Getsemanen puutarhan vanhat oliivipuut kasvavat Öljymäen juurella.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Оld Olive trees in the Garden of Gethsemane, 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9Eld_Olive_trees_in_the_Garden_of_Gethsemane%2C_08.jpg?width=1280",
+     "tekija": "Beko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9Eld_Olive_trees_in_the_Garden_of_Gethsemane%2C_08.jpg",
+     "selite": "Puutarhan polku kiertää vääntyneitä, vuosisatoja vanhoja oliivipuita.",
+     "leveys": 4917,
+     "korkeus": 3279,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Оld Olive trees in the Garden of Gethsemane, 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9Eld_Olive_trees_in_the_Garden_of_Gethsemane%2C_07.jpg?width=1280",
+     "tekija": "Beko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9Eld_Olive_trees_in_the_Garden_of_Gethsemane%2C_07.jpg",
+     "selite": "Oliivipuiden paksut rungot antavat varjoa puutarhan polulle.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1331689",
+   "nimi": "Kaikkien kansojen kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 31.77923,
+   "lon": 35.23963,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Church of All Nations at Gethsemane, Jerusalem (Front).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_All_Nations_at_Gethsemane%2C_Jerusalem_(Front).JPG?width=1280",
+     "tekija": "Danny Lyulev",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_All_Nations_at_Gethsemane%2C_Jerusalem_(Front).JPG",
+     "selite": "Kaikkien kansojen kirkon pylväskäytävä ja mosaiikkijulkisivu sijaitsevat Getsemanen vieressä.",
+     "leveys": 3379,
+     "korkeus": 2434,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Church of All Nations, Jerusalem, March 11, 2023.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_All_Nations%2C_Jerusalem%2C_March_11%2C_2023.jpg?width=1280",
+     "tekija": "Databases",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_All_Nations%2C_Jerusalem%2C_March_11%2C_2023.jpg",
+     "selite": "Kirkon etuseinän mosaiikki hohtaa auringossa, ja kolme kaarta kehystää sisäänkäynnin.",
+     "leveys": 3452,
+     "korkeus": 2160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Church of All Nations (Jerusalem)-Facade.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_All_Nations_(Jerusalem)-Facade.jpg?width=1280",
+     "tekija": "Yair-haklai",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Church_of_All_Nations_(Jerusalem)-Facade.jpg",
+     "selite": "Kirkon julkisivun yläosan mosaiikki kuvaa Getsemanen rukoushetkeä.",
+     "leveys": 2793,
+     "korkeus": 1601,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q46815",
+   "nimi": "Israelin kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 31.7725,
+   "lon": 35.20417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shrine of the Book (3744139198).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shrine_of_the_Book_(3744139198).jpg?width=1280",
+     "tekija": "Ian Scott",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shrine_of_the_Book_(3744139198).jpg",
+     "selite": "Kirjan pyhäkön valkoinen kupoli on Israelin kansallismuseon tunnetuin rakennus.",
+     "leveys": 3285,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Shrine of the Book 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shrine_of_the_Book_2.jpg?width=1280",
+     "tekija": "deror_avi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shrine_of_the_Book_2.jpg",
+     "selite": "Museon kupolirakennus ja viereinen musta seinä muodostavat tarkoituksellisen vastinparin.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "PikiWiki Israel 19483 Shrine of the book in Israel Museum Jerusalem.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PikiWiki_Israel_19483_Shrine_of_the_book_in_Israel_Museum_Jerusalem.JPG?width=1280",
+     "tekija": "ד\"ר אבישי טייכר",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_19483_Shrine_of_the_book_in_Israel_Museum_Jerusalem.JPG",
+     "selite": "Kupolia ympäröi vesiallas, joka heijastaa rakennuksen valkoista muotoa.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q214077",
+   "nimi": "Via Dolorosa",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 31.7794,
+   "lon": 35.23207,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem Via dolorosa BW 2010-09-20 09-56-43.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Via_dolorosa_BW_2010-09-20_09-56-43.JPG?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Via_dolorosa_BW_2010-09-20_09-56-43.JPG",
+     "selite": "Via Dolorosa kiemurtelee vanhankaupungin ahtaiden kivikatujen ja holvikaarien läpi.",
+     "leveys": 2220,
+     "korkeus": 3332,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Via Dolorosa, Jerusalem, 09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Via_Dolorosa%2C_Jerusalem%2C_09.jpg?width=1280",
+     "tekija": "Hoshvilim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Via_Dolorosa%2C_Jerusalem%2C_09.jpg",
+     "selite": "Katua reunustavat asemamerkit, jotka osoittavat pyhiinvaellusreitin kohdat.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q332444",
+   "nimi": "Siioninvuori",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 31.77167,
+   "lon": 35.22861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ISRAEL, Jerusalem, Abbey of Dormition of Virgin Mary (Mount Zion); DI is 1-3000-802.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISRAEL%2C_Jerusalem%2C_Abbey_of_Dormition_of_Virgin_Mary_(Mount_Zion)%3B_DI_is_1-3000-802.JPG?width=1280",
+     "tekija": "Britchi Mirela",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISRAEL%2C_Jerusalem%2C_Abbey_of_Dormition_of_Virgin_Mary_(Mount_Zion)%3B_DI_is_1-3000-802.JPG",
+     "selite": "Siioninvuoren Marian kuolonkirkko on linnamainen luostarikirkko vanhankaupungin eteläpuolella.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "PikiWiki Israel 73786 mount zion jerusalem.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PikiWiki_Israel_73786_mount_zion_jerusalem.jpg?width=1280",
+     "tekija": "אושרה דיין",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_73786_mount_zion_jerusalem.jpg",
+     "selite": "Siioninvuoren kellotorni ja minareetti kohoavat rinnakkain.",
+     "leveys": 4032,
+     "korkeus": 1960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1057872",
+   "nimi": "Jerusalemin kielisilta",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 31.78899,
+   "lon": 35.20011,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Jerusalem Chords Bridge 7.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge_7.jpg?width=1280",
+     "tekija": "Shabatashtiot",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Chords_Bridge_7.jpg",
+     "selite": "Jerusalemin kielisilta on kaupungin sisäänkäynnillä kohoava, harpun kielten näköinen riippusilta.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jerusalem Chords Bridge.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge.JPG?width=1280",
+     "tekija": "Petdad",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Chords_Bridge.JPG",
+     "selite": "Illalla valaistu silta erottuu kaupungin valoista.",
+     "leveys": 3562,
+     "korkeus": 2366,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Jerusalem Chords Bridge 5.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_Chords_Bridge_5.JPG?width=1280",
+     "tekija": "Little Savage",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_Chords_Bridge_5.JPG",
+     "selite": "Sillan kaareva kansi ja kaltevat vaijerit ovat nykyaikaisen Jerusalemin tunnusmerkki.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "JERUSALEM THE OLD CITY & THE TEMPLE MOUNT.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/JERUSALEM_THE_OLD_CITY_%26_THE_TEMPLE_MOUNT.JPG?width=1280",
+   "tekija": "AVRAHAM GRAICER",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:JERUSALEM_THE_OLD_CITY_%26_THE_TEMPLE_MOUNT.JPG",
+   "selite": "Jerusalemin vanhakaupunki ja Temppelivuori muodostavat kaupungin historiallisen sydämen.",
+   "leveys": 7355,
+   "korkeus": 4511,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Jerusalem panorama from Mount of Olives 07112018.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerusalem_panorama_from_Mount_of_Olives_07112018.jpg?width=1280",
+   "tekija": "Beko",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jerusalem_panorama_from_Mount_of_Olives_07112018.jpg",
+   "selite": "Öljymäeltä avautuu laaja panoraama Jerusalemin vanhankaupungin ja muurien ylle.",
+   "leveys": 11512,
+   "korkeus": 3163,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

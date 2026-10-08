@@ -1,0 +1,430 @@
+{
+ "kaupunki": "kathmandu",
+ "kaupunkiQ": "Q3037",
+ "kohteet": [
+  {
+   "q": "Q889902",
+   "nimi": "Boudhanath",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 27.72139,
+   "lon": 85.36194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Boudha Stupa 2018 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boudha_Stupa_2018_04.jpg?width=1280",
+     "tekija": "Nabin K. Sapkota",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boudha_Stupa_2018_04.jpg",
+     "selite": "Boudhanath on Nepalin suurimpia stupia ja tiibetinbuddhalaisten tärkein pyhiinvaelluspaikka Kathmandussa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Boudhanath Stupa 2, Kathmandu, Nepal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boudhanath_Stupa_2%2C_Kathmandu%2C_Nepal.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Boudhanath_Stupa_2%2C_Kathmandu%2C_Nepal.jpg",
+     "selite": "Stupan kultaisen tornin neljällä sivulla katsovat Buddhan silmät rukouslippujen keskeltä.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12946982",
+   "nimi": "Swayambhunath",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 27.715,
+   "lon": 85.29,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Swayambhunath temple - an ancient religious architecture of Nepal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swayambhunath_temple_-_an_ancient_religious_architecture_of_Nepal.jpg?width=1280",
+     "tekija": "Nirmal Dulal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Swayambhunath_temple_-_an_ancient_religious_architecture_of_Nepal.jpg",
+     "selite": "Swayambhunath on kukkulalla kohoava buddhalaisten ja hindujen pyhäkkö, jota kutsutaan apinatemppeliksi.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Swayambhu, Kathmandu, Nepal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swayambhu%2C_Kathmandu%2C_Nepal.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Swayambhu%2C_Kathmandu%2C_Nepal.jpg",
+     "selite": "Stupan kaikkinäkevät silmät katsovat Kathmandun laaksoon.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Swayambhunath Stupa -Kathmandu Nepal-0336.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Swayambhunath_Stupa_-Kathmandu_Nepal-0336.jpg?width=1280",
+     "tekija": "Bijay Chaurasia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Swayambhunath_Stupa_-Kathmandu_Nepal-0336.jpg",
+     "selite": "Valkoisen stupan ympärillä on lukuisia pieniä pyhäkköjä ja pagodeja.",
+     "leveys": 3456,
+     "korkeus": 5184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q380384",
+   "nimi": "Pashupatinath",
+   "peruste": "UNESCO",
+   "koko_m": 400,
+   "lat": 27.7105,
+   "lon": 85.34865,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Pashupatinath Temple 27.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Pashupatinath_Temple_27.jpg?width=1280",
+     "tekija": "Nabin K. Sapkota",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Pashupatinath_Temple_27.jpg",
+     "selite": "Pashupatinath on Shivalle omistettu temppelialue Bagmatin rannalla ja Nepalin tärkeimpiä hindupyhäkköjä.",
+     "leveys": 13208,
+     "korkeus": 6544,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pashupatinath Temple 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pashupatinath_Temple_4.jpg?width=1280",
+     "tekija": "Gaurav Dhwaj Khadka",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pashupatinath_Temple_4.jpg",
+     "selite": "Temppelialueen pagodamaisia rakennuksia ja vesialtaita.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2023 January night aarti at Pashupatinath Temple, Kathmandu 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_January_night_aarti_at_Pashupatinath_Temple%2C_Kathmandu_02.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2023_January_night_aarti_at_Pashupatinath_Temple%2C_Kathmandu_02.jpg",
+     "selite": "Iltaisin joen rannalla toimitetaan aarti-rituaali temppelien valaistessa rannan.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6122177",
+   "nimi": "Kathmandun Durbar-aukio",
+   "peruste": "UNESCO",
+   "koko_m": 250,
+   "lat": 27.70407,
+   "lon": 85.30708,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Historic Pagoda Style Architecture in Kathmandu Durbar Square-IMG 4069.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Historic_Pagoda_Style_Architecture_in_Kathmandu_Durbar_Square-IMG_4069.jpg?width=1280",
+     "tekija": "Bijay Chaurasia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Historic_Pagoda_Style_Architecture_in_Kathmandu_Durbar_Square-IMG_4069.jpg",
+     "selite": "Durbar-aukion monikattoiset pagodat edustavat newarien puuarkkitehtuuria.",
+     "leveys": 3304,
+     "korkeus": 3304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kathmandu Durbar Square, Shiva Parvati Temple, Nepal (edit).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathmandu_Durbar_Square%2C_Shiva_Parvati_Temple%2C_Nepal_(edit).jpg?width=1280",
+     "tekija": "Original: Vyacheslav Argenberg Derivative work: UnpetitproleX",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kathmandu_Durbar_Square%2C_Shiva_Parvati_Temple%2C_Nepal_(edit).jpg",
+     "selite": "Vanhan kuninkaallisen palatsin edustalla on useita temppeleitä ja avoin aukio.",
+     "leveys": 2906,
+     "korkeus": 2046,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7144236",
+   "nimi": "Patanin Durbar-aukio",
+   "peruste": "UNESCO",
+   "koko_m": 250,
+   "lat": 27.67307,
+   "lon": 85.32571,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Nepal Patan Durbar Square 10 (full res).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepal_Patan_Durbar_Square_10_(full_res).jpg?width=1280",
+     "tekija": "Alexander Shafir",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nepal_Patan_Durbar_Square_10_(full_res).jpg",
+     "selite": "Patanin Durbar-aukio on newarien taiteen ja arkkitehtuurin keskus Lalitpurissa.",
+     "leveys": 3999,
+     "korkeus": 2499,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Patan Durbar Square-2644.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Patan_Durbar_Square-2644.jpg?width=1280",
+     "tekija": "Bijay Chaurasia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Patan_Durbar_Square-2644.jpg",
+     "selite": "Aukiota ympäröivät kivitemppelit ja punatiiliset palatsirakennukset.",
+     "leveys": 6000,
+     "korkeus": 3375,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lalitpur Patan Durbar Square 2023 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lalitpur_Patan_Durbar_Square_2023_02.jpg?width=1280",
+     "tekija": "Chainwit.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lalitpur_Patan_Durbar_Square_2023_02.jpg",
+     "selite": "Krishna-temppeli on kokonaan kivestä rakennettu ja aukion tunnetuimpia pyhäkköjä.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5269090",
+   "nimi": "Dharahara",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 27.7006,
+   "lon": 85.3117,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DHARAHARA TOWER.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DHARAHARA_TOWER.jpg?width=1280",
+     "tekija": "SUMIR SHRESTHA",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DHARAHARA_TOWER.jpg",
+     "selite": "Dharahara on korkea torni Kathmandun keskustassa, joka rakennettiin uudelleen maanjäristyksen jälkeen.",
+     "leveys": 8108,
+     "korkeus": 10135,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1050042",
+   "nimi": "Narayanhitin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 27.71556,
+   "lon": 85.32,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Narayanhiti Palace Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narayanhiti_Palace_Museum.jpg?width=1280",
+     "tekija": "Suraj Belbase",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narayanhiti_Palace_Museum.jpg",
+     "selite": "Narayanhitin palatsi oli Nepalin kuninkaiden asuinpalatsi, ja nykyään se on museona.",
+     "leveys": 5896,
+     "korkeus": 3817,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Narayanhiti Palace-070A1259.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narayanhiti_Palace-070A1259.jpg?width=1280",
+     "tekija": "Bijay Chaurasia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Narayanhiti_Palace-070A1259.jpg",
+     "selite": "Palatsi kohoaa vihreiden puiden keskellä Kathmandun laakson keskustassa.",
+     "leveys": 6720,
+     "korkeus": 2411,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1001415",
+   "nimi": "Budhanilkantha",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 27.77806,
+   "lon": 85.36222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Budhanilkantha Temple 20180404 135610.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budhanilkantha_Temple_20180404_135610.jpg?width=1280",
+     "tekija": "Ricky Partel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budhanilkantha_Temple_20180404_135610.jpg",
+     "selite": "Budhanilkanthassa suuri Vishnu-patsas makaa vesialtaassa käärmeen kiemuroiden päällä.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Budhanilkantha Temple Entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budhanilkantha_Temple_Entrance.jpg?width=1280",
+     "tekija": "Bharatahs",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Budhanilkantha_Temple_Entrance.jpg",
+     "selite": "Temppelialueen portti ja muurit Kathmandun laakson pohjoisreunalla.",
+     "leveys": 4640,
+     "korkeus": 2610,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5300315",
+   "nimi": "Ranipokhari",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 27.70785,
+   "lon": 85.31545,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ranipokhari(Queenspond).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ranipokhari(Queenspond).jpg?width=1280",
+     "tekija": "Saurab Mani Rimal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ranipokhari(Queenspond).jpg",
+     "selite": "Ranipokhari on Kathmandun keskustan suuri tekolampi, jonka keskellä on pieni temppeli.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ranipokhari (26617).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ranipokhari_(26617).jpg?width=1280",
+     "tekija": "Prakashphuyal30",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ranipokhari_(26617).jpg",
+     "selite": "Lampi on vanhan kaupungin rauhallinen avoin tila.",
+     "leveys": 4080,
+     "korkeus": 1884,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5522383",
+   "nimi": "Unelmien puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 27.71417,
+   "lon": 85.31472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kathmandu-Garden of Dreams-04-Amphitheater-2013-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathmandu-Garden_of_Dreams-04-Amphitheater-2013-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kathmandu-Garden_of_Dreams-04-Amphitheater-2013-gje.jpg",
+     "selite": "Unelmien puutarha on uusklassinen puistotila Thamelin lähellä Kathmandun keskustassa.",
+     "leveys": 4696,
+     "korkeus": 3114,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kathmandu-Garden of Dreams-38-Loewenmaul-2013-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathmandu-Garden_of_Dreams-38-Loewenmaul-2013-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kathmandu-Garden_of_Dreams-38-Loewenmaul-2013-gje.jpg",
+     "selite": "Puutarhan terassit, pylväät ja kukkapenkit muistuttavat eurooppalaisista puutarhoista.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Nepal 2018-04-06 (42178602212).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nepal_2018-04-06_(42178602212).jpg?width=1280",
+   "tekija": "Guillaume Baviere from Uppsala, Sweden",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nepal_2018-04-06_(42178602212).jpg",
+   "selite": "Kathmandun tiheästi rakennettu kaupunki levittyy laaksoon vuorten ympäröimänä.",
+   "leveys": 5669,
+   "korkeus": 3356,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Kathmandu, Nepal Astronaut Imagery.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathmandu%2C_Nepal_Astronaut_Imagery.JPG?width=1280",
+   "tekija": "NASA Astronauts",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kathmandu%2C_Nepal_Astronaut_Imagery.JPG",
+   "selite": "Kathmandun laakso erottuu avaruudesta vuorten keskelle jäävänä tiheänä alueena.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q3457358",
+   "nimi": "Singha Durbar",
+   "peruste": "sitelinks",
+   "lat": 27.69827,
+   "lon": 85.32525,
+   "syy": "ei vapaata kuvaa, jossa itse palatsi näkyy kunnolla"
+  }
+ ]
+}

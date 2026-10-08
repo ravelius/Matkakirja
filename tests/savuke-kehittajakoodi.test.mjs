@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 
 import {
-  lisaaPolloKehittajakoodi, onPolloOsoite, POLLO_ORIGIN, POLLO_KEHITTAJA_OTSAKE,
+  lisaaPolloKehittajakoodi, onPolloOsoite, POLLO_ORIGIN, POLLO_KEHITTAJA_OTSAKE, POLLO_TESTI_OTSAKE,
 } from '../tools/savukkeet/pollo-kehittajakoodi.mjs';
 import { POLLOPALVELIN } from '../js/packs/pollo-asetukset.js';
 
@@ -65,7 +65,7 @@ test('koodi lisätään pöllöpyyntöön fallbackilla, muut otsakkeet säilyvä
     fallback: (v) => { saatu = v; },
     continue: () => assert.fail('continue ohittaisi savukkeen omat reitit'),
   });
-  assert.deepEqual(saatu, { headers: { 'content-type': 'application/json', [POLLO_KEHITTAJA_OTSAKE]: KOODI } });
+  assert.deepEqual(saatu, { headers: { 'content-type': 'application/json', [POLLO_KEHITTAJA_OTSAKE]: KOODI, [POLLO_TESTI_OTSAKE]: '1' } });
   assert.ok(!tulosteet.some((t) => t.includes(KOODI)), 'koodi päätyi tulosteeseen');
 });
 

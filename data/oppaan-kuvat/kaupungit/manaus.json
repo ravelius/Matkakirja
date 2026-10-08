@@ -1,0 +1,407 @@
+{
+ "kaupunki": "manaus",
+ "kaupunkiQ": "Q40236",
+ "kohteet": [
+  {
+   "q": "Q1434444",
+   "nimi": "Amazonas-teatteri",
+   "peruste": "UNESCO",
+   "koko_m": 120,
+   "lat": -3.13028,
+   "lon": -60.02333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Teatro Amazonas Atualmente 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Teatro_Amazonas_Atualmente_01.jpg?width=1280",
+     "tekija": "Karine Hermes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Teatro_Amazonas_Atualmente_01.jpg",
+     "selite": "Amazonas-teatteri on kumibuumin aikainen vaaleanpunainen oopperatalo keskellä sademetsäkaupunkia.",
+     "leveys": 5616,
+     "korkeus": 3744,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "AnaClaudiaJatahy Teatro Amazonas Manaus AM (41107560852).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AnaClaudiaJatahy_Teatro_Amazonas_Manaus_AM_(41107560852).jpg?width=1280",
+     "tekija": "MTur Destinos",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AnaClaudiaJatahy_Teatro_Amazonas_Manaus_AM_(41107560852).jpg",
+     "selite": "Teatterin tiilikatettu kupoli on kuvioitu Brasilian lipun väreillä ja kohoaa Manausin kattojen yli.",
+     "leveys": 3696,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "-CulturaGeraFuturo em Manaus reúne artistas e gestores culturais (28351403157).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-CulturaGeraFuturo_em_Manaus_re%C3%BAne_artistas_e_gestores_culturais_(28351403157).jpg?width=1280",
+     "tekija": "Ministério da Cultura",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-CulturaGeraFuturo_em_Manaus_re%C3%BAne_artistas_e_gestores_culturais_(28351403157).jpg",
+     "selite": "Teatterin julkisivu ja balustradi avautuvat Largo de São Sebastiãon aukiolle.",
+     "leveys": 1600,
+     "korkeus": 1064,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Amazon Theatre, Teatro Amazonas. Manaus, Brazil. 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_Theatre%2C_Teatro_Amazonas._Manaus%2C_Brazil._05.jpg?width=1280",
+     "tekija": "Ridiculopathy",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amazon_Theatre%2C_Teatro_Amazonas._Manaus%2C_Brazil._05.jpg",
+     "selite": "Rakennus valmistui 1896 rikkaiden kumikauppiaiden ylellisyyden merkiksi.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q656597",
+   "nimi": "Vesien kohtaaminen",
+   "peruste": "pelin nosto",
+   "koko_m": 3000,
+   "lat": -3.13667,
+   "lon": -59.90472,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Meeting of Waters (Manaus).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Meeting_of_Waters_(Manaus).jpg?width=1280",
+     "tekija": "Ana Claudia Jatahy - MTUR",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Meeting_of_Waters_(Manaus).jpg",
+     "selite": "Vesien kohtaamisessa tumma Rio Negro ja vaaleampi Solimões virtaavat kilometrejä rinnakkain sekoittumatta.",
+     "leveys": 5472,
+     "korkeus": 3480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-CulturaGeraFuturo em Manaus reúne artistas e gestores culturais (28351337767).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-CulturaGeraFuturo_em_Manaus_re%C3%BAne_artistas_e_gestores_culturais_(28351337767).jpg?width=1280",
+     "tekija": "Ministério da Cultura",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-CulturaGeraFuturo_em_Manaus_re%C3%BAne_artistas_e_gestores_culturais_(28351337767).jpg",
+     "selite": "Rio Negron ja Solimõesin vedet erottuvat toisistaan kahtena värinä Amazonjoen alkuvirrassa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q205516",
+   "nimi": "Rio Negron silta",
+   "peruste": "sitelinks",
+   "koko_m": 3600,
+   "lat": -3.12194,
+   "lon": -60.07944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista aérea da ponte sobre o rio Negro que liga Manaus a Iranduba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_a%C3%A9rea_da_ponte_sobre_o_rio_Negro_que_liga_Manaus_a_Iranduba.jpg?width=1280",
+     "tekija": "Ministério da Defesa",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_a%C3%A9rea_da_ponte_sobre_o_rio_Negro_que_liga_Manaus_a_Iranduba.jpg",
+     "selite": "Rio Negron silta yhdistää Manausin Irandubaan vinoköysisillalla joen yli.",
+     "leveys": 1800,
+     "korkeus": 1198,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019-10-05 Rio Negro Bridge (Manaus).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-10-05_Rio_Negro_Bridge_(Manaus).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-10-05_Rio_Negro_Bridge_(Manaus).jpg",
+     "selite": "Sillan korkea pylväs ja pitkä ajorata ylittävät Rio Negron leveän vesialueen.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "7ª Viagem de Estudos e Reportagens, dia 23 (10709539474).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/7%C2%AA_Viagem_de_Estudos_e_Reportagens%2C_dia_23_(10709539474).jpg?width=1280",
+     "tekija": "OBORÉ / Projeto Repórter do Futuro",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:7%C2%AA_Viagem_de_Estudos_e_Reportagens%2C_dia_23_(10709539474).jpg",
+     "selite": "Sillan betonipilarit kohoavat suoraan joen vedestä ja kannattelevat ajorataa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q641527",
+   "nimi": "Amazonas-areena",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -3.08306,
+   "lon": -60.02806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arena Amazônia Manaus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arena_Amaz%C3%B4nia_Manaus.jpg?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arena_Amaz%C3%B4nia_Manaus.jpg",
+     "selite": "Amazonas-areena rakennettiin vuoden 2014 jalkapallon MM-kisoihin kaupungin pohjoisosaan.",
+     "leveys": 3788,
+     "korkeus": 2837,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amazonia Arena.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazonia_Arena.jpg?width=1280",
+     "tekija": "Brazilian Government - Portal da Copa - Atribuição 3.0 Brasil",
+     "lisenssi": "CC BY 3.0 br",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amazonia_Arena.jpg",
+     "selite": "Areenan valkoinen kattorakenne hohtaa illalla Manausin yllä.",
+     "leveys": 3000,
+     "korkeus": 2002,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Amazon Arena, Manaus, Brazil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amazon_Arena%2C_Manaus%2C_Brazil.jpg?width=1280",
+     "tekija": "José Zamith",
+     "lisenssi": "CC BY 3.0 br",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amazon_Arena%2C_Manaus%2C_Brazil.jpg",
+     "selite": "Stadionin katsomo ja kattorakenne muodostavat sisältä katsottuna suuren soikean kehän.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18482308",
+   "nimi": "Manausin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -3.1352,
+   "lon": -60.0255,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Catedral-Manaus 16-04-2015-03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral-Manaus_16-04-2015-03.JPG?width=1280",
+     "tekija": "JLPizzol",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral-Manaus_16-04-2015-03.JPG",
+     "selite": "Manausin katedraali on keltavalkoinen kaksitorninen kirkko kaupungin vanhassa keskustassa.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CATEDRAL DA MATRIZ 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CATEDRAL_DA_MATRIZ_02.jpg?width=1280",
+     "tekija": "Periclesd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CATEDRAL_DA_MATRIZ_02.jpg",
+     "selite": "Katedraali erottuu puiden keskeltä Manausin keskustan pilvenpiirtäjien edessä.",
+     "leveys": 8064,
+     "korkeus": 4536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "CATEDRAL DA MATRIZ 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CATEDRAL_DA_MATRIZ_01.jpg?width=1280",
+     "tekija": "Periclesd",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CATEDRAL_DA_MATRIZ_01.jpg",
+     "selite": "Illalla valaistu katedraali ja sen puistoaukio näkyvät ylhäältä kuvattuna.",
+     "leveys": 8064,
+     "korkeus": 6048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9603252",
+   "nimi": "Manausin tullirakennus",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -3.13708,
+   "lon": -60.02569,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Alfândega-Manaus 16-04-2015-.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alf%C3%A2ndega-Manaus_16-04-2015-.JPG?width=1280",
+     "tekija": "JLPizzol",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alf%C3%A2ndega-Manaus_16-04-2015-.JPG",
+     "selite": "Tullirakennus rakennettiin Britanniassa esivalmistetuista osista Manausin satamaan 1900-luvun alussa.",
+     "leveys": 2563,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alfândega de Manaus.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alf%C3%A2ndega_de_Manaus.jpg?width=1280",
+     "tekija": "Ajmcbarreto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alf%C3%A2ndega_de_Manaus.jpg",
+     "selite": "Tiilenpunainen tulli on Manausin satama-alueen tunnetuimpia vanhoja rakennuksia.",
+     "leveys": 4128,
+     "korkeus": 2006,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16489612",
+   "nimi": "Amazonasin yleinen kirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -3.13433,
+   "lon": -60.02337,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "BibliotecaPublicaAmazonas 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BibliotecaPublicaAmazonas_02.JPG?width=1280",
+     "tekija": "Joehawkins",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BibliotecaPublicaAmazonas_02.JPG",
+     "selite": "Amazonasin osavaltion kirjasto toimii punakeltaisessa 1800-luvun lopun rakennuksessa Manausin keskustassa.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "BibliotecaPublicaAmazonas 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BibliotecaPublicaAmazonas_01.JPG?width=1280",
+     "tekija": "Joehawkins",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:BibliotecaPublicaAmazonas_01.JPG",
+     "selite": "Kirjaston julkisivun ikkunoita ja parvekkeita koristavat valkoiset kaiteet.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6518202",
+   "nimi": "Amazonasin osavaltion parlamentti",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -3.08391,
+   "lon": -60.02398,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Assembleia Legislativa do Estado do Amazonas (ALEAM).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Assembleia_Legislativa_do_Estado_do_Amazonas_(ALEAM).jpg?width=1280",
+     "tekija": "Assembleia Legislativa do Amazonas",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Assembleia_Legislativa_do_Estado_do_Amazonas_(ALEAM).jpg",
+     "selite": "Osavaltion parlamentti toimii laajassa nykyaikaisessa rakennuskompleksissa Manausin pohjoisosassa.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1636101",
+   "nimi": "Amazonian tutkimuslaitos",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -3.09577,
+   "lon": -59.98975,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Instituto de Pesquisas da Amazônia.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Instituto_de_Pesquisas_da_Amaz%C3%B4nia.JPG?width=1280",
+     "tekija": "União da Juventude Mestiça",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Instituto_de_Pesquisas_da_Amaz%C3%B4nia.JPG",
+     "selite": "INPA on Amazonian suurimpia tutkimuslaitoksia ja sen kampus on sademetsäpuiston keskellä Manausissa.",
+     "leveys": 4288,
+     "korkeus": 3216,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Manaus harbor.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manaus_harbor.jpg?width=1280",
+   "tekija": "Arne Müseler",
+   "lisenssi": "CC BY-SA 3.0 de",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manaus_harbor.jpg",
+   "selite": "Manausin satamassa Rio Negron rannalla ovat jokilaivat ja kaupungin vanha satamapuoli.",
+   "leveys": 5272,
+   "korkeus": 2966,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Manaus aerial view.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manaus_aerial_view.jpg?width=1280",
+   "tekija": "CIAT",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manaus_aerial_view.jpg",
+   "selite": "Manaus kohoaa Amazonian sademetsän keskelle kerrostaloineen ja viheralueineen.",
+   "leveys": 4288,
+   "korkeus": 2848,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q68118772",
+   "nimi": "Amazonasin maantieteellinen ja historiallinen instituutti",
+   "peruste": "pelin nosto",
+   "lat": -3.13364,
+   "lon": -60.02911,
+   "syy": "ei vapaata kuvaa >= 1200 px"
+  }
+ ]
+}

@@ -51,3 +51,25 @@ dialog.tk-kortti[open]:has(.tk-lista--loki) > :not(.tk-lista--loki) { flex: none
 /* Ikoninappi (voittokortin Jatka vaeltamista): ikoni ja teksti rinnakkain pohjan välillä. */
 .tk-kortti .tk-nappi:has(.viiva-ikoni) { display: inline-flex; align-items: center; justify-content: center; gap: var(--tk-vali-xs); }
 .tk-kortti .tk-napit--pysty .tk-nappi:has(.viiva-ikoni) { display: flex; justify-content: flex-start; }
+
+/* Apurahakortti (omistaja 7.10.2026 klo 14.5x): leveämpi kortti, kuva pienenä kappaleensa vieressä (KUVA upotus,
+   napautus suurentaa) ja seuraava väliotsikko kuvan alle. Kuva on nappi: vanha `.dialog button` ei saa pukea sitä. */
+.apuraha-lappu .dialog-card.tk-kortti { max-width: var(--tk-leveys-kapea); }
+/* Omistaja: kuvat "aika pienellä" → noin kolmannes kortin leveydestä (KUVA upotus muuten 40 %). */
+.apuraha-lappu .tk-kortti .tk-kuva--upotus { width: calc(100% / 3); }
+.dialog .tk-kortti button.tk-kuva--upotus,
+.dialog .tk-kortti button.tk-kuva--upotus:hover:not(:disabled) {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+.apuraha-lappu .tk-kortti .tk-kapiteeli,
+.apuraha-lappu .tk-kortti .tk-nappi--levea { clear: both; }
+/* Listarivin kuva (esittely.json "rivi"): rivi pitää kuvan sisällään, seuraava rivi alkaa kuvan alta. */
+.apuraha-lappu .tk-kortti .tk-lista li::after { content: ''; display: block; clear: both; }
+/* Vanhan dialogikortin katkoviivakehys (::before, absoluuttinen) vierii pitkän kortin sisällön mukana ja piirtyi
+   tekstin ja kuvien poikki; KORTTI-pohjalla on oma kehys (varjorengas), joten vanha pois vierivistä lapuista. */
+.periaate-lappu .dialog-card.tk-kortti::before { display: none; }

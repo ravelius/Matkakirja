@@ -39,6 +39,8 @@ on:
       - 'assets/**'
       - 'index.html'
       - 'tools/vienti/**'
+      # Skeema 1.59: natiivin asetukset (kokoelmat/asetukset.json).
+      - 'data/asetukset.json'
       - '.github/workflows/vie-sisalto.yml'
   workflow_dispatch:
     inputs:

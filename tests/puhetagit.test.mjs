@@ -206,7 +206,8 @@ test('kehote: sääntö selaimelle ja tagit siivoavalle natiiville (puhetagit: 1
   const kehotteet = [];
   globalThis.fetch = async (osoite, init) => {
     kehotteet.push(JSON.parse(init.body).system);
-    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Pariisi on Ranskan pääkaupunki.' }] }),
+    // Kaksi JATKOT-riviä mukana: ei jatkojen täydennyskutsua, joten jokainen kysymys tekee tasan yhden mallikutsun (5.10.2026).
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Pariisi on Ranskan pääkaupunki.\nJATKOT:\nMikä on Louvre?\nMissä Seine virtaa?' }] }),
       { status: 200, headers: { 'content-type': 'application/json' } });
   };
   const kysy = (otsakkeet, lisa = {}) => worker.fetch(new Request('https://pollo.example/', {

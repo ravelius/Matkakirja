@@ -170,10 +170,10 @@ export const AANET = {
   'keittio-pulu': { silmukka: false, voimakkuus: 1, kesto_s: 19.84, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
   'keittio-etsinta-0': { silmukka: false, voimakkuus: 1, kesto_s: 4.64, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
   // Rakennuksen kertoja (isoisä, Viisas Kertoja, eleven_v3; omistaja 30.9. klo 23.5x).
-  'linna-kertoja-jarvelta': { silmukka: false, voimakkuus: 1, kesto_s: 11.92, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'linna-kertoja-tornit': { silmukka: false, voimakkuus: 1, kesto_s: 12.32, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'linna-kertoja-piha': { silmukka: false, voimakkuus: 1, kesto_s: 11.6, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'linna-kertoja-laituri': { silmukka: false, voimakkuus: 1, kesto_s: 20, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
+  'linna-kertoja-jarvelta': { silmukka: false, voimakkuus: 1, kesto_s: 11.84, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 2 },
+  'linna-kertoja-tornit': { silmukka: false, voimakkuus: 1, kesto_s: 12.0, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 2 },
+  'linna-kertoja-piha': { silmukka: false, voimakkuus: 1, kesto_s: 11.36, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 2 },
+  'linna-kertoja-laituri': { silmukka: false, voimakkuus: 1, kesto_s: 20.08, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 2 },
 
   // --- Linnan äänimaisema (Linnanrakentaja 30.9.2026, omistajan lupa: vain CC0/PD-lähteet, ei generointia).
   // Äänitetyt lähteet (Freesound CC0, tekijä ja id; lisäksi Commons PD-self), käsittely ja lisenssit:
@@ -203,5 +203,21 @@ export const AANET = {
   'sivu-kaanto': { silmukka: false, voimakkuus: 1, kesto_s: 1, lisenssi: 'CC0 (Freesound, esperri 119127)', versio: 1 },
   'keihas-kolahdus': { silmukka: false, voimakkuus: 1, kesto_s: 1.52, lisenssi: 'CC0 (Freesound, loganzsound 774269)', versio: 1 },
   'arkku-kansi': { silmukka: false, voimakkuus: 1, kesto_s: 1.76, lisenssi: 'CC0 (Freesound, The_Frisbee_of_Peace 573653)', versio: 1 },
+  // --- Kohtaukset v3 (Linnanrakentaja 5.10.; omistaja hyväksyi 14.0x): huoneen kertoja (William) ja keskustelu (yksi
+  // Text to Dialogue -otto, äänipankki v1); kesto_s WAV-masterista. Avauskierroksen linna-kertoja-* v2 = Williamin uudet otot.
+  'laituri-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 13.2, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'laituri-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 26.0, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'keittio-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 10.16, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'keittio-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 31.12, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'keskushalli-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 10.32, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'keskushalli-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 24.4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'kappeli-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 12.4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'kappeli-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 29.2, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'fatabuuri-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 10.16, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'fatabuuri-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 21.76, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'muurinharja-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 10.88, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'muurinharja-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 28.48, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'kierreportaat-kertoja': { silmukka: false, voimakkuus: 1, kesto_s: 9.52, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
+  'kierreportaat-keskustelu': { silmukka: false, voimakkuus: 1, kesto_s: 27.28, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text to Dialogue / Text-to-Speech, äänipankki v1 + William)', versio: 1 },
   'soihtu-syttyy': { silmukka: false, voimakkuus: 1, kesto_s: 3, lisenssi: 'CC0 (Freesound, DanielVega 479338)', versio: 1 },
 };

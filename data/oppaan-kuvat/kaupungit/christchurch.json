@@ -1,0 +1,418 @@
+{
+ "kaupunki": "christchurch",
+ "kaupunkiQ": "Q79990",
+ "kohteet": [
+  {
+   "q": "Q1077977",
+   "nimi": "Christchurchin tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": -43.531,
+   "lon": 172.637,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "00 1754 Christchurch (NZ) - Cathedral Square.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/00_1754_Christchurch_(NZ)_-_Cathedral_Square.jpg?width=1280",
+     "tekija": "W. Bulach",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:00_1754_Christchurch_(NZ)_-_Cathedral_Square.jpg",
+     "selite": "Anglikaaninen tuomiokirkko seisoo Cathedral Squarella kaupungin keskipisteenä.",
+     "leveys": 3300,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Christ Church Cathedral 23.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christ_Church_Cathedral_23.jpg?width=1280",
+     "tekija": "Schwede66",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral_23.jpg",
+     "selite": "Vuoden 2011 maanjäristys vaurioitti tuomiokirkkoa, ja sen runko on tuettu telineillä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q15207543",
+   "nimi": "Pahvikatedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -43.5324,
+   "lon": 172.643,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cardboard Cathedral 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cardboard_Cathedral_03.JPG?width=1280",
+     "tekija": "Schwede66",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cardboard_Cathedral_03.JPG",
+     "selite": "Shigeru Banin suunnittelema väliaikainen katedraali on tehty pahvista, ja sen etuseinässä on värikäs lasi-ikkuna.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cardboard Cathedral 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cardboard_Cathedral_01.JPG?width=1280",
+     "tekija": "Schwede66",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cardboard_Cathedral_01.JPG",
+     "selite": "A-muotoinen pahvikatedraali nousee puiden takaa Latimer Squaren laidalla.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1186086",
+   "nimi": "Christchurchin kasvitieteellinen puutarha",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": -43.53042,
+   "lon": 172.62115,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christchurch Botanic Gardens, Avon river 2016-02-04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_Botanic_Gardens%2C_Avon_river_2016-02-04.jpg?width=1280",
+     "tekija": "Szilas",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_Botanic_Gardens%2C_Avon_river_2016-02-04.jpg",
+     "selite": "Avon-joki mutkittelee kasvitieteellisen puutarhan läpi, ja sillä voi meloa.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A pond in Christchurch Botanic Gardens, Christchurch, New Zealand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_pond_in_Christchurch_Botanic_Gardens%2C_Christchurch%2C_New_Zealand.jpg?width=1280",
+     "tekija": "Michal Klajban",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_pond_in_Christchurch_Botanic_Gardens%2C_Christchurch%2C_New_Zealand.jpg",
+     "selite": "Puutarhan lammen rannalla kasvaa vanhoja puita Hagley Parkin vieressä.",
+     "leveys": 5242,
+     "korkeus": 2949,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1134612",
+   "nimi": "Hagley Park",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -43.53,
+   "lon": 172.62,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "HagleyParkAerialPhoto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HagleyParkAerialPhoto.jpg?width=1280",
+     "tekija": "Phillip Capper",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:HagleyParkAerialPhoto.jpg",
+     "selite": "Hagley Park on keskustan viereinen laaja puisto, jossa on urheilukenttiä ja puistokäytäviä.",
+     "leveys": 3440,
+     "korkeus": 2192,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Autumn Christchurch NZ (14539587124).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Autumn_Christchurch_NZ_(14539587124).jpg?width=1280",
+     "tekija": "Bernard Spragg. NZ from Christchurch, New Zealand",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Autumn_Christchurch_NZ_(14539587124).jpg",
+     "selite": "Syksyllä Hagley Parkin puut ja Avon-joen ranta värjäytyvät punaisiksi ja keltaisiksi.",
+     "leveys": 2400,
+     "korkeus": 1311,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q863801",
+   "nimi": "Christchurchin Arts Centre",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -43.5315,
+   "lon": 172.628,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "28 Worcester Street in Christchurch 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/28_Worcester_Street_in_Christchurch_01.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:28_Worcester_Street_in_Christchurch_01.jpg",
+     "selite": "Gotiikkatyylinen kivikompleksi on entinen Canterburyn yliopisto ja nykyinen taidekeskus.",
+     "leveys": 3752,
+     "korkeus": 2387,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "28 Worcester Street in Christchurch 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/28_Worcester_Street_in_Christchurch_03.jpg?width=1280",
+     "tekija": "Krzysztof Golik",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:28_Worcester_Street_in_Christchurch_03.jpg",
+     "selite": "Arts Centren tornit kohoavat sähkökaapelien ja raitiotien yläpuolella Worcester Streetillä.",
+     "leveys": 3942,
+     "korkeus": 2917,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1033769",
+   "nimi": "Canterburyn museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -43.5309,
+   "lon": 172.6271,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CanterburyMuseum gobeirne.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CanterburyMuseum_gobeirne.jpg?width=1280",
+     "tekija": "Photograph by Greg O'Beirne",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CanterburyMuseum_gobeirne.jpg",
+     "selite": "Canterburyn museon kivijulkisivu on Botanic Gardensin ja Arts Centren välissä.",
+     "leveys": 3917,
+     "korkeus": 1490,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5109058",
+   "nimi": "Christchurchin taidegalleria",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -43.5306,
+   "lon": 172.631,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christchurch Art Gallery, Christchurch, New Zealand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_Art_Gallery%2C_Christchurch%2C_New_Zealand.jpg?width=1280",
+     "tekija": "Michal Klajban",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_Art_Gallery%2C_Christchurch%2C_New_Zealand.jpg",
+     "selite": "Taidegallerian aaltoileva lasijulkisivu kaartuu Worcester Boulevardin kulmassa.",
+     "leveys": 12413,
+     "korkeus": 5296,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Christchurch - Art gallery (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_-_Art_gallery_(1).jpg?width=1280",
+     "tekija": "Remi Jouan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_-_Art_gallery_(1).jpg",
+     "selite": "Gallerian lasi- ja terästaide heijastaa puita ja keskustan rakennuksia.",
+     "leveys": 1600,
+     "korkeus": 1000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5109102",
+   "nimi": "Christchurchin kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -43.527,
+   "lon": 172.635,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christchurch Town Hall of the Performing Arts, New Zealand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_Town_Hall_of_the_Performing_Arts%2C_New_Zealand.jpg?width=1280",
+     "tekija": "Michal Klajban",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_Town_Hall_of_the_Performing_Arts%2C_New_Zealand.jpg",
+     "selite": "Kaupungintalo on 1970-luvun betoninen esitystaiteen keskus Avon-joen rannalla.",
+     "leveys": 5421,
+     "korkeus": 3535,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Christchurch Pre-Wikicon sunset photowalk 04 town hall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_Pre-Wikicon_sunset_photowalk_04_town_hall.jpg?width=1280",
+     "tekija": "David Palmer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_Pre-Wikicon_sunset_photowalk_04_town_hall.jpg",
+     "selite": "Kaupungintalon betonitilavuudet erottuvat laskevan auringon valossa.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q590954",
+   "nimi": "Christchurchin raitiotie",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": -43.53092,
+   "lon": 172.63444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Christchurch Tram.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_Tram.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Mr. Tickle assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_Tram.jpg",
+     "selite": "Punainen perinneraitiovaunu kiertää keskustan City Loop -reittiä Cathedral Squaren ohi.",
+     "leveys": 2288,
+     "korkeus": 1520,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2022-05-28 Christchurch City Tour Tram.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2022-05-28_Christchurch_City_Tour_Tram.jpg?width=1280",
+     "tekija": "Maxim75",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2022-05-28_Christchurch_City_Tour_Tram.jpg",
+     "selite": "Sinikeltainen raitiovaunu kulkee keskustan puistokatua.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q416098",
+   "nimi": "Akaroa",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -43.80414,
+   "lon": 172.96819,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Akaroa, New Zealand.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akaroa%2C_New_Zealand.jpg?width=1280",
+     "tekija": "Jonathan Keelty",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Akaroa%2C_New_Zealand.jpg",
+     "selite": "Akaroa on ranskalaisten perustama pikkukaupunki Banks Peninsulan tulivuoriperäisen lahden rannalla.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Akaroa township.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akaroa_township.jpg?width=1280",
+     "tekija": "J Montagu (HerrSchnapps)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Akaroa_township.jpg",
+     "selite": "Akaroan satamalahti sinertää vihreiden kukkuloiden alla.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q911909",
+   "nimi": "Lyttelton",
+   "peruste": "sitelinks",
+   "koko_m": 2000,
+   "lat": -43.6,
+   "lon": 172.71667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "26658LytteltonPanorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/26658LytteltonPanorama.jpg?width=1280",
+     "tekija": "Mick Stephenson",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:26658LytteltonPanorama.jpg",
+     "selite": "Lyttelton on Christchurchin satamakaupunki kraaterin kehää vasten Port Hillsin takana.",
+     "leveys": 3500,
+     "korkeus": 1421,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "053 Lyttelton Harbour New Zealand 1967 (51208427488).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/053_Lyttelton_Harbour_New_Zealand_1967_(51208427488).jpg?width=1280",
+     "tekija": "wilford peloquin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:053_Lyttelton_Harbour_New_Zealand_1967_(51208427488).jpg",
+     "selite": "Lytteltonin satama ja kaupunki levittäytyvät vanhan tulivuorikraaterin rinteille.",
+     "leveys": 1799,
+     "korkeus": 1128,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "02-01-2025-Central Christchurch and Tūranga library.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02-01-2025-Central_Christchurch_and_T%C5%ABranga_library.jpg?width=1280",
+   "tekija": "ZNDave",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02-01-2025-Central_Christchurch_and_T%C5%ABranga_library.jpg",
+   "selite": "Christchurchin keskusta on rakentunut uudelleen maanjäristyksen jälkeen, ja Etelä-Alpit näkyvät taustalla.",
+   "leveys": 3786,
+   "korkeus": 2473,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Christchurch Skyline 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_Skyline_2015.jpg?width=1280",
+   "tekija": "Francis Vallance (Heritage Warrior)",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Christchurch_Skyline_2015.jpg",
+   "selite": "Keskustan tornit kohoavat esikaupunkien vehreyden yli Canterburyn tasangolla.",
+   "leveys": 4896,
+   "korkeus": 3264,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

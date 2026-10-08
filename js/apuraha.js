@@ -26,7 +26,11 @@ export function tarkistaApuraha(d) {
   if (typeof d.otsikko !== 'string' || !Array.isArray(d.kappaleet)) return null;
   // Selainversio: webTeksti korvaa tekstin (kappale tai listarivi {teksti, webTeksti}).
   const web = (x) => (x && typeof x === 'object' ? (x.webTeksti ?? x.teksti) : x);
+  const kaikkiKuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
+  // Kuva kappaleensa viereen (omistaja 7.10.2026, versio 7): "kappale" = 0-pohjainen indeksi alkuperäiseen listaan.
+  const kappaleenKuvat = (i) => kaikkiKuvat.filter((k) => k.kappale === i);
   const kappaleet = d.kappaleet
+    .map((k, i) => (k && typeof k === 'object' ? { ...k, kuvat: kappaleenKuvat(i) } : k))
     .filter((k) => k && (k.teksti || k.lista?.length || k.otsikko || k.nappi))
     .map((k) => ({
       ...k,
@@ -35,7 +39,8 @@ export function tarkistaApuraha(d) {
       korostus: k.korostus === true,
       lista: Array.isArray(k.lista) ? k.lista.map(web).filter((r) => typeof r === 'string') : k.lista,
     }));
-  const kuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
+  // Kuvat ilman kelvollista kappaletta kortin loppuun kuvariviksi kuten ennen.
+  const kuvat = kaikkiKuvat.filter((k) => !kappaleet.some((x) => x.kuvat.includes(k)));
   return {
     nappi: d.nappi.trim(),
     otsikko: d.otsikko,
@@ -43,7 +48,17 @@ export function tarkistaApuraha(d) {
     kappaleet,
     kuvat,
     webHuomautus: typeof d.webHuomautus === 'string' ? d.webHuomautus : '',
+    // "Avaa valmiit linssit" (omistaja 7.10.2026 klo 15.0x): oma kenttä, jota vanhat TF-appit eivät lue.
+    valmiitLinssit: valmiitLinssit(d.valmiitLinssit),
   };
+}
+
+/** valmiitLinssit { teksti, nappi, valmis, linssit[] } tai null (puuttuva nappi tai tyhjä lista). */
+function valmiitLinssit(v) {
+  if (!v || typeof v.nappi !== 'string' || !Array.isArray(v.linssit)) return null;
+  const linssit = v.linssit.filter((t) => typeof t === 'string');
+  if (!linssit.length) return null;
+  return { teksti: typeof v.teksti === 'string' ? v.teksti : '', nappi: v.nappi, valmis: typeof v.valmis === 'string' ? v.valmis : v.nappi, linssit };
 }
 
 /** Lataa esittelyn kerran; epäonnistuessa null (portti näkyy ilman nappia). */
@@ -69,14 +84,32 @@ const ESITTELYLINSSIT_AVAIN = 'matkakirja-esittelylinssit';
 
 export function esittelylinssitAuki() {
   try {
-    return globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN) === '1';
+    const arvo = globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN);
+    return arvo === '1' || Boolean(arvo?.startsWith('['));
   } catch {
     return false; // yksityinen selaus
   }
 }
 
-export function avaaEsittelylinssit() {
-  try { globalThis.localStorage?.setItem(ESITTELYLINSSIT_AVAIN, '1'); } catch { /* yksityinen selaus */ }
+/**
+ * Avaa esittelylinssit. lista (esittely.json nappi.linssit, omistaja 7.10.2026 klo 15.0x "valmiit linssit"): vain
+ * nämä tunnukset; ilman listaa vanha tapa (kaikki rekisterin toimivat linssit).
+ */
+export function avaaEsittelylinssit(lista = null) {
+  const arvo = Array.isArray(lista) && lista.length ? JSON.stringify(lista.filter((t) => typeof t === 'string')) : '1';
+  try { globalThis.localStorage?.setItem(ESITTELYLINSSIT_AVAIN, arvo); } catch { /* yksityinen selaus */ }
+}
+
+/** Avattujen esittelylinssien lista tai null (ei listaa: kaikki toimivat). */
+export function esittelylinssiLista() {
+  try {
+    const arvo = globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN);
+    if (!arvo || arvo === '1') return null;
+    const l = JSON.parse(arvo);
+    return Array.isArray(l) ? l : null;
+  } catch {
+    return null;
+  }
 }
 
 /** Testeille: seuraava lataaApuraha hakee uudelleen. */

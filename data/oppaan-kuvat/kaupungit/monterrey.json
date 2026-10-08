@@ -1,0 +1,381 @@
+{
+ "kaupunki": "monterrey",
+ "kaupunkiQ": "Q81033",
+ "kohteet": [
+  {
+   "q": "Q1778291",
+   "nimi": "Cerro de la Silla",
+   "peruste": "pelin nosto",
+   "koko_m": 4000,
+   "lat": 25.62778,
+   "lon": -100.23905,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cerro de la Silla.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerro_de_la_Silla.jpg?width=1280",
+     "tekija": "Nathaniel C. Sheetz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cerro_de_la_Silla.jpg",
+     "selite": "Satulan muotoinen vuori on Monterreyn tunnetuin maamerkki.",
+     "leveys": 1984,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "CerroDeLaSilla201806p1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CerroDeLaSilla201806p1.jpg?width=1280",
+     "tekija": "Carlos Valenzuela",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CerroDeLaSilla201806p1.jpg",
+     "selite": "Cerro de la Silla kohoaa kaupungin yläpuolelle useine huippuineen.",
+     "leveys": 6008,
+     "korkeus": 2893,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3058827",
+   "nimi": "Estadio BBVA",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 25.67017,
+   "lon": -100.2437,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mexico Guadalupe Monterrey Estadio BBVA Bancomer fifa world cup 2026 6.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG?width=1280",
+     "tekija": "Arne Müseler",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mexico_Guadalupe_Monterrey_Estadio_BBVA_Bancomer_fifa_world_cup_2026_6.JPG",
+     "selite": "Metallikuorinen jalkapallostadion on Monterreyn moderni maamerkki.",
+     "leveys": 3150,
+     "korkeus": 1772,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "07 2933 30 N331.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/07_2933_30_N331.jpg?width=1280",
+     "tekija": "Stadium spotter",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:07_2933_30_N331.jpg",
+     "selite": "Stadionin kaareva julkisivu ja Cerro de la Silla samassa kuvassa.",
+     "leveys": 4600,
+     "korkeus": 2584,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5758389",
+   "nimi": "Monterreyn katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 25.66567,
+   "lon": -100.30961,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monterrey - Catedral de la Inmaculada Concepción - 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monterrey_-_Catedral_de_la_Inmaculada_Concepci%C3%B3n_-_4.jpg?width=1280",
+     "tekija": "This illustration was made by Peter Potrowl. Please credit this with : © Peter Potrowl in the immediate vicinity of the image. A link to my website sitemai.eu would be much appreciated but isn't mandatory. An email to Peter Potrowl would be appreciated too. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me Peter Potrowl to negotiate terms. More free pictures in my website. Donations are accepted here and here.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monterrey_-_Catedral_de_la_Inmaculada_Concepci%C3%B3n_-_4.jpg",
+     "selite": "Barokkikatedraali seisoo Macroplazan laidalla Monterreyn vanhassa keskustassa.",
+     "leveys": 1824,
+     "korkeus": 1368,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral De Monterrey.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_De_Monterrey.jpg?width=1280",
+     "tekija": "Luis Antonio Rodríguez Ochoa from Redmond, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_De_Monterrey.jpg",
+     "selite": "Katedraalin kellotorni kohoaa aukion puiden yläpuolelle.",
+     "leveys": 1944,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5822652",
+   "nimi": "Museo del Obispado",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.67347,
+   "lon": -100.34218,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Antiguo Obispado o Museo Regional de Nuevo León.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiguo_Obispado_o_Museo_Regional_de_Nuevo_Le%C3%B3n.JPG?width=1280",
+     "tekija": "Brendablue77",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antiguo_Obispado_o_Museo_Regional_de_Nuevo_Le%C3%B3n.JPG",
+     "selite": "Entinen piispanpalatsi kukkulalla on nykyään Nuevo Leónin alueellinen museo.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Obispado y contorno.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Obispado_y_contorno.jpg?width=1280",
+     "tekija": "Hector Martínez",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Obispado_y_contorno.jpg",
+     "selite": "Obispado näkyy kukkulan harjalla kaupungin talojen yläpuolella.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Antiguo Obispado o Museo Regional de Nuevo León 10.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiguo_Obispado_o_Museo_Regional_de_Nuevo_Le%C3%B3n_10.JPG?width=1280",
+     "tekija": "Mauriciosalinasmoreno",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antiguo_Obispado_o_Museo_Regional_de_Nuevo_Le%C3%B3n_10.JPG",
+     "selite": "Pylväiden kannattamat kaaret reunustavat palatsin sisäpihaa.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4863709",
+   "nimi": "Barrio Antiguo",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 25.66684,
+   "lon": -100.30707,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monterrey Barrio Antiguo.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monterrey_Barrio_Antiguo.JPG?width=1280",
+     "tekija": "Ivanmartinez",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monterrey_Barrio_Antiguo.JPG",
+     "selite": "Barrio Antiguo on Monterreyn vanhin kaupunginosa värikkäine taloineen.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Barrio Antiguo de Monterrey en 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barrio_Antiguo_de_Monterrey_en_2017.jpg?width=1280",
+     "tekija": "Distrito Medico Monterrey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barrio_Antiguo_de_Monterrey_en_2017.jpg",
+     "selite": "Värikkäät kulmatalot kuuluvat kaupunginosan kuvaan.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Barrio Antiguo Mty.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barrio_Antiguo_Mty.jpg?width=1280",
+     "tekija": "Gabriela Sánchez Cortés",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barrio_Antiguo_Mty.jpg",
+     "selite": "Koristeellinen barokkiportaali on säilynyt vanhan kaupunginosan talossa.",
+     "leveys": 5841,
+     "korkeus": 3894,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3329683",
+   "nimi": "Meksikon historian museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.67172,
+   "lon": -100.30643,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museo Historia Mexicana Monterrey01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo_Historia_Mexicana_Monterrey01.JPG?width=1280",
+     "tekija": "Thelmadatter",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museo_Historia_Mexicana_Monterrey01.JPG",
+     "selite": "Museo esittelee Meksikon historiaa aukion laidalla Macroplazan lähellä.",
+     "leveys": 4512,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Vista de la fachada principal del Museo de Historia Mexicana en Monterrey 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_la_fachada_principal_del_Museo_de_Historia_Mexicana_en_Monterrey_01.jpg?width=1280",
+     "tekija": "B.jars",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_la_fachada_principal_del_Museo_de_Historia_Mexicana_en_Monterrey_01.jpg",
+     "selite": "Museon vaalea julkisivu on moderni vastakohta vanhalle keskustalle.",
+     "leveys": 4624,
+     "korkeus": 3468,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q919965",
+   "nimi": "Fundidoran puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 25.67806,
+   "lon": -100.28333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Horno 3 Parque Fundidora Nublado.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Horno_3_Parque_Fundidora_Nublado.jpg?width=1280",
+     "tekija": "Jorge ATF",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Horno_3_Parque_Fundidora_Nublado.jpg",
+     "selite": "Vanha masuuni on jäänyt Fundidoran puiston muistomerkiksi.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hornos en Parque Fundidora 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hornos_en_Parque_Fundidora_2.jpg?width=1280",
+     "tekija": "Pequeño mar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hornos_en_Parque_Fundidora_2.jpg",
+     "selite": "Teräsvalimon masuunit kohoavat puiston nurmikon yläpuolelle.",
+     "leveys": 3000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5748414",
+   "nimi": "Dulces Nombresin kappeli",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 25.66833,
+   "lon": -100.30889,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Monterrey - Chapelle des Doux Noms - 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Monterrey_-_Chapelle_des_Doux_Noms_-_1.jpg?width=1280",
+     "tekija": "This illustration was made by Peter Potrowl. Please credit this with : © Peter Potrowl in the immediate vicinity of the image. A link to my website sitemai.eu would be much appreciated but isn't mandatory. An email to Peter Potrowl would be appreciated too. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me Peter Potrowl to negotiate terms. More free pictures in my website. Donations are accepted here and here.",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Monterrey_-_Chapelle_des_Doux_Noms_-_1.jpg",
+     "selite": "Pieni kappeli on yksi Monterreyn vanhimmista säilyneistä rakennuksista.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q144040",
+   "nimi": "Sierra Madre Oriental",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 25.36667,
+   "lon": -100.55,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La m 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_m_2.jpg?width=1280",
+     "tekija": "Valdez Lopez",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_m_2.jpg",
+     "selite": "Sierra Madren jyrkkä vuorimuuri rajaa Monterreyn laakson.",
+     "leveys": 2592,
+     "korkeus": 1700,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Barrancas de Sierra Madre Oriental - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barrancas_de_Sierra_Madre_Oriental_-_panoramio.jpg?width=1280",
+     "tekija": "panza.rayada",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barrancas_de_Sierra_Madre_Oriental_-_panoramio.jpg",
+     "selite": "Vuoriston rinteet ovat kallioisia ja metsäisiä.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Skyline de Monterrey.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_de_Monterrey.jpg?width=1280",
+   "tekija": "Daniel Escobedo",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skyline_de_Monterrey.jpg",
+   "selite": "Monterreyn tornitalot kohoavat vuorten edessä.",
+   "leveys": 3120,
+   "korkeus": 2080,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "View of Monterrey (2015).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Monterrey_(2015).jpg?width=1280",
+   "tekija": "Rick González",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Monterrey_(2015).jpg",
+   "selite": "Cerro de la Silla hallitsee Monterreyn kaupunkinäkymää.",
+   "leveys": 6000,
+   "korkeus": 3375,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q5776873",
+   "nimi": "Colegio Civil",
+   "peruste": "pelin nosto",
+   "lat": 25.67408,
+   "lon": -100.31567,
+   "syy": "ei vapaata kuvaa Commonsissa"
+  }
+ ]
+}

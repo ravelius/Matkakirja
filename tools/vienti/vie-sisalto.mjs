@@ -20,6 +20,8 @@
  *   kokoelmat/*.json       KOKOELMAKERROS: tyypitetyt entiteetit (kaupungit,
  *                          reitit, maat...) id-viittauksineen — tuojan
  *                          helppo lähtöpiste (tools/vienti/kokoelmat.mjs).
+ *   kokoelmat/asetukset.json  natiivin asetukset (data/asetukset.json, tavallinen objekti,
+ *                          EI kokoelmamuotoa; tools/vienti/asetukset.mjs, skeema 1.59).
  *   tiedostot/...          valmiit JSON-aineistot sellaisenaan (lahteet.mjs).
  *   web/<näkymä>.json      web-näkymän (lehti) koodi- ja tiedostoriippuvuudet
  *                          natiivin WKWebView-kuorelle (web-riippuvuudet.mjs).
@@ -47,6 +49,7 @@ import { kokoaOffline } from './offline.mjs';
 import { lueKuvamitat } from './kuvamitat.mjs';
 import { kokoaLisenssit } from './lisenssit.mjs';
 import { pikkukuvaOsoite } from './elava-kartta.mjs';
+import { ASETUKSET_PAKETISSA, lueAsetukset, validoiAsetukset } from './asetukset.mjs';
 
 export const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKEEMAVERSIO = 'matkakirja-vienti/1';
@@ -236,8 +239,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        js/packs/monumentit-eurooppa.js) ja siten ensimmäiset hahmotelmamoduulinsa
  *        (js/packs/hahmotelma-{srb,alb,mkd,mne,mda,blr}.js) — kuusi uutta moduulia
  *        manifestissa (Fable 28.9.2026, VAIN EUROOPPA -karttatyö).
+ *   1.58 radiot.kaupunki, lat ja lon (Linssiseppä 2, radioiden maailmanlaajennus).
+ *   1.59 asetukset: kokoelmat/asetukset.json, natiivin Asetus.cs, Pelikoodari 5.10.2026
+ *        (tavallinen objekti { skeema, versio, aanet, pelit, tekstit, kamera, osoitteet }, ei { alkiot });
+ *        manifest.asetukset { tiedosto, sha256, tavuja }; lähde data/asetukset.json.
  */
-export const SKEEMAVERSIO_TARKKA = '1.58';
+export const SKEEMAVERSIO_TARKKA = '1.59';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
@@ -450,6 +457,20 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
   const lisenssiTeksti = JSON.stringify(kokoaLisenssit(), null, 1) + '\n';
   tiedostot.set('lisenssit.json', lisenssiTeksti);
 
+  // Skeema 1.59: natiivin asetukset (data/asetukset.json). Virhe kaataa viennin, varoitus tulostetaan.
+  let asetukset = null;
+  const asetusLahde = lueAsetukset(juuri);
+  if (asetusLahde !== null) {
+    let obj;
+    try { obj = JSON.parse(asetusLahde); } catch (e) { throw new Error(`data/asetukset.json: ${e.message}`); }
+    const { virheet, varoitukset } = validoiAsetukset(obj);
+    for (const v of varoitukset) console.warn(v);
+    if (virheet.length) throw new Error(`data/asetukset.json:\n  ${virheet.join('\n  ')}`);
+    const asetusTeksti = JSON.stringify(obj) + '\n';
+    tiedostot.set(ASETUKSET_PAKETISSA, asetusTeksti);
+    asetukset = { tiedosto: ASETUKSET_PAKETISSA, sha256: sha(asetusTeksti), tavuja: tavuja(asetusTeksti) };
+  }
+
   const skeemat = readdirSync(join(JUURI, 'tools/vienti/skeema')).filter((f) => f.endsWith('.json')).sort();
   for (const f of skeemat) tiedostot.set(`skeema/${f}`, readFileSync(join(JUURI, 'tools/vienti/skeema', f), 'utf8'));
 
@@ -478,6 +499,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     webNakymat,
     offline: { tiedosto: 'offline.json', sha256: sha(offlineTeksti), tavuja: tavuja(offlineTeksti) },
     lisenssit: { tiedosto: 'lisenssit.json', sha256: sha(lisenssiTeksti), tavuja: tavuja(lisenssiTeksti) },
+    ...(asetukset ? { asetukset } : {}),
     logiikka: logiikkaLista(),
     moduulit: manifestModuulit,
   };

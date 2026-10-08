@@ -3,7 +3,7 @@
   "versio": 1,
   "kehys": {
     "_selite": "Sovelluksen kehyksen ja kartan värit. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
-    "_vainNatiivi": ["kulta", "rivi-tausta"],
+    "_vainNatiivi": ["kulta", "kulta-kuulto", "rivi-tausta"],
     "_vainNatiiviSyy": "Webissä --kulta on määrittelemätön (käyttöpaikat var(--kulta, #eab84e), var(--kulta, #d9a13b) ja ilman varaa); määrittely muuttaisi niitä. Yhtenäistetään KORTTI-pohjan siirrossa.",
     "bg": "#1d1610",
     "panel": "#2a1f16",
@@ -14,6 +14,7 @@
     "accent": "#d9a13b",
     "accent-dark": "#8a6114",
     "kulta": "#eab84e",
+    "kulta-kuulto": "rgba(234, 184, 78, 0.4)",
     "danger": "#ff9b8a",
     "rivi-tausta": "rgba(53, 39, 26, 0.55)",
     "overlay-card": "rgba(46, 33, 20, 0.88)",
@@ -75,6 +76,17 @@
       "korostus": "#ffffff",
       "reunus": "#aaaaaa",
       "toiminto": "rgba(170, 170, 170, 0.55)"
+    },
+    "lcd": {
+      "pinta": "#0c2214",
+      "pinta-peitto": "#0c2214",
+      "muste": "#84ffa0",
+      "muste-pehmea": "rgba(132, 255, 160, 0.62)",
+      "korostus": "#84ffa0",
+      "reunus": "rgba(124, 255, 158, 0.28)",
+      "toiminto": "#84ffa0",
+      "varoitus": "#ffb347",
+      "vaara": "#ff5a4a"
     }
   },
   "himmennys": {
@@ -83,9 +95,11 @@
     "kuva": "rgba(14, 9, 4, 0.92)"
   },
   "tila": {
-    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana.",
+    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana. live: ☾-listan LIVE-laatikon pohja päällä (oranssi; pois = teeman toiminto-harmaa; omistaja 8.10.2026 klo 09.1x).",
     "onnistuminen": "#2f6b3f",
-    "virhe": "#b03a2b"
+    "virhe": "#b03a2b",
+    "live": "#e8892e",
+    "live-kuulto": "rgba(232, 137, 46, 0.65)"
   },
   "kentta": {
     "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
@@ -110,7 +124,11 @@
     "otsikko": { "koko": 21, "kirjasin": "LukuLihava" },
     "arkki": { "koko": 26, "kirjasin": "LukuLihava" },
     "nimio": { "koko": 34, "kirjasin": "KoneBold" },
-    "leveaLisa": 2
+    "leveaLisa": 2,
+    "lcd": { "koko": 30, "kirjasin": "Lcd" },
+    "lcd-pieni": { "koko": 15, "kirjasin": "Lcd", "harvennus": 0.27 },
+    "lcd-mini": { "koko": 20, "kirjasin": "Lcd" },
+    "rumpu": { "koko": 12, "kirjasin": "Segmentti" }
   },
   "fontit": {
     "punta": { "kirjasin": "Luku", "vali": 1, "_selite": "£-merkki aina Luku-kirjasimella (Iowan Old Style) ja 1 pt:n väli numeroon, myös Kone-teksteissä: American Typewriterin £ näytti koukulta ja '−£20' luettiin '−&20' (omistaja ja Päätoimittaja 2.10.2026). Web: @font-face 'Matkakirja Punta' src: local('Iowan Old Style Roman'), local('IowanOldStyle-Roman'), local('Iowan Old Style'), local('Charter Roman'), local('Charter-Roman'), local('Georgia'), local('Palatino Linotype'), local('Palatino-Roman'), local('Cambria'), local('Noto Serif'), local('NotoSerif-Regular'), local('DejaVu Serif'), local('Times New Roman') (local() vaatii kasvon koko nimen tai PostScript-nimen, Pelikoodari mittasi Chromiumilla; Iowan on Applen järjestelmäfontti eikä upotettavissa), unicode-range U+00A3, jokaisen fonttipinon alkuun. Natiivi: £ omana Luku-tekstinään (Ylapalkki.AsetaRahaTeksti; muut näytöt samalla apurilla)." },
@@ -119,7 +137,8 @@
       "font-type": "\"Matkakirja Punta\", \"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
       "font-luku": "\"Matkakirja Punta\", \"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
       "font-kauno": "\"Matkakirja Punta\", \"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
-      "font-atlas": "\"Matkakirja Punta\", \"Liberation Serif\", \"Times New Roman\", Times, serif"
+      "font-atlas": "\"Matkakirja Punta\", \"Liberation Serif\", \"Times New Roman\", Times, serif",
+    "font-moderni": "-apple-system, system-ui, \"SF Pro Text\", \"Helvetica Neue\", Helvetica, Arial, sans-serif"
     },
     "natiivi": {
       "Kone": [["American Typewriter", "Regular"], ["Courier New", "Regular"], ["Courier", "Regular"]],
@@ -128,7 +147,7 @@
       "Luku": [["Iowan Old Style", "Roman"], ["Iowan Old Style", "Regular"], ["Charter", "Roman"], ["Palatino", "Regular"], ["Georgia", "Regular"]],
       "LukuLihava": [["Iowan Old Style", "Bold"], ["Charter", "Bold"], ["Palatino", "Bold"], ["Georgia", "Bold"]],
       "LukuKursiivi": [["Iowan Old Style", "Italic"], ["Charter", "Italic"], ["Palatino", "Italic"], ["Georgia", "Italic"]],
-      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]]
+      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]], "Moderni": [["SF Pro Text", "Regular"], ["SF Pro", "Regular"], [".SF UI Text", "Regular"], ["Helvetica Neue", "Regular"], ["Helvetica", "Regular"]], "ModerniLihava": [["SF Pro Display", "Semibold"], ["SF Pro", "Semibold"], [".SF UI Display", "Semibold"], ["Helvetica Neue", "Medium"], ["Helvetica Neue", "Bold"], ["Helvetica", "Bold"]], "_moderni": "MODERNI ja MODERNILIHAVA (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro VAIN nykyajan näkymiin (elävä opas), ei muualle peliin."
     }
   },
   "mitat": {
@@ -159,16 +178,18 @@
     "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
-    "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)" },
-    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] },
+    "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)", "variantit": ["SIRURIVI IRRALLAAN (.mk-chat__sirut--irrallaan; omistaja 5.10.2026 klo 19.0x, elävä opas): samat Pulun sirut ilman chat-paneelia, kullakin lasipinnan tausta (--tk-lasi-pinta, reunus --tk-lasi-reunus); kaksi vaihtoehtoa rinnakkain alareunan keskellä ja vieressä pieni puhu/kirjoita-siru (mikki), joka avaa Pulu-chatin syöttöineen ja käynnistää sanelun; häivytys --tk-kesto-sulku"] },
+    "PINNATTU PALKKI": { "osa": true, "teemat": ["paperi"], "_selite": "PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026 klo 23.3x): ikkunan (nosto, Pulu-chat ym.) ylärivin pin-kuvake rivin muiden kuvakkeiden koossa; pinnattu ikkuna pienenee kartan liikkeestä yhden rivin palkiksi oikeaan yläreunaan nappien alle: pin-merkki, otsikko (apuri, ellipsi), tauko/jatka 34 pt ja ohut EDISTYMINEN-viiva; napautus palauttaa ikkunan, ei ✕:ää; vain yksi kerrallaan" },
+    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus", "tumma"], "kulma": "0 (ohut terävä viiva; Päätoimittaja 5.10.2026: ei kapselipäitä)", "variantit": ["LATAUSPALKKI (odotusruudun nimen alla, 140 × 3 pt, arvo 0–1, häivytys; omistaja 5.10.2026: linnan ja vastaavien lataukset)"] },
+    "LATAUSKUVA": { "teemat": ["tumma"], "koostuu": ["tausta (still-kuva)", "1–2 liikkuvaa kerrosta alfalla", "köydet vektoriviivoina kiintopisteestä liikkuvaan kerrokseen: riippuköydet (kori → kupu, kevyt riippuma) ja ankkuriköysi korista maahan (pieni kaari; omistaja 8.10.2026 klo 08.4x)", "nimi ja EDISTYMINEN/LATAUSPALKKI ennallaan päällä"], "liike": "vähäeleinen (omistaja 8.10.2026 klo 08.4x): sinimuotoinen heilahdus ±0,5–0,75° kääntöpisteen ympäri ja nousu–lasku enintään 4 pt neljännesjakson edellä, jakso 7–8 s; ei nykimistä; päivitys 30 fps ilman täyttä ruudunpäivitystä", "valokuva": "hidas lähentyminen ja siirto (Ken Burns) 1,00 → 1,04 / 8 s ja pehmeästi takaisin, ei hyppyä; nipistyszoom keskeyttää (oppaan latauskuva)", "esiin": "heti tai häivyttäen liike.avaus (alle liike.maksimi)", "ilman kerroksia": "nykyinen still-kuva", "_selite": "Kevyesti animoitu latauskuva (omistaja 8.10.2026 ~08.5x: 'Lataus kuvista pitää tehdä kevyesti animoituja. Esim ilmapallo kuva pitää tehdä kahdesta osasta uudestaan niin että pallo heiluu hitaasti ruudulla ja köysi piirretään vektorina'; Päätoimittaja: uusi pohja). Vain natiivi: UI/Latauskuva.cs, liike Linssit/Ydin/LatausLiike.cs." },
     "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
     "LAUTAPELI": {
       "koostuu": ["KUVANÄKYMÄ (lauta)", "PANEELI (ohjaimet)", "KORTTI (valinta ja voitto)"],
-      "teemat": ["paperi", "tumma"],
+      "teemat": ["paperi"],
       "lauta": "KUVANÄKYMÄ ilman laudan taustaa: lauta suoraan näkymän päällä, epäsäännöllinen reuna näkyy (ei vaaleaa taustalevyä)",
-      "tausta": "kartta sumennettuna kertakuvana pelin avautuessa, koko näkymän päällä himmennys-kevyt",
-      "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["tumma"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
-      "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa, sumennettu tausta ja tumma tilapaneeli: omistaja 2.10.2026 klo 08.2x (Myllystä)"
+      "tausta": "kertakuvasumennus (pelin avautuessa) kattaa kaikki laudan takana näkyvät elementit: kartta, symbolit, nostot, valokuvat ja tekstit, myös yläreunan paikkarivi ja äänikuvake; terävinä vain pelin omat osat (lauta, paneeli, kortit, ✕); päällä himmennys-kevyt",
+      "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["paperi"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
+      "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa: omistaja 2.10.2026 klo 08.2x. Tilapaneeli paperi (alkuperäinen) ja kaikki taustan elementit pehmennettyinä, myös tekstit: omistaja 2.10.2026 klo 11.0x (loki 11.01; tumma ja lasi hylätty)"
     },
     "GALLERIA": {
       "teemat": ["paperi"],
@@ -186,6 +207,9 @@
       "teemat": ["harmaa", "paperi", "lasi", "lasi-avaruus"],
       "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
+      "kontekstikuvakkeet": "seikkailun toimintonappi (omistaja 7.10.2026 klo 20.3x): käsi = poimi, käytä, avaa, aseta, laske; kaari = heitä; liekki = sytytä, puhalla, sammuta. Natiivin omat 24-ruudukon viivakuvakkeet (Ikonit.Kasi, Ikonit.Heittokaari, Ikonit.Liekki), viiva 1,75, ei tekstiä",
+      "saakuvakkeet": "pallon säätila ☾-napissa ja -listassa (omistaja 8.10.2026 klo 09.1x \"Saa tottakai piirtää\"): pilvi, sade, sumu, lumi, ukkonen; selkeä = paiva (aurinko). Natiivin omat 24×24-viivakuvakkeet (Ikonit.Viiva) samassa tyylissä kuin kontekstikuvakkeet: sama pilvi ylhäällä, alla sade (3 vinoviivaa), sumu (2 vaakaviivaa), lumi (2 kuusisakaraista hiutaletta) tai salama. Napissa aika ja sen kulmassa pieni sääkuvake, kun sää ei ole pois.",
+      "live": "☾-nappi LIVE-tilassa (omistaja 8.10.2026 klo 09.1x): napissa vain teksti LIVE (kapiteeli, lihava) ja pohja tila.live-kuulto (läpikuultava oranssi); koko, paikka ja kulma ennallaan (pyöristetty neliö, ei ovaalia).",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
       "linssivalikot": {
@@ -205,6 +229,19 @@
       "nimi": "jokaisella osalla nimi (VoiceOver ja pitkä painallus), ei näkyvää tekstiä",
       "teemat": [],
       "_selite": "omistaja 2.10.2026 klo 12.34 (vaihtoehto B): ajattelijoiden päät kartalla, myöhemmin muut erikoisnostot allekkain; Natiivi-UI:n tarkennukset 2.10."
+    },
+    "ISS-OHJAAMO": {
+      "_selite": "ISS-ohjaamon paneeli Cupolan alareunaan (omistaja 4.10.2026 klo 11.40 'ISS-OHJAAMO UUSIKSI'; vain natiivi, UI/Linssit/IssOhjaamo.cs ja Pohjat/iss-ohjaamo.uss). Pinta teema tumma, näytöt teema lcd.",
+      "joystick": "plus-muoto 96 pt (varret 32 pt), yksi suunta kerrallaan, liike pidon ajan, irrotus pysäyttää; painettu varsi lcd-korostuksella, napa kallistuu 7 pt",
+      "lcd": "vihreä LCD (teema lcd): lähin kohde koolla lcd (pitkä nimi pienenee yhdellä rivillä 22 pt:iin ja rivittyy sitten kahdelle riville, vähintään 17 pt), maa alla koolla lcd-pieni harvennettuna; kirjasin Lcd (VT323, OFL)",
+      "kamera": "pyöreä 48 pt kamerakuvake; tarkka ISS-kuva kaikkialla (loki #3934, #3936); himmeä (peitto 0,35) Cupolan ulkopuolella ja kuvan työstön aikana",
+      "kaasu": "vipu neljällä pykälällä (1, 10, 100, 1000 alhaalta ylös), juuressa pyöreä kolo ja numerorumpu koolla rumpu (Segmentti = DSEG7, OFL), ×-merkki Lcd-kirjasimella; vanha luku liukuu piiloon ja uusi esiin 200 ms",
+      "mininaytto": "napautus ohjaamon ulkopuolelle pienentää yksiriviseksi LCD-näytöksi (36 pt, koko lcd-mini, 'KOHDE · MAA'); napautus palauttaa; siirtymä liike.avaus ja liike.sulku",
+      "laajennus": "LCD:n napautus: LCD kasvaa ohjainten päälle (teema lcd, Ponnahdus LCD:n kohdalta); vasemmalla tuplakorkea SIJAINTI ja oikealla OK (72 pt), keskellä rivit TALVI KEVÄT KESÄ SYKSY ja AAMU PÄIVÄ ILTA YÖ LCD-nappeina koolla lcd-pieni; valittu käänteisenä (pohja lcd-muste, teksti lcd-pinta); OK palaa sijaintiin",
+      "sijainti": "perinteinen pelin ikkuna ilman LCD-efektiä: pohja lasi-avaruus pinta-peitto (musta), kehys lcd-reunus, kulma kortti, leveys 92 % enintään 520 pt, korkeus enintään 70 %; otsikko SIJAINTI kapiteelina, kohteet (Oma sijainti + astronauttikierros) kahteen sarakkeeseen kirjasimella Luku koolla leipa ja värillä lcd-muste, rivi ≥ nappi.osuma; vieritys; valinta tai ohinapautus sulkee",
+      "omakuva": "valmis oma ISS-kuva KUVANÄKYMÄ-pohjalla ikkunana Cupolan päällä (teema tumma, leveys 92 % enintään 520 pt, kuva omalla suhteellaan, kuvateksti apuri-koossa, OHJAUSNAPIT jaa ja ✕ oikeassa yläkulmassa, ‹ › kuvatekstin sivuilla kun kuvia on useampi); sulku (✕, ohinapautus, veto alas) lentää pinoon kuvan suurennoksen arvoilla (320 ms, poikkeus)",
+      "kuvapino": "uusi elementti (omistaja 4.10.2026 klo 15.2x): vasemmassa alareunassa ohjaamopaneelin yläpuolella 10 pt, pikkukuva 52 × 65 pt (4:5), 2 pt reuna tumma-muste, kulma pieni; uusin päällimmäisenä, kaksi vanhempaa alla vinossa (−7° ja 6°); napautus avaa uusimman isoon ikkunaan",
+      "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }

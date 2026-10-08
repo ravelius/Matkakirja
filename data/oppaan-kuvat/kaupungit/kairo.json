@@ -1,0 +1,627 @@
+{
+ "kaupunki": "kairo",
+ "kaupunkiQ": "Q85",
+ "kohteet": [
+  {
+   "q": "Q12508",
+   "nimi": "Gizan pyramidit",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 29.97611,
+   "lon": 31.13278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pyramids of the Giza Necropolis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pyramids_of_the_Giza_Necropolis.jpg?width=1280",
+     "tekija": "KennyOMG",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pyramids_of_the_Giza_Necropolis.jpg",
+     "selite": "Gizan pyramidit kohoavat aavikon reunalla Kairon länsipuolella.",
+     "leveys": 10104,
+     "korkeus": 4210,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "All Gizah Pyramids-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/All_Gizah_Pyramids-2.jpg?width=1280",
+     "tekija": "Ricardo Liberato",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids-2.jpg",
+     "selite": "Kheopsin, Khafren ja Menkauren pyramidit muodostavat Gizan kuuluisan ryhmän.",
+     "leveys": 4240,
+     "korkeus": 2228,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Sphinx and the Great Pyramid of Giza panorama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sphinx_and_the_Great_Pyramid_of_Giza_panorama.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sphinx_and_the_Great_Pyramid_of_Giza_panorama.jpg",
+     "selite": "Suuri sfinksi vartioi Gizan pyramidien edustaa.",
+     "leveys": 8780,
+     "korkeus": 2500,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q201219",
+   "nimi": "Egyptiläinen museo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 30.04778,
+   "lon": 31.23333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Facade of the Egyptian Museum, Tahrir Square, Cairo, Egypt1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_of_the_Egyptian_Museum%2C_Tahrir_Square%2C_Cairo%2C_Egypt1.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_of_the_Egyptian_Museum%2C_Tahrir_Square%2C_Cairo%2C_Egypt1.jpg",
+     "selite": "Punatiilinen museorakennus Tahririn aukion laidalla säilyttää muinaisen Egyptin aarteita.",
+     "leveys": 3426,
+     "korkeus": 2359,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1897 bis 1902 wurde das Ägyptische Museum in Kairo gebaut. 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1897_bis_1902_wurde_das_%C3%84gyptische_Museum_in_Kairo_gebaut._04.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1897_bis_1902_wurde_das_%C3%84gyptische_Museum_in_Kairo_gebaut._04.jpg",
+     "selite": "Museo rakennettiin vuosina 1897–1902 faaraoiden esineistön kodiksi.",
+     "leveys": 5345,
+     "korkeus": 3009,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Egyptian Museum beside view.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egyptian_Museum_beside_view.JPG?width=1280",
+     "tekija": "Johnny 201",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Egyptian_Museum_beside_view.JPG",
+     "selite": "Museon sivusiipi näkyy Kairon keskustan kadulta.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1988240",
+   "nimi": "Saladinin linnoitus",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 30.0294,
+   "lon": 31.2614,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Muhammad Ali Mosque 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muhammad_Ali_Mosque_1.jpg?width=1280",
+     "tekija": "kallerna",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muhammad_Ali_Mosque_1.jpg",
+     "selite": "Muhammad Alin moskeija hallitsee linnoituskukkulan siluettia Kairon yllä.",
+     "leveys": 2994,
+     "korkeus": 2220,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cairo, Cairo Citadel, Muhammad Ali Mosque, Egypt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo%2C_Cairo_Citadel%2C_Muhammad_Ali_Mosque%2C_Egypt.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo%2C_Cairo_Citadel%2C_Muhammad_Ali_Mosque%2C_Egypt.jpg",
+     "selite": "Linnoitus ja sen moskeija näkyvät kauas Kairon kattojen yli.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Muhammad Ali Mosque, Citadel, Cairo, Egypt5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muhammad_Ali_Mosque%2C_Citadel%2C_Cairo%2C_Egypt5.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muhammad_Ali_Mosque%2C_Citadel%2C_Cairo%2C_Egypt5.jpg",
+     "selite": "Moskeijan sisäpihan peseytymiskatos on koristeellinen alabasterirakennelma.",
+     "leveys": 2574,
+     "korkeus": 2454,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1100964",
+   "nimi": "Islamilainen Kairo",
+   "peruste": "UNESCO",
+   "koko_m": 1500,
+   "lat": 30.046,
+   "lon": 31.2627,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cairo 1a (9).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_1a_(9).jpg?width=1280",
+     "tekija": "Manshy482",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_1a_(9).jpg",
+     "selite": "Kairon vanhan kaupungin minareetit ja kupolit kuuluvat UNESCOn maailmanperintöön.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cairo Citadel P1020127.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Citadel_P1020127.jpg?width=1280",
+     "tekija": "Николай Чакръкчиев",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Citadel_P1020127.jpg",
+     "selite": "Sulttaani Hassanin ja al-Rifain moskeijat seisovat vanhan Kairon kattojen yllä.",
+     "leveys": 2304,
+     "korkeus": 1728,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Egypt, Cairo, Panorama of Islamic Cairo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egypt%2C_Cairo%2C_Panorama_of_Islamic_Cairo.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Egypt%2C_Cairo%2C_Panorama_of_Islamic_Cairo.jpg",
+     "selite": "Keskiaikaisen Kairon tiheä kaupunkirakenne on pysynyt vuosisatoja ennallaan.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1061621",
+   "nimi": "Khan el-Khalili",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 30.0475,
+   "lon": 31.26222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Khan el-Khalili 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khan_el-Khalili_2019.jpg?width=1280",
+     "tekija": "Mohammed Moussa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khan_el-Khalili_2019.jpg",
+     "selite": "Khan el-Khalilin basaarissa myydään lyhtyjä, mausteita ja matkamuistoja jo useiden vuosisatojen ajan.",
+     "leveys": 4603,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Khan el-Khalili 2019 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Khan_el-Khalili_2019_1.jpg?width=1280",
+     "tekija": "Mohammed Ali Moussa",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Khan_el-Khalili_2019_1.jpg",
+     "selite": "Basaarin kapeat kujat ja holvit muodostavat Kairon tunnetuimman kauppakorttelin.",
+     "leveys": 3954,
+     "korkeus": 5931,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q614684",
+   "nimi": "Kairon torni",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 30.04583,
+   "lon": 31.22444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Best View Of Cairo Tower Nile (200005243).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Best_View_Of_Cairo_Tower_Nile_(200005243).jpeg?width=1280",
+     "tekija": "Hesham Mokhtar Ali",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Best_View_Of_Cairo_Tower_Nile_(200005243).jpeg",
+     "selite": "Kairon torni kohoaa Niilin Gezira-saarella ja on kaupungin tunnetuin nykyaikainen maamerkki.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Nile and Cairo Tower - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nile_and_Cairo_Tower_-_panoramio.jpg?width=1280",
+     "tekija": "Daniel Nussbaum",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nile_and_Cairo_Tower_-_panoramio.jpg",
+     "selite": "Tornista on näkymä Niilin ylittäville silloille ja Kairon keskustaan.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Nile and Cairo Tower at night - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nile_and_Cairo_Tower_at_night_-_panoramio.jpg?width=1280",
+     "tekija": "Daniel Nussbaum",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nile_and_Cairo_Tower_at_night_-_panoramio.jpg",
+     "selite": "Iltaisin torni ja Niilin sillat valaistaan kaupungin yllä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q312342",
+   "nimi": "Al-Azharin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 30.04573,
+   "lon": 31.2627,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AlAzhar Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AlAzhar_Mosque.jpg?width=1280",
+     "tekija": "Mohamed Ouda",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AlAzhar_Mosque.jpg",
+     "selite": "Al-Azharin moskeijan sisäpiha kuuluu islamilaisen maailman vanhimpiin oppilaitoksiin.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cario - Islamic district - Al-Azhar Mosque - courtyard.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cario_-_Islamic_district_-_Al-Azhar_Mosque_-_courtyard.JPG?width=1280",
+     "tekija": "Daniel Mayer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cario_-_Islamic_district_-_Al-Azhar_Mosque_-_courtyard.JPG",
+     "selite": "Moskeijan holvikäytävät ympäröivät laajaa marmoripihaa.",
+     "leveys": 3141,
+     "korkeus": 1089,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12061",
+   "nimi": "Tahririn aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 30.04444,
+   "lon": 31.23583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tahrir Square (Cairo).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tahrir_Square_(Cairo).jpg?width=1280",
+     "tekija": "The Egy King",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tahrir_Square_(Cairo).jpg",
+     "selite": "Tahririn aukio on Kairon keskustan liikenteen ja historian solmukohta.",
+     "leveys": 1352,
+     "korkeus": 713,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tahrir square (Cairo, Egypt).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tahrir_square_(Cairo%2C_Egypt).jpg?width=1280",
+     "tekija": "The Egy King",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tahrir_square_(Cairo%2C_Egypt).jpg",
+     "selite": "Aukion keskellä kohoaa obeliski, jota ympäröi Mogamma-hallintorakennus.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q915413",
+   "nimi": "Ibn Tulunin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 30.02875,
+   "lon": 31.24953,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kairo Ibn Tulun Moschee BW 5.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kairo_Ibn_Tulun_Moschee_BW_5.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kairo_Ibn_Tulun_Moschee_BW_5.jpg",
+     "selite": "Ibn Tulunin moskeija on Kairon vanhimpia, ja sen sisäpihalla on kupolikatettu peseytymiskaivo.",
+     "leveys": 3641,
+     "korkeus": 2378,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kairo Ibn Tulun Moschee BW 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kairo_Ibn_Tulun_Moschee_BW_4.jpg?width=1280",
+     "tekija": "User:Berthold Werner",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kairo_Ibn_Tulun_Moschee_BW_4.jpg",
+     "selite": "Laaja sisäpiha ja kaarikäytävät ovat 800-luvun lopun arkkitehtuuria.",
+     "leveys": 3476,
+     "korkeus": 1898,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mosque of Ibn Tulun, Cairo, Egypt9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mosque_of_Ibn_Tulun%2C_Cairo%2C_Egypt9.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mosque_of_Ibn_Tulun%2C_Cairo%2C_Egypt9.jpg",
+     "selite": "Ulkopuolinen kierreminareetti on moskeijan tunnusmerkki.",
+     "leveys": 2441,
+     "korkeus": 3586,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1430119",
+   "nimi": "Sulttaani Hassanin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 30.0319,
+   "lon": 31.2567,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kairo Sultan Hassan Moschee BW 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kairo_Sultan_Hassan_Moschee_BW_1.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kairo_Sultan_Hassan_Moschee_BW_1.jpg",
+     "selite": "Sulttaani Hassanin moskeija ja koulu on yksi mamelukkiajan suurimmista rakennuksista.",
+     "leveys": 2661,
+     "korkeus": 2544,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2422298",
+   "nimi": "Riippuva kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 30.00542,
+   "lon": 31.23008,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "By ovedc - Hanging Church (Cairo) - 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/By_ovedc_-_Hanging_Church_(Cairo)_-_01.jpg?width=1280",
+     "tekija": "Ovedc",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:By_ovedc_-_Hanging_Church_(Cairo)_-_01.jpg",
+     "selite": "Riippuva kirkko on koptilaisen Kairon tunnetuimpia kirkkoja.",
+     "leveys": 5312,
+     "korkeus": 2988,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kairo Hanging Church BW 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kairo_Hanging_Church_BW_1.jpg?width=1280",
+     "tekija": "Berthold Werner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kairo_Hanging_Church_BW_1.jpg",
+     "selite": "Kirkko on rakennettu Babylonin linnoituksen muurin päälle.",
+     "leveys": 2374,
+     "korkeus": 3710,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2041270",
+   "nimi": "Bab Zuweila",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 30.0428,
+   "lon": 31.2578,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bab Zuweila minaret.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bab_Zuweila_minaret.jpg?width=1280",
+     "tekija": "Rahmnaj",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bab_Zuweila_minaret.jpg",
+     "selite": "Bab Zuweila on keskiaikainen kaupunginportti, jonka päällä kohoavat Mu'ayyadin moskeijan minareetit.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cairo, bab zuweila 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo%2C_bab_zuweila_02.JPG?width=1280",
+     "tekija": "Sailko",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo%2C_bab_zuweila_02.JPG",
+     "selite": "Portin massiiviset tornit ovat osa Kairon vanhaa kaupunginmuuria.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q597617",
+   "nimi": "Kairon oopperatalo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 30.04245,
+   "lon": 31.22353,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cairo Opera House - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Opera_House_-_panoramio.jpg?width=1280",
+     "tekija": "AwOiSoAk KaOsIoWa",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House_-_panoramio.jpg",
+     "selite": "Kairon oopperatalo sijaitsee Gezira-saarella Niilin keskellä.",
+     "leveys": 3648,
+     "korkeus": 2432,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cairo Opera House at evening 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_Opera_House_at_evening_06.jpg?width=1280",
+     "tekija": "لا روسا",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_Opera_House_at_evening_06.jpg",
+     "selite": "Illalla ooppera on valaistu lämpimin sävyin.",
+     "leveys": 4160,
+     "korkeus": 2336,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q286446",
+   "nimi": "Al-Azhar-puisto",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 30.0405,
+   "lon": 31.2646,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ayyubid Wall Al-Azhar Park Cairo 01-2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ayyubid_Wall_Al-Azhar_Park_Cairo_01-2006.jpg?width=1280",
+     "tekija": "Błażej Pindor",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ayyubid_Wall_Al-Azhar_Park_Cairo_01-2006.jpg",
+     "selite": "Puisto on rakennettu entiselle kaatopaikalle ja sen vierestä näkyy Ayyubidien muuri.",
+     "leveys": 1600,
+     "korkeus": 1088,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Al-Azhar-Park 2016-03-28l.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Azhar-Park_2016-03-28l.jpg?width=1280",
+     "tekija": "Djehouty",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Azhar-Park_2016-03-28l.jpg",
+     "selite": "Puiston puutarhoista on näkymä Kairon linnoitukselle.",
+     "leveys": 3394,
+     "korkeus": 5091,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q307747",
+   "nimi": "Abdeenin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 30.0417,
+   "lon": 31.2483,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "GD-EG-Caire-Abedin001.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GD-EG-Caire-Abedin001.JPG?width=1280",
+     "tekija": "Gérard Ducher (user:Néfermaât)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GD-EG-Caire-Abedin001.JPG",
+     "selite": "Abdeenin palatsi oli Egyptin kuninkaiden virallinen asuinpalatsi 1800-luvun lopulta.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Flickr - Bakar 88 - Cairo, Egypt (HDR).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Bakar_88_-_Cairo%2C_Egypt_(HDR).jpg?width=1280",
+   "tekija": "Andrew A. Shenouda from Cairo, Egypt",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_Bakar_88_-_Cairo%2C_Egypt_(HDR).jpg",
+   "selite": "Niili halkoo Kairon ja kaupungin pilvenpiirtäjät reunustavat sen rantoja.",
+   "leveys": 3872,
+   "korkeus": 2580,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Cairo skyline, Nile River, Egypt.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cairo_skyline%2C_Nile_River%2C_Egypt.jpg?width=1280",
+   "tekija": "Vyacheslav Argenberg",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cairo_skyline%2C_Nile_River%2C_Egypt.jpg",
+   "selite": "Kairo levittäytyy Niilin molemmin puolin Egyptin pääkaupunkina.",
+   "leveys": 3072,
+   "korkeus": 2048,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

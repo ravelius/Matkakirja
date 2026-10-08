@@ -1,0 +1,284 @@
+{
+ "kaupunki": "suva",
+ "kaupunkiQ": "Q38807",
+ "kohteet": [
+  {
+   "q": "Q5594860",
+   "nimi": "Grand Pacific Hotel",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": -18.14689,
+   "lon": 178.4225,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "GPH Suva MatthiasSuessen-8490.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GPH_Suva_MatthiasSuessen-8490.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GPH_Suva_MatthiasSuessen-8490.jpg",
+     "selite": "Vuonna 1914 avattu Grand Pacific Hotel loistaa illalla Suvan rannalla palmujen takana.",
+     "leveys": 4752,
+     "korkeus": 2451,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "GPH Suva MatthiasSuessen-7735.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GPH_Suva_MatthiasSuessen-7735.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GPH_Suva_MatthiasSuessen-7735.jpg",
+     "selite": "Hotellin valkoinen julkisivu ja kuninkaanpalmut ovat Suvan tunnetuin rantanäkymä.",
+     "leveys": 4395,
+     "korkeus": 2930,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "GPH Suva MatthiasSuessen-8675.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GPH_Suva_MatthiasSuessen-8675.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GPH_Suva_MatthiasSuessen-8675.jpg",
+     "selite": "Rakennuksen kaksikerroksiset verannat on suunniteltu tuulettumaan trooppisessa helteessä.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4345425",
+   "nimi": "Fidžin parlamentti",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -18.14586,
+   "lon": 178.42441,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parliament Suva MatthiasSuessen-8477.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_Suva_MatthiasSuessen-8477.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parliament_Suva_MatthiasSuessen-8477.jpg",
+     "selite": "Fidžin parlamenttitalon pyramidikatto on saanut mallinsa perinteisistä fidžiläisistä bure-taloista.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18416905",
+   "nimi": "Pyhän sydämen katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -18.1416,
+   "lon": 178.442,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sacred Heart Suva MatthiasSuessen-8140.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sacred_Heart_Suva_MatthiasSuessen-8140.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sacred_Heart_Suva_MatthiasSuessen-8140.jpg",
+     "selite": "Pyhän sydämen katedraali kohoaa kaksitorniseksi Suvan keskustassa, päällä Kristus-patsas.",
+     "leveys": 2571,
+     "korkeus": 3239,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4275602",
+   "nimi": "Thurston Gardens",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -18.1491,
+   "lon": 178.4247,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Thurston Garden Suva MatthiasSuessen-7808.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thurston_Garden_Suva_MatthiasSuessen-7808.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Thurston_Garden_Suva_MatthiasSuessen-7808.jpg",
+     "selite": "Thurston Gardensin juomavesilähde on ollut puiston kävijöiden käytössä vuodesta 1914.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Thurston Gardens from Cakobau Rd and QE Dr.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thurston_Gardens_from_Cakobau_Rd_and_QE_Dr.jpg?width=1280",
+     "tekija": "Tucoxn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Thurston_Gardens_from_Cakobau_Rd_and_QE_Dr.jpg",
+     "selite": "Vanha botaaninen puisto on Suvan keskustan vihreä keidas ja Fidžin museon koti.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2652153",
+   "nimi": "Fidžin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -18.14967,
+   "lon": 178.42574,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fiji Museum Clock Tower Suva MatthiasSuessen-7816.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiji_Museum_Clock_Tower_Suva_MatthiasSuessen-7816.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fiji_Museum_Clock_Tower_Suva_MatthiasSuessen-7816.jpg",
+     "selite": "Fidžin museo toimii Thurston Gardensin puistossa, sen nurmella seisoo pieni kellotorni.",
+     "leveys": 4752,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fiji Museum in Suva.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiji_Museum_in_Suva.jpg?width=1280",
+     "tekija": "Yuko Hara from Yokohama, Japan",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fiji_Museum_in_Suva.jpg",
+     "selite": "Museon sisäänkäynnillä on saarten luontoa kuvaava maalaus.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5588890",
+   "nimi": "Valtionpäämiehen talo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -18.15189,
+   "lon": 178.42614,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Presidential Pallace Suva MatthiasSuessen-8769.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Presidential_Pallace_Suva_MatthiasSuessen-8769.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Presidential_Pallace_Suva_MatthiasSuessen-8769.jpg",
+     "selite": "Presidentin virka-asunto on entinen kuvernöörin residenssi, ja se seisoo puistomaisella rinteellä.",
+     "leveys": 1655,
+     "korkeus": 2101,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q26914986",
+   "nimi": "Suvan Carnegie-kirjasto",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": -18.14211,
+   "lon": 178.4231,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Carnegie Library Suva MatthiasSuessen-8648.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carnegie_Library_Suva_MatthiasSuessen-8648.jpg?width=1280",
+     "tekija": "User:Matthias Süßen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Carnegie_Library_Suva_MatthiasSuessen-8648.jpg",
+     "selite": "Vuonna 1909 valmistunut Carnegie-kirjasto on yksi Suvan siirtomaa-ajan hienoimmista rakennuksista.",
+     "leveys": 4752,
+     "korkeus": 2926,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q24570920",
+   "nimi": "Colo-i-Suvan metsäpuisto",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": -18.07,
+   "lon": 178.36,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Colo-i-Suva big waterfall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colo-i-Suva_big_waterfall.jpg?width=1280",
+     "tekija": "Tucoxn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colo-i-Suva_big_waterfall.jpg",
+     "selite": "Colo-i-Suvan sademetsäpuiston putoukset syöksyvät kirkasvetisiin altaisiin kymmenen kilometrin päässä keskustasta.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Colo-i-Suva rope-swing.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colo-i-Suva_rope-swing.jpg?width=1280",
+     "tekija": "Tucoxn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Colo-i-Suva_rope-swing.jpg",
+     "selite": "Puiston vesialtaat ovat suosittuja uimapaikkoja sademetsän keskellä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Suva City 1 February 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suva_City_1_February_2015.jpg?width=1280",
+   "tekija": "Stemoc",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suva_City_1_February_2015.jpg",
+   "selite": "Suvan keskustassa siirtomaa-ajan matalat talot ja uudet konttoritornit ovat samassa korttelissa.",
+   "leveys": 2048,
+   "korkeus": 1529,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Suva Bay (Imagicity 1016).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suva_Bay_(Imagicity_1016).jpg?width=1280",
+   "tekija": "Graham Crumb",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suva_Bay_(Imagicity_1016).jpg",
+   "selite": "Suvan lahden takana kohoavat Viti Levun vuoret ja Joske's Thumbin kärki.",
+   "leveys": 4217,
+   "korkeus": 2801,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

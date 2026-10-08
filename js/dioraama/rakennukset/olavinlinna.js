@@ -24,6 +24,7 @@ import { TILA as TILA_KAPPELI } from './olavinlinna/kappeli.js';
 import { TILA as TILA_KESKUSHALLI } from './olavinlinna/keskushalli.js';
 import { TILA as TILA_KEITTIO } from './olavinlinna/keittio.js';
 import { TILA as TILA_TUNNELMA } from './olavinlinna/tunnelma.js';
+import { kohtauksetV3 } from './olavinlinna/kohtaukset-v3.js';
 
 // ---------------------------------------------------------------------------
 // Linnan taulu (RAKENNUS-tason opetustaulu, 3 ydinasiaa). Sisältökirjuri tarkisti 29.9. (Kansallismuseo, Museovirasto, Finna):
@@ -65,31 +66,51 @@ export const RAKENNUS = {
   // matala kaari Kyrönsalmen yltä (lounas, 600 m) yleisnäkymään; toisella käynnillä lyhyt (6 s).
   nimilaput: false,
   // Uusi rakenne (omistaja 30.9. klo 15.28): lyhyt saapuminen aina, sitten kertojan esittely ja kamerakierros.
-  saapuminen: { alku: { atsimuutti: 200, etaisyys: 600, korkeus: 8 }, kesto: 6, lyhyt: 6 },
+  // Yhtenäinen kamera-ajo (omistaja 6.10. klo 13.1x: "sisääntuloajo ei ole pehmeästi synkassa esittelyn kamera-ajon kanssa"):
+  // loppu 'kertoja' = saapumiskaari päättyy suoraan kertojan 1. jakson kameraan (järveltä 200°, sama atsimuutti kuin kaaren
+  // alku, joten kaari on suora liuku 600 → 230 m), ei yleisnäkymään välissä. Natiivi (Siirtoseppä) lukee kentän; vanhat ohittavat.
+  saapuminen: { alku: { atsimuutti: 200, etaisyys: 600, korkeus: 8 }, kesto: 6, lyhyt: 6, loppu: 'kertoja' },
   // Kertoja (noin 45 s): 4 jaksoa, tekstilaatikko kuten ihmisen matkan linssissä (≤ 3 virkettä, ≤ 240 merkkiä per jakso),
   // napautus ohittaa, uusinta napista. Kamera kuten yleiskamera (kohde + atsimuutti/korkeus/etäisyys, fov). Tekstit v2
   // Päätoimittajalta (faktat Sisältökirjuri 30.9., 5684d5d81) (docs/raportit/olavinlinna-kertoja-pulu-tekstit-20260930.md), odottavat omistajaa ja Sisältökirjuria.
   // Kamerapaikat: kohteet tilojen elava.kohde-pisteistä; kameraPysty iPhonen pystyasentoon (kuten tiloissa). Siirtoseppä
   // hioo kulmat natiivissa. Vanhat kentät (taulu, pulu, kasikirjoitus) säilyvät TF 1.0.57–72:n yhteensopivuutta varten. Ääni 1.10.2026: isoisä
   // (Viisas Kertoja, eleven_v3; omistaja 30.9. klo 23.5x), kesto_s vähintään äänen kesto + 0,5 s.
+  // Avainsanat (Päätoimittaja 5.10. hyväksyi, omistajan toive): enintään 6; t_s = sekuntia kertojan klipin alusta (ElevenLabs-
+  // kohdistus 5.10.; v3 Williamin äänellä: _valmiit/linna-kohtaukset-v3/ajat/avaus-avainsanat.json), natiivi häivyttää sisään t_s:ssä ja pois noin 4 s:n jälkeen. Web ohittaa.
   kertoja: {
     jaksot: [
       { id: 'jarvelta', kesto_s: 13, aani: 'linna-kertoja-jarvelta',
         kamera: { kohde: [0, 2, 0], atsimuutti: 200, korkeus: 10, etaisyys: 230, fov: 32 },
         kameraPysty: { kohde: [0, 0, 2], atsimuutti: 200, korkeus: 14, etaisyys: 420, fov: 40 },
-        teksti: 'Olavinlinna nousee kalliosaarelta Kyrönsalmessa. Sen rakentaminen alkoi vuonna 1475, ja linnan tehtävä oli vartioida valtakunnan itärajaa.' },
-      { id: 'tornit', kesto_s: 13, aani: 'linna-kertoja-tornit',
-        kamera: { kohde: [-27.4, 11, -12.8], atsimuutti: 230, korkeus: 16, etaisyys: 95, fov: 32 },
-        kameraPysty: { kohde: [-27.4, 9, -12.8], atsimuutti: 230, korkeus: 20, etaisyys: 170, fov: 40 },
-        teksti: 'Linnan perusti ritari Erik Akselinpoika Tott, ja se sai nimensä Pyhän Olavin mukaan. Sen kolme tornia ovat Kirkkotorni, Kellotorni ja Kijlin torni.' },
-      { id: 'piha', kesto_s: 13, aani: 'linna-kertoja-piha',
+        teksti: 'Olavinlinna nousee kalliosaarelta Kyrönsalmessa. Sen rakentaminen alkoi vuonna 1475, ja linnan tehtävä oli vartioida valtakunnan itärajaa.',
+        avainsanat: [{ t_s: 5.52, vuosi: '1475', sanat: 'Rakentaminen alkaa' }] },
+      // Kolme tornia saman kokoisina (omistaja 6.10.): kamera kohtisuoraan tornilinjaa vastaan (atsimuutti 157°, linnan pihan
+      // puoli), 260 m, jolloin tornien etäisyydet eroavat ≤ 1,1 % (Kellotorni 261, Kirkkotorni 258, Kijlin torni 260 m).
+      // Tornien paikat ulkokuoren kattohuipuista (Linnanrakentaja 6.10.). Pystykenttä 16° (vaaka) / 66° (iPhone pysty: korkeampi
+      // kulma ja matalampi kohde, jolloin linna on kuvan yläpuoliskolla kortin yllä). Tarkistettu Blender-renderöinnillä molemmista.
+      // nimet: nimikylttipohja tornin kärjen yläpuolella 3 s, kun kertoja sanoo nimen (sanakohdistus, ajat/linna-kertoja-tornit.json).
+      { id: 'tornit', kesto_s: 14, aani: 'linna-kertoja-tornit',
+        kamera: { kohde: [-1.0, 22, -20.7], atsimuutti: 157, korkeus: 8, etaisyys: 260, fov: 16 },
+        kameraPysty: { kohde: [-1.0, -20, -20.7], atsimuutti: 157, korkeus: 14, etaisyys: 260, fov: 66 },
+        nimet: [
+          { teksti: 'Kirkkotorni', paikka: [-15.13, 38.8, -14.03], alku_s: 8.48, kesto_s: 3 },
+          { teksti: 'Kellotorni', paikka: [-44.05, 45.2, -4.61], alku_s: 9.68, kesto_s: 3 },
+          { teksti: 'Kijlin torni', paikka: [47.5, 34.4, -43.44], alku_s: 10.88, kesto_s: 3 },
+        ],
+        teksti: 'Linnan perusti ritari Erik Akselinpoika Tott, ja se sai nimensä Pyhän Olavin mukaan. Sen kolme tornia ovat Kirkkotorni, Kellotorni ja Kijlin torni.',
+        avainsanat: [{ t_s: 1.6, sanat: 'Erik Akselinpoika Tott' }] },
+      { id: 'piha', kesto_s: 12, aani: 'linna-kertoja-piha',
         kamera: { kohde: [-14.75, 3.5, -9.2], atsimuutti: 160, korkeus: 42, etaisyys: 85, fov: 32 },
         kameraPysty: { kohde: [-14.75, 2, -9.2], atsimuutti: 160, korkeus: 48, etaisyys: 150, fov: 40 },
-        teksti: 'Linnaa johti vouti, joka hoiti kuninkaan puolesta veroja, oikeutta ja puolustusta. Arki kulki tulisijojen, vahtivuorojen ja veneiden tahdissa.' },
+        teksti: 'Linnaa johti vouti, joka hoiti kuninkaan puolesta veroja, oikeutta ja puolustusta. Arki kulki tulisijojen, vahtivuorojen ja veneiden tahdissa.',
+        avainsanat: [{ t_s: 0.72, sanat: 'Linnanvouti' }] },
       // tila: kierroksen aikana laiturin leikkausikkuna aukeaa lennon jälkipuoliskolla (laituri on kuoren sisällä; Siirtoseppä 1.1 (74)),
       // ja natiivi käyttää laituri-tilan omaa kameraa (sijoitettu paikka). Jakson omat kamera-arvot poistettu (vanhentuneet).
       { id: 'laituri', tila: 'laituri', kesto_s: 21, aani: 'linna-kertoja-laituri',
-        teksti: 'Linna jäi Turun rauhassa 1743 Venäjälle, ja vuonna 1812 Vanha Suomi liitettiin Suomen suuriruhtinaskuntaan. Nykyään Savonlinnan oopperajuhlat pidetään linnassa joka heinäkuu. Tutki linnaa: napauta huonetta.' },
+        teksti: 'Linna jäi Turun rauhassa 1743 Venäjälle, ja vuonna 1812 Vanha Suomi liitettiin Suomen suuriruhtinaskuntaan. Nykyään Savonlinnan oopperajuhlat pidetään linnassa joka heinäkuu. Tutki linnaa: napauta huonetta.',
+        avainsanat: [{ t_s: 0.64, vuosi: '1743', sanat: 'Turun rauha' }, { t_s: 5.76, vuosi: '1812', sanat: 'Vanha Suomi' },
+          { t_s: 13.2, sanat: 'Oopperajuhlat' }] },
     ],
   },
   // Voudin sinetti (käsikirjoitus kohta 4, Päätoimittaja 29.9.): vapaaehtoinen kolmen vihjeen etsintä; vaiheet ovat
@@ -115,5 +136,5 @@ export const RAKENNUS = {
   tilat: [
     TILA_MASSA, TILA_LAITURI, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
     TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO, TILA_TUNNELMA,
-  ],
+  ].map(kohtauksetV3), // kohtaukset v3 (5.10.): kertoja + keskustelu, käsikirjoitus pulu-lenna + taulu (olavinlinna/kohtaukset-v3.js)
 };
