@@ -3,7 +3,15 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 00.5x (UUSIN)
+## TILA 9.10. 01.0x (UUSIN)
+BUILD 168 6a67a9b19: iOS TF 37847901354, Mac TF käynnistetty 00.51, junavahti T7 4/4 00.50.
+**JUNA 169 = natiiviseppa/juna-169 45ac381fd** (PT KUITTASI): BUILD 168 + Siirtoseppä 1b43eb127 + juna169 0d8de8b8a (v45s 8K+POM, TAA, tuulet, hahmolaskuri)
++ LS1 13f809ad1 + ajallinen-169 734ec0ba5 + NUI c6fbfead6 (⊇ a6748a855 ⊇ 01698c19b liput/julisteet, pallon Mikseri) + 3bad314c0 + budjetti-169 9747db7f4;
+testit 453/419/1083, unity 0, tarkista 0; simukäännös b0d4bce23 01.01 0 shader erroria (app lokit/natiiviseppa-app-169-45ac381fd).
+EI LUKITA ennen LS1:n TF 168 -korjausta (Pariisin esittelyn alku, siirtymien kiihdytys). TF aamulla omistajan TF 168 -palautteen jälkeen.
+JUNA 170: LS1 kompassi-glb-170 94a9410e4 (⊇ muotokorostus 429f9d68b ⊇ kompassi 04b5cbc94; ehdot: KaupunkiYovalot kääntyy + kuvaparit päivä/yö).
+
+## TILA 9.10. 00.5x
 TF 168 käynnissä 6a67a9b1:stä (iOS 37847901354, 21:35Z; muutosloki #4240 = 268 merkin teksti), Mac-odottaja päällä, juna/b13 = 4d13b1e3.
 **JUNA 169 git-runko = natiiviseppa/juna-169 f9c826a1d** (wt/proto-natiiviseppa-j169; BUILD 168 6a67a9b19 + Siirtoseppä 1b43eb127 (latauslaskuri, ASTC-tuki)
 + juna169 1630e8ef1 (v45s, dioraama-TAA ⊇ 95577f871) + LS1 13f809ad1 (ylöskatse) + ajallinen-169 df7c7d41a (kaupunki-TAA oletus pois) + NUI 311bb35ac
