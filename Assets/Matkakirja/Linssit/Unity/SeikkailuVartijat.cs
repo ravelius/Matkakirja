@@ -63,18 +63,22 @@ namespace Matkakirja.Natiivi
         {
             var a = Aktiivinen; if (a == null) return false;
             foreach (var v in a.vartijat)
-                if (v.Aivot.Profiili == VartijaProfiili.Torkku && v.Aivot.Torkkuu && !v.Aivot.Syo && v.Agentti != null && (v.Agentti.transform.position - p).sqrMagnitude < 1.6f * 1.6f) return true;
+                if (OttaaTarjottimen(v, p)) return true;
             return false;
         }
+
+        /// <summary>Torkkuja ottaa tarjottimen torkkuessaan tai heränneenä (ei hälytyksessä eikä jo syödessä; LS2 8.10.: herännyt ei ottanut).</summary>
+        static bool OttaaTarjottimen(V v, Vector3 p) => v.Aivot.Profiili == VartijaProfiili.Torkku && !v.Aivot.Syo && v.Agentti != null
+            && v.Aivot.Tila != VartijanTila.Halytys && v.Aivot.Tila != VartijanTila.Kiinni && (v.Agentti.transform.position - p).sqrMagnitude < 1.6f * 1.6f;
 
         /// <summary>Tarjotin torkkuvalle vartijalle: herää eväisiin (vartija-tarjotin-1) ja jää syömään (näkee vain katsejaksoissa).</summary>
         public static bool AnnaTarjotin(Vector3 p)
         {
             var a = Aktiivinen; if (a == null) return false;
             foreach (var v in a.vartijat)
-                if (v.Aivot.Profiili == VartijaProfiili.Torkku && v.Aivot.Torkkuu && !v.Aivot.Syo && v.Agentti != null && (v.Agentti.transform.position - p).sqrMagnitude < 1.6f * 1.6f)
+                if (OttaaTarjottimen(v, p))
                 {
-                    v.Aivot.Syo = true;
+                    v.Aivot.Torkkuu = true; v.Aivot.Syo = true;   // herännyt istuu takaisin syömään
                     var r = SeikkailuRepliikit.Aktiivinen; if (r != null && r.Valmis) r.Soita("vartija-tarjotin-1", v.Agentti.transform);
                     a.kirjaa?.Invoke("seikkailu: torkkuva vartija sai eväät");
                     return true;
@@ -90,13 +94,13 @@ namespace Matkakirja.Natiivi
             var ky = SeikkailuKynttilat.Aktiivinen;
             if (ky != null && ky.Lahella(p.transform.position)) v = ky.Valoisuus(p.transform.position + Vector3.up, p.transform.position + Vector3.up);
             // Pelattavuusmalli 2.3: palava kynttilä kädessä paljastaa kantajansa (≥ 0,9, suojattuna ≥ 0,45); vartijan lyhty valaisee
-            // (≥ 1 − etäisyys / 4 m; soihdun kantaja 6 m).
+            // vain kantaja (≥ 1 − etäisyys / 4 m, soihtu 6 m).
             if (ky != null && ky.OmaKadessa) v = Math.Max(v, ky.OmaSuojattu ? 0.45 : 0.9);
             var a = Aktiivinen;
             if (a != null)
                 foreach (var x in a.vartijat)
-                    if (x.Agentti != null && x.Aivot.Profiili.Havaitsee && x.Aivot.Profiili.JahtaaMs > 0)
-                        v = Math.Max(v, 1 - Vector3.Distance(x.Agentti.transform.position, p.transform.position) / (x.ValoM > 0 ? x.ValoM : LyhtyM));
+                    if (x.Agentti != null && x.ValoM > 0 && x.Agentti.gameObject.activeInHierarchy)   // vain lyhdyn tai soihdun kantaja (LS2 8.10.)
+                        v = Math.Max(v, 1 - Vector3.Distance(x.Agentti.transform.position, p.transform.position) / x.ValoM);
             return v;
         }
 
@@ -162,7 +166,8 @@ namespace Matkakirja.Natiivi
                 ag.radius = 0.3f; ag.height = 1.8f; ag.baseOffset = 0f; ag.angularSpeed = 360f; ag.acceleration = 6f;
                 ag.stoppingDistance = 0.25f; ag.autoBraking = true; ag.speed = (float)Vartija.KavelyMs;
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
-                double yaw0 = eka.KiertoY is double ky0 ? -ky0 * 180 / Math.PI : 0;
+                // kierto_y kääntää glTF:n +Z:aa; Unityssa z peilattu → katseen yaw = 180° − kierto_y (LS2 8.10.: −kierto_y katsoi väärään suuntaan).
+                double yaw0 = eka.KiertoY is double ky0 ? 180 - ky0 * 180 / Math.PI : 0;
                 var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = VartijaProfiili.Hae(eka.Profiili), Torkkuu = istuu }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
                 v.Askeleet.loop = true; v.Askeleet.volume = 0.9f;
@@ -245,7 +250,10 @@ namespace Matkakirja.Natiivi
                 var pp0 = p.transform.position; var kd = SeikkailuKavely.Data;
                 string pinta = Askelaani.Pinta(kd, pp0.x, pp0.y, -pp0.z);
                 double sade = Askelaani.Sade(pinta, p.Tila.Tapa);
-                if (p.Tila.Vauhti > 0.3 && sade > 0) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z)));
+                // Kulkulupa (tarjotin) kävellen: askeleet ovat palvelijan askeleita, eivät herätä tutkimaan (LS2 8.10.: tarjottimen kantajan
+                // askeleet herättivät torkkujan ennen kuin tarjotinta ehti antaa). Juoksu kuuluu silti.
+                bool lupa = SeikkailuEsineet.Aktiivinen?.Kadessa == SeikkailuEsineet.Tarjotin && p.Tila.Tapa != Liiketapa.Juoksu;
+                if (p.Tila.Vauhti > 0.3 && sade > 0 && !lupa) aanet.Add(new Aanilahde(pp0.x, pp0.z, sade, Askelaani.Osa(kd, pp0.x, pp0.y, -pp0.z)));
                 OmatAskeleet(p, pinta, pp0);
             }
             bool piilossa = p != null && Piilossa(p);

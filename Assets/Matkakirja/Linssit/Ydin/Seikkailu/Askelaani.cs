@@ -53,7 +53,10 @@ namespace Matkakirja.Linssit.Seikkailu
             foreach (var m in d.Lajia("pinta"))
             {
                 var k = m.KokoV ?? new[] { 1.0, 1.0, 1.0 };
-                if (Math.Abs(x - m.X) <= k[0] / 2 && Math.Abs(y - m.Y) <= Math.Max(0.5, k[1] / 2) && Math.Abs(z - m.Z) <= k[2] / 2)
+                // Kierretty laatikko (kierto_y, glTF y-akselin ympäri; LS2 8.10.: laiturin puu-1 41°) kuten KavelyPiilo.Sisalla.
+                double dx = x - m.X, dz = z - m.Z, c = Math.Cos(m.KiertoY ?? 0), s = Math.Sin(m.KiertoY ?? 0);
+                double lx = c * dx - s * dz, lz = s * dx + c * dz;
+                if (Math.Abs(lx) <= k[0] / 2 && Math.Abs(y - m.Y) <= Math.Max(0.5, k[1] / 2) && Math.Abs(lz) <= k[2] / 2)
                 {
                     int v = m.Tunnus.LastIndexOf('-');
                     return v > 0 ? m.Tunnus.Substring(0, v) : m.Tunnus;

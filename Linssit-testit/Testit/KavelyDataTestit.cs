@@ -58,10 +58,11 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void PartionLyhtyJaSoihtu()
         {
             // v44m: partio:portinvartija-1 lyhty, partio:portaat-1 soihtu (pelattavuusmalli 8.1: valo seinällä ennen kantajaa).
-            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"partio:portinvartija-1\", \"paikka\": [0, 0, 0], \"lyhty\": true}, " +
+            var d = KavelyData.Lue("{\"osat\": {}}", "[{\"nimi\": \"partio:portinvartija-1\", \"paikka\": [0, 0, 0], \"lyhty\": true, \"odotus_s\": 8}, " +
                 "{\"nimi\": \"partio:portaat-1\", \"paikka\": [1, 0, 0], \"soihtu\": true}, {\"nimi\": \"partio:piha-1\", \"paikka\": [2, 0, 0]}]");
             var p = System.Linq.Enumerable.ToList(d.Lajia("partio"));
             Oleta.Tosi(p[0].Lyhty && !p[0].Soihtu && p[1].Soihtu && !p[1].Lyhty && !p[2].Lyhty && !p[2].Soihtu, "lyhty ja soihtu luetaan, puuttuva = ei");
+            Oleta.Tosi(p[0].OdotaS == 8 && p[1].OdotaS == 0, "odotus_s (v44s) luetaan kuten odota_s");
         }
 
         [Testi] static void LuukunSarana()
