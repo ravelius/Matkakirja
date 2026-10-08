@@ -41,7 +41,8 @@ Shader "Matkakirja/Linssit/IlmakehaTaivas"
                 L = L * (1.0 - pilvi.a) + pilvi.rgb;
                 float3 c = IlmSavytys(L * _IlmParam.y);
                 half3 vanha = lerp(_TaivasHorisontti.rgb, _TaivasLaki.rgb, (half)saturate(d.y * 2.0));
-                return half4(lerp(vanha, (half3)c, (half)_IlmParam.w), 1);
+                float3 ulos = lerp((float3)vanha, c, _IlmParam.w);
+                return half4((half3)IlmDither(ulos, i.paikkaH.xy), 1);   // ei portaita B10G11R11-puskurissa
             }
             ENDHLSL
         }

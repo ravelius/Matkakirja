@@ -63,7 +63,7 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float3 sironta, lapaisy; IlmIlmaperspektiivi(et * m, d, sironta, lapaisy);
                 c = lerp(c, c * lapaisy + IlmSavytys(sironta * _IlmParam.y), _IlmParam.z);
                 float alfa = smoothstep(0.0, 3.0, v.ranta) * 0.97;
-                return half4(MixFog((half3)c, v.sumu), alfa);
+                return half4((half3)IlmDither(MixFog((half3)c, v.sumu), v.p.xy), alfa);   // ei portaita B10G11R11-puskurissa
             }
             ENDHLSL
         }
