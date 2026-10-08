@@ -248,6 +248,8 @@ namespace Matkakirja.Linssit
         /// <summary>Googlen pinta leikkauskulmien ulkopuolelta (+3 m ulospäin) → ero mallin korkeuteen lokiin ja korjaus.</summary>
         async void MittaaKorkeudet()
         {
+            // Map Tiles C4 (Linssiseppä 8.10.): Googlen pintaa ei näytteistetä, kun oma korkeusmalli on käytössä; mallit.json:n korkeus.
+            if (Matkakirja.Natiivi.OpasSovitin.OmaKorkeusPaalla) { kirjaa?.Invoke("omat mallit: korkeuskorjaus pois (oma korkeusmalli, ei Googlen pintaa)"); return; }
             var g = google;
             foreach (var (k, t, _) in new List<(OmatMallit.Kohde, Cesium3DTileset, CesiumCartographicPolygon)>(mallit))
             for (int yritys = 1; yritys <= NayteYrityksia; yritys++)
