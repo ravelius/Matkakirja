@@ -8,7 +8,7 @@ vektorina; heilahdus ±1–2°, nousu ≤ 8 pt, jakso 6–8 s; nimi ja latauspal
 
 | # | Näkymä (koodi) | Kuva nyt | Ehdotettu kevyt liike |
 |---|---|---|---|
-| 1 | Kuumailmapallon latauskuva (OpasValikko siirtymaKuva, R2 julisteet/latauskuva-kuumailmapallo, 3 rajausta) | yksi still koko ruudulla | Pallo omaksi kerrokseksi (kääntöpiste kuvun yläosassa), ±1,5°, nousu 4 pt, jakso 7 s; 4 köyttä korin kulmista kuvun alareunaan vektorina; tausta (taivas, maisema, tumma alaosa) still. Osat Codexilta. |
+| 1 | Kuumailmapallon latauskuva (OpasValikko siirtymaKuva, R2 julisteet/latauskuva-kuumailmapallo, 3 rajausta) | yksi still koko ruudulla | Kupu ja kori omiksi kerroksikseen (kupu: kääntöpiste yläosassa, ±1,5°, nousu 4 pt, jakso 7 s; kori ±1°, eri vaihe tai paikallaan); 4 köyttä korin kulmista kuvun alareunaan vektorina; tausta still. Codexilta 3 kuvaa per rajaus: tausta ilman palloa, kupu alfalla, kori alfalla. |
 | 2 | Oppaan latauskuva (OpasSovitin.LatausKuva, kohteen 1. valokuva 80 % Kuvasuurennoksessa, ≤ 8 s) | valokuva + lähderivi | Ei kerroksia (valokuva, lähde); suositus: ennallaan. Vaihtoehto omistajalle: AvausTausta-pohjan hidas lähentyminen (Ken Burns) 1,00 → 1,03 / 8 s. |
 | 3 | Sovelluksen aloitusverho (Kartta/Aloitusverho, valkoinen Matkakirja-logo 30 %, 1–8 s) | logo mustalla | Ei liikettä (tunnus, lyhyt, iOS-käynnistysruudun jatke); suositus: ennallaan. |
 | 4 | Saapumistraileri (Pulu/Saapumistraileri, kaupungin 1–3 avauskuvaa) | kuvat liukuvat jo | Ei latausnäkymä, liikkuu jo; ei muutosta. |
