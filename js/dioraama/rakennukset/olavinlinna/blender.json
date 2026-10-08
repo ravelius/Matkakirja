@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "944e640d996a763a",
-  "kansio": "dioraama/olavinlinna/blender/944e640d996a763a/",
+  "hash": "3c6ef11842eeb04b",
+  "kansio": "dioraama/olavinlinna/blender/3c6ef11842eeb04b/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-faceit.glb",
@@ -475,8 +475,8 @@
     },
     {
       "polku": "kavely/kappeli-kavely.glb",
-      "sha256": "57f23ba75bc2d8f61489886235b49aa86c583a24ab01e39638fca6708ce3e43d",
-      "tavuja": 193268
+      "sha256": "904e05f8488514cc483cf4caedd080da8de38bc26e401aa5fb2a17b058a21b22",
+      "tavuja": 239228
     },
     {
       "polku": "kavely/keittio-G102-kavely.glb",
@@ -505,8 +505,8 @@
     },
     {
       "polku": "kavely/kirkkotorni-portaat.glb",
-      "sha256": "98850dc4a29303e2640d92f119cb8f5ac41c763c9a5d759290b3a04c5912a079",
-      "tavuja": 110952
+      "sha256": "b0767d97d72620bfaac729822ab7f446421a615060cf1baaf4dd1351f791dd30",
+      "tavuja": 140308
     },
     {
       "polku": "kavely/merkit.json",
@@ -525,13 +525,13 @@
     },
     {
       "polku": "kavely/muurikaytava.glb",
-      "sha256": "54231d8273113bb52cdada7b10937e66dcad2f40f00dbdef14dd6a7a2a102532",
-      "tavuja": 56920
+      "sha256": "5cd9eac825b368cb7008d9cfa74214d652e8c903d2d1c610630a25268570026d",
+      "tavuja": 73196
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "b1b4ade3bb98329bbce46a081079e43ba2df25b93ff2c921110596fa93364aa8",
-      "tavuja": 25848
+      "sha256": "0120c7f600f953571c969dc34a89ab093a23d22b0bce5db0353c08d604699bd6",
+      "tavuja": 28460
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -545,8 +545,8 @@
     },
     {
       "polku": "kavely/palatsi.glb",
-      "sha256": "ef82480d44c6ff38463d41da4d6509e65b20af8368041a6deeb4c4773046d774",
-      "tavuja": 30676
+      "sha256": "a7dae11010e013fded2659a027764e52fb7ae544e201b65686fdb020ba79d9d1",
+      "tavuja": 37588
     },
     {
       "polku": "kavely/pikkupiha-kavely.glb",
@@ -560,8 +560,8 @@
     },
     {
       "polku": "kavely/pikkupiha.glb",
-      "sha256": "c6734d57d35864f1753bcac9e37ff0b1f696b734ea69aad542fd8e6476cd8437",
-      "tavuja": 1516
+      "sha256": "8261377227064f3d337062f0bbae6e82a1bba1c5afdb51d3aa5bf0edc37faa44",
+      "tavuja": 1720
     },
     {
       "polku": "kavely/porttikaytava-T102-kavely.glb",
@@ -575,8 +575,8 @@
     },
     {
       "polku": "kavely/porttikaytava-T102.glb",
-      "sha256": "7f5c88e65a95c9ebf50e4a54294f4445e72929f3c1d1f553258e70abc7064f61",
-      "tavuja": 32940
+      "sha256": "65aec0cf6b05bb5728e55d8c0b266c518d6aa061bf1c6a303647a3b6653c3059",
+      "tavuja": 41024
     },
     {
       "polku": "kavely/ranta-1499-kavely.glb",
@@ -605,8 +605,8 @@
     },
     {
       "polku": "kavely/tyrma-E101.glb",
-      "sha256": "52e72f9a1aea86d2a8c2efed95b1d53a66ec586513560d87877609c8dd030dd2",
-      "tavuja": 22936
+      "sha256": "8226684c7b3059cd385c41993e0bf9f67baf52b3aa6df448b5a001728fbba724",
+      "tavuja": 31292
     },
     {
       "polku": "kavely/ulkoalue-kavely.glb",
@@ -617,6 +617,166 @@
       "polku": "kavely/ulkoalue-tormays.glb",
       "sha256": "4c47ce880c569d8c9d45c960221c8768e3a711c3f57bb471b451b178c72cf5ee",
       "tavuja": 1241880
+    },
+    {
+      "polku": "kavely/valot/kappeli-kavely-4x4.astcm",
+      "sha256": "37b52c7a6a02770111c332c65f725ffc34f1f73f349c994f1567ca650dc09402",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/kappeli-kavely-512-4x4.astcm",
+      "sha256": "9e7148c70dc6e435313d560536177d1808a635cfe4dab1b4339522540df18f1f",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/kappeli-kavely-512.jpg",
+      "sha256": "dd8a1e2dad68768a21d93dff2160517b77cc5d791148bb686085615ad82dddba",
+      "tavuja": 83048
+    },
+    {
+      "polku": "kavely/valot/kappeli-kavely.jpg",
+      "sha256": "b0817600f7df1209b9c366915273e72d52d7ba2b6d1d90fcd655f00591f93372",
+      "tavuja": 233110
+    },
+    {
+      "polku": "kavely/valot/kirkkotorni-portaat-4x4.astcm",
+      "sha256": "6e6e4750a11474c3433d59823990d208c11d2ddd86a85be4423ff735095fe076",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/kirkkotorni-portaat-512-4x4.astcm",
+      "sha256": "a6722d0ac66e703fa580f699a4c6b53ca10c78a784c87109092b4a823f01a546",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/kirkkotorni-portaat-512.jpg",
+      "sha256": "f3861885320b9319bda379154d632c9ca04ea5db82956e4744c6dda5d792d572",
+      "tavuja": 74861
+    },
+    {
+      "polku": "kavely/valot/kirkkotorni-portaat.jpg",
+      "sha256": "c0f91aaab6763bfdc4460b5911a07ffd1053d3a24058c2927309f79836899bbd",
+      "tavuja": 218061
+    },
+    {
+      "polku": "kavely/valot/muurikaytava-4x4.astcm",
+      "sha256": "2af296fbbbb14ce07b157fe694a226b3bf4de37b8374aa069ba8fc5a7fc60954",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/muurikaytava-512-4x4.astcm",
+      "sha256": "8c076ec4b82fc780a25dc53a2b81e443aead496054adfa0a8fb488f4afd5743c",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/muurikaytava-512.jpg",
+      "sha256": "34a87815384514fcd61e4675cc90e40782da488e22519a4bb4f968ae7328ca94",
+      "tavuja": 48314
+    },
+    {
+      "polku": "kavely/valot/muurikaytava.jpg",
+      "sha256": "136786d4ae1609bab30e71350319315eb4e0670d1ca4ef59ef090f290f07eb77",
+      "tavuja": 135037
+    },
+    {
+      "polku": "kavely/valot/palatsi-4x4.astcm",
+      "sha256": "e5c986df03a2f75b656e130e4983313a5e7161eec9800774968f9016503e14ce",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/palatsi-512-4x4.astcm",
+      "sha256": "15811553a0a858fe07a7df1017338f9b95cf38f724d00be95ebad49c79e6e7ae",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/palatsi-512.jpg",
+      "sha256": "d24f84ffa3bcb31f3bf133a2020a535b5351c031192da6fe2ef6b938618cda86",
+      "tavuja": 43010
+    },
+    {
+      "polku": "kavely/valot/palatsi.jpg",
+      "sha256": "a41d394f5da16e28e1e2dad057710febb79f6d3523b862ac6563b75c42466cb2",
+      "tavuja": 148886
+    },
+    {
+      "polku": "kavely/valot/pikkupiha-4x4.astcm",
+      "sha256": "5784b8e6864d1ec0a96bc710da1ed33aaebe99dff7993e0c8cc6c9fd39a05dd2",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/pikkupiha-512-4x4.astcm",
+      "sha256": "437a0583a618af3de367fb84fcfdee3b9332597238ed4c6955a06f03b6a0766e",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/pikkupiha-512.jpg",
+      "sha256": "f24d316a828eba77c54aa7c09d7e551edf1a9629c76182fa06b482bbc4e6ec10",
+      "tavuja": 11784
+    },
+    {
+      "polku": "kavely/valot/pikkupiha.jpg",
+      "sha256": "b44b9a64d4d960665f23a7f5918ef85470f1d58091e3b6f497463e3c06b3afa1",
+      "tavuja": 33547
+    },
+    {
+      "polku": "kavely/valot/porttikaytava-T102-4x4.astcm",
+      "sha256": "ac5522bca85333333c72546b578f16c47763f4b363b58213d60874f783d6a059",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/porttikaytava-T102-512-4x4.astcm",
+      "sha256": "a41051f759542e909f1ba2bd2ac7e1dbd4de779b96100eba0727848a86e13d3b",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/porttikaytava-T102-512.jpg",
+      "sha256": "4e9d7151c2e4afaa43a2951279333bae13d01d4b29d087eac024e34dab40d22a",
+      "tavuja": 43596
+    },
+    {
+      "polku": "kavely/valot/porttikaytava-T102.jpg",
+      "sha256": "dc025b0c05e63a1bb19c8395d817a16a8c4779e1151c09d7595e64ecc6b271b1",
+      "tavuja": 120728
+    },
+    {
+      "polku": "kavely/valot/tyrma-E101-4x4.astcm",
+      "sha256": "e9c96ed8bb9c7b1146cebe5a3974857fb2520702a0dcd32c4e6a680e23206e71",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/tyrma-E101-512-4x4.astcm",
+      "sha256": "4c3d9f57260a5d8da2d4d8857e55391582fad1d464f81af14858966cfe38518d",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/tyrma-E101-512.jpg",
+      "sha256": "5e78ad6a35d8c167c6add78c3541fb74f50abc80a8919a63650ebe4bb46afe21",
+      "tavuja": 34909
+    },
+    {
+      "polku": "kavely/valot/tyrma-E101.jpg",
+      "sha256": "cc96e244a5addc2430f9b363311a8f2341b44631e2119515b1237dd9fe965438",
+      "tavuja": 109179
+    },
+    {
+      "polku": "kavely/valot/vesiportti-4x4.astcm",
+      "sha256": "56d4ff893ca8cc05b1244fd1b226714e0793061c42bccd878f31c1e82cebf027",
+      "tavuja": 1398144
+    },
+    {
+      "polku": "kavely/valot/vesiportti-512-4x4.astcm",
+      "sha256": "5dfceaa5be89ac166d101c418aaf35a66cbca8e1d6502d7135720da860d1c489",
+      "tavuja": 349568
+    },
+    {
+      "polku": "kavely/valot/vesiportti-512.jpg",
+      "sha256": "d68d3cf84736461a33771b483f03fd1859ec2c31e683b5269feb65600e122da6",
+      "tavuja": 22068
+    },
+    {
+      "polku": "kavely/valot/vesiportti.jpg",
+      "sha256": "a225b84ee8432db39c5db7518cf96450d2dedb601bdd0e490d144b2b52d24d1a",
+      "tavuja": 69997
     },
     {
       "polku": "kavely/vesiportti-kavely.glb",
@@ -630,8 +790,8 @@
     },
     {
       "polku": "kavely/vesiportti.glb",
-      "sha256": "23f96f117d43dfb96246fffee9520d92343fd69e6d7bb2cd7b0049264ab47021",
-      "tavuja": 18096
+      "sha256": "0780feb6db14e01691db89b79ce8772893f62f42a8af8eed2bea492e065361c4",
+      "tavuja": 22480
     },
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff-4x4.astcm",
