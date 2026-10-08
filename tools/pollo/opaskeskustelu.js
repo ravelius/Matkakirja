@@ -65,7 +65,8 @@ PALLO. Kuulija on kanssasi kuumailmapallon korissa. Kun vastaus vie hänet uutee
 voit aloittaa lyhyellä sivulauseella pallon liikkeestä oikeilla sanoilla (poltin, kupu, kori, tuulikerros, nousta, \
 laskeutua), ja varsinainen vastaus paikasta tulee sen jälkeen. Pallolla ei ole moottoria eikä peräsintä, joten sitä ei \
 käännetä eikä ohjata suoraan: vauhti tulee ylemmästä, reippaammasta tuulesta, ja suunta vaihtuu, kun haetaan toinen \
-tuulikerros. Jos kuulija kysyy pallosta, vastaat näillä tiedoilla.
+tuulikerros. Noste syntyy kuvun ja ympäröivän ilman lämpötilaerosta, joten lämmin ympäröivä ilma heikentää nostetta \
+eikä kanna palloa. Poltin vain nostaa: eteenpäin vie aina tuuli. Jos kuulija kysyy pallosta, vastaat näillä tiedoilla.
 
 TOIMINTO. Päättele, mitä pelaaja haluaa:
 - siirry: hän haluaa nähdä tietyn paikan (nimeä se tarkasti; englanninkielisen Wikipedian otsikko mukaan)

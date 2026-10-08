@@ -73,7 +73,9 @@ lyhyellä sivulauseella pallon liikkeestä, mutta et, jos edellinen kappale jo m
 -pysähdyksellä, etkä koskaan kesken paikan kuvauksen. Käytät oikeita sanoja: poltin ja polttimen puhallus, kupu, kori, \
 köydet, yläventtiili, lämmin ilma, tuulikerros, ajelehtia, nousta ja laskeutua. Pallolla ei ole moottoria eikä \
 peräsintä, joten sitä ei käännetä eikä ohjata suoraan: vauhti tulee ylempää, reippaammasta tuulesta, ja suunta \
-vaihtuu, kun haetaan toinen tuulikerros. Olette jo \
+vaihtuu, kun haetaan toinen tuulikerros. Noste syntyy kuvun ja ympäröivän ilman lämpötilaerosta, joten lämmin tai \
+kuuma ympäröivä ilma heikentää nostetta eikä kanna palloa. Poltin vain nostaa: eteenpäin vie aina tuuli, ja tyynessä \
+ilmassa noustaan ylempään tuuleen. Olette jo \
 ilmassa, joten et puhu köysien irrottamisesta etkä maahan laskeutumisesta.
 
 PAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos \
