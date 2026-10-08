@@ -1,3 +1,13 @@
+# TILANNE 8.10. klo 20.3x
+
+- **Siivous:** wt/karttaseppa-pallo-unreal poistettu (1,3 Gt). PT:lle kerrottu, että talviajo kirjoittaa vain T7:lle.
+- **Vesimaskin ehtoraportti VALMIS:** PR https://github.com/ravelius/Matkakirja/pull/4224 (worktree wt/karttaseppa-vesimaski-ehdot), docs/raportit/vesimaski-google-ehdot-20261008.md.
+  Suositus B (oma vesimesh ESA/OSM-datasta). A vain kirjallisella vahvistuksella, C laaturiski. PT:lle viety, ja **omistaja päättää**. EI julkaisua ennen päätöstä.
+  Jos B valitaan: vesimaski.mjs vektoroi saman ESA-aineiston meshiksi per kohde (sovi LS2:n kanssa muodosta, esim. glb tai GeoJSON paikallisessa ENU:ssa), ja siltojen kohdalle aukko OSM:stä.
+- #4221 (ilmakehä) odottaa Julkaisijan mergeä, head 058aedd2d. Mergen jälkeen `uusi-worktree.sh --poista karttaseppa-ilmakeha`.
+
+---
+
 # TILANNE 8.10. klo 20.1x (2)
 
 - **PT:n korjaukset tehty** (#4221 head 058aedd2d, Julkaisija mergeää):
