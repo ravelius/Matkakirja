@@ -21,7 +21,7 @@
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
-  kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
+  kaupunginAineisto, aineistoLohko, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, lyhinReitti,
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana, kohteetLahella, etaisyys,
 } from './opas.js';
@@ -3548,10 +3548,13 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       ? `KIERROS PÄÄTTYI: kaikki kierroksen paikat on nähty. Vastaa KYSYMYS-muodossa: kysy lyhyesti ja lämpimästi, jatketaanko. `
         + `Ensimmäinen VAIHTOEHTO on täsmälleen "${LISAA_KAUPUNKIA}", toinen vie tämän kaupungin toiseen suuntaan (ei kaupungin vaihtoa).`
       : null;
+  // Kaupungin aineisto omana välimuistilohkonaan kehotteen perässä (kulusuunnitelma K2): sama kaikille saman kaupungin
+  // kutsuille, joten se luetaan välimuistista; viestiin jää vain tilanne ja isoisän merkintä (vaihtelee istunnoittain).
+  const aineistoTeksti = aineistoLohko(aineisto);
   const kutsu = {
-    jarjestelma: OPAS_KEHOTE,
+    jarjestelma: aineistoTeksti ? [OPAS_KEHOTE, aineistoTeksti] : OPAS_KEHOTE,
     viestit: [{ role: 'user', content: [oppaanViesti({ ...p, sijainti, isoisaKaytetty, toive: jatkaKierrosta || aloitaKierros ? null : p.toive,
-      kohdelista: listatila ? lukitut.map((x) => x.nimi) : [] }, kaydytNimet, aineisto), ohje]
+      kohdelista: listatila ? lukitut.map((x) => x.nimi) : [] }, kaydytNimet, aineisto ? { ...aineisto, tausta: [] } : null), ohje]
       .filter(Boolean).join('\n\n') }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
