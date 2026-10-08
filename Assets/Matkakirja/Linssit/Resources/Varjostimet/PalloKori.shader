@@ -27,7 +27,7 @@ Shader "Matkakirja/Linssit/PalloKori"
             CBUFFER_START(UnityPerMaterial)
             half4 _Vari; float _Kuvio; float4 _Toisto; float _NorVoima; float _OnKartat;
             CBUFFER_END
-            float4 _KoriAurinkoV, _KoriAurinkoVari, _KoriYlosV, _KoriTaivasYla, _KoriTaivasAla, _KoriValotus;
+            float4 _KoriAurinkoV, _KoriAurinkoVari, _KoriYlosV, _KoriTaivasYla, _KoriTaivasAla, _KoriValotus, _KoriPoltin;
             TEXTURE2D(_MainTex); SAMPLER(sampler_MainTex);
             TEXTURE2D(_NorTex); SAMPLER(sampler_NorTex);
             TEXTURE2D(_OrmTex); SAMPLER(sampler_OrmTex);
@@ -62,7 +62,9 @@ Shader "Matkakirja/Linssit/PalloKori"
                 half kiilto = (half)exp2(10.0 * (1.0 - karheus) + 1.0);
                 half heijastus = (half)pow(saturate(dot(n, h)), kiilto) * (1.0h - karheus) * 0.35h * (half)saturate(dot(n, l));
                 half3 c = albedo * (amb + (half3)_KoriAurinkoVari.rgb * kaari) + (half3)_KoriAurinkoVari.rgb * heijastus;
-                return c * (half3)_KoriValotus.rgb;
+                // Polttimen lämmin valo ylhäältä (Poltin.Liekki, PalloKori.PoltinValo): paikallinen valo, ei kaupungin valotusta.
+                half3 poltin = albedo * (half3)_KoriPoltin.rgb * (half)saturate(dot(n, ylos) * 0.6 + 0.4) * ao;
+                return c * (half3)_KoriValotus.rgb + poltin;
             }
             half4 frag(V v) : SV_Target
             {

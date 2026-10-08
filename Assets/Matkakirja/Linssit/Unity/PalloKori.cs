@@ -129,6 +129,8 @@ namespace Matkakirja.Natiivi
             KytkeAanimaisema(false);
             VasenKoysiNorm = default;
             malliJuuri = null; malliKori = null; malliKoydet.Clear(); malliKoysiAlku.Clear();
+            if (liekkiMat != null) Object.Destroy(liekkiMat);
+            liekki = null; liekkiMat = null;
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
         }
 
@@ -449,10 +451,11 @@ namespace Matkakirja.Natiivi
                 Soita("korin-narina", taso);
                 Soita("koyden-kiristys", taso * 0.7f);
             }
+            // Liekin humahdus samasta polttimesta kuin liekki ja valo (Poltin.Syttyi), ei omaa kynnystä.
+            if (poltin.Syttyi && nyt - viimeLiekki > PystyValiS) { viimeLiekki = nyt; Soita("liekin-humahdus", 0.8f); }
             int suunta = pystyNopeus > PystyRaja ? 1 : pystyNopeus < -PystyRaja ? -1 : 0;
             if (suunta != 0 && suunta != pystySuunta)
             {
-                if (suunta > 0 && nyt - viimeLiekki > PystyValiS) { viimeLiekki = nyt; Soita("liekin-humahdus", 0.8f); }
                 if (suunta < 0 && nyt - viimeHuokaus > PystyValiS) { viimeHuokaus = nyt; Soita("kankaan-huokaus", 0.7f); }
             }
             pystySuunta = suunta;
@@ -559,6 +562,39 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdValotus, new Vector4(s.r * e, s.g * e, s.b * e, 1f));
         }
 
+        // POLTIN (Linssiseppä 8.10., pallo Unreal-tasolle kohdat 2 ja 7): Ydin Poltin pystynopeudesta (vain nousussa), lämmin valo
+        // korin reunaan ylhäältä (_KoriPoltin) ja liekkikuva hehkuineen kuvan yläreunaan (PalloLiekki).
+        readonly Poltin poltin = new Poltin();
+        public Poltin Poltin => poltin;
+        static readonly int IdPoltin = Shader.PropertyToID("_KoriPoltin"), IdVoima = Shader.PropertyToID("_Voima");
+        public const float PoltinValo = 1.6f;
+        GameObject liekki; Material liekkiMat;
+        void PaivitaPoltin(float dt, float pystyNopeus)
+        {
+            poltin.Paivita(dt, pystyNopeus);
+            float l = (float)poltin.Liekki;
+            Shader.SetGlobalVector(IdPoltin, new Vector4(1f, 0.62f, 0.3f, 0f) * (l * PoltinValo));
+            if (liekki == null)
+            {
+                var sh = Shader.Find("Matkakirja/Linssit/PalloLiekki");
+                if (sh == null || overlay == null) return;
+                liekki = GameObject.CreatePrimitive(PrimitiveType.Quad); Object.Destroy(liekki.GetComponent<Collider>());
+                liekki.name = "polttimen liekki"; liekki.layer = Kerros; liekki.transform.SetParent(overlay.transform, false);
+                var r = liekki.GetComponent<MeshRenderer>(); r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
+                liekkiMat = new Material(sh); r.sharedMaterial = liekkiMat;
+            }
+            bool nakyy = l > 0.01f;
+            if (liekki.activeSelf != nakyy) liekki.SetActive(nakyy);
+            if (!nakyy) return;
+            // Liekin juuri kuvan yläreunassa keskellä, kieli nousee kuvan ulkopuolelle (kamera katsoo eteen, poltin on yläpuolella).
+            const float z = 1.2f;
+            float yla = Mathf.Tan(overlay.fieldOfView * 0.5f * Mathf.Deg2Rad) * z, korkeus = yla * 0.7f;
+            liekki.transform.localPosition = new Vector3(0f, yla - korkeus * 0.2f, z);
+            liekki.transform.localRotation = Quaternion.identity;
+            liekki.transform.localScale = new Vector3(korkeus * 1.3f, korkeus, 1f);
+            liekkiMat.SetFloat(IdVoima, l);
+        }
+
         void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
             // Korin kamera piirtää ensin (depth perus − 1; suorassa tilassa pinossa perus-kameran jälkeen): asento ja liike sen alussa.
@@ -575,6 +611,7 @@ namespace Matkakirja.Natiivi
             if (historia > 0 && (p - edPaikka).magnitude > HyppyM) historia = 0;   // origon siirto tai siirtymä
             Vector3 v = historia > 0 ? (p - edPaikka) / dt : Vector3.zero;
             Vector3 a = historia > 1 ? (v - edNopeus) / dt : Vector3.zero;
+            PaivitaPoltin(dt, historia > 0 ? v.y : 0f);
             kiihtyvyys += (a - kiihtyvyys) * (1 - Mathf.Exp(-dt / KiihtyvyysAikavakioS));
             edPaikka = p; edNopeus = v; historia = Mathf.Min(historia + 1, 2);
             Vector3 eteen = Vector3.ProjectOnPlane(perus.transform.forward, Vector3.up);
