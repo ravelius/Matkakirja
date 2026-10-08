@@ -417,6 +417,23 @@ namespace Matkakirja.Linssit.Testit
             finally { OpasSilmukka.PalloLento = false; OpasKuvaus.SumennusNostoPaalla = true; }
         }
 
+        // Varsova 7.10. (Päätoimittaja 8.10.: juna 166): Googlen 404-tiilet → aluskerros. Toisto oikealla lokilla (b-ajo, 38 riviä).
+        [Testi] static void VarsovanTiiliReiatTunnistetaan()
+        {
+            var rivit = System.IO.File.ReadAllLines(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "varsova-404-20261007.log"));
+            var r = new GoogleTiiliReiat();
+            int reikia = 0;
+            foreach (var x in rivit) if (r.Kirjaa(x)) reikia++;
+            Oleta.Sama(38, reikia, "kaikki Varsovan 404-tiilet tunnistetaan");
+            Oleta.Tosi(r.AluskerrosTarvitaan, "Varsovassa aluskerros tarvitaan");
+            var y = new GoogleTiiliReiat();
+            y.Kirjaa(rivit[0]); y.Kirjaa("MATKAKIRJA valmisluennat: manifesti ei saatavilla (404) → palavirta");
+            y.Kirjaa("[error] Received status code 404 for tile content https://assets.ion.cesium.com/x.b3dm");
+            Oleta.Tosi(y.Maara == 1 && !y.AluskerrosTarvitaan, "yksittäinen 404 tai muu 404 ei riitä");
+            r.Nollaa();
+            Oleta.Tosi(!r.AluskerrosTarvitaan, "kaupungin vaihto nollaa");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);
