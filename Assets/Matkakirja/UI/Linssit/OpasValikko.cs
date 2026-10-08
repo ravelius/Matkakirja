@@ -1682,6 +1682,8 @@ namespace Matkakirja.Natiivi
                     Alanakyma("Äänet", () => Avaa(Nakyma.Aanet));
                     // Säätiedot (Pelikoodari 8.10.: /opas/saa, MET Norwayn lisenssiehto): aina näkyvissä, kun sää on käytettävissä.
                     Kirjasimet.Aseta(Rakenne.Teksti(SaaLahde, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Korkeusmallit (Päätoimittaja 8.10.2026: LS1:n korkeuslukija 25d32fd39; tekstit Karttasepän korkeus-20261008-jsoneista).
+                    foreach (var k in KorkeusLahteet) Kirjasimet.Aseta(Rakenne.Teksti(k, "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
@@ -1987,6 +1989,13 @@ namespace Matkakirja.Natiivi
         };
         const string SaatilaAvain = "matkakirja-pallo-saatila";
         /// <summary>Säätietojen lähderivi (CC BY 4.0 -ehto; Pelikoodarin worker /opas/saa).</summary>
+        static readonly string[] KorkeusLahteet =
+        {
+            "Korkeus, Pariisi: © IGN – LiDAR HD (Licence Ouverte Etalab 2.0)",
+            "Korkeus, Tukholma ja muut kaupungit: Copernicus GLO-30 © DLR e.V. 2010–2014 ja © Airbus Defence and Space GmbH 2014–2018, Copernicus-ohjelma (EU/ESA)",
+            "Rakennukset: © OpenStreetMap contributors (ODbL)",
+        };
+
         const string SaaLahde = "Säätiedot: MET Norway (Norjan ilmatieteen laitos), CC BY 4.0";
 
         /// <summary>LS1:n silta (junat 165–166): KaupunkiKuva.Valinta "paiva" | "yo" = voimassa oleva Saatila.Aika.</summary>
