@@ -481,6 +481,21 @@ namespace Matkakirja.Natiivi
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
             // Kohde vasta korostuksen syttyessä (video4 14,3–16,2 s: varjostin muutti kohdealuetta nollavoimallakin lennon alussa).
             KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
+            // Yövalot v6 (kehityskaupungit): kierroksen muut kohteet valaistuina, maa omasta korkeusmallista (päivitys kerran sekunnissa).
+            if (Time.unscaledTime - maamerkitAika > 1f)
+            {
+                maamerkitAika = Time.unscaledTime;
+                KaupunkiYovalot.Maamerkit.Clear();
+                string kid = NykyinenKaupunkiId;
+                if (kid != null && Kehityskaupungit.On(kid) && (kierrosKohteet ?? kohteet) is List<OpasTaky> mk)
+                    foreach (var t in mk)
+                    {
+                        if (yk != null && Math.Abs(t.Lat - yk.Lat) < 1e-5 && Math.Abs(t.Lon - yk.Lon) < 1e-5) continue;   // nykyinen kohde: oma valo
+                        double h = MaaPisteessa(t.Lat, t.Lon);   // kehyksen maa (kehän näytteistä), jos kohteessa on käyty
+                        if (double.IsNaN(h)) h = OmaMaaKehalla(t.Lat, t.Lon);
+                        if (!double.IsNaN(h)) KaupunkiYovalot.Maamerkit.Add((t.Lat, t.Lon, h, 60));
+                    }
+            }
             // Kohdevalo ja rengas häivyttyvät silmukan korostusosuuden mukaan (sammuvat ennen lähtöä, syttyvät saapumisesta).
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = (float)silmukka.KorostusOsuus;
             // A3 lähitarkkuus: pysähdyksellä (ei lento eikä siirto) kohteen ympärille tarkemmat laatat, kun valinta on tarkentunut.
@@ -511,6 +526,7 @@ namespace Matkakirja.Natiivi
         }
 
         readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length];
+        float maamerkitAika = -9f;
         double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
         double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
         static string PisteAvain(double lat, double lon) => lat.ToString("F4") + "," + lon.ToString("F4");
@@ -2264,6 +2280,19 @@ namespace Matkakirja.Natiivi
         {
             string id = KorkeusId(lat, lon);
             return id != null && korkeusMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
+        }
+
+        /// <summary>Maa kohteen ympäriltä: pienin pinta keskeltä ja 8 pisteestä 70 m:n kehältä (tornin huippu ei ole maa; Eiffel).</summary>
+        public static double OmaMaaKehalla(double lat, double lon)
+        {
+            double h = OmaMaa(lat, lon);
+            if (double.IsNaN(h)) return h;
+            for (int i = 0; i < 8; i++)
+            {
+                double a = i * Math.PI / 4, la = lat + 70 * Math.Cos(a) / 111132.0, lo = lon + 70 * Math.Sin(a) / (111320.0 * Math.Cos(lat * Math.PI / 180));
+                double hk = OmaMaa(la, lo); if (!double.IsNaN(hk)) h = Math.Min(h, hk);
+            }
+            return h;
         }
 
         static string KorkeusId(double lat, double lon)
