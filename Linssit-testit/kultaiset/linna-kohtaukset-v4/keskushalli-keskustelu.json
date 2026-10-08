@@ -219,7 +219,7 @@
    "voice_id": "i5MApVdm05SBFn71supu",
    "rivi": 3,
    "alku_s": 17.93,
-   "loppu_s": 24.57,
+   "loppu_s": 24.49,
    "sanat": [
     {
      "sana": "Ja",
@@ -279,7 +279,7 @@
     {
      "sana": "kamariin.",
      "alku_s": 23.61,
-     "loppu_s": 24.57
+     "loppu_s": 24.49
     }
    ],
    "tauko_s": 0.0
