@@ -477,7 +477,7 @@ namespace Matkakirja.Natiivi
             if (Ensimmainen && hiiri != null && hiiri.leftButton.wasPressedThisFrame && Cursor.lockState != CursorLockMode.Locked)
             {
                 var pos = hiiri.position.ReadValue();
-                if (!(UiKerros.Olemassa && UiKerros.Hae().PeittaaPisteen(pos))) Napautus(pos);
+                if (!(UiKerros.Olemassa && UiKerros.Hae().PeittaaPisteen(pos)) && !SeikkailuKasittely.Alla(pos)) Napautus(pos);   // käsiteltävä: veto tai napautus SeikkailuKasittelyssä
             }
             var gp = Gamepad.current;
             if (gp != null)
@@ -508,6 +508,7 @@ namespace Matkakirja.Natiivi
             }
             // Oikea veto koko oikealla puoliskolla (Natiivi-UI SeikkailuTapit.OtaKatse: asteet edellisestä lukukerrasta, x + oikealle, y + ylös).
             if (tapKatse != null && tapKatse.Invoke(null, null) is Vector2 k && k.sqrMagnitude > 0f) { s.HiiriX += k.x; s.HiiriY += k.y; }
+            if (SeikkailuKasittely.Kaynnissa) { s.HiiriX = s.HiiriY = 0; s.KatseX = s.KatseY = 0; }   // käsittely käsin: katse paikallaan
             return s;
         }
         static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea; static System.Reflection.MethodInfo tapKatse;
