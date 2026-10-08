@@ -152,3 +152,12 @@ sävyero; ΔE ≥ 10 = eri väri (uusi token tai pinnan oma väri, esim. lehtipa
 - 1 × `#8a6a1f` → `--accent-dark` (ΔE 4.1)
 
 Täysi lista: pohjavahti2-varit-20261008-liite.json (pinta, arvo, määrä, lähin token, ΔE).
+
+## Päätökset ja toteutus (pohjavahti 3, proto natiivi-ui/pohjavahti3-169 c1c202a0b)
+
+- ISS- ja astronauttipinnat: 23 tarkkaa osumaa → --tk-lasi-avaruus-* (ulkoasu ennallaan).
+- #ffffff 6 × → --valkoinen (trailerin tekstit kuvan päällä ja kuvien sävytys, ei paperipintoja; web-PR #4218).
+- ΔE 2–5: 359 USS-väriä → lähin token (juuri erottuva muutos). Vertailukuvat viidestä eniten muuttuvasta pinnasta (ennen | jälkeen
+  paperilla ja tummalla): kaappaukset/pohjavahti3-20261008/{Lehti,Matkakirja,Kartta,Linssit,Sahketehtava}.jpg. Värinäytteitä, ei
+  pelin ruutukaappauksia (ne vaatisivat käännöksen).
+- Pohjavahti: värit 1072 → 684. ΔE ≥ 5 (422 USS) ja C#-/shorthand-värit ennallaan listana.
