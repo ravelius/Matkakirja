@@ -522,9 +522,10 @@ namespace Matkakirja.Natiivi
             if (v.Malli != null)
             {
                 // ASTC (v45c, astc-mip.swift: sama suunta kuin LoadImage-JPEG, samat UV:t): vain jos paketin manifestissa (ei 404:ää vanhoille).
-                // Rekvisiitta (LR v45p): Ultra-tasolla 2048-kuvat <glb>-vari-6x6.astcm (ja normaali alla), muilla tasoilla glb:n upotettu 1024.
+                // Rekvisiitta (LR v45p): <glb>-vari-6x6.astcm (2048², ASTC 6×6 ~2,5 Mt mipeineen) KAIKILLA tasoilla — glb:n upotettu 1024
+                // purkautuisi pakkaamattomaksi RGBA32:ksi (~5,3 Mt mallia kohden, 22 mallia ≈ 117 Mt); normaali samoin alla.
                 string pohjaNimi = glb.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) ? glb.Substring(0, glb.Length - 4) : null;
-                foreach (string astc in pohjaNimi == null ? Array.Empty<string>() : Laatutaso.Ultra ? new[] { pohjaNimi + "-vari-6x6.astcm", pohjaNimi + "-4x4.astcm" } : new[] { pohjaNimi + "-4x4.astcm" })
+                foreach (string astc in pohjaNimi == null ? Array.Empty<string>() : new[] { pohjaNimi + "-vari-6x6.astcm", pohjaNimi + "-4x4.astcm" })
                 {
                     string astcUrl = malliUrl(malliJuuri + astc);
                     if (DioraamaLevyvalimuisti.Manifestissa(astcUrl) != true) continue;
@@ -538,9 +539,9 @@ namespace Matkakirja.Natiivi
                     var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Esine:" + glb };
                     if (k.LoadImage(v.Malli.Kuvat[0], true)) v.Kuva = k; else Destroy(k);   // markNonReadable: CPU-kopio pois
                 }
-                // Normaalikartta (LR v45o): <glb>-normaali-4x4.astcm (esineet) tai Ultralla <glb>-normaali-6x6.astcm (rekvisiitta v45p);
+                // Normaalikartta (LR v45o): <glb>-normaali-4x4.astcm (esineet) tai <glb>-normaali-6x6.astcm (rekvisiitta v45p);
                 // lineaarinen, sama UV0 ja v-suunta kuin perusvärillä.
-                foreach (string nAstc in pohjaNimi == null ? Array.Empty<string>() : Laatutaso.Ultra ? new[] { pohjaNimi + "-normaali-6x6.astcm", pohjaNimi + "-normaali-4x4.astcm" } : new[] { pohjaNimi + "-normaali-4x4.astcm" })
+                foreach (string nAstc in pohjaNimi == null ? Array.Empty<string>() : new[] { pohjaNimi + "-normaali-6x6.astcm", pohjaNimi + "-normaali-4x4.astcm" })
                 {
                     string nUrl = malliUrl(malliJuuri + nAstc);
                     if (DioraamaLevyvalimuisti.Manifestissa(nUrl) != true) continue;
