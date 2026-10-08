@@ -970,7 +970,8 @@ namespace Matkakirja.Natiivi
         public static bool KameraVapaa;
         bool pelattavaPala;
         bool veneLaituriin; int veneRepliikki;
-        const double VeneSumuM = 120, VeneKestoS = 50;
+        // Omistaja 8.10.: souto noin 22 s (oli 50 s): reitin loppuosa 46 m samalla soutuvauhdilla (~2,1 m/s), linna näkyy heti.
+        const double VeneSumuM = 120, VeneKestoS = 22, VeneMatkaM = 46;
         float himmennysAsti = -1f;
         const double KavelySumuM = 25;
         const float KavelyLahiMaxM = 2.2f;
@@ -1010,6 +1011,7 @@ namespace Matkakirja.Natiivi
                 dx /= Math.Max(1e-6, l); dz /= Math.Max(1e-6, l);
                 foreach (double e in new[] { 120.0, 40, 8, 2 }) reitti.Add((lt.Kamera.Kohde.X + dx * e + (e > 30 ? dz * e * 0.15 : 0), vesi, lt.Kamera.Kohde.Z + dz * e - (e > 30 ? dx * e * 0.15 : 0)));
             }
+            reitti = Matkakirja.Linssit.Seikkailu.Venesaapuminen.Lyhenna(reitti, VeneMatkaM * kesto / VeneKestoS);
             var ydin = new Matkakirja.Linssit.Seikkailu.Venesaapuminen(reitti, kesto, loppuSuunta);
             bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
             string polku = puhelin ? (vm.Kevyt ?? vm.Huippu) : (vm.Huippu ?? vm.Kevyt);

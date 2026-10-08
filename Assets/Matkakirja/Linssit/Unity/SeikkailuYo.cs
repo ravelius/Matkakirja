@@ -32,6 +32,7 @@ namespace Matkakirja.Natiivi
             y.mustaProfiili.Add<ColorAdjustments>(true).postExposure.Override(-12f);
             y.musta.profile = y.mustaProfiili;
             y.auki = !mustaAlku; y.mustaPaino = mustaAlku ? 1f : 0f; y.musta.weight = y.mustaPaino;
+            y.luotu = Time.unscaledTime;
             Aktiivinen = y;
             return y;
         }
@@ -39,10 +40,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Seikkailun kamera on käytössä (vene tai pelaaja): alun musta avautuu.</summary>
         public void Avaa() { if (!auki) { auki = true; avausAlkaa = Time.unscaledTime + ViiveS; } }
         public const float ViiveS = 0.8f;   // kameran vaihdon blendi ehtii loppuun mustan alla (ei lintuperspektiiviä blendin aikana)
-        float avausAlkaa;
+        float avausAlkaa, luotu = float.MaxValue;
+        public const float VaraS = 8f;
 
         void Update()
         {
+            if (!auki && Time.unscaledTime - luotu > VaraS) Avaa();   // vara: vene ei latautunut → ei jäädä mustaan
             if (!auki || Time.unscaledTime < avausAlkaa) return;
             mustaPaino = Mathf.MoveTowards(mustaPaino, 0f, Time.unscaledDeltaTime / AvausS);
             musta.weight = mustaPaino * mustaPaino * (3f - 2f * mustaPaino);
