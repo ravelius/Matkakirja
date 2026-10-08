@@ -451,6 +451,7 @@ namespace Matkakirja.Natiivi
         {
             var kehys = Rakenne.El("mk-kysymys__kuvakehys", s);
             if (lippu) kehys.AddToClassList("mk-kysymys__kuvakehys--lippu");
+            if (lippu) url = LiputIso.Url(url);   // peilin liput/ → liput-1024/, jos luettelossa (terävyys 9.10.2026)
             // Vain kysymyksen oma kuva suurena, ei artikkeligalleriaa (paljastaisi vastauksen).
             Suurennettava(kehys, new LehtiKuva { Lahde = url, Selite = lippu ? "Tullimiehen näyttämä lippu" : "Matkavalokuvaajan vedos" });
             var kuva = Rakenne.El("mk-kysymys__kuva", kehys, PickingMode.Ignore);
