@@ -111,7 +111,7 @@ namespace Matkakirja.Natiivi
                 puhujat[avain] = a;
             }
             puhujaT[avain] = puhuja;
-            a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus; a.Play();
+            a.Stop(); a.clip = r.Klippi; a.volume = Voimakkuus * Asetukset.Taso(Voima.Repliikit); a.Play();   // ☰-mikseri "Hahmojen repliikit"
             kirjaa?.Invoke($"seikkailu: repliikki {r.Tunnus} ({r.Hahmo}, {r.KestoS:F1} s)");
         }
 
