@@ -5,6 +5,8 @@
 // - Liekit: Liekki(isa) luo VFX_Candle_Flame_01:n kynttilän tai lyhdyn liekiksi (DioraamaLiekit.LuoLyhty, kappelin kynttilät).
 // - Kuunsäteet: Saede(paikka, suunta, …) luo spottivalon VolumetricLight-komponentilla; render feature lisätään URP:n renderereihin
 //   ensimmäisellä käytöllä ja poistetaan, kun kytkin menee pois. Testi: "poikki valot volumetriset 0|1" ja "poikki valot liekit 0|1".
+// - Hehku (8.10.): pistevalo, jonka ympärille VolumetricLight tekee savuisen hehkun. Kannettu valo (vartijan lyhty tai soihtu) palaa
+//   aina ja vain hehku seuraa laatutasoa; tilan soihtujen ja tulisijojen hehku on kokonaan laatutason takana.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +23,8 @@ namespace Matkakirja.Natiivi
         static readonly List<ScriptableRendererFeature> lisatyt = new List<ScriptableRendererFeature>();
         /// <summary>Luodut säteet (kytkin ajon aikana näyttää/piilottaa ne; luukun säde lisäksi luukun tilan mukaan).</summary>
         static readonly List<Light> saeteet = new List<Light>();
+        /// <summary>Hehkut: (valo, palaa aina). Aina-valoista kytkin vaihtaa vain hehkun, muista myös valon.</summary>
+        static readonly List<(Light Valo, bool Aina)> hehkut = new List<(Light, bool)>();
 
         /// <summary>Candle VFX -liekit (kevyet, oletuksena päällä kaikilla).</summary>
         public static bool Liekit = true;
@@ -51,6 +55,8 @@ namespace Matkakirja.Natiivi
                 if (!v) PoistaFeature(); else VarmistaFeature();
                 saeteet.RemoveAll(x => x == null);
                 foreach (var s in saeteet) { var vl = tyyppiValo != null ? s.GetComponent(tyyppiValo) as Behaviour : null; if (vl != null) vl.enabled = v; s.enabled = v; }
+                hehkut.RemoveAll(x => x.Valo == null);
+                foreach (var h in hehkut) { var vl = tyyppiValo != null ? h.Valo.GetComponent(tyyppiValo) as Behaviour : null; if (vl != null) vl.enabled = v; h.Valo.enabled = v || h.Aina; }
             }
             Muuttui?.Invoke();
         }
@@ -101,6 +107,46 @@ namespace Matkakirja.Natiivi
             return l;
         }
 
+        /// <summary>Pistevalo isän lapseksi (paikallinen paikka) ja sen ympärille volumetrinen hehku, jos paketti on mukana. aina = valo
+        /// palaa laatutasosta riippumatta (kannettu lyhty tai soihtu valaisee hahmot ja paljastaa kantajan tulon); muuten valo ja hehku
+        /// vain laatutason ollessa päällä. Palauttaa valon (aina-valo myös ilman pakettia), muuten null.</summary>
+        public static Light Hehku(Transform isa, Vector3 paikallinen, Color vari, float voima, float kantama, bool aina, int kerros)
+        {
+            Hae();
+            if (isa == null || !aina && tyyppiValo == null) return null;
+            if (Volumetriset && tyyppiValo != null) VarmistaFeature();
+            var go = new GameObject(aina ? "Kannettu valo" : "Liekin hehku (volumetrinen)") { layer = kerros };
+            go.transform.SetParent(isa, false);
+            go.transform.localPosition = paikallinen;
+            var l = go.AddComponent<Light>();
+            l.type = LightType.Point; l.color = vari; l.intensity = voima; l.range = kantama; l.shadows = LightShadows.None;
+            if (tyyppiValo != null)
+            {
+                var vl = go.AddComponent(tyyppiValo);
+                // Tiheämpi ja lyhyempi kuin kuunsäteessä: savuinen pallo liekin ympärillä, ei pölyä.
+                Kentta(vl, "density", 0.2f); Kentta(vl, "brightness", 0.5f); Kentta(vl, "noiseStrength", 0.8f); Kentta(vl, "enableDustParticles", false);
+                if (vl is Behaviour b) b.enabled = Volumetriset;
+            }
+            l.enabled = aina || Volumetriset;
+            hehkut.Add((l, aina));
+            return l;
+        }
+
+        static readonly HashSet<int> hehkuLiekit = new HashSet<int>();
+        static readonly List<GameObject> isot = new List<GameObject>();
+        /// <summary>Soihtujen ja tulisijojen volumetrinen hehku (laatutaso): lisää hehkun isoihin liekkeihin, joilla sitä ei vielä ole
+        /// (tilat latautuvat vähitellen; SeikkailuVartijat kutsuu 2 s välein). Sammunut liekki (Go pois) vie hehkun mukanaan.</summary>
+        public static void HehkuIsoihinLiekkeihin(DioraamaLiekit liekit, int kerros)
+        {
+            if (liekit == null || !Volumetriset) return;
+            Hae();
+            if (tyyppiValo == null) return;
+            isot.Clear(); liekit.IsotLiekit(1.4f, isot);
+            foreach (var g in isot)
+                if (hehkuLiekit.Add(g.GetInstanceID()))
+                    Hehku(g.transform, Vector3.zero, new Color(1f, 0.6f, 0.28f), 0.8f, 2.5f, false, kerros);
+        }
+
         static void Kentta(Component c, string nimi, object arvo)
         {
             var f = c.GetType().GetField(nimi);
@@ -139,6 +185,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Seikkailu suljetaan: feature pois rendereristä (muut näkymät eivät maksa siitä).</summary>
-        public static void Poista() => PoistaFeature();
+        public static void Poista()
+        {
+            PoistaFeature();
+            // Tilan liekkien hehkut pois (liekit jäävät linnanäkymään); kannetut valot lähtevät vartijoiden mukana.
+            foreach (var h in hehkut) if (h.Valo != null && !h.Aina) UnityEngine.Object.Destroy(h.Valo.gameObject);
+            hehkuLiekit.Clear(); hehkut.Clear();
+        }
     }
 }

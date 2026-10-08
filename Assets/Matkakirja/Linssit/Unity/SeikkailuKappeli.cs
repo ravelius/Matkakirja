@@ -278,6 +278,8 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke("seikkailu: löytö: kalkki, pateeni ja liuskekivi");
             var pl = SeikkailuPelaaja.Aktiivinen;
             if (pl != null) { SeikkailuAanet.Soita("liina-avaus", pl.transform.position + Vector3.up, 0.8f); SeikkailuAanet.Soita("hopea-kilahdus", pl.transform.position + Vector3.up * 1.1f, 0.7f); }
+            // Löytömerkki (pelattavuusmalli 10, omistajan päätös 4): kanteleen 3–4 säveltä, aanet-fp-v1 "loyto-kantele" (puuttuessa hiljaa).
+            if (pl != null) SeikkailuAanet.Soita("loyto-kantele", pl.transform.position + Vector3.up * 1.6f, 0.8f);
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); return; }

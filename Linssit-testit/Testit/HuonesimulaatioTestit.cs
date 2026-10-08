@@ -1,5 +1,5 @@
 // HISTORIAMOOTTORI (Siirtoseppä 7.10.2026): pelattavuusmalli kohta 11 — huonesimulaatio ilman Unityä. Ydin-luokat (Vartija, Askelaani,
-// KavelyData) ajetaan Olavinlinnan v44m-datalla (kultaiset/olavinlinna-v44m-*.json): partiot, torkkuja, pinnat, osat. Näkölinja
+// KavelyData) ajetaan Olavinlinnan v44s-datalla (kultaiset/olavinlinna-v44s-*.json): partiot, torkkuja, pinnat, osat. Näkölinja
 // yksinkertaistettuna: sama tai naapuriosa ja kerrosero alle 2 m (seinät osien rajoista). Testiajuri hiipii reitti:pelaaja-N -merkit
 // odottaen, ettei vartija ole 5 m:n sisällä seuraavasta pisteestä (pimeä, valoisuus 0,25), tai kävelee valossa (1,0).
 using System;
@@ -16,7 +16,7 @@ namespace Matkakirja.Linssit.Testit
         static KavelyData Data()
         {
             string Lue(string n) => File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", n));
-            return KavelyData.Lue(Lue("olavinlinna-v44m-osat.json"), Lue("olavinlinna-v44m-merkit.json"));
+            return KavelyData.Lue(Lue("olavinlinna-v44s-osat.json"), Lue("olavinlinna-v44s-merkit.json"));
         }
 
         static List<Simuvartija> Vartijat(KavelyData d)
@@ -160,18 +160,8 @@ namespace Matkakirja.Linssit.Testit
             return (kiinni, i >= reitti.Count ? t : double.PositiveInfinity, varoitettu, sujuva);
         }
 
-        // Huone 2 (laituri → porttikäytävä, reitti:pelaaja-1…8) riidan ikkunassa. Huoneet 3–5 vaativat ajurilta tarjottimen ja
-        // harhautuksen ajoituksen (pelattavuusmalli vaihe 4), ja ne lisätään tähän, kun tarjotin on paketissa.
-        [Testi] static void VarjoreittiIlmanKiinnijaantia()
-        {
-            var (kiinni, aika, _, sujuva) = Aja(valossa: false, maxS: 600, pisteita: 8);
-            Console.WriteLine($"      varjoreitti: {aika:F0} s (sujuva {sujuva:F0} s), kiinnijäämisiä {kiinni}");
-            Oleta.Tosi(kiinni == 0, $"varjoreitti: {kiinni} kiinnijääntiä");
-            Oleta.Tosi(aika <= 2 * sujuva, $"varjoreitti ajassa ({aika:F0} s, sujuva {sujuva:F0} s)");
-        }
-
-        // Koko pala (tarjottimella: true) lisätään testiksi, kun ajuri ajoittaa keittiön: nyt pihan vartija (partio 0,5 m reitistä
-        // reitti:pelaaja-9/-13) väistyy, mutta kokki näkee oven kohdalla (pelaaja-10/-11 kokin reitillä). Tila 7.10.: 52 kiinnijääntiä.
+        // Varjoreitti ja koko pala 1–5: OlavinlinnaPalaTestit (LS2 8.10., Thief-ajuri odottaa piilossa). Vanha 8 pisteen suora ajuri
+        // poistettu: odotus_s-kenttä (LS2:n löydös 1) pidensi partioiden odotukset, eikä odottamaton ajuri ole pelaajan malli.
 
         [Testi] static void ValoreittiKiinniVaroituksen()
         {

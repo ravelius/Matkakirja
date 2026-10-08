@@ -42,6 +42,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public string Nimi, Laji, Tunnus, Osa, Tyyppi, Glb;
         /// <summary>partio: henkilo ja profiili (pelattavuusmalli 3.1: vartija, portinvartija, kokki, apulainen, renki).</summary>
         public string Henkilo, Profiili;
+        /// <summary>partio: kantaa lyhtyä tai soihtua (v44m; pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu).</summary>
+        public bool Lyhty, Soihtu;
         /// <summary>koko [x, y, z] (piilo, pinta), null jos kenttä on luku tai puuttuu.</summary>
         public double[] KokoV;
         public double X, Y, Z, Leveys, Korkeus, Koko, OdotaS;
@@ -121,12 +123,13 @@ namespace Matkakirja.Linssit.Seikkailu
                 Nimi = nimi, Laji = kp > 0 ? nimi.Substring(0, kp) : "", Tunnus = kp > 0 ? nimi.Substring(kp + 1) : nimi,
                 Osa = MiniJson.Teksti(o, "osa"), Tyyppi = MiniJson.Teksti(o, "tyyppi"), Glb = MiniJson.Teksti(o, "glb"),
                 X = p[0], Y = p[1], Z = p[2], Leveys = MiniJson.Luku(o, "leveys") ?? 0, Korkeus = MiniJson.Luku(o, "korkeus") ?? 0,
-                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
+                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? MiniJson.Luku(o, "odotus_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
                 Sarana = MiniJson.Kentta(o, "sarana") is object sa ? Vektori(sa) : null,
                 Yla = MiniJson.Kentta(o, "yla") is object ya ? Vektori(ya) : null,
                 Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
                 Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
                 Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
+                Lyhty = MiniJson.Kentta(o, "lyhty") is bool lyb && lyb, Soihtu = MiniJson.Kentta(o, "soihtu") is bool sob && sob,
                 KokoV = MiniJson.Kentta(o, "koko") is List<object> kl && kl.Count == 3 ? Vektori(kl) : null,
             };
         }

@@ -395,6 +395,12 @@ namespace Matkakirja.Natiivi
             return Mathf.Clamp01(v);
         }
 
+        /// <summary>Historiamoottori 8.10.: isot liekit (koko ≥ minKoko: soihdut ja tulisijat, valosäde ≥ 6 m) volumetrista hehkua varten.</summary>
+        public void IsotLiekit(float minKoko, List<GameObject> ulos)
+        {
+            foreach (var e in esiintymat) if (e.Go != null && e.Paikka != null && e.Paikka.Koko >= minKoko) ulos.Add(e.Go);
+        }
+
         /// <summary>Historiamoottori E3: tilan liekkien GameObjectit ja paikat (kynttilöiden sammutus ja sytytys).</summary>
         public List<(GameObject Go, Vector3 Paikka)> TilanLiekit(string tilaId)
         {
