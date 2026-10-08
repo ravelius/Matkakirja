@@ -145,6 +145,10 @@ namespace Matkakirja.Natiivi
             transform.position = ote + ulos * OteIrti - Vector3.up * OteRiippuu;
             kavely.HahmoYaw = Mathf.Atan2(-ulos.x, -ulos.z) * Mathf.Rad2Deg;   // kasvot seinään
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
+            // Takakuvan hahmon leike (LR pyydetty 8.10.: ote_idle, ote_siirto 0,6 s; puuttuessa Hahmot3D:n varaketju idleen).
+            string ol = k.Siirtyy != 0 ? "ote_siirto" : "ote_idle";
+            if (ol != leike) { leike = ol; leikeAika = 0; }
+            leikeAika += dt;
             takaPaino = Mathf.MoveTowards(takaPaino, 1f, dt / TakaSiirtymaS);
             var taka = transform.position + ulos * TakaM + Vector3.up * (Korkeus + TakaYlos);
             takaPaikka = taka; takaKierto = Quaternion.LookRotation(transform.position + Vector3.up * 1.2f - taka);
