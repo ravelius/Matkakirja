@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '22'
       - env:
-          FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
+          FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
           "airot|rowing boat oars|3|40"
