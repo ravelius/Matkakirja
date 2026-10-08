@@ -35,7 +35,14 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 8.10. aamupäivä, myöhemmin (uusin)
+## TILA 8.10. keskipäivä (uusin)
+- v44x (LR B, d1695f96) AJETTU: worktreet wt/proto-linssiseppa2-v44x-p (historia-valot b73018ba5, haara linssiseppa2/v44x-p) ja
+  -v44x-m (historia-m f4286888c, linssiseppa2/v44x-m), kultaiset v44x vaihdettu, EI COMMITTIA (pala kaatuu). Tulos: P 912/913, M 946/947:
+  VarjoreittiKokoPala jumissa 3/20 — silta alkaa laiturin juuresta 1,2–1,3 m portinvartijasta hänen riitakatseensa sektorissa (25°),
+  lyhdyn valossa 0,63–0,72 → B ei junakuntoinen. M-osa OK (harja tiedoksi). Luvut + vaihtoehdot Siirtosepälle.
+- ODOTTAA: LR:n korjattu hash → aja molemmat uudelleen samoissa worktreeissä, commit + SHA kun pala menee.
+
+## TILA 8.10. aamupäivä, myöhemmin
 - muuri-v44w MERGETTY; Siirtosepän harjakorjaus 00ddd3c12 (Uppoutunut, talonpojan kääntö, kuulon korkeus).
 - proto linssiseppa2/harja 64a1fc4ca (00ddd3c12 päällä), worktree wt/proto-linssiseppa2-harja: klooni päivitetty; harja pääsee 90:een,
   sakara (91) 0,83 m vartijan edessä 17° katseesta valossa 0,81 → HarjaKorjattu=false. Luvut + vaihtoehdot Siirtosepälle.
