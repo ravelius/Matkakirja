@@ -173,6 +173,12 @@ namespace Matkakirja.Natiivi
             switch (nakyma)
             {
                 case Nakyma.Paa:
+                    // VIHJE (omistaja 8.10.: videopeleissä ei Pulua, vihje maailman sisällä; Päätoimittaja hyväksyi A:n): vain
+                    // seikkailun ollessa käynnissä, ei linnakierroksella. Napautus sulkee valikon (Komento) ja pyytää vihjeen.
+                    if (SeikkailuTapit.SeikkailuKaynnissa) Komento("Vihje", () => SeikkailuTapit.PyydaVihje("valikko"));
+                    // TIETOA (Päätoimittaja 8.10.: tietokerros ilman Pulua, ettei iPad-pelaaja menetä sitä): seikkailun tietokerroksen
+                    // kortisto, kun se on tarjolla (SeikkailuTietokerros, nousun jälkeen); sama KORTTI-kortisto kuin Pulun napautuksesta.
+                    if (SeikkailuTapit.TietokerrosTarjolla) Komento("Tietoa", SeikkailuTapit.AvaaTietokerrosValikosta);
                     Alanakyma("Huoneet", Nakyma.Huoneet);
                     Komento("Esittely uudelleen", EsittelyUudelleen);
                     Alanakyma("Äänet", Nakyma.Aanet);

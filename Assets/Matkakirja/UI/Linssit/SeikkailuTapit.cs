@@ -398,6 +398,42 @@ namespace Matkakirja.Natiivi
             PuluKaappaa();
         }
 
+        static MethodInfo maailmaVihje;
+        static bool maailmaVihjeHaettu;
+
+        /// <summary>Seikkailu käynnissä (SeikkailuPelaaja.Aktiivinen; linnan ☰-valikon Vihje-rivi näkyy vain silloin).</summary>
+        public static bool SeikkailuKaynnissa => PelaajaAktiivinen();
+
+        /// <summary>
+        /// VIHJEEN PYYNTÖ ILMAN PULUA (omistaja 8.10.: videopeleissä ei Pulua; Päätoimittaja: linnan ☰ → Vihje): sama vihjereitti kuin
+        /// P/Y-näppäimellä, mutta ilman tietokerroksen tarjousta. Siirtosepän maailmavihje (kimallus + ääni) tulee SeikkailuPelaaja.
+        /// PyydaVihje() (Siirtoseppä 8.10., historia-m c15eb5b8a; vanha nimi PuluVihje samaan reittiin varana). true = vihje annettiin.
+        /// </summary>
+        public static bool PyydaVihje(string lahde)
+        {
+            if (!maailmaVihjeHaettu)
+            {
+                maailmaVihjeHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                const BindingFlags F = BindingFlags.Public | BindingFlags.Static;
+                maailmaVihje = tp?.GetMethod("PyydaVihje", F, null, System.Type.EmptyTypes, null)
+                    ?? tp?.GetMethod("PuluVihje", F, null, System.Type.EmptyTypes, null);
+            }
+            bool annettu = maailmaVihje?.Invoke(null, null) is bool b && b;
+            Debug.Log($"MATKAKIRJA seikkailutapit: vihje pyydetty ({lahde}) → " + (annettu ? "annettu" : "ei vihjettä"));
+            return annettu;
+        }
+
+        /// <summary>Tietokerros tarjolla (NaytaTietokerros kutsuttu, seikkailu käynnissä): linnan ☰-valikon Tietoa-rivi.</summary>
+        public static bool TietokerrosTarjolla => tkOtsikot != null;
+
+        /// <summary>Linnan ☰ → Tietoa (ilman Pulua, Päätoimittaja 8.10.): sama kortisto kuin Pulun napautuksesta.</summary>
+        public static void AvaaTietokerrosValikosta()
+        {
+            Debug.Log("MATKAKIRJA seikkailutapit: tietokerros valikosta");
+            AvaaTietokerros();
+        }
+
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
         static void PoistaTietokerros()
         {
