@@ -2500,6 +2500,10 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuvasarja (3)";
                 case "peitto": return Peitto();
                 case "tapit": return "opas: " + tapit.Kuvaus();
+                case "historia":
+                    // ui opasvalikko historia [otsikko…|pois]: historiaosion otsikko metrolinjaan (testi; LS1:n kytkennän tilalla).
+                    if (o.Length > 1) OpasMetrolinja.HistoriaOtsikko = o[1] == "pois" ? null : string.Join(" ", o, 1, o.Length - 1);
+                    return "opas: " + metro.HistoriaKuvaus();
                 case "vipu":
                     // ui opasvalikko vipu [asento −2…1]: vapaan lennon nopeusvipu (OpasTapit, juna 170).
                     return "opas: " + tapit.VipuKuvaus(o.Length > 1 && float.TryParse(o[1], System.Globalization.NumberStyles.Float,

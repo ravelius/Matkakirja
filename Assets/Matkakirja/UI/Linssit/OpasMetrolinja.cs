@@ -40,6 +40,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Korostus;
         public static string KorostusSelite;
+        /// <summary>
+        /// HISTORIAOSION OTSIKKO (Päätoimittaja 9.10.2026, juna 170; Pelikoodarin lentokerronta historia-v1 "otsikko"): lennon aikana soivan
+        /// osion otsikko HistoriaNakyyS sekuntia osion alussa lähtö- ja tuloaseman välissä samalla selitteen pohjalla (asemat eivät suurene);
+        /// null = osio ei soi. OpasValikko asettaa LS1:n OpasSovitin.HistoriaOtsikko-arvosta.
+        /// </summary>
+        public static string HistoriaOtsikko;
+        public const float HistoriaNakyyS = 3f;
         const float KorostusKoko = 44f;   // KierrosTaulun kohdeotsikon koko (nimi 44 pt)
         const float KorostusVaihto = 0.6f;
         float korostusTaso;
@@ -51,8 +58,10 @@ namespace Matkakirja.Natiivi
         float sovitusKoko; int sovitusRivit;
         /// <summary>Nimien enimmäisleveys (Paivita, paneelin pt): korostettu nimi sovitetaan tähän yhdelle riville.</summary>
         float leveysRaja;
-        Label selite;
-        int seliteAsema = -1;
+        Label selite, historia;
+        int seliteAsema = -1, historiaAsema = -1;
+        string historiaNyt;
+        float historiaAlku = -10f, historiaTaso;
 
         /// <summary>Metrolinjan alareuna paneelin pisteinä (iPhonella otsikko sen alle); 0 = ei näy.</summary>
         public static float Alareuna { get; private set; }
@@ -128,6 +137,7 @@ namespace Matkakirja.Natiivi
             // (Päätoimittaja 8.10.: "Orsayn taidemuseo" rivittyi ja selite osui Eiffel-torniin, video 164 41,5 s).
             if (korostusTaso > 0.001f && selite != null)
                 korkeus += korostusTaso * (RiviKerroin * Mathf.Max(0f, korostusRivit * korostusKoko - Tyylikirja.Koko.Valiotsikko) + Mathf.Max(0f, selite.layout.height));
+            if (historiaTaso > 0.001f && historia != null) korkeus += historiaTaso * Mathf.Max(0f, historia.layout.height);
             float top = Mathf.Round(Keskita ? yla + (kaista - korkeus) * 0.5f : yla);
             if (juuri.style.top.value.value != top) juuri.style.top = top;
             if (juuri.style.height.value.value != korkeus) juuri.style.height = Mathf.Round(korkeus);
@@ -206,6 +216,7 @@ namespace Matkakirja.Natiivi
             float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
             if (kohde >= 0 && kohde < n && kt > 0f) (korostusKoko, korostusRivit) = SovitaKorostus(asemat[kohde].Nimi, asemat[kohde].Rivi);
             PaivitaSelite(korostus, kt);
+            PaivitaHistoria();
             for (int k = 0; k < n; k++)
             {
                 float taso = Mathf.Lerp(alkuTaso.Length == n ? alkuTaso[k] : 0f, Taso(k, kohde), e);
@@ -255,6 +266,46 @@ namespace Matkakirja.Natiivi
             selite.style.opacity = kt;
         }
 
+        /// <summary>Historiaosion otsikko lähtöaseman nimen alle (lento kohti seuraavaa: aseman ja seuraavan väliin), HistoriaNakyyS s.</summary>
+        void PaivitaHistoria()
+        {
+            if (historia == null || asemat.Count == 0) return;
+            string o = HistoriaOtsikko;
+            if (o != historiaNyt)
+            {
+                historiaNyt = o;
+                if (!string.IsNullOrEmpty(o)) { historia.text = o; historiaAlku = Time.unscaledTime; }
+            }
+            bool nayta = !string.IsNullOrEmpty(historiaNyt) && Time.unscaledTime - historiaAlku < HistoriaNakyyS;
+            int asema = Mathf.Clamp(Mathf.Min(naytettyIndeksi, kohde < 0 ? naytettyIndeksi : kohde), 0, asemat.Count - 1);
+            if (nayta && historiaAsema != asema) { historiaAsema = asema; asemat[asema].Nimi.parent.Add(historia); }
+            historiaTaso = Mathf.MoveTowards(historiaTaso, nayta ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
+            float ht = historiaTaso * historiaTaso * (3f - 2f * historiaTaso);
+            var d = ht > 0.001f ? DisplayStyle.Flex : DisplayStyle.None;
+            if (historia.style.display != d) historia.style.display = d;
+            historia.style.opacity = ht;
+        }
+
+        /// <summary>Testi (`ui opasvalikko historia`): otsikko, näkyvyys ja paikka.</summary>
+        public string HistoriaKuvaus() => historia == null ? "historia: ei metrolinjaa"
+            : $"historia \"{HistoriaOtsikko ?? "-"}\" {(historia.style.display == DisplayStyle.Flex ? "näkyy" : "piilossa")} peitto {historia.resolvedStyle.opacity:0.00}, "
+            + $"aseman {historiaAsema} alla @ {historia.worldBound.xMin:0},{historia.worldBound.yMin:0} {historia.worldBound.width:0}×{historia.worldBound.height:0}";
+
+        /// <summary>Selitteen pohja: aseman nimen pohja apuri-koossa (+2), rivittyy, oppaan otsikon varjo ja ääriviiva.</summary>
+        static Label SeliteTeksti()
+        {
+            var l = Rakenne.Teksti("", "mk-metrolinja__nimi", null);
+            Kirjasimet.Aseta(l, Kirjasin.Moderni);
+            l.style.fontSize = Tyylikirja.Koko.Apuri + 2f;
+            l.style.whiteSpace = WhiteSpace.Normal;
+            l.style.textOverflow = TextOverflow.Clip;
+            l.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
+            l.style.unityTextOutlineWidth = 0.8f;
+            l.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
+            l.style.display = DisplayStyle.None;
+            return l;
+        }
+
         void Rakenna(IReadOnlyList<string> nimet)
         {
             likainen = false;
@@ -279,16 +330,11 @@ namespace Matkakirja.Natiivi
             }
             naytettyIndeksi = -2;
             nytTaso = new float[0];
-            selite = Rakenne.Teksti("", "mk-metrolinja__nimi", null);
-            Kirjasimet.Aseta(selite, Kirjasin.Moderni);
-            selite.style.fontSize = Tyylikirja.Koko.Apuri + 2f;
-            selite.style.whiteSpace = WhiteSpace.Normal;
-            selite.style.textOverflow = TextOverflow.Clip;
-            selite.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
-            selite.style.unityTextOutlineWidth = 0.8f;
-            selite.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
-            selite.style.display = DisplayStyle.None;
+            selite = SeliteTeksti();
             seliteAsema = -1;
+            historia = SeliteTeksti();
+            historiaAsema = -1;
+            historiaTaso = 0f;
         }
 
         /// <summary>Viiva ensimmäisen ja viimeisen aseman pisteiden keskeltä; kuljettu osuus nykyiseen asti.</summary>
