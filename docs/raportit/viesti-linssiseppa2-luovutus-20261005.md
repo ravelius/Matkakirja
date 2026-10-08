@@ -39,7 +39,9 @@ Avoimet työt:
 - muuri-v44w MERGETTY; Siirtosepän harjakorjaus 00ddd3c12 (Uppoutunut, talonpojan kääntö, kuulon korkeus).
 - proto linssiseppa2/harja 64a1fc4ca (00ddd3c12 päällä), worktree wt/proto-linssiseppa2-harja: klooni päivitetty; harja pääsee 90:een,
   sakara (91) 0,83 m vartijan edessä 17° katseesta valossa 0,81 → HarjaKorjattu=false. Luvut + vaihtoehdot Siirtosepälle.
-- ODOTTAA: Siirtosepän/LR:n sakarakorjaus → todenna, HarjaKorjattu=true.
+- harja 64a1fc4ca MERGETTY (historia-m = 64a1fc4ca); worktree poistettu.
+- ODOTTAA: LR:n hash (sakara + ote 1 > 55° katseesta ja ≥ 2,5 m vartijasta, tai vartija sivuun) → uusi worktree historia-m:stä,
+  kultaiset, todenna HarjaHiipien, HarjaKorjattu=true jos läpi.
 
 ## TILA 8.10. aamupäivä
 - LR v44w (f8aa682f): proto linssiseppa2/muuri-v44w 8aa45baf4 (historia-m 3cd1e87e3 päällä), worktree wt/proto-linssiseppa2-muuri.
