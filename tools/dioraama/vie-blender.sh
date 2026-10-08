@@ -105,6 +105,8 @@ for g in "$LAHDE"/tilat/*.glb; do
   for v in "" "-hamara"; do
     [ -f "$LAHDE/valot/$id$v.jpg" ] || continue
     for f in "$id$v.jpg" "$id$v-2k.jpg" "$id$v-4x4.astcm" "$id$v-2k-4x4.astcm"; do lisaa "valot/$f" "valot/$f"; done
+    # Huippu/Täysi (8.10.2026): 8192²-atlas samalle UV1:lle, jos leivottu (leivo_tila.py --iso 8192).
+    for f in "$id$v-8k.jpg" "$id$v-8k-6x6.astcm"; do [ -f "$LAHDE/valot/$f" ] && lisaa "valot/$f" "valot/$f"; done
   done
 done
 

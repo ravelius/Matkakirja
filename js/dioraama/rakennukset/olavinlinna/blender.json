@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "3e6f985d19c51c3e",
-  "kansio": "dioraama/olavinlinna/blender/3e6f985d19c51c3e/",
+  "hash": "b53f54af2b527c1c",
+  "kansio": "dioraama/olavinlinna/blender/b53f54af2b527c1c/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1979,6 +1979,16 @@
       "tavuja": 5592448
     },
     {
+      "polku": "valot/kappeli-8k-6x6.astcm",
+      "sha256": "2cf326eefaab279b5115ecfd83c2bcc427c8072bc50475f861e7b647ee9f1aae",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/kappeli-8k.jpg",
+      "sha256": "7b71b4a0336cb3ac3d41d9546f53f36808c894f6c0161b044893a5332c494230",
+      "tavuja": 7989455
+    },
+    {
       "polku": "valot/kappeli-hamara-2k-4x4.astcm",
       "sha256": "1ffb6774b3f0c697c25e371e5cb859cbbbddf8f923c0a5ea8fb4a7118a717bc4",
       "tavuja": 1398144
@@ -1992,6 +2002,16 @@
       "polku": "valot/kappeli-hamara-4x4.astcm",
       "sha256": "76242f4e3bc91b560ab252f543b6169d85f01d945477caf838f77c2c52811511",
       "tavuja": 5592448
+    },
+    {
+      "polku": "valot/kappeli-hamara-8k-6x6.astcm",
+      "sha256": "da9936c227bd37dcb097c614a38455c977e5610291d2a5a1a39b74eacf10669b",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/kappeli-hamara-8k.jpg",
+      "sha256": "97ca0acf589d9188216399e110a8622c0d4236bd6f3fed8adc9d6cf74f72c2f8",
+      "tavuja": 7731905
     },
     {
       "polku": "valot/kappeli-hamara.jpg",
@@ -2034,6 +2054,16 @@
       "tavuja": 5592448
     },
     {
+      "polku": "valot/keittio-g102-8k-6x6.astcm",
+      "sha256": "f9234e7eff6a761d6570eb3eb43f26cba6fc78fb9b32f73a6e9019cb208262e7",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/keittio-g102-8k.jpg",
+      "sha256": "b8bd99448c4e47a4236bf716b2e1537530fe53dacf8461919d849eecc51307bd",
+      "tavuja": 5697713
+    },
+    {
       "polku": "valot/keittio-g102-hamara-2k-4x4.astcm",
       "sha256": "d0ef7f98f15fa813ff37baa14aa5776a05d41b8df453ede90db070ce4113a6bc",
       "tavuja": 1398144
@@ -2047,6 +2077,16 @@
       "polku": "valot/keittio-g102-hamara-4x4.astcm",
       "sha256": "ed11f439fdaf0b010d66691c5f236399f7096a0d34983b3bbf23bf1c5f43cc0e",
       "tavuja": 5592448
+    },
+    {
+      "polku": "valot/keittio-g102-hamara-8k-6x6.astcm",
+      "sha256": "4ff8286562d1681ecc1bc11d132a84d6ec5e71adeec757e6cd3c14f0847b2e87",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/keittio-g102-hamara-8k.jpg",
+      "sha256": "d8566d919c6c887bd17174bdc1de6212f646ba9dea3a0a0d47a9b04cdacaeaac",
+      "tavuja": 5087127
     },
     {
       "polku": "valot/keittio-g102-hamara.jpg",
@@ -2219,6 +2259,16 @@
       "tavuja": 5592448
     },
     {
+      "polku": "valot/linnantupa-8k-6x6.astcm",
+      "sha256": "707570cf2ef0ccdad927bab4504d4a7dcbd250b56b80e2fa22fc1c83662acd47",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/linnantupa-8k.jpg",
+      "sha256": "9585b125db25bcf42d658246e72acd3342459237d64ecb51e5d48fff964e3a54",
+      "tavuja": 11216298
+    },
+    {
       "polku": "valot/linnantupa-hamara-2k-4x4.astcm",
       "sha256": "c81a70a0d2b091c55cdbadab33441c8c8c040010520c7fcf6889a5152a4d443c",
       "tavuja": 1398144
@@ -2232,6 +2282,16 @@
       "polku": "valot/linnantupa-hamara-4x4.astcm",
       "sha256": "0dca6ef78d303adee21c0ba491e580d2f843f845c7200567068912251bb46516",
       "tavuja": 5592448
+    },
+    {
+      "polku": "valot/linnantupa-hamara-8k-6x6.astcm",
+      "sha256": "9e3d923faf4912a356563e4756dd5d4a29de894be8dcec8bf09dcc51feddb4d8",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/linnantupa-hamara-8k.jpg",
+      "sha256": "14d3226eea87e4040c6dbbd88233af168708f61e2f6127f6ddb70abf599a4672",
+      "tavuja": 10801545
     },
     {
       "polku": "valot/linnantupa-hamara.jpg",
@@ -2319,6 +2379,16 @@
       "tavuja": 5592448
     },
     {
+      "polku": "valot/voudin-sali-8k-6x6.astcm",
+      "sha256": "1da5312f51996caa4c222fcc235560bc9f1bb0966ff1c8e27112bfc4d82c6057",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/voudin-sali-8k.jpg",
+      "sha256": "fe5787717ab8de7ac8b13d62e90ac57c84b1243bccb8a36596f2cf9cffc9b617",
+      "tavuja": 11486824
+    },
+    {
       "polku": "valot/voudin-sali-hamara-2k-4x4.astcm",
       "sha256": "614596f3eae47f3f18380a6dbc19ee73d32262a0ebcc56592d2cdaa3b6677603",
       "tavuja": 1398144
@@ -2332,6 +2402,16 @@
       "polku": "valot/voudin-sali-hamara-4x4.astcm",
       "sha256": "a415580c8a931b94beb4ef62515ef14241d7a1484fa8853d161634793db28700",
       "tavuja": 5592448
+    },
+    {
+      "polku": "valot/voudin-sali-hamara-8k-6x6.astcm",
+      "sha256": "bb3c450bb1fe38deb527216d989949e5da139a2c64973aea85a46216e4763c56",
+      "tavuja": 39816848
+    },
+    {
+      "polku": "valot/voudin-sali-hamara-8k.jpg",
+      "sha256": "d2bbbf4380a4a7c50f0e106dd7b3567c49c6bd409315b1c63e113d9249386468",
+      "tavuja": 10820092
     },
     {
       "polku": "valot/voudin-sali-hamara.jpg",
