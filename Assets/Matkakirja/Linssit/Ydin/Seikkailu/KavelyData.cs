@@ -18,6 +18,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public List<KavelyMerkki> Portaalit = new List<KavelyMerkki>();
         public List<KavelyLeikkaus> Leikkaukset = new List<KavelyLeikkaus>();
         public double? KattoY;
+        /// <summary>Osan oletuspinta askelille (pelattavuusmalli 2.2: kivi, porras, puu, olki, sora, vesi); null = kivi.</summary>
+        public string Pinta;
     }
 
     /// <summary>Särmiö, jonka sisältä kuori ei piirry kävelytilassa (keskipiste, koko, kierto y-akselin ympäri radiaaneina).</summary>
@@ -38,6 +40,12 @@ namespace Matkakirja.Linssit.Seikkailu
     public sealed class KavelyMerkki
     {
         public string Nimi, Laji, Tunnus, Osa, Tyyppi, Glb;
+        /// <summary>partio: henkilo ja profiili (pelattavuusmalli 3.1: vartija, portinvartija, kokki, apulainen, renki).</summary>
+        public string Henkilo, Profiili;
+        /// <summary>partio: kantaa lyhtyä tai soihtua (v44m; pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu).</summary>
+        public bool Lyhty, Soihtu;
+        /// <summary>koko [x, y, z] (piilo, pinta), null jos kenttä on luku tai puuttuu.</summary>
+        public double[] KokoV;
         public double X, Y, Z, Leveys, Korkeus, Koko, OdotaS;
         /// <summary>kierto_y radiaaneina (glTF y-akselin ympäri; esim. vene:laituri = keulan suunta); null jos puuttuu.</summary>
         public double? KiertoY;
@@ -45,8 +53,15 @@ namespace Matkakirja.Linssit.Seikkailu
         public bool Heitettava;
         /// <summary>esine: irrotettava (Linnanrakentaja v44h: syvennyksen muuratut kivet).</summary>
         public bool Irrotettava;
+        /// <summary>esine: kiintea (Linnanrakentaja v44k: kilpilaatat seinässä): näkyy, ei poimittavissa.</summary>
+        public bool Kiintea;
+        /// <summary>esine: kannettava (tarjotin, molemmat kädet) ja kaadettava (patapino) sekä äänen kuuluvuus aani_m (v44m).</summary>
+        public bool Kannettava, Kaadettava;
+        public double AaniM;
         /// <summary>luukku: sarana (Linnanrakentaja v44i), glTF-koordinaatit; null jos puuttuu.</summary>
         public double[] Sarana;
+        /// <summary>kiipeily: yläpää (v44q kiipeily:tikkaat-*), glTF; null jos puuttuu.</summary>
+        public double[] Yla;
     }
 
     public sealed class KavelyData
@@ -72,7 +87,7 @@ namespace Matkakirja.Linssit.Seikkailu
                     {
                         Id = pari.Key, Nakyva = MiniJson.Teksti(t, "nakyva"), Tormays = MiniJson.Teksti(t, "tormays"),
                         Kavely = MiniJson.Teksti(t, "kavely"), Varmuus = MiniJson.Teksti(v, "varmuus"),
-                        KattoY = MiniJson.Luku(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "kamera_rajat")), "katto_y"),
+                        KattoY = MiniJson.Luku(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "kamera_rajat")), "katto_y"), Pinta = MiniJson.Teksti(v, "pinta"),
                     };
                     var r = MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "rajat"));
                     osa.RajatMin = Vektori(MiniJson.Kentta(r, "min")); osa.RajatMax = Vektori(MiniJson.Kentta(r, "max"));
@@ -108,8 +123,14 @@ namespace Matkakirja.Linssit.Seikkailu
                 Nimi = nimi, Laji = kp > 0 ? nimi.Substring(0, kp) : "", Tunnus = kp > 0 ? nimi.Substring(kp + 1) : nimi,
                 Osa = MiniJson.Teksti(o, "osa"), Tyyppi = MiniJson.Teksti(o, "tyyppi"), Glb = MiniJson.Teksti(o, "glb"),
                 X = p[0], Y = p[1], Z = p[2], Leveys = MiniJson.Luku(o, "leveys") ?? 0, Korkeus = MiniJson.Luku(o, "korkeus") ?? 0,
-                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
+                Koko = MiniJson.Luku(o, "koko") ?? 0, OdotaS = MiniJson.Luku(o, "odota_s") ?? MiniJson.Luku(o, "odotus_s") ?? 0, KiertoY = MiniJson.Luku(o, "kierto_y"), Heitettava = MiniJson.Kentta(o, "heitettava") is bool hb && hb, Irrotettava = MiniJson.Kentta(o, "irrotettava") is bool ib && ib,
                 Sarana = MiniJson.Kentta(o, "sarana") is object sa ? Vektori(sa) : null,
+                Yla = MiniJson.Kentta(o, "yla") is object ya ? Vektori(ya) : null,
+                Kiintea = MiniJson.Kentta(o, "kiintea") is bool kb && kb,
+                Kannettava = MiniJson.Kentta(o, "kannettava") is bool kab && kab, Kaadettava = MiniJson.Kentta(o, "kaadettava") is bool kdb && kdb, AaniM = MiniJson.Luku(o, "aani_m") ?? 0,
+                Henkilo = MiniJson.Teksti(o, "henkilo"), Profiili = MiniJson.Teksti(o, "profiili"),
+                Lyhty = MiniJson.Kentta(o, "lyhty") is bool lyb && lyb, Soihtu = MiniJson.Kentta(o, "soihtu") is bool sob && sob,
+                KokoV = MiniJson.Kentta(o, "koko") is List<object> kl && kl.Count == 3 ? Vektori(kl) : null,
             };
         }
 

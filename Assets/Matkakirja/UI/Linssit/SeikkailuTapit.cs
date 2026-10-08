@@ -9,9 +9,19 @@
 // TIETOKERROS (Siirtoseppä E3, Päätoimittaja 7.10. 18.0x, olemassa olevat pohjat, ei hehkua): pelin aikana tietokortin avautuessa
 // vain Pulun ele Tunne("utelias", 0.3) ilman tekstiä; lopussa Pulun ele Tunne("ilo") ja kortisto KORTTI-pohjalla, joka EI avaudu
 // itsestään vaan vasta Pulun napautuksesta (tieto vain halutessaan). Tarjous päättyy, kun seikkailu päättyy.
+// PELATTAVUUSMALLI (docs/raportit/pelattavuusmalli-olavinlinna.md kohta 6, 8.10.): kosketuksella KATSE vedetään koko oikealla
+// puoliskolla CupolaVedon kaavalla (Input Systemin kosketukset suoraan, UI:n päältä alkava ohitetaan, 10 pt:n napautusraja):
+// 0,30°/pt vaaka, 0,22°/pt pysty, ei liukumaa, "kuin kuvaa selaisi" (sormi oikealle → katse vasemmalle); Siirtoseppä lukee
+// OtaKatse() joka ruutu. Oikea TAPPI on testikytkin (oletus piilossa). Lyhyt napautus maailmaan (ei UI, ei vetoa) kutsuu
+// SeikkailuPelaaja.Napautus(px) (napautuskävely tai toiminto alle 1,2 m:n esineeseen). Mac: hiiri on Siirtosepän.
+// Pulun vihje myös näppäimellä: Mac P, peliohjain Y (LuePuluNappain → PuluKaappaa).
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Kosketus = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using KosketusVaihe = UnityEngine.InputSystem.TouchPhase;
 
 namespace Matkakirja.Natiivi
 {
@@ -33,22 +43,53 @@ namespace Matkakirja.Natiivi
         static PropertyInfo aktiivinen;
         static bool haettu;
 
-        /// <summary>Poimi- ja heitä-kuvakkeet (UI-POHJAT-kysymys Päätoimittajalle 7.10. 16.4x: uudet viivaikonit vai olemassa olevat).</summary>
-        static string PoimiIkoni => Ikonit.Viiva["peukalo"];
-        static string HeitaIkoni => Ikonit.Viiva["nuoli"];
+        /// <summary>
+        /// Kontekstikuvake verbin mukaan (omistaja 7.10. 20.3x): kaari = heitä, liekki = sytytä/puhalla/sammuta, muuten käsi
+        /// (poimi, käytä, avaa, aseta, laske, ota, irrota, koputa …).
+        /// </summary>
+        static string Kuvake(string tila)
+        {
+            switch ((tila ?? "").ToLowerInvariant())
+            {
+                case "heita": case "heitä": return Ikonit.Heittokaari;
+                case "sytyta": case "sytytä": case "puhalla": case "sammuta": case "kynttila": return Ikonit.Liekki;
+                default: return Ikonit.Kasi;
+            }
+        }
         /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
         public static string TestiToiminto;
         readonly UiKerros kerros;
+        readonly int kerrosNro;
+
+        /// <summary>Katseen vetokertoimet (pelattavuusmalli kohta 6) ja suunta: true = kamera seuraa sormea (testi), false = selaus.</summary>
+        public static float AsteitaVaaka = 0.30f, AsteitaPysty = 0.22f;
+        public static bool VetoSuora;
+        /// <summary>Oikea TAPPI näkyvissä (testikytkin `ui seikkailutapit oikeatappi on|off`); oletus piilossa, katse vedolla.</summary>
+        public static bool OikeaTappi;
+        const float NapautusPt = 10f;   // sama raja kuin PalloKierto.napautusLiike / CupolaVeto
+        const double NapautusS = 0.35;
+
+        sealed class Sormi { public Vector2 Alku, Edellinen; public double AlkuT; public bool Ui, Veto, Oikealla; }
+        static readonly Dictionary<int, Sormi> sormet = new Dictionary<int, Sormi>();
+        static readonly HashSet<int> nahdyt = new HashSet<int>();
+        static Vector2 katseKertyma;
+        static MethodInfo pelaajaNapautus;
+        static bool napautusHaettu;
+        static string viimeNapautus = "-";
+
+        /// <summary>Katseen veto asteina edellisestä lukukerrasta (x kääntö + oikealle, y nosto + ylös); lukeminen nollaa.</summary>
+        public static Vector2 OtaKatse() { var k = katseKertyma; katseKertyma = Vector2.zero; return k; }
         readonly VisualElement toimintoRivi;
         readonly Button toimintoNappi;
         string toimintoTila;   // null = piilossa, "poimi" tai "heita"
-        static PropertyInfo esineetAktiivinen, esineLahin, esineKadessa;
+        static PropertyInfo esineetAktiivinen, esineLahin, esineKadessa, esineVerbi;
         static FieldInfo esineToiminto;
         static bool esineetHaettu;
 
         public SeikkailuTapit(UiKerros kerros, int kerrosNro)
         {
             this.kerros = kerros;
+            this.kerrosNro = kerrosNro;
             juuri = Rakenne.El("mk-seikkailutapit", kerros.Turva(kerrosNro), PickingMode.Ignore);
             juuri.style.position = Position.Absolute;
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
@@ -60,7 +101,7 @@ namespace Matkakirja.Natiivi
             toimintoRivi.style.top = StyleKeyword.Auto;
             toimintoRivi.style.right = OpasTapit.Reuna + OpasTapit.Halkaisija * 0.5f - Tyylikirja.Nappi.Ohjaus * 0.5f;
             toimintoRivi.style.bottom = TappiAla + OpasTapit.Halkaisija + 8f;
-            toimintoNappi = Ohjausnappi.Nappi(PoimiIkoni, "Poimi", PyydaToiminto, toimintoRivi);
+            toimintoNappi = Ohjausnappi.Nappi(Ikonit.Kasi, "Poimi", PyydaToiminto, toimintoRivi);
             toimintoRivi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
             viimeisin = this;
@@ -89,9 +130,13 @@ namespace Matkakirja.Natiivi
                 esineetAktiivinen = t?.GetProperty("Aktiivinen", BindingFlags.Public | BindingFlags.Static);
                 esineLahin = t?.GetProperty("Lahin", BindingFlags.Public | BindingFlags.Instance);
                 esineKadessa = t?.GetProperty("Kadessa", BindingFlags.Public | BindingFlags.Instance);
+                esineVerbi = t?.GetProperty("Toiminto", BindingFlags.Public | BindingFlags.Instance);
                 esineToiminto = t?.GetField("ToimintoPyydetty", BindingFlags.Public | BindingFlags.Static);
             }
             if (!(esineetAktiivinen?.GetValue(null) is Object e) || e == null) return null;
+            // VALMIS VERBI (Siirtoseppä, historia-fp d1734576): SeikkailuEsineet.Toiminto ("Poimi", "Heitä", "Aseta", "Avaa" …),
+            // null = nappi piiloon. Tila on verbi sellaisenaan (VoiceOver-nimi); alla oleva tunnuskartta vain vanhalle rajapinnalle.
+            if (esineVerbi != null) return esineVerbi.GetValue(e) as string is string v && v.Length > 0 ? v : null;
             // Pyhä esine (kalkki, pateeni, liuskekivi) lasketaan, ei heitetä (Siirtoseppä E3); muut kädessä olevat heitetään.
             if (esineKadessa?.GetValue(e) is string k && k.Length > 0) return PyhaEsine(k) ? "laske" : "heita";
             // E3 (Siirtoseppä): kynttilä, koputus ja kivet omina tiloina samalla napilla (VoiceOver-nimi Toimintonimet); kuvake kuten poimi.
@@ -129,23 +174,85 @@ namespace Matkakirja.Natiivi
             toimintoTila = tila;
             toimintoRivi.style.display = tila == null ? DisplayStyle.None : DisplayStyle.Flex;
             if (tila == null) return;
-            bool heita = tila == "heita";
             toimintoNappi.Clear();
-            toimintoNappi.Add(new SvgIkoni(heita ? HeitaIkoni : PoimiIkoni));
-            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : "Poimi";   // VoiceOver-nimi
+            toimintoNappi.Add(new SvgIkoni(Kuvake(tila)));
+            // VoiceOver-nimi: valmis verbi sellaisenaan, vanhan rajapinnan tila Toimintonimistä.
+            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : tila;
         }
 
         const float TappiAla = 40f;
 
+        /// <summary>Kosketukset joka ruutu (vain seikkailussa): oikean puoliskon veto katseeksi, lyhyt napautus maailmaan.</summary>
+        void LueKosketukset()
+        {
+            if (!nakyy) { sormet.Clear(); katseKertyma = Vector2.zero; return; }
+            float lev = kerros.Juuri(kerrosNro).layout.width;
+            float k = lev > 1f && !float.IsNaN(lev) ? Screen.width / lev : 1f;   // pikseliä pisteessä
+            nahdyt.Clear();
+            foreach (var t in Kosketus.activeTouches)
+            {
+                int id = t.touchId;
+                var px = t.screenPosition;
+                nahdyt.Add(id);
+                if (t.phase == KosketusVaihe.Began || !sormet.TryGetValue(id, out var s))
+                {
+                    s = new Sormi { Alku = px, Edellinen = px, AlkuT = t.startTime, Ui = UiKerros.Peittaa(px), Oikealla = px.x >= Screen.width * 0.5f };
+                    sormet[id] = s;
+                }
+                if (!s.Ui)
+                {
+                    if (!s.Veto && ((px - s.Alku) / k).magnitude > NapautusPt) s.Veto = true;
+                    if (s.Veto && s.Oikealla && !OikeaTappi)
+                    {
+                        var d = (px - s.Edellinen) / k;   // pisteinä, y ylös (Input System)
+                        float suunta = VetoSuora ? 1f : -1f;
+                        katseKertyma += new Vector2(suunta * d.x * AsteitaVaaka, suunta * d.y * AsteitaPysty);
+                        Ruudunpaivitys.Herata();
+                    }
+                }
+                s.Edellinen = px;
+                if (t.phase == KosketusVaihe.Ended || t.phase == KosketusVaihe.Canceled)
+                {
+                    if (t.phase == KosketusVaihe.Ended && !s.Ui && !s.Veto && t.time - s.AlkuT <= NapautusS) Napauta(px);
+                    sormet.Remove(id);
+                }
+            }
+            if (sormet.Count > nahdyt.Count)
+                foreach (var id in new List<int>(sormet.Keys)) if (!nahdyt.Contains(id)) sormet.Remove(id);
+        }
+
+        /// <summary>Napautus maailmaan: SeikkailuPelaaja.Napautus(Vector2 px) (Siirtoseppä, historia-fp) heijastuksella.</summary>
+        static void Napauta(Vector2 px)
+        {
+            if (!napautusHaettu)
+            {
+                napautusHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                pelaajaNapautus = tp?.GetMethod("Napautus", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(Vector2) }, null);
+            }
+            object osui = pelaajaNapautus?.Invoke(null, new object[] { px });
+            viimeNapautus = $"({px.x:0}, {px.y:0}) px → {(pelaajaNapautus == null ? "ei SeikkailuPelaaja.Napautusta" : osui is bool b && b ? "maailma" : "ei osumaa")}";
+            Debug.Log("MATKAKIRJA seikkailutapit: napautus " + viimeNapautus);
+        }
+
+        bool oikeaNakyy;
+
         void Paivita()
         {
             PaivitaToiminto();
+            LueKosketukset();
+            LuePuluNappain();
+            bool oikeaNyt = nakyy && OikeaTappi;
+            if (oikeaNyt != oikeaNakyy) { oikeaNakyy = oikeaNyt; oikea.Nayta(oikeaNyt); }
             bool nayta = TestiNakyy ?? PelaajaAktiivinen();
             if (nayta == nakyy) return;
             nakyy = nayta;
-            if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous ja Pulun kaappaus pois
+            if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous pois
+            // Pulun napautus seikkailun ajan: tietokerros tai vihje (PuluKaappaa); muulloin Pulun oma (chat).
+            Pulu.Hae().NapautusKaappaa = nayta ? PuluKaappaa : (System.Func<bool>)null;
             vasen.Nayta(nayta);
-            oikea.Nayta(nayta);
+            oikeaNakyy = nayta && OikeaTappi;
+            oikea.Nayta(oikeaNakyy);
             // Alareuna ja sivureuna kuten oppaan tapeilla (krediittien yläpuolella, reunasta OpasTapit.Reuna).
             vasen.Juuri.style.bottom = TappiAla; oikea.Juuri.style.bottom = TappiAla;
             Debug.Log("MATKAKIRJA seikkailutapit: " + (nayta ? "näkyvät" : "piilossa"));
@@ -194,10 +301,47 @@ namespace Matkakirja.Natiivi
                 tkOtsikot = otsikot; tkTekstit = tekstit; tkLyhyet = lyhyet;
                 tkHimmennys?.RemoveFromHierarchy(); tkHimmennys = null;
                 var pulu = Pulu.Hae();
-                pulu.NapautusKaappaa = () => { if (tkOtsikot == null) return false; AvaaTietokerros(); return true; };
+                pulu.NapautusKaappaa = PuluKaappaa;
                 pulu.Tunne("ilo");
                 Debug.Log($"MATKAKIRJA seikkailutapit: tietokerros tarjolla, {otsikot?.Length ?? 0} korttia");
             });
+        }
+
+        static MethodInfo puluVihje;
+        static bool vihjeHaettu;
+
+        /// <summary>
+        /// Pulun reunakuvan napautus seikkailussa: tietokerroksen tarjous edelle, muuten SeikkailuPelaaja.PuluVihje() (Siirtoseppä,
+        /// vihjeportaat; false = ei vihjettä → Pulun tavallinen napautus).
+        /// </summary>
+        static bool PuluKaappaa()
+        {
+            if (tkOtsikot != null) { AvaaTietokerros(); return true; }
+            if (!vihjeHaettu)
+            {
+                vihjeHaettu = true;
+                var tp = typeof(SeikkailuTapit).Assembly.GetType("Matkakirja.Natiivi.SeikkailuPelaaja");
+                puluVihje = tp?.GetMethod("PuluVihje", BindingFlags.Public | BindingFlags.Static, null, System.Type.EmptyTypes, null);
+            }
+            bool kaytetty = puluVihje?.Invoke(null, null) is bool b && b;
+            Debug.Log("MATKAKIRJA seikkailutapit: Pulun napautus → " + (kaytetty ? "vihje" : "ei vihjettä"));
+            return kaytetty;
+        }
+
+        /// <summary>
+        /// Pulun vihje näppäimellä (pelattavuusmalli kohta 6): Mac P, peliohjain Y (pohjoinen nappi) tekee seikkailun aikana saman
+        /// kuin reunakuvan napautus (PuluKaappaa: tietokerros tai vihje). Ei tekstikentän ollessa kohdistettuna.
+        /// </summary>
+        void LuePuluNappain()
+        {
+            if (!nakyy) return;
+            var kb = UnityEngine.InputSystem.Keyboard.current; var gp = UnityEngine.InputSystem.Gamepad.current;
+            bool p = kb != null && kb.pKey.wasPressedThisFrame;
+            bool y = gp != null && gp.buttonNorth.wasPressedThisFrame;
+            if (!p && !y) return;
+            if (p && vasen.Juuri.panel?.focusController?.focusedElement is TextField) return;
+            Debug.Log("MATKAKIRJA seikkailutapit: Pulun vihje " + (p ? "P" : "Y"));
+            PuluKaappaa();
         }
 
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
@@ -205,7 +349,6 @@ namespace Matkakirja.Natiivi
         {
             if (tkOtsikot == null) return;
             tkOtsikot = tkTekstit = tkLyhyet = null;
-            Pulu.Hae().NapautusKaappaa = null;
             if (tkHimmennys != null) { tkHimmennys.RemoveFromHierarchy(); tkHimmennys = null; }
         }
 
@@ -241,6 +384,71 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(tkHimmennys, true, 250);
         }
 
+        /// <summary>
+        /// TEKSTIVAHTI (pelattavuusmalli kohta 11, vaihe 3): seikkailussa ei näkyvää tekstiä paitsi löytö- (Paljastus, .mk-paljastus)
+        /// ja tietokerrospohjissa. Käy UiKerroksen kaikki kerrokset: näkyvä = koko ketju display ≠ None, visibility näkyvä,
+        /// peitto > 0,01 ja laatikko ruudulla. Karttakrediitit ovat Cesiumin omassa dokumentissa (pakolliset, eivät kuulu tähän).
+        /// Palauttaa "OK" tai "VIRHE n: teksti @ polku …" (testi `ui seikkailutapit teksti`, Siirtosepän botti lokiväittämäksi).
+        /// </summary>
+        public static string Tekstivahti()
+        {
+            var ui = UiKerros.Hae();
+            var loydot = new List<string>();
+            foreach (var (nro, juuri) in ui.Juuret)
+            {
+                float w = juuri.layout.width, h = juuri.layout.height;
+                juuri.Query<TextElement>().ForEach(t =>
+                {
+                    if (string.IsNullOrWhiteSpace(t.text) || !Nakyva(t, w, h)) return;
+                    for (var e = (VisualElement)t; e != null; e = e.parent)
+                        if (e.ClassListContains("mk-paljastus") || e == tkHimmennys) return;
+                    loydot.Add($"\"{(t.text.Length > 30 ? t.text.Substring(0, 30) + "…" : t.text)}\" @ {nro}/{t.parent?.GetClasses().FirstOrDefault() ?? t.parent?.name ?? "-"}");
+                });
+            }
+            return loydot.Count == 0 ? "OK" : $"VIRHE {loydot.Count}: " + string.Join("; ", loydot.Take(12));
+        }
+
+        static bool Nakyva(VisualElement t, float w, float h)
+        {
+            var r = t.worldBound;
+            if (r.width < 1f || r.height < 1f || r.xMax <= 0f || r.yMax <= 0f || r.xMin >= w || r.yMin >= h) return false;
+            for (var e = t; e != null; e = e.parent)
+            {
+                var rs = e.resolvedStyle;
+                if (rs.display == DisplayStyle.None || rs.visibility == Visibility.Hidden || rs.opacity < 0.01f) return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// PELATTAVAN PALAN AVAUS JATKA/ALUSTA-VALINNALLA (Siirtoseppä V6-tallennus, Päätoimittaja 7.10. 20.1x): jos tallennus on
+        /// (SeikkailuTallentaja.LueTiedosto("olavinlinna", DioraamaSovitin.PelattavaPalaHash) != null), olemassa oleva Vahvistus-
+        /// dialogi "Olavinlinna" / "Jatketaanko siitä, mihin jäit?" / Alusta (TOIMINTO) ja Jatka (kulta); Jatka asettaa
+        /// DioraamaSovitin.PelattavaPalaJatka = true ennen LinssiOhjain.AvaaPelattavaPala(). Ilman tallennusta suoraan alusta.
+        /// Esc sulkee käynnistämättä. Siirtosepän luokat heijastuksella (historia-fp); Paavalikon rivi kutsuu tätä.
+        /// </summary>
+        public static void AvaaPelattavaPala()
+        {
+            var asm = typeof(SeikkailuTapit).Assembly;
+            var sovitin = asm.GetType("Matkakirja.Natiivi.DioraamaSovitin");
+            var tallentaja = asm.GetType("Matkakirja.Natiivi.SeikkailuTallentaja");
+            var avaa = asm.GetType("Matkakirja.Natiivi.LinssiOhjain")?.GetMethod("AvaaPelattavaPala", BindingFlags.Public | BindingFlags.Static, null, System.Type.EmptyTypes, null);
+            var jatkaKentta = sovitin?.GetField("PelattavaPalaJatka", BindingFlags.Public | BindingFlags.Static);
+            string hash = sovitin?.GetField("PelattavaPalaHash", BindingFlags.Public | BindingFlags.Static)?.GetValue(null) as string;
+            var lue = tallentaja?.GetMethod("LueTiedosto", BindingFlags.Public | BindingFlags.Static, null, new[] { typeof(string), typeof(string) }, null);
+            if (avaa == null) { Debug.LogWarning("MATKAKIRJA seikkailutapit: LinssiOhjain.AvaaPelattavaPala puuttuu"); return; }
+            void Aloita(bool jatka)
+            {
+                jatkaKentta?.SetValue(null, jatka);
+                Debug.Log("MATKAKIRJA seikkailutapit: pelattava pala " + (jatka ? "jatkaa tallennuksesta" : "alusta"));
+                avaa.Invoke(null, null);
+            }
+            object tallennus = hash != null ? lue?.Invoke(null, new object[] { "olavinlinna", hash }) : null;
+            if (tallennus == null) { Aloita(false); return; }
+            UiNakymat.Hae().Vahvistus.Kysy("Olavinlinna", "Jatketaanko siitä, mihin jäit?", "Alusta", "Jatka",
+                () => Aloita(true), kunPeruttu: () => Aloita(false));
+        }
+
         /// <summary>Testi: tila, arvot ja laatikot.</summary>
         public static string Kuvaus()
         {
@@ -248,6 +456,7 @@ namespace Matkakirja.Natiivi
             Rect a = vasen.Juuri.worldBound, b = oikea.Juuri.worldBound;
             return $"seikkailutapit {(viimeisin.nakyy ? "näkyvät" : "piilossa")}, vasen {Vasen.x:0.00},{Vasen.y:0.00} @ {a.xMin:0},{a.yMin:0} {a.width:0}×{a.height:0}, "
                  + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}, "
+                 + $"oikea tappi {(OikeaTappi ? "päällä" : "piilossa (veto)")}, veto {(VetoSuora ? "suora" : "selaus")}, sormia {sormet.Count}, napautus {viimeNapautus}, "
                  + $"toiminto {viimeisin.toimintoTila ?? "piilossa"} @ {viimeisin.toimintoNappi.worldBound.center.x:0},{viimeisin.toimintoNappi.worldBound.center.y:0}";
         }
     }

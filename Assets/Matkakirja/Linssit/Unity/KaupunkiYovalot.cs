@@ -30,6 +30,8 @@ namespace Matkakirja.Natiivi
         /// valonheiton (Eiffel kultaisena). OpasSovitin asettaa joka kehys; null = ei kohdetta.</summary>
         public static (double lat, double lon, double maaM, double sadeM)? Kohde;
         public static float KohdeVoima = 2.8f;
+        /// <summary>Kohdevalon häivytys 0–1 (OpasSilmukka.KorostusOsuus; Päätoimittaja 8.10. 07.5x: valo hyppäsi yhdessä ruudussa).</summary>
+        public static float KohdeOsuus = 1f;
         /// <summary>Katumaskin tarkkuus (px) ja alue (m): oletus 6 km (testitiedosto), ämpäritiedostossa 2 × r enintään 12 km;
         /// 2048² R8 + mipit ≈ 5,6 Mt (8 km ≈ 3,9 m/px; isot kaupungit r 6000 → 12 km ≈ 5,9 m/px).</summary>
         public const float TieSivuM = 6000f, TieSivuMax = 12000f; public const int TieN = 2048;
@@ -89,7 +91,7 @@ namespace Matkakirja.Natiivi
                 var u = georef.TransformEarthCenteredEarthFixedPositionToUnity(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(ko.lon, ko.lat, ko.maaM)));
                 var pk = georef.transform.worldToLocalMatrix.MultiplyPoint3x4(new Vector3((float)u.x, (float)u.y, (float)u.z));
                 materiaali.SetVector(IdKohde, new Vector4(pk.x, pk.y, pk.z, 1f));
-                materiaali.SetVector(IdKohdeParam, new Vector4((float)Math.Min(90, Math.Max(25, ko.sadeM * 0.4)), KohdeVoima, 0f, 0f));   // v5: kapeampi (lähikuva kokonaan kultainen)
+                materiaali.SetVector(IdKohdeParam, new Vector4((float)Math.Min(90, Math.Max(25, ko.sadeM * 0.4)), KohdeVoima * Mathf.SmoothStep(0f, 1f, KohdeOsuus), 0f, 0f));   // v5: kapeampi (lähikuva kokonaan kultainen)
             }
             else materiaali.SetVector(IdKohde, Vector4.zero);
         }

@@ -177,15 +177,15 @@ namespace Matkakirja.Natiivi
             {
                 // Äänetön kiinniotto (vouti tarttuu olkaan) → E3c tyrmä; nyt tallennuspisteeseen "pimeä kappeli" ja valppaus.
                 kirjaa?.Invoke("seikkailu: vouti otti Foggin kiinni (tyrmä → pimeä kappeli)");
-                p.Siirra(Tallennus);
                 voudinKierros.Tyrmasta();
+                Tyrmaan(p);
             }
         }
 
         // --- E3c: kappalaisen paluu (vaihe 7) ---
         public const float PaluuS = 100f, LyhtyM = 2.5f, VaroitusS = 6f;
         bool paluuTehty, raapaistu; float pimeaAlku;
-        void Raapaisu() => raapaistu = true;
+        void Raapaisu() { if (SeikkailuTyrma.Aktiivinen == null) raapaistu = true; }   // tyrmän irtokivi ei kutsu kappalaista
 
         IEnumerator Paluu()
         {
@@ -196,6 +196,7 @@ namespace Matkakirja.Natiivi
             kappalainen.gameObject.SetActive(true);
             kappalainen.position = reunaOvi + (reunaOvi - alttari).normalized * 1.2f;
             lyhty.enabled = true; lyhty.intensity = 0f;
+            SeikkailuPelaaja.Aktiivinen?.PyydaKaanto(reunaOvi);   // valo oven alla: käännössääntö (pelattavuusmalli 7.3)
             for (float t = 0; t < 2f; t += Time.deltaTime) { lyhty.intensity = Mathf.Lerp(0f, 0.8f, t / 2f); yield return null; }
             double kesto = SeikkailuRepliikit.Aktiivinen?.Soita("kappalainen-2", kappalainen) ?? 0;
             yield return new WaitForSeconds((float)Math.Max(1.0, kesto));
@@ -254,11 +255,18 @@ namespace Matkakirja.Natiivi
             double k2 = SeikkailuRepliikit.Aktiivinen?.Soita("vartija-kiinni-2", kappalainen) ?? 0;
             yield return new WaitForSeconds((float)Math.Max(1.5, k2));
             // Tyrmä (ehdotus 2.7): äänetön pako myöhemmin; nyt suoraan tallennuspisteeseen "pimeä kappeli", kohtaus ei toistu.
-            var p = SeikkailuPelaaja.Aktiivinen; if (p != null) p.Siirra(Tallennus);
+            var p = SeikkailuPelaaja.Aktiivinen; if (p != null) Tyrmaan(p);
             lyhty.intensity = 0f; kappalainen.gameObject.SetActive(false);
             voudinKierros.Tyrmasta();
             paluuTehty = false; raapaistu = false; pimeaAlku = Time.time;   // "kerran yritystä kohden"
             Nyt = Vaihe.Pimea;
+        }
+
+        /// <summary>E3c / pelattavuusmalli 4.1: kiinnijäänti kappelissa → tyrmä (jos merkit paketissa), sitten tallennuspiste "pimeä kappeli".</summary>
+        void Tyrmaan(SeikkailuPelaaja p)
+        {
+            if (p == null) return;
+            if (!SeikkailuTyrma.Aloita(transform.parent, p, () => { var q = SeikkailuPelaaja.Aktiivinen; if (q != null) q.Siirra(Tallennus); }, kirjaa)) p.Siirra(Tallennus);
         }
 
         // --- E3d: löytö (vaihe 10) Natiivi-UI:n Paljastus-pohjalla (SeikkailuTapit.NaytaLoyto heijastuksella) ---
@@ -270,6 +278,8 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke("seikkailu: löytö: kalkki, pateeni ja liuskekivi");
             var pl = SeikkailuPelaaja.Aktiivinen;
             if (pl != null) { SeikkailuAanet.Soita("liina-avaus", pl.transform.position + Vector3.up, 0.8f); SeikkailuAanet.Soita("hopea-kilahdus", pl.transform.position + Vector3.up * 1.1f, 0.7f); }
+            // Löytömerkki (pelattavuusmalli 10, omistajan päätös 4): kanteleen 3–4 säveltä, aanet-fp-v1 "loyto-kantele" (puuttuessa hiljaa).
+            if (pl != null) SeikkailuAanet.Soita("loyto-kantele", pl.transform.position + Vector3.up * 1.6f, 0.8f);
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuTapit");
             var m = t?.GetMethod("NaytaLoyto", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (m == null) { kirjaa?.Invoke("seikkailu: löytö: SeikkailuTapit.NaytaLoyto puuttuu"); return; }
@@ -310,7 +320,7 @@ namespace Matkakirja.Natiivi
             DioraamaSovitin.KameraVapaa = true;
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuNousu");
             var m = t?.GetMethod("Aloita", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            Action valmis = () => { kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)"); SeikkailuTietokerros.Aktiivinen?.Loppu(); };
+            Action valmis = () => { kirjaa?.Invoke("seikkailu: pelattava pala valmis (nousu päättyi)"); SeikkailuTietokerros.Aktiivinen?.Loppu(); SeikkailuTallentaja.Aktiivinen?.Valmis(); };
             if (m != null) { try { m.Invoke(null, new object[] { kamera, kamera.position, valmis }); yield break; } catch (Exception e) { kirjaa?.Invoke("seikkailu: SeikkailuNousu: " + (e.InnerException?.Message ?? e.Message)); } }
             // Varanousu (kunnes LS2:n SeikkailuNousu on mukana): holvin läpi 80 m linnan ylle katse alas keskukseen, 9 s.
             var alku = kamera.position; var loppuP = keskus + new Vector3(-40f, 80f, -60f);

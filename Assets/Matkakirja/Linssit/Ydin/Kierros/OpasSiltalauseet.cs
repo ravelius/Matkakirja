@@ -36,6 +36,17 @@ namespace Matkakirja.Linssit.Kierros
         public static readonly string[] KysymysLauseet = { "Hyvä kysymys.", "Tästä on kiinnostava tarina.", "Kerron mielelläni lisää.", "Katsotaan tarkemmin." };
         public static readonly string[] VapaanToiveenLauseet = { "Tiedän juuri oikean paikan.", "Hyvä, minulla on sinulle jotain.", "Hyvä toive, se onnistuu.", "Mainio ajatus." };
         public static readonly string[] LennonOdotukset = { "Melkein perillä.", "Kohta ollaan siellä." };
+        /// <summary>Valmiin esittelyn kaupunki (omistaja TF 163: "miksi lukija sanoo pariisissa että mietin sopivan reitin? eikö se
+        /// pitäisi olla jo valmiiksi mietittynä?"): lennon odotus vain "perillä"-lauseilla, paikallaan ei odotuslausetta lainkaan.</summary>
+        public const string OdotusValmis = "@odotus-valmis";
+
+        /// <summary>Ryhmä valmiin esittelyn kaupungissa: reitin miettimistä kuvaavat odotukset pois; null = ei lausetta.</summary>
+        public static string ValmiillaReitilla(string ryhma) => ryhma switch
+        {
+            Odotus => OdotusValmis,
+            OdotusPaikalla => null,
+            _ => ryhma,
+        };
 
         static bool On(string[] lista, string teksti) => teksti != null && Array.IndexOf(lista, teksti.Trim()) >= 0;
 
@@ -45,6 +56,7 @@ namespace Matkakirja.Linssit.Kierros
             Kysymys => (Syventava, l => On(KysymysLauseet, l.Teksti)),
             Valinta => (Kuittaus, l => !On(VapaanToiveenLauseet, l.Teksti)),
             OdotusPaikalla => (Odotus, l => !On(LennonOdotukset, l.Teksti)),
+            OdotusValmis => (Odotus, l => On(LennonOdotukset, l.Teksti)),
             _ => (ryhma, null),
         };
 

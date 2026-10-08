@@ -111,6 +111,15 @@ namespace Matkakirja.Natiivi
             if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
         }
 
+        /// <summary>Irrallisen hahmon solmu nimellä (kädet: kahva_oikea, Kontaktivarjo), kun malli on rakennettu; muuten null.</summary>
+        public Transform IrrallisenSolmu(string henkiloId, string nimi)
+        {
+            foreach (var e in esiintymat)
+                if (e.Isa != null && e.HahmoId == henkiloId && e.Juuri != null)
+                    foreach (var t in e.Juuri.GetComponentsInChildren<Transform>(true)) if (t.name == nimi) return t;
+            return null;
+        }
+
         /// <summary>Irrallisten hahmojen glb:t, joita ei ole vielä ladattu.</summary>
         public void IrrallistenGlb(List<string> ulos)
         {
@@ -124,6 +133,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Historiamoottori: tilat, joiden kohtaushahmot piilotetaan (E3: kappelin kappalainen ja vouti korvataan pelin hahmoilla).</summary>
         public static readonly HashSet<string> PiilotetutTilat = new HashSet<string>(StringComparer.Ordinal);
+        /// <summary>Historiamoottori: henkilöt, joiden kohtaushahmot piilotetaan kaikista tiloista (partioiva kokki, portinvartija, vartijat).</summary>
+        public static readonly HashSet<string> PiilotetutHenkilot = new HashSet<string>(StringComparer.Ordinal);
 
         public void PoistaIrralliset(string henkiloId = null)
         {
@@ -752,7 +763,7 @@ namespace Matkakirja.Natiivi
             {
                 if (e.Juuri == null) continue; // glb ei ole vielä latautunut — ei GameObjectia, ei mitään tehtävää.
                 if (e.TilaId == "irrallinen") { PaivitaIrrallinen(e); continue; }
-                if (PiilotetutTilat.Contains(e.TilaId)) { if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; } continue; }
+                if (PiilotetutTilat.Contains(e.TilaId) || PiilotetutHenkilot.Contains(e.Hahmo?.HenkiloId ?? "")) { if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; } continue; }
                 if (!nakymaHaku.TryGetValue((e.TilaId, e.HahmoId), out var hn) || !hn.Naky)
                 {
                     if (e.Nakyvissa) { e.Juuri.SetActive(false); e.Nakyvissa = false; }

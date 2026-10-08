@@ -921,13 +921,22 @@ namespace Matkakirja.Linssit.Astronautti
         /// </summary>
         int[] Kierros => kierros ??= AstronauttiKierros.Aineistosta(aineisto.Kierros, aineisto.Kohteet) ?? AstronauttiKierros.Laske(aineisto.Kohteet);
 
+        /// <summary>
+        /// TAUSTAPALLO PAIKALLAAN (omistaja 5.10.2026 klo 16.1x: "taustalla näkyvän maapallon voisi jäädyttää paikalleen, eli se ei
+        /// muuttuisi vaikka kuva muuttuu"): kamera liukuu kuvan kohteen ylle vain kuvan avautuessa, ei selauksessa (‹ ›, AUTO,
+        /// pyyhkäisy, pallovalitsin). Natiivi-UI, Linssisepät kuittasivat. A/B: false = vanha liuku joka kuvalle.
+        /// </summary>
+        public static bool TaustaJaatyy = true;
+
         void AvaaKohde(Havaintokohde kohde, int indeksi)
         {
+            bool selaus = AvoinKuva != null;
             // Kamera liukuu kuvan kohteen ylle: seuranta päättyy (web katsoKohteeseen → lopetaSeuranta).
             LopetaSeuranta();
             AvoinKuva = kohde;
             nakyma.Kuva(kohde, indeksi);
             if (double.IsNaN(kohde.Lat) || double.IsNaN(kohde.Lon)) return;
+            if (selaus && TaustaJaatyy) return;
             // Kamera kohteen ylle nykyisellä korkeudella, kuitenkin enintään lepokorkeudella (pallo täyttää ikkunan).
             double h = Math.Min(y.Kamera.Korkeus, avaus * KuvanKorkeus);
             y.AjaKamera(new Nakyma(kohde.Lat, kohde.Lon, h), y.VahennettyLiike ? 0f : KuvaanAjoS, Matkakirja.Linssit.Kamera.Kamerakayrat.Pehmea);

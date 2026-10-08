@@ -5,6 +5,9 @@ poikkeukset, stillit, ääni, aiemmat palautteet, kuorma, ei-testattu).
 
 **Ajo vain Julkaisijan `SIMULAATTORI NYT` -vuorolla** ja vain vuorossa nimetyllä UDID:llä. Jos toinen simu (esim. junan
 käännös) on vuorossa käynnissä, lisää `--nyt`; ilman sitä ajo pysähtyy. Lopuksi simu sammuu (`--jata-paalle` jättää päälle) → "simu vapaa".
+**Simulaattorit ovat T7-sarjassa** (8.10.2026 alkaen, `/Volumes/T7 4TB/Simulaattorit/Sarja`): todistusajo, sarja.sh ja
+simkosketus käyttävät sitä (`proto-3d/tyokalut/simusarja.sh`); vanha sisäinen UDID käy, se käännetään saman nimisen
+T7-laitteen UDID:ksi. Omissa skripteissä `source /Users/Shared/Claude/proto-3d/tyokalut/simusarja.sh || exit 2` alkuun.
 
     tyokalut/todistusajo/todistusajo.sh --era <haara-tai-aihe> --udid <UDID> --app <polku.app> \
       --sha <käännöksen SHA> --haara <erän commit> --skenaario <tiedosto> [--laite ipad] [--nyt]

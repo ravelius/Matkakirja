@@ -1,0 +1,26 @@
+iPhone 18 Pro	com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	1572C658-6455-4E55-8C05-3F88CB3C32F6
+pariteetti-iPhone	com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2
+pariteetti-iPhone-vaaka	com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	993F8873-E2D9-4230-81CE-CBF9230D9B55
+iPhone 18 Pro Max	com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro-Max	com.apple.CoreSimulator.SimRuntime.iOS-27-0	46EC73E2-7594-4CCB-A2B6-4FAEF263C36E
+linnanrakentaja-iPhone	com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	D760E909-1F24-4047-AC4B-EA64F8D3A4F2
+linssiseppa-iPhone	com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	D0D2CD1E-70C7-4140-A972-E615212E8911
+linssiseppa2-iPhone	com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	F2D9B022-CBC4-41CD-85E2-E30CCA5D6446
+natiiviseppa-iPhone	com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	FBBD41D7-2E5A-4B73-9818-B1D9C6C9C748
+siirtoseppa-iPhone	com.apple.CoreSimulator.SimDeviceType.iPhone-17-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	F989814A-4E6F-4617-8E5E-C7505E30DEF9
+iPhone 17e	com.apple.CoreSimulator.SimDeviceType.iPhone-17e	com.apple.CoreSimulator.SimRuntime.iOS-27-0	4AC5DFFF-6E17-47A4-9BA2-E63865D17EC5
+iPhone Air	com.apple.CoreSimulator.SimDeviceType.iPhone-Air	com.apple.CoreSimulator.SimRuntime.iOS-27-0	D2EBA4C0-72EE-4F18-9DDC-C83B50D12E40
+iPhone 17	com.apple.CoreSimulator.SimDeviceType.iPhone-17	com.apple.CoreSimulator.SimRuntime.iOS-27-0	FB234D08-4693-4496-9C7A-6C7C15B03963
+linnanrakentaja-iPad13	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-16GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	D9AC9B91-2078-4FFF-8412-CEB0AF638E58
+siirtoseppa-iPad13	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-16GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	D5900D45-EB2B-457F-B4C5-182067D2B8FB
+iPad Pro 13-inch (M5)	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	3B4CDACB-CCBE-42EC-809D-FB4D0B43CC7D
+linssiseppa-iPad13	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	3A3E4671-B6EE-43ED-BC90-6FB5E1581C42
+linssiseppa2-iPad13	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	4CE6C737-B056-4F73-9CEA-D2DABFC9B8FC
+pariteetti-iPad13	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	88939C12-2D15-4514-B107-DF6DAAABB227
+pelikoodari-iPad13	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-13-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	CD526454-E966-48B4-AB1F-9EFDAA0BEF53
+linssiseppa-iPad11	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	903C2B91-34C3-4C43-A392-A52F7DAFD96C
+natiivi-ui-iPad11	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	AD119F7B-A2A2-43EE-8769-7326DD757F89
+pariteetti-iPad11-834	com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-M5-12GB	com.apple.CoreSimulator.SimRuntime.iOS-27-0	C1D5E34C-DFA8-4326-AD85-92B58A672AA7
+iPad mini (A17 Pro)	com.apple.CoreSimulator.SimDeviceType.iPad-mini-A17-Pro	com.apple.CoreSimulator.SimRuntime.iOS-27-0	E765DF34-308C-4C6E-8793-7A5529D4AD72
+iPad Air 13-inch (M4)	com.apple.CoreSimulator.SimDeviceType.iPad-Air-13-inch-M4	com.apple.CoreSimulator.SimRuntime.iOS-27-0	926C58CD-1B79-4F6A-BF89-A5A63C1F6B4A
+iPad Air 11-inch (M4)	com.apple.CoreSimulator.SimDeviceType.iPad-Air-11-inch-M4	com.apple.CoreSimulator.SimRuntime.iOS-27-0	EA8A340D-DAB3-46D3-94E3-BEDD8C18E6B4
+iPad (A16)	com.apple.CoreSimulator.SimDeviceType.iPad-A16	com.apple.CoreSimulator.SimRuntime.iOS-27-0	DC74067B-7779-4FE2-B047-C7AD750073E6
