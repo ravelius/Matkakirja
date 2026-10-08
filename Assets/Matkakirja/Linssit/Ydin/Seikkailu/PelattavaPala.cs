@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "84c975aba9876a55";
-        public const string Versio = "v45c";   // v45b + esineiden ASTC-kuvat (kavely/esine-*-4x4.astcm, 21,3 Mt; LR 8.10.), merkit ja osat samat
+        public const string Hash = "e557f4a4dc62944c";
+        public const string Versio = "v45d";   // v45c + kohtaukset v4 (rakennus.json: 8 keskustelun vuorot, kertoja aanet/v2-v3; LR 8.10.), merkit ja osat samat
     }
 }
