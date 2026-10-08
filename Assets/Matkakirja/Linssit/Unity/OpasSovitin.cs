@@ -1445,6 +1445,24 @@ namespace Matkakirja.Natiivi
             };
         }
 
+        // KIERTO KARTALLA (Natiivi-UI 9.10., BUILD 167 -ajo: latauskuva musta, koska muistissa oli ipad-pysty ja siirtymä tarvitsi
+        // vaakarajauksen, jonka purku ei ehtinyt kuormassa): kun ruudun asento vaihtuu kartalla, uuden asennon rajaus puretaan heti.
+        static bool? edellinenVaaka;
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KytkeKierto() { Application.onBeforeRender -= TarkistaKierto; Application.onBeforeRender += TarkistaKierto; }
+        static void TarkistaKierto()
+        {
+            bool vaaka = Screen.width > Screen.height;
+            if (edellinenVaaka == vaaka) return;
+            bool muuttui = edellinenVaaka.HasValue;
+            edellinenVaaka = vaaka;
+            if (muuttui && !Auki && sallitut != null && sallitut.Count > 0)
+            {
+                KirjaaS($"opas: ruutu kiertyi ({(vaaka ? "vaaka" : "pysty")}), latauskuva {PalloKuvaRuudulle()} muistiin");
+                PalloTekstuuriMuistiin();
+            }
+        }
+
         /// <summary>Siirtymän jälkeen: tekstuuri pois muistista.</summary>
         public static void VapautaPalloTekstuuri()
         {
