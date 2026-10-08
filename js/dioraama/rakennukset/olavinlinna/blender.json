@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "aa4f945e438f1134",
-  "kansio": "dioraama/olavinlinna/blender/aa4f945e438f1134/",
+  "hash": "732fc33e6dc72bbc",
+  "kansio": "dioraama/olavinlinna/blender/732fc33e6dc72bbc/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1475,8 +1475,8 @@
     },
     {
       "polku": "materiaalit/detaljit.json",
-      "sha256": "88429b85aaaed3e54d3cc8fc5bc23a77ae60911b2e3c833da755553846ce9459",
-      "tavuja": 809
+      "sha256": "3a4ec4e46843371b9dfa30bcd00f7ac6293ce883237530052498a397d0a2e781",
+      "tavuja": 5234
     },
     {
       "polku": "materiaalit/kivi-albedo-6x6.astcm",
@@ -1507,6 +1507,96 @@
       "polku": "materiaalit/kivi-normaali.jpg",
       "sha256": "affe61b5fe2a04f699ea59e2e8f1772ba77f95f2f423ca044e2723ea42cb395d",
       "tavuja": 514866
+    },
+    {
+      "polku": "materiaalit/lankku-albedo-6x6.astcm",
+      "sha256": "d054a40cb2e733a59cb19f51fcc83300619703423049da8f9d10161f5f5ccf41",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/lankku-albedo.jpg",
+      "sha256": "846979a6ba51f1bb8a256bd203917d651be19cd6ca6494b17450ef34581e037e",
+      "tavuja": 400747
+    },
+    {
+      "polku": "materiaalit/lankku-karheus-6x6.astcm",
+      "sha256": "9929ec978044a5fcd951e62be7014304b1f00f3c0921ab81783acfb4c8f62e79",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/lankku-karheus.jpg",
+      "sha256": "7758d46efa6380dcd9ca72699728e8cd47b065b1da6ce5835586a30d481e7ede",
+      "tavuja": 166078
+    },
+    {
+      "polku": "materiaalit/lankku-normaali-6x6.astcm",
+      "sha256": "812ff7ddb1e30d5b2763020e100ecacdd965995a7ccc00edf4199aed54597770",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/lankku-normaali.jpg",
+      "sha256": "6c9137fe4ad2640b13dbc01c707590de06f206184df9ce2a8ad60dcc8541f094",
+      "tavuja": 339288
+    },
+    {
+      "polku": "materiaalit/puu-albedo-6x6.astcm",
+      "sha256": "50b046562cc1666cc285fff51c6bb65a39d107f3d5f12b43b2b6579c93776a98",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/puu-albedo.jpg",
+      "sha256": "baffb5d75fc8ec20add0d2ffdfbbe2a00e6c53d80bc02badaaff854c45e3f0d4",
+      "tavuja": 298143
+    },
+    {
+      "polku": "materiaalit/puu-karheus-6x6.astcm",
+      "sha256": "34ac132e880ad126637cc690eafa6916eab1ddea95e71c864d41534ba4d119fa",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/puu-karheus.jpg",
+      "sha256": "fb14d5bb93f5c5163cf939f3f4084451db8f48eba93ee9de04bc89005e25218c",
+      "tavuja": 292247
+    },
+    {
+      "polku": "materiaalit/puu-normaali-6x6.astcm",
+      "sha256": "379c75b1bac996d4ded1c053a3ae54ad1664ef0563c89276e46ed8f53d679f1f",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/puu-normaali.jpg",
+      "sha256": "0bd8d514f54d782704e35f31aef9528bc0b1d03271a677e6fdc78bcf7730747f",
+      "tavuja": 245750
+    },
+    {
+      "polku": "materiaalit/rappaus-albedo-6x6.astcm",
+      "sha256": "6382927f7cb5aa94866abb684709b13b1ae5de0cdf3a5179f97210108ef0ddb5",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rappaus-albedo.jpg",
+      "sha256": "fea5beff351f34c76bce7d28dbdc5d06fe5c833447da671fdcec7fbca2059540",
+      "tavuja": 331411
+    },
+    {
+      "polku": "materiaalit/rappaus-karheus-6x6.astcm",
+      "sha256": "4ded934686c647b159f8461f9f7249dda7294ef879fccd50001056043ae1344d",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rappaus-karheus.jpg",
+      "sha256": "bbd0cc066f20ba1ab7782154204354265a214c006ddec8b8eb252bd2f1ba79ca",
+      "tavuja": 195526
+    },
+    {
+      "polku": "materiaalit/rappaus-normaali-6x6.astcm",
+      "sha256": "109905ea670956609b4ec336fed0eee4e392f299fe3121867f4cbf4c64456c6a",
+      "tavuja": 626304
+    },
+    {
+      "polku": "materiaalit/rappaus-normaali.jpg",
+      "sha256": "b1757e1bb03eb7938735e362a665b7d1af89f196251d97b7b78766e2d5652533",
+      "tavuja": 442311
     },
     {
       "polku": "tilat/fatabuuri.glb",
