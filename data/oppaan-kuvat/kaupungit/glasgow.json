@@ -1,0 +1,444 @@
+{
+ "kaupunki": "glasgow",
+ "kaupunkiQ": "Q4093",
+ "kohteet": [
+  {
+   "q": "Q192775",
+   "nimi": "Glasgow’n yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 55.87222,
+   "lon": -4.28806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "University of Glasgow Gilbert Scott Building - Feb 2008.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Glasgow_Gilbert_Scott_Building_-_Feb_2008.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:University_of_Glasgow_Gilbert_Scott_Building_-_Feb_2008.jpg",
+     "selite": "Yliopiston goottilaistyylinen päärakennus kohoaa tornineen Gilmorehillin kukkulalla.",
+     "leveys": 4056,
+     "korkeus": 3099,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "West quadrangle, Gilbert Scott Building, University of Glasgow - geograph.org.uk - 6196922.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/West_quadrangle%2C_Gilbert_Scott_Building%2C_University_of_Glasgow_-_geograph.org.uk_-_6196922.jpg?width=1280",
+     "tekija": "Rudi Winter",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:West_quadrangle%2C_Gilbert_Scott_Building%2C_University_of_Glasgow_-_geograph.org.uk_-_6196922.jpg",
+     "selite": "Yliopiston sisäpihaa ympäröivät hiekkakivestä rakennetut kaarikäytävät ja tornit.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1061094",
+   "nimi": "Kelvingroven taidemuseo",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 55.86861,
+   "lon": -4.29064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kelvingrove Art Gallery and Museum - exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kelvingrove_Art_Gallery_and_Museum_-_exterior.jpg?width=1280",
+     "tekija": "Stinglehammer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kelvingrove_Art_Gallery_and_Museum_-_exterior.jpg",
+     "selite": "Punahiekkakivinen Kelvingroven museo on Glasgow’n tunnetuimpia rakennuksia.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kelvingrove Art Gallery and Museum - aerial - 2025-04-17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kelvingrove_Art_Gallery_and_Museum_-_aerial_-_2025-04-17.jpg?width=1280",
+     "tekija": "瑞丽江的河水",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kelvingrove_Art_Gallery_and_Museum_-_aerial_-_2025-04-17.jpg",
+     "selite": "Ilmasta näkyy museon symmetrinen julkisivu puiston ja yliopiston tornin edessä.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1473348",
+   "nimi": "Glasgow’n tuomiokirkko",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 55.8631,
+   "lon": -4.2346,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2018 07 19 Schottland (33).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_07_19_Schottland_(33).jpg?width=1280",
+     "tekija": "Bewahrerderwerte",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_07_19_Schottland_(33).jpg",
+     "selite": "Keskiaikainen tuomiokirkko on yksi Skotlannin harvoista lähes ehjänä säilyneistä goottilaisista kirkoista.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathedral of St Mungo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cathedral_of_St_Mungo.jpg?width=1280",
+     "tekija": "Yidan Xue",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cathedral_of_St_Mungo.jpg",
+     "selite": "Kirkon vihreät kuparikatot ja torni erottuvat tummasta kivestä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Glasgow Cathedral & Glasgow Necropolis - aerial - 2025-04-17.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_Cathedral_%26_Glasgow_Necropolis_-_aerial_-_2025-04-17.jpg?width=1280",
+     "tekija": "瑞丽江的河水",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_Cathedral_%26_Glasgow_Necropolis_-_aerial_-_2025-04-17.jpg",
+     "selite": "Tuomiokirkon takana kohoavalla kukkulalla on viktoriaaninen Necropolis-hautausmaa.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Glasgow - May 2015 (19) (17858798790).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_-_May_2015_(19)_(17858798790).jpg?width=1280",
+     "tekija": "Daniel from Glasgow, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_-_May_2015_(19)_(17858798790).jpg",
+     "selite": "Kirkon kylkeä rytmittävät korkeat ikkunat ja tukipilarit.",
+     "leveys": 4583,
+     "korkeus": 2985,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q800825",
+   "nimi": "Glasgow Centralin rautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 55.86028,
+   "lon": -4.25806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hielanman's Umbrella, Glasgow Central Station, 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hielanman's_Umbrella%2C_Glasgow_Central_Station%2C_2.jpg?width=1280",
+     "tekija": "LornaMCampbell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hielanman's_Umbrella%2C_Glasgow_Central_Station%2C_2.jpg",
+     "selite": "Asemaa kaupungin keskustassa kutsutaan Highlandmanin sateenvarjoksi sen lasikatoksen mukaan.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Glasgow Central railway station - aerial - 2025-04-17 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_Central_railway_station_-_aerial_-_2025-04-17_04.jpg?width=1280",
+     "tekija": "瑞丽江的河水",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_Central_railway_station_-_aerial_-_2025-04-17_04.jpg",
+     "selite": "Asemahallin laaja lasikatto levittäytyy kaupungin kortteleiden keskelle.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5566778",
+   "nimi": "Glasgow’n kaupungintalo",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 55.86099,
+   "lon": -4.24867,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Glasgow City Chambers Exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_City_Chambers_Exterior.jpg?width=1280",
+     "tekija": "Michael D Beckwith",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_City_Chambers_Exterior.jpg",
+     "selite": "1800-luvun loistokas kaupungintalo hallitsee George Squaren aukiota.",
+     "leveys": 8688,
+     "korkeus": 5792,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Glasgow City Chambers Staircase.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_City_Chambers_Staircase.jpg?width=1280",
+     "tekija": "Michael D Beckwith",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_City_Chambers_Staircase.jpg",
+     "selite": "Kaupungintalon marmoriportaikko on viktoriaanisen Glasgow’n vaurauden näyteikkuna.",
+     "leveys": 8685,
+     "korkeus": 5790,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1529512",
+   "nimi": "Glasgow’n Necropolis",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 300,
+   "lat": 55.86252,
+   "lon": -4.23111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Glasgow Necropolis - aerial - 2025-04-17 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_Necropolis_-_aerial_-_2025-04-17_01.jpg?width=1280",
+     "tekija": "瑞丽江的河水",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_Necropolis_-_aerial_-_2025-04-17_01.jpg",
+     "selite": "Rinnehautausmaa on täynnä muistomerkkejä ja kiemurtelevia polkuja.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2002-04-Glasgow-Necropolis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2002-04-Glasgow-Necropolis.jpg?width=1280",
+     "tekija": "Gunnar Klack",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2002-04-Glasgow-Necropolis.jpg",
+     "selite": "Viktoriaaniset hautamuistomerkit ja obeliski kohoavat hautausmaan kukkulalla.",
+     "leveys": 4040,
+     "korkeus": 2353,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q894634",
+   "nimi": "Glasgow’n kasvitieteellinen puutarha",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 250,
+   "lat": 55.88014,
+   "lon": -4.29064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wfm Glasgow Botanic Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wfm_Glasgow_Botanic_Gardens.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Finlay McWalter assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wfm_Glasgow_Botanic_Gardens.jpg",
+     "selite": "Puutarhan viktoriaaniset lasihuoneet reunustavat laajaa nurmikkoa.",
+     "leveys": 2288,
+     "korkeus": 1712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kibble Palace - Glasgow Botanic Gardens.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kibble_Palace_-_Glasgow_Botanic_Gardens.jpg?width=1280",
+     "tekija": "Wiki.cullin",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kibble_Palace_-_Glasgow_Botanic_Gardens.jpg",
+     "selite": "Kibble Palace on kupolikattoinen rautarakenteinen lasipalatsi täynnä trooppisia kasveja.",
+     "leveys": 1845,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1531015",
+   "nimi": "Glenlee-purjelaiva",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 55.8626,
+   "lon": -4.29806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1. The Tall Ship Glenlee beside the Riverside Museum, Glasgow, Scotland.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1._The_Tall_Ship_Glenlee_beside_the_Riverside_Museum%2C_Glasgow%2C_Scotland.jpg?width=1280",
+     "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1._The_Tall_Ship_Glenlee_beside_the_Riverside_Museum%2C_Glasgow%2C_Scotland.jpg",
+     "selite": "Vuonna 1896 rakennettu kolmimastoinen parkki on säilynyt Clyde-joen rannalla.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Glenlee\" Three-masted barque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Glenlee%22_Three-masted_barque.jpg?width=1280",
+     "tekija": "kitmasterbloke",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Glenlee%22_Three-masted_barque.jpg",
+     "selite": "Teräsrunkoinen purjelaiva muistuttaa Glasgow’n laivanrakennuksen kulta-ajasta.",
+     "leveys": 3873,
+     "korkeus": 4065,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5450733",
+   "nimi": "Finnieston-nosturi",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 100,
+   "lat": 55.85829,
+   "lon": -4.28461,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Finnieston Crane - geograph.org.uk - 6439132.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Finnieston_Crane_-_geograph.org.uk_-_6439132.jpg?width=1280",
+     "tekija": "Richard Sutcliffe",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Finnieston_Crane_-_geograph.org.uk_-_6439132.jpg",
+     "selite": "Käytöstä poistettu jättinosturi on muistuttamassa Clyde-joen telakkateollisuudesta.",
+     "leveys": 1600,
+     "korkeus": 883,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1489852",
+   "nimi": "Pollok House",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 120,
+   "lat": 55.828,
+   "lon": -4.31851,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pollok House, Glasgow.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pollok_House%2C_Glasgow.jpg?width=1280",
+     "tekija": "LornaMCampbell",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pollok_House%2C_Glasgow.jpg",
+     "selite": "1700-luvun kartanon ympärillä levittäytyy laaja Pollok Country Park.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Facade of the Pollok House, Glasgow..JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Facade_of_the_Pollok_House%2C_Glasgow..JPG?width=1280",
+     "tekija": "Osama Shukir Muhammed Amin FRCP(Glasg)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Facade_of_the_Pollok_House%2C_Glasgow..JPG",
+     "selite": "Kartanon hiekkakivinen julkisivu on yksi Skotlannin hienoimpia georgiaanisia taloja.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7252283",
+   "nimi": "Provand’s Lordship",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 60,
+   "lat": 55.8624,
+   "lon": -4.2369,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Provand's Lordship 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Provand's_Lordship_2026.jpg?width=1280",
+     "tekija": "TSP",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Provand's_Lordship_2026.jpg",
+     "selite": "Glasgow’n vanhin säilynyt talo on 1400-luvulta tuomiokirkon vieressä.",
+     "leveys": 7578,
+     "korkeus": 6012,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Glasgow Provand's Lordship 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_Provand's_Lordship_01.jpg?width=1280",
+     "tekija": "Spike",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_Provand's_Lordship_01.jpg",
+     "selite": "Keskiaikaisen talon ympärillä on yrttipuutarha.",
+     "leveys": 4988,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Glasgow - aerial - 2025-04-17 12.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_-_aerial_-_2025-04-17_12.jpg?width=1280",
+   "tekija": "瑞丽江的河水",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_-_aerial_-_2025-04-17_12.jpg",
+   "selite": "Glasgow’n keskusta levittyy Clyde-joen molemmin puolin.",
+   "leveys": 4032,
+   "korkeus": 2268,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Glasgow City Chambers - aerial - 2025-04-17 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_City_Chambers_-_aerial_-_2025-04-17_03.jpg?width=1280",
+   "tekija": "瑞丽江的河水",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Glasgow_City_Chambers_-_aerial_-_2025-04-17_03.jpg",
+   "selite": "Kaupungin sydän on George Square ja sen viktoriaaniset julkiset rakennukset.",
+   "leveys": 4032,
+   "korkeus": 2268,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -48,6 +48,10 @@ done
 # Hybridi-PBR (laatusuunnitelma 30.9., menetelmä B): materiaalimaski + kirjaston 4 materiaalia (diff + nor_gl), maskin
 # kanavajärjestyksessä R graniittilohkomuuri, G paanukatto, B kivilaatta, A kallio. Mukaan, jos lähteissä on.
 KIRJASTO=${KIRJASTO:-/Users/Shared/Claude/proto-3d/_kirjasto/valmiit}
+# Akustiikkaverkot (5.10.2026, Siirtosepän suunnitelma kohta 6; tools/dioraama/blender/akustiikka.py): jos lähteessä on akustiikka/
+if [ -d "$LAHDE/akustiikka" ]; then
+  for f in "$LAHDE"/akustiikka/*.glb(N) "$LAHDE"/akustiikka/akustiikka.json(N); do lisaa "akustiikka/${f:t}" "akustiikka/${f:t}"; done
+fi
 if [ -f "$LAHDE/ulkokuori/hybridi/kuori-materiaali-2k.png" ]; then
   lisaa "ulkokuori/hybridi/kuori-materiaali-2k.png" "ulkokuori/hybridi/kuori-materiaali-2k.png"
   for id in graniittilohkomuuri paanukatto kivilaatta kallio; do
@@ -88,6 +92,10 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
     if [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ]; then lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"; fi
   done
 fi
+# Staattiset ympäristömallit (ymparisto/mallit/*.glb, 7.10.2026: rantakivet, vene) ja vapaan kävelyn aineisto
+# (kavely/: osien glb:t, osat.json, merkit.json, esine-*.glb), jos lähteessä.
+for f in "$LAHDE"/ymparisto/mallit/*.glb(N); do lisaa "ymparisto/mallit/${f:t}" "ymparisto/mallit/${f:t}"; done
+for f in "$LAHDE"/kavely/*.(glb|json)(N); do lisaa "kavely/${f:t}" "kavely/${f:t}"; done
 # Skinnatut hahmot (omistaja 2.10. 18.0x, Quaternius CC0; tools/dioraama/blender/hahmo_skin.py): hahmot/<henkilo>.glb, jos lähteessä.
 for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
 for g in "$LAHDE"/tilat/*.glb; do

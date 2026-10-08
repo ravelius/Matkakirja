@@ -37,6 +37,14 @@ for (const z of [33.6, 36, 38, 40, 42, 44.4]) {
 for (const x of [-21.55, -17.45]) {
   PALKIT.push({ resepti: 'laatta', paikka: [x, KANSI_Y - 0.12, 39.1], suunta: 0, leveys: 0.16, syvyys: 11.8, paksuus: 0.2, pinnat: PUU });
 }
+// Otsalaudat kannen kaikille reunoille (7.10.2026, Siirtosepän venesaapuminen P3: kannen reunan alla näkyi musta rako,
+// kun kamera on 0,4 m kannen yläpuolella): 0,32 m korkea lauta kannen yläpinnasta alaspäin, 0,05 m kannen ulkopuolella.
+for (const x of [-21.53, -17.47]) {
+  PALKIT.push({ resepti: 'laatta', paikka: [x, KANSI_Y - 0.01, 39], suunta: 0, leveys: 0.05, syvyys: 12.06, paksuus: 0.32, pinnat: PUU });
+}
+for (const z of [32.97, 45.03]) {
+  PALKIT.push({ resepti: 'laatta', paikka: [-19.5, KANSI_Y - 0.01, z], suunta: 0, leveys: 4.1, syvyys: 0.05, paksuus: 0.32, pinnat: PUU });
+}
 
 const LASTI = [
   // Länsireuna: tynnyrit (yksi kalatynnyri kantena), tervaruukku, arkku, säkit, köysikieppi, verkko telineellä.

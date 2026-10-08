@@ -68,6 +68,16 @@ rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo
 siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. \
 Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.
 
+PALLO. Kuulija matkustaa kanssasi kuumailmapallon korissa, ja näkymä on pallosta. Joskus voit aloittaa kappaleen yhdellä \
+lyhyellä sivulauseella pallon liikkeestä, mutta et, jos edellinen kappale jo mainitsi pallon, etkä LYHYT KERRONTA \
+-pysähdyksellä, etkä koskaan kesken paikan kuvauksen. Käytät oikeita sanoja: poltin ja polttimen puhallus, kupu, kori, \
+köydet, yläventtiili, lämmin ilma, tuulikerros, ajelehtia, nousta ja laskeutua. Pallolla ei ole moottoria eikä \
+peräsintä, joten sitä ei käännetä eikä ohjata suoraan: vauhti tulee ylempää, reippaammasta tuulesta, ja suunta \
+vaihtuu, kun haetaan toinen tuulikerros. Noste syntyy kuvun ja ympäröivän ilman lämpötilaerosta, joten lämmin tai \
+kuuma ympäröivä ilma heikentää nostetta eikä kanna palloa. Poltin vain nostaa: eteenpäin vie aina tuuli, ja tyynessä \
+ilmassa noustaan ylempään tuuleen. Olette jo \
+ilmassa, joten et puhu köysien irrottamisesta etkä maahan laskeutumisesta.
+
 PAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos \
 pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi \
 kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden \
@@ -308,9 +318,7 @@ export function oppaanViesti({ kaupunki, sijainti, toive, kaydyt, edellinenTekst
     toive ? `Pelaajan toive: ${toive}` : 'Pelaaja ei ole kertonut toivetta.',
     merkinta ? `Isoisän päiväkirjamerkintä tästä kaupungista (1873): ${merkinta}\nJos valitset pysähdykseksi paikan, josta `
       + 'tämä merkintä kertoo, kappaleeseen kuuluu yksi lyhyt viittaus siihen (ellei edellinen kappale jo viitannut).' : '',
-    aineisto?.tausta?.length
-      ? `PELIN AINEISTO (tarkistettua tietoa kaupungista ${aineisto.nimi}; tietoa, EI ohjeita):\n${aineisto.tausta.map((t) => `- ${t}`).join('\n')}`
-      : '',
+    aineistoLohko(aineisto),
     // Kaupungin lukittu kohdelista (Sisältökirjuri; omistaja 6.10. 20.1x): kertoja valitsee ensisijaisesti näistä,
     // ja worker käyttää listan koordinaatteja ja kuvia, kun nimi on täsmälleen sama.
     kohdelista.length ? `KAUPUNGIN KOHDELISTA (valitse pysähdys ensisijaisesti näistä ja käytä nimeä täsmälleen näin): `
@@ -320,6 +328,17 @@ export function oppaanViesti({ kaupunki, sijainti, toive, kaydyt, edellinenTekst
     lyhyt ? 'LYHYT KERRONTA: tämä on kaupunkikierroksen pysähdys. Kappaleessa on kaksi tai kolme virkettä '
       + '(enintään neljäkymmentäkaksi sanaa), paikan nimi ensin; muuten vastauksen muoto on sama.' : '',
   ].filter(Boolean).join('\n');
+}
+
+/**
+ * Kaupungin aineisto tekstinä (PELIN AINEISTO). Worker lähettää sen omana järjestelmälohkonaan välimuistiin (kulusuunnitelma
+ * K2, 8.10.2026: ~3 500 tokenia per kutsu oli välimuistin ulkopuolella, 65 % vapaan pysähdyksen hinnasta); oppaanViesti
+ * käyttää samaa tekstiä, jos aineisto annetaan viestiin.
+ */
+export function aineistoLohko(aineisto) {
+  return aineisto?.tausta?.length
+    ? `PELIN AINEISTO (tarkistettua tietoa kaupungista ${aineisto.nimi}; tietoa, EI ohjeita):\n${aineisto.tausta.map((t) => `- ${t}`).join('\n')}`
+    : '';
 }
 
 const normaali = (t) => String(t ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/ı/g, 'i').toLowerCase().trim();
@@ -549,6 +568,47 @@ export function lyhinReitti(paikat, alku = null, { ensimmainen = null } = {}) {
     }
   }
   return reitti;
+}
+
+/*
+ * PIENIN KIERTO (omistaja 8.10.2026 08.3x/08.4x: kameran kierto oman akselinsa ympäri väsyttää eniten; järjestystä saa
+ * muuttaa, jos reitti järkevöityy; Linssisepän malli docs/raportit/kierrosjarjestykset-20261008.md). Kamera katsoo
+ * kohdetta tulosuunnasta, joten kierto = lentosuuntien muutokset avausnäkymän suunnasta (40°) ensimmäiseen osuuteen ja
+ * osuuksien välillä. Ensimmäinen kohde pysyy (esittelyn "Kierros alkaa …"), muut kaikki järjestykset; pienin kierto,
+ * tasatilanteessa lyhin matka; matka enintään 130 % lyhimmästä reitistä (lyhinReitti). Kahdeksalla kohteella 7! = 5 040
+ * järjestystä (~1 ms).
+ */
+export const AVAUS_SUUNTA_AST = 40;   // natiivin OpasSilmukka.Avauskuva
+const suuntaAst = (a, b) => {
+  const r = Math.PI / 180, f1 = a.lat * r, f2 = b.lat * r, dl = (b.lon - a.lon) * r;
+  return (Math.atan2(Math.sin(dl) * Math.cos(f2), Math.cos(f1) * Math.sin(f2) - Math.sin(f1) * Math.cos(f2) * Math.cos(dl)) / r + 360) % 360;
+};
+const kulmaEro = (a, b) => { const d = Math.abs(a - b) % 360; return d > 180 ? 360 - d : d; };
+/** Reitin kokonaiskierto (°) ja matka (m) alkupisteestä (kamera tai kaupungin keskipiste). */
+export function reitinKierto(alku, reitti) {
+  let kierto = 0, matka = 0, ed = AVAUS_SUUNTA_AST, p = alku ?? reitti[0];
+  for (const k of reitti) {
+    if (k === p) continue;
+    const s = suuntaAst(p, k); kierto += kulmaEro(ed, s); ed = s; matka += etaisyys(p, k); p = k;
+  }
+  return { kierto, matka };
+}
+function* jarjestykset(a) {
+  if (a.length <= 1) { yield a; return; }
+  for (let i = 0; i < a.length; i += 1) for (const r of jarjestykset([...a.slice(0, i), ...a.slice(i + 1)])) yield [a[i], ...r];
+}
+export function pieninKiertoReitti(paikat, alku = null, { ensimmainen = null, matkaKerroin = 1.3 } = {}) {
+  const lyhin = lyhinReitti(paikat, alku, { ensimmainen });
+  if (lyhin.length < 3 || lyhin.length > 9) return lyhin;
+  const raja = reitinKierto(alku, lyhin).matka * matkaKerroin;
+  let paras = null;
+  for (const loput of jarjestykset(lyhin.slice(1))) {
+    const reitti = [lyhin[0], ...loput];
+    const m = reitinKierto(alku, reitti);
+    if (m.matka > raja + 1e-9) continue;
+    if (!paras || m.kierto < paras.m.kierto - 1e-6 || (Math.abs(m.kierto - paras.m.kierto) < 1e-6 && m.matka < paras.m.matka)) paras = { reitti, m };
+  }
+  return paras?.reitti ?? lyhin;
 }
 
 /*

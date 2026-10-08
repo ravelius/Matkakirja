@@ -1,0 +1,467 @@
+{
+ "kaupunki": "zurich",
+ "kaupunkiQ": "Q72",
+ "kohteet": [
+  {
+   "q": "Q684948",
+   "nimi": "Grossmünster",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 47.37,
+   "lon": 8.54417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grossmünster and Limmat River, Zurich, 20250330 1239 7931.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grossm%C3%BCnster_and_Limmat_River%2C_Zurich%2C_20250330_1239_7931.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grossm%C3%BCnster_and_Limmat_River%2C_Zurich%2C_20250330_1239_7931.jpg",
+     "selite": "Grossmünsterin kaksi tornia hallitsevat Limmatin rantaa Zürichin vanhassakaupungissa.",
+     "leveys": 5645,
+     "korkeus": 3768,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "7472 - Zürich - Grossmünster.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/7472_-_Z%C3%BCrich_-_Grossm%C3%BCnster.JPG?width=1280",
+     "tekija": "Andrew Bossi",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:7472_-_Z%C3%BCrich_-_Grossm%C3%BCnster.JPG",
+     "selite": "Romaaninen Grossmünster oli uskonpuhdistaja Zwinglin saarnakirkko 1500-luvulla.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Limmatquai mit Grossmünstertürmen Zürich.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Limmatquai_mit_Grossm%C3%BCnstert%C3%BCrmen_Z%C3%BCrich.jpg?width=1280",
+     "tekija": "JoachimKohler-HB",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Limmatquai_mit_Grossm%C3%BCnstert%C3%BCrmen_Z%C3%BCrich.jpg",
+     "selite": "Limmatquai johtaa joen rantaa pitkin Grossmünsterin tornien juurelle.",
+     "leveys": 4352,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q690944",
+   "nimi": "Fraumünster",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 47.36972,
+   "lon": 8.54111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zürich Switzerland-Münsterbrücke-and-Fraumünster-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%BCrich_Switzerland-M%C3%BCnsterbr%C3%BCcke-and-Fraum%C3%BCnster-01.jpg?width=1280",
+     "tekija": "CEphoto, Uwe Aranas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Z%C3%BCrich_Switzerland-M%C3%BCnsterbr%C3%BCcke-and-Fraum%C3%BCnster-01.jpg",
+     "selite": "Fraumünsterin vihreä korkea torni nousee Limmatin länsirannalla Münsterbrücken päässä.",
+     "leveys": 5675,
+     "korkeus": 3783,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fraumünster, Münsterbrücke and St. Peter, Zürich, 20250330 1243 7934.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fraum%C3%BCnster%2C_M%C3%BCnsterbr%C3%BCcke_and_St._Peter%2C_Z%C3%BCrich%2C_20250330_1243_7934.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fraum%C3%BCnster%2C_M%C3%BCnsterbr%C3%BCcke_and_St._Peter%2C_Z%C3%BCrich%2C_20250330_1243_7934.jpg",
+     "selite": "Fraumünster ja Pietarinkirkon suuri kellotaulu antavat vanhallekaupungille tunnistettavan siluetin.",
+     "leveys": 5308,
+     "korkeus": 3543,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "CH Zürich, Fraumünster 041.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CH_Z%C3%BCrich%2C_Fraum%C3%BCnster_041.jpg?width=1280",
+     "tekija": "-wuppertaler",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CH_Z%C3%BCrich%2C_Fraum%C3%BCnster_041.jpg",
+     "selite": "Entisen luostarin kirkko seisoo Münsterhofin laidalla keskiaikaisella paikalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14407",
+   "nimi": "Zürichinjärvi",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 47.2475,
+   "lon": 8.6775,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zürich - Bürkliplatz - Quaibrücke - Zürichsee 2010-08-06 14-34-46.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%BCrich_-_B%C3%BCrkliplatz_-_Quaibr%C3%BCcke_-_Z%C3%BCrichsee_2010-08-06_14-34-46.JPG?width=1280",
+     "tekija": "Roland zh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Z%C3%BCrich_-_B%C3%BCrkliplatz_-_Quaibr%C3%BCcke_-_Z%C3%BCrichsee_2010-08-06_14-34-46.JPG",
+     "selite": "Zürichinjärvi alkaa heti kaupungin keskustasta, jossa Limmat saa alkunsa.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Quaibrücke - Zürichsee in Zürich - Wollishofen 2015-05-06 13-40-30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Quaibr%C3%BCcke_-_Z%C3%BCrichsee_in_Z%C3%BCrich_-_Wollishofen_2015-05-06_13-40-30.jpg?width=1280",
+     "tekija": "Roland zh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Quaibr%C3%BCcke_-_Z%C3%BCrichsee_in_Z%C3%BCrich_-_Wollishofen_2015-05-06_13-40-30.jpg",
+     "selite": "Järven rannat nousevat loivasti kaupungin viheräksi kasvaneille rinteille.",
+     "leveys": 4620,
+     "korkeus": 3080,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14338",
+   "nimi": "Limmat",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 47.36634,
+   "lon": 8.54335,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bahnhofbrücke Zürich.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahnhofbr%C3%BCcke_Z%C3%BCrich.jpg?width=1280",
+     "tekija": "Reustli",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahnhofbr%C3%BCcke_Z%C3%BCrich.jpg",
+     "selite": "Limmat virtaa järvestä vanhankaupungin läpi, ja sen rannoilla kohoavat kirkot.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-i---i- (39142265800).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(39142265800).jpg?width=1280",
+     "tekija": "Thomas Woodtli from Zürich, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(39142265800).jpg",
+     "selite": "Limmatin poukamassa näkyvät Grossmünsterin tornit ja kaupungin tunnetut kirkot.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q224494",
+   "nimi": "Zürichin päärautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 47.37817,
+   "lon": 8.54018,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zuerich Hauptbahnhof-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zuerich_Hauptbahnhof-2.jpg?width=1280",
+     "tekija": "Ikiwaner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Zuerich_Hauptbahnhof-2.jpg",
+     "selite": "Zürichin päärautatieasema on Sveitsin vilkkain ja vuodelta 1871 peräisin oleva asema.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-i---i- (41117228714).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(41117228714).jpg?width=1280",
+     "tekija": "Thomas Woodtli from Zürich, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(41117228714).jpg",
+     "selite": "Aseman kivinen päärakennus kohoaa aivan Limmatin rannalla keskustan reunalla.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q670406",
+   "nimi": "Zürichin ooppera",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 47.365,
+   "lon": 8.54694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Opernhaus Zürich - Sechseläutenplatz 2013-08-31 18-30-40.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Opernhaus_Z%C3%BCrich_-_Sechsel%C3%A4utenplatz_2013-08-31_18-30-40.JPG?width=1280",
+     "tekija": "Roland zh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Opernhaus_Z%C3%BCrich_-_Sechsel%C3%A4utenplatz_2013-08-31_18-30-40.JPG",
+     "selite": "Zürichin ooppera avattiin vuonna 1891 uusbarokkityylisessä rakennuksessa järven rannalla.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-i---i- (39615738660).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(39615738660).jpg?width=1280",
+     "tekija": "Thomas Woodtli from Zürich, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(39615738660).jpg",
+     "selite": "Illan valo kultaa oopperatalon julkisivun Sechseläutenplatzin laidalla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16524",
+   "nimi": "Üetliberg",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 47.34972,
+   "lon": 8.49028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Uetliberg from Felsenegg 20200124.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Uetliberg_from_Felsenegg_20200124.jpg?width=1280",
+     "tekija": "Daniel Kraft",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Uetliberg_from_Felsenegg_20200124.jpg",
+     "selite": "Üetliberg on Zürichin oma kotivuori, jonka huipulle nousee radio- ja näkötorni.",
+     "leveys": 9000,
+     "korkeus": 3792,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View from Uetliberg Observation Tower in Zurich, 20250330 1105 7897.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Uetliberg_Observation_Tower_in_Zurich%2C_20250330_1105_7897.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_from_Uetliberg_Observation_Tower_in_Zurich%2C_20250330_1105_7897.jpg",
+     "selite": "Huipulta avautuu näkymä Zürichin kaupunkiin ja sen takana siintävään järvilaaksoon.",
+     "leveys": 5730,
+     "korkeus": 3806,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q691896",
+   "nimi": "Sveitsin kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 47.37917,
+   "lon": 8.53972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Landesmuseum Zürich - Bahnhofplatz 2018-09-05 12-14-09.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Landesmuseum_Z%C3%BCrich_-_Bahnhofplatz_2018-09-05_12-14-09.jpg?width=1280",
+     "tekija": "Roland zh",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Landesmuseum_Z%C3%BCrich_-_Bahnhofplatz_2018-09-05_12-14-09.jpg",
+     "selite": "Linnamaisen rakennuksen torni nousee aivan päärautatieaseman vierestä.",
+     "leveys": 4000,
+     "korkeus": 5333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q14565994",
+   "nimi": "ETH Zürichin päärakennus",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 200,
+   "lat": 47.37645,
+   "lon": 8.54785,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ETH Zürich - Hauptgebäude - Polyterrasse 2012-09-27 14-40-49 ShiftN.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ETH_Z%C3%BCrich_-_Hauptgeb%C3%A4ude_-_Polyterrasse_2012-09-27_14-40-49_ShiftN.jpg?width=1280",
+     "tekija": "roland zh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ETH_Z%C3%BCrich_-_Hauptgeb%C3%A4ude_-_Polyterrasse_2012-09-27_14-40-49_ShiftN.jpg",
+     "selite": "Gottfried Semperin suunnittelema päärakennus hallitsee kaupunkia katsovaa Polyterrassea.",
+     "leveys": 4500,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hauptgebäude der ETH Zürich and Polyterrasse 2022-09-24 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hauptgeb%C3%A4ude_der_ETH_Z%C3%BCrich_and_Polyterrasse_2022-09-24_01.jpg?width=1280",
+     "tekija": "Leonhard Lenz",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hauptgeb%C3%A4ude_der_ETH_Z%C3%BCrich_and_Polyterrasse_2022-09-24_01.jpg",
+     "selite": "Tekniikan korkeakoulu perustettiin vuonna 1855, ja Albert Einstein opiskeli siellä.",
+     "leveys": 8368,
+     "korkeus": 5584,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q477189",
+   "nimi": "Wasserkirche",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 47.36961,
+   "lon": 8.54333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grossmünster, Helmhaus and Wasserkirche in Zurich.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grossm%C3%BCnster%2C_Helmhaus_and_Wasserkirche_in_Zurich.JPG?width=1280",
+     "tekija": "Крізь час",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grossm%C3%BCnster%2C_Helmhaus_and_Wasserkirche_in_Zurich.JPG",
+     "selite": "Wasserkirche seisoo Limmatin rannalla Helmhausin vieressä, Grossmünsterin tornien edessä.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Helmhaus-Wasserkirche - Münsterbrücke 2012-09-26 16-02-40 ShiftN.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Helmhaus-Wasserkirche_-_M%C3%BCnsterbr%C3%BCcke_2012-09-26_16-02-40_ShiftN.jpg?width=1280",
+     "tekija": "Roland zh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Helmhaus-Wasserkirche_-_M%C3%BCnsterbr%C3%BCcke_2012-09-26_16-02-40_ShiftN.jpg",
+     "selite": "Kirkko rakennettiin kerran joen saarelle, ja siitä sen nimi on peräisin.",
+     "leveys": 4500,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q39374",
+   "nimi": "Lindenhof",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 150,
+   "lat": 47.37306,
+   "lon": 8.54083,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Zürich - Lindenhof 2011-08-01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%BCrich_-_Lindenhof_2011-08-01.jpg?width=1280",
+     "tekija": "Roland zh",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Z%C3%BCrich_-_Lindenhof_2011-08-01.jpg",
+     "selite": "Lindenhof on Zürichin vanhimmalla asuinkukkulalla sijaitseva varjoisa lehmusaukio.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2013-05-05 Zuriko (Foto Dietrich Michael Weidmann) 071.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-05-05_Zuriko_(Foto_Dietrich_Michael_Weidmann)_071.JPG?width=1280",
+     "tekija": "Dietrich Michael Weidmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-05-05_Zuriko_(Foto_Dietrich_Michael_Weidmann)_071.JPG",
+     "selite": "Kukkulalta näkee vanhankaupungin kattojen yli Limmatille ja Zürichvuorelle.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9315546",
+   "nimi": "Zürichin kaupungintalo",
+   "peruste": "kaupungin päänähtävyys",
+   "koko_m": 80,
+   "lat": 47.37139,
+   "lon": 8.5425,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rathaus of Zürich and Limmatquai 20120626 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rathaus_of_Z%C3%BCrich_and_Limmatquai_20120626_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rathaus_of_Z%C3%BCrich_and_Limmatquai_20120626_1.jpg",
+     "selite": "Barokkityylinen kaupungintalo seisoo suoraan Limmatin rannalla 1600-luvulta.",
+     "leveys": 4462,
+     "korkeus": 2510,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Altstadt Zürich 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altstadt_Z%C3%BCrich_2015.jpg?width=1280",
+   "tekija": "Thomas Wolf, www.foto-tw.de",
+   "lisenssi": "CC BY-SA 3.0 de",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altstadt_Z%C3%BCrich_2015.jpg",
+   "selite": "Zürichin vanhakaupunki levittäytyy Limmatin molemmin puolin vihreiden kukkuloiden alla.",
+   "leveys": 11303,
+   "korkeus": 6164,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Zürich view Quaibrücke 20200702.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Z%C3%BCrich_view_Quaibr%C3%BCcke_20200702.jpg?width=1280",
+   "tekija": "Daniel Kraft",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Z%C3%BCrich_view_Quaibr%C3%BCcke_20200702.jpg",
+   "selite": "Kaupungin siluetti nousee järven rannalle kirkkojen ja vuoristojen eteen.",
+   "leveys": 12732,
+   "korkeus": 6619,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

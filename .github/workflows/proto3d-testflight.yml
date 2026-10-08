@@ -231,6 +231,14 @@ jobs:
 
       # Vienti kirjoittaa ProjectSettingsiin bundleVersionin, buildNumberin
       # ja iPhoneSdkVersionin sekä koskee Materiaaleihin: palautus aina.
+      - name: Editorin Burst-JIT pois
+        # MONO-SEGV-JUURIKORJAUS (Päätoimittaja 8.10.2026, Natiiviseppä proto 9a98cd437, junaan 167): Rakennus.Kaanna perui
+        # editorin Burst-JIT:n kesken Unityn käynnistyksen linkityksen → satunnainen segv 7–8 s kohdalla (7.–8.10. kolmesti).
+        # EditorPrefs BurstCompilation = 0 jo ennen Unityä; palautus alla (always). Pelaajan AOT ei käytä tätä asetusta.
+        if: env.VIE_UNITYSTA == 'true' && env.OHITA != '1'
+        shell: zsh {0}
+        run: source /Users/Shared/Claude/proto-3d/tyokalut/burst-jit.sh && burst_jit_pois
+
       - name: Unity-vienti Build/yo
         # PRIORITEETTI (Päätoimittaja 7.10.2026, TF 155: Unity nice 19:llä ja taustapoltot nice 15:llä → Burst AOT nälkiintyi
         # ja unity-vahti tappoi viennin): junan Unity-vienti ja arkistointi nice 10:llä, alle taustapolttojen 15.
@@ -296,6 +304,12 @@ jobs:
             exit $tila
           fi
           grep "MATKAKIRJA: TestFlight-vienti" tulokset/yo.log || true
+
+      - name: Editorin Burst-JIT takaisin
+        # Myös kaatuneen viennin jälkeen; ilman merkkitiedostoa (pois-askel ei ajanut) ei tee mitään.
+        if: always()
+        shell: zsh {0}
+        run: source /Users/Shared/Claude/proto-3d/tyokalut/burst-jit.sh && burst_jit_palauta
 
       - name: Onko Unity-vienti paikallaan
         if: env.OHITA != '1'

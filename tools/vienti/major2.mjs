@@ -62,7 +62,8 @@ export function johdaMajor2(tiedostot) {
   for (const [polku, teksti] of tiedostot) {
     if (polku === 'manifest.json' || pois.has(polku)) continue;
     let uusi = teksti;
-    if (polku.startsWith('kokoelmat/')) {
+    // Asetukset (skeema 1.59) on tavallinen objekti, ei kokoelma: sellaisenaan (ei data-kenttiä, ei alkioita).
+    if (polku.startsWith('kokoelmat/') && polku !== manifest.asetukset?.tiedosto) {
       const k = JSON.parse(teksti);
       k.alkiot = k.alkiot.map(({ data, ...a }) => a);
       if (k.nimi === 'laatat') {
