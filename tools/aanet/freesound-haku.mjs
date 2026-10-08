@@ -28,7 +28,9 @@ async function tallenna(tunnus, i, s) {
 }
 
 for (const h of haut) {
-  const [tunnus, sanat, min = '1', max = '60'] = h.split('|');
+  const [tunnus, sanat, min = '1', max = '60', lis = 'cc0'] = h.split('|');
+  // 5. kenttä "by": CC0 tai CC BY (nimeäminen Lähteisiin; PT 8.10. pallon äänimaisema), oletus vain CC0
+  const lisenssi = lis === 'by' ? '("Creative Commons 0" OR "Attribution")' : '"Creative Commons 0"';
   if (sanat.startsWith('id:')) {   // suoraan nimetyt äänet (aiemman haun ehdokkaat)
     for (const [i, id] of sanat.slice(3).split(',').entries()) {
       const v = await api(`https://freesound.org/apiv2/sounds/${id}/?fields=${KENTAT}`);
@@ -37,7 +39,7 @@ for (const h of haut) {
     }
     continue;
   }
-  const v = await api(`https://freesound.org/apiv2/search/text/?query=${encodeURIComponent(sanat)}&filter=${encodeURIComponent(`license:"Creative Commons 0" duration:[${min} TO ${max}]`)}`
+  const v = await api(`https://freesound.org/apiv2/search/text/?query=${encodeURIComponent(sanat)}&filter=${encodeURIComponent(`license:${lisenssi} duration:[${min} TO ${max}]`)}`
     + `&sort=rating_desc&page_size=8&fields=${KENTAT}`);
   if (!v.ok) { console.log(tunnus, 'haku', v.status); continue; }
   const d = await v.json();
