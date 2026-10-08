@@ -120,7 +120,7 @@ namespace Matkakirja.Linssit.Testit
                     double Kulma(int k) { var (ce, cn) = (r[k].E - pe, r[k].N - pn); double a1 = Math.Atan2(cn, ce), a2 = Math.Atan2(qn - pn, qe - pe); double d = Math.Abs(a1 - a2) % (2 * Math.PI); return Math.Min(d, 2 * Math.PI - d) * 180 / Math.PI; }
                     if (pahin > t.Taaksepain) { t.Taaksepain = pahin; t.TaakseKohta = $"{vk} {c.Kohteet[i].Nimi}→{c.Kohteet[i + 1].Nimi} {r[pahinK].Vaihe} {r[pahinK].T:F0} s"; }
                     if (pisin > t.Seisahdus) { t.Seisahdus = pisin; t.SeisKohta = $"{vk} {c.Kohteet[i].Nimi}→{c.Kohteet[i + 1].Nimi} {r[pisinK].Vaihe} kulma {Kulma(pisinK):F0}°"; }
-                    if (pahin > 1) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} → {c.Kohteet[i + 1].Nimi} taaksepäin {pahin:F1} m");
+                    if (pahin > 1) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} → {c.Kohteet[i + 1].Nimi} taaksepäin {pahin:F1} m (et {r[pahinK].EtM:F0} m, {100 * pahin / r[pahinK].EtM:F1} %, silmä alussa {((r[a].E - pe) * ue + (r[a].N - pn) * un):F0} m / väli {l:F0} m)");
                     if (pisin > 3) t.Viat.Add($"{vk} {c.Kohteet[i].Nimi} → {c.Kohteet[i + 1].Nimi} seisoo {pisin:F1} s");
                 }
                 // Kehys ja nykäys pysähdyksellä.
@@ -175,7 +175,6 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      | {t.Kaupunki} | {t.Perilla}/{t.Kohteita} | {t.Taaksepain:F1} | {t.Seisahdus:F1} | {t.Kehys:F2} | {t.SaumaDv:F2} | {t.SaumaDa:F2} | {t.Nykays:F1} | {t.Kaanto:F1} | {t.Kierto:F0} | {t.Viat.Count} |");
             var viat = tulokset.Where(t => t.Viat.Count > 0).Select(t => $"{t.Kaupunki}: {string.Join(", ", t.Viat.Take(4))}{(t.Viat.Count > 4 ? $" (+{t.Viat.Count - 4})" : "")}").ToList();
             foreach (var v in viat) Console.WriteLine("      VIKA " + v);
-            foreach (var t in tulokset) Console.WriteLine($"      KOHTA {t.Kaupunki}: kääntö @ {t.KaantoKohta}; taakse @ {t.TaakseKohta}; seis @ {t.SeisKohta}");
             Oleta.Sama(37, tulokset.Count, "kaupunkeja");
             Oleta.Tosi(viat.Count == 0, $"{viat.Count} kaupungissa vikoja");
         }

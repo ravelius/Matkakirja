@@ -1109,6 +1109,33 @@ namespace Matkakirja.Linssit.Kierros
                 double A = Math.PI / 180, hNyt = Asento.EtaisyysM * Math.Sin(Asento.Kallistus * A), hMax = hNyt + 0.9 * matkaM;
                 double h = p.EtaisyysM * Math.Sin(p.Kallistus * A);
                 if (h > hMax && p.EtaisyysM > 1) p.Kallistus = Math.Max(OpasOhjaus.KallistusMin, Math.Asin(Math.Min(1, hMax / p.EtaisyysM)) / A);
+                // Silmä jo seuraavan ohi hypyn suunnassa (PalloKaupungitTestit: Granada, Alhambran kehyksen silmä 196 m kohti 128 m:n
+                // päässä olevaa Kaarle V:n palatsia, lento palasi 12,5 m): kehys katsoo seuraavaan nykyisestä silmän paikasta, jolloin
+                // vaakaliikettä ei ole (vain suunta ja katse vaihtuvat).
+                var nyt = OpasKuvaus.KameraPaikka(Asento, k.Lat, k.Lon);
+                var uusi = OpasKuvaus.KameraPaikka(KehysAsento(p, 0), k.Lat, k.Lon);
+                var (ae, an) = (OpasKuvaus.KameraPaikka(new Kuvakulma(Asento.Lat, Asento.Lon, 0, 0, 0, 0), k.Lat, k.Lon).e, OpasKuvaus.KameraPaikka(new Kuvakulma(Asento.Lat, Asento.Lon, 0, 0, 0, 0), k.Lat, k.Lon).n);
+                double ul = Math.Sqrt(ae * ae + an * an);
+                if (ul > 1)
+                {
+                    double ue = -ae / ul, un = -an / ul;   // hypyn suunta (nykyisestä kohteesta seuraavaan)
+                    double eteNyt = nyt.e * ue + nyt.n * un, eteUusi = uusi.e * ue + uusi.n * un;
+                    double hz = Math.Sqrt(nyt.e * nyt.e + nyt.n * nyt.n), vz = nyt.u - p.KatseKorkeusM;
+                    if (eteNyt <= ul && eteUusi < eteNyt - 1 && eteUusi < -1 && eteNyt < 0 && p.EtaisyysM > 1)
+                    {
+                        // Silmä seuraavan takana, ja suurempi kehys perääntyisi (Praha 75 m, 40 → 200 m: 8–11 m taaksepäin): vaakaetäisyys
+                        // pienenee niin, ettei silmä kulje hypyn suunnassa taaksepäin, ja kehys katsoo jyrkemmin ylhäältä.
+                        double f = eteNyt / eteUusi, hb = p.EtaisyysM * Math.Sin(p.Kallistus * A) * f;
+                        p.Kallistus = Math.Max(OpasOhjaus.KallistusMin, Math.Asin(Math.Min(1, hb / p.EtaisyysM)) / A);
+                    }
+                    else if (eteNyt > ul && eteUusi < eteNyt - 1 && hz > 1 && vz > 1)
+                    {
+                        p.Suuntima = KierrosLento.Kiedo(Math.Atan2(-nyt.e, -nyt.n) / A);
+                        p.Kallistus = Math.Atan2(hz, vz) / A;
+                        p.EtaisyysM = Math.Sqrt(hz * hz + vz * vz);
+                        p.MinEtM = 0;
+                    }
+                }
             }
             return p;
         }
@@ -1327,6 +1354,15 @@ namespace Matkakirja.Linssit.Kierros
                 && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, k.Lat, k.Lon) < 50)
             {
                 Nykyinen = k; edellinen = null;
+                // Uusi kohde samassa paikassa: lipuminen alkaa alusta kohti sen seuraavaa (PalloKaupungitTestit: Košice, Tampere,
+                // Sisilia — vanha lipumissuunta osoitti samaan paikkaan, ja pallo seisoi koko kerronnan).
+                if (PalloLento && NykyinenKehys != null && !VapaaTila)
+                {
+                    NykyinenKehys = new Pysahdys { Id = k.Id, Nimi = k.Nimi, Lat = NykyinenKehys.Lat, Lon = NykyinenKehys.Lon, MaaM = NykyinenKehys.MaaM, NostoM = NykyinenKehys.NostoM,
+                        Suuntima = Asento.Suuntima, Kallistus = Asento.Kallistus, EtaisyysM = Asento.EtaisyysM };
+                    kierto = 0; lipumisAika = 0; lipumisKohti = null; lipumisRaaka = 0; LipumisVauhti = 0;
+                    Ohjaus.Nollaa();   // kehys on jo nykyinen asento: ohjauksen rajoitustila ei saa siirtyä uuteen kehykseen (hyppy 7,6°)
+                }
                 Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
                 puheAloitettu = true; AlkaaPuhua?.Invoke(k);
                 Saapui?.Invoke(k);
