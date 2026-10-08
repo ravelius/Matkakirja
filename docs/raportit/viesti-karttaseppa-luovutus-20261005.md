@@ -1,4 +1,4 @@
-# TILANNE 8.10. klo 20.3x
+# TILANNE 8.10. klo 20.2x
 
 - **Siivous:** wt/karttaseppa-pallo-unreal poistettu (1,3 Gt). PT:lle kerrottu, että talviajo kirjoittaa vain T7:lle.
 - **Vesimaskin ehtoraportti VALMIS:** PR https://github.com/ravelius/Matkakirja/pull/4224 (worktree wt/karttaseppa-vesimaski-ehdot), docs/raportit/vesimaski-google-ehdot-20261008.md.
