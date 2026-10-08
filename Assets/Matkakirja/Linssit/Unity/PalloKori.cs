@@ -352,10 +352,26 @@ namespace Matkakirja.Natiivi
                     tekstuurit[osa.Kuva] = t;
                 }
                 m.SetTexture("_MainTex", t);
+                // Normaali- ja ORM-kartat (Linssiseppä 8.10.: kori_nakyma.glb:n kaikissa materiaaleissa), lineaarisina.
+                Texture2D Lin(int i)
+                {
+                    if (i < 0 || i >= malli.Kuvat.Count || malli.Kuvat[i] == null) return null;
+                    if (!tekstuurit.TryGetValue(LinAvain + i, out var lt))
+                    {
+                        lt = new Texture2D(2, 2, TextureFormat.RGBA32, true, true);
+                        lt.LoadImage(malli.Kuvat[i], true);
+                        tekstuurit[LinAvain + i] = lt;
+                    }
+                    return lt;
+                }
+                var nor = Lin(osa.NormaaliKuva); var orm = Lin(osa.OrmKuva);
+                if (nor != null && orm != null) { m.SetTexture("_NorTex", nor); m.SetTexture("_OrmTex", orm); m.SetFloat("_OnKartat", 1); }
             }
             else if (osa.Vari != null && osa.Vari.Length >= 3) { m.SetFloat("_Kuvio", 0); m.SetColor("_Vari", new Color(osa.Vari[0], osa.Vari[1], osa.Vari[2]).gamma); }
             r.sharedMaterial = m;
         }
+
+        const int LinAvain = 100000;   // lineaaristen (normaali, ORM) tekstuurien avaimet samassa välimuistissa
 
         void Laatikko(Transform v, Material m, Vector3 p, Vector3 koko)
         {
@@ -518,6 +534,31 @@ namespace Matkakirja.Natiivi
             koosteTaso.localScale = new Vector3(k * perus.aspect, k, 1f);
         }
 
+        static readonly int IdAurinko = Shader.PropertyToID("_KoriAurinkoV"), IdAurinkoVari = Shader.PropertyToID("_KoriAurinkoVari"),
+            IdYlos = Shader.PropertyToID("_KoriYlosV"), IdYla = Shader.PropertyToID("_KoriTaivasYla"), IdAla = Shader.PropertyToID("_KoriTaivasAla"),
+            IdValotus = Shader.PropertyToID("_KoriValotus");
+        /// <summary>
+        /// KORIN VALO KAUPUNGISTA (Linssiseppä 8.10., Päätoimittaja: pallo Unreal-tasolle kohta 1): Ydin KoriValaistus kaupunkinäkymän
+        /// vuorokausisävystä ja säästä; suunnat kaupunkikameran näkymäavaruuteen (kori on kuvassa aina samassa paikassa, joten korin
+        /// kameran näkymäavaruus = kaupunkikameran). Kori saa myös kaupungin valotuksen ja suotimen, koska sillä ei ole jälkikäsittelyä.
+        /// </summary>
+        void AsetaValo()
+        {
+            Vector3 V(double[] c) => new Vector3((float)c[0], (float)c[1], (float)c[2]);
+            double[] C(Color c) => new double[] { c.r, c.g, c.b };
+            var k = KoriValaistus.Laske(KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, C(KaupunkiKuva.KoriLaki), C(KaupunkiKuva.KoriHorisontti), KaupunkiKuva.Saa.Harmaus);
+            var nakyma = perus.worldToCameraMatrix;
+            Vector3 aurinko = nakyma.MultiplyVector(new Vector3((float)k.AurinkoX, (float)k.AurinkoY, (float)k.AurinkoZ)).normalized;
+            Vector3 ylos = nakyma.MultiplyVector(Vector3.up).normalized;
+            Shader.SetGlobalVector(IdAurinko, aurinko);
+            Shader.SetGlobalVector(IdYlos, ylos);
+            Shader.SetGlobalVector(IdAurinkoVari, V(k.AurinkoVari));
+            Shader.SetGlobalVector(IdYla, V(k.TaivasYla));
+            Shader.SetGlobalVector(IdAla, V(k.TaivasAla));
+            var s = KaupunkiKuva.KoriSuodin; float e = Mathf.Pow(2f, KaupunkiKuva.KoriValotusEV);
+            Shader.SetGlobalVector(IdValotus, new Vector4(s.r * e, s.g * e, s.b * e, 1f));
+        }
+
         void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
             // Korin kamera piirtää ensin (depth perus − 1; suorassa tilassa pinossa perus-kameran jälkeen): asento ja liike sen alussa.
@@ -528,6 +569,7 @@ namespace Matkakirja.Natiivi
             if (!Mathf.Approximately(fov, perus.fieldOfView) || !Mathf.Approximately(aspect, perus.aspect))
             { fov = perus.fieldOfView; aspect = perus.aspect; Rakenna(); }
             SovitaMalli();
+            AsetaValo();
             float dt = Mathf.Max(Time.unscaledDeltaTime, 1e-3f);
             Vector3 p = perus.transform.position;
             if (historia > 0 && (p - edPaikka).magnitude > HyppyM) historia = 0;   // origon siirto tai siirtymä
