@@ -278,7 +278,20 @@ namespace Matkakirja.Natiivi
             if (!piilossa) piiloPaljastui = false;
             if (piiloPaljastui) piilossa = false;
             double sydan = 0;
-            if (piilossa != oliPiilossa) { kirjaa?.Invoke($"seikkailu: pelaaja {(piilossa ? "piilossa" : "esillä")}"); oliPiilossa = piilossa; }
+            if (piilossa != oliPiilossa)
+            {
+                kirjaa?.Invoke($"seikkailu: pelaaja {(piilossa ? "piilossa" : "esillä")}");
+                // Tarkistuspiste myös turvalliseen piiloon (LS2 8.10.: kirkkotorni-portaat on yksi iso osa, joten muuriportailla kiinni jäänyt
+                // palasi Tott-kammioon, josta ei päässyt eteenpäin): piiloon meno kenenkään epäilemättä ja yli 6 m:n päähän edellisestä.
+                if (piilossa && p != null && !Vaara(p.transform.position, 0f) && (p.transform.position - tarkistus).sqrMagnitude > 6f * 6f)
+                {
+                    var pp2 = p.transform.position;
+                    tarkistus = pp2; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp2.x, pp2.y, -pp2.z) ?? TarkistusOsa;
+                    kirjaa?.Invoke($"seikkailu: tarkistuspiste piilossa ({pp2})");
+                    Tarkistuspiste?.Invoke(TarkistusOsa, pp2);
+                }
+                oliPiilossa = piilossa;
+            }
             foreach (var v in vartijat)
             {
                 var ag = v.Agentti; if (ag == null || !ag.isOnNavMesh) continue;

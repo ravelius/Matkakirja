@@ -213,6 +213,9 @@ namespace Matkakirja.Natiivi
                 if ((m.Tiilet & (1 << i)) != 0) { ydin.Tiilet.AsetaIrti(i); if (i < tiiliGo.Count && tiiliGo[i] != null) tiiliGo[i].SetActive(false); }
             ydin.Lukko.Kaanna(1, m.Kilpi1 - ydin.Lukko.Kilpi1); ydin.Lukko.Kaanna(2, m.Kilpi2 - ydin.Lukko.Kilpi2);
             if (m.Arkku) ydin.Lukko.Kokeile();
+            // Tallennus kannen aukeamisen ja löydön kuittauksen välissä (arkku auki, kello ei soinut): kuittaus tehdään nyt, muuten pako ei
+            // koskaan ala (Avaa-verbiä ei tarjota avoimelle arkulle). LS2 8.10. M-jumimalli.
+            if (m.Arkku && !m.Kello) ArkkuAuki?.Invoke();
             kirjaa?.Invoke($"seikkailu: jatko: komero (tiilet {m.Tiilet}, kilvet {m.Kilpi1:F0}/{m.Kilpi2:F0}, arkku {(ydin.Auki ? "auki" : "kiinni")})");
         }
 

@@ -231,6 +231,9 @@ namespace Matkakirja.Natiivi
             v.LisaLuetteloRivi(peli, "Retkikunta", Ikonit.PilleriRetkikunta,
                 () => { v.Sulje(); Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); }, () => Valikko.RetkikuntaSaatavilla);
             v.LisaLuetteloRivi(peli, "Asetukset", Ikonit.PilleriAsetukset, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Asetukset));
+            // MIKSERI (omistaja 8.10.2026 klo 17.5x: "hampurilaisen alle mikserinapin, millä voisin itse säätää kaikki eri äänitasot"):
+            // Äänentasot-paneelin liukusäätimet (kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää, Pulu).
+            v.LisaLuetteloRivi(peli, "Mikseri", Ikonit.Mikseri, () => { v.Sulje(); Aanentasot.AvaaOsa(Aanentasot.Osa.Aanet); });
             v.LisaErotin();
             // Alarivi yhdellä rivillä (omistaja 14.37): Uusi peli vasemmalla, versio oikealla (natiivissa ei päivitä-nappia).
             v.LisaAlarivinNappi("Uusi peli", Valikko.KysyUusiPeli);

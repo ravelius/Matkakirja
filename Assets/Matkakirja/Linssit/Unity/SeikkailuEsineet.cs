@@ -184,6 +184,9 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Onko lukittu ovi (ovi:&lt;tunnus&gt;) auki (LS2:n vihjeportaat).</summary>
+        public bool OviAuki(string tunnus) { foreach (var o in ovet) if (o.M.Tunnus == tunnus) return o.Auki; return false; }
+
         Ovi LahinOvi(SeikkailuPelaaja p)
         {
             var pp = p.transform.position;
