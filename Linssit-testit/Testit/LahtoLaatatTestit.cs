@@ -299,23 +299,22 @@ namespace Matkakirja.Linssit.Testit
         }
 
         // Pelikoodari 8.10. (pallosanasto, siltalauseet-v3b): pallolauseiden valinta kierroksella.
+        // Omistaja 9.10. ("kuulostaa puuduttavalta"), Päätoimittaja: lause noin joka 4. siirtymään, ei peräkkäin, muulloin kierros-lause.
         [Testi] static void PallolauseetValitaanSaannoin()
         {
             var p = new OpasPallolauseet();
             Oleta.Sama(OpasPallolauseet.Lahto, p.Lahtoon(0, 500), "1. lähtö: pallo-lahto");
-            Oleta.Sama(null, p.Lahtoon(90, 1500), "heti seuraava: ei (enintään joka toinen)");
-            Oleta.Sama(OpasPallolauseet.Kaanto, p.Lahtoon(170, 500), "suunta muuttui 80° → pallo-kaanto");
-            Oleta.Sama(null, p.Lahtoon(175, 1500), "joka toinen");
-            Oleta.Sama(OpasPallolauseet.Nousu, p.Lahtoon(180, 1500), "pitkä, suunta sama → pallo-nousu");
-            Oleta.Sama(null, p.Laskuun(), "lähdössä soi pallolause → ei laskua samaan siirtymään");
-            Oleta.Sama(null, p.Lahtoon(185, 300), "viereinen siirtymä: ei");
-            Oleta.Sama(null, p.Laskuun(), "viereinen siirtymä: ei laskuakaan");
-            Oleta.Sama(null, p.Lahtoon(186, 300), "lyhyt, suora → tavallinen lähtö");
-            Oleta.Sama(OpasPallolauseet.Lasku, p.Laskuun(), "lennon loppuun pallo-lasku (lähtö tavallinen, edellinen pallo kaksi siirtymää sitten)");
-            var q = new OpasPallolauseet(); int kaannot = 0;
-            for (int i = 0; i < 20; i++) if (q.Lahtoon(i % 2 == 0 ? 0 : 120, 300) == OpasPallolauseet.Kaanto) kaannot++;
-            Oleta.Sama(OpasPallolauseet.RyhmaMax, kaannot, "ryhmää enintään kolmesti kierroksella");
-            Oleta.Sama(null, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
+            for (int i = 1; i < OpasPallolauseet.Vali; i++) Oleta.Sama(null, p.Lahtoon(i % 2 == 0 ? 0 : 120, 1500), $"siirtymä {i}: hiljaa");
+            Oleta.Sama(OpasPallolauseet.Kaanto, p.Lahtoon(120 + 100, 500), "4. siirtymä, suunta muuttui → pallo-kaanto");
+            Oleta.Sama(null, p.Laskuun(), "lähdössä soi → ei laskua");
+            for (int i = 1; i < OpasPallolauseet.Vali; i++) p.Lahtoon(220, 300);
+            Oleta.Sama(OpasSiltalauseet.Kierros, p.Lahtoon(221, 300), "lyhyt, suora → tavallinen kierros-lause");
+            // 20 siirtymää: enintään 5 lausetta, ei kahta peräkkäin.
+            var q = new OpasPallolauseet(); int n = 0, ed = -10;
+            for (int i = 0; i < 20; i++)
+                if (q.Lahtoon(i % 2 == 0 ? 0 : 120, 1500) != null) { n++; Oleta.Tosi(i - ed >= OpasPallolauseet.Vali, $"siirtymä {i}: edellinen lause {i - ed} siirtymää sitten"); ed = i; }
+            Oleta.Sama(5, n, "20 siirtymää → 5 lausetta");
+            Oleta.Sama(OpasSiltalauseet.Kierros, new OpasPallolauseet().Lahtoon(0, 500, r => r != OpasPallolauseet.Lahto), "ryhmää ei aineistossa → tavallinen");
         }
 
         // Juna 166 (Pelikoodarin GET /opas/saa PR #4194): vastaus → Saatila.LiveSaa; LIVE-aika auringosta; hakuväli.

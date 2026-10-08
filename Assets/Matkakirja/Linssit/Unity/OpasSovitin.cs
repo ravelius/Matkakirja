@@ -836,6 +836,31 @@ namespace Matkakirja.Natiivi
         {
             if (yksAjo != null) { o.StopCoroutine(yksAjo); yksAjo = null; }
             kortti?.Piilota();
+            // Kuvanosto: suurennettu kuva pysyy, kunnes pelaaja sulkee sen (Natiivi-UI 9.10.); pieni poistuu omalla ajallaan.
+            if (Nosto is Matkakirja.Natiivi.OpasKuvanosto n && n.Nakyy && !n.Suurennettu && !nostoPoistuu) o.StartCoroutine(NostoPois(n));
+        }
+
+        // ---- KUVANOSTO (omistaja TF 168, Päätoimittaja 9.10.: kuvat pienenä reunaan, pidempään; Natiivi-UI:n OpasKuvanosto) ----
+        static Matkakirja.Natiivi.OpasKuvanosto Nosto => Testi ? null : Matkakirja.Natiivi.OpasKuvanosto.Viimeisin;
+        /// <summary>Näkyvän kuvanoston kuvan kulunut aika (s; tauko ei kulu) ja kuvan tunniste.</summary>
+        float nostoKulunut; int nostoVersio; bool nostoPoistuu;
+
+        void NostoNayta(Matkakirja.Natiivi.OpasKuvanosto n, OpasYksityiskohdat.Kuva k) { n.Nayta(k); nostoKulunut = 0; nostoVersio++; nostoPoistuu = false; }
+
+        /// <summary>Yksi ruutu: kulunut aika ja pienen kuvan poisto NayttoS:n jälkeen (suurennettu odottaa sulkemista).</summary>
+        void NostoAskel(Matkakirja.Natiivi.OpasKuvanosto n)
+        {
+            if (n == null || !n.Nakyy) return;
+            if (!tauolla) nostoKulunut += Time.unscaledDeltaTime;
+            if (!n.Suurennettu && nostoKulunut >= OpasYksityiskohdat.NayttoS) n.Piilota();
+        }
+
+        /// <summary>Kerronta loppui tai vaihtui: pieni kuva jää loppuajakseen (ei katkea kesken), sitten pois.</summary>
+        IEnumerator NostoPois(Matkakirja.Natiivi.OpasKuvanosto n)
+        {
+            int v = nostoVersio; nostoPoistuu = true;
+            while (n != null && n.Nakyy && v == nostoVersio) { NostoAskel(n); yield return null; }
+            if (v == nostoVersio) nostoPoistuu = false;
         }
 
         /// <summary>Kerronta alkoi: kohteen (tai "avaus") kuvat ajoitetaan ja näytetään soivan klipin ajan mukaan.</summary>
@@ -877,6 +902,22 @@ namespace Matkakirja.Natiivi
             if (lista.Count == 0) yield break;
             o.Kirjaa($"opas: yksityiskohtakuvat {kohdeId}: {lista.Count} ({(ajat != null && ajat.Count > 0 ? "sana-ajat" : "osuus tekstistä")}) "
                      + string.Join(", ", lista.ConvertAll(x => $"{x.AikaS:F1} s")));
+            var nosto = Nosto;
+            if (nosto != null)
+            {
+                // Kuvanosto: kuva pienenä reunaan ankkurin kohdalla, NayttoS tai seuraavaan kuvaan asti; suurennettua ei vaihdeta
+                // ennen kuin pelaaja sulkee sen (myöhästyneet ankkurit ohitetaan). Valikko, chat ja siirtymä piilottavat sen itse.
+                foreach (var (kuva, t) in lista)
+                {
+                    while (kaynnissa() && (aika() < t - 0.35 || nosto.Suurennettu)) { NostoAskel(nosto); yield return null; }
+                    if (!kaynnissa()) break;
+                    if (aika() > t + 1.0) continue;
+                    NostoNayta(nosto, kuva);
+                }
+                yksAjo = null;
+                if (nosto.Nakyy) yield return NostoPois(nosto);
+                yield break;
+            }
             kortti ??= new YksityiskohtaKortti(o);
             foreach (var (kuva, t) in lista)
             {
@@ -1961,9 +2002,10 @@ namespace Matkakirja.Natiivi
             if (toiveesta) return;
             // Pallolauseet (Pelikoodari 8.10., juna 165): kierroksen siirtymässä pallon oma ryhmä, muuten tavallinen.
             bool pallo = OpasSilmukka.PalloLento && silmukka.KierrosKaynnissa && matkaM <= 20000 && siltalauseet != null;
-            string pr = pallo ? pallolauseet.Lahtoon(OpasSilmukka.Suunta(silmukka.Asento.Lat, silmukka.Asento.Lon, k.Lat, k.Lon), matkaM, siltalauseet.OnRyhma) : null;
-            Silta(pr ?? (matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros), false);
-            if (pallo && pr == null) o.StartCoroutine(PalloLaskuun(k));
+            // Pallokierros (omistaja 9.10. "puuduttavalta", Päätoimittaja): lause vain noin joka 4. siirtymään, muissa hiljaa, ja
+            // kertoja alkaa jo lennon aikana (OpasSilmukka.PuheLennolla), joten lennon loppuun ei soiteta lasku-lausetta.
+            if (pallo) { var pr = pallolauseet.Lahtoon(OpasSilmukka.Suunta(silmukka.Asento.Lat, silmukka.Asento.Lon, k.Lat, k.Lon), matkaM, siltalauseet.OnRyhma); if (pr != null) Silta(pr, false); return; }
+            Silta(matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros, false);
         }
 
         readonly OpasPallolauseet pallolauseet = new OpasPallolauseet();
@@ -2710,7 +2752,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
-            YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false;
+            YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false; Nosto?.Piilota();
             luotain?.Dispose(); luotain = null;
             OpasKorostusKuva.Piilota(true);
             KaupunkiYovalot.Kohde = null;
