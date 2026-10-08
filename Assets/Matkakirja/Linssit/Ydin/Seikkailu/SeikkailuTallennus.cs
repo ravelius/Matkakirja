@@ -73,7 +73,7 @@ namespace Matkakirja.Linssit.Seikkailu
         static void Sanakirja(StringBuilder b, string nimi, Dictionary<string, int> d)
         {
             b.Append(", \"").Append(nimi).Append("\": {"); bool eka = true;
-            foreach (var kv in d) { if (!eka) b.Append(", "); eka = false; Merkkijono(b, kv.Key); b.Append(": ").Append(kv.Value); }
+            foreach (var kv in d) { if (!eka) b.Append(", "); eka = false; Merkkijono(b, kv.Key); b.Append(": ").Append(kv.Value.ToString(CultureInfo.InvariantCulture)); }   // ei kulttuurin miinusta (fi: −30 rikkoi JSONin)
             b.Append('}');
         }
     }

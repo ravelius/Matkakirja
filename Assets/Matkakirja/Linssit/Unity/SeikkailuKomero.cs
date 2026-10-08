@@ -117,6 +117,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.Soita("raapaisu", c, 0.8f, UnityEngine.Random.Range(0.92f, 1.08f));
                 var tulos = ydin.Raavi(ti, p.Tila.Vauhti);
                 kirjaa?.Invoke($"seikkailu: tiili {ti + 1}: {tulos}");
+                if (tulos == TiiliTulos.Putosi || tulos == TiiliTulos.Komeroon) SeikkailuTallentaja.Aktiivinen?.Tallenna("m: tiili " + (ti + 1));
                 if (tulos == TiiliTulos.Putosi) StartCoroutine(Putoaa(go));
                 else if (tulos == TiiliTulos.Komeroon) { SeikkailuAanet.Soita("kivi-lasku", c, 0.6f); go.transform.position = c - ulos * 0.35f + Vector3.down * 0.05f; }
                 if (ydin.Tiilet.Kurkistaa) { ydin.Tiilet.Kurkistaa = false; SeikkailuVartijat.Kurkistus(c + Vector3.up * 2.5f, 6f); }
@@ -156,6 +157,7 @@ namespace Matkakirja.Natiivi
         {
             SeikkailuAanet.Soita("luukku-narahdus", a + Vector3.up * 0.4f, 0.8f);
             kirjaa?.Invoke("seikkailu: arkku auki (kilvet 45° toisiaan kohti)");
+            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: arkku auki");
             yield return new WaitForSeconds(0.8f);
             SeikkailuAanet.Soita("hopea-kilahdus", a + Vector3.up * 0.4f, 0.8f);
             SeikkailuAanet.Soita("loyto-kantele", p.transform.position + Vector3.up * 1.6f, 0.8f);
@@ -173,6 +175,23 @@ namespace Matkakirja.Natiivi
             if (arkku is Vector3 a && (a - p).sqrMagnitude < 2.5f * 2.5f) return true;
             foreach (var t in tiiliGo) if (t != null && (t.transform.position - p).sqrMagnitude < 2.5f * 2.5f) return true;
             return false;
+        }
+
+        public void TaytaM(MTila m)
+        {
+            if (ydin == null) return;
+            for (int i = 0; i < ydin.Tiilet.Maara && i < 30; i++) if (ydin.Tiilet.Irti(i)) m.Tiilet |= 1 << i;
+            m.Kilpi1 = ydin.Lukko.Kilpi1; m.Kilpi2 = ydin.Lukko.Kilpi2; m.Arkku = ydin.Auki;
+        }
+
+        public void PalautaM(MTila m)
+        {
+            if (ydin == null) return;
+            for (int i = 0; i < ydin.Tiilet.Maara && i < 30; i++)
+                if ((m.Tiilet & (1 << i)) != 0) { ydin.Tiilet.AsetaIrti(i); if (i < tiiliGo.Count && tiiliGo[i] != null) tiiliGo[i].SetActive(false); }
+            ydin.Lukko.Kaanna(1, m.Kilpi1 - ydin.Lukko.Kilpi1); ydin.Lukko.Kaanna(2, m.Kilpi2 - ydin.Lukko.Kilpi2);
+            if (m.Arkku) ydin.Lukko.Kokeile();
+            kirjaa?.Invoke($"seikkailu: jatko: komero (tiilet {m.Tiilet}, kilvet {m.Kilpi1:F0}/{m.Kilpi2:F0}, arkku {(ydin.Auki ? "auki" : "kiinni")})");
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }

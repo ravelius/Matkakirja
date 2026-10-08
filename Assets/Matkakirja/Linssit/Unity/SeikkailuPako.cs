@@ -59,6 +59,7 @@ namespace Matkakirja.Natiivi
             SeikkailuVartijat.Valpastu();
             SeikkailuRepliikit.SoitaTaiVara("vartija-kello-1", "vartija-valpas-1", krampi + Vector3.up * 3f);   // "Kello soimaan!"
             kirjaa?.Invoke("seikkailu: hälytyskello soi, vartijat valppaina");
+            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: kello");
         }
 
         /// <summary>Toimintonapin verbi kävellessä (Kiinnitä krampin luona kellon jälkeen) tai null.</summary>
@@ -164,6 +165,15 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke("seikkailu: köysi katkaistu → K5");
             SeikkailuRepliikit.SoitaTaiVara("ranta-vartija-1", null, koysi + Vector3.up * 1.2f);   // istahtaa matalaan veteen
             SeikkailuRepliikit.SoitaTaiVara("soutaja-pako-2", null, vene + Vector3.up * 1.2f);
+        }
+
+        public void TaytaM(MTila m) => m.Kello = ydin.Vaihe != PakoVaihe.Odottaa;
+        /// <summary>Jatko: hälytys on jo soinut → pako alkaa krampista (ei kelloa uudelleen; vartijat valppaina jatkon armon jälkeen).</summary>
+        public void PalautaM(MTila m)
+        {
+            if (!m.Kello || ydin.Vaihe != PakoVaihe.Odottaa) return;
+            ydin.ArkkuAuki(); ydin.KelloSoi = false;
+            kirjaa?.Invoke("seikkailu: jatko: pako alkaa krampista");
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); OhjattuVerbi = null; OhjattuToimi = null; }

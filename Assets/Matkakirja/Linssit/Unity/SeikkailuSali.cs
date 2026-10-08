@@ -39,6 +39,7 @@ namespace Matkakirja.Natiivi
         {
             if (id != "keittokulho" || !ydin.KulhoLaskettu(Vector3.Distance(paikka, kulhoPaikka))) return;
             kirjaa?.Invoke("seikkailu: kulho voudin pöydällä → vouti syö, kiista aitan hoitajan kanssa alkaa");
+            SeikkailuTallentaja.Aktiivinen?.Tallenna("m: kulho pöydällä");
         }
 
         void KiistaAani()
@@ -69,6 +70,14 @@ namespace Matkakirja.Natiivi
             if (!(vh is (Vector3 vp, double vy))) return true;
             var d = p.transform.position - vp;
             return ydin.SaaOttaa(d.x, d.z, vy);
+        }
+
+        public void TaytaM(MTila m) => m.Kulho = ydin.Kiista >= 0;
+        public void PalautaM(MTila m)
+        {
+            if (!m.Kulho || !ydin.KulhoLaskettu(0)) return;
+            SeikkailuEsineet.Aktiivinen?.Siirra("keittokulho", kulhoPaikka + Vector3.up * 0.05f);
+            kirjaa?.Invoke("seikkailu: jatko: kulho voudin pöydällä, kiista käynnissä");
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); }

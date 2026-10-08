@@ -125,6 +125,8 @@ namespace Matkakirja.Linssit.Seikkailu
         public Tiilet(int maara = 6) { raapaisut = new int[maara]; irti = new bool[maara]; }
         public int Maara => irti.Length;
         public bool Irti(int i) => irti[i];
+        /// <summary>Jatko tallennuksesta: tiili on jo irti (ei ääntä eikä kurkistusta; ensimmäinen putoaminen on tapahtunut).</summary>
+        public void AsetaIrti(int i) { if (i < 0 || i >= irti.Length) return; irti[i] = true; ensimmainen = false; }
         public bool KaikkiIrti { get { foreach (var b in irti) if (!b) return false; return true; } }
         public void Paivita(double dt) => kello += dt;
         /// <summary>Raapaisu veitsellä; toinen raapaisu irrottaa: ensimmäinen irrotettu putoaa aina, muut vedon nopeuden mukaan.</summary>
