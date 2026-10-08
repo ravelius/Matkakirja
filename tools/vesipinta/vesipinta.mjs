@@ -232,6 +232,20 @@ for (let pj = 0; pj < H; pj += PALA) for (let pi = 0; pi < W; pi += PALA) {
 }
 loki('verkko', palat.length, 'palaa,', vMaara, 'kärkeä,', iMaara / 3, 'kolmiota');
 
+// --- navigointimaski (--maski): 8-bit PNG ruutukoossa, 0 = maa, 1–255 = etäisyys rantaan m (veneet ja lokit, LS1) ---
+if (A.includes('--maski')) {
+  const INF = 1e12, n = Math.max(W, H), f = new Float64Array(n), dd = new Float64Array(n), v = new Int32Array(n), z = new Float64Array(n + 1), D2 = new Float32Array(W * H);
+  const dt1 = (m) => { let k = 0; v[0] = 0; z[0] = -INF; z[1] = INF; for (let q = 1; q < m; q++) { let s; while (true) { s = ((f[q] + q * q) - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]); if (s <= z[k]) { k--; continue; } break; } k++; v[k] = q; z[k] = s; z[k + 1] = INF; } k = 0; for (let q = 0; q < m; q++) { while (z[k + 1] < q) k++; dd[q] = (q - v[k]) * (q - v[k]) + f[v[k]]; } };
+  for (let i = 0; i < W; i++) { for (let j = 0; j < H; j++) f[j] = vesi(j * W + i) ? INF : 0; dt1(H); for (let j = 0; j < H; j++) D2[j * W + i] = dd[j]; }
+  const png = new PNG({ width: W, height: H, colorType: 0, inputColorType: 0, bitDepth: 8 });
+  for (let j = 0; j < H; j++) { for (let i = 0; i < W; i++) f[i] = D2[j * W + i]; dt1(W); for (let i = 0; i < W; i++) png.data[(H - 1 - j) * W + i] = vesi(j * W + i) ? Math.max(1, Math.min(255, Math.round(Math.sqrt(dd[i]) * C))) : 0; }
+  fs.mkdirSync(ULOS, { recursive: true });
+  fs.writeFileSync(path.join(ULOS, `vesi-${NIMI}-maski.png`), PNG.sync.write(png, { colorType: 0, inputColorType: 0 }));
+  fs.writeFileSync(path.join(ULOS, `vesi-${NIMI}-maski.json`), JSON.stringify({ origo: { lat: lat0, lon: lon0 }, ruutu_m: C, leveys: W, korkeus: H,
+    kulma_enu: { x: X0, y: Y0 }, rivi0: 'ylin rivi = pohjoisin (y = −X0 … ); pikseli (i, r) → x = X0 + (i + 0,5)·ruutu, y = Y0 + (H − 1 − r + 0,5)·ruutu',
+    arvo: '0 = maa, 1–255 = etäisyys lähimpään rantaan m (katto 255)', krediitti: 'Vesi: © OpenStreetMap contributors (ODbL), ESA WorldCover 2021 (CC BY 4.0)' }, null, 2));
+  loki('navigointimaski', W, '×', H);
+}
 // --- kirjoitus ---
 fs.mkdirSync(ULOS, { recursive: true });
 const vb = Buffer.alloc(vMaara * 16 + iMaara * 4); let o = 0;

@@ -37,3 +37,17 @@ Krediitti (☰ › Lähteet): "Vesi: © OpenStreetMap contributors (ODbL), ESA W
 Kärki on float32 x itä, y pohjoinen, z ylös ja d rantaetäisyys (m). Indeksit ovat uint32 ja palan sisäisiä. Kolmiot ovat CCW ylhäältä katsottuna.
 Rannat: marching squares (4 × 4 -alinäytteistetty peitto) ja satulatapaukset kahtena palana. Avovesi: nelipuu enintään 64 ruutua.
 z on vesitaso ilman nostoa; nosto (suositus 0,4 m) tehdään ajossa.
+
+## Navigointimaski (--maski)
+
+`vesi-<nimi>-maski.png` + `.json`: 8-bit harmaa ruutukoossa, 0 = maa, 1–255 = etäisyys rantaan m. Veneiden ja lokkien simulaatioon (Linssiseppä).
+
+## Reitit ja kohteet (elävä kaupunki, omistaja 8.10. 20.4x)
+
+- `reitit.mjs <nimi> <lat> <lon> [säde] --osm <Geofabrik free-shp -kansio> --ulos <kansio>` → `reitit-<nimi>.json`: kadut, jalankulku,
+  raitiotiet, rautatiet, metro (maan päällä), köysiradat, vesiväylät, puistot, aukiot (pisteet), satamat (laiturit, venesatamat,
+  telakka-altaat), pysäkit. Tunnelit pois, Douglas–Peucker 0,5 m. Tukholma 15,6 Mt, noin 20 s.
+- `pbf-kohteet.mjs <nimi> <lat> <lon> [säde] --pbf <maa-latest.osm.pbf> --ulos <kansio>` → `kohteet-<nimi>.json`: lautat (route=ferry),
+  piiput, maailmanpyörät, aukiot alueina, suihkulähteet ja nimetyt vesialueet. Oma PBF-lukija ilman riippuvuuksia. Ruotsi noin 60 s.
+- Koordinaatit ENU-metreinä samasta origosta kuin vesi. Korkeutta ei anneta, koska Googlen laatoista ei saa mitata.
+- Krediitti: "© OpenStreetMap contributors (ODbL)". Tiedostot ovat ODbL-johdannaistietokantoja (teko-ohje tässä).
