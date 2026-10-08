@@ -49,7 +49,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static readonly (string Id, string Nimi, string Selite, string Ikoni, System.Action Avaa)[] Keskeneraiset =
         {
-            ("olavinlinna", "Olavinlinna", "1499 · ensimmäinen osa", "taikalasit", SeikkailuTapit.AvaaPelattavaPala),
+            ("olavinlinna", "Olavinlinna", "1499 · koko seikkailu, noin 25 min", "taikalasit", SeikkailuTapit.AvaaPelattavaPala),
         };
 
         /// <summary>Pelit-kategoriassa on jotain (Karttaselitteen Linssit-nappi näkyy myös ilman linssejä).</summary>
