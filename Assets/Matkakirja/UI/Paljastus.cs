@@ -194,6 +194,7 @@ namespace Matkakirja.Natiivi
             foreach (var c in new[] { "mk-auki", "mk-kuva", "mk-nakyy", "mk-lyoty", "mk-jatka" }) kerros.RemoveFromClassList(c);
             bool peli = tyyppi == "seikkailu";
             kerros.EnableInClassList("mk-paljastus--peli", peli);
+            kerros.EnableInClassList("mk-paljastus--tumma", peli);   // KORTTI-pohjan tumma variantti vain videopelissä (omistaja 21.2x)
             jatka.pickingMode = PickingMode.Ignore;
             kerros.style.display = DisplayStyle.Flex;
             Auki = true;

@@ -1003,3 +1003,29 @@
 .mk-paljastus.mk-paljastus--peli .mk-paljastus__jatka {
     transition-duration: 0.22s;
 }
+
+/* Seikkailun löytö TUMMANA (omistaja 8.10.2026 klo 21.2x "A"; KORTTI-pohjan tumma variantti): pergamenttimalli tk-tumma-*-
+ * tokeneista vain videopelissä (mk-paljastus--tumma); muut paljastukset ennallaan. */
+.mk-paljastus--paikallis.mk-paljastus--tumma {
+    background-color: var(--tk-tumma-pinta);
+}
+
+.mk-paljastus--paikallis.mk-paljastus--tumma .mk-paljastus__reuna {
+    -unity-background-image-tint-color: var(--tk-tumma-pinta);
+}
+
+.mk-paljastus--paikallis.mk-paljastus--tumma .mk-paljastus__nimi {
+    color: var(--tk-tumma-muste);
+}
+
+.mk-paljastus--paikallis.mk-paljastus--tumma .mk-paljastus__palkkio,
+.mk-paljastus--paikallis.mk-paljastus--tumma .mk-paljastus__fakta,
+.mk-paljastus--paikallis.mk-paljastus--tumma .mk-paljastus__isoisa {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-paljastus--paikallis.mk-paljastus--tumma .mk-paljastus__jatka {
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--tk-tumma-pinta);
+    color: var(--tk-tumma-muste);
+}
