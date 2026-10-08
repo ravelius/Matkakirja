@@ -245,7 +245,9 @@ namespace Matkakirja.Linssit.Kierros
         /// p on etenemisen S-käyrä (rampit PalloProfiili) → kuvan nopeudella on yksi kumpu, ja se alkaa ja loppuu nollasta. Suunta ja
         /// kallistus seuraavat vaakaosuutta (ei kääntymistä paikallaan). ZoomRho: pienempi = matalampi kaari.
         /// </summary>
-        public const double ZoomRho = 0.6;   // 2,5 km: et 420 → ~600 m → 350 m (ennen ~1 500 m)
+        // Omistaja TF 167 (9.10.): "lentää siirtymissä matalammalla" → 0,6 → 0,42 (2,5 km:n lennon huippu ~600 → ~470 m); lipumisen
+        // kaari samalla etäisyydellä ennallaan, sumennusten ohitus nostaa yhä tarvittaessa (SumennusRho).
+        public const double ZoomRho = 0.42;
         static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka)
         {
             double p = Eteneminen(t, matka);

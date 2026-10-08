@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "ca94057a6b155179";
-        public const string Versio = "v45n";   // v45l + ranta-1499:n yöatlas + detaljit kivi, rappaus, puu, lankku ja aliakset (LR 8.10.)
+        public const string Hash = "27c1262c20dfd693";
+        public const string Versio = "v45p";   // v45o + rekvisiitta (48 merkkiä, 22 CC0-mallia Poly Havenista; LR 8.10.)
     }
 }

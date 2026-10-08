@@ -39,6 +39,8 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
         _ValoAtlas ("Kävelyosan valoatlas (UV1, valo × 0,5, LR 8.10.)", 2D) = "grey" {}
         _ValoVain ("Valo atlaksesta (1) vai reaaliaikaisista valoista (0)", Float) = 0
         _Markyys ("Märkyys 0–1 (kävelydata, LR v45f)", Float) = 0
+        _NormaaliKuva ("Normaalikartta (UV0, OpenGL Y+, lineaarinen; esineet LR v45o)", 2D) = "bump" {}
+        _NormaaliPaalla ("Normaalikartta käytössä", Float) = 0
         _Detalji ("Detalji (x = 1 / toistoväli m, y = voima, z = päällä)", Vector) = (0.6667, 0.6, 0, 0)
         _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
         _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
@@ -83,6 +85,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
 
             TEXTURE2D(_PohjaKuva); SAMPLER(sampler_PohjaKuva);
             TEXTURE2D(_ValoAtlas); SAMPLER(sampler_ValoAtlas);
+            TEXTURE2D(_NormaaliKuva); SAMPLER(sampler_NormaaliKuva);
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _Vari;
@@ -96,6 +99,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _ValoVain;         // 1 = kävelyosa: valo leivotusta atlaksesta (UV1), ei pää- eikä taivasvaloa
                 float _Markyys;          // märkyys 0–1 (SeikkailuKavely.AsetaMarkyys)
                 float4 _Detalji;         // x = 1 / toistoväli m, y = voima, z = päällä (DioraamaRakennus.AsetaDetalji)
+                float _NormaaliPaalla;   // 1 = _NormaaliKuva tangenttiavaruudessa (mesh-tangentit; SeikkailuEsineet)
             CBUFFER_END
 
             struct Syote
@@ -105,6 +109,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 half4 vari : COLOR;
                 float2 uv : TEXCOORD0;
                 float2 uv1 : TEXCOORD1;
+                float4 tangentti : TANGENT;
             };
             struct Vali
             {
@@ -114,6 +119,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float3 paikkaW : TEXCOORD1;
                 float2 uv : TEXCOORD2;
                 float2 uv1 : TEXCOORD3;
+                float4 tangenttiW : TEXCOORD4;
             };
 
             Vali vert(Syote i)
@@ -126,6 +132,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 o.vari = i.vari; // R = AO, G = lämpö, B = satunnainen (ei värejä: ei sRGB-muunnosta)
                 o.uv = TRANSFORM_TEX(i.uv, _PohjaKuva);
                 o.uv1 = i.uv1;
+                o.tangenttiW = float4(TransformObjectToWorldDir(i.tangentti.xyz), i.tangentti.w * GetOddNegativeScale());
                 return o;
             }
 
@@ -144,6 +151,15 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
 
                 // Vesi virtaa (_Virtaus, muilla pinnoilla 0,0): sama UV kuvioon ja pohjakuvaan.
                 float2 uv = i.uv + _Virtaus.xy * _Time.y;
+
+                // Normaalikartta (esineet, LR v45o): tangenttiavaruus mesh-tangenteilla (RecalculateTangents), G = +V.
+                if (_NormaaliPaalla > 0.5)
+                {
+                    float3 tn = SAMPLE_TEXTURE2D(_NormaaliKuva, sampler_NormaaliKuva, uv).rgb * 2.0 - 1.0;
+                    float3 tW = normalize(i.tangenttiW.xyz);
+                    float3 bW = cross(n, tW) * i.tangenttiW.w;
+                    n = normalize(tn.x * tW + tn.y * bW + tn.z * n);
+                }
 
                 half3 albedo;
                 if (_Tila > 0.5)
@@ -255,6 +271,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _ValoVain;
                 float _Markyys;
                 float4 _Detalji;
+                float _NormaaliPaalla;
             CBUFFER_END
 
             struct SyoteVarjo { float4 paikka : POSITION; float3 normaali : NORMAL; };
@@ -302,6 +319,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float _ValoVain;
                 float _Markyys;
                 float4 _Detalji;
+                float _NormaaliPaalla;
             CBUFFER_END
 
             struct SyoteSyvyys { float4 paikka : POSITION; };

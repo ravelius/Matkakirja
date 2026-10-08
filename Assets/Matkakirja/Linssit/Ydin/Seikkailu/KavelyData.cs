@@ -84,6 +84,16 @@ namespace Matkakirja.Linssit.Seikkailu
 
     public sealed class KavelyData
     {
+        /// <summary>Rekvisiitta peittää poimittavan esineen (alle 0,25 m vaakatasossa ja 0,5 m pystyssä; LR v45p: kulho tarjottimen päällä):
+        /// silloin sitä ei piirretä, jottei koriste estä esineen napautusta.</summary>
+        public const double RekvisiittaVaraM = 0.25;
+        public bool RekvisiittaPeittaa(KavelyMerkki r)
+        {
+            foreach (var e in Lajia("esine"))
+                if ((r.X - e.X) * (r.X - e.X) + (r.Z - e.Z) * (r.Z - e.Z) < RekvisiittaVaraM * RekvisiittaVaraM && System.Math.Abs(r.Y - e.Y) < 0.5) return true;
+            return false;
+        }
+
         public int Versio;
         public Dictionary<string, KavelyOsa> Osat = new Dictionary<string, KavelyOsa>(StringComparer.Ordinal);
         public Dictionary<string, string> Esineet = new Dictionary<string, string>(StringComparer.Ordinal);
