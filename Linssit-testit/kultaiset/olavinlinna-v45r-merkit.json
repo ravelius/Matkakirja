@@ -3634,9 +3634,9 @@
  {
   "nimi": "rekvisiitta:keittio-wooden_bowl_01-1",
   "paikka": [
-   -19.45,
-   -1.75,
-   12.75
+   -21.25,
+   -1.71,
+   14.35
   ],
   "kierto_y": -0.7507,
   "glb": "rekvisiitta-wooden_bowl_01.glb",
@@ -3645,9 +3645,9 @@
  {
   "nimi": "rekvisiitta:keittio-wooden_bowl_02-1",
   "paikka": [
-   -22.65,
-   -1.71,
-   13.55
+   -16.85,
+   -1.75,
+   13.75
   ],
   "kierto_y": 1.0226,
   "glb": "rekvisiitta-wooden_bowl_02.glb",
@@ -3656,9 +3656,9 @@
  {
   "nimi": "rekvisiitta:keittio-wooden_bowl_02-2",
   "paikka": [
-   -19.85,
-   -1.75,
-   12.75
+   -24.05,
+   -1.8,
+   12.55
   ],
   "kierto_y": -0.8328,
   "glb": "rekvisiitta-wooden_bowl_02.glb",
@@ -3667,23 +3667,12 @@
  {
   "nimi": "rekvisiitta:keittio-wooden_spoon-1",
   "paikka": [
-   -21.25,
-   -1.71,
-   14.35
+   -24.05,
+   -1.8,
+   11.75
   ],
   "kierto_y": -1.3957,
   "glb": "rekvisiitta-wooden_spoon.glb",
-  "osa": "keittio-G102"
- },
- {
-  "nimi": "rekvisiitta:keittio-wooden_cutting_board-1",
-  "paikka": [
-   -23.85,
-   -1.8,
-   12.15
-  ],
-  "kierto_y": -1.7684,
-  "glb": "rekvisiitta-wooden_cutting_board.glb",
   "osa": "keittio-G102"
  },
  {
@@ -3691,64 +3680,64 @@
   "paikka": [
    -15.45,
    -1.75,
-   12.95
+   13.35
   ],
-  "kierto_y": -2.1007,
+  "kierto_y": -2.056,
   "glb": "rekvisiitta-yellow_onion.glb",
   "osa": "keittio-G102"
  },
  {
   "nimi": "rekvisiitta:keittio-yellow_onion-2",
   "paikka": [
-   -15.65,
+   -20.25,
    -1.75,
-   13.15
+   12.35
   ],
-  "kierto_y": -3.0753,
+  "kierto_y": 0.7723,
   "glb": "rekvisiitta-yellow_onion.glb",
   "osa": "keittio-G102"
  },
  {
   "nimi": "rekvisiitta:keittio-yellow_onion-3",
   "paikka": [
-   -19.65,
+   -16.45,
    -1.75,
-   12.35
+   12.95
   ],
-  "kierto_y": -0.4927,
+  "kierto_y": -1.4279,
   "glb": "rekvisiitta-yellow_onion.glb",
   "osa": "keittio-G102"
  },
  {
   "nimi": "rekvisiitta:keittio-food_apple_01-1",
   "paikka": [
-   -20.25,
+   -15.45,
    -1.75,
-   12.55
+   12.95
   ],
-  "kierto_y": -2.0894,
+  "kierto_y": 1.5167,
   "glb": "rekvisiitta-food_apple_01.glb",
   "osa": "keittio-G102"
  },
  {
   "nimi": "rekvisiitta:keittio-food_apple_01-2",
   "paikka": [
-   -21.05,
-   -1.75,
+   -23.85,
+   -1.8,
    12.35
   ],
-  "kierto_y": -1.8272,
+  "kierto_y": -2.1137,
   "glb": "rekvisiitta-food_apple_01.glb",
   "osa": "keittio-G102"
  },
  {
   "nimi": "rekvisiitta:keittio-food_apple_01-3",
   "paikka": [
-   -20.85,
-   -1.75,
-   12.55
+   -23.65,
+   -1.8,
+   11.75
   ],
-  "kierto_y": 2.0875,
+  "kierto_y": 1.0188,
   "glb": "rekvisiitta-food_apple_01.glb",
   "osa": "keittio-G102"
  },
@@ -3759,126 +3748,115 @@
    -1.71,
    13.95
   ],
-  "kierto_y": 1.5176,
+  "kierto_y": -0.9313,
   "glb": "rekvisiitta-brass_pot_01.glb",
-  "osa": "keittio-G102"
- },
- {
-  "nimi": "rekvisiitta:keittio-jug_01-1",
-  "paikka": [
-   -16.45,
-   -1.75,
-   13.15
-  ],
-  "kierto_y": 0.4844,
-  "glb": "rekvisiitta-jug_01.glb",
   "osa": "keittio-G102"
  },
  {
   "nimi": "rekvisiitta:linnantupa-wooden_stool_01-1",
   "paikka": [
-   -16.56,
+   -12.36,
    3.4,
-   0.33
+   -4.67
   ],
-  "kierto_y": 2.2353,
+  "kierto_y": -1.1372,
   "glb": "rekvisiitta-wooden_stool_01.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-wooden_stool_01-2",
   "paikka": [
-   -6.96,
+   -11.36,
    3.4,
-   5.93
+   4.13
   ],
-  "kierto_y": -1.0817,
+  "kierto_y": 0.5357,
   "glb": "rekvisiitta-wooden_stool_01.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-wine_barrel_01-1",
   "paikka": [
-   -12.16,
+   -16.76,
    3.4,
-   -3.87
+   -0.47
   ],
-  "kierto_y": -1.3493,
+  "kierto_y": 1.7573,
   "glb": "rekvisiitta-wine_barrel_01.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-wooden_bucket_02-1",
   "paikka": [
-   -11.56,
+   -9.16,
    3.4,
-   -2.87
+   3.33
   ],
-  "kierto_y": -1.0718,
+  "kierto_y": -0.9845,
   "glb": "rekvisiitta-wooden_bucket_02.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-brass_goblets-1",
   "paikka": [
-   -13.56,
-   4.18,
-   2.33
+   -9.36,
+   4.4,
+   -1.27
   ],
-  "kierto_y": -2.1587,
+  "kierto_y": -0.4465,
   "glb": "rekvisiitta-brass_goblets.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-1",
   "paikka": [
-   -10.76,
+   -11.56,
    4.18,
-   1.13
+   1.33
   ],
-  "kierto_y": -0.6382,
+  "kierto_y": 0.0474,
   "glb": "rekvisiitta-carved_wooden_plate.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-2",
   "paikka": [
-   -13.96,
-   4.4,
-   9.33
+   -14.16,
+   4.18,
+   2.53
   ],
-  "kierto_y": -2.637,
+  "kierto_y": 2.075,
   "glb": "rekvisiitta-carved_wooden_plate.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-3",
   "paikka": [
-   -9.16,
+   -15.96,
    4.4,
-   -1.67
+   4.53
   ],
-  "kierto_y": -2.0567,
+  "kierto_y": -1.6448,
   "glb": "rekvisiitta-carved_wooden_plate.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-carved_wooden_plate-4",
   "paikka": [
-   -13.96,
-   4.18,
-   2.73
+   -6.56,
+   4.25,
+   7.13
   ],
-  "kierto_y": 0.2007,
+  "kierto_y": 2.8628,
   "glb": "rekvisiitta-carved_wooden_plate.glb",
   "osa": "palatsi"
  },
  {
   "nimi": "rekvisiitta:linnantupa-metal_jug-1",
   "paikka": [
-   -6.16,
-   4.4,
-   4.53
+   -10.96,
+   4.18,
+   0.93
   ],
   "kierto_y": -1.8708,
   "glb": "rekvisiitta-metal_jug.glb",
@@ -3887,9 +3865,9 @@
  {
   "nimi": "rekvisiitta:linnantupa-jug_01-1",
   "paikka": [
-   -9.36,
-   4.4,
-   -1.27
+   -12.16,
+   4.18,
+   1.73
   ],
   "kierto_y": -1.1304,
   "glb": "rekvisiitta-jug_01.glb",
@@ -3898,9 +3876,9 @@
  {
   "nimi": "rekvisiitta:linnantupa-wooden_bowl_02-1",
   "paikka": [
-   -13.16,
+   -13.56,
    4.18,
-   1.93
+   2.33
   ],
   "kierto_y": 2.0169,
   "glb": "rekvisiitta-wooden_bowl_02.glb",
@@ -3909,9 +3887,9 @@
  {
   "nimi": "rekvisiitta:linnantupa-wooden_bowl_02-2",
   "paikka": [
-   -9.96,
-   4.16,
-   8.13
+   -10.36,
+   4.18,
+   1.13
   ],
   "kierto_y": -2.0426,
   "glb": "rekvisiitta-wooden_bowl_02.glb",
@@ -3920,9 +3898,9 @@
  {
   "nimi": "rekvisiitta:linnantupa-food_apple_01-1",
   "paikka": [
-   -12.96,
-   4.4,
-   8.93
+   -10.36,
+   4.16,
+   8.33
   ],
   "kierto_y": 3.0024,
   "glb": "rekvisiitta-food_apple_01.glb",
@@ -3931,9 +3909,9 @@
  {
   "nimi": "rekvisiitta:linnantupa-food_apple_01-2",
   "paikka": [
-   -5.96,
-   4.4,
-   4.73
+   -12.36,
+   4.18,
+   2.13
   ],
   "kierto_y": 0.1767,
   "glb": "rekvisiitta-food_apple_01.glb",
@@ -4021,7 +3999,7 @@
   "paikka": [
    -9.36,
    8.3,
-   7.53
+   7.73
   ],
   "kierto_y": 0.4824,
   "glb": "rekvisiitta-carved_wooden_plate.glb",
