@@ -415,6 +415,16 @@ namespace Matkakirja.Natiivi
             return annettu;
         }
 
+        /// <summary>Tietokerros tarjolla (NaytaTietokerros kutsuttu, seikkailu käynnissä): linnan ☰-valikon Tietoa-rivi.</summary>
+        public static bool TietokerrosTarjolla => tkOtsikot != null;
+
+        /// <summary>Linnan ☰ → Tietoa (ilman Pulua, Päätoimittaja 8.10.): sama kortisto kuin Pulun napautuksesta.</summary>
+        public static void AvaaTietokerrosValikosta()
+        {
+            Debug.Log("MATKAKIRJA seikkailutapit: tietokerros valikosta");
+            AvaaTietokerros();
+        }
+
         /// <summary>Tarjous pois (seikkailu päättyi): Pulun napautus palaa ennalleen.</summary>
         static void PoistaTietokerros()
         {
