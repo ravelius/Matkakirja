@@ -1,0 +1,585 @@
+{
+  "task": "vilna-yksityiskohdat-20261008",
+  "routedTaskNumber": 31,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-vilna-yksityiskohdat-20261008.md",
+    "commit": "4906827b88c9be430a474698af12d798de766434",
+    "blob": "7667d11b3d4168d70410d6b9f893d179aecdf04b"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 5,
+  "imageCount": 4,
+  "generationCalls": 5,
+  "generationLimit": 5,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 2,
+      "qid": "Q1284847",
+      "id": "palatsin-rauniokellari",
+      "filename": "vilna-Q1284847-palatsin-rauniokellari.png",
+      "file": "vilna-Q1284847-palatsin-rauniokellari.png",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: photorealistic educational illustration for a Vilnius city introduction.\nCreate ONE entirely new TEXT-ONLY image, native exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input or reference photos.\nScene/backdrop: a present-day archaeology museum basement inspired only by the general concept of medieval palace foundations beneath the hill in Vilnius. It is an ORIGINAL APPROXIMATE interior arrangement, not a reconstruction of an actual room or any photograph. An eye-level camera looks along a quiet, empty brick-vaulted passage. Reconstructed clean warm-red brick vaults and simple arches recede overhead and in the background. Beneath them are exposed low irregular medieval foundation walls of worn reddish brick and rough natural stones, with a little dark charcoal-like archaeological fill between stones. These are the main visual subject, prominent across the foreground and continuing into the middle distance.\nDetails: a narrow clear glass viewing-floor strip and unobtrusive simple plain metal safety railing beside the archaeological remains, subtle concealed warm lighting. The glass floor occupies ONLY around one third of the image and absolutely LESS THAN half. No luminous glowing floor effect. Behind distant plain glass, just two small ORIGINAL GENERIC unglazed earthenware vessel props: one simple undecorated clay bowl and one plain small pot, conventional anonymous basic shapes with absolutely no lettering, design, pattern, icon, collection identity or replica of any known museum artefact. No ceramic tiles or artworks on display. Archaeological masonry matters much more than the tiny clay props.\nComposition/framing: wide horizontal photograph-like view along the passage from eye level, exposed ancient masonry in the foreground, a calm sequence of brick arches beyond. Balanced scale, realistic construction and perspective. No visitors or guards; the entire interior is empty.\nStyle/medium: convincing photograph from a real camera, 35mm lens feel, natural muted colors and moderate contrast, sharp believable brick-and-stone texture, soft warm museum spot lighting with gentle shadows, restrained exposure. Realistic subtle glass reflections. No HDR, no painting, no romantic artwork, no cinematic color grading, no oversaturated orange, no glossy CGI, no enormous ultra-wide distortion.\nAvoid: people, faces, real artefact replicas, museum logos, exact actual-room layout or copied photo composition, pictures, paintings, labelled display panels, signs, plaques, writing, numbers, Hebrew or any letters, cameras, security cameras, watermarks, borders, captions, decorative symbols. No modern installations as primary subject. No text of any kind anywhere.",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "viitteet": [
+        {
+          "publisher": "National Museum – Palace of the Grand Dukes of Lithuania",
+          "title": "History, Archaeology, Architecture",
+          "url": "https://www.valdovurumai.lt/en/expositions/i/5366/history-archaeology-architecture/",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text confirms surviving authentic walls from several periods in archaeology route. Exact new vault arrangement, glass-floor framing and anonymous clay props are fictional and do not copy actual museum artefacts or any photographic composition.",
+          "access": "2026-10-08; official indexed text excerpts read; direct page returned502, no photos or pixels viewed."
+        },
+        {
+          "publisher": "National Museum – Palace of the Grand Dukes of Lithuania",
+          "title": "The Purpose and Use of the Reconstructed Palace",
+          "url": "https://media.valdovurumai.lt/files/a/stendines_parodos/e4eefd9b3c471327e306b13dd1d18803.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official indexed PDF text confirms July2013 opening of south/east wings and display of surviving castle/palace ruins. No PDF pages or images viewed.",
+          "access": "2026-10-08; official indexed text only."
+        }
+      ],
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/02-palatsin-rauniokellari/vilna-Q1284847-palatsin-rauniokellari.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b23-b1fc-7131-9d49-00813ee9adbf/exec-87ffc85a-81ee-4452-89e3-7f34d56f14e4.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/02-palatsin-rauniokellari/original-generation.png",
+      "originalSha256": "970ecd8ff60539a09db9fa69311876266de1f1198797ae2ae07a6ec1e223f700",
+      "sha256": "55dc787bd11be6e146c3fccaf14b7dfa0a8dcfd570ccde7452ebb5d6deaab7a1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/02-palatsin-rauniokellari/qa-preview-480.png",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "kuvateksti": "Vilnan palatsin säilyneitä keskiaikaisia perustuksia havainnollistava kuvitteellinen museokellari. Tilajärjestys ja nimettömät saviastiat ovat havainnollistavaa rekvisiittaa, eivät todellisen museon tarkka näkymä tai kokoelmaesineiden jäljennöksiä. Havainnekuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; equality of decoded native/final pixels verified.",
+        "Byte-exact tool original copied to original-generation.png.",
+        "Created separate full-frame480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native view: restrained warm brick-vaulted basement, foreground rough medieval-style masonry, narrow glass-floor strip well under half of image, railing, two tiny generic undecorated pottery props behind glass.",
+          "No people, letters, labels, logos, watermarks, borders or recognizable artefact designs observed.",
+          "Full-frame480x320 view: archaeology remains dominate, brick arches stay clear and narrow glass viewing floor remains below half; anonymous clay props are small."
+        ],
+        "limitations": [
+          "Original approximate composition, not a reconstruction of an actual room or archaeological wall plan.",
+          "Brick/stones reference the official descriptions of surviving walls; specific materials, vault details and generic clay props are invented."
+        ]
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "7667d11b3d4168d70410d6b9f893d179aecdf04b",
+      "visualReview": {
+        "task": "vilna-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1284847",
+        "file": "vilna-Q1284847-palatsin-rauniokellari.png",
+        "sha256": "55dc787bd11be6e146c3fccaf14b7dfa0a8dcfd570ccde7452ebb5d6deaab7a1",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tiiliholvin ja perustusten kameramainen näkymä; lasikäytävä alle puolet alasta, kaksi geneeristä pientä saviastiaa. Ei ihmisiä, esinerekonstruktioita tai tekstiä."
+        ],
+        "limitations": [
+          "Kuvitteellinen museotila ja rekvisiitta; ei todellisen kellarin pohjapiirros tai nimetty kokoelmaesine."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native view: restrained warm brick-vaulted basement, foreground rough medieval-style masonry, narrow glass-floor strip well under half of image, railing, two tiny generic undecorated pottery props behind glass.",
+          "No people, letters, labels, logos, watermarks, borders or recognizable artefact designs observed.",
+          "Full-frame480x320 view: archaeology remains dominate, brick arches stay clear and narrow glass viewing floor remains below half; anonymous clay props are small."
+        ],
+        "limitations": [
+          "Original approximate composition, not a reconstruction of an actual room or archaeological wall plan.",
+          "Brick/stones reference the official descriptions of surviving walls; specific materials, vault details and generic clay props are invented."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/vilna-yksityiskohdat/20261008/vilna-Q1284847-palatsin-rauniokellari.png",
+      "url": "https://media.matkakirja.app/julisteet/vilna-yksityiskohdat/20261008/vilna-Q1284847-palatsin-rauniokellari.png",
+      "bytes": 2817673,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q937290",
+      "id": "kirkon-varasto-1812",
+      "file": "vilna-Q937290-kirkon-varasto-1812.png",
+      "filename": "vilna-Q937290-kirkon-varasto-1812.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/03-kirkon-varasto-1812/vilna-Q937290-kirkon-varasto-1812.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b2f-a008-74d0-b979-b3bc694afa31/exec-b56de569-d048-463b-976a-ba302ce8f0f5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/03-kirkon-varasto-1812/original-generation.png",
+      "sha256": "a26c7fa287cbba63435666f2e20d3c8b90a6642ae0db83197c62696d3528da59",
+      "originalSha256": "705cc4ad18013201491e698ce1350fca2c7a1974e6b26a9b55a7d2afce754d15",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational illustration for a Vilnius city introduction.\nCreate ONE entirely new image from this text only, exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input images or source photograph pixels.\nScene: an original photograph-like reconstruction of a small Lithuanian red-brick Gothic church interior in Vilnius during the cold winter retreat of 1812, evoking the story of St Anne's Church used as a military store. It is a plausible illustrative interior, not an exact copy of the real church or museum. A single narrow nave with tall pointed lancet windows, modest ribbed brick vaults, rough red masonry and a worn stone floor. Looking from the entrance along the central aisle at eye level toward a plain distant chancel in shadow. Do not recreate any actual altar, religious artwork or decorated museum object.\nPrimary subjects: clearly visible storage supplies arranged along both sides of the aisle: anonymous plain coarse linen grain sacks, a few simple weathered wooden staved barrels without marks, and rough wooden containers. In the lower middle distance, a SMALL low fire burns on the stone floor among a few broken plain wooden bench planks and dismantled plain furniture timber, with a thin thread of smoke. Keep flame height low, subdued and believable; this is a restrained warmth-seeking camp fire, not a destructive building fire. Much of the church remains empty. Worn snow and slush at the entrance threshold in the foreground.\nPeople: only TWO SMALL anonymous fictional adult soldiers far inside the nave, wearing plain worn dark blue early-1800s long military coats, dark trousers and simple dark caps with no insignia. Both entirely seen from behind, looking away; each no more than about one tenth of image height. No face visible, no historical person likeness, no Napoleon. No weapons.\nComposition: wide full-frame view with both the brick vaults and storage sacks/barrels clearly legible. Fire and supplies remain discernible when the whole image is reduced to 480 pixels wide. Natural spatial scale and perspective, no cropped foreground human figures.\nStyle/medium: convincing camera-captured natural-material reconstruction, tactile irregular masonry, coarse woven sacks, aged timber and muddy snow, photographic texture without painterly brushwork or glossy CGI.\nLighting/mood: cold soft winter daylight from narrow windows, balanced with a gentle local warm glow from the small fire, restrained gray-blue and brick-brown palette. Naturally dim but readable exposure, no theatrical spotlight or volumetric beams. No HDR, cinematic grading, oversaturation or disaster spectacle.\nAvoid: any words, letters, numerals, labels, insignia, logos, signs, plaques, captions, watermarks, frames/borders, recognizable or visible faces, actual person likeness, copied art or museum object, modern electrical fittings or modern props, firearms or other weapons, violence, injury, blood, casualties or bodies. No giant cathedral, gilded altar or ornate baroque church furnishings.",
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/03-kirkon-varasto-1812/prompt.txt",
+      "viitteet": [
+        {
+          "publisher": "Lietuvos nacionalinis dailės muziejus (Lithuanian National Museum of Art)",
+          "title": "Spalvink Vilnių: Miesto gyvenimas — Vilniaus nelaimės",
+          "url": "https://www.lndm.lt/wp-content/themes/ldm/ldm/sv/Spalvink-Vilniu_Miesto-Gyvenimas.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official indexed educational text states St Anne church was used as a warehouse by Napoleon’s army and its wooden furnishings were burned. No page illustrations, artwork or source image pixels viewed. Exact fire, sacks, barrel placement and interior remain fictional.",
+          "access": "2026-10-08; official indexed text read; direct PDF parser rejected content size, no PDF page images viewed."
+        },
+        {
+          "publisher": "Vilniaus universitetas / Orbis Lituaniae",
+          "author": "Rūta Janonienė",
+          "title": "Mitai apie Šv. Onos bažnyčią",
+          "url": "https://www.ldkistorija.lt/mitai-apie-sv-onos-baznycia/",
+          "type": "textResearchOnly",
+          "notes": "Institutional authored text explicitly confirms soldiers returning from Russia established a warehouse here and burned pews, confessionals and other wooden furnishings. Supports event, not exact spatial reconstruction.",
+          "access": "2026-10-08; full web text read only."
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen kohtaus Pyhän Annan kirkon käytöstä varastona Vilnassa talvella 1812. Viljasäkkien, tynnyrien ja puukalusteista tehdyn nuotion sijoittelu sekä sisätilan yksityiskohdat ovat kuviteltuja. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged and equality verified.",
+        "Preserved byte-exact tool original as original-generation.png.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/03-kirkon-varasto-1812/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 image and separate full-frame 480x320 QA preview.",
+          "Plain unmarked coarse sacks, wooden barrels and crates dominate the storage scene; low fire and broken bench timber are legible in 480px preview.",
+          "Two small adult soldiers wear muted blue coats and face entirely away; no clear face or real person likeness visible.",
+          "Brick pointed vaults/lancet windows, cold window light and snowy entrance threshold; distant chancel plain, no copied altar or museum artwork.",
+          "No words, numerals, logos, labels, watermark, border, weapons, modern objects, blood, injury or violence observed.",
+          "Natural photographic masonry, timber and coarse textile texture with restrained winter/fire lighting."
+        ],
+        "limitations": [
+          "Plausible generic brick-Gothic interior, not an exact reconstruction of St Anne church’s 1812 interior, vaulting, wall finish or altar.",
+          "Official and institutional sources support the warehouse and burned wooden furnishings; exact winter scene, live fire and supplies arrangement are illustrative.",
+          "Small rear-facing soldiers are about one eighth of image height, slightly larger than prompt target of one tenth, with no visible faces."
+        ]
+      },
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "7667d11b3d4168d70410d6b9f893d179aecdf04b",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootQA": "pending independent parent review",
+      "visualReview": {
+        "task": "vilna-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q937290",
+        "file": "vilna-Q937290-kirkon-varasto-1812.png",
+        "sha256": "a26c7fa287cbba63435666f2e20d3c8b90a6642ae0db83197c62696d3528da59",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Yleinen tiiligoottilainen varastotila, säkit/tynnyrit/puukalusteet, pieni nuotio ja kaksi kaukaista täysin selin olevaa hahmoa; ei tunnistettavia kasvoja, tekstiä tai väkivaltaa."
+        ],
+        "limitations": [
+          "Talven1812 käyttöä havainnollistava kuvitteellinen järjestely; ei Pyhän Annan kirkon mitattu sisätila tai tarkka tapahtumavalokuva."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 image and separate full-frame 480x320 QA preview.",
+          "Plain unmarked coarse sacks, wooden barrels and crates dominate the storage scene; low fire and broken bench timber are legible in 480px preview.",
+          "Two small adult soldiers wear muted blue coats and face entirely away; no clear face or real person likeness visible.",
+          "Brick pointed vaults/lancet windows, cold window light and snowy entrance threshold; distant chancel plain, no copied altar or museum artwork.",
+          "No words, numerals, logos, labels, watermark, border, weapons, modern objects, blood, injury or violence observed.",
+          "Natural photographic masonry, timber and coarse textile texture with restrained winter/fire lighting."
+        ],
+        "limitations": [
+          "Plausible generic brick-Gothic interior, not an exact reconstruction of St Anne church’s 1812 interior, vaulting, wall finish or altar.",
+          "Official and institutional sources support the warehouse and burned wooden furnishings; exact winter scene, live fire and supplies arrangement are illustrative.",
+          "Small rear-facing soldiers are about one eighth of image height, slightly larger than prompt target of one tenth, with no visible faces."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/vilna-yksityiskohdat/20261008/vilna-Q937290-kirkon-varasto-1812.png",
+      "url": "https://media.matkakirja.app/julisteet/vilna-yksityiskohdat/20261008/vilna-Q937290-kirkon-varasto-1812.png",
+      "bytes": 2617813,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1497616",
+      "id": "rautaisen-suden-legenda",
+      "file": "vilna-Q1497616-rautaisen-suden-legenda.png",
+      "filename": "vilna-Q1497616-rautaisen-suden-legenda.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/04-rautaisen-suden-legenda/vilna-Q1497616-rautaisen-suden-legenda.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b2f-a008-74d0-b979-b3bc694afa31/exec-953240dc-ba2b-47ae-a978-5aff7ae87a03.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/04-rautaisen-suden-legenda/original-generation.png",
+      "sha256": "88f81fbff91aba52a25684de8566e044f9f57be448490abf43f1299a3cb32d6f",
+      "originalSha256": "21a732f8d6afc1d1ec7681cf2a949647ec4fcb4574d258e4e12d3d993fd6ad52",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic myth illustration for a Vilnius city introduction.\nCreate ONE entirely new image from this text only, exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input images or source photograph pixels.\nPrimary request: illustrate the Lithuanian Iron Wolf founding legend in an original landscape made of convincingly photographic natural materials. This is a mythic dream-world scene, not evidence of a historical event. A whole metal-gray iron wolf stands on a grassy wooded hilltop, howling upward under a softly bright full moon. The wolf's entire body, all four legs, paws, tail and raised head must be visible against the night sky. It has realistic wolf anatomy with worn dark iron and steel-gray surface texture that follows the fur; restrained moonlit metal highlights. No cartoon eyes, giant monster or glossy robotic joints.\nScene/backdrop: a forested Lithuanian river valley evoking the Neris and Vilnia landscape in the early 1300s legendary world. From the valley look gently upward toward the nearby hill. Behind and around the hillside, two gently curving river reaches can be discerned through trees. The full moon behind the wolf is softly bright and realistic in scale. The summit has grass and natural rock only, NO castle, fort, tower, buildings or modern city.\nHuman detail: at the lower base of the hill, a tiny fire and THREE very small adult campers sleeping nearby in plain muted rough wool cloaks, simple tunics and leather boots, suggesting an anonymous medieval hunting party. The sleeping adults have backs turned or heads fully covered/turned away under cloaks; no visible face. One lies a little nearer the camera, but still tiny and subordinate to the hill and wolf. No actual Gediminas likeness, no crown, heraldry, portrait or weapons. Peaceful sleepers, clearly alive and resting, no injury.\nComposition: wide landscape observed from low on the river valley edge, hill and whole howling wolf form the clear principal subject in the upper middle distance, tiny campfire and sleeping party at the lower hillside, rivers and trees extending naturally across the scene. Keep the entire wolf inside the frame. Clear silhouette that stays legible in a full-frame 480px-wide preview. Spatially plausible, original arrangement, no imitation of a specific existing painting or sculpture.\nStyle/medium: natural photograph-like reconstruction with real grass, damp soil, bark, forest foliage, rough wool, worn iron texture and believable atmosphere. A photorealistic material world containing a legendary wolf; no painterly/romantic historical painting style, brushwork, art reproduction, fantasy poster or glossy CGI render.\nLighting/mood: muted natural moonlight with the small local orange fire glow, naturally dim but readable blue-gray forest and neutral gray wolf. Soft moonlit contours, believable dark sky, no enormous halo, HDR, cinematic grading, oversaturated colors or theatrical shafts of light.\nAvoid: all words, letters, numerals, labels, signs, logos, inscriptions, watermarks, captions, picture frame/border; visible or recognizable human faces, historical or living person likeness; Gediminas Tower or any castle/settlement/building; actual museum collection replicas; copied painting composition; weapons, modern objects, blood, injury, violence or bodies.",
+      "generationMethod": "built-in image_gen; new text-only generation",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/04-rautaisen-suden-legenda/prompt.txt",
+      "viitteet": [
+        {
+          "publisher": "Lietuvos nacionalinis muziejus (National Museum of Lithuania)",
+          "title": "Gediminas’ Tower: How Well Do You Know the History of This National Symbol?",
+          "url": "https://lnm.lt/en/news/gediminas-tower-how-well-do-you-know-the-history-of-this-national-symbol/",
+          "type": "textResearchOnly",
+          "notes": "Official museum text describes the iron wolf howling on a high hill as a legend; separates it from archaeological evidence of habitation and earlier fortification. Used only for myth/theme, no museum object or photo pixels used.",
+          "access": "2026-10-08; full web text read only."
+        },
+        {
+          "publisher": "Vilniaus universitetas / Orbis Lituaniae",
+          "author": "Kęstutis Gudmantas",
+          "title": "The Lithuanian Chronicles’ Tale of the Founding of Vilnius: Myth or History?",
+          "url": "https://www.ldkistorija.lt/the-lithuanian-chronicles-tale-of-the-founding-of-vilnius-myth-or-history/",
+          "type": "textResearchOnly",
+          "notes": "Institutional text distinguishes the founding legend, first recorded in the 1530s, from actual history; describes the hunt, overnight stay and dreamed howling iron wolf. Landscape and anonymous sleepers are original imaginary composition.",
+          "access": "2026-10-08; full web text read only."
+        }
+      ],
+      "kuvateksti": "Vilnan perustamislegendan rautainen susi ulvoo kuutamossa nukkuvan metsästysseurueen yläpuolella. Legendan maisema ja hahmot ovat kuviteltuja, eivät historiallinen rekonstruktio. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged and equality verified.",
+        "Preserved byte-exact tool original as original-generation.png.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/04-rautaisen-suden-legenda/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 image and separate full-frame 480x320 QA preview.",
+          "Whole howling iron-gray wolf visible from tail to head and feet on the hill; material texture and silhouette remain clear at 480px.",
+          "Three small adult campers rest by a low fire below the wolf; heads turned down/away or covered, no discernible identifying facial features or person likeness.",
+          "Forest and two river bends visible; no castle, Gediminas Tower, city or other building.",
+          "Photograph-like natural grass, tree, rough wool and worn metal texture; muted moon/fire light, no painting brushwork or artwork copy used.",
+          "No words, numerals, logos, signs, watermark, border, weapons, modern objects, blood, injury or violence observed."
+        ],
+        "limitations": [
+          "This is an original myth illustration; iron wolf, anonymous sleeping party, rivers and hill are imagined and are not historical or geographic evidence.",
+          "No castle is shown to serve the myth scene; official museum history notes habitation and earlier fortification before Gediminas, so bare hill is not claimed as historical fact.",
+          "Wolf and moon are visually enlarged in this dreamed composition; moon is larger than normal photographic sky scale.",
+          "Sleeping campers are larger than the tiny prompt target, though subordinate to the landscape and faces fully hidden."
+        ]
+      },
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "7667d11b3d4168d70410d6b9f893d179aecdf04b",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "rootQA": "pending independent parent review",
+      "visualReview": {
+        "task": "vilna-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1497616",
+        "file": "vilna-Q1497616-rautaisen-suden-legenda.png",
+        "sha256": "88f81fbff91aba52a25684de8566e044f9f57be448490abf43f1299a3cb32d6f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Metalliharmaa kokonainen ulvova susi kukkulalla, kuutamo ja nukkuva anonyymi seurue kasvot piilossa. Valokuvamaiset metalli-, metsä- ja maapinnat; ei tekstiä, linnan nykyosia tai tunnetun maalauksen kopio."
+        ],
+        "limitations": [
+          "Legendan unimaailma: susi ja kuu suurennettuja, maisema sekä hahmot keksittyjä; ei väite kukkulan historiallisesta asumattomuudesta tai todellisesta kuuasteikosta."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed the final native 1536x1024 image and separate full-frame 480x320 QA preview.",
+          "Whole howling iron-gray wolf visible from tail to head and feet on the hill; material texture and silhouette remain clear at 480px.",
+          "Three small adult campers rest by a low fire below the wolf; heads turned down/away or covered, no discernible identifying facial features or person likeness.",
+          "Forest and two river bends visible; no castle, Gediminas Tower, city or other building.",
+          "Photograph-like natural grass, tree, rough wool and worn metal texture; muted moon/fire light, no painting brushwork or artwork copy used.",
+          "No words, numerals, logos, signs, watermark, border, weapons, modern objects, blood, injury or violence observed."
+        ],
+        "limitations": [
+          "This is an original myth illustration; iron wolf, anonymous sleeping party, rivers and hill are imagined and are not historical or geographic evidence.",
+          "No castle is shown to serve the myth scene; official museum history notes habitation and earlier fortification before Gediminas, so bare hill is not claimed as historical fact.",
+          "Wolf and moon are visually enlarged in this dreamed composition; moon is larger than normal photographic sky scale.",
+          "Sleeping campers are larger than the tiny prompt target, though subordinate to the landscape and faces fully hidden."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/vilna-yksityiskohdat/20261008/vilna-Q1497616-rautaisen-suden-legenda.png",
+      "url": "https://media.matkakirja.app/julisteet/vilna-yksityiskohdat/20261008/vilna-Q1497616-rautaisen-suden-legenda.png",
+      "bytes": 2465388,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q445649",
+      "id": "synagogan-kaivauslattia",
+      "filename": "vilna-Q445649-synagogan-kaivauslattia.png",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "status": "local-candidate-approved",
+      "shapeClarification": {
+        "conflict": "Source brief calls excavation base octagonal; primary archaeologist paper describes rectangular lower base, octagonal second decorative tier.",
+        "primaryTextEvidence": "Arts 2020, 9, 46, architecture section: lower base 3.8 x 3.2 m, second tier octagonal; no source image pixels viewed.",
+        "url": "https://etalpykla.lituanistika.lt/object/LT-LDB-0001:J.04~2020~1609521202043/J.04~2020~1609521202043.pdf",
+        "proposedResolution": "Low roughly rectangular bima foundation remnants in an explicitly approximate archaeological illustration; do not copy exact survey layout.",
+        "status": "approved-by-root",
+        "decision": "Low approximately rectangular bima foundation and four broken corner column stumps; no octagonal upper decorative tier at excavation-floor level. Independently composed approximate layout.",
+        "received": "2026-10-08"
+      },
+      "dateClarification": {
+        "textEvidence": "Vilnius Old Town Renewal Agency: initial archaeology 2011, bathhouse 2016–2017, bima exposed 2018 and expanded 2019.",
+        "url": "https://www.vsaa.lt/en/news-cat/research-of-the-great-synagogue-2/",
+        "proposedResolution": "Modern excavation without claiming 2016 as first site excavation.",
+        "status": "approved-by-root",
+        "decision": "Modern generic excavation illustration in a post-2018 context, without asserting that the first excavation began in 2016."
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "viitteet": [
+        {
+          "publisher": "Jon Seligman / Arts; Lituanistika repository",
+          "title": "Between Yerushalayim DeLita and Jerusalem—The Memorial Inscription from the Bimah of the Great Synagogue of Vilna",
+          "url": "https://etalpykla.lituanistika.lt/object/LT-LDB-0001:J.04~2020~1609521202043/J.04~2020~1609521202043.pdf",
+          "type": "textResearchOnly",
+          "notes": "Primary archaeologist paper, Arts 2020, 9, 46. Read extracted text only. Rectangular base 3.8 x 3.2 m; octagonal geometry belongs to the second decorative tier. Broken column and flooring excavation context. No photographs, plans, artifact imagery, floor illustration or PDF image pixels viewed or used.",
+          "access": "2026-10-08; PDF extracted text via web tool; no screenshot/image tools called for sources."
+        },
+        {
+          "publisher": "Vilnius Old Town Renewal Agency",
+          "title": "Research of the Great Synagogue",
+          "url": "https://www.vsaa.lt/en/news-cat/research-of-the-great-synagogue-2/",
+          "type": "textResearchOnly",
+          "notes": "Institutional heritage source: initial archaeology 2011; bathhouse work 2016–2017; bima exposed in 2018 and expanded in 2019.",
+          "access": "2026-10-08; text-only page read."
+        },
+        {
+          "publisher": "Good Will Foundation / joint excavation partners",
+          "title": "Information for Media: The Bimah of the Great Synagogue of Vilna (Vilnius) is Rediscovered",
+          "url": "https://gvf.lt/en/2018/07/25/information-for-media-the-bimah-of-the-great-synagogue-of-vilna-vilnius-is-rediscovered/",
+          "type": "textResearchOnly",
+          "notes": "Joint 2018 excavation partner statement confirms parts of synagogue floor and bima, including column pieces. No photos viewed or used.",
+          "access": "2026-10-08; text-only page read."
+        }
+      ],
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational photorealistic archaeological illustration for the Vilnius city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input or reference images.\nScene: an empty modern archaeological trench in the context of the post-2018 excavation, evoking the excavated remains of the Great Synagogue of Vilna, Lithuania, without imitating any actual photograph or survey plan. A modest excavation below today's ground surface reveals broken pale stone floor slabs, old red-brown brick fragments, short broken cylindrical stone column stumps and very low masonry remnants of the bima reading platform. The lower bima foundation has a roughly rectangular footprint, with irregular incomplete straight masonry edges and two crumbled shallow side steps; it is NOT an octagon. The octagonal tier belonged above ground and no standing or reconstructed decorative tier is present. This is an independently composed approximate educational scene, not a measured reconstruction of the actual excavation.\nSubject and composition: view obliquely down from the trench edge, with the pale exposed floor and low rectangular bima remains clearly visible in the center. Show the four short broken corner column stumps of the low roughly rectangular platform base, with irregular damage and some partly buried in dirt; keep everything at excavation-floor height, rather than a tall reconstructed structure. Broad full-frame 3:2 landscape photograph-like composition, coherent perspective and believable human-scale materials. Different natural soil strata line the sides of the trench.\nEquipment: one plain shovel and one simple hand brush lying on the dirt near the excavation edge; one plain unmarked wooden measuring stick and two small COMPLETELY BLANK marker cards, with no scale, numbers, markings, writing or printed symbols. These are incidental details, not a still life.\nBackground: only a narrow soft strip of subtle green vegetation and an indistinct old plastered wall beyond the upper trench edge. Modern buildings must never be the main subject. No people, workers or visitors anywhere.\nMedium and lighting: resembles a real camera photograph under natural soft overcast daylight; muted pale stone, earthy brown and subdued brick colors. Realistic weathered stone, chipped brick, compact soil, matte surfaces and restrained exposure. No HDR, cinematic grading, dramatic spotlights, oversaturated colors, glossy CGI or fantasy archaeology.\nAvoid: people or human likenesses; any letters, words, numerals, ruler scales, Hebrew inscriptions, text-like scratches, patterned text, signs, logos, plaques, watermarks, captions, borders or frames; actual museum objects, engraved sacred artifacts, distinctive copied historical floor designs, reconstructed full columns, rebuilt synagogue, octagonal foundation, fountains, a complete circle or wheel-like base. No source-photo composition or actual survey-plan replica.",
+      "generationMethod": "built-in image_gen; text-only",
+      "file": "vilna-Q445649-synagogan-kaivauslattia.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/05-synagogan-kaivauslattia/vilna-Q445649-synagogan-kaivauslattia.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b30-4fa9-7be2-8c96-f4d9a078007f/exec-37eabf3e-6877-48ca-af2b-541e623dea07.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/05-synagogan-kaivauslattia/original-generation.png",
+      "sha256": "c1d9fccf0eff109410eb505badb042f313c07364b2d56a67c7857d5d395da37c",
+      "originalSha256": "8118d70c63c9d3b900ee7fe308b03b952c2f47ace530386c518e8455e561a6c2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/05-synagogan-kaivauslattia/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "7667d11b3d4168d70410d6b9f893d179aecdf04b",
+      "kuvateksti": "Vilnan Suuren synagogan kaivausta havainnollistava näkymä rukoussalin lattian ja matalan bima-perustuksen jäänteisiin. Alempi bima oli suorakulmainen; kahdeksankulmainen osa kuului ylempään koristekerrokseen. Kaivannon sijoittelu on likimääräinen. Havainnekuva.",
+      "technicalChanges": [
+        "Preserved tool original byte-exact as original-generation.png.",
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged and equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 image and full-frame 480x320 preview viewed directly.",
+          "Low roughly rectangular bima-base remains with four broken corner column stumps and shallow crumbled steps; no octagonal foundation or reconstructed decorative tier.",
+          "Pale damaged floor fragments, red-brown old brick, exposed soil strata, subtle vegetation and wall background remain clear at 480px.",
+          "No people, human faces, words, numerals, Hebrew letters, logos, signs, watermark, frame, recognizable museum artifacts or copied historical floor artwork observed.",
+          "One shovel, one hand brush, one plain measuring stick without scales, and two visibly blank marker cards.",
+          "Natural soft daylight, muted earthy colors and camera-like stone/soil texture; no HDR or cinematic color grading."
+        ],
+        "limitations": [
+          "Fictional approximate excavation layout rather than an exact archaeological survey, actual photograph replica, or verified reconstruction of a specific excavation date.",
+          "Brief corrected with root approval using primary archaeologist text: rectangular lower bima base; octagon belongs to the upper decorative tier, which is absent.",
+          "Modern excavation context follows the 2018 bima exposure; caption does not claim that initial excavations began in 2016.",
+          "Pale stone floor fragments and masonry arrangement are generic illustrative details; exact original floor patterns and actual recovered artifacts are deliberately not reproduced.",
+          "Shovel handle extends to the right frame edge; this incidental crop does not obscure the archaeological subject."
+        ]
+      },
+      "visualReview": {
+        "task": "vilna-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q445649",
+        "file": "vilna-Q445649-synagogan-kaivauslattia.png",
+        "sha256": "c1d9fccf0eff109410eb505badb042f313c07364b2d56a67c7857d5d395da37c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Matala suorakulmainen bima-perustus ja neljä pilaritynkää, kivilaattalattian osat, tyhjä kaivanto, tekstittömät laput ja työkalut. Ei virheellistä kahdeksankulmaista alaperustaa."
+        ],
+        "limitations": [
+          "Likimääräinen alkuperäinen kaivausjärjestely vuoden2018bima-paljastuksen yhteydessä; ei tarkka kaivauskartta. Lapion varsi päättyy kuvanreunaan."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 image and full-frame 480x320 preview viewed directly.",
+          "Low roughly rectangular bima-base remains with four broken corner column stumps and shallow crumbled steps; no octagonal foundation or reconstructed decorative tier.",
+          "Pale damaged floor fragments, red-brown old brick, exposed soil strata, subtle vegetation and wall background remain clear at 480px.",
+          "No people, human faces, words, numerals, Hebrew letters, logos, signs, watermark, frame, recognizable museum artifacts or copied historical floor artwork observed.",
+          "One shovel, one hand brush, one plain measuring stick without scales, and two visibly blank marker cards.",
+          "Natural soft daylight, muted earthy colors and camera-like stone/soil texture; no HDR or cinematic color grading."
+        ],
+        "limitations": [
+          "Fictional approximate excavation layout rather than an exact archaeological survey, actual photograph replica, or verified reconstruction of a specific excavation date.",
+          "Brief corrected with root approval using primary archaeologist text: rectangular lower bima base; octagon belongs to the upper decorative tier, which is absent.",
+          "Modern excavation context follows the 2018 bima exposure; caption does not claim that initial excavations began in 2016.",
+          "Pale stone floor fragments and masonry arrangement are generic illustrative details; exact original floor patterns and actual recovered artifacts are deliberately not reproduced.",
+          "Shovel handle extends to the right frame edge; this incidental crop does not obscure the archaeological subject."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/vilna-yksityiskohdat/20261008/vilna-Q445649-synagogan-kaivauslattia.png",
+      "url": "https://media.matkakirja.app/julisteet/vilna-yksityiskohdat/20261008/vilna-Q445649-synagogan-kaivauslattia.png",
+      "bytes": 3370297,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 1,
+      "qid": "Q1283798",
+      "id": "piilossa-rauniokirkossa-1662",
+      "generationCalls": 1,
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/vilna-yksityiskohdat-20261008/production/01-piilossa-rauniokirkossa-1662/vilna-Q1283798-piilossa-rauniokirkossa-1662.png",
+      "sha256": "a68f32e4c492db24026eb781b8c923b6f39b10712c939c236702f7345f823a1e",
+      "reason": "Hylätty: virallinen lähde kertoo puukirkosta, mutta tuotos on tiiliraunio. Materiaali sekä numeerinen hahmokokoraja eivät vastaa hyväksyttyä ohjetta. Yksi kutsu käytetty; ei uusintaa.",
+      "R2Delivered": false
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-4.jpg",
+    "r2Key": "julisteet/vilna-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "url": "https://media.matkakirja.app/julisteet/vilna-yksityiskohdat/20261008/toimitetut-4.jpg",
+    "sha256": "aee328e8feaaaa06a27d7ff0a8f58877b78ad9dc4b73cc1947d1adf189ee1ba5",
+    "bytes": 265721,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:05:23.155838+00:00"
+}

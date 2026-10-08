@@ -1,0 +1,749 @@
+{
+  "task": "bergen-yksityiskohdat-20261008",
+  "routedTaskNumber": 28,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-bergen-yksityiskohdat-20261008.md",
+    "commit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+    "blob": "76f2c6f248c039ba6cbceb7df3b416603e670466"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 6,
+  "imageCount": 5,
+  "generationCalls": 5,
+  "generationLimit": 6,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q257558",
+      "id": "fantoft-palo-1992",
+      "file": "bergen-Q257558-fantoft-palo-1992.png",
+      "filename": "bergen-Q257558-fantoft-palo-1992.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/01-fantoft-palo-1992/bergen-Q257558-fantoft-palo-1992.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aff-84d0-7630-924e-d1f663d2bef9/exec-9a7ad4ee-208e-4f5e-93e8-4ad6072723f5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/01-fantoft-palo-1992/original-generation.png",
+      "sha256": "6d9cfa6c5dec7b1a86c6876bd5af1c9fa390e743909e9881aefc77ea1b6d1a51",
+      "originalSha256": "8154b92d25e2b914629e25f5896853cf9f65ed2fe4f66fbce3244e52e60ada63",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational reconstruction for a Bergen city introduction.\nCreate ONE completely new image from TEXT ONLY, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No reference photographs, no copied composition, no historical image reproduction.\nScene: the old Fantoft stave church at Bergen during the fire of 6 June 1992, before the 1997 rebuilding. A small dark-brown weathered Norwegian wooden stave church in a leafy woodland clearing is burning through its whole timber structure. Fire rises naturally from the walls and along sections of the steep wooden-shingle roofs, smoke lifts into the trees, and a few small embers rise. No explosion.\nArchitecture: the compact pre-fire Fantoft form reconstructed at this site in 1883, not a generic fantasy church. Tall central nave with lower surrounding open timber gallery; lower chancel and small round east apse with a conical shingle roof. Several steep gabled roof planes step inward toward the central roof. Above the nave sits a SMALL central three-stage ridge turret, each dark timber stage with its own narrowing shingle roof, with a modest pointed apex. Traditional carved dragon-head finials extend from gable ridges, visibly wooden architectural carvings. The architectural massing is compact, irregular lengthwise nave plus chancel, never a tall symmetrical pagoda or cathedral. Dark tar-brown timber, dull uneven old hand-worked roof shingles, low gray fieldstone foundation.\nComposition: ordinary horizontal documentary camera view from a safe distance of approximately 50 metres, near the entrance to the churchyard and slightly below the clearing, looking obliquely at the nave and chancel. ENTIRE church, every roof level and the top of the turret fit fully inside the frame with generous sky margin. The church occupies approximately half the frame width. In the foreground, dark grass and a weathered plain gray stone cross on a low grassy mound at the LEFT, fully inside the image. Leafy beech trees and a few conifers enclose the clearing. Architecture and cross remain legible beneath smoke and fire.\nLighting and style: a plain, imperfect but well-exposed real camera photograph appearance, a June summer night in Bergen with a faint dull blue-gray twilight sky glimpsed above the dark canopy. Fire is the only strong local light, softly illuminating some leaves and timber. Moderate flame brightness with small white-hot centers but no giant bright fireball. Natural subdued greens, gray, brown, dull orange. Unprocessed still-photo texture, slight realistic low-light grain, ordinary lens perspective and natural tonal range. No HDR, no cinematic grading, no glamour, no aggressive orange/teal color, no painting, no CGI look. Do not turn the foreground into black empty space.\nExclude all people, firefighters, police, silhouettes of humans, faces, injuries, casualties, bodies, blood, rescue or firefighting activity, arsonists or any reference to perpetrators. No black-metal imagery, occult symbols, graffiti, inscriptions, writing, numerals, signs, logos, watermark, caption, border, cars, dramatic explosion or flying wreckage. The existing stone cross is the only freestanding cross and has no writing. This is an original fictional interpretation of a historical fire, not evidence or an archival photograph.",
+      "viitteet": [
+        {
+          "publisher": "Norges Kirker",
+          "title": "Fantoft kapell",
+          "url": "https://norgeskirker.no/wiki/Fantoft_kapell",
+          "type": "textResearchOnly",
+          "notes": "Hans-Emil Lidénin rakennushistoriateksti vahvistaa palon 6.6.1992, ennen paloa olleen kolmikerroksisen keskisen kattotornin, paanukatot, matalamman kuorin ja kartiokattoisen apsiksen, avoimen sivukäytävän sekä pohjoispuolen kiviristin. Käytetty vain tekstinä; valokuvia ja piirroksia ei avattu tai syötetty generointiin.",
+          "access": "2026-10-08; primary text read"
+        },
+        {
+          "publisher": "Bergen Byarkiv",
+          "title": "Fantoft stavkirke",
+          "url": "https://www.bergenbyarkiv.no/bergenbyleksikon/arkiv/1424901",
+          "type": "textResearchOnly",
+          "notes": "Kaupunginarkiston teksti tukee vuonna 1883 siirretyn kirkon rakennetta ja Tjoran kiviristin sijaintia kirkon pohjoispuolella. Vain tekstisisältö; historiallista valokuvaa ei avattu.",
+          "access": "2026-10-08; municipal archive text read"
+        }
+      ],
+      "kuvateksti": "Oma tulkinta Fantoftin vanhan sauvakirkon tulipalosta 6. kesäkuuta 1992: porrastetut paanukatot palavat metsäisessä kirkkopihassa, jonka reunalla seisoo kiviristi. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded byte equality verified.",
+        "Copied tool original byte-for-byte to original-generation.png.",
+        "Created a separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 and separate full-frame 480x320 preview.",
+          "Entire church, central stepped ridge turret, dragon-head roof finials and small conical apse remain inside frame; gray stone cross visible fully at left.",
+          "No people, faces, firefighting, perpetrators, casualties, graphic injury, graffiti, black-metal symbols, text, numerals, signage, logos or watermark observed.",
+          "Restrained photographic woodland/fire textures and faint blue-gray summer twilight; no fireball, explosion or flying wreckage.",
+          "Both whole building and left cross remain legible at 480px."
+        ],
+        "limitations": [
+          "Palon tarkka vaihe, liekit, savu, kuvakulma, sää ja pihan sommittelu ovat omaa tulkintaa; kuva ei ole tapahtumavalokuva eikä tarkka rakennusmittaus.",
+          "Tumma puuväritys ja himmeä siniharmaa kesäyön taivas ovat luonteva valokuvamainen tulkinta. Tarkkaa valotusta tai palon kellonaikaa ei rekonstruoitu."
+        ],
+        "parentQARequired": true
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "76f2c6f248c039ba6cbceb7df3b416603e670466",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "imagegenSkillReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/01-fantoft-palo-1992/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalByteExact": true,
+      "iccProfile": "sRGB",
+      "opaque": true,
+      "visualReview": {
+        "task": "bergen-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q257558",
+        "file": "bergen-Q257558-fantoft-palo-1992.png",
+        "sha256": "6d9cfa6c5dec7b1a86c6876bd5af1c9fa390e743909e9881aefc77ea1b6d1a51",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Entire stepped-roof stave church, dragon finials and left stonecross stay inside frame; naturalfire/woodland textures,no people/text/explosion."
+        ],
+        "limitations": [
+          "Fictional firephase,weather/viewpoint/architecture proportions, not event photograph."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 and separate full-frame 480x320 preview.",
+          "Entire church, central stepped ridge turret, dragon-head roof finials and small conical apse remain inside frame; gray stone cross visible fully at left.",
+          "No people, faces, firefighting, perpetrators, casualties, graphic injury, graffiti, black-metal symbols, text, numerals, signage, logos or watermark observed.",
+          "Restrained photographic woodland/fire textures and faint blue-gray summer twilight; no fireball, explosion or flying wreckage.",
+          "Both whole building and left cross remain legible at 480px."
+        ],
+        "limitations": [
+          "Palon tarkka vaihe, liekit, savu, kuvakulma, sää ja pihan sommittelu ovat omaa tulkintaa; kuva ei ole tapahtumavalokuva eikä tarkka rakennusmittaus.",
+          "Tumma puuväritys ja himmeä siniharmaa kesäyön taivas ovat luonteva valokuvamainen tulkinta. Tarkkaa valotusta tai palon kellonaikaa ei rekonstruoitu."
+        ],
+        "parentQARequired": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bergen-yksityiskohdat/20261008/bergen-Q257558-fantoft-palo-1992.png",
+      "url": "https://media.matkakirja.app/julisteet/bergen-yksityiskohdat/20261008/bergen-Q257558-fantoft-palo-1992.png",
+      "bytes": 2762650,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1291307",
+      "id": "keksityt-onnenkalut",
+      "file": "bergen-Q1291307-keksityt-onnenkalut.png",
+      "filename": "bergen-Q1291307-keksityt-onnenkalut.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/02-keksityt-onnenkalut/bergen-Q1291307-keksityt-onnenkalut.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b00-2953-7132-89e0-cbf1a8071d49/exec-8cd12566-0838-4ae7-8f4d-cf085624de2c.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/02-keksityt-onnenkalut/original-generation.png",
+      "sha256": "a84913c9a1a5d37e6b52e40369cd7946191c5eb2d2b367b6462cc929d287f197",
+      "originalSha256": "55662e2b95f28550eac9932eb097b9ec40fc503e9a240db0f0bd0b7869bc9c68",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic educational detail image for Bergen city guide.\nCreate ONE entirely new TEXT-ONLY image. Exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No reference image or copied artwork.\nScene/backdrop: an entirely invented late-19th-century Norwegian wooden composing room, around 1890–1900. A dark worn wooden writing desk in the foreground. In the soft background are plain timber walls and a simple window, with quiet natural overcast window light. Do not reproduce any actual house, museum room or known collection object.\nSubject: exactly THREE tiny, entirely ORIGINAL invented generic lucky charms standing side by side on an open cream paper notebook on the desk: a small green ceramic upright seated frog around 3 cm tall, a laughing traditional Nordic folk-myth troll around 5 cm tall carved from plain brown wood, and a plump pale pink ceramic pig around 4 cm tall. All three are modest handmade objects, with simple original shapes and natural wear. The mythical troll is a squat fantastical woodland creature with a rounded nose and merry carved smile, not a human portrait and not any existing character design. No hats, emblems, jewellery or costumes. The frog and pig should be unmistakable as animal miniatures. These invented charms only illustrate a supplied frog/troll/pig anecdote; they must not imitate actual Grieg or Troldhaugen/KODE objects.\nA plain unbranded wooden graphite pencil lies near the notebook. The notebook is absolutely BLANK apart from empty straight parallel staff lines: no musical notes, no clefs, no symbols, no words, no numerals, no scribbles. No additional objects.\nComposition/framing: a close still-life photograph from slightly above, horizontal 3:2 image. The three charms form an evenly spaced row in the middle foreground, all fully visible and all sharply focused, with enough depth of field for their shapes to read well. Modest honest scale, small tabletop objects, no giant figurines. Shallow depth of field softly blurs the wooden room.\nStyle/medium: convincing natural camera-captured photograph appearance; real ceramic glaze, visible tiny hand-carved wooden toolmarks and subtle desk grain. Soft muted green, warm brown, pale pink and cream; restrained natural contrast, no HDR, no cinematic color grading, no glossy CGI, no illustration or painted finish.\nConstraints: original fictional composition and original charm designs. NO identifiable collection objects or replicas, no museum display or glass case, no person, no hand, no human face or historical likeness, no portrait or painting, no readable text or music, no writing, numerals, labels, logos, watermark, signature, border, flags or modern object.",
+      "viitteet": [
+        {
+          "publisher": "Kode",
+          "title": "Easter holiday at Troldhaugen",
+          "url": "https://www.kodebergen.no/en/whats-happening/family-program/easter-holiday-at-troldhaugen",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text mentions Edvard Grieg's lucky frog. Used solely as contextual anecdote, not appearance or museum object design. Pig/troll trio comes from supplied brief and is explicitly fictional in this image.",
+          "access": "2026-10-08; indexed primary text only; no photographs/pixels opened or used."
+        },
+        {
+          "publisher": "Kode",
+          "title": "Autumn holiday: A troll walk with Nina at Troldhaugen",
+          "url": "https://www.kodebergen.no/en/whats-happening/family-program/autumn-holiday-a-troll-walk-with-nina-at-troldhaugen",
+          "type": "textResearchOnly",
+          "notes": "Official indexed text provides Troldhaugen troll-name/family-program context. No design or image reference used.",
+          "access": "2026-10-08; indexed primary text only; no photographs/pixels opened or used."
+        }
+      ],
+      "kuvateksti": "Kuvitteelliset sammakko-, peikko- ja possuonnenkalut Griegiin liittyvän tarinan innoittamina. Esineet ja säveltäjän työhuone ovat keksittyjä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel values unchanged; equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and full-frame 480x320 preview inspected by generating worker.",
+          "Exactly three clearly distinct miniatures: green ceramic frog, original carved wooden mythical troll, pale pink ceramic pig.",
+          "Notebook has only empty staff lines; pencil is unmarked. No notes, words, numerals, logos, watermark or border observed.",
+          "No people, human hands, human portraits, identifiable museum replicas, glass display cases or modern objects visible.",
+          "Natural muted window light and convincing ceramic/wood/paper textures; all three figures remain distinct at 480px."
+        ],
+        "limitations": [
+          "Generic original charms and generic invented 19th-century room are illustrative; not Grieg's actual belongings, original collection objects or a documentary reconstruction.",
+          "Exact 3–6 cm scale is an intended still-life scale, not a measured claim.",
+          "The staff lines curve slightly near notebook binding; no musical symbols or writing appear."
+        ]
+      },
+      "scopeClarification": {
+        "status": "approved-by-root",
+        "decision": "Only wholly original generic frog, folk-myth troll and pig charms; no identifiable actual Grieg/KODE amulet replicas or collection photo. Original invented composing room.",
+        "reason": "Supplied source forbids identifiable museum objects; root resolved trio as fictional story-inspired charms."
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "76f2c6f248c039ba6cbceb7df3b416603e670466",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/02-keksityt-onnenkalut/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "bergen-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1291307",
+        "file": "bergen-Q1291307-keksityt-onnenkalut.png",
+        "sha256": "a84913c9a1a5d37e6b52e40369cd7946191c5eb2d2b367b6462cc929d287f197",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Exactly three original invented frog/troll/pig charms; blank musicstaffs and unmarkedpencil, naturalceramic/wood/paper texture,no portraits or writing."
+        ],
+        "limitations": [
+          "Not actual Grieg belongings or museum replicas; charm scale illustrative."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 PNG and full-frame 480x320 preview inspected by generating worker.",
+          "Exactly three clearly distinct miniatures: green ceramic frog, original carved wooden mythical troll, pale pink ceramic pig.",
+          "Notebook has only empty staff lines; pencil is unmarked. No notes, words, numerals, logos, watermark or border observed.",
+          "No people, human hands, human portraits, identifiable museum replicas, glass display cases or modern objects visible.",
+          "Natural muted window light and convincing ceramic/wood/paper textures; all three figures remain distinct at 480px."
+        ],
+        "limitations": [
+          "Generic original charms and generic invented 19th-century room are illustrative; not Grieg's actual belongings, original collection objects or a documentary reconstruction.",
+          "Exact 3–6 cm scale is an intended still-life scale, not a measured claim.",
+          "The staff lines curve slightly near notebook binding; no musical symbols or writing appear."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bergen-yksityiskohdat/20261008/bergen-Q1291307-keksityt-onnenkalut.png",
+      "url": "https://media.matkakirja.app/julisteet/bergen-yksityiskohdat/20261008/bergen-Q1291307-keksityt-onnenkalut.png",
+      "bytes": 1962426,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q1420616",
+      "id": "floyen-talvivalot",
+      "file": "bergen-Q1420616-floyen-talvivalot.png",
+      "filename": "bergen-Q1420616-floyen-talvivalot.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/04-floyen-talvivalot/bergen-Q1420616-floyen-talvivalot.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11aff-84d0-7630-924e-d1f663d2bef9/exec-ed1047a7-f0b1-461b-8569-45eb6a7f7dbc.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/04-floyen-talvivalot/original-generation.png",
+      "sha256": "5b4d2aff2d3dc3606926407018be17495ca91d2f1dcf01f6494e1e2ca172545f",
+      "originalSha256": "0494fa5cfd6a6beef865106675cdd1ac2f4842a674d30c9c20a646a43a163b97",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: original photograph-like educational winter illustration for a Bergen city introduction.\nCreate ONE completely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input or reference photographs; no copied photo composition.\nScene: a plausible winter evening sledding trail on the wooded downhill slopes of Mount Fløyen above Bergen, Norway. A broad compacted snowy footpath curves gently DOWNHILL through frost-covered spruce trees toward distant lights of Bergen and a small dark suggestion of Vågen harbour. A simple row of slender unbranded functional park lampposts follows the curve down the slope, warm lamps producing modest pools of soft light on the packed snow. Generic park lamps, not decorative fantasy lanterns. Snow has ordinary sled tracks, footprints and slight uneven dirty-gray compressed areas; trees have natural frost rather than extravagant perfect snow sculptures.\nPeople: only THREE TINY distant fictional ADULT sledders, entirely viewed FROM BEHIND as they head down the trail on simple traditional wooden sleds with plain curved runners. All remain at least 35–60 metres from the camera and are each no more than 3 percent of image height. They are adult-sized, in plain dark winter coats, wool hats and ordinary gloves, with no brands. No near-camera person. No faces, no side profiles, no real person likeness, no children, no featured individual. Clear but small ordinary sled shapes under the rear-facing adults, not skiing equipment.\nComposition: full-frame 3:2 horizontal view, camera low near the snow-covered path looking naturally downhill, a mildly telephoto perspective. Foreground is vacant snow trail with realistic snow texture; it leads through the lamppost row into the small rear-facing sledders in the middle distance, then through a gap in trees to modest distant city lights and dark harbour. Foreground and distant landscape both look like the SAME ordinary real night camera exposure. Distant city remains a secondary small part of the frame, not a monumental panoramic skyline. The snow path drops away clearly toward the city, not uphill. No artificial split scene or miniature city.\nLighting and style: plain realistic winter night still-photo texture, faint blue-gray ambient light and subdued warm lamp pools, naturally muted colors, modest realistic low-light grain. Gentle practical exposure; snow is slightly dim gray rather than glowing white, distant lights are small and imperfect, trees dark green-gray, clothing low contrast. Restrained local contrast and realistic physical light falloff. No HDR, no cinematic treatment, no orange/teal grade, no saturated blue night, no illustration or painting, no glossy CGI, no postcard fantasy, no exaggerated bloom or magical sky. Both near and distant areas must be sober believable camera imagery.\nAvoid all readable letters, numerals, labels, signs, logos, brands, advertisements, watermarks, captions, frame/border, cars or other road vehicles, recognizable faces or identities. The route, snowfall and lamp arrangement are an original plausible interpretation rather than a verified photograph of current conditions.",
+      "viitteet": [
+        {
+          "publisher": "Fløibanen / Fløyen",
+          "title": "Skiing and sledding on Mount Fløyen",
+          "url": "https://www.floyen.no/en/activities/skiing-and-sledding-on-mount-floyen",
+          "type": "textResearchOnly",
+          "notes": "Toimijan teksti vahvistaa talvisen kelkkailun Fløysvingeneä alas sekä lumisen metsäympäristön. Käytetty vain tekstinä; kuvia ei avattu.",
+          "access": "2026-10-08; operator text read"
+        },
+        {
+          "publisher": "Bergen kommune",
+          "title": "Turveibelysning i Fløysvingene",
+          "url": "https://www.bergen.kommune.no/hvaskjer/tema/vi-bygger-bergen/veier-byrom-og-parker/park-og-natur/turveibelysning-i-floysvingene",
+          "type": "textResearchOnly",
+          "notes": "Kunnan 16.4.2026 julkaistu teksti kertoo noin 40 pylvään valaistushankkeesta, jonka asennus oli suunniteltu alkusyksylle 2026. Valmistumista ei vahvistettu; kuvan lampusto ei ole väite nykyisestä toteutuksesta. Vain teksti; hankkeen havainnekuvaa ei avattu.",
+          "access": "2026-10-08; municipality text read"
+        }
+      ],
+      "kuvateksti": "Oma tulkinta Fløyenin talvisesta kelkkamäestä: kolme nimetöntä aikuista laskee puukelkoilla lumista metsäpolkua kohti Bergenin iltavaloja. Reitti, lampuston sijoittelu ja sää ovat kuviteltuja. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded byte equality verified.",
+        "Copied tool original byte-for-byte to original-generation.png.",
+        "Created a separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed final native 1536x1024 and separate full-frame 480x320 preview.",
+          "Snowy forest trail clearly leads downhill, functional lamp row follows slope, frost trees and distant Bergen-like harbour/city lights are visible.",
+          "Exactly three anonymous adult-sized rear-facing sledders; plain wooden sled shapes; no faces or identifying marks observed.",
+          "No readable text, numerals, labels, brands, signs, logos, watermark, cars, children or close facial imagery observed.",
+          "Snow texture and lights look like consistent ordinary night camera exposure, with subdued color and modest grain.",
+          "Nearest adult occupies approximately 10 percent of native image height, larger than the tiny-person prompt target; held for independent parent QA."
+        ],
+        "limitations": [
+          "Reitti, näkymäaukko, sataman sijainti, lampuston tarkka muoto ja sijoittelu sekä lumiolosuhteet ovat omaa tulkintaa, eivät paikkatarkka tai nykyhetken dokumentointi.",
+          "Lähimmän selin olevan aikuisen korkeus on noin 10 prosenttia kuvasta. Se on suurempi kuin promptin 3 prosentin tavoite; kasvot eivät näy. Vanhempi agentti tekee lopullisen kokotulkinnan itsenäisessä QA:ssa.",
+          "Valaistushankkeen valmistumista ei varmistettu. Kuva ei osoita Fløysvingenen valaistuksen nykyistä tilaa."
+        ],
+        "parentQARequired": true
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "76f2c6f248c039ba6cbceb7df3b416603e670466",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "imagegenSkillReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-needs-parent-review",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/04-floyen-talvivalot/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalByteExact": true,
+      "iccProfile": "sRGB",
+      "opaque": true,
+      "visualReview": {
+        "task": "bergen-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q1420616",
+        "file": "bergen-Q1420616-floyen-talvivalot.png",
+        "sha256": "5b4d2aff2d3dc3606926407018be17495ca91d2f1dcf01f6494e1e2ca172545f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Three distant rear-facing sledders, snowy lamp-lined forestdescent and harbour lights clear at480. Anonymous10percent adult acceptable under source rear/distant alternatives."
+        ],
+        "limitations": [
+          "Invented route/lighting/weather; completion of actual lightingproject unverified. Agent falsehold relates only to stricterprompt3percent target, not sourcehardlimit."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Viewed final native 1536x1024 and separate full-frame 480x320 preview.",
+          "Snowy forest trail clearly leads downhill, functional lamp row follows slope, frost trees and distant Bergen-like harbour/city lights are visible.",
+          "Exactly three anonymous adult-sized rear-facing sledders; plain wooden sled shapes; no faces or identifying marks observed.",
+          "No readable text, numerals, labels, brands, signs, logos, watermark, cars, children or close facial imagery observed.",
+          "Snow texture and lights look like consistent ordinary night camera exposure, with subdued color and modest grain.",
+          "Nearest adult occupies approximately 10 percent of native image height, larger than the tiny-person prompt target; held for independent parent QA."
+        ],
+        "limitations": [
+          "Reitti, näkymäaukko, sataman sijainti, lampuston tarkka muoto ja sijoittelu sekä lumiolosuhteet ovat omaa tulkintaa, eivät paikkatarkka tai nykyhetken dokumentointi.",
+          "Lähimmän selin olevan aikuisen korkeus on noin 10 prosenttia kuvasta. Se on suurempi kuin promptin 3 prosentin tavoite; kasvot eivät näy. Vanhempi agentti tekee lopullisen kokotulkinnan itsenäisessä QA:ssa.",
+          "Valaistushankkeen valmistumista ei varmistettu. Kuva ei osoita Fløysvingenen valaistuksen nykyistä tilaa."
+        ],
+        "parentQARequired": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bergen-yksityiskohdat/20261008/bergen-Q1420616-floyen-talvivalot.png",
+      "url": "https://media.matkakirja.app/julisteet/bergen-yksityiskohdat/20261008/bergen-Q1420616-floyen-talvivalot.png",
+      "bytes": 2758766,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q117767",
+      "id": "floibanen-pysahtynyt-1986",
+      "file": "bergen-Q117767-floibanen-pysahtynyt-1986.png",
+      "filename": "bergen-Q117767-floibanen-pysahtynyt-1986.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/05-floibanen-pysahtynyt-1986/bergen-Q117767-floibanen-pysahtynyt-1986.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b01-843e-7ca1-b751-dae8b6ac43bc/exec-b43ca81a-351e-42c5-bd8b-543605320ca7.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/05-floibanen-pysahtynyt-1986/original-generation.png",
+      "sha256": "939837c0b6057a0c4ad4d9f6ead9965669f62434cd1eda0847b268df6a073f89",
+      "originalSha256": "344165e114b291cc37aefcb37cfab88400e0474c37d4e8deffdb5253e4d12565",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "preservedOriginalByteExact": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photograph-like educational illustration for Bergen city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images, reference photographs, or copied press image compositions.\nScene: a fictional reconstruction of a calm funicular service interruption on the steep wooded Fløyen slope above Bergen in spring 1986. Damp rails, wet gravel and moss, bare early-spring birches mixed with evergreen trees, old timber houses farther downhill, and Bergen's clustered tiled roofs and Vågen harbour dimly below in gray haze.\nSubject: a stopped OLD PLAIN RED funicular railcar of the THIRD Fløibanen generation used from 1974 to 2002, an approximately 80-passenger 1970s von Roll style inclined railcar. Modest practical boxy metal body, separate rectangular framed windows, a low pale gray roof following the incline, stepped passenger compartments appropriate to a funicular. It sits firmly ON two rails along a continuous steep downhill railway, aligned exactly with the rails. It is a rail-based cable-hauled vehicle, not a suspended cable-car, bus, tram on a street, or flat-floor modern panoramic train. All surfaces plain and unbranded.\nClear physical evacuation arrangement: one short portable exit ladder with just a few treads is visibly hooked securely to an OPEN SIDE DOOR of the stopped car; its feet rest on a small stable landing directly beside the track. This short exit ladder is physically connected to the car door, not floating or detached. Beside the same side of the rails is a separate continuous narrow stairway, with low practical handrail, running ALONG THE TRACK DOWN THE HILL toward the city. The landing joins this trackside stairway directly. Preserve a coherent route from the car door to the ladder, to the landing, to the stairway.\nPeople: only THREE TINY FICTIONAL ANONYMOUS ADULT PASSENGERS already calmly descending the trackside stairs downhill away from the camera, all seen FROM BEHIND. Each figure no more than about 6 percent of frame height, distant enough that no facial detail is visible. Generic dull blue, brown and gray 1980s anoraks and wool sweaters with plain trousers; no insignia, no recognizable real person, no celebrity, no recognizable child. Natural cautious walking with one hand on the rail; no panic, no falling, no injury.\nComposition: elevated camera uphill of the car, looking obliquely DOWN ALONG THE SLOPE. The full red car is central in the middle distance, enough of its near side visible to read the open door and short ladder. The rails and continuous adjacent stairs lead downhill behind it into Bergen's distant city roofs and harbour. Wide landscape showing the entire scene, realistic consistent perspective and rail geometry. Keep the car, connected ladder and descending stairs clearly legible at thumbnail size. No artificial sectional cutaway.\nStyle/medium: looks like an ordinary real camera photograph of a reconstructed period scene, natural muted wet gray spring daylight, low cloud and soft diffuse light, restrained reds and greens, realistic metal, damp timber, gravel and foliage, light film-like grain, normal photographic dynamic range.\nHistorical boundaries: an illustrative fictional arrangement and anonymous passengers, not a documentary photograph or a claim of the exact incident location, exact date, exact weather or mechanical cause. Do NOT show a broken signal wire, hanging electrical cable, sparks, electrical hazard or damaged infrastructure.\nAvoid: 1954-generation car, modern 2002 or 2022 panoramic car, tall sweeping glass canopy, modern branding, modern objects, drones visible in frame, recognizable faces, front-facing people, real person likeness, news reporters, disaster spectacle, blood or violence. Absolutely no letters, readable words, numerals, car names, route numbers, symbols, signs, posters, advertising, logos, watermarks, caption text or border anywhere in the image. No HDR, no cinematic grading, no oversaturation, no glossy CGI or illustration/painting look.\n",
+      "viitteet": [
+        {
+          "publisher": "Fløibanen AS / Fløyen",
+          "title": "Fløibanens historie",
+          "url": "https://www.floyen.no/floibanen/historie",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; official page text read; no image pixels opened or used",
+          "notes": "Official history confirms third-generation von Roll cars used 1974–2002, 80 passenger capacity. Earlier 1954 cars retired in 1974. Exact body appearance not validated with photographs; no 1986 incident account on this page."
+        },
+        {
+          "publisher": "Bergens Tidende",
+          "title": "Bli med på historisk tur med Fløibanen!",
+          "url": "https://www.bt.no/nyheter/lokalt/i/L47Q9/bli-med-paa-historisk-tur-med-floeibanen",
+          "type": "textResearchOnly",
+          "access": "2026-10-08; article and archival photo caption TEXT only; linked photo pixels not opened or used",
+          "notes": "Text captions corroborate old 1954 cars stored in January 1975 and new 1974 cars hoisted on 26 November 1974; not an incident source."
+        },
+        {
+          "publisher": "ESC Norge",
+          "title": "Hvor ble de av? 1986 – Sandra Kim",
+          "url": "https://escnorge.no/2016/07/03/hvor-ble-de-av-1986-sandra-kim/",
+          "type": "textResearchOnly; secondary retrospective",
+          "access": "2026-10-08; indexed article text only",
+          "notes": "Retrospective reports a fallen signal line, stopped car, ladder exit and narrow trackside stairs; no serious harm. Claims same day as contest final, conflicting with wiki-linked account. Neither exact day nor wire/cause treated as confirmed, and no wire or real people depicted."
+        },
+        {
+          "publisher": "wikisida.no",
+          "title": "Fløibanen",
+          "url": "https://wikisida.no/index.php?title=Fl%C3%B8ibanen",
+          "type": "textResearchOnly; wiki-derived secondary account",
+          "access": "2026-10-08; indexed text only; direct page open failed",
+          "notes": "Reports incident a few days before 1986 final, ladder evacuation, stairs and no injuries; cites Grytten history p142. That underlying book was not accessible via ResearchGate, so exact date, site and cause remain unverified."
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen poistumistilanne pysähtyneestä Fløibanenin vaunusta Bergenin rinteellä kevään 1986 kertomuksen pohjalta. Vaunu kuvaa vuosina 1974–2002 käytettyä sukupolvea; tarkka tapahtumapäivä, pysähdyspaikka ja vian syy jäivät varmistamatta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Preserved a byte-exact tool original as original-generation.png.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "parentQA": "pending-root-independent-inspection",
+        "observations": [
+          "Final native 1536x1024 image and separate full-frame 480x320 preview visually inspected.",
+          "Old plain red boxy inclined funicular car rests on downhill rails; no modern sweeping panoramic glazing or readable branding observed.",
+          "Short metal ladder is secured at the open side-door sill; feet meet a stable ground plate beside the railway.",
+          "Narrow stairway and handrail run continuously downhill alongside the railway; three calmly walking passengers are entirely rear-facing.",
+          "No recognizable face, real-person likeness, readable word, numeral, sign, logo, watermark, border, blood, injury, panic, falling person, broken wire or electrical hazard observed.",
+          "Muted wet gray diffuse daylight, damp rails/rock/trees, city roofs and harbour below; car, ladder and stairs remain visible in 480px preview.",
+          "Opaque RGB, required PNG text metadata and embedded sRGB ICC verified; decoded final RGB pixels equal tool original, preserved original is byte-exact."
+        ],
+        "limitations": [
+          "Official operator text supports 1974–2002 generation in 1986, but exact car-body detailing was not photographically checked; source image pixels were neither opened nor used.",
+          "Primary incident text was not found. Secondary accounts disagree on exact day; signalwire/cause omitted with root approval. Scene does not claim exact date, weather, site or cause.",
+          "Fictional camera viewpoint, city/harbour architecture, exit equipment and passenger arrangement; not a reconstruction of a specific press photograph.",
+          "Nearest rear-facing passenger is about 13 percent of image height, larger than 6 percent prompt target, though unidentifiable with no visible face.",
+          "Ladder lands on a ground plate; a short passable gravel interval connects it to the stairway rather than a single continuous fabricated landing. Exact evacuation arrangement is illustrative."
+        ]
+      },
+      "preflightClarification": {
+        "status": "approved-by-root",
+        "received": "2026-10-08",
+        "decision": "Use third-generation 1974–2002 car appropriate to 1986, omit unconfirmed signal wire/cause; generic calm fictional adults with physical ladder exit and trackside descending stairs.",
+        "reason": "Official operator history conflicts with brief reference to 1950s body; exact 1986 incident day/cause could not be established from primary source."
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "76f2c6f248c039ba6cbceb7df3b416603e670466",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/05-floibanen-pysahtynyt-1986/qa-preview-480.png",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "bergen-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q117767",
+        "file": "bergen-Q117767-floibanen-pysahtynyt-1986.png",
+        "sha256": "939837c0b6057a0c4ad4d9f6ead9965669f62434cd1eda0847b268df6a073f89",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Old red plaininclinedcar, side laddergroundplate and adjacentstairs; three rearpassengers, mutedwetlight, no face/text/brand."
+        ],
+        "limitations": [
+          "1974-2002generation context; preciseincidentdate,cause,carbody,evacuationequipment andtopography unverified. No brokenwireclaim."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "parentQA": "pending-root-independent-inspection",
+        "observations": [
+          "Final native 1536x1024 image and separate full-frame 480x320 preview visually inspected.",
+          "Old plain red boxy inclined funicular car rests on downhill rails; no modern sweeping panoramic glazing or readable branding observed.",
+          "Short metal ladder is secured at the open side-door sill; feet meet a stable ground plate beside the railway.",
+          "Narrow stairway and handrail run continuously downhill alongside the railway; three calmly walking passengers are entirely rear-facing.",
+          "No recognizable face, real-person likeness, readable word, numeral, sign, logo, watermark, border, blood, injury, panic, falling person, broken wire or electrical hazard observed.",
+          "Muted wet gray diffuse daylight, damp rails/rock/trees, city roofs and harbour below; car, ladder and stairs remain visible in 480px preview.",
+          "Opaque RGB, required PNG text metadata and embedded sRGB ICC verified; decoded final RGB pixels equal tool original, preserved original is byte-exact."
+        ],
+        "limitations": [
+          "Official operator text supports 1974–2002 generation in 1986, but exact car-body detailing was not photographically checked; source image pixels were neither opened nor used.",
+          "Primary incident text was not found. Secondary accounts disagree on exact day; signalwire/cause omitted with root approval. Scene does not claim exact date, weather, site or cause.",
+          "Fictional camera viewpoint, city/harbour architecture, exit equipment and passenger arrangement; not a reconstruction of a specific press photograph.",
+          "Nearest rear-facing passenger is about 13 percent of image height, larger than 6 percent prompt target, though unidentifiable with no visible face.",
+          "Ladder lands on a ground plate; a short passable gravel interval connects it to the stairway rather than a single continuous fabricated landing. Exact evacuation arrangement is illustrative."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bergen-yksityiskohdat/20261008/bergen-Q117767-floibanen-pysahtynyt-1986.png",
+      "url": "https://media.matkakirja.app/julisteet/bergen-yksityiskohdat/20261008/bergen-Q117767-floibanen-pysahtynyt-1986.png",
+      "bytes": 3173750,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 6,
+      "qid": "Q583428",
+      "id": "rosenkrantz-kolme-toimintoa",
+      "file": "bergen-Q583428-rosenkrantz-kolme-toimintoa.png",
+      "filename": "bergen-Q583428-rosenkrantz-kolme-toimintoa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/06-rosenkrantz-kolme-toimintoa/bergen-Q583428-rosenkrantz-kolme-toimintoa.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b00-2953-7132-89e0-cbf1a8071d49/exec-1907662e-bb9d-4c3c-8be4-9845f527ea9d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/06-rosenkrantz-kolme-toimintoa/original-generation.png",
+      "sha256": "e510e2bee16c59757ff06b7b49d3f783541ab41c72c95a348ba65820330bc13f",
+      "originalSha256": "760d70a429c8caa6d8e909777cf56e9af6baf8527607fbfc2c4c08d76f832f7e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: original photorealistic educational architectural cutaway for Bergen city guide.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference images, no copied drawings, no museum collection replicas.\nPrimary request: a physically convincing, camera-material sectional view explaining three simultaneous FUNCTIONS of the Rosenkrantz Tower in Bergen around the 1560s: a dark dungeon low in the tower, domestic governor's quarters in the middle, and idle cannon positions in the upper tower. This is an ORIGINAL conceptual material cutaway, NOT a measured floor plan or exact archaeological reconstruction.\nScene: a tall square Norwegian Renaissance stone tower with very thick rubble masonry walls and a subtle older inner masonry core. Its entire front wall is conceptually sliced away so the viewer can see the interiors. The tower stands naturally on rough stone ground under an overcast gray sky; no surrounding city, site-copy composition or museum setting. Fine pale weathered lime plaster remains on the exterior sides; the exposed section edges reveal thick rough stone masonry. Full-scale natural stone, timber, tile and iron materials, not a tabletop toy.\nRoof correction: the MAIN roof is a LOW turf-covered GABLE roof recessed inside a surrounding stone wallwalk with a simple crenellated parapet. NO large green dome, NO copper roof, NO steep tall hipped tiled roof, no banner, flag, vane, sculpture or decorative symbolic emblem. No turret cupola needed.\nStructure: suggest SEVEN narrow horizontal levels INCLUDING the basement and shallow roof attic, with six clearly separated timber or stone floor decks and restrained partial inner partitions. These seven suggested levels form THREE broad functional zones; do not depict a building with only three literal floors. Floors and connecting side stairs are only a plausible invented arrangement, not a survey.\nLOWER FUNCTION ZONE: the lowermost basement chamber is a dark empty stone dungeon with a small ventilation slit. One plain slack idle iron chain hangs from a simple wall ring, unattached to anybody. The next low level is a plain empty ancillary chamber. No prisoners, no people, no shackled bodies, no torture devices.\nMIDDLE FUNCTION ZONE: three successive simple domestic levels, with original generic 16th-century furnishings spread naturally across them: unadorned wooden bench and table, an ordinary stone fireplace, and a plain tiled stove. Modest worn wood, no fine art, no period replica sculpture, no heraldry. Every furnishing is an invented period-plausible generic design, not an actual object now in a museum.\nUPPER FUNCTION ZONE: one upper cannon room just beneath a shallow mostly empty attic. Two small static plain dark iron cannons on simple timber carriages sit safely indoors, their barrels aligned toward modest external embrasures at the SIDE walls. These are generic invented historical defence fixtures, not collection replicas. No firing, no smoke, no projectile, no people or soldiers.\nComposition/framing: almost straight frontal view, with a subtle natural perspective into the opened rooms. The complete tall tower and low turf roof fill most of the image height, centred on the 3:2 canvas with calm gray sky at the sides. All broad functions are legible without labels; use realistic subdued daylight reaching the cut rooms, darkest at the dungeon and slightly brighter at the roof. Show the thick cut stone side edges clearly.\nStyle/medium: camera-captured natural material appearance applied to a conceptual architectural section. Crisp natural rubble stone, weathered timber, plain tile and iron surfaces; muted stone gray, dull brown, earth and turf green. Soft honest overcast daylight, restrained contrast. No HDR, no cinematic grading, no shiny CGI, no ink drawing, no pencil lines, no painted illustration, no measurement diagram.\nAvoid: text, numerals, letters, captions, labels, signs, floor-number markers, plans, measurement lines, writing, logos, watermark, signature, border, flags, insignia, artworks, museum exhibits, modern fixtures, tourists, ANY human, recognizable face, prison victim, blood, violence, skulls, fired weapons. No later 1620s full-covering high roof.",
+      "viitteet": [
+        {
+          "publisher": "Forsvarsbygg – Nasjonale festningsverk",
+          "title": "Rosenkrantztårnet i Bergen",
+          "url": "https://www.forsvarsbygg.no/no/samfunnsansvar/kulturmiljoforvaltning3/referanseprosjekter/istandsetting-og-vedlikehold/rosenkrantztarnet-i-bergen/",
+          "type": "textResearchOnly",
+          "notes": "Official architectural text confirms 1560s seven plans including cellar and attic; altered floor division, passages and stairs; turf-covered gable roof with surrounding wallwalk. The high full-cover hipped tile roof belongs to c1622–24, not this scene. No photos or illustration pixels viewed.",
+          "access": "2026-10-08; official indexed full text read. Direct open failed, indexed text provided substantive history."
+        },
+        {
+          "publisher": "Forsvarsbygg – Nasjonale festningsverk",
+          "title": "Rosenkrantztårnet – bygnings- og restaureringshistorie",
+          "url": "https://www.forsvarsbygg.no/contentassets/1ba92296492246758190c25cecfa6b0e/1.-rosenkrantztarnet-bygnings--og-restaureringshistorie.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official indexed report summary confirms 1560s turf roof and crenellated surrounding parapet; fully covering roof c1624 and later roof changes in 1840s/1870. Used only textual architecture facts; no report drawings/images opened.",
+          "access": "2026-10-08; indexed text summary read only. Direct PDF open failed; no screenshot/page pixels used."
+        },
+        {
+          "publisher": "Bymuseet i Bergen",
+          "title": "Guide til Rosenkrantztårnet",
+          "url": "https://bymuseet.no/guide-til-rosenkrantztarnet/",
+          "type": "textResearchOnly",
+          "notes": "Official text confirms 16th-century dungeon, multiple remodelled rooms and levels, domestic rooms with fireplaces, and cannon loft added in Erik Rosenkrantz's time. Original items from present collection were neither viewed nor reproduced.",
+          "access": "2026-10-08; primary indexed text read only, no site image pixels opened."
+        },
+        {
+          "publisher": "Bymuseet i Bergen",
+          "title": "Rosenkrantztårnet",
+          "url": "https://bymuseet.no/utstillinger/rosenkrantztarnet/",
+          "type": "textResearchOnly",
+          "notes": "Official text identifies cellar dungeon, 1560s governor's private rooms and cannon lofts. Supports functional explanation, not this invented floor arrangement.",
+          "access": "2026-10-08; primary indexed text only, no site image pixels opened."
+        }
+      ],
+      "kuvateksti": "Oma selittävä materiaalileikkaus Rosenkrantzin tornin 1560-luvun kolmesta tehtävästä: alhaalla tyrmä, keskellä asumistilat ja ylhäällä tykkiasemat. Kerrosjako, ympäristö ja kalusteet ovat kuvitteellisia, eivät mittarekonstruktio. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixels unchanged; equality verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "workerVisualPass": true,
+        "parentReviewPending": true,
+        "observations": [
+          "Generating worker viewed native 1536x1024 PNG and full-frame 480x320 preview.",
+          "Three broad functions are legible: empty lower dungeon with idle chain, furnished domestic middle rooms with fireplace/tiled stove, two static upper cannons.",
+          "Low turf-covered gable roof and surrounding crenellated parapet; no incorrect main green dome or later full-covering steep hipped roof.",
+          "Thick cut stone side walls, realistic rubble/wood/iron/tile; subdued gray daylight, muted natural colors.",
+          "No people, prisoner bodies, blood, injury, firing, text, numerals, labels, heraldry, logo, watermark or frame visible.",
+          "Original generic domestic furnishings and cannon forms; no reference-image or identifiable museum-object pixels used."
+        ],
+        "limitations": [
+          "Conceptual original material section; layout, proportions, location and furnishings are invented. This is not a measured architectural reconstruction.",
+          "Generated candidate visibly presents six level bands including dungeon and attic, while primary architectural text specifies seven historical plans and prompt suggested seven. Caption does not assert actual floor count; parent architectural QA must decide delivery acceptability.",
+          "Static stored cannonballs and additional generic domestic storage objects appear beyond prompt specifics. No fired weapons or airborne projectile shown.",
+          "Distant indistinct shoreline houses appear in the invented background; the setting is not verified Bergenhus site topography."
+        ]
+      },
+      "architectureClarification": {
+        "status": "approved-by-root-before-generation",
+        "received": "2026-10-08",
+        "decision": "Three functional zones, general reference to seven actual historical levels/extra floor decks, not a measured three-floor building. Low turf-covered gable and wallwalk. No incorrect green main dome, later 1620s roof, flag or museum replicas.",
+        "reason": "Primary official architectural text corrected roof/date and floor-count conflict; root authorised original explanatory material cutaway."
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "76f2c6f248c039ba6cbceb7df3b416603e670466",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-pending-parent-review",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/bergen-yksityiskohdat-20261008/production/06-rosenkrantz-kolme-toimintoa/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "visualReview": {
+        "task": "bergen-yksityiskohdat-20261008",
+        "number": 6,
+        "qid": "Q583428",
+        "file": "bergen-Q583428-rosenkrantz-kolme-toimintoa.png",
+        "sha256": "e510e2bee16c59757ff06b7b49d3f783541ab41c72c95a348ba65820330bc13f",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Photographicstone/wood/iron materialcutaway shows emptydungeon, furnishedlivingrooms and idleuppercannons. Lowturfgableroof,no maindome/text/people."
+        ],
+        "limitations": [
+          "Originalconceptualsection withsixvisiblelevelbands; threefunctions required, actualsevenhistoricalplans not claimed. Not a measured architectural reconstruction."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "workerVisualPass": true,
+        "parentReviewPending": true,
+        "observations": [
+          "Generating worker viewed native 1536x1024 PNG and full-frame 480x320 preview.",
+          "Three broad functions are legible: empty lower dungeon with idle chain, furnished domestic middle rooms with fireplace/tiled stove, two static upper cannons.",
+          "Low turf-covered gable roof and surrounding crenellated parapet; no incorrect main green dome or later full-covering steep hipped roof.",
+          "Thick cut stone side walls, realistic rubble/wood/iron/tile; subdued gray daylight, muted natural colors.",
+          "No people, prisoner bodies, blood, injury, firing, text, numerals, labels, heraldry, logo, watermark or frame visible.",
+          "Original generic domestic furnishings and cannon forms; no reference-image or identifiable museum-object pixels used."
+        ],
+        "limitations": [
+          "Conceptual original material section; layout, proportions, location and furnishings are invented. This is not a measured architectural reconstruction.",
+          "Generated candidate visibly presents six level bands including dungeon and attic, while primary architectural text specifies seven historical plans and prompt suggested seven. Caption does not assert actual floor count; parent architectural QA must decide delivery acceptability.",
+          "Static stored cannonballs and additional generic domestic storage objects appear beyond prompt specifics. No fired weapons or airborne projectile shown.",
+          "Distant indistinct shoreline houses appear in the invented background; the setting is not verified Bergenhus site topography."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/bergen-yksityiskohdat/20261008/bergen-Q583428-rosenkrantz-kolme-toimintoa.png",
+      "url": "https://media.matkakirja.app/julisteet/bergen-yksityiskohdat/20261008/bergen-Q583428-rosenkrantz-kolme-toimintoa.png",
+      "bytes": 2610848,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [
+    {
+      "number": 3,
+      "qid": "Q153430",
+      "id": "riimupuikko",
+      "generationCalls": 0,
+      "reason": "Explicitly sharp READABLE medieval runic writing conflicts with common no-text rule; museum excavated-runestick reproduction also conflicts with collection exclusion. No non-runic substitute authorised."
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-5.jpg",
+    "r2Key": "julisteet/bergen-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "url": "https://media.matkakirja.app/julisteet/bergen-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "sha256": "bcf5086d561255fdceb9dafeb0c7b68b7d9b7572797283431faf753354fbf81a",
+    "bytes": 304227,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:02:21.679888+00:00"
+}

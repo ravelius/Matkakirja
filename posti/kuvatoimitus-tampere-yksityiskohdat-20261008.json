@@ -1,0 +1,732 @@
+{
+  "task": "tampere-yksityiskohdat-20261008",
+  "routedTaskNumber": 30,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md",
+    "commit": "4906827b88c9be430a474698af12d798de766434",
+    "blob": "974a263261be956b54ee87d0d19eacfe644247cb"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 5,
+  "imageCount": 5,
+  "generationCalls": 5,
+  "generationLimit": 5,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q15846380",
+      "id": "langan-solmun-sitominen-1873",
+      "filename": "tampere-Q15846380-langan-solmun-sitominen-1873.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "tampere-Q15846380-langan-solmun-sitominen-1873.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/01-langan-solmun-sitominen-1873/tampere-Q15846380-langan-solmun-sitominen-1873.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b20-c48b-7860-b915-d0bac1f8ae2d/exec-c9acac31-ba4b-470a-8424-5647feceb90d.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/01-langan-solmun-sitominen-1873/original-generation.png",
+      "sha256": "81ee891d625c590d1120eaedf166f6ebcdc20d1ac5f49f30aff6ccb31f0b7a64",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration for a Tampere city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input images or source photographs.\nScene: a fictional quiet cotton weaving workshop in Tampere in 1873, representing the Finlayson factory era, not any exact documented room. Use an earlier modest factory hall, NOT the Plevna hall built in 1877. Softly blurred stopped wood-and-iron textile machinery, plain wooden bobbins and cotton spools, old plaster walls and tall simple multi-pane windows. The steam-era machines are stationary, with no moving exposed parts near the hands. No electrical installation or electric lamps: Finlayson electric lighting came later in 1882. No machine nameplates.\nSubject and action: ONE completely anonymous FICTIONAL ADULT female textile worker, visibly mature (about 35-50), wearing a plain dark worn apron over a simple long-sleeved muted brown blouse, and a plain cloth head scarf. This is no real person's portrait and not the story's real grandfather. A rear-oblique medium-close view shows her upper torso and TWO work-worn hands centrally. She is calmly tying together the two ends of a broken fine WHITE COTTON THREAD. Her thumb and index finger on each hand gently hold the short ends next to ONE clearly visible tiny simple cotton knot at image center. The knot, thread, skin texture and hand gesture are the sharpest details. Correct plausible anatomy: exactly two adult hands, natural five fingers per hand, normal proportions and joints, other fingers comfortably curled, no extra/fused digits. The thread runs simply from a small wooden bobbin near the lower foreground to the knot, with two small short loose ends. No large tangles or cobweb-like loops.\nHuman identity constraint: her head is turned fully away toward the far factory hall. See the back of the scarf and just a narrow shadowed side contour; no frontal or identifiable face, no visible detailed eyes or mouth. She is focused ahead, not looking down at the hands. Only this adult exists in the scene; no children, no other people, no child labor.\nComposition and camera: realistic camera-like documentary view from slightly behind and to the side, hands and thread large and readable in the center foreground, worker's torso and covered head to one side, a blurred plain textile machine and window light behind. Gentle realistic depth of field, roughly normal 50mm lens perspective, no extreme blur or exaggerated bokeh. Full 3:2 frame with no border.\nMaterials, lighting and palette: convincing real-camera photorealistic reconstruction, modest warm daylight falling diagonally through the windows, naturally shaded face contour, muted brown wood, dull aged iron, matte natural cloth and fine cotton, slightly rough realistic adult skin. A few faint dust motes in the sunbeam. Calm working moment, restrained exposure and normal material texture. Do not render as a painting despite warm light. No HDR, dramatic cinematic grading, orange-teal palette, oversaturation, glossy CGI or fantasy machinery.\nAvoid: recognizable real human likeness, visible portrait facial features, children, modern tools or clothing, electric lamps, electric switches, cables, modern machinery, unsafe action near running machines, injury, blood, violence, readable writing, letters, numbers, logos, labels, signage, watermarks, captions or frames.",
+      "viitteet": [
+        {
+          "publisher": "Finlaysonin alue",
+          "title": "Tietoa Finlaysonin alueesta",
+          "url": "https://finlaysoninalue.fi/tietoa-finlaysonin-alueesta/",
+          "type": "textResearchOnly",
+          "notes": "Text confirms mechanized cotton weaving after 1836, Plevna completion in 1877 and electric lighting in 1882. Earlier 1873 workshop kept generic; no source photographs or room layout used.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Finlaysonin alue",
+          "title": "Naisten kaupungissa tehtaan pilli soi aamuisin kello 4.30",
+          "url": "https://finlaysoninalue.fi/ajankohtaista/naisten-kaupungissa-tehtaan-pilli-soi-aamuisin-kello-4-30/",
+          "type": "textResearchOnly",
+          "notes": "Text supports female factory workforce and electricity 1882; images and museum objects not accessed. Individual person, knot gesture, clothing and precise machine arrangement fictional.",
+          "access": "2026-10-08; official indexed text only"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen työhetki Tampereen puuvillatehtaassa vuonna 1873: nimetön aikuinen työläinen sitoo katkenneen langan solmuun. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "974a263261be956b54ee87d0d19eacfe644247cb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "One adult textile worker shown fully rear-oblique; only back/head scarf and nonidentifying ear/cheek edge visible. No identifiable face, other people or children.",
+          "Two plausible adult hands, naturally folded fingers, and a small white cotton knot at center; no extra or fused digits observed.",
+          "Generic stopped wood-and-iron textile machinery, unlabelled spools, plastered factory hall and natural window light; no electrical lamps or modern items.",
+          "Knot and hand action remain legible at 480px. Natural muted material tones; no writing, logos, borders, injury, blood or violence."
+        ],
+        "limitations": [
+          "Fictional person, gesture, knot and workshop arrangement; not a portrait of a real grandfather or a verified reconstruction of a specific 1873 factory room.",
+          "The cotton knot appears nearly completed between the fingertips, rather than showing an unclosed knot loop.",
+          "Historic machine details are generic period suggestions, not an authenticated machine replica."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "8a43bc6158483e0644503ddd119f4012aea2df0f8dcf653a0d8134ab549d3dea",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/01-langan-solmun-sitominen-1873/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "generationAttemptsRemaining": 0,
+      "sourcePath": "posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/worktrees/posti-kuvatoimitus-20261006/posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md",
+      "sharedRulesSourcesRead": [
+        "posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md (entire)",
+        "posti/sisaltokirjuri-codex-lontoo-yksityiskohdat-20261007.md (entire)",
+        "posti/sisaltokirjuri-codex-rooma-yksityiskohdat-20261007.md (shared rules)"
+      ],
+      "visualReview": {
+        "task": "tampere-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q15846380",
+        "file": "tampere-Q15846380-langan-solmun-sitominen-1873.png",
+        "sha256": "81ee891d625c590d1120eaedf166f6ebcdc20d1ac5f49f30aff6ccb31f0b7a64",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Two plausibleadulthands holdingwhitecottonknot; matureworkerfullyrear withheadscarf, genericsteam-period textilemachines/windowlight. Noelectriclamps/text/knownlikeness."
+        ],
+        "limitations": [
+          "Fictionalworkshop/person/machine; knotnearlycompleted. Rearbody is large due requestedhandsdetail, permittedrear-facingalternative."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "One adult textile worker shown fully rear-oblique; only back/head scarf and nonidentifying ear/cheek edge visible. No identifiable face, other people or children.",
+          "Two plausible adult hands, naturally folded fingers, and a small white cotton knot at center; no extra or fused digits observed.",
+          "Generic stopped wood-and-iron textile machinery, unlabelled spools, plastered factory hall and natural window light; no electrical lamps or modern items.",
+          "Knot and hand action remain legible at 480px. Natural muted material tones; no writing, logos, borders, injury, blood or violence."
+        ],
+        "limitations": [
+          "Fictional person, gesture, knot and workshop arrangement; not a portrait of a real grandfather or a verified reconstruction of a specific 1873 factory room.",
+          "The cotton knot appears nearly completed between the fingertips, rather than showing an unclosed knot loop.",
+          "Historic machine details are generic period suggestions, not an authenticated machine replica."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/tampere-yksityiskohdat/20261008/tampere-Q15846380-langan-solmun-sitominen-1873.png",
+      "url": "https://media.matkakirja.app/julisteet/tampere-yksityiskohdat/20261008/tampere-Q15846380-langan-solmun-sitominen-1873.png",
+      "bytes": 1987606,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q18346706",
+      "id": "keksitty-pelinayttely",
+      "filename": "tampere-Q18346706-keksitty-pelinayttely.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "file": "tampere-Q18346706-keksitty-pelinayttely.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/02-keksitty-pelinayttely/tampere-Q18346706-keksitty-pelinayttely.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b20-c48b-7860-b915-d0bac1f8ae2d/exec-9c62121f-cb9f-415a-92cb-ccb00588e69a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/02-keksitty-pelinayttely/original-generation.png",
+      "sha256": "5e637efd603e59587fb3ca0197c32a2454de5caeb2133fdcf4e4fd2efc9d9b29",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: generic FICTIONAL game exhibition illustration for a Tampere city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No source images, no reference photographs. The 3:2 canvas is mandatory.\nScene: an EXPLICITLY INVENTED, GENERIC game-history exhibition in an old red-brick industrial hall in Finland, present day after 2017. This is NOT the actual Vapriikki building, NOT the real Finnish Museum of Games interior, NOT a reconstruction of any museum collection. Invent the hall layout and all display objects from scratch. Modest brick walls, plain dark iron columns and beams, a long row of simple wood tables and a few unlabelled low glass display cases leading toward large multi-pane daylight windows.\nExhibits: wholly INVENTED retro electronic device props suggesting several decades of home gaming (1980s to 2000s). A tabletop computer prop at the foreground with a subtly unusual compact irregular muted-beige housing, a plain nonbranded small CRT-like monitor and a blank keyboard with entirely unmarked keycaps. Separate simple invented console boxes in muted gray/brown/black, with basic blank sockets and unobtrusive plain cables. Include two plain simple upright joysticks with unlabelled bases, rounded grips and only plain circular buttons; no cross-shaped controls, directional pads, controller symbols or recognizable controller shapes. A few completely blank unlabelled plastic cartridge cases and unlabelled flat storage cases on shelves and tables. Each object is a generic fictional design, NOT an actual identifiable product or collection object. No actual recognizable Amiga, Atari, Nintendo, Sega, Sony or other branded computer/console/controller housing or design. No famous cartridge silhouette, no distinctive branded color scheme.\nScreen content: each screen shows ONLY abstract nonrepresentational scattered colored square PIXEL PATTERNS, gently luminous. Invented geometric patches with no identifiable game, character, creature, vehicle, icon, scenery, interface, score, words, numerals or letters. Absolutely no Mario, Pac-Man or recognizable game art. Do not imitate screenshots or artworks. No title screens.\nComposition and camera: eye-level real-camera photograph-like view slightly diagonally along the long hall. One foreground wood table with the fictional blank computer and two simple joysticks is clear; further invented console props and glass cases recede naturally toward the windows. No people anywhere. Realistic scale, believable table geometry, subtle reflections in glass, moderate depth of field, natural normal-wide lens perspective. The complete scene fills a 3:2 landscape frame, with no border.\nLighting and materials: soft warm daylight from the windows with modest warm display illumination, muted brick reds and weathered wood browns, soft neutral plastics, slight age and scuffs, ordinary dull metal, restrained screen glow. Convincing natural photographic material detail and realistic balanced exposure. No HDR, no neon arcade glow, no cinematic grading, no oversaturated colors, no CGI slickness.\nAvoid: actual Vapriikki floorplan or interior, replicas of real museum collection artifacts, any actual recognizable branded device or controller designs, game characters or identifiable copyrighted artwork, keyboard letters, numbers, writing, explanatory plaques, labels, logos, symbols, signs, watermarks, image captions, picture borders, people or faces.",
+      "viitteet": [
+        {
+          "publisher": "Museokeskus Vapriikki / Tampereen kaupunki",
+          "title": "Tukijat – Suomen pelimuseo",
+          "url": "https://www.vapriikki.fi/museo/suomen-pelimuseo/tukijat/",
+          "type": "textResearchOnly",
+          "notes": "Text confirms crowdfunding: more than 1100 contributors and nearly 86 000 euros. Only context used; no people, named sponsors or existing exhibition imagery passed to generation.",
+          "access": "2026-10-08; text only"
+        },
+        {
+          "publisher": "Museokeskus Vapriikki / Tampereen kaupunki",
+          "title": "The Finnish Museum of Games",
+          "url": "https://www.vapriikki.fi/en/the-museum/the-finnish-museum-of-games/",
+          "type": "textResearchOnly",
+          "notes": "Text supports the 2017 opening and history-of-gaming exhibition context. Real devices, game titles, collection objects and themed room layouts explicitly excluded from generation.",
+          "access": "2026-10-08; text only"
+        }
+      ],
+      "kuvateksti": "Keksitty pelinäyttely suomalaisessa tiilihallissa: laitteet ja ruutujen pikselikuviot ovat kuvitteellisia. Kuva ei esitä Vapriikin tiloja tai museokokoelman esineitä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "974a263261be956b54ee87d0d19eacfe644247cb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Invented brick hall with tables, glass cases, blank electronic props, two plain joysticks and unlabelled flat cases; no people.",
+          "Foreground keyboard keycaps are blank. Device faces, buttons and cases have no readable writing, numerals, logos or familiar controller symbols.",
+          "Screens and additional invented wall panels show abstract scattered colored square patterns; no recognizable game characters, screenshots or score interfaces.",
+          "No distinctive actual branded device identity observed in the generic housings. Natural warm muted daylight, plausible wood/plastic/brick/glass textures, legible at 480px."
+        ],
+        "limitations": [
+          "Entire hall, layout, device housings and patterns are fictional; this does not show the actual Finnish Museum of Games, Vapriikki or an actual museum collection.",
+          "Generic CRT-and-keyboard forms suggest their era; devices are not identified as real models or authenticated collection objects.",
+          "No museum/interior/source photograph pixels were consulted; exact accidental similarity to every historical hardware design cannot be exhaustively excluded."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "originalSha256": "623aa95c6959d4e55db700fcf939c959d48f9034fef948f5ea00ab1756730dcd",
+      "originalByteExact": true,
+      "mode": "RGB",
+      "iccProfileName": "sRGB built-in",
+      "rgbPixelsUnchanged": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/02-keksitty-pelinayttely/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Decoded RGB pixel bytes verified unchanged.",
+        "Preserved byte-exact tool original; created separate full-frame 480x320 QA preview."
+      ],
+      "generationAttemptsRemaining": 0,
+      "sourcePath": "posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md",
+      "sourceFileRead": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/worktrees/posti-kuvatoimitus-20261006/posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md",
+      "sharedRulesSourcesRead": [
+        "posti/sisaltokirjuri-codex-tampere-yksityiskohdat-20261008.md (entire)",
+        "posti/sisaltokirjuri-codex-lontoo-yksityiskohdat-20261007.md (entire)",
+        "posti/sisaltokirjuri-codex-rooma-yksityiskohdat-20261007.md (shared rules)"
+      ],
+      "visualReview": {
+        "task": "tampere-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q18346706",
+        "file": "tampere-Q18346706-keksitty-pelinayttely.png",
+        "sha256": "5e637efd603e59587fb3ca0197c32a2454de5caeb2133fdcf4e4fd2efc9d9b29",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Keksityt pelikoneet ja tyhjät näppäimet, uudet väripikselikuviot; ei tunnistettavaa peliä, logoa, tekstiä tai museoesinekopiota. Aito kameramainen tiili-, puu- ja muovipinta."
+        ],
+        "limitations": [
+          "Koko näyttelytila ja laitteet ovat kuvitteellisia; ei Vapriikin dokumentointi."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Viewed final native 1536x1024 image and separate full-frame 480x320 preview.",
+          "Invented brick hall with tables, glass cases, blank electronic props, two plain joysticks and unlabelled flat cases; no people.",
+          "Foreground keyboard keycaps are blank. Device faces, buttons and cases have no readable writing, numerals, logos or familiar controller symbols.",
+          "Screens and additional invented wall panels show abstract scattered colored square patterns; no recognizable game characters, screenshots or score interfaces.",
+          "No distinctive actual branded device identity observed in the generic housings. Natural warm muted daylight, plausible wood/plastic/brick/glass textures, legible at 480px."
+        ],
+        "limitations": [
+          "Entire hall, layout, device housings and patterns are fictional; this does not show the actual Finnish Museum of Games, Vapriikki or an actual museum collection.",
+          "Generic CRT-and-keyboard forms suggest their era; devices are not identified as real models or authenticated collection objects.",
+          "No museum/interior/source photograph pixels were consulted; exact accidental similarity to every historical hardware design cannot be exhaustively excluded."
+        ],
+        "parentReview": "pending independent root QA"
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/tampere-yksityiskohdat/20261008/tampere-Q18346706-keksitty-pelinayttely.png",
+      "url": "https://media.matkakirja.app/julisteet/tampere-yksityiskohdat/20261008/tampere-Q18346706-keksitty-pelinayttely.png",
+      "bytes": 2198247,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q222028",
+      "id": "muinainen-nasijarvi",
+      "filename": "tampere-Q222028-muinainen-nasijarvi.png",
+      "file": "tampere-Q222028-muinainen-nasijarvi.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/03-muinainen-nasijarvi/tampere-Q222028-muinainen-nasijarvi.png",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational paleolandscape illustration for Tampere in Matkakirja.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input photographs, no reference images and no copied maps.\nScene: a completely natural Finnish early-Holocene landscape around the ancient Lake Näsijärvi immediately before the southern outlet changed, approximately 5500 BCE. An extensive high-water lake stretches north across the upper two thirds of the image. In the far north / upper left, a narrower connected winding natural water channel continues away toward the ancient Lapuanjoki headwaters. This outlet is visibly connected to the northern lake edge. Water at the southern lake end has not yet breached the ridge; absolutely no river connecting the two southern water bodies.\nForeground and geography: looking obliquely north from a high aerial camera viewpoint south of the landscape, around 2 km high. A long narrow sandy glacial ridge, representing the early Pyynikki–Pispala ridge, crosses the lower third between the large northern lake and a smaller, lower early Lake Pyhäjärvi in the immediate southern foreground. The pale ridge crest is mostly forested, with a few naturally exposed pale sand slopes and shore bluffs. The smaller lower lake is separated from the main lake by uninterrupted sand ridge and woods. Lake Näsijärvi occupies most of the upper frame, its irregular forested shores and northern connected channel recede into natural distance haze.\nAccuracy: a freely composed approximate paleolandscape based on textual geological history, not survey-accurate GIS and not a map. Natural connected drainage geometry, low Finnish terrain, no fantastical mountains or cliffs. Make the northward outlet a subtle natural channel, never an arrow or diagram.\nMaterials: clear subdued blue lake water with realistic surface texture, sandy shore slopes, organic irregular shoreline, dense natural Scots pine, mixed conifers and birches. No manicured forest grid or geometric land divisions.\nStyle and light: convincing real-camera landscape photograph-like reconstruction, realistic aerial atmosphere, natural soft summer daylight, muted greens and blue water, restrained contrast. No HDR, no cinematic grading, no glossy CGI, no painting, no exaggerated saturation.\nAvoid: all humans, animals, buildings, roads, bridges, dams, boats, aircraft, modern objects, towers, cities, signs, any text or labels, map symbols, arrows, directional overlays, logos, watermarks, frames or borders. No southward outlet anywhere in this pre-breach scene.",
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "974a263261be956b54ee87d0d19eacfe644247cb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "chronology": {
+        "basis": "Seppä & Tikkanen primary geology research gives approximately 7500 calibrated years BP.",
+        "depictedPhase": "North-draining high lake immediately before the southern outlet shift, approximately 5500 BCE.",
+        "note": "Older municipal 2012 report gives 3500 BCE; specialist research supports the order date. Root notified before generation.",
+        "ruling": "approved-by-root on 2026-10-08: preserve circa 5500 BCE based on specialist 7500 cal BP research; both scenes approximate.",
+        "radiocarbonClarification": "Tikkanen & Seppä 2001 abstract gives approximately 6700 radiocarbon years BP, calibrated to approximately 7500 calendar years BP. BP is referenced to 1950, so the illustrative circa 5500 BCE date is approximate.",
+        "conflictResolution": "Older city landscape report gives approximately 3500 BCE and Kotus gives 5500–6000 years ago; retain these as a documented source discrepancy. The specialist geology dating and current city cultural-route text support the order date."
+      },
+      "viitteet": [
+        {
+          "publisher": "Geological Society of Finland",
+          "title": "Ähtärinjärven vanha lasku-uoma — Seppä ja Tikkanen, Geologi58 (2006)",
+          "url": "https://www.geologinenseura.fi/sites/geologinenseura.fi/files/geologi_-_artikkelit/seppa_tikkanen.pdf",
+          "type": "textResearchOnly",
+          "notes": "Author text confirms the ancient Näsijärvi northern outlet through Sapsalampi to Lapuanjoki headwaters ended approximately 7500 years ago with the birth of Tammerkoski. Indexed text read only; no image pixels."
+        },
+        {
+          "publisher": "Geological Society of Finland",
+          "title": "Land uplift-driven shift of the outlet of Lake Ähtärinjärvi, western Finland — Seppä & Tikkanen 2006",
+          "url": "https://www.geologinenseura.fi/sites/geologinenseura.fi/files/seppatikkanen.pdf",
+          "type": "textResearchOnly",
+          "notes": "Primary research text specifies Näsijärvi northern drainage until 7500 calibrated years BP and the ancient connected Toisvesi basin. Indexed text accessed; direct PDF open returned an internal error; no images viewed."
+        },
+        {
+          "publisher": "Tampereen kaupunki",
+          "title": "Tehtaiden Tammerkoski",
+          "url": "https://www.tampere.fi/kulttuuri-ja-museot/tampereen-kulttuuriraitit/tehtaiden-tammerkoski-raitti/tehtaiden-tammerkoski",
+          "type": "textResearchOnly",
+          "notes": "City text confirms approximately 7500-year dating and land-uplift-induced drainage reversal to the south. Used as context only; no images."
+        },
+        {
+          "publisher": "Tampereen kaupunki",
+          "title": "Pohjavesiselvitys rakentamista varten, Pispalan eteläpuolinen alue, 10.6.2016",
+          "url": "https://www.tampere.fi/sites/default/files/2023-05/pohjavesiselvitys_rakentamista_varten_pispalan_etelapuolinen_alue_10.06.2016_8310.pdf",
+          "type": "textResearchOnly",
+          "notes": "Municipal survey text describes Pyynikinharju as a longitudinal esker made of silt, sand and gravel, bounded by Näsijärvi to the north and Pyhäjärvi to the south. Current elevations not passed to generation as exact ancient measurements. No photo or map pixels used."
+        },
+        {
+          "publisher": "Geographical Society of Finland / Fennia",
+          "title": "Post-glacial history of Lake Näsijärvi, Finland, and the origin of the Tammerkoski Rapids — Tikkanen & Seppä 2001",
+          "url": "https://fennia.journal.fi/article/view/9187",
+          "type": "textResearchOnly",
+          "notes": "Original journal page blocked automated text access. Author abstract text indexed on ResearchGate reports approximately 6700 radiocarbon yr BP / approximately 7500 calibrated yr BP. The 7500 calendar-year chronology independently supported by the later author papers on the Geological Society of Finland site. No PDF pages or image pixels used.",
+          "abstractAccessUrl": "https://www.researchgate.net/publication/289660358_Post-glacial_history_of_Lake_Nasijarvi_Finland_and_the_origin_of_the_Tammerkoski_Rapids"
+        }
+      ],
+      "kuvateksti": "Muinais-Näsijärven korkea vesipinta ja pohjoinen laskureitti Lapuanjoen latvoille noin 5500 eaa., juuri ennen eteläisen lasku-uoman syntyä. Pyynikin–Pispalan harju erottaa järven etelämpänä sijaitsevasta varhaisesta Pyhäjärvestä; maisema on likimääräinen. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and separate full-frame 480x320 preview viewed.",
+          "Wide natural blue lake, an upper-left northern connected channel, a sandy forested foreground ridge and a separate southern foreground lake are clear.",
+          "No southern through-channel across the foreground ridge, buildings, roads, bridges, dams, boats, humans, map arrows, labels, logos, watermark or border observed.",
+          "Normal daylight, natural low terrain and muted forest colors; main lake, dividing ridge and northward channel remain legible at 480px."
+        ],
+        "limitations": [
+          "Likimääräinen vapaasti sommiteltu paleomaisema, ei rannansiirtymiseen tai GIS-mittauksiin perustuva tarkka karttarekonstruktio.",
+          "Eri yleislähteissä esiintyy ristiriitainen ajoitus. Käytetty noin 5500 eaa. perustuu erikoistutkimuksen noin 7500 cal BP -ajoitukseen, ei kalibroimattomaan radiohiili-ikään.",
+          "Ancient shoreline outlines, exact ridge dimensions, lake-level difference and forest species proportions are illustrative; no survey or pollen-based vegetation model used."
+        ]
+      },
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b22-fd32-7660-b3ad-8d52f9b558af/exec-95c164d5-d1b0-4b55-a872-4e917cdd720c.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/03-muinainen-nasijarvi/original-generation.png",
+      "sha256": "49b1f80c5b58a5f43fa3e2cd2b95ffbbe21e983fb5a81bb2ffb2e858bdcfcfa5",
+      "originalSha256": "694da5220565bfb2eeb3e7a92b02eb460e905d4e3f2d0c12363c600585c3874d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/03-muinainen-nasijarvi/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "generationLimit": 1,
+      "parentIndependentQA": "pending-root-review",
+      "visualReview": {
+        "task": "tampere-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q222028",
+        "file": "tampere-Q222028-muinainen-nasijarvi.png",
+        "sha256": "49b1f80c5b58a5f43fa3e2cd2b95ffbbe21e983fb5a81bb2ffb2e858bdcfcfa5",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Luonnollisen näköinen paleomaisema: kaksi järvialuetta erottaa yhtenäinen hiekkaharju, pohjoisen vesireitti näkyy kaukana vasemmalla; ei kaupunkia, teitä, tekstiä tai ihmisiä."
+        ],
+        "limitations": [
+          "Rannat, mittasuhteet ja kasvillisuus ovat likimääräisiä. Noin5500eaa ajoitus perustuu erikoistutkimuksen kalibroituun7500calBP ajoitukseen; yleislähteiden eri ajoitus kirjattu."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and separate full-frame 480x320 preview viewed.",
+          "Wide natural blue lake, an upper-left northern connected channel, a sandy forested foreground ridge and a separate southern foreground lake are clear.",
+          "No southern through-channel across the foreground ridge, buildings, roads, bridges, dams, boats, humans, map arrows, labels, logos, watermark or border observed.",
+          "Normal daylight, natural low terrain and muted forest colors; main lake, dividing ridge and northward channel remain legible at 480px."
+        ],
+        "limitations": [
+          "Likimääräinen vapaasti sommiteltu paleomaisema, ei rannansiirtymiseen tai GIS-mittauksiin perustuva tarkka karttarekonstruktio.",
+          "Eri yleislähteissä esiintyy ristiriitainen ajoitus. Käytetty noin 5500 eaa. perustuu erikoistutkimuksen noin 7500 cal BP -ajoitukseen, ei kalibroimattomaan radiohiili-ikään.",
+          "Ancient shoreline outlines, exact ridge dimensions, lake-level difference and forest species proportions are illustrative; no survey or pollen-based vegetation model used."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/tampere-yksityiskohdat/20261008/tampere-Q222028-muinainen-nasijarvi.png",
+      "url": "https://media.matkakirja.app/julisteet/tampere-yksityiskohdat/20261008/tampere-Q222028-muinainen-nasijarvi.png",
+      "bytes": 2519447,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 4,
+      "qid": "Q222028",
+      "id": "nuori-puro-hiekassa",
+      "filename": "tampere-Q222028-nuori-puro-hiekassa.png",
+      "file": "tampere-Q222028-nuori-puro-hiekassa.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/04-nuori-puro-hiekassa/tampere-Q222028-nuori-puro-hiekassa.png",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: educational natural-history illustration for Tampere in Matkakirja.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input photographs and no reference images.\nPrimary request: the early beginning of the southern outlet of ancient Lake Näsijärvi, the future Tammerkoski, approximately 5500 BCE. A newborn clear natural stream is actively carving a small fresh channel into a soft pale sandy ridge. This is a close, freely composed illustration of the erosion process, not a measured reconstruction of the exact historic site.\nScene and subject: clear water runs downhill through a shallow natural incision between raw exposed pale sand banks. In the foreground, submerged rounded pebbles and sand grains are visible through transparent water. In the middle of the frame, the current accelerates over a low irregular gravel and sand step, with several small foamy ripples and realistic current streaks. A freshly undercut sand bank has a small slumped wedge and loose damp grains falling at the water's edge. The sandy sides look recently incised, soft and uneven; no rock canyon, no large waterfall and no catastrophic flood.\nBackground: a softly sloping pale sand ridge with naturally spaced Scots pines and slender birches, roots and dry needles; entirely undeveloped Finnish woodland in summer. Bare sandy patches are natural erosion exposures, not excavator cuts. No geometric landscaping or planted forest grid.\nComposition: low camera just above ground near the foreground stream, looking upstream and gently downward at the current. The stream leads from the background centre through the sandy incision into the foreground. Water, fresh sandy banks and small white foam patches occupy the main frame and remain clear in a small image. Natural scale for a newly forming small watercourse.\nStyle and light: convincing real-camera natural landscape photograph-like reconstruction, soft ordinary summer daylight, pale warm sand, subdued green pines and birches, naturally dark water reflections but clear shallows. Detailed pebbles, damp sand and moving water; realistic surface tension and mild foam. Normal contrast, muted colors. No HDR, no cinematic grading, no oversaturated blue water, no painting and no glossy CGI.\nAvoid: humans, animals, buildings, roads, bridges, dams, concrete, pipes, factories, boats, tools, excavators, tyre tracks, footprints, manufactured objects, any modern clue, signs, text, numbers, labels, arrows, map elements, logos, watermarks, frames or borders.",
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "974a263261be956b54ee87d0d19eacfe644247cb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "chronology": {
+        "basis": "Seppä & Tikkanen primary geology research gives approximately 7500 calibrated years BP",
+        "depictedPhase": "initial southern outlet erosion, approximately 5500 BCE",
+        "conflictingSource": "Tampere 2012 landscape report says approximately 3500 BCE; specialist research supports the order date.",
+        "ruling": "approved-by-root on 2026-10-08: preserve circa 5500 BCE based on specialist 7500 cal BP research; both scenes approximate.",
+        "radiocarbonClarification": "Tikkanen & Seppä 2001 abstract gives approximately 6700 radiocarbon years BP, calibrated to approximately 7500 calendar years BP. BP is referenced to 1950, so the illustrative circa 5500 BCE date is approximate.",
+        "conflictResolution": "Older city landscape report gives approximately 3500 BCE and Kotus gives 5500–6000 years ago; retain these as a documented source discrepancy. The specialist geology dating and current city cultural-route text support the order date."
+      },
+      "viitteet": [
+        {
+          "publisher": "Geological Society of Finland",
+          "title": "Ähtärinjärven vanha lasku-uoma — Seppä ja Tikkanen, Geologi 58 (2006)",
+          "url": "https://www.geologinenseura.fi/sites/geologinenseura.fi/files/geologi_-_artikkelit/seppa_tikkanen.pdf",
+          "type": "textResearchOnly",
+          "notes": "Author text confirms ancient Näsijärvi northern outlet through Sapsalampi to Lapuanjoki headwaters ended approximately 7500 years ago with Tammerkoski birth. Indexed text read only; no image pixels."
+        },
+        {
+          "publisher": "Geological Society of Finland",
+          "title": "Land uplift-driven shift of the outlet of Lake Ähtärinjärvi, western Finland — Seppä & Tikkanen 2006",
+          "url": "https://www.geologinenseura.fi/sites/geologinenseura.fi/files/seppatikkanen.pdf",
+          "type": "textResearchOnly",
+          "notes": "Primary research text specifies Näsijärvi northern drainage until 7500 calibrated years BP. Indexed text accessed; direct PDF open returned an internal error; no images viewed."
+        },
+        {
+          "publisher": "Tampereen kaupunki",
+          "title": "Tehtaiden Tammerkoski",
+          "url": "https://www.tampere.fi/kulttuuri-ja-museot/tampereen-kulttuuriraitit/tehtaiden-tammerkoski-raitti/tehtaiden-tammerkoski",
+          "type": "textResearchOnly",
+          "notes": "Current city text confirms approximately 7500-year dating, lake tilting and a first small stream eroding sandy ground to form the southern outlet. Text only."
+        },
+        {
+          "publisher": "Geographical Society of Finland / Fennia",
+          "title": "Post-glacial history of Lake Näsijärvi, Finland, and the origin of the Tammerkoski Rapids — Tikkanen & Seppä 2001",
+          "url": "https://fennia.journal.fi/article/view/9187",
+          "type": "textResearchOnly",
+          "notes": "Original journal page blocked automated text access. Author abstract text indexed on ResearchGate reports approximately 6700 radiocarbon yr BP / approximately 7500 calibrated yr BP. The 7500 calendar-year chronology independently supported by the later author papers on the Geological Society of Finland site. No PDF pages or image pixels used.",
+          "abstractAccessUrl": "https://www.researchgate.net/publication/289660358_Post-glacial_history_of_Lake_Nasijarvi_Finland_and_the_origin_of_the_Tammerkoski_Rapids"
+        }
+      ],
+      "kuvateksti": "Kirkas vesi kuluttaa uutta uomaa hiekkaiseen maaperään Tammerkosken synnyn alkuvaiheessa noin 5500 eaa. Kuvitteellinen lähinäkymä havainnollistaa hiekkatörmien syöpymistä ja pieniä koskipaikkoja. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and separate full-frame 480x320 preview viewed.",
+          "Clear shallow current over rounded pebbles and low steps, small white foam patches, undercut fresh sand banks, exposed roots, pines and birches are visible.",
+          "Sand and gravel rather than a rock canyon; no large waterfall or catastrophic flood.",
+          "No humans, bridges, dams, concrete, machinery, roads, tracks, buildings, text, logos, watermark or borders observed.",
+          "Water movement and fresh sand erosion remain readable at 480px under natural summer daylight."
+        ],
+        "limitations": [
+          "Vapaasti sommiteltu geologisen kulutusprosessin havainnekuva, ei Tammerkosken syntyhetken tarkan uoman rekonstruktio.",
+          "Eri yleislähteissä esiintyy ristiriitainen ajoitus. Käytetty noin 5500 eaa. perustuu erikoistutkimuksen noin 7500 cal BP -ajoitukseen, ei kalibroimattomaan radiohiili-ikään."
+        ]
+      },
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b22-fd32-7660-b3ad-8d52f9b558af/exec-2839ddda-29cb-47db-b698-9723e4bbd298.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/04-nuori-puro-hiekassa/original-generation.png",
+      "sha256": "9c76ddb645a4a39afe5abf0c00440acdd565eecb84b655db903cd1e3fb487d63",
+      "originalSha256": "ac73b5d411cdc103a0223371460ab3c4676ba906016d969c3df2103dfd1ad17d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/04-nuori-puro-hiekassa/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "generationLimit": 1,
+      "parentIndependentQA": "pending-root-review",
+      "visualReview": {
+        "task": "tampere-yksityiskohdat-20261008",
+        "number": 4,
+        "qid": "Q222028",
+        "file": "tampere-Q222028-nuori-puro-hiekassa.png",
+        "sha256": "9c76ddb645a4a39afe5abf0c00440acdd565eecb84b655db903cd1e3fb487d63",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kirkas matala puro kuluttaa hiekkatörmiä; pienet koskipaikat ja metsä näkyvät luonnollisessa päivänvalossa. Ei nykyesineitä, tekstiä tai hahmoja."
+        ],
+        "limitations": [
+          "Alkuvaiheen uoma on kuvitteellinen geologinen havainnollistus, ei tarkka muinaisuoman kartta; sama tutkimusajoituksen rajoitus kuin03."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 generation and separate full-frame 480x320 preview viewed.",
+          "Clear shallow current over rounded pebbles and low steps, small white foam patches, undercut fresh sand banks, exposed roots, pines and birches are visible.",
+          "Sand and gravel rather than a rock canyon; no large waterfall or catastrophic flood.",
+          "No humans, bridges, dams, concrete, machinery, roads, tracks, buildings, text, logos, watermark or borders observed.",
+          "Water movement and fresh sand erosion remain readable at 480px under natural summer daylight."
+        ],
+        "limitations": [
+          "Vapaasti sommiteltu geologisen kulutusprosessin havainnekuva, ei Tammerkosken syntyhetken tarkan uoman rekonstruktio.",
+          "Eri yleislähteissä esiintyy ristiriitainen ajoitus. Käytetty noin 5500 eaa. perustuu erikoistutkimuksen noin 7500 cal BP -ajoitukseen, ei kalibroimattomaan radiohiili-ikään."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/tampere-yksityiskohdat/20261008/tampere-Q222028-nuori-puro-hiekassa.png",
+      "url": "https://media.matkakirja.app/julisteet/tampere-yksityiskohdat/20261008/tampere-Q222028-nuori-puro-hiekassa.png",
+      "bytes": 3383553,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 5,
+      "qid": "Q1190334",
+      "id": "nasinneula-liukuvalu-1970",
+      "filename": "tampere-Q1190334-nasinneula-liukuvalu-1970.png",
+      "file": "tampere-Q1190334-nasinneula-liukuvalu-1970.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/05-nasinneula-liukuvalu-1970/tampere-Q1190334-nasinneula-liukuvalu-1970.png",
+      "generationCalls": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: historical construction illustration for Tampere in Matkakirja.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No input photographs and no reference images.\nPrimary request: the reinforced-concrete shaft of Näsinneula observation tower under construction with slipforming in summer 1970 at Särkänniemi, Tampere, Finland. Depict an intermediate stage: ONLY a tall gray concrete shaft about 55 metres high, roughly10 metres across at the lower part, tapering gently upward. At its unfinished top sits a modest circular steel-and-timber slipform work platform. Its ring is only slightly wider than the shaft. Show steel formwork panels and guardrails around the top, a closely spaced series of upright exposed reinforcing rods, hydraulic jacking rods and small supports. Below the ring is some suspended work scaffolding. The concrete is recently cast, faintly textured with subtle pour marks.\nConstruction details: a plausible slim period1970 lattice worksite crane associated with the shaft, its lattice jib extending beside the upper platform; narrow construction lift/rack-and-mast scaffolding on one side of the shaft. Small tungsten floodlights on the work platform glow at summer dusk, illuminating only the working rim and the fresh upper concrete. In the lower foreground, plain weathered temporary timber worksite fencing and a modest amount of unmarked construction materials. No people are needed.\nComposition: low ground-level camera from the Särkänniemi lakeshore looking diagonally up toward the shaft and its ringform at the top. Entire ringwork and exposed rebar visible within the frame. Wide view with the slender concrete shaft dominating the left-centre; subdued blue-gray Lake Näsijärvi and a low distant1970 shoreline / low roofline silhouettes visible across the lower right. Keep the lake legible in the dusk. Natural scale and perspective; not a futuristic industrial monument.\nStyle and lighting: convincing documentary color-photograph-like reconstruction with a restrained1970s camera appearance. Natural blue-gray summer twilight balanced with modest warm tungsten work lamps, muted gray concrete and earthy construction tones. Realistic concrete, worn timber, rust-dark steel and fine lattice geometry. Normal exposure; noHDR, no dramatic spotlights, no cinematic grading, no oversaturation, no glossy CGI.\nEssential constraint: NO observation deck, NO restaurant, NO broad saucer or disc at the top, NO umbrella or completed wider crown, NO antenna. The modest ring at the very top is clearly temporary open construction formwork, not a permanent observation structure.\nAvoid: all amusement-park rides, rollercoasters, finished tower silhouette, modern vehicles, cranes with contemporary styling, bright modern safety branding, identifiable people or faces, injuries, blood, signs, numbers, letters, text, logos, watermarks, frames or borders.",
+      "sourceCommit": "4906827b88c9be430a474698af12d798de766434",
+      "sourceBlob": "974a263261be956b54ee87d0d19eacfe644247cb",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "viitteet": [
+        {
+          "publisher": "Särkänniemi Oy",
+          "title": "Näsinneula 50 vuotta",
+          "url": "https://sarkanniemi.fi/fi/nasinneula50",
+          "type": "textResearchOnly",
+          "notes": "Official owner history text confirms a 130 m slipform pour in 33 days, an adjustable tapering mould with 10.5 m initial diameter and 2 cm/m reduction, and opening on 28 April 1971. Text opened; none of the linked archive photos viewed or used."
+        },
+        {
+          "publisher": "Betoniteollisuus / Betoni-lehti",
+          "title": "Vuoden 1970 betonirakenne: Tampereen Näsinneula",
+          "url": "https://betoni.com/lehti/2024/10/01/vuoden-1970-betonirakenne-tampereen-nasinneula/",
+          "type": "textResearchOnly",
+          "notes": "Official industry article citing the 1971 architect account confirms 1970 construction, a hydraulic slipform system, 33 days / approximately 130 m, and a construction crane elevated via ALIMAK lifts. The shaft roof and wide observation ring came after slipforming; topping-out was in October 1970. Only text read, no archive photo pixels."
+        }
+      ],
+      "kuvateksti": "Näsinneulan teräsbetonirunko kohoaa liukuvalumuotin avulla kesällä 1970. Rungon päällä on tilapäinen työskentelyrengas; näköalatasanne ja ravintolakiekko tehdään myöhemmässä vaiheessa. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and separate full-frame 480x320 preview viewed.",
+          "Unfinished tapered gray concrete shaft, open temporary formwork ring, projecting vertical rebar, side construction-lift mast, period lattice crane and modest warm floodlights are clear.",
+          "No completed observation disc, restaurant, antenna, amusement rides, modern vehicles, people, injury, text, logo, watermark or borders observed.",
+          "Natural muted blue-gray dusk and realistic concrete, steel and timber materials; structure and lake context remain legible at 480px."
+        ],
+        "limitations": [
+          "Kuvitteellinen työmaasommitelma ja valuvaihe, ei tietyn päivän tai valokuvan tarkka rekonstruktio.",
+          "Nosturin, nostolaitteen ja muottirenkaan tarkkaa mallia tai työmaan kaukaista siluettia ei ole varmennettu; ne ovat aikakauteen sopivia havainnollistavia yksityiskohtia."
+        ]
+      },
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b22-fd32-7660-b3ad-8d52f9b558af/exec-18b510db-7f05-4133-9b40-cb4050d36cbf.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/05-nasinneula-liukuvalu-1970/original-generation.png",
+      "sha256": "88ada51ebb4100c1b13fdc2c7988217e69906d4002157f642f7f8d7fc233de17",
+      "originalSha256": "3fd9465176854f88e630956bf1ce9995bd2eaf33831698d15f3f233d256565af",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/tampere-yksityiskohdat-20261008/production/05-nasinneula-liukuvalu-1970/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "generationLimit": 1,
+      "parentIndependentQA": "pending-root-review",
+      "visualReview": {
+        "task": "tampere-yksityiskohdat-20261008",
+        "number": 5,
+        "qid": "Q1190334",
+        "file": "tampere-Q1190334-nasinneula-liukuvalu-1970.png",
+        "sha256": "88ada51ebb4100c1b13fdc2c7988217e69906d4002157f642f7f8d7fc233de17",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Koko keskeneräinen betonirunko ja liukuvalurengas, raudoitteet, nosturi ja työvalot; ei valmistunutta ravintolakiekkoa, huvilaitteita, ihmiskehoja tai kirjoitusta."
+        ],
+        "limitations": [
+          "Työmaan sommittelu, nosturimalli ja taustan siluetti ovat havainnollistavia, eivät varmennettu tietyn päivän näkymä."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 and separate full-frame 480x320 preview viewed.",
+          "Unfinished tapered gray concrete shaft, open temporary formwork ring, projecting vertical rebar, side construction-lift mast, period lattice crane and modest warm floodlights are clear.",
+          "No completed observation disc, restaurant, antenna, amusement rides, modern vehicles, people, injury, text, logo, watermark or borders observed.",
+          "Natural muted blue-gray dusk and realistic concrete, steel and timber materials; structure and lake context remain legible at 480px."
+        ],
+        "limitations": [
+          "Kuvitteellinen työmaasommitelma ja valuvaihe, ei tietyn päivän tai valokuvan tarkka rekonstruktio.",
+          "Nosturin, nostolaitteen ja muottirenkaan tarkkaa mallia tai työmaan kaukaista siluettia ei ole varmennettu; ne ovat aikakauteen sopivia havainnollistavia yksityiskohtia."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/tampere-yksityiskohdat/20261008/tampere-Q1190334-nasinneula-liukuvalu-1970.png",
+      "url": "https://media.matkakirja.app/julisteet/tampere-yksityiskohdat/20261008/tampere-Q1190334-nasinneula-liukuvalu-1970.png",
+      "bytes": 2223379,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-5.jpg",
+    "r2Key": "julisteet/tampere-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "url": "https://media.matkakirja.app/julisteet/tampere-yksityiskohdat/20261008/toimitetut-5.jpg",
+    "sha256": "a17638380b2b1d46d124572e728b733ba60df6ce50ce976164a04e4ab53e00d2",
+    "bytes": 310942,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:05:24.960693+00:00"
+}

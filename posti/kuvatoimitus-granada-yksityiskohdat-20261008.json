@@ -1,0 +1,436 @@
+{
+  "task": "granada-yksityiskohdat-20261008",
+  "routedTaskNumber": 29,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-granada-yksityiskohdat-20261008.md",
+    "commit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+    "blob": "3835931109a77dd984cb45e65ee8e88a01858594"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 3,
+  "generationCalls": 3,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q5419362",
+      "id": "paamoskeijan-piha-1490",
+      "file": "granada-Q5419362-paamoskeijan-piha-1490.png",
+      "filename": "granada-Q5419362-paamoskeijan-piha-1490.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/01-paamoskeijan-piha-1490/granada-Q5419362-paamoskeijan-piha-1490.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b07-e00e-7311-a73f-8f9d4094f703/exec-33ba0e9a-158b-4d07-ba01-c2b89298a0b0.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/01-paamoskeijan-piha-1490/original-generation.png",
+      "sha256": "46d946ac52fba52036c3b88c5bc97a11e123d20e54e3cc3319d6543c9fe42c55",
+      "originalSha256": "802d9cc59f4f94ca31a4c7cef94e1905dde56e66f8aa16e32ae64049633dc3be",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration for Granada.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input images or reference photographs.\nScene: an invented, historically plausible spatial interpretation of the medieval MAIN CITY mosque courtyard in Granada about 1490, during the late Nasrid period, before the Christian conquest of 1492. The lost site's exact plan and facade are not to be claimed as known: design an original restrained Andalusi courtyard based only on generic period architecture, not a replica of an existing building, not today's new Granada mosque, not an Alhambra palace courtyard.\nPrimary architecture: a rectangular open paved courtyard enclosed by modest single-storey shaded arcades with plainly formed HORSESHOE ARCHES, rendered in softly weathered pale lime plaster and patches of exposed reddish brick. Across the rear, a modest prayer hall's horseshoe-arched frontage under a simple sloping clay-tile roof. Behind one corner rises a SINGLE plain square masonry minaret, modest and simply proportioned with small plain openings, flat restrained roofline, no ornate monumental tower cap. No domes.\nCourtyard: a low broad stone ablution basin with a shallow surface of still water at the center, a few orange trees bearing discreet orange fruit planted in the courtyard beside the stone paving. The basin is practical and unadorned, not a monumental ornamental fountain. No copied palace decoration or famous courtyard composition.\nComposition/framing: 3:2 wide camera view from just above human eye height on one side of the courtyard, looking slightly downward enough to see the ablution basin, orange trees and pavement while including the entire prayer-hall frontage and the simple minaret above. Entire scene confined within the historic mosque courtyard; no surrounding present-day blocks. Balanced quiet spatial depth; keep foreground paving, central basin and rear horseshoe arches legible at small image size.\nStyle/medium: convincing real-camera photograph appearance of a historical scene, natural soft bright late-morning light, gentle real shadows, slightly warm pale plaster, muted earthen brick, clay roofs and subdued green leaves. Tactile ordinary lime plaster, aged brick mortar, stone paving and clean still water. Restrained authentic material wear. Natural photographic exposure and muted color, no HDR, no cinematic saturation, no painterly or CGI finish.\nAbsolute constraints: NO PEOPLE or human figures anywhere. No identifiable faces or actual person likeness. No modern buildings, no modern Granada mosque, no cathedral, no Christian church, crosses, bells, soldiers, flags, poles, electric lights or modern fixtures. No inscriptions or Arabic calligraphy, even decorative unreadable writing; all wall surfaces are plain architectural material. No copied museum decoration, artwork, religious imagery, readable words or numerals, signs, labels, logos, watermark, caption or image frame.",
+      "viitteet": [
+        {
+          "publisher": "Catedral de Granada",
+          "title": "Siglo XVI",
+          "url": "https://catedraldegranada.com/la-catedral/su-historia/datos-y-fechas/siglo-xvi/",
+          "type": "textResearchOnly",
+          "notes": "Official chronology confirms cathedral relocation to the main mosque in 1502/1507, new cathedral foundation in 1523, and demolition of the mosque minaret Torre Turpiana in 1588. Used as chronology only; no plans, drawings, photographs or image pixels viewed or used.",
+          "access": "2026-10-08; official page text read"
+        },
+        {
+          "publisher": "Catedral de Granada",
+          "title": "Siglo XVIII",
+          "url": "https://catedraldegranada.com/la-catedral/su-historia/datos-y-fechas/siglo-xviii/",
+          "type": "textResearchOnly",
+          "notes": "Official chronology records old mosque demolition in 1704 for the Sagrario, whose project was sanctioned in 1705. Corrects source-brief claim of whole mosque demolition during the sixteenth century. Scene remains an invented circa-1490 spatial interpretation.",
+          "access": "2026-10-08; official page text read"
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen tulkinta Granadan keskiaikaisen päämoskeijan sisäpihasta noin vuonna 1490, ennen kaupungin valloitusta vuonna 1492. Piha, kaarijulkisivu ja minareetti eivät ole mittatarkka rekonstruktio tunnetusta rakennuksesta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 image and separate full-frame 480x320 preview inspected.",
+          "Empty courtyard with lime-plaster and exposed brick arcades, clay roof, orange trees, simple square minaret and stone water basin. Inner prayer-hall openings have horseshoe profiles; outer arcades are less strongly horseshoe-shaped.",
+          "No people, faces, cathedral, Christian crosses, flags, Arabic calligraphy, visible words, numerals, signs, logos, copied decorative artwork, watermarks or image border observed.",
+          "Camera-like stone, lime, brick, roof-tile and foliage textures under natural late-morning light; scene is legible in 480px preview."
+        ],
+        "limitations": [
+          "An extremely thin vertical rod rises from the minaret roof to the upper frame edge. Its material/function are indeterminate; it may read as a modern lightning rod. Candidate is held for root QA and is not approved for delivery by this worker.",
+          "Architecture, exact layout, basin and orange-tree placement are fictional general period interpretation, not a verified or measured reconstruction of the actual lost main mosque.",
+          "The source brief incorrectly states whole mosque demolition in the sixteenth century. Root approved keeping circa-1490 topic with official reference clarification: minaret demolition 1588, old mosque demolition 1704.",
+          "One authorized generation consumed. No retries, variants, resizing, cropping or content edits performed."
+        ]
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "3835931109a77dd984cb45e65ee8e88a01858594",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-awaiting-root-qa",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/01-paamoskeijan-piha-1490/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "architectureClarification": {
+        "status": "approved-by-root",
+        "decision": "Keep original circa-1490 mosque-courtyard topic as fictional historically plausible space; exclude whole-mosque sixteenth-century demolition claim, record official minaret 1588 and old mosque 1704 chronology in references. No claim to a measured or known exact historical plan.",
+        "received": "2026-10-08",
+        "reason": "Official Catedral de Granada chronology distinguishes minaret demolition from later old mosque demolition."
+      },
+      "rootQAComplete": false,
+      "visualReview": {
+        "task": "granada-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q5419362",
+        "file": "granada-Q5419362-paamoskeijan-piha-1490.png",
+        "sha256": "46d946ac52fba52036c3b88c5bc97a11e123d20e54e3cc3319d6543c9fe42c55",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "EmptyMosqueperiodcourtyard, basin/oranges/plasterbrickarcade, innerhorseshoeopenings andsimpleminaret; noChristianmarkers/people/text/visibleelectricalwire."
+        ],
+        "limitations": [
+          "Entirearchitecture inventedcirca1490. Thinunidentifiedroofrod extends beyondtopframe; no evidence of conductor/electricalfixture to classify modernlightningrod. This partialmast/framinglimit explicitly retained."
+        ],
+        "agentVerdictBeforeRootReview": false,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": false,
+        "observations": [
+          "Native 1536x1024 image and separate full-frame 480x320 preview inspected.",
+          "Empty courtyard with lime-plaster and exposed brick arcades, clay roof, orange trees, simple square minaret and stone water basin. Inner prayer-hall openings have horseshoe profiles; outer arcades are less strongly horseshoe-shaped.",
+          "No people, faces, cathedral, Christian crosses, flags, Arabic calligraphy, visible words, numerals, signs, logos, copied decorative artwork, watermarks or image border observed.",
+          "Camera-like stone, lime, brick, roof-tile and foliage textures under natural late-morning light; scene is legible in 480px preview."
+        ],
+        "limitations": [
+          "An extremely thin vertical rod rises from the minaret roof to the upper frame edge. Its material/function are indeterminate; it may read as a modern lightning rod. Candidate is held for root QA and is not approved for delivery by this worker.",
+          "Architecture, exact layout, basin and orange-tree placement are fictional general period interpretation, not a verified or measured reconstruction of the actual lost main mosque.",
+          "The source brief incorrectly states whole mosque demolition in the sixteenth century. Root approved keeping circa-1490 topic with official reference clarification: minaret demolition 1588, old mosque demolition 1704.",
+          "One authorized generation consumed. No retries, variants, resizing, cropping or content edits performed."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/granada-yksityiskohdat/20261008/granada-Q5419362-paamoskeijan-piha-1490.png",
+      "url": "https://media.matkakirja.app/julisteet/granada-yksityiskohdat/20261008/granada-Q5419362-paamoskeijan-piha-1490.png",
+      "bytes": 2851680,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q429192",
+      "id": "keksityt-hoviesineet",
+      "file": "granada-Q429192-keksityt-hoviesineet.png",
+      "filename": "granada-Q429192-keksityt-hoviesineet.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/02-keksityt-hoviesineet/granada-Q429192-keksityt-hoviesineet.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b07-e00e-7311-a73f-8f9d4094f703/exec-35bd846b-6d68-4468-9edf-b0778b53ea7b.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/02-keksityt-hoviesineet/original-generation.png",
+      "sha256": "69b717d25cb0a2ba35d01d38d4a87b2a067f9568cdb76637dc6f7a87150edc34",
+      "originalSha256": "bcebcc990570723c4f0be2ed74cdd6d3472ae351340792cfcb8b3d13b1392bf6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational historical illustration for Granada.\nGenerate ONE wholly new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG with sRGB color. No input images or reference photographs.\nPrimary request: four entirely invented late-fifteenth-century Castilian court props on dark charcoal-brown velvet, in front of a dim plain stone sacristy-like background. These are FICTIONAL NEW PROP DESIGNS, not actual personal belongings of any named queen, not copies or reconstructions of objects in any museum collection. Do not reproduce real royal regalia or famous collection designs.\nSubjects: exactly four separate complete objects: (1) an open low golden crown at the center, with original broad rounded flower ornaments and alternating small muted red and green jewels, simple hand-worked metal with a slight copper-gold warmth; (2) a SHORT gold scepter lying diagonally beside it, with a completely invented small rounded floral finial; (3) a small CLOSED decorated jewelry box with subtle original enamel ornament, to the side; (4) a SMALL round hand mirror with a short metal handle, its blank dim polished surface reflecting only unfocused room light and dark fabric, never a face.\nComposition/framing: camera close and slightly above, at an oblique three-quarter angle. All FOUR objects fully inside the 3:2 canvas, clearly separate and individually readable, including the entire scepter and the full mirror handle. Leave ample visible velvet all around the group with at least an 8% clear margin to every edge. Crown central; scepter diagonal nearby; box and mirror adjacent without hiding each other. Let the objects occupy the lower two thirds, soft unadorned stone backdrop beyond them. No extra jewelry, no fifth object.\nStyle/medium: convincing real-camera still-life photograph appearance, tactile physically plausible hand-worked late-medieval metal, rounded subtly uneven set stones, worn soft velvet nap, restrained material reflections and a little natural surface wear. Soft natural warm window light from one side; quiet muted gold, red, green and gray-brown palette. Ordinary photographic exposure. Photorealistic materials and natural light, not an oil painting or drawing.\nAvoid: identifiable museum replicas, actual regalia, pomegranate chain motifs, royal coats of arms or royal crests, religious relief scenes, crosses, portrait medallions, real person likeness, people, faces, reflections of people, inscriptions, readable words or numerals, labels, signs, display cases, glass vitrines, museum fixtures, modern objects, logos, watermark, caption, image border, HDR, glossy CGI, cinematic saturation, painterly brushwork.",
+      "viitteet": [
+        {
+          "publisher": "Capilla Real de Granada",
+          "title": "La orfebrería",
+          "url": "https://capillarealgranada.com/la-sacristia-museo/la-orfebreria/",
+          "type": "textResearchOnly",
+          "notes": "Official indexed textual collection description confirms the source-order context of royal crown, scepter, coffer and mirror. Specific collection forms, dimensions and decoration were treated as exclusion cues, never as replication instructions. Generated props are deliberately fictional and the caption explicitly states this. No photographs or other source-image pixels viewed or used.",
+          "access": "2026-10-08; official indexed text read"
+        }
+      ],
+      "kuvateksti": "Neljä kokonaan keksittyä uutta rekvisiittaesinettä 1400-luvun lopun Kastilian hovin yleisessä asiayhteydessä: kruunu, valtikka, suljettu korurasia ja käsipeili. Kuvan esineet eivät ole Isabellan todellisia esineitä tai museokokoelman jäljennöksiä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 image and separate full-frame 480x320 preview inspected.",
+          "Exactly four separate fictional court props are visible in full: broad-flower gold crown with muted red and green stones, short gold scepter, closed decorated round jewelry box and small round hand mirror.",
+          "The mirror reflects only dim room tones; no reflected people or faces. All handles and object ends are within the frame.",
+          "Crown flower forms and jeweled band, short round-finial scepter, round box and small handheld mirror differ from specific collection forms described in the textual institutional source. No claim to depict actual Isabellan relics.",
+          "Dark velvet, plain stone background and natural soft warm light; realistic metal and textile materials. No readable words, numerals, royal coats of arms, religious relief scenes, display cases, modern fixtures, logos, watermarks or image border observed.",
+          "Four objects remain individually readable at 480px preview."
+        ],
+        "limitations": [
+          "Completely invented props and generic court/sacristy setting; not Isabella’s actual objects, not museum-collection replicas, not an exact archaeological reconstruction. Caption explicitly states fictional new props.",
+          "Objects fit fully inside the frame, but the margin at the mirror end is about 4 percent rather than the prompt’s requested 8 percent. No object is cropped.",
+          "One authorized generation consumed. No retries, variants or content edits performed."
+        ]
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "3835931109a77dd984cb45e65ee8e88a01858594",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/02-keksityt-hoviesineet/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "rootQAComplete": false,
+      "visualReview": {
+        "task": "granada-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q429192",
+        "file": "granada-Q429192-keksityt-hoviesineet.png",
+        "sha256": "69b717d25cb0a2ba35d01d38d4a87b2a067f9568cdb76637dc6f7a87150edc34",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Four completeoriginalcourtprops: flowercrown,scepter,closedroundbox,handmirror. Naturalmetalvelvettextures, no actualreliccopies/face/reflection/text."
+        ],
+        "limitations": [
+          "Entirelyinventedprops, approximate15Cgeneralcontext; mirrorendmarginabout4percent,butuncropped."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 image and separate full-frame 480x320 preview inspected.",
+          "Exactly four separate fictional court props are visible in full: broad-flower gold crown with muted red and green stones, short gold scepter, closed decorated round jewelry box and small round hand mirror.",
+          "The mirror reflects only dim room tones; no reflected people or faces. All handles and object ends are within the frame.",
+          "Crown flower forms and jeweled band, short round-finial scepter, round box and small handheld mirror differ from specific collection forms described in the textual institutional source. No claim to depict actual Isabellan relics.",
+          "Dark velvet, plain stone background and natural soft warm light; realistic metal and textile materials. No readable words, numerals, royal coats of arms, religious relief scenes, display cases, modern fixtures, logos, watermarks or image border observed.",
+          "Four objects remain individually readable at 480px preview."
+        ],
+        "limitations": [
+          "Completely invented props and generic court/sacristy setting; not Isabella’s actual objects, not museum-collection replicas, not an exact archaeological reconstruction. Caption explicitly states fictional new props.",
+          "Objects fit fully inside the frame, but the margin at the mirror end is about 4 percent rather than the prompt’s requested 8 percent. No object is cropped.",
+          "One authorized generation consumed. No retries, variants or content edits performed."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/granada-yksityiskohdat/20261008/granada-Q429192-keksityt-hoviesineet.png",
+      "url": "https://media.matkakirja.app/julisteet/granada-yksityiskohdat/20261008/granada-Q429192-keksityt-hoviesineet.png",
+      "bytes": 2255416,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q2842387",
+      "id": "sacromonte-sateiden-jalkeen-1963",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "status": "local-candidate-approved",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; text-only",
+      "generationPrompt": "Use case: historical-scene\nAsset type: historical educational illustration for a Granada city introduction.\nCreate ONE entirely NEW TEXT-ONLY image, native exactly 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No reference/input photographs.\nPrimary request: a photorealistic, camera-captured-looking imagined reconstruction of Granada's Sacromonte hillside after the prolonged winter rains of 1963. This is a fictional whole-period scene, not a reproduction of any documentary photograph, actual recorded eviction, identifiable location arrangement or real person's likeness.\nScene/backdrop: modest cave homes dug into a weathered sedimentary rock and clay slope, several small irregular WHITEWASHED cave entrance fronts and simple doors in the middle of the view. Wet mud streaks stain the limewashed walls. Show a localized broken, slumped section of rock and earth above and beside one partially collapsed cave front, settled rubble and soggy ground; the collapse has already happened and nothing is falling. The other cave fronts remain standing. Low simple white chimney stacks emerge from the hillside, sparse scrub bushes grow between them. A muddy clay footpath descends along the slope, with shallow puddles and thin mud runoff trails. Misty gray overcast sky, quiet winter atmosphere.\nForeground: one plain worn fabric mattress, one unbranded metal cooking pot, and one simple wooden kitchen chair form a small group of saved household belongings on a safe flat patch beside the muddy path. These items must be distinct and recognizable, period-plausible for a modest Spanish home in 1963, with no writing, decoration depicting art, or brand marks.\nPeople: a short loose line of THREE tiny anonymous fictional ADULTS far away on the descending path, FULLY REAR-FACING, walking safely down the slope away from the cave homes while carrying a plain bundle or a small household belonging. Each distant adult is only about 4-5 percent of the full image height. Ordinary plain early-1960s coats or jackets and trousers; no ethnically stereotyped features, exotic costume, theatrical pose, uniforms or insignia. No faces or readable facial details. They are far from the settled rubble and not in any active danger.\nComposition/framing: wide horizontal view from slightly lower ground toward the hillside, from the general lower Albayzin direction; cave fronts occupy the middle distance, damaged rocky clay slope visible above them, small saved household objects in the foreground and tiny rear-facing walkers in the distance. The whole scene fills the frame naturally with believable perspective and human scale. Do not crop around one person or impose a collage. Do not copy a particular photograph's composition.\nStyle/medium: convincing restrained documentary-photo appearance as if captured with a normal 35mm camera in the early 1960s, muted monochrome with only a faint faded sepia warmth, true natural textures of damp chalky plaster, clay mud, weathered wood, worn cloth and metal. Moderate natural photographic grain, realistic exposure and soft mist. No simulated printed-photo border, scratches or photographic captions.\nLighting/mood: soft flat gray daylight through mist, natural shadows, quiet aftermath. No dramatic spotlight, dramatic backlighting, HDR, glossy CGI, explosion, action-disaster spectacle or cinematic saturation.\nAvoid: bodies, casualties, blood, injuries, violence, police, uniforms, military figures, actual-person likeness, identifiable faces, close-up people, children, stereotyped ethnic faces or clothing, modern cars or any vehicles, modern buildings, modern street furniture, electrical wires or technology, signs, lettering, readable words, readable numerals, brands, logos, symbols, watermarks, captions, borders, frames, borrowed artwork, exact documentary photograph composition. No readable text anywhere in the image.",
+      "file": "granada-Q2842387-sacromonte-sateiden-jalkeen-1963.png",
+      "filename": "granada-Q2842387-sacromonte-sateiden-jalkeen-1963.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/03-sacromonte-sateiden-jalkeen-1963/granada-Q2842387-sacromonte-sateiden-jalkeen-1963.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b08-7b14-7cf2-9a07-6889e51230b5/exec-c8a5a3e2-5521-4784-a6a5-4c16569a7a34.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/03-sacromonte-sateiden-jalkeen-1963/original-generation.png",
+      "sha256": "4911697567fa3e23a93f340cabf839a71b55e163629be6bd9192e48961f6c34d",
+      "originalSha256": "1324c5d3b3270743d85436df9bb27b5666cf016c633847e629436798a9e76ce4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/granada-yksityiskohdat-20261008/production/03-sacromonte-sateiden-jalkeen-1963/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "idatBytesUnchanged": true,
+      "viitteet": [
+        {
+          "publisher": "Universidad Nacional de Colombia / Bitácora Urbano Territorial",
+          "author": "Paula Pérez Sanz",
+          "title": "“Me sentía en el fin del mundo”. Mujeres y subjetividades de la injusticia espacial",
+          "url": "https://revistas.unal.edu.co/index.php/bitacora/article/download/105721/99102?inline=1",
+          "doi": "10.15446/bitacora.v33n2.105721",
+          "type": "textResearchOnly",
+          "notes": "Original ethnographic research and interviews; text lines 88–95 place rains in January–February 1963 and describe evacuations of Albayzín/Sacromonte caves for collapse danger, followed by temporary relocation. Used for year/season and event context only. Exact path, homes, people and household objects are invented.",
+          "access": "2026-10-08; HTML text read only; no source images or pixels opened."
+        },
+        {
+          "publisher": "Ayuntamiento de Granada",
+          "title": "Plan Especial de Protección y Catálogo del Área Centro de Granada — Memoria",
+          "url": "https://web.granada.org/urbanismo.nsf/c3abb01dbb6ecb39c125812100281f63/3dba4fc4a3c66eb2c125811400392846/%24FILE/Memoria.pdf",
+          "type": "textResearchOnly",
+          "notes": "Official planning text corroborates Sacromonte cave residence and residents moved to barracks after floods. Used as contextual institutional corroboration, not to assign an exact day.",
+          "access": "2026-10-08; indexed text excerpt read, PDF text-only open; no PDF page screenshots or source pixels used."
+        }
+      ],
+      "kuvateksti": "Kuvitteellinen rekonstruktio Sacromonten luolakotien vaurioista vuoden 1963 talvisateiden jälkeen. Taustalla ovat tammi–helmikuun sateet ja evakuoinnit; rinteen, tavaroiden ja kulkijoiden sommittelu sekä kuvatun hetken tarkka ajoitus ovat kuviteltuja. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "Original compressed IDAT bytes retained; RGB pixels verified unchanged.",
+        "Tool original copied byte-exactly to original-generation.png.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Final native 1536x1024 RGB PNG and full-frame 480x320 preview personally viewed.",
+          "Several muddy whitewashed cave fronts, settled rock/clay collapse, low white chimneys, bushes, shallow puddles and muddy downhill path are legible at both sizes.",
+          "Foreground mattress, plain wooden chair and metal cooking pot are distinct; no readable marks or brands observed.",
+          "Three fictional adults walk downhill with household belongings, fully rear-facing, safely away from settled rubble; no recognizable faces or real-person likeness visible.",
+          "Muted monochrome/sepia, natural gray mist and soft daylight; no dramatic HDR or action-disaster treatment.",
+          "No police, uniforms, injury, bodies, blood, vehicles, readable text/numerals, signs, watermark or border observed.",
+          "Description and Source both exactly match the mandated Finnish marking; standard sRGB ICC and unchanged RGB pixels verified."
+        ],
+        "limitations": [
+          "Imagined arrangement of cave homes, damaged slope, path, saved household items and anonymous walkers; not a reconstruction of a specific documentary photograph or recorded eviction.",
+          "Historical text confirms winter January–February 1963 context; no exact day or complete eviction chronology is claimed.",
+          "Adults are about 11–13 percent of frame height, larger than the requested 4–5 percent; they remain in the distance and fully rear-facing with no visible faces.",
+          "Generated distant city/Alhambra skyline and low hillside viewing angle are illustrative; exact Albayzín-to-Sacromonte camera position and building arrangement are not independently reconstructed."
+        ],
+        "limits": [
+          "Imagined arrangement of cave homes, damaged slope, path, saved household items and anonymous walkers; not a reconstruction of a specific documentary photograph or recorded eviction.",
+          "Historical text confirms winter January–February 1963 context; no exact day or complete eviction chronology is claimed.",
+          "Adults are about 11–13 percent of frame height, larger than the requested 4–5 percent; they remain in the distance and fully rear-facing with no visible faces.",
+          "Generated distant city/Alhambra skyline and low hillside viewing angle are illustrative; exact Albayzín-to-Sacromonte camera position and building arrangement are not independently reconstructed."
+        ],
+        "parentIndependentReviewPending": true
+      },
+      "sourceCommit": "bafeb55c10cc7db6ca1bd59c64240fe0ee368071",
+      "sourceBlob": "3835931109a77dd984cb45e65ee8e88a01858594",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "granada-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q2842387",
+        "file": "granada-Q2842387-sacromonte-sateiden-jalkeen-1963.png",
+        "sha256": "4911697567fa3e23a93f340cabf839a71b55e163629be6bd9192e48961f6c34d",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Mud/cavefronts/settledcollapse/oldchimneys with salvagedmattress/chair/pot; threesmallbackadults, noinjury/text/police. Photographicmutedmonochrome."
+        ],
+        "limitations": [
+          "Fictionalslope,skyline,weather andhouseholdlayout; winter1963raincontextonly,noexactevictionday/process. Adults11-13percent remain distantrear withoutsourcehardlimit."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:01:54.352358+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Final native 1536x1024 RGB PNG and full-frame 480x320 preview personally viewed.",
+          "Several muddy whitewashed cave fronts, settled rock/clay collapse, low white chimneys, bushes, shallow puddles and muddy downhill path are legible at both sizes.",
+          "Foreground mattress, plain wooden chair and metal cooking pot are distinct; no readable marks or brands observed.",
+          "Three fictional adults walk downhill with household belongings, fully rear-facing, safely away from settled rubble; no recognizable faces or real-person likeness visible.",
+          "Muted monochrome/sepia, natural gray mist and soft daylight; no dramatic HDR or action-disaster treatment.",
+          "No police, uniforms, injury, bodies, blood, vehicles, readable text/numerals, signs, watermark or border observed.",
+          "Description and Source both exactly match the mandated Finnish marking; standard sRGB ICC and unchanged RGB pixels verified."
+        ],
+        "limitations": [
+          "Imagined arrangement of cave homes, damaged slope, path, saved household items and anonymous walkers; not a reconstruction of a specific documentary photograph or recorded eviction.",
+          "Historical text confirms winter January–February 1963 context; no exact day or complete eviction chronology is claimed.",
+          "Adults are about 11–13 percent of frame height, larger than the requested 4–5 percent; they remain in the distance and fully rear-facing with no visible faces.",
+          "Generated distant city/Alhambra skyline and low hillside viewing angle are illustrative; exact Albayzín-to-Sacromonte camera position and building arrangement are not independently reconstructed."
+        ],
+        "limits": [
+          "Imagined arrangement of cave homes, damaged slope, path, saved household items and anonymous walkers; not a reconstruction of a specific documentary photograph or recorded eviction.",
+          "Historical text confirms winter January–February 1963 context; no exact day or complete eviction chronology is claimed.",
+          "Adults are about 11–13 percent of frame height, larger than the requested 4–5 percent; they remain in the distance and fully rear-facing with no visible faces.",
+          "Generated distant city/Alhambra skyline and low hillside viewing angle are illustrative; exact Albayzín-to-Sacromonte camera position and building arrangement are not independently reconstructed."
+        ],
+        "parentIndependentReviewPending": true
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/granada-yksityiskohdat/20261008/granada-Q2842387-sacromonte-sateiden-jalkeen-1963.png",
+      "url": "https://media.matkakirja.app/julisteet/granada-yksityiskohdat/20261008/granada-Q2842387-sacromonte-sateiden-jalkeen-1963.png",
+      "bytes": 3435473,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/granada-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/granada-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "3737e159ad69fcb3fc996ff2b874787fb6b892b5608fc87b0884f627532bfb4b",
+    "bytes": 191285,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:02:03.098618+00:00"
+}

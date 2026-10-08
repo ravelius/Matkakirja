@@ -1,0 +1,489 @@
+{
+  "task": "valletta-yksityiskohdat-20261008",
+  "routedTaskNumber": 33,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-valletta-yksityiskohdat-20261008.md",
+    "commit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+    "blob": "249c13798ca9b0dc91012b2239a5272b75a28498"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 3,
+  "generationCalls": 3,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q1368885",
+      "id": "keksitty-gobeliini",
+      "file": "valletta-Q1368885-keksitty-gobeliini.png",
+      "filename": "valletta-Q1368885-keksitty-gobeliini.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/01-keksitty-gobeliini/valletta-Q1368885-keksitty-gobeliini.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b3a-9021-7a03-93db-538edf8fd66d/exec-5e22c172-2d57-4e4f-a3f6-d610adfb861a.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/01-keksitty-gobeliini/original-generation.png",
+      "sha256": "e3b9a23905ff52ea51e783398ad202a0aeb214a8bb8251c3638e6dc1a524f749",
+      "originalSha256": "e356703479624425c90831afc620e347421a06c76c77c476882e00e87f29cd85",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational illustrative image for a Valletta city guide.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference image pixels.\n\nPrimary request: a convincing camera photograph of a WHOLLY INVENTED, ORIGINAL large woven wall hanging inspired only by the broad late-seventeenth/early-eighteenth-century European genre of exotic animal-and-plant tapestries. Design an entirely new arrangement and ornamentation. This is a fictional newly invented textile, NOT an actual museum object, NOT a copy of any specific historic tapestry, panel, named artwork, artist composition or museum room. Do not imitate an identifiable existing artwork.\n\nScene/backdrop: a generic pale honey-colored limestone hall, with only a narrow unobtrusive glimpse of a gilded Baroque cornice or ceiling edge at the top. The hall is invented. No real palace interior is reconstructed.\n\nSubject and original woven imagery: a large physically real thick wool-and-silk textile depicting a calm invented tropical landscape. An unmistakable rhinoceros, a spotted jaguar and one smaller striped zebra-like animal appear among broad banana leaves, pineapple plants, and several parrots perched at different heights in branches. Make an original asymmetrical arrangement with a winding shallow stream and two differently sized low rock terraces, generous breathing room around the animal silhouettes, and uneven clusters of tropical vegetation. Flora and fauna only: no human figures, no faces, no heraldry. All animals and plants are pigment-colored woven threads ON THE TEXTILE, not real animals in the hall.\nThe textile has a WIDE INTRICATE WOVEN BORDER on ALL FOUR SIDES, integrated as fabric, using wholly original interlaced leafy scrolls and small botanical motifs, without emblems or letters. Entire object and whole border must be visibly intact.\n\nStyle/medium: genuine photograph-like fabric object, NOT a flat digital illustration and NOT an oil painting. The textile visibly hangs under its own weight; subtle vertical undulations, soft uneven selvage, raised wool threads, fine interlaced warp-and-weft, thread grain across animals and plants, gentle worn fiber fuzz and restrained age-softened dye variation. Visible fabric texture remains convincing over the entire tapestry. Floor and stone surfaces are real photographic materials. The textile patterns stay slightly softer than sharp real room geometry.\n\nComposition/framing: medium-distance view almost straight on but slightly oblique, camera at human eye level. FULL rectangular textile including all four woven border edges fits completely in the frame with comfortable limestone margin around it. Textile fills about 70 percent of the image area; it is the dominant large subject. Include just small margins of generic wall and a thin gilded ceiling edge, a little floor below. Landscape 3:2 image. No border or frame around the IMAGE.\n\nLighting/mood: gentle natural daylight from an unseen high window, realistic diffuse illumination, restrained exposure and soft shadows. Muted deep indigo blue, moss green and brick red woven dyes, pale warm limestone. No HDR, no cinematic lighting, no oversaturation, no glossy CGI.\nAvoid: humans, human faces, guards, tourists, labels, plaques, words, numerals, monograms, coats of arms, logos, signage, watermark, museum display cases, protective ropes or barriers, modern visible lights, cameras, copied or identifiable museum artworks and copied palace-room architecture. No lettering anywhere, including the textile border. No digital-image border; the textile's woven object border is required.",
+      "viitteet": [
+        {
+          "publisher": "Heritage Malta",
+          "title": "The Palace Tapestries: How the tapestries came to be",
+          "url": "https://heritagemalta.mt/mt/news/the-palace-tapestries-how-the-tapestries-came-to-be/?news-type=66",
+          "type": "textResearchOnly",
+          "notes": "Official institutional text verifies the Gobelins commission in 1708, completion in 1710 and the broad exotic fauna/flora tapestry genre. Read only the textual page; no source photographs, artwork pixels, specific panel composition or artist imagery were viewed or supplied to generation. The output is a wholly invented new textile, not one of the collection objects.",
+          "access": "2026-10-08; text-only web open; source page dated 25 September 2026."
+        }
+      ],
+      "kuvateksti": "Kokonaan uusi, kuvitteellinen seinävaate 1600-luvun lopun ja 1700-luvun alun eksoottisen eläin- ja kasviaiheisen gobeliiniperinteen hengessä. Sarvikuono, jaguaari, seeprankaltainen eläin ja papukaijat muodostavat uuden sommitelman kuvitteellisessa salissa; kuva ei esitä Vallettan vuoden 1710 kokoelmaesinettä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/01-keksitty-gobeliini/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalByteExactPreserved": true,
+      "sourceCommit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+      "sourceBlob": "249c13798ca9b0dc91012b2239a5272b75a28498",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only; one call; no retry or variants",
+      "scopeClarification": {
+        "status": "approved-by-root",
+        "decision": "1708–1710 is historical genre context only. Create a wholly invented original animal-and-plant wall hanging and generic limestone hall; do not recreate any actual Grand Masters Palace/Tenture des Indes panel, museum object or room. Caption explicitly identifies a new fictional textile.",
+        "received": "2026-10-08"
+      },
+      "fictionalOriginalArtwork": true,
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native original 1536x1024 RGB generation viewed at original resolution.",
+          "Entire textile visible including wide woven border on all four sides, with generic limestone margins, narrow gilded ceiling edge and a little floor.",
+          "Rhinoceros, spotted jaguar, zebra-like striped animal, three parrots, pineapple motifs and broad banana leaves are distinct woven imagery.",
+          "Realistic hanging textile with fiber texture and subtle ripples; restrained natural window illumination and muted blues, greens, reds.",
+          "No human figures, faces, words, numerals, monograms, heraldry, labels, logos, watermarks, museum guards, cases, barriers, visible modern lights or digital image border observed.",
+          "Decoded RGB pixel bytes unchanged after adding sRGB ICC and required Description/Source metadata; tool original preserved byte exactly.",
+          "Full-frame 480x320 preview viewed: full four-sided textile border and animal/plant subject remain visible; rhinoceros, jaguar, zebra-like animal and parrots readable at thumbnail scale."
+        ],
+        "limitations": [
+          "Wholly invented textile and generic invented hall; not an authenticated representation of the Grand Masters Palace collection or an actual 1710 panel.",
+          "Animal-and-plant layout and border ornament are new invented interpretation of the historical genre; no source artwork comparison performed and no source photograph pixels used."
+        ]
+      },
+      "limits": [
+        "Generation cap is one built-in call for this item; used exactly one, no retries, no variants, no CLI/API.",
+        "Parent independent QA still required."
+      ],
+      "parentIndependentQA": {
+        "nativeViewed": false,
+        "preview480Viewed": false,
+        "approvedForDelivery": false
+      },
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "valletta-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q1368885",
+        "file": "valletta-Q1368885-keksitty-gobeliini.png",
+        "sha256": "e3b9a23905ff52ea51e783398ad202a0aeb214a8bb8251c3638e6dc1a524f749",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Uusi kudottu seinävaate näkyy kokonaan reunuksineen: sarvikuono, jaguaari, raidallinen eläin ja papukaijat; kangaspinta ja valaistus kameramaisia, ei tekstiä tai ihmisiä."
+        ],
+        "limitations": [
+          "Kokonaan keksitty gobeliini ja sali, lähteen sallima historiallinen lajityyli; ei Vallettan1710kokoelmateoksen jäljennös."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native original 1536x1024 RGB generation viewed at original resolution.",
+          "Entire textile visible including wide woven border on all four sides, with generic limestone margins, narrow gilded ceiling edge and a little floor.",
+          "Rhinoceros, spotted jaguar, zebra-like striped animal, three parrots, pineapple motifs and broad banana leaves are distinct woven imagery.",
+          "Realistic hanging textile with fiber texture and subtle ripples; restrained natural window illumination and muted blues, greens, reds.",
+          "No human figures, faces, words, numerals, monograms, heraldry, labels, logos, watermarks, museum guards, cases, barriers, visible modern lights or digital image border observed.",
+          "Decoded RGB pixel bytes unchanged after adding sRGB ICC and required Description/Source metadata; tool original preserved byte exactly.",
+          "Full-frame 480x320 preview viewed: full four-sided textile border and animal/plant subject remain visible; rhinoceros, jaguar, zebra-like animal and parrots readable at thumbnail scale."
+        ],
+        "limitations": [
+          "Wholly invented textile and generic invented hall; not an authenticated representation of the Grand Masters Palace collection or an actual 1710 panel.",
+          "Animal-and-plant layout and border ornament are new invented interpretation of the historical genre; no source artwork comparison performed and no source photograph pixels used."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/valletta-yksityiskohdat/20261008/valletta-Q1368885-keksitty-gobeliini.png",
+      "url": "https://media.matkakirja.app/julisteet/valletta-yksityiskohdat/20261008/valletta-Q1368885-keksitty-gobeliini.png",
+      "bytes": 3239363,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q7898477",
+      "id": "katettu-kaarikaytava",
+      "file": "valletta-Q7898477-katettu-kaarikaytava.png",
+      "filename": "valletta-Q7898477-katettu-kaarikaytava.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/02-katettu-kaarikaytava/valletta-Q7898477-katettu-kaarikaytava.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b3b-38ef-7ae1-90e4-1f48b8fcf066/exec-6febfcd4-bbcd-448e-9479-a6da0f3e9ebe.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/02-katettu-kaarikaytava/original-generation.png",
+      "sha256": "57b21c610b05005e09f40511ddd0512892ef07c80975152af068d031570637c1",
+      "originalSha256": "2dec9004cab8382d85544723336710195c240e9aa11faf683ecc21354914d08d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/02-katettu-kaarikaytava/qa-preview-480.png",
+      "rgbPixelsUnchanged": true,
+      "originalByteExactPreserved": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic historical educational illustration for a Valletta city introduction.\nCreate ONE entirely new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No input/reference photographs or source image pixels.\nScene: the originally roofed arcaded loggia at Upper Barrakka, Valletta, overlooking Malta's Grand Harbour, in the eighteenth century before its roof was dismantled in 1775. This is an explicitly approximate architectural interpretation of a lost covered space, not a photograph of its present state or a claim to an exact documented roof reconstruction.\nPrimary subject: a completely empty, shaded limestone arcade with the ENTIRE roof still in place above the passage. Repeated sturdy honey-colored Maltese limestone piers and rounded arches support a continuous understated plain flat ceiling. The ceiling must be visibly closed and unbroken from the foreground to the far end: absolutely no open sky above the passage, no missing roof, no uncovered pergola. Keep the approximate ceiling simple; no ornate coffering, no Gothic ribs, no invented monumental barrel vault, no modern roof panels or metalwork.\nComposition/framing: eye-level camera looking lengthwise along the covered arcade, a strong but natural receding perspective, full 3:2 landscape frame. Show the overhead ceiling clearly in the upper third and weathered plain stone paving clearly below. The passage leads to daylight at its distant end. Through the open arches along the harbour-facing side, and ONLY through these arches, show a modest band of blue Grand Harbour water, a narrow hazy skyline and low period limestone bastions of the opposite shore. No modern city, port equipment or vessels. The harbour remains a secondary glimpse through the architectural openings; the covered stone arcade is the dominant subject.\nStyle/medium: convincing camera-captured photograph-like historical illustration, solid and spatially plausible limestone architecture, gently aged limestone with subtle pores, joints and small irregularities, matte stone slabs underfoot. Natural warm Mediterranean daylight entering from the side arches creates soft-edged curved patches of light and shadow across the stone floor, with softly lit shaded arches and ceiling; understated muted honey-beige stone and moderate natural blue water. Retain readable detail in the shade without HDR. No theatrical light beams, no cinematic grading, no artificial glow, no oversaturation, no glossy CGI.\nConstraints: zero people or animals. No tourists, benches, furniture, statues, plaques, inscriptions, signs, modern buildings, lift, electric lights, pipes, cables, railings, machinery, cranes, ships, boats, cars or contemporary objects. No text, letters, digits, emblems, logos, watermark, caption, image frame or border. No violence. The scene is only the empty fully roofed historical limestone arcade and distant harbour glimpses through its arches.",
+      "viitteet": [
+        {
+          "publisher": "Fondazzjoni Wirt Artna / Saluting Battery",
+          "title": "History",
+          "url": "https://www.salutingbattery.com/history-and-stories",
+          "type": "textResearchOnly",
+          "notes": "The operator confirms a roofed arcaded loggia above the bastion in the early seventeenth century and removal on Grandmaster Ximenez's orders in 1775. The plotting motive is qualified as tradition. Exact roof design is not specified.",
+          "access": "2026-10-08; text-only web page read; no photographs or pixels viewed"
+        },
+        {
+          "publisher": "Flimkien ghal Ambjent Ahjar / Culture Malta",
+          "title": "Upper Barrakka Gardens - Valletta",
+          "url": "https://culture-malta.org/upper-barrakka-valletta/",
+          "type": "textResearchOnly",
+          "notes": "Heritage NGO text confirms originally roofed arcades and gives 1661 and a 1775 revolt explanation. Operator wording is less precise, so exact construction year and causal explanation are omitted from the caption.",
+          "access": "2026-10-08; text-only web page read; no image links opened"
+        }
+      ],
+      "kuvateksti": "Yläbarrakan alkuperäistä katettua kalkkikivikäytävää havainnollistava tulkinta. Katon rakenne ja näkymän yksityiskohdat ovat likimääräisiä. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "architectureClarification": {
+        "status": "approved-by-root",
+        "decision": "Use a plain understated approximate period flat ceiling. Roofed loggia before 1775 is source-supported; exact roof shape is interpreted, not a claim of verified reconstruction. Omit 1661 and revolt-cause assertions.",
+        "received": "2026-10-08"
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native full-frame 1536x1024 image and separate full-frame 480x320 preview viewed.",
+          "Continuous plain flat ceiling visibly covers the full arcade length; no sky or openings above the passage.",
+          "Eye-level longitudinal perspective, repeated honey-colored limestone piers and rounded arches, matte stone paving and curved side-light patches.",
+          "Harbour water, skyline and period-looking limestone fortifications appear only through the arches; no vessels, port cranes or conspicuous modern buildings observed.",
+          "Entire passage empty: no people, animals, benches, furniture, statues, signs, plaques, letters, digits, emblems, logos, watermark, modern lift or electric installations observed.",
+          "Natural Mediterranean daylight, softly detailed shaded ceiling and muted stone texture; no HDR or cinematic color treatment.",
+          "At 480px the closed roof, limestone arches, receding passage and harbour glimpses remain clear.",
+          "Decoded RGB pixels unchanged after metadata addition; original generation preserved byte exactly."
+        ],
+        "limitations": [
+          "Exact original roof construction is not documented in the accessed operator/heritage text. The plain flat period ceiling is an approximate interpretation approved by the root, not an authenticated reconstruction.",
+          "Arcade proportions, stone paving and distant fortified skyline are approximate text-derived scenery; no source-photo pixels or exact-view comparison used.",
+          "Construction year 1661 and a definite Priests Revolt cause are intentionally not asserted in the caption; operator source confirms removal in 1775 but qualifies the plotting explanation."
+        ]
+      },
+      "limits": [
+        "Exactly one permitted built-in new text-only image_gen call used; no retry, variants, CLI or API.",
+        "Parent independent native and preview QA remains required."
+      ],
+      "parentIndependentQA": {
+        "nativeViewed": false,
+        "preview480Viewed": false,
+        "approvedForDelivery": false
+      },
+      "sourceCommit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+      "sourceBlob": "249c13798ca9b0dc91012b2239a5272b75a28498",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only; one call; no retry or variants",
+      "status": "local-candidate-approved",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "valletta-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q7898477",
+        "file": "valletta-Q7898477-katettu-kaarikaytava.png",
+        "sha256": "57b21c610b05005e09f40511ddd0512892ef07c80975152af068d031570637c1",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Tyhjä katettu kalkkikivikäytävä, tasainen periodikatto, kaaririvi ja sataman linnoitukset luonnollisessa päivänvalossa; ei nykyhissiä, autoja, kylttejä tai ihmisiä."
+        ],
+        "limitations": [
+          "Alkuperäisen katon tarkka rakenne ja näkymän geometria tuntemattomia.1775poisto varmennettu,1661 ja varma kapinasyy eivät kuvatekstissä väitteinä."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native full-frame 1536x1024 image and separate full-frame 480x320 preview viewed.",
+          "Continuous plain flat ceiling visibly covers the full arcade length; no sky or openings above the passage.",
+          "Eye-level longitudinal perspective, repeated honey-colored limestone piers and rounded arches, matte stone paving and curved side-light patches.",
+          "Harbour water, skyline and period-looking limestone fortifications appear only through the arches; no vessels, port cranes or conspicuous modern buildings observed.",
+          "Entire passage empty: no people, animals, benches, furniture, statues, signs, plaques, letters, digits, emblems, logos, watermark, modern lift or electric installations observed.",
+          "Natural Mediterranean daylight, softly detailed shaded ceiling and muted stone texture; no HDR or cinematic color treatment.",
+          "At 480px the closed roof, limestone arches, receding passage and harbour glimpses remain clear.",
+          "Decoded RGB pixels unchanged after metadata addition; original generation preserved byte exactly."
+        ],
+        "limitations": [
+          "Exact original roof construction is not documented in the accessed operator/heritage text. The plain flat period ceiling is an approximate interpretation approved by the root, not an authenticated reconstruction.",
+          "Arcade proportions, stone paving and distant fortified skyline are approximate text-derived scenery; no source-photo pixels or exact-view comparison used.",
+          "Construction year 1661 and a definite Priests Revolt cause are intentionally not asserted in the caption; operator source confirms removal in 1775 but qualifies the plotting explanation."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/valletta-yksityiskohdat/20261008/valletta-Q7898477-katettu-kaarikaytava.png",
+      "url": "https://media.matkakirja.app/julisteet/valletta-yksityiskohdat/20261008/valletta-Q7898477-katettu-kaarikaytava.png",
+      "bytes": 2627552,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q2499012",
+      "id": "julkisivun-trofeet-ja-rintakuva",
+      "file": "valletta-Q2499012-julkisivun-trofeet-ja-rintakuva.png",
+      "filename": "valletta-Q2499012-julkisivun-trofeet-ja-rintakuva.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/03-julkisivun-trofeet-ja-rintakuva/valletta-Q2499012-julkisivun-trofeet-ja-rintakuva.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b44-b15b-7fd1-92b8-d2324dca3b36/exec-a81da747-f57b-4d18-b30f-fe0c70ef7b32.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/03-julkisivun-trofeet-ja-rintakuva/original-generation.png",
+      "sha256": "4259c9a91ef5191831e43249f9ae3302bf94cce0ecb7a177f7ac5d004beb11f4",
+      "originalSha256": "405511d80fbc47bff64d46022a2729803ea9b1841e314ec5a5844df18e39a774",
+      "preservedOriginalSha256": "405511d80fbc47bff64d46022a2729803ea9b1841e314ec5a5844df18e39a774",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: historical architecture educational illustration for the Valletta city introduction.\nCreate ONE wholly NEW TEXT-ONLY image, exactly 1536 x 1024 landscape 3:2, opaque RGB PNG, sRGB. No input images or photographic references.\nScene and subject: an original approximate architectural interpretation of the CENTRAL EXTERIOR FACADE of Auberge de Castille, Valletta, Malta, the richly ornamented 1740s Baroque limestone building. Present-day clean restored stone appearance with all modern street and roof fittings excluded. This is exterior architectural sculpture, not a museum display or artwork reproduction.\nCamera and framing: a plausible real camera at the foot of the entrance stairs, looking slightly upward toward the two-storey central facade, near axial with mild vertical perspective. The entire central DOOR PORTAL, the stone military trophy decoration surrounding and above that portal, the small bust directly ABOVE THE DOOR and BELOW the central upper-storey window, and the upper sculpted pediment/crest all fit INSIDE THE SAME landscape frame with margin. The building takes most of the frame; small blue sky area above. Show a short portion of the honey limestone entrance stair podium at the bottom. Do not cut off the portal, sculpture, crest or upper pediment.\nArchitecture: warm honey-colored Maltese limestone blockwork, restrained weathering and real grain, a slightly projecting central bay, freestanding carved columns flanking the doorway, layered Baroque moldings, pilasters, continuous cornice, recessed windows. A central upper-storey window aligns vertically over the doorway. Quiet dark green wooden shutters are visible on adjacent windows toward the lower edges.\nMain details: a clearly STONE-CARVED, sculptural military TROPHY GROUP at the portal, made of inert swords, spear shafts, cannon forms, round drum forms, rolled and folded carved flags and pennants. All of these are limestone architectural carving attached to the facade, not actual usable weapons, fabric flags or flags on modern poles. The folded flags have no insignia. This original arrangement should evoke period architectural ornament without reproducing exact sculptural compositions. Stone carving has worn edges, deep recesses and believable shadows.\nBust location and material: immediately above the door on the central portal cornice, BELOW the upper central window, place ONE VERY SMALL dark patinated BRONZE sculptural bust with generic early-18th-century dress. The bust is clearly an architectural metal sculpture with a dull dark green-brown patina, hard sculpted forms, no skin tones and no living human. The face has only small distant weathered generic forms and must be impossible to identify as any actual person. Do not reproduce the face of any named historic or living person or any museum portrait/bust. Keep the bust at roughly 4 percent of image height, subordinate to the architectural carvings. There is NO bust on the rooftop, facade summit, upper pediment or above the upper window.\nUpper ornaments: above the central window and in the crowning curved Baroque pediment, use original GENERIC carved heraldic-style stone cartouches with scrollwork and plain shield shapes. They are approximate decorative architecture, not exact coats of arms, branding or copied artwork. No letters, numerals, inscriptions, readable seals or monograms.\nStyle and light: photograph-like real camera material rendering, natural clear daylight, soft realistic shadows, restrained warm limestone and dark green colors against a normal blue sky. Real stone grain and bronze patina, calm believable exposure and natural optical detail. No HDR, no cinematic lighting or grading, no excessive saturation, no glossy CGI or illustrated/painted appearance.\nAvoid: any people or human figures, recognizable person likeness, lifelike portrait faces, tourists, vehicles, actual modern flags or flagpoles, antennas, wires, cameras, modern fittings, signage, readable words, letters, numerals, plaques, logos, watermarks, captions, borders or frames. No standalone weapons, violence, blood or battle scene. No exact replica of a museum collection object.",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/03-julkisivun-trofeet-ja-rintakuva/generation-prompt.txt",
+      "viitteet": [
+        {
+          "publisher": "Superintendence of Cultural Heritage Malta",
+          "title": "National Inventory of the Cultural Property of the Maltese Islands, 01127",
+          "url": "https://schmalta.mt/wp-content/uploads/2023/08/DC-01127.pdf",
+          "type": "textResearchOnly",
+          "notes": "Primary register text confirms Belli design in 1741 and construction in 1744, column-flanked portal on stairs, bust and arms/armour directly above doorway, and armorial ornaments above central window and at upper centrepiece. The bust is bronze. Used to correct source summit-bust location and material; decorative arrangement and anonymous sculpted face are original approximations.",
+          "access": "2026-10-08; PDF extracted text read; no plan/property-image screenshots or source photo pixels viewed."
+        },
+        {
+          "publisher": "Office of the Prime Minister Malta",
+          "title": "Office of the Prime Minister – Auberge de Castille",
+          "url": "https://primeminister.gov.mt/office-of-the-prime-minister-2/",
+          "type": "textResearchOnly",
+          "notes": "Primary indexed text confirms Baroque rebuilding in 1741–1745 under Pinto and bust at main door. Page gives architect first name as Antonio; source and other heritage text give Andrea, while primary SCH register uses Belli. Generation uses the unambiguous 1740s building context and does not require a disputed first name.",
+          "access": "2026-10-08; indexed page text only, no photo pixels used."
+        },
+        {
+          "publisher": "Heritage Malta",
+          "title": "Heritage Malta Annual Report 2012",
+          "url": "https://heritagemalta.mt/app/uploads/2022/01/2012.pdf",
+          "type": "textResearchOnly",
+          "notes": "Indexed official conservation text mentions the bronze Pinto bust from the facade of Auberge de Castille. Confirms material correction only; no collection artifact or photographic representation copied.",
+          "access": "2026-10-08; indexed textual excerpt only; no PDF page images viewed."
+        }
+      ],
+      "kuvateksti": "Vallettan Auberge de Castillen kalkkikivijulkisivun ja portaalia koristavan ase- ja lipputrofeen likimääräinen tulkinta. Virallisen rekisterin mukaan Pinton rintakuva sijaitsee oven yläpuolella ja on pronssinen; tässä pieni veistos on yleisluonteinen, eikä sen kasvoja ole varmennettu Pinton muotokuvaksi. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "metadata": {
+        "Description": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "Source": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "ICC": "sRGB"
+      },
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/valletta-yksityiskohdat-20261008/production/03-julkisivun-trofeet-ja-rintakuva/qa-preview-480.png",
+      "previewDimensions": [
+        480,
+        320
+      ],
+      "rgbPixelsUnchanged": true,
+      "originalPreservedByteExact": true,
+      "originalPhotoPixelsUsed": false,
+      "sourceImagePixelsUsed": false,
+      "publicHistoricalExteriorArchitecturalSculpture": true,
+      "sculptureIdentity": "Small unidentified generic bronze architectural bust; no verified real-person likeness or collection-portrait reproduction.",
+      "architectureClarification": {
+        "status": "approved-by-root",
+        "received": "2026-10-08",
+        "decision": "Primary SCH text controls location: small generic dark bronze bust directly above door below central window; stone trophy group at portal; generic heraldic stone ornament higher on central facade. No bust at facade summit. Face is generic sculpture, not a verified portrait or collection replica.",
+        "reason": "Primary SCH inventory 01127 contradicts source summit-bust location and stone material."
+      },
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "parentReviewPending": true,
+        "observations": [
+          "Native 1536x1024 final file and full-frame 480x320 preview visually viewed.",
+          "Complete central doorway, column-framed portal, stone-carved flags/spears/cannon/drum trophy group, small dark bronze bust directly above doorway below upper central window, and upper curved pediment are all within frame.",
+          "Natural honey limestone texture, dark green shutters, patinated bronze, blue daylight sky and calm camera-like exposure.",
+          "No people, vehicles, modern flags/poles, antennas, readable words/numerals, inscriptions, signs, branding, watermark or picture border observed.",
+          "Upper carved shields are blank generic ornament. Small stone ornamental masque at the portal crest remains a decorative face motif, not an additional bust or identified person.",
+          "Bronze bust is visibly small and sculptural with generic facial forms, not living-person skin or a verified historic portrait.",
+          "Decoded final RGB pixels exactly equal the generated original. Original-generation.png is byte-identical to tool original; exact Description/Source and sRGB ICC verified."
+        ],
+        "limitations": [
+          "Original approximate interpretation of architecture and sculptural arrangement from text-only sources; ornament layout, proportions, and exact measured building geometry are unverified.",
+          "Root-approved source correction: bronze bust at doorway, not source order’s facade summit. Generic face and heraldry do not reproduce the actual Pinto sculpture or exact coat of arms.",
+          "Topmost pediment ornament has a tight but complete margin; the facade extends out of frame at lateral edges while all requested central subjects remain inside.",
+          "Bronze bust occupies about 6 percent of image height rather than prompt target 4 percent; it remains subordinate to the portal and its face is very small at 480px.",
+          "Local child-agent visual approval; root independent QA remains pending."
+        ]
+      },
+      "limits": [
+        "One built-in new text-only generation call used (1/1); no retries, edits or variants.",
+        "No source photographs or museum collection pixels used.",
+        "No R2, mailbox, Fable, game, main branch, version change or publication performed by this child."
+      ],
+      "callCount": 1,
+      "generationMethod": "built-in image_gen; new text-only",
+      "sourceCommit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+      "sourceBlob": "249c13798ca9b0dc91012b2239a5272b75a28498",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "status": "local-candidate-approved-pending-root-qa",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "createdAt": "2026-10-08",
+      "QAReviewer": "/root/valletta_facade_trophies",
+      "QAParent": "/root",
+      "technicalChanges": [
+        "Added standard sRGB ICC without color conversion.",
+        "Added exact PNG Description and Source marking.",
+        "RGB pixels unchanged.",
+        "Created separate full-frame 480x320 preview."
+      ],
+      "visualReview": {
+        "task": "valletta-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q2499012",
+        "file": "valletta-Q2499012-julkisivun-trofeet-ja-rintakuva.png",
+        "sha256": "4259c9a91ef5191831e43249f9ae3302bf94cce0ecb7a177f7ac5d004beb11f4",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Portaalia ympäröivät kiviset ase- ja lipputrofeet, pieni tumma pronssirintakuva oven/ikkunan välissä ja ehjä yläkoriste; ei legiblekirjoitusta, logoa tai ihmisiä."
+        ],
+        "limitations": [
+          "Yleinen arkkitehtuuri- ja ornamenttitulkinta. Bronssirintakuva noin6prosenttia korkeudesta, ei varmennettu Pinton kasvomuotokuva; yläkoriste tiukasti mutta ehjänä rajattu, sivujulkisivu jatkuu kuvan ulkopuolelle."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "parentReviewPending": true,
+        "observations": [
+          "Native 1536x1024 final file and full-frame 480x320 preview visually viewed.",
+          "Complete central doorway, column-framed portal, stone-carved flags/spears/cannon/drum trophy group, small dark bronze bust directly above doorway below upper central window, and upper curved pediment are all within frame.",
+          "Natural honey limestone texture, dark green shutters, patinated bronze, blue daylight sky and calm camera-like exposure.",
+          "No people, vehicles, modern flags/poles, antennas, readable words/numerals, inscriptions, signs, branding, watermark or picture border observed.",
+          "Upper carved shields are blank generic ornament. Small stone ornamental masque at the portal crest remains a decorative face motif, not an additional bust or identified person.",
+          "Bronze bust is visibly small and sculptural with generic facial forms, not living-person skin or a verified historic portrait.",
+          "Decoded final RGB pixels exactly equal the generated original. Original-generation.png is byte-identical to tool original; exact Description/Source and sRGB ICC verified."
+        ],
+        "limitations": [
+          "Original approximate interpretation of architecture and sculptural arrangement from text-only sources; ornament layout, proportions, and exact measured building geometry are unverified.",
+          "Root-approved source correction: bronze bust at doorway, not source order’s facade summit. Generic face and heraldry do not reproduce the actual Pinto sculpture or exact coat of arms.",
+          "Topmost pediment ornament has a tight but complete margin; the facade extends out of frame at lateral edges while all requested central subjects remain inside.",
+          "Bronze bust occupies about 6 percent of image height rather than prompt target 4 percent; it remains subordinate to the portal and its face is very small at 480px.",
+          "Local child-agent visual approval; root independent QA remains pending."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/valletta-yksityiskohdat/20261008/valletta-Q2499012-julkisivun-trofeet-ja-rintakuva.png",
+      "url": "https://media.matkakirja.app/julisteet/valletta-yksityiskohdat/20261008/valletta-Q2499012-julkisivun-trofeet-ja-rintakuva.png",
+      "bytes": 2761376,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/valletta-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/valletta-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "d27e2c6542f26e72a876edc893a3f5902846f83e351e8e50bc3892466881c938",
+    "bytes": 193512,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:05:20.421797+00:00"
+}

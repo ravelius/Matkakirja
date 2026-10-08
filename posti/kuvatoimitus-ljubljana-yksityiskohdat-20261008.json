@@ -1,0 +1,458 @@
+{
+  "task": "ljubljana-yksityiskohdat-20261008",
+  "routedTaskNumber": 32,
+  "source": {
+    "path": "posti/sisaltokirjuri-codex-ljubljana-yksityiskohdat-20261008.md",
+    "commit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+    "blob": "278c93e518643ad6d519f86762468fd230b51bc8"
+  },
+  "sourceReadInFull": true,
+  "requestedImages": 3,
+  "imageCount": 3,
+  "generationCalls": 3,
+  "generationLimit": 3,
+  "sourceImagePixelsUsed": false,
+  "generationMode": "built-in image_gen, text-only, one call per produced subject; metadata-only final preparation",
+  "productionComplete": true,
+  "assets": [
+    {
+      "number": 1,
+      "qid": "Q6438656",
+      "id": "krizanken-kangaskatto",
+      "file": "ljubljana-Q6438656-krizanken-kangaskatto.png",
+      "filename": "ljubljana-Q6438656-krizanken-kangaskatto.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/01-krizanken-kangaskatto/ljubljana-Q6438656-krizanken-kangaskatto.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b30-f2f3-7981-8242-18af4b2f7768/exec-133db602-1288-4b42-94a5-db769c21bc50.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/01-krizanken-kangaskatto/original-generation.png",
+      "originalSha256": "91ce8eced69ee678f3bf24f8a3d2214cab7c030ea379ab1e4bbac6d168306417",
+      "sha256": "8d0339bb8e7a016b1f8d783b8d594178d10222e9b70d14c70e64c1abde5947d0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photorealistic educational illustration for the Ljubljana city introduction.\nCreate ONE entirely new TEXT-ONLY image. Native exact 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No image references or source photographs.\nScene/backdrop: an approximate reconstruction of Ljubljana's Križanke outdoor summer theatre in a quiet summer twilight before April 2016. The historic former monastery context has modest worn stone and light plaster walls, arched openings, and a red clay tile roof visible behind the stage. Original architectural context, not a copied photograph or an exact engineering diagram.\nPrimary subject: the ORIGINAL lightweight retractable pale white FABRIC roof of the 1960s, fully drawn CLOSED across the auditorium and stage. Make the material recognizably taut thin canvas, a continuous broad membrane with gentle shallow drape and stretched seams, tensioned between slender steel masts and visible taut support cables around the perimeter. The canopy occupies much of the upper image, suspended well above the seating. The mast and cable arrangement is plausible, general, and modest; avoid the new fixed steel roof of 2022, any rigid grid or heavy lattice trusses. It is a functioning intact canopy, without tears or snow.\nComposition/framing: wide 3:2 view from slightly above the back of the auditorium, looking down over empty stepped rows of plain wooden benches toward an EMPTY stage at the far end. Stepped seating occupies the lower third; the expansive closed canopy above is the main focus. The stage has a plain worn stone architectural back wall and modest arched context. A little dusk sky and the former monastery's terracotta tiled roof remain visible around the canopy perimeter.\nStyle/medium: looks captured by a real camera on location, restrained editorial architecture photography, realistic rough stone, worn wood, matte textile weave and dull steel. Natural perspective and believable structural scale.\nLighting/mood: dim blue-gray summer twilight outside, slightly warm subdued ordinary lighting under the canvas; no spotlight spectacle. Muted pale canvas, gray stone, brown wood and restrained red tiles. Natural soft exposure, fine imperfect everyday texture; no HDR, no cinematic grading, no dramatic orange-and-teal, no oversaturation, no glossy CGI, no painting or illustration strokes.\nConstraints: absolutely NO people, audience, musicians or performers. NO readable or unreadable writing, letters, numerals, dates, signs, plaques, screens, projection cloths, posters, logos, branding, watermark, captions, frame or border. No modern event equipment obscuring the stage. The white fabric canopy must be the roof above the entire seating area, not a stage screen or hanging backdrop.",
+      "viitteet": [
+        {
+          "publisher": "Festival Ljubljana",
+          "title": "The new roof of the Križanke Summer Theatre",
+          "url": "https://ljubljanafestival.si/en/the-new-roof-of-the-krizanke-summer-theatre/",
+          "type": "textResearchOnly",
+          "notes": "Operator text identifies original Miloš Marinček retractable canvas roof built 1964–1965, damaged by unexpected late-April 2016 snow; distinguishes fixed 2022 replacement. Exact earlier support layout not verified.",
+          "access": "2026-10-08; official indexed full article text read; direct open inaccessible; no source image pixels viewed or used."
+        },
+        {
+          "publisher": "Festival Ljubljana",
+          "title": "Križanke — Where History Meets Art",
+          "url": "https://www.ljubljanafestival.si/en/for-visitors/venues/krizanke/",
+          "type": "textResearchOnly",
+          "notes": "Operator text confirms former monastery of German Knights Order and Plečnik remodelling. Context only; no exact architecture copied.",
+          "access": "2026-10-08; official indexed text read; no source image pixels viewed or used."
+        }
+      ],
+      "kuvateksti": "Križanken kesäteatterin liikkuvaa kangaskattoa havainnollistava kuvitteellinen näkymä ajalta ennen huhtikuun 2016 lumivauriota. Katon tuet ja luostariympäristö ovat suuntaa antavia. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 viewed at original resolution.",
+          "Closed pale fabric canopy dominates upper frame with visible seams, modest masts and cables; no heavy fixed steel roof grid.",
+          "Empty terraced wooden benches and empty stone-backed stage, muted twilight and warm pools of under-canopy light.",
+          "No people, event screen, signs, letters, numerals, logos, captions, border or watermark observed.",
+          "Full-frame 480x320 preview viewed; roof, masts, cables, stepped seating and empty stage remain legible."
+        ],
+        "limitations": [
+          "Original canopy support layout and monastery-stage geometry are approximate, not a verified architectural reconstruction.",
+          "Image is a fictional illustration of the original retractable fabric-roof concept; current fixed 2022 roof is not intended."
+        ]
+      },
+      "sourceCommit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+      "sourceBlob": "278c93e518643ad6d519f86762468fd230b51bc8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/01-krizanken-kangaskatto/qa-preview-480.png",
+      "parentQARequired": true,
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "ljubljana-yksityiskohdat-20261008",
+        "number": 1,
+        "qid": "Q6438656",
+        "file": "ljubljana-Q6438656-krizanken-kangaskatto.png",
+        "sha256": "8d0339bb8e7a016b1f8d783b8d594178d10222e9b70d14c70e64c1abde5947d0",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Suuri suljettu kangaskatto mastoineen ja kaapeleineen tyhjän kesäteatterin päällä; penkit, lava ja luostariympäristö luonnollisessa kameravalossa, ei kirjoitusta tai ihmisiä."
+        ],
+        "limitations": [
+          "Alkuperäisen ennen2016 katon yleinen konsepti, tukien ja rakennuksen tarkka geometria kuvitteellinen; ei2022 kiinteän katon dokumentointi."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 viewed at original resolution.",
+          "Closed pale fabric canopy dominates upper frame with visible seams, modest masts and cables; no heavy fixed steel roof grid.",
+          "Empty terraced wooden benches and empty stone-backed stage, muted twilight and warm pools of under-canopy light.",
+          "No people, event screen, signs, letters, numerals, logos, captions, border or watermark observed.",
+          "Full-frame 480x320 preview viewed; roof, masts, cables, stepped seating and empty stage remain legible."
+        ],
+        "limitations": [
+          "Original canopy support layout and monastery-stage geometry are approximate, not a verified architectural reconstruction.",
+          "Image is a fictional illustration of the original retractable fabric-roof concept; current fixed 2022 roof is not intended."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/ljubljana-yksityiskohdat/20261008/ljubljana-Q6438656-krizanken-kangaskatto.png",
+      "url": "https://media.matkakirja.app/julisteet/ljubljana-yksityiskohdat/20261008/ljubljana-Q6438656-krizanken-kangaskatto.png",
+      "bytes": 2314460,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 2,
+      "qid": "Q1236564",
+      "id": "maalattu-naennaiskupoli",
+      "file": "ljubljana-Q1236564-maalattu-naennaiskupoli.png",
+      "filename": "ljubljana-Q1236564-maalattu-naennaiskupoli.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/02-maalattu-naennaiskupoli/ljubljana-Q1236564-maalattu-naennaiskupoli.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b39-7d65-7c30-a2ce-05d3044b4bf5/exec-ec6edc28-d051-431e-8a18-36d9eca2b3b5.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/02-maalattu-naennaiskupoli/original-generation.png",
+      "sha256": "77a50bbc85d1be896301ad761e34b0448e7f9fe60af160e385499a6356b9e17a",
+      "originalSha256": "5b624536fe79ff194a80d756ea7273e867ececaa3fae68ad83082f2a30ad4908",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: historical-scene\nAsset type: photographic historical educational illustration for Ljubljana; an original invented interpretation of a lost painted ceiling, not a reproduction of an authentic artwork.\nGenerate ONE brand-new TEXT-ONLY image, exactly 1536 x 1024 landscape, opaque RGB PNG, sRGB. No reference images or source photograph pixels.\nPrimary subject: an illusionistic architectural ceiling PAINTING on an approximately FLAT, very shallow solid plastered wooden temporary ceiling cover above the crossing of an early-1700s Baroque church in Ljubljana, around 1703. Photograph the actual painted material from beneath. The main subject is the solid painted surface: the sky and every apparently receding architectural feature are pigment on the same nearly flat covered surface. There is no physical open roof, real dome, deep concave vault, tall drum, lantern, or opening behind the central image. The photograph must visibly distinguish the shallow painted material from the illusion it carries. This is an original fictional interpretation, with no claim of precisely measured original geometry.\nPainting: invent a wholly new restrained Baroque perspective design, with an oval-looking ring of painted balustrades, painted pilasters converging toward a pale painted sky, and light painted clouds. These architectural forms are two-dimensional brushwork with painted shadows, NOT masonry projecting into real depth. No saints, portraits, named figures, copied iconography or existing artwork composition. No people or painted human figures are needed.\nPhysical surface: a broad, thin, gently worn plastered timber cover closes the entire crossing. Keep its whole approximately flat perimeter visible, with a narrow plain plaster strip and a shallow panel joint continuing across one peripheral section of the painting. Fine brushwork, lime-plaster grain and a faint substrate seam continue over the painted architectural illusion and sky. There must be no genuine hole or real window in this central cover. Avoid a deep spherical or bowl-shaped surface: its physical surface remains nearly flat or very shallow from edge to center.\nSurroundings: only a narrow margin of real pale plaster Baroque supporting arches and pilasters on the sides and bottom, very modest simple moulding, visibly unfinished blank plaster areas, sparse early decoration. This is before the church's later completed nave frescoes and furnishings. No lavish later marble cladding or gilding, no modern 1841 dome, no exact recreation of the current cathedral. No benches, visitors, scaffolding, chandeliers, electric lamps or wiring.\nComposition: wide upward-and-slightly-forward view from near the nave crossing, camera a little off the ideal perspective point so the shallow painted cover is legible as material. Painted ceiling occupies about three quarters of the frame; a small margin of real supporting arches provides architectural scale. The entire image uses the native 3:2 canvas without cropping or borders. Show enough perimeter and subtle seam to make the trompe-l'oeil clear even in a 480-pixel-wide preview.\nMedium and light: convincing camera-captured photograph of painted plaster and historic architecture, natural soft lateral window daylight, faint warm reflected candle light from below, modest exposure. Muted chalky ivory, warm stone, subdued ochre and quiet pale blue pigment. Realistic matte plaster, pigment and wood-supported panel materials, small material irregularities, ordinary camera detail. No glowing heavenly portal, no HDR, no oversaturated color, no cinematic grading, no glossy CGI or fantasy spectacle.\nAvoid: actual open real dome or roof, deep physical space above the ceiling cover, modern architecture, actual Quaglio or Langus panels, museum artefact replicas, copied composition, real-person likenesses, recognizable faces, people, words, numerals, Latin inscriptions, readable markings, signs, logos, watermark, captions, image frames or borders.",
+      "promptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/02-maalattu-naennaiskupoli/prompt.txt",
+      "generationMethod": "built-in image_gen; new text-only generation; no input/reference images",
+      "viitteet": [
+        {
+          "publisher": "Stolnica sv. Nikolaja / Ljubljana Cathedral",
+          "title": "Zgodovinski pregled",
+          "url": "https://www.stolnica.com/Zgodovinski_pregled.php",
+          "type": "textResearchOnly",
+          "notes": "Church history text confirms suspended painted wooden framework, real dome in 1841, stucco in 1704 and marble/gilding changes in 1859.",
+          "access": "2026-10-08; webpage text only, no image pixels viewed"
+        },
+        {
+          "publisher": "ZVKDS / Institute for the Protection of Cultural Heritage of Slovenia",
+          "title": "Ljubljana Cathedral and its wall paintings / RES.5",
+          "url": "https://www.zvkds.si/wp-content/uploads/2024/04/RES5-notr_AN_low.pdf",
+          "type": "textResearchOnly",
+          "notes": "PDF page 15, printed pp.26-27, footnote 27: 1703 temporary dome cover made from massive beams and plaster, painted as illusionistic ceiling. PDF page29, printed pp.54-55: historical account describes shallow false dome with wooden ceiling suspended from roofing; this does not prove perfectly planar original. PDF page92 confirms September1703 painting and removal1841.",
+          "access": "2026-10-08; PDF text extracted in memory using pypdf, no PDF pages/images rendered or viewed"
+        },
+        {
+          "publisher": "National Gallery of Slovenia",
+          "title": "Revelations: Giulio Quaglio and the Dome of the Ljubljana Cathedral",
+          "url": "https://www.ng-slo.si/en/exhibitions-and-projects/exibition-or-project/revelations-giulio-quaglio-and-the-dome-of-the-ljubljana-cathedral?id=6192",
+          "type": "textResearchOnly",
+          "notes": "Institutional exhibition text dates illusion dome to1703 and replacement/removal to1841. Used only for historical dates; described original iconography and surviving compositions excluded from generation.",
+          "access": "2026-10-08; webpage text only, no artwork or image pixels viewed"
+        },
+        {
+          "publisher": "ZRC SAZU / France Stele Institute of Art History",
+          "title": "Stolna in župnijska cerkev sv. Miklavža",
+          "url": "https://barok.zrc-sazu.si/spomeniki/stolnica",
+          "type": "textResearchOnly",
+          "notes": "Institutional heritage text distinguishes1703 illusion dome from1705-1706 nave painting,1721-1723 later decorations and1859 marble/gilding.",
+          "access": "2026-10-08; webpage text only, no gallery or image pixels viewed"
+        }
+      ],
+      "kuvateksti": "Oma tulkinta Ljubljanan tuomiokirkon vuoden 1703 kadonneen kattoperspektiivin ideasta: rapattu puukansi näyttää avautuvan maalatun taivaan suuntaan. Kuvan maalaus ja tilan yksityiskohdat ovat kuvitteellisia, eivät alkuperäisen teoksen jäljennös. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; decoded pixel byte equality verified.",
+        "Preserved byte-exact original-generation.png and tool-original file.",
+        "Created separate full-frame480x320 QA preview with no crop."
+      ],
+      "rgbPixelsUnchanged": true,
+      "opaque": true,
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/02-maalattu-naennaiskupoli/qa-preview-480.png",
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 generated original and separate full-frame480x320 preview viewed directly by worker.",
+          "Matte plaster surface is visibly nearly flat: a horizontal substrate seam continues across painted sky and architectural forms. Whole painted-ceiling perimeter and solid closed cover remain legible at480px.",
+          "Painted oval balustrade and pilasters create apparent upward depth; no deep physical dome, tall1841drum, real open sky or roof hole observed.",
+          "Sparse real pale plaster arches and blank surrounding areas provide early Baroque context. No later marble cladding, extensive gilt furnishing, modern benches, chandeliers, visitors or electric lighting observed.",
+          "No humans, recognisable faces, words, numerals, inscriptions, logos, signs, watermark or outer image border observed.",
+          "Quiet natural light, muted chalky stone/ochre/blue pigments and photographic plaster texture meet the intended camera-like style; no HDR or glossy CGI observed.",
+          "Paint has visible patina and fading. This limitation is recorded; caption presents an own interpretation rather than freshly finished authentic1703appearance."
+        ],
+        "limitations": [
+          "This is an original fictional painted-ceiling interpretation; it is not a replica of Quaglio’s lost painting, a surviving museum fragment or Langus’s copy.",
+          "Historical sources support a suspended plastered wooden temporary cover, with an account describing a shallow false dome. The image does not establish the measured original ceiling geometry.",
+          "The photograph-like generated surface shows substantial fading and patina; it is not a verified depiction of the painting freshly completed in1703.",
+          "Only the ceiling concept is depicted. The supporting architecture and painted balustrade/pilaster/sky design are invented; later completed nave decoration is omitted."
+        ],
+        "approvalScope": "Worker approves as declared own conceptual illustration; independent root QA remains pending."
+      },
+      "historicalClarification": {
+        "status": "approved-by-root-before-generation",
+        "decision": "Proceed with own illusion-painting interpretation on approximately flat or shallow temporary plastered timber cover, visible cover edge and unfinished sparse surroundings; no measured original geometry or authentic Quaglio copy claimed.",
+        "approvedAt": "2026-10-08T11:20:34.556177+00:00",
+        "preflightPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/02-maalattu-naennaiskupoli/preflight.json"
+      },
+      "sourceCommit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+      "sourceBlob": "278c93e518643ad6d519f86762468fd230b51bc8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "createdAt": "2026-10-08T11:22:17.437758+00:00",
+      "status": "local-candidate-approved-awaiting-root-qa",
+      "rootQA": "pending-independent-root-view",
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "ljubljana-yksityiskohdat-20261008",
+        "number": 2,
+        "qid": "Q1236564",
+        "file": "ljubljana-Q1236564-maalattu-naennaiskupoli.png",
+        "sha256": "77a50bbc85d1be896301ad761e34b0448e7f9fe60af160e385499a6356b9e17a",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Rapattuun paneelikanteen maalattu alkuperäinen taivas/balustradiperspektiivi; saumat ja kantava reunus paljastavat matalan maalatun pinnan, ei todellinen korkea1841kupoli. Ei ihmisiä tai tekstiä."
+        ],
+        "limitations": [
+          "Maalaus ja arkkitehtuuri ovat kokonaan oma tulkinta kadonneen1703 kattokannen ideasta. Kulunut patina ei vastaa juuri valmistunutta1703pintaa; ei alkuperäisteoksen jäljennös tai mittarekonstruktio."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native1536x1024 generated original and separate full-frame480x320 preview viewed directly by worker.",
+          "Matte plaster surface is visibly nearly flat: a horizontal substrate seam continues across painted sky and architectural forms. Whole painted-ceiling perimeter and solid closed cover remain legible at480px.",
+          "Painted oval balustrade and pilasters create apparent upward depth; no deep physical dome, tall1841drum, real open sky or roof hole observed.",
+          "Sparse real pale plaster arches and blank surrounding areas provide early Baroque context. No later marble cladding, extensive gilt furnishing, modern benches, chandeliers, visitors or electric lighting observed.",
+          "No humans, recognisable faces, words, numerals, inscriptions, logos, signs, watermark or outer image border observed.",
+          "Quiet natural light, muted chalky stone/ochre/blue pigments and photographic plaster texture meet the intended camera-like style; no HDR or glossy CGI observed.",
+          "Paint has visible patina and fading. This limitation is recorded; caption presents an own interpretation rather than freshly finished authentic1703appearance."
+        ],
+        "limitations": [
+          "This is an original fictional painted-ceiling interpretation; it is not a replica of Quaglio’s lost painting, a surviving museum fragment or Langus’s copy.",
+          "Historical sources support a suspended plastered wooden temporary cover, with an account describing a shallow false dome. The image does not establish the measured original ceiling geometry.",
+          "The photograph-like generated surface shows substantial fading and patina; it is not a verified depiction of the painting freshly completed in1703.",
+          "Only the ceiling concept is depicted. The supporting architecture and painted balustrade/pilaster/sky design are invented; later completed nave decoration is omitted."
+        ],
+        "approvalScope": "Worker approves as declared own conceptual illustration; independent root QA remains pending."
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/ljubljana-yksityiskohdat/20261008/ljubljana-Q1236564-maalattu-naennaiskupoli.png",
+      "url": "https://media.matkakirja.app/julisteet/ljubljana-yksityiskohdat/20261008/ljubljana-Q1236564-maalattu-naennaiskupoli.png",
+      "bytes": 2476676,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "number": 3,
+      "qid": "Q1236564",
+      "id": "vanha-kirkonkello-1326",
+      "file": "ljubljana-Q1236564-vanha-kirkonkello-1326.png",
+      "filename": "ljubljana-Q1236564-vanha-kirkonkello-1326.png",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/03-vanha-kirkonkello-1326/ljubljana-Q1236564-vanha-kirkonkello-1326.png",
+      "originalGeneratedPath": "/Users/samireivinen/.codex/generated_images/01a11b30-f2f3-7981-8242-18af4b2f7768/exec-ca4af457-9843-4fba-9294-1e4dddfe9022.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/03-vanha-kirkonkello-1326/original-generation.png",
+      "originalSha256": "0ab9509895d1b485271d1671fc3214c9965f5f22c3bb955e409f631f27c9e5e6",
+      "sha256": "1ecd54ef0bf25662af3605a4efb15056fbf4214cb2ee657751e0dcdb6eae527c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "rgbPixelsUnchanged": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: educational architectural illustration for the Ljubljana city introduction.\nCreate ONE entirely new TEXT-ONLY image. Native exact 1536 x 1024 landscape (3:2), opaque RGB PNG, sRGB. No image references or source photographs.\nScene/backdrop: a quiet stone belfry chamber with aged timber supports and a modest arched opening overlooking muted red-tile city rooftops. The architecture suggests a historic cathedral tower in Ljubljana, in the present day, but the chamber and view are ORIGINAL GENERAL FICTIONAL architecture, not a surveyed reconstruction.\nSubject: one very old, modestly sized, plain BRONZE church bell, suspended upright and at REST beneath a worn wooden yoke with a few simple dark iron fastenings. The bell is unmistakably the main subject, centered and clearly visible, with natural age-worn matte bronze, subdued brown and gray-green patina, irregular tiny casting marks and wear. It has a plain gently flaring traditional bell body, a dark interior and a still vertical clapper. It is an ORIGINAL GENERIC old bell, not a replica of a named historical artefact, museum object or known bell geometry. Its entire surface is UNDECORATED: no relief images, figures, patterns, lettering, Gothic inscription, maker marks, numerals, dates or logos.\nComposition/framing: camera within the chamber, slightly below the bell, looking gently upward. Show the whole bell, its wooden yoke and enough surrounding timber and masonry to explain that it hangs inside a tower. Keep the bell clear of the frame edges. Natural perspective as a real 40mm architectural photograph. The arched window lets soft light into the side of the chamber and shows a small believable patch of distant tiled roofs without any recognizable detailed landmark.\nStyle/medium: looks taken with a real camera in an ordinary quiet tower. Real rough stone mortar, aged timber grain and dull iron; convincing softly worn metal texture, restrained detail. No painting, drawing, illustrative strokes, glossy CGI or polished new bronze.\nLighting/mood: natural diffuse daylight entering the tower opening, gentle shadows, muted earthy brown, stone gray and patinated bronze colors. Bell remains legible in subdued interior light. Soft normal camera exposure; no HDR, no cinematic grading, no oversaturated orange-and-teal and no dramatic spotlight.\nConstraints: the old bell is dormant, still and unpowered. No motion, ringing action or claim of functioning machinery. No people, faces, electricians, modern electric wires, motors, control boxes, signs, warnings, labels, plaques, text, numerals, symbols, logos, watermark, caption, border or frame. No copied artwork, sculptural relief, museum display, protective barriers or replica of a specific collection object.",
+      "viitteet": [
+        {
+          "publisher": "Stolnica sv. Nikolaja — cathedral operator",
+          "title": "Zvonovi v stolnici sv. Nikolaja v Ljubljani",
+          "url": "https://stolnica.si/home/orgle/zvonovi/",
+          "type": "textResearchOnly",
+          "notes": "Operator identifies smallest bell as medieval 1328 bell, patinated, hanging on a wooden yoke in the north tower, not regularly used. Conflicts with requested 1326. Exact object geometry, inscription and relief content not passed into generation; output is generic.",
+          "access": "2026-10-08; full text page read; no photos, source image pixels or video viewed or used."
+        },
+        {
+          "publisher": "Slovenska škofovska konferenca — official Catholic Church site",
+          "title": "Vseslovensko srečanje pritrkovalcev v ljubljanski stolnici v svetem letu",
+          "url": "https://katoliska-cerkev.si/vseslovensko-srecanje-pritrkovalcev-v-ljubljanski-stolnici-v-svetem-letu",
+          "type": "textResearchOnly",
+          "notes": "14 September 2025 report confirms historic 1328 bell in the north tower and says it is not in use. Used to verify retained location and dormant status only.",
+          "access": "2026-10-08; full text page read; no source image pixels viewed or used."
+        }
+      ],
+      "kuvateksti": "Ljubljanan tuomiokirkon pohjoistornissa säilyy vuonna 1328 valettu keskiaikainen kello. Kuvassa on yleinen havainnollistus vanhasta pronssikellosta ja kellohuoneesta. Havainnekuva.",
+      "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalChanges": [
+        "Added standard sRGB ICC profile without color conversion.",
+        "Added exact Description and Source PNG text metadata.",
+        "RGB pixel values unchanged; byte equality of decoded pixels verified.",
+        "Created separate full-frame 480x320 QA preview."
+      ],
+      "QA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 viewed at original resolution.",
+          "Plain worn patinated bronze bell on wooden yoke with generic dark iron fastenings; bell and vertical clapper at rest.",
+          "Stone and timber tower chamber, natural window light and muted tiled rooftops; believable camera texture and normal exposure.",
+          "No people, inscriptions, dates, numerals, letters, maker marks, figurative relief, signs, logos, electrical wires, controls, watermark, image border or museum display observed.",
+          "Full-frame 480x320 preview viewed; plain old bell, timber yoke, stone chamber and rooftop context remain clear."
+        ],
+        "limitations": [
+          "Kuva on yleinen vanhan pronssikellon havainnollistus: esineen muoto, ripustus, kellohuone ja kaupunkinäkymä ovat kuvitteellisia, eivät varmennettu rekonstruktio.",
+          "Tilauksen id ja tiedostonimi sisältävät vuoden 1326 vain toimitusprotokollan tunnisteena. Operaattorin ensisijainen lähde ajoittaa säilyneen keskiaikaisen kellon vuoteen 1328.",
+          "Slovenian toiseksi vanhin -sijaa ei saatu varmennettua ensisijaisesta lähteestä; väitettä ei käytetä kuvatekstissä.",
+          "Nykyinen kirkollinen lähde kertoo kellon riippuvan pohjoistornissa ilman käyttöä. Kuva näyttää kellon levossa eikä väitä soittomekanismia toimivaksi."
+        ]
+      },
+      "sourceClarification": {
+        "status": "approved-by-root-before-generation",
+        "requestedYear": 1326,
+        "verifiedOperatorYear": 1328,
+        "secondOldestClaimVerified": false,
+        "verifiedLocation": "north tower",
+        "verifiedCurrentUse": "not in use per official 2025 report",
+        "filenameProtocolPreserved": true,
+        "decision": "Use original generic old bronze bell context; omit 1326 and national age rank from caption; record operator conflict explicitly. No verified object or hanging geometry.",
+        "decisionDate": "2026-10-08"
+      },
+      "sourceCommit": "10020a9d0b2e9f718b18c36ce2620980e7e34f2f",
+      "sourceBlob": "278c93e518643ad6d519f86762468fd230b51bc8",
+      "sourceReadInFull": true,
+      "sharedRulesReadInFull": true,
+      "sourceImagePixelsUsed": false,
+      "generationMethod": "built-in image_gen; new text-only",
+      "status": "local-candidate-approved",
+      "previewPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/ljubljana-yksityiskohdat-20261008/production/03-vanha-kirkonkello-1326/qa-preview-480.png",
+      "parentQARequired": true,
+      "r2Delivered": false,
+      "mailboxDelivered": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "visualReview": {
+        "task": "ljubljana-yksityiskohdat-20261008",
+        "number": 3,
+        "qid": "Q1236564",
+        "file": "ljubljana-Q1236564-vanha-kirkonkello-1326.png",
+        "sha256": "1ecd54ef0bf25662af3605a4efb15056fbf4214cb2ee657751e0dcdb6eae527c",
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Kokonainen yleinen vanha pronssikello puuisessa ripustuksessa levossa; ei vuosilukua, tekstiä, figuurireliefiä, ihmisiä tai sähköjärjestelmää."
+        ],
+        "limitations": [
+          "Kellon muoto ja huone kuvitteellisia. Virallinen toimija ajoittaa pohjoistornin säilyneen kellon1328, joka on kuvatekstissä;1326tiedostonimessä vain alkuperäinen tunniste, ei vahvistettu historiallinen vuosi."
+        ],
+        "agentVerdictBeforeRootReview": true,
+        "reviewedAtUTC": "2026-10-08T12:05:13.099008+00:00"
+      },
+      "agentQA": {
+        "nativeViewed": true,
+        "preview480Viewed": true,
+        "approvedForDelivery": true,
+        "observations": [
+          "Native 1536x1024 viewed at original resolution.",
+          "Plain worn patinated bronze bell on wooden yoke with generic dark iron fastenings; bell and vertical clapper at rest.",
+          "Stone and timber tower chamber, natural window light and muted tiled rooftops; believable camera texture and normal exposure.",
+          "No people, inscriptions, dates, numerals, letters, maker marks, figurative relief, signs, logos, electrical wires, controls, watermark, image border or museum display observed.",
+          "Full-frame 480x320 preview viewed; plain old bell, timber yoke, stone chamber and rooftop context remain clear."
+        ],
+        "limitations": [
+          "Kuva on yleinen vanhan pronssikellon havainnollistus: esineen muoto, ripustus, kellohuone ja kaupunkinäkymä ovat kuvitteellisia, eivät varmennettu rekonstruktio.",
+          "Tilauksen id ja tiedostonimi sisältävät vuoden 1326 vain toimitusprotokollan tunnisteena. Operaattorin ensisijainen lähde ajoittaa säilyneen keskiaikaisen kellon vuoteen 1328.",
+          "Slovenian toiseksi vanhin -sijaa ei saatu varmennettua ensisijaisesta lähteestä; väitettä ei käytetä kuvatekstissä.",
+          "Nykyinen kirkollinen lähde kertoo kellon riippuvan pohjoistornissa ilman käyttöä. Kuva näyttää kellon levossa eikä väitä soittomekanismia toimivaksi."
+        ]
+      },
+      "mitat": [
+        1536,
+        1024
+      ],
+      "fableReceipt": false,
+      "r2Key": "julisteet/ljubljana-yksityiskohdat/20261008/ljubljana-Q1236564-vanha-kirkonkello-1326.png",
+      "url": "https://media.matkakirja.app/julisteet/ljubljana-yksityiskohdat/20261008/ljubljana-Q1236564-vanha-kirkonkello-1326.png",
+      "bytes": 2648757,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "excludedItems": [],
+  "comparison": {
+    "file": "toimitetut-3.jpg",
+    "r2Key": "julisteet/ljubljana-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "url": "https://media.matkakirja.app/julisteet/ljubljana-yksityiskohdat/20261008/toimitetut-3.jpg",
+    "sha256": "b0d65fb329df4723edf754d6fd54387dca4e38628ec0fb93ca775722e1307d29",
+    "bytes": 157595,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "deliveryStatus": "Selected candidates R2 verified and submitted through this mailbox manifest/report; Fable/editor/game receipt unverified.",
+  "merkinta": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+  "editorAcceptance": false,
+  "fableReceipt": false,
+  "gameIntegrated": false,
+  "published": false,
+  "createdAt": "2026-10-08T12:05:20.600181+00:00"
+}
