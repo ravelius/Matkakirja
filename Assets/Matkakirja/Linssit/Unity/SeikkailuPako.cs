@@ -48,6 +48,7 @@ namespace Matkakirja.Natiivi
             if (mv != null) { s.vene = U(mv); s.veneOn = true; }
             s.koysi = mko != null ? U(mko) : s.vene;
             SeikkailuKomero.ArkkuAuki -= s.Halytyskello; SeikkailuKomero.ArkkuAuki += s.Halytyskello;
+            SeikkailuVartijat.Kiinnijaatiin -= s.Kiinni; SeikkailuVartijat.Kiinnijaatiin += s.Kiinni;
             kirjaa?.Invoke($"seikkailu: pako (K4 {(s.k4On ? "kyllä" : "ei")}, vene {(s.veneOn ? "kyllä" : "ei")})");
         }
 
@@ -150,6 +151,9 @@ namespace Matkakirja.Natiivi
             };
         }
 
+        /// <summary>Kiinnijäänti köysilaskussa tai kalliolla: pako takaisin Kello-vaiheeseen (Kiinnitä taas krampin luona, 45 s alusta).</summary>
+        void Kiinni(string osa) { if (ydin.Kiinni()) kirjaa?.Invoke("seikkailu: pako keskeytyi kiinnijääntiin → köysi kramppiin uudelleen"); }
+
         void AsetaKoysi(bool paalla) { OhjattuVerbi = paalla ? "Katkaise" : null; OhjattuToimi = paalla ? (Action)Katkaise : null; }
 
         void Katkaise() { if (ydin.Katkaise()) Katkaistu(); }
@@ -167,6 +171,6 @@ namespace Matkakirja.Natiivi
         }
 
         public static void Poista() { var a = Aktiivinen; Aktiivinen = null; if (a != null) Destroy(a.gameObject); OhjattuVerbi = null; OhjattuToimi = null; }
-        void OnDestroy() { SeikkailuKomero.ArkkuAuki -= Halytyskello; if (Aktiivinen == this) { Aktiivinen = null; OhjattuVerbi = null; OhjattuToimi = null; } }
+        void OnDestroy() { SeikkailuKomero.ArkkuAuki -= Halytyskello; SeikkailuVartijat.Kiinnijaatiin -= Kiinni; if (Aktiivinen == this) { Aktiivinen = null; OhjattuVerbi = null; OhjattuToimi = null; } }
     }
 }

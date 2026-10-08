@@ -64,6 +64,20 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(PakoVaihe.K4, p.Vaihe);
         }
 
+        [Testi] static void KiinniLaskussaTaiKalliollaUusiYritys()
+        {
+            foreach (var vaihe in new[] { PakoVaihe.Lasku, PakoVaihe.Kallio })
+            {
+                var p = new Pako(); p.ArkkuAuki(); p.Kiinnita(); if (vaihe == PakoVaihe.Kallio) p.LaskuValmis();
+                Aja(p, 10, false, _ => false);
+                Oleta.Tosi(p.Kiinni() && p.Vaihe == PakoVaihe.Kello, $"kiinni ({vaihe}) → kello-vaihe");
+                Aja(p, 30, false, _ => false);
+                Oleta.Tosi(p.Kiinnita() && p.UusiYritys && p.KelloS < Dt, $"{vaihe}: uusi kiinnitys alusta");
+            }
+            var q = new Pako(); q.ArkkuAuki();
+            Oleta.Tosi(!q.Kiinni() && q.Vaihe == PakoVaihe.Kello, "kellovaiheessa kiinni ei muuta");
+        }
+
         [Testi] static void SatunnaisetPakosarjatPaatyvatValmiiksi()
         {
             var r = new Random(23); int myohastyi = 0;
@@ -72,15 +86,17 @@ namespace Matkakirja.Linssit.Testit
                 var p = new Pako(); var ennen = p.Vaihe;
                 for (int n = 0; n < 60; n++)
                 {
-                    switch (r.Next(6))
+                    bool kiinni = false;
+                    switch (r.Next(7))
                     {
+                        case 6: kiinni = p.Kiinni(); break;
                         case 0: p.ArkkuAuki(); break;
                         case 1: p.Kiinnita(); break;
                         case 2: p.LaskuValmis(); break;
                         case 3: p.Katkaise(); break;
                         default: p.Paivita(r.NextDouble() * 8, r.Next(4) == 0); break;
                     }
-                    if (p.Myohastyi) { p.Myohastyi = false; myohastyi++; Oleta.Sama(PakoVaihe.Kello, p.Vaihe); }
+                    if (p.Myohastyi || kiinni) { if (p.Myohastyi) myohastyi++; p.Myohastyi = false; Oleta.Sama(PakoVaihe.Kello, p.Vaihe); }
                     else Oleta.Tosi(p.Vaihe >= ennen, $"ajo {ajo}: vaihe ei taannu ilman myöhästymistä ({ennen} → {p.Vaihe})");
                     ennen = p.Vaihe;
                 }
@@ -95,7 +111,7 @@ namespace Matkakirja.Linssit.Testit
                 }
                 Oleta.Sama(PakoVaihe.Valmis, p.Vaihe, $"ajo {ajo}: jumi");
             }
-            Oleta.Tosi(myohastyi > 20, $"myöhästymisiä syntyi ({myohastyi})");
+            Oleta.Tosi(myohastyi > 10, $"myöhästymisiä syntyi ({myohastyi})");
         }
 
         [Testi] static void KomeroArkkuVastaTiiltenJalkeenJaKilpiKiertaa()

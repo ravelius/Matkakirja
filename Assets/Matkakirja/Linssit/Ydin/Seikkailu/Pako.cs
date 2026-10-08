@@ -3,7 +3,8 @@
 // → Kallio (ensimmäinen persoona; 20 s kellosta rannan soihtuvartijat esiin, 45 s → myöhästyi) → K4 (sukellus 4 s) → Uinti (12 s, soutaja
 // huutaa 1,5 s ennen) → Köysi (vartija pitää kiinnitysköydestä: Katkaise; armo 20 s, soutaja irrottaa itse) → K5 (12 s) → Valmis.
 // Myöhästyminen palauttaa Kello-vaiheeseen (kiinni → T10a köysilaskun alku); uusi kiinnitys aloittaa 45 s:n ikkunan alusta (ei jumia:
-// muuten kello jatkui ja jokainen uusi yritys myöhästyi heti kalliolle päästessä). Kertalaukaisut sovittimelle (nollaa itse).
+// muuten kello jatkui ja jokainen uusi yritys myöhästyi heti kalliolle päästessä). Kiinnijäänti köysilaskussa tai kalliolla (Kiinni) palauttaa
+// samoin Kello-vaiheeseen (LS2 8.10. M-jumitesti: vaihe jäi Laskuun, eikä köyttä voinut kiinnittää uudelleen). Kertalaukaisut sovittimelle.
 namespace Matkakirja.Linssit.Seikkailu
 {
     public enum PakoVaihe { Odottaa, Kello, Lasku, Kallio, K4, Uinti, Koysi, K5, Valmis }
@@ -34,6 +35,14 @@ namespace Matkakirja.Linssit.Seikkailu
         }
 
         public void LaskuValmis() { if (Vaihe == PakoVaihe.Lasku) Vaihe = PakoVaihe.Kallio; }
+
+        /// <summary>Kiinnijäänti (tyrmä → T10a köysilaskun alku): köysilaskussa tai kalliolla takaisin Kello-vaiheeseen; uusi kiinnitys aloittaa
+        /// ikkunan alusta. Muissa vaiheissa ei vaikutusta.</summary>
+        public bool Kiinni()
+        {
+            if (Vaihe != PakoVaihe.Lasku && Vaihe != PakoVaihe.Kallio) return false;
+            Vaihe = PakoVaihe.Kello; Myohastynyt = true; return true;
+        }
 
         public bool Katkaise() { if (Vaihe != PakoVaihe.Koysi) return false; Vaihe = PakoVaihe.K5; VaiheS = 0; Katkaistu = true; return true; }
 
