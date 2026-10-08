@@ -18,11 +18,8 @@ namespace Matkakirja.Natiivi
         static readonly List<(float D, Light L)> ehdokkaat = new List<(float, Light)>();
         static float seuraava;
 
-        /// <summary>Laatutaso nimeltä "Ultra" (Natiiviseppä 8.10.: M-laitteet).</summary>
-        public static bool UltraTaso
-        {
-            get { var n = QualitySettings.names; int i = QualitySettings.GetQualityLevel(); return i >= 0 && i < n.Length && n[i].Contains("Ultra"); }
-        }
+        /// <summary>Ultra-taso (Natiiviseppä 8.10.: Laatutaso.Ultra, M-laitteet).</summary>
+        public static bool UltraTaso => Laatutaso.Ultra;
 
         public static void Paivita(Transform juuri, Camera kamera)
         {

@@ -116,7 +116,9 @@ namespace Matkakirja.Natiivi
         /// linssin ✕ ja taulu päälle. Koko = ruutu × KuvaSkaala (Mobile_RPAssetin renderöintiskaala 0,8).
         /// </summary>
         public RenderTexture Kuva { get; private set; }
-        public const float KuvaSkaala = 0.8f;
+        /// <summary>Kuvan skaala (Natiiviseppä 8.10.): Ultra-tasolla 1,0, muuten 0,8; lämmön noustessa 0,7 (VarmistaKuva luo kuvan
+        /// uudelleen, kun koko muuttuu).</summary>
+        public static float KuvaSkaala => Lampo.Kuuma ? 0.7f : Laatutaso.Ultra ? 1f : 0.8f;
         public static event System.Action<RenderTexture> KuvaVaihtui;
         public static RenderTexture NykyinenKuva { get; private set; }
 
@@ -344,6 +346,7 @@ namespace Matkakirja.Natiivi
             // Aurinko/pistevalojen lepatus + kohdetilan mukainen varjoetäisyys (era 2b, DioraamaValot.cs).
             Valot?.Paivita(t, vahennettyLiike, Kamera);
             SeikkailuVarjot.Paivita(transform, Kamera);   // seikkailun liekkien pehmeät varjot (lähimmät)
+            if (Time.frameCount % 30 == 0) SeikkailuValot.LampoTarkistus();
         }
 
         /// <summary>"poikki dof 0|1" ja Hehku-ominaisuus ("poikki hehku 0|1") voivat vaihtaa tilaa milloin tahansa;
