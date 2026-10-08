@@ -481,7 +481,11 @@ namespace Matkakirja.Natiivi
                 maasto.url = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.url : null;
             }
             else if (data == Lahde.Google)
+            {
                 maasto = LuoTileset("Kaupunki Google 3D", GoogleAsset, GoogleSse, GoogleValimuistiNyt);
+                // Ilmaperspektiivi ja pilvien varjot (LS2 8.10.; renderöintitehoste, Map Tiles -ehdot: Karttaseppä 8.10. kohta 2).
+                if (KaupunkiIlmakeha.LaattaMateriaali() is Material im) maasto.opaqueMaterial = im;
+            }
             else
             {
                 maasto = LuoTileset("Kaupunki maasto", 1, MaastoSse, MaastoValimuisti);

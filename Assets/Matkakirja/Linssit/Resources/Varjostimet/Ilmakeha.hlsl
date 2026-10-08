@@ -13,6 +13,7 @@ float4 _IlmAurinko;     // xyz suunta aurinkoon (maailma), w = auringon zeniitti
 float4 _IlmParam;       // x kameran korkeus m, y valotus, z ilmaperspektiivin voima 0–1, w taivaan voima 0–1
 float4 _IlmPilviParam;  // x peitto 0–1, y varjon voima, z jakso m (uv1), w pilvikorkeus m
 float4 _IlmTuuli;       // xy pilvikentän siirtymä m (tuuli × aika)
+float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala)
 
 static const float IlmR = 6360.0, IlmRT = 6460.0, IlmApKm = 200.0;
 
@@ -74,7 +75,7 @@ void IlmIlmaperspektiivi(float etM, float3 d, out float3 sironta, out float3 lap
     lapaisy = lerp(SAMPLE_TEXTURE3D_LOD(_IlmApLapaisy, sampler_IlmApLapaisy, float3(u, v, IlmZ(t0)), 0).rgb, SAMPLE_TEXTURE3D_LOD(_IlmApLapaisy, sampler_IlmApLapaisy, float3(u, v, IlmZ(t1)), 0).rgb, th);
 }
 
-/// Pilvien peitto maailman pisteen yllä auringon suunnassa (Karttasepän pilvet-tiheys.json: kolme näytettä toiston estoon).
+/// Pilvien peitto pisteen p (metreinä georeferenssin origosta) yllä auringon suunnassa (Karttasepän pilvet-tiheys.json: kolme näytettä toiston estoon).
 float IlmPilvi(float3 p)
 {
     float korkeus = _IlmPilviParam.w;
