@@ -29,13 +29,15 @@ namespace Matkakirja.Linssit.Testit
             // LR v45l: osoitin erilliseen tiedostoon.
             var o = DioraamaData.Lue(@"{ ""id"": ""x"", ""nimi"": ""x"", ""versio"": 1, ""detaljit"": ""blender/materiaalit/detaljit.json"" }");
             Oleta.Sama("blender/materiaalit/detaljit.json", o.DetaljitTiedosto);
-            DioraamaData.LueDetaljitTiedosto(@"{ ""versio"": 1, ""koodaus"": ""lineaarinen"", ""detaljit"": { ""kivi"": { ""albedo"": ""a.jpg"", ""astc"": { ""albedo"": ""a-6x6.astcm"", ""normaali"": ""n-6x6.astcm"", ""karheus"": ""k-6x6.astcm"" }, ""m"": 1.5, ""voima"": 0.6, ""lahde"": ""x"", ""lisenssi"": ""CC0"" } } }", o);
+            DioraamaData.LueDetaljitTiedosto(@"{ ""versio"": 1, ""koodaus"": ""lineaarinen"", ""detaljit"": { ""kivi"": { ""albedo"": ""a.jpg"", ""astc"": { ""albedo"": ""a-6x6.astcm"", ""normaali"": ""n-6x6.astcm"", ""karheus"": ""k-6x6.astcm"", ""korkeus"": ""h-6x6.astcm"" }, ""korkeus"": ""h.jpg"", ""syvyys_m"": 0.03, ""m"": 1.5, ""voima"": 0.6, ""lahde"": ""x"", ""lisenssi"": ""CC0"" } } }", o);
             Oleta.Tosi(o.Detaljit.TryGetValue("kivi", out var ok) && ok.AstcKarheus == "k-6x6.astcm", "erillinen tiedosto jäsennetty");
+            Oleta.Tosi(ok.Korkeus == "h.jpg" && ok.AstcKorkeus == "h-6x6.astcm" && System.Math.Abs(ok.SyvyysM - 0.03) < 1e-9, "POM: korkeus ja syvyys_m (LR v45s)");
+            Oleta.Tosi(r.Detaljit["kivi"].SyvyysM == 0 && r.Detaljit["kivi"].Korkeus == null, "ilman korkeutta ei POM:ia");
         }
 
         [Testi] static void KavelyosienValoatlakset()
         {
-            // LR v45r: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
+            // LR v45s: 9 kävelyosalla valoatlas paketin juuresta (blender/kavely/valot/…), ASTC-vastineineen; Tila.ValoVain.
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0;
             foreach (var o in d.Osat.Values)
@@ -49,9 +51,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(9, n);
         }
 
+        [Testi] static void HuonekohtainenLataus()
+        {
+            // PT 9.10.: keittiössä ladattuina keittiö ja sen naapurit, ei tyrmää eikä palatsia; tuntematon osa = ei rajausta.
+            var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
+            var a = new System.Collections.Generic.HashSet<string>();
+            d.AktiivisetOsat("keittio-G102", a);
+            Oleta.Tosi(a.Contains("keittio-G102") && a.Count >= 2, "keittiö ja naapuri(t): " + string.Join(", ", a));
+            Oleta.Tosi(!a.Contains("tyrma-E101"), "tyrmä ei keittiön naapuri");
+            foreach (var n in a) Oleta.Tosi(n == "keittio-G102" || d.Osat["keittio-G102"].Naapurit.Contains(n) || d.Osat[n].Naapurit.Contains("keittio-G102"), n + " on naapuri");
+            d.AktiivisetOsat(null, a);
+            Oleta.Sama(0, a.Count);
+        }
+
         [Testi] static void Rekvisiitta()
         {
-            // LR v45r: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
+            // LR v45s: 46 rekvisiittamerkkiä, glb ja osa jokaisella; ei esineiden eikä reittien päällä (sijoittelu LR:n).
             var d = Matkakirja.Linssit.Testit.Huonesimulaatio.Data;
             int n = 0; var ohitetut = new System.Collections.Generic.List<string>();
             foreach (var m in d.Lajia("rekvisiitta"))

@@ -87,6 +87,16 @@ namespace Matkakirja.Linssit.Seikkailu
         /// <summary>Rekvisiitta peittää poimittavan esineen (alle 0,25 m vaakatasossa ja 0,5 m pystyssä; LR v45p: kulho tarjottimen päällä):
         /// silloin sitä ei piirretä, jottei koriste estä esineen napautusta.</summary>
         public const double RekvisiittaVaraM = 0.25;
+
+        /// <summary>Huonekohtainen lataus (PT 9.10.): osa ja sen naapurit kumpaan suuntaan tahansa (KavelyOsa.Naapurit voi olla yksisuuntainen).</summary>
+        public void AktiivisetOsat(string osa, System.Collections.Generic.ISet<string> ulos)
+        {
+            ulos.Clear();
+            if (osa == null) return;
+            ulos.Add(osa);
+            if (Osat.TryGetValue(osa, out var o)) foreach (var n in o.Naapurit) ulos.Add(n);
+            foreach (var kv in Osat) if (kv.Value.Naapurit.Contains(osa)) ulos.Add(kv.Key);
+        }
         public bool RekvisiittaPeittaa(KavelyMerkki r)
         {
             foreach (var e in Lajia("esine"))
