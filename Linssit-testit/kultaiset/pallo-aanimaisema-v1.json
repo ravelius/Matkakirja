@@ -1,0 +1,102 @@
+{
+ "versio": 1,
+ "kuvaus": "Pallon äänimaisema kehityskaupungeille (Tausta-säädin). Silmukat soivat jatkuvasti, kerta-äänet harvakseltaan.",
+ "taso": "−23 LUFS (silmukat kolmen kierron yli)",
+ "kaupungit": {
+  "tukholma": [
+   {
+    "tunnus": "humina",
+    "aani": "tukholma/humina.mp3",
+    "silmukka": true,
+    "kesto_s": 60.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -8.9,
+    "lahde": "Freesound",
+    "nimi": "AMBTraf_Calm City traffic.Clean.Distance 100m",
+    "tekija": "newlocknew",
+    "lisenssi": "CC BY 4.0",
+    "url": "https://freesound.org/s/711130/"
+   },
+   {
+    "tunnus": "lokit",
+    "aani": "tukholma/lokit.mp3",
+    "silmukka": true,
+    "kesto_s": 45.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -4.9,
+    "lahde": "Freesound",
+    "nimi": "seagulls Le Conquet harbour pier",
+    "tekija": "bruno.auzet",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/829207/"
+   },
+   {
+    "tunnus": "vene-ohi",
+    "aani": "tukholma/vene-ohi.mp3",
+    "silmukka": false,
+    "kesto_s": 38.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -9.2,
+    "lahde": "Freesound",
+    "nimi": "Moottorivene, kumivene, ohi / Rubber boat passing",
+    "tekija": "YleArkisto",
+    "lisenssi": "CC BY 4.0",
+    "url": "https://freesound.org/s/348843/"
+   },
+   {
+    "tunnus": "hoyrypilli",
+    "aani": "tukholma/hoyrypilli.mp3",
+    "silmukka": false,
+    "kesto_s": 6.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -10.7,
+    "lahde": "Freesound",
+    "nimi": "Long Steamboat Whistle",
+    "tekija": "Robo9418",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/840325/"
+   },
+   {
+    "tunnus": "kellot",
+    "aani": "tukholma/kellot.mp3",
+    "silmukka": false,
+    "kesto_s": 54.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -4.5,
+    "lahde": "Freesound",
+    "nimi": "ChurchBell from pasture city",
+    "tekija": "klankbeeld",
+    "lisenssi": "CC BY 4.0",
+    "url": "https://freesound.org/s/269417/"
+   }
+  ],
+  "pariisi": [
+   {
+    "tunnus": "humina",
+    "aani": "pariisi/humina.mp3",
+    "silmukka": true,
+    "kesto_s": 60.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -4.6,
+    "lahde": "Freesound",
+    "nimi": "ambiance rue stereo",
+    "tekija": "transeman",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/513729/"
+   },
+   {
+    "tunnus": "kellot",
+    "aani": "pariisi/kellot.mp3",
+    "silmukka": false,
+    "kesto_s": 60.0,
+    "LUFS": -23.0,
+    "huippu_dBFS": -6.2,
+    "lahde": "Freesound",
+    "nimi": "batignolles_bells",
+    "tekija": "milo",
+    "lisenssi": "CC0 1.0",
+    "url": "https://freesound.org/s/164776/"
+   }
+  ]
+ }
+}
