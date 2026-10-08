@@ -1,3 +1,14 @@
+# TILANNE 8.10. klo 21.2x (PT:n tauko 21.25–22.10, 5 h -raja)
+
+- **Juna 167 siirtyi** (omistaja 21.2x), TF noin 23.30–24.00.
+  `kaudet/ohjaus-talvi3-2240.sh` (PID 86404) perii 21.45:n STOPin 21.46 (osat jatkavat tai käynnistyvät uudelleen v2-skriptillä) ja asettaa uuden STOPin 22.40.
+  Syy: Laitetestaajan kaappaus 22.40–23.10 ja juna 167 noin 23.15.
+  **Jatko käsin**, kun Julkaisija ilmoittaa TF 167:n ladatuksi: poista osa1/STOP ja osa2/STOP, sitten perl setsid aja-talvi3-osa-v2.sh. Varmuusjatko klo 00.00 (jatko-talvi3-varmuus.sh).
+- Vesi on ämpärissä: Tukholma vesi/index.json, Pariisi vesi/index-v2.json (todennettu 200).
+- Klo 22.10 jälkeen: tarkista talviajo ja vahtiloki. Jono: LS2:n kuvapari, LS1:n korkeuslukija. Uusia raskaita ajoja ei aloiteta ennen TF 167:ää.
+
+---
+
 # TILANNE 8.10. klo 21.0x
 
 - **Kehityskaupungit TUKHOLMA ja PARIISI** (omistaja 20.4x) tehdään ensin mahdollisimman hyviksi. Muu Eurooppa odottaa omistajan päätöstä.
