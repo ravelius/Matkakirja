@@ -1539,9 +1539,12 @@ namespace Matkakirja.Natiivi
             string atlas = hamara ? tila.HamaraAtlas : tila.ValoAtlas, atlasPuoli = hamara ? tila.HamaraAtlasPuoli : tila.ValoAtlasPuoli;
             string astcTaysi = hamara ? tila.HamaraAtlasAstc : tila.ValoAtlasAstc, astcPuoliP = hamara ? tila.HamaraAtlasAstcPuoli : tila.ValoAtlasAstcPuoli;
             bool puoli = PieniLaite() && !string.IsNullOrEmpty(atlasPuoli);
-            string polku = puoli ? atlasPuoli : atlas;
-            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli), JPEG varalla.
-            string astcPolku = puoli ? astcPuoliP : astcTaysi;
+            // 8K (LR v45o, juna 169): Ultra-tasolla (M-sarja) iso atlas, jos viety; muuten kuten ennen (2k / puolikas).
+            string astcIso = hamara ? tila.HamaraAtlasAstcIso : tila.ValoAtlasAstcIso, jpgIso = hamara ? tila.HamaraAtlasIso : tila.ValoAtlasIso;
+            bool iso = !puoli && Laatutaso.Ultra && !string.IsNullOrEmpty(astcIso);
+            string polku = iso && !string.IsNullOrEmpty(jpgIso) ? jpgIso : puoli ? atlasPuoli : atlas;
+            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli / astcIso), JPEG varalla.
+            string astcPolku = iso ? astcIso : puoli ? astcPuoliP : astcTaysi;
             if (!string.IsNullOrEmpty(astcPolku))
             {
                 // Linnan piikit (iPad 2.10.): 8 valoatlasta (4096² ASTC, ~22 Mt) latautui peräkkäin kukin yhdessä ruudussa →
