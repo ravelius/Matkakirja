@@ -598,6 +598,10 @@ namespace Matkakirja.Natiivi
             palloKerrokset = new Latauskuva(siirtyma);
             palloKerrokset.Juuri.RemoveFromHierarchy();
             siirtyma.Insert(siirtyma.IndexOf(siirtymaKuva) + 1, palloKerrokset.Juuri);
+            // Kerrokset levylle valmiiksi (laitteen pysty- ja vaakarajaus), jotta ne ehtivät jo ensimmäiseen siirtymään.
+            int pysty = Matkakirja.Linssit.LatausLiike.Rajausindeksi(Mathf.Min(Screen.width, Screen.height), Mathf.Max(Screen.width, Screen.height));
+            foreach (int r in new[] { pysty, 2 })
+                foreach (var k in new[] { "tausta-maaankkuri", "kori", "kupu" }) Kuvat.Esilataa(PalloKerrosUrl(r, k));
             // Tumma liuku leveän vaakaruudun alaosaan (4:3-rajauksesta näkyy vain kaista): kuvan oma alasävy (Tyylikirja.Kehys.Bg).
             siirtymaLiuku = Rakenne.El(null, siirtyma, PickingMode.Ignore);
             siirtymaLiuku.style.position = Position.Absolute;
@@ -827,8 +831,11 @@ namespace Matkakirja.Natiivi
         // ne korvaavat stillin (häivytys), muuten still lähentyy kuten ennen. Kupu heiluu yläosastaan ±0,6° / 3 pt / 7,5 s, kori ±0,5°
         // / 2 pt eri vaiheessa; 4 riippuköyttä korin kulmista kuvun alareunaan ja ankkuriköysi korista maahan vektoreina (Latauskuva.
         // Koysi). Kiinnityspisteet Sisältökirjurin mittauksesta (alfa-bbox, osuudet koko kuvasta, sisaltokirjuri-vertailu/
-        // pallo-kiinnityspisteet-osuuksina.json). Polku 20261008b = Codexin korjattu tausta (saumaton); puuttuessa still pysyy.
-        const string PalloKerrosJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/20261008b/latauskuva-pallo-";
+        // pallo-kiinnityspisteet-osuuksina.json). Tausta polulta 20261008b (Codexin korjattu, saumaton; Sisältökirjuri tarkisti 8.10.),
+        // kupu ja kori 20261008; puuttuessa still pysyy.
+        const string PalloKerrosJuuri = "https://media.matkakirja.app/julisteet/latauskuva-kuumailmapallo-kerrokset/";
+        static string PalloKerrosUrl(int rajaus, string kerros) =>
+            PalloKerrosJuuri + (kerros == "tausta-maaankkuri" ? "20261008b" : "20261008") + "/latauskuva-pallo-" + PalloKerrosRajaus[rajaus] + "-" + kerros + ".png";
         static readonly string[] PalloKerrosRajaus = { "iphone", "ipad-pysty", "ipad-vaaka" };
         /// <summary>Rajauksittain: kuvun 4 ja korin 4 kiinnityspistettä (takavasen, takaoikea, etuvasen, etuoikea), kuvun ja korin
         /// kääntöpiste, ankkuriköyden korin piste ja maa-ankkuri.</summary>
@@ -859,7 +866,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < 3; i++)
             {
                 int j = i;
-                Kuvat.Hae(PalloKerrosJuuri + PalloKerrosRajaus[r] + "-" + nimet[i] + ".png", t =>
+                Kuvat.Hae(PalloKerrosUrl(r, nimet[i]), t =>
                 {
                     if (kerta != palloKerrosKerta || !palloNakyy) return;
                     if (palloKerrosKuvat[j] != null && palloKerrosKuvat[j] != t) Kuvat.Vapauta(palloKerrosKuvat[j]);
