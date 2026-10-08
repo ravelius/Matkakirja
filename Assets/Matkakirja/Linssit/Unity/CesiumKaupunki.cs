@@ -486,6 +486,7 @@ namespace Matkakirja.Natiivi
             {
                 maasto = LuoTileset("Kaupunki Google 3D", GoogleAsset, GoogleSse, GoogleValimuistiNyt);
                 // Ilmaperspektiivi ja pilvien varjot (LS2 8.10.; renderöintitehoste, Map Tiles -ehdot: Karttaseppä 8.10. kohta 2).
+                if (georef != null) KaupunkiIlmakeha.Kaupunki(georef.latitude, georef.longitude);   // kehityskaupungeissa oletus päällä
                 if (KaupunkiIlmakeha.LaattaMateriaali() is Material im) maasto.opaqueMaterial = im;
             }
             else

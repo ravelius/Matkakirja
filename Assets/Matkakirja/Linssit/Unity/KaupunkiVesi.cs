@@ -20,7 +20,9 @@ namespace Matkakirja.Natiivi
 {
     public sealed class KaupunkiVesi
     {
-        public static bool Paalla;
+        /// <summary>Asetuksen pakotus "vesi 0|1"; null = oletus: päällä OletusKohteissa (omistaja 21.1x: Tukholman elävä vesi).</summary>
+        public static bool? Pakotettu;
+        public static string[] OletusKohteet = { "tukholma" };
         public static string VesiJuuri = "https://media.matkakirja.app/vesi/";
         public const float LahiM = 3000f, KaukoM = 20000f, PaivitysM = 400f;
         public static float NostoM = 0.4f;
@@ -45,7 +47,7 @@ namespace Matkakirja.Natiivi
         public void Avaa(Transform vanhempi, double lat, double lon, int kerros)
         {
             Sulje();
-            if (!Paalla || vanhempi == null) return;
+            if (Pakotettu == false || vanhempi == null) return;
             this.kerros = kerros; vanhempi0 = vanhempi;
             int tama = ++avaus;
             LinssiOhjain.Instanssi?.StartCoroutine(Lataa(JuuriUrl(), lat, lon, tama));
@@ -77,7 +79,7 @@ namespace Matkakirja.Natiivi
                 }
                 else kirjaa?.Invoke($"kaupunki: vesi: index.json ei latautunut ({r.responseCode})");
             }
-            if (k == null || tama != avaus) yield break;
+            if (k == null || tama != avaus || Pakotettu == null && Array.IndexOf(OletusKohteet, k) < 0) yield break;
             string pohja = juuriUrl + k;
             VesiVerkko l = null, ka = null; (double Lat, double Lon)? origo = null;
             foreach (var (ruutu, lahiTaso) in new[] { ("6m", true), ("16m", false) })

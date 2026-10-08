@@ -5,14 +5,20 @@
 //  3) CesiumKaupunki antaa Googlen tilesetille LaattaMateriaali()n (IlmakehaLaatat: ilmaperspektiivi ja pilvien varjot), kun Paalla.
 // Map Tiles -ehdot: renderöintitehosteet (varjostus, sumu, ilmakehä) eivät ole rajoitettuja, kuten Cesiumin omat; ei sisällön
 // tunnistusta, ei tallennusta, krediitit ennallaan (Karttaseppä 8.10., vesimaski-google-ehdot-20261008.md kohta 2).
-// "poikki kaupunki ilmakeha 0|1" (oletus pois, kunnes kuvapari hyväksytty); laattamateriaali vaihtuu seuraavalla avauksella.
+// OLETUS (omistaja 21.1x, PT): päällä kehityskaupungeissa (Kehityskaupungit: Tukholma, Pariisi), muualla pois; asetus "ilmakeha 0|1"
+// (kaupunki-kuva-asetukset.txt) pakottaa. Varjostimen ollessa rikki (isSupported false) materiaalia ei käytetä (Google ei muutu).
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class KaupunkiIlmakeha
     {
-        public static bool Paalla;
+        /// <summary>Asetuksen pakotus (null = kehityskaupungeissa päällä).</summary>
+        public static bool? Pakotettu;
+        public static bool Paalla => Pakotettu ?? kehitys;
+        static bool kehitys;
+        /// <summary>Nykyinen kaupunki (kameran georeferenssi): kehityskaupungissa oletus päällä.</summary>
+        public static void Kaupunki(double lat, double lon) => kehitys = Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon) != null;
         /// <summary>Valotus (radianssi × valotus ennen sävytystä; Karttaseppä: 10–30), ilmaperspektiivin voima, pilvien varjon voima.</summary>
         public static float Valotus = 20f, ApVoima = 1f, VarjoVoima = 0.45f, PilviJaksoM = 30000f, PilviKorkeusM = 2000f;
         static float voima;
@@ -53,8 +59,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Joka kehys (KaupunkiKuva): kameran korkeus maasta (m), auringon korkeus ja atsimuutti (astetta; x itä, z pohjoinen),
         /// pilvisyys 0–1, tuulen siirtymä (m), maailman mittakaava (maailmayksikköä metriä kohden, georeferenssin skaala).</summary>
-        public static void Paivita(float korkeusM, float aurinkoKorkeusAst, float aurinkoAtsimuuttiAst, float pilvisyys, Vector2 tuuliM, float mitta)
+        public static void Paivita(double lat, double lon, float korkeusM, float aurinkoKorkeusAst, float aurinkoAtsimuuttiAst, float pilvisyys, Vector2 tuuliM, float mitta)
         {
+            Kaupunki(lat, lon);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
             if (voima <= 0f && !Paalla) return;
             if (!Lataa()) { voima = 0f; return; }
@@ -72,7 +79,8 @@ namespace Matkakirja.Natiivi
         {
             if (!Paalla || !Lataa()) return null;
             var sh = Shader.Find("Matkakirja/Linssit/IlmakehaTaivas");
-            return sh != null ? new Material(sh) { name = "KaupunkiKuva:ilmakehä" } : null;
+            if (sh == null || !sh.isSupported) { Debug.Log("MATKAKIRJA kaupunki: ilmakehän taivasvarjostin ei käytettävissä, vanha kupoli"); return null; }
+            return new Material(sh) { name = "KaupunkiKuva:ilmakehä" };
         }
 
         /// <summary>Googlen tilesetin materiaali (IlmakehaLaatat: Cesiumin unlit-ominaisuudet + ilmaperspektiivi ja pilvien varjot).</summary>
@@ -81,7 +89,8 @@ namespace Matkakirja.Natiivi
             if (!Paalla || !Lataa()) return null;
             if (laattaMat != null) return laattaMat;   // yksi materiaali koko istunnolle (LS1:n katselmointi: ei uutta joka avauksella)
             var sh = Shader.Find("Matkakirja/Linssit/IlmakehaLaatat");
-            return laattaMat = sh != null ? new Material(sh) { name = "CesiumKaupunki:ilmakehä" } : null;
+            if (sh == null || !sh.isSupported) { Debug.Log("MATKAKIRJA kaupunki: ilmakehän laattavarjostin ei käytettävissä, Cesiumin oma"); return null; }
+            return laattaMat = new Material(sh) { name = "CesiumKaupunki:ilmakehä" };
         }
         static Material laattaMat;
 
