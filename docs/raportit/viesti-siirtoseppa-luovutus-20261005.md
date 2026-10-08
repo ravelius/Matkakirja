@@ -35,6 +35,14 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 8.10. 09.54 — JUNA 165 = becd20404 (BUILD 8adddd2c, varjostin Metal OK); JUNA 166 -EHDOKAS historia-valot @ 0d5c33250
+
+- Juna 166: PelattavaPalaHash = 92f6029878e2011b (v44z, vuoden 1499 linna) Ydin PelattavaPala-vakiosta + PelattavaPalaTestit (sitoo
+  simulaation kultaisiin). HUOM: pelattava pala lukee koodiin kiinnitettyä pakettia, EI uusin.json:ia → vanhat appit pysyvät v44s:ssä;
+  osoitinta (uusin.json 1a1857e0) ei vaihdeta. Versioitu osoitin uusin-v2.json tehtiin ja jätettiin pois (PT: turha 404 CDN:ssä).
+- historia-m @ e0c46d263 (948/948) = M-osa + historia-valot.
+- SendMessage-raja (10/kierros) täyttyi; varakanava mcp__ccd_session_mgmt__send_message (hookin ohje).
+
 ## TILA 8.10. 09.44 — JUNA 165 KUITTAUSPYYNTÖ: siirtoseppa/historia-juna165 @ becd20404 (wt/proto-siirtoseppa-kello)
 
 - Juna 164 masterissa (df24a24d BUILD 164). Juna 165 = historia-valot 71af4648 + master: LS2 kappeli-Ydin + kytkentä, saumat/alttarikynttilä,
