@@ -35,7 +35,17 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 00.4x (uusin)
+## TILA 9.10. klo 01.3x (uusin)
+- TAIVAS: jälkeen-kuva junasta 168 OK (PT kuittasi); lokit/linssiseppa2-taivas-jalkeen-0100/kuvapari-*.png.
+- PILVIKERROS: käännös 694b0077 (ilmakeha-170 masterin päälle; app-kopio lokit/linssiseppa2-app-170-694b00776), pilvet 1 näkyy
+  (lokit/linssiseppa2-pilvet-0115/pilvet1); pilvet0-ajo epäonnistui (app ei käynnistynyt), vertailukohtana jalkeen168. Kytkin pois.
+- OMAT 3D-MALLIT: raportti docs/raportit/pallo-omat-mallit-pariisi-tukholma-20261009.md (884277ae6), kuvat lokit/linssiseppa2-kohteet-0100
+  (+ mallilahteet-liite.md). Odottaa PT:n/omistajan päätöstä ostoista (Notre-Dame ~20 USD, Riddarholmen ~15 USD).
+- MUISTI: muistitesti-168 20bea87c6 (v45u, hahmojen ASTC oikein): Ultra keittiö 1010 / tupa 1019 / tyrmä 963, pinnat 440/450.
+- VIKA löydetty: junat 168/170 pala sulkeutuu latausvirheeseen (hahmot 10/13) → korjaus 1b43eb127 junan 169 rungossa (Siirtoseppä).
+  UI-stillien ja pala-kuvien uusinta junan 169 simukäännöksellä (pyydetty Julkaisijalta).
+
+## TILA 9.10. klo 00.4x
 - TAIVAAN RAIDAT (PT kuittasi junaan 168): proto linssiseppa2/ilmakeha-168 989685f09 (= 911f772d8 + dither eca114064 + vanha
   DioraamaTaivas 989685f09, Dither.hlsl); syy B10G11R11-HDR-puskurin 5-bittinen sininen. Ennen-kuva lokit/linssiseppa2-taivas-ennen-0015
   (Sacré-Cœur, JALKEEN="opas kamera 48.8867 2.3431 700 76 350 175"); JÄLKEEN-kuva junan 168 simukäännöksestä samalla ajolla.
