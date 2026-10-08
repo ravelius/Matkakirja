@@ -6,6 +6,15 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 8.10. klo 17.3x (JATKA TÄSTÄ)
+
+Junassa 165: säätila 9417aa6ae. Junassa 166 (kuitattu): latauskuvat-liike a7953991e (pallon still Ken Burns).
+KUITTAUSTA ODOTTAA: natiivi-ui/linna-latauskuva 24372c44d (a7953991e:n päällä; Olavinlinnan nimiruutu: tausta+usva+vene R2
+julisteet/olavinlinna-latauskuva/20261008, Codex 3910eb5c8; Latauskuva.TaustaLahentyy nyt koko juuri). Web-PR #4208
+(kontekstikuvakkeiden käsi-verbit M-osa) — mergeä vihreänä. Luettelo docs/raportit/latauskuvat-liike-20261008.md (linja: vain
+3D-maailmat, #4/#5 pois). Pallon kerrokset Codexilta → LS1 kytkee. Worktreet: wt/proto-natiivi-ui-tkpariteetti (linna-latauskuva),
+wt/natiivi-ui-kontekstiverbit (poista #4208:n mergen jälkeen).
+
 ## 8.10. klo 11.0x: OLAVINLINNAN LATAUSKUVA (omistaja hyväksyi 10.5x) — ODOTTAA KUVIA
 
 Sisältökirjuri tilaa Codexilta kerrokset (PÄIVITETTY Päätoimittaja 8.10.): tausta (linna 1499, salmi, ilman venettä; valinnainen
