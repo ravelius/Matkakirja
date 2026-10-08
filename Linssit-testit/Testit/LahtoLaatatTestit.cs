@@ -144,6 +144,54 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && t > OpasSilmukka.LahtoOdotusMaxS - 0.1, $"odotti laattoja ({t:F2} s)");
         }
 
+        // Päätoimittaja 8.10. 08.3x: silmän nopeus (m/s) nousee ja hidastuu 10 → 90 % vähintään 3 s:ssa, eikä kuvan nopeus kasva
+        // laskeutuessa (Laitetestaaja: Louvreen tultaessa näennäinen nopeus kasvoi ennen pysähdystä).
+        [Testi] static void LennonRampitJaKuvanNopeus()
+        {
+            OpasSilmukka.PalloLento = true;
+            try
+            {
+                foreach (double m in new[] { 700.0, 1363, 3000 })
+                {
+                    double lat0 = 48.853, lon0 = 2.3498, lat1 = lat0 + m / 111320.0 * 0.6, lon1 = lon0 - m / 73000.0 * 0.8;
+                    var a = new Kuvakulma(lat0, lon0, 420, 58, 250, 40);
+                    var b = new Kuvakulma(lat1, lon1, 350, 58, 300, 60);
+                    double T = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(lat0, lon0, lat1, lon1)), dt = 1 / 60.0;
+                    var v = new List<double>(); var vk = new List<double>(); var et = new List<double>();
+                    var e = OpasKuvaus.KameraPaikka(a, lat0, lon0); var edK = a;
+                    for (double t = dt; t <= T + 1e-9; t += dt)
+                    {
+                        var k = OpasKuvaus.Lennossa(a, b, t / T); var p2 = OpasKuvaus.KameraPaikka(k, lat0, lon0);
+                        v.Add(KierrosLento.EtaisyysM(edK.Lat, edK.Lon, k.Lat, k.Lon) / dt); edK = k;   // kulkunopeus: katsepisteen maajälki
+                        vk.Add(Math.Sqrt((p2.e - e.e) * (p2.e - e.e) + (p2.n - e.n) * (p2.n - e.n) + (p2.u - e.u) * (p2.u - e.u)) / dt); et.Add(k.EtaisyysM); e = p2;
+                    }
+                    var (nousu, hidastus, huippu, _) = OpasKuvaus.Telemetria(v, et, dt);
+                    var (_, _, _, kasvu) = OpasKuvaus.Telemetria(vk, et, dt);   // kuvan nopeus kokonaisliikkeestä
+                    Oleta.Tosi(nousu >= 3 && hidastus >= 3, $"{m} m: nousu {nousu:F1} s, hidastus {hidastus:F1} s (≥ 3), huippu {huippu:F0} m/s, kesto {T:F1} s");
+                    Oleta.Tosi(kasvu < 0.03, $"{m} m: kuvan nopeus ei kasva huipun jälkeen ({kasvu:P1})");
+                }
+            }
+            finally { OpasSilmukka.PalloLento = false; }
+        }
+
+        // Omistaja 8.10. ~09.0x: kierroksen aloitus yleiskuvasta laskeutuu rauhallisesti suoraan 1. kohteeseen (ei pysähdystä arviokehyksessä).
+        [Testi] static void AvauksenLaskeutuminenJatkuuSuoraanKohteeseen()
+        {
+            var s = new OpasSilmukka(OpasSilmukka.Avauskuva(48.8566, 2.3522));
+            var p = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => p.Add((n, t));
+            int vaihtui = 0; s.LentoKohdeVaihtui += _ => vaihtui++;
+            s.Aloita("Pariisi");
+            s.AloitaKierros(new List<(string, double, double)> { ("Notre-Dame", 48.8530, 2.3499), ("Louvre", 48.8606, 2.3376) });
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && s.LentoKestoS >= OpasSilmukka.AvausLaskuS - 1e-9, $"laskeutuminen alkoi ({s.Vaihe}, {s.LentoKestoS:F1} s)");
+            for (int i = 0; i < 240; i++) s.Paivita(0.05, _ => 35);   // 12 s: worker vastaa kesken laskeutumisen
+            s.Vastaus(p[^1].n, K("Notre-Dame", 48.8530, 2.3499));
+            bool odotti = false;
+            for (int i = 0; i < 600 && s.Vaihe != OpasVaihe.Puhuu; i++) { s.Paivita(0.05, _ => 35); if (s.Vaihe == OpasVaihe.Odottaa) odotti = true; }
+            Oleta.Tosi(vaihtui == 1 && !odotti, $"kohde vaihtui lennossa ({vaihtui}), ei pysähdystä välissä ({odotti})");
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Notre-Dame", $"perillä kohteessa ({s.Vaihe} {s.Nykyinen?.Id})");
+        }
+
         [Testi] static void ReitinValinakymatEsiladataanPysahdyksellaJaLennossa()
         {
             var s = AssaBValmiina(() => 0.5);

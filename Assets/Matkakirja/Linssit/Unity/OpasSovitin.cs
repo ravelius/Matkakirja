@@ -274,6 +274,7 @@ namespace Matkakirja.Natiivi
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
+            silmukka.LentoKohdeVaihtui += k => o.Kirjaa($"opas: avauksen laskeutuminen jatkuu suoraan kohteeseen {k.Nimi} (kehys vaihtuu {OpasSilmukka.AvausVaihtoS:F0} s, lento {silmukka.LentoKestoS:F1} s, kulunut {silmukka.VaiheAika:F1} s)");
             silmukka.Torjuttu += (n, pelaajalta) =>
             {
                 o.Kirjaa($"opas: {n} on sallitun 3D-alueen ulkopuolella, ei lennetä{(pelaajalta ? " (siltalause)" : "")}");
@@ -371,6 +372,13 @@ namespace Matkakirja.Natiivi
             kori.Kayta(nakymaAuki, kaupunki.Kamera);
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
+            // Linssireitti (omistaja 8.10. ~09.0x): sama esilataus siirtoruudun aikana (palkki kattaa myös 1. kohteen), ilman avausnäkymän kohdistusta.
+            if (!Kaupunkitila && silmukka.Siirtymassa && silmukka.EsiKohde == null && esiKohdeKaupunki != Aloituskaupunki
+                && (kierrosKohteet ?? kohteet) is List<OpasTaky> lk && lk.Count > 0 && kohteetKaupunki == Aloituskaupunki)
+            {
+                esiKohdeKaupunki = Aloituskaupunki;
+                silmukka.EsiKohde = (lk[0].Nimi, lk[0].Lat, lk[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {lk[0].Nimi} (linssireitti, siirron aikana)");
+            }
             if (Kaupunkitila && silmukka.PyynnotSeis && silmukka.EsiKohde == null && (kierrosKohteet ?? kohteet) is List<OpasTaky> ek && ek.Count > 0 && kohteetKaupunki == Aloituskaupunki)
             {
                 silmukka.EsiKohde = (ek[0].Nimi, ek[0].Lat, ek[0].Lon); o.Kirjaa($"opas: esilataus ensimmäinen kohde {ek[0].Nimi}");
@@ -452,7 +460,8 @@ namespace Matkakirja.Natiivi
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
-            KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
+            // Kohde vasta korostuksen syttyessä (video4 14,3–16,2 s: varjostin muutti kohdealuetta nollavoimallakin lennon alussa).
+            KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
             // Kohdevalo ja rengas häivyttyvät silmukan korostusosuuden mukaan (sammuvat ennen lähtöä, syttyvät saapumisesta).
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = (float)silmukka.KorostusOsuus;
             LatausKuvaPaivita();
@@ -465,6 +474,7 @@ namespace Matkakirja.Natiivi
             // Reitin välinäkymät (Päätoimittaja 8.10. 07.4x: sumea kortteli lennon alussa); 0 näkymää → reittikamerat pois.
             kaupunki.AsetaReittikamerat(reittiNakymat, silmukka.ReittiEsilataus(MaaKorkeus, reittiNakymat));
             EsilataaKortit();
+            Telemetria(ennen);
             // Lähdön valmistelu lokiin kerran sekunnissa (laattaodotuksen säätö).
             if (silmukka.LahtoValmisteilla && Time.realtimeSinceStartup - lahtoLokiAika >= 1f)
             {
@@ -628,7 +638,40 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Seuraavan kohteen (lennossa nykyisen) yksityiskohtakuvat tekstuureiksi valmiiksi (YksityiskohtaKortti.Esilataa).</summary>
-        string esiKortitId;
+        string esiKortitId, esiKohdeKaupunki;
+
+        // LENNON TELEMETRIA (Päätoimittaja 8.10. 08.3x): ruuduittain kulkunopeus (katsepisteen maajälki m/s), kuvan nopeus
+        // (silmän nopeus / katse-etäisyys, rad/s), kääntönopeus (°/s) ja silmän korkeus; perillä yhteenveto (OpasKuvaus.Telemetria).
+        readonly List<double> telV = new List<double>(), telVk = new List<double>(), telEt = new List<double>();
+        Kuvakulma? telEd; (double e, double n, double u) telSilma; double telKaanto, telAika; string telKohde;
+        void Telemetria(OpasVaihe ennen)
+        {
+            bool lentaa = silmukka.Vaihe == OpasVaihe.Lentaa && !silmukka.Siirtymassa && !silmukka.AvausTauolla;
+            var a = silmukka.Asento; float dt = Time.unscaledDeltaTime;
+            if (lentaa && dt > 0)
+            {
+                if (telEd == null) { telV.Clear(); telVk.Clear(); telEt.Clear(); telKaanto = 0; telAika = 0; telKohde = silmukka.Nykyinen?.Nimi; telSilma = OpasKuvaus.KameraPaikka(a, a.Lat, a.Lon); telEd = a; telLat0 = a.Lat; telLon0 = a.Lon; return; }
+                var ed = telEd.Value; var silma = OpasKuvaus.KameraPaikka(a, telLat0, telLon0);
+                double v = KierrosLento.EtaisyysM(ed.Lat, ed.Lon, a.Lat, a.Lon) / dt;
+                double de = silma.e - telSilma.e, dn = silma.n - telSilma.n, du = silma.u - telSilma.u;
+                double vk = Math.Sqrt(de * de + dn * dn + du * du) / dt, k = Math.Abs(KierrosLento.Kiedo(a.Suuntima - ed.Suuntima)) / dt;
+                telAika += dt; telV.Add(v); telVk.Add(vk); telEt.Add(a.EtaisyysM); telKaanto = Math.Max(telKaanto, k);
+                o.Kirjaa($"opas: telemetria {telAika:F2} s kulku {v:F1} m/s kuva {vk / Math.Max(1, a.EtaisyysM):F3} rad/s kääntö {k:F1} °/s korkeus {silma.u:F0} m");
+                telSilma = silma; telEd = a;
+            }
+            else if (telEd != null)
+            {
+                telEd = null;
+                if (telV.Count > 10)
+                {
+                    var (nousu, hidastus, huippu, _) = OpasKuvaus.Telemetria(telV, telEt, telAika / telV.Count);
+                    var (_, _, huippuK, kasvu) = OpasKuvaus.Telemetria(telVk, telEt, telAika / telV.Count);
+                    o.Kirjaa($"opas: telemetria yhteenveto {telKohde}: kesto {telAika:F1} s, kulku huippu {huippu:F0} m/s, nousu 10→90 % {nousu:F1} s, hidastus 90→10 % {hidastus:F1} s, "
+                        + $"silmä huippu {huippuK:F0} m/s, kuvan nopeuden kasvu huipun jälkeen {kasvu:P1}, kääntö enintään {telKaanto:F1} °/s");
+                }
+            }
+        }
+        double telLat0, telLon0;
         float lahtoLokiAika;
         void EsilataaKortit()
         {
