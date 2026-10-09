@@ -144,7 +144,7 @@ namespace Matkakirja.Natiivi
             ladataan.Remove(polku);
             klipit[polku] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
             if (klipit[polku] != null && osoitteenId.TryGetValue(polku, out var id)) klipit[polku].name = id;
-            if (klipit[polku] != null) yield return SaumatonSilmukka.HaeTagi(osoite, klipit[polku]);
+            if (klipit[polku] != null) yield return SaumatonSilmukka.HaeTagi(r.url, klipit[polku]);   // pyynnön todellinen osoite (LS1:n kaupunkisilmukat-ohjaus)
         }
 
         public void Sulje()

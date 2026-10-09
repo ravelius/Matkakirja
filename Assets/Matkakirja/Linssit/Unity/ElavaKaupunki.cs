@@ -573,7 +573,7 @@ namespace Matkakirja.Natiivi
                     yield return r.SendWebRequest();
                     if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klipit[i] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(r);
                     if (klipit[i] != null) klipit[i].name = KlippiNimet[i];
-                    if (i == 0 && klipit[0] != null) yield return SaumatonSilmukka.HaeTagi(AaniJuuri + nimet[0] + ".mp3", klipit[0]);   // lokkiparvi: saumaton liitos
+                    if (i == 0 && klipit[0] != null) yield return SaumatonSilmukka.HaeTagi(r.url, klipit[0]);   // lokkiparvi: saumaton liitos
                 }
             lokkiKlippi = klipit[0]; kyyhky1Klippi = klipit[1]; kyyhky2Klippi = klipit[2]; koneKlippi = klipit[3];
             Debug.Log($"MATKAKIRJA kaupunki: elävän kaupungin äänet {System.Array.FindAll(klipit, x => x != null).Length}/{nimet.Length}");

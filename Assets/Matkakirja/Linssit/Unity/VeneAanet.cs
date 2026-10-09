@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
             ladataan.Remove(t);
             klipit[t] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
             if (klipit[t] != null) klipit[t].name = AaniId(t);
-            if (klipit[t] != null) yield return SaumatonSilmukka.HaeTagi(Juuri + t + ".mp3", klipit[t]);
+            if (klipit[t] != null) yield return SaumatonSilmukka.HaeTagi(r.url, klipit[t]);
             if (klipit[t] == null) Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {t} ei latautunut ({r.error})");
         }
 
