@@ -97,11 +97,37 @@ namespace Matkakirja.Natiivi
             if (nakyy)
             {
                 foreach (var r in piilotetut) if (r != null) r.enabled = true;
-                foreach (var l in sammutetut) if (l != null) l.enabled = true;
+                // Valot syttyvät 1,5 s:ssa (arvio 4, PT: valmiin linnan valot ilmestyivät kerralla); lepattavat valot asettavat oman
+                // voimakkuutensa itse, ja häivytys koskee vain tasaisia valoja.
+                ValotLoppuun();
+                foreach (var l in sammutetut) if (l != null) { syttyvat.Add((l, l.intensity)); l.intensity = 0f; l.enabled = true; }
                 piilotetut.Clear(); sammutetut.Clear();
+                if (syttyvat.Count > 0) syttyminen = StartCoroutine(Syty());
                 return;
             }
             PiilotaLinna();
+        }
+
+        readonly List<(Light L, float I)> syttyvat = new List<(Light, float)>(); Coroutine syttyminen;
+        public const float ValotSyttyvatS = 1.5f;
+
+        IEnumerator Syty()
+        {
+            for (float t = 0f; t < ValotSyttyvatS; t += Time.deltaTime)
+            {
+                float u = t / ValotSyttyvatS; u = u * u * (3f - 2f * u);
+                foreach (var (l, i) in syttyvat) if (l != null) l.intensity = i * u;
+                yield return null;
+            }
+            syttyminen = null; ValotLoppuun();
+        }
+
+        /// <summary>Syttyvät valot täyteen heti (häivytys valmis, katkaistu tai historia päättyy).</summary>
+        void ValotLoppuun()
+        {
+            if (syttyminen != null) { StopCoroutine(syttyminen); syttyminen = null; }
+            foreach (var (l, i) in syttyvat) if (l != null) l.intensity = i;
+            syttyvat.Clear();
         }
 
         /// <summary>Linnan renderöijät ja valot piiloon (ympäristö, vaihemallit ja vesi jäävät): kaikki dioraaman kerroksen renderöijät
@@ -229,6 +255,7 @@ namespace Matkakirja.Natiivi
             }
             Avainsana = null;
             LinnaNakyviin(true);
+            ValotLoppuun();   // historia päättyy: ei jätetä valoja himmeiksi (objekti tuhotaan)
             vaiheet?.Tuhoa(); vaiheet = null;
             SeikkailuKavely.VainVuosileikkaukset = false;
             foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
