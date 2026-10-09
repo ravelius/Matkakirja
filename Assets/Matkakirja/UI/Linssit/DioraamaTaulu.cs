@@ -463,7 +463,10 @@ namespace Matkakirja.Natiivi
                         if (linnaTekstuurit[j] != null && linnaTekstuurit[j] != t) Kuvat.Vapauta(linnaTekstuurit[j]);
                         linnaTekstuurit[j] = t;
                         if (t != null) Kuvat.Kiinnita(t);
-                        if (linnaTekstuurit[0] != null && linnaTekstuurit[1] != null && linnaTekstuurit[2] != null) NaytaLinnaKuva(r);
+                        Debug.Log($"MATKAKIRJA linssit: nimiruutu: latauskuvan {nimet[j]} {(t != null ? "saapui" : "puuttuu")} ({Time.unscaledTime - nimiruutuAlku:F1} s avauksesta)");
+                        // UI-kuva-arkki 9.10.2026 (19059ffb7): iPadilla kuva ei ehtinyt 19,7 s:ssa, iPhonella vasta 9,2 s, koska näyttö
+                        // odotti kaikkia kolmea kerrosta. Tausta näkyviin heti; usva ja vene liittyvät saapuessaan (Aseta ohittaa puuttuvan).
+                        if (linnaTekstuurit[0] != null) NaytaLinnaKuva(r);
                     });
                 }
                 return;
