@@ -178,6 +178,11 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float terava = saturate(2.0 - jalanjalki * 2.0 / 1.2);       // ikkuna (~1,2 m) yli puolen pikselin
                     float keski = bm * _IkkunaParam.y * 0.23;                     // kaukana: palavien osuus × ikkunan ala
                     float3 iv = lerp(float3(1.0, 0.72, 0.42), float3(1.0, 0.88, 0.70), h.y);
+                    // VALOMAINOKSET (v7, Päätoimittaja 9.10. iltavalot): harva palava ikkuna värillisenä neonina, joka välkkyy hitaasti.
+                    float neon = step(h.z, 0.035) * palaa;
+                    float3 nv = h.y < 0.33 ? float3(1.0, 0.2, 0.55) : (h.y < 0.66 ? float3(0.2, 0.85, 1.0) : float3(1.0, 0.35, 0.15));
+                    float valke = 0.75 + 0.25 * sin(_Time.y * (2.0 + 5.0 * h.x) + h.y * 40.0);
+                    iv = lerp(iv, nv * 1.8 * valke, neon);
                     lisa += iv * pysty * tasainen * _IkkunaParam.x * (0.6 + 0.4 * h.z) * lerp(keski, palaa * ikkuna, terava);
                 }
                 // v6 veden heijastukset: vaakapinta vesimaskissa; rantavalot ja maamerkit katsesuunnassa juovina.
