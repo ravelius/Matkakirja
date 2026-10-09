@@ -54,7 +54,7 @@ namespace Matkakirja.Natiivi
             taukoTauolla = tauolla;
             taukoNappi.Clear();
             taukoNappi.Add(new SvgIkoni(tauolla ? Ikonit.Toista : Ikonit.Tauko));
-            taukoNappi.tooltip = tauolla ? "Jatka" : "Tauko";
+            taukoNappi.tooltip = tauolla ? Kieli.T("linna.jatka") : Kieli.T("linna.tauko");
             taukoNappi.EnableInClassList("mk-valittu", tauolla);
         }
 
@@ -70,19 +70,19 @@ namespace Matkakirja.Natiivi
 
             ryhma = Ohjausnappi.Ryhma(Juuri);
             // ESITTELYN TAUKO (omistaja 6.10.2026): II/▶ ☰:n vieressä kertojan esittelyn ajan (sama kuvake kuin oppaassa).
-            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { Matkakirja.Natiivi.DioraamaSovitin.VaihdaTauko(); NaytaTauko(true); }, ryhma);
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, Kieli.T("linna.tauko"), () => { Matkakirja.Natiivi.DioraamaSovitin.VaihdaTauko(); NaytaTauko(true); }, ryhma);
             taukoNappi.style.display = DisplayStyle.None;
             // LINNAN HISTORIAN OHITUS (Päätoimittaja 9.10.2026, juna 171): sama OHJAUSNAPPI ja ⏭-kuvake kuin oppaan tauko/seuraava-
             // parissa; lopettaa SeikkailuHistorian (Siirtoseppä), jolloin alun valinnassa tulee Pelaa-kortti ja ☰:sta avattuna peli jatkuu.
             ohitaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Ohita linnan historia", () => { Debug.Log("MATKAKIRJA linnavalikko: historia ohitettu"); SeikkailuHistoria.Lopeta(); }, ryhma);
             ohitaNappi.style.display = DisplayStyle.None;
-            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
+            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, Kieli.T("linna.valikko"), () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
             // Pienoiskartta ‹:n paikalle OHJAUSNAPPI-kehyksessä (.mk-ohjausnappi--iso 56 pt, omistaja 17.4x): oma ryhmä
             // vasempaan yläkulmaan, yläreuna ☰:n tasolla. Kuva kehyksen sisällä kuvasuhteessaan, piste kuvan päällä.
             karttaRyhma = Ohjausnappi.Ryhma(Juuri);
             karttaRyhma.AddToClassList("mk-minikartta-ryhma");
-            kartta = Ohjausnappi.Nappi(null, "Huoneet", () => Avaa(Nakyma.Huoneet), karttaRyhma);
+            kartta = Ohjausnappi.Nappi(null, Kieli.T("linna.huoneet"), () => Avaa(Nakyma.Huoneet), karttaRyhma);
             kartta.AddToClassList("mk-ohjausnappi--iso");
             // Linna täyttää kehyksen (Päätoimittaja 2.10. 18.0x: 2:1-kuva jäi viiruksi): kuva KarttaZoom × kehyksen
             // sisäleveys, korkeus ~80 % kehyksestä, reunat rajautuvat (overflow hidden); näkymä panoroi pisteen näkyviin.
@@ -194,29 +194,29 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Paa:
                     // VIHJE (omistaja 8.10.: videopeleissä ei Pulua, vihje maailman sisällä; Päätoimittaja hyväksyi A:n): vain
                     // seikkailun ollessa käynnissä, ei linnakierroksella. Napautus sulkee valikon (Komento) ja pyytää vihjeen.
-                    if (SeikkailuTapit.SeikkailuKaynnissa) Komento("Vihje", () => SeikkailuTapit.PyydaVihje("valikko"));
+                    if (SeikkailuTapit.SeikkailuKaynnissa) Komento(Kieli.T("linna.vihje"), () => SeikkailuTapit.PyydaVihje("valikko"));
                     // TIETOA (Päätoimittaja 8.10.: tietokerros ilman Pulua, ettei iPad-pelaaja menetä sitä): seikkailun tietokerroksen
                     // kortisto, kun se on tarjolla (SeikkailuTietokerros, nousun jälkeen); sama KORTTI-kortisto kuin Pulun napautuksesta.
-                    if (SeikkailuTapit.TietokerrosTarjolla) Komento("Tietoa", SeikkailuTapit.AvaaTietokerrosValikosta);
+                    if (SeikkailuTapit.TietokerrosTarjolla) Komento(Kieli.T("linna.tietoa"), SeikkailuTapit.AvaaTietokerrosValikosta);
                     // LINNAN HISTORIA (Päätoimittaja 9.10.2026, juna 171; Siirtoseppä a8a454732): alun valinnan historia myös valikosta,
                     // kun Olavinlinna on ladattu (DioraamaSovitin.HistoriaKaytettavissa); pelin aikana peli pysähtyy ja jatkuu lopussa.
-                    if (DioraamaSovitin.HistoriaKaytettavissa) Komento("Linnan historia", () => DioraamaSovitin.AloitaHistoria(null));
+                    if (DioraamaSovitin.HistoriaKaytettavissa) Komento(Kieli.T("linna.linnan-historia"), () => DioraamaSovitin.AloitaHistoria(null));
                     // Seikkailussa vain pelin rivit (Päätoimittaja 8.10.2026): Vihje, Tietoa, Linnan historia, Äänet, Lähteet, Sulje.
                     if (!SeikkailuTapit.SeikkailuKaynnissa)
                     {
-                        Alanakyma("Huoneet", Nakyma.Huoneet);
-                        Komento("Esittely uudelleen", EsittelyUudelleen);
+                        Alanakyma(Kieli.T("linna.huoneet"), Nakyma.Huoneet);
+                        Komento(Kieli.T("linna.esittely-uudelleen"), EsittelyUudelleen);
                     }
-                    Alanakyma("Äänet", Nakyma.Aanet);
-                    Alanakyma("Lähteet", Nakyma.Lahteet);
+                    Alanakyma(Kieli.T("linna.aanet"), Nakyma.Aanet);
+                    Alanakyma(Kieli.T("linna.lahteet"), Nakyma.Lahteet);
                     // Kehittäjän kuorivalinta (omistaja 5.10.: pois ruudulta hampurilaiseen): auto → huippu → normaali → kevyt.
                     if (Asetukset.Kehittaja && !LinssiOhjain.ValmiitLinssitAuki)
                         Komento(DioraamaUlkokuori.ValintaTeksti(), DioraamaUlkokuori.SeuraavaPakotus);
                     Viiva();
-                    Komento("Sulje linna", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
+                    Komento(Kieli.T("linna.sulje-linna"), () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
                 case Nakyma.Huoneet:
-                    Takaisin("Huoneet");
+                    Takaisin(Kieli.T("linna.huoneet"));
                     string nyt = DioraamaAanet.NykyinenHuone;
                     // Natiivisepän itsetarkistus 4.10. (juna 141, vaaka): seitsemän huonetta ylitti ruudun korkeuden → rivit omaan
                     // vieritykseensä, ja valikko rajataan turva-alueelle (SovitaKorkeus tiivistää rivit, jos tila ei riitä).
@@ -231,15 +231,15 @@ namespace Matkakirja.Natiivi
                     }
                     break;
                 case Nakyma.Aanet:
-                    Takaisin("Äänet");
-                    Kytkinrivi(Kytkin.Kertoja, "Kertoja");
-                    Kytkinrivi(Kytkin.Musiikki, "Musiikki");   // sama nimi kuin mikserissä (Päätoimittaja 8.10.2026)
-                    Kytkinrivi(Kytkin.Aanimaisema, "Äänimaisema");
+                    Takaisin(Kieli.T("linna.aanet"));
+                    Kytkinrivi(Kytkin.Kertoja, Kieli.T("linna.kertoja"));
+                    Kytkinrivi(Kytkin.Musiikki, Kieli.T("linna.musiikki"));   // sama nimi kuin mikserissä (Päätoimittaja 8.10.2026)
+                    Kytkinrivi(Kytkin.Aanimaisema, Kieli.T("linna.aanimaisema"));
                     if (Asetukset.Kehittaja && MikseriPaneeli.Viimeisin != null)
-                        Komento("Mikseri", () => MikseriPaneeli.Viimeisin.Avaa(true));
+                        Komento(Kieli.T("linna.mikseri"), () => MikseriPaneeli.Viimeisin.Avaa(true));
                     break;
                 case Nakyma.Lahteet:
-                    Takaisin("Lähteet");
+                    Takaisin(Kieli.T("linna.lahteet"));
                     var vieritys = new ScrollView(ScrollViewMode.Vertical)
                     { verticalScrollerVisibility = ScrollerVisibility.Hidden, horizontalScrollerVisibility = ScrollerVisibility.Hidden };
                     vieritys.style.maxHeight = Length.Percent(60);
@@ -309,7 +309,7 @@ namespace Matkakirja.Natiivi
         {
             var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => { nakyma = Nakyma.Paa; Rakenna(); }, valikko);
             Kirjasimet.Aseta(Rakenne.Teksti("‹ " + otsikko, "mk-linssivalikko__nimi", b), Kirjasin.LukuLihava);
-            b.tooltip = "Takaisin";
+            b.tooltip = Kieli.T("linna.takaisin");
             Viiva();
         }
 
@@ -323,8 +323,8 @@ namespace Matkakirja.Natiivi
             {
                 bool paalla = Asetukset.Paalla(k);
                 b.EnableInClassList("mk-valittu", paalla);
-                tila.text = paalla ? "PÄÄLLÄ" : "POIS";
-                b.tooltip = nimi + ": " + (paalla ? "päällä" : "pois");
+                tila.text = paalla ? Kieli.T("linna.paalla") : Kieli.T("linna.pois");
+                b.tooltip = Kieli.T(paalla ? "linna.kytkin-paalla" : "linna.kytkin-pois", nimi);
             }
             b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () =>
             {

@@ -110,16 +110,16 @@ namespace Matkakirja.Natiivi
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
             vasen = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--vasen", Ikonit.Viiva["kompassi"], v => Vasen = v);
             oikea = new OpasTapit.Tappi(juuri, "mk-tappi mk-tappi--oikea", Ikonit.Viiva["silma"], v => Oikea = v);
-            vasen.Juuri.tooltip = "Liiku";
+            vasen.Juuri.tooltip = Kieli.T("seikkailu.liiku");
             // Thiefin taso (Päätoimittaja 8.10.2026): tapit näkyvät vain kosketuksessa, levossa näkymättöminä paikallaan.
             vasen.Juuri.AddToClassList("mk-tappi--vain-kosketus");
             oikea.Juuri.AddToClassList("mk-tappi--vain-kosketus");
-            oikea.Juuri.tooltip = "Katso ympärillesi";
+            oikea.Juuri.tooltip = Kieli.T("seikkailu.katso-ymparillesi");
             toimintoRivi = Ohjausnappi.Ryhma(juuri);
             toimintoRivi.style.top = StyleKeyword.Auto;
             toimintoRivi.style.right = OpasTapit.Reuna + OpasTapit.Halkaisija * 0.5f - Tyylikirja.Nappi.Ohjaus * 0.5f;
             toimintoRivi.style.bottom = TappiAla + OpasTapit.Halkaisija + 8f;
-            toimintoNappi = Ohjausnappi.Nappi(Ikonit.Kasi, "Poimi", PyydaToiminto, toimintoRivi);
+            toimintoNappi = Ohjausnappi.Nappi(Ikonit.Kasi, Kieli.T("seikkailu.poimi"), PyydaToiminto, toimintoRivi);
             toimintoRivi.AddToClassList("mk-ohjausryhma--haivytys");   // häivyttäen (Päätoimittaja 8.10.2026), ei ponnahdusta
             toimintoRivi.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
@@ -177,7 +177,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Toimintonapin VoiceOver-nimet tiloittain (Siirtoseppä E2/E3).</summary>
         static readonly System.Collections.Generic.Dictionary<string, string> Toimintonimet = new System.Collections.Generic.Dictionary<string, string>
         {
-            ["poimi"] = "Poimi", ["heita"] = "Heitä", ["kynttila"] = "Kynttilä", ["koputa"] = "Koputa", ["irrota"] = "Irrota", ["nosta"] = "Nosta", ["laske"] = "Laske",
+            // Arvot Kieli-avaimina (juna 172/173): tooltip = Kieli.T(arvo).
+            ["poimi"] = "seikkailu.toiminto.poimi", ["heita"] = "seikkailu.toiminto.heita", ["kynttila"] = "seikkailu.toiminto.kynttila", ["koputa"] = "seikkailu.toiminto.koputa",
+            ["irrota"] = "seikkailu.toiminto.irrota", ["nosta"] = "seikkailu.toiminto.nosta", ["laske"] = "seikkailu.toiminto.laske",
         };
 
         void PyydaToiminto()
@@ -196,7 +198,7 @@ namespace Matkakirja.Natiivi
             toimintoNappi.Clear();
             toimintoNappi.Add(new SvgIkoni(Kuvake(tila)));
             // VoiceOver-nimi: valmis verbi sellaisenaan, vanhan rajapinnan tila Toimintonimistä.
-            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? nimi : tila;
+            toimintoNappi.tooltip = Toimintonimet.TryGetValue(tila, out var nimi) ? Kieli.T(nimi) : tila;
         }
 
         const float TappiAla = 40f;
@@ -461,7 +463,7 @@ namespace Matkakirja.Natiivi
                 var vieritys = new ScrollView(ScrollViewMode.Vertical);
                 vieritys.AddToClassList("mk-tietoja__vieritys");
                 vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
-                Kirjasimet.Aseta(Rakenne.Teksti("Olavinlinna", "mk-kortti__otsikko", vieritys), Tyylikirja.Kirjain.Otsikko);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("seikkailu.olavinlinna"), "mk-kortti__otsikko", vieritys), Tyylikirja.Kirjain.Otsikko);
                 for (int i = 0; i < tkOtsikot.Length; i++)
                 {
                     Kirjasimet.Aseta(Rakenne.Teksti((tkOtsikot[i] ?? "").ToUpperInvariant(), "mk-kortti__kapiteeli", vieritys), Kirjasin.Kone);
@@ -472,7 +474,7 @@ namespace Matkakirja.Natiivi
                 }
                 kortti.Sisus.Add(vieritys);
                 var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", () => Rakenne.Nayta(h, false, 250), napit), Kirjasin.KoneLihava);
+                Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("seikkailu.takaisin"), "mk-nappi--toiminto", () => Rakenne.Nayta(h, false, 250), napit), Kirjasin.KoneLihava);
                 tkHimmennys = h;
             }
             Debug.Log("MATKAKIRJA seikkailutapit: tietokerros auki");
@@ -540,7 +542,7 @@ namespace Matkakirja.Natiivi
             }
             object tallennus = hash != null ? lue?.Invoke(null, new object[] { "olavinlinna", hash }) : null;
             if (tallennus == null) { Aloita(false); return; }
-            UiNakymat.Hae().Vahvistus.Kysy("Olavinlinna", "Jatketaanko siitä, mihin jäit?", "Alusta", "Jatka",
+            UiNakymat.Hae().Vahvistus.Kysy(Kieli.T("seikkailu.olavinlinna"), Kieli.T("seikkailu.jatketaanko-siita-mihin-jait"), Kieli.T("seikkailu.alusta"), Kieli.T("seikkailu.jatka"),
                 () => Aloita(true), kunPeruttu: () => Aloita(false));
         }
 

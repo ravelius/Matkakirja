@@ -11,6 +11,8 @@ python3 tyokalut/uss-tarkistus.py || exit 1
 python3 tyokalut/tyylikirja-tarkistus.py || exit 1
 # Pohjavahti (UI-pohjat kohta 8): pohjien ohi menevät arvot eivät saa lisääntyä (lähtötaso tyylikirja/pohjavahti.json).
 python3 tyokalut/pohjavahti.py || exit 1
+# Kielivahti (juna 172/173, UI:n käännettävyys): avaimet fi.json:ssa, ei kovakoodattua UI-tekstiä kohdetiedostoissa.
+python3 tyokalut/kielivahti.py || exit 1
 # Kirjainväli: UITK:n letter-spacing on em/100; merkitsemätön px-arvo on todennäköisesti webin pikseli (varoitus).
 python3 tyokalut/kirjainvali.py --tarkista || true
 print -r -- "$T" | tail -1 | grep -q "virheitä yhteensä 0"

@@ -50,8 +50,8 @@ namespace Matkakirja.Natiivi
         {
             vasen = new Tappi(isa, "mk-tappi mk-tappi--vasen", PystyIkoni, v => Vasen = v);
             oikea = new Tappi(isa, "mk-tappi mk-tappi--oikea", Ikonit.PaivitaVersio, v => Oikea = v);
-            vasen.Juuri.tooltip = "Lähemmäs ja kauemmas";
-            oikea.Juuri.tooltip = "Kierrä kohdetta ja nosta tai laske kameraa";
+            vasen.Juuri.tooltip = Kieli.T("opas.tapit.lahemmas-ja-kauemmas");
+            oikea.Juuri.tooltip = Kieli.T("opas.tapit.kierra-kohdetta-ja-nosta-tai");
             // Pystysäädin: Unityn pystysuunnassa pienin arvo on ylhäällä, inverted kääntää (ylös = nopeampi; `ui opasvalikko vipu`).
             vipu = new Slider(VapaaNopeusVipu.Min, VapaaNopeusVipu.Max, SliderDirection.Vertical) { pageSize = 0, inverted = true };
             vipu.AddToClassList("mk-saadin");
@@ -67,7 +67,7 @@ namespace Matkakirja.Natiivi
             isa.Add(vipu);
         }
 
-        static string VipuNimi() => "Lentonopeus " + VapaaNopeusVipu.Teksti(NopeusVipu);
+        static string VipuNimi() => Kieli.T("opas.tapit.lentonopeus", VapaaNopeusVipu.Teksti(NopeusVipu));
 
         bool vapaa;
 
@@ -78,7 +78,7 @@ namespace Matkakirja.Natiivi
             vapaa = paalla;
             vasen.Nuppi.Clear();
             Rakenne.Ikoni(paalla ? Ikonit.Viiva["kompassi"] : PystyIkoni, "mk-tappi__ikoni", vasen.Nuppi);
-            vasen.Juuri.tooltip = paalla ? "Liiku eteen, taakse ja sivuille" : "Lähemmäs ja kauemmas";
+            vasen.Juuri.tooltip = paalla ? Kieli.T("opas.tapit.liiku-eteen-taakse-ja-sivuille") : Kieli.T("opas.tapit.lahemmas-ja-kauemmas");
         }
 
         /// <summary>Näkyvyys, alareuna ja etäisyys sivureunasta joka ruudulla OpasValikolta (juna 156: iPadilla sisemmäs ja

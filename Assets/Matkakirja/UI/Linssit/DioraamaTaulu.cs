@@ -158,7 +158,7 @@ namespace Matkakirja.Natiivi
 
             // Kuuntele uudelleen: infotaulun oikean yläkulman yläpuolelle kaistaleen paikalle (kaistale on silloin poissa;
             // laudan sisällä nappi peitti tekstirivin, 357bce14-kuva). Ei sekoitu yleisnäkymän ↻-kertojaan vasemmassa yläkulmassa.
-            kuunteleNappi = Rakenne.Nappi("Kuuntele", "mk-dioraama__kuuntele", () => { if (kuunnelmaTila != null) kuunnelma.Aloita(kuunnelmaTila, true); },
+            kuunteleNappi = Rakenne.Nappi(Kieli.T("linna.taulu.kuuntele"), "mk-dioraama__kuuntele", () => { if (kuunnelmaTila != null) kuunnelma.Aloita(kuunnelmaTila, true); },
                 juuri, Ikonit.PaivitaVersio);
             kuunteleNappi.style.position = Position.Absolute;
             kuunteleNappi.style.flexDirection = FlexDirection.Row; kuunteleNappi.style.alignItems = Align.Center;
@@ -217,7 +217,7 @@ namespace Matkakirja.Natiivi
             uusintaNappi.style.borderBottomLeftRadius = 22; uusintaNappi.style.borderBottomRightRadius = 22;
             uusintaNappi.style.color = Teksti;
             uusintaNappi.style.alignItems = Align.Center; uusintaNappi.style.justifyContent = Justify.Center;
-            uusintaNappi.tooltip = "Kertoja uudelleen";
+            uusintaNappi.tooltip = Kieli.T("linna.taulu.kertoja-uudelleen");
             uusintaNappi.style.display = DisplayStyle.None;
 
             // Kertojan teksti (Linssit.uss .mk-aikajana-kertomus): tumma läpikuultava laatikko alareunaan, häivytys 380 ms.
@@ -240,7 +240,7 @@ namespace Matkakirja.Natiivi
                 // puhuttua ei näytetä kuplana; teksti vain, jos ääntä ei ole tai Kertoja on pois.
                 if (!DioraamaAanet.SoitaPulu(puluAani))
                 {
-                    etsintaOtsikko.text = "Pulu";
+                    etsintaOtsikko.text = Kieli.T("linna.taulu.pulu");
                     etsintaTeksti.text = puluKupla;
                     etsintaKortti.style.display = DisplayStyle.Flex;
                     etsintaKortti.style.opacity = 1f;
@@ -815,7 +815,7 @@ namespace Matkakirja.Natiivi
             else
             {
                 int i = Mathf.Clamp(nakyma.Kohta, 0, taulu.Kohdat.Count - 1);
-                laskuri.text = $"{i + 1}/{taulu.Kohdat.Count}" + (luonnos ? " · luonnos" : "");
+                laskuri.text = (i + 1) + "/" + taulu.Kohdat.Count + (luonnos ? Kieli.T("linna.taulu.luonnos") : "");
                 var kohta = taulu.Kohdat[i];
                 teksti.text = kohta.Teksti ?? "";
                 teksti.style.display = DisplayStyle.Flex;
@@ -1208,10 +1208,10 @@ namespace Matkakirja.Natiivi
             int viimeinen = (nakyma.KohdeTila == null ? Mathf.Min(3, kohtia) : kohtia) - 1;
             if (!nakyma.KasikirjoitusLopussa && nakyma.Kohta != viimeinen) return null;
             string seuraavaId = Ohjaaja.SeuraavaKiertueella(rakennus, nakyma.KohdeTila);
-            if (seuraavaId == null) return "Takaisin linnaan ›";
+            if (seuraavaId == null) return Kieli.T("linna.taulu.takaisin-linnaan");
             var tila = rakennus.Tila(seuraavaId);
             string nimi = !string.IsNullOrEmpty(tila?.Nimi) ? tila.Nimi : seuraavaId;
-            return (nakyma.KohdeTila == null ? "Aloita kierros: " : "Seuraavaksi: ") + nimi + " ›";
+            return Kieli.T(nakyma.KohdeTila == null ? "linna.taulu.aloita-kierros" : "linna.taulu.seuraavaksi", nimi);
         }
 
         static string PuhujanNimi(Rakennus rakennus, Nakyma nakyma)
