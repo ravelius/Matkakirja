@@ -49,7 +49,8 @@ namespace Matkakirja.Editori
             "Liuskekivi on kannettava alttari: pieni kivilaatta, jonka päällä messu voitiin pitää missä tahansa. Kiven keskellä on syvennys, johon pyhäinjäännös suljettiin vahalla.",
         };
 
-        enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Pallo, OdotaPallo, Mikseri, OdotaMikseri, Linna, OdotaLinna, Loyto, OdotaLoyto,
+        enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Pallo, OdotaPallo, Mikseri, OdotaMikseri, Chat, OdotaChat, Pin, OdotaPin, Palkki, OdotaPalkki, Nosto, OdotaNosto,
+            Taulu, OdotaTaulu, Linna, OdotaLinna, Loyto, OdotaLoyto,
             Tietokerros, AvaaTietokerros, OdotaTietokerros,
             Lopeta, OdotaLoppua, Valmis }
 
@@ -192,8 +193,69 @@ namespace Matkakirja.Editori
                     TarkistaMikseri();
                     MikseriPaneeli.Viimeisin?.Avaa(false);
                     MikseriPaneeli.Lahde = null;
+                    Siirry(Vaihe.Chat);
+                    break;
+                case Vaihe.Chat:
+                    OpasValikko.Hae().Komento("sulje");
+                    UiNakymat.Hae().Chat.Avaa();
+                    Siirry(Vaihe.OdotaChat);
+                    break;
+                case Vaihe.OdotaChat:
+                    if (kehyksia < 20 || Kulunut < 0.6) return;
+                    TarkistaPaneeli(UiNakymat.Hae().Chat.TestiPaneeli, Pulu.Kerros, "chat");
+                    Siirry(Vaihe.Pin);
+                    break;
+                case Vaihe.Pin:
+                    // Pin päälle: chat nousee yläreunaan kokonaisena (omistaja 6.10.).
+                    UiNakymat.Hae().Chat.TestiPinnaa();
+                    Siirry(Vaihe.OdotaPin);
+                    break;
+                case Vaihe.OdotaPin:
+                    if (kehyksia < 20 || Kulunut < 0.6) return;
+                    TarkistaPaneeli(UiNakymat.Hae().Chat.TestiPaneeli, Pulu.Kerros, "chat pinnattu");
+                    Pinnaus.Pienenna();   // kartan liike pienentää pinnatun chatin yhden rivin palkiksi
+                    Siirry(Vaihe.Palkki);
+                    break;
+                case Vaihe.Palkki:
+                    Siirry(Vaihe.OdotaPalkki);
+                    break;
+                case Vaihe.OdotaPalkki:
+                    if (kehyksia < 20 || Kulunut < 0.6) return;
+                    TarkistaPaneeli(Pinnaus.TestiPalkki, UiKerros.Tilarivi, "pinnattu palkki");
+                    Pinnaus.Testi("pois");
+                    UiNakymat.Hae().Chat.Sulje();
+                    Siirry(Vaihe.Nosto);
+                    break;
+                case Vaihe.Nosto:
+                    UiNakymat.Hae().Nostokortti.Avaa("kohde:pompeji@ITA");
+                    Siirry(Vaihe.OdotaNosto);
+                    break;
+                case Vaihe.OdotaNosto:
+                {
+                    // Nosto latautuu paketista: odotetaan korttia enintään 10 s.
+                    var nk = UiNakymat.Hae().Nostokortti;
+                    bool valmis = nk.Auki && nk.TestiKortti?.panel != null && nk.TestiKortti.worldBound.height >= 1f;
+                    if ((!valmis && Kulunut < 10) || kehyksia < 20 || Kulunut < 1.0) return;
+                    if (!nk.Auki) Virhe("nosto: lukunäkymä ei aukea");
+                    else TarkistaPaneeli(nk.TestiKortti, UiKerros.Valikot, "nosto");
+                    nk.Sulje();
+                    Siirry(Vaihe.Taulu);
+                    break;
+                }
+                case Vaihe.Taulu:
+                    UiNakymat.Hae().Linssit.Astronautti.Taulu.Testaa("auki", "");
+                    Siirry(Vaihe.OdotaTaulu);
+                    break;
+                case Vaihe.OdotaTaulu:
+                {
+                    if (kehyksia < 20 || Kulunut < 0.8) return;
+                    var taulu = UiNakymat.Hae().Linssit.Astronautti.Taulu;
+                    if (!taulu.Auki) Virhe("ISS-taulu: ei aukea (" + taulu.Tila() + ")");
+                    else TarkistaPaneeli(taulu.TestiPaneeli, LinssiUi.Ylakerros, "ISS-taulu");
+                    taulu.Testaa("kiinni", "");
                     Siirry(Vaihe.Linna);
                     break;
+                }
                 case Vaihe.Linna:
                     // Linnan HUD ilman SeikkailuPelaajaa: tapit näkyviin ja toimintonappi poimi-tilaan (testikytkimet). Oppaan
                     // esitysrivi (Kysy-rivi, tauko) pois: linnassa ei ole kierrosta.
@@ -396,6 +458,15 @@ namespace Matkakirja.Editori
                     Mathf.Max(r.Value.xMax, b.xMax), Mathf.Max(r.Value.yMax, b.yMax));
             });
             return r ?? juuri.worldBound;
+        }
+
+        /// <summary>Paneeli näkyvissä, mitoittunut ja kokonaan kerroksensa turva-alueella; peitto kirjataan.</summary>
+        static void TarkistaPaneeli(VisualElement p, int kerros, string nimi)
+        {
+            if (p?.panel == null) { Virhe($"{nimi}: paneeli puuttuu"); return; }
+            if (!Nakyvissa(p) || p.resolvedStyle.visibility == Visibility.Hidden) { Virhe($"{nimi}: ei näkyvissä"); return; }
+            Kokonaan(p, TurvaAlue(p, kerros), nimi);
+            Kirjaa($"-- {nimi}: peitto {Peitto(p, p):P0}");
         }
 
         static void TarkistaMikseri()

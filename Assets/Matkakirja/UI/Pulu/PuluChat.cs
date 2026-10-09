@@ -141,6 +141,9 @@ namespace Matkakirja.Natiivi
         (double Lat, double Lon, double Korkeus)? paluupaikka;
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: chatin paneeli ja pinnaus (sama kuin pin-napin painallus).</summary>
+        public VisualElement TestiPaneeli => paneeli;
+        public void TestiPinnaa() => VaihdaPin();
 
         /// <summary>
         /// LINSSITILA (omistaja 30.9.2026 klo 23.5x, astronautin kamera: "pululla saisi olla myös tässä striimiluenta. tee
