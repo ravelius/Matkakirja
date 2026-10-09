@@ -1733,7 +1733,29 @@ namespace Matkakirja.Natiivi
                 sb.Append("\nNäkymä: ").Append(o.LehtiAuki ? "kaupunkilehti" : o.KorttiKaupunki != null ? "kaupunkikortti: " + (UiSisalto.Kaupunki(o.KorttiKaupunki)?.Nimi ?? o.KorttiKaupunki) : pohja);
             }
             // Kortin aihe (web kokoaKonteksti kohde) vain kysymyksen omassa pyynnössä (aineisto != null), ei ehdotuksissa.
-            var aihe = aineisto != null ? kysymyksenAihe : null;
+            return KontekstinLoppu(sb, aineisto != null ? kysymyksenAihe : null, avaruudessa ? null : kaupunki, aineisto);
+        }
+
+        /// <summary>
+        /// PULUN ESIGENEROINTI (omistaja 9.10.2026, PuluVienti): kohdan konteksti samassa muodossa kuin pelaajan pyynnössä, kun pelaaja
+        /// on kohteen kaupungissa ja kartalla, mutta ilman matkapäivää (vaihtelee pelaajittain).
+        /// </summary>
+        internal static string EsigenerointiKonteksti(Aihe aihe, string kaupunki, List<PuluHaku.Katkelma> aineisto)
+        {
+            var sb = new StringBuilder("Lauta: Maailmankartta");
+            var k = UiSisalto.Kaupunki(kaupunki);
+            if (k != null)
+            {
+                sb.Append("\nKaupunki, jossa pelaaja on: ").Append(k.Nimi);
+                if (k.MaaNimi != null) sb.Append("\nMaa, jossa pelaaja on: ").Append(k.MaaNimi);
+            }
+            sb.Append("\nNäkymä: kartta");
+            return KontekstinLoppu(sb, aihe, k != null ? kaupunki : null, aineisto);
+        }
+
+        /// <summary>Kontekstin loppu: kortin aihe, isoisän merkintä (kaupunki) ja pelin aineisto; katto KontekstiKatto.</summary>
+        static string KontekstinLoppu(StringBuilder sb, Aihe aihe, string kaupunki, List<PuluHaku.Katkelma> aineisto)
+        {
             if (aihe?.Nimi != null)
             {
                 sb.Append('\n').Append(aihe.Otsake).Append(": ").Append(aihe.Nimi.Trim());
@@ -1744,7 +1766,7 @@ namespace Matkakirja.Natiivi
                     sb.Append("\nTietoruudun teksti: ").Append(t0.Length > KohteenKatto ? t0.Substring(0, KohteenKatto - 1) + "…" : t0);
                 }
             }
-            var v = avaruudessa ? null : Fokusvirrat.Hae(kaupunki);
+            var v = Fokusvirrat.Hae(kaupunki);
             if (v?.Teksti != null)
                 sb.Append("\nIsoisän matkakirjamerkintä: ").Append(v.Teksti.Length > 900 ? v.Teksti.Substring(0, 900) : v.Teksti);
             var t = sb.ToString();

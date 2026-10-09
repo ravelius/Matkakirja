@@ -1773,22 +1773,22 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// LUENTAVIENTI (Natiivi-UI 9.10.2026, Pelikoodarin esigenerointi, omistajan lupa 10.2x): kaupunkilehti auki ja jokainen sivu
         /// vuorollaan näkyviin; sivu(i, tekstit) saa samat tekstit kuin kaiutin (SivunTekstit, ilman jatkuvan luennan yläotsikkoa).
-        /// Lehti suljetaan lopuksi. Ei lehteä tai aikaraja (20 s) → ei sivuja.
+        /// Lehti suljetaan lopuksi. Ei lehteä tai aikaraja (20 s) → ei sivuja. Kaupunkilehti (omistaja = kaupunki) tai maalehti (ISO3).
         /// </summary>
-        internal System.Collections.IEnumerator VieLuennat(string kaupunki, Action<int, List<string>> sivuValmis)
+        internal System.Collections.IEnumerator VieLuennat(LehtiLaji laji, string omistaja, Action<int, LehtiSivuLaji, List<string>> sivuValmis)
         {
             var ennen = lehti;
-            Nayta(LehtiLaji.Kaupunki, kaupunki, null, 0);
+            Nayta(laji, omistaja, null, 0);
             float raja = Time.realtimeSinceStartup + 20f;
-            while ((lehti == null || ReferenceEquals(lehti, ennen) || lehti.Omistaja != kaupunki) && Time.realtimeSinceStartup < raja) yield return null;
-            if (lehti == null || lehti.Omistaja != kaupunki) { Debug.Log("MATKAKIRJA lehti: luentavienti ei lehteä " + kaupunki); yield break; }
+            while ((lehti == null || ReferenceEquals(lehti, ennen) || lehti.Omistaja != omistaja) && Time.realtimeSinceStartup < raja) yield return null;
+            if (lehti == null || lehti.Omistaja != omistaja) { Debug.Log("MATKAKIRJA lehti: luentavienti ei lehteä " + laji + " " + omistaja); yield break; }
             bool otsikko = lueOtsikko;
             lueOtsikko = false;
             for (int i = 0; i < lehti.Sivut.Count; i++)
             {
                 if (i != nyt) NaytaSivu(i, 0);
                 yield return null; yield return null;
-                sivuValmis?.Invoke(i, SivunTekstit().ToList());
+                sivuValmis?.Invoke(i, lehti.Sivut[i].Laji, SivunTekstit().ToList());
             }
             lueOtsikko = otsikko;
             Sulje();

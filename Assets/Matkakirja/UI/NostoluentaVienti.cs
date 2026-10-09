@@ -3,7 +3,8 @@
 // loppuTagi ja persoona kuten pelissä. Lajit:
 //   nostot        Nostokortti.LuennanTekstit → LuennanPalatJaTagit, kertoja (KortinLukija)
 //   kohtaamiset   löytörepliikki Loyto ja tarinakaaren muoto KaariAarre + "\n" + Loyto; yksi pala, tagi "", kertoja (PeliOhjain.Vastaa)
-//   lehdet        kaupunkilehden sivut oikean Lehtinakyman kautta (SivunTekstit → LuennanPalatJaTagit), kertoja
+//   lehdet        kaupunki- ja maalehtien sivut oikean Lehtinakyman kautta (SivunTekstit → LuennanPalatJaTagit), kertoja;
+//                 lahde <kaupunki>#<sivu> tai maa:<ISO3>#<sivu>; etusivulla perässä @etusivu
 //   saapumiset    isoisän saapumisteksti ilman ääntä (Matkakirjamerkinnat.Lukija); yksi pala, tagi "", merkinnat (Saapumisesitys)
 //   nahtavyydet   kohdekarttojen jutut (Nahtavyysarkki.JutunLuettavat → LuennanPalatJaTagit), kertoja
 //   oppaat        matkailijan oppaat (Nahtavyysarkki.OppaanLuettavat → LuennanPalatJaTagit), kertoja
@@ -162,12 +163,30 @@ namespace Matkakirja.Natiivi
             if (lajit.Contains("lehdet") && UiNakymat.Olemassa)
             {
                 var lehti = UiNakymat.Hae().Lehti;
-                var lehtikaupungit = kaupungit.Where(c => c.Lehti).ToList();
-                for (int n = 0; n < lehtikaupungit.Count; n++)
+                // Kaikki kaupunki- ja maalehdet LehtiSisallosta (Pelikoodari 9.10.: KaupunkiTiedot.Lehti on tosi vain kaupungeilla,
+                // joiden lehti on jo ladattu kaupungeittain, joten ensimmäinen vienti sai 6 kaupunkia 66:sta). Maalehdet samalla
+                // kertojalla, lahde "maa:<ISO3>#<sivu>".
+                var lehdet = new List<(LehtiLaji Laji, string Omistaja, string Maa)>();
+                foreach (var c in kaupungit)
                 {
-                    var c = lehtikaupungit[n];
-                    yield return lehti.VieLuennat(c.Id, (sivu, tekstit) => k.Lukija("lehdet", c.Id + "#" + sivu, c.Maa, tekstit));
-                    Edisty("lehdet", n + 1, lehtikaupungit.Count, k);
+                    Lehti l = null;
+                    yield return LehtiSisalto.Hae(LehtiLaji.Kaupunki, c.Id, x => l = x);
+                    if (l?.Sivut != null && l.Sivut.Count > 0) lehdet.Add((LehtiLaji.Kaupunki, c.Id, c.Maa));
+                }
+                foreach (var maa in maat.OrderBy(x => x, StringComparer.Ordinal))
+                {
+                    Lehti l = null;
+                    yield return LehtiSisalto.Hae(LehtiLaji.Maa, maa, x => l = x);
+                    if (l?.Sivut != null && l.Sivut.Count > 0) lehdet.Add((LehtiLaji.Maa, maa, maa));
+                }
+                for (int n = 0; n < lehdet.Count; n++)
+                {
+                    var (laji, omistaja, maa) = lehdet[n];
+                    string etu = laji == LehtiLaji.Maa ? "maa:" : "";
+                    // Etusivu merkitään (#<sivu>@etusivu), jotta generointi voi rajata maalehdistä vain etusivun intron.
+                    yield return lehti.VieLuennat(laji, omistaja, (sivu, sivuLaji, tekstit) => k.Lukija("lehdet",
+                        etu + omistaja + "#" + sivu + (sivuLaji == LehtiSivuLaji.Etusivu || sivuLaji == LehtiSivuLaji.MaaEtusivu ? "@etusivu" : ""), maa, tekstit));
+                    Edisty("lehdet", n + 1, lehdet.Count, k);
                 }
             }
 
