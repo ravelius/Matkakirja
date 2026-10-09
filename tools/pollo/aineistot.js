@@ -34,39 +34,41 @@ export const OPAS_AINEISTOT = Object.freeze({
   ],
   // Poikkeavat esittelypolut (ämpäri muuttumaton): Praha ja Wien avauksen ja kierros-kentän kanssa 7.10. (-20261007c).
   // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
+  // 9.10. (omistaja 8.10. 22.49 + 9.10. 08.2x "Käyttöön + Edinburgh"): 30 entistä äänetöntä kertojan äänin, opas/esittely-v2 (avaus.aani; aaneton: true pysyy → vain R2:n ääni).
   esittely_polut: {
+    pariisi: 'opas/esittely-v1c/pariisi.json',   // 9.10. Concorden 5. kysymys: "… kesällä 2024?" (Sisältökirjuri, PT), muuten v1
     praha: 'opas/esittely-v1b/praha.json', wien: 'opas/esittely-v1b/wien.json',
-    amsterdam: 'opas/esittely-aaneton-v3/amsterdam.json',
-    ateena: 'opas/esittely-aaneton-v3/ateena.json',
-    barcelona: 'opas/esittely-aaneton-v3/barcelona.json',
-    bergen: 'opas/esittely-aaneton-v3/bergen.json',
-    berliini: 'opas/esittely-aaneton-v3/berliini.json',
-    bryssel: 'opas/esittely-aaneton-v3/bryssel.json',
-    budapest: 'opas/esittely-aaneton-v3/budapest.json',
-    bukarest: 'opas/esittely-aaneton-v3/bukarest.json',
-    dublin: 'opas/esittely-aaneton-v3/dublin.json',
-    edinburgh: 'opas/esittely-aaneton-v3/edinburgh.json',
-    firenze: 'opas/esittely-aaneton-v3/firenze.json',
-    granada: 'opas/esittely-aaneton-v3/granada.json',
-    helsinki: 'opas/esittely-aaneton-v3/helsinki.json',
-    islanti: 'opas/esittely-aaneton-v3/islanti.json',
-    kosice: 'opas/esittely-aaneton-v3/kosice.json',
-    krakova: 'opas/esittely-aaneton-v3/krakova.json',
-    kreeta: 'opas/esittely-aaneton-v3/kreeta.json',
-    lissabon: 'opas/esittely-aaneton-v3/lissabon.json',
-    ljubljana: 'opas/esittely-aaneton-v3/ljubljana.json',
-    luxemburg: 'opas/esittely-aaneton-v3/luxemburg.json',
-    madrid: 'opas/esittely-aaneton-v3/madrid.json',
-    marseille: 'opas/esittely-aaneton-v3/marseille.json',
-    oslo: 'opas/esittely-aaneton-v3/oslo.json',
-    sevilla: 'opas/esittely-aaneton-v3/sevilla.json',
-    sisilia: 'opas/esittely-aaneton-v3/sisilia.json',
-    sofia: 'opas/esittely-aaneton-v3/sofia.json',
-    tampere: 'opas/esittely-aaneton-v3/tampere.json',
-    tukholma: 'opas/esittely-v3/tukholma.json',   // 9.10. omistaja: kohteita lähempää; v2 + 5 lähikohdetta, kierros 14 kohdetta lyhimpänä reittinä (v2: avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
-    valletta: 'opas/esittely-aaneton-v3/valletta.json',
-    venetsia: 'opas/esittely-aaneton-v3/venetsia.json',
-    vilna: 'opas/esittely-aaneton-v3/vilna.json',
+    amsterdam: 'opas/esittely-v2/amsterdam.json',
+    ateena: 'opas/esittely-v2/ateena.json',
+    barcelona: 'opas/esittely-v2/barcelona.json',
+    bergen: 'opas/esittely-v2/bergen.json',
+    berliini: 'opas/esittely-v2/berliini.json',
+    bryssel: 'opas/esittely-v2/bryssel.json',
+    budapest: 'opas/esittely-v2/budapest.json',
+    bukarest: 'opas/esittely-v2/bukarest.json',
+    dublin: 'opas/esittely-v2/dublin.json',
+    edinburgh: 'opas/esittely-v2/edinburgh.json',
+    firenze: 'opas/esittely-v2/firenze.json',
+    granada: 'opas/esittely-v2/granada.json',
+    helsinki: 'opas/esittely-v2/helsinki.json',
+    islanti: 'opas/esittely-v2/islanti.json',
+    kosice: 'opas/esittely-v2/kosice.json',
+    krakova: 'opas/esittely-v2/krakova.json',
+    kreeta: 'opas/esittely-v2/kreeta.json',
+    lissabon: 'opas/esittely-v2/lissabon.json',
+    ljubljana: 'opas/esittely-v2/ljubljana.json',
+    luxemburg: 'opas/esittely-v2/luxemburg.json',
+    madrid: 'opas/esittely-v2/madrid.json',
+    marseille: 'opas/esittely-v2/marseille.json',
+    oslo: 'opas/esittely-v2/oslo.json',
+    sevilla: 'opas/esittely-v2/sevilla.json',
+    sisilia: 'opas/esittely-v2/sisilia.json',
+    sofia: 'opas/esittely-v2/sofia.json',
+    tampere: 'opas/esittely-v2/tampere.json',
+    tukholma: 'opas/esittely-v3b/tukholma.json',   // v3b 9.10.: Vasa-museo katse_suunta 40 (veden puolelta, LS1/PT, juna 174). v3 9.10. omistaja: kohteita lähempää; v2 + 5 lähikohdetta, kierros 14 kohdetta lyhimpänä reittinä (v2: avaus + 14 kohdetta), aaneton: true pysyy (vain R2:n ääni)
+    valletta: 'opas/esittely-v2/valletta.json',
+    venetsia: 'opas/esittely-v2/venetsia.json',
+    vilna: 'opas/esittely-v2/vilna.json',
   },
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
   yksityiskohdat_polut: {
@@ -80,7 +82,7 @@ export const OPAS_AINEISTOT = Object.freeze({
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
     // erät 3–4 (8.10.)
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v3/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v5/tukholma-yksityiskohdat.json',   // v5 9.10.: + Kuninkaanlinnan aarrekammio ja Erik XIV:n kruunu
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     // erät 5–6 (8.10.)
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
@@ -97,6 +99,11 @@ export const OPAS_AINEISTOT = Object.freeze({
     luxemburg: 'esittely/luxemburg-v2/luxemburg-yksityiskohdat.json', kosice: 'esittely/kosice-v2/kosice-yksityiskohdat.json',
     islanti: 'esittely/islanti-v2/islanti-yksityiskohdat.json', kreeta: 'esittely/kreeta-v2/kreeta-yksityiskohdat.json',
     sisilia: 'esittely/sisilia-v4/sisilia-yksityiskohdat.json',
+  },
+  // Klikattavat lisäkuvat ilman ankkuria (Sisältökirjuri 9.10.; NUI näyttää lisäkuvina):
+  // [{ kohde_id, nimi, kuvat: [{ kuvateksti, url, lisenssi, tekija, media_url, paketti_leveys, paketti_korkeus, jarjestys }] }].
+  lisakuvat_polut: {
+    tukholma: 'esittely/tukholma-lisakuvat-v2/tukholma-lisakuvat.json',
   },
   // Historia- ja arkiosiot lentojen ajaksi (omistaja 9.10.: vähemmän taukoja ja pelkkiä siirtymiä; kehityskaupungit):
   // { kaupunki, versio, osiot: [{ tunnus, otsikko, teksti, sha, kesto_s, lahteet }] }, ääni R2 opas/<sha>.mp3|pcm|ajat.json.

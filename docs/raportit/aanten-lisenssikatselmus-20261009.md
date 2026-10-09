@@ -95,3 +95,18 @@ lukee kuitenkin vain aanilahteet.json:ia, joten nimet puuttuivat natiivista koko
 4. **Avoimet tarkistukset omistajalle:** ehtoja ei ole luettu itse.
    - Google Lyrian ehdot (etusivun musiikki).
    - ElevenLabsin ehdot pallokorin koeäänille. Muut ElevenLabs-äänet on dokumentoitu maksulliselle tilille.
+
+## Lisäys 9.10. klo 05: kielinäytteet ja ryhmät
+
+- **Kielinäytteet** `js/packs/europe-kielet.js` puuttuivat ensimmäisestä läpikäynnistä. Natiivi soittaa ne kaupunkien kokoelmista.
+  Ääniä on 31 radio aporee -äänitystä, joista 26 on PD-merkinnällä ja 5 CC BY tai BY-SA 3.0. NC- tai ND-ääniä ei ole. Kaikki 5
+  BY-ääntä olivat jo nimettyinä, ja kaikki 31 peiliä vastaavat 200.
+- **Ryhmäkenttä:** aanilahteet.json sai jokaiselle nimeämiselle kentän `ryhma`, jonka mukaan Lähteet › Äänet ryhmittelee nimet
+  (Natiivi-UI):
+
+  | ryhmä | nimeämisiä |
+  |---|---|
+  | Kartta ja linssit | 49 (kenttä-äänitykset, kielinäytteet, Ihmisen matka) |
+  | Kuumailmapallo ja kaupungit | 15 (äänimaisema, pallo, Seine, elävä kaupunki) |
+  | Käyttöliittymä | 6 (Pulu) |
+  | Olavinlinna | 3 |

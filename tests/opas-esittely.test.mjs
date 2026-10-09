@@ -2,7 +2,7 @@
 // mallikutsua; kohde ilman valmista tekstiä ja vapaat toiveet live-mallilla.
 import test, { beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
-import worker from '../tools/pollo/worker.js';
+import worker, { katseSuunta } from '../tools/pollo/worker.js';
 import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
 import { tyhjennaKuvalista } from '../tools/pollo/opas-kuvat.js';
 import { oppaanEsittely, kaupunkiId, tyhjennaEsittelyt, valmisKohde } from '../tools/pollo/opas-esittely.js';
@@ -177,9 +177,9 @@ test('esittely-indeksi: pilotti pariisi, praha, wien (vienti 7.10.)', async () =
   // Äänettömät 31 (omistaja 7.10. 18.2x): kaikki sallitut kaupungit, jokaisella oma polku esittely-aaneton-v3:ssa (8.10. avaukseen pallovirke).
   const { OPAS_SALLITUT } = await import('../tools/pollo/sallitut.js');
   assert.deepEqual([...OPAS_AINEISTOT.esittely].sort(), OPAS_SALLITUT.sallitut.map((x) => x.id).sort());
-  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3.
-  const AANELLISET = { tukholma: 'opas/esittely-v3/tukholma.json' };
-  for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-aaneton-v3/${id}.json`);
+  // Kehityskaupunki Tukholma (omistaja 8.10. 20.4x): kertojan äänet, oma polku; 9.10. lähikohteet esittely-v3, v3b Vasan katse_suunta.
+  const AANELLISET = { tukholma: 'opas/esittely-v3b/tukholma.json' };
+  for (const id of OPAS_AINEISTOT.esittely.slice(6)) assert.equal(OPAS_AINEISTOT.esittely_polut[id], AANELLISET[id] ?? `opas/esittely-v2/${id}.json`);
 });
 
 test('avauksen lupaama alku: kierros alkaa esittelyn kierros[0]:sta, ei kameraa lähimmästä (Rooma: Forum, ei Trevi)', async () => {
@@ -244,7 +244,7 @@ test('yksityiskohdat_polut: 6 äänellistä + kaikki 31 äänetöntä (Sisältö
     berliini: 'esittely/berliini-v2/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v1/amsterdam-yksityiskohdat.json',
     madrid: 'esittely/madrid-v1/madrid-yksityiskohdat.json', ateena: 'esittely/ateena-v1/ateena-yksityiskohdat.json',
     firenze: 'esittely/firenze-v2/firenze-yksityiskohdat.json',
-    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v3/tukholma-yksityiskohdat.json',
+    lissabon: 'esittely/lissabon-v1/lissabon-yksityiskohdat.json', tukholma: 'esittely/tukholma-v5/tukholma-yksityiskohdat.json',
     helsinki: 'esittely/helsinki-v2/helsinki-yksityiskohdat.json', budapest: 'esittely/budapest-v1/budapest-yksityiskohdat.json',
     edinburgh: 'esittely/edinburgh-v1/edinburgh-yksityiskohdat.json', dublin: 'esittely/dublin-v1/dublin-yksityiskohdat.json',
     krakova: 'esittely/krakova-v1/krakova-yksityiskohdat.json', sevilla: 'esittely/sevilla-v1/sevilla-yksityiskohdat.json',
@@ -290,11 +290,41 @@ test('äänetön esittely (omistaja 7.10. 18.2x): ei generointia, ei aani-, aani
 test('näyttönimi ≠ tunnus: Reykjavík löytää islanti-esittelyn', async () => {
   const urlit = [];
   await oppaanEsittely({}, 'Reykjavík', async (u) => { urlit.push(String(u)); return new Response(JSON.stringify(ESITTELY)); });
-  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-aaneton-v3/islanti.json']);
+  assert.deepEqual(urlit, ['https://media.matkakirja.app/opas/esittely-v2/islanti.json']);
 });
 
 test('historia_polut: kehityskaupunkien historiaosiot (Tukholma, Pariisi) omasta polustaan', async () => {
   const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
   assert.deepEqual(OPAS_AINEISTOT.historia_polut, { tukholma: 'opas/historia-v1/tukholma.json', pariisi: 'opas/historia-v1/pariisi.json' });
   assert.deepEqual(Object.keys(OPAS_AINEISTOT.historia_yksityiskohdat_polut).sort(), Object.keys(OPAS_AINEISTOT.historia_polut).sort());
+});
+
+test('esittely_polut: Pariisi v1c (Concorden kysymys kesällä 2024), äänet ennallaan', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.pariisi, 'opas/esittely-v1c/pariisi.json');
+});
+
+test('lisakuvat_polut: Tukholman Kuninkaanlinnan lisäkuvat (Sisältökirjuri 9.10.), vain esittelykaupungeille', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.deepEqual(OPAS_AINEISTOT.lisakuvat_polut, { tukholma: 'esittely/tukholma-lisakuvat-v2/tukholma-lisakuvat.json' });
+  for (const k of Object.keys(OPAS_AINEISTOT.lisakuvat_polut)) assert.ok(OPAS_AINEISTOT.esittely.includes(k), k);
+});
+
+test('katse_suunta (LS1/PT 9.10., juna 174): esittelyn kohteen kenttä pysähdykseen litteänä, puuttuva/virheellinen jää pois', async () => {
+  assert.deepEqual(katseSuunta(40), { katse_suunta: 40 });
+  assert.deepEqual(katseSuunta(-90), { katse_suunta: 270 });
+  assert.deepEqual(katseSuunta(400), { katse_suunta: 40 });
+  assert.deepEqual(katseSuunta('15'), { katse_suunta: 15 });
+  for (const v of [undefined, null, '', 'pohjoinen', NaN, Infinity]) assert.deepEqual(katseSuunta(v), {}, String(v));
+  const env = ymparisto();
+  env.OPAS_ESITTELY_TESTI.testila = { ...ESITTELY, kohteet: ESITTELY.kohteet.map((k, i) => (i === 0 ? { ...k, katse_suunta: 40 } : k)) };
+  const { d, malli } = await opas(env, { toive: 'Esittele kaupunki', istunto: 'ks1' });
+  assert.equal(malli, 0); assert.equal(d.id, 'Q100'); assert.equal(d.katse_suunta, 40);
+  const toka = await opas(env, { kaydyt: ['Q100'], istunto: 'ks1' });
+  assert.equal(toka.d.id, 'Q101'); assert.ok(!('katse_suunta' in toka.d), 'kenttä puuttuu → ei vastauksessa');
+});
+
+test('esittely_polut: Tukholma v3b (Vasa-museo katse_suunta 40, juna 174)', async () => {
+  const { OPAS_AINEISTOT } = await import('../tools/pollo/aineistot.js');
+  assert.equal(OPAS_AINEISTOT.esittely_polut.tukholma, 'opas/esittely-v3b/tukholma.json');
 });

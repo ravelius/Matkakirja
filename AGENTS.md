@@ -173,6 +173,14 @@ Lisäksi:
   ne jumittavat session ja tuottavat omistajalle lupakyselyn.
 - Työsessio ei päätä vuoroaan avoimeen kysymykseen eikä hyväksynnän
   odotukseen. Esteet kirjataan raporttiin.
+- **Codex: jos tilaus ja pysyvä ohje näyttävät ristiriitaisilta, toimi
+  tilauksen mukaan, kirjaa kysymys `posti/`-kansioon (haara
+  `claude/postilaatikko`) Päätoimittajalle ja jatka muita kohteita.** Älä jää
+  odottamaan omistajan vastausta (9.10.2026: varustekuvatilaus pysähtyi
+  yöksi). Kuvatyyli: käyttöliittymän kuvakkeet (matkalaukun varustekuvat
+  `assets/varusteet/`, kartan nähtävyysminiatyyrit) nykyisen akvarellisarjan
+  tyyliin, kaikki muut havainnekuvat fotorealistisina (Raamattu, KUVAT —
+  TYYLI JA TUOTANTO).
 
 ## Git-käytännöt
 
