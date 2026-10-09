@@ -15,6 +15,8 @@ simu tallentaa vaakanäkymän pystyruudulle → `filmi-kuvapari.sh <app> <sha8>`
 Käännös + simu pyydetty Julkaisijalta 169:n jälkeen. Sitten arkit PT:lle.
 JUNA 170 kärjet: LS1 avaus-170 db9ad39ca, NUI 9b7bb7134 (⊇ 570917a6e), Siirtoseppä 290f5d4ae (⊇ 28c65e98e), LS2 laivat-170 0a40a8165 (⊇ fa5efa25c, e5edd5e60,
 f50d2980e; varjostimet kääntyivät 84bd41d56) + omat-mallit-korkeus 8a23d6508 (ehto data), OMA filmi-170 8309c2f47, + LS1 kierron lisäkorjaus (tulossa).
+JUNA 171 (PT kuittasi 03.1x): Siirtoseppä 0b8999cc7 (⊇ 778202265, Olavinlinnan alkuvalinta) + NUI natiivi-ui/olavinlinna-alku-171 f1a459e2f (valintakortit),
+koeyhdistelmä 1102/1102. 778202265 junaan 170 vasta LS2:n muistitestin jälkeen (Siirtoseppä ilmoittaa).
 
 ## TILA 9.10. 02.5x
 **JUNA 169 runko natiiviseppa/juna-169 71dbfba87** (+ LS1 kierros-169 a3ad152f5 ⊇ avaus/sumennus, NUI b58981d4a cherry-pick); testit 453/419/1093,
