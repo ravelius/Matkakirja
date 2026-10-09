@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "e94eefb2d2a22fe6",
-  "kansio": "dioraama/olavinlinna/blender/e94eefb2d2a22fe6/",
+  "hash": "18ffd8472fe0757c",
+  "kansio": "dioraama/olavinlinna/blender/18ffd8472fe0757c/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -437,6 +437,11 @@
       "polku": "hahmot/renki-1500.glb",
       "sha256": "360a879c4852a9fc728fe9f638223a32c34067ae71f159b92a7e3fc6464bd5f2",
       "tavuja": 2172080
+    },
+    {
+      "polku": "hahmot/rukouskirja.glb",
+      "sha256": "70e7e53af1e8b2bb45f87293de9e1f7b3c7357a984e2205284f5927ef356bfa1",
+      "tavuja": 8704
     },
     {
       "polku": "hahmot/soutaja-1500-0-6x6.astcm",
