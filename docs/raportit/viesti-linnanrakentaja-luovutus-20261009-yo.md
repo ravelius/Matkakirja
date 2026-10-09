@@ -211,3 +211,7 @@ Seuraavaksi:
   - Sijoitus: tartu-rivi jää muuntamatta vain, kun sen esine on saman hahmon kanna-rivin esine. Hoitajan pulpettirivit muunnetaan kuten ennen.
   - Main-pohjainen `linnanrakentaja-kadet-sijoitus` on vanhentunut, ja sen worktree on poistettu (haara jää originiin).
   - Poista v45c- ja v45d-worktreet, kun Siirtoseppä on kytkenyt.
+- **ranta-1499 v2 -muoto** (22.3x, v25-vientiä varten): `olavinlinna-kavely-v1/lahde/ranta1499.py`. KALT on 0,7, ja silokallion kohina
+  (σ 3/1/1,5/0,5 m) on vain veden yläpuolella. Vanha versio on `ranta1499_v1.py`. Koe v24-kuorella: `ranta1499-v2-koe-v24kuori.json`,
+  vertailu `linna-laatu/ranta1499-v2-vertailu.jpg`. Yli veden ala on 6 660 → 4 200 ruutua.
+  - Ehdotettu PT:lle: rantakivet.glb-kiviä rinteeseen (odottaa vastausta).
