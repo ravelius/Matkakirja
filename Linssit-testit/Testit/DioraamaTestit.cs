@@ -386,6 +386,16 @@ namespace Matkakirja.Linssit.Testit
 
         /// <summary>Sparse float -accessor morph-kohteessa (Blenderin muotoavainten oletus; LR:n MetaHuman 9.10.): ei pohjaa (nollat),
         /// yksi harva arvo kärjelle 2.</summary>
+        /// <summary>LR v46b: glTF alphaMode → alfaraja (noki BLEND → 0,5; MASK alphaCutoffilla; OPAQUE ja puuttuva 0).</summary>
+        [Testi] static void GlbAlfaRaja()
+        {
+            Oleta.Sama(0.5f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "BLEND" }));
+            Oleta.Sama(0.3f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "MASK", ["alphaCutoff"] = 0.3 }));
+            Oleta.Sama(0.5f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "MASK" }));
+            Oleta.Sama(0f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(new System.Collections.Generic.Dictionary<string, object> { ["alphaMode"] = "OPAQUE" }));
+            Oleta.Sama(0f, Matkakirja.Linssit.Dioraama.DioraamaGlb.AlfaRajaMateriaalista(null));
+        }
+
         [Testi] static void GlbSparseMorph()
         {
             float[] pos = { 0, 0, 2, 1, 0, 2, 0, 1, 5 };

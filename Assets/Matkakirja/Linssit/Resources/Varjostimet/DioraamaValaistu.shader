@@ -43,6 +43,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
         _NormaaliPaalla ("Normaalikartta käytössä", Float) = 0
         _OrmKuva ("ORM (R = AO, G = karheus, B = metalli; lineaarinen, UV0; rekvisiitta LR v45p)", 2D) = "white" {}
         _OrmPaalla ("ORM käytössä", Float) = 0
+        _AlfaRaja ("Alfaraja (0 = läpinäkymätön; glTF MASK/BLEND, LR v46b noki)", Float) = 0
         _Detalji ("Detalji (x = 1 / toistoväli m, y = voima, z = päällä)", Vector) = (0.6667, 0.6, 0, 0)
         _DetaljiAlbedo ("Detalji: albedo (0,5-pohjainen)", 2D) = "grey" {}
         _DetaljiNormaali ("Detalji: normaali (OpenGL Y+)", 2D) = "bump" {}
@@ -107,6 +108,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _DetaljiPom;      // POM: x = syvyys UV, y = päällä (Ultra)
                 float _NormaaliPaalla;   // 1 = _NormaaliKuva tangenttiavaruudessa (mesh-tangentit; SeikkailuEsineet)
                 float _OrmPaalla;        // 1 = _OrmKuva: AO kertoo valon (kuten COLOR.r)
+                float _AlfaRaja;         // > 0: _PohjaKuva.a < raja leikataan pois (kaikissa passeissa: varjo ja syvyys samoin)
             CBUFFER_END
 
             struct Syote
@@ -174,7 +176,9 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 half3 albedo;
                 if (_Tila > 0.5)
                 {
-                    half3 pohja = SAMPLE_TEXTURE2D(_PohjaKuva, sampler_PohjaKuva, uv).rgb;
+                    half4 pohja4 = SAMPLE_TEXTURE2D(_PohjaKuva, sampler_PohjaKuva, uv);
+                    if (_AlfaRaja > 0) clip(pohja4.a - _AlfaRaja);
+                    half3 pohja = pohja4.rgb;
                     albedo = pohja * (1.0h + (satunnainen - 0.5h) * 0.1h); // B: vain Codexin kuva (_Vari jää A:n pinnan väriksi)
                 }
                 else
@@ -250,7 +254,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
 
         // Varjojen heitto (aurinko + tulevat lisävalojen varjot, jos joskus otetaan käyttöön): sama
         // UnityPerMaterial-CBUFFER kuin Forward-passissa (SRP Batcher vaatii identtisen layoutin joka passissa),
-        // vaikka tämä passi ei albedoa tarvitsekaan (ei alpha-cutoutia dioraaman pinnoilla).
+        // alfaleikkaus (_AlfaRaja > 0, LR v46b noki) myös varjoon ja syvyyteen, muuten läpinäkyvä osa heittäisi varjon ja peittäisi seinän.
         Pass
         {
             Name "ShadowCaster"
@@ -284,10 +288,12 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _DetaljiPom;
                 float _NormaaliPaalla;
                 float _OrmPaalla;
+                float _AlfaRaja;
             CBUFFER_END
 
-            struct SyoteVarjo { float4 paikka : POSITION; float3 normaali : NORMAL; };
-            struct ValiVarjo { float4 paikka : SV_POSITION; };
+            TEXTURE2D(_PohjaKuva); SAMPLER(sampler_PohjaKuva);
+            struct SyoteVarjo { float4 paikka : POSITION; float3 normaali : NORMAL; float2 uv : TEXCOORD0; };
+            struct ValiVarjo { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; };
 
             ValiVarjo vertVarjo(SyoteVarjo i)
             {
@@ -296,10 +302,15 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float3 normaaliW = TransformObjectToWorldNormal(i.normaali);
                 float4 paikka = TransformWorldToHClip(ApplyShadowBias(maailma, normaaliW, _LightDirection));
                 o.paikka = ApplyShadowClamping(paikka);
+                o.uv = TRANSFORM_TEX(i.uv, _PohjaKuva);
                 return o;
             }
 
-            half4 fragVarjo(ValiVarjo i) : SV_Target { return 0; }
+            half4 fragVarjo(ValiVarjo i) : SV_Target
+            {
+                if (_AlfaRaja > 0) clip(SAMPLE_TEXTURE2D(_PohjaKuva, sampler_PohjaKuva, i.uv).a - _AlfaRaja);
+                return 0;
+            }
             ENDHLSL
         }
 
@@ -334,19 +345,26 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 float4 _DetaljiPom;
                 float _NormaaliPaalla;
                 float _OrmPaalla;
+                float _AlfaRaja;
             CBUFFER_END
 
-            struct SyoteSyvyys { float4 paikka : POSITION; };
-            struct ValiSyvyys { float4 paikka : SV_POSITION; };
+            TEXTURE2D(_PohjaKuva); SAMPLER(sampler_PohjaKuva);
+            struct SyoteSyvyys { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
+            struct ValiSyvyys { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; };
 
             ValiSyvyys vertSyvyys(SyoteSyvyys i)
             {
                 ValiSyvyys o;
                 o.paikka = TransformWorldToHClip(TransformObjectToWorld(i.paikka.xyz));
+                o.uv = TRANSFORM_TEX(i.uv, _PohjaKuva);
                 return o;
             }
 
-            half4 fragSyvyys(ValiSyvyys i) : SV_Target { return 0; }
+            half4 fragSyvyys(ValiSyvyys i) : SV_Target
+            {
+                if (_AlfaRaja > 0) clip(SAMPLE_TEXTURE2D(_PohjaKuva, sampler_PohjaKuva, i.uv).a - _AlfaRaja);
+                return 0;
+            }
             ENDHLSL
         }
     }

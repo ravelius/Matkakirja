@@ -64,6 +64,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// (malli3d.varit[pinta]) tai pankin oletuksen (PINNAT[pinta].vari — EI rakennus.json:ssa hahmojen
         /// pinnoille, koska niitä ei käytetä rakennuksen geometriassa) ja leiponut tuloksen tähän.</summary>
         public float[] Vari;
+        /// <summary>LR v46b: alfaleikkauksen raja materiaalin alphaModesta (MASK: alphaCutoff, oletus 0,5; BLEND: 0,5, koska dioraamassa ei
+        /// ole läpikuultavaa passia); 0 = OPAQUE tai puuttuva.</summary>
+        public float AlfaRaja;
         public int[] Kolmiot;
         /// <summary>SKIN: JOINTS_0 (4 per kärki, indeksejä skinin Nivelet-listaan) tai null.</summary>
         public int[] Nivelet;
@@ -145,6 +148,15 @@ namespace Matkakirja.Linssit.Dioraama
 
     public static class DioraamaGlb
     {
+        /// <summary>glTF alphaMode → alfaraja (GlbOsa.AlfaRaja).</summary>
+        public static float AlfaRajaMateriaalista(Dictionary<string, object> materiaali)
+        {
+            if (materiaali == null) return 0f;
+            string tila = MiniJson.Teksti(materiaali, "alphaMode");
+            if (tila == "MASK") return (float)(MiniJson.Luku(materiaali, "alphaCutoff") ?? 0.5);
+            return tila == "BLEND" ? 0.5f : 0f;
+        }
+
         const uint Magic = 0x46546C67, JsonPala = 0x4E4F534A, BinPala = 0x004E4942;
 
         /// <summary>Lukee dioraaman glb:n. unityyn = true kääntää Unityn kehykseen (ks. tiedoston alun huomautus).</summary>
@@ -293,7 +305,7 @@ namespace Matkakirja.Linssit.Dioraama
                     var nivelet = Nivelet(a, k);
                     var painot = nivelet != null ? Painot(a, k) : null;
                     if (nivelet != null && painot == null) throw new DioraamaGlbVirhe("JOINTS_0 ilman WEIGHTS_0:aa");
-                    var osa = new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, NormaaliKuva = normaaliKuva, OrmKuva = ormKuva, KaksiPuolinen = materiaaliObj != null && MiniJson.Kentta(materiaaliObj, "doubleSided") is bool kp && kp, Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot };
+                    var osa = new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, NormaaliKuva = normaaliKuva, OrmKuva = ormKuva, KaksiPuolinen = materiaaliObj != null && MiniJson.Kentta(materiaaliObj, "doubleSided") is bool kp && kp, AlfaRaja = AlfaRajaMateriaalista(materiaaliObj), Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot };
                     // MORPH: vain POSITION-deltat (normaalit lasketaan muodoille Unityssa; FACEIT-vienti antaa vain POSITIONin).
                     var nimet = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(mesh, "extras")), "targetNames"));
                     int ti = 0;
