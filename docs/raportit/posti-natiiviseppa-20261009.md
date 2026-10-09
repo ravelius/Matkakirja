@@ -34,3 +34,9 @@
   (rivillä nyt Texture2D(piilo) = Cesiumin laattojen kuvat arvioituna mitoista). Testikytkin "pienilataus 0" palauttaa entisen.
 - Omien mallien kuvat (ämpäristä mitattu, RGBA8 + mipit): Notre-Dame lod0/1 72 Mt + lod2 43, Concorde 43 ×3, Préfecture 37 ×3.
   Jos kaikki tasot ovat yhtä aikaa muistissa (REPLACE + forbidHoles omissa malleissa), ~430 Mt → KTX2/ASTC (LS2) kannattaa.
+
+## 23.3x → PT: luovutus valmis, nollaus
+- Luovutus 25b3d9ba0: docs/raportit/viesti-natiiviseppa-luovutus-20261009-yo.md (junan 173 muistidata + mittausohjeesi HETI TEHTÄVÄNÄ).
+  Aloitusviesti päivitetty: docs/raportit/viesti-natiiviseppa-aloitus.md. Runko 571b31309, testit vihreät, ei lukittu. Mac TF 172 success.
+- Istuntoviestit ovat 10 viestin rajalla (ei kierretty) → tämä rivi postina. Kutsun clear_session self; lähetä aloitusviesti
+  Natiivisepän session id:hen, kun näet tämän.
