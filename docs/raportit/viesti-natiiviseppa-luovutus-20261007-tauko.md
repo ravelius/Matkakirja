@@ -3,7 +3,17 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 03.0x (UUSIN)
+## TILA 9.10. 03.2x (UUSIN)
+**BUILD 169 = 5b91b1a2c** (proto master; runko e9802f2d1 = d9c848fa0 + LS1 b92647d44 kohdekaari/kierto; simukäännös 2ee9aea8e 0 shader erroria;
+app lokit/natiiviseppa-app-169-e9802f2d1). iOS TF 169 ajo 37864329025 (Julkaisija 03.21), muutosloki #4253. Mac TF -odottaja käynnissä (alaraja
+00:21Z, loki lokit/natiiviseppa-mac-tf-169.log). juna/b13 → e9802f2d 03.21 (juna.log).
+**JUNA 170 runko natiiviseppa/juna-170 3a3b47a63** (wt/proto-natiiviseppa-j170): BUILD 169 + Siirtoseppä 290f5d4ae + LS1 db9ad39ca + LS2 0a40a8165 +
+8a23d6508 + NUI fcc8d81f7 (äänilähteet 54; konflikti 9b7bb7134-cherry-pickin takia → NUI:n versio, metro-kyltti säilyi) + filmi 8309c2f47; testit
+453/419/1122, unity 0, tarkista 0. ODOTTAA: simukäännös (Julkaisijan NYT, varjostinehto), Siirtoseppä 778202265 (LS2:n muistitestin jälkeen), kuvaparit.
+FILMI-kuvapari: käännös 2fa4e772e (03.20), ajo filmi-ajo.sh scratchpadissa → arkit lokit/filmi170-arkki-{tukholma,pariisi}-2fa4e772.png → PT.
+JUNA 171 kärki: NUI a918d7e97 (⊇ a099ee0b5 ⊇ Siirtoseppä a8a454732 ⊇ 0b8999cc7 ⊇ 778202265).
+
+## TILA 9.10. 03.0x
 **JUNA 169 LOPULLINEN runko natiiviseppa/juna-169 d9c848fa0** = 71dbfba87 + Siirtoseppä 56fda7154 (kertoja vaikenee pelattavan palan aikana, ⊇ b8a0e4133)
 + NUI 9b7bb7134 cherry-pick (äänilähteet 51; jokiproomu ja laivan torvi soivat jo 169:n pallossa → nimeäminen samaan versioon); testit 453/419/1093,
 unity 0, tarkista 0. LS1:n kierron lisäkorjaus → 170 (PT: ei odoteta). ODOTTAA: Julkaisijan KÄÄNNÖS NYT (LS2:n simu 02.57–~03.22) → simukäännös
