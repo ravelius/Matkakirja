@@ -482,9 +482,18 @@ export const RAAMATTU = {
           + 'docs/raportit/viesti-fable-luovutus-<pvm>.md. G) CI: suorituskykysavukkeet '
           + 'omassa sarjassa (schedule, yksi työntekijä), PR-portissa vain toiminnalliset '
           + 'vartiot; simulaattorit kuormittavat CI-Macia -> Laitetestaaja ilmoittaa. KONTEKSTIN NOLLAUS (omistaja 21.9.2026, tarkennus 21.9. ilta): '
-          + 'Postivahti lukee kaikkien roolisessioiden kontekstin asteen 10 minuutin '
-          + 'kierroksellaan get_usage-työkalulla ja ilmoittaa Fablelle yhdellä rivillä, kun '
-          + 'sessio ylittää 70 % (uudestaan vasta 85 %:ssa); Fable käskee luovutuksen. Kun '
+          + 'POSTIVAHDIN KIERROS (sitova, omistaja 9.10.2026 klo 11.5x: "Kirjoita tuo postivahdin tehtävä selkeästi raamattuun, '
+          + 'jotta se toimii myös tilinvaihtojen jälkeenkin"; syy: Päätoimittaja tiivistyi 97 %:ssa, koska kierros ei enää lukenut '
+          + 'konteksteja): Postivahti ajaa kierroksen 10 minuutin välein toistuvalla ajastuksella (CronCreate tai ScheduleWakeup), '
+          + 'jonka kehote on sanatarkasti "POSTIVAHDIN KIERROS (Raamattu, KONTEKSTIN NOLLAUS): 1) get_usage jokaiselle käynnissä '
+          + 'olevalle roolisessiolle ja PÄÄTOIMITTAJALLE; rooli ≥ 70 % (uudestaan 85 %), Päätoimittaja ≥ 65 % (uudestaan 80 %) '
+          + '→ yksi rivi Päätoimittajalle. 2) Viikkokiintiö 96 % ja 99 % → yksi rivi Päätoimittajalle, ei siirtopromptia. '
+          + '3) tools/tarkista-tyotilat.sh. 4) Talon tila." — ohje kulkee joka kierroksella kehotteessa, joten tiivistys, '
+          + 'nollaus tai tilinvaihto ei pudota kohtia pois. Uusi, nollattu tai tilinvaihdon jälkeen avattu Postivahti käynnistää '
+          + 'ajastuksen ensimmäisenä toimenaan ja uusii sen viikoittain (CronCreate vanhenee 7 vuorokaudessa). Päätoimittaja '
+          + 'lukee oman asteensa (get_usage self) jokaisella jonokierroksellaan ja tarkistaa kerran tunnissa list_eventsillä, '
+          + 'että Postivahdin viimeisin kierros sisältää kontekstiluvut; puuttuvat luvut = ajastus on rikki, korjataan heti. '
+          + 'Fable käskee luovutuksen. Kun '
           + 'session konteksti ylittää 70 %, sessio '
           + 'kirjoittaa luovutuksen docs/raportit/viesti-<rooli>-luovutus-<pvm>.md ja FABLE '
           + 'NOLLAA SESSION ITSE ILMAN OMISTAJAA (sitova kaava, korjattu 24.9.2026 klo 04.2x, '
@@ -1189,7 +1198,7 @@ export const RAAMATTU = {
           + 'docs/raamattu-loki/paatokset-2026-08-24--09-03.md #LIVIAN PUHEKIELI - '
           + 'TYYLIMAARITTELY, #LIVIAN KEHYSMALLI CHATISSA, #LIVIAN LISAYS JA KEVYT '
           + 'MAUSTE, #LIVIAN MIETINTAMUODOT.',
-        'PULU-CHAT YHTENÄINEN (omistaja 5.10.2026 klo 16.4x, sitova): Pululla ei ole koskaan valmiiksi kirjoitettuja vastauksia, vain valmiita kysymyksiä; valmiit vastaukset ovat korkeintaan workerin taustatietoa. Jokaisen vastauksen perään tulee aina tasan kaksi uutta jatkokysymystä syöttörivin yläpuolelle, eivätkä vanhat kysymykset jää pinoon vastauksen alle. Chat toimii täsmälleen samoin kaikkialla pelissä ulkoasua ja nappeja myöten; vain värit saavat vaihdella linssin mukaan. Uusi paikka aloittaa puhtaan keskustelun. Pulun kaiutin on aina joko Auto- tai ei luentaa -tilassa, ja jälkimmäisen merkki on kaiutin ja yksi vino viiva. Pulun äänen päiväkatto on 15 000 merkkiä vuorokaudessa, ja ylityksessä vastaus tulee tekstinä ilman ääntä; kehittäjäkoodilla kattoa ei ole. Astronauttikuvissa chatin konteksti ja valmiit kysymykset vaihtuvat näytöllä olevan kuvan mukaan: worker tekee kuvalle kolme enintään kuuden sanan kokonaista kysymystä kerran ensimmäisellä katselulla ja tallentaa ne kuvan tunnuksella (omistaja 6.10.2026 klo 00.1x).',
+        'PULU-CHAT YHTENÄINEN (omistaja 5.10.2026 klo 16.4x, sitova): PULU ESIGENEROITUNA (omistaja 9.10.2026 klo 11.4x–11.5x, korvaa 5.10. linjan "ei valmiita vastauksia"; loki): peruspelin Pulu vastaa etukäteen generoiduilla vastauksilla — valmiit kysymykset (tavoite vähintään 5 kohtaa kohden; näkyvissä 2, loput vierittämällä), niiden vastaukset sekä vastausten alleviivattujen linkkien ja jatkokysymysten vastaukset generoidaan valmiiksi ja tallennetaan (ehdotus: ämpäripaketti maittain), joten peruspeli ei käytä API-krediittejä; vapaa kysyminen on myöhemmin maksullinen lisäosa, joka käyttää API:a. Generoinnin määrä ja syvyys omistajan luvalla; luentaäänet vasta, kun Pulun ääni on valittu. Jokaisen vastauksen perään tulee aina tasan kaksi uutta jatkokysymystä syöttörivin yläpuolelle, eivätkä vanhat kysymykset jää pinoon vastauksen alle. Chat toimii täsmälleen samoin kaikkialla pelissä ulkoasua ja nappeja myöten; vain värit saavat vaihdella linssin mukaan. Uusi paikka aloittaa puhtaan keskustelun. Pulun kaiutin on aina joko Auto- tai ei luentaa -tilassa, ja jälkimmäisen merkki on kaiutin ja yksi vino viiva. Pulun äänen päiväkatto on 15 000 merkkiä vuorokaudessa, ja ylityksessä vastaus tulee tekstinä ilman ääntä; kehittäjäkoodilla kattoa ei ole. Astronauttikuvissa chatin konteksti ja valmiit kysymykset vaihtuvat näytöllä olevan kuvan mukaan: worker tekee kuvalle kolme enintään kuuden sanan kokonaista kysymystä kerran ensimmäisellä katselulla ja tallentaa ne kuvan tunnuksella (omistaja 6.10.2026 klo 00.1x).',
         'PULUN VASTAUSKAAVA (omistaja 26.9.2026 klo 23.4x, sitova): Pulun (Livian) chat-vastaus on kolmiosainen — se alkaa Pulun omalla tyylillä, jatkuu luontevasti asiantuntevaan sävyyn ja palaa lopuksi pulumaiseen yhteenvetoon. Omistaja pitää tästä erittäin paljon: malli ja kehote kiinnitetään, ja kaavaa muutetaan vain omistajan luvalla. Kaikki vastaukset syntyvät live-mallilla (ks. PULU-CHAT YHTENÄINEN).',
         'LIVIA ISOISÄN MERKINNÄN KOMMENTAATTORINA — PARIPERIAATE (28.8.2026): '
           + 'reaktio suunnitellaan aina parina isoisän kertomuksen kanssa. Hurja tai '
