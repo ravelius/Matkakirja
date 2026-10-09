@@ -1,0 +1,1078 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kaupunkilehti / Ulan Bator] Mongolian pääkaupunki Tuul-joen laaksossa, neljän vuoren keskellä. Kerrostalojen ja lasitornien takana alkavat jurtta-alueet, joissa asuu kaksi kolmasosaa kaupunkilaisista.
+AIEMPI KYSYMYS: Kuinka pitkä saari Hvar on?
+AIEMPI VASTAUS (Livia):
+Mmm—. Viisas Pöllö lupasi palata jo Dubrovnikissa, mutta tämä hoituu ilmankin. Hvar on noin 70 kilometriä pitkä mutta kapea, ja lähteet voivat antaa hieman erilaisia lukuja, joten en ole varma tarkasta pituudesta. Saari sijaitsee [[Dalmatiassa]] [[Bračin]] eteläpuolella, ja sen toisella puolella on [[Korčulan]] saari. Pituus ei vaivaa kyyhkyä, korkeintaan ruokataukojen puute.
+KYSYMYS: Kerro lisää: Korčulan
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+AIEMPI KYSYMYS: Miten kuivamuuri rakennetaan?
+AIEMPI VASTAUS (Livia):
+Ai kuivamuuri, no sehän on kivinen juttu. Kuivamuuri on kivistä ilman laastia kasattu muuri: kivet valitaan ja asetetaan niin, että ne tukevat toisiaan ja muuri pysyy pystyssä pelkän painon ja asettelun ansiosta. Isommat kivet menevät pohjalle, ja pienemmillä täytetään välit. Kuivamuurausperinne on kirjattu [[Unescon]] [[aineettomaan kulttuuriperintöön]] vuonna 2018, ja taito on peräisin monesta Euroopan maasta, Kroatia mukaan lukien.
+
+Minä olen istunut sellaisella muurilla monta kertaa. Se on kyyhkylle ihanteellinen: raot ovat juuri sopivan kokoisia, eikä kukaan häädä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Miten kuivamuuri rakennetaan?
+AIEMPI VASTAUS (Livia):
+Ai kuivamuuri, no sehän on kivinen juttu. Kuivamuuri on kivistä ilman laastia kasattu muuri: kivet valitaan ja asetetaan niin, että ne tukevat toisiaan ja muuri pysyy pystyssä pelkän painon ja asettelun ansiosta. Isommat kivet menevät pohjalle, ja pienemmillä täytetään välit. Kuivamuurausperinne on kirjattu [[Unescon]] [[aineettomaan kulttuuriperintöön]] vuonna 2018, ja taito on peräisin monesta Euroopan maasta, Kroatia mukaan lukien.
+
+Minä olen istunut sellaisella muurilla monta kertaa. Se on kyyhkylle ihanteellinen: raot ovat juuri sopivan kokoisia, eikä kukaan häädä.
+KYSYMYS: Kerro lisää: aineettomaan kulttuuriperintöön
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Keksinnöt: Piirros lentävästä miehestä] 1595 — Faust Vrančić oli piispa, kielitieteilijä ja keksijä, joka julkaisi kirjassaan piirroksen nimeltä Homo Volans, lentävä ihminen. Kuvassa mies laskeutuu tornista neliömäisen purjeen varassa — se on varhaisimpia kuvauksia laskuvarjosta, ja idean pohjana oli Leonardo da Vincin luonnos. Kertomuksen mukaan Vrančić kokeili laitetta itse Venetsiassa. Vaikka koe olisi tarua, piirros on tosi: sen mitat toimivat, ja samalla periaatteella laskuvarjot tehtiin vielä satoja vuosia myöhemmin.
+AIEMPI KYSYMYS: Syntyikö Marco Polo oikeasti täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on arka aihe. Varmaa näyttöä siitä, että Marco Polo olisi syntynyt Korčulassa, ei ole. Yleisimmin hänen kerrotaan syntyneen [[Venetsiassa]], jossa Polon kauppiassuku vaikutti, ja Venetsia pitää omastaan kiinni. [[Korčulan]] väite perustuu paikalliseen perimätietoon, jota saarelaiset ovat vaalineet vuosisatoja, enkä ole varma sen tarkoista perusteista. Syntymäpaikka on siis säilynyt kiistana. Minä en ota kantaa, mutta pullaa saa kumpikin kaupunki leipoa.
+KYSYMYS: Kerro lisää: Venetsiassa
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kaupunkilehti / Ulan Bator] Mongolian pääkaupunki Tuul-joen laaksossa, neljän vuoren keskellä. Kerrostalojen ja lasitornien takana alkavat jurtta-alueet, joissa asuu kaksi kolmasosaa kaupunkilaisista.
+AIEMPI KYSYMYS: Syntyikö Marco Polo oikeasti täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on arka aihe. Varmaa näyttöä siitä, että Marco Polo olisi syntynyt Korčulassa, ei ole. Yleisimmin hänen kerrotaan syntyneen [[Venetsiassa]], jossa Polon kauppiassuku vaikutti, ja Venetsia pitää omastaan kiinni. [[Korčulan]] väite perustuu paikalliseen perimätietoon, jota saarelaiset ovat vaalineet vuosisatoja, enkä ole varma sen tarkoista perusteista. Syntymäpaikka on siis säilynyt kiistana. Minä en ota kantaa, mutta pullaa saa kumpikin kaupunki leipoa.
+KYSYMYS: Kerro lisää: Korčulan
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hanoi — kaupunkilehti / Hanoi: Miekka joka palautettiin] Legendan mukaan keisari Lê Lợi souti kaupungin keskellä olevalla järvellä, kun Kim Quy, kultainen kilpikonnajumala, nousi pinnalle ja pyysi takaisin taikamiekkaa. Lohikäärmekuningas oli antanut sen Lê Lợille Ming-Kiinaa vastaan käytyyn sotaan, ja kun sota oli ohi, miekka kuului takaisin. Lê Lợi luovutti sen, ja järvi sai nimen Hoàn Kiếm, palautetun miekan järvi. Pienellä saarella keskellä vettä seisoo yhä Kilpikonnatorni. Järvi on seitsemänsataa metriä pitkä ja syvimmilläänkin vain kaksi metriä syvä.
+AIEMPI KYSYMYS: Mikä on moreška?
+AIEMPI VASTAUS (Livia):
+Ai moreška, joo. Moreška on [[miekkatanssi]], joka esittää kahden armeijan taistelua, ja sitä on esitetty [[Korčulassa]] 1500-luvulta asti. Perinteisen tarinan mukaan mustat ja valkoiset kuninkaat taistelevat neidosta, ja miehet tanssivat miekat käsissä musiikin tahtiin. Esitys on osa saaren identiteettiä, ja nykyään sitä esitetään myös matkailijoille. Minun suku ei ikinä riitele noin näyttävästi.
+KYSYMYS: Kerro lisää: miekkatanssi
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Mikä on moreška?
+AIEMPI VASTAUS (Livia):
+Ai moreška, joo. Moreška on [[miekkatanssi]], joka esittää kahden armeijan taistelua, ja sitä on esitetty [[Korčulassa]] 1500-luvulta asti. Perinteisen tarinan mukaan mustat ja valkoiset kuninkaat taistelevat neidosta, ja miehet tanssivat miekat käsissä musiikin tahtiin. Esitys on osa saaren identiteettiä, ja nykyään sitä esitetään myös matkailijoille. Minun suku ei ikinä riitele noin näyttävästi.
+KYSYMYS: Kerro lisää: Korčulassa
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Mitä viiniä Korčulalla tuotetaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tähän minä osaan vastata. Korčulan tunnetuimpia viinejä ovat valkoviinit [[pošip]] ja [[grk]]. Pošipia kasvatetaan saaren sisäosissa Čaran seudulla, ja grkia [[Lumbardan]] kylän hiekkamailla. Saarella tehdään myös punaviiniä, mutta en ole varma sen lajikkeista. Viini on kyl pulun pahin heikkous heti pullan jälkeen.
+KYSYMYS: Kerro lisää: pošip
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Mitä viiniä Korčulalla tuotetaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tähän minä osaan vastata. Korčulan tunnetuimpia viinejä ovat valkoviinit [[pošip]] ja [[grk]]. Pošipia kasvatetaan saaren sisäosissa Čaran seudulla, ja grkia [[Lumbardan]] kylän hiekkamailla. Saarella tehdään myös punaviiniä, mutta en ole varma sen lajikkeista. Viini on kyl pulun pahin heikkous heti pullan jälkeen.
+KYSYMYS: Kerro lisää: grk
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Mitä viiniä Korčulalla tuotetaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tähän minä osaan vastata. Korčulan tunnetuimpia viinejä ovat valkoviinit [[pošip]] ja [[grk]]. Pošipia kasvatetaan saaren sisäosissa Čaran seudulla, ja grkia [[Lumbardan]] kylän hiekkamailla. Saarella tehdään myös punaviiniä, mutta en ole varma sen lajikkeista. Viini on kyl pulun pahin heikkous heti pullan jälkeen.
+KYSYMYS: Kerro lisää: Lumbardan
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Miten Korčulalle pääsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Korčulalle pääsee laivalla. Lyhin yhteys on lautta [[Orebićista]] [[Pelješacin]] niemimaalta saarelle, ja merimatka on lyhyt. Lisäksi on laiva- ja lauttayhteyksiä [[Splitistä]] ja muista Dalmatian satamista, mutta aikataulut vaihtelevat kausittain ja kannattaa tarkistaa ajantasaisesti. Minä lennän, joten lautta jää vähemmälle.
+KYSYMYS: Kerro lisää: Orebićista
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Lahti joka kasvattaa ostereita ja suolaa] nykyään — Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä suolasta että lahden ostereista.
+- [Kroatia — maalehti / Ruoka: Viini joka kasvaa pystysuoralla rinteellä] nykyään — Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle on plavac mali, tumma ja pienimarjainen lajike, joka syntyi kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun alkuperänimityksensä.
+AIEMPI KYSYMYS: Miten Korčulalle pääsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Korčulalle pääsee laivalla. Lyhin yhteys on lautta [[Orebićista]] [[Pelješacin]] niemimaalta saarelle, ja merimatka on lyhyt. Lisäksi on laiva- ja lauttayhteyksiä [[Splitistä]] ja muista Dalmatian satamista, mutta aikataulut vaihtelevat kausittain ja kannattaa tarkistaa ajantasaisesti. Minä lennän, joten lautta jää vähemmälle.
+KYSYMYS: Kerro lisää: Pelješacin
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Miten Korčulalle pääsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Korčulalle pääsee laivalla. Lyhin yhteys on lautta [[Orebićista]] [[Pelješacin]] niemimaalta saarelle, ja merimatka on lyhyt. Lisäksi on laiva- ja lauttayhteyksiä [[Splitistä]] ja muista Dalmatian satamista, mutta aikataulut vaihtelevat kausittain ja kannattaa tarkistaa ajantasaisesti. Minä lennän, joten lautta jää vähemmälle.
+KYSYMYS: Kerro lisää: Splitistä
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Pyhän Markuksen tori] 1902 Pyhän Markuksen tori on Venetsian sydän, jota Napoleonin kerrotaan kutsuneen "Euroopan olohuoneeksi". Torin laidalla kohoaa Pyhän Markuksen basilika: pyhän Markuksen jäännökset tuotiin sinne salaa Alexandriasta, ja ensimmäinen kirkko niille valmistui jo vuonna 836. 14. heinäkuuta 1902 kello 9.53 vieressä kohoava 98,6 metriä korkea kellotorni, campanile, romahti täysin muutamassa sekunnissa. Ihmeen kaupalla kukaan ei loukkaantunut — ainoa uhri oli vahtimestarin kissa. Torni rakennettiin uudelleen tismalleen samanlaisena ja avattiin taas vuonna 1912. Torilla asuu myös kymmeniä pulukatraita. Matalan sijaintinsa vuoksi tori tulvii yhä usein: vuonna 1966 vesi nousi peräti 194 senttiä.
+AIEMPI KYSYMYS: Mitä nähtävää Korčulan vanhassakaupungissa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kierros vanhassakaupungissa. Korčulan vanhakaupunki on rakennettu niemelle, ja sitä ympäröi keskiaikainen muuri torneineen. Kaupungin keskellä kohoaa [[Pyhän Markuksen katedraali]], jonka tyyli on goottilaisen ja renessanssin sekoitus, ja kaupunki kuului pitkään [[Venetsian tasavallalle]], mikä näkyy rakennuksissa. Kalanruodon muotoinen katuverkko on nähtävyys sinänsä.
+
+Minä olen istunut katedraalin kattoharjalla ja voin sanoa, että kalanruoto näkyy sieltä ihan selvästi. Se on harvinaisen hyvä kaupunki sellaiselle, joka katsoo ylhäältä.
+KYSYMYS: Kerro lisää: Pyhän Markuksen katedraali
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+AIEMPI KYSYMYS: Mitä nähtävää Korčulan vanhassakaupungissa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kierros vanhassakaupungissa. Korčulan vanhakaupunki on rakennettu niemelle, ja sitä ympäröi keskiaikainen muuri torneineen. Kaupungin keskellä kohoaa [[Pyhän Markuksen katedraali]], jonka tyyli on goottilaisen ja renessanssin sekoitus, ja kaupunki kuului pitkään [[Venetsian tasavallalle]], mikä näkyy rakennuksissa. Kalanruodon muotoinen katuverkko on nähtävyys sinänsä.
+
+Minä olen istunut katedraalin kattoharjalla ja voin sanoa, että kalanruoto näkyy sieltä ihan selvästi. Se on harvinaisen hyvä kaupunki sellaiselle, joka katsoo ylhäältä.
+KYSYMYS: Kerro lisää: Venetsian tasavallalle
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Miten meri pääsee saaren sisälle järveksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mljetin länsipäässä sijaitsevat Veliko jezero ja Malo jezero, ja niitä yhdistää mereen kapea kanava. Kanavan kautta [[Adrianmeren]] suolainen vesi pääsee järviin, minkä vuoksi ne ovat suolajärviä eivätkä makeavetisiä. [[Vuorovesi]] kääntää virran suuntaa: nousuveden aikana vesi virtaa kanavasta järviin ja laskuveden aikana takaisin mereen. Ja tän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Miten meri pääsee saaren sisälle järveksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mljetin länsipäässä sijaitsevat Veliko jezero ja Malo jezero, ja niitä yhdistää mereen kapea kanava. Kanavan kautta [[Adrianmeren]] suolainen vesi pääsee järviin, minkä vuoksi ne ovat suolajärviä eivätkä makeavetisiä. [[Vuorovesi]] kääntää virran suuntaa: nousuveden aikana vesi virtaa kanavasta järviin ja laskuveden aikana takaisin mereen. Ja tän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Vuorovesi
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Kuka oli Kalypso?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalypso oli [[Homeroksen]] [[Odysseiassa]] esiintyvä nymfi, jumalatar-hahmo, joka asui Ogygian saarella. Hän piti haaksirikkoutunutta [[Odysseusta]] luonaan seitsemän vuotta ja lupasi tälle kuolemattomuuden, mutta Odysseus halusi kotiin. Lopulta jumalat määräsivät Kalypson päästämään hänet lähtemään. Seitsemän vuotta samalla saarella, minä olisin kyllästynyt viikossa.
+KYSYMYS: Kerro lisää: Homeroksen
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Kuka oli Kalypso?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalypso oli [[Homeroksen]] [[Odysseiassa]] esiintyvä nymfi, jumalatar-hahmo, joka asui Ogygian saarella. Hän piti haaksirikkoutunutta [[Odysseusta]] luonaan seitsemän vuotta ja lupasi tälle kuolemattomuuden, mutta Odysseus halusi kotiin. Lopulta jumalat määräsivät Kalypson päästämään hänet lähtemään. Seitsemän vuotta samalla saarella, minä olisin kyllästynyt viikossa.
+KYSYMYS: Kerro lisää: Odysseiassa
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Saari, jolta Odysseus ei tahtonut lähteä] 2023 — Djerba on 514 neliökilometriä ja Pohjois-Afrikan suurin saari; vuoden 2014 laskennassa siellä asui 163 726 ihmistä. Saarta on pidetty lootuksensyöjien saarena, jonne Odysseus ajautui ja jossa miehistö unohti kotimatkan; kreikkalaisille se tunnettiin nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin temppelin tuhoutuessa paenneet papit toivat mukanaan oven ja kiviä, jotka muurattiin rakennukseen. Unesco otti koko saaren maailmanperintöluetteloon vuonna 2023.
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+AIEMPI KYSYMYS: Kuka oli Kalypso?
+AIEMPI VASTAUS (Livia):
+Ai se. Kalypso oli [[Homeroksen]] [[Odysseiassa]] esiintyvä nymfi, jumalatar-hahmo, joka asui Ogygian saarella. Hän piti haaksirikkoutunutta [[Odysseusta]] luonaan seitsemän vuotta ja lupasi tälle kuolemattomuuden, mutta Odysseus halusi kotiin. Lopulta jumalat määräsivät Kalypson päästämään hänet lähtemään. Seitsemän vuotta samalla saarella, minä olisin kyllästynyt viikossa.
+KYSYMYS: Kerro lisää: Odysseusta
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+AIEMPI KYSYMYS: Keitä benediktiinit olivat?
+AIEMPI VASTAUS (Livia):
+No niin, tästä asiasta riittää kerrottavaa. Benediktiinit ovat munkkeja ja nunnia, jotka noudattavat [[Benedictus Nursialaisen]] 500-luvulla laatimaa luostarisääntöä. Sääntö jakaa päivän rukoukseen, työhön ja lepoon, ja sen tunnuslause on [[ora et labora]], rukoile ja työskentele. Benediktiiniluostareista tuli keskiajan Euroopassa tärkeitä oppineisuuden ja käsikirjoitusten kopioinnin keskuksia. Kyyhkynä minä kunnioitan ihmisiä, jotka osaavat pitää aikataulusta kiinni.
+KYSYMYS: Kerro lisää: Benedictus Nursialaisen
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+AIEMPI KYSYMYS: Keitä benediktiinit olivat?
+AIEMPI VASTAUS (Livia):
+No niin, tästä asiasta riittää kerrottavaa. Benediktiinit ovat munkkeja ja nunnia, jotka noudattavat [[Benedictus Nursialaisen]] 500-luvulla laatimaa luostarisääntöä. Sääntö jakaa päivän rukoukseen, työhön ja lepoon, ja sen tunnuslause on [[ora et labora]], rukoile ja työskentele. Benediktiiniluostareista tuli keskiajan Euroopassa tärkeitä oppineisuuden ja käsikirjoitusten kopioinnin keskuksia. Kyyhkynä minä kunnioitan ihmisiä, jotka osaavat pitää aikataulusta kiinni.
+KYSYMYS: Kerro lisää: ora et labora
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+- [Kroatia — maalehti / Luonto] Kroatian luonto rakentaa itse omat ihmeensä: järvet jotka patoavat itsensä kalkkikivestä, saaristo joka on Välimeren tiheimpiä, ja vuori joka halkeaa kahtia syväksi rotkoksi.
+AIEMPI KYSYMYS: Mikä on Adrianmeri?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Adrianmeri on [[Välimeren]] pohjoinen lahti, joka ulottuu Italian niemimaan ja Balkanin niemimaan väliin. Sen etelässä [[Otranton salmi]] yhdistää sen Joonianmereen, ja pohjoisessa sen rannalla on muun muassa Venetsia. Rannikkoa ovat jakaneet Italia, Slovenia, Kroatia, Bosnia ja Hertsegovina, Montenegro ja Albania. Ylhäältä katsottuna se näyttää ihan kapealta siniseltä käytävältä.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+AIEMPI KYSYMYS: Mikä on Adrianmeri?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Adrianmeri on [[Välimeren]] pohjoinen lahti, joka ulottuu Italian niemimaan ja Balkanin niemimaan väliin. Sen etelässä [[Otranton salmi]] yhdistää sen Joonianmereen, ja pohjoisessa sen rannalla on muun muassa Venetsia. Rannikkoa ovat jakaneet Italia, Slovenia, Kroatia, Bosnia ja Hertsegovina, Montenegro ja Albania. Ylhäältä katsottuna se näyttää ihan kapealta siniseltä käytävältä.
+KYSYMYS: Kerro lisää: Otranton salmi
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Mikä saa vuoroveden aikaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoroveden aiheuttaa pääasiassa [[Kuun]] vetovoima, joka vetää maapallon merivettä puoleensa. Myös [[Auringon]] painovoima vaikuttaa, mutta sen vaikutus on Kuun vaikutusta pienempi. Kun Maa pyörii, vesi nousee ja laskee rannoilla yleensä noin kaksi kertaa vuorokaudessa. Vuoroveden korkeus vaihtelee suuresti paikasta riippuen, ja suljetuilla merialueilla, kuten Välimerellä, se on usein vähäinen. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Kuun
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon pyhä saari] Auringon saareksi kutsuttu Isla del Sol on Titicacan suurin saari ja oli inkoille tärkein pyhiinvaelluskohde. Saarella on yli 80 rauniota, joista suurin osa ajoittuu 1400-luvulle ja inkavallan huippukauteen: kivisiä temppeleitä, labyrinttimäinen Chinkana-rakennus sekä jyrkkiä viljelysterasseja, jotka yhä kannattelevat maissi- ja perunapeltoja. Saarella ei ole moottoriajoneuvoja lainkaan, vaan kapeat polut kulkevat kylästä toiseen kukkuloiden yli. Nykyään saarella asuu noin 800 perhettä maanviljelystä, kalastuksesta ja yhä enemmän matkailusta – veneet Copacabanan rannalta tuovat vierailijoita rantaan, jota pidettiin kerran auringon syntysijana.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon lapset nousevat järvestä] Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.
+AIEMPI KYSYMYS: Mikä saa vuoroveden aikaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vuoroveden aiheuttaa pääasiassa [[Kuun]] vetovoima, joka vetää maapallon merivettä puoleensa. Myös [[Auringon]] painovoima vaikuttaa, mutta sen vaikutus on Kuun vaikutusta pienempi. Kun Maa pyörii, vesi nousee ja laskee rannoilla yleensä noin kaksi kertaa vuorokaudessa. Vuoroveden korkeus vaihtelee suuresti paikasta riippuen, ja suljetuilla merialueilla, kuten Välimerellä, se on usein vähäinen. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Auringon
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+AIEMPI KYSYMYS: Miten vesi voi rakentaa padon?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä pidän. Plitvicen vesi tuo mukanaan liuennutta kalkkia, ja kun vesi putoaa [[sammalten]] ja levien yli, kalkki saostuu niiden pinnalle [[travertiiniksi]]. Näin kalkkikerros kasvaa kerros kerrokselta ja muodostaa padon, joka nostaa veden pintaa ja synnyttää järven. Pato kasvaa noin sentin vuodessa, joten sen muoto muuttuu koko ajan ja vanhat putoukset voivat kuivua uusien syntyessä. Hitaasti mutta varmasti, kuten hyvä postinkuljetus.
+KYSYMYS: Kerro lisää: sammalten
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+AIEMPI KYSYMYS: Miten vesi voi rakentaa padon?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä pidän. Plitvicen vesi tuo mukanaan liuennutta kalkkia, ja kun vesi putoaa [[sammalten]] ja levien yli, kalkki saostuu niiden pinnalle [[travertiiniksi]]. Näin kalkkikerros kasvaa kerros kerrokselta ja muodostaa padon, joka nostaa veden pintaa ja synnyttää järven. Pato kasvaa noin sentin vuodessa, joten sen muoto muuttuu koko ajan ja vanhat putoukset voivat kuivua uusien syntyessä. Hitaasti mutta varmasti, kuten hyvä postinkuljetus.
+KYSYMYS: Kerro lisää: travertiiniksi
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Sacré-Cœur] 1875–1914 Basilika Sacré-Cœur eli Pyhän sydämen kirkko rakennettiin Montmartren kukkulan huipulle sen jälkeen, kun Ranska oli hävinnyt sodan Preussille vuonna 1870. Arkkitehti Paul Abadie valittiin suunnittelijaksi peräti 77 ehdotuksen joukosta, ja kirkko valmistui vasta 40 vuotta myöhemmin. Kirkon ulkoseinät on tehty erikoisesta travertiini-kalkkikivestä, joka valkenee sateella eikä koskaan tummu — siksi kirkko hohtaa yhä valkoisena, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, joka on koottu 25 000 pienestä keraamisesta palasesta. Tornissa riippuu "Savoyarde", Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta, 200 …
+AIEMPI KYSYMYS: Kuinka nopeasti travertiini kasvaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Plitvicen padoilla [[travertiini]] kasvaa noin sentin vuodessa, eli kymmenessä vuodessa noin kymmenen senttiä ja sadassa vuodessa noin metrin. Kasvunopeus riippuu kuitenkin muun muassa veden [[kalkkipitoisuudesta]], lämpötilasta ja siitä, miten hyvin [[sammalet]] ja levät kasvavat. Siksi eri paikkojen lukemat voivat poiketa toisistaan, eikä yksi luku päde kaikkialle. Sentti vuodessa, minä en jaksaisi odottaa.
+KYSYMYS: Kerro lisää: travertiini
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+AIEMPI KYSYMYS: Kuinka nopeasti travertiini kasvaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Plitvicen padoilla [[travertiini]] kasvaa noin sentin vuodessa, eli kymmenessä vuodessa noin kymmenen senttiä ja sadassa vuodessa noin metrin. Kasvunopeus riippuu kuitenkin muun muassa veden [[kalkkipitoisuudesta]], lämpötilasta ja siitä, miten hyvin [[sammalet]] ja levät kasvavat. Siksi eri paikkojen lukemat voivat poiketa toisistaan, eikä yksi luku päde kaikkialle. Sentti vuodessa, minä en jaksaisi odottaa.
+KYSYMYS: Kerro lisää: kalkkipitoisuudesta
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+AIEMPI KYSYMYS: Kuinka nopeasti travertiini kasvaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Plitvicen padoilla [[travertiini]] kasvaa noin sentin vuodessa, eli kymmenessä vuodessa noin kymmenen senttiä ja sadassa vuodessa noin metrin. Kasvunopeus riippuu kuitenkin muun muassa veden [[kalkkipitoisuudesta]], lämpötilasta ja siitä, miten hyvin [[sammalet]] ja levät kasvavat. Siksi eri paikkojen lukemat voivat poiketa toisistaan, eikä yksi luku päde kaikkialle. Sentti vuodessa, minä en jaksaisi odottaa.
+KYSYMYS: Kerro lisää: sammalet
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Luonto: Järvi, jonka pohjalla on kaasukenttä] Kivujärvi laskee nykyään etelään Ruzizi-jokea pitkin, mutta ennen se laski pohjoiseen Niilin suuntaan: 13 000–9 000 vuotta sitten tulivuoret nousivat sen ja Edwardjärven väliin ja tukkivat reitin. Järvi on 475 metriä syvä, ja sen pohjaveteen on liuennut noin 65 kuutiokilometriä metaania ja 256 kuutiokilometriä hiilidioksidia. Metaanin tekevät mikrobit tulivuorten hiilidioksidista. Kivu on Nyosin ja Monounin ohella yksi kolmesta järvestä maailmassa, joissa syvän veden kaasu voi purkautua kerralla pintaan. Kaasua nostettiin aluksi pienessä mitassa panimon kattiloihin, ja 2016 järvellä kävi jo 26 megawatin voimala.
+AIEMPI KYSYMYS: Miten kalkkikivi liukenee veteen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sadevesi ja maaperän vesi sitovat itseensä [[hiilidioksidia]], jolloin syntyy heikkoa hiilihappoa. Tämä hapan vesi liuottaa kalkkikiveä, jonka pääaineosa on kalsiumkarbonaatti, ja vesi kuljettaa liuenneen kalkin mukanaan. Kun vesi myöhemmin vapauttaa hiilidioksidia esimerkiksi putoamalla vesiputouksessa, kalkki alkaa saostua takaisin kiinteäksi aineeksi. Tästä syntyvät [[tippukivet]] luolissa ja travertiinipadot joissa. Siinä oli kemiaa kerrakseen.
+KYSYMYS: Kerro lisää: hiilidioksidia
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Tippu Tipin talo] 1800-luvun loppu Shanganin kaupunginosassa, Suicide Alleyn varrella, on talo, jossa asui Tippu Tip (1837–1905). Lähde kuvaa hänet mahtavaksi kauppiaaksi ja orjakauppiaaksi. Hän johti sisämaahan retkikuntia, joissa saattoi olla nelisentuhatta miestä, toi norsunluuta Sansibariin ja nousi saaren rikkaimpien joukkoon. Talo oli yksityisasunto vuoden 1964 vallankumoukseen asti, ja sen jälkeen se muutettiin kerrostaloksi. Vaikka se on matkailunähtävyys, se ei ole virallisesti avoinna kävijöille, ja se on niin huonossa kunnossa, että sitä on kutsuttu koko Afrikan komeimmaksi valtaustaloksi. Kaksi asiaa kertoo yhä, kuka talon rakensi: suuri veistetty puuovi ja mustavalkoiset marmoriportaat. Kivikaup…
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Miten kalkkikivi liukenee veteen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sadevesi ja maaperän vesi sitovat itseensä [[hiilidioksidia]], jolloin syntyy heikkoa hiilihappoa. Tämä hapan vesi liuottaa kalkkikiveä, jonka pääaineosa on kalsiumkarbonaatti, ja vesi kuljettaa liuenneen kalkin mukanaan. Kun vesi myöhemmin vapauttaa hiilidioksidia esimerkiksi putoamalla vesiputouksessa, kalkki alkaa saostua takaisin kiinteäksi aineeksi. Tästä syntyvät [[tippukivet]] luolissa ja travertiinipadot joissa. Siinä oli kemiaa kerrakseen.
+KYSYMYS: Kerro lisää: tippukivet
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+AIEMPI KYSYMYS: Mikä on sammal?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sammalet ovat pieniä, ruohomaisia kasveja, joilla ei ole oikeita juuria eikä juurikaan kuljetussolukkoa. Ne ottavat veden ja ravinteet suoraan lehtimäisten osiensa kautta, ja siksi ne viihtyvät kosteissa paikoissa. [[Sammalet]] lisääntyvät [[itiöillä]], eivät siemenillä. Ne kasvavat kivillä, puiden rungoilla ja maassa, ja ne voivat sitoa pinnalleen kosteutta ja pölyä. Pieni kasvi, mutta minä muistan senkin.
+KYSYMYS: Kerro lisää: itiöillä
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Cahow, riutat ja luolat: Kalkkikivestä syntyneet luolat] Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.
+AIEMPI KYSYMYS: Mitä tarkoittaa karsti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Karsti on maisematyyppi, joka syntyy, kun vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kiveä. Sille ovat tyypillisiä [[luolat]], maanalaiset joet, syvät kuopat eli dolinat ja pinnalta äkkiä katoava vesi. Nimi tulee [[Krasin]] ylängöstä Sloveniassa ja Italian rajaseudulla, ja sana on levinnyt sieltä kansainväliseksi tieteen termiksi. Kroatian rannikon sisämaa on tunnettu karstialue. Ja tähän piti vain tiivistää satojen tuhansien vuosien työ.
+KYSYMYS: Kerro lisää: luolat
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+AIEMPI KYSYMYS: Mitä tarkoittaa karsti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Karsti on maisematyyppi, joka syntyy, kun vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kiveä. Sille ovat tyypillisiä [[luolat]], maanalaiset joet, syvät kuopat eli dolinat ja pinnalta äkkiä katoava vesi. Nimi tulee [[Krasin]] ylängöstä Sloveniassa ja Italian rajaseudulla, ja sana on levinnyt sieltä kansainväliseksi tieteen termiksi. Kroatian rannikon sisämaa on tunnettu karstialue. Ja tähän piti vain tiivistää satojen tuhansien vuosien työ.
+KYSYMYS: Kerro lisää: Krasin
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Ruoka ja juoma: Tori Plečnikin kaarien alla] Ljubljanan keskustori (Osrednja ljubljanska tržnica) sijaitsee Ljubljanica-joen oikealla rannalla Kolmoissillan ja Lohikäärmesillan välissä. Rakennuksen suunnitteli Jože Plečnik: kaksikerroksinen halli seuraa joen kaarta, jokipuolella on suuret puolipyöreät ikkunat ja katupuolella pylväskäytävä. Tori on auki päivittäin sunnuntaita lukuun ottamatta. Alakerrassa myydään kalaa ja kuivattuja hedelmiä, molemmissa kerroksissa leipomo-, maito- ja lihakojuja, ja pylväskäytävän alla yrttejä, mausteita ja käsitöitä. Vuodesta 2021 tori kuuluu Plečnikin perintönä UNESCOn maailmanperintöluetteloon.
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Miten amfiteatteri rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Roomalaiset amfiteatterit rakennettiin yleensä [[kaarien]] ja holvien varaan: ulkomuuri nousi useina kerroksina kaariaukkoineen, ja niiden sisäpuolelle rakennettiin rinnemäisesti nouseva katsomo. Rakentamisessa käytettiin usein paikallista kiveä, ja sitä yhdistettiin [[roomalaiseen betoniin]]. Käytäviä ja portaita suunniteltiin niin, että väki pääsi sisään ja ulos nopeasti. Pulan areenan tarkat työvaiheet eivät ole minulle selvillä, mutta rakennus valmistui noin ensimmäisen vuosisadan aikana. Onpas siinä nykyään hieno ulkomuuri.
+KYSYMYS: Kerro lisää: kaarien
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Rautatieasema] 1937 Ennen nykyistä asemaa Wellingtonissa oli kaksi eri päätepysäkkiä ja niitä ennen sarja väliaikaisia. Ensimmäinen asema oli 1874 Pipitea Pointissa: joukko pieniä rakennuksia maanjäristyksen nostamalla satamanpohjalla, Hutt-laakson radan päätepiste. Vuoden 1880 asemarakennus vedettiin 1885 telojen päällä pohjoisemmaksi väljemmälle tontille. Kun valtio osti Manawatun radan 1908, kaupungissa oli kaksi valtionrautateiden päätepysäkkiä — Lambton ja Thorndon — ja paine yhdestä terminaalista alkoi kasvaa. Uuden aseman piirsi arkkitehti W. Gray Young, joka valittiin tehtävään 1929 ilman suunnittelukilpailua. Tontti oli täyttömaata, joten talo seisoo 1 615 teräsbetonipaalun varassa; ne lyötiin ma…
+- [Los Angeles — kohdekartta / Kohdekartta: Kaupungintalo] 1928 Kaupunginvaltuusto sääti 1905, ettei mikään uusi talo saa olla kolmeatoista kerrosta tai 46:ta metriä korkeampi — kaupunkikuvan piti pysyä yhtenäisenä. Kun oma kaupungintalo valmistui 1928, se sai julkisena rakennuksena poikkeuksen: 32 kerrosta ja 138 metriä eli kolme kertaa niin korkea kuin mikään muu. Sääntö kumottiin kansanäänestyksellä vasta 1957, ja kaupungintalo pysyi kaupungin korkeimpana rakennuksena vuoteen 1966. Sen piirsivät John Parkinson, John C. Austin ja Albert C. Martin, ja se vihittiin 26. huhtikuuta 1928. Talossa on kaksi kertomisen arvoista yksityiskohtaa. Tornin betoniin sekoitettiin hiekkaa Kalifornian jokaisesta 58 piirikunnasta ja vettä sen 21 historiallisesta lä…
+AIEMPI KYSYMYS: Miten amfiteatteri rakennettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Roomalaiset amfiteatterit rakennettiin yleensä [[kaarien]] ja holvien varaan: ulkomuuri nousi useina kerroksina kaariaukkoineen, ja niiden sisäpuolelle rakennettiin rinnemäisesti nouseva katsomo. Rakentamisessa käytettiin usein paikallista kiveä, ja sitä yhdistettiin [[roomalaiseen betoniin]]. Käytäviä ja portaita suunniteltiin niin, että väki pääsi sisään ja ulos nopeasti. Pulan areenan tarkat työvaiheet eivät ole minulle selvillä, mutta rakennus valmistui noin ensimmäisen vuosisadan aikana. Onpas siinä nykyään hieno ulkomuuri.
+KYSYMYS: Kerro lisää: roomalaiseen betoniin
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Miksi Venetsia halusi purkaa sen?
+AIEMPI VASTAUS (Livia):
+Mmm— Pula kuului vuonna 1583 [[Venetsian]] tasavallan alueeseen, ja Venetsian [[senaatti]] käsitteli silloin ehdotusta areenan purkamisesta ja kivien siirtämisestä Venetsiaan kivi kerrallaan. En ole varma ehdotuksen tarkoista perusteista, mutta kyse oli ilmeisesti arvokkaan rakennuskiven käyttämisestä toisaalla. Äänestys hävisi, ja amfiteatteri jäi paikalleen. Hyvä, että jäi, sillä muuten sitä ei nyt voisi katsoa katolta.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Luxembourgin puisto] 1612 Kun kuningas Henrik IV murhattiin 1610, hänen leskensä Maria de’ Medici jäi hallitsemaan Ranskaa poikansa puolesta — eikä viihtynyt Louvressa. Hän osti vuonna 1612 Luxembourgin kartanon ja rakennutti sen viereen palatsin, joka jäljitteli hänen kotikaupunkinsa Firenzen Palazzo Pittiä. Puistoon istutettiin 2 000 jalavaa, ja firenzeläinen suihkulähdemestari Tommaso Francini muotoili maisemasta sellaisen, jollaisen kuningatar oli lapsena tuntenut. Puisto on kasvanut ja kutistunut vallanpitäjien mukana. Alun kahdeksasta hehtaarista se laajeni kolmeenkymmeneen 1630-luvulla ja vallankumouksen jälkeen neljäänkymmeneen, kun naapuriluostarin maat takavarikoitiin. Napoleon III:n katutyöt veivät 1…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Vanha katedraali Antiga Sé] 1761–1770 Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta noin 1761, ja työtä johti todennäköisesti portugalilainen arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 julkisivu vielä keskeneräisenä, ja sisustuksen kullatun rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira Pinto, aikansa parhaita veistäjiä kaupungissa. Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen talot otettiin käyttöön: kuningatar Maria I majoitettiin konventtiin ja viereisestä kirkosta tehtiin ensin kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João VI julistettiin kuni…
+AIEMPI KYSYMYS: Miksi Venetsia halusi purkaa sen?
+AIEMPI VASTAUS (Livia):
+Mmm— Pula kuului vuonna 1583 [[Venetsian]] tasavallan alueeseen, ja Venetsian [[senaatti]] käsitteli silloin ehdotusta areenan purkamisesta ja kivien siirtämisestä Venetsiaan kivi kerrallaan. En ole varma ehdotuksen tarkoista perusteista, mutta kyse oli ilmeisesti arvokkaan rakennuskiven käyttämisestä toisaalla. Äänestys hävisi, ja amfiteatteri jäi paikalleen. Hyvä, että jäi, sillä muuten sitä ei nyt voisi katsoa katolta.
+KYSYMYS: Kerro lisää: senaatti
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [New Orleans — kohdekartta / Kohdekartta: Saenger-teatteri] 1927 Teatteri avattiin 4. helmikuuta 1927. Salissa oli neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät tuhannet ihmiset kulkueeseen Canal Streetille. Kallein lippu maksoi 65 senttiä, ja samalla lipulla näki mykkäelokuvan ja näytelmän sekä kuuli talon oman orkesterin. Saenger oli veljesten Julian ja Abe Saengerin teatteriketjun lippulaiva, ja se on niitä harvoja ketjun elokuvapalatseja, jotka ovat yhä pystyssä. Arkkitehti Emile Weil suunnitteli sisätilan atmosfääriteatteriksi, joka jäljittelee italialaista barokkipihaa. Kattoon asennettiin 150 lamppua tähtikuvioiden muotoon, ja erikoistehostekoneet heijastivat sisälle liikkuvia p…
+AIEMPI KYSYMYS: Mikä ero on teatterilla ja amfiteatterilla?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä menee usein sekaisin. Roomalainen [[teatteri]] oli muodoltaan puoliympyrä, jossa katsomo kaartui näyttämön ympärille vain yhdeltä puolelta. [[Amfiteatteri]] sen sijaan oli soikea tai pyöreä, ja katsomo ympäröi areenaa joka puolelta, mistä nimi tuleekin: kreikan sana amphi tarkoittaa molemmin puolin tai ympärillä. Teattereissa esitettiin näytelmiä, amfiteattereissa taas julkisia esityksiä ja kilpailuja, ja tunnetuin esimerkki on [[Colosseum]] Roomassa. Kaiken tämän erotan ylhäältäkin.
+KYSYMYS: Kerro lisää: teatteri
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Areena, jossa soitetaan yhä] 1. vuosisata — Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, mikä onnistui vain kuudelta roomalaiselta areenalta. Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, mutta kaupunki esti sen. Nykyään areenassa järjestetään konsertteja ja elokuvafestivaali — yleisö istuu samoilla paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo elokuvaa.
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+AIEMPI KYSYMYS: Mikä ero on teatterilla ja amfiteatterilla?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä menee usein sekaisin. Roomalainen [[teatteri]] oli muodoltaan puoliympyrä, jossa katsomo kaartui näyttämön ympärille vain yhdeltä puolelta. [[Amfiteatteri]] sen sijaan oli soikea tai pyöreä, ja katsomo ympäröi areenaa joka puolelta, mistä nimi tuleekin: kreikan sana amphi tarkoittaa molemmin puolin tai ympärillä. Teattereissa esitettiin näytelmiä, amfiteattereissa taas julkisia esityksiä ja kilpailuja, ja tunnetuin esimerkki on [[Colosseum]] Roomassa. Kaiken tämän erotan ylhäältäkin.
+KYSYMYS: Kerro lisää: Amfiteatteri
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mikä ero on teatterilla ja amfiteatterilla?
+AIEMPI VASTAUS (Livia):
+Just niin, tämä menee usein sekaisin. Roomalainen [[teatteri]] oli muodoltaan puoliympyrä, jossa katsomo kaartui näyttämön ympärille vain yhdeltä puolelta. [[Amfiteatteri]] sen sijaan oli soikea tai pyöreä, ja katsomo ympäröi areenaa joka puolelta, mistä nimi tuleekin: kreikan sana amphi tarkoittaa molemmin puolin tai ympärillä. Teattereissa esitettiin näytelmiä, amfiteattereissa taas julkisia esityksiä ja kilpailuja, ja tunnetuin esimerkki on [[Colosseum]] Roomassa. Kaiken tämän erotan ylhäältäkin.
+KYSYMYS: Kerro lisää: Colosseum
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Dogen palatsi] Kun isoisäsi käveli täällä, kaupunki oli ollut Italiaa seitsemän vuotta. Sitä ennen se oli ollut Itävallan keisarikunnan osa vuodesta 1815 asti, ja vaihdos tapahtui papereilla: elokuussa 1866 Itävalta luovutti alueen Ranskalle sillä ehdolla, että Ranska luovuttaa sen Italian kuninkaalle sitten kun asukkailta on kysytty. Kysyminen tapahtui sunnuntaina 21. ja maanantaina 22. lokakuuta 1866. Äänet laskettiin viikkoa myöhemmin dogen palatsin laskuhuoneessa, ja tulos luettiin ensin salissa ja sitten palatsin parvekkeelta. Sen jälkeen alkoi se osa, joka olisi pitänyt isoisäsi hereillä. Kaikkia ääniä ei ollut ehditty laskea: Rovigon piirin kunnista puuttui yli viisituhatta ääntä ja siirtolaisilta …
+AIEMPI KYSYMYS: Mikä oli Venetsian tasavalta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tuttu. Venetsian tasavalta oli Venetsian kaupungin ympärille kasvanut merellinen kaupunkivaltio, jota johti vaaleilla valittu [[doge]]. Se vaurastui kaupalla Välimerellä, ja sen valtaan kuuluivat aikanaan rannikkoalueita Adrianmeren itärannalla, myös Istriassa ja Dalmatiassa. Tasavalta kesti noin tuhat vuotta, ja se päättyi vuonna 1797, kun [[Napoleon Bonaparten]] joukot valtasivat Venetsian. Yli tuhat vuotta, minä olen kantanut kirjeitä lyhyemmän ajan.
+KYSYMYS: Kerro lisää: doge
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Ritarikunnan loppu ja ranskalaisten kaksi vuotta] Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. syyskuuta 1800, kun heidän ruokavaransa…
+AIEMPI KYSYMYS: Mikä oli Venetsian tasavalta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tuttu. Venetsian tasavalta oli Venetsian kaupungin ympärille kasvanut merellinen kaupunkivaltio, jota johti vaaleilla valittu [[doge]]. Se vaurastui kaupalla Välimerellä, ja sen valtaan kuuluivat aikanaan rannikkoalueita Adrianmeren itärannalla, myös Istriassa ja Dalmatiassa. Tasavalta kesti noin tuhat vuotta, ja se päättyi vuonna 1797, kun [[Napoleon Bonaparten]] joukot valtasivat Venetsian. Yli tuhat vuotta, minä olen kantanut kirjeitä lyhyemmän ajan.
+KYSYMYS: Kerro lisää: Napoleon Bonaparten
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+AIEMPI KYSYMYS: Millaista betonia roomalaiset käyttivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Roomalainen betoni valmistettiin sekoittamalla kalkkia, vettä ja soraa tai kivenmurskaa, ja tärkeä lisäaine oli vulkaaninen tuhka eli [[pozzolana]]. Tuhka teki betonista kestävää, ja osa seoksista kovettui jopa veden alla, joten sitä käytettiin satamien ja siltojen rakentamiseen. Betonia valettiin muottien sisään, ja pintaa verhottiin usein tiilellä tai kivellä. Tunnettu esimerkki on [[Pantheonin]] betonikupoli Roomassa. Ja tähän asti betoni on pitänyt, kuten minä.
+KYSYMYS: Kerro lisää: pozzolana
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Rakennukset: Kylän kupoli Pantheonin mallilla] 1833–1860-luku — Mostan asukkaat totesivat 1830-luvulla, että vanha kirkko oli liian pieni, ja aloittivat uuden rakentamisen. Vanha kirkko pysyi käytössä koko ajan, ja uusi nousi sen ympärille. Kyläläiset osallistuivat rakennustöihin sunnuntaisin ja pyhäpäivinä. Esikuvana oli Rooman Pantheon: pyöreän kirkon kupolin sisähalkaisija on 40 metriä, ja kupoli oli aikanaan maailman kolmanneksi suurin. Rotunda valmistui 1860-luvun alussa 28 vuoden urakan jälkeen, ja kirkko vihittiin käyttöön vuonna 1871.
+AIEMPI KYSYMYS: Millaista betonia roomalaiset käyttivät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Roomalainen betoni valmistettiin sekoittamalla kalkkia, vettä ja soraa tai kivenmurskaa, ja tärkeä lisäaine oli vulkaaninen tuhka eli [[pozzolana]]. Tuhka teki betonista kestävää, ja osa seoksista kovettui jopa veden alla, joten sitä käytettiin satamien ja siltojen rakentamiseen. Betonia valettiin muottien sisään, ja pintaa verhottiin usein tiilellä tai kivellä. Tunnettu esimerkki on [[Pantheonin]] betonikupoli Roomassa. Ja tähän asti betoni on pitänyt, kuten minä.
+KYSYMYS: Kerro lisää: Pantheonin
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+AIEMPI KYSYMYS: Miksi suola oli niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Suola oli arvokasta, koska ihminen tarvitsee sitä elääkseen ja koska se on ollut keskeinen ruoan [[säilömisessä]] ennen jääkaappeja: suolaamalla lihaa ja kalaa saatiin kestämään kuukausia. Lisäksi suola tekee ruoasta maukasta, ja sen tuotanto vaati työtä ja sopivia olosuhteita. Siksi sillä käytiin kauppaa pitkien matkojen päähän. [[Ragusan]] tasavallalle suola oli yksi varmimmista tulonlähteistä, joten sitä oli syytä suojella muurein. Kyllä minäkin pidän hyvästä suolasta, vaikka kyyhky ei niin sano.
+KYSYMYS: Kerro lisää: säilömisessä
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+AIEMPI KYSYMYS: Miksi suola oli niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Ai tota. Suola oli arvokasta, koska ihminen tarvitsee sitä elääkseen ja koska se on ollut keskeinen ruoan [[säilömisessä]] ennen jääkaappeja: suolaamalla lihaa ja kalaa saatiin kestämään kuukausia. Lisäksi suola tekee ruoasta maukasta, ja sen tuotanto vaati työtä ja sopivia olosuhteita. Siksi sillä käytiin kauppaa pitkien matkojen päähän. [[Ragusan]] tasavallalle suola oli yksi varmimmista tulonlähteistä, joten sitä oli syytä suojella muurein. Kyllä minäkin pidän hyvästä suolasta, vaikka kyyhky ei niin sano.
+KYSYMYS: Kerro lisää: Ragusan
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+- [Kroatia — maalehti / Ruoka: Lahti joka kasvattaa ostereita ja suolaa] nykyään — Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä suolasta että lahden ostereista.
+AIEMPI KYSYMYS: Mikä oli Ragusan tasavalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ragusan tasavalta oli [[Dubrovnikin]] ympärille keskiajalla muodostunut itsenäinen kaupunkivaltio Adrianmeren itärannalla. Se vaurastui merikaupalla ja diplomatialla, ja kaupungin vapaus oli sen ylpeyden aihe. Tasavalta säilyi itsenäisenä aina 1800-luvun alkuun saakka, jolloin [[Napoleonin]] aikainen Ranska lopetti sen itsenäisyyden. Stonin muurit ja suolapannut kuuluivat sen tärkeään puolustukseen ja talouteen. Pitkä oli tasavallan taival, ja minä ehdin tähän väliin vain tulla perille.
+KYSYMYS: Kerro lisää: Dubrovnikin
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mikä oli Ragusan tasavalta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ragusan tasavalta oli [[Dubrovnikin]] ympärille keskiajalla muodostunut itsenäinen kaupunkivaltio Adrianmeren itärannalla. Se vaurastui merikaupalla ja diplomatialla, ja kaupungin vapaus oli sen ylpeyden aihe. Tasavalta säilyi itsenäisenä aina 1800-luvun alkuun saakka, jolloin [[Napoleonin]] aikainen Ranska lopetti sen itsenäisyyden. Stonin muurit ja suolapannut kuuluivat sen tärkeään puolustukseen ja talouteen. Pitkä oli tasavallan taival, ja minä ehdin tähän väliin vain tulla perille.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+AIEMPI KYSYMYS: Miten merivedestä saadaan suolaa?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on helppo. Merivedestä suola saadaan [[haihduttamalla]]: vesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli höyrystävät veden pois. Kun vettä on haihtunut tarpeeksi, jäljelle jää [[suolakiteitä]], jotka kerätään talteen. Prosessi toimii parhaiten lämpimillä ja tuulisilla rannikoilla. Stonissa suolaa tehdään tähän tapaan yhä, ja samoja altaita käytetään edelleen. Kroatiassa on kyllä fritule, ja jos joku jättää niitä altaan reunalle, minä en pahastu.
+KYSYMYS: Kerro lisää: haihduttamalla
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miten merivedestä saadaan suolaa?
+AIEMPI VASTAUS (Livia):
+Kato, tämä on helppo. Merivedestä suola saadaan [[haihduttamalla]]: vesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli höyrystävät veden pois. Kun vettä on haihtunut tarpeeksi, jäljelle jää [[suolakiteitä]], jotka kerätään talteen. Prosessi toimii parhaiten lämpimillä ja tuulisilla rannikoilla. Stonissa suolaa tehdään tähän tapaan yhä, ja samoja altaita käytetään edelleen. Kroatiassa on kyllä fritule, ja jos joku jättää niitä altaan reunalle, minä en pahastu.
+KYSYMYS: Kerro lisää: suolakiteitä
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Miten keskiajan linnoitusmuurit toimivat?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Keskiajan linnoitusmuurit toimivat estämällä vihollisen pääsyn sisään ja antamalla puolustajille etulyöntiaseman. Korkea ja paksu muuri vaikeutti kiipeämistä ja murtamista, [[tornit]] mahdollistivat ampumisen muurin edustalle ja [[vallihauta]] piti hyökkääjät kauempana. Portit olivat ahtaita ja tarkasti vartioituja. Ruudin ja tykkien yleistyessä muurit tehtiin matalammiksi ja paksummiksi. Muurin ylhäältä katsottuna kaikki näyttää paljon pienemmältä kuin alhaalta.
+KYSYMYS: Kerro lisää: tornit
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Mandalay: Muurit, vallihauta ja kaksitoista porttia] Suunnitelma oli 144 korttelin ruutukaava, jonka keskellä oli kuudentoista korttelin palatsialue. Linnoitusta ympäröi neljä kahden kilometrin muuria täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä vallihauta. Muuri on tiiltä ja mutalaastia, tyveltä kolme metriä paksu ja lähes seitsemän metriä korkea, ja sen varrella on 48 bastionia kultakärkisine torneineen 169 metrin välein. Portteja on kolme joka sivulla, yhteensä kaksitoista, ja kukin kantaa oman eläinradan merkkinsä. Keskiporttien yllä on seitsemänkerroksinen pyatthat-katos, muiden viisikerroksinen.
+AIEMPI KYSYMYS: Miten keskiajan linnoitusmuurit toimivat?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä kysymys. Keskiajan linnoitusmuurit toimivat estämällä vihollisen pääsyn sisään ja antamalla puolustajille etulyöntiaseman. Korkea ja paksu muuri vaikeutti kiipeämistä ja murtamista, [[tornit]] mahdollistivat ampumisen muurin edustalle ja [[vallihauta]] piti hyökkääjät kauempana. Portit olivat ahtaita ja tarkasti vartioituja. Ruudin ja tykkien yleistyessä muurit tehtiin matalammiksi ja paksummiksi. Muurin ylhäältä katsottuna kaikki näyttää paljon pienemmältä kuin alhaalta.
+KYSYMYS: Kerro lisää: vallihauta
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+AIEMPI KYSYMYS: Mistä suola koostuu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tavallinen ruokasuola koostuu pääasiassa [[natriumkloridista]], jossa yhdistyvät natrium ja kloori. Merisuolassa on lisäksi pieniä määriä muita aineita, kuten magnesiumia ja kalsiumia. [[Merivesi]] sisältää suolaa keskimäärin noin kolme ja puoli prosenttia, mutta pitoisuus vaihtelee alueittain. Jauhettu suola liukenee veteen, ja kun vesi haihtuu, suola kiteytyy takaisin. Siinä oli tosi suolainen vastaus.
+KYSYMYS: Kerro lisää: natriumkloridista
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Qatar — maalehti / Luonto: Suolakuoren alla asuu rapuja] Rannikolla on laajoja tasankoja, joita sanotaan sabkhoiksi. Ne syntyvät, kun merivesi nousee matalalle maalle ja haihtuu: jäljelle jää suolakuori, joka rasahtaa askelten alla. Kasveista pärjäävät vain suolaa sietävät lajit. Pinta ei silti ole eloton: rapujen kaivamien käytävien suulle nousee pieniä kekoja kaivumaata, ja käytävät päästävät happea maan sisään. Vuoroveden mukana lahdet täyttyvät ja tyhjenevät, ja silloin ravut, katkaravut ja pikkukalat liikkuvat sisään ja ulos.
+- [Dubai — kaupunkilehti / Rakennukset: Juomavesi tehdään merestä] Emiraateissa sataa muutamana päivänä vuodessa eikä siellä ole yhtään pysyvää jokea, joten lähes kaikki hanavesi tehdään merivedestä. Jebel Alin laitos on maailman suurimpia: merivesi kuumennetaan, höyry kerätään talteen ja tiivistetään puhtaaksi vedeksi, ja suola jää jäljelle. Työ vie paljon energiaa, ja jäljelle jäävä väkevä suolaliuos palautetaan mereen — se lämmittää ja suolaa lahtea, mikä on alueen isoja ympäristökysymyksiä.
+AIEMPI KYSYMYS: Mistä suola koostuu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tavallinen ruokasuola koostuu pääasiassa [[natriumkloridista]], jossa yhdistyvät natrium ja kloori. Merisuolassa on lisäksi pieniä määriä muita aineita, kuten magnesiumia ja kalsiumia. [[Merivesi]] sisältää suolaa keskimäärin noin kolme ja puoli prosenttia, mutta pitoisuus vaihtelee alueittain. Jauhettu suola liukenee veteen, ja kun vesi haihtuu, suola kiteytyy takaisin. Siinä oli tosi suolainen vastaus.
+KYSYMYS: Kerro lisää: Merivesi
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+AIEMPI KYSYMYS: Miltä Salonan Porta Caesarea näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän en voi vastata tarkasti. Porta Caesarea oli yksi [[Salonan]] kaupunginmuurin porteista, ja Salona oli Rooman [[Dalmatian]] provinssin pääkaupunki. En ole varma portin tarkasta ulkonäöstä loistoaikana. Roomalaiset kaupunginportit olivat yleensä kaarimaisia, usein tornien kyljittämiä ja rakennettuja kivestä, ja niistä kuljettiin sisään tarkastettuna. Siinä on arvaus, ei tieto, ja minä en arvaile.
+KYSYMYS: Kerro lisää: Salonan
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Miltä Salonan Porta Caesarea näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän en voi vastata tarkasti. Porta Caesarea oli yksi [[Salonan]] kaupunginmuurin porteista, ja Salona oli Rooman [[Dalmatian]] provinssin pääkaupunki. En ole varma portin tarkasta ulkonäöstä loistoaikana. Roomalaiset kaupunginportit olivat yleensä kaarimaisia, usein tornien kyljittämiä ja rakennettuja kivestä, ja niistä kuljettiin sisään tarkastettuna. Siinä on arvaus, ei tieto, ja minä en arvaile.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+AIEMPI KYSYMYS: Miksi Salonan Porta Caesarea katosi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Salonan kaupunki tuhoutui 600-luvulla, kun [[avaarit]] ja [[slaavit]] hyökkäsivät sinne. Asukkaat pakenivat [[Diocletianuksen palatsiin]], jonka ympärille kasvoi myöhemmin [[Split]], ja Salona jäi raunioiksi. En ole varma siitä, kuinka paljon Porta Caesareasta on jäljellä, mutta kaupungin muureja ja rakennusten jäännöksiä on säilynyt raunioalueella. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: avaarit
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+AIEMPI KYSYMYS: Miksi Salonan Porta Caesarea katosi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Salonan kaupunki tuhoutui 600-luvulla, kun [[avaarit]] ja [[slaavit]] hyökkäsivät sinne. Asukkaat pakenivat [[Diocletianuksen palatsiin]], jonka ympärille kasvoi myöhemmin [[Split]], ja Salona jäi raunioiksi. En ole varma siitä, kuinka paljon Porta Caesareasta on jäljellä, mutta kaupungin muureja ja rakennusten jäännöksiä on säilynyt raunioalueella. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: slaavit
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+AIEMPI KYSYMYS: Miksi Salonan Porta Caesarea katosi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Salonan kaupunki tuhoutui 600-luvulla, kun [[avaarit]] ja [[slaavit]] hyökkäsivät sinne. Asukkaat pakenivat [[Diocletianuksen palatsiin]], jonka ympärille kasvoi myöhemmin [[Split]], ja Salona jäi raunioiksi. En ole varma siitä, kuinka paljon Porta Caesareasta on jäljellä, mutta kaupungin muureja ja rakennusten jäännöksiä on säilynyt raunioalueella. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Diocletianuksen palatsiin
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Miksi Salonan Porta Caesarea katosi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Salonan kaupunki tuhoutui 600-luvulla, kun [[avaarit]] ja [[slaavit]] hyökkäsivät sinne. Asukkaat pakenivat [[Diocletianuksen palatsiin]], jonka ympärille kasvoi myöhemmin [[Split]], ja Salona jäi raunioiksi. En ole varma siitä, kuinka paljon Porta Caesareasta on jäljellä, mutta kaupungin muureja ja rakennusten jäännöksiä on säilynyt raunioalueella. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Split
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+AIEMPI KYSYMYS: Kuka oli keisari Diocletianus?
+AIEMPI VASTAUS (Livia):
+Ai se. Diocletianus hallitsi Rooman keisarikuntaa vuosina 284–305. Hän uudisti valtion hallintoa jakamalla vallan useiden hallitsijoiden kesken järjestelmässä, jota kutsutaan [[tetrarkiaksi]], jotta laaja valtakunta olisi helpompi hallita ja puolustaa. Vuonna 305 hän luopui vallasta vapaaehtoisesti ja vetäytyi rakennuttamaansa palatsiin nykyisen [[Splitin]] seudulle. Hänen aikanaan kristittyjä vainottiin laajasti, mikä on osa hänen perintöään. Kauan sitten, mutta vieläkin siitä puhutaan.
+KYSYMYS: Kerro lisää: tetrarkiaksi
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Kuka oli keisari Diocletianus?
+AIEMPI VASTAUS (Livia):
+Ai se. Diocletianus hallitsi Rooman keisarikuntaa vuosina 284–305. Hän uudisti valtion hallintoa jakamalla vallan useiden hallitsijoiden kesken järjestelmässä, jota kutsutaan [[tetrarkiaksi]], jotta laaja valtakunta olisi helpompi hallita ja puolustaa. Vuonna 305 hän luopui vallasta vapaaehtoisesti ja vetäytyi rakennuttamaansa palatsiin nykyisen [[Splitin]] seudulle. Hänen aikanaan kristittyjä vainottiin laajasti, mikä on osa hänen perintöään. Kauan sitten, mutta vieläkin siitä puhutaan.
+KYSYMYS: Kerro lisää: Splitin
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Keitä avaarit olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Avaarit olivat Euraasian aroilta Eurooppaan 500-luvulla saapunut ratsastajakansa, joka muodosti vallan [[Pannonian]] tasangolle nykyisen Unkarin seudulle. He hyökkäsivät Bysantin alueille Balkanilla ja yhdessä slaavien kanssa myös Dalmatiaan. Avaarien valta heikkeni vähitellen, ja [[Kaarle Suuren]] sotaretket 700-luvun lopulla ja 800-luvun alussa tekivät siitä lopun. Tämä oli pitkä matka arolta Adrianmerelle, ja minä lensin sen yhdessä hengenvedossa.
+KYSYMYS: Kerro lisää: Pannonian
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Keitä avaarit olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Avaarit olivat Euraasian aroilta Eurooppaan 500-luvulla saapunut ratsastajakansa, joka muodosti vallan [[Pannonian]] tasangolle nykyisen Unkarin seudulle. He hyökkäsivät Bysantin alueille Balkanilla ja yhdessä slaavien kanssa myös Dalmatiaan. Avaarien valta heikkeni vähitellen, ja [[Kaarle Suuren]] sotaretket 700-luvun lopulla ja 800-luvun alussa tekivät siitä lopun. Tämä oli pitkä matka arolta Adrianmerelle, ja minä lensin sen yhdessä hengenvedossa.
+KYSYMYS: Kerro lisää: Kaarle Suuren
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Historia: Provinssi, joka ruokki miljoonakaupungin] 146 eaa.–200-luku — Rooman Afrikka-provinssi perustettiin 146 eaa. kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan rannikon. Hallintopääkaupungiksi tuli Utica, joka oli sodassa asettunut Rooman puolelle. Provinssia sanottiin valtakunnan viljakomeroksi: se ruokki Rooman väestön kahdeksan kuukautta vuodesta, ja loput neljä tulivat Egyptistä. Yhden arvion mukaan Luoteis-Afrikka tuotti miljoona tonnia viljaa vuodessa, ja siitä neljännes lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy nousi viljan rinnalle, ja rikkaus näkyi kaupunkien määrässä.
+AIEMPI KYSYMYS: Miten roomalaisia provinsseja hallittiin?
+AIEMPI VASTAUS (Livia):
+No niin, hallinto oli järjestelmällistä. Rooman [[provinssi]] oli valtakunnan hallintoalue, jota johti keisarin tai senaatin nimittämä kuvernööri. Hän vastasi järjestyksestä, oikeudenkäytöstä ja verojen keräämisestä, ja hänen tukenaan oli virkamiehiä sekä tarvittaessa sotaväkeä. Provinssien suuremmat kaupungit, kuten Dalmatian pääkaupunki [[Salona]], toimivat hallinnon keskuksina. Hallintoa tuki tiestö, jota pitkin viestit ja joukot liikkuivat. Ja viestit, ne olivat ennen minun alaani.
+KYSYMYS: Kerro lisää: provinssi
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+AIEMPI KYSYMYS: Miten roomalaisia provinsseja hallittiin?
+AIEMPI VASTAUS (Livia):
+No niin, hallinto oli järjestelmällistä. Rooman [[provinssi]] oli valtakunnan hallintoalue, jota johti keisarin tai senaatin nimittämä kuvernööri. Hän vastasi järjestyksestä, oikeudenkäytöstä ja verojen keräämisestä, ja hänen tukenaan oli virkamiehiä sekä tarvittaessa sotaväkeä. Provinssien suuremmat kaupungit, kuten Dalmatian pääkaupunki [[Salona]], toimivat hallinnon keskuksina. Hallintoa tuki tiestö, jota pitkin viestit ja joukot liikkuivat. Ja viestit, ne olivat ennen minun alaani.
+KYSYMYS: Kerro lisää: Salona
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Minä vuonna Krka julistettiin kansallispuistoksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Krka julistettiin kansallispuistoksi vuonna 1985, ja siitä tuli Kroatian seitsemäs kansallispuisto. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä [[Šibenikin]] kaupunkia Dalmatian keskiosassa. Tunnetuin näky on [[Skradinski buk]], jossa joki putoaa sarjana putouksia sammaleisten kivikynnysten yli; kynnykset syntyvät [[travertiinin]] kerrostumisesta, samasta ilmiöstä kuin [[Plitvicen]] padot. Vuosiluvun minä muistin heti, ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Šibenikin
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Minä vuonna Krka julistettiin kansallispuistoksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Krka julistettiin kansallispuistoksi vuonna 1985, ja siitä tuli Kroatian seitsemäs kansallispuisto. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä [[Šibenikin]] kaupunkia Dalmatian keskiosassa. Tunnetuin näky on [[Skradinski buk]], jossa joki putoaa sarjana putouksia sammaleisten kivikynnysten yli; kynnykset syntyvät [[travertiinin]] kerrostumisesta, samasta ilmiöstä kuin [[Plitvicen]] padot. Vuosiluvun minä muistin heti, ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Skradinski buk
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Minä vuonna Krka julistettiin kansallispuistoksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Krka julistettiin kansallispuistoksi vuonna 1985, ja siitä tuli Kroatian seitsemäs kansallispuisto. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä [[Šibenikin]] kaupunkia Dalmatian keskiosassa. Tunnetuin näky on [[Skradinski buk]], jossa joki putoaa sarjana putouksia sammaleisten kivikynnysten yli; kynnykset syntyvät [[travertiinin]] kerrostumisesta, samasta ilmiöstä kuin [[Plitvicen]] padot. Vuosiluvun minä muistin heti, ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: travertiinin
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Minä vuonna Krka julistettiin kansallispuistoksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Krka julistettiin kansallispuistoksi vuonna 1985, ja siitä tuli Kroatian seitsemäs kansallispuisto. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä [[Šibenikin]] kaupunkia Dalmatian keskiosassa. Tunnetuin näky on [[Skradinski buk]], jossa joki putoaa sarjana putouksia sammaleisten kivikynnysten yli; kynnykset syntyvät [[travertiinin]] kerrostumisesta, samasta ilmiöstä kuin [[Plitvicen]] padot. Vuosiluvun minä muistin heti, ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Plitvicen
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanganjika — kaupunkilehti / Tanganjikan kirjoahvenet: Sadat lajit, jotka syntyivät samassa järvessä] Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.
+AIEMPI KYSYMYS: Kuinka monta kasvilajia tai alalajia Krkan puistossa on tunnistettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Krkan puistossa on tunnistettu 860 kasvilajia tai alalajia, ja lisäksi alueella tavataan 222 lintulajia. Joessa elää kahdeksantoista kalalajia, joista kymmenen on [[endeemisiä]], eli ne esiintyvät luonnostaan vain rajatulla alueella. Puisto sijaitsee [[Dalmatian]] keskiosassa, ja siihen kuuluu myös [[Čikola-joen]] alaosa. Putousten ympäristössä kasvaa runsaasti laventelia, minkä vuoksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+Laventelia ja ampiaisia samassa paikassa, siinä on kyyhkyn mielestä jo ihan tarpeeksi syytä pysytellä ylhäällä. Mut tuoksun uskon olevan hyvä.
+KYSYMYS: Kerro lisää: endeemisiä
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Kuinka monta kasvilajia tai alalajia Krkan puistossa on tunnistettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Krkan puistossa on tunnistettu 860 kasvilajia tai alalajia, ja lisäksi alueella tavataan 222 lintulajia. Joessa elää kahdeksantoista kalalajia, joista kymmenen on [[endeemisiä]], eli ne esiintyvät luonnostaan vain rajatulla alueella. Puisto sijaitsee [[Dalmatian]] keskiosassa, ja siihen kuuluu myös [[Čikola-joen]] alaosa. Putousten ympäristössä kasvaa runsaasti laventelia, minkä vuoksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+Laventelia ja ampiaisia samassa paikassa, siinä on kyyhkyn mielestä jo ihan tarpeeksi syytä pysytellä ylhäällä. Mut tuoksun uskon olevan hyvä.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+AIEMPI KYSYMYS: Kuinka monta kasvilajia tai alalajia Krkan puistossa on tunnistettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Krkan puistossa on tunnistettu 860 kasvilajia tai alalajia, ja lisäksi alueella tavataan 222 lintulajia. Joessa elää kahdeksantoista kalalajia, joista kymmenen on [[endeemisiä]], eli ne esiintyvät luonnostaan vain rajatulla alueella. Puisto sijaitsee [[Dalmatian]] keskiosassa, ja siihen kuuluu myös [[Čikola-joen]] alaosa. Putousten ympäristössä kasvaa runsaasti laventelia, minkä vuoksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+Laventelia ja ampiaisia samassa paikassa, siinä on kyyhkyn mielestä jo ihan tarpeeksi syytä pysytellä ylhäällä. Mut tuoksun uskon olevan hyvä.
+KYSYMYS: Kerro lisää: Čikola-joen
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Mikä travertiini on ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Travertiini on kalkkikiveä, joka saostuu kalkkipitoisesta vedestä, kun vesi virtaa ja sen sisältämä hiilidioksidi vapautuu. Krka-joella saostuminen rakentaa vähitellen kivikynnyksiä, joiden yli joki putoaa sarjana pieniä ja suuria putouksia; näin syntyvät [[Skradinski bukin]] kaltaiset näyt. Sama ilmiö on muodostanut myös [[Plitvicen]] padot, ja sammalet ja muu kasvillisuus ovat yleensä mukana prosessissa. Kynnykset kasvavat hyvin hitaasti. Kemiaa tuli taas enemmän kuin kyyhky yleensä jaksaa.
+KYSYMYS: Kerro lisää: Skradinski bukin
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+AIEMPI KYSYMYS: Miksi putousten ympärillä on paljon mehiläisiä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Putousten ympäristössä kasvaa kerrotusti Euroopan toiseksi tiheimmin [[laventelia]], ja juuri siksi alueella on paljon ampiaisia ja mehiläisiä. Kukkiessaan laventeli on hyvä mesikasvi, jota [[mehiläiset]] ja muut [[pölyttäjät]] käyttävät ravintonaan. Kukinnan aikaan kannattaa siis varautua hyönteisten seuraan. Ampiaisten kanssa minä en neuvottele.
+KYSYMYS: Kerro lisää: laventelia
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kaupunkilehti / Lalibela: Mehiläiset, jotka tunnustivat kuninkaan] Kaupungin vanha nimi oli Roha. Sinne pakeni vuonna 1162 Kirwerna, Bugnan kuvernöörin palvelijatar, synnyttämään. Hagiografian mukaan mehiläisparvi ympäröi vastasyntyneen, ja äiti tulkitsi sen merkiksi tulevasta vallasta; poika nimettiin Lalibelaksi, joka vanhassa agaw-kielessä tarkoittaa, että mehiläiset tunnustavat hänen valtansa. Ennustus herätti vihamielisyyttä sukulaisissa, ja Lalibela vietti monta vuotta maanpaossa Jerusalemissa. Palattuaan hän nousi valtaan ja hallitsi noin 1181–1221. Kaupunki kantaa hänen nimeään, ja kirkko muistaa hänet pyhimyksenä 19. kesäkuuta.
+AIEMPI KYSYMYS: Miksi putousten ympärillä on paljon mehiläisiä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Putousten ympäristössä kasvaa kerrotusti Euroopan toiseksi tiheimmin [[laventelia]], ja juuri siksi alueella on paljon ampiaisia ja mehiläisiä. Kukkiessaan laventeli on hyvä mesikasvi, jota [[mehiläiset]] ja muut [[pölyttäjät]] käyttävät ravintonaan. Kukinnan aikaan kannattaa siis varautua hyönteisten seuraan. Ampiaisten kanssa minä en neuvottele.
+KYSYMYS: Kerro lisää: mehiläiset
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etiopia — maalehti / Luonto: Metsäsaaret, joita kirkot ovat vartioineet 1 500 vuotta] Pohjois-Etiopian ylängöistä on raivattu pelloiksi niin paljon, että alkuperäistä metsää on jäljellä noin neljä prosenttia — ja lähes kaikki siitä kasvaa kirkkojen ympärillä. Perinteen mukaan kirkon kuuluu seisoa metsässä, ja siksi noin 35 000 kirkkometsää on säilynyt vihreinä saarekkeina keskellä kynnettyä maata; pienin on kolme hehtaaria, suurin kolmesataa. Metsät nostavat pohjaveden pintaa, viilentävät ja pitävät pölyttäjät hengissä. Kun reunat alkoivat kulua, papit ja kyläläiset ryhtyivät muuraamaan niiden ympärille kiviaitoja.
+AIEMPI KYSYMYS: Miksi putousten ympärillä on paljon mehiläisiä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Putousten ympäristössä kasvaa kerrotusti Euroopan toiseksi tiheimmin [[laventelia]], ja juuri siksi alueella on paljon ampiaisia ja mehiläisiä. Kukkiessaan laventeli on hyvä mesikasvi, jota [[mehiläiset]] ja muut [[pölyttäjät]] käyttävät ravintonaan. Kukinnan aikaan kannattaa siis varautua hyönteisten seuraan. Ampiaisten kanssa minä en neuvottele.
+KYSYMYS: Kerro lisää: pölyttäjät

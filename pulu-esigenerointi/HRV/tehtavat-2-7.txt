@@ -1,0 +1,784 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+AIEMPI KYSYMYS: Mikä on Još Hrvatska ni propala?
+AIEMPI VASTAUS (Livia):
+Kas vaan, laulukysymys. Još Hrvatska ni propala on kroatialainen isänmaallinen laulu, jonka suomennos on likimain "Kroatia ei ole vielä tuhoutunut". Sen on säveltänyt [[Ferdo Livadić]] 1830-luvulla, ja se on peräisin [[illyrialaisen liikkeen]] ajalta. Laulua pidetään 1800-luvun tunnetuimpana kroatialaisena isänmaallisena laulunumerona. Samoborissa laulu on tietysti erityisen tuttu, ja minä hyräilen mukana.
+KYSYMYS: Kerro lisää: Ferdo Livadić
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia: Ranskalaisten Illyria ja kongressi, jossa Laibach oli maailman keskus] Vuonna 1809 Napoleon voitti Itävallan, ja Schönbrunnin rauhassa Itävalta luovutti Ranskalle Krainin ja muita alueita. Niistä muodostettiin Illyrian maakunnat, joiden hallinnon pääkaupungiksi tuli Ljubljana, ranskaksi Laybach. Vuonna 1810 perustettu École centrale pidetään nykyään Ljubljanan yliopiston perustamisasiakirjana. Itävalta sai alueen takaisin 1813–1814, ja vuonna 1821 kaupungissa, silloin Laibachissa, kokoontui kongressi, joka antoi Itävallalle luvan tukahduttaa kapina Napolissa.
+AIEMPI KYSYMYS: Mikä on Još Hrvatska ni propala?
+AIEMPI VASTAUS (Livia):
+Kas vaan, laulukysymys. Još Hrvatska ni propala on kroatialainen isänmaallinen laulu, jonka suomennos on likimain "Kroatia ei ole vielä tuhoutunut". Sen on säveltänyt [[Ferdo Livadić]] 1830-luvulla, ja se on peräisin [[illyrialaisen liikkeen]] ajalta. Laulua pidetään 1800-luvun tunnetuimpana kroatialaisena isänmaallisena laulunumerona. Samoborissa laulu on tietysti erityisen tuttu, ja minä hyräilen mukana.
+KYSYMYS: Kerro lisää: illyrialaisen liikkeen
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+AIEMPI KYSYMYS: Mikä oli illyrialainen liike?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on isoa historiaa. Illyrialainen liike oli kroatialainen kansallinen herätysliike 1800-luvulla, jonka johtohahmo oli [[Ljudevit Gaj]]. Liike uudisti kirjakieltä ja kirjoitusasua, ja se vahvisti kroatialaista kulttuuria ja kansallistunnetta [[Habsburgien]] monarkian sisällä. Ferdo Livadić kuului liikkeeseen, ja se vaikutti myös musiikkiin ja kirjallisuuteen. Pitkä aihe, mutta ei se lintua väsytä.
+KYSYMYS: Kerro lisää: Ljudevit Gaj
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+AIEMPI KYSYMYS: Mikä on Karlowitzin rauha?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tän muistan. Karlowitzin rauha tehtiin vuonna 1699, ja se päätti suuren [[Turkin sodan]] [[Osmanien valtakunnan]] sekä [[Habsburgien]] johtaman liittouman välillä. Rauhassa Habsburgit saivat hallintaansa suuren osan Unkarista ja Slavoniaa, joten rajat siirtyivät merkittävästi. Samoborin kaltaiset kaupungit kuuluivat siitä lähtien vakaammin Habsburgien monarkiaan. Siinäpä oli rauhaa, kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Turkin sodan
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mikä on Karlowitzin rauha?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tän muistan. Karlowitzin rauha tehtiin vuonna 1699, ja se päätti suuren [[Turkin sodan]] [[Osmanien valtakunnan]] sekä [[Habsburgien]] johtaman liittouman välillä. Rauhassa Habsburgit saivat hallintaansa suuren osan Unkarista ja Slavoniaa, joten rajat siirtyivät merkittävästi. Samoborin kaltaiset kaupungit kuuluivat siitä lähtien vakaammin Habsburgien monarkiaan. Siinäpä oli rauhaa, kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Osmanien valtakunnan
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Minkä joen varrella Kumrovec sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kumrovec sijaitsee [[Sutla]]-joen varrella Pohjois-Kroatiassa [[Krapina-Zagorjen]] läänissä. Joki kulkee kyseisellä kohdalla Kroatian ja [[Slovenian]] rajalla, joten kylä on aivan rajan tuntumassa. Kylässä on vain 245 asukasta, ja kunnassa on 1 412 asukasta vuoden 2021 mukaan. Pieni paikka, mutta iso kartalla.
+KYSYMYS: Kerro lisää: Sutla
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Minkä joen varrella Kumrovec sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kumrovec sijaitsee [[Sutla]]-joen varrella Pohjois-Kroatiassa [[Krapina-Zagorjen]] läänissä. Joki kulkee kyseisellä kohdalla Kroatian ja [[Slovenian]] rajalla, joten kylä on aivan rajan tuntumassa. Kylässä on vain 245 asukasta, ja kunnassa on 1 412 asukasta vuoden 2021 mukaan. Pieni paikka, mutta iso kartalla.
+KYSYMYS: Kerro lisää: Krapina-Zagorjen
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Minkä joen varrella Kumrovec sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kumrovec sijaitsee [[Sutla]]-joen varrella Pohjois-Kroatiassa [[Krapina-Zagorjen]] läänissä. Joki kulkee kyseisellä kohdalla Kroatian ja [[Slovenian]] rajalla, joten kylä on aivan rajan tuntumassa. Kylässä on vain 245 asukasta, ja kunnassa on 1 412 asukasta vuoden 2021 mukaan. Pieni paikka, mutta iso kartalla.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Minä vuonna Staro Selon talojen kunnostus alkoi?
+AIEMPI VASTAUS (Livia):
+Ai tota, vuosiluku. [[Staro Selon]] talojen kunnostus aloitettiin vuonna 1977. Staro Selo on Kumrovecin vanha osa, joka on nykyään etnologinen museo, ja kunnostettuja taloja ja tilarakennuksia on yli neljäkymmentä. Talot ovat [[Zagorjen]] talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta. Kunnostus on kestänyt kauan, mutta tulos kai kelpaa.
+KYSYMYS: Kerro lisää: Staro Selon
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Minä vuonna Staro Selon talojen kunnostus alkoi?
+AIEMPI VASTAUS (Livia):
+Ai tota, vuosiluku. [[Staro Selon]] talojen kunnostus aloitettiin vuonna 1977. Staro Selo on Kumrovecin vanha osa, joka on nykyään etnologinen museo, ja kunnostettuja taloja ja tilarakennuksia on yli neljäkymmentä. Talot ovat [[Zagorjen]] talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta. Kunnostus on kestänyt kauan, mutta tulos kai kelpaa.
+KYSYMYS: Kerro lisää: Zagorjen
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Mikä on Lijepa naša domovino?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on iso juttu. Lijepa naša domovino on Kroatian kansallislaulu, jonka suomennos on "Kaunis kotimaamme". Sanat on kirjoittanut [[Antun Mihanović]] ja ne julkaistiin 1830-luvulla, ja sävel liitetään yleensä [[Josip Runjaniniin]], vaikka en ole varma kaikista yksityiskohdista. Kumrovecissa on laulun muistomerkki, joka pystytettiin vuonna 1935 satavuotisjuhlan kunniaksi. Pieni kylä, suuri laulu.
+KYSYMYS: Kerro lisää: Antun Mihanović
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kohdekartta / Kohdekartta: Sarajevon katedraali] 1884–1889 Sarajevon suurin katolinen kirkko, Pyhän Sydämen katedraali, kohoaa kahdella tornillaan keskustan sydämessä. Rakennustyöt alkoivat vuonna 1884, ja kirkko vihittiin käyttöön jo viiden vuoden kuluttua, vuonna 1889. Arkkitehti Josip Vancaš otti mallia kaukaisesta Ranskan Dijonista, Notre-Damen kirkosta, ja niin Sarajevoon syntyi oma pieni sisarrakennus sille. Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja koko rakennus on lähes 42 metriä pitkä. Sen suippokaariset ikkunat ja pyöreät tornit ovat niin tunnettuja, että ne on kuvattu Sarajevon kaupungin vaakunassa ja koko kantonin lipussa — katedraali on siis virallisesti osa kaupungin tunnusta. 1990-luvun alussa Sarajevoa…
+AIEMPI KYSYMYS: Mikä on Lijepa naša domovino?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on iso juttu. Lijepa naša domovino on Kroatian kansallislaulu, jonka suomennos on "Kaunis kotimaamme". Sanat on kirjoittanut [[Antun Mihanović]] ja ne julkaistiin 1830-luvulla, ja sävel liitetään yleensä [[Josip Runjaniniin]], vaikka en ole varma kaikista yksityiskohdista. Kumrovecissa on laulun muistomerkki, joka pystytettiin vuonna 1935 satavuotisjuhlan kunniaksi. Pieni kylä, suuri laulu.
+KYSYMYS: Kerro lisää: Josip Runjaniniin
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Mitä Staro Selossa voi nähdä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Staro Selossa voi nähdä hyvin säilyneitä [[Zagorjen]] talonpoikaistaloja sekä näyttelyitä perinteisistä töistä. Esillä on esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi -prosessi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kunnostus on tehnyt museosta kokonaisen [[ulkomuseon]], jossa vierailija pääsee tutustumaan entiseen arkeen. Leipäosasto kiinnostaa kyyhkyä erityisesti.
+KYSYMYS: Kerro lisää: ulkomuseon
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Plaza Garibaldi] 1920 Aukio on Eje Centralin varrella Hondurasin ja Perun tasavallan katujen välissä, muutaman korttelin pohjoispuolella Palacio de Bellas Artesia. Sen alkuperäinen nimi oli Plaza Santa Cecilia. Nykyisen nimensä se sai 1920 Meksikon vallankumouksen päätyttyä everstiluutnantti Peppino Garibaldin mukaan, joka liittyi maderistien joukkoihin Casas Grandesin hyökkäyksessä Chihuahuassa. Aukio on Mexico Cityn mariachi-musiikin koti. Aukion pohjoislaidalla toimii yhä Salón Tenampa, josta tuli mariachin päänäyttämö 1920-luvulla, kun Cirilo Marmolejo orkestereineen alkoi soittaa siellä säännöllisesti. Muut soittajat seurasivat perässä, ja aukiolla alettiin maksaa muusikoille siitä, että he lauloivat t…
+- [Sarajevo — kohdekartta / Kohdekartta: Sarajevon katedraali] 1884–1889 Sarajevon suurin katolinen kirkko, Pyhän Sydämen katedraali, kohoaa kahdella tornillaan keskustan sydämessä. Rakennustyöt alkoivat vuonna 1884, ja kirkko vihittiin käyttöön jo viiden vuoden kuluttua, vuonna 1889. Arkkitehti Josip Vancaš otti mallia kaukaisesta Ranskan Dijonista, Notre-Damen kirkosta, ja niin Sarajevoon syntyi oma pieni sisarrakennus sille. Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja koko rakennus on lähes 42 metriä pitkä. Sen suippokaariset ikkunat ja pyöreät tornit ovat niin tunnettuja, että ne on kuvattu Sarajevon kaupungin vaakunassa ja koko kantonin lipussa — katedraali on siis virallisesti osa kaupungin tunnusta. 1990-luvun alussa Sarajevoa…
+AIEMPI KYSYMYS: Kuka tunnettu henkilö on syntynyt Kumrovecissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän tiedän kyllä. Kumrovecissa syntyi vuonna 1892 [[Josip Broz Tito]], joka johti [[Jugoslaviaa]] toisen maailmansodan jälkeen kuolemaansa vuonna 1980 asti. Hänen syntymäkotinsa on osa [[Staro Selon]] museoaluetta, ja kylä tunnetaan hänestä edelleen. Tito on kiistelty hahmo, ja hänen perintönsä arvioidaan entisen Jugoslavian alueella eri tavoin. Tämän kylän kuuluisuus on siis kotoisin sieltä, minä uskon.
+KYSYMYS: Kerro lisää: Josip Broz Tito
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+AIEMPI KYSYMYS: Kuka tunnettu henkilö on syntynyt Kumrovecissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän tiedän kyllä. Kumrovecissa syntyi vuonna 1892 [[Josip Broz Tito]], joka johti [[Jugoslaviaa]] toisen maailmansodan jälkeen kuolemaansa vuonna 1980 asti. Hänen syntymäkotinsa on osa [[Staro Selon]] museoaluetta, ja kylä tunnetaan hänestä edelleen. Tito on kiistelty hahmo, ja hänen perintönsä arvioidaan entisen Jugoslavian alueella eri tavoin. Tämän kylän kuuluisuus on siis kotoisin sieltä, minä uskon.
+KYSYMYS: Kerro lisää: Jugoslaviaa
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Minä vuonna turkkilaisten piiritys Sinjissä epäonnistui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Turkkilaisten piiritys Sinjissä epäonnistui vuonna 1715, kun turkkilaiset yrittivät ottaa kaupungin takaisin. Piiritys päättyi 15. elokuuta yöllä, jolloin turkkilaiset pakenivat [[Livnoon]]. Voitto on kaupungin tärkeä muisto, ja sen kunniaksi järjestetään [[Sinjska alka]] -ritariturnaus. Kyyhky ei olisi yöllä uskaltanut lentää.
+KYSYMYS: Kerro lisää: Livnoon
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Minä vuonna turkkilaisten piiritys Sinjissä epäonnistui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Turkkilaisten piiritys Sinjissä epäonnistui vuonna 1715, kun turkkilaiset yrittivät ottaa kaupungin takaisin. Piiritys päättyi 15. elokuuta yöllä, jolloin turkkilaiset pakenivat [[Livnoon]]. Voitto on kaupungin tärkeä muisto, ja sen kunniaksi järjestetään [[Sinjska alka]] -ritariturnaus. Kyyhky ei olisi yöllä uskaltanut lentää.
+KYSYMYS: Kerro lisää: Sinjska alka
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Millä nimellä Sinjin ympäristön seutua kutsutaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sinjin ympäristön seutua kutsutaan nimellä [[Cetinska krajina]], ja Sinj on sen keskus. Seutu on hedelmällistä [[Sinjsko poljea]], joka on karstikenttä, ja sitä ympäröivät Svilajan, Dinaran, Kamešnican ja Visokan vuoret. Seutu sijaitsee Split-Dalmatian läänin sisämaassa, noin Adrianmeren rannikkoa taaempana. Neljä vuorta yhdellä lauseella, ei paha.
+KYSYMYS: Kerro lisää: Cetinska krajina
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Millä nimellä Sinjin ympäristön seutua kutsutaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sinjin ympäristön seutua kutsutaan nimellä [[Cetinska krajina]], ja Sinj on sen keskus. Seutu on hedelmällistä [[Sinjsko poljea]], joka on karstikenttä, ja sitä ympäröivät Svilajan, Dinaran, Kamešnican ja Visokan vuoret. Seutu sijaitsee Split-Dalmatian läänin sisämaassa, noin Adrianmeren rannikkoa taaempana. Neljä vuorta yhdellä lauseella, ei paha.
+KYSYMYS: Kerro lisää: Sinjsko poljea
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Mikä on Sinjska alka?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saa kertoa. Sinjska alka on ritariturnaus, jota on järjestetty Sinjissä 1700-luvun alusta lähtien voiton merkiksi [[ottomaaneista]]. Ratsastajat kilpailevat ratsain ja tähtäävät keihäällä rengasmaaliin, ja kilpailua pidetään vuosittain elokuussa. Perinne on tunnustettu myös [[UNESCOn]] aineettomaksi kulttuuriperinnöksi, vaikka en ole varma tarkasta vuodesta. Kisan kuvaaminen ylhäältä on makeaa.
+KYSYMYS: Kerro lisää: ottomaaneista
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Mikä on Sinjska alka?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tästä saa kertoa. Sinjska alka on ritariturnaus, jota on järjestetty Sinjissä 1700-luvun alusta lähtien voiton merkiksi [[ottomaaneista]]. Ratsastajat kilpailevat ratsain ja tähtäävät keihäällä rengasmaaliin, ja kilpailua pidetään vuosittain elokuussa. Perinne on tunnustettu myös [[UNESCOn]] aineettomaksi kulttuuriperinnöksi, vaikka en ole varma tarkasta vuodesta. Kisan kuvaaminen ylhäältä on makeaa.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Mikä on karstikenttä eli polje?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Polje on karstialueen suuri, tasapohjainen ja suljettu painanne, joka syntyy kalkkikiven liukenemisen seurauksena. Sinjsko polje on tällainen [[karstikenttä]], ja sen maaperä on hedelmällistä, joten alue sopii viljelyyn. Kentät voivat tulvia kosteina kausina, koska vesi poistuu maan alaisten [[luolien]] kautta. Tuollainen on täällä Dinaran juurella tavallista.
+KYSYMYS: Kerro lisää: karstikenttä
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Sacromonten luolat] 1500-luku Granadan itälaidalla kohoaa Sacromonten kukkula, jonka rinteisiin on kaiverrettu satoja luolakoteja jo 1500-luvulta lähtien. Ensin luoliin piiloutuivat ihmiset, jotka oli karkotettu kaupungista, mutta pian niistä tuli koti romanikansalle eli gitaneille, jotka asettuivat Granadaan sen jälkeen kun kaupunki oli vuonna 1492 vallattu takaisin kristityille. Jokainen luola on erimuotoinen, sillä se on louhittu suoraan kukkulan kallioon - ovena toimii usein pyöreä, valkoiseksi kalkittu kaariaukko. Lähellä sijaitsevassa rotkossa, jota kutsutaan Mustien rotkoksi, kerrotaan tarina vapautetuista orjista, jotka etsivät sotien jälkeen kätkettyä arabikultaa oliivilehdosta - aivan kuin suoraan aa…
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Mikä on karstikenttä eli polje?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Polje on karstialueen suuri, tasapohjainen ja suljettu painanne, joka syntyy kalkkikiven liukenemisen seurauksena. Sinjsko polje on tällainen [[karstikenttä]], ja sen maaperä on hedelmällistä, joten alue sopii viljelyyn. Kentät voivat tulvia kosteina kausina, koska vesi poistuu maan alaisten [[luolien]] kautta. Tuollainen on täällä Dinaran juurella tavallista.
+KYSYMYS: Kerro lisää: luolien
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+AIEMPI KYSYMYS: Mikä on Sinjin Neitsyt Marian pyhäkkö?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tän muistan. Sinjin Neitsyt Marian pyhäkkö on kaupungin tärkeä katolinen pyhiinvaelluskohde, jossa kunnioitetaan Neitsyt Marian kuvaa. Perimätiedon mukaan kuva liittyy vuoden 1715 voittoon, ja sen vuoksi pyhäkkö ja [[Sinjska alka]] kuuluvat läheisesti yhteen kaupungin historiassa. Pyhäkköä hoitavat [[fransiskaanit]], ja elokuun puolivälin juhla kokoaa tavallisesti paljon vierailijoita. Tämän tiedon olen kuullut, en kyllä nähnyt.
+KYSYMYS: Kerro lisää: fransiskaanit
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Millä nimellä asukkaat kutsuvat itseään?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hauska juttu. [[Đurđevacin]] asukkaat kutsuvat itseään leikillisesti [[picokeiksi]]. Kaupungin tunnetuimpiin nähtävyyksiin kuuluu [[Picokijada]], joka perustuu kukkojen legendaan, ja kaupunki sai vuonna 2008 EU:n [[EDEN-tunnustuksen]] epätavallisena matkailukohteena. Kyyhkynä minä kunnioitan kyl kaikkia siivekkäitä.
+KYSYMYS: Kerro lisää: Đurđevacin
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Millä nimellä asukkaat kutsuvat itseään?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hauska juttu. [[Đurđevacin]] asukkaat kutsuvat itseään leikillisesti [[picokeiksi]]. Kaupungin tunnetuimpiin nähtävyyksiin kuuluu [[Picokijada]], joka perustuu kukkojen legendaan, ja kaupunki sai vuonna 2008 EU:n [[EDEN-tunnustuksen]] epätavallisena matkailukohteena. Kyyhkynä minä kunnioitan kyl kaikkia siivekkäitä.
+KYSYMYS: Kerro lisää: picokeiksi
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Millä nimellä asukkaat kutsuvat itseään?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hauska juttu. [[Đurđevacin]] asukkaat kutsuvat itseään leikillisesti [[picokeiksi]]. Kaupungin tunnetuimpiin nähtävyyksiin kuuluu [[Picokijada]], joka perustuu kukkojen legendaan, ja kaupunki sai vuonna 2008 EU:n [[EDEN-tunnustuksen]] epätavallisena matkailukohteena. Kyyhkynä minä kunnioitan kyl kaikkia siivekkäitä.
+KYSYMYS: Kerro lisää: Picokijada
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Eden Park] 1900 Stadionin paikalla oli suo, jota ruokkivat Maungawhaun ja Mount Albertin laavaonkalot yli 30 000 vuoden takaa. Tāmakin maorit keräsivät suolta ruokaa ja tarveaineita. Vuonna 1845 alueen osti cornwallilainen maanviljelijä John Walters, eli isoisän aikaan tässä oli maatila. Urheilukenttänä paikka on ollut vuodesta 1900 ja krikettikenttänä 1903 alkaen, ja siitä saa kiittää Harry Ryania, joka vuokrasi innostuneena palan Waltersin maata. Kenttä oli kivinen ja kallioinen laidun, jonka notko täyttyi sateella ja pysyi veden alla koko talven. Vuonna 1907 kenttä oli kahdesti viikon ajan veden alla. Ylläpito kävi kalliiksi, ja 1910 paikallinen krikettiseura pyysi Aucklandin krikettiliittoa ottama…
+AIEMPI KYSYMYS: Millä nimellä asukkaat kutsuvat itseään?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hauska juttu. [[Đurđevacin]] asukkaat kutsuvat itseään leikillisesti [[picokeiksi]]. Kaupungin tunnetuimpiin nähtävyyksiin kuuluu [[Picokijada]], joka perustuu kukkojen legendaan, ja kaupunki sai vuonna 2008 EU:n [[EDEN-tunnustuksen]] epätavallisena matkailukohteena. Kyyhkynä minä kunnioitan kyl kaikkia siivekkäitä.
+KYSYMYS: Kerro lisää: EDEN-tunnustuksen
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Minä vuonna Đurđevac sai EU:n EDEN-tunnustuksen?
+AIEMPI VASTAUS (Livia):
+Mmm— tän minä muistan. [[Đurđevac]] sai EU:n [[EDEN-tunnustuksen]] vuonna 2008, ja tunnustus myönnettiin kaupungille epätavallisena matkailukohteena. Kaupungin nähtävyyksiin kuuluu muun muassa [[Picokijada]], joka perustuu kukkojen legendaan. Helppo vuosiluku, ei tarvinnut räpytellä siipiäkään.
+KYSYMYS: Kerro lisää: Đurđevac
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Mikä oli Kroatian sotilasraja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kroatian [[sotilasraja]] oli [[Habsburgien]] monarkian puolustusvyöhyke [[osmanien]] valtakunnan rajalla, ja sen asukkaat palvelivat sotilaina saadakseen maata käyttöönsä. Đurđevac kuului sotilasrajaan Varaždin–Sankt Georgen -rykmentti nro VI:n alueena, ja ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Aikamoinen nimi, pidempi ku koko häntäni.
+KYSYMYS: Kerro lisää: sotilasraja
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä oli Kroatian sotilasraja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kroatian [[sotilasraja]] oli [[Habsburgien]] monarkian puolustusvyöhyke [[osmanien]] valtakunnan rajalla, ja sen asukkaat palvelivat sotilaina saadakseen maata käyttöönsä. Đurđevac kuului sotilasrajaan Varaždin–Sankt Georgen -rykmentti nro VI:n alueena, ja ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Aikamoinen nimi, pidempi ku koko häntäni.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mikä oli Kroatian sotilasraja?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kroatian [[sotilasraja]] oli [[Habsburgien]] monarkian puolustusvyöhyke [[osmanien]] valtakunnan rajalla, ja sen asukkaat palvelivat sotilaina saadakseen maata käyttöönsä. Đurđevac kuului sotilasrajaan Varaždin–Sankt Georgen -rykmentti nro VI:n alueena, ja ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Aikamoinen nimi, pidempi ku koko häntäni.
+KYSYMYS: Kerro lisää: osmanien
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+AIEMPI KYSYMYS: Kuka oli Pyhä Yrjö, jonka mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Pyhä Yrjö]] oli perimätiedon mukaan sotilas, joka kuoli [[marttyyrina]] noin 300-luvun alussa. Häntä kunnioitetaan monissa kirkoissa, ja keskiajalla hänestä kertova [[lohikäärmelegenda]] levisi laajalle Eurooppaan. Đurđevacin Pyhän Yrjön kirkko on nimetty hänen mukaansa, ja kaupungin entinen saksankielinen nimi Militär Sanct Georgen viittaa samaan pyhimykseen. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Pyhä Yrjö
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ouro Preto — kaupunkilehti / Salaliitto vuoristokaupungissa: Aukio joka sai marttyyrin nimen] Kun Tiradentesin pää tuotiin Vila Ricaan näytille varoitukseksi, se asetettiin juuri sille aukiolle, joka tunnetaan nykyään nimellä Praça Tiradentes. Brasilian tultua tasavallaksi 1889 Tiradentesista tehtiin kansallissankari ja itsenäisyyden marttyyri: hänen muistomerkkinsä paljastettiin aukiolla 21. huhtikuuta 1894, täsmälleen 102 vuotta teloituksen jälkeen. Samasta päivästä tuli Brasiliassa pysyvä kansallinen vapaapäivä, jota vietetään yhä joka vuosi Tiradentesin muistoksi.
+AIEMPI KYSYMYS: Kuka oli Pyhä Yrjö, jonka mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Pyhä Yrjö]] oli perimätiedon mukaan sotilas, joka kuoli [[marttyyrina]] noin 300-luvun alussa. Häntä kunnioitetaan monissa kirkoissa, ja keskiajalla hänestä kertova [[lohikäärmelegenda]] levisi laajalle Eurooppaan. Đurđevacin Pyhän Yrjön kirkko on nimetty hänen mukaansa, ja kaupungin entinen saksankielinen nimi Militär Sanct Georgen viittaa samaan pyhimykseen. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: marttyyrina
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin lohikäärme] 1972 Vanhan tarinan mukaan Wawelin kukkulan luolassa asui hirmuinen lohikäärme, joka vaati viikoittain karjaa ruoakseen - tai söi muuten ihmisiä. Vanhin kirjoitettu versio tarinasta on 1200-luvulta, piispa Kadłubekin kronikasta, jossa kuningas Krakuksen pojat viekoittelevat pedon syömään rikillä täytettyä eläimennahkaa. Suosituimmassa, vuonna 1597 kirjoitetussa tarinassa sankarina on suutari nimeltä Skuba. Hän täyttää lampaannahan tulikivellä, lohikäärme syö sen ja janoaa niin kovasti, että se juo koko Vistula-joen kuiviin ja lopulta halkeaa. Lohikäärmeen luola on yhä avoinna vierailijoille linnan alla, ja sen suulla seisoo pronssinen lohikäärmepatsas vuodelta 1972. Kuvanveistäjä Bronisław …
+- [Puola — maalehti / Historia: Lohikäärme joka syttyy tuleen] nykyään — Wawelin kukkulan luolassa Krakovassa asui tarun mukaan lohikäärme, joka vaati kaupungilta uhrilampaita ja lopulta neitoja, kunnes köyhä suutarinoppipoika täytti lampaan rikillä ja piellä — lohikäärme söi sen, janosi hillittömästi ja lopulta räjähti juotuaan joesta niin paljon vettä. Tarina on niin rakastettu, että Wawelin kukkulan juurelle pystytettiin 1972 pronssinen lohikäärmepatsas, joka oikeasti henkäisee tulta muutaman minuutin välein kaasuputken ansiosta — lasten suosikkinähtävyys nykyaikaisen tekniikan ja vanhan tarun yhdistelmänä.
+AIEMPI KYSYMYS: Kuka oli Pyhä Yrjö, jonka mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Pyhä Yrjö]] oli perimätiedon mukaan sotilas, joka kuoli [[marttyyrina]] noin 300-luvun alussa. Häntä kunnioitetaan monissa kirkoissa, ja keskiajalla hänestä kertova [[lohikäärmelegenda]] levisi laajalle Eurooppaan. Đurđevacin Pyhän Yrjön kirkko on nimetty hänen mukaansa, ja kaupungin entinen saksankielinen nimi Militär Sanct Georgen viittaa samaan pyhimykseen. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: lohikäärmelegenda
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Mikä oli vuoden 1867 sovinto Itävallan ja Unkarin välillä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuoden 1867 sovinnossa Habsburgien keisarikunta muuttui [[kaksoismonarkiaksi]], jossa Itävallalla ja Unkarilla oli omat hallituksensa ja parlamenttinsa mutta yhteinen hallitsija, keisari [[Frans Joosef]]. Yhteisiä asioita olivat muun muassa ulkopolitiikka ja puolustus. [[Kroatia-Slavonian]] kuningaskunta oli osa tätä kokonaisuutta, ja Đurđevac kuului siihen vuoteen 1918 asti. Politiikkaa, mut minä tykkään enemmän reiteistä.
+KYSYMYS: Kerro lisää: kaksoismonarkiaksi
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Egypti — maalehti / Kanava: Port Said 1869 — keulan edessä vain kaivettua vettä] 17.11.1869 — Keulan edessä ei ole enää mitään paitsi kaivettua vettä. Keisarillinen huvijahti L'Aigle kääntyy Port Saidista kanavaan 17. marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa 1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin 1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekij…
+AIEMPI KYSYMYS: Mikä oli vuoden 1867 sovinto Itävallan ja Unkarin välillä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuoden 1867 sovinnossa Habsburgien keisarikunta muuttui [[kaksoismonarkiaksi]], jossa Itävallalla ja Unkarilla oli omat hallituksensa ja parlamenttinsa mutta yhteinen hallitsija, keisari [[Frans Joosef]]. Yhteisiä asioita olivat muun muassa ulkopolitiikka ja puolustus. [[Kroatia-Slavonian]] kuningaskunta oli osa tätä kokonaisuutta, ja Đurđevac kuului siihen vuoteen 1918 asti. Politiikkaa, mut minä tykkään enemmän reiteistä.
+KYSYMYS: Kerro lisää: Frans Joosef
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+AIEMPI KYSYMYS: Mikä oli vuoden 1867 sovinto Itävallan ja Unkarin välillä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuoden 1867 sovinnossa Habsburgien keisarikunta muuttui [[kaksoismonarkiaksi]], jossa Itävallalla ja Unkarilla oli omat hallituksensa ja parlamenttinsa mutta yhteinen hallitsija, keisari [[Frans Joosef]]. Yhteisiä asioita olivat muun muassa ulkopolitiikka ja puolustus. [[Kroatia-Slavonian]] kuningaskunta oli osa tätä kokonaisuutta, ja Đurđevac kuului siihen vuoteen 1918 asti. Politiikkaa, mut minä tykkään enemmän reiteistä.
+KYSYMYS: Kerro lisää: Kroatia-Slavonian
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Kuinka monta katsojaa amfiteatteriin mahtui parhaimmillaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Salonan]] amfiteatterin kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa, joten luku on arvio eikä tarkka määrä. Rakennuksen ulkomitat olivat noin 125 x 100 metriä, ja se rakennettiin [[Dalmatian]] provinssin pääkaupunkiin 100-luvun jälkipuoliskolla. Siinä ois ollut kyyhkyllekin tilaa kierrellä.
+KYSYMYS: Kerro lisää: Salonan
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Kuinka monta katsojaa amfiteatteriin mahtui parhaimmillaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Salonan]] amfiteatterin kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa, joten luku on arvio eikä tarkka määrä. Rakennuksen ulkomitat olivat noin 125 x 100 metriä, ja se rakennettiin [[Dalmatian]] provinssin pääkaupunkiin 100-luvun jälkipuoliskolla. Siinä ois ollut kyyhkyllekin tilaa kierrellä.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+AIEMPI KYSYMYS: Miksi venetsialaiset purkivat amfiteatterin 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Venetsialaiset]] purkivat amfiteatteria tarkoituksella 1600-luvun [[turkkilaissodissa]], jotta [[osmanit]] eivät voisi linnoittautua sen muureihin. Rakennus oli selvinnyt Salonan tuhosta 600-luvulla paremmin kuin muu kaupunki, joten sen pahimmat vauriot syntyivät vasta tuolloin. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Venetsialaiset
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Miksi venetsialaiset purkivat amfiteatterin 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Venetsialaiset]] purkivat amfiteatteria tarkoituksella 1600-luvun [[turkkilaissodissa]], jotta [[osmanit]] eivät voisi linnoittautua sen muureihin. Rakennus oli selvinnyt Salonan tuhosta 600-luvulla paremmin kuin muu kaupunki, joten sen pahimmat vauriot syntyivät vasta tuolloin. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: turkkilaissodissa
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Miksi venetsialaiset purkivat amfiteatterin 1600-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Venetsialaiset]] purkivat amfiteatteria tarkoituksella 1600-luvun [[turkkilaissodissa]], jotta [[osmanit]] eivät voisi linnoittautua sen muureihin. Rakennus oli selvinnyt Salonan tuhosta 600-luvulla paremmin kuin muu kaupunki, joten sen pahimmat vauriot syntyivät vasta tuolloin. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: osmanit
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Mikä on Diocletianuksen palatsi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Diocletianuksen palatsi]] on roomalaisen keisarin rakennuttama linnoitusmainen palatsi nykyisen [[Splitin]] keskustassa, ja keisarin kerrotaan viettäneen siellä eläkevuosiaan. Kun [[Salona]] tuhoutui 600-luvulla, asukkaat pakenivat palatsin muurien suojaan, ja siitä kehittyi nykyinen Split. Koko kaupunki yhden palatsin sisällä, melkein kuin kyyhkyslakka.
+KYSYMYS: Kerro lisää: Diocletianuksen palatsi
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä on Diocletianuksen palatsi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Diocletianuksen palatsi]] on roomalaisen keisarin rakennuttama linnoitusmainen palatsi nykyisen [[Splitin]] keskustassa, ja keisarin kerrotaan viettäneen siellä eläkevuosiaan. Kun [[Salona]] tuhoutui 600-luvulla, asukkaat pakenivat palatsin muurien suojaan, ja siitä kehittyi nykyinen Split. Koko kaupunki yhden palatsin sisällä, melkein kuin kyyhkyslakka.
+KYSYMYS: Kerro lisää: Splitin
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Mikä on Diocletianuksen palatsi?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä kysymys. [[Diocletianuksen palatsi]] on roomalaisen keisarin rakennuttama linnoitusmainen palatsi nykyisen [[Splitin]] keskustassa, ja keisarin kerrotaan viettäneen siellä eläkevuosiaan. Kun [[Salona]] tuhoutui 600-luvulla, asukkaat pakenivat palatsin muurien suojaan, ja siitä kehittyi nykyinen Split. Koko kaupunki yhden palatsin sisällä, melkein kuin kyyhkyslakka.
+KYSYMYS: Kerro lisää: Salona
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Mitä gladiaattoriottelut olivat roomalaisessa yhteiskunnassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Gladiaattoriottelut]] olivat roomalaisten julkista viihdettä: koulutetut taistelijat esiintyivät areenalla yleisön katsellessa. Niitä järjestettiin eri puolilla [[Rooman]] valtakuntaa amfiteattereissa, [[Salona]] mukaan lukien, ja Salonassa ottelut jatkuivat 400-luvulle asti, kunnes ne kiellettiin. Tuolloin lait ja tavat olivat toiset kuin nykyään, ja asiasta on kulunut yli tuhat vuotta. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Gladiaattoriottelut
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mitä gladiaattoriottelut olivat roomalaisessa yhteiskunnassa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Gladiaattoriottelut]] olivat roomalaisten julkista viihdettä: koulutetut taistelijat esiintyivät areenalla yleisön katsellessa. Niitä järjestettiin eri puolilla [[Rooman]] valtakuntaa amfiteattereissa, [[Salona]] mukaan lukien, ja Salonassa ottelut jatkuivat 400-luvulle asti, kunnes ne kiellettiin. Tuolloin lait ja tavat olivat toiset kuin nykyään, ja asiasta on kulunut yli tuhat vuotta. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Rooman
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Keitä avaarit olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Avaarit]] olivat Keski-Aasian aroilta Eurooppaan 500-luvun puolivälin jälkeen saapunut hevosratsastajakansa, joka asettui [[Pannonian]] alueelle Tonavan varrelle. Avaarit ja [[slaavit]] valtasivat ja tuhosivat Salonan 600-luvulla, minkä jälkeen kaupungin asukkaat pakenivat Diocletianuksen palatsin suojaan. Tapahtumasta on kulunut yli tuhat vuotta, ja Euroopan kartta on muuttunut sen jälkeen moneen kertaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Avaarit
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Keitä avaarit olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Avaarit]] olivat Keski-Aasian aroilta Eurooppaan 500-luvun puolivälin jälkeen saapunut hevosratsastajakansa, joka asettui [[Pannonian]] alueelle Tonavan varrelle. Avaarit ja [[slaavit]] valtasivat ja tuhosivat Salonan 600-luvulla, minkä jälkeen kaupungin asukkaat pakenivat Diocletianuksen palatsin suojaan. Tapahtumasta on kulunut yli tuhat vuotta, ja Euroopan kartta on muuttunut sen jälkeen moneen kertaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pannonian
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+AIEMPI KYSYMYS: Keitä avaarit olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Avaarit]] olivat Keski-Aasian aroilta Eurooppaan 500-luvun puolivälin jälkeen saapunut hevosratsastajakansa, joka asettui [[Pannonian]] alueelle Tonavan varrelle. Avaarit ja [[slaavit]] valtasivat ja tuhosivat Salonan 600-luvulla, minkä jälkeen kaupungin asukkaat pakenivat Diocletianuksen palatsin suojaan. Tapahtumasta on kulunut yli tuhat vuotta, ja Euroopan kartta on muuttunut sen jälkeen moneen kertaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: slaavit
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Minä vuonna osmanit valtasivat Čačvinan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Osmanit]] valtasivat [[Čačvinan]] linnan vuonna 1513. Linna kuului sen jälkeen [[Hertsegovinan sandžakin]] osana osmanien hallintaan vuoteen 1718 asti, jolloin alue siirtyi [[Venetsian]] Dalmatiaan. Aika monta isäntää yhdellä linnalla.
+KYSYMYS: Kerro lisää: Osmanit
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Minä vuonna osmanit valtasivat Čačvinan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Osmanit]] valtasivat [[Čačvinan]] linnan vuonna 1513. Linna kuului sen jälkeen [[Hertsegovinan sandžakin]] osana osmanien hallintaan vuoteen 1718 asti, jolloin alue siirtyi [[Venetsian]] Dalmatiaan. Aika monta isäntää yhdellä linnalla.
+KYSYMYS: Kerro lisää: Čačvinan
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Minä vuonna osmanit valtasivat Čačvinan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Osmanit]] valtasivat [[Čačvinan]] linnan vuonna 1513. Linna kuului sen jälkeen [[Hertsegovinan sandžakin]] osana osmanien hallintaan vuoteen 1718 asti, jolloin alue siirtyi [[Venetsian]] Dalmatiaan. Aika monta isäntää yhdellä linnalla.
+KYSYMYS: Kerro lisää: Hertsegovinan sandžakin
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Minä vuonna osmanit valtasivat Čačvinan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Osmanit]] valtasivat [[Čačvinan]] linnan vuonna 1513. Linna kuului sen jälkeen [[Hertsegovinan sandžakin]] osana osmanien hallintaan vuoteen 1718 asti, jolloin alue siirtyi [[Venetsian]] Dalmatiaan. Aika monta isäntää yhdellä linnalla.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Kuka purki linnan ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä tiedän puoliksi. [[Čačvinan]] linna purettiin kokonaan vuonna 1808, [[Ranskan]] vallan aikana, [[Napoleonin]] sotien aikoihin. En ole varma, kuka tarkalleen purkamisen määräsi. Linna oli autioitunut jo 1700-luvun puolivälissä, ennen purkamista. Ja minä kun luulin linnojen olevan ikuisia.
+KYSYMYS: Kerro lisää: Ranskan
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Kuka purki linnan ja minä vuonna?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä tiedän puoliksi. [[Čačvinan]] linna purettiin kokonaan vuonna 1808, [[Ranskan]] vallan aikana, [[Napoleonin]] sotien aikoihin. En ole varma, kuka tarkalleen purkamisen määräsi. Linna oli autioitunut jo 1700-luvun puolivälissä, ennen purkamista. Ja minä kun luulin linnojen olevan ikuisia.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Mitä Dinaridit ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Dinaridit]] ovat vuoristo Balkanin luoteisosassa, [[Adrianmeren]] itärannikon suuntaisesti Sloveniasta Albaniaan, ja ne erottavat rannikon sisämaasta. Čačvinan linna sijaitsi 705 metrin korkeudessa vuoriston solassa, jossa se vartioi kauppareittiä rannikon [[Dalmatian]] ja Bosnian välillä. Vuoret ovat kyyhkyn kauhu, aina pitää lentää yli.
+KYSYMYS: Kerro lisää: Dinaridit
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mitä Dinaridit ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Dinaridit]] ovat vuoristo Balkanin luoteisosassa, [[Adrianmeren]] itärannikon suuntaisesti Sloveniasta Albaniaan, ja ne erottavat rannikon sisämaasta. Čačvinan linna sijaitsi 705 metrin korkeudessa vuoriston solassa, jossa se vartioi kauppareittiä rannikon [[Dalmatian]] ja Bosnian välillä. Vuoret ovat kyyhkyn kauhu, aina pitää lentää yli.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Mitä Dinaridit ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Dinaridit]] ovat vuoristo Balkanin luoteisosassa, [[Adrianmeren]] itärannikon suuntaisesti Sloveniasta Albaniaan, ja ne erottavat rannikon sisämaasta. Čačvinan linna sijaitsi 705 metrin korkeudessa vuoriston solassa, jossa se vartioi kauppareittiä rannikon [[Dalmatian]] ja Bosnian välillä. Vuoret ovat kyyhkyn kauhu, aina pitää lentää yli.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Mikä on sandžakki?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Sandžakki]] oli [[osmanien]] hallinnon aluejaon yksikkö: suurempien maakuntien osa, jota hallitsi nimitetty virkamies. Čačvina kuului vuosina 1513–1718 Hertsegovinan sandžakkiin, ja sen jälkeen alue siirtyi Venetsian Dalmatiaan. Byrokratiaa, mut tarkkaa.
+KYSYMYS: Kerro lisää: Sandžakki
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mikä on sandžakki?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Sandžakki]] oli [[osmanien]] hallinnon aluejaon yksikkö: suurempien maakuntien osa, jota hallitsi nimitetty virkamies. Čačvina kuului vuosina 1513–1718 Hertsegovinan sandžakkiin, ja sen jälkeen alue siirtyi Venetsian Dalmatiaan. Byrokratiaa, mut tarkkaa.
+KYSYMYS: Kerro lisää: osmanien
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Keitä Frankopanit olivat?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Frankopanit]] olivat merkittävä kroatialainen aatelissuku, jonka valta oli keskiajalla vahvimmillaan [[Krkin]] saarella ja Kvarnerin alueella. Suku kertoi polveutuvansa roomalaisesta Frangipani-suvusta. [[Čačvinan]] linna siirtyi heidän haltuunsa vuonna 1435, mutta omistus vaihtui pian uudelleen. Roomalaisia sukuja, kuten minunkin.
+KYSYMYS: Kerro lisää: Frankopanit
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+AIEMPI KYSYMYS: Keitä Frankopanit olivat?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Frankopanit]] olivat merkittävä kroatialainen aatelissuku, jonka valta oli keskiajalla vahvimmillaan [[Krkin]] saarella ja Kvarnerin alueella. Suku kertoi polveutuvansa roomalaisesta Frangipani-suvusta. [[Čačvinan]] linna siirtyi heidän haltuunsa vuonna 1435, mutta omistus vaihtui pian uudelleen. Roomalaisia sukuja, kuten minunkin.
+KYSYMYS: Kerro lisää: Krkin

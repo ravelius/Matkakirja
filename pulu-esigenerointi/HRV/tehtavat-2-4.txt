@@ -1,0 +1,1104 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Keksinnöt: Portaat, joita soittaa meri] 2005 — Zadarin rantaan rakennettiin vuonna 2005 marmoriportaat, jotka laskeutuvat suoraan mereen. Portaiden alle on piilotettu kolmisenkymmentä eri mittaista putkea. Kun aalto työntyy portaiden alle, se painaa ilmaa putkiin ja soitin soi — matalat putket huokaavat pitkään ja lyhyet vastaavat korkeammalta. Sävelmää ei voi ennustaa, koska sen tekevät aallot: tyynellä säällä ääni on hiljainen huokaus, myrskyllä kokonainen soinnutus. Portailla istutaan kuuntelemassa auringonlaskua.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dalmatia on Kroatian rannikkoalue Adrianmeren itärannalla, ja siihen kuuluu pitkä rannikkokaista sekä sen edustan saaria. Alueen tunnettuja kaupunkeja ovat muun muassa [[Zadar]], [[Split]] ja [[Dubrovnik]]. Krkan kansallispuisto on Dalmatian keskiosassa lähellä Šibenikiä, ja samalla seudulla ovat myös [[Kornatin]] saaret. Alueen tarkkoja rajoja en ole varma sanomaan, koska ne ovat vaihdelleet historian kuluessa. Onpas sitä rantaviivaa, ylhäältä katsoen ihan loputtomiin.
+KYSYMYS: Kerro lisää: Zadar
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dalmatia on Kroatian rannikkoalue Adrianmeren itärannalla, ja siihen kuuluu pitkä rannikkokaista sekä sen edustan saaria. Alueen tunnettuja kaupunkeja ovat muun muassa [[Zadar]], [[Split]] ja [[Dubrovnik]]. Krkan kansallispuisto on Dalmatian keskiosassa lähellä Šibenikiä, ja samalla seudulla ovat myös [[Kornatin]] saaret. Alueen tarkkoja rajoja en ole varma sanomaan, koska ne ovat vaihdelleet historian kuluessa. Onpas sitä rantaviivaa, ylhäältä katsoen ihan loputtomiin.
+KYSYMYS: Kerro lisää: Split
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik] Kalkkikivinen kaupunki Adrianmeren rannalla oli satojen vuosien ajan oma pieni tasavaltansa: sillä oli oma laivasto, omat lait ja tapa selvitä naapureiden välissä sopimalla eikä sotimalla.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dalmatia on Kroatian rannikkoalue Adrianmeren itärannalla, ja siihen kuuluu pitkä rannikkokaista sekä sen edustan saaria. Alueen tunnettuja kaupunkeja ovat muun muassa [[Zadar]], [[Split]] ja [[Dubrovnik]]. Krkan kansallispuisto on Dalmatian keskiosassa lähellä Šibenikiä, ja samalla seudulla ovat myös [[Kornatin]] saaret. Alueen tarkkoja rajoja en ole varma sanomaan, koska ne ovat vaihdelleet historian kuluessa. Onpas sitä rantaviivaa, ylhäältä katsoen ihan loputtomiin.
+KYSYMYS: Kerro lisää: Dubrovnik
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dalmatia on Kroatian rannikkoalue Adrianmeren itärannalla, ja siihen kuuluu pitkä rannikkokaista sekä sen edustan saaria. Alueen tunnettuja kaupunkeja ovat muun muassa [[Zadar]], [[Split]] ja [[Dubrovnik]]. Krkan kansallispuisto on Dalmatian keskiosassa lähellä Šibenikiä, ja samalla seudulla ovat myös [[Kornatin]] saaret. Alueen tarkkoja rajoja en ole varma sanomaan, koska ne ovat vaihdelleet historian kuluessa. Onpas sitä rantaviivaa, ylhäältä katsoen ihan loputtomiin.
+KYSYMYS: Kerro lisää: Kornatin
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Minkä saaren nimestä Kornatin saariston nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+No niin. Kornatin saariston nimi tulee sen suurimmasta saaresta, Kornatista, ja saariston nimi on suurimman saaren nimen monikko. Saaristo sijaitsee Pohjois-Dalmatiassa [[Zadarista]] etelään ja [[Šibenikistä]] länteen, ja se koostuu 89 saaresta noin 320 neliökilometrin merialueella. Se on yksi Välimeren tiheimpiä saaristoja. Saaret ovat enimmäkseen paljasta [[karstikalkkikiveä]], jonka jyrkät valkoiset kalliot nousevat suoraan merestä, ja alue on suosittu [[purjehtijoiden]] ja sukeltajien kohde. Ylhäältä katsottuna se on varmaan ihan sirpaleinen näky.
+KYSYMYS: Kerro lisää: Zadarista
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Minkä saaren nimestä Kornatin saariston nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+No niin. Kornatin saariston nimi tulee sen suurimmasta saaresta, Kornatista, ja saariston nimi on suurimman saaren nimen monikko. Saaristo sijaitsee Pohjois-Dalmatiassa [[Zadarista]] etelään ja [[Šibenikistä]] länteen, ja se koostuu 89 saaresta noin 320 neliökilometrin merialueella. Se on yksi Välimeren tiheimpiä saaristoja. Saaret ovat enimmäkseen paljasta [[karstikalkkikiveä]], jonka jyrkät valkoiset kalliot nousevat suoraan merestä, ja alue on suosittu [[purjehtijoiden]] ja sukeltajien kohde. Ylhäältä katsottuna se on varmaan ihan sirpaleinen näky.
+KYSYMYS: Kerro lisää: Šibenikistä
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Minkä saaren nimestä Kornatin saariston nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+No niin. Kornatin saariston nimi tulee sen suurimmasta saaresta, Kornatista, ja saariston nimi on suurimman saaren nimen monikko. Saaristo sijaitsee Pohjois-Dalmatiassa [[Zadarista]] etelään ja [[Šibenikistä]] länteen, ja se koostuu 89 saaresta noin 320 neliökilometrin merialueella. Se on yksi Välimeren tiheimpiä saaristoja. Saaret ovat enimmäkseen paljasta [[karstikalkkikiveä]], jonka jyrkät valkoiset kalliot nousevat suoraan merestä, ja alue on suosittu [[purjehtijoiden]] ja sukeltajien kohde. Ylhäältä katsottuna se on varmaan ihan sirpaleinen näky.
+KYSYMYS: Kerro lisää: karstikalkkikiveä
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+AIEMPI KYSYMYS: Minkä saaren nimestä Kornatin saariston nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+No niin. Kornatin saariston nimi tulee sen suurimmasta saaresta, Kornatista, ja saariston nimi on suurimman saaren nimen monikko. Saaristo sijaitsee Pohjois-Dalmatiassa [[Zadarista]] etelään ja [[Šibenikistä]] länteen, ja se koostuu 89 saaresta noin 320 neliökilometrin merialueella. Se on yksi Välimeren tiheimpiä saaristoja. Saaret ovat enimmäkseen paljasta [[karstikalkkikiveä]], jonka jyrkät valkoiset kalliot nousevat suoraan merestä, ja alue on suosittu [[purjehtijoiden]] ja sukeltajien kohde. Ylhäältä katsottuna se on varmaan ihan sirpaleinen näky.
+KYSYMYS: Kerro lisää: purjehtijoiden
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Mistä kunnasta kansallispuistoa hallinnoidaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. En oo ihan varma tästä. Puiston hallinto on uskoakseni [[Murterin]] saarella, mutta tämä kannattaa tarkistaa. Saariston maanomistajat ovat enimmäkseen peräisin Murterin ja [[Dugi Otokin]] saarilta, ja heidän käytössään on suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Murterin asukkaat ostivat saaret 1800-luvun lopulla, ja osasta perustettiin kansallispuisto vuonna 1980. Hallintokuvioissa kyyhky ei aina pysy mukana.
+KYSYMYS: Kerro lisää: Murterin
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Mistä kunnasta kansallispuistoa hallinnoidaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. En oo ihan varma tästä. Puiston hallinto on uskoakseni [[Murterin]] saarella, mutta tämä kannattaa tarkistaa. Saariston maanomistajat ovat enimmäkseen peräisin Murterin ja [[Dugi Otokin]] saarilta, ja heidän käytössään on suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Murterin asukkaat ostivat saaret 1800-luvun lopulla, ja osasta perustettiin kansallispuisto vuonna 1980. Hallintokuvioissa kyyhky ei aina pysy mukana.
+KYSYMYS: Kerro lisää: Dugi Otokin
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Mikä Toreta-torni on ja miltä ajalta se on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Toreta on Kornatin saarella oleva pieni torni, joka on luultavasti 500-luvulta eli [[myöhäisantiikin]] ajalta. Saarella on lisäksi jäänteitä [[roomalaisista huviloista]], joten sitä on käytetty jo antiikin aikana. Tornin tarkasta käyttötarkoituksesta en ole varma.
+
+Puolitoista tuhatta vuotta ja torni on yhä siellä, sitä täytyy arvostaa. Omakin sukuni on kantanut kirjeitä Rooman ajoista asti.
+KYSYMYS: Kerro lisää: myöhäisantiikin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+AIEMPI KYSYMYS: Mikä Toreta-torni on ja miltä ajalta se on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Toreta on Kornatin saarella oleva pieni torni, joka on luultavasti 500-luvulta eli [[myöhäisantiikin]] ajalta. Saarella on lisäksi jäänteitä [[roomalaisista huviloista]], joten sitä on käytetty jo antiikin aikana. Tornin tarkasta käyttötarkoituksesta en ole varma.
+
+Puolitoista tuhatta vuotta ja torni on yhä siellä, sitä täytyy arvostaa. Omakin sukuni on kantanut kirjeitä Rooman ajoista asti.
+KYSYMYS: Kerro lisää: roomalaisista huviloista
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Millainen maisema Kornatin saarilla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Saaret ovat enimmäkseen paljasta ja kasvitonta [[kalkkikiveä]], ja jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Tuulet ja aallot ovat kuluttaneet maiseman, ja ilmasta kuvattuna se näyttää kartalta revityiltä palasilta. Alue on suosittu [[purjehtijoiden]] ja [[sukeltajien]] kohde, ja asutus rajoittuu suojaisten poukamien yksinkertaisiin majoihin. Kyllä siitä kelpaa lentää ohi.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+AIEMPI KYSYMYS: Millainen maisema Kornatin saarilla on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Saaret ovat enimmäkseen paljasta ja kasvitonta [[kalkkikiveä]], ja jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Tuulet ja aallot ovat kuluttaneet maiseman, ja ilmasta kuvattuna se näyttää kartalta revityiltä palasilta. Alue on suosittu [[purjehtijoiden]] ja [[sukeltajien]] kohde, ja asutus rajoittuu suojaisten poukamien yksinkertaisiin majoihin. Kyllä siitä kelpaa lentää ohi.
+KYSYMYS: Kerro lisää: sukeltajien
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Kuinka suuri Lonjsko polje on neliökilometreinä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lonjsko polje on pinta-alaltaan 505,6 neliökilometriä. Sitä pidetään Kroatian suurimpana suojeltuna kosteikkona, ja lähteiden mukaan se on suurin myös koko [[Tonavan]] vesistöalueella. Alue ulottuu [[Sava-joen]] varrella [[Sisakin]] itäpuolelta Nova Gradiškan länsipuolelle, ja se on luonnonpuisto, jonka hallinto perustettiin vuonna 1998.
+
+Yli viisisataa neliökilometriä märkää maata, ja minä vain lennän sen yli kuivin jaloin. Siinä on kyyhkyn etu.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Vihreä ranta savannin keskellä] Tšad-järvi sijaitsee Sahelissa, kapealla vyöhykkeellä Saharan autiomaan ja eteläisemmän Afrikan kosteiden savannien välissä, ja sen rannat vaihtelevat rajusti vuodenaikojen mukaan. Sadekauden jälkeen vesi tulvii laajoille ruovikko- ja heinäalueille, ja kun tulva vetäytyy, paljastuneelle mudalle kylvetään nopeasti kasvavia satoja – tätä kutsutaan vetäytymisviljelyksi. Samat rantaniityt toimivat myös karjapaimenten laidunmaina: karja käy juomassa aivan veden äärellä ja laiduntaa tulvan jättämällä vihreällä kaistaleella, joka pysyy rehevänä silloinkin, kun ympäröivä savanni on kuivunut ruskeaksi.
+- [Boa Vista — kaupunkilehti / Lavrado ja Roraima-vuori: Lavrado — savanniaukio keskellä sademetsää] Lavrado on Amazonin altaan pohjoisosan laaja savanni, joka poikkeaa jyrkästi ympäröivästä sademetsästä: matalaa ruohikkoa, hajanaisia puuryhmiä ja lähes täysin tasaista maastoa. Suurin osa koko Guayanan savannivyöhykkeestä — noin 43 000 neliökilometriä — sijaitsee juuri Roraiman osavaltiossa, ja loput levittäytyvät naapurimaihin Guyanaan ja Venezuelaan. Silmiinpistävin piirre ovat lukemattomat termiittikeot: eräät termiittilajit pystyttävät jopa parimetrisiä kekoja, jotka toimivat hedelmällisyyssaarekkeina köyhässä savannimaassa ja näkyvät maisemassa säännöllisinä täplinä kilometrien päähän.
+AIEMPI KYSYMYS: Kuinka suuri Lonjsko polje on neliökilometreinä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lonjsko polje on pinta-alaltaan 505,6 neliökilometriä. Sitä pidetään Kroatian suurimpana suojeltuna kosteikkona, ja lähteiden mukaan se on suurin myös koko [[Tonavan]] vesistöalueella. Alue ulottuu [[Sava-joen]] varrella [[Sisakin]] itäpuolelta Nova Gradiškan länsipuolelle, ja se on luonnonpuisto, jonka hallinto perustettiin vuonna 1998.
+
+Yli viisisataa neliökilometriä märkää maata, ja minä vain lennän sen yli kuivin jaloin. Siinä on kyyhkyn etu.
+KYSYMYS: Kerro lisää: Sava-joen
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+AIEMPI KYSYMYS: Kuinka suuri Lonjsko polje on neliökilometreinä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lonjsko polje on pinta-alaltaan 505,6 neliökilometriä. Sitä pidetään Kroatian suurimpana suojeltuna kosteikkona, ja lähteiden mukaan se on suurin myös koko [[Tonavan]] vesistöalueella. Alue ulottuu [[Sava-joen]] varrella [[Sisakin]] itäpuolelta Nova Gradiškan länsipuolelle, ja se on luonnonpuisto, jonka hallinto perustettiin vuonna 1998.
+
+Yli viisisataa neliökilometriä märkää maata, ja minä vain lennän sen yli kuivin jaloin. Siinä on kyyhkyn etu.
+KYSYMYS: Kerro lisää: Sisakin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+AIEMPI KYSYMYS: Minkä joen varrella kosteikko sijaitsee?
+AIEMPI VASTAUS (Livia):
+Just niin. Kosteikko sijaitsee [[Sava-joen]] varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle. Nimi tulee alajuoksulla virtaavasta [[Lonja-joesta]], ja alueeseen kuuluu myös Veliki Strug -joen varsi. Sava on [[Tonavan]] sivujoki. Onpas siinä sitä vettä.
+KYSYMYS: Kerro lisää: Lonja-joesta
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+AIEMPI KYSYMYS: Milloin luonnonpuiston hallinto perustettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: hallinto perustettiin vuonna 1998, ja sen toimipaikka on [[Krapjen]] kylä. Alue on luonnonpuisto, kroatiaksi park prirode, ja Euroopan unionin [[lintudirektiivin]] kriteerien mukaan se on lisäksi tärkeä lintualue. Hallinnon vuosiluvun minä muistan, kylän oikeaa lausuntaa en niinkään.
+KYSYMYS: Kerro lisää: Krapjen
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vanuatu — maalehti / Luonto: Lintu, joka ei haudo munaansa] Vanuatun megapodi elää vain tässä maassa, alankometsissä, ja sen kaksi tyyppiyksilöä kerättiin Efatelta heinä- ja syyskuussa 1877. Megapodit eivät haudo munia ruumiinlämmöllä vaan hautaavat ne: osa suvun linnuista kasaa mätänevästä kasvimassasta kekoja, joiden lämpöä koiras säätää lisäämällä ja poistamalla lehtiä, osa käyttää maan omaa lämpöä ja osa auringon kuumentamaa hiekkaa. Muna on poikkeuksellisen keltuaisvaltainen, ja poikanen kuoriutuu kypsempänä kuin yksikään toinen lintu: silmät auki, siipisulat valmiina ja juoksukykyisenä samana päivänä.
+AIEMPI KYSYMYS: Milloin luonnonpuiston hallinto perustettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: hallinto perustettiin vuonna 1998, ja sen toimipaikka on [[Krapjen]] kylä. Alue on luonnonpuisto, kroatiaksi park prirode, ja Euroopan unionin [[lintudirektiivin]] kriteerien mukaan se on lisäksi tärkeä lintualue. Hallinnon vuosiluvun minä muistan, kylän oikeaa lausuntaa en niinkään.
+KYSYMYS: Kerro lisää: lintudirektiivin
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko: Vuosittainen tulva-aalto] Pantanal on maailman suurin trooppinen kosteikkoalue, 140 000-195 000 neliökilometriä Brasiliassa, Boliviassa ja Paraguayssa - suurin osa siitä Mato Grosso do Sulissa. Sadekaudella Paraguayn joen vedenpinta nousee kahdesta viiteen metriin ja tulva etenee hitaasti loivan maaston vuoksi, kunnes noin 80 prosenttia koko tasangosta on veden alla. Kuivalla kaudella vesi vetäytyy ja paljastaa laajoja ruohotasankoja, joilla laiduntavat muun muassa pampashirvet (Ozotoceros bezoarticus) - arka, isokorvainen hirvieläin, joka väistyy piiloon korkeaan heinikkoon. Tämä vuosittainen tulvarytmi tekee Pantanalista yhden maailman eläinrikkaimmista elinympäristöistä.
+- [Los Angeles — kaupunkilehti / Historia: Tulva siirsi koko kaupungin] Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden 1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä prosenttia edellisen vuosikymmenen rakentamisesta oli tapahtunut plazan eteläpuolella.
+AIEMPI KYSYMYS: Miksi Lonjsko polje on tärkeä lintualue?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Euroopan unionin [[lintudirektiivin]] kriteerien mukaan puisto täyttää tärkeän lintualueen ehdot. Kosteikko on laaja [[tulva-alue]], jossa vesi, ruohikko ja metsät tarjoavat linnuille ruokaa ja pesäpaikkoja; yksittäisistä lajeista en ole varma, joten jätän luettelon antamatta. Alue kuuluu [[Tonavan]] vesistöalueeseen. Linnut tietävät hyvän pysähdyspaikan, ja sen minä kyllä ymmärrän.
+KYSYMYS: Kerro lisää: tulva-alue
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä luonnolle?
+AIEMPI VASTAUS (Livia):
+Mmm— kosteikko on alue, jossa vesi pysyy maan pinnalla tai lähellä sitä pitkiä aikoja, ja siksi se tarjoaa elinympäristön monille kasveille, linnuille ja kaloille. Kosteikot hillitsevät [[tulvia]], koska ne varastoivat vettä, ja ne puhdistavat sitä pidättämällä ravinteita. Lisäksi turpeen ja kasvillisuuden kerrokset sitovat [[hiiltä]]. Lonjsko polje on hyvä esimerkki, sillä se on laaja suojeltu kosteikko [[Sava-joen]] varrella. Märkää mutta tärkeää, sanoisin minä.
+KYSYMYS: Kerro lisää: tulvia
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä luonnolle?
+AIEMPI VASTAUS (Livia):
+Mmm— kosteikko on alue, jossa vesi pysyy maan pinnalla tai lähellä sitä pitkiä aikoja, ja siksi se tarjoaa elinympäristön monille kasveille, linnuille ja kaloille. Kosteikot hillitsevät [[tulvia]], koska ne varastoivat vettä, ja ne puhdistavat sitä pidättämällä ravinteita. Lisäksi turpeen ja kasvillisuuden kerrokset sitovat [[hiiltä]]. Lonjsko polje on hyvä esimerkki, sillä se on laaja suojeltu kosteikko [[Sava-joen]] varrella. Märkää mutta tärkeää, sanoisin minä.
+KYSYMYS: Kerro lisää: hiiltä
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Hiri: Ankerias joka lähetti miehen merelle] Boeran kylän kalastaja Edai Siabo oli tarinan mukaan palaamassa kalasta, kun suuri ankerias tarttui häneen ja veti hänet veden alle. Ankerias oli meren henki. Se palautti Edain pinnalle ja käski hänen rakentaa suuren lagatoin, täyttää sen keittopadoilla ja purjehtia länteen kaakkoistuulen mukana, jota motun kielessä kutsutaan nimellä laurabada. Edai totteli. Hän rakensi ensimmäisen hiri-lagatoin ja antoi sille nimeksi Bogebada, merikotka, lastasi sen vaimonsa tekemillä padoilla ja purjehti ystävineen Papuanlahden vesille. Näin alkoi kauppapurjehdusten perinne, joka kesti sukupolvien yli.
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Kuinka monta lintulajia Kopački ritillä pesii?
+AIEMPI VASTAUS (Livia):
+Ai se. Kopački ritillä pesii noin 260 lintulajia, muun muassa [[merikotka]], [[valkoinen haikara]] ja [[mustahaikara]]. Vesissä elää lisäksi noin 40 kalalajia. Puisto on luonnonpuisto Itä-Kroatiassa [[Tonavan]] ja Dravan yhtymäkohdan luoteispuolella, ja sitä pidetään yhtenä Euroopan tärkeimmistä koskemattomina säilyneistä kosteikoista.
+
+Noin kaksisataakuusikymmentä lintulajia samalla alueella, ja minä olen tottunut jakamaan katon korkeintaan kolmen kanssa. Hurja naapurusto.
+KYSYMYS: Kerro lisää: merikotka
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Naru joka odottaa haikaraa] 1. maaliskuuta — Baba Martan eli maaliskuun mummon päivänä 1. maaliskuuta bulgarialaiset antavat toisilleen martenitsoja: punaisesta ja valkoisesta langasta kierrettyjä rannenauhoja tai tupsuja. Punainen kuvaa verta ja voimaa, valkoinen puhtautta ja onnea, ja koru puetaan ranteeseen tai vaatteeseen suojaksi arvaamatonta kevätsäätä vastaan. Martenitsaa kannetaan niin kauan, kunnes näkee ensimmäisen muuttolinnun, useimmiten haikaran, tai kukkivan puun — silloin naru riisutaan ja sidotaan puun oksaan. Perinteen juuret ulottuvat kauas kristinuskoa varhaisempaan aikaan, ja maaliskuun alussa lähes jokaisen bulgarialaisen ranteessa näkyy oma punavalkoinen solmu.
+AIEMPI KYSYMYS: Kuinka monta lintulajia Kopački ritillä pesii?
+AIEMPI VASTAUS (Livia):
+Ai se. Kopački ritillä pesii noin 260 lintulajia, muun muassa [[merikotka]], [[valkoinen haikara]] ja [[mustahaikara]]. Vesissä elää lisäksi noin 40 kalalajia. Puisto on luonnonpuisto Itä-Kroatiassa [[Tonavan]] ja Dravan yhtymäkohdan luoteispuolella, ja sitä pidetään yhtenä Euroopan tärkeimmistä koskemattomina säilyneistä kosteikoista.
+
+Noin kaksisataakuusikymmentä lintulajia samalla alueella, ja minä olen tottunut jakamaan katon korkeintaan kolmen kanssa. Hurja naapurusto.
+KYSYMYS: Kerro lisää: valkoinen haikara
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+AIEMPI KYSYMYS: Kuinka monta lintulajia Kopački ritillä pesii?
+AIEMPI VASTAUS (Livia):
+Ai se. Kopački ritillä pesii noin 260 lintulajia, muun muassa [[merikotka]], [[valkoinen haikara]] ja [[mustahaikara]]. Vesissä elää lisäksi noin 40 kalalajia. Puisto on luonnonpuisto Itä-Kroatiassa [[Tonavan]] ja Dravan yhtymäkohdan luoteispuolella, ja sitä pidetään yhtenä Euroopan tärkeimmistä koskemattomina säilyneistä kosteikoista.
+
+Noin kaksisataakuusikymmentä lintulajia samalla alueella, ja minä olen tottunut jakamaan katon korkeintaan kolmen kanssa. Hurja naapurusto.
+KYSYMYS: Kerro lisää: mustahaikara
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Kuinka monta lintulajia Kopački ritillä pesii?
+AIEMPI VASTAUS (Livia):
+Ai se. Kopački ritillä pesii noin 260 lintulajia, muun muassa [[merikotka]], [[valkoinen haikara]] ja [[mustahaikara]]. Vesissä elää lisäksi noin 40 kalalajia. Puisto on luonnonpuisto Itä-Kroatiassa [[Tonavan]] ja Dravan yhtymäkohdan luoteispuolella, ja sitä pidetään yhtenä Euroopan tärkeimmistä koskemattomina säilyneistä kosteikoista.
+
+Noin kaksisataakuusikymmentä lintulajia samalla alueella, ja minä olen tottunut jakamaan katon korkeintaan kolmen kanssa. Hurja naapurusto.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+AIEMPI KYSYMYS: Minkä jokien yhtymäkohdan luoteispuolella luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Luonnonpuisto on [[Dravan]] ja [[Tonavan]] yhtymäkohdan luoteispuolella Itä-Kroatiassa, lähellä Serbian rajaa. Se sijaitsee Bilje- ja Kneževi Vinogradi -kuntien alueella, ja lähellä on [[Osijek]], josta puistoon on hyvät yhteydet. Alueella on runsaasti Tonavan sivuvesiä ja lampia. Joet kohtaavat siinä ylhäältä katsoen ihan kauniisti.
+KYSYMYS: Kerro lisää: Dravan
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+AIEMPI KYSYMYS: Minkä jokien yhtymäkohdan luoteispuolella luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Luonnonpuisto on [[Dravan]] ja [[Tonavan]] yhtymäkohdan luoteispuolella Itä-Kroatiassa, lähellä Serbian rajaa. Se sijaitsee Bilje- ja Kneževi Vinogradi -kuntien alueella, ja lähellä on [[Osijek]], josta puistoon on hyvät yhteydet. Alueella on runsaasti Tonavan sivuvesiä ja lampia. Joet kohtaavat siinä ylhäältä katsoen ihan kauniisti.
+KYSYMYS: Kerro lisää: Osijek
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+AIEMPI KYSYMYS: Miten Kopački ritille voi tutustua retkellä?
+AIEMPI VASTAUS (Livia):
+No jopas. Kävijät tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan. [[Osijekin]] läheisyys ja hyvät yhteydet tuovat alueelle paljon kävijöitä. Kosteikon vesillä ja lammilla näkee erityisesti lintuja, sillä siellä pesii noin 260 lajia, ja vesistö on osa [[Tonavan]] sivuvesiä. Itse valitsisin siivet, mutta ne eivät kuulu vuokravälineisiin.
+KYSYMYS: Kerro lisää: Osijekin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko: Vuosittainen tulva-aalto] Pantanal on maailman suurin trooppinen kosteikkoalue, 140 000-195 000 neliökilometriä Brasiliassa, Boliviassa ja Paraguayssa - suurin osa siitä Mato Grosso do Sulissa. Sadekaudella Paraguayn joen vedenpinta nousee kahdesta viiteen metriin ja tulva etenee hitaasti loivan maaston vuoksi, kunnes noin 80 prosenttia koko tasangosta on veden alla. Kuivalla kaudella vesi vetäytyy ja paljastaa laajoja ruohotasankoja, joilla laiduntavat muun muassa pampashirvet (Ozotoceros bezoarticus) - arka, isokorvainen hirvieläin, joka väistyy piiloon korkeaan heinikkoon. Tämä vuosittainen tulvarytmi tekee Pantanalista yhden maailman eläinrikkaimmista elinympäristöistä.
+- [Los Angeles — kaupunkilehti / Historia: Tulva siirsi koko kaupungin] Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden 1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä prosenttia edellisen vuosikymmenen rakentamisesta oli tapahtunut plazan eteläpuolella.
+AIEMPI KYSYMYS: Miksi Tonavan varrella on paljon sivuvesiä ja lampia?
+AIEMPI VASTAUS (Livia):
+Kato. Suuri joki muodostaa tulvatasangoille mutkia, sivu-uomia ja lampia, kun vedenkorkeus vaihtelee ja joki muuttaa uomaansa. Kopački ritin kaltainen [[tulva-alue]] syntyy erityisesti paikkaan, jossa [[Drava]] yhtyy Tonavaan, ja tulvavesi täyttää matalat painanteet. Tarkkoja syitä juuri tälle alueelle en ole varma sanomaan.
+
+Joki ei tykkää pysyä uomassaan, ja minä ymmärrän sitä täysin. Minäkään en pysy samalla katolla kovin kauan.
+KYSYMYS: Kerro lisää: tulva-alue
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Slovenia — maalehti / Ruoka: Yli 400-vuotias köynnös] 1657 — Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin ja annetaan kaupungin lahjoiksi vieraille.
+AIEMPI KYSYMYS: Miksi Tonavan varrella on paljon sivuvesiä ja lampia?
+AIEMPI VASTAUS (Livia):
+Kato. Suuri joki muodostaa tulvatasangoille mutkia, sivu-uomia ja lampia, kun vedenkorkeus vaihtelee ja joki muuttaa uomaansa. Kopački ritin kaltainen [[tulva-alue]] syntyy erityisesti paikkaan, jossa [[Drava]] yhtyy Tonavaan, ja tulvavesi täyttää matalat painanteet. Tarkkoja syitä juuri tälle alueelle en ole varma sanomaan.
+
+Joki ei tykkää pysyä uomassaan, ja minä ymmärrän sitä täysin. Minäkään en pysy samalla katolla kovin kauan.
+KYSYMYS: Kerro lisää: Drava
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Millainen lintu mustahaikara on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Mustahaikara on suuri, arka ja yksinäinen lintu, joka pesii vanhoissa metsissä kosteikkojen ja jokien lähellä. Se on [[muuttolintu]], joka talvehtii Afrikassa, ja sitä tavataan pesimälintuna myös Suomessa, joskin harvinaisena. Sukulaisensa [[valkoinen haikara]] on seuranhakuisempi ja pesii usein ihmisasutuksen lähellä. Itse olen harmaa, ja ylpeä siitä.
+KYSYMYS: Kerro lisää: muuttolintu
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+AIEMPI KYSYMYS: Mikä saari on Adrianmeren väkirikkain?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren väkirikkain saari on Krk, jossa asukkaita oli vuonna 2021 yhteensä 19 916. Krk on [[Cresin]] kanssa Adrianmeren suurin saari mittaustavasta riippuen, joten kumpikaan ei yksiselitteisesti ole toista suurempi. Saari sijaitsee Pohjois-Adrianmerellä [[Kvarnerin]] lahdella lähellä [[Rijekaa]].
+
+Melkein kaksikymmentätuhatta asukasta tarkoittaa varmasti myös paljon leivonnaisia, ja yksi kroatialainen pullalaji on fritule. En tosin tiedä, tehdäänkö niitä juuri Krkillä.
+KYSYMYS: Kerro lisää: Cresin
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+AIEMPI KYSYMYS: Mikä saari on Adrianmeren väkirikkain?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren väkirikkain saari on Krk, jossa asukkaita oli vuonna 2021 yhteensä 19 916. Krk on [[Cresin]] kanssa Adrianmeren suurin saari mittaustavasta riippuen, joten kumpikaan ei yksiselitteisesti ole toista suurempi. Saari sijaitsee Pohjois-Adrianmerellä [[Kvarnerin]] lahdella lähellä [[Rijekaa]].
+
+Melkein kaksikymmentätuhatta asukasta tarkoittaa varmasti myös paljon leivonnaisia, ja yksi kroatialainen pullalaji on fritule. En tosin tiedä, tehdäänkö niitä juuri Krkillä.
+KYSYMYS: Kerro lisää: Kvarnerin
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+AIEMPI KYSYMYS: Mikä saari on Adrianmeren väkirikkain?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Adrianmeren väkirikkain saari on Krk, jossa asukkaita oli vuonna 2021 yhteensä 19 916. Krk on [[Cresin]] kanssa Adrianmeren suurin saari mittaustavasta riippuen, joten kumpikaan ei yksiselitteisesti ole toista suurempi. Saari sijaitsee Pohjois-Adrianmerellä [[Kvarnerin]] lahdella lähellä [[Rijekaa]].
+
+Melkein kaksikymmentätuhatta asukasta tarkoittaa varmasti myös paljon leivonnaisia, ja yksi kroatialainen pullalaji on fritule. En tosin tiedä, tehdäänkö niitä juuri Krkillä.
+KYSYMYS: Kerro lisää: Rijekaa
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Minä vuonna silta mantereelle valmistui?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Saaren pohjoispäätä mantereeseen yhdistävä silta valmistui heinäkuussa 1980. Krk on [[Adrianmeren]] saari [[Kvarnerin]] lahdella lähellä [[Rijekaa]], ja silta tekee siitä helposti tavoitettavan. Ei paha kyyhkyltä, kuukausikin meni oikein.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Löytöretki: Plymouth 1768 — hiililaiva lähtee Tyynellemerelle] 26.8.1768 — Laiturilla seisoo ruukku, jossa kasvaa elävä taimi. Sen vieressä on kasvipuristimia, lasipurkkeja ja verkkohäkkejä — laatikoita, joita sotalaivaan ei yleensä kanneta. Ne kuuluvat 25-vuotiaalle Joseph Banksille, joka kustansi omasta pussistaan seitsemän seuralaisensa paikat; mukana ovat ruotsalainen Daniel Solander ja turkulaissyntyinen Herman Spöring. Kansimies ottaa viimeisen katseen Plymouthiin ennen matkaa, jonka pituutta kukaan ei osaa luvata. Alus on entinen Whitbyn hiililaiva Earl of Pembroke: laivasto osti sen keväällä, nimesi His Majesty’s Bark Endeavouriksi ja rakensi ruumaan kolmannen kannen. Luutnantti James Cook, 39-vuotias, vie kahdeksantoista kuukauden muonat 94 he…
+- [Firenze — kohdekartta / Kohdekartta: Uffizi] 1560–1581 Uffizi ei ole rakennettu museoksi vaan virastotaloksi. Nimi tarkoittaa italiaksi yksinkertaisesti "virastoja": Cosimo I halusi kaupungin hallinnon toimistot yhteen taloon, ja Giorgio Vasari alkoi rakentaa niitä vuonna 1560. Tuloksena on pitkä kapea U, jonka avoin sisäpiha johtaa Signorian aukiolta suoraan Arnon rannalle. Medicit alkoivat säilyttää talon ylimmässä kerroksessa omaa taidekokoelmaansa, jota sai käydä katsomassa pyynnöstä jo 1500-luvun lopulla. Yleisölle museo avattiin vuonna 1769. Kokoelma pysyi Firenzessä yhden ihmisen ansiosta: suvun viimeinen jäsen Anna Maria Luisa de' Medici testamenttasi kaiken kaupungille ehdolla, ettei mitään saa koskaan viedä sieltä pois. Koko…
+AIEMPI KYSYMYS: Mikä Curicum oli ja mitä siellä on löydetty?
+AIEMPI VASTAUS (Livia):
+Ai tota. Curicum oli nykyisen Krkin kaupungin kohdalla sijainnut roomalainen kaupunki. Sieltä on löydetty [[Venuksen]] temppeli 1. vuosisadalta eaa., jonka kerrotaan olevan ainoa laatuaan tunnettu [[Adrianmeren]] itärannikolta. Saarella on asuttu keskeytyksettä [[neoliittiselta kaudelta]] asti, joten roomalaisaika on vain yksi kerros pitkässä historiassa. Venuksen lintu on perinteisesti kyyhkynen, joten minä tunnen oloni siellä kotoisaksi.
+KYSYMYS: Kerro lisää: Venuksen
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+AIEMPI KYSYMYS: Mikä Curicum oli ja mitä siellä on löydetty?
+AIEMPI VASTAUS (Livia):
+Ai tota. Curicum oli nykyisen Krkin kaupungin kohdalla sijainnut roomalainen kaupunki. Sieltä on löydetty [[Venuksen]] temppeli 1. vuosisadalta eaa., jonka kerrotaan olevan ainoa laatuaan tunnettu [[Adrianmeren]] itärannikolta. Saarella on asuttu keskeytyksettä [[neoliittiselta kaudelta]] asti, joten roomalaisaika on vain yksi kerros pitkässä historiassa. Venuksen lintu on perinteisesti kyyhkynen, joten minä tunnen oloni siellä kotoisaksi.
+KYSYMYS: Kerro lisää: neoliittiselta kaudelta
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+AIEMPI KYSYMYS: Keitä Frankopanit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Frankopanit olivat Kroatian mahtavimpiin kuuluva aatelissuku. Krkin kreivit ottivat nimen Frankopan vuonna 1430, ja he kuuluivat Kroatian mahtavimpiin [[aatelissukuihin]]. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa [[Venetsiaan]]. Suvun vaiheista en osaa kertoa tämän enempää.
+
+Seitsemän vuosisataa Venetsian kanssa, ja minun sukuni on kantanut kirjeitä sinne ja takaisin. Mut en tiedä, onko Frankopanien viestejä koskaan ollut meikäläisten laukussa.
+KYSYMYS: Kerro lisää: aatelissukuihin
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+- [Venetsia — kohdekartta / Kohdekartta: Markuksen hevoset] Isoisäsi näki ne siellä, missä ne olivat seisoneet kuusisataa vuotta: basilikan parvekkeella, katunäkymän yläpuolella. Sitä ennen ne olivat seisoneet Konstantinopolin hippodromilla, ja vuonna 1204 ne vietiin sieltä pois. Kuljetusta varten päät katkaistiin irti, ja samana vuonna kaulaan lisättiin pannat peittämään saumat — ne pannat ovat siinä yhä. Venetsiaan hevoset pystytettiin 1254, ja Petrarca kävi ihailemassa niitä. Vuonna 1797 Napoleon vei ne Pariisiin ja ne nostettiin Carrousel-riemukaareen; kahdeksantoista vuotta myöhemmin ne tuotiin takaisin, ja työn teki kapteeni nimeltä Dumaresq, jonka Itävallan keisari palkitsi kultaisella nuuskarasialla, kannessa timanteista tehdyt nimikirjaimet…
+AIEMPI KYSYMYS: Keitä Frankopanit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Frankopanit olivat Kroatian mahtavimpiin kuuluva aatelissuku. Krkin kreivit ottivat nimen Frankopan vuonna 1430, ja he kuuluivat Kroatian mahtavimpiin [[aatelissukuihin]]. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa [[Venetsiaan]]. Suvun vaiheista en osaa kertoa tämän enempää.
+
+Seitsemän vuosisataa Venetsian kanssa, ja minun sukuni on kantanut kirjeitä sinne ja takaisin. Mut en tiedä, onko Frankopanien viestejä koskaan ollut meikäläisten laukussa.
+KYSYMYS: Kerro lisää: Venetsiaan
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+AIEMPI KYSYMYS: Kuinka kauan Krkin saarella on asuttu?
+AIEMPI VASTAUS (Livia):
+No niin. Krkin saarella on asuttu keskeytyksettä [[neoliittiselta kaudelta]] eli nuoremmalta kivikaudelta alkaen. Roomalaisaikana saarella oli [[Curicum]], jonka Venuksen temppeli on 1. vuosisadalta eaa., ja myöhemmin saaren historia oli seitsemän vuosisataa tiiviisti sidoksissa [[Venetsiaan]]. No olipas pitkä historia, ja kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Curicum
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Quinta da Boa Vista] 1808–1889 Alue oli aikanaan jesuiittojen maatila. Kun jesuiitat karkotettiin siirtomaasta 1759, maat jaettiin, ja 1800-luvun alussa osa niistä kuului varakkaalle portugalilaiselle kauppiaalle Elias António Lopesille. Hän rakensi noin 1803 kukkulan päälle kartanon, jonka ikkunoista näkyi Guanabaran lahti — siitä nimi Boa Vista, "hyvä näköala". Kun prinssiregentti João VI saapui hoveineen 1808, Lopes lahjoitti tilan hänelle. Talo kunnostettiin 1816–1821 englantilaisen arkkitehdin John Johnstonin johdolla hoville sopivaksi, ja sen eteen pystytettiin koristeportti, jonka Northumberlandin herttua oli lähettänyt lahjaksi Englannista. Rakennus sai nimen Paço de São Cristóvão, ja siinä asui Portuga…
+AIEMPI KYSYMYS: Mikä on Kroatian mantereesta kaukaisin asuttu saari?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Tän minä tiedän. Kroatian mantereesta kaukaisin asuttu saari on [[Vis]], joka sijaitsee [[Adrianmeren]] avovesillä kaukana rannikosta. Saaren pinta-ala on noin 90 neliökilometriä, ja sen korkein kohta on 587 metrin korkuinen [[Hum]]. Asukkaita siellä oli vuonna 2021 yhteensä 3 313, ja pääelinkeinoja ovat viininviljely, kalastus ja matkailu. Ei paha, kun vielä muistin luvutkin.
+
+Kyyhkyn silmin tuollainen yksinäinen saari on paras mahdollinen laskeutumispaikka: ei ketään kiusaamassa, vain meri joka suuntaan. Kunhan joku muistaisi tuoda sinne pullaa.
+KYSYMYS: Kerro lisää: Vis
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä on Kroatian mantereesta kaukaisin asuttu saari?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Tän minä tiedän. Kroatian mantereesta kaukaisin asuttu saari on [[Vis]], joka sijaitsee [[Adrianmeren]] avovesillä kaukana rannikosta. Saaren pinta-ala on noin 90 neliökilometriä, ja sen korkein kohta on 587 metrin korkuinen [[Hum]]. Asukkaita siellä oli vuonna 2021 yhteensä 3 313, ja pääelinkeinoja ovat viininviljely, kalastus ja matkailu. Ei paha, kun vielä muistin luvutkin.
+
+Kyyhkyn silmin tuollainen yksinäinen saari on paras mahdollinen laskeutumispaikka: ei ketään kiusaamassa, vain meri joka suuntaan. Kunhan joku muistaisi tuoda sinne pullaa.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Delhi — kohdekartta / Kohdekartta: Humayunin mausoleumi] 1558 Keisarinna rakennutti puolisolleen haudan, jollaista Intiassa ei ollut nähty. Humayunin leski Bega Begum tilasi mausoleumin vuonna 1558 ja valitsi arkkitehdiksi Heratista tuodun Mirak Mirza Ghiyasin, jonka työtä jatkoi hänen poikansa Sayyid Muhammad. Esikuvana oli Timurin hauta Samarkandissa. Se oli Intian niemimaan ensimmäinen puutarhahauta: rakennus istuu charbaghin, neljään yhtä suureen osaan jaetun persialaisen paratiisipuutarhan, keskellä. Punaisen hiekkakiven ja valkoisen marmorin yhdistelmästä tuli Mughal-arkkitehtuurin tunnus, ja sarja huipentui seuraavalla vuosisadalla Agran Taj Mahaliin. Maailmanperintökohde mausoleumista tuli 1993. Rakennus on myös historian näyttämö: tänne …
+- [Geraldton — kaupunkilehti / Houtman Abrolhosin haaksirikko: Hummerileirit riutalla tänään] Houtman Abrolhos ei ole vain haaksirikkojen historiaa, vaan myös elävä työpaikka: saarilla toimii yhä kausiluonteisia kalastusleirejä, joissa sadat kalastajat asuvat maalis-kesäkuun pyyntikauden ajan mökeissä keskellä hiekkaa ja pensaikkoa. Leireissä pyydetään läntistä piikkihummeria, jonka saalis puretaan lopulta Geraldtonin satamaan. Samalla saaristo on yksi maailman tärkeimmistä merilintujen pesimäalueista, jossa pesii muun muassa yli miljoona paria kiitäjäliitoruokkeja, joten kalastus ja luonnonsuojelu on täytynyt sovittaa yhteen tarkoin säännöin. Vanhat kalastajamökit ja pinotut hummeripyydykset ovat osa saariston maisemaa jo vuosikymmenten takaa.
+AIEMPI KYSYMYS: Mikä on Kroatian mantereesta kaukaisin asuttu saari?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Tän minä tiedän. Kroatian mantereesta kaukaisin asuttu saari on [[Vis]], joka sijaitsee [[Adrianmeren]] avovesillä kaukana rannikosta. Saaren pinta-ala on noin 90 neliökilometriä, ja sen korkein kohta on 587 metrin korkuinen [[Hum]]. Asukkaita siellä oli vuonna 2021 yhteensä 3 313, ja pääelinkeinoja ovat viininviljely, kalastus ja matkailu. Ei paha, kun vielä muistin luvutkin.
+
+Kyyhkyn silmin tuollainen yksinäinen saari on paras mahdollinen laskeutumispaikka: ei ketään kiusaamassa, vain meri joka suuntaan. Kunhan joku muistaisi tuoda sinne pullaa.
+KYSYMYS: Kerro lisää: Hum
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+AIEMPI KYSYMYS: Kuka johti Itävallan laivastoa vuonna 1866?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tän minä muistan. Itävallan laivastoa johti vuonna 1866 amiraali [[Wilhelm von Tegetthoff]]. Hänen johtamansa laivasto kohtasi 20. heinäkuuta 1866 Lissan saaren edustalla suuremman [[Italian]] laivaston ja voitti sen. Taistelussa upposi italialainen alus [[Re d’Italia]]. Onpa siitä jo pitkä aika, ja hyvä niin.
+KYSYMYS: Kerro lisää: Wilhelm von Tegetthoff
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Murzuk — kaupunkilehti / Murzuk: Italian lippu nousee, ja jälleen laskee] Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Kuka johti Itävallan laivastoa vuonna 1866?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tän minä muistan. Itävallan laivastoa johti vuonna 1866 amiraali [[Wilhelm von Tegetthoff]]. Hänen johtamansa laivasto kohtasi 20. heinäkuuta 1866 Lissan saaren edustalla suuremman [[Italian]] laivaston ja voitti sen. Taistelussa upposi italialainen alus [[Re d’Italia]]. Onpa siitä jo pitkä aika, ja hyvä niin.
+KYSYMYS: Kerro lisää: Italian
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Kuka johti Itävallan laivastoa vuonna 1866?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joo, tän minä muistan. Itävallan laivastoa johti vuonna 1866 amiraali [[Wilhelm von Tegetthoff]]. Hänen johtamansa laivasto kohtasi 20. heinäkuuta 1866 Lissan saaren edustalla suuremman [[Italian]] laivaston ja voitti sen. Taistelussa upposi italialainen alus [[Re d’Italia]]. Onpa siitä jo pitkä aika, ja hyvä niin.
+KYSYMYS: Kerro lisää: Re d’Italia
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+AIEMPI KYSYMYS: Kuka perusti Issan siirtokunnan Visin saarelle?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Antiikki, hyvä kysymys. Issan siirtokunnan perusti saarelle Syrakusan tyranni [[Dionysios Vanhempi]] 300-luvulla eaa. [[Syrakusa]] oli yksi [[Sisilian]] kreikkalaisista kaupungeista, ja siirtokunta kuului sen toimintaan Adrianmerellä. Myöhemmin saari kuului Venetsian vallan päätyttyä Itävallalle vuodesta 1814, ja silloin sen nimi oli Lissa. Siinä oli aikamoinen aikajana yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Dionysios Vanhempi
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+AIEMPI KYSYMYS: Kuka perusti Issan siirtokunnan Visin saarelle?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Antiikki, hyvä kysymys. Issan siirtokunnan perusti saarelle Syrakusan tyranni [[Dionysios Vanhempi]] 300-luvulla eaa. [[Syrakusa]] oli yksi [[Sisilian]] kreikkalaisista kaupungeista, ja siirtokunta kuului sen toimintaan Adrianmerellä. Myöhemmin saari kuului Venetsian vallan päätyttyä Itävallalle vuodesta 1814, ja silloin sen nimi oli Lissa. Siinä oli aikamoinen aikajana yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Syrakusa
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+- [Tunisia — maalehti / Historia: Kapinallinen amiraali avasi tien Sisiliaan] 827–902 — Aghlabidit hallitsivat Ifriqiyaa vuosina 800–909 abbasidien nimellisenä vasallina, ja heidän pääkaupunkinsa oli Kairouan. Kesäkuussa 827 avautui tilaisuus: Sisilian bysanttilaisen laivaston komentaja Eufemios kapinoi keisari Mikael II:ta vastaan, hävisi ja pyysi aghlabideilta apua. Retkikunnan johtoon asetettiin oppinut tuomari Asad ibn al-Furat. Ensimmäinen hyökkäys Syrakusaan epäonnistui, mutta vuonna 831 valloitettiin Palermo, josta tuli uuden maakunnan pääkaupunki. Viimeinen suuri bysanttilaislinnake Taormina kaatui vasta 902 — valloitus kesti siis 75 vuotta.
+AIEMPI KYSYMYS: Kuka perusti Issan siirtokunnan Visin saarelle?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Antiikki, hyvä kysymys. Issan siirtokunnan perusti saarelle Syrakusan tyranni [[Dionysios Vanhempi]] 300-luvulla eaa. [[Syrakusa]] oli yksi [[Sisilian]] kreikkalaisista kaupungeista, ja siirtokunta kuului sen toimintaan Adrianmerellä. Myöhemmin saari kuului Venetsian vallan päätyttyä Itävallalle vuodesta 1814, ja silloin sen nimi oli Lissa. Siinä oli aikamoinen aikajana yhteen hengenvetoon.
+KYSYMYS: Kerro lisää: Sisilian
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+AIEMPI KYSYMYS: Mitä tapahtui Lissan edustalla heinäkuussa 1866?
+AIEMPI VASTAUS (Livia):
+Hmm, tämä on vakava asia. Heinäkuun 20. päivänä 1866 Lissan saaren pohjoispuolella käytiin meritaistelu, jossa Wilhelm von [[Tegetthoffin]] johtama Itävallan laivasto löi suuremman italialaisen laivaston. Italialaisten alus [[Re d’Italian]] upotettiin taistelussa. Sota oli osa [[Itävallan ja Preussin sotaa]], jonka rinnalla Italia pyrki saamaan lisää alueita, ja siitä on nyt yli sataviisikymmentä vuotta. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Tegetthoffin
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Murzuk — kaupunkilehti / Murzuk: Italian lippu nousee, ja jälleen laskee] Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Mitä tapahtui Lissan edustalla heinäkuussa 1866?
+AIEMPI VASTAUS (Livia):
+Hmm, tämä on vakava asia. Heinäkuun 20. päivänä 1866 Lissan saaren pohjoispuolella käytiin meritaistelu, jossa Wilhelm von [[Tegetthoffin]] johtama Itävallan laivasto löi suuremman italialaisen laivaston. Italialaisten alus [[Re d’Italian]] upotettiin taistelussa. Sota oli osa [[Itävallan ja Preussin sotaa]], jonka rinnalla Italia pyrki saamaan lisää alueita, ja siitä on nyt yli sataviisikymmentä vuotta. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Re d’Italian
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Mitä tapahtui Lissan edustalla heinäkuussa 1866?
+AIEMPI VASTAUS (Livia):
+Hmm, tämä on vakava asia. Heinäkuun 20. päivänä 1866 Lissan saaren pohjoispuolella käytiin meritaistelu, jossa Wilhelm von [[Tegetthoffin]] johtama Itävallan laivasto löi suuremman italialaisen laivaston. Italialaisten alus [[Re d’Italian]] upotettiin taistelussa. Sota oli osa [[Itävallan ja Preussin sotaa]], jonka rinnalla Italia pyrki saamaan lisää alueita, ja siitä on nyt yli sataviisikymmentä vuotta. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Itävallan ja Preussin sotaa
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Kroatia — maalehti / Ruoka: Viini joka kasvaa pystysuoralla rinteellä] nykyään — Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle on plavac mali, tumma ja pienimarjainen lajike, joka syntyi kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun alkuperänimityksensä.
+AIEMPI KYSYMYS: Mistä Visin asukkaat saavat nykyään elantonsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Selvä juttu. Visin pääelinkeinot ovat [[viininviljely]], [[kalastus]] ja [[matkailu]]. Saari sijaitsee Adrianmerellä, joten meri ja aurinko ovat sen tärkeimpiä voimavaroja. Asukkaita oli vuonna 2021 yhteensä 3 313. Kalastajien torilla on varmaan joka päivä jotain kiinnostavaa nähtävää, ainakin kyyhkyn mielestä.
+KYSYMYS: Kerro lisää: viininviljely
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zimbabwe — maalehti / Ruoka: Kalastus alkaa lampun sytyttämisestä] Kapenta eli matemba on pieni tanganjikansardiini, joka istutettiin Kariban tekojärveen ja on siitä asti ollut yksi maan tärkeimmistä ruoka-aineista. Kalastus käy yöllä lautoilta: lamppu tai led-valo houkuttelee parven pinnan alle, ja noin kuusimetrinen haavi nostetaan jopa neljänkymmenen metrin syvyydestä. Saalis kuivataan auringossa betonilaatalla tai verkolla, ja Sambesin laakson kuumuudessa siihen menee vuorokausi. Kuivattu kapenta paistetaan sipulin, tomaatin ja maapähkinäjauheen kanssa. Kupillinen riittää perheelle.
+AIEMPI KYSYMYS: Mistä Visin asukkaat saavat nykyään elantonsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Selvä juttu. Visin pääelinkeinot ovat [[viininviljely]], [[kalastus]] ja [[matkailu]]. Saari sijaitsee Adrianmerellä, joten meri ja aurinko ovat sen tärkeimpiä voimavaroja. Asukkaita oli vuonna 2021 yhteensä 3 313. Kalastajien torilla on varmaan joka päivä jotain kiinnostavaa nähtävää, ainakin kyyhkyn mielestä.
+KYSYMYS: Kerro lisää: kalastus
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+AIEMPI KYSYMYS: Mistä Visin asukkaat saavat nykyään elantonsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Selvä juttu. Visin pääelinkeinot ovat [[viininviljely]], [[kalastus]] ja [[matkailu]]. Saari sijaitsee Adrianmerellä, joten meri ja aurinko ovat sen tärkeimpiä voimavaroja. Asukkaita oli vuonna 2021 yhteensä 3 313. Kalastajien torilla on varmaan joka päivä jotain kiinnostavaa nähtävää, ainakin kyyhkyn mielestä.
+KYSYMYS: Kerro lisää: matkailu
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Minkä lempinimen Pag on saanut maisemansa vuoksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pagia kutsutaan kuun saareksi sen karun, kuunmaisen maiseman vuoksi. Saari on Pohjois-[[Adrianmeren]] saari ja [[Kroatian]] rannikon viidenneksi suurin, ja sen rantaviiva on 269 kilometriä pitkä. Pinta-ala on noin 284 neliökilometriä. Hyvä kysymys tuokin oli.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+AIEMPI KYSYMYS: Minkä lempinimen Pag on saanut maisemansa vuoksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pagia kutsutaan kuun saareksi sen karun, kuunmaisen maiseman vuoksi. Saari on Pohjois-[[Adrianmeren]] saari ja [[Kroatian]] rannikon viidenneksi suurin, ja sen rantaviiva on 269 kilometriä pitkä. Pinta-ala on noin 284 neliökilometriä. Hyvä kysymys tuokin oli.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Kuinka pitkä silta yhdistää saaren mantereeseen?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nyt muistan: Pagin eteläosan ja mantereen yhdistää 300 metrin pituinen [[kaarisilta]]. Silta kulkee [[Adrianmeren]] salmen yli ja tekee saaren tavoittamisesta helppoa autolla. Pag kuuluu muuten kahteen lääniin, mikä on [[Kroatian]] saarten joukossa poikkeuksellista. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: kaarisilta
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Historia: Kaikkien karttojen äiti] 1734 — Jesuiitta Pedro Murillo Velarde laati vuonna 1734 kartan, jota kutsutaan kaikkien Filippiinien karttojen äidiksi. Kaiverruksen teki tagalogilainen Nicolás de la Cruz Bagay, joka merkitsi nimensä viereen sanat "Indio Tagalo". Reunoilla on kaksitoista kuvaa: kaupunkien ja saarten karttoja sekä saarilla asuvia väkiä sangleyeistä aetoihin. Kuparilaatat vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää vedoksia ennen kuin metalli sulatettiin merikarttojen tarpeisiin. Alkuperäispainoksia tunnetaan alle viisikymmentä.
+AIEMPI KYSYMYS: Kuka kirjoitti ensimmäisen kroatian kieliopin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost minä osaan kertoo. Ensimmäisen kroatian kieliopin kirjoitti pagilainen [[jesuiitta]] [[Bartol Kašić]]. Hän oli kotoisin Pagin saarelta, joten saari on antanut [[kroatian kielen]] tutkimukselle suuren panoksen. Tarkkaa vuotta en tähän uskalla arvata, joten jätän sen pois. Eipä sitä kyyhkynen joka päivä pääse kielitieteestä puhumaan.
+KYSYMYS: Kerro lisää: jesuiitta
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+AIEMPI KYSYMYS: Kuka kirjoitti ensimmäisen kroatian kieliopin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost minä osaan kertoo. Ensimmäisen kroatian kieliopin kirjoitti pagilainen [[jesuiitta]] [[Bartol Kašić]]. Hän oli kotoisin Pagin saarelta, joten saari on antanut [[kroatian kielen]] tutkimukselle suuren panoksen. Tarkkaa vuotta en tähän uskalla arvata, joten jätän sen pois. Eipä sitä kyyhkynen joka päivä pääse kielitieteestä puhumaan.
+KYSYMYS: Kerro lisää: Bartol Kašić
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+AIEMPI KYSYMYS: Kuka kirjoitti ensimmäisen kroatian kieliopin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost minä osaan kertoo. Ensimmäisen kroatian kieliopin kirjoitti pagilainen [[jesuiitta]] [[Bartol Kašić]]. Hän oli kotoisin Pagin saarelta, joten saari on antanut [[kroatian kielen]] tutkimukselle suuren panoksen. Tarkkaa vuotta en tähän uskalla arvata, joten jätän sen pois. Eipä sitä kyyhkynen joka päivä pääse kielitieteestä puhumaan.
+KYSYMYS: Kerro lisää: kroatian kielen
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Kuinka kauan Pagilla on valmistettu suolaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tuota niin. Pagilla on valmistettu suolaa yli tuhat vuotta. [[Suolantuotanto]] liittyy myös [[Pagin kaupungin]] syntyyn, sillä suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Vanhin kirjallinen maininta saaren suolasta on vuodelta 999. Saari on siis ollut suolan tärkeä tuottaja jo keskiajalta lähtien.
+
+Suola on minulle sellainen asia, josta en tiedä muuta kuin että pullassa sitä on aina liian vähän. Mutta kyllä minä arvostan sitä, joka tuon kaiken on tuhat vuotta kauhonut.
+KYSYMYS: Kerro lisää: Suolantuotanto
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+AIEMPI KYSYMYS: Kuinka kauan Pagilla on valmistettu suolaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tuota niin. Pagilla on valmistettu suolaa yli tuhat vuotta. [[Suolantuotanto]] liittyy myös [[Pagin kaupungin]] syntyyn, sillä suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Vanhin kirjallinen maininta saaren suolasta on vuodelta 999. Saari on siis ollut suolan tärkeä tuottaja jo keskiajalta lähtien.
+
+Suola on minulle sellainen asia, josta en tiedä muuta kuin että pullassa sitä on aina liian vähän. Mutta kyllä minä arvostan sitä, joka tuon kaiken on tuhat vuotta kauhonut.
+KYSYMYS: Kerro lisää: Pagin kaupungin
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+AIEMPI KYSYMYS: Mitkä kaksi kaupunkia Pagin saarella on?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Pagin saarella on kaksi kaupunkia: [[Novalja]] ja saaren oma kaupunki, Pag. Saari kuuluu myös kahteen lääniin, mikä tekee siitä Kroatian saarten joukossa erikoisen. Eteläosan yhdistää mantereeseen [[Pagin sillaksi]] kutsuttava kaarisilta, joka on 300 metriä pitkä. Pitkälti tuossa se kaupunkikuva on.
+KYSYMYS: Kerro lisää: Novalja
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+AIEMPI KYSYMYS: Mitkä kaksi kaupunkia Pagin saarella on?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Pagin saarella on kaksi kaupunkia: [[Novalja]] ja saaren oma kaupunki, Pag. Saari kuuluu myös kahteen lääniin, mikä tekee siitä Kroatian saarten joukossa erikoisen. Eteläosan yhdistää mantereeseen [[Pagin sillaksi]] kutsuttava kaarisilta, joka on 300 metriä pitkä. Pitkälti tuossa se kaupunkikuva on.
+KYSYMYS: Kerro lisää: Pagin sillaksi
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kaupunkilehti / Ulan Bator] Mongolian pääkaupunki Tuul-joen laaksossa, neljän vuoren keskellä. Kerrostalojen ja lasitornien takana alkavat jurtta-alueet, joissa asuu kaksi kolmasosaa kaupunkilaisista.
+AIEMPI KYSYMYS: Kuinka monta saarta Lastovon saaristoon kuuluu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on helppo. Lastovon kunta ja saaristo koostuvat 46 saaresta, joiden yhteenlaskettu maa-ala on noin 53 neliökilometriä. Pääsaari sijaitsee 13 kilometriä [[Korčulan]] saaresta etelään, ja yksi Adrianmeren syrjäisimmistä asutuista saarista. Asukkaita on 792. Saaristo kuuluu [[Dubrovnik-Neretvan]] lääniin.
+
+Pienet saaret ovat kyyhkyn silmin kuin tarjottimelle kaadettuja muruja, ja niitä on tuolla ihan riittämiin. Saisi sieltä leivän vielä lisäksi.
+KYSYMYS: Kerro lisää: Korčulan
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+AIEMPI KYSYMYS: Kuinka monta saarta Lastovon saaristoon kuuluu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on helppo. Lastovon kunta ja saaristo koostuvat 46 saaresta, joiden yhteenlaskettu maa-ala on noin 53 neliökilometriä. Pääsaari sijaitsee 13 kilometriä [[Korčulan]] saaresta etelään, ja yksi Adrianmeren syrjäisimmistä asutuista saarista. Asukkaita on 792. Saaristo kuuluu [[Dubrovnik-Neretvan]] lääniin.
+
+Pienet saaret ovat kyyhkyn silmin kuin tarjottimelle kaadettuja muruja, ja niitä on tuolla ihan riittämiin. Saisi sieltä leivän vielä lisäksi.
+KYSYMYS: Kerro lisää: Dubrovnik-Neretvan
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+AIEMPI KYSYMYS: Minä vuonna saaristo julistettiin luonnonpuistoksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lastovon saaristo julistettiin [[luonnonpuistoksi]] vuonna 2006. Alue sijaitsee [[Adrianmeren]] syrjäisessä osassa Dubrovnik-Neretvan läänissä, ja siihen kuuluu 46 saarta. Pääkylä on rakennettu rinteille poispäin merestä, mikä on Adrianmerellä epätavallista. Ja siinä se, hyvä että muistin.
+KYSYMYS: Kerro lisää: luonnonpuistoksi
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Minä vuonna saaristo julistettiin luonnonpuistoksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lastovon saaristo julistettiin [[luonnonpuistoksi]] vuonna 2006. Alue sijaitsee [[Adrianmeren]] syrjäisessä osassa Dubrovnik-Neretvan läänissä, ja siihen kuuluu 46 saarta. Pääkylä on rakennettu rinteille poispäin merestä, mikä on Adrianmerellä epätavallista. Ja siinä se, hyvä että muistin.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Lahti joka kasvattaa ostereita ja suolaa] nykyään — Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä suolasta että lahden ostereista.
+AIEMPI KYSYMYS: Minkä tasavallan osa Lastovo oli 1200-luvulta lähtien?
+AIEMPI VASTAUS (Livia):
+Mmm— odotas vähän. Lastovo liittyi 1200-luvulla [[Dubrovnikin tasavaltaan]], jota kutsuttiin myös nimellä Ragusa. Saarella oli tasavallan alaisena tietynasteista itsehallintoa aina [[Napoleonin]] valtaukseen asti. Sen jälkeen saarta hallitsivat Itävalta ja myöhemmin Itävalta-Unkari. Pitkää historiaa on mahtunut kyyhkyn päähän tuohon.
+KYSYMYS: Kerro lisää: Dubrovnikin tasavaltaan
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Minkä tasavallan osa Lastovo oli 1200-luvulta lähtien?
+AIEMPI VASTAUS (Livia):
+Mmm— odotas vähän. Lastovo liittyi 1200-luvulla [[Dubrovnikin tasavaltaan]], jota kutsuttiin myös nimellä Ragusa. Saarella oli tasavallan alaisena tietynasteista itsehallintoa aina [[Napoleonin]] valtaukseen asti. Sen jälkeen saarta hallitsivat Itävalta ja myöhemmin Itävalta-Unkari. Pitkää historiaa on mahtunut kyyhkyn päähän tuohon.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Broome — kaupunkilehti / Broome: Merirosvo joka purjehti ohi] Englantilainen merirosvo ja tutkimusmatkailija William Dampier purjehti Broomen edustan ohi kahdesti, ensin vuonna 1688 laivalla Cygnet ja uudelleen 1699 laivalla HMS Roebuck, jonka mukaan lähellä sijaitseva Roebuck Bay on myöhemmin nimetty. Dampier kartoitti rannikkoa Shark Baystä La Grange Bayhin asti ja kirjasi muistiin kasveja, eläimiä ja tuulia tarkemmin kuin kukaan eurooppalainen ennen häntä, mutta ei koskaan noussut maihin juuri tällä kohdalla. Isoisän matkavuoteen 1873 mennessä Dampierin käynneistä oli kulunut jo lähes kaksi vuosisataa, eikä rannikolle ollut silti syntynyt yhtäkään eurooppalaista asutusta.
+AIEMPI KYSYMYS: Miksi venetsialaiset hyökkäsivät Lastovolle vuonna 1000?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on vakava asia. Vuonna 1000, siis yli tuhat vuotta sitten, venetsialaiset hyökkäsivät Lastovolle ja tuhosivat asutuksen, koska saarelaiset harjoittivat [[merirosvousta]]. Aikana, jolloin [[Adrianmeren]] kauppareitit olivat kiistan kohteena, tällaiset välienselvittelyt olivat tavallisia. Saari asutettiin myöhemmin uudelleen ja se on tänään rauhallinen paikka. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: merirosvousta
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+AIEMPI KYSYMYS: Mikä on Lastovon suurin kulttuuritapahtuma?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lastovon suurin kulttuuritapahtuma on [[Poklade-karnevaali]]. Karnevaali kuuluu yleisesti ennen [[paastoa]] vietettäviin juhliin, mutta Lastovon omista perinteistä en ole varma, joten en lähde arvailemaan yksityiskohtia. Saaristo kuuluu [[Dubrovnik-Neretvan]] lääniin. Olisinpa itse paikalla, jos pullaa olisi tarjolla.
+KYSYMYS: Kerro lisää: Poklade-karnevaali
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pakistan — maalehti / Kuvataide: Ihmemuseo ja paastoava prinssi] Lahoren museon urdunkielinen nimi on Ajaib Ghar, ihmetalo. Nykyinen rakennus avattiin 1894, ja sen suunnittelivat Bhai Ram Singh ja John Lockwood Kipling, joka oli museon ensimmäisiä hoitajia. Hänen poikansa Rudyard Kipling aloitti romaaninsa Kim tämän museon edustalta, vanhan Zamzama-tykin päältä. Vuoden 1948 jaossa kokoelma puolitettiin, ja noin 60 prosenttia jäi Lahoreen. Tunnetuin esine on gandharalainen kiviveistos paastoavasta Siddharthasta: kylkiluut, suonet ja kuopalle painuneet posket kertovat vuosista, jotka hän eli äärimmäisessä kieltäymyksessä ennen kuin hylkäsi sen tien.
+- [Churchill — kaupunkilehti / Jääkarhujen pääkaupunki: Karhut odottavat rannalla] Odotusaika on karhuille raskasta paastoa: ne eivät voi metsästää hylkeitä ennen kuin jää kantaa, joten energiaa on säästettävä. Monet karhut makaavat suurimman osan päivästä paikoillaan pensaikkojen tai kivien suojassa, liikkuen vain vähän ja hidastaen aineenvaihduntaansa lähes horrosta muistuttavalla tavalla. Emo saattaa levätä samalla alueella viikkoja poikastensa kanssa, sillä turha liikkuminen kuluttaisi rasvavarastoja, joiden varassa koko perhe on elänyt jo useita kuukausia. Kun ensimmäinen kunnollinen jää vihdoin muodostuu, karhut lähtevät liikkeelle lähes saman tien ja suuntaavat hylkeenpyyntiin.
+- [Venäjä — maalehti / Ruoka: Laskiaisviikolla syödään aurinkoja] Laskiaisviikolla — Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon suurta paastoa, ja sen ruoka on blini: ohut lettu, joka esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on vuoden mittaan loukannut.
+AIEMPI KYSYMYS: Mikä on Lastovon suurin kulttuuritapahtuma?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lastovon suurin kulttuuritapahtuma on [[Poklade-karnevaali]]. Karnevaali kuuluu yleisesti ennen [[paastoa]] vietettäviin juhliin, mutta Lastovon omista perinteistä en ole varma, joten en lähde arvailemaan yksityiskohtia. Saaristo kuuluu [[Dubrovnik-Neretvan]] lääniin. Olisinpa itse paikalla, jos pullaa olisi tarjolla.
+KYSYMYS: Kerro lisää: paastoa
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Kuinka monta laivatelakkaa kaupungissa oli vuonna 1868?
+AIEMPI VASTAUS (Livia):
+No niin, katotaas. Mali Lošinjin kulta-aikana vuonna 1868 kaupungissa oli yksitoista laivatelakkaa. Kaupungissa oli myös [[Adrianmeren]] suurin ja kehittynein kauppalaivasto, jopa [[Rijekan]], [[Triesten]] ja Venetsian edellä. Amerikkalaisen kirjailijan mukaan saarella asui 1930-luvulla neljäsataa merikapteenia.
+
+Yksitoista telakkaa on aika paljon puuta, mutta kyllä minä sellaista kyyhkynä katselisin mielelläni. Telakan ylle ei kai oikein pesää rakenneta, mutta kyllä siellä olisi mukava istuskella.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Kuinka monta laivatelakkaa kaupungissa oli vuonna 1868?
+AIEMPI VASTAUS (Livia):
+No niin, katotaas. Mali Lošinjin kulta-aikana vuonna 1868 kaupungissa oli yksitoista laivatelakkaa. Kaupungissa oli myös [[Adrianmeren]] suurin ja kehittynein kauppalaivasto, jopa [[Rijekan]], [[Triesten]] ja Venetsian edellä. Amerikkalaisen kirjailijan mukaan saarella asui 1930-luvulla neljäsataa merikapteenia.
+
+Yksitoista telakkaa on aika paljon puuta, mutta kyllä minä sellaista kyyhkynä katselisin mielelläni. Telakan ylle ei kai oikein pesää rakenneta, mutta kyllä siellä olisi mukava istuskella.
+KYSYMYS: Kerro lisää: Rijekan
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Kuinka monta laivatelakkaa kaupungissa oli vuonna 1868?
+AIEMPI VASTAUS (Livia):
+No niin, katotaas. Mali Lošinjin kulta-aikana vuonna 1868 kaupungissa oli yksitoista laivatelakkaa. Kaupungissa oli myös [[Adrianmeren]] suurin ja kehittynein kauppalaivasto, jopa [[Rijekan]], [[Triesten]] ja Venetsian edellä. Amerikkalaisen kirjailijan mukaan saarella asui 1930-luvulla neljäsataa merikapteenia.
+
+Yksitoista telakkaa on aika paljon puuta, mutta kyllä minä sellaista kyyhkynä katselisin mielelläni. Telakan ylle ei kai oikein pesää rakenneta, mutta kyllä siellä olisi mukava istuskella.
+KYSYMYS: Kerro lisää: Triesten
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Minä vuonna Mali Lošinj mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo. Mali Lošinj mainitaan ensimmäisen kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Kaupunki on kasvanut sen jälkeen merkittäväksi satamaksi [[Lošinjin]] saarella [[Kvarnerin]] alueella Länsi-Kroatiassa. Kaupungin asukasluku oli vuonna 2021 yhteensä 7 537. Ihan kunnioitettava ikä, sanon minä.
+KYSYMYS: Kerro lisää: Lošinjin

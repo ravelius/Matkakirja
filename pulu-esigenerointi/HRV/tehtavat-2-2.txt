@@ -1,0 +1,1065 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Kuka oli pyhä Yrjö?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tarina on vanha. Pyhä Yrjö oli perimätiedon mukaan [[Rooman armeijan]] sotilas, joka kuoli kristittynä marttyyrina noin 300-luvun alussa [[Diocletianuksen]] vainojen aikaan. Tarkkoja elämäntapahtumia ei tunneta varmasti, ja lähteet ovat osin legendaa. Tunnetuin kertomus, jossa Yrjö surmaa [[lohikäärmeen]], on peräisin keskiajalta eikä kuulu varhaisimpiin lähteisiin. Hänestä tuli monen maan ja kaupungin suojeluspyhimys, muun muassa Englannin. Siksi hänen nimeään kantavia kappeleita ja kirkkoja löytyy ympäri Eurooppaa, myös Biokovon huipulta. Ja minä kun luulin, että Yrjö oli vain ratsastaja.
+KYSYMYS: Kerro lisää: Rooman armeijan
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+AIEMPI KYSYMYS: Kuka oli pyhä Yrjö?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tarina on vanha. Pyhä Yrjö oli perimätiedon mukaan [[Rooman armeijan]] sotilas, joka kuoli kristittynä marttyyrina noin 300-luvun alussa [[Diocletianuksen]] vainojen aikaan. Tarkkoja elämäntapahtumia ei tunneta varmasti, ja lähteet ovat osin legendaa. Tunnetuin kertomus, jossa Yrjö surmaa [[lohikäärmeen]], on peräisin keskiajalta eikä kuulu varhaisimpiin lähteisiin. Hänestä tuli monen maan ja kaupungin suojeluspyhimys, muun muassa Englannin. Siksi hänen nimeään kantavia kappeleita ja kirkkoja löytyy ympäri Eurooppaa, myös Biokovon huipulta. Ja minä kun luulin, että Yrjö oli vain ratsastaja.
+KYSYMYS: Kerro lisää: Diocletianuksen
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin lohikäärme] 1972 Vanhan tarinan mukaan Wawelin kukkulan luolassa asui hirmuinen lohikäärme, joka vaati viikoittain karjaa ruoakseen - tai söi muuten ihmisiä. Vanhin kirjoitettu versio tarinasta on 1200-luvulta, piispa Kadłubekin kronikasta, jossa kuningas Krakuksen pojat viekoittelevat pedon syömään rikillä täytettyä eläimennahkaa. Suosituimmassa, vuonna 1597 kirjoitetussa tarinassa sankarina on suutari nimeltä Skuba. Hän täyttää lampaannahan tulikivellä, lohikäärme syö sen ja janoaa niin kovasti, että se juo koko Vistula-joen kuiviin ja lopulta halkeaa. Lohikäärmeen luola on yhä avoinna vierailijoille linnan alla, ja sen suulla seisoo pronssinen lohikäärmepatsas vuodelta 1972. Kuvanveistäjä Bronisław …
+- [Hanoi — kaupunkilehti / Hanoi: Nouseva lohikäärme] Vuonna 1010 Lý-suvun ensimmäinen hallitsija Lý Thái Tổ siirsi Đại Việtin pääkaupungin vanhalle Đại La -linnoituspaikalle Punaisenjoen rannalle. Hän kertoi nähneensä joelta nousevan lohikäärmeen ja antoi paikalle nimen Thăng Long, nouseva lohikäärme. Lohikäärme ei ollut oikku: kaupungin vanhemmissakin nimissä toistuu sana long, ja se viittaa joen kaarteeseen kaupungin ympärillä — mutkaan, joka nähtiin lohikäärmeen selkänä. Nimi on vaihtunut sen jälkeen monta kertaa, mutta lisänimi lentävän lohikäärmeen kaupunki on jäänyt.
+- [Barcelona — kaupunkilehti / Talot: Talon katolla nukkuu lohikäärme] Kutomotehtailija Josep Batlló palkkasi vuonna 1904 Antoni Gaudín muuttamaan tavallisen vuokratalon sellaiseksi, ettei toista samanlaista olisi. Katosta tuli kaareva ja se katettiin kaakeleilla kuin suomuilla: lohikäärmeen selkä. Katon vasemmassa reunassa nousee torni ja sen huipussa risti, jonka on tulkittu olevan pyhän Yrjänän keihäs lohikäärmeen selässä. Parvekkeet muistuttavat naamioita, ja talon lempinimi on luutalo.
+AIEMPI KYSYMYS: Kuka oli pyhä Yrjö?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tarina on vanha. Pyhä Yrjö oli perimätiedon mukaan [[Rooman armeijan]] sotilas, joka kuoli kristittynä marttyyrina noin 300-luvun alussa [[Diocletianuksen]] vainojen aikaan. Tarkkoja elämäntapahtumia ei tunneta varmasti, ja lähteet ovat osin legendaa. Tunnetuin kertomus, jossa Yrjö surmaa [[lohikäärmeen]], on peräisin keskiajalta eikä kuulu varhaisimpiin lähteisiin. Hänestä tuli monen maan ja kaupungin suojeluspyhimys, muun muassa Englannin. Siksi hänen nimeään kantavia kappeleita ja kirkkoja löytyy ympäri Eurooppaa, myös Biokovon huipulta. Ja minä kun luulin, että Yrjö oli vain ratsastaja.
+KYSYMYS: Kerro lisää: lohikäärmeen
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Pastrmajlija, Štipin uunileipä] perinneleipä — Pastrmajlija on makedonialainen leipäpiirakka, jonka pohja tehdään taikinasta ja päälle tulee lihaa, ja lisäksi juustoa ja kananmunaa. Nimi tulee sanasta pastrma, joka tarkoittaa suolattua ja kuivattua lampaanlihaa. Lihana käytetään myös savustettua tai kuivattua sikaa ja siipikarjaa, ja päälle voi tulla kaškavalia, sieniä tai tulisia marinoituja paprikoita. Leipä on yleensä soikea, ja lihakuutiot asetetaan sen päälle. Ruoka on suosittu Štipin, Velesin, Sveti Nikolen, Kratovon ja Negotinon kaupungeissa, ja Štipissä sille on omistettu vuotuinen Štipska Pastrmalijada -juhla.
+- [Sarajevo — kaupunkilehti / Talvikisat: Suomalainen voitti kaikki kolme matkaa] Talviolympialaiset pidettiin Sarajevossa 8.–19. helmikuuta 1984, ja kilpailut käytiin kaupunkia ympäröivillä vuorilla. Suomalainen Marja-Liisa Hämäläinen — nykyään Kirvesniemi — voitti kaikki kolme naisten henkilökohtaista hiihtomatkaa ja hiihti lisäksi viestistä pronssia. Isäntämaa Jugoslavia sai kisoista ensimmäisen talviolympiamitalinsa, kun Jure Franko tuli suurpujottelussa toiseksi.
+AIEMPI KYSYMYS: Miksi huipulla on lunta vielä huhtikuussa?
+AIEMPI VASTAUS (Livia):
+Kato, ihan yksinkertainen juttu. Ilma viilenee korkeuden mukana, yleensä noin puoli astetta jokaista sataa metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Kun [[Sveti Jure]] kohoaa 1762 metriin ja rannikko on lähellä merenpintaa, lämpötilaero rannan ja huipun välillä on useita asteita. Talvella huipulle kertyy lunta, jota keväinen aurinko ei ehdi sulattaa pois ennen huhtikuuta. Rannalla on lämmintä, ja [[viikunoita]] kasvaa, sillä [[Adrianmeri]] tasoittaa lämpötilaa. Vuoristo on myös tuulinen, mikä hidastaa sulamista. Jos kyyhky saisi päättää, lumi tulisi vasta joulukuussa.
+KYSYMYS: Kerro lisää: Sveti Jure
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+AIEMPI KYSYMYS: Miksi huipulla on lunta vielä huhtikuussa?
+AIEMPI VASTAUS (Livia):
+Kato, ihan yksinkertainen juttu. Ilma viilenee korkeuden mukana, yleensä noin puoli astetta jokaista sataa metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Kun [[Sveti Jure]] kohoaa 1762 metriin ja rannikko on lähellä merenpintaa, lämpötilaero rannan ja huipun välillä on useita asteita. Talvella huipulle kertyy lunta, jota keväinen aurinko ei ehdi sulattaa pois ennen huhtikuuta. Rannalla on lämmintä, ja [[viikunoita]] kasvaa, sillä [[Adrianmeri]] tasoittaa lämpötilaa. Vuoristo on myös tuulinen, mikä hidastaa sulamista. Jos kyyhky saisi päättää, lumi tulisi vasta joulukuussa.
+KYSYMYS: Kerro lisää: viikunoita
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+AIEMPI KYSYMYS: Miksi huipulla on lunta vielä huhtikuussa?
+AIEMPI VASTAUS (Livia):
+Kato, ihan yksinkertainen juttu. Ilma viilenee korkeuden mukana, yleensä noin puoli astetta jokaista sataa metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Kun [[Sveti Jure]] kohoaa 1762 metriin ja rannikko on lähellä merenpintaa, lämpötilaero rannan ja huipun välillä on useita asteita. Talvella huipulle kertyy lunta, jota keväinen aurinko ei ehdi sulattaa pois ennen huhtikuuta. Rannalla on lämmintä, ja [[viikunoita]] kasvaa, sillä [[Adrianmeri]] tasoittaa lämpötilaa. Vuoristo on myös tuulinen, mikä hidastaa sulamista. Jos kyyhky saisi päättää, lumi tulisi vasta joulukuussa.
+KYSYMYS: Kerro lisää: Adrianmeri
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Mikä on Adrianmeri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näkyy hyvin. Adrianmeri on Välimeren pohjoinen sivumeri, joka sijaitsee Italian niemimaan ja Balkanin niemimaan välissä. Sen itäranta on Kroatian, Slovenian, Montenegron ja Albanian puolella vuorista ja saaria täynnä, kun taas länsiranta Italian puolella on matalampi. [[Venetsia]] on sen pohjukassa. Selkeällä säällä [[Sveti Juren]] huipulta voi nähdä Italian rannikon toiselta puolelta. Sen rannoilla puhutaan eri kieliä, mutta samat tuulet puhaltavat kaikille.
+KYSYMYS: Kerro lisää: Venetsia
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Pastrmajlija, Štipin uunileipä] perinneleipä — Pastrmajlija on makedonialainen leipäpiirakka, jonka pohja tehdään taikinasta ja päälle tulee lihaa, ja lisäksi juustoa ja kananmunaa. Nimi tulee sanasta pastrma, joka tarkoittaa suolattua ja kuivattua lampaanlihaa. Lihana käytetään myös savustettua tai kuivattua sikaa ja siipikarjaa, ja päälle voi tulla kaškavalia, sieniä tai tulisia marinoituja paprikoita. Leipä on yleensä soikea, ja lihakuutiot asetetaan sen päälle. Ruoka on suosittu Štipin, Velesin, Sveti Nikolen, Kratovon ja Negotinon kaupungeissa, ja Štipissä sille on omistettu vuotuinen Štipska Pastrmalijada -juhla.
+AIEMPI KYSYMYS: Mikä on Adrianmeri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katolta se näkyy hyvin. Adrianmeri on Välimeren pohjoinen sivumeri, joka sijaitsee Italian niemimaan ja Balkanin niemimaan välissä. Sen itäranta on Kroatian, Slovenian, Montenegron ja Albanian puolella vuorista ja saaria täynnä, kun taas länsiranta Italian puolella on matalampi. [[Venetsia]] on sen pohjukassa. Selkeällä säällä [[Sveti Juren]] huipulta voi nähdä Italian rannikon toiselta puolelta. Sen rannoilla puhutaan eri kieliä, mutta samat tuulet puhaltavat kaikille.
+KYSYMYS: Kerro lisää: Sveti Juren
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kohdekartta / Kohdekartta: Eläintarha] 1883 Adelaiden eläintarha avattiin 23. toukokuuta 1883 ja on Australian toiseksi vanhin Melbournen jälkeen. Sen perusti Etelä-Australian kotouttamis- ja eläintieteellinen seura valtiolta saadulle maalle. Seurasta tuli kuninkaallinen 1937, kun Yrjö VI myönsi sille kuninkaallisen peruskirjan. Ensimmäinen johtaja oli R. E. Minchin 1882–1893; häntä seurasi poika A. C. Minchin 1893–1934 ja tätä pojanpoika R. R. L. Minchin 1935–1940 — kolme sukupolvea samassa virassa. Viisi rakennusta on suojeltu, niiden joukossa Frome Roadin pääportti ja vuoden 1900 norsutalo. Norsutalossa ei enää pidetä eläimiä, vaan siellä on opasteita; viimeinen norsu Samorn siirrettiin 1991 Monarton laajaan puistoon, jossa s…
+AIEMPI KYSYMYS: Miksi viikuna viihtyy Välimeren rannikolla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viikuna on kotoisin lämpimiltä seuduilta ja viihtyy siellä, missä talvet ovat leutoja ja kesät pitkiä ja aurinkoisia. Välimeren ilmasto sopii sille, sillä [[viikunapuu]] kestää kuivuutta ja pärjää kivisessäkin maassa, koska sen juuret etsivät vettä syvältä. Hieman viileämmällä seudulla puu voi paleltua talvella, ja siksi viikunoita ei Suomessa näe pihoilla, ellei niitä suojaa. Makarskan rannikolla ilmasto on kuitenkin sen verran suotuisa, että viikunoita kasvaa aivan meren äärellä, kun taas [[Biokovon]] huipulla on lunta huhtikuussa. Kyllä viikuna kelpaisi minullekin, mutta pulla on parempi.
+KYSYMYS: Kerro lisää: viikunapuu
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Mikä on bura?
+AIEMPI VASTAUS (Livia):
+Kato, tuo tuuli on tuttu. Bura on kylmä laskutuuli, joka syöksyy talvella [[Velebitin]] vuorijonon yli kohti Adrianmerta. Kylmä ilma virtaa vuoren rinnettä alas ja kiihtyy solissa niin kovaksi, että se voi kaataa kuormia ja pysäyttää lautat. Tuuli on myös tärkeä osa paikallista ruokakulttuuria: Pagin saarella bura kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumet ohuella suolakerroksella. Lampaiden maito saa siitä suolaisen ja yrttisen maun, joka siirtyy kovaan, pitkään kypsytettyyn juustoon nimeltä [[Paški sir]]. Kroatiassa se kuuluu arvostetuimpiin juustoihin. Tuuli sekä kaataa että ruokkii.
+KYSYMYS: Kerro lisää: Velebitin
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Sir John Guisen stadion] 1991 Stadion avattiin 1991 Etelä-Tyynenmeren kisoja varten, ja se nimettiin Sir John Guisen mukaan — hän oli Papua-Uuden-Guinean ensimmäinen kenraalikuvernööri. Katsomoon mahtui alun perin noin viisituhatta katsojaa. Stadion on osa laajempaa urheilupuistoa, jossa on lisäksi sisähalli, beachvolley- ja maahockeykenttä sekä uimahalli. Kun Papua-Uusi-Guinea valittiin 27. syyskuuta 2009 vuoden 2015 Tyynenmeren kisojen isännäksi, tämä stadion valittiin kisojen pääareenaksi. Remontissa vanha katsomo kunnostettiin ja laajennettiin, ja paikkaluku nousi viidestätuhannesta viiteentoistatuhanteen. Taloon tuli pelaajatilat, toimistot, pukuhuoneet, mediakeskus ja lääkintäpisteet, ja kentälle televisiokel…
+- [Port Moresby — kohdekartta / Kohdekartta: Sir Hubert Murrayn stadion] 1969 Stadion rakennettiin vuoden 1969 Etelä-Tyynenmeren kisoja varten Konedobuun täytemaalle, joka oli sitä ennen ollut mangroverantaa. Siellä juostiin kisojen yleisurheilu ja pidettiin avajaiset ja päättäjäiset. Nimi tulee Sir Hubert Murraysta, siirtomaan entisestä varakuvernööristä. Katsomoon mahtui noin viisitoistatuhatta katsojaa, ja kisojen jälkeen kentällä pelattiin australialaista jalkapalloa ja jalkapalloa sekä juostiin koulujen kisoja. Vuoden 2003 lopulla alkoi kolmivaiheinen uudistus, jonka hinnaksi arvioitiin 120 miljoonaa kinaa ja jonka piti nostaa paikkaluku 25 000:een. Suunnitelmissa oli FIFA-kelpoinen luonnonnurmikenttä ja kuusikerroksinen pääkatsomo, jossa olisi kahdeksan ra…
+AIEMPI KYSYMYS: Mikä on bura?
+AIEMPI VASTAUS (Livia):
+Kato, tuo tuuli on tuttu. Bura on kylmä laskutuuli, joka syöksyy talvella [[Velebitin]] vuorijonon yli kohti Adrianmerta. Kylmä ilma virtaa vuoren rinnettä alas ja kiihtyy solissa niin kovaksi, että se voi kaataa kuormia ja pysäyttää lautat. Tuuli on myös tärkeä osa paikallista ruokakulttuuria: Pagin saarella bura kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumet ohuella suolakerroksella. Lampaiden maito saa siitä suolaisen ja yrttisen maun, joka siirtyy kovaan, pitkään kypsytettyyn juustoon nimeltä [[Paški sir]]. Kroatiassa se kuuluu arvostetuimpiin juustoihin. Tuuli sekä kaataa että ruokkii.
+KYSYMYS: Kerro lisää: Paški sir
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Miksi vuorijono erottaa rannikon sisämaasta?
+AIEMPI VASTAUS (Livia):
+No niin, selitän. [[Velebit]] on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja se kohoaa meren ja sisämaan väliin niin, että yli pääseminen vaatii solia tai kiertämistä. Vuoriston kaksi puolta eroavat selvästi: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Ilmastokin eroaa, sillä jono estää merellisen ja sisämaan ilman vapaan sekoittumisen, ja talvella sen yli syöksyy [[bura]]-tuuli. Siksi rannikolla ja sisämaassa ovat omat luontonsa ja omat tapansa, eikä niitä ole aina yhdistänyt kuin tuuli. Kyyhky lentää muurin yli, mutta kuorma-auto joutuu odottamaan.
+KYSYMYS: Kerro lisää: Velebit
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+AIEMPI KYSYMYS: Miksi vuorijono erottaa rannikon sisämaasta?
+AIEMPI VASTAUS (Livia):
+No niin, selitän. [[Velebit]] on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja se kohoaa meren ja sisämaan väliin niin, että yli pääseminen vaatii solia tai kiertämistä. Vuoriston kaksi puolta eroavat selvästi: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Ilmastokin eroaa, sillä jono estää merellisen ja sisämaan ilman vapaan sekoittumisen, ja talvella sen yli syöksyy [[bura]]-tuuli. Siksi rannikolla ja sisämaassa ovat omat luontonsa ja omat tapansa, eikä niitä ole aina yhdistänyt kuin tuuli. Kyyhky lentää muurin yli, mutta kuorma-auto joutuu odottamaan.
+KYSYMYS: Kerro lisää: bura
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+AIEMPI KYSYMYS: Eläkö Euroopassa yhä ilveksiä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kyllä, ilveksiä elää Euroopassa yhä, vaikka ne ovat monin paikoin harvinaisia. [[Risnjakin]] metsissä ilveskanta hävisi aikanaan mutta palautettiin 1970-luvulla, ja laji elää siellä yhä. Espanjassa elää [[iberianilves]], jota laskettiin vuonna 2002 koko maailmassa alle sata yksilöä, ja se oli silloin uhanalaisin kissaeläin. Pelastus tehtiin hoitamalla kanikantoja, kasvattamalla ilveksiä tarhoissa ja rakentamalla teille alikulkuja. Nyt niitä on yli kaksituhatta, ja laji on siirretty luokasta äärimmäisen uhanalainen luokkaan vaarantunut. Yleisemmin ilveksiä on myös Pohjois-Euroopassa, mutta tarkkoja määriä en tiedä.
+
+Ilves on kissa, ja kissoille minulla on tietty varauksellinen suhde. Mutta kunnioitan sitä, joka ei hyökkää kuvaruudulta.
+KYSYMYS: Kerro lisää: Risnjakin
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+AIEMPI KYSYMYS: Eläkö Euroopassa yhä ilveksiä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kyllä, ilveksiä elää Euroopassa yhä, vaikka ne ovat monin paikoin harvinaisia. [[Risnjakin]] metsissä ilveskanta hävisi aikanaan mutta palautettiin 1970-luvulla, ja laji elää siellä yhä. Espanjassa elää [[iberianilves]], jota laskettiin vuonna 2002 koko maailmassa alle sata yksilöä, ja se oli silloin uhanalaisin kissaeläin. Pelastus tehtiin hoitamalla kanikantoja, kasvattamalla ilveksiä tarhoissa ja rakentamalla teille alikulkuja. Nyt niitä on yli kaksituhatta, ja laji on siirretty luokasta äärimmäisen uhanalainen luokkaan vaarantunut. Yleisemmin ilveksiä on myös Pohjois-Euroopassa, mutta tarkkoja määriä en tiedä.
+
+Ilves on kissa, ja kissoille minulla on tietty varauksellinen suhde. Mutta kunnioitan sitä, joka ei hyökkää kuvaruudulta.
+KYSYMYS: Kerro lisää: iberianilves
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+AIEMPI KYSYMYS: Miksi metsä muuttuu korkeuden mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Korkeus muuttaa kasvuolosuhteet. Ylöspäin mentäessä ilma viilenee, kasvukausi lyhenee, tuuli voimistuu ja maaperä ohenee, joten kaikki puulajit eivät pärjää kaikkialla. [[Risnjakin]] rinteillä metsä vaihtuu korkeuden mukaan [[pyökistä]] [[kuuseen]] ja lopulta [[vuorimännyn]] pensaikoksi. Pyökki viihtyy alempana, missä on leudompaa, kuusi kestää kylmempää, ja ylimpänä sitkeä vuorimänty kasvaa matalana pensaana, jota tuuli ja lumi eivät kaada. Tarkat rajat riippuvat paikasta, enkä ole varma luvuista tälle vuorelle. Kyllä sen huomaa ilman mittaria, kun lentää ylös.
+KYSYMYS: Kerro lisää: pyökistä
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+AIEMPI KYSYMYS: Miksi metsä muuttuu korkeuden mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Korkeus muuttaa kasvuolosuhteet. Ylöspäin mentäessä ilma viilenee, kasvukausi lyhenee, tuuli voimistuu ja maaperä ohenee, joten kaikki puulajit eivät pärjää kaikkialla. [[Risnjakin]] rinteillä metsä vaihtuu korkeuden mukaan [[pyökistä]] [[kuuseen]] ja lopulta [[vuorimännyn]] pensaikoksi. Pyökki viihtyy alempana, missä on leudompaa, kuusi kestää kylmempää, ja ylimpänä sitkeä vuorimänty kasvaa matalana pensaana, jota tuuli ja lumi eivät kaada. Tarkat rajat riippuvat paikasta, enkä ole varma luvuista tälle vuorelle. Kyllä sen huomaa ilman mittaria, kun lentää ylös.
+KYSYMYS: Kerro lisää: kuuseen
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Miksi metsä muuttuu korkeuden mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Korkeus muuttaa kasvuolosuhteet. Ylöspäin mentäessä ilma viilenee, kasvukausi lyhenee, tuuli voimistuu ja maaperä ohenee, joten kaikki puulajit eivät pärjää kaikkialla. [[Risnjakin]] rinteillä metsä vaihtuu korkeuden mukaan [[pyökistä]] [[kuuseen]] ja lopulta [[vuorimännyn]] pensaikoksi. Pyökki viihtyy alempana, missä on leudompaa, kuusi kestää kylmempää, ja ylimpänä sitkeä vuorimänty kasvaa matalana pensaana, jota tuuli ja lumi eivät kaada. Tarkat rajat riippuvat paikasta, enkä ole varma luvuista tälle vuorelle. Kyllä sen huomaa ilman mittaria, kun lentää ylös.
+KYSYMYS: Kerro lisää: vuorimännyn
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+AIEMPI KYSYMYS: Miksi ilves katosi Gorski kotarin metsistä?
+AIEMPI VASTAUS (Livia):
+Mmm— tarkkaa syytä en tiedä. Ilveksiä on hävitetty Euroopassa monin paikoin metsästyksellä, ja metsien väheneminen sekä saaliseläinten, kuten kauriiden, väheneminen ovat vähentäneet kantoja. Todennäköisesti sama pätee [[Risnjakin]] alueeseen: ilveskanta eli siellä vielä isoisän matkan aikaan, mutta hävisi myöhemmin, ja se palautettiin alueelle 1970-luvulla. En ole varma, tapahtuiko häviäminen yhdessä vaiheessa vai vähitellen, tai mikä tekijä oli ratkaiseva. [[Gorski kotarin]] metsät ovat nykyään jälleen ilveksen kotia, ja niiden suojelu on osa laajempaa Euroopan luonnonsuojelua. Ilves ei ole kyyhkyn ystävä, sanotaan vaikka niin.
+KYSYMYS: Kerro lisää: Gorski kotarin
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä on Pannonian tasanko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pannonian tasanko on laaja matala alanko Keski-Euroopassa, jota ympäröivät vuoret. Sen keskus on Unkarissa, mutta se ulottuu myös Serbian, Kroatian, Slovakian, Romanian ja Itävallan alueille. Tasangon halki virtaa [[Tonava]], ja maaperä on viljavaa, minkä vuoksi alue on tunnettu maanviljelystä. [[Risnjak]] sijaitsee siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat, joten vuoren ympärillä on kolmen erilaisen maiseman raja. En ole varma, miten tasangon rajat vedetään tarkasti, sillä lähteet voivat poiketa toisistaan. Tasanko on kyyhkylle mukavaa maata, kun näkee kauas.
+KYSYMYS: Kerro lisää: Tonava
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+AIEMPI KYSYMYS: Mikä on Pannonian tasanko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pannonian tasanko on laaja matala alanko Keski-Euroopassa, jota ympäröivät vuoret. Sen keskus on Unkarissa, mutta se ulottuu myös Serbian, Kroatian, Slovakian, Romanian ja Itävallan alueille. Tasangon halki virtaa [[Tonava]], ja maaperä on viljavaa, minkä vuoksi alue on tunnettu maanviljelystä. [[Risnjak]] sijaitsee siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat, joten vuoren ympärillä on kolmen erilaisen maiseman raja. En ole varma, miten tasangon rajat vedetään tarkasti, sillä lähteet voivat poiketa toisistaan. Tasanko on kyyhkylle mukavaa maata, kun näkee kauas.
+KYSYMYS: Kerro lisää: Risnjak
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+AIEMPI KYSYMYS: Miten ilves saalistaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin, katotaas. Ilves on yksin saalistava, hiipivä kissaeläin, joka lähestyy saalista huomaamatta ja hyökkää lyhyellä syöksyllä sen sijaan, että jahtaisi sitä pitkään. Saaliina on yleensä keskikokoisia eläimiä, esimerkiksi [[metsäkauriita]] ja jäniksiä, mutta ravinto vaihtelee alueen mukaan. [[Iberianilves]] on tästä poikkeus, sillä se syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilveskin joutui vaikeuksiin. Ilves metsästää usein hämärässä ja piilossa, ja tarkkoja tapoja on vaikea nähdä, koska laji on hyvin arka. Se osaa pysyä näkymättömänä paremmin kuin minä.
+KYSYMYS: Kerro lisää: metsäkauriita
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka] Kroatian ruokakulttuuri kasvaa tuulesta ja kalliosta: valkotryffeli metsän alla, lampaanjuusto saarella jossa tuuli suolaa laitumet, viini pystysuoralta rinteeltä ja osterit suojaisasta lahdesta.
+AIEMPI KYSYMYS: Mitä Istrian niemellä kasvaa?
+AIEMPI VASTAUS (Livia):
+Kato, vihreä niemi. Istrian sisäosa on vihreä, ja siellä kasvaa muun muassa metsää, jossa kuuluisin kasvi on oikeastaan sieni: [[valkotryffeli]]. Mirna-joen varren metsissä sitä kasvaa samaa lajia kuin Italian kuuluisaa Alban tryffeliä. Paikallinen metsästäjä Giancarlo Zigante löysi koiransa Dianan avulla vuonna 1999 Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin, joka oli lähteiden mukaan sen ajan suurin koskaan löydetty. Löytö teki [[Motovunin]] kukkulakaupungista maailmankuulun, ja siellä järjestetään joka syksy kansainvälinen tryffelifestivaali. Vuosisatojen ajan Istriassa kasvoi myös [[tammea]], jota kuljetettiin Venetsiaan. Tryffeli vain kasvaa maan alla eikä näy katolle.
+KYSYMYS: Kerro lisää: valkotryffeli
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Mitä Istrian niemellä kasvaa?
+AIEMPI VASTAUS (Livia):
+Kato, vihreä niemi. Istrian sisäosa on vihreä, ja siellä kasvaa muun muassa metsää, jossa kuuluisin kasvi on oikeastaan sieni: [[valkotryffeli]]. Mirna-joen varren metsissä sitä kasvaa samaa lajia kuin Italian kuuluisaa Alban tryffeliä. Paikallinen metsästäjä Giancarlo Zigante löysi koiransa Dianan avulla vuonna 1999 Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin, joka oli lähteiden mukaan sen ajan suurin koskaan löydetty. Löytö teki [[Motovunin]] kukkulakaupungista maailmankuulun, ja siellä järjestetään joka syksy kansainvälinen tryffelifestivaali. Vuosisatojen ajan Istriassa kasvoi myös [[tammea]], jota kuljetettiin Venetsiaan. Tryffeli vain kasvaa maan alla eikä näy katolle.
+KYSYMYS: Kerro lisää: Motovunin
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kaupunkilehti / Winnipeg: Kaksi yhtiötä ja seitsemän tammea] North West Company rakensi Fort Gibraltarin 1809 ja Hudson's Bay Company Fort Douglasin 1812, ja yhtiöt kilpailivat kiivaasti samasta turkiskaupasta. Lord Selkirk osti maata ja perusti ensimmäisen pysyvän siirtokunnan, Red River Colonyn, ja mittautti jokitontit. Métisit ja Selkirkin uudisasukkaat ottivat yhteen Seitsemän tammen taistelussa 1816. Kilpailu päättyi vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja se rakennettiin uudelleen vasta 1835.
+AIEMPI KYSYMYS: Mitä Istrian niemellä kasvaa?
+AIEMPI VASTAUS (Livia):
+Kato, vihreä niemi. Istrian sisäosa on vihreä, ja siellä kasvaa muun muassa metsää, jossa kuuluisin kasvi on oikeastaan sieni: [[valkotryffeli]]. Mirna-joen varren metsissä sitä kasvaa samaa lajia kuin Italian kuuluisaa Alban tryffeliä. Paikallinen metsästäjä Giancarlo Zigante löysi koiransa Dianan avulla vuonna 1999 Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin, joka oli lähteiden mukaan sen ajan suurin koskaan löydetty. Löytö teki [[Motovunin]] kukkulakaupungista maailmankuulun, ja siellä järjestetään joka syksy kansainvälinen tryffelifestivaali. Vuosisatojen ajan Istriassa kasvoi myös [[tammea]], jota kuljetettiin Venetsiaan. Tryffeli vain kasvaa maan alla eikä näy katolle.
+KYSYMYS: Kerro lisää: tammea
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+AIEMPI KYSYMYS: Miksi vuorelle rakennetaan näkötorni?
+AIEMPI VASTAUS (Livia):
+No jopas, helppo vastata. Näkötorni nostaa katsojan puiden ja huipun yläpuolelle, joten maisema avautuu laajemmalle kuin pelkältä maan tasolta. [[Vojakin]] huipulta näkyy selkeällä säällä Venetsian lahdelle asti, ja siellä seisoo kivinen näkötorni, joka pystytettiin 1911. Tornit ovat myös matkailun kohteita: Prahan [[Petřínin]] näkötorni nousi vuonna 1891 juhlanäyttelyä varten, kun prahalaiset olivat nähneet Pariisin [[Eiffel-tornin]]. Tampereen [[Pyynikin]] torni on 26 metriä korkea ja valmistui 1929, ja sen tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Minulle ei tornia tarvita, minulla on siivet.
+KYSYMYS: Kerro lisää: Vojakin
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+AIEMPI KYSYMYS: Miksi vuorelle rakennetaan näkötorni?
+AIEMPI VASTAUS (Livia):
+No jopas, helppo vastata. Näkötorni nostaa katsojan puiden ja huipun yläpuolelle, joten maisema avautuu laajemmalle kuin pelkältä maan tasolta. [[Vojakin]] huipulta näkyy selkeällä säällä Venetsian lahdelle asti, ja siellä seisoo kivinen näkötorni, joka pystytettiin 1911. Tornit ovat myös matkailun kohteita: Prahan [[Petřínin]] näkötorni nousi vuonna 1891 juhlanäyttelyä varten, kun prahalaiset olivat nähneet Pariisin [[Eiffel-tornin]]. Tampereen [[Pyynikin]] torni on 26 metriä korkea ja valmistui 1929, ja sen tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Minulle ei tornia tarvita, minulla on siivet.
+KYSYMYS: Kerro lisää: Petřínin
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle] elokuu 1888 — Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave…
+- [Pariisi — kohdekartta / Kohdekartta: Eiffel-torni] 1889 Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna 1889, insinööri Gustave Eiffelin toimisto pystytti Champ de Mars -puistoon noin 300 metriä korkean rautatornin vain reilussa kahdessa vuodessa. Torniin käytettiin 18 038 metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko rakennustyön aikana sattui vain yksi kuolemantapaus. Moni pariisilainen taiteilija vihasi tornia aluksi: kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti vetoomuksen, jossa torni tuomittiin rumaksi ja hyödyttömäksi. Kirjailija Guy de Maupassant väitti syövänsä lounasta tornin ravintolassa joka päivä juuri siksi, että se oli ainoa paikka Pariisissa, josta tornia ei näkynyt. Torni oli tarkoitus purkaa jo …
+AIEMPI KYSYMYS: Miksi vuorelle rakennetaan näkötorni?
+AIEMPI VASTAUS (Livia):
+No jopas, helppo vastata. Näkötorni nostaa katsojan puiden ja huipun yläpuolelle, joten maisema avautuu laajemmalle kuin pelkältä maan tasolta. [[Vojakin]] huipulta näkyy selkeällä säällä Venetsian lahdelle asti, ja siellä seisoo kivinen näkötorni, joka pystytettiin 1911. Tornit ovat myös matkailun kohteita: Prahan [[Petřínin]] näkötorni nousi vuonna 1891 juhlanäyttelyä varten, kun prahalaiset olivat nähneet Pariisin [[Eiffel-tornin]]. Tampereen [[Pyynikin]] torni on 26 metriä korkea ja valmistui 1929, ja sen tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Minulle ei tornia tarvita, minulla on siivet.
+KYSYMYS: Kerro lisää: Eiffel-tornin
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kohdekartta / Kohdekartta: Pyynikin näkötorni] 1929 Torni valmistui Pyynikinharjun laelle vuonna 1929 apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta punagraniitista. Harjun laki on 152 metriä merenpinnasta, joten tornin tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Pyynikinharju on maailman korkein pitkittäisharju: se kohoaa 160 metriin merenpinnasta ja 80 metriä Pyhäjärven pintaa ylemmäs. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun hiekka vierii vuosien mittaan alaspäin. Tornin juurella toimii munkkikahvila, joka on ainakin yhtä kuuluisa kuin näköala. Sokerissa kieritetyt munkit paistetaa…
+AIEMPI KYSYMYS: Miksi vuorelle rakennetaan näkötorni?
+AIEMPI VASTAUS (Livia):
+No jopas, helppo vastata. Näkötorni nostaa katsojan puiden ja huipun yläpuolelle, joten maisema avautuu laajemmalle kuin pelkältä maan tasolta. [[Vojakin]] huipulta näkyy selkeällä säällä Venetsian lahdelle asti, ja siellä seisoo kivinen näkötorni, joka pystytettiin 1911. Tornit ovat myös matkailun kohteita: Prahan [[Petřínin]] näkötorni nousi vuonna 1891 juhlanäyttelyä varten, kun prahalaiset olivat nähneet Pariisin [[Eiffel-tornin]]. Tampereen [[Pyynikin]] torni on 26 metriä korkea ja valmistui 1929, ja sen tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Minulle ei tornia tarvita, minulla on siivet.
+KYSYMYS: Kerro lisää: Pyynikin
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Miten Venetsia käytti Istrian kiveä ja tammea?
+AIEMPI VASTAUS (Livia):
+Ai tota. Venetsia rakennettiin lagunin matalaan veteen, ja rakennusaineet tulivat usein meritse Adrianmeren toiselta puolelta. Lähteiden mukaan Istrian kalkkikiveä käytettiin rakennusten perustuksissa ja julkisivuissa, koska se kestää kosteutta hyvin. [[Istrian kiveä]] ja [[tammea]] kuljetettiin vuosisatoja Venetsian rakennustyömaille samaa merta pitkin, jonka näkee [[Vojakin]] huipulta. Tammi sopi vahvuutensa vuoksi rakentamiseen ja laivanrakennukseen, mutta tarkkoja käyttötapoja en ole varma. Näin Istrian metsät ja louhokset ovat olleet osa [[Venetsian]] historiaa. Venetsiassa ei taida olla ainuttakaan puuta ilman pitkää matkaa.
+KYSYMYS: Kerro lisää: Istrian kiveä
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Miten Venetsia käytti Istrian kiveä ja tammea?
+AIEMPI VASTAUS (Livia):
+Ai tota. Venetsia rakennettiin lagunin matalaan veteen, ja rakennusaineet tulivat usein meritse Adrianmeren toiselta puolelta. Lähteiden mukaan Istrian kalkkikiveä käytettiin rakennusten perustuksissa ja julkisivuissa, koska se kestää kosteutta hyvin. [[Istrian kiveä]] ja [[tammea]] kuljetettiin vuosisatoja Venetsian rakennustyömaille samaa merta pitkin, jonka näkee [[Vojakin]] huipulta. Tammi sopi vahvuutensa vuoksi rakentamiseen ja laivanrakennukseen, mutta tarkkoja käyttötapoja en ole varma. Näin Istrian metsät ja louhokset ovat olleet osa [[Venetsian]] historiaa. Venetsiassa ei taida olla ainuttakaan puuta ilman pitkää matkaa.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+AIEMPI KYSYMYS: Mikä on Kvarnerinlahti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kvarnerinlahti on Adrianmeren pohjoinen lahti Istrian niemen ja Kroatian mantereen rannikon välissä. Siihen kuuluu useita saaria, kuten Krk, Cres, Lošinj ja Rab, ja rannikolla sijaitsee Rijeka. [[Vojak]] erottaa Istrian niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja sen takia lahden ilmasto ja maisema eroavat sisämaasta. Laivaliikenne kulkee lahden halki, ja kovalla [[buralla]] liikenne voi keskeytyä. En ole varma, miten tarkasti lahden rajat on määritelty, sillä eri lähteet voivat vetää ne eri kohtiin. Lahti on muuten paljon kauniimpi ylhäältä.
+KYSYMYS: Kerro lisää: Vojak
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+AIEMPI KYSYMYS: Mikä on Kvarnerinlahti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kvarnerinlahti on Adrianmeren pohjoinen lahti Istrian niemen ja Kroatian mantereen rannikon välissä. Siihen kuuluu useita saaria, kuten Krk, Cres, Lošinj ja Rab, ja rannikolla sijaitsee Rijeka. [[Vojak]] erottaa Istrian niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja sen takia lahden ilmasto ja maisema eroavat sisämaasta. Laivaliikenne kulkee lahden halki, ja kovalla [[buralla]] liikenne voi keskeytyä. En ole varma, miten tarkasti lahden rajat on määritelty, sillä eri lähteet voivat vetää ne eri kohtiin. Lahti on muuten paljon kauniimpi ylhäältä.
+KYSYMYS: Kerro lisää: buralla
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+AIEMPI KYSYMYS: Miksi tryffeliä etsitään koiran avulla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tryffeli kasvaa maan alla puiden juurten yhteydessä, joten sitä ei näe päältä. Sen voimakas tuoksu kantautuu kuitenkin maaperän läpi, ja koulutettu koira haistaa sen ja osoittaa paikan. Koira merkitsee kohdan, ja metsästäjä nostaa tryffelin varovasti maasta. Motovunin metsästä löytyi vuonna 1999 koiran avulla lähes 1,3 kilon painoinen [[valkotryffeli]], ja siitä lähtien [[Motovunissa]] on pidetty tryffelifestivaalia. Aiemmin tryffelin etsimiseen on käytetty myös sikoja, mutta en ole varma, kuinka laajasti. Hajuaistissa koira voittaa kyyhkyn, vaikka en sitä ääneen myönnä.
+KYSYMYS: Kerro lisää: Motovunissa
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+AIEMPI KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kato, tost on hyvä nähdä ylhäältä. Kroatian rannikolla vuoristoharjanteet kulkevat rannan suuntaisesti, ja viimeisen jääkauden jälkeen merenpinta nousi ja tulvi laaksojen yli. Vesi peitti laaksot, ja entisten harjanteiden huiput jäivät näkyviin saarina, luotoina ja kareina. Näin [[kalkkikiven]] rikkoma rannikko pirstoutui lukemattomiksi osiksi, ja saaria, luotoja ja karia on yli tuhat, enemmän kuin missään muualla [[Välimerellä]]. Tällaista rantatyyppiä kutsutaan usein [[Dalmatian]] mukaan dalmatialaiseksi rannikoksi. Ei ihme, ettei kukaan ole saanut niitä laskettua yhdellä lennolla.
+KYSYMYS: Kerro lisää: kalkkikiven
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Kirkot: Seinään kirjoitettiin vuosiluku] Asinoun kirkko eli Panagia Phorbiotissa on Troodoksen pohjoisrinteillä kolme kilometriä Nikitarin kylästä etelään. Se on yksilaivainen ja tynnyriholvattu, muurattu paikallisesta kovasta kivestä. Piirtokirjoituksen mukaan kirkko rakennettiin tai maalattiin vuonna 1105 tai 1106 Nikeforos Ischyrioksen lahjoituksella; miehellä oli bysanttilainen arvonimi magistros. Päivätyt piirtokirjoitukset tekevät Troodoksen kirkoista tutkijoille poikkeuksellisia: keskiajan itäisellä Välimerellä maalauksia päivättiin harvoin, joten näiden avulla voidaan ajoittaa muitakin. Asinoussa on useita maalauskerroksia, ja eteishuone sai yhtenäisen ohjelmansa vuonna 1332 tai 1333. Sen omistuskirjoituksen mukaan työ teh…
+- [Kreikka — maalehti / Luonto: Saari, jossa koneet eivät lennä pimeällä] kesällä — Valekarettikilpikonna nousee kesäöinä Kreikan rannoille kaivamaan pesäkuoppaa hiekkaan. Kreikassa on yli 3 000 pesää vuodessa, enemmän kuin missään muualla Välimerellä, ja eniten niitä on Zakynthoksen Laganaksen lahdella, jonne perustettiin maan ensimmäinen merikansallispuisto. Poikaset kaivautuvat ulos pimeällä ja suunnistavat kohti kirkkainta horisonttia, joten rannan lamput voivat viedä ne väärään suuntaan. Siksi Zakynthoksen lentokentältä ei saa nousta eikä sinne laskeutua yöllä. Toiseksi tärkein pesimäranta on Kyparissian lahti.
+AIEMPI KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kato, tost on hyvä nähdä ylhäältä. Kroatian rannikolla vuoristoharjanteet kulkevat rannan suuntaisesti, ja viimeisen jääkauden jälkeen merenpinta nousi ja tulvi laaksojen yli. Vesi peitti laaksot, ja entisten harjanteiden huiput jäivät näkyviin saarina, luotoina ja kareina. Näin [[kalkkikiven]] rikkoma rannikko pirstoutui lukemattomiksi osiksi, ja saaria, luotoja ja karia on yli tuhat, enemmän kuin missään muualla [[Välimerellä]]. Tällaista rantatyyppiä kutsutaan usein [[Dalmatian]] mukaan dalmatialaiseksi rannikoksi. Ei ihme, ettei kukaan ole saanut niitä laskettua yhdellä lennolla.
+KYSYMYS: Kerro lisää: Välimerellä
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kato, tost on hyvä nähdä ylhäältä. Kroatian rannikolla vuoristoharjanteet kulkevat rannan suuntaisesti, ja viimeisen jääkauden jälkeen merenpinta nousi ja tulvi laaksojen yli. Vesi peitti laaksot, ja entisten harjanteiden huiput jäivät näkyviin saarina, luotoina ja kareina. Näin [[kalkkikiven]] rikkoma rannikko pirstoutui lukemattomiksi osiksi, ja saaria, luotoja ja karia on yli tuhat, enemmän kuin missään muualla [[Välimerellä]]. Tällaista rantatyyppiä kutsutaan usein [[Dalmatian]] mukaan dalmatialaiseksi rannikoksi. Ei ihme, ettei kukaan ole saanut niitä laskettua yhdellä lennolla.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+AIEMPI KYSYMYS: Mihin Adrianmeri johtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Adrianmeri on Välimeren pohjoisin haara, ja se johtaa etelässä [[Otranton salmen]] kautta [[Joonianmerelle]] ja siitä edelleen Välimeren pääaltaaseen. Pohjoisessa se päättyy [[Venetsian]] ja Trieston seuduille, missä rannat kaartuvat yhteen. Meri on siis umpinaisen oloinen kuja, jonka ainoa merkittävä yhteys avomerelle on eteläpää.
+
+Ylhäältä katsottuna koko meri näyttää suppilolta, jonka kapea pää osoittaa kohti etelää. Minä lensin sen pituuden kerran läpi, ja sen jälkeen siipiä väsytti.
+KYSYMYS: Kerro lisää: Otranton salmen
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+AIEMPI KYSYMYS: Mihin Adrianmeri johtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Adrianmeri on Välimeren pohjoisin haara, ja se johtaa etelässä [[Otranton salmen]] kautta [[Joonianmerelle]] ja siitä edelleen Välimeren pääaltaaseen. Pohjoisessa se päättyy [[Venetsian]] ja Trieston seuduille, missä rannat kaartuvat yhteen. Meri on siis umpinaisen oloinen kuja, jonka ainoa merkittävä yhteys avomerelle on eteläpää.
+
+Ylhäältä katsottuna koko meri näyttää suppilolta, jonka kapea pää osoittaa kohti etelää. Minä lensin sen pituuden kerran läpi, ja sen jälkeen siipiä väsytti.
+KYSYMYS: Kerro lisää: Joonianmerelle
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Mihin Adrianmeri johtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Adrianmeri on Välimeren pohjoisin haara, ja se johtaa etelässä [[Otranton salmen]] kautta [[Joonianmerelle]] ja siitä edelleen Välimeren pääaltaaseen. Pohjoisessa se päättyy [[Venetsian]] ja Trieston seuduille, missä rannat kaartuvat yhteen. Meri on siis umpinaisen oloinen kuja, jonka ainoa merkittävä yhteys avomerelle on eteläpää.
+
+Ylhäältä katsottuna koko meri näyttää suppilolta, jonka kapea pää osoittaa kohti etelää. Minä lensin sen pituuden kerran läpi, ja sen jälkeen siipiä väsytti.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+AIEMPI KYSYMYS: Kuinka syvä Adrianmeri on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Viisas Pöllö parantelee siipeään, joten tämä jää minulle. [[Pohjois-Adrianmeri]] on matala: sen pohjoisosa on vain muutamia kymmeniä metrejä syvä, ja pohja laskee vähitellen kohti etelää. [[Etelä-Adrianmeren]] syvänne on yli tuhat metriä, ja syvimmän kohdan arvioidaan olevan noin 1200 metriä, mutta en ole varma tarkasta luvusta. Matala pohjoisosa lämpenee kesällä nopeasti ja jäähtyy talvella, mikä erottaa sen eteläosan syvästä vedestä. Kyyhky ei kuitenkaan sukella, joten syvyys on minulle pelkkä huhu.
+KYSYMYS: Kerro lisää: Pohjois-Adrianmeri
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Kuinka syvä Adrianmeri on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Viisas Pöllö parantelee siipeään, joten tämä jää minulle. [[Pohjois-Adrianmeri]] on matala: sen pohjoisosa on vain muutamia kymmeniä metrejä syvä, ja pohja laskee vähitellen kohti etelää. [[Etelä-Adrianmeren]] syvänne on yli tuhat metriä, ja syvimmän kohdan arvioidaan olevan noin 1200 metriä, mutta en ole varma tarkasta luvusta. Matala pohjoisosa lämpenee kesällä nopeasti ja jäähtyy talvella, mikä erottaa sen eteläosan syvästä vedestä. Kyyhky ei kuitenkaan sukella, joten syvyys on minulle pelkkä huhu.
+KYSYMYS: Kerro lisää: Etelä-Adrianmeren
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+AIEMPI KYSYMYS: Mikä on bura?
+AIEMPI VASTAUS (Livia):
+Ai se, bura. Sen minä tunnen valitettavan hyvin. Bura on kylmä, kuiva ja puuskainen koillistuuli, joka puhaltaa Adrianmeren itärannikolla vuoristosta kohti merta. Kylmä ilma valuu [[Dinaarien vuorten]] yli [[Kroatian]] rannikolle, ja tuuli voi olla hyvin voimakas ja puuskittainen erityisesti talvella. Tuuli on vuosisatojen ajan otettu huomioon kaupunkien rakentamisessa ja laivaliikenteessä, ja usein se jättää taivaan kirkkaaksi. Meikäläiset pysyvät sillon mieluummin maassa.
+KYSYMYS: Kerro lisää: Dinaarien vuorten
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+AIEMPI KYSYMYS: Mikä on bura?
+AIEMPI VASTAUS (Livia):
+Ai se, bura. Sen minä tunnen valitettavan hyvin. Bura on kylmä, kuiva ja puuskainen koillistuuli, joka puhaltaa Adrianmeren itärannikolla vuoristosta kohti merta. Kylmä ilma valuu [[Dinaarien vuorten]] yli [[Kroatian]] rannikolle, ja tuuli voi olla hyvin voimakas ja puuskittainen erityisesti talvella. Tuuli on vuosisatojen ajan otettu huomioon kaupunkien rakentamisessa ja laivaliikenteessä, ja usein se jättää taivaan kirkkaaksi. Meikäläiset pysyvät sillon mieluummin maassa.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Mitä kaupunkeja Adrianmeren rannalla on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee ne kaikki. Adrianmeren italialaisella rannalla ovat muun muassa [[Venetsia]], Rimini, Ancona ja [[Bari]], ja Kroatian puolella tunnetuimpia ovat Rijeka, Zadar, [[Split]] ja [[Dubrovnik]]. Pohjukassa on myös Trieste, ja eteläisellä Balkanin rannikolla on esimerkiksi Durrës. Ja jokaisessa niistä on varmasti oma pullansa, vaikka en kaikkien nimeä tiedäkään.
+KYSYMYS: Kerro lisää: Venetsia
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Etelä-Sudan — maalehti / Kielet: Kieli, joka syntyi varuskunnassa] Juba-arabia syntyi 1800-luvulla sotilaiden jälkeläisten keskuudessa: väki oli koottu eri kansoista, ja yhteiseksi kieleksi muodostui sudaninarabiaan perustuva pidgin, jonka kielioppi on hyvin yksinkertainen ja sanastossa näkyvät dinka, bari, pojulu ja shilluk. Se on kaikesta huolimatta maan puhutuin kieli, yleisempi kuin virallinen englanti, ja sitä kuulee etenkin Ekvatorian maakunnassa ja Juban kaduilla. Vasta 1970-luvulla se tunnustettiin omaksi kielimuodokseen eikä pelkäksi huonoksi arabiaksi.
+AIEMPI KYSYMYS: Mitä kaupunkeja Adrianmeren rannalla on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee ne kaikki. Adrianmeren italialaisella rannalla ovat muun muassa [[Venetsia]], Rimini, Ancona ja [[Bari]], ja Kroatian puolella tunnetuimpia ovat Rijeka, Zadar, [[Split]] ja [[Dubrovnik]]. Pohjukassa on myös Trieste, ja eteläisellä Balkanin rannikolla on esimerkiksi Durrës. Ja jokaisessa niistä on varmasti oma pullansa, vaikka en kaikkien nimeä tiedäkään.
+KYSYMYS: Kerro lisää: Bari
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mitä kaupunkeja Adrianmeren rannalla on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee ne kaikki. Adrianmeren italialaisella rannalla ovat muun muassa [[Venetsia]], Rimini, Ancona ja [[Bari]], ja Kroatian puolella tunnetuimpia ovat Rijeka, Zadar, [[Split]] ja [[Dubrovnik]]. Pohjukassa on myös Trieste, ja eteläisellä Balkanin rannikolla on esimerkiksi Durrës. Ja jokaisessa niistä on varmasti oma pullansa, vaikka en kaikkien nimeä tiedäkään.
+KYSYMYS: Kerro lisää: Split
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik] Kalkkikivinen kaupunki Adrianmeren rannalla oli satojen vuosien ajan oma pieni tasavaltansa: sillä oli oma laivasto, omat lait ja tapa selvitä naapureiden välissä sopimalla eikä sotimalla.
+AIEMPI KYSYMYS: Mitä kaupunkeja Adrianmeren rannalla on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee ne kaikki. Adrianmeren italialaisella rannalla ovat muun muassa [[Venetsia]], Rimini, Ancona ja [[Bari]], ja Kroatian puolella tunnetuimpia ovat Rijeka, Zadar, [[Split]] ja [[Dubrovnik]]. Pohjukassa on myös Trieste, ja eteläisellä Balkanin rannikolla on esimerkiksi Durrës. Ja jokaisessa niistä on varmasti oma pullansa, vaikka en kaikkien nimeä tiedäkään.
+KYSYMYS: Kerro lisää: Dubrovnik
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Mihin Sava laskee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Sava laskee Tonavaan [[Belgradin]] kohdalla. Joki saa alkunsa Slovenian Alpeilta ja kulkee [[Zagrebin]] läpi, ja sen pituudeksi mainitaan noin 990 kilometriä. Se tuo [[Tonavaan]] enemmän vettä kuin yksikään toinen sivujoki. Ylhäältä sen näkee ihan hyvin, kun tietää mistä katsoa.
+KYSYMYS: Kerro lisää: Belgradin
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+AIEMPI KYSYMYS: Mihin Sava laskee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Sava laskee Tonavaan [[Belgradin]] kohdalla. Joki saa alkunsa Slovenian Alpeilta ja kulkee [[Zagrebin]] läpi, ja sen pituudeksi mainitaan noin 990 kilometriä. Se tuo [[Tonavaan]] enemmän vettä kuin yksikään toinen sivujoki. Ylhäältä sen näkee ihan hyvin, kun tietää mistä katsoa.
+KYSYMYS: Kerro lisää: Zagrebin
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mihin Sava laskee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Sava laskee Tonavaan [[Belgradin]] kohdalla. Joki saa alkunsa Slovenian Alpeilta ja kulkee [[Zagrebin]] läpi, ja sen pituudeksi mainitaan noin 990 kilometriä. Se tuo [[Tonavaan]] enemmän vettä kuin yksikään toinen sivujoki. Ylhäältä sen näkee ihan hyvin, kun tietää mistä katsoa.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko] Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.
+AIEMPI KYSYMYS: Miksi tulvametsä on hyväksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tulvametsä toimii luonnon omana vesivarastona: kun joki nousee, vesi leviää metsään ja laitumille ja virtaus hidastuu, jolloin alajuoksun tulvahuippu pienenee. Samalla vesi tuo mukanaan ravinteita ja lietettä, jotka lisäävät maan hedelmällisyyttä, ja [[kosteikko]] suodattaa vettä. Tulvametsä on myös monen eläin- ja kasvilajin elinympäristö, ja vaihtelevaa vedenpintaa tarvitsevat lajit eivät viihdy säännöstellyissä joissa. [[Lonjsko poljen]] kaltaisia säilyneitä tulvametsiä on Euroopassa jäljellä vähän. Tulvametsä on kyl siivekkään unelma, aina jotain syötävää.
+KYSYMYS: Kerro lisää: kosteikko
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+AIEMPI KYSYMYS: Miksi tulvametsä on hyväksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tulvametsä toimii luonnon omana vesivarastona: kun joki nousee, vesi leviää metsään ja laitumille ja virtaus hidastuu, jolloin alajuoksun tulvahuippu pienenee. Samalla vesi tuo mukanaan ravinteita ja lietettä, jotka lisäävät maan hedelmällisyyttä, ja [[kosteikko]] suodattaa vettä. Tulvametsä on myös monen eläin- ja kasvilajin elinympäristö, ja vaihtelevaa vedenpintaa tarvitsevat lajit eivät viihdy säännöstellyissä joissa. [[Lonjsko poljen]] kaltaisia säilyneitä tulvametsiä on Euroopassa jäljellä vähän. Tulvametsä on kyl siivekkään unelma, aina jotain syötävää.
+KYSYMYS: Kerro lisää: Lonjsko poljen
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä lintuja Lonjsko poljella pesii?
+AIEMPI VASTAUS (Livia):
+Ai haikarat. Ne on vähän ylpeää väkeä. Alueella pesii muun muassa [[kattohaikara]], ja alueen kylissä pesät rakennetaan usein talojen katoille. Tulvatasanko on hyvä ruokapaikka, koska kosteat niityt ja metsät tarjoavat sammakoita, kaloja ja hyönteisiä. Alue on suojeltu [[luonnonpuistona]], ja sen linnusto on laaja, vaikka en ole varma tarkoista lajimääristä. Haikaroilla on kyl korkeammat katot kuin kyyhkyllä.
+KYSYMYS: Kerro lisää: kattohaikara
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+AIEMPI KYSYMYS: Mitä lintuja Lonjsko poljella pesii?
+AIEMPI VASTAUS (Livia):
+Ai haikarat. Ne on vähän ylpeää väkeä. Alueella pesii muun muassa [[kattohaikara]], ja alueen kylissä pesät rakennetaan usein talojen katoille. Tulvatasanko on hyvä ruokapaikka, koska kosteat niityt ja metsät tarjoavat sammakoita, kaloja ja hyönteisiä. Alue on suojeltu [[luonnonpuistona]], ja sen linnusto on laaja, vaikka en ole varma tarkoista lajimääristä. Haikaroilla on kyl korkeammat katot kuin kyyhkyllä.
+KYSYMYS: Kerro lisää: luonnonpuistona
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Miksi Sava tulvii keväisin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sava tulvii keväisin, koska sen vesi kertyy sekä vuoristojen sulavasta lumesta että sateista. [[Alppien]] ja muiden vuoristojen lumi sulaa keväällä, ja samaan aikaan sateet kasvattavat virtaamaa, joten vesimäärä nousee nopeasti ja joki leviää tulvatasangolle. Kroatiassa joki saa yhä levitä luonnollisesti, ja siksi [[Lonjsko poljen]] kaltainen tulva on osa alueen vuotuista kiertokulkua.
+
+Minä pidän tulvasta siksi, että silloin vesilinnut tulevat lähemmäs. Toisaalta pullataikinan nouseminenkin muistuttaa tulvaa, ja siitä minä pidän vielä enemmän.
+KYSYMYS: Kerro lisää: Alppien
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+AIEMPI KYSYMYS: Minkä kaupunkien kautta Sava virtaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, reittikysymys. Sava virtaa [[Zagrebin]] ja [[Belgradin]] kautta, ja niiden välillä sen rannoilla ovat myös muun muassa [[Sisak]] ja Slavonski Brod. Suuri osa Kroatian ja Bosnia ja Hertsegovinan välisestä rajasta kulkee Savaa pitkin. Belgradissa joki yhtyy Tonavaan. Joenvarsikaupungit ovat kyl pulun parasta aluetta, sillä siltojen alla on aina leivänmuruja.
+KYSYMYS: Kerro lisää: Sisak
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mistä Drava saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Drava saa alkunsa Etelä-Tirolin vuorilta Italiasta. Sieltä joki virtaa [[Itävallan]] ja Slovenian kautta Kroatiaan ja laskee Tonavaan Osijekin alapuolella, yhteensä noin 710 kilometrin matkan. Sloveniassa joen rannalla ovat muun muassa [[Maribor]] ja [[Ptuj]], ja Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Matka on pitkä, mutta onneksi joki kulkee itse.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mistä Drava saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Drava saa alkunsa Etelä-Tirolin vuorilta Italiasta. Sieltä joki virtaa [[Itävallan]] ja Slovenian kautta Kroatiaan ja laskee Tonavaan Osijekin alapuolella, yhteensä noin 710 kilometrin matkan. Sloveniassa joen rannalla ovat muun muassa [[Maribor]] ja [[Ptuj]], ja Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Matka on pitkä, mutta onneksi joki kulkee itse.
+KYSYMYS: Kerro lisää: Maribor
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mistä Drava saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Drava saa alkunsa Etelä-Tirolin vuorilta Italiasta. Sieltä joki virtaa [[Itävallan]] ja Slovenian kautta Kroatiaan ja laskee Tonavaan Osijekin alapuolella, yhteensä noin 710 kilometrin matkan. Sloveniassa joen rannalla ovat muun muassa [[Maribor]] ja [[Ptuj]], ja Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Matka on pitkä, mutta onneksi joki kulkee itse.
+KYSYMYS: Kerro lisää: Ptuj
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Slovenia — maalehti / Ruoka: Yli 400-vuotias köynnös] 1657 — Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin ja annetaan kaupungin lahjoiksi vieraille.
+AIEMPI KYSYMYS: Miksi joki kelpaa rajaksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Joki sopii rajaksi, koska se on näkyvä, pysyvä ja vaikeasti ylitettävä maastonkohta, jonka sijainnin kaikki osapuolet tuntevat. Rantaviivaa on helppo seurata, eikä rajaa tarvitse merkitä erikseen, ja joen ylitys vaatii sillan tai lautan, jolloin liikennettä on helppo valvoa. Samalla joki voi tuottaa ongelmia: esimerkiksi [[Drava]] siirtää soraa ja hiekkaa, ja uoma voi muuttaa paikkaa, jolloin rajan tarkka kulku voi muuttua tai jäädä epäselväksi. Kroatian ja [[Unkarin]] välillä raja on kuitenkin kulkenut joella vuosisatoja. Kyyhkylle raja on pelkkä ajatus, minä lennän yli milloin haluan.
+KYSYMYS: Kerro lisää: Drava
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Miksi joki kelpaa rajaksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Joki sopii rajaksi, koska se on näkyvä, pysyvä ja vaikeasti ylitettävä maastonkohta, jonka sijainnin kaikki osapuolet tuntevat. Rantaviivaa on helppo seurata, eikä rajaa tarvitse merkitä erikseen, ja joen ylitys vaatii sillan tai lautan, jolloin liikennettä on helppo valvoa. Samalla joki voi tuottaa ongelmia: esimerkiksi [[Drava]] siirtää soraa ja hiekkaa, ja uoma voi muuttaa paikkaa, jolloin rajan tarkka kulku voi muuttua tai jäädä epäselväksi. Kroatian ja [[Unkarin]] välillä raja on kuitenkin kulkenut joella vuosisatoja. Kyyhkylle raja on pelkkä ajatus, minä lennän yli milloin haluan.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mikä kaupunki Osijek on?
+AIEMPI VASTAUS (Livia):
+Ai Osijek, joo. Osijek on Itä-Kroatian [[Slavonian]] suurimpia kaupunkeja, ja se sijaitsee Drava-joen rannalla melko lähellä paikkaa, jossa joki laskee [[Tonavaan]]. Kaupungin vanhin osa, [[Tvrđa]], on barokkiaikainen linnoituskaupunginosa.
+
+Vanhat linnoitukset ovat kyyhkylle mukavia, koska muureilla on aina lämmin kohta. Sukuni on kuulemma kantanut viestejä sellaisten muurien yli ennenkin.
+KYSYMYS: Kerro lisää: Slavonian
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä kaupunki Osijek on?
+AIEMPI VASTAUS (Livia):
+Ai Osijek, joo. Osijek on Itä-Kroatian [[Slavonian]] suurimpia kaupunkeja, ja se sijaitsee Drava-joen rannalla melko lähellä paikkaa, jossa joki laskee [[Tonavaan]]. Kaupungin vanhin osa, [[Tvrđa]], on barokkiaikainen linnoituskaupunginosa.
+
+Vanhat linnoitukset ovat kyyhkylle mukavia, koska muureilla on aina lämmin kohta. Sukuni on kuulemma kantanut viestejä sellaisten muurien yli ennenkin.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mikä kaupunki Osijek on?
+AIEMPI VASTAUS (Livia):
+Ai Osijek, joo. Osijek on Itä-Kroatian [[Slavonian]] suurimpia kaupunkeja, ja se sijaitsee Drava-joen rannalla melko lähellä paikkaa, jossa joki laskee [[Tonavaan]]. Kaupungin vanhin osa, [[Tvrđa]], on barokkiaikainen linnoituskaupunginosa.
+
+Vanhat linnoitukset ovat kyyhkylle mukavia, koska muureilla on aina lämmin kohta. Sukuni on kuulemma kantanut viestejä sellaisten muurien yli ennenkin.
+KYSYMYS: Kerro lisää: Tvrđa
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mikä on Mura–Drava–Tonava-biosfäärialue?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, nyt muistan. Mura–Drava–Tonava on useamman maan yhteinen [[Unescon]] biosfäärialue, johon kuuluu jokien varsia Itävallasta, Sloveniasta, Kroatiasta, Unkarista ja Serbiasta. Sen ydintä ovat [[Muran]] ja Dravan luonnonmukaiset tulva-alueet, soraharjut ja [[tulvametsät]], ja alue on suojeltu yhdessä rajojen yli. En ole varma alueen tarkasta pinta-alasta tai perustamisvuodesta. Yksi alue, viisi maata, ja linnut ei välitä rajoista.
+KYSYMYS: Kerro lisää: Unescon
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Mikä on Mura–Drava–Tonava-biosfäärialue?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, nyt muistan. Mura–Drava–Tonava on useamman maan yhteinen [[Unescon]] biosfäärialue, johon kuuluu jokien varsia Itävallasta, Sloveniasta, Kroatiasta, Unkarista ja Serbiasta. Sen ydintä ovat [[Muran]] ja Dravan luonnonmukaiset tulva-alueet, soraharjut ja [[tulvametsät]], ja alue on suojeltu yhdessä rajojen yli. En ole varma alueen tarkasta pinta-alasta tai perustamisvuodesta. Yksi alue, viisi maata, ja linnut ei välitä rajoista.
+KYSYMYS: Kerro lisää: Muran
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Suisto ja sademetsä: Tulvametsät ja tulipunaiset linnut] Macapán ympärillä maisema vaihtelee mangrovemetsien, makeanveden kosteikkojen ja kausittain tulvivien metsien välillä. Aivan kaupungin kupeessa sijaitseva Rio Curiaún suojelualue kattaa yli 20 000 hehtaaria tulvaniittyjä, tulvametsää ja savannia, ja se on rauhoitettu myös alueen perinteisen väestön elämäntavan turvaamiseksi. Kosteikkojen tunnetuin asukas on guará eli tulipunainen ibis, jonka räikeän punainen höyhenpuku erottuu kauas mangrovepuiden ja mutavallien keskeltä; samat vesialueet ovat myös suiston kalastajien tärkeimpiä pyyntipaikkoja.
+AIEMPI KYSYMYS: Mikä on Mura–Drava–Tonava-biosfäärialue?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, nyt muistan. Mura–Drava–Tonava on useamman maan yhteinen [[Unescon]] biosfäärialue, johon kuuluu jokien varsia Itävallasta, Sloveniasta, Kroatiasta, Unkarista ja Serbiasta. Sen ydintä ovat [[Muran]] ja Dravan luonnonmukaiset tulva-alueet, soraharjut ja [[tulvametsät]], ja alue on suojeltu yhdessä rajojen yli. En ole varma alueen tarkasta pinta-alasta tai perustamisvuodesta. Yksi alue, viisi maata, ja linnut ei välitä rajoista.
+KYSYMYS: Kerro lisää: tulvametsät
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+AIEMPI KYSYMYS: Onko Dravalla vesivoimaa?
+AIEMPI VASTAUS (Livia):
+Ai se. No sitä minä en ole itse laskenut. Drava on vesivoimalla vahvasti valjastettu joki: Itävallan, Slovenian ja Kroatian puolella joessa on useita [[vesivoimalaitoksia]] padotuksineen. Padot säätelevät virtaamaa ja muuttavat joen luontoa, sillä ne vähentävät [[tulvia]] ja pysäyttävät [[soraa]]. Siksi vapaasti virtaavia jaksoja on yhä vähemmän, ja ne ovat luonnonsuojelun kannalta arvokkaita. Padot ovat kyl ihmisen tapa kertoa joelle, että tässä sinä pysähdyt.
+KYSYMYS: Kerro lisää: vesivoimalaitoksia
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Onko Dravalla vesivoimaa?
+AIEMPI VASTAUS (Livia):
+Ai se. No sitä minä en ole itse laskenut. Drava on vesivoimalla vahvasti valjastettu joki: Itävallan, Slovenian ja Kroatian puolella joessa on useita [[vesivoimalaitoksia]] padotuksineen. Padot säätelevät virtaamaa ja muuttavat joen luontoa, sillä ne vähentävät [[tulvia]] ja pysäyttävät [[soraa]]. Siksi vapaasti virtaavia jaksoja on yhä vähemmän, ja ne ovat luonnonsuojelun kannalta arvokkaita. Padot ovat kyl ihmisen tapa kertoa joelle, että tässä sinä pysähdyt.
+KYSYMYS: Kerro lisää: tulvia
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kohdekartta / Kohdekartta: Pyynikin näkötorni] 1929 Torni valmistui Pyynikinharjun laelle vuonna 1929 apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta punagraniitista. Harjun laki on 152 metriä merenpinnasta, joten tornin tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Pyynikinharju on maailman korkein pitkittäisharju: se kohoaa 160 metriin merenpinnasta ja 80 metriä Pyhäjärven pintaa ylemmäs. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun hiekka vierii vuosien mittaan alaspäin. Tornin juurella toimii munkkikahvila, joka on ainakin yhtä kuuluisa kuin näköala. Sokerissa kieritetyt munkit paistetaa…
+- [Machu Picchu — kaupunkilehti / Kiveen veistetty taito: Viljelyä pilvimetsän reunalla] Viljelysterassit kattoivat noin 4,9 hehtaaria ja olivat itsessään insinööritaidon näyte: pohjalla oli suuria kiviä, niiden päällä sepeliä, sitten hiekkaa ja soraa ja päällimmäisenä laaksosta ylös kannettua multaa. Kerrosrakenne juoksutti sadeveden tehokkaasti pois eikä päästänyt terasseja sortumaan, vaikka sadetta kertyy seudulla yli 1 800 millimetriä vuodessa. Maissia ja perunaa viljeltiin, mutta sato ei riittänyt ruokkimaan koko väestöä, joten suurin osa ruoasta tuotiin muualta laaksoista. Kanavat ja lähteet johtivat vettä ylhäältä alaspäin koko kaupungin läpi, ja osa terasseista rakennettiin vasta aiemman maanvyörymän tuhoaman rakennelman tilalle.
+AIEMPI KYSYMYS: Onko Dravalla vesivoimaa?
+AIEMPI VASTAUS (Livia):
+Ai se. No sitä minä en ole itse laskenut. Drava on vesivoimalla vahvasti valjastettu joki: Itävallan, Slovenian ja Kroatian puolella joessa on useita [[vesivoimalaitoksia]] padotuksineen. Padot säätelevät virtaamaa ja muuttavat joen luontoa, sillä ne vähentävät [[tulvia]] ja pysäyttävät [[soraa]]. Siksi vapaasti virtaavia jaksoja on yhä vähemmän, ja ne ovat luonnonsuojelun kannalta arvokkaita. Padot ovat kyl ihmisen tapa kertoa joelle, että tässä sinä pysähdyt.
+KYSYMYS: Kerro lisää: soraa
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+AIEMPI KYSYMYS: Keitä olivat Paroksen siirtolaiset?
+AIEMPI VASTAUS (Livia):
+Kas vaan, antiikkia. Paroksen siirtolaiset olivat antiikin kreikkalaisia, jotka lähtivät [[Paroksen]] saarelta Egeanmereltä perustamaan uutta kaupunkia Hvarille vuonna 384 eaa. Paros kuuluu Kykladien saariin ja tunnetaan vanhastaan marmoristaan. Kaupunki sijaitsi nykyisen [[Stari Gradin]] kohdalla, ja siirtolaisten jakama peltotasanko on yhä paikallaan. Merimatka Egeanmereltä tänne ei olisi ollut kyyhkylle kovin pitkä.
+KYSYMYS: Kerro lisää: Paroksen
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+AIEMPI KYSYMYS: Keitä olivat Paroksen siirtolaiset?
+AIEMPI VASTAUS (Livia):
+Kas vaan, antiikkia. Paroksen siirtolaiset olivat antiikin kreikkalaisia, jotka lähtivät [[Paroksen]] saarelta Egeanmereltä perustamaan uutta kaupunkia Hvarille vuonna 384 eaa. Paros kuuluu Kykladien saariin ja tunnetaan vanhastaan marmoristaan. Kaupunki sijaitsi nykyisen [[Stari Gradin]] kohdalla, ja siirtolaisten jakama peltotasanko on yhä paikallaan. Merimatka Egeanmereltä tänne ei olisi ollut kyyhkylle kovin pitkä.
+KYSYMYS: Kerro lisää: Stari Gradin
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Labrador — kaupunkilehti / Labrador: Baskit keittivät valasta öljyksi] Kauan ennen brittiläisiä tai ranskalaisia siirtokuntia Red Bayn satamassa kiehuivat baskien valaanpyytäjien padat: 1530-luvulta 1600-luvun alkuun baskilaiset laivastot pyysivät alueella grönlanninvalaita ja sulattivat rasvan öljyksi Euroopan lamppuihin. Arkeologit ovat löytäneet paikalta uponneita laivoja ja baskityylisiä punaisia kattotiiliä, jotka todistavat asutuksen olleen aikanaan Pohjois-Amerikan suurin eurooppalainen teollisuuslaitos. Red Bay julistettiin Kanadan kansalliseksi historialliseksi kohteeksi 1979 ja Unescon maailmanperintökohteeksi 2013 parhaiten säilyneenä todisteena eurooppalaisesta valaanpyyntiperinteestä.
+- [Singapore — kaupunkilehti / Singapore: Tuhannesta kahdeksaankymmeneen tuhanteen] Ennen Rafflesin tuloa saarella asui noin tuhat ihmistä, enimmäkseen malaijeja ja pieni joukko kiinalaisia. Vuoteen 1860 mennessä väkiluku oli noussut yli kahdeksaankymmeneentuhanteen, ja yli puolet asukkaista oli kiinalaisia; heitä oli tullut töihin pippuri- ja gambierviljelmille ja pakoon Etelä-Kiinan levottomuuksia. Malaijit olivat 1860-luvulle asti toiseksi suurin ryhmä, ja sen jälkeen intialaiset. Vuonna 1826 Singaporesta tuli Penangin ja Malakan kanssa osa Straitsin siirtokuntia, vuodesta 1836 niiden pääkaupunki ja vuonna 1867 osa suoraan Lontoosta hallittua kruununsiirtokuntaa.
+- [Asunción — kaupunkilehti / Asunción] Paraguayjoen rannalle 1537 pystytetystä linnakkeesta lähdettiin perustamaan kymmeniä muita siirtokuntia. Isoisän matkan aikoihin kaupunki eli yhä sodanjälkeistä miehitystä, joka päättyi vasta 1876.
+- [Australia — maalehti / Historia] Vuonna 1873 Australia ei ole vielä yksi maa vaan joukko erillisiä siirtokuntia, ja viimeisen vankilaivan saapumisesta on kulunut vasta viisi vuotta.
+AIEMPI KYSYMYS: Miksi pellot jaettiin suorakaiteisiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, mietitäänpä. Kreikkalaiset perustivat [[siirtokuntia]] suunnitelmallisesti, ja maa jaettiin usein tasaisesti asukkaiden kesken. Suorakaiteiset tilat olivat helppo mitata ja merkitä, ja ne antoivat kaikille samankokoisen osuuden tasangosta. Rajoina toimineet [[kuivamuurit]] ovat kestäneet lähes 2400 vuotta, ja samat polut ja viljelykaistat ovat yhä käytössä. Lähes 2400 vuotta samalla pellolla, ja minä valitan jo kahden tunnin lennosta.
+KYSYMYS: Kerro lisää: siirtokuntia
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+AIEMPI KYSYMYS: Miksi pellot jaettiin suorakaiteisiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, mietitäänpä. Kreikkalaiset perustivat [[siirtokuntia]] suunnitelmallisesti, ja maa jaettiin usein tasaisesti asukkaiden kesken. Suorakaiteiset tilat olivat helppo mitata ja merkitä, ja ne antoivat kaikille samankokoisen osuuden tasangosta. Rajoina toimineet [[kuivamuurit]] ovat kestäneet lähes 2400 vuotta, ja samat polut ja viljelykaistat ovat yhä käytössä. Lähes 2400 vuotta samalla pellolla, ja minä valitan jo kahden tunnin lennosta.
+KYSYMYS: Kerro lisää: kuivamuurit
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Viini joka kasvaa pystysuoralla rinteellä] nykyään — Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle on plavac mali, tumma ja pienimarjainen lajike, joka syntyi kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun alkuperänimityksensä.
+AIEMPI KYSYMYS: Mitä Hvarin tasangolla viljellään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee rivit. Hvarin tasangolla viljellään perinteisesti [[viiniköynnöstä]] ja [[oliivipuita]], ja saari tunnetaan myös [[laventelista]]. Rinteillä kasvaa laventelia ja muita tuoksuvia kasveja, ja viini ja oliiviöljy ovat tärkeitä paikallisia tuotteita. En ole varma tämän päivän viljelyaloista. Laventelin tuoksu nousee ylös asti, mutta pullan tuoksu olisi parempi.
+KYSYMYS: Kerro lisää: viiniköynnöstä
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Putous, jonka nimi tarkoittaa jauhamista] Ouzoud on yhteisnimi useille putouksille Azilalin maakunnassa Keski-Atlaksessa. Vesi putoaa kaikkiaan 110 metriä kolmessa portaassa El-Abid-joen rotkoon; joen nimi tarkoittaa orjien jokea. Azilalin kaupunkiin on matkaa 36 kilometriä ja Marrakechiin 150. Nimi ouzoud tarkoittaa berberiksi viljan jauhamista, ja se kertoo, mihin vettä käytettiin ennen kuin sitä tultiin katsomaan: putouksen yläpuolella on yhä pieniä vesimyllyjä, joissa jauhettiin kylän vilja. Alempana rotkossa kasvaa oliivipuita, joita kastellaan samasta joesta.
+- [Egypti — maalehti / Luonto: Keidas keskellä ei-mitään] Siwan keidas on aavikon saari: lähimpään kaupunkiin on satoja kilometrejä hiekkaa, mutta keitaalla pulppuaa satoja lähteitä, joiden varassa kasvaa satojatuhansia taateli- ja oliivipuita. Eristyksissä siwalaiset säilyttivät oman berberikielensä, jota muualla Egyptissä ei puhuta. Kuuluisin vieras saapui vuonna 331 eaa.: Aleksanteri Suuri vaelsi aavikon poikki kysymään neuvoa keitaan oraakkelilta.
+- [Kreeta — kaupunkilehti / Kreeta] Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän kuin ihmisiä.
+AIEMPI KYSYMYS: Mitä Hvarin tasangolla viljellään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee rivit. Hvarin tasangolla viljellään perinteisesti [[viiniköynnöstä]] ja [[oliivipuita]], ja saari tunnetaan myös [[laventelista]]. Rinteillä kasvaa laventelia ja muita tuoksuvia kasveja, ja viini ja oliiviöljy ovat tärkeitä paikallisia tuotteita. En ole varma tämän päivän viljelyaloista. Laventelin tuoksu nousee ylös asti, mutta pullan tuoksu olisi parempi.
+KYSYMYS: Kerro lisää: oliivipuita
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+AIEMPI KYSYMYS: Mitä Hvarin tasangolla viljellään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, katoilta näkee rivit. Hvarin tasangolla viljellään perinteisesti [[viiniköynnöstä]] ja [[oliivipuita]], ja saari tunnetaan myös [[laventelista]]. Rinteillä kasvaa laventelia ja muita tuoksuvia kasveja, ja viini ja oliiviöljy ovat tärkeitä paikallisia tuotteita. En ole varma tämän päivän viljelyaloista. Laventelin tuoksu nousee ylös asti, mutta pullan tuoksu olisi parempi.
+KYSYMYS: Kerro lisää: laventelista
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+AIEMPI KYSYMYS: Kuinka pitkä saari Hvar on?
+AIEMPI VASTAUS (Livia):
+Mmm—. Viisas Pöllö lupasi palata jo Dubrovnikissa, mutta tämä hoituu ilmankin. Hvar on noin 70 kilometriä pitkä mutta kapea, ja lähteet voivat antaa hieman erilaisia lukuja, joten en ole varma tarkasta pituudesta. Saari sijaitsee [[Dalmatiassa]] [[Bračin]] eteläpuolella, ja sen toisella puolella on [[Korčulan]] saari. Pituus ei vaivaa kyyhkyä, korkeintaan ruokataukojen puute.
+KYSYMYS: Kerro lisää: Dalmatiassa
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Kuinka pitkä saari Hvar on?
+AIEMPI VASTAUS (Livia):
+Mmm—. Viisas Pöllö lupasi palata jo Dubrovnikissa, mutta tämä hoituu ilmankin. Hvar on noin 70 kilometriä pitkä mutta kapea, ja lähteet voivat antaa hieman erilaisia lukuja, joten en ole varma tarkasta pituudesta. Saari sijaitsee [[Dalmatiassa]] [[Bračin]] eteläpuolella, ja sen toisella puolella on [[Korčulan]] saari. Pituus ei vaivaa kyyhkyä, korkeintaan ruokataukojen puute.
+KYSYMYS: Kerro lisää: Bračin

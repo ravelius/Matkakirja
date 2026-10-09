@@ -1,0 +1,1047 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Miksi kaksi kaupunkia riiteli sillasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl vanha riita. Gradec ja Kaptol olivat vuosisatoja kaksi eri kaupunkia: [[Gradec]] oli porvarien ja [[Kaptol]] piispan kaupunki, ja niiden välissä virtasi puro. Lähteiden mukaan kiista koski lähinnä valtaa ja etuoikeuksia, mutta yksittäisten riitojen syistä en ole varma. Sillan ylittäneet välikohtaukset olivat niin tavallisia, että katu on yhä nimeltään [[Krvavi most]], Verinen silta. Kaupungit yhdistettiin yhdeksi vasta vuonna 1850, ja siitä lähtien on ollut vain yksi [[Zagreb]]. Ny se on onneks pelkkä katu.
+KYSYMYS: Kerro lisää: Gradec
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Miksi kaksi kaupunkia riiteli sillasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl vanha riita. Gradec ja Kaptol olivat vuosisatoja kaksi eri kaupunkia: [[Gradec]] oli porvarien ja [[Kaptol]] piispan kaupunki, ja niiden välissä virtasi puro. Lähteiden mukaan kiista koski lähinnä valtaa ja etuoikeuksia, mutta yksittäisten riitojen syistä en ole varma. Sillan ylittäneet välikohtaukset olivat niin tavallisia, että katu on yhä nimeltään [[Krvavi most]], Verinen silta. Kaupungit yhdistettiin yhdeksi vasta vuonna 1850, ja siitä lähtien on ollut vain yksi [[Zagreb]]. Ny se on onneks pelkkä katu.
+KYSYMYS: Kerro lisää: Kaptol
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Miksi kaksi kaupunkia riiteli sillasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl vanha riita. Gradec ja Kaptol olivat vuosisatoja kaksi eri kaupunkia: [[Gradec]] oli porvarien ja [[Kaptol]] piispan kaupunki, ja niiden välissä virtasi puro. Lähteiden mukaan kiista koski lähinnä valtaa ja etuoikeuksia, mutta yksittäisten riitojen syistä en ole varma. Sillan ylittäneet välikohtaukset olivat niin tavallisia, että katu on yhä nimeltään [[Krvavi most]], Verinen silta. Kaupungit yhdistettiin yhdeksi vasta vuonna 1850, ja siitä lähtien on ollut vain yksi [[Zagreb]]. Ny se on onneks pelkkä katu.
+KYSYMYS: Kerro lisää: Krvavi most
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Keksinnöt: Kynä, jonka nimestä tuli sana] 1906 — Insinööri Slavoljub Penkala patentoi vuonna 1906 mekaanisen lyijykynän, jossa lyijy työntyy ulos kiertämällä — kynää ei tarvinnut teroittaa lainkaan. Vuotta myöhemmin hän patentoi täytekynän, ja Zagrebiin perustettiin tehdas, joka valmisti niitä miljoonittain. Keksijän nimestä tuli kroaatin kielessä arkinen sana: penkala tarkoittaa yhä lyijykynää. Hän ehti patentoida elämänsä aikana yli kahdeksankymmentä keksintöä, muun muassa kuumavesipullon ja lentokoneen.
+AIEMPI KYSYMYS: Miksi kaksi kaupunkia riiteli sillasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on kyl vanha riita. Gradec ja Kaptol olivat vuosisatoja kaksi eri kaupunkia: [[Gradec]] oli porvarien ja [[Kaptol]] piispan kaupunki, ja niiden välissä virtasi puro. Lähteiden mukaan kiista koski lähinnä valtaa ja etuoikeuksia, mutta yksittäisten riitojen syistä en ole varma. Sillan ylittäneet välikohtaukset olivat niin tavallisia, että katu on yhä nimeltään [[Krvavi most]], Verinen silta. Kaupungit yhdistettiin yhdeksi vasta vuonna 1850, ja siitä lähtien on ollut vain yksi [[Zagreb]]. Ny se on onneks pelkkä katu.
+KYSYMYS: Kerro lisää: Zagreb
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Kuka oli ban?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Ban oli Kroatian käskynhaltija, hallitsijan nimittämä korkein virkamies, joka johti maata kuninkaan puolesta. Virkanimike on keskiaikainen ja säilyi vuosisatoja. Vuonna 1873 [[Kroatia-Slavonian kuningaskunta]] kuului [[Unkarin kruunun]] alaisuuteen, ja lähteiden mukaan baanin nimitti hallitsija Unkarin hallituksen esityksestä. Samana vuonna virkaan nimitettiin [[Ivan Mažuranić]], joka toimi baanina vuosikymmenen lopulle. Kolme kirjainta, ja vallaa vaikka muille jakaa.
+KYSYMYS: Kerro lisää: Kroatia-Slavonian kuningaskunta
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Kuka oli ban?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Ban oli Kroatian käskynhaltija, hallitsijan nimittämä korkein virkamies, joka johti maata kuninkaan puolesta. Virkanimike on keskiaikainen ja säilyi vuosisatoja. Vuonna 1873 [[Kroatia-Slavonian kuningaskunta]] kuului [[Unkarin kruunun]] alaisuuteen, ja lähteiden mukaan baanin nimitti hallitsija Unkarin hallituksen esityksestä. Samana vuonna virkaan nimitettiin [[Ivan Mažuranić]], joka toimi baanina vuosikymmenen lopulle. Kolme kirjainta, ja vallaa vaikka muille jakaa.
+KYSYMYS: Kerro lisää: Unkarin kruunun
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Kuka oli ban?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Ban oli Kroatian käskynhaltija, hallitsijan nimittämä korkein virkamies, joka johti maata kuninkaan puolesta. Virkanimike on keskiaikainen ja säilyi vuosisatoja. Vuonna 1873 [[Kroatia-Slavonian kuningaskunta]] kuului [[Unkarin kruunun]] alaisuuteen, ja lähteiden mukaan baanin nimitti hallitsija Unkarin hallituksen esityksestä. Samana vuonna virkaan nimitettiin [[Ivan Mažuranić]], joka toimi baanina vuosikymmenen lopulle. Kolme kirjainta, ja vallaa vaikka muille jakaa.
+KYSYMYS: Kerro lisää: Ivan Mažuranić
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Mikä oli vuoden 1868 Unkarin ja Kroatian sopimus?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää vaatii vähän kaivelua. Sopimus tunnetaan nimellä [[Nagodba]], ja se solmittiin vuonna 1868 Unkarin ja Kroatian välillä [[Itävalta-Unkarin]] kaksoismonarkian aikana. Sen perusteella Kroatia-Slavonia sai autonomian sisäisissä asioissa, esimerkiksi oikeus-, opetus- ja kirkollisissa kysymyksissä, ja oma maapäivä kokoontui [[Zagrebissa]]. Rahaan, liikenteeseen ja ulkoasioihin liittyvä päätösvalta oli pitkälti Unkarilla, mistä syntyi jatkuvaa kitkaa; yksityiskohtia en ole aivan varma. Paperilla se oli yksinkertaista, käytännössä ei ihan.
+KYSYMYS: Kerro lisää: Nagodba
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä oli vuoden 1868 Unkarin ja Kroatian sopimus?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää vaatii vähän kaivelua. Sopimus tunnetaan nimellä [[Nagodba]], ja se solmittiin vuonna 1868 Unkarin ja Kroatian välillä [[Itävalta-Unkarin]] kaksoismonarkian aikana. Sen perusteella Kroatia-Slavonia sai autonomian sisäisissä asioissa, esimerkiksi oikeus-, opetus- ja kirkollisissa kysymyksissä, ja oma maapäivä kokoontui [[Zagrebissa]]. Rahaan, liikenteeseen ja ulkoasioihin liittyvä päätösvalta oli pitkälti Unkarilla, mistä syntyi jatkuvaa kitkaa; yksityiskohtia en ole aivan varma. Paperilla se oli yksinkertaista, käytännössä ei ihan.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Mikä oli vuoden 1868 Unkarin ja Kroatian sopimus?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää vaatii vähän kaivelua. Sopimus tunnetaan nimellä [[Nagodba]], ja se solmittiin vuonna 1868 Unkarin ja Kroatian välillä [[Itävalta-Unkarin]] kaksoismonarkian aikana. Sen perusteella Kroatia-Slavonia sai autonomian sisäisissä asioissa, esimerkiksi oikeus-, opetus- ja kirkollisissa kysymyksissä, ja oma maapäivä kokoontui [[Zagrebissa]]. Rahaan, liikenteeseen ja ulkoasioihin liittyvä päätösvalta oli pitkälti Unkarilla, mistä syntyi jatkuvaa kitkaa; yksityiskohtia en ole aivan varma. Paperilla se oli yksinkertaista, käytännössä ei ihan.
+KYSYMYS: Kerro lisää: Zagrebissa
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Asunciónin katedraali] 1845 Asunciónin katedraali on Paraguayn tärkein katolinen kirkko, ja se seisoo vanhan keskustan Catedral-kaupunginosassa. Hiippakunta on vanhempi kuin mikään talo sen päällä: paavi Paavali III perusti Paraguayn hiippakunnan 1. heinäkuuta 1547, ja se oli Río de la Platan ensimmäinen. Ensimmäinen piispa oli fransiskaani Juan de los Barrios, joka hoiti virkaa 1547–1552. Nykyinen kirkkorakennus on presidentti Carlos Antonio Lópezin ajalta ja vihittiin 1845 — isoisän matkan aikaan se oli siis alle kolmekymmentä vuotta vanha. Kirkko on omistettu taivaaseen otetulle Neitsyt Marialle, joka on pääkaupungin suojelija ja jonka mukaan koko kaupunki on nimetty. Pääalttari on päällystetty hopealla. Paavi…
+AIEMPI KYSYMYS: Millainen kirkko hallitsee Kaptolin kukkulaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen tornit näkyy hyvin ylhäältä. Zagrebin katedraali on [[Neitsyt Marian taivaaseenotolle]] omistettu kirkko Kaptolin kukkulalla. Rakennus on alkujaan goottilainen, ja nykyisen uusgoottilaisen ilmeensä se sai suurelta osin 1800-luvun lopulla, kun sitä korjattiin [[Zagrebin maanjäristyksen]] jälkeen vuonna 1880 arkkitehti [[Hermann Bollén]] johdolla.
+
+Minun kantani katedraaliin on käytännöllinen: tornit ovat erinomaisia maamerkkejä, ja kun niitä on kaksi, perille löytäminen on lähes varmaa. Sukuni on aina pitänyt kirkontornien reunoja hyvinä lepopaikkoina.
+KYSYMYS: Kerro lisää: Neitsyt Marian taivaaseenotolle
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+AIEMPI KYSYMYS: Millainen kirkko hallitsee Kaptolin kukkulaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen tornit näkyy hyvin ylhäältä. Zagrebin katedraali on [[Neitsyt Marian taivaaseenotolle]] omistettu kirkko Kaptolin kukkulalla. Rakennus on alkujaan goottilainen, ja nykyisen uusgoottilaisen ilmeensä se sai suurelta osin 1800-luvun lopulla, kun sitä korjattiin [[Zagrebin maanjäristyksen]] jälkeen vuonna 1880 arkkitehti [[Hermann Bollén]] johdolla.
+
+Minun kantani katedraaliin on käytännöllinen: tornit ovat erinomaisia maamerkkejä, ja kun niitä on kaksi, perille löytäminen on lähes varmaa. Sukuni on aina pitänyt kirkontornien reunoja hyvinä lepopaikkoina.
+KYSYMYS: Kerro lisää: Zagrebin maanjäristyksen
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Millainen kirkko hallitsee Kaptolin kukkulaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Sen tornit näkyy hyvin ylhäältä. Zagrebin katedraali on [[Neitsyt Marian taivaaseenotolle]] omistettu kirkko Kaptolin kukkulalla. Rakennus on alkujaan goottilainen, ja nykyisen uusgoottilaisen ilmeensä se sai suurelta osin 1800-luvun lopulla, kun sitä korjattiin [[Zagrebin maanjäristyksen]] jälkeen vuonna 1880 arkkitehti [[Hermann Bollén]] johdolla.
+
+Minun kantani katedraaliin on käytännöllinen: tornit ovat erinomaisia maamerkkejä, ja kun niitä on kaksi, perille löytäminen on lähes varmaa. Sukuni on aina pitänyt kirkontornien reunoja hyvinä lepopaikkoina.
+KYSYMYS: Kerro lisää: Hermann Bollén
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Miksi Zagrebissa ammutaan tykki joka päivä keskipäivällä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tost tulee mieleen pamaus. Tykki laukaistaan joka päivä keskipäivällä [[Lotrščak-tornista]] [[Gradecin]] kukkulalta, ja pamaus kuuluu pitkälle yli vanhankaupungin. Perinne on lähteiden mukaan alkanut 1800-luvun loppupuolella, ja sen tarkoituksena oli alun perin merkitä kaupunkilaisille keskipäivän aikaa. Nykyään laukaus on ennen kaikkea vakiintunut tapa, jonka tuntevat sekä kaupunkilaiset että matkailijat. Meikäläiset ei säpsähdä, ollaan tottuneita.
+KYSYMYS: Kerro lisää: Lotrščak-tornista
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+AIEMPI KYSYMYS: Miksi Zagrebissa ammutaan tykki joka päivä keskipäivällä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tost tulee mieleen pamaus. Tykki laukaistaan joka päivä keskipäivällä [[Lotrščak-tornista]] [[Gradecin]] kukkulalta, ja pamaus kuuluu pitkälle yli vanhankaupungin. Perinne on lähteiden mukaan alkanut 1800-luvun loppupuolella, ja sen tarkoituksena oli alun perin merkitä kaupunkilaisille keskipäivän aikaa. Nykyään laukaus on ennen kaikkea vakiintunut tapa, jonka tuntevat sekä kaupunkilaiset että matkailijat. Meikäläiset ei säpsähdä, ollaan tottuneita.
+KYSYMYS: Kerro lisää: Gradecin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Kuka oli Diocletianus?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suoraan keisarin kimppuun. Diocletianus oli Rooman keisari, joka nousi valtaan vuonna 284 ja jakoi myöhemmin vallan useamman hallitsijan kesken, jotta valtavaa [[Rooman keisarikunnan]] aluetta olisi helpompi johtaa; järjestelyä kutsutaan [[tetrarkiaksi]]. Lähteiden mukaan hän oli kotoisin Dalmatian seudulta. Hänet tunnetaan harvinaisesta teosta: hän luopui vallasta vapaaehtoisesti vuonna 305 ja vetäytyi rakennuttamaansa linnoitettuun palatsiin Adrianmeren rannalle, nykyisen [[Splitin]] kaupungin alueelle. Ei hassumpi eläkeasunto.
+KYSYMYS: Kerro lisää: Rooman keisarikunnan
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Kuka oli Diocletianus?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suoraan keisarin kimppuun. Diocletianus oli Rooman keisari, joka nousi valtaan vuonna 284 ja jakoi myöhemmin vallan useamman hallitsijan kesken, jotta valtavaa [[Rooman keisarikunnan]] aluetta olisi helpompi johtaa; järjestelyä kutsutaan [[tetrarkiaksi]]. Lähteiden mukaan hän oli kotoisin Dalmatian seudulta. Hänet tunnetaan harvinaisesta teosta: hän luopui vallasta vapaaehtoisesti vuonna 305 ja vetäytyi rakennuttamaansa linnoitettuun palatsiin Adrianmeren rannalle, nykyisen [[Splitin]] kaupungin alueelle. Ei hassumpi eläkeasunto.
+KYSYMYS: Kerro lisää: tetrarkiaksi
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Kuka oli Diocletianus?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suoraan keisarin kimppuun. Diocletianus oli Rooman keisari, joka nousi valtaan vuonna 284 ja jakoi myöhemmin vallan useamman hallitsijan kesken, jotta valtavaa [[Rooman keisarikunnan]] aluetta olisi helpompi johtaa; järjestelyä kutsutaan [[tetrarkiaksi]]. Lähteiden mukaan hän oli kotoisin Dalmatian seudulta. Hänet tunnetaan harvinaisesta teosta: hän luopui vallasta vapaaehtoisesti vuonna 305 ja vetäytyi rakennuttamaansa linnoitettuun palatsiin Adrianmeren rannalle, nykyisen [[Splitin]] kaupungin alueelle. Ei hassumpi eläkeasunto.
+KYSYMYS: Kerro lisää: Splitin
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Miltä tuntuisi asua palatsin sisällä?
+AIEMPI VASTAUS (Livia):
+Annas ku katon. Asuminen [[Diocletianuksen palatsissa]] tarkoittaa elämää keskellä kaupunkia, joka on kasvanut vanhojen muurien sisään ja ympärille. Palatsin sisällä on katuja, kauppoja ja koteja, ja siellä asuu yhä tuhansia ihmisiä. Taloja on rakennettu vanhojen seinien väliin ja päälle, joten kodin seinänä voi olla vuosisatoja vanhaa roomalaista kiveä. Keskellä on pylväiden reunustama aukio, [[Peristyyli]], ja keisarin mausoleumista tehty [[Pyhän Dujen katedraali]] kuuluu samaan kokonaisuuteen. Arjesta yksittäisen asukkaan kannalta en osaa sanoa tarkemmin. Ei ihan tavallinen osoite, tunnustan.
+KYSYMYS: Kerro lisää: Diocletianuksen palatsissa
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Miltä tuntuisi asua palatsin sisällä?
+AIEMPI VASTAUS (Livia):
+Annas ku katon. Asuminen [[Diocletianuksen palatsissa]] tarkoittaa elämää keskellä kaupunkia, joka on kasvanut vanhojen muurien sisään ja ympärille. Palatsin sisällä on katuja, kauppoja ja koteja, ja siellä asuu yhä tuhansia ihmisiä. Taloja on rakennettu vanhojen seinien väliin ja päälle, joten kodin seinänä voi olla vuosisatoja vanhaa roomalaista kiveä. Keskellä on pylväiden reunustama aukio, [[Peristyyli]], ja keisarin mausoleumista tehty [[Pyhän Dujen katedraali]] kuuluu samaan kokonaisuuteen. Arjesta yksittäisen asukkaan kannalta en osaa sanoa tarkemmin. Ei ihan tavallinen osoite, tunnustan.
+KYSYMYS: Kerro lisää: Peristyyli
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Miltä tuntuisi asua palatsin sisällä?
+AIEMPI VASTAUS (Livia):
+Annas ku katon. Asuminen [[Diocletianuksen palatsissa]] tarkoittaa elämää keskellä kaupunkia, joka on kasvanut vanhojen muurien sisään ja ympärille. Palatsin sisällä on katuja, kauppoja ja koteja, ja siellä asuu yhä tuhansia ihmisiä. Taloja on rakennettu vanhojen seinien väliin ja päälle, joten kodin seinänä voi olla vuosisatoja vanhaa roomalaista kiveä. Keskellä on pylväiden reunustama aukio, [[Peristyyli]], ja keisarin mausoleumista tehty [[Pyhän Dujen katedraali]] kuuluu samaan kokonaisuuteen. Arjesta yksittäisen asukkaan kannalta en osaa sanoa tarkemmin. Ei ihan tavallinen osoite, tunnustan.
+KYSYMYS: Kerro lisää: Pyhän Dujen katedraali
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Kenen mukaan Splitin katedraali on nimetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Katedraali on nimetty [[Pyhän Dujen]] mukaan, jonka latinankielinen nimi on Domnius. Hän oli Salonan piispa ja kristitty marttyyri, joka sai surmansa Rooman valtakunnan kristittyjen vainoissa 300-luvun alussa, ja hänet kunnioitetaan Splitin suojelupyhimyksenä. Katedraali toimii keisari [[Diocletianuksen]] entisessä mausoleumissa, ja Pyhän Dujen päivää vietetään kaupungissa toukokuussa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pyhän Dujen
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Kenen mukaan Splitin katedraali on nimetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Katedraali on nimetty [[Pyhän Dujen]] mukaan, jonka latinankielinen nimi on Domnius. Hän oli Salonan piispa ja kristitty marttyyri, joka sai surmansa Rooman valtakunnan kristittyjen vainoissa 300-luvun alussa, ja hänet kunnioitetaan Splitin suojelupyhimyksenä. Katedraali toimii keisari [[Diocletianuksen]] entisessä mausoleumissa, ja Pyhän Dujen päivää vietetään kaupungissa toukokuussa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Diocletianuksen
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä kaupunki Salona oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Salona oli [[Rooman]] Dalmatian maakunnan tärkeä kaupunki muutaman kilometrin päässä nykyisestä Splitistä. Se tuhoutui 600-luvulla, mutta tuhon tarkoista vaiheista en ole varma, ja kaupungin pakolaiset hakeutuivat läheisen palatsin muurien suojaan, mistä Splitin vanhakaupunki sai alkunsa. Salonan rauniot ovat yhä nähtävissä [[Solinin]] kaupungin alueella, ja alue on arkeologinen kohde, joka kertoo [[Dalmatian]] roomalaisesta ajasta. Ihmiset muutti, kaupunki jäi.
+KYSYMYS: Kerro lisää: Rooman
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Mikä kaupunki Salona oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Salona oli [[Rooman]] Dalmatian maakunnan tärkeä kaupunki muutaman kilometrin päässä nykyisestä Splitistä. Se tuhoutui 600-luvulla, mutta tuhon tarkoista vaiheista en ole varma, ja kaupungin pakolaiset hakeutuivat läheisen palatsin muurien suojaan, mistä Splitin vanhakaupunki sai alkunsa. Salonan rauniot ovat yhä nähtävissä [[Solinin]] kaupungin alueella, ja alue on arkeologinen kohde, joka kertoo [[Dalmatian]] roomalaisesta ajasta. Ihmiset muutti, kaupunki jäi.
+KYSYMYS: Kerro lisää: Solinin
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Mikä kaupunki Salona oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Salona oli [[Rooman]] Dalmatian maakunnan tärkeä kaupunki muutaman kilometrin päässä nykyisestä Splitistä. Se tuhoutui 600-luvulla, mutta tuhon tarkoista vaiheista en ole varma, ja kaupungin pakolaiset hakeutuivat läheisen palatsin muurien suojaan, mistä Splitin vanhakaupunki sai alkunsa. Salonan rauniot ovat yhä nähtävissä [[Solinin]] kaupungin alueella, ja alue on arkeologinen kohde, joka kertoo [[Dalmatian]] roomalaisesta ajasta. Ihmiset muutti, kaupunki jäi.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Mistä kivestä Diocletianuksen palatsi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän vastaus on onneksi tiedossa. Palatsin pääasiallinen rakennuskivi oli lähteiden mukaan valkoinen kalkkikivi läheiseltä [[Bračin]] saarelta. Lisäksi palatsiin tuotiin marmoria ja koristeaineksia kauempaa, ja [[Peristyylin]] aukiolla on yhä yksi Egyptistä tuotu sfinksi. Tarkkoja osuuksia eri kivilajeille en ole varma, mutta Bračin kivi oli se, joka hallitsi. Kantaisin mieluummin kirjeitä kuin kiviä.
+KYSYMYS: Kerro lisää: Bračin
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+AIEMPI KYSYMYS: Mistä kivestä Diocletianuksen palatsi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän vastaus on onneksi tiedossa. Palatsin pääasiallinen rakennuskivi oli lähteiden mukaan valkoinen kalkkikivi läheiseltä [[Bračin]] saarelta. Lisäksi palatsiin tuotiin marmoria ja koristeaineksia kauempaa, ja [[Peristyylin]] aukiolla on yhä yksi Egyptistä tuotu sfinksi. Tarkkoja osuuksia eri kivilajeille en ole varma, mutta Bračin kivi oli se, joka hallitsi. Kantaisin mieluummin kirjeitä kuin kiviä.
+KYSYMYS: Kerro lisää: Peristyylin
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Merchandise Mart] 1930 Kun Marshall Field & Co. ilmoitti 1927 rakentavansa Chicago-joen pohjoisrannalle, tontti oli vanhaa ratapihaa: siinä oli seissyt Chicago and North Western -radan Wells Streetin asema, joka hylättiin 1911. Sitä ennen samalla kohdalla oli ollut alkuperäiskansojen kauppapaikka. Ratapihan purkaminen sopi kaupungin kaavakomissiolle, joka halusi siistiä jokivarren, ja radan ilmatilaoikeuksien kanssa tontti oli tarpeeksi iso maailman suurimmalle rakennukselle. Työmaa aloitettiin 16. elokuuta 1928, ja se muistutti enemmän patotyömaata kuin talonrakennusta. Sementti saapui laivalla ja nostettiin paineilmalla siiloihin kahdenkymmenen metrin korkeuteen, sora ja hiekka tulivat junavaunuissa kuljet…
+- [Valparaíso — kohdekartta / Kohdekartta: Anglikaaninen katedraali] 1858 Seurakunta alkoi 1837 kotikirkkona, jossa jumalanpalveluksia pitivät ohi kulkevat anglikaanipapit. Chilen laki rajoitti vuoteen 1865 asti kaikkia muita uskontoja kuin katolista, mutta 1857 anglikaanit saivat luvan rakentaa kirkon Cerro Concepciónille. Varainkeruuta johti Britannian konsuli William Rouse. Lupa tuli ehdoilla, jotka näkyvät talossa yhä. Kirkkoon ei saanut tulla tornia eikä huippua, joka olisi paljastanut sen kirkoksi, eivätkä ovet saaneet olla suurempia kuin lähikatolisten kirkkojen ovet — siksi seurakunta kulki sisään sivuovesta. Suunnittelija oli englantilainen arkkitehti ja insinööri William Henry Lloyd, joka oli Chilessä rakentamassa Santiagon ja Valparaíson välistä r…
+AIEMPI KYSYMYS: Miten torpedo toimi?
+AIEMPI VASTAUS (Livia):
+Katotaas, tähän tarvitaan vähän insinöörin päätä. Rijekassa kehitetty torpedo oli veden alla kulkeva, räjähdyspanoksella varustettu laite, jota ajoi [[paineilmalla]] toimiva moottori. Idean oli alun perin piirtänyt itävaltalainen upseeri [[Giovanni Luppis]], ja englantilainen insinööri [[Robert Whitehead]] sai sen kulkemaan vuonna 1866 suoraa linjaa veden alla; ratkaisevaa oli mekanismi, joka piti laitteen sovitussa syvyydessä. Tarkkaa rakennetta ja ensimmäisten mallien nopeuksia en ole varma, mutta periaate oli, että laite kulki itse kohti kohdetta ja räjähti osuessaan. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: paineilmalla
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+AIEMPI KYSYMYS: Miten torpedo toimi?
+AIEMPI VASTAUS (Livia):
+Katotaas, tähän tarvitaan vähän insinöörin päätä. Rijekassa kehitetty torpedo oli veden alla kulkeva, räjähdyspanoksella varustettu laite, jota ajoi [[paineilmalla]] toimiva moottori. Idean oli alun perin piirtänyt itävaltalainen upseeri [[Giovanni Luppis]], ja englantilainen insinööri [[Robert Whitehead]] sai sen kulkemaan vuonna 1866 suoraa linjaa veden alla; ratkaisevaa oli mekanismi, joka piti laitteen sovitussa syvyydessä. Tarkkaa rakennetta ja ensimmäisten mallien nopeuksia en ole varma, mutta periaate oli, että laite kulki itse kohti kohdetta ja räjähti osuessaan. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Giovanni Luppis
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Miten torpedo toimi?
+AIEMPI VASTAUS (Livia):
+Katotaas, tähän tarvitaan vähän insinöörin päätä. Rijekassa kehitetty torpedo oli veden alla kulkeva, räjähdyspanoksella varustettu laite, jota ajoi [[paineilmalla]] toimiva moottori. Idean oli alun perin piirtänyt itävaltalainen upseeri [[Giovanni Luppis]], ja englantilainen insinööri [[Robert Whitehead]] sai sen kulkemaan vuonna 1866 suoraa linjaa veden alla; ratkaisevaa oli mekanismi, joka piti laitteen sovitussa syvyydessä. Tarkkaa rakennetta ja ensimmäisten mallien nopeuksia en ole varma, mutta periaate oli, että laite kulki itse kohti kohdetta ja räjähti osuessaan. Onpas siitä pitkä aika.
+KYSYMYS: Kerro lisää: Robert Whitehead
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä oli corpus separatum?
+AIEMPI VASTAUS (Livia):
+No jopas, latinaa. Latinaksi nimi tarkoittaa erillistä ruumista eli erillisaluetta. Rijeka oli sellainen: kaupunki oli liitetty suoraan [[Unkarin kruunuun]] eikä kuulunut ympäröivään Kroatiaan, joten Unkarilla oli sen kautta oma pääsy [[Adrianmerelle]]. Asema juontaa lähteiden mukaan juurensa 1700-luvun lopulle, mutta sen tulkinnasta Unkari ja Kroatia olivat eri mieltä, enkä osaa kertoa riidan yksityiskohtia luotettavasti. Latinaa on suvussa puhuttu, joten tää oli helppo.
+KYSYMYS: Kerro lisää: Unkarin kruunuun
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pelikaanien järvi, joka hengittää] vuodesta 1983 — Skutarijärvi on Balkanin suurin järvi, ja siitä noin kaksi kolmasosaa kuuluu Montenegrolle. Järven pinta-ala vaihtelee vuodenaikojen mukaan 370 ja 530 neliökilometrin välillä, mutta syvimmilläänkin vettä on vain noin 44 metriä. Montenegron puoli sai kansallispuiston aseman vuonna 1983, ja alueella on tavattu noin 270 lintulajia sekä 34 alkuperäistä kalalajia, joista seitsemän on järven omia. Tunnetuimpia asukkaita ovat kiharapelikaanit, joiden siipiväli voi ylittää kolme metriä. Järven vedestä noin 62 prosenttia tulee Morača-joesta, ja Buna-joki laskee järvestä Adrianmerelle.
+AIEMPI KYSYMYS: Mikä oli corpus separatum?
+AIEMPI VASTAUS (Livia):
+No jopas, latinaa. Latinaksi nimi tarkoittaa erillistä ruumista eli erillisaluetta. Rijeka oli sellainen: kaupunki oli liitetty suoraan [[Unkarin kruunuun]] eikä kuulunut ympäröivään Kroatiaan, joten Unkarilla oli sen kautta oma pääsy [[Adrianmerelle]]. Asema juontaa lähteiden mukaan juurensa 1700-luvun lopulle, mutta sen tulkinnasta Unkari ja Kroatia olivat eri mieltä, enkä osaa kertoa riidan yksityiskohtia luotettavasti. Latinaa on suvussa puhuttu, joten tää oli helppo.
+KYSYMYS: Kerro lisää: Adrianmerelle
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+AIEMPI KYSYMYS: Minkä lahden rannalla Rijeka on?
+AIEMPI VASTAUS (Livia):
+Ai tota, ylhäältä se näyttää hyvältä. Rijeka sijaitsee [[Kvarnerinlahden]] pohjukassa Adrianmeren pohjoisosassa, Istrian niemimaan itäpuolella. Lahdessa on useita saaria, muun muassa [[Krk]], [[Cres]] ja [[Lošinj]], ja ne tekevät rannikosta hyvin rikkonaisen.
+
+Ylhäältä saaret näyttävät pullanmuruilta, ja minulle se on ammatillinen vaisto. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Kvarnerinlahden
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Minkä lahden rannalla Rijeka on?
+AIEMPI VASTAUS (Livia):
+Ai tota, ylhäältä se näyttää hyvältä. Rijeka sijaitsee [[Kvarnerinlahden]] pohjukassa Adrianmeren pohjoisosassa, Istrian niemimaan itäpuolella. Lahdessa on useita saaria, muun muassa [[Krk]], [[Cres]] ja [[Lošinj]], ja ne tekevät rannikosta hyvin rikkonaisen.
+
+Ylhäältä saaret näyttävät pullanmuruilta, ja minulle se on ammatillinen vaisto. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Krk
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+AIEMPI KYSYMYS: Minkä lahden rannalla Rijeka on?
+AIEMPI VASTAUS (Livia):
+Ai tota, ylhäältä se näyttää hyvältä. Rijeka sijaitsee [[Kvarnerinlahden]] pohjukassa Adrianmeren pohjoisosassa, Istrian niemimaan itäpuolella. Lahdessa on useita saaria, muun muassa [[Krk]], [[Cres]] ja [[Lošinj]], ja ne tekevät rannikosta hyvin rikkonaisen.
+
+Ylhäältä saaret näyttävät pullanmuruilta, ja minulle se on ammatillinen vaisto. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Cres
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Injera on lautanen ja lusikka] Injera on hapan, sienimäisen huokoinen lettuleipä, jonka päälle ateria katetaan: se on samalla lautanen, lusikka ja leipä. Taikina käy ersho-nimisen hapatteen kanssa 24–72 tuntia, mistä tulee hapan maku. Sen jälkeen osa taikinasta keitetään absitiksi ja sekoitetaan takaisin; toinen käyminen kestää enää puolesta tunnista kahteen. Leipä paistetaan savisella mitad-levyllä 90–95 asteessa: taikina kaadetaan spiraalina ulkoa sisäänpäin, kansi päälle, kaksi tai kolme minuuttia — eikä sitä käännetä. Höyry tekee pintaan kuplat, joita sanotaan silmiksi.
+AIEMPI KYSYMYS: Minkä lahden rannalla Rijeka on?
+AIEMPI VASTAUS (Livia):
+Ai tota, ylhäältä se näyttää hyvältä. Rijeka sijaitsee [[Kvarnerinlahden]] pohjukassa Adrianmeren pohjoisosassa, Istrian niemimaan itäpuolella. Lahdessa on useita saaria, muun muassa [[Krk]], [[Cres]] ja [[Lošinj]], ja ne tekevät rannikosta hyvin rikkonaisen.
+
+Ylhäältä saaret näyttävät pullanmuruilta, ja minulle se on ammatillinen vaisto. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Lošinj
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+AIEMPI KYSYMYS: Miksi Rijekaa kutsutaan myös nimellä Fiume?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimiä on kaksi. Rijeka tarkoittaa kroatiaksi jokea, ja Fiume on saman sanan italiankielinen vastine. Nimi viittaa [[Rječina]]-jokeen, joka virtaa kaupungin kautta mereen. Italian kieltä on Rijekassa puhuttu pitkään, ja nimi Fiume oli historiallisesti laajasti käytössä myös [[Itävalta-Unkarin]] aikana; sen käytöstä eri aikoina en tiedä tarkemmin. Minulla on vaan yksi nimi, ja sekin on latinaa.
+KYSYMYS: Kerro lisää: Rječina
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Miksi Rijekaa kutsutaan myös nimellä Fiume?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimiä on kaksi. Rijeka tarkoittaa kroatiaksi jokea, ja Fiume on saman sanan italiankielinen vastine. Nimi viittaa [[Rječina]]-jokeen, joka virtaa kaupungin kautta mereen. Italian kieltä on Rijekassa puhuttu pitkään, ja nimi Fiume oli historiallisesti laajasti käytössä myös [[Itävalta-Unkarin]] aikana; sen käytöstä eri aikoina en tiedä tarkemmin. Minulla on vaan yksi nimi, ja sekin on latinaa.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Henry Wickhamin varastetut siemenet] Vuoden 1876 huhti–toukokuussa englantilainen Henry Wickham keräsi Boimin kylästä Tapajós-joen varrelta, aivan Santarémin läheltä, noin 70 000 kumipuun siementä. Hän ilmoitti Brasilian tulliviranomaisille kuljettavansa vain arkoja kasvitieteellisiä näytteitä Britannian kuninkaalliselle kasvitieteelliselle puutarhalle, ja vain murto-osa siemenistä, noin 2400, itikin lopulta Kew Gardensissa. Näistä taimista kasvatettiin istutuksia Britannian Aasian siirtomaihin, ja muutamassa vuosikymmenessä Aasian kumiplantaasit murskasivat Brasilian monopolin. Isoisän matkasta oli tuolloin kulunut vain kolme vuotta.
+AIEMPI KYSYMYS: Kenelle Whitehead myi torpedojaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, tähän on pari varmaa palaa. Whitehead perusti torpedojen valmistusta varten tehtaan Rijekaan, ja keksintö kiinnosti pian monia merivoimia Euroopassa. Lähteiden mukaan torpedoja ja valmistuslupia myytiin 1870-luvulla muun muassa [[Britannian kuninkaalliselle laivastolle]] ja [[Itävalta-Unkarin]] merivoimille sekä useille muille eurooppalaisille laivastoille. Tarkkoja ostajamääriä ja vuosilukuja en ole varma. Aikaa on kulunut, ja kaupunki on rauhoittunut.
+KYSYMYS: Kerro lisää: Britannian kuninkaalliselle laivastolle
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mikä oli forum?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo: Rooman perintöä. Forum oli roomalaisen kaupungin keskusaukio ja sen jokapäiväisen elämän keskus. Siellä pidettiin puheita, kuljettiin juhlakulkueissa, hoidettiin kauppoja ja käytiin oikeutta, ja aukion ympärillä oli temppeleitä ja hallintorakennuksia. Tunnetuin on [[Forum Romanum]] Roomassa, mutta forum rakennettiin myös maakuntakaupunkeihin, esimerkiksi [[Zadariin]], jossa roomalainen forum on yhä näkyvissä keskustassa ja jonka kivistä pystytettiin 800-luvulla [[Pyhän Donatuksen kirkko]]. Siis niin kuin tori, mut marmorilla.
+KYSYMYS: Kerro lisää: Forum Romanum
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+AIEMPI KYSYMYS: Mikä oli forum?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo: Rooman perintöä. Forum oli roomalaisen kaupungin keskusaukio ja sen jokapäiväisen elämän keskus. Siellä pidettiin puheita, kuljettiin juhlakulkueissa, hoidettiin kauppoja ja käytiin oikeutta, ja aukion ympärillä oli temppeleitä ja hallintorakennuksia. Tunnetuin on [[Forum Romanum]] Roomassa, mutta forum rakennettiin myös maakuntakaupunkeihin, esimerkiksi [[Zadariin]], jossa roomalainen forum on yhä näkyvissä keskustassa ja jonka kivistä pystytettiin 800-luvulla [[Pyhän Donatuksen kirkko]]. Siis niin kuin tori, mut marmorilla.
+KYSYMYS: Kerro lisää: Zadariin
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+AIEMPI KYSYMYS: Mikä oli forum?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo: Rooman perintöä. Forum oli roomalaisen kaupungin keskusaukio ja sen jokapäiväisen elämän keskus. Siellä pidettiin puheita, kuljettiin juhlakulkueissa, hoidettiin kauppoja ja käytiin oikeutta, ja aukion ympärillä oli temppeleitä ja hallintorakennuksia. Tunnetuin on [[Forum Romanum]] Roomassa, mutta forum rakennettiin myös maakuntakaupunkeihin, esimerkiksi [[Zadariin]], jossa roomalainen forum on yhä näkyvissä keskustassa ja jonka kivistä pystytettiin 800-luvulla [[Pyhän Donatuksen kirkko]]. Siis niin kuin tori, mut marmorilla.
+KYSYMYS: Kerro lisää: Pyhän Donatuksen kirkko
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+AIEMPI KYSYMYS: Mistä maraskino tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— kirsikkaa, hyvä. Maraskino on kirsikkalikööri, joka valmistetaan [[marasca]]-hapankirsikasta, jota kasvatetaan [[Dalmatian]] rannikolla. Lähteiden mukaan valmistuksessa käytetään hedelmien lisäksi myös kiviä, minkä jälkeen neste tislataan, makeutetaan ja annetaan kypsyä. Tarkkaa reseptiä en ole varma, koska valmistajat pitävät omansa omana tietonaan. Cocktailkirsikat ovat eri tuote. [[Zadarissa]] likööriä valmistettiin tehdasmaisesti vuodesta 1821. Ei pullaa, mut kirsikkaa kuitenkin.
+KYSYMYS: Kerro lisää: marasca
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+AIEMPI KYSYMYS: Mistä maraskino tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— kirsikkaa, hyvä. Maraskino on kirsikkalikööri, joka valmistetaan [[marasca]]-hapankirsikasta, jota kasvatetaan [[Dalmatian]] rannikolla. Lähteiden mukaan valmistuksessa käytetään hedelmien lisäksi myös kiviä, minkä jälkeen neste tislataan, makeutetaan ja annetaan kypsyä. Tarkkaa reseptiä en ole varma, koska valmistajat pitävät omansa omana tietonaan. Cocktailkirsikat ovat eri tuote. [[Zadarissa]] likööriä valmistettiin tehdasmaisesti vuodesta 1821. Ei pullaa, mut kirsikkaa kuitenkin.
+KYSYMYS: Kerro lisää: Dalmatian
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+AIEMPI KYSYMYS: Mistä maraskino tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— kirsikkaa, hyvä. Maraskino on kirsikkalikööri, joka valmistetaan [[marasca]]-hapankirsikasta, jota kasvatetaan [[Dalmatian]] rannikolla. Lähteiden mukaan valmistuksessa käytetään hedelmien lisäksi myös kiviä, minkä jälkeen neste tislataan, makeutetaan ja annetaan kypsyä. Tarkkaa reseptiä en ole varma, koska valmistajat pitävät omansa omana tietonaan. Cocktailkirsikat ovat eri tuote. [[Zadarissa]] likööriä valmistettiin tehdasmaisesti vuodesta 1821. Ei pullaa, mut kirsikkaa kuitenkin.
+KYSYMYS: Kerro lisää: Zadarissa
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+AIEMPI KYSYMYS: Mikä on Zadarin meriurut?
+AIEMPI VASTAUS (Livia):
+Ai se, sen kuulen aina kun lennän ohi. Meriurut ovat satamapromenadilla sijaitseva arkkitehtuuriteos, jonka suunnitteli arkkitehti [[Nikola Bašić]] ja joka avattiin vuonna 2005. Marmoriportaiden alla on putkia, ja [[Adrianmeren]] aaltojen liike työntää niihin ilmaa, jolloin syntyy sointuja. Soinnut vaihtelevat meren mukaan, joten sama paikka ei soi kahdesti samalla tavalla.
+
+Minä pidän siitä, että aallot soittavat ilman kapellimestaria. Jos joku kysyy, mikä kaupunki kuulostaa parhaalta ylhäältä, vastaan tämä.
+KYSYMYS: Kerro lisää: Nikola Bašić
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä on Zadarin meriurut?
+AIEMPI VASTAUS (Livia):
+Ai se, sen kuulen aina kun lennän ohi. Meriurut ovat satamapromenadilla sijaitseva arkkitehtuuriteos, jonka suunnitteli arkkitehti [[Nikola Bašić]] ja joka avattiin vuonna 2005. Marmoriportaiden alla on putkia, ja [[Adrianmeren]] aaltojen liike työntää niihin ilmaa, jolloin syntyy sointuja. Soinnut vaihtelevat meren mukaan, joten sama paikka ei soi kahdesti samalla tavalla.
+
+Minä pidän siitä, että aallot soittavat ilman kapellimestaria. Jos joku kysyy, mikä kaupunki kuulostaa parhaalta ylhäältä, vastaan tämä.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+AIEMPI KYSYMYS: Miten Pyhän Donatuksen kirkko sai nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo jotain. Pyhän Donatuksen kirkko on nimetty [[piispa Donatuksen]] mukaan, jonka kerrotaan rakennuttaneen kirkon 800-luvulla ja joka oli [[Zadarin]] piispa. Lähteiden mukaan kirkko oli alun perin omistettu pyhälle kolminaisuudelle ja Donatuksen nimi tuli käyttöön vasta myöhemmin, mutta tämän ajankohdasta en ole varma. Kirkko on pyöreä ja rakennettu [[roomalaisen forumin]] kivistä, joten seinistä voi yhä lukea roomalaisia kirjoituksia. Pyöreä kirkko, helppo kiertää lentäen.
+KYSYMYS: Kerro lisää: piispa Donatuksen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Keksinnöt: Portaat, joita soittaa meri] 2005 — Zadarin rantaan rakennettiin vuonna 2005 marmoriportaat, jotka laskeutuvat suoraan mereen. Portaiden alle on piilotettu kolmisenkymmentä eri mittaista putkea. Kun aalto työntyy portaiden alle, se painaa ilmaa putkiin ja soitin soi — matalat putket huokaavat pitkään ja lyhyet vastaavat korkeammalta. Sävelmää ei voi ennustaa, koska sen tekevät aallot: tyynellä säällä ääni on hiljainen huokaus, myrskyllä kokonainen soinnutus. Portailla istutaan kuuntelemassa auringonlaskua.
+AIEMPI KYSYMYS: Miten Pyhän Donatuksen kirkko sai nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo jotain. Pyhän Donatuksen kirkko on nimetty [[piispa Donatuksen]] mukaan, jonka kerrotaan rakennuttaneen kirkon 800-luvulla ja joka oli [[Zadarin]] piispa. Lähteiden mukaan kirkko oli alun perin omistettu pyhälle kolminaisuudelle ja Donatuksen nimi tuli käyttöön vasta myöhemmin, mutta tämän ajankohdasta en ole varma. Kirkko on pyöreä ja rakennettu [[roomalaisen forumin]] kivistä, joten seinistä voi yhä lukea roomalaisia kirjoituksia. Pyöreä kirkko, helppo kiertää lentäen.
+KYSYMYS: Kerro lisää: Zadarin
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+AIEMPI KYSYMYS: Miten Pyhän Donatuksen kirkko sai nimensä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo jotain. Pyhän Donatuksen kirkko on nimetty [[piispa Donatuksen]] mukaan, jonka kerrotaan rakennuttaneen kirkon 800-luvulla ja joka oli [[Zadarin]] piispa. Lähteiden mukaan kirkko oli alun perin omistettu pyhälle kolminaisuudelle ja Donatuksen nimi tuli käyttöön vasta myöhemmin, mutta tämän ajankohdasta en ole varma. Kirkko on pyöreä ja rakennettu [[roomalaisen forumin]] kivistä, joten seinistä voi yhä lukea roomalaisia kirjoituksia. Pyöreä kirkko, helppo kiertää lentäen.
+KYSYMYS: Kerro lisää: roomalaisen forumin
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Käsityö: Lasinpuhaltajat karkotettiin saarelle] Vuonna 1291 Venetsian tasavalta määräsi kaikki lasinpuhaltajat siirtämään uuninsa Muranon saarelle. Syy oli pelko: lasi sulaa vasta yli tuhannen asteen kuumuudessa, ja uunit paloivat keskellä kaupunkia, jonka talot olivat suureksi osaksi puuta. Muranossa mestarit saivat erikoisoikeuksia — jopa luvan kantaa miekkaa — mutta tasavallasta heidän ei ollut lupa lähteä. Lasin valmistustapa oli valtionsalaisuus.
+AIEMPI KYSYMYS: Kuka hallitsi Zadaria ennen kuin Itävalta sai sen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän tarvitaan koko historiakirja. Zadaria hallitsi vuosisatoja [[Venetsian tasavalta]]: lähteiden mukaan kaupunki joutui Venetsian vallan alle 1400-luvun alussa ja pysyi sen hallinnassa vuoteen 1797, jolloin tasavalta lakkasi ja alue siirtyi [[Habsburgien]] Itävallalle. Aiemmin Zadar oli kuulunut vuorotellen muun muassa Unkarin ja Kroatian kuninkaille sekä Venetsialle, sillä kaupunki vaihtoi herraa usein, eivätkä lähteet ole aina yhtä mieltä vaiheista. Itävallan hallinnon aikana Zadar oli [[Dalmatian]] hallinnollinen keskus. Monta lippua on nähty, taivas pysyy samana.
+KYSYMYS: Kerro lisää: Venetsian tasavalta
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Kuka hallitsi Zadaria ennen kuin Itävalta sai sen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän tarvitaan koko historiakirja. Zadaria hallitsi vuosisatoja [[Venetsian tasavalta]]: lähteiden mukaan kaupunki joutui Venetsian vallan alle 1400-luvun alussa ja pysyi sen hallinnassa vuoteen 1797, jolloin tasavalta lakkasi ja alue siirtyi [[Habsburgien]] Itävallalle. Aiemmin Zadar oli kuulunut vuorotellen muun muassa Unkarin ja Kroatian kuninkaille sekä Venetsialle, sillä kaupunki vaihtoi herraa usein, eivätkä lähteet ole aina yhtä mieltä vaiheista. Itävallan hallinnon aikana Zadar oli [[Dalmatian]] hallinnollinen keskus. Monta lippua on nähty, taivas pysyy samana.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Hasht Behesht] 1669 Hasht behesht tarkoittaa persiaksi kahdeksaa paratiisia, ja Iranissa sana on myös pohjakaavan nimi: keskussali, jonka ympärille sijoittuu kahdeksan huonetta. Isfahanin paviljonki on kaavan safavidilainen esimerkki, ja sen rakennutti dynastian kahdeksas hallitsija, shaahi Suleiman I. Se oli hallitsijan yksityinen huvimaja. Vuosiluvut hajoavat: valmistumisvuodeksi merkitään 1669, samasta talosta esitetään myös vuotta 1671, ja väljimmin 1600-luvun loppupuoli. Talo on kahdeksankulmainen ja kaksikerroksinen, ja siihen johtaa kaksi pääovea. Umpinainen se ei ole: neljällä leveimmällä sivulla on suuri holvattu parveke eli iwan, ja parvekkeiden alla nousee ohuita puupylväitä. Keskellä on sali k…
+- [Jerusalem — kohdekartta / Kohdekartta: Damaskoksen portti] 1537 Damaskoksen portti on vanhankaupungin komein sisäänkäynti, ja nykyinen rakennus on vuodelta 1537 eli Suleiman Suuren muurityön ajalta. Portti ei kuitenkaan ole uusi paikkana: samassa kohdassa on ollut portti roomalaisajasta asti, ja nykyisen alta on kaivettu esiin vanhempi portti keisari Hadrianuksen ajalta. Arabiankielinen nimi Bab al-Amud tarkoittaa pylvään porttia, ja se on ollut käytössä ainakin 900-luvulta. Nimi säilyttää muiston roomalaisesta voitonpylväästä, joka kohosi portin takana olevalla aukiolla ja jonka päällä seisoi keisari Hadrianuksen patsas. Pylvästä ei ole enää olemassa, mutta se näkyy 500-luvulla tehdyssä Madaban mosaiikkikartassa — eli nimi on vanhempi kuin mikään …
+AIEMPI KYSYMYS: Miten kahdeksan kilometrin puusilta rakennettiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on tarkkoja tietoja harvassa. [[Suleiman Suuren]] insinöörit rakensivat vuonna 1566 [[Dravan]] soiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä. Rakennus liittyi lähteiden mukaan sulttaanin sotaretkeen Unkariin, ja sen oli tarkoitus mahdollistaa armeijan kulku soiden yli. Rakennustekniikan yksityiskohdista en ole varma, mutta aikalaiset ihailivat työtä niin, että sitä kutsuttiin maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana. Kahdeksan kilometriä puuta, ei paha urakka.
+KYSYMYS: Kerro lisää: Suleiman Suuren
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+AIEMPI KYSYMYS: Miten kahdeksan kilometrin puusilta rakennettiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on tarkkoja tietoja harvassa. [[Suleiman Suuren]] insinöörit rakensivat vuonna 1566 [[Dravan]] soiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä. Rakennus liittyi lähteiden mukaan sulttaanin sotaretkeen Unkariin, ja sen oli tarkoitus mahdollistaa armeijan kulku soiden yli. Rakennustekniikan yksityiskohdista en ole varma, mutta aikalaiset ihailivat työtä niin, että sitä kutsuttiin maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana. Kahdeksan kilometriä puuta, ei paha urakka.
+KYSYMYS: Kerro lisää: Dravan
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mitä varten Tvrđa rakennettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itävaltalaiset rakensivat linnoituksen sen jälkeen, kun [[Habsburgien]] joukot olivat ajaneet [[osmanit]] pois Osijekista 1600-luvun lopulla. Tarkoitus oli suojata kaupunkia ja koko rajaseutua mahdolliselta uudelta hyökkäykseltä sekä pitää hallussa tärkeä ylityspaikka Dravan yli; rakentaminen alkoi lähteiden mukaan 1700-luvun alussa. Linnoitus on barokkityylinen ja seisoo yhä, ja nykyään se on osa kaupunkia, jossa asutaan ja vietetään aikaa. Seisoo yhä, ei kaikki pysy pystyssä.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+AIEMPI KYSYMYS: Mitä varten Tvrđa rakennettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itävaltalaiset rakensivat linnoituksen sen jälkeen, kun [[Habsburgien]] joukot olivat ajaneet [[osmanit]] pois Osijekista 1600-luvun lopulla. Tarkoitus oli suojata kaupunkia ja koko rajaseutua mahdolliselta uudelta hyökkäykseltä sekä pitää hallussa tärkeä ylityspaikka Dravan yli; rakentaminen alkoi lähteiden mukaan 1700-luvun alussa. Linnoitus on barokkityylinen ja seisoo yhä, ja nykyään se on osa kaupunkia, jossa asutaan ja vietetään aikaa. Seisoo yhä, ei kaikki pysy pystyssä.
+KYSYMYS: Kerro lisää: osmanit
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mihin jokeen Drava laskee?
+AIEMPI VASTAUS (Livia):
+No niin, joet minä tunnen ylhäältä. Drava on [[Tonavaan]] laskeva sivujoki, joka saa alkunsa [[Alpeilta]], virtaa Itävallan ja Slovenian kautta ja muodostaa pitkän osan Kroatian ja Unkarin rajasta. Se yhtyy Tonavaan Osijekin itäpuolella, lähellä Aljmašin kylää. Lähellä laskukohtaa on [[Kopački rit]] -luonnonpuisto, laaja kosteikkoalue. Kyl joki jaksaa lähteä kauas.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+- [Alpit — kaupunkilehti / Luonto: Lintu, joka syö luita] Partakorppikotkan ravinnosta valtaosa on luuta — se on ainoa lintu maailmassa, joka elää lähes pelkillä luilla. Isot luut se kantaa ilmaan ja pudottaa kalliolle, kunnes ne murtuvat, ja nielee palat kokonaisina; vatsahapot ovat niin väkeviä, että luu liukenee. Siipiväli on lähes kolme metriä. Lintu tapettiin Alpeilta sukupuuttoon 1900-luvun alkuun mennessä, koska sen luultiin vievän lampaita ja lapsia. Palautus aloitettiin 1986, ja nyt niitä pesii taas satakunta paria.
+- [Alpit — kaupunkilehti / Alpit: Vuori hehkuu punaisena auringon laskiessa] Matterhorn on lähes symmetrinen pyramidi, jonka neljä jyrkkää seinämää osoittavat ilmansuuntiin, ja huippu kohoaa 4 478 metriin Sveitsin ja Italian rajalla. Auringon laskiessa tai noustessa huippu hehkuu hetken punaisena tai oranssina, kun matala valo heijastuu ilmakehän pisaroista — ilmiötä kutsutaan alppihehkuksi (saksaksi Alpenglühen), ja nimi tulee juuri Alpeilta. Muotonsa ja hehkunsa ansiosta Matterhorn on yksi maailman kuvatuimmista vuorista.
+AIEMPI KYSYMYS: Mihin jokeen Drava laskee?
+AIEMPI VASTAUS (Livia):
+No niin, joet minä tunnen ylhäältä. Drava on [[Tonavaan]] laskeva sivujoki, joka saa alkunsa [[Alpeilta]], virtaa Itävallan ja Slovenian kautta ja muodostaa pitkän osan Kroatian ja Unkarin rajasta. Se yhtyy Tonavaan Osijekin itäpuolella, lähellä Aljmašin kylää. Lähellä laskukohtaa on [[Kopački rit]] -luonnonpuisto, laaja kosteikkoalue. Kyl joki jaksaa lähteä kauas.
+KYSYMYS: Kerro lisää: Alpeilta
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+AIEMPI KYSYMYS: Mihin jokeen Drava laskee?
+AIEMPI VASTAUS (Livia):
+No niin, joet minä tunnen ylhäältä. Drava on [[Tonavaan]] laskeva sivujoki, joka saa alkunsa [[Alpeilta]], virtaa Itävallan ja Slovenian kautta ja muodostaa pitkän osan Kroatian ja Unkarin rajasta. Se yhtyy Tonavaan Osijekin itäpuolella, lähellä Aljmašin kylää. Lähellä laskukohtaa on [[Kopački rit]] -luonnonpuisto, laaja kosteikkoalue. Kyl joki jaksaa lähteä kauas.
+KYSYMYS: Kerro lisää: Kopački rit
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Vihreä ranta savannin keskellä] Tšad-järvi sijaitsee Sahelissa, kapealla vyöhykkeellä Saharan autiomaan ja eteläisemmän Afrikan kosteiden savannien välissä, ja sen rannat vaihtelevat rajusti vuodenaikojen mukaan. Sadekauden jälkeen vesi tulvii laajoille ruovikko- ja heinäalueille, ja kun tulva vetäytyy, paljastuneelle mudalle kylvetään nopeasti kasvavia satoja – tätä kutsutaan vetäytymisviljelyksi. Samat rantaniityt toimivat myös karjapaimenten laidunmaina: karja käy juomassa aivan veden äärellä ja laiduntaa tulvan jättämällä vihreällä kaistaleella, joka pysyy rehevänä silloinkin, kun ympäröivä savanni on kuivunut ruskeaksi.
+- [Boa Vista — kaupunkilehti / Lavrado ja Roraima-vuori: Lavrado — savanniaukio keskellä sademetsää] Lavrado on Amazonin altaan pohjoisosan laaja savanni, joka poikkeaa jyrkästi ympäröivästä sademetsästä: matalaa ruohikkoa, hajanaisia puuryhmiä ja lähes täysin tasaista maastoa. Suurin osa koko Guayanan savannivyöhykkeestä — noin 43 000 neliökilometriä — sijaitsee juuri Roraiman osavaltiossa, ja loput levittäytyvät naapurimaihin Guyanaan ja Venezuelaan. Silmiinpistävin piirre ovat lukemattomat termiittikeot: eräät termiittilajit pystyttävät jopa parimetrisiä kekoja, jotka toimivat hedelmällisyyssaarekkeina köyhässä savannimaassa ja näkyvät maisemassa säännöllisinä täplinä kilometrien päähän.
+AIEMPI KYSYMYS: Mikä alue Slavonia on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sehän on tämän seudun nimi. Slavonia on Kroatian itäosan tasankoalue [[Savan]], [[Dravan]] ja [[Tonavan]] välissä, ja Osijek on sen keskeisiä kaupunkeja. Alue on viljavaa maatalousmaata ja tunnetaan laajoista tammimetsistä; lähteiden mukaan [[Slavonian tammesta]] on perinteisesti valmistettu muun muassa viinitynnyreitä. Tasaista maata, helppo lentää.
+KYSYMYS: Kerro lisää: Savan
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä alue Slavonia on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sehän on tämän seudun nimi. Slavonia on Kroatian itäosan tasankoalue [[Savan]], [[Dravan]] ja [[Tonavan]] välissä, ja Osijek on sen keskeisiä kaupunkeja. Alue on viljavaa maatalousmaata ja tunnetaan laajoista tammimetsistä; lähteiden mukaan [[Slavonian tammesta]] on perinteisesti valmistettu muun muassa viinitynnyreitä. Tasaista maata, helppo lentää.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+AIEMPI KYSYMYS: Mikä alue Slavonia on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sehän on tämän seudun nimi. Slavonia on Kroatian itäosan tasankoalue [[Savan]], [[Dravan]] ja [[Tonavan]] välissä, ja Osijek on sen keskeisiä kaupunkeja. Alue on viljavaa maatalousmaata ja tunnetaan laajoista tammimetsistä; lähteiden mukaan [[Slavonian tammesta]] on perinteisesti valmistettu muun muassa viinitynnyreitä. Tasaista maata, helppo lentää.
+KYSYMYS: Kerro lisää: Slavonian tammesta
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+AIEMPI KYSYMYS: Mitä ruokaa Osijekin seudulla syödään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, vatsa kurisee jo. Osijekin seudulla eli Slavoniassa ja [[Baranjassa]] tunnetaan etenkin [[kulen]], paprikalla maustettu säilykemakkara, sekä [[fiš-paprikaš]], paprikalla maustettu kalakeitto, jota perinteisesti keitetään padassa jokikalasta. Paprika on alueen ruoanlaitossa tärkeä mauste, ja ruoat ovat usein reheviä ja tulisia. Tarkempaa reseptiä tai ruokien alkuperää en ole varma, ja monella perheellä on oma versionsa.
+
+Kalakeitto padassa kuulostaa hyvältä, mutta sanon suoraan, että minun makuuni sopisi paremmin paikallinen leivonnainen. En vaan tiedä, mikä se on, enkä aio arvata.
+KYSYMYS: Kerro lisää: Baranjassa
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+AIEMPI KYSYMYS: Mitä ruokaa Osijekin seudulla syödään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, vatsa kurisee jo. Osijekin seudulla eli Slavoniassa ja [[Baranjassa]] tunnetaan etenkin [[kulen]], paprikalla maustettu säilykemakkara, sekä [[fiš-paprikaš]], paprikalla maustettu kalakeitto, jota perinteisesti keitetään padassa jokikalasta. Paprika on alueen ruoanlaitossa tärkeä mauste, ja ruoat ovat usein reheviä ja tulisia. Tarkempaa reseptiä tai ruokien alkuperää en ole varma, ja monella perheellä on oma versionsa.
+
+Kalakeitto padassa kuulostaa hyvältä, mutta sanon suoraan, että minun makuuni sopisi paremmin paikallinen leivonnainen. En vaan tiedä, mikä se on, enkä aio arvata.
+KYSYMYS: Kerro lisää: kulen
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+- [Izmir — kaupunkilehti / Arki: Sämpylä sai nimensä muodostaan] Kumru on turkiksi kyyhkynen, ja voileipä on saanut nimensä muodostaan. Alkuperäinen kumru oli renkaan muotoinen ja kokonaan seesaminsiementen peitossa. Nykyinen versio syntyi İzmirissä 1900-luvun puolivälissä ja levisi nopeasti muualle. Väliin pannaan juustoa, tomaattia ja sucukia eli tulista makkaraa, ja osa myyjistä lisää suolakurkkua, tulista paprikaa, majoneesia ja ketsuppia. Leipä on pehmeää, ja osa leipomoista ja ravintoloista nostattaa taikinan kikhernejuurella. Kumrua myydään katuruokana.
+AIEMPI KYSYMYS: Mitä ruokaa Osijekin seudulla syödään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, vatsa kurisee jo. Osijekin seudulla eli Slavoniassa ja [[Baranjassa]] tunnetaan etenkin [[kulen]], paprikalla maustettu säilykemakkara, sekä [[fiš-paprikaš]], paprikalla maustettu kalakeitto, jota perinteisesti keitetään padassa jokikalasta. Paprika on alueen ruoanlaitossa tärkeä mauste, ja ruoat ovat usein reheviä ja tulisia. Tarkempaa reseptiä tai ruokien alkuperää en ole varma, ja monella perheellä on oma versionsa.
+
+Kalakeitto padassa kuulostaa hyvältä, mutta sanon suoraan, että minun makuuni sopisi paremmin paikallinen leivonnainen. En vaan tiedä, mikä se on, enkä aio arvata.
+KYSYMYS: Kerro lisää: fiš-paprikaš
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mitä karsti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kivikin voi sulaa, jos sille antaa aikaa. Karsti on maanpinnan muoto, joka syntyy, kun sadevesi liuottaa hitaasti [[kalkkikiveä]] tai muuta helposti liukenevaa kiveä. Vesi syövyttää kallioon rakoja, jotka laajenevat ajan mittaan rotkoiksi, kuiluiksi ja luoliksi, ja pinta jää usein paljaaksi, koska vesi katoaa maan alle. Siksi karstialueella joet voivat kulkea osan matkaansa maanalaisina, kuten Dinaaristen alppien alueella. Serbialainen maantieteilijä [[Jovan Cvijić]] väitteli aiheesta Wienin yliopistossa vuonna 1893, ja hänen työtään pidetään karstitutkimuksen uranuurtajana. Karstin tutkimus alkoi siis juuri tästä osasta [[Dinaaristen alppien]] maailmaa. Ei paha kyyhkyltä, joka ei edes kuulu kivenmurtajiin.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Tiede: Cvijićin koti karstintutkijan työhuoneena] 1905 — Jovan Cvijić syntyi Loznicassa vuonna 1865 ja väitteli Wienin yliopistossa 1893 aiheenaan karstilmiö, Das Karstphänomen, jota pidetään karstimorfologian alan uranuurtajana. Hän perusti Serbian maantieteellisen seuran vuonna 1910 ja johti Serbian kuninkaallista akatemiaa 1921–1927. Belgradin Jelene Ćetković -kadun talo rakennettiin 1905, ja hän asui, työskenteli ja kuoli siinä. Sisätiloissa on Dragutin Inkiostri Medenjakin maalaamia Bosnian, Šumadijan ja Hertsegovinan maisemia. Talo on toiminut muistomuseona 1960-luvulta.
+AIEMPI KYSYMYS: Mitä karsti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kivikin voi sulaa, jos sille antaa aikaa. Karsti on maanpinnan muoto, joka syntyy, kun sadevesi liuottaa hitaasti [[kalkkikiveä]] tai muuta helposti liukenevaa kiveä. Vesi syövyttää kallioon rakoja, jotka laajenevat ajan mittaan rotkoiksi, kuiluiksi ja luoliksi, ja pinta jää usein paljaaksi, koska vesi katoaa maan alle. Siksi karstialueella joet voivat kulkea osan matkaansa maanalaisina, kuten Dinaaristen alppien alueella. Serbialainen maantieteilijä [[Jovan Cvijić]] väitteli aiheesta Wienin yliopistossa vuonna 1893, ja hänen työtään pidetään karstitutkimuksen uranuurtajana. Karstin tutkimus alkoi siis juuri tästä osasta [[Dinaaristen alppien]] maailmaa. Ei paha kyyhkyltä, joka ei edes kuulu kivenmurtajiin.
+KYSYMYS: Kerro lisää: Jovan Cvijić
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Mitä karsti tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kivikin voi sulaa, jos sille antaa aikaa. Karsti on maanpinnan muoto, joka syntyy, kun sadevesi liuottaa hitaasti [[kalkkikiveä]] tai muuta helposti liukenevaa kiveä. Vesi syövyttää kallioon rakoja, jotka laajenevat ajan mittaan rotkoiksi, kuiluiksi ja luoliksi, ja pinta jää usein paljaaksi, koska vesi katoaa maan alle. Siksi karstialueella joet voivat kulkea osan matkaansa maanalaisina, kuten Dinaaristen alppien alueella. Serbialainen maantieteilijä [[Jovan Cvijić]] väitteli aiheesta Wienin yliopistossa vuonna 1893, ja hänen työtään pidetään karstitutkimuksen uranuurtajana. Karstin tutkimus alkoi siis juuri tästä osasta [[Dinaaristen alppien]] maailmaa. Ei paha kyyhkyltä, joka ei edes kuulu kivenmurtajiin.
+KYSYMYS: Kerro lisää: Dinaaristen alppien
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+AIEMPI KYSYMYS: Miksi kokonainen vuoristo on nimetty yhden huipun mukaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimistä ei aina löydy tarkkaa syytä. Dinaaristen alppien nimi on lähtöisin [[Dinara]]-vuoresta, jonka korkein huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Nimi siirtyi vuorelta koko Adrianmeren itärantaa seuraavalle vuoristolle, joka ulottuu Sloveniasta Albaniaan. Vuoristoja nimetään usein jonkin tunnetun tai hyvin näkyvän kohteen mukaan, mutta en ole varma, miksi juuri Dinara valikoitui koko jonon nimeksi. Luotettavasti voidaan sanoa vain, että nimi on vuoren ja vuoristo on saanut sen siltä. Vuoriston kivi on suurelta osin kalkkikiveä, ja siksi alue on tunnettu [[karstista]].No, jonkun huipun nimi pitää aina jäädä historiaan.
+KYSYMYS: Kerro lisää: Dinara
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+AIEMPI KYSYMYS: Miksi kokonainen vuoristo on nimetty yhden huipun mukaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimistä ei aina löydy tarkkaa syytä. Dinaaristen alppien nimi on lähtöisin [[Dinara]]-vuoresta, jonka korkein huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Nimi siirtyi vuorelta koko Adrianmeren itärantaa seuraavalle vuoristolle, joka ulottuu Sloveniasta Albaniaan. Vuoristoja nimetään usein jonkin tunnetun tai hyvin näkyvän kohteen mukaan, mutta en ole varma, miksi juuri Dinara valikoitui koko jonon nimeksi. Luotettavasti voidaan sanoa vain, että nimi on vuoren ja vuoristo on saanut sen siltä. Vuoriston kivi on suurelta osin kalkkikiveä, ja siksi alue on tunnettu [[karstista]].No, jonkun huipun nimi pitää aina jäädä historiaan.
+KYSYMYS: Kerro lisää: karstista
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+AIEMPI KYSYMYS: Minne maan alle kadonnut joki päätyy?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joet eivät katoa mihinkään, ne vain vaihtavat reittiä. Karstialueella joen vesi valuu rakoihin ja kuiluihin ja jatkaa matkaansa maanalaisissa käytävissä, jotka vesi on itse liuottanut kalkkikiveen. Usein vesi purkautuu myöhemmin maan pinnalle lähteenä tai virtaa edelleen toiseen jokeen tai mereen, mutta tarkka reitti vaihtelee paikasta toiseen ja sitä voidaan selvittää esimerkiksi värjäämällä vettä. [[Dinaran]] alueella ilmiö on tuttu: maanalaiset vedet kulkevat [[luolastoissa]], joihin ihminen ei aina pääse. Siksi karstialueen vesistöt ovat vaikeita tutkia ja helppoja saastuttaa, sillä kivi ei suodata vettä juuri lainkaan. Ja minä kun luulin, että vain posti katoaa.
+KYSYMYS: Kerro lisää: Dinaran
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Minne maan alle kadonnut joki päätyy?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joet eivät katoa mihinkään, ne vain vaihtavat reittiä. Karstialueella joen vesi valuu rakoihin ja kuiluihin ja jatkaa matkaansa maanalaisissa käytävissä, jotka vesi on itse liuottanut kalkkikiveen. Usein vesi purkautuu myöhemmin maan pinnalle lähteenä tai virtaa edelleen toiseen jokeen tai mereen, mutta tarkka reitti vaihtelee paikasta toiseen ja sitä voidaan selvittää esimerkiksi värjäämällä vettä. [[Dinaran]] alueella ilmiö on tuttu: maanalaiset vedet kulkevat [[luolastoissa]], joihin ihminen ei aina pääse. Siksi karstialueen vesistöt ovat vaikeita tutkia ja helppoja saastuttaa, sillä kivi ei suodata vettä juuri lainkaan. Ja minä kun luulin, että vain posti katoaa.
+KYSYMYS: Kerro lisää: luolastoissa
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Tippu Tipin talo] 1800-luvun loppu Shanganin kaupunginosassa, Suicide Alleyn varrella, on talo, jossa asui Tippu Tip (1837–1905). Lähde kuvaa hänet mahtavaksi kauppiaaksi ja orjakauppiaaksi. Hän johti sisämaahan retkikuntia, joissa saattoi olla nelisentuhatta miestä, toi norsunluuta Sansibariin ja nousi saaren rikkaimpien joukkoon. Talo oli yksityisasunto vuoden 1964 vallankumoukseen asti, ja sen jälkeen se muutettiin kerrostaloksi. Vaikka se on matkailunähtävyys, se ei ole virallisesti avoinna kävijöille, ja se on niin huonossa kunnossa, että sitä on kutsuttu koko Afrikan komeimmaksi valtaustaloksi. Kaksi asiaa kertoo yhä, kuka talon rakensi: suuri veistetty puuovi ja mustavalkoiset marmoriportaat. Kivikaup…
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Miten luolat syntyvät kalkkikiveen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä minä olen kuullut tarinoita. Sadevesi imee ilmasta ja maaperästä hiilidioksidia ja muuttuu hieman happamaksi, jolloin se liuottaa [[kalkkikiveä]]. Vesi virtaa kallion rakoihin ja laajentaa niitä vuosituhansien ja satojentuhansien vuosien kuluessa, kunnes rakoihin syntyy käytäviä ja saleja. Kun luolaan tippuva vesi myöhemmin luovuttaa liuenneen kalkin takaisin, syntyvät [[tippukivet]], eli kattoa kohti kasvavat ja lattiasta nousevat kivipylväät. Prosessi on hidas, eikä sen tarkkaa kestoa voi sanoa yleisesti. Dinaaristen alppien [[karstialue]] on täynnä tällaisia luolia ja kuiluja. Itse pidän katosta, jossa on tilaa istua.
+KYSYMYS: Kerro lisää: tippukivet
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+AIEMPI KYSYMYS: Miten luolat syntyvät kalkkikiveen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä minä olen kuullut tarinoita. Sadevesi imee ilmasta ja maaperästä hiilidioksidia ja muuttuu hieman happamaksi, jolloin se liuottaa [[kalkkikiveä]]. Vesi virtaa kallion rakoihin ja laajentaa niitä vuosituhansien ja satojentuhansien vuosien kuluessa, kunnes rakoihin syntyy käytäviä ja saleja. Kun luolaan tippuva vesi myöhemmin luovuttaa liuenneen kalkin takaisin, syntyvät [[tippukivet]], eli kattoa kohti kasvavat ja lattiasta nousevat kivipylväät. Prosessi on hidas, eikä sen tarkkaa kestoa voi sanoa yleisesti. Dinaaristen alppien [[karstialue]] on täynnä tällaisia luolia ja kuiluja. Itse pidän katosta, jossa on tilaa istua.
+KYSYMYS: Kerro lisää: karstialue
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Tiede: Luolalohikäärmeen poikanen] 1689 — Olmi eli luolasalamanteri on sokea, valkoinen ja koko elämänsä pimeässä uiva eläin. Ensimmäisen kerran sen mainitsi kirjassaan Johann Weikhard von Valvasor vuonna 1689. Sateiden jälkeen olmeja huuhtoutui maan alta pintaan, ja paikalliset uskoivat niiden olevan luolalohikäärmeen poikasia. Olmin silmät ovat surkastuneet, mutta haju ja kuulo toimivat erinomaisesti. Se voi elää jopa kymmenen vuotta ilman ruokaa, ja sen enimmäiseliniäksi on arvioitu yli sata vuotta. Sloveniassa sitä kutsutaan ihmiskalaksi, koska sen iho on ihmisen ihon värinen. Postojnan luolassa olmeja voi nähdä erityisessä akvaariossa.
+AIEMPI KYSYMYS: Millaista elämää karstimaisemassa on?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys tuo. Karstimaisema on ensi silmäyksellä karu, mutta elämää löytyy sieltä yllättävän paljon. Pinnalla maaperä on ohutta ja vesi valuu nopeasti rakoihin, joten kasvillisuus on usein niukkaa ja kuivuutta kestävää, ja kalliorakoihin juurtuu sitkeitä kasveja. Maan alla luolissa elää eläimiä, jotka ovat sopeutuneet pimeään, kuten [[olmi]], sokea luolasalamanteri, jonka elinalueeseen kuuluu myös Dinaaristen alppien karstia. En ole varma, missä kaikkialla sitä tavataan. Kaiken kaikkiaan vesi, kivi ja pimeys luovat [[luolastojen]] ja kuilujen ympärille omat ekosysteeminsä. Kyyhkynä minä pidän ilmasta.
+KYSYMYS: Kerro lisää: olmi
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Millaista elämää karstimaisemassa on?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys tuo. Karstimaisema on ensi silmäyksellä karu, mutta elämää löytyy sieltä yllättävän paljon. Pinnalla maaperä on ohutta ja vesi valuu nopeasti rakoihin, joten kasvillisuus on usein niukkaa ja kuivuutta kestävää, ja kalliorakoihin juurtuu sitkeitä kasveja. Maan alla luolissa elää eläimiä, jotka ovat sopeutuneet pimeään, kuten [[olmi]], sokea luolasalamanteri, jonka elinalueeseen kuuluu myös Dinaaristen alppien karstia. En ole varma, missä kaikkialla sitä tavataan. Kaiken kaikkiaan vesi, kivi ja pimeys luovat [[luolastojen]] ja kuilujen ympärille omat ekosysteeminsä. Kyyhkynä minä pidän ilmasta.
+KYSYMYS: Kerro lisää: luolastojen
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+AIEMPI KYSYMYS: Miltä näyttää, kun vuori nousee suoraan merestä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tuon kuvan minä tunnen katolta. [[Biokovon]] vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure, 1762 metriä, on vain muutaman kilometrin päässä aallonmurtajasta. Rinne on seinämäinen, ja samassa vuoressa kohtaavat kaksi ilmastoa: rannalla kasvaa viikunoita, mutta huipulla voi olla lunta vielä huhtikuussa. Selkeällä säällä huipulta näkyy toiselle puolelle [[Adrianmerta]], Italian rannikolle asti. Huipulle rakennetun [[kappelin]] pyhä Yrjö on antanut vuorelle sen nimen.
+
+Kroatian rannikolla on varmasti omat pullansa, mutta en tiedä, mikä niistä on se oikea. Silti tuo näkymä jäisi mieleen ilman pullaakin.
+KYSYMYS: Kerro lisää: Biokovon
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Miltä näyttää, kun vuori nousee suoraan merestä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tuon kuvan minä tunnen katolta. [[Biokovon]] vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure, 1762 metriä, on vain muutaman kilometrin päässä aallonmurtajasta. Rinne on seinämäinen, ja samassa vuoressa kohtaavat kaksi ilmastoa: rannalla kasvaa viikunoita, mutta huipulla voi olla lunta vielä huhtikuussa. Selkeällä säällä huipulta näkyy toiselle puolelle [[Adrianmerta]], Italian rannikolle asti. Huipulle rakennetun [[kappelin]] pyhä Yrjö on antanut vuorelle sen nimen.
+
+Kroatian rannikolla on varmasti omat pullansa, mutta en tiedä, mikä niistä on se oikea. Silti tuo näkymä jäisi mieleen ilman pullaakin.
+KYSYMYS: Kerro lisää: Adrianmerta
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Anglikaanisen kappelin paikka] 1853 Anglikaanisuus tuli Brasiliaan Portugalin hovin mukana. Portugali ja Britannia sopivat 1810 kauppa- ja merenkulkusopimuksessa, että anglikaanisia kappeleita saa rakentaa kahdella ehdolla: ne eivät saa näyttää temppeleiltä eivätkä käännyttää brasilialaisia. Salvadorin pappisvirka perustettiin 1815, ja jumalanpalvelukset pidettiin aluksi yksityiskodeissa. Vuonna 1811 kuvernööri Marcos de Noronha e Brito antoi luvan brittiläiselle hautausmaalle Barran rinteeseen, ja sen yhteyteen tuli kappeli hautajaisia varten. Itsenäistymisen jälkeen pappi Edward Parker osti tontin Campo Granden aukion läheltä, ja Pyhän Yrjön seura avasi kappelin lokakuussa 1853. Britit kutsuivat sitä nimellä Christ Chu…
+AIEMPI KYSYMYS: Miltä näyttää, kun vuori nousee suoraan merestä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tuon kuvan minä tunnen katolta. [[Biokovon]] vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure, 1762 metriä, on vain muutaman kilometrin päässä aallonmurtajasta. Rinne on seinämäinen, ja samassa vuoressa kohtaavat kaksi ilmastoa: rannalla kasvaa viikunoita, mutta huipulla voi olla lunta vielä huhtikuussa. Selkeällä säällä huipulta näkyy toiselle puolelle [[Adrianmerta]], Italian rannikolle asti. Huipulle rakennetun [[kappelin]] pyhä Yrjö on antanut vuorelle sen nimen.
+
+Kroatian rannikolla on varmasti omat pullansa, mutta en tiedä, mikä niistä on se oikea. Silti tuo näkymä jäisi mieleen ilman pullaakin.
+KYSYMYS: Kerro lisää: kappelin

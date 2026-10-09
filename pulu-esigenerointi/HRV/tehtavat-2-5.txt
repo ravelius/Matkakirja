@@ -1,0 +1,1040 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Minä vuonna Mali Lošinj mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo. Mali Lošinj mainitaan ensimmäisen kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Kaupunki on kasvanut sen jälkeen merkittäväksi satamaksi [[Lošinjin]] saarella [[Kvarnerin]] alueella Länsi-Kroatiassa. Kaupungin asukasluku oli vuonna 2021 yhteensä 7 537. Ihan kunnioitettava ikä, sanon minä.
+KYSYMYS: Kerro lisää: Kvarnerin
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+- [Iso-Britannia — maalehti / Musiikki: Laulu piti nostoväen tahdissa] Purjelaivalla monta työtä vaati yhtäaikaista voimaa: ankkurin nostaminen tai purjeen kiristäminen onnistui vain, jos kaikki vetivät samalla hetkellä. Siksi laulettiin. Merimieslauluissa esilaulaja lauloi säkeen ja miehistö vastasi kertosäkeen — ja juuri kertosäkeen kohdalla vedettiin. What shall we do with the drunken sailor on niin sanottu stamp-and-go -laulu, jota laulettiin marssien kannen poikki köysi kädessä. Höyrykoneen myötä työlaulut kävivät tarpeettomiksi, mutta laulut jäivät.
+AIEMPI KYSYMYS: Mikä pysäytti Mali Lošinjin kulta-ajan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kulta-ajan pysäytti kaksi asiaa. [[Höyrykoneen]] keksiminen muutti merenkulkua ja vei purjelaivojen aseman, ja [[viiniköynnöstaudin]] puhkeaminen pysäytti myös viljelyn kehityksen. Mali Lošinj oli vuonna 1868 Adrianmeren suurin kauppalaivastopaikka, ja sitä seurannut taantuma muutti kaupungin luonteen. Näin kyllä kävi monelle muullekin satamakaupungille. Kyllä purjeetkin silti ansaitsisivat muistamista.
+KYSYMYS: Kerro lisää: Höyrykoneen
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Viini joka kasvaa pystysuoralla rinteellä] nykyään — Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle on plavac mali, tumma ja pienimarjainen lajike, joka syntyi kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun alkuperänimityksensä.
+AIEMPI KYSYMYS: Mikä pysäytti Mali Lošinjin kulta-ajan?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kulta-ajan pysäytti kaksi asiaa. [[Höyrykoneen]] keksiminen muutti merenkulkua ja vei purjelaivojen aseman, ja [[viiniköynnöstaudin]] puhkeaminen pysäytti myös viljelyn kehityksen. Mali Lošinj oli vuonna 1868 Adrianmeren suurin kauppalaivastopaikka, ja sitä seurannut taantuma muutti kaupungin luonteen. Näin kyllä kävi monelle muullekin satamakaupungille. Kyllä purjeetkin silti ansaitsisivat muistamista.
+KYSYMYS: Kerro lisää: viiniköynnöstaudin
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kohdekartta / Kohdekartta: Nigerian kansallismuseo] 1957 Museon ensimmäiset arkkitehtiluonnokset esitettiin heinäkuussa 1948 konferenssissa, jossa mietittiin Nigerian museopolitiikkaa. Museon perusti 1957 englantilainen arkeologi Kenneth Murray, joka oli koonnut perinteisiä naamioita Cross Riverin alueelta; ne olivat ensimmäisiä esineitä näyttelyssä. Ensimmäisenä vuosikymmenenä British Museum lahjoitti museolle kaksi laattaa ja muita esineitä. Kokoelmassa arvioidaan olevan noin 47 000 esinettä: puuta, norsunluuta, metallia ja terrakottaa. Tunnetuin on Jemaan pää, Nok-kulttuurin terrakottapää, joka ajoitetaan noin vuosien 900 ja 200 eaa. väliin. Esillä on naamioita, tekstiilejä, rumpuja, ennustusmaljoja ja esi-isähahmoja, muun muassa mumuye-h…
+AIEMPI KYSYMYS: Kuka kirjoitti saarella asuneen neljäsataa merikapteenia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tuota niin. Luvun esitti amerikkalainen kirjailija [[Kenneth Roberts]], joka kirjoitti vuonna 1938, että saarella asui neljäsataa [[merikapteenia]]. Se on hänen arvionsa, eikä lukua voi pitää tarkasti tarkistettuna. Kaupunki oli kuitenkin Adrianmeren merenkulun keskus, jonka [[kauppalaivasto]] oli 1800-luvulla alueen suurin. Vaikuttava lukumäärä, vaikka kyyhky ei kapteeneja laske.
+KYSYMYS: Kerro lisää: Kenneth Roberts
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Kuka kirjoitti saarella asuneen neljäsataa merikapteenia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tuota niin. Luvun esitti amerikkalainen kirjailija [[Kenneth Roberts]], joka kirjoitti vuonna 1938, että saarella asui neljäsataa [[merikapteenia]]. Se on hänen arvionsa, eikä lukua voi pitää tarkasti tarkistettuna. Kaupunki oli kuitenkin Adrianmeren merenkulun keskus, jonka [[kauppalaivasto]] oli 1800-luvulla alueen suurin. Vaikuttava lukumäärä, vaikka kyyhky ei kapteeneja laske.
+KYSYMYS: Kerro lisää: merikapteenia
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Kuka kirjoitti saarella asuneen neljäsataa merikapteenia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tuota niin. Luvun esitti amerikkalainen kirjailija [[Kenneth Roberts]], joka kirjoitti vuonna 1938, että saarella asui neljäsataa [[merikapteenia]]. Se on hänen arvionsa, eikä lukua voi pitää tarkasti tarkistettuna. Kaupunki oli kuitenkin Adrianmeren merenkulun keskus, jonka [[kauppalaivasto]] oli 1800-luvulla alueen suurin. Vaikuttava lukumäärä, vaikka kyyhky ei kapteeneja laske.
+KYSYMYS: Kerro lisää: kauppalaivasto
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+AIEMPI KYSYMYS: Kuinka monta asukasta Mali Lošinjissa oli vuonna 2021?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Mali Lošinjin asukasluku oli vuonna 2021 yhteensä 7 537. Kaupunki sijaitsee Lošinjin saarella [[Kvarnerin]] alueella Länsi-Kroatiassa, saaren aurinkoisella itäpuolella ja [[Lošinjin lahden]] suojaisimmassa osassa. Tämä kaupunki oli aikoinaan paljon vilkkaampi kuin luku antaa ymmärtää. Hyvin pärjää pieni kaupunki.
+KYSYMYS: Kerro lisää: Lošinjin lahden
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+AIEMPI KYSYMYS: Kuinka pitkä Neretva on kokonaisuudessaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, nyt muistan. [[Neretvan]] pituudeksi ilmoitetaan 225 kilometriä, ja se on [[Dinaaristen Alppien]] suurin karstijoki sekä Adrianmeren itäisen valuma-alueen suurimpia jokia. Osien luvut eivät täsmää täysin: noin 208 kilometriä sijaitsee Bosnia ja Hertsegovinassa ja noin 22 kilometriä Kroatiassa, joten tarkkaa pituutta en uskalla vannoa. Joen lähde on 1 227 metrin korkeudessa. Pitkä joki, ja siitä riitti jutella.
+KYSYMYS: Kerro lisää: Neretvan
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Kuinka pitkä Neretva on kokonaisuudessaan?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, nyt muistan. [[Neretvan]] pituudeksi ilmoitetaan 225 kilometriä, ja se on [[Dinaaristen Alppien]] suurin karstijoki sekä Adrianmeren itäisen valuma-alueen suurimpia jokia. Osien luvut eivät täsmää täysin: noin 208 kilometriä sijaitsee Bosnia ja Hertsegovinassa ja noin 22 kilometriä Kroatiassa, joten tarkkaa pituutta en uskalla vannoa. Joen lähde on 1 227 metrin korkeudessa. Pitkä joki, ja siitä riitti jutella.
+KYSYMYS: Kerro lisää: Dinaaristen Alppien
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+AIEMPI KYSYMYS: Minä vuonna Neretvan suisto tuli Ramsar-alueeksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Neretvan suisto on ollut [[Ramsar-alue]] vuodesta 1992. Yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Suisto on leveä tulvatasanko noin 30 kilometrin matkalla ennen [[Adrianmerta]]. Sopiva paikka kyyhkyllekin levähtää.
+KYSYMYS: Kerro lisää: Ramsar-alue
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+AIEMPI KYSYMYS: Minä vuonna Neretvan suisto tuli Ramsar-alueeksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Neretvan suisto on ollut [[Ramsar-alue]] vuodesta 1992. Yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Suisto on leveä tulvatasanko noin 30 kilometrin matkalla ennen [[Adrianmerta]]. Sopiva paikka kyyhkyllekin levähtää.
+KYSYMYS: Kerro lisää: Hutovo Blaton
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Minä vuonna Neretvan suisto tuli Ramsar-alueeksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Neretvan suisto on ollut [[Ramsar-alue]] vuodesta 1992. Yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Suisto on leveä tulvatasanko noin 30 kilometrin matkalla ennen [[Adrianmerta]]. Sopiva paikka kyyhkyllekin levähtää.
+KYSYMYS: Kerro lisää: Adrianmerta
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+AIEMPI KYSYMYS: Minkä vuorten juurella Neretva saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo. Neretvan lähde on [[Zelengoran]] ja [[Lebršnikin]] vuorten juurella, 1 227 metrin korkeudessa. Vuoret kuuluvat [[Dinaaristen Alppien]] vuoristoon, ja joki laskee sieltä lopulta Adrianmereen. Joen pituus on 225 kilometriä. Pitkä matka vuorilta mereen, ja kyyhky lentäisi sen nopeammin.
+KYSYMYS: Kerro lisää: Zelengoran
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+AIEMPI KYSYMYS: Minkä vuorten juurella Neretva saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo. Neretvan lähde on [[Zelengoran]] ja [[Lebršnikin]] vuorten juurella, 1 227 metrin korkeudessa. Vuoret kuuluvat [[Dinaaristen Alppien]] vuoristoon, ja joki laskee sieltä lopulta Adrianmereen. Joen pituus on 225 kilometriä. Pitkä matka vuorilta mereen, ja kyyhky lentäisi sen nopeammin.
+KYSYMYS: Kerro lisää: Lebršnikin
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+AIEMPI KYSYMYS: Kuinka suuri osa Neretvasta on Kroatian puolella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, katotaas. Neretvasta noin 22 kilometriä kulkee Kroatiassa [[Dubrovnik-Neretvan]] läänissä ja noin 208 kilometriä [[Bosnia ja Hertsegovinassa]]. Luvut eivät aivan täsmää kokonaispituuden kanssa, joka on 225 kilometriä, joten en ole varma tarkasta jaosta. Joen viimeiset noin 30 kilometriä muodostavat suiston ennen merta. Rajan tuolla puolen vettä riittää kyllä.
+KYSYMYS: Kerro lisää: Dubrovnik-Neretvan
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+AIEMPI KYSYMYS: Kuinka suuri osa Neretvasta on Kroatian puolella?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, katotaas. Neretvasta noin 22 kilometriä kulkee Kroatiassa [[Dubrovnik-Neretvan]] läänissä ja noin 208 kilometriä [[Bosnia ja Hertsegovinassa]]. Luvut eivät aivan täsmää kokonaispituuden kanssa, joka on 225 kilometriä, joten en ole varma tarkasta jaosta. Joen viimeiset noin 30 kilometriä muodostavat suiston ennen merta. Rajan tuolla puolen vettä riittää kyllä.
+KYSYMYS: Kerro lisää: Bosnia ja Hertsegovinassa
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että Neretvan suisto on Ramsar-alue?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys tuo. [[Ramsar-sopimus]] on kansainvälinen sopimus [[kosteikkojen]] suojelusta, ja Ramsar-alueeksi nimetty kohde on kansainvälisesti tärkeä kosteikko. Neretvan suisto on ollut sellainen vuodesta 1992, ja yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Sopimuksen tarkemmista ehdoista en ole varma.
+
+Kosteikko on kyyhkylle vähän vieras ympäristö, koska minä pidän kivistä ja kattoharjoista. Mutta kyllä kosteikon linnut ansaitsevat suojelun, ihan niin kuin muutkin.
+KYSYMYS: Kerro lisää: Ramsar-sopimus
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko] Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+AIEMPI KYSYMYS: Mitä tarkoittaa, että Neretvan suisto on Ramsar-alue?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys tuo. [[Ramsar-sopimus]] on kansainvälinen sopimus [[kosteikkojen]] suojelusta, ja Ramsar-alueeksi nimetty kohde on kansainvälisesti tärkeä kosteikko. Neretvan suisto on ollut sellainen vuodesta 1992, ja yhdessä Bosnian puolella olevan [[Hutovo Blaton]] kanssa se muodostaa yhden yhtenäisen suojelualueen. Sopimuksen tarkemmista ehdoista en ole varma.
+
+Kosteikko on kyyhkylle vähän vieras ympäristö, koska minä pidän kivistä ja kattoharjoista. Mutta kyllä kosteikon linnut ansaitsevat suojelun, ihan niin kuin muutkin.
+KYSYMYS: Kerro lisää: kosteikkojen
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+AIEMPI KYSYMYS: Millä nimellä Omišin merirosvojen alukset tunnettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Omišin eli Almissan merirosvojen alukset tunnettiin nimellä [[sagittat]], mikä tarkoittaa nuolia. Ne rakennettiin nopeiksi, jotta niillä voitiin hyökätä ja vetäytyä äkkiä [[Cetinan]] suulle, joka suojeli kaupunkia. Merirosvojen ystäviä ja liittolaisia olivat [[Poljican ruhtinaskunnan]] ylämaalaiset. Nopeat nuolet, ja minä kun luulin olevani nopea.
+KYSYMYS: Kerro lisää: sagittat
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+AIEMPI KYSYMYS: Millä nimellä Omišin merirosvojen alukset tunnettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Omišin eli Almissan merirosvojen alukset tunnettiin nimellä [[sagittat]], mikä tarkoittaa nuolia. Ne rakennettiin nopeiksi, jotta niillä voitiin hyökätä ja vetäytyä äkkiä [[Cetinan]] suulle, joka suojeli kaupunkia. Merirosvojen ystäviä ja liittolaisia olivat [[Poljican ruhtinaskunnan]] ylämaalaiset. Nopeat nuolet, ja minä kun luulin olevani nopea.
+KYSYMYS: Kerro lisää: Cetinan
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+AIEMPI KYSYMYS: Millä nimellä Omišin merirosvojen alukset tunnettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Omišin eli Almissan merirosvojen alukset tunnettiin nimellä [[sagittat]], mikä tarkoittaa nuolia. Ne rakennettiin nopeiksi, jotta niillä voitiin hyökätä ja vetäytyä äkkiä [[Cetinan]] suulle, joka suojeli kaupunkia. Merirosvojen ystäviä ja liittolaisia olivat [[Poljican ruhtinaskunnan]] ylämaalaiset. Nopeat nuolet, ja minä kun luulin olevani nopea.
+KYSYMYS: Kerro lisää: Poljican ruhtinaskunnan
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Mikä joki laskee Adrianmereen Omišin kohdalla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Omišin kohdalla [[Adrianmereen]] laskee Cetina-joki, ja kaupunki sijaitsee juuri sen suulla Dalmatiassa, noin 25 kilometriä [[Splitistä]] kaakkoon. Joen suu suojasi kaupunkia aikoinaan, ja sinne [[Almissan]] merirosvot vetäytyivät nopeilla aluksillaan. Lyhyt vastaus, mut kelpaa.
+KYSYMYS: Kerro lisää: Adrianmereen
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+AIEMPI KYSYMYS: Mikä joki laskee Adrianmereen Omišin kohdalla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Omišin kohdalla [[Adrianmereen]] laskee Cetina-joki, ja kaupunki sijaitsee juuri sen suulla Dalmatiassa, noin 25 kilometriä [[Splitistä]] kaakkoon. Joen suu suojasi kaupunkia aikoinaan, ja sinne [[Almissan]] merirosvot vetäytyivät nopeilla aluksillaan. Lyhyt vastaus, mut kelpaa.
+KYSYMYS: Kerro lisää: Splitistä
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+AIEMPI KYSYMYS: Mikä joki laskee Adrianmereen Omišin kohdalla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Omišin kohdalla [[Adrianmereen]] laskee Cetina-joki, ja kaupunki sijaitsee juuri sen suulla Dalmatiassa, noin 25 kilometriä [[Splitistä]] kaakkoon. Joen suu suojasi kaupunkia aikoinaan, ja sinne [[Almissan]] merirosvot vetäytyivät nopeilla aluksillaan. Lyhyt vastaus, mut kelpaa.
+KYSYMYS: Kerro lisää: Almissan
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Dalmatia on historiallinen alue Kroatian Adrianmeren rannikolla, pitkä ja kapea kaistale, jonka edustalla on lukuisia saaria. Sen tunnetuimpia kaupunkeja ovat [[Split]], [[Zadar]] ja [[Dubrovnik]]. Suuri osa rannikosta kuului pitkään Venetsian hallintaan, minkä vuoksi monilla kaupungeilla on myös italialainen nimi; Dubrovnik oli aikoinaan itsenäinen kaupunkivaltio.
+
+Dalmatiankoira on saanut nimensä tästä seudusta, vaikka sen alkuperästä on kiistelty. Minä en ota kantaa, mutta pilkullinen takki on kyllä ylhäältä helppo tunnistaa.
+KYSYMYS: Kerro lisää: Split
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Keksinnöt: Portaat, joita soittaa meri] 2005 — Zadarin rantaan rakennettiin vuonna 2005 marmoriportaat, jotka laskeutuvat suoraan mereen. Portaiden alle on piilotettu kolmisenkymmentä eri mittaista putkea. Kun aalto työntyy portaiden alle, se painaa ilmaa putkiin ja soitin soi — matalat putket huokaavat pitkään ja lyhyet vastaavat korkeammalta. Sävelmää ei voi ennustaa, koska sen tekevät aallot: tyynellä säällä ääni on hiljainen huokaus, myrskyllä kokonainen soinnutus. Portailla istutaan kuuntelemassa auringonlaskua.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Dalmatia on historiallinen alue Kroatian Adrianmeren rannikolla, pitkä ja kapea kaistale, jonka edustalla on lukuisia saaria. Sen tunnetuimpia kaupunkeja ovat [[Split]], [[Zadar]] ja [[Dubrovnik]]. Suuri osa rannikosta kuului pitkään Venetsian hallintaan, minkä vuoksi monilla kaupungeilla on myös italialainen nimi; Dubrovnik oli aikoinaan itsenäinen kaupunkivaltio.
+
+Dalmatiankoira on saanut nimensä tästä seudusta, vaikka sen alkuperästä on kiistelty. Minä en ota kantaa, mutta pilkullinen takki on kyllä ylhäältä helppo tunnistaa.
+KYSYMYS: Kerro lisää: Zadar
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik] Kalkkikivinen kaupunki Adrianmeren rannalla oli satojen vuosien ajan oma pieni tasavaltansa: sillä oli oma laivasto, omat lait ja tapa selvitä naapureiden välissä sopimalla eikä sotimalla.
+AIEMPI KYSYMYS: Mikä alue Dalmatia on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Dalmatia on historiallinen alue Kroatian Adrianmeren rannikolla, pitkä ja kapea kaistale, jonka edustalla on lukuisia saaria. Sen tunnetuimpia kaupunkeja ovat [[Split]], [[Zadar]] ja [[Dubrovnik]]. Suuri osa rannikosta kuului pitkään Venetsian hallintaan, minkä vuoksi monilla kaupungeilla on myös italialainen nimi; Dubrovnik oli aikoinaan itsenäinen kaupunkivaltio.
+
+Dalmatiankoira on saanut nimensä tästä seudusta, vaikka sen alkuperästä on kiistelty. Minä en ota kantaa, mutta pilkullinen takki on kyllä ylhäältä helppo tunnistaa.
+KYSYMYS: Kerro lisää: Dubrovnik
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kaupunkilehti / Dubrovnik: Klapa lauletaan ilman soittimia] Klapa on dalmatialainen mieskuorolaulu ilman soittimia: viidestä kymmeneen laulajaa seisoo tiiviissä puolikaaressa ja sovittaa äänet toisiinsa. Perinne syntyi kirkoissa ja satamissa, ja Unesco suojeli sen 2012.
+AIEMPI KYSYMYS: Mitä tarkoittaa a cappella -laulu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. A cappella tarkoittaa laulua ilman soitinsäestystä, pelkillä äänillä. Termi tulee italian kielestä ja viittaa kirjaimellisesti kappelin tapaan laulamiseen. Dalmatiassa tällaisella moniäänisellä laululla on vahva perinne, ja se tunnetaan nimellä [[klapa]]. Muistaakseni [[Unescon]] aineettoman kulttuuriperinnön luettelossa on mukana myös tämä dalmatialainen laulutapa, mutta en ole varma tarkasta vuodesta. Kyllä kyyhkykin tykkää laulusta, jossa ei tarvita soittimia.
+KYSYMYS: Kerro lisää: klapa
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+AIEMPI KYSYMYS: Mitä tarkoittaa a cappella -laulu?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. A cappella tarkoittaa laulua ilman soitinsäestystä, pelkillä äänillä. Termi tulee italian kielestä ja viittaa kirjaimellisesti kappelin tapaan laulamiseen. Dalmatiassa tällaisella moniäänisellä laululla on vahva perinne, ja se tunnetaan nimellä [[klapa]]. Muistaakseni [[Unescon]] aineettoman kulttuuriperinnön luettelossa on mukana myös tämä dalmatialainen laulutapa, mutta en ole varma tarkasta vuodesta. Kyllä kyyhkykin tykkää laulusta, jossa ei tarvita soittimia.
+KYSYMYS: Kerro lisää: Unescon
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Pyhän Pietarin kirkko] 1209–1746 Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja se on yksi kaupungin vanhimmista rakennuksista. Sen torni on ollut vuosisatojen ajan Riian korkein rakennelma – mutta myös yksi onnettomimmista: torni on romahtanut ja palanut useita kertoja historian aikana. Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja se oli 148 metriä korkea – tuolloin koko Euroopan korkein puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja seuraava, matalampi torni valmistui vasta 1746. Toisessa maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja nykyinen torni valmistui jälleenrakennettuna vasta 1970-luvulla.…
+AIEMPI KYSYMYS: Mitä esiromaaninen tarkoittaa rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Esiromaanisella tarkoitetaan varhaiskeskiajan rakennustaidetta, joka edelsi romaanisen tyylin vakiintumista noin vuoden 1000 tienoilla. Rakennukset olivat usein pieniä kivikirkkoja, joissa oli paksut seinät, yksinkertaiset muodot ja vähän koristelua. Omišin 900-luvun [[Pyhän Pietarin kirkko]] edustaa tätä tyyliä, ja Kroatian rannikolla on useita muitakin varhaiskeskiaikaisia kirkkoja. Tyylin jälkeen tuli [[romaanisen tyylin]] vaihe. Vanhaa tavaraa, ja silti seisoo.
+KYSYMYS: Kerro lisää: Pyhän Pietarin kirkko
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Denver — kohdekartta / Kohdekartta: Molly Brownin talo] 1889 Pennsylvania Streetin varrella seisova talo rakennettiin 1889 Isaac ja Mary Largen kodiksi. Arkkitehti William A. Lang yhdisti siinä aikakauden muotivirtaukset, kuningatar Annen tyylin ja richardsonilaisen romaanisen tyylin. Kun hopean hinta romahti 1893, Larget myivät talon; sen osti seuraavana vuonna kaivosmies J. J. Brown 30 000 dollarilla, ja 1898 omistus siirtyi hänen vaimolleen Margaretille. Margaret Brown selvisi Titanicin haaksirikosta ja tunnettiin sen jälkeen nimellä Unsinkable Molly Brown. Talo oli usein vuokralla, koska perhe matkusti paljon: vuonna 1902 siinä asui Coloradon kuvernööri perheineen, kun virka-asuntoa remontoitiin. Vuonna 1926 Margaret muutti talon täysihoitol…
+AIEMPI KYSYMYS: Mitä esiromaaninen tarkoittaa rakennustaiteessa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Esiromaanisella tarkoitetaan varhaiskeskiajan rakennustaidetta, joka edelsi romaanisen tyylin vakiintumista noin vuoden 1000 tienoilla. Rakennukset olivat usein pieniä kivikirkkoja, joissa oli paksut seinät, yksinkertaiset muodot ja vähän koristelua. Omišin 900-luvun [[Pyhän Pietarin kirkko]] edustaa tätä tyyliä, ja Kroatian rannikolla on useita muitakin varhaiskeskiaikaisia kirkkoja. Tyylin jälkeen tuli [[romaanisen tyylin]] vaihe. Vanhaa tavaraa, ja silti seisoo.
+KYSYMYS: Kerro lisää: romaanisen tyylin
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Millä kukkulalla Motovun sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Motovun sijaitsee [[Istrian]] keskiosassa Länsi-Kroatiassa kukkulalla, joka kohoaa noin 270 metriä merenpinnan yläpuolelle. Kukkulan alla virtaa [[Mirna]]-joki, ja sen toisella puolella on tryffeleistään tunnettu metsä. Kukkulan mahdollisesta omasta nimestä en ole varma, joten kerron mieluummin sen, minkä tiedän: keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja [[Venetsia]] otti sen haltuunsa vuonna 1278. Ylhäältä katsoen näkymä on kyllä komea.
+KYSYMYS: Kerro lisää: Istrian
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Millä kukkulalla Motovun sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Motovun sijaitsee [[Istrian]] keskiosassa Länsi-Kroatiassa kukkulalla, joka kohoaa noin 270 metriä merenpinnan yläpuolelle. Kukkulan alla virtaa [[Mirna]]-joki, ja sen toisella puolella on tryffeleistään tunnettu metsä. Kukkulan mahdollisesta omasta nimestä en ole varma, joten kerron mieluummin sen, minkä tiedän: keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja [[Venetsia]] otti sen haltuunsa vuonna 1278. Ylhäältä katsoen näkymä on kyllä komea.
+KYSYMYS: Kerro lisää: Mirna
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Millä kukkulalla Motovun sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Motovun sijaitsee [[Istrian]] keskiosassa Länsi-Kroatiassa kukkulalla, joka kohoaa noin 270 metriä merenpinnan yläpuolelle. Kukkulan alla virtaa [[Mirna]]-joki, ja sen toisella puolella on tryffeleistään tunnettu metsä. Kukkulan mahdollisesta omasta nimestä en ole varma, joten kerron mieluummin sen, minkä tiedän: keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja [[Venetsia]] otti sen haltuunsa vuonna 1278. Ylhäältä katsoen näkymä on kyllä komea.
+KYSYMYS: Kerro lisää: Venetsia
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Millä eläimillä tryffeleitä etsitään?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä tiedän. Motovunin metsässä tryffeleitä etsitään nykyään koulutetuilla koirilla, jotka haistavat maan alla kasvavan sienen tuoksun. Tunnettu esimerkki on paikallinen tryffelinmetsästäjä [[Giancarlo Zigante]], joka löysi vuonna 1999 koiransa [[Dianan]] avulla lähes 1,3 kilon painoisen [[valkotryffelin]]. Joissain maissa on perinteisesti käytetty myös sikoja. Koira siinä pääsee makkaran sijaan sienelle.
+KYSYMYS: Kerro lisää: Giancarlo Zigante
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Millä eläimillä tryffeleitä etsitään?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä tiedän. Motovunin metsässä tryffeleitä etsitään nykyään koulutetuilla koirilla, jotka haistavat maan alla kasvavan sienen tuoksun. Tunnettu esimerkki on paikallinen tryffelinmetsästäjä [[Giancarlo Zigante]], joka löysi vuonna 1999 koiransa [[Dianan]] avulla lähes 1,3 kilon painoisen [[valkotryffelin]]. Joissain maissa on perinteisesti käytetty myös sikoja. Koira siinä pääsee makkaran sijaan sienelle.
+KYSYMYS: Kerro lisää: Dianan
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Millä eläimillä tryffeleitä etsitään?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä minä tiedän. Motovunin metsässä tryffeleitä etsitään nykyään koulutetuilla koirilla, jotka haistavat maan alla kasvavan sienen tuoksun. Tunnettu esimerkki on paikallinen tryffelinmetsästäjä [[Giancarlo Zigante]], joka löysi vuonna 1999 koiransa [[Dianan]] avulla lähes 1,3 kilon painoisen [[valkotryffelin]]. Joissain maissa on perinteisesti käytetty myös sikoja. Koira siinä pääsee makkaran sijaan sienelle.
+KYSYMYS: Kerro lisää: valkotryffelin
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+AIEMPI KYSYMYS: Miksi valkotryffeli on niin arvostettu ja kallis?
+AIEMPI VASTAUS (Livia):
+Mmm— Valkotryffeli on arvostettu, koska sitä ei ole onnistuttu viljelemään luotettavasti. Se kasvaa luonnossa maan alla ja muodostaa puiden juurten kanssa [[mykorritsan]], eli sienen ja puun välisen yhteistoiminnan, jota ei voi helposti jäljitellä. Lisäksi sen tuoksu on erittäin voimakas, ja sesonki on lyhyt ja osuu syksyyn. Istrian valkotryffeli on samaa lajia kuin [[Alban]] kuuluisa tryffeli Italiassa. Tarkkoja hintoja en lähde arvailemaan. Minä en ole koskaan maistanut, ja se on sääli.
+KYSYMYS: Kerro lisää: mykorritsan
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Miksi valkotryffeli on niin arvostettu ja kallis?
+AIEMPI VASTAUS (Livia):
+Mmm— Valkotryffeli on arvostettu, koska sitä ei ole onnistuttu viljelemään luotettavasti. Se kasvaa luonnossa maan alla ja muodostaa puiden juurten kanssa [[mykorritsan]], eli sienen ja puun välisen yhteistoiminnan, jota ei voi helposti jäljitellä. Lisäksi sen tuoksu on erittäin voimakas, ja sesonki on lyhyt ja osuu syksyyn. Istrian valkotryffeli on samaa lajia kuin [[Alban]] kuuluisa tryffeli Italiassa. Tarkkoja hintoja en lähde arvailemaan. Minä en ole koskaan maistanut, ja se on sääli.
+KYSYMYS: Kerro lisää: Alban
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Andrea Palladio?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Andrea Palladio oli 1500-luvun italialainen arkkitehti, joka vaikutti pääasiassa Pohjois-Italiassa [[Vicenzan]] ympäristössä ja [[Venetsian]] alueella. Hän suunnitteli kaupunkipalatseja, kirkkoja ja maaseutuhuviloita, joista tunnetuin lienee [[Villa Rotonda]]. Hänen kirjansa rakennustaiteesta levitti tyyliä Euroopassa ja sen ulkopuolelle, ja siitä syntyi palladiolaisuus. Motovunin [[Pyhän Tapanin kirkon]] luonnosten on arveltu olevan hänen käsialaansa, mutta varmaa tietoa en tästä ole. Vähän kyl arkkitehtikin on kuin kyyhky: asuu korkealla ja katsoo alas.
+KYSYMYS: Kerro lisää: Vicenzan
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Andrea Palladio?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Andrea Palladio oli 1500-luvun italialainen arkkitehti, joka vaikutti pääasiassa Pohjois-Italiassa [[Vicenzan]] ympäristössä ja [[Venetsian]] alueella. Hän suunnitteli kaupunkipalatseja, kirkkoja ja maaseutuhuviloita, joista tunnetuin lienee [[Villa Rotonda]]. Hänen kirjansa rakennustaiteesta levitti tyyliä Euroopassa ja sen ulkopuolelle, ja siitä syntyi palladiolaisuus. Motovunin [[Pyhän Tapanin kirkon]] luonnosten on arveltu olevan hänen käsialaansa, mutta varmaa tietoa en tästä ole. Vähän kyl arkkitehtikin on kuin kyyhky: asuu korkealla ja katsoo alas.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Managua — kaupunkilehti / Managua: Osoite ilman katua eikä numeroa] Managuan osoitteissa ei ole katujen nimiä eikä talonumeroita: matka lasketaan varoina, vanhana espanjalaisena pituusmittana jota ei käytetä juuri missään muualla, ja suunnaksi ilmoitetaan usein "järvelle" pohjoisen sijaan, koska kaupunki nojaa Xolotlániin. Lähtöpisteenä toimii tunnettu maamerkki, kuten iso pyöreä Rotonda Plaza Inter -risteys. Moni perinteinen maamerkki hävisi kuitenkin vuoden 1972 järistyksessä: osoite voi yhä viitata rakennukseen tai puuhun, joka ei ole ollut olemassa vuosikymmeniin, ja silti paikalliset löytävät perille.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Andrea Palladio?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Andrea Palladio oli 1500-luvun italialainen arkkitehti, joka vaikutti pääasiassa Pohjois-Italiassa [[Vicenzan]] ympäristössä ja [[Venetsian]] alueella. Hän suunnitteli kaupunkipalatseja, kirkkoja ja maaseutuhuviloita, joista tunnetuin lienee [[Villa Rotonda]]. Hänen kirjansa rakennustaiteesta levitti tyyliä Euroopassa ja sen ulkopuolelle, ja siitä syntyi palladiolaisuus. Motovunin [[Pyhän Tapanin kirkon]] luonnosten on arveltu olevan hänen käsialaansa, mutta varmaa tietoa en tästä ole. Vähän kyl arkkitehtikin on kuin kyyhky: asuu korkealla ja katsoo alas.
+KYSYMYS: Kerro lisää: Villa Rotonda
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Andrea Palladio?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Andrea Palladio oli 1500-luvun italialainen arkkitehti, joka vaikutti pääasiassa Pohjois-Italiassa [[Vicenzan]] ympäristössä ja [[Venetsian]] alueella. Hän suunnitteli kaupunkipalatseja, kirkkoja ja maaseutuhuviloita, joista tunnetuin lienee [[Villa Rotonda]]. Hänen kirjansa rakennustaiteesta levitti tyyliä Euroopassa ja sen ulkopuolelle, ja siitä syntyi palladiolaisuus. Motovunin [[Pyhän Tapanin kirkon]] luonnosten on arveltu olevan hänen käsialaansa, mutta varmaa tietoa en tästä ole. Vähän kyl arkkitehtikin on kuin kyyhky: asuu korkealla ja katsoo alas.
+KYSYMYS: Kerro lisää: Pyhän Tapanin kirkon
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+AIEMPI KYSYMYS: Mikä erottaa goottilaisen tyylin romaanisesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Romaaninen tyyli tunnetaan paksuista muureista, pyöreistä kaarista ja pienistä ikkunoista, kun taas goottilaiselle tyylille ovat ominaisia [[suippokaaret]], korkeat holvit ja suuret ikkunat, jotka päästävät sisään enemmän valoa. Goottilainen tyyli syntyi 1100-luvun puolivälin tienoilla Pohjois-[[Ranskassa]], ja sen suuriin kirkkoihin kuuluvat usein ulkopuoliset [[tukikaaret]], jotka kannattelevat korkeaa rakennetta. Motovunin tornit ja portit yhdistävät näitä tyylejä. Ei tämä ihan lyhyt asia ollut.
+KYSYMYS: Kerro lisää: suippokaaret
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä erottaa goottilaisen tyylin romaanisesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Romaaninen tyyli tunnetaan paksuista muureista, pyöreistä kaarista ja pienistä ikkunoista, kun taas goottilaiselle tyylille ovat ominaisia [[suippokaaret]], korkeat holvit ja suuret ikkunat, jotka päästävät sisään enemmän valoa. Goottilainen tyyli syntyi 1100-luvun puolivälin tienoilla Pohjois-[[Ranskassa]], ja sen suuriin kirkkoihin kuuluvat usein ulkopuoliset [[tukikaaret]], jotka kannattelevat korkeaa rakennetta. Motovunin tornit ja portit yhdistävät näitä tyylejä. Ei tämä ihan lyhyt asia ollut.
+KYSYMYS: Kerro lisää: Ranskassa
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Notre-Dame] 1163–1345 Notre-Damen katedraalin rakentaminen kesti uskomattomat 182 vuotta — työ alkoi vuonna 1163 ja valmistui vasta 1345. Kirkko oli aikansa insinööritaidon huippu: sen kivikattoa kannattelevat ulkopuoliset tukikaaret, niin sanotut lentävät tukipilarit, jotka keksittiin juuri tällaisia jättimäisiä kirkkoja varten. Katedraalissa on tapahtunut historian suuria hetkiä: vuonna 1804 Napoleon kruunasi itsensä keisariksi kirkon alttarilla, ja vuonna 1944 kenraali de Gaulle kiitti Jumalaa Pariisin vapautumisesta samassa kirkossa. Huhtikuussa 2019 katedraalin vintillä syttyi tulipalo, joka tuhosi vanhan puukaton ja tornihuipun. Palomiehet onnistuivat kuitenkin pelastamaan tornit, julkisivun ja l…
+AIEMPI KYSYMYS: Mikä erottaa goottilaisen tyylin romaanisesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Romaaninen tyyli tunnetaan paksuista muureista, pyöreistä kaarista ja pienistä ikkunoista, kun taas goottilaiselle tyylille ovat ominaisia [[suippokaaret]], korkeat holvit ja suuret ikkunat, jotka päästävät sisään enemmän valoa. Goottilainen tyyli syntyi 1100-luvun puolivälin tienoilla Pohjois-[[Ranskassa]], ja sen suuriin kirkkoihin kuuluvat usein ulkopuoliset [[tukikaaret]], jotka kannattelevat korkeaa rakennetta. Motovunin tornit ja portit yhdistävät näitä tyylejä. Ei tämä ihan lyhyt asia ollut.
+KYSYMYS: Kerro lisää: tukikaaret
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Minkä saaren välissä Trogirin vanhakaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Trogirin vanhakaupunki sijaitsee pienellä saarella mantereen ja [[Čiovon]] saaren välissä Dalmatian rannikolla, 27 kilometriä [[Splitistä]] länteen. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset [[Visin]] saarelta nimellä [[Tragurion]]. Vanha keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997. Tämä on mukava kaupunki katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Čiovon
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Minkä saaren välissä Trogirin vanhakaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Trogirin vanhakaupunki sijaitsee pienellä saarella mantereen ja [[Čiovon]] saaren välissä Dalmatian rannikolla, 27 kilometriä [[Splitistä]] länteen. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset [[Visin]] saarelta nimellä [[Tragurion]]. Vanha keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997. Tämä on mukava kaupunki katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Splitistä
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Minkä saaren välissä Trogirin vanhakaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Trogirin vanhakaupunki sijaitsee pienellä saarella mantereen ja [[Čiovon]] saaren välissä Dalmatian rannikolla, 27 kilometriä [[Splitistä]] länteen. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset [[Visin]] saarelta nimellä [[Tragurion]]. Vanha keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997. Tämä on mukava kaupunki katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Visin
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Minkä saaren välissä Trogirin vanhakaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä muistan. Trogirin vanhakaupunki sijaitsee pienellä saarella mantereen ja [[Čiovon]] saaren välissä Dalmatian rannikolla, 27 kilometriä [[Splitistä]] länteen. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset [[Visin]] saarelta nimellä [[Tragurion]]. Vanha keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997. Tämä on mukava kaupunki katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Tragurion
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Kuka teki Trogirin katedraalin kuuluisan portaalin?
+AIEMPI VASTAUS (Livia):
+Ai se. Trogirin katedraalin kuuluisan portaalin teki mestari [[Radovan]], ja se on vanhan kaupungin 1200-luvun katedraalissa. Katedraali on pyhitetty Pyhälle Laurentiukselle. Portaali on Trogirin tunnetuimpia taideteoksia, ja se kuuluu [[Unescon]] maailmanperintökohteena suojeltuun historialliseen keskustaan. Tarkemmasta valmistumisvuodesta en ole varma. Ihan kunnon mestarityö kuulemma.
+KYSYMYS: Kerro lisää: Radovan
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Kuka teki Trogirin katedraalin kuuluisan portaalin?
+AIEMPI VASTAUS (Livia):
+Ai se. Trogirin katedraalin kuuluisan portaalin teki mestari [[Radovan]], ja se on vanhan kaupungin 1200-luvun katedraalissa. Katedraali on pyhitetty Pyhälle Laurentiukselle. Portaali on Trogirin tunnetuimpia taideteoksia, ja se kuuluu [[Unescon]] maailmanperintökohteena suojeltuun historialliseen keskustaan. Tarkemmasta valmistumisvuodesta en ole varma. Ihan kunnon mestarityö kuulemma.
+KYSYMYS: Kerro lisää: Unescon
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot] Sisiliassa jokainen valloittaja jätti jälkensä kiveen: kreikkalaisten temppelit, roomalaisten mosaiikit ja teatteri, jossa näytelmiä esitetään yhä.
+- [Sisilia — kaupunkilehti / Sisilia] Saari, jossa nukketeatterin ritarit taistelevat narujen varassa, leivos täytetään vasta tilauksesta, ja torilla huudetaan laulaen.
+AIEMPI KYSYMYS: Ketä saraseenit olivat keskiajan Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hmm. Saraseeni oli keskiajalla käytetty yleisnimitys, jolla eurooppalaiset kristityt kutsuivat Välimeren alueen muslimeja, ei yhtä yksittäistä kansaa. Nimeä käytettiin esimerkiksi arabeista ja muista Pohjois-Afrikan asukkaista, ja muslimien hallinto ulottui keskiajalla myös [[Sisiliassa]] ja Etelä-Italiaan. Nimitys liitettiin usein [[ristiretkien]] aikaiseen kuvaan vastapuolesta, ja nykyään sitä käytetään lähinnä historiantutkimuksessa. Trogirin kohdalla on mainittu vuoden 1123 hyökkäys. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Sisiliassa
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Ketä saraseenit olivat keskiajan Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hmm. Saraseeni oli keskiajalla käytetty yleisnimitys, jolla eurooppalaiset kristityt kutsuivat Välimeren alueen muslimeja, ei yhtä yksittäistä kansaa. Nimeä käytettiin esimerkiksi arabeista ja muista Pohjois-Afrikan asukkaista, ja muslimien hallinto ulottui keskiajalla myös [[Sisiliassa]] ja Etelä-Italiaan. Nimitys liitettiin usein [[ristiretkien]] aikaiseen kuvaan vastapuolesta, ja nykyään sitä käytetään lähinnä historiantutkimuksessa. Trogirin kohdalla on mainittu vuoden 1123 hyökkäys. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: ristiretkien
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Mikä oli Salona ja miksi se tuhoutui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Salona oli muinainen roomalainen kaupunki lähellä nykyistä Splitiä, nykyisen [[Solinin]] kaupungin kohdalla, ja se oli Dalmatian roomalaisprovinssin tärkeä keskus. Kaupunki tuhoutui noin 600-luvun alussa, kun [[avaarien]] ja slaavien hyökkäykset ajoivat sen asukkaat pakoon; tarkka vuosi vaihtelee lähteissä. Osa pakolaisista asettui [[Diocletianuksen]] palatsin muurien suojaan, mistä Split kasvoi, ja osa Trogiriin. Siitä on jo noin tuhat neljäsataa vuotta.
+KYSYMYS: Kerro lisää: Solinin
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Mikä oli Salona ja miksi se tuhoutui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Salona oli muinainen roomalainen kaupunki lähellä nykyistä Splitiä, nykyisen [[Solinin]] kaupungin kohdalla, ja se oli Dalmatian roomalaisprovinssin tärkeä keskus. Kaupunki tuhoutui noin 600-luvun alussa, kun [[avaarien]] ja slaavien hyökkäykset ajoivat sen asukkaat pakoon; tarkka vuosi vaihtelee lähteissä. Osa pakolaisista asettui [[Diocletianuksen]] palatsin muurien suojaan, mistä Split kasvoi, ja osa Trogiriin. Siitä on jo noin tuhat neljäsataa vuotta.
+KYSYMYS: Kerro lisää: avaarien
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+AIEMPI KYSYMYS: Mikä oli Salona ja miksi se tuhoutui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Salona oli muinainen roomalainen kaupunki lähellä nykyistä Splitiä, nykyisen [[Solinin]] kaupungin kohdalla, ja se oli Dalmatian roomalaisprovinssin tärkeä keskus. Kaupunki tuhoutui noin 600-luvun alussa, kun [[avaarien]] ja slaavien hyökkäykset ajoivat sen asukkaat pakoon; tarkka vuosi vaihtelee lähteissä. Osa pakolaisista asettui [[Diocletianuksen]] palatsin muurien suojaan, mistä Split kasvoi, ja osa Trogiriin. Siitä on jo noin tuhat neljäsataa vuotta.
+KYSYMYS: Kerro lisää: Diocletianuksen
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maailmanperintöluettelo on Unescon ylläpitämä luettelo kulttuuri- ja luontokohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Se perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]], ja kohteet suojellaan niin, että niiden säilyminen tuleville sukupolville turvataan. Kroatiassa luettelossa ovat muun muassa Trogirin lisäksi [[Dubrovnikin]] vanha kaupunki ja [[Plitvicen]] järvet. Luetteloon pääsy vaatii maan omaa hakemusta ja kansainvälisen arvioinnin.
+
+Minä olen lentänyt monen luetteloidun kohteen yli. Tuntuu aina siltä, että lintu pitäisi myös suojella.
+KYSYMYS: Kerro lisää: maailmanperintösopimukseen
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+- [Kroatia — maalehti / Ruoka: Lahti joka kasvattaa ostereita ja suolaa] nykyään — Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä suolasta että lahden ostereista.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maailmanperintöluettelo on Unescon ylläpitämä luettelo kulttuuri- ja luontokohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Se perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]], ja kohteet suojellaan niin, että niiden säilyminen tuleville sukupolville turvataan. Kroatiassa luettelossa ovat muun muassa Trogirin lisäksi [[Dubrovnikin]] vanha kaupunki ja [[Plitvicen]] järvet. Luetteloon pääsy vaatii maan omaa hakemusta ja kansainvälisen arvioinnin.
+
+Minä olen lentänyt monen luetteloidun kohteen yli. Tuntuu aina siltä, että lintu pitäisi myös suojella.
+KYSYMYS: Kerro lisää: Dubrovnikin
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+AIEMPI KYSYMYS: Mikä on Unescon maailmanperintöluettelo?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Maailmanperintöluettelo on Unescon ylläpitämä luettelo kulttuuri- ja luontokohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Se perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]], ja kohteet suojellaan niin, että niiden säilyminen tuleville sukupolville turvataan. Kroatiassa luettelossa ovat muun muassa Trogirin lisäksi [[Dubrovnikin]] vanha kaupunki ja [[Plitvicen]] järvet. Luetteloon pääsy vaatii maan omaa hakemusta ja kansainvälisen arvioinnin.
+
+Minä olen lentänyt monen luetteloidun kohteen yli. Tuntuu aina siltä, että lintu pitäisi myös suojella.
+KYSYMYS: Kerro lisää: Plitvicen
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+AIEMPI KYSYMYS: Millä nimellä Rovinjia kutsutaan italiaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rovinjia kutsutaan italiaksi nimellä [[Rovigno]], ja kaupunki on virallisesti kaksikielinen. Se sijaitsee [[Istrian]] länsirannikolla Pohjois-Adrianmerellä, ja alueella ennen laajasti puhuttu romaaninen [[istriotti]]-kieli on yhä joidenkin kotikieli. Kaksikielinen kaupunki, ja minä kun osaan vain yhtä.
+KYSYMYS: Kerro lisää: Rovigno
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Millä nimellä Rovinjia kutsutaan italiaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rovinjia kutsutaan italiaksi nimellä [[Rovigno]], ja kaupunki on virallisesti kaksikielinen. Se sijaitsee [[Istrian]] länsirannikolla Pohjois-Adrianmerellä, ja alueella ennen laajasti puhuttu romaaninen [[istriotti]]-kieli on yhä joidenkin kotikieli. Kaksikielinen kaupunki, ja minä kun osaan vain yhtä.
+KYSYMYS: Kerro lisää: Istrian
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+AIEMPI KYSYMYS: Millä nimellä Rovinjia kutsutaan italiaksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rovinjia kutsutaan italiaksi nimellä [[Rovigno]], ja kaupunki on virallisesti kaksikielinen. Se sijaitsee [[Istrian]] länsirannikolla Pohjois-Adrianmerellä, ja alueella ennen laajasti puhuttu romaaninen [[istriotti]]-kieli on yhä joidenkin kotikieli. Kaksikielinen kaupunki, ja minä kun osaan vain yhtä.
+KYSYMYS: Kerro lisää: istriotti
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Minä vuonna Rovinjin saari yhdistettiin mantereeseen?
+AIEMPI VASTAUS (Livia):
+Just niin, Rovinjin saari yhdistettiin mantereeseen vuonna 1763, kun salmi täytettiin umpeen. Kaupunki oli rakennettu saarelle, ja [[Venetsian]] hallinnon aikana 1283–1797 se oli yksi Istrian tärkeimmistä kaupungeista. Vanhoja jäänteitä ovat kahden muurikehän jäänteet, laiturin [[Balbin kaari]] vuodelta 1680 sekä [[Pyhän Euphemian kirkko]]. Hyvä ajoitus, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+AIEMPI KYSYMYS: Minä vuonna Rovinjin saari yhdistettiin mantereeseen?
+AIEMPI VASTAUS (Livia):
+Just niin, Rovinjin saari yhdistettiin mantereeseen vuonna 1763, kun salmi täytettiin umpeen. Kaupunki oli rakennettu saarelle, ja [[Venetsian]] hallinnon aikana 1283–1797 se oli yksi Istrian tärkeimmistä kaupungeista. Vanhoja jäänteitä ovat kahden muurikehän jäänteet, laiturin [[Balbin kaari]] vuodelta 1680 sekä [[Pyhän Euphemian kirkko]]. Hyvä ajoitus, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Balbin kaari
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+AIEMPI KYSYMYS: Minä vuonna Rovinjin saari yhdistettiin mantereeseen?
+AIEMPI VASTAUS (Livia):
+Just niin, Rovinjin saari yhdistettiin mantereeseen vuonna 1763, kun salmi täytettiin umpeen. Kaupunki oli rakennettu saarelle, ja [[Venetsian]] hallinnon aikana 1283–1797 se oli yksi Istrian tärkeimmistä kaupungeista. Vanhoja jäänteitä ovat kahden muurikehän jäänteet, laiturin [[Balbin kaari]] vuodelta 1680 sekä [[Pyhän Euphemian kirkko]]. Hyvä ajoitus, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Pyhän Euphemian kirkko
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Kaupungilla on oma kieli] Kujilla ja toreilla puhutaan shanghainkieltä, joka kuuluu wu-kieliin eikä aukea mandariinia osaavalle. Puhujia on noin 14 miljoonaa, ja kieli muotoutui sataman mukana: kun kaupunki avattiin kaupalle 1850-luvulla, muuttajat toivat Suzhousta ja Ningbosta murteensa, jotka sulautuivat paikalliseen puheeseen. Yleiskielen opetus työnsi shanghain syrjään, ja kouluissa sen käyttöä hillittiin vuodesta 1992, mutta 2010-luvulla suunta kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi 2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi 2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.
+AIEMPI KYSYMYS: Millainen kieli istriotti on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Istriotti on romaaninen kieli, joka on ennen ollut laajasti käytössä Istrian länsiosissa, mutta jota nykyään puhuu enää pieni joukko ihmisiä. Se kuuluu [[romaanisiin kieliin]] kuten italia ja ranska, mutta sitä pidetään omana kielenään eikä pelkästään italian murteena, vaikka tutkijat ovat kiistelleet sen tarkasta luokittelusta. Siihen on vaikuttanut vahvasti myös [[venetsian kielen]] läheisyys. Kieltä pidetään uhanalaisena, ja Rovinjissa se on yhä joidenkin kotikieli. Pieni kieli, mut elävä.
+KYSYMYS: Kerro lisää: romaanisiin kieliin
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Historia: Opettaja, joka käänsi Shakespearen] 1961–1985 — Julius Nyerere opiskeli Makereressa ja Edinburghissa, palasi opettajaksi ja johti maansa itsenäisyyteen 1961; Tanganjika ja Sansibar yhdistyivät Tansaniaksi 1964. Vuoden 1967 Arushan julistus nosti omavaraisuuden ja yhteisöllisyyden — ujamaa, suurperhe — maan ohjelmaksi. Nyerere teki swahilista koko valtion kielen ja käänsi sille itse Shakespearen Julius Caesarin 1961 ja Venetsian kauppiaan 1972. Häntä kutsuttiin Mwalimuksi, opettajaksi; patsaita hän kielsi pystyttämästä itsestään ja jätti presidentin paikan vapaaehtoisesti 1985 — harvinaista koko mantereella.
+AIEMPI KYSYMYS: Millainen kieli istriotti on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Istriotti on romaaninen kieli, joka on ennen ollut laajasti käytössä Istrian länsiosissa, mutta jota nykyään puhuu enää pieni joukko ihmisiä. Se kuuluu [[romaanisiin kieliin]] kuten italia ja ranska, mutta sitä pidetään omana kielenään eikä pelkästään italian murteena, vaikka tutkijat ovat kiistelleet sen tarkasta luokittelusta. Siihen on vaikuttanut vahvasti myös [[venetsian kielen]] läheisyys. Kieltä pidetään uhanalaisena, ja Rovinjissa se on yhä joidenkin kotikieli. Pieni kieli, mut elävä.
+KYSYMYS: Kerro lisää: venetsian kielen
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+AIEMPI KYSYMYS: Kuka oli Pyhä Euphemia, jonka mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Euphemia oli Khalkedonin kaupungista kotoisin oleva nuori nainen, joka kuoli marttyyrina noin vuoden 303 tienoilla [[Diocletianuksen]] vainojen aikana. Hänet muistetaan kristillisessä perinteessä pyhimyksenä, ja hän on Rovinjin [[suojeluspyhimys]]. Kaupungin vuosisatoja vanha [[Pyhän Euphemian kirkko]] on nimetty hänen mukaansa. Siitä on yli tuhat seitsemänsataa vuotta.
+KYSYMYS: Kerro lisää: Diocletianuksen
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+AIEMPI KYSYMYS: Kuka oli Pyhä Euphemia, jonka mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Euphemia oli Khalkedonin kaupungista kotoisin oleva nuori nainen, joka kuoli marttyyrina noin vuoden 303 tienoilla [[Diocletianuksen]] vainojen aikana. Hänet muistetaan kristillisessä perinteessä pyhimyksenä, ja hän on Rovinjin [[suojeluspyhimys]]. Kaupungin vuosisatoja vanha [[Pyhän Euphemian kirkko]] on nimetty hänen mukaansa. Siitä on yli tuhat seitsemänsataa vuotta.
+KYSYMYS: Kerro lisää: suojeluspyhimys
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Menovinkit] Kroatia on pieni maa, mutta sen museot ja kirjastot ovat vieneet verkkoon yllättävän paljon: 4500 vuotta vanhoja saviesineitä 3D-malleina, glagoliittisia käsikirjoituksia ja virtuaalikävelyn vesiputouksille.
+AIEMPI KYSYMYS: Mikä Istria on ja mitkä maat jakavat sen?
+AIEMPI VASTAUS (Livia):
+No niin, Istria on Pohjois-Adrianmerelle työntyvä niemimaa, jonka suurin osa kuuluu [[Kroatialle]]. Pienempi osa kuuluu [[Sloveniaan]] ja aivan pieni kaistale [[Italiaan]]. Alueen tunnettuja kohteita ovat muun muassa [[Pulan]] roomalainen amfiteatteri sekä rannikon vanhat satamakaupungit, joissa Venetsian vaikutus näkyy yhä. Alueella käytetään sekä kroatiaa että italiaa, ja monet paikat ovat virallisesti kaksikielisiä.
+
+Pula ja pulla. Nimi on vaarallisen lähellä, enkä minä ole koskaan vastustanut kumpaakaan.
+KYSYMYS: Kerro lisää: Kroatialle
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+AIEMPI KYSYMYS: Mikä Istria on ja mitkä maat jakavat sen?
+AIEMPI VASTAUS (Livia):
+No niin, Istria on Pohjois-Adrianmerelle työntyvä niemimaa, jonka suurin osa kuuluu [[Kroatialle]]. Pienempi osa kuuluu [[Sloveniaan]] ja aivan pieni kaistale [[Italiaan]]. Alueen tunnettuja kohteita ovat muun muassa [[Pulan]] roomalainen amfiteatteri sekä rannikon vanhat satamakaupungit, joissa Venetsian vaikutus näkyy yhä. Alueella käytetään sekä kroatiaa että italiaa, ja monet paikat ovat virallisesti kaksikielisiä.
+
+Pula ja pulla. Nimi on vaarallisen lähellä, enkä minä ole koskaan vastustanut kumpaakaan.
+KYSYMYS: Kerro lisää: Sloveniaan
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+- [Mandalay — kaupunkilehti / Historia: Kuningas joka lähetti oppilaita Eurooppaan] Mindon Min hallitsi 18. helmikuuta 1853 alkaen kuolemaansa 1. lokakuuta 1878. Hän nousi valtaan velipuolensa Pagan Minin tilalle yhdessä nuoremman veljensä Kanaungin kanssa ja käytti hallituskautensa yrittäen yhtä aikaa puolustaa Ylä-Burmaa ja nykyaikaistaa sitä. Oppineita lähetettiin Ranskaan, Italiaan, Yhdysvaltoihin ja Britanniaan katsomaan teollistumista. Virkamiehille säädettiin palkka, oikeudenkäyntimaksut kiinnitettiin, verotus uudistettiin ja tullimuureja purettiin, ja palatsin rahapaja löi valtakunnan omaa hopearahaa. Kanaung kävi tehtailla varhain talviaamuina huopa harteillaan kyselemässä koneenkäyttäjiltä, miten laitteet toimivat.
+AIEMPI KYSYMYS: Mikä Istria on ja mitkä maat jakavat sen?
+AIEMPI VASTAUS (Livia):
+No niin, Istria on Pohjois-Adrianmerelle työntyvä niemimaa, jonka suurin osa kuuluu [[Kroatialle]]. Pienempi osa kuuluu [[Sloveniaan]] ja aivan pieni kaistale [[Italiaan]]. Alueen tunnettuja kohteita ovat muun muassa [[Pulan]] roomalainen amfiteatteri sekä rannikon vanhat satamakaupungit, joissa Venetsian vaikutus näkyy yhä. Alueella käytetään sekä kroatiaa että italiaa, ja monet paikat ovat virallisesti kaksikielisiä.
+
+Pula ja pulla. Nimi on vaarallisen lähellä, enkä minä ole koskaan vastustanut kumpaakaan.
+KYSYMYS: Kerro lisää: Italiaan
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Areena, jossa soitetaan yhä] 1. vuosisata — Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, mikä onnistui vain kuudelta roomalaiselta areenalta. Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, mutta kaupunki esti sen. Nykyään areenassa järjestetään konsertteja ja elokuvafestivaali — yleisö istuu samoilla paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo elokuvaa.
+AIEMPI KYSYMYS: Mikä Istria on ja mitkä maat jakavat sen?
+AIEMPI VASTAUS (Livia):
+No niin, Istria on Pohjois-Adrianmerelle työntyvä niemimaa, jonka suurin osa kuuluu [[Kroatialle]]. Pienempi osa kuuluu [[Sloveniaan]] ja aivan pieni kaistale [[Italiaan]]. Alueen tunnettuja kohteita ovat muun muassa [[Pulan]] roomalainen amfiteatteri sekä rannikon vanhat satamakaupungit, joissa Venetsian vaikutus näkyy yhä. Alueella käytetään sekä kroatiaa että italiaa, ja monet paikat ovat virallisesti kaksikielisiä.
+
+Pula ja pulla. Nimi on vaarallisen lähellä, enkä minä ole koskaan vastustanut kumpaakaan.
+KYSYMYS: Kerro lisää: Pulan
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Missä joessa Vukovarin satama sijaitsee Vukan yhtymäkohdassa?
+AIEMPI VASTAUS (Livia):
+Annas kun katson. Vukovarin satama sijaitsee [[Tonavan]] varrella, siinä missä [[Vuka]]-joki yhtyy siihen. Kaupunki on [[Slavonian]] itäosassa, ja satamaa pidetään Kroatian suurimpana jokisatamana. Nimi Vukovar tarkoittaa Vukan varren linnaa. Joki kuljettaa tavaraa pitkälle.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+AIEMPI KYSYMYS: Missä joessa Vukovarin satama sijaitsee Vukan yhtymäkohdassa?
+AIEMPI VASTAUS (Livia):
+Annas kun katson. Vukovarin satama sijaitsee [[Tonavan]] varrella, siinä missä [[Vuka]]-joki yhtyy siihen. Kaupunki on [[Slavonian]] itäosassa, ja satamaa pidetään Kroatian suurimpana jokisatamana. Nimi Vukovar tarkoittaa Vukan varren linnaa. Joki kuljettaa tavaraa pitkälle.
+KYSYMYS: Kerro lisää: Vuka
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+AIEMPI KYSYMYS: Missä joessa Vukovarin satama sijaitsee Vukan yhtymäkohdassa?
+AIEMPI VASTAUS (Livia):
+Annas kun katson. Vukovarin satama sijaitsee [[Tonavan]] varrella, siinä missä [[Vuka]]-joki yhtyy siihen. Kaupunki on [[Slavonian]] itäosassa, ja satamaa pidetään Kroatian suurimpana jokisatamana. Nimi Vukovar tarkoittaa Vukan varren linnaa. Joki kuljettaa tavaraa pitkälle.
+KYSYMYS: Kerro lisää: Slavonian
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+AIEMPI KYSYMYS: Minkä suvun kreivit ostivat suuren osan seudusta ottomaanien jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— Suuren osan seudusta ostivat saksalaiset [[Eltzin]] kreivit. Mainzin arkkipiispa [[Philip Karl Eltz]] osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa, ja suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Kaupungin kulttuuriperintöön kuuluu 1700-luvun [[Eltzin kartano]]. Pitkä suku, pitkä vastaus.
+KYSYMYS: Kerro lisää: Eltzin
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+AIEMPI KYSYMYS: Minkä suvun kreivit ostivat suuren osan seudusta ottomaanien jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— Suuren osan seudusta ostivat saksalaiset [[Eltzin]] kreivit. Mainzin arkkipiispa [[Philip Karl Eltz]] osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa, ja suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Kaupungin kulttuuriperintöön kuuluu 1700-luvun [[Eltzin kartano]]. Pitkä suku, pitkä vastaus.
+KYSYMYS: Kerro lisää: Philip Karl Eltz
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+AIEMPI KYSYMYS: Minkä suvun kreivit ostivat suuren osan seudusta ottomaanien jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— Suuren osan seudusta ostivat saksalaiset [[Eltzin]] kreivit. Mainzin arkkipiispa [[Philip Karl Eltz]] osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa, ja suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Kaupungin kulttuuriperintöön kuuluu 1700-luvun [[Eltzin kartano]]. Pitkä suku, pitkä vastaus.
+KYSYMYS: Kerro lisää: Eltzin kartano
