@@ -71,7 +71,7 @@ Mitä Pelopsin taru kertoo?
 Mitä saaria Kykladeihin kuuluu?
 
 ### 173
-Ikarianmeri on Egeanmeren itäinen osa Ikarian saaren ympärillä. Nimi liittyy Ikaroksen tarinaan: Daidalos teki itselleen ja pojalleen [[Ikaros]]elle siivet höyhenistä ja vahasta, mutta poika lensi liian korkealle, vaha suli ja hän putosi mereen. Daidalos antoi lähimmälle maalle nimen Ikaria pojan muistoksi. Saari sijaitsee Samoksesta lounaaseen, ja merialue on yhä nimeltään Ikarianmeri.
+Ikarianmeri on [[Egeanmeren]] itäinen osa Ikarian saaren ympärillä. Nimi liittyy Ikaroksen tarinaan: [[Daidalos]] teki itselleen ja pojalleen [[Ikaros]]elle siivet höyhenistä ja vahasta, mutta poika lensi liian korkealle, vaha suli ja hän putosi mereen. Daidalos antoi lähimmälle maalle nimen Ikaria pojan muistoksi. Saari sijaitsee [[Samoksesta]] lounaaseen, ja merialue on yhä nimeltään Ikarianmeri.
 JATKOT:
 Millainen saari Ikaria on?
 Miten Daidalos pakeni Kreetalta?
@@ -95,7 +95,7 @@ Mitä Delos oli antiikin aikana?
 Miten Santorinin kaldera syntyi?
 
 ### 177
-Kreetanmeri on Egeanmeren eteläisin osa, noin 45 000 neliökilometrin laajuinen merialue Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä [[Karpathos]] ja Kasos. Syvin kohta on Koillis-Kreetan edustalla, jossa merikartat antavat syvyydeksi 2 591 metriä, vaikka osa mittauksista antaa lähes 3 300 metriä. Saaren toisella puolella alkaa jo [[Libyanmeri]]. Merellä purjehtivat jo [[minolaiset]], ja nykyään samaa reittiä liikennöivät Pireuksen ja Iraklionin lautat. Kreeta oli vielä 1800-luvun puolivälissä Ottomaanien saari, ja itsehallinnon se sai vuonna 1898.
+Kreetanmeri on Egeanmeren eteläisin osa, noin 45 000 neliökilometrin laajuinen merialue Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä [[Karpathos]] ja Kasos. Syvin kohta on Koillis-Kreetan edustalla, jossa merikartat antavat syvyydeksi 2 591 metriä, vaikka osa mittauksista antaa lähes 3 300 metriä. Saaren toisella puolella alkaa jo Libyanmeri. Merellä purjehtivat jo [[minolaiset]], ja nykyään samaa reittiä liikennöivät Pireuksen ja Iraklionin lautat. Kreeta oli vielä 1800-luvun puolivälissä Ottomaanien saari, ja itsehallinnon se sai vuonna 1898.
 JATKOT:
 Keitä minolaiset olivat?
 Mikä Karpathos on?
@@ -233,7 +233,7 @@ Millainen on Axiósin suisto?
 Mikä Olympos-vuori on?
 
 ### 200
-Grámos on Pindos-vuoriston osa Kreikan ja Albanian rajalla. Sen korkein huippu kohoaa noin 2 500 metriin Kreikan puolella. Vuoriston harjanteet ja ylänköniityt ovat perinteisesti toimineet laidunmaina, ja alueella on asunut karjanhoitajia, kuten aromanialaisia eli vlahhilaisia paimenia, jotka vaelsivat laumojensa kanssa vuodenaikojen mukaan. Siellä saa alkunsa [[Aliákmonas]]-joki, joka kiertää vuoriston jälkeen Vourinoksen ympäri. Vuoristo on harvaan asuttua ja luonnoltaan koskematonta.
+Grámos on [[Pindos]]-vuoriston osa Kreikan ja Albanian rajalla. Sen korkein huippu kohoaa noin 2 500 metriin Kreikan puolella. Vuoriston harjanteet ja ylänköniityt ovat perinteisesti toimineet laidunmaina, ja alueella on asunut karjanhoitajia, kuten aromanialaisia eli vlahhilaisia paimenia, jotka vaelsivat laumojensa kanssa vuodenaikojen mukaan. Siellä saa alkunsa [[Aliákmonas]]-joki, joka kiertää vuoriston jälkeen [[Vourinoksen]] ympäri. Vuoristo on harvaan asuttua ja luonnoltaan koskematonta.
 JATKOT:
 Keitä aromanialaiset ovat?
 Mikä Pindos-vuoristo on?
@@ -281,7 +281,7 @@ Keitä diadokit olivat?
 Mikä Berat on?
 
 ### 208
-Amfipolin leijona on suuri kalkkikivestä veistetty patsas Amfipolin lähellä, Strymón-joen sillan tuntumassa. Se ajoitetaan 300-luvun lopulle eaa., ja sen on arveltu pystytetyn jonkun [[Aleksanteri Suuren]] komentajan muistoksi, mutta asia on epävarma. Patsaan palaset löytyivät joen uomasta, ja se koottiin uudelleen 1900-luvun alkupuoliskolla. Se seisoo korkealla jalustalla, ja se on yksi alueen tunnetuimmista muistomerkeistä. Amfipolin kaupunki oli antiikissa tärkeä satama- ja kauppakaupunki.
+Amfipolin leijona on suuri kalkkikivestä veistetty patsas Amfipolin lähellä, [[Strymón]]-joen sillan tuntumassa. Se ajoitetaan 300-luvun lopulle eaa., ja sen on arveltu pystytetyn jonkun [[Aleksanteri Suuren]] komentajan muistoksi, mutta asia on epävarma. Patsaan palaset löytyivät joen uomasta, ja se koottiin uudelleen 1900-luvun alkupuoliskolla. Se seisoo korkealla jalustalla, ja se on yksi alueen tunnetuimmista muistomerkeistä. [[Amfipolin]] kaupunki oli antiikissa tärkeä satama- ja kauppakaupunki.
 JATKOT:
 Millainen Amfipoli oli antiikissa?
 Mistä Aleksanteri Suuri tunnetaan?
@@ -317,7 +317,7 @@ Millainen oli Serdica antiikin aikaan?
 Miksi katedraali on omistettu Aleksanteri Nevskille?
 
 ### 214
-Tšerni Vrah on Vitoša-vuoriston korkein huippu, ja se kohoaa 2 290 metriin heti Sofian eteläpuolella. Nimi tarkoittaa mustaa huippua. Rinteillä on kivijokia eli satojen metrien mittaisia kivilohkarenauhoja, jotka valuvat alaspäin hitaasti ja ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 noin kolmesataa sofialaista kiipesi yhtenä joukkona huipulle kirjailija [[Aleko Konstantinovin]] johdolla, ja päivästä lasketaan bulgarialaisen retkeilyn alku. Huipulle pääsee vaeltamalla tai hiihtohissillä.
+Tšerni Vrah on [[Vitoša]]-vuoriston korkein huippu, ja se kohoaa 2 290 metriin heti [[Sofian]] eteläpuolella. Nimi tarkoittaa mustaa huippua. Rinteillä on kivijokia eli satojen metrien mittaisia kivilohkarenauhoja, jotka valuvat alaspäin hitaasti ja ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 noin kolmesataa sofialaista kiipesi yhtenä joukkona huipulle kirjailija [[Aleko Konstantinovin]] johdolla, ja päivästä lasketaan bulgarialaisen retkeilyn alku. Huipulle pääsee vaeltamalla tai hiihtohissillä.
 JATKOT:
 Kuka Aleko Konstantinov oli?
 Mitä muuta Vitošalla voi tehdä?
@@ -413,7 +413,7 @@ Mitä Sèvres'n rauhansopimus sisälsi?
 Miten Dodekanesos päätyi Kreikalle?
 
 ### 230
-Kreikan ja Turkin väestönvaihto perustui tammikuussa 1923 Lausannessa allekirjoitettuun sopimukseen. Siirrettävät valittiin uskonnon mukaan: Turkin ortodoksikristityt muuttivat Kreikkaan ja Kreikan muslimit Turkkiin. Siirretyistä noin puolitoista miljoonaa oli ortodokseja ja noin puoli miljoonaa muslimeja, mutta arviot vaihtelevat. Poikkeuksina olivat Istanbulin kreikkalaiset ja [[Länsi-Traakian]] muslimit. Muutos oli monille kivulias, ja se muutti sekä Anatolian että Kreikan kaupunkien väestöä pysyvästi. Thessalonikiin asettui paljon pakolaisia, ja kaupungin luonne muuttui.
+Kreikan ja Turkin väestönvaihto perustui tammikuussa 1923 [[Lausannessa]] allekirjoitettuun sopimukseen. Siirrettävät valittiin uskonnon mukaan: Turkin ortodoksikristityt muuttivat Kreikkaan ja Kreikan muslimit Turkkiin. Siirretyistä noin puolitoista miljoonaa oli ortodokseja ja noin puoli miljoonaa muslimeja, mutta arviot vaihtelevat. Poikkeuksina olivat Istanbulin kreikkalaiset ja [[Länsi-Traakian]] muslimit. Muutos oli monille kivulias, ja se muutti sekä Anatolian että Kreikan kaupunkien väestöä pysyvästi. [[Thessalonikiin]] asettui paljon pakolaisia, ja kaupungin luonne muuttui.
 JATKOT:
 Millaista pakolaisten elämä oli Kreikassa?
 Keitä Länsi-Traakian muslimit ovat?

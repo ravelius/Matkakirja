@@ -438,8 +438,10 @@
   "kohde": "kohde:ioannina",
   "kasite": "Pamvotis-järven",
   "kysymys": "Kerro lisää: Pamvotis-järven",
-  "vastaus": "Pamvotis-järvi on Ioanninan kaupungin vieressä sijaitseva järvi, jota ympäröivät Pindoksen vuoristoon kuuluvat kukkulat ja vuoret. Järven keskellä on asuttu saari, jolla on kylä ja useita luostareita, ja sinne pääsee veneellä kaupungin rannasta. Saaren [[Pyhän Panteleimonin luostarissa]] Ali-pasha surmattiin vuonna 1822 paettuaan sinne odottamaan armahdusta. Järvi on kaupunkilaisten virkistyspaikka, ja sen rannoilla on kävelyreittejä. Järven mittoja en muista varmasti.",
+  "vastaus": "Pamvotis-järvi on [[Ioanninan]] kaupungin vieressä sijaitseva järvi, jota ympäröivät [[Pindoksen]] vuoristoon kuuluvat kukkulat ja vuoret. Järven keskellä on asuttu saari, jolla on kylä ja useita luostareita, ja sinne pääsee veneellä kaupungin rannasta. Saaren [[Pyhän Panteleimonin luostarissa]] Ali-pasha surmattiin vuonna 1822 paettuaan sinne odottamaan armahdusta. Järvi on kaupunkilaisten virkistyspaikka, ja sen rannoilla on kävelyreittejä. Järven mittoja en muista varmasti.",
   "linkit": [
+   "Ioanninan",
+   "Pindoksen",
    "Pyhän Panteleimonin luostarissa"
   ],
   "jatkot": [
@@ -801,11 +803,10 @@
   "kohde": "kohde:iraklion",
   "kasite": "Faistoksen kiekko",
   "kysymys": "Kerro lisää: Faistoksen kiekko",
-  "vastaus": "Faistoksen kiekko on poltetusta savesta valmistettu pyöreä levy, jonka löysi italialainen arkeologi [[Luigi Pernier]] vuonna 1908 [[Faistoksen palatsin]] raunioista Etelä-Kreetalta. Levyn molemmille puolille on painettu spiraalimuotoon asetettuja kuvamerkkejä, yhteensä 241, ja ne on tehty erillisillä leimasimilla ennen polttamista. Ikä ajoitetaan keskiminolaiselle kaudelle, noin 1850–1600 eaa. Kirjoitusta ei ole onnistuttu yhdistämään mihinkään tunnettuun kieleen, eikä yksikään tulkinta ole saanut laajaa hyväksyntää. Levyä säilytetään [[Iraklionin arkeologisessa museossa]]. Pieni vähemmistö tutkijoista on epäillyt levyn aitoutta, mutta useimmat pitävät sitä aitona.",
+  "vastaus": "Faistoksen kiekko on poltetusta savesta valmistettu pyöreä levy, jonka löysi italialainen arkeologi [[Luigi Pernier]] vuonna 1908 [[Faistoksen palatsin]] raunioista Etelä-Kreetalta. Levyn molemmille puolille on painettu spiraalimuotoon asetettuja kuvamerkkejä, yhteensä 241, ja ne on tehty erillisillä leimasimilla ennen polttamista. Ikä ajoitetaan keskiminolaiselle kaudelle, noin 1850–1600 eaa. Kirjoitusta ei ole onnistuttu yhdistämään mihinkään tunnettuun kieleen, eikä yksikään tulkinta ole saanut laajaa hyväksyntää. Levyä säilytetään Iraklionin arkeologisessa museossa. Pieni vähemmistö tutkijoista on epäillyt levyn aitoutta, mutta useimmat pitävät sitä aitona.",
   "linkit": [
    "Luigi Pernier",
-   "Faistoksen palatsin",
-   "Iraklionin arkeologisessa museossa"
+   "Faistoksen palatsin"
   ],
   "jatkot": [
    "Onko kiekon aitoutta epäilty?",
@@ -2628,9 +2629,12 @@
   "kohde": "kohde:kreetanmeri",
   "kasite": "Ikarianmeri",
   "kysymys": "Kerro lisää: Ikarianmeri",
-  "vastaus": "Ikarianmeri on Egeanmeren itäinen osa Ikarian saaren ympärillä. Nimi liittyy Ikaroksen tarinaan: Daidalos teki itselleen ja pojalleen [[Ikaros]]elle siivet höyhenistä ja vahasta, mutta poika lensi liian korkealle, vaha suli ja hän putosi mereen. Daidalos antoi lähimmälle maalle nimen Ikaria pojan muistoksi. Saari sijaitsee Samoksesta lounaaseen, ja merialue on yhä nimeltään Ikarianmeri.",
+  "vastaus": "Ikarianmeri on [[Egeanmeren]] itäinen osa Ikarian saaren ympärillä. Nimi liittyy Ikaroksen tarinaan: [[Daidalos]] teki itselleen ja pojalleen [[Ikaros]]elle siivet höyhenistä ja vahasta, mutta poika lensi liian korkealle, vaha suli ja hän putosi mereen. Daidalos antoi lähimmälle maalle nimen Ikaria pojan muistoksi. Saari sijaitsee [[Samoksesta]] lounaaseen, ja merialue on yhä nimeltään Ikarianmeri.",
   "linkit": [
-   "Ikaros"
+   "Egeanmeren",
+   "Daidalos",
+   "Ikaros",
+   "Samoksesta"
   ],
   "jatkot": [
    "Millainen saari Ikaria on?",
@@ -2685,10 +2689,9 @@
   "kohde": "kohde:kreetanmeri",
   "kasite": "Kreetanmeren",
   "kysymys": "Kerro lisää: Kreetanmeren",
-  "vastaus": "Kreetanmeri on Egeanmeren eteläisin osa, noin 45 000 neliökilometrin laajuinen merialue Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä [[Karpathos]] ja Kasos. Syvin kohta on Koillis-Kreetan edustalla, jossa merikartat antavat syvyydeksi 2 591 metriä, vaikka osa mittauksista antaa lähes 3 300 metriä. Saaren toisella puolella alkaa jo [[Libyanmeri]]. Merellä purjehtivat jo [[minolaiset]], ja nykyään samaa reittiä liikennöivät Pireuksen ja Iraklionin lautat. Kreeta oli vielä 1800-luvun puolivälissä Ottomaanien saari, ja itsehallinnon se sai vuonna 1898.",
+  "vastaus": "Kreetanmeri on Egeanmeren eteläisin osa, noin 45 000 neliökilometrin laajuinen merialue Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä [[Karpathos]] ja Kasos. Syvin kohta on Koillis-Kreetan edustalla, jossa merikartat antavat syvyydeksi 2 591 metriä, vaikka osa mittauksista antaa lähes 3 300 metriä. Saaren toisella puolella alkaa jo Libyanmeri. Merellä purjehtivat jo [[minolaiset]], ja nykyään samaa reittiä liikennöivät Pireuksen ja Iraklionin lautat. Kreeta oli vielä 1800-luvun puolivälissä Ottomaanien saari, ja itsehallinnon se sai vuonna 1898.",
   "linkit": [
    "Karpathos",
-   "Libyanmeri",
    "minolaiset"
   ],
   "jatkot": [
@@ -3028,9 +3031,11 @@
   "kohde": "kohde:aliakmonas",
   "kasite": "Grámoksen",
   "kysymys": "Kerro lisää: Grámoksen",
-  "vastaus": "Grámos on Pindos-vuoriston osa Kreikan ja Albanian rajalla. Sen korkein huippu kohoaa noin 2 500 metriin Kreikan puolella. Vuoriston harjanteet ja ylänköniityt ovat perinteisesti toimineet laidunmaina, ja alueella on asunut karjanhoitajia, kuten aromanialaisia eli vlahhilaisia paimenia, jotka vaelsivat laumojensa kanssa vuodenaikojen mukaan. Siellä saa alkunsa [[Aliákmonas]]-joki, joka kiertää vuoriston jälkeen Vourinoksen ympäri. Vuoristo on harvaan asuttua ja luonnoltaan koskematonta.",
+  "vastaus": "Grámos on [[Pindos]]-vuoriston osa Kreikan ja Albanian rajalla. Sen korkein huippu kohoaa noin 2 500 metriin Kreikan puolella. Vuoriston harjanteet ja ylänköniityt ovat perinteisesti toimineet laidunmaina, ja alueella on asunut karjanhoitajia, kuten aromanialaisia eli vlahhilaisia paimenia, jotka vaelsivat laumojensa kanssa vuodenaikojen mukaan. Siellä saa alkunsa [[Aliákmonas]]-joki, joka kiertää vuoriston jälkeen [[Vourinoksen]] ympäri. Vuoristo on harvaan asuttua ja luonnoltaan koskematonta.",
   "linkit": [
-   "Aliákmonas"
+   "Pindos",
+   "Aliákmonas",
+   "Vourinoksen"
   ],
   "jatkot": [
    "Keitä aromanialaiset ovat?",
@@ -3146,9 +3151,11 @@
   "kohde": "kohde:strymonas",
   "kasite": "Amfipolin leijona",
   "kysymys": "Kerro lisää: Amfipolin leijona",
-  "vastaus": "Amfipolin leijona on suuri kalkkikivestä veistetty patsas Amfipolin lähellä, Strymón-joen sillan tuntumassa. Se ajoitetaan 300-luvun lopulle eaa., ja sen on arveltu pystytetyn jonkun [[Aleksanteri Suuren]] komentajan muistoksi, mutta asia on epävarma. Patsaan palaset löytyivät joen uomasta, ja se koottiin uudelleen 1900-luvun alkupuoliskolla. Se seisoo korkealla jalustalla, ja se on yksi alueen tunnetuimmista muistomerkeistä. Amfipolin kaupunki oli antiikissa tärkeä satama- ja kauppakaupunki.",
+  "vastaus": "Amfipolin leijona on suuri kalkkikivestä veistetty patsas Amfipolin lähellä, [[Strymón]]-joen sillan tuntumassa. Se ajoitetaan 300-luvun lopulle eaa., ja sen on arveltu pystytetyn jonkun [[Aleksanteri Suuren]] komentajan muistoksi, mutta asia on epävarma. Patsaan palaset löytyivät joen uomasta, ja se koottiin uudelleen 1900-luvun alkupuoliskolla. Se seisoo korkealla jalustalla, ja se on yksi alueen tunnetuimmista muistomerkeistä. [[Amfipolin]] kaupunki oli antiikissa tärkeä satama- ja kauppakaupunki.",
   "linkit": [
-   "Aleksanteri Suuren"
+   "Strymón",
+   "Aleksanteri Suuren",
+   "Amfipolin"
   ],
   "jatkot": [
    "Millainen Amfipoli oli antiikissa?",
@@ -3235,8 +3242,10 @@
   "kohde": "kohde:strymonas",
   "kasite": "Tšerni Vrah",
   "kysymys": "Kerro lisää: Tšerni Vrah",
-  "vastaus": "Tšerni Vrah on Vitoša-vuoriston korkein huippu, ja se kohoaa 2 290 metriin heti Sofian eteläpuolella. Nimi tarkoittaa mustaa huippua. Rinteillä on kivijokia eli satojen metrien mittaisia kivilohkarenauhoja, jotka valuvat alaspäin hitaasti ja ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 noin kolmesataa sofialaista kiipesi yhtenä joukkona huipulle kirjailija [[Aleko Konstantinovin]] johdolla, ja päivästä lasketaan bulgarialaisen retkeilyn alku. Huipulle pääsee vaeltamalla tai hiihtohissillä.",
+  "vastaus": "Tšerni Vrah on [[Vitoša]]-vuoriston korkein huippu, ja se kohoaa 2 290 metriin heti [[Sofian]] eteläpuolella. Nimi tarkoittaa mustaa huippua. Rinteillä on kivijokia eli satojen metrien mittaisia kivilohkarenauhoja, jotka valuvat alaspäin hitaasti ja ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 noin kolmesataa sofialaista kiipesi yhtenä joukkona huipulle kirjailija [[Aleko Konstantinovin]] johdolla, ja päivästä lasketaan bulgarialaisen retkeilyn alku. Huipulle pääsee vaeltamalla tai hiihtohissillä.",
   "linkit": [
+   "Vitoša",
+   "Sofian",
    "Aleko Konstantinovin"
   ],
   "jatkot": [
@@ -3468,9 +3477,11 @@
   "kohde": "kohde:evros",
   "kasite": "väestönvaihto",
   "kysymys": "Kerro lisää: väestönvaihto",
-  "vastaus": "Kreikan ja Turkin väestönvaihto perustui tammikuussa 1923 Lausannessa allekirjoitettuun sopimukseen. Siirrettävät valittiin uskonnon mukaan: Turkin ortodoksikristityt muuttivat Kreikkaan ja Kreikan muslimit Turkkiin. Siirretyistä noin puolitoista miljoonaa oli ortodokseja ja noin puoli miljoonaa muslimeja, mutta arviot vaihtelevat. Poikkeuksina olivat Istanbulin kreikkalaiset ja [[Länsi-Traakian]] muslimit. Muutos oli monille kivulias, ja se muutti sekä Anatolian että Kreikan kaupunkien väestöä pysyvästi. Thessalonikiin asettui paljon pakolaisia, ja kaupungin luonne muuttui.",
+  "vastaus": "Kreikan ja Turkin väestönvaihto perustui tammikuussa 1923 [[Lausannessa]] allekirjoitettuun sopimukseen. Siirrettävät valittiin uskonnon mukaan: Turkin ortodoksikristityt muuttivat Kreikkaan ja Kreikan muslimit Turkkiin. Siirretyistä noin puolitoista miljoonaa oli ortodokseja ja noin puoli miljoonaa muslimeja, mutta arviot vaihtelevat. Poikkeuksina olivat Istanbulin kreikkalaiset ja [[Länsi-Traakian]] muslimit. Muutos oli monille kivulias, ja se muutti sekä Anatolian että Kreikan kaupunkien väestöä pysyvästi. [[Thessalonikiin]] asettui paljon pakolaisia, ja kaupungin luonne muuttui.",
   "linkit": [
-   "Länsi-Traakian"
+   "Lausannessa",
+   "Länsi-Traakian",
+   "Thessalonikiin"
   ],
   "jatkot": [
    "Millaista pakolaisten elämä oli Kreikassa?",
@@ -12146,7 +12157,7 @@
   "kohde": "kohde:hahmotelma-sporadien-meripuisto",
   "kasite": "Skopelos",
   "kysymys": "Kerro lisää: Skopelos",
-  "vastaus": "Skopelos on Pohjoisten Sporadien saari Skiathosin ja Alonnisoksen välillä. Saari tunnetaan luumuistaan, runsaista kirkoistaan ja kappeleistaan sekä vuonna 2008 ilmestyneen elokuvan Mamma Mia! kuvauspaikkana. Yksityiskohdista, kuten asukasluvusta, en ole varma. Skopelos kuuluu samaan saariryhmään kuin [[Alonnisos]], jonka ympärille merikansallispuisto on perustettu, ja sen lähellä on [[Skiathos]]. Suuri osa saaresta on vehreää metsämaisemaa, ja sen rannoilla on useita kyliä.",
+  "vastaus": "Skopelos on Pohjoisten Sporadien saari Skiathosin ja Alonnisoksen välillä. Saari tunnetaan luumuistaan, runsaista kirkoistaan ja kappeleistaan sekä vuonna 2008 ilmestyneen elokuvan Mamma Mia kuvauspaikkana. Yksityiskohdista, kuten asukasluvusta, en ole varma. Skopelos kuuluu samaan saariryhmään kuin [[Alonnisos]], jonka ympärille merikansallispuisto on perustettu, ja sen lähellä on [[Skiathos]]. Suuri osa saaresta on vehreää metsämaisemaa, ja sen rannoilla on useita kyliä.",
   "linkit": [
    "Alonnisos",
    "Skiathos"
