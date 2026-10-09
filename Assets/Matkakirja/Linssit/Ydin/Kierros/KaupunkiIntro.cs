@@ -61,6 +61,9 @@ namespace Matkakirja.Linssit.Kierros
         public const double MusiikkiOdotusS = 5;
 
         public static double AvausAlkaa(bool c5) => c5 ? AvausS : AvausIlmanC5S;
+        /// <summary>Pallon kori pois nykyajan otoksista (kuva-arkki 9.10.: kori ja köydet näkyivät avausnäkymässä ja Eiffel-otoksessa);
+        /// palaa, kun C5 peittää ruudun (paluun alku 36,0 s), ilman C5:tä kovan leikkauksen kohdalla: isoisän maailmaan palataan pallossa.</summary>
+        public static double KoriPalaa(bool c5) => c5 ? PaluuAlkaaS : SiirtymaS;
         /// <summary>Intron kuvakerros loppuu (C5:n kanssa paluun loppu, ilman sitä kohtauksen 7 alku).</summary>
         public static double Loppu(bool c5) => c5 ? PaluuLoppuS : SiirtymaS;
         /// <summary>Napautus intron aikana: hyppy kohtaukseen 7 (ei suoraan kierrokseen); siirtymässä jo → ennallaan.</summary>

@@ -132,6 +132,8 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"opas: intro {kaupunkiId} ohitettu ennen musiikkia → otos 7");
             }
 
+            // Kori pois nykyajan otoksista (KaupunkiIntro.KoriPalaa); palautetaan aina (IntroPurku).
+            if (introKoriEnnen == null) { introKoriEnnen = PalloKori.Paalla; PalloKori.Paalla = false; }
             int otos = -1;
             bool nytKasitelty = false, c5Lukittu = false, c5 = false;
             while (true)
@@ -164,6 +166,7 @@ namespace Matkakirja.Natiivi
                     if (t < KaupunkiIntro.NytRiviS + 1) { NytRivi.Nayta(kk.Nimi, kk.Lat, kk.Lon, kaupunkiId); o.Kirjaa($"opas: intro {kaupunkiId} nyt-rivi {t:F2} s"); }
                 }
                 bool c5Nyt = c5Lukittu ? c5 : introKuvat[5] != null;
+                if (introKoriEnnen != null && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
                 var tila = KaupunkiIntro.Tila(t, n => introKuvat[n] != null, c5Nyt);
                 if (!KaupunkiIntro.EiffelEsilataus(t)) introEsilataus = null;
                 introKamera = tila.Laji == IntroLaji.Eiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
@@ -185,6 +188,10 @@ namespace Matkakirja.Natiivi
             IntroLoppuu(versio, true, "valmis");
         }
 
+        /// <summary>Pallon korin tila ennen introa (null = ei piilotettu).</summary>
+        bool? introKoriEnnen;
+        void KoriTakaisin() { if (introKoriEnnen is bool k) { PalloKori.Paalla = k; introKoriEnnen = null; } }
+
         /// <summary>Intro päättyi (soitettu = kuvat ja tahti ajettiin; muuten opastus jää avaukseen kuten ennen).</summary>
         void IntroLoppuu(int versio, bool soitettu, string syy)
         {
@@ -199,6 +206,7 @@ namespace Matkakirja.Natiivi
             bool oli = introKaynnissa;
             introKaynnissa = false; introAvausVapaa = true; introOhitusPyynto = false;
             introKamera = null; introEsilataus = null;
+            KoriTakaisin();
             introKerros?.Pois();
             for (int i = 0; i < introKuvat.Length; i++) { if (introKuvat[i] != null) Kuvat.Vapauta(introKuvat[i]); introKuvat[i] = null; }
             if (oli) o.Kirjaa($"opas: intro loppui ({syy})");

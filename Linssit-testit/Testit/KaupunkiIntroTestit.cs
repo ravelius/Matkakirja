@@ -150,5 +150,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c1.jpg", KaupunkiIntro.KuvaUrl(1));
             Oleta.Sama("https://media.matkakirja.app/julisteet/pariisi-nykyintro/20261009/pariisi-nykyintro-c5.jpg", KaupunkiIntro.KuvaUrl(5));
         }
+
+        [Testi] static void KoriPalaaVanhanKuvanAlla()
+        {
+            Oleta.Tosi(KaupunkiIntro.KoriPalaa(true) >= KaupunkiIntro.C5TaysiS && KaupunkiIntro.KoriPalaa(true) <= KaupunkiIntro.PaluuAlkaaS, "C5:n kanssa kori palaa, kun C5 peittää ruudun");
+            Oleta.Sama(KaupunkiIntro.SiirtymaS, KaupunkiIntro.KoriPalaa(false), "ilman C5:tä kovan leikkauksen kohdalla");
+        }
     }
 }
