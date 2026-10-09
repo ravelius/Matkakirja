@@ -64,4 +64,10 @@ Linjaus: LIIKKUVAT KOHTAUKSET TEHDÄÄN KUIN ELOKUVA (omistaja 9.10.2026), kohda
 | 20 | Pysähdys: Sacré-Cœur | 310,9–319,8 s | Sacré-Cœur: rakennus, et. ~168 m, kallistus 64°, silmä ~74 m kohteen yllä, saapuu levosta | kaari ≤ 80° kohti seuraavaa, spiraali −35 % korkeudesta | muistettava 3: kukkula ja valkoinen kirkko | 8,9 s (kerronnan loppu + 1 s + jarrutus 2 s) | nyt 102 → 88 m; **tavoite 42–59 m** (H 84 m) | +0,0…+5,9 s Sacré-Cœur 2/2 “Kupolin ulkoparvekkeelle johtavat kierreportaat, ja sieltä n…”<br>**TYHJÄ 3,0 s** | pysähdys ~9 s, viimeinen kohde |
 | 21 | Loppu | 319,8 s → | Sacré-Cœurin kehys | kehys leijuu, kierros päättyy | puuttuu: lopetus | – | – | ei lopetuslausetta | **ehdotus uudeksi kohtaukseksi**: nousu Montmartren yltä, koko kaupunki ja akseli kuvassa, yksi lopetuslause (muistettava 2 + 3) |
 
+## Odottavat kohtaukset (otetaan käyttöön ehdon täyttyessä)
 
+| Nro | Kohtaus | Ehto | Alkutila | Lopputila | Syy | Liike (liikesaannot.md) | Kertoja |
+|---|---|---|---|---|---|---|---|
+| 4b | **Notre-Damen lähilento** (omistaja 9.10.: "Varsinkin Notre Dame olisi kiva, jos kamera lentäisi todella lähelle sitä, sitten kun se on tehty hienosti.") | Linnanrakentajan parannettu Notre-Damen malli on hyväksytty (oma malli Googlen laatan tilalla, Map Tiles C3) | Pysähdys 4: silmä esittelykorkeudella (0,5–0,7 × H, H 96 m) länsijulkisivun edessä | Pehmeä kaari julkisivun ohi etelään ja lentotukikaarten (kuorin) ympäri itäpäähän puolivälin ja katonharjan korkeudella (noin 35–50 m maasta), etäisyys julkisivuun 40–70 m | Katedraali on kierroksen tärkein muistettava (suunnitelma.md, muistettava 1), ja lähellä sen kolmiulotteisuus näkyy | Kaari 25–35 s, pehmeä S-käyrä alussa ja lopussa, kulmanopeus ≤ 5 °/s ja silmän nopeus ≤ 6 m/s, ei äkkikäännöksiä; laattojen ja oman mallin törmäysvara ≥ 15 m | Notre-Damen pitkä teksti lauseittain: julkisivu (Hugo) → lentotukikaaret ja torni (Viollet-le-Duc) sanojen mukaan, tauot kameran käännöskohdiksi |
+
+Sama lähilento myöhemmin Tukholman kuninkaanlinnalle (kohtauslista-tukholma.md, odottava kohtaus), kun linnan oma malli on hyväksytty.
