@@ -43,7 +43,7 @@ Milloin Hallista tuli kaupunki?
 
 ### 42.2
 KYSYMYS: Miten suolavesi kulki kaivokselta kaupunkiin?
-Odotas vähän. Suolavesi johdettiin [[Absamin suolakaivos|Absamin suolakaivokselta]] noin kymmenen kilometrin pituista putkea pitkin haihdutusaltaalle. Ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi [[Meinhard II:n]] käskystä, ja kaivos oli kaupungin pääelinkeino 1200-luvulta alkaen. Haihdutuksen jälkeen jäljelle jäi suola, jota kaupattiin laajalle alueelle. Putken materiaalista ja tarkasta rakenteesta en ole varma. Kymmenen kilometriä putkea on kyyhkylle lyhyt matka, mutta vedelle se on pitkä.
+Odotas vähän. Suolavesi johdettiin [[Absamin suolakaivokselta]] noin kymmenen kilometrin pituista putkea pitkin haihdutusaltaalle. Ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi [[Meinhard II:n]] käskystä, ja kaivos oli kaupungin pääelinkeino 1200-luvulta alkaen. Haihdutuksen jälkeen jäljelle jäi suola, jota kaupattiin laajalle alueelle. Putken materiaalista ja tarkasta rakenteesta en ole varma. Kymmenen kilometriä putkea on kyyhkylle lyhyt matka, mutta vedelle se on pitkä.
 JATKOT:
 Mihin Hallin suola kulki?
 Kuka oli kreivi Meinhard II?
@@ -64,7 +64,7 @@ Milloin Hall sai kaupunkioikeudet?
 
 ### 42.5
 KYSYMYS: Milloin Hall sai kaupunkioikeudet?
-No jopas, tähän minä muistan vastauksen. Hallista tuli kaupunki vuonna 1303. Paikka oli jo aiemmin tunnettu suolatehtaana, ja se mainitaan asiakirjassa vuodelta 1232, kun taas nykyinen nimi on vuodelta 1256. Absamin suolakaivoksen ensimmäinen käytävä tehtiin vuonna 1272, joten kaupunkioikeudet seurasivat suolantuotannon vakiintumista. Syy oikeuksien myöntämiseen oli todennäköisesti kaupan kasvu, mutta tarkkoja perusteita en ole varma. Pitkä historia mahtui kyyhkyn päähän, ja pää on pieni.
+No jopas, tähän minä muistan vastauksen. [[Hallista]] tuli kaupunki vuonna 1303. Paikka oli jo aiemmin tunnettu suolatehtaana, ja se mainitaan asiakirjassa vuodelta 1232, kun taas nykyinen nimi on vuodelta 1256. [[Absamin suolakaivoksen]] ensimmäinen käytävä tehtiin vuonna 1272, joten kaupunkioikeudet seurasivat suolantuotannon vakiintumista. Syy oikeuksien myöntämiseen oli todennäköisesti kaupan kasvu, mutta tarkkoja perusteita en ole varma. Pitkä historia mahtui kyyhkyn päähän, ja pää on pieni.
 JATKOT:
 Mitä Absamin suolakaivoksella tapahtui?
 Mistä Thaurin linna on tunnettu?
@@ -100,7 +100,7 @@ Mikä on Klagenfurt?
 
 ### 43.5
 KYSYMYS: Mitä on Itävallan aineeton kulttuuriperintö?
-Hetkinen ny. Aineeton kulttuuriperintö tarkoittaa eläviä perinteitä, taitoja ja tapoja, joita ihmiset siirtävät sukupolvelta toiselle, kuten käsityötaitoja, juhlia ja esitystaidetta. Itävallalla on oma kansallinen luettelonsa, joka perustuu [[UNESCOn]] aineettoman kulttuuriperinnön yleissopimukseen. Ferlachin asesepänperinne on kuulunut tähän luetteloon vuodesta 2010. Muita luettelon kohteita en muista varmasti. Aineetonta se on, mutta kyllä minä sen silti kuulen.
+Hetkinen ny. [[Aineeton kulttuuriperintö]] tarkoittaa eläviä perinteitä, taitoja ja tapoja, joita ihmiset siirtävät sukupolvelta toiselle, kuten käsityötaitoja, juhlia ja esitystaidetta. Itävallalla on oma kansallinen luettelonsa, joka perustuu [[UNESCOn]] aineettoman kulttuuriperinnön yleissopimukseen. [[Ferlachin]] asesepänperinne on kuulunut tähän luetteloon vuodesta 2010. Muita luettelon kohteita en muista varmasti. Aineetonta se on, mutta kyllä minä sen silti kuulen.
 JATKOT:
 Mikä on UNESCO?
 Millaisia aseita Ferlachissa on perinteisesti tehty?
@@ -121,7 +121,7 @@ Kuka Hannes Schneider oli?
 
 ### 44.3
 KYSYMYS: Kuinka suuri St. Antonin hiihtoalue on?
-Selvä juttu, tässä on lukuja. St. Anton on osa [[Arlbergin]] hiihtoaluetta, johon kuuluu 94 köysirataa ja hissiä sekä 340 kilometriä kunnostettuja rinteitä. Köysiradat ja tuolihissit nousevat 2 811 metriin, ja pystysuora pudotus on 1 507 metriä. Alue on siis laaja, ja se on suosittu hiihtokohde. Hiihtokauden pituudesta en ole varma, joten sen jätän sanomatta. Lukuja riittää, mutta rinnettä minä en laskisi.
+Selvä juttu, tässä on lukuja. [[St. Anton]] on osa [[Arlbergin]] hiihtoaluetta, johon kuuluu 94 [[köysirataa]] ja hissiä sekä 340 kilometriä kunnostettuja rinteitä. Köysiradat ja tuolihissit nousevat 2 811 metriin, ja pystysuora pudotus on 1 507 metriä. Alue on siis laaja, ja se on suosittu hiihtokohde. Hiihtokauden pituudesta en ole varma, joten sen jätän sanomatta. Lukuja riittää, mutta rinnettä minä en laskisi.
 JATKOT:
 Mikä on hiihtokeskus ja miten se toimii?
 Miten pääsee St. Antoniin?

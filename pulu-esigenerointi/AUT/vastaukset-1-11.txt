@@ -8,7 +8,7 @@ Miten lipizzanien väri muuttuu iän myötä?
 
 ### 51.2
 KYSYMYS: Mitä ratsastuskoulussa opetetaan hevosille neljän vuoden iästä eteenpäin?
-Odotas vähän, annas ku mietin. Ratsastuskoulussa hevosille opetetaan klassista ratsastusta eli koulutusta, jossa hevosen liikkeet kehitetään vähitellen hallituiksi, tasapainoisiksi ja sulaviksi. Perusasioista edetään vaativampiin liikkeisiin, ja koulutus kestää vuosia. Kokeneimmat hevoset oppivat niin sanottuja ilmaharjoituksia, joissa hevonen nousee tai kohoaa ilmaan, mutta tarkkaa vaiheiden aikataulua en ole varma. Taustalla on [[Hofburgin]] ratsastuskoulun pitkä perinne, ja hevosen ja ratsastajan yhteistyö on koulutuksen ydin. Mut minä lentäisin vaikka ilman koulutusta.
+Odotas vähän, annas ku mietin. Ratsastuskoulussa hevosille opetetaan [[klassista ratsastusta]] eli koulutusta, jossa hevosen liikkeet kehitetään vähitellen hallituiksi, tasapainoisiksi ja sulaviksi. Perusasioista edetään vaativampiin liikkeisiin, ja koulutus kestää vuosia. Kokeneimmat hevoset oppivat niin sanottuja ilmaharjoituksia, joissa hevonen nousee tai kohoaa ilmaan, mutta tarkkaa vaiheiden aikataulua en ole varma. Taustalla on [[Hofburgin]] ratsastuskoulun pitkä perinne, ja hevosen ja ratsastajan yhteistyö on koulutuksen ydin. Mut minä lentäisin vaikka ilman koulutusta.
 
 JATKOT:
 Mitä ovat ratsastuksen ilmaharjoitukset?
@@ -26,7 +26,7 @@ Kuka oli keisari Kaarle VI?
 
 ### 51.4
 KYSYMYS: Mistä lipizzanirotu on saanut nimensä?
-Ai tota, tän minä muistan kaiteelta. Nimi tulee Lipicasta, kylästä nykyisen Slovenian alueella, jossa Habsburgien hovin ratsuhevosia alettiin kasvattaa 1500-luvun loppupuolella. Paikan saksankielinen nimi on Lipizza, ja siitä rodun nimi on johdettu. Hevoset ovat polveutuneet espanjalaisista, italialaisista ja muista eurooppalaisista hevossuvuista, joita hovi risteytti keskenään. Rotua kasvatetaan nykyään monessa maassa, ja [[Piberin]] siitostalli on yksi tunnetuimmista. Habsburgien hovin vaikutus näkyy rodun historiassa edelleen. Onpas siin taas vierähtänyt koko iltapäivä.
+Ai tota, tän minä muistan kaiteelta. Nimi tulee Lipicasta, kylästä nykyisen Slovenian alueella, jossa [[Habsburgien]] hovin ratsuhevosia alettiin kasvattaa 1500-luvun loppupuolella. Paikan saksankielinen nimi on Lipizza, ja siitä rodun nimi on johdettu. Hevoset ovat polveutuneet espanjalaisista, italialaisista ja muista eurooppalaisista hevossuvuista, joita hovi risteytti keskenään. Rotua kasvatetaan nykyään monessa maassa, ja [[Piberin]] siitostalli on yksi tunnetuimmista. Habsburgien hovin vaikutus näkyy rodun historiassa edelleen. Onpas siin taas vierähtänyt koko iltapäivä.
 
 JATKOT:
 Mistä espanjalainen ratsastuskoulu on saanut nimensä?
@@ -92,7 +92,7 @@ Miksi Tonava kaunoinen tunnetaan nykyään orkesterilta?
 
 ### 53.2
 KYSYMYS: Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi laskea?
-Joo, tän minä muistan. Wieniläisvalssissa toinen isku tulee hieman etuajassa, joten sitä ei voi laskea metronomin avulla tasan. Se opitaan kuuntelemalla ja tanssimalla: oppija kuulee rytmin monta kertaa, tuntee sen kehossaan ja alkaa lopulta tuottaa sen itse. Kokeneet tanssijat ja muusikot kertovat usein, että tunne tulee toiston ja kokemuksen kautta, eikä sitä voi kirjoittaa nuottiin täsmälleen. [[Wieniläisvalssi]] on kaupungin musiikkiperinteen ydintä, ja se elää soittajalta soittajalle. Tarkkaa opetusmenetelmää en ole varma, mutta kuuntelu on varmasti ratkaisevaa. Rytmin tunnen minäkin, kun lennän.
+Joo, tän minä muistan. Wieniläisvalssissa toinen isku tulee hieman etuajassa, joten sitä ei voi laskea metronomin avulla tasan. Se opitaan kuuntelemalla ja [[tanssimalla]]: oppija kuulee rytmin monta kertaa, tuntee sen kehossaan ja alkaa lopulta tuottaa sen itse. Kokeneet tanssijat ja muusikot kertovat usein, että tunne tulee toiston ja kokemuksen kautta, eikä sitä voi kirjoittaa nuottiin täsmälleen. [[Wieniläisvalssi]] on kaupungin musiikkiperinteen ydintä, ja se elää soittajalta soittajalle. Tarkkaa opetusmenetelmää en ole varma, mutta kuuntelu on varmasti ratkaisevaa. Rytmin tunnen minäkin, kun lennän.
 
 JATKOT:
 Mitä eroa on wieniläisvalssilla ja tavallisella valssilla?
