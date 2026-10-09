@@ -711,7 +711,43 @@ namespace Matkakirja.Editori
             AsetaIos(iOSSdkVersion.SimulatorSDK);
             // MATKAKIRJA_KEHITYS=1: Development-käännös (Profilerin skriptimerkit CpuMittarille), kuten laitteelle.
             bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
-            Kaanna("Build/iOS-sim", kehitys ? BuildOptions.Development : BuildOptions.None);
+            // Steam Audion iOS-kirjastot (phonon, audioplugin_phonon, mysofa, pffft) ovat vain laitteen arm64:ää →
+            // simulaattorin linkitys kaatuu ("building for iOS-simulator, but linking … built for iOS"; juna 173).
+            // Simulaattorissa Steam Audio pois kokonaan: määrite MATKAKIRJA_EI_STEAMAUDIO (SteamAudioUnity- ja
+            // -Editor-asmdefien defineConstraints, SteamAudioKoe.cs:n tynkä) ja Binaries/iOS pois iOS-käännöksestä.
+            // Palautus finallyssä; Kaanna kutsuu virheessä EditorApplication.Exit(1), jolloin palautus ei aja
+            // (käännöskopio resetoidaan gitillä joka kerta).
+            var kohde = UnityEditor.Build.NamedBuildTarget.iOS;
+            string maaritteet = PlayerSettings.GetScriptingDefineSymbols(kohde);
+            var steamAudio = SteamAudioIos(false);
+            PlayerSettings.SetScriptingDefineSymbols(kohde, (maaritteet + ";" + EiSteamAudio).Trim(';'));
+            try { Kaanna("Build/iOS-sim", kehitys ? BuildOptions.Development : BuildOptions.None); }
+            finally
+            {
+                PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet);
+                foreach (var p in steamAudio) { p.SetCompatibleWithPlatform(BuildTarget.iOS, true); p.SaveAndReimport(); }
+            }
+        }
+
+        /// <summary>Simulaattorikäännöksen määrite: Steam Audio pois (laitekirjastot eivät linkity simulaattoriin).</summary>
+        public const string EiSteamAudio = "MATKAKIRJA_EI_STEAMAUDIO";
+        const string SteamAudioIosKansio = "Assets/Plugins/SteamAudio/Binaries/iOS";
+
+        /// <summary>Steam Audion iOS-liitännäiset (.a + AppController.mm) iOS-käännökseen tai pois; palauttaa muutetut.</summary>
+        static System.Collections.Generic.List<PluginImporter> SteamAudioIos(bool mukaan)
+        {
+            var muutetut = new System.Collections.Generic.List<PluginImporter>();
+            if (!AssetDatabase.IsValidFolder(SteamAudioIosKansio)) return muutetut;
+            foreach (var guid in AssetDatabase.FindAssets("", new[] { SteamAudioIosKansio }))
+            {
+                if (AssetImporter.GetAtPath(AssetDatabase.GUIDToAssetPath(guid)) is not PluginImporter p) continue;
+                if (p.GetCompatibleWithPlatform(BuildTarget.iOS) == mukaan) continue;
+                p.SetCompatibleWithPlatform(BuildTarget.iOS, mukaan);
+                p.SaveAndReimport();
+                muutetut.Add(p);
+            }
+            Debug.Log($"MATKAKIRJA: Steam Audion iOS-liitännäiset {(mukaan ? "mukaan" : "pois")}: {muutetut.Count}");
+            return muutetut;
         }
 
         /// <summary>

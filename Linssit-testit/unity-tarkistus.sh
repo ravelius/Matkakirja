@@ -127,6 +127,10 @@ firstpass ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP"
 steamaudio ios $IOS -define:"$DEF_YHT;ENABLE_IL2CPP;STEAMAUDIO_ENABLED"
 kaanna "Assembly-CSharp (ios)" "$ULOS/ios.log" $YHTEISET $NETSTD $IOS $PAKETIT $FP_REF $SA_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
   -define:"$DEF_YHT;ENABLE_IL2CPP" -out:"$ULOS/Assembly-CSharp-ios.dll" $SKRIPTIT
+# 2a'. iOS-simulaattori (juna 173): Rakennus.IosSimulaattori asettaa MATKAKIRJA_EI_STEAMAUDIO → SteamAudioUnity-asmdef jää pois
+# (defineConstraints), SteamAudioKoe.cs:n tynkä. Käännetään ilman SteamAudioUnity-viitettä.
+kaanna "Assembly-CSharp (ios-sim)" "$ULOS/ios-sim.log" $YHTEISET $NETSTD $IOS $PAKETIT $FP_REF -r:"$ULOS/Matkakirja.Peli.dll" -r:"$ULOS/Matkakirja.Linssit.Ydin.dll" $KARTTA_REF \
+  -define:"$DEF_YHT;ENABLE_IL2CPP;MATKAKIRJA_EI_STEAMAUDIO" -out:"$ULOS/Assembly-CSharp-ios-sim.dll" $SKRIPTIT
 
 # 2b. Editori iOS-kohteella: UNITY_EDITOR, joten #else-haarat käännetään.
 EDI=""

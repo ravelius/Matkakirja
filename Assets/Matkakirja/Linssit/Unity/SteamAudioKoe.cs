@@ -6,6 +6,9 @@
 // spatialisoijaksi on valittu Steam Audio (playerissa sitä ei voi vaihtaa ajon aikana). Päällä: MatkakirjaSteamAudio.Kaynnista()
 // ja jokaiselle rekisteröidylle lähteelle SteamAudioSource + spatialize = true (HRTF, ilma-absorptio, etäisyysvaimennus lähteen
 // omalla käyrällä; ei okkluusiota eikä heijastuksia). Pois kytkettäessä lähteet irti heti ja Steam Audio sammuu 0,5 s:n päästä.
+// Simulaattorikäännöksessä (MATKAKIRJA_EI_STEAMAUDIO, Rakennus.IosSimulaattori) Steam Audion kokoonpano puuttuu: tynkä samalla
+// rajapinnalla, aina pois.
+#if !MATKAKIRJA_EI_STEAMAUDIO
 using System.Collections.Generic;
 using SteamAudio;
 using UnityEngine;
@@ -90,3 +93,21 @@ namespace Matkakirja.Natiivi
         }
     }
 }
+#else
+using UnityEngine;
+
+namespace Matkakirja.Natiivi
+{
+    public static class SteamAudioKoe
+    {
+        public const string AsetusAvain = "pallo.SteamAudio";
+        public static bool? Pakko;
+        public static bool Asetus => false;
+        public static bool Paalla => false;
+        public static void Rekisteroi(AudioSource a) { }
+        public static void Paivita() { }
+        public static string Komento(string arvo) => Tila();
+        public static string Tila() => "steamaudio ei tässä käännöksessä (simulaattori)";
+    }
+}
+#endif

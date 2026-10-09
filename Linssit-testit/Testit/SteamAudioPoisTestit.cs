@@ -110,5 +110,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(sp.Success && (sp.Groups[1].Value.Trim() == "" || sp.Groups[1].Value.Trim() == "Steam Audio Spatializer"),
                 $"spatialisoija tyhjä tai Steam Audio ('{sp.Groups[1].Value.Trim()}')");
         }
+
+        // (4) Simulaattorikäännös ilman Steam Audiota (juna 173: iOS-kirjastot ovat vain laitteen arm64:ää): Rakennus.IosSimulaattori
+        //     asettaa MATKAKIRJA_EI_STEAMAUDIO, molemmat Steam Audion asmdefit jäävät pois sillä, ja SteamAudioKoe.cs:llä on tynkä.
+        [Testi] static void SimulaattoriIlmanSteamAudiota()
+        {
+            foreach (var a in new[] { "Plugins/SteamAudio/SteamAudioUnity.asmdef", "Plugins/SteamAudio/Scripts/Editor/SteamAudioUnityEditor.asmdef" })
+                Oleta.Tosi(File.ReadAllText(Path.Combine(Assets, a)).Contains("\"!MATKAKIRJA_EI_STEAMAUDIO\""), $"{a}: defineConstraints !MATKAKIRJA_EI_STEAMAUDIO");
+            string koe = File.ReadAllText(Directory.EnumerateFiles(Assets, "SteamAudioKoe.cs", SearchOption.AllDirectories).Single());
+            Oleta.Tosi(koe.Contains("#if !MATKAKIRJA_EI_STEAMAUDIO") && koe.Contains("#else"), "SteamAudioKoe.cs: tynkä MATKAKIRJA_EI_STEAMAUDIO-määritteellä");
+            int tynka = koe.IndexOf("#else", StringComparison.Ordinal);
+            foreach (var api in new[] { "AsetusAvain", "Pakko", "Asetus", "Paalla", "Rekisteroi(", "Paivita(", "Komento(", "Tila(" })
+                Oleta.Tosi(koe.IndexOf(api, tynka, StringComparison.Ordinal) > 0, $"tyngässä {api}");
+            string rakennus = File.ReadAllText(Path.Combine(Assets, "Matkakirja/Editor/Rakennus.cs"));
+            int sim = rakennus.IndexOf("public static void IosSimulaattori()", StringComparison.Ordinal);
+            Oleta.Tosi(sim > 0 && rakennus.IndexOf("EiSteamAudio", sim, StringComparison.Ordinal) > sim
+                       && rakennus.IndexOf("SteamAudioIos(false)", sim, StringComparison.Ordinal) > sim, "IosSimulaattori kytkee Steam Audion pois");
+        }
     }
 }
