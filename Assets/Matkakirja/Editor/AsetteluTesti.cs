@@ -276,6 +276,15 @@ namespace Matkakirja.Editori
                 Kokonaan(e, turva, "Kysy: " + teksti);
                 IlmanVieritysta(e, "Kysy: " + teksti);
             }
+            // Erotinviiva kysymysten ja Puhu/Kirjoita-rivien välissä, ei listan alla (UI-kuva-arkki 9.10.2026 u03/u05).
+            var puhu = Etsi(juuri, "Puhu oppaalle");
+            if (puhu != null && opas.TestiValikko != null)
+                opas.TestiValikko.Query<VisualElement>(className: "mk-linssivalikko__viiva").ForEach(v =>
+                {
+                    if (!Nakyvissa(v)) return;
+                    if (v.worldBound.yMin > puhu.worldBound.yMax) Virhe($"Kysy: erotinviiva {Laatikko(v.worldBound)} on Puhu oppaalle -rivin alla");
+                    else Kirjaa($"OK Kysy: erotinviiva {Laatikko(v.worldBound)} ennen Puhu oppaalle");
+                });
             float peitto = Peitto(opas.TestiValikko, juuri);
             if (peitto > 0.45f) Virhe($"Kysy-paneelin peitto {peitto:P0} > 45 %"); else Kirjaa($"OK Kysy-paneelin peitto {peitto:P0}");
         }
