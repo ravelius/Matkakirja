@@ -1,0 +1,128 @@
+================ KOHTA 46 (kohde:hahmotelma-durdevac) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 46.1
+KYSYMYS: Millä nimellä asukkaat kutsuvat itseään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 46.2
+KYSYMYS: Minä vuonna Đurđevac sai EU:n EDEN-tunnustuksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đurđevac (kulttuuri)
+Tietoruudun teksti: Đurđevac on kaupunki Koprivnica-Križevcin läänissä Pohjois-Kroatiassa. Vuoteen 1918 se kuului Itävallan monarkiaan (Kroatia-Slavonian kuningaskuntaan vuoden 1867 sovinnon jälkeen) ja Kroatian sotilasrajalla Varaždin–Sankt Georgen -rykmentti nro VI:n alueeseen; ennen vuotta 1850 kaupungin nimi oli Militär Sanct Georgen. Kaupungin nähtävyyksiin kuuluvat vanha linna, Pyhän Yrjön kirkko, Đurđevacin hiekat -puistometsä ja Picokijada, joka perustuu kukkojen legendaan. Asukkaat kutsuvat itseään leikillisesti picokeiksi, ja kaupunki sai vuonna 2008 EU:n EDEN-tunnustuksen epätavallisena matkailukohteena.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-salona-amfiteatteri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Areena, jossa soitetaan yhä] 1. vuosisata — Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, mikä onnistui vain kuudelta roomalaiselta areenalta. Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, mutta kaupunki esti sen. Nykyään areenassa järjestetään konsertteja ja elokuvafestivaali — yleisö istuu samoilla paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo elokuvaa.
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+
+### 47.1
+KYSYMYS: Kuinka monta katsojaa amfiteatteriin mahtui parhaimmillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Areena, jossa soitetaan yhä] 1. vuosisata — Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, mikä onnistui vain kuudelta roomalaiselta areenalta. Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, mutta kaupunki esti sen. Nykyään areenassa järjestetään konsertteja ja elokuvafestivaali — yleisö istuu samoilla paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo elokuvaa.
+
+### 47.2
+KYSYMYS: Miksi venetsialaiset purkivat amfiteatterin 1600-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan amfiteatteri (historia)
+Tietoruudun teksti: Salonan amfiteatteri rakennettiin Rooman Dalmatian provinssin pääkaupunkiin 100-luvun jälkipuoliskolla, ja sen ulkomitat olivat noin 125 x 100 metriä ja areena 65 x 40 metriä. Kolmelle katsomotasolle mahtui arviolta 15 000–18 000 katsojaa seuraamaan gladiaattoriotteluita, joita järjestettiin 400-luvulle asti, kunnes ne kiellettiin; myöhemmin areenaa käytettiin myös teloituspaikkana keisari Diocletianuksen kristittyjen vainoissa. Kun avaarit ja slaavit valtasivat ja tuhosivat Salonan 600-luvulla, asukkaat pakenivat läheisen Diocletianuksen palatsin muurien suojaan — siitä syntyi nykyinen Split — mutta amfiteatteri selvisi hyökkäyksestä paremmin kuin muu kaupunki. Pahimmat vauriot se kärsi vasta 1600-luvulla turkkilaissodissa, kun venetsialaiset purkivat sitä tarkoituksella, jotta osmanit eivät voisi linnoittautua sen muureihin. Rauniot ovat nykyään osa Salonan arkeologista puistoa Solini…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-cacvina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Sarajevo — kohdekartta / Kohdekartta: Inat kuća] Tämä ei ole isoisäsi Sarajevoa. Kun hän käveli täällä, jokivarsi oli yhä ottomaanien kaupunkia; viisi vuotta myöhemmin tuli Itävalta-Unkari. Sen virkamiehet halusivat Miljackan rannalta tontin uudelle kaupungintalolle ja kirjastolle. Tontilla oli talo. Omistajalle tarjottiin rahaa: ei. Hänelle sanottiin, että hänen on pakko muuttaa: ei. Kun virkamiehet siirtyivät uhkailuun, mies purki talonsa, siirsi sen ja kokosi sen uudelleen pala palalta joen vastarannalle — ei siksi, että olisi halunnut asua siellä, vaan kiusatakseen heitä. Talo seisoo yhä paikallaan, ja siinä on nykyään ravintola nimeltä Inat kuća, Uhmatalo. Kuulet siitä vielä toisenkin version, jossa mies vaati korvaukseksi kultarahan…
+
+### 48.1
+KYSYMYS: Minä vuonna osmanit valtasivat Čačvinan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+### 48.2
+KYSYMYS: Kuka purki linnan ja minä vuonna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čačvinan linna (historia)
+Tietoruudun teksti: Čačvinan linna on keskiaikainen linnoitus Sisä-Dalmatiassa, 705 metrin korkeudessa Dinaridien vuoriston solassa, missä se vartioi kauppareittiä rannikon Dalmatiasta sisämaahan Bosniaan. Seutu oli Šubić-suvun hallussa vuoteen 1322 asti, ja linna mainitaan lähteissä ensimmäisen kerran vuonna 1371, jolloin se kuului Nelipić-suvulle aina 1400-luvun alkuun asti. Omistus vaihtui sen jälkeen useaan otteeseen: Frankopanit saivat linnan 1435, Talovcit 1436, ja herttua Stjepan Vukčić Kosača otti sen haltuunsa 1459 taisteltuaan siitä kuningas Tomašin kanssa. Osmanit valtasivat Čačvinan 1513 ja hallitsivat sitä Hertsegovinan sandžakin osana aina vuoteen 1718 asti, jolloin alue siirtyi Venetsian Dalmatiaan. Linna autioitui 1700-luvun puolivälissä, ja Ranskan vallan aikana se purettiin kokonaan vuonna 1808.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Sarajevo — kohdekartta / Kohdekartta: Inat kuća] Tämä ei ole isoisäsi Sarajevoa. Kun hän käveli täällä, jokivarsi oli yhä ottomaanien kaupunkia; viisi vuotta myöhemmin tuli Itävalta-Unkari. Sen virkamiehet halusivat Miljackan rannalta tontin uudelle kaupungintalolle ja kirjastolle. Tontilla oli talo. Omistajalle tarjottiin rahaa: ei. Hänelle sanottiin, että hänen on pakko muuttaa: ei. Kun virkamiehet siirtyivät uhkailuun, mies purki talonsa, siirsi sen ja kokosi sen uudelleen pala palalta joen vastarannalle — ei siksi, että olisi halunnut asua siellä, vaan kiusatakseen heitä. Talo seisoo yhä paikallaan, ja siinä on nykyään ravintola nimeltä Inat kuća, Uhmatalo. Kuulet siitä vielä toisenkin version, jossa mies vaati korvaukseksi kultarahan…
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI

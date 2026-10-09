@@ -1,0 +1,213 @@
+================ KOHTA 26 (kohde:hahmotelma-vis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Kulta-Liisa] Heinrich Strack suunnitteli pylvään vuoden 1864 jälkeen muistoksi voitosta Tanskasta. Ennen kuin se ehdittiin vihkiä, Preussi oli voittanut myös Itävallan ja Ranskan, ja pylväs sai uuden merkityksen: harjalle lisättiin 8,3 metriä korkea pronssinen Victoria, jota alkuperäisissä suunnitelmissa ei ollut lainkaan. Vihkiäiset pidettiin 2. syyskuuta 1873, isoisäsi matkavuonna. Berliiniläiset eivät jääneet juhlapuheiden varaan vaan antoivat patsaalle lempinimen Goldelse, Kulta-Liisa, vuonna 1866 ilmestyneen romaanin sankarittaren mukaan. Pylväs ei ole enää siinä, missä se silloin seisoi: se nousi Königsplatzille, ja vuosina 1938–39 se siirrettiin Großer Sternille ja korotettiin samalla kuudella ja…
+- [Kathmandu — kohdekartta / Kohdekartta: Unelmien puutarha] 1920 Kaiser Mahalin muurien sisällä on uusklassinen puutarha, jonka Rana-suvun kenttämarsalkka Kaiser Sumsher Rana (1892–1964) rakennutti vuonna 1920. Alkuperäinen nimi oli Kuuden vuodenajan puutarha, ja paviljongit omistettiin Nepalin kuudelle vuodenajalle. Suunnittelija oli Kishore Narshingh, sama arkkitehti, joka piirsi Singha Durbarin hallintopalatsin. Pinta-alaa on 6 895 neliömetriä. Muodollinen ja akselille asetettu arkkitehtuuri on tarkoituksellisessa ristiriidassa vapaasti istutettujen kasvien kanssa — sama ajatus kuin Edward VII:n aikaisissa englantilaisissa puutarhoissa. Käytävien varsilla on upotettuja kukkatarhoja, joiden keskellä on lampi, ja lisäksi amfiteatteri, pergoloita, k…
+
+### 26.1
+KYSYMYS: Mikä on Kroatian mantereesta kaukaisin asuttu saari?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Kinoteatteri Gornjak] Leninin valtakatu 19 Gornjak tarkoittaa kaivosmiestä, ja se on Magadanin elokuvateatteri. Talo on vaaleanvihreä, sen julkisivua jäsentävät valkoiset pilasterit ja sen katolla lukee kolmessa osassa mainoskirjaimin sana elokuva, nimi Gornjak punaisella käsialakirjaimistolla ja sana teatteri. Sisäänkäynnin viereen on ripustettu elokuvajulisteita lasitettuihin kehyksiin. Elokuvateatteri kuuluu samaan sarjaan kuin kaupungin muut julkiset talot: se on kulttuurilaitos, joka rakennettiin, kun kaupunki oli vasta muutaman vuosikymmenen ikäinen, ja se sai saman klassisistisen asun. Magadanissa on lisäksi aluemuseo, geologinen museo, aluekirjasto ja yliopisto, ja kaupungin oma sanomalehti on Magadanska…
+
+### 26.2
+KYSYMYS: Kuka johti Itävallan laivastoa vuonna 1866?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vis (luonto · saari)
+Tietoruudun teksti: Vis on Adrianmeren kroatialainen saari ja Kroatian mantereesta kaukaisin asuttu saari; asukkaita oli 3 313 vuonna 2021. Saaren pinta-ala on 90 neliökilometriä ja korkein kohta on 587 metrin Hum. Antiikissa Syrakusan tyranni Dionysios Vanhempi perusti saarelle Issan siirtokunnan 300-luvulla eaa., ja Venetsian vallan päätyttyä saari kuului Itävallalle vuodesta 1814 nimellä Lissa. Saaren pohjoispuolella käytiin 1800-luvulla kaksi meritaistelua: vuonna 1811 brittiläinen laivue löi ranskalaisen Lissan taistelussa, ja 20. heinäkuuta 1866 Wilhelm von Tegetthoffin johtama Itävallan laivasto löi suuremman Italian laivaston ja upotti Re d’Italian. Saaren pääelinkeinot ovat viininviljely, kalastus ja matkailu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Kulta-Liisa] Heinrich Strack suunnitteli pylvään vuoden 1864 jälkeen muistoksi voitosta Tanskasta. Ennen kuin se ehdittiin vihkiä, Preussi oli voittanut myös Itävallan ja Ranskan, ja pylväs sai uuden merkityksen: harjalle lisättiin 8,3 metriä korkea pronssinen Victoria, jota alkuperäisissä suunnitelmissa ei ollut lainkaan. Vihkiäiset pidettiin 2. syyskuuta 1873, isoisäsi matkavuonna. Berliiniläiset eivät jääneet juhlapuheiden varaan vaan antoivat patsaalle lempinimen Goldelse, Kulta-Liisa, vuonna 1866 ilmestyneen romaanin sankarittaren mukaan. Pylväs ei ole enää siinä, missä se silloin seisoi: se nousi Königsplatzille, ja vuosina 1938–39 se siirrettiin Großer Sternille ja korotettiin samalla kuudella ja…
+- [Kathmandu — kohdekartta / Kohdekartta: Unelmien puutarha] 1920 Kaiser Mahalin muurien sisällä on uusklassinen puutarha, jonka Rana-suvun kenttämarsalkka Kaiser Sumsher Rana (1892–1964) rakennutti vuonna 1920. Alkuperäinen nimi oli Kuuden vuodenajan puutarha, ja paviljongit omistettiin Nepalin kuudelle vuodenajalle. Suunnittelija oli Kishore Narshingh, sama arkkitehti, joka piirsi Singha Durbarin hallintopalatsin. Pinta-alaa on 6 895 neliömetriä. Muodollinen ja akselille asetettu arkkitehtuuri on tarkoituksellisessa ristiriidassa vapaasti istutettujen kasvien kanssa — sama ajatus kuin Edward VII:n aikaisissa englantilaisissa puutarhoissa. Käytävien varsilla on upotettuja kukkatarhoja, joiden keskellä on lampi, ja lisäksi amfiteatteri, pergoloita, k…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-pag) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan silta] 1960 Tromssan silta on jättimäinen betoninen kaari, joka yhdistää Tromsøyan saaren mantereeseen yli Tromsøysundetin salmen. Se on peräti 1036 metriä pitkä - siinä on 58 erillistä siltakaarta peräkkäin! Sillan pisin yksittäinen jänneväli on 80 metriä, ja laivat mahtuvat kulkemaan sen alta jopa 38 metrin korkeudessa. Sillan rakentaminen alkoi vuonna 1958, ja se avattiin liikenteelle 3. heinäkuuta 1960. Valmistuessaan se oli koko Pohjois-Euroopan pisin silta - ja samalla ensimmäinen ulokerakenteinen (konsoli-) silta koko Norjassa! Ennen siltaa saarelle pääsi vain lautalla, joten silta muutti koko kaupungin elämän ja kasvun. Nykyään silta on niin arvokas rakennelma, että Norjan muinaismuistovir…
+- [Mosambik — kaupunkilehti / Mosambik: Silta joka päätti eristyksen] Vuosisatojen ajan Mosambikin saarelle pääsi vain veneellä – juuri tämä teki siitä niin helposti puolustettavan linnoituskaupungin. Sillan rakentamisesta järjestettiin tarjouskilpailu vuonna 1962, ja lähes 3,4 kilometriä pitkä silta valmistui vuonna 1969, sata vuotta isoisän vierailun jälkeen. Silta yhdisti saaren vihdoin mantereeseen autolla ja jalan kuljettavaksi, ja nykyään sitä pitkin kulkee sekä paikallisten arkiliikenne että Unescon maailmanperintökohteeksi vuonna 1991 nimetyllä saarella vierailevat matkailijat.
+
+### 27.1
+KYSYMYS: Minkä lempinimen Pag on saanut maisemansa vuoksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kimberley — kaupunkilehti / Timanttiryntäys: Kivi joka sai nimensä kaupungista] Timantit eivät synny sattumalta minkä tahansa kiven sisään, vaan tietynlaisessa syvältä maankuoresta nousseessa kivilajissa. Kun geologit alkoivat tutkia Kimberleyn seudun piippumaisia, alaspäin kapenevia kivimuodostumia, he huomasivat niiden olevan poikkeuksellisen rikkaita timanteista. Koska juuri Kimberleyn ympäristöstä löytyi useita timanttipitoisia piippuja, tutkijat ristivät kivilajin kimberliitiksi. Rapautunut kimberliitti sai lempinimen "yellowground", syvemmällä säilynyt, rapautumaton kivi taas nimen "blueground". Nimi levisi tieteen kieleksi ympäri maailmaa, vaikka moni muukin paikka tuotti myöhemmin timantteja samasta kivilajista.
+
+### 27.2
+KYSYMYS: Kuinka pitkä silta yhdistää saaren mantereeseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pag (luonto · saari)
+Tietoruudun teksti: Pag on Pohjois-Adrianmeren saari, Kroatian rannikon viidenneksi suurin ja pisin rantaviivaltaan (269 kilometriä); sen pinta-ala on noin 284 neliökilometriä. Karun kuunmaisen maisemansa vuoksi sitä kutsutaan kuun saareksi. Pag on ainoa Kroatian saari, joka kuuluu kahteen lääniin, ja siellä on kaksi kaupunkia, Pag ja Novalja; 300 metrin pituinen kaarisilta yhdistää saaren eteläosan mantereeseen. Saarella on tuotettu suolaa yli tuhat vuotta: vanhin kirjallinen maininta on vuodelta 999, ja Pagin kaupungin synty liittyy siihen, että suojaisen lahden matalia poukamia käytettiin suolan valmistukseen. Tunnettuihin pagilaisiin kuuluu jesuiitta Bartol Kašić, joka kirjoitti ensimmäisen kroatian kieliopin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan silta] 1960 Tromssan silta on jättimäinen betoninen kaari, joka yhdistää Tromsøyan saaren mantereeseen yli Tromsøysundetin salmen. Se on peräti 1036 metriä pitkä - siinä on 58 erillistä siltakaarta peräkkäin! Sillan pisin yksittäinen jänneväli on 80 metriä, ja laivat mahtuvat kulkemaan sen alta jopa 38 metrin korkeudessa. Sillan rakentaminen alkoi vuonna 1958, ja se avattiin liikenteelle 3. heinäkuuta 1960. Valmistuessaan se oli koko Pohjois-Euroopan pisin silta - ja samalla ensimmäinen ulokerakenteinen (konsoli-) silta koko Norjassa! Ennen siltaa saarelle pääsi vain lautalla, joten silta muutti koko kaupungin elämän ja kasvun. Nykyään silta on niin arvokas rakennelma, että Norjan muinaismuistovir…
+- [Mosambik — kaupunkilehti / Mosambik: Silta joka päätti eristyksen] Vuosisatojen ajan Mosambikin saarelle pääsi vain veneellä – juuri tämä teki siitä niin helposti puolustettavan linnoituskaupungin. Sillan rakentamisesta järjestettiin tarjouskilpailu vuonna 1962, ja lähes 3,4 kilometriä pitkä silta valmistui vuonna 1969, sata vuotta isoisän vierailun jälkeen. Silta yhdisti saaren vihdoin mantereeseen autolla ja jalan kuljettavaksi, ja nykyään sitä pitkin kulkee sekä paikallisten arkiliikenne että Unescon maailmanperintökohteeksi vuonna 1991 nimetyllä saarella vierailevat matkailijat.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-lastovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 28.1
+KYSYMYS: Kuinka monta saarta Lastovon saaristoon kuuluu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+### 28.2
+KYSYMYS: Minä vuonna saaristo julistettiin luonnonpuistoksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lastovo (luonto · saari)
+Tietoruudun teksti: Lastovo, italiaksi Lagosta, on Dubrovnik-Neretvan läänin saaristo ja kunta, johon kuuluu 46 saarta ja jonka maa-ala on noin 53 neliökilometriä; asukkaita on 792. Pääsaari on 13 kilometriä Korčulasta etelään ja yksi Adrianmeren syrjäisimpiä asuttuja saaria. Vuonna 1000 venetsialaiset hyökkäsivät ja tuhosivat asutuksen, koska saarelaiset harjoittivat merirosvousta, ja 1200-luvulla saari liittyi Dubrovnikin tasavaltaan (Ragusa), jossa se nautti tietynasteista itsehallintoa aina Napoleonin valtaukseen asti; sen jälkeen saarta hallitsivat Itävalta ja Itävalta-Unkari. Lastovon kylä on rakennettu luonnollisen amfiteatterin rinteille poispäin merestä, mikä on epätavallista Adrianmerellä. Suurin kulttuuritapahtuma on Poklade-karnevaali, ja vuonna 2006 saaristo julistettiin luonnonpuistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-mali-losinj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Injera on lautanen ja lusikka] Injera on hapan, sienimäisen huokoinen lettuleipä, jonka päälle ateria katetaan: se on samalla lautanen, lusikka ja leipä. Taikina käy ersho-nimisen hapatteen kanssa 24–72 tuntia, mistä tulee hapan maku. Sen jälkeen osa taikinasta keitetään absitiksi ja sekoitetaan takaisin; toinen käyminen kestää enää puolesta tunnista kahteen. Leipä paistetaan savisella mitad-levyllä 90–95 asteessa: taikina kaadetaan spiraalina ulkoa sisäänpäin, kansi päälle, kaksi tai kolme minuuttia — eikä sitä käännetä. Höyry tekee pintaan kuplat, joita sanotaan silmiksi.
+- [Sydney — kohdekartta / Kohdekartta: Australian museo] 1827–1857 Museon perusti 1827 siirtomaaministeri Earl Bathurst, joka kirjoitti New South Walesin kuvernöörille aikovansa perustaa julkisen museon ja myönsi sen ylläpitoon 200 puntaa vuodessa. Asiaa oli ajanut hyönteistutkija Alexander Macleay. Museo on Australian vanhin luonnonhistoriallinen museo ja maailman viidenneksi vanhin. Ensimmäinen hoitaja William Holmes nimitettiin 1829, ja hän kuoli elokuussa 1831 oman aseensa laukaukseen keräysmatkalla Moreton Bayssä. Nimi oli aluksi Colonial Museum tai Sydney Museum, ja Australian Museumiksi se ristittiin kesäkuussa 1836 kesken erään kokouksen kiistan. Kolmenkymmenen ensimmäisen vuoden aikana kokoelma muutti talosta toiseen, kunnes se sai oman …
+
+### 29.1
+KYSYMYS: Kuinka monta laivatelakkaa kaupungissa oli vuonna 1868?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Australian museo] 1827–1857 Museon perusti 1827 siirtomaaministeri Earl Bathurst, joka kirjoitti New South Walesin kuvernöörille aikovansa perustaa julkisen museon ja myönsi sen ylläpitoon 200 puntaa vuodessa. Asiaa oli ajanut hyönteistutkija Alexander Macleay. Museo on Australian vanhin luonnonhistoriallinen museo ja maailman viidenneksi vanhin. Ensimmäinen hoitaja William Holmes nimitettiin 1829, ja hän kuoli elokuussa 1831 oman aseensa laukaukseen keräysmatkalla Moreton Bayssä. Nimi oli aluksi Colonial Museum tai Sydney Museum, ja Australian Museumiksi se ristittiin kesäkuussa 1836 kesken erään kokouksen kiistan. Kolmenkymmenen ensimmäisen vuoden aikana kokoelma muutti talosta toiseen, kunnes se sai oman …
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+
+### 29.2
+KYSYMYS: Minä vuonna Mali Lošinj mainitaan ensi kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mali Lošinj (merenkulku)
+Tietoruudun teksti: Mali Lošinj on kaupunki Lošinjin saarella Kvarnerin alueella Länsi-Kroatiassa; kaupungin asukasluku oli 7 537 vuonna 2021. Se mainitaan ensi kerran vuonna 1398 nimellä Malo selo eli pieni kylä. Vuonna 1868 se koki kulta-aikansa: siellä oli yksitoista laivatelakkaa, ja Adrianmeren suurin ja kehittynein kauppalaivasto oli täällä, jopa Rijekan, Triesten ja Venetsian edellä. Amerikkalainen kirjailija Kenneth Roberts kirjoitti vuonna 1938, että saarella asui neljäsataa merikapteenia. Höyrykoneen keksiminen ja viiniköynnöstaudin puhkeaminen pysäyttivät kehityksen, ja kaupunki sijaitsee Lošinjin lahden suojaisimmassa osassa saaren aurinkoisella itäpuolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Injera on lautanen ja lusikka] Injera on hapan, sienimäisen huokoinen lettuleipä, jonka päälle ateria katetaan: se on samalla lautanen, lusikka ja leipä. Taikina käy ersho-nimisen hapatteen kanssa 24–72 tuntia, mistä tulee hapan maku. Sen jälkeen osa taikinasta keitetään absitiksi ja sekoitetaan takaisin; toinen käyminen kestää enää puolesta tunnista kahteen. Leipä paistetaan savisella mitad-levyllä 90–95 asteessa: taikina kaadetaan spiraalina ulkoa sisäänpäin, kansi päälle, kaksi tai kolme minuuttia — eikä sitä käännetä. Höyry tekee pintaan kuplat, joita sanotaan silmiksi.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-neretva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+### 30.1
+KYSYMYS: Kuinka pitkä Neretva on kokonaisuudessaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+### 30.2
+KYSYMYS: Minä vuonna Neretvan suisto tuli Ramsar-alueeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretvan suisto (luonto · joki)
+Tietoruudun teksti: Neretva, italiaksi Narenta, on Adrianmeren itäisen valuma-alueen suurimpia jokia ja Dinaaristen Alppien suurin karstijoki. Sen pituus on 225 kilometriä, josta 208 on Bosnia ja Hertsegovinassa ja viimeiset 22 kilometriä Kroatian Dubrovnik-Neretvan läänissä. Joen lähde on Zelengoran ja Lebršnikin vuorten juurella 1 227 metrin korkeudessa, ja viimeiset noin 30 kilometriä muodostavat leveän tulvatasangon, suiston, ennen Adrianmerta. Neretvan suisto on ollut Ramsar-alue vuodesta 1992, ja yhdessä Bosnian puolella olevan Hutovo Blaton kanssa se muodostaa yhden yhtenäisen suojelualueen.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

@@ -1,0 +1,180 @@
+================ KOHTA 41 (kohde:hahmotelma-ilok) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilok (historia)
+Tietoruudun teksti: Ilok on Kroatian itäisin kaupunki, joka muodostaa maantieteellisen kiilan Serbian Vojvodinan ympäröimänä Sremin alueella Fruška Goran kukkulan rinteillä Tonavan yllä. Roomalaiset perustivat 1. tai 2. vuosisadalla Cuccium-nimisen, Tonavan ensimmäisen rajalinnoituksen. Keskiajalla Ilok oli Ylä-Sremin puolittain itsenäisen valtion pääkaupunki 1200- ja 1300-luvuilla, ja Iločkien eli Újlakien suku hallitsi sitä; ottomaanit valtasivat kaupungin vuonna 1526, ja Habsburgit ottivat sen lopullisesti takaisin vuonna 1697. Kaupungin nähtävyyksiä ovat fransiskaaniluostari ja Iločin linna, ja 1800-luvun lopulla Ilok oli Sremin läänin piirikunnan pääkaupunki Kroatia-Slavonian kuningaskunnassa.
+
+### 41.1
+KYSYMYS: Minkä joen rannalla Ilok sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilok (historia)
+Tietoruudun teksti: Ilok on Kroatian itäisin kaupunki, joka muodostaa maantieteellisen kiilan Serbian Vojvodinan ympäröimänä Sremin alueella Fruška Goran kukkulan rinteillä Tonavan yllä. Roomalaiset perustivat 1. tai 2. vuosisadalla Cuccium-nimisen, Tonavan ensimmäisen rajalinnoituksen. Keskiajalla Ilok oli Ylä-Sremin puolittain itsenäisen valtion pääkaupunki 1200- ja 1300-luvuilla, ja Iločkien eli Újlakien suku hallitsi sitä; ottomaanit valtasivat kaupungin vuonna 1526, ja Habsburgit ottivat sen lopullisesti takaisin vuonna 1697. Kaupungin nähtävyyksiä ovat fransiskaaniluostari ja Iločin linna, ja 1800-luvun lopulla Ilok oli Sremin läänin piirikunnan pääkaupunki Kroatia-Slavonian kuningaskunnassa.
+
+### 41.2
+KYSYMYS: Minä vuonna Habsburgit ottivat kaupungin lopullisesti takaisin ottomaaneilta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ilok (historia)
+Tietoruudun teksti: Ilok on Kroatian itäisin kaupunki, joka muodostaa maantieteellisen kiilan Serbian Vojvodinan ympäröimänä Sremin alueella Fruška Goran kukkulan rinteillä Tonavan yllä. Roomalaiset perustivat 1. tai 2. vuosisadalla Cuccium-nimisen, Tonavan ensimmäisen rajalinnoituksen. Keskiajalla Ilok oli Ylä-Sremin puolittain itsenäisen valtion pääkaupunki 1200- ja 1300-luvuilla, ja Iločkien eli Újlakien suku hallitsi sitä; ottomaanit valtasivat kaupungin vuonna 1526, ja Habsburgit ottivat sen lopullisesti takaisin vuonna 1697. Kaupungin nähtävyyksiä ovat fransiskaaniluostari ja Iločin linna, ja 1800-luvun lopulla Ilok oli Sremin läänin piirikunnan pääkaupunki Kroatia-Slavonian kuningaskunnassa.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-djakovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đakovo (kulttuuri)
+Tietoruudun teksti: Đakovo on Slavonian kaupunki, joka on hedelmällisen ja rikkaan Đakovon seudun keskus. Roomalaisaikana samalla paikalla oli Certissia, ja ensimmäinen asiakirjamaininta on vuodelta 1239, jolloin Unkarin Béla IV lahjoitti sen Bosnian hiippakunnalle; piispa siirsi istuimensa sinne vuonna 1246. Nykyinen Pyhän Pietarin katedraali rakennettiin vuosina 1866–1882 Đakovon ja Sremin katolisen piispan Josip Juraj Strossmayerin johdolla, ja se on koko Slavonian tärkein sakraalirakennus. Vuonna 1805 lipizzanhevoslauma evakuoitiin Đakovoon Napoleonin hyökättyä Itävaltaan ja Unkariin, ja osa laumasta jäi sinne pysyvästi. Kaupungin keskeinen perinnetapahtuma on Đakovački vezovi, Slavonian kansanperinteen ja kirjonnan esitys.
+
+### 42.1
+KYSYMYS: Kuka johti Đakovon katedraalin rakentamista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đakovo (kulttuuri)
+Tietoruudun teksti: Đakovo on Slavonian kaupunki, joka on hedelmällisen ja rikkaan Đakovon seudun keskus. Roomalaisaikana samalla paikalla oli Certissia, ja ensimmäinen asiakirjamaininta on vuodelta 1239, jolloin Unkarin Béla IV lahjoitti sen Bosnian hiippakunnalle; piispa siirsi istuimensa sinne vuonna 1246. Nykyinen Pyhän Pietarin katedraali rakennettiin vuosina 1866–1882 Đakovon ja Sremin katolisen piispan Josip Juraj Strossmayerin johdolla, ja se on koko Slavonian tärkein sakraalirakennus. Vuonna 1805 lipizzanhevoslauma evakuoitiin Đakovoon Napoleonin hyökättyä Itävaltaan ja Unkariin, ja osa laumasta jäi sinne pysyvästi. Kaupungin keskeinen perinnetapahtuma on Đakovački vezovi, Slavonian kansanperinteen ja kirjonnan esitys.
+
+### 42.2
+KYSYMYS: Minä vuonna lipizzanhevoslauma evakuoitiin Đakovoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đakovo (kulttuuri)
+Tietoruudun teksti: Đakovo on Slavonian kaupunki, joka on hedelmällisen ja rikkaan Đakovon seudun keskus. Roomalaisaikana samalla paikalla oli Certissia, ja ensimmäinen asiakirjamaininta on vuodelta 1239, jolloin Unkarin Béla IV lahjoitti sen Bosnian hiippakunnalle; piispa siirsi istuimensa sinne vuonna 1246. Nykyinen Pyhän Pietarin katedraali rakennettiin vuosina 1866–1882 Đakovon ja Sremin katolisen piispan Josip Juraj Strossmayerin johdolla, ja se on koko Slavonian tärkein sakraalirakennus. Vuonna 1805 lipizzanhevoslauma evakuoitiin Đakovoon Napoleonin hyökättyä Itävaltaan ja Unkariin, ja osa laumasta jäi sinne pysyvästi. Kaupungin keskeinen perinnetapahtuma on Đakovački vezovi, Slavonian kansanperinteen ja kirjonnan esitys.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-samobor) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+
+### 43.1
+KYSYMYS: Minä vuonna Franz Liszt vieraili Samborissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+
+### 43.2
+KYSYMYS: Milloin Samobor sai vapaan kuninkaallisen kaupungin aseman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samobor (kulttuuri)
+Tietoruudun teksti: Samobor on kaupunki Zagrebin läänissä Zagrebin länsipuolella, Samoborin vuorten itärinteiden ja Žumberakin vuorten välissä Savan laaksossa. Se on ollut vapaa kuninkaallinen kaupunki vuodesta 1242 Béla IV:n lahjakirjan mukaan, ja Karlowitzin rauhan 1699 jälkeen se kuului Habsburgien monarkiaan. Samobor on yksi alueen varhaisimmista matkailukohteista: ensimmäiset matkailupalvelut ovat vuodelta 1810, ja ne palvelivat kalastajia, metsästäjiä ja retkeilijöitä. Vuonna 1846 säveltäjä Franz Liszt vieraili kaupungissa ystävänsä Ferdo Livadićin luona; Livadić kuului illyrialaiseen liikkeeseen ja kirjoitti 1800-luvun tunnetuimman isänmaallisen laulun Još Hrvatska ni propala. Tepec-kukkulalla ovat 1200-luvun Samoborin linnoituksen jäännökset, ja kaupungin merkittäviä teollisuudenaloja on kristallinhionta.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-kumrovec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+
+### 44.1
+KYSYMYS: Minkä joen varrella Kumrovec sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+
+### 44.2
+KYSYMYS: Minä vuonna Staro Selon talojen kunnostus alkoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kumrovec (kulttuuri)
+Tietoruudun teksti: Kumrovec on kylä Pohjois-Kroatiassa Krapina-Zagorjen läänissä Sutla-joen varrella Kroatian ja Slovenian rajalla; kylässä on vain 245 asukasta ja kunnassa 1 412 (2021). Kylän vanha osa, Staro Selo, on etnologinen museo, jossa on hyvin säilyneitä Zagorjen talonpoikaistaloja 1800- ja 1900-lukujen vaihteesta; kunnostus aloitettiin vuonna 1977, ja yli neljäkymmentä taloa ja tilarakennusta on kunnostettu. Näyttelyissä esitellään esimerkiksi Zagorjen tyylinen häät, hampusta pellavaksi, sepän, rattaantekijän ja savenvalajan työt sekä viljasta leipään. Kylässä on muistomerkki kansallislaululle Lijepa naša domovino, joka pystytettiin 24. marraskuuta 1935 laulun satavuotisjuhlan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-sinj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+
+### 45.1
+KYSYMYS: Minä vuonna turkkilaisten piiritys Sinjissä epäonnistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+
+### 45.2
+KYSYMYS: Millä nimellä Sinjin ympäristön seutua kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sinj (kulttuuri)
+Tietoruudun teksti: Sinj on Split-Dalmatian läänin sisämaan kaupunki, jonka asukasluku oli 23 500 vuonna 2021. Se tunnetaan Sinjska alka -ritariturnauksesta, jota on järjestetty 1700-luvun alusta lähtien voiton merkiksi ottomaaneista, sekä Sinjin Neitsyt Marian pyhäköstä. Kaupunki on Cetinska krajinan keskus Sinjsko poljen hedelmällisen karstikentän ympärillä Svilajan, Dinaran, Kamešnican ja Visokan vuorten välissä. Elokuussa 1715 turkkilaiset yrittivät ottaa Sinjin takaisin ja piirittivät sitä, mutta piiritys epäonnistui, ja turkkilaiset pakenivat Livnoon 15. elokuuta yöllä. Wienin kongressin 1815 jälkeen vuoteen 1918 kaupunki kuului Itävallan monarkiaan ja oli samannimisen piirin keskus Dalmatian kuningaskunnassa.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

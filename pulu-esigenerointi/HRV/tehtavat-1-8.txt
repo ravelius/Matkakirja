@@ -1,0 +1,198 @@
+================ KOHTA 36 (kohde:hahmotelma-varazdin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varaždin (historia)
+Tietoruudun teksti: Varaždin on Pohjois-Kroatian kaupunki 81 kilometriä Zagrebista koilliseen, joka tunnetaan barokkirakennuksistaan, musiikistaan, tekstiiliteollisuudestaan ja ruoastaan. Ensimmäinen kirjallinen maininta on 20. elokuuta 1181, ja Unkarin kuningas Andreas II julisti sen vapaaksi kuninkaalliseksi kaupungiksi vuonna 1209. Ottomaanien ryöstöretkien vuoksi kaupunki rakennettiin puolustusasentoon vanhan linnoituksen ympärille; 1300-luvulla aloitetun Vanhan linnan pyöreät tornit lisättiin seuraavalla vuosisadalla, ja nykyään linnassa on kaupunginmuseo. Vuoden 1756 tai 1766 tienoilta Varaždin oli koko Kroatian pääkaupunki, ja siellä kokoontuivat Kroatian valtiopäivät ja Maria Teresian perustama Kuninkaallinen neuvosto, kunnes huhtikuun 1776 tulipalo päätti sen. Palossa tuhoutui kokonaan 70 muurien sisäisestä 113 rakennuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+- [Kööpenhamina — kohdekartta / Kohdekartta: Christiansborgin linna] 1907–1928 Christiansborgin linna seisoo Slotsholmenin saarella paikalla, jossa piispa Absalon rakensi Kööpenhaminan ensimmäisen linnan jo vuonna 1167. Sen jälkeen paikalle on noussut linna toisensa perään - kahdesti aiempi rakennus on tuhoutunut kokonaan tulipalossa, vuosina 1794 ja 1884. Nykyinen, jo kolmas Christiansborg valmistui vuosina 1907–1928. Se on rakennettu uusbarokkityyliin raudoitetusta betonista, ja sen torni kohoaa 106 metrin korkeuteen - se on Kööpenhaminan korkein rakennus. Christiansborg on maailmanlaajuisestikin harvinainen: se on ainoa rakennus, jossa toimivat samaan aikaan kaikki kolme valtiovallan haaraa - Tanskan parlamentti, pääministerin toimisto ja korkein oikeus. …
+
+### 36.1
+KYSYMYS: Minä vuonna Varaždinin suuri palo tuhosi suuren osan kaupunkia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varaždin (historia)
+Tietoruudun teksti: Varaždin on Pohjois-Kroatian kaupunki 81 kilometriä Zagrebista koilliseen, joka tunnetaan barokkirakennuksistaan, musiikistaan, tekstiiliteollisuudestaan ja ruoastaan. Ensimmäinen kirjallinen maininta on 20. elokuuta 1181, ja Unkarin kuningas Andreas II julisti sen vapaaksi kuninkaalliseksi kaupungiksi vuonna 1209. Ottomaanien ryöstöretkien vuoksi kaupunki rakennettiin puolustusasentoon vanhan linnoituksen ympärille; 1300-luvulla aloitetun Vanhan linnan pyöreät tornit lisättiin seuraavalla vuosisadalla, ja nykyään linnassa on kaupunginmuseo. Vuoden 1756 tai 1766 tienoilta Varaždin oli koko Kroatian pääkaupunki, ja siellä kokoontuivat Kroatian valtiopäivät ja Maria Teresian perustama Kuninkaallinen neuvosto, kunnes huhtikuun 1776 tulipalo päätti sen. Palossa tuhoutui kokonaan 70 muurien sisäisestä 113 rakennuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Qara Saray] n. 1230–1250 Qara Saray tarkoittaa Mustaa palatsia, ja se oli Badr al-Din Lu'lu'n hovi Tigriin länsirannalla. Nimi on tarinan mukaan syntynyt onnettomuudesta: palatsi tunnettiin alun perin nimellä Ak Saray eli Valkoinen palatsi, ja kun se paloi mongolien ensimmäisessä hyökkäyksessä, sen ulkopinta muuttui valkoisesta mustaksi. Lu'lu' rakennutti lisäksi Sinjarin portin sekä Imam Yahyan ja Awn al-Dinin hautapyhäköt. Rakennuksesta tiedetään enemmän kuin sitä katsomalla näkisi, ja siitä saadaan kiittää kahta saksalaista. Vuonna 1910 arkeologi Ernst Herzfeld ja taidehistorioitsija Friedrich Sarre tekivät paikalla rakennustutkimuksen. Heidän mukaansa palatsi oli louhittua kalkkikiveä, joka oli pei…
+- [Jemen — maalehti / Rakennukset: Kaupunki jyrkänteen reunalla] Kawkaban on vuoren laella lähes kolmen kilometrin korkeudessa, ja aivan sen alapuolella tasangolla on toinen kaupunki nimeltä Shibam — ei sama kuin Hadramautin savitiilikaupunki. Ylhäällä asuttiin, alhaalla käytiin kauppaa, ja väliä kuljettiin kallioon hakattuja portaita pitkin: niitä on runsaat tuhat ja korkeuseroa lähes 600 metriä. Nimi tarkoittaa arabiaksi kahta planeettaa. Kaupunki oli Yufirien hallitsijasuvun pääkaupunki 800-luvulta alkaen ja Sharaf ad-Dinin suvun tukikohta 1500-luvulta. Lähdettä ei ylhäällä ole, joten kalliosta louhittiin sadevesialtaita, joilla on omat nimensä. Vettä myös riittää: Kawkabaniin sataa vuodessa noin 380 millimetriä, enemmän kuin lähelle jäävään Sanaaseen.
+
+### 36.2
+KYSYMYS: Mikä vanhan linnan nykyinen käyttö on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varaždin (historia)
+Tietoruudun teksti: Varaždin on Pohjois-Kroatian kaupunki 81 kilometriä Zagrebista koilliseen, joka tunnetaan barokkirakennuksistaan, musiikistaan, tekstiiliteollisuudestaan ja ruoastaan. Ensimmäinen kirjallinen maininta on 20. elokuuta 1181, ja Unkarin kuningas Andreas II julisti sen vapaaksi kuninkaalliseksi kaupungiksi vuonna 1209. Ottomaanien ryöstöretkien vuoksi kaupunki rakennettiin puolustusasentoon vanhan linnoituksen ympärille; 1300-luvulla aloitetun Vanhan linnan pyöreät tornit lisättiin seuraavalla vuosisadalla, ja nykyään linnassa on kaupunginmuseo. Vuoden 1756 tai 1766 tienoilta Varaždin oli koko Kroatian pääkaupunki, ja siellä kokoontuivat Kroatian valtiopäivät ja Maria Teresian perustama Kuninkaallinen neuvosto, kunnes huhtikuun 1776 tulipalo päätti sen. Palossa tuhoutui kokonaan 70 muurien sisäisestä 113 rakennuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+- [Kööpenhamina — kohdekartta / Kohdekartta: Christiansborgin linna] 1907–1928 Christiansborgin linna seisoo Slotsholmenin saarella paikalla, jossa piispa Absalon rakensi Kööpenhaminan ensimmäisen linnan jo vuonna 1167. Sen jälkeen paikalle on noussut linna toisensa perään - kahdesti aiempi rakennus on tuhoutunut kokonaan tulipalossa, vuosina 1794 ja 1884. Nykyinen, jo kolmas Christiansborg valmistui vuosina 1907–1928. Se on rakennettu uusbarokkityyliin raudoitetusta betonista, ja sen torni kohoaa 106 metrin korkeuteen - se on Kööpenhaminan korkein rakennus. Christiansborg on maailmanlaajuisestikin harvinainen: se on ainoa rakennus, jossa toimivat samaan aikaan kaikki kolme valtiovallan haaraa - Tanskan parlamentti, pääministerin toimisto ja korkein oikeus. …
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-trakoscan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakošćan (historia)
+Tietoruudun teksti: Trakošćan on Pohjois-Kroatiassa Varaždinin läänissä oleva linna, jonka alku on 1200-luvulla ja jonka nimi mainitaan ensi kerran vuonna 1334; sitä pidetään Kroatian parhaiten säilyneenä ja yhtenä kauneimmista linnoista. Se rakennettiin pieneksi tähystyslinnoitukseksi valvomaan Ptujin ja Bednjan laakson välistä tietä. Vuonna 1584 linnan omistajaksi tuli Drašković-suku, mutta 1700-luvun jälkipuoliskolla linna hylättiin ja rapistui. Vasta 1800-luvun puolivälissä Juraj V. Drašković muutti sen romantiikan hengessä, luontoon ja sukuperinteeseen palaten, asuinkartanoksi ja ympäröivän puiston huvipuistoksi. Suku asui linnassa vuoteen 1944, ja museo perustettiin vuonna 1953.
+
+### 37.1
+KYSYMYS: Minä vuonna Trakošćanin nimi mainitaan ensi kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakošćan (historia)
+Tietoruudun teksti: Trakošćan on Pohjois-Kroatiassa Varaždinin läänissä oleva linna, jonka alku on 1200-luvulla ja jonka nimi mainitaan ensi kerran vuonna 1334; sitä pidetään Kroatian parhaiten säilyneenä ja yhtenä kauneimmista linnoista. Se rakennettiin pieneksi tähystyslinnoitukseksi valvomaan Ptujin ja Bednjan laakson välistä tietä. Vuonna 1584 linnan omistajaksi tuli Drašković-suku, mutta 1700-luvun jälkipuoliskolla linna hylättiin ja rapistui. Vasta 1800-luvun puolivälissä Juraj V. Drašković muutti sen romantiikan hengessä, luontoon ja sukuperinteeseen palaten, asuinkartanoksi ja ympäröivän puiston huvipuistoksi. Suku asui linnassa vuoteen 1944, ja museo perustettiin vuonna 1953.
+
+### 37.2
+KYSYMYS: Minkä suvun omistukseen linna tuli vuonna 1584?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trakošćan (historia)
+Tietoruudun teksti: Trakošćan on Pohjois-Kroatiassa Varaždinin läänissä oleva linna, jonka alku on 1200-luvulla ja jonka nimi mainitaan ensi kerran vuonna 1334; sitä pidetään Kroatian parhaiten säilyneenä ja yhtenä kauneimmista linnoista. Se rakennettiin pieneksi tähystyslinnoitukseksi valvomaan Ptujin ja Bednjan laakson välistä tietä. Vuonna 1584 linnan omistajaksi tuli Drašković-suku, mutta 1700-luvun jälkipuoliskolla linna hylättiin ja rapistui. Vasta 1800-luvun puolivälissä Juraj V. Drašković muutti sen romantiikan hengessä, luontoon ja sukuperinteeseen palaten, asuinkartanoksi ja ympäröivän puiston huvipuistoksi. Suku asui linnassa vuoteen 1944, ja museo perustettiin vuonna 1953.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-karlovac) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovac (historia)
+Tietoruudun teksti: Karlovac on Keski-Kroatian kaupunki 56 kilometriä Zagrebista lounaaseen; sen asukasluku oli 49 377 vuonna 2021. Itävaltalaiset rakensivat sen tyhjästä vuonna 1579 vahvistaakseen eteläistä puolustustaan ottomaanien hyökkäyksiä vastaan, ja rakennustyöt aloitettiin 13. heinäkuuta 1579 arkkiherttua Kaarle II:n käskystä, jonka mukaan kaupunki sai nimensä (saksaksi Karlstadt). Kuusikärkinen tähtilinnoitus rakennettiin Kupan ja Koranan yhtymäkohtaan, ja tähden muoto näkyy kaupungissa yhä. Paikka valittiin tahallaan tulville ja epäterveelliselle vedelle alttiiksi maastoksi turkkilaisten etenemisen hidastamiseksi. Karlovac oli yksi Sotilasrajan yleiskomennon ensimmäisistä päämajoista.
+
+### 38.1
+KYSYMYS: Minä vuonna Karlovacin rakentaminen aloitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovac (historia)
+Tietoruudun teksti: Karlovac on Keski-Kroatian kaupunki 56 kilometriä Zagrebista lounaaseen; sen asukasluku oli 49 377 vuonna 2021. Itävaltalaiset rakensivat sen tyhjästä vuonna 1579 vahvistaakseen eteläistä puolustustaan ottomaanien hyökkäyksiä vastaan, ja rakennustyöt aloitettiin 13. heinäkuuta 1579 arkkiherttua Kaarle II:n käskystä, jonka mukaan kaupunki sai nimensä (saksaksi Karlstadt). Kuusikärkinen tähtilinnoitus rakennettiin Kupan ja Koranan yhtymäkohtaan, ja tähden muoto näkyy kaupungissa yhä. Paikka valittiin tahallaan tulville ja epäterveelliselle vedelle alttiiksi maastoksi turkkilaisten etenemisen hidastamiseksi. Karlovac oli yksi Sotilasrajan yleiskomennon ensimmäisistä päämajoista.
+
+### 38.2
+KYSYMYS: Minkä muotoinen linnoitus Karlovacissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovac (historia)
+Tietoruudun teksti: Karlovac on Keski-Kroatian kaupunki 56 kilometriä Zagrebista lounaaseen; sen asukasluku oli 49 377 vuonna 2021. Itävaltalaiset rakensivat sen tyhjästä vuonna 1579 vahvistaakseen eteläistä puolustustaan ottomaanien hyökkäyksiä vastaan, ja rakennustyöt aloitettiin 13. heinäkuuta 1579 arkkiherttua Kaarle II:n käskystä, jonka mukaan kaupunki sai nimensä (saksaksi Karlstadt). Kuusikärkinen tähtilinnoitus rakennettiin Kupan ja Koranan yhtymäkohtaan, ja tähden muoto näkyy kaupungissa yhä. Paikka valittiin tahallaan tulville ja epäterveelliselle vedelle alttiiksi maastoksi turkkilaisten etenemisen hidastamiseksi. Karlovac oli yksi Sotilasrajan yleiskomennon ensimmäisistä päämajoista.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-slavonski-brod) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slavonski Brod (historia)
+Tietoruudun teksti: Slavonski Brod on Itä-Kroatian kaupunki lähellä Bosnian rajaa; se on yksi Slavonian ja Posavinan tärkeimmistä kaupungeista ja Savan jokisatama. Nimi tulee sanasta brod, muinaisslaaviksi kahluupaikka, ja kaupunki kehittyi strategisesti tärkeään Savan ylityskohtaan. Nimi mainitaan ensi kerran Unkarin kuninkaan Béla IV:n kirjeessä vuodelta 1224, ja ottomaanit hallitsivat asutusta vuodesta 1536 vuoteen 1691. Vuoteen 1918 saakka kaupunki kuului Itävallan monarkiaan, ja Slavonian sotilasrajalla se oli vuoteen 1881 asti (nimellä Brood ennen vuotta 1850). Suuri, barokkiajan Vauban-tyylinen Brodin linnoitus, joka rakennettiin suojaksi ottomaaneja vastaan Savan vastarannalla, on yksi Euroopan parhaiten säilyneistä linnoituksista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Dili: Vuosi 1873: kaupunki nousi uudelleen tuhkasta] Kuvernööri José Maria Marques saapui 1834 ja rakensi asutuksen uudelleen ruutukaavaan. Kaupunki levisi rantaa pitkin ja etelään, kun vanhan kaupungin ja Lahanen välinen kosteikko kanavoitiin ja kuivattiin, ja tie vietiin Lahaneen ja Dareen. Uusi kaupunki keskittyi satamaansa: sen ympärille tulivat kauppatilat, kirkko, sotilas- ja hallintorakennukset, kuvernöörin asunto sekä Motaelin kuningaskunnan edustajan ja Manatuton kuningattaren asunnot — mutta vain kirkko ja valtiovarainhoitajan talo olivat kivestä. Sitten paloi. Tulipalo tuhosi linnoituksen ja suuren osan kaupungista, ja viisi vuotta myöhemmin, 1871, sen raunioille alettiin rakentaa uutta jalkaväkikasarmia. Vuoden 1870 merikartta Pla…
+
+### 39.1
+KYSYMYS: Mitä sana brod tarkoittaa muinaisslaaviksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slavonski Brod (historia)
+Tietoruudun teksti: Slavonski Brod on Itä-Kroatian kaupunki lähellä Bosnian rajaa; se on yksi Slavonian ja Posavinan tärkeimmistä kaupungeista ja Savan jokisatama. Nimi tulee sanasta brod, muinaisslaaviksi kahluupaikka, ja kaupunki kehittyi strategisesti tärkeään Savan ylityskohtaan. Nimi mainitaan ensi kerran Unkarin kuninkaan Béla IV:n kirjeessä vuodelta 1224, ja ottomaanit hallitsivat asutusta vuodesta 1536 vuoteen 1691. Vuoteen 1918 saakka kaupunki kuului Itävallan monarkiaan, ja Slavonian sotilasrajalla se oli vuoteen 1881 asti (nimellä Brood ennen vuotta 1850). Suuri, barokkiajan Vauban-tyylinen Brodin linnoitus, joka rakennettiin suojaksi ottomaaneja vastaan Savan vastarannalla, on yksi Euroopan parhaiten säilyneistä linnoituksista.
+
+### 39.2
+KYSYMYS: Mihin vuoteen asti kaupunki oli Sotilasrajan hallinnossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slavonski Brod (historia)
+Tietoruudun teksti: Slavonski Brod on Itä-Kroatian kaupunki lähellä Bosnian rajaa; se on yksi Slavonian ja Posavinan tärkeimmistä kaupungeista ja Savan jokisatama. Nimi tulee sanasta brod, muinaisslaaviksi kahluupaikka, ja kaupunki kehittyi strategisesti tärkeään Savan ylityskohtaan. Nimi mainitaan ensi kerran Unkarin kuninkaan Béla IV:n kirjeessä vuodelta 1224, ja ottomaanit hallitsivat asutusta vuodesta 1536 vuoteen 1691. Vuoteen 1918 saakka kaupunki kuului Itävallan monarkiaan, ja Slavonian sotilasrajalla se oli vuoteen 1881 asti (nimellä Brood ennen vuotta 1850). Suuri, barokkiajan Vauban-tyylinen Brodin linnoitus, joka rakennettiin suojaksi ottomaaneja vastaan Savan vastarannalla, on yksi Euroopan parhaiten säilyneistä linnoituksista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Dili: Vuosi 1873: kaupunki nousi uudelleen tuhkasta] Kuvernööri José Maria Marques saapui 1834 ja rakensi asutuksen uudelleen ruutukaavaan. Kaupunki levisi rantaa pitkin ja etelään, kun vanhan kaupungin ja Lahanen välinen kosteikko kanavoitiin ja kuivattiin, ja tie vietiin Lahaneen ja Dareen. Uusi kaupunki keskittyi satamaansa: sen ympärille tulivat kauppatilat, kirkko, sotilas- ja hallintorakennukset, kuvernöörin asunto sekä Motaelin kuningaskunnan edustajan ja Manatuton kuningattaren asunnot — mutta vain kirkko ja valtiovarainhoitajan talo olivat kivestä. Sitten paloi. Tulipalo tuhosi linnoituksen ja suuren osan kaupungista, ja viisi vuotta myöhemmin, 1871, sen raunioille alettiin rakentaa uutta jalkaväkikasarmia. Vuoden 1870 merikartta Pla…
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-sisak) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sisak (historia)
+Tietoruudun teksti: Sisak on Keski-Kroatian kaupunki Kupan, Savan ja Odran yhtymäkohdassa 57 kilometriä Zagrebista kaakkoon; se on Kroatian suurin jokisatama. Roomalaiset kutsuivat sitä Sisciaksi: se oli Ylä-Pannonian tärkeimpiä paikkoja, koska se sijaitsi kahden purjehduskelpoisen joen varrella, ja Augustus ja Tiberius johtivat sieltä hankkeitaan pannonialaisia ja illyrialaisia vastaan. Vuonna 1593 kroaattien, itävaltalaisten ja krainilaisten yhteisjoukot löivät ottomaanit Sisakin taistelussa, joka oli ottomaanien armeijan ensimmäisiä merkittäviä tappioita Euroopan maaperällä. Puolustusta johtanut ban Thomas Erdődy tuli tunnetuksi koko Euroopassa, vaikka voitto ei estänyt ottomaaneja valtaamasta Sisakia 24. elokuuta 1593.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kohdekartta / Kohdekartta: Colónin aukio] 1869—1911 Vuoden 1869 asemakaavassa tämä kortteli oli jo merkitty aukioksi, mutta paikalla oli vain joutomaata, josta työntyi esiin kalliokohoumia; laidoilla seisoivat seurakuntakirkko, poliisikasarmi vankiloineen ja kunnan koulu. Vuonna 1873, kun Cobijan prefektin oli määrä saapua käymään, kunnanhallitus antoi vangeille tehtäväksi poistaa kalliot ja tasoittaa maan. Naapureiden avustuksilla syntyi keskuspuutarha, jota kasteltiin 1874 asennetulla pumpulla, ja 1875 Valparaíson intendentti Francisco Echaurren lahjoitti 35 puuta ja suihkulähteen. Aidan ja neljä pyöröporttia tarvittiin, jotta eläimet eivät söisi puutarhaa. Aukio kantoi vuosina 1880—1892 nimeä Plaza Emilio Sotomayor; vanha nimi p…
+
+### 40.1
+KYSYMYS: Millä nimellä roomalaiset kutsuivat Sisakia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sisak (historia)
+Tietoruudun teksti: Sisak on Keski-Kroatian kaupunki Kupan, Savan ja Odran yhtymäkohdassa 57 kilometriä Zagrebista kaakkoon; se on Kroatian suurin jokisatama. Roomalaiset kutsuivat sitä Sisciaksi: se oli Ylä-Pannonian tärkeimpiä paikkoja, koska se sijaitsi kahden purjehduskelpoisen joen varrella, ja Augustus ja Tiberius johtivat sieltä hankkeitaan pannonialaisia ja illyrialaisia vastaan. Vuonna 1593 kroaattien, itävaltalaisten ja krainilaisten yhteisjoukot löivät ottomaanit Sisakin taistelussa, joka oli ottomaanien armeijan ensimmäisiä merkittäviä tappioita Euroopan maaperällä. Puolustusta johtanut ban Thomas Erdődy tuli tunnetuksi koko Euroopassa, vaikka voitto ei estänyt ottomaaneja valtaamasta Sisakia 24. elokuuta 1593.
+
+### 40.2
+KYSYMYS: Kuka johti kroatialaisten puolustusta vuonna 1593?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sisak (historia)
+Tietoruudun teksti: Sisak on Keski-Kroatian kaupunki Kupan, Savan ja Odran yhtymäkohdassa 57 kilometriä Zagrebista kaakkoon; se on Kroatian suurin jokisatama. Roomalaiset kutsuivat sitä Sisciaksi: se oli Ylä-Pannonian tärkeimpiä paikkoja, koska se sijaitsi kahden purjehduskelpoisen joen varrella, ja Augustus ja Tiberius johtivat sieltä hankkeitaan pannonialaisia ja illyrialaisia vastaan. Vuonna 1593 kroaattien, itävaltalaisten ja krainilaisten yhteisjoukot löivät ottomaanit Sisakin taistelussa, joka oli ottomaanien armeijan ensimmäisiä merkittäviä tappioita Euroopan maaperällä. Puolustusta johtanut ban Thomas Erdődy tuli tunnetuksi koko Euroopassa, vaikka voitto ei estänyt ottomaaneja valtaamasta Sisakia 24. elokuuta 1593.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kohdekartta / Kohdekartta: Colónin aukio] 1869—1911 Vuoden 1869 asemakaavassa tämä kortteli oli jo merkitty aukioksi, mutta paikalla oli vain joutomaata, josta työntyi esiin kalliokohoumia; laidoilla seisoivat seurakuntakirkko, poliisikasarmi vankiloineen ja kunnan koulu. Vuonna 1873, kun Cobijan prefektin oli määrä saapua käymään, kunnanhallitus antoi vangeille tehtäväksi poistaa kalliot ja tasoittaa maan. Naapureiden avustuksilla syntyi keskuspuutarha, jota kasteltiin 1874 asennetulla pumpulla, ja 1875 Valparaíson intendentti Francisco Echaurren lahjoitti 35 puuta ja suihkulähteen. Aidan ja neljä pyöröporttia tarvittiin, jotta eläimet eivät söisi puutarhaa. Aukio kantoi vuosina 1880—1892 nimeä Plaza Emilio Sotomayor; vanha nimi p…
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

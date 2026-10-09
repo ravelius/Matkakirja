@@ -1,0 +1,231 @@
+================ KOHTA 6 (kohde:dinara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+- [Machu Picchu — kaupunkilehti / Machu Picchu: Kahden huipun satulassa] Machu Picchu sijaitsee 2 430 metrin korkeudessa Itäisen Kordilleerin vuoristonharjanteella, noin 80 kilometriä Cuscosta luoteeseen. Kaupunki on rakennettu satulaksi kahden huipun, Machu Picchun ja Huayna Picchun, väliin, ja Urubamba-joki kiertää sitä kolmelta sivulta jyrkkien, noin 450 metriä syvien rotkojen pohjalla. Ilmasto on kostea vuoristosademetsä: sadetta kertyy yli 2 000 millimetriä vuodessa ja ilmankosteus pysyy usein 80–90 prosentissa. Sijainti oli tarkoituksella vaikeapääsyinen ja helposti puolustettava, mutta samalla poikkeuksellisen näyttävä – pilvet verhoavat huippuja lähes joka aamu.
+- [Serbia — maalehti / Tiede: Cvijićin koti karstintutkijan työhuoneena] 1905 — Jovan Cvijić syntyi Loznicassa vuonna 1865 ja väitteli Wienin yliopistossa 1893 aiheenaan karstilmiö, Das Karstphänomen, jota pidetään karstimorfologian alan uranuurtajana. Hän perusti Serbian maantieteellisen seuran vuonna 1910 ja johti Serbian kuninkaallista akatemiaa 1921–1927. Belgradin Jelene Ćetković -kadun talo rakennettiin 1905, ja hän asui, työskenteli ja kuoli siinä. Sisätiloissa on Dragutin Inkiostri Medenjakin maalaamia Bosnian, Šumadijan ja Hertsegovinan maisemia. Talo on toiminut muistomuseona 1960-luvulta.
+
+### 6.1
+KYSYMYS: Mitä karsti tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Tiede: Cvijićin koti karstintutkijan työhuoneena] 1905 — Jovan Cvijić syntyi Loznicassa vuonna 1865 ja väitteli Wienin yliopistossa 1893 aiheenaan karstilmiö, Das Karstphänomen, jota pidetään karstimorfologian alan uranuurtajana. Hän perusti Serbian maantieteellisen seuran vuonna 1910 ja johti Serbian kuninkaallista akatemiaa 1921–1927. Belgradin Jelene Ćetković -kadun talo rakennettiin 1905, ja hän asui, työskenteli ja kuoli siinä. Sisätiloissa on Dragutin Inkiostri Medenjakin maalaamia Bosnian, Šumadijan ja Hertsegovinan maisemia. Talo on toiminut muistomuseona 1960-luvulta.
+
+### 6.2
+KYSYMYS: Miksi kokonainen vuoristo on nimetty yhden huipun mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinara (luonto · vuori)
+Tietoruudun teksti: Dinaran huippu Sinjal on 1831 metriä ja Kroatian korkein kohta. Vuori on kuitenkin tunnetumpi siitä, mille se antoi nimensä: koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava vuoristo on Dinaariset alpit. Kalkkikivi liukenee sadeveteen, joten pinta on karstia — rotkoja, kuiluja ja luolia, ja joet katoavat maan alle keskellä matkaansa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+- [Machu Picchu — kaupunkilehti / Machu Picchu: Kahden huipun satulassa] Machu Picchu sijaitsee 2 430 metrin korkeudessa Itäisen Kordilleerin vuoristonharjanteella, noin 80 kilometriä Cuscosta luoteeseen. Kaupunki on rakennettu satulaksi kahden huipun, Machu Picchun ja Huayna Picchun, väliin, ja Urubamba-joki kiertää sitä kolmelta sivulta jyrkkien, noin 450 metriä syvien rotkojen pohjalla. Ilmasto on kostea vuoristosademetsä: sadetta kertyy yli 2 000 millimetriä vuodessa ja ilmankosteus pysyy usein 80–90 prosentissa. Sijainti oli tarkoituksella vaikeapääsyinen ja helposti puolustettava, mutta samalla poikkeuksellisen näyttävä – pilvet verhoavat huippuja lähes joka aamu.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:sveti-jure) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Hirviö, jota ei ollut tarkoitus näyttää kenellekään] Inuiittien uskomuksessa tupilak oli kostohirviö, jonka angakkuq eli shamaani kokosi salassa eläimen osista ja herätti henkiin loitsulaululla, minkä jälkeen se laskettiin mereen etsimään tiettyä vihollista. Työ oli tekijälleen vaarallista: jos kohteella oli vahvempi taika, tupilak kääntyi takaisin, ja ainoa pelastus oli tunnustaa teko julkisesti. Koska tupilakit tehtiin salassa katoavista aineksista, yhtään ei ole säilynyt. Eurooppalaiset vieraat halusivat silti nähdä, miltä sellainen näyttää, ja niin niistä alettiin veistää kuvia kaskelotin hampaisiin.
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+
+### 7.1
+KYSYMYS: Miltä näyttää, kun vuori nousee suoraan merestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Hirviö, jota ei ollut tarkoitus näyttää kenellekään] Inuiittien uskomuksessa tupilak oli kostohirviö, jonka angakkuq eli shamaani kokosi salassa eläimen osista ja herätti henkiin loitsulaululla, minkä jälkeen se laskettiin mereen etsimään tiettyä vihollista. Työ oli tekijälleen vaarallista: jos kohteella oli vahvempi taika, tupilak kääntyi takaisin, ja ainoa pelastus oli tunnustaa teko julkisesti. Koska tupilakit tehtiin salassa katoavista aineksista, yhtään ei ole säilynyt. Eurooppalaiset vieraat halusivat silti nähdä, miltä sellainen näyttää, ja niin niistä alettiin veistää kuvia kaskelotin hampaisiin.
+
+### 7.2
+KYSYMYS: Kuka oli pyhä Yrjö?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveti Jure (luonto · vuori)
+Tietoruudun teksti: Biokovon vuorijono nousee Makarskan rantakaistalta niin jyrkästi, että sen korkein huippu Sveti Jure — 1762 metriä — on vain muutaman kilometrin päässä aallonmurtajasta. Rannalla kasvaa viikunoita ja huipulla on lunta huhtikuussa. Vuori on saanut nimensä huipulle rakennetusta pyhän Yrjön kappelista, ja selkeällä säällä sieltä näkyy Italian rannikko toiselle puolelle Adrianmerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:vaganski-vrh) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+- [Namib — kaupunkilehti / Namib: Valkoinen läiskä kartalla] Kun isoisä matkusti maailmalla vuonna 1873, Namibin sisämaa oli eurooppalaisille käytännössä valkoinen läiskä kartalla. Alueella ei ollut siirtomaavaltaa eikä juuri teitä, ja harvat lähetyssaarnaajat ja kauppiaat olivat nähneet vain rannikon tuntumaa. Vasta viisi vuotta isoisän matkan jälkeen, 1878, Britannia liitti Walvis Bayn satamakaupungin alueeseensa, ja varsinainen eurooppalainen siirtomaavalta – Saksan Lounais-Afrikka – syntyi vasta 1884. Sitä ennen hiekka-aallot, kivikkoiset tasangot ja vuoret olivat tuntemattomia kaikille paitsi alkuperäisväestölle, joka oli oppinut elämään sen äärimmäisissä oloissa jo vuosituhansien ajan.
+
+### 8.1
+KYSYMYS: Mikä on bura?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Juusto joka maistuu tuulelta] nykyään — Pagin saarella lampaat laiduntavat tuulisilla, suolaisen meriveden huuhtomilla niityillä, joilla kasvaa villiä salviaa ja muita aromikkaita yrttejä. Voimakas bura-tuuli kuljettaa suolaa ilmassa kauas rannasta ja peittää laitumen ohuella suolakerroksella. Lampaiden maito saa tästä ruokavaliosta ainutlaatuisen, hieman suolaisen ja yrttisen maun, joka siirtyy juustoon: Paški sir on kova, pitkään kypsytetty juusto, jota pidetään yhtenä Kroatian arvostetuimmista.
+
+### 8.2
+KYSYMYS: Miksi vuorijono erottaa rannikon sisämaasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vaganski vrh (luonto · vuori)
+Tietoruudun teksti: Velebit on Kroatian pisin vuorijono, noin 145 kilometriä rannikon suuntaisena muurina, ja Vaganski vrh on sen korkein huippu 1757 metrissä. Muurilla on kaksi puolta: meren puoli on paljasta kiveä ja sisämaan puoli metsää. Talvella jonon yli syöksyy bura, kylmä laskutuuli, joka kiihtyy solissa niin kovaksi, että se kaataa kuormia ja pysäyttää lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Valkoinen läiskä kartalla] Kun isoisä matkusti maailmalla vuonna 1873, Namibin sisämaa oli eurooppalaisille käytännössä valkoinen läiskä kartalla. Alueella ei ollut siirtomaavaltaa eikä juuri teitä, ja harvat lähetyssaarnaajat ja kauppiaat olivat nähneet vain rannikon tuntumaa. Vasta viisi vuotta isoisän matkan jälkeen, 1878, Britannia liitti Walvis Bayn satamakaupungin alueeseensa, ja varsinainen eurooppalainen siirtomaavalta – Saksan Lounais-Afrikka – syntyi vasta 1884. Sitä ennen hiekka-aallot, kivikkoiset tasangot ja vuoret olivat tuntemattomia kaikille paitsi alkuperäisväestölle, joka oli oppinut elämään sen äärimmäisissä oloissa jo vuosituhansien ajan.
+- [Magadan — kohdekartta / Kohdekartta: Severovostokzoloton talo] Proletarskajan katu 12 Proletarskajan kadun numerossa 12 seisoo Magadanin komein 1950-luvun talo. Se on kolmikerroksinen, valkoinen ja pitkä, ja sen ikkunoita kehystävät kaksoispylväät ja pienet päätykolmiot. Alakerta on punertavaa lohkokiveä jäljittelevää rappausta, ja sisäänkäynnin kohdalla julkisivusta työntyy esiin punainen pylväsportikko. Talon kansanomainen nimi on lyhenne SVZ. Nimi kertoo kaupungin elinkeinosta. Magadanin talouden kaksi tukijalkaa ovat kullankaivuu ja kalastus, ja kaupunki syntyi nimenomaan siksi, että Kolyman sisämaasta löytyi kultaa: satama rakennettiin viemään sitä ulos. Kullantuotanto on sittemmin laskenut, ja kalastuskin on jäänyt kiintiöidensä alle, mutta kaupu…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:risnjak) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Moskeija, jonka sisään rakennettiin katedraali] 1236 — Córdoban Mezquitassa on 856 pylvästä ja niiden päällä kaksi kaarikerrosta punavalkoisin raidoin. Ratkaisu on käytännöllinen: pylväät olivat vanhoja roomalaisia ja liian lyhyitä, joten kaaret ladottiin päällekkäin korkeuden saamiseksi. Tuloksena on metsä, jonka läpi katse ei kanna. Kun Córdoba vallattiin 1236, moskeijaa ei purettu vaan sen keskelle rakennettiin katedraali — kaupunki pyysi kuningas Kaarle V:tä estämään työn, ja tämän kerrotaan katuneen lupaansa nähtyään lopputuloksen.
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+
+### 9.1
+KYSYMYS: Eläkö Euroopassa yhä ilveksiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+
+### 9.2
+KYSYMYS: Miksi metsä muuttuu korkeuden mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Risnjak (luonto · vuori)
+Tietoruudun teksti: Risnjak on 1528 metriä ja kohoaa Gorski kotarin metsien keskeltä siinä kohdassa, missä Alpit, Dinaariset alpit ja Pannonian tasanko kohtaavat. Nimi tulee sanasta ris, ilves: näissä metsissä eli isoisän matkan aikaan ilveskanta, joka sittemmin hävisi ja palautettiin 1970-luvulla. Rinteillä metsä vaihtuu korkeuden mukaan pyökistä kuuseen ja lopulta vuorimännyn pensaikoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Moskeija, jonka sisään rakennettiin katedraali] 1236 — Córdoban Mezquitassa on 856 pylvästä ja niiden päällä kaksi kaarikerrosta punavalkoisin raidoin. Ratkaisu on käytännöllinen: pylväät olivat vanhoja roomalaisia ja liian lyhyitä, joten kaaret ladottiin päällekkäin korkeuden saamiseksi. Tuloksena on metsä, jonka läpi katse ei kanna. Kun Córdoba vallattiin 1236, moskeijaa ei purettu vaan sen keskelle rakennettiin katedraali — kaupunki pyysi kuningas Kaarle V:tä estämään työn, ja tämän kerrotaan katuneen lupaansa nähtyään lopputuloksen.
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:vojak) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+
+### 10.1
+KYSYMYS: Mitä Istrian niemellä kasvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+
+### 10.2
+KYSYMYS: Miksi vuorelle rakennetaan näkötorni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vojak (luonto · vuori)
+Tietoruudun teksti: Vojak on Učkan vuoriston ja koko Istrian niemen korkein kohta, 1401 metriä. Vuori erottaa niemen vihreän sisäosan Kvarnerinlahden rannikosta, ja huipulta näkyy selkeällä säällä Venetsian lahdelle asti — samalle merelle, jota pitkin Istrian kivi ja tammi kulkivat vuosisatoja Venetsian rakennustyömaille. Huipulla seisoo kivinen näkötorni, joka pystytettiin 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+- [Tampere — kohdekartta / Kohdekartta: Pyynikin näkötorni] 1929 Torni valmistui Pyynikinharjun laelle vuonna 1929 apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta punagraniitista. Harjun laki on 152 metriä merenpinnasta, joten tornin tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Pyynikinharju on maailman korkein pitkittäisharju: se kohoaa 160 metriin merenpinnasta ja 80 metriä Pyhäjärven pintaa ylemmäs. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun hiekka vierii vuosien mittaan alaspäin. Tornin juurella toimii munkkikahvila, joka on ainakin yhtä kuuluisa kuin näköala. Sokerissa kieritetyt munkit paistetaa…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

@@ -1,0 +1,210 @@
+================ KOHTA 1 (kohde:zagreb) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kaupunkilehti / Fès: Kaksi kaupunkia, jotka riitelivät joen yli] Idris I perusti kaupunkinsa Fèsjoen rannalle vuonna 789, ja hänen poikansa Idris II toisen vastarannalle 809. Kaupungit kasvoivat erikseen. Ensimmäinen väestö oli berberejä ja satoja Kairouanista tulleita arabisotilaita; vuosina 817–818 Córdobasta karkotetut andalusialaisperheet muuttivat toiselle puolelle, ja kaupunginosat saivat nimensä tulijoidensa mukaan. Vuosina 1059–1061 rantoja hallitsi kaksi riitelevää veljestä, Al-Gisa ja Al-Fetouh, jotka linnoittivat kumpikin omansa. Heidän nimensä ovat yhä kahdessa kaupunginportissa: Bab Guissa pohjoisessa, Bab Ftouh etelässä.
+
+### 1.1
+KYSYMYS: Miksi kaksi kaupunkia riiteli sillasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kaupunkilehti / Fès: Kaksi kaupunkia, jotka riitelivät joen yli] Idris I perusti kaupunkinsa Fèsjoen rannalle vuonna 789, ja hänen poikansa Idris II toisen vastarannalle 809. Kaupungit kasvoivat erikseen. Ensimmäinen väestö oli berberejä ja satoja Kairouanista tulleita arabisotilaita; vuosina 817–818 Córdobasta karkotetut andalusialaisperheet muuttivat toiselle puolelle, ja kaupunginosat saivat nimensä tulijoidensa mukaan. Vuosina 1059–1061 rantoja hallitsi kaksi riitelevää veljestä, Al-Gisa ja Al-Fetouh, jotka linnoittivat kumpikin omansa. Heidän nimensä ovat yhä kahdessa kaupunginportissa: Bab Guissa pohjoisessa, Bab Ftouh etelässä.
+
+### 1.2
+KYSYMYS: Kuka oli ban?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagreb (kaupungit)
+Tietoruudun teksti: Zagreb kasvoi kahdesta kukkulasta, jotka olivat vuosisatoja eri kaupunkeja: Gradec oli porvarien ja Kaptol piispan. Niiden välissä virtasi puro, ja sen yli vievä silta oli niin usein tappelupaikka, että kadun nimi on yhä Krvavi most, Verinen silta. Kaupungit yhdistettiin yhdeksi vasta 1850 — kaksikymmentä vuotta ennen isoisän matkaa. Vuonna 1873 Zagreb oli Kroatia-Slavonian kuningaskunnan pääkaupunki Unkarin kruunun alaisuudessa.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:split) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+- [Pariisi — kohdekartta / Kohdekartta: Panthéon] 1758–1790 Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon perustukset laskettiin 1758. Rahapula venytti työtä vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä. Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 kansalliskokous määräsi sen suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun…
+
+### 2.1
+KYSYMYS: Kuka oli Diocletianus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+
+### 2.2
+KYSYMYS: Miltä tuntuisi asua palatsin sisällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Split (kaupungit)
+Tietoruudun teksti: Split ei ole kaupunki, jossa on palatsi, vaan kaupunki, joka on palatsin sisällä. Keisari Diocletianus rakennutti tänne noin vuosina 295–305 valtavan linnoitetun eläkeasunnon, ja kun läheinen Salona tuhoutui 600-luvulla, pakolaiset muuttivat muurien suojaan. He eivät koskaan lähteneet. Palatsin sisällä on yhä katuja, kauppoja ja koteja — siellä asuu tuhansia ihmisiä, ja keisarin mausoleumista tehtiin katedraali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Panthéon] 1758–1790 Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon perustukset laskettiin 1758. Rahapula venytti työtä vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä. Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 kansalliskokous määräsi sen suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun…
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:rijeka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Musiikki: Paholaiset, jotka tanssivat lupauksen takia] 1749 — Corpus Christin juhlassa veljeskunnat pukeutuvat paholaisiksi ja tanssivat kirkon edessä. Tapa syntyi 1600-luvun puolivälissä Araguan ja Vargasin haciendoilla, ja vuodelta 1749 on kirjattu, että miehet, naiset ja lapset pukeutuivat paholaisiksi täyttääkseen pyhälle sakramentille antamansa lupauksen. Tunnustettuja veljeskuntia on yksitoista ja osallistujia yli viisituhatta; tunnetuin on San Francisco de Yaren veljeskunta. Unesco otti perinteen aineettoman kulttuuriperinnön luetteloon vuonna 2012.
+
+### 3.1
+KYSYMYS: Miten torpedo toimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+### 3.2
+KYSYMYS: Mikä oli corpus separatum?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rijeka (kaupungit)
+Tietoruudun teksti: Rijeka oli isoisän matkan aikaan Unkarin oma meritie: kaupunki oli liitetty suoraan Unkarin kruunuun erillisalueena, corpus separatum, eikä se kuulunut Kroatiaan sen ympärillä. Samassa satamassa syntyi 1866 maailman ensimmäinen käyttökelpoinen itseliikkuva torpedo: itävaltalainen upseeri Giovanni Luppis oli piirtänyt idean, ja englantilainen insinööri Robert Whitehead sai sen kulkemaan paineilmalla suoraa linjaa veden alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Musiikki: Paholaiset, jotka tanssivat lupauksen takia] 1749 — Corpus Christin juhlassa veljeskunnat pukeutuvat paholaisiksi ja tanssivat kirkon edessä. Tapa syntyi 1600-luvun puolivälissä Araguan ja Vargasin haciendoilla, ja vuodelta 1749 on kirjattu, että miehet, naiset ja lapset pukeutuivat paholaisiksi täyttääkseen pyhälle sakramentille antamansa lupauksen. Tunnustettuja veljeskuntia on yksitoista ja osallistujia yli viisituhatta; tunnetuin on San Francisco de Yaren veljeskunta. Unesco otti perinteen aineettoman kulttuuriperinnön luetteloon vuonna 2012.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:zadar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+
+### 4.1
+KYSYMYS: Mikä oli forum?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+
+### 4.2
+KYSYMYS: Mistä maraskino tehdään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zadar (kaupungit)
+Tietoruudun teksti: Zadarin keskellä on yhä avoinna Adrianmeren itärannan suurin roomalainen forum, rakennettu ensimmäisen vuosisadan eaa. ja kolmannen vuosisadan välillä. Sen kivistä pystytettiin 800-luvulla pyöreä Pyhän Donatuksen kirkko, jonka seinistä voi yhä lukea roomalaisia kirjoituksia ylösalaisin. Kaupungista tuli myös maraskinon koti: kirsikkalikööriä valmistettiin täällä tehdasmaisesti vuodesta 1821, ja se oli isoisän matkan aikaan Zadarin tunnetuin vientitavara.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:osijek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+- [Ljubljana — kohdekartta / Kohdekartta: Tromostovje] 1842 Tromostovje, suomeksi Kolmisilta, on Ljubljanan vanhin silta. Samassa kohdassa mainitaan puusilta jo vuonna 1280. Sitä kutsuttiin ensin Vanhaksi sillaksi ja myöhemmin Alasillaksi, erotuksena samalla vuosisadalla rakennetusta Yläsillasta, ja myös Špitalin sillaksi läheisen köyhäintalon mukaan. Tulipalon jälkeen silta rakennettiin uudelleen 1657. Vuonna 1842 puusillan tilalle tuli kivisilta, jonka suunnitteli villachilainen italialaisarkkitehti Giovanni Picco. Se avattiin 25. syyskuuta 1842 ja nimettiin Franzin sillaksi arkkiherttua Franz Karlin kunniaksi. Siinä oli kaksi kaarta ja metallikaide, ja keskipilarin yllä on yhä latinankielinen omistus: "Arkkiherttua Franz Karlille 1842, kaupu…
+
+### 5.1
+KYSYMYS: Miten kahdeksan kilometrin puusilta rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+- [Ljubljana — kohdekartta / Kohdekartta: Tromostovje] 1842 Tromostovje, suomeksi Kolmisilta, on Ljubljanan vanhin silta. Samassa kohdassa mainitaan puusilta jo vuonna 1280. Sitä kutsuttiin ensin Vanhaksi sillaksi ja myöhemmin Alasillaksi, erotuksena samalla vuosisadalla rakennetusta Yläsillasta, ja myös Špitalin sillaksi läheisen köyhäintalon mukaan. Tulipalon jälkeen silta rakennettiin uudelleen 1657. Vuonna 1842 puusillan tilalle tuli kivisilta, jonka suunnitteli villachilainen italialaisarkkitehti Giovanni Picco. Se avattiin 25. syyskuuta 1842 ja nimettiin Franzin sillaksi arkkiherttua Franz Karlin kunniaksi. Siinä oli kaksi kaarta ja metallikaide, ja keskipilarin yllä on yhä latinankielinen omistus: "Arkkiherttua Franz Karlille 1842, kaupu…
+
+### 5.2
+KYSYMYS: Mitä varten Tvrđa rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Osijek (kaupungit)
+Tietoruudun teksti: Osijekin kohdalla Drava levittäytyy soiksi, joiden yli ei päässyt. Sulttaani Suleiman Suuren insinöörit rakensivat 1566 niiden poikki puisen sillan ja pengertien, jonka pituudeksi kerrotaan noin kahdeksan kilometriä; aikalaiset kutsuivat sitä maailman kahdeksanneksi ihmeeksi. Silta paloi sotien mukana, ja kun itävaltalaiset olivat ajaneet osmanit pois, he pystyttivät joen rannalle barokkilinnoituksen Tvrđan, joka seisoo yhä.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

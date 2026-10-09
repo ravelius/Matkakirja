@@ -1,0 +1,221 @@
+================ KOHTA 21 (kohde:hahmotelma-krka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+
+### 21.1
+KYSYMYS: Minä vuonna Krka julistettiin kansallispuistoksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+
+### 21.2
+KYSYMYS: Kuinka monta kasvilajia tai alalajia Krkan puistossa on tunnistettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krka (luonto · joki)
+Tietoruudun teksti: Krkan kansallispuisto on Šibenik-Kninin läänissä Dalmatian keskiosassa Krka-joen varrella, muutaman kilometrin koilliseen Šibenikistä. Puisto julistettiin kansallispuistoksi vuonna 1985, ja se on Kroatian seitsemäs kansallispuisto; sen pinta-ala on 109 neliökilometriä Kninin alapuolelta Skradiniin sekä Čikola-joen alaosan. Alueella on tunnistettu 860 kasvilajia tai alalajia ja 222 lintulajia, ja Krka-joessa elää kahdeksantoista kalalajia, joista kymmenen on endeemisiä. Joen putousten ympäristössä laventelia on Euroopan toiseksi tiheimmin, ja siksi paikalla on paljon ampiaisia ja mehiläisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Kosket jotka kohisevat kivikynnyksillä] 1985 — Krkan kansallispuiston tunnetuin näky, Skradinski buk, syntyy samasta travertiinin kerrostumisilmiöstä kuin Plitvicen padot: joki putoaa sarjana pieniä ja suuria putouksia sammaleisten kivikynnysten yli. Puisto suojelee Krka-joen keski- ja alajuoksua lähellä Šibenikin kaupunkia, ja siitä tuli Kroatian seitsemäs kansallispuisto vuonna 1985. Putousten juurella syntyvä vesisumu ja jatkuva kohina saavat kynnykset tuntumaan enemmän eläviltä kuin kiviltä.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-kornati) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+- [Itä-Timor — maalehti / Kuvataide: Talo, joka on samalla suku] Yhteisön keskus on uma lulik, pyhä talo. Se on rakennus, mutta käsitteenä se ulottuu koko sen ympärille kokoontuvaan yhteisöön: sukulaisuus lasketaan talojen sisällä ja niiden välillä, ja moni kaupunkilainen tunnistaa yhä oman talonsa toisella puolella maata. Rakennustyyli vaihtelee kunnasta toiseen. Ajatus on venynyt koko maan mittaan niin, että kansalliskokousta on kuvattu koko kansan yhteiseksi pyhäksi taloksi. Taustalla on lulik, pyhyyden käsite: pyhä voi olla myös esine, esimerkiksi suvussa polvesta toiseen periytynyt portugalilainen lippu.
+- [Toronto — kaupunkilehti / Historia] Rannalla asui monta kansaa ennen kuin britit mittasivat Yorkin kylän 1793. Sota, tulipalot ja rautatiet tekivät siitä sadassa vuodessa provinssin pääkaupungin, ja kuudesta kunnasta tuli lopulta yksi kaupunki.
+
+### 22.1
+KYSYMYS: Minkä saaren nimestä Kornatin saariston nimi on peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Meri jossa on 89 saarta] nykyään — Kornatin saaristo Pohjois-Dalmatiassa koostuu 89 saaresta noin 320 neliökilometrin merialueella ja tunnetaan koko Välimeren tiheimpänä saaristona. Saaret ovat enimmäkseen paljasta, kasvitonta kalkkikiveä, jonka jyrkät valkoiset kalliot nousevat suoraan sinisestä merestä. Saariston nimi tulee sen suurimmasta saaresta, Kornatista. Tuulien ja aaltojen kuluttama maisema näyttää ilmasta kuvattuna kartalta revityiltä palasilta, ja se on suosittu purjehtijoiden ja sukeltajien kohde.
+
+### 22.2
+KYSYMYS: Mistä kunnasta kansallispuistoa hallinnoidaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kornati (luonto · saari)
+Tietoruudun teksti: Kornatin saaristo sijaitsee Pohjois-Dalmatiassa Zadarista etelään ja Šibenikistä länteen. Saaristo ulottuu 35 kilometrin matkalle noin 320 neliökilometrin merialueella, ja se on Välimeren tiheimpiä; nimi on monikko suurimman saaren, Kornatin, nimestä. Pysyviä asutuskeskuksia ei ole, vaan mantereen maanomistajat, enimmäkseen Murterin ja Dugi Otokin saarilta, käyttävät suojaisissa poukamissa yksinkertaisia taloja tilapäisinä majoina. Saaret ovat enimmäkseen karstikalkkikiveä, ja vuonna 1980 osasta perustettiin kansallispuisto; Kornatilla on jäänteitä roomalaisista huviloista ja pieni Toreta-torni, joka on luultavasti 500-luvulta. Murterin asukkaat ostivat saaret 1800-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Kuvataide: Talo, joka on samalla suku] Yhteisön keskus on uma lulik, pyhä talo. Se on rakennus, mutta käsitteenä se ulottuu koko sen ympärille kokoontuvaan yhteisöön: sukulaisuus lasketaan talojen sisällä ja niiden välillä, ja moni kaupunkilainen tunnistaa yhä oman talonsa toisella puolella maata. Rakennustyyli vaihtelee kunnasta toiseen. Ajatus on venynyt koko maan mittaan niin, että kansalliskokousta on kuvattu koko kansan yhteiseksi pyhäksi taloksi. Taustalla on lulik, pyhyyden käsite: pyhä voi olla myös esine, esimerkiksi suvussa polvesta toiseen periytynyt portugalilainen lippu.
+- [Toronto — kaupunkilehti / Historia] Rannalla asui monta kansaa ennen kuin britit mittasivat Yorkin kylän 1793. Sota, tulipalot ja rautatiet tekivät siitä sadassa vuodessa provinssin pääkaupungin, ja kuudesta kunnasta tuli lopulta yksi kaupunki.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-lonjsko-polje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko] Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.
+
+### 23.1
+KYSYMYS: Kuinka suuri Lonjsko polje on neliökilometreinä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+### 23.2
+KYSYMYS: Minkä joen varrella kosteikko sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lonjsko polje (luonto · järvi)
+Tietoruudun teksti: Lonjsko polje on Kroatian ja koko Tonavan vesistöalueen suurin suojeltu kosteikko, jonka pinta-ala on 505,6 neliökilometriä. Se ulottuu Sava-joen varrella Sisakin itäpuolelta Nova Gradiškan länsipuolelle, ja nimi tulee alajuoksulla virtaavasta Lonja-joesta; alueeseen kuuluu myös Veliki Strug -joen varsi. Alue on luonnonpuisto (park prirode), jonka hallinto perustettiin vuonna 1998 ja jonka toimipaikka on Krapjen kylä. Euroopan unionin lintudirektiivin kriteerien mukaan puisto on lisäksi tärkeä lintualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko] Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-kopacki-rit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Kanadan ihmisoikeusmuseo] 2014 Museo seisoo aivan jokien yhtymäkohdan vieressä, ja se on kahdella tavalla ensimmäinen: se on ensimmäinen uusi kansallinen museo Kanadassa vuoden 1967 jälkeen ja ensimmäinen kansallinen museo pääkaupunkiseudun ulkopuolella. Talon perusti vuoden 2008 lakimuutos. Ajatus oli winnipegiläisen Izzy Asperin, ja hän keksi sen 18. heinäkuuta 2000. Asper kuoli 2003 matkalla julkistamaan arkkitehtuurikilpailua, ja työtä jatkoi hänen tyttärensä Gail Asper. Kilpailuun tuli sata ehdotusta kahdestakymmenestäyhdestä maasta, ja voittajaksi valittiin albuquerquelainen Antoine Predock. Ennen rakentamista arkeologit kaivoivat paikalta vanhinten kanssa yli 400 000 esinettä — jokien risteys on ollut kohtaam…
+
+### 24.1
+KYSYMYS: Kuinka monta lintulajia Kopački ritillä pesii?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+### 24.2
+KYSYMYS: Minkä jokien yhtymäkohdan luoteispuolella luonnonpuisto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kopački rit (luonto · järvi)
+Tietoruudun teksti: Kopački rit on luonnonpuisto Itä-Kroatiassa Bilje- ja Kneževi Vinogradi -kuntien alueella, Dravan ja Tonavan yhtymäkohdan luoteispuolella lähellä Serbian rajaa. Alueella on runsaasti Tonavan sivuvesiä ja lampia, ja se on yksi Euroopan tärkeimmistä, suurimmista ja vaikuttavimmista koskemattomina säilyneistä kosteikoista. Siellä pesii noin 260 lintulajia, muun muassa merikotka, valkoinen haikara ja mustahaikara, ja vesissä elää noin 40 kalalajia. Osijekin läheisyys ja hyvät yhteydet tuovat kävijöitä, jotka tekevät retkiä panoraamalaivoilla, veneillä, hevosvaunuilla tai jalan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Kanadan ihmisoikeusmuseo] 2014 Museo seisoo aivan jokien yhtymäkohdan vieressä, ja se on kahdella tavalla ensimmäinen: se on ensimmäinen uusi kansallinen museo Kanadassa vuoden 1967 jälkeen ja ensimmäinen kansallinen museo pääkaupunkiseudun ulkopuolella. Talon perusti vuoden 2008 lakimuutos. Ajatus oli winnipegiläisen Izzy Asperin, ja hän keksi sen 18. heinäkuuta 2000. Asper kuoli 2003 matkalla julkistamaan arkkitehtuurikilpailua, ja työtä jatkoi hänen tyttärensä Gail Asper. Kilpailuun tuli sata ehdotusta kahdestakymmenestäyhdestä maasta, ja voittajaksi valittiin albuquerquelainen Antoine Predock. Ennen rakentamista arkeologit kaivoivat paikalta vanhinten kanssa yli 400 000 esinettä — jokien risteys on ollut kohtaam…
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-krk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Siirtokunta, joka muutti saarelta mantereelle] Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri Claus Paarss siirsi Hans Egeden Toivon siirtokunnan Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi toivoksi. Alku oli karu: Paarssin siirtolaiset olivat kapinoineita sotilaita ja tuomittuja, ja ensimmäisen vuoden aikana useimmat kuolivat keripukkiin ja muihin tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi suuren osan paikallisväestöstä ja myös Egeden vaimon. Egede palasi Tanskaan 1736 ja jätti työn pojalleen Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta 1979, samana päivänä kun kotihallinto aloitti.
+- [Persepolis — kaupunkilehti / Persepolis: Sali, joka on hajonnut kolmelle mantereelle] Valtaistuinsali eli Sadan pylvään sali on seitsemänkymmentä metriä kumpaankin suuntaan. Sen kahdeksassa kivisessä ovenpielessä on reliefejä valtaistuinkohtauksista ja kuninkaasta taistelemassa hirviötä vastaan. Pohjoista pylväikköä vartioi kaksi jättimäistä kivihärkää. Toisen härän pää on nykyään Chicagossa ja yksi salin pylväänjalusta British Museumissa Lontoossa — sali on siis kaivausten ja keräilyn myötä jakautunut kolmelle mantereelle.
+
+### 25.1
+KYSYMYS: Mikä saari on Adrianmeren väkirikkain?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+- [Kroatia — maalehti / Historia: Palatsi, jonka sisään muutti kokonainen kaupunki] 300 — Keisari Diocletianus rakennutti itselleen noin vuonna 300 eläkepalatsin Adrianmeren rannalle. Se oli enemmän linnoitus kuin huvila: korkeat muurit, neljä porttia ja keskellä pylväiden reunustama aukio. Kun Rooman valta hajosi, lähiseudun asukkaat pakenivat muurien sisään ja jäivät sinne. Taloja rakennettiin vanhojen seinien väliin ja päälle, ja niin palatsista tuli kaupunginosa. Splitin vanhassa kaupungissa asuu yhä tuhansia ihmisiä keisarin muurien sisällä.
+
+### 25.2
+KYSYMYS: Minä vuonna silta mantereelle valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krk (luonto · saari)
+Tietoruudun teksti: Krk on Pohjois-Adrianmeren kroatialainen saari Kvarnerin lahdella lähellä Rijekaa. Se on Cresin kanssa Adrianmeren suurin saari mittaustavasta riippuen ja väkirikkain: asukkaita on 19 916 (2021). Saarella on asuttu keskeytyksettä neoliittiselta kaudelta, ja Krkin kaupungin roomalaisessa Curicumissa on löydetty Venuksen temppeli 1. vuosisadalta eaa., ainoa Adrianmeren itärannikolta tunnettu laatuaan. Krkin historia oli seitsemän vuosisataa tiiviisti sidoksissa Venetsiaan, ja Krkin kreivit, jotka ottivat vuonna 1430 nimen Frankopan, kuuluivat Kroatian mahtavimpiin aatelissukuihin. Saaren pohjoispäätä yhdistävä silta mantereelle valmistui heinäkuussa 1980.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Siirtokunta, joka muutti saarelta mantereelle] Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri Claus Paarss siirsi Hans Egeden Toivon siirtokunnan Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi toivoksi. Alku oli karu: Paarssin siirtolaiset olivat kapinoineita sotilaita ja tuomittuja, ja ensimmäisen vuoden aikana useimmat kuolivat keripukkiin ja muihin tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi suuren osan paikallisväestöstä ja myös Egeden vaimon. Egede palasi Tanskaan 1736 ja jätti työn pojalleen Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta 1979, samana päivänä kun kotihallinto aloitti.
+- [Persepolis — kaupunkilehti / Persepolis: Sali, joka on hajonnut kolmelle mantereelle] Valtaistuinsali eli Sadan pylvään sali on seitsemänkymmentä metriä kumpaankin suuntaan. Sen kahdeksassa kivisessä ovenpielessä on reliefejä valtaistuinkohtauksista ja kuninkaasta taistelemassa hirviötä vastaan. Pohjoista pylväikköä vartioi kaksi jättimäistä kivihärkää. Toisen härän pää on nykyään Chicagossa ja yksi salin pylväänjalusta British Museumissa Lontoossa — sali on siis kaivausten ja keräilyn myötä jakautunut kolmelle mantereelle.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

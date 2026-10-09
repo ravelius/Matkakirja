@@ -1,0 +1,223 @@
+================ KOHTA 11 (kohde:adrianmeri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+- [Kroatia — maalehti / Historia] Kroatian rannikolla roomalaiset rakensivat niin lujaa, että rakennukset ovat yhä käytössä: palatsissa asutaan, areenassa soitetaan ja muurilla kävellään.
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+
+### 11.1
+KYSYMYS: Miksi Kroatian rannikolla on niin paljon saaria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Vuori joka halkeaa kahtia] nykyään — Velebit-vuoriston eteläisillä rinteillä Paklenica halkeaa kahdeksi jyrkkäseinäiseksi kalkkikivirotkoksi, Velika ja Mala Paklenicaksi. Vuosituhansien aikana virtaava vesi on syövyttänyt vuoreen kapean, satoja metrejä syvän kanjonin, jonka pystysuorat seinämät houkuttelevat kalliokiipeilijöitä ympäri Eurooppaa. Rotkon pohjalla kulkeva polku on varjoisa ja viileä silloinkin, kun Dalmatian rannikolla paahtaa kesähelle. Paklenica on yksi Kroatian vanhimmista kansallispuistoista ja sijaitsee lähellä Starigradin kaupunkia.
+- [Kroatia — maalehti / Historia] Kroatian rannikolla roomalaiset rakensivat niin lujaa, että rakennukset ovat yhä käytössä: palatsissa asutaan, areenassa soitetaan ja muurilla kävellään.
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+
+### 11.2
+KYSYMYS: Mihin Adrianmeri johtaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri on Välimeren pohjoisin haara, noin 800 kilometriä pitkä kuja Italian ja Balkanin välissä. Sen kaksi rantaa ovat kuin eri meriä: lännen italialainen ranta on suoraa hiekkaa, idän kroatialainen ranta rikkoutunutta kalkkikiveä, jossa vedenpinnan nousu on hukuttanut kokonaisia laaksoja. Siksi täällä on yli tuhat saarta, luotoa ja karia — enemmän kuin missään muualla Välimerellä.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:sava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ilha do Bananal — kaupunkilehti / Ilha do Bananal: Tulvasavannin rytmi] Ilha do Bananal elää joen tahdissa. Kuivana kautena, kesä-elokuussa, vedenpinta laskee niin paljon, että joen voi ylittää ajoneuvolla kahlaamalla, ja hiekkarannat paljastuvat laajoina särkkinä. Sadekautena samat alueet peittyvät tulvaveden alle, ja savannin, babassupalmumetsien ja tulvametsien mosaiikki muuttuu järvien ja soiden verkostoksi. Tämä vuosittainen tulvapulssi on koko saaren ekosysteemin ja sen asukkaiden elämän perusta: se täyttää kalavedet, kastelee viljelysmaat ja tarjoaa kilpikonnille ja linnuille pesimäpaikkoja, kun vesi vetäytyy.
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+
+### 12.1
+KYSYMYS: Mihin Sava laskee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ilha do Bananal — kaupunkilehti / Ilha do Bananal: Tulvasavannin rytmi] Ilha do Bananal elää joen tahdissa. Kuivana kautena, kesä-elokuussa, vedenpinta laskee niin paljon, että joen voi ylittää ajoneuvolla kahlaamalla, ja hiekkarannat paljastuvat laajoina särkkinä. Sadekautena samat alueet peittyvät tulvaveden alle, ja savannin, babassupalmumetsien ja tulvametsien mosaiikki muuttuu järvien ja soiden verkostoksi. Tämä vuosittainen tulvapulssi on koko saaren ekosysteemin ja sen asukkaiden elämän perusta: se täyttää kalavedet, kastelee viljelysmaat ja tarjoaa kilpikonnille ja linnuille pesimäpaikkoja, kun vesi vetäytyy.
+- [Tšad-järvi — kaupunkilehti / Tšad-järvi: Vihreä ranta savannin keskellä] Tšad-järvi sijaitsee Sahelissa, kapealla vyöhykkeellä Saharan autiomaan ja eteläisemmän Afrikan kosteiden savannien välissä, ja sen rannat vaihtelevat rajusti vuodenaikojen mukaan. Sadekauden jälkeen vesi tulvii laajoille ruovikko- ja heinäalueille, ja kun tulva vetäytyy, paljastuneelle mudalle kylvetään nopeasti kasvavia satoja – tätä kutsutaan vetäytymisviljelyksi. Samat rantaniityt toimivat myös karjapaimenten laidunmaina: karja käy juomassa aivan veden äärellä ja laiduntaa tulvan jättämällä vihreällä kaistaleella, joka pysyy rehevänä silloinkin, kun ympäröivä savanni on kuivunut ruskeaksi.
+
+### 12.2
+KYSYMYS: Miksi tulvametsä on hyväksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sava (luonto · joki)
+Tietoruudun teksti: Sava alkaa Slovenian Alpeilta, kulkee Zagrebin läpi ja laskee lopulta Tonavaan Belgradin kohdalla — noin 990 kilometriä, ja vettä se tuo Tonavaan enemmän kuin yksikään toinen sivujoki. Kroatian puolella joki saa yhä levitä: Lonjsko poljen tulvatasangolla vesi nousee joka kevät metsiin ja laitumiin, ja juuri se tekee alueesta yhden Euroopan suurimmista säilyneistä tulvametsistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [Yangon — kohdekartta / Kohdekartta: Bogyoken markkinat] avattiin 1926 Pabedanin kaupunginosassa on vuonna 1926 avattu markkinahalli, jonka britit nimesivät Scott Marketiksi. Rakennus on kaksikerroksinen, ja sen sisällä kulkee mukulakivikatuja kojurivien välissä. Nykyään täällä myydään antiikkia, käsitöitä, koruja, kankaita ja taidetta, mutta myös lääkkeitä ja ruokaa paikallisille. Maanantaisin halli on kiinni. Nimestä väiteltiin kerran kunnolla. Vuonna 1940 nuori burmalainen U Ba Hlaing ehdotti, että markkinat nimettäisiin uudelleen Mingala Marketiksi — mingala tarkoittaa paalin kielessä onnekasta. Hänen perustelunsa oli, että julkisilla laitoksilla pitäisi olla burmalaiset nimet ja ettei herra Scott ollut tehnyt maan hyväksi mitään. Kaupungin t…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:drava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Slovenia — maalehti / Ruoka: Yli 400-vuotias köynnös] 1657 — Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin ja annetaan kaupungin lahjoiksi vieraille.
+
+### 13.1
+KYSYMYS: Mistä Drava saa alkunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Slovenia — maalehti / Ruoka: Yli 400-vuotias köynnös] 1657 — Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin ja annetaan kaupungin lahjoiksi vieraille.
+
+### 13.2
+KYSYMYS: Miksi joki kelpaa rajaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Drava (luonto · joki)
+Tietoruudun teksti: Drava alkaa Etelä-Tirolin vuorilta Italiasta, virtaa Itävallan ja Slovenian läpi ja laskee Tonavaan Osijekin alapuolella — noin 710 kilometriä. Kroatian pohjoisreunalla se on ollut vuosisatoja raja Unkariin. Joki tuo Alpeilta soraa ja hiekkaa ja kasaa niistä särkkiä, jotka siirtyvät tulvien mukana paikasta toiseen; niiden päällä pesivät linnut, joita ei muualla Kroatiassa ole.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hvar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Ruoka: Hirssi, joka myös juodaan] Pohjoisen pellot elävät efundjasta, Angolan sateiden tuomasta vuotuisesta tulvasta, joka täyttää oshanat eli matalat tulvatasangot. Niissä kasvaa mahangu, helmihirssi, joka kestää kuivuutta, kuumuutta, laihaa maata ja suolaa ja tulee toimeen siellä, missä maissi ja vehnä eivät kasvaisi. Jyvät ovat hirssien suurimmat, kolmesta neljään millimetriin. Jauhosta, leseistä ja mallastetusta durrajauhosta sekoitetaan haaleaan veteen seos, joka saa käydä muutaman tunnin: näin syntyy oshikundu, ruskea ja sakea kotijuoma. Se on juotava kuuden tunnin kuluessa, se tarjotaan usein puuron kanssa, ja resepti on kulkenut suullisesti sukupolvelta toiselle.
+- [GUF — maalehti / Arki: Laosista viidakkokylään] 1977 — Hmongit taistelivat Ranskan ja myöhemmin Yhdysvaltojen rinnalla Indokiinan ja Vietnamin sodissa, ja kommunistien noustua valtaan Laosissa heidän oli paettava. Syyskuussa 1977 noin 500 hmongpakolaista asutettiin Cacaon kylään Ranskan Guayanan sademetsään, koska seudun ilmasto muistutti Laosin vuoristoa. Uudisasukkaiden piti rakentaa kaikki tyhjästä: tiet, koulut, talot ja pellot. Kaksi vuotta myöhemmin toinen samankokoinen ryhmä asutettiin lännemmäs Acarouanyyn. Nykyään Cacao tunnetaan sunnuntaitorista, jonne matkustetaan Cayennesta asti ostamaan tuoreita vihanneksia ja hmongkulttuuria edustavaa käsityötä.
+
+### 14.1
+KYSYMYS: Keitä olivat Paroksen siirtolaiset?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+### 14.2
+KYSYMYS: Miksi pellot jaettiin suorakaiteisiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hvar (luonto · saari)
+Tietoruudun teksti: Kun kreikkalaiset siirtolaiset Paroksen saarelta perustivat Hvarille kaupungin 384 eaa., he jakoivat sen takana olevan tasangon suorakaiteisiin peltoihin ja merkitsivät rajat kuivamuureilla. Jako on yhä paikallaan. Samat kivimuurit, samat polut ja samat viljelykaistat ovat käytössä lähes 2400 vuotta myöhemmin — se on parhaiten säilynyt antiikin Kreikan peltojako koko Välimerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Ruoka: Hirssi, joka myös juodaan] Pohjoisen pellot elävät efundjasta, Angolan sateiden tuomasta vuotuisesta tulvasta, joka täyttää oshanat eli matalat tulvatasangot. Niissä kasvaa mahangu, helmihirssi, joka kestää kuivuutta, kuumuutta, laihaa maata ja suolaa ja tulee toimeen siellä, missä maissi ja vehnä eivät kasvaisi. Jyvät ovat hirssien suurimmat, kolmesta neljään millimetriin. Jauhosta, leseistä ja mallastetusta durrajauhosta sekoitetaan haaleaan veteen seos, joka saa käydä muutaman tunnin: näin syntyy oshikundu, ruskea ja sakea kotijuoma. Se on juotava kuuden tunnin kuluessa, se tarjotaan usein puuron kanssa, ja resepti on kulkenut suullisesti sukupolvelta toiselle.
+- [GUF — maalehti / Arki: Laosista viidakkokylään] 1977 — Hmongit taistelivat Ranskan ja myöhemmin Yhdysvaltojen rinnalla Indokiinan ja Vietnamin sodissa, ja kommunistien noustua valtaan Laosissa heidän oli paettava. Syyskuussa 1977 noin 500 hmongpakolaista asutettiin Cacaon kylään Ranskan Guayanan sademetsään, koska seudun ilmasto muistutti Laosin vuoristoa. Uudisasukkaiden piti rakentaa kaikki tyhjästä: tiet, koulut, talot ja pellot. Kaksi vuotta myöhemmin toinen samankokoinen ryhmä asutettiin lännemmäs Acarouanyyn. Nykyään Cacao tunnetaan sunnuntaitorista, jonne matkustetaan Cayennesta asti ostamaan tuoreita vihanneksia ja hmongkulttuuria edustavaa käsityötä.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:korcula) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Macapá: Nollapiiri keskellä kaupunkia] Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".
+- [Santa Cruz — kohdekartta / Kohdekartta: Gabriel René Moreno -yliopisto] 1880 Bolivian idän suurin julkinen korkeakoulu perustettiin 11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. Perustamisen taustalla oli valtion asetus 15. joulukuuta 1879, jolla haluttiin vastata kaupungin nuorten tarpeeseen: siihen asti tutkintoa oli pitänyt hakea Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe Leonor Riberalta ja cruceño-piispalta, joka toimi myös ensimmäisenä rehtorina. Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja oikeustiede. Niin pysyi lähes viisikymmentä vuotta. Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen yliopisto 1898 ja nykyisen nimensä 1911 cruceño-kirjailijan ja historioitsijan Gabriel René Morenon mukaan. Keskusrakennus nousi 1940 Ju…
+
+### 15.1
+KYSYMYS: Syntyikö Marco Polo oikeasti täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Macapá: Nollapiiri keskellä kaupunkia] Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä "Keskimaailman pääkaupunki".
+
+### 15.2
+KYSYMYS: Mikä on moreška?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korčula (luonto · saari)
+Tietoruudun teksti: Korčulan kaupunki on rakennettu niemelle kalanruodon muotoon: yksi pääkatu keskellä ja sivukadut vinosti siitä, jotta bura pääsee ulos muttei suoraan sisään. Saarelaiset ovat pitäneet vuosisatoja kiinni väitteestä, että Marco Polo syntyi täällä — todisteita ei ole, ja Venetsia on eri mieltä. Varmempaa on moreška, miekkatanssi kahden armeijan taistelusta, jota on esitetty Korčulassa 1500-luvulta asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Cruz — kohdekartta / Kohdekartta: Gabriel René Moreno -yliopisto] 1880 Bolivian idän suurin julkinen korkeakoulu perustettiin 11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. Perustamisen taustalla oli valtion asetus 15. joulukuuta 1879, jolla haluttiin vastata kaupungin nuorten tarpeeseen: siihen asti tutkintoa oli pitänyt hakea Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe Leonor Riberalta ja cruceño-piispalta, joka toimi myös ensimmäisenä rehtorina. Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja oikeustiede. Niin pysyi lähes viisikymmentä vuotta. Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen yliopisto 1898 ja nykyisen nimensä 1911 cruceño-kirjailijan ja historioitsijan Gabriel René Morenon mukaan. Keskusrakennus nousi 1940 Ju…
+- [Iquitos — kohdekartta / Kohdekartta: Casa Morey] 1910—1913 Kumiparoni Luis Felipe Morey rakennutti talon vuosina 1910—1913, ja se päätyi hänen veljelleen, niin ikään kumiparonille Adolfo Morey Ariasille. Adolfo asui siellä vaimonsa Estefanía Peñan ja neljäntoista lapsensa kanssa; useat lapsista lähetettiin kouluun Eurooppaan. Talo on kaksikerroksinen, ja sen ikkunoita suojaavat hienot takoraudasta tehdyt ristikot. Sitä pidetään yhtenä kumikauden Iquitosin komeimmista rakennuskokonaisuuksista, ja se seisoo Plaza Ramón Castilla y Marquesadoa vastapäätä kaupungin pohjoisosassa lähellä satamaa. Talo kertoo, mihin kumiraha meni. Kaupungissa oli vuonna 1900 kaksikymmentäviisi kumikauppahuonetta, ja niiden omistajat rakensivat itselleen taloja, …
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

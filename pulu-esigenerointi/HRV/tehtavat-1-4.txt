@@ -1,0 +1,207 @@
+================ KOHTA 16 (kohde:mljet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kaupunkilehti / Luonto: Vesi, jota toiset sanovat järveksi ja toiset joeksi] Guaíba syntyy siinä, missä neljä jokea yhtyy kaupungin edustalla, ja jatkuu sieltä etelään kohti Patojen laguunia ja lopulta merta. Onko se järvi vai joki? Kysymystä on puitu paikallisessa tieteellisessä keskustelussa pitkään, eikä Wikipedia itsekään valitse puolta; käytännössä kaupunkilaiset sanovat sitä järveksi. Vesi on matalaa ja leveää, ja sen matalikoilla ruokailee jalohaikaroita. Rauhallinen se ei aina ole: vuoden 1941 suurtulvassa Guaíba nousi 4,76 metriin, ja lukema pysyi ennätyksenä yli kahdeksankymmentä vuotta.
+
+### 16.1
+KYSYMYS: Miten meri pääsee saaren sisälle järveksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kaupunkilehti / Luonto: Vesi, jota toiset sanovat järveksi ja toiset joeksi] Guaíba syntyy siinä, missä neljä jokea yhtyy kaupungin edustalla, ja jatkuu sieltä etelään kohti Patojen laguunia ja lopulta merta. Onko se järvi vai joki? Kysymystä on puitu paikallisessa tieteellisessä keskustelussa pitkään, eikä Wikipedia itsekään valitse puolta; käytännössä kaupunkilaiset sanovat sitä järveksi. Vesi on matalaa ja leveää, ja sen matalikoilla ruokailee jalohaikaroita. Rauhallinen se ei aina ole: vuoden 1941 suurtulvassa Guaíba nousi 4,76 metriin, ja lukema pysyi ennätyksenä yli kahdeksankymmentä vuotta.
+
+### 16.2
+KYSYMYS: Kuka oli Kalypso?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mljet (luonto · saari)
+Tietoruudun teksti: Mljetin länsipäässä on kaksi järveä, jotka eivät ole makeavetisiä: kapea kanava päästää Adrianmeren sisään, joten Veliko ja Malo jezero ovat suolajärviä, joissa vuorovesi kääntää virran suuntaa. Ison järven saarekkeella seisoo 1100-luvulla perustettu benediktiiniluostari. Antiikin kirjoittajista lähtien on esitetty, että juuri Mljet olisi Homeroksen Ogygia, saari jolla nymfi Kalypso piti Odysseusta seitsemän vuotta.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:plitvicen-jarvet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 17.1
+KYSYMYS: Miten vesi voi rakentaa padon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+
+### 17.2
+KYSYMYS: Kuinka nopeasti travertiini kasvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plitvicen järvet (luonto)
+Tietoruudun teksti: Plitvicellä on kuusitoista järveä portaina toistensa alla, ja niitä erottavat padot ovat elävää työtä. Vesi tuo mukanaan kalkkia, ja kun se putoaa sammalten ja levien yli, kalkki saostuu niiden pinnalle travertiiniksi. Pato kasvaa noin sentin vuodessa — hitaasti, mutta lakkaamatta, joten järvien muoto muuttuu koko ajan ja vanhat putoukset kuivuvat uusien syntyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:pulan-areena) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Areena, jossa soitetaan yhä] 1. vuosisata — Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, mikä onnistui vain kuudelta roomalaiselta areenalta. Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, mutta kaupunki esti sen. Nykyään areenassa järjestetään konsertteja ja elokuvafestivaali — yleisö istuu samoilla paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo elokuvaa.
+- [Kabul — kohdekartta / Kohdekartta: Bala Hissar] linnoituksena ainakin 400-luvulta Bala Hissar tarkoittaa korkeaa linnaa, ja se seisoo vanhankaupungin eteläpuolella Sher Darwazan vuoren kärjessä. Paikan käyttö linnoituksena on ajoitettu ainakin 400-luvulle, mutta alkuperää ei tunneta: lähistöltä on löytynyt kušanikautta vanhempaa keramiikkaa sekä indokreikkalaisia ja akhaimenidien kolikoita. Linnoituksesta lähtevät Kabulin muurit, jotka ovat kuusi metriä korkeat ja lähes neljä metriä paksut ja seuraavat vuorenharjaa kaarevana viivana alas joelle. Babur valtasi linnoituksen 1504, ja mogulit tekivät siitä palatsin: Jahangir purki vanhoja rakennuksia ja rakennutti tilalle saleja ja nelijakoisen puutarhan, Shah Jahan asui täällä Keski-Aasian …
+
+### 18.1
+KYSYMYS: Miten amfiteatteri rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Historia: Areena, jossa soitetaan yhä] 1. vuosisata — Pulan amfiteatteri rakennettiin ensimmäisellä vuosisadalla, ja siihen mahtui yli kaksikymmentätuhatta katsojaa. Se on harvinaisuus: kaikki kolme kerrosta ovat säilyneet pystyssä, mikä onnistui vain kuudelta roomalaiselta areenalta. Keskiajalla kiveä yritettiin viedä muualle rakennusaineeksi, mutta kaupunki esti sen. Nykyään areenassa järjestetään konsertteja ja elokuvafestivaali — yleisö istuu samoilla paikoilla kuin kaksituhatta vuotta sitten, mutta katsoo elokuvaa.
+
+### 18.2
+KYSYMYS: Miksi Venetsia halusi purkaa sen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pulan areena (historia)
+Tietoruudun teksti: Pulan amfiteatteri rakennettiin vuosien 27 eaa. ja 68 jaa. välillä, ja se on säilyneistä roomalaisista areenoista harvoja, joissa koko ulkomuuri on yhä pystyssä — ainoa, jossa on tallella kaikki neljä sivutornia. Katsojia mahtui kymmeniätuhansia. Vuonna 1583 Venetsian senaatti käsitteli ehdotusta, että areena purettaisiin ja siirrettäisiin kivi kerrallaan Venetsiaan. Äänestys hävisi, ja rakennus jäi paikalleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kohdekartta / Kohdekartta: Bala Hissar] linnoituksena ainakin 400-luvulta Bala Hissar tarkoittaa korkeaa linnaa, ja se seisoo vanhankaupungin eteläpuolella Sher Darwazan vuoren kärjessä. Paikan käyttö linnoituksena on ajoitettu ainakin 400-luvulle, mutta alkuperää ei tunneta: lähistöltä on löytynyt kušanikautta vanhempaa keramiikkaa sekä indokreikkalaisia ja akhaimenidien kolikoita. Linnoituksesta lähtevät Kabulin muurit, jotka ovat kuusi metriä korkeat ja lähes neljä metriä paksut ja seuraavat vuorenharjaa kaarevana viivana alas joelle. Babur valtasi linnoituksen 1504, ja mogulit tekivät siitä palatsin: Jahangir purki vanhoja rakennuksia ja rakennutti tilalle saleja ja nelijakoisen puutarhan, Shah Jahan asui täällä Keski-Aasian …
+- [Kabul — kaupunkilehti / Historia: Lähettilään loppu ja linnoituksen loppu] Syyskuussa 1879 Britannian lähettiläs Kabuliin, Sir Pierre Louis Napoleon Cavagnari, surmattiin Bala Hissarin sisällä. Teko laukaisi yleisen kansannousun ja Toisen anglo-afgaanisodan toisen vaiheen. Linnoitus vaurioitui pahoin: brittiläinen residenssi paloi ja asevarasto räjähti. Wikipedian oma artikkeli kertoo lopusta kahdella tavalla — johdannon mukaan britit tuhosivat linnoituksen 1880, mutta historiaosion mukaan kenraali Frederick Roberts halusi purkaa sen kokonaan, ja lopulta se päinvastoin vahvistettiin keväällä 1880. Emiiri Abdur Rahman Khan laski samana vuonna uuden linnakkeen perustukset, ja Bala Hissar hylättiin 1890-luvulla.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:stonin-muurit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+
+### 19.1
+KYSYMYS: Miksi suola oli niin arvokasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+
+### 19.2
+KYSYMYS: Mikä oli Ragusan tasavalta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonin muurit (historia)
+Tietoruudun teksti: Ragusan tasavalta — Dubrovnikin kaupunkivaltio — alkoi 1358 rakentaa Stonin kannakselle muuria, joka nousee vuorten yli ja laskeutuu toiselle rannalle. Sitä on jäljellä useita kilometrejä, ja se on Euroopan pisimpiä säilyneitä linnoitusmuureja. Suojeltavana ei ollut kaupunki vaan suolapannut: merivesi haihdutettiin altaissa suolaksi, ja suola oli tasavallan varmimpia tulonlähteitä. Samoja altaita käytetään yhä.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-salona-porta-caesarea) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+### 20.1
+KYSYMYS: Miltä Salonan Porta Caesarea näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+### 20.2
+KYSYMYS: Miksi Salonan Porta Caesarea katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salonan Porta Caesarea (historia)
+Tietoruudun teksti: Salona oli Rooman Dalmatian provinssin pääkaupunki ja keisari Diocletianuksen syntymäpaikka. Avaarit ja slaavit tuhosivat kaupungin 600-luvulla. Asukkaat pakenivat Diocletianuksen palatsiin, jonka ympärille Split kasvoi.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

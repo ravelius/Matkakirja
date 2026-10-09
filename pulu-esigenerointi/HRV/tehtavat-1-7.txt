@@ -1,0 +1,198 @@
+================ KOHTA 31 (kohde:hahmotelma-omis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+
+### 31.1
+KYSYMYS: Millä nimellä Omišin merirosvojen alukset tunnettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 31.2
+KYSYMYS: Mikä joki laskee Adrianmereen Omišin kohdalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Omiš (merenkulku)
+Tietoruudun teksti: Omiš on satamakaupunki Dalmatiassa noin 25 kilometriä Splitistä kaakkoon siinä, missä Cetina-joki laskee Adrianmereen; asukkaita on 14 139. Se tunnettiin aikoinaan Almissan merirosvoista, joiden nopeat alukset, sagittat eli nuolet, rakennettiin hyökkäämään ja vetäytymään nopeasti Cetinan suulle, joka suojeli kaupunkia. Poljican ruhtinaskunnan ylämaalaiset olivat merirosvojen ystäviä ja liittolaisia, ja 1400-luvun lopulta alkaen kaupunki kuului Venetsialle, jolloin sen italialainen nimi oli Almissa. Historiallisia kohteita ovat 1200-luvun Mirabellan linnake, 1400-luvun Starigradin linnoitus ja 900-luvun esiromaaninen Pyhän Pietarin kirkko, ja kaupunki tunnetaan dalmatialaisten a cappella -ryhmien perinteisestä festivaalista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-motovun) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+
+### 32.1
+KYSYMYS: Millä kukkulalla Motovun sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+
+### 32.2
+KYSYMYS: Millä eläimillä tryffeleitä etsitään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Motovun (historia)
+Tietoruudun teksti: Motovun on kylä ja kunta Istrian keskiosassa Länsi-Kroatiassa, 270 metriä merenpinnan yläpuolella olevalla kukkulalla, jossa talot ovat hajallaan. Keskiaikainen kaupunki kasvoi muinaisen linnakylän paikalle, ja Venetsia otti sen haltuunsa vuonna 1278 ja ympäröi sen vahvoilla muureilla, jotka ovat yhä ehjät ja toimivat kävelytienä. Tornit ja kaupunginportit ovat 1300–1600-luvuilta ja yhdistävät romaanista, goottilaista ja renessanssityyliä; myöhäisrenessanssin Pyhän Tapanin kirkon luonnokset on ehkä laatinut Andrea Palladio. Kukkulan alla virtaavan Mirna-joen toisella puolella on Motovunin metsä, joka tunnetaan arvostetuista mustista ja valkoisista tryffeleistä, ja koska sieni kasvaa maan alla, sitä etsitään koulutetuilla koirilla.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-trogir) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+### 33.1
+KYSYMYS: Minkä saaren välissä Trogirin vanhakaupunki sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+### 33.2
+KYSYMYS: Kuka teki Trogirin katedraalin kuuluisan portaalin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trogir (historia)
+Tietoruudun teksti: Trogir on historiallinen kaupunki ja satama Dalmatian rannikolla 27 kilometriä Splitistä länteen; vanha kaupunki on pienellä saarella mantereen ja Čiovon saaren välissä. Kaupungin perustivat 300-luvulla eaa. kreikkalaiset siirtokuntalaiset Visin saarelta nimellä Tragurion, ja Salonan tuhon jälkeen sinne pakeni sen asukkaita. Vuonna 1123 saraseenit valtasivat ja melkein tuhosivat kaupungin, mutta se toipui nopeasti ja koki vaurauden 1100- ja 1200-luvuilla; Venetsian lähes neljä vuosisataa kestänyt hallinta alkoi vuonna 1420 ja jätti jälkeensä lukuisia renessanssiteoksia. Vanhan kaupungin 1200-luvun katedraalissa on mestari Radovanin portaali, ja 1400-luvun Kamerlengo-linnoitus kuuluu nähtävyyksiin. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon vuonna 1997.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-rovinj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+### 34.1
+KYSYMYS: Millä nimellä Rovinjia kutsutaan italiaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+### 34.2
+KYSYMYS: Minä vuonna Rovinjin saari yhdistettiin mantereeseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rovinj (historia)
+Tietoruudun teksti: Rovinj on Istrian länsirannikon kaupunki Pohjois-Adrianmerellä; asukkaita oli 12 968 vuonna 2021. Se on suosittu matkailukohde ja vilkas kalastussatama, ja istriotti, alueella ennen laajasti puhuttu romaaninen kieli, on yhä joidenkin kotikieli; kaupunki on virallisesti kaksikielinen, ja sen italialainen nimi on Rovigno. Venetsian hallinnon aikana 1283–1797 Rovinj oli yksi Istrian tärkeimmistä kaupungeista, ja sitä suojasi kaksi muurikehää, joiden jäänteitä on yhä jäljellä; laiturilla on kaupunginportti Balbin kaari vuodelta 1680 ja myöhäisrenessanssin kellotorni. Saarelle rakennettu kaupunki yhdistettiin mantereeseen täyttämällä salmi vasta vuonna 1763, ja nähtävyyksiin kuuluu Pyhän Euphemian kirkko.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-vukovar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Machu Picchu — kaupunkilehti / Kiveen veistetty taito: Muuri ilman laastia] Machu Picchun muurit on ladottu ilman laastia: kivet on veistetty ja hiottu niin tarkasti toisiinsa sopiviksi, ettei ohuinkaan veitsenterä mahdu saumaan. Hienoimmat, kuninkaallisille rakennuksille varatut muurit koostuvat suorakulmaisista lohkoista, kun taas tavallisempien rakennusten seinät on karkeampaa kenttäkiveä. Vuonna 2019 julkaistu tutkimus huomasi, ettei kaupungin sijainti aktiivisten maanjäristysvyöhykkeiden päällä liene sattumaa: samat kallion murtumat, jotka tekevät seudusta järistysherkän, ovat tuottaneet runsaasti lohkeillutta kiveä rakennusaineeksi. Trapetsinmuotoiset aukot auttavat rakenteita kestämään tärinää murtumatta.
+- [GUF — maalehti / Historia: Kuoleman siirtokunta Kouroussa] 1763 — Menetettyään Kanadan Ranska halusi uuden siirtomaan, ja ministeri Choiseul suunnitteli Kouroun seudusta eurooppalaisten siirtokunnan ilman orjatyövoimaa. Vuonna 1763 sinne kuljetettiin kiireesti yli 13 000 siirtolaista, joukossa myös Britannian Kanadasta karkottamia akadialaisia. Suurin osa saapui sadekautena, jolloin majoiksi kelpasivat vain teltat ja hökkelit, ja varastot mätänivät kosteudessa. Keltakuume, punatauti ja malaria levisivät ahtaissa leireissä nopeasti, ja hankkeesta tuli katastrofi: yli 9 000 siirtolaista kuoli parissa vuodessa. Kourousta tuli pitkäksi aikaa varoittava esimerkki huonosti valmistellusta siirtomaasta.
+
+### 35.1
+KYSYMYS: Missä joessa Vukovarin satama sijaitsee Vukan yhtymäkohdassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+
+### 35.2
+KYSYMYS: Minkä suvun kreivit ostivat suuren osan seudusta ottomaanien jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vukovar (historia)
+Tietoruudun teksti: Vukovar on Slavonian ja Sremin itäosassa oleva kaupunki, jossa on Kroatian suurin jokisatama Vuka-joen ja Tonavan yhtymäkohdassa; nimi tarkoittaa Vukan varren linnaa. Keskiajalla alue oli Vukovon kreivikunnan keskus, ja Vukovarin vapaan kuninkaallisen kaupungin etuoikeudet myönnettiin vuonna 1231. Ottomaanien vallan jälkeen saksalaiset Eltzin kreivit ostivat suuren osan alueesta, ja Mainzin arkkipiispa Philip Karl Eltz osti vuonna 1736 laajan herruuden, jossa oli yli 30 asuttua paikkaa; suku vaikutti kaupungin talouteen ja kulttuuriin kaksi vuosisataa. Seudulla on asuttu viisituhatta vuotta, ja Vučedolin kulttuuri on erityisen merkittävä: vuonna 1938 löydetystä Vučedolin kyyhkystä tuli kaupungin tunnus. Kulttuuriperintöön kuuluvat 1700-luvun Eltzin kartano, keskustan barokkirakennukset ja fransiskaaniluostari; monet rakennukset kärsivät 1990-luvun sodassa ja on kunnostettu vuoden 1998 j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Machu Picchu — kaupunkilehti / Kiveen veistetty taito: Muuri ilman laastia] Machu Picchun muurit on ladottu ilman laastia: kivet on veistetty ja hiottu niin tarkasti toisiinsa sopiviksi, ettei ohuinkaan veitsenterä mahdu saumaan. Hienoimmat, kuninkaallisille rakennuksille varatut muurit koostuvat suorakulmaisista lohkoista, kun taas tavallisempien rakennusten seinät on karkeampaa kenttäkiveä. Vuonna 2019 julkaistu tutkimus huomasi, ettei kaupungin sijainti aktiivisten maanjäristysvyöhykkeiden päällä liene sattumaa: samat kallion murtumat, jotka tekevät seudusta järistysherkän, ovat tuottaneet runsaasti lohkeillutta kiveä rakennusaineeksi. Trapetsinmuotoiset aukot auttavat rakenteita kestämään tärinää murtumatta.
+- [GUF — maalehti / Historia: Kuoleman siirtokunta Kouroussa] 1763 — Menetettyään Kanadan Ranska halusi uuden siirtomaan, ja ministeri Choiseul suunnitteli Kouroun seudusta eurooppalaisten siirtokunnan ilman orjatyövoimaa. Vuonna 1763 sinne kuljetettiin kiireesti yli 13 000 siirtolaista, joukossa myös Britannian Kanadasta karkottamia akadialaisia. Suurin osa saapui sadekautena, jolloin majoiksi kelpasivat vain teltat ja hökkelit, ja varastot mätänivät kosteudessa. Keltakuume, punatauti ja malaria levisivät ahtaissa leireissä nopeasti, ja hankkeesta tuli katastrofi: yli 9 000 siirtolaista kuoli parissa vuodessa. Kourousta tuli pitkäksi aikaa varoittava esimerkki huonosti valmistellusta siirtomaasta.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
