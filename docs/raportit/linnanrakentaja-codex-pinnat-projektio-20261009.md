@@ -80,19 +80,30 @@ kuvan kohdistuksen (kohta 3.1).
 
 ## 3. Projektiosuunnitelma
 
-### 3.1 Kohdistus (työkalu `kohdista.py`, uusi)
+### 3.1 Kohdistus (työkalu `kohdista.py`, valmis ja testattu 9.10.)
 
-1. Codexin kuva skaalataan ohjekuvan kokoon.
-2. Kuvasta tunnistetaan aukot: tummat suorakaiteet maskin `aukot_kaikki` ympäriltä ±0,5 m:n ikkunassa. Niiden keskipisteitä
-   verrataan `mitat.json`:n aukkoihin.
-3. Kuvaan sovitetaan ensin siirto ja mittakaava pienimmän neliösumman menetelmällä. Jos jäännös on yli 0,15 m, sovitetaan
-   ohutlevyinterpolaatio (TPS), jonka ohjauspisteinä ovat aukkojen keskipisteet ja rakennusmaskin kulmat.
+`_valmiit/kaupunkipinnat-v1/lahde/kohdista.py`. Ajo: `venv-rembg/bin/python kohdista.py <codex-ohje/<näkymä>> <codex-kuva> [--osa k]`.
+Tulos tallentuu kansioon `<näkymä>/kohdistetut/`, josta `projisoi.py` lukee sen. Lisäksi syntyy `_kohdistus.json`, jossa ovat
+mittarit, hyväksyntä ja poikkeavat aukot.
+
+1. Kuva skaalataan ohjekuvan tai osan kokoon. Rakennuksen ääriviiva (alfa tai valkoinen tausta) sovitetaan maskiin
+   mittakaavalla ja siirrolla: ensin rajauslaatikoista, sitten IoU-haulla 4 px:n ja 1 px:n askelin.
+2. Jokainen ohjeen aukko etsitään Codex-kuvasta normalisoidulla ristikorrelaatiolla (cv2). Malline on ohjeen puhdas-kuva aukon
+   ympäriltä (aukko + 0,25 m), ylipäästetty, ja haku ulottuu ±1,0 m:n päähän. Vastaavuus on luotettava, kun NCC ≥ 0,35.
+3. Jos luotettavien aukkojen mediaanijäännös on yli 0,08 m, kuvaan tehdään ohutlevyvääntö (TPS) aukkojen keskipisteillä enintään
+   kolme kierrosta. Jäännös mitataan aina uudelleen väännetystä kuvasta.
 4. Hyväksyntärajat:
-   - Aukkojen jäännös on mediaanina ≤ 0,15 m ja enintään 0,4 m.
+   - Luotettavien aukkojen jäännöksen mediaani on ≤ 0,15 m ja 90. persentiili ≤ 0,4 m.
    - Rakennusmaskin IoU on ≥ 0,97.
-   - Muuten kuva palaa Codexille. Palautteeseen tulee eroavien aukkojen lista.
-5. KL:n osien limitysalueet (vähintään 12 %) häivytetään lineaarisesti. Sauma osuu limityksen keskelle, ja jos mahdollista
-   pilasterin tai rännin kohdalle. Ennen häivytystä osien kirkkaus ja sävy tasataan limitysalueen keskiarvon mukaan.
+   - Muuten kuva palaa Codexille, ja palautteeseen tulee poikkeavien aukkojen lista.
+5. Testit ND:n eteläjulkisivulla:
+   - Kuva skaalattuna 0,96× ja siirrettynä 70/40 px: mittakaava 1,041 ja siirto −72,5/−41,3 px löytyivät, jäännös 0,05 m ja
+     IoU 0,979, joten kuva hyväksyttiin.
+   - Kuva vääristettynä ±0,6 m:n siniaallolla: jäännös laski 0,41 m:stä 0,16 m:iin ja IoU oli 0,969. Kuva hylättiin niukasti,
+     mikä on oikea tulos näin vahvalle vääristymälle.
+6. KL:n osien limitysalueet (vähintään 12 %) häivytetään lineaarisesti. Sauma osuu limityksen keskelle, ja jos mahdollista
+   pilasterin tai rännin kohdalle. Ennen häivytystä osien kirkkaus ja sävy tasataan limitysalueen keskiarvon mukaan. Osien
+   kokoaja on vielä tekemättä, ja se tehdään KL:n tilauksen yhteydessä.
 
 ### 3.2 Planaariprojektio ja atlas (työkalu `projisoi.py`, valmis ja testattu 9.10. puhdas-kuvilla)
 
@@ -145,7 +156,7 @@ Jokainen ortonäkymä on projektori, jonka `*_mitat.json` → `kehys` määrää
 | Ohjekuvat ND (6) + KL (5 + 14 osaa) | Linnanrakentaja | valmis 9.10. |
 | Commons-referenssit + Codex-tilaukset | Sisältökirjuri | ohjekuvat |
 | Pilotti: ND eteläjulkisivu + ND katot | Codex → Linnanrakentaja | ensimmäiset kaksi kuvaa |
-| projisoi.py (valmis 9.10.), kohdista.py | Linnanrakentaja | pilottikuvat |
+| projisoi.py ja kohdista.py (valmiit 9.10.), KL:n osien kokoaja | Linnanrakentaja | pilottikuvat |
 | Valaisematon esitys + Google-sävynäytteet | LS2 | atlas-GLB |
 | Pelikuvat omistajalle (kulma ja versio kuvassa) | LS2 → PT | vienti uuteen versiokansioon |
 
