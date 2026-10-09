@@ -711,3 +711,10 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 - Vesi index-v5 (40 km, Tukholma kauko2 48 m) ja kaukomaa v1 ovat ämpärissä. Kaukomaan yövalot (kaukomaa/yo-v1, 25 Mt) on Julkaisijalla vientiin (PT ja Natiiviseppä kuittasivat). LS2 kytkee myöhemmin Natiivisepän ehdoilla.
 - Kaukomaa v2 (vuodenajat) jätetty tekemättä: pallossa ei ole vuodenajan valintaa (PT samaa mieltä).
 - TEKOÄLYPINNAT (omistaja hyväksyi): T7 tekoalypinnat/ (ComfyUI + venv + mallit 14 Gt, LAHTEET.md, LUEMINUT.md, pinta.py). ComfyUI jää taustalle porttiin 8189 (pinta.py käynnisti sen). Sammutus vaatii killin, joten se vain omistajan luvalla. Koe LR:n kuninkaanlinnalla: noin 71 s per kuva, vertailut _tyo/karttaseppa/tekoalypinnat-koe/.
+
+## 9.10. 19.0x: TEKOÄLYPINNAT, YÖAJO
+
+- AJOSSA (perl setsid): T7 tekoalypinnat/aja-yo.sh odottaa LR:n palakokeen loppumista, sitten aja-nakymat.py: ND etela, katot, pohjoinen, lansi, apsis, spiira → KL etela, ita, lansi, pohjoinen, katot. Loki aja-yo.log, tauko `touch tekoalypinnat/STOP`. Tulokset tekoalypinnat/tulokset/<nd|kl>_<näkymä>_{koko_,}v1.png, LR projisoi.
+- KL:n jälkikäsittely kesken: rappaus = luokat.png seina 226,219,201 → savy.py kohde 153,146,131. Katto-luokka sisältää sekä pellin että kuparin, joten kupari erotellaan pohja.png:n vihreästä tai LR:n ortomateriaali-ID:stä. Paneeli 52,62,92 (lukitse pohjasta).
+- G3 (KL perspektiivi) hyväksytty. Olavinlinnan seinä 1 (olavinlinna-codex-ohje-v25) jonon lopussa.
+- wt/karttaseppa-tyokalut3 poistettu (Postivahti, worktree-katto). PR #4256 on auki Julkaisijan junaan, ja haara on pushattu.
