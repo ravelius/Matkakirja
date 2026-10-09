@@ -3,8 +3,9 @@
   "kohde": "kohde:carrauntoohil",
   "kysymys": "Mitä nimi Corrán Tuathail tarkoittaa?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Corrán Tuathail on vuoren irlanninkielinen nimi, ja se tarkoittaa Tuathalin sirppiä. Vuori tunnetaan englanniksi nimellä Carrauntoohil, ja se on Irlannin korkein, 1 038,6 metriä. Se kohoaa Kerryn kreivikunnassa Iveraghin niemimaalla [[MacGillycuddy's Reeksin]] vuorijonon keskellä. Sirppi-sanan yhteys vuoren muotoon on mahdollinen, sillä jäätiköt ovat veistäneet sen itä- ja koillisseinämiin jyrkkiä rotkoja ja teräviä harjanteita, mutta nimen tarkasta alkuperästä en ole varma. Sirppi on kyl hyvä nimi vuorelle.",
+  "vastaus": "Joo, tän minä tiedän. Corrán Tuathail on vuoren irlanninkielinen nimi, ja se tarkoittaa Tuathalin sirppiä. Vuori tunnetaan englanniksi nimellä Carrauntoohil, ja se on Irlannin korkein, 1 038,6 metriä. Se kohoaa Kerryn kreivikunnassa [[Iveraghin]] niemimaalla [[MacGillycuddy's Reeksin]] vuorijonon keskellä. Sirppi-sanan yhteys vuoren muotoon on mahdollinen, sillä jäätiköt ovat veistäneet sen itä- ja koillisseinämiin jyrkkiä rotkoja ja teräviä harjanteita, mutta nimen tarkasta alkuperästä en ole varma. Sirppi on kyl hyvä nimi vuorelle.",
   "linkit": [
+   "Iveraghin",
    "MacGillycuddy's Reeksin"
   ],
   "jatkot": [
@@ -165,8 +166,9 @@
   "kohde": "kohde:shannon",
   "kysymys": "Mikä on Shannon Pot?",
   "uusi": false,
-  "vastaus": "Ai tota. Shannon Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja sitä pidetään Shannon-joen alkulähteenä. Joki lähtee siitä vielä taimenpuron kokoisena. Mittaukset ovat kuitenkin osoittaneet, että lammen vesi tulee nielukuiluista kilometrien päässä, osittain jopa [[Pohjois-Irlannin]] puolelta. Legendan mukaan joki on nimetty jumalatar Sionnan mukaan, joka hukkui paikkaan etsiessään viisauden lähdettä. Pienestä lammesta isoksi joeksi, kyl se kunnioitusta ansaitsee.",
+  "vastaus": "Ai tota. [[Shannon Pot]] on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja sitä pidetään Shannon-joen alkulähteenä. Joki lähtee siitä vielä taimenpuron kokoisena. Mittaukset ovat kuitenkin osoittaneet, että lammen vesi tulee nielukuiluista kilometrien päässä, osittain jopa [[Pohjois-Irlannin]] puolelta. Legendan mukaan joki on nimetty jumalatar Sionnan mukaan, joka hukkui paikkaan etsiessään viisauden lähdettä. Pienestä lammesta isoksi joeksi, kyl se kunnioitusta ansaitsee.",
   "linkit": [
+   "Shannon Pot",
    "Pohjois-Irlannin"
   ],
   "jatkot": [
@@ -237,9 +239,10 @@
   "kohde": "kohde:newgrange",
   "kysymys": "Kumpi on vanhempi, Newgrange vai Stonehenge?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Newgrange on vanhempi. Se rakennettiin noin vuoden 3100 eaa. paikkeilla, kun taas Stonehengen ensimmäinen vaihe, kehämäinen vallihauta, ajoitetaan noin vuoteen 3000 eaa., ja sen tunnetut suuret kivet pystytettiin vasta myöhemmin, arviolta noin vuoden 2500 eaa. tienoilla. Newgrange on vanhempi myös kuin Egyptin Gizan pyramidit, jotka rakennettiin noin vuoden 2600 eaa. aikoihin. Ajoitukset ovat arvioita ja eri lähteet antavat hieman eri lukuja, mutta Newgrangen etumatka on selvä. Newgrange on [[käytävähauta]] Meathin kreivikunnassa Boyne-joen varrella.\n\nViisituhatta vuotta, ja kumpu seisoo yhä paikallaan. Moni linna ei pärjäisi sille.",
+  "vastaus": "Annas ku mietin. Newgrange on vanhempi. Se rakennettiin noin vuoden 3100 eaa. paikkeilla, kun taas Stonehengen ensimmäinen vaihe, kehämäinen vallihauta, ajoitetaan noin vuoteen 3000 eaa., ja sen tunnetut suuret kivet pystytettiin vasta myöhemmin, arviolta noin vuoden 2500 eaa. tienoilla. Newgrange on vanhempi myös kuin Egyptin Gizan pyramidit, jotka rakennettiin noin vuoden 2600 eaa. aikoihin. Ajoitukset ovat arvioita ja eri lähteet antavat hieman eri lukuja, mutta Newgrangen etumatka on selvä. Newgrange on [[käytävähauta]] Meathin kreivikunnassa Boyne-joen varrella, [[Brú na Bóinnen]] alueella.\n\nViisituhatta vuotta, ja kumpu seisoo yhä paikallaan. Moni linna ei pärjäisi sille.",
   "linkit": [
-   "käytävähauta"
+   "käytävähauta",
+   "Brú na Bóinnen"
   ],
   "jatkot": [
    "Mitä neoliittinen kausi tarkoittaa?",
@@ -250,8 +253,9 @@
   "kohde": "kohde:newgrange",
   "kysymys": "Mistä Newgrangen kvartsikivet on tuotu?",
   "uusi": true,
-  "vastaus": "Ai se valkoinen julkisivu. Newgrangen julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, joiden on arvioitu tulleen kaukaa, ainakin osittain Wicklowin vuorten suunnalta, ja joiden joukossa on myös tummempia kiviä. Tarkasta alkuperästä en ole aivan varma. Kivien kuljetus on ollut mittava työ, sillä monumentin rakentamiseen tarvittiin myös suuria kivilohkareita, ja monet kivet on peitetty [[megaliittitaiteella]]. Nykyinen julkisivu on rakennettu osin uudelleen 1960- ja 1970-lukujen kaivausten jälkeen, ja sen asu on herättänyt keskustelua. Valkoinen kumpu näkyy ylös asti, se on kyyhkyn mieleen.",
+  "vastaus": "Ai se valkoinen julkisivu. Newgrangen [[käytävähauta]]-kumpua kehystävä julkisivu on tehty enimmäkseen valkoisista kvartsimukulakivistä, joiden on arvioitu tulleen kaukaa, ainakin osittain Wicklowin vuorten suunnalta, ja joiden joukossa on myös tummempia kiviä. Tarkasta alkuperästä en ole aivan varma. Kivien kuljetus on ollut mittava työ, sillä monumentin rakentamiseen tarvittiin myös suuria kivilohkareita, ja monet kivet on peitetty [[megaliittitaiteella]]. Nykyinen julkisivu on rakennettu osin uudelleen 1960- ja 1970-lukujen kaivausten jälkeen, ja sen asu on herättänyt keskustelua. Valkoinen kumpu näkyy ylös asti, se on kyyhkyn mieleen.",
   "linkit": [
+   "käytävähauta",
    "megaliittitaiteella"
   ],
   "jatkot": [
@@ -703,8 +707,9 @@
   "kohde": "kohde:moherin-kalliot",
   "kysymys": "Miten Atlantin aallot muovaavat merikallioita?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Aallot ovat kärsivällistä väkeä. Aallot muovaavat merikallioita eroosion kautta: ne iskevät jatkuvasti kallion juureen, ja vesi sekä siihen sekoittuneet kivet kuluttavat sen pintaa. Heikommat kohdat, kuten kerrosten rajat ja halkeamat, kuluvat nopeimmin ja muodostavat luolia ja koloja. Kun kallion alaosa heikkenee, yläpuolinen kivi romahtaa ajan mittaan, ja kalliojyrkänne siirtyy hitaasti taaksepäin. Moherin kalliot koostuvat kerroksellisesta liuskeesta ja hiekkakivestä, jotka ovat yli 300 miljoonaa vuotta vanhoja [[hiilikaudelta]] peräisin olevia kerrostumia. Kärsivällisyys kyllä palkitaan, jos on tarpeeksi aikaa, ja mereltä sitä riittää.",
+  "vastaus": "Hetkinen ny. Aallot ovat kärsivällistä väkeä. Aallot muovaavat merikallioita eroosion kautta: ne iskevät jatkuvasti kallion juureen, ja vesi sekä siihen sekoittuneet kivet kuluttavat sen pintaa. Heikommat kohdat, kuten kerrosten rajat ja halkeamat, kuluvat nopeimmin ja muodostavat luolia ja koloja. Kun kallion alaosa heikkenee, yläpuolinen kivi romahtaa ajan mittaan, ja kalliojyrkänne siirtyy hitaasti taaksepäin. [[Moherin kalliot]] koostuvat kerroksellisesta liuskeesta ja hiekkakivestä, jotka ovat yli 300 miljoonaa vuotta vanhoja [[hiilikaudelta]] peräisin olevia kerrostumia. Kärsivällisyys kyllä palkitaan, jos on tarpeeksi aikaa, ja mereltä sitä riittää.",
   "linkit": [
+   "Moherin kalliot",
    "hiilikaudelta"
   ],
   "jatkot": [
@@ -880,9 +885,10 @@
   "kohde": "kohde:dun-aonghasa",
   "kysymys": "Mikä chevaux de frise on?",
   "uusi": false,
-  "vastaus": "Kas vaan. Chevaux de frise on ranskankielinen nimitys puolustusvyöhykkeelle, jossa maahan tai kallionrakoihin on pystytetty teräviä kivipaaluja tiheään ja ulospäin kallistuneina. [[Dún Aonghasan]] ympärillä kalkkikiven halkeamiin asetetut kivet hidastivat hyökkääjiä, koska niiden yli ei voinut juosta eikä edetä tiiviinä ryhmänä. Nimi on ranskaa ja tulee sotahistoriasta, ei linnakkeen rakentajilta; arkeologit ovat lainanneet sitä kuvaamaan tällaista kivipaaluvyöhykettä. Irlannin linnakkeen paalut ovat paljon vanhempia kuin nimi. Minä lentäisin tuon yli, mut jalkamiehillä oli hankalaa.",
+  "vastaus": "Kas vaan. Chevaux de frise on ranskankielinen nimitys puolustusvyöhykkeelle, jossa maahan tai kallionrakoihin on pystytetty teräviä kivipaaluja tiheään ja ulospäin kallistuneina. [[Dún Aonghasan]] ympärillä kalkkikiven halkeamiin asetetut kivet hidastivat hyökkääjiä, koska niiden yli ei voinut juosta eikä edetä tiiviinä ryhmänä. Nimi on ranskaa ja tulee sotahistoriasta, ei linnakkeen rakentajilta; arkeologit ovat lainanneet sitä kuvaamaan tällaista kivipaaluvyöhykettä. [[Aransaarten]] linnakkeen paalut ovat paljon vanhempia kuin nimi. Minä lentäisin tuon yli, mut jalkamiehillä oli hankalaa.",
   "linkit": [
-   "Dún Aonghasan"
+   "Dún Aonghasan",
+   "Aransaarten"
   ],
   "jatkot": [
    "Milloin Dún Aonghasa rakennettiin?",
@@ -2346,11 +2352,10 @@
   "kohde": "kohde:hahmotelma-loop-head",
   "kysymys": "Mitä nimi Ceann Léime tarkoittaa?",
   "uusi": false,
-  "vastaus": "No niin, tämä on helppo. Irlanninkielinen nimi Ceann Léime tarkoittaa hyppyniemeä: sana ceann merkitsee päätä tai niemen kärkeä ja léim hyppyä. [[Loop Head]] on [[Shannon-joen]] suun pohjoispuolella [[Clarein]] kreivikunnassa Länsi-Irlannissa oleva niemi. Englanninkielinen nimi on todennäköisesti kehittynyt irlantilaisesta nimestä, mutta sen tarkasta syntytavasta en ole varma. Hyppyniemi kuulostaa kyl kyyhkyn mielestä oikealta paikalta lähteä lentoon.",
+  "vastaus": "No niin, tämä on helppo. Irlanninkielinen nimi Ceann Léime tarkoittaa hyppyniemeä: sana ceann merkitsee päätä tai niemen kärkeä ja léim hyppyä. [[Loop Head]] on [[Shannon-joen]] suun pohjoispuolella Clarenkreivikunnassa Länsi-Irlannissa oleva niemi. Englanninkielinen nimi on todennäköisesti kehittynyt irlantilaisesta nimestä, mutta sen tarkasta syntytavasta en ole varma. Hyppyniemi kuulostaa kyl kyyhkyn mielestä oikealta paikalta lähteä lentoon.",
   "linkit": [
    "Loop Head",
-   "Shannon-joen",
-   "Clarein"
+   "Shannon-joen"
   ],
   "jatkot": [
    "Mikä merkitsee Loop Headin kärkeä?",
@@ -2493,11 +2498,10 @@
   "kohde": "kohde:hahmotelma-bunratty",
   "kysymys": "Mitä nimi Bunratty tarkoittaa?",
   "uusi": false,
-  "vastaus": "Kato, tämä on helppo. Bunratty tarkoittaa irlanniksi Ratty-joen suuta. Ratty on toinen nimi [[Owenogarney]]-joelle, joka laskee [[Shannonin]] suistoon linnan ohi. Bunratty Castle on 1400-luvun tornitalo [[Clarein]] kreivikunnassa, [[Limerickin]] ja Ennisin välisen tien varrella. Joen suu, siin on kyl kaikki tarpeellinen paikannimeksi.",
+  "vastaus": "Kato, tämä on helppo. Bunratty tarkoittaa irlanniksi Ratty-joen suuta. Ratty on toinen nimi [[Owenogarney]]-joelle, joka laskee [[Shannonin]] suistoon linnan ohi. Bunratty Castle on 1400-luvun tornitalo Clarenkreivikunnassa, [[Limerickin]] ja Ennisin välisen tien varrella. Joen suu, siin on kyl kaikki tarpeellinen paikannimeksi.",
   "linkit": [
    "Owenogarney",
    "Shannonin",
-   "Clarein",
    "Limerickin"
   ],
   "jatkot": [
@@ -2880,8 +2884,9 @@
   "kohde": "kohde:hahmotelma-loughcrew",
   "kysymys": "Kuka legendan mukaan pudotti Loughcrewin kivet esiliinastaan?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Legendan mukaan kivet pudotti jättiläisakka, jota nimi Slieve na Calliagh viittaa: Cailleach, irlantilaisen mytologian jumalallinen akka. Hän astui kukkulalta toiselle ja pudotti esiliinastaan suuria kiviä, joista [[Loughcrewin]] haudat syntyivät. Tarun taustalla ovat todellisuudessa kivikautiset hautakummut, jotka ajoitetaan noin vuoteen 3300 eaa. Akalla oli kyl painava esiliina.",
+  "vastaus": "Selvä juttu. Legendan mukaan kivet pudotti jättiläisakka, jota nimi Slieve na Calliagh viittaa: Cailleach, irlantilaisen mytologian jumalallinen akka. Hän astui kukkulalta toiselle [[Meathin]] maaseudulla ja pudotti esiliinastaan suuria kiviä, joista [[Loughcrewin]] haudat syntyivät. Tarun taustalla ovat todellisuudessa kivikautiset hautakummut, jotka ajoitetaan noin vuoteen 3300 eaa. Akalla oli kyl painava esiliina.",
   "linkit": [
+   "Meathin",
    "Loughcrewin"
   ],
   "jatkot": [
@@ -3354,9 +3359,10 @@
   "kohde": "kohde:hahmotelma-waterford",
   "kysymys": "Mitä eroa kristallilla ja tavallisella lasilla on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Kristalli on lasia, johon on lisätty metallioksideja, ja perinteisessä [[lyijykristallissa]] se on lyijyoksidia. Lisäaine tekee lasista tavallista raskaampaa ja kirkkaampaa, ja valo taittuu siinä voimakkaammin, minkä vuoksi hiottu pinta kimaltaa. Kristallilasi myös kilahtaa kirkkaasti, kun sitä napauttaa kevyesti. Tarkkoja pitoisuusrajoja en ole varma, ja ne vaihtelevat maittain. Pitkä selitys lasista, vaikka mieli teki pullaa.",
+  "vastaus": "Annas ku mietin. Kristalli on lasia, johon on lisätty metallioksideja, ja perinteisessä [[lyijykristallissa]] se on lyijyoksidia. Lisäaine tekee lasista tavallista raskaampaa ja kirkkaampaa, ja valo taittuu siinä voimakkaammin, minkä vuoksi hiottu pinta kimaltaa. Kristallilasi myös kilahtaa kirkkaasti, kun sitä napauttaa kevyesti. Irlannissa tästä tunnetaan esimerkiksi [[Waterford-kristallien]] perinne. Tarkkoja pitoisuusrajoja en ole varma, ja ne vaihtelevat maittain. Pitkä selitys lasista, vaikka mieli teki pullaa.",
   "linkit": [
-   "lyijykristallissa"
+   "lyijykristallissa",
+   "Waterford-kristallien"
   ],
   "jatkot": [
    "Miksi kristalli kuulostaa kilisevältä?",
@@ -3445,8 +3451,9 @@
   "kohde": "kohde:hahmotelma-valentia",
   "kysymys": "Miksi Atlantin kaapelin laskeminen oli niin vaikeaa?",
   "uusi": true,
-  "vastaus": "Tuota niin. Atlantin ylittäminen kaapelilla oli vaikeaa, koska matka oli pitkä, meri syvä ja kaapelin piti kestää sekä oman painonsa että aallokon. Lisäksi heikko sähköinen signaali vaimeni pitkällä matkalla. Ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli saatiin toimimaan. Höyrylaiva [[Great Eastern]] toi sen silloin paikalle, ja se oli aikansa suuria laivoja. Neljä yritystä, mut ei se kyyhkyä lannistaisi.",
+  "vastaus": "Tuota niin. Atlantin ylittäminen [[lennätinkaapelin]] avulla oli vaikeaa, koska matka oli pitkä, meri syvä ja kaapelin piti kestää sekä oman painonsa että aallokon. Lisäksi heikko sähköinen signaali vaimeni pitkällä matkalla. Ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli saatiin toimimaan. Höyrylaiva [[Great Eastern]] toi sen silloin paikalle, ja se oli aikansa suuria laivoja. Neljä yritystä, mut ei se kyyhkyä lannistaisi.",
   "linkit": [
+   "lennätinkaapelin",
    "Great Eastern"
   ],
   "jatkot": [

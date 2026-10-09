@@ -22,7 +22,7 @@ PAIKKA: Waterford | 52.26 | -7.11 | kaupunki
 
 ### 46.4
 KYSYMYS: Mitä eroa kristallilla ja tavallisella lasilla on?
-Annas ku mietin. Kristalli on lasia, johon on lisätty metallioksideja, ja perinteisessä [[lyijykristallissa]] se on lyijyoksidia. Lisäaine tekee lasista tavallista raskaampaa ja kirkkaampaa, ja valo taittuu siinä voimakkaammin, minkä vuoksi hiottu pinta kimaltaa. Kristallilasi myös kilahtaa kirkkaasti, kun sitä napauttaa kevyesti. Tarkkoja pitoisuusrajoja en ole varma, ja ne vaihtelevat maittain. Pitkä selitys lasista, vaikka mieli teki pullaa.
+Annas ku mietin. Kristalli on lasia, johon on lisätty metallioksideja, ja perinteisessä [[lyijykristallissa]] se on lyijyoksidia. Lisäaine tekee lasista tavallista raskaampaa ja kirkkaampaa, ja valo taittuu siinä voimakkaammin, minkä vuoksi hiottu pinta kimaltaa. Kristallilasi myös kilahtaa kirkkaasti, kun sitä napauttaa kevyesti. Irlannissa tästä tunnetaan esimerkiksi [[Waterford-kristallien]] perinne. Tarkkoja pitoisuusrajoja en ole varma, ja ne vaihtelevat maittain. Pitkä selitys lasista, vaikka mieli teki pullaa.
 JATKOT:
 Miksi kristalli kuulostaa kilisevältä?
 Onko lyijykristalli terveydelle haitallista?
@@ -69,7 +69,7 @@ Miten viestit lähetettiin ennen lennätintä?
 
 ### 47.5
 KYSYMYS: Miksi Atlantin kaapelin laskeminen oli niin vaikeaa?
-Tuota niin. Atlantin ylittäminen kaapelilla oli vaikeaa, koska matka oli pitkä, meri syvä ja kaapelin piti kestää sekä oman painonsa että aallokon. Lisäksi heikko sähköinen signaali vaimeni pitkällä matkalla. Ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli saatiin toimimaan. Höyrylaiva [[Great Eastern]] toi sen silloin paikalle, ja se oli aikansa suuria laivoja. Neljä yritystä, mut ei se kyyhkyä lannistaisi.
+Tuota niin. Atlantin ylittäminen [[lennätinkaapelin]] avulla oli vaikeaa, koska matka oli pitkä, meri syvä ja kaapelin piti kestää sekä oman painonsa että aallokon. Lisäksi heikko sähköinen signaali vaimeni pitkällä matkalla. Ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli saatiin toimimaan. Höyrylaiva [[Great Eastern]] toi sen silloin paikalle, ja se oli aikansa suuria laivoja. Neljä yritystä, mut ei se kyyhkyä lannistaisi.
 JATKOT:
 Millainen laiva Great Eastern oli?
 Kuinka nopeasti viesti kulki Atlantin yli?
