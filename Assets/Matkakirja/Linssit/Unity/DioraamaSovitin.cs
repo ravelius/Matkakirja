@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// HISTORIAMOOTTORI H0 (Siirtoseppä 7.10.2026; omistajan linja 08.4x: Olavinlinna, Kielletty kaupunki ja Giza seikkailuina):
         /// rakennuksen ämpärijuuri rakennus-id:stä (ennen vakio …/olavinlinna/). Id asetetaan ennen linssin avausta
-        /// (AsetaRakennus tai "poikki rakennus &lt;id&gt;"); osoitin, paketti, äänet ja levyvälimuisti seuraavat sitä. Oletus olavinlinna.
+        /// (AsetaRakennus tai "poikki rakennus <id>"); osoitin, paketti, äänet ja levyvälimuisti seuraavat sitä. Oletus olavinlinna.
         /// </summary>
         public static string RakennusId { get; private set; } = Oletusrakennus;
         public const string Oletusrakennus = "olavinlinna";
@@ -621,7 +621,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
-        /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/&lt;r&gt;/aanet/v&lt;versio&gt;/). Peili-ajossa
+        /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/<r>/aanet/v<versio>/). Peili-ajossa
         /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
         public string AaniUrl(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null
@@ -1795,6 +1795,16 @@ namespace Matkakirja.Natiivi
         /// paketin glb (tiedostonimen mukaan, esim. vouti-1500-faceit.glb) luetaan paikallisesta tiedostosta ja ASTC-kuvat sen kansion
         /// astc/<nimi>-<i>-6x6.astcm:stä. Ei junan sisältöä: ei pysyvää tilaa eikä osoittimen vaihtoa.</summary>
         static readonly Dictionary<string, string> hahmoKorvaus = new Dictionary<string, string>(StringComparer.Ordinal);
+        /// <summary>METAHUMAN (LR v46j 9.10., PT kuittasi vouti v4:n): paketin <nimi>-mh.glb korvaa <nimi>-faceit.glb:n, kun se on
+        /// paketin manifestissa (ASTC-kuvat <nimi>-mh-<i>-6x6.astcm). faceit-glb jää pakettiin (LR:n mh_vouti.py lukee asun ja
+        /// animaatiot siitä), ja vanhat paketit ilman mh-glb:tä toimivat ennallaan.</summary>
+        public static string HahmonLahde(string glbPolku)
+        {
+            const string Faceit = "-faceit.glb";
+            if (glbPolku == null || !glbPolku.EndsWith(Faceit, StringComparison.Ordinal)) return glbPolku;
+            string mh = glbPolku.Substring(0, glbPolku.Length - Faceit.Length) + "-mh.glb";
+            return DioraamaLevyvalimuisti.PaketissaPolku(mh) == true ? mh : glbPolku;
+        }
         static string Korvaus(string glbPolku) { int i = glbPolku.LastIndexOf('/'); return hahmoKorvaus.TryGetValue(i >= 0 ? glbPolku.Substring(i + 1) : glbPolku, out var p) ? p : null; }
         static IEnumerator HaeSuoraan(string url, Action<byte[]> valmis)
         {
@@ -1808,8 +1818,13 @@ namespace Matkakirja.Natiivi
             int kerta = avauskerta;
             byte[] tavut = null;
             string korvaus = Korvaus(glbPolku);
+            string lahde = korvaus == null ? HahmonLahde(glbPolku) : glbPolku;
             if (korvaus != null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} → paikallinen koe {korvaus}"); yield return HaeSuoraan("file://" + korvaus, t => tavut = t); }
-            else yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
+            else
+            {
+                if (lahde != glbPolku) o.Kirjaa($"poikki: hahmo3d {glbPolku} → MetaHuman {lahde}");
+                yield return HaeTavut(peili(paketinJuuri + lahde), t => tavut = t);
+            }
             if (tavut == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} ei latautunut (hahmo puuttuu)"); yield break; }
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(tavut, true); }
@@ -1822,7 +1837,7 @@ namespace Matkakirja.Natiivi
             if (glbPolku.EndsWith(".glb", StringComparison.OrdinalIgnoreCase) && DioraamaAstc.AstcTuettu)
                 for (int ki = 0; ki < malli.Kuvat.Count; ki++)
                 {
-                    string url = peili(paketinJuuri + glbPolku.Substring(0, glbPolku.Length - 4) + "-" + ki + "-6x6.astcm");
+                    string url = peili(paketinJuuri + lahde.Substring(0, lahde.Length - 4) + "-" + ki + "-6x6.astcm");
                     byte[] a = null;
                     if (korvaus != null)
                     {

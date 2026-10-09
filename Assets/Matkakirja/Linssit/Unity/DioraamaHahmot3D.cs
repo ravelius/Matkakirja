@@ -1057,11 +1057,13 @@ namespace Matkakirja.Natiivi
             // SKIN (omistaja 20.1x "kuin moon walkia"): glTF-mallin kasvot ovat +Z (Linnanrakentajan mittaus: varvas
             // (0, 0, +0,16), tukijalka liukuu −Z:aan), ja DioraamaGlb:n z-peilaus kääntää ne Unityssä −Z:ksi. LookRotation
             // vie paikallisen +Z:n kasvosuuntaan, joten skinnatulle hahmolle käytetään vastavektoria. Nivelhahmot ennallaan.
-            if (e.Sekoitin != null) kasvot = -kasvot;
+            // KATSE ENNEN VASTAVEKTORIA (Siirtoseppä 9.10., MetaHuman-vouti v4: puolilähikuva jäi voudin selän taakse, kappalainen puhui
+            // selin voutiin): Katse kääntää KASVOJA kuulijaan ja kameraan päin; vastavektorille ajettuna se käänsi selän.
             Vector3 paikka = DioraamaNayttamo.UnityPiste(paikkaKanoninen);
             paikka.y += (float)juuriNousuM;
             e.Juuri.transform.position = paikka;
             if (e.Hahmo.Reitti == null && e.Sekoitin != null) kasvot = Katse(e, paikka, kasvot);
+            if (e.Sekoitin != null) kasvot = -kasvot;
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
             if (PuhujanTila != null && e.TilaId == PuhujanTila && e.Juuri != null)
             {
