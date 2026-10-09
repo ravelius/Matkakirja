@@ -10,6 +10,8 @@
 //    väistö kertojan alla) × mikserin Kerroin(ryhmä, tunnus).
 // KAUPUNKIÄÄNET v1 (juna 173; Ydin PalloKaupunkiAanet): toinen manifesti aanet/pallo-kaupunki-v1/manifest.json samalla tavalla
 //  (oma haku, oma 404-lokirivi; tunnukset eivät mene päällekkäin v2:n kanssa, joten Klippi ja Kerroin palvelevat molempia).
+// SOUNDLY-ERÄ 1 (juna 173; Ydin PalloSoundlyAanet): kolmas manifesti aanet/pallo-soundly-v1; v2:n kanssa päällekkäiset tunnukset
+//  (laivan-torvi-01…03) sisäisellä nimellä soundly-<tunnus>.
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -37,6 +39,8 @@ namespace Matkakirja.Natiivi
                 Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloElavaAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
             new Lahde { Nimi = "kaupunkiäänet v1", Osoite = PalloKaupunkiAanet.ManifestiOsoite, Tunnukset = PalloKaupunkiAanet.Tunnukset,
                 Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloKaupunkiAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
+            new Lahde { Nimi = "Soundly-erä 1", Osoite = PalloSoundlyAanet.ManifestiOsoite, Tunnukset = PalloSoundlyAanet.Tunnukset,
+                Lue = j => { var d = new Dictionary<string, string>(); foreach (var a in PalloSoundlyAanet.Lue(j).Aanet.Values) d[a.Tunnus] = a.Osoite; return d; } },
         };
 
         /// <summary>Diagnoosi: manifestien tila (opas kaupunkiaanet tila).</summary>
@@ -56,6 +60,7 @@ namespace Matkakirja.Natiivi
             rekisteroity = true;
             foreach (var m in PalloElavaAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
             foreach (var m in PalloKaupunkiAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
+            foreach (var m in PalloSoundlyAanet.Mikseri) Aanimikseri.Yhteinen.Rekisteroi("pallo", m.Ryhma, m.Id, m.Nimi, m.Klipit);
         }
 
         /// <summary>Mikserin kerroin tunnukselle (ryhmän taso nykyisessä kontekstissa × äänen oma kerroin).</summary>
@@ -63,8 +68,12 @@ namespace Matkakirja.Natiivi
         {
             var (id, ryhma) = PalloElavaAanet.MikseriAani(tunnus);
             if (id == null) (id, ryhma) = PalloKaupunkiAanet.MikseriAani(tunnus);
+            if (id == null) (id, ryhma) = PalloSoundlyAanet.MikseriAani(tunnus);
             return id != null ? Aanimikseri.Yhteinen.Kerroin(ryhma, id) : 0f;
         }
+
+        /// <summary>Onko klippi jo ladattu (ei käynnistä hakua).</summary>
+        public static bool Ladattu(string tunnus) => tunnus != null && klipit.ContainsKey(tunnus);
 
         /// <summary>Ladattu klippi tai null (käynnistää manifestin haun; puuttuva = null pysyvästi).</summary>
         public static AudioClip Klippi(string tunnus)
