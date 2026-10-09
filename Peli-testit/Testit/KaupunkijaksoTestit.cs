@@ -101,6 +101,39 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi"), "katko hitaan aikana ei tee mitään");
         }
 
+        [Testi] static void IntroLinssinPidonOhi()
+        {
+            var s = Uusi();
+            s.Paikka("lontoo", "kaupunki");
+            s.LinssiPito(true, 200);
+            Oleta.Sama(null, Pohja(s), "linssi auki: pohja pidossa");
+            s.JaksonIntroAlusta("lontoo");
+            Oleta.Sama(null, Pohja(s), "Lontoolla ei jaksoa → pito pysyy");
+            s.JaksonIntroAlusta("pariisi");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "intro: nopea alusta pidon ohi: " + Pohja(s));
+            Oleta.Sama("pariisi:nopea", s.Jakso);
+            s.Hiljennys("lehti", true); s.Hiljennys("lehti", false);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "tilamuutos ei katkaise introa: " + Pohja(s));
+            s.JaksonIntroKatko(2000);
+            Oleta.Sama(null, Pohja(s), "31,0 s: katko");
+            s.JaksonIntroHidas();
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi") && !Soi(s, "musa-kaupunki-pariisi-nopea"), "32,0 s: hidas pidon ohi: " + Pohja(s));
+            s.PohjaLoppui();
+            Oleta.Sama(null, Pohja(s), "hitaan jälkeen takaisin pitoon (ei taustaa)");
+            Oleta.Tosi(s.Pidossa, "pito voimassa");
+            s.LinssiPito(false);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-lontoo"), "linssi kiinni: paikan musiikki: " + Pohja(s));
+        }
+
+        [Testi] static void IntroIlmanPitoaEiTeeMitaan()
+        {
+            var s = Uusi();
+            s.Paikka("lontoo", "kaupunki");
+            s.JaksonIntroAlusta("pariisi");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-lontoo"), "ilman linssipitoa Paikka hoitaa jakson: " + Pohja(s));
+            Oleta.Sama(null, s.Jakso);
+        }
+
         [Testi] static void MuutKaupungitJaWebTilaEnnallaan()
         {
             var s = Uusi();

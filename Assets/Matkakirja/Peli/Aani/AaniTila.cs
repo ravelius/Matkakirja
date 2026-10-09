@@ -138,6 +138,8 @@ namespace Matkakirja.Peli
         // KAUPUNKIJAKSO (AaniTaulut.Jaksot): vaihe 0 nopea (kerran), 1 tauko, 2 hidas (kerran), 3 tausta (silmukka).
         string jaksoKaupunki;
         int jaksoVaihe;
+        /// <summary>Kaupunki-intro soittaa jakson nopean ja hitaan linssipidon ohi (JaksonIntroAlusta); hitaan loppu palauttaa pidon.</summary>
+        bool introPito;
         /// <summary>Kasvaa jokaisella jakson tauolla; soitin ajastaa JaksonTaukoMs:n ja kutsuu JaksonTaukoOhi(nro).</summary>
         public int JaksonTaukoNro { get; private set; }
         public int JaksonTaukoMs { get; private set; }
@@ -183,7 +185,7 @@ namespace Matkakirja.Peli
         /// </summary>
         public void Paikka(string paikka, string tyyppi) => Tee(() =>
         {
-            if (paikka != this.paikka) { soinutPolku = null; jaksoKaupunki = null; jaksoVaihe = 0; } // uusi laukaisu: musiikki (ja jakso) alusta
+            if (paikka != this.paikka) { soinutPolku = null; jaksoKaupunki = null; jaksoVaihe = 0; introPito = false; } // uusi laukaisu: musiikki (ja jakso) alusta
             this.paikka = paikka;
             paikanTyyppi = paikka == null ? null : tyyppi;
             SoitaPaikka();
@@ -281,6 +283,7 @@ namespace Matkakirja.Peli
             else
             {
                 pito = false;
+                introPito = false;
                 Palauta(AaniVakiot.LinssinHiljennys);
                 SoitaPaikka();
             }
@@ -458,8 +461,9 @@ namespace Matkakirja.Peli
                 Vapauta(s);
                 var j = t.Jaksot[jaksoKaupunki];
                 if (jaksoVaihe == 0 && j.TaukoMs > 0) { jaksoVaihe = 1; JaksonTaukoMs = j.TaukoMs; JaksonTaukoNro++; return; }
+                if (jaksoVaihe == 2) introPito = false; // intro ohi: tausta ei soi linssipidossa
                 jaksoVaihe = jaksoVaihe == 0 ? 2 : 3;
-                KaynnistaPohja(musiikinPaikka, musiikinMaa);
+                JatkaJaksoa();
                 return;
             }
             soinutPolku = s.Polku;
@@ -474,7 +478,7 @@ namespace Matkakirja.Peli
         {
             if (nro != JaksonTaukoNro || jaksoKaupunki == null || jaksoVaihe != 1) return;
             jaksoVaihe = 2;
-            KaynnistaPohja(musiikinPaikka, musiikinMaa);
+            JatkaJaksoa();
         });
 
         /// <summary>
@@ -493,8 +497,34 @@ namespace Matkakirja.Peli
         {
             if (jaksoKaupunki == null || jaksoVaihe != 1) return;
             jaksoVaihe = 2;
-            KaynnistaPohja(musiikinPaikka, musiikinMaa);
+            JatkaJaksoa();
         });
+
+        /// <summary>
+        /// KAUPUNKI-INTRO LINSSIN AUKI (LS1 9.10.: pallon nykyintro avautuu opas-linssissä, jolloin pohja on linssipidossa): jakson
+        /// nopea alkaa heti alusta pidon ohi täysillä, katko ja hidas kuten JaksonIntroKatko/JaksonIntroHidas, ja hitaan loppu
+        /// palauttaa pohjan pitoon (tausta ei soi). Ilman pitoa ei tee mitään (Paikka käynnistää jakson). Linssin sulku tai
+        /// paikan vaihto lopettaa ohituksen.
+        /// </summary>
+        public void JaksonIntroAlusta(string kaupunki) => Tee(() =>
+        {
+            if (!pito || kaupunki == null || !Aanimaisema || !Musiikki || !t.Jaksot.ContainsKey(kaupunki)) return;
+            introPito = true;
+            musiikinPaikka = kaupunki;
+            musiikinMaa = t.Maa(kaupunki);
+            jaksoKaupunki = kaupunki;
+            jaksoVaihe = 0;
+            JatkaJaksoa();
+        });
+
+        /// <summary>Jakson seuraava vaihe: intron aikana suoraan jaksosta (pito ja tilaraidat ohi), muuten pohjan valinnan kautta.</summary>
+        void JatkaJaksoa()
+        {
+            if (introPito && jaksoKaupunki != null && t.Jaksot.TryGetValue(jaksoKaupunki, out var j))
+                SoitaJakso(j, Musiikkivalitsin.Valitse(valitsin.Ketju(null, jaksoKaupunki, t.Maa(jaksoKaupunki)), puuttuvat));
+            else
+                KaynnistaPohja(musiikinPaikka, musiikinMaa);
+        }
 
         /// <summary>Jakson nopean kappaleen polku kaupungille (soittimen intro-ajastus tunnistaa sen), tai null.</summary>
         public string JaksonNopea(string kaupunki) =>
@@ -617,7 +647,7 @@ namespace Matkakirja.Peli
         // --- tasot ----------------------------------------------------------------
 
         double PohjaTaso(double kerroin) =>
-            AaniVakiot.MusiikinPerustaso * kerroin * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1);
+            AaniVakiot.MusiikinPerustaso * (introPito ? 1 : kerroin) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1);
 
         double VisaTaso(double kerroin) =>
             Math.Min(1, AaniVakiot.MusiikinPerustaso * AaniVakiot.VisanKerroin * visanVoima * kerroin * MusiikinKerroin);
@@ -688,13 +718,14 @@ namespace Matkakirja.Peli
         void MusiikkitilaMuuttui()
         {
             if (Aanimaisema) KaynnistaPohja(musiikinPaikka, musiikinMaa);
-            if (pito) LopetaPohja();
+            if (pito && !introPito) LopetaPohja();
         }
 
         // --- pohjaraita -----------------------------------------------------------
 
         void KaynnistaPohja(string cityId, string maa)
         {
+            if (introPito) { if (Aanimaisema && Musiikki) return; introPito = false; } // intro omistaa pohjan (JaksonIntroAlusta)
             musiikinPaikka = cityId;
             musiikinMaa = maa;
             if (!Aanimaisema || !Musiikki || pito) { LopetaPohja(); return; }
