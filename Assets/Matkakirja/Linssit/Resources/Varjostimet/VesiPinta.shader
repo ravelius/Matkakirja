@@ -132,9 +132,11 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float a01 = frac(sin(dot(i + float2(0, 1), float2(127.1, 311.7))) * 43758.5453), a11 = frac(sin(dot(i + float2(1, 1), float2(127.1, 311.7))) * 43758.5453);
                 float n = lerp(lerp(a00, a10, f.x), lerp(a01, a11, f.x), f.y);
                 float et = length(v.w - _WorldSpaceCameraPos) * m;
-                float alfa = _IlmSaa.z * 0.45 * (0.5 + 0.5 * n) * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
-                // Sumun väri: auringon läpäisy (lämmin aamuvalo) + taivas, sävytettynä kuten taivas.
-                float3 c = IlmSavytys((IlmLapaisy(_IlmParam.x, _IlmAurinko.y) * 0.25 + IlmTaivas(float3(0, 1, 0))) * _IlmParam.y);
+                float alfa = _IlmSaa.z * 0.6 * (0.5 + 0.5 * n) * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
+                // Sumun väri (simu 9.10.: liian tumma tummalla vedellä): sumu sirottaa matalaa aurinkoa, joten valo tulee auringon
+                // puoleiselta taivaanrannalta ja suoraan auringosta (lämmin), vähän lakitaivaalta; sävytettynä kuten taivas.
+                float3 sh = normalize(float3(_IlmAurinko.x, 0.06, _IlmAurinko.z));
+                float3 c = IlmSavytys((IlmTaivas(sh) * 1.4 + IlmTaivas(float3(0, 1, 0)) * 0.6 + IlmLapaisy(_IlmParam.x, max(0.02, _IlmAurinko.y)) * 0.5) * _IlmParam.y);
                 return half4(MixFog((half3)c, v.sumu), alfa);
             }
             ENDHLSL
