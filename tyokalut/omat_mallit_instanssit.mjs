@@ -51,10 +51,42 @@ for (const mesh of root.listMeshes()) {
   kayttajat.forEach(n => { n.setMesh(null); if (!n.listChildren().length) n.dispose(); });   // tyhjät puusolmut pois
   mesh.dispose();
 }
+// MATERIAALIT (PT 10.10. 01.0x vientiportti): Cesium luo tekstuurin primitiiviä kohden, joten sama teksturoitu materiaali usealla
+// primitiivillä monistaa kuvan GPU:lla (KL v6j:n 4096²-atlas 7 primitiivillä). Yhdistetään samat materiaali + attribuuttiasettelu
+// koko näkymästä yhdeksi primitiiviksi (maailmamatriisi leivottu). Erilliset solmut (PIDA, esim. Riddarholmenin spiira) jäävät ennalleen.
+const PIDA = new Set((process.env.OMAT_PIDA_SOLMUT || 'spiira').split(','));
+const avain = p => [p.getMaterial() ? root.listMaterials().indexOf(p.getMaterial()) : -1, p.getMode(), !!p.getIndices(),
+  ...p.listSemantics().sort().map(s_ => `${s_}:${p.getAttribute(s_).getType()}:${p.getAttribute(s_).getComponentType()}:${p.getAttribute(s_).getNormalized()}`)].join('|');
+const ryhmat = new Map();
+for (const n of root.listNodes()) {
+  const m = n.getMesh(); if (!m || PIDA.has(n.getName()) || n.getSkin()) continue;
+  for (const p of m.listPrimitives()) {
+    if (!teksturoitu(p.getMaterial()) || p.listTargets().length) continue;
+    const k = avain(p); if (!ryhmat.has(k)) ryhmat.set(k, []); ryhmat.get(k).push([n, p]);
+  }
+}
+let materiaalit = 0;
+for (const [, jasenet] of ryhmat) {
+  if (jasenet.length <= 1) continue;
+  materiaalit++;
+  const kopiot = jasenet.map(([n, p]) => {
+    const c = p.clone();
+    for (const sem of c.listSemantics()) c.setAttribute(sem, c.getAttribute(sem).clone());
+    if (c.getIndices()) c.setIndices(c.getIndices().clone());
+    transformPrimitive(c, n.getWorldMatrix()); return c;
+  });
+  const yhdessa = joinPrimitives(kopiot); kopiot.forEach(c => c.dispose());
+  const nimi = jasenet[0][1].getMaterial().getName() || 'materiaali';
+  scene.addChild(doc.createNode(nimi).setMesh(doc.createMesh(nimi).addPrimitive(yhdessa)));
+  for (const [n, p] of jasenet) {
+    const m = n.getMesh(); m.removePrimitive(p); p.dispose();
+    if (!m.listPrimitives().length) { n.setMesh(null); if (!n.listChildren().length) n.dispose(); if (!m.listParents().some(x => x instanceof Node)) m.dispose(); }
+  }
+}
 await doc.transform(prune({ propertyTypes: ['node', 'mesh', 'primitive', 'accessor'], keepLeaves: false, keepAttributes: true }));
 const solmut1 = root.listNodes().filter(n => n.getMesh()).length, prim1 = root.listNodes().reduce((s, n) => s + (n.getMesh()?.listPrimitives().length || 0), 0);
 const rajat1 = getBounds(scene), kolmiot1 = kolmiot();
 const ero = Math.max(...[0, 1, 2].flatMap(i => [Math.abs(rajat0.min[i] - rajat1.min[i]), Math.abs(rajat0.max[i] - rajat1.max[i])]));
 if (ero > 0.01 || kolmiot0 !== kolmiot1) { console.error(`VIRHE ${sisaan}: rajaero ${ero.toFixed(3)} m, kolmiot ${kolmiot0} → ${kolmiot1}`); process.exit(1); }
 await io.write(ulos, doc);
-console.log(`INSTANSSIT ${path.basename(path.dirname(sisaan))}/${path.basename(sisaan)} meshit_jaettu=${jaetut} solmut ${solmut0}→${solmut1} primitiivit ${prim0}→${prim1} kolmiot ${kolmiot1} rajaero ${ero.toFixed(4)} m`);
+console.log(`INSTANSSIT ${path.basename(path.dirname(sisaan))}/${path.basename(sisaan)} meshit_jaettu=${jaetut} materiaalit_yhdistetty=${materiaalit} solmut ${solmut0}→${solmut1} primitiivit ${prim0}→${prim1} kolmiot ${kolmiot1} rajaero ${ero.toFixed(4)} m`);

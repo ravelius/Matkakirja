@@ -16,6 +16,7 @@ Työkalut: gltf-transform (npm @gltf-transform/cli 4.5) ja toktx (KTX-Software 4
 (oletus T7:n linssiseppa2-tyokalut). Muut tiedostot (tileset.json, mallit.json, helma.glb jos ei tekstuureja) kopioidaan sellaisinaan.
 Lopuksi taulukko: tiedostokoko ja GPU-arvio (tekstuurit, mipit mukana) ennen/jälkeen kohteittain, ja automaattinen tarkistus.
 Pelkkä tarkistus: omat_mallit_ktx2.py --tarkista <lähde> <ulos> (paluuarvo 1, jos virheitä).
+Vientiportti: omat_mallit_ktx2.py --portti <paketti> (teksturoitu mesh tai materiaali vain yhdessä solmussa/primitiivissä; testit omat_mallit_portti_testi.py).
 Vain puusolmut yhdeksi (JPEG-paketit, vanhat apit): omat_mallit_ktx2.py --instanssit <lähde> <ulos>; KTX2-muunnos tekee sen aina ensin.
 """
 import argparse, io, json, os, shutil, struct, subprocess, sys, tempfile
@@ -94,8 +95,8 @@ def instanssit(sisaan, ulos):
         if 'mesh' in x: k[x['mesh']] = k.get(x['mesh'], 0) + 1
     tekst = lambda mi: mi is not None and (any(t in j['materials'][mi].get('pbrMetallicRoughness', {}) for t in ('baseColorTexture', 'metallicRoughnessTexture'))
                                            or any(t in j['materials'][mi] for t in ('normalTexture', 'occlusionTexture', 'emissiveTexture')))
-    if not any(v > 1 and any(tekst(p_.get('material')) for p_ in j['meshes'][m]['primitives']) for m, v in k.items()):
-        shutil.copyfile(sisaan, ulos); return None   # ei jaettuja teksturoituja meshejä (Concorden valaisimet ilman tekstuuria) → tavu tavulta
+    if not portti_glb(j)[0]:
+        shutil.copyfile(sisaan, ulos); return None   # portti läpi (ei instanssi- eikä materiaaliansaa) → tavu tavulta
     nm = os.path.join(os.path.dirname(os.path.dirname(GT)))
     r = subprocess.run(['node', INSTANSSIT, sisaan, ulos], env=dict(os.environ, GLTF_TRANSFORM_NM=nm), capture_output=True, text=True)
     if r.returncode: raise SystemExit(f'instanssit epäonnistui {sisaan}:\n{r.stdout}\n{r.stderr[-2000:]}')
@@ -135,6 +136,44 @@ def muunna(sisaan, ulos, a):
         shutil.copyfile(nyt, ulos)
 
 
+PIDA_SOLMUT = {'spiira'}   # tarkoituksella erilliset solmut (Riddarholmenin spiira piilotettavissa)
+
+
+def portti_glb(j, nimi='glb'):
+    """VIENTIPORTTI (PT 10.10. 01.0x): Cesium for Unity luo tekstuurin primitiiviä (solmu × primitiivi × tekstuuripaikka) kohden.
+    Hylkää: 1) teksturoitu mesh useassa solmussa (ND:n puut), 2) teksturoitu materiaali useassa primitiivissä (KL v6j:n atlas 7 ×).
+    Tiedoksi: Cesiumin tekstuuriarvio vs. glb:n kuvat (eri materiaalit voivat jakaa kuvan aiheellisesti). Palauttaa (virheet, arvio, kuvat)."""
+    virheet = []
+    paikat = lambda mi: 0 if mi is None else sum(1 for k in ('baseColorTexture', 'metallicRoughnessTexture') if k in j['materials'][mi].get('pbrMetallicRoughness', {})) + sum(1 for k in ('normalTexture', 'occlusionTexture', 'emissiveTexture') if k in j['materials'][mi])
+    kaytto, mat, arvio = {}, {}, 0
+    for x in j.get('nodes', []):
+        if 'mesh' not in x: continue
+        kaytto[x['mesh']] = kaytto.get(x['mesh'], 0) + 1
+        for p_ in j['meshes'][x['mesh']]['primitives']:
+            arvio += paikat(p_.get('material'))
+            if paikat(p_.get('material')) and x.get('name') not in PIDA_SOLMUT: mat[p_['material']] = mat.get(p_['material'], 0) + 1
+    for mi_, k_ in kaytto.items():
+        if k_ > 1 and any(paikat(p_.get('material')) for p_ in j['meshes'][mi_]['primitives']):
+            virheet.append(f'{nimi}: teksturoitu mesh {j["meshes"][mi_].get("name")} {k_} solmussa')
+    for mi_, k_ in mat.items():
+        if k_ > 1 and not any(kaytto.get(m_, 0) > 1 for m_, mm in enumerate(j['meshes']) for p_ in mm['primitives'] if p_.get('material') == mi_):
+            virheet.append(f'{nimi}: teksturoitu materiaali {j["materials"][mi_].get("name")} {k_} primitiivissä')
+    return virheet, arvio, len(j.get('images', []))
+
+
+def portti(kansio):
+    """Koko paketti (kansion kaikki glb:t). Paluuarvo: virherivit; tulostaa myös tekstuuriarvion kohteittain."""
+    virheet = []
+    for juuri, _, tiedostot in sorted(os.walk(kansio)):
+        for n in sorted(tiedostot):
+            if not n.endswith('.glb'): continue
+            nimi = os.path.relpath(os.path.join(juuri, n), kansio); j, _ = lue_glb(os.path.join(juuri, n))
+            v, arvio, kuvat = portti_glb(j, nimi); virheet += v
+            if arvio > kuvat: print(f'  tiedoksi {nimi}: Cesiumin tekstuuriarvio {arvio} > {kuvat} kuvaa (eri materiaalit jakavat kuvia)')
+    print(f'PORTTI {kansio}: {len(virheet)} virhettä'); [print('  ' + v) for v in virheet[:40]]
+    return virheet
+
+
 def tarkista(lahde, ulos, ktx2=True):
     """Automaattinen todennus (ei simua): jokainen kuva KTX2 + KHR_texture_basisu pakollisena, täysi mip-ketju, sivut 4:llä jaollisia,
     geometria sama kuin lähteessä (kolmiot ja POSITION-rajat), glTF-validaattori 0 virhettä. Palauttaa virherivit."""
@@ -144,16 +183,7 @@ def tarkista(lahde, ulos, ktx2=True):
             if not n.endswith('.glb'): continue
             u = os.path.join(juuri, n); s = os.path.join(lahde, os.path.relpath(u, ulos)); nimi = os.path.relpath(u, ulos); n_glb += 1
             j, B = lue_glb(u); js, _ = lue_glb(s)
-            # INSTANSSIANSA (Natiiviseppä 10.10.: ND 4 puumeshiä × 23 solmua → Cesium 103 tekstuuria 12 kuvasta, 557 Mt): teksturoitu mesh
-            # vain yhdessä solmussa, ja Cesiumin tekstuuriarvio (solmu × primitiivi × tekstuuripaikat) enintään 2 × kuvat + 8
-            kaytto = {}
-            for x in j.get('nodes', []):
-                if 'mesh' in x: kaytto[x['mesh']] = kaytto.get(x['mesh'], 0) + 1
-            paikat = lambda mi: 0 if mi is None else sum(1 for k in ('baseColorTexture', 'metallicRoughnessTexture') if k in j['materials'][mi].get('pbrMetallicRoughness', {})) + sum(1 for k in ('normalTexture', 'occlusionTexture', 'emissiveTexture') if k in j['materials'][mi])
-            for mi_, k_ in kaytto.items():
-                if k_ > 1 and any(paikat(p_.get('material')) for p_ in j['meshes'][mi_]['primitives']): virheet.append(f'{nimi}: teksturoitu mesh {j["meshes"][mi_].get("name")} {k_} solmussa (omat_mallit_ktx2.py --instanssit)')
-            arvio = sum(paikat(p_.get('material')) for x in j.get('nodes', []) if 'mesh' in x for p_ in j['meshes'][x['mesh']]['primitives'])
-            if arvio > 2 * len(j.get('images', [])) + 8: virheet.append(f'{nimi}: Cesiumin tekstuuriarvio {arvio} > 2 × {len(j.get("images", []))} kuvaa + 8')
+            virheet += portti_glb(j, nimi)[0]   # instanssi- ja materiaaliansa (vientiportti)
             if not ktx2: pass
             elif j.get('images') and 'KHR_texture_basisu' not in (j.get('extensionsRequired') or []): virheet.append(f'{nimi}: KHR_texture_basisu ei pakollinen')
             for t in (j.get('textures', []) if ktx2 else []):
@@ -183,6 +213,7 @@ def tarkista(lahde, ulos, ktx2=True):
 
 
 def main():
+    if len(sys.argv) == 3 and sys.argv[1] == '--portti': sys.exit(1 if portti(sys.argv[2]) else 0)   # vie-paketti.sh: omat-mallit-paketit
     if len(sys.argv) == 4 and sys.argv[1] == '--tarkista': sys.exit(1 if tarkista(sys.argv[2], sys.argv[3]) else 0)
     if len(sys.argv) == 4 and sys.argv[1] == '--instanssit':   # vain puusolmujen yhdistys (formaatti ennallaan, käy vanhoille apeille)
         lahde, ulos = sys.argv[2], sys.argv[3]
