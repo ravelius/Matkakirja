@@ -2263,6 +2263,7 @@ namespace Matkakirja.Natiivi
                         OpasSovitin.TestiVapaa(vvx, vvy, vox, voy, (float)vs);
                     else if (osat.Length > 1 && osat[1] == "vapaa") Kirjaa("opas " + (OpasSovitin.VapaanTila ?? "vapaa: ei vapaassa tilassa"));
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
+                    else if (osat.Length > 1 && osat[1] == "tekstuurit") Kirjaa("opas: " + CesiumKaupunki.Tekstuurit(osat.Length > 2 && int.TryParse(osat[2], out var tn2) ? tn2 : 20));
                     // "opas vaihda <lat> <lon> <nimi>": kaupungin vaihto kuten valikosta (OpasSovitin.VaihdaKaupunki; äänimaiseman todennus 7.10.).
                     else if (osat.Length > 4 && osat[1] == "vaihda" && LukuOk(osat[2], out double vla) && LukuOk(osat[3], out double vlo))
                         Kirjaa($"opas: vaihda → {(OpasSovitin.VaihdaKaupunki(string.Join(" ", osat.Skip(4)), vla, vlo) ? "ok" : "ei otettu")}");
