@@ -97,18 +97,44 @@ namespace Matkakirja.Natiivi
             if (nakyy)
             {
                 foreach (var r in piilotetut) if (r != null) r.enabled = true;
-                foreach (var l in sammutetut) if (l != null) l.enabled = true;
+                // Valot syttyvät 1,5 s:ssa (arvio 4, PT: valmiin linnan valot ilmestyivät kerralla); lepattavat valot asettavat oman
+                // voimakkuutensa itse, ja häivytys koskee vain tasaisia valoja.
+                ValotLoppuun();
+                foreach (var l in sammutetut) if (l != null) { syttyvat.Add((l, l.intensity)); l.intensity = 0f; l.enabled = true; }
                 piilotetut.Clear(); sammutetut.Clear();
+                if (syttyvat.Count > 0) syttyminen = StartCoroutine(Syty());
                 return;
             }
             PiilotaLinna();
+        }
+
+        readonly List<(Light L, float I)> syttyvat = new List<(Light, float)>(); Coroutine syttyminen;
+        public const float ValotSyttyvatS = 1.5f;
+
+        IEnumerator Syty()
+        {
+            for (float t = 0f; t < ValotSyttyvatS; t += Time.deltaTime)
+            {
+                float u = t / ValotSyttyvatS; u = u * u * (3f - 2f * u);
+                foreach (var (l, i) in syttyvat) if (l != null) l.intensity = i * u;
+                yield return null;
+            }
+            syttyminen = null; ValotLoppuun();
+        }
+
+        /// <summary>Syttyvät valot täyteen heti (häivytys valmis, katkaistu tai historia päättyy).</summary>
+        void ValotLoppuun()
+        {
+            if (syttyminen != null) { StopCoroutine(syttyminen); syttyminen = null; }
+            foreach (var (l, i) in syttyvat) if (l != null) l.intensity = i;
+            syttyvat.Clear();
         }
 
         /// <summary>Linnan renderöijät ja valot piiloon (ympäristö, vaihemallit ja vesi jäävät): kaikki dioraaman kerroksen renderöijät
         /// koko näkymässä (myös seikkailun juuret näyttämön ulkopuolella). Ajetaan joka ruutu linnan ollessa piilossa (Update jälkeen):
         /// lykätyt kävelyosat, SeikkailuEsineiden huonelataus ja kynttilät kytkivät renderöijiä takaisin, ja ne näkyivät valopisteinä
         /// tyhjän saaren yllä (arvio 2 ja 3 9.10., t = 0–37).</summary>
-        void PiilotaLinna()
+        void PiilotaLinna(bool leikattavatNakyviin = false)
         {
             var n = FindAnyObjectByType<DioraamaNayttamo>(); if (n == null) return;
             // Piiloon: näyttämön lapset paitsi ympäristö, vaihemallit ja vesi; näyttämön ulkopuolelta vain seikkailun juuret ("Seikkailu …").
@@ -124,7 +150,10 @@ namespace Matkakirja.Natiivi
                 return seikkailu;
             }
             foreach (var r in FindObjectsByType<Renderer>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+            {
+                if (leikattavatNakyviin && Leikattava(r)) { if (!r.enabled && piilotetut.Remove(r)) r.enabled = true; continue; }   // rakentuva kuori
                 if (r.enabled && Piiloon(r.transform)) { r.enabled = false; piilotetut.Add(r); }
+            }
             foreach (var l in FindObjectsByType<Light>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
                 if (l.enabled && l.type != LightType.Directional && Piiloon(l.transform)) { l.enabled = false; sammutetut.Add(l); }
         }
@@ -140,12 +169,48 @@ namespace Matkakirja.Natiivi
                 for (var t = r.transform; t != null && t != n.transform; t = t.parent)
                     if (t.name.StartsWith("Tila:kavely:", StringComparison.Ordinal))
                     {
-                        if (t.name != "Tila:kavely:ranta-1499") { r.enabled = false; kavelyPiilossa.Add(r); }   // kieli: ei (tekninen)
+                        if (Array.IndexOf(HistorianKavelyosat, t.name) < 0) { r.enabled = false; kavelyPiilossa.Add(r); }
+                        else if (t.name == HistorianKavelyosat[0] && tasaisetRannat.Add(r)) TasainenRanta(r);
                         break;
                     }
             }
         }
         readonly HashSet<Renderer> kavelyPiilossa = new HashSet<Renderer>();
+
+        // Arvio 6: ranta-1499:n leivotussa valoatlaksessa (albedo × valo) on mustia alueita ja mustaa reunatäyttöä pienten UV-saarten välissä;
+        // kaukaa (mipit) täyttö näkyi lounaispuolella mustina aukkoina. Historian ajaksi tasainen kalliosävy (atlaksen keskiarvo), palautus lopussa.
+        readonly HashSet<Renderer> tasaisetRannat = new HashSet<Renderer>();
+        // Arvio 7: lounaispuolen musta ei ollut tyhjää (järvitaso on kuoren alla) vaan kuvaamattomia mustia tekselejä kuoressa ja
+        // porttikäytävän pimeässä valoatlaksessa, jotka myöhempien rakenteiden leikkaus paljastaa. Historian ajan maan tasolla (y < 4 m)
+        // lähes mustat tekselit kalliosävyllä (DioraamaKuori ja DioraamaLeivottu, globaali; oletus 0 = pois).
+        static readonly int IdMustaKorvaus = Shader.PropertyToID("_DioraamaMustaKorvaus");
+        // Raakakuvan sävy ennen valoa (arvio 8: valaistun värin kynnys vaalensi yön tummat pinnat). Arvio 9: historia näkyy kuoren
+        // hämäräkuvalla, jonka raaka-arvot ovat noin viidesosa päiväkuvasta, joten 0,27 näkyi valkoisena; sävy tunnelman mukaan.
+        static Vector4 MustaKorvaus => Hamara ? new Vector4(0.045f, 0.047f, 0.05f, 4f) : new Vector4(0.27f, 0.28f, 0.29f, 4f);
+        /// <summary>Kuori hämäräkuvalla (DioraamaTunnelma.Hamara; DioraamaSovitin asettaa ennen Aloita-kutsua).</summary>
+        public static bool Hamara;
+        static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
+        static void TasainenRanta(Renderer r)
+        {
+            if (rantaSavy == null) { rantaSavy = new Texture2D(1, 1, TextureFormat.RGBA32, false) { name = "Historia:rantasavy" }; rantaSavy.SetPixel(0, 0, new Color(0.42f, 0.43f, 0.45f)); rantaSavy.Apply(false, true); }
+            rantaLohko ??= new MaterialPropertyBlock();
+            r.GetPropertyBlock(rantaLohko); rantaLohko.SetTexture("_ValoAtlas", rantaSavy); r.SetPropertyBlock(rantaLohko);
+        }
+        /// <summary>Historiassa näkyvät kävelyosat (LR 9.10.): ranta-1499 (kalliotäyttö ja vesipohjat leikkausten alla) ja porttikaytava-T102
+        /// ilman sisätilaleikkaustaan (sen seinät täyttävät onton fotogrammetriakuoren porttikäytävän tornin juurella, arvio 4 t = 40–70).</summary>
+        static readonly string[] HistorianKavelyosat = { "Tila:kavely:ranta-1499", "Tila:kavely:porttikaytava-T102" };   // kieli: ei (tekninen)
+
+        /// <summary>Rakentuva renderöijä: vain linnan kuori (DioraamaKuori tottelee kävelyleikkauksia). Arvio 4: leivotut huoneet
+        /// (DioraamaLeivottu) näkyivät rakentumisen aikana ilman kuorta mustina laatikkoina ja tornien sisus hehkui.</summary>
+        static bool Leikattava(Renderer r)
+        {
+            var m = r.sharedMaterial; var sh = m != null ? m.shader : null; if (sh == null) return false;
+            if (sh.name.EndsWith("DioraamaKuori", StringComparison.Ordinal)) return true;
+            // Arvio 5: historian kävelyosat (ranta-1499:n täyttö ja vesipohja, porttikaytava-T102) nousevat kuoren mukana, muuten
+            // rakentumisen aikana lounaispuolella näkyi mustia aukkoja.
+            for (var t = r.transform; t != null; t = t.parent) if (Array.IndexOf(HistorianKavelyosat, t.name) >= 0) return true;
+            return false;
+        }
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
 
@@ -177,19 +242,30 @@ namespace Matkakirja.Natiivi
                 if (cam != null) cam.fieldOfView = (float)Historiajana.Fov;
                 double vuosi = h.Vuosi(t);
                 if (t >= seurLoki) { seurLoki += 5; kirjaa?.Invoke($"seikkailu: historia t={t:F1} vuosi {vuosi:F0} kamera {sij}"); }   // kuva-arkin aikaleimat
-                LinnaNakyviin(Historiajana.LinnaNakyy(vuosi));
-                if (linnaPiilossa) PiilotaLinna();   // joka ruutu: huonelataus ja kynttilät kytkevät renderöijiä takaisin (arvio 3)
+                // Kivilinna rakentuu (arvio 3): kuori nousee vedestä leikkausrajan alta, muu linna (huoneet,
+                // esineet, hahmot, liekit, valot) pysyy piilossa, kunnes linna on valmis.
+                bool linnaNakyy = h.LinnaNakyyT(t), rakentuu = linnaNakyy && h.Rakennus(t) < 1;
+                if (rakentuu) { if (!linnaPiilossa) LinnaNakyviin(false); PiilotaLinna(true); }
+                else { LinnaNakyviin(linnaNakyy); if (linnaPiilossa) PiilotaLinna(); }   // joka ruutu: huonelataus ja kynttilät (arvio 3)
                 List<KavelyLeikkaus> vl = null;
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
                     {
-                        bool nakyy = vm.Nakyy(vuosi);
+                        bool maa = vm.Malli.Vuodesta == null && h.MaaNakyy(t);   // tyhjä saari kunnes kuoren kallio on noussut (arvio 3)
+                        bool nakyy = maa || vm.Nakyy(vuosi);
                         if (vm.Go != null && vm.Go.activeSelf != nakyy) kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})");
-                        vm.Nayta(vuosi);
+                        if (maa) { if (vm.Go != null && !vm.Go.activeSelf) vm.Go.SetActive(true); } else vm.Nayta(vuosi);
                         if (nakyy && vm.Leikkaukset != null) vl = vm.Leikkaukset;
                     }
                 SeikkailuKavely.VainVuosileikkaukset = true;
+                Shader.SetGlobalVector(IdMustaKorvaus, MustaKorvaus);
                 PiilotaKavelyosat();
+                if (rakentuu)
+                {
+                    double raja = h.RakennusKorkeus(t), r = SeikkailuNousu.LinnaSade * 1.3;
+                    vl = vl != null ? new List<KavelyLeikkaus>(vl) : new List<KavelyLeikkaus>();
+                    vl.Add(new KavelyLeikkaus("rakentuminen", keski.X, (raja + Historiajana.RakennusYla) / 2, keski.Z, 2 * r, Historiajana.RakennusYla - raja, 2 * r, 0));
+                }
                 if (kasvu) SeikkailuKavely.AsetaHistoriaLeikkaukset(vl);
                 if (kasvu) SeikkailuKavely.AsetaKasvu(n => Historiajana.Kasvu(vuosi, SeikkailuKavely.HistoriaOsa(n)));
                 var (i, _) = h.Kohta(t);
@@ -208,10 +284,14 @@ namespace Matkakirja.Natiivi
             }
             Avainsana = null;
             LinnaNakyviin(true);
+            ValotLoppuun();   // historia päättyy: ei jätetä valoja himmeiksi (objekti tuhotaan)
             vaiheet?.Tuhoa(); vaiheet = null;
             SeikkailuKavely.VainVuosileikkaukset = false;
+            Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
             foreach (var r in kavelyPiilossa) if (r != null) r.enabled = true;
             kavelyPiilossa.Clear();
+            foreach (var r in tasaisetRannat) if (r != null) r.SetPropertyBlock(null);
+            tasaisetRannat.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;
             DioraamaSovitin.KameraVapaa = kameraVapaa;

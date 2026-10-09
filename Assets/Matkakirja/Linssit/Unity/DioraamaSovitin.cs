@@ -1002,6 +1002,7 @@ namespace Matkakirja.Natiivi
             // Vaihemallit (LR v45y): paketin blender-kansio kävelydatan polusta (blender/kavely/osat.json → blender/).
             string ko = rakennus?.KavelyOsat; int ki = ko != null ? ko.LastIndexOf("kavely/", StringComparison.Ordinal) : -1;
             string vaiheJuuri = ki >= 0 && kavelyKehitysJuuri == null ? paketinJuuri + ko.Substring(0, ki) : null;
+            SeikkailuHistoria.Hamara = DioraamaTunnelma.Hamara(rakennus);   // mustan korvauksen sävy kuoren hämärä- tai päiväkuvaan
             SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null,
                 () => { if (!oli) SeikkailuKavely.Leikkaukset(false); valmis?.Invoke(); }, o.Kirjaa, vaiheJuuri, peili);
         }

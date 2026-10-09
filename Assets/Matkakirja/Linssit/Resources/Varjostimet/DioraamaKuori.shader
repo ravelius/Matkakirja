@@ -53,6 +53,7 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             float4 _KuoriLahi;   // x = 1 / toistoväli m, y = voima, z = päällä
 
             half4 _DioraamaSumuVari;
+            half4 _DioraamaMustaKorvaus;   // historia (SeikkailuHistoria): rgb = kalliosävy, a = y-raja (0 = pois); kuvaamattomat mustat tekselit maan tasolla
             float4 _DioraamaSumu;
             float4 _DioraamaValo;
             float4 _DetaljiToisto, _DetaljiKeski, _DetaljiParam; // toisto m (R,G,B,A), keskikirkkaus, (voimakkuus, normaali, päällä)
@@ -181,7 +182,10 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
 
             half4 frag(Vali i) : SV_Target
             {
-                half3 vari = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb * _Kirkkaus;
+                half3 raaka = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv).rgb;
+                // Historia (arvio 7–8): kuvaamattomat mustat tekselit maan tasolla kalliosävyllä ennen valoa ja kirkkautta (ei valaistua tummaa).
+                if (_DioraamaMustaKorvaus.a > 0.5 && i.paikkaW.y < _DioraamaMustaKorvaus.a && max(raaka.r, max(raaka.g, raaka.b)) < 0.012h) raaka = _DioraamaMustaKorvaus.rgb;
+                half3 vari = raaka * _Kirkkaus;
                 vari = Detalji(vari, i.uv, i.paikkaW, i.normaaliW);
                 if (_KuoriLahi.z > 0.5)
                 {

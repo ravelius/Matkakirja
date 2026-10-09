@@ -152,6 +152,37 @@ namespace Matkakirja.Linssit.Dioraama
 
         public double VaiheenAlku(int i) => alut[i];
 
+        /// <summary>Kivilinnan rakentuminen (arvio 3 9.10.: linna ilmestyi vuonna 1477 kerralla ja puuvarustus seisoi vedessä vuonna 1476,
+        /// kun tyhjä saari oli jo piilossa): kuori nousee vedestä ylös RakennusS sekunnissa ja valmistuu kivilinnan kohtauksen alkuun.</summary>
+        public const double RakennusS = 8;   // arvio 5: 6 s ja raja 60 m näytti nousun vain ~2 s:n hyppynä
+        /// <summary>Ensimmäisen kivilinnan kohtauksen (Vuosi ≥ KivilinnaVuosi) alku: rakentuminen valmis.</summary>
+        public double RakennusValmisT
+        {
+            get { for (int i = 0; i < Vaiheet.Count; i++) if (Vaiheet[i].Vuosi >= KivilinnaVuosi) return alut[i]; return 0; }
+        }
+        /// <summary>Rakentumisen osuus 0…1 hetkellä t (smootherstep; 0 ennen alkua, 1 kivilinnan kohtauksesta alkaen).</summary>
+        public double Rakennus(double t) => Kameraliike.Smootherstep((t - (RakennusValmisT - RakennusS)) / RakennusS);
+        /// <summary>Linnan kuori näkyvissä (rakentuminen alkanut).</summary>
+        public bool LinnaNakyyT(double t) => t >= RakennusValmisT - RakennusS;
+        /// <summary>Rakentumisen leikkausraja (glTF y, m): kuori näkyy tämän alapuolella; RakennusAla (veden alla) → RakennusYla (tornien yli).</summary>
+        public const double RakennusAla = -8, RakennusYla = 38, MaanPinta = 2;   // yläraja tornien katoille (ei tyhjää nousua)
+        public double RakennusKorkeus(double t) => RakennusAla + Rakennus(t) * (RakennusYla - RakennusAla);
+        /// <summary>Maavaihemalli (ei vuodesta-kenttää, tyhjä saari) näkyy, kunnes kuoren kallio on noussut maan pinnan yli (ei
+        /// päällekkäisiä pintoja), vaikka sen vuoteen olisi aiemmin (puuvarustus seisoi vedessä vuonna 1476).</summary>
+        public bool MaaNakyy(double t) => !LinnaNakyyT(t) || RakennusKorkeus(t) < MaanPinta;
+
+        /// <summary>Historian myöhempien rakenteiden (vain-1499-listat) leikkaus vain maan yläpuolelta (arvio 5): leikkauslaatikon alareuna
+        /// nostetaan tasolle <paramref name="maa"/>, jolloin onton fotogrammetriakuoren juuri jää ehjäksi ja LR:n ranta-1499-täyttö (v46g:
+        /// rakennusten juurella −2,0) jatkuu siitä; laatikko kokonaan maan alla = ei leikkausta (puoli 0).</summary>
+        public const double LeikkausMaa = -2.0;
+        public static (double Y, double Puoli) MaanYlapuolella(double y, double puoli, double maa)
+        {
+            double ala = y - puoli, yla = y + puoli;
+            if (ala >= maa) return (y, puoli);
+            if (yla <= maa) return (maa, 0);
+            return ((maa + yla) / 2, (yla - maa) / 2);
+        }
+
         /// <summary>Vuosi hetkellä t: vaiheen vuodesta seuraavan vaiheen vuoteen (viimeinen: LoppuVuosi) lineaarisesti ankkureiden kautta.</summary>
         public double Vuosi(double t)
         {

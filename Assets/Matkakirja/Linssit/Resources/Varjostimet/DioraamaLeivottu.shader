@@ -57,6 +57,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
 
             half _DioraamaLepatus;
             half4 _DioraamaSumuVari;
+            half4 _DioraamaMustaKorvaus;   // historia (SeikkailuHistoria): rgb = kalliosävy, a = y-raja (0 = pois); kuvaamattomat mustat tekselit maan tasolla
             float4 _DioraamaSumu; // x = alku (m), y = loppu (m)
             float4 _DioraamaLiekkiPisteet[8];
             float _DioraamaLiekkiMaara;
@@ -130,7 +131,10 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 InputData inputData = (InputData)0;   // lisävalosilmukat (LIGHT_LOOP_BEGIN, Forward+)
                 inputData.positionWS = i.paikkaW;
                 inputData.normalizedScreenSpaceUV = GetNormalizedScreenSpaceUV(i.paikka);
-                half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
+                half3 raaka = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb;
+                // Historia (arvio 7–8): kuvaamattomat mustat tekselit maan tasolla kalliosävyllä ennen valoa ja kirkkautta (ei valaistua tummaa).
+                if (_DioraamaMustaKorvaus.a > 0.5 && i.paikkaW.y < _DioraamaMustaKorvaus.a && max(raaka.r, max(raaka.g, raaka.b)) < 0.012h) raaka = _DioraamaMustaKorvaus.rgb;
+                half3 vari = raaka * _Kirkkaus;
 
                 // Detalji (DioraamaDetalji.hlsl, juna 169): albedo-overlay ja kohokuvio leivotun valon päälle.
                 float3 nW = normalize(i.normaaliW);
