@@ -1004,6 +1004,10 @@ namespace Matkakirja.Editori
             // ISS-kuvan tallennus Kuviin (LS2:n MatkakirjaValokuva.mm, PHPhotoLibrary .addOnly).
             projekti.AddFrameworkToProject(kehys, "Photos.framework", false);
             projekti.SetBuildProperty(kehys, "SWIFT_VERSION", "5.0");
+            // Steam Audio -koe (Linssiseppä 9.10.2026, juna 172; PT: iOS-asetukset samaan erään): staattiset arm64-kirjastot
+            // (libphonon, libaudioplugin_phonon, libmysofa, libpffft) ilman bitcodea; libz.tbd lisää Steam Audion oma BuildProcessor.
+            foreach (var k in new[] { kehys, projekti.GetUnityMainTargetGuid() })
+                projekti.SetBuildProperty(k, "ENABLE_BITCODE", "NO");
             projekti.WriteToFile(projektiPolku);
         }
 
