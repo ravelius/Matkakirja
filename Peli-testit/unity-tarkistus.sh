@@ -124,14 +124,26 @@ done < "$ULOS/jarjestys.txt"
 # polut response-tiedostoon (välilyönnit, "Shared Scripts"). Assembly-CSharp viittaa siihen.
 FP_RSP="$ULOS/firstpass.rsp"
 : > "$FP_RSP"
-[ -d "$ASSETS/../Plugins" ] && find "$ASSETS/../Plugins" -name '*.cs' -not -path '*/Editor/*' | while IFS= read -r f; do printf '"%s"\n' "$f" >> "$FP_RSP"; done
+[ -d "$ASSETS/../Plugins" ] && find "$ASSETS/../Plugins" -name '*.cs' -not -path '*/Editor/*' -not -path '*/Plugins/SteamAudio/*' | while IFS= read -r f; do printf '"%s"\n' "$f" >> "$FP_RSP"; done
 FP_IOS=""; FP_EDI=""
+# Steam Audio (Linssiseppä 9.10.2026): oma asmdef SteamAudioUnity kuten Unityssä, STEAMAUDIO_ENABLED (asmdefin versionDefines).
+# Editorikäännös vain moduuleja vasten: UnityEditor.dll + UnityEditor.CoreModule.dll yhdessä antaa CS0433:n (AssetDatabase kahdesti).
+SA_RUNTIME="$ASSETS/../Plugins/SteamAudio/Scripts/Runtime"
+if [ -d "$SA_RUNTIME" ]; then
+  EDI_MODUULIT=""
+  for f in "$EDITORI_MODUULIT"/*.dll; do EDI_MODUULIT="$EDI_MODUULIT -r:$f"; done
+  kaanna "SteamAudioUnity (ios)" "$ULOS/steamaudio-ios.log" $YHTEISET $NETSTD $IOS -define:"$DEF_IOS;STEAMAUDIO_ENABLED" \
+    -nowarn:0618,0414,0649,0169,0162 -out:"$ULOS/SteamAudioUnity-ios.dll" $(find "$SA_RUNTIME" -name '*.cs')
+  kaanna "SteamAudioUnity (editori)" "$ULOS/steamaudio-editori.log" $YHTEISET $NETSTD $EDI_MODUULIT -define:"$DEF_EDI;STEAMAUDIO_ENABLED" \
+    -nowarn:0618,0414,0649,0169,0162 -out:"$ULOS/SteamAudioUnity-editori.dll" $(find "$SA_RUNTIME" -name '*.cs')
+  FP_IOS="-r:$ULOS/SteamAudioUnity-ios.dll"; FP_EDI="-r:$ULOS/SteamAudioUnity-editori.dll"
+fi
 if [ -s "$FP_RSP" ]; then
   kaanna "firstpass (ios)" "$ULOS/firstpass-ios.log" $YHTEISET $NETSTD $IOS -define:"$DEF_IOS" -nowarn:0618,0414,0649,0169 \
     -out:"$ULOS/Assembly-CSharp-firstpass-ios.dll" @"$FP_RSP"
   kaanna "firstpass (editori)" "$ULOS/firstpass-editori.log" $YHTEISET $NETSTD $EDI -define:"$DEF_EDI" -nowarn:0618,0414,0649,0169 \
     -out:"$ULOS/Assembly-CSharp-firstpass-editori.dll" @"$FP_RSP"
-  FP_IOS="-r:$ULOS/Assembly-CSharp-firstpass-ios.dll"; FP_EDI="-r:$ULOS/Assembly-CSharp-firstpass-editori.dll"
+  FP_IOS="$FP_IOS -r:$ULOS/Assembly-CSharp-firstpass-ios.dll"; FP_EDI="$FP_EDI -r:$ULOS/Assembly-CSharp-firstpass-editori.dll"
 fi
 
 # Assembly-CSharp viittaa kaikkiin omiin (autoReferenced).
