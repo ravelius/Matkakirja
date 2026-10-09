@@ -14,6 +14,30 @@ JATKOT:
 Mitä Notre-Damen ullakolla paloi?
 Mihin aikaan Notre-Damen keskitorni romahti?
 
+### 56.3
+KYSYMYS: Mitä uuden kukon sisään pantiin?
+Ai se. Uuden kullatun [[kukon]] sisään pantiin samat [[pyhäinjäännökset]], jotka olivat olleet vanhan kukon sisällä. Lisäksi sinne suljettiin 2 000 [[jälleenrakentajien]] nimet. Kukko seisoo [[Notre-Damen]] tornin huipulla, jossa vanha kuparinen kukko seisoi ennen paloa.
+Pieni lintu, suuri vastuu.
+JATKOT:
+Mistä materiaalista vanha kukko oli tehty?
+Mitä pyhäinjäännökset ovat?
+
+### 56.4
+KYSYMYS: Mistä Notre-Damen vanha kattotuolisto oli tehty?
+Katotaas. Notre-Damen vanha [[kattotuolisto]] oli tehty yli tuhannesta [[tammirungosta]]. Rakenne oli peräisin 1200-luvulta, joten se oli seissyt katon alla useita satoja vuosia. Se paloi ullakon tulipalossa 15. huhtikuuta 2019.
+Puuta riitti, mutta tuli oli nopeampi.
+JATKOT:
+Miksi keskiajalla rakennettiin tammesta?
+Kuinka monta vuotta Notre-Dame on ollut pystyssä?
+
+### 56.5
+KYSYMYS: Milloin Notre-Damen palo syttyi?
+Nyt muistan: Notre-Damen [[ullakko]] syttyi 15. huhtikuuta 2019. Palo eteni nopeasti, ja [[keskitorni]] romahti kello 19.50. Tornin huipulla seisonut kuparinen kukko putosi mukana ja löytyi seuraavana päivänä maasta.
+Se päivä muistetaan Pariisissa hiljaisena.
+JATKOT:
+Mikä on Notre-Damen keskitorni?
+Milloin Notre-Dame avattiin uudelleen?
+
 ### 57.1
 KYSYMYS: Miksi leivät numeroidaan ennen maistamista?
 Hetkinen ny. Leivät numeroidaan ennen maistamista, jotta raati ei tiedä, kenen leipää se arvostelee. Näin kilpailu pysyy sokkona ja arvostelu perustuu pelkästään leivän makuun ja laatuun. Raadissa istuu ammattilaisia, toimittajia ja kuusi arvottua tavallista pariisilaista, ja kaikki arvioivat [[patonkeja]] samoin ehdoin. Kilpailun voittaja saa lisäksi toimittaa [[presidentinpalatsin]] leivät seuraavan vuoden ajan.
@@ -96,7 +120,7 @@ Missä kaupunginosassa Édith Piaf syntyi?
 
 ### 59.1
 KYSYMYS: Miksi kardinaali uskoi väärennetyt kirjeet?
-Tuota niin. Huijari Jeanne de la Motte sai kardinaali de Rohanin uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.
+Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.
 Moni olisi kai uskonut.
 JATKOT:
 Mitä kardinaali de Rohanille tapahtui lopulta?

@@ -4075,6 +4075,50 @@
   ]
  },
  {
+  "kohde": "nosto:notre-damen-kukko",
+  "kysymys": "Mitä uuden kukon sisään pantiin?",
+  "uusi": false,
+  "vastaus": "Ai se. Uuden kullatun [[kukon]] sisään pantiin samat [[pyhäinjäännökset]], jotka olivat olleet vanhan kukon sisällä. Lisäksi sinne suljettiin 2 000 [[jälleenrakentajien]] nimet. Kukko seisoo [[Notre-Damen]] tornin huipulla, jossa vanha kuparinen kukko seisoi ennen paloa.\nPieni lintu, suuri vastuu.",
+  "linkit": [
+   "kukon",
+   "pyhäinjäännökset",
+   "jälleenrakentajien",
+   "Notre-Damen"
+  ],
+  "jatkot": [
+   "Mistä materiaalista vanha kukko oli tehty?",
+   "Mitä pyhäinjäännökset ovat?"
+  ]
+ },
+ {
+  "kohde": "nosto:notre-damen-kukko",
+  "kysymys": "Mistä Notre-Damen vanha kattotuolisto oli tehty?",
+  "uusi": true,
+  "vastaus": "Katotaas. Notre-Damen vanha [[kattotuolisto]] oli tehty yli tuhannesta [[tammirungosta]]. Rakenne oli peräisin 1200-luvulta, joten se oli seissyt katon alla useita satoja vuosia. Se paloi ullakon tulipalossa 15. huhtikuuta 2019.\nPuuta riitti, mutta tuli oli nopeampi.",
+  "linkit": [
+   "kattotuolisto",
+   "tammirungosta"
+  ],
+  "jatkot": [
+   "Miksi keskiajalla rakennettiin tammesta?",
+   "Kuinka monta vuotta Notre-Dame on ollut pystyssä?"
+  ]
+ },
+ {
+  "kohde": "nosto:notre-damen-kukko",
+  "kysymys": "Milloin Notre-Damen palo syttyi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Notre-Damen [[ullakko]] syttyi 15. huhtikuuta 2019. Palo eteni nopeasti, ja [[keskitorni]] romahti kello 19.50. Tornin huipulla seisonut kuparinen kukko putosi mukana ja löytyi seuraavana päivänä maasta.\nSe päivä muistetaan Pariisissa hiljaisena.",
+  "linkit": [
+   "ullakko",
+   "keskitorni"
+  ],
+  "jatkot": [
+   "Mikä on Notre-Damen keskitorni?",
+   "Milloin Notre-Dame avattiin uudelleen?"
+  ]
+ },
+ {
   "kohde": "nosto:pariisin-patonki",
   "kysymys": "Miksi leivät numeroidaan ennen maistamista?",
   "uusi": false,
@@ -4222,9 +4266,12 @@
   "kohde": "nosto:pariisin-vuosisadat",
   "kysymys": "Miksi kardinaali uskoi väärennetyt kirjeet?",
   "uusi": false,
-  "vastaus": "Tuota niin. Huijari Jeanne de la Motte sai kardinaali de Rohanin uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.\nMoni olisi kai uskonut.",
+  "vastaus": "Tuota niin. Huijari [[Jeanne de la Motte]] sai kardinaali [[de Rohanin]] uskomaan, että [[Marie Antoinette]] halusi kaulanauhan salaa ja tarvitsi välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen [[Versailles'n]] puistossa, jossa kuningatarta esitti palkattu nuori nainen. Kardinaali luuli siis saavansa kuningattaren suosion ja osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä. Kirjeet ja tapaaminen yhdessä saivat huijauksen näyttämään todelliselta.\nMoni olisi kai uskonut.",
   "linkit": [
-   "Marie Antoinette"
+   "Jeanne de la Motte",
+   "de Rohanin",
+   "Marie Antoinette",
+   "Versailles'n"
   ],
   "jatkot": [
    "Mitä kardinaali de Rohanille tapahtui lopulta?",
