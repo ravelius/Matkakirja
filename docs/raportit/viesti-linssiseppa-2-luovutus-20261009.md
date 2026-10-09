@@ -34,7 +34,7 @@ ensimmäinen käynnistys asennuksen jälkeen epäonnistuu.)
 Kuvien jälkeen: SHA:t (laivat-171, omavalo-172) Natiivisepälle, kuvat PT:lle ja LR:lle, lopuksi rivi PT:lle "valmis 172:een".
 
 ## Omat mallit (ämpäri)
-- v7 (KL v1.6 + ND v4) ämpärissä 11.02, uusin-2 → v7 junan 172 mukana (nyt v6). uusin.json → v2/mallit-giza.json (vanhat appit).
+- v7 (KL v1.6 + ND v4) ämpärissä 11.02. v8 (= v7 + ND v5 korttipuut + KL v1.7, vienti21) paketoitu 12.3x _valmiit/omat-mallit-vienti-20261009h; vienti ämpäriin pyydetty Julkaisijalta. OSOITIN uusin-2 → v8 (ei v7) junan 172 mukana, koska ND v5:n puut tarvitsevat OmaMalli-alfaleikkauksen; siihen asti v6. uusin.json → v2/mallit-giza.json (vanhat appit).
 - Putki: `proto-3d/_tyo/linssiseppa2/concorde-putki/glb/sijainnit.json` → `python3 -I tyokalut/omat_mallit_tileset.py <putki> <putki>/vientiN`
   (worktree proto-linssiseppa2-korkeus). Uusin vienti21 (ND v5 korttipuut 137 k + KL v1.7).
 - LR:n jatkolista (PT): ND puut (v5 korttipuut tehty), jokimuurin kiila, KL lämmin rosa (v1.7 tehty); emissive vain lasille (OmaMalli).
