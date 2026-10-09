@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
             var koot = new[] { 256 * 64 * 8, 96 * 64 * 96 * 8, 32 * 32 * 96 * 8, 32 * 32 * 96 * 8 };
             var tavut = new byte[nimet.Length][]; int valmiit = 0;
             // LEVYVÄLIMUISTI (Natiivisepän ehto junaan 174): versioitu polku (aerosoli-v1 muuttumaton), ladataan vain kerran per laite.
-            string kansio = System.IO.Path.Combine(Application.persistentDataPath, "ilmakeha", "aerosoli-v1", avain);
+            string kansio = System.IO.Path.Combine(Application.temporaryCachePath, "ilmakeha", "aerosoli-v1", avain);   // Caches (ei iCloud-varmuuskopiota; Natiiviseppä)
             for (int i = 0; i < nimet.Length; i++)
             {
                 int n = i;
