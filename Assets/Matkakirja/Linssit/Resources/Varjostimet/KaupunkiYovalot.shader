@@ -229,7 +229,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         float3 q3 = p + float3(v.x * s, 0.0, v.y * s);
                         ranta = max(ranta, BlackMarble(q3) * (1.0 - Vesi(q3)) / (1.0 + s / 250.0));
                     }
-                    float3 heij = _ValoVari.rgb * ranta * 0.9;
+                    float3 heij = _ValoVari.rgb * ranta * 0.45;   // v9: puolet (junan 170 kuvat: vesi tasaisen kullanruskea)
                     float3 kulta = float3(1.0, 0.74, 0.36);
                     int nm = (int)_MaamerkkiParam.x;
                     for (int m = 0; m < 8; m++)
@@ -238,8 +238,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                         float4 mm = _Maamerkit[m];
                         float2 dl = mm.xz - p.xz; float pitka = dot(dl, v);
                         if (pitka <= 0.0) continue;
-                        float sivu = dot(dl, poikki), lev = mm.w * 0.6;
-                        heij += kulta * _MaamerkkiParam.y * 0.35 * exp(-sivu * sivu / (lev * lev)) / (1.0 + pitka / 700.0);
+                        float sivu = dot(dl, poikki), lev = mm.w * 0.35;
+                        heij += kulta * _MaamerkkiParam.y * 0.15 * exp(-sivu * sivu / (lev * lev)) / (1.0 + pitka / 700.0);   // v9: himmeämpi (pystyraidat)
                     }
                     if (_KohdeP.w > 0.5)   // nykyinen kohde (Eiffel Seinellä) vahvimpana juovana
                     {
@@ -249,6 +249,9 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     }
                     lisa += heij * vesi * fresnel * valke * _VesiAlue.w;
                 }
+                // v9 etäisyyshäivytys (junan 170 kuvat 0ae25418: horisontin kaukainen maasto hehkui kullanruskeana ja Tukholman karkeiden
+                // kaukolaattojen sahalaita erottui mustaa taivasta vasten): valot täysinä 5 km:iin, häipyvät 12 km:ssä.
+                lisa *= 1.0 - saturate((distance(pw, _KaupunkiKamera.xyz) - 5000.0) / 7000.0);
                 if (_ValoDebug.x > 14.5 && _ValoDebug.x < 15.5) return Merkki(lisa + vesi);   // veden jälkeen
                 if (_ValoDebug.x > 3.5 && _ValoDebug.x < 4.5) return half4((half3)saturate(lisa * 5.0), 1.0h);
                 float3 tulos = c.rgb + lisa * _ValoParam.x * max(1.0, _ValoDebug.y);
