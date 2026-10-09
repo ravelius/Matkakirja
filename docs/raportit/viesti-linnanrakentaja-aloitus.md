@@ -8,9 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1b. **NYT (10.10. yö):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-yo.md` kokonaan. Olavinlinna v46m–v46q
-   peilissä (v46q 4c01b13e623e0be1, haara linnanrakentaja-linna-v45e); auki Kijlin/Pyhän Eerikin tornit (PT). Seuraavaksi ND:n
-   tekselitason projisoinnin korjauslista (projisoi_tekseli.py) ja lod1/2 + puut yhdeksi meshiksi.
+1b. **NYT (10.10. 03.0x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-yo.md` kokonaan ja toimi sen lopun
+   "NOLLAUS 10.10. klo 03.0x" -järjestyksessä: 1) ND sävykalibrointi + ovilaatta + glb:t LS2:lle (pelikuva PT:lle ennen klo 07),
+   2) v46q:n harjat tornin kivellä (aja_tornit.log), 3) Kijlin torni 16,5 m, 4) Pyhän Eerikin torni, 5) 1499-asu junaan 175, 6) Riddarholmen.
+   Olavinlinna uusin peili v46q 4c01b13e623e0be1, koodihaara linnanrakentaja-linna-v45e.
 2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-yo.md`** – lue myös loppuosan LISÄYKSET 20.5x–22.5x, joissa on uusin tila:
    - ND v10 on viety (muotokorjaus tehty, 244 k / 89 k / 5 k), ja uudet ohjauskuvat ovat valmiit.
    - Karttaseppä generoi v3:a. Kun se on valmis, aja `tekoaly_koko.zsh nd v3`.
