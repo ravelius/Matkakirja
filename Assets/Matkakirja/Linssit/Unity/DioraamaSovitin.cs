@@ -623,7 +623,14 @@ namespace Matkakirja.Natiivi
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
         /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/<r>/aanet/v<versio>/). Peili-ajossa
         /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
-        public string AaniUrl(string tiedostoRelPolku) =>
+        public string AaniUrl(string tiedostoRelPolku) => AaniUrlSuora(LaatuKorvaaja(tiedostoRelPolku));
+
+        /// <summary>LAATUKORVAAJAT (Pelikoodari 9.10., aanet/laatu-korvaajat-v1, PT:n laatutarkistus): rakennus.json:n äänitiedosto →
+        /// korjattu ääni median juuresta (keittiön ambienssissa oli englanninkielistä puhetta; uusi: tulisijan rätinä ja sanaton sorina).</summary>
+        static string LaatuKorvaaja(string polku) =>
+            polku == "aanet/v1/keittio-ambienssi.mp3" ? "/aanet/laatu-korvaajat-v1/keittio-ambienssi-02.mp3" : polku;
+
+        string AaniUrlSuora(string tiedostoRelPolku) =>
             string.IsNullOrEmpty(tiedostoRelPolku) ? null
             // "/…" = median juuresta (Pelikoodarin mikseristemit aanet/mikseri/v1/ ovat ämpärin juuressa, 30.9.2026),
             // "https://…" sellaisenaan; muuten rakennuksen juuresta kuten ennen.
@@ -1282,6 +1289,7 @@ namespace Matkakirja.Natiivi
                 // Soundly-pankki (Pelikoodari 9.10., erä 1b, 205 ääntä vuodelle 1499): pakattuna muistiin; korvaa varmat vastineet
                 // (SeikkailuAanet.Korvaavat) ja pelaajan askeleet kertaääninä (SeikkailuAanet.Askel); puuttuva = vanhat äänet.
                 SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/olavinlinna-soundly-v1/manifest.json");
+                SeikkailuAanet.LisaaPankki(MediaJuuri + "/aanet/laatu-korvaajat-v1/manifest.json", "sydan-silmukka-02", "sydan-nopea-01", "hiipiminen-10");   // Pelikoodari 9.10.
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }

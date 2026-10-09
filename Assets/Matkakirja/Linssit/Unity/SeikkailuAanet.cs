@@ -43,10 +43,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Iso pankki (olavinlinna-soundly-v1, 205 ääntä, ~14 min; Pelikoodari 9.10.): klipit pakattuina muistiin (MP3, ~14 Mt;
         /// purettuna ~150 Mt), ei mikserirekisteriin omina riveinään: muunnelmat soivat korvattavan tunnuksen nimellä ja tasolla
         /// (Korvaavat).</summary>
-        public static void LisaaPankki(string manifestUrl)
+        public static void LisaaPankki(string manifestUrl, params string[] vain)
         {
             var a = Aktiivinen; if (a == null || string.IsNullOrEmpty(manifestUrl)) return;
-            a.StartCoroutine(a.Lataa(manifestUrl, null, pankki: true));
+            a.StartCoroutine(a.Lataa(manifestUrl, vain != null && vain.Length > 0 ? new HashSet<string>(vain) : null, pankki: true));
         }
 
         static string Lyhyt(string url) { int i = url.LastIndexOf('/'); int k = i > 0 ? url.LastIndexOf('/', i - 1) : -1; return k >= 0 ? url.Substring(k + 1) : url; }
@@ -133,7 +133,8 @@ namespace Matkakirja.Natiivi
         public static readonly Dictionary<string, string[]> Korvaavat = new Dictionary<string, string[]>(StringComparer.Ordinal)
         {
             ["avain-lukko"] = Sarja("avain", 1, 4), ["avainnippu"] = Sarja("avain", 7, 12), ["loyto-kantele"] = Sarja("loyto", 1, 5),
-            ["sydan"] = Sarja("sydan-silmukka", 1, 1), ["tuuli-rako"] = Sarja("tuuli-rako", 1, 3),
+            // sydan-silmukka-02 (laatu-korvaajat-v1, 58 BPM): Soundlyn -01 oli lääketieteellinen ultraääni, eikä sitä kytketä.
+            ["sydan"] = new[] { "sydan-silmukka-02" }, ["tuuli-rako"] = Sarja("tuuli-rako", 1, 3),
             ["tarjotin"] = Sarja("keittio", 1, 4), ["kulho-poyta"] = new[] { "keittio-05", "keittio-08" }, ["kauha"] = Sarja("keittio", 6, 7),
             ["luuta"] = Sarja("keittio", 9, 12), ["nauris"] = Sarja("ruoka", 1, 6), ["savipurkki"] = Sarja("savi", 1, 8),
             ["patapino"] = Sarja("astiat", 1, 3), ["vesisanko"] = new[] { "astiat-04", "astiat-05", "astiat-08" },
@@ -170,7 +171,9 @@ namespace Matkakirja.Natiivi
             return pohja == null ? null : Jokin(Sarja(pohja, 1, pohja == "askel-multa" ? 4 : 8));
         }
         /// <summary>Hiivinnän vaatteen kahina askeleen päälle (hiipiminen-01…06).</summary>
-        public static AudioClip Kahina() => Jokin(Sarja("hiipiminen", 1, 6));
+        public static AudioClip Kahina() => Jokin(Kahinat);
+        // hiipiminen-10 (laatu-korvaajat-v1) korvaa -08:n, joka kuulosti röyhtäykseltä; 07–09 ovat kiven raapaisuja eivätkä kuulu kahinaan.
+        static readonly string[] Kahinat = { "hiipiminen-01", "hiipiminen-02", "hiipiminen-03", "hiipiminen-04", "hiipiminen-05", "hiipiminen-06", "hiipiminen-10" };
 
         // ÄÄNIREKISTERI (omistaja 9.10.2026 klo 09.5x, Natiivi-UI:n konteksti-mikseri): jokainen linnan ääni rekisteröidään kontekstiin
         // "linna" (ryhmä, tunnus, näkyvä nimi, klippien nimet äänivahdille) ja soi tasolla perus × Kerroin(ryhmä, tunnus).
