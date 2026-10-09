@@ -295,6 +295,7 @@ namespace Matkakirja.Natiivi
             return $"passi {(feature != null ? (feature.isActive ? "aktiivinen" : "EI aktiivinen") : "ei")}, renderöijä {(data != null ? data.name : "-")} {(data != null && data == nyt ? "= nykyinen" : "≠ nykyinen " + (nyt != null ? nyt.name : "-"))}" +
                 $" (piirteitä {(data != null ? data.rendererFeatures.Count : 0)}, paikka {(data != null && feature != null ? data.rendererFeatures.IndexOf(feature) : -1)}), putki {(urp != null ? urp.name : "-")}, " +
                 $"varjostin {(materiaali != null ? (materiaali.shader.isSupported ? "tuettu" : "EI tuettu") : "-")}, ruudukko {(ruudukko != null ? "on" : "ei")}, kulma {kulma}, " +
+                $"kamerat [{string.Join("; ", System.Array.ConvertAll(Camera.allCameras, k => { var d = k.GetComponent<UniversalAdditionalCameraData>(); return $"{k.name} d{k.depth:F0} {(d != null ? d.renderType.ToString() : "?")} rt {(k.targetTexture != null ? k.targetTexture.name + " " + k.targetTexture.width + "x" + k.targetTexture.height : "-")} msaa {k.allowMSAA} hdr {k.allowHDR} renderöijä {(d != null ? d.scriptableRenderer?.GetType().Name : "?")}"; }))}], " +
                 $"kamera {(viimeKamera != null ? viimeKamera.name : "-")} jälkik. {(ca != null ? ca.renderPostProcessing.ToString() : "?")} syvyys {(ca != null ? ca.requiresDepthOption.ToString() : "?")} tyyppi {(ca != null ? ca.renderType.ToString() : "?")} pino {(ca != null ? ca.cameraStack?.Count ?? 0 : 0)}";
         }
 

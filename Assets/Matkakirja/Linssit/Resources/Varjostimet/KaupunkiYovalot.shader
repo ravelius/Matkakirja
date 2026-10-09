@@ -94,6 +94,8 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 half4 c = SAMPLE_TEXTURE2D_X_LOD(_BlitTexture, sampler_PointClamp, uv, 0);
                 if (_ValoDebug.x > 0.5 && _ValoDebug.x < 1.5) return half4(c.rgb * 0.5h + half3(0.5h, 0.0h, 0.5h), 1.0h);
                 float syvyys = SampleSceneDepth(uv);
+                if (_ValoDebug.x > 4.5 && _ValoDebug.x < 5.5) return half4(syvyys > 1e-7 && syvyys < 1.0 - 1e-7 ? half3(0.0h, 1.0h, 0.0h) : half3(1.0h, 0.0h, 0.0h), 1.0h);   // 5: syvyys (vihreä = on)
+                if (_ValoDebug.x > 5.5) return half4((half3)frac(syvyys * 200.0), 1.0h);   // 6: syvyyden arvo
                 #if UNITY_REVERSED_Z
                 if (syvyys <= 1e-7) return c;
                 #else
