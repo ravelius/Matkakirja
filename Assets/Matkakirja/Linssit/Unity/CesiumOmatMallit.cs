@@ -125,6 +125,7 @@ namespace Matkakirja.Linssit
         public void Kamera(Vector3 kamera)
         {
             Shader.SetGlobalVector(IdOmaValo, new Vector4(Valotus, Julkisivu, Hehku, VarjoNosto));
+            OmatVarjot.Paivita(juuri != null ? juuri.transform : null, mallit.Count > 0, kirjaa);
             if (leikkaus == null || mallit.Count == 0) return;
             float d = float.MaxValue;
             foreach (var m in mallit) if (m.polygoni != null) d = Mathf.Min(d, (m.polygoni.transform.position - kamera).magnitude);
@@ -189,6 +190,7 @@ namespace Matkakirja.Linssit
         public void Sulje()
         {
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
+            OmatVarjot.Pois();
             if (leikkaus != null) UnityEngine.Object.Destroy(leikkaus);
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             leikkaus = null; juuri = null; google = null; mallit.Clear(); Tekijat = null; avattu = null;
