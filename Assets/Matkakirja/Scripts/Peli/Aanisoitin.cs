@@ -156,7 +156,10 @@ namespace Matkakirja.Natiivi
             if (tunnus != null && Matkakirja.Natiivi.CupolaAani.KorvaaLinssinTaustan(tunnus)) tunnus = null;
             if (tunnus == null) { s.Tila.LinssiTausta(null, 0, 0); return; }
             if (!LinssiTaustat.TryGetValue(tunnus, out var t)) { Debug.Log("MATKAKIRJA aani: tuntematon linssin taustaääni " + tunnus); return; }
-            s.Tila.LinssiTausta(t.Url, t.Voima, t.NousuMs);
+            // Mikseri (PT 9.10.: ISS-äänet rekisteriin): linssin taustaääni omalla tunnuksellaan maisema-ryhmässä (astro-humina iss).
+            var mik = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            if (!mik.Rekisteroity(tunnus)) mik.Rekisteroi(tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina ? "iss" : "linssit", "maisema", tunnus, tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina ? "Astronautin humina" : tunnus, tunnus);
+            s.Tila.LinssiTausta(t.Url, t.Voima * mik.Kerroin("maisema", tunnus), t.NousuMs);
         }
 
         /// <summary>Linssin raidan himmennys (kellon pysäytys 0,5; jatko 1).</summary>
