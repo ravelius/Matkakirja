@@ -1793,6 +1793,7 @@ namespace Matkakirja.Natiivi
             foreach (var c in valikko.Children().Where(c => c != vanhat).ToList()) vanhat.Add(c);
             valikko.Clear();
             valikko.Add(vanhat);
+            valikko.style.width = StyleKeyword.Null;
             rivit = null;
             nykyiset.Clear();
             var kaikki = VainSallitut(Kaupungit?.Invoke());
@@ -1867,6 +1868,10 @@ namespace Matkakirja.Natiivi
                     break;
                 case Nakyma.Kysy:
                     RakennaKysy();
+                    // UI-kuva-arkki 9.10.2026 (19059ffb7, iPhone vaaka): sisällön mittainen paneeli rivitti kysymykset kahdelle riville,
+                    // jolloin Puhu oppaalle ja Kirjoita oppaalle jäivät vierityksen taakse ilman vihjettä. Matalalla vaakaruudulla
+                    // paneeli 45 % leveäksi (peittoraja); RajaaLeveys pitää sen turva-alueen sisällä.
+                    if (!LeveaRuutu && !PuhelinPysty && Juuri.layout.width > 0) valikko.style.width = Mathf.Round(Juuri.layout.width * 0.45f);
                     break;
                 case Nakyma.Liiku:
                     RakennaLiiku();
