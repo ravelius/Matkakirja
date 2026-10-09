@@ -14,6 +14,8 @@
 // 20261009.md, PT-hyväksytty). Kellobastionille ei vuotta; epävarmat (Paksun tornin räjähdys, 1600-luvun palo) eivät ole mukana.
 using System;
 using System.Collections.Generic;
+using Matkakirja.Linssit.Seikkailu;
+using Matkakirja.Peli;
 
 namespace Matkakirja.Linssit.Dioraama
 {
@@ -34,8 +36,51 @@ namespace Matkakirja.Linssit.Dioraama
         { Etuliite = etuliite; Vuodesta = vuodesta; RakennusVuotta = rakennusVuotta; Vuoteen = vuoteen; }
     }
 
+    /// <summary>LR:n vaihemalli (blender/vaiheet/vaiheet.json, v45y): oma glb, joka näkyy vuodesta (null = alusta) vuoteen (null = loppuun)
+    /// asti; valinnainen leikkauslista (palon jäljet: kuoren katot piiloon vaiheen ajaksi).</summary>
+    public sealed class HistoriaVaihemalli
+    {
+        public string Id, Glb, Leikkaukset;
+        public double? Vuodesta, Vuoteen;
+        public bool Nakyy(double vuosi) => (Vuodesta == null || vuosi >= Vuodesta) && (Vuoteen == null || vuosi < Vuoteen);
+    }
+
     public sealed class Historiajana
     {
+        /// <summary>Kivilinna (Sisältökirjuri 9.10.: puuvarustus 1475, kivi 1477): sitä ennen linnan kuori, tilat ja hahmot piilossa,
+        /// näkyvissä vain vaihemallit (tyhjä saari, puuvarustus) ja ympäristö.</summary>
+        public const double KivilinnaVuosi = 1477;
+        public static bool LinnaNakyy(double vuosi) => vuosi >= KivilinnaVuosi;
+
+        public static List<HistoriaVaihemalli> LueVaihemallit(string json)
+        {
+            var l = new List<HistoriaVaihemalli>();
+            foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Jasenna(json)))
+            {
+                var o = MiniJson.ObjektiTaiNull(x); string glb = MiniJson.Teksti(o, "glb");
+                if (o == null || string.IsNullOrEmpty(glb)) continue;
+                l.Add(new HistoriaVaihemalli { Id = MiniJson.Teksti(o, "id"), Glb = glb, Leikkaukset = MiniJson.Teksti(o, "leikkaukset"),
+                    Vuodesta = MiniJson.Luku(o, "vuodesta"), Vuoteen = MiniJson.Luku(o, "vuoteen") });
+            }
+            return l;
+        }
+
+        /// <summary>Vaiheen leikkaukset (palon-jaljet-leikkaukset.json: nimi, keskipiste, koko, kierto_y, vuodesta, vuoteen).</summary>
+        public static List<KavelyLeikkaus> LueLeikkaukset(string json)
+        {
+            var l = new List<KavelyLeikkaus>();
+            foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Jasenna(json)))
+            {
+                var o = MiniJson.ObjektiTaiNull(x); if (o == null) continue;
+                var k = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "keskipiste")); var s = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "koko"));
+                if (k.Count < 3 || s.Count < 3) continue;
+                double L(List<object> a, int i) => Convert.ToDouble(a[i], System.Globalization.CultureInfo.InvariantCulture);
+                l.Add(new KavelyLeikkaus(MiniJson.Teksti(o, "nimi"), L(k, 0), L(k, 1), L(k, 2), L(s, 0), L(s, 1), L(s, 2), MiniJson.Luku(o, "kierto_y") ?? 0,
+                    MiniJson.Luku(o, "vuodesta"), MiniJson.Luku(o, "vuoteen")));
+            }
+            return l;
+        }
+
         /// <summary>Sisältökirjurin faktatarkistus tehty (PT:n ehto 1). Ennen sitä historiatila vain kehityskomennolla.</summary>
         public const bool Lukittu = true;   // Sisältökirjuri 9.10., PT-hyväksytty
         /// <summary>Avainsana näkyy vaiheen alusta AvainsanaAlkuS:sta AvainsanaS:n ajan.</summary>

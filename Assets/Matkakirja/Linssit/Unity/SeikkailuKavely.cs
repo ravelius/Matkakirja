@@ -110,7 +110,14 @@ namespace Matkakirja.Natiivi
         }
         public static void AsetaKasvu(Func<string, double> k) { kasvu = k; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
         public static bool LeikkauksetPaalla => leikkauksetPaalla && Data != null;
-        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; if (paalla) { Vain1499 = true; kasvu = null; } PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
+        /// <summary>Historian vaiheen omat leikkaukset (LR v45y: palon jäljet piilottavat kuoren katot 1868–1872); null = ei. Etusijalla.</summary>
+        static List<KavelyLeikkaus> historiaLeikkaukset;
+        public static void AsetaHistoriaLeikkaukset(List<KavelyLeikkaus> l)
+        {
+            if (ReferenceEquals(l, historiaLeikkaukset)) return;
+            historiaLeikkaukset = l; PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true);
+        }
+        public static void Leikkaukset(bool paalla) { leikkauksetPaalla = paalla; leikkausOsa = null; if (paalla) { Vain1499 = true; kasvu = null; historiaLeikkaukset = null; } PaivitaLeikkaukset(SeikkailuPelaaja.Aktiivinen != null ? SeikkailuPelaaja.Aktiivinen.transform.position : (Vector3?)null, true); }
 
         /// <summary>Kasvun leikkauslaatikko: alareuna nousee (osa kasvaa maasta ylös), yläreuna pysyy.</summary>
         static KavelyLeikkaus Kasvanut(KavelyLeikkaus l, double g)
@@ -133,6 +140,7 @@ namespace Matkakirja.Natiivi
                 var aina = new HashSet<string>(StringComparer.Ordinal);
                 foreach (var m in Data.Lajia("leikkaus")) if (m.Tunnus.StartsWith("vain-1499", StringComparison.Ordinal) && m.Leikkaukset != null) foreach (var nm in m.Leikkaukset) if (nm != null) aina.Add(nm);
                 var kaikki = new List<(KavelyLeikkaus L, double Arvo)>();
+                if (historiaLeikkaukset != null) foreach (var hl in historiaLeikkaukset) kaikki.Add((hl, -2e6));
                 foreach (var o in Data.Osat.Values)
                     foreach (var l in o.Leikkaukset)
                     {
