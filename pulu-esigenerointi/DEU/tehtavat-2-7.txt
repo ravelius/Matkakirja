@@ -1,0 +1,1012 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohenzollernin linna (historia)
+Tietoruudun teksti: Hohenzollernin linna on entisen keisarillisen Hohenzollern-suvun kantalinna. Se sijaitsee Hechingenin eteläpuolella Hohenzollern-vuoren huipulla Schwäbische Alb -vuoriston reunalla Baden-Württembergissä. Nykyinen linna on kolmas samalla paikalla: ensimmäinen 1000-luvun linna tuhottiin täysin vuonna 1423 kymmenen kuukauden piirityksen jälkeen, ja toinen rakennettiin vuosina 1454–1461 mutta rappeutui 1700-luvun loppuun mennessä. Nykyinen linna rakennettiin vuosina 1846–1867 sukumuistomerkiksi Preussin kuningas Fredrik Vilhelm IV:n aloitteesta, ja arkkitehti Friedrich August Stüler otti mallia englantilaisesta uusgotiikasta ja Loiren linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyhä saksalais-roomalainen keisarikunta oli keskiajalta alkanut ja uuden ajan alkuun jatkunut Keski-Euroopan valtioliitto, jonka johdossa oli keisari. Perinteisesti sen alkuna pidetään vuotta 962, jolloin [[Otto I]] kruunattiin keisariksi Roomassa. Keisarikunta koostui satoista [[ruhtinaskunnista]], piispakunnista ja [[vapaista kaupungeista]], joilla oli paljon omaa päätösvaltaa, ja keisarin valta riippui pitkälti ruhtinaiden tuesta. Keisarikunta lakkautettiin vuonna 1806 [[Napoleonin]] sotien aikana, kun Frans II luopui keisarin arvosta. Tuhat vuotta yhteen vastaukseen.
+KYSYMYS: Kerro lisää: ruhtinaskunnista
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohenzollernin linna (historia)
+Tietoruudun teksti: Hohenzollernin linna on entisen keisarillisen Hohenzollern-suvun kantalinna. Se sijaitsee Hechingenin eteläpuolella Hohenzollern-vuoren huipulla Schwäbische Alb -vuoriston reunalla Baden-Württembergissä. Nykyinen linna on kolmas samalla paikalla: ensimmäinen 1000-luvun linna tuhottiin täysin vuonna 1423 kymmenen kuukauden piirityksen jälkeen, ja toinen rakennettiin vuosina 1454–1461 mutta rappeutui 1700-luvun loppuun mennessä. Nykyinen linna rakennettiin vuosina 1846–1867 sukumuistomerkiksi Preussin kuningas Fredrik Vilhelm IV:n aloitteesta, ja arkkitehti Friedrich August Stüler otti mallia englantilaisesta uusgotiikasta ja Loiren linnoista.
+AIEMPI KYSYMYS: Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyhä saksalais-roomalainen keisarikunta oli keskiajalta alkanut ja uuden ajan alkuun jatkunut Keski-Euroopan valtioliitto, jonka johdossa oli keisari. Perinteisesti sen alkuna pidetään vuotta 962, jolloin [[Otto I]] kruunattiin keisariksi Roomassa. Keisarikunta koostui satoista [[ruhtinaskunnista]], piispakunnista ja [[vapaista kaupungeista]], joilla oli paljon omaa päätösvaltaa, ja keisarin valta riippui pitkälti ruhtinaiden tuesta. Keisarikunta lakkautettiin vuonna 1806 [[Napoleonin]] sotien aikana, kun Frans II luopui keisarin arvosta. Tuhat vuotta yhteen vastaukseen.
+KYSYMYS: Kerro lisää: vapaista kaupungeista
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohenzollernin linna (historia)
+Tietoruudun teksti: Hohenzollernin linna on entisen keisarillisen Hohenzollern-suvun kantalinna. Se sijaitsee Hechingenin eteläpuolella Hohenzollern-vuoren huipulla Schwäbische Alb -vuoriston reunalla Baden-Württembergissä. Nykyinen linna on kolmas samalla paikalla: ensimmäinen 1000-luvun linna tuhottiin täysin vuonna 1423 kymmenen kuukauden piirityksen jälkeen, ja toinen rakennettiin vuosina 1454–1461 mutta rappeutui 1700-luvun loppuun mennessä. Nykyinen linna rakennettiin vuosina 1846–1867 sukumuistomerkiksi Preussin kuningas Fredrik Vilhelm IV:n aloitteesta, ja arkkitehti Friedrich August Stüler otti mallia englantilaisesta uusgotiikasta ja Loiren linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mikä oli Pyhä saksalais-roomalainen keisarikunta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyhä saksalais-roomalainen keisarikunta oli keskiajalta alkanut ja uuden ajan alkuun jatkunut Keski-Euroopan valtioliitto, jonka johdossa oli keisari. Perinteisesti sen alkuna pidetään vuotta 962, jolloin [[Otto I]] kruunattiin keisariksi Roomassa. Keisarikunta koostui satoista [[ruhtinaskunnista]], piispakunnista ja [[vapaista kaupungeista]], joilla oli paljon omaa päätösvaltaa, ja keisarin valta riippui pitkälti ruhtinaiden tuesta. Keisarikunta lakkautettiin vuonna 1806 [[Napoleonin]] sotien aikana, kun Frans II luopui keisarin arvosta. Tuhat vuotta yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Kuka Henrik Linnustaja oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Henrik Linnustaja eli Henrik I oli [[Saksin]] herttua ja Itä-Frankin kuningas vuosina 919–936. Hänet valittiin kuninkaaksi frankkien ja saksien ruhtinaiden päätöksellä, ja hänestä tuli [[Ottonien]] suvun ensimmäinen hallitsija. Hän vahvisti valtakuntaansa linnoittamalla alueita ja torjui unkarilaisten hyökkäyksiä, ja hänet on haudattu [[Quedlinburgiin]]. Lempinimi viittaa legendaan, jonka mukaan sanansaattajat löysivät hänet pyydystämästä lintuja, kun uutinen kuninkaaksi valitsemisesta saapui; en ole varma, onko tarina tosi.
+
+Linnustaja kuulostaa kyyhkyn korvaan vähän pahaenteiseltä, sen tunnustan. Saman ammatin Papageno kantaa Mozartin [[Taikahuilussa]], ja hänhän laulaa siinä kokonaisen oopperan, joten ehkä ala ei ole pelkästään paha.
+KYSYMYS: Kerro lisää: Saksin
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Kuka Henrik Linnustaja oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Henrik Linnustaja eli Henrik I oli [[Saksin]] herttua ja Itä-Frankin kuningas vuosina 919–936. Hänet valittiin kuninkaaksi frankkien ja saksien ruhtinaiden päätöksellä, ja hänestä tuli [[Ottonien]] suvun ensimmäinen hallitsija. Hän vahvisti valtakuntaansa linnoittamalla alueita ja torjui unkarilaisten hyökkäyksiä, ja hänet on haudattu [[Quedlinburgiin]]. Lempinimi viittaa legendaan, jonka mukaan sanansaattajat löysivät hänet pyydystämästä lintuja, kun uutinen kuninkaaksi valitsemisesta saapui; en ole varma, onko tarina tosi.
+
+Linnustaja kuulostaa kyyhkyn korvaan vähän pahaenteiseltä, sen tunnustan. Saman ammatin Papageno kantaa Mozartin [[Taikahuilussa]], ja hänhän laulaa siinä kokonaisen oopperan, joten ehkä ala ei ole pelkästään paha.
+KYSYMYS: Kerro lisää: Ottonien
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Kuka Henrik Linnustaja oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Henrik Linnustaja eli Henrik I oli [[Saksin]] herttua ja Itä-Frankin kuningas vuosina 919–936. Hänet valittiin kuninkaaksi frankkien ja saksien ruhtinaiden päätöksellä, ja hänestä tuli [[Ottonien]] suvun ensimmäinen hallitsija. Hän vahvisti valtakuntaansa linnoittamalla alueita ja torjui unkarilaisten hyökkäyksiä, ja hänet on haudattu [[Quedlinburgiin]]. Lempinimi viittaa legendaan, jonka mukaan sanansaattajat löysivät hänet pyydystämästä lintuja, kun uutinen kuninkaaksi valitsemisesta saapui; en ole varma, onko tarina tosi.
+
+Linnustaja kuulostaa kyyhkyn korvaan vähän pahaenteiseltä, sen tunnustan. Saman ammatin Papageno kantaa Mozartin [[Taikahuilussa]], ja hänhän laulaa siinä kokonaisen oopperan, joten ehkä ala ei ole pelkästään paha.
+KYSYMYS: Kerro lisää: Quedlinburgiin
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+AIEMPI KYSYMYS: Kuka Henrik Linnustaja oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Henrik Linnustaja eli Henrik I oli [[Saksin]] herttua ja Itä-Frankin kuningas vuosina 919–936. Hänet valittiin kuninkaaksi frankkien ja saksien ruhtinaiden päätöksellä, ja hänestä tuli [[Ottonien]] suvun ensimmäinen hallitsija. Hän vahvisti valtakuntaansa linnoittamalla alueita ja torjui unkarilaisten hyökkäyksiä, ja hänet on haudattu [[Quedlinburgiin]]. Lempinimi viittaa legendaan, jonka mukaan sanansaattajat löysivät hänet pyydystämästä lintuja, kun uutinen kuninkaaksi valitsemisesta saapui; en ole varma, onko tarina tosi.
+
+Linnustaja kuulostaa kyyhkyn korvaan vähän pahaenteiseltä, sen tunnustan. Saman ammatin Papageno kantaa Mozartin [[Taikahuilussa]], ja hänhän laulaa siinä kokonaisen oopperan, joten ehkä ala ei ole pelkästään paha.
+KYSYMYS: Kerro lisää: Taikahuilussa
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Miksi Quedlinburgia sanotaan valtakunnan kehdoksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kaksi tarinaa. Legendan mukaan frankkiruhtinaat tarjosivat Quedlinburgissa vuonna 919 kruunua Saksin herttua [[Henrik Linnustajalle]]. Henrikistä tuli Itä-Frankin kuningas ja Ottonien suvun ensimmäinen hallitsija, ja [[Ottonit]] tekivät Quedlinburgista valtansa keskuksen 900- ja 1000-luvuilla. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 922 Henrikin lahjoituksessa. Historiankirjoituksessa kuninkaanvaalin paikkana mainitaan kuitenkin usein [[Fritzlar]], joten en ole varma, onko Quedlinburgin tarina tarkka. Kehto tai ei, kaunis kaupunki se on ylhäältä.
+KYSYMYS: Kerro lisää: Henrik Linnustajalle
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Miksi Quedlinburgia sanotaan valtakunnan kehdoksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kaksi tarinaa. Legendan mukaan frankkiruhtinaat tarjosivat Quedlinburgissa vuonna 919 kruunua Saksin herttua [[Henrik Linnustajalle]]. Henrikistä tuli Itä-Frankin kuningas ja Ottonien suvun ensimmäinen hallitsija, ja [[Ottonit]] tekivät Quedlinburgista valtansa keskuksen 900- ja 1000-luvuilla. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 922 Henrikin lahjoituksessa. Historiankirjoituksessa kuninkaanvaalin paikkana mainitaan kuitenkin usein [[Fritzlar]], joten en ole varma, onko Quedlinburgin tarina tarkka. Kehto tai ei, kaunis kaupunki se on ylhäältä.
+KYSYMYS: Kerro lisää: Ottonit
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Miksi Quedlinburgia sanotaan valtakunnan kehdoksi?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kaksi tarinaa. Legendan mukaan frankkiruhtinaat tarjosivat Quedlinburgissa vuonna 919 kruunua Saksin herttua [[Henrik Linnustajalle]]. Henrikistä tuli Itä-Frankin kuningas ja Ottonien suvun ensimmäinen hallitsija, ja [[Ottonit]] tekivät Quedlinburgista valtansa keskuksen 900- ja 1000-luvuilla. Kaupunki mainitaan kaupunkina ensimmäisen kerran vuonna 922 Henrikin lahjoituksessa. Historiankirjoituksessa kuninkaanvaalin paikkana mainitaan kuitenkin usein [[Fritzlar]], joten en ole varma, onko Quedlinburgin tarina tarkka. Kehto tai ei, kaunis kaupunki se on ylhäältä.
+KYSYMYS: Kerro lisää: Fritzlar
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Millainen on saksalainen Fachwerk-talo?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne ovat niitä kaikkein kuvauksellisimpia. Fachwerk-talo on puurunkoinen rakennus, jonka vaakasuorat, pystysuorat ja vinot palkit näkyvät julkisivulla. Palkkien väliset kentät täytettiin esimerkiksi punotulla risuseinällä ja savella, myöhemmin usein tiilellä, ja pinta rapattiin yleensä valkoiseksi tai värilliseksi. Rakenne oli keskiajalla ja uudella ajalla yleinen monessa osassa Saksaa, koska puuta oli saatavilla ja talon pystytys oli nopeaa. [[Quedlinburgin]] vanhassakaupungissa on noin 2 100 tällaista puutaloa, ja ne ovat osa kaupungin [[UNESCOn]] maailmanperintökohdetta. Palkit näyttävät ylhäältä kuin kaupunki olisi piirretty tussilla.
+KYSYMYS: Kerro lisää: Quedlinburgin
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Millainen on saksalainen Fachwerk-talo?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne ovat niitä kaikkein kuvauksellisimpia. Fachwerk-talo on puurunkoinen rakennus, jonka vaakasuorat, pystysuorat ja vinot palkit näkyvät julkisivulla. Palkkien väliset kentät täytettiin esimerkiksi punotulla risuseinällä ja savella, myöhemmin usein tiilellä, ja pinta rapattiin yleensä valkoiseksi tai värilliseksi. Rakenne oli keskiajalla ja uudella ajalla yleinen monessa osassa Saksaa, koska puuta oli saatavilla ja talon pystytys oli nopeaa. [[Quedlinburgin]] vanhassakaupungissa on noin 2 100 tällaista puutaloa, ja ne ovat osa kaupungin [[UNESCOn]] maailmanperintökohdetta. Palkit näyttävät ylhäältä kuin kaupunki olisi piirretty tussilla.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Keitä Ottonit olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nyt mennään pitkälle. Ottonit olivat saksilainen hallitsijasuku, joka hallitsi Itä-Frankin kuningaskuntaa eli myöhempää Saksaa vuosina 919–1024. Suvun ensimmäinen kuningas oli Henrik I, ja hänen poikansa [[Otto I]] voitti unkarilaiset [[Lechfeldin]] taistelussa vuonna 955 ja kruunattiin keisariksi Roomassa vuonna 962. Ottonit tukeutuivat vahvasti kirkkoon: he nimittivät piispoja ja apatteja ja rakennuttivat luostareita, joihin kuuluivat myös naisten luostarit kuten Quedlinburgin. Monta Ottoa, ja jokaisella oma numeronsa.
+KYSYMYS: Kerro lisää: Otto I
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+AIEMPI KYSYMYS: Keitä Ottonit olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nyt mennään pitkälle. Ottonit olivat saksilainen hallitsijasuku, joka hallitsi Itä-Frankin kuningaskuntaa eli myöhempää Saksaa vuosina 919–1024. Suvun ensimmäinen kuningas oli Henrik I, ja hänen poikansa [[Otto I]] voitti unkarilaiset [[Lechfeldin]] taistelussa vuonna 955 ja kruunattiin keisariksi Roomassa vuonna 962. Ottonit tukeutuivat vahvasti kirkkoon: he nimittivät piispoja ja apatteja ja rakennuttivat luostareita, joihin kuuluivat myös naisten luostarit kuten Quedlinburgin. Monta Ottoa, ja jokaisella oma numeronsa.
+KYSYMYS: Kerro lisää: Lechfeldin
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quedlinburg (historia)
+Tietoruudun teksti: Quedlinburg on kaupunki Harzin vuoriston pohjoispuolella Saksi-Anhaltin länsiosassa. Varhaiskeskiajalla vaikutusvaltainen ja vauras kauppakeskus nousi 900- ja 1000-luvuilla Ottonien suvun vallan keskukseksi. Linna, kirkko ja vanhakaupunki, jossa on noin 2 100 puutaloa, kirjattiin UNESCOn maailmanperintöluetteloon vuonna 1994 poikkeuksellisen säilyneisyytensä ja romaanisen arkkitehtuurin vuoksi. Kaupunki mainitaan ensimmäisen kerran kaupunkina vuonna 922 kuningas Henrik Linnustajan lahjoituksessa, ja legendan mukaan frankkiruhtinaat tarjosivat Henrikille kruunua Quedlinburgissa vuonna 919, minkä vuoksi kaupunkia sanotaan Saksan valtakunnan kehdoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Taideinstituutti] 1879 Alkusysäys tuli 1866, kun 35 taiteilijaa perusti Dearborn Streetin ateljeehen Chicago Academy of Designin eurooppalaisten taideakatemioiden malliin. Koulu piti olla ilmainen ja sillä oma galleria; opetus alkoi 1868, ja 1870 akatemia sai oman viisikerroksisen kivitalon. Vuoden 1871 suurpalo tuhosi sen ja jätti akatemian velkoihin. Vuoteen 1878 mennessä velkaa oli 10 000 dollaria, ja 1879 osa jäsenistä perusti uuden yhdistyksen, joka osti konkurssiin menneen edeltäjänsä omaisuuden huutokaupasta. Nykyinen nimi otettiin käyttöön 1882. Nykyinen talo Michigan Avenuen varrella rakennettiin vuoden 1893 maailmannäyttelyä varten, ja museo muutti siihen näyttelyn jälkeen. Sisäänkäyntiä vartioi ka…
+- [Mumbai — kohdekartta / Kohdekartta: Crawford Market] 1869 Markkinahalli valmistui 1869, ja sen lahjoitti kaupungille kauppias Cowasji Jehangir. Nimen se sai Arthur Crawfordilta, kaupungin ensimmäiseltä kunnalliskomissaarilta; myöhemmin halli nimettiin uudelleen yhteiskunnallisen uudistajan Jyotirao Phulen mukaan, ja virallinen nimi on nyt Mahatma Jyotiba Phule Mandai. Halli on aivan aseman pohjoispuolella vilkkaassa risteyksessä. Suunnittelija oli brittiarkkitehti William Emerson, ja talo oli varhainen yritys sovittaa viktoriaaninen gotiikka paikallisiin aiheisiin. Tonttia on 22 471 neliömetriä ja rakennusta 5 515. Kivi on karkeaa kellertävää Kurlan kiveä ja punaista Basseinin kiveä, ja viidentoista metrin korkeudessa kulkee kattoikkuna, joka…
+AIEMPI KYSYMYS: Mitä romaaninen arkkitehtuuri tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä, tästä minä pidän. Romaaninen arkkitehtuuri oli Euroopassa suunnilleen 1000-luvulta 1100-luvun loppuun vallinnut rakennustyyli. Sille ovat tyypillisiä paksut kivimuurit, pyöreät kaaret, pienet ikkunat sekä tynnyri- ja ristiholvit. Rakennukset ovat massiivisia ja vakaita, ja tyyli levisi etenkin kirkkoihin ja luostareihin. [[Gotiikka]] korvasi sen vähitellen suippokaarineen ja korkeine ikkunoineen. [[Quedlinburgin]] linnavuoren kirkko on esimerkki romaanisesta rakentamisesta, ja romaanisen arkkitehtuurin säilyneisyys on yksi syy kaupungin [[UNESCOn]] maailmanperintöasemaan.
+
+Katolta nämä romaaniset kirkot näyttävät pyöreiltä ja jämeriltä, mikä sopii kyyhkylle, kun pitää laskeutua rauhassa. Vähän kuin pullataikina, mutta kivestä.
+KYSYMYS: Kerro lisää: Gotiikka
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Keitä sisterssiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Sisterssiläiset olivat katolinen munkkikunta, joka sai alkunsa vuonna 1098, kun ryhmä munkkeja perusti uuden luostarin [[Cîteaux'hon]] [[Burgundissa]]. He pyrkivät noudattamaan [[Benedictuksen]] sääntöä entistä tiukemmin, elämään yksinkertaisesti ja elättämään itsensä omalla työllään. Luostarit rakennettiin usein eristyneisiin laaksoihin, ja munkit viljelivät maata sekä kehittivät maataloutta ja vesirakentamista. Tunnettu vaikuttaja oli [[Clairvaux'n]] apotti Bernard, ja [[Maulbronnin]] luostari kuului tähän kuntaan. Munkit pukeutuivat valkoisiin kaapuihin.
+
+Valkoiset kaavut ja tiukka arki ovat melkein vastakohta minun tapaani elää, mutta luostarin leipä oli varmasti hyvää. Ainakin murut saisivat kelvata.
+KYSYMYS: Kerro lisää: Cîteaux'hon
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Keitä sisterssiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Sisterssiläiset olivat katolinen munkkikunta, joka sai alkunsa vuonna 1098, kun ryhmä munkkeja perusti uuden luostarin [[Cîteaux'hon]] [[Burgundissa]]. He pyrkivät noudattamaan [[Benedictuksen]] sääntöä entistä tiukemmin, elämään yksinkertaisesti ja elättämään itsensä omalla työllään. Luostarit rakennettiin usein eristyneisiin laaksoihin, ja munkit viljelivät maata sekä kehittivät maataloutta ja vesirakentamista. Tunnettu vaikuttaja oli [[Clairvaux'n]] apotti Bernard, ja [[Maulbronnin]] luostari kuului tähän kuntaan. Munkit pukeutuivat valkoisiin kaapuihin.
+
+Valkoiset kaavut ja tiukka arki ovat melkein vastakohta minun tapaani elää, mutta luostarin leipä oli varmasti hyvää. Ainakin murut saisivat kelvata.
+KYSYMYS: Kerro lisää: Burgundissa
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Keitä sisterssiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Sisterssiläiset olivat katolinen munkkikunta, joka sai alkunsa vuonna 1098, kun ryhmä munkkeja perusti uuden luostarin [[Cîteaux'hon]] [[Burgundissa]]. He pyrkivät noudattamaan [[Benedictuksen]] sääntöä entistä tiukemmin, elämään yksinkertaisesti ja elättämään itsensä omalla työllään. Luostarit rakennettiin usein eristyneisiin laaksoihin, ja munkit viljelivät maata sekä kehittivät maataloutta ja vesirakentamista. Tunnettu vaikuttaja oli [[Clairvaux'n]] apotti Bernard, ja [[Maulbronnin]] luostari kuului tähän kuntaan. Munkit pukeutuivat valkoisiin kaapuihin.
+
+Valkoiset kaavut ja tiukka arki ovat melkein vastakohta minun tapaani elää, mutta luostarin leipä oli varmasti hyvää. Ainakin murut saisivat kelvata.
+KYSYMYS: Kerro lisää: Benedictuksen
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Keitä sisterssiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Sisterssiläiset olivat katolinen munkkikunta, joka sai alkunsa vuonna 1098, kun ryhmä munkkeja perusti uuden luostarin [[Cîteaux'hon]] [[Burgundissa]]. He pyrkivät noudattamaan [[Benedictuksen]] sääntöä entistä tiukemmin, elämään yksinkertaisesti ja elättämään itsensä omalla työllään. Luostarit rakennettiin usein eristyneisiin laaksoihin, ja munkit viljelivät maata sekä kehittivät maataloutta ja vesirakentamista. Tunnettu vaikuttaja oli [[Clairvaux'n]] apotti Bernard, ja [[Maulbronnin]] luostari kuului tähän kuntaan. Munkit pukeutuivat valkoisiin kaapuihin.
+
+Valkoiset kaavut ja tiukka arki ovat melkein vastakohta minun tapaani elää, mutta luostarin leipä oli varmasti hyvää. Ainakin murut saisivat kelvata.
+KYSYMYS: Kerro lisää: Clairvaux'n
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Keitä sisterssiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Sisterssiläiset olivat katolinen munkkikunta, joka sai alkunsa vuonna 1098, kun ryhmä munkkeja perusti uuden luostarin [[Cîteaux'hon]] [[Burgundissa]]. He pyrkivät noudattamaan [[Benedictuksen]] sääntöä entistä tiukemmin, elämään yksinkertaisesti ja elättämään itsensä omalla työllään. Luostarit rakennettiin usein eristyneisiin laaksoihin, ja munkit viljelivät maata sekä kehittivät maataloutta ja vesirakentamista. Tunnettu vaikuttaja oli [[Clairvaux'n]] apotti Bernard, ja [[Maulbronnin]] luostari kuului tähän kuntaan. Munkit pukeutuivat valkoisiin kaapuihin.
+
+Valkoiset kaavut ja tiukka arki ovat melkein vastakohta minun tapaani elää, mutta luostarin leipä oli varmasti hyvää. Ainakin murut saisivat kelvata.
+KYSYMYS: Kerro lisää: Maulbronnin
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+AIEMPI KYSYMYS: Miksi luostari muuttui seminaariksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Syynä oli [[uskonpuhdistus]]. [[Württembergin]] herttuakunta siirtyi 1500-luvulla luterilaiseen oppiin, ja katolisia luostareita ruvettiin lakkauttamaan. Maulbronnin luostari liitettiin Württembergiin jo vuonna 1504, ja myöhemmin siitä tehtiin protestanttinen luostarikoulu, jossa kasvatettiin tulevia pappeja ja virkamiehiä. Kouluun kuului tunnetusti kirjailija [[Hermann Hesse]], joka kävi siellä lyhyen aikaa, ja tähtitieteilijä [[Johannes Kepler]] opiskeli siellä lähteiden mukaan 1580-luvulla. Tällaisia käänteitä katolta katsoo mielellään.
+KYSYMYS: Kerro lisää: uskonpuhdistus
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Miksi luostari muuttui seminaariksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Syynä oli [[uskonpuhdistus]]. [[Württembergin]] herttuakunta siirtyi 1500-luvulla luterilaiseen oppiin, ja katolisia luostareita ruvettiin lakkauttamaan. Maulbronnin luostari liitettiin Württembergiin jo vuonna 1504, ja myöhemmin siitä tehtiin protestanttinen luostarikoulu, jossa kasvatettiin tulevia pappeja ja virkamiehiä. Kouluun kuului tunnetusti kirjailija [[Hermann Hesse]], joka kävi siellä lyhyen aikaa, ja tähtitieteilijä [[Johannes Kepler]] opiskeli siellä lähteiden mukaan 1580-luvulla. Tällaisia käänteitä katolta katsoo mielellään.
+KYSYMYS: Kerro lisää: Württembergin
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Miksi luostari muuttui seminaariksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Syynä oli [[uskonpuhdistus]]. [[Württembergin]] herttuakunta siirtyi 1500-luvulla luterilaiseen oppiin, ja katolisia luostareita ruvettiin lakkauttamaan. Maulbronnin luostari liitettiin Württembergiin jo vuonna 1504, ja myöhemmin siitä tehtiin protestanttinen luostarikoulu, jossa kasvatettiin tulevia pappeja ja virkamiehiä. Kouluun kuului tunnetusti kirjailija [[Hermann Hesse]], joka kävi siellä lyhyen aikaa, ja tähtitieteilijä [[Johannes Kepler]] opiskeli siellä lähteiden mukaan 1580-luvulla. Tällaisia käänteitä katolta katsoo mielellään.
+KYSYMYS: Kerro lisää: Hermann Hesse
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Tycho Brahe] Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. Viimeisenä vuotenaan hän sai apula…
+AIEMPI KYSYMYS: Miksi luostari muuttui seminaariksi?
+AIEMPI VASTAUS (Livia):
+Ai se. Syynä oli [[uskonpuhdistus]]. [[Württembergin]] herttuakunta siirtyi 1500-luvulla luterilaiseen oppiin, ja katolisia luostareita ruvettiin lakkauttamaan. Maulbronnin luostari liitettiin Württembergiin jo vuonna 1504, ja myöhemmin siitä tehtiin protestanttinen luostarikoulu, jossa kasvatettiin tulevia pappeja ja virkamiehiä. Kouluun kuului tunnetusti kirjailija [[Hermann Hesse]], joka kävi siellä lyhyen aikaa, ja tähtitieteilijä [[Johannes Kepler]] opiskeli siellä lähteiden mukaan 1580-luvulla. Tällaisia käänteitä katolta katsoo mielellään.
+KYSYMYS: Kerro lisää: Johannes Kepler
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Millaista arki sisterssiläisluostarissa oli?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on pitkä lista. Arkea ohjasi [[Benedictuksen]] sääntö ja periaate rukoile ja tee työtä. Päivä jaettiin yhteisiin rukoushetkiin, lukemiseen ja työhön, ja munkit nousivat varhain aamuyöllä pitämään ensimmäisen rukoushetken. Ruoka oli yksinkertaista, ja liharuokia vältettiin. [[Maulbronnin]] kaltaisessa luostarissa oli munkkien lisäksi niin sanottuja [[lekoveljiä]], jotka hoitivat enemmän käytännön töitä pelloilla ja verstaissa. Yksityiskohdat vaihtelivat ajan ja luostarin mukaan, joten tämä on yleiskuva. Varhain nousu ei ole kyyhkyn juttu, sen myönnän.
+KYSYMYS: Kerro lisää: lekoveljiä
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Miksi Maulbronnin luostari on säilynyt näin hyvin?
+AIEMPI VASTAUS (Livia):
+Kiva kysymys tuo. Yksi tärkeä syy on rakennusten jatkuva käyttö. Kun luostari lakkautettiin 1500-luvulla, tilalle tuli protestanttinen seminaari, joten rakennuksia ei hylätty rapistumaan eikä purettu rakennusmateriaaliksi. Luostarin muurit ja pihapiiri ovat myös säilyneet poikkeuksellisen kokonaisina, ja tiloja on osin käytetty koulutarkoituksiin pitkälle nykyaikaan. [[Württembergin]] hallinnon alaisuudessa rakennukset pysyivät huollettuina, ja vuonna 1993 kohde otettiin [[UNESCOn]] maailmanperintöluetteloon. Muitakin tekijöitä voi olla, mutta täsmällisiä yksityiskohtia en ole varma. Pitkäikäinen paikka, ei hassumpaa.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+AIEMPI KYSYMYS: Miten kohde pääsee UNESCOn maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Tuota, virallinen asia, mutta kerrotaan. Kohde pääsee maailmanperintöluetteloon usean vaiheen kautta. Ensin valtio, joka on liittynyt vuonna 1972 laadittuun maailmanperintösopimukseen, kirjaa kohteen ehdotuslistalleen ja laatii siitä virallisen hakemuksen. Kulttuurikohteita arvioi asiantuntijajärjestö [[ICOMOS]], luontokohteita [[IUCN]], ja lopullisesta päätöksestä vastaa maailmanperintökomitea. Kohteella on oltava poikkeuksellinen yleismaailmallinen arvo ja täytettävä vähintään yksi kymmenestä kriteeristä sekä aitouden ja eheyden vaatimukset. [[Maulbronnin]] luostari hyväksyttiin luetteloon vuonna 1993. Paljon papereita, ja minä kuljettaisin ne mielelläni perille.
+KYSYMYS: Kerro lisää: ICOMOS
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maulbronnin luostari (historia)
+Tietoruudun teksti: Maulbronnin luostari on entinen sisterssiläisluostari ja Pyhän saksalais-roomalaisen keisarikunnan kirkollinen valtio Baden-Württembergissä. Se on yksi Euroopan parhaiten säilyneistä luostarikomplekseista ja UNESCO-kohde vuodesta 1993. Luostari perustettiin vuonna 1147, kun munkit siirrettiin Eckenweiherista Salzach-joen lähteen tuntumassa olevalle paikalle Speyerin piispan päätöksellä. Se kasvoi nopeasti 1100-luvulla, kärsi vaikeuksista 1200- ja 1300-luvun lopulla ja vaurastui uudelleen 1400-luvulla, kunnes Württembergin herttuakunta liitti sen itseensä vuonna 1504. 1500-luvulla sisterssiläisluostari lakkautettiin ja tilalle tuli protestanttinen seminaari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Labrador — kaupunkilehti / Labradorinsorsa – lintu joka katosi: Viimeinen lintu ammutaan] Labradorinsorsan kanta romahti nopeasti vuosien 1850 ja 1870 välillä: munia kerättiin, höyhenkauppa verotti kantaa ja talvehtimisalueiden simpukkapenkit hupenivat. Viimeinen Kanadassa nähty yksilö havaittiin New Brunswickin Grand Mananissa vuonna 1874 – isoisän matkavuonna. Viimeinen tunnettu ja museoon säilötty näytekappale ammuttiin syksyllä 1875 Long Islandilla New Yorkissa, ja viimeinen väitetty havainto tehtiin vielä 1878 Elmirassa. Kansainvälinen luonnonsuojeluliitto IUCN pitää lajia sukupuuttoon kuolleena virallisesti vuodesta 1875 – ensimmäisenä pohjoisamerikkalaisena vesilintulajina, jonka ihminen hävitti.
+- [Dunedin — kaupunkilehti / Otagon niemimaa: Maailman harvinaisin pingviini vetäytyy] Hoiho eli keltasilmäpingviini on IUCN:n luokituksessa uhanalainen, ja Otagon niemimaalla sen kanta on romahtanut 75 prosenttia 1990-luvun puolivälistä. Kehityssuunta ennakoi lajin katoamista niemimaalta kokonaan 20–40 vuoden sisällä. Syitä on useita: meren lämpeneminen, 2000-luvun puolivälin tautiepidemia joka tappoi lintuja suoraan, sekä kalastuksen ja saastumisen vaikutukset, joiden osuutta tutkijat pitävät mahdollisesti yhtä suurena tai suurempana kuin ilmastonmuutoksen.
+AIEMPI KYSYMYS: Miten kohde pääsee UNESCOn maailmanperintöluetteloon?
+AIEMPI VASTAUS (Livia):
+Tuota, virallinen asia, mutta kerrotaan. Kohde pääsee maailmanperintöluetteloon usean vaiheen kautta. Ensin valtio, joka on liittynyt vuonna 1972 laadittuun maailmanperintösopimukseen, kirjaa kohteen ehdotuslistalleen ja laatii siitä virallisen hakemuksen. Kulttuurikohteita arvioi asiantuntijajärjestö [[ICOMOS]], luontokohteita [[IUCN]], ja lopullisesta päätöksestä vastaa maailmanperintökomitea. Kohteella on oltava poikkeuksellinen yleismaailmallinen arvo ja täytettävä vähintään yksi kymmenestä kriteeristä sekä aitouden ja eheyden vaatimukset. [[Maulbronnin]] luostari hyväksyttiin luetteloon vuonna 1993. Paljon papereita, ja minä kuljettaisin ne mielelläni perille.
+KYSYMYS: Kerro lisää: IUCN
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+AIEMPI KYSYMYS: Mikä Romanttinen tie on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu reitti. Romanttinen tie on matkailutie Etelä-Saksassa, joka kulkee [[Würzburgista]] Frankenin ja Baijerin halki aina [[Füsseniin]] Alppien juurelle. Se yhdistää useita keskiaikaisia kaupunkeja ja linnoja, kuten [[Rothenburg ob der Tauberin]], Dinkelsbühlin, Nördlingenin ja Augsburgin, ja päättyy lähelle [[Neuschwansteinin]] linnaa. Reitti on pitkä, yli 300 kilometriä, ja sen nimi ja markkinointi ovat syntyneet matkailun tarpeisiin 1900-luvulla; tarkkaa vuotta en ole varma.
+
+Linnuntietä kaikki nuo kaupungit ovat kyyhkylle vain pisteitä kartalla, mutta autoilijan pitää kuulemma pysähtyä joka toisessa. Tienvarsilla on varmasti omat pullansa, en vaan tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Würzburgista
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Mikä Romanttinen tie on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu reitti. Romanttinen tie on matkailutie Etelä-Saksassa, joka kulkee [[Würzburgista]] Frankenin ja Baijerin halki aina [[Füsseniin]] Alppien juurelle. Se yhdistää useita keskiaikaisia kaupunkeja ja linnoja, kuten [[Rothenburg ob der Tauberin]], Dinkelsbühlin, Nördlingenin ja Augsburgin, ja päättyy lähelle [[Neuschwansteinin]] linnaa. Reitti on pitkä, yli 300 kilometriä, ja sen nimi ja markkinointi ovat syntyneet matkailun tarpeisiin 1900-luvulla; tarkkaa vuotta en ole varma.
+
+Linnuntietä kaikki nuo kaupungit ovat kyyhkylle vain pisteitä kartalla, mutta autoilijan pitää kuulemma pysähtyä joka toisessa. Tienvarsilla on varmasti omat pullansa, en vaan tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Füsseniin
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Mikä Romanttinen tie on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu reitti. Romanttinen tie on matkailutie Etelä-Saksassa, joka kulkee [[Würzburgista]] Frankenin ja Baijerin halki aina [[Füsseniin]] Alppien juurelle. Se yhdistää useita keskiaikaisia kaupunkeja ja linnoja, kuten [[Rothenburg ob der Tauberin]], Dinkelsbühlin, Nördlingenin ja Augsburgin, ja päättyy lähelle [[Neuschwansteinin]] linnaa. Reitti on pitkä, yli 300 kilometriä, ja sen nimi ja markkinointi ovat syntyneet matkailun tarpeisiin 1900-luvulla; tarkkaa vuotta en ole varma.
+
+Linnuntietä kaikki nuo kaupungit ovat kyyhkylle vain pisteitä kartalla, mutta autoilijan pitää kuulemma pysähtyä joka toisessa. Tienvarsilla on varmasti omat pullansa, en vaan tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Rothenburg ob der Tauberin
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Mikä Romanttinen tie on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu reitti. Romanttinen tie on matkailutie Etelä-Saksassa, joka kulkee [[Würzburgista]] Frankenin ja Baijerin halki aina [[Füsseniin]] Alppien juurelle. Se yhdistää useita keskiaikaisia kaupunkeja ja linnoja, kuten [[Rothenburg ob der Tauberin]], Dinkelsbühlin, Nördlingenin ja Augsburgin, ja päättyy lähelle [[Neuschwansteinin]] linnaa. Reitti on pitkä, yli 300 kilometriä, ja sen nimi ja markkinointi ovat syntyneet matkailun tarpeisiin 1900-luvulla; tarkkaa vuotta en ole varma.
+
+Linnuntietä kaikki nuo kaupungit ovat kyyhkylle vain pisteitä kartalla, mutta autoilijan pitää kuulemma pysähtyä joka toisessa. Tienvarsilla on varmasti omat pullansa, en vaan tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Neuschwansteinin
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Mitä vapaa keisarillinen kaupunki tarkoitti?
+AIEMPI VASTAUS (Livia):
+Hmm, otetaanpa tämä rauhassa. Vapaa keisarillinen kaupunki oli [[Pyhän saksalais-roomalaisen keisarikunnan]] kaupunki, joka ei kuulunut minkään ruhtinaan tai piispan alaisuuteen vaan oli suoraan keisarin vallan alla. Tällainen kaupunki hallitsi itseään: sillä oli oma neuvosto, oma tuomiovalta, oikeus kerätä veroja ja usein oma sotaväki ja muurit. Vastineeksi kaupunki maksoi keisarille veroja ja osallistui keisarin sotaretkien tukemiseen. [[Rothenburg]] oli tällainen kaupunki myöhäiskeskiajalta vuoteen 1803, jolloin keisarikunnan rakenteet hajosivat ja kaupunki menetti asemansa; samanlaisia olivat myös [[Nürnberg]] ja [[Augsburg]]. Oma neuvosto ja omat muurit, ihan kuin kyyhkyslakka isommassa koossa.
+KYSYMYS: Kerro lisää: Pyhän saksalais-roomalaisen keisarikunnan
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Mitä vapaa keisarillinen kaupunki tarkoitti?
+AIEMPI VASTAUS (Livia):
+Hmm, otetaanpa tämä rauhassa. Vapaa keisarillinen kaupunki oli [[Pyhän saksalais-roomalaisen keisarikunnan]] kaupunki, joka ei kuulunut minkään ruhtinaan tai piispan alaisuuteen vaan oli suoraan keisarin vallan alla. Tällainen kaupunki hallitsi itseään: sillä oli oma neuvosto, oma tuomiovalta, oikeus kerätä veroja ja usein oma sotaväki ja muurit. Vastineeksi kaupunki maksoi keisarille veroja ja osallistui keisarin sotaretkien tukemiseen. [[Rothenburg]] oli tällainen kaupunki myöhäiskeskiajalta vuoteen 1803, jolloin keisarikunnan rakenteet hajosivat ja kaupunki menetti asemansa; samanlaisia olivat myös [[Nürnberg]] ja [[Augsburg]]. Oma neuvosto ja omat muurit, ihan kuin kyyhkyslakka isommassa koossa.
+KYSYMYS: Kerro lisää: Rothenburg
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Markkinat, jotka avataan joka vuosi samana päivänä] 1628 — Joulumarkkinat ovat Saksassa oma vuodenaikansa. Nürnbergin Christkindlesmarkt on niistä kuuluisin, ja se mainitaan asiakirjoissa jo vuonna 1628. Markkinat avataan adventin alla ja suljetaan jouluaattona. Kojuissa myydään puisia leluja, kynttilöitä, paahdettuja manteleita ja Glühweiniä, joka on kuumaa maustettua viiniä — lapsille sama juoma tehdään ilman viiniä ja se on nimeltään Kinderpunsch.
+AIEMPI KYSYMYS: Mitä vapaa keisarillinen kaupunki tarkoitti?
+AIEMPI VASTAUS (Livia):
+Hmm, otetaanpa tämä rauhassa. Vapaa keisarillinen kaupunki oli [[Pyhän saksalais-roomalaisen keisarikunnan]] kaupunki, joka ei kuulunut minkään ruhtinaan tai piispan alaisuuteen vaan oli suoraan keisarin vallan alla. Tällainen kaupunki hallitsi itseään: sillä oli oma neuvosto, oma tuomiovalta, oikeus kerätä veroja ja usein oma sotaväki ja muurit. Vastineeksi kaupunki maksoi keisarille veroja ja osallistui keisarin sotaretkien tukemiseen. [[Rothenburg]] oli tällainen kaupunki myöhäiskeskiajalta vuoteen 1803, jolloin keisarikunnan rakenteet hajosivat ja kaupunki menetti asemansa; samanlaisia olivat myös [[Nürnberg]] ja [[Augsburg]]. Oma neuvosto ja omat muurit, ihan kuin kyyhkyslakka isommassa koossa.
+KYSYMYS: Kerro lisää: Nürnberg
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venezuela — maalehti / Historia: Maa, joka annettiin pankkiirille velan pantiksi] 1527–1546 — Juan Martín de Ampués perusti Santa Ana de Coron 26. heinäkuuta 1527. Vuotta myöhemmin keisari Kaarle V luovutti koko provinssin velkojensa vakuudeksi augsburgilaiselle Welser-pankkiirisuvulle, ja aluetta alettiin kutsua nimellä Klein-Venedig; Coron nimi oli tuolloin Neu-Augsburg. Ensimmäinen kuvernööri Ambrosius Ehinger perusti Maracaibon 1529, ja retkikunnat lähtivät Corosta etsimään El Doradoa. Vuonna 1546 espanjalainen kuvernööri teloitti Welserien miehet, ja keisari perui valtakirjan.
+AIEMPI KYSYMYS: Mitä vapaa keisarillinen kaupunki tarkoitti?
+AIEMPI VASTAUS (Livia):
+Hmm, otetaanpa tämä rauhassa. Vapaa keisarillinen kaupunki oli [[Pyhän saksalais-roomalaisen keisarikunnan]] kaupunki, joka ei kuulunut minkään ruhtinaan tai piispan alaisuuteen vaan oli suoraan keisarin vallan alla. Tällainen kaupunki hallitsi itseään: sillä oli oma neuvosto, oma tuomiovalta, oikeus kerätä veroja ja usein oma sotaväki ja muurit. Vastineeksi kaupunki maksoi keisarille veroja ja osallistui keisarin sotaretkien tukemiseen. [[Rothenburg]] oli tällainen kaupunki myöhäiskeskiajalta vuoteen 1803, jolloin keisarikunnan rakenteet hajosivat ja kaupunki menetti asemansa; samanlaisia olivat myös [[Nürnberg]] ja [[Augsburg]]. Oma neuvosto ja omat muurit, ihan kuin kyyhkyslakka isommassa koossa.
+KYSYMYS: Kerro lisää: Augsburg
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Miksi kaupunkeja ympäröitiin muureilla?
+AIEMPI VASTAUS (Livia):
+Selvä, no tää on helppo. Kaupunginmuuri suojasi kaupunkia hyökkäyksiltä ja piirityksiltä, ja sen portit voitiin sulkea yöksi. Muuri ei kuitenkaan ollut vain puolustusrakenne: sen avulla kaupunki valvoi kauppaa, keräsi tulleja ja erotti kaupungin oikeudellisesti ympäröivästä maaseudusta. Samalla muuri ja sen tornit osoittivat kaupungin vaurautta ja itsenäisyyttä. Tykistön kehittyessä ja kaupunkien kasvaessa monet muurit menettivät merkityksensä, ja moni purettiin 1800-luvulla uuden tilan tieltä. [[Rothenburgin]] lisäksi täysin ehjät muurit ovat vielä esimerkiksi [[Nördlingenissä]] ja [[Dinkelsbühlissä]]. Muurit näyttävät ylhäältä kauniilta renkailta.
+KYSYMYS: Kerro lisää: Rothenburgin
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Miksi kaupunkeja ympäröitiin muureilla?
+AIEMPI VASTAUS (Livia):
+Selvä, no tää on helppo. Kaupunginmuuri suojasi kaupunkia hyökkäyksiltä ja piirityksiltä, ja sen portit voitiin sulkea yöksi. Muuri ei kuitenkaan ollut vain puolustusrakenne: sen avulla kaupunki valvoi kauppaa, keräsi tulleja ja erotti kaupungin oikeudellisesti ympäröivästä maaseudusta. Samalla muuri ja sen tornit osoittivat kaupungin vaurautta ja itsenäisyyttä. Tykistön kehittyessä ja kaupunkien kasvaessa monet muurit menettivät merkityksensä, ja moni purettiin 1800-luvulla uuden tilan tieltä. [[Rothenburgin]] lisäksi täysin ehjät muurit ovat vielä esimerkiksi [[Nördlingenissä]] ja [[Dinkelsbühlissä]]. Muurit näyttävät ylhäältä kauniilta renkailta.
+KYSYMYS: Kerro lisää: Nördlingenissä
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Miksi kaupunkeja ympäröitiin muureilla?
+AIEMPI VASTAUS (Livia):
+Selvä, no tää on helppo. Kaupunginmuuri suojasi kaupunkia hyökkäyksiltä ja piirityksiltä, ja sen portit voitiin sulkea yöksi. Muuri ei kuitenkaan ollut vain puolustusrakenne: sen avulla kaupunki valvoi kauppaa, keräsi tulleja ja erotti kaupungin oikeudellisesti ympäröivästä maaseudusta. Samalla muuri ja sen tornit osoittivat kaupungin vaurautta ja itsenäisyyttä. Tykistön kehittyessä ja kaupunkien kasvaessa monet muurit menettivät merkityksensä, ja moni purettiin 1800-luvulla uuden tilan tieltä. [[Rothenburgin]] lisäksi täysin ehjät muurit ovat vielä esimerkiksi [[Nördlingenissä]] ja [[Dinkelsbühlissä]]. Muurit näyttävät ylhäältä kauniilta renkailta.
+KYSYMYS: Kerro lisää: Dinkelsbühlissä
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Mikä on Nördlingenin erikoisuus?
+AIEMPI VASTAUS (Livia):
+Joo, sepä on kiinnostava. Nördlingen on Baijerin Schwabenissa sijaitseva kaupunki, jonka keskiaikainen muuri on yhä kokonainen. Kaupunki sijaitsee [[Riesin kraatterissa]], joka syntyi noin 15 miljoonaa vuotta sitten, kun meteoriitti iski alueelle; lukua pidetään likimääräisenä. Kaupungin [[Pyhän Yrjön kirkon]] torni on suosittu näköalapaikka, ja kerrotaan, että kirkon rakennuskivessä on iskun yhteydessä syntyneitä pieniä timantteja. Nördlingen kuuluu myös [[Romanttiseen tiehen]]. Kuoppaan rakennettu kaupunki, ja silti ylpeä muureistaan.
+KYSYMYS: Kerro lisää: Riesin kraatterissa
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+AIEMPI KYSYMYS: Mikä on Nördlingenin erikoisuus?
+AIEMPI VASTAUS (Livia):
+Joo, sepä on kiinnostava. Nördlingen on Baijerin Schwabenissa sijaitseva kaupunki, jonka keskiaikainen muuri on yhä kokonainen. Kaupunki sijaitsee [[Riesin kraatterissa]], joka syntyi noin 15 miljoonaa vuotta sitten, kun meteoriitti iski alueelle; lukua pidetään likimääräisenä. Kaupungin [[Pyhän Yrjön kirkon]] torni on suosittu näköalapaikka, ja kerrotaan, että kirkon rakennuskivessä on iskun yhteydessä syntyneitä pieniä timantteja. Nördlingen kuuluu myös [[Romanttiseen tiehen]]. Kuoppaan rakennettu kaupunki, ja silti ylpeä muureistaan.
+KYSYMYS: Kerro lisää: Pyhän Yrjön kirkon
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Mikä on Nördlingenin erikoisuus?
+AIEMPI VASTAUS (Livia):
+Joo, sepä on kiinnostava. Nördlingen on Baijerin Schwabenissa sijaitseva kaupunki, jonka keskiaikainen muuri on yhä kokonainen. Kaupunki sijaitsee [[Riesin kraatterissa]], joka syntyi noin 15 miljoonaa vuotta sitten, kun meteoriitti iski alueelle; lukua pidetään likimääräisenä. Kaupungin [[Pyhän Yrjön kirkon]] torni on suosittu näköalapaikka, ja kerrotaan, että kirkon rakennuskivessä on iskun yhteydessä syntyneitä pieniä timantteja. Nördlingen kuuluu myös [[Romanttiseen tiehen]]. Kuoppaan rakennettu kaupunki, ja silti ylpeä muureistaan.
+KYSYMYS: Kerro lisää: Romanttiseen tiehen
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+AIEMPI KYSYMYS: Millainen alue Franken on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on laaja aihe. Franken eli Franconia on historiallinen alue Pohjois-Baijerissa, ja nykyisin siihen kuuluu kolme Baijerin hallintoaluetta: Ylä-Franken, Keski-Franken ja Ala-Franken. Frankenilaisilla on oma murteensa ja oma identiteettinsä, joka eroaa vanhoista baijerilaisista alueista. Alue tunnetaan viinistä, erityisesti Bocksbeutel-pullosta, jolla on litteä, pyöreä muoto, sekä oluesta ja linnoista. Rothenburg ob der Tauber sijaitsee Keski-Frankenissa, ja alueen keskeisiä kaupunkeja ovat [[Nürnberg]], [[Würzburg]] ja [[Bamberg]]. Frankenissa on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Würzburg
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rothenburg ob der Tauber (kulttuuri)
+Tietoruudun teksti: Rothenburg ob der Tauber on kaupunki Ansbachin piirikunnassa Baijerin Keski-Frankenissa, ja se tunnetaan parhaiten hyvin säilyneestä keskiaikaisesta vanhastakaupungistaan. Se kuuluu suosittuun Romanttiseen tiehen Etelä-Saksassa, ja se on yksi vain neljästä saksalaiskaupungista, joiden kaupunginmuurit ovat yhä täysin ehjät; muut ovat Nördlingen, Dinkelsbühl ja Berching. Nimi tarkoittaa Tauber-joen yläpuolella olevaa punaista linnaa. Rothenburg oli vapaa keisarillinen kaupunki myöhäiskeskiajalta vuoteen 1803, ja vuosina 1884–1903 Johann Friedrich von Hessing rakennutti kaupunkiin Wildbadin kylpylän.
+AIEMPI KYSYMYS: Millainen alue Franken on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on laaja aihe. Franken eli Franconia on historiallinen alue Pohjois-Baijerissa, ja nykyisin siihen kuuluu kolme Baijerin hallintoaluetta: Ylä-Franken, Keski-Franken ja Ala-Franken. Frankenilaisilla on oma murteensa ja oma identiteettinsä, joka eroaa vanhoista baijerilaisista alueista. Alue tunnetaan viinistä, erityisesti Bocksbeutel-pullosta, jolla on litteä, pyöreä muoto, sekä oluesta ja linnoista. Rothenburg ob der Tauber sijaitsee Keski-Frankenissa, ja alueen keskeisiä kaupunkeja ovat [[Nürnberg]], [[Würzburg]] ja [[Bamberg]]. Frankenissa on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Bamberg
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Kellotorni, joka näkyy joelle] Luostarin kellotorni rakennettiin vuosina 1731–1745 saksalaisen arkkitehti Johann Gottfried Schädelin suunnitelmien mukaan, ja se oli valmistuessaan maailman korkein vapaasti seisova kellotorni. Ristin kanssa se nousee 96,5 metrin korkeuteen ja sen kullattu kupoli näkyy kauas Dnipro-joelle. Koko luostarikompleksi, luolat ja maanpäälliset rakennukset yhdessä, on ollut Unescon maailmanperintökohde vuodesta 1990.
+AIEMPI KYSYMYS: Miksi Wagner rakennutti oman oopperatalon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tost riittäis juttua vaikka kolmeksi illaksi. Wagner halusi näyttämön, joka oli omistettu yksinomaan hänen omien näyttämöteostensa esittämiselle. Hän mukaili suunnitelman [[Gottfried Semperin]] toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa. Pääasiallisen rahoituksen antoi Baijerin kuningas [[Ludwig II]], ja Brasilian keisari Pedro II tuki hanketta omista varoistaan. Peruskivi laskettiin 22. toukokuuta 1872, ja talo avattiin [[Nibelungin sormuksen]] koko sarjan ensi-illalla elokuussa 1876. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Gottfried Semperin
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kuuro säveltäjä kuuli musiikin päässään] Bonnissa syntynyt Ludwig van Beethoven alkoi menettää kuuloaan alle kolmekymppisenä — säveltäjälle pahin mahdollinen kohtalo. Hän ei lopettanut vaan sävelsi päänsä sisällä: keskustelut käytiin vihkoihin kirjoittamalla, ja flyygelistä hän sahasi jalat, jotta tunsi sävelet lattian värinänä. Yhdeksännen sinfonian kantaesityksessä 1824 täysin kuuro Beethoven piti kääntää kasvot yleisöön päin, jotta hän näki suosionosoitukset, joita ei kuullut. Sinfonian loppuhymni Oodi ilolle on nykyään Euroopan unionin hymni.
+AIEMPI KYSYMYS: Miksi Wagner rakennutti oman oopperatalon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tost riittäis juttua vaikka kolmeksi illaksi. Wagner halusi näyttämön, joka oli omistettu yksinomaan hänen omien näyttämöteostensa esittämiselle. Hän mukaili suunnitelman [[Gottfried Semperin]] toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa. Pääasiallisen rahoituksen antoi Baijerin kuningas [[Ludwig II]], ja Brasilian keisari Pedro II tuki hanketta omista varoistaan. Peruskivi laskettiin 22. toukokuuta 1872, ja talo avattiin [[Nibelungin sormuksen]] koko sarjan ensi-illalla elokuussa 1876. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Ludwig II
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Historia: Vehnäntähkä turbaanissa] 1747 — Kun Persian hallitsija Nader Shah murhattiin kesäkuussa 1747, hänen afgaanikaartinsa päällikkö Ahmad Khan Abdali otti vainajan sormuksen ja Koh-i-Noor-timantin ja marssi joukkoineen Kandahariin. Tarun mukaan heimopäälliköiden jirga valitsi hänet yksimielisesti kuninkaaksi ja hänen turbaaniinsa asetettiin vehnäntähkä. Historioitsijat ovat toista mieltä: vallan antoi yhdeksän miehen sotilasneuvosto, ja neuvonantaja Sabir Shah kiinnitti lakkiin vain vihreän oksan. Ahmad Shah otti liikanimen Durr-i Durran, helmien helmi, ja vaihtoi heimonsa nimen abdaleista durraneiksi. Afganistanissa häntä sanotaan yhä nimellä Ahmad Shah Baba, isä.
+AIEMPI KYSYMYS: Miksi Wagner rakennutti oman oopperatalon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tost riittäis juttua vaikka kolmeksi illaksi. Wagner halusi näyttämön, joka oli omistettu yksinomaan hänen omien näyttämöteostensa esittämiselle. Hän mukaili suunnitelman [[Gottfried Semperin]] toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa. Pääasiallisen rahoituksen antoi Baijerin kuningas [[Ludwig II]], ja Brasilian keisari Pedro II tuki hanketta omista varoistaan. Peruskivi laskettiin 22. toukokuuta 1872, ja talo avattiin [[Nibelungin sormuksen]] koko sarjan ensi-illalla elokuussa 1876. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Nibelungin sormuksen
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mikä Nibelungin sormus on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sormus. Se on iso juttu, mut yritän pysyä lyhyenä. Nibelungin sormus on Richard Wagnerin neljän oopperan sarja, johon kuuluvat [[Reinin kulta]], [[Valkyyria]], [[Siegfried]] ja [[Jumalten tuho]]. Sarja kertoo sormuksesta, joka antaa haltijalleen vallan, ja taistelusta sen omistamisesta. Wagner otti aineksia muun muassa germaanisesta ja pohjoismaisesta myyttiperinteestä. Koko sarja esitettiin ensimmäistä kertaa Bayreuthin Festspielhausin avajaisissa elokuussa 1876, ja esitys vie useita iltoja. Sormus on kyl kyyhkylle liian painava.
+KYSYMYS: Kerro lisää: Reinin kulta
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+AIEMPI KYSYMYS: Mikä Nibelungin sormus on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sormus. Se on iso juttu, mut yritän pysyä lyhyenä. Nibelungin sormus on Richard Wagnerin neljän oopperan sarja, johon kuuluvat [[Reinin kulta]], [[Valkyyria]], [[Siegfried]] ja [[Jumalten tuho]]. Sarja kertoo sormuksesta, joka antaa haltijalleen vallan, ja taistelusta sen omistamisesta. Wagner otti aineksia muun muassa germaanisesta ja pohjoismaisesta myyttiperinteestä. Koko sarja esitettiin ensimmäistä kertaa Bayreuthin Festspielhausin avajaisissa elokuussa 1876, ja esitys vie useita iltoja. Sormus on kyl kyyhkylle liian painava.
+KYSYMYS: Kerro lisää: Valkyyria
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+AIEMPI KYSYMYS: Mikä Nibelungin sormus on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sormus. Se on iso juttu, mut yritän pysyä lyhyenä. Nibelungin sormus on Richard Wagnerin neljän oopperan sarja, johon kuuluvat [[Reinin kulta]], [[Valkyyria]], [[Siegfried]] ja [[Jumalten tuho]]. Sarja kertoo sormuksesta, joka antaa haltijalleen vallan, ja taistelusta sen omistamisesta. Wagner otti aineksia muun muassa germaanisesta ja pohjoismaisesta myyttiperinteestä. Koko sarja esitettiin ensimmäistä kertaa Bayreuthin Festspielhausin avajaisissa elokuussa 1876, ja esitys vie useita iltoja. Sormus on kyl kyyhkylle liian painava.
+KYSYMYS: Kerro lisää: Siegfried
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Jumalten vaunu] Noin vuonna 500 eaa. karthagolainen merenkulkija Hanno purjehti Länsi-Afrikan rannikkoa pitkin ja näki kaukaa merellä vuoren, joka syöksi öisin liekkejä taivaalle. Hänen pelästyneet miehensä antoivat sille nimen "jumalten vaunu", Theon Ochema. Tutkijat eivät ole täysin varmoja, mikä vuori kertomuksessa oli kyseessä, mutta monien mielestä paras ehdokas on juuri Kamerunvuori – jolloin Hannon matkakertomus olisi ihmiskunnan vanhin säilynyt kuvaus tulivuorenpurkauksesta.
+AIEMPI KYSYMYS: Mikä Nibelungin sormus on?
+AIEMPI VASTAUS (Livia):
+Ai tota, sormus. Se on iso juttu, mut yritän pysyä lyhyenä. Nibelungin sormus on Richard Wagnerin neljän oopperan sarja, johon kuuluvat [[Reinin kulta]], [[Valkyyria]], [[Siegfried]] ja [[Jumalten tuho]]. Sarja kertoo sormuksesta, joka antaa haltijalleen vallan, ja taistelusta sen omistamisesta. Wagner otti aineksia muun muassa germaanisesta ja pohjoismaisesta myyttiperinteestä. Koko sarja esitettiin ensimmäistä kertaa Bayreuthin Festspielhausin avajaisissa elokuussa 1876, ja esitys vie useita iltoja. Sormus on kyl kyyhkylle liian painava.
+KYSYMYS: Kerro lisää: Jumalten tuho
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+AIEMPI KYSYMYS: Kuka oli Baijerin kuningas Ludwig II?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan [[Richard Wagnerin]] ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. [[Bayreuthin Festspielhausin]] pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.
+KYSYMYS: Kerro lisää: Richard Wagnerin
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Kuka oli Baijerin kuningas Ludwig II?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan [[Richard Wagnerin]] ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. [[Bayreuthin Festspielhausin]] pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.
+KYSYMYS: Kerro lisää: Neuschwanstein
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+AIEMPI KYSYMYS: Kuka oli Baijerin kuningas Ludwig II?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: satukuningas. Hänestä on kerrottu enemmän kuin ehdin lentää. Ludwig II oli Baijerin kuningas 1860-luvulta 1880-luvun puoliväliin. Hän tunnetaan [[Richard Wagnerin]] ihailijana ja tukijana sekä satumaisista linnoistaan, joista tunnetuin on [[Neuschwanstein]]. [[Bayreuthin Festspielhausin]] pääasiallinen rahoitus tuli häneltä. Hänen elämänsä loppu oli arvoituksellinen ja surullinen, eikä sitä tässä käydä läpi. Kyllä minä sen verran muistan, vaikka vuosilukuja en rupea vannomaan.
+KYSYMYS: Kerro lisää: Bayreuthin Festspielhausin
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+AIEMPI KYSYMYS: Järjestetäänkö talossa yhä Wagner-festivaaleja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän tiedän. Kyllä, [[Bayreuthin festivaali]] järjestetään yhä vuosittain kesäisin [[Festspielhausissa]], ja ohjelmistossa ovat Wagnerin teokset. Talo on rakennettu juuri tätä varten, ja sen käyttö on pysynyt samana siitä asti, kun se avattiin vuonna 1876. Tarkkoja päiviä ja ohjelmistoa en ole varma, joten ne kannattaa tarkistaa festivaalin omilta sivuilta. Lippujen saamisesta kuulemma kilpaillaan, ja minä lentäisin ikkunalle.
+KYSYMYS: Kerro lisää: Bayreuthin festivaali
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+AIEMPI KYSYMYS: Järjestetäänkö talossa yhä Wagner-festivaaleja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän tiedän. Kyllä, [[Bayreuthin festivaali]] järjestetään yhä vuosittain kesäisin [[Festspielhausissa]], ja ohjelmistossa ovat Wagnerin teokset. Talo on rakennettu juuri tätä varten, ja sen käyttö on pysynyt samana siitä asti, kun se avattiin vuonna 1876. Tarkkoja päiviä ja ohjelmistoa en ole varma, joten ne kannattaa tarkistaa festivaalin omilta sivuilta. Lippujen saamisesta kuulemma kilpaillaan, ja minä lentäisin ikkunalle.
+KYSYMYS: Kerro lisää: Festspielhausissa
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Gottfried Semper?
+AIEMPI VASTAUS (Livia):
+Kas vaan, Semper. Hänen työnsä näkee monessa kaupungissa. Gottfried Semper oli 1800-luvun saksalainen arkkitehti ja taidehistorian ajattelija. Hänet muistetaan erityisesti oopperataloista ja muista suurista julkisista rakennuksista; Dresdenin oopperatalo [[Semperoper]] on yksi hänen tunnetuimpia töitään. Hän suunnitteli myös Münchenin oopperatalon, jota ei koskaan rakennettu, ja juuri sen suunnitelmaa [[Richard Wagner]] mukaili Bayreuthissa. Ei kyyhky muista kaikkea, mut tämän verran.
+KYSYMYS: Kerro lisää: Semperoper
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bayreuthin Festspielhaus (kulttuuri)
+Tietoruudun teksti: Bayreuthin Festspielhaus on Bayreuthin pohjoispuolella oleva oopperatalo, jonka säveltäjä Richard Wagner rakennutti ja joka on omistettu yksinomaan hänen näyttämöteostensa esittämiselle. Wagner mukaili suunnitelman Gottfried Semperin toteutumattomasta Münchenin oopperatalosta ja valvoi rakentamista arkkitehti Otto Brückwaldin kanssa, ja pääasiallisen rahoituksen antoi Baijerin kuningas Ludwig II. Peruskivi laskettiin 22. toukokuuta 1872, Wagnerin 59-vuotispäivänä, ja talo avattiin Nibelungin sormuksen koko sarjan ensi-illalla 13.–17. elokuuta 1876. Vain sisäänkäyntijulkisivussa on 1800-luvun lopun koristelua, ja muu ulkopuoli on koristelematonta tiiltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+AIEMPI KYSYMYS: Kuka oli arkkitehti Gottfried Semper?
+AIEMPI VASTAUS (Livia):
+Kas vaan, Semper. Hänen työnsä näkee monessa kaupungissa. Gottfried Semper oli 1800-luvun saksalainen arkkitehti ja taidehistorian ajattelija. Hänet muistetaan erityisesti oopperataloista ja muista suurista julkisista rakennuksista; Dresdenin oopperatalo [[Semperoper]] on yksi hänen tunnetuimpia töitään. Hän suunnitteli myös Münchenin oopperatalon, jota ei koskaan rakennettu, ja juuri sen suunnitelmaa [[Richard Wagner]] mukaili Bayreuthissa. Ei kyyhky muista kaikkea, mut tämän verran.
+KYSYMYS: Kerro lisää: Richard Wagner
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+AIEMPI KYSYMYS: Mikä Rheingau on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, annas ku mietin. Rheingau on viinialue Reinin oikealla rannalla Hessenissä. Sen tunnetuin kaupunki on [[Rüdesheim am Rhein]], joka sijaitsee Niederwaldin juurella. Alue tunnetaan erityisesti rieslingviineistä, ja sen läpi kulkevan [[Reinin rotkon]] maisema on kuulunut Reinin romantiikan ylistämiin näkymiin. Rüdesheimin viinitarhojen halki kulkee Riesling-reitti. Täältä katolta ne rinteet näyttävät kyl vihreiltä raidoilta.
+KYSYMYS: Kerro lisää: Rüdesheim am Rhein
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mikä Rheingau on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, annas ku mietin. Rheingau on viinialue Reinin oikealla rannalla Hessenissä. Sen tunnetuin kaupunki on [[Rüdesheim am Rhein]], joka sijaitsee Niederwaldin juurella. Alue tunnetaan erityisesti rieslingviineistä, ja sen läpi kulkevan [[Reinin rotkon]] maisema on kuulunut Reinin romantiikan ylistämiin näkymiin. Rüdesheimin viinitarhojen halki kulkee Riesling-reitti. Täältä katolta ne rinteet näyttävät kyl vihreiltä raidoilta.
+KYSYMYS: Kerro lisää: Reinin rotkon
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+AIEMPI KYSYMYS: Mitä Niederwalddenkmal esittää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki [[Rüdesheimin]] viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy [[Saksan keisarikunnan]] perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.
+KYSYMYS: Kerro lisää: Rüdesheimin
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+AIEMPI KYSYMYS: Mitä Niederwalddenkmal esittää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki [[Rüdesheimin]] viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy [[Saksan keisarikunnan]] perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.
+KYSYMYS: Kerro lisää: Germania
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Mitä Niederwalddenkmal esittää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Niederwalddenkmal on isänmaallinen muistomerkki [[Rüdesheimin]] viinitarhojen yläpuolella. Sen keskeinen hahmo on [[Germania]], naisfiguuri, joka symboloi Saksaa ja jonka kohotetussa kädessä on kruunu. Muistomerkki liittyy [[Saksan keisarikunnan]] perustamiseen vuonna 1871. Sen peruskivi laskettiin vuonna 1877 ja se valmistui vuonna 1883. Aika korkealta sitä on hyvä katsoa, mut minä katson sitä vielä korkeammalta.
+KYSYMYS: Kerro lisää: Saksan keisarikunnan
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Mikä on Drosselgasse?
+AIEMPI VASTAUS (Livia):
+Mmm, tuo on kuuluisa. Drosselgasse on [[Rüdesheimin]] vanhankaupungin sydämessä oleva kapea kivetty jalankulkukatu, jonka pituus on 144 metriä. Sen varrella on viinitavernoja, ja se kuuluu kaupungin tunnetuimpiin nähtävyyksiin. Kaupungin viinitarhojen läpi kulkee myös [[Riesling-reitti]], joka on toinen tapa tutustua alueeseen. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Riesling-reitti
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+AIEMPI KYSYMYS: Mikä Reinin rotko on?
+AIEMPI VASTAUS (Livia):
+No jopas, iso aihe. Katsotaas. Reinin rotko on Reinin joenlaakson osuus, joka kuuluu UNESCOn maailmanperintökohteisiin. Se on noin 65 kilometrin mittainen jakso, jonka rinteillä on viinitarhoja, kyliä ja linnoja. Tunnetuimpia paikkoja siellä on [[Loreley-kallio]], ja alueen maisemaa ylisti [[Reinin romantiikka]]. Rüdesheim kuuluu samaan kohteeseen. Tämän matkan minä oon lentänyt useammin kuin ehdin laskea.
+KYSYMYS: Kerro lisää: Loreley-kallio
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mikä Reinin rotko on?
+AIEMPI VASTAUS (Livia):
+No jopas, iso aihe. Katsotaas. Reinin rotko on Reinin joenlaakson osuus, joka kuuluu UNESCOn maailmanperintökohteisiin. Se on noin 65 kilometrin mittainen jakso, jonka rinteillä on viinitarhoja, kyliä ja linnoja. Tunnetuimpia paikkoja siellä on [[Loreley-kallio]], ja alueen maisemaa ylisti [[Reinin romantiikka]]. Rüdesheim kuuluu samaan kohteeseen. Tämän matkan minä oon lentänyt useammin kuin ehdin laskea.
+KYSYMYS: Kerro lisää: Reinin romantiikka
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Millaista viiniä Rheingaussa tuotetaan?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä osaan kertoo. Rheingaussa tuotetaan pääasiassa valkoviiniä, ja tunnetuin rypälelajike on [[Riesling]]. Alueella on myös punaviinin tuotantoa: [[Assmannshausen]] on tunnettu punaviinistään, joka tehdään [[Spätburgunder]]-rypäleestä. Tarkkoja tuotantomääriä en ole varma, joten niitä ei kannata ottaa minulta. Minä pidän kyl enemmän jyvistä kuin rypäleistä.
+KYSYMYS: Kerro lisää: Riesling
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+AIEMPI KYSYMYS: Millaista viiniä Rheingaussa tuotetaan?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä osaan kertoo. Rheingaussa tuotetaan pääasiassa valkoviiniä, ja tunnetuin rypälelajike on [[Riesling]]. Alueella on myös punaviinin tuotantoa: [[Assmannshausen]] on tunnettu punaviinistään, joka tehdään [[Spätburgunder]]-rypäleestä. Tarkkoja tuotantomääriä en ole varma, joten niitä ei kannata ottaa minulta. Minä pidän kyl enemmän jyvistä kuin rypäleistä.
+KYSYMYS: Kerro lisää: Assmannshausen
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rüdesheim ja Rheingau (ruoka)
+Tietoruudun teksti: Rüdesheim am Rhein on saksalainen viininviljelykaupunki Reinin rotkossa Hessenissä, ja se kuuluu UNESCOn Reinin rotkon maailmanperintökohteeseen. Se sijaitsee Niederwaldin juurella Reinin oikealla rannalla Rheingaun viinialueella, ja sen vanhassakaupungissa on Reinin romantiikan ylistämä maisema. Vuonna 1877 laskettiin peruskivi Niederwalddenkmalille, isänmaalliselle muistomerkille viinitarhojen yläpuolella, ja se valmistui vuonna 1883. Drosselgasse on 144 metriä pitkä kapea kivetty jalankulkukatu vanhankaupungin sydämessä, jonka varrella on viinitavernoja, ja kaupungin viinitarhojen läpi kulkee Riesling-reitti.
+AIEMPI KYSYMYS: Millaista viiniä Rheingaussa tuotetaan?
+AIEMPI VASTAUS (Livia):
+Ai se, tost minä osaan kertoo. Rheingaussa tuotetaan pääasiassa valkoviiniä, ja tunnetuin rypälelajike on [[Riesling]]. Alueella on myös punaviinin tuotantoa: [[Assmannshausen]] on tunnettu punaviinistään, joka tehdään [[Spätburgunder]]-rypäleestä. Tarkkoja tuotantomääriä en ole varma, joten niitä ei kannata ottaa minulta. Minä pidän kyl enemmän jyvistä kuin rypäleistä.
+KYSYMYS: Kerro lisää: Spätburgunder
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Kuka Nikolaus von Kues oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on vähän vaativampi veto. Nikolaus von Kues, latinalaisesti [[Cusanus]], oli keskiaikainen kirkonmies ja filosofi. Hän syntyi Kuesissa, joka kuuluu nykyisin Bernkastel-Kuesin kaupunkiin Moselin varrella. Hänet muistetaan ajattelijana ja kardinaalina, ja hänen tunnetuin teoksensa on [[De docta ignorantia]], jonka nimi tarkoittaa oppinutta tietämättömyyttä. Hän perusti Kuesiin myös hospitaalin, joka on yhä olemassa. Tarkat vuosiluvut jätän kirjoihin, kun en ole niistä aivan varma.
+KYSYMYS: Kerro lisää: Cusanus
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Kuka Nikolaus von Kues oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tää on vähän vaativampi veto. Nikolaus von Kues, latinalaisesti [[Cusanus]], oli keskiaikainen kirkonmies ja filosofi. Hän syntyi Kuesissa, joka kuuluu nykyisin Bernkastel-Kuesin kaupunkiin Moselin varrella. Hänet muistetaan ajattelijana ja kardinaalina, ja hänen tunnetuin teoksensa on [[De docta ignorantia]], jonka nimi tarkoittaa oppinutta tietämättömyyttä. Hän perusti Kuesiin myös hospitaalin, joka on yhä olemassa. Tarkat vuosiluvut jätän kirjoihin, kun en ole niistä aivan varma.
+KYSYMYS: Kerro lisää: De docta ignorantia
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Mikä Spitzhäuschen on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tuo pieni on söpö. Spitzhäuschen on [[Bernkastelin]] keskiaikaisella torilla oleva kapea ristikkotalo, joka on vuodelta 1416. Nimi viittaa talon suippoon muotoon. Se kuuluu torin ympärillä olevaan ristikkotaloihin, joita on pääosin 1600-luvulta, ja torin [[Pyhän Mikaelin kaivon]] ympärillä on rivi hyvin säilyneitä rakennuksia. Pienin talo, isoin huomio, ja kyyhky istuu kuulemma mielellään sen harjalla.
+KYSYMYS: Kerro lisää: Bernkastelin
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+AIEMPI KYSYMYS: Mikä Spitzhäuschen on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tuo pieni on söpö. Spitzhäuschen on [[Bernkastelin]] keskiaikaisella torilla oleva kapea ristikkotalo, joka on vuodelta 1416. Nimi viittaa talon suippoon muotoon. Se kuuluu torin ympärillä olevaan ristikkotaloihin, joita on pääosin 1600-luvulta, ja torin [[Pyhän Mikaelin kaivon]] ympärillä on rivi hyvin säilyneitä rakennuksia. Pienin talo, isoin huomio, ja kyyhky istuu kuulemma mielellään sen harjalla.
+KYSYMYS: Kerro lisää: Pyhän Mikaelin kaivon
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Millaista viiniä Moselilla tuotetaan?
+AIEMPI VASTAUS (Livia):
+Kato, tästä alueesta minä pidän. Moselin viinialueella tuotetaan pääasiassa valkoviiniä, ja tunnetuin lajike on [[Riesling]]. Viinitarhat ovat jyrkillä rinteillä, joiden maaperä on liusketta. Bernkastelin alueen tunnetuin viinitarha on [[Bernkasteler Doctor]]. Tarkkoja tuotantomääriä en ole varma.
+
+Moselin rinteet näyttävät katolta pystysuorilta, ja silti ihmiset kiipeävät niille poimimaan rypäleitä, mikä on kyyhkyn mielestä aika rohkeaa.
+KYSYMYS: Kerro lisää: Riesling
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Millaista viiniä Moselilla tuotetaan?
+AIEMPI VASTAUS (Livia):
+Kato, tästä alueesta minä pidän. Moselin viinialueella tuotetaan pääasiassa valkoviiniä, ja tunnetuin lajike on [[Riesling]]. Viinitarhat ovat jyrkillä rinteillä, joiden maaperä on liusketta. Bernkastelin alueen tunnetuin viinitarha on [[Bernkasteler Doctor]]. Tarkkoja tuotantomääriä en ole varma.
+
+Moselin rinteet näyttävät katolta pystysuorilta, ja silti ihmiset kiipeävät niille poimimaan rypäleitä, mikä on kyyhkyn mielestä aika rohkeaa.
+KYSYMYS: Kerro lisää: Bernkasteler Doctor
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Mikä Landshutin linna on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tää menee aika vanhaan aikaan. Landshutin linna on Bernkastelin lähellä sijaitseva linnanrauniokohde. Rauniot ovat mahdollisesti 300-luvun roomalaisen [[castellumin]] paikalla, mutta tätä ei voi pitää varmana. Keskiaikaisen linnan rakentamisajasta en ole varma, joten jätän sen sanomatta. Se kuuluu [[Bernkastelin]] historiaan, joka alkaa asiakirjoista 1000-luvun alkupuoliskolla. No, kyl raunioiden päältä näkee kauas.
+KYSYMYS: Kerro lisää: castellumin
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Mikä Trier on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Trier. Hyvä kysymys tuo. Trier on Moselin varrella sijaitseva saksalainen kaupunki, jonka roomalaisaikainen nimi oli [[Augusta Treverorum]]. Se tunnetaan roomalaisista rakennuksistaan, joista tunnetuin on [[Porta Nigra]], ja kaupunki väittää usein olevansa Saksan vanhin. Siitä on Bernkastelista noin 50 kilometrin matka. Roomalaiset rakensivat nämä paikat hyvin, kyllä minä sen sanon.
+KYSYMYS: Kerro lisää: Augusta Treverorum
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernkastel ja Mosel (ruoka)
+Tietoruudun teksti: Bernkastel-Kues on kaupunki Moselin keskijuoksulla Rheinland-Pfalzissa, ja se tunnetaan viininviljelystään. Kaupunki on keskiaikaisen kirkonmiehen ja filosofin Nikolaus von Kuesin, Cusanuksen, syntymäkaupunki, ja Trierista on matkaa noin 50 kilometriä. Bernkastel mainitaan ensimmäisen kerran asiakirjoissa 1000-luvun alkupuoliskolla, ja lähellä olevan Landshutin linnanrauniot ovat mahdollisesti 300-luvun roomalaisen castellumin paikalla. Keskiaikaisella torilla on 1600-luvun ristikkotaloja, joista kapea Spitzhäuschen on vuodelta 1416, ja Pyhän Mikaelin kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.
+AIEMPI KYSYMYS: Mikä Trier on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Trier. Hyvä kysymys tuo. Trier on Moselin varrella sijaitseva saksalainen kaupunki, jonka roomalaisaikainen nimi oli [[Augusta Treverorum]]. Se tunnetaan roomalaisista rakennuksistaan, joista tunnetuin on [[Porta Nigra]], ja kaupunki väittää usein olevansa Saksan vanhin. Siitä on Bernkastelista noin 50 kilometrin matka. Roomalaiset rakensivat nämä paikat hyvin, kyllä minä sen sanon.
+KYSYMYS: Kerro lisää: Porta Nigra
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+AIEMPI KYSYMYS: Kuinka korkeat Tribergin putoukset ovat?
+AIEMPI VASTAUS (Livia):
+Hmm, nyt tarvitaan tarkkuutta. Tribergin vesiputoukset ovat sarja putouksia [[Gutach-joessa]], ja niiden yhteenlaskettu putoamiskorkeus on 151 metriä. Ne ovat Saksan korkeimpia putouksia, mutta eivät kuitenkaan korkeimmat, sillä korkein on [[Röthbachfall]]. Putoukset sijaitsevat [[Mustan metsän]] keskellä Tribergin kaupungissa. Sata viisikymmentä metriä on kyyhkylle kyl ihan tarpeeksi alas katsottavaksi.
+KYSYMYS: Kerro lisää: Gutach-joessa
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+AIEMPI KYSYMYS: Kuinka korkeat Tribergin putoukset ovat?
+AIEMPI VASTAUS (Livia):
+Hmm, nyt tarvitaan tarkkuutta. Tribergin vesiputoukset ovat sarja putouksia [[Gutach-joessa]], ja niiden yhteenlaskettu putoamiskorkeus on 151 metriä. Ne ovat Saksan korkeimpia putouksia, mutta eivät kuitenkaan korkeimmat, sillä korkein on [[Röthbachfall]]. Putoukset sijaitsevat [[Mustan metsän]] keskellä Tribergin kaupungissa. Sata viisikymmentä metriä on kyyhkylle kyl ihan tarpeeksi alas katsottavaksi.
+KYSYMYS: Kerro lisää: Röthbachfall

@@ -1,0 +1,973 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+AIEMPI KYSYMYS: Millaista maastoa Elben laakso Dresdenin kohdalla on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dresdenin kohdalla Elbe virtaa leveässä jokilaaksossa, johon suurin osa kaupungin asukkaista on asettunut. Joen itäpuolella maasto nousee Länsi-Lusatian kukkulaseuduksi, joka kuuluu [[Sudeettien]] läntisimpään osaan, ja länsipuolella ollaan [[Malmivuorten]] esimaastossa, jossa [[Weißeritz]] ja Lockwitzbach syntyvät purolaaksoineen. Joen yläjuoksulla kaakossa jatkuu hiekkakivikallioinen [[Saksilainen Sveitsi]]. Joen laakso on kyyhkylle kuin valmis kulkureitti.
+KYSYMYS: Kerro lisää: Saksilainen Sveitsi
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: San Franciscon kaupungintalo] 1870–1915 Edellinen kaupungintalo oli varoittava esimerkki. Sen rakentaminen alkoi 1870 vanhan hautausmaan paikalle kolmion muotoiselle tontille, ja Augustus Laverin ja Thomas Stentin suunnitelma valmistui vasta 1897 — kaksikymmentäseitsemän vuotta ja seitsemän pääarkkitehtia myöhemmin. Työtä varjosti korruptio: tiilien huhuttiin olevan kelvottomia ja seinien täytteenä todettiin olevan hiekkaa, lattiat olivat vinossa ja savupiiput vetivät huonosti. Hinnaksi tuli kuusi miljoonaa dollaria, ja vuoden 1906 maanjäristys kaatoi talon vajaat kymmenen vuotta sen valmistumisen jälkeen. Isoisän matkan aikaan työmaa oli ollut käynnissä kolme vuotta, ja sitä oli vielä neljäkolmatta vuotta jäljellä. Uus…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Mikä on Zwinger?
+AIEMPI VASTAUS (Livia):
+Tuota niin, se on kaupungin tunnetuimpia rakennuksia. Zwinger on Dresdenin barokkityylinen palatsi- ja puutarhakokonaisuus, jonka rakentaminen alkoi 1700-luvun alussa [[Augustus Vahvan]] käskystä ja jonka suunnitteli arkkitehti [[Pöppelmann]]. Nimi tarkoittaa linnoituksen ulko- ja sisämuurin väliin jäävää aluetta, jolle rakennus nousi. Nykyään rakennuksissa toimii taidemuseoita ja aukio on avoin kävijöille. Kyyhkynä sanon, että [[barokin]] kaarevat katot ovat mainio laskeutumispaikka.
+KYSYMYS: Kerro lisää: Augustus Vahvan
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+AIEMPI KYSYMYS: Mikä on Zwinger?
+AIEMPI VASTAUS (Livia):
+Tuota niin, se on kaupungin tunnetuimpia rakennuksia. Zwinger on Dresdenin barokkityylinen palatsi- ja puutarhakokonaisuus, jonka rakentaminen alkoi 1700-luvun alussa [[Augustus Vahvan]] käskystä ja jonka suunnitteli arkkitehti [[Pöppelmann]]. Nimi tarkoittaa linnoituksen ulko- ja sisämuurin väliin jäävää aluetta, jolle rakennus nousi. Nykyään rakennuksissa toimii taidemuseoita ja aukio on avoin kävijöille. Kyyhkynä sanon, että [[barokin]] kaarevat katot ovat mainio laskeutumispaikka.
+KYSYMYS: Kerro lisää: Pöppelmann
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Mikä on Zwinger?
+AIEMPI VASTAUS (Livia):
+Tuota niin, se on kaupungin tunnetuimpia rakennuksia. Zwinger on Dresdenin barokkityylinen palatsi- ja puutarhakokonaisuus, jonka rakentaminen alkoi 1700-luvun alussa [[Augustus Vahvan]] käskystä ja jonka suunnitteli arkkitehti [[Pöppelmann]]. Nimi tarkoittaa linnoituksen ulko- ja sisämuurin väliin jäävää aluetta, jolle rakennus nousi. Nykyään rakennuksissa toimii taidemuseoita ja aukio on avoin kävijöille. Kyyhkynä sanon, että [[barokin]] kaarevat katot ovat mainio laskeutumispaikka.
+KYSYMYS: Kerro lisää: barokin
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+AIEMPI KYSYMYS: Kuka oli Augustus Vahva?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Augustus Vahva, eli Fredrik Augustus I, oli [[Saksin]] vaaliruhtinas ja ajoittain myös [[Puolan]] kuningas, joka eli 1670–1733. Hän sai Puolan kruunun 1697 ja kääntyi sitä varten katoliseksi. Hän rakennutti Dresdeniin barokkipalatseja ja tuki [[Meissenin]] posliinin valmistuksen kehittämistä. Lempinimen kerrotaan viittaavan hänen poikkeukselliseen voimaansa, mutta tarinoiden todenperäisyydestä en ole varma. Rautaisia patkoja sormilla, sanotaan.
+KYSYMYS: Kerro lisää: Saksin
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Kuka oli Augustus Vahva?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Augustus Vahva, eli Fredrik Augustus I, oli [[Saksin]] vaaliruhtinas ja ajoittain myös [[Puolan]] kuningas, joka eli 1670–1733. Hän sai Puolan kruunun 1697 ja kääntyi sitä varten katoliseksi. Hän rakennutti Dresdeniin barokkipalatseja ja tuki [[Meissenin]] posliinin valmistuksen kehittämistä. Lempinimen kerrotaan viittaavan hänen poikkeukselliseen voimaansa, mutta tarinoiden todenperäisyydestä en ole varma. Rautaisia patkoja sormilla, sanotaan.
+KYSYMYS: Kerro lisää: Puolan
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+AIEMPI KYSYMYS: Kuka oli Augustus Vahva?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Augustus Vahva, eli Fredrik Augustus I, oli [[Saksin]] vaaliruhtinas ja ajoittain myös [[Puolan]] kuningas, joka eli 1670–1733. Hän sai Puolan kruunun 1697 ja kääntyi sitä varten katoliseksi. Hän rakennutti Dresdeniin barokkipalatseja ja tuki [[Meissenin]] posliinin valmistuksen kehittämistä. Lempinimen kerrotaan viittaavan hänen poikkeukselliseen voimaansa, mutta tarinoiden todenperäisyydestä en ole varma. Rautaisia patkoja sormilla, sanotaan.
+KYSYMYS: Kerro lisää: Meissenin
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+AIEMPI KYSYMYS: Mikä on Meissenin posliini?
+AIEMPI VASTAUS (Livia):
+No jopas. Meissenin posliini on saksilaista hienoposliinia, jonka valmistus alkoi Meissenin kaupungissa Dresdenin lähellä 1700-luvun alussa. Sen kehittämisessä oli keskeinen alkemisti [[Johann Friedrich Böttger]], jota [[Augustus Vahva]] velvoitti työhön, koska Euroopassa kiinalaista posliinia osattiin jäljitellä vain huonosti. Tuotannon tunnuksena ovat [[ristikkäiset miekat]]. Posliinia en ole koskaan kantanut, sillä se ei kestä lentoa.
+KYSYMYS: Kerro lisää: Johann Friedrich Böttger
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dresden (kulttuuri)
+Tietoruudun teksti: Dresden on Saksin osavaltion pääkaupunki ja Leipzigin jälkeen sen toiseksi suurin kaupunki. Hampurin jälkeen se on Elben toiseksi suurin kaupunki, ja suurin osa asukkaista asuu jokilaaksossa. Elben itäpuolella kaupunkia jatkuu Länsi-Lusatian kukkulamaastoon eli Sudeettien läntisimpään osaan; länsipuolella ollaan jo Malmivuorten esimaastossa, ja siellä syntyvät Weißeritzin ja Lockwitzbachin purolaaksot. Kaupungin nimi ja useimmat sen kaupunginosien nimet ovat alkuaan slaavilaisia.
+AIEMPI KYSYMYS: Mikä on Meissenin posliini?
+AIEMPI VASTAUS (Livia):
+No jopas. Meissenin posliini on saksilaista hienoposliinia, jonka valmistus alkoi Meissenin kaupungissa Dresdenin lähellä 1700-luvun alussa. Sen kehittämisessä oli keskeinen alkemisti [[Johann Friedrich Böttger]], jota [[Augustus Vahva]] velvoitti työhön, koska Euroopassa kiinalaista posliinia osattiin jäljitellä vain huonosti. Tuotannon tunnuksena ovat [[ristikkäiset miekat]]. Posliinia en ole koskaan kantanut, sillä se ei kestä lentoa.
+KYSYMYS: Kerro lisää: ristikkäiset miekat
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi Luther piileskeli linnassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on selvä syy. Luther joutui piiloon, koska keisari [[Kaarle V]] kuulusteli hänet [[Wormsin]] valtiopäivillä 1521 ja julisti hänet sen jälkeen lainsuojattomaksi, jolloin häntä ei saanut suojella eikä majoittaa. Saksin vaaliruhtinas [[Fredrik Viisas]] järjesti hänelle turvapaikan Wartburgista, ja Luther asui linnassa naamioituneena ritari Jörgiksi vuoden verran, 1521–1522. Siellä hän käänsi [[Uuden testamentin]] saksaksi, ja käännös julkaistiin 1522. Linna kyllä piilopaikaksi kelpaa, vaikka kyyhky huomaisi sen heti.
+KYSYMYS: Kerro lisää: Kaarle V
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Miksi Luther piileskeli linnassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on selvä syy. Luther joutui piiloon, koska keisari [[Kaarle V]] kuulusteli hänet [[Wormsin]] valtiopäivillä 1521 ja julisti hänet sen jälkeen lainsuojattomaksi, jolloin häntä ei saanut suojella eikä majoittaa. Saksin vaaliruhtinas [[Fredrik Viisas]] järjesti hänelle turvapaikan Wartburgista, ja Luther asui linnassa naamioituneena ritari Jörgiksi vuoden verran, 1521–1522. Siellä hän käänsi [[Uuden testamentin]] saksaksi, ja käännös julkaistiin 1522. Linna kyllä piilopaikaksi kelpaa, vaikka kyyhky huomaisi sen heti.
+KYSYMYS: Kerro lisää: Wormsin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Miksi Luther piileskeli linnassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on selvä syy. Luther joutui piiloon, koska keisari [[Kaarle V]] kuulusteli hänet [[Wormsin]] valtiopäivillä 1521 ja julisti hänet sen jälkeen lainsuojattomaksi, jolloin häntä ei saanut suojella eikä majoittaa. Saksin vaaliruhtinas [[Fredrik Viisas]] järjesti hänelle turvapaikan Wartburgista, ja Luther asui linnassa naamioituneena ritari Jörgiksi vuoden verran, 1521–1522. Siellä hän käänsi [[Uuden testamentin]] saksaksi, ja käännös julkaistiin 1522. Linna kyllä piilopaikaksi kelpaa, vaikka kyyhky huomaisi sen heti.
+KYSYMYS: Kerro lisää: Fredrik Viisas
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia: Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna] Primož Trubar oli protestanttinen uudistaja, joka saarnasi Ljubljanassa 1530-luvulta ja joutui lähtemään kaupungista vuonna 1547. Saksassa hän kirjoitti vuonna 1550 kaksi ensimmäistä sloveniankielistä kirjaa, Catechismuksen ja Abecedariumin, jotka painettiin Schwäbisch Hallissa. Kaikkiaan hän kirjoitti 22 sloveniankielistä kirjaa ja käänsi koko Uuden testamentin. Kirjakielen pohjaksi hän valitsi Ljubljanan puheen, koska piti sitä sopivimpana.
+AIEMPI KYSYMYS: Miksi Luther piileskeli linnassa?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on selvä syy. Luther joutui piiloon, koska keisari [[Kaarle V]] kuulusteli hänet [[Wormsin]] valtiopäivillä 1521 ja julisti hänet sen jälkeen lainsuojattomaksi, jolloin häntä ei saanut suojella eikä majoittaa. Saksin vaaliruhtinas [[Fredrik Viisas]] järjesti hänelle turvapaikan Wartburgista, ja Luther asui linnassa naamioituneena ritari Jörgiksi vuoden verran, 1521–1522. Siellä hän käänsi [[Uuden testamentin]] saksaksi, ja käännös julkaistiin 1522. Linna kyllä piilopaikaksi kelpaa, vaikka kyyhky huomaisi sen heti.
+KYSYMYS: Kerro lisää: Uuden testamentin
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Mikä Wartburgin juhla 1817 oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Wartburgin juhla 1817 oli saksalaisten opiskelijoiden kokous Wartburgin linnassa lokakuussa. Paikalle kokoontui [[Burschenschaft]]-nimisten opiskelijayhdistysten edustajia useista yliopistoista, ja juhlan aiheina olivat [[uskonpuhdistuksen]] 300-vuotisjuhla ja [[Leipzigin kansojen taistelun]] muisto vuodelta 1813. Opiskelijat toivoivat Saksan yhtenäisyyttä ja vapaampia oloja, ja tapahtumaa pidetään yhtenä Saksan kansallisen ja liberaalin liikkeen alkupisteistä. Opiskelijat osaavat edelleen kokoontua isolla äänellä.
+KYSYMYS: Kerro lisää: Burschenschaft
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Riddarholmenin kirkko] 1835 Riddarholmenin kirkko on yksi Tukholman vanhimmista rakennuksista — se rakennettiin fransiskaanimunkkien luostariksi jo 1200-luvun lopulla. Uskonpuhdistuksen jälkeen munkit lähtivät, ja kirkosta tuli vähitellen kuninkaallisten hautakirkko. Melkein kaikki Ruotsin kuninkaat Kustaa II Aadolfista Kustaa V:een lepäävät kirkon holveissa, samoin kaksi keskiaikaista kuningasta. Vain kuningatar Kristiina on haudattu muualle, Roomaan. Alkuperäisen tornin huipun suunnitteli flaamilainen arkkitehti Willem Boy 1500-luvulla, mutta salama tuhosi sen 28. heinäkuuta 1835. Nykyinen valurautahuippu on rakennettu sen tilalle. Seurakunta lakkautettiin jo 1807, joten kirkkoa käytetään enää hautajaisiin ja m…
+AIEMPI KYSYMYS: Mikä Wartburgin juhla 1817 oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Wartburgin juhla 1817 oli saksalaisten opiskelijoiden kokous Wartburgin linnassa lokakuussa. Paikalle kokoontui [[Burschenschaft]]-nimisten opiskelijayhdistysten edustajia useista yliopistoista, ja juhlan aiheina olivat [[uskonpuhdistuksen]] 300-vuotisjuhla ja [[Leipzigin kansojen taistelun]] muisto vuodelta 1813. Opiskelijat toivoivat Saksan yhtenäisyyttä ja vapaampia oloja, ja tapahtumaa pidetään yhtenä Saksan kansallisen ja liberaalin liikkeen alkupisteistä. Opiskelijat osaavat edelleen kokoontua isolla äänellä.
+KYSYMYS: Kerro lisää: uskonpuhdistuksen
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kanttori sävelsi joka viikolle uuden teoksen] Johann Sebastian Bach oli Leipzigin Tuomaskirkon kanttori, jonka työhön kuului säveltää lähes joka sunnuntaille uusi kantaatti — ja opettaa samalla poikakuoroa ja latinaa. Sävellyksiä kertyi yli tuhat. Bach oli aikansa kuuluisin urkujen testaaja: kun uudet urut valmistuivat, hän veti kaikki äänikerrat auki ja sanoi haluavansa kuulla, onko soittimella "hyvät keuhkot". Kotona oli kaksikymmentä lasta, joista neljä pojista nousi itsekin kuuluisiksi säveltäjiksi.
+AIEMPI KYSYMYS: Mikä Wartburgin juhla 1817 oli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Wartburgin juhla 1817 oli saksalaisten opiskelijoiden kokous Wartburgin linnassa lokakuussa. Paikalle kokoontui [[Burschenschaft]]-nimisten opiskelijayhdistysten edustajia useista yliopistoista, ja juhlan aiheina olivat [[uskonpuhdistuksen]] 300-vuotisjuhla ja [[Leipzigin kansojen taistelun]] muisto vuodelta 1813. Opiskelijat toivoivat Saksan yhtenäisyyttä ja vapaampia oloja, ja tapahtumaa pidetään yhtenä Saksan kansallisen ja liberaalin liikkeen alkupisteistä. Opiskelijat osaavat edelleen kokoontua isolla äänellä.
+KYSYMYS: Kerro lisää: Leipzigin kansojen taistelun
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Kuka oli pyhä Elisabet Unkarilainen?
+AIEMPI VASTAUS (Livia):
+Just niin, hänestä riittää juttua. Elisabet oli unkarilainen kuninkaantytär, syntynyt 1207, joka meni naimisiin [[Thüringenin]] maakreivin kanssa ja asui [[Wartburgissa]]. Hän tunnetaan köyhien ja sairaiden auttamisesta, ja hän kuoli nuorena 1231 [[Marburgissa]]. Paavi julisti hänet pyhäksi 1235. Leipää köyhille jakava pyhimys on kyyhkyn lempiihmisiä.
+KYSYMYS: Kerro lisää: Thüringenin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Kuka oli pyhä Elisabet Unkarilainen?
+AIEMPI VASTAUS (Livia):
+Just niin, hänestä riittää juttua. Elisabet oli unkarilainen kuninkaantytär, syntynyt 1207, joka meni naimisiin [[Thüringenin]] maakreivin kanssa ja asui [[Wartburgissa]]. Hän tunnetaan köyhien ja sairaiden auttamisesta, ja hän kuoli nuorena 1231 [[Marburgissa]]. Paavi julisti hänet pyhäksi 1235. Leipää köyhille jakava pyhimys on kyyhkyn lempiihmisiä.
+KYSYMYS: Kerro lisää: Wartburgissa
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Kuka oli pyhä Elisabet Unkarilainen?
+AIEMPI VASTAUS (Livia):
+Just niin, hänestä riittää juttua. Elisabet oli unkarilainen kuninkaantytär, syntynyt 1207, joka meni naimisiin [[Thüringenin]] maakreivin kanssa ja asui [[Wartburgissa]]. Hän tunnetaan köyhien ja sairaiden auttamisesta, ja hän kuoli nuorena 1231 [[Marburgissa]]. Paavi julisti hänet pyhäksi 1235. Leipää köyhille jakava pyhimys on kyyhkyn lempiihmisiä.
+KYSYMYS: Kerro lisää: Marburgissa
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Mikä Sängerkrieg oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sängerkrieg, eli laulajien sota, on keskiaikainen legenda laulukilpailusta, jonka kerrotaan käyneen Wartburgin linnassa 1200-luvun alussa Thüringenin maakreivi Hermannin hovissa. Tarinan mukaan osanottajina olivat muun muassa [[Walther von der Vogelweide]] ja [[Wolfram von Eschenbach]], ja kilpailua pidetään yleensä pikemminkin legendana kuin todellisena tapahtumana. Aiheen otti myöhemmin käyttöönsä [[Richard Wagner]] oopperassaan Tannhäuser.
+
+Laulukilpailu linnassa kuulostaa minusta ihanalta. Pitäisi järjestää sellainen kyyhkyillekin, vaikka voittaja olisi tiedossa jo ennalta.
+KYSYMYS: Kerro lisää: Walther von der Vogelweide
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Mikä Sängerkrieg oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sängerkrieg, eli laulajien sota, on keskiaikainen legenda laulukilpailusta, jonka kerrotaan käyneen Wartburgin linnassa 1200-luvun alussa Thüringenin maakreivi Hermannin hovissa. Tarinan mukaan osanottajina olivat muun muassa [[Walther von der Vogelweide]] ja [[Wolfram von Eschenbach]], ja kilpailua pidetään yleensä pikemminkin legendana kuin todellisena tapahtumana. Aiheen otti myöhemmin käyttöönsä [[Richard Wagner]] oopperassaan Tannhäuser.
+
+Laulukilpailu linnassa kuulostaa minusta ihanalta. Pitäisi järjestää sellainen kyyhkyillekin, vaikka voittaja olisi tiedossa jo ennalta.
+KYSYMYS: Kerro lisää: Wolfram von Eschenbach
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+AIEMPI KYSYMYS: Mikä Sängerkrieg oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sängerkrieg, eli laulajien sota, on keskiaikainen legenda laulukilpailusta, jonka kerrotaan käyneen Wartburgin linnassa 1200-luvun alussa Thüringenin maakreivi Hermannin hovissa. Tarinan mukaan osanottajina olivat muun muassa [[Walther von der Vogelweide]] ja [[Wolfram von Eschenbach]], ja kilpailua pidetään yleensä pikemminkin legendana kuin todellisena tapahtumana. Aiheen otti myöhemmin käyttöönsä [[Richard Wagner]] oopperassaan Tannhäuser.
+
+Laulukilpailu linnassa kuulostaa minusta ihanalta. Pitäisi järjestää sellainen kyyhkyillekin, vaikka voittaja olisi tiedossa jo ennalta.
+KYSYMYS: Kerro lisää: Richard Wagner
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+AIEMPI KYSYMYS: Missä Eisenach sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Eisenach on kaupunki Thüringenin länsiosassa, lähellä [[Hessenin]] rajaa, ja Wartburgin linna kohoaa sen yläpuolella jyrkänteen päällä. Kaupunki tunnetaan myös siitä, että säveltäjä [[Johann Sebastian Bach]] syntyi siellä 1685. Bach ja linna samassa kaupungissa, ei paha.
+KYSYMYS: Kerro lisää: Hessenin
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wartburg (sana)
+Tietoruudun teksti: Wartburg on keskiaikainen linna 410 metrin korkeudella Thüringenissä, jyrkänteen päällä Eisenachin kaupungin yläpuolella. Se oli Unkarin pyhän Elisabetin koti, ja siellä Martti Luther käänsi Uuden testamentin saksaksi. Samassa linnassa pidettiin vuoden 1817 Wartburgin juhla, ja sinne sijoittuu myös legendaarinen laulajien kilpailu Sängerkrieg. Linnassa on yhä paljon alkuperäistä 1100–1400-lukujen rakennetta, vaikka sisätilat ovat suureksi osaksi 1800-luvulta — juuri sen restauroinnin aikaan isoisä olisi kulkenut ohi. Wartburg innoitti myös Ludwig II:ta, kun hän ryhtyi rakentamaan Neuschwansteinia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kanttori sävelsi joka viikolle uuden teoksen] Johann Sebastian Bach oli Leipzigin Tuomaskirkon kanttori, jonka työhön kuului säveltää lähes joka sunnuntaille uusi kantaatti — ja opettaa samalla poikakuoroa ja latinaa. Sävellyksiä kertyi yli tuhat. Bach oli aikansa kuuluisin urkujen testaaja: kun uudet urut valmistuivat, hän veti kaikki äänikerrat auki ja sanoi haluavansa kuulla, onko soittimella "hyvät keuhkot". Kotona oli kaksikymmentä lasta, joista neljä pojista nousi itsekin kuuluisiksi säveltäjiksi.
+AIEMPI KYSYMYS: Missä Eisenach sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Eisenach on kaupunki Thüringenin länsiosassa, lähellä [[Hessenin]] rajaa, ja Wartburgin linna kohoaa sen yläpuolella jyrkänteen päällä. Kaupunki tunnetaan myös siitä, että säveltäjä [[Johann Sebastian Bach]] syntyi siellä 1685. Bach ja linna samassa kaupungissa, ei paha.
+KYSYMYS: Kerro lisää: Johann Sebastian Bach
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mistä Ruhrin alueen hiili tuli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ruhrin alueen kivihiili on peräisin [[hiilikaudelta]], noin 300 miljoonan vuoden takaa, jolloin alueella kasvoi laajoja suometsiä. Kasvijäänteet painuivat kerros kerrokselta maan alle ja muuttuivat vuosimiljoonien kuluessa hiileksi. Hiiltä louhittiin ensin [[Ruhr-joen]] rannoilla, missä hiilikerrokset nousivat pintaan, ja 1800-luvulla kaivokset siirtyivät yhä syvemmälle pohjoiseen. Saksan viimeiset kivihiilikaivokset suljettiin vuonna 2018. Kolmesataa miljoonaa vuotta, ja sen muistaminen vie jo ison osan kyyhkyn päästä.
+KYSYMYS: Kerro lisää: hiilikaudelta
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mistä Ruhrin alueen hiili tuli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ruhrin alueen kivihiili on peräisin [[hiilikaudelta]], noin 300 miljoonan vuoden takaa, jolloin alueella kasvoi laajoja suometsiä. Kasvijäänteet painuivat kerros kerrokselta maan alle ja muuttuivat vuosimiljoonien kuluessa hiileksi. Hiiltä louhittiin ensin [[Ruhr-joen]] rannoilla, missä hiilikerrokset nousivat pintaan, ja 1800-luvulla kaivokset siirtyivät yhä syvemmälle pohjoiseen. Saksan viimeiset kivihiilikaivokset suljettiin vuonna 2018. Kolmesataa miljoonaa vuotta, ja sen muistaminen vie jo ison osan kyyhkyn päästä.
+KYSYMYS: Kerro lisää: Ruhr-joen
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mikä Hellweg oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hellweg oli keskiajan tärkeä kauppa- ja kulkutie, joka seurasi Ruhrin alueen pohjoisreunaa Reinin varrelta itään kohti Westfalenin sisäosia. Reitti kulki [[Duisburgin]] tienoilta [[Dortmundin]] ja [[Soestin]] kautta [[Paderbornin]] suuntaan Teutoburgin metsän kukkuloille. Nimen alkuperästä en ole varma. Pitkä tie, ja sen varrella olisi ollut paljon paikkoja pullalle.
+KYSYMYS: Kerro lisää: Duisburgin
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mikä Hellweg oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hellweg oli keskiajan tärkeä kauppa- ja kulkutie, joka seurasi Ruhrin alueen pohjoisreunaa Reinin varrelta itään kohti Westfalenin sisäosia. Reitti kulki [[Duisburgin]] tienoilta [[Dortmundin]] ja [[Soestin]] kautta [[Paderbornin]] suuntaan Teutoburgin metsän kukkuloille. Nimen alkuperästä en ole varma. Pitkä tie, ja sen varrella olisi ollut paljon paikkoja pullalle.
+KYSYMYS: Kerro lisää: Dortmundin
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mikä Hellweg oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hellweg oli keskiajan tärkeä kauppa- ja kulkutie, joka seurasi Ruhrin alueen pohjoisreunaa Reinin varrelta itään kohti Westfalenin sisäosia. Reitti kulki [[Duisburgin]] tienoilta [[Dortmundin]] ja [[Soestin]] kautta [[Paderbornin]] suuntaan Teutoburgin metsän kukkuloille. Nimen alkuperästä en ole varma. Pitkä tie, ja sen varrella olisi ollut paljon paikkoja pullalle.
+KYSYMYS: Kerro lisää: Soestin
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mikä Hellweg oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Hellweg oli keskiajan tärkeä kauppa- ja kulkutie, joka seurasi Ruhrin alueen pohjoisreunaa Reinin varrelta itään kohti Westfalenin sisäosia. Reitti kulki [[Duisburgin]] tienoilta [[Dortmundin]] ja [[Soestin]] kautta [[Paderbornin]] suuntaan Teutoburgin metsän kukkuloille. Nimen alkuperästä en ole varma. Pitkä tie, ja sen varrella olisi ollut paljon paikkoja pullalle.
+KYSYMYS: Kerro lisää: Paderbornin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mitä Ruhrin alueelle tapahtui, kun kaivokset suljettiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaivosten ja terästehtaiden vähentyessä Ruhrin alue siirtyi 1900-luvun lopulta vähitellen kohti palveluja, koulutusta ja kulttuuria, ja alueella on nykyään useita yliopistoja. Vanhoja teollisuuskohteita on otettu uuteen käyttöön: Essenin [[Zollvereinin]] kaivos- ja koksaamokompleksi on [[Unescon]] maailmanperintökohde, ja Essen edusti koko aluetta [[Euroopan kulttuuripääkaupunkina]] vuonna 2010.
+
+Savupiippujen paikalle on tullut puistoja ja museoita, ja ylhäältä katsoen vihreä näyttää paremmalta. Minun mielestäni vanha kaivosmaisemakin on hyvä näköalapaikka.
+KYSYMYS: Kerro lisää: Zollvereinin
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mitä Ruhrin alueelle tapahtui, kun kaivokset suljettiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaivosten ja terästehtaiden vähentyessä Ruhrin alue siirtyi 1900-luvun lopulta vähitellen kohti palveluja, koulutusta ja kulttuuria, ja alueella on nykyään useita yliopistoja. Vanhoja teollisuuskohteita on otettu uuteen käyttöön: Essenin [[Zollvereinin]] kaivos- ja koksaamokompleksi on [[Unescon]] maailmanperintökohde, ja Essen edusti koko aluetta [[Euroopan kulttuuripääkaupunkina]] vuonna 2010.
+
+Savupiippujen paikalle on tullut puistoja ja museoita, ja ylhäältä katsoen vihreä näyttää paremmalta. Minun mielestäni vanha kaivosmaisemakin on hyvä näköalapaikka.
+KYSYMYS: Kerro lisää: Unescon
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Mitä Ruhrin alueelle tapahtui, kun kaivokset suljettiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaivosten ja terästehtaiden vähentyessä Ruhrin alue siirtyi 1900-luvun lopulta vähitellen kohti palveluja, koulutusta ja kulttuuria, ja alueella on nykyään useita yliopistoja. Vanhoja teollisuuskohteita on otettu uuteen käyttöön: Essenin [[Zollvereinin]] kaivos- ja koksaamokompleksi on [[Unescon]] maailmanperintökohde, ja Essen edusti koko aluetta [[Euroopan kulttuuripääkaupunkina]] vuonna 2010.
+
+Savupiippujen paikalle on tullut puistoja ja museoita, ja ylhäältä katsoen vihreä näyttää paremmalta. Minun mielestäni vanha kaivosmaisemakin on hyvä näköalapaikka.
+KYSYMYS: Kerro lisää: Euroopan kulttuuripääkaupunkina
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Monterrey: Masuuni jäi puistoon seisomaan] Fundidora Monterrey oli Latinalaisen Amerikan ensimmäinen rauta- ja terästehdas. Se meni konkurssiin 1986, alue pakkolunastettiin 1988 ja rakennustyöt alkoivat 1989 — ensin suojelemalla historiallisesti tärkeät rakennukset ja purkamalla muut. Puisto avattiin 24. helmikuuta 2001 sadanneljäntoista hehtaarin kokoisena, ja se sai lisänimen teollisen arkeologian museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin kanava, ja ala nousi 144 hehtaariin, josta 80 on vihreää. Paikallaan seisovat yhä 27 suurta teollisuusrakennelmaa ja 127 teräksentekokonetta.
+AIEMPI KYSYMYS: Miksi hiiltä ja terästä tarvittiin yhdessä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on oikeastaan kemiaa. Teräs valmistetaan raudasta, ja rautaa saadaan malmista [[masuunissa]]. Malmista täytyy poistaa happi, ja siihen tarvitaan hiiltä: kivihiilestä poltetaan ensin [[koksia]], joka kuumentaa masuunin ja sitoo hapen itseensä. Syntyvä [[raakarauta]] sisältää liikaa hiiltä, ja sen hiilipitoisuutta lasketaan jatkokäsittelyssä, jolloin saadaan terästä. Siksi hiilen ja teräksen tuotanto nousi samoille seuduille. Hiiltä ja rautaa, melko raskas lounas kyyhkylle.
+KYSYMYS: Kerro lisää: masuunissa
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Miksi hiiltä ja terästä tarvittiin yhdessä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on oikeastaan kemiaa. Teräs valmistetaan raudasta, ja rautaa saadaan malmista [[masuunissa]]. Malmista täytyy poistaa happi, ja siihen tarvitaan hiiltä: kivihiilestä poltetaan ensin [[koksia]], joka kuumentaa masuunin ja sitoo hapen itseensä. Syntyvä [[raakarauta]] sisältää liikaa hiiltä, ja sen hiilipitoisuutta lasketaan jatkokäsittelyssä, jolloin saadaan terästä. Siksi hiilen ja teräksen tuotanto nousi samoille seuduille. Hiiltä ja rautaa, melko raskas lounas kyyhkylle.
+KYSYMYS: Kerro lisää: koksia
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Miksi hiiltä ja terästä tarvittiin yhdessä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on oikeastaan kemiaa. Teräs valmistetaan raudasta, ja rautaa saadaan malmista [[masuunissa]]. Malmista täytyy poistaa happi, ja siihen tarvitaan hiiltä: kivihiilestä poltetaan ensin [[koksia]], joka kuumentaa masuunin ja sitoo hapen itseensä. Syntyvä [[raakarauta]] sisältää liikaa hiiltä, ja sen hiilipitoisuutta lasketaan jatkokäsittelyssä, jolloin saadaan terästä. Siksi hiilen ja teräksen tuotanto nousi samoille seuduille. Hiiltä ja rautaa, melko raskas lounas kyyhkylle.
+KYSYMYS: Kerro lisää: raakarauta
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mistä Ruhrin alue on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ruhrin alue on saanut nimensä [[Ruhr-joesta]], joka virtaa alueen eteläreunalla ja laskee [[Reiniin]] [[Duisburgissa]]. Joki on tärkeä vedenlähde, ja sen rannoilla louhittiin hiiltä jo ennen suurteollisuuden aikaa. Alueen pohjoisrajana on Lippe-joki. Ei paha joelle, ja kyyhky ei ole saanut edes katua nimeensä.
+KYSYMYS: Kerro lisää: Ruhr-joesta
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mistä Ruhrin alue on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ruhrin alue on saanut nimensä [[Ruhr-joesta]], joka virtaa alueen eteläreunalla ja laskee [[Reiniin]] [[Duisburgissa]]. Joki on tärkeä vedenlähde, ja sen rannoilla louhittiin hiiltä jo ennen suurteollisuuden aikaa. Alueen pohjoisrajana on Lippe-joki. Ei paha joelle, ja kyyhky ei ole saanut edes katua nimeensä.
+KYSYMYS: Kerro lisää: Reiniin
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruhrin alue (tekniikka)
+Tietoruudun teksti: Ruhrgebiet on monikeskuksinen kaupunkialue Nordrhein-Westfalenissa: yli viisi miljoonaa asukasta ja tiheydeltään Saksan suurin kaupunkialue. Sitä rajaavat etelässä Ruhr, lännessä Rein ja pohjoisessa Lippe. Kaupungit seuraavat toisiaan lännestä itään — Duisburg, Oberhausen, Bottrop, Mülheim, Essen, Gelsenkirchen, Bochum, Herne, Witten, Hagen, Dortmund ja Hamm — eikä niiden väliin jää juuri maaseutua. Keskiajalla samaa linjaa kulki kauppatie Hellweg Ala-Reiniltä Teutoburgin metsän kukkuloille. Isoisän matkan aikaan alue oli juuri muuttumassa: hiilikaivokset ja terässulatot vetivät sinne väkeä koko Preussista.
+AIEMPI KYSYMYS: Mistä Ruhrin alue on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ruhrin alue on saanut nimensä [[Ruhr-joesta]], joka virtaa alueen eteläreunalla ja laskee [[Reiniin]] [[Duisburgissa]]. Joki on tärkeä vedenlähde, ja sen rannoilla louhittiin hiiltä jo ennen suurteollisuuden aikaa. Alueen pohjoisrajana on Lippe-joki. Ei paha joelle, ja kyyhky ei ole saanut edes katua nimeensä.
+KYSYMYS: Kerro lisää: Duisburgissa
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Minkä ranskalaisten linnojen mukaan Schwerinin linna on muotoiltu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ranskalaista mallia. Nykyisen linnan esikuvina olivat [[Loiren]] renessanssilinnat, ja yhtenä niistä mainitaan [[Chambord]]. Linnan suunnitteluun osallistuivat muun muassa [[Gottfried Semper]] ja [[Friedrich August Stüler]], ja nykyinen rakennus valmistui vuosina 1845–1857. Vanhemmasta linnasta on säilynyt vain harvoja osia. Ylhäältä päin tuo näyttää kyl ihan satukirjalta.
+KYSYMYS: Kerro lisää: Loiren
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Minkä ranskalaisten linnojen mukaan Schwerinin linna on muotoiltu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ranskalaista mallia. Nykyisen linnan esikuvina olivat [[Loiren]] renessanssilinnat, ja yhtenä niistä mainitaan [[Chambord]]. Linnan suunnitteluun osallistuivat muun muassa [[Gottfried Semper]] ja [[Friedrich August Stüler]], ja nykyinen rakennus valmistui vuosina 1845–1857. Vanhemmasta linnasta on säilynyt vain harvoja osia. Ylhäältä päin tuo näyttää kyl ihan satukirjalta.
+KYSYMYS: Kerro lisää: Chambord
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Kellotorni, joka näkyy joelle] Luostarin kellotorni rakennettiin vuosina 1731–1745 saksalaisen arkkitehti Johann Gottfried Schädelin suunnitelmien mukaan, ja se oli valmistuessaan maailman korkein vapaasti seisova kellotorni. Ristin kanssa se nousee 96,5 metrin korkeuteen ja sen kullattu kupoli näkyy kauas Dnipro-joelle. Koko luostarikompleksi, luolat ja maanpäälliset rakennukset yhdessä, on ollut Unescon maailmanperintökohde vuodesta 1990.
+AIEMPI KYSYMYS: Minkä ranskalaisten linnojen mukaan Schwerinin linna on muotoiltu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ranskalaista mallia. Nykyisen linnan esikuvina olivat [[Loiren]] renessanssilinnat, ja yhtenä niistä mainitaan [[Chambord]]. Linnan suunnitteluun osallistuivat muun muassa [[Gottfried Semper]] ja [[Friedrich August Stüler]], ja nykyinen rakennus valmistui vuosina 1845–1857. Vanhemmasta linnasta on säilynyt vain harvoja osia. Ylhäältä päin tuo näyttää kyl ihan satukirjalta.
+KYSYMYS: Kerro lisää: Gottfried Semper
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Minkä ranskalaisten linnojen mukaan Schwerinin linna on muotoiltu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ranskalaista mallia. Nykyisen linnan esikuvina olivat [[Loiren]] renessanssilinnat, ja yhtenä niistä mainitaan [[Chambord]]. Linnan suunnitteluun osallistuivat muun muassa [[Gottfried Semper]] ja [[Friedrich August Stüler]], ja nykyinen rakennus valmistui vuosina 1845–1857. Vanhemmasta linnasta on säilynyt vain harvoja osia. Ylhäältä päin tuo näyttää kyl ihan satukirjalta.
+KYSYMYS: Kerro lisää: Friedrich August Stüler
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Mikä toimii nykyään linnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnassa toimii nykyään [[Mecklenburg-Vorpommernin]] osavaltion [[maapäivä]], ja lisäksi siellä on museo. Linna kuuluu myös vuonna 2024 maailmanperintölistalle otettuun [[Schwerinin residenssikokonaisuuteen]]. Se sijaitsee saarella Schwerinin järvessä. Eipä ole huono työpaikka, kun järvi näkyy ikkunasta.
+KYSYMYS: Kerro lisää: Mecklenburg-Vorpommernin
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Mikä toimii nykyään linnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnassa toimii nykyään [[Mecklenburg-Vorpommernin]] osavaltion [[maapäivä]], ja lisäksi siellä on museo. Linna kuuluu myös vuonna 2024 maailmanperintölistalle otettuun [[Schwerinin residenssikokonaisuuteen]]. Se sijaitsee saarella Schwerinin järvessä. Eipä ole huono työpaikka, kun järvi näkyy ikkunasta.
+KYSYMYS: Kerro lisää: maapäivä
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Mikä toimii nykyään linnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnassa toimii nykyään [[Mecklenburg-Vorpommernin]] osavaltion [[maapäivä]], ja lisäksi siellä on museo. Linna kuuluu myös vuonna 2024 maailmanperintölistalle otettuun [[Schwerinin residenssikokonaisuuteen]]. Se sijaitsee saarella Schwerinin järvessä. Eipä ole huono työpaikka, kun järvi näkyy ikkunasta.
+KYSYMYS: Kerro lisää: Schwerinin residenssikokonaisuuteen
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Millainen linna Chambord on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Chambord on [[Loiren laakson]] renessanssilinna, jonka rakennutti 1500-luvun alussa Ranskan kuningas [[Frans I]]. Se tunnetaan runsaasta torni- ja savupiippumetsästään, ja sen tyyli toimi esikuvana myös Schwerinin linnan suunnittelijoille. Siellä on kuulemma niin paljon torneja, ettei kyyhky tiedä mihin laskeutua.
+KYSYMYS: Kerro lisää: Loiren laakson
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Millainen linna Chambord on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Chambord on [[Loiren laakson]] renessanssilinna, jonka rakennutti 1500-luvun alussa Ranskan kuningas [[Frans I]]. Se tunnetaan runsaasta torni- ja savupiippumetsästään, ja sen tyyli toimi esikuvana myös Schwerinin linnan suunnittelijoille. Siellä on kuulemma niin paljon torneja, ettei kyyhky tiedä mihin laskeutua.
+KYSYMYS: Kerro lisää: Frans I
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Milloin Schwerinin residenssikokonaisuus otettiin maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuonna 2024. Schwerinin residenssikokonaisuus otettiin [[Unescon]] maailmanperintölistalle vuonna 2024, ja Schwerinin linna kuuluu siihen. Linna sijaitsee saarella [[Schwerinin järvessä]], ja sen nykyinen rakennus on peräisin vuosilta 1845–1857. Tuoretta tietoa, sellaisesta minä pidän.
+KYSYMYS: Kerro lisää: Unescon
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Milloin Schwerinin residenssikokonaisuus otettiin maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuonna 2024. Schwerinin residenssikokonaisuus otettiin [[Unescon]] maailmanperintölistalle vuonna 2024, ja Schwerinin linna kuuluu siihen. Linna sijaitsee saarella [[Schwerinin järvessä]], ja sen nykyinen rakennus on peräisin vuosilta 1845–1857. Tuoretta tietoa, sellaisesta minä pidän.
+KYSYMYS: Kerro lisää: Schwerinin järvessä
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Kuka oli Henrik Leijona?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Henrik Leijona oli 1100-luvun voimakas ruhtinas, [[Saksin]] ja [[Baijerin]] herttua Welf-suvusta. Hänet yhdistetään Schwerinin valtaukseen vuonna 1160, jolla hän vakiinnutti saksalaisen vallan alueella, sekä [[Münchenin]] varhaisiin vaiheisiin. Tarkoista vuosiluvuista en ole kaikilta osin varma. Hyvä lempinimi, sitä minä vähän kadehdin.
+KYSYMYS: Kerro lisää: Saksin
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Kuka oli Henrik Leijona?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Henrik Leijona oli 1100-luvun voimakas ruhtinas, [[Saksin]] ja [[Baijerin]] herttua Welf-suvusta. Hänet yhdistetään Schwerinin valtaukseen vuonna 1160, jolla hän vakiinnutti saksalaisen vallan alueella, sekä [[Münchenin]] varhaisiin vaiheisiin. Tarkoista vuosiluvuista en ole kaikilta osin varma. Hyvä lempinimi, sitä minä vähän kadehdin.
+KYSYMYS: Kerro lisää: Baijerin
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schwerinin linna (historia)
+Tietoruudun teksti: Schwerinin linna sijaitsee saarella Schwerinin järvessä, ja paikalla mainitaan slaavilainen linnake jo vuonna 973. Henrik Leijona valtasi sen vuonna 1160 ja vakiinnutti näin saksalaisen vallan. Nykyinen linna rakennettiin vuosina 1845–1857, ja vain harvat osat sitä vanhemmasta linnasta ovat säilyneet. Sen suunnitteluun osallistuivat muun muassa Gottfried Semper ja Friedrich August Stüler, ja esikuvina olivat Loiren renessanssilinnat, kuten Chambord. Linnassa toimii Mecklenburg-Vorpommernin osavaltion maapäivä sekä museo, ja se kuuluu vuonna 2024 maailmanperintölistalle otettuun Schwerinin residenssikokonaisuuteen.
+AIEMPI KYSYMYS: Kuka oli Henrik Leijona?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Henrik Leijona oli 1100-luvun voimakas ruhtinas, [[Saksin]] ja [[Baijerin]] herttua Welf-suvusta. Hänet yhdistetään Schwerinin valtaukseen vuonna 1160, jolla hän vakiinnutti saksalaisen vallan alueella, sekä [[Münchenin]] varhaisiin vaiheisiin. Tarkoista vuosiluvuista en ole kaikilta osin varma. Hyvä lempinimi, sitä minä vähän kadehdin.
+KYSYMYS: Kerro lisää: Münchenin
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Miten Bambergin raatihuoneeseen pääsee keskelle jokea?
+AIEMPI VASTAUS (Livia):
+No niin, siltoja pitkin. Bambergin vanha raatihuone rakennettiin vuonna 1386 keskelle [[Regnitz-joen]] virtaa, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Vanhakaupunki on ollut vuodesta 1993 [[Unescon]] maailmanperintökohde. Minä kyl lentäisin ylitse, mut ihmiset käyttävät siltoja.
+KYSYMYS: Kerro lisää: Regnitz-joen
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Miten Bambergin raatihuoneeseen pääsee keskelle jokea?
+AIEMPI VASTAUS (Livia):
+No niin, siltoja pitkin. Bambergin vanha raatihuone rakennettiin vuonna 1386 keskelle [[Regnitz-joen]] virtaa, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Vanhakaupunki on ollut vuodesta 1993 [[Unescon]] maailmanperintökohde. Minä kyl lentäisin ylitse, mut ihmiset käyttävät siltoja.
+KYSYMYS: Kerro lisää: Unescon
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Kuka keisari on haudattu Bambergin tuomiokirkkoon?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuomiokirkkoon on haudattu keisari [[Henrik II]], joka perusti kirkon vuonna 1002. Kirkko vihittiin käyttöön 6. toukokuuta 1012, ja Henrik on haudattu puolisonsa [[Kunigunden]] viereen. Hyvä, että pääsivät vierekkäin.
+KYSYMYS: Kerro lisää: Henrik II
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Kuka keisari on haudattu Bambergin tuomiokirkkoon?
+AIEMPI VASTAUS (Livia):
+Ai se. Tuomiokirkkoon on haudattu keisari [[Henrik II]], joka perusti kirkon vuonna 1002. Kirkko vihittiin käyttöön 6. toukokuuta 1012, ja Henrik on haudattu puolisonsa [[Kunigunden]] viereen. Hyvä, että pääsivät vierekkäin.
+KYSYMYS: Kerro lisää: Kunigunden
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Mitä rauchbier on?
+AIEMPI VASTAUS (Livia):
+Mmm— savuinen juttu. Rauchbier on olut, jonka [[mallas]] on kuivattu savussa, ja siitä juoma saa tunnusomaisen savuisen maun. [[Bambergin]] kaupunki tunnetaan nimenomaan tästä savustetusta oluesta. Perinteisesti mallas on kuivattu puun savussa, mutta tarkasta puulajista en ole aivan varma. Pulla vaan sopii kyyhkylle paremmin.
+KYSYMYS: Kerro lisää: mallas
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Mitä rauchbier on?
+AIEMPI VASTAUS (Livia):
+Mmm— savuinen juttu. Rauchbier on olut, jonka [[mallas]] on kuivattu savussa, ja siitä juoma saa tunnusomaisen savuisen maun. [[Bambergin]] kaupunki tunnetaan nimenomaan tästä savustetusta oluesta. Perinteisesti mallas on kuivattu puun savussa, mutta tarkasta puulajista en ole aivan varma. Pulla vaan sopii kyyhkylle paremmin.
+KYSYMYS: Kerro lisää: Bambergin
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+- [Porto Velho — kaupunkilehti / Porto Velho: Aurinko laskee jokeen joka ilta] Kun ilta saapuu, Porto Velhon rantaraitille kokoontuu ihmisiä katsomaan auringonlaskua Rio Madeiran ylle - se on kaupungin vakiintunut ilta-askare siinä missä iltakävely muualla. Joelta palaa samaan aikaan kalastajaveneitä, jotka ovat olleet päivän saaliilla, sillä joki on monelle perheelle yhä tärkein toimeentulon lähde. Saalis myydään usein heti rantatorilla tuoreena, ennen kuin se ehtii pilaantua trooppisessa lämmössä. Sademetsän ilmasto tekee illoista kosteita ja lämpimiä ympäri vuoden, joten auringonlasku on myös hetki, jolloin päivän pahin helle vihdoin hellittää ja kaupunki herää toiseen elämäänsä.
+AIEMPI KYSYMYS: Mihin Regnitz-joki laskee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Regnitz laskee [[Main-jokeen]] Bambergin tuntumassa, ja Main puolestaan yhtyy [[Reiniin]]. Regnitz kulkee siis Baijerin pohjoisosista kohti Saksan suurta jokiverkostoa. Joki vie veden eteenpäin, minä vien viestit.
+KYSYMYS: Kerro lisää: Main-jokeen
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bambergin vanhakaupunki (kulttuuri)
+Tietoruudun teksti: Bambergin vanhakaupunki Baijerissa on ollut Unescon maailmanperintökohde vuodesta 1993 keskiaikaisen kaupunkirakenteensa ja hyvin säilyneiden historiallisten rakennustensa vuoksi. Keisari Henrik II perusti tuomiokirkon vuonna 1002, ja se vihittiin käyttöön 6. toukokuuta 1012; Henrik on haudattu sinne puolisonsa viereen. Vanha raatihuone rakennettiin vuonna 1386 keskelle Regnitz-jokea, ja sinne pääsee kahta siltaa pitkin. Nykyinen rakennus on peräisin vuosien 1744–1756 uudelleenrakennuksesta. Kaupunki tunnetaan myös savustetusta rauchbier-oluesta.
+AIEMPI KYSYMYS: Mihin Regnitz-joki laskee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Regnitz laskee [[Main-jokeen]] Bambergin tuntumassa, ja Main puolestaan yhtyy [[Reiniin]]. Regnitz kulkee siis Baijerin pohjoisosista kohti Saksan suurta jokiverkostoa. Joki vie veden eteenpäin, minä vien viestit.
+KYSYMYS: Kerro lisää: Reiniin
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Milloin Naumburgin tuomiokirkon rakentaminen alkoi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Naumburgin tuomiokirkon rakentaminen alkoi keväällä 1029, ja kirkko vihittiin käyttöön vuonna 1044. Se sijaitsee [[Saksi-Anhaltin]] Naumburgissa ja on kaksikuorinen [[basilika]]. Kirkko liitettiin [[Unescon]] maailmanperintöluetteloon vuonna 2018. Lähes tuhat vuotta, ja yhä seisoo.
+KYSYMYS: Kerro lisää: Saksi-Anhaltin
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Milloin Naumburgin tuomiokirkon rakentaminen alkoi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Naumburgin tuomiokirkon rakentaminen alkoi keväällä 1029, ja kirkko vihittiin käyttöön vuonna 1044. Se sijaitsee [[Saksi-Anhaltin]] Naumburgissa ja on kaksikuorinen [[basilika]]. Kirkko liitettiin [[Unescon]] maailmanperintöluetteloon vuonna 2018. Lähes tuhat vuotta, ja yhä seisoo.
+KYSYMYS: Kerro lisää: basilika
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Milloin Naumburgin tuomiokirkon rakentaminen alkoi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Naumburgin tuomiokirkon rakentaminen alkoi keväällä 1029, ja kirkko vihittiin käyttöön vuonna 1044. Se sijaitsee [[Saksi-Anhaltin]] Naumburgissa ja on kaksikuorinen [[basilika]]. Kirkko liitettiin [[Unescon]] maailmanperintöluetteloon vuonna 2018. Lähes tuhat vuotta, ja yhä seisoo.
+KYSYMYS: Kerro lisää: Unescon
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Keitä Naumburgin lahjoittajahahmot esittävät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi [[Ekkehard II]] ja tämän puoliso [[Uta von Ballenstedt]]. Hahmot ovat [[Naumburgin mestarin]] työtä ja kirkon tunnetuin taideteos. Kaksitoista vartijaa, mutta yksikään ei ole kyyhky.
+KYSYMYS: Kerro lisää: Ekkehard II
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Keitä Naumburgin lahjoittajahahmot esittävät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi [[Ekkehard II]] ja tämän puoliso [[Uta von Ballenstedt]]. Hahmot ovat [[Naumburgin mestarin]] työtä ja kirkon tunnetuin taideteos. Kaksitoista vartijaa, mutta yksikään ei ole kyyhky.
+KYSYMYS: Kerro lisää: Uta von Ballenstedt
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Keitä Naumburgin lahjoittajahahmot esittävät?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi [[Ekkehard II]] ja tämän puoliso [[Uta von Ballenstedt]]. Hahmot ovat [[Naumburgin mestarin]] työtä ja kirkon tunnetuin taideteos. Kaksitoista vartijaa, mutta yksikään ei ole kyyhky.
+KYSYMYS: Kerro lisää: Naumburgin mestarin
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+AIEMPI KYSYMYS: Mitä tarkoittaa kaksikuorinen basilika?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Basilika on kirkkotyyppi, jossa korkeampaa keskilaivaa reunustavat matalammat [[sivulaivat]]. Kaksikuorisella kirkolla tarkoitetaan sitä, että alttaripäätyjä eli kuoreja on kaksi, itässä ja lännessä. Naumburgissa varhaisgoottilainen [[länsikuoro]] lisättiin 1200-luvun puolivälissä vanhemman rakennuksen jatkoksi. Minä pidän katosta enemmän kuin kuorosta.
+KYSYMYS: Kerro lisää: sivulaivat
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mitä tarkoittaa kaksikuorinen basilika?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Basilika on kirkkotyyppi, jossa korkeampaa keskilaivaa reunustavat matalammat [[sivulaivat]]. Kaksikuorisella kirkolla tarkoitetaan sitä, että alttaripäätyjä eli kuoreja on kaksi, itässä ja lännessä. Naumburgissa varhaisgoottilainen [[länsikuoro]] lisättiin 1200-luvun puolivälissä vanhemman rakennuksen jatkoksi. Minä pidän katosta enemmän kuin kuorosta.
+KYSYMYS: Kerro lisää: länsikuoro
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Mitä Saalen ja Unstrutin laaksossa viljellään?
+AIEMPI VASTAUS (Livia):
+Just niin, viiniä tässä ensin muistuu mieleen. Naumburgin kirkko kuuluu osana [[Saalen]] ja [[Unstrutin]] jokien kulttuurimaisemaan, joka liitettiin maailmanperintöön vuonna 2018. Alueella tunnetaan perinteistä [[viininviljelyä]]. Lajikkeista tai tuotantomääristä en ole varma. Viini ei ole kyyhkyn juttu, mut näköala viinirinteeltä on.
+KYSYMYS: Kerro lisää: Saalen
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+AIEMPI KYSYMYS: Mitä Saalen ja Unstrutin laaksossa viljellään?
+AIEMPI VASTAUS (Livia):
+Just niin, viiniä tässä ensin muistuu mieleen. Naumburgin kirkko kuuluu osana [[Saalen]] ja [[Unstrutin]] jokien kulttuurimaisemaan, joka liitettiin maailmanperintöön vuonna 2018. Alueella tunnetaan perinteistä [[viininviljelyä]]. Lajikkeista tai tuotantomääristä en ole varma. Viini ei ole kyyhkyn juttu, mut näköala viinirinteeltä on.
+KYSYMYS: Kerro lisää: Unstrutin
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naumburgin tuomiokirkko (kulttuuri)
+Tietoruudun teksti: Naumburgin tuomiokirkko on Saksi-Anhaltin Naumburgissa sijaitseva kaksikuorinen basilika, jonka rakentaminen alkoi keväällä 1029 ja joka vihittiin käyttöön 1044. Varhaisgoottilainen länsikuoro lisättiin 1200-luvun puolivälissä. Kirkon tunnetuin taideteos on Naumburgin mestarin kaksitoista luonnollisen kokoista lahjoittajahahmoa, kahdeksan miestä ja neljä naista, jotka esittävät kirkon perustajiin kuuluneita aatelisia. Heidän joukossaan ovat markkraavi Ekkehard II ja tämän puoliso Uta von Ballenstedt. Kirkko liitettiin Unescon maailmanperintöluetteloon vuonna 2018 osana Saale- ja Unstrut-jokien kulttuurimaisemaa, ja se on edelleen protestanttinen seurakuntakirkko.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Mitä Saalen ja Unstrutin laaksossa viljellään?
+AIEMPI VASTAUS (Livia):
+Just niin, viiniä tässä ensin muistuu mieleen. Naumburgin kirkko kuuluu osana [[Saalen]] ja [[Unstrutin]] jokien kulttuurimaisemaan, joka liitettiin maailmanperintöön vuonna 2018. Alueella tunnetaan perinteistä [[viininviljelyä]]. Lajikkeista tai tuotantomääristä en ole varma. Viini ei ole kyyhkyn juttu, mut näköala viinirinteeltä on.
+KYSYMYS: Kerro lisää: viininviljelyä
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+AIEMPI KYSYMYS: Minä vuonna raatihuone ja Roland liitettiin UNESCOn maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bremenin raatihuone ja Roland-patsas otettiin [[Unescon]] maailmanperintöluetteloon vuonna 2004. Raatihuoneen gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja torin puoleinen julkisivu uudistettiin vuosina 1608–1612 [[Weserin renessanssin]] tyyliin. Hyvin on pysynyt pystyssä, vaikka kyyhkyt istuvat sen päällä.
+KYSYMYS: Kerro lisää: Unescon
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+AIEMPI KYSYMYS: Minä vuonna raatihuone ja Roland liitettiin UNESCOn maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bremenin raatihuone ja Roland-patsas otettiin [[Unescon]] maailmanperintöluetteloon vuonna 2004. Raatihuoneen gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja torin puoleinen julkisivu uudistettiin vuosina 1608–1612 [[Weserin renessanssin]] tyyliin. Hyvin on pysynyt pystyssä, vaikka kyyhkyt istuvat sen päällä.
+KYSYMYS: Kerro lisää: Weserin renessanssin
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Luonto: Kotka, joka syö lentäviä lemureita] Filippiinienkotka on pituudeltaan maailman suurin kotka: naaras on runsaan metrin mittainen ja painaa noin kuusi kiloa. Se pesii enää neljällä saarella, ja Mindanaon vanhoissa vuorimetsissä sen pääsaalis on kolugo eli lentävä lemuri. Lisääntymiskierto kestää kaksi vuotta: naaras munii yhden munan, poikanen lähtee lennolle vasta neljän tai viiden kuukauden ikäisenä ja saa vanhempien hoitoa parikymmentä kuukautta. Lentäjä Charles Lindbergh matkusti maahan useasti 1969–1972 ja sai hallituksen ryhtymään lajin suojeluun.
+- [Portugali — maalehti / Urheilu: Kotka kiertää stadionin] 1904 — Maan suurimmalla jalkapalloseuralla on tapa, jota ei ole monella muulla: ennen ottelua elävä kotka päästetään lentoon ja se kiertää stadionin yleisön yllä ennen kuin palaa hoitajansa käsivarrelle. Kotka on ollut seuran tunnuksessa sen perustamisesta 1904 lähtien, ja jokaisella linnulla on oma nimi. Seuran kotistadion on maan suurin, ja sinne mahtuu yli 64 000 katsojaa. Kannattajakirjoja on niin paljon, että seura on ollut jäsenmäärältään maailman suurimpia.
+AIEMPI KYSYMYS: Kuinka korkea Roland-patsas on?
+AIEMPI VASTAUS (Livia):
+No jopas. Roland-patsas vuodelta 1404 on 5,47 metriä korkea. Sen kilvessä on [[kaksipäinen kotka]], ja legendan mukaan [[Bremenin]] kaupunki pysyy vapaana, kunhan Roland vartioi. Viiden metrin vartija, ja silti minä lennän sen ylitse.
+KYSYMYS: Kerro lisää: kaksipäinen kotka
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kaupunkilehti / Muiscat: Järvi joka synnytti El Doradon] Guatavita-järvi on lähes ympyränmuotoinen, noin 20 hehtaarin laajuinen vesi 3 000 metrin korkeudessa, noin 57 kilometriä Bogotásta koilliseen. Muiscoille se oli pyhä paikka, ei aarrearkku: uuden zipan astuessa valtaan hänet peitettiin kultapölyllä, hänet vietiin lautalla järven keskelle ja hän sukelsi veteen pesten kullan pois, kun väki heitti uhrilahjoja järveen. Toinen tunnettu kultalautta löytyi 1856 Siechan lammikosta, ei tästä järvestä; se myytiin Saksaan ja tuhoutui tulipalossa Bremenin satamassa.
+- [Saksa — maalehti / Sadut ja tarinat: Soittoniekat, jotka eivät päässeet perille] 1951 — Grimmin sadussa vanha aasi, koira, kissa ja kukko lähtevät Bremeniin soittajiksi, kun niitä ei enää kotona tarvita. Perille ne eivät koskaan pääse — matkalla ne pelästyttävät rosvot ulos talosta huutamalla yhteen ääneen ja jäävät sinne asumaan. Bremen otti soittoniekat silti omikseen: raatihuoneen kupeessa on seissyt vuodesta 1951 pronssipatsas, jossa eläimet seisovat päällekkäin. Aasin etujalat kiiltävät kullalta, koska niistä pidetään kiinni molemmin käsin ja toivotaan — yhdellä kädellä tarttuminen on paikallisten mukaan vain aasin kättelyä.
+AIEMPI KYSYMYS: Kuinka korkea Roland-patsas on?
+AIEMPI VASTAUS (Livia):
+No jopas. Roland-patsas vuodelta 1404 on 5,47 metriä korkea. Sen kilvessä on [[kaksipäinen kotka]], ja legendan mukaan [[Bremenin]] kaupunki pysyy vapaana, kunhan Roland vartioi. Viiden metrin vartija, ja silti minä lennän sen ylitse.
+KYSYMYS: Kerro lisää: Bremenin
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mikä on Roland-patsas ja miksi se on kaupungille tärkeä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Roland-patsas seisoo Bremenin torilla raatihuoneen edessä, ja se on vuodelta 1404 ja 5,47 metriä korkea. Nimi liittyy [[Kaarle Suuren]] sankariritariin, ja patsaan kilvessä on [[kaksipäinen kotka]]. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi, ja siksi patsas mielletään kaupungin vapauden vertauskuvaksi. Seisoo siellä vuosisadasta toiseen eikä väsy, kyl minä kadehdin.
+KYSYMYS: Kerro lisää: Kaarle Suuren
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+AIEMPI KYSYMYS: Mikä on Weserin renessanssi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on arkkitehtuuria. Weserin renessanssi on [[Weser-joen]] seudulla noin 1500-luvun lopulta 1600-luvun alkuun vaikuttanut renessanssin rakennustyyli. Sille ovat tyypillisiä runsaasti koristellut päätykolmiot ja [[erkkerit]]. Bremenin raatihuoneen torin puoleinen julkisivu uudistettiin vuosina 1608–1612 tähän tyyliin. Koristeita niin paljon, että kyyhkyn on hyvä istua joka lovessa.
+KYSYMYS: Kerro lisää: Weser-joen
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Baburizzan palatsi] 1916 Palatsin rakennuttivat 1916 Zanellit, yksi kaupungin merkittävimmistä suvuista, ja piirustukset tekivät italialaiset arkkitehdit. Vuonna 1925 talon osti kroatialaissyntyinen Pascual Baburizza, salpietarikaivoksiin sijoittanut liikemies, joka kokosi Chilessä suuren omaisuuden ja käytti siitä huomattavan osan hyväntekeväisyyteen. Vuonna 1971 kaupunki osti palatsin museoksi ja kuvataidekouluksi, ja 1976 se julistettiin historialliseksi monumentiksi. Kokoelma on karttunut suureksi osaksi Baburizzan omista testamenttilahjoituksista; sen tärkeimpiä nimiä ovat Mauricio Rugendas, Alfredo Valenzuela Puelma, Alfredo Helsby ja Carlos Hermosilla Álvarez. Museo suljettiin korjaustöiden ajaksi 1997 …
+AIEMPI KYSYMYS: Mikä on Weserin renessanssi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on arkkitehtuuria. Weserin renessanssi on [[Weser-joen]] seudulla noin 1500-luvun lopulta 1600-luvun alkuun vaikuttanut renessanssin rakennustyyli. Sille ovat tyypillisiä runsaasti koristellut päätykolmiot ja [[erkkerit]]. Bremenin raatihuoneen torin puoleinen julkisivu uudistettiin vuosina 1608–1612 tähän tyyliin. Koristeita niin paljon, että kyyhkyn on hyvä istua joka lovessa.
+KYSYMYS: Kerro lisää: erkkerit
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+AIEMPI KYSYMYS: Mitä jugendtyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Jugendtyyli on 1800-luvun lopun ja 1900-luvun alun taidesuuntaus, jolle ovat tyypillisiä kaarevat linjat ja kasvimuodot, ja sitä kutsutaan myös nimellä art nouveau. Bremenin raatihuoneen [[Güldenkammer]] sisustettiin vuonna 1905 [[Heinrich Vogelerin]] jugendtyylillä. Vogeler tunnetaan taiteilijayhteisö [[Worpswedestä]]. Minun makuuni sopisi vähän lisää lintuja.
+KYSYMYS: Kerro lisää: Güldenkammer

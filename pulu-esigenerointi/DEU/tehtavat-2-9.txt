@@ -1,0 +1,1112 @@
+### 641
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Verkko, joka kalastaa sumua] 1962– — Itävaltalainen hyönteistieteilijä Charles Koch perusti 1962 tutkimusaseman keskelle aavikkoa, 120 kilometriä Walvis Baysta kaakkoon. Gobabeb seisoo kolmen ympäristön saumassa: pohjoisessa ovat soratasangot, etelässä dyynimeri ja välissä kausiluonteinen Kuisebjoki. Sadetta tulee keskimäärin 23,8 millimetriä vuodessa, mutta sumupäiviä on 94, ja asemalla on opeteltu ottamaan vesi sumusta: yksi verkko kerää sumuisena yönä jopa 3,3 litraa neliöltä. Aseman 370 aurinkopaneelia kattavat yli 90 prosenttia sähköstä, tiilet poltetaan joen lietteestä ja eloperäinen jäte menee topnaarien vuohille.
+AIEMPI KYSYMYS: Miten linssi toimii?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan. Linssi on läpinäkyvä, kaareva kappale, tavallisesti lasia tai muovia, joka taittaa siihen osuvia [[valonsäteitä]]. Kupera linssi kokoaa säteet yhteen pisteeseen, minkä ansiosta sillä voi suurentaa ja muodostaa kuvan, kun taas kovera linssi hajottaa säteitä. Linssejä on mikroskoopeissa, kiikareissa, kameroissa ja silmälaseissa, ja ihmisen silmässäkin on oma linssinsä, joka tarkentaa kuvan [[verkkokalvolle]].
+
+Minä en tarvitse silmälaseja, ja sen sanon ihan vaatimattomasti. Moni muu tarvitsee, ja siksi Jenassa tehty työ on ollut tärkeää.
+KYSYMYS: Kerro lisää: verkkokalvolle
+
+### 642
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Mikä on Thüringen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Thüringen on Saksan osavaltio maan keskiosassa, ja sen pääkaupunki on [[Erfurt]]. Jena on osavaltion toiseksi suurin kaupunki. Alue tunnetaan metsäisistä kukkuloistaan ja kulttuurihistoriastaan: siellä on muun muassa [[Weimar]], jossa asuivat [[Goethe]] ja Schiller, sekä Wartburgin linna. Viisas Pöllö lupasi palata jo Konstantinopolissa, mut ehkä hän eksyi Thüringenin metsiin.
+KYSYMYS: Kerro lisää: Erfurt
+
+### 643
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Mikä on Thüringen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Thüringen on Saksan osavaltio maan keskiosassa, ja sen pääkaupunki on [[Erfurt]]. Jena on osavaltion toiseksi suurin kaupunki. Alue tunnetaan metsäisistä kukkuloistaan ja kulttuurihistoriastaan: siellä on muun muassa [[Weimar]], jossa asuivat [[Goethe]] ja Schiller, sekä Wartburgin linna. Viisas Pöllö lupasi palata jo Konstantinopolissa, mut ehkä hän eksyi Thüringenin metsiin.
+KYSYMYS: Kerro lisää: Weimar
+
+### 644
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+AIEMPI KYSYMYS: Mikä on Thüringen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Thüringen on Saksan osavaltio maan keskiosassa, ja sen pääkaupunki on [[Erfurt]]. Jena on osavaltion toiseksi suurin kaupunki. Alue tunnetaan metsäisistä kukkuloistaan ja kulttuurihistoriastaan: siellä on muun muassa [[Weimar]], jossa asuivat [[Goethe]] ja Schiller, sekä Wartburgin linna. Viisas Pöllö lupasi palata jo Konstantinopolissa, mut ehkä hän eksyi Thüringenin metsiin.
+KYSYMYS: Kerro lisää: Goethe
+
+### 645
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+AIEMPI KYSYMYS: Mikä on planetaario?
+AIEMPI VASTAUS (Livia):
+No niin, selvä juttu. Planetaario on rakennus tai sali, jonka kupolimaiseen kattoon heijastetaan [[tähtitaivas]], jotta yleisö voi katsella tähtiä ja [[planeettoja]] päivälläkin ja säästä riippumatta. Kuvan tekee erityinen projektori, ja nykyisin kupolille voidaan heijastaa myös elokuvia avaruudesta. [[Zeissin]] valmistamat tähtiprojektorit levisivät planetaarioihin ympäri maailmaa 1900-luvulla. Yötaivas on kyl kaunis, vaikka kyyhky onkin päivälintu.
+KYSYMYS: Kerro lisää: tähtitaivas
+
+### 646
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Tiede: Tornista tuli kaikkien tähtiharrastajien oma] 1926 — Helsingin yliopisto käytti tähtitornia tutkimukseen vuosikymmenten ajan, kunnes uusi, isompi tutkimusobservatorio valmistui muualle. Vuonna 1926 vanha Kaivopuiston torni siirtyi tähtitieteen harrastajayhdistys Ursalle, joka käyttää sitä yhä yleisölle avoimiin tähtitarkkailuiltoihin. Ammattitähtitieteilijöiden yksityisestä työkalusta tuli näin paikka, jonne kuka tahansa voi tulla katsomaan kuuta ja planeettoja kaukoputkella.
+AIEMPI KYSYMYS: Mikä on planetaario?
+AIEMPI VASTAUS (Livia):
+No niin, selvä juttu. Planetaario on rakennus tai sali, jonka kupolimaiseen kattoon heijastetaan [[tähtitaivas]], jotta yleisö voi katsella tähtiä ja [[planeettoja]] päivälläkin ja säästä riippumatta. Kuvan tekee erityinen projektori, ja nykyisin kupolille voidaan heijastaa myös elokuvia avaruudesta. [[Zeissin]] valmistamat tähtiprojektorit levisivät planetaarioihin ympäri maailmaa 1900-luvulla. Yötaivas on kyl kaunis, vaikka kyyhky onkin päivälintu.
+KYSYMYS: Kerro lisää: planeettoja
+
+### 647
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Mikä on planetaario?
+AIEMPI VASTAUS (Livia):
+No niin, selvä juttu. Planetaario on rakennus tai sali, jonka kupolimaiseen kattoon heijastetaan [[tähtitaivas]], jotta yleisö voi katsella tähtiä ja [[planeettoja]] päivälläkin ja säästä riippumatta. Kuvan tekee erityinen projektori, ja nykyisin kupolille voidaan heijastaa myös elokuvia avaruudesta. [[Zeissin]] valmistamat tähtiprojektorit levisivät planetaarioihin ympäri maailmaa 1900-luvulla. Yötaivas on kyl kaunis, vaikka kyyhky onkin päivälintu.
+KYSYMYS: Kerro lisää: Zeissin
+
+### 648
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Kuinka korkea silta on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Silta on 107 metriä korkea, ja se on Saksan korkein rautatiesilta. Se ylittää [[Wupper-joen]] laakson ja kuljettaa Wuppertal-Oberbarmen–Solingen-radan [[Remscheidin]] ja [[Solingenin]] kaupunkien välillä. Aika korkealla se on kyyhkynkin mielestä.
+KYSYMYS: Kerro lisää: Wupper-joen
+
+### 649
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Kuinka korkea silta on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Silta on 107 metriä korkea, ja se on Saksan korkein rautatiesilta. Se ylittää [[Wupper-joen]] laakson ja kuljettaa Wuppertal-Oberbarmen–Solingen-radan [[Remscheidin]] ja [[Solingenin]] kaupunkien välillä. Aika korkealla se on kyyhkynkin mielestä.
+KYSYMYS: Kerro lisää: Remscheidin
+
+### 650
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Kuinka korkea silta on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Silta on 107 metriä korkea, ja se on Saksan korkein rautatiesilta. Se ylittää [[Wupper-joen]] laakson ja kuljettaa Wuppertal-Oberbarmen–Solingen-radan [[Remscheidin]] ja [[Solingenin]] kaupunkien välillä. Aika korkealla se on kyyhkynkin mielestä.
+KYSYMYS: Kerro lisää: Solingenin
+
+### 651
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+- [Saksa — maalehti / Tiede: Säde näytti luut ihon läpi] Wilhelm Röntgen tutki marraskuussa 1895 Würzburgissa sähköpurkauksia lasiputkessa, kun huoneen poikki pimeässä hohti jotain, minkä ei pitänyt olla mahdollista: säteily läpäisi pahvin, puun ja kirjan sivut. Hän nimesi tuntemattoman säteen X:ksi. Joulukuussa hän kuvasi vaimonsa Anna Berthan käden — kuvassa näkyvät luut ja sormus, ja vaimon kerrotaan huudahtaneen: "Olen nähnyt oman kuolemani!" Röntgen sai historian ensimmäisen fysiikan Nobelin 1901 eikä patentoinut keksintöään: se kuului hänen mielestään kaikille.
+AIEMPI KYSYMYS: Miksi silta sai alun perin keisarin nimen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Silta nimettiin alun perin Kaiser-Wilhelm-Brückeksi keisari [[Wilhelm I:n]] mukaan, ja hallitsijan mukaan nimeäminen oli tuohon aikaan tavallinen tapa osoittaa kunnioitusta, vaikka varsinaista nimeämispäätöstä en voi tässä todentaa. Silta valmistui vuonna 1897 monarkian aikana, ja monarkian päätyttyä se nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Nimi vaihtui, silta pysyi.
+KYSYMYS: Kerro lisää: Wilhelm I:n
+
+### 652
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Miksi silta sai alun perin keisarin nimen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Silta nimettiin alun perin Kaiser-Wilhelm-Brückeksi keisari [[Wilhelm I:n]] mukaan, ja hallitsijan mukaan nimeäminen oli tuohon aikaan tavallinen tapa osoittaa kunnioitusta, vaikka varsinaista nimeämispäätöstä en voi tässä todentaa. Silta valmistui vuonna 1897 monarkian aikana, ja monarkian päätyttyä se nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Nimi vaihtui, silta pysyi.
+KYSYMYS: Kerro lisää: Müngstenin
+
+### 653
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Kuka johti Müngstenin sillan rakennushanketta?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Müngstenin sillan]] hanketta johti insinööri [[Anton von Rieppel]]. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja silta valmistui vuonna 1897, joten hanke kesti useita vuosia suunnittelusta valmistumiseen. Muista Rieppelin saavutuksista en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä muistaa nimi.
+KYSYMYS: Kerro lisää: Müngstenin sillan
+
+### 654
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Kuka johti Müngstenin sillan rakennushanketta?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Müngstenin sillan]] hanketta johti insinööri [[Anton von Rieppel]]. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja silta valmistui vuonna 1897, joten hanke kesti useita vuosia suunnittelusta valmistumiseen. Muista Rieppelin saavutuksista en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä muistaa nimi.
+KYSYMYS: Kerro lisää: Anton von Rieppel
+
+### 655
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Milloin Müngstenin sillan rakentaminen alkoi ja valmistui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maansiirto alkoi 26. helmikuuta 1894, ja silta valmistui vuonna 1897. Ensimmäiset suunnitelmat ovat vuodelta 1889, ja [[Preussin]] maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890. Silta ylittää [[Wupper-joen]] laakson. Onpas siinä ollut rakentamista.
+KYSYMYS: Kerro lisää: Preussin
+
+### 656
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Müngstenin silta (tekniikka)
+Tietoruudun teksti: Müngstenin silta on Saksan korkein rautatiesilta. Silta on 107 metriä korkea ja ylittää Wupper-joen laakson kuljettaen Wuppertal-Oberbarmen–Solingen-rataa Remscheidin ja Solingenin kaupunkien välillä. Silta sai alun perin nimen Kaiser-Wilhelm-Brücke keisari Wilhelm I:n mukaan, ja monarkian päätyttyä se nimettiin lähellä sijainneen Müngstenin asutuksen mukaan. Ensimmäiset suunnitelmat ovat vuodelta 1889, Preussin maapäivät hyväksyivät tarvittavat viisi miljoonaa markkaa vuonna 1890, maansiirto alkoi 26. helmikuuta 1894 ja silta valmistui vuonna 1897. Hanketta johti insinööri Anton von Rieppel.
+AIEMPI KYSYMYS: Miksi silta nimettiin uudelleen monarkian päätyttyä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Silta oli alun perin [[Kaiser-Wilhelm-Brücke]], joten keisarin nimi liittyi monarkiaan. Kun monarkia päättyi, nimi ei enää vastannut valtiojärjestystä, ja silta nimettiin lähellä sijainneen [[Müngstenin]] asutuksen mukaan. Saksassa monarkia päättyi vuonna 1918, mutta tarkkaa nimenmuutoksen vuotta en ole varma. Tää oli kyllä selkeä juttu.
+KYSYMYS: Kerro lisää: Kaiser-Wilhelm-Brücke
+
+### 657
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Historia: Kultainen naula ja yhden sanan sähke] 1869 — Toukokuun 10. päivänä 1869 kaksi rautatietä kohtasi Utahin autiomaassa Promontory Summitissa. Vasarat ja viimeinen naula oli kytketty lennätinlankaan, jotta jokainen isku kuuluisi naksahduksena lennätinasemilla ympäri maata; kun lyönnit menivät ohi, virkailija napautti merkit itse ja lähetti perään yhden sanan: DONE. Lännestä nousseen radan louhivat suurelta osin kiinalaiset siirtotyöläiset, jotka saivat 31 dollaria kuussa ja majoituksen mutta laittoivat ruokansa itse; lakon jälkeen vuonna 1867 palkka nousi 35 dollariin. Matka rannikolta rannikolle lyheni puolesta vuodesta viikkoon.
+AIEMPI KYSYMYS: Mitä Hambachin juhlassa vaadittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Hambachin juhlassa vuonna 1832 vaadittiin yleistiedon mukaan kansalaisvapauksia, kuten [[sananvapautta]], sekä Saksan yhtenäisyyttä ja kansanvaltaa, mutta tarkkoja yksityiskohtia en ole varma. Taustalla oli [[Baijerin]] hallinto, joka oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka [[Ranskan]] vallankumousjoukot olivat aiemmin antaneet kansalle. Linna oli pfalzilaisten tyytymättömyyden keskipiste. Hyvä, että sain tämän kasaan.
+KYSYMYS: Kerro lisää: sananvapautta
+
+### 658
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Mitä Hambachin juhlassa vaadittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Hambachin juhlassa vuonna 1832 vaadittiin yleistiedon mukaan kansalaisvapauksia, kuten [[sananvapautta]], sekä Saksan yhtenäisyyttä ja kansanvaltaa, mutta tarkkoja yksityiskohtia en ole varma. Taustalla oli [[Baijerin]] hallinto, joka oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka [[Ranskan]] vallankumousjoukot olivat aiemmin antaneet kansalle. Linna oli pfalzilaisten tyytymättömyyden keskipiste. Hyvä, että sain tämän kasaan.
+KYSYMYS: Kerro lisää: Baijerin
+
+### 659
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+AIEMPI KYSYMYS: Mitä Hambachin juhlassa vaadittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— Hambachin juhlassa vuonna 1832 vaadittiin yleistiedon mukaan kansalaisvapauksia, kuten [[sananvapautta]], sekä Saksan yhtenäisyyttä ja kansanvaltaa, mutta tarkkoja yksityiskohtia en ole varma. Taustalla oli [[Baijerin]] hallinto, joka oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka [[Ranskan]] vallankumousjoukot olivat aiemmin antaneet kansalle. Linna oli pfalzilaisten tyytymättömyyden keskipiste. Hyvä, että sain tämän kasaan.
+KYSYMYS: Kerro lisää: Ranskan
+
+### 660
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+AIEMPI KYSYMYS: Miksi linna oli rauniona?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linna oli rauniona jo vuoden 1832 juhlan aikaan, ja yleistiedon mukaan se oli vaurioitunut pahoin 1600-luvun lopun sodissa, luultavasti [[Pfalzin perintösodan]] aikana, mutta en ole varma yksityiskohdista enkä tarkasta vuodesta. Rauniona se oli silti pfalzilaisten tyytymättömyyden keskipiste [[Baijerin]] hallinnon toimien vuoksi. Raunio sai siis uuden elämän symbolina.
+KYSYMYS: Kerro lisää: Pfalzin perintösodan
+
+### 661
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+AIEMPI KYSYMYS: Kuinka korkealla Hambachin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Hambachin linna sijaitsee [[Schlossberg-vuorella]] 325 metrin korkeudessa. Vuori on [[Pfalzin metsän]] itälaidalla, lähellä Neustadt an der Weinstrassen Hambachin kaupunginosaa Rheinland-Pfalzissa. Siellä ylhäällä on kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Schlossberg-vuorella
+
+### 662
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+AIEMPI KYSYMYS: Kuinka korkealla Hambachin linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Hambachin linna sijaitsee [[Schlossberg-vuorella]] 325 metrin korkeudessa. Vuori on [[Pfalzin metsän]] itälaidalla, lähellä Neustadt an der Weinstrassen Hambachin kaupunginosaa Rheinland-Pfalzissa. Siellä ylhäällä on kyyhkyn mieleen.
+KYSYMYS: Kerro lisää: Pfalzin metsän
+
+### 663
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hambachin linna (historia)
+Tietoruudun teksti: Hambachin linna on linna Neustadt an der Weinstrassen Hambachin kaupunginosan lähellä Rheinland-Pfalzissa. Sitä pidetään saksalaisen demokratialiikkeen symbolina, koska siellä pidettiin vuonna 1832 Hambachin juhla. Linna sijaitsee Schlossberg-vuorella, 325 metrin korkeudessa Pfalzin metsän itälaidalla. Vuoden 1832 juhlan aikaan rauniona ollut linna oli pfalzilaisten tyytymättömyyden keskipiste Baijerin hallinnon toimien vuoksi: hallinto oli ollut vallassa vuodesta 1816 ja perunut oikeuksia, jotka Ranskan vallankumousjoukot olivat aiemmin antaneet kansalle.
+AIEMPI KYSYMYS: Kuka hallitsi Pfalzia ennen Baijerin hallintoa?
+AIEMPI VASTAUS (Livia):
+Ai se. Ennen Baijerin hallintoa [[Pfalzissa]] vaikuttivat [[Ranskan]] vallankumousjoukot, jotka olivat antaneet kansalle oikeuksia, ja Baijerin hallinto oli vallassa vuodesta 1816. Tarkkoja vuosilukuja Ranskan vallan alkamisesta tai päättymisestä en ole varma. Baijerin hallinto perui näitä oikeuksia, mikä lisäsi tyytymättömyyttä. Pitkä historia tiivistettynä, ei huono.
+KYSYMYS: Kerro lisää: Pfalzissa
+
+### 664
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+- [Saksa — maalehti / Tiede: Säde näytti luut ihon läpi] Wilhelm Röntgen tutki marraskuussa 1895 Würzburgissa sähköpurkauksia lasiputkessa, kun huoneen poikki pimeässä hohti jotain, minkä ei pitänyt olla mahdollista: säteily läpäisi pahvin, puun ja kirjan sivut. Hän nimesi tuntemattoman säteen X:ksi. Joulukuussa hän kuvasi vaimonsa Anna Berthan käden — kuvassa näkyvät luut ja sormus, ja vaimon kerrotaan huudahtaneen: "Olen nähnyt oman kuolemani!" Röntgen sai historian ensimmäisen fysiikan Nobelin 1901 eikä patentoinut keksintöään: se kuului hänen mielestään kaikille.
+AIEMPI KYSYMYS: Mikä Emsin sähke oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Emsin sähke oli vuoden 1870 sähke, joka sai alkunsa Bad Emsissä, ja se johti Ranskan ja Preussin sotaan. Yleistiedon mukaan Preussin kuningas [[Wilhelm I]] oli kylpylässä, ja hänen ja Ranskan lähettilään keskustelusta lähetetty sähke julkaistiin [[Bismarckin]] muokkaamana sävyltään terävämpänä. Ranska julisti sodan heinäkuussa 1870. Siitä on yli 150 vuotta, ja nykyään asiaa pidetään historian oppikirjaesimerkkinä.
+KYSYMYS: Kerro lisää: Wilhelm I
+
+### 665
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Historia: Ruukku, jonka reunaan painettiin hammasleimasin] 1000 eaa. — Fidžin ensimmäiset asukkaat olivat lapitalaisia, austronesialaisia merenkulkijoita, jotka levittäytyivät Bismarckin saaristosta itään ja saapuivat saarille noin vuosina 1100–1000 eaa. Heidät tunnistaa savesta: lapitakeramiikan pinta koristeltiin hammastetulla leimasimella, joka painoi geometrisia kuvioita tiiviiksi riveiksi. Samanlaisia kuvioita on löydetty Taiwanista, Batanesista ja Luzonilta asti, ja juuri keramiikka on vahvin todiste siitä, että lapitalaiset tulivat Kaakkois-Aasiasta. Viti Levun lounaisrannalla on Bourewan kaivausalue, josta on nostettu sekä koristeltuja sirpaleita että simpukasta ja luusta hiottuja helmiä.
+- [Tromssa — kaupunkilehti / Historia: Sotalaiva, joka kaatui Tromssan edustalla] Saksan laivaston Tirpitz oli sisarlaivansa Bismarckin ohella Euroopan suurin ja pelätyin sotalaiva, ja se oli sijoitettu Norjan rannikolle uhkaamaan liittoutuneiden arktisia saattueita. Marraskuussa 1944 brittiläiset pommikoneet upottivat sen Tromssan edustalla räjähtävillä Tallboy-erikoispommeilla, jotka lävistivät laivan kannen. Laiva kaatui kyljelleen minuuteissa, ja arviolta yli tuhat merimiestä kuoli. Hylky makasi Tromssan vuonossa vuoteen 1957 asti, jolloin se lopulta romutettiin — mutta osia siitä ja sieltä löydettyjä esineitä säilytetään yhä museoissa Norjassa.
+AIEMPI KYSYMYS: Mikä Emsin sähke oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Emsin sähke oli vuoden 1870 sähke, joka sai alkunsa Bad Emsissä, ja se johti Ranskan ja Preussin sotaan. Yleistiedon mukaan Preussin kuningas [[Wilhelm I]] oli kylpylässä, ja hänen ja Ranskan lähettilään keskustelusta lähetetty sähke julkaistiin [[Bismarckin]] muokkaamana sävyltään terävämpänä. Ranska julisti sodan heinäkuussa 1870. Siitä on yli 150 vuotta, ja nykyään asiaa pidetään historian oppikirjaesimerkkinä.
+KYSYMYS: Kerro lisää: Bismarckin
+
+### 666
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+AIEMPI KYSYMYS: Miksi Bad Ems oli kuuluisa kylpylä?
+AIEMPI VASTAUS (Livia):
+Just niin, Ems. Bad Ems on kylpylä [[Lahn-joen]] molemmin puolin, ja yleistiedon mukaan sen maine perustui lämpimiin kivennäislähteisiin, joiden vettä käytettiin hoitoihin; tarkkoja lähteiden tietoja en ole varma. Kaupunki oli 1600- ja 1700-luvuilla yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Kaupunki sijaitsee [[Rheinland-Pfalzissa]]. Kyl kylpylä kuulostaa kyyhkyllekin hyvältä.
+KYSYMYS: Kerro lisää: Lahn-joen
+
+### 667
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+AIEMPI KYSYMYS: Miksi Bad Ems oli kuuluisa kylpylä?
+AIEMPI VASTAUS (Livia):
+Just niin, Ems. Bad Ems on kylpylä [[Lahn-joen]] molemmin puolin, ja yleistiedon mukaan sen maine perustui lämpimiin kivennäislähteisiin, joiden vettä käytettiin hoitoihin; tarkkoja lähteiden tietoja en ole varma. Kaupunki oli 1600- ja 1700-luvuilla yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Kaupunki sijaitsee [[Rheinland-Pfalzissa]]. Kyl kylpylä kuulostaa kyyhkyllekin hyvältä.
+KYSYMYS: Kerro lisää: Rheinland-Pfalzissa
+
+### 668
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+AIEMPI KYSYMYS: Mitkä alueet Lahn erottaa Bad Emsin kohdalla?
+AIEMPI VASTAUS (Livia):
+No jopas. Lahn on Bad Emsin kohdalla luonnollinen raja [[Taunuksen]] ja [[Westerwaldin]] välillä. Molemmat ovat Saksan keskiosan matalia vuoristoalueita, mutta tarkempia tietoja niiden korkeuksista en ole varma. Raja kulkee siis joen kohdalla. Hyvin kulkee kyyhkyltä vesireitti.
+KYSYMYS: Kerro lisää: Taunuksen
+
+### 669
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ems (historia)
+Tietoruudun teksti: Bad Ems on noin 9 000 asukkaan kaupunki Rheinland-Pfalzissa Lahn-joen molemmin puolin, ja se on tunnettu kylpylä. Lahn on kaupungin kohdalla luonnollinen raja Taunuksen ja Westerwaldin välillä. Kaupunki mainitaan ensimmäisen kerran asiakirjoissa vuonna 880 ja se sai kaupunkioikeudet vuonna 1324. 1600- ja 1700-luvuilla Bad Ems oli yksi Saksan kuuluisimmista kylpylöistä, ja sen kukoistuskausi oli 1800-luvulla, jolloin vieraita saapui kaikkialta maailmasta. Vuonna 1870 kaupunki tuli tunnetuksi paikkana, jossa Emsin sähke sai alkunsa ja johti Ranskan ja Preussin sotaan.
+AIEMPI KYSYMYS: Mitkä alueet Lahn erottaa Bad Emsin kohdalla?
+AIEMPI VASTAUS (Livia):
+No jopas. Lahn on Bad Emsin kohdalla luonnollinen raja [[Taunuksen]] ja [[Westerwaldin]] välillä. Molemmat ovat Saksan keskiosan matalia vuoristoalueita, mutta tarkempia tietoja niiden korkeuksista en ole varma. Raja kulkee siis joen kohdalla. Hyvin kulkee kyyhkyltä vesireitti.
+KYSYMYS: Kerro lisää: Westerwaldin
+
+### 670
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Miten Rammelsbergin hopea löydettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:. Legendan mukaan vuori on saanut nimensä ritari Rammilta, [[Otto Suuren]] kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Rammelsberg on vuori Harzin pohjoisreunalla [[Goslarin]] eteläpuolella, ja sen kaivoksessa louhittiin hopeaa, kuparia ja lyijyä. Tarina on legenda, ei varmennettu tosiasia. Hevoselle pitää antaa kiitos.
+KYSYMYS: Kerro lisää: Otto Suuren
+
+### 671
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+AIEMPI KYSYMYS: Miten Rammelsbergin hopea löydettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:. Legendan mukaan vuori on saanut nimensä ritari Rammilta, [[Otto Suuren]] kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Rammelsberg on vuori Harzin pohjoisreunalla [[Goslarin]] eteläpuolella, ja sen kaivoksessa louhittiin hopeaa, kuparia ja lyijyä. Tarina on legenda, ei varmennettu tosiasia. Hevoselle pitää antaa kiitos.
+KYSYMYS: Kerro lisää: Goslarin
+
+### 672
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+AIEMPI KYSYMYS: Miksi kaivos on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaivos oli sulkemisensa vuonna 1988 aikaan ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta, mikä on keskeinen syy sen arvoon. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Kaivos sijaitsee [[Harzin]] vuoriston pohjoisreunalla. UNESCOn tarkkaa perustelua en ole varma, joten pysyn tässä. Tuhat vuotta, siinä on kestämistä.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 673
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+AIEMPI KYSYMYS: Miksi kaivos on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaivos oli sulkemisensa vuonna 1988 aikaan ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta, mikä on keskeinen syy sen arvoon. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Kaivos sijaitsee [[Harzin]] vuoriston pohjoisreunalla. UNESCOn tarkkaa perustelua en ole varma, joten pysyn tässä. Tuhat vuotta, siinä on kestämistä.
+KYSYMYS: Kerro lisää: Harzin
+
+### 674
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+AIEMPI KYSYMYS: Miten Rammelsbergin malmiesiintymä syntyi?
+AIEMPI VASTAUS (Livia):
+Hmm, annas ku mietin. Malmiesiintymä syntyi [[devonikaudella]] merenpohjan kuumista lähteistä. Kuumista lähteistä liuenneet metallit kerääntyivät merenpohjaan, ja ajan myötä esiintymä päätyi vuoreen, joka kohoaa [[Harzin]] pohjoisreunalla. Tarkemmat geologiset yksityiskohdat jätän asiantuntijoille. Pitkä matka merenpohjasta vuoreen.
+KYSYMYS: Kerro lisää: devonikaudella
+
+### 675
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rammelsbergin kaivos (kauppa)
+Tietoruudun teksti: Rammelsberg on 635 metriä korkea vuori Harzin vuoriston pohjoisreunalla, Goslarin historiallisen kaupungin eteläpuolella Ala-Saksissa. Vuoressa on tärkeä hopea-, kupari- ja lyijykaivos, ja kun se suljettiin vuonna 1988, se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Legendan mukaan vuori on saanut nimensä ritari Rammilta, Otto Suuren kätyriltä, jonka hevonen paljasti kavioillaan hopeasuonen vuonna 968. Malmiesiintymä syntyi devonikaudella merenpohjan kuumista lähteistä. Vierailukaivos merkittiin UNESCOn maailmanperintökohteeksi vuonna 1992.
+AIEMPI KYSYMYS: Milloin Rammelsbergin kaivos suljettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Rammelsbergin]] kaivos suljettiin vuonna 1988, ja silloin se oli ainoa kaivos, joka oli toiminut yhtäjaksoisesti yli tuhat vuotta. Vierailukaivos merkittiin [[UNESCOn]] maailmanperintökohteeksi vuonna 1992. Sulkemisen syytä en ole varma. Onpa siinä ollut elinikää.
+KYSYMYS: Kerro lisää: Rammelsbergin
+
+### 676
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Kuka Kaspar Hauser oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui [[Ansbachissa]] vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ansbachissa
+
+### 677
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Ruokaa ja tapakulttuuria: Markkinat, jotka avataan joka vuosi samana päivänä] 1628 — Joulumarkkinat ovat Saksassa oma vuodenaikansa. Nürnbergin Christkindlesmarkt on niistä kuuluisin, ja se mainitaan asiakirjoissa jo vuonna 1628. Markkinat avataan adventin alla ja suljetaan jouluaattona. Kojuissa myydään puisia leluja, kynttilöitä, paahdettuja manteleita ja Glühweiniä, joka on kuumaa maustettua viiniä — lapsille sama juoma tehdään ilman viiniä ja se on nimeltään Kinderpunsch.
+AIEMPI KYSYMYS: Kuka Kaspar Hauser oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaspar Hauser (1812–1833) oli nuori mies, joka asui [[Ansbachissa]] vuosina 1830–1833 ja jota puukotettiin palatsin puutarhassa. Yleistiedon mukaan hän ilmestyi [[Nürnbergin]] kaduille 1820-luvun lopulla ja kertoi eläneensä vuosia eristyksissä; hänen alkuperänsä jäi arvoitukseksi, enkä ole varma, mikä selitys on varmin. Tapahtumista on yli 190 vuotta, ja kaupungissa on hänen muistomerkkinsä. Onpa siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Nürnbergin
+
+### 678
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Keitä Brandenburg-Ansbachin markkreivit olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Brandenburg-Ansbachin markkreivit olivat [[Hohenzollern-suvun]] haara, joka hallitsi Ansbachia, ja kaupunki oli Hohenzollernien kotipaikka vuodesta 1331. Vuonna 1460 siellä asuivat markkreivit, ja heidän aikaansa kuuluu Ansbachin barokkipalatsi, joka rakennettiin vuosina 1704–1738. Yleistiedon mukaan ruhtinaskunta siirtyi lopulta [[Preussille]] 1700-luvun lopulla, mutta tarkasta vuodesta en ole varma. Markkreivi on kuin keskiaikainen reunaherra.
+KYSYMYS: Kerro lisää: Hohenzollern-suvun
+
+### 679
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Sacré-Cœur] 1875–1914 Basilika Sacré-Cœur eli Pyhän sydämen kirkko rakennettiin Montmartren kukkulan huipulle sen jälkeen, kun Ranska oli hävinnyt sodan Preussille vuonna 1870. Arkkitehti Paul Abadie valittiin suunnittelijaksi peräti 77 ehdotuksen joukosta, ja kirkko valmistui vasta 40 vuotta myöhemmin. Kirkon ulkoseinät on tehty erikoisesta travertiini-kalkkikivestä, joka valkenee sateella eikä koskaan tummu — siksi kirkko hohtaa yhä valkoisena, vaikka se on jo yli sata vuotta vanha. Sisällä kattoa koristaa yksi maailman suurimmista mosaiikeista, joka on koottu 25 000 pienestä keraamisesta palasesta. Tornissa riippuu "Savoyarde", Ranskan suurin kello, joka painaa lähes 19 tonnia. Kirkon huipulta, 200 …
+- [Pietari — kaupunkilehti / Taide] Keisarinna osti sata kaksikymmentäviisi maalausta Preussille kelvanneena hylkytavarana, ja niistä kasvoi maailman suurimpia museoita.
+AIEMPI KYSYMYS: Keitä Brandenburg-Ansbachin markkreivit olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Brandenburg-Ansbachin markkreivit olivat [[Hohenzollern-suvun]] haara, joka hallitsi Ansbachia, ja kaupunki oli Hohenzollernien kotipaikka vuodesta 1331. Vuonna 1460 siellä asuivat markkreivit, ja heidän aikaansa kuuluu Ansbachin barokkipalatsi, joka rakennettiin vuosina 1704–1738. Yleistiedon mukaan ruhtinaskunta siirtyi lopulta [[Preussille]] 1700-luvun lopulla, mutta tarkasta vuodesta en ole varma. Markkreivi on kuin keskiaikainen reunaherra.
+KYSYMYS: Kerro lisää: Preussille
+
+### 680
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Millainen on Ansbachin markkreivien palatsi?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen [[barokkisen]] ilmeensä. Palatsin puutarhassa puukotettiin Kaspar Hauser, joka asui Ansbachissa vuosina 1830–1833. Sisätiloista en ole varma. Aika komea paikka kyyhkyn silmin.
+KYSYMYS: Kerro lisää: Markgrafenschloss
+
+### 681
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Millainen on Ansbachin markkreivien palatsi?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Markgrafenschloss]] rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen [[barokkisen]] ilmeensä. Palatsin puutarhassa puukotettiin Kaspar Hauser, joka asui Ansbachissa vuosina 1830–1833. Sisätiloista en ole varma. Aika komea paikka kyyhkyn silmin.
+KYSYMYS: Kerro lisää: barokkisen
+
+### 682
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Kuinka kaukana Ansbach on Nürnbergistä?
+AIEMPI VASTAUS (Livia):
+Hei, tämä on helppo. Ansbach sijaitsee 40 kilometrin päässä [[Nürnbergistä]] lounaaseen. Se on Baijerin [[Keski-Frankenin]] hallintoalueen pääkaupunki, ja asukkaita siellä oli vuonna 2020 noin 41 700. Lyhyt lento kyyhkylle.
+KYSYMYS: Kerro lisää: Nürnbergistä
+
+### 683
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Kuinka kaukana Ansbach on Nürnbergistä?
+AIEMPI VASTAUS (Livia):
+Hei, tämä on helppo. Ansbach sijaitsee 40 kilometrin päässä [[Nürnbergistä]] lounaaseen. Se on Baijerin [[Keski-Frankenin]] hallintoalueen pääkaupunki, ja asukkaita siellä oli vuonna 2020 noin 41 700. Lyhyt lento kyyhkylle.
+KYSYMYS: Kerro lisää: Keski-Frankenin
+
+### 684
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ansbach (historia)
+Tietoruudun teksti: Ansbach on Baijerin Keski-Frankenin hallintoalueen pääkaupunki, 40 kilometriä Nürnbergistä lounaaseen, ja asukkaita siellä oli vuonna 2020 noin 41 700. Kaupunki sai alkunsa 700-luvulla benediktiiniluostarina ja siitä tuli Hohenzollern-suvun kotipaikka vuonna 1331; vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupungin Markgrafenschloss rakennettiin vuosina 1704–1738, ja se on säilyttänyt alkuperäisen barokkisen ilmeensä. Kaspar Hauser (1812–1833) asui Ansbachissa vuosina 1830–1833 ja puukotettiin palatsin puutarhassa; kaupungissa on hänen muistomerkkinsä.
+AIEMPI KYSYMYS: Miten Ansbach sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Ai se. Ansbach sai alkunsa 700-luvulla [[benediktiiniluostarina]]. Kaupungista tuli [[Hohenzollern-suvun]] kotipaikka vuonna 1331, ja vuonna 1460 siellä asuivat Brandenburg-Ansbachin markkreivit. Kaupunki on Baijerin Keski-Frankenin hallintoalueen pääkaupunki. Luostarista pääkaupungiksi, ei huono ura.
+KYSYMYS: Kerro lisää: benediktiiniluostarina
+
+### 685
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Miksi ranskalaiset räjäyttivät tornin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Ranskan joukot räjäyttivät [[Krautturmin]] syyskuussa 1693 [[Pfalzin perimyssodan]] aikana, jotta [[Heidelbergin]] linnasta tulisi sotilaallisesti käyttökelvoton. Linna oli poltettu jo vuonna 1689, ja räjäytys viimeisteli tuhon. Puolet tornista sortui vallihautaan, ja loppuosa on seissyt puoliksi auki siitä lähtien. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Krautturmin
+
+### 686
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Historia: Ranskalaisten kolme vuotta] Vuonna 1746 ranskalaiset valtasivat Madrasin ja Fort St. Georgen kenraali La Bourdonnais’n johdolla; hän oli tuolloin Mauritiuksen kuvernööri. Britit saivat kaupungin takaisin 1749 Aix-la-Chapellen rauhassa, joka päätti Itävallan perimyssodan. Sen jälkeen kuusimetrisiä muureja vahvistettiin yhä uudelleen: ranskalaiset yrittivät piiritystä 1759, ja 1769 Mysoren Hyder Ali uhkasi kaupunkia ensimmäisessä Anglo-Mysore-sodassa, joka päättyi Madrasin sopimukseen. Linnoituksessa on yhä museo, jonka kokoelmissa on komppanian ajan esineistöä.
+AIEMPI KYSYMYS: Miksi ranskalaiset räjäyttivät tornin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Ranskan joukot räjäyttivät [[Krautturmin]] syyskuussa 1693 [[Pfalzin perimyssodan]] aikana, jotta [[Heidelbergin]] linnasta tulisi sotilaallisesti käyttökelvoton. Linna oli poltettu jo vuonna 1689, ja räjäytys viimeisteli tuhon. Puolet tornista sortui vallihautaan, ja loppuosa on seissyt puoliksi auki siitä lähtien. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pfalzin perimyssodan
+
+### 687
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Kuvataide: Ulkona maalaamisen oppi-isä] Sveitsiläinen Abram-Louis Buvelot ehti maalata vuosia Brasiliassa, missä hänen sedällään oli plantaasi, ennen kuin palasi kotimaahansa ja muutti terveytensä vuoksi Melbourneen 1865 ja asettui Fitzroyhin. Galleria osti häneltä kaksi maalausta 1869, ja vuoden 1873 Melbournen näyttelyissä hän voitti kultamitalit. Hänen innostuksensa maalata suoraan ulkoilmassa tarttui nuorempiin: Heidelbergin koulun maalarit pitivät häntä opettajanaan, ja Arthur Streeton kutsui myöhemmin hänen vuoden 1866 Templestowe-maisemaansa ensimmäiseksi hienoksi maisemaksi, joka Victoriassa on maalattu.
+AIEMPI KYSYMYS: Miksi ranskalaiset räjäyttivät tornin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä tiedän. Ranskan joukot räjäyttivät [[Krautturmin]] syyskuussa 1693 [[Pfalzin perimyssodan]] aikana, jotta [[Heidelbergin]] linnasta tulisi sotilaallisesti käyttökelvoton. Linna oli poltettu jo vuonna 1689, ja räjäytys viimeisteli tuhon. Puolet tornista sortui vallihautaan, ja loppuosa on seissyt puoliksi auki siitä lähtien. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Heidelbergin
+
+### 688
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Kuinka paljon ruutia räjäytykseen käytettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ruutimäärästä minulla ei ole luotettavaa tietoa, enkä halua arvata lukua. Varmaa on, että [[Krautturm]] räjäytettiin syyskuussa 1693 osana [[Pfalzin perimyssodan]] tuhoa ja että puolet tornista sortui vallihautaan. Parempi myöntää kuin keksiä.
+KYSYMYS: Kerro lisää: Krautturm
+
+### 689
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Missä Heidelberg sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heidelberg sijaitsee lounaisessa Saksassa [[Baden-Württembergin]] osavaltiossa [[Neckar]]-joen laaksossa. Kaupunki on tunnettu linnastaan ja [[Heidelbergin yliopistosta]], joka perustettiin vuonna 1386. Neckar yhtyy Reiniin Mannheimin kohdalla.
+
+Jokilaaksot ovat kyyhkyn parhaita ystäviä, koska niitä pitkin löytää perille ilman karttaa. Setäni lensi vastaavia reittejä Reuterin kurssien kanssa, vaikka hän ei koskaan myöntänyt, että laakso teki työn.
+KYSYMYS: Kerro lisää: Baden-Württembergin
+
+### 690
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Missä Heidelberg sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heidelberg sijaitsee lounaisessa Saksassa [[Baden-Württembergin]] osavaltiossa [[Neckar]]-joen laaksossa. Kaupunki on tunnettu linnastaan ja [[Heidelbergin yliopistosta]], joka perustettiin vuonna 1386. Neckar yhtyy Reiniin Mannheimin kohdalla.
+
+Jokilaaksot ovat kyyhkyn parhaita ystäviä, koska niitä pitkin löytää perille ilman karttaa. Setäni lensi vastaavia reittejä Reuterin kurssien kanssa, vaikka hän ei koskaan myöntänyt, että laakso teki työn.
+KYSYMYS: Kerro lisää: Neckar
+
+### 691
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Kuvataide: Ulkona maalaamisen oppi-isä] Sveitsiläinen Abram-Louis Buvelot ehti maalata vuosia Brasiliassa, missä hänen sedällään oli plantaasi, ennen kuin palasi kotimaahansa ja muutti terveytensä vuoksi Melbourneen 1865 ja asettui Fitzroyhin. Galleria osti häneltä kaksi maalausta 1869, ja vuoden 1873 Melbournen näyttelyissä hän voitti kultamitalit. Hänen innostuksensa maalata suoraan ulkoilmassa tarttui nuorempiin: Heidelbergin koulun maalarit pitivät häntä opettajanaan, ja Arthur Streeton kutsui myöhemmin hänen vuoden 1866 Templestowe-maisemaansa ensimmäiseksi hienoksi maisemaksi, joka Victoriassa on maalattu.
+AIEMPI KYSYMYS: Missä Heidelberg sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Heidelberg sijaitsee lounaisessa Saksassa [[Baden-Württembergin]] osavaltiossa [[Neckar]]-joen laaksossa. Kaupunki on tunnettu linnastaan ja [[Heidelbergin yliopistosta]], joka perustettiin vuonna 1386. Neckar yhtyy Reiniin Mannheimin kohdalla.
+
+Jokilaaksot ovat kyyhkyn parhaita ystäviä, koska niitä pitkin löytää perille ilman karttaa. Setäni lensi vastaavia reittejä Reuterin kurssien kanssa, vaikka hän ei koskaan myöntänyt, että laakso teki työn.
+KYSYMYS: Kerro lisää: Heidelbergin yliopistosta
+
+### 692
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+AIEMPI KYSYMYS: Mistä Pfalzin perimyssodassa taisteltiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tuttu aihe. Sota käytiin vuosina 1688–1697, ja siitä käytetään myös nimeä yhdeksänvuotinen sota. Ranskan kuningas [[Ludvig XIV]] taisteli sitä vastaan liittoutuneita valtioita, joita kutsutaan [[Augsburgin liitoksi]]. Yksi syy oli Ludvigin vaatimus Pfalzin perintöön vaaliruhtinas Karlin kuoltua ilman poikaperillisiä vuonna 1685. Sota päättyi [[Rijswijkin rauhaan]] vuonna 1697. Onneksi tuosta on jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Ludvig XIV
+
+### 693
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Mistä Pfalzin perimyssodassa taisteltiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tuttu aihe. Sota käytiin vuosina 1688–1697, ja siitä käytetään myös nimeä yhdeksänvuotinen sota. Ranskan kuningas [[Ludvig XIV]] taisteli sitä vastaan liittoutuneita valtioita, joita kutsutaan [[Augsburgin liitoksi]]. Yksi syy oli Ludvigin vaatimus Pfalzin perintöön vaaliruhtinas Karlin kuoltua ilman poikaperillisiä vuonna 1685. Sota päättyi [[Rijswijkin rauhaan]] vuonna 1697. Onneksi tuosta on jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Augsburgin liitoksi
+
+### 694
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Mistä Pfalzin perimyssodassa taisteltiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on tuttu aihe. Sota käytiin vuosina 1688–1697, ja siitä käytetään myös nimeä yhdeksänvuotinen sota. Ranskan kuningas [[Ludvig XIV]] taisteli sitä vastaan liittoutuneita valtioita, joita kutsutaan [[Augsburgin liitoksi]]. Yksi syy oli Ludvigin vaatimus Pfalzin perintöön vaaliruhtinas Karlin kuoltua ilman poikaperillisiä vuonna 1685. Sota päättyi [[Rijswijkin rauhaan]] vuonna 1697. Onneksi tuosta on jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Rijswijkin rauhaan
+
+### 695
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Kuvataide: Ulkona maalaamisen oppi-isä] Sveitsiläinen Abram-Louis Buvelot ehti maalata vuosia Brasiliassa, missä hänen sedällään oli plantaasi, ennen kuin palasi kotimaahansa ja muutti terveytensä vuoksi Melbourneen 1865 ja asettui Fitzroyhin. Galleria osti häneltä kaksi maalausta 1869, ja vuoden 1873 Melbournen näyttelyissä hän voitti kultamitalit. Hänen innostuksensa maalata suoraan ulkoilmassa tarttui nuorempiin: Heidelbergin koulun maalarit pitivät häntä opettajanaan, ja Arthur Streeton kutsui myöhemmin hänen vuoden 1866 Templestowe-maisemaansa ensimmäiseksi hienoksi maisemaksi, joka Victoriassa on maalattu.
+AIEMPI KYSYMYS: Mikä on Heidelbergin linnan suuri viinitynnyri?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tynnyri. [[Heidelbergin linnan]] kellarissa on jättimäinen viinitynnyri, jota kutsutaan Suureksi tynnyriksi. Se on rakennettu 1700-luvulla [[Pfalzin vaaliruhtinaiden]] aikana, ja siihen mahtuu yli 200 000 litraa viiniä. Tynnyri on yksi linnan suosituimmista nähtävyyksistä. Pullataikinaa siihen mahtuisi hurja määrä.
+KYSYMYS: Kerro lisää: Heidelbergin linnan
+
+### 696
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krautturm (historia)
+Tietoruudun teksti: Heidelbergin linnan Krautturm eli "gesprengter Turm" (räjäytetty torni) oli osa 1500-luvun puolustusvarustusta. Ranskan joukot polttivat linnan Pfalzin perimyssodassa 1689 ja räjäyttivät tornin lopullisesti syyskuussa 1693 tehdäkseen alueesta sotilaallisesti käyttökelvottoman. Puolet tornista sortui vallihautaan — loppu on seissyt puoliksi auki siitä lähtien ja on nykyään linnan tunnetuin symboli.
+AIEMPI KYSYMYS: Mikä on Heidelbergin linnan suuri viinitynnyri?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tynnyri. [[Heidelbergin linnan]] kellarissa on jättimäinen viinitynnyri, jota kutsutaan Suureksi tynnyriksi. Se on rakennettu 1700-luvulla [[Pfalzin vaaliruhtinaiden]] aikana, ja siihen mahtuu yli 200 000 litraa viiniä. Tynnyri on yksi linnan suosituimmista nähtävyyksistä. Pullataikinaa siihen mahtuisi hurja määrä.
+KYSYMYS: Kerro lisää: Pfalzin vaaliruhtinaiden
+
+### 697
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Miksi sotilaat tottelivat vierasta miestä univormussa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Preussin]] armeijassa totteleminen oli kuriin kasvatettu tapa, ja kaartin kapteenin univormu merkitsi arvoa, jonka käskyjä ei ollut tapana kyseenalaistaa. [[Wilhelm Voigt]] oli lisäksi koekäyttänyt univormun vaikutusta sotilaisiin jo ennen tekoaan, ja hän esiintyi käskevästi. Sotilaat noudattivat käskyä, koska he uskoivat sen tulevan oikealta esimieheltä. Ei hassumpi suutarilta.
+KYSYMYS: Kerro lisää: Preussin
+
+### 698
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Miksi sotilaat tottelivat vierasta miestä univormussa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Preussin]] armeijassa totteleminen oli kuriin kasvatettu tapa, ja kaartin kapteenin univormu merkitsi arvoa, jonka käskyjä ei ollut tapana kyseenalaistaa. [[Wilhelm Voigt]] oli lisäksi koekäyttänyt univormun vaikutusta sotilaisiin jo ennen tekoaan, ja hän esiintyi käskevästi. Sotilaat noudattivat käskyä, koska he uskoivat sen tulevan oikealta esimieheltä. Ei hassumpi suutarilta.
+KYSYMYS: Kerro lisää: Wilhelm Voigt
+
+### 699
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+- [Saksa — maalehti / Tiede: Säde näytti luut ihon läpi] Wilhelm Röntgen tutki marraskuussa 1895 Würzburgissa sähköpurkauksia lasiputkessa, kun huoneen poikki pimeässä hohti jotain, minkä ei pitänyt olla mahdollista: säteily läpäisi pahvin, puun ja kirjan sivut. Hän nimesi tuntemattoman säteen X:ksi. Joulukuussa hän kuvasi vaimonsa Anna Berthan käden — kuvassa näkyvät luut ja sormus, ja vaimon kerrotaan huudahtaneen: "Olen nähnyt oman kuolemani!" Röntgen sai historian ensimmäisen fysiikan Nobelin 1901 eikä patentoinut keksintöään: se kuului hänen mielestään kaikille.
+AIEMPI KYSYMYS: Miksi keisari armahti Köpenickin kapteenin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keisari [[Wilhelm II]] armahti Voigtin vuonna 1908, mutta syystä minulla ei ole varmaa tietoa. Yleisesti kerrotaan, että tapaus huvitti suurta yleisöä ja herätti myötätuntoa, sillä Voigt oli karkotettu [[Berliinistä]] pelkästään entisen vankeutensa vuoksi, ja keisarin sanotaan itsekin pitäneen asiaa hupaisana. En ole tästä varma. Hyvä, että joku sentään nauroi.
+KYSYMYS: Kerro lisää: Wilhelm II
+
+### 700
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Gaertnerin Berliini] Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, että taloista voi laskea ikkunaruudut ja kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.
+AIEMPI KYSYMYS: Miksi keisari armahti Köpenickin kapteenin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Keisari [[Wilhelm II]] armahti Voigtin vuonna 1908, mutta syystä minulla ei ole varmaa tietoa. Yleisesti kerrotaan, että tapaus huvitti suurta yleisöä ja herätti myötätuntoa, sillä Voigt oli karkotettu [[Berliinistä]] pelkästään entisen vankeutensa vuoksi, ja keisarin sanotaan itsekin pitäneen asiaa hupaisana. En ole tästä varma. Hyvä, että joku sentään nauroi.
+KYSYMYS: Kerro lisää: Berliinistä
+
+### 701
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Mitä univormu merkitsi keisarillisessa Saksassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Keisarillisessa Saksassa, joka oli olemassa vuosina 1871–1918, armeijalla oli erittäin korkea asema yhteiskunnassa, ja univormu kertoi arvosta ja vallasta. Upseerin univormu toi kantajalleen kunnioitusta myös siviilielämässä, ja [[Preussin]] perinne korosti kuria ja tottelemista. [[Köpenickin tapaus]] tulkittiin usein pilkkana tälle auktoriteettiuskolle.
+
+Minulla on harmaa takki, joka on kaikilla serkuillanikin, eikä kukaan ole koskaan totellut minua sen perusteella. Kai siinä on jotain muuta kuin väri.
+KYSYMYS: Kerro lisää: Köpenickin tapaus
+
+### 702
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Miten Berliinin putkipostijärjestelmä toimi?
+AIEMPI VASTAUS (Livia):
+Ai se. Viisas Pöllö on matkoilla, mutta tän minä tiedän. [[Berliinin]] putkipostissa viestit suljettiin kapseleihin, jotka kulkivat katujen alla olevissa putkissa paineilman ja alipaineen avulla. Järjestelmä yhdisti muun muassa lennätintoimistoja ja pörssin, ja viestit liikkuivat huomattavasti ihmiskuriiria nopeammin. Järjestelmän rakentamiseen osallistui [[Siemens]]. Verkko kehittyi 1860-luvulta alkaen. Setäni kyllä sanoisi, että lennätin vei hänen työnsä.
+KYSYMYS: Kerro lisää: Berliinin
+
+### 703
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Lehmän hinnalla] Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies,…
+AIEMPI KYSYMYS: Miten Berliinin putkipostijärjestelmä toimi?
+AIEMPI VASTAUS (Livia):
+Ai se. Viisas Pöllö on matkoilla, mutta tän minä tiedän. [[Berliinin]] putkipostissa viestit suljettiin kapseleihin, jotka kulkivat katujen alla olevissa putkissa paineilman ja alipaineen avulla. Järjestelmä yhdisti muun muassa lennätintoimistoja ja pörssin, ja viestit liikkuivat huomattavasti ihmiskuriiria nopeammin. Järjestelmän rakentamiseen osallistui [[Siemens]]. Verkko kehittyi 1860-luvulta alkaen. Setäni kyllä sanoisi, että lennätin vei hänen työnsä.
+KYSYMYS: Kerro lisää: Siemens
+
+### 704
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Museosaari] 1830 Museosaari on saari joen Spreen keskellä, ja siellä on peräti viisi museota vierekkäin. Ensimmäinen, Vanha museo, avattiin 1830 — viimeisenä valmistui Pergamonmuseo vasta 1930. Pergamonmuseossa on koottuna kokonaisia muinaisia rakennuksia oikean kokoisina, kuten Babylonin sinisenä hohtava Ištar-portti. Uudessa museossa taas asuu 3 300 vuotta vanha kuningatar Nefertitin rintakuva. Unesco liitti koko Museosaaren maailmanperintöluetteloon 1999. Museot on nykyään yhdistetty maan alla kulkevalla käytävällä, jota pitkin pääsee kulkemaan museosta toiseen kastumatta.
+AIEMPI KYSYMYS: Millainen paikka Köpenick on nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Köpenick on Berliinin kaakkoisosan kaupunginosa, joka liitettiin osaksi Berliiniä vuonna 1920. Alue sijaitsee [[Spree]]-joen ja Dahme-joen tuntumassa, ja siellä on vanha kaupunginosa sekä kaupungintalo, joka on yhä käytössä. Lähistöllä on myös [[Müggelsee]]-järvi, joka on suosittu virkistysalue. Kyllä sinne mieluummin menisi pullalle kuin univormuun.
+KYSYMYS: Kerro lisää: Spree
+
+### 705
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suutari osti univormun palasina ja valtasi kaupungintalon — keisari armahti hänet
+Tietoruudun teksti: Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. Elokuussa Berliinin poliisi karkotti hänet kaupungista pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. päivänä hän puki ylleen preussilaisen kaartinkapteenin univormun, jonka oli ostanut palasina eri kaupoista ja jonka vaikutusta sotilaisiin hän oli ensin koekäyttänyt.
+
+Hän pysäytti kadulla neljä krenatööriä ja kersantin, otti kuusi lisää ampumaradalta, vei joukkonsa junalla Köpenickiin, miehitti kaupungintalon, käski poliisin huolehtia järjestyksestä ja estää puhelut Berliiniin tunnin ajaksi, pidätytti pormestarin ja rahastonhoitajan ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. Kiinni jäätyään hänet tuomittiin neljäksi vuodeksi, mutta keisari Wilhelm II armahti hänet 1908. Neljä päivää…
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Millainen paikka Köpenick on nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Köpenick on Berliinin kaakkoisosan kaupunginosa, joka liitettiin osaksi Berliiniä vuonna 1920. Alue sijaitsee [[Spree]]-joen ja Dahme-joen tuntumassa, ja siellä on vanha kaupunginosa sekä kaupungintalo, joka on yhä käytössä. Lähistöllä on myös [[Müggelsee]]-järvi, joka on suosittu virkistysalue. Kyllä sinne mieluummin menisi pullalle kuin univormuun.
+KYSYMYS: Kerro lisää: Müggelsee
+
+### 706
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Miksi 1800-luvulla rakennettiin keskiaikaisen näköisiä linnoja?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä pohdinta. Keskiaikaisen näköisten linnojen rakentaminen kuului 1800-luvun [[historismiin]], jossa vanhoja tyylejä jäljiteltiin ja ihailtiin. [[Romantiikka]] teki keskiajasta mielikuvien ja ritaritarinoiden kultaisen ajan, ja moni hallitsija halusi rakennuksen, joka viestii perinteestä ja arvovallasta. Baijerin kuninkaan Ludwig II:n linna rakennettiin myös kunnianosoituksena säveltäjä [[Richard Wagnerille]], jonka oopperat sijoittuvat satumaiseen menneisyyteen. Hyvä paikka katsella Alppeja, sen myönnän.
+KYSYMYS: Kerro lisää: historismiin
+
+### 707
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Miksi 1800-luvulla rakennettiin keskiaikaisen näköisiä linnoja?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä pohdinta. Keskiaikaisen näköisten linnojen rakentaminen kuului 1800-luvun [[historismiin]], jossa vanhoja tyylejä jäljiteltiin ja ihailtiin. [[Romantiikka]] teki keskiajasta mielikuvien ja ritaritarinoiden kultaisen ajan, ja moni hallitsija halusi rakennuksen, joka viestii perinteestä ja arvovallasta. Baijerin kuninkaan Ludwig II:n linna rakennettiin myös kunnianosoituksena säveltäjä [[Richard Wagnerille]], jonka oopperat sijoittuvat satumaiseen menneisyyteen. Hyvä paikka katsella Alppeja, sen myönnän.
+KYSYMYS: Kerro lisää: Romantiikka
+
+### 708
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Miksi 1800-luvulla rakennettiin keskiaikaisen näköisiä linnoja?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä pohdinta. Keskiaikaisen näköisten linnojen rakentaminen kuului 1800-luvun [[historismiin]], jossa vanhoja tyylejä jäljiteltiin ja ihailtiin. [[Romantiikka]] teki keskiajasta mielikuvien ja ritaritarinoiden kultaisen ajan, ja moni hallitsija halusi rakennuksen, joka viestii perinteestä ja arvovallasta. Baijerin kuninkaan Ludwig II:n linna rakennettiin myös kunnianosoituksena säveltäjä [[Richard Wagnerille]], jonka oopperat sijoittuvat satumaiseen menneisyyteen. Hyvä paikka katsella Alppeja, sen myönnän.
+KYSYMYS: Kerro lisää: Richard Wagnerille
+
+### 709
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kuuro säveltäjä kuuli musiikin päässään] Bonnissa syntynyt Ludwig van Beethoven alkoi menettää kuuloaan alle kolmekymppisenä — säveltäjälle pahin mahdollinen kohtalo. Hän ei lopettanut vaan sävelsi päänsä sisällä: keskustelut käytiin vihkoihin kirjoittamalla, ja flyygelistä hän sahasi jalat, jotta tunsi sävelet lattian värinänä. Yhdeksännen sinfonian kantaesityksessä 1824 täysin kuuro Beethoven piti kääntää kasvot yleisöön päin, jotta hän näki suosionosoitukset, joita ei kuullut. Sinfonian loppuhymni Oodi ilolle on nykyään Euroopan unionin hymni.
+AIEMPI KYSYMYS: Mistä Ludwig II sai rahat rakennustöihin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Ludwig II]] maksoi rakennustyöt omista varoistaan ja laajalla lainanotolla, ei [[Baijerin]] julkisista varoista. Velkaa kertyi paljon, ja vuonna 1886 hänet julistettiin kykenemättömäksi hallitsemaan; samana vuonna hän kuoli. Linna oli tarkoitettu hänen yksityiseksi asunnokseen, mutta se avattiin yleisölle pian hänen kuolemansa jälkeen. Velka on velkaa, vaikka se olisi linnan muotoinen.
+KYSYMYS: Kerro lisää: Ludwig II
+
+### 710
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Mistä Ludwig II sai rahat rakennustöihin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Ludwig II]] maksoi rakennustyöt omista varoistaan ja laajalla lainanotolla, ei [[Baijerin]] julkisista varoista. Velkaa kertyi paljon, ja vuonna 1886 hänet julistettiin kykenemättömäksi hallitsemaan; samana vuonna hän kuoli. Linna oli tarkoitettu hänen yksityiseksi asunnokseen, mutta se avattiin yleisölle pian hänen kuolemansa jälkeen. Velka on velkaa, vaikka se olisi linnan muotoinen.
+KYSYMYS: Kerro lisää: Baijerin
+
+### 711
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Mitä Neuschwansteinista oli valmiina 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on selvät vuosiluvut. Peruskivi laskettiin 5. syyskuuta 1869, ja vuonna 1872 oli valmiina kellari. Vuoteen 1876 mennessä rakennus oli noussut ensimmäiseen kerrokseen asti, joten 1870-luvulla [[Neuschwansteinin]] linna oli vielä pääosin työmaa. [[Harjannostajaisia]] vietettiin vasta 1880, ja kuningas muutti sisään 1884.
+
+Perustukset ovat linnan tylsin vaihe, mutta ilman niitä ei ole tornejakaan. Ylhäältä katsoen työmaa näyttäisi varmasti pelkältä kuopalta.
+KYSYMYS: Kerro lisää: Neuschwansteinin
+
+### 712
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Luonto: Leijona, jonka harja ulottui kyynärpäihin] 1960-luku — Atlasleijona eli Pohjois-Afrikassa Marokosta Egyptiin. Metsästys- ja havaintotietojen läpikäynti osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa 1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; sen jälkeen laji on luonnosta hävinnyt. Museoiden täytetyt urokset ovat kuonosta hännänpäähän 2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 senttimetriä pitkiä; osalla harja jatkui hartioiden yli ja vatsan alta kyynärpäihin asti. Selitykseksi on tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. Rabatin eläintarhan leijonat olivat aatelisten ja berberien lahjoja kuningasperheelle: kun perhe joutui 1953 maanpakoon, niitä oli 21.
+- [Chicago — kohdekartta / Kohdekartta: Willis Tower] 1973 Sears, Roebuck & Co. oli 1969 maailman suurin vähittäiskauppias ja työllisti noin 350 000 ihmistä. Kun yhtiö päätti koota tuhannet chicagolaiset toimistotyöntekijänsä yhteen taloon, esikaupunki hylättiin heti — se olisi vaatinut noin 7 000 ihmisen muuttamista. Tilalle valittiin kahden korttelin tontti Loopin länsilaidalta. Chicagon väljä kaavoitus olisi sallinut jopa 300-kerroksisen talon, mutta ilmailuhallinto rajoitti korkeutta ja harva vuokralainen halusi toimistoa pilvien tasalta. Suunnitelma julkistettiin 27. heinäkuuta 1970. Arkkitehti Bruce Graham ja insinööri Fazlur Rahman Khan ratkaisivat korkeuden yhdeksällä neliömäisellä putkella, jotka on niputettu kolme kertaa kolme -ruudu…
+AIEMPI KYSYMYS: Mitä Neuschwansteinista oli valmiina 1870-luvulla?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on selvät vuosiluvut. Peruskivi laskettiin 5. syyskuuta 1869, ja vuonna 1872 oli valmiina kellari. Vuoteen 1876 mennessä rakennus oli noussut ensimmäiseen kerrokseen asti, joten 1870-luvulla [[Neuschwansteinin]] linna oli vielä pääosin työmaa. [[Harjannostajaisia]] vietettiin vasta 1880, ja kuningas muutti sisään 1884.
+
+Perustukset ovat linnan tylsin vaihe, mutta ilman niitä ei ole tornejakaan. Ylhäältä katsoen työmaa näyttäisi varmasti pelkältä kuopalta.
+KYSYMYS: Kerro lisää: Harjannostajaisia
+
+### 713
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Richard Wagner?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hänestä puhutaan paljon. Richard Wagner (1813–1883) oli saksalainen säveltäjä ja oopperakirjailija, joka kirjoitti itse oopperoidensa tekstit. Hänen tunnetuimpia teoksiaan ovat muun muassa [[Lohengrin]], [[Tristan ja Isolde]] sekä oopperasarja [[Nibelungin sormus]]. Hänen teoksiaan varten rakennettiin oma oopperatalo [[Bayreuthiin]], jossa pidetään yhä Wagner-festivaalia. Baijerin kuningas [[Ludwig II]] oli hänen suuri ihailijansa ja tukijansa. Wagnerin musiikki on kyllä kovaäänistä kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: Lohengrin
+
+### 714
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Richard Wagner?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hänestä puhutaan paljon. Richard Wagner (1813–1883) oli saksalainen säveltäjä ja oopperakirjailija, joka kirjoitti itse oopperoidensa tekstit. Hänen tunnetuimpia teoksiaan ovat muun muassa [[Lohengrin]], [[Tristan ja Isolde]] sekä oopperasarja [[Nibelungin sormus]]. Hänen teoksiaan varten rakennettiin oma oopperatalo [[Bayreuthiin]], jossa pidetään yhä Wagner-festivaalia. Baijerin kuningas [[Ludwig II]] oli hänen suuri ihailijansa ja tukijansa. Wagnerin musiikki on kyllä kovaäänistä kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: Tristan ja Isolde
+
+### 715
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Richard Wagner?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hänestä puhutaan paljon. Richard Wagner (1813–1883) oli saksalainen säveltäjä ja oopperakirjailija, joka kirjoitti itse oopperoidensa tekstit. Hänen tunnetuimpia teoksiaan ovat muun muassa [[Lohengrin]], [[Tristan ja Isolde]] sekä oopperasarja [[Nibelungin sormus]]. Hänen teoksiaan varten rakennettiin oma oopperatalo [[Bayreuthiin]], jossa pidetään yhä Wagner-festivaalia. Baijerin kuningas [[Ludwig II]] oli hänen suuri ihailijansa ja tukijansa. Wagnerin musiikki on kyllä kovaäänistä kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: Nibelungin sormus
+
+### 716
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Tiede: Kolmas hallitsija akatemian luettelossa] 1875 — Vuonna 1875 Ranskan tiedeakatemia valitsi Pedro II:n jäsenekseen. Valtionpäämiehistä sama kunnia oli ennen häntä osunut vain kahdelle: Pietari Suurelle ja Napoleon Bonapartelle. Keisari kuului myös Lontoon Royal Societyyn ja Venäjän tiedeakatemiaan ja kävi kirjeenvaihtoa muun muassa Louis Pasteurin, Alexander Graham Bellin ja Richard Wagnerin kanssa. Omista varoistaan hän tuki Pasteur-instituutin perustamista ja Wagnerin oopperatalon rakentamista Bayreuthiin.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Richard Wagner?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hänestä puhutaan paljon. Richard Wagner (1813–1883) oli saksalainen säveltäjä ja oopperakirjailija, joka kirjoitti itse oopperoidensa tekstit. Hänen tunnetuimpia teoksiaan ovat muun muassa [[Lohengrin]], [[Tristan ja Isolde]] sekä oopperasarja [[Nibelungin sormus]]. Hänen teoksiaan varten rakennettiin oma oopperatalo [[Bayreuthiin]], jossa pidetään yhä Wagner-festivaalia. Baijerin kuningas [[Ludwig II]] oli hänen suuri ihailijansa ja tukijansa. Wagnerin musiikki on kyllä kovaäänistä kyyhkyn korvaan.
+KYSYMYS: Kerro lisää: Bayreuthiin
+
+### 717
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Missä Neuschwanstein sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Neuschwanstein sijaitsee Baijerin lounaisosassa [[Alppien]] reunalla [[Füssenin]] kaupungin lähellä, aika lähellä [[Itävallan]] rajaa. Berliinistä sinne on pitkä matka etelään. Berliinistä sinne on kyyhkyllekin pitkä lento.
+KYSYMYS: Kerro lisää: Alppien
+
+### 718
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+AIEMPI KYSYMYS: Missä Neuschwanstein sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Neuschwanstein sijaitsee Baijerin lounaisosassa [[Alppien]] reunalla [[Füssenin]] kaupungin lähellä, aika lähellä [[Itävallan]] rajaa. Berliinistä sinne on pitkä matka etelään. Berliinistä sinne on kyyhkyllekin pitkä lento.
+KYSYMYS: Kerro lisää: Füssenin
+
+### 719
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuningas rakensi satulinnan omilla rahoillaan ja veloillaan — ovet avattiin yleisölle heti hänen kuoltuaan
+Tietoruudun teksti: Baijerin kuningas Ludwig II halusi pois Münchenin hovin rajoituksista ja rakennutti Alppien reunalle linnan, joka näyttää keskiaikaiselta ritarilinnalta mutta on 1800-luvun työtä ja rakennettu kunnianosoituksena Richard Wagnerille. Peruskivi laskettiin 5. syyskuuta 1869. Vuonna 1872 kellari oli valmis, 1876 kaikki ensimmäiseen kerrokseen asti, 1880 vietettiin harjannostajaisia, ja vasta 1884 kuningas muutti sisään.
+
+Hän maksoi kaiken omista varoistaan ja laajalla lainanotolla, ei Baijerin julkisista varoista. Linna oli tarkoitettu kuninkaan yksityiseksi asunnoksi — mutta hän kuoli 1886, ja se avattiin yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli 61 miljoonaa ihmistä.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Kulta-Liisa] Heinrich Strack suunnitteli pylvään vuoden 1864 jälkeen muistoksi voitosta Tanskasta. Ennen kuin se ehdittiin vihkiä, Preussi oli voittanut myös Itävallan ja Ranskan, ja pylväs sai uuden merkityksen: harjalle lisättiin 8,3 metriä korkea pronssinen Victoria, jota alkuperäisissä suunnitelmissa ei ollut lainkaan. Vihkiäiset pidettiin 2. syyskuuta 1873, isoisäsi matkavuonna. Berliiniläiset eivät jääneet juhlapuheiden varaan vaan antoivat patsaalle lempinimen Goldelse, Kulta-Liisa, vuonna 1866 ilmestyneen romaanin sankarittaren mukaan. Pylväs ei ole enää siinä, missä se silloin seisoi: se nousi Königsplatzille, ja vuosina 1938–39 se siirrettiin Großer Sternille ja korotettiin samalla kuudella ja…
+AIEMPI KYSYMYS: Missä Neuschwanstein sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Neuschwanstein sijaitsee Baijerin lounaisosassa [[Alppien]] reunalla [[Füssenin]] kaupungin lähellä, aika lähellä [[Itävallan]] rajaa. Berliinistä sinne on pitkä matka etelään. Berliinistä sinne on kyyhkyllekin pitkä lento.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 720
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Berliini
+Maa, jossa pelaaja on: Saksa
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brandenburgin portti (historia)
+Tietoruudun teksti: Brandenburgin portti on 1700-luvun klassistinen monumentti Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin paikalle — siitä alkoi tie Brandenburg an der Haveliin, Brandenburgin markkreivikunnan entiseen pääkaupunkiin. Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. Portista alkaa Unter den Linden, bulevardi, joka vie suoraan vanhalle kaupunginlinnalle.
+Isoisän matkakirjamerkintä: Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Kellotorni, joka näkyy joelle] Luostarin kellotorni rakennettiin vuosina 1731–1745 saksalaisen arkkitehti Johann Gottfried Schädelin suunnitelmien mukaan, ja se oli valmistuessaan maailman korkein vapaasti seisova kellotorni. Ristin kanssa se nousee 96,5 metrin korkeuteen ja sen kullattu kupoli näkyy kauas Dnipro-joelle. Koko luostarikompleksi, luolat ja maanpäälliset rakennukset yhdessä, on ollut Unescon maailmanperintökohde vuodesta 1990.
+AIEMPI KYSYMYS: Mikä kvadriga on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kvadriga on antiikin kaksipyöräinen vaunu, jota vetää neljä rinnakkain valjastettua hevosta. Brandenburgin portin harjalla oleva pronssinen kvadriga on kuvanveistäjä [[Johann Gottfried Schadowin]] työ, ja sitä ohjaa voiton jumalatar Victoria. [[Napoleon]] vei sen sotasaaliina Pariisiin vuonna 1806, ja se palautettiin vasta 1814. Neljä hevosta on kyllä enemmän kuin minulla on koskaan ollut.
+KYSYMYS: Kerro lisää: Johann Gottfried Schadowin

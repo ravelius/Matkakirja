@@ -1,0 +1,1033 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+AIEMPI KYSYMYS: Mitä jugendtyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Jugendtyyli on 1800-luvun lopun ja 1900-luvun alun taidesuuntaus, jolle ovat tyypillisiä kaarevat linjat ja kasvimuodot, ja sitä kutsutaan myös nimellä art nouveau. Bremenin raatihuoneen [[Güldenkammer]] sisustettiin vuonna 1905 [[Heinrich Vogelerin]] jugendtyylillä. Vogeler tunnetaan taiteilijayhteisö [[Worpswedestä]]. Minun makuuni sopisi vähän lisää lintuja.
+KYSYMYS: Kerro lisää: Heinrich Vogelerin
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bremenin raatihuone (historia)
+Tietoruudun teksti: Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat 41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.
+AIEMPI KYSYMYS: Mitä jugendtyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Jugendtyyli on 1800-luvun lopun ja 1900-luvun alun taidesuuntaus, jolle ovat tyypillisiä kaarevat linjat ja kasvimuodot, ja sitä kutsutaan myös nimellä art nouveau. Bremenin raatihuoneen [[Güldenkammer]] sisustettiin vuonna 1905 [[Heinrich Vogelerin]] jugendtyylillä. Vogeler tunnetaan taiteilijayhteisö [[Worpswedestä]]. Minun makuuni sopisi vähän lisää lintuja.
+KYSYMYS: Kerro lisää: Worpswedestä
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+AIEMPI KYSYMYS: Miltä Hampurin vanha raatihuone näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tarkkaa ulkoasua en ole varma kuvata, enkä halua arvata. Vanha raatihuone seisoi [[Alsterin]] rannalla ja laajeni vuosisatojen aikana, joten se oli todennäköisesti sekoitus eri aikojen tyylejä; vuosilukua 1290 en pidä täysin varmana, sillä [[renessanssin]] tyylipiirteet yleistyivät Euroopassa vasta myöhemmin. Nykyinen raatihuone valmistui eri paikalle vuonna 1897, joten vanhaa ei voi enää käydä katsomassa. Parempi myöntää kuin keksiä.
+KYSYMYS: Kerro lisää: Alsterin
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Miltä Hampurin vanha raatihuone näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tarkkaa ulkoasua en ole varma kuvata, enkä halua arvata. Vanha raatihuone seisoi [[Alsterin]] rannalla ja laajeni vuosisatojen aikana, joten se oli todennäköisesti sekoitus eri aikojen tyylejä; vuosilukua 1290 en pidä täysin varmana, sillä [[renessanssin]] tyylipiirteet yleistyivät Euroopassa vasta myöhemmin. Nykyinen raatihuone valmistui eri paikalle vuonna 1897, joten vanhaa ei voi enää käydä katsomassa. Parempi myöntää kuin keksiä.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Miksi Hampurin vanha raatihuone katosi?
+AIEMPI VASTAUS (Livia):
+Ai se. Vanha raatihuone menetettiin [[Hampurin suurpalossa]] vuonna 1842, kun rakennus räjäytettiin [[palokujan]] avaamiseksi eli palon etenemisen pysäyttämiseksi. Raatihuone oli seissyt Alsterin rannalla, ja nykyinen raatihuone valmistui eri paikalle vuonna 1897. Tapahtumasta on kulunut yli 180 vuotta, ja onneksi sen jäljiltä kaupunki rakennettiin uudelleen.
+KYSYMYS: Kerro lisää: Hampurin suurpalossa
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+AIEMPI KYSYMYS: Miksi Hampurin vanha raatihuone katosi?
+AIEMPI VASTAUS (Livia):
+Ai se. Vanha raatihuone menetettiin [[Hampurin suurpalossa]] vuonna 1842, kun rakennus räjäytettiin [[palokujan]] avaamiseksi eli palon etenemisen pysäyttämiseksi. Raatihuone oli seissyt Alsterin rannalla, ja nykyinen raatihuone valmistui eri paikalle vuonna 1897. Tapahtumasta on kulunut yli 180 vuotta, ja onneksi sen jäljiltä kaupunki rakennettiin uudelleen.
+KYSYMYS: Kerro lisää: palokujan
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+AIEMPI KYSYMYS: Millainen on Hampurin nykyinen raatihuone?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä minulla on näköhavaintoa. Hampurin nykyinen raatihuone valmistui vuonna 1897, ja se on rakennettu [[uusrenessanssin]] tyyliin. Se sijaitsee eri paikalla kuin vanha raatihuone, ja siellä toimii yhä [[Hampurin kaupunkivaltion]] hallinto. Kyyhkyt viihtyvät sen katoilla varmasti hyvin.
+KYSYMYS: Kerro lisää: uusrenessanssin
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Millainen on Hampurin nykyinen raatihuone?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä minulla on näköhavaintoa. Hampurin nykyinen raatihuone valmistui vuonna 1897, ja se on rakennettu [[uusrenessanssin]] tyyliin. Se sijaitsee eri paikalla kuin vanha raatihuone, ja siellä toimii yhä [[Hampurin kaupunkivaltion]] hallinto. Kyyhkyt viihtyvät sen katoilla varmasti hyvin.
+KYSYMYS: Kerro lisää: Hampurin kaupunkivaltion
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+AIEMPI KYSYMYS: Mikä on Alster?
+AIEMPI VASTAUS (Livia):
+Mmm— vesistö. Alster on [[Elben]] sivujoki, joka virtaa Hampurin kaupungin läpi. Kaupungissa se on padottu järviksi, joista tunnetaan [[Binnenalster]] ja [[Außenalster]]. Hampurin vanha raatihuone seisoi Alsterin rannalla. Ylhäältä se on kyl aika kaunis näky.
+KYSYMYS: Kerro lisää: Elben
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+AIEMPI KYSYMYS: Mikä on Alster?
+AIEMPI VASTAUS (Livia):
+Mmm— vesistö. Alster on [[Elben]] sivujoki, joka virtaa Hampurin kaupungin läpi. Kaupungissa se on padottu järviksi, joista tunnetaan [[Binnenalster]] ja [[Außenalster]]. Hampurin vanha raatihuone seisoi Alsterin rannalla. Ylhäältä se on kyl aika kaunis näky.
+KYSYMYS: Kerro lisää: Binnenalster
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+AIEMPI KYSYMYS: Mikä on Alster?
+AIEMPI VASTAUS (Livia):
+Mmm— vesistö. Alster on [[Elben]] sivujoki, joka virtaa Hampurin kaupungin läpi. Kaupungissa se on padottu järviksi, joista tunnetaan [[Binnenalster]] ja [[Außenalster]]. Hampurin vanha raatihuone seisoi Alsterin rannalla. Ylhäältä se on kyl aika kaunis näky.
+KYSYMYS: Kerro lisää: Außenalster
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Mikä Hampurin rooli Hansaliitossa oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hampuri kuului keskiajalla [[Hansaliittoon]], jonka muodostivat pohjoiseurooppalaiset kauppakaupungit. Liitto edisti kauppaa [[Pohjanmeren]] ja [[Itämeren]] alueella, ja Hampuri on yhä virallisesti Vapaa ja Hansakaupunki Hampuri. Tarkoista vuosiluvuista en ole varma. Kauppiaat kuljettivat tavaraa, minä kuljetin kirjeitä.
+KYSYMYS: Kerro lisää: Hansaliittoon
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä Hampurin rooli Hansaliitossa oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hampuri kuului keskiajalla [[Hansaliittoon]], jonka muodostivat pohjoiseurooppalaiset kauppakaupungit. Liitto edisti kauppaa [[Pohjanmeren]] ja [[Itämeren]] alueella, ja Hampuri on yhä virallisesti Vapaa ja Hansakaupunki Hampuri. Tarkoista vuosiluvuista en ole varma. Kauppiaat kuljettivat tavaraa, minä kuljetin kirjeitä.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hampurin vanha raatihuone (historia)
+Tietoruudun teksti: Hampurin Alsterin rannalla seissyt renessanssiraatihuone valmistui vuonna 1290 ja laajeni vuosisatojen aikana. Vuoden 1842 suurpalossa rakennus räjäytettiin palokujan avaamiseksi. Nykyinen raatihuone valmistui eri paikalle 1897.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mikä Hampurin rooli Hansaliitossa oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hampuri kuului keskiajalla [[Hansaliittoon]], jonka muodostivat pohjoiseurooppalaiset kauppakaupungit. Liitto edisti kauppaa [[Pohjanmeren]] ja [[Itämeren]] alueella, ja Hampuri on yhä virallisesti Vapaa ja Hansakaupunki Hampuri. Tarkoista vuosiluvuista en ole varma. Kauppiaat kuljettivat tavaraa, minä kuljetin kirjeitä.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+AIEMPI KYSYMYS: Miltä Pantaleonstor näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa en kaiva päästäni, mutta pääpiirteet tiedän. Pantaleonstor oli yksi [[Kölnin]] suuren keskiaikaisen [[kaupunginmuurin]] porteista, ja se oli kaksoistorninen eli siinä oli kaksi tornia. Portti hallitsi eteläistä maantietä, joten sen kautta kulki liikenne kaupunkiin etelän suunnasta. Tarkemmista yksityiskohdista, kuten kattojen muodoista tai koristeista, en ole varma, eikä niitä sovi arvailla. Enempää ei kyyhky ny tost kehtaa luvata.
+KYSYMYS: Kerro lisää: Kölnin
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+AIEMPI KYSYMYS: Miltä Pantaleonstor näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa en kaiva päästäni, mutta pääpiirteet tiedän. Pantaleonstor oli yksi [[Kölnin]] suuren keskiaikaisen [[kaupunginmuurin]] porteista, ja se oli kaksoistorninen eli siinä oli kaksi tornia. Portti hallitsi eteläistä maantietä, joten sen kautta kulki liikenne kaupunkiin etelän suunnasta. Tarkemmista yksityiskohdista, kuten kattojen muodoista tai koristeista, en ole varma, eikä niitä sovi arvailla. Enempää ei kyyhky ny tost kehtaa luvata.
+KYSYMYS: Kerro lisää: kaupunginmuurin
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+AIEMPI KYSYMYS: Miksi Pantaleonstor katosi?
+AIEMPI VASTAUS (Livia):
+Ai se. Pantaleonstor purettiin, kun Köln hävitti keskiaikaiset muurinsa ja porttinsa 1800-luvun lopulla. Kaupunki kasvoi ja liikenne lisääntyi, eikä kapea kaksoistorninen portti enää vastannut uuden ajan tarpeita. Muurin linjalle rakennettiin leveitä kehäkatuja, jotka tunnetaan nimellä [[Ringit]], ja vain muutama portti jäi pystyyn, esimerkiksi [[Hahnentor]].
+
+Olen katsonut Kölniä ylhäältä monta kertaa, ja Ringit erottuvat kaupungista kuin sormus. Kukaan ei vain koskaan kysy, miltä muuri näytti, ennen kuin se on poissa.
+KYSYMYS: Kerro lisää: Ringit
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+AIEMPI KYSYMYS: Miksi Pantaleonstor katosi?
+AIEMPI VASTAUS (Livia):
+Ai se. Pantaleonstor purettiin, kun Köln hävitti keskiaikaiset muurinsa ja porttinsa 1800-luvun lopulla. Kaupunki kasvoi ja liikenne lisääntyi, eikä kapea kaksoistorninen portti enää vastannut uuden ajan tarpeita. Muurin linjalle rakennettiin leveitä kehäkatuja, jotka tunnetaan nimellä [[Ringit]], ja vain muutama portti jäi pystyyn, esimerkiksi [[Hahnentor]].
+
+Olen katsonut Kölniä ylhäältä monta kertaa, ja Ringit erottuvat kaupungista kuin sormus. Kukaan ei vain koskaan kysy, miltä muuri näytti, ennen kuin se on poissa.
+KYSYMYS: Kerro lisää: Hahnentor
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mikä on Kölnin tuomiokirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kölnin tuomiokirkko on goottilainen katedraali [[Reinin]] rannalla, ja sen rakentaminen alkoi vuonna 1248. Rakennustyö kesti keskeytyksineen vuoteen 1880, joten valmistumiseen meni noin kuusisataa vuotta. Kaksi tornia kohoaa noin 157 metrin korkeuteen, ja kirkko merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 1996. Kuusisataa vuotta, ja minä valitan jo kolmen tunnin lennosta.
+KYSYMYS: Kerro lisää: Reinin
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+AIEMPI KYSYMYS: Mikä on Kölnin tuomiokirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kölnin tuomiokirkko on goottilainen katedraali [[Reinin]] rannalla, ja sen rakentaminen alkoi vuonna 1248. Rakennustyö kesti keskeytyksineen vuoteen 1880, joten valmistumiseen meni noin kuusisataa vuotta. Kaksi tornia kohoaa noin 157 metrin korkeuteen, ja kirkko merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 1996. Kuusisataa vuotta, ja minä valitan jo kolmen tunnin lennosta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+AIEMPI KYSYMYS: Mikä on kölsch?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kölsch on [[Kölnin]] oma olutlaji: vaalea, kevyt ja yläkäyvä olut, joka kypsytetään viileässä. Sitä tarjoillaan perinteisesti pienissä, kapeissa ja suorissa laseissa, joita kutsutaan nimellä [[Stange]], ja tarjoilijat kantavat lasit tarjottimella pöytiin. Nimi on suojattu, ja vain Kölnin alueella valmistettua olutta saa kutsua kölschiksi. Kyyhkynä en maista, mutta lasit näyttävät ylhäältä kyl aika pieniltä.
+KYSYMYS: Kerro lisää: Stange
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+AIEMPI KYSYMYS: Mistä Kölnin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on suvun vanhaa kantaa. Kölnin nimi tulee latinan sanasta colonia eli siirtokunta. Roomalaiset perustivat paikalle siirtokunnan, jonka täysi nimi oli Colonia Claudia Ara Agrippinensium, ja nimessä näkyy [[Agrippina]], keisari [[Claudiuksen]] puoliso, joka oli syntynyt alueella. Kaupunki sai siirtokunnan aseman ensimmäisellä vuosisadalla jälkeen Kristuksen. Ajan mittaan nimestä jäi muoto Colonia, josta saksan Köln kehittyi. Roomalaiset tunnen kyl, suku on samaa vanhaa kantaa.
+KYSYMYS: Kerro lisää: Agrippina
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pantaleonstor (historia)
+Tietoruudun teksti: Pantaleonstor oli yksi Kölnin suuren keskiaikaisen kaupunginmuurin porteista. Kaksoistorninen portti hallitsi eteläistä maantietä, kunnes kaupunki purki muurit ja portit 1800-luvun lopulla kasvavan liikenteen tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+AIEMPI KYSYMYS: Mistä Kölnin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on suvun vanhaa kantaa. Kölnin nimi tulee latinan sanasta colonia eli siirtokunta. Roomalaiset perustivat paikalle siirtokunnan, jonka täysi nimi oli Colonia Claudia Ara Agrippinensium, ja nimessä näkyy [[Agrippina]], keisari [[Claudiuksen]] puoliso, joka oli syntynyt alueella. Kaupunki sai siirtokunnan aseman ensimmäisellä vuosisadalla jälkeen Kristuksen. Ajan mittaan nimestä jäi muoto Colonia, josta saksan Köln kehittyi. Roomalaiset tunnen kyl, suku on samaa vanhaa kantaa.
+KYSYMYS: Kerro lisää: Claudiuksen
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Miksi aluetta sanotaan Sveitsiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Sächsische Schweiz eli Saksilainen Sveitsi ilmestyi 1700-luvulla. Sveitsiläiset taiteilijat [[Adrian Zingg]] ja [[Anton Graff]] nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat Elben hiekkakivivuorten maiseman muistuttavan kotimaansa [[Juraa]]. Nimeä levitti laajalle [[Wilhelm Lebrecht Götzinger]] kirjoillaan. Nykyisin Saksin puolella on kansallispuisto ja kiipeilyaluetta, ja rajan toisella puolella jatkuu Tšekin Böömin Sveitsi. Viisas Pöllö kertoisi tämän pidemmin, mutta hän parantelee siipeään.
+KYSYMYS: Kerro lisää: Adrian Zingg
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Bobiradasta tuli tulilinja, sitten graffititaidetta] 1984 — Sarajevo isännöi vuoden 1984 talviolympialaisia — ensimmäisiä, jotka pidettiin sosialistisessa maassa. Trebević-vuorelle rakennettu bob- ja kelkkarata oli kisojen näkyvimpiä uutuuksia, betonista valettu 1300 metrin mittainen kouru vuoren rinteessä. Kymmenen vuotta myöhemmin, Sarajevon piirityksen aikana 1992–1996, Trebević oli rintamalinjalla, ja hylätty rata toimi tykistöasemana kaupunkia kohti. Rata jäi käyttämättömäksi ja rappeutui, mutta 2000-luvulla siitä tuli suosittu graffititaiteen näyttämö ja nähtävyys, jonne moni kulkee yhä kävellen tai polkupyörällä.
+AIEMPI KYSYMYS: Miksi aluetta sanotaan Sveitsiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Sächsische Schweiz eli Saksilainen Sveitsi ilmestyi 1700-luvulla. Sveitsiläiset taiteilijat [[Adrian Zingg]] ja [[Anton Graff]] nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat Elben hiekkakivivuorten maiseman muistuttavan kotimaansa [[Juraa]]. Nimeä levitti laajalle [[Wilhelm Lebrecht Götzinger]] kirjoillaan. Nykyisin Saksin puolella on kansallispuisto ja kiipeilyaluetta, ja rajan toisella puolella jatkuu Tšekin Böömin Sveitsi. Viisas Pöllö kertoisi tämän pidemmin, mutta hän parantelee siipeään.
+KYSYMYS: Kerro lisää: Anton Graff
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Miksi aluetta sanotaan Sveitsiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Sächsische Schweiz eli Saksilainen Sveitsi ilmestyi 1700-luvulla. Sveitsiläiset taiteilijat [[Adrian Zingg]] ja [[Anton Graff]] nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat Elben hiekkakivivuorten maiseman muistuttavan kotimaansa [[Juraa]]. Nimeä levitti laajalle [[Wilhelm Lebrecht Götzinger]] kirjoillaan. Nykyisin Saksin puolella on kansallispuisto ja kiipeilyaluetta, ja rajan toisella puolella jatkuu Tšekin Böömin Sveitsi. Viisas Pöllö kertoisi tämän pidemmin, mutta hän parantelee siipeään.
+KYSYMYS: Kerro lisää: Juraa
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Miksi aluetta sanotaan Sveitsiksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi Sächsische Schweiz eli Saksilainen Sveitsi ilmestyi 1700-luvulla. Sveitsiläiset taiteilijat [[Adrian Zingg]] ja [[Anton Graff]] nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat Elben hiekkakivivuorten maiseman muistuttavan kotimaansa [[Juraa]]. Nimeä levitti laajalle [[Wilhelm Lebrecht Götzinger]] kirjoillaan. Nykyisin Saksin puolella on kansallispuisto ja kiipeilyaluetta, ja rajan toisella puolella jatkuu Tšekin Böömin Sveitsi. Viisas Pöllö kertoisi tämän pidemmin, mutta hän parantelee siipeään.
+KYSYMYS: Kerro lisää: Wilhelm Lebrecht Götzinger
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+AIEMPI KYSYMYS: Mikä Königsteinin linnoitus on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Königsteinin linnoitus on Saksilaisen Sveitsin tunnetuin maamerkki, laaja linnoitus [[Elben]] rannalla kohoavalla hiekkakivikalliolla. Sitä on käytetty puolustukseen ja myöhemmin myös vankilana, mutta vuosiluvuista ja muista yksityiskohdista en ole varma. Linnoitus kuuluu [[Saksilaisen Sveitsin]] kiipeily- ja kansallispuistoalueen maisemaan. Korkealla se on kyl, mut kyyhky pääsee sinne ilman portaita.
+KYSYMYS: Kerro lisää: Elben
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Mikä Königsteinin linnoitus on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Königsteinin linnoitus on Saksilaisen Sveitsin tunnetuin maamerkki, laaja linnoitus [[Elben]] rannalla kohoavalla hiekkakivikalliolla. Sitä on käytetty puolustukseen ja myöhemmin myös vankilana, mutta vuosiluvuista ja muista yksityiskohdista en ole varma. Linnoitus kuuluu [[Saksilaisen Sveitsin]] kiipeily- ja kansallispuistoalueen maisemaan. Korkealla se on kyl, mut kyyhky pääsee sinne ilman portaita.
+KYSYMYS: Kerro lisää: Saksilaisen Sveitsin
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Mikä on Bastei?
+AIEMPI VASTAUS (Livia):
+No niin, Bastei on Saksilaisen Sveitsin tunnetuimpia kalliomuodostelmia, hiekkakivipylväiden ryhmä Elben jyrkän mutkan yllä. Kallioiden välillä kulkee kivinen [[Basteisilta]], joka valmistui vuonna 1851, ja näköalapaikka on noin 190 metrin korkeudella joesta. Alue kuuluu [[Elben]] hiekkakivivuoriin, ja se on yksi alueen suosituimmista retkikohteista. Näkymä on hyvä, mut olen nähnyt sen kyl paremmaltakin korkeudelta.
+KYSYMYS: Kerro lisää: Basteisilta
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Miten hiekkakivi syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hiekkakivi on [[sedimenttikivilaji]], joka syntyy, kun hiekkarakeet kerrostuvat ja painuvat vuosimiljoonien kuluessa yhteen ja sementoituvat kiinteäksi kiveksi. Raaka-aineena voi olla joen, meren tai aavikon hiekkaa. Elben hiekkakivi on lähteiden mukaan muodostunut [[liitukaudella]], ja myöhemmin [[eroosio]] on muovannut siitä pylväitä ja rotkoja. Hiekkaa, vettä ja aikaa, kyl se riittää vuoreksi asti.
+KYSYMYS: Kerro lisää: sedimenttikivilaji
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Liitukallio joka syöksyy mereen] 2025 — Mönin saaren itärannikolla kohoaa kuuden kilometrin pituinen liitukallioiden vyö, joka syöksyy jyrkästi mereen — korkein kohta, Dronningestolen, on 128 metriä. Valkoinen kallio koostuu miljardeista pikkuruisista merieliöiden kuorista, jotka kertyivät merenpohjaan liitukaudella miljoonia vuosia sitten. Meri kuluttaa kalliota jatkuvasti, ja lohkeamiset paljastavat uusia fossiileja — merisiilejä ja simpukoita — jotka huuhtoutuvat rantaan etsittäviksi. Alueella kulkee poluilla vuosittain noin 250 000 kävijää, ja heinäkuussa 2025 Unesco lisäsi Mönin liitukalliot maailmanperintöluetteloon.
+- [Coober Pedy — kaupunkilehti / Opaali: Muinainen sisämeri jätti jälkensä] Noin sata miljoonaa vuotta sitten liitukaudella suuri osa Keski-Australiaa oli matalan Eromanga-sisämeren peitossa. Kun meri vetäytyi vähitellen, sen pohjalle kerrostuneet hiekka- ja savikerrokset jäivät paljaiksi ja alkoivat rapautua eri tahtiin. Värikkäät, kerrokselliset kukkulat kertovat tästä menneisyydestä suoraan: vaaleat kerrokset ovat hienojakoista hiekkakiveä, oranssit ja punertavat raudan värjäämiä savikerroksia. Samasta kerrostumasta, jota geologit kutsuvat Suureksi artesiseksi altaaksi, on peräisin myös alueen opaali — sekä liikakosteus, joka aikoinaan toi piidioksidin kiveen.
+AIEMPI KYSYMYS: Miten hiekkakivi syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hiekkakivi on [[sedimenttikivilaji]], joka syntyy, kun hiekkarakeet kerrostuvat ja painuvat vuosimiljoonien kuluessa yhteen ja sementoituvat kiinteäksi kiveksi. Raaka-aineena voi olla joen, meren tai aavikon hiekkaa. Elben hiekkakivi on lähteiden mukaan muodostunut [[liitukaudella]], ja myöhemmin [[eroosio]] on muovannut siitä pylväitä ja rotkoja. Hiekkaa, vettä ja aikaa, kyl se riittää vuoreksi asti.
+KYSYMYS: Kerro lisää: liitukaudella
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Potjomkin-portaat] Kun isoisäsi nousi rannasta kaupunkiin, portaikko oli kolmekymmentäkaksivuotias ja täysin tuntematon maailmalla. Se rakennettiin vuosina 1837–1841, ja sen teetti ruhtinas Mihail Vorontsov: virallisesti lahjaksi vaimolleen Elżbietalle, käytännössä myös siksi, että kaupungin varakkain väki asui törmän päällä ja pääsi satamaan vain kiemurtelevia polkuja ja karkeita puuportaita pitkin. Hinta oli kahdeksansataatuhatta ruplaa. Piirustukset teki Francesco Boffo kahden muun kanssa, ja työmaata valvoi englantilainen insinööri John Upton. Nimiä portaikolla oli isoisäsi aikaan kolme, eikä yksikään niistä ollut nykyinen: sitä sanottiin Bulevardin portaiksi, Richelieun portaiksi ja useimmiten yksinkerta…
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kivi joka on lähes kaksi miljardia vuotta vanha] Kanjonin pohjalla, siellä missä Coloradojoki on kaivautunut syvimmälle, paljastuu tummaa, juovikasta kiveä nimeltä Vishnu-liuske. Se syntyi noin 1 745 miljoonaa vuotta sitten valtavien paineiden ja kuumuuden muokatessa alkuperäistä laavaa ja sedimenttiä syvällä maankuoressa – kauan ennen monisoluista elämää. Kivilajin ja sitä 270 miljoonaa vuotta nuoremman reunakerroksen, Kaibab-kalkkikiven, väliin jää niin sanottu Suuri epäjatkuvuus: yli 500 miljoonan vuoden aukko kerrostumissa, sillä eroosio on kuluttanut välissä olleen kiviaineksen pois. Geologit kutsuvatkin kanjonia paikaksi, jossa voi kävellä läpi suuren osan maapallon historiaa.
+AIEMPI KYSYMYS: Miten hiekkakivi syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hiekkakivi on [[sedimenttikivilaji]], joka syntyy, kun hiekkarakeet kerrostuvat ja painuvat vuosimiljoonien kuluessa yhteen ja sementoituvat kiinteäksi kiveksi. Raaka-aineena voi olla joen, meren tai aavikon hiekkaa. Elben hiekkakivi on lähteiden mukaan muodostunut [[liitukaudella]], ja myöhemmin [[eroosio]] on muovannut siitä pylväitä ja rotkoja. Hiekkaa, vettä ja aikaa, kyl se riittää vuoreksi asti.
+KYSYMYS: Kerro lisää: eroosio
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Elbe on Keski-Euroopan suuri joki, joka saa alkunsa Tšekin [[Krkonošen]] vuoristosta ja virtaa Saksan halki [[Dresdenin]] ja [[Hampurin]] kautta [[Pohjanmereen]]. Sen pituus on noin 1100 kilometriä, ja matkalla se kulkee Böömin Sveitsin ja Saksilaisen Sveitsin hiekkakivimaiseman läpi. Elbe on ollut tärkeä kauppa- ja kulkuväylä vuosisatojen ajan.
+
+Dresdenin kohdalla olen joskus laskeutunut joen rantaan lepäämään. Kaupungista tunnetaan joululeipä stollen, ja sitä en ole koskaan saanut maistaa.
+KYSYMYS: Kerro lisää: Krkonošen
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Elbe on Keski-Euroopan suuri joki, joka saa alkunsa Tšekin [[Krkonošen]] vuoristosta ja virtaa Saksan halki [[Dresdenin]] ja [[Hampurin]] kautta [[Pohjanmereen]]. Sen pituus on noin 1100 kilometriä, ja matkalla se kulkee Böömin Sveitsin ja Saksilaisen Sveitsin hiekkakivimaiseman läpi. Elbe on ollut tärkeä kauppa- ja kulkuväylä vuosisatojen ajan.
+
+Dresdenin kohdalla olen joskus laskeutunut joen rantaan lepäämään. Kaupungista tunnetaan joululeipä stollen, ja sitä en ole koskaan saanut maistaa.
+KYSYMYS: Kerro lisää: Dresdenin
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Elbe on Keski-Euroopan suuri joki, joka saa alkunsa Tšekin [[Krkonošen]] vuoristosta ja virtaa Saksan halki [[Dresdenin]] ja [[Hampurin]] kautta [[Pohjanmereen]]. Sen pituus on noin 1100 kilometriä, ja matkalla se kulkee Böömin Sveitsin ja Saksilaisen Sveitsin hiekkakivimaiseman läpi. Elbe on ollut tärkeä kauppa- ja kulkuväylä vuosisatojen ajan.
+
+Dresdenin kohdalla olen joskus laskeutunut joen rantaan lepäämään. Kaupungista tunnetaan joululeipä stollen, ja sitä en ole koskaan saanut maistaa.
+KYSYMYS: Kerro lisää: Hampurin
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saksilainen Sveitsi (luonto · vuori)
+Tietoruudun teksti: Saksilainen Sveitsi on kiipeilyaluetta ja kansallispuisto Elben hiekkakivivuorilla Dresdenin kaakkoispuolella Saksissa, Tšekin Böömin Sveitsin vieressä. Yhdessä tšekkiläisen osan kanssa aluetta kutsutaan Saksilais-Böömiläiseksi Sveitsiksi, ja tunnettu maamerkki on Königsteinin linnoitus. Nimi Sächsische Schweiz ilmestyi 1700-luvulla: sveitsiläiset taiteilijat Adrian Zingg ja Anton Graff nimitettiin Dresdenin taideakatemiaan vuonna 1766, ja he kokivat maiseman muistuttavan kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Elbe on Keski-Euroopan suuri joki, joka saa alkunsa Tšekin [[Krkonošen]] vuoristosta ja virtaa Saksan halki [[Dresdenin]] ja [[Hampurin]] kautta [[Pohjanmereen]]. Sen pituus on noin 1100 kilometriä, ja matkalla se kulkee Böömin Sveitsin ja Saksilaisen Sveitsin hiekkakivimaiseman läpi. Elbe on ollut tärkeä kauppa- ja kulkuväylä vuosisatojen ajan.
+
+Dresdenin kohdalla olen joskus laskeutunut joen rantaan lepäämään. Kaupungista tunnetaan joululeipä stollen, ja sitä en ole koskaan saanut maistaa.
+KYSYMYS: Kerro lisää: Pohjanmereen
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+- [Ruotsi — maalehti / Ruoka: Lihapullat ja punainen marja] Ruotsalaiselle lautaselle kuuluu kolme asiaa: lihapullat, perunamuusi ja lusikallinen puolukkahilloa. Makea marja hapan lihan vieressä hämmästyttää monta vierasta, mutta yhdistelmä on vanha keino: ennen jääkaappeja happamat ja sokeriset säilykkeet pitivät ruoan syömäkelpoisena talven yli. Ruotsin virallinen somekin on kertonut, että lihapullan resepti tuotiin maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun alussa — asiaa on sen jälkeen kiistelty innokkaasti.
+AIEMPI KYSYMYS: Mistä Königsstuhlin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Königsstuhl tarkoittaa saksaksi kuninkaan tuolia. Legendan mukaan nimi juontuu Ruotsin kuninkaasta [[Kaarle XII:sta]], joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin. Nimi mainitaan kuitenkin jo vuonna 1586, joten se on paljon vanhempi kuin legenda, ja sen todellisesta alkuperästä en ole varma. Kallio sijaitsee [[Rügenin]] saarella [[Jasmundin kansallispuistossa]]. Tuoli on iso, mut kyyhky mahtuis siihen silti.
+KYSYMYS: Kerro lisää: Kaarle XII:sta
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Mistä Königsstuhlin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Königsstuhl tarkoittaa saksaksi kuninkaan tuolia. Legendan mukaan nimi juontuu Ruotsin kuninkaasta [[Kaarle XII:sta]], joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin. Nimi mainitaan kuitenkin jo vuonna 1586, joten se on paljon vanhempi kuin legenda, ja sen todellisesta alkuperästä en ole varma. Kallio sijaitsee [[Rügenin]] saarella [[Jasmundin kansallispuistossa]]. Tuoli on iso, mut kyyhky mahtuis siihen silti.
+KYSYMYS: Kerro lisää: Rügenin
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Mistä Königsstuhlin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Königsstuhl tarkoittaa saksaksi kuninkaan tuolia. Legendan mukaan nimi juontuu Ruotsin kuninkaasta [[Kaarle XII:sta]], joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin. Nimi mainitaan kuitenkin jo vuonna 1586, joten se on paljon vanhempi kuin legenda, ja sen todellisesta alkuperästä en ole varma. Kallio sijaitsee [[Rügenin]] saarella [[Jasmundin kansallispuistossa]]. Tuoli on iso, mut kyyhky mahtuis siihen silti.
+KYSYMYS: Kerro lisää: Jasmundin kansallispuistossa
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Kuinka korkea kallio on?
+AIEMPI VASTAUS (Livia):
+Mmm— Königsstuhl kohoaa 118 metrin korkeuteen merenpinnasta. Se on [[Stubbenkammerin]] tunnetuin liitukallio, ja sen tasanteelta avautuu laaja näkymä [[Itämerelle]]. Tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen [[hautakummun]] päällä. Satakahdeksantoista metriä, ja minä sain sen muistettua ilman muistilappua.
+KYSYMYS: Kerro lisää: Stubbenkammerin
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Kuinka korkea kallio on?
+AIEMPI VASTAUS (Livia):
+Mmm— Königsstuhl kohoaa 118 metrin korkeuteen merenpinnasta. Se on [[Stubbenkammerin]] tunnetuin liitukallio, ja sen tasanteelta avautuu laaja näkymä [[Itämerelle]]. Tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen [[hautakummun]] päällä. Satakahdeksantoista metriä, ja minä sain sen muistettua ilman muistilappua.
+KYSYMYS: Kerro lisää: Itämerelle
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+- [St. Helena — kaupunkilehti / Keisari kalliosaaren vankina: Tyhjä hauta Geraniumilaaksossa] Napoleon haudattiin kuolemansa jälkeen kaislaverhoiseen laaksoon, jota hän oli itse kutsunut kävelyillään Geraniumilaaksoksi – virallisesti Sane Valleyksi. Hautakiveen ei koskaan kaiverrettu nimeä, koska Ranska ja Britannia eivät päässeet sopuun siitä, tulisiko siihen lukea vain 'Napoleon' vai täydellisemmin 'Napoleon Bonaparte'. Vuonna 1840 ruumis kaivettiin esiin ja vietiin Ranskaan, mutta tyhjä hauta rautaisine aitoineen on yhä paikallaan rehevän puutarhan keskellä – yksi St. Helenan suosituimmista nähtävyyksistä isoisän ajoista näihin päiviin.
+AIEMPI KYSYMYS: Kuinka korkea kallio on?
+AIEMPI VASTAUS (Livia):
+Mmm— Königsstuhl kohoaa 118 metrin korkeuteen merenpinnasta. Se on [[Stubbenkammerin]] tunnetuin liitukallio, ja sen tasanteelta avautuu laaja näkymä [[Itämerelle]]. Tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen [[hautakummun]] päällä. Satakahdeksantoista metriä, ja minä sain sen muistettua ilman muistilappua.
+KYSYMYS: Kerro lisää: hautakummun
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Mistä liitu koostuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liitu on kalkkipitoinen sedimenttikivi, joka on syntynyt muinaisen meren pohjalle kerrostuneista pikkuruisista levänkuorista. Prosessi kesti kymmeniä miljoonia vuosia, ja kerrostumista löytää yhä [[fossiileja]]. Rügenin valkoiset kalliot ovat tätä merenpohjaa, joka on kohonnut maan päälle. [[Liitukausi]] on saanut nimensä juuri tästä kivilajista. Kaikki tuo pikkuruisista kuorista, ihan hurjaa.
+KYSYMYS: Kerro lisää: fossiileja
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Mistä liitu koostuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Liitu on kalkkipitoinen sedimenttikivi, joka on syntynyt muinaisen meren pohjalle kerrostuneista pikkuruisista levänkuorista. Prosessi kesti kymmeniä miljoonia vuosia, ja kerrostumista löytää yhä [[fossiileja]]. Rügenin valkoiset kalliot ovat tätä merenpohjaa, joka on kohonnut maan päälle. [[Liitukausi]] on saanut nimensä juuri tästä kivilajista. Kaikki tuo pikkuruisista kuorista, ihan hurjaa.
+KYSYMYS: Kerro lisää: Liitukausi
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Kuka oli Caspar David Friedrich?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Caspar David Friedrich]] oli saksalainen romantiikan taidemaalari, syntynyt [[Greifswaldissa]] vuonna 1774 ja kuollut [[Dresdenissä]] vuonna 1840. Hänen maalauksensa kuvaavat usein yksinäistä ihmistä suuren luonnon edessä. Rügenin liitukalliot hän maalasi vuonna 1818, ja taulusta tuli Saksan romantiikan tunnuskuva. Tunnettu teos on myös Vaeltaja sumumeren yllä.
+
+Yksinäinen vaeltaja kallion reunalla on minulle hyvin tuttu näky, sillä seison itsekin usein jonkin reunalla ja katson kauas. Erona on, että minä lähden sieltä lentäen.
+KYSYMYS: Kerro lisää: Caspar David Friedrich
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Kuka oli Caspar David Friedrich?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Caspar David Friedrich]] oli saksalainen romantiikan taidemaalari, syntynyt [[Greifswaldissa]] vuonna 1774 ja kuollut [[Dresdenissä]] vuonna 1840. Hänen maalauksensa kuvaavat usein yksinäistä ihmistä suuren luonnon edessä. Rügenin liitukalliot hän maalasi vuonna 1818, ja taulusta tuli Saksan romantiikan tunnuskuva. Tunnettu teos on myös Vaeltaja sumumeren yllä.
+
+Yksinäinen vaeltaja kallion reunalla on minulle hyvin tuttu näky, sillä seison itsekin usein jonkin reunalla ja katson kauas. Erona on, että minä lähden sieltä lentäen.
+KYSYMYS: Kerro lisää: Greifswaldissa
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Kuka oli Caspar David Friedrich?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Caspar David Friedrich]] oli saksalainen romantiikan taidemaalari, syntynyt [[Greifswaldissa]] vuonna 1774 ja kuollut [[Dresdenissä]] vuonna 1840. Hänen maalauksensa kuvaavat usein yksinäistä ihmistä suuren luonnon edessä. Rügenin liitukalliot hän maalasi vuonna 1818, ja taulusta tuli Saksan romantiikan tunnuskuva. Tunnettu teos on myös Vaeltaja sumumeren yllä.
+
+Yksinäinen vaeltaja kallion reunalla on minulle hyvin tuttu näky, sillä seison itsekin usein jonkin reunalla ja katson kauas. Erona on, että minä lähden sieltä lentäen.
+KYSYMYS: Kerro lisää: Dresdenissä
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Mikä on Jasmundin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Katotaas. Jasmundin kansallispuisto on [[Rügenin]] saaren koillisosassa Itämeren rannalla, ja se perustettiin vuonna 1990. Puistoon kuuluvat liitukalliot, joista tunnetuin on Königsstuhl, sekä laajat [[pyökkimetsät]]. Jasmundin pyökkimetsät kuuluvat [[Unescon]] maailmanperintökohteeseen, joka kattaa vanhoja pyökkimetsiä useissa Euroopan maissa. Pesäpaikkoja riittäis siellä kyl vaikka kuinka.
+KYSYMYS: Kerro lisää: pyökkimetsät
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rügenin liitukalliot (luonto · saari)
+Tietoruudun teksti: Königsstuhl eli Kuninkaan tuoli on Rügenin saaren Stubbenkammerin tunnetuin liitukallio Jasmundin kansallispuistossa Itämeren rannalla. Se kohoaa 118 metrin korkeuteen merenpinnasta. Kallion tasanteelle johtavien graniittiportaiden arvellaan kulkevan pronssikautisen hautakummun päällä, ja tasanteelta avautuu laaja näkymä Itämerelle. Legendan mukaan nimi juontuu Ruotsin kuninkaasta Kaarle XII:sta, joka olisi johtanut merisotaa tanskalaisia vastaan vuonna 1715 ja tarvinnut tuolin, mutta nimi mainitaan jo vuonna 1586, joten se on paljon vanhempi.
+AIEMPI KYSYMYS: Mikä on Jasmundin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Katotaas. Jasmundin kansallispuisto on [[Rügenin]] saaren koillisosassa Itämeren rannalla, ja se perustettiin vuonna 1990. Puistoon kuuluvat liitukalliot, joista tunnetuin on Königsstuhl, sekä laajat [[pyökkimetsät]]. Jasmundin pyökkimetsät kuuluvat [[Unescon]] maailmanperintökohteeseen, joka kattaa vanhoja pyökkimetsiä useissa Euroopan maissa. Pesäpaikkoja riittäis siellä kyl vaikka kuinka.
+KYSYMYS: Kerro lisää: Unescon
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi Sylt menettää maata?
+AIEMPI VASTAUS (Livia):
+Kato, tää on aika suoraviivainen juttu. Saari on avoin [[Pohjanmerelle]], ja [[myrskyvuoksien]] aallot ja virtaukset kuluttavat sen länsirannikkoa. Hiekka siirtyy rannalta mereen ja virtausten mukana muualle, joten saari menettää maata jatkuvasti. Rannikon suojaamiseksi rannoille on pitkään pumpattu uutta hiekkaa. Ennustaminen ei oo kyyhkyn lajia.
+KYSYMYS: Kerro lisää: Pohjanmerelle
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [PRI — maalehti / Luonto: Neljä viikkoa raivonnut myrsky] 1899 — Elokuun 8. päivänä 1899, vain vuosi sen jälkeen kun Puerto Rico oli siirtynyt Yhdysvalloille, hirmumyrsky San Ciriaco pyyhkäisi saaren yli kuudesta yhdeksään tuntiin ja jätti jälkeensä yli 3 000 kuollutta. Myrsky oli koko Atlantin historian pisimpään elänyt, lähes neljä viikkoa, ja se saavutti nelosluokan voiman. Sen mukanaan tuoma runsas sadekertymä tuhosi kahvi- ja sokeriviljelmät juuri ennen satokautta, ja arviolta neljäsosa saaren väestöstä jäi ilman ruokaa tai kattoa pään päälle. Aikalaislehdet julkaisivat piirroskuvia sortuneista taloista ja raunioituneesta keskustorista dokumentoidakseen tuhon laajuutta.
+- [Belgia — maalehti / Luonto: Myrsky avasi Bruggelle tien merelle] 1134 — Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.
+AIEMPI KYSYMYS: Miksi Sylt menettää maata?
+AIEMPI VASTAUS (Livia):
+Kato, tää on aika suoraviivainen juttu. Saari on avoin [[Pohjanmerelle]], ja [[myrskyvuoksien]] aallot ja virtaukset kuluttavat sen länsirannikkoa. Hiekka siirtyy rannalta mereen ja virtausten mukana muualle, joten saari menettää maata jatkuvasti. Rannikon suojaamiseksi rannoille on pitkään pumpattu uutta hiekkaa. Ennustaminen ei oo kyyhkyn lajia.
+KYSYMYS: Kerro lisää: myrskyvuoksien
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+AIEMPI KYSYMYS: Mikä Hindenburgdamm on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän tunnen. Hindenburgdamm on Syltin ja mantereen yhdistävä pengertie, joka valmistui vuonna 1927. Sitä pitkin kulkee rautatie, ja se on noin yksitoista kilometriä pitkä. Pengertie ylittää matalan merialueen, ja [[autojunilla]] kuljetetaan myös autoja saarelle [[Westerlandin]] asemalle. Minä ylitän sen nopeammin kuin juna, ainakin omasta mielestäni.
+KYSYMYS: Kerro lisää: autojunilla
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+AIEMPI KYSYMYS: Mikä Hindenburgdamm on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän tunnen. Hindenburgdamm on Syltin ja mantereen yhdistävä pengertie, joka valmistui vuonna 1927. Sitä pitkin kulkee rautatie, ja se on noin yksitoista kilometriä pitkä. Pengertie ylittää matalan merialueen, ja [[autojunilla]] kuljetetaan myös autoja saarelle [[Westerlandin]] asemalle. Minä ylitän sen nopeammin kuin juna, ainakin omasta mielestäni.
+KYSYMYS: Kerro lisää: Westerlandin
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Mikä on Wattimeri?
+AIEMPI VASTAUS (Livia):
+No jopas. Wattimeri on Pohjanmeren rannikolla Alankomaista Saksan kautta Tanskaan ulottuva laaja vuorovesialue, jossa meri vetäytyy päivittäin ja paljastaa mutaisia ja hiekkaisia tasankoja. Se on tärkeä levähdys- ja ruokailualue miljoonille [[muuttolinnuille]]. Alue on [[Unescon]] maailmanperintökohde, ja sen osia on suojeltu kansallispuistoina.
+
+Muuttolinnut ovat minulle ammatillista kiinnostusta, koska lentäjät tuntevat toistensa reitit. Kyyhky ei muuta kauas, mutta kaukolentäjiä minä arvostan.
+KYSYMYS: Kerro lisää: muuttolinnuille
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+AIEMPI KYSYMYS: Mikä on Wattimeri?
+AIEMPI VASTAUS (Livia):
+No jopas. Wattimeri on Pohjanmeren rannikolla Alankomaista Saksan kautta Tanskaan ulottuva laaja vuorovesialue, jossa meri vetäytyy päivittäin ja paljastaa mutaisia ja hiekkaisia tasankoja. Se on tärkeä levähdys- ja ruokailualue miljoonille [[muuttolinnuille]]. Alue on [[Unescon]] maailmanperintökohde, ja sen osia on suojeltu kansallispuistoina.
+
+Muuttolinnut ovat minulle ammatillista kiinnostusta, koska lentäjät tuntevat toistensa reitit. Kyyhky ei muuta kauas, mutta kaukolentäjiä minä arvostan.
+KYSYMYS: Kerro lisää: Unescon
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Mitä kieltä Sylt-saarella puhutaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Syltillä arkikieli on saksa. Lisäksi alueella on perinteisesti puhuttu [[pohjoisfriisiä]], jonka Syltin oma muoto on [[sölring]], sekä [[alasaksaa]]. Sölringin puhujia on nykyisin vähän, mutta tarkkaa lukua en tiedä. Eipä kyyhky kieliä tarvitse, kuhertaminen kelpaa kaikkialla.
+KYSYMYS: Kerro lisää: pohjoisfriisiä
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+AIEMPI KYSYMYS: Mitä kieltä Sylt-saarella puhutaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Syltillä arkikieli on saksa. Lisäksi alueella on perinteisesti puhuttu [[pohjoisfriisiä]], jonka Syltin oma muoto on [[sölring]], sekä [[alasaksaa]]. Sölringin puhujia on nykyisin vähän, mutta tarkkaa lukua en tiedä. Eipä kyyhky kieliä tarvitse, kuhertaminen kelpaa kaikkialla.
+KYSYMYS: Kerro lisää: sölring
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+AIEMPI KYSYMYS: Mitä kieltä Sylt-saarella puhutaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Syltillä arkikieli on saksa. Lisäksi alueella on perinteisesti puhuttu [[pohjoisfriisiä]], jonka Syltin oma muoto on [[sölring]], sekä [[alasaksaa]]. Sölringin puhujia on nykyisin vähän, mutta tarkkaa lukua en tiedä. Eipä kyyhky kieliä tarvitse, kuhertaminen kelpaa kaikkialla.
+KYSYMYS: Kerro lisää: alasaksaa
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+AIEMPI KYSYMYS: Mikä on Strandkorb?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä olen nähnyt rannalta. Strandkorb on saksalainen rantakori eli katettu ja istuttava punottu tuolikoppi, jossa on korkea selkänoja ja kuomu suojaamassa tuulelta ja auringolta. Keksintö liitetään [[Rostockiin]] Itämeren rannalle 1800-luvun lopulle, mutta tarkasta vuodesta en ole varma. Rantakoreja näkee sekä [[Pohjanmeren]] että [[Itämeren]] rannoilla, myös Syltillä. Korin sisälle ei kyyhky mahdu, mutta katolla istuisin kyl mielelläni.
+KYSYMYS: Kerro lisää: Rostockiin
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä on Strandkorb?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä olen nähnyt rannalta. Strandkorb on saksalainen rantakori eli katettu ja istuttava punottu tuolikoppi, jossa on korkea selkänoja ja kuomu suojaamassa tuulelta ja auringolta. Keksintö liitetään [[Rostockiin]] Itämeren rannalle 1800-luvun lopulle, mutta tarkasta vuodesta en ole varma. Rantakoreja näkee sekä [[Pohjanmeren]] että [[Itämeren]] rannoilla, myös Syltillä. Korin sisälle ei kyyhky mahdu, mutta katolla istuisin kyl mielelläni.
+KYSYMYS: Kerro lisää: Pohjanmeren
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sylt (luonto · saari)
+Tietoruudun teksti: Sylt on Pohjois-Saksan saari Nordfrieslandin piirikunnassa Schleswig-Holsteinissa, ja se kuuluu Pohjois-Friisin saariin, joista se on suurin. Saari on Saksan pohjoisin, ja se tunnetaan lomakohteistaan, kuten Westerland, Kampen ja Wenningstedt-Braderup, sekä 40 kilometrin pituisesta hiekkarannastaan. Saari on alttiina Pohjanmerelle ja menettää maata myrskyvuoksissa. Vuodesta 1927 sitä on yhdistänyt mantereeseen Hindenburgdamm-pengertie. Saaren pinta-ala on 99 neliökilometriä, ja pohjoisimmassa kohdassa Königshafenilla se on vain 320 metriä leveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mikä on Strandkorb?
+AIEMPI VASTAUS (Livia):
+Just niin, tän minä olen nähnyt rannalta. Strandkorb on saksalainen rantakori eli katettu ja istuttava punottu tuolikoppi, jossa on korkea selkänoja ja kuomu suojaamassa tuulelta ja auringolta. Keksintö liitetään [[Rostockiin]] Itämeren rannalle 1800-luvun lopulle, mutta tarkasta vuodesta en ole varma. Rantakoreja näkee sekä [[Pohjanmeren]] että [[Itämeren]] rannoilla, myös Syltillä. Korin sisälle ei kyyhky mahdu, mutta katolla istuisin kyl mielelläni.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi Helgoland kuului Britannialle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pitkä juoni. Britannia otti Helgolandin [[Tanskalta]] vuonna 1807 [[Napoleonin sotien]] aikana, koska Tanska oli Ranskan liittolainen. Hallinta vahvistettiin sodan jälkeen vuonna 1814 [[Kielin rauhassa]], ja saaret pysyivät brittiläisinä vuoteen 1890. Silloin Britannia luovutti ne Saksalle vaihtokaupassa, jossa se sai Sansibarin saaren Itä-Afrikassa. Pitkä historia pienelle kalliolle.
+KYSYMYS: Kerro lisää: Tanskalta
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kaupunkilehti / Dunedin: Uusi Edinburgh maailman toisella laidalla] Skotlannin vapaakirkon maallikkojärjestö perusti Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja piirsi komean, romanttisen katuverkon, jonka rakentajat sitten taistelivat läpi mäkisen maaston. Maallisena johtajana toimi Napoleonin sotien veteraani William Cargill ja hengellisenä pastori Thomas Burns, runoilija Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä kaupunkiin oli muuttanut noin 12 000 skottia, monet teollistuneelta Lowlandsin alueelta.
+AIEMPI KYSYMYS: Miksi Helgoland kuului Britannialle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pitkä juoni. Britannia otti Helgolandin [[Tanskalta]] vuonna 1807 [[Napoleonin sotien]] aikana, koska Tanska oli Ranskan liittolainen. Hallinta vahvistettiin sodan jälkeen vuonna 1814 [[Kielin rauhassa]], ja saaret pysyivät brittiläisinä vuoteen 1890. Silloin Britannia luovutti ne Saksalle vaihtokaupassa, jossa se sai Sansibarin saaren Itä-Afrikassa. Pitkä historia pienelle kalliolle.
+KYSYMYS: Kerro lisää: Napoleonin sotien
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Luonto: Saari, jolla linnut saavat olla rauhassa] 1981 — Kymmenkunta kilometriä rannikolta on pieni graniittisaari, joka julistettiin luonnonsuojelualueeksi vuonna 1981. Saarella pesii merilintuja, muun muassa liejuliitäjiä, jotka tulevat pesäkoloilleen vasta pimeän tultua. Kävijämäärää rajoitetaan päivittäisellä kiintiöllä, ja osaan saarta ei saa mennä lainkaan pesimäaikaan. Saarella on myös 1600-luvun linnake, joka on rakennettu omalle luodolleen ja jonne pääsee kapeaa kivipengertä pitkin.
+AIEMPI KYSYMYS: Miksi Helgoland kuului Britannialle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pitkä juoni. Britannia otti Helgolandin [[Tanskalta]] vuonna 1807 [[Napoleonin sotien]] aikana, koska Tanska oli Ranskan liittolainen. Hallinta vahvistettiin sodan jälkeen vuonna 1814 [[Kielin rauhassa]], ja saaret pysyivät brittiläisinä vuoteen 1890. Silloin Britannia luovutti ne Saksalle vaihtokaupassa, jossa se sai Sansibarin saaren Itä-Afrikassa. Pitkä historia pienelle kalliolle.
+KYSYMYS: Kerro lisää: Kielin rauhassa
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+AIEMPI KYSYMYS: Mikä on Deutschlandlied?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Deutschlandlied eli Saksan laulu on Saksan kansallislaulu. Sanat kirjoitti [[August Heinrich Hoffmann von Fallersleben]] Helgolandilla vuonna 1841, ja sävelmä on [[Joseph Haydnin]] vuonna 1797 säveltämä melodia. Nykyisin kansallislauluna käytetään vain kolmatta säkeistöä, joka alkaa sanoilla Einigkeit und Recht und Freiheit. Kuhertaa osaan, laulaa en.
+KYSYMYS: Kerro lisää: August Heinrich Hoffmann von Fallersleben
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+AIEMPI KYSYMYS: Mikä on Deutschlandlied?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Deutschlandlied eli Saksan laulu on Saksan kansallislaulu. Sanat kirjoitti [[August Heinrich Hoffmann von Fallersleben]] Helgolandilla vuonna 1841, ja sävelmä on [[Joseph Haydnin]] vuonna 1797 säveltämä melodia. Nykyisin kansallislauluna käytetään vain kolmatta säkeistöä, joka alkaa sanoilla Einigkeit und Recht und Freiheit. Kuhertaa osaan, laulaa en.
+KYSYMYS: Kerro lisää: Joseph Haydnin
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Mikä on Lange Anna?
+AIEMPI VASTAUS (Livia):
+Ai se. Lange Anna eli Pitkä Anna on Helgolandin saaren luoteiskärjessä merestä kohoava erillinen kalliopylväs, joka on punaista [[hiekkakiveä]]. Sen korkeus on noin 47 metriä. Pylväs on jäänne kallion reunasta, jonka meri on [[eroosion]] myötä kuluttanut pois. Pitkä Anna, kuulostaa ihan sukulaiselta.
+KYSYMYS: Kerro lisää: hiekkakiveä
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norfolk — kaupunkilehti / Selviytyjät: Phillip Islandin hibiskus — kaksi pensasta koko maailmassa] Norfolkin eteläpuolella kohoava pieni Phillip Island oli vielä 1850-luvulla lähes täysin paljas: 1790-luvulta lähtien saarelle päästetyt siat, vuohet ja kanit olivat syöneet kasvillisuuden loppuun ja jättäneet jäljelle vain punertavan, eroosion kalvaman kallioperän. Eläimet hävitettiin vasta 1980-luvun lopulla, minkä jälkeen saari on vihertynyt uudelleen. Yksi harvinaisimmista selviytyjistä on Phillip Islandin hibiskus, jonka koko luonnonvarainen kanta koostuu edelleen vain kahdesta pensaasta samalla kalliolla — laji kasvaa nykyisin varmuuden vuoksi myös Norfolkin kasvitieteellisessä puutarhassa.
+- [Sahara — kaupunkilehti / Sahara: Sammuneet tulivuoret keskellä aavikkoa] Keskellä Algerian aavikkoa kohoaa Ahaggarin eli Hoggarin vuoristo, jonka huippu Tahat nousee 2 908 metriin – Algerian korkein kohta. Osa jyrkistä huipuista, kuten Ilamen, on sammuneiden tulivuorten eroosion paljastamia syöttökanavia, ja peruskallio on lähes kaksi miljardia vuotta vanhaa. Yöt ovat vuoristossa kylmiä, toisinaan pakkasen puolella, vaikka ympäröivä aavikko hehkuu päivällä kuumuudesta. Alue on vuosisatoja ollut Kel Ahaggar -tuaregien kotiseutua ja yksi Saharan harvoista paikoista, joissa erikoistunut linnusto on säilynyt muuttuvassa ilmastossa.
+AIEMPI KYSYMYS: Mikä on Lange Anna?
+AIEMPI VASTAUS (Livia):
+Ai se. Lange Anna eli Pitkä Anna on Helgolandin saaren luoteiskärjessä merestä kohoava erillinen kalliopylväs, joka on punaista [[hiekkakiveä]]. Sen korkeus on noin 47 metriä. Pylväs on jäänne kallion reunasta, jonka meri on [[eroosion]] myötä kuluttanut pois. Pitkä Anna, kuulostaa ihan sukulaiselta.
+KYSYMYS: Kerro lisää: eroosion
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+AIEMPI KYSYMYS: Mitä lintuja Helgolandin kallioilla pesii?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Helgolandin jyrkillä kallioilla pesii suuri määrä merilintuja, ja niiden joukossa on [[suulia]], joiden pesimäkolonia on kuulemani mukaan Saksan ainoa. Saari sijaitsee [[muuttolintujen]] reitin varrella, ja siellä on noin sata vuotta toiminut [[lintuasema]], jossa lintuja on seurattu ja rengastettu.
+
+Rengastus on mielestäni kohtalaisen hyvä idea, kunhan rengas on kevyt. Minulla on sukulaisia, jotka kantavat sellaista koko elämänsä.
+KYSYMYS: Kerro lisää: suulia
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+- [Tunisia — maalehti / Meri: Järvi, jonka padot melkein tappoivat] 1980–2006 — Ichkeulin järvi on Pohjois-Tunisiassa, parikymmentä kilometriä Bizertestä, Afrikan pohjoisimmasta kaupungista. Kansallispuisto on 126 neliökilometriä ja pääsi maailmanperintöluetteloon 1980. Järvi ja sen kosteikot ovat satojentuhansien muuttolintujen levähdyspaikka: sorsia, hanhia, kattohaikaroita ja flamingoja. Sitten järveen laskevat joet padottiin, makean veden tulo väheni, ja ruovikot ja sarat vaihtuivat suolaa sietäviin kasveihin — lintumäärät romahtivat. Kohde siirrettiin uhanalaisten maailmanperintökohteiden listalle 1996 ja poistettiin siltä 2006, kun suolaisuutta oli saatu laskemaan.
+AIEMPI KYSYMYS: Mitä lintuja Helgolandin kallioilla pesii?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Helgolandin jyrkillä kallioilla pesii suuri määrä merilintuja, ja niiden joukossa on [[suulia]], joiden pesimäkolonia on kuulemani mukaan Saksan ainoa. Saari sijaitsee [[muuttolintujen]] reitin varrella, ja siellä on noin sata vuotta toiminut [[lintuasema]], jossa lintuja on seurattu ja rengastettu.
+
+Rengastus on mielestäni kohtalaisen hyvä idea, kunhan rengas on kevyt. Minulla on sukulaisia, jotka kantavat sellaista koko elämänsä.
+KYSYMYS: Kerro lisää: muuttolintujen
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vanuatu — maalehti / Luonto: Lintu, joka ei haudo munaansa] Vanuatun megapodi elää vain tässä maassa, alankometsissä, ja sen kaksi tyyppiyksilöä kerättiin Efatelta heinä- ja syyskuussa 1877. Megapodit eivät haudo munia ruumiinlämmöllä vaan hautaavat ne: osa suvun linnuista kasaa mätänevästä kasvimassasta kekoja, joiden lämpöä koiras säätää lisäämällä ja poistamalla lehtiä, osa käyttää maan omaa lämpöä ja osa auringon kuumentamaa hiekkaa. Muna on poikkeuksellisen keltuaisvaltainen, ja poikanen kuoriutuu kypsempänä kuin yksikään toinen lintu: silmät auki, siipisulat valmiina ja juoksukykyisenä samana päivänä.
+AIEMPI KYSYMYS: Mitä lintuja Helgolandin kallioilla pesii?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Helgolandin jyrkillä kallioilla pesii suuri määrä merilintuja, ja niiden joukossa on [[suulia]], joiden pesimäkolonia on kuulemani mukaan Saksan ainoa. Saari sijaitsee [[muuttolintujen]] reitin varrella, ja siellä on noin sata vuotta toiminut [[lintuasema]], jossa lintuja on seurattu ja rengastettu.
+
+Rengastus on mielestäni kohtalaisen hyvä idea, kunhan rengas on kevyt. Minulla on sukulaisia, jotka kantavat sellaista koko elämänsä.
+KYSYMYS: Kerro lisää: lintuasema
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kuuro säveltäjä kuuli musiikin päässään] Bonnissa syntynyt Ludwig van Beethoven alkoi menettää kuuloaan alle kolmekymppisenä — säveltäjälle pahin mahdollinen kohtalo. Hän ei lopettanut vaan sävelsi päänsä sisällä: keskustelut käytiin vihkoihin kirjoittamalla, ja flyygelistä hän sahasi jalat, jotta tunsi sävelet lattian värinänä. Yhdeksännen sinfonian kantaesityksessä 1824 täysin kuuro Beethoven piti kääntää kasvot yleisöön päin, jotta hän näki suosionosoitukset, joita ei kuullut. Sinfonian loppuhymni Oodi ilolle on nykyään Euroopan unionin hymni.
+AIEMPI KYSYMYS: Onko Helgoland tullivapaa alue?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Helgoland on tullivapaa alue, sillä se ei kuulu [[Euroopan unionin]] tulli- eikä arvonlisäveroalueeseen. Siksi saarella voi ostaa esimerkiksi alkoholia, tupakkaa ja hajuvesiä edullisemmin kuin mantereella. Päiväretkeläiset saapuvat saarelle laivalla, esimerkiksi [[Cuxhavenista]], ja ostosmatkailu on ollut vuosikymmeniä saaren elinkeino. Ostoslistallani olisi vain yksi asia, ja se on pulla.
+KYSYMYS: Kerro lisää: Euroopan unionin
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Helgoland (luonto · saari)
+Tietoruudun teksti: Helgoland on Pohjanmeren pieni saaristo Schleswig-Holsteinin osavaltiossa Saksanlahdella, noin 69 kilometrin päässä Elben suulla olevasta Cuxhavenista; ne ovat ainoat saksalaiset saaret, jotka eivät ole lähellä mannerta. Saaret kuuluivat aiemmin Tanskalle ja sitten Britannialle vuosina 1807–1890, ja vuodesta 1890 ne ovat olleet Saksan osa. Pääsaari putoaa pohjoisessa, lännessä ja lounaassa 50 metrin korkeana mereen. Paikalliset friisiläiset puhuvat Halunder-murretta. Saarella August Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, joista tuli Saksan kansallislaulu.
+AIEMPI KYSYMYS: Onko Helgoland tullivapaa alue?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Helgoland on tullivapaa alue, sillä se ei kuulu [[Euroopan unionin]] tulli- eikä arvonlisäveroalueeseen. Siksi saarella voi ostaa esimerkiksi alkoholia, tupakkaa ja hajuvesiä edullisemmin kuin mantereella. Päiväretkeläiset saapuvat saarelle laivalla, esimerkiksi [[Cuxhavenista]], ja ostosmatkailu on ollut vuosikymmeniä saaren elinkeino. Ostoslistallani olisi vain yksi asia, ja se on pulla.
+KYSYMYS: Kerro lisää: Cuxhavenista
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+AIEMPI KYSYMYS: Miksi nummi on kulttuurimaisema?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lüneburgin nummi on kulttuurimaisema, koska se ei ole syntynyt luonnostaan vaan ihmisen toiminnan seurauksena: [[neoliittisen]] ajan jälkeen köyhien hiekkamaiden metsiä laidunnettiin liikaa, ja metsän tilalle levisi [[kanerva]]. Nummi pysyy avoimena vain, jos sitä hoidetaan edelleen, ja siksi sitä laiduntavat pääosin [[heidschnucke]]-lampaat. Ihmisen jälki näkyy siis ylhäältäkin selvästi.
+KYSYMYS: Kerro lisää: neoliittisen
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+AIEMPI KYSYMYS: Miksi nummi on kulttuurimaisema?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lüneburgin nummi on kulttuurimaisema, koska se ei ole syntynyt luonnostaan vaan ihmisen toiminnan seurauksena: [[neoliittisen]] ajan jälkeen köyhien hiekkamaiden metsiä laidunnettiin liikaa, ja metsän tilalle levisi [[kanerva]]. Nummi pysyy avoimena vain, jos sitä hoidetaan edelleen, ja siksi sitä laiduntavat pääosin [[heidschnucke]]-lampaat. Ihmisen jälki näkyy siis ylhäältäkin selvästi.
+KYSYMYS: Kerro lisää: kanerva
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+AIEMPI KYSYMYS: Miksi nummi on kulttuurimaisema?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Lüneburgin nummi on kulttuurimaisema, koska se ei ole syntynyt luonnostaan vaan ihmisen toiminnan seurauksena: [[neoliittisen]] ajan jälkeen köyhien hiekkamaiden metsiä laidunnettiin liikaa, ja metsän tilalle levisi [[kanerva]]. Nummi pysyy avoimena vain, jos sitä hoidetaan edelleen, ja siksi sitä laiduntavat pääosin [[heidschnucke]]-lampaat. Ihmisen jälki näkyy siis ylhäältäkin selvästi.
+KYSYMYS: Kerro lisää: heidschnucke
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+AIEMPI KYSYMYS: Mikä on heidschnucke?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Heidschnucke on Lüneburgin nummen perinteinen lammasrotu, joka on sopeutunut karuun ja köyhään laidunmaahan. Se syö [[kanervaa]] ja nuoria vesakkoja, ja juuri sen laiduntaminen pitää [[nummen]] avoimena ja estää metsää valtaamasta aluetta takaisin. Rotu on siis samalla sekä maiseman tuote että sen hoitaja. Villamaista lampaita ei ole helppo lukea, mut kyllä ne minulle kelpaavat.
+KYSYMYS: Kerro lisää: kanervaa
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+AIEMPI KYSYMYS: Mikä on heidschnucke?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Heidschnucke on Lüneburgin nummen perinteinen lammasrotu, joka on sopeutunut karuun ja köyhään laidunmaahan. Se syö [[kanervaa]] ja nuoria vesakkoja, ja juuri sen laiduntaminen pitää [[nummen]] avoimena ja estää metsää valtaamasta aluetta takaisin. Rotu on siis samalla sekä maiseman tuote että sen hoitaja. Villamaista lampaita ei ole helppo lukea, mut kyllä ne minulle kelpaavat.
+KYSYMYS: Kerro lisää: nummen
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lüneburgin nummi (kulttuuri)
+Tietoruudun teksti: Lüneburgin nummi on laaja nummi-, geest- ja metsäalue Ala-Saksin koillisosassa Pohjois-Saksassa. Se on Hampurin, Hannoverin ja Bremenin taustaseutua ja saa nimensä Lüneburgin kaupungista, ja suurin osa alueesta on luonnonsuojelualuetta. Alueen keltaiset kanervanummet ovat tyypillisiä maisemia, jotka peittivät suurimman osan Pohjois-Saksan maaseudusta vuoteen 1800 asti mutta ovat muualta lähes kadonneet. Nummet syntyivät neoliittisen ajan jälkeen, kun köyhien hiekkamaiden metsiä laidunnettiin liikaa, joten alue on historiallinen kulttuurimaisema. Nummet pidetään avoimina pääosin laiduntamalla nummilampaita, heidschnuckeja, ja korkein kohta on 169 metrin Wilseder Berg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Mikä Wilseder Berg on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Wilseder Berg on Lüneburgin nummen korkein kohta, 169 metriä merenpinnan yläpuolella. Se on siis pikemmin matala kukkula kuin vuori, mutta tasaisella [[Pohjois-Saksan]] alangolla se näkyy kauas. Kukkulan ympärillä levittäytyy [[Lüneburgin nummen]] kanervaa ja laidunmaita. Ylhäältä katsoen sekin on kyllä aika vaatimaton korkeus.
+KYSYMYS: Kerro lisää: Pohjois-Saksan

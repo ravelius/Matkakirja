@@ -1,0 +1,1045 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välissä: yli 970 kilometriä pitkä ja 580 leveä, kaikkiaan 570 000 neliökilometriä. Se on matala meri Euroopan mannerjalustalla ja yhdistyy Atlanttiin etelässä Englannin kanaalin ja pohjoisessa Norjanmeren kautta. Täällä kulkevat Pohjois-Euroopan tärkeimmät laivaväylät, ja täältä kalastetaan. Meri oli viikinkien nousun näyttämö, ja myöhemmin siitä kilpailivat Hansaliitto, Alankomaiden tasavalta ja Britannia — se, joka hallitsi Pohjanmerta, pääsi maailman markkinoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Miksi silli oli keskiajalla niin tärkeä ruoka?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, ja se tuoksuu vähän kalalta. Silli oli keskiajalla tärkeä ruoka, koska se oli runsas ja edullinen kala, ja suolattuna tai savustettuna se säilyi pitkään ilman kylmäsäilytystä. Kirkon [[paastopäivinä]] lihaa ei saanut syödä mutta kala kelpasi, joten kysyntää riitti ympäri Eurooppaa. Kalan [[suolaus]] teki siitä myös helposti kuljetettavan tynnyreissä, ja silliä kuljetettiin pitkiä matkoja kauppiaiden laivoilla; esimerkiksi [[Hansaliiton]] kauppatavaroihin kuuluivat suola ja silli. Nyt tekis kyl mieli pullaa.
+KYSYMYS: Kerro lisää: suolaus
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välissä: yli 970 kilometriä pitkä ja 580 leveä, kaikkiaan 570 000 neliökilometriä. Se on matala meri Euroopan mannerjalustalla ja yhdistyy Atlanttiin etelässä Englannin kanaalin ja pohjoisessa Norjanmeren kautta. Täällä kulkevat Pohjois-Euroopan tärkeimmät laivaväylät, ja täältä kalastetaan. Meri oli viikinkien nousun näyttämö, ja myöhemmin siitä kilpailivat Hansaliitto, Alankomaiden tasavalta ja Britannia — se, joka hallitsi Pohjanmerta, pääsi maailman markkinoille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Miksi silli oli keskiajalla niin tärkeä ruoka?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, ja se tuoksuu vähän kalalta. Silli oli keskiajalla tärkeä ruoka, koska se oli runsas ja edullinen kala, ja suolattuna tai savustettuna se säilyi pitkään ilman kylmäsäilytystä. Kirkon [[paastopäivinä]] lihaa ei saanut syödä mutta kala kelpasi, joten kysyntää riitti ympäri Eurooppaa. Kalan [[suolaus]] teki siitä myös helposti kuljetettavan tynnyreissä, ja silliä kuljetettiin pitkiä matkoja kauppiaiden laivoilla; esimerkiksi [[Hansaliiton]] kauppatavaroihin kuuluivat suola ja silli. Nyt tekis kyl mieli pullaa.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Iqaluit: Vuosi 1873: lahti, joka ei ollutkaan salmi] Kaksisataa kahdeksankymmentä vuotta Frobisherin jälkeen amerikkalainen Charles Francis Hall talvehti valaanpyytäjän mukana Baffininsaarella. Paikalliset inuiitit kertoivat hänelle, missä Frobisherin kaivosyrityksen jäännökset olivat — tieto oli kulkenut suullisena perimätietona koko sen ajan. Oppaikseen Hall sai aviopari Ipirvikin ja Taqulittuqin, ja 1861 hänestä tuli ensimmäinen ei-alkuperäinen ihminen, joka tajusi, ettei Frobisherin salmi ole salmi vaan umpilahti. Kartta korjattiin. Hall itse kuoli marraskuussa 1871 Grönlannissa oudoissa oloissa, joten isoisän matkavuonna kartta oli kaksi vuotta vanha ja sen tekijä kaksi vuotta kuollut.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Mmm— se on kyl yksi merien erikoisuuksista. Itämeren vesi on murtovettä, koska meri on lähes suljettu allas, jonka yhteys valtamereen kulkee kapeiden ja matalien [[Tanskan salmien]] kautta [[Kattegatiin]]. Suolaista vettä virtaa sisään vain vähän, ja veden vaihtuminen on hidasta. Samaan aikaan mereen laskee runsaasti jokia, jotka tuovat makeaa vettä, ja viileällä alueella haihdunta on vähäistä, joten merivesi laimenee. Suolapitoisuus on sen vuoksi selvästi pienempi kuin valtamerissä, ja se pienenee edelleen pohjoiseen ja itään mentäessä, erityisesti [[Pohjanlahdella]] ja [[Suomenlahden]] perukassa. Pieni salmi, iso vaikutus.
+KYSYMYS: Kerro lisää: Tanskan salmien
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Mmm— se on kyl yksi merien erikoisuuksista. Itämeren vesi on murtovettä, koska meri on lähes suljettu allas, jonka yhteys valtamereen kulkee kapeiden ja matalien [[Tanskan salmien]] kautta [[Kattegatiin]]. Suolaista vettä virtaa sisään vain vähän, ja veden vaihtuminen on hidasta. Samaan aikaan mereen laskee runsaasti jokia, jotka tuovat makeaa vettä, ja viileällä alueella haihdunta on vähäistä, joten merivesi laimenee. Suolapitoisuus on sen vuoksi selvästi pienempi kuin valtamerissä, ja se pienenee edelleen pohjoiseen ja itään mentäessä, erityisesti [[Pohjanlahdella]] ja [[Suomenlahden]] perukassa. Pieni salmi, iso vaikutus.
+KYSYMYS: Kerro lisää: Kattegatiin
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Mmm— se on kyl yksi merien erikoisuuksista. Itämeren vesi on murtovettä, koska meri on lähes suljettu allas, jonka yhteys valtamereen kulkee kapeiden ja matalien [[Tanskan salmien]] kautta [[Kattegatiin]]. Suolaista vettä virtaa sisään vain vähän, ja veden vaihtuminen on hidasta. Samaan aikaan mereen laskee runsaasti jokia, jotka tuovat makeaa vettä, ja viileällä alueella haihdunta on vähäistä, joten merivesi laimenee. Suolapitoisuus on sen vuoksi selvästi pienempi kuin valtamerissä, ja se pienenee edelleen pohjoiseen ja itään mentäessä, erityisesti [[Pohjanlahdella]] ja [[Suomenlahden]] perukassa. Pieni salmi, iso vaikutus.
+KYSYMYS: Kerro lisää: Pohjanlahdella
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Mmm— se on kyl yksi merien erikoisuuksista. Itämeren vesi on murtovettä, koska meri on lähes suljettu allas, jonka yhteys valtamereen kulkee kapeiden ja matalien [[Tanskan salmien]] kautta [[Kattegatiin]]. Suolaista vettä virtaa sisään vain vähän, ja veden vaihtuminen on hidasta. Samaan aikaan mereen laskee runsaasti jokia, jotka tuovat makeaa vettä, ja viileällä alueella haihdunta on vähäistä, joten merivesi laimenee. Suolapitoisuus on sen vuoksi selvästi pienempi kuin valtamerissä, ja se pienenee edelleen pohjoiseen ja itään mentäessä, erityisesti [[Pohjanlahdella]] ja [[Suomenlahden]] perukassa. Pieni salmi, iso vaikutus.
+KYSYMYS: Kerro lisää: Suomenlahden
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mitä Tanskan salmet ovat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kolme salmea pitää saada oikeaan järjestykseen. Tanskan salmet ovat kolme kapeaa vesiväylää Tanskan saarten ja mantereen välillä, ja ne yhdistävät Itämeren [[Kattegatiin]] ja sitä kautta [[Pohjanmereen]]. [[Juutinrauma]] kulkee Tanskan Seelannin saaren ja Ruotsin Skånen välissä, ja sen rannoilla ovat [[Kööpenhamina]] ja Malmö. Iso-Belt kulkee Seelannin ja Fynin saaren välissä ja Vähä-Belt Fynin ja Jyllannin mantereen välissä. Itämeren ja Pohjanmeren välinen vedenvaihto kulkee näiden salmien kautta, ja niiden yli on nykyään myös siltoja.
+
+Sukuni on lentänyt salmien yli jo ennen siltoja. Silta on kyllä kätevä, mutta lentäminen on edelleen halvempaa.
+KYSYMYS: Kerro lisää: Pohjanmereen
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+AIEMPI KYSYMYS: Mitä Tanskan salmet ovat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kolme salmea pitää saada oikeaan järjestykseen. Tanskan salmet ovat kolme kapeaa vesiväylää Tanskan saarten ja mantereen välillä, ja ne yhdistävät Itämeren [[Kattegatiin]] ja sitä kautta [[Pohjanmereen]]. [[Juutinrauma]] kulkee Tanskan Seelannin saaren ja Ruotsin Skånen välissä, ja sen rannoilla ovat [[Kööpenhamina]] ja Malmö. Iso-Belt kulkee Seelannin ja Fynin saaren välissä ja Vähä-Belt Fynin ja Jyllannin mantereen välissä. Itämeren ja Pohjanmeren välinen vedenvaihto kulkee näiden salmien kautta, ja niiden yli on nykyään myös siltoja.
+
+Sukuni on lentänyt salmien yli jo ennen siltoja. Silta on kyllä kätevä, mutta lentäminen on edelleen halvempaa.
+KYSYMYS: Kerro lisää: Juutinrauma
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Kööpenhamina] Tanskan pääkaupunki on rakennettu kahden saaren kupeeseen salmen rannalle. Se on matala kaupunki, jossa liikutaan pyörällä ja jossa vesi on aina lähellä.
+AIEMPI KYSYMYS: Mitä Tanskan salmet ovat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kolme salmea pitää saada oikeaan järjestykseen. Tanskan salmet ovat kolme kapeaa vesiväylää Tanskan saarten ja mantereen välillä, ja ne yhdistävät Itämeren [[Kattegatiin]] ja sitä kautta [[Pohjanmereen]]. [[Juutinrauma]] kulkee Tanskan Seelannin saaren ja Ruotsin Skånen välissä, ja sen rannoilla ovat [[Kööpenhamina]] ja Malmö. Iso-Belt kulkee Seelannin ja Fynin saaren välissä ja Vähä-Belt Fynin ja Jyllannin mantereen välissä. Itämeren ja Pohjanmeren välinen vedenvaihto kulkee näiden salmien kautta, ja niiden yli on nykyään myös siltoja.
+
+Sukuni on lentänyt salmien yli jo ennen siltoja. Silta on kyllä kätevä, mutta lentäminen on edelleen halvempaa.
+KYSYMYS: Kerro lisää: Kööpenhamina
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy helpommin kuin valtameret?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään talveen. Itämeri jäätyy helpommin kuin valtameret, koska sen vesi on vähäsuolaista ja vähäsuolaisen veden jäätymispiste on lähempänä nollaa kuin tavallisen meriveden. Lisäksi meri on matala ja suojaisa, joten sen pintavesi viilenee nopeasti. [[Pohjanlahden]] ja [[Suomenlahden]] pohjukat jäätyvät yleensä joka talvi, kun taas eteläinen Itämeri jäätyy vain kovina talvina. Jään laajuus vaihtelee vuodesta toiseen, ja kylmä [[jäätymispiste]] ei yksin ratkaise sitä. Talvella meri on kyyhkylle ihan liian kova alusta.
+KYSYMYS: Kerro lisää: Pohjanlahden
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+AIEMPI KYSYMYS: Miksi Itämeri jäätyy helpommin kuin valtameret?
+AIEMPI VASTAUS (Livia):
+No niin, nyt mennään talveen. Itämeri jäätyy helpommin kuin valtameret, koska sen vesi on vähäsuolaista ja vähäsuolaisen veden jäätymispiste on lähempänä nollaa kuin tavallisen meriveden. Lisäksi meri on matala ja suojaisa, joten sen pintavesi viilenee nopeasti. [[Pohjanlahden]] ja [[Suomenlahden]] pohjukat jäätyvät yleensä joka talvi, kun taas eteläinen Itämeri jäätyy vain kovina talvina. Jään laajuus vaihtelee vuodesta toiseen, ja kylmä [[jäätymispiste]] ei yksin ratkaise sitä. Talvella meri on kyyhkylle ihan liian kova alusta.
+KYSYMYS: Kerro lisää: jäätymispiste
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+AIEMPI KYSYMYS: Mitä Rügenin liitukalliot ovat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, ne näkyvät kauas. Rügen on Saksan suurin saari Itämerellä, ja sen koillisosassa [[Jasmundin kansallispuiston]] alueella kohoaa valkoisia liitukallioita, jotka syntyivät kymmenien miljoonien vuosien kuluessa muinaisen meren pohjaan kerrostuneista pienten eliöiden kuorista. Tunnetuin kohta on [[Königsstuhl]], joka kohoaa yli sadan metrin korkeuteen. Kalliot ovat inspiroineet taidetta, ja [[Caspar David Friedrich]] maalasi aiheesta tunnetun teoksen 1800-luvun alkupuolella. Valkoinen kallio on kyyhkylle kuin kotiparveke.
+KYSYMYS: Kerro lisää: Jasmundin kansallispuiston
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Mitä Rügenin liitukalliot ovat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, ne näkyvät kauas. Rügen on Saksan suurin saari Itämerellä, ja sen koillisosassa [[Jasmundin kansallispuiston]] alueella kohoaa valkoisia liitukallioita, jotka syntyivät kymmenien miljoonien vuosien kuluessa muinaisen meren pohjaan kerrostuneista pienten eliöiden kuorista. Tunnetuin kohta on [[Königsstuhl]], joka kohoaa yli sadan metrin korkeuteen. Kalliot ovat inspiroineet taidetta, ja [[Caspar David Friedrich]] maalasi aiheesta tunnetun teoksen 1800-luvun alkupuolella. Valkoinen kallio on kyyhkylle kuin kotiparveke.
+KYSYMYS: Kerro lisää: Königsstuhl
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+AIEMPI KYSYMYS: Mitä Rügenin liitukalliot ovat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, ne näkyvät kauas. Rügen on Saksan suurin saari Itämerellä, ja sen koillisosassa [[Jasmundin kansallispuiston]] alueella kohoaa valkoisia liitukallioita, jotka syntyivät kymmenien miljoonien vuosien kuluessa muinaisen meren pohjaan kerrostuneista pienten eliöiden kuorista. Tunnetuin kohta on [[Königsstuhl]], joka kohoaa yli sadan metrin korkeuteen. Kalliot ovat inspiroineet taidetta, ja [[Caspar David Friedrich]] maalasi aiheesta tunnetun teoksen 1800-luvun alkupuolella. Valkoinen kallio on kyyhkylle kuin kotiparveke.
+KYSYMYS: Kerro lisää: Caspar David Friedrich
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Luonto: Puu, joka elää toisten juurista] Valkosantelipuu on neljästä yhdeksään metriä korkea ainavihanta puu, joka ei tule toimeen yksin: sen juurissa on imujuuria, joilla se kiinnittyy naapuripuiden juuriin ja ottaa niistä fosforia, typpeä ja kaliumia sekä varjon. Isäntälajeja tunnetaan kolmisensataa, eikä niille koidu siitä sanottavaa vahinkoa. Arvo on ytimessä: vain sydänpuu tuoksuu, ja siitä veistetään ja tislataan öljyä, kun taas vaalea pintapuu on hajuton. Hedelmiä puu tekee kolmen vuoden ikäisenä ja itämiskykyisiä siemeniä viiden, ja linnut levittävät ne. Timor kuuluu lajin alkuperäiseen levinneisyysalueeseen.
+- [Zimbabwe — maalehti / Ruoka: Ruoka, jonka pavut kypsyvät maan alla] Mutakura on sekoitus, jossa on maapähkinöitä eli nzungua, keitettyä ja auringossa kuivattua maissia, silmupapuja eli nyembaa ja nyimoa. Nyimo on bambaranmaapähkinä, palkokasvi, jonka kukan varsi kääntyy hedelmöityksen jälkeen alaspäin ja työntyy maahan: palot kypsyvät mullan alla, ja sato nostetaan varsista kiinni kuin peruna. Kasvi kestää kuumuutta ja karua maata ja jättää maaperään typpeä seuraavalle viljelylle. Afrikassa sitä viljelevät, myyvät ja käsittelevät enimmäkseen naiset.
+AIEMPI KYSYMYS: Mitä Itämeren rehevöityminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, vaikka vähän ikävä. Rehevöityminen tarkoittaa sitä, että vesistöön päätyy liikaa ravinteita, erityisesti [[typpeä]] ja [[fosforia]]. Ravinteita huuhtoutuu mereen pelloilta, jätevesistä ja ilmasta, ja ne ruokkivat levien kasvua. Kesäisin ilmiö näkyy [[sinilevien]] kukintoina, ja kun levä vajoaa pohjaan ja hajoaa, se kuluttaa pohjan happea. Itämerellä vaikutus on erityisen voimakas, koska vesi vaihtuu hitaasti ja ravinteet jäävät mereen pitkäksi aikaa, ja osassa syviä pohjia happi on kokonaan vähissä. Kyllä tuo kannattaa muistaa seuraavan rantalomankin aikana.
+KYSYMYS: Kerro lisää: typpeä
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itä-Timor — maalehti / Luonto: Puu, joka elää toisten juurista] Valkosantelipuu on neljästä yhdeksään metriä korkea ainavihanta puu, joka ei tule toimeen yksin: sen juurissa on imujuuria, joilla se kiinnittyy naapuripuiden juuriin ja ottaa niistä fosforia, typpeä ja kaliumia sekä varjon. Isäntälajeja tunnetaan kolmisensataa, eikä niille koidu siitä sanottavaa vahinkoa. Arvo on ytimessä: vain sydänpuu tuoksuu, ja siitä veistetään ja tislataan öljyä, kun taas vaalea pintapuu on hajuton. Hedelmiä puu tekee kolmen vuoden ikäisenä ja itämiskykyisiä siemeniä viiden, ja linnut levittävät ne. Timor kuuluu lajin alkuperäiseen levinneisyysalueeseen.
+- [Ruotsi — maalehti / Tiede: Tulitikku, joka syttyy vain omasta rasiastaan] Vanhat tulitikut syttyivät mistä tahansa hankauksesta ja sisälsivät valkoista fosforia, joka sairastutti tehtaiden työntekijät. Ruotsalainen Gustaf Erik Pasch keksi 1844 jakaa syttyminen kahtia: tikun päähän jää osa aineista ja loput siirretään rasian kylkeen. Johan Edvard Lundström kehitti ideasta Jönköpingissä valmistuskelpoisen tuotteen 1850-luvulla. Turvatulitikku syttyy vain omaa raapaisupintaansa vasten — siksi tikut eivät syty taskussa.
+AIEMPI KYSYMYS: Mitä Itämeren rehevöityminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, vaikka vähän ikävä. Rehevöityminen tarkoittaa sitä, että vesistöön päätyy liikaa ravinteita, erityisesti [[typpeä]] ja [[fosforia]]. Ravinteita huuhtoutuu mereen pelloilta, jätevesistä ja ilmasta, ja ne ruokkivat levien kasvua. Kesäisin ilmiö näkyy [[sinilevien]] kukintoina, ja kun levä vajoaa pohjaan ja hajoaa, se kuluttaa pohjan happea. Itämerellä vaikutus on erityisen voimakas, koska vesi vaihtuu hitaasti ja ravinteet jäävät mereen pitkäksi aikaa, ja osassa syviä pohjia happi on kokonaan vähissä. Kyllä tuo kannattaa muistaa seuraavan rantalomankin aikana.
+KYSYMYS: Kerro lisää: fosforia
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeri on Atlantin haara, jota ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas: vettä vaihtuu Atlantin kanssa vain vähän, koska ainoa tie ulos kulkee Tanskan salmien — Juutinrauman sekä Ison- ja Vähänbeltin — kautta Kattegatiin. Meri ulottuu leveyspiiriltä 53 pohjoista leveyspiirille 66 ja pituuspiiriltä 10 pituuspiirille 30, ja siihen kuuluvat Pohjanlahti, Suomenlahti, Riianlahti ja Gdańskinlahti. Saksan rannikolla sitä reunustavat Rügenin liitukalliot.
+AIEMPI KYSYMYS: Mitä Itämeren rehevöityminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo, vaikka vähän ikävä. Rehevöityminen tarkoittaa sitä, että vesistöön päätyy liikaa ravinteita, erityisesti [[typpeä]] ja [[fosforia]]. Ravinteita huuhtoutuu mereen pelloilta, jätevesistä ja ilmasta, ja ne ruokkivat levien kasvua. Kesäisin ilmiö näkyy [[sinilevien]] kukintoina, ja kun levä vajoaa pohjaan ja hajoaa, se kuluttaa pohjan happea. Itämerellä vaikutus on erityisen voimakas, koska vesi vaihtuu hitaasti ja ravinteet jäävät mereen pitkäksi aikaa, ja osassa syviä pohjia happi on kokonaan vähissä. Kyllä tuo kannattaa muistaa seuraavan rantalomankin aikana.
+KYSYMYS: Kerro lisää: sinilevien
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Miksi järven valtionrajoista ei ole sovittu?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on oikeasti hieno sotku. Bodenjärvellä ei ole sovittua valtionrajaa, koska [[Saksa]], [[Sveitsi]] ja [[Itävalta]] eivät ole päässeet yksimielisiksi siitä, miten raja pitäisi vetää. Maat tulkitsevat järven asemaa eri tavoin: yhden näkemyksen mukaan rajaa ei vedetä lainkaan vaan vesialue on yhteistä, toisen mukaan se jaettaisiin rantavaltioiden kesken, mutta en ole varma, mikä maa kannattaa mitäkin. Käytännössä asioista on sovittu yhteistyöllä, sillä esimerkiksi laivaliikenteestä, kalastuksesta ja vesiensuojelusta on yhteisiä sopimuksia, joten arki sujuu ilman rajaviivaa. Kyyhky ei kysy lupaa kummaltakaan rannalta.
+KYSYMYS: Kerro lisää: Saksa
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Miksi järven valtionrajoista ei ole sovittu?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on oikeasti hieno sotku. Bodenjärvellä ei ole sovittua valtionrajaa, koska [[Saksa]], [[Sveitsi]] ja [[Itävalta]] eivät ole päässeet yksimielisiksi siitä, miten raja pitäisi vetää. Maat tulkitsevat järven asemaa eri tavoin: yhden näkemyksen mukaan rajaa ei vedetä lainkaan vaan vesialue on yhteistä, toisen mukaan se jaettaisiin rantavaltioiden kesken, mutta en ole varma, mikä maa kannattaa mitäkin. Käytännössä asioista on sovittu yhteistyöllä, sillä esimerkiksi laivaliikenteestä, kalastuksesta ja vesiensuojelusta on yhteisiä sopimuksia, joten arki sujuu ilman rajaviivaa. Kyyhky ei kysy lupaa kummaltakaan rannalta.
+KYSYMYS: Kerro lisää: Sveitsi
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Miksi järven valtionrajoista ei ole sovittu?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tämä on oikeasti hieno sotku. Bodenjärvellä ei ole sovittua valtionrajaa, koska [[Saksa]], [[Sveitsi]] ja [[Itävalta]] eivät ole päässeet yksimielisiksi siitä, miten raja pitäisi vetää. Maat tulkitsevat järven asemaa eri tavoin: yhden näkemyksen mukaan rajaa ei vedetä lainkaan vaan vesialue on yhteistä, toisen mukaan se jaettaisiin rantavaltioiden kesken, mutta en ole varma, mikä maa kannattaa mitäkin. Käytännössä asioista on sovittu yhteistyöllä, sillä esimerkiksi laivaliikenteestä, kalastuksesta ja vesiensuojelusta on yhteisiä sopimuksia, joten arki sujuu ilman rajaviivaa. Kyyhky ei kysy lupaa kummaltakaan rannalta.
+KYSYMYS: Kerro lisää: Itävalta
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Miten Rein kulkee järven läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on helppo seurata ylhäältä. Alppien Rein laskee Bodenjärveen etelästä ja kerrostaa suulleen hiekkaa ja lietettä, joten suisto kasvaa vähitellen. Vesi virtaa ensin suureen [[Obersee]]-altaaseen, sieltä [[Konstanzin]] kohdalla kapeaan [[Seerhein]]-jokeen ja edelleen pienempään [[Untersee]]-altaaseen, josta Rein lähtee länteen Ylä-Reininä. Joki menee siitä läpi kuin lanka neulansilmästä.
+KYSYMYS: Kerro lisää: Obersee
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+AIEMPI KYSYMYS: Miten Rein kulkee järven läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on helppo seurata ylhäältä. Alppien Rein laskee Bodenjärveen etelästä ja kerrostaa suulleen hiekkaa ja lietettä, joten suisto kasvaa vähitellen. Vesi virtaa ensin suureen [[Obersee]]-altaaseen, sieltä [[Konstanzin]] kohdalla kapeaan [[Seerhein]]-jokeen ja edelleen pienempään [[Untersee]]-altaaseen, josta Rein lähtee länteen Ylä-Reininä. Joki menee siitä läpi kuin lanka neulansilmästä.
+KYSYMYS: Kerro lisää: Konstanzin
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Miten Rein kulkee järven läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on helppo seurata ylhäältä. Alppien Rein laskee Bodenjärveen etelästä ja kerrostaa suulleen hiekkaa ja lietettä, joten suisto kasvaa vähitellen. Vesi virtaa ensin suureen [[Obersee]]-altaaseen, sieltä [[Konstanzin]] kohdalla kapeaan [[Seerhein]]-jokeen ja edelleen pienempään [[Untersee]]-altaaseen, josta Rein lähtee länteen Ylä-Reininä. Joki menee siitä läpi kuin lanka neulansilmästä.
+KYSYMYS: Kerro lisää: Seerhein
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Miten Rein kulkee järven läpi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on helppo seurata ylhäältä. Alppien Rein laskee Bodenjärveen etelästä ja kerrostaa suulleen hiekkaa ja lietettä, joten suisto kasvaa vähitellen. Vesi virtaa ensin suureen [[Obersee]]-altaaseen, sieltä [[Konstanzin]] kohdalla kapeaan [[Seerhein]]-jokeen ja edelleen pienempään [[Untersee]]-altaaseen, josta Rein lähtee länteen Ylä-Reininä. Joki menee siitä läpi kuin lanka neulansilmästä.
+KYSYMYS: Kerro lisää: Untersee
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Ruoka: Peruna sai nimen ilmalaivasta] 1920-luku — Cepelinai on Liettuan tunnetuin ruokalaji: raastetusta ja keitetystä perunataikinasta muotoillut, jauhelihalla, raejuustolla tai sienillä täytetyt pallot, joita tarjoillaan silava- tai smetanakastikkeen kanssa. Ruokalaji tunnettiin jo 1800-luvulla nimellä didžkukuliai, mutta nykyinen nimi ja soikea muoto vakiintuivat 1920- ja 1930-luvuilla, kun kreivi Ferdinand von Zeppelinin ilmalaivat olivat lehtiotsikoissa ja pallojen muoto muistutti niitä. Samalla cepelinaista tuli tuoreen itsenäisen Liettuan uudistetun maatalouden symboli.
+AIEMPI KYSYMYS: Miksi Friedrichshafen liittyy zeppeliineihin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ilmailu kiinnostaa minua ihan ammatillisesti. Friedrichshafen on Bodenjärven pohjoisrannalla Saksassa, ja siellä kreivi [[Ferdinand von Zeppelin]] rakennutti ilmalaivansa. Ensimmäinen niistä nousi ilmaan järven päällä noin vuonna 1900, ja kaupungin tehtaat valmistivat jäykkärunkoisia [[ilmalaivoja]] vielä pitkään sen jälkeen. Nimi tulee kreivin sukunimestä, ja kaupungissa toimii nykyään [[Zeppelin-museo]], joka kertoo ilmalaivojen historiasta. Ilmalaiva on kyl komea, mutta siivet ovat edelleen halvempi ratkaisu.
+KYSYMYS: Kerro lisää: Ferdinand von Zeppelin
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Miksi Friedrichshafen liittyy zeppeliineihin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ilmailu kiinnostaa minua ihan ammatillisesti. Friedrichshafen on Bodenjärven pohjoisrannalla Saksassa, ja siellä kreivi [[Ferdinand von Zeppelin]] rakennutti ilmalaivansa. Ensimmäinen niistä nousi ilmaan järven päällä noin vuonna 1900, ja kaupungin tehtaat valmistivat jäykkärunkoisia [[ilmalaivoja]] vielä pitkään sen jälkeen. Nimi tulee kreivin sukunimestä, ja kaupungissa toimii nykyään [[Zeppelin-museo]], joka kertoo ilmalaivojen historiasta. Ilmalaiva on kyl komea, mutta siivet ovat edelleen halvempi ratkaisu.
+KYSYMYS: Kerro lisää: ilmalaivoja
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+AIEMPI KYSYMYS: Miksi Friedrichshafen liittyy zeppeliineihin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, ilmailu kiinnostaa minua ihan ammatillisesti. Friedrichshafen on Bodenjärven pohjoisrannalla Saksassa, ja siellä kreivi [[Ferdinand von Zeppelin]] rakennutti ilmalaivansa. Ensimmäinen niistä nousi ilmaan järven päällä noin vuonna 1900, ja kaupungin tehtaat valmistivat jäykkärunkoisia [[ilmalaivoja]] vielä pitkään sen jälkeen. Nimi tulee kreivin sukunimestä, ja kaupungissa toimii nykyään [[Zeppelin-museo]], joka kertoo ilmalaivojen historiasta. Ilmalaiva on kyl komea, mutta siivet ovat edelleen halvempi ratkaisu.
+KYSYMYS: Kerro lisää: Zeppelin-museo
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Mitä Bodenjärven ympärillä viljellään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, rantojen maisema on aika erikoinen. Bodenjärven ympäristössä ilmasto on järven lämpöä tasaavan vaikutuksen ansiosta leuto, ja se sopii hedelmien viljelyyn. Rantojen rinteillä kasvatetaan [[omenoita]] ja viiniköynnöksiä, ja alueella on tunnettu [[humalan]] viljelyalue [[Tettnang]]-nimisen kaupungin ympäristössä. Järvi toimii siis alueen ilmastolle eräänlaisena lämpöakkuna. Omenapiirakka olisi kyllä kiva, mutta pulla on parempi.
+KYSYMYS: Kerro lisää: omenoita
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Mitä Bodenjärven ympärillä viljellään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, rantojen maisema on aika erikoinen. Bodenjärven ympäristössä ilmasto on järven lämpöä tasaavan vaikutuksen ansiosta leuto, ja se sopii hedelmien viljelyyn. Rantojen rinteillä kasvatetaan [[omenoita]] ja viiniköynnöksiä, ja alueella on tunnettu [[humalan]] viljelyalue [[Tettnang]]-nimisen kaupungin ympäristössä. Järvi toimii siis alueen ilmastolle eräänlaisena lämpöakkuna. Omenapiirakka olisi kyllä kiva, mutta pulla on parempi.
+KYSYMYS: Kerro lisää: humalan
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Mitä Bodenjärven ympärillä viljellään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, rantojen maisema on aika erikoinen. Bodenjärven ympäristössä ilmasto on järven lämpöä tasaavan vaikutuksen ansiosta leuto, ja se sopii hedelmien viljelyyn. Rantojen rinteillä kasvatetaan [[omenoita]] ja viiniköynnöksiä, ja alueella on tunnettu [[humalan]] viljelyalue [[Tettnang]]-nimisen kaupungin ympäristössä. Järvi toimii siis alueen ilmastolle eräänlaisena lämpöakkuna. Omenapiirakka olisi kyllä kiva, mutta pulla on parempi.
+KYSYMYS: Kerro lisää: Tettnang
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+AIEMPI KYSYMYS: Mikä Reichenaun luostarisaari on?
+AIEMPI VASTAUS (Livia):
+Just niin, se on se luostarisaari. Reichenau on Bodenjärven [[Untersee]]-osassa sijaitseva saari, jonka luostari perustettiin vuonna 724 munkki [[Pirminin]] toimesta. Saari oli keskiajalla merkittävä oppineisuuden ja kirjataiteen keskus, ja sen kirkoissa on säilynyt vanhoja seinämaalauksia. Saari kuuluu [[maailmanperintökohteisiin]], ja siellä viljellään nykyäänkin vihanneksia ja viiniä.
+
+Vihanneksia ja viiniä, mutta pullasta ei kukaan maininnut mitään. Täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Pirminin
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bodenjärvi (meri)
+Tietoruudun teksti: Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja niitä yhdistävä joenpätkä Seerhein. Järvi on siinä kohdassa, jossa Saksa, Sveitsi ja Itävalta kohtaavat. Alppien Rein laskee siihen etelästä ja Ylä-Rein lähtee siitä länteen. Erikoisinta on, ettei valtionrajojen kulusta järven päällä ole sovittu lainkaan: Itävallalla, Saksalla ja Sveitsillä on kullakin oma näkemyksensä siitä, mihin raja piirretään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Reichenaun luostarisaari on?
+AIEMPI VASTAUS (Livia):
+Just niin, se on se luostarisaari. Reichenau on Bodenjärven [[Untersee]]-osassa sijaitseva saari, jonka luostari perustettiin vuonna 724 munkki [[Pirminin]] toimesta. Saari oli keskiajalla merkittävä oppineisuuden ja kirjataiteen keskus, ja sen kirkoissa on säilynyt vanhoja seinämaalauksia. Saari kuuluu [[maailmanperintökohteisiin]], ja siellä viljellään nykyäänkin vihanneksia ja viiniä.
+
+Vihanneksia ja viiniä, mutta pullasta ei kukaan maininnut mitään. Täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: maailmanperintökohteisiin
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mikä Loreleyn tarina on?
+AIEMPI VASTAUS (Livia):
+Ai se, se on tosi tuttu tarina. Loreley on korkea ja jyrkkä kallio Reinin itärannalla [[Reinin rotkon]] kapeassa kohdassa Saksassa. Joessa on siinä voimakas virtaus ja vaarallisia karikkoja, ja sieltä on saanut alkunsa tarina kauniista neidosta, joka istuu kalliolla, kampaa kultaisia hiuksiaan ja laulaa niin, että veneilijät unohtavat kulkunsa ja ajautuvat karille. Tarinan sanotaan saaneen kirjallisen muotonsa runoilija [[Clemens Brentanon]] käsissä 1800-luvun alussa, ja tunnetuksi sen teki [[Heinrich Heinen]] runo, jonka sävelsi [[Friedrich Silcher]]. Kyyhky ei laula, joten ei ole vaaraa.
+KYSYMYS: Kerro lisää: Reinin rotkon
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Mikä Loreleyn tarina on?
+AIEMPI VASTAUS (Livia):
+Ai se, se on tosi tuttu tarina. Loreley on korkea ja jyrkkä kallio Reinin itärannalla [[Reinin rotkon]] kapeassa kohdassa Saksassa. Joessa on siinä voimakas virtaus ja vaarallisia karikkoja, ja sieltä on saanut alkunsa tarina kauniista neidosta, joka istuu kalliolla, kampaa kultaisia hiuksiaan ja laulaa niin, että veneilijät unohtavat kulkunsa ja ajautuvat karille. Tarinan sanotaan saaneen kirjallisen muotonsa runoilija [[Clemens Brentanon]] käsissä 1800-luvun alussa, ja tunnetuksi sen teki [[Heinrich Heinen]] runo, jonka sävelsi [[Friedrich Silcher]]. Kyyhky ei laula, joten ei ole vaaraa.
+KYSYMYS: Kerro lisää: Clemens Brentanon
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Mikä Loreleyn tarina on?
+AIEMPI VASTAUS (Livia):
+Ai se, se on tosi tuttu tarina. Loreley on korkea ja jyrkkä kallio Reinin itärannalla [[Reinin rotkon]] kapeassa kohdassa Saksassa. Joessa on siinä voimakas virtaus ja vaarallisia karikkoja, ja sieltä on saanut alkunsa tarina kauniista neidosta, joka istuu kalliolla, kampaa kultaisia hiuksiaan ja laulaa niin, että veneilijät unohtavat kulkunsa ja ajautuvat karille. Tarinan sanotaan saaneen kirjallisen muotonsa runoilija [[Clemens Brentanon]] käsissä 1800-luvun alussa, ja tunnetuksi sen teki [[Heinrich Heinen]] runo, jonka sävelsi [[Friedrich Silcher]]. Kyyhky ei laula, joten ei ole vaaraa.
+KYSYMYS: Kerro lisää: Heinrich Heinen
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Mikä Loreleyn tarina on?
+AIEMPI VASTAUS (Livia):
+Ai se, se on tosi tuttu tarina. Loreley on korkea ja jyrkkä kallio Reinin itärannalla [[Reinin rotkon]] kapeassa kohdassa Saksassa. Joessa on siinä voimakas virtaus ja vaarallisia karikkoja, ja sieltä on saanut alkunsa tarina kauniista neidosta, joka istuu kalliolla, kampaa kultaisia hiuksiaan ja laulaa niin, että veneilijät unohtavat kulkunsa ja ajautuvat karille. Tarinan sanotaan saaneen kirjallisen muotonsa runoilija [[Clemens Brentanon]] käsissä 1800-luvun alussa, ja tunnetuksi sen teki [[Heinrich Heinen]] runo, jonka sävelsi [[Friedrich Silcher]]. Kyyhky ei laula, joten ei ole vaaraa.
+KYSYMYS: Kerro lisää: Friedrich Silcher
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Miksi Reinin varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Katotaas, tää on selkeä juttu. Reinin keskiosan rotkolaaksossa linnoja on kymmeniä, koska joki oli keskiajalla yksi Euroopan tärkeimmistä kauppareiteistä. [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana alue oli jakautunut moniin pieniin ruhtinaskuntiin ja herrojen alueisiin, ja monet heistä perivät laivoilta tulleja. Linnat rakennettiin valvomaan jokiliikennettä ja keräämään [[tullia]] kapeissa kohdissa. Hyvä esimerkki on joen keskellä saarella sijaitseva [[Pfalzgrafenstein]], joka palveli tullilinnana. Kyyhkyltä ei olisi tullia saanut, kun ei ole taskuja.
+KYSYMYS: Kerro lisää: Pyhän saksalais-roomalaisen keisarikunnan
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kaupunkilehti / Singapore: Vapaasatama, jossa ei peritty tullia] Raffles määräsi sataman vapaasatamaksi, ja se ratkaisi kilpailun: Batavian ja Manilan satamissa perittiin tulleja, täällä ei. Kiinalaiset kauppiaat asettuivat joen alajuoksulle ja englantilaiset yläjuoksulle, ja kaupungissa risteytyi kolme kauppaverkostoa: kiinalainen, kaakkoisaasialainen saariverkosto ja eurooppalais-intialainen. 1830-luvulla Singapore oli jo ohittanut Batavian kiinalaisen junkkikaupan keskuksena, ja 1840-luvulta se oli höyrylaivojen hiiliasema. Suezin kanavan avaaminen 1869 laski rahdin hintaa Eurooppaan rajusti: vuonna 1880 satamasta kulki jo yli puolitoista miljoonaa tonnia tavaraa vuodessa, neljä viidesosaa siitä höyrylaivoilla.
+- [Birdsville — kaupunkilehti / Birdsville: Tulliasema keskellä tyhjyyttä] Birdsville seisoo Queenslandin ja Etelä-Australian rajalla, ja ennen liittovaltion perustamista 1901 jokainen rajan yli kuljetettu karjalauma tai tavaraerä maksoi tullia. Kaupunkiin nousi oma tullitoimisto, ja rahavirta toi mukanaan kolme hotellia, kauppoja ja poliisiaseman. Väkiluku nousi noin sadastakymmenestä vuonna 1889 yli kolmeensataan vuosisadan vaihteessa. Kun liittovaltio poisti sisärajojen tullit vuonna 1901, tulovirta katkesi yhtä äkkiä kuin oli alkanutkin: 1950-luvulla Birdsvillessä asui enää noin viisikymmentä ihmistä, ja kaupunki eli lähinnä ohikulkevasta karjatiestä.
+AIEMPI KYSYMYS: Miksi Reinin varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Katotaas, tää on selkeä juttu. Reinin keskiosan rotkolaaksossa linnoja on kymmeniä, koska joki oli keskiajalla yksi Euroopan tärkeimmistä kauppareiteistä. [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana alue oli jakautunut moniin pieniin ruhtinaskuntiin ja herrojen alueisiin, ja monet heistä perivät laivoilta tulleja. Linnat rakennettiin valvomaan jokiliikennettä ja keräämään [[tullia]] kapeissa kohdissa. Hyvä esimerkki on joen keskellä saarella sijaitseva [[Pfalzgrafenstein]], joka palveli tullilinnana. Kyyhkyltä ei olisi tullia saanut, kun ei ole taskuja.
+KYSYMYS: Kerro lisää: tullia
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Miksi Reinin varrella on niin paljon linnoja?
+AIEMPI VASTAUS (Livia):
+Katotaas, tää on selkeä juttu. Reinin keskiosan rotkolaaksossa linnoja on kymmeniä, koska joki oli keskiajalla yksi Euroopan tärkeimmistä kauppareiteistä. [[Pyhän saksalais-roomalaisen keisarikunnan]] aikana alue oli jakautunut moniin pieniin ruhtinaskuntiin ja herrojen alueisiin, ja monet heistä perivät laivoilta tulleja. Linnat rakennettiin valvomaan jokiliikennettä ja keräämään [[tullia]] kapeissa kohdissa. Hyvä esimerkki on joen keskellä saarella sijaitseva [[Pfalzgrafenstein]], joka palveli tullilinnana. Kyyhkyltä ei olisi tullia saanut, kun ei ole taskuja.
+KYSYMYS: Kerro lisää: Pfalzgrafenstein
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Miten Reinin putous syntyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tämä on yksi suosikkikohteitani. Reinin putous sijaitsee Sveitsin pohjoisosassa lähellä [[Schaffhausenin]] kaupunkia. Se syntyi viimeisen [[jääkauden]] aikoihin, kun jäätiköt ja niiden kerrostumat muuttivat joen uomaa ja Rein ajautui uudelle reitille, jossa sen alla oli kovempaa kalliota. Joki ei jaksanut kuluttaa kalliota yhtä nopeasti, ja niin siihen jäi porras, jonka yli vesi syöksyy. Tarkkaa ikää en ole varma, mutta kyse on yli kymmenen tuhannen vuoden takaisesta tapahtumasta. Putouksen korkeus on noin 23 metriä, ja se kuuluu Euroopan voimakkaimpiin putouksiin. Putous ei ole kyyhkylle paras paikka päiväunille.
+KYSYMYS: Kerro lisää: Schaffhausenin
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miten Reinin putous syntyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tämä on yksi suosikkikohteitani. Reinin putous sijaitsee Sveitsin pohjoisosassa lähellä [[Schaffhausenin]] kaupunkia. Se syntyi viimeisen [[jääkauden]] aikoihin, kun jäätiköt ja niiden kerrostumat muuttivat joen uomaa ja Rein ajautui uudelle reitille, jossa sen alla oli kovempaa kalliota. Joki ei jaksanut kuluttaa kalliota yhtä nopeasti, ja niin siihen jäi porras, jonka yli vesi syöksyy. Tarkkaa ikää en ole varma, mutta kyse on yli kymmenen tuhannen vuoden takaisesta tapahtumasta. Putouksen korkeus on noin 23 metriä, ja se kuuluu Euroopan voimakkaimpiin putouksiin. Putous ei ole kyyhkylle paras paikka päiväunille.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+- [Kumasi — kohdekartta / Kohdekartta: Ramseyerin muistokirkko] 1869–1914 Kesäkuussa 1869 Asanten armeija otti vangiksi Baselin lähetyssaarnaajan Fritz Augustus Ramseyerin, hänen vaimonsa Rosan, veljensä Johanneksen ja akan-kristityn Thomas Owusun. Neuvottelut vapauttamisesta epäonnistuivat puolen vuosikymmenen ajan; vasta kun britit valtasivat Kumasin, neljä vankia pääsivät vapaaksi. Isoisän matkavuonna 1873 he olivat siis yhä kaupungissa. Ramseyer palasi Kumasiin lähetyssaarnaajana 1896, kaksikymmentäkaksi vuotta vapautumisensa jälkeen, ja osti Thomas Owusun avustuksella maata Bantamasta nykyisen Komfo Anokyen sairaalan tienoilta. Vuodessa syntyi kaksi lähetysasemaa ja kaksi koulua. Hanke ei ollut suosittu: sotilaallisen valloituksen jälkeen lähetysty…
+AIEMPI KYSYMYS: Miksi Rein on tärkeä rahtiliikenteelle?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä aiheesta voisin puhua kauan. Rein on yksi Euroopan vilkkaimmista sisävesiväylistä, koska se kulkee Pohjanmereltä syvälle Keski-Euroopan teollisuusalueille ja laivat pääsevät sitä pitkin aina [[Baselin]] seudulle asti. Joella kuljetetaan proomuilla suuria määriä muun muassa kivihiiltä, malmeja, kemikaaleja ja kontteja, ja tärkeitä satamia ovat [[Duisburg]] ja [[Rotterdam]]. Duisburgin satamaa sanotaan usein maailman suurimmaksi sisävesisatamaksi. Kuivina kesinä veden korkeus voi laskea niin, että proomut joutuvat ottamaan vähemmän lastia.
+
+Proomut ovat kyllä vakuuttavia, mutta nopeudessa ne eivät kyyhkyä voita. Niissä on silti tilaa enemmän kuin yhdessä kirjeessä.
+KYSYMYS: Kerro lisää: Baselin
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Miksi Rein on tärkeä rahtiliikenteelle?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä aiheesta voisin puhua kauan. Rein on yksi Euroopan vilkkaimmista sisävesiväylistä, koska se kulkee Pohjanmereltä syvälle Keski-Euroopan teollisuusalueille ja laivat pääsevät sitä pitkin aina [[Baselin]] seudulle asti. Joella kuljetetaan proomuilla suuria määriä muun muassa kivihiiltä, malmeja, kemikaaleja ja kontteja, ja tärkeitä satamia ovat [[Duisburg]] ja [[Rotterdam]]. Duisburgin satamaa sanotaan usein maailman suurimmaksi sisävesisatamaksi. Kuivina kesinä veden korkeus voi laskea niin, että proomut joutuvat ottamaan vähemmän lastia.
+
+Proomut ovat kyllä vakuuttavia, mutta nopeudessa ne eivät kyyhkyä voita. Niissä on silti tilaa enemmän kuin yhdessä kirjeessä.
+KYSYMYS: Kerro lisää: Duisburg
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+AIEMPI KYSYMYS: Miksi Rein on tärkeä rahtiliikenteelle?
+AIEMPI VASTAUS (Livia):
+No jopas, tästä aiheesta voisin puhua kauan. Rein on yksi Euroopan vilkkaimmista sisävesiväylistä, koska se kulkee Pohjanmereltä syvälle Keski-Euroopan teollisuusalueille ja laivat pääsevät sitä pitkin aina [[Baselin]] seudulle asti. Joella kuljetetaan proomuilla suuria määriä muun muassa kivihiiltä, malmeja, kemikaaleja ja kontteja, ja tärkeitä satamia ovat [[Duisburg]] ja [[Rotterdam]]. Duisburgin satamaa sanotaan usein maailman suurimmaksi sisävesisatamaksi. Kuivina kesinä veden korkeus voi laskea niin, että proomut joutuvat ottamaan vähemmän lastia.
+
+Proomut ovat kyllä vakuuttavia, mutta nopeudessa ne eivät kyyhkyä voita. Niissä on silti tilaa enemmän kuin yhdessä kirjeessä.
+KYSYMYS: Kerro lisää: Rotterdam
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: Chhatrapati Shivaji Maharaj Terminus] rakennettu 1878–1888 Asema rakennettiin vanhan Bori Bunderin tilalle Suuren Intian niemimaan rautatien pääkonttoriksi, ja se nimettiin Victoria Terminukseksi kuningatar Victorian hallitsijajuhlan muistoksi. Suunnittelija oli brittiläinen insinööriarkkitehti Frederick William Stevens, joka sai tehtävän piirtäjä Axel Haigin akvarellin ansiosta ja jolle maksettiin työstä 1 614 000 rupiaa. Työ alkoi toukokuussa 1878 ja rakennus valmistui 20. toukokuuta 1888 — kymmenen vuotta, pisin rakennusaika millekään sen ajan talolle kaupungissa. Tyyli on goottilaista uusrenessanssia, johon on sekoitettu romaanisia ja intialaisia aiheita. Keskellä kohoaa korkea kupoli, jonka huipulla seisoo Edistystä esittä…
+- [Dubrovnik — kohdekartta / Kohdekartta: Sponzan palatsi] 1516–1522 Sponzan palatsi rakennettiin vuosina 1516–1522 arkkitehti Paskoje Miličevićin suunnitelmien mukaan, ja se yhdistelee kahta tyyliä: osa rakennuksesta on goottilaista, osa renessanssia. Nimi 'Sponza' tulee latinan sanasta, joka tarkoittaa paikkaa, johon sadevesi kerääntyy - katoilta valuva vesi kerääntyi juuri tämän talon pihalle. Palatsissa toimi melkein kaikki, mitä kaupungin talouselämä tarvitsi: tulli, tavaravarasto, rahapaja, asevarasto ja pankki, kaikki saman katon alla! Sisäpihan holvikäytävässä kauppiaat punnitsivat tavaransa julkisesti niin, ettei kukaan voinut huijata - seinään oli hakattu latinankielinen muistutus rehellisyydestä. Kun valtava maanjäristys tuhosi suuren os…
+AIEMPI KYSYMYS: Mikä Kölnin tuomiokirkko on?
+AIEMPI VASTAUS (Livia):
+Hei, tän tunnen kyllä. Kölnin tuomiokirkko on [[goottilaista]] tyyliä edustava katedraali Reinin länsirannalla. Sen rakentaminen aloitettiin vuonna 1248, ja valmiiksi se saatiin vasta vuonna 1880, joten työ kesti satoja vuosia ja keskeytyi pitkäksi aikaa. Kirkon kaksi tornia kohoavat noin sadan viidenkymmenen metrin korkeuteen. Kirkossa säilytetään [[Pyhien kolmen kuninkaan]] pyhäinjäännöksiä, ja se kuuluu [[maailmanperintökohteisiin]]. Satoja vuosia rakentamista, siinä on kyyhkylle mietittävää.
+KYSYMYS: Kerro lisää: goottilaista
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Pyhien sydänten kirkko] 1874 Laiva Sylphide saapui Bordeaux’sta Valparaísoon 13. toukokuuta 1834, ja sen matkustajina oli neljä Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. Heistä Chrysostome Liausu jäi kaupunkiin ja perusti sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle luvan perustaa koulun — itsenäisen Chilen ensimmäisen yksityiskoulun. Koulu muutti 1840 Independencia-kadulle nykyiselle paikalleen, jota laajennettiin ostamalla viereisiä tontteja, ja sinne rakennettiin kappeli. Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi uuden kirkon, jonka suunnittelivat arkkitehdit Lucie…
+AIEMPI KYSYMYS: Mikä Kölnin tuomiokirkko on?
+AIEMPI VASTAUS (Livia):
+Hei, tän tunnen kyllä. Kölnin tuomiokirkko on [[goottilaista]] tyyliä edustava katedraali Reinin länsirannalla. Sen rakentaminen aloitettiin vuonna 1248, ja valmiiksi se saatiin vasta vuonna 1880, joten työ kesti satoja vuosia ja keskeytyi pitkäksi aikaa. Kirkon kaksi tornia kohoavat noin sadan viidenkymmenen metrin korkeuteen. Kirkossa säilytetään [[Pyhien kolmen kuninkaan]] pyhäinjäännöksiä, ja se kuuluu [[maailmanperintökohteisiin]]. Satoja vuosia rakentamista, siinä on kyyhkylle mietittävää.
+KYSYMYS: Kerro lisää: Pyhien kolmen kuninkaan
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein alkaa Sveitsin Graubündenistä ja on noin 1 230 kilometriä pitkä — Tonavan jälkeen Keski- ja Länsi-Euroopan pisin joki. Se kulkee Bodenjärvestä länteen, muodostaa pitkän matkaa Sveitsin ja Saksan sekä Ranskan ja Saksan rajan, kääntyy sitten pohjoiseen Saksan Rheinlandin halki ja laskee Alankomaiden kautta Pohjanmereen. Sen valuma-alue on 185 000 neliökilometriä ja keskivirtaama noin 2 900 kuutiometriä sekunnissa. Joessa on myös Euroopan voimakkain vesiputous, Reinin putous.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Kölnin tuomiokirkko on?
+AIEMPI VASTAUS (Livia):
+Hei, tän tunnen kyllä. Kölnin tuomiokirkko on [[goottilaista]] tyyliä edustava katedraali Reinin länsirannalla. Sen rakentaminen aloitettiin vuonna 1248, ja valmiiksi se saatiin vasta vuonna 1880, joten työ kesti satoja vuosia ja keskeytyi pitkäksi aikaa. Kirkon kaksi tornia kohoavat noin sadan viidenkymmenen metrin korkeuteen. Kirkossa säilytetään [[Pyhien kolmen kuninkaan]] pyhäinjäännöksiä, ja se kuuluu [[maailmanperintökohteisiin]]. Satoja vuosia rakentamista, siinä on kyyhkylle mietittävää.
+KYSYMYS: Kerro lisää: maailmanperintökohteisiin
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mistä Elbe saa vetensä?
+AIEMPI VASTAUS (Livia):
+No niin, vettä tulee monesta suunnasta. Elbe saa alkunsa Tšekin pohjoisosan [[Jättiläisvuorilta]], jossa se on vielä pieni vuoristopuro. Matkalla se kerää vettä sivujoista, joista suurimpia ovat [[Vltava]], Ohře, [[Saale]], Havel ja Mulde. Vltava yhtyy Elbeen Mělníkin kohdalla ja tuo joen vesimäärään suuren lisäyksen. Koko valuma-alue on noin 148 000 neliökilometriä, ja sen vedet kulkeutuvat Saksan halki Pohjanmereen. Vesi tulee siis sateesta, lumen sulamisesta ja näistä sivujoista. Joella on monta äitiä, mutta yksi nimi.
+KYSYMYS: Kerro lisää: Jättiläisvuorilta
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Kaarlensilta] 1357–1402 Kaarlensillan rakensi keisari Kaarle IV vuonna 1357 korvaamaan vanhan Judit-sillan, jonka tulva oli tuhonnut. Legendan mukaan rakennustyöt aloitettiin tarkalleen kello 5.31 aamulla 9. heinäkuuta 1357 — päivämäärä ja kellonaika muodostavat yhdessä palindromin, ja Kaarle IV uskoi tämän erikoisen lukusarjan tekevän sillasta vahvemman. Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. Vuosina 1683–1714 sillan kaiteille pystytettiin 30 barokkipatsasta pyhimyksistä — nykyään sillalla nähtävät patsaat ovat kuitenkin kopioita, sillä alkuperäiset siirrettiin talteen museoon vuodesta 1965 lähtien sään ja saasteiden vaurioittamina. Kaarlensilta oli Vltava-joen ainoa ylityspaikka aina…
+AIEMPI KYSYMYS: Mistä Elbe saa vetensä?
+AIEMPI VASTAUS (Livia):
+No niin, vettä tulee monesta suunnasta. Elbe saa alkunsa Tšekin pohjoisosan [[Jättiläisvuorilta]], jossa se on vielä pieni vuoristopuro. Matkalla se kerää vettä sivujoista, joista suurimpia ovat [[Vltava]], Ohře, [[Saale]], Havel ja Mulde. Vltava yhtyy Elbeen Mělníkin kohdalla ja tuo joen vesimäärään suuren lisäyksen. Koko valuma-alue on noin 148 000 neliökilometriä, ja sen vedet kulkeutuvat Saksan halki Pohjanmereen. Vesi tulee siis sateesta, lumen sulamisesta ja näistä sivujoista. Joella on monta äitiä, mutta yksi nimi.
+KYSYMYS: Kerro lisää: Vltava
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Mistä Elbe saa vetensä?
+AIEMPI VASTAUS (Livia):
+No niin, vettä tulee monesta suunnasta. Elbe saa alkunsa Tšekin pohjoisosan [[Jättiläisvuorilta]], jossa se on vielä pieni vuoristopuro. Matkalla se kerää vettä sivujoista, joista suurimpia ovat [[Vltava]], Ohře, [[Saale]], Havel ja Mulde. Vltava yhtyy Elbeen Mělníkin kohdalla ja tuo joen vesimäärään suuren lisäyksen. Koko valuma-alue on noin 148 000 neliökilometriä, ja sen vedet kulkeutuvat Saksan halki Pohjanmereen. Vesi tulee siis sateesta, lumen sulamisesta ja näistä sivujoista. Joella on monta äitiä, mutta yksi nimi.
+KYSYMYS: Kerro lisää: Saale
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Miksi Hampuri rakennettiin niin kauas merestä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, siinä on järkeä. Hampuri sijaitsee kauempana merestä, koska kaupunki syntyi jokivarteen, jossa kauppiaat olivat suojassa merirosvoilta ja myrskyiltä mutta pääsivät silti laivoilla sekä merelle että Elbeä pitkin sisämaahan. Vuorovesi ulottuu joessa Hampuriin asti, joten suuretkin alukset pääsevät kaupunkiin. Kaupungin juuret ovat [[Hammaburg]]-linnoituksessa, joka perustettiin lähteiden mukaan 800-luvulla, ja myöhemmin Hampuri liittyi [[Hansaliiton]] jäseneksi. [[Cuxhavenin]] kohdalla joki laskee mereen noin 110 kilometrin päässä Hampurista. Hyvin viisasta, mennä merelle vasta kun se kannattaa.
+KYSYMYS: Kerro lisää: Hammaburg
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Miksi Hampuri rakennettiin niin kauas merestä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, siinä on järkeä. Hampuri sijaitsee kauempana merestä, koska kaupunki syntyi jokivarteen, jossa kauppiaat olivat suojassa merirosvoilta ja myrskyiltä mutta pääsivät silti laivoilla sekä merelle että Elbeä pitkin sisämaahan. Vuorovesi ulottuu joessa Hampuriin asti, joten suuretkin alukset pääsevät kaupunkiin. Kaupungin juuret ovat [[Hammaburg]]-linnoituksessa, joka perustettiin lähteiden mukaan 800-luvulla, ja myöhemmin Hampuri liittyi [[Hansaliiton]] jäseneksi. [[Cuxhavenin]] kohdalla joki laskee mereen noin 110 kilometrin päässä Hampurista. Hyvin viisasta, mennä merelle vasta kun se kannattaa.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Miksi Hampuri rakennettiin niin kauas merestä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, siinä on järkeä. Hampuri sijaitsee kauempana merestä, koska kaupunki syntyi jokivarteen, jossa kauppiaat olivat suojassa merirosvoilta ja myrskyiltä mutta pääsivät silti laivoilla sekä merelle että Elbeä pitkin sisämaahan. Vuorovesi ulottuu joessa Hampuriin asti, joten suuretkin alukset pääsevät kaupunkiin. Kaupungin juuret ovat [[Hammaburg]]-linnoituksessa, joka perustettiin lähteiden mukaan 800-luvulla, ja myöhemmin Hampuri liittyi [[Hansaliiton]] jäseneksi. [[Cuxhavenin]] kohdalla joki laskee mereen noin 110 kilometrin päässä Hampurista. Hyvin viisasta, mennä merelle vasta kun se kannattaa.
+KYSYMYS: Kerro lisää: Cuxhavenin
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Mitä Saksin Sveitsi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ne ovat komeita kivitorneja. Saksin Sveitsi on Elben laakson hiekkakiviseutu [[Dresdenin]] kaakkoispuolella ja Tšekin rajalla, jossa sade ja joki ovat muovanneet pehmeästä [[hiekkakivestä]] jyrkkiä torneja ja kielekkeitä. Tunnetuimpia kohteita on [[Bastei]], kallioryhmä, jonka välillä kulkee kivisilta. Alue kuuluu kansallispuistoon, ja suojelualue jatkuu myös Tšekin puolella. Nimen kerrotaan tulleen sveitsiläisiltä taiteilijoilta, jotka 1700-luvulla näkivät maisemassa kotiseutunsa. Kivet ovat hienoja, mutta ylhäältä näkee vähän enemmän.
+KYSYMYS: Kerro lisää: Dresdenin
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Hiekka joka on täynnä pieneliöitä] nykyään — Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+AIEMPI KYSYMYS: Mitä Saksin Sveitsi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ne ovat komeita kivitorneja. Saksin Sveitsi on Elben laakson hiekkakiviseutu [[Dresdenin]] kaakkoispuolella ja Tšekin rajalla, jossa sade ja joki ovat muovanneet pehmeästä [[hiekkakivestä]] jyrkkiä torneja ja kielekkeitä. Tunnetuimpia kohteita on [[Bastei]], kallioryhmä, jonka välillä kulkee kivisilta. Alue kuuluu kansallispuistoon, ja suojelualue jatkuu myös Tšekin puolella. Nimen kerrotaan tulleen sveitsiläisiltä taiteilijoilta, jotka 1700-luvulla näkivät maisemassa kotiseutunsa. Kivet ovat hienoja, mutta ylhäältä näkee vähän enemmän.
+KYSYMYS: Kerro lisää: hiekkakivestä
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Mitä Saksin Sveitsi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, ne ovat komeita kivitorneja. Saksin Sveitsi on Elben laakson hiekkakiviseutu [[Dresdenin]] kaakkoispuolella ja Tšekin rajalla, jossa sade ja joki ovat muovanneet pehmeästä [[hiekkakivestä]] jyrkkiä torneja ja kielekkeitä. Tunnetuimpia kohteita on [[Bastei]], kallioryhmä, jonka välillä kulkee kivisilta. Alue kuuluu kansallispuistoon, ja suojelualue jatkuu myös Tšekin puolella. Nimen kerrotaan tulleen sveitsiläisiltä taiteilijoilta, jotka 1700-luvulla näkivät maisemassa kotiseutunsa. Kivet ovat hienoja, mutta ylhäältä näkee vähän enemmän.
+KYSYMYS: Kerro lisää: Bastei
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Mikä Speicherstadt Hampurissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota, tiilikaupunkia. Speicherstadt on Hampurin satama-alueella sijaitseva punatiilinen varastokaupunginosa, jonka rakentaminen alkoi 1800-luvun lopulla. Rakennukset seisovat osittain vesikanavien varrella [[tammipaalujen]] varassa, ja varastot palvelivat aikoinaan erityisesti kahvin, teen ja mausteiden varastointia. Alue kuului pitkään [[vapaasataman]] piiriin, mikä tarkoitti, että tavaroita sai säilyttää ilman tulleja. Nykyään alue on [[maailmanperintökohde]], ja siellä toimii museoita.
+
+Kahvin tuoksu kantautui varmaan kauas, ja sen perusteella sitä olisi löytänyt silmät kiinni. Pullaa en kuitenkaan tiedä sieltä löytyvän.
+KYSYMYS: Kerro lisää: tammipaalujen
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+AIEMPI KYSYMYS: Mikä Speicherstadt Hampurissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota, tiilikaupunkia. Speicherstadt on Hampurin satama-alueella sijaitseva punatiilinen varastokaupunginosa, jonka rakentaminen alkoi 1800-luvun lopulla. Rakennukset seisovat osittain vesikanavien varrella [[tammipaalujen]] varassa, ja varastot palvelivat aikoinaan erityisesti kahvin, teen ja mausteiden varastointia. Alue kuului pitkään [[vapaasataman]] piiriin, mikä tarkoitti, että tavaroita sai säilyttää ilman tulleja. Nykyään alue on [[maailmanperintökohde]], ja siellä toimii museoita.
+
+Kahvin tuoksu kantautui varmaan kauas, ja sen perusteella sitä olisi löytänyt silmät kiinni. Pullaa en kuitenkaan tiedä sieltä löytyvän.
+KYSYMYS: Kerro lisää: vapaasataman
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Speicherstadt Hampurissa on?
+AIEMPI VASTAUS (Livia):
+Ai tota, tiilikaupunkia. Speicherstadt on Hampurin satama-alueella sijaitseva punatiilinen varastokaupunginosa, jonka rakentaminen alkoi 1800-luvun lopulla. Rakennukset seisovat osittain vesikanavien varrella [[tammipaalujen]] varassa, ja varastot palvelivat aikoinaan erityisesti kahvin, teen ja mausteiden varastointia. Alue kuului pitkään [[vapaasataman]] piiriin, mikä tarkoitti, että tavaroita sai säilyttää ilman tulleja. Nykyään alue on [[maailmanperintökohde]], ja siellä toimii museoita.
+
+Kahvin tuoksu kantautui varmaan kauas, ja sen perusteella sitä olisi löytänyt silmät kiinni. Pullaa en kuitenkaan tiedä sieltä löytyvän.
+KYSYMYS: Kerro lisää: maailmanperintökohde
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Miksi Elbe on tulvinut Dresdenin tienoilla?
+AIEMPI VASTAUS (Livia):
+Hmm, tämä on vakavampi asia. Elbe tulvii erityisesti silloin, kun [[Jättiläisvuorilla]] ja muilla ylävirran vuoristoalueilla sataa pitkään tai lumi sulaa nopeasti, jolloin sivujoet, kuten [[Vltava]], täyttyvät yhtä aikaa ja vesimäärä kasvaa alajuoksulla. Dresdenin seudulla suuria tulvia on ollut muun muassa elokuussa 2002 ja kesäkuussa 2013. Sittemmin [[tulvasuojelua]] on parannettu rakentamalla muureja ja tulvaesteitä, mutta en ole varma sen laajuudesta. Onneksi näistä on jo aikaa.
+KYSYMYS: Kerro lisää: Jättiläisvuorilla
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbe (luonto · joki)
+Tietoruudun teksti: Elbe — tšekiksi Labe — on yksi Keski-Euroopan suurista joista. Se saa alkunsa Tšekin pohjoisosan Jättiläisvuorilta, kulkee Böömin halki ja jatkaa Saksaan, jossa se laskee Pohjanmereen Cuxhavenin kohdalla 110 kilometriä Hampurista luoteeseen. Pituutta on 1 094 kilometriä. Suurimmat sivujoet ovat Vltava, Ohře, Saale, Havel, Mulde ja Schwarze Elster, ja valuma-alue on 148 268 neliökilometriä — Euroopan kahdenneksitoista suurin. Sen varrella asuu 24,4 miljoonaa ihmistä, ja sen suurimmat kaupungit ovat Berliini, Hampuri, Praha, Dresden ja Leipzig.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko: Vuosittainen tulva-aalto] Pantanal on maailman suurin trooppinen kosteikkoalue, 140 000-195 000 neliökilometriä Brasiliassa, Boliviassa ja Paraguayssa - suurin osa siitä Mato Grosso do Sulissa. Sadekaudella Paraguayn joen vedenpinta nousee kahdesta viiteen metriin ja tulva etenee hitaasti loivan maaston vuoksi, kunnes noin 80 prosenttia koko tasangosta on veden alla. Kuivalla kaudella vesi vetäytyy ja paljastaa laajoja ruohotasankoja, joilla laiduntavat muun muassa pampashirvet (Ozotoceros bezoarticus) - arka, isokorvainen hirvieläin, joka väistyy piiloon korkeaan heinikkoon. Tämä vuosittainen tulvarytmi tekee Pantanalista yhden maailman eläinrikkaimmista elinympäristöistä.
+- [Los Angeles — kaupunkilehti / Historia: Tulva siirsi koko kaupungin] Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden 1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä prosenttia edellisen vuosikymmenen rakentamisesta oli tapahtunut plazan eteläpuolella.
+AIEMPI KYSYMYS: Miksi Elbe on tulvinut Dresdenin tienoilla?
+AIEMPI VASTAUS (Livia):
+Hmm, tämä on vakavampi asia. Elbe tulvii erityisesti silloin, kun [[Jättiläisvuorilla]] ja muilla ylävirran vuoristoalueilla sataa pitkään tai lumi sulaa nopeasti, jolloin sivujoet, kuten [[Vltava]], täyttyvät yhtä aikaa ja vesimäärä kasvaa alajuoksulla. Dresdenin seudulla suuria tulvia on ollut muun muassa elokuussa 2002 ja kesäkuussa 2013. Sittemmin [[tulvasuojelua]] on parannettu rakentamalla muureja ja tulvaesteitä, mutta en ole varma sen laajuudesta. Onneksi näistä on jo aikaa.
+KYSYMYS: Kerro lisää: tulvasuojelua
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Ruoka: Kala joka kypsyy limessä] Ceviche on Perun kansallisruoka. Tuore kala leikataan paloiksi ja jätetään limemehuun, jonka happamuus kypsentää sen ilman lämpöä; mukaan tulevat suola, valkosipuli, sipuli ja chili. Alue vaihtelee reseptiä: pohjoisessa käytetään mustia simpukoita ja äyriäisiä, Andeilla taimenta ja jopa kanaa. Lime itsessään ei ole kotoisin Perusta – sitrushedelmät ovat peräisin Aasiasta ja tulivat mantereelle espanjalaisten mukana. Yhtä vanhaa ruokalajia, causa limeñaa, selitetään kolmella eri tarinalla, eikä yhtäkään niistä ole voitu todistaa.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan raja?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Rooman valtakunnan pohjoisraja kulki suurelta osin Tonavaa pitkin, koska leveä ja vuolas joki oli luonnollinen puolustuslinja: sen yli oli vaikea hyökätä, ja sen rannoille oli helppo sijoittaa linnoituksia, vartiotorneja ja laivasto. Rajaa kutsuttiin nimellä [[limes]], ja se oli ketju leirejä ja linnoituksia eikä yhtenäinen muuri. Esimerkiksi [[Carnuntum]] oli Tonavan-laivaston tukikohta, ja sen kohdalla [[meripihkatie]] ylitti joen, joten raja oli myös kaupan ja sotaväen kohtaamispaikka. Kyl joki on parempi raja ku mikään aita.
+KYSYMYS: Kerro lisää: limes
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan raja?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Rooman valtakunnan pohjoisraja kulki suurelta osin Tonavaa pitkin, koska leveä ja vuolas joki oli luonnollinen puolustuslinja: sen yli oli vaikea hyökätä, ja sen rannoille oli helppo sijoittaa linnoituksia, vartiotorneja ja laivasto. Rajaa kutsuttiin nimellä [[limes]], ja se oli ketju leirejä ja linnoituksia eikä yhtenäinen muuri. Esimerkiksi [[Carnuntum]] oli Tonavan-laivaston tukikohta, ja sen kohdalla [[meripihkatie]] ylitti joen, joten raja oli myös kaupan ja sotaväen kohtaamispaikka. Kyl joki on parempi raja ku mikään aita.
+KYSYMYS: Kerro lisää: Carnuntum
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Miksi Tonava oli Rooman valtakunnan raja?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä osaan. Rooman valtakunnan pohjoisraja kulki suurelta osin Tonavaa pitkin, koska leveä ja vuolas joki oli luonnollinen puolustuslinja: sen yli oli vaikea hyökätä, ja sen rannoille oli helppo sijoittaa linnoituksia, vartiotorneja ja laivasto. Rajaa kutsuttiin nimellä [[limes]], ja se oli ketju leirejä ja linnoituksia eikä yhtenäinen muuri. Esimerkiksi [[Carnuntum]] oli Tonavan-laivaston tukikohta, ja sen kohdalla [[meripihkatie]] ylitti joen, joten raja oli myös kaupan ja sotaväen kohtaamispaikka. Kyl joki on parempi raja ku mikään aita.
+KYSYMYS: Kerro lisää: meripihkatie
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+AIEMPI KYSYMYS: Mistä Tonavan nimi alkaa?
+AIEMPI VASTAUS (Livia):
+No niin. Katotaas. Tonavan nimi alkaa Schwarzwaldin tuntumassa sijaitsevassa [[Donaueschingenissä]], jossa Breg- ja Brigach-joet yhtyvät linnanpuiston lähteiden luona. Pisin latvahaara Breg alkaa [[Furtwangenista]], mutta Tonavan nimeä joki ei vielä sitä ennen kanna. Sieltä matkaa Mustallemerelle kertyy noin 2 850 kilometriä. Pienestä se alkaa, iso siit tulee.
+KYSYMYS: Kerro lisää: Donaueschingenissä
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+AIEMPI KYSYMYS: Mistä Tonavan nimi alkaa?
+AIEMPI VASTAUS (Livia):
+No niin. Katotaas. Tonavan nimi alkaa Schwarzwaldin tuntumassa sijaitsevassa [[Donaueschingenissä]], jossa Breg- ja Brigach-joet yhtyvät linnanpuiston lähteiden luona. Pisin latvahaara Breg alkaa [[Furtwangenista]], mutta Tonavan nimeä joki ei vielä sitä ennen kanna. Sieltä matkaa Mustallemerelle kertyy noin 2 850 kilometriä. Pienestä se alkaa, iso siit tulee.
+KYSYMYS: Kerro lisää: Furtwangenista
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Millainen sävellys Tonava kaunoinen on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sepä sattui: [[Johann Strauss nuoremman]] vuonna 1867 valmistunut valssi kantaesitettiin Wienissä 15. helmikuuta, aluksi mieskuorolle ja vasta myöhemmin pelkälle orkesterille. [[Wieniläisvalssissa]] toinen isku tulee hieman etuajassa, joten rytmiä ei voi laskea metronomin mukaan, vaan se täytyy tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa. Valssin kanssa sopis Buchtelnit, mutta kukaan ei kysy pullasta.
+KYSYMYS: Kerro lisää: Johann Strauss nuoremman
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Millainen sävellys Tonava kaunoinen on?
+AIEMPI VASTAUS (Livia):
+Ai se. Sepä sattui: [[Johann Strauss nuoremman]] vuonna 1867 valmistunut valssi kantaesitettiin Wienissä 15. helmikuuta, aluksi mieskuorolle ja vasta myöhemmin pelkälle orkesterille. [[Wieniläisvalssissa]] toinen isku tulee hieman etuajassa, joten rytmiä ei voi laskea metronomin mukaan, vaan se täytyy tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa. Valssin kanssa sopis Buchtelnit, mutta kukaan ei kysy pullasta.
+KYSYMYS: Kerro lisää: Wieniläisvalssissa
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+AIEMPI KYSYMYS: Mitkä pääkaupungit ovat Tonavan rannalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonavan rannalla on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki virtaa siis Itävallan, Slovakian, Unkarin ja Serbian pääkaupunkien läpi matkallaan kohti Mustaamerta.
+
+Ylhäältä katsoen joki on kuin hopeinen nauha, jota kyyhkyn on helppo seurata, eikä sillä edes eksy. Melkein.
+KYSYMYS: Kerro lisää: Wien
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+AIEMPI KYSYMYS: Mitkä pääkaupungit ovat Tonavan rannalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonavan rannalla on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki virtaa siis Itävallan, Slovakian, Unkarin ja Serbian pääkaupunkien läpi matkallaan kohti Mustaamerta.
+
+Ylhäältä katsoen joki on kuin hopeinen nauha, jota kyyhkyn on helppo seurata, eikä sillä edes eksy. Melkein.
+KYSYMYS: Kerro lisää: Bratislava
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+AIEMPI KYSYMYS: Mitkä pääkaupungit ovat Tonavan rannalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonavan rannalla on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki virtaa siis Itävallan, Slovakian, Unkarin ja Serbian pääkaupunkien läpi matkallaan kohti Mustaamerta.
+
+Ylhäältä katsoen joki on kuin hopeinen nauha, jota kyyhkyn on helppo seurata, eikä sillä edes eksy. Melkein.
+KYSYMYS: Kerro lisää: Budapest
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Mitkä pääkaupungit ovat Tonavan rannalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tonavan rannalla on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki virtaa siis Itävallan, Slovakian, Unkarin ja Serbian pääkaupunkien läpi matkallaan kohti Mustaamerta.
+
+Ylhäältä katsoen joki on kuin hopeinen nauha, jota kyyhkyn on helppo seurata, eikä sillä edes eksy. Melkein.
+KYSYMYS: Kerro lisää: Belgrad
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+AIEMPI KYSYMYS: Kuka oli keisari Marcus Aurelius?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Marcus Aurelius oli Rooman keisari vuosina 161–180 ja [[stoalaisuuden]] edustaja, joka tunnetaan teoksestaan Itsetutkistelut. Hänen kerrotaan asuneen [[Carnuntumissa]] vuosina 172–175 ja kirjoittaneen osan teoksestaan siellä Tonavan rajalla. Itsetutkistelut on henkilökohtaista pohdintaa elämästä, velvollisuudesta ja mielen tasapainosta. Joen rannalla kirjoittaminen kyl luonnistuu, sen minä tiedän.
+KYSYMYS: Kerro lisää: stoalaisuuden
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan pisin joki. Se alkaa Saksan Schwarzwaldista ja virtaa 2 850 kilometriä kaakkoon Mustallemerelle Romanian suistoon asti, matkan varrella Itävallan, Slovakian, Unkarin, Kroatian, Serbian, Romanian, Bulgarian, Moldovan ja Ukrainan kautta. Sen rannalla on neljä pääkaupunkia: Wien, Bratislava, Budapest ja Belgrad. Aikoinaan se oli Rooman valtakunnan raja. Pisin latvahaara Breg alkaa Furtwangenista, mutta Tonavan nimen joki saa vasta Donaueschingenissä, linnanpuiston lähteiden yhtymäkohdasta.
+AIEMPI KYSYMYS: Kuka oli keisari Marcus Aurelius?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Marcus Aurelius oli Rooman keisari vuosina 161–180 ja [[stoalaisuuden]] edustaja, joka tunnetaan teoksestaan Itsetutkistelut. Hänen kerrotaan asuneen [[Carnuntumissa]] vuosina 172–175 ja kirjoittaneen osan teoksestaan siellä Tonavan rajalla. Itsetutkistelut on henkilökohtaista pohdintaa elämästä, velvollisuudesta ja mielen tasapainosta. Joen rannalla kirjoittaminen kyl luonnistuu, sen minä tiedän.
+KYSYMYS: Kerro lisää: Carnuntumissa
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+AIEMPI KYSYMYS: Mikä Oder–Neisse-linja on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Oder–Neisse-linja on Saksan ja Puolan välinen raja, joka kulkee Oder- ja Neisse-jokien mukaan. Se sovittiin toisen maailmansodan jälkeen [[Potsdamin konferenssissa]] 1945 aluksi väliaikaisena järjestelynä, jolloin sen itäpuoliset alueet siirrettiin Puolan hallintoon. Isoisän aikaan Oderin alajuoksu kuului vielä [[Preussiin]], ja rajan siirtyminen merkitsi suuria väestönsiirtoja. Saksa vahvisti rajan lopullisesti vasta vuonna 1990, ja Oderin matkasta 187 kilometriä on nykyään tätä valtionrajaa. Onneksi siit on jo pitkä aika.
+KYSYMYS: Kerro lisää: Potsdamin konferenssissa
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+AIEMPI KYSYMYS: Mikä Oder–Neisse-linja on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Oder–Neisse-linja on Saksan ja Puolan välinen raja, joka kulkee Oder- ja Neisse-jokien mukaan. Se sovittiin toisen maailmansodan jälkeen [[Potsdamin konferenssissa]] 1945 aluksi väliaikaisena järjestelynä, jolloin sen itäpuoliset alueet siirrettiin Puolan hallintoon. Isoisän aikaan Oderin alajuoksu kuului vielä [[Preussiin]], ja rajan siirtyminen merkitsi suuria väestönsiirtoja. Saksa vahvisti rajan lopullisesti vasta vuonna 1990, ja Oderin matkasta 187 kilometriä on nykyään tätä valtionrajaa. Onneksi siit on jo pitkä aika.
+KYSYMYS: Kerro lisää: Preussiin
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+AIEMPI KYSYMYS: Mihin Oder lopulta laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Oder laskee [[Szczecinin laguuniin]], josta vesi jatkuu kolmen haaran, Dziwnan, Świnan ja Peenen, kautta [[Itämeren]] Pommerinlahteen. Matkaa joelle kertyy noin 742 kilometriä Tšekistä Länsi-Puolan halki. Pitkä matka, mut kokonaan alamäkeä.
+KYSYMYS: Kerro lisää: Szczecinin laguuniin
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mihin Oder lopulta laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Oder laskee [[Szczecinin laguuniin]], josta vesi jatkuu kolmen haaran, Dziwnan, Świnan ja Peenen, kautta [[Itämeren]] Pommerinlahteen. Matkaa joelle kertyy noin 742 kilometriä Tšekistä Länsi-Puolan halki. Pitkä matka, mut kokonaan alamäkeä.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+AIEMPI KYSYMYS: Missä Szczecin sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Szczecin on kaupunki Luoteis-Puolassa, [[Oder-joen]] alajuoksulla lähellä Szczecinin laguunia ja melko lähellä Saksan rajaa. Ennen toista maailmansotaa kaupunki kuului Saksaan ja sen saksalainen nimi oli [[Stettin]]. Nykyään se on yksi Puolan merkittävistä satamakaupungeista ja [[Länsi-Pommerin]] suurin kaupunki. Kyl sen kartalta löytää, kun tietää mistä etsiä.
+KYSYMYS: Kerro lisää: Oder-joen
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oder (luonto · joki)
+Tietoruudun teksti: Oder — tšekiksi ja puolaksi Odra — alkaa Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki. Matkasta 187 kilometriä on Puolan ja Saksan rajaa, osa niin sanottua Oder–Neisse-linjaa. Se on Puolan toiseksi pisin joki. Lopulta se laskee Szczecinin laguuniin ja jakautuu kolmeen haaraan — Dziwna, Świna ja Peene — jotka vievät veden Itämeren Pommerinlahteen. Isoisän matkan aikaan koko joki virtasi Preussin sisällä; nykyinen raja piirrettiin vasta toisen maailmansodan jälkeen.
+AIEMPI KYSYMYS: Missä Szczecin sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Szczecin on kaupunki Luoteis-Puolassa, [[Oder-joen]] alajuoksulla lähellä Szczecinin laguunia ja melko lähellä Saksan rajaa. Ennen toista maailmansotaa kaupunki kuului Saksaan ja sen saksalainen nimi oli [[Stettin]]. Nykyään se on yksi Puolan merkittävistä satamakaupungeista ja [[Länsi-Pommerin]] suurin kaupunki. Kyl sen kartalta löytää, kun tietää mistä etsiä.
+KYSYMYS: Kerro lisää: Stettin

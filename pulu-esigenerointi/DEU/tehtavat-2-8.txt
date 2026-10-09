@@ -1,0 +1,1049 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Borneo — kaupunkilehti / Luonto: Metsän ihminen tarvitsee metsän] Borneonoranki elää luonnossa vain tällä saarella. Se on läntisen gorillan jälkeen maailman kolmanneksi suurin ihmisapina ja suurin, joka viettää elämänsä puissa: urokset painavat keskimäärin 75 kiloa. Laji syö yli 400 erilaista ravintoa viikunoista durianiin, hunajaan ja hyönteisiin, ja se tarvitsee siksi laajan yhtenäisen metsän. Borneonoranki elää yksinäisemmin kuin Sumatran sukulaisensa, ja aikuiset kohtaavat vain lyhyesti. Kun metsä pirstoutuu, elintila kapenee: kanta pieneni vuosina 1999–2015 arviolta 148 500 yksilöllä.
+- [Ruotsi — maalehti / Luonto: Metsän kuningas painaa puoli tonnia] Ruotsin metsissä elää talvisin noin kolmesataatuhatta hirveä, ja kesällä vasojen kanssa selvästi enemmän. Aikuinen sonni painaa jopa puoli tonnia ja kasvattaa joka kevät uuden sarvikruunun, jonka se pudottaa talvella. Hirvi on niin tavallinen, että se on tiellä todellinen vaara: teiden varsilla on satoja kilometrejä hirviaitaa ja varoituskylttejä. Ruotsalaiset kutsuvat sitä metsän kuninkaaksi — skogens konung. Sarvet ovat aikuisella sonnilla lapiomaiset ja voivat olla yli puolentoista metrin levyiset.
+AIEMPI KYSYMYS: Kuinka korkeat Tribergin putoukset ovat?
+AIEMPI VASTAUS (Livia):
+Hmm, nyt tarvitaan tarkkuutta. Tribergin vesiputoukset ovat sarja putouksia [[Gutach-joessa]], ja niiden yhteenlaskettu putoamiskorkeus on 151 metriä. Ne ovat Saksan korkeimpia putouksia, mutta eivät kuitenkaan korkeimmat, sillä korkein on [[Röthbachfall]]. Putoukset sijaitsevat [[Mustan metsän]] keskellä Tribergin kaupungissa. Sata viisikymmentä metriä on kyyhkylle kyl ihan tarpeeksi alas katsottavaksi.
+KYSYMYS: Kerro lisää: Mustan metsän
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Kolme porrasta, 380 metriä] nykyään — Krimmlin vesiputoukset ovat Itävallan korkeimmat. Krimmler Ache syöksyy alas kolmessa portaassa, jotka ovat 145, 100 ja 140 metriä. Vettä ei tule tasaisesti: kesäkuussa ja heinäkuussa virtaa noin 5 600 litraa sekunnissa, helmikuussa vain 140 litraa. Voimakkaimmillaan putous on myöhään illalla yhdeksän ja kahdentoista välillä, sillä jäätiköltä sulanut vesi kulkee 18 kilometriä putouksille ja on matkalla 9–12 tuntia. Vuonna 1899 putouksia yritettiin valjastaa tehtaan voimaksi, mutta hanke kaatui.
+AIEMPI KYSYMYS: Mikä on Saksan korkein vesiputous?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Saksan korkein vesiputous on [[Röthbachfall]]. Se on korkeampi kuin [[Tribergin vesiputoukset]], joiden yhteenlaskettu putoamiskorkeus on 151 metriä. Röthbachfall sijaitsee Baijerin Alpeilla Berchtesgadenin tienoilla, mutta sen tarkkaa korkeutta en ole varma, sillä lähteet voivat esittää sen eri tavoin. Putouksia on vaikea mitata, ja minulla ei ole mitta-asetta.
+KYSYMYS: Kerro lisää: Tribergin vesiputoukset
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+AIEMPI KYSYMYS: Miksi Musta metsä tunnetaan käkikelloista?
+AIEMPI VASTAUS (Livia):
+Ai tota, kellot. Niitä minä kuuntelen mielelläni. Käkikello on yksi [[Mustan metsän]] tunnetuimpia tuotteita, ja alueella tehtiin kelloja jo 1700-luvun paikkeilla. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino myös [[Tribergissä]], vaikka se ei enää ole keskeinen. Aiheeseen voi tutustua [[Schwarzwaldmuseumissa]], joka sijaitsee kaupungissa. Tarkkaa vuosilukua kellon keksimiselle en ole varma. Kellot ovat kyl aika äänekkäitä naapureita.
+KYSYMYS: Kerro lisää: Tribergissä
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Metsä, joka oppi tekemään kelloja] Schwarzwald, Mustametsä, on niin tiheää kuusikkoa, että se näyttää kaukaa mustalta — siitä nimi. Talvet olivat pitkiä, ja 1700-luvulla maatilojen väki alkoi vuolla pimeinä kuukausina puusta kelloja, joita kaupattiin keväällä selässä kannettavilla telineillä ympäri Eurooppaa. Kelloon lisättiin lintu, joka kertoo tunnit kukkumalla — käki siksi, että sen kutsu on helppo matkia kahdella urkupillillä. Schonachin kylässä voi kävellä sisään maailman suurimpaan käkikelloon.
+AIEMPI KYSYMYS: Miksi Musta metsä tunnetaan käkikelloista?
+AIEMPI VASTAUS (Livia):
+Ai tota, kellot. Niitä minä kuuntelen mielelläni. Käkikello on yksi [[Mustan metsän]] tunnetuimpia tuotteita, ja alueella tehtiin kelloja jo 1700-luvun paikkeilla. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino myös [[Tribergissä]], vaikka se ei enää ole keskeinen. Aiheeseen voi tutustua [[Schwarzwaldmuseumissa]], joka sijaitsee kaupungissa. Tarkkaa vuosilukua kellon keksimiselle en ole varma. Kellot ovat kyl aika äänekkäitä naapureita.
+KYSYMYS: Kerro lisää: Schwarzwaldmuseumissa
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+AIEMPI KYSYMYS: Mikä on Tribergin pyhiinvaelluskirkko?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kirkko. [[Tribergin]] pyhiinvaelluskirkko on nimeltään [[Maria in der Tanne]]. Se on barokkinen pyhiinvaelluskirkko, ja nimi tarkoittaa suomeksi Mariaa kuusessa. Kirkko kuuluu Tribergin tunnetuimpiin nähtävyyksiin vesiputousten ja museon rinnalla. Rakennusvuosia en ole aivan varma. Hyvä paikka kyyhkylle laskeutua, vaikka kuulemma eivät päästä sisään.
+KYSYMYS: Kerro lisää: Tribergin
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+AIEMPI KYSYMYS: Mikä on Tribergin pyhiinvaelluskirkko?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kirkko. [[Tribergin]] pyhiinvaelluskirkko on nimeltään [[Maria in der Tanne]]. Se on barokkinen pyhiinvaelluskirkko, ja nimi tarkoittaa suomeksi Mariaa kuusessa. Kirkko kuuluu Tribergin tunnetuimpiin nähtävyyksiin vesiputousten ja museon rinnalla. Rakennusvuosia en ole aivan varma. Hyvä paikka kyyhkylle laskeutua, vaikka kuulemma eivät päästä sisään.
+KYSYMYS: Kerro lisää: Maria in der Tanne
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+AIEMPI KYSYMYS: Mikä Musta metsä on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Isoa asiaa tää. Musta metsä, saksaksi Schwarzwald, on metsäinen vuoristoalue Baden-Württembergissä Lounais-Saksassa. Sen korkein huippu on [[Feldberg]], joka on noin 1 493 metriä korkea. Alueelta saa alkunsa myös [[Tonava]], jonka lähdejokia ovat Breg ja Brigach. Tribergin kaupunki sijaitsee metsän keskellä, 500–1 038 metrin korkeudessa. Tuhat metriä on kyyhkylle ihan sopiva lentokorkeus.
+KYSYMYS: Kerro lisää: Feldberg
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Triberg (kulttuuri)
+Tietoruudun teksti: Triberg im Schwarzwald on kaupunki Baden-Württembergissä Mustan metsän keskellä 500–1 038 metrin korkeudessa merenpinnasta. Sen tunnetuin nähtävyys on Tribergin vesiputoukset, sarja putouksia Gutach-joessa, jotka ovat Saksan korkeimpia; putoamiskorkeus on yhteensä 151 metriä, mikä ei silti ole Saksan korkein, sillä korkein on Röthbachfall. Kellosepäntyö oli aikoinaan vireä paikallinen elinkeino, mutta ei enää ole keskeinen. Kaupungissa on Schwarzwaldmuseum ja barokkinen pyhiinvaelluskirkko Maria in der Tanne, ja asukkaita on noin 4 650.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä Musta metsä on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Isoa asiaa tää. Musta metsä, saksaksi Schwarzwald, on metsäinen vuoristoalue Baden-Württembergissä Lounais-Saksassa. Sen korkein huippu on [[Feldberg]], joka on noin 1 493 metriä korkea. Alueelta saa alkunsa myös [[Tonava]], jonka lähdejokia ovat Breg ja Brigach. Tribergin kaupunki sijaitsee metsän keskellä, 500–1 038 metrin korkeudessa. Tuhat metriä on kyyhkylle ihan sopiva lentokorkeus.
+KYSYMYS: Kerro lisää: Tonava
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittaja, jota seurattiin kaupungista] 1284 — Hamelnin kaupungin kirjoihin merkittiin 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui — vasta myöhemmin tarinaan liitettiin rotat, jotka soittaja houkutteli ensin jokeen. Hamelnissa tarina elää yhä: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia — kunnioituksesta kadonneita kohtaan.
+AIEMPI KYSYMYS: Mitä Hamelnin pillipiiparille tapahtui?
+AIEMPI VASTAUS (Livia):
+Voi. Tässä on vakava tarina. Hamelnin kaupungin kirjoihin merkittiin vuonna 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui, ja vasta myöhemmin tarinaan liitettiin [[rotat]], jotka soittaja houkutteli ensin jokeen. Tarina elää yhä Hamelnissa: kesäsunnuntaisin se esitetään näytelmänä, ja [[Bungelosenstrassella]] eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia kunnioituksesta kadonneita kohtaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: rotat
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittaja, jota seurattiin kaupungista] 1284 — Hamelnin kaupungin kirjoihin merkittiin 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui — vasta myöhemmin tarinaan liitettiin rotat, jotka soittaja houkutteli ensin jokeen. Hamelnissa tarina elää yhä: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia — kunnioituksesta kadonneita kohtaan.
+AIEMPI KYSYMYS: Mitä Hamelnin pillipiiparille tapahtui?
+AIEMPI VASTAUS (Livia):
+Voi. Tässä on vakava tarina. Hamelnin kaupungin kirjoihin merkittiin vuonna 1284 outo suru: sata kolmekymmentä lasta lähti kaupungista kirjavan soittajan perässä eikä palannut. Kukaan ei tiedä varmasti, mitä oikeasti tapahtui, ja vasta myöhemmin tarinaan liitettiin [[rotat]], jotka soittaja houkutteli ensin jokeen. Tarina elää yhä Hamelnissa: kesäsunnuntaisin se esitetään näytelmänä, ja [[Bungelosenstrassella]] eli Rummuttomalla kadulla ei edelleenkään soiteta musiikkia kunnioituksesta kadonneita kohtaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Bungelosenstrassella
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on isoja asioita. Hansaliitto oli keskiajalla kauppiaiden liitto, joka vaikutti Itämeren kaupankäyntiin. Siihen kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta [[Novgorodiin]], ja sitä johdettiin [[Lyypekistä]]. Hansan laiva oli [[koggi]], pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon. Hameln oli 1400- ja 1500-luvuilla liiton vähäinen jäsen.
+
+Minä oisin kyl ottanut hansakauppiaan postin kantajaksi, siinä on selvästi tekemistä.
+KYSYMYS: Kerro lisää: Novgorodiin
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on isoja asioita. Hansaliitto oli keskiajalla kauppiaiden liitto, joka vaikutti Itämeren kaupankäyntiin. Siihen kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta [[Novgorodiin]], ja sitä johdettiin [[Lyypekistä]]. Hansan laiva oli [[koggi]], pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon. Hameln oli 1400- ja 1500-luvuilla liiton vähäinen jäsen.
+
+Minä oisin kyl ottanut hansakauppiaan postin kantajaksi, siinä on selvästi tekemistä.
+KYSYMYS: Kerro lisää: Lyypekistä
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tää on isoja asioita. Hansaliitto oli keskiajalla kauppiaiden liitto, joka vaikutti Itämeren kaupankäyntiin. Siihen kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta [[Novgorodiin]], ja sitä johdettiin [[Lyypekistä]]. Hansan laiva oli [[koggi]], pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon. Hameln oli 1400- ja 1500-luvuilla liiton vähäinen jäsen.
+
+Minä oisin kyl ottanut hansakauppiaan postin kantajaksi, siinä on selvästi tekemistä.
+KYSYMYS: Kerro lisää: koggi
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+AIEMPI KYSYMYS: Mitä Hamelnissa voi nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hamelnissa voi nähdä vanhankaupungin, jossa on Weser-renessanssin tyylisiä rakennuksia; tunnettu esimerkki on [[Rattenfängerhaus]], vuoden 1600 vaiheilla rakennettu talo, jonka tarkkaa ikää en ole varma. Pillipiiparin tarina on esillä kaupungilla: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella ei edelleenkään soiteta musiikkia. Kaupungin juuret ovat vuonna 851 perustetussa luostarissa. Kaupunki on [[Weser-joen]] varrella Ala-Saksissa. Parempi paikka kuin moni, kun pitää lentää katolta toiselle.
+KYSYMYS: Kerro lisää: Rattenfängerhaus
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+AIEMPI KYSYMYS: Mitä Hamelnissa voi nähdä nykyään?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hamelnissa voi nähdä vanhankaupungin, jossa on Weser-renessanssin tyylisiä rakennuksia; tunnettu esimerkki on [[Rattenfängerhaus]], vuoden 1600 vaiheilla rakennettu talo, jonka tarkkaa ikää en ole varma. Pillipiiparin tarina on esillä kaupungilla: kesäsunnuntaisin se esitetään näytelmänä, ja Bungelosenstrassella ei edelleenkään soiteta musiikkia. Kaupungin juuret ovat vuonna 851 perustetussa luostarissa. Kaupunki on [[Weser-joen]] varrella Ala-Saksissa. Parempi paikka kuin moni, kun pitää lentää katolta toiselle.
+KYSYMYS: Kerro lisää: Weser-joen
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+AIEMPI KYSYMYS: Mikä Weser-joki on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, joki. Weser on pohjoissaksalainen joki, joka muodostuu [[Werra]]- ja [[Fulda]]-joen yhtymäkohdassa Hannoversch Mündenin kaupungissa. Se virtaa pohjoiseen ja laskee [[Pohjanmereen]], ja sen varrella sijaitsee muun muassa Hameln sekä [[Bremen]]. Joen pituuden tarkkaa lukua en ole varma. Hameln on kasvanut sen rannalle, ja jokisatamat ovat aina olleet kauppakaupunkien sydän.
+KYSYMYS: Kerro lisää: Werra
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+AIEMPI KYSYMYS: Mikä Weser-joki on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, joki. Weser on pohjoissaksalainen joki, joka muodostuu [[Werra]]- ja [[Fulda]]-joen yhtymäkohdassa Hannoversch Mündenin kaupungissa. Se virtaa pohjoiseen ja laskee [[Pohjanmereen]], ja sen varrella sijaitsee muun muassa Hameln sekä [[Bremen]]. Joen pituuden tarkkaa lukua en ole varma. Hameln on kasvanut sen rannalle, ja jokisatamat ovat aina olleet kauppakaupunkien sydän.
+KYSYMYS: Kerro lisää: Fulda
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä Weser-joki on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, joki. Weser on pohjoissaksalainen joki, joka muodostuu [[Werra]]- ja [[Fulda]]-joen yhtymäkohdassa Hannoversch Mündenin kaupungissa. Se virtaa pohjoiseen ja laskee [[Pohjanmereen]], ja sen varrella sijaitsee muun muassa Hameln sekä [[Bremen]]. Joen pituuden tarkkaa lukua en ole varma. Hameln on kasvanut sen rannalle, ja jokisatamat ovat aina olleet kauppakaupunkien sydän.
+KYSYMYS: Kerro lisää: Pohjanmereen
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Sadut ja tarinat: Soittoniekat, jotka eivät päässeet perille] 1951 — Grimmin sadussa vanha aasi, koira, kissa ja kukko lähtevät Bremeniin soittajiksi, kun niitä ei enää kotona tarvita. Perille ne eivät koskaan pääse — matkalla ne pelästyttävät rosvot ulos talosta huutamalla yhteen ääneen ja jäävät sinne asumaan. Bremen otti soittoniekat silti omikseen: raatihuoneen kupeessa on seissyt vuodesta 1951 pronssipatsas, jossa eläimet seisovat päällekkäin. Aasin etujalat kiiltävät kullalta, koska niistä pidetään kiinni molemmin käsin ja toivotaan — yhdellä kädellä tarttuminen on paikallisten mukaan vain aasin kättelyä.
+AIEMPI KYSYMYS: Mikä Weser-joki on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, joki. Weser on pohjoissaksalainen joki, joka muodostuu [[Werra]]- ja [[Fulda]]-joen yhtymäkohdassa Hannoversch Mündenin kaupungissa. Se virtaa pohjoiseen ja laskee [[Pohjanmereen]], ja sen varrella sijaitsee muun muassa Hameln sekä [[Bremen]]. Joen pituuden tarkkaa lukua en ole varma. Hameln on kasvanut sen rannalle, ja jokisatamat ovat aina olleet kauppakaupunkien sydän.
+KYSYMYS: Kerro lisää: Bremen
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+AIEMPI KYSYMYS: Milloin Hameln oli vauraimmillaan?
+AIEMPI VASTAUS (Livia):
+Mmm, kysymys on hyvä. Hamelnin vaurauden aika alkoi sen jälkeen, kun kaupungista tuli vuonna 1664 [[Calenbergin ruhtinaskunnan]] linnoitettu rajakaupunki. Aiemmin, 1400- ja 1500-luvuilla, Hameln oli [[Hansaliiton]] vähäinen jäsen. Kaupunki sai alkunsa jo vuonna 851 perustetusta luostarista, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Tarkkoja rahamääriä ei voi sanoa. Kyllä vauraudesta jäi kaupunkiin vähän kaikkea muutakin kuin pelkkiä seiniä.
+KYSYMYS: Kerro lisää: Calenbergin ruhtinaskunnan
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hameln (kulttuuri)
+Tietoruudun teksti: Hameln on kaupunki Weser-joen varrella Ala-Saksissa, jonka asukasluku on noin 57 000, ja se tunnetaan parhaiten Hamelnin pillipiiparin taruista. Kaupunki sai alkunsa luostarista, joka perustettiin jo vuonna 851, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Pillipiiparin tapahtuman kerrotaan sattuneen vuonna 1284, ja se voi perustua todelliseen tapaukseen, vaikka se olisi ollut hieman erilainen kuin perinteinen tarina. 1400- ja 1500-luvuilla Hameln oli Hansaliiton vähäinen jäsen, ja vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä jälkeen alkoi sen suurimman vaurauden aika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Milloin Hameln oli vauraimmillaan?
+AIEMPI VASTAUS (Livia):
+Mmm, kysymys on hyvä. Hamelnin vaurauden aika alkoi sen jälkeen, kun kaupungista tuli vuonna 1664 [[Calenbergin ruhtinaskunnan]] linnoitettu rajakaupunki. Aiemmin, 1400- ja 1500-luvuilla, Hameln oli [[Hansaliiton]] vähäinen jäsen. Kaupunki sai alkunsa jo vuonna 851 perustetusta luostarista, ja sen ympärille kasvanut kylä oli kaupunki 1100-luvulla. Tarkkoja rahamääriä ei voi sanoa. Kyllä vauraudesta jäi kaupunkiin vähän kaikkea muutakin kuin pelkkiä seiniä.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+AIEMPI KYSYMYS: Miksi näytelmä esitetään kymmenen vuoden välein?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Esitysrytmi juontuu lupauksesta: paikallisen legendan mukaan [[Oberammergaun]] asukkaat lupasivat esittää [[passionnäytelmän]], jos Jumala säästäisi heidät [[ruttoepidemialta]]. Perinne juontuu vuodesta 1633, ja ensimmäinen esitys oli vuonna 1634. Sen jälkeen näytelmä on esitetty kymmenen vuoden välein, ja nykyisin esitysvuodet ovat nollaan päättyvät vuodet sekä vuodet 1934 ja 1984. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Oberammergaun
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Afrikka — maalehti / Musiikki: Passi mitätöitiin äidin hautajaisten alla] 1960-luku — Miriam Makeba pääsi maailmalle 1959 neljän minuutin roolilla apartheidia vastustaneessa elokuvassa Come Back, Africa. Kun hän vuonna 1960 yritti palata kotiin äitinsä hautajaisiin, passi oli mitätöity. Vuonna 1962 hän todisti YK:ssa apartheidia vastaan, ja sen jälkeen häneltä vietiin kansalaisuus ja hänen levynsä kiellettiin kotimaassa. Makebasta tuli valtioton, mutta Algeria, Guinea, Belgia ja Ghana antoivat hänelle passin — elämänsä aikana hän piti yhdeksää. Grammyn hän voitti 1966 ensimmäisenä afrikkalaisena artistina. Kotimaahan hän palasi vasta 10. kesäkuuta 1990.
+AIEMPI KYSYMYS: Miksi näytelmä esitetään kymmenen vuoden välein?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Esitysrytmi juontuu lupauksesta: paikallisen legendan mukaan [[Oberammergaun]] asukkaat lupasivat esittää [[passionnäytelmän]], jos Jumala säästäisi heidät [[ruttoepidemialta]]. Perinne juontuu vuodesta 1633, ja ensimmäinen esitys oli vuonna 1634. Sen jälkeen näytelmä on esitetty kymmenen vuoden välein, ja nykyisin esitysvuodet ovat nollaan päättyvät vuodet sekä vuodet 1934 ja 1984. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: passionnäytelmän
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Rutto, joka tappoi joka toisen kaupunkilaisen] Rutto saapui Marseilleen toukokuussa 1720 kauppalaiva Grand-Saint-Antoinen mukana Levantista, ja sairaus levisi nopeasti kaupunkiin, jonka viranomaiset olivat aluksi kieltäytyneet asettamasta laivaa karanteeniin kauppaetujen takia. Tauti tappoi lopulta noin puolet kaupungin sadastatuhannesta asukkaasta kahden vuoden aikana. Taiteilija Michel Serre eli itse epidemian keskellä ja maalasi katukohtauksia, joissa ruumiita kasataan kärryihin kadulle — hänen teoksensa ovat harvinaisia silminnäkijäkuvia siitä, miltä ruttoepidemia näytti todellisuudessa. Katastrofi johti tiukempiin karanteenisäännöksiin koko Ranskan satamissa.
+- [Iso-Britannia — maalehti / Tiede: Rutto sulki yliopiston ja avasi maailman] Kun rutto sulki Cambridgen yliopiston 1665, 23-vuotias Isaac Newton palasi kotitilalleen Woolsthorpeen. Siellä vietetyn puolentoista vuoden aikana hän kehitti differentiaalilaskennan, selvitti valon jakautumisen väreiksi prisman avulla ja muotoili painovoiman lain. Hän itse kertoi myöhemmin, että ajatus lähti puutarhan omenapuusta: miksi omena putoaa aina suoraan alas? Newton oli myös rahapajan johtaja ja jahtasi väärentäjiä katujen kapakoissa — hän lähetti heistä useita hirsipuuhun.
+AIEMPI KYSYMYS: Miksi näytelmä esitetään kymmenen vuoden välein?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Esitysrytmi juontuu lupauksesta: paikallisen legendan mukaan [[Oberammergaun]] asukkaat lupasivat esittää [[passionnäytelmän]], jos Jumala säästäisi heidät [[ruttoepidemialta]]. Perinne juontuu vuodesta 1633, ja ensimmäinen esitys oli vuonna 1634. Sen jälkeen näytelmä on esitetty kymmenen vuoden välein, ja nykyisin esitysvuodet ovat nollaan päättyvät vuodet sekä vuodet 1934 ja 1984. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ruttoepidemialta
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+AIEMPI KYSYMYS: Miksi Oberammergau tunnetaan puunveistäjistään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oberammergau tunnetaan [[puunveistäjistään]] ja veistoksistaan, ja kylässä toimii myös [[Baijerin]] valtion puunveistokoulu, joten veistäminen on siellä sekä elävää käsityötä että koulutettu ammatti. En ole varma, mistä veistoperinne tarkalleen sai alkunsa, enkä halua arvata. Varmaa on kuitenkin se, että koulutus ja perinne kulkevat siellä rinnakkain. Tämän verran minä uskallan sanoa, loppu menisi arvailuksi.
+KYSYMYS: Kerro lisää: puunveistäjistään
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Miksi Oberammergau tunnetaan puunveistäjistään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oberammergau tunnetaan [[puunveistäjistään]] ja veistoksistaan, ja kylässä toimii myös [[Baijerin]] valtion puunveistokoulu, joten veistäminen on siellä sekä elävää käsityötä että koulutettu ammatti. En ole varma, mistä veistoperinne tarkalleen sai alkunsa, enkä halua arvata. Varmaa on kuitenkin se, että koulutus ja perinne kulkevat siellä rinnakkain. Tämän verran minä uskallan sanoa, loppu menisi arvailuksi.
+KYSYMYS: Kerro lisää: Baijerin
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä on passionnäytelmä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Passionnäytelmä on uskonnollinen näytelmä, joka kuvaa [[Jeesuksen]] viimeisiä päiviä, kärsimystä ja kuolemaa. Sana passio tulee [[latinan]] kärsimystä tarkoittavasta sanasta. Tällaisia näytelmiä on esitetty Euroopassa jo [[keskiajalta]] lähtien, ja Oberammergaun perinne on niistä yksi tunnetuimmista. Kunnioitettava perinne, sen sanon.
+KYSYMYS: Kerro lisää: Jeesuksen
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+AIEMPI KYSYMYS: Mikä on passionnäytelmä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Passionnäytelmä on uskonnollinen näytelmä, joka kuvaa [[Jeesuksen]] viimeisiä päiviä, kärsimystä ja kuolemaa. Sana passio tulee [[latinan]] kärsimystä tarkoittavasta sanasta. Tällaisia näytelmiä on esitetty Euroopassa jo [[keskiajalta]] lähtien, ja Oberammergaun perinne on niistä yksi tunnetuimmista. Kunnioitettava perinne, sen sanon.
+KYSYMYS: Kerro lisää: latinan
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä on passionnäytelmä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Passionnäytelmä on uskonnollinen näytelmä, joka kuvaa [[Jeesuksen]] viimeisiä päiviä, kärsimystä ja kuolemaa. Sana passio tulee [[latinan]] kärsimystä tarkoittavasta sanasta. Tällaisia näytelmiä on esitetty Euroopassa jo [[keskiajalta]] lähtien, ja Oberammergaun perinne on niistä yksi tunnetuimmista. Kunnioitettava perinne, sen sanon.
+KYSYMYS: Kerro lisää: keskiajalta
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+AIEMPI KYSYMYS: Mikä on Baijeri?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Baijeri. Baijeri on Saksan eteläisin osavaltio ja pinta-alaltaan maan suurin, ja se rajoittuu etelässä [[Itävallan]] kanssa [[Alppien]] juurella. Sen pääkaupunki on [[München]]. Virallisesti se on vapaavaltio, jolla on pitkä oma historiansa, joka näkyy murteessa ja perinteissä; kansanpukuja, kuten naisten [[dirndl]]-mekkoa ja miesten nahkahousuja, nähdään yhä juhlissa. Pieni kyyhky, iso osavaltio.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mikä on Baijeri?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Baijeri. Baijeri on Saksan eteläisin osavaltio ja pinta-alaltaan maan suurin, ja se rajoittuu etelässä [[Itävallan]] kanssa [[Alppien]] juurella. Sen pääkaupunki on [[München]]. Virallisesti se on vapaavaltio, jolla on pitkä oma historiansa, joka näkyy murteessa ja perinteissä; kansanpukuja, kuten naisten [[dirndl]]-mekkoa ja miesten nahkahousuja, nähdään yhä juhlissa. Pieni kyyhky, iso osavaltio.
+KYSYMYS: Kerro lisää: Alppien
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+AIEMPI KYSYMYS: Mikä on Baijeri?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Baijeri. Baijeri on Saksan eteläisin osavaltio ja pinta-alaltaan maan suurin, ja se rajoittuu etelässä [[Itävallan]] kanssa [[Alppien]] juurella. Sen pääkaupunki on [[München]]. Virallisesti se on vapaavaltio, jolla on pitkä oma historiansa, joka näkyy murteessa ja perinteissä; kansanpukuja, kuten naisten [[dirndl]]-mekkoa ja miesten nahkahousuja, nähdään yhä juhlissa. Pieni kyyhky, iso osavaltio.
+KYSYMYS: Kerro lisää: München
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oberammergau (kulttuuri)
+Tietoruudun teksti: Oberammergau on kunta Garmisch-Partenkirchenin piirikunnassa Baijerissa, pieni kaupunki Ammer-joen varrella. Se tunnetaan puunveistäjistään ja veistoksistaan sekä kymmenen vuoden välein esitettävästä Passionnäytelmästä, jonka perinne juontuu vuodesta 1633. Ensimmäinen esitys oli vuonna 1634. Paikallisen legendan mukaan näytelmä esitetään joka kymmenes vuosi lupauksen vuoksi: asukkaat lupasivat esittää passionnäytelmän, jos Jumala säästäisi heidät ruttoepidemialta. Näytelmä esitetään nykyisin nollaan päättyvinä vuosina sekä vuosina 1934 ja 1984, ja kylässä on myös Baijerin valtion puunveistokoulu.
+AIEMPI KYSYMYS: Mikä on Baijeri?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Baijeri. Baijeri on Saksan eteläisin osavaltio ja pinta-alaltaan maan suurin, ja se rajoittuu etelässä [[Itävallan]] kanssa [[Alppien]] juurella. Sen pääkaupunki on [[München]]. Virallisesti se on vapaavaltio, jolla on pitkä oma historiansa, joka näkyy murteessa ja perinteissä; kansanpukuja, kuten naisten [[dirndl]]-mekkoa ja miesten nahkahousuja, nähdään yhä juhlissa. Pieni kyyhky, iso osavaltio.
+KYSYMYS: Kerro lisää: dirndl
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+AIEMPI KYSYMYS: Miksi rautatehdas on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Völklingenin rautatehdas on [[UNESCOn]] maailmanperintökohde, koska se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista. Raakarautaa tuotettiin [[Saarlandissa]] sijaitsevalla paikalla vuodesta 1882 vuoteen 1986, ja entinen [[masuunikompleksi]] näyttää havainnollisesti, millaista raskas teollisuus oli. UNESCO julisti kohteen maailmanperintökohteeksi vuonna 1994.
+
+Minä en ole kovin innostunut savusta, mutta kyllä masuunin kokoinen muistomerkki ansaitsee sen, että sen annetaan seistä.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+AIEMPI KYSYMYS: Miksi rautatehdas on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Völklingenin rautatehdas on [[UNESCOn]] maailmanperintökohde, koska se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista. Raakarautaa tuotettiin [[Saarlandissa]] sijaitsevalla paikalla vuodesta 1882 vuoteen 1986, ja entinen [[masuunikompleksi]] näyttää havainnollisesti, millaista raskas teollisuus oli. UNESCO julisti kohteen maailmanperintökohteeksi vuonna 1994.
+
+Minä en ole kovin innostunut savusta, mutta kyllä masuunin kokoinen muistomerkki ansaitsee sen, että sen annetaan seistä.
+KYSYMYS: Kerro lisää: Saarlandissa
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Monterrey: Masuuni jäi puistoon seisomaan] Fundidora Monterrey oli Latinalaisen Amerikan ensimmäinen rauta- ja terästehdas. Se meni konkurssiin 1986, alue pakkolunastettiin 1988 ja rakennustyöt alkoivat 1989 — ensin suojelemalla historiallisesti tärkeät rakennukset ja purkamalla muut. Puisto avattiin 24. helmikuuta 2001 sadanneljäntoista hehtaarin kokoisena, ja se sai lisänimen teollisen arkeologian museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin kanava, ja ala nousi 144 hehtaariin, josta 80 on vihreää. Paikallaan seisovat yhä 27 suurta teollisuusrakennelmaa ja 127 teräksentekokonetta.
+AIEMPI KYSYMYS: Miksi rautatehdas on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Völklingenin rautatehdas on [[UNESCOn]] maailmanperintökohde, koska se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista. Raakarautaa tuotettiin [[Saarlandissa]] sijaitsevalla paikalla vuodesta 1882 vuoteen 1986, ja entinen [[masuunikompleksi]] näyttää havainnollisesti, millaista raskas teollisuus oli. UNESCO julisti kohteen maailmanperintökohteeksi vuonna 1994.
+
+Minä en ole kovin innostunut savusta, mutta kyllä masuunin kokoinen muistomerkki ansaitsee sen, että sen annetaan seistä.
+KYSYMYS: Kerro lisää: masuunikompleksi
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+AIEMPI KYSYMYS: Mitä masuuni tekee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Masuuni on korkea uuni, jossa [[rautamalmista]] sulatetaan [[raakarautaa]]. Uuniin syötetään ylhäältä rautamalmia, [[koksia]] ja kalkkikiveä, ja alhaalta puhalletaan kuumaa ilmaa. Koksi toimii sekä polttoaineena että aineena, joka poistaa malmista hapen, ja kalkkikivi sitoo epäpuhtauksia kuonaksi. Sulanut raakarauta ja kuona valuvat uunin pohjalle, josta ne lasketaan erikseen ulos. Völklingenissä raakarautaa tuotettiin vuodesta 1882 vuoteen 1986. Hui, kuumaa puuhaa, minä pysyn mielelläni ulkopuolella.
+KYSYMYS: Kerro lisää: rautamalmista
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+AIEMPI KYSYMYS: Mitä masuuni tekee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Masuuni on korkea uuni, jossa [[rautamalmista]] sulatetaan [[raakarautaa]]. Uuniin syötetään ylhäältä rautamalmia, [[koksia]] ja kalkkikiveä, ja alhaalta puhalletaan kuumaa ilmaa. Koksi toimii sekä polttoaineena että aineena, joka poistaa malmista hapen, ja kalkkikivi sitoo epäpuhtauksia kuonaksi. Sulanut raakarauta ja kuona valuvat uunin pohjalle, josta ne lasketaan erikseen ulos. Völklingenissä raakarautaa tuotettiin vuodesta 1882 vuoteen 1986. Hui, kuumaa puuhaa, minä pysyn mielelläni ulkopuolella.
+KYSYMYS: Kerro lisää: raakarautaa
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+AIEMPI KYSYMYS: Mitä masuuni tekee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Masuuni on korkea uuni, jossa [[rautamalmista]] sulatetaan [[raakarautaa]]. Uuniin syötetään ylhäältä rautamalmia, [[koksia]] ja kalkkikiveä, ja alhaalta puhalletaan kuumaa ilmaa. Koksi toimii sekä polttoaineena että aineena, joka poistaa malmista hapen, ja kalkkikivi sitoo epäpuhtauksia kuonaksi. Sulanut raakarauta ja kuona valuvat uunin pohjalle, josta ne lasketaan erikseen ulos. Völklingenissä raakarautaa tuotettiin vuodesta 1882 vuoteen 1986. Hui, kuumaa puuhaa, minä pysyn mielelläni ulkopuolella.
+KYSYMYS: Kerro lisää: koksia
+
+### 600
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+AIEMPI KYSYMYS: Mitä eroa on raudalla ja teräksellä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Raudan ja teräksen ero on hiilipitoisuudessa. Masuunissa syntyvä [[raakarauta]] sisältää paljon hiiltä, jolloin se on kovaa mutta hauraata. Kun hiiltä poistetaan ja seosta jalostetaan, syntyy [[teräs]], joka on raudan ja [[hiilen]] seos, jossa hiiltä on vähän, ja se on sitkeämpää ja kestää rasitusta paremmin. Viisas Pöllö on kuulemma matkoilla, joten tää tuli hoidettua minun siivilläni.
+KYSYMYS: Kerro lisää: raakarauta
+
+### 601
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Mitä eroa on raudalla ja teräksellä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Raudan ja teräksen ero on hiilipitoisuudessa. Masuunissa syntyvä [[raakarauta]] sisältää paljon hiiltä, jolloin se on kovaa mutta hauraata. Kun hiiltä poistetaan ja seosta jalostetaan, syntyy [[teräs]], joka on raudan ja [[hiilen]] seos, jossa hiiltä on vähän, ja se on sitkeämpää ja kestää rasitusta paremmin. Viisas Pöllö on kuulemma matkoilla, joten tää tuli hoidettua minun siivilläni.
+KYSYMYS: Kerro lisää: teräs
+
+### 602
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Falkland — kaupunkilehti / Falklandinsaaret: Haaksirikkojen satama] Port Stanleyn maine 1800-luvulla ei ollut mairitteleva: kaupunki tunnettiin paikkana, jonne pahoin vaurioituneet purjelaivat ajautuivat Kap Hornin kiertämisen jälkeen ja jäivät usein korjauskelvottomina makaamaan satamaan. Paikallinen talous eli pitkälti näiden hylkyjen ja niiden lastien myynnistä ja ostosta, ja monet asukkaat vaurastuivat purjelaivojen onnettomuuksien varassa. Kauppa hiipui vasta 1870-luvun jälkeen, kun höyrylaivat alkoivat syrjäyttää purjelaivoja halvan eteläamerikkalaisen hiilen ansiosta, ja loppui käytännössä kokonaan, kun Panaman kanava avattiin vuonna 1914 ja tarve kiertää Kap Hornia väheni ratkaisevasti.
+AIEMPI KYSYMYS: Mitä eroa on raudalla ja teräksellä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Raudan ja teräksen ero on hiilipitoisuudessa. Masuunissa syntyvä [[raakarauta]] sisältää paljon hiiltä, jolloin se on kovaa mutta hauraata. Kun hiiltä poistetaan ja seosta jalostetaan, syntyy [[teräs]], joka on raudan ja [[hiilen]] seos, jossa hiiltä on vähän, ja se on sitkeämpää ja kestää rasitusta paremmin. Viisas Pöllö on kuulemma matkoilla, joten tää tuli hoidettua minun siivilläni.
+KYSYMYS: Kerro lisää: hiilen
+
+### 603
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Tyhjät talot täyttyivät bassosta] Kun muuri kaatui 1989, keskustaan jäi tyhjiä tehtaita, kellareita ja pankkiholveja, joilla ei ollut omistajaa. Niihin syntyi teknoklubeja, joissa idän ja lännen nuoret tanssivat ensi kertaa samoissa tiloissa — kuuluisin klubi, Tresor, aloitti tavaratalon vanhassa holvikellarissa, jonka teräsovet olivat jääneet paikoilleen. Berliinin teknokulttuuri otettiin maaliskuussa 2024 Saksan aineettoman kulttuuriperinnön luetteloon — samaan sarjaan leipurintaidon ja käkikellojen kanssa.
+AIEMPI KYSYMYS: Mitä teollisuusperintö tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Teollisuusperintö tarkoittaa teollisen ajan jäänteitä: [[tehtaita]], kaivoksia, koneita ja rakennuksia sekä niihin liittyviä työ- ja asuinympäristöjä, joita suojellaan ja pidetään esillä, koska ne kertovat, miten ihmiset ovat tehneet työtä ja miten yhteiskunta on muuttunut. Völklingenin rautatehdas on tällainen kohde. Luxemburgin [[Belvalissa]] masuunien ympärille on puolestaan noussut yliopistoa ja konserttisali. Vanhalla raudallakin on tarinansa, ja minä kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: tehtaita
+
+### 604
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Mitä teollisuusperintö tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Teollisuusperintö tarkoittaa teollisen ajan jäänteitä: [[tehtaita]], kaivoksia, koneita ja rakennuksia sekä niihin liittyviä työ- ja asuinympäristöjä, joita suojellaan ja pidetään esillä, koska ne kertovat, miten ihmiset ovat tehneet työtä ja miten yhteiskunta on muuttunut. Völklingenin rautatehdas on tällainen kohde. Luxemburgin [[Belvalissa]] masuunien ympärille on puolestaan noussut yliopistoa ja konserttisali. Vanhalla raudallakin on tarinansa, ja minä kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Belvalissa
+
+### 605
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kaupunkilehti / Doha: Kaikki hyllyt ovat samassa salissa] Qatarin kansalliskirjasto avattiin Education Cityssä huhtikuussa 2018. Talon piirsi hollantilainen Rem Koolhaas, eivätkä kirjat ole erillisissä huoneissa vaan yhdessä isossa salissa, jonka poikki hyllyrivit kulkevat suorina. Avausvuonna hyllyillä oli yli 800 000 kirjaa ja lisäksi puoli miljoonaa sähkökirjaa, lehteä ja erikoiskokoelmien nidettä. Sama talo hoitaa kolmea tehtävää: se on kansalliskirjasto, yliopistokirjasto ja kaupunginkirjasto, ja kirjastokortin saa jokainen maassa vakinaisesti asuva. Perintökokoelmassa on noin 2 400 käsikirjoitusta sekä karttoja ja matkakertomuksia, joita Persianlahdelle tulleet kirjoittivat vuosisatojen mittaan.
+- [Sudan — maalehti / Ruoka: Papuja, jotka on hauduttu yön yli] Nimi tarkoittaa haudattuja papuja: härkäpavut kiehuvat matalalla lämmöllä koko yön isossa metallikannussa, josta ne myös tarjoillaan aamulla. Päälle kaadetaan öljyä ja kuminaa ja lisätään maun mukaan valkosipulia, sipulia, sitruunaa, persiljaa tai chiliä. Ruoka on vanha: Nasaretin lähistön kivikautiselta paikalta on kaivettu esiin 2 600 kuivattua härkäpapua, ja Jerusalemin Talmud tuntee ruoan jo 300-luvulla. Keskiajan Kairossa fulin keitto oli erään korttelin asukkaiden yksinoikeus. Sudanissa se on aamiainen, joka syödään yhdessä samalta vadilta.
+AIEMPI KYSYMYS: Milloin teollinen vallankumous alkoi?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Teollisen vallankumouksen katsotaan yleensä alkaneen 1700-luvun jälkipuoliskolla [[Isossa-Britanniassa]]. Muutos perustui muun muassa [[höyrykoneen]] kehitykseen sekä [[kivihiilen]] ja raudan käyttöön, ja teollistuminen levisi sieltä muualle Eurooppaan etenkin 1800-luvulla. Tarkka alkamisvuosi riippuu siitä, keneltä historioitsijalta kysytään. Onpas siinä ollu vuosia kerrallaan.
+KYSYMYS: Kerro lisää: Isossa-Britanniassa
+
+### 606
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Ensimmäinen höyrykone oli huvikapine] n. 60 jaa. — Heron Aleksandrialainen kuvasi laitteen, jossa kattilan päällä lepää ontto pallo kahden putken varassa. Kun vesi kiehuu, höyry karkaa pallon kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta ja pallo alkaa pyöriä. Se on vanhin tunnettu höyrykone, eikä sillä tehty mitään työtä. Heron rakensi myös automaatin, joka antoi kolikkoa vastaan tietyn määrän pyhää vettä — se on maailman ensimmäinen tunnettu myyntiautomaatti — sekä temppelin ovet, jotka aukesivat itsestään, kun alttarilla sytytettiin tuli.
+- [Iso-Britannia — maalehti / Musiikki: Laulu piti nostoväen tahdissa] Purjelaivalla monta työtä vaati yhtäaikaista voimaa: ankkurin nostaminen tai purjeen kiristäminen onnistui vain, jos kaikki vetivät samalla hetkellä. Siksi laulettiin. Merimieslauluissa esilaulaja lauloi säkeen ja miehistö vastasi kertosäkeen — ja juuri kertosäkeen kohdalla vedettiin. What shall we do with the drunken sailor on niin sanottu stamp-and-go -laulu, jota laulettiin marssien kannen poikki köysi kädessä. Höyrykoneen myötä työlaulut kävivät tarpeettomiksi, mutta laulut jäivät.
+AIEMPI KYSYMYS: Milloin teollinen vallankumous alkoi?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Teollisen vallankumouksen katsotaan yleensä alkaneen 1700-luvun jälkipuoliskolla [[Isossa-Britanniassa]]. Muutos perustui muun muassa [[höyrykoneen]] kehitykseen sekä [[kivihiilen]] ja raudan käyttöön, ja teollistuminen levisi sieltä muualle Eurooppaan etenkin 1800-luvulla. Tarkka alkamisvuosi riippuu siitä, keneltä historioitsijalta kysytään. Onpas siinä ollu vuosia kerrallaan.
+KYSYMYS: Kerro lisää: höyrykoneen
+
+### 607
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Völklingenin rautatehdas (tekniikka)
+Tietoruudun teksti: Völklingenin rautatehdas on entinen masuunikompleksi Völklingenin kaupungissa Saarlandissa. Raakarautaa tuotettiin paikalla vuodesta 1882 vuoteen 1986. Se on yksi Euroopan ja Pohjois-Amerikan harvoista ehjänä säilyneistä 1800- ja 1900-lukujen alun rautatehtaista, ja UNESCO julisti sen maailmanperintökohteeksi vuonna 1994. Vuonna 1873 Julius Buch suunnitteli ja rakennutti terästehtaan Saar-joen rannalle lähelle Völklingeniä, mutta tehdas lopetti toimintansa jo kuuden vuoden kuluttua, ja Karl Röchling osti sen. Masuunin rakentaminen alkoi vuonna 1881, ja ensimmäinen uuni aloitti toimintansa kaksi vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Luonto: Sumu, joka ei ollutkaan sumua] 1952 — Lontoon kuuluisa sumu oli kivihiilen savua, ja 1800-luvulla soihtupojat opastivat kulkijoita savuisilla kaduilla. Pahin savusumu alkoi 5. joulukuuta 1952, kun korkeapaine painoi savun kadun tasalle ja tuuli tyyntyi. Viisi päivää kestäneen sumun aikana näkyvyys putosi paikoin noin kolmeenkymmeneen senttiin, konsertteja ja elokuvanäytöksiä peruttiin, ja kaikki joukkoliikenne metroa lukuun ottamatta pysähtyi. Kuolleita arvioitiin ensin neljätuhatta, myöhemmissä laskelmissa 10 000-12 000. Neljä vuotta myöhemmin säädettiin laki, jonka nojalla kaupunginosia voitiin määrätä savuttomiksi.
+AIEMPI KYSYMYS: Milloin teollinen vallankumous alkoi?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas. Teollisen vallankumouksen katsotaan yleensä alkaneen 1700-luvun jälkipuoliskolla [[Isossa-Britanniassa]]. Muutos perustui muun muassa [[höyrykoneen]] kehitykseen sekä [[kivihiilen]] ja raudan käyttöön, ja teollistuminen levisi sieltä muualle Eurooppaan etenkin 1800-luvulla. Tarkka alkamisvuosi riippuu siitä, keneltä historioitsijalta kysytään. Onpas siinä ollu vuosia kerrallaan.
+KYSYMYS: Kerro lisää: kivihiilen
+
+### 608
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+AIEMPI KYSYMYS: Miksi Freibergia sanotaan hopeakaupungiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Freibergia sanotaan hopeakaupungiksi, koska sen vauraus ja historia perustuvat [[hopeaan]], jota kaupungin ympäristössä louhittiin vuosisatojen ajan. Kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus vuoteen 1969 asti, ja koko historiallinen keskusta, Hopeakaupunki, on suojeltu. Kaupunki sijaitsee [[Saksissa]] Malmivuorten esimaastossa. Kaupungin synty liitetään lähteiden mukaan hopealöytöön 1100-luvulla, mutta tarkkaa vuotta en ole varma.
+
+Nimi kertoo suoraan, mistä rahat tulivat, ja se on kyyhkystä virkistävää. Muualla kaupungit peittelevät sellaista ihan urakalla.
+KYSYMYS: Kerro lisää: hopeaan
+
+### 609
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+AIEMPI KYSYMYS: Miksi Freibergia sanotaan hopeakaupungiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Freibergia sanotaan hopeakaupungiksi, koska sen vauraus ja historia perustuvat [[hopeaan]], jota kaupungin ympäristössä louhittiin vuosisatojen ajan. Kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus vuoteen 1969 asti, ja koko historiallinen keskusta, Hopeakaupunki, on suojeltu. Kaupunki sijaitsee [[Saksissa]] Malmivuorten esimaastossa. Kaupungin synty liitetään lähteiden mukaan hopealöytöön 1100-luvulla, mutta tarkkaa vuotta en ole varma.
+
+Nimi kertoo suoraan, mistä rahat tulivat, ja se on kyyhkystä virkistävää. Muualla kaupungit peittelevät sellaista ihan urakalla.
+KYSYMYS: Kerro lisää: Saksissa
+
+### 610
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+AIEMPI KYSYMYS: Mikä on Bergakademie?
+AIEMPI VASTAUS (Livia):
+No jopas. Bergakademie on saksan kielen sana, joka tarkoittaa [[kaivosakatemiaa]]: Berg viittaa vuoreen ja kaivostoimintaan, Akademie oppilaitokseen. [[Freibergin]] Bergakademie perustettiin vuonna 1765, ja sitä pidetään maailman vanhimpana kaivos- ja [[metallurgian]] yliopistona. Nykyisin se on yliopisto, ja se on yksi syy siihen, että Freiberg on edelleen opiskelukaupunki. Viisas Pöllö parantelee siipeään, joten akateemiset jäi minulle.
+KYSYMYS: Kerro lisää: kaivosakatemiaa
+
+### 611
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+AIEMPI KYSYMYS: Mikä on Bergakademie?
+AIEMPI VASTAUS (Livia):
+No jopas. Bergakademie on saksan kielen sana, joka tarkoittaa [[kaivosakatemiaa]]: Berg viittaa vuoreen ja kaivostoimintaan, Akademie oppilaitokseen. [[Freibergin]] Bergakademie perustettiin vuonna 1765, ja sitä pidetään maailman vanhimpana kaivos- ja [[metallurgian]] yliopistona. Nykyisin se on yliopisto, ja se on yksi syy siihen, että Freiberg on edelleen opiskelukaupunki. Viisas Pöllö parantelee siipeään, joten akateemiset jäi minulle.
+KYSYMYS: Kerro lisää: Freibergin
+
+### 612
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+AIEMPI KYSYMYS: Mikä on Bergakademie?
+AIEMPI VASTAUS (Livia):
+No jopas. Bergakademie on saksan kielen sana, joka tarkoittaa [[kaivosakatemiaa]]: Berg viittaa vuoreen ja kaivostoimintaan, Akademie oppilaitokseen. [[Freibergin]] Bergakademie perustettiin vuonna 1765, ja sitä pidetään maailman vanhimpana kaivos- ja [[metallurgian]] yliopistona. Nykyisin se on yliopisto, ja se on yksi syy siihen, että Freiberg on edelleen opiskelukaupunki. Viisas Pöllö parantelee siipeään, joten akateemiset jäi minulle.
+KYSYMYS: Kerro lisää: metallurgian
+
+### 613
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Miksi hopea on arvokasta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hopea on arvokasta, koska se on suhteellisen harvinainen, kaunis ja kiiltävä metalli, jota on helppo muotoilla. Se ei ruostu, mutta se tummuu ilmassa ajan myötä. Euroopassa hopeasta tehtiin vuosisatojen ajan [[hopearahoja]], ja se oli yksi tärkeimmistä [[rahametalleista]]; lisäksi siitä valmistettiin koruja ja ruokailuvälineitä. Kimaltavat asiat kiinnostaa kyyhkyäkin.
+KYSYMYS: Kerro lisää: hopearahoja
+
+### 614
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+AIEMPI KYSYMYS: Miksi hopea on arvokasta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hopea on arvokasta, koska se on suhteellisen harvinainen, kaunis ja kiiltävä metalli, jota on helppo muotoilla. Se ei ruostu, mutta se tummuu ilmassa ajan myötä. Euroopassa hopeasta tehtiin vuosisatojen ajan [[hopearahoja]], ja se oli yksi tärkeimmistä [[rahametalleista]]; lisäksi siitä valmistettiin koruja ja ruokailuvälineitä. Kimaltavat asiat kiinnostaa kyyhkyäkin.
+KYSYMYS: Kerro lisää: rahametalleista
+
+### 615
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kohdekartta / Kohdekartta: Kansallismuseo] 1885–1891 Prahan kansallismuseo perustettiin jo vuonna 1818, mutta nykyinen komea rakennus Vaclavin aukion päässä valmistui vasta vuosina 1885–1891 arkkitehti Josef Schulzin suunnitelmien mukaan. Museon kokoelmissa on nykyään noin 14 miljoonaa esinettä — kivennäisistä ja eläimistä keskiaikaisiin käsikirjoituksiin. Elokuussa 1968, kun Varsovan liiton joukot miehittivät Tšekkoslovakian, museon julkisivuun ammuttiin lukuisia luoteja neuvostosotilaiden konekivääreistä. Reiät paikattiin, mutta koska korjauksiin käytettiin hieman vaaleampaa hiekkakiveä kuin alkuperäisessä julkisivussa, luodinreikien paikat erottuvat seinästä yhä tänäkin päivänä. Vuosina 2011–2018 koko museo remontoitiin perusteel…
+AIEMPI KYSYMYS: Mitkä ovat Malmivuoret?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Erzgebirge. Malmivuoret ovat vuoristo Saksin ja [[Tšekin]] rajalla, ja saksankielinen nimi Erzgebirge tarkoittaa suunnilleen malmivuoristoa. Nimi viittaa siihen, että alueella louhittiin vuosisatojen ajan [[hopeaa]], tinaa ja muita malmeja. Kaivosalue, jonka nimi on Erzgebirge/Krušnohoří, kuuluu maailmanperintöön vuodesta 2019. Tuollaisten vuorten yli lentäisin mielelläni, jos sää sallisi.
+KYSYMYS: Kerro lisää: Tšekin
+
+### 616
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+AIEMPI KYSYMYS: Mitkä ovat Malmivuoret?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Erzgebirge. Malmivuoret ovat vuoristo Saksin ja [[Tšekin]] rajalla, ja saksankielinen nimi Erzgebirge tarkoittaa suunnilleen malmivuoristoa. Nimi viittaa siihen, että alueella louhittiin vuosisatojen ajan [[hopeaa]], tinaa ja muita malmeja. Kaivosalue, jonka nimi on Erzgebirge/Krušnohoří, kuuluu maailmanperintöön vuodesta 2019. Tuollaisten vuorten yli lentäisin mielelläni, jos sää sallisi.
+KYSYMYS: Kerro lisää: hopeaa
+
+### 617
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+AIEMPI KYSYMYS: Mikä on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maailmanperintökohde on [[UNESCOn]] luettelossa oleva paikka, jonka arvon katsotaan kuuluvan koko ihmiskunnalle ja joka halutaan säilyttää tuleville sukupolville. Luettelo perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]]. Kohde voi olla kulttuurikohde, kuten kaupungin vanha keskusta tai kaivosalue, tai luontokohde, ja jotkin kohteet ovat molempia. [[Freibergin]] kaivoshistorialliset kohteet ovat luettelossa vuodesta 2019. Pullakin ansaitsisi paikan luettelossa, sanon vaan.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 618
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Freibergin hopeakaivokset (kauppa)
+Tietoruudun teksti: Freiberg on yliopisto- ja entinen kaivoskaupunki Saksissa, noin 41 000 asukkaan kaupunki Malmivuorten esimaastossa Freiberger Mulde -joen varrella. Koko historiallinen keskusta, Hopeakaupunki, on suojeltu, ja se kuuluu Reiche Zeche -malmikaivoksen kaltaisten kaivoshistoriallisten kohteiden kanssa vuodesta 2019 UNESCOn Erzgebirge/Krušnohoří-kaivosalueen maailmanperintöön. Freibergin Bergakademie, perustettu vuonna 1765, on maailman vanhin kaivos- ja metallurgiayliopisto. Vuoteen 1969 asti kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Maailmanperintökohde on [[UNESCOn]] luettelossa oleva paikka, jonka arvon katsotaan kuuluvan koko ihmiskunnalle ja joka halutaan säilyttää tuleville sukupolville. Luettelo perustuu vuonna 1972 hyväksyttyyn [[maailmanperintösopimukseen]]. Kohde voi olla kulttuurikohde, kuten kaupungin vanha keskusta tai kaivosalue, tai luontokohde, ja jotkin kohteet ovat molempia. [[Freibergin]] kaivoshistorialliset kohteet ovat luettelossa vuodesta 2019. Pullakin ansaitsisi paikan luettelossa, sanon vaan.
+KYSYMYS: Kerro lisää: maailmanperintösopimukseen
+
+### 619
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Miksi posliini oli niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Posliini oli arvokasta, koska se oli ohutta, valkoista, kovaa ja kaunista, ja Euroopassa sitä tuotiin pitkän matkan takaa Itä-Aasiasta niin, ettei kukaan osannut valmistaa sitä itse. Tuonti oli kallista, joten posliiniesineet olivat ruhtinaiden ja rikkaiden statussymboleita. Kun [[Meissenissä]] valmistettiin Euroopan ensimmäinen posliini vuonna 1710, [[Augustus II Väkevä]] perusti [[Albrechtsburgin]] linnaan tehtaan, ja valmistustapa pidettiin tarkasti salassa. Minä en kyllä uskaltaisi laskeutua tuollaisen pöydälle.
+KYSYMYS: Kerro lisää: Meissenissä
+
+### 620
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Ruoka: Viinimaa, joka lakkasi olemasta] 1930–1970-luku — Viininviljely alkoi Algeriassa foinikialaisten ja roomalaisten aikana ja hiipui islamin tultua. Ranskan vallan alettua 1830 tarhat istutettiin uudelleen, ja kun viinikirva tuhosi Ranskan omat viinitarhat 1800-luvun puolivälissä, algerialainen viini täytti aukon: tuotanto kasvoi 25 000 hehtolitrasta vuonna 1854 kymmeneen miljoonaan vuonna 1915. Huipulla 1930-luvun lopulla tarhoja oli yli neljätuhatta neliökilometriä. Ennen itsenäisyyttä Algeria oli maailman suurin viininviejä, ja sen tumma, väkevä punaviini päätyi sekoitukseksi Etelä-Ranskan viineihin. Itsenäistymisen jälkeen markkina katosi, ja tarhat vaihdettiin viljaan ja syötäviin rypäleisiin.
+- [Marokko — maalehti / Ruoka: Mauste, jossa on kaksikymmentäseitsemän ainesta] Ras el hanout tarkoittaa kaupan parasta, ja siihen voidaan yhdistää jopa kaksikymmentäseitsemän maustetta. Osa niistä tuli idästä arabien mukana, mutta moni on maan omaa satoa: sahrami Taliouinesta, minttu ja oliivit Meknèsistä, appelsiinit ja sitruunat Fèsistä. Marokkolaisen ruoan tunnistaa säilötystä sitruunasta, arganöljystä, kuivatuista hedelmistä ja smenistä, suolatusta ja kypsytetystä voista, jonka tuoksu on väkevä. Perusvilja on nykyään vehnä ja riisi, mutta 1900-luvun puoliväliin asti etelässä syötiin ennen kaikkea ohraa.
+AIEMPI KYSYMYS: Miksi posliini oli niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Posliini oli arvokasta, koska se oli ohutta, valkoista, kovaa ja kaunista, ja Euroopassa sitä tuotiin pitkän matkan takaa Itä-Aasiasta niin, ettei kukaan osannut valmistaa sitä itse. Tuonti oli kallista, joten posliiniesineet olivat ruhtinaiden ja rikkaiden statussymboleita. Kun [[Meissenissä]] valmistettiin Euroopan ensimmäinen posliini vuonna 1710, [[Augustus II Väkevä]] perusti [[Albrechtsburgin]] linnaan tehtaan, ja valmistustapa pidettiin tarkasti salassa. Minä en kyllä uskaltaisi laskeutua tuollaisen pöydälle.
+KYSYMYS: Kerro lisää: Augustus II Väkevä
+
+### 621
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Miksi posliini oli niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Posliini oli arvokasta, koska se oli ohutta, valkoista, kovaa ja kaunista, ja Euroopassa sitä tuotiin pitkän matkan takaa Itä-Aasiasta niin, ettei kukaan osannut valmistaa sitä itse. Tuonti oli kallista, joten posliiniesineet olivat ruhtinaiden ja rikkaiden statussymboleita. Kun [[Meissenissä]] valmistettiin Euroopan ensimmäinen posliini vuonna 1710, [[Augustus II Väkevä]] perusti [[Albrechtsburgin]] linnaan tehtaan, ja valmistustapa pidettiin tarkasti salassa. Minä en kyllä uskaltaisi laskeutua tuollaisen pöydälle.
+KYSYMYS: Kerro lisää: Albrechtsburgin
+
+### 622
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Kuka Augustus II Väkevä oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Augustus II Väkevä, joka eli vuosina 1670–1733, oli [[Saksin]] vaaliruhtinas ja [[Puolan]] kuningas. Hän hallitsi [[Dresdenistä]] käsin ja tunnetaan barokkikauden taiteiden ja rakennusten suosijana. Lisänimi Väkevä viittaa tarinoiden mukaan hänen voimaansa. Posliinitehtaan perustaminen Meissenin Albrechtsburgin linnaan vuonna 1710 oli osa hänen kunnianhimoisia hankkeitaan. Kyllä tuommoisella lisänimellä on varmaan ollut painoa.
+KYSYMYS: Kerro lisää: Saksin
+
+### 623
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Kuka Augustus II Väkevä oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Augustus II Väkevä, joka eli vuosina 1670–1733, oli [[Saksin]] vaaliruhtinas ja [[Puolan]] kuningas. Hän hallitsi [[Dresdenistä]] käsin ja tunnetaan barokkikauden taiteiden ja rakennusten suosijana. Lisänimi Väkevä viittaa tarinoiden mukaan hänen voimaansa. Posliinitehtaan perustaminen Meissenin Albrechtsburgin linnaan vuonna 1710 oli osa hänen kunnianhimoisia hankkeitaan. Kyllä tuommoisella lisänimellä on varmaan ollut painoa.
+KYSYMYS: Kerro lisää: Puolan
+
+### 624
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Kuka Augustus II Väkevä oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Augustus II Väkevä, joka eli vuosina 1670–1733, oli [[Saksin]] vaaliruhtinas ja [[Puolan]] kuningas. Hän hallitsi [[Dresdenistä]] käsin ja tunnetaan barokkikauden taiteiden ja rakennusten suosijana. Lisänimi Väkevä viittaa tarinoiden mukaan hänen voimaansa. Posliinitehtaan perustaminen Meissenin Albrechtsburgin linnaan vuonna 1710 oli osa hänen kunnianhimoisia hankkeitaan. Kyllä tuommoisella lisänimellä on varmaan ollut painoa.
+KYSYMYS: Kerro lisää: Dresdenistä
+
+### 625
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Miten posliini eroaa tavallisesta keramiikasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hetkinen. Posliini on keramiikan laji, joka valmistetaan puhtaasta valkoisesta savesta eli [[kaoliinista]], [[maasälvästä]] ja [[kvartsista]] ja poltetaan hyvin korkeassa lämpötilassa. Poltossa massa muuttuu lasimaisen tiiviiksi, jolloin posliini on kovaa, ohutta ja vettä läpäisemätöntä, ja ohuena se päästää valon osittain lävitse. Tavallinen saviastia poltetaan yleensä matalammassa lämpötilassa, ja se on huokoisempaa ja raskaampaa. Hieno juttu, vaikka minun pitää pysyä erossa kuumista uuneista.
+KYSYMYS: Kerro lisää: kaoliinista
+
+### 626
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Tyhjä neljännes on Ranskaa suurempi] Rub al-Khali on arabiaa ja tarkoittaa tyhjää neljännestä. Se on maailman suurin yhtenäinen hiekka-aavikko: noin 650 000 neliökilometriä eli Ranskaa suurempi, tuhat kilometriä idästä länteen ja viisisataa pohjoisesta etelään. Aavikko peittää suurimman osan Arabian niemimaan eteläisestä kolmanneksesta ja jakautuu neljän maan kesken: Saudi-Arabian, Omanin, Arabiemiirikuntien ja Jemenin. Valtaosa maastosta on hiekkamerta eli ergiä, jonka dyynit kohoavat jopa kahteensataanviiteenkymmeneen metriin, ja niiden väliin jää sora- ja kipsitasankoja. Hiekan punaisenoranssi väri tulee maasälvästä.
+AIEMPI KYSYMYS: Miten posliini eroaa tavallisesta keramiikasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hetkinen. Posliini on keramiikan laji, joka valmistetaan puhtaasta valkoisesta savesta eli [[kaoliinista]], [[maasälvästä]] ja [[kvartsista]] ja poltetaan hyvin korkeassa lämpötilassa. Poltossa massa muuttuu lasimaisen tiiviiksi, jolloin posliini on kovaa, ohutta ja vettä läpäisemätöntä, ja ohuena se päästää valon osittain lävitse. Tavallinen saviastia poltetaan yleensä matalammassa lämpötilassa, ja se on huokoisempaa ja raskaampaa. Hieno juttu, vaikka minun pitää pysyä erossa kuumista uuneista.
+KYSYMYS: Kerro lisää: maasälvästä
+
+### 627
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Miten posliini eroaa tavallisesta keramiikasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hetkinen. Posliini on keramiikan laji, joka valmistetaan puhtaasta valkoisesta savesta eli [[kaoliinista]], [[maasälvästä]] ja [[kvartsista]] ja poltetaan hyvin korkeassa lämpötilassa. Poltossa massa muuttuu lasimaisen tiiviiksi, jolloin posliini on kovaa, ohutta ja vettä läpäisemätöntä, ja ohuena se päästää valon osittain lävitse. Tavallinen saviastia poltetaan yleensä matalammassa lämpötilassa, ja se on huokoisempaa ja raskaampaa. Hieno juttu, vaikka minun pitää pysyä erossa kuumista uuneista.
+KYSYMYS: Kerro lisää: kvartsista
+
+### 628
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on tuttu. Elbe on yksi Keski-Euroopan suurimmista joista, ja sen pituus on yli tuhat kilometriä. Se saa alkunsa Tšekin puolelta [[Krkonošen]] vuoristosta, ja sen tšekinkielinen nimi on Labe. Joki virtaa Saksin halki [[Dresdenin]] ja Meissenin kautta ja jatkaa [[Hampurin]] kautta [[Pohjanmereen]].
+
+Minä pidän joista, koska niitä pitkin on helppo suunnistaa. Elbeä seuraamalla pääsee Meissenistä aina merelle asti.
+KYSYMYS: Kerro lisää: Krkonošen
+
+### 629
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on tuttu. Elbe on yksi Keski-Euroopan suurimmista joista, ja sen pituus on yli tuhat kilometriä. Se saa alkunsa Tšekin puolelta [[Krkonošen]] vuoristosta, ja sen tšekinkielinen nimi on Labe. Joki virtaa Saksin halki [[Dresdenin]] ja Meissenin kautta ja jatkaa [[Hampurin]] kautta [[Pohjanmereen]].
+
+Minä pidän joista, koska niitä pitkin on helppo suunnistaa. Elbeä seuraamalla pääsee Meissenistä aina merelle asti.
+KYSYMYS: Kerro lisää: Dresdenin
+
+### 630
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on tuttu. Elbe on yksi Keski-Euroopan suurimmista joista, ja sen pituus on yli tuhat kilometriä. Se saa alkunsa Tšekin puolelta [[Krkonošen]] vuoristosta, ja sen tšekinkielinen nimi on Labe. Joki virtaa Saksin halki [[Dresdenin]] ja Meissenin kautta ja jatkaa [[Hampurin]] kautta [[Pohjanmereen]].
+
+Minä pidän joista, koska niitä pitkin on helppo suunnistaa. Elbeä seuraamalla pääsee Meissenistä aina merelle asti.
+KYSYMYS: Kerro lisää: Hampurin
+
+### 631
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mikä joki Elbe on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on tuttu. Elbe on yksi Keski-Euroopan suurimmista joista, ja sen pituus on yli tuhat kilometriä. Se saa alkunsa Tšekin puolelta [[Krkonošen]] vuoristosta, ja sen tšekinkielinen nimi on Labe. Joki virtaa Saksin halki [[Dresdenin]] ja Meissenin kautta ja jatkaa [[Hampurin]] kautta [[Pohjanmereen]].
+
+Minä pidän joista, koska niitä pitkin on helppo suunnistaa. Elbeä seuraamalla pääsee Meissenistä aina merelle asti.
+KYSYMYS: Kerro lisää: Pohjanmereen
+
+### 632
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Mitä goottilainen tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gotiikka on keskiajan rakennus- ja kuvataiteen tyyli, joka syntyi Ranskassa 1100-luvun puolivälin tienoilla ja levisi sieltä muualle Eurooppaan. Goottilaisia kirkkoja tunnistaa [[suippokaarista]], [[ristiholveista]], tukikaarista ja suurista ikkunoista, jotka päästävät sisään paljon valoa. Rakennukset kurottuvat korkealle. [[Meissenin tuomiokirkko]] on esimerkki goottilaisesta kirkosta. Viisas Pöllö kutsuttiin puhumaan johonkin, mut kyllä gotiikasta minäkin osaan.
+KYSYMYS: Kerro lisää: suippokaarista
+
+### 633
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mitä goottilainen tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gotiikka on keskiajan rakennus- ja kuvataiteen tyyli, joka syntyi Ranskassa 1100-luvun puolivälin tienoilla ja levisi sieltä muualle Eurooppaan. Goottilaisia kirkkoja tunnistaa [[suippokaarista]], [[ristiholveista]], tukikaarista ja suurista ikkunoista, jotka päästävät sisään paljon valoa. Rakennukset kurottuvat korkealle. [[Meissenin tuomiokirkko]] on esimerkki goottilaisesta kirkosta. Viisas Pöllö kutsuttiin puhumaan johonkin, mut kyllä gotiikasta minäkin osaan.
+KYSYMYS: Kerro lisää: ristiholveista
+
+### 634
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Meissenin posliini (kauppa)
+Tietoruudun teksti: Meissen on noin 30 000 asukkaan kaupunki Elben molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Se tunnetaan Meissenin posliinista, Albrechtsburgin linnasta, goottilaisesta tuomiokirkosta ja Frauenkirchestä. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti Albrechtsburgiin Puolan kuninkaallisen ja Saksin vaaliruhtinaallisen posliinitehtaan. Vuonna 1861 tuotanto siirrettiin Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur Meissenin rekisteröity tavaramerkki.
+AIEMPI KYSYMYS: Mitä goottilainen tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gotiikka on keskiajan rakennus- ja kuvataiteen tyyli, joka syntyi Ranskassa 1100-luvun puolivälin tienoilla ja levisi sieltä muualle Eurooppaan. Goottilaisia kirkkoja tunnistaa [[suippokaarista]], [[ristiholveista]], tukikaarista ja suurista ikkunoista, jotka päästävät sisään paljon valoa. Rakennukset kurottuvat korkealle. [[Meissenin tuomiokirkko]] on esimerkki goottilaisesta kirkosta. Viisas Pöllö kutsuttiin puhumaan johonkin, mut kyllä gotiikasta minäkin osaan.
+KYSYMYS: Kerro lisää: Meissenin tuomiokirkko
+
+### 635
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Mitä Carl Zeiss valmisti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Carl Zeiss perusti Jenaan optisen työpajan vuonna 1846, ja yritys tunnetaan [[mikroskoopeista]] sekä muista optisista laitteista, kuten kameran objektiiveista, kiikareista ja mittalaitteista; myöhemmin se valmisti myös planetaarioiden tähtiprojektoreita. Yrityksen kehitystyössä vaikutti merkittävästi fyysikko [[Ernst Abbe]], ja [[Otto Schott]] kehitti optiseen käyttöön sopivaa lasia. Linssejä niin pitkälle kuin silmä kantaa, ja minun silmäni kantaa pitkälle.
+KYSYMYS: Kerro lisää: mikroskoopeista
+
+### 636
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+AIEMPI KYSYMYS: Mitä Carl Zeiss valmisti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Carl Zeiss perusti Jenaan optisen työpajan vuonna 1846, ja yritys tunnetaan [[mikroskoopeista]] sekä muista optisista laitteista, kuten kameran objektiiveista, kiikareista ja mittalaitteista; myöhemmin se valmisti myös planetaarioiden tähtiprojektoreita. Yrityksen kehitystyössä vaikutti merkittävästi fyysikko [[Ernst Abbe]], ja [[Otto Schott]] kehitti optiseen käyttöön sopivaa lasia. Linssejä niin pitkälle kuin silmä kantaa, ja minun silmäni kantaa pitkälle.
+KYSYMYS: Kerro lisää: Ernst Abbe
+
+### 637
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Mitä Carl Zeiss valmisti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Carl Zeiss perusti Jenaan optisen työpajan vuonna 1846, ja yritys tunnetaan [[mikroskoopeista]] sekä muista optisista laitteista, kuten kameran objektiiveista, kiikareista ja mittalaitteista; myöhemmin se valmisti myös planetaarioiden tähtiprojektoreita. Yrityksen kehitystyössä vaikutti merkittävästi fyysikko [[Ernst Abbe]], ja [[Otto Schott]] kehitti optiseen käyttöön sopivaa lasia. Linssejä niin pitkälle kuin silmä kantaa, ja minun silmäni kantaa pitkälle.
+KYSYMYS: Kerro lisää: Otto Schott
+
+### 638
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Miksi Jena oli optiikan keskus?
+AIEMPI VASTAUS (Livia):
+Mmm— odotas vähän. Jena kehittyi optiikan keskukseksi, koska siellä yhdistyivät yliopisto, tiede ja teollisuus. [[Jenan yliopisto]] perustettiin vuonna 1558, ja sen luonnontieteet kasvoivat voimakkaasti erityisesti vuoden 1871 jälkeisen teollisen nousun aikana. Kaupungissa syntyi yhteistyö, jossa mekaanikko Carl Zeiss, fyysikko Ernst Abbe ja lasinvalmistaja Otto Schott pystyivät kehittämään tarkempia linssejä tieteellisin perustein. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus, ja Zeiss, Schott ja [[Jenoptik]] olivat sen suuria nimiä. Hyvä, että joku muukin kantaa tietoa kuin minä.
+KYSYMYS: Kerro lisää: Jenan yliopisto
+
+### 639
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+AIEMPI KYSYMYS: Miksi Jena oli optiikan keskus?
+AIEMPI VASTAUS (Livia):
+Mmm— odotas vähän. Jena kehittyi optiikan keskukseksi, koska siellä yhdistyivät yliopisto, tiede ja teollisuus. [[Jenan yliopisto]] perustettiin vuonna 1558, ja sen luonnontieteet kasvoivat voimakkaasti erityisesti vuoden 1871 jälkeisen teollisen nousun aikana. Kaupungissa syntyi yhteistyö, jossa mekaanikko Carl Zeiss, fyysikko Ernst Abbe ja lasinvalmistaja Otto Schott pystyivät kehittämään tarkempia linssejä tieteellisin perustein. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus, ja Zeiss, Schott ja [[Jenoptik]] olivat sen suuria nimiä. Hyvä, että joku muukin kantaa tietoa kuin minä.
+KYSYMYS: Kerro lisää: Jenoptik
+
+### 640
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jena ja Zeiss (tekniikka)
+Tietoruudun teksti: Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus. Jenan yliopisto perustettiin vuonna 1558. Kaupunki mainittiin ensimmäisen kerran vuonna 1182 ja pysyi pienenä 1800-luvulle asti, jolloin teollisuus kehittyi; yliopiston luonnontieteiden laajeneminen liittyi läheisesti vuoden 1871 jälkeiseen teolliseen nousuun. Suurimman osan 1900-lukua Jena oli optisen teollisuuden maailmankeskus yritysten kuten Carl Zeiss, Schott ja Jenoptik ympärillä. Entinen Zeissin tehdas keskustassa on esimerkki tekniikan arkkitehtuurista vuosilta 1880–1965, ja sen Bau 15 vuodelta 1915 oli Saksan ensimmäinen korkea rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+- [Algeria — maalehti / Ruoka: Taateli, jonka läpi näkee valon] Deglet Nour tarkoittaa valon taatelia, ja nimi on kuvaus: hedelmä on pehmeä, läpikuultavan vaalea ja maultaan hunajainen. Lajike on kotoisin Tolgan keitaalta Algeriasta, ja Pierre Munierin mukaan se levisi 1200-luvun lopulla ja 1300-luvun alussa Tolgasta naapurikeitaille Biskraan ja Oued Righiin. Tunisiaan sen vei 1600-luvun lopulla tozeurilainen viljelijä Sidi Touati, ja sieltä lajike on kulkenut Libyaan ja Yhdysvaltoihin asti. FAO:n mukaan se on vientiarvoltaan maailman johtava taatelilajike, ja Algerian maatalousministeriö on varannut nimen omille taateleilleen.
+AIEMPI KYSYMYS: Miten linssi toimii?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan. Linssi on läpinäkyvä, kaareva kappale, tavallisesti lasia tai muovia, joka taittaa siihen osuvia [[valonsäteitä]]. Kupera linssi kokoaa säteet yhteen pisteeseen, minkä ansiosta sillä voi suurentaa ja muodostaa kuvan, kun taas kovera linssi hajottaa säteitä. Linssejä on mikroskoopeissa, kiikareissa, kameroissa ja silmälaseissa, ja ihmisen silmässäkin on oma linssinsä, joka tarkentaa kuvan [[verkkokalvolle]].
+
+Minä en tarvitse silmälaseja, ja sen sanon ihan vaatimattomasti. Moni muu tarvitsee, ja siksi Jenassa tehty työ on ollut tärkeää.
+KYSYMYS: Kerro lisää: valonsäteitä
