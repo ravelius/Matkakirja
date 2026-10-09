@@ -396,8 +396,8 @@ namespace Matkakirja.Natiivi
                 PelattavaPalaPyydetty = false;
                 // V6: jatko tallennuksesta vain pyynnöstä (Natiivi-UI "Jatka"); muuten aina alusta (veneyö).
                 var jatka = PelattavaPalaJatka ? SeikkailuTallentaja.LueTiedosto("olavinlinna", PelattavaPalaHash) : null;
-                // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, heijastuksella:
-                // puuttuva luokka = suoraan peliin). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
+                // Alun valinta (PT 9.10., juna 171): "Pelaa: kesäyö 1499" / "Linnan historia" (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut:
+                // puuttuva rajapinta kaataa käännöksen). Kerran valittu → seuraavalla kerralla suoraan peliin (OlavinlinnaAlku.Nahty).
                 if (jatka == null && !alkuValittu && AlunValinta()) { PelattavaPalaJatka = false; goto palaOhi; }
                 alkuValittu = false; pelattavaPala = true;
                 PelattavaPalaJatka = false;
@@ -943,18 +943,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Automaattiajot (botti, todistusajo): "poikki kavely alkuvalinta 0" ohittaa valinnan suoraan peliin.</summary>
         public static bool AlkuValintaPaalla = true;
 
-        /// <summary>Näyttää alun valinnan, jos Natiivi-UI:n OlavinlinnaAlku on mukana eikä valintaa ole tehty; true = valinta auki
+        /// <summary>Näyttää alun valinnan (Natiivi-UI:n OlavinlinnaAlku, suorat kutsut), jos valintaa ei ole tehty; true = valinta auki
         /// (pala odottaa). Pelaa → pala alkaa; Historia → linnan historia, lopussa kortti "Pelaa".</summary>
         bool AlunValinta()
         {
-            var t = typeof(DioraamaSovitin).Assembly.GetType("Matkakirja.Natiivi.OlavinlinnaAlku");
-            const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
-            var kysy = t?.GetMethod("Kysy", F); var loppui = t?.GetMethod("HistoriaLoppui", F);
-            if (!AlkuValintaPaalla || kysy == null || loppui == null || t.GetProperty("Nahty", F)?.GetValue(null) is true) return false;
+            if (!AlkuValintaPaalla || OlavinlinnaAlku.Nahty) return false;
             Action pelaa = () => { AlkuValintaAuki = false; alkuValittu = true; PelattavaPalaPyydetty = true; };
-            Action historia = () => o.StartCoroutine(Historia(() => loppui.Invoke(null, new object[] { pelaa })));
+            Action historia = () => o.StartCoroutine(Historia(() => OlavinlinnaAlku.HistoriaLoppui(pelaa)));
             AlkuValintaAuki = true;
-            kysy.Invoke(null, new object[] { pelaa, historia });
+            OlavinlinnaAlku.Kysy(pelaa, historia);
             o.Kirjaa("seikkailu: alun valinta (Pelaa / Linnan historia)");
             return true;
         }
