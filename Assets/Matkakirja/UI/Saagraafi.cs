@@ -144,7 +144,7 @@ namespace Matkakirja.Natiivi
         const float L = 300f, K = 176f, Vasen = 30f, Oikea = 268f, Yla = 20f, Ala = 146f;
         const float Askel = (Oikea - Vasen) / 12f;
         const float Tekstikoko = 8.5f;
-        const string Kirjaimet = "THMHTKHESLMJ";
+        static string Kirjaimet => Kieli.T("ui.saagraafi.kuukausikirjaimet");
 
         static readonly Color KuluvaKaista = new Color32(164, 105, 28, 23);   // 0.09
         static readonly Color Palkki = new Color32(96, 118, 142, 140);        // 0.55
@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
                 LisaaTeksti($"{Mathf.RoundToInt(aste)}°", "mk-saa__akseli", Vasen - 4f, LampoY(aste) + 3f, 1f);
             foreach (var mm in new[] { sadeYla / 2f, sadeYla })
                 LisaaTeksti($"{Mathf.RoundToInt(mm)}", "mk-saa__akseli", Oikea + 4f, SadeY(mm) + 3f, 0f);
-            LisaaTeksti("mm", "mk-saa__akseli", Oikea + 4f, Ala + 3f, 0f);
+            LisaaTeksti("mm", "mk-saa__akseli", Oikea + 4f, Ala + 3f, 0f);   // kieli: ei (yksikkö, kielineutraali)
 
             // Ääripäiden lukemat: lämpimin ja kylmin kuukausi käyrälle, sateisin palkin päälle.
             if (keski.Length > 0)
@@ -252,7 +252,7 @@ namespace Matkakirja.Natiivi
             g.AddToClassList("mk-saa--nappi");
             g.RegisterCallback<ClickEvent>(_ => NaytaIsona(t, otsikko));
             kehys.Add(g);
-            Kirjasimet.Aseta(Rakenne.Teksti("Sää vuoden mittaan. Napauta suuremmaksi.", "mk-saa__kelluke-teksti", kehys), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.saagraafi.napauta-suuremmaksi"), "mk-saa__kelluke-teksti", kehys), Kirjasin.Kone);
             return kehys;
         }
 
@@ -262,10 +262,10 @@ namespace Matkakirja.Natiivi
             bool k = KelpaaKaista(t?.Ylin, t?.Alin);
             string lahde = !string.IsNullOrEmpty(t?.LahdeNimi)
                 ? t.LahdeNimi + (!string.IsNullOrEmpty(t.LahdeKausi) ? ", " + t.LahdeKausi : "")
-                : "Open-Meteo (ERA5), 1991–2020";
+                : Kieli.T("ui.saagraafi.oletuslahde");
             return k
-                ? "Käyrä keskilämpö, kaista tyypillinen vaihteluväli °C · palkit sademäärä mm · " + lahde
-                : "Käyrä keskilämpö °C · palkit sademäärä mm · " + lahde;
+                ? Kieli.T("ui.saagraafi.selite-kaista", lahde)
+                : Kieli.T("ui.saagraafi.selite", lahde);
         }
 
         // --- mitoitus -----------------------------------------------------------------

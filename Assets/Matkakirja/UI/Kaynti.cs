@@ -17,7 +17,7 @@ namespace Matkakirja.Natiivi
 {
     public static class Kaynti
     {
-        public const string Tekijatietorivi = "Peli laskee nimettömiä käyntikertoja; IP-osoitteita ei tallenneta.";
+        public static string Tekijatietorivi => Kieli.T("ui.kaynti.tekijatietorivi");
         public const string OmistajaAvain = "matkakirja-omistaja";
         static readonly HashSet<string> lahetetyt = new HashSet<string>();
 
@@ -53,8 +53,8 @@ namespace Matkakirja.Natiivi
             bool pois = url.IndexOf("pois", "matkakirja://omistaja".Length, System.StringComparison.OrdinalIgnoreCase) >= 0;
             PlayerPrefs.SetInt(OmistajaAvain, pois ? 0 : 1);
             PlayerPrefs.Save();
-            string teksti = pois ? "Omistajan merkintä poistettu: tämän laitteen käynnit lasketaan taas."
-                : "Tämä laite on merkitty omistajan laitteeksi: sen käyntejä ei lasketa.";
+            string teksti = pois ? Kieli.T("ui.kaynti.omistaja-pois")
+                : Kieli.T("ui.kaynti.omistaja-merkitty");
             Debug.Log("MATKAKIRJA kaynti: linkki " + (pois ? "omistaja pois" : "omistaja"));
             UiKerros.Hae()?.StartCoroutine(Ilmoita(teksti));
             return teksti;

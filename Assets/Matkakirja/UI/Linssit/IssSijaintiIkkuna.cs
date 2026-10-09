@@ -40,7 +40,7 @@ namespace Matkakirja.Natiivi
             peite.RegisterCallback<PointerDownEvent>(e => { if (e.target == peite) { Sulje("ulkopuoli"); e.StopPropagation(); } });
             ikkuna = Rakenne.El("mk-isssijainti__ikkuna", peite);
             ikkuna.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
-            Kirjasimet.Aseta(Rakenne.Teksti("SIJAINTI", "mk-isssijainti__otsikko", ikkuna), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.iss.sijainti-iso"), "mk-isssijainti__otsikko", ikkuna), Kirjasin.Kone);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-isssijainti__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;

@@ -36,7 +36,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(arkki, Kirjasin.Luku);
             var yla = Rakenne.El("mk-nahtavyydet__yla", arkki, PickingMode.Ignore);
             // Web .tiivis-lehtiarkki .lehti-nimio: versaalinimiö keskellä (× ei siirrä keskikohtaa).
-            otsikko = Rakenne.Teksti("NÄHTÄVYYDET", "mk-nahtavyydet__otsikko", yla);
+            otsikko = Rakenne.Teksti(Kieli.T("ui.nahtavyys.otsikko"), "mk-nahtavyydet__otsikko", yla);
             Kirjasimet.Aseta(otsikko, Kirjasin.KoneBold);
             // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): taustapeitteen napautus sulkee.
             var v = new ScrollView(ScrollViewMode.Vertical);
@@ -92,7 +92,7 @@ namespace Matkakirja.Natiivi
             if (piste < 0 || piste > EsittelynRaja) { l.text = Suojaa(teksti); return; }
             string alku = teksti.Substring(0, piste + 1);
             l.text = Suojaa(alku);
-            var lisaa = Rakenne.Nappi("Lue lisää", "mk-lehti__opaslinkki mk-nahtavyydet__luelisaa", null, sisus);
+            var lisaa = Rakenne.Nappi(Kieli.T("ui.nahtavyys.lue-lisaa"), "mk-lehti__opaslinkki mk-nahtavyydet__luelisaa", null, sisus);
             Kirjasimet.Aseta(lisaa, Kirjasin.Luku);
             lisaa.clicked += () => { l.text = Suojaa(teksti); lisaa.RemoveFromHierarchy(); };
         }

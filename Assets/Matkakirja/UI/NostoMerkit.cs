@@ -85,7 +85,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Selitteen rivi: id, lyhyt nimi, koko nimi, merkki (vektori tai kuvat) ja aiheväri.</summary>
         public sealed class Rivi
         {
-            public string Id, Nimi, Koko, Vektori, Vari;
+            public string Id, Vektori, Vari;
+            /// <summary>Kieliavaimet (Kieli.T): lyhyt nimi ja koko nimi.</summary>
+            public string NimiAvain, KokoAvain;
+            public string Nimi => Kieli.T(NimiAvain);
+            public string Koko => Kieli.T(KokoAvain);
             public bool Piste;
             public string[] Kuvat = new string[0];
         }
@@ -93,17 +97,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Webin KARTTASELITE_JARJESTYS (omistaja 22.9.2026) ja KARTTASELITE_MERKIT.</summary>
         public static readonly IReadOnlyList<Rivi> Jarjestys = new[]
         {
-            new Rivi { Id = "kaikki", Nimi = "Kaikki", Koko = "Kaikki aiheet" },
-            new Rivi { Id = "kaupungit", Nimi = "Kaupungit", Koko = "Kaupungit", Piste = true, Vari = "#8a6d4a" },
-            new Rivi { Id = "historia", Nimi = "Historia", Koko = "Historia", Kuvat = new[] { "merkki-historia.png" } },
-            new Rivi { Id = "ihmeet", Nimi = "Ihmeet", Koko = "Kadonneet ihmeet", Vektori = Ruusu, Vari = "#b8862b" },
-            new Rivi { Id = "hetket", Nimi = "Hetket", Koko = "Historian hetket", Piste = true, Vari = "#6e4a63" },
-            new Rivi { Id = "skandaalit", Nimi = "Skandaalit", Koko = "Skandaalit", Vektori = Salama, Vari = "#dda42c" },
-            new Rivi { Id = "luonto", Nimi = "Luonto", Koko = "Luonto", Kuvat = new[] { "merkki-vuori.png", "merkki-meri.png" } },
-            new Rivi { Id = "elaimet", Nimi = "Eläimet", Koko = "Eläimet", Vektori = Tassu, Vari = "#b98d54" },
-            new Rivi { Id = "kulttuuri", Nimi = "Kulttuuri…", Koko = "Kulttuuri ja ruoka", Kuvat = new[] { "merkki-kulttuuri.png", "merkki-ruoka.png" } },
-            new Rivi { Id = "kauppa", Nimi = "Kauppa…", Koko = "Kauppa ja tekniikka", Kuvat = new[] { "merkki-kauppa.png", "merkki-tekniikka.png", "merkki-merenkulku.png" } },
-            new Rivi { Id = "ei", Nimi = "Ei mitään", Koko = "Ei mitään" },
+            new Rivi { Id = "kaikki", NimiAvain = "ui.nostomerkit.kaikki", KokoAvain = "ui.nostomerkit.kaikki-koko" },
+            new Rivi { Id = "kaupungit", NimiAvain = "ui.nostomerkit.kaupungit", KokoAvain = "ui.nostomerkit.kaupungit", Piste = true, Vari = "#8a6d4a" },
+            new Rivi { Id = "historia", NimiAvain = "ui.nostomerkit.historia", KokoAvain = "ui.nostomerkit.historia", Kuvat = new[] { "merkki-historia.png" } },
+            new Rivi { Id = "ihmeet", NimiAvain = "ui.nostomerkit.ihmeet", KokoAvain = "ui.nostomerkit.ihmeet-koko", Vektori = Ruusu, Vari = "#b8862b" },
+            new Rivi { Id = "hetket", NimiAvain = "ui.nostomerkit.hetket", KokoAvain = "ui.nostomerkit.hetket-koko", Piste = true, Vari = "#6e4a63" },
+            new Rivi { Id = "skandaalit", NimiAvain = "ui.nostomerkit.skandaalit", KokoAvain = "ui.nostomerkit.skandaalit", Vektori = Salama, Vari = "#dda42c" },
+            new Rivi { Id = "luonto", NimiAvain = "ui.nostomerkit.luonto", KokoAvain = "ui.nostomerkit.luonto", Kuvat = new[] { "merkki-vuori.png", "merkki-meri.png" } },
+            new Rivi { Id = "elaimet", NimiAvain = "ui.nostomerkit.elaimet", KokoAvain = "ui.nostomerkit.elaimet", Vektori = Tassu, Vari = "#b98d54" },
+            new Rivi { Id = "kulttuuri", NimiAvain = "ui.nostomerkit.kulttuuri", KokoAvain = "ui.nostomerkit.kulttuuri-koko", Kuvat = new[] { "merkki-kulttuuri.png", "merkki-ruoka.png" } },
+            new Rivi { Id = "kauppa", NimiAvain = "ui.nostomerkit.kauppa", KokoAvain = "ui.nostomerkit.kauppa-koko", Kuvat = new[] { "merkki-kauppa.png", "merkki-tekniikka.png", "merkki-merenkulku.png" } },
+            new Rivi { Id = "ei", NimiAvain = "ui.nostomerkit.ei", KokoAvain = "ui.nostomerkit.ei" },
         };
     }
 }

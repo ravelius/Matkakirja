@@ -49,7 +49,7 @@ namespace Matkakirja.Natiivi
             teksti.enableRichText = true;
             teksti.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
-            nappi = Rakenne.Nappi("Avaa juttu", "mk-pulukuva__nappi", Avaa, kortti);
+            nappi = Rakenne.Nappi(Kieli.T("ui.pulu.avaa-juttu"), "mk-pulukuva__nappi", Avaa, kortti);
             Kirjasimet.Aseta(nappi, Kirjasin.Kone);
             ui.TurvaMuuttui += Mitoita;
             tausta.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());

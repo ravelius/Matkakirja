@@ -164,7 +164,7 @@ namespace Matkakirja.Natiivi
             if (!pakollinen)
             {
                 var takaisin = Rakenne.Nappi(null, "mk-valintarivi mk-valintarivi--takaisin", Peruuta, rivit, Ikonit.Viiva["nuoli"]);
-                takaisin.tooltip = "Takaisin";
+                takaisin.tooltip = Kieli.T("ui.linssi.takaisin");
             }
 
             Asettele();
@@ -435,7 +435,7 @@ namespace Matkakirja.Natiivi
         {
             liuku.Clear();
             var n = Rakenne.Nappi(null, "mk-liiku__tapa mk-liiku__tapa--korostettu mk-liiku__noppa", () => heita?.Invoke(), liuku, Ikonit.Viiva["noppa"]);
-            n.tooltip = "Heitä noppa";
+            n.tooltip = Kieli.T("ui.matkavalinta.heita-noppa");
             if (vaihda != null)
             {
                 var v = Rakenne.Nappi(null, "mk-liiku__tapa", () => { var f = vaihda; f?.Invoke(); }, liuku, Ikonit.Viiva["nuoli"]);

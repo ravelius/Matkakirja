@@ -74,7 +74,7 @@ namespace Matkakirja.Natiivi
             taukoNappi.style.display = DisplayStyle.None;
             // LINNAN HISTORIAN OHITUS (Päätoimittaja 9.10.2026, juna 171): sama OHJAUSNAPPI ja ⏭-kuvake kuin oppaan tauko/seuraava-
             // parissa; lopettaa SeikkailuHistorian (Siirtoseppä), jolloin alun valinnassa tulee Pelaa-kortti ja ☰:sta avattuna peli jatkuu.
-            ohitaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Ohita linnan historia", () => { Debug.Log("MATKAKIRJA linnavalikko: historia ohitettu"); SeikkailuHistoria.Lopeta(); }, ryhma);
+            ohitaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, Kieli.T("ui.linna.ohita-historia"), () => { Debug.Log("MATKAKIRJA linnavalikko: historia ohitettu"); SeikkailuHistoria.Lopeta(); }, ryhma);
             ohitaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, Kieli.T("ui.linna.valikko"), () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
