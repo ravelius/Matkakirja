@@ -801,6 +801,11 @@
     margin-bottom: 2px;
 }
 
+/* Pulun valmiit kysymykset (omistaja 9.10.2026): sama sirusarake, kaksi näkyy ja loput vierittämällä; kolmannen yläreuna vihjaa jatkosta. */
+.mk-chat__sirut--vieritys {
+    max-height: 112px;
+}
+
 .mk-chat__siru {
     min-height: 34px;
     margin-bottom: 6px;

@@ -1070,7 +1070,11 @@ namespace Matkakirja.Natiivi
             // Napit kuten web avaaKohdePohjalla (#3788, omistaja 2.10.2026 pysyväksi): Kysy vain kysymyksillä, Visa, Kierros,
             // Lehti = kohteen oma täkynosto (Livian leikekirja), ei kaupungin/maan lehteä. Esim. Ateena: vain Kysy.
             if (n.Kysymykset.Count > 0)
-                Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
+            {
+                // Pulun valmiit vastaukset (omistaja 9.10.2026): maan paketti esiladataan, jotta Kysy vastaa heti.
+                PuluValmiitLataus.Esilataa(n.Iso);
+                Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset, PuluValmiitLataus.Kohta(n), n.Iso); });
+            }
             if (n.Visa != null)
                 Nappi("visa", "Visa", () => AvaaVisa(n));
             if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", "Kierros", () => Application.OpenURL(u)); }
@@ -1123,7 +1127,7 @@ namespace Matkakirja.Natiivi
             {
                 string kk = n.Kysymykset[i];
                 // Kortin aihe kysymyksen mukana (omistajan löydös 30.9.2026: pulu ei tiennyt, mistä akveduktista on kyse).
-                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk, aihe: PuluChat.NostonAihe(n)); };
+                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk, aihe: PuluChat.NostonAihe(n), kohta: PuluValmiitLataus.Kohta(n), maa: n.Iso); };
                 var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", kysy, isa);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
                 napit["kysy" + i] = kysy;

@@ -468,6 +468,8 @@ namespace Matkakirja.Natiivi
             sirualue.Clear();
             historia.Clear();
             keskustelunAihe = null;
+            valmisKohta = null;
+            valmisPaketti = null;
             lukija.Vaihtui();
             Tervehdi();
         }
@@ -477,7 +479,9 @@ namespace Matkakirja.Natiivi
         /// NOSTOKORTTI-pohjan Kysy-nappi (omistaja 1.10.2026, kohdekortti kokeiluun, loki f344f1034): chat aukeaa kortin
         /// aiheella, ja kortin valmiit kysymykset ovat siruina (kysyminen kortin aiheen kanssa). Ei ehdotushakua.
         /// </summary>
-        public void AvaaKortista(Aihe aihe, IReadOnlyList<string> valmiit)
+        /// <param name="kohta">PULUN VALMIIT (omistaja 9.10.2026, juna 173): nostokortin kohta paketissa (PuluValmiitLataus.Kohta), maa ISO3.
+        /// Kun maan paketissa on kohta, sirut ovat paketin viisi kysymystä (2 näkyy, loput vierittämällä) ja vastaus tulee valmiina.</param>
+        public void AvaaKortista(Aihe aihe, IReadOnlyList<string> valmiit, string kohta = null, string maa = null)
         {
             Paikka("kortti:" + ValmiidenAvain(aihe));
             Avaa(false);
@@ -485,6 +489,88 @@ namespace Matkakirja.Natiivi
             NaytaKohteenValmiit(valmiit, aihe);
             AsetaMatala(valmiit != null && valmiit.Count > 0);
             Asettele();
+            AsetaValmisKohta(kohta, maa, aihe, true);
+        }
+
+        // --- Pulun valmiit vastaukset (Peli/PuluValmiit.cs, PuluValmiitLataus.cs) ------------------------------------
+
+        PuluValmiit valmisPaketti;
+        string valmisKohta;
+        Aihe valmisAihe;
+
+        /// <summary>Keskustelun kohta valmiisiin vastauksiin; sirut = kohdan kysymykset, kun paketti on (nayta).</summary>
+        void AsetaValmisKohta(string kohta, string maa, Aihe aihe, bool nayta)
+        {
+            valmisKohta = kohta;
+            valmisAihe = aihe;
+            valmisPaketti = null;
+            if (kohta == null || maa == null) return;
+            PuluValmiitLataus.Hae(maa, p =>
+            {
+                if (valmisKohta != kohta || p == null || !p.Kohdat.ContainsKey(kohta)) return;
+                valmisPaketti = p;
+                if (nayta && Auki && !kysyy) NaytaValmiinKohdanKysymykset();
+            });
+        }
+
+        string ValmiidenKysytytAvain => "valmis:" + valmisKohta;
+
+        /// <summary>
+        /// Kohdan kysymättömät valmiit kysymykset sirupohjalla (mk-chat__siru) samaan sarakkeeseen: kaksi näkyy, loput tulevat esiin
+        /// vierittämällä (omistaja 9.10.2026: "näkymässä 2 kysymystä, loput vierittämällä"). 0 = ei lohkoa.
+        /// </summary>
+        int NaytaValmiinKohdanKysymykset()
+        {
+            foreach (var e in sirualue.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+            if (valmisPaketti == null || valmisKohta == null || !valmisPaketti.Kohdat.TryGetValue(valmisKohta, out var k)) return 0;
+            valmiitKysytyt.TryGetValue(ValmiidenKysytytAvain, out var kysytyt);
+            var jaljella = k.Kysymykset.Where(v => kysytyt == null || !kysytyt.Contains(v.Kysymys)).ToList();
+            if (jaljella.Count == 0) return 0;
+            var vieritys = new ScrollView(ScrollViewMode.Vertical);
+            vieritys.AddToClassList("mk-chat__sirut");
+            vieritys.AddToClassList("mk-chat__kohdevalmiit");
+            vieritys.AddToClassList("mk-chat__sirut--vieritys");
+            vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            sirualue.Add(vieritys);
+            var aihe = valmisAihe;
+            foreach (var v in jaljella)
+            {
+                string kysymys = v.Kysymys;
+                Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => Kysy(kysymys, aihe: aihe), vieritys.contentContainer), Kirjasin.Kone);
+            }
+            Vierita(VirranLoppu());
+            return jaljella.Count;
+        }
+
+        /// <summary>Valmis vastaus samaan kuplaan ja luentaan kuin workerin vastaus; ei verkkoa. Tosi = vastattu.</summary>
+        bool VastaaValmiista(string kysymys)
+        {
+            if (valmisKohta == null) return false;
+            var p = valmisPaketti;
+            var v = p?.Vastaa(valmisKohta, kysymys);
+            if (v == null) return false;
+            if (!valmiitKysytyt.TryGetValue(ValmiidenKysytytAvain, out var kysytyt)) valmiitKysytyt[ValmiidenKysytytAvain] = kysytyt = new HashSet<string>();
+            kysytyt.Add(v.Kysymys);
+            historia.Add(("kayttaja", kysymys));
+            pulu.ChatVastausAlkoi();
+            // Live vain kehittäjälle: linkki vain käsitteeseen, jolla on valmis "Kerro lisää" -vastaus (ei kuollutta linkkiä).
+            bool rajaa = PuluValmiitLataus.LiveVainKehittajalle && !Asetukset.Kehittaja;
+            string kohta = valmisKohta;
+            var kupla = Viesti("mk-chat__livia", Kasitelinkit(v.Teksti, rajaa ? k => p.OnLisaa(kohta, k) : (Func<string, bool>)null));
+            KytkeKasitelinkit(kupla);
+            string nakyva = Nakyva(v.Teksti);
+            pulu.Tilanne("answer", nakyva);
+            AsetaLukijalle(v.Teksti);
+            if (!Auki) PeruLuenta();
+            else LueVastaus(Puhuttava(v.Teksti));
+            VahdiPuheVuoroa();
+            historia.Add(("pollo", nakyva));
+            // Jatkot valmiista; live vain kehittäjälle → kohdan kysymättömät kysymykset (jatkoon ei olisi vastausta).
+            if (!rajaa) Sirut(v.Jatkot, "mk-chat__jatkot", true);
+            else NaytaValmiinKohdanKysymykset();
+            Debug.Log("MATKAKIRJA pulu: valmis vastaus " + kohta + " / " + kysymys);
+            return true;
         }
 
         bool matala;
@@ -865,7 +951,8 @@ namespace Matkakirja.Natiivi
             Vierita(kupla);
         }
 
-        public void Kysy(string kysymys, bool jatko = false, bool puhe = false, Aihe aihe = null)
+        /// <param name="kohta">nostokortin kohta ja maa valmiisiin vastauksiin (kortin kysymyssiru suljetusta chatista)</param>
+        public void Kysy(string kysymys, bool jatko = false, bool puhe = false, Aihe aihe = null, string kohta = null, string maa = null)
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
@@ -873,6 +960,8 @@ namespace Matkakirja.Natiivi
             kysymyksenAihe = aihe ?? keskustelunAihe;
             // Kortin kysymys suljetusta chatista (nostokortin sirut ja korostetut sanat): kortti on oma paikkansa.
             if (!Auki && aihe != null) Paikka("kortti:" + ValmiidenAvain(aihe));
+            // Paikan jälkeen: paikan vaihto nollaa valmiin kohdan.
+            if (kohta != null && kohta != valmisKohta) AsetaValmisKohta(kohta, maa, aihe, false);
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki && !(oppaalle && Sieppaa != null)) Avaa(false);
             if (oppaalle) AsetaOppaanJatkot(null);
@@ -901,6 +990,8 @@ namespace Matkakirja.Natiivi
                 if (puhe) LopetaPuheVuoro(hiljaa: true);
                 return;
             }
+            // Valmis vastaus paketista ennen workeria (omistaja 9.10.2026); muuten live kuten ennen.
+            if (VastaaValmiista(kysymys)) { if (puhe && !LuentaPaalla) LopetaPuheVuoro(); return; }
             bool paikkaa = Paikkakysymys.IsMatch(kysymys);
             // Oma paikkahakemisto ensin (webin ratkaisePaikka): kamera lähtee heti.
             bool lensi = paikkaa && LennaTunnettuun(kysymys);
@@ -1217,7 +1308,8 @@ namespace Matkakirja.Natiivi
         /// Vastauksen [[käsite|muoto]] → pisteviivalla alleviivattu linkki (näkyvä muoto); napautus
         /// kysyy "Kerro lisää: aihe" perusmuodosta. Muu teksti suojataan rich textiltä.
         /// </summary>
-        static string Kasitelinkit(string vastaus)
+        /// <param name="linkitettava">null = jokainen käsite linkiksi; muuten vain ne, joille tosi (valmiit vastaukset ilman liveä)</param>
+        static string Kasitelinkit(string vastaus, Func<string, bool> linkitettava = null)
         {
             string koko = vastaus ?? "";
             var sb = new StringBuilder();
@@ -1240,6 +1332,12 @@ namespace Matkakirja.Natiivi
                 string muoto = p < 0 ? k : k.Substring(p + 1).Split('|')[^1].Trim();
                 if (aihe.Length == 0) aihe = muoto;
                 sb.Append(Suojaa(koko.Substring(kohta, m.Index - kohta)));
+                if (linkitettava != null && !linkitettava(aihe))
+                {
+                    sb.Append(Suojaa(muoto));
+                    kohta = m.Index + m.Length;
+                    continue;
+                }
                 sb.Append("<link=\"").Append(aihe.Replace("\"", "")).Append("\"><color=#6b5a44><u>").Append(muoto.Replace("<", "")).Append("</u></color></link>");
                 kohta = m.Index + m.Length;
                 n++;
