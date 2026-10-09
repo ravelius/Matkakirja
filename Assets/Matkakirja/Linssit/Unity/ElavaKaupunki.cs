@@ -36,7 +36,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Paketit (id, origo): lisätään, kun tyokalut/elava_kaupunki.py on ajettu kaupungille.</summary>
         static readonly (string Id, double Lat, double Lon, double SadeM)[] Paketit = { ("tukholma", 59.3299, 18.07382, 15000), ("pariisi", 48.86122, 2.35092, 15000) };
 
-        static Material kohdeMat, vanaMat;
+        static Material kohdeMat, vanaMat, valoMat;
+        string paketti;
         static readonly Dictionary<int, Mesh> veneVerkot = new Dictionary<int, Mesh>(), vanaVerkot = new Dictionary<int, Mesh>();
         static Mesh lokki, siipiO, siipiV, kyyhky, kSiipiO, kSiipiV;
         static readonly Dictionary<int, Mesh> palloVerkot = new Dictionary<int, Mesh>();
@@ -96,7 +97,7 @@ namespace Matkakirja.Natiivi
             ankkuri.longitudeLatitudeHeight = new double3(lon, lat, 0);
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var e2 = go.AddComponent<ElavaKaupunki>();
-            e2.liikenne = l; e2.kerros = CesiumKaupunki.Kerros; e2.kaupunki = k;
+            e2.liikenne = l; e2.kerros = CesiumKaupunki.Kerros; e2.kaupunki = k; e2.paketti = id;
             e2.katuJson = kj != null && kj.Contains("\"kadut\"") ? kj : null; e2.autoRaja = new[] { 80, 200, 500 }[taso]; e2.lat0 = lat; e2.lon0 = lon;
             // Muiden pallojen korkeus georeferenssin origon korkeudesta (kohteen maa, ei luettu Googlen laatoista tässä).
             e2.maaM = (float)gr.height;
@@ -128,6 +129,8 @@ namespace Matkakirja.Natiivi
             var a = Shader.Find("Matkakirja/Linssit/ElavaKohde"); var b = Shader.Find("Matkakirja/Linssit/ElavaVana");
             kohdeMat = new Material(a != null ? a : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Elävä kohde", enableInstancing = true };
             vanaMat = b != null ? new Material(b) { name = "Elävä vana" } : null;
+            var cv = Shader.Find("Matkakirja/Linssit/ElavaValo");
+            valoMat = cv != null ? new Material(cv) { name = "Elävä valo" } : null;
             lokki = Verkko(VeneMallit.LokinVartalo(), "Lokki"); siipiO = Verkko(VeneMallit.LokinSiipi(1), "Lokin siipi O"); siipiV = Verkko(VeneMallit.LokinSiipi(-1), "Lokin siipi V");
             kyyhky = Verkko(VeneMallit.KyyhkynVartalo(), "Kyyhky"); kSiipiO = Verkko(VeneMallit.LokinSiipi(1, true), "Kyyhkyn siipi O"); kSiipiV = Verkko(VeneMallit.LokinSiipi(-1, true), "Kyyhkyn siipi V");
         }
@@ -152,6 +155,7 @@ namespace Matkakirja.Natiivi
                 if (!palloVerkot.TryGetValue(pv, out var pm)) palloVerkot[pv] = pm = Verkko(VeneMallit.Pallo(pv), "Muu pallo " + pv);
                 palloT[j] = Olio("muu pallo", transform, pm, kohdeMat).transform;
             }
+            RakennaTaivas();
             if (liikenne == null) return;
             int i = 0;
             foreach (var k in liikenne.Liike.Kulkijat)
@@ -322,6 +326,132 @@ namespace Matkakirja.Natiivi
                 }
             }
             PaivitaAanet(c);
+            PaivitaTaivas(c);
+        }
+
+        // ---- ELÄVÄ TAIVAS JA VALONHEITIN (Päätoimittaja 9.10., juna 170; Ydin ElavaTaivas): lintuparvi V:nä päivällä, lentokone ja
+        // tiivistysvana äänen tahdissa (yöllä navigointivalot), Pariisissa yöllä Eiffelin majakan kaksi keilaa. ----
+        ElavaTaivas taivas; Transform parviJuuri, koneT, keilaT; Transform[] lintuT, lintuV, lintuO; Renderer vanaR; Transform[] koneValot;
+        public static readonly (double Lat, double Lon, double Korkeus) Eiffel = (48.858296, 2.294479, 324);
+        double eiffelMaa = double.NaN;
+
+        static Mesh Nauha(string nimi, float pituus, float leveys, Color alku, Color loppu)
+        {
+            // Vaakasuora nauha z = 0 … −pituus (taakse), x ±leveys/2; väri alusta loppuun.
+            var m = new Mesh { name = nimi };
+            m.SetVertices(new List<Vector3> { new Vector3(-leveys / 2, 0, 0), new Vector3(leveys / 2, 0, 0), new Vector3(-leveys / 2, 0, -pituus), new Vector3(leveys / 2, 0, -pituus) });
+            m.SetColors(new List<Color> { alku, alku, loppu, loppu });
+            m.SetNormals(new List<Vector3> { Vector3.up, Vector3.up, Vector3.up, Vector3.up });
+            m.SetTriangles(new[] { 0, 2, 1, 1, 2, 3 }, 0); m.RecalculateBounds(); m.bounds = new Bounds(m.bounds.center, m.bounds.size + Vector3.one * 50); m.UploadMeshData(true);
+            return m;
+        }
+
+        static Mesh Keila(string nimi, float pituus, float alkuLeveys, float loppuLeveys, Color alku)
+        {
+            // Nelikulmainen katkaistu pyramidi +z-suuntaan (kaksi ristikkäistä tasoa riittää additiiviselle keilalle).
+            var loppu = new Color(alku.r, alku.g, alku.b, 0f);
+            float a = alkuLeveys / 2, b = loppuLeveys / 2;
+            var m = new Mesh { name = nimi };
+            m.SetVertices(new List<Vector3> { new Vector3(-a, 0, 0), new Vector3(a, 0, 0), new Vector3(-b, 0, pituus), new Vector3(b, 0, pituus),
+                new Vector3(0, -a, 0), new Vector3(0, a, 0), new Vector3(0, -b, pituus), new Vector3(0, b, pituus) });
+            m.SetColors(new List<Color> { alku, alku, loppu, loppu, alku, alku, loppu, loppu });
+            m.SetTriangles(new[] { 0, 2, 1, 1, 2, 3, 4, 6, 5, 5, 6, 7 }, 0); m.RecalculateBounds(); m.UploadMeshData(true);
+            return m;
+        }
+
+        static Mesh Lentokone()
+        {
+            // Runko ja siivet vaakatasossa (alhaalta katsottuna), harmaa; 60 m × 55 m (näkyvyyden vuoksi ~1,5 × matkustajakone).
+            var m = new Mesh { name = "Lentokone" };
+            Color c = new Color(0.82f, 0.84f, 0.86f, 1f);
+            m.SetVertices(new List<Vector3> { new Vector3(-3, 0, 30), new Vector3(3, 0, 30), new Vector3(-3, 0, -30), new Vector3(3, 0, -30),
+                new Vector3(-27, 0, 2), new Vector3(27, 0, 2), new Vector3(-27, 0, -8), new Vector3(27, 0, -8),
+                new Vector3(-10, 0, -24), new Vector3(10, 0, -24), new Vector3(-10, 0, -30), new Vector3(10, 0, -30) });
+            var cs = new List<Color>(); for (int i = 0; i < 12; i++) cs.Add(c); m.SetColors(cs);
+            var ns = new List<Vector3>(); for (int i = 0; i < 12; i++) ns.Add(Vector3.down); m.SetNormals(ns);
+            m.SetTriangles(new[] { 0, 2, 1, 1, 2, 3, 4, 6, 5, 5, 6, 7, 8, 10, 9, 9, 10, 11 }, 0); m.RecalculateBounds(); m.UploadMeshData(true);
+            return m;
+        }
+
+        void RakennaTaivas()
+        {
+            taivas = new ElavaTaivas(Mathf.Abs((int)(lat0 * 7919 + lon0 * 104729)));
+            parviJuuri = new GameObject("lintuparvi") { layer = kerros }.transform; parviJuuri.SetParent(transform, false);
+            lintuT = new Transform[ElavaTaivas.ParviLintuja]; lintuV = new Transform[ElavaTaivas.ParviLintuja]; lintuO = new Transform[ElavaTaivas.ParviLintuja];
+            for (int j = 0; j < lintuT.Length; j++)
+            {
+                var g = Olio("lintu", parviJuuri, lokki, kohdeMat); g.transform.localScale = Vector3.one * 2.2f;
+                lintuT[j] = g.transform; lintuV[j] = Olio("siipi", g.transform, siipiV, kohdeMat).transform; lintuO[j] = Olio("siipi", g.transform, siipiO, kohdeMat).transform;
+            }
+            parviJuuri.gameObject.SetActive(false);
+            koneT = Olio("lentokone", transform, Lentokone(), kohdeMat).transform;
+            if (valoMat != null)
+            {
+                vanaR = Olio("tiivistysvana", koneT, Nauha("Tiivistysvana", 3000, 22, new Color(1f, 1f, 1f, 0.45f), new Color(1f, 1f, 1f, 0f)), valoMat).GetComponent<Renderer>();
+                vanaR.transform.localPosition = new Vector3(0, 0, -32);
+                koneValot = new Transform[3];
+                var vv = new[] { (new Color(1f, 0.1f, 0.1f, 1f), new Vector3(-27, 0, -3)), (new Color(0.1f, 1f, 0.2f, 1f), new Vector3(27, 0, -3)), (new Color(1f, 1f, 1f, 1f), new Vector3(0, 0, -30)) };
+                for (int i = 0; i < 3; i++)
+                {
+                    koneValot[i] = Olio("navigointivalo", koneT, Keila("Navigointivalo", 0.01f, 45f, 45f, vv[i].Item1), valoMat).transform;
+                    koneValot[i].localPosition = vv[i].Item2;
+                }
+                if (paketti == "pariisi")
+                {
+                    keilaT = new GameObject("Eiffelin majakka") { layer = kerros }.transform; keilaT.SetParent(transform, false);
+                    var km = Keila("Majakan keila", (float)ElavaTaivas.MajakkaPituusM, 4f, 160f, new Color(1f, 0.93f, 0.78f, 0.28f));
+                    for (int i = 0; i < 2; i++) Olio("keila", keilaT, km, valoMat).transform.localRotation = Quaternion.Euler(-2f, 180f * i, 0f);
+                    keilaT.gameObject.SetActive(false);
+                }
+            }
+            koneT.gameObject.SetActive(false);
+        }
+
+        void PaivitaTaivas(Vector3 c)
+        {
+            if (taivas == null) return;
+            float t = Time.time, yo = KaupunkiYovalot.Osuus;
+            taivas.Paivita(t, c.x, c.y, c.z, yo < 0.3f);
+            bool parvi = taivas.Parvi != null;
+            if (parviJuuri.gameObject.activeSelf != parvi) parviJuuri.gameObject.SetActive(parvi);
+            if (parvi)
+                for (int j = 0; j < lintuT.Length; j++)
+                {
+                    var b = taivas.Lintu(j, t);
+                    lintuT[j].localPosition = new Vector3((float)b.x, (float)b.y, (float)b.z);
+                    lintuT[j].localRotation = Quaternion.Euler(0, (float)b.suunta, 0);
+                    float siipi = 6f + 30f * Mathf.Sin(2f * Mathf.PI * (float)b.siipi);
+                    lintuV[j].localRotation = Quaternion.Euler(0, 0, -siipi); lintuO[j].localRotation = Quaternion.Euler(0, 0, siipi);
+                }
+            bool kone = taivas.Lentokone != null;
+            if (koneT.gameObject.activeSelf != kone) koneT.gameObject.SetActive(kone);
+            if (kone)
+            {
+                var k = taivas.KonePaikka(t);
+                koneT.localPosition = new Vector3((float)k.x, (float)k.y, (float)k.z);
+                koneT.localRotation = Quaternion.Euler(0, (float)taivas.Lentokone.Suunta, 0);
+                if (vanaR != null) vanaR.enabled = yo < 0.7f;   // tiivistysvana päivällä ja hämärässä
+                if (koneValot != null)
+                    for (int i = 0; i < koneValot.Length; i++)
+                    {
+                        bool palaa = yo > 0.3f && (i < 2 || Mathf.Repeat(t, 1.3f) < 0.12f);   // valkoinen vilkku
+                        if (koneValot[i].gameObject.activeSelf != palaa) koneValot[i].gameObject.SetActive(palaa);
+                    }
+            }
+            if (keilaT != null)
+            {
+                bool palaa = yo > 0.3f;
+                if (keilaT.gameObject.activeSelf != palaa) keilaT.gameObject.SetActive(palaa);
+                if (palaa)
+                {
+                    double cl = System.Math.Cos(lat0 * System.Math.PI / 180);
+                    double x = (Eiffel.Lon - lon0) * 111320.0 * cl, z = (Eiffel.Lat - lat0) * 111132.0;
+                    if (double.IsNaN(eiffelMaa)) eiffelMaa = Maa(x, z);
+                    double maa = double.IsNaN(eiffelMaa) ? 35 : eiffelMaa;
+                    keilaT.localPosition = new Vector3((float)x, (float)(maa + Eiffel.Korkeus - 8), (float)z);
+                    keilaT.localRotation = Quaternion.Euler(0, (float)ElavaTaivas.MajakkaKulma(t), 0);
+                }
+            }
         }
 
         // ---- ELÄVÄN KAUPUNGIN ÄÄNET (Päätoimittaja 9.10., juna 170; Pelikoodari aanet/elava-kaupunki-v1, −23 LUFS, etäisyys soittimessa):
@@ -375,10 +505,12 @@ namespace Matkakirja.Natiivi
                 var klippi = kyyhky1Klippi != null && UnityEngine.Random.value < 0.3f ? kyyhky1Klippi : kyyhky2Klippi;
                 kertaLahde.PlayOneShot(klippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KyyhkyTaso * (1f - kyyhkyD / KyyhkyKuuluuM), vaisto));
             }
-            if (paalla && tu > seuraavaKone && koneKlippi != null && !vaisto)
+            if (tu > seuraavaKone && !vaisto)
             {
+                // Lentokone näkyy ja kuuluu yhdessä (ElavaTaivas.AloitaKone); ääni vain Äänimaisema-kytkimellä.
                 seuraavaKone = tu + UnityEngine.Random.Range(240f, 420f);
-                kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false));
+                taivas?.AloitaKone(Time.time, c.x, c.z);
+                if (paalla && koneKlippi != null) kertaLahde.PlayOneShot(koneKlippi, (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(KoneTaso, false));
             }
         }
 
