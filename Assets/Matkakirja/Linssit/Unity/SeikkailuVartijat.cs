@@ -188,7 +188,7 @@ namespace Matkakirja.Natiivi
                     Uppoutunut = seisoo && eka.Tunnus.StartsWith("harja", StringComparison.Ordinal),   // huone 8: katsovat järvelle
                     Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
-                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet);
+                v.Askeleet.loop = true; SaumatonSilmukka.Kiinnita(v.Askeleet); v.Askeleet.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet);
                 // Kannettu valo (pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu): oikea pistevalo ilman varjoja,
                 // joten valo kasvaa kierreportaan kaarevalla seinällä ennen kuin kantaja tulee näkyviin; liekki käden kohdalle, hehku laatutasolla.
                 var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
@@ -482,7 +482,7 @@ namespace Matkakirja.Natiivi
         /// silmukkana jalkojen kohdalta, voimakkuus pinnan ja liiketavan mukaan, tahti nopeudesta. Hiivintä kuuluu itselle hiljaa.</summary>
         void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat, double markyys = 0)
         {
-            if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; }
+            if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; SaumatonSilmukka.Kiinnita(omatAskeleet); }
             var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa, markyys);
             AudioClip klippi = null;
             foreach (var t in tunnukset) { klippi = SeikkailuAanet.Klippi(t) ?? (AskelKlipit.TryGetValue(t, out var k) ? k : null); if (klippi != null) break; }

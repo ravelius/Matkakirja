@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
                 if (!klipit.TryGetValue(u, out var sc)) { if (ladataan.Add(u)) isanta.StartCoroutine(Lataa(u)); continue; }
                 if (sc == null) continue;
                 var ol = isanta.gameObject.AddComponent<AudioSource>(); ol.playOnAwake = false; ol.spatialBlend = 0; ol.loop = true; ol.clip = sc; ol.volume = 0f;
-                ol.time = Random.Range(0f, sc.length * 0.9f); ol.Play(); omat[u] = ol;
+                ol.time = Random.Range(0f, sc.length * 0.9f); SaumatonSilmukka.Kiinnita(ol); ol.Play(); omat[u] = ol;   // saumaton (juna 174)
             }
             if (!soi || !manifesti.Kaupungit.TryGetValue(kaupunki, out var l)) return;
             double nyt = Time.unscaledTimeAsDouble;
@@ -141,6 +141,7 @@ namespace Matkakirja.Natiivi
             ladataan.Remove(polku);
             klipit[polku] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
             if (klipit[polku] != null && osoitteenId.TryGetValue(polku, out var id)) klipit[polku].name = id;
+            if (klipit[polku] != null) yield return SaumatonSilmukka.HaeTagi(osoite, klipit[polku]);
         }
 
         public void Sulje()

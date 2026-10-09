@@ -52,6 +52,7 @@ namespace Matkakirja.Natiivi
             a.spatialBlend = 1f; a.rolloffMode = AudioRolloffMode.Linear; a.minDistance = MinM * s; a.maxDistance = MaxM * s;
             a.loop = true; a.playOnAwake = false; a.dopplerLevel = 0f; a.pitch = Random.Range(0.92f, 1.08f); a.volume = 0f;
             a.priority = 200;
+            SaumatonSilmukka.Kiinnita(a);   // saumaton silmukka (juna 174)
             lahteet.Add((a, t));
             SteamAudioKoe.Rekisteroi(a);   // HRTF-koe (kehittäjäkytkin pallo.SteamAudio, oletus pois)
         }
@@ -64,6 +65,7 @@ namespace Matkakirja.Natiivi
             ladataan.Remove(t);
             klipit[t] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
             if (klipit[t] != null) klipit[t].name = AaniId(t);
+            if (klipit[t] != null) yield return SaumatonSilmukka.HaeTagi(Juuri + t + ".mp3", klipit[t]);
             if (klipit[t] == null) Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {t} ei latautunut ({r.error})");
         }
 

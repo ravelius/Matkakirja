@@ -571,6 +571,7 @@ namespace Matkakirja.Natiivi
                     yield return r.SendWebRequest();
                     if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) klipit[i] = UnityEngine.Networking.DownloadHandlerAudioClip.GetContent(r);
                     if (klipit[i] != null) klipit[i].name = KlippiNimet[i];
+                    if (i == 0 && klipit[0] != null) yield return SaumatonSilmukka.HaeTagi(AaniJuuri + nimet[0] + ".mp3", klipit[0]);   // lokkiparvi: saumaton liitos
                 }
             lokkiKlippi = klipit[0]; kyyhky1Klippi = klipit[1]; kyyhky2Klippi = klipit[2]; koneKlippi = klipit[3];
             Debug.Log($"MATKAKIRJA kaupunki: elävän kaupungin äänet {System.Array.FindAll(klipit, x => x != null).Length}/{nimet.Length}");
@@ -588,7 +589,7 @@ namespace Matkakirja.Natiivi
                 float d = Mathf.Max(0f, Vector3.Distance(new Vector3((float)p.Paikka.X, y, (float)p.Paikka.Z), c) - (float)p.Paikka.Alue * 0.5f);
                 if (p.Paikka.Kyyhky) kyyhkyD = Mathf.Min(kyyhkyD, d); else lokkiD = Mathf.Min(lokkiD, d);
             }
-            if (lokkiLahde == null) { lokkiLahde = gameObject.AddComponent<AudioSource>(); lokkiLahde.loop = true; lokkiLahde.playOnAwake = false; lokkiLahde.spatialBlend = 0; lokkiLahde.volume = 0; }
+            if (lokkiLahde == null) { lokkiLahde = gameObject.AddComponent<AudioSource>(); lokkiLahde.loop = true; lokkiLahde.playOnAwake = false; lokkiLahde.spatialBlend = 0; lokkiLahde.volume = 0; SaumatonSilmukka.Kiinnita(lokkiLahde); }
             if (kertaLahde == null) { kertaLahde = gameObject.AddComponent<AudioSource>(); kertaLahde.playOnAwake = false; kertaLahde.spatialBlend = 0; }
             bool vaisto = OpasSovitin.OpasAaniSoi;
             var mk = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;   // TF 169: kaikki pallon äänet mikserin ryhmiin; 9.10. äänikohtaisesti

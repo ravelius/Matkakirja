@@ -73,6 +73,8 @@ namespace Matkakirja.Natiivi
             yield return p.SendWebRequest();
             a.Haussa = false;
             if (p.result == UnityWebRequest.Result.Success) { a.Klippi = DownloadHandlerAudioClip.GetContent(p); a.Klippi.name = "Tehoste:" + a.Tunnus; }
+            // Silmukat ja askeleet: LAME-tagi saumattomalle liitokselle (SaumatonSilmukka; iOS-FMOD ei leikkaa kooderiviivettä).
+            if (a.Klippi != null && (a.Silmukka || a.Tunnus.StartsWith("askel", StringComparison.Ordinal))) yield return SaumatonSilmukka.HaeTagi(a.Polku, a.Klippi);
         }
 
         /// <summary>Satunnainen ladattu muunnelma (sonniss-aanet-v4: lukko-ulko-1-a/b …), muuten vara.</summary>
@@ -134,6 +136,7 @@ namespace Matkakirja.Natiivi
             {
                 if (!paalla || !s.aanet.TryGetValue(tunnus, out var a) || a.Klippi == null) return;
                 l = SeikkailuKuulija.Lahde("Silmukka:" + tunnus, 2f, 25f); l.clip = a.Klippi; l.loop = true; s.silmukat[tunnus] = l;
+                SaumatonSilmukka.Kiinnita(l);   // ~51 ms katko saumassa pois (juna 174)
             }
             SeikkailuKuulija.Aseta(l, paikka); l.volume = voimakkuus * MikserinTaso(tunnus); l.pitch = savel;
             if (paalla && !l.isPlaying) l.Play(); else if (!paalla && l.isPlaying) l.Stop();
