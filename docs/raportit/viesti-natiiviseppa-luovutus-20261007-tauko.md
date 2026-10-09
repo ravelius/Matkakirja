@@ -10,7 +10,7 @@ ajo-id:llä (mac-tf-odottaja.sh 4. arg = ajo-id, korjattu 9.10.: peruttu yöajo 
 juna/b13 → e1386897 10.36. Taukokaatumisen syy: CesiumKaupunki.Muistivahti asetti SSE:n → Cesium RecreateTileset (Cesium3DTileset.cs:255);
 korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauolla). Hätätoisto: scratchpad hata-ajo.sh <app> <tunniste>.
 **JUNA 172 = YKSI ISO JUNA (omistaja 10.3x: 172–175 yhdessä, ei välijunia/TF:iä ennen PT:n ilmoitusta)** — runko natiiviseppa/juna-172
-(wt/proto-natiiviseppa-j172) **b507cb66a** BUILD 171:n päällä; 453/420/1197, unity 0, tarkista 0. TARKISTUSLISTA:
+(wt/proto-natiiviseppa-j172) **e956b2a2a** BUILD 171:n päällä; 453/420/1197, unity 0, tarkista 0. TARKISTUSLISTA:
   [x] 172 NUI cd4553c8d (⊇ Siirtoseppä 18227438d + pysty + krediitit + ef56acf4e)
   [x] 173 Siirtoseppä f5346bac4 (⊇ 5d8e362f7 ⊇ bed0c2d97, v45z, äänet; ⊇ 174:n Siirtoseppä-osa)
   [x] 173–175 NUI 1fce56a22 (⊇ 2bb472819 ⊇ 500126589 mikseri ⊇ c00f125a9 ⊇ 9ca6e2795 ⊇ 54182ab06 ⊇ 17ee84663 ⊇ becff9f1b); konfliktit
@@ -23,7 +23,7 @@ korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauol
   [x] LS1 bd217b509 (merge 17e01cf2a: 171-erän osat + pallon mikserirekisteröinti; konflikti KaupunkiAanimaisemaSoitin → LS1:n versio kokonaan,
       KaupunkiKuuroTestit → molemmat testit)
   [x] Siirtoseppä 9950cb17e (historia-elokuva + 3 korjausta, loppumusiikki, hahmokorvaus, glb sparse, linnan äänet mikseriin)
-  [x] Siirtoseppä 6718cf807 (⊇ cb262e9c6 ⊇ 9950cb17e; arvio 2: saaren materiaali, valopisteet pois; PelattavaPala v46a 460ceacae1645a3a: Codex-rekvisiitta 12 + tammiovet, 825/825 200)
+  [x] Siirtoseppä d4c4f9958 (v46b 28e7c5d85c964309 + DioraamaValaistu alfaleikkaus; LUKITUSEHTO: Siirtosepän arvio 3 -laitekäännös ilman varjostinvirheitä) ⊇ 6718cf807 (⊇ cb262e9c6 ⊇ 9950cb17e; arvio 2: saaren materiaali, valopisteet pois; PelattavaPala v46a 460ceacae1645a3a: Codex-rekvisiitta 12 + tammiovet, 825/825 200)
   [ ] LS1:n kamera/kohtauslista-korjaukset
   [x] NUI 0f2a2cec1 (⊇ fe8d84616 katalogikuvat havainne-v2 + 7 foto-minikuvaa varusteille; loput NUI:lta Codexin erän mukana)
   [x] LS1 Steam Audio -koe 4869a5dc9 (kytkin oletuksena pois; AudioManager spatializer = Steam Audio) + OMA a1b13e5ee ENABLE_BITCODE NO;
