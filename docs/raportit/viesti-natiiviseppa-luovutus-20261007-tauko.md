@@ -9,7 +9,7 @@ tarkista 0; EI vielä käännetty) ← 90c7bb19a = 9851acae5 + LS1 kierros-170 8
 testit 453/419/1137, unity 0, tarkista 0. Käännös 8fae5eb43:sta (ca4221d88, 03.55, 0 varjostinvirhettä; app lokit/natiiviseppa-app-170-8fae5eb43).
 YÖKUVAPARI (lokit/yo170-arkki-{pariisi,tukholma}-ca4221d8.png): yövalot EIVÄT näy, vaikka loki sanoo "9/9 laattaa"; taivas ja vedet mustat → PT, LS1, LS2.
 Ehto LS1:lle (varjostimet + yökuvapari) ei täyty → odota LS1:n korjausta. Ajo: scratchpad yo170-ajo.sh <runko> kaanna|simu (vaatii NYT:t).
-Puuttuu: LS1:n yövalojen näkyvyyskorjaus (PT), LS1 9b83405fc/9ea01b5a0 EI kuitattu. Sen jälkeen käännös + yökuvapari uudelleen.
++ LS2 0bf2ed7b2 (Lahderivit; korvaa b1e23a065). Puuttuu: NUI:n Lähteet › Kartta-aineistot -rivi omista malleista (PT: samaan versioon), LS1:n yövalojen näkyvyyskorjaus (PT), LS1 9b83405fc/9ea01b5a0 EI kuitattu. Sen jälkeen käännös + yökuvapari uudelleen.
 Filmi rungossa (rae 0,32). PT: 170 TF vasta omistajan TF 169 -palautteen jälkeen (iltapäivä). TF 169 ajo 37864329025, Mac-odottaja käynnissä.
 
 ## TILA 9.10. 03.2x
@@ -20,6 +20,7 @@ app lokit/natiiviseppa-app-169-e9802f2d1). iOS TF 169 ajo 37864329025 (Julkaisij
 8a23d6508 + NUI fcc8d81f7 (äänilähteet 54; konflikti 9b7bb7134-cherry-pickin takia → NUI:n versio, metro-kyltti säilyi) + filmi 8309c2f47; testit
 453/419/1122, unity 0, tarkista 0. ODOTTAA: simukäännös (Julkaisijan NYT, varjostinehto), Siirtoseppä 778202265 (LS2:n muistitestin jälkeen), kuvaparit.
 FILMI-kuvapari: käännös 2fa4e772e (03.20), ajo filmi-ajo.sh scratchpadissa → arkit lokit/filmi170-arkki-{tukholma,pariisi}-2fa4e772.png → PT.
+JUNA 172 kärki: Siirtoseppä e00415cea (PT 04.3x; otetyypit tulevat päälle).
 JUNA 171 kärki: **Siirtoseppä 9bd44cca6** (⊇ NUI 2a0d607be: napautus ei lopeta historiaa, avainsana 4 s) ← 2a0d607be (04.2x, ⊇ 49786e8dc; historian Ohita-nappi, VoiceOver) ← 49786e8dc = 516ff1b32 (puut identtiset, kumpi tahansa; PT/Siirtoseppä/NUI viestivät ristiin; ⊇ 90a93e5ad + a918d7e97: alkuvalinta, ☰ Linnan historia, tuuli-metsa, luuta);
 jatkokärjet sen päälle.
 JUNA 170 runko nyt **9851acae5** (+ Siirtoseppä 778202265: v45x, K3, äänet, historia-animaatio; LS2:n muistitesti +0 Mt; Linssit 1130; v45x-data ämpäriin ennen junaa) ← 8b7a0d42f (+ filmi 6764bd924: rae 0,32 / yö 0,36, PT: 0,45 taivaalla likainen; Linssit 1122). PT 03.2x: 170 EI yöllä, TF omistajan
