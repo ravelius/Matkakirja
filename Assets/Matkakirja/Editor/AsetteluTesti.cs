@@ -50,7 +50,7 @@ namespace Matkakirja.Editori
         };
 
         enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Pallo, OdotaPallo, Mikseri, OdotaMikseri, Chat, OdotaChat, Pin, OdotaPin, Palkki, OdotaPalkki, Nosto, OdotaNosto,
-            Taulu, OdotaTaulu, Linna, OdotaLinna, Loyto, OdotaLoyto,
+            Taulu, OdotaTaulu, Nakyma, OdotaNakyma, Linna, OdotaLinna, Loyto, OdotaLoyto,
             Tietokerros, AvaaTietokerros, OdotaTietokerros,
             Lopeta, OdotaLoppua, Valmis }
 
@@ -266,7 +266,26 @@ namespace Matkakirja.Editori
                     else TarkistaPaneeli(taulu.TestiPaneeli, LinssiUi.Ylakerros, "ISS-taulu");
                     taulu.Testaa("kiinni", "");
                     taulu.LinssiVaihtui(false);
-                    Siirry(Vaihe.Linna);
+                    nakymaNro = 0;
+                    Siirry(Vaihe.Nakyma);
+                    break;
+                }
+                case Vaihe.Nakyma:
+                    // Isot näkymät yksi kerrallaan: ennen avausta näkyvät napit talteen, avauksen jälkeen uudet tarkistetaan.
+                    if (nakymaNro >= Nakymat.Length) { Siirry(Vaihe.Linna); break; }
+                    if (kehyksia < 10) return;
+                    ennen = NakyvatOhjaimet();
+                    Nakymat[nakymaNro].Avaa();
+                    Siirry(Vaihe.OdotaNakyma);
+                    break;
+                case Vaihe.OdotaNakyma:
+                {
+                    var n = Nakymat[nakymaNro];
+                    if (kehyksia < 20 || Kulunut < n.OdotusS) return;
+                    TarkistaUudet(n.Nimi);
+                    try { n.Sulje(); } catch (Exception e) { Virhe($"{n.Nimi}: sulku kaatui {e.Message}"); }
+                    nakymaNro++;
+                    Siirry(Vaihe.Nakyma);
                     break;
                 }
                 case Vaihe.Linna:
@@ -480,6 +499,88 @@ namespace Matkakirja.Editori
             if (!Nakyvissa(p) || p.resolvedStyle.visibility == Visibility.Hidden) { Virhe($"{nimi}: ei näkyvissä"); return; }
             Kokonaan(p, TurvaAlue(p, kerros), nimi);
             Kirjaa($"-- {nimi}: peitto {Peitto(p, p):P0}");
+        }
+
+        static int nakymaNro;
+        static HashSet<VisualElement> ennen = new HashSet<VisualElement>();
+
+        /// <summary>Isot näkymät (PT 9.10.2026): avaus samoin kuin UiKomennot-testikomennoilla, sulku, odotus ennen tarkistusta.</summary>
+        static readonly (string Nimi, Action Avaa, Action Sulje, double OdotusS)[] Nakymat =
+        {
+            ("kaupunkilehti", () => UiNakymat.Hae().Lehti.Nayta(LehtiLaji.Kaupunki, "firenze", null, 1), () => UiNakymat.Hae().Lehti.Sulje(), 3.0),
+            ("nähtävyys", () => Kohdekartat.Hae("firenze", k =>
+                {
+                    var kohde = k?.Kohteet.Find(x => x.Selattava);
+                    if (kohde != null) UiNakymat.Hae().Nahtavyydet.AvaaKohde(k, kohde);
+                }), () => UiNakymat.Hae().Nahtavyydet.SuljeKokonaan(), 3.0),
+            ("päävalikko", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.Avaa(); }, () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 1.0),
+            ("asetukset", () => UiNakymat.Hae().Aanentasot.Avaa(), () => UiNakymat.Hae().Aanentasot.Sulje(), 1.0),
+        };
+
+        /// <summary>Kaikkien kerrosten näkyvät napit ja tekstit (ketju display ≠ None, visibility, peitto > 0,01, mitoittunut).</summary>
+        static HashSet<VisualElement> NakyvatOhjaimet()
+        {
+            var tulos = new HashSet<VisualElement>();
+            foreach (var (_, juuri) in UiKerros.Hae().Juuret)
+                juuri.Query<VisualElement>().ForEach(e =>
+                {
+                    if (!(e is Button) && !(e is TextElement t && !string.IsNullOrWhiteSpace(t.text))) return;
+                    if (e is TextElement && e.parent is Button) return;   // napin teksti tarkistetaan nappina
+                    if (Nakyva(e)) tulos.Add(e);
+                });
+            return tulos;
+        }
+
+        static bool Nakyva(VisualElement e)
+        {
+            var b = e.worldBound;
+            if (!(b.width >= 1f && b.height >= 1f)) return false;
+            for (var p = e; p != null; p = p.parent)
+                if (p.resolvedStyle.display == DisplayStyle.None || p.resolvedStyle.visibility == Visibility.Hidden || p.resolvedStyle.opacity < 0.01f)
+                    return false;
+            return true;
+        }
+
+        /// <summary>Avauksen jälkeen uudet näkyvät napit ja tekstit: kokonaan turva-alueella (vierityslistan sisältö: vain napit
+        /// ja vain vieritysikkunan sisällä olevat). Enintään 6 vikariviä näkymää kohden.</summary>
+        static void TarkistaUudet(string nimi)
+        {
+            var uudet = NakyvatOhjaimet().Where(e => !ennen.Contains(e)).ToList();
+            if (uudet.Count == 0) { Virhe($"{nimi}: ei avautunut (ei uusia näkyviä elementtejä)"); return; }
+            int viat = 0, ok = 0;
+            foreach (var e in uudet)
+            {
+                var sv = e.GetFirstAncestorOfType<ScrollView>();
+                var b = e.worldBound;
+                if (sv != null)
+                {
+                    var ikkuna = sv.contentViewport.worldBound;
+                    if (b.yMax < ikkuna.yMin || b.yMin > ikkuna.yMax) continue;   // vierityksen takana: ei tarkisteta
+                }
+                var koko = e.panel.visualTree.layout;
+                var turva = RuudunTurva(koko);
+                const float Vara = 0.5f;
+                if (b.xMin >= turva.xMin - Vara && b.xMax <= turva.xMax + Vara && b.yMin >= turva.yMin - Vara && b.yMax <= turva.yMax + Vara) { ok++; continue; }
+                if (++viat <= 6)
+                    Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
+            }
+            if (viat > 6) Kirjaa($"-- {nimi}: {viat - 6} muuta vikaa");
+            Kirjaa($"{(viat == 0 ? "OK" : "--")} {nimi}: {ok} elementtiä turva-alueella, {uudet.Count} uutta");
+        }
+
+        static string Lyhyt(VisualElement e)
+        {
+            string t = e is TextElement te ? te.text : e.Q<TextElement>()?.text ?? e.tooltip ?? e.GetClasses().FirstOrDefault() ?? "-";
+            t = (t ?? "-").Replace("\n", " ");
+            return t.Length > 30 ? t.Substring(0, 30) + "…" : t;
+        }
+
+        /// <summary>Laitteen turva-alue paneelin pisteinä (UiRuutu: pikselit, origo vasen alakulma).</summary>
+        static Rect RuudunTurva(Rect koko)
+        {
+            float s = UiRuutu.Korkeus > 0 ? koko.height / UiRuutu.Korkeus : 1f;
+            var t = UiRuutu.Turva;
+            return Rect.MinMaxRect(t.xMin * s, (UiRuutu.Korkeus - t.yMax) * s, t.xMax * s, (UiRuutu.Korkeus - t.yMin) * s);
         }
 
         static void TarkistaMikseri()
