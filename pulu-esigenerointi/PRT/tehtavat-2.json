@@ -1,0 +1,3590 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:torre",
+  "kasite": "Serra da Estrelan",
+  "kysymys": "Kerro lisää: Serra da Estrelan"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:torre",
+  "kasite": "Portugalin",
+  "kysymys": "Kerro lisää: Portugalin"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:torre",
+  "kasite": "Sistema Centralin",
+  "kysymys": "Kerro lisää: Sistema Centralin"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:torre",
+  "kasite": "Torren",
+  "kysymys": "Kerro lisää: Torren"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:torre",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:torre",
+  "kasite": "Bordaleira-lampaan",
+  "kysymys": "Kerro lisää: Bordaleira-lampaan"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:torre",
+  "kasite": "ohdakkeen",
+  "kysymys": "Kerro lisää: ohdakkeen"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:torre",
+  "kasite": "alkuperänimityksen",
+  "kysymys": "Kerro lisää: alkuperänimityksen"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:torre",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:torre",
+  "kasite": "Zêzere-joen",
+  "kysymys": "Kerro lisää: Zêzere-joen"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:torre",
+  "kasite": "Mondego",
+  "kysymys": "Kerro lisää: Mondego"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:torre",
+  "kasite": "Zêzere",
+  "kysymys": "Kerro lisää: Zêzere"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:torre",
+  "kasite": "Tejoon",
+  "kysymys": "Kerro lisää: Tejoon"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:atlantti",
+  "kasite": "Henrik Merenkulkija",
+  "kysymys": "Kerro lisää: Henrik Merenkulkija"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:atlantti",
+  "kasite": "karavellia",
+  "kysymys": "Kerro lisää: karavellia"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:atlantti",
+  "kasite": "Bartolomeu Dias",
+  "kysymys": "Kerro lisää: Bartolomeu Dias"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:atlantti",
+  "kasite": "Vasco da Gama",
+  "kysymys": "Kerro lisää: Vasco da Gama"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:atlantti",
+  "kasite": "Azorien",
+  "kysymys": "Kerro lisää: Azorien"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:atlantti",
+  "kasite": "kaskelotti",
+  "kysymys": "Kerro lisää: kaskelotti"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:atlantti",
+  "kasite": "Pohjois-Atlantin virta",
+  "kysymys": "Kerro lisää: Pohjois-Atlantin virta"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:atlantti",
+  "kasite": "Norjan",
+  "kysymys": "Kerro lisää: Norjan"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:atlantti",
+  "kasite": "Britannian saarten",
+  "kysymys": "Kerro lisää: Britannian saarten"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:atlantti",
+  "kasite": "laattatektoniikka",
+  "kysymys": "Kerro lisää: laattatektoniikka"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:atlantti",
+  "kasite": "Islanti",
+  "kysymys": "Kerro lisää: Islanti"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:atlantti",
+  "kasite": "Atlasta",
+  "kysymys": "Kerro lisää: Atlasta"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:atlantti",
+  "kasite": "Herodotoksen",
+  "kysymys": "Kerro lisää: Herodotoksen"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:tejo",
+  "kasite": "Tejon",
+  "kysymys": "Kerro lisää: Tejon"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:tejo",
+  "kasite": "Vuorovesi",
+  "kysymys": "Kerro lisää: Vuorovesi"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:tejo",
+  "kasite": "Lissabon",
+  "kysymys": "Kerro lisää: Lissabon"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:tejo",
+  "kasite": "Azoreilta",
+  "kysymys": "Kerro lisää: Azoreilta"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:tejo",
+  "kasite": "Gibraltarin salmen",
+  "kysymys": "Kerro lisää: Gibraltarin salmen"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:tejo",
+  "kasite": "Pombalin markiisi",
+  "kysymys": "Kerro lisää: Pombalin markiisi"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:tejo",
+  "kasite": "Baixan",
+  "kysymys": "Kerro lisää: Baixan"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:tejo",
+  "kasite": "Voltaire",
+  "kysymys": "Kerro lisää: Voltaire"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:tejo",
+  "kasite": "Teruelin",
+  "kysymys": "Kerro lisää: Teruelin"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:tejo",
+  "kasite": "Toledon",
+  "kysymys": "Kerro lisää: Toledon"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:tejo",
+  "kasite": "flamingoja",
+  "kysymys": "Kerro lisää: flamingoja"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:tejo",
+  "kasite": "kahlaajia",
+  "kysymys": "Kerro lisää: kahlaajia"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:douro",
+  "kasite": "portviiniä",
+  "kysymys": "Kerro lisää: portviiniä"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:douro",
+  "kasite": "Portoon",
+  "kysymys": "Kerro lisää: Portoon"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:douro",
+  "kasite": "Alto Douron",
+  "kysymys": "Kerro lisää: Alto Douron"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:douro",
+  "kasite": "Pico de Urbiónin",
+  "kysymys": "Kerro lisää: Pico de Urbiónin"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:douro",
+  "kasite": "Duero",
+  "kysymys": "Kerro lisää: Duero"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:douro",
+  "kasite": "Portossa",
+  "kysymys": "Kerro lisää: Portossa"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:douro",
+  "kasite": "Dom Luís I -silta",
+  "kysymys": "Kerro lisää: Dom Luís I -silta"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:douro",
+  "kasite": "Vila Nova de Gaian",
+  "kysymys": "Kerro lisää: Vila Nova de Gaian"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:douro",
+  "kasite": "Gustave Eiffelin",
+  "kysymys": "Kerro lisää: Gustave Eiffelin"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:douro",
+  "kasite": "rabelo-veneillä",
+  "kysymys": "Kerro lisää: rabelo-veneillä"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:douro",
+  "kasite": "Espanjan",
+  "kysymys": "Kerro lisää: Espanjan"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:douro",
+  "kasite": "Portugalin",
+  "kysymys": "Kerro lisää: Portugalin"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:sintra",
+  "kasite": "Sintran vuoriston",
+  "kysymys": "Kerro lisää: Sintran vuoriston"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:sintra",
+  "kasite": "Ferdinand II:n",
+  "kysymys": "Kerro lisää: Ferdinand II:n"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:sintra",
+  "kasite": "Penha Verdestä",
+  "kysymys": "Kerro lisää: Penha Verdestä"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:sintra",
+  "kasite": "São Pedro de Canaferrimista",
+  "kysymys": "Kerro lisää: São Pedro de Canaferrimista"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:sintra",
+  "kasite": "Sintran",
+  "kysymys": "Kerro lisää: Sintran"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:sintra",
+  "kasite": "maurit",
+  "kysymys": "Kerro lisää: maurit"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:sintra",
+  "kasite": "Lissabon",
+  "kysymys": "Kerro lisää: Lissabon"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:sintra",
+  "kasite": "Ferdinand II",
+  "kysymys": "Kerro lisää: Ferdinand II"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:sintra",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:sintra",
+  "kasite": "Cabo da Rocan",
+  "kysymys": "Kerro lisää: Cabo da Rocan"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:sintra",
+  "kasite": "Carvalho Monteiron",
+  "kysymys": "Kerro lisää: Carvalho Monteiron"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:sintra",
+  "kasite": "Luigi Maninin",
+  "kysymys": "Kerro lisää: Luigi Maninin"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:batalha",
+  "kasite": "Kastilian",
+  "kysymys": "Kerro lisää: Kastilian"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:batalha",
+  "kasite": "Juhana I",
+  "kysymys": "Kerro lisää: Juhana I"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:batalha",
+  "kasite": "Avisin",
+  "kysymys": "Kerro lisää: Avisin"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:batalha",
+  "kasite": "Afonso Domingues",
+  "kysymys": "Kerro lisää: Afonso Domingues"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:batalha",
+  "kasite": "Huguet",
+  "kysymys": "Kerro lisää: Huguet"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:batalha",
+  "kasite": "liekkigotiikan",
+  "kysymys": "Kerro lisää: liekkigotiikan"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:batalha",
+  "kasite": "Jerónimosin",
+  "kysymys": "Kerro lisää: Jerónimosin"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:batalha",
+  "kasite": "Ranskassa",
+  "kysymys": "Kerro lisää: Ranskassa"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:batalha",
+  "kasite": "manueliinityyliin",
+  "kysymys": "Kerro lisää: manueliinityyliin"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:batalha",
+  "kasite": "Manuel I:n",
+  "kysymys": "Kerro lisää: Manuel I:n"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:batalha",
+  "kasite": "Jerónimosin luostari",
+  "kysymys": "Kerro lisää: Jerónimosin luostari"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:batalha",
+  "kasite": "Belémin torni",
+  "kysymys": "Kerro lisää: Belémin torni"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:batalha",
+  "kasite": "Dominic de Guzmán",
+  "kysymys": "Kerro lisää: Dominic de Guzmán"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:batalha",
+  "kasite": "Batalhan",
+  "kysymys": "Kerro lisää: Batalhan"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:tomar",
+  "kasite": "Dionysios",
+  "kysymys": "Kerro lisää: Dionysios"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:tomar",
+  "kasite": "Johannes XXII",
+  "kysymys": "Kerro lisää: Johannes XXII"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:tomar",
+  "kasite": "Kristuksen ritarikunta",
+  "kysymys": "Kerro lisää: Kristuksen ritarikunta"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:tomar",
+  "kasite": "Temppeliherrat",
+  "kysymys": "Kerro lisää: Temppeliherrat"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:tomar",
+  "kasite": "Gualdim Pais",
+  "kysymys": "Kerro lisää: Gualdim Pais"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:tomar",
+  "kasite": "Troyesin kirkolliskokouksessa",
+  "kysymys": "Kerro lisää: Troyesin kirkolliskokouksessa"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:tomar",
+  "kasite": "ristiretkien",
+  "kysymys": "Kerro lisää: ristiretkien"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:tomar",
+  "kasite": "Filip IV",
+  "kysymys": "Kerro lisää: Filip IV"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:tomar",
+  "kasite": "Henrik Merenkulkija",
+  "kysymys": "Kerro lisää: Henrik Merenkulkija"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:tomar",
+  "kasite": "Bartolomeu Dias",
+  "kysymys": "Kerro lisää: Bartolomeu Dias"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:tomar",
+  "kasite": "Vasco da Gama",
+  "kysymys": "Kerro lisää: Vasco da Gama"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:tomar",
+  "kasite": "Fado",
+  "kysymys": "Kerro lisää: Fado"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:tomar",
+  "kasite": "portugalilainen kitara",
+  "kysymys": "Kerro lisää: portugalilainen kitara"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:tomar",
+  "kasite": "Amália Rodrigues",
+  "kysymys": "Kerro lisää: Amália Rodrigues"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Asturian",
+  "kysymys": "Kerro lisää: Asturian"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Porton",
+  "kysymys": "Kerro lisää: Porton"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Portugalin kreivikunta",
+  "kysymys": "Kerro lisää: Portugalin kreivikunta"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Afonso Henriques",
+  "kysymys": "Kerro lisää: Afonso Henriques"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Teresan",
+  "kysymys": "Kerro lisää: Teresan"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Portugalin kreivikunnassa",
+  "kysymys": "Kerro lisää: Portugalin kreivikunnassa"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Ateena",
+  "kysymys": "Kerro lisää: Ateena"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Melina Mercourin",
+  "kysymys": "Kerro lisää: Melina Mercourin"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Mariborin",
+  "kysymys": "Kerro lisää: Mariborin"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Zamoran",
+  "kysymys": "Kerro lisää: Zamoran"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Aleksanteri III",
+  "kysymys": "Kerro lisää: Aleksanteri III"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Lissabonin",
+  "kysymys": "Kerro lisää: Lissabonin"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:guimaraes",
+  "kasite": "ICOMOS",
+  "kysymys": "Kerro lisää: ICOMOS"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:guimaraes",
+  "kasite": "Maailmanperintökomitea",
+  "kysymys": "Kerro lisää: Maailmanperintökomitea"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:guimaraes",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:almendres",
+  "kasite": "Évoran",
+  "kysymys": "Kerro lisää: Évoran"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:almendres",
+  "kasite": "Alentejossa",
+  "kysymys": "Kerro lisää: Alentejossa"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:almendres",
+  "kasite": "menhirien",
+  "kysymys": "Kerro lisää: menhirien"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:almendres",
+  "kasite": "megaliittirakenteille",
+  "kysymys": "Kerro lisää: megaliittirakenteille"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:almendres",
+  "kasite": "Carnacin",
+  "kysymys": "Kerro lisää: Carnacin"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:almendres",
+  "kasite": "Bretagnen",
+  "kysymys": "Kerro lisää: Bretagnen"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:almendres",
+  "kasite": "megaliittikulttuureihin",
+  "kysymys": "Kerro lisää: megaliittikulttuureihin"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:almendres",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:almendres",
+  "kasite": "Capela dos Ossos",
+  "kysymys": "Kerro lisää: Capela dos Ossos"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:almendres",
+  "kasite": "kallioperää",
+  "kysymys": "Kerro lisää: kallioperää"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:almendres",
+  "kasite": "malmien",
+  "kysymys": "Kerro lisää: malmien"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:almendres",
+  "kasite": "Henrique Leonor Pina",
+  "kysymys": "Kerro lisää: Henrique Leonor Pina"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:saovicente",
+  "kasite": "Herakleen",
+  "kysymys": "Kerro lisää: Herakleen"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:saovicente",
+  "kasite": "Promontorium Sacrum",
+  "kysymys": "Kerro lisää: Promontorium Sacrum"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:saovicente",
+  "kasite": "Strabon",
+  "kysymys": "Kerro lisää: Strabon"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:saovicente",
+  "kasite": "Vincentin",
+  "kysymys": "Kerro lisää: Vincentin"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:saovicente",
+  "kasite": "korpit",
+  "kysymys": "Kerro lisää: korpit"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:saovicente",
+  "kasite": "Afonso Henriques",
+  "kysymys": "Kerro lisää: Afonso Henriques"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:saovicente",
+  "kasite": "Lissaboniin",
+  "kysymys": "Kerro lisää: Lissaboniin"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:saovicente",
+  "kasite": "Geographica",
+  "kysymys": "Kerro lisää: Geographica"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:saovicente",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:saovicente",
+  "kasite": "Iberian niemimaasta",
+  "kysymys": "Kerro lisää: Iberian niemimaasta"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:saovicente",
+  "kasite": "Faro",
+  "kysymys": "Kerro lisää: Faro"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:saovicente",
+  "kasite": "al-Gharb",
+  "kysymys": "Kerro lisää: al-Gharb"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:saovicente",
+  "kasite": "São Vicenten",
+  "kysymys": "Kerro lisää: São Vicenten"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:saovicente",
+  "kasite": "kompassia",
+  "kysymys": "Kerro lisää: kompassia"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:saovicente",
+  "kasite": "astrolabilla",
+  "kysymys": "Kerro lisää: astrolabilla"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:saovicente",
+  "kasite": "John Harrisonin",
+  "kysymys": "Kerro lisää: John Harrisonin"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:elvas",
+  "kasite": "tykistön",
+  "kysymys": "Kerro lisää: tykistön"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:elvas",
+  "kasite": "bastionit",
+  "kysymys": "Kerro lisää: bastionit"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:elvas",
+  "kasite": "tähtilinnoitukseksi",
+  "kysymys": "Kerro lisää: tähtilinnoitukseksi"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:elvas",
+  "kasite": "painovoiman",
+  "kysymys": "Kerro lisää: painovoiman"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:elvas",
+  "kasite": "Alentejon",
+  "kysymys": "Kerro lisää: Alentejon"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:elvas",
+  "kasite": "Tejon",
+  "kysymys": "Kerro lisää: Tejon"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:elvas",
+  "kasite": "tähtilinnoituksiksi",
+  "kysymys": "Kerro lisää: tähtilinnoituksiksi"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:elvas",
+  "kasite": "maailmanperintösopimus",
+  "kysymys": "Kerro lisää: maailmanperintösopimus"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:elvas",
+  "kasite": "yhdistelmäkohteita",
+  "kysymys": "Kerro lisää: yhdistelmäkohteita"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:elvas",
+  "kasite": "Elvasin varuskuntarajakaupunki",
+  "kysymys": "Kerro lisää: Elvasin varuskuntarajakaupunki"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:elvas",
+  "kasite": "altaisiin",
+  "kysymys": "Kerro lisää: altaisiin"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:elvas",
+  "kasite": "akvedukteja",
+  "kysymys": "Kerro lisää: akvedukteja"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:obidos",
+  "kasite": "Afonso II",
+  "kysymys": "Kerro lisää: Afonso II"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:obidos",
+  "kasite": "Afonso Henriquesin",
+  "kysymys": "Kerro lisää: Afonso Henriquesin"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:obidos",
+  "kasite": "Sancho I",
+  "kysymys": "Kerro lisää: Sancho I"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:obidos",
+  "kasite": "Eburobrittium",
+  "kysymys": "Kerro lisää: Eburobrittium"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:obidos",
+  "kasite": "linna",
+  "kysymys": "Kerro lisää: linna"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:obidos",
+  "kasite": "latinan",
+  "kysymys": "Kerro lisää: latinan"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:obidos",
+  "kasite": "kelttiläisten",
+  "kysymys": "Kerro lisää: kelttiläisten"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:obidos",
+  "kasite": "romaanisissa kielissä",
+  "kysymys": "Kerro lisää: romaanisissa kielissä"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:obidos",
+  "kasite": "Lissabonin",
+  "kysymys": "Kerro lisää: Lissabonin"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:obidos",
+  "kasite": "Óbidos",
+  "kysymys": "Kerro lisää: Óbidos"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:obidos",
+  "kasite": "Reconquista",
+  "kysymys": "Kerro lisää: Reconquista"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:obidos",
+  "kasite": "Gibraltarinsalmen",
+  "kysymys": "Kerro lisää: Gibraltarinsalmen"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:obidos",
+  "kasite": "al-Andalus",
+  "kysymys": "Kerro lisää: al-Andalus"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:aveiro",
+  "kasite": "Aveiron",
+  "kysymys": "Kerro lisää: Aveiron"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:aveiro",
+  "kasite": "moliçon",
+  "kysymys": "Kerro lisää: moliçon"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:aveiro",
+  "kasite": "Ria de Aveiron",
+  "kysymys": "Kerro lisää: Ria de Aveiron"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:aveiro",
+  "kasite": "hiekkasärkän",
+  "kysymys": "Kerro lisää: hiekkasärkän"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:aveiro",
+  "kasite": "laguunin",
+  "kysymys": "Kerro lisää: laguunin"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:aveiro",
+  "kasite": "Ria de Aveiro",
+  "kysymys": "Kerro lisää: Ria de Aveiro"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:aveiro",
+  "kasite": "Venetsian laguuni",
+  "kysymys": "Kerro lisää: Venetsian laguuni"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:aveiro",
+  "kasite": "suola-altaille",
+  "kysymys": "Kerro lisää: suola-altaille"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:aveiro",
+  "kasite": "merisuola",
+  "kysymys": "Kerro lisää: merisuola"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:aveiro",
+  "kasite": "arabian",
+  "kysymys": "Kerro lisää: arabian"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:aveiro",
+  "kasite": "maurien",
+  "kysymys": "Kerro lisää: maurien"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Manuel I",
+  "kysymys": "Kerro lisää: Manuel I"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Lissabonin maanjäristyksessä",
+  "kysymys": "Kerro lisää: Lissabonin maanjäristyksessä"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Praça do Comércio",
+  "kysymys": "Kerro lisää: Praça do Comércio"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Lissabonin maanjäristys",
+  "kysymys": "Kerro lisää: Lissabonin maanjäristys"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Pombalin markiisi",
+  "kysymys": "Kerro lisää: Pombalin markiisi"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "gaiola",
+  "kysymys": "Kerro lisää: gaiola"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Vasco da Gaman",
+  "kysymys": "Kerro lisää: Vasco da Gaman"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "manuelilainen tyyli",
+  "kysymys": "Kerro lisää: manuelilainen tyyli"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Paço da Ribeira",
+  "kysymys": "Kerro lisää: Paço da Ribeira"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "maanjäristyksen",
+  "kysymys": "Kerro lisää: maanjäristyksen"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "tulivuorenpurkaukset",
+  "kysymys": "Kerro lisää: tulivuorenpurkaukset"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:hahmotelma-paco-da-ribeira",
+  "kasite": "Lissabonin maanjäristyksen",
+  "kysymys": "Kerro lisää: Lissabonin maanjäristyksen"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "Lissaboniin",
+  "kysymys": "Kerro lisää: Lissaboniin"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "Lissabonin maanjäristyksessä",
+  "kysymys": "Kerro lisää: Lissabonin maanjäristyksessä"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "kristillisen hyväntekeväisyyden",
+  "kysymys": "Kerro lisää: kristillisen hyväntekeväisyyden"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "Pombalin markiisi",
+  "kysymys": "Kerro lisää: Pombalin markiisi"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "luostarien",
+  "kysymys": "Kerro lisää: luostarien"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "lääkekasveihin",
+  "kysymys": "Kerro lisää: lääkekasveihin"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "Hospital Real de Todos-os-Santos",
+  "kysymys": "Kerro lisää: Hospital Real de Todos-os-Santos"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "latinan",
+  "kysymys": "Kerro lisää: latinan"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "hospes",
+  "kysymys": "Kerro lisää: hospes"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "luostarit",
+  "kysymys": "Kerro lisää: luostarit"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "Voltaire",
+  "kysymys": "Kerro lisää: Voltaire"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "valistusajan",
+  "kysymys": "Kerro lisää: valistusajan"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "kasite": "seismologian",
+  "kysymys": "Kerro lisää: seismologian"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Arrábidan",
+  "kysymys": "Kerro lisää: Arrábidan"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Gerês-Xurésin biosfäärialueen",
+  "kysymys": "Kerro lisää: Gerês-Xurésin biosfäärialueen"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "iberianhukka",
+  "kysymys": "Kerro lisää: iberianhukka"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "garrano-hevonen",
+  "kysymys": "Kerro lisää: garrano-hevonen"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Serra do Xurés",
+  "kysymys": "Kerro lisää: Serra do Xurés"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Gerês-Xurésin",
+  "kysymys": "Kerro lisää: Gerês-Xurésin"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Serra da Peneda",
+  "kysymys": "Kerro lisää: Serra da Peneda"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Serra do Gerês",
+  "kysymys": "Kerro lisää: Serra do Gerês"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "tammimetsät",
+  "kysymys": "Kerro lisää: tammimetsät"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "sammalet",
+  "kysymys": "Kerro lisää: sammalet"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "saniaiset",
+  "kysymys": "Kerro lisää: saniaiset"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-peneda-geres",
+  "kasite": "Peneda-Gerêsin",
+  "kysymys": "Kerro lisää: Peneda-Gerêsin"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "hiekkasärkkä",
+  "kysymys": "Kerro lisää: hiekkasärkkä"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Ria Formosa",
+  "kysymys": "Kerro lisää: Ria Formosa"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Algarven",
+  "kysymys": "Kerro lisää: Algarven"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "muuttolintujen",
+  "kysymys": "Kerro lisää: muuttolintujen"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Ramsar-alueen",
+  "kysymys": "Kerro lisää: Ramsar-alueen"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "suojelualuetta",
+  "kysymys": "Kerro lisää: suojelualuetta"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Ramsarin sopimukseen",
+  "kysymys": "Kerro lisää: Ramsarin sopimukseen"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "soita",
+  "kysymys": "Kerro lisää: soita"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "rantaniittyjä",
+  "kysymys": "Kerro lisää: rantaniittyjä"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Hiekkasaaret",
+  "kysymys": "Kerro lisää: Hiekkasaaret"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "myrskyt",
+  "kysymys": "Kerro lisää: myrskyt"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Ria Formosan",
+  "kysymys": "Kerro lisää: Ria Formosan"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Faron",
+  "kysymys": "Kerro lisää: Faron"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "Muuttolinnut",
+  "kysymys": "Kerro lisää: Muuttolinnut"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-ria-formosa",
+  "kasite": "maan magneettikenttää",
+  "kysymys": "Kerro lisää: maan magneettikenttää"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Serra da Arrábida",
+  "kysymys": "Kerro lisää: Serra da Arrábida"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "karbonaattikivestä",
+  "kysymys": "Kerro lisää: karbonaattikivestä"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Galapinhos",
+  "kysymys": "Kerro lisää: Galapinhos"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Portinho da Arrábida",
+  "kysymys": "Kerro lisää: Portinho da Arrábida"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Arrábidan luonnonpuistossa",
+  "kysymys": "Kerro lisää: Arrábidan luonnonpuistossa"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "fransiskaanit",
+  "kysymys": "Kerro lisää: fransiskaanit"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "sedimenttikivi",
+  "kysymys": "Kerro lisää: sedimenttikivi"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "kalkkikivi",
+  "kysymys": "Kerro lisää: kalkkikivi"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "dolomiitti",
+  "kysymys": "Kerro lisää: dolomiitti"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Arrábidan",
+  "kysymys": "Kerro lisää: Arrábidan"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "tammilajit",
+  "kysymys": "Kerro lisää: tammilajit"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "oliivipuut",
+  "kysymys": "Kerro lisää: oliivipuut"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "munkit",
+  "kysymys": "Kerro lisää: munkit"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-arrabida",
+  "kasite": "hengellisenä ihanteena",
+  "kysymys": "Kerro lisää: hengellisenä ihanteena"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Lagosin",
+  "kysymys": "Kerro lisää: Lagosin"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Algarven",
+  "kysymys": "Kerro lisää: Algarven"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "majakka",
+  "kysymys": "Kerro lisää: majakka"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Ponta da Piedaden",
+  "kysymys": "Kerro lisää: Ponta da Piedaden"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "sää",
+  "kysymys": "Kerro lisää: sää"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Algarvessa",
+  "kysymys": "Kerro lisää: Algarvessa"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "merenkulkijoille",
+  "kysymys": "Kerro lisää: merenkulkijoille"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "linssijärjestelmä",
+  "kysymys": "Kerro lisää: linssijärjestelmä"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "aaltojen",
+  "kysymys": "Kerro lisää: aaltojen"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "kalliokaari",
+  "kysymys": "Kerro lisää: kalliokaari"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "arabian",
+  "kysymys": "Kerro lisää: arabian"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Iberian niemimaata",
+  "kysymys": "Kerro lisää: Iberian niemimaata"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Portugalin",
+  "kysymys": "Kerro lisää: Portugalin"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-ponta-da-piedade",
+  "kasite": "Ponta da Piedade",
+  "kysymys": "Kerro lisää: Ponta da Piedade"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Berlengalla",
+  "kysymys": "Kerro lisää: Berlengalla"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Pyhän Hieronymuksen",
+  "kysymys": "Kerro lisää: Pyhän Hieronymuksen"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Eleonora Viseulaisen",
+  "kysymys": "Kerro lisää: Eleonora Viseulaisen"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Britannian",
+  "kysymys": "Kerro lisää: Britannian"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Berlengas",
+  "kysymys": "Kerro lisää: Berlengas"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Penichen",
+  "kysymys": "Kerro lisää: Penichen"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Atlantin",
+  "kysymys": "Kerro lisää: Atlantin"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Merilinnut",
+  "kysymys": "Kerro lisää: Merilinnut"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "matkailu",
+  "kysymys": "Kerro lisää: matkailu"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Berlengasin",
+  "kysymys": "Kerro lisää: Berlengasin"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Portugalin",
+  "kysymys": "Kerro lisää: Portugalin"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Johannes II:n",
+  "kysymys": "Kerro lisää: Johannes II:n"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Misericórdia",
+  "kysymys": "Kerro lisää: Misericórdia"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "Berlengan",
+  "kysymys": "Kerro lisää: Berlengan"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-berlengas",
+  "kasite": "purjeveneillä",
+  "kysymys": "Kerro lisää: purjeveneillä"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "niemimaasodassa",
+  "kysymys": "Kerro lisää: niemimaasodassa"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Wellingtonin herttuan",
+  "kysymys": "Kerro lisää: Wellingtonin herttuan"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Massénan",
+  "kysymys": "Kerro lisää: Massénan"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "gotiikkatyylinen",
+  "kysymys": "Kerro lisää: gotiikkatyylinen"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Côa-joen",
+  "kysymys": "Kerro lisää: Côa-joen"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Torres Vedrasin linjat",
+  "kysymys": "Kerro lisää: Torres Vedrasin linjat"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "sissisodasta",
+  "kysymys": "Kerro lisää: sissisodasta"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Manuel I",
+  "kysymys": "Kerro lisää: Manuel I"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "inkvisitio",
+  "kysymys": "Kerro lisää: inkvisitio"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Belmonten",
+  "kysymys": "Kerro lisää: Belmonten"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "sefardien",
+  "kysymys": "Kerro lisää: sefardien"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "Douro-jokeen",
+  "kysymys": "Kerro lisää: Douro-jokeen"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "kalliopiirroksista",
+  "kysymys": "Kerro lisää: kalliopiirroksista"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-sabugal",
+  "kasite": "UNESCOn maailmanperintökohteeksi",
+  "kysymys": "Kerro lisää: UNESCOn maailmanperintökohteeksi"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Terras de Cervaria",
+  "kysymys": "Kerro lisää: Terras de Cervaria"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Dinis",
+  "kysymys": "Kerro lisää: Dinis"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Minho-joen",
+  "kysymys": "Kerro lisää: Minho-joen"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Venetsian biennaali",
+  "kysymys": "Kerro lisää: Venetsian biennaali"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Vila Nova de Cerveiran",
+  "kysymys": "Kerro lisää: Vila Nova de Cerveiran"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Galiciasta",
+  "kysymys": "Kerro lisää: Galiciasta"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Atlanttiin",
+  "kysymys": "Kerro lisää: Atlanttiin"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "Coimbran yliopisto",
+  "kysymys": "Kerro lisää: Coimbran yliopisto"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "portugalin kieli",
+  "kysymys": "Kerro lisää: portugalin kieli"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "vinho verde",
+  "kysymys": "Kerro lisää: vinho verde"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "caldo verde",
+  "kysymys": "Kerro lisää: caldo verde"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "kasite": "bacalhau",
+  "kysymys": "Kerro lisää: bacalhau"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Idanha-a-Novan",
+  "kysymys": "Kerro lisää: Idanha-a-Novan"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "graniittilohkareiden",
+  "kysymys": "Kerro lisää: graniittilohkareiden"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Afonso I",
+  "kysymys": "Kerro lisää: Afonso I"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "temppeliritarikunnalle",
+  "kysymys": "Kerro lisää: temppeliritarikunnalle"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Santiagon ritarikunnalle",
+  "kysymys": "Kerro lisää: Santiagon ritarikunnalle"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Klemens V",
+  "kysymys": "Kerro lisää: Klemens V"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Kristuksen ritarikunta",
+  "kysymys": "Kerro lisää: Kristuksen ritarikunta"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "magma",
+  "kysymys": "Kerro lisää: magma"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "kvartsi",
+  "kysymys": "Kerro lisää: kvartsi"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "maasälpä",
+  "kysymys": "Kerro lisää: maasälpä"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "kiille",
+  "kysymys": "Kerro lisää: kiille"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Alcañicesin sopimuksessa",
+  "kysymys": "Kerro lisää: Alcañicesin sopimuksessa"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Kastilian",
+  "kysymys": "Kerro lisää: Kastilian"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-monsanto",
+  "kasite": "Olivenzan",
+  "kysymys": "Kerro lisää: Olivenzan"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "muwalladi",
+  "kysymys": "Kerro lisää: muwalladi"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Córdoban emiraatin",
+  "kysymys": "Kerro lisää: Córdoban emiraatin"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Badajoz",
+  "kysymys": "Kerro lisää: Badajoz"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Serra de São Mamedessa",
+  "kysymys": "Kerro lisää: Serra de São Mamedessa"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Alentejon",
+  "kysymys": "Kerro lisää: Alentejon"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "José Saramago",
+  "kysymys": "Kerro lisää: José Saramago"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "al-Andalusin",
+  "kysymys": "Kerro lisää: al-Andalusin"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Córdoban kalifaatiksi",
+  "kysymys": "Kerro lisää: Córdoban kalifaatiksi"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "hiekkakivestä",
+  "kysymys": "Kerro lisää: hiekkakivestä"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "kvartsista",
+  "kysymys": "Kerro lisää: kvartsista"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Filip II",
+  "kysymys": "Kerro lisää: Filip II"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Bragançan herttuan",
+  "kysymys": "Kerro lisää: Bragançan herttuan"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-marvao",
+  "kasite": "Johannes IV:ksi",
+  "kysymys": "Kerro lisää: Johannes IV:ksi"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Guadiana-joen",
+  "kysymys": "Kerro lisää: Guadiana-joen"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Myrtilis Iulia",
+  "kysymys": "Kerro lisää: Myrtilis Iulia"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "mihrab",
+  "kysymys": "Kerro lisää: mihrab"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Reconquista",
+  "kysymys": "Kerro lisää: Reconquista"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Cádizinlahteen",
+  "kysymys": "Kerro lisää: Cádizinlahteen"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Alquevan",
+  "kysymys": "Kerro lisää: Alquevan"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Emerita Augusta",
+  "kysymys": "Kerro lisää: Emerita Augusta"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "Viriathus",
+  "kysymys": "Kerro lisää: Viriathus"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "korkkitammia",
+  "kysymys": "Kerro lisää: korkkitammia"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-mertola",
+  "kasite": "oliivipuita",
+  "kysymys": "Kerro lisää: oliivipuita"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "Vila Nova de Foz Côassa",
+  "kysymys": "Kerro lisää: Vila Nova de Foz Côassa"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "kalliopiirroksia",
+  "kysymys": "Kerro lisää: kalliopiirroksia"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "Côa-museo",
+  "kysymys": "Kerro lisää: Côa-museo"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "hevosia",
+  "kysymys": "Kerro lisää: hevosia"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "nautoja",
+  "kysymys": "Kerro lisää: nautoja"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "paleoliittisen",
+  "kysymys": "Kerro lisää: paleoliittisen"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "vanha kivikausi",
+  "kysymys": "Kerro lisää: vanha kivikausi"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "metsästäjä-keräilijöinä",
+  "kysymys": "Kerro lisää: metsästäjä-keräilijöinä"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "okralla",
+  "kysymys": "Kerro lisää: okralla"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "Lascaux'n",
+  "kysymys": "Kerro lisää: Lascaux'n"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "Altamiran",
+  "kysymys": "Kerro lisää: Altamiran"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-foz-coa",
+  "kasite": "maailmanperintökomitea",
+  "kysymys": "Kerro lisää: maailmanperintökomitea"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Leónin",
+  "kysymys": "Kerro lisää: Leónin"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Alfonso IX",
+  "kysymys": "Kerro lisää: Alfonso IX"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Dinis",
+  "kysymys": "Kerro lisää: Dinis"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Ferdinand IV",
+  "kysymys": "Kerro lisää: Ferdinand IV"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Riba Côan",
+  "kysymys": "Kerro lisää: Riba Côan"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Asturian",
+  "kysymys": "Kerro lisää: Asturian"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Kastilian",
+  "kysymys": "Kerro lisää: Kastilian"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Alcañicesin sopimus",
+  "kysymys": "Kerro lisää: Alcañicesin sopimus"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "vallihauta",
+  "kysymys": "Kerro lisää: vallihauta"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "päätorni",
+  "kysymys": "Kerro lisää: päätorni"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "piiritystorneja",
+  "kysymys": "Kerro lisää: piiritystorneja"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Alcañicesin sopimuksella",
+  "kysymys": "Kerro lisää: Alcañicesin sopimuksella"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-castelo-rodrigo",
+  "kasite": "Olivenzan",
+  "kysymys": "Kerro lisää: Olivenzan"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "pakkokäännytyksen",
+  "kysymys": "Kerro lisää: pakkokäännytyksen"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "inkvisitio",
+  "kysymys": "Kerro lisää: inkvisitio"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "Dinis",
+  "kysymys": "Kerro lisää: Dinis"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "Marvãon",
+  "kysymys": "Kerro lisää: Marvãon"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "São Mamedeen",
+  "kysymys": "Kerro lisää: São Mamedeen"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "dolmenit",
+  "kysymys": "Kerro lisää: dolmenit"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "menhirit",
+  "kysymys": "Kerro lisää: menhirit"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "Stonehenge",
+  "kysymys": "Kerro lisää: Stonehenge"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "sapattina",
+  "kysymys": "Kerro lisää: sapattina"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "Tooraa",
+  "kysymys": "Kerro lisää: Tooraa"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "rabbi",
+  "kysymys": "Kerro lisää: rabbi"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "Coimbraan",
+  "kysymys": "Kerro lisää: Coimbraan"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "trubaduurien",
+  "kysymys": "Kerro lisää: trubaduurien"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-castelo-de-vide",
+  "kasite": "Alcañicesin sopimus",
+  "kysymys": "Kerro lisää: Alcañicesin sopimus"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "Belmonten",
+  "kysymys": "Kerro lisää: Belmonten"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "Vasco da Gaman",
+  "kysymys": "Kerro lisää: Vasco da Gaman"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "inkvisition",
+  "kysymys": "Kerro lisää: inkvisition"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "Samuel Schwarzin",
+  "kysymys": "Kerro lisää: Samuel Schwarzin"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "João III:n",
+  "kysymys": "Kerro lisää: João III:n"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "käännynnäiset",
+  "kysymys": "Kerro lisää: käännynnäiset"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "linnanpäällikön",
+  "kysymys": "Kerro lisää: linnanpäällikön"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "Afonso V",
+  "kysymys": "Kerro lisää: Afonso V"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "Osmanien valtakunnan",
+  "kysymys": "Kerro lisää: Osmanien valtakunnan"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-belmonte",
+  "kasite": "ladinossa",
+  "kysymys": "Kerro lisää: ladinossa"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Klemens V",
+  "kysymys": "Kerro lisää: Klemens V"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Kristuksen ritarikunnassa",
+  "kysymys": "Kerro lisää: Kristuksen ritarikunnassa"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Dinis",
+  "kysymys": "Kerro lisää: Dinis"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "kasteluun",
+  "kysymys": "Kerro lisää: kasteluun"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Guadianan",
+  "kysymys": "Kerro lisää: Guadianan"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Alentejon",
+  "kysymys": "Kerro lisää: Alentejon"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "La Manchan",
+  "kysymys": "Kerro lisää: La Manchan"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Cádizinlahden",
+  "kysymys": "Kerro lisää: Cádizinlahden"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Tejo-joen",
+  "kysymys": "Kerro lisää: Tejo-joen"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "korkkitammien",
+  "kysymys": "Kerro lisää: korkkitammien"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Évora",
+  "kysymys": "Kerro lisää: Évora"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Covadongan",
+  "kysymys": "Kerro lisää: Covadongan"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Algarven",
+  "kysymys": "Kerro lisää: Algarven"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-monsaraz",
+  "kasite": "Granadan",
+  "kysymys": "Kerro lisää: Granadan"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "Minhon",
+  "kysymys": "Kerro lisää: Minhon"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "Alvarinho",
+  "kysymys": "Kerro lisää: Alvarinho"
+ },
+ {
+  "n": 398,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "Santiago de Compostelan",
+  "kysymys": "Kerro lisää: Santiago de Compostelan"
+ },
+ {
+  "n": 399,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "botafumeiro",
+  "kysymys": "Kerro lisää: botafumeiro"
+ },
+ {
+  "n": 400,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "Jaakobin",
+  "kysymys": "Kerro lisää: Jaakobin"
+ },
+ {
+  "n": 401,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "arroz de sarrabulho",
+  "kysymys": "Kerro lisää: arroz de sarrabulho"
+ },
+ {
+  "n": 402,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "kaupunkioikeuksien",
+  "kysymys": "Kerro lisää: kaupunkioikeuksien"
+ },
+ {
+  "n": 403,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "latinan",
+  "kysymys": "Kerro lisää: latinan"
+ },
+ {
+  "n": 404,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "Roomassa",
+  "kysymys": "Kerro lisää: Roomassa"
+ },
+ {
+  "n": 405,
+  "kohta": "kohde:hahmotelma-ponte-de-lima",
+  "kasite": "Johann Sebastian Bach",
+  "kysymys": "Kerro lisää: Johann Sebastian Bach"
+ },
+ {
+  "n": 406,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "João IV",
+  "kysymys": "Kerro lisää: João IV"
+ },
+ {
+  "n": 407,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Katariina Braganzalainen",
+  "kysymys": "Kerro lisää: Katariina Braganzalainen"
+ },
+ {
+  "n": 408,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Kaarle II:n",
+  "kysymys": "Kerro lisää: Kaarle II:n"
+ },
+ {
+  "n": 409,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Estremozissa",
+  "kysymys": "Kerro lisää: Estremozissa"
+ },
+ {
+  "n": 410,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "kalkkikivestä",
+  "kysymys": "Kerro lisää: kalkkikivestä"
+ },
+ {
+  "n": 411,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "maureja",
+  "kysymys": "Kerro lisää: maureja"
+ },
+ {
+  "n": 412,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Reconquistan",
+  "kysymys": "Kerro lisää: Reconquistan"
+ },
+ {
+  "n": 413,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "João I",
+  "kysymys": "Kerro lisää: João I"
+ },
+ {
+  "n": 414,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "korkkitammet",
+  "kysymys": "Kerro lisää: korkkitammet"
+ },
+ {
+  "n": 415,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Évora",
+  "kysymys": "Kerro lisää: Évora"
+ },
+ {
+  "n": 416,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Algarve",
+  "kysymys": "Kerro lisää: Algarve"
+ },
+ {
+  "n": 417,
+  "kohta": "kohde:hahmotelma-vila-vicosa",
+  "kasite": "Granada",
+  "kysymys": "Kerro lisää: Granada"
+ },
+ {
+  "n": 418,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "Cádiz",
+  "kysymys": "Kerro lisää: Cádiz"
+ },
+ {
+  "n": 419,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "aakkosten",
+  "kysymys": "Kerro lisää: aakkosten"
+ },
+ {
+  "n": 420,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "oliiviöljy",
+  "kysymys": "Kerro lisää: oliiviöljy"
+ },
+ {
+  "n": 421,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 422,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "Faro",
+  "kysymys": "Kerro lisää: Faro"
+ },
+ {
+  "n": 423,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "Sagresin",
+  "kysymys": "Kerro lisää: Sagresin"
+ },
+ {
+  "n": 424,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "al-Andalus",
+  "kysymys": "Kerro lisää: al-Andalus"
+ },
+ {
+  "n": 425,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "Córdoba",
+  "kysymys": "Kerro lisää: Córdoba"
+ },
+ {
+  "n": 426,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "Sevilla",
+  "kysymys": "Kerro lisää: Sevilla"
+ },
+ {
+  "n": 427,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "kuparin",
+  "kysymys": "Kerro lisää: kuparin"
+ },
+ {
+  "n": 428,
+  "kohta": "kohde:hahmotelma-tavira",
+  "kasite": "rautakauteen",
+  "kysymys": "Kerro lisää: rautakauteen"
+ },
+ {
+  "n": 429,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "dominikaanimunkki",
+  "kysymys": "Kerro lisää: dominikaanimunkki"
+ },
+ {
+  "n": 430,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Amaranteen",
+  "kysymys": "Kerro lisää: Amaranteen"
+ },
+ {
+  "n": 431,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Bologna",
+  "kysymys": "Kerro lisää: Bologna"
+ },
+ {
+  "n": 432,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Glasgow",
+  "kysymys": "Kerro lisää: Glasgow"
+ },
+ {
+  "n": 433,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "guitarra portuguesa",
+  "kysymys": "Kerro lisää: guitarra portuguesa"
+ },
+ {
+  "n": 434,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "saudade",
+  "kysymys": "Kerro lisää: saudade"
+ },
+ {
+  "n": 435,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Amália Rodrigues",
+  "kysymys": "Kerro lisää: Amália Rodrigues"
+ },
+ {
+  "n": 436,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Wellington",
+  "kysymys": "Kerro lisää: Wellington"
+ },
+ {
+  "n": 437,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Torres Vedrasin linjat",
+  "kysymys": "Kerro lisää: Torres Vedrasin linjat"
+ },
+ {
+  "n": 438,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Peneda-Gerêsin kansallispuisto",
+  "kysymys": "Kerro lisää: Peneda-Gerêsin kansallispuisto"
+ },
+ {
+  "n": 439,
+  "kohta": "kohde:hahmotelma-amarante",
+  "kasite": "Minhon",
+  "kysymys": "Kerro lisää: Minhon"
+ },
+ {
+  "n": 440,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Aquae Flaviae",
+  "kysymys": "Kerro lisää: Aquae Flaviae"
+ },
+ {
+  "n": 441,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Vespasianus",
+  "kysymys": "Kerro lisää: Vespasianus"
+ },
+ {
+  "n": 442,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Bracara Augustan",
+  "kysymys": "Kerro lisää: Bracara Augustan"
+ },
+ {
+  "n": 443,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Tâmega-joen",
+  "kysymys": "Kerro lisää: Tâmega-joen"
+ },
+ {
+  "n": 444,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "legioonat",
+  "kysymys": "Kerro lisää: legioonat"
+ },
+ {
+  "n": 445,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "thermae",
+  "kysymys": "Kerro lisää: thermae"
+ },
+ {
+  "n": 446,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "hypocaustum",
+  "kysymys": "Kerro lisää: hypocaustum"
+ },
+ {
+  "n": 447,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Titus",
+  "kysymys": "Kerro lisää: Titus"
+ },
+ {
+  "n": 448,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Colosseum",
+  "kysymys": "Kerro lisää: Colosseum"
+ },
+ {
+  "n": 449,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "neandertalinihmiset",
+  "kysymys": "Kerro lisää: neandertalinihmiset"
+ },
+ {
+  "n": 450,
+  "kohta": "kohde:hahmotelma-chaves",
+  "kasite": "Lascaux'n",
+  "kysymys": "Kerro lisää: Lascaux'n"
+ },
+ {
+  "n": 451,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "kuparin",
+  "kysymys": "Kerro lisää: kuparin"
+ },
+ {
+  "n": 452,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "Mason and Barry",
+  "kysymys": "Kerro lisää: Mason and Barry"
+ },
+ {
+  "n": 453,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "Pomarãon",
+  "kysymys": "Kerro lisää: Pomarãon"
+ },
+ {
+  "n": 454,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "Río Tinto",
+  "kysymys": "Kerro lisää: Río Tinto"
+ },
+ {
+  "n": 455,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "Neves-Corvo",
+  "kysymys": "Kerro lisää: Neves-Corvo"
+ },
+ {
+  "n": 456,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "messinki",
+  "kysymys": "Kerro lisää: messinki"
+ },
+ {
+  "n": 457,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "pronssi",
+  "kysymys": "Kerro lisää: pronssi"
+ },
+ {
+  "n": 458,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "tunneleita",
+  "kysymys": "Kerro lisää: tunneleita"
+ },
+ {
+  "n": 459,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "kuiluja",
+  "kysymys": "Kerro lisää: kuiluja"
+ },
+ {
+  "n": 460,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "avolouhokset",
+  "kysymys": "Kerro lisää: avolouhokset"
+ },
+ {
+  "n": 461,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "maisemointia",
+  "kysymys": "Kerro lisää: maisemointia"
+ },
+ {
+  "n": 462,
+  "kohta": "kohde:hahmotelma-sao-domingos",
+  "kasite": "kaivosmuseoiksi",
+  "kysymys": "Kerro lisää: kaivosmuseoiksi"
+ },
+ {
+  "n": 463,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "kosteikkojen",
+  "kysymys": "Kerro lisää: kosteikkojen"
+ },
+ {
+  "n": 464,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "Portugalin",
+  "kysymys": "Kerro lisää: Portugalin"
+ },
+ {
+  "n": 465,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "haikarat",
+  "kysymys": "Kerro lisää: haikarat"
+ },
+ {
+  "n": 466,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "avosetit",
+  "kysymys": "Kerro lisää: avosetit"
+ },
+ {
+  "n": 467,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "flamingot",
+  "kysymys": "Kerro lisää: flamingot"
+ },
+ {
+  "n": 468,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "karotenoidit",
+  "kysymys": "Kerro lisää: karotenoidit"
+ },
+ {
+  "n": 469,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "levissä",
+  "kysymys": "Kerro lisää: levissä"
+ },
+ {
+  "n": 470,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "äyriäisissä",
+  "kysymys": "Kerro lisää: äyriäisissä"
+ },
+ {
+  "n": 471,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "Ramsarin sopimus",
+  "kysymys": "Kerro lisää: Ramsarin sopimus"
+ },
+ {
+  "n": 472,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "luonnonsuojelualueet",
+  "kysymys": "Kerro lisää: luonnonsuojelualueet"
+ },
+ {
+  "n": 473,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "magneettikenttää",
+  "kysymys": "Kerro lisää: magneettikenttää"
+ },
+ {
+  "n": 474,
+  "kohta": "kohde:hahmotelma-castro-marim",
+  "kasite": "kosteikot",
+  "kysymys": "Kerro lisää: kosteikot"
+ },
+ {
+  "n": 475,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "Trancosossa",
+  "kysymys": "Kerro lisää: Trancosossa"
+ },
+ {
+  "n": 476,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "sebastianismiin",
+  "kysymys": "Kerro lisää: sebastianismiin"
+ },
+ {
+  "n": 477,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "inkvisition",
+  "kysymys": "Kerro lisää: inkvisition"
+ },
+ {
+  "n": 478,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "Inkvisitio",
+  "kysymys": "Kerro lisää: Inkvisitio"
+ },
+ {
+  "n": 479,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "Trancoson",
+  "kysymys": "Kerro lisää: Trancoson"
+ },
+ {
+  "n": 480,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "Serra da Estrela",
+  "kysymys": "Kerro lisää: Serra da Estrela"
+ },
+ {
+  "n": 481,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "Guardan",
+  "kysymys": "Kerro lisää: Guardan"
+ },
+ {
+  "n": 482,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "Espanjasta",
+  "kysymys": "Kerro lisää: Espanjasta"
+ },
+ {
+  "n": 483,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "ladino",
+  "kysymys": "Kerro lisää: ladino"
+ },
+ {
+  "n": 484,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "marraaneina",
+  "kysymys": "Kerro lisää: marraaneina"
+ },
+ {
+  "n": 485,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "kuntiin",
+  "kysymys": "Kerro lisää: kuntiin"
+ },
+ {
+  "n": 486,
+  "kohta": "kohde:hahmotelma-trancoso",
+  "kasite": "municipioihin",
+  "kysymys": "Kerro lisää: municipioihin"
+ },
+ {
+  "n": 487,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "hehkulamppujen",
+  "kysymys": "Kerro lisää: hehkulamppujen"
+ },
+ {
+  "n": 488,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "kovametallien",
+  "kysymys": "Kerro lisää: kovametallien"
+ },
+ {
+  "n": 489,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "Panasqueiran",
+  "kysymys": "Kerro lisää: Panasqueiran"
+ },
+ {
+  "n": 490,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "wolframin",
+  "kysymys": "Kerro lisää: wolframin"
+ },
+ {
+  "n": 491,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "Silva Pinto",
+  "kysymys": "Kerro lisää: Silva Pinto"
+ },
+ {
+  "n": 492,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "Cabeço do Pião",
+  "kysymys": "Kerro lisää: Cabeço do Pião"
+ },
+ {
+  "n": 493,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "pronssin",
+  "kysymys": "Kerro lisää: pronssin"
+ },
+ {
+  "n": 494,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "pronssikausi",
+  "kysymys": "Kerro lisää: pronssikausi"
+ },
+ {
+  "n": 495,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "Serra da Estrelan",
+  "kysymys": "Kerro lisää: Serra da Estrelan"
+ },
+ {
+  "n": 496,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "Covilhã",
+  "kysymys": "Kerro lisää: Covilhã"
+ },
+ {
+  "n": 497,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "Fundão",
+  "kysymys": "Kerro lisää: Fundão"
+ },
+ {
+  "n": 498,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "sulatukseen",
+  "kysymys": "Kerro lisää: sulatukseen"
+ },
+ {
+  "n": 499,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "takomiseen",
+  "kysymys": "Kerro lisää: takomiseen"
+ },
+ {
+  "n": 500,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "miilussa",
+  "kysymys": "Kerro lisää: miilussa"
+ },
+ {
+  "n": 501,
+  "kohta": "kohde:hahmotelma-panasqueira",
+  "kasite": "puuhiiltä",
+  "kysymys": "Kerro lisää: puuhiiltä"
+ },
+ {
+  "n": 502,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "Borban",
+  "kysymys": "Kerro lisää: Borban"
+ },
+ {
+  "n": 503,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "Vila Viçosan",
+  "kysymys": "Kerro lisää: Vila Viçosan"
+ },
+ {
+  "n": 504,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "Alentejossa",
+  "kysymys": "Kerro lisää: Alentejossa"
+ },
+ {
+  "n": 505,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "Emerita Augustan Circus Maximuksen",
+  "kysymys": "Kerro lisää: Emerita Augustan Circus Maximuksen"
+ },
+ {
+  "n": 506,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "katukivinä",
+  "kysymys": "Kerro lisää: katukivinä"
+ },
+ {
+  "n": 507,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "kalkkikivestä",
+  "kysymys": "Kerro lisää: kalkkikivestä"
+ },
+ {
+  "n": 508,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "metamorfoosiksi",
+  "kysymys": "Kerro lisää: metamorfoosiksi"
+ },
+ {
+  "n": 509,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "timanttilankasahoilla",
+  "kysymys": "Kerro lisää: timanttilankasahoilla"
+ },
+ {
+  "n": 510,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "nosturein",
+  "kysymys": "Kerro lisää: nosturein"
+ },
+ {
+  "n": 511,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "korkkitammia",
+  "kysymys": "Kerro lisää: korkkitammia"
+ },
+ {
+  "n": 512,
+  "kohta": "kohde:hahmotelma-estremoz",
+  "kasite": "Lissabonin",
+  "kysymys": "Kerro lisää: Lissabonin"
+ },
+ {
+  "n": 513,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Arthur Wellesley",
+  "kysymys": "Kerro lisää: Arthur Wellesley"
+ },
+ {
+  "n": 514,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Richard Fletcher",
+  "kysymys": "Kerro lisää: Richard Fletcher"
+ },
+ {
+  "n": 515,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Masséna",
+  "kysymys": "Kerro lisää: Masséna"
+ },
+ {
+  "n": 516,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "niemimaasodan",
+  "kysymys": "Kerro lisää: niemimaasodan"
+ },
+ {
+  "n": 517,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "niemimaasodassa",
+  "kysymys": "Kerro lisää: niemimaasodassa"
+ },
+ {
+  "n": 518,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Waterloon",
+  "kysymys": "Kerro lisää: Waterloon"
+ },
+ {
+  "n": 519,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 520,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Iberian niemimaalla",
+  "kysymys": "Kerro lisää: Iberian niemimaalla"
+ },
+ {
+  "n": 521,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Oeste",
+  "kysymys": "Kerro lisää: Oeste"
+ },
+ {
+  "n": 522,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Tejo",
+  "kysymys": "Kerro lisää: Tejo"
+ },
+ {
+  "n": 523,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "Napoleon",
+  "kysymys": "Kerro lisää: Napoleon"
+ },
+ {
+  "n": 524,
+  "kohta": "kohde:hahmotelma-torres-vedras",
+  "kasite": "marsalkansauva",
+  "kysymys": "Kerro lisää: marsalkansauva"
+ },
+ {
+  "n": 525,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Junotin",
+  "kysymys": "Kerro lisää: Junotin"
+ },
+ {
+  "n": 526,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Sintran sopimus",
+  "kysymys": "Kerro lisää: Sintran sopimus"
+ },
+ {
+  "n": 527,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "niemimaasodan",
+  "kysymys": "Kerro lisää: niemimaasodan"
+ },
+ {
+  "n": 528,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 529,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Lissabonin",
+  "kysymys": "Kerro lisää: Lissabonin"
+ },
+ {
+  "n": 530,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Abrantèsin herttuaksi",
+  "kysymys": "Kerro lisää: Abrantèsin herttuaksi"
+ },
+ {
+  "n": 531,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Britannian",
+  "kysymys": "Kerro lisää: Britannian"
+ },
+ {
+  "n": 532,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "kauppasaarto",
+  "kysymys": "Kerro lisää: kauppasaarto"
+ },
+ {
+  "n": 533,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "Wellesleyn",
+  "kysymys": "Kerro lisää: Wellesleyn"
+ },
+ {
+  "n": 534,
+  "kohta": "kohde:hahmotelma-vimeiro",
+  "kasite": "João VI",
+  "kysymys": "Kerro lisää: João VI"
+ },
+ {
+  "n": 535,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "niemimaasodan",
+  "kysymys": "Kerro lisää: niemimaasodan"
+ },
+ {
+  "n": 536,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "pääruutivarastoon",
+  "kysymys": "Kerro lisää: pääruutivarastoon"
+ },
+ {
+  "n": 537,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "Espanjan",
+  "kysymys": "Kerro lisää: Espanjan"
+ },
+ {
+  "n": 538,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "vallihauta",
+  "kysymys": "Kerro lisää: vallihauta"
+ },
+ {
+  "n": 539,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "Iberian niemimaan",
+  "kysymys": "Kerro lisää: Iberian niemimaan"
+ },
+ {
+  "n": 540,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "Algarven",
+  "kysymys": "Kerro lisää: Algarven"
+ },
+ {
+  "n": 541,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "Beira Interior Norten",
+  "kysymys": "Kerro lisää: Beira Interior Norten"
+ },
+ {
+  "n": 542,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "Ludvig XIV:n",
+  "kysymys": "Kerro lisää: Ludvig XIV:n"
+ },
+ {
+  "n": 543,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "tähtilinnoitusten",
+  "kysymys": "Kerro lisää: tähtilinnoitusten"
+ },
+ {
+  "n": 544,
+  "kohta": "kohde:hahmotelma-almeida",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 545,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "merivirtojen",
+  "kysymys": "Kerro lisää: merivirtojen"
+ },
+ {
+  "n": 546,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Berlengas-saaret",
+  "kysymys": "Kerro lisää: Berlengas-saaret"
+ },
+ {
+  "n": 547,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Atouguia da Baleian",
+  "kysymys": "Kerro lisää: Atouguia da Baleian"
+ },
+ {
+  "n": 548,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Estado Novo",
+  "kysymys": "Kerro lisää: Estado Novo"
+ },
+ {
+  "n": 549,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "neilikkavallankumouksen",
+  "kysymys": "Kerro lisää: neilikkavallankumouksen"
+ },
+ {
+  "n": 550,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Estado Novon",
+  "kysymys": "Kerro lisää: Estado Novon"
+ },
+ {
+  "n": 551,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Marcelo Caetano",
+  "kysymys": "Kerro lisää: Marcelo Caetano"
+ },
+ {
+  "n": 552,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "surffauksesta",
+  "kysymys": "Kerro lisää: surffauksesta"
+ },
+ {
+  "n": 553,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "nypläyspitsi",
+  "kysymys": "Kerro lisää: nypläyspitsi"
+ },
+ {
+  "n": 554,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Berlengas-saarille",
+  "kysymys": "Kerro lisää: Berlengas-saarille"
+ },
+ {
+  "n": 555,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "kannas",
+  "kysymys": "Kerro lisää: kannas"
+ },
+ {
+  "n": 556,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Iberian niemimaa",
+  "kysymys": "Kerro lisää: Iberian niemimaa"
+ },
+ {
+  "n": 557,
+  "kohta": "kohde:hahmotelma-peniche",
+  "kasite": "Pyreneet",
+  "kysymys": "Kerro lisää: Pyreneet"
+ },
+ {
+  "n": 558,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Lissabonin suuressa maanjäristyksessä",
+  "kysymys": "Kerro lisää: Lissabonin suuressa maanjäristyksessä"
+ },
+ {
+  "n": 559,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Pombalin markiisin",
+  "kysymys": "Kerro lisää: Pombalin markiisin"
+ },
+ {
+  "n": 560,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "arkeologisena museona",
+  "kysymys": "Kerro lisää: arkeologisena museona"
+ },
+ {
+  "n": 561,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Chiadon",
+  "kysymys": "Kerro lisää: Chiadon"
+ },
+ {
+  "n": 562,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Nuno Álvares Pereira",
+  "kysymys": "Kerro lisää: Nuno Álvares Pereira"
+ },
+ {
+  "n": 563,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Avilan Teresa",
+  "kysymys": "Kerro lisää: Avilan Teresa"
+ },
+ {
+  "n": 564,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "suippokaaret",
+  "kysymys": "Kerro lisää: suippokaaret"
+ },
+ {
+  "n": 565,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "ristiholvit",
+  "kysymys": "Kerro lisää: ristiholvit"
+ },
+ {
+  "n": 566,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "tukikaaret",
+  "kysymys": "Kerro lisää: tukikaaret"
+ },
+ {
+  "n": 567,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Pombalin markiisi",
+  "kysymys": "Kerro lisää: Pombalin markiisi"
+ },
+ {
+  "n": 568,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Baixa",
+  "kysymys": "Kerro lisää: Baixa"
+ },
+ {
+  "n": 569,
+  "kohta": "kohde:hahmotelma-convento-carmo",
+  "kasite": "Praça do Comércio",
+  "kysymys": "Kerro lisää: Praça do Comércio"
+ },
+ {
+  "n": 570,
+  "kohta": "nosto:joanina",
+  "kasite": "Joanina-kirjastossa",
+  "kysymys": "Kerro lisää: Joanina-kirjastossa"
+ },
+ {
+  "n": 571,
+  "kohta": "nosto:joanina",
+  "kasite": "lepakot",
+  "kysymys": "Kerro lisää: lepakot"
+ },
+ {
+  "n": 572,
+  "kohta": "nosto:joanina",
+  "kasite": "João V",
+  "kysymys": "Kerro lisää: João V"
+ },
+ {
+  "n": 573,
+  "kohta": "nosto:joanina",
+  "kasite": "Joanina-kirjaston",
+  "kysymys": "Kerro lisää: Joanina-kirjaston"
+ },
+ {
+  "n": 574,
+  "kohta": "nosto:joanina",
+  "kasite": "Joanina-kirjasto",
+  "kysymys": "Kerro lisää: Joanina-kirjasto"
+ },
+ {
+  "n": 575,
+  "kohta": "nosto:joanina",
+  "kasite": "João V:n",
+  "kysymys": "Kerro lisää: João V:n"
+ },
+ {
+  "n": 576,
+  "kohta": "nosto:joanina",
+  "kasite": "Coimbran yliopiston",
+  "kysymys": "Kerro lisää: Coimbran yliopiston"
+ },
+ {
+  "n": 577,
+  "kohta": "nosto:nazare",
+  "kasite": "Nazarén",
+  "kysymys": "Kerro lisää: Nazarén"
+ },
+ {
+  "n": 578,
+  "kohta": "nosto:nazare",
+  "kasite": "Praia do Norten",
+  "kysymys": "Kerro lisää: Praia do Norten"
+ },
+ {
+  "n": 579,
+  "kohta": "nosto:nazare",
+  "kasite": "merenalainen kanjoni",
+  "kysymys": "Kerro lisää: merenalainen kanjoni"
+ },
+ {
+  "n": 580,
+  "kohta": "nosto:nazare",
+  "kasite": "vesijetillä",
+  "kysymys": "Kerro lisää: vesijetillä"
+ },
+ {
+  "n": 581,
+  "kohta": "nosto:nazare",
+  "kasite": "Iberian syvänmerentasankoon",
+  "kysymys": "Kerro lisää: Iberian syvänmerentasankoon"
+ },
+ {
+  "n": 582,
+  "kohta": "nosto:nazare",
+  "kasite": "merenalaisen kanjonin",
+  "kysymys": "Kerro lisää: merenalaisen kanjonin"
+ },
+ {
+  "n": 583,
+  "kohta": "nosto:saobento",
+  "kasite": "Jorge Colaço",
+  "kysymys": "Kerro lisää: Jorge Colaço"
+ },
+ {
+  "n": 584,
+  "kohta": "nosto:saobento",
+  "kasite": "Sacavémin",
+  "kysymys": "Kerro lisää: Sacavémin"
+ },
+ {
+  "n": 585,
+  "kohta": "nosto:saobento",
+  "kasite": "azulejo-laattaa",
+  "kysymys": "Kerro lisää: azulejo-laattaa"
+ },
+ {
+  "n": 586,
+  "kohta": "nosto:saobento",
+  "kasite": "Jorge Colaçon",
+  "kysymys": "Kerro lisää: Jorge Colaçon"
+ },
+ {
+  "n": 587,
+  "kohta": "nosto:saobento",
+  "kasite": "Porton",
+  "kysymys": "Kerro lisää: Porton"
+ },
+ {
+  "n": 588,
+  "kohta": "nosto:saobento",
+  "kasite": "kobolttioksidista",
+  "kysymys": "Kerro lisää: kobolttioksidista"
+ },
+ {
+  "n": 589,
+  "kohta": "nosto:saobento",
+  "kasite": "São Bento",
+  "kysymys": "Kerro lisää: São Bento"
+ },
+ {
+  "n": 590,
+  "kohta": "nosto:saobento",
+  "kasite": "José Marques da Silvan",
+  "kysymys": "Kerro lisää: José Marques da Silvan"
+ },
+ {
+  "n": 591,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "Korkkitammen",
+  "kysymys": "Kerro lisää: Korkkitammen"
+ },
+ {
+  "n": 592,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "korkkia",
+  "kysymys": "Kerro lisää: korkkia"
+ },
+ {
+  "n": 593,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "Portugalin",
+  "kysymys": "Kerro lisää: Portugalin"
+ },
+ {
+  "n": 594,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "korkkitammimetsissä",
+  "kysymys": "Kerro lisää: korkkitammimetsissä"
+ },
+ {
+  "n": 595,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "Korkkitammimetsä",
+  "kysymys": "Kerro lisää: Korkkitammimetsä"
+ },
+ {
+  "n": 596,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "laidunmetsää",
+  "kysymys": "Kerro lisää: laidunmetsää"
+ },
+ {
+  "n": 597,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "kaarnasta",
+  "kysymys": "Kerro lisää: kaarnasta"
+ },
+ {
+  "n": 598,
+  "kohta": "nosto:korkkitammi",
+  "kasite": "montado",
+  "kysymys": "Kerro lisää: montado"
+ }
+]

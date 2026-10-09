@@ -1,0 +1,1012 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Vorontsovin majakka] 1862–1955 Odessan satamansuulla seisoo punavalkoinen Vorontsovin majakka, joka kohoaa lähes 30 metrin korkeuteen – yhtä korkealle kuin kymmenkerroksinen talo. Nykyinen torni on jo kolmas samalla paikalla: ensin siellä oli puinen majakka 1800-luvun puolivälissä, sen jälkeen valurautainen torni, ja lopulta vuonna 1955 valmistui torni, joka seisoo paikalla vielä nykyäänkin. Majakan huipulla palava valo näkyy merelle yli 20 kilometrin päähän. Se vilkkuu aina samalla tunnuksellaan: kolme pitkää välähdystä, mikä on Morse-aakkosissa kirjain O – niin kuin Odessa. Sumuisina päivinä majakasta kuuluu myös kova sumutorvi, joka varoittaa laivoja karikoista. Majakka on nimetty ruhtinas Vorontsovin mukaan…
+- [San Francisco — kaupunkilehti / Alcatrazin saari: Pelikaanien saari ja lännen ensimmäinen majakka] Espanjalainen merenkulkija Juan Manuel de Ayala kartoitti lahden 1775 ja antoi nykyiselle Yerba Buena Islandille nimen La Isla de los Alcatraces; nimen siirsi myöhemmin tälle kalliolle englantilainen kapteeni Frederick W. Beechey. Nimi tarkoittanee pelikaanien saarta, ja ranskalainen kapteeni Auguste Duhaut-Cilly kirjoitti elokuussa 1827, että laukaus nosti saaren linnut pilveksi hurrikaanin äänellä. Kultaryntäyksen vilkastuttama merenkulku sai kongressin tilaamaan 1851–1852 seitsemän majakkaa länsirannikolle, ja Alcatrazin majakka valmistui niistä ensimmäisenä. Ranskalainen Fresnel-linssi tuotiin laivalla Etelä-Amerikan ympäri, ja vartija Michael Cassin sytytti valon 1. kesäkuuta 1854 — en…
+AIEMPI KYSYMYS: Mitä Ponta da Piedade tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tän minä osaan. Ponta da Piedade on portugalia ja tarkoittaa suunnilleen armon niemeä: ponta on niemi tai kärki, ja piedade tarkoittaa armoa tai sääliä. Se on niemeke ja joukko kallioita [[Lagosin]] kaupungin rannikolla [[Algarven]] alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Niemellä on [[majakka]] vuodelta 1913, ja useissa niemen luolissa voi vierailla veneellä. Nimen tarkkaa alkuperää en ole varma kertomaan. Lyhyt ja selkeä, ihan kyyhkyn tyyliin.
+KYSYMYS: Kerro lisää: majakka
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+AIEMPI KYSYMYS: Miten luolissa vieraillaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Ponta da Piedaden]] luolissa voi vierailla veneellä: niemen kalliot ovat meren puolella, ja luolat ovat kallioiden juuressa, joten niihin pääsee parhaiten vesiteitse. Veneretki kulkee kallioiden ja luolien välissä, ja matkan aikana näkee keltakultaisia kallioita, jotka ovat jopa 20 metriä korkeita. Tarkkoja retkiaikoja, hintoja tai venetyyppejä en tunne, joten ne kannattaa tarkistaa paikan päältä, sillä [[sää]] ja merenkäynti vaikuttavat retkiin. Alue sijaitsee [[Lagosin]] lähellä [[Algarvessa]]. Minun siivilläni sinne pääsee nopeammin, mutta veneellä on kai omat etunsa.
+KYSYMYS: Kerro lisää: Ponta da Piedaden
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+AIEMPI KYSYMYS: Miten luolissa vieraillaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Ponta da Piedaden]] luolissa voi vierailla veneellä: niemen kalliot ovat meren puolella, ja luolat ovat kallioiden juuressa, joten niihin pääsee parhaiten vesiteitse. Veneretki kulkee kallioiden ja luolien välissä, ja matkan aikana näkee keltakultaisia kallioita, jotka ovat jopa 20 metriä korkeita. Tarkkoja retkiaikoja, hintoja tai venetyyppejä en tunne, joten ne kannattaa tarkistaa paikan päältä, sillä [[sää]] ja merenkäynti vaikuttavat retkiin. Alue sijaitsee [[Lagosin]] lähellä [[Algarvessa]]. Minun siivilläni sinne pääsee nopeammin, mutta veneellä on kai omat etunsa.
+KYSYMYS: Kerro lisää: sää
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+AIEMPI KYSYMYS: Miten luolissa vieraillaan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. [[Ponta da Piedaden]] luolissa voi vierailla veneellä: niemen kalliot ovat meren puolella, ja luolat ovat kallioiden juuressa, joten niihin pääsee parhaiten vesiteitse. Veneretki kulkee kallioiden ja luolien välissä, ja matkan aikana näkee keltakultaisia kallioita, jotka ovat jopa 20 metriä korkeita. Tarkkoja retkiaikoja, hintoja tai venetyyppejä en tunne, joten ne kannattaa tarkistaa paikan päältä, sillä [[sää]] ja merenkäynti vaikuttavat retkiin. Alue sijaitsee [[Lagosin]] lähellä [[Algarvessa]]. Minun siivilläni sinne pääsee nopeammin, mutta veneellä on kai omat etunsa.
+KYSYMYS: Kerro lisää: Algarvessa
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+AIEMPI KYSYMYS: Miten majakka toimii?
+AIEMPI VASTAUS (Livia):
+Katotaas. Majakka on torni, jonka huipulla oleva valo kertoo [[merenkulkijoille]], missä rannikko ja vaaralliset kohdat sijaitsevat. Valo tuotetaan nykyään sähkölampulla, ja sen eteen on asetettu [[linssijärjestelmä]], joka kokoaa valon kapeaksi, kauas näkyväksi keilaksi. Linssit tai valo pyörivät tai valo sammuu ja syttyy säännöllisesti, jolloin jokaisella majakalla on oma, tunnistettava vilkkumistapansa. [[Ponta da Piedaden]] majakka on vuodelta 1913, ja se näkyy niemellä [[Lagosin]] lähellä. Aikoinaan majakkaa hoiti vartija, mutta nykyisen hoitotavan en ole varma. Minä luotan kyllä enemmän omiin silmiini.
+KYSYMYS: Kerro lisää: merenkulkijoille
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+AIEMPI KYSYMYS: Miten majakka toimii?
+AIEMPI VASTAUS (Livia):
+Katotaas. Majakka on torni, jonka huipulla oleva valo kertoo [[merenkulkijoille]], missä rannikko ja vaaralliset kohdat sijaitsevat. Valo tuotetaan nykyään sähkölampulla, ja sen eteen on asetettu [[linssijärjestelmä]], joka kokoaa valon kapeaksi, kauas näkyväksi keilaksi. Linssit tai valo pyörivät tai valo sammuu ja syttyy säännöllisesti, jolloin jokaisella majakalla on oma, tunnistettava vilkkumistapansa. [[Ponta da Piedaden]] majakka on vuodelta 1913, ja se näkyy niemellä [[Lagosin]] lähellä. Aikoinaan majakkaa hoiti vartija, mutta nykyisen hoitotavan en ole varma. Minä luotan kyllä enemmän omiin silmiini.
+KYSYMYS: Kerro lisää: linssijärjestelmä
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Urheilu: Aalto, jonka pohja on kuilu] 2011 — Nazarén kylän pohjoisella rannalla nousee talvisin maailman suurimpia surffattuja aaltoja. Syy on meren pohjassa: rannan edessä on merenalainen kanjoni, joka on satoja kilometrejä pitkä ja syvimmillään kilometrejä syvä. Kanjoni ohjaa avomeren maininkia kapenevaan uomaan, ja kun syvä vesi loppuu äkisti, aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.
+AIEMPI KYSYMYS: Miten meri muovaa kallioita luoliksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä on tuttu näky ylhäältä. Meri muovaa kallioita luoliksi [[aaltojen]] voimalla. Aallot iskevät rantakallioon uudestaan ja uudestaan, ja ne ajavat vettä ja ilmaa kiven halkeamiin. Paine ja vesi rikkovat heikoimmat kohdat, ja aaltojen mukana kulkevat hiekka ja kivet hioavat kalliota kuin hiomapaperi. Ajan myötä halkeamista kasvaa ensin kolo, sitten luola, ja jos luola jatkuu läpi niemen, siitä voi tulla [[kalliokaari]]. Veden lisäksi myös sade ja tuuli kuluttavat kiveä. [[Ponta da Piedaden]] luolat ovat tällaisen pitkän työn tulos. Meri on kyllä sitkeä työmies.
+KYSYMYS: Kerro lisää: aaltojen
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+AIEMPI KYSYMYS: Miten meri muovaa kallioita luoliksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä on tuttu näky ylhäältä. Meri muovaa kallioita luoliksi [[aaltojen]] voimalla. Aallot iskevät rantakallioon uudestaan ja uudestaan, ja ne ajavat vettä ja ilmaa kiven halkeamiin. Paine ja vesi rikkovat heikoimmat kohdat, ja aaltojen mukana kulkevat hiekka ja kivet hioavat kalliota kuin hiomapaperi. Ajan myötä halkeamista kasvaa ensin kolo, sitten luola, ja jos luola jatkuu läpi niemen, siitä voi tulla [[kalliokaari]]. Veden lisäksi myös sade ja tuuli kuluttavat kiveä. [[Ponta da Piedaden]] luolat ovat tällaisen pitkän työn tulos. Meri on kyllä sitkeä työmies.
+KYSYMYS: Kerro lisää: kalliokaari
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Saudi-Arabian kansallismuseo] 1999 Museo avattiin 23. tammikuuta 1999 osaksi Kuningas Abdulazizin historiallista keskusta, noin 360 000 neliömetrin aluetta Murabban kaupunginosassa. Päivä ei ollut museon valinta: alue rakennettiin satavuotisjuhliin, joissa muistettiin Riadin valtausta 1902, ja suunnitteluun ja rakentamiseen jäi 26 kuukautta. Talon piirsi kanadalainen Raymond Moriyama. Esikuvana olivat Riadin ulkopuolisten Punaisten hiekkojen dyynit: Murabban aukion puoleinen länsijulkisivu myötäilee dyynin loivaa kaarta, ja pohjakaava kaartuu puolikuuksi, jonka kärki osoittaa Mekkaan. Näyttely kulkee kahdeksassa salissa, kolme pohjakerroksessa ja viisi ylhäällä. Ensimmäisenä on rautameteoriitti Rub al-Khalin Wabarin kra…
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Mitä Algarve tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Algarve on nimenä peräisin [[arabian]] kielen sanasta al-Gharb, joka tarkoittaa länttä. Alue oli keskiajalla osa muslimien hallitsemaa [[Iberian niemimaata]], ja nimi jäi käyttöön, vaikka valtaus päättyi. Nykyään Algarve on [[Portugalin]] eteläisin alue, jolla on pitkä Atlantin rannikko, kallioita, hiekkarantoja ja laguuneja. [[Ponta da Piedade]] ja [[Lagosin]] kaupunki kuuluvat tähän alueeseen. Tarkkaa ajankohtaa, jolloin nimi vakiintui, en ole varma. Lännessä on muuten usein parasta leivonnaisia, sanon minä.
+KYSYMYS: Kerro lisää: arabian
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Kirjoitettu Tanger: Hajjille lähtenyt poika] Ibn Battuta syntyi Tangerissa 24. helmikuuta 1304 ja lähti kotoa kaksikymmenvuotiaana pyhiinvaellukselle. Kolmenkymmenen vuoden aikana 1325–1354 hän kiersi suuren osan Afrikkaa, Aasiaa ja Iberian niemimaata ja kulki arvioiden mukaan noin 117 000 kilometriä — enemmän kuin yksikään esimoderni matkaaja. Zheng He teki noin 50 000 ja Marco Polo noin 24 000 kilometriä. Elämänsä lopulla Ibn Battuta saneli matkoistaan kirjan, joka tunnetaan nimellä Rihla; kirjoittajaksi ryhtyi Ibn Juzayy, oppinut, jonka hän oli tavannut Granadassa.
+AIEMPI KYSYMYS: Mitä Algarve tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Algarve on nimenä peräisin [[arabian]] kielen sanasta al-Gharb, joka tarkoittaa länttä. Alue oli keskiajalla osa muslimien hallitsemaa [[Iberian niemimaata]], ja nimi jäi käyttöön, vaikka valtaus päättyi. Nykyään Algarve on [[Portugalin]] eteläisin alue, jolla on pitkä Atlantin rannikko, kallioita, hiekkarantoja ja laguuneja. [[Ponta da Piedade]] ja [[Lagosin]] kaupunki kuuluvat tähän alueeseen. Tarkkaa ajankohtaa, jolloin nimi vakiintui, en ole varma. Lännessä on muuten usein parasta leivonnaisia, sanon minä.
+KYSYMYS: Kerro lisää: Iberian niemimaata
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Severan kotikadulle ladottiin kitara] 1846 — Maria Severa Onofriana syntyi vuonna 1820 ja lauloi fadoa Mourarian kortteleissa niin, että hänestä tuli koko Lissabonin puheenaihe. Hän sairastui tuberkuloosiin ja kuoli 30. marraskuuta 1846 vain 26-vuotiaana Rua do Capelãon varrella. Köyhä laulaja haudattiin yhteishautaan ilman arkkua. Kahdeksankymmentäviisi vuotta myöhemmin hänestä tehtiin Portugalin ensimmäinen äänielokuva, ja hänen kotikatunsa kiveykseen on ladottu kitaran kuva.
+- [Portugali — maalehti / Menovinkit] Portugalin parhaat paikat ovat verkossa ja ilmaisia: zoomattava hirviömaalaus, kuninkaan kultavaunut sisältä, kuusituhatta fadolevyä ja kamera, joka näyttää maailman suurimmat aallot juuri nyt.
+- [Itä-Timor — maalehti / Ruoka: Portugali jäi ruokapöytään] Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja chorizoa — on sama pata kuin muissakin entisissä Portugalin siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, koska niistä tuotiin sotilaita Timorille.
+AIEMPI KYSYMYS: Mitä Algarve tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Algarve on nimenä peräisin [[arabian]] kielen sanasta al-Gharb, joka tarkoittaa länttä. Alue oli keskiajalla osa muslimien hallitsemaa [[Iberian niemimaata]], ja nimi jäi käyttöön, vaikka valtaus päättyi. Nykyään Algarve on [[Portugalin]] eteläisin alue, jolla on pitkä Atlantin rannikko, kallioita, hiekkarantoja ja laguuneja. [[Ponta da Piedade]] ja [[Lagosin]] kaupunki kuuluvat tähän alueeseen. Tarkkaa ajankohtaa, jolloin nimi vakiintui, en ole varma. Lännessä on muuten usein parasta leivonnaisia, sanon minä.
+KYSYMYS: Kerro lisää: Portugalin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponta da Piedade (meri)
+Tietoruudun teksti: Ponta da Piedade, portugalin kielellä armon niemi, on niemeke ja joukko kallioita Lagosin kaupungin rannikolla Algarven alueella. Keltakultaiset kalliomuodostelmat ovat jopa 20 metriä korkeita, ja ne ovat yksi Portugalin tunnetuimmista matkailukohteista. Useissa niemen luolissa voi vierailla veneellä. Paikalla on myös majakka, joka on vuodelta 1913.
+AIEMPI KYSYMYS: Mitä Algarve tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Algarve on nimenä peräisin [[arabian]] kielen sanasta al-Gharb, joka tarkoittaa länttä. Alue oli keskiajalla osa muslimien hallitsemaa [[Iberian niemimaata]], ja nimi jäi käyttöön, vaikka valtaus päättyi. Nykyään Algarve on [[Portugalin]] eteläisin alue, jolla on pitkä Atlantin rannikko, kallioita, hiekkarantoja ja laguuneja. [[Ponta da Piedade]] ja [[Lagosin]] kaupunki kuuluvat tähän alueeseen. Tarkkaa ajankohtaa, jolloin nimi vakiintui, en ole varma. Lännessä on muuten usein parasta leivonnaisia, sanon minä.
+KYSYMYS: Kerro lisää: Ponta da Piedade
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Ketkä munkit asuivat Berlengalla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on hauska aihe. [[Berlengalla]] asui [[Pyhän Hieronymuksen]] munkkeja, jotka perustivat saarelle yhteisön vuonna 1513 kuningatar [[Eleonora Viseulaisen]] tuella. Yhteisön tarkoituksena oli auttaa merenkulkua ja usein haaksirikkoon joutuneita merimiehiä. Munkit joutuivat kuitenkin lähtemään saarelta 1500-luvulla, koska tautien, tarvikepulan ja huonon yhteyden vuoksi elämä oli liian vaikeaa. Munkkien tarkempia vaiheita saarella en ole varma kertomaan, joten tyydyn näihin perusasioihin. Saarella ei ole enää pysyvää asutusta, mikä varmaan hiljensi sen. Ei ollut helppoa hänen siivillään.
+KYSYMYS: Kerro lisää: Berlengalla
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Ketkä munkit asuivat Berlengalla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on hauska aihe. [[Berlengalla]] asui [[Pyhän Hieronymuksen]] munkkeja, jotka perustivat saarelle yhteisön vuonna 1513 kuningatar [[Eleonora Viseulaisen]] tuella. Yhteisön tarkoituksena oli auttaa merenkulkua ja usein haaksirikkoon joutuneita merimiehiä. Munkit joutuivat kuitenkin lähtemään saarelta 1500-luvulla, koska tautien, tarvikepulan ja huonon yhteyden vuoksi elämä oli liian vaikeaa. Munkkien tarkempia vaiheita saarella en ole varma kertomaan, joten tyydyn näihin perusasioihin. Saarella ei ole enää pysyvää asutusta, mikä varmaan hiljensi sen. Ei ollut helppoa hänen siivillään.
+KYSYMYS: Kerro lisää: Pyhän Hieronymuksen
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Ketkä munkit asuivat Berlengalla?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on hauska aihe. [[Berlengalla]] asui [[Pyhän Hieronymuksen]] munkkeja, jotka perustivat saarelle yhteisön vuonna 1513 kuningatar [[Eleonora Viseulaisen]] tuella. Yhteisön tarkoituksena oli auttaa merenkulkua ja usein haaksirikkoon joutuneita merimiehiä. Munkit joutuivat kuitenkin lähtemään saarelta 1500-luvulla, koska tautien, tarvikepulan ja huonon yhteyden vuoksi elämä oli liian vaikeaa. Munkkien tarkempia vaiheita saarella en ole varma kertomaan, joten tyydyn näihin perusasioihin. Saarella ei ole enää pysyvää asutusta, mikä varmaan hiljensi sen. Ei ollut helppoa hänen siivillään.
+KYSYMYS: Kerro lisää: Eleonora Viseulaisen
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+- [Saint Helena — maalehti / Historia: Britannian toiseksi vanhin siirtomaa] 1657–1673 — Oliver Cromwell antoi Itä-Intian kauppakomppanialle 1657 luvan hallita saarta, ja kapteeni John Dutton saapui 1659 ensimmäisenä kuvernöörinä. Linnake valmistui kuukaudessa, ja sen viereen nousi kaupunki, joka sai kuninkuuden palauduttua nimen Jamestown Yorkin herttuan mukaan. Uudisasukkaille luvattiin oma palsta sadastakolmestakymmenestä, mutta väkeä ei saatu: vuonna 1670 saarella asui 66 ihmistä, heistä 18 orjaa. Jouluna 1672 hollantilaiset valtasivat saaren, mutta kuvernööri pakeni Brasiliaan, vuokrasi nopean laivan ja löysi komppanian laivaston, joka otti saaren takaisin toukokuussa 1673 ilman ihmishenkien menetystä.
+AIEMPI KYSYMYS: Miksi saaria kutsuttiin Burlingeiksi?
+AIEMPI VASTAUS (Livia):
+No niin. Tässä oikaisen heti, ettei kenenkään tarvitse arvailla. [[Britannian]] merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings", ja nimi on todennäköisesti englantilaistettu muoto portugalilaisesta nimestä [[Berlengas]]. Merimiehet muokkasivat vieraan nimen helpommin lausuttavaan muotoon, kuten merenkulkijat tekivät usein paikannimien kanssa. Saaristo sijaitsee 10–17 kilometrin päässä [[Penichen]] rannikolta, joten se oli merimiesten tuntema maamerkki [[Atlantin]] reitillä. Nimen tarkkaa historiaa en ole varma kertomaan. Lyhyt vastaus, sopii minulle.
+KYSYMYS: Kerro lisää: Britannian
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Miksi saaria kutsuttiin Burlingeiksi?
+AIEMPI VASTAUS (Livia):
+No niin. Tässä oikaisen heti, ettei kenenkään tarvitse arvailla. [[Britannian]] merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings", ja nimi on todennäköisesti englantilaistettu muoto portugalilaisesta nimestä [[Berlengas]]. Merimiehet muokkasivat vieraan nimen helpommin lausuttavaan muotoon, kuten merenkulkijat tekivät usein paikannimien kanssa. Saaristo sijaitsee 10–17 kilometrin päässä [[Penichen]] rannikolta, joten se oli merimiesten tuntema maamerkki [[Atlantin]] reitillä. Nimen tarkkaa historiaa en ole varma kertomaan. Lyhyt vastaus, sopii minulle.
+KYSYMYS: Kerro lisää: Berlengas
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Miksi saaria kutsuttiin Burlingeiksi?
+AIEMPI VASTAUS (Livia):
+No niin. Tässä oikaisen heti, ettei kenenkään tarvitse arvailla. [[Britannian]] merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings", ja nimi on todennäköisesti englantilaistettu muoto portugalilaisesta nimestä [[Berlengas]]. Merimiehet muokkasivat vieraan nimen helpommin lausuttavaan muotoon, kuten merenkulkijat tekivät usein paikannimien kanssa. Saaristo sijaitsee 10–17 kilometrin päässä [[Penichen]] rannikolta, joten se oli merimiesten tuntema maamerkki [[Atlantin]] reitillä. Nimen tarkkaa historiaa en ole varma kertomaan. Lyhyt vastaus, sopii minulle.
+KYSYMYS: Kerro lisää: Penichen
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Atlantin ranta, jonne kaikki tiet johtivat] Ouidah sijaitsee kapealla hiekkaharjulla Atlantin valtameren ja sisämaan laguunien välissä. Ranta on leveä ja lähes puuton, sillä avomereltä kohti rantaa kohoavat mahtavat, usein vaaralliset aallot ovat estäneet luonnollisen satama-altaan syntymisen koko rannikolle. Juuri tämä sama karu ranta toimi vuosisatoja sekä kalastajien arkena että sen viimeisenä maakaistaleena, jonka yli kuljettiin ennen merelle lähtöä. Nykyisin rannalla on hiljaista: muutama kalastajakylä, palmuja ja pieniä, valkoisiksi rapattuja majoja hiekalla.
+AIEMPI KYSYMYS: Miksi saaria kutsuttiin Burlingeiksi?
+AIEMPI VASTAUS (Livia):
+No niin. Tässä oikaisen heti, ettei kenenkään tarvitse arvailla. [[Britannian]] merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings", ja nimi on todennäköisesti englantilaistettu muoto portugalilaisesta nimestä [[Berlengas]]. Merimiehet muokkasivat vieraan nimen helpommin lausuttavaan muotoon, kuten merenkulkijat tekivät usein paikannimien kanssa. Saaristo sijaitsee 10–17 kilometrin päässä [[Penichen]] rannikolta, joten se oli merimiesten tuntema maamerkki [[Atlantin]] reitillä. Nimen tarkkaa historiaa en ole varma kertomaan. Lyhyt vastaus, sopii minulle.
+KYSYMYS: Kerro lisää: Atlantin
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NFK — maalehti / Luonto: Punainen saari vihertyy] 1980-luvulta nykyään — Phillipinsaari näytti 1900-luvulla Norfolkinsaarelta katsottuna punaruskealta paljaalta kalliolta: siirtolan aikana sinne tuodut vuohet, siat ja kanit olivat syöneet kasvillisuuden loppuun, ja paljas maaperä oli huuhtoutunut mereen. Vuohet ja siat hävitettiin 1900-luvun alkupuolella, ja viimeinen kani tapettiin vasta 1988 laajan myrkytys- ja pyyntikampanjan jälkeen. Ilmavoimien Hercules-kone levitti 1980-luvun lopulla norfolkinmännyn siemeniä ilmasta, ja luonto on palannut yllättävän nopeasti: kasvillisuus on vallannut suuren osan aiemmin paljaista rinteistä, ja merilinnut pesivät koloissa, joissa ei ennen ollut edes maaperää.
+- [San Ambrosio — kaupunkilehti / San Ambrosio] San Ambrosio on yksi Chilen syrjäisimmistä saarista: tulivuorikallio Tyynellämerellä, jonka jyrkät rinteet putoavat suoraan mereen. Kukaan ei asu siellä pysyvästi – vain merilinnut ja satunnaiset hummerikalastajat käyvät kalliolla.
+AIEMPI KYSYMYS: Miksi merilinnut pesivät saarilla?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minulla on omakohtaistakin näkemystä. [[Merilinnut]] pesivät mielellään saarilla, koska niillä on niemimaan sisäosia vähemmän maalla liikkuvia petoja, kuten kettuja tai kissoja. Jyrkät kalliot tarjoavat suojaisia pesäpaikkoja, ja ruoka eli kalat ovat lähellä, joten poikasille on lyhyt matka kuljettaa ravintoa. Saaret ovat usein myös ihmisiltä rauhassa, joskin [[matkailu]] voi aiheuttaa häiriötä. [[Berlengasin]] kaltaisilla [[Atlantin]] saarilla tämä pätee myös, vaikka tarkkoja lajeja en tässä luettele. Sanoisin, että kalliolla on parempi näkymä kuin kaupungin katolla.
+KYSYMYS: Kerro lisää: Merilinnut
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+AIEMPI KYSYMYS: Miksi merilinnut pesivät saarilla?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minulla on omakohtaistakin näkemystä. [[Merilinnut]] pesivät mielellään saarilla, koska niillä on niemimaan sisäosia vähemmän maalla liikkuvia petoja, kuten kettuja tai kissoja. Jyrkät kalliot tarjoavat suojaisia pesäpaikkoja, ja ruoka eli kalat ovat lähellä, joten poikasille on lyhyt matka kuljettaa ravintoa. Saaret ovat usein myös ihmisiltä rauhassa, joskin [[matkailu]] voi aiheuttaa häiriötä. [[Berlengasin]] kaltaisilla [[Atlantin]] saarilla tämä pätee myös, vaikka tarkkoja lajeja en tässä luettele. Sanoisin, että kalliolla on parempi näkymä kuin kaupungin katolla.
+KYSYMYS: Kerro lisää: matkailu
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Miksi merilinnut pesivät saarilla?
+AIEMPI VASTAUS (Livia):
+Kato, tästä minulla on omakohtaistakin näkemystä. [[Merilinnut]] pesivät mielellään saarilla, koska niillä on niemimaan sisäosia vähemmän maalla liikkuvia petoja, kuten kettuja tai kissoja. Jyrkät kalliot tarjoavat suojaisia pesäpaikkoja, ja ruoka eli kalat ovat lähellä, joten poikasille on lyhyt matka kuljettaa ravintoa. Saaret ovat usein myös ihmisiltä rauhassa, joskin [[matkailu]] voi aiheuttaa häiriötä. [[Berlengasin]] kaltaisilla [[Atlantin]] saarilla tämä pätee myös, vaikka tarkkoja lajeja en tässä luettele. Sanoisin, että kalliolla on parempi näkymä kuin kaupungin katolla.
+KYSYMYS: Kerro lisää: Berlengasin
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Severan kotikadulle ladottiin kitara] 1846 — Maria Severa Onofriana syntyi vuonna 1820 ja lauloi fadoa Mourarian kortteleissa niin, että hänestä tuli koko Lissabonin puheenaihe. Hän sairastui tuberkuloosiin ja kuoli 30. marraskuuta 1846 vain 26-vuotiaana Rua do Capelãon varrella. Köyhä laulaja haudattiin yhteishautaan ilman arkkua. Kahdeksankymmentäviisi vuotta myöhemmin hänestä tehtiin Portugalin ensimmäinen äänielokuva, ja hänen kotikatunsa kiveykseen on ladottu kitaran kuva.
+- [Portugali — maalehti / Menovinkit] Portugalin parhaat paikat ovat verkossa ja ilmaisia: zoomattava hirviömaalaus, kuninkaan kultavaunut sisältä, kuusituhatta fadolevyä ja kamera, joka näyttää maailman suurimmat aallot juuri nyt.
+- [Itä-Timor — maalehti / Ruoka: Portugali jäi ruokapöytään] Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja chorizoa — on sama pata kuin muissakin entisissä Portugalin siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, koska niistä tuotiin sotilaita Timorille.
+AIEMPI KYSYMYS: Kuka oli kuningatar Eleonora Viseulainen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku muistelen. Eleonora Viseulainen eli Leonor of Viseu oli [[Portugalin]] kuningatar, kuningas [[Johannes II:n]] puoliso, ja hänet tunnetaan erityisesti hyväntekeväisyydestä. Hänen nimiinsä liitetään [[Misericórdia]]-veljeskuntien perustaminen Portugalissa, jonka tarkoituksena oli auttaa sairaita ja köyhiä. Tarkat vuosiluvut ja yksityiskohdat en ole varma, joten jätän ne mainitsematta. Tässä yhteydessä oleellista on, että hän tuki [[Pyhän Hieronymuksen]] munkkien yhteisön perustamista [[Berlengan]] saarelle vuonna 1513. Kyyhky kunnioittaa kuningattaria, jotka auttavat merimiehiä.
+KYSYMYS: Kerro lisää: Portugalin
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Kuka oli kuningatar Eleonora Viseulainen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku muistelen. Eleonora Viseulainen eli Leonor of Viseu oli [[Portugalin]] kuningatar, kuningas [[Johannes II:n]] puoliso, ja hänet tunnetaan erityisesti hyväntekeväisyydestä. Hänen nimiinsä liitetään [[Misericórdia]]-veljeskuntien perustaminen Portugalissa, jonka tarkoituksena oli auttaa sairaita ja köyhiä. Tarkat vuosiluvut ja yksityiskohdat en ole varma, joten jätän ne mainitsematta. Tässä yhteydessä oleellista on, että hän tuki [[Pyhän Hieronymuksen]] munkkien yhteisön perustamista [[Berlengan]] saarelle vuonna 1513. Kyyhky kunnioittaa kuningattaria, jotka auttavat merimiehiä.
+KYSYMYS: Kerro lisää: Johannes II:n
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Nosso Senhor dos Passosin kappeli] 1819–1825 Santa Casa de Misericórdia, kaupungin vanha laupeudensairaala, perustettiin 1803, mutta oma kirkko sen sisälle syntyi hitaasti. Veljeskunnan päätöskirjan ensimmäinen merkintä 24. tammikuuta 1814 kertoo Senhor dos Passos -pyhäinkuvasta ja tarpeesta saada sairaalaan kappeli, jossa säilytettäisiin ehtoollista sairaita varten. Lupa tuli saman vuoden heinäkuussa kapteenikunnan kuvernööriltä Diogo de Souzalta, mutta työ ei silti alkanut: uusi anomus tehtiin 1818, ja vasta 1819 rakennettiin. Vuonna 1825 vihittiin runko ja alttari ja pyhäinkuva siirrettiin paikalleen seurakuntakirkosta. Ensimmäinen kappeli purettiin 1858 uuden tieltä. Vuosina 1866–1868 mestari João do Couto e Silva teki u…
+AIEMPI KYSYMYS: Kuka oli kuningatar Eleonora Viseulainen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku muistelen. Eleonora Viseulainen eli Leonor of Viseu oli [[Portugalin]] kuningatar, kuningas [[Johannes II:n]] puoliso, ja hänet tunnetaan erityisesti hyväntekeväisyydestä. Hänen nimiinsä liitetään [[Misericórdia]]-veljeskuntien perustaminen Portugalissa, jonka tarkoituksena oli auttaa sairaita ja köyhiä. Tarkat vuosiluvut ja yksityiskohdat en ole varma, joten jätän ne mainitsematta. Tässä yhteydessä oleellista on, että hän tuki [[Pyhän Hieronymuksen]] munkkien yhteisön perustamista [[Berlengan]] saarelle vuonna 1513. Kyyhky kunnioittaa kuningattaria, jotka auttavat merimiehiä.
+KYSYMYS: Kerro lisää: Misericórdia
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+AIEMPI KYSYMYS: Kuka oli kuningatar Eleonora Viseulainen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku muistelen. Eleonora Viseulainen eli Leonor of Viseu oli [[Portugalin]] kuningatar, kuningas [[Johannes II:n]] puoliso, ja hänet tunnetaan erityisesti hyväntekeväisyydestä. Hänen nimiinsä liitetään [[Misericórdia]]-veljeskuntien perustaminen Portugalissa, jonka tarkoituksena oli auttaa sairaita ja köyhiä. Tarkat vuosiluvut ja yksityiskohdat en ole varma, joten jätän ne mainitsematta. Tässä yhteydessä oleellista on, että hän tuki [[Pyhän Hieronymuksen]] munkkien yhteisön perustamista [[Berlengan]] saarelle vuonna 1513. Kyyhky kunnioittaa kuningattaria, jotka auttavat merimiehiä.
+KYSYMYS: Kerro lisää: Berlengan
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berlengasin saaret (luonto · saari)
+Tietoruudun teksti: Berlengas on Portugalin pieni Atlantin saaristo, joka sijaitsee 10–17 kilometrin päässä Penichen rannikolta Oeste-alueella. Britannian merimiehet kutsuivat saaria perinteisesti nimellä "the Burlings". Ainoa asuttu saari on suurin, Berlenga Grande, vaikka pysyvää asutusta saaristossa ei nykyisin ole. Muut saaret ovat kahden pikkusaariryhmän, Estelasin ja Farilhões-Forcadosin, saaria. Vuonna 1513 kuningatar Eleonora Viseulaisen tuella Pyhän Hieronymuksen munkit perustivat saarelle yhteisön auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Laiva, joka kulki vastatuuleen] 1400-luku — Karavelli oli pieni ja kevyt purjelaiva, jonka avulla merenkulkijat pääsivät etenemään Afrikan rannikkoa etelään. Sen salaisuus oli purje: kolmikulmainen latinalaispurje kääntyy niin, että laiva voi purjehtia vinosti tuulta vasten eikä vain myötätuuleen. Karavelli oli myös matalakulkuinen, joten sillä uskalsi mennä lähelle rantaa ja jokisuihin. Miehistöä oli vain parikymmentä. Purjeisiin maalattiin usein punainen risti, Kristuksen ritarikunnan merkki, joka rahoitti retkiä.
+AIEMPI KYSYMYS: Miten saarille kuljetettiin tarvikkeita ennen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tässä ei lennetä, vaan soudetaan. Ennen moottoriveneitä tarvikkeet kuljetettiin saarille [[purjeveneillä]] ja soutuveneillä, ja matka riippui säästä ja merenkäynnistä. [[Berlengan]] saari on 10–17 kilometrin päässä [[Penichen]] rannikolta, joten myrskyisellä säällä yhteys saattoi katketa pitkiksi ajoiksi. Se selittää osaltaan, miksi [[Pyhän Hieronymuksen]] munkit joutuivat lähtemään saarelta 1500-luvulla: tautien, tarvikepulan ja huonon yhteyden vuoksi elämä oli vaikeaa. Tarkkoja reittejä ja kuljetusten aikatauluja en tunne. Minulle kuljetusongelma on tuttu, sillä kirjeet eivät kanna itseään.
+KYSYMYS: Kerro lisää: purjeveneillä
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+- [Dunedin — kaupunkilehti / Otagon niemimaa] Otagon niemimaa on sammuneen tulivuoren jäänne, jonka kärjessä kuninkaanalbatrossit pesivät ainoana paikkana asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi josta koko maakunta on saanut nimensä.
+AIEMPI KYSYMYS: Mitä Sabugalin taistelussa tapahtui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sabugalin taistelu käytiin vuonna 1811 [[niemimaasodassa]], jossa Ranska oli vastakkain Portugalin, Espanjan ja Britannian kanssa. Arthur Wellesleyn, myöhemmän [[Wellingtonin herttuan]], johtamat britit ja portugalilaiset voittivat marsalkka [[Massénan]] ranskalaiset kaupungin luona. Ranskalaiset olivat tuolloin vetäytymässä Portugalista kohti Espanjaa, ja taistelu on yksi sodan monista vaiheista tuolla rajaseudulla. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: niemimaasodassa
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Wellingtonin museo] 1892 Museo asuu vuonna 1892 valmistuneessa Bond Store -makasiinissa Queens Wharfilla. Talo rakennettiin tullivarastoksi: siellä säilytettiin tavaraa, josta tullia ei ollut vielä maksettu. Museon oma historia alkaa vasta 1972, jolloin sataman hallintoneuvosto perusti kaupunkiin merenkulkumuseon. Vuonna 1989 museo siirtyi kaupungille ja sen aihepiiri laajeni koko seudun yhteiskuntahistoriaan. Talo avattiin 1999 nimellä Museum of Wellington City & Sea, ja heinäkuussa 2015 nimi lyheni Wellingtonin museoksi. Neljä kerrosta käyvät läpi kaupungin historian, ja kolmen alimman kerroksen läpi nousee jättimäinen elokuvakangas. Yhdessä kolmesta teatteritilasta māorien tarinat esitetään Pepperin haamu -…
+AIEMPI KYSYMYS: Mitä Sabugalin taistelussa tapahtui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sabugalin taistelu käytiin vuonna 1811 [[niemimaasodassa]], jossa Ranska oli vastakkain Portugalin, Espanjan ja Britannian kanssa. Arthur Wellesleyn, myöhemmän [[Wellingtonin herttuan]], johtamat britit ja portugalilaiset voittivat marsalkka [[Massénan]] ranskalaiset kaupungin luona. Ranskalaiset olivat tuolloin vetäytymässä Portugalista kohti Espanjaa, ja taistelu on yksi sodan monista vaiheista tuolla rajaseudulla. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Wellingtonin herttuan
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Mitä Sabugalin taistelussa tapahtui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sabugalin taistelu käytiin vuonna 1811 [[niemimaasodassa]], jossa Ranska oli vastakkain Portugalin, Espanjan ja Britannian kanssa. Arthur Wellesleyn, myöhemmän [[Wellingtonin herttuan]], johtamat britit ja portugalilaiset voittivat marsalkka [[Massénan]] ranskalaiset kaupungin luona. Ranskalaiset olivat tuolloin vetäytymässä Portugalista kohti Espanjaa, ja taistelu on yksi sodan monista vaiheista tuolla rajaseudulla. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Massénan
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Miksi linnassa on viisikulmainen muuri?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tarkkaa syytä viisikulmaiseen muotoon en ole varma, joten sitä ei kannata esittää varmana tietona. Keskiaikaisissa linnoissa muuri seurasi yleensä kukkulan tai kallion reunoja, jotta maasto auttoi puolustuksessa, ja viisikulmainen ulkomuuri sopii tähän ajatukseen. Linna on [[gotiikkatyylinen]] rajalinna, jonka tornit kohoavat [[Côa-joen]] yllä ja jonka tehtävä oli vartioida Espanjan rajaa. Enempää minä en tosta tiedä.
+KYSYMYS: Kerro lisää: gotiikkatyylinen
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Miksi linnassa on viisikulmainen muuri?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tarkkaa syytä viisikulmaiseen muotoon en ole varma, joten sitä ei kannata esittää varmana tietona. Keskiaikaisissa linnoissa muuri seurasi yleensä kukkulan tai kallion reunoja, jotta maasto auttoi puolustuksessa, ja viisikulmainen ulkomuuri sopii tähän ajatukseen. Linna on [[gotiikkatyylinen]] rajalinna, jonka tornit kohoavat [[Côa-joen]] yllä ja jonka tehtävä oli vartioida Espanjan rajaa. Enempää minä en tosta tiedä.
+KYSYMYS: Kerro lisää: Côa-joen
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä oli niemimaasota?
+AIEMPI VASTAUS (Livia):
+No niin, kerron. Niemimaasota oli vuosina 1808–1814 käyty sota Iberian niemimaalla, jossa Napoleonin Ranska taisteli Espanjaa, Portugalia ja Britanniaa vastaan. Britteja johti Wellington, ja portugalilaiset joukot taistelivat heidän rinnallaan. Portugalissa [[Torres Vedrasin linjat]] eli Lissabonin edustalle rakennetut puolustuslinjat pysäyttivät ranskalaiset vuonna 1810. Espanjassa sota tunnetaan myös [[sissisodasta]], jonka sana juontuu espanjan kielestä. Sota päättyi Napoleonin tappioon ja vaikutti merkittävästi koko Euroopan myöhempään kehitykseen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Torres Vedrasin linjat
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Mikä oli niemimaasota?
+AIEMPI VASTAUS (Livia):
+No niin, kerron. Niemimaasota oli vuosina 1808–1814 käyty sota Iberian niemimaalla, jossa Napoleonin Ranska taisteli Espanjaa, Portugalia ja Britanniaa vastaan. Britteja johti Wellington, ja portugalilaiset joukot taistelivat heidän rinnallaan. Portugalissa [[Torres Vedrasin linjat]] eli Lissabonin edustalle rakennetut puolustuslinjat pysäyttivät ranskalaiset vuonna 1810. Espanjassa sota tunnetaan myös [[sissisodasta]], jonka sana juontuu espanjan kielestä. Sota päättyi Napoleonin tappioon ja vaikutti merkittävästi koko Euroopan myöhempään kehitykseen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: sissisodasta
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Manuel de Fallan talo] 1921–1939 Aivan Alhambran kupeessa seisoo vaatimaton huvila, josta avautuu näkymä koko Granadaan. Siellä asui vuosina 1921–1939 säveltäjä Manuel de Falla, yksi Espanjan tunnetuimmista muusikoista - ja juuri tässä talossa hän sävelsi osan kuuluisimmista teoksistaan. Vuonna 1922 Falla järjesti Concurso de Cante Jondo -nimisen laulukilpailun, joka nosti Andalusian perinteisen flamencolaulun suuren yleisön tietoisuuteen. Falla asui talossa koko tämän luovan kautensa ajan, kunnes Espanjan sisällissota pakotti hänet lähtemään maasta vuonna 1939 - hän ei koskaan palannut Granadaan. Fallan lähdön jälkeen hänen huvilansa säilytettiin sellaisena kuin hän sen jätti, ja siitä tehtiin museo, joka kertoo…
+- [Granada — kaupunkilehti / Musiikki: Säveltäjä, joka muutti Alhambran kylkeen] Manuel de Falla kirjoitti teoksensa "Öitä Espanjan puutarhoissa" vuosina 1909–1915, kun asui vielä Pariisissa ja Madridissa. Sen ensimmäinen osa on nimeltään "Generalifessa", ja se on puutarha Alhambran kukkulalla. Vasta myöhemmin Falla muutti Granadaan ja asettui pieneen puutarhataloon aivan saman kukkulan rinteeseen; talo on nyt museo ja piano yhä paikallaan. Vuonna 1922 hän järjesti Alhambran pihalla kilpailun, joka pelasti vanhan cante jondo -laulun unohdukselta.
+AIEMPI KYSYMYS: Millaista juutalaista perintöä Portugalin rajaseuduilla on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Portugalissa oli keskiajalla merkittäviä juutalaisyhteisöjä, ja jäljet näkyvät vanhoissa kaupungeissa ja rajaseuduilla. Kuningas [[Manuel I]] määräsi juutalaiset kääntymään kristinuskoon vuosina 1496–1497, ja monista tuli niin sanottuja uusia kristittyjä. Heitä valvoi vuodesta 1536 [[inkvisitio]], ja osa perheistä säilytti perinteitään salassa sukupolvien ajan; tästä tunnetaan erityisesti [[Belmonten]] seutu Beira Baixassa. Nykyään [[sefardien]] jälkeläisiä kohdellaan Portugalissa omana ryhmänään, ja heille on tarjottu mahdollisuutta kansalaisuuteen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Manuel I
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Inkvisition museo] 1968 Talo Jirón Junínin varrella Plaza Bolívarin kulmassa oli varakuningaskunnan aikana pyhän inkvisition tuomioistuimen päämaja. Ennen lakkauttamistaan — vuosi ennen kuin José de San Martín julisti Perun itsenäiseksi — tuomioistuin oli käsitellyt kaikkiaan 1 474 ihmisen asian, ja heistä 32 teloitettiin. Itsenäisyyden jälkeen samaan taloon asettui Perun ensimmäinen perustuslakia säätävä kongressi, ja sen jälkeen senaatti istui siellä aina vuoteen 1939, jolloin se muutti uuteen lakiasäätävään palatsiin. Vuoden 1909 vallankaappausyrityksessä sotaväki hajotti väkijoukon ampumalla, rakennus vaurioitui ja osa salaliittolaisista pakeni sen sisään. Vuodesta 1943 talossa toimi edustajainhuoneen yle…
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+AIEMPI KYSYMYS: Millaista juutalaista perintöä Portugalin rajaseuduilla on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Portugalissa oli keskiajalla merkittäviä juutalaisyhteisöjä, ja jäljet näkyvät vanhoissa kaupungeissa ja rajaseuduilla. Kuningas [[Manuel I]] määräsi juutalaiset kääntymään kristinuskoon vuosina 1496–1497, ja monista tuli niin sanottuja uusia kristittyjä. Heitä valvoi vuodesta 1536 [[inkvisitio]], ja osa perheistä säilytti perinteitään salassa sukupolvien ajan; tästä tunnetaan erityisesti [[Belmonten]] seutu Beira Baixassa. Nykyään [[sefardien]] jälkeläisiä kohdellaan Portugalissa omana ryhmänään, ja heille on tarjottu mahdollisuutta kansalaisuuteen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: inkvisitio
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Millaista juutalaista perintöä Portugalin rajaseuduilla on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Portugalissa oli keskiajalla merkittäviä juutalaisyhteisöjä, ja jäljet näkyvät vanhoissa kaupungeissa ja rajaseuduilla. Kuningas [[Manuel I]] määräsi juutalaiset kääntymään kristinuskoon vuosina 1496–1497, ja monista tuli niin sanottuja uusia kristittyjä. Heitä valvoi vuodesta 1536 [[inkvisitio]], ja osa perheistä säilytti perinteitään salassa sukupolvien ajan; tästä tunnetaan erityisesti [[Belmonten]] seutu Beira Baixassa. Nykyään [[sefardien]] jälkeläisiä kohdellaan Portugalissa omana ryhmänään, ja heille on tarjottu mahdollisuutta kansalaisuuteen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Belmonten
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Millaista juutalaista perintöä Portugalin rajaseuduilla on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Portugalissa oli keskiajalla merkittäviä juutalaisyhteisöjä, ja jäljet näkyvät vanhoissa kaupungeissa ja rajaseuduilla. Kuningas [[Manuel I]] määräsi juutalaiset kääntymään kristinuskoon vuosina 1496–1497, ja monista tuli niin sanottuja uusia kristittyjä. Heitä valvoi vuodesta 1536 [[inkvisitio]], ja osa perheistä säilytti perinteitään salassa sukupolvien ajan; tästä tunnetaan erityisesti [[Belmonten]] seutu Beira Baixassa. Nykyään [[sefardien]] jälkeläisiä kohdellaan Portugalissa omana ryhmänään, ja heille on tarjottu mahdollisuutta kansalaisuuteen. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: sefardien
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+AIEMPI KYSYMYS: Mihin Côa-joki laskee ja mistä se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Côa saa alkunsa Serra das Mesasin tienoilla Sabugalin seudulla ja virtaa pohjoiseen, kunnes se laskee [[Douro-jokeen]]. Joki on tunnettu laaksonsa [[kalliopiirroksista]], jotka löydettiin 1990-luvulla ja jotka ovat esihistoriallisia, taiteilijoiden avoimeen kallioon kaivertamia kuvia. Laakson piirrokset on hyväksytty [[UNESCOn maailmanperintökohteeksi]]. Sabugalin linna kohoaa joen yllä, ja se onkin tämän rajaseudun tunnetuimpia maamerkkejä. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Douro-jokeen
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+AIEMPI KYSYMYS: Mihin Côa-joki laskee ja mistä se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Côa saa alkunsa Serra das Mesasin tienoilla Sabugalin seudulla ja virtaa pohjoiseen, kunnes se laskee [[Douro-jokeen]]. Joki on tunnettu laaksonsa [[kalliopiirroksista]], jotka löydettiin 1990-luvulla ja jotka ovat esihistoriallisia, taiteilijoiden avoimeen kallioon kaivertamia kuvia. Laakson piirrokset on hyväksytty [[UNESCOn maailmanperintökohteeksi]]. Sabugalin linna kohoaa joen yllä, ja se onkin tämän rajaseudun tunnetuimpia maamerkkejä. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: kalliopiirroksista
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sabugalin linna (historia)
+Tietoruudun teksti: Sabugal on Guardan piirikunnan kaupunki ja kunta Espanjan rajalla Côa-joen varrella; itse kaupungissa on noin 3 000 asukasta. Noin 750 metrin korkeudessa se on yksi Portugalin korkeimmalla sijaitsevista kaupungeista. Sabugal on kuuluisa gotiikkatyylisestä linnastaan, jossa on viisikulmainen ulkomuuri ja sisämuuri, jossa on viisi nelikulmaista tornia Côa-joen yllä. Vuonna 1811 kaupungin luona käytiin Sabugalin taistelu niemimaasodassa: Arthur Wellesleyn, myöhemmän Wellingtonin herttuan, johtamat britit ja portugalilaiset voittivat marsalkka Massénan ranskalaiset. Kaupungilla on myös juutalaista perintöä vähintään 1500-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mihin Côa-joki laskee ja mistä se on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Côa saa alkunsa Serra das Mesasin tienoilla Sabugalin seudulla ja virtaa pohjoiseen, kunnes se laskee [[Douro-jokeen]]. Joki on tunnettu laaksonsa [[kalliopiirroksista]], jotka löydettiin 1990-luvulla ja jotka ovat esihistoriallisia, taiteilijoiden avoimeen kallioon kaivertamia kuvia. Laakson piirrokset on hyväksytty [[UNESCOn maailmanperintökohteeksi]]. Sabugalin linna kohoaa joen yllä, ja se onkin tämän rajaseudun tunnetuimpia maamerkkejä. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: UNESCOn maailmanperintökohteeksi
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Legendan mukaan seudun kuninkaaksi valittiin jumalten tahdosta hirvi, ja alue sai nimekseen [[Terras de Cervaria]] eli hirvien maa. Nimi Cerveira liittyy luultavasti tähän hirvilegendaan ja latinan hirveä tarkoittavaan sanaan. Vila Nova tarkoittaa uutta kaupunkia: kuningas [[Dinis]] perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan [[Minho-joen]] rannalle. Hirvi kuninkaaksi, siinäpä vasta kruunajaiset.
+KYSYMYS: Kerro lisää: Terras de Cervaria
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Legendan mukaan seudun kuninkaaksi valittiin jumalten tahdosta hirvi, ja alue sai nimekseen [[Terras de Cervaria]] eli hirvien maa. Nimi Cerveira liittyy luultavasti tähän hirvilegendaan ja latinan hirveä tarkoittavaan sanaan. Vila Nova tarkoittaa uutta kaupunkia: kuningas [[Dinis]] perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan [[Minho-joen]] rannalle. Hirvi kuninkaaksi, siinäpä vasta kruunajaiset.
+KYSYMYS: Kerro lisää: Dinis
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Legendan mukaan seudun kuninkaaksi valittiin jumalten tahdosta hirvi, ja alue sai nimekseen [[Terras de Cervaria]] eli hirvien maa. Nimi Cerveira liittyy luultavasti tähän hirvilegendaan ja latinan hirveä tarkoittavaan sanaan. Vila Nova tarkoittaa uutta kaupunkia: kuningas [[Dinis]] perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan [[Minho-joen]] rannalle. Hirvi kuninkaaksi, siinäpä vasta kruunajaiset.
+KYSYMYS: Kerro lisää: Minho-joen
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dakar — kaupunkilehti / Taiteen kaupunki: Biennaali, joka jäi] Dak'Art suunniteltiin 1989 tapahtumaksi, joka vuorottelisi kirjallisuuden ja kuvataiteen välillä: ensimmäinen vuoden 1990 tapahtuma keskittyi kirjallisuuteen ja vuoden 1992 kuvataiteeseen. Rakenne muuttui 1993, ja vuoden 1996 Dak'Art oli ensimmäinen nimenomaan afrikkalaiselle nykytaiteelle omistettu näyttely. Vuodesta 2000 se on järjestetty joka toinen vuosi, ja se on Afrikan mantereen pitkäikäisin suuren mittakaavan taidetapahtuma. Kansainväliseen näyttelyyn pääsi pitkään vain Afrikan maan kansalainen; 2014 se avattiin ensimmäistä kertaa myös muille.
+AIEMPI KYSYMYS: Mikä nykytaiteen biennaali on?
+AIEMPI VASTAUS (Livia):
+Ai se. Biennaali on joka toinen vuosi järjestettävä suuri taidetapahtuma, johon kootaan eri maiden taiteilijoiden töitä. Nimi tulee italian kielen sanasta, joka tarkoittaa kaksivuotista. Yksi tunnetuimmista on [[Venetsian biennaali]], mutta lukuisia muita järjestetään ympäri maailmaa, ja yleensä ne esittelevät aivan uusia ja kokeilevia teoksia. [[Vila Nova de Cerveiran]] biennaali on järjestetty vuodesta 1978, ja se on tehnyt pienestä rajakaupungista kansainvälisesti tunnetun taidepaikan. Kaksi vuotta on kyyhkylle ihan kohtuullinen odotusaika.
+KYSYMYS: Kerro lisää: Venetsian biennaali
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mikä nykytaiteen biennaali on?
+AIEMPI VASTAUS (Livia):
+Ai se. Biennaali on joka toinen vuosi järjestettävä suuri taidetapahtuma, johon kootaan eri maiden taiteilijoiden töitä. Nimi tulee italian kielen sanasta, joka tarkoittaa kaksivuotista. Yksi tunnetuimmista on [[Venetsian biennaali]], mutta lukuisia muita järjestetään ympäri maailmaa, ja yleensä ne esittelevät aivan uusia ja kokeilevia teoksia. [[Vila Nova de Cerveiran]] biennaali on järjestetty vuodesta 1978, ja se on tehnyt pienestä rajakaupungista kansainvälisesti tunnetun taidepaikan. Kaksi vuotta on kyyhkylle ihan kohtuullinen odotusaika.
+KYSYMYS: Kerro lisää: Vila Nova de Cerveiran
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Monterrey: Kuningasvuori, joka onkin kreivi] Espanjaksi Monterrey kääntyy kirjaimellisesti kuningasvuoreksi, ja kansanetymologia liittää nimen kaupunkia ympäröiviin vuoriin. Se ei pidä paikkaansa: kaupunki on nimetty Gaspar de Zúñigan, Monterreyn viidennen kreivin mukaan, joka oli Uuden Espanjan varakuningas vuosina 1595–1603 ja jonka suku oli kotoisin Monterreistä Galiciasta. Vuoret olivat silti paikalla ennen nimeä. Ennen eurooppalaisia laaksossa ei ollut valtiota vaan paimentolaisryhmiä, joista kalliopiirrosten ja luolamaalausten perusteella on tunnistettu neljä: azalapat, huachichilit, coahuiltecot ja borradot.
+AIEMPI KYSYMYS: Mikä Minho-joki on ja mihin se virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Minho, espanjaksi Miño, saa alkunsa [[Galiciasta]] Pohjois-Espanjasta ja virtaa lounaaseen kohti rannikkoa. Alajuoksullaan se muodostaa Portugalin ja Espanjan välisen rajan, ja sen yli kulkee siltoja sekä lauttayhteyksiä. Joki laskee [[Atlanttiin]] Portugalin pohjoisrajan tuntumassa. Vila Nova de Cerveira seisoo joen Portugalin puoleisella rannalla. Joki kulkee, minä lennän yli, ja rajat on ihmisten juttu.
+KYSYMYS: Kerro lisää: Galiciasta
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mikä Minho-joki on ja mihin se virtaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Minho, espanjaksi Miño, saa alkunsa [[Galiciasta]] Pohjois-Espanjasta ja virtaa lounaaseen kohti rannikkoa. Alajuoksullaan se muodostaa Portugalin ja Espanjan välisen rajan, ja sen yli kulkee siltoja sekä lauttayhteyksiä. Joki laskee [[Atlanttiin]] Portugalin pohjoisrajan tuntumassa. Vila Nova de Cerveira seisoo joen Portugalin puoleisella rannalla. Joki kulkee, minä lennän yli, ja rajat on ihmisten juttu.
+KYSYMYS: Kerro lisää: Atlanttiin
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande: Hyökkäys Coimbran linnakkeeseen] Joulukuun 27.-29. päivänä 1864 paraguaylaiset joukot hyökkäsivät Coimbran linnakkeeseen Paraguayn joen varrella lähellä Corumbáa - se oli sodan ensimmäisiä taisteluita ja avasi hyökkäyksen koko Mato Grosson provinssiin. Vain noin 190 hengen varuskunta, jossa palveli myös alkuperäiskansojen sotilaita, kesti ylivoimaisen hyökkäyksen kaksi vuorokautta ennen järjestäytynyttä evakuointiaan höyrylaiva Anhambaíssa; hyökkääjät menettivät noin 200 miestä, puolustajat ei yhtään. Paraguaylaiset miehittivät seutua aina vuoteen 1868 asti. Rio de Janeiroon pystytettiin myöhemmin sotasankareille muistomerkki, jonka pronssireliefi kuvaa hyökkäystä.
+AIEMPI KYSYMYS: Millainen hallitsija kuningas Dinis oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hän hallitsi Portugalia vuosina 1279–1325 ja oli tunnettu kiinnostuksestaan kulttuuriin ja maan kehittämiseen. Kuningas perusti kaupunkeja ja linnoja, ja hänen aikanaan perustettu yliopisto on nykyisin [[Coimbran yliopisto]]. Lähteiden mukaan hänen aikanaan [[portugalin kieli]] otettiin virallisiin asiakirjoihin latinan rinnalle. Dinis tunnetaan myös runoilijana, ja häneltä on säilynyt lauluja keskiaikaisessa galicialais-portugalilaisessa kielessä. Hyvä kuningas, jos minulta kysytään.
+KYSYMYS: Kerro lisää: Coimbran yliopisto
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — maalehti / Kirjallisuus: Shakespeare krioksi, koska kieli ei ole murre] 1964–2013 — Kriota puhuu yli yhdeksänkymmentä prosenttia maan väestöstä, mutta sillä ei ole virallista asemaa. Sanasto tulee englannista, kieliopin arvellaan seuraavan jamaikalaista maroonikreolia ja afrikkalaiset sanat ovat pääosin akanista, jorubasta ja igbosta; lapsi on pikin portugalin sanasta pequeno. Toimittaja ja kielimies Thomas Decker väitti 1900-luvun puolivälissä, ettei krio ole murre vaan kieli, ja todisti sen kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 ja Vanha testamentti 2013.
+AIEMPI KYSYMYS: Millainen hallitsija kuningas Dinis oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hän hallitsi Portugalia vuosina 1279–1325 ja oli tunnettu kiinnostuksestaan kulttuuriin ja maan kehittämiseen. Kuningas perusti kaupunkeja ja linnoja, ja hänen aikanaan perustettu yliopisto on nykyisin [[Coimbran yliopisto]]. Lähteiden mukaan hänen aikanaan [[portugalin kieli]] otettiin virallisiin asiakirjoihin latinan rinnalle. Dinis tunnetaan myös runoilijana, ja häneltä on säilynyt lauluja keskiaikaisessa galicialais-portugalilaisessa kielessä. Hyvä kuningas, jos minulta kysytään.
+KYSYMYS: Kerro lisää: portugalin kieli
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mitä pohjoisportugalilaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pohjois-Portugalin Minhon seudulta on kotoisin [[vinho verde]], nuori, kevyt ja usein hieman kuohuva viini, jonka nimi tarkoittaa vihreää viiniä. Seudun perinteisiin kuuluu myös [[caldo verde]], kaalista ja perunasta keitetty keitto. Koko maassa rakastetaan kuivattua turskaa eli [[bacalhau]], jolle sanotaan olevan lukuisia valmistustapoja. Pullan nimeä en tiedä, mut kyl täällä jokin versio on.
+KYSYMYS: Kerro lisää: vinho verde
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mitä pohjoisportugalilaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pohjois-Portugalin Minhon seudulta on kotoisin [[vinho verde]], nuori, kevyt ja usein hieman kuohuva viini, jonka nimi tarkoittaa vihreää viiniä. Seudun perinteisiin kuuluu myös [[caldo verde]], kaalista ja perunasta keitetty keitto. Koko maassa rakastetaan kuivattua turskaa eli [[bacalhau]], jolle sanotaan olevan lukuisia valmistustapoja. Pullan nimeä en tiedä, mut kyl täällä jokin versio on.
+KYSYMYS: Kerro lisää: caldo verde
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Nova de Cerveira (historia)
+Tietoruudun teksti: Vila Nova de Cerveira on kunta Viana do Castelon piirikunnassa Pohjois-Portugalissa Minho-joen vasemmalla rannalla, joka muodostaa Espanjan rajan. Kuningas Dinis perusti kaupungin 1. lokakuuta 1321 ja määräsi rakennettavaksi linnan, joka yhä hallitsee kaupungin keskustaa. Linna on 1300-luvulta ja seisoo pienellä kukkulalla Minhon vieressä, ja siitä näkee kaupunkiin ja Galician yli menevät kulkureitit. Nimestä kertoo legenda, jonka mukaan hirvi valittiin jumalten tahdosta kuninkaaksi ja seutu sai nimen Terras de Cervaria, hirvien maa. Nykyisin kaupunki on tunnettu kansainvälisestä taidebiennaalista, joka on järjestetty siellä vuodesta 1978.
+AIEMPI KYSYMYS: Mitä pohjoisportugalilaiseen ruokapöytään kuuluu?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pohjois-Portugalin Minhon seudulta on kotoisin [[vinho verde]], nuori, kevyt ja usein hieman kuohuva viini, jonka nimi tarkoittaa vihreää viiniä. Seudun perinteisiin kuuluu myös [[caldo verde]], kaalista ja perunasta keitetty keitto. Koko maassa rakastetaan kuivattua turskaa eli [[bacalhau]], jolle sanotaan olevan lukuisia valmistustapoja. Pullan nimeä en tiedä, mut kyl täällä jokin versio on.
+KYSYMYS: Kerro lisää: bacalhau
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+AIEMPI KYSYMYS: Miksi Monsantoa kutsutaan portugalilaisimmaksi kyläksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuonna 1938 hallitus järjesti kilpailun, jossa palkittiin kaksitoista historiallista kylää arvonimellä "Portugalin portugalilaisin kylä", kukin omassa maakunnassaan. Monsanto sai tämän arvonimen, ja se on pysynyt kylän tunnuksena siitä lähtien. Kylä sijaitsee [[Idanha-a-Novan]] kunnassa jyrkällä kukkulalla, ja sen talot ovat rakentuneet jättimäisten [[graniittilohkareiden]] lomaan. Portugalilaisin on kyl iso titteli kyyhkyn mittapuulla.
+KYSYMYS: Kerro lisää: Idanha-a-Novan
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Miksi Monsantoa kutsutaan portugalilaisimmaksi kyläksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vuonna 1938 hallitus järjesti kilpailun, jossa palkittiin kaksitoista historiallista kylää arvonimellä "Portugalin portugalilaisin kylä", kukin omassa maakunnassaan. Monsanto sai tämän arvonimen, ja se on pysynyt kylän tunnuksena siitä lähtien. Kylä sijaitsee [[Idanha-a-Novan]] kunnassa jyrkällä kukkulalla, ja sen talot ovat rakentuneet jättimäisten [[graniittilohkareiden]] lomaan. Portugalilaisin on kyl iso titteli kyyhkyn mittapuulla.
+KYSYMYS: Kerro lisää: graniittilohkareiden
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Historia: Kuningas, joka kirjoitti Lissaboniin] 1483–1526 — Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.
+- [Saint Helena — maalehti / Historia: Mies, joka jäi saarelle omasta tahdostaan] 1515–1545 — Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monsanton keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena, ja rauniot kohoavat yhä kylän yläpuolella. Linnan historia ulottuu pitkälle taakse: kuningas [[Afonso I]] valtasi paikan maureilta 1100-luvulla ja antoi sen [[temppeliritarikunnalle]] ja myöhemmin [[Santiagon ritarikunnalle]]. Tarkkaa räjähdyksen vuotta en ole varma. Onpas ollu levoton historia kivillä.
+KYSYMYS: Kerro lisää: Afonso I
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+AIEMPI KYSYMYS: Mitä linnalle tapahtui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monsanton keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena, ja rauniot kohoavat yhä kylän yläpuolella. Linnan historia ulottuu pitkälle taakse: kuningas [[Afonso I]] valtasi paikan maureilta 1100-luvulla ja antoi sen [[temppeliritarikunnalle]] ja myöhemmin [[Santiagon ritarikunnalle]]. Tarkkaa räjähdyksen vuotta en ole varma. Onpas ollu levoton historia kivillä.
+KYSYMYS: Kerro lisää: temppeliritarikunnalle
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Sokeriruokoa kasvatettiin holvien vieressä] Ennen kuin sokeriruoko siirtyi Atlantin taakse, sitä kasvatettiin Kyproksen etelärannikolla. Kolossin tila annettiin vuonna 1210 johanniittojen ritarikunnalle, ja sokerin valmistus paikalla on dokumentoitu vuodesta 1343. Linnan itäpuolella on yhä jäljellä pitkä ja kapea holvattu halli, jossa ruoko puristettiin ja mehu keitettiin. Työ vaati vettä kahteen tarkoitukseen: kastelemaan ruokoviljelmiä ja pyörittämään myllynrattaita. Sitä varten alueelle rakennettiin akveduktien, altaiden ja vesimyllyjen verkosto. Sokeri oli keskiajan Euroopassa kallis ylellisyystuote, ja saaren sokeri myytiin sinne mausteen tapaan.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Monsanton keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena, ja rauniot kohoavat yhä kylän yläpuolella. Linnan historia ulottuu pitkälle taakse: kuningas [[Afonso I]] valtasi paikan maureilta 1100-luvulla ja antoi sen [[temppeliritarikunnalle]] ja myöhemmin [[Santiagon ritarikunnalle]]. Tarkkaa räjähdyksen vuotta en ole varma. Onpas ollu levoton historia kivillä.
+KYSYMYS: Kerro lisää: Santiagon ritarikunnalle
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Vizcaínas-koulu] 1734 Koulun perusti baskien veljeskunta Nuestra Señora de Aránzazu, johon kuului Vizcayasta, Álavasta, Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; hanketta johti kolme jäsentä, Francisco de Echeveste, Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin tonttia sieltä, missä nykyään kulkee Avenida Juárez, mutta pyyntö evättiin. Tilalle tarjottiin San Juanin kaupunginosan entistä toripaikkaa, josta oli tullut kaatopaikka ja jota pidettiin hyvin huonona seutuna. Tontti otettiin vastaan, vaikka se piti kuivattaa. Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, baskien…
+AIEMPI KYSYMYS: Mikä temppeliritarikunta oli ja mitä sille tapahtui?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: ritarikunta liittyy suoraan Monsantoon. Temppeliritarikunta oli keskiajalla perustettu sotilaallinen ja uskonnollinen veljeskunta, joka suojeli pyhiinvaeltajia ja sai laajoja omaisuuksia ja linnoja Euroopassa. Paavi [[Klemens V]] lakkautti ritarikunnan vuonna 1312. Portugalissa sen omaisuuden ja perinteen jatkajaksi syntyi 1300-luvun alussa [[Kristuksen ritarikunta]], jota kuningas Dinis tuki. Aika on kuljettanut kaikkea, kuten linnoja ja ritarikuntia, mutta myös rajaseutujen kyliä.
+KYSYMYS: Kerro lisää: Klemens V
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kohdekartta / Kohdekartta: Kristuksen katedraali] 1867–1946 Marinan varrella oleva anglikaaninen katedraali on Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali perustettiin 1869 — neljä vuotta ennen isoisän matkaa. Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi piispaksi. Nykyinen rakennus on paljon nuorempi. Työ alkoi arkkitehti Bagan Benjaminin piirustusten mukaan 1. marraskuuta 1924, peruskiven laski Walesin prinssi — myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja kirkko valmistui 1946. Katedraali on ollut vuorollaan Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko Nigerian arkkipiispan ja nykyään Lagosin piispa…
+- [Whitehorse — kohdekartta / Kohdekartta: Kristuksen katedraali] 1891 alkaen Whitehorsen anglikaaninen katedraali on Yukonin hiippakunnan istuin. Hiippakunta syntyi 1891, kun Mackenzie-joen hiippakunta jaettiin kahtia; se sai ensin nimen Selkirk ja vaihtoi nimekseen Yukon vasta 1907. Alue on suuri ja seurakuntia vähän: kolmetoista seurakuntaa kattaa koko Yukonin ja osan Pohjois-Brittiläistä Kolumbiaa, ja jäseniä laskettiin vuonna 2022 vajaat tuhat. Hiippakunta siirrettiin nykyiseen kirkkoprovinssiin 1947. Katedraalissa on nähty myös yksi Kanadan kirkkohistorian ensimmäisistä: Lesley Wheeler-Dame valittiin 2019 ensin apulaispiispaksi ja hänestä tuli hiippakunnan ensimmäinen naispuolinen piispa. Hänet vihittiin ja asetettiin virkaan elokuussa 2019.
+AIEMPI KYSYMYS: Mikä temppeliritarikunta oli ja mitä sille tapahtui?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: ritarikunta liittyy suoraan Monsantoon. Temppeliritarikunta oli keskiajalla perustettu sotilaallinen ja uskonnollinen veljeskunta, joka suojeli pyhiinvaeltajia ja sai laajoja omaisuuksia ja linnoja Euroopassa. Paavi [[Klemens V]] lakkautti ritarikunnan vuonna 1312. Portugalissa sen omaisuuden ja perinteen jatkajaksi syntyi 1300-luvun alussa [[Kristuksen ritarikunta]], jota kuningas Dinis tuki. Aika on kuljettanut kaikkea, kuten linnoja ja ritarikuntia, mutta myös rajaseutujen kyliä.
+KYSYMYS: Kerro lisää: Kristuksen ritarikunta
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Diamond Head – sammunut tuhkakartio] Oahun saarella Honolulun kupeessa kohoava Diamond Head, havaijiksi Lēʻahi, syntyi yhdessä ainoassa räjähtävässä purkauksessa noin 300 000 vuotta sitten, kun nouseva magma kohtasi merivettä ja pirstoi kiven hienoksi tuhkaksi. Näin syntyi laaja, matala tuffikartio, jonka läpimitta on lähes 1,2 kilometriä. 1800-luvun brittiläiset merimiehet luulivat kraatterin seinämissä kimaltavia kalsiittikiteitä timanteiksi ja antoivat vuorelle englanninkielisen nimensä, vaikka aitoja jalokiviä paikalta ei koskaan löytynyt. Nykyään sammunut kraatteri kohoaa keskellä tiheästi asuttua Honolulua, ja sen reunalta avautuu näkymä koko kaupunkiin ja valtamerelle.
+- [Galápagos — kaupunkilehti / Galápagossaaret: Tulivuorista noussut saaristo] Galápagossaaret ovat syntyneet keskellä Tyyntämerta kuuman pisteen yllä, jossa maankuoren alla virtaava magma on työntänyt esiin tulivuoria miljoonien vuosien ajan. Espanjalainen piispa Tomás de Berlanga törmäsi saaristoon vahingossa vuonna 1535, kun hänen laivansa ajelehti tyynellä säällä Panamasta Peruun matkatessa. Kolme vuosisataa myöhemmin, vuonna 1835, saariston rannoille nousi nuori luonnontutkija Charles Darwin HMS Beaglelta. Hänen huomionsa saariston omalaatuisesta eläimistöstä kypsyi vuosikymmenten varrella teokseksi Lajien synty (1859) — isoisän matkavuosi 1873 sijoittuu vain 14 vuotta sen jälkeen.
+AIEMPI KYSYMYS: Miten graniitti syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Graniitti syntyy, kun maankuoren alla oleva kuuma kivisula eli [[magma]] jähmettyy hitaasti syvällä maan sisällä. Hidas jäähtyminen antaa mineraaleille aikaa kasvaa, ja siksi graniitissa erottuvat selvästi [[kvartsi]], [[maasälpä]] ja [[kiille]]. Kun päällä oleva kivi kuluu pois, graniitti paljastuu pinnalle, ja sääolot pyöristävät sen vähitellen suuriksi lohkareiksi. Hidasta hommaa, mut kestävää.
+KYSYMYS: Kerro lisää: magma
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+AIEMPI KYSYMYS: Miten graniitti syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Graniitti syntyy, kun maankuoren alla oleva kuuma kivisula eli [[magma]] jähmettyy hitaasti syvällä maan sisällä. Hidas jäähtyminen antaa mineraaleille aikaa kasvaa, ja siksi graniitissa erottuvat selvästi [[kvartsi]], [[maasälpä]] ja [[kiille]]. Kun päällä oleva kivi kuluu pois, graniitti paljastuu pinnalle, ja sääolot pyöristävät sen vähitellen suuriksi lohkareiksi. Hidasta hommaa, mut kestävää.
+KYSYMYS: Kerro lisää: kvartsi
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+AIEMPI KYSYMYS: Miten graniitti syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Graniitti syntyy, kun maankuoren alla oleva kuuma kivisula eli [[magma]] jähmettyy hitaasti syvällä maan sisällä. Hidas jäähtyminen antaa mineraaleille aikaa kasvaa, ja siksi graniitissa erottuvat selvästi [[kvartsi]], [[maasälpä]] ja [[kiille]]. Kun päällä oleva kivi kuluu pois, graniitti paljastuu pinnalle, ja sääolot pyöristävät sen vähitellen suuriksi lohkareiksi. Hidasta hommaa, mut kestävää.
+KYSYMYS: Kerro lisää: maasälpä
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+AIEMPI KYSYMYS: Miten graniitti syntyy?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Graniitti syntyy, kun maankuoren alla oleva kuuma kivisula eli [[magma]] jähmettyy hitaasti syvällä maan sisällä. Hidas jäähtyminen antaa mineraaleille aikaa kasvaa, ja siksi graniitissa erottuvat selvästi [[kvartsi]], [[maasälpä]] ja [[kiille]]. Kun päällä oleva kivi kuluu pois, graniitti paljastuu pinnalle, ja sääolot pyöristävät sen vähitellen suuriksi lohkareiksi. Hidasta hommaa, mut kestävää.
+KYSYMYS: Kerro lisää: kiille
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+AIEMPI KYSYMYS: Kuinka vanha Portugalin ja Espanjan raja on?
+AIEMPI VASTAUS (Livia):
+Mmm— Portugalin ja Espanjan raja on yksi Euroopan vanhimmista lähes muuttumattomista rajoista. Sen pääpiirteet vahvistettiin vuonna 1297 [[Alcañicesin sopimuksessa]], jonka tekivät Portugalin kuningas Dinis ja [[Kastilian]] kuningas. Vuosisatojen aikana raja on pysynyt hyvin vakaana. Tunnettu poikkeus on [[Olivenzan]] seutu, jonka asemasta on kiistelty. Raja on sentään kestänyt paremmin kuin useimmat muistoni.
+KYSYMYS: Kerro lisää: Alcañicesin sopimuksessa
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kaupunkilehti / Historian hetki: Santa Fé 1492 — sanansaattaja tavoittaa tiellä] 17.4.1492 — Kavioiden kapse tavoittaa hänet vasta tiellä. Kolumbus on lähtenyt Santa Fésta jälleen kerran torjuttuna, kun kuninkaallinen sanansaattaja saa hänet kiinni ja käskee kääntyä takaisin: hovi on muuttanut mielensä. Miehellä, joka ratsastaa takaisin leirikaupunkiin, ei ole enää mitään hävittävää, ja juuri siksi hän uskaltaa vaatia. Hän ei pyydä pelkkiä laivoja vaan amiraalin arvon, kuvernöörin aseman löytämissään maissa ja kymmenyksen kaikesta, mitä lännestä tulee. Odotusta on takana seitsemän vuotta: Kastilian hovi on kuunnellut, lykännyt ja torjunut, ja koko ajan on ollut sota. Santa Fé on rakennettu Granadan piiritystä varten, ja kaupunki antautui vasta tammikuun toisena päivänä;…
+- [Lissabon — kaupunkilehti / Historian hetki: Lissabon 1484 — kartta, jota kukaan ei osta] 1484 — Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja pudistavat päätään — taas kerran. Loukkaus on tuttu eikä siksi yhtään helpompi. Epäilijät osuvat siihen, mikä on olennaista: Kolumbus on laskenut maapallon liian pieneksi ja Aasian aivan liian lähelle, ja purjehdus, jonka hän lupaa, olisi todellisuudessa moninkertainen. Juhana II:n hovi ei silti hylkää suunnitelmaa vain laskuvirheen takia. Portugalin laivat etenevät jo Afrikan rannikkoa etelään, ja se tie Intiaan näyttää varmalta — miksi maksaa arvauksesta? Lissabonista lähtee mies, jolla ei ole …
+AIEMPI KYSYMYS: Kuinka vanha Portugalin ja Espanjan raja on?
+AIEMPI VASTAUS (Livia):
+Mmm— Portugalin ja Espanjan raja on yksi Euroopan vanhimmista lähes muuttumattomista rajoista. Sen pääpiirteet vahvistettiin vuonna 1297 [[Alcañicesin sopimuksessa]], jonka tekivät Portugalin kuningas Dinis ja [[Kastilian]] kuningas. Vuosisatojen aikana raja on pysynyt hyvin vakaana. Tunnettu poikkeus on [[Olivenzan]] seutu, jonka asemasta on kiistelty. Raja on sentään kestänyt paremmin kuin useimmat muistoni.
+KYSYMYS: Kerro lisää: Kastilian
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monsanto (historia)
+Tietoruudun teksti: Monsanto on kylä Idanha-a-Novan kunnassa Castelo Brancon piirikunnassa. Vuonna 2011 kylässä asui 828 ihmistä, ja siitä tuli myöhemmin tunnettu "Portugalin portugalilaisimpana kylänä", kun hallituksen vuonna 1938 järjestämä kilpailu palkitsi kaksitoista historiallista kylää tällä arvonimellä omassa maakunnassaan. Kylä oli kunnan pääkaupunki vuodesta 1174 1800-luvun alkuun, ja se kohoaa jyrkästi 758 metrin korkeuteen merenpinnasta. Kuningas Afonso I valtasi Monsanton maureilta 1100-luvulla ja antoi sen temppeliritarikunnalle ja myöhemmin Santiagon ritarikunnalle. Keskiaikainen linna tuhoutui 1800-luvulla räjähdyksen seurauksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kohdekartta / Kohdekartta: Olive Pinkin puutarha] 1956 Olive Pinkin kasvitieteellinen puutarha on kuudentoista hehtaarin alue Todd-joen itäpuolella kaupungin keskustan eteläreunassa, ja se on erikoistunut Keski-Australian kuivan alueen kasveihin. Alue määrättiin 1956 Australian kuivien alueiden kasvistoreserviksi sen jälkeen, kun sen perustaja ja ensimmäinen kunniakuraattori Olive Muriel Pink oli lobannut asiaa sitkeästi. Ennen vuotta 1956 maa oli ollut käyttämätöntä ja siellä olivat laiduntaneet villivuohet, kanit ja karja, niin että tulvatasangon kasvillisuus oli muuttunut perusteellisesti eikä puita tai pensaita ollut jäljellä. Pink ja hänen warlpiri-avustajansa käyttivät seuraavat kaksi vuosikymmentä kuivuutta ja lähes olematonta rahoi…
+AIEMPI KYSYMYS: Kuinka vanha Portugalin ja Espanjan raja on?
+AIEMPI VASTAUS (Livia):
+Mmm— Portugalin ja Espanjan raja on yksi Euroopan vanhimmista lähes muuttumattomista rajoista. Sen pääpiirteet vahvistettiin vuonna 1297 [[Alcañicesin sopimuksessa]], jonka tekivät Portugalin kuningas Dinis ja [[Kastilian]] kuningas. Vuosisatojen aikana raja on pysynyt hyvin vakaana. Tunnettu poikkeus on [[Olivenzan]] seutu, jonka asemasta on kiistelty. Raja on sentään kestänyt paremmin kuin useimmat muistoni.
+KYSYMYS: Kerro lisää: Olivenzan
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Kuka Ibn Marwan oli?
+AIEMPI VASTAUS (Livia):
+No jopas, kysyt kunnon rebellistä. Ibn Marwan oli [[muwalladi]] eli Iberian niemimaalla elänyt, islamiin kääntyneen väestön jälkeläinen, ja hän nousi kapinaan [[Córdoban emiraatin]] hallitsijoita vastaan. Hänen kerrotaan eläneen 800-luvulla, vaikka joissain esityksissä ajoitus on 700-luvulla. Hän perusti itsenäisen emiraatin, jonka keskuksena tunnetaan [[Badajoz]], ja rakennutti Marvãon linnan valtansa tukikohdaksi, luultavasti aiemman roomalaisen vartiotornin paikalle. Marvãon nimi juontuu hänestä. Rebelli ja linnanrakentaja, ei hassumpi cv.
+KYSYMYS: Kerro lisää: muwalladi
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Al Ahmadiyan koulu] 1912 Ennen kouluja lapset opiskelivat Dubaissa moskeijoiden yhteydessä. Vuonna 1912 helmikaupalla rikastunut Sheikh Ahmed Bin Dalmouk rakennutti Deiran Al Rasiin talon, joka oli tarkoitettu pelkkään opetukseen — se on Dubain vanhin tunnettu muodollinen oppilaitos. Perustaja ei ehtinyt nähdä työtään valmiina: hänen poikansa Mohammed viimeisteli rakennuksen ja antoi koululle isänsä nimen. Opettajiksi saatiin aikansa tunnetuimpia dubailaisia lakioppineita ja islamin tutkijoita, ja koulun penkeiltä nousi sukupolvi, joka myöhemmin rakensi emiraatin liike-elämän: oppilaina olivat muun muassa Easa Al-Gurg, Majid Al Futtaim ja Abdulla Al Ghurair. Talo säilyi, ja Dubain hallitus alkoi kunnostaa sitä…
+AIEMPI KYSYMYS: Kuka Ibn Marwan oli?
+AIEMPI VASTAUS (Livia):
+No jopas, kysyt kunnon rebellistä. Ibn Marwan oli [[muwalladi]] eli Iberian niemimaalla elänyt, islamiin kääntyneen väestön jälkeläinen, ja hän nousi kapinaan [[Córdoban emiraatin]] hallitsijoita vastaan. Hänen kerrotaan eläneen 800-luvulla, vaikka joissain esityksissä ajoitus on 700-luvulla. Hän perusti itsenäisen emiraatin, jonka keskuksena tunnetaan [[Badajoz]], ja rakennutti Marvãon linnan valtansa tukikohdaksi, luultavasti aiemman roomalaisen vartiotornin paikalle. Marvãon nimi juontuu hänestä. Rebelli ja linnanrakentaja, ei hassumpi cv.
+KYSYMYS: Kerro lisää: Córdoban emiraatin
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Kuka Ibn Marwan oli?
+AIEMPI VASTAUS (Livia):
+No jopas, kysyt kunnon rebellistä. Ibn Marwan oli [[muwalladi]] eli Iberian niemimaalla elänyt, islamiin kääntyneen väestön jälkeläinen, ja hän nousi kapinaan [[Córdoban emiraatin]] hallitsijoita vastaan. Hänen kerrotaan eläneen 800-luvulla, vaikka joissain esityksissä ajoitus on 700-luvulla. Hän perusti itsenäisen emiraatin, jonka keskuksena tunnetaan [[Badajoz]], ja rakennutti Marvãon linnan valtansa tukikohdaksi, luultavasti aiemman roomalaisen vartiotornin paikalle. Marvãon nimi juontuu hänestä. Rebelli ja linnanrakentaja, ei hassumpi cv.
+KYSYMYS: Kerro lisää: Badajoz
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Miksi Marvãosta näkee niin kauas?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä kannattaa kysyä lintua. Marvão seisoo [[Serra de São Mamedessa]] kvartsiittikallion päällä, huomattavasti ympäröivää maata korkeammalla. Alla aukeaa [[Alentejon]] laaja tasanko, joten näkymä ei katkea metsään tai muihin kukkuloihin, ja raja Espanjaan on aivan lähellä. Sen vuoksi paikka sopi vartiopaikaksi ja linnoitukseksi jo varhain. Nobel-kirjailija [[José Saramago]] kirjoitti, että Marvãosta näkee koko maan. Ylhäältä näkee kyl pullaleipomonkin katon, jos tietää mistä katsoa.
+KYSYMYS: Kerro lisää: Serra de São Mamedessa
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Miksi Marvãosta näkee niin kauas?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä kannattaa kysyä lintua. Marvão seisoo [[Serra de São Mamedessa]] kvartsiittikallion päällä, huomattavasti ympäröivää maata korkeammalla. Alla aukeaa [[Alentejon]] laaja tasanko, joten näkymä ei katkea metsään tai muihin kukkuloihin, ja raja Espanjaan on aivan lähellä. Sen vuoksi paikka sopi vartiopaikaksi ja linnoitukseksi jo varhain. Nobel-kirjailija [[José Saramago]] kirjoitti, että Marvãosta näkee koko maan. Ylhäältä näkee kyl pullaleipomonkin katon, jos tietää mistä katsoa.
+KYSYMYS: Kerro lisää: Alentejon
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Miksi Marvãosta näkee niin kauas?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä kannattaa kysyä lintua. Marvão seisoo [[Serra de São Mamedessa]] kvartsiittikallion päällä, huomattavasti ympäröivää maata korkeammalla. Alla aukeaa [[Alentejon]] laaja tasanko, joten näkymä ei katkea metsään tai muihin kukkuloihin, ja raja Espanjaan on aivan lähellä. Sen vuoksi paikka sopi vartiopaikaksi ja linnoitukseksi jo varhain. Nobel-kirjailija [[José Saramago]] kirjoitti, että Marvãosta näkee koko maan. Ylhäältä näkee kyl pullaleipomonkin katon, jos tietää mistä katsoa.
+KYSYMYS: Kerro lisää: José Saramago
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Mikä oli Córdoban emiraatti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Córdoban emiraatti oli [[al-Andalusin]] muslimivaltio Iberian niemimaalla, ja se syntyi vuonna 756, kun Umayyad-dynastian jäsen sai vallan Córdobassa. Emiraatti kesti vuoteen 929, jolloin hallitsija Abd al-Rahman III julistautui kalifiksi ja alue muuttui [[Córdoban kalifaatiksi]]. Emiraatin aikana kaupunki kasvoi oppineisuuden ja kaupan keskukseksi, ja sen valta ulottui myös nykyisen Portugalin osiin. Kapinoitsijoita oli kuitenkin riittävästi, kuten Marvãon linnan rakentanut Ibn Marwan. Pitkä oli matka, mutta kyyhky muistaa.
+KYSYMYS: Kerro lisää: al-Andalusin
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Mikä oli Córdoban emiraatti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Córdoban emiraatti oli [[al-Andalusin]] muslimivaltio Iberian niemimaalla, ja se syntyi vuonna 756, kun Umayyad-dynastian jäsen sai vallan Córdobassa. Emiraatti kesti vuoteen 929, jolloin hallitsija Abd al-Rahman III julistautui kalifiksi ja alue muuttui [[Córdoban kalifaatiksi]]. Emiraatin aikana kaupunki kasvoi oppineisuuden ja kaupan keskukseksi, ja sen valta ulottui myös nykyisen Portugalin osiin. Kapinoitsijoita oli kuitenkin riittävästi, kuten Marvãon linnan rakentanut Ibn Marwan. Pitkä oli matka, mutta kyyhky muistaa.
+KYSYMYS: Kerro lisää: Córdoban kalifaatiksi
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Hiekka joka on täynnä pieneliöitä] nykyään — Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+AIEMPI KYSYMYS: Mikä kvartsiitti on ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Kato, kallio kannattaa tuntea. Kvartsiitti on erittäin kova kivi, joka syntyy, kun [[hiekkakivestä]] tulee kuumuuden ja paineen vaikutuksesta tiivis ja kiteytynyt. Se koostuu pääosin [[kvartsista]], jonka kuluminen on hyvin hidasta. Siksi kvartsiittikalliot kestävät sään ja veden kulutusta paremmin kuin ympäröivä pehmeämpi kivi, ja ne jäävät jyrkiksi kohoumiksi maisemaan. Marvão on rakennettu juuri tällaisen kallion päälle. Pitkä lause, mut kivi oli kyl pitkämielinen.
+KYSYMYS: Kerro lisää: hiekkakivestä
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Mikä kvartsiitti on ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Kato, kallio kannattaa tuntea. Kvartsiitti on erittäin kova kivi, joka syntyy, kun [[hiekkakivestä]] tulee kuumuuden ja paineen vaikutuksesta tiivis ja kiteytynyt. Se koostuu pääosin [[kvartsista]], jonka kuluminen on hyvin hidasta. Siksi kvartsiittikalliot kestävät sään ja veden kulutusta paremmin kuin ympäröivä pehmeämpi kivi, ja ne jäävät jyrkiksi kohoumiksi maisemaan. Marvão on rakennettu juuri tällaisen kallion päälle. Pitkä lause, mut kivi oli kyl pitkämielinen.
+KYSYMYS: Kerro lisää: kvartsista
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Miksi Portugali oli osa Espanjan kruunua 1580–1640?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun Portugalin kuningas Sebastian kuoli taistelussa Marokossa vuonna 1578 ja hänen seuraajansa, vanha kardinaali Henrik, kuoli ilman perillistä vuonna 1580, kruunusta syntyi kiista. Espanjan kuningas [[Filip II]] esitti vaatimuksensa ja sai valtaansa myös Portugalin, jolloin maat olivat yhteisen hallitsijan alaisia. Portugalin oma hallinto ja lait säilyivät pitkälti, mutta tyytymättömyys kasvoi. Vuonna 1640 [[Bragançan herttuan]] johtama kapina palautti Portugalin itsenäisyyden, ja herttua kruunattiin kuninkaaksi [[Johannes IV:ksi]]. Kuusikymmentä vuotta ei ole kyyhkylle pitkä aika.
+KYSYMYS: Kerro lisää: Filip II
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+AIEMPI KYSYMYS: Miksi Portugali oli osa Espanjan kruunua 1580–1640?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun Portugalin kuningas Sebastian kuoli taistelussa Marokossa vuonna 1578 ja hänen seuraajansa, vanha kardinaali Henrik, kuoli ilman perillistä vuonna 1580, kruunusta syntyi kiista. Espanjan kuningas [[Filip II]] esitti vaatimuksensa ja sai valtaansa myös Portugalin, jolloin maat olivat yhteisen hallitsijan alaisia. Portugalin oma hallinto ja lait säilyivät pitkälti, mutta tyytymättömyys kasvoi. Vuonna 1640 [[Bragançan herttuan]] johtama kapina palautti Portugalin itsenäisyyden, ja herttua kruunattiin kuninkaaksi [[Johannes IV:ksi]]. Kuusikymmentä vuotta ei ole kyyhkylle pitkä aika.
+KYSYMYS: Kerro lisää: Bragançan herttuan
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marvão (historia)
+Tietoruudun teksti: Marvão, viralliselta nimeltään Erittäin jalo ja alati uskollinen kaupunki Marvão, on kunta Portalegren piirikunnassa Portugalissa. Se sijaitsee Serra de São Mamedessa kvartsiittikallion päällä, ja sen nimi juontuu 700-luvun muwalladikapinallisesta Ibn Marwanista. Hän rakennutti Marvãon linnan, luultavasti aiemman roomalaisen vartiotornin paikalle, valtansa tukikohdaksi perustaessaan itsenäistä emiraattia Córdoban emiraatin aikana. Linnaa ja muurien ympäröimää kylää vahvistettiin vuosisatojen kuluessa, erityisesti 1200-luvulla Sancho II:n ja myöhemmin Dinisin aikana. Nobel-kirjailija José Saramago kirjoitti kylästä, että Marvãosta näkee koko maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+- [Fès — kohdekartta / Kohdekartta: Moulay Idris II:n zawiya] 1437 ja 1700-luku Tämä on yksi Marokon pyhimmistä pyhäköistä. Se on zawiya eli pyhäkkö ja uskonnollinen keskus, ja siinä on Idris II:n hauta. Idris II hallitsi nykyisen Marokon aluetta vuosina 807–828, ja häntä pidetään perinteisesti Fèsin perustajana ja suojeluspyhimyksenä. Paikalla oli alun perin 900-luvun moskeija, joka rappeutui myöhempinä vuosisatoina. Pyhäkön merkitys elpyi 1300- ja 1400-luvuilla, kun profeetan jälkeläisten uskonnollinen asema kasvoi — ja perinteisten kertomusten mukaan ratkaisevasti vuonna 1437: rakennusta oltiin kunnostamassa, kun paikalta löytyi haudattu ruumis, jonka ajan lakioppineet tunnistivat Idris II:ksi. Nykyisen perusmuotonsa, myös minareetin ja pyramidikat…
+AIEMPI KYSYMYS: Miksi Portugali oli osa Espanjan kruunua 1580–1640?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun Portugalin kuningas Sebastian kuoli taistelussa Marokossa vuonna 1578 ja hänen seuraajansa, vanha kardinaali Henrik, kuoli ilman perillistä vuonna 1580, kruunusta syntyi kiista. Espanjan kuningas [[Filip II]] esitti vaatimuksensa ja sai valtaansa myös Portugalin, jolloin maat olivat yhteisen hallitsijan alaisia. Portugalin oma hallinto ja lait säilyivät pitkälti, mutta tyytymättömyys kasvoi. Vuonna 1640 [[Bragançan herttuan]] johtama kapina palautti Portugalin itsenäisyyden, ja herttua kruunattiin kuninkaaksi [[Johannes IV:ksi]]. Kuusikymmentä vuotta ei ole kyyhkylle pitkä aika.
+KYSYMYS: Kerro lisää: Johannes IV:ksi

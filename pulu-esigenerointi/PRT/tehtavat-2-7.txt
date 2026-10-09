@@ -1,0 +1,1039 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Mikä on Beira Interior?
+AIEMPI VASTAUS (Livia):
+Mmm— Beira Interior on Portugalin keskiosassa, Espanjan rajan tuntumassa sijaitseva sisämaan alue. Se on pääosin vuoristoista ja harvaan asuttua seutua, jossa on linnoitettuja kaupunkeja ja kyliä, koska raja on ollut vuosisatojen ajan strategisesti tärkeä. Alueeseen kuuluvat muun muassa Guardan piirikunta sekä lähellä oleva [[Serra da Estrela]] -vuoristo. Perinteisesti seudun elinkeinoja ovat olleet karjanhoito, maanviljely ja tekstiiliteollisuus. Beira Interior Norte -alue kattaa osan [[Guardan]] piirikunnasta. Tosta paikasta olisi vielä paljon muutakin kerrottavaa.
+KYSYMYS: Kerro lisää: Guardan
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+AIEMPI KYSYMYS: Mitä sefardit ovat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sefardit ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla Espanjassa ja Portugalissa. [[Espanjasta]] juutalaiset karkotettiin vuonna 1492, ja Portugalissa heidät pakotettiin kääntymään kristinuskoon 1490-luvun lopulla. Monet lähtivät pakoon muun muassa Pohjois-Afrikkaan, Alankomaihin ja Osmanien valtakuntaan, ja he veivät mukanaan [[ladino]]-kielen ja omat perinteensä. Osa jäi maahan ja eli salaa juutalaisina [[marraaneina]]. Sefardien perintö elää yhä musiikissa, ruoassa ja kielessä. Hiljaista ja pitkää historiaa tämä on.
+KYSYMYS: Kerro lisää: Espanjasta
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Mitä sefardit ovat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sefardit ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla Espanjassa ja Portugalissa. [[Espanjasta]] juutalaiset karkotettiin vuonna 1492, ja Portugalissa heidät pakotettiin kääntymään kristinuskoon 1490-luvun lopulla. Monet lähtivät pakoon muun muassa Pohjois-Afrikkaan, Alankomaihin ja Osmanien valtakuntaan, ja he veivät mukanaan [[ladino]]-kielen ja omat perinteensä. Osa jäi maahan ja eli salaa juutalaisina [[marraaneina]]. Sefardien perintö elää yhä musiikissa, ruoassa ja kielessä. Hiljaista ja pitkää historiaa tämä on.
+KYSYMYS: Kerro lisää: ladino
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Jebel Marra — sulttaanikunnan vuoristosydän] Darfurin sulttaanikunta hallitsi laajaa savannialuetta Sudanin ja Tšadin välissä, ja sen ydinalue oli Jebel Marran tulivuoriylänkö keskellä maata. Ylängön eteläpuolen hedelmällisillä rinteillä asui maanviljelyä harjoittava Fur-kansa, jonka mukaan koko alue ja sulttaanikunta on nimetty – Dar Fur tarkoittaa Fur-kansan maata. Pohjoisemmat, kuivemmat seudut kuuluivat paimentolaisheimoille, jotka kasvattivat kameleita ja maksoivat niistä veroa sulttaanille. Jebel Marra kohoaa yli 3000 metrin korkeuteen ja erottuu ympäröivästä savannista viileämpänä, sateisempana saarekkeena, joka teki alueesta poikkeuksellisen elinkelpoisen aavikon reunalla.
+AIEMPI KYSYMYS: Mitä sefardit ovat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sefardit ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla Espanjassa ja Portugalissa. [[Espanjasta]] juutalaiset karkotettiin vuonna 1492, ja Portugalissa heidät pakotettiin kääntymään kristinuskoon 1490-luvun lopulla. Monet lähtivät pakoon muun muassa Pohjois-Afrikkaan, Alankomaihin ja Osmanien valtakuntaan, ja he veivät mukanaan [[ladino]]-kielen ja omat perinteensä. Osa jäi maahan ja eli salaa juutalaisina [[marraaneina]]. Sefardien perintö elää yhä musiikissa, ruoassa ja kielessä. Hiljaista ja pitkää historiaa tämä on.
+KYSYMYS: Kerro lisää: marraaneina
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Mikä on piirikunta Portugalissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Piirikunta eli distrikti on Portugalin hallinnollinen aluejako. Mantereella on 18 piirikuntaa, ja ne jakautuvat edelleen [[kuntiin]] eli [[municipioihin]]. Piirikunnat nimetään yleensä pääkaupunkinsa mukaan, ja esimerkiksi [[Guardan]] piirikunnan keskus on Guardan kaupunki. Nykyisin piirikuntien merkitys hallinnossa on vähäinen verrattuna kuntiin ja suurempiin tilastoalueisiin. Tämä olikin helppo, vaikka rajat ovat kyyhkylle vaikeita.
+KYSYMYS: Kerro lisää: kuntiin
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Mikä on piirikunta Portugalissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Piirikunta eli distrikti on Portugalin hallinnollinen aluejako. Mantereella on 18 piirikuntaa, ja ne jakautuvat edelleen [[kuntiin]] eli [[municipioihin]]. Piirikunnat nimetään yleensä pääkaupunkinsa mukaan, ja esimerkiksi [[Guardan]] piirikunnan keskus on Guardan kaupunki. Nykyisin piirikuntien merkitys hallinnossa on vähäinen verrattuna kuntiin ja suurempiin tilastoalueisiin. Tämä olikin helppo, vaikka rajat ovat kyyhkylle vaikeita.
+KYSYMYS: Kerro lisää: municipioihin
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Mitä wolframi on?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on lujaa kamaa. Wolframi eli volframi on metalli, jonka kemiallinen merkki on W ja jolla on kaikista metalleista korkein sulamispiste. Se on erittäin kova ja tiheä, joten sitä käytetään muun muassa [[hehkulamppujen]] hehkulangoissa, työkalujen kärjissä ja [[kovametallien]] valmistuksessa. Sitä saadaan malmeista, joista tunnetuin on wolframiitti. Portugalissa wolframia on louhittu runsaasti, ja [[Panasqueiran]] kaivos tunnetaan juuri sen tuotannosta. Metalli on raskas, ja sama koski tämän vastauksen kantamista.
+KYSYMYS: Kerro lisää: hehkulamppujen
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Mitä wolframi on?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on lujaa kamaa. Wolframi eli volframi on metalli, jonka kemiallinen merkki on W ja jolla on kaikista metalleista korkein sulamispiste. Se on erittäin kova ja tiheä, joten sitä käytetään muun muassa [[hehkulamppujen]] hehkulangoissa, työkalujen kärjissä ja [[kovametallien]] valmistuksessa. Sitä saadaan malmeista, joista tunnetuin on wolframiitti. Portugalissa wolframia on louhittu runsaasti, ja [[Panasqueiran]] kaivos tunnetaan juuri sen tuotannosta. Metalli on raskas, ja sama koski tämän vastauksen kantamista.
+KYSYMYS: Kerro lisää: kovametallien
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Mitä wolframi on?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on lujaa kamaa. Wolframi eli volframi on metalli, jonka kemiallinen merkki on W ja jolla on kaikista metalleista korkein sulamispiste. Se on erittäin kova ja tiheä, joten sitä käytetään muun muassa [[hehkulamppujen]] hehkulangoissa, työkalujen kärjissä ja [[kovametallien]] valmistuksessa. Sitä saadaan malmeista, joista tunnetuin on wolframiitti. Portugalissa wolframia on louhittu runsaasti, ja [[Panasqueiran]] kaivos tunnetaan juuri sen tuotannosta. Metalli on raskas, ja sama koski tämän vastauksen kantamista.
+KYSYMYS: Kerro lisää: Panasqueiran
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Miten kaivos löydettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on mukava tarina. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti [[wolframin]] louhinnan, ja professori [[Silva Pinto]] osti myöhemmin malmin ja maan. Kaivos on sijainnut [[Cabeço do Pião]] -kukkulan ja Panasqueiran kylän välillä, ja se on toiminut lähes keskeytyksettä vuodesta 1901.
+
+Hiilenpolttaja löytää kiven kanervikosta ja muuttaa sillä koko seudun historian, ja siinä on hyvä viestinviejän tarina. Minä olisin kyllä kantanut kiven suoraan professorille.
+KYSYMYS: Kerro lisää: wolframin
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+AIEMPI KYSYMYS: Miten kaivos löydettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on mukava tarina. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti [[wolframin]] louhinnan, ja professori [[Silva Pinto]] osti myöhemmin malmin ja maan. Kaivos on sijainnut [[Cabeço do Pião]] -kukkulan ja Panasqueiran kylän välillä, ja se on toiminut lähes keskeytyksettä vuodesta 1901.
+
+Hiilenpolttaja löytää kiven kanervikosta ja muuttaa sillä koko seudun historian, ja siinä on hyvä viestinviejän tarina. Minä olisin kyllä kantanut kiven suoraan professorille.
+KYSYMYS: Kerro lisää: Silva Pinto
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Miten kaivos löydettiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on mukava tarina. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti [[wolframin]] louhinnan, ja professori [[Silva Pinto]] osti myöhemmin malmin ja maan. Kaivos on sijainnut [[Cabeço do Pião]] -kukkulan ja Panasqueiran kylän välillä, ja se on toiminut lähes keskeytyksettä vuodesta 1901.
+
+Hiilenpolttaja löytää kiven kanervikosta ja muuttaa sillä koko seudun historian, ja siinä on hyvä viestinviejän tarina. Minä olisin kyllä kantanut kiven suoraan professorille.
+KYSYMYS: Kerro lisää: Cabeço do Pião
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Gamelan – pronssin puhetta] Gamelan-musiikki syntyi Jaavalla, mutta löysi Balilla oman äänensä 1400-luvulla, kun Majapahit-valtakunnan sortuessa aateliset, taiteilijat ja papit pakenivat saarelle tuoden mukanaan gongit ja metallilaatat. Hovin juhlagamelaneita, gong gedeä, soitettiin jo 1400–1500-luvun kuninkaskuntien temppelijuhlissa, ja soittajat oppivat ohjelmiston korvakuulolta sukupolvi toisensa jälkeen ilman nuotteja. 1800-luvun lopulla balilaiskylissä syntyi nopeatempoisempi gong kebyar, joka räjähti suosioon Jagaragan kylän kilpailussa joulukuussa 1915 – silminnäkijöiden mukaan sidotut karjaeläimetkin repivät itsensä irti kuullessaan uuden tyylin rytmin ensi kertaa.
+AIEMPI KYSYMYS: Mikä on tina ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tina on pehmeä, hopeanvalkoinen metalli, jonka kemiallinen merkki on Sn. Se ei ruostu helposti, joten sillä päällystetään teräspeltiä, ja tällaisesta tinatusta pellistä valmistetaan esimerkiksi säilyketölkkejä. Tinaa käytetään myös juotteissa elektroniikan komponenttien yhdistämiseen sekä [[pronssin]] valmistukseen, sillä pronssi on kuparin ja tinan seos. Tina on ollut ihmiselle tärkeä jo tuhansia vuosia, ja sen mukaan on nimetty myös [[pronssikausi]]. Pitkältä näyttää tämäkin lista.
+KYSYMYS: Kerro lisää: pronssin
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Anatolian sivilisaatioiden museo] Museo on kahdessa 1400-luvun ottomaanirakennuksessa Ankaran linnan eteläpuolella Atpazarın korttelissa. Näyttely on Mahmut Paşan bedestenissä eli katetussa kauppahallissa, jonka Mehmed II:n visiiri rakennutti vuosina 1464–1471: kymmenen kupolia kattaa suorakaiteen, ja hallissa oli 102 puotia vastakkain. Vieressä on Kurşunlu Han: keskellä piha ja pylväskäytävä, ympärillä kaksi kerrosta huoneita, 28 alhaalla ja 30 ylhäällä. Han on nykyään hallintosiipi, jossa ovat työhuoneet, kirjasto, esitelmäsali ja laboratorio. Kymmenkupolinen keskihalli on jätetty yhdeksi tilaksi, ja siinä seisovat suuret kivireliefit ja patsaat myöhäisheettiläiseltä ajalta: pitkäkaapuisia sotilaita, sotavaunuja, hierogly…
+AIEMPI KYSYMYS: Mikä on tina ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tina on pehmeä, hopeanvalkoinen metalli, jonka kemiallinen merkki on Sn. Se ei ruostu helposti, joten sillä päällystetään teräspeltiä, ja tällaisesta tinatusta pellistä valmistetaan esimerkiksi säilyketölkkejä. Tinaa käytetään myös juotteissa elektroniikan komponenttien yhdistämiseen sekä [[pronssin]] valmistukseen, sillä pronssi on kuparin ja tinan seos. Tina on ollut ihmiselle tärkeä jo tuhansia vuosia, ja sen mukaan on nimetty myös [[pronssikausi]]. Pitkältä näyttää tämäkin lista.
+KYSYMYS: Kerro lisää: pronssikausi
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Mikä on Cova da Beira?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Cova da Beira on Portugalin keskiosassa sijaitseva alue Beira Interiorissa, [[Serra da Estrelan]] ja muiden vuoristojen välissä. Aluetta luonnehtii laaja laakso, joka on ympäristöään viljavampi, ja sen kaupunkeja ovat muun muassa [[Covilhã]] ja [[Fundão]]. En ole varma alueen tarkoista rajoista, koska ne määritellään eri tavoin eri yhteyksissä. [[Panasqueiran]] kaivoksella on ollut vahva vaikutus sekä Beira Interiorin että Cova da Beiran identiteettiin. Tässä oli kyllä pieni karttakurssi kyyhkylle.
+KYSYMYS: Kerro lisää: Serra da Estrelan
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Mikä on Cova da Beira?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Cova da Beira on Portugalin keskiosassa sijaitseva alue Beira Interiorissa, [[Serra da Estrelan]] ja muiden vuoristojen välissä. Aluetta luonnehtii laaja laakso, joka on ympäristöään viljavampi, ja sen kaupunkeja ovat muun muassa [[Covilhã]] ja [[Fundão]]. En ole varma alueen tarkoista rajoista, koska ne määritellään eri tavoin eri yhteyksissä. [[Panasqueiran]] kaivoksella on ollut vahva vaikutus sekä Beira Interiorin että Cova da Beiran identiteettiin. Tässä oli kyllä pieni karttakurssi kyyhkylle.
+KYSYMYS: Kerro lisää: Covilhã
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Mikä on Cova da Beira?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Cova da Beira on Portugalin keskiosassa sijaitseva alue Beira Interiorissa, [[Serra da Estrelan]] ja muiden vuoristojen välissä. Aluetta luonnehtii laaja laakso, joka on ympäristöään viljavampi, ja sen kaupunkeja ovat muun muassa [[Covilhã]] ja [[Fundão]]. En ole varma alueen tarkoista rajoista, koska ne määritellään eri tavoin eri yhteyksissä. [[Panasqueiran]] kaivoksella on ollut vahva vaikutus sekä Beira Interiorin että Cova da Beiran identiteettiin. Tässä oli kyllä pieni karttakurssi kyyhkylle.
+KYSYMYS: Kerro lisää: Fundão
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Miksi hiiltä aikoinaan poltettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Hiiltä poltettiin, koska puuhiili palaa kuumemmin ja savuttomammin kuin raaka puu, ja sitä tarvittiin erityisesti metallien [[sulatukseen]] ja [[takomiseen]]. Hiilenpoltossa puuta kuumennetaan hapettomissa oloissa, esimerkiksi peitetyssä [[miilussa]], jolloin siitä poistuu kosteutta ja haihtuvia aineita ja jäljelle jää lähes pelkkää hiiltä. Hiilenpoltto oli ennen teollisuuden nykyaikaistumista tärkeä ammatti metsäseuduilla. Nykyään [[puuhiiltä]] käytetään enää esimerkiksi grillaamiseen ja joihinkin erikoistarkoituksiin, ja ammatti on harvinaistunut. Vaikka kyyhky haaveilee mieluummin pullan tuoksusta kuin hiilestä.
+KYSYMYS: Kerro lisää: sulatukseen
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Miksi hiiltä aikoinaan poltettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Hiiltä poltettiin, koska puuhiili palaa kuumemmin ja savuttomammin kuin raaka puu, ja sitä tarvittiin erityisesti metallien [[sulatukseen]] ja [[takomiseen]]. Hiilenpoltossa puuta kuumennetaan hapettomissa oloissa, esimerkiksi peitetyssä [[miilussa]], jolloin siitä poistuu kosteutta ja haihtuvia aineita ja jäljelle jää lähes pelkkää hiiltä. Hiilenpoltto oli ennen teollisuuden nykyaikaistumista tärkeä ammatti metsäseuduilla. Nykyään [[puuhiiltä]] käytetään enää esimerkiksi grillaamiseen ja joihinkin erikoistarkoituksiin, ja ammatti on harvinaistunut. Vaikka kyyhky haaveilee mieluummin pullan tuoksusta kuin hiilestä.
+KYSYMYS: Kerro lisää: takomiseen
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+AIEMPI KYSYMYS: Miksi hiiltä aikoinaan poltettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Hiiltä poltettiin, koska puuhiili palaa kuumemmin ja savuttomammin kuin raaka puu, ja sitä tarvittiin erityisesti metallien [[sulatukseen]] ja [[takomiseen]]. Hiilenpoltossa puuta kuumennetaan hapettomissa oloissa, esimerkiksi peitetyssä [[miilussa]], jolloin siitä poistuu kosteutta ja haihtuvia aineita ja jäljelle jää lähes pelkkää hiiltä. Hiilenpoltto oli ennen teollisuuden nykyaikaistumista tärkeä ammatti metsäseuduilla. Nykyään [[puuhiiltä]] käytetään enää esimerkiksi grillaamiseen ja joihinkin erikoistarkoituksiin, ja ammatti on harvinaistunut. Vaikka kyyhky haaveilee mieluummin pullan tuoksusta kuin hiilestä.
+KYSYMYS: Kerro lisää: miilussa
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Panasqueiran kaivos (tekniikka)
+Tietoruudun teksti: Panasqueiran kaivokset ovat Portugalin kaivostoimintojen ryhmä Cabeço do Pião -kukkulan ja Panasqueiran kylän välillä; ne ovat toimineet jatkuvasti tinan ja wolframin löytämisestä lähtien. Kaivos on toiminut lähes keskeytyksettä vuodesta 1901, ja sillä on ollut vahva vaikutus Beira Interiorin ja Cova da Beiran identiteettiin. Se on tunnettu ympäri maailmaa wolframiteollisuudessa laadustaan, tuotantomääristään ja pitkäikäisyydestään. 1800-luvun lopussa seutua peitti paksu kanervapensaikko, ja hiilenpolttaja "Pescão de Casegas" löysi kiiltävän mustan kiven, jonka hän vei Manuel dos Santosille. Santos osti maan ja aloitti wolframin louhinnan, ja professori Silva Pinto osti myöhemmin malmin ja maan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Masqat — kaupunkilehti / Arki: Astia kiertää kädestä käteen] Suitsuke poltetaan astiassa, jonka nimi on mabkhara tai majmar. Pohjalle pannaan hehkuvaa puuhiiltä ja hiilten päälle muutama jyvä lubania eli suitsuketta; savu nousee suoraan huoneeseen, eikä liekkiä tarvita. Astiat tehdään Dhofarissa savesta, ja niitä on muotoiltu ja maalattu etenkin kolmessa kaupungissa: Salalahissa, Mirbatissa ja Taqahissa. Muoto vaihtelee nelikulmaisesta lieriöön ja veneeseen. Vieraiden tullessa astia kiertää kädestä käteen, ja jokainen ohjaa savua vaatteidensa alle ja hiuksiinsa. Illan päätteeksi sama kierros on kohtelias merkki siitä, että vierailu on ohi.
+AIEMPI KYSYMYS: Miksi hiiltä aikoinaan poltettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Hiiltä poltettiin, koska puuhiili palaa kuumemmin ja savuttomammin kuin raaka puu, ja sitä tarvittiin erityisesti metallien [[sulatukseen]] ja [[takomiseen]]. Hiilenpoltossa puuta kuumennetaan hapettomissa oloissa, esimerkiksi peitetyssä [[miilussa]], jolloin siitä poistuu kosteutta ja haihtuvia aineita ja jäljelle jää lähes pelkkää hiiltä. Hiilenpoltto oli ennen teollisuuden nykyaikaistumista tärkeä ammatti metsäseuduilla. Nykyään [[puuhiiltä]] käytetään enää esimerkiksi grillaamiseen ja joihinkin erikoistarkoituksiin, ja ammatti on harvinaistunut. Vaikka kyyhky haaveilee mieluummin pullan tuoksusta kuin hiilestä.
+KYSYMYS: Kerro lisää: puuhiiltä
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Mitä värejä Estremozin marmorissa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Estremozin marmoria on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana sekä kaikissa näiden väriyhdistelmissä. Se tunnetaan kansainvälisesti hienosta laadustaan, ja sitä louhitaan paitsi Estremozin ympäristössä myös [[Borban]] ja [[Vila Viçosan]] seuduilla, jotka yhdessä muodostavat tunnetun marmorikolmion [[Alentejossa]]. Marmorin värit riippuvat sen sisältämistä hivenaineista ja mineraaleista. Väriskaala on todella laaja, ja jokaisella kivellä on oma luonteensa. Onpas hieno värikartta, ja siinä on kyyhkyllekin harmaan sävyjä.
+KYSYMYS: Kerro lisää: Borban
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Mitä värejä Estremozin marmorissa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Estremozin marmoria on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana sekä kaikissa näiden väriyhdistelmissä. Se tunnetaan kansainvälisesti hienosta laadustaan, ja sitä louhitaan paitsi Estremozin ympäristössä myös [[Borban]] ja [[Vila Viçosan]] seuduilla, jotka yhdessä muodostavat tunnetun marmorikolmion [[Alentejossa]]. Marmorin värit riippuvat sen sisältämistä hivenaineista ja mineraaleista. Väriskaala on todella laaja, ja jokaisella kivellä on oma luonteensa. Onpas hieno värikartta, ja siinä on kyyhkyllekin harmaan sävyjä.
+KYSYMYS: Kerro lisää: Vila Viçosan
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Mitä värejä Estremozin marmorissa on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Estremozin marmoria on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana sekä kaikissa näiden väriyhdistelmissä. Se tunnetaan kansainvälisesti hienosta laadustaan, ja sitä louhitaan paitsi Estremozin ympäristössä myös [[Borban]] ja [[Vila Viçosan]] seuduilla, jotka yhdessä muodostavat tunnetun marmorikolmion [[Alentejossa]]. Marmorin värit riippuvat sen sisältämistä hivenaineista ja mineraaleista. Väriskaala on todella laaja, ja jokaisella kivellä on oma luonteensa. Onpas hieno värikartta, ja siinä on kyyhkyllekin harmaan sävyjä.
+KYSYMYS: Kerro lisää: Alentejossa
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kaupunkilehti / Mérida: Viiden kukkulan kaupunki] Ennen Méridaa paikalla oli mayakaupunki Tʼhó, jota kutsuttiin myös nimellä Ichcaanzihó, viiden kukkulan kaupunki — nimi viittasi sen pyramideihin. Kaupungin perustivat 1542 espanjalaiset valloittajat, joiden joukossa olivat Francisco de Montejo nuorempi ja Juan de la Cámara. Nimen he ottivat Extremaduran Méridasta, koska Tʼhón rauniot muistuttivat heitä Rooman Augusta Emeritan raunioista. Uudet rakennukset tehtiin vanhan kaupungin veistetyistä kivistä, ja niitä näkee yhä katedraalin seinissä. Kiviä otettiin mayatemppelistä nimeltä Yajam Cumu, ja työn tekivät mayat itse — kahden heistä nimet tunnetaan, Francisco Pool ja Diego Can.
+AIEMPI KYSYMYS: Missä marmoria on käytetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Estremozin marmoria on käytetty antiikista lähtien veistoksiin ja rakennuksiin, ja ensimmäiset vientierät menivät todennäköisesti [[Emerita Augustan Circus Maximuksen]] rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan. Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja [[katukivinä]]. Marmori on siis ollut sekä juhlallinen että arkinen rakennusaine. Eikä yhtään haittaa, että kyyhky saa istua kivellä.
+KYSYMYS: Kerro lisää: Emerita Augustan Circus Maximuksen
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Missä marmoria on käytetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Estremozin marmoria on käytetty antiikista lähtien veistoksiin ja rakennuksiin, ja ensimmäiset vientierät menivät todennäköisesti [[Emerita Augustan Circus Maximuksen]] rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan. Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja [[katukivinä]]. Marmori on siis ollut sekä juhlallinen että arkinen rakennusaine. Eikä yhtään haittaa, että kyyhky saa istua kivellä.
+KYSYMYS: Kerro lisää: katukivinä
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Cahow, riutat ja luolat: Kalkkikivestä syntyneet luolat] Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.
+AIEMPI KYSYMYS: Miten marmori syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Marmori syntyy [[kalkkikivestä]] tai dolomiitista, kun kivi altistuu syvällä maankuoressa korkealle lämpötilalle ja paineelle. Tätä prosessia kutsutaan [[metamorfoosiksi]], ja siinä kiven mineraalit kiteytyvät uudelleen suuremmiksi kiteiksi. Lopputuloksena on tiivis ja kiillotettavissa oleva kivi, jonka väri ja raidat riippuvat alkuperäisen kiven epäpuhtauksista. Prosessi kestää miljoonia vuosia. Hyvä että joku kärsii odottaa, sillä minulla ei ole siihen malttia.
+KYSYMYS: Kerro lisää: kalkkikivestä
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Miten marmori syntyy?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Marmori syntyy [[kalkkikivestä]] tai dolomiitista, kun kivi altistuu syvällä maankuoressa korkealle lämpötilalle ja paineelle. Tätä prosessia kutsutaan [[metamorfoosiksi]], ja siinä kiven mineraalit kiteytyvät uudelleen suuremmiksi kiteiksi. Lopputuloksena on tiivis ja kiillotettavissa oleva kivi, jonka väri ja raidat riippuvat alkuperäisen kiven epäpuhtauksista. Prosessi kestää miljoonia vuosia. Hyvä että joku kärsii odottaa, sillä minulla ei ole siihen malttia.
+KYSYMYS: Kerro lisää: metamorfoosiksi
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+AIEMPI KYSYMYS: Miten marmori louhitaan ja työstetään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Marmori louhitaan nykyään yleensä irrottamalla kalliosta suuria lohkoja esimerkiksi [[timanttilankasahoilla]], jotka sahaavat kiven läpi vähitellen vettä apuna käyttäen. Lohkot nostetaan [[nosturein]] ylös ja kuljetetaan työstettäväksi. Tehtaassa ne sahataan levyiksi, ja pinta hiotaan ja kiillotetaan, jotta kuvio ja väri tulevat esiin. Lisäksi marmoria voidaan veistää käsin tai koneella veistoksiksi ja koristeiksi. Nykyaikaiset menetelmät ovat nopeampia kuin vanhat, mutta työ vaatii silti paljon tarkkuutta. Kyllä tää oli kerrottavaa varmaan kolmen torin verran.
+KYSYMYS: Kerro lisää: timanttilankasahoilla
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Miten marmori louhitaan ja työstetään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Marmori louhitaan nykyään yleensä irrottamalla kalliosta suuria lohkoja esimerkiksi [[timanttilankasahoilla]], jotka sahaavat kiven läpi vähitellen vettä apuna käyttäen. Lohkot nostetaan [[nosturein]] ylös ja kuljetetaan työstettäväksi. Tehtaassa ne sahataan levyiksi, ja pinta hiotaan ja kiillotetaan, jotta kuvio ja väri tulevat esiin. Lisäksi marmoria voidaan veistää käsin tai koneella veistoksiksi ja koristeiksi. Nykyaikaiset menetelmät ovat nopeampia kuin vanhat, mutta työ vaatii silti paljon tarkkuutta. Kyllä tää oli kerrottavaa varmaan kolmen torin verran.
+KYSYMYS: Kerro lisää: nosturein
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+AIEMPI KYSYMYS: Mikä on Alentejo?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Alentejo on Portugalin eteläosan alue, jonka nimi tarkoittaa suunnilleen "Tejon takana" eli Tejo-joen toisella puolella. Se on laaja ja harvaan asuttu, ja maisemaa hallitsevat tasaiset tai lievästi kumpuilevat vilja- ja laidunmaat sekä [[korkkitammia]] kasvavat metsälaidunmaat. Alue on tunnettu viinistään ja korkin tuotannostaan, ja kesät ovat kuumia ja kuivia. Alentejon marmorikaupunkeihin kuuluvat Estremoz, Borba ja Vila Viçosa, ja sieltä löytyy myös São Domingosin kaivoksen kaltaisia vanhoja kaivosalueita. Tästä tulee mieleen, että [[Lissabonin]] ja Espanjan välissä on paljon katsottavaa.
+KYSYMYS: Kerro lisää: korkkitammia
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Estremozin marmori (kauppa)
+Tietoruudun teksti: Estremoz on kunta Alentejossa Portugalissa, ja kaupungissa itsessään asui vuonna 2001 7 682 ihmistä. Yhdessä kahden muun marmorikaupungin, Borban ja Vila Viçosan, kanssa Estremoz tunnetaan kansainvälisesti hienosta marmoristaan, jota on valkoisena, kermanvärisenä, vaaleanpunaisena, harmaana tai mustana ja kaikissa näiden väriyhdistelmissä. Marmoria on käytetty jo antiikista lähtien veistoksiin ja rakennuksiin; ensimmäiset vientierät menivät todennäköisesti Emerita Augustan Circus Maximuksen rakentamiseen. Portugalilaiset merenkulkijat veivät marmoria Afrikkaan, Intiaan ja Brasiliaan, ja Estremozin seudulla marmoria on niin paljon, että sitä käytetään kaikkialla, jopa kynnyksinä ja katukivinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Musiikki: Lissabonin salonkien suosikki Riosta] Domingos Caldas Barbosa syntyi Rio de Janeirossa noin 1739 portugalilaisen isän ja vapautetun angolalaisen naisen poikana, ja hänestä tuli 1700-luvun lopun Lissabonin hienoston suosituin laulaja-runoilija. Hän säesti itseään violalla ja improvisoi laulunsa; syntyperäänsä hänelle muistutettiin alentavalla lisänimellä violansoittaja. Hänen modinha-laulunsa julkaistiin kirjana vasta 1825, neljännesvuosisata hänen kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu ovat Brasilian populaarimusiikin vanhimmat juuret.
+AIEMPI KYSYMYS: Mikä on Alentejo?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Alentejo on Portugalin eteläosan alue, jonka nimi tarkoittaa suunnilleen "Tejon takana" eli Tejo-joen toisella puolella. Se on laaja ja harvaan asuttu, ja maisemaa hallitsevat tasaiset tai lievästi kumpuilevat vilja- ja laidunmaat sekä [[korkkitammia]] kasvavat metsälaidunmaat. Alue on tunnettu viinistään ja korkin tuotannostaan, ja kesät ovat kuumia ja kuivia. Alentejon marmorikaupunkeihin kuuluvat Estremoz, Borba ja Vila Viçosa, ja sieltä löytyy myös São Domingosin kaivoksen kaltaisia vanhoja kaivosalueita. Tästä tulee mieleen, että [[Lissabonin]] ja Espanjan välissä on paljon katsottavaa.
+KYSYMYS: Kerro lisää: Lissabonin
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Fort St. George] 1639–1644 Linnoitus perustettiin 1639 ja se valmistui 23. huhtikuuta 1644 kolmentuhannen punnan kustannuksin. Se oli ensimmäinen englantilainen linnoitus Intiassa, ja sen kuusimetriset muurit kestivät koko 1700-luvun hyökkäykset lukuun ottamatta ranskalaisten vuosia 1746–1749. Nykyään muurien sisällä toimivat Tamil Nadun lakiasäätävä kokous ja osavaltion virastot, ja aluetta hoitaa Intian arkeologinen tutkimuslaitos armeijan hallinnollisella tuella. Linnoituksen museo on vuonna 1795 valmistuneessa talossa, jossa toimi ensin Madras Bank. Yläkerran sali oli julkinen pörssisali, jossa pidettiin kokouksia ja arvontoja. Kokoelmissa on aseita, rahoja, mitaleita ja univormuja Englannista, Skotlann…
+- [Karachi — kaupunkilehti / Historia: Kolme päivää helmikuussa 1839] Brittiläinen sotalaiva Wellesley ankkuroitui Manoran saaren edustalle 1. helmikuuta 1839 ja avasi kahta päivää myöhemmin tulen Talpurien 1797 rakentamaa Manora Fortia vastaan. Linnoitus antautui nopeasti, ja kaupunki siirtyi kauppakomppanialle. Kaupungissa asui arviolta 8 000–14 000 ihmistä, ja se mahtui yhä muurien sisään Mithadariin. Sindin keskus siirtyi Hyderabadista Karachiin 1840, ja kenraalimajuri Charles James Napier valtasi loput maakunnasta 1843. Sen jälkeen Sind liitettiin Bombayn presidenssiin, jossa se pysyi seuraavat 93 vuotta. Vuoden 1846 koleraepidemia synnytti Karachin koleralautakunnan, kaupungin ensimmäisen hallintoelimen.
+AIEMPI KYSYMYS: Miksi linjat rakennettiin salassa?
+AIEMPI VASTAUS (Livia):
+Kato, salaisuuksia — niitä minä osaan kantaa. Torres Vedrasin linjat rakennettiin salassa, koska niiden voima oli yllätyksessä: jos ranskalaiset olisivat tienneet puolustusketjusta etukäteen, he olisivat voineet suunnitella etenemisensä toisin tai varustautua sitä vastaan. Rakentamisen määräsi [[Arthur Wellesley]], ja työtä johti eversti [[Richard Fletcher]] portugalilaisten työmiesten kanssa marraskuusta 1809 syyskuuhun 1810. Kun marsalkka [[Masséna]] eteni vuonna 1810 kohti Lissabonia, linjat tulivat monien kertomusten mukaan ranskalaisille yllätyksenä, ja heidän hyökkäyksensä pysähtyi niiden eteen. Salaisuus oli siis osa koko [[niemimaasodan]] puolustussuunnitelmaa eikä pelkkä varokeino. Hyvä, että minäkin osaan pitää salaisuuksia — useimmiten.
+KYSYMYS: Kerro lisää: Arthur Wellesley
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Rautatieasema] 1937 Ennen nykyistä asemaa Wellingtonissa oli kaksi eri päätepysäkkiä ja niitä ennen sarja väliaikaisia. Ensimmäinen asema oli 1874 Pipitea Pointissa: joukko pieniä rakennuksia maanjäristyksen nostamalla satamanpohjalla, Hutt-laakson radan päätepiste. Vuoden 1880 asemarakennus vedettiin 1885 telojen päällä pohjoisemmaksi väljemmälle tontille. Kun valtio osti Manawatun radan 1908, kaupungissa oli kaksi valtionrautateiden päätepysäkkiä — Lambton ja Thorndon — ja paine yhdestä terminaalista alkoi kasvaa. Uuden aseman piirsi arkkitehti W. Gray Young, joka valittiin tehtävään 1929 ilman suunnittelukilpailua. Tontti oli täyttömaata, joten talo seisoo 1 615 teräsbetonipaalun varassa; ne lyötiin ma…
+- [Zimbabwe — maalehti / Urheilu: Ensimmäinen maaottelu, ensimmäinen yllätys] 1983 — Zimbabwe pelasi kriketissä ensimmäisen virallisen yhden päivän maaottelunsa vasta vuoden 1983 maailmancupissa — ja voitti heti Australian. Kapteeni Duncan Fletcher teki 69 juoksua jäämättä kertaakaan palamaan, ja kun Australia oli lyöntivuorossa, hän poltti neljä vastustajaa 42 juoksun hinnalla. Zimbabwe keräsi 239 juoksua, Australia jäi 226:een. Turnauksen viisi muuta ottelua hävittiin. Testiasema tuli heinäkuussa 1992, ja saman vuoden lokakuussa Zimbabwe pelasi yhdeksäntenä testimaana ensimmäisen testinsä Intiaa vastaan Hararessa.
+AIEMPI KYSYMYS: Miksi linjat rakennettiin salassa?
+AIEMPI VASTAUS (Livia):
+Kato, salaisuuksia — niitä minä osaan kantaa. Torres Vedrasin linjat rakennettiin salassa, koska niiden voima oli yllätyksessä: jos ranskalaiset olisivat tienneet puolustusketjusta etukäteen, he olisivat voineet suunnitella etenemisensä toisin tai varustautua sitä vastaan. Rakentamisen määräsi [[Arthur Wellesley]], ja työtä johti eversti [[Richard Fletcher]] portugalilaisten työmiesten kanssa marraskuusta 1809 syyskuuhun 1810. Kun marsalkka [[Masséna]] eteni vuonna 1810 kohti Lissabonia, linjat tulivat monien kertomusten mukaan ranskalaisille yllätyksenä, ja heidän hyökkäyksensä pysähtyi niiden eteen. Salaisuus oli siis osa koko [[niemimaasodan]] puolustussuunnitelmaa eikä pelkkä varokeino. Hyvä, että minäkin osaan pitää salaisuuksia — useimmiten.
+KYSYMYS: Kerro lisää: Richard Fletcher
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+AIEMPI KYSYMYS: Miksi linjat rakennettiin salassa?
+AIEMPI VASTAUS (Livia):
+Kato, salaisuuksia — niitä minä osaan kantaa. Torres Vedrasin linjat rakennettiin salassa, koska niiden voima oli yllätyksessä: jos ranskalaiset olisivat tienneet puolustusketjusta etukäteen, he olisivat voineet suunnitella etenemisensä toisin tai varustautua sitä vastaan. Rakentamisen määräsi [[Arthur Wellesley]], ja työtä johti eversti [[Richard Fletcher]] portugalilaisten työmiesten kanssa marraskuusta 1809 syyskuuhun 1810. Kun marsalkka [[Masséna]] eteni vuonna 1810 kohti Lissabonia, linjat tulivat monien kertomusten mukaan ranskalaisille yllätyksenä, ja heidän hyökkäyksensä pysähtyi niiden eteen. Salaisuus oli siis osa koko [[niemimaasodan]] puolustussuunnitelmaa eikä pelkkä varokeino. Hyvä, että minäkin osaan pitää salaisuuksia — useimmiten.
+KYSYMYS: Kerro lisää: Masséna
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+- [Dunedin — kaupunkilehti / Otagon niemimaa] Otagon niemimaa on sammuneen tulivuoren jäänne, jonka kärjessä kuninkaanalbatrossit pesivät ainoana paikkana asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi josta koko maakunta on saanut nimensä.
+AIEMPI KYSYMYS: Miksi linjat rakennettiin salassa?
+AIEMPI VASTAUS (Livia):
+Kato, salaisuuksia — niitä minä osaan kantaa. Torres Vedrasin linjat rakennettiin salassa, koska niiden voima oli yllätyksessä: jos ranskalaiset olisivat tienneet puolustusketjusta etukäteen, he olisivat voineet suunnitella etenemisensä toisin tai varustautua sitä vastaan. Rakentamisen määräsi [[Arthur Wellesley]], ja työtä johti eversti [[Richard Fletcher]] portugalilaisten työmiesten kanssa marraskuusta 1809 syyskuuhun 1810. Kun marsalkka [[Masséna]] eteni vuonna 1810 kohti Lissabonia, linjat tulivat monien kertomusten mukaan ranskalaisille yllätyksenä, ja heidän hyökkäyksensä pysähtyi niiden eteen. Salaisuus oli siis osa koko [[niemimaasodan]] puolustussuunnitelmaa eikä pelkkä varokeino. Hyvä, että minäkin osaan pitää salaisuuksia — useimmiten.
+KYSYMYS: Kerro lisää: niemimaasodan
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+- [Dunedin — kaupunkilehti / Otagon niemimaa] Otagon niemimaa on sammuneen tulivuoren jäänne, jonka kärjessä kuninkaanalbatrossit pesivät ainoana paikkana asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi josta koko maakunta on saanut nimensä.
+AIEMPI KYSYMYS: Kuka Wellington oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Arthur Wellesley, Wellingtonin herttua, oli irlantilaissyntyinen brittiläinen upseeri ja valtiomies, joka eli vuosina 1769–1852. Hän johti brittijoukkoja [[niemimaasodassa]] ranskalaisia vastaan ja voitti heidät muun muassa Vimeiron taistelussa vuonna 1808; hän myös määräsi Torres Vedrasin linjojen rakentamisen. Hänet muistetaan erityisesti [[Waterloon]] taistelusta vuonna 1815, jossa hänen johtamansa liittoutuneet kukistivat [[Napoleonin]] yhdessä preussilaisten kanssa. Myöhemmin hän toimi myös Britannian pääministerinä. Siinäpä kokonainen elämä yhdessä kappaleessa.
+KYSYMYS: Kerro lisää: niemimaasodassa
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+- [Dublin — kaupunkilehti / Luonto: Euroopan korkein obeliski juuri valmistunut] 1861 — Puiston laidalle nousee Wellingtonin muistomerkki, 62 metriä korkea obeliski, joka on Euroopan korkein. Peruskivi muurattiin 1817 kunnianosoituksena Dublinissa syntyneelle herttua Wellingtonille, mutta rahat loppuivat kesken kahteen otteeseen, ja obeliski valmistui vasta 1861 — vain kaksitoista vuotta ennen isoisän matkaa. Neljä pronssireliefiä oli tarkoitus valaa Waterloon taistelusta vallatuista tykeistä, mutta rahapulan vuoksi vain yksi niistä ehdittiin lopulta valaa.
+AIEMPI KYSYMYS: Kuka Wellington oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Arthur Wellesley, Wellingtonin herttua, oli irlantilaissyntyinen brittiläinen upseeri ja valtiomies, joka eli vuosina 1769–1852. Hän johti brittijoukkoja [[niemimaasodassa]] ranskalaisia vastaan ja voitti heidät muun muassa Vimeiron taistelussa vuonna 1808; hän myös määräsi Torres Vedrasin linjojen rakentamisen. Hänet muistetaan erityisesti [[Waterloon]] taistelusta vuonna 1815, jossa hänen johtamansa liittoutuneet kukistivat [[Napoleonin]] yhdessä preussilaisten kanssa. Myöhemmin hän toimi myös Britannian pääministerinä. Siinäpä kokonainen elämä yhdessä kappaleessa.
+KYSYMYS: Kerro lisää: Waterloon
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Kuka Wellington oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Arthur Wellesley, Wellingtonin herttua, oli irlantilaissyntyinen brittiläinen upseeri ja valtiomies, joka eli vuosina 1769–1852. Hän johti brittijoukkoja [[niemimaasodassa]] ranskalaisia vastaan ja voitti heidät muun muassa Vimeiron taistelussa vuonna 1808; hän myös määräsi Torres Vedrasin linjojen rakentamisen. Hänet muistetaan erityisesti [[Waterloon]] taistelusta vuonna 1815, jossa hänen johtamansa liittoutuneet kukistivat [[Napoleonin]] yhdessä preussilaisten kanssa. Myöhemmin hän toimi myös Britannian pääministerinä. Siinäpä kokonainen elämä yhdessä kappaleessa.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Portugalista tuotu kuorrutus] Kun portugalilaiset asettuivat São Luísiin, he toivat mukanaan maurien Iberian niemimaalle jättämän perinteen: lasitetut keraamiset laatat, asulejot. Kaupungista tuli Brasilian laatoitetuin – Rua Portugalin varrella on enemmän laatoitettuja kauppahuoneiden julkisivuja kuin missään muualla Latinalaisessa Amerikassa. Laatat eivät olleet pelkkää koristelua: niiden lasitettu pinta kestää päiväntasaajan auringon, sadekauden kosteuden ja meren suolaisen ilman paremmin kuin rappaus, ja ne toimivat lämmöneristeenä kivitalojen seinissä. Kadulla kävely on kuin näytekirjan selaamista – jokainen talo kilpailee naapuriaan komeammalla kuvioinnilla.
+AIEMPI KYSYMYS: Mikä oli niemimaasota?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Niemimaasota oli Iberian niemimaalla noin vuosina 1808–1814 käyty sota, jossa Espanja, Portugali ja Britannia taistelivat [[Napoleonin]] Ranskaa vastaan. Sodan taustalla oli Napoleonin pyrkimys vahvistaa valtaansa [[Iberian niemimaalla]]: ranskalaisjoukot hyökkäsivät Portugaliin vuonna 1807 ja miehittivät sittemmin suuria osia Espanjaa. Sotaa käytiin tavallisten taistelujen lisäksi paikallisten sissiryhmien iskuilla, ja espanjankielinen sana guerrilla, pieni sota, tuli tämän sodan myötä laajalti tunnetuksi. Sota päättyi Napoleonin tappioon ja ranskalaisten vetäytymiseen niemimaalta. Onpa tuokin jo kaukana takana.
+KYSYMYS: Kerro lisää: Iberian niemimaalla
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+AIEMPI KYSYMYS: Missä Torres Vedras sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katsotaas ylhäältä. Torres Vedras on kaupunki Portugalin länsiosassa, Lissabonin pohjoispuolella ja lähellä Atlantin rannikkoa. Se kuuluu Lissabonin piirikuntaan ja [[Oeste]]-alueeseen. Kaupungin nimeä kantavat puolustuslinjat ulottuivat Atlantin rannikolta [[Tejo]]-joelle, ja ne suojasivat Lissabonia pohjoisesta tulevalta hyökkäykseltä. Ylhäältä sen näkee heti.
+KYSYMYS: Kerro lisää: Oeste
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Kaupunki kaatui pyhäinpäivänä 1755] Lauantaina 1. marraskuuta 1755 oli pyhäinpäivä ja kirkot olivat täynnä väkeä, kun maa alkoi täristä noin kello 9.40. Kaatuneista kynttilöistä syttyi palo, ja noin 40 minuutin kuluttua Tejo-joesta nousi tsunami. Karmeliittikirkon kivikatto romahti eikä sitä rakennettu enää koskaan. Uusi alakaupunki nousi suorien katujen ristikoksi, ja seinien sisään piilotettiin puinen häkki, jonka piti joustaa tärinässä. Kehikkoa kokeiltiin pienoismalleilla: sotilaat marssivat mallin ympärillä, jotta maa tärisisi.
+AIEMPI KYSYMYS: Missä Torres Vedras sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katsotaas ylhäältä. Torres Vedras on kaupunki Portugalin länsiosassa, Lissabonin pohjoispuolella ja lähellä Atlantin rannikkoa. Se kuuluu Lissabonin piirikuntaan ja [[Oeste]]-alueeseen. Kaupungin nimeä kantavat puolustuslinjat ulottuivat Atlantin rannikolta [[Tejo]]-joelle, ja ne suojasivat Lissabonia pohjoisesta tulevalta hyökkäykseltä. Ylhäältä sen näkee heti.
+KYSYMYS: Kerro lisää: Tejo
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mitä marsalkan arvo tarkoitti Napoleonin armeijassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ranskan keisarikunnassa marsalkan arvo ei ollut tavallinen sotilasarvo vaan armeijan korkein kunniatehtävä. [[Napoleon]] nimitti keisarikunnan marsalkkoja ensimmäisen kerran vuonna 1804, ja heitä oli koko keisarikunnan aikana vain pieni joukko. Marsalkat komensivat suuria armeijoita ja armeijakuntia, ja heidän arvomerkkinsä oli [[marsalkansauva]]. Marsalkkojen joukossa oli myös [[Masséna]], joka johti Ranskan hyökkäystä Portugaliin vuonna 1810.
+
+Sukuni on kantanut kirjeitä eikä sauvoja, ja kirjeet ovat kyllä paljon kevyempiä. Sauvaa ei olisi minulle koskaan luotettu.
+KYSYMYS: Kerro lisää: Napoleon
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torres Vedrasin linjat (historia)
+Tietoruudun teksti: Torres Vedrasin linjat olivat Lissabonin puolustamiseksi niemimaasodan aikana salassa rakennettu linnakkeiden ja muiden sotilaallisten puolustusrakenteiden ketju. Ne on nimetty lähellä olevan Torres Vedrasin kaupungin mukaan, ja niiden rakentamisen määräsi Arthur Wellesley, Wellingtonin varakreivi. Rakentamisesta vastasivat eversti Richard Fletcher ja hänen portugalilaiset työmiehensä marraskuusta 1809 syyskuuhun 1810, ja linjoja käytettiin pysäyttämään marsalkka Massénan vuoden 1810 hyökkäys. Portugalin hallitus julisti linjat kansalliseksi perinnöksi maaliskuussa 2019.
+AIEMPI KYSYMYS: Mitä marsalkan arvo tarkoitti Napoleonin armeijassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ranskan keisarikunnassa marsalkan arvo ei ollut tavallinen sotilasarvo vaan armeijan korkein kunniatehtävä. [[Napoleon]] nimitti keisarikunnan marsalkkoja ensimmäisen kerran vuonna 1804, ja heitä oli koko keisarikunnan aikana vain pieni joukko. Marsalkat komensivat suuria armeijoita ja armeijakuntia, ja heidän arvomerkkinsä oli [[marsalkansauva]]. Marsalkkojen joukossa oli myös [[Masséna]], joka johti Ranskan hyökkäystä Portugaliin vuonna 1810.
+
+Sukuni on kantanut kirjeitä eikä sauvoja, ja kirjeet ovat kyllä paljon kevyempiä. Sauvaa ei olisi minulle koskaan luotettu.
+KYSYMYS: Kerro lisää: marsalkansauva
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+AIEMPI KYSYMYS: Miksi Vimeiron taistelu oli tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vimeiron taistelu oli tärkeä, koska se päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Arthur Wellesleyn johtamat britit ja portugalilaiset voittivat 21. elokuuta 1808 kenraali [[Junotin]] johtamat ranskalaiset; Junot menetti noin 2 000 miestä ja 13 tykkiä, kun liittoutuneiden tappiot olivat noin 700. Voitto ei kuitenkaan merkinnyt ranskalaisten täydellistä tuhoa: taistelua seurasi [[Sintran sopimus]], jonka nojalla ranskalaisjoukot saivat poistua Portugalista brittien aluksilla. Wellesleylle taistelu oli tärkeä myös siksi, että hänen maineensa komentajana vahvistui ennen [[niemimaasodan]] myöhempiä vaiheita. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: Junotin
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+AIEMPI KYSYMYS: Miksi Vimeiron taistelu oli tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vimeiron taistelu oli tärkeä, koska se päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Arthur Wellesleyn johtamat britit ja portugalilaiset voittivat 21. elokuuta 1808 kenraali [[Junotin]] johtamat ranskalaiset; Junot menetti noin 2 000 miestä ja 13 tykkiä, kun liittoutuneiden tappiot olivat noin 700. Voitto ei kuitenkaan merkinnyt ranskalaisten täydellistä tuhoa: taistelua seurasi [[Sintran sopimus]], jonka nojalla ranskalaisjoukot saivat poistua Portugalista brittien aluksilla. Wellesleylle taistelu oli tärkeä myös siksi, että hänen maineensa komentajana vahvistui ennen [[niemimaasodan]] myöhempiä vaiheita. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: Sintran sopimus
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+- [Dunedin — kaupunkilehti / Otagon niemimaa] Otagon niemimaa on sammuneen tulivuoren jäänne, jonka kärjessä kuninkaanalbatrossit pesivät ainoana paikkana asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi josta koko maakunta on saanut nimensä.
+AIEMPI KYSYMYS: Miksi Vimeiron taistelu oli tärkeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vimeiron taistelu oli tärkeä, koska se päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Arthur Wellesleyn johtamat britit ja portugalilaiset voittivat 21. elokuuta 1808 kenraali [[Junotin]] johtamat ranskalaiset; Junot menetti noin 2 000 miestä ja 13 tykkiä, kun liittoutuneiden tappiot olivat noin 700. Voitto ei kuitenkaan merkinnyt ranskalaisten täydellistä tuhoa: taistelua seurasi [[Sintran sopimus]], jonka nojalla ranskalaisjoukot saivat poistua Portugalista brittien aluksilla. Wellesleylle taistelu oli tärkeä myös siksi, että hänen maineensa komentajana vahvistui ennen [[niemimaasodan]] myöhempiä vaiheita. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: niemimaasodan
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Kuka Junot oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Jean-Andoche Junot oli ranskalainen kenraali, joka syntyi vuonna 1771 ja kuului [[Napoleonin]] varhaisiin kannattajiin. Hän palveli Napoleonin adjutanttina ja johti vuonna 1807 ranskalaisjoukot Portugaliin ja miehitti [[Lissabonin]]. Hänet nimitettiin myöhemmin [[Abrantèsin herttuaksi]]. Vuonna 1808 hän hävisi Vimeiron taistelun Arthur Wellesleylle, minkä jälkeen ranskalaiset joutuivat poistumaan Portugalista. Junot kuoli vuonna 1813. Kyllä minä tämän muistin ihan itse.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Musiikki: Lissabonin salonkien suosikki Riosta] Domingos Caldas Barbosa syntyi Rio de Janeirossa noin 1739 portugalilaisen isän ja vapautetun angolalaisen naisen poikana, ja hänestä tuli 1700-luvun lopun Lissabonin hienoston suosituin laulaja-runoilija. Hän säesti itseään violalla ja improvisoi laulunsa; syntyperäänsä hänelle muistutettiin alentavalla lisänimellä violansoittaja. Hänen modinha-laulunsa julkaistiin kirjana vasta 1825, neljännesvuosisata hänen kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu ovat Brasilian populaarimusiikin vanhimmat juuret.
+AIEMPI KYSYMYS: Kuka Junot oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Jean-Andoche Junot oli ranskalainen kenraali, joka syntyi vuonna 1771 ja kuului [[Napoleonin]] varhaisiin kannattajiin. Hän palveli Napoleonin adjutanttina ja johti vuonna 1807 ranskalaisjoukot Portugaliin ja miehitti [[Lissabonin]]. Hänet nimitettiin myöhemmin [[Abrantèsin herttuaksi]]. Vuonna 1808 hän hävisi Vimeiron taistelun Arthur Wellesleylle, minkä jälkeen ranskalaiset joutuivat poistumaan Portugalista. Junot kuoli vuonna 1813. Kyllä minä tämän muistin ihan itse.
+KYSYMYS: Kerro lisää: Lissabonin
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+AIEMPI KYSYMYS: Kuka Junot oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Jean-Andoche Junot oli ranskalainen kenraali, joka syntyi vuonna 1771 ja kuului [[Napoleonin]] varhaisiin kannattajiin. Hän palveli Napoleonin adjutanttina ja johti vuonna 1807 ranskalaisjoukot Portugaliin ja miehitti [[Lissabonin]]. Hänet nimitettiin myöhemmin [[Abrantèsin herttuaksi]]. Vuonna 1808 hän hävisi Vimeiron taistelun Arthur Wellesleylle, minkä jälkeen ranskalaiset joutuivat poistumaan Portugalista. Junot kuoli vuonna 1813. Kyllä minä tämän muistin ihan itse.
+KYSYMYS: Kerro lisää: Abrantèsin herttuaksi
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+- [Saint Helena — maalehti / Historia: Britannian toiseksi vanhin siirtomaa] 1657–1673 — Oliver Cromwell antoi Itä-Intian kauppakomppanialle 1657 luvan hallita saarta, ja kapteeni John Dutton saapui 1659 ensimmäisenä kuvernöörinä. Linnake valmistui kuukaudessa, ja sen viereen nousi kaupunki, joka sai kuninkuuden palauduttua nimen Jamestown Yorkin herttuan mukaan. Uudisasukkaille luvattiin oma palsta sadastakolmestakymmenestä, mutta väkeä ei saatu: vuonna 1670 saarella asui 66 ihmistä, heistä 18 orjaa. Jouluna 1672 hollantilaiset valtasivat saaren, mutta kuvernööri pakeni Brasiliaan, vuokrasi nopean laivan ja löysi komppanian laivaston, joka otti saaren takaisin toukokuussa 1673 ilman ihmishenkien menetystä.
+AIEMPI KYSYMYS: Mikä oli Napoleonin mannermaasulku?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mannermaasulku oli Napoleonin vuonna 1806 julistama kauppasaarto, jonka tarkoituksena oli katkaista Britannian kauppa Euroopan mantereen kanssa ja heikentää sen taloutta. Euroopan satamat piti sulkea brittiläisiltä laivoilta ja tavaroilta, ja Ranska pyrki pakottamaan liittolaisensa ja valtaamansa maat noudattamaan määräystä. Portugali oli perinteisesti läheinen [[Britannian]] kauppakumppani eikä halunnut liittyä sulkuun, mikä oli yksi syy siihen, että [[Napoleonin]] joukot hyökkäsivät Portugaliin vuonna 1807. Sulku oli [[kauppasaarto]], jota oli käytännössä vaikea valvoa, koska salakuljetus kukoisti. No, tämä meni vähän pitkäksi.
+KYSYMYS: Kerro lisää: Britannian
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+AIEMPI KYSYMYS: Mikä oli Napoleonin mannermaasulku?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Mannermaasulku oli Napoleonin vuonna 1806 julistama kauppasaarto, jonka tarkoituksena oli katkaista Britannian kauppa Euroopan mantereen kanssa ja heikentää sen taloutta. Euroopan satamat piti sulkea brittiläisiltä laivoilta ja tavaroilta, ja Ranska pyrki pakottamaan liittolaisensa ja valtaamansa maat noudattamaan määräystä. Portugali oli perinteisesti läheinen [[Britannian]] kauppakumppani eikä halunnut liittyä sulkuun, mikä oli yksi syy siihen, että [[Napoleonin]] joukot hyökkäsivät Portugaliin vuonna 1807. Sulku oli [[kauppasaarto]], jota oli käytännössä vaikea valvoa, koska salakuljetus kukoisti. No, tämä meni vähän pitkäksi.
+KYSYMYS: Kerro lisää: kauppasaarto
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+AIEMPI KYSYMYS: Mikä oli Sintran sopimus?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Sintran sopimus oli elokuun lopussa 1808 tehty järjestely, jonka mukaan [[Junotin]] ranskalaisjoukot saivat poistua Portugalista aseineen brittien laivoilla Vimeiron taistelun jälkeen. Sopimus päätti ranskalaisten miehityksen Portugalissa ilman jatkotaisteluja, mutta se herätti Britanniassa paljon paheksuntaa, koska voittaneet britit päästivät ranskalaiset lähtemään. Asiaa tutkittiin Britanniassa, ja [[Wellesleyn]] ura jatkui sopimuksesta huolimatta. Ei kyyhkyltä kysytty, mutta kerroin silti.
+KYSYMYS: Kerro lisää: Wellesleyn
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vimeiron taistelu (historia)
+Tietoruudun teksti: Vimeiron taistelussa 21. elokuuta 1808 kenraali Arthur Wellesley, myöhempi Wellingtonin herttua, johtamat britit voittivat kenraalimajuri Jean-Andoche Junotin johtamat ranskalaiset lähellä Vimeiron kylää Lissabonin lähellä niemimaasodan aikana. Taistelu päätti Ranskan ensimmäisen hyökkäyksen Portugaliin. Neljä päivää Roliçan taistelun jälkeen ranskalaiset hyökkäsivät Wellesleyn armeijaa vastaan, ja taistelu alkoi liikkeen taisteluna, jossa ranskalaiset yrittivät kiertää brittien vasenta laitaa. Wellesley onnistui kuitenkin siirtämään joukkonsa kohtaamaan hyökkäyksen, Junot vetäytyi Torres Vedrasia kohti menetettyään 2 000 miestä ja 13 tykkiä, kun anglo-portugalilaisten tappiot olivat 700.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / João Pessoa] João Pessoa on Brasilian koillisrannikon satamakaupunki, jonka portugalilaiset perustivat 1585 – kolmanneksi vanhimpana koko maassa. Vieressä kohoava niemi ottaa vastaan Amerikan mantereen ensimmäisen auringonsäteen joka aamu.
+AIEMPI KYSYMYS: Miksi Portugalin hovi pakeni Brasiliaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Portugalin kuninkaallinen hovi purjehti marraskuussa 1807 Brasiliaan, koska [[Napoleonin]] joukot lähestyivät Lissabonia, eikä Portugalilla ollut voimia pysäyttää niitä. Hovia johti prinssi-valtionhoitaja João, myöhemmin kuningas [[João VI]], ja matkaan lähti brittilaivaston saattamana tuhansia hoviväkeä. Britannia tuki pakoa, koska se halusi estää Ranskaa saamasta Portugalin laivastoa ja satamia haltuunsa. Hovi palasi Portugaliin vasta vuonna 1821. Pitkä pako, pitkä vastaus.
+KYSYMYS: Kerro lisää: João VI
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Niemi, jolla on ollut neljä asukasta] Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti samojen ihmisten toimesta. Ensimmäisinä tulivat Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin saarella, mutta se katosi Nuukin piiristä ennen vuotta 1000. Sitten tulivat norjalaiset, jotka asuivat täällä noin vuodesta 1000 siihen asti, kun heidän asutuksensa katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen kaupunki on neljäs alku samalla kalliolla.
+- [Dunedin — kaupunkilehti / Otagon niemimaa] Otagon niemimaa on sammuneen tulivuoren jäänne, jonka kärjessä kuninkaanalbatrossit pesivät ainoana paikkana asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi josta koko maakunta on saanut nimensä.
+AIEMPI KYSYMYS: Mitä Almeidan piirityksessä tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Almeidan linnoitus joutui ranskalaisten piiritettäväksi [[niemimaasodan]] aikana kesällä 1810. Piiritys päättyi dramaattisesti, kun kranaatti osui sattumalta linnoituksen [[pääruutivarastoon]] ja sytytti sen. Räjähdys tuhosi suurimman osan kaupungista, ja puolustajat antautuivat pian sen jälkeen. Nykyään Almeida on rauhallinen linnoituskylä, jossa asuu noin 1 300 ihmistä. Onneksi siitä on jo yli kaksisataa vuotta.
+KYSYMYS: Kerro lisää: niemimaasodan
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+AIEMPI KYSYMYS: Mitä Almeidan piirityksessä tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Almeidan linnoitus joutui ranskalaisten piiritettäväksi [[niemimaasodan]] aikana kesällä 1810. Piiritys päättyi dramaattisesti, kun kranaatti osui sattumalta linnoituksen [[pääruutivarastoon]] ja sytytti sen. Räjähdys tuhosi suurimman osan kaupungista, ja puolustajat antautuivat pian sen jälkeen. Nykyään Almeida on rauhallinen linnoituskylä, jossa asuu noin 1 300 ihmistä. Onneksi siitä on jo yli kaksisataa vuotta.
+KYSYMYS: Kerro lisää: pääruutivarastoon
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia: USS Mainen tuho ja Espanjan vallan loppu] Yhdysvaltain taistelulaiva USS Maine upposi Havannan satamassa 1898, ja siitä tuli Espanjan ja Yhdysvaltain välisen sodan välitön syy. Kuubassa sota oli huipennus jo kolme vuotta käynnissä olleelle itsenäisyyssodalle. Espanja luopui Kuuban ylivallasta 12. elokuuta 1898, ja sen neljä vuosisataa kestänyt läsnäolo Amerikan mantereella päättyi. Kuuban tasavalta syntyi kuitenkin vasta 1902, ja silloin Havannasta tuli sen pääkaupunki: kaupunki isännöi maan ensimmäisen presidentin Tomás Estrada Palman virkaanastujaisia.
+- [Espanja — maalehti / Luonto: Espanjan korkein vuori on Afrikan edustalla] Espanjan korkein kohta ei ole Pyreneillä vaan Teneriffalla: Teide nousee 3 715 metriin, ja merenpohjasta mitattuna se on yli seitsemän kilometriä korkea eli maailman kolmanneksi korkein tulivuorirakennelma. Huipun ympärillä on Las Cañadasin kraatterilaakso, jonka kivikko muistuttaa niin paljon Marsia, että Euroopan avaruusjärjestö on koekäyttänyt siellä mönkijöitään. Vuori purkautui viimeksi 1909. Kanariansaaret ovat maantieteellisesti Afrikkaa, sata kilometriä Marokon rannikolta.
+AIEMPI KYSYMYS: Miksi linnoitus rakennettiin rajalle?
+AIEMPI VASTAUS (Livia):
+No niin. Almeida sijaitsee vain noin seitsemän kilometrin päässä [[Espanjan]] rajasta, ja linnoitus rakennettiin vartioimaan tärkeää Espanjasta Portugaliin johtavaa rajatietä. Se valmistui vuonna 1641, pian sen jälkeen kun Portugal oli vuonna 1640 irrottautunut Espanjan kruunun alaisuudesta ja Espanja yritti saada maan takaisin. Linnoitukseen kuuluu kuiva [[vallihauta]] ja kaksi tunneliporttia, ja sen muodot oli suunniteltu aikakauden tykistöä vastaan. Ei kyyhkyltä ole rajalla koskaan paperia pyydetty.
+KYSYMYS: Kerro lisää: Espanjan
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Mandalay: Muurit, vallihauta ja kaksitoista porttia] Suunnitelma oli 144 korttelin ruutukaava, jonka keskellä oli kuudentoista korttelin palatsialue. Linnoitusta ympäröi neljä kahden kilometrin muuria täsmällisenä neliönä ja 64 metriä leveä, 4,5 metriä syvä vallihauta. Muuri on tiiltä ja mutalaastia, tyveltä kolme metriä paksu ja lähes seitsemän metriä korkea, ja sen varrella on 48 bastionia kultakärkisine torneineen 169 metrin välein. Portteja on kolme joka sivulla, yhteensä kaksitoista, ja kukin kantaa oman eläinradan merkkinsä. Keskiporttien yllä on seitsemänkerroksinen pyatthat-katos, muiden viisikerroksinen.
+AIEMPI KYSYMYS: Miksi linnoitus rakennettiin rajalle?
+AIEMPI VASTAUS (Livia):
+No niin. Almeida sijaitsee vain noin seitsemän kilometrin päässä [[Espanjan]] rajasta, ja linnoitus rakennettiin vartioimaan tärkeää Espanjasta Portugaliin johtavaa rajatietä. Se valmistui vuonna 1641, pian sen jälkeen kun Portugal oli vuonna 1640 irrottautunut Espanjan kruunun alaisuudesta ja Espanja yritti saada maan takaisin. Linnoitukseen kuuluu kuiva [[vallihauta]] ja kaksi tunneliporttia, ja sen muodot oli suunniteltu aikakauden tykistöä vastaan. Ei kyyhkyltä ole rajalla koskaan paperia pyydetty.
+KYSYMYS: Kerro lisää: vallihauta
+
+### 539
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Maurit ja kristityt samassa padassa] Moros y cristianos tarkoittaa maureja ja kristittyjä: moros ovat mustia papuja ja cristianos valkoista riisiä. Nimi viittaa Iberian niemimaan muslimihallintoon, joka kesti 700-luvulta reconquistan päättymiseen 1400-luvulla. Pohjana on sofrito eli sipulin, valkosipulin ja paprikan kuullotus, mausteina kumina, oregano ja laakerinlehti. Ero tavalliseen papu-riisiruokaan on se, että papu ja riisi kypsennetään samassa padassa papujen keitinveteen. Saaren itäosassa sama ruoka punaisista pavuista on congrí.
+- [Granada — kaupunkilehti / Granada: Aamulla hiihtoa, iltapäivällä merta] Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä Välimeren rannalle, joten saman päivän aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli kolmen kilometrin korkeuteen, ja vieressä kohoaa Mulhacén, 3 479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
+- [Granada — kaupunkilehti / Granada: Palatsi, jota ei purettu] Alhambra oli Granadan emiirikunnan hallintokeskus ja Iberian niemimaan viimeisen muslimivaltion sydän. Kun se luovutettiin vuonna 1492, uudet hallitsijat eivät purkaneet palatsia vaan muuttivat siihen — siksi sen kipsikoristelu ja arabiankieliset kirjoitukset ovat yhä paikoillaan. Sama lause toistuu seinillä uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja se kuuluu "ei ole voittajaa paitsi Jumala".
+AIEMPI KYSYMYS: Mistä Almeidan nimi tulee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Almeidan nimi tulee arabian sanasta al-Maʾida, joka tarkoittaa pöytää. Nimi periytyy ajalta, jolloin [[Iberian niemimaan]] suuria osia hallitsivat muslimit, ja arabian kielen vaikutus näkyy edelleen portugalin sanoissa ja paikannimissä. Esimerkiksi [[Algarven]] nimi juontuu arabian sanasta al-Gharb, länsi.
+
+Pöytä on kyllä hyvä nimi paikalle. Minä katson jokaista pöytää ensin sen mukaan, onko sillä pullaa, ja Portugalissa on varmasti oma versionsa, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Iberian niemimaan
+
+### 540
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Kauppakamarin talo] 1817 Talo seisoo linnoituksen raunioilla. São Fernandon linnake purettiin 1814–1816, ja sen paikalle nousi Bahian kauppakamarin palatsi, joka vihittiin 28. tammikuuta 1817. Rakentamisen kustansi Bahian entinen kuvernööri Marcos de Noronha e Brito, Arcosin kahdeksas kreivi, ja hän valitsi myös tontin; piirustukset teki portugalilainen arkkitehti ja kersanttimajuri Cosme Damião da Cunha Fidié. Vanhan linnakkeen rakenteita on yhä nykyisen talon sisällä. Rakennus on Salvadorin päänäytteitä uusklassismista, ja sillä on kaksi julkisivua. Riachuelon aukiolle päin katsovassa on neljä marmoriporrasta ja neljä kreikkalaisista muistomerkeistä otettua pylvästä, Comércion aukiolle katsovassa kaksi porra…
+- [Rio de Janeiro — kaupunkilehti / Historia: Pääkaupunki kolme kertaa] Rio nousi Brasilian siirtomaahallinnon pääkaupungiksi 1763, kun Minas Geraisin kulta- ja timanttilöydöt tekivät siitä Salvadoria käytännöllisemmän vientisataman. Vuonna 1808 koko Portugalin hovi muutti tänne, ja 1815 kaupungista tuli Portugalin, Brasilian ja Algarven yhdistyneen kuningaskunnan pääkaupunki. Itsenäistymisen 1822 jälkeen Rio jatkoi Brasilian keisarikunnan pääkaupunkina isoisän koko vierailun ajan — asema säilyi tasavallankin alla aina vuoteen 1960.
+AIEMPI KYSYMYS: Mistä Almeidan nimi tulee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Almeidan nimi tulee arabian sanasta al-Maʾida, joka tarkoittaa pöytää. Nimi periytyy ajalta, jolloin [[Iberian niemimaan]] suuria osia hallitsivat muslimit, ja arabian kielen vaikutus näkyy edelleen portugalin sanoissa ja paikannimissä. Esimerkiksi [[Algarven]] nimi juontuu arabian sanasta al-Gharb, länsi.
+
+Pöytä on kyllä hyvä nimi paikalle. Minä katson jokaista pöytää ensin sen mukaan, onko sillä pullaa, ja Portugalissa on varmasti oma versionsa, en vaan tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Algarven
+
+### 541
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+AIEMPI KYSYMYS: Missä Almeida sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Almeida sijaitsee Portugalin koillisosassa [[Beira Interior Norten]] alueella Guardan piirikunnassa, noin seitsemän kilometriä [[Espanjan]] rajalta länteen. Se on pieni linnoituskylä, jossa asuu noin 1 300 ihmistä, ja sen tähtimäinen linnoitus hallitsee maisemaa. Rajan tuntumassa sijaitseva paikka on ollut tärkeä jo vuosisatojen ajan, koska tie Espanjasta kulkee sen läheltä. Rajalle on kyyhkyn siivin lyhyt matka.
+KYSYMYS: Kerro lisää: Beira Interior Norten
+
+### 542
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+AIEMPI KYSYMYS: Kuka oli Vauban?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sébastien Le Prestre de Vauban oli ranskalainen sotilasinsinööri, joka eli vuosina 1633–1707 ja palveli [[Ludvig XIV:n]] sotilasinsinöörinä. Hän suunnitteli ja korjasi monia linnoituksia ja johti piirityksiä, ja hänen nimensä liitetään [[tähtilinnoitusten]] kehittämiseen: muurit tehtiin matalina ja kulmikkaina, jotta tykistön tuli ei murtaisi niitä helposti. Hän sai marsalkan arvon vuonna 1703. Osa hänen linnoituksistaan kuuluu nykyään [[Unescon]] maailmanperintöön. Tämäkin tuli kyyhkyn päästä sujuvasti.
+KYSYMYS: Kerro lisää: Ludvig XIV:n
+
+### 543
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+AIEMPI KYSYMYS: Kuka oli Vauban?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sébastien Le Prestre de Vauban oli ranskalainen sotilasinsinööri, joka eli vuosina 1633–1707 ja palveli [[Ludvig XIV:n]] sotilasinsinöörinä. Hän suunnitteli ja korjasi monia linnoituksia ja johti piirityksiä, ja hänen nimensä liitetään [[tähtilinnoitusten]] kehittämiseen: muurit tehtiin matalina ja kulmikkaina, jotta tykistön tuli ei murtaisi niitä helposti. Hän sai marsalkan arvon vuonna 1703. Osa hänen linnoituksistaan kuuluu nykyään [[Unescon]] maailmanperintöön. Tämäkin tuli kyyhkyn päästä sujuvasti.
+KYSYMYS: Kerro lisää: tähtilinnoitusten
+
+### 544
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almeidan linnoitus (historia)
+Tietoruudun teksti: Almeida on linnoitettu kylä ja kunta Beira Interior Norten alueella Guardan piirikunnassa. Kaupungissa itsessään asuu noin 1 300 ihmistä. Kylä sijaitsee 7,2 kilometriä Espanjan rajalta länteen, ja kaupungin linnoitus valmistui vuonna 1641 kylän pohjoispuolella; siihen johtaa kaksi tunneliporttia ja kuiva vallihauta. Linnoitus vartioi tärkeää Espanjasta tulevaa rajatietä, ja se on kestänyt useita piirityksiä. Niemimaasodan vuoden 1810 piiritys päättyi dramaattisesti, kun sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti ja tuhosi suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.
+AIEMPI KYSYMYS: Kuka oli Vauban?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sébastien Le Prestre de Vauban oli ranskalainen sotilasinsinööri, joka eli vuosina 1633–1707 ja palveli [[Ludvig XIV:n]] sotilasinsinöörinä. Hän suunnitteli ja korjasi monia linnoituksia ja johti piirityksiä, ja hänen nimensä liitetään [[tähtilinnoitusten]] kehittämiseen: muurit tehtiin matalina ja kulmikkaina, jotta tykistön tuli ei murtaisi niitä helposti. Hän sai marsalkan arvon vuonna 1703. Osa hänen linnoituksistaan kuuluu nykyään [[Unescon]] maailmanperintöön. Tämäkin tuli kyyhkyn päästä sujuvasti.
+KYSYMYS: Kerro lisää: Unescon
+
+### 545
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Luonto: Saari, joka nousi merestä] 1963 — Marraskuussa 1963 kalastajat näkivät merellä savua ja luulivat sitä palavaksi laivaksi. Kyseessä oli tulivuorenpurkaus merenpohjassa, ja purkaus jatkui vuoteen 1967, jolloin pinnalle oli kasvanut kokonainen uusi saari. Surtseyhin ei päästetä ketään muuta kuin tutkijoita, koska halutaan nähdä, miten elämä valtaa aivan tyhjän maan itsestään. Siemenet tulivat merivirtojen mukana, linnut lensivät, ja saarelle on ilmestynyt kasveja, hyönteisiä ja lintuja ilman ihmisen apua.
+AIEMPI KYSYMYS: Miksi Peniche oli ennen saari?
+AIEMPI VASTAUS (Livia):
+No jopas. Peniche oli saari keskiaikaan asti, koska sen ja mantereen välillä oli merisalmi. Salmi alkoi vähitellen liettyä, kun [[merivirtojen]] ja tuulen mukanaan tuoma aines kasautui sinne, ja lopulta kapea maakaista yhdisti saaren mantereeseen, jolloin siitä tuli niemimaa. Penichen edustalla Atlantilla sijaitsevat nykyään [[Berlengas-saaret]], jotka ovat yhä erillään mantereesta. Ylhäältä se muutos näkyisi varmaan paremmin.
+KYSYMYS: Kerro lisää: merivirtojen
+
+### 546
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Miksi Peniche oli ennen saari?
+AIEMPI VASTAUS (Livia):
+No jopas. Peniche oli saari keskiaikaan asti, koska sen ja mantereen välillä oli merisalmi. Salmi alkoi vähitellen liettyä, kun [[merivirtojen]] ja tuulen mukanaan tuoma aines kasautui sinne, ja lopulta kapea maakaista yhdisti saaren mantereeseen, jolloin siitä tuli niemimaa. Penichen edustalla Atlantilla sijaitsevat nykyään [[Berlengas-saaret]], jotka ovat yhä erillään mantereesta. Ylhäältä se muutos näkyisi varmaan paremmin.
+KYSYMYS: Kerro lisää: Berlengas-saaret
+
+### 547
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Mihin linnoitusta käytettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Penichen linnoitus rakennettiin entisen [[Atouguia da Baleian]] linnan paikalle, ja ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, ja sitä muutettiin myöhemmin useasti. Autoritaarisen [[Estado Novo]] -hallinnon aikana linnoitus toimi poliittisena vankilana, jossa hallinnon vastustajia pidettiin vangittuina. Hallinto kaatui vuonna 1974 [[neilikkavallankumouksen]] myötä, ja nykyisin linnoituksessa toimii museo, joka käsittelee Estado Novon vastarintaa. Onneksi siellä on nykyään museo.
+KYSYMYS: Kerro lisää: Atouguia da Baleian
+
+### 548
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Jorge Amadon talo] 1987 Kysymys kuului, kenelle kirjailijan paperit kuuluvat. Vuonna 1982 Jorge Amado täytti 70 vuotta ja oli kirjoittanut viisikymmentä vuotta, ja monet laitokset Brasiliassa ja ulkomailla painostivat häntä lahjoittamaan kokoelmansa. Hänen vaimonsa, kirjailija Zélia Gattai, vastusti: kokoelma kuului Bahian ihmisille ja sen oli jäätävä Bahiaan. Kaksi vuotta myöhemmin kirjailija Myriam Fraga otti asian uudelleen esiin, ja Bahian liittovaltionyliopisto ryhtyi luetteloimaan papereita, joita oli siihen asti säilytetty Amadon kotona Rio Vermelhon kaupunginosassa. Ennen vuotta 1950 syntyneistä asiakirjoista suuri osa oli jo mennyttä: osa tuhoutui Estado Novon vainoissa, osa hajosi maanpakovuosina, k…
+AIEMPI KYSYMYS: Mihin linnoitusta käytettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Penichen linnoitus rakennettiin entisen [[Atouguia da Baleian]] linnan paikalle, ja ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, ja sitä muutettiin myöhemmin useasti. Autoritaarisen [[Estado Novo]] -hallinnon aikana linnoitus toimi poliittisena vankilana, jossa hallinnon vastustajia pidettiin vangittuina. Hallinto kaatui vuonna 1974 [[neilikkavallankumouksen]] myötä, ja nykyisin linnoituksessa toimii museo, joka käsittelee Estado Novon vastarintaa. Onneksi siellä on nykyään museo.
+KYSYMYS: Kerro lisää: Estado Novo
+
+### 549
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Mihin linnoitusta käytettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Penichen linnoitus rakennettiin entisen [[Atouguia da Baleian]] linnan paikalle, ja ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, ja sitä muutettiin myöhemmin useasti. Autoritaarisen [[Estado Novo]] -hallinnon aikana linnoitus toimi poliittisena vankilana, jossa hallinnon vastustajia pidettiin vangittuina. Hallinto kaatui vuonna 1974 [[neilikkavallankumouksen]] myötä, ja nykyisin linnoituksessa toimii museo, joka käsittelee Estado Novon vastarintaa. Onneksi siellä on nykyään museo.
+KYSYMYS: Kerro lisää: neilikkavallankumouksen
+
+### 550
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Jorge Amadon talo] 1987 Kysymys kuului, kenelle kirjailijan paperit kuuluvat. Vuonna 1982 Jorge Amado täytti 70 vuotta ja oli kirjoittanut viisikymmentä vuotta, ja monet laitokset Brasiliassa ja ulkomailla painostivat häntä lahjoittamaan kokoelmansa. Hänen vaimonsa, kirjailija Zélia Gattai, vastusti: kokoelma kuului Bahian ihmisille ja sen oli jäätävä Bahiaan. Kaksi vuotta myöhemmin kirjailija Myriam Fraga otti asian uudelleen esiin, ja Bahian liittovaltionyliopisto ryhtyi luetteloimaan papereita, joita oli siihen asti säilytetty Amadon kotona Rio Vermelhon kaupunginosassa. Ennen vuotta 1950 syntyneistä asiakirjoista suuri osa oli jo mennyttä: osa tuhoutui Estado Novon vainoissa, osa hajosi maanpakovuosina, k…
+AIEMPI KYSYMYS: Mikä oli neilikkavallankumous?
+AIEMPI VASTAUS (Livia):
+Just niin. Neilikkavallankumous oli Portugalin sotilasvallankaappaus 25. huhtikuuta 1974, jossa nuoret upseerit kaatoivat [[Estado Novon]] autoritaarisen hallinnon. Hallinnon viimeinen johtaja oli [[Marcelo Caetano]]. Vallankaappaus oli suurelta osin väkivallaton, ja nimensä se sai siitä, että ihmiset antoivat sotilaille neilikoita, jotka monet kiinnittivät aseidensa piippuihin. Se avasi tien demokratialle, ja ensimmäiset vapaat vaalit pidettiin vuonna 1975. Portugalin siirtomaat itsenäistyivät pian vallankumouksen jälkeen. Kukat olivat siinä paljon parempi väline kuin aseet.
+KYSYMYS: Kerro lisää: Estado Novon
+
+### 551
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Jorge Amadon talo] 1987 Kysymys kuului, kenelle kirjailijan paperit kuuluvat. Vuonna 1982 Jorge Amado täytti 70 vuotta ja oli kirjoittanut viisikymmentä vuotta, ja monet laitokset Brasiliassa ja ulkomailla painostivat häntä lahjoittamaan kokoelmansa. Hänen vaimonsa, kirjailija Zélia Gattai, vastusti: kokoelma kuului Bahian ihmisille ja sen oli jäätävä Bahiaan. Kaksi vuotta myöhemmin kirjailija Myriam Fraga otti asian uudelleen esiin, ja Bahian liittovaltionyliopisto ryhtyi luetteloimaan papereita, joita oli siihen asti säilytetty Amadon kotona Rio Vermelhon kaupunginosassa. Ennen vuotta 1950 syntyneistä asiakirjoista suuri osa oli jo mennyttä: osa tuhoutui Estado Novon vainoissa, osa hajosi maanpakovuosina, k…
+- [Salvador — kohdekartta / Kohdekartta: Vila Velhan teatteri] 1964 Teatteri rakennettiin 1964 Avenida Seten varrelle, 1800-luvun uusklassisen Passeio Públicon länsilaidalle. Sen takana oli Teatro dos Novos, Bahian ensimmäinen ammattilaisryhmä 1950-luvulta, jota johti Bahian liittovaltionyliopiston opettaja João Augusto de Azevedo. Pysyvää näyttämöä ajoi joukko ryhmästä irtautuneita opiskelijoita — Echio Reis, Sônia Robatto, Carlos Petrovich, Othon Bastos, Thereza Sá ja Carmem Bittencourt — ja osavaltio antoi tontin 1961. Avajaisnäytöksessä Nós, Por Exemplo esiintyivät Caetano Veloso, Gilberto Gil, Tom Zé, Gal Costa ja Maria Bethânia. Talosta tuli 1960-luvun tropicália-vastakulttuurin keskus ja sotilasdiktatuurin (1964–1985) aikaisen kulttuurisen vasta…
+AIEMPI KYSYMYS: Mikä oli neilikkavallankumous?
+AIEMPI VASTAUS (Livia):
+Just niin. Neilikkavallankumous oli Portugalin sotilasvallankaappaus 25. huhtikuuta 1974, jossa nuoret upseerit kaatoivat [[Estado Novon]] autoritaarisen hallinnon. Hallinnon viimeinen johtaja oli [[Marcelo Caetano]]. Vallankaappaus oli suurelta osin väkivallaton, ja nimensä se sai siitä, että ihmiset antoivat sotilaille neilikoita, jotka monet kiinnittivät aseidensa piippuihin. Se avasi tien demokratialle, ja ensimmäiset vapaat vaalit pidettiin vuonna 1975. Portugalin siirtomaat itsenäistyivät pian vallankumouksen jälkeen. Kukat olivat siinä paljon parempi väline kuin aseet.
+KYSYMYS: Kerro lisää: Marcelo Caetano
+
+### 552
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Mistä Peniche on tunnettu nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— Peniche on kalastussatamakaupunki Portugalin länsirannikolla, ja kalastus on kaupungin perinteinen elinkeino. Kaupunki on tunnettu myös aalloistaan: [[surffauksesta]] on tullut sen merkittävä vetonaula, ja Penichessä on järjestetty kansainvälisiä kilpailuja. Perinteisiin kuuluu myös [[nypläyspitsi]], jota on valmistettu alueella pitkään, ja satamasta lähtevät veneretket vievät [[Berlengas-saarille]]. Linnoituskin on nykyään museo.
+
+Kalasataman laituri on kyyhkylle melkein pyhä paikka, koska siltä putoaa aina jotain syötävää. Pitsiä en ole koskaan ehtinyt nokkimaan.
+KYSYMYS: Kerro lisää: surffauksesta
+
+### 553
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Mistä Peniche on tunnettu nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— Peniche on kalastussatamakaupunki Portugalin länsirannikolla, ja kalastus on kaupungin perinteinen elinkeino. Kaupunki on tunnettu myös aalloistaan: [[surffauksesta]] on tullut sen merkittävä vetonaula, ja Penichessä on järjestetty kansainvälisiä kilpailuja. Perinteisiin kuuluu myös [[nypläyspitsi]], jota on valmistettu alueella pitkään, ja satamasta lähtevät veneretket vievät [[Berlengas-saarille]]. Linnoituskin on nykyään museo.
+
+Kalasataman laituri on kyyhkylle melkein pyhä paikka, koska siltä putoaa aina jotain syötävää. Pitsiä en ole koskaan ehtinyt nokkimaan.
+KYSYMYS: Kerro lisää: nypläyspitsi
+
+### 554
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Mistä Peniche on tunnettu nykyään?
+AIEMPI VASTAUS (Livia):
+Mmm— Peniche on kalastussatamakaupunki Portugalin länsirannikolla, ja kalastus on kaupungin perinteinen elinkeino. Kaupunki on tunnettu myös aalloistaan: [[surffauksesta]] on tullut sen merkittävä vetonaula, ja Penichessä on järjestetty kansainvälisiä kilpailuja. Perinteisiin kuuluu myös [[nypläyspitsi]], jota on valmistettu alueella pitkään, ja satamasta lähtevät veneretket vievät [[Berlengas-saarille]]. Linnoituskin on nykyään museo.
+
+Kalasataman laituri on kyyhkylle melkein pyhä paikka, koska siltä putoaa aina jotain syötävää. Pitsiä en ole koskaan ehtinyt nokkimaan.
+KYSYMYS: Kerro lisää: Berlengas-saarille
+
+### 555
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Sudet takaisin erämaahan] Harmaasudet metsästettiin Yellowstonesta sukupuuttoon: viimeiset puiston sisällä ammuttiin vuonna 1926, eikä alueella kuultu susien ulvontaa lähes seitsemään vuosikymmeneen. Tilanne muuttui tammikuussa 1995, kun Albertasta, Kanadasta, tuotiin 14 tainnutettua sutta ja vapautettiin puiston erämaahan; vuonna 1996 seurasi vielä 17 sutta lisää, yhteensä 31 yksilöä. Palanneet sudet alkoivat pitää hirvikannan kurissa, mikä antoi pajukoille ja haavoille tilaa toipua vuosikymmenten laidunnuksesta. Nykyisin puistossa elää noin 124 sutta reilussa kymmenessä laumassa — osa siitä yli 300 suden kannasta, joka asuttaa koko Yellowstonen ympäristöä.
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+AIEMPI KYSYMYS: Miten niemimaa eroaa saaresta?
+AIEMPI VASTAUS (Livia):
+Ai se. Saari on maa-alue, jota vesi ympäröi joka puolelta, kun taas niemimaa työntyy veteen ja on yhdistetty mantereeseen. Kapeaa maakaistaa, joka yhdistää niemimaan tai saaren mantereeseen, kutsutaan [[kannas]]ksi. Esimerkiksi [[Iberian niemimaa]], jolla Portugali ja Espanja sijaitsevat, on laaja niemimaa, jota [[Pyreneet]] erottavat Ranskasta. Siivillä ei tarvitse välittää kummastakaan.
+KYSYMYS: Kerro lisää: kannas
+
+### 556
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Portugalista tuotu kuorrutus] Kun portugalilaiset asettuivat São Luísiin, he toivat mukanaan maurien Iberian niemimaalle jättämän perinteen: lasitetut keraamiset laatat, asulejot. Kaupungista tuli Brasilian laatoitetuin – Rua Portugalin varrella on enemmän laatoitettuja kauppahuoneiden julkisivuja kuin missään muualla Latinalaisessa Amerikassa. Laatat eivät olleet pelkkää koristelua: niiden lasitettu pinta kestää päiväntasaajan auringon, sadekauden kosteuden ja meren suolaisen ilman paremmin kuin rappaus, ja ne toimivat lämmöneristeenä kivitalojen seinissä. Kadulla kävely on kuin näytekirjan selaamista – jokainen talo kilpailee naapuriaan komeammalla kuvioinnilla.
+- [Tanger — kaupunkilehti / Kirjoitettu Tanger: Hajjille lähtenyt poika] Ibn Battuta syntyi Tangerissa 24. helmikuuta 1304 ja lähti kotoa kaksikymmenvuotiaana pyhiinvaellukselle. Kolmenkymmenen vuoden aikana 1325–1354 hän kiersi suuren osan Afrikkaa, Aasiaa ja Iberian niemimaata ja kulki arvioiden mukaan noin 117 000 kilometriä — enemmän kuin yksikään esimoderni matkaaja. Zheng He teki noin 50 000 ja Marco Polo noin 24 000 kilometriä. Elämänsä lopulla Ibn Battuta saneli matkoistaan kirjan, joka tunnetaan nimellä Rihla; kirjoittajaksi ryhtyi Ibn Juzayy, oppinut, jonka hän oli tavannut Granadassa.
+AIEMPI KYSYMYS: Miten niemimaa eroaa saaresta?
+AIEMPI VASTAUS (Livia):
+Ai se. Saari on maa-alue, jota vesi ympäröi joka puolelta, kun taas niemimaa työntyy veteen ja on yhdistetty mantereeseen. Kapeaa maakaistaa, joka yhdistää niemimaan tai saaren mantereeseen, kutsutaan [[kannas]]ksi. Esimerkiksi [[Iberian niemimaa]], jolla Portugali ja Espanja sijaitsevat, on laaja niemimaa, jota [[Pyreneet]] erottavat Ranskasta. Siivillä ei tarvitse välittää kummastakaan.
+KYSYMYS: Kerro lisää: Iberian niemimaa
+
+### 557
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Penichen linnoitus (historia)
+Tietoruudun teksti: Penichen linnoitus sijaitsee Penichen kunnassa Oeste-alueella Portugalissa. Se on rakennettu entisen Atouguia da Baleian linnan paikalle, josta on jäljellä vain jäänteitä; ensimmäiset rakennustyöt tehtiin vuosina 1557 ja 1558, ja sitä on muutettu useasti. Sen puolustusmuurit ympäröivät kahden hehtaarin alueen, joka on jaettu ylä- ja alaosaan. Linnoituksella on ollut monta tehtävää, muun muassa poliittisena vankilana autoritaarisen Estado Novo -hallinnon aikana, ja nykyisin se sisältää Estado Novon vastarintaa käsittelevän museon. Keskiaikaan asti Peniche oli saari, mutta salmen liettyminen merivirtojen ja tuulen vuoksi muutti sen niemimaaksi.
+AIEMPI KYSYMYS: Miten niemimaa eroaa saaresta?
+AIEMPI VASTAUS (Livia):
+Ai se. Saari on maa-alue, jota vesi ympäröi joka puolelta, kun taas niemimaa työntyy veteen ja on yhdistetty mantereeseen. Kapeaa maakaistaa, joka yhdistää niemimaan tai saaren mantereeseen, kutsutaan [[kannas]]ksi. Esimerkiksi [[Iberian niemimaa]], jolla Portugali ja Espanja sijaitsevat, on laaja niemimaa, jota [[Pyreneet]] erottavat Ranskasta. Siivillä ei tarvitse välittää kummastakaan.
+KYSYMYS: Kerro lisää: Pyreneet
+
+### 558
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Convento do Carmo (historia)
+Tietoruudun teksti: Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Musiikki: Lissabonin salonkien suosikki Riosta] Domingos Caldas Barbosa syntyi Rio de Janeirossa noin 1739 portugalilaisen isän ja vapautetun angolalaisen naisen poikana, ja hänestä tuli 1700-luvun lopun Lissabonin hienoston suosituin laulaja-runoilija. Hän säesti itseään violalla ja improvisoi laulunsa; syntyperäänsä hänelle muistutettiin alentavalla lisänimellä violansoittaja. Hänen modinha-laulunsa julkaistiin kirjana vasta 1825, neljännesvuosisata hänen kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu ovat Brasilian populaarimusiikin vanhimmat juuret.
+AIEMPI KYSYMYS: Miksi kirkolla ei ole kattoa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kirkon kivikatto romahti [[Lissabonin suuressa maanjäristyksessä]] 1. marraskuuta 1755, eikä sitä rakennettu koskaan uudelleen. Maanjäristys iski pyhäinpäivänä, jolloin lähteiden mukaan monet olivat kirkoissa, ja seuranneet tulvat ja palot tuhosivat suuren osan kaupunkia. Kattamattomat pilarit ja holvikaaret jätettiin paikalleen muistomerkiksi, ja kaupunki jälleenrakennettiin [[Pombalin markiisin]] johdolla. Tapahtumasta on kulunut yli 270 vuotta, ja rauniot ovat nykyään rauhallinen museo. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Lissabonin suuressa maanjäristyksessä
+
+### 559
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Convento do Carmo (historia)
+Tietoruudun teksti: Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Historia: Sotilaat testasivat uudisrakennukset marssimalla] 1758– — Kuningas José I:n pääministeri, markiisi de Pombal, otti jälleenrakennuksen johtoonsa ja teetti Baixan keskustaan täysin uuden, suoraviivaisen ruutukaavan — yhden Euroopan ensimmäisistä. Talot rakennettiin "gaiola pombalinaksi" kutsutulla puisella häkkirungolla, joka joustaa järistyksessä murtumatta; kestävyys testattiin muun muassa marssittamalla sotilasjoukkoja rakennusten ympärillä täristystä jäljittelemään. Isoisän matkan aikaan Baixan ruutukaava on jo yli sata vuotta vanha ja vakiintunut osa kaupunkia.
+AIEMPI KYSYMYS: Miksi kirkolla ei ole kattoa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kirkon kivikatto romahti [[Lissabonin suuressa maanjäristyksessä]] 1. marraskuuta 1755, eikä sitä rakennettu koskaan uudelleen. Maanjäristys iski pyhäinpäivänä, jolloin lähteiden mukaan monet olivat kirkoissa, ja seuranneet tulvat ja palot tuhosivat suuren osan kaupunkia. Kattamattomat pilarit ja holvikaaret jätettiin paikalleen muistomerkiksi, ja kaupunki jälleenrakennettiin [[Pombalin markiisin]] johdolla. Tapahtumasta on kulunut yli 270 vuotta, ja rauniot ovat nykyään rauhallinen museo. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pombalin markiisin
+
+### 560
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Convento do Carmo (historia)
+Tietoruudun teksti: Convento do Carmo on entinen karmeliittiluostarin kirkko Lissabonin Chiadon kaupunginosassa. Goottilaistyylinen luostarikirkko valmistui vuonna 1407, ja se oli aikanaan yksi kaupungin suurimmista kirkoista. Marraskuun 1755 suuri Lissabonin maanjäristys romahdutti kirkon kivikaton, jota ei koskaan rakennettu uudelleen. Kattamattomat pilarit ja holvikaaret jätettiin muistomerkiksi katastrofista, ja rauniot toimivat nykyään avoimena arkeologisena museona, jossa on esillä muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dakar — kaupunkilehti / Taiteen kaupunki: Museo, joka pyytää takaisin] Mustien sivilisaatioiden museo avattiin Dakarissa 6. joulukuuta 2018. Sen tavoitteeksi kirjattiin Afrikan panoksen esittäminen maailman kulttuuriseen ja tieteelliseen perintöön, ja johtaja, arkeologi Hamady Bocoum, muistuttaa että raudanvalmistus keksittiin Afrikassa 2 500 vuotta ennen ajanlaskun alkua. Museo on pyytänyt afrikkalaisten teosten palauttamista: jopa 95 prosenttia mantereen kulttuuriperinnöstä on Afrikan ulkopuolella, ja pelkästään Pariisin Quai Branly pitää hallussaan 70 000 esinettä Saharan eteläpuolisesta Afrikasta. Time valitsi museon vuoden 2019 sadan parhaan paikan joukkoon.
+AIEMPI KYSYMYS: Mitä raunioissa on nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Convento do Carmon raunioissa toimii nykyään avoin museo, joka on omistettu arkeologialle: rauniot ovat [[arkeologisena museona]] jokaisen vierailijan nähtävillä. Esillä on muun muassa keskiaikaisia hautamuistomerkkejä ja esihistoriallisia löytöjä. Kirkon kattamattomat pilarit ja holvikaaret ovat paikoillaan, joten vierailija kävelee goottilaisen kirkon kaarien alla taivas yläpuolellaan. Rauniot sijaitsevat Lissabonin [[Chiadon]] kaupunginosassa.
+
+Katottomassa kirkossa pilarit nousevat suoraan kohti taivasta, ja ylhäältä katsoen näky on hiljainen ja kaunis. Hiljaisuus sopii tällaiselle paikalle.
+KYSYMYS: Kerro lisää: arkeologisena museona

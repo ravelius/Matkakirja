@@ -1,0 +1,1051 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+AIEMPI KYSYMYS: Minkä rakennuksen mukaan pyörökirkko tehtiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tomarin pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläiset pitivät Herran temppelinä. Joissakin lähteissä mallina mainitaan myös Jerusalemin Pyhän haudan kirkko, joten esikuvaa ei kannata esittää aivan yksiselitteisenä. [[Temppeliherrat]] rakensivat usein pyöreitä kirkkoja, koska pyöreä muoto muistutti pyhistä paikoista. Linnan oratorion sai valmiiksi suurmestari [[Gualdim Pais]] noin vuonna 1160, ja pyörökirkon rakentaminen jatkui sen jälkeen. Ja tämän minä muistin ihan itse.
+KYSYMYS: Kerro lisää: Gualdim Pais
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+AIEMPI KYSYMYS: Keitä olivat temppeliherrat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Temppeliherrat olivat keskiaikainen sotilaallinen ritarikunta, joka perustettiin Jerusalemissa noin vuonna 1119 suojelemaan pyhiinvaeltajia. Kirkko vahvisti ritarikunnan vuonna 1129 [[Troyesin kirkolliskokouksessa]], ja jäsenet sitoutuivat luostariveljien tapaan kuuliaisuuteen ja köyhyyteen. Tunnusmerkkinä oli valkoinen vaippa ja punainen risti. Ritarikunnan omaisuus kasvoi suureksi [[ristiretkien]] aikana, ja se hoiti myös rahansiirtoja matkaajille. Ranskan kuningas [[Filip IV]] painosti paavia, ja ritarikunta lakkautettiin vuonna 1312. Hyvä että aika on tasannut tämänkin tarinan.
+KYSYMYS: Kerro lisää: Troyesin kirkolliskokouksessa
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Keitä olivat temppeliherrat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Temppeliherrat olivat keskiaikainen sotilaallinen ritarikunta, joka perustettiin Jerusalemissa noin vuonna 1119 suojelemaan pyhiinvaeltajia. Kirkko vahvisti ritarikunnan vuonna 1129 [[Troyesin kirkolliskokouksessa]], ja jäsenet sitoutuivat luostariveljien tapaan kuuliaisuuteen ja köyhyyteen. Tunnusmerkkinä oli valkoinen vaippa ja punainen risti. Ritarikunnan omaisuus kasvoi suureksi [[ristiretkien]] aikana, ja se hoiti myös rahansiirtoja matkaajille. Ranskan kuningas [[Filip IV]] painosti paavia, ja ritarikunta lakkautettiin vuonna 1312. Hyvä että aika on tasannut tämänkin tarinan.
+KYSYMYS: Kerro lisää: ristiretkien
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Filipin patsas] Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, jollaista ei ollut veistoksessa ennen tehty: hevonen nousee corvetaan, etujalat ilmassa, koko paino takajaloilla ja hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä …
+- [João Pessoa — kaupunkilehti / João Pessoa: Filipeiasta Parahybaksi] Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.
+AIEMPI KYSYMYS: Keitä olivat temppeliherrat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Temppeliherrat olivat keskiaikainen sotilaallinen ritarikunta, joka perustettiin Jerusalemissa noin vuonna 1119 suojelemaan pyhiinvaeltajia. Kirkko vahvisti ritarikunnan vuonna 1129 [[Troyesin kirkolliskokouksessa]], ja jäsenet sitoutuivat luostariveljien tapaan kuuliaisuuteen ja köyhyyteen. Tunnusmerkkinä oli valkoinen vaippa ja punainen risti. Ritarikunnan omaisuus kasvoi suureksi [[ristiretkien]] aikana, ja se hoiti myös rahansiirtoja matkaajille. Ranskan kuningas [[Filip IV]] painosti paavia, ja ritarikunta lakkautettiin vuonna 1312. Hyvä että aika on tasannut tämänkin tarinan.
+KYSYMYS: Kerro lisää: Filip IV
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+AIEMPI KYSYMYS: Miksi Portugali lähti 1400-luvulla löytöretkille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Portugali sijaitsee Atlantin rannalla, ja sen satamista oli luonteva lähteä merelle. Maa halusi päästä suoraan Afrikan kullan ja mausteiden kauppaan ilman välikäsiä, ja mukana oli myös uskonnollisia tavoitteita sekä halu laajentaa vaikutusvaltaa. Retkiä vauhditti prinssi [[Henrik Merenkulkija]], ja Ceutan valtauksesta vuonna 1415 alkoi pitkä sarja matkoja Afrikan rannikolle. [[Bartolomeu Dias]] kiersi Hyväntoivonniemen vuonna 1488, ja [[Vasco da Gama]] purjehti Intiaan vuonna 1498. Ja minä kun luulin, että vain kyyhkyt lentävät kauas.
+KYSYMYS: Kerro lisää: Henrik Merenkulkija
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Historia: Satama, joka jäi naapurille] 1878–1994 — Walvis Bay on rannikon ainoa luonnon syväsatama, ja siksi siitä kiisteltiin sata vuotta. Bartolomeu Dias ankkuroi lahteen 8. joulukuuta 1487, mutta Portugali ei vaatinut sitä itselleen; Britannia otti sataman ja Pingviinisaaret Kapkolonialle 1878 ja 1884, kun ympäröivä maa jäi Saksalle. Vuonna 1910 satamasta tuli Etelä-Afrikan unionin eksklaavi, jonka pinta-alaksi sovittiin 1 124 neliökilometriä. Namibia itsenäistyi 1990, mutta Walvis Bay pysyi yhä Etelä-Afrikan hallussa. Maat perustivat 1992 yhteisen väliaikaishallinnon, ja 1. maaliskuuta 1994 satama luovutettiin Namibialle.
+AIEMPI KYSYMYS: Miksi Portugali lähti 1400-luvulla löytöretkille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Portugali sijaitsee Atlantin rannalla, ja sen satamista oli luonteva lähteä merelle. Maa halusi päästä suoraan Afrikan kullan ja mausteiden kauppaan ilman välikäsiä, ja mukana oli myös uskonnollisia tavoitteita sekä halu laajentaa vaikutusvaltaa. Retkiä vauhditti prinssi [[Henrik Merenkulkija]], ja Ceutan valtauksesta vuonna 1415 alkoi pitkä sarja matkoja Afrikan rannikolle. [[Bartolomeu Dias]] kiersi Hyväntoivonniemen vuonna 1488, ja [[Vasco da Gama]] purjehti Intiaan vuonna 1498. Ja minä kun luulin, että vain kyyhkyt lentävät kauas.
+KYSYMYS: Kerro lisää: Bartolomeu Dias
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosambik — kaupunkilehti / Mosambik: Vasco da Gama pysähtyy saarella] Portugalilainen purjehtija Vasco da Gama pysähtyi saarella maaliskuussa 1498 matkallaan kohti Intiaa – Portugalin ensimmäinen kosketus koko Itä-Afrikan rannikkoon. Saarella hallitsi tuolloin swahilikauppiaiden sulttaani, jonka nimi tunnettiin muodossa Musa Mbiki; portugalilaiset vääntivät nimen ajan mittaan muotoon Moçambique, ja siitä tuli lopulta koko nykyisen valtion nimi. Da Gaman patsas seisoo nykyään entisen kuvernöörinpalatsin, São Paulon palatsin, edessä – rakennuksessa, joka toimi 1600-luvulla jesuiittojen oppilaitoksena ja myöhemmin siirtomaahallinnon ytimenä.
+AIEMPI KYSYMYS: Miksi Portugali lähti 1400-luvulla löytöretkille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Portugali sijaitsee Atlantin rannalla, ja sen satamista oli luonteva lähteä merelle. Maa halusi päästä suoraan Afrikan kullan ja mausteiden kauppaan ilman välikäsiä, ja mukana oli myös uskonnollisia tavoitteita sekä halu laajentaa vaikutusvaltaa. Retkiä vauhditti prinssi [[Henrik Merenkulkija]], ja Ceutan valtauksesta vuonna 1415 alkoi pitkä sarja matkoja Afrikan rannikolle. [[Bartolomeu Dias]] kiersi Hyväntoivonniemen vuonna 1488, ja [[Vasco da Gama]] purjehti Intiaan vuonna 1498. Ja minä kun luulin, että vain kyyhkyt lentävät kauas.
+KYSYMYS: Kerro lisää: Vasco da Gama
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+AIEMPI KYSYMYS: Mikä on saudade?
+AIEMPI VASTAUS (Livia):
+Ai se. Saudade on portugalin kielen sana, jota on vaikea kääntää: se tarkoittaa kaipausta johonkin, mikä on poissa tai mitä ei enää ole. [[Fado]] on Lissabonin oma laulu, ja sen aiheena on useimmiten juuri saudade. Fadoa laulaa yksi laulaja, jota säestävät klassinen kitara ja [[portugalilainen kitara]], jossa on kaksitoista kieltä kuutena parina. [[Amália Rodrigues]] lauloi fadoa yli viisikymmentä vuotta, ja hänen kuoltuaan vuonna 1999 Portugalissa vietettiin kolme päivää kansallista surua. Sana on niin kaunis, että kyyhkykin kuuntelee sen hiljaa.
+KYSYMYS: Kerro lisää: Fado
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Severan kotikadulle ladottiin kitara] 1846 — Maria Severa Onofriana syntyi vuonna 1820 ja lauloi fadoa Mourarian kortteleissa niin, että hänestä tuli koko Lissabonin puheenaihe. Hän sairastui tuberkuloosiin ja kuoli 30. marraskuuta 1846 vain 26-vuotiaana Rua do Capelãon varrella. Köyhä laulaja haudattiin yhteishautaan ilman arkkua. Kahdeksankymmentäviisi vuotta myöhemmin hänestä tehtiin Portugalin ensimmäinen äänielokuva, ja hänen kotikatunsa kiveykseen on ladottu kitaran kuva.
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+AIEMPI KYSYMYS: Mikä on saudade?
+AIEMPI VASTAUS (Livia):
+Ai se. Saudade on portugalin kielen sana, jota on vaikea kääntää: se tarkoittaa kaipausta johonkin, mikä on poissa tai mitä ei enää ole. [[Fado]] on Lissabonin oma laulu, ja sen aiheena on useimmiten juuri saudade. Fadoa laulaa yksi laulaja, jota säestävät klassinen kitara ja [[portugalilainen kitara]], jossa on kaksitoista kieltä kuutena parina. [[Amália Rodrigues]] lauloi fadoa yli viisikymmentä vuotta, ja hänen kuoltuaan vuonna 1999 Portugalissa vietettiin kolme päivää kansallista surua. Sana on niin kaunis, että kyyhkykin kuuntelee sen hiljaa.
+KYSYMYS: Kerro lisää: portugalilainen kitara
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tomarin luostari (historia)
+Tietoruudun teksti: Tomarin Kristuksen luostari on entinen katolinen luostari Keski-Portugalissa. Temppeliherrat perustivat linnan vuonna 1118, ja rakentaminen jatkui 1100-luvun loppuun; suurmestari Gualdim Pais sai oratorion valmiiksi noin vuonna 1160. Noin vuonna 1190 linna kesti kalifi Abu Yusuf al-Mansurin armeijat, jotka valtasivat etelämpänä muita tukikohtia, ja 1200-luvun toisella neljänneksellä Tomarista tuli ritarikunnan pääpaikka ja osa nuoren kristityn kuningaskunnan rajapuolustusta. Kun temppeliherrain ritarikunta lakkautettiin 14. maaliskuuta 1319, paavi Johannes XXII perusti Portugalin kuningas Dionysioksen pyynnöstä Kristuksen ritarikunnan: veljet, omaisuus ja osin jäsenistökin siirtyivät sille, ja juuri se ritarikunta tuki myöhemmin Portugalin 1400-luvun löytöretkiä. Linnan kuuluisa pyörökirkko rakennettiin 1100-luvun jälkipuoliskolla Jerusalemin Kalliomoskeijan malliin, jota ristiretkeläis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+AIEMPI KYSYMYS: Mikä on saudade?
+AIEMPI VASTAUS (Livia):
+Ai se. Saudade on portugalin kielen sana, jota on vaikea kääntää: se tarkoittaa kaipausta johonkin, mikä on poissa tai mitä ei enää ole. [[Fado]] on Lissabonin oma laulu, ja sen aiheena on useimmiten juuri saudade. Fadoa laulaa yksi laulaja, jota säestävät klassinen kitara ja [[portugalilainen kitara]], jossa on kaksitoista kieltä kuutena parina. [[Amália Rodrigues]] lauloi fadoa yli viisikymmentä vuotta, ja hänen kuoltuaan vuonna 1999 Portugalissa vietettiin kolme päivää kansallista surua. Sana on niin kaunis, että kyyhkykin kuuntelee sen hiljaa.
+KYSYMYS: Kerro lisää: Amália Rodrigues
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+AIEMPI KYSYMYS: Kuka oli Vímara Peres?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vímara Peres oli 800-luvun portugalilainen aatelismies ja sotapäällikkö, joka palveli [[Asturian]] kuningasta Alfonso III:a. Hän valtasi [[Porton]] seudun maurien hallitsijoilta noin vuonna 868 ja sai hallittavakseen alueen, josta tuli [[Portugalin kreivikunta]]. Hän valitsi hallintopaikaksi nykyisen Guimarãesin seudun, ja kaupungin vanha nimi Vimaranes juontuu todennäköisesti hänen nimestään. Vímara Peres kuoli noin vuonna 873. Hyvä että nimi on pysynyt mukana.
+KYSYMYS: Kerro lisää: Asturian
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Käsityö: Asemahalli laatoista] 1916 — Porton päärautatieaseman odotushalli on päällystetty sinivalkoisin seinälaatoin. Niitä on noin kaksikymmentätuhatta, ja ne muodostavat suuria kuvakenttiä, joissa esitetään maan historian tapahtumia ja maaseudun töitä. Kuvat maalasi Jorge Colaço, ja työ vei yksitoista vuotta. Halli valmistui vuonna 1916. Asema rakennettiin vanhan luostarin paikalle, ja siitä se sai nimensä. Sininen väri tulee kobolttioksidista, joka kestää polttoa kirkkaana.
+AIEMPI KYSYMYS: Kuka oli Vímara Peres?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vímara Peres oli 800-luvun portugalilainen aatelismies ja sotapäällikkö, joka palveli [[Asturian]] kuningasta Alfonso III:a. Hän valtasi [[Porton]] seudun maurien hallitsijoilta noin vuonna 868 ja sai hallittavakseen alueen, josta tuli [[Portugalin kreivikunta]]. Hän valitsi hallintopaikaksi nykyisen Guimarãesin seudun, ja kaupungin vanha nimi Vimaranes juontuu todennäköisesti hänen nimestään. Vímara Peres kuoli noin vuonna 873. Hyvä että nimi on pysynyt mukana.
+KYSYMYS: Kerro lisää: Porton
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Kauppakamarin talo] 1817 Talo seisoo linnoituksen raunioilla. São Fernandon linnake purettiin 1814–1816, ja sen paikalle nousi Bahian kauppakamarin palatsi, joka vihittiin 28. tammikuuta 1817. Rakentamisen kustansi Bahian entinen kuvernööri Marcos de Noronha e Brito, Arcosin kahdeksas kreivi, ja hän valitsi myös tontin; piirustukset teki portugalilainen arkkitehti ja kersanttimajuri Cosme Damião da Cunha Fidié. Vanhan linnakkeen rakenteita on yhä nykyisen talon sisällä. Rakennus on Salvadorin päänäytteitä uusklassismista, ja sillä on kaksi julkisivua. Riachuelon aukiolle päin katsovassa on neljä marmoriporrasta ja neljä kreikkalaisista muistomerkeistä otettua pylvästä, Comércion aukiolle katsovassa kaksi porra…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Real Gabinete -kirjasto] 1837–1887 Kirjaston perusti 1837 neljäkymmentäkolme portugalilaista siirtolaista, jotka olivat paenneet kotimaansa poliittisia oloja. Tarkoitus oli pitää yllä portugalilaista kulttuuria keisarikunnan pääkaupungissa, ja se oli yhteisön ensimmäinen oma yhdistys kaupungissa. Isoisän matkan aikaan lukukabinetti oli siis toiminut jo 36 vuotta — mutta ei siinä talossa, joka nyt tunnetaan. Nykyinen rakennus tehtiin 1880–1887 portugalilaisen arkkitehdin Rafael da Silva e Castron piirustusten mukaan uusmanueliiniseen tyyliin, joka jäljittelee löytöretkiajan portugalilaista koristetyyliä. Keisari Pedro II laski peruskiven 10. kesäkuuta 1880, ja talon vihkivät 10. syyskuuta 1887 hänen tyttärensä prins…
+AIEMPI KYSYMYS: Kuka oli Vímara Peres?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vímara Peres oli 800-luvun portugalilainen aatelismies ja sotapäällikkö, joka palveli [[Asturian]] kuningasta Alfonso III:a. Hän valtasi [[Porton]] seudun maurien hallitsijoilta noin vuonna 868 ja sai hallittavakseen alueen, josta tuli [[Portugalin kreivikunta]]. Hän valitsi hallintopaikaksi nykyisen Guimarãesin seudun, ja kaupungin vanha nimi Vimaranes juontuu todennäköisesti hänen nimestään. Vímara Peres kuoli noin vuonna 873. Hyvä että nimi on pysynyt mukana.
+KYSYMYS: Kerro lisää: Portugalin kreivikunta
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Historia: Kuningas, joka kirjoitti Lissaboniin] 1483–1526 — Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.
+AIEMPI KYSYMYS: Mikä São Mameden taistelu oli?
+AIEMPI VASTAUS (Livia):
+Mmm— hetkinen. São Mameden taistelu käytiin 24. kesäkuuta 1128 Guimarãesin lähellä. Siinä [[Afonso Henriques]] kukisti äitinsä [[Teresan]] ja tämän liittolaisen, galicialaisen kreivi Fernando Pérez de Travan joukot. Voitto antoi Afonsolle vallan [[Portugalin kreivikunnassa]], ja siitä alkanut kehitys johti Portugalin itsenäistymiseen kuningaskunnaksi. Taistelu oli oman maan sisäinen valtataistelu aikana, jolloin hallitsijoiden riidat ratkaistiin usein aseilla. Kuninkaaksi Afonso nimitti itsensä vasta myöhemmin, noin vuonna 1139. Onneksi siitä on jo lähes yhdeksänsataa vuotta.
+KYSYMYS: Kerro lisää: Afonso Henriques
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kohdekartta / Kohdekartta: Santa Teresan basilika] 1881 Basilika on kaksi uusklassista kirkkoa, jotka on liitetty yhteen kupolilla. Kupolin alla on pääalttari, ja rakennuksella on kaksi julkisivua eri suuntiin: läntinen on omistettu pyhälle Annalle ja itäinen pyhälle Teresalle. Osoite on La Palman ja Santa Teresan kulma vanhassa keskustassa. Talo nousi San Felipe Nerin kirkon paikalle. Presidentti Guzmán Blanco määräsi vanhan kirkon purettavaksi ja tilasi 1870 arkkitehti Juan Hurtado Manriquelta samalle tontille monumentaalisen uuden. Työt tehtiin 1877–1881, ja kirkko vihittiin 28. lokakuuta 1881 Santa Teresan kirkkona presidentin vaimon Ana Teresan mukaan. Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja pääsiäisenä väkeä tulee…
+AIEMPI KYSYMYS: Mikä São Mameden taistelu oli?
+AIEMPI VASTAUS (Livia):
+Mmm— hetkinen. São Mameden taistelu käytiin 24. kesäkuuta 1128 Guimarãesin lähellä. Siinä [[Afonso Henriques]] kukisti äitinsä [[Teresan]] ja tämän liittolaisen, galicialaisen kreivi Fernando Pérez de Travan joukot. Voitto antoi Afonsolle vallan [[Portugalin kreivikunnassa]], ja siitä alkanut kehitys johti Portugalin itsenäistymiseen kuningaskunnaksi. Taistelu oli oman maan sisäinen valtataistelu aikana, jolloin hallitsijoiden riidat ratkaistiin usein aseilla. Kuninkaaksi Afonso nimitti itsensä vasta myöhemmin, noin vuonna 1139. Onneksi siitä on jo lähes yhdeksänsataa vuotta.
+KYSYMYS: Kerro lisää: Teresan
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Kauppakamarin talo] 1817 Talo seisoo linnoituksen raunioilla. São Fernandon linnake purettiin 1814–1816, ja sen paikalle nousi Bahian kauppakamarin palatsi, joka vihittiin 28. tammikuuta 1817. Rakentamisen kustansi Bahian entinen kuvernööri Marcos de Noronha e Brito, Arcosin kahdeksas kreivi, ja hän valitsi myös tontin; piirustukset teki portugalilainen arkkitehti ja kersanttimajuri Cosme Damião da Cunha Fidié. Vanhan linnakkeen rakenteita on yhä nykyisen talon sisällä. Rakennus on Salvadorin päänäytteitä uusklassismista, ja sillä on kaksi julkisivua. Riachuelon aukiolle päin katsovassa on neljä marmoriporrasta ja neljä kreikkalaisista muistomerkeistä otettua pylvästä, Comércion aukiolle katsovassa kaksi porra…
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Real Gabinete -kirjasto] 1837–1887 Kirjaston perusti 1837 neljäkymmentäkolme portugalilaista siirtolaista, jotka olivat paenneet kotimaansa poliittisia oloja. Tarkoitus oli pitää yllä portugalilaista kulttuuria keisarikunnan pääkaupungissa, ja se oli yhteisön ensimmäinen oma yhdistys kaupungissa. Isoisän matkan aikaan lukukabinetti oli siis toiminut jo 36 vuotta — mutta ei siinä talossa, joka nyt tunnetaan. Nykyinen rakennus tehtiin 1880–1887 portugalilaisen arkkitehdin Rafael da Silva e Castron piirustusten mukaan uusmanueliiniseen tyyliin, joka jäljittelee löytöretkiajan portugalilaista koristetyyliä. Keisari Pedro II laski peruskiven 10. kesäkuuta 1880, ja talon vihkivät 10. syyskuuta 1887 hänen tyttärensä prins…
+AIEMPI KYSYMYS: Mikä São Mameden taistelu oli?
+AIEMPI VASTAUS (Livia):
+Mmm— hetkinen. São Mameden taistelu käytiin 24. kesäkuuta 1128 Guimarãesin lähellä. Siinä [[Afonso Henriques]] kukisti äitinsä [[Teresan]] ja tämän liittolaisen, galicialaisen kreivi Fernando Pérez de Travan joukot. Voitto antoi Afonsolle vallan [[Portugalin kreivikunnassa]], ja siitä alkanut kehitys johti Portugalin itsenäistymiseen kuningaskunnaksi. Taistelu oli oman maan sisäinen valtataistelu aikana, jolloin hallitsijoiden riidat ratkaistiin usein aseilla. Kuninkaaksi Afonso nimitti itsensä vasta myöhemmin, noin vuonna 1139. Onneksi siitä on jo lähes yhdeksänsataa vuotta.
+KYSYMYS: Kerro lisää: Portugalin kreivikunnassa
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena] Kaupunki, jossa marmoritorni mittasi aikaa vedellä ja jossa vesikantaja voitti maailman ensimmäisen olympiamaratonin.
+AIEMPI KYSYMYS: Mikä on Euroopan kulttuuripääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Euroopan kulttuuripääkaupunki on Euroopan unionin ohjelma, jossa yksi tai useampi kaupunki saa vuodeksi vastuun esitellä kulttuuriaan ja kulttuurielämäänsä. Ohjelma alkoi vuonna 1985, kun ensimmäisenä nimettiin [[Ateena]] kreikkalaisen kulttuuriministerin [[Melina Mercourin]] aloitteesta. Kaupungit järjestävät vuoden aikana tapahtumia, näyttelyitä ja konsertteja, ja moni on käyttänyt vuotta myös kaupunkikuvan kohentamiseen. Guimarães oli kulttuuripääkaupunki vuonna 2012 yhdessä [[Mariborin]] kanssa. Juhlavuosi olisi minusta hyvä, jos tarjolla olisi pullaa.
+KYSYMYS: Kerro lisää: Ateena
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+AIEMPI KYSYMYS: Mikä on Euroopan kulttuuripääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Euroopan kulttuuripääkaupunki on Euroopan unionin ohjelma, jossa yksi tai useampi kaupunki saa vuodeksi vastuun esitellä kulttuuriaan ja kulttuurielämäänsä. Ohjelma alkoi vuonna 1985, kun ensimmäisenä nimettiin [[Ateena]] kreikkalaisen kulttuuriministerin [[Melina Mercourin]] aloitteesta. Kaupungit järjestävät vuoden aikana tapahtumia, näyttelyitä ja konsertteja, ja moni on käyttänyt vuotta myös kaupunkikuvan kohentamiseen. Guimarães oli kulttuuripääkaupunki vuonna 2012 yhdessä [[Mariborin]] kanssa. Juhlavuosi olisi minusta hyvä, jos tarjolla olisi pullaa.
+KYSYMYS: Kerro lisää: Melina Mercourin
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Yli 400-vuotias köynnös] 1657 — Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin ja annetaan kaupungin lahjoiksi vieraille.
+AIEMPI KYSYMYS: Mikä on Euroopan kulttuuripääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Euroopan kulttuuripääkaupunki on Euroopan unionin ohjelma, jossa yksi tai useampi kaupunki saa vuodeksi vastuun esitellä kulttuuriaan ja kulttuurielämäänsä. Ohjelma alkoi vuonna 1985, kun ensimmäisenä nimettiin [[Ateena]] kreikkalaisen kulttuuriministerin [[Melina Mercourin]] aloitteesta. Kaupungit järjestävät vuoden aikana tapahtumia, näyttelyitä ja konsertteja, ja moni on käyttänyt vuotta myös kaupunkikuvan kohentamiseen. Guimarães oli kulttuuripääkaupunki vuonna 2012 yhdessä [[Mariborin]] kanssa. Juhlavuosi olisi minusta hyvä, jos tarjolla olisi pullaa.
+KYSYMYS: Kerro lisää: Mariborin
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+AIEMPI KYSYMYS: Mikä merkitys Afonso Henriquesilla oli Portugalille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä mies syntyi juuri tässä kaupungissa. Afonso Henriques oli Portugalin kreivikunnan hallitsija, josta tuli maan ensimmäinen kuningas. Hän otti kuninkaan arvon noin vuonna 1139, ja Leónin ja Kastilian kuningas Alfonso VII tunnusti aseman [[Zamoran]] sopimuksessa vuonna 1143. Paavi [[Aleksanteri III]] vahvisti kuninkuuden vuonna 1179. Afonso valloitti myös [[Lissabonin]] maurien hallinnasta vuonna 1147 ristiretkeläisten avulla, ja kaupungista tuli myöhemmin Portugalin pääkaupunki. Aika paljon yhdelle miehelle, ja minä vain kuljetan kirjeitä.
+KYSYMYS: Kerro lisää: Zamoran
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mikä merkitys Afonso Henriquesilla oli Portugalille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä mies syntyi juuri tässä kaupungissa. Afonso Henriques oli Portugalin kreivikunnan hallitsija, josta tuli maan ensimmäinen kuningas. Hän otti kuninkaan arvon noin vuonna 1139, ja Leónin ja Kastilian kuningas Alfonso VII tunnusti aseman [[Zamoran]] sopimuksessa vuonna 1143. Paavi [[Aleksanteri III]] vahvisti kuninkuuden vuonna 1179. Afonso valloitti myös [[Lissabonin]] maurien hallinnasta vuonna 1147 ristiretkeläisten avulla, ja kaupungista tuli myöhemmin Portugalin pääkaupunki. Aika paljon yhdelle miehelle, ja minä vain kuljetan kirjeitä.
+KYSYMYS: Kerro lisää: Aleksanteri III
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Musiikki: Lissabonin salonkien suosikki Riosta] Domingos Caldas Barbosa syntyi Rio de Janeirossa noin 1739 portugalilaisen isän ja vapautetun angolalaisen naisen poikana, ja hänestä tuli 1700-luvun lopun Lissabonin hienoston suosituin laulaja-runoilija. Hän säesti itseään violalla ja improvisoi laulunsa; syntyperäänsä hänelle muistutettiin alentavalla lisänimellä violansoittaja. Hänen modinha-laulunsa julkaistiin kirjana vasta 1825, neljännesvuosisata hänen kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu ovat Brasilian populaarimusiikin vanhimmat juuret.
+AIEMPI KYSYMYS: Mikä merkitys Afonso Henriquesilla oli Portugalille?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä mies syntyi juuri tässä kaupungissa. Afonso Henriques oli Portugalin kreivikunnan hallitsija, josta tuli maan ensimmäinen kuningas. Hän otti kuninkaan arvon noin vuonna 1139, ja Leónin ja Kastilian kuningas Alfonso VII tunnusti aseman [[Zamoran]] sopimuksessa vuonna 1143. Paavi [[Aleksanteri III]] vahvisti kuninkuuden vuonna 1179. Afonso valloitti myös [[Lissabonin]] maurien hallinnasta vuonna 1147 ristiretkeläisten avulla, ja kaupungista tuli myöhemmin Portugalin pääkaupunki. Aika paljon yhdelle miehelle, ja minä vain kuljetan kirjeitä.
+KYSYMYS: Kerro lisää: Lissabonin
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+AIEMPI KYSYMYS: Miten kohteesta tulee maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kohteen on ensin kuuluttava valtion omalle ehdokaslistalle, ja valtio tekee siitä virallisen ehdotuksen. Kansainväliset asiantuntijajärjestöt, kuten [[ICOMOS]] kulttuurikohteiden osalta, arvioivat ehdokkaan, ja päätöksen tekee [[Maailmanperintökomitea]] vuosittaisessa kokouksessaan. Kohteen on täytettävä vähintään yksi kriteeri ja osoitettava poikkeuksellinen yleismaailmallinen arvo. Järjestelmä perustuu [[UNESCOn]] vuoden 1972 sopimukseen. Guimarãesin historiallinen keskusta hyväksyttiin listalle vuonna 2001. Paperityötä riittää, vaikka pulu voisi kuljettaa hakemuksen itse.
+KYSYMYS: Kerro lisää: ICOMOS
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miten kohteesta tulee maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kohteen on ensin kuuluttava valtion omalle ehdokaslistalle, ja valtio tekee siitä virallisen ehdotuksen. Kansainväliset asiantuntijajärjestöt, kuten [[ICOMOS]] kulttuurikohteiden osalta, arvioivat ehdokkaan, ja päätöksen tekee [[Maailmanperintökomitea]] vuosittaisessa kokouksessaan. Kohteen on täytettävä vähintään yksi kriteeri ja osoitettava poikkeuksellinen yleismaailmallinen arvo. Järjestelmä perustuu [[UNESCOn]] vuoden 1972 sopimukseen. Guimarãesin historiallinen keskusta hyväksyttiin listalle vuonna 2001. Paperityötä riittää, vaikka pulu voisi kuljettaa hakemuksen itse.
+KYSYMYS: Kerro lisää: Maailmanperintökomitea
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guimarães (historia)
+Tietoruudun teksti: Guimarães on kaupunki Pohjois-Portugalissa, ja sen historiallinen keskusta on ollut maailmanperintökohde vuodesta 2001 poikkeuksellisen hyvin säilyneenä esimerkkinä siitä, miten keskiaikainen asutus kasvoi uudenaikaiseksi kaupungiksi. Paikka asutettiin 800-luvulla nimellä Vimaranes, ja nimi juontuu todennäköisesti soturi Vímara Peresistä, joka valitsi alueen valloittamansa Portugalin kreivikunnan hallintopaikaksi. Kaupunkia sanotaan Portugalin syntymäpaikaksi ja kehtokaupungiksi, koska maan ensimmäinen kuningas Afonso Henriques syntyi siellä ja koska São Mameden taistelu — Portugalin kuningaskunnan synnyn ratkaiseva tapahtuma — käytiin kaupungin liepeillä. Guimarães oli Slovenian Mariborin kanssa Euroopan kulttuuripääkaupunki vuonna 2012. Condé Nast Traveler -lehti julisti sen vuonna 2022 Euroopan kauneimmaksi pikkukaupungiksi.
+AIEMPI KYSYMYS: Miten kohteesta tulee maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kohteen on ensin kuuluttava valtion omalle ehdokaslistalle, ja valtio tekee siitä virallisen ehdotuksen. Kansainväliset asiantuntijajärjestöt, kuten [[ICOMOS]] kulttuurikohteiden osalta, arvioivat ehdokkaan, ja päätöksen tekee [[Maailmanperintökomitea]] vuosittaisessa kokouksessaan. Kohteen on täytettävä vähintään yksi kriteeri ja osoitettava poikkeuksellinen yleismaailmallinen arvo. Järjestelmä perustuu [[UNESCOn]] vuoden 1972 sopimukseen. Guimarãesin historiallinen keskusta hyväksyttiin listalle vuonna 2001. Paperityötä riittää, vaikka pulu voisi kuljettaa hakemuksen itse.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Kuinka vanha kivikehä on?
+AIEMPI VASTAUS (Livia):
+No jopas. Almendresin kivikehän iästä on eri arvioita, mutta kaikissa se on todella vanha. Kaivausten perusteella siinä erotetaan kolme vaihetta: vanhin on noin vuodelta 6000 eaa., toinen noin vuodelta 5000 eaa. ja nuorin noin vuodelta 4000 eaa. Kivet ovat siis noin kuuden–kahdeksan tuhannen vuoden ikäisiä. Kohde sijaitsee [[Évoran]] kunnassa [[Alentejossa]], ja se on yksi Euroopan merkittävimmistä [[menhirien]] ryhmistä. Kivet ovat vanhempia kuin Rooma, vaikka sukuni onkin roomalaista.
+KYSYMYS: Kerro lisää: Évoran
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Kuinka vanha kivikehä on?
+AIEMPI VASTAUS (Livia):
+No jopas. Almendresin kivikehän iästä on eri arvioita, mutta kaikissa se on todella vanha. Kaivausten perusteella siinä erotetaan kolme vaihetta: vanhin on noin vuodelta 6000 eaa., toinen noin vuodelta 5000 eaa. ja nuorin noin vuodelta 4000 eaa. Kivet ovat siis noin kuuden–kahdeksan tuhannen vuoden ikäisiä. Kohde sijaitsee [[Évoran]] kunnassa [[Alentejossa]], ja se on yksi Euroopan merkittävimmistä [[menhirien]] ryhmistä. Kivet ovat vanhempia kuin Rooma, vaikka sukuni onkin roomalaista.
+KYSYMYS: Kerro lisää: Alentejossa
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Kuinka vanha kivikehä on?
+AIEMPI VASTAUS (Livia):
+No jopas. Almendresin kivikehän iästä on eri arvioita, mutta kaikissa se on todella vanha. Kaivausten perusteella siinä erotetaan kolme vaihetta: vanhin on noin vuodelta 6000 eaa., toinen noin vuodelta 5000 eaa. ja nuorin noin vuodelta 4000 eaa. Kivet ovat siis noin kuuden–kahdeksan tuhannen vuoden ikäisiä. Kohde sijaitsee [[Évoran]] kunnassa [[Alentejossa]], ja se on yksi Euroopan merkittävimmistä [[menhirien]] ryhmistä. Kivet ovat vanhempia kuin Rooma, vaikka sukuni onkin roomalaista.
+KYSYMYS: Kerro lisää: menhirien
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mihin kehää on arveltu käytetyn?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kaksi vakiintunutta tulkintaa. Kivikehän arvellaan olleen joko uskonnollinen paikka, jossa pidettiin rituaaleja tai muisteltiin vainajia, tai osa varhaista tähtitieteellistä havainnointia, jossa seurattiin auringon ja muiden taivaankappaleiden liikkeitä. Tarkkaa tehtävää ei tiedetä, koska rakentajat eivät jättäneet kirjallisia lähteitä. Selitykset eivät sulje toisiaan pois: sama paikka on voinut olla sekä pyhä että kalenterin apuväline. Samoja selityksiä ehdotetaan usein muillekin [[megaliittirakenteille]], kuten [[Carnacin]] kiviriveille Ranskassa. Ja kyyhky vain istuu kivellä ja miettii.
+KYSYMYS: Kerro lisää: megaliittirakenteille
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mihin kehää on arveltu käytetyn?
+AIEMPI VASTAUS (Livia):
+Just niin, tästä on kaksi vakiintunutta tulkintaa. Kivikehän arvellaan olleen joko uskonnollinen paikka, jossa pidettiin rituaaleja tai muisteltiin vainajia, tai osa varhaista tähtitieteellistä havainnointia, jossa seurattiin auringon ja muiden taivaankappaleiden liikkeitä. Tarkkaa tehtävää ei tiedetä, koska rakentajat eivät jättäneet kirjallisia lähteitä. Selitykset eivät sulje toisiaan pois: sama paikka on voinut olla sekä pyhä että kalenterin apuväline. Samoja selityksiä ehdotetaan usein muillekin [[megaliittirakenteille]], kuten [[Carnacin]] kiviriveille Ranskassa. Ja kyyhky vain istuu kivellä ja miettii.
+KYSYMYS: Kerro lisää: Carnacin
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mitä menhir tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Menhir on esihistoriallisella ajalla pystyyn nostettu yksittäinen suuri kivi. Sana tulee bretonin kielen sanoista men, kivi, ja hir, pitkä, eli se tarkoittaa suunnilleen pitkää kiveä. Menhirejä esiintyy yksin, riveinä tai kehinä, ja niitä on Euroopassa laajalti, erityisesti Atlantin rannikolla. Tunnetuimpia ovat [[Bretagnen]] [[Carnacin]] kivirivit Ranskassa. Menhirit kuuluvat [[megaliittikulttuureihin]], jotka rakensivat suuria kivirakenteita. Käyttötarkoitus tiedetään vain osittain: ne ovat voineet olla hautoja, rajamerkkejä tai uskonnollisia paikkoja. Kuivaa kuin kivi, mutta minusta tämä on kiva sana.
+KYSYMYS: Kerro lisää: Bretagnen
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mitä menhir tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Menhir on esihistoriallisella ajalla pystyyn nostettu yksittäinen suuri kivi. Sana tulee bretonin kielen sanoista men, kivi, ja hir, pitkä, eli se tarkoittaa suunnilleen pitkää kiveä. Menhirejä esiintyy yksin, riveinä tai kehinä, ja niitä on Euroopassa laajalti, erityisesti Atlantin rannikolla. Tunnetuimpia ovat [[Bretagnen]] [[Carnacin]] kivirivit Ranskassa. Menhirit kuuluvat [[megaliittikulttuureihin]], jotka rakensivat suuria kivirakenteita. Käyttötarkoitus tiedetään vain osittain: ne ovat voineet olla hautoja, rajamerkkejä tai uskonnollisia paikkoja. Kuivaa kuin kivi, mutta minusta tämä on kiva sana.
+KYSYMYS: Kerro lisää: megaliittikulttuureihin
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mikä on Évora?
+AIEMPI VASTAUS (Livia):
+Kato, Évora on Alentejon alueen kaupunki Etelä-Portugalissa, ja sen historiallinen keskusta on ollut [[UNESCOn]] maailmanperintökohde vuodesta 1986. Kaupungin tunnetuimpia nähtävyyksiä ovat roomalaisaikainen temppeli, jota on perinteisesti kutsuttu Dianan temppeliksi, vaikka nimi ei liene alkuperäinen, sekä [[Capela dos Ossos]] eli luukappeli, jonka seinät on koristeltu ihmisluilla. Évoran yliopisto perustettiin vuonna 1559, ja kaupunki on tunnettu myös keskiaikaisista kaduistaan ja muureistaan. Almendresin kivikehä sijaitsee kaupungin lähellä Évoran kunnassa. Kaupungissa riittää nähtävää myös kyyhkylle.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mikä on Évora?
+AIEMPI VASTAUS (Livia):
+Kato, Évora on Alentejon alueen kaupunki Etelä-Portugalissa, ja sen historiallinen keskusta on ollut [[UNESCOn]] maailmanperintökohde vuodesta 1986. Kaupungin tunnetuimpia nähtävyyksiä ovat roomalaisaikainen temppeli, jota on perinteisesti kutsuttu Dianan temppeliksi, vaikka nimi ei liene alkuperäinen, sekä [[Capela dos Ossos]] eli luukappeli, jonka seinät on koristeltu ihmisluilla. Évoran yliopisto perustettiin vuonna 1559, ja kaupunki on tunnettu myös keskiaikaisista kaduistaan ja muureistaan. Almendresin kivikehä sijaitsee kaupungin lähellä Évoran kunnassa. Kaupungissa riittää nähtävää myös kyyhkylle.
+KYSYMYS: Kerro lisää: Capela dos Ossos
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+AIEMPI KYSYMYS: Mitä geologinen kartoitus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on käytännöllinen kysymys. Geologinen kartoitus tarkoittaa sitä, että geologi kulkee maastossa, tutkii [[kallioperää]] ja maaperää ja merkitsee kartalle, mitä kivilajeja alueella on, miten ne ovat asettuneet ja minkä ikäisiä ne ovat. Tuloksena syntyy geologinen kartta, jota käytetään esimerkiksi [[malmien]] ja rakennuskivien etsintään, pohjaveden suojeluun ja maankäytön suunnitteluun. Almendresin kivet löydettiin uudelleen vuonna 1966, kun [[Henrique Leonor Pina]] teki alueella tällaista työtä. Kartoitus perustuu havaintoihin kalliopaljastumista sekä näytteisiin, ja se täydentyy ajan mittaan uusilla mittauksilla. Minä kartoitan yleensä vain ruokapaikat.
+KYSYMYS: Kerro lisää: kallioperää
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+AIEMPI KYSYMYS: Mitä geologinen kartoitus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on käytännöllinen kysymys. Geologinen kartoitus tarkoittaa sitä, että geologi kulkee maastossa, tutkii [[kallioperää]] ja maaperää ja merkitsee kartalle, mitä kivilajeja alueella on, miten ne ovat asettuneet ja minkä ikäisiä ne ovat. Tuloksena syntyy geologinen kartta, jota käytetään esimerkiksi [[malmien]] ja rakennuskivien etsintään, pohjaveden suojeluun ja maankäytön suunnitteluun. Almendresin kivet löydettiin uudelleen vuonna 1966, kun [[Henrique Leonor Pina]] teki alueella tällaista työtä. Kartoitus perustuu havaintoihin kalliopaljastumista sekä näytteisiin, ja se täydentyy ajan mittaan uusilla mittauksilla. Minä kartoitan yleensä vain ruokapaikat.
+KYSYMYS: Kerro lisää: malmien
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almendresin kivikehä (historia)
+Tietoruudun teksti: Almendresin kivikehä on megaliittikokonaisuus Évoran kunnassa Alentejossa, noin neljän ja puolen kilometrin päässä Nossa Senhora de Guadalupen kylästä. Se on Iberian niemimaan suurin järjestetty menhirien ryhmä ja yksi Euroopan suurimmista, ja siihen kuuluu useita megaliittisia rakenteita: kivikehiä ja pystykiviä. Rakenteet ovat kuudennelta vuosituhannelta eaa., ja kaivaukset ovat erottaneet kolme vaihetta — Almendres I noin 6000 eaa., Almendres II noin 5000 eaa. ja Almendres III noin 4000 eaa. Kohde löydettiin uudelleen vasta vuonna 1966, kun Henrique Leonor Pina teki alueella geologista kartoitustyötä. Ympyrämäisesti järjestetty kehä on noin 95 graniittimonoliitin metsä, ja sillä arvellaan olleen joko uskonnollinen tehtävä tai osa varhaista tähtitieteellistä havainnointia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Cruz — kohdekartta / Kohdekartta: Gabriel René Moreno -yliopisto] 1880 Bolivian idän suurin julkinen korkeakoulu perustettiin 11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. Perustamisen taustalla oli valtion asetus 15. joulukuuta 1879, jolla haluttiin vastata kaupungin nuorten tarpeeseen: siihen asti tutkintoa oli pitänyt hakea Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe Leonor Riberalta ja cruceño-piispalta, joka toimi myös ensimmäisenä rehtorina. Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja oikeustiede. Niin pysyi lähes viisikymmentä vuotta. Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen yliopisto 1898 ja nykyisen nimensä 1911 cruceño-kirjailijan ja historioitsijan Gabriel René Morenon mukaan. Keskusrakennus nousi 1940 Ju…
+AIEMPI KYSYMYS: Mitä geologinen kartoitus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on käytännöllinen kysymys. Geologinen kartoitus tarkoittaa sitä, että geologi kulkee maastossa, tutkii [[kallioperää]] ja maaperää ja merkitsee kartalle, mitä kivilajeja alueella on, miten ne ovat asettuneet ja minkä ikäisiä ne ovat. Tuloksena syntyy geologinen kartta, jota käytetään esimerkiksi [[malmien]] ja rakennuskivien etsintään, pohjaveden suojeluun ja maankäytön suunnitteluun. Almendresin kivet löydettiin uudelleen vuonna 1966, kun [[Henrique Leonor Pina]] teki alueella tällaista työtä. Kartoitus perustuu havaintoihin kalliopaljastumista sekä näytteisiin, ja se täydentyy ajan mittaan uusilla mittauksilla. Minä kartoitan yleensä vain ruokapaikat.
+KYSYMYS: Kerro lisää: Henrique Leonor Pina
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+AIEMPI KYSYMYS: Miksi antiikin kirjoittajat pitivät niemeä pyhänä?
+AIEMPI VASTAUS (Livia):
+Mmm, ikivanha juttu. Niemi on Manner-Euroopan lounaisin kohta, ja antiikin ihmiset pitivät sitä maailman reunana. Kreikkalaiset kutsuivat sitä nimellä Ophiussa eli käärmeiden maa ja pystyttivät sinne [[Herakleen]] temppelin, ja roomalaisille se oli [[Promontorium Sacrum]] eli pyhä niemi. [[Strabon]] kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että kansa uskoi auringon vajoavan siinä sihisten mereen. Hän itse piti tätä tavallisena kansanpuheena. Pyhyyttä todistavat myös lähistön kivikautiset pystykivet. Aurinko ei kyllä sihise minulle, vaikka olen katsonut sitä usein.
+KYSYMYS: Kerro lisää: Herakleen
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+AIEMPI KYSYMYS: Miksi antiikin kirjoittajat pitivät niemeä pyhänä?
+AIEMPI VASTAUS (Livia):
+Mmm, ikivanha juttu. Niemi on Manner-Euroopan lounaisin kohta, ja antiikin ihmiset pitivät sitä maailman reunana. Kreikkalaiset kutsuivat sitä nimellä Ophiussa eli käärmeiden maa ja pystyttivät sinne [[Herakleen]] temppelin, ja roomalaisille se oli [[Promontorium Sacrum]] eli pyhä niemi. [[Strabon]] kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että kansa uskoi auringon vajoavan siinä sihisten mereen. Hän itse piti tätä tavallisena kansanpuheena. Pyhyyttä todistavat myös lähistön kivikautiset pystykivet. Aurinko ei kyllä sihise minulle, vaikka olen katsonut sitä usein.
+KYSYMYS: Kerro lisää: Promontorium Sacrum
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Teatterista tehtiin kehä ja takaisin] Kourion oli kaupunkikuningaskunta jyrkänteen päällä etelärannikolla. Herodotos kertoo kourionilaisten polveutuvan Argoksesta tulleista siirtolaisista, ja saman toistaa Strabon; akhaialaiset asettuivat paikalle 1100-luvulla eaa. Teatteri rakennettiin 100-luvulla eaa. ja se oli aluksi pienempi. Nykyiseen kokoonsa se laajennettiin 100-luvulla jaa., jolloin katsomoon mahtui 3 500 katsojaa. 200-luvun alkupuolella teatteri muutettiin areenaksi: näyttämön eteen pystytettiin metalliristikko petoeläinnäytöksiä varten ja kolme alinta istuinriviä purettiin, jotta katsojat olisivat kauempana kehästä. Saman vuosisadan puolivälin jälkeen areena muutettiin takaisin teatteriksi, ja alimmat karkeasti hakatu…
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+AIEMPI KYSYMYS: Miksi antiikin kirjoittajat pitivät niemeä pyhänä?
+AIEMPI VASTAUS (Livia):
+Mmm, ikivanha juttu. Niemi on Manner-Euroopan lounaisin kohta, ja antiikin ihmiset pitivät sitä maailman reunana. Kreikkalaiset kutsuivat sitä nimellä Ophiussa eli käärmeiden maa ja pystyttivät sinne [[Herakleen]] temppelin, ja roomalaisille se oli [[Promontorium Sacrum]] eli pyhä niemi. [[Strabon]] kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että kansa uskoi auringon vajoavan siinä sihisten mereen. Hän itse piti tätä tavallisena kansanpuheena. Pyhyyttä todistavat myös lähistön kivikautiset pystykivet. Aurinko ei kyllä sihise minulle, vaikka olen katsonut sitä usein.
+KYSYMYS: Kerro lisää: Strabon
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Pershing Square] 1866 Kortteli oli 1850-luvulla leiripaikka, jossa yöpyivät ne, jotka tulivat pueblon ulkopuolelta. Sen halki kulki Arroyo de Los Reyes -niminen uoma, ja vieressä kulkivat kaupungin vanhan maaojan sivukanavat. Vuonna 1866 pormestari Cristóbal Aguilar vihki paikan julkiseksi aukioksi nimellä La Plaza Abaja eli alempi tori — se on siis seitsemän vuotta isoisän matkaa vanhempi. Läheisen oluttarhan pitäjä, saksalainen siirtolainen George Lehman, istutti aukiolle sypressejä, hedelmäpuita ja kukkivia pensaita ja hoiti niitä kuolemaansa 1882 asti. Nimi vaihtui tämän tästä. Kun kadun toiselle puolelle tuli 1867 Pyhän Vincentin oppilaitos, aukiota alettiin kutsua Pyhän Vincentin puistoksi; 1870 se ni…
+- [Lissabon — kohdekartta / Kohdekartta: Tuomiokirkko] 1147 Lissabonin tuomiokirkko, jota paikalliset kutsuvat lyhyesti nimellä Sé, on kaupungin vanhin kirkko. Sen rakentaminen aloitettiin heti vuonna 1147, kun kaupunki oli vasta vallattu maureilta - kirkko nousi suoraan entisen suuren moskeijan paikalle. Kirkko muistuttaa hieman pientä linnoitusta: sen paksut kivimuurit, hammastetut muurinharjat ja tornit kertovat ajasta, jolloin Lissabonia piti puolustaa hyökkääjiltä. Vuosisatojen varrella kirkkoon on lisätty osia monessa eri tyylissä, joten siellä näkyy sekä romaniikkaa, goottia että myöhempiä koristeellisempia tyylejä. Kirkko selvisi hengissä vuoden 1755 suuresta maanjäristyksestä, vaikka moni muu Lissabonin rakennus tuhoutui. Lattian alta …
+AIEMPI KYSYMYS: Mistä niemi sai nimensä?
+AIEMPI VASTAUS (Livia):
+Ai niin. Niemi on nimetty 300-luvulla marttyyrina kuolleen iberialaisen diakonin [[Vincentin]] mukaan. Tarinan mukaan hänen ruumiinsa tuotiin maihin niemellä, ja haudan päälle rakennettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina [[korpit]]. Kuningas [[Afonso Henriques]] käski kaivaa ruumiin ylös vuonna 1173 ja vei sen laivalla [[Lissaboniin]] korppien saattamana. Tarinaa ei voi pitää varmana historiana, mutta korpit ovat sittemmin pysyneet osana Lissabonin symboliikkaa. Korppien kanssa minä en ole sukua, vaikka ne ovat kyllä lintuja.
+KYSYMYS: Kerro lisää: Vincentin
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+AIEMPI KYSYMYS: Mistä niemi sai nimensä?
+AIEMPI VASTAUS (Livia):
+Ai niin. Niemi on nimetty 300-luvulla marttyyrina kuolleen iberialaisen diakonin [[Vincentin]] mukaan. Tarinan mukaan hänen ruumiinsa tuotiin maihin niemellä, ja haudan päälle rakennettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina [[korpit]]. Kuningas [[Afonso Henriques]] käski kaivaa ruumiin ylös vuonna 1173 ja vei sen laivalla [[Lissaboniin]] korppien saattamana. Tarinaa ei voi pitää varmana historiana, mutta korpit ovat sittemmin pysyneet osana Lissabonin symboliikkaa. Korppien kanssa minä en ole sukua, vaikka ne ovat kyllä lintuja.
+KYSYMYS: Kerro lisää: korpit
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Historia: Kuningas, joka kirjoitti Lissaboniin] 1483–1526 — Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.
+AIEMPI KYSYMYS: Mistä niemi sai nimensä?
+AIEMPI VASTAUS (Livia):
+Ai niin. Niemi on nimetty 300-luvulla marttyyrina kuolleen iberialaisen diakonin [[Vincentin]] mukaan. Tarinan mukaan hänen ruumiinsa tuotiin maihin niemellä, ja haudan päälle rakennettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina [[korpit]]. Kuningas [[Afonso Henriques]] käski kaivaa ruumiin ylös vuonna 1173 ja vei sen laivalla [[Lissaboniin]] korppien saattamana. Tarinaa ei voi pitää varmana historiana, mutta korpit ovat sittemmin pysyneet osana Lissabonin symboliikkaa. Korppien kanssa minä en ole sukua, vaikka ne ovat kyllä lintuja.
+KYSYMYS: Kerro lisää: Afonso Henriques
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Historia: Kuningas, joka kirjoitti Lissaboniin] 1483–1526 — Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.
+AIEMPI KYSYMYS: Mistä niemi sai nimensä?
+AIEMPI VASTAUS (Livia):
+Ai niin. Niemi on nimetty 300-luvulla marttyyrina kuolleen iberialaisen diakonin [[Vincentin]] mukaan. Tarinan mukaan hänen ruumiinsa tuotiin maihin niemellä, ja haudan päälle rakennettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina [[korpit]]. Kuningas [[Afonso Henriques]] käski kaivaa ruumiin ylös vuonna 1173 ja vei sen laivalla [[Lissaboniin]] korppien saattamana. Tarinaa ei voi pitää varmana historiana, mutta korpit ovat sittemmin pysyneet osana Lissabonin symboliikkaa. Korppien kanssa minä en ole sukua, vaikka ne ovat kyllä lintuja.
+KYSYMYS: Kerro lisää: Lissaboniin
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+AIEMPI KYSYMYS: Kuka oli Strabon?
+AIEMPI VASTAUS (Livia):
+Annapas kun muistelen. Strabon oli kreikkalainen maantieteilijä ja historioitsija, joka eli noin vuodesta 64 eaa. noin vuoteen 24 jaa. Hänen tunnetuin teoksensa on Maantiede eli [[Geographica]], laaja seitsemäntoistaosainen kuvaus tunnetusta maailmasta. Strabon matkusti paljon, mutta teos perustuu osin muiden kirjoittajien tietoihin. Hän kirjoitti [[Rooman]] valtakunnan aikana, ja hänen kuvauksensa [[Iberian niemimaasta]] on arvokas lähde antiikin ajalta. Näin pitkältä ajalta minä en ole yhtään kirjettä kantanut.
+KYSYMYS: Kerro lisää: Geographica
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Kuka oli Strabon?
+AIEMPI VASTAUS (Livia):
+Annapas kun muistelen. Strabon oli kreikkalainen maantieteilijä ja historioitsija, joka eli noin vuodesta 64 eaa. noin vuoteen 24 jaa. Hänen tunnetuin teoksensa on Maantiede eli [[Geographica]], laaja seitsemäntoistaosainen kuvaus tunnetusta maailmasta. Strabon matkusti paljon, mutta teos perustuu osin muiden kirjoittajien tietoihin. Hän kirjoitti [[Rooman]] valtakunnan aikana, ja hänen kuvauksensa [[Iberian niemimaasta]] on arvokas lähde antiikin ajalta. Näin pitkältä ajalta minä en ole yhtään kirjettä kantanut.
+KYSYMYS: Kerro lisää: Rooman
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: São Benton luostari] 1598 Luostari perustettiin 14. heinäkuuta 1598. Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja oli munkki Mauro Teixeira, José de Anchietan oppilas. Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui kahdesti: ensin Montserratin Neitsyeksi ja 1720 Taivaaseen otetuksi Neitsyeksi. Luostari joutui kerran valtakunnanpolitiikan näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon espanjalaisperäisistä asukkaista halusi estää uuden kuninkaan tunnustamisen ja tarjosi Amador Buenolle "São Paulon kuninkaan" arvoa. Bueno kielt…
+- [São Luís — kaupunkilehti / Asulejot ja kirkkotaide: Portugalista tuotu kuorrutus] Kun portugalilaiset asettuivat São Luísiin, he toivat mukanaan maurien Iberian niemimaalle jättämän perinteen: lasitetut keraamiset laatat, asulejot. Kaupungista tuli Brasilian laatoitetuin – Rua Portugalin varrella on enemmän laatoitettuja kauppahuoneiden julkisivuja kuin missään muualla Latinalaisessa Amerikassa. Laatat eivät olleet pelkkää koristelua: niiden lasitettu pinta kestää päiväntasaajan auringon, sadekauden kosteuden ja meren suolaisen ilman paremmin kuin rappaus, ja ne toimivat lämmöneristeenä kivitalojen seinissä. Kadulla kävely on kuin näytekirjan selaamista – jokainen talo kilpailee naapuriaan komeammalla kuvioinnilla.
+AIEMPI KYSYMYS: Kuka oli Strabon?
+AIEMPI VASTAUS (Livia):
+Annapas kun muistelen. Strabon oli kreikkalainen maantieteilijä ja historioitsija, joka eli noin vuodesta 64 eaa. noin vuoteen 24 jaa. Hänen tunnetuin teoksensa on Maantiede eli [[Geographica]], laaja seitsemäntoistaosainen kuvaus tunnetusta maailmasta. Strabon matkusti paljon, mutta teos perustuu osin muiden kirjoittajien tietoihin. Hän kirjoitti [[Rooman]] valtakunnan aikana, ja hänen kuvauksensa [[Iberian niemimaasta]] on arvokas lähde antiikin ajalta. Näin pitkältä ajalta minä en ole yhtään kirjettä kantanut.
+KYSYMYS: Kerro lisää: Iberian niemimaasta
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kohdekartta / Kohdekartta: Ka Faroshin lintutori] osa vanhankaupungin basaareja Vanhaakaupunkia täyttävät basaarit, jotka kiemurtelevat kapeita ja mutkaisia katuja pitkin. Kaksi niistä mainitaan nimeltä useimmin: Mandawi ja Ka Faroshi eli lintutori. Jälkimmäinen on kuja moskeijakorttelin kupeessa, ja siellä myydään laululintuja ja peltopyitä. Kaupan olevat linnut säilytetään käsin punotuissa pajuhäkeissä, joita ladotaan kojujen eteen kerroksittain katolle asti. Häkit ovat itsessään kauppatavaraa: kupolinmuotoisia, pitkulaisia ja matalia malleja on rinnakkain, ja punonta vaihtelee myyjän mukaan. Basaarikortteleiden mitta on vanha. Mogulikaudella kaupungissa oli Char Chattan katettu basaari, jonka neljä holvikäytävää kulkivat yli kahdensadan…
+AIEMPI KYSYMYS: Mikä on Algarve?
+AIEMPI VASTAUS (Livia):
+Noh, Algarve on Portugalin eteläisin alue, joka sijaitsee Atlantin rannikolla. Se tunnetaan rannoistaan, kallioisesta rannikostaan ja lauhkeasta ilmastostaan, ja matkailu on sen tärkeä elinkeino. Aluekeskus on [[Faro]]. Nimi tulee arabian sanasta [[al-Gharb]], joka tarkoittaa länttä, koska alue kuului maurien hallitsemien maiden läntiseen osaan. [[São Vicenten]] niemi sijaitsee Algarven länsipäässä. Hyvä paikka kyyhkyn talvehtia, sanoisin.
+KYSYMYS: Kerro lisää: Faro
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+AIEMPI KYSYMYS: Mikä on Algarve?
+AIEMPI VASTAUS (Livia):
+Noh, Algarve on Portugalin eteläisin alue, joka sijaitsee Atlantin rannikolla. Se tunnetaan rannoistaan, kallioisesta rannikostaan ja lauhkeasta ilmastostaan, ja matkailu on sen tärkeä elinkeino. Aluekeskus on [[Faro]]. Nimi tulee arabian sanasta [[al-Gharb]], joka tarkoittaa länttä, koska alue kuului maurien hallitsemien maiden läntiseen osaan. [[São Vicenten]] niemi sijaitsee Algarven länsipäässä. Hyvä paikka kyyhkyn talvehtia, sanoisin.
+KYSYMYS: Kerro lisää: al-Gharb
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: São Miguelin kirkko] 1732 Kirkon rakennutti yksi mies. Francisco Gomes do Rego, pyhän Franciscuksen kolmannen sääntökunnan jäsen, lahjoitti tontin, ja rakentaminen alkoi 1725 rukoushuoneena. Talo valmistui kirkoksi 1732. Regon kuoltua 1745 kirkko, sen viereinen talo ja 33 muuta taloa siirtyivät kolmannelle sääntökunnalle. Regon hautakivi on kuorin lattiassa, ja siinä lukee, että Francisco, suuri syntinen ja tämän kappelin arvoton perustaja, pyytää veljiltä armoa. Kirkko seisoo Rua Frei Vicenten varrella, mukulakivikadulla, joka yhdistää vanhankaupungin ja Baixa dos Sapateiroksen, 1800-luvun talojen keskellä. Julkisivussa on kolmiopääty, valkoiset pilasterit ja kivestä veistetty barokkiportaali; kellotornissa on…
+AIEMPI KYSYMYS: Mikä on Algarve?
+AIEMPI VASTAUS (Livia):
+Noh, Algarve on Portugalin eteläisin alue, joka sijaitsee Atlantin rannikolla. Se tunnetaan rannoistaan, kallioisesta rannikostaan ja lauhkeasta ilmastostaan, ja matkailu on sen tärkeä elinkeino. Aluekeskus on [[Faro]]. Nimi tulee arabian sanasta [[al-Gharb]], joka tarkoittaa länttä, koska alue kuului maurien hallitsemien maiden läntiseen osaan. [[São Vicenten]] niemi sijaitsee Algarven länsipäässä. Hyvä paikka kyyhkyn talvehtia, sanoisin.
+KYSYMYS: Kerro lisää: São Vicenten
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Saari, joka väänsi kompassia] 1770 — Kahdeksan kilometriä rannikolta on 52 neliökilometrin vuoristoinen saari, jonka wulgurun kielinen nimi on Yunbenun. James Cook purjehti ohi 1770 ja kutsui sitä nimellä Magnetical Island, koska saaresta näytti lähtevän magneettinen veto, joka häiritsi aluksen kompassia. Aluetta on sittemmin tutkittu monenlaisilla laitteilla eikä syytä ole löytynyt. Saari on käytännössä kaupungin lähiö, jossa asuu vajaat 2 500 ihmistä; siitä 39,5 neliökilometriä on kansallispuistoa ja lintujen suojelualuetta. Saaren graniitti ei jäänyt paikalleen: sitä louhittiin sataman maantäyttöön ja Townsvillen tullitalon jalustaan.
+- [Uusi-Seelanti — maalehti / Merenkulku: Navigointi ilman kompassia] Aotearoaan purjehdittiin avomeren yli satoja vuosia ennen eurooppalaisia. Alukset olivat suuria waka hourua -kaksirunkokanootteja, ja suunta pidettiin ilman kompassia: tähtien nousukohdista, aallokon suunnasta, pilvien väristä saaren yllä ja merilintujen lentoreiteistä. Perimätieto muistaa kanoottien nimet, ja monet heimot laskevat sukunsa niistä yhä. Vanhin löydetty kanootin osa, Anaweka-waka Eteläsaaren pohjoisrannikolta, on ajoitettu noin vuoteen 1400 ja rakennettu jo täällä — muun Polynesian tyyliin, mutta uusiseelantilaisesta puusta.
+AIEMPI KYSYMYS: Miten merimiehet suunnistivat ennen GPS-paikannusta?
+AIEMPI VASTAUS (Livia):
+Aijaa. Merimiehet suunnistivat ennen satelliittipaikannusta rannikon maamerkeistä, [[kompassia]] ja syvyyslankaa apuna käyttäen. Leveysasteen he määrittivät mittaamalla auringon tai pohjantähden korkeuden horisontista välineillä kuten [[astrolabilla]] ja kvadrantilla. Nopeus arvioitiin logilla, ja suunnan, nopeuden ja ajan avulla laivan paikka voitiin merkitä merikartalle. Pituusasteen määrittäminen oli pitkään vaikeaa, kunnes 1700-luvulla [[John Harrisonin]] kehittämä merikronometri teki siitä luotettavaa. Minä suunnistan maamerkeistä ja pullantuoksusta.
+KYSYMYS: Kerro lisää: kompassia
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kohdekartta / Kohdekartta: Astro Hill] 1976 Astro Hill on neljän rakennuksen ryhmä kukkulalla Frobisherinlahden yllä, ja siinä ovat kaupungin suurimmat ja korkeimmat talot. Kokonaisuuteen kuuluvat W. G. Brownin talo, hotelli Frobisher Inn ja kaksi asuintornia: kuusikerroksinen Nanurjuk ja kahdeksankerroksinen Tukturjuk. Kahdeksan kerrosta on Iqaluitin ennätys. Talot ovat sekakäytössä. Liiketilaa on noin tuhat neliömetriä, ja vuokralaisina ovat muun muassa CBC Northin radiostudiot, Astro-elokuvateatteri, kongressitila, kuntosali, lähikauppa ja kolme ravintolaa; hotellissa on 95 huonetta. W. G. Brownin talossa hoidetaan Nunavutin hallinnon palveluita, kuten oikeusrekistereitä ja toimeentulotukea. Astro Hill Terrace rakennettiin 19…
+AIEMPI KYSYMYS: Miten merimiehet suunnistivat ennen GPS-paikannusta?
+AIEMPI VASTAUS (Livia):
+Aijaa. Merimiehet suunnistivat ennen satelliittipaikannusta rannikon maamerkeistä, [[kompassia]] ja syvyyslankaa apuna käyttäen. Leveysasteen he määrittivät mittaamalla auringon tai pohjantähden korkeuden horisontista välineillä kuten [[astrolabilla]] ja kvadrantilla. Nopeus arvioitiin logilla, ja suunnan, nopeuden ja ajan avulla laivan paikka voitiin merkitä merikartalle. Pituusasteen määrittäminen oli pitkään vaikeaa, kunnes 1700-luvulla [[John Harrisonin]] kehittämä merikronometri teki siitä luotettavaa. Minä suunnistan maamerkeistä ja pullantuoksusta.
+KYSYMYS: Kerro lisää: astrolabilla
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Vicenten niemi (merenkulku)
+Tietoruudun teksti: São Vicenten niemi Algarvessa on Portugalin ja koko Manner-Euroopan lounaisin kohta. Se oli pyhää maata jo kivikaudella, mistä kertovat lähistön pystykivet: kreikkalaiset kutsuivat sitä Ophiussaksi eli käärmeiden maaksi ja pystyttivät sinne Herakleen temppelin, roomalaisille se oli Promontorium Sacrum eli pyhä niemi. Strabon kertoo Maantieteessään, että paikkaa pidettiin taianomaisena ja että rahvas uskoi auringon vajoavan siinä sihisten mereen maailman reunalla — mitä hän itse piti tavallisena kansanpuheena. Nykyinen nimi tulee tarinasta, jonka mukaan 300-luvulla marttyyrina kuolleen iberialaisen diakonin Vincentin ruumis tuotiin maihin täällä ja haudan päälle pystytettiin pyhäkkö, jota arabimaantieteilijä al-Idrisin mukaan vartioivat aina korpit. Kuningas Afonso Henriques käski kaivaa ruumiin ylös vuonna 1173 ja vietti sen laivalla Lissaboniin korppien saattamana; siirto näkyy yhä Lis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kohdekartta / Kohdekartta: Kristuksen katedraali] 1867–1946 Marinan varrella oleva anglikaaninen katedraali on Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali perustettiin 1869 — neljä vuotta ennen isoisän matkaa. Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi piispaksi. Nykyinen rakennus on paljon nuorempi. Työ alkoi arkkitehti Bagan Benjaminin piirustusten mukaan 1. marraskuuta 1924, peruskiven laski Walesin prinssi — myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja kirkko valmistui 1946. Katedraali on ollut vuorollaan Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko Nigerian arkkipiispan ja nykyään Lagosin piispa…
+- [Dunedin — kohdekartta / Kohdekartta: Knoxin kirkko] 1872–1876 Knoxin seurakunta syntyi 1860, kun First Churchista lähtenyt kolmannes ja kaupungin itsenäinen seurakunta yhdistyivät. Ensimmäinen kirkko avattiin 6. toukokuuta 1861 Great Kingin ja Frederick Streetin kulmassa, ja se oli siirtokunnan toinen presbyteerikirkko. Tontin lahjoitti John Hyde Harris, joka ehdotti myös nimeä. Talo oli puinen, ja ensimmäinen pappi oli Englannista tammikuussa 1861 saapunut D. M. Stuart. Kultaryntäys kasvatti väkimäärää niin nopeasti, että 1871 päätettiin rakentaa uusi kirkko tuhannelle hengelle. Tontti ostettiin Georgen ja Pittin kadun kulmasta 569 punnalla, ja suunnittelukilpailuun tuli 17 ehdotusta. Voittaja oli Robert Lawson, mutta hänen suunnitelmansa y…
+AIEMPI KYSYMYS: Miten merimiehet suunnistivat ennen GPS-paikannusta?
+AIEMPI VASTAUS (Livia):
+Aijaa. Merimiehet suunnistivat ennen satelliittipaikannusta rannikon maamerkeistä, [[kompassia]] ja syvyyslankaa apuna käyttäen. Leveysasteen he määrittivät mittaamalla auringon tai pohjantähden korkeuden horisontista välineillä kuten [[astrolabilla]] ja kvadrantilla. Nopeus arvioitiin logilla, ja suunnan, nopeuden ja ajan avulla laivan paikka voitiin merkitä merikartalle. Pituusasteen määrittäminen oli pitkään vaikeaa, kunnes 1700-luvulla [[John Harrisonin]] kehittämä merikronometri teki siitä luotettavaa. Minä suunnistan maamerkeistä ja pullantuoksusta.
+KYSYMYS: Kerro lisää: John Harrisonin
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+- [Colombo — kohdekartta / Kohdekartta: Galle Face Hotel] 1864 Neljä brittiläistä yrittäjää perusti hotellin 1864 vanhan hollantilaisen Galle Face House -huvilan paikalle nurmikentän eteläpäähän, ja kenttä antoi talolle nimen. Siitä tuli yksi Suezin itäpuolen vanhimmista hotelleista. Maata laajennuksia varten ostettiin 1870–1894, ja arkkitehti Edward Skinnerin suunnittelema eteläsiipi valmistui 1894. Pohjoissiipi peruskorjattiin 2010-luvulla ja avattiin uudelleen lokakuussa 2015; huoneita on sataviisikymmentäkuusi. Talon oma museo on Regency-siivessä. Siellä on esillä muun muassa Edinburghin herttuan Philipin ensimmäinen auto ja galleria kuuluisista vieraista. Hotellin uima-allas on Colombon ainoa suolavesiallas, ja terassin mustavalkoruudulle men…
+AIEMPI KYSYMYS: Mikä trace italienne on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on ihan linnoitusalan perusteos, ylhäältä katsottuna näkyy heti. Trace italienne on tykkien aikakaudella Italiassa 1400- ja 1500-lukujen kuluessa kehitetty linnoitustapa. Kun [[tykistön]] voima kasvoi, korkeat ja ohuet keskiaikaiset muurit alkoivat murtua, ja niiden tilalle rakennettiin matalia, paksuja ja viistoja muureja, jotka kestivät ammusten iskut. Tunnusomaisia ovat teräväkärkiset [[bastionit]], joista puolustajat pystyivät ampumaan sivusuunnasta muurin edustalle niin, ettei hyökkääjille jäänyt kuolleita kulmia. Muurien eteen kaivettiin usein myös vallihautoja ja rakennettiin ulkolinnakkeita. Ylhäältä katsoen ääriviivat muistuttavat tähteä, minkä vuoksi tapaa kutsutaan myös [[tähtilinnoitukseksi]]. Elvasin seitsemän bastionia ovat tämän periaatteen hyvä esimerkki. Ylhäältä tuo tähti näyttää vielä paremmalta kuin kirjassa.
+KYSYMYS: Kerro lisää: tykistön
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kaupunkilehti / Rakennukset: Ainoa bastioni, joka jäi kaupunginmuureista] Pyövelin bastioni on puolipyöreä puolustusrakennus, jossa on kahdeksan tykkikammiota. Se pystytettiin noin vuonna 1500, ja nimensä se sai keskiaikaisen pyövelin talon läheisyydestä. Kaupungin muurit purettiin vähitellen 1800-luvun alusta vuoteen 1856, ja bastioni on muurinpätkien ohella ainoa osa linnoituksista, joka jäi pystyyn. Vuosina 1920–1930 se sovitettiin Itä-Slovakian museon käyttöön, ja pihalla on Ferenc II Rákóczin maanpakotalon jäljennös.
+AIEMPI KYSYMYS: Mikä trace italienne on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on ihan linnoitusalan perusteos, ylhäältä katsottuna näkyy heti. Trace italienne on tykkien aikakaudella Italiassa 1400- ja 1500-lukujen kuluessa kehitetty linnoitustapa. Kun [[tykistön]] voima kasvoi, korkeat ja ohuet keskiaikaiset muurit alkoivat murtua, ja niiden tilalle rakennettiin matalia, paksuja ja viistoja muureja, jotka kestivät ammusten iskut. Tunnusomaisia ovat teräväkärkiset [[bastionit]], joista puolustajat pystyivät ampumaan sivusuunnasta muurin edustalle niin, ettei hyökkääjille jäänyt kuolleita kulmia. Muurien eteen kaivettiin usein myös vallihautoja ja rakennettiin ulkolinnakkeita. Ylhäältä katsoen ääriviivat muistuttavat tähteä, minkä vuoksi tapaa kutsutaan myös [[tähtilinnoitukseksi]]. Elvasin seitsemän bastionia ovat tämän periaatteen hyvä esimerkki. Ylhäältä tuo tähti näyttää vielä paremmalta kuin kirjassa.
+KYSYMYS: Kerro lisää: bastionit
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+AIEMPI KYSYMYS: Mikä trace italienne on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on ihan linnoitusalan perusteos, ylhäältä katsottuna näkyy heti. Trace italienne on tykkien aikakaudella Italiassa 1400- ja 1500-lukujen kuluessa kehitetty linnoitustapa. Kun [[tykistön]] voima kasvoi, korkeat ja ohuet keskiaikaiset muurit alkoivat murtua, ja niiden tilalle rakennettiin matalia, paksuja ja viistoja muureja, jotka kestivät ammusten iskut. Tunnusomaisia ovat teräväkärkiset [[bastionit]], joista puolustajat pystyivät ampumaan sivusuunnasta muurin edustalle niin, ettei hyökkääjille jäänyt kuolleita kulmia. Muurien eteen kaivettiin usein myös vallihautoja ja rakennettiin ulkolinnakkeita. Ylhäältä katsoen ääriviivat muistuttavat tähteä, minkä vuoksi tapaa kutsutaan myös [[tähtilinnoitukseksi]]. Elvasin seitsemän bastionia ovat tämän periaatteen hyvä esimerkki. Ylhäältä tuo tähti näyttää vielä paremmalta kuin kirjassa.
+KYSYMYS: Kerro lisää: tähtilinnoitukseksi
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Mikä Amoreiran akvedukti on?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän tunnistaa kyyhkykin kaukaa, kun kaaret sojottavat peltojen yli. Amoreiran akvedukti on kuuden kilometrin pituinen vesijohto, joka tuo puhdasta vettä Elvasin kaupunkiin. Sen rakentaminen aloitettiin 1400-luvun alussa ja se valmistui vuonna 1622, joten työ kesti reilut kaksisataa vuotta. Osalla matkaa rakenne nousee neljän päällekkäisen kaarikerroksen verran noin neljänkymmenen metrin korkeuteen. Akvedukti toimii [[painovoiman]] avulla: vesi virtaa loivasti laskevaa kanavaa pitkin lähteeltä kaupunkiin, ja kaaret kannattelevat kanavaa maastossa, jossa maa vajoaa. Kaupunki oli [[Alentejon]] rajaseudulla, ja linnoituksen piirityksissä oma vesihuolto oli puolustuksen kannalta tärkeä. Ei pahaa kahdellesadalle vuodelle yhtä putkea.
+KYSYMYS: Kerro lisää: painovoiman
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+AIEMPI KYSYMYS: Mikä Amoreiran akvedukti on?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän tunnistaa kyyhkykin kaukaa, kun kaaret sojottavat peltojen yli. Amoreiran akvedukti on kuuden kilometrin pituinen vesijohto, joka tuo puhdasta vettä Elvasin kaupunkiin. Sen rakentaminen aloitettiin 1400-luvun alussa ja se valmistui vuonna 1622, joten työ kesti reilut kaksisataa vuotta. Osalla matkaa rakenne nousee neljän päällekkäisen kaarikerroksen verran noin neljänkymmenen metrin korkeuteen. Akvedukti toimii [[painovoiman]] avulla: vesi virtaa loivasti laskevaa kanavaa pitkin lähteeltä kaupunkiin, ja kaaret kannattelevat kanavaa maastossa, jossa maa vajoaa. Kaupunki oli [[Alentejon]] rajaseudulla, ja linnoituksen piirityksissä oma vesihuolto oli puolustuksen kannalta tärkeä. Ei pahaa kahdellesadalle vuodelle yhtä putkea.
+KYSYMYS: Kerro lisää: Alentejon
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Historian hetki: Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä] 8.7.1497 — Polvet painuvat rantahiekkaan, ja yön viimeinen tunti kuluu näin. Restelon kappelissa, jonka Henrik Purjehtija rakennutti merimiehiä varten ja joka on jo pahasti rapistunut, Vasco da Gama ja hänen miehensä ovat rukoilleet aamuun asti — moni heistä rukoilee ehkä vähemmän Intian rikkauksia kuin sitä, että näkisi vielä kotinsa. Moni ei näe: miehiä on noin 170, ja heistä palaa noin 55. Tejon suulla odottaa neljä alusta, da Gaman São Gabriel, hänen veljensä Paulon São Rafael, karavelli Bérrio ja nimetön varastolaiva, joka on määrä hylätä matkan varrella. Kukkulalla ei vielä ole luostaria: Jerónimos alkaa nousta vasta vuonna 1501, tämän matkan mausteilla ansaituilla tuloilla. Edessä on…
+AIEMPI KYSYMYS: Miksi Elvasin ja Badajozin linnoitukset rakennettiin lähekkäin?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on pitkä naapurisuhde. Elvas sijaitsee [[Alentejon]] alueella Itä-Portugalissa aivan Espanjan rajan tuntumassa, ja espanjalainen Badajoz on rajan toisella puolella. Kummallekin valtiolle oli tärkeää hallita rajan kulkureittejä, joten linnoitukset nousivat kaupunkeihin vastakkain. Lähteiden mukaan Elvasista tuli 1600-luvulla [[Tejon]] eteläpuolen tärkein rajalinnoitus, ja sen puolustuksia uudistettiin tykkitulen aikakaudella [[tähtilinnoituksiksi]]. Läheisyys ei siis ollut sattumaa vaan rajan vartiointia. Rajaseudut näyttää ylhäältä kummallisilta, kun kyyhky ei näe viivaa maassa.
+KYSYMYS: Kerro lisää: Tejon
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+AIEMPI KYSYMYS: Miksi Elvasin ja Badajozin linnoitukset rakennettiin lähekkäin?
+AIEMPI VASTAUS (Livia):
+No niin, tässä on pitkä naapurisuhde. Elvas sijaitsee [[Alentejon]] alueella Itä-Portugalissa aivan Espanjan rajan tuntumassa, ja espanjalainen Badajoz on rajan toisella puolella. Kummallekin valtiolle oli tärkeää hallita rajan kulkureittejä, joten linnoitukset nousivat kaupunkeihin vastakkain. Lähteiden mukaan Elvasista tuli 1600-luvulla [[Tejon]] eteläpuolen tärkein rajalinnoitus, ja sen puolustuksia uudistettiin tykkitulen aikakaudella [[tähtilinnoituksiksi]]. Läheisyys ei siis ollut sattumaa vaan rajan vartiointia. Rajaseudut näyttää ylhäältä kummallisilta, kun kyyhky ei näe viivaa maassa.
+KYSYMYS: Kerro lisää: tähtilinnoituksiksi
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä UNESCOn maailmanperintöluettelo on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tämä on, koska Elvas kuuluu luetteloon. UNESCOn maailmanperintöluettelo on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestön ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Sen perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]], jonka allekirjoittaneet valtiot sitoutuvat suojelemaan alueellaan olevia kohteita. Luettelossa on sekä kulttuuri- että luonnonperintökohteita, ja joukossa on myös [[yhdistelmäkohteita]]. Elvas hyväksyttiin luetteloon vuonna 2012 nimellä [[Elvasin varuskuntarajakaupunki]] ja sen linnoitukset. Kyl se on pitkä lista, jota ei yhdellä lennolla kierrä.
+KYSYMYS: Kerro lisää: maailmanperintösopimus
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+AIEMPI KYSYMYS: Mikä UNESCOn maailmanperintöluettelo on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tämä on, koska Elvas kuuluu luetteloon. UNESCOn maailmanperintöluettelo on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestön ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Sen perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]], jonka allekirjoittaneet valtiot sitoutuvat suojelemaan alueellaan olevia kohteita. Luettelossa on sekä kulttuuri- että luonnonperintökohteita, ja joukossa on myös [[yhdistelmäkohteita]]. Elvas hyväksyttiin luetteloon vuonna 2012 nimellä [[Elvasin varuskuntarajakaupunki]] ja sen linnoitukset. Kyl se on pitkä lista, jota ei yhdellä lennolla kierrä.
+KYSYMYS: Kerro lisää: yhdistelmäkohteita
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+AIEMPI KYSYMYS: Mikä UNESCOn maailmanperintöluettelo on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys tämä on, koska Elvas kuuluu luetteloon. UNESCOn maailmanperintöluettelo on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestön ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Sen perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]], jonka allekirjoittaneet valtiot sitoutuvat suojelemaan alueellaan olevia kohteita. Luettelossa on sekä kulttuuri- että luonnonperintökohteita, ja joukossa on myös [[yhdistelmäkohteita]]. Elvas hyväksyttiin luetteloon vuonna 2012 nimellä [[Elvasin varuskuntarajakaupunki]] ja sen linnoitukset. Kyl se on pitkä lista, jota ei yhdellä lennolla kierrä.
+KYSYMYS: Kerro lisää: Elvasin varuskuntarajakaupunki
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Shakkia lämpimässä altaassa] Budapestin alla on toistasataa lämmintä lähdettä, ja kaupunki on rakentanut niiden päälle kylpylöitä ottomaanien ajoista asti. Széchenyin kylpylä avattiin vuonna 1913, ja sen vesi nousee maasta 74- ja 77-asteisena; altaisiin se jäähdytetään. Ulkoaltaassa on betonisia pöytiä, joiden ääreen pelaajat asettuvat lautoineen: he seisovat vedessä vyötäröä myöten ja siirtävät nappuloita märin sormin. Vakiopelaajat tulevat paikalle myös talvella, kun altaan pinnasta nousee höyryä.
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Miten akvedukti toimii?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on oikeastaan fysiikkaa. Akvedukti on rakennelma, joka kuljettaa vettä lähteeltä tai joesta kaupunkiin hyödyntäen painovoimaa. Vesi virtaa avoimessa tai suljetussa kanavassa, jonka kallistus on hyvin loiva: kallistuksen täytyy olla riittävä, jotta vesi liikkuu, mutta ei niin suuri, että virtaus kuluttaa kanavaa. Kun maasto laskee tai nousee, kanava johdetaan kaarien varassa laaksojen yli, jolloin se säilyy tasaisella kulmalla. Vesi pysyy puhtaana, kun kanava on peitetty, ja kaupunkiin tultaessa se johdetaan [[altaisiin]] ja suihkulähteisiin jakelua varten. Perinteinen menetelmä ei tarvinnut pumppuja eikä moottoreita, koska vesi liikkui itsekseen alamäkeen. Roomalaiset rakensivat [[akvedukteja]] eri puolille Eurooppaa, ja monet niistä ovat pystyssä yhä. Se oli nyt sitten fysiikan tunti kyyhkyltä.
+KYSYMYS: Kerro lisää: altaisiin
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elvas (tekniikka)
+Tietoruudun teksti: Elvas on kaupunki Itä-Portugalissa Alentejossa, noin kahdeksan kilometrin päässä espanjalaisesta Badajozin linnoituksesta. Se on hienoimpia esimerkkejä tähtilinnoituksen eli trace italiennen perusteellisesta käytöstä sotilasarkkitehtuurissa, ja maailmanperintökohde se on ollut 30. kesäkuuta 2012 alkaen nimellä Elvasin varuskuntarajakaupunki ja sen linnoitukset. Kaupunkia puolusti seitsemän bastionia sekä Santa Lucían ja Nossa Senhora da Graçan linnakkeet, ja vuodesta 1642 se oli Tejon eteläpuolen tärkein rajalinnoitus, joka kesti espanjalaisten piiritykset 1659, 1711 ja 1801. Kuusi kilometriä pitkä Amoreiran akvedukti tuo kaupunkiin puhdasta vettä: sitä alettiin rakentaa 1400-luvun alussa ja se valmistui vuonna 1622, ja osalla matkaa siinä on neljä kaarikerrosta päällekkäin ja korkeutta neljäkymmentä metriä. Afonso I valtasi kaupungin maureilta vuonna 1166, mutta se menetettiin vielä ke…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Miten akvedukti toimii?
+AIEMPI VASTAUS (Livia):
+Ai tota, tää on oikeastaan fysiikkaa. Akvedukti on rakennelma, joka kuljettaa vettä lähteeltä tai joesta kaupunkiin hyödyntäen painovoimaa. Vesi virtaa avoimessa tai suljetussa kanavassa, jonka kallistus on hyvin loiva: kallistuksen täytyy olla riittävä, jotta vesi liikkuu, mutta ei niin suuri, että virtaus kuluttaa kanavaa. Kun maasto laskee tai nousee, kanava johdetaan kaarien varassa laaksojen yli, jolloin se säilyy tasaisella kulmalla. Vesi pysyy puhtaana, kun kanava on peitetty, ja kaupunkiin tultaessa se johdetaan [[altaisiin]] ja suihkulähteisiin jakelua varten. Perinteinen menetelmä ei tarvinnut pumppuja eikä moottoreita, koska vesi liikkui itsekseen alamäkeen. Roomalaiset rakensivat [[akvedukteja]] eri puolille Eurooppaa, ja monet niistä ovat pystyssä yhä. Se oli nyt sitten fysiikan tunti kyyhkyltä.
+KYSYMYS: Kerro lisää: akvedukteja
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Historia: Kuningas, joka kirjoitti Lissaboniin] 1483–1526 — Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.
+- [Saint Helena — maalehti / Historia: Mies, joka jäi saarelle omasta tahdostaan] 1515–1545 — Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Miksi Óbidosia sanotaan kuningattarien kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, kun lensin sen yli aikoinaan. Viisas Pöllö on taas matkoilla, joten kysymys tuli minulle. Syy on kuningatar Urracalle annettu lahjoitus. Kuningas [[Afonso II]] antoi kaupungin vuonna 1210 kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet kaupunkia. Käytännössä Óbidos tuli kuningattarien omaisuudeksi ja tuloläheksi, ja tapa vakiintui niin, että kaupungista alettiin puhua kuningattarien kaupunkina. Tätä ennen kaupunki oli vallattu maureilta Portugalin ensimmäisen kuninkaan [[Afonso Henriquesin]] aikana vuonna 1148, ja sen ensimmäisen privilegiokirjan antoi kuningas [[Sancho I]] vuonna 1195. Nykyisin Óbidos on pieni muurien ympäröimä kaupunki Oesten alueella, ja sen vanha ydinkeskusta on säilyttänyt keskiaikaisen luonteensa. Sen verran minä tästä muistin.
+KYSYMYS: Kerro lisää: Afonso II
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Historia: Kuningas, joka kirjoitti Lissaboniin] 1483–1526 — Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.
+AIEMPI KYSYMYS: Miksi Óbidosia sanotaan kuningattarien kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, kun lensin sen yli aikoinaan. Viisas Pöllö on taas matkoilla, joten kysymys tuli minulle. Syy on kuningatar Urracalle annettu lahjoitus. Kuningas [[Afonso II]] antoi kaupungin vuonna 1210 kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet kaupunkia. Käytännössä Óbidos tuli kuningattarien omaisuudeksi ja tuloläheksi, ja tapa vakiintui niin, että kaupungista alettiin puhua kuningattarien kaupunkina. Tätä ennen kaupunki oli vallattu maureilta Portugalin ensimmäisen kuninkaan [[Afonso Henriquesin]] aikana vuonna 1148, ja sen ensimmäisen privilegiokirjan antoi kuningas [[Sancho I]] vuonna 1195. Nykyisin Óbidos on pieni muurien ympäröimä kaupunki Oesten alueella, ja sen vanha ydinkeskusta on säilyttänyt keskiaikaisen luonteensa. Sen verran minä tästä muistin.
+KYSYMYS: Kerro lisää: Afonso Henriquesin
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Miksi Óbidosia sanotaan kuningattarien kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo, kun lensin sen yli aikoinaan. Viisas Pöllö on taas matkoilla, joten kysymys tuli minulle. Syy on kuningatar Urracalle annettu lahjoitus. Kuningas [[Afonso II]] antoi kaupungin vuonna 1210 kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet kaupunkia. Käytännössä Óbidos tuli kuningattarien omaisuudeksi ja tuloläheksi, ja tapa vakiintui niin, että kaupungista alettiin puhua kuningattarien kaupunkina. Tätä ennen kaupunki oli vallattu maureilta Portugalin ensimmäisen kuninkaan [[Afonso Henriquesin]] aikana vuonna 1148, ja sen ensimmäisen privilegiokirjan antoi kuningas [[Sancho I]] vuonna 1195. Nykyisin Óbidos on pieni muurien ympäröimä kaupunki Oesten alueella, ja sen vanha ydinkeskusta on säilyttänyt keskiaikaisen luonteensa. Sen verran minä tästä muistin.
+KYSYMYS: Kerro lisää: Sancho I
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Mistä nimi Óbidos tulee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimet on mun heikko kohta, mut tämä tiedetään. Óbidosin nimi on muunnos latinan sanasta oppidum, joka tarkoittaa linnoitettua kaupunkia. Seudulla oli roomalaisaikana [[Eburobrittium]]-niminen kaupunki, jonka nimen taustalla on vanhempi kelttiläinen muoto, ja asutus sai nykyisen nimensä linnoitetun kaupungin mukaan. Roomalaiskaupunki sijaitsi lähistöllä, ja se hylättiin 400-luvulla, kun turvallisempi kukkula alkoi houkutella asukkaita. Nykyinen kaupunki kasvoi sittemmin jyrkänteen juurelle, ja sen ylle nousee keskiaikainen [[linna]]. Nimen kehitys latinasta portugaliksi on tavallinen esimerkki siitä, miten kielet muuttavat sanoja vuosisatojen kuluessa. Kyl se oppidum on siinä vielä kuultavissa.
+KYSYMYS: Kerro lisää: Eburobrittium
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+- [Lhasa — kaupunkilehti / Lhasa: Talvipalatsi Punaisella kummulla] Marpo Rilla eli Punaisella kummulla oli seissyt linna jo 600-luvulta, kun Viides dalai-lama määräsi 1645 rakennettavaksi uuden palatsin. Ulkoseinät nousivat kolmessa vuodessa, mutta sisustus vei neljäkymmentäviisi vuotta lisää. Dalai-lama muutti Valkoiseen palatsiin 1649, ja Punainen palatsi nousi vasta 1690–1694, kaksitoista vuotta hänen kuolemansa jälkeen. Tuloksena on kolmetoista kerrosta, yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin kaksisataatuhatta patsasta; korkeutta on 119 metriä kukkulan päältä ja yli kolmesataa laakson pohjalta. Kaltevat kiviseinät ovat kolmisen metriä paksut, ja perustuksiin valettiin kuparia järistysten varalta.
+AIEMPI KYSYMYS: Mistä nimi Óbidos tulee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimet on mun heikko kohta, mut tämä tiedetään. Óbidosin nimi on muunnos latinan sanasta oppidum, joka tarkoittaa linnoitettua kaupunkia. Seudulla oli roomalaisaikana [[Eburobrittium]]-niminen kaupunki, jonka nimen taustalla on vanhempi kelttiläinen muoto, ja asutus sai nykyisen nimensä linnoitetun kaupungin mukaan. Roomalaiskaupunki sijaitsi lähistöllä, ja se hylättiin 400-luvulla, kun turvallisempi kukkula alkoi houkutella asukkaita. Nykyinen kaupunki kasvoi sittemmin jyrkänteen juurelle, ja sen ylle nousee keskiaikainen [[linna]]. Nimen kehitys latinasta portugaliksi on tavallinen esimerkki siitä, miten kielet muuttavat sanoja vuosisatojen kuluessa. Kyl se oppidum on siinä vielä kuultavissa.
+KYSYMYS: Kerro lisää: linna
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+AIEMPI KYSYMYS: Mitä oppidum tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, sukumme on kuullut sen roomalaisilta ajoilta. Oppidum on [[latinan]] sana, joka tarkoittaa linnoitettua asutusta tai kaupunkia. Roomalaiset käyttivät sanaa muun muassa [[kelttiläisten]] kansojen linnoitetuista kukkula-asutuksista, joita he kohtasivat Euroopassa. Sana ei viitannut yhteen tiettyyn kokoon, vaan se sopi sekä pieneen varustettuun kylään että suurempaan kaupunkiin, jonka ympärillä oli muuri tai vallit. Lähteiden mukaan se on Óbidosin nimen taustalla, ja latinan sanasto on säilynyt useissa [[romaanisissa kielissä]], vaikka sanat ovat vuosisatojen mittaan muuttuneet. No, se oli lyhyt latinan tunti.
+KYSYMYS: Kerro lisää: latinan
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Mitä oppidum tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, sukumme on kuullut sen roomalaisilta ajoilta. Oppidum on [[latinan]] sana, joka tarkoittaa linnoitettua asutusta tai kaupunkia. Roomalaiset käyttivät sanaa muun muassa [[kelttiläisten]] kansojen linnoitetuista kukkula-asutuksista, joita he kohtasivat Euroopassa. Sana ei viitannut yhteen tiettyyn kokoon, vaan se sopi sekä pieneen varustettuun kylään että suurempaan kaupunkiin, jonka ympärillä oli muuri tai vallit. Lähteiden mukaan se on Óbidosin nimen taustalla, ja latinan sanasto on säilynyt useissa [[romaanisissa kielissä]], vaikka sanat ovat vuosisatojen mittaan muuttuneet. No, se oli lyhyt latinan tunti.
+KYSYMYS: Kerro lisää: kelttiläisten
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Kaupungilla on oma kieli] Kujilla ja toreilla puhutaan shanghainkieltä, joka kuuluu wu-kieliin eikä aukea mandariinia osaavalle. Puhujia on noin 14 miljoonaa, ja kieli muotoutui sataman mukana: kun kaupunki avattiin kaupalle 1850-luvulla, muuttajat toivat Suzhousta ja Ningbosta murteensa, jotka sulautuivat paikalliseen puheeseen. Yleiskielen opetus työnsi shanghain syrjään, ja kouluissa sen käyttöä hillittiin vuodesta 1992, mutta 2010-luvulla suunta kääntyi: ensimmäinen shanghainkielinen romaani ilmestyi 2011, bussit alkoivat kuuluttaa pysäkkejä shanghaiksi 2013, ja 2017 kieltä oppi myös puhelimen ääniavustaja.
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+AIEMPI KYSYMYS: Mitä oppidum tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, sukumme on kuullut sen roomalaisilta ajoilta. Oppidum on [[latinan]] sana, joka tarkoittaa linnoitettua asutusta tai kaupunkia. Roomalaiset käyttivät sanaa muun muassa [[kelttiläisten]] kansojen linnoitetuista kukkula-asutuksista, joita he kohtasivat Euroopassa. Sana ei viitannut yhteen tiettyyn kokoon, vaan se sopi sekä pieneen varustettuun kylään että suurempaan kaupunkiin, jonka ympärillä oli muuri tai vallit. Lähteiden mukaan se on Óbidosin nimen taustalla, ja latinan sanasto on säilynyt useissa [[romaanisissa kielissä]], vaikka sanat ovat vuosisatojen mittaan muuttuneet. No, se oli lyhyt latinan tunti.
+KYSYMYS: Kerro lisää: romaanisissa kielissä
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brasilia — maalehti / Musiikki: Lissabonin salonkien suosikki Riosta] Domingos Caldas Barbosa syntyi Rio de Janeirossa noin 1739 portugalilaisen isän ja vapautetun angolalaisen naisen poikana, ja hänestä tuli 1700-luvun lopun Lissabonin hienoston suosituin laulaja-runoilija. Hän säesti itseään violalla ja improvisoi laulunsa; syntyperäänsä hänelle muistutettiin alentavalla lisänimellä violansoittaja. Hänen modinha-laulunsa julkaistiin kirjana vasta 1825, neljännesvuosisata hänen kuolemansa jälkeen. Modinha ja afrikkalaisperäinen lundu ovat Brasilian populaarimusiikin vanhimmat juuret.
+AIEMPI KYSYMYS: Kuka oli Portugalin ensimmäinen kuningas Afonso Henriques?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Afonso Henriques oli Portugalin ensimmäinen kuningas ja valtakunnan perustaja. Hän johti taisteluja maureja vastaan 1100-luvulla ja laajensi hallitsemaansa aluetta etelään, ja lähteiden mukaan hänen aikanaan valloitettiin muun muassa [[Lissabonin]] kaupunki vuonna 1147. Myös [[Óbidos]] vallattiin maureilta vuonna 1148. Portugalin itsenäisyys kuninkaallisena valtakuntana vakiintui hänen hallituskaudellaan, vaikka tarkat vuosiluvut ja tapahtumien järjestys vaihtelevat lähteistä riippuen. Kristittyjen etenemistä Iberian niemimaalla kutsutaan nimellä [[Reconquista]], ja hänet muistetaan Portugalissa kansallisena sankarina. Kuninkaista on kyl niin paljon tarinoita, etten tiedä, mitkä pitävät paikkansa.
+KYSYMYS: Kerro lisää: Lissabonin
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Kuka oli Portugalin ensimmäinen kuningas Afonso Henriques?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Afonso Henriques oli Portugalin ensimmäinen kuningas ja valtakunnan perustaja. Hän johti taisteluja maureja vastaan 1100-luvulla ja laajensi hallitsemaansa aluetta etelään, ja lähteiden mukaan hänen aikanaan valloitettiin muun muassa [[Lissabonin]] kaupunki vuonna 1147. Myös [[Óbidos]] vallattiin maureilta vuonna 1148. Portugalin itsenäisyys kuninkaallisena valtakuntana vakiintui hänen hallituskaudellaan, vaikka tarkat vuosiluvut ja tapahtumien järjestys vaihtelevat lähteistä riippuen. Kristittyjen etenemistä Iberian niemimaalla kutsutaan nimellä [[Reconquista]], ja hänet muistetaan Portugalissa kansallisena sankarina. Kuninkaista on kyl niin paljon tarinoita, etten tiedä, mitkä pitävät paikkansa.
+KYSYMYS: Kerro lisää: Óbidos
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Kuka oli Portugalin ensimmäinen kuningas Afonso Henriques?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Afonso Henriques oli Portugalin ensimmäinen kuningas ja valtakunnan perustaja. Hän johti taisteluja maureja vastaan 1100-luvulla ja laajensi hallitsemaansa aluetta etelään, ja lähteiden mukaan hänen aikanaan valloitettiin muun muassa [[Lissabonin]] kaupunki vuonna 1147. Myös [[Óbidos]] vallattiin maureilta vuonna 1148. Portugalin itsenäisyys kuninkaallisena valtakuntana vakiintui hänen hallituskaudellaan, vaikka tarkat vuosiluvut ja tapahtumien järjestys vaihtelevat lähteistä riippuen. Kristittyjen etenemistä Iberian niemimaalla kutsutaan nimellä [[Reconquista]], ja hänet muistetaan Portugalissa kansallisena sankarina. Kuninkaista on kyl niin paljon tarinoita, etten tiedä, mitkä pitävät paikkansa.
+KYSYMYS: Kerro lisää: Reconquista
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Mitä maurien valta Iberian niemimaalla tarkoitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Maurien valta Iberian niemimaalla tarkoitti sitä, että muslimihallitsijat hallitsivat suurta osaa niemimaasta 700-luvun alusta lähtien: ensimmäiset joukot ylittivät [[Gibraltarinsalmen]] vuonna 711. Alue tunnettiin nimellä [[al-Andalus]], ja sen kaupungit olivat aikansa merkittäviä kauppa- ja oppineisuuskeskuksia. Maurien valta-alue pieneni vähitellen kristittyjen valtakuntien edetessä etelään, ja Portugalin nykyisen alueen valtaaminen eteni 1100- ja 1200-lukujen kuluessa; esimerkiksi [[Óbidos]] vallattiin takaisin vuonna 1148. Tätä vuosisatoja kestänyttä kehitystä kutsutaan nimellä [[Reconquista]], ja sen jäljet näkyvät yhä arkkitehtuurissa, sanastossa ja paikannimissä. Siinä oli pitkä historiaosuus, ja kyyhkyn pää humisee.
+KYSYMYS: Kerro lisää: Gibraltarinsalmen
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Óbidos (kulttuuri)
+Tietoruudun teksti: Óbidos on pieni muurien ympäröimä kaupunki Portugalin Oesten alueella; itse kaupungissa asuu noin 3 100 ihmistä. Nimi on latinan sanan oppidum eli linnoitettu kaupunki muunnos vanhemmasta kelttiläisestä nimestä Eburobricio, ja asutus kasvoi roomalaisesta kylästä jyrkänteen juurelle. Óbidosin linnan keskiaikaisen tornin juurelta on löytynyt roomalaista rakennustyötä, joka liittyy Eburobrittiumin kaupunkiin; sen forumia, kylpylöitä ja muita rakenteita on kaivettu esiin lähistöltä, ja itse roomalaiskaupunki hylättiin 400-luvulla turvallisemman kukkulan takia. Kaupunki vallattiin maureilta Portugalin ensimmäisen kuninkaan Afonso Henriquesin aikana vuonna 1148, ja se sai ensimmäisen privilegiokirjansa 1195 kuningas Sancho I:n aikana. Vuonna 1210 kuningas Afonso II antoi kaupungin kuningatar Urracalle, ja siitä lähtien Portugalin kuningattaret ovat suojelleet sitä — siitä epävirallinen nimi V…
+AIEMPI KYSYMYS: Mitä maurien valta Iberian niemimaalla tarkoitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Maurien valta Iberian niemimaalla tarkoitti sitä, että muslimihallitsijat hallitsivat suurta osaa niemimaasta 700-luvun alusta lähtien: ensimmäiset joukot ylittivät [[Gibraltarinsalmen]] vuonna 711. Alue tunnettiin nimellä [[al-Andalus]], ja sen kaupungit olivat aikansa merkittäviä kauppa- ja oppineisuuskeskuksia. Maurien valta-alue pieneni vähitellen kristittyjen valtakuntien edetessä etelään, ja Portugalin nykyisen alueen valtaaminen eteni 1100- ja 1200-lukujen kuluessa; esimerkiksi [[Óbidos]] vallattiin takaisin vuonna 1148. Tätä vuosisatoja kestänyttä kehitystä kutsutaan nimellä [[Reconquista]], ja sen jäljet näkyvät yhä arkkitehtuurissa, sanastossa ja paikannimissä. Siinä oli pitkä historiaosuus, ja kyyhkyn pää humisee.
+KYSYMYS: Kerro lisää: al-Andalus
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aveiro (kulttuuri)
+Tietoruudun teksti: Aveiro on kaupunki ja kunta Portugalin keskiosassa, Atlantin rannalla Ria de Aveiron laguunin äärellä. Sitä kutsutaan Portugalin Venetsiaksi, koska kaupungin halki kulkee kanavaverkosto ja kanavilla liikkuu veneitä. Vuonna 2021 asukkaita oli 80 880.
+
+Kaupunki eli pitkään suolasta ja merenkulusta. Roomalaiset ottivat täältä suolaa, ja keskiajalla paikka oli kauppakeskus: se on mainittu asiakirjassa 26. tammikuuta 959, kreivitär Mumadona Diasin testamentissa, jossa seudun vanha nimi Alauario et Salinas tarkoittaa suunnilleen lintujen kokoontumispaikkaa ja suuria suoloja. Kaupungin nimi juontuu latinan muodosta Averius ja sitä kautta kelttiläisestä sanasta aber, joensuu.
+
+Talvella 1575 ankara myrsky sulki sataman suun ja kasvatti Atlantin puolelle riuttamaisen hiekkasärkän. Kauppa metalleilla ja kaakeleilla loppui, laguunin vedet seisahtuivat, ja seurasi talouskriisi, väen väheneminen ja s…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Käsityö: Vene, jonka keula on maalattu] 1800-luku — Aveiron matalassa merenlahdessa liikkuu litteäpohjaisia veneitä, joiden keula ja perä nousevat korkealle kaarelle. Niillä kerättiin merilevää, jota levitettiin pelloille lannoitteeksi. Vene on pitkä ja kapea, ja sen pohja on tarkoituksella litteä, koska lahti on paikoin vain metrin syvyinen. Keulaan ja perään maalataan kuvia: pyhimyksiä, kalastajia ja pilailevia kohtauksia, joihin kuuluu aina lyhyt teksti. Nykyään veneet kuljettavat matkailijoita, mutta maalaukset uusitaan yhä.
+AIEMPI KYSYMYS: Mihin moliceiro-veneitä alun perin käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Veneet on tuttu näky ylhäältä. Moliceiro on [[Aveiron]] laguunin perinteinen kapea ja korkeakeulainen vene, jota käytettiin alun perin laguunin vesikasvien eli [[moliçon]] keräämiseen. Kerätty kasvillisuus levitettiin pelloille lannoitteeksi, ja veneen nimi tulee siitä. Veneet olivat tärkeitä paikallisille maanviljelijöille, koska rannikon hiekkainen maa tarvitsi lannoitusta. Nykyään moliceiro-veneitä käytetään pääasiassa matkailuun: niillä tehdään retkiä [[Ria de Aveiron]] kanavilla, ja veneiden keulat ja perät on usein koristeltu maalatuilla kuvilla. Kyl ne kannattaa ylhäältäkin katsoa.
+KYSYMYS: Kerro lisää: Aveiron
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aveiro (kulttuuri)
+Tietoruudun teksti: Aveiro on kaupunki ja kunta Portugalin keskiosassa, Atlantin rannalla Ria de Aveiron laguunin äärellä. Sitä kutsutaan Portugalin Venetsiaksi, koska kaupungin halki kulkee kanavaverkosto ja kanavilla liikkuu veneitä. Vuonna 2021 asukkaita oli 80 880.
+
+Kaupunki eli pitkään suolasta ja merenkulusta. Roomalaiset ottivat täältä suolaa, ja keskiajalla paikka oli kauppakeskus: se on mainittu asiakirjassa 26. tammikuuta 959, kreivitär Mumadona Diasin testamentissa, jossa seudun vanha nimi Alauario et Salinas tarkoittaa suunnilleen lintujen kokoontumispaikkaa ja suuria suoloja. Kaupungin nimi juontuu latinan muodosta Averius ja sitä kautta kelttiläisestä sanasta aber, joensuu.
+
+Talvella 1575 ankara myrsky sulki sataman suun ja kasvatti Atlantin puolelle riuttamaisen hiekkasärkän. Kauppa metalleilla ja kaakeleilla loppui, laguunin vedet seisahtuivat, ja seurasi talouskriisi, väen väheneminen ja s…
+AIEMPI KYSYMYS: Mihin moliceiro-veneitä alun perin käytettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Veneet on tuttu näky ylhäältä. Moliceiro on [[Aveiron]] laguunin perinteinen kapea ja korkeakeulainen vene, jota käytettiin alun perin laguunin vesikasvien eli [[moliçon]] keräämiseen. Kerätty kasvillisuus levitettiin pelloille lannoitteeksi, ja veneen nimi tulee siitä. Veneet olivat tärkeitä paikallisille maanviljelijöille, koska rannikon hiekkainen maa tarvitsi lannoitusta. Nykyään moliceiro-veneitä käytetään pääasiassa matkailuun: niillä tehdään retkiä [[Ria de Aveiron]] kanavilla, ja veneiden keulat ja perät on usein koristeltu maalatuilla kuvilla. Kyl ne kannattaa ylhäältäkin katsoa.
+KYSYMYS: Kerro lisää: moliçon

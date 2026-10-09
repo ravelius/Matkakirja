@@ -1,0 +1,1042 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+AIEMPI KYSYMYS: Mikä on sarrabulho?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Joo, tän minä tiedän. Sarrabulho on Pohjois-Portugalin [[Minhon]] alueen perinteinen ruoka, ja Ponte de Limassa tunnettu muoto on [[arroz de sarrabulho]] eli sarrabulho-riisi. Se valmistetaan perinteisesti sianlihasta, sian verestä ja mausteista, ja riisi kypsennetään liemessä. Ruoka on runsas ja voimakasmakuinen, ja se kuuluu alueen perinteiseen ruokakulttuuriin, jossa hyödynnetään eläimestä mahdollisimman paljon. Tarkat reseptit vaihtelevat kylästä ja perheestä toiseen. Nälkä tuli kyl jo tätä kirjoittaessa.
+KYSYMYS: Kerro lisää: arroz de sarrabulho
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Mitä vila tarkoittaa Portugalissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kätevä pieni sana. Vila on portugalilainen kaupunkinimike, joka sijoittuu perinteisesti kylän ja suuren kaupungin väliin: aldeia on kylä, vila on pienempi kaupunki ja cidade on varsinainen kaupunki. Vila-asema liittyi keskiajalla [[kaupunkioikeuksien]] myöntämiseen, eli paikka sai oikeuksia ja etuja hallitsijalta. Ponte de Lima on Portugalin vanhin vila, joten sen kaupunkioikeudet ovat maan vanhimpia. Sanan taustalla on [[latinan]] sana villa, joka tarkoitti maatilaa. Nykyään nimike on enimmäkseen hallinnollinen. Pieni nimike, mutta kyl siitä riittää jutun juurta.
+KYSYMYS: Kerro lisää: kaupunkioikeuksien
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+AIEMPI KYSYMYS: Mitä vila tarkoittaa Portugalissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kätevä pieni sana. Vila on portugalilainen kaupunkinimike, joka sijoittuu perinteisesti kylän ja suuren kaupungin väliin: aldeia on kylä, vila on pienempi kaupunki ja cidade on varsinainen kaupunki. Vila-asema liittyi keskiajalla [[kaupunkioikeuksien]] myöntämiseen, eli paikka sai oikeuksia ja etuja hallitsijalta. Ponte de Lima on Portugalin vanhin vila, joten sen kaupunkioikeudet ovat maan vanhimpia. Sanan taustalla on [[latinan]] sana villa, joka tarkoitti maatilaa. Nykyään nimike on enimmäkseen hallinnollinen. Pieni nimike, mutta kyl siitä riittää jutun juurta.
+KYSYMYS: Kerro lisää: latinan
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kaupunkilehti / Siirtolaisuus: Enemmän italialaisia kuin Roomassa] São Paulossa on enemmän italialaisten jälkeläisiä kuin missään Italian kaupungissa, Rooma mukaan luettuna: noin puolella kaupunkilaisista on kokonaan tai osittain italialaiset juuret. Vuoteen 1920 mennessä osavaltioon oli saapunut 1 078 437 italialaista, ja samana vuonna lähes 80 prosenttia kaupungin väestöstä oli siirtolaisia tai heidän jälkeläisiään. Italiaa ja sen murteita puhuttiin 1900-luvun alussa melkein yhtä paljon kuin portugalia, ja siitä jäi jälki paulistanojen puhetapaan. Bixigan, Brásin ja Moocan juhlakalenteri on yhä italialainen, ja kaupungin kuudessatuhannessa pizzeriassa paistetaan noin miljoona pizzaa päivässä.
+AIEMPI KYSYMYS: Mitä barokki-tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku keräilen kiemurat kasaan. Barokki on taidetyyli, joka syntyi [[Roomassa]] 1500-luvun lopun ja 1600-luvun taitteessa ja levisi sieltä ympäri Eurooppaa. Sille ovat ominaisia liike, runsaat koristeet ja voimakkaat valon ja varjon vastakohdat. Arkkitehtuurissa barokki näkyy kaarevissa muodoissa ja koristeellisissa julkisivuissa, ja musiikissa sen suuria nimiä on [[Johann Sebastian Bach]]. Portugalissa barokkia edustavat monet kirkot ja kartanot, ja Ponte de Liman ympäristössä barokkikartanoita on erityisen paljon. Kyl minä tykkään rakennuksista, joissa on kunnolla kaiteita.
+KYSYMYS: Kerro lisää: Roomassa
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ponte de Lima (ruoka)
+Tietoruudun teksti: Ponte de Lima on Portugalin vanhin vila eli kaupunkioikeuksilla varustettu kunnan keskus, ja se sijaitsee Viana do Castelon piirikunnassa Lima-joen eteläisellä rannalla. Se on saanut nimensä keskiaikaisesta sillasta, joka ylittää joen. Kaupungissa itsessään asuu noin 2 800 ihmistä. Roomalaisaikana paikka nousi merkittäväksi sijaintinsa vuoksi Antoninuksen matkakirjan Via XIX:n varrella, joka yhdisti Bragan Santiago de Compostelaan ja joka osittain vastaa Camino de Santiagon pyhiinvaellusreittiä. Ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden keskittymä, ja Ponte de Lima tunnetaan koko maassa punaisesta Vinho Verde -viinistään ja sarrabulho-riisistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Musiikki: Kanttori sävelsi joka viikolle uuden teoksen] Johann Sebastian Bach oli Leipzigin Tuomaskirkon kanttori, jonka työhön kuului säveltää lähes joka sunnuntaille uusi kantaatti — ja opettaa samalla poikakuoroa ja latinaa. Sävellyksiä kertyi yli tuhat. Bach oli aikansa kuuluisin urkujen testaaja: kun uudet urut valmistuivat, hän veti kaikki äänikerrat auki ja sanoi haluavansa kuulla, onko soittimella "hyvät keuhkot". Kotona oli kaksikymmentä lasta, joista neljä pojista nousi itsekin kuuluisiksi säveltäjiksi.
+AIEMPI KYSYMYS: Mitä barokki-tyyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Annas ku keräilen kiemurat kasaan. Barokki on taidetyyli, joka syntyi [[Roomassa]] 1500-luvun lopun ja 1600-luvun taitteessa ja levisi sieltä ympäri Eurooppaa. Sille ovat ominaisia liike, runsaat koristeet ja voimakkaat valon ja varjon vastakohdat. Arkkitehtuurissa barokki näkyy kaarevissa muodoissa ja koristeellisissa julkisivuissa, ja musiikissa sen suuria nimiä on [[Johann Sebastian Bach]]. Portugalissa barokkia edustavat monet kirkot ja kartanot, ja Ponte de Liman ympäristössä barokkikartanoita on erityisen paljon. Kyl minä tykkään rakennuksista, joissa on kunnolla kaiteita.
+KYSYMYS: Kerro lisää: Johann Sebastian Bach
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / João Pessoa] João Pessoa on Brasilian koillisrannikon satamakaupunki, jonka portugalilaiset perustivat 1585 – kolmanneksi vanhimpana koko maassa. Vieressä kohoava niemi ottaa vastaan Amerikan mantereen ensimmäisen auringonsäteen joka aamu.
+AIEMPI KYSYMYS: Keitä Braganzan herttuat olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä osaan kertoo. Braganzan herttuat olivat yksi Portugalin tärkeimmistä aatelissuvuista. Vila Viçosa tuli suvun omaisuudeksi vuonna 1461, ja siitä kehittyi herttuoiden päätukikohta; neljäs herttua Jaime aloitti herttuan palatsin rakentamisen vuonna 1502. Suvun vaikutusvalta kasvoi niin suureksi, että herttua nousi Portugalin kuninkaaksi vuonna 1640, kun maa palautti itsenäisyytensä Espanjan kruunulta. Hän oli [[João IV]], ja hänen tyttärensä [[Katariina Braganzalainen]] avioitui Englannin kuninkaan [[Kaarle II:n]] kanssa. Kyl siinä suvussa riitti kruunuja jaettavaksi.
+KYSYMYS: Kerro lisää: João IV
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+AIEMPI KYSYMYS: Keitä Braganzan herttuat olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä osaan kertoo. Braganzan herttuat olivat yksi Portugalin tärkeimmistä aatelissuvuista. Vila Viçosa tuli suvun omaisuudeksi vuonna 1461, ja siitä kehittyi herttuoiden päätukikohta; neljäs herttua Jaime aloitti herttuan palatsin rakentamisen vuonna 1502. Suvun vaikutusvalta kasvoi niin suureksi, että herttua nousi Portugalin kuninkaaksi vuonna 1640, kun maa palautti itsenäisyytensä Espanjan kruunulta. Hän oli [[João IV]], ja hänen tyttärensä [[Katariina Braganzalainen]] avioitui Englannin kuninkaan [[Kaarle II:n]] kanssa. Kyl siinä suvussa riitti kruunuja jaettavaksi.
+KYSYMYS: Kerro lisää: Katariina Braganzalainen
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Keitä Braganzan herttuat olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tost minä osaan kertoo. Braganzan herttuat olivat yksi Portugalin tärkeimmistä aatelissuvuista. Vila Viçosa tuli suvun omaisuudeksi vuonna 1461, ja siitä kehittyi herttuoiden päätukikohta; neljäs herttua Jaime aloitti herttuan palatsin rakentamisen vuonna 1502. Suvun vaikutusvalta kasvoi niin suureksi, että herttua nousi Portugalin kuninkaaksi vuonna 1640, kun maa palautti itsenäisyytensä Espanjan kruunulta. Hän oli [[João IV]], ja hänen tyttärensä [[Katariina Braganzalainen]] avioitui Englannin kuninkaan [[Kaarle II:n]] kanssa. Kyl siinä suvussa riitti kruunuja jaettavaksi.
+KYSYMYS: Kerro lisää: Kaarle II:n
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+AIEMPI KYSYMYS: Mikä Vila Viçosan marmori on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää kuuluu paikalliseen ylpeyteen. Vila Viçosa tunnetaan Alentejon marmorista, jota louhitaan kaupungin ympäristössä ja läheisissä kaupungeissa, kuten [[Estremozissa]]. Marmori on [[kalkkikivestä]] kuumuuden ja paineen vaikutuksesta muuttunut kivilaji, ja alueen marmori on tavallisesti vaaleaa. Sitä on käytetty rakennuksissa, patsaissa ja koristeissa, ja herttuoiden palatsin julkisivukin on tiettävästi marmoria. Kiveä on viety myös ulkomaille, ja Portugali on tunnettu marmorin tuottaja.
+
+Valkoinen marmori on kyyhkylle vähän vaarallista pintaa, koska siinä kaikki näkyy. Minä pysyn kuitenkin kaiteilla.
+KYSYMYS: Kerro lisää: Estremozissa
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Cahow, riutat ja luolat: Kalkkikivestä syntyneet luolat] Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.
+AIEMPI KYSYMYS: Mikä Vila Viçosan marmori on?
+AIEMPI VASTAUS (Livia):
+Mmm— tää kuuluu paikalliseen ylpeyteen. Vila Viçosa tunnetaan Alentejon marmorista, jota louhitaan kaupungin ympäristössä ja läheisissä kaupungeissa, kuten [[Estremozissa]]. Marmori on [[kalkkikivestä]] kuumuuden ja paineen vaikutuksesta muuttunut kivilaji, ja alueen marmori on tavallisesti vaaleaa. Sitä on käytetty rakennuksissa, patsaissa ja koristeissa, ja herttuoiden palatsin julkisivukin on tiettävästi marmoria. Kiveä on viety myös ulkomaille, ja Portugali on tunnettu marmorin tuottaja.
+
+Valkoinen marmori on kyyhkylle vähän vaarallista pintaa, koska siinä kaikki näkyy. Minä pysyn kuitenkin kaiteilla.
+KYSYMYS: Kerro lisää: kalkkikivestä
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Maurit ja kristityt samassa padassa] Moros y cristianos tarkoittaa maureja ja kristittyjä: moros ovat mustia papuja ja cristianos valkoista riisiä. Nimi viittaa Iberian niemimaan muslimihallintoon, joka kesti 700-luvulta reconquistan päättymiseen 1400-luvulla. Pohjana on sofrito eli sipulin, valkosipulin ja paprikan kuullotus, mausteina kumina, oregano ja laakerinlehti. Ero tavalliseen papu-riisiruokaan on se, että papu ja riisi kypsennetään samassa padassa papujen keitinveteen. Saaren itäosassa sama ruoka punaisista pavuista on congrí.
+AIEMPI KYSYMYS: Mikä oli Avizin ritarikunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ritarit kuuluvat tähän maisemaan. Avizin ritarikunta oli keskiaikainen portugalilainen sotilaallinen ritarikunta, joka syntyi taistelemaan [[maureja]] vastaan [[Reconquistan]] aikana. Se sai nimensä Avizin kaupungista, ja se sai Portugalin rajaseuduilla maita ja vaikutusvaltaa. Ritarikunta osallistui Alentejon valtaamiseen kristityille, ja vuonna 1217 se valtasi myös Vila Viçosan seudun. Ritarikunnan mestari [[João I]] nousi vuonna 1385 Portugalin kuninkaaksi, ja hänen perustamansa Avizin kuningassuku hallitsi maata 1400- ja 1500-luvuilla. Linnojen vartiointi ei olisi kyyhkyn alaa.
+KYSYMYS: Kerro lisää: maureja
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Maurit ja kristityt samassa padassa] Moros y cristianos tarkoittaa maureja ja kristittyjä: moros ovat mustia papuja ja cristianos valkoista riisiä. Nimi viittaa Iberian niemimaan muslimihallintoon, joka kesti 700-luvulta reconquistan päättymiseen 1400-luvulla. Pohjana on sofrito eli sipulin, valkosipulin ja paprikan kuullotus, mausteina kumina, oregano ja laakerinlehti. Ero tavalliseen papu-riisiruokaan on se, että papu ja riisi kypsennetään samassa padassa papujen keitinveteen. Saaren itäosassa sama ruoka punaisista pavuista on congrí.
+AIEMPI KYSYMYS: Mikä oli Avizin ritarikunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ritarit kuuluvat tähän maisemaan. Avizin ritarikunta oli keskiaikainen portugalilainen sotilaallinen ritarikunta, joka syntyi taistelemaan [[maureja]] vastaan [[Reconquistan]] aikana. Se sai nimensä Avizin kaupungista, ja se sai Portugalin rajaseuduilla maita ja vaikutusvaltaa. Ritarikunta osallistui Alentejon valtaamiseen kristityille, ja vuonna 1217 se valtasi myös Vila Viçosan seudun. Ritarikunnan mestari [[João I]] nousi vuonna 1385 Portugalin kuninkaaksi, ja hänen perustamansa Avizin kuningassuku hallitsi maata 1400- ja 1500-luvuilla. Linnojen vartiointi ei olisi kyyhkyn alaa.
+KYSYMYS: Kerro lisää: Reconquistan
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / João Pessoa] João Pessoa on Brasilian koillisrannikon satamakaupunki, jonka portugalilaiset perustivat 1585 – kolmanneksi vanhimpana koko maassa. Vieressä kohoava niemi ottaa vastaan Amerikan mantereen ensimmäisen auringonsäteen joka aamu.
+AIEMPI KYSYMYS: Mikä oli Avizin ritarikunta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ritarit kuuluvat tähän maisemaan. Avizin ritarikunta oli keskiaikainen portugalilainen sotilaallinen ritarikunta, joka syntyi taistelemaan [[maureja]] vastaan [[Reconquistan]] aikana. Se sai nimensä Avizin kaupungista, ja se sai Portugalin rajaseuduilla maita ja vaikutusvaltaa. Ritarikunta osallistui Alentejon valtaamiseen kristityille, ja vuonna 1217 se valtasi myös Vila Viçosan seudun. Ritarikunnan mestari [[João I]] nousi vuonna 1385 Portugalin kuninkaaksi, ja hänen perustamansa Avizin kuningassuku hallitsi maata 1400- ja 1500-luvuilla. Linnojen vartiointi ei olisi kyyhkyn alaa.
+KYSYMYS: Kerro lisää: João I
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+AIEMPI KYSYMYS: Mikä on Alentejo?
+AIEMPI VASTAUS (Livia):
+Ai se. Tasainen maa on kyyhkylle mieluinen. Alentejo on Etelä-Portugalin laaja ja harvaan asuttu alue Tejo-joen eteläpuolella, ja sen nimi tarkoittaa suunnilleen "Tejon tuolla puolen". Maisemaa hallitsevat tasangot, viljapellot, viiniköynnökset ja oliivitarhat sekä [[korkkitammet]], joiden kuoresta valmistetaan korkkia. Portugali on yksi maailman johtavista korkin tuottajista. Alueen tunnetuimpia kaupunkeja on [[Évora]], jonka vanhakaupunki kuuluu Unescon maailmanperintöön. Korkkia minä en ole koskaan kantanut, kirjeitä vain.
+KYSYMYS: Kerro lisää: korkkitammet
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+AIEMPI KYSYMYS: Mikä on Alentejo?
+AIEMPI VASTAUS (Livia):
+Ai se. Tasainen maa on kyyhkylle mieluinen. Alentejo on Etelä-Portugalin laaja ja harvaan asuttu alue Tejo-joen eteläpuolella, ja sen nimi tarkoittaa suunnilleen "Tejon tuolla puolen". Maisemaa hallitsevat tasangot, viljapellot, viiniköynnökset ja oliivitarhat sekä [[korkkitammet]], joiden kuoresta valmistetaan korkkia. Portugali on yksi maailman johtavista korkin tuottajista. Alueen tunnetuimpia kaupunkeja on [[Évora]], jonka vanhakaupunki kuuluu Unescon maailmanperintöön. Korkkia minä en ole koskaan kantanut, kirjeitä vain.
+KYSYMYS: Kerro lisää: Évora
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+AIEMPI KYSYMYS: Mikä on reconquista?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tää on vuosisatojen juttu. Reconquista on nimitys Iberian niemimaan keskiaikaiselle prosessille, jossa kristityt valtakunnat valtasivat takaisin alueita, jotka olivat 700-luvun alusta olleet muslimien hallussa. Se ei ollut yksittäinen sota vaan usean vuosisadan mittainen sarja sotia, sopimuksia ja rajojen siirtymiä. Portugalissa vaihe päättyi 1200-luvun puolivälin tienoilla, kun [[Algarve]] liitettiin kuningaskuntaan. Espanjassa viimeinen muslimivaltio [[Granada]] kaatui vuonna 1492. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Algarve
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vila Viçosa (kulttuuri)
+Tietoruudun teksti: Vila Viçosa on kaupunki ja kunta Évoran piirikunnassa Alentejossa, ja vuonna 2011 siellä asui 8 319 ihmistä. Mauriherruus päättyi vuonna 1217, kun Avizin ritarikunta valtasi alueen kristityille, ja kuningas Afonso III antoi kylälle oikeudet vuonna 1270. 1300-luvun alussa kuningas Dinis rakennutti kylään linnan suojaamaan kastilialaisten hyökkäyksiltä. Vuonna 1461 kylästä tuli Braganzan suvun, yhden Portugalin tärkeimmistä aatelissuvuista, omaisuutta, ja siitä kehittyi herttuoiden päätukikohta. Vuonna 1502 aloitettiin Vila Viçosan herttuan palatsin rakentaminen neljännen herttuan Jaimen tilauksesta, ja palatsia uudistettiin 1500- ja 1600-luvuilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kaupunkilehti / Granada] Kaupunki lumihuippujen alla: täällä seisoo palatsi, jota voittajat eivät purkaneet, ja baarissa juoman mukana tulee yhä ruokaa ilman eri maksua.
+- [Granada — kohdekartta / Kohdekartta: Granadan katedraali] 1523–1704 Kun Granada oli vallattu takaisin kristityille vuonna 1492, kaupungin suurimman moskeijan paikalle alettiin vuosikymmeniä myöhemmin rakentaa valtava katedraali. Perustustyöt aloitti arkkitehti Enrique Egas vuonna 1518, mutta varsinainen rakentaminen pääsi vauhtiin vasta vuonna 1523 - ja kesti siitä peräti 181 vuotta, aina jouluaattoon 1704 asti, jolloin viimeiset kivet muurattiin paikoilleen. Vuonna 1529 työt otti vastuulleen Diego de Siloé, joka muutti suunnitelman renessanssityyliin ja lisäsi kirkkoon viisi holvikäytävää sekä epätavallisen pyöreän pääkappelin. Katedraalin sisällä soi kaksi 1700-luvulla rakennettua urkua, jotka näyttävät koristeiltaan lähes identtisiltä mutta kuu…
+AIEMPI KYSYMYS: Mikä on reconquista?
+AIEMPI VASTAUS (Livia):
+Nyt muistan, tää on vuosisatojen juttu. Reconquista on nimitys Iberian niemimaan keskiaikaiselle prosessille, jossa kristityt valtakunnat valtasivat takaisin alueita, jotka olivat 700-luvun alusta olleet muslimien hallussa. Se ei ollut yksittäinen sota vaan usean vuosisadan mittainen sarja sotia, sopimuksia ja rajojen siirtymiä. Portugalissa vaihe päättyi 1200-luvun puolivälin tienoilla, kun [[Algarve]] liitettiin kuningaskuntaan. Espanjassa viimeinen muslimivaltio [[Granada]] kaatui vuonna 1492. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Granada
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+AIEMPI KYSYMYS: Keitä foinikialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, merimiehiä. Niistä minä tykkään. Foinikialaiset olivat Välimeren itärannikolta, nykyisen Libanonin seudulta, lähtöisin oleva merenkulkijoiden ja kauppiaiden kansa. Heidän kaupunkivaltionsa, kuten Tyros ja Sidon, perustivat siirtokuntia pitkin Välimerta, myös Iberian niemimaalle: [[Cádiz]] on perinteisesti katsottu yhdeksi heidän vanhimmista siirtokunnistaan, ja myös Tavira oli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Heidät tunnettiin purppuranvärjäyksestä ja laivanrakennuksesta, ja heidän aakkostonsa on [[aakkosten]] kantamuoto muun muassa kreikkalaisten kautta. Nämä purjehtivat ilman kyyhkyä, mikä on kunnioitettavaa.
+KYSYMYS: Kerro lisää: Cádiz
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Siinai — kaupunkilehti / Siinai: Aakkosten syntysija] Talvella 1904–1905 arkeologipariskunta Hilda ja Flinders Petrie löysi Serabit el-Khadimin turkoosikaivosten läheltä joukon lyhyitä kirjoituksia, jotka eivät olleet hieroglyfejä eivätkä mitään tunnettua kirjoitusjärjestelmää. Merkkejä tunnetaan nykyään kolmisenkymmentä tai neljäkymmentä. Ne on lainattu hieroglyfeistä, mutta niillä merkitään äänteitä eikä sanoja — juuri se on aakkoskirjoituksen periaate. Ajoituksesta kiistellään: varhainen arvio on noin 1850 eKr. ja myöhäinen noin 1550 eKr.
+AIEMPI KYSYMYS: Keitä foinikialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, merimiehiä. Niistä minä tykkään. Foinikialaiset olivat Välimeren itärannikolta, nykyisen Libanonin seudulta, lähtöisin oleva merenkulkijoiden ja kauppiaiden kansa. Heidän kaupunkivaltionsa, kuten Tyros ja Sidon, perustivat siirtokuntia pitkin Välimerta, myös Iberian niemimaalle: [[Cádiz]] on perinteisesti katsottu yhdeksi heidän vanhimmista siirtokunnistaan, ja myös Tavira oli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Heidät tunnettiin purppuranvärjäyksestä ja laivanrakennuksesta, ja heidän aakkostonsa on [[aakkosten]] kantamuoto muun muassa kreikkalaisten kautta. Nämä purjehtivat ilman kyyhkyä, mikä on kunnioitettavaa.
+KYSYMYS: Kerro lisää: aakkosten
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Puolet maailman oliiviöljystä] Espanja tuottaa noin puolet koko maailman oliiviöljystä, ja siitä valtaosa tulee yhdestä maakunnasta: Jaénissa kasvaa yli 60 miljoonaa oliivipuuta niin tasaisin rivein, että maisema näyttää lentokoneesta ruudukolta. Sato korjataan talvella ravistamalla puita koneella, ja hedelmät puristetaan öljyksi saman vuorokauden aikana — nopeus ratkaisee maun. Oliivipuu elää satoja vuosia ja kestää kuivuutta paremmin kuin melkein mikään muu viljelykasvi, mikä on yhä tärkeämpää.
+- [Tunisia — maalehti / Historia: Provinssi, joka ruokki miljoonakaupungin] 146 eaa.–200-luku — Rooman Afrikka-provinssi perustettiin 146 eaa. kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan rannikon. Hallintopääkaupungiksi tuli Utica, joka oli sodassa asettunut Rooman puolelle. Provinssia sanottiin valtakunnan viljakomeroksi: se ruokki Rooman väestön kahdeksan kuukautta vuodesta, ja loput neljä tulivat Egyptistä. Yhden arvion mukaan Luoteis-Afrikka tuotti miljoona tonnia viljaa vuodessa, ja siitä neljännes lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy nousi viljan rinnalle, ja rikkaus näkyi kaupunkien määrässä.
+AIEMPI KYSYMYS: Mikä on Välimeren ruokavalio?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tässä pitää olla tarkkana. Välimeren ruokavalio tarkoittaa Välimeren maiden perinteistä ruokatapaa, jonka perustana ovat kasvikset, hedelmät, palkokasvit, täysjyvävilja, kala ja [[oliiviöljy]]. Punaista lihaa ja makeaa syödään vähän. Ruokavaliota on tutkittu paljon, ja sen on yhdistetty terveyteen; se on myös osa [[UNESCOn]] aineetonta kulttuuriperintöä. Ruokatapaan kuuluu myös yhdessä aterioiminen ja kausittaiset raaka-aineet. Pullaa tähän ei kuulu, mikä on suuri puute.
+KYSYMYS: Kerro lisää: oliiviöljy
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+AIEMPI KYSYMYS: Mikä on Välimeren ruokavalio?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tässä pitää olla tarkkana. Välimeren ruokavalio tarkoittaa Välimeren maiden perinteistä ruokatapaa, jonka perustana ovat kasvikset, hedelmät, palkokasvit, täysjyvävilja, kala ja [[oliiviöljy]]. Punaista lihaa ja makeaa syödään vähän. Ruokavaliota on tutkittu paljon, ja sen on yhdistetty terveyteen; se on myös osa [[UNESCOn]] aineetonta kulttuuriperintöä. Ruokatapaan kuuluu myös yhdessä aterioiminen ja kausittaiset raaka-aineet. Pullaa tähän ei kuulu, mikä on suuri puute.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kohdekartta / Kohdekartta: Ka Faroshin lintutori] osa vanhankaupungin basaareja Vanhaakaupunkia täyttävät basaarit, jotka kiemurtelevat kapeita ja mutkaisia katuja pitkin. Kaksi niistä mainitaan nimeltä useimmin: Mandawi ja Ka Faroshi eli lintutori. Jälkimmäinen on kuja moskeijakorttelin kupeessa, ja siellä myydään laululintuja ja peltopyitä. Kaupan olevat linnut säilytetään käsin punotuissa pajuhäkeissä, joita ladotaan kojujen eteen kerroksittain katolle asti. Häkit ovat itsessään kauppatavaraa: kupolinmuotoisia, pitkulaisia ja matalia malleja on rinnakkain, ja punonta vaihtelee myyjän mukaan. Basaarikortteleiden mitta on vanha. Mogulikaudella kaupungissa oli Char Chattan katettu basaari, jonka neljä holvikäytävää kulkivat yli kahdensadan…
+AIEMPI KYSYMYS: Mikä on Algarve?
+AIEMPI VASTAUS (Livia):
+No jopas. Tätä seutua minä katson mielelläni. Algarve on Portugalin eteläisin alue, joka ulottuu Atlantin rannikolla Espanjan rajalta Sagresin niemelle asti. Nimi tulee arabian sanasta al-gharb, joka tarkoittaa länttä, maurien ajalta. Alueen keskus on [[Faro]], ja rannikko on tunnettu hiekkarannoista ja kallioista. Sisämaassa viljellään perinteisesti mantelia ja viikunaa. Tavira sijaitsee Algarven itäosassa, ja läheisin lännen pää on [[Sagresin]] seutu. Aurinkoa siellä on kuulemma enemmän kuin pilviä.
+KYSYMYS: Kerro lisää: Faro
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+AIEMPI KYSYMYS: Mikä on Algarve?
+AIEMPI VASTAUS (Livia):
+No jopas. Tätä seutua minä katson mielelläni. Algarve on Portugalin eteläisin alue, joka ulottuu Atlantin rannikolla Espanjan rajalta Sagresin niemelle asti. Nimi tulee arabian sanasta al-gharb, joka tarkoittaa länttä, maurien ajalta. Alueen keskus on [[Faro]], ja rannikko on tunnettu hiekkarannoista ja kallioista. Sisämaassa viljellään perinteisesti mantelia ja viikunaa. Tavira sijaitsee Algarven itäosassa, ja läheisin lännen pää on [[Sagresin]] seutu. Aurinkoa siellä on kuulemma enemmän kuin pilviä.
+KYSYMYS: Kerro lisää: Sagresin
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+AIEMPI KYSYMYS: Keitä maurit olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää vaatii tarkkuutta. Maurit on keskiaikainen nimitys muslimeille, jotka hallitsivat suuria osia Iberian niemimaasta 700-luvulta alkaen ja joiden juuret olivat Pohjois-Afrikassa ja arabimaailmassa. Alue tunnettiin nimellä [[al-Andalus]], ja sen kuuluisia keskuksia olivat [[Córdoba]] ja [[Sevilla]]. Maurit toivat mukanaan uusia viljelykasveja, kastelutekniikoita ja rakennustaidetta; Tavirassa he rakensivat linnan, kaksi moskeijaa ja palatseja. Portugalin alueella mauriherruus päättyi vuosisatojen kuluessa, ja Algarve liitettiin kuningaskuntaan 1200-luvun puolivälin tienoilla. Pitkä oli siinä historiassa tarinaa.
+KYSYMYS: Kerro lisää: al-Andalus
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kaupunkilehti / Asunción: Linnake, josta lähdettiin perustamaan muita] Espanjalainen Juan de Salazar y Espinosa pystytti Paraguayjoen rannalle linnakkeen elokuussa 1537 ja nimesi sen Neitsyt Marian taivaaseenastumisen juhlapäivän mukaan. Kun alkuperäisväestö tuhosi tuoreen Buenos Airesin 1542, sen espanjalaiset pakenivat tänne, ja Asunciónista tuli koko laajan siirtokuntaprovinssin keskus. Täältä lähetettiin retkikuntia perustamaan uusia kaupunkeja: Villarrica, Corrientes, Santa Fe, Córdoba, Santa Cruz de la Sierra ja 65 muuta — sekä Buenos Aires toistamiseen.
+- [Espanja — maalehti / Historia: Moskeija, jonka sisään rakennettiin katedraali] 1236 — Córdoban Mezquitassa on 856 pylvästä ja niiden päällä kaksi kaarikerrosta punavalkoisin raidoin. Ratkaisu on käytännöllinen: pylväät olivat vanhoja roomalaisia ja liian lyhyitä, joten kaaret ladottiin päällekkäin korkeuden saamiseksi. Tuloksena on metsä, jonka läpi katse ei kanna. Kun Córdoba vallattiin 1236, moskeijaa ei purettu vaan sen keskelle rakennettiin katedraali — kaupunki pyysi kuningas Kaarle V:tä estämään työn, ja tämän kerrotaan katuneen lupaansa nähtyään lopputuloksen.
+AIEMPI KYSYMYS: Keitä maurit olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää vaatii tarkkuutta. Maurit on keskiaikainen nimitys muslimeille, jotka hallitsivat suuria osia Iberian niemimaasta 700-luvulta alkaen ja joiden juuret olivat Pohjois-Afrikassa ja arabimaailmassa. Alue tunnettiin nimellä [[al-Andalus]], ja sen kuuluisia keskuksia olivat [[Córdoba]] ja [[Sevilla]]. Maurit toivat mukanaan uusia viljelykasveja, kastelutekniikoita ja rakennustaidetta; Tavirassa he rakensivat linnan, kaksi moskeijaa ja palatseja. Portugalin alueella mauriherruus päättyi vuosisatojen kuluessa, ja Algarve liitettiin kuningaskuntaan 1200-luvun puolivälin tienoilla. Pitkä oli siinä historiassa tarinaa.
+KYSYMYS: Kerro lisää: Córdoba
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Viikko, jolloin Sevilla pukeutuu] Sevillan huhtikuun feria on viikon mittainen juhla, jota varten kaupungin laitaan pystytetään tuhat juhlatelttaa omine katuineen ja lyhtyineen. Siellä tanssitaan sevillanoja: neljä lyhyttä osaa, joilla on kiinteät askeleet, joten kuka tahansa espanjalainen osaa tanssia ne kenen tahansa kanssa. Sevillanat eivät ole flamencoa vaan kansantanssia — ero on sama kuin oopperan ja yhteislaulun. Naisten traje de gitana on ainoa espanjalainen kansanpuku, jonka muoti muuttuu joka vuosi.
+- [Sevilla — kaupunkilehti / Sevilla] Guadalquivirin itärannalla, kahdeksankymmentä kilometriä Atlantilta ylävirtaan. Roomalaisten Hispalis, almohadien Ishbiliya ja Amerikan-laivaston kotisatama seurasivat toisiaan saman jokimutkan äärellä.
+AIEMPI KYSYMYS: Keitä maurit olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää vaatii tarkkuutta. Maurit on keskiaikainen nimitys muslimeille, jotka hallitsivat suuria osia Iberian niemimaasta 700-luvulta alkaen ja joiden juuret olivat Pohjois-Afrikassa ja arabimaailmassa. Alue tunnettiin nimellä [[al-Andalus]], ja sen kuuluisia keskuksia olivat [[Córdoba]] ja [[Sevilla]]. Maurit toivat mukanaan uusia viljelykasveja, kastelutekniikoita ja rakennustaidetta; Tavirassa he rakensivat linnan, kaksi moskeijaa ja palatseja. Portugalin alueella mauriherruus päättyi vuosisatojen kuluessa, ja Algarve liitettiin kuningaskuntaan 1200-luvun puolivälin tienoilla. Pitkä oli siinä historiassa tarinaa.
+KYSYMYS: Kerro lisää: Sevilla
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Mitä pronssikausi tarkoitti?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää vie meidät kauas taaksepäin. Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet valmistettiin pronssista eli [[kuparin]] ja tinan seoksesta. Euroopassa se alkoi alueesta riippuen noin 3000–2000 eaa. ja päättyi [[rautakauteen]] noin 800–500 eaa. Pronssi oli kovempaa kuin pelkkä kupari, ja siksi siitä syntyi laaja kauppaverkosto, sillä tinaa oli vain harvoissa paikoissa. Myös Tavirassa on asuttu myöhäisellä pronssikaudella, ennen foinikialaisia. Kauan sitten, ja silti kaupunki seisoo yhä.
+KYSYMYS: Kerro lisää: kuparin
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tavira (kulttuuri)
+Tietoruudun teksti: Tavira on portugalilainen kaupunki ja kunta Algarven itäosassa etelärannikolla, 28 kilometriä Farosta itään ja 75 kilometriä Huelvasta länteen Guadiana-joen toisella puolella Espanjassa. Gilão-joki laskee kaupungissa Atlanttiin. Kaupungin alkuperä ulottuu myöhäiselle pronssikaudelle, ja 700-luvulla eaa. siitä tuli yksi ensimmäisistä foinikialaisten asutuksista Iberian länsiosassa. Maurien aikakausi 700–1200-luvuilla vaikutti alueen maanviljelyyn, kulttuuriin ja rakennustaiteeseen, ja maurit rakensivat Tavirassa linnan, kaksi moskeijaa ja palatseja. Nykyisessä kaupungissa on paljon 1700-luvun rakennuksia ja 37 kirkkoa, ja silta yhdistää kaupungin kaksi osaa Gilão-joen yli.
+AIEMPI KYSYMYS: Mitä pronssikausi tarkoitti?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää vie meidät kauas taaksepäin. Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet valmistettiin pronssista eli [[kuparin]] ja tinan seoksesta. Euroopassa se alkoi alueesta riippuen noin 3000–2000 eaa. ja päättyi [[rautakauteen]] noin 800–500 eaa. Pronssi oli kovempaa kuin pelkkä kupari, ja siksi siitä syntyi laaja kauppaverkosto, sillä tinaa oli vain harvoissa paikoissa. Myös Tavirassa on asuttu myöhäisellä pronssikaudella, ennen foinikialaisia. Kauan sitten, ja silti kaupunki seisoo yhä.
+KYSYMYS: Kerro lisää: rautakauteen
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Historia: Munkki, joka näki tulevan tuhon] Dominikaanimunkki Girolamo Savonarola nousi 1490-luvulla Firenzen todelliseksi vallanpitäjäksi saarnoillaan, joissa hän ennusti Jumalan rangaistusta kaupungin ylellisyydestä ja synnistä. Hänen ansiostaan Firenzeen perustettiin lyhytaikainen tasavalta Medici-suvun karkotuksen jälkeen. Tämän muotokuvan maalasi Fra Bartolomeo, joka oli itse yksi Savonarolan uskollisimmista seuraajista, samana vuonna kuin suuri Turhuuksien rovio.
+AIEMPI KYSYMYS: Kuka São Gonçalo oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä miehestä on kyl tarinoita. São Gonçalo de Amarante oli perimätiedon mukaan 1200-luvulla elänyt portugalilainen pappi ja [[dominikaanimunkki]], jota kunnioitetaan paikallisesti pyhimyksenä. Hän liittyy kiinteästi [[Amaranteen]], ja hänet tunnetaan perinteisesti avioliittojen ja naimattomien suojelijana. Hänen juhlaansa vietetään kesäkuun alussa, ja juhlan tapoihin kuuluvat perinteiset leivonnaiset. Elämäkerran yksityiskohdat perustuvat osin perimätietoon, joten kaikkia niitä ei voi pitää varmoina. Leivonnaiset kiinnostavat minua tässä eniten, tunnustan.
+KYSYMYS: Kerro lisää: dominikaanimunkki
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+AIEMPI KYSYMYS: Kuka São Gonçalo oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä miehestä on kyl tarinoita. São Gonçalo de Amarante oli perimätiedon mukaan 1200-luvulla elänyt portugalilainen pappi ja [[dominikaanimunkki]], jota kunnioitetaan paikallisesti pyhimyksenä. Hän liittyy kiinteästi [[Amaranteen]], ja hänet tunnetaan perinteisesti avioliittojen ja naimattomien suojelijana. Hänen juhlaansa vietetään kesäkuun alussa, ja juhlan tapoihin kuuluvat perinteiset leivonnaiset. Elämäkerran yksityiskohdat perustuvat osin perimätietoon, joten kaikkia niitä ei voi pitää varmoina. Leivonnaiset kiinnostavat minua tässä eniten, tunnustan.
+KYSYMYS: Kerro lisää: Amaranteen
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+AIEMPI KYSYMYS: Mikä on UNESCOn musiikkikaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Musiikki kuuluu ylös asti. UNESCOn luovien kaupunkien verkosto perustettiin vuonna 2004 tukemaan kaupunkeja, joiden kehitys nojaa luovuuteen. Verkostossa on seitsemän alaa: käsityö ja kansantaide, muotoilu, elokuva, gastronomia, kirjallisuus, mediataide ja musiikki. Musiikkikaupungeiksi on nimetty muun muassa [[Bologna]] ja [[Glasgow]], ja Amarante liittyi verkostoon musiikkikaupunkina vuonna 2017. Nimitys ei ole palkinto vaan sitoumus: kaupunki lupaa tukea musiikkielämää ja jakaa kokemuksia muiden kaupunkien kanssa. Eipä kyyhkyn kurkusta kauniisti kuulosta, mutta kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Bologna
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Empress Place] rakennettu 1864–1867 Joen pohjoisrannalla seisova pitkä kellertävä rakennus oli siirtomaahallinnon konttoritalo, jota kutsuttiin yksinkertaisesti nimellä Government Offices. Sen suunnitteli siirtokunnan insinööri J. F. A. McNair, ja se rakennettiin vankityövoimalla kesäkuun 1864 ja joulukuun 1867 välillä. Taloon sijoitettiin sihteeristö, tilintarkastus, maanmittaus, rakennusvirasto, lääkintäosasto, rahasto ja poliisin ylitarkastajan toimisto; lainsäädäntöneuvosto kokoontui yläkerran salissa. Laajennuksia tehtiin 1880, 1904–1909 ja 1920, ja jokainen noudatti McNairin uuspalladiolaista linjaa, joten talo näyttää yhtenäiseltä. Rakennuksen edessä oleva aukio nimettiin vuonna 1907 Empress Placek…
+- [Yangon — kohdekartta / Kohdekartta: Sihteeristö] valmistui 1905 Kuudentoista eekkerin tontilla seisoo punatiilinen ja keltatiilinen viktoriaaninen jättiläinen, joka oli brittiläisen Burman hallinnon päärakennus. Sen suunnitteli Henry Hoyne-Fox, valtion rakennushallinnon toimeenpaneva insinööri, ja pohja on U-kirjaimen muotoinen. Työ alkoi loppuvuodesta 1889, keskusosa valmistui 1902 ja itäinen ja läntinen siipi 1905. Hinnaksi tuli 2,5 miljoonaa rupiaa. Suistomaan pehmeä pohja teki tepposet heti. Pohjoinen siipi painui muutaman metrin maan sisään, ja itä- ja länsisiipi rakennettiin osaksi sitä tukemaan. Rakennusaineet tulivat kaukaa: teräs Glasgow’sta, kattotiilet Ranskasta, tiilet ja tiikki lähempää Aasiasta. Kupoleita oli alun perin kuus…
+AIEMPI KYSYMYS: Mikä on UNESCOn musiikkikaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Musiikki kuuluu ylös asti. UNESCOn luovien kaupunkien verkosto perustettiin vuonna 2004 tukemaan kaupunkeja, joiden kehitys nojaa luovuuteen. Verkostossa on seitsemän alaa: käsityö ja kansantaide, muotoilu, elokuva, gastronomia, kirjallisuus, mediataide ja musiikki. Musiikkikaupungeiksi on nimetty muun muassa [[Bologna]] ja [[Glasgow]], ja Amarante liittyi verkostoon musiikkikaupunkina vuonna 2017. Nimitys ei ole palkinto vaan sitoumus: kaupunki lupaa tukea musiikkielämää ja jakaa kokemuksia muiden kaupunkien kanssa. Eipä kyyhkyn kurkusta kauniisti kuulosta, mutta kuuntelen mielelläni.
+KYSYMYS: Kerro lisää: Glasgow
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+AIEMPI KYSYMYS: Mitä on fado?
+AIEMPI VASTAUS (Livia):
+Mmm— joo, tän minä osaan. Fado on portugalilainen musiikkilaji, joka syntyi 1800-luvun alussa Lissabonin kujilla, ja Unesco otti sen ihmiskunnan kulttuuriperinnön luetteloon vuonna 2011. Sen tunnusomaisia piirteitä ovat haikea, tunteikas laulutapa ja säestyksenä käytettävä [[guitarra portuguesa]], pienikokoinen portugalilainen kitara. Aiheina ovat usein kaipuu ja kohtalo, ja tunnelmaa kuvataan sanalla [[saudade]]. Yksi tunnetuimmista esittäjistä oli [[Amália Rodrigues]].
+
+Kaipuu on kyyhkylle tuttu tunne, sillä kirje pitää aina viedä perille, vaikka kotiin olisi kuinka ikävä. Fadoa kuunnellessani ymmärrän sen vähän paremmin.
+KYSYMYS: Kerro lisää: guitarra portuguesa
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+AIEMPI KYSYMYS: Mitä on fado?
+AIEMPI VASTAUS (Livia):
+Mmm— joo, tän minä osaan. Fado on portugalilainen musiikkilaji, joka syntyi 1800-luvun alussa Lissabonin kujilla, ja Unesco otti sen ihmiskunnan kulttuuriperinnön luetteloon vuonna 2011. Sen tunnusomaisia piirteitä ovat haikea, tunteikas laulutapa ja säestyksenä käytettävä [[guitarra portuguesa]], pienikokoinen portugalilainen kitara. Aiheina ovat usein kaipuu ja kohtalo, ja tunnelmaa kuvataan sanalla [[saudade]]. Yksi tunnetuimmista esittäjistä oli [[Amália Rodrigues]].
+
+Kaipuu on kyyhkylle tuttu tunne, sillä kirje pitää aina viedä perille, vaikka kotiin olisi kuinka ikävä. Fadoa kuunnellessani ymmärrän sen vähän paremmin.
+KYSYMYS: Kerro lisää: saudade
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Fado — laulu, jossa on saudade] 1999 — Fado on Lissabonin oma laulu: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Aiheena on useimmiten saudade, kaipaus jotakin kohti, mitä ei enää ole. Amália Rodrigues lauloi fadoa yli viisikymmentä vuotta, ja kun hän kuoli 1999, Portugalissa vietettiin kolme päivää kansallista surua.
+AIEMPI KYSYMYS: Mitä on fado?
+AIEMPI VASTAUS (Livia):
+Mmm— joo, tän minä osaan. Fado on portugalilainen musiikkilaji, joka syntyi 1800-luvun alussa Lissabonin kujilla, ja Unesco otti sen ihmiskunnan kulttuuriperinnön luetteloon vuonna 2011. Sen tunnusomaisia piirteitä ovat haikea, tunteikas laulutapa ja säestyksenä käytettävä [[guitarra portuguesa]], pienikokoinen portugalilainen kitara. Aiheina ovat usein kaipuu ja kohtalo, ja tunnelmaa kuvataan sanalla [[saudade]]. Yksi tunnetuimmista esittäjistä oli [[Amália Rodrigues]].
+
+Kaipuu on kyyhkylle tuttu tunne, sillä kirje pitää aina viedä perille, vaikka kotiin olisi kuinka ikävä. Fadoa kuunnellessani ymmärrän sen vähän paremmin.
+KYSYMYS: Kerro lisää: Amália Rodrigues
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kaupunkilehti / Auckland: Pääkaupunki, jonka Wellington vei] Auckland julistettiin viralliseksi pääkaupungiksi 1841, ja hallinto siirrettiin Russellista Bay of Islandsista kokonaan tänne 1842. Jo 1840 Port Nicholson — nykyinen Wellington — nähtiin kuitenkin parempana hallintopaikkana, koska se on lähempänä Eteläsaarta, ja 1865 pääkaupunki siirtyi sinne. Isoisän saapuessa 1873 menetyksestä oli kulunut kahdeksan vuotta. Kaupunki kasvoi silti satamansa varassa, ja Auckland pysyi Aucklandin provinssin pääkaupunkina, kunnes koko provinssijärjestelmä lakkautettiin 1876 — kolme vuotta isoisän käynnin jälkeen.
+AIEMPI KYSYMYS: Mikä oli niemimaasota Napoleonia vastaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Niemimaasota oli Napoleonin sotien osa, joka käytiin Iberian niemimaalla noin vuosina 1808–1814, eli yli kaksi vuosisataa sitten. Ranskan joukot hyökkäsivät Portugaliin ensimmäisen kerran jo vuonna 1807, ja Portugali ja Espanja nousivat vastarintaan; Britannia tuki Portugalia, ja britti-portugalilaisia joukkoja johti [[Wellington]]. Lissabonin ympärille rakennetut [[Torres Vedrasin linjat]] pysäyttivät ranskalaisten etenemisen noin vuonna 1810. Sota koetteli maata raskaasti, mutta vuoteen 1814 mennessä Ranskan joukot oli ajettu pois niemimaalta. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Wellington
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+AIEMPI KYSYMYS: Mikä oli niemimaasota Napoleonia vastaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Niemimaasota oli Napoleonin sotien osa, joka käytiin Iberian niemimaalla noin vuosina 1808–1814, eli yli kaksi vuosisataa sitten. Ranskan joukot hyökkäsivät Portugaliin ensimmäisen kerran jo vuonna 1807, ja Portugali ja Espanja nousivat vastarintaan; Britannia tuki Portugalia, ja britti-portugalilaisia joukkoja johti [[Wellington]]. Lissabonin ympärille rakennetut [[Torres Vedrasin linjat]] pysäyttivät ranskalaisten etenemisen noin vuonna 1810. Sota koetteli maata raskaasti, mutta vuoteen 1814 mennessä Ranskan joukot oli ajettu pois niemimaalta. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Torres Vedrasin linjat
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+AIEMPI KYSYMYS: Miksi Pohjois-Portugali on sateisempi kuin etelä?
+AIEMPI VASTAUS (Livia):
+Kato, tässä minä tiedän: sateella ei lennetä. Pohjois-Portugali on sateisempi, koska Atlantilta saapuvat kosteat länsituulet kohtaavat rannikon läheiset vuoristot ja nousevat niiden yli. Ilma jäähtyy noustessaan, ja kosteus tiivistyy sateeksi. Etelässä vaikutus on heikompi ja ilmasto muistuttaa enemmän Välimeren aluetta, jossa kesät ovat kuivia. Siksi pohjoinen on vehreää, ja siellä sijaitsee muun muassa [[Peneda-Gerêsin kansallispuisto]]. Sade ja maaperä sopivat myös viiniköynnöksille, kuten [[Minhon]] viinialueella. Sateella minä viivyn mieluummin kaiteen alla.
+KYSYMYS: Kerro lisää: Peneda-Gerêsin kansallispuisto
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amarante (kulttuuri)
+Tietoruudun teksti: Amarante on kaupunki ja kunta Tâmega e Sousan alueella Pohjois-Portugalissa. Vuonna 2021 kunnassa asui 52 116 ihmistä, mutta itse kaupungissa, joka käsittää São Gonçalon, Madalenan, Cepelosin ja Gatãon seurakunnat, oli 11 564 asukasta. Kaupunki on ollut UNESCOn luovien kaupunkien verkoston jäsen musiikkikaupunki-luokassa vuodesta 2017. Sen kerrotaan auttaneen paikallisia joukkoja torjumaan ranskalaisten hyökkäyksen 1800-luvun alussa, ja se liittyy pappiin ja pyhimykseen Gundisalvus de Amaranteen, paikallisesti São Gonçalo de Amaranteen. Linnoitettu kukkula-asutus Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.
+AIEMPI KYSYMYS: Miksi Pohjois-Portugali on sateisempi kuin etelä?
+AIEMPI VASTAUS (Livia):
+Kato, tässä minä tiedän: sateella ei lennetä. Pohjois-Portugali on sateisempi, koska Atlantilta saapuvat kosteat länsituulet kohtaavat rannikon läheiset vuoristot ja nousevat niiden yli. Ilma jäähtyy noustessaan, ja kosteus tiivistyy sateeksi. Etelässä vaikutus on heikompi ja ilmasto muistuttaa enemmän Välimeren aluetta, jossa kesät ovat kuivia. Siksi pohjoinen on vehreää, ja siellä sijaitsee muun muassa [[Peneda-Gerêsin kansallispuisto]]. Sade ja maaperä sopivat myös viiniköynnöksille, kuten [[Minhon]] viinialueella. Sateella minä viivyn mieluummin kaiteen alla.
+KYSYMYS: Kerro lisää: Minhon
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Mistä Chavesin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nimessä on vanha kaiku. Chavesin nimi juontuu todennäköisesti roomalaisten antamasta nimestä [[Aquae Flaviae]], joka tarkoittaa Flaviusten vesiä. Nimi viittaa seudun lähteisiin ja Flavius-keisarisukuun, johon kuuluivat [[Vespasianus]], Titus ja Domitianus. Kun latinan kieli muuttui vuosisatojen kuluessa portugaliksi, nimi lyheni vähitellen muotoon Chaves. Nimen kehityksen kaikkia vaiheita en tunne varmasti, joten tämä on yleiskuva. Latinasta portugaliin, siinä on pitkä lento.
+KYSYMYS: Kerro lisää: Aquae Flaviae
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Mistä Chavesin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Tuota niin, nimessä on vanha kaiku. Chavesin nimi juontuu todennäköisesti roomalaisten antamasta nimestä [[Aquae Flaviae]], joka tarkoittaa Flaviusten vesiä. Nimi viittaa seudun lähteisiin ja Flavius-keisarisukuun, johon kuuluivat [[Vespasianus]], Titus ja Domitianus. Kun latinan kieli muuttui vuosisatojen kuluessa portugaliksi, nimi lyheni vähitellen muotoon Chaves. Nimen kehityksen kaikkia vaiheita en tunne varmasti, joten tämä on yleiskuva. Latinasta portugaliin, siinä on pitkä lento.
+KYSYMYS: Kerro lisää: Vespasianus
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Miksi roomalaiset perustivat sen tähän?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paikka oli roomalaisille käytännöllinen ja strateginen. Se sijaitsi kolmen tärkeän roomalaisen tien, muun muassa [[Bracara Augustan]] tien, risteyksessä, ja teitä pitkin kulki sekä sotajoukkoja että kauppaa. Lisäksi [[Tâmega-joen]] laakso on hedelmällinen, joten alue pystyi ruokkimaan asukkaansa ja [[legioonat]]. Kolmas syy näkyy nimessä: Aquae Flaviae tarkoittaa Flaviusten vesiä, ja seudun lähteet olivat tiettävästi tärkeä vetovoima. Teiden risteys on kyyhkyllekin hyvä paikka, siitä näkee kaiken.
+KYSYMYS: Kerro lisää: Bracara Augustan
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Miksi roomalaiset perustivat sen tähän?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paikka oli roomalaisille käytännöllinen ja strateginen. Se sijaitsi kolmen tärkeän roomalaisen tien, muun muassa [[Bracara Augustan]] tien, risteyksessä, ja teitä pitkin kulki sekä sotajoukkoja että kauppaa. Lisäksi [[Tâmega-joen]] laakso on hedelmällinen, joten alue pystyi ruokkimaan asukkaansa ja [[legioonat]]. Kolmas syy näkyy nimessä: Aquae Flaviae tarkoittaa Flaviusten vesiä, ja seudun lähteet olivat tiettävästi tärkeä vetovoima. Teiden risteys on kyyhkyllekin hyvä paikka, siitä näkee kaiken.
+KYSYMYS: Kerro lisää: Tâmega-joen
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Rauniot] Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, joita seisoo yhä pystyssä keskellä maisemaa.
+AIEMPI KYSYMYS: Miksi roomalaiset perustivat sen tähän?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paikka oli roomalaisille käytännöllinen ja strateginen. Se sijaitsi kolmen tärkeän roomalaisen tien, muun muassa [[Bracara Augustan]] tien, risteyksessä, ja teitä pitkin kulki sekä sotajoukkoja että kauppaa. Lisäksi [[Tâmega-joen]] laakso on hedelmällinen, joten alue pystyi ruokkimaan asukkaansa ja [[legioonat]]. Kolmas syy näkyy nimessä: Aquae Flaviae tarkoittaa Flaviusten vesiä, ja seudun lähteet olivat tiettävästi tärkeä vetovoima. Teiden risteys on kyyhkyllekin hyvä paikka, siitä näkee kaiken.
+KYSYMYS: Kerro lisää: legioonat
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Miten roomalaiset kylpylät toimivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä saan puhua kuivin siivin. Roomalainen kylpylä, [[thermae]], oli julkinen rakennus, jossa kylvettiin sarjassa huoneita: kylmä, lämmin ja kuuma allas. Lämmitys toimi [[hypocaustum]]-järjestelmällä eli lattian alla kulkevalla kuuman ilman kanavistolla. Kylpylä oli myös kohtaamispaikka: siellä keskusteltiin, urheiltiin ja tehtiin kauppaa. Paikoissa, joissa lähteistä virtasi luonnostaan kuumaa vettä, kuten tiettävästi Chavesin seudulla, lämmitystä tarvittiin vähemmän. Kylpylään minäkin menisin, mutta höyhenet menisivät sekaisin.
+KYSYMYS: Kerro lisää: thermae
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Miten roomalaiset kylpylät toimivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tästä saan puhua kuivin siivin. Roomalainen kylpylä, [[thermae]], oli julkinen rakennus, jossa kylvettiin sarjassa huoneita: kylmä, lämmin ja kuuma allas. Lämmitys toimi [[hypocaustum]]-järjestelmällä eli lattian alla kulkevalla kuuman ilman kanavistolla. Kylpylä oli myös kohtaamispaikka: siellä keskusteltiin, urheiltiin ja tehtiin kauppaa. Paikoissa, joissa lähteistä virtasi luonnostaan kuumaa vettä, kuten tiettävästi Chavesin seudulla, lämmitystä tarvittiin vähemmän. Kylpylään minäkin menisin, mutta höyhenet menisivät sekaisin.
+KYSYMYS: Kerro lisää: hypocaustum
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Keitä flaviolaiset olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Flaviolaiset olivat Rooman keisarisuku, joka hallitsi vuosina 69–96 jaa. Sen perustaja oli [[Vespasianus]], jota seurasivat hänen poikansa [[Titus]] ja Domitianus. Heidän aikanaan rakennettiin [[Colosseum]], jonka rakentaminen aloitettiin Vespasianuksen aikana. Suvun nimi näkyy nimessä Aquae Flaviae, ja Pohjois-Portugalin kaupunki sai nimensä juuri heidän mukaansa. Kolme keisaria ja yksi kyyhky, joka muistaa heidät.
+KYSYMYS: Kerro lisää: Titus
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+AIEMPI KYSYMYS: Keitä flaviolaiset olivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Flaviolaiset olivat Rooman keisarisuku, joka hallitsi vuosina 69–96 jaa. Sen perustaja oli [[Vespasianus]], jota seurasivat hänen poikansa [[Titus]] ja Domitianus. Heidän aikanaan rakennettiin [[Colosseum]], jonka rakentaminen aloitettiin Vespasianuksen aikana. Suvun nimi näkyy nimessä Aquae Flaviae, ja Pohjois-Portugalin kaupunki sai nimensä juuri heidän mukaansa. Kolme keisaria ja yksi kyyhky, joka muistaa heidät.
+KYSYMYS: Kerro lisää: Colosseum
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Mikä on paleoliittinen aika?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää vie meidät kauas taaksepäin. Paleoliittinen aika eli vanhempi kivikausi on ihmiskunnan historian pisin vaihe. Se alkoi noin 2,5 miljoonaa vuotta sitten ensimmäisten kivityökalujen mukana ja päättyi noin 10 000 vuotta sitten viimeisen jääkauden lopulla. Ihmiset elivät metsästäen ja keräten ruokansa, liikkuivat ryhmissä paikasta toiseen ja valmistivat työkaluja kivestä, luusta ja puusta. Aikaan kuuluvat [[neandertalinihmiset]] sekä luolamaalaukset, kuten [[Lascaux'n]] luolassa Ranskassa. Pitkä aika, ja minä silti muistan kaiken.
+KYSYMYS: Kerro lisää: neandertalinihmiset
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chaves (kulttuuri)
+Tietoruudun teksti: Chaves on kaupunki ja kunta Pohjois-Portugalissa, 10 kilometriä Espanjan rajalta etelään. Koko kunnassa asui vuonna 2011 41 243 ihmistä, ja kunta on Vila Realin piirikunnan toiseksi väkirikkain. Kaupunki on kehittynyt alueelliseksi keskukseksi roomalaisen civitas Aquæ Flaviaen pohjalta. Löydökset osoittavat, että ihmisiä on asunut seudulla jo paleoliittisella ajalla, ja pysyvä asutus alkoi, kun roomalaiset legioonat valtasivat Tâmega-joen hedelmällisen laakson. Paikka sijaitsi kolmen tärkeän roomalaisen tien, Bracara Augustan, Asturican ja Lamecumin, risteyksessä.
+AIEMPI KYSYMYS: Mikä on paleoliittinen aika?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää vie meidät kauas taaksepäin. Paleoliittinen aika eli vanhempi kivikausi on ihmiskunnan historian pisin vaihe. Se alkoi noin 2,5 miljoonaa vuotta sitten ensimmäisten kivityökalujen mukana ja päättyi noin 10 000 vuotta sitten viimeisen jääkauden lopulla. Ihmiset elivät metsästäen ja keräten ruokansa, liikkuivat ryhmissä paikasta toiseen ja valmistivat työkaluja kivestä, luusta ja puusta. Aikaan kuuluvat [[neandertalinihmiset]] sekä luolamaalaukset, kuten [[Lascaux'n]] luolassa Ranskassa. Pitkä aika, ja minä silti muistan kaiken.
+KYSYMYS: Kerro lisää: Lascaux'n
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Miksi britit tulivat Portugaliin louhimaan kuparia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syy oli kuparin kysynnän kasvu ja alueen valmis malmivarallisuus: louhinta käynnistyi uudelleen vuonna 1855 [[kuparin]] kysynnän kasvaessa, ja vuonna 1859 kaivosoikeus vuokrattiin viideksikymmeneksi vuodeksi englantilaiselle yhtiölle [[Mason and Barry]]. Samana vuonna vihittiin käyttöön Guadianan [[Pomarãon]] satama, ja vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, jolloin malmi pääsi laivoihin. Alueella oli louhittu jo ennen kuin brittiyhtiö saapui, sillä roomalaiset etsivät siellä kultaa ja hopeaa noin 400 vuoden ajan. Ja tän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: kuparin
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+AIEMPI KYSYMYS: Miksi britit tulivat Portugaliin louhimaan kuparia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syy oli kuparin kysynnän kasvu ja alueen valmis malmivarallisuus: louhinta käynnistyi uudelleen vuonna 1855 [[kuparin]] kysynnän kasvaessa, ja vuonna 1859 kaivosoikeus vuokrattiin viideksikymmeneksi vuodeksi englantilaiselle yhtiölle [[Mason and Barry]]. Samana vuonna vihittiin käyttöön Guadianan [[Pomarãon]] satama, ja vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, jolloin malmi pääsi laivoihin. Alueella oli louhittu jo ennen kuin brittiyhtiö saapui, sillä roomalaiset etsivät siellä kultaa ja hopeaa noin 400 vuoden ajan. Ja tän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Mason and Barry
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+AIEMPI KYSYMYS: Miksi britit tulivat Portugaliin louhimaan kuparia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Syy oli kuparin kysynnän kasvu ja alueen valmis malmivarallisuus: louhinta käynnistyi uudelleen vuonna 1855 [[kuparin]] kysynnän kasvaessa, ja vuonna 1859 kaivosoikeus vuokrattiin viideksikymmeneksi vuodeksi englantilaiselle yhtiölle [[Mason and Barry]]. Samana vuonna vihittiin käyttöön Guadianan [[Pomarãon]] satama, ja vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, jolloin malmi pääsi laivoihin. Alueella oli louhittu jo ennen kuin brittiyhtiö saapui, sillä roomalaiset etsivät siellä kultaa ja hopeaa noin 400 vuoden ajan. Ja tän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Pomarãon
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historian hetki: Palos de la Frontera 1492 — kolme laivaa laskuveden mukana] 3.8.1492 — Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty naapureista Palosista ja Moguerista. Laiturilla seisova väki tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. …
+- [Espanja — maalehti / Historian hetki] Kahdeksankymmentä kilometriä Sevillasta länteen, Río Tinton suistossa, kolme laivaa odotti laskuvettä 3. elokuuta 1492 — ja lähtijät olivat tämän saman jokisuun omia merenkulkijoita.
+AIEMPI KYSYMYS: Mikä Iberian pyriittivyöhyke on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Iberian pyriittivyöhyke on Portugalin eteläosan ja Espanjan lounaisosan halki kulkeva geologinen vyöhyke, jonka kallioperässä on runsaasti rikkikiisu- eli pyriittipitoisia malmiesiintymiä. Niistä on louhittu muun muassa kuparia, ja vyöhykkeeseen kuuluvat São Domingosin kaivoksen lisäksi esimerkiksi Espanjan [[Río Tinto]] ja Portugalin [[Neves-Corvo]]. Vyöhykkeen tarkkaa rajausta en ole varma, joten sen laajuudesta kannattaa tarkistaa lisää. Pitkä sana, mutta kyyhky sanoo sen yhdellä hengityksellä.
+KYSYMYS: Kerro lisää: Río Tinto
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+AIEMPI KYSYMYS: Mikä Iberian pyriittivyöhyke on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Iberian pyriittivyöhyke on Portugalin eteläosan ja Espanjan lounaisosan halki kulkeva geologinen vyöhyke, jonka kallioperässä on runsaasti rikkikiisu- eli pyriittipitoisia malmiesiintymiä. Niistä on louhittu muun muassa kuparia, ja vyöhykkeeseen kuuluvat São Domingosin kaivoksen lisäksi esimerkiksi Espanjan [[Río Tinto]] ja Portugalin [[Neves-Corvo]]. Vyöhykkeen tarkkaa rajausta en ole varma, joten sen laajuudesta kannattaa tarkistaa lisää. Pitkä sana, mutta kyyhky sanoo sen yhdellä hengityksellä.
+KYSYMYS: Kerro lisää: Neves-Corvo
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Ruoka: Aito kaneli irrotetaan messinkitangolla] Cinnamomum verum eli aito kaneli on kotoisin Sri Lankasta, ja saari tuottaa yhä 80–90 prosenttia maailman aidosta kanelista; kasvin vanha tieteellinen nimi zeylanicum kertoo saman. Puu kasvaisi viisitoistametriseksi, mutta viljelmillä se pidetään kolmen metrin pensaana, josta leikataan ohuita oksia. Ulkokuori poistetaan, ja sisäkuori irrotetaan hankaamalla sitä messinkitangolla ja halkaisemalla veitsellä, jotta se saataisiin irti mahdollisimman ehjänä. Käärö kuivataan ensin varjossa ja sitten pimeässä. Ehjä pitkä käärö on arvokkaampi kuin murut, ja luokat nimetään halkaisijan mukaan: Alba on alle kuusi milliä.
+AIEMPI KYSYMYS: Mihin kuparia käytetään nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kuparia käytetään nykyään ennen kaikkea sähkön siirtoon ja sähkölaitteisiin, koska se johtaa sähköä erittäin hyvin. Sitä on sähkökaapeleissa, johtimissa, moottoreissa ja elektroniikassa, ja sitä käytetään myös putkistoissa sekä lämmönsiirtimissä, sillä se johtaa myös lämpöä hyvin. Lisäksi kuparia sekoitetaan muihin metalleihin, ja esimerkiksi [[messinki]] ja [[pronssi]] ovat kupariseoksia. Metalli on lisäksi helppo kierrättää menettämättä ominaisuuksiaan. Ei paha kyyhkyltä, vaikka ei tää ollut mun vahvinta alaa.
+KYSYMYS: Kerro lisää: messinki
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+AIEMPI KYSYMYS: Mihin kuparia käytetään nykyään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kuparia käytetään nykyään ennen kaikkea sähkön siirtoon ja sähkölaitteisiin, koska se johtaa sähköä erittäin hyvin. Sitä on sähkökaapeleissa, johtimissa, moottoreissa ja elektroniikassa, ja sitä käytetään myös putkistoissa sekä lämmönsiirtimissä, sillä se johtaa myös lämpöä hyvin. Lisäksi kuparia sekoitetaan muihin metalleihin, ja esimerkiksi [[messinki]] ja [[pronssi]] ovat kupariseoksia. Metalli on lisäksi helppo kierrättää menettämättä ominaisuuksiaan. Ei paha kyyhkyltä, vaikka ei tää ollut mun vahvinta alaa.
+KYSYMYS: Kerro lisää: pronssi
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+- [Mexico City — kaupunkilehti / Mexico City: Kaupunki, joka painuu omaa vauhtiaan] Kaupunki lepää 2 240 metrin korkeudessa entisen Texcoco-järven pohjalla, ja pohja on savea, joka on yhä läpimärkää. Kun sitä vettä pumpataan juomavedeksi, savi tiivistyy ja maanpinta laskee: 1900-luvun alusta lähtien osa kaupungista on painunut jopa yhdeksän metriä, ja vauhti on nyt lähes puoli metriä vuodessa. Laaksosta ei ole vesille luonnollista purkautumistietä, ja painuva maa vaikeuttaa sade- ja jäteveden johtamista pois; kanavia ja tunneleita on kaivettu jo 1600-luvulta lähtien. Sama pehmeä pohja hidasti aikanaan Palacio de Bellas Artesin rakentamista, kun raskas marmoripalatsi alkoi vajota.
+AIEMPI KYSYMYS: Miten avolouhos eroaa tunnelikaivoksesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Avolouhoksessa malmia louhitaan suoraan maan pinnalta kaivamalla suuri, porrasmainen kuoppa, kun taas maanalaisessa kaivoksessa malmin luo kaivetaan [[tunneleita]] ja [[kuiluja]]. Avolouhos sopii esiintymille, jotka ovat lähellä pintaa ja joissa malmia on paljon, mutta se vaatii valtavien maamassojen siirtämistä ja jättää maisemaan suuren kuopan. Maanalainen kaivos sopii syvemmälle esiintymille, ja siinä pintaa häiriintyy vähemmän, mutta työ on kalliimpaa ja vaikeampaa. Monet [[avolouhokset]] täyttyvät kaivostoiminnan loputtua vedellä, kun pumppaus lakkaa. Kuka tahansa kyyhky valitsisi kyllä katon alta lentämisen.
+KYSYMYS: Kerro lisää: tunneleita
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Urheilu: Aalto, jonka pohja on kuilu] 2011 — Nazarén kylän pohjoisella rannalla nousee talvisin maailman suurimpia surffattuja aaltoja. Syy on meren pohjassa: rannan edessä on merenalainen kanjoni, joka on satoja kilometrejä pitkä ja syvimmillään kilometrejä syvä. Kanjoni ohjaa avomeren maininkia kapenevaan uomaan, ja kun syvä vesi loppuu äkisti, aallon energia purkautuu ylöspäin. Rannalta katsottuna aalto voi nousta yli kahdenkymmenen metrin korkeuteen. Surffaaja hinataan aaltoon vesijetillä, koska omin voimin ei ehdi.
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miten avolouhos eroaa tunnelikaivoksesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Avolouhoksessa malmia louhitaan suoraan maan pinnalta kaivamalla suuri, porrasmainen kuoppa, kun taas maanalaisessa kaivoksessa malmin luo kaivetaan [[tunneleita]] ja [[kuiluja]]. Avolouhos sopii esiintymille, jotka ovat lähellä pintaa ja joissa malmia on paljon, mutta se vaatii valtavien maamassojen siirtämistä ja jättää maisemaan suuren kuopan. Maanalainen kaivos sopii syvemmälle esiintymille, ja siinä pintaa häiriintyy vähemmän, mutta työ on kalliimpaa ja vaikeampaa. Monet [[avolouhokset]] täyttyvät kaivostoiminnan loputtua vedellä, kun pumppaus lakkaa. Kuka tahansa kyyhky valitsisi kyllä katon alta lentämisen.
+KYSYMYS: Kerro lisää: kuiluja
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+AIEMPI KYSYMYS: Miten avolouhos eroaa tunnelikaivoksesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Avolouhoksessa malmia louhitaan suoraan maan pinnalta kaivamalla suuri, porrasmainen kuoppa, kun taas maanalaisessa kaivoksessa malmin luo kaivetaan [[tunneleita]] ja [[kuiluja]]. Avolouhos sopii esiintymille, jotka ovat lähellä pintaa ja joissa malmia on paljon, mutta se vaatii valtavien maamassojen siirtämistä ja jättää maisemaan suuren kuopan. Maanalainen kaivos sopii syvemmälle esiintymille, ja siinä pintaa häiriintyy vähemmän, mutta työ on kalliimpaa ja vaikeampaa. Monet [[avolouhokset]] täyttyvät kaivostoiminnan loputtua vedellä, kun pumppaus lakkaa. Kuka tahansa kyyhky valitsisi kyllä katon alta lentämisen.
+KYSYMYS: Kerro lisää: avolouhokset
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+AIEMPI KYSYMYS: Miksi kaivokset autioituvat, kun malmi loppuu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaivos autioituu yleensä silloin, kun malmin louhiminen ei enää kannata: esiintymä on ehtymässä, jäljellä oleva malmi on köyhempää tai syvemmällä, tai metallin hinta laskee niin matalalle, ettei louhinta kata kustannuksia. Kun työpaikat häviävät, väki muuttaa usein muualle, ja kaivosyhdyskunnan koulut, kaupat ja asunnot jäävät tyhjilleen. Rakennukset ja koneet voivat jäädä paikalleen, ja kaivosalue vaatii usein [[maisemointia]] sekä vesien hallintaa vielä pitkään. Joissakin paikoissa vanhat kaivokset ovat muuttuneet [[kaivosmuseoiksi]], joissa vierailijat pääsevät tutustumaan työn historiaan.
+Minä olen nähnyt monta tyhjentynyttä paikkaa ylhäältä, ja ne näyttävät aina vähän haikeilta.
+KYSYMYS: Kerro lisää: maisemointia
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: São Domingosin kaivos (tekniikka)
+Tietoruudun teksti: São Domingosin kaivos on autioitunut avolouhos Corte do Pinton kylässä Mértolan kunnassa Alentejossa. Se kuuluu Iberian pyriittivyöhykkeen malmiesiintymiin, ja se oli ensimmäinen paikka Portugalissa, jossa oli sähkövalo. Roomalaiset louhivat aluetta kultaa ja hopeaa varten noin 400 vuotta. Vuonna 1854 italialainen kaivosmies Nicolau Biava haki kaivokselle oikeudet, ja louhinta alkoi uudelleen vuonna 1855 kuparin kysynnän kasvaessa. Vuonna 1859 kaivosoikeus vuokrattiin 50 vuodeksi englantilaiselle yhtiölle Mason and Barry, ja samana vuonna vihittiin käyttöön Guadianan Pomarãon satama. Vuonna 1862 avattiin 18 kilometrin rautatie kaivokselta satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+AIEMPI KYSYMYS: Miksi kaivokset autioituvat, kun malmi loppuu?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaivos autioituu yleensä silloin, kun malmin louhiminen ei enää kannata: esiintymä on ehtymässä, jäljellä oleva malmi on köyhempää tai syvemmällä, tai metallin hinta laskee niin matalalle, ettei louhinta kata kustannuksia. Kun työpaikat häviävät, väki muuttaa usein muualle, ja kaivosyhdyskunnan koulut, kaupat ja asunnot jäävät tyhjilleen. Rakennukset ja koneet voivat jäädä paikalleen, ja kaivosalue vaatii usein [[maisemointia]] sekä vesien hallintaa vielä pitkään. Joissakin paikoissa vanhat kaivokset ovat muuttuneet [[kaivosmuseoiksi]], joissa vierailijat pääsevät tutustumaan työn historiaan.
+Minä olen nähnyt monta tyhjentynyttä paikkaa ylhäältä, ja ne näyttävät aina vähän haikeilta.
+KYSYMYS: Kerro lisää: kaivosmuseoiksi
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Campo Grande — kaupunkilehti / Pantanal - maailman suurin kosteikko] Campo Grande on nykyään Pantanalin portti: maailman suurin trooppinen kosteikko levittäytyy kaupungista länteen ja tulvii vuosittain lähes kokonaan täyteen elämää, jollaista isoisä ei olisi osannut kuvitellakaan.
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+AIEMPI KYSYMYS: Mikä Ramsar-alue on?
+AIEMPI VASTAUS (Livia):
+No niin. Ramsar-alue on kosteikko, joka on otettu mukaan kansainväliseen kosteikkojen suojelusopimukseen, joka allekirjoitettiin vuonna 1971 Ramsarin kaupungissa Iranissa. Sopimus velvoittaa jäsenmaat suojelemaan listalleen merkittyjä [[kosteikkojen]] luontoarvoja ja käyttämään niitä kestävästi. Listalle voidaan ottaa esimerkiksi soita, rantaluhtia, laguuneja ja järviä, jotka ovat tärkeitä erityisesti vesilinnuille. Castro Marimin alue on tällainen kosteikko, ja se on merkittävä [[Portugalin]] luonnonsuojelualue. Ei kovin kyyhkymäinen aihe, mut sain sen kyllä kasaan.
+KYSYMYS: Kerro lisää: kosteikkojen
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Musiikki: Severan kotikadulle ladottiin kitara] 1846 — Maria Severa Onofriana syntyi vuonna 1820 ja lauloi fadoa Mourarian kortteleissa niin, että hänestä tuli koko Lissabonin puheenaihe. Hän sairastui tuberkuloosiin ja kuoli 30. marraskuuta 1846 vain 26-vuotiaana Rua do Capelãon varrella. Köyhä laulaja haudattiin yhteishautaan ilman arkkua. Kahdeksankymmentäviisi vuotta myöhemmin hänestä tehtiin Portugalin ensimmäinen äänielokuva, ja hänen kotikatunsa kiveykseen on ladottu kitaran kuva.
+- [Portugali — maalehti / Menovinkit] Portugalin parhaat paikat ovat verkossa ja ilmaisia: zoomattava hirviömaalaus, kuninkaan kultavaunut sisältä, kuusituhatta fadolevyä ja kamera, joka näyttää maailman suurimmat aallot juuri nyt.
+- [Itä-Timor — maalehti / Ruoka: Portugali jäi ruokapöytään] Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja chorizoa — on sama pata kuin muissakin entisissä Portugalin siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, koska niistä tuotiin sotilaita Timorille.
+AIEMPI KYSYMYS: Mikä Ramsar-alue on?
+AIEMPI VASTAUS (Livia):
+No niin. Ramsar-alue on kosteikko, joka on otettu mukaan kansainväliseen kosteikkojen suojelusopimukseen, joka allekirjoitettiin vuonna 1971 Ramsarin kaupungissa Iranissa. Sopimus velvoittaa jäsenmaat suojelemaan listalleen merkittyjä [[kosteikkojen]] luontoarvoja ja käyttämään niitä kestävästi. Listalle voidaan ottaa esimerkiksi soita, rantaluhtia, laguuneja ja järviä, jotka ovat tärkeitä erityisesti vesilinnuille. Castro Marimin alue on tällainen kosteikko, ja se on merkittävä [[Portugalin]] luonnonsuojelualue. Ei kovin kyyhkymäinen aihe, mut sain sen kyllä kasaan.
+KYSYMYS: Kerro lisää: Portugalin
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kohdekartta / Kohdekartta: Kansallisinstituutti] 1909 Kansallisinstituutti on Panaman tunnetuin koulu ja ensimmäinen, joka tarjosi korkea-asteen opetusta omissa tiloissaan. Presidentti Manuel Amador Guerrero perusti sen lailla 1. kesäkuuta 1907, ja opetus alkoi 25. huhtikuuta 1909 väliaikaisissa tiloissa, kun oma talo oli vasta rakenteilla. Rakennuksen pystytti insinööri Florencio Harmodio Arosemena, josta tuli myöhemmin Panaman presidentti, ja se valmistui toukokuussa 1911. Koulu sijaitsee Santa Anan kaupunginosassa Ancónin kukkulan juurella. Panamalaiset kutsuvat koulua nimellä Nido de Águilas, Kotkanpesä. Sen käyneiden joukossa on taiteilijoita, tutkijoita ja poliitikkoja — muun muassa säveltäjä Gonzalo Brenes ja säveltäjä-lyömäsoittaj…
+- [Egypti — maalehti / Eläimet: Sadattuhannet linnut kiertävät saman mutkan] Syksyisin Euroopan haikarat ja petolinnut lentävät Afrikkaan, ja matkalla ne kaikki puristuvat samaan kapeaan kohtaan Suezinlahden pohjukassa. Syy on ilmassa: liitävä lintu ei jaksa räpytellä koko matkaa, vaan se nousee maan yltä kohoavan lämpimän ilman mukana korkealle ja liukuu sieltä eteenpäin. Avomeren yllä sellaista nousevaa ilmaa ei synny, joten linnut kiertävät lahden ympäri maata pitkin. Hyvänä päivänä yhden kukkulan yli voi lentää tuhansia lintuja, ja niitä lasketaan joka syksy.
+AIEMPI KYSYMYS: Mitä lintuja alueella näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alueella on noin 153 lintulajia, joista tunnetuimpia ovat [[haikarat]], [[avosetit]], rantasipit ja [[flamingot]]. Kosteikko tarjoaa lintuja varten ruokaa ja suojaa, ja flamingoparvet ovat alueen näyttävimpiä asukkaita. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta. Alueella elää lisäksi yli 400 kasvilajia sekä matelijoita, sammakkoeläimiä ja nisäkkäitä.
+
+Flamingot ovat kyllä komeita, mutta kyyhkynä minä sanon, että jalat ne ovat saaneet aika suhteettomat. Ei siinä mitään, mut sanonpahan vain.
+KYSYMYS: Kerro lisää: haikarat
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+AIEMPI KYSYMYS: Mitä lintuja alueella näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alueella on noin 153 lintulajia, joista tunnetuimpia ovat [[haikarat]], [[avosetit]], rantasipit ja [[flamingot]]. Kosteikko tarjoaa lintuja varten ruokaa ja suojaa, ja flamingoparvet ovat alueen näyttävimpiä asukkaita. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta. Alueella elää lisäksi yli 400 kasvilajia sekä matelijoita, sammakkoeläimiä ja nisäkkäitä.
+
+Flamingot ovat kyllä komeita, mutta kyyhkynä minä sanon, että jalat ne ovat saaneet aika suhteettomat. Ei siinä mitään, mut sanonpahan vain.
+KYSYMYS: Kerro lisää: avosetit
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Meri: Flamingot kahlaavat vuoroveden jäljissä] Farasanin saaristo on myös lintujen levähdyspaikka. Saarten välissä on laajoja matalikkoja, jotka vuorovesi paljastaa kahdesti vuorokaudessa, ja liejusta löytyy ruokaa. Isoflamingot kävelevät rivissä matalassa vedessä ja siivilöivät ravintonsa nokkansa reunalevyillä. Saaristo on suojelualue: siellä pesii merilintuja ja elää oma gasellikanta, joka on jäänyt saarille eristyksiin. Talvella lahdilla lepää myös kahlaajia, jotka ovat matkalla Euraasiasta Afrikkaan.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Flamingot seisovat kaupungin laidalla] Dubain keskustan kupeessa on Ras Al Khorin lintusuojelualue, matala suolainen lahti pilvenpiirtäjien varjossa. Sinne kerääntyy talvisin tuhansia flamingoja. Ne syövät päänsä veteen käännettynä ja siivilöivät mudasta pieniä eläimiä ja leviä, ja juuri niistä tulee höyhenten vaaleanpunainen väri: poikaset ovat harmaita. Rannalle on rakennettu kolme katselukojua, joissa on kiikarit, eikä lahdelle saa mennä muualta.
+AIEMPI KYSYMYS: Mitä lintuja alueella näkee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alueella on noin 153 lintulajia, joista tunnetuimpia ovat [[haikarat]], [[avosetit]], rantasipit ja [[flamingot]]. Kosteikko tarjoaa lintuja varten ruokaa ja suojaa, ja flamingoparvet ovat alueen näyttävimpiä asukkaita. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta. Alueella elää lisäksi yli 400 kasvilajia sekä matelijoita, sammakkoeläimiä ja nisäkkäitä.
+
+Flamingot ovat kyllä komeita, mutta kyyhkynä minä sanon, että jalat ne ovat saaneet aika suhteettomat. Ei siinä mitään, mut sanonpahan vain.
+KYSYMYS: Kerro lisää: flamingot
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+AIEMPI KYSYMYS: Miksi flamingot ovat vaaleanpunaisia?
+AIEMPI VASTAUS (Livia):
+Ai se. Flamingojen värin aiheuttavat ravinnon mukana saadut [[karotenoidit]], joita on esimerkiksi [[levissä]] ja pienissä [[äyriäisissä]]. Linnut syövät niitä suodattamalla ravintoa vedestä nokallaan, ja elimistö muuttaa väriaineet höyhenten ja ihon väriksi. Mitä enemmän karotenoideja linnun ravinto sisältää, sitä värikkäämmäksi se tulee, ja ilman sopivaa ravintoa väri himmenee. Nuoret linnut ovat aluksi harmaita ja saavat värinsä vasta kasvaessaan. Tämä oli kyllä väriopin tunti kyyhkylle.
+KYSYMYS: Kerro lisää: karotenoidit
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+AIEMPI KYSYMYS: Miksi flamingot ovat vaaleanpunaisia?
+AIEMPI VASTAUS (Livia):
+Ai se. Flamingojen värin aiheuttavat ravinnon mukana saadut [[karotenoidit]], joita on esimerkiksi [[levissä]] ja pienissä [[äyriäisissä]]. Linnut syövät niitä suodattamalla ravintoa vedestä nokallaan, ja elimistö muuttaa väriaineet höyhenten ja ihon väriksi. Mitä enemmän karotenoideja linnun ravinto sisältää, sitä värikkäämmäksi se tulee, ja ilman sopivaa ravintoa väri himmenee. Nuoret linnut ovat aluksi harmaita ja saavat värinsä vasta kasvaessaan. Tämä oli kyllä väriopin tunti kyyhkylle.
+KYSYMYS: Kerro lisää: levissä
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+AIEMPI KYSYMYS: Miksi flamingot ovat vaaleanpunaisia?
+AIEMPI VASTAUS (Livia):
+Ai se. Flamingojen värin aiheuttavat ravinnon mukana saadut [[karotenoidit]], joita on esimerkiksi [[levissä]] ja pienissä [[äyriäisissä]]. Linnut syövät niitä suodattamalla ravintoa vedestä nokallaan, ja elimistö muuttaa väriaineet höyhenten ja ihon väriksi. Mitä enemmän karotenoideja linnun ravinto sisältää, sitä värikkäämmäksi se tulee, ja ilman sopivaa ravintoa väri himmenee. Nuoret linnut ovat aluksi harmaita ja saavat värinsä vasta kasvaessaan. Tämä oli kyllä väriopin tunti kyyhkylle.
+KYSYMYS: Kerro lisää: äyriäisissä
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Luonto: Kaksituhatta kilometriä rantaa] Libyan rantaviiva on lähes kaksituhatta kilometriä pitkä, ja siihen mahtuu koralliriuttoja, meriruohoniittyjä, suolamaita ja mutatasankoja. Maasta on kirjattu 87 nisäkäslajia ja 338 lintulajia. Rannat ovat valeunikilpikonnan pesimäalueita, ja rannikon vesissä elää munkkihylje, joka on luokiteltu äärimmäisen uhanalaiseksi. Kansallispuistoja on seitsemän: El-Kouf perustettiin 1975 Vihreän vuoren rinteille ja Karabolli 1992 Tripolin itäpuolelle, ja jälkimmäinen nimettiin samana vuonna lintujen suojelualueeksi, jolla on sata lajia. Kaksi kosteikkoa liitettiin Ramsarin sopimukseen huhtikuussa 2000. Rannoilla nähdään flamingoja ja kattohaikaroita.
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kosteikot ovat tärkeitä, koska ne ovat monien kasvi- ja eläinlajien elinympäristöjä ja erityisesti vesilintujen lisääntymis- ja levähdysalueita. Ne puhdistavat vettä sitomalla ravinteita ja pidättävät sadevettä, mikä vähentää tulvien riskiä. Kosteikot myös varastoivat hiiltä, erityisesti suoalueilla, jolloin niillä on merkitystä ilmastonmuutoksen hillinnässä. Lisäksi ne tarjoavat ihmisille kalaa, ruokoa ja virkistysalueita. Kosteikkojen häviäminen on ollut maailmanlaajuinen ongelma, minkä vuoksi [[Ramsarin sopimus]] ja [[luonnonsuojelualueet]] ovat tärkeitä. Näitä kannattaa varjella, vaikka kyyhky ei itse märkiä jalkoja kaipaa.
+KYSYMYS: Kerro lisää: Ramsarin sopimus
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+AIEMPI KYSYMYS: Miksi kosteikot ovat tärkeitä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kosteikot ovat tärkeitä, koska ne ovat monien kasvi- ja eläinlajien elinympäristöjä ja erityisesti vesilintujen lisääntymis- ja levähdysalueita. Ne puhdistavat vettä sitomalla ravinteita ja pidättävät sadevettä, mikä vähentää tulvien riskiä. Kosteikot myös varastoivat hiiltä, erityisesti suoalueilla, jolloin niillä on merkitystä ilmastonmuutoksen hillinnässä. Lisäksi ne tarjoavat ihmisille kalaa, ruokoa ja virkistysalueita. Kosteikkojen häviäminen on ollut maailmanlaajuinen ongelma, minkä vuoksi [[Ramsarin sopimus]] ja [[luonnonsuojelualueet]] ovat tärkeitä. Näitä kannattaa varjella, vaikka kyyhky ei itse märkiä jalkoja kaipaa.
+KYSYMYS: Kerro lisää: luonnonsuojelualueet
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Valo: Taivasta tutkittiin ensin vuoren huipulla] Fyysikko Kristian Birkeland halusi selvittää, mistä revontulet syntyvät, ja rakensi vuonna 1899 havaintoaseman tunturin huipulle Pohjois-Norjaan. Hän talvehti siellä apulaistensa kanssa mittaamassa magneettikenttää pakkasessa ja myrskyssä. Birkeland päätteli oikein, että syynä ovat auringosta sinkoutuvat sähköiset hiukkaset, jotka törmäävät ilmakehän kaasuihin. Moni ei uskonut sitä ennen kuin satelliitit todistivat asian vasta 1960-luvulla.
+AIEMPI KYSYMYS: Miksi monet linnut muuttavat talveksi etelään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnut muuttavat pääosin siksi, että pohjoisessa talvella ravintoa on vähän ja päivät ovat lyhyitä, kun taas lämpimämmillä alueilla ruokaa on saatavilla ympäri vuoden. Lisääntymiseen pohjoinen kesä on kuitenkin edullinen, koska päivä on pitkä ja hyönteisiä on runsaasti, joten monet lajit palaavat sinne keväällä. Reitin suuntaamiseen linnut käyttävät muun muassa auringon asemaa, tähtiä ja maapallon [[magneettikenttää]]. Iberian [[kosteikot]] ovat usein tärkeitä levähdys- tai talvehtimispaikkoja Euroopan pohjoisemmille linnuille. Minä pysyn kyllä mieluummin paikallani.
+KYSYMYS: Kerro lisää: magneettikenttää
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castro Marimin suoalue (luonto · järvi)
+Tietoruudun teksti: Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuisto on Portugalin luonnonsuojelualue, joka on Ramsar-kosteikko. Alue houkuttelee vierailijoita monipuolisen eläimistönsä vuoksi: siellä on noin 153 lintulajia, muun muassa haikaroita, avosetteja, rantasipejä ja flamingoparvia, sekä yli 400 kasvilajia ja erilaisia matelijoita, sammakkoeläimiä ja nisäkkäitä. Kevättalvella 2021 alueella kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Kosteikot keskellä kuivuutta] Kaupungissa on vähän kasvillisuutta, mutta sen alueella on sarja kaupunkikosteikkoja, ja ne ovat aavikkokaupungin harvoja vihreitä kohtia. Niissä elää tai käy kotoperäisiä matelijoita ja niveljalkaisia, sirrejä ja nisäkkäistä kulpeokettu. Uhat ovat kaupungin omia: roskat, kulkukoirat, veden otto, vajojen rakentaminen ja vesiuomien kääntäminen. Kunta valmisteli tammikuussa 2024 niiden julistamista virallisiksi kaupunkikosteikoiksi. Kaupungin pohjoispuolelta, taajaman ulkopuolelta lentokentän kohdalta, kulkee Kauriin kääntöpiiri; siihen pystytettiin 21. joulukuuta 2000 arkkitehti Eleonora Romanin suunnittelema muistomerkki, joka merkitsee piirin paikan ja toimii aurinkokalenterina.
+AIEMPI KYSYMYS: Miksi monet linnut muuttavat talveksi etelään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnut muuttavat pääosin siksi, että pohjoisessa talvella ravintoa on vähän ja päivät ovat lyhyitä, kun taas lämpimämmillä alueilla ruokaa on saatavilla ympäri vuoden. Lisääntymiseen pohjoinen kesä on kuitenkin edullinen, koska päivä on pitkä ja hyönteisiä on runsaasti, joten monet lajit palaavat sinne keväällä. Reitin suuntaamiseen linnut käyttävät muun muassa auringon asemaa, tähtiä ja maapallon [[magneettikenttää]]. Iberian [[kosteikot]] ovat usein tärkeitä levähdys- tai talvehtimispaikkoja Euroopan pohjoisemmille linnuille. Minä pysyn kyllä mieluummin paikallani.
+KYSYMYS: Kerro lisää: kosteikot
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Kuka Bandarra oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. António Gonçalves de Bandarra oli 1500-luvulla elänyt portugalilainen suutari ja runoilija, joka asui [[Trancosossa]] ja kirjoitti profeetallisia säkeitä. Hänen tekstejään luettiin myöhemmin ennustuksina Portugalin kohtalosta, ja niiden tiedetään vaikuttaneen [[sebastianismiin]], uskoon kadonneen kuninkaan paluusta. Hänen profeetallinen kirjoittamisensa herätti myös uskonnollisten viranomaisten huomion, ja hänet kutsuttiin [[inkvisition]] eteen. Hänen patsaansa on pystytetty Trancoson kaupungintalon eteen. Onpas siit jo aikaa.
+KYSYMYS: Kerro lisää: Trancosossa
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Kuka Bandarra oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. António Gonçalves de Bandarra oli 1500-luvulla elänyt portugalilainen suutari ja runoilija, joka asui [[Trancosossa]] ja kirjoitti profeetallisia säkeitä. Hänen tekstejään luettiin myöhemmin ennustuksina Portugalin kohtalosta, ja niiden tiedetään vaikuttaneen [[sebastianismiin]], uskoon kadonneen kuninkaan paluusta. Hänen profeetallinen kirjoittamisensa herätti myös uskonnollisten viranomaisten huomion, ja hänet kutsuttiin [[inkvisition]] eteen. Hänen patsaansa on pystytetty Trancoson kaupungintalon eteen. Onpas siit jo aikaa.
+KYSYMYS: Kerro lisää: sebastianismiin
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Inkvisition museo] 1968 Talo Jirón Junínin varrella Plaza Bolívarin kulmassa oli varakuningaskunnan aikana pyhän inkvisition tuomioistuimen päämaja. Ennen lakkauttamistaan — vuosi ennen kuin José de San Martín julisti Perun itsenäiseksi — tuomioistuin oli käsitellyt kaikkiaan 1 474 ihmisen asian, ja heistä 32 teloitettiin. Itsenäisyyden jälkeen samaan taloon asettui Perun ensimmäinen perustuslakia säätävä kongressi, ja sen jälkeen senaatti istui siellä aina vuoteen 1939, jolloin se muutti uuteen lakiasäätävään palatsiin. Vuoden 1909 vallankaappausyrityksessä sotaväki hajotti väkijoukon ampumalla, rakennus vaurioitui ja osa salaliittolaisista pakeni sen sisään. Vuodesta 1943 talossa toimi edustajainhuoneen yle…
+AIEMPI KYSYMYS: Kuka Bandarra oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. António Gonçalves de Bandarra oli 1500-luvulla elänyt portugalilainen suutari ja runoilija, joka asui [[Trancosossa]] ja kirjoitti profeetallisia säkeitä. Hänen tekstejään luettiin myöhemmin ennustuksina Portugalin kohtalosta, ja niiden tiedetään vaikuttaneen [[sebastianismiin]], uskoon kadonneen kuninkaan paluusta. Hänen profeetallinen kirjoittamisensa herätti myös uskonnollisten viranomaisten huomion, ja hänet kutsuttiin [[inkvisition]] eteen. Hänen patsaansa on pystytetty Trancoson kaupungintalon eteen. Onpas siit jo aikaa.
+KYSYMYS: Kerro lisää: inkvisition
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Inkvisition museo] 1968 Talo Jirón Junínin varrella Plaza Bolívarin kulmassa oli varakuningaskunnan aikana pyhän inkvisition tuomioistuimen päämaja. Ennen lakkauttamistaan — vuosi ennen kuin José de San Martín julisti Perun itsenäiseksi — tuomioistuin oli käsitellyt kaikkiaan 1 474 ihmisen asian, ja heistä 32 teloitettiin. Itsenäisyyden jälkeen samaan taloon asettui Perun ensimmäinen perustuslakia säätävä kongressi, ja sen jälkeen senaatti istui siellä aina vuoteen 1939, jolloin se muutti uuteen lakiasäätävään palatsiin. Vuoden 1909 vallankaappausyrityksessä sotaväki hajotti väkijoukon ampumalla, rakennus vaurioitui ja osa salaliittolaisista pakeni sen sisään. Vuodesta 1943 talossa toimi edustajainhuoneen yle…
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+AIEMPI KYSYMYS: Keitä marraanit olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Marraaneiksi kutsutaan Iberian niemimaalla asuneita juutalaisia, jotka pakotettiin kääntymään kristinuskoon ja jotka usein säilyttivät salaa juutalaisia tapojaan. Portugalissa juutalaiset pakkokastettiin 1490-luvun lopulla, ja sen jälkeen heidän uskonnonharjoittamistaan valvottiin ankarasti. [[Inkvisitio]] aloitti toimintansa Portugalissa 1500-luvulla ja se lakkautettiin vasta 1800-luvun alussa. Trancosossa oli laaja marraaniyhteisö, joka jätti jälkeensä noin 300 heprealaista kirjoitusta, ja noin 700 trancosolaista juutalaista joutui vainotuksi inkvisition aikana. Nykyään aihetta tutkitaan ja muistetaan [[Trancoson]] kaupungissa ja sen ulkopuolella. Hyvä, että näistä kerrotaan.
+KYSYMYS: Kerro lisää: Inkvisitio
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Keitä marraanit olivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Marraaneiksi kutsutaan Iberian niemimaalla asuneita juutalaisia, jotka pakotettiin kääntymään kristinuskoon ja jotka usein säilyttivät salaa juutalaisia tapojaan. Portugalissa juutalaiset pakkokastettiin 1490-luvun lopulla, ja sen jälkeen heidän uskonnonharjoittamistaan valvottiin ankarasti. [[Inkvisitio]] aloitti toimintansa Portugalissa 1500-luvulla ja se lakkautettiin vasta 1800-luvun alussa. Trancosossa oli laaja marraaniyhteisö, joka jätti jälkeensä noin 300 heprealaista kirjoitusta, ja noin 700 trancosolaista juutalaista joutui vainotuksi inkvisition aikana. Nykyään aihetta tutkitaan ja muistetaan [[Trancoson]] kaupungissa ja sen ulkopuolella. Hyvä, että näistä kerrotaan.
+KYSYMYS: Kerro lisää: Trancoson
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trancoso (historia)
+Tietoruudun teksti: Trancoso on kaupunki ja kunta Guardan piirikunnassa Portugalin keskiosassa, Beira Interior Norte -alueella. Kunnassa asui vuonna 2011 9 878 ihmistä, ja itse kaupungissa noin 3 000. Pääasiallinen nähtävyys on Trancoson linna. Kaupunki on tunnettu paikkana, jossa 1500-luvun runoilija ja suutari António Gonçalves de Bandarra asui ja kirjoitti profeetallisia tekstejään; hänen patsaansa on pystytetty kaupungintalon eteen. Trancosossa syntyi myös Isaac Cardoso, oppinut juutalainen kirjailija, filosofi ja lääkäri. Hänen vanhempansa kuuluivat Trancoson laajaan marraaniyhteisöön, joka jätti jälkeensä 300 heprealaista kirjoitusta, ja 700 Trancoson juutalaista vainottiin inkvisition aikana.
+AIEMPI KYSYMYS: Mikä on Beira Interior?
+AIEMPI VASTAUS (Livia):
+Mmm— Beira Interior on Portugalin keskiosassa, Espanjan rajan tuntumassa sijaitseva sisämaan alue. Se on pääosin vuoristoista ja harvaan asuttua seutua, jossa on linnoitettuja kaupunkeja ja kyliä, koska raja on ollut vuosisatojen ajan strategisesti tärkeä. Alueeseen kuuluvat muun muassa Guardan piirikunta sekä lähellä oleva [[Serra da Estrela]] -vuoristo. Perinteisesti seudun elinkeinoja ovat olleet karjanhoito, maanviljely ja tekstiiliteollisuus. Beira Interior Norte -alue kattaa osan [[Guardan]] piirikunnasta. Tosta paikasta olisi vielä paljon muutakin kerrottavaa.
+KYSYMYS: Kerro lisää: Serra da Estrela
