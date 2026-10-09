@@ -137,7 +137,7 @@ Miten esiintyjät valitaan Oberammergaussa?
 Mitä Jeesuksen viimeisistä päivistä kerrotaan evankeliumeissa?
 
 ### 584
-Rutto on bakteerin aiheuttama tauti, joka on levinnyt Euroopassa toistuvasti, tunnetuimmin 1300-luvun puolivälin [[mustana surmana]]. Nykyään se on hoidettavissa antibiooteilla, mutta aiemmin epidemiat veivät suuren osan väestöstä. Marseilleen rutto saapui toukokuussa 1720 kauppalaiva Grand-Saint-Antoinen mukana, ja se tappoi noin puolet kaupungin sadastatuhannesta asukkaasta kahden vuoden aikana; katastrofi johti tiukempiin karanteenisäännöksiin Ranskan satamissa. Kun rutto sulki Cambridgen yliopiston vuonna 1665, [[Isaac Newton]] palasi kotitilalleen ja kehitti siellä muun muassa differentiaalilaskennan. Onpas siitä onneksi pitkä aika.
+Rutto on bakteerin aiheuttama tauti, joka on levinnyt Euroopassa toistuvasti, tunnetuimmin 1300-luvun puolivälin [[mustana surmana]]. Nykyään se on hoidettavissa antibiooteilla, mutta aiemmin epidemiat veivät suuren osan väestöstä. Marseilleen rutto saapui toukokuussa 1720 kauppalaiva Grand-Saint-Antoinen mukana, ja se tappoi noin puolet kaupungin sadastatuhannesta asukkaasta kahden vuoden aikana; katastrofi johti tiukempiin karanteenisäännöksiin Ranskan satamissa. Kun rutto sulki Cambridgen yliopiston vuonna 1665, [[Isaac Newton]] palasi kotitilalleen ja kehitti siellä muun muassa differentiaalilaskennan.
 JATKOT:
 Miten karanteeni syntyi?
 Miten rutto leviää?
@@ -219,4 +219,262 @@ Rautamalmi on kallio- tai mineraaliaines, josta rautaa voidaan taloudellisesti e
 JATKOT:
 Miten raakarauta jalostetaan teräkseksi?
 Miten Kirunan kaivos toimii?
+
+### 598
+Raakarauta on masuunissa syntyvä raudan ja hiilen seos, jonka hiilipitoisuus on tavallisesti noin neljä prosenttia. Se on kovaa mutta hauraata, joten sitä ei sellaisenaan voi käyttää rasitettuihin rakenteisiin. Sulana raakarauta laskettiin masuunin pohjalta ulos, ja osa siitä valettiin harkoiksi tai muotteihin [[valurautaa]] varten. Suurin osa jalostettiin edelleen [[teräkseksi]] polttamalla hiiltä pois esimerkiksi [[konvertterissa]], ja tällaisia menetelmiä kehitettiin 1800-luvun puolivälistä alkaen, kuten [[Bessemerin]] menetelmä. Völklingenissä raakarautaa tuotettiin vuodesta 1882 vuoteen 1986.
+JATKOT:
+Miten Bessemerin menetelmä toimi?
+Mitä valurautaa käytettiin tekemään?
+
+### 599
+Koksi on kivihiilestä valmistettua polttoainetta, jota saadaan kuumentamalla hiiltä hapettomissa olosuhteissa noin tuhannen asteen lämpötilassa. Prosessissa hiilestä poistuu haihtuvia aineita, ja jäljelle jää lähes puhdasta hiiltä, joka on kovaa ja huokoista. Masuunissa koksi toimii sekä polttoaineena että aineena, joka poistaa rautamalmista hapen; koksista muodostuva [[hiilimonoksidi]] on tässä keskeinen. Koksi kestää uunin painon kasassa, ja siksi se sopii kivihiiltä paremmin masuuniin. Koksin käyttö raudan valmistuksessa yleistyi 1700-luvun alussa, ja sen tunnetaan edistäneen [[Abraham Darby]], joka työskenteli Coalbrookdalessa. Koksia valmistettiin erityisissä [[koksaamoissa]].
+JATKOT:
+Miten koksaamo toimii?
+Miksi koksi sopii masuuniin hiiltä paremmin?
+
+### 600
+Raakarauta on masuunin ensimmäinen tuote: sulaa rautaa, joka sisältää noin 3,5–4,5 prosenttia hiiltä sekä pieniä määriä muun muassa piitä, mangaania, rikkiä ja fosforia. Englanniksi sitä kutsutaan nimellä pig iron, koska muotit, joihin sula metalli valettiin, muistuttivat emakkoa ja sen porsaita. Korkean hiilipitoisuuden vuoksi raakarauta on hauras. Sitä käytettiin [[valuraudan]] raaka-aineena, mutta suurin osa jalostettiin [[teräkseksi]], jolloin hiilen määrää vähennetään. Völklingenin kaltaisissa tehtaissa raakarauta oli koko toiminnan perusta, ja pitkälle jalostettujen tuotteiden valmistus alkoi vasta sen jälkeen. Rauta ja [[hiili]] muodostavat yhdessä seoksen, jonka ominaisuudet riippuvat hiilen määrästä.
+JATKOT:
+Miksi hiilipitoisuus tekee raudasta hauraan?
+Mistä pig iron -nimi tulee?
+
+### 601
+Teräs on raudan ja hiilen seos, jossa hiiltä on tyypillisesti alle kaksi prosenttia. Pieni hiilipitoisuus tekee siitä sitkeämpää ja kestävämpää kuin raakarauta, ja se kestää sekä vetoa että painetta. Teräksen massavalmistus yleistyi 1800-luvun jälkipuoliskolla muun muassa [[Bessemerin]] menetelmän ansiosta. [[Ruostumaton teräs]] sisältää vähintään noin kymmenen prosenttia [[kromia]], joka suojaa metallia ruosteelta. Terästä käytetään rakennuksissa, silloissa, kulkuneuvoissa ja työkaluissa, ja sen kierrätys on yleistä, koska se voidaan sulattaa uudelleen menettämättä ominaisuuksiaan.
+JATKOT:
+Mitä seosaineita teräkseen lisätään?
+Miksi ruostumaton teräs ei ruostu?
+
+### 602
+Hiili on alkuaine, jonka merkki on C ja järjestysluku 6. Sitä esiintyy puhtaana muun muassa [[timanttina]] ja [[grafiittina]], jotka ovat saman alkuaineen hyvin erilaisia muotoja: timantti on kovimpia luonnon aineita ja grafiitti pehmeää. Hiili on kaiken elämän perusta, sillä se muodostaa lukemattomia [[orgaanisia yhdisteitä]]. Raudassa pieni hiilimäärä muuttaa metallin ominaisuuksia: se tekee raudasta kovempaa, mutta liika hiili tekee siitä hauraan, joten teräksessä hiiltä on vähän. Hiili on myös kivihiilen ja koksin pääaine, ja palaessaan se muodostaa [[hiilidioksidia]].
+JATKOT:
+Miten timantti ja grafiitti eroavat toisistaan?
+Mistä kivihiili on syntynyt?
+
+### 603
+Tehdas on laitos, jossa tuotteita valmistetaan koneilla ja työvoimalla suuressa mittakaavassa. Ensimmäiset tehtaat syntyivät 1700-luvulla Britanniassa, ja yksi tunnetuimmista varhaisista kehräämöistä on noin vuonna 1771 perustettu [[Cromford]]. Saksassa teollisuusperintöä edustaa muun muassa Essenin [[Zollvereinin]] hiilikaivos- ja koksaamoalue sekä Völklingenin rautatehdas. Kun tehtaita suljetaan, tyhjät tilat saavat usein uuden käyttötarkoituksen: Berliinissä muurin kaaduttua 1989 vanhoihin tehtaisiin, kellareihin ja pankkiholveihin syntyi teknoklubeja, joista tunnetuin on [[Tresor]]. Berliinin teknokulttuuri otettiin maaliskuussa 2024 Saksan aineettoman kulttuuriperinnön luetteloon.
+JATKOT:
+Miten Zollverein toimi aikoinaan?
+Miten Tresor-klubi sai alkunsa?
+
+### 604
+Belval on Luxemburgin lounaisosassa Esch-sur-Alzetten seudulla sijaitseva entinen terästehdasalue. Sen masuunit A ja B sytytettiin vuosina 1965 ja 1970, ja masuuni B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului yhtiölle [[ARBED]], joka syntyi vuonna 1911 kolmen terästehtaan yhdistyessä. Huhtikuun 30. päivänä 1953 [[Jean Monnet]] käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarin alueelle on noussut muun muassa [[Luxemburgin yliopisto]], arkistoja ja konserttisali [[Rockhal]].
+JATKOT:
+Miksi Jean Monnet käynnisti teräsvalun?
+Mitä Rockhalissa tapahtuu nykyään?
+
+### 605
+Teollinen vallankumous alkoi Isossa-Britanniassa, koska siellä oli runsaasti kivihiiltä ja rautaa, kehittynyt kauppa ja kanavaverkosto sekä pääomaa investointeihin. Tekstiiliteollisuus kasvoi nopeasti erityisesti [[Manchesterin]] seudulla, ja Coalbrookdalen läheisyyteen 1700-luvun lopulla valmistunut rautasilta [[Ironbridge]] on yksi vallankumouksen tunnetuimmista symboleista. [[James Watt]] kehitti höyrykonetta 1700-luvun loppupuolella, ja 1800-luvun alkupuolella Britanniaan rakennettiin ensimmäiset höyryjunaradat. Teollistuminen levisi sieltä Belgiaan, Saksaan ja muualle Eurooppaan, ja sen vaikutukset näkyvät yhä esimerkiksi Völklingenin tehtaan kaltaisissa kohteissa.
+JATKOT:
+Miten teollistuminen levisi Saksaan?
+Millaista työ oli varhaisessa tehtaassa?
+
+### 606
+Höyrykone muuttaa höyryn lämpöenergian liike-energiaksi. Vanhin tunnettu laite on antiikin keksijä Heronin noin vuoden 60 jälkeen Kristuksen syntymän kuvaama pallo, joka alkoi pyöriä, kun kattilasta tuleva höyry purkautui kahdesta vastakkaisiin suuntiin taivutetusta suuttimesta; sillä ei tehty mitään työtä. Käytännön höyrykone syntyi 1700-luvun alussa, kun [[Thomas Newcomen]] rakensi kaivosten vedenpumppaukseen tarkoitetun koneen. [[James Watt]] paransi sitä myöhemmin erillisellä lauhduttimella, ja 1800-luvun alussa höyrykone siirtyi kulkuneuvoihin: [[Stephensonin Rocket]] voitti veturikilpailun vuonna 1829. Höyrykone teki teollisen vallankumouksen mahdolliseksi, sillä se irrotti tuotannon vesivoiman ja ihmislihasten rajoista.
+JATKOT:
+Miten Wattin lauhdutin paransi konetta?
+Miten höyryveturi toimii?
+
+### 607
+Kivihiili on kivi, joka on syntynyt miljoonien vuosien kuluessa muinaisten kasvien jäännöksistä. Suuri osa maailman kivihiilestä muodostui hiilikaudella, noin 300 miljoonaa vuotta sitten, ja sen nimi tulee juuri tästä. Teollisessa vallankumouksessa kivihiili oli [[höyrykoneiden]] ja masuunien polttoaine, ja sitä louhittiin muun muassa Saarlandissa Völklingenin ympäristössä. Hiilen poltto aiheutti kuitenkin ilmansaasteita: Lontoon savusumu alkoi 5. joulukuuta 1952 ja kesti viisi päivää, ja kuolleita arvioitiin ensin neljätuhatta, myöhemmin 10 000–12 000. Neljä vuotta myöhemmin säädettiin laki, jonka nojalla kaupunginosia voitiin määrätä savuttomiksi.
+JATKOT:
+Miten ilmanlaatu on parantunut Euroopassa?
+Miksi kivihiilestä on luovuttu?
+
+### 608
+Hopea on jalometalli, jonka alkuaineen merkki on Ag ja järjestysluku 47. Se on tunnettu kauneudestaan ja siitä, että se johtaa sähköä ja lämpöä erittäin hyvin, joten sitä on käytetty kolikoihin, koruihin, aterimiin ja elektroniikkaan. Freibergin ympäristössä hopeaa louhittiin vuosisatojen ajan, ja kaupungin synty liitetään lähteiden mukaan 1100-luvun hopealöytöön, vaikka tarkkaa vuotta en ole varma. Kaupungissa vallitsivat noin 800 vuotta kaivos- ja sulatusteollisuus vuoteen 1969 asti. Kaupungin kaivoshistoria on osa [[Malmivuorten]] alueen maailmanperintöä, ja sen yliopisto [[Bergakademie]] perustettiin vuonna 1765. Kaivoksista tunnettu on muun muassa [[Reiche Zeche]].
+JATKOT:
+Mikä Malmivuoret ovat?
+Miten hopeaa on käytetty rahana?
+
+### 609
+Saksi on Saksan itäosassa sijaitseva vapaavaltio, jonka pääkaupunki on [[Dresden]] ja suurin kaupunki [[Leipzig]]. Se rajoittuu Tšekkiin ja Puolaan sekä muihin Saksan osavaltioihin, ja sen halki virtaa [[Elbe]]. Etelärajalla kohoavat Malmivuoret, joiden hopeakaivokset tekivät Freibergistä ja koko alueesta vauraan keskiajalta lähtien. Saksin tunnetuimpiin tuotteisiin kuuluu [[Meissenin posliini]], jonka valmistus alkoi vuonna 1710. Alueella on myös runsaasti linnoja ja historiallisia kaupunkeja, ja Freibergin kaivoshistoria on osa UNESCOn maailmanperintöä.
+JATKOT:
+Millainen kaupunki Dresden on?
+Miksi Leipzig on tunnettu?
+
+### 610
+Kaivosakatemia tarkoittaa oppilaitosta, jossa opetetaan kaivosalaa, metallurgiaa ja niihin liittyviä tieteitä. Freibergin Bergakademie perustettiin vuonna 1765, ja sitä pidetään maailman vanhimpana kaivos- ja metallurgiayliopistona. Nykyään se toimii teknillisenä yliopistona. Siellä opiskelivat tai opettivat monet tunnetut tutkijat: muun muassa geologi [[Abraham Gottlob Werner]] opetti akatemiassa, ja [[Alexander von Humboldt]] opiskeli siellä 1790-luvun alussa. Kemisti Clemens Winkler löysi lähteiden mukaan Freibergissä alkuaineen [[germanium]]in 1880-luvulla, mutta tarkasta vuodesta en ole täysin varma.
+JATKOT:
+Millainen oli Alexander von Humboldt?
+Mitä kaivosinsinöörit tekevät?
+
+### 611
+Freiberg on noin 41 000 asukkaan yliopisto- ja entinen kaivoskaupunki Saksissa Malmivuorten esimaastossa. Kaupunki sijaitsee [[Freiberger Mulde]] -joen varrella, ja sen koko historiallinen keskusta, Hopeakaupunki, on suojeltu. Kaupungin vauraus perustui hopeaan, ja kaivoshistorialliset kohteet, kuten [[Reiche Zeche]] -malmikaivos, kuuluvat vuodesta 2019 UNESCOn maailmanperintöön. Kaupungissa on myös tuomiokirkko, jonka urut on lähteiden mukaan rakentanut [[Gottfried Silbermann]] 1700-luvun alussa, vaikka tarkasta vuodesta en ole varma. Kaivos- ja sulatusteollisuus vallitsi vuoteen 1969 asti, ja nykyisin kaupunki elää pitkälti yliopistostaan.
+JATKOT:
+Millainen oli Gottfried Silbermann?
+Miten Reiche Zeche -kaivosta voi tutustua?
+
+### 612
+Metallurgia on tiede ja tekniikka, joka tutkii metallien erottamista malmeista, jalostamista ja ominaisuuksia. Siihen kuuluvat sekä malmin sulatus ja puhdistus että [[seosten]] valmistus, kuten teräksen tai pronssin. Alan varhaisimpia tunnettuja oppikirjoja on [[Georgius Agricola]]n teos [[De re metallica]], joka ilmestyi vuonna 1556 ja kuvasi kaivostoimintaa ja metallien käsittelyä Saksin alueella. Freibergin Bergakademie perustettiin vuonna 1765 opettamaan tätä alaa, ja sitä pidetään maailman vanhimpana kaivos- ja metallurgiayliopistona. Metallurgia on edelleen tärkeää esimerkiksi kierrätyksessä ja uusien materiaalien kehityksessä.
+JATKOT:
+Mitä De re metallica -kirjassa kerrotaan?
+Miten teräs ja pronssi eroavat toisistaan?
+
+### 613
+Hopearahat olivat Euroopassa vuosisatojen ajan tavallisin kolikkotyyppi. Niiden arvo perustui metallin määrään, ja karolingien aikana liikkeelle tuli hopeadenaari, josta kehittyi pitkäikäinen rahajärjestelmä. Saksissa hopeakaivokset tekivät rahanteosta tuottoisaa, ja Böömin puolella [[Joachimsthalin]] hopeakaivosten kolikot, jotka alkoivat 1500-luvun alussa, tunnettiin nimellä [[taaleri]]. Taalerista on lähteiden mukaan peräisin myös sana [[dollari]], vaikka kehityksen yksityiskohdista en ole täysin varma. Hopearahojen aikakausi päättyi vähitellen, kun kolikoiden arvo erkani metallista.
+JATKOT:
+Miksi dollari on saanut nimensä taalerista?
+Miten kolikoita on väärennetty historiassa?
+
+### 614
+Rahametalleiksi kutsutaan metalleja, joista on valmistettu kolikoita tai jotka ovat toimineet rahan arvon perustana. Tärkeimmät ovat olleet kulta, hopea ja kupari. Kolikon arvo perustui pitkään sen metallin määrään, ja kun valtio piti sekä kultaa että hopeaa rahan perustana, puhuttiin [[bimetallismista]]. Ranska, Belgia, Italia ja Sveitsi perustivat vuonna 1865 [[Latinalaisen rahaliiton]], joka oli tällainen sopimus. Saksa siirtyi yhtenäistymisen jälkeen 1870-luvulla [[kultakantaan]], ja moni muu maa seurasi. Nykyään rahan arvo ei enää perustu metalliin vaan valtion luottamukseen.
+JATKOT:
+Mikä kultakanta oli?
+Miten paperiraha syntyi?
+
+### 615
+Tšekki eli Tšekin tasavalta on Keski-Euroopan valtio, jonka pääkaupunki on [[Praha]]. Se rajoittuu Saksaan, Puolaan, Slovakiaan ja Itävaltaan, ja se muodostuu historiallisista alueista, kuten [[Böömistä]] ja Määristä. Pohjoisessa Tšekin ja Saksin rajalla sijaitsevat Malmivuoret, joita kutsutaan tšekiksi nimellä Krušné hory. Prahan linnan rakentaminen alkoi vuonna 870, ja Guinnessin ennätystenkirjan mukaan se on maailman suurin muinainen linnakokonaisuus; alue on noin 70 000 neliömetriä. Prahassa [[Kansallismuseon]] julkisivussa näkyvät yhä vuoden 1968 miehityksen luodinreikien paikat.
+JATKOT:
+Millainen on Prahan linna?
+Mitä Tšekkoslovakian miehityksestä 1968 tiedetään?
+
+### 616
+Hopea oli Malmivuorten rikkaus. Alueella louhittiin sitä vuosisatojen ajan, ja malmin löytyminen synnytti nopeasti kasvavia kaivoskaupunkeja. Lähteiden mukaan hopeaa löydettiin 1100-luvulla Freibergin ympäristöstä, ja 1400-luvun lopulla ja 1500-luvun alussa vuoristossa koettiin suuri hopeabuumi esimerkiksi [[Schneebergin]] ja [[Annabergin]] kaupungeissa, joskin tarkat vuodet vaihtelevat lähteittäin. Kaivostoiminta toi vaurautta Saksin ruhtinaille, ja Saksin hallitsijasuvun, [[Wettinien]], rakennushankkeet ja hovi rahoitettiin osin hopealla. Alue kuuluu nykyisin UNESCOn maailmanperintöön kaivosalueena nimeltä Erzgebirge/Krušnohoří.
+JATKOT:
+Mitä Saksin ruhtinaat rakensivat hopealla?
+Miten hopeaa louhittiin ennen koneita?
+
+### 617
+UNESCO on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, jonka päämaja on [[Pariisissa]]. Järjestö perustettiin 1940-luvun puolivälissä, ja siihen kuuluu yli 190 jäsenvaltiota. Sen tehtäviin kuuluvat koulutus, tiede, kulttuuri ja viestintä. Maailmanperintöluettelon lisäksi UNESCO ylläpitää luetteloa [[aineettomasta kulttuuriperinnöstä]], johon kuuluvat esimerkiksi perinteiset taidot ja tavat, ja kohteiden suojelu perustuu jäsenvaltioiden yhteistyöhön. Malmivuorten alue, [[Erzgebirge/Krušnohoří]], on kuulunut luetteloon vuodesta 2019, ja siitä vastaavat yhdessä Saksa ja Tšekki.
+JATKOT:
+Mitä aineeton kulttuuriperintö tarkoittaa?
+Miten jäsenvaltio ehdottaa kohdetta luetteloon?
+
+### 618
+Maailmanperintösopimus on UNESCOn yleiskokouksessa vuonna 1972 hyväksytty kansainvälinen sopimus, jonka tarkoituksena on suojella ihmiskunnalle erityisen arvokkaita kulttuuri- ja luontokohteita. Sopimuksen allekirjoittaneet valtiot sitoutuvat suojelemaan alueellaan olevia kohteita, ja luetteloon valittavat kohteet päättää [[maailmanperintökomitea]]. Luettelossa on yli tuhat kohdetta eri puolilla maailmaa. Jos kohde on vaarassa, se voidaan merkitä [[vaarantuneiden kohteiden luetteloon]], jotta kansainvälinen apu saadaan liikkeelle. Sopimuksen taustalla oli muun muassa huoli Euroopan kulttuurikohteiden, kuten Venetsian ja Firenzen, suojelusta tulvien jälkeen.
+JATKOT:
+Mitä vaarantuneiden kohteiden luettelo tarkoittaa?
+Miten maailmanperintökomitea valitsee kohteet?
+
+### 619
+Meissen on noin 30 000 asukkaan kaupunki [[Elben]] molemmin puolin Saksin vapaavaltiossa, noin 25 kilometriä Dresdenistä luoteeseen. Kaupungin symboli on Albrechtsburgin linna, joka on myöhäisgoottilainen rakennus kukkulalla, ja sen yhteydessä on goottilainen tuomiokirkko. Euroopan ensimmäinen posliini valmistettiin Meissenissä vuonna 1710, kun kuningas Augustus II Väkevä perusti [[Albrechtsburgiin]] tehtaan; keksinnön takana oli lähteiden mukaan alkemisti [[Johann Friedrich Böttger]]. Meissenin posliinin tunnusmerkkinä ovat [[ristikkäiset miekat]], ja kaupungin Frauenkirchessä on tunnettu posliinikellopeli.
+JATKOT:
+Miten Böttger keksi posliinin?
+Mitä Albrechtsburgissa voi nähdä?
+
+### 620
+Augustus II Väkevä (1670–1733) oli Saksin vaaliruhtinas ja Puolan kuningas. Puolan kruunun hän sai vuonna 1697, ja saadakseen sen hän siirtyi katoliseen uskoon, vaikka hänen kotimaansa Saksi oli luterilainen. Hän osallistui [[Suureen Pohjan sotaan]], joka koetteli hänen valtakuntiaan, mutta tunnetaan parhaiten barokin rakennuttajana ja taiteiden suosijana Dresdenissä, jossa nousi muun muassa [[Zwinger]]-palatsi. Hän oli innokas posliininkerääjä, ja Meissenin tehtaan perustaminen vuonna 1710 liittyi hänen haluunsa saada Euroopassa valmistettua posliinia; keksijänä pidetään [[Johann Friedrich Böttgeriä]]. Lisänimi Väkevä viittaa tarinoiden mukaan hänen voimaansa.
+JATKOT:
+Mitä Zwingerissä on nähtävää?
+Miksi Augustus siirtyi katoliseen uskoon?
+
+### 621
+Albrechtsburg on Meissenin kukkulalla kohoava myöhäisgoottilainen linna. Sen rakentaminen alkoi 1400-luvun lopulla, ja rakennuksen suunnittelijana pidetään [[Arnold von Westfalenia]]. Linna on ollut Saksin Wettin-suvun hallitsijoiden kotipaikka, ja se on tunnettu kierteisistä portaistaan sekä holvikatoistaan. Vuonna 1710 Augustus II Väkevä perusti linnaan posliinitehtaan, joka toimi siellä 1800-luvun puoliväliin asti, kunnes tuotanto siirrettiin Triebisch-joen laaksoon. Linnan vieressä on goottilainen [[Meissenin tuomiokirkko]], ja yhdessä ne hallitsevat [[Elben]] rantamaisemaa.
+JATKOT:
+Millainen on Meissenin tuomiokirkko?
+Mikä Wettinien suku oli?
+
+### 622
+Saksi on Saksan itäosassa sijaitseva vapaavaltio, jonka pääkaupunki on Dresden. Historiallisesti Saksi oli vaaliruhtinaskunta, jota hallitsi Wettinien suku, ja sen ruhtinas Augustus II Väkevä oli myös Puolan kuningas. Vuonna 1806 se nousi [[Napoleonin]] aikana kuningaskunnaksi, mutta menetti [[Wienin kongressissa]] vuonna 1815 suuren osan alueestaan Preussille. Saksi liittyi Saksan keisarikuntaan 1871 ja muuttui vapaavaltioksi 1918. Sodan jälkeen se kuului [[Itä-Saksaan]], ja nykyinen vapaavaltio perustettiin uudelleen vuonna 1990. Alue tunnetaan hopeakaivoksistaan, posliinistaan ja teollisuudestaan.
+JATKOT:
+Miten Saksin kuningaskunta syntyi?
+Mitä Itä-Saksassa tapahtui vuonna 1990?
+
+### 623
+Puola on Keski-Euroopan valtio, jonka pääkaupunki on [[Varsova]]. Keskiajalta lähtien se oli yksi alueen suurimmista valtioista, ja vuodesta 1569 se muodosti Liettuan kanssa liiton nimeltä [[Puola-Liettua]], jonka perusta luotiin [[Lublinin unionissa]]. Augustus II Väkevä valittiin Puolan kuninkaaksi vuonna 1697, ja valtakunta joutui hänen aikanaan Suuren Pohjan sodan jaloihin. Valtion talous oli 1600-luvulla vaikeuksissa: vuosina 1659–1668 lyötiin kuparikolikoita, joiden arvo laski nopeasti ja joille kansa antoi pilkkanimen [[boratynka]]. Nykyinen Puola rajoittuu muun muassa Saksaan ja Tšekkiin.
+JATKOT:
+Mikä oli Puola-Liettuan liitto?
+Miten kuparikolikot johtivat inflaatioon?
+
+### 624
+Dresden on Saksin vapaavaltion pääkaupunki ja suurin osa sen kulttuurielämästä. Kaupunki sijaitsee Elben varrella, ja sitä kutsutaan sen barokkirakennusten vuoksi joskus Elben Firenzeksi. Tunnettuja kohteita ovat [[Zwinger]]-palatsi, [[Semperoper]] ja [[Frauenkirche]]. Kaupungin keskusta tuhoutui pahoin liittoutuneiden ilmahyökkäyksissä helmikuussa 1945, ja Frauenkirche rakennettiin uudelleen: se vihittiin käyttöön vuonna 2005. Kaupungissa on myös taidekokoelmia, kuten [[Grünes Gewölbe]], jonka aarteet ovat peräisin Saksin ruhtinaiden ajalta. Dresden oli Augustus II Väkevän hallintokaupunki.
+JATKOT:
+Miten Frauenkirche rakennettiin uudelleen?
+Mitä Grünes Gewölbessa säilytetään?
+
+### 625
+Kaoliini on valkoinen savi, jonka pääaineena on mineraali [[kaoliniitti]]. Nimi tulee kiinalaisen Gaolingin kukkulan nimestä, josta savea tuotiin aikoinaan. Posliinin valmistuksessa kaoliini antaa massalle valkoisuuden ja muovattavuuden, ja korkeassa poltossa se muuttuu osaksi lasimaista rakennetta. Euroopassa kaoliinia on louhittu esimerkiksi englantilaisessa [[Cornwallissa]], ja Saksin posliinin kehityksessä sillä oli keskeinen asema: lähteiden mukaan sopiva kaoliini löytyi [[Aue]]n seudulta Malmivuorilta, mutta tarkoista vaiheista en ole varma. Kaoliinia käytetään posliinin lisäksi myös paperiteollisuudessa ja lääkkeissä.
+JATKOT:
+Miten posliinimassa valmistetaan?
+Mihin muuhun kaoliinia käytetään?
+
+### 626
+Maasälpä on kivennäisryhmä, ja se on yksi maankuoren yleisimmistä mineraaleista. Sitä on muun muassa [[graniitissa]], ja kaliumia sisältävä maasälpä on nimeltään ortoklaasi. Posliinin valmistuksessa maasälpä toimii sulatteena: se laskee massan sulamislämpötilaa ja muodostaa poltossa lasimaisen osan, jonka ansiosta posliini on tiivistä ja läpikuultavaa. Suomessa tunnettu esimerkki maasälpää sisältävästä kivestä on [[rapakivi]], jossa soikeat maasälpärakeet erottuvat selvästi. Maasälpiä on useita lajeja, ja ne vaihtelevat väriltään vaaleanpunaisesta valkoiseen ja harmaaseen.
+JATKOT:
+Miten graniitti syntyy?
+Mikä rapakivi on?
+
+### 627
+Kvartsi on mineraali, jonka kemiallinen koostumus on piidioksidi eli SiO₂, ja se on yksi maankuoren yleisimmistä mineraaleista. Se on kovaa: [[Mohsin kovuusasteikolla]] sen kovuus on seitsemän. Kvartsin lajeja ovat muun muassa vuorikide, savukvartsi ja [[ametisti]], ja suurin osa hiekasta koostuu kvartsirakeista. Posliinimassassa kvartsi antaa tuotteelle rungon ja lujuutta. Kvartsilla on myös tekninen käyttö: sen sähköisten ominaisuuksien vuoksi sitä käytetään [[kvartsikelloissa]] ajan mittaamiseen.
+JATKOT:
+Miten ametisti saa värinsä?
+Miksi kvartsikello on tarkka?
+
+### 628
+Krkonoše, saksaksi Riesengebirge ja puolaksi Karkonosze, on vuoristo Tšekin ja Puolan rajalla. Sen korkein huippu on [[Sněžka]], jonka korkeus on noin 1 600 metriä. Vuoristosta saa alkunsa Elbe eli tšekiksi Labe: joen alkukohta on noin 1 387 metrin korkeudella, ja se päättyy noin 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivirenkaalla, ja vuodesta 1968 sen vieressä on kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa niiden kaupunkien mukaan, joiden ohi joki kulkee. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään. Vuoristoa suojelevat kansallispuistot kummallakin rajan puolella, ja sen kansanperinteessä esiintyy vuoren henki [[Krakonoš]].
+JATKOT:
+Kuka Krakonoš on?
+Millaisia kansallispuistoja Krkonošessa on?
+
+### 629
+Dresden on Saksin pääkaupunki ja tunnettu taidekaupunki. Sen kokoelmiin kuuluu Gemäldegalerie Alte Meister, jonka tunnetuimpia teoksia on Rafaelin [[Sikstuksen madonna]]. Kaupungin joulumarkkina [[Striezelmarkt]] on yksi Saksan vanhimpia, vaikka tarkkaa vuotta en ole varma, ja joulun leivonnaisena tunnetaan [[Dresdner Stollen]], täyteläinen hedelmäleipä. Kaupungin rakennuksista tunnettuja ovat Zwinger ja Frauenkirche. Kaupunki on Elben varrella noin 25 kilometrin päässä Meissenistä, ja sen ympäristössä on viinitarhoja, sillä Saksin Elben laaksossa viljellään viiniä.
+JATKOT:
+Mikä on Rafaelin Sikstuksen madonna?
+Mistä Dresdner Stollen on tehty?
+
+### 630
+Hampuri on Pohjois-Saksan kaupunki ja samalla oma osavaltionsa, jossa asuu noin 1,9 miljoonaa ihmistä. Se on Saksan toiseksi suurin kaupunki ja maan suurin satama. Kaupunki sijaitsee Elben varrella, ja virallinen nimi on Vapaa ja Hansakaupunki Hampuri, sillä se kuului keskiajalla [[Hansaliittoon]]. Tunnettuja kohteita ovat [[Speicherstadt]], tiilinen varastokaupunki, joka on Unescon maailmanperintökohde, sekä vuonna 2017 avattu konserttitalo [[Elbphilharmonie]]. Kaupungin tunnettu viihdekatu on [[Reeperbahn]], ja siellä esiintyi 1960-luvun alussa myös varhainen Beatles.
+JATKOT:
+Mikä Speicherstadt on?
+Miten Hansaliitto vaikutti Hampuriin?
+
+### 631
+Elbe laskee Pohjanmereen Cuxhavenin tienoilla, noin 1 094 kilometrin päässä lähteestään. Joen suisto on mereen avautuva ja vuorovesi vaikuttaa sen virtaukseen aina Hampurin yläpuolelle asti. Pohjanmeren Saksan rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä [[Vattimeren]], mutta Elben suulla laivaliikenne jatkuu myös tulvan aikaan. Rannikon edustalla on [[Helgoland]]-saari, ja merellä sijaitsee myös [[Doggerbank]], joka on tärkeä kalastusalue. Pohjanmerellä on myös runsaasti merituulipuistoja.
+JATKOT:
+Miten vuorovesi vaikuttaa Hampuriin?
+Mikä Helgoland on?
+
+### 632
+Suippokaari on kaari, jonka huippu päättyy teräväksi kärjeksi eikä pyöristy puoliympyrän muotoon, ja se on goottilaisen rakennustaiteen tunnusmerkki. Pyöreään kaareen verrattuna suippokaari ohjaa rakenteen painon enemmän pystysuoraan alaspäin, joten seinät voidaan rakentaa korkeammiksi ja ohuemmiksi ja ikkunat suuremmiksi. Gotiikan alkupaikkana pidetään Ranskassa sijaitsevaa [[Saint-Denisin]] luostarikirkkoa 1100-luvun puolivälissä. Suippokaaria tukevat monissa katedraaleissa ulkopuoliset [[tukikaaret]], ja niiden ansiosta kirkkojen sisätilat ovat valoisia. Aiempaa [[romaanista]] tyyliä edustivat paksut seinät ja pienet ikkunat.
+JATKOT:
+Mikä erottaa romaanisen tyylin goottilaisesta?
+Miten tukikaaret toimivat?
+
+### 633
+Ristiholvi on holvityyppi, jossa kaksi tynnyriholvia leikkaa toisensa ja jossa yhtymäkohtaan muodostuu rivat eli kaarimaiset kivirakenteet. Goottilaisessa rakennustaiteessa rivat ovat kantavia osia, jotka ohjaavat holvin painon pilareille, joten holvin täytekivet voivat olla ohuita. Varhaisia ristiholveja on esimerkiksi [[Durhamin tuomiokirkossa]] Englannissa, joka rakennettiin 1000- ja 1100-lukujen taitteesta alkaen. Ristiholvi sopii yhteen [[suippokaarten]] kanssa, ja yhdessä ne mahdollistivat korkeat kirkkosalit. Holvien rakentaminen vaati taitavia [[kivimestareita]] ja suuria puisia tukirakenteita rakennusvaiheen ajaksi.
+JATKOT:
+Miten kivimestarit oppivat ammattinsa?
+Miten Durhamin tuomiokirkko rakennettiin?
+
+### 634
+Meissenin tuomiokirkko on goottilainen kirkko Burgbergin kukkulalla Albrechtsburgin vieressä. Meissenin piispakunnan perusti vuonna 968 keisari [[Otto I]], ja nykyisen kirkon rakentaminen alkoi lähteiden mukaan 1200-luvulla, mutta tarkasta vuodesta en ole varma. Kirkon pääkaksoistornit valmistuivat vasta 1900-luvun alussa. Kirkko on omistettu pyhille Johannes Evankelistalle ja Donatukselle. Siellä on haudattuna [[Wettinien]] suvun jäseniä, ja kirkon ja [[Albrechtsburgin]] muodostama kokonaisuus hallitsee Elben rantamaisemaa.
+JATKOT:
+Millainen Otto I oli?
+Miten tuomiokirkon tornit rakennettiin uudelleen?
+
+### 635
+Mikroskooppi on laite, joka suurentaa pieniä kohteita niin, että ne voi nähdä paljain silmin näkymättömänä. Varhaisia yhdistelmämikroskooppeja rakennettiin Alankomaissa 1500-luvun lopulla, vaikka keksijästä on kiistaa. [[Robert Hooke]] kuvasi 1600-luvulla kasvisolujen rakenteen ja otti käyttöön sanan solu, ja [[Antoni van Leeuwenhoek]] havaitsi yhdellä linssillä pieniä eliöitä. Jenassa Carl Zeiss alkoi 1840-luvun lopulla valmistaa mikroskooppeja, ja Ernst Abben teoreettinen työ 1870-luvulla muutti linssien suunnittelun tieteelliseksi. Mikroskoopeilla on tutkittu muun muassa [[soluja]] ja bakteereita.
+JATKOT:
+Miten Hooke havaitsi solun?
+Mitä Abbe selvitti linssien rajoista?
+
+### 636
+Ernst Abbe (1840–1905) oli saksalainen fyysikko ja matemaatikko, joka toimi Jenan yliopistossa ja liittyi Carl Zeissin yritykseen 1860-luvun puolivälissä. Hän kehitti teorian siitä, miten mikroskoopin kuva muodostuu, ja se antoi yritykselle tieteellisen perustan linssien suunnitteluun. Yhdessä lasinvalmistaja Otto Schottin kanssa hän työskenteli [[apokromaattisten]] linssien parissa. Abbe oli myös yhteiskunnallisesti uudistusmielinen: hän perusti vuonna 1889 [[Carl Zeiss -säätiön]], ja yrityksessä otettiin käyttöön [[kahdeksan tunnin työpäivä]] vuonna 1900, mitä pidetään edistyksellisenä.
+JATKOT:
+Mitä apokromaattinen linssi tarkoittaa?
+Mikä oli Carl Zeiss -säätiön tarkoitus?
+
+### 637
+Otto Schott (1851–1935) oli saksalainen lasikemisti, joka kehitti optiseen ja tekniseen käyttöön sopivia laseja. Hän perusti vuonna 1884 Jenaan lasitekniikan laboratorion, jonka yhteistyökumppaneita olivat Ernst Abbe ja Carl Zeissin yritys, ja siitä kasvoi myöhemmin [[Schott AG]]. Schott kehitti muun muassa [[boorisilikaattilasia]], joka kestää hyvin lämpötilan vaihteluita ja kemikaaleja, ja se tunnetaan laboratorio- ja keittiökäytössä tuotenimellä [[Duran]]. Optisen lasin laatu oli Jenan nousun edellytys, sillä parempi lasi mahdollisti tarkemmat linssit.
+JATKOT:
+Mitä boorisilikaattilasi on?
+Miten Schott ja Abbe tekivät yhteistyötä?
+
+### 638
+Jenan yliopisto perustettiin vuonna 1558, ja nykyisin sen nimi on Friedrich-Schiller-Universität Jena kirjailija [[Friedrich Schillerin]] mukaan, joka toimi siellä professorina 1780-luvun lopulla. Yliopistossa opettivat tai opiskelivat myös filosofi [[Hegel]] 1800-luvun alussa, ja [[Karl Marx]] väitteli siellä tohtoriksi vuonna 1841. Yliopiston luonnontieteet kasvoivat voimakkaasti vuoden 1871 jälkeisen teollisen nousun aikana, ja se oli tiiviissä yhteistyössä optisen teollisuuden kanssa. Jena on Thüringenin toiseksi suurin kaupunki ja noin 110 000 asukkaan koulutus- ja tutkimuskeskus.
+JATKOT:
+Miksi Schiller oli tärkeä Jenalle?
+Mitä Hegel opetti Jenassa?
+
+### 639
+Jenoptik on Jenassa toimiva teknologiayritys, joka syntyi Saksojen yhdistymisen jälkeen vuonna 1991 entisen Itä-Saksan valtionyhtiön VEB Carl Zeiss Jenan pohjalta. Itä-Saksassa Jenan optinen teollisuus oli koottu yhteen suureen kombinaattiin, ja yhdistymisen jälkeen se jaettiin ja yksityistettiin. Nykyään Jenoptik toimii muun muassa [[fotoniikan]], laserteknologian ja mittaustekniikan aloilla, ja sen tuotteisiin kuuluvat myös [[nopeusvalvonnan]] laitteet. Jena oli suurimman osan 1900-lukua optisen teollisuuden maailmankeskus, ja Jenoptik jatkaa tätä perinnettä yhdessä Zeissin ja [[Schottin]] kanssa.
+JATKOT:
+Mitä fotoniikka tarkoittaa?
+Miten nopeusvalvontakamera toimii?
+
+### 640
+Valonsäde on yksinkertaistettu kuva valon kulkusuunnasta, jota käytetään geometrisessa optiikassa. Valo kulkee tyhjiössä noin 300 000 kilometrin sekuntinopeudella. Kun säde siirtyy väliaineesta toiseen, esimerkiksi ilmasta lasiin, se muuttaa suuntaansa, ja ilmiötä kutsutaan [[taittumiseksi]]. Taittumisen laskentaa kuvaa [[Snellin laki]], jonka hollantilainen Willebrord Snellius muotoili 1600-luvun alussa. Linssi hyödyntää taittumista: kupera linssi kokoaa säteet, kovera hajottaa ne. Kun valkoinen valo kulkee [[prisman]] läpi, se hajoaa eri väreiksi, koska eri väriset säteet taittuvat hieman eri tavoin.
+JATKOT:
+Miksi prisma hajottaa valon väreihin?
+Miten silmälasit korjaavat näköä?
 
