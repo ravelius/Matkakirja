@@ -37,7 +37,16 @@ Koko arkiston haku (`hae.py`, ei purettu, ei tarkistettu) löysi ehdokkaita kolm
 | tarjotin ja kauha (160 kr) | Nikko Barrera-Amaya – Cooking night: Plates_2, Cooking_6, Cup_10, Silverware_2 | mahdollinen; tarkistus tunnistimella |
 | hanska, nauris (80 kr) | ei osumia | generointi tarpeen |
 
-Jos PT valitsee nämä, tehosteiden generointi putoaa 360:stä noin 80–240 krediittiin. Puran ja tarkistan ehdokkaat ennen aamua.
+**Tarkistus 9.10. klo 05 (purettu, AST):**
+
+- **kolikot:** CB `many_coins_12` (Coin 0,64) ja `coins_9` (Coin 0,35) tunnistuvat kolikoiksi, joten **generointia ei tarvita**
+  (−80 kr). Soundholderin säkkiäänet ovat liian pitkiä ja epäselviä (0,00–0,08).
+- **sytytys:** tulitikku (Static 0,10) ja fire whoosh (Burst 0,08) eivät varmistu. Tunnistin on lyhyissä äänissä epäluotettava,
+  joten generointi pysyy listalla.
+- **tarjotin ja kauha:** Cooking night on paistamista (Frying 0,85) ja ottimia (Coin 0,28 / Dishes 0,07), ei kauhaa eikä
+  tarjotinta. Generointi pysyy.
+
+Tehosteiden generointi putoaa siis 360:stä 280 krediittiin, ja aamun kokonaissumma on noin 415 krediittiä.
 
 ## Kaikki tiedostot kategorioittain
 
