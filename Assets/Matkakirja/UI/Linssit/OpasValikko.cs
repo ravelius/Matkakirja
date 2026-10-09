@@ -610,6 +610,11 @@ namespace Matkakirja.Natiivi
                 // (ei katkaisua eikä pisteiksi supistusta).
                 x = t.x > 20f ? IslandOikeaPt + KuvaRako : 14f; y = 12f;
                 korkeus = Mathf.Min(ph * 0.6f, OpasMetrolinja.AsemaValiPt * metro.Maara);
+                // Asettelutesti 9.10.2026 22.13 (Päätoimittaja): 8 asemaa × 26 pt ulottui vasemman tapin päälle; linja päättyy
+                // KuvaRakoa ennen tapin yläreunaa (asemaväli tiivistyy, nimet kokonaan, vähintään VahinRivi asemaa kohden).
+                var tappi = tapit.VasenLaatikko;
+                if (tapit.Nakyy && tappi.height > 0f && !float.IsNaN(tappi.yMin))
+                    korkeus = Mathf.Max(Mathf.Min(korkeus, tappi.yMin - KuvaRako - y), OpasMetrolinja.VahinRivi * metro.Maara);
                 leveys = pw * 0.45f;
             }
             // Juuri on turva-alueen sisällä: paikka turva-alueen koordinaateiksi (negatiivinen = ulkopuolella).
