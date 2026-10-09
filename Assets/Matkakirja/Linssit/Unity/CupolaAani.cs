@@ -33,7 +33,9 @@ namespace Matkakirja.Natiivi
 {
     public sealed class CupolaAani : MonoBehaviour
     {
-        public const string HuminaUrl = "https://media.matkakirja.app/aanet/cupola/v2/cupola-humina-gen-90s.wav";
+        // v3 (Pelikoodari 9.10., juna 174, muisti): sama humina 16 kHz:nä (yli 8 kHz energiaa −77 dB, saumaton, RMS ennallaan):
+        // koko tiedosto natiiviin float32-puskuriin 16,5 → 5,5 Mt.
+        public const string HuminaUrl = "https://media.matkakirja.app/aanet/cupola/v3/cupola-humina-gen-90s-16k.wav";
         public const string RadioUrl = "https://media.matkakirja.app/aanet/cupola/v1/cupola-radio-eva38-23min.mp3";
         public const float RadioPituusS = 1380f;
         /// <summary>NASA:n radiosilmukka (rätinä) pois käytöstä (omistaja 3.10.2026); tiedostoa ei ladata eikä kerrosta avata.</summary>
@@ -80,9 +82,9 @@ namespace Matkakirja.Natiivi
         static bool Rekisteroi()
         {
             var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
-            m.Rekisteroi("iss", "maisema", "cupola-humina", "Cupolan humina", "cupola-humina-gen-90s");
+            m.Rekisteroi("iss", "maisema", "cupola-humina", "Cupolan humina", "cupola-humina-gen-90s", "cupola-humina-gen-90s-16k");
             // Radiosilmukkaa ei rekisteröidä: omistaja poisti sen 3.10. (rätinä), RadioKaytossa = false (PT 9.10.: ei kytketä).
-            m.Rekisteroi("linssit", "maisema", "cupola-humina", "Linssin humina (Cupola)", "cupola-humina-gen-90s");
+            m.Rekisteroi("linssit", "maisema", "cupola-humina", "Linssin humina (Cupola)", "cupola-humina-gen-90s", "cupola-humina-gen-90s-16k");
             // Astronautin humina (linssin taustaääni; Cupolan humina korvaa sen ISS:ssä, mutta taso säädettävissä): Aanisoitin.LinssiTausta.
             m.Rekisteroi("iss", "maisema", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina, "Astronautin humina", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
             return true;

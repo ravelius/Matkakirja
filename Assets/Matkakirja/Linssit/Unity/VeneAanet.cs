@@ -60,12 +60,12 @@ namespace Matkakirja.Natiivi
         static IEnumerator Lataa(string t)
         {
             using var r = UnityWebRequestMultimedia.GetAudioClip(Juuri + t + ".mp3", AudioType.MPEG);
+            ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;   // 3 laivaa PCM:nä 11 Mt, pakattuina 1,6 Mt (juna 174, muisti)
             r.timeout = 30;
             yield return r.SendWebRequest();
-            ladataan.Remove(t);
-            klipit[t] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
-            if (klipit[t] != null) klipit[t].name = AaniId(t);
-            if (klipit[t] != null) yield return SaumatonSilmukka.HaeTagi(Juuri + t + ".mp3", klipit[t]);
+            var c = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
+            if (c != null) { c.name = AaniId(t); yield return SaumatonSilmukka.HaeTagi(r.url, c); }   // tagi ennen käyttöönottoa
+            ladataan.Remove(t); klipit[t] = c;
             if (klipit[t] == null) Debug.Log($"MATKAKIRJA kaupunki: laivan ääni {t} ei latautunut ({r.error})");
         }
 

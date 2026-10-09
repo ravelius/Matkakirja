@@ -3,10 +3,12 @@
 // 3D-silmukat ja askeleet, pallon kyyhkyt, lokkiparvi ja laivat). Kiinnita(lähde) ottaa soittimen oman AudioSourcen OHJAUSLÄHTEEKSI:
 // soitin käyttää sitä kuten ennenkin (clip, Play, Stop, isPlaying, volume, pitch, time, paikka), mutta se on mykistetty, ja kaksi
 // samaan GameObjectiin luotua kaksoislähdettä soittaa saman klipin saumattomasti (Ydin: Silmukkasauma):
-//   Liitos (PCM-klippi, compressed = false; WAV): kierros [Alku, Loppu) LAME-tagista (AsetaTagi/HaeTagi) tai varalla alun
-//     hiljaisuudesta; seuraava kierros PlayScheduled näytetarkasti Lopun hetkeen ja edellinen SetScheduledEndTime samaan hetkeen.
-//   Risti (pakattu klippi, ≥ 7,5 s): 1,2 s tasatehoinen ristihäivytys kuten KaupunkiAanimaisemaSoitin ja ElavaSilmukka.
-//   Tavallinen (pakattu < 7,5 s tai striimattu): ohjauslähde soi itse kuten ennen.
+//   Liitos (PCM-klippi, compressed = false; WAV; pakotettuna myös pakattu musiikki): kierros [Alku, Loppu) LAME-tagista
+//     (AsetaTagi/HaeTagi) tai varalla alun hiljaisuudesta; edellinen päättyy SetScheduledEndTime Lopun hetkellä ja seuraava
+//     PlayScheduled klipin ALUSTA Alun verran aiemmin (hakuton: alkuviive soi hiljaisuutena edellisen lopun alla).
+//     Pakattu klippi saa Liitoksen, kun sen LAME-tagi on tiedossa (hakuton jatko).
+//   Risti (pakattu ilman tagia, ≥ 7,5 s): 1,2 s tasatehoinen ristihäivytys kuten KaupunkiAanimaisemaSoitin ja ElavaSilmukka.
+//   Tavallinen (pakattu ilman tagia < 7,5 s tai striimattu): ohjauslähde soi itse kuten ennen.
 // MUISTI: ei PCM-kopioita; kaksi lisä-AudioSourcea per silmukka samalla klipillä (pakatulla klipillä ristihäivytyksen ajan kaksi
 // dekooderia). Tagin haku: 8 kt Range-pyyntö per klippi. ÄÄNET: ohjauslähde mykistettynä prioriteetilla 256 (virtualisoituu ensin).
 using System.Collections;
@@ -50,12 +52,13 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Ottaa lähteen ohjaukseen (kerran); palauttaa komponentin. Soitin jatkaa lähteen käyttöä kuten ennen.</summary>
-        public static SaumatonSilmukka Kiinnita(AudioSource ohjaus)
+        /// <param name="pakotaLiitos">Liitos myös pakatulle klipille (musiikki: ristihäivytys rikkoisi tahdin).</param>
+        public static SaumatonSilmukka Kiinnita(AudioSource ohjaus, bool pakotaLiitos = false)
         {
             if (ohjaus == null) return null;
             foreach (var x in ohjaus.GetComponents<SaumatonSilmukka>()) if (x.ohjaus == ohjaus) return x;
             var s = ohjaus.gameObject.AddComponent<SaumatonSilmukka>();
-            s.ohjaus = ohjaus; ohjaus.loop = true; ohjaus.mute = true;
+            s.ohjaus = ohjaus; s.pakotaLiitos = pakotaLiitos; ohjaus.loop = true; ohjaus.mute = true;
             s.a = s.Kaksonen(); s.b = s.Kaksonen();
             // Mykistetty ohjauslähde soi yhä (isPlaying, time): alin prioriteetti, jotta FMOD virtualisoi sen ensin (32 todellista ääntä).
             ohjaus.priority = 256;
@@ -66,7 +69,7 @@ namespace Matkakirja.Natiivi
         AudioClip klippi;
         Silmukkasauma.Tapa tapa;
         long alku, loppu;
-        bool soi, ajastettu;
+        bool soi, ajastettu, pakotaLiitos;
         double t0, kohta0, liitos;
         float savel, ristiAlku = -1f;
 
@@ -107,7 +110,8 @@ namespace Matkakirja.Natiivi
             Lopeta();
             klippi = c; soi = true;
             bool pakattu = c.loadType != AudioClipLoadType.DecompressOnLoad;
-            tapa = c.loadType == AudioClipLoadType.Streaming ? Silmukkasauma.Tapa.Tavallinen : Silmukkasauma.Valitse(pakattu, c.length);
+            tapa = c.loadType == AudioClipLoadType.Streaming ? Silmukkasauma.Tapa.Tavallinen
+                : pakotaLiitos ? Silmukkasauma.Tapa.Liitos : Silmukkasauma.Valitse(pakattu, c.length, tagit.TryGetValue(c, out var tg) && tg.HasValue);
             ohjaus.mute = tapa != Silmukkasauma.Tapa.Tavallinen; ohjaus.priority = ohjaus.mute ? 256 : a.priority;
             if (tapa == Silmukkasauma.Tapa.Tavallinen) return;
             (alku, loppu) = Alue(c);
@@ -144,7 +148,7 @@ namespace Matkakirja.Natiivi
             {
                 if (nyt > t0) { kohta0 = Silmukkasauma.Kohta(kohta0, t0, nyt, klippi.frequency, savel); t0 = nyt; }
                 savel = sav;
-                if (ajastettu) { liitos = Silmukkasauma.LoppuHetki(kohta0, t0, loppu, klippi.frequency, savel); b.SetScheduledStartTime(liitos); a.SetScheduledEndTime(liitos); }
+                if (ajastettu) { liitos = Silmukkasauma.LoppuHetki(kohta0, t0, loppu, klippi.frequency, savel); b.SetScheduledStartTime(Silmukkasauma.KaynnistysHetki(liitos, alku, klippi.frequency, savel)); a.SetScheduledEndTime(liitos); }
             }
             a.volume = vol; b.volume = vol; a.pitch = sav; b.pitch = sav;
             if (!ajastettu)
@@ -152,7 +156,8 @@ namespace Matkakirja.Natiivi
                 liitos = Silmukkasauma.LoppuHetki(kohta0, t0, loppu, klippi.frequency, savel);
                 if (liitos - nyt < Silmukkasauma.EnnakkoS)
                 {
-                    b.timeSamples = (int)alku; b.PlayScheduled(liitos); a.SetScheduledEndTime(liitos); ajastettu = true;
+                    // Hakuton liitos: b alkaa klipin alusta niin, että sen alkuviive soi a:n lopun alla (Silmukkasauma.KaynnistysHetki).
+                    b.timeSamples = 0; b.PlayScheduled(Silmukkasauma.KaynnistysHetki(liitos, alku, klippi.frequency, savel)); a.SetScheduledEndTime(liitos); ajastettu = true;
                 }
             }
             else if (nyt >= liitos)

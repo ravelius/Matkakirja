@@ -88,10 +88,11 @@ namespace Matkakirja.Natiivi
             using var p = UnityWebRequestMultimedia.GetAudioClip(a.Polku, AudioType.MPEG);
             var dh = (DownloadHandlerAudioClip)p.downloadHandler; dh.streamAudio = false; dh.compressed = a.Pakattu;
             yield return p.SendWebRequest();
-            a.Haussa = false;
-            if (p.result == UnityWebRequest.Result.Success) { a.Klippi = DownloadHandlerAudioClip.GetContent(p); a.Klippi.name = "Tehoste:" + a.Tunnus; }
-            // Silmukat ja askeleet: LAME-tagi saumattomalle liitokselle (SaumatonSilmukka; iOS-FMOD ei leikkaa kooderiviivettä).
-            if (a.Klippi != null && (a.Silmukka || a.Tunnus.StartsWith("askel", StringComparison.Ordinal))) yield return SaumatonSilmukka.HaeTagi(a.Polku, a.Klippi);
+            var c = p.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(p) : null;
+            if (c != null) c.name = "Tehoste:" + a.Tunnus;
+            // Silmukat ja askeleet: LAME-tagi saumattomalle liitokselle (SaumatonSilmukka; iOS-FMOD ei leikkaa kooderiviivettä), ennen käyttöönottoa.
+            if (c != null && (a.Silmukka || a.Tunnus.StartsWith("askel", StringComparison.Ordinal))) yield return SaumatonSilmukka.HaeTagi(a.Polku, c);
+            a.Klippi = c; a.Haussa = false;
         }
 
         /// <summary>Satunnainen ladattu muunnelma (sonniss-aanet-v4: lukko-ulko-1-a/b …), muuten vara.</summary>

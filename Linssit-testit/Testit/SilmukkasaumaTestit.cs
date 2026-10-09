@@ -54,6 +54,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(Silmukkasauma.Tapa.Liitos, Silmukkasauma.Valitse(false, 60));
             Oleta.Sama(Silmukkasauma.Tapa.Risti, Silmukkasauma.Valitse(true, 20));      // lokkiparvi, laivat: pakattu
             Oleta.Sama(Silmukkasauma.Tapa.Tavallinen, Silmukkasauma.Valitse(true, 5));
+            Oleta.Sama(Silmukkasauma.Tapa.Liitos, Silmukkasauma.Valitse(true, 6, tagi: true), "pakattu höyrykone 6 s tagilla: hakuton liitos");
+            Oleta.Sama(Silmukkasauma.Tapa.Liitos, Silmukkasauma.Valitse(true, 30, tagi: true));
         }
 
         [Testi] static void LiitosAjastetaanLopunHetkeen()
@@ -66,6 +68,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(Silmukkasauma.LoppuHetki(alku, 10.0, loppu, 44100, 1.25) - (10.0 + 1840675.0 / 44100 / 1.25)) < 1e-9, "sävel");
             Oleta.Tosi(Math.Abs(Silmukkasauma.Kohta(alku, 10.0, 11.0, 44100, 1.25) - (alku + 55125)) < 1e-9, "kohta");
             Oleta.Sama(alku, (long)Silmukkasauma.Kohta(alku, 10.0, 9.0, 44100, 1.0), "ei ennen alkua");
+        }
+
+        [Testi] static void HakutonKaynnistysEnnenLiitosta()
+        {
+            // Loppumusiikki (loppu-silmukka.mp3: Info 2211 kehystä, viive 576, täyte 609): FMOD-alku 2257 → seuraava kierros alkaa
+            // 2257/44100 s ennen liitosta, jolloin sen ensimmäinen kelvollinen näyte soi liitoshetkellä.
+            var t = new AjattelijaTahti.Mp3Tiedot(2211, 1152, 576, 609);
+            var (alku, loppu) = Silmukkasauma.Alue(t, 2212L * 1152);
+            Oleta.Sama(2257L, alku); Oleta.Sama(2545887L, loppu - alku, "ffmpeg:n aukoton pituus");
+            double k = Silmukkasauma.KaynnistysHetki(100.0, alku, 44100, 1.0);
+            Oleta.Tosi(Math.Abs(k + alku / 44100.0 - 100.0) < 1e-12, "alku osuu liitokseen");
+            Oleta.Tosi(Silmukkasauma.KaynnistysHetki(100.0, alku, 44100, 1.0) > 100.0 - Silmukkasauma.EnnakkoS, "ennakko riittää");
         }
 
         [Testi] static void AloitusRajataanAlueelle()

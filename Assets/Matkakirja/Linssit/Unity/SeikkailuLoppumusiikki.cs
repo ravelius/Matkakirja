@@ -46,15 +46,19 @@ namespace Matkakirja.Natiivi
         {
             using (var q = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
             {
-                var dh = (DownloadHandlerAudioClip)q.downloadHandler; dh.streamAudio = true; dh.compressed = true;
+                // Silmukka pakattuna muistiin (ei striimiä): striimattua klippiä ei voi soittaa kahdella lähteellä, ja saumaton jatko
+                // (SaumatonSilmukka, hakuton liitos) tarvitsee kaksi. Data (1,4 Mt) on muistissa kummassakin tavassa (latauspuskuri).
+                var dh = (DownloadHandlerAudioClip)q.downloadHandler; dh.streamAudio = !silmukka; dh.compressed = true;
                 yield return q.SendWebRequest();
                 if (q.result != UnityWebRequest.Result.Success) { kirjaa?.Invoke($"seikkailu: loppumusiikki ei ämpärissä ({q.responseCode})"); lopeta = true; yield break; }
                 var k = DownloadHandlerAudioClip.GetContent(q);
                 if (k == null) { lopeta = true; yield break; }
                 k.name = silmukka ? "Musiikki:loppu-silmukka" : "Musiikki:loppu";
                 SeikkailuAanet.Rekisteroi("musiikki", Id, k.name);
+                if (silmukka) yield return SaumatonSilmukka.HaeTagi(url, k);   // LAME-tagi: kierroksen tarkka alku ja loppu
                 if (lahde == null) lahde = gameObject.AddComponent<AudioSource>();
                 lahde.clip = k; lahde.loop = silmukka; lahde.spatialBlend = 0f; lahde.playOnAwake = false; lahde.volume = taso * SeikkailuAanet.Taso("musiikki", Id);
+                if (silmukka) SaumatonSilmukka.Kiinnita(lahde, pakotaLiitos: true);   // ~53 ms katko jokaisessa saumassa pois (juna 174)
                 lahde.Play();
                 kirjaa?.Invoke($"seikkailu: loppumusiikki alkaa ({k.length:F0} s)");
             }
