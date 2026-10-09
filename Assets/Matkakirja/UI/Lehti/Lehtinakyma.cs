@@ -1775,7 +1775,7 @@ namespace Matkakirja.Natiivi
         /// vuorollaan näkyviin; sivu(i, tekstit) saa samat tekstit kuin kaiutin (SivunTekstit, ilman jatkuvan luennan yläotsikkoa).
         /// Lehti suljetaan lopuksi. Ei lehteä tai aikaraja (20 s) → ei sivuja. Kaupunkilehti (omistaja = kaupunki) tai maalehti (ISO3).
         /// </summary>
-        internal System.Collections.IEnumerator VieLuennat(LehtiLaji laji, string omistaja, Action<int, List<string>> sivuValmis)
+        internal System.Collections.IEnumerator VieLuennat(LehtiLaji laji, string omistaja, Action<int, LehtiSivuLaji, List<string>> sivuValmis)
         {
             var ennen = lehti;
             Nayta(laji, omistaja, null, 0);
@@ -1788,7 +1788,7 @@ namespace Matkakirja.Natiivi
             {
                 if (i != nyt) NaytaSivu(i, 0);
                 yield return null; yield return null;
-                sivuValmis?.Invoke(i, SivunTekstit().ToList());
+                sivuValmis?.Invoke(i, lehti.Sivut[i].Laji, SivunTekstit().ToList());
             }
             lueOtsikko = otsikko;
             Sulje();
