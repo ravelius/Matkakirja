@@ -170,6 +170,16 @@ const KAPPELI_HAHMOT = [
     // 7.10.: sisäsäde 5 → 3,9, paikka lasketaan polvituolin kehyksestä (u −0,75, w 0,98).
     id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: paik(PA, 260, -0.75, 0, 0.98), suunta: 90, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
+    // 9.10. (PT/Siirtoseppä, juna 174, vaihtoehto B): oma rukouskirja käsissä työsilmukassa (polvituoli ja sommittelu ennallaan).
+    // Kirja blender/hahmot/rukouskirja.glb (linna-hahmot/esineet-v1/lahde/rukouskirja.py): origo keskellä, X korkeus 0,21, Y paksuus
+    // 0,04 (+Y etukansi), Z selkämyksestä etureunaan 0,15. Oikea kämmen kannattelee alta (kehys 'kammen': kämmen −Y, sormet +Z,
+    // origo käden luussa): kirjan takakansi kämmentä vasten, korkeus sormien suuntaan. Vasen käsi etukannella etureunan puolella,
+    // kämmen kantta vasten, sormet selkämystä kohti (paikka ja kierto kirjan kehyksessä).
+    kadet: [
+      { tyyppi: 'kanna', kasi: 'r', esine: 'rukouskirja', glb: 'blender/hahmot/rukouskirja.glb', kehys: 'kammen',
+        siirto: [0, -0.035, 0.08], kierto: [0.707107, 0, 0.707107, 0], milloin: 'tyo', paino: 1 },
+      { tyyppi: 'tartu', kasi: 'l', esine: 'rukouskirja', paikka: [0, 0.035, 0.03], kierto: [0, 1, 0, 0], milloin: 'tyo', paino: 1 },
+    ],
     repliikit: [
       { id: 'kappalainen-1', aani: 'kappeli-kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
       { id: 'kappalainen-2', aani: 'kappeli-kappalainen-2', teksti: 'Vahakynttilä on kallis, siksi ne palavat vain messun ajan, eivät päivän mittaa.' },
