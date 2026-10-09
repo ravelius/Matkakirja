@@ -1719,9 +1719,15 @@ namespace Matkakirja.Natiivi
         Kuvasuurennos latausSuurennos;
         const float LatausKuvaOsuus = 0.8f;
 
+        // OMISTAJA TF 169 (9.10.2026 klo 10.0x): "Älä enää avaa niitä melkein koko ruudun kuvia automaattisesti isolle, vaan pidä niitä vain
+        // alareunassa klikattavina" → ei automaattista suurennosta koskaan, ei myöskään latauksen varakuvana. Kohteen kuvat ovat oikean
+        // alareunan kuvakortissa (lisäkuvat, napautus suurentaa) ja kertojan tarinakuvat kuvanostossa (lentävät näkyviin).
+        public static bool LatausKuvaAuto = false;
+
         void LatausKuvaVaihtui(OpasKuva k)
         {
             if (k == null) { if (latausSuurennos?.Auki ?? false) { latausSuurennos.Sulje(); Debug.Log("MATKAKIRJA opas: latauskuva suljettu"); } return; }
+            if (!LatausKuvaAuto) { Debug.Log("MATKAKIRJA opas: latauskuva ei suurennu automaattisesti (TF 169) " + k.Url); return; }
             if (!nakyy || !KuvatPaalla || (suurennos?.Auki ?? false)) return;
             latausSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true, Osuus = LatausKuvaOsuus, Lahentyy = true };
             latausSuurennos.Avaa(new[] { Lehtikuvaksi(k, OpasSovitin.Viimeisin?.Silmukka?.Nykyinen?.Nimi) }, 0);
