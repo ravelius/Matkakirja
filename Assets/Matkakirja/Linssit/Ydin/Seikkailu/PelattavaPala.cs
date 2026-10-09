@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "a41ac10c88688301";
-        public const string Versio = "v45z";   // v45y + historian restaurointivaihe 1961–1975 (9 telineryhmää, Museoviraston kuvat CC BY 4.0; LR 9.10.)
+        public const string Hash = "35b6b52e5705792c";
+        public const string Versio = "v45z";   // v45y + historian restaurointivaihe 1961–1975 (9 telineryhmää; krediitit lahteet-listassa: Museovirasto ja MML CC BY 4.0; LR 9.10.)
     }
 }
