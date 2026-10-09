@@ -1,0 +1,46 @@
+# Karttasepän luovutus 9.10.2026 ilta (noin 18.50, PT:n nollaus 71 %)
+
+## 1. AJOSSA: tekoälypintojen yöajo (T7, irrotettu)
+
+- `aja-yo.sh` (PID 48086, setsid, PPID 1) odottaa, että LR:n ND-etelän palakoe (`tekoaly_palat.py`, PID 96175) ja kaikki `pinta.py`-ajot päättyvät. Sen jälkeen se ajaa
+  `aja-nakymat.py`: **ND** etela, katot, pohjoinen, lansi, apsis, spiira → **KL** etela, ita, lansi, pohjoinen, katot (tunniste v1).
+- Polut (kaikki T7:llä, `/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat/`):
+  - loki `aja-yo.log`: "ALKU", "NÄKYMÄ VALMIS <malli> <näkymä> <polku> <s>", "VIRHE ND/KL", "YÖAJO VALMIS"
+  - tulokset `tulokset/<nd|kl>_<näkymä>_v1.png` (kamera.json ulos_px, LR projisoi) ja `_koko_v1.png` (1 Mpx)
+  - työkansiot `tyo/<nd|kl>_<näkymä>/{tekoaly,tekoaly-pala}` (kopio LR:n `_valmiit/<malli>-v1/codex-ohje/<näkymä>/`-syötteistä, palat täällä)
+  - **tauko:** `touch …/tekoalypinnat/STOP` (pysähtyy mallien välissä). Jatkoa varten valmiit näkymät ohitetaan (koko-tiedosto ja palat jäävät talteen).
+- ComfyUI-palvelin PID 12915 (127.0.0.1:8189, irrotettu). Sammutus vaatii killin → vain omistajan luvalla. LR ei aja rinnakkain.
+- Arvio: noin 20 palaa × 80 s per iso näkymä, 11 näkymää, useita tunteja.
+
+## 2. Tekoälyputki (omistaja hyväksyi kokeen; PT hyväksyi F:n ja G3:n)
+
+- Asennus T7:llä (14 Gt): ComfyUI + venv (Python 3.14, PyTorch 2.14.1, MPS). Mallit: SDXL base 1.0 (RAIL++-M), xinsir ControlNet union promax (Apache-2.0), IP-Adapter plus ViT-H ja CLIP-ViT-H (Apache-2.0), fp16-VAE-korjaus (MIT). Vain safetensors. `LAHTEET.md`, `LUEMINUT.md` (komennot ja mittaustaulukot).
+- Työkalut (T7 ja PR #4256 `tools/tekoalypinnat/`):
+  - `pinta.py`: syvyys + reunat (+ viite) → kuva. Valinnat --tile, --pohja/--denoise (img2img), --reunat-loppu, --valaistus pilvinen (oletus). Välimuistit ja temp T7:lle.
+  - `viivat.py`: puhdas viivaohjaus = syvyysreunat + ikkunoiden ääriviivat (LR:n `<nimi>_ikkunat.png`, muuten värintunnistus).
+  - `savy.py`: kanavittainen kerroin lineaarisessa valossa materiaalimaskin mediaanista kohteeseen (KL rappaus 153/146/131, LS2:n valokuvamittaus).
+  - `kokoa.py`: F (valokuva) + L (renderi pohjana, denoise 0,45, tile 0,6) → lukitut materiaalit L:stä tai renderistä, muu F:stä, sitten sävy materiaaleittain. `--siivous` 1 puhtailla maskeilla.
+- Tulokset (KL perspektiivi, `_tyo/karttaseppa/tekoalypinnat-koe/`): G3 = ikkunat 99,5/99,0 % ±3 px, rappaus 153/146/131, siipikatot vihreät, paneelit renderistä, kiilto 0. PT:n kuvat `pt-*-G3.jpg`.
+- **Kesken KL-ajon jälkeen:** jälkikäsittely luokat.png:llä (LR:n LUOKAT): seina 226,219,201 → savy 153/146/131. Paneeli 52,62,92 lukitaan pohjasta. Katto 138,154,160 sisältää sekä pellin että kuparin, joten kupari erotellaan pohja.png:n vihreästä (tai pyydä LR:ltä ortomateriaali-ID).
+- **ND:** vertailu nykyinen | Codex | uusi (kulma ja versio kuvaan) PT:lle, kun LR on projisoinut ND:n. PT: julkisivut noin 25 px/m, katot sileäksi harmaaksi lyijyksi pystysaumoin, ei tummia raitoja.
+- Jonon lopussa: Olavinlinnan seinä 1 (LR:n `olavinlinna-codex-ohje-v25/`, syöksytorvi poistettu), sitten viisi pahinta kohtaa 1499-asussa.
+
+## 3. Ämpäriin viety tänään (Julkaisija)
+
+- talvi/v1 (MGRS-ruututasaus, ei Iberiaa) 13.45. LS2 kytki junaan 173.
+- vesi index-v4 (pienet altaat pois) 07.40, **index-v5** (40 km, Tukholma kauko2 48 m) 17.10. LS2 kytkee Natiivisepän ehdoilla.
+- kaukomaa/v1 (S2-kesä z11–z13, Pariisi ja Tukholma) 17.23, **kaukomaa/yo-v1** (Black Marble × WorldCover) 18.03.
+- **Julkaisijalla viennissä:** kaukomaa/v1p ja yo-v1p (LS2:n paikallinen tiling scheme, sisältö tavulleen sama). Kerro LS2:lle, kun ne ovat valmiit.
+
+## 4. Muut tämän päivän toimitukset
+
+- LR: Vasa-museon lähdepaketti (`_tyo/karttaseppa/vasamuseet/`, mastoja ei OSM:ssä).
+- LS1: liput-<id>.json (lipputangot) ja kohteet-<id>.json:iin kirkot, kahvilat ja hallit (junaan 173).
+- LS2: ilmakehätaulukot kaupungeittain ja vuodenajoittain AERONETista (`_tyo/karttaseppa/ilmakeha-aerosoli-20261009/`). LS2:n utu-A/B jonossa, vienti vasta hyväksynnän jälkeen.
+- Kaukomaa v2 (vuodenajat) jätettiin tekemättä, koska pallossa ei ole vuodenaikaa (PT samaa mieltä).
+- PR:t #3105 ja #3108 suljettu (vanhentuneet). PR #4256 (kaikki tämän päivän työkalut) on auki Julkaisijan junaan. Worktree on poistettu, ja haara on pushattu.
+
+## 5. Odottaa muita
+
+- Geotorget-tunnus (omistaja): tilaa Markhöjdmodell grid 1+ ja Laserdata skog (CC0) sekä Ortofoto vain, jos se on maksuton. Tunnukset `LM_GEOTORGET_USER/PASS` tiedostoon `~/.matkakirja-avaimet-koodaus.zsh`. Lataus STAC-rajapinnasta api.lantmateriet.se/stac-hojd/v1 ja stac-bild/v1.
+- Notre-Damen LiDAR HD -pistepilveä ei pyydetä nyt (PT).
