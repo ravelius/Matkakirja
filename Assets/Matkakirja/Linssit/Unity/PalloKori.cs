@@ -141,6 +141,7 @@ namespace Matkakirja.Natiivi
             if (juuri != null) juuri.gameObject.SetActive(paalla);
             if (overlay != null) overlay.enabled = paalla;
             if (kooste != null) kooste.enabled = paalla;
+            if (!paalla) { sadeKangas?.Hiljaa(); sadeKori?.Hiljaa(); }
             historia = 0;
             if (paalla) RenderPipelineManager.beginCameraRendering += EnnenPiirtoa;
             else RenderPipelineManager.beginCameraRendering -= EnnenPiirtoa;
@@ -169,6 +170,7 @@ namespace Matkakirja.Natiivi
             if (liekkiMat != null) Object.Destroy(liekkiMat);
             liekki = null; liekkiMat = null;
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
+            sadeKangas = sadeKori = null;   // lähteet olivat overlayn oliossa
         }
 
         void Luo(Camera kamera)
@@ -232,7 +234,26 @@ namespace Matkakirja.Natiivi
             aani = go.AddComponent<AudioSource>();
             aani.playOnAwake = false; aani.spatialBlend = 0f; aani.loop = false;
             RekisteroiAanet();
+            sadeKangas = new ElavaSilmukka(go.transform, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKangas, false);
+            sadeKori = new ElavaSilmukka(go.transform, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKori, false);
             KytkeAanimaisema(true);
+        }
+
+        // SADE KANKAALLE JA KORILLE (Linssiseppä 9.10., PT junaan 172; Pelikoodarin pallo-elava-v2, ElavaAaniPankki): kuurojen ja sadesään
+        // aikana lähiäänenä kaksi silmukkaa (2D: sade kuuluu koko kuvun ympäriltä), taso kerroin × voima, voima = max(oppaan kuuro,
+        // käsin pakotettu kuuro, sään sade); liukuva häivytys SadeHaivytysS. Taso OpasAanitasot.Maisema (maiseman Taso, väistö) ×
+        // mikserin Kerroin("saa", kori.sade-*). Äänimaisema-kytkin pois tai kori piilossa → hiljaa. Puuttuva ääni = hiljaisuus.
+        ElavaSilmukka sadeKangas, sadeKori;
+        void PaivitaSade(float dt)
+        {
+            if (sadeKangas == null || sadeKori == null) return;
+            ElavaAaniPankki.Kaynnista();
+            bool paalla = Asetukset.Paalla(Kytkin.Aanimaisema), vaisto = OpasSovitin.OpasAaniSoi;
+            double voima = paalla ? Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeVoima(System.Math.Max(OpasSovitin.KuuroVoima, Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima), KaupunkiKuva.Saa.Sade) : 0;
+            float S(double kerroin, string tunnus) => voima <= 0 ? 0f : (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(kerroin * voima, vaisto) * ElavaAaniPankki.Kerroin(tunnus);
+            float aika = (float)Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeHaivytysS;
+            sadeKangas.Paivita(S(Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKangasTaso, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKangas), dt, aika);
+            sadeKori.Paivita(S(Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKoriTaso, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKori), dt, aika);
         }
 
         static AudioClip Leike(string nimi)
@@ -956,6 +977,7 @@ namespace Matkakirja.Natiivi
             PaivitaKoydet(dt, aOikea, aEteen);
             PaivitaKompassi(dt);
             Aanet(new Vector2(aEteen, aOikea).magnitude, v.y);
+            PaivitaSade(dt);
             var kKori = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
             koriKaanto.localRotation = kKori; koysiKaanto.localRotation = kKoysi;

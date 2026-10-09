@@ -178,6 +178,20 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Lähimmän näkyvän lipun kankaan etäisyys kamerasta (m, float.MaxValue = ei lippua) ja paikka paketin ENU:ssa
+        /// (lipun lepatus, ElavaKaupunki; elävät äänet v2).</summary>
+        public float LahinLippu(Vector3 c, out Vector3 paikka)
+        {
+            paikka = default; float paras = float.MaxValue;
+            if (kankaat == null || !LiputPaalla) return paras;
+            for (int i = 0; i < LippuNakyy; i++)
+            {
+                var p = kankaat[i].localPosition; float d = (p - c).sqrMagnitude;
+                if (d < paras) { paras = d; paikka = p; }
+            }
+            return paras < float.MaxValue ? Mathf.Sqrt(paras) : paras;
+        }
+
         public string Tila() =>
             $"savu {SavuNakyy}/{Math.Min(raja, d.Savuavia)} näkyy ({d.Savuavia}/{d.Piiput.Count} piippua savuaa, {(SavuPaalla ? "päällä" : "pois")}), " +
             $"liput {LippuNakyy}/{Math.Min(raja, d.Liput.Count)} näkyy ({d.Liput.Count} tankoa, {(LiputPaalla ? "päällä" : "pois")}), " +
