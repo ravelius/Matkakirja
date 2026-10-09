@@ -98,7 +98,12 @@ namespace Matkakirja.Linssit.Testit
                 if (a < 0 || b <= a) continue;
                 var (pe, pn) = Enu(c, c.Kohteet[i]);
                 double kulma = 0;
-                for (int k = a + 1; k <= b; k++)
+                // Kokonaiskierto: lennon loppuosan kaari (OpasSilmukka.PalloLentoKaariS ennen saapumista) + pysähdys.
+                int a0 = Math.Max(1, a - (int)(OpasSilmukka.PalloLentoKaariS / Dt));
+                // Vain kohteen lähellä (vaakaetäisyys ≤ 1,5 × saapuminen): lähestymisen geometria ei ole kiertoa.
+                double ra = Math.Sqrt(Math.Pow(r[a].E - pe, 2) + Math.Pow(r[a].N - pn, 2));
+                while (a0 < a && Math.Sqrt(Math.Pow(r[a0].E - pe, 2) + Math.Pow(r[a0].N - pn, 2)) > 1.5 * ra) a0++;
+                for (int k = a0 + 1; k <= b; k++)
                 {
                     double d = Math.Atan2(r[k].N - pn, r[k].E - pe) - Math.Atan2(r[k - 1].N - pn, r[k - 1].E - pe);
                     d -= 2 * Math.PI * Math.Floor((d + Math.PI) / (2 * Math.PI)); kulma += d;
@@ -154,7 +159,9 @@ namespace Matkakirja.Linssit.Testit
                 var m = MittaaKaari(c);
                 Console.WriteLine($"      {m.Kaupunki}: {m.Pysahdyksia} pysähdystä, kierto ka {m.KiertoKa:F0}° (max {m.KiertoMax:F0}°), etäisyys −{100 * m.EtMuutos:F0} %, korkeus −{100 * m.KorkeusMuutos:F0} %, lennon nousu enintään {m.NousuMax:F0} m ({m.NousuKohta})");
                 // Ennen 9.10. (juna 168): kierto ka 4–9° (max 6–16°), ei laskua; lennon nousu Pariisissa 1 320 m (sumennusnosto).
-                Oleta.Tosi(m.KiertoMax >= 15, $"{m.Kaupunki}: pisin kohdekaari {m.KiertoMax:F0}° (≥ 15°)");
+                // a3ad152f5: pysähdyksen kaari 6–13°; nyt kaari alkaa jo lennon loppuosalla (kokonaiskierto).
+                Oleta.Tosi(m.KiertoKa >= 40, $"{m.Kaupunki}: kokonaiskierto kohteen ympäri keskimäärin {m.KiertoKa:F0}° (≥ 40°; Päätoimittaja 45–90°)");
+                Oleta.Tosi(m.KiertoMax <= 100, $"{m.Kaupunki}: suurin kokonaiskierto {m.KiertoMax:F0}° (≤ 100°)");
                 Oleta.Tosi(m.KorkeusMuutos > 0, $"{m.Kaupunki}: pallo laskeutuu pysähdyksellä ({100 * m.KorkeusMuutos:F1} %)");
                 Oleta.Tosi(m.NousuMax <= 150, $"{m.Kaupunki}: lennon nousu enintään {m.NousuMax:F0} m ({m.NousuKohta}; ≤ 150)");
             }
@@ -233,6 +240,8 @@ namespace Matkakirja.Linssit.Testit
                     double da = Pit(Ero(Ero(V(r, k + 2), V(r, k + 1)), Ero(V(r, k - 1), V(r, k - 2)))) / Dt;
                     t.SaumaDv = Math.Max(t.SaumaDv, dv); t.SaumaDa = Math.Max(t.SaumaDa, da);
                     if (dv > 0.1 || da > 1) t.Viat.Add($"{vk} {r[k].T:F1} s {(nyt ? "lähtö" : "lasku")} Δv {dv:F2} m/s Δa {da:F2} m/s²");
+                    if ((dv > 0.1 || da > 1) && Environment.GetEnvironmentVariable("NYK_DEBUG") == c.Id && r[k].T < 60)
+                        for (int q = k - 4; q <= k + 4; q++) Console.WriteLine($"        sauma {r[q].T:F2} {r[q].Vaihe} v {Pit(V(r, q)):F2} suunta {r[q].Suunta:F2} et {r[q].EtM:F1} u {r[q].U:F1}");
                 }
                 // Kääntö ja kokonaiskierto (ei siirtojen hyppyjä).
                 double kierto = 0;
@@ -245,7 +254,7 @@ namespace Matkakirja.Linssit.Testit
                 }
                 t.Kierto = Math.Max(t.Kierto, kierto);
             }
-            if (t.Kaanto > OpasSilmukka.PalloKaantoAstS + 0.2) t.Viat.Add($"kääntö {t.Kaanto:F1} °/s");
+            if (t.Kaanto > OpasSilmukka.PalloKaantoAstS + 0.2) t.Viat.Add($"kääntö {t.Kaanto:F1} °/s ({t.KaantoKohta})");
             if (t.Perilla < c.Kohteet.Length) t.Viat.Add($"perillä {t.Perilla}/{c.Kohteet.Length}");
             return t;
         }
