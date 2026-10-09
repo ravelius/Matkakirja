@@ -629,6 +629,67 @@ namespace Matkakirja.Natiivi
         int jaksoTaukoNahty;
         float jaksoTaukoLoppuu;
 
+        // --- KAUPUNKI-INTRO (Pariisin nykyintro, kohta 4): musiikin ajoitus intron kohtaukseen 1 ---------------------------
+        /// <summary>
+        /// Intron musiikkitahti alkaa: nopea kappale soi (t0 = sen todellinen alku, myös jo soivasta laskettuna). Intro aloittaa
+        /// kohtauksen 1 tästä ruudusta. Argumentti: kaupunki ja nopean kappaleen kohta sekunteina (0 = juuri alkoi).
+        /// </summary>
+        public static event Action<string, float> KaupunkiIntroAlkoi;
+        string introKaupunki, introUrl;
+        float introKatkoS, introHaivytysS, introHidasS, introT0 = -1f;
+        bool introKatkottu, introHidasAlkoi;
+
+        /// <summary>
+        /// Intro pyytää kaupunkijakson ajoitusta: nopea katkeaa katkoS:ssä (häivytys haivytysS) ja hidas alkaa hidasS:ssä ilman
+        /// jakson taukoa. Kutsutaan saapumisen yhteydessä (ennen tai jälkeen Paikka-tapahtuman); false = kaupungilla ei jaksoa.
+        /// </summary>
+        public bool KaupunkiIntro(string kaupunki, float katkoS = 31f, float haivytysS = 2f, float hidasS = 32f)
+        {
+            var polku = Tila?.JaksonNopea(kaupunki);
+            if (polku == null) return false;
+            introKaupunki = kaupunki; introUrl = AaniOsoite.Url(polku);
+            introKatkoS = katkoS; introHaivytysS = haivytysS; introHidasS = hidasS;
+            introT0 = -1f; introKatkottu = introHidasAlkoi = introOhita = false;
+            return true;
+        }
+
+        /// <summary>
+        /// Intron ohitus (napautus hyppää kohtaukseen 7 eli siirtymään vanhaan): musiikki tekee heti saman kuin katkoS:ssä, eli
+        /// nopean häivytys alkaa nyt ja hidas alkaa (hidasS − katkoS) myöhemmin. Toimii missä tahansa intron kohdassa, myös ennen
+        /// kuin nopea on alkanut soida (KaupunkiIntroAlkoi ei silloin enää laukea). false = intro ei ole käynnissä.
+        /// </summary>
+        public bool KaupunkiIntroOhita()
+        {
+            if (introKaupunki == null) return false;
+            introOhita = true;
+            return true;
+        }
+        bool introOhita;
+
+        void PaivitaIntro(float nyt, Action<Action> tee)
+        {
+            if (introKaupunki == null) return;
+            var l = nykyiset[(int)Kanava.Pohja];
+            if (introOhita)
+            {
+                introOhita = false;
+                // Siirretään intron kello niin, että katko on tässä ruudussa; jo tehty katko ei toistu, hidas tulee ajallaan.
+                if (!introKatkottu) introT0 = nyt - introKatkoS;
+                Debug.Log($"MATKAKIRJA aani: kaupunki-intro {introKaupunki} ohitettu");
+            }
+            if (introT0 < 0f)
+            {
+                if (l == null || !l.Kaynnistetty || l.A == null || l.Url != introUrl) return;
+                introT0 = nyt - l.A.time;
+                string k = introKaupunki; float kohta = l.A.time;
+                tee(() => KaupunkiIntroAlkoi?.Invoke(k, kohta));
+                Debug.Log($"MATKAKIRJA aani: kaupunki-intro {k} alkoi (nopea {kohta:0.00} s)");
+            }
+            float s = nyt - introT0;
+            if (!introKatkottu && s >= introKatkoS) { introKatkottu = true; int ms = (int)(introHaivytysS * 1000); tee(() => Tila.JaksonIntroKatko(ms)); }
+            if (!introHidasAlkoi && s >= introHidasS) { introHidasAlkoi = true; tee(() => Tila.JaksonIntroHidas()); introKaupunki = null; }
+        }
+
         void Update()
         {
             if (jaassa || Tila == null) return;
@@ -640,6 +701,7 @@ namespace Matkakirja.Natiivi
             // Kaupunkijakson tauko (AaniTila.JaksonTaukoNro/Ms): ajastus täällä, siirtymä hitaaseen kappaleeseen koneessa.
             if (Tila.JaksonTaukoNro != jaksoTaukoNahty) { jaksoTaukoNahty = Tila.JaksonTaukoNro; jaksoTaukoLoppuu = nyt + Tila.JaksonTaukoMs / 1000f; }
             if (jaksoTaukoLoppuu > 0 && nyt >= jaksoTaukoLoppuu) { jaksoTaukoLoppuu = 0; int nro = jaksoTaukoNahty; Tee(() => Tila.JaksonTaukoOhi(nro)); }
+            PaivitaIntro(nyt, Tee);
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
             for (int i = elavat.Count - 1; i >= 0; i--)

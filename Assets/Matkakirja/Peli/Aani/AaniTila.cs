@@ -477,6 +477,29 @@ namespace Matkakirja.Peli
             KaynnistaPohja(musiikinPaikka, musiikinMaa);
         });
 
+        /// <summary>
+        /// KAUPUNKI-INTRON KATKO (Pariisin nykyintro, docs/kohtaukset/pallokierros/pariisi-nykyintro.md kohta 4): nopea kappale
+        /// häivytetään haivytysMs:ssä ja jakso jää taukoon ilman ajastinta; JaksonIntroHidas aloittaa hitaan (ei 3 s:n taukoa).
+        /// Soitin kutsuu nämä intron ajoista (Aanisoitin.KaupunkiIntro). Muualla kuin jakson nopeassa vaiheessa ei tee mitään.
+        /// </summary>
+        public void JaksonIntroKatko(int haivytysMs) => Tee(() =>
+        {
+            if (jaksoKaupunki == null || jaksoVaihe != 0) return;
+            jaksoVaihe = 1;
+            LopetaPohja(haivytysMs);
+        });
+
+        public void JaksonIntroHidas() => Tee(() =>
+        {
+            if (jaksoKaupunki == null || jaksoVaihe != 1) return;
+            jaksoVaihe = 2;
+            KaynnistaPohja(musiikinPaikka, musiikinMaa);
+        });
+
+        /// <summary>Jakson nopean kappaleen polku kaupungille (soittimen intro-ajastus tunnistaa sen), tai null.</summary>
+        public string JaksonNopea(string kaupunki) =>
+            kaupunki != null && t.Jaksot.TryGetValue(kaupunki, out var j) && j.Nopea != null ? t.MusaPolku(j.Nopea) : null;
+
         /// <summary>Portin "Aloita seikkailu" (true) ja intron loppu / eteneminen kartalle (false).</summary>
         public void Avaus(bool alkaa) => Tee(() =>
         {
