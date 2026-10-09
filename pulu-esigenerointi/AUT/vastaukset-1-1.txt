@@ -28,7 +28,7 @@ Kuinka paljon Alpit nousevat vielä nykyään?
 
 ### 1.5
 KYSYMYS: Mikä on sembramänty?
-Ai se. Sembramänty on havupuu, joka kasvaa Alpeilla korkealla puurajan tuntumassa, jossa talvet ovat ankaria ja kasvukausi lyhyt. Se on hidaskasvuinen ja voi elää hyvin vanhaksi, ja sen neulaset kasvavat viiden kimpuissa. Puun siemenet ovat syötäviä, ja niitä on kerätty ruoaksi, kun taas sen tiivis ja tuoksuva puu on ollut suosittua puuseppien ja veistäjien käytössä. Alppien kansanperinteessä se on tuttu puu, mutta sen tarkempaa levinneisyyttä en osaa muistista varmasti sanoa. Minä olen istunut sen oksalla, ja se tuoksui ihan hyvälle.
+Ai se. Sembramänty on havupuu, joka kasvaa [[Alpeilla]] korkealla [[puurajan]] tuntumassa, jossa talvet ovat ankaria ja kasvukausi lyhyt. Se on hidaskasvuinen ja voi elää hyvin vanhaksi, ja sen neulaset kasvavat viiden kimpuissa. Puun siemenet ovat syötäviä, ja niitä on kerätty ruoaksi, kun taas sen tiivis ja tuoksuva puu on ollut suosittua puuseppien ja veistäjien käytössä. Alppien kansanperinteessä se on tuttu puu, mutta sen tarkempaa levinneisyyttä en osaa muistista varmasti sanoa. Minä olen istunut sen oksalla, ja se tuoksui ihan hyvälle.
 JATKOT:
 Mitä puurajalla tarkoitetaan?
 Mitkä eläimet käyttävät sembramännyn siemeniä ravinnokseen?
@@ -116,28 +116,28 @@ Mihin Sveitsin joet muuten laskevat?
 
 ### 4.2
 KYSYMYS: Miksi Inn on niin vetinen?
-Ai se. Inn on virtaamaltaan Tonavan kolmanneksi suurin sivujoki, ja syy on sen alkuperässä korkealla vuoristossa. Joen valuma-alue ulottuu aina [[Piz Berninan]] huipulle 4 049 metriin asti, ja sinne sataa ja kertyy runsaasti lunta ja jäätä. Kun lumi ja jäätiköt sulavat, vesi virtaa jokeen, ja sateet täydentävät virtaamaa. Alppien joet ovat usein vuodenajan mukaan hyvin vaihtelevia: keväällä ja alkukesällä sulamisvesi nostaa virtaamaa, vaikka tarkkoja lukuja en uskalla muistista sanoa. Vettä siis riittää.
+Ai se. Inn on virtaamaltaan [[Tonavan]] kolmanneksi suurin sivujoki, ja syy on sen alkuperässä korkealla vuoristossa. Joen valuma-alue ulottuu aina [[Piz Berninan]] huipulle 4 049 metriin asti, ja sinne sataa ja kertyy runsaasti lunta ja jäätä. Kun lumi ja [[jäätiköt]] sulavat, vesi virtaa jokeen, ja sateet täydentävät virtaamaa. Alppien joet ovat usein vuodenajan mukaan hyvin vaihtelevia: keväällä ja alkukesällä sulamisvesi nostaa virtaamaa, vaikka tarkkoja lukuja en uskalla muistista sanoa. Vettä siis riittää.
 JATKOT:
 Miten Alppien jokien virtaama vaihtelee vuodenaikojen mukaan?
 Mihin Inn yhtyy Tonavaan?
 
 ### 4.3
 KYSYMYS: Mitä tapahtuu, kun Inn yhtyy Tonavaan?
-No jopas, tämä on mukava kysymys. Inn yhtyy Tonavaan [[Passaussa]] Saksassa lähellä Itävallan rajaa. Kaupunki on tunnettu siitä, että siinä kohtaavat kolme jokea: Tonava, Inn ja pienempi Ilz. Vesien värit poikkeavat toisistaan, joten joet näyttävät kulkevan hetken rinnakkain ennen kuin ne sekoittuvat. Inn tuo mukanaan lähteiden mukaan jopa enemmän vettä kuin Tonava, vaikka en ole varma tarkoista luvuista. Yhdistyneenä joki jatkaa kohti Itävaltaa ja edelleen kohti Mustaamerta. Se on kaunis näky ylhäältä.
+No jopas, tämä on mukava kysymys. Inn yhtyy Tonavaan [[Passaussa]] Saksassa lähellä Itävallan rajaa. Kaupunki on tunnettu siitä, että siinä kohtaavat kolme jokea: Tonava, Inn ja pienempi [[Ilz]]. Vesien värit poikkeavat toisistaan, joten joet näyttävät kulkevan hetken rinnakkain ennen kuin ne sekoittuvat. Inn tuo mukanaan lähteiden mukaan jopa enemmän vettä kuin Tonava, vaikka en ole varma tarkoista luvuista. Yhdistyneenä joki jatkaa kohti Itävaltaa ja edelleen kohti [[Mustaamerta]]. Se on kaunis näky ylhäältä.
 JATKOT:
 Miksi joet voivat näyttää eriväristen vetensä takia?
 Mitä Passaussa on nähtävää?
 
 ### 4.4
 KYSYMYS: Mikä on Piz Bernina?
-Joo, tän minä tiedän. Piz Bernina on Sveitsin Graubündenin kantonissa sijaitseva vuori, jonka huippu on 4 049 metrissä. Se kuuluu [[Bernina-ryhmään]] lähellä Italian rajaa, ja sen rinteillä on jäätiköitä. Siitä lähtevät vedet kuuluvat Inn-joen valuma-alueeseen, joten sen lumet ja jäät päätyvät lopulta Tonavaa pitkin Mustaanmereen. Vuori on suosittu kiipeilykohde, mutta sen tarkkaa asemaa Alppien vuorten joukossa en muista varmasti. Korkealle se ainakin nousee.
+Joo, tän minä tiedän. Piz Bernina on Sveitsin [[Graubündenin]] kantonissa sijaitseva vuori, jonka huippu on 4 049 metrissä. Se kuuluu [[Bernina-ryhmään]] lähellä Italian rajaa, ja sen rinteillä on jäätiköitä. Siitä lähtevät vedet kuuluvat Inn-joen valuma-alueeseen, joten sen lumet ja jäät päätyvät lopulta Tonavaa pitkin [[Mustaanmereen]]. Vuori on suosittu kiipeilykohde, mutta sen tarkkaa asemaa Alppien vuorten joukossa en muista varmasti. Korkealle se ainakin nousee.
 JATKOT:
 Miten Alppien huiput luokitellaan neljänsadan metrin ryhmiin?
 Millaisia jäätiköitä Bernina-ryhmässä on?
 
 ### 4.5
 KYSYMYS: Mikä on vedenjakaja?
-Tuota niin. Vedenjakaja on maanpinnan korkeampi kohta tai harjanne, joka erottaa toisistaan eri suuntiin virtaavat vedet. Kun sade tai sulamisvesi putoaa vedenjakajan toiselle puolelle, se virtaa yhteen jokijärjestelmään, ja toiselle puolelle pudonnut vesi virtaa toiseen. Alpeilla vedenjakajat ovat selvästi nähtävissä: yhdet vedet päätyvät [[Pohjanmerelle]], toiset Välimerelle ja Adrianmerelle, ja jotkin, kuten Engadinin vedet, Mustallemerelle. Vedenjakaja ei ole aina korkeimman huipun kohdalla, vaan se voi kulkea myös matalan solan kautta. Maastokartalta se näkyy parhaiten.
+Tuota niin. Vedenjakaja on maanpinnan korkeampi kohta tai harjanne, joka erottaa toisistaan eri suuntiin virtaavat vedet. Kun sade tai sulamisvesi putoaa vedenjakajan toiselle puolelle, se virtaa yhteen jokijärjestelmään, ja toiselle puolelle pudonnut vesi virtaa toiseen. Alpeilla vedenjakajat ovat selvästi nähtävissä: yhdet vedet päätyvät [[Pohjanmerelle]], toiset [[Välimerelle]] ja Adrianmerelle, ja jotkin, kuten [[Engadinin]] vedet, Mustallemerelle. Vedenjakaja ei ole aina korkeimman huipun kohdalla, vaan se voi kulkea myös matalan solan kautta. Maastokartalta se näkyy parhaiten.
 JATKOT:
 Mitkä ovat Euroopan suuret vedenjakajat?
 Mitä tarkoittaa valuma-alue?
@@ -160,7 +160,7 @@ Keitä kelttiläiset kansat olivat?
 
 ### 5.3
 KYSYMYS: Kuka oli Johann Georg Ramsauer?
-Kas vaan. Johann Georg Ramsauer oli kaivosmies, joka löysi vuonna 1846 Salzbergin kaivosten läheltä suuren esihistoriallisen [[kalmiston]]. Hän kaivoi sitä 1800-luvun jälkipuoliskon ajan, ja kaivauksista tuli lopulta 1 045 hautaa. Löydöt toivat Hallstattin kaupungin kuuluisaksi kautta Euroopan ja antoivat nimen koko varhaisen rautakauden kulttuurille. Itse asuinpaikkaa ei ole kuitenkaan löydetty, ja se saattaa olla myöhemmän kylän alla. Ramsauerin tarkasta virka-asemasta en ole varma, joten jätän sen sanomatta. Aika monta hautaa yhdeltä mieheltä.
+Kas vaan. Johann Georg Ramsauer oli kaivosmies, joka löysi vuonna 1846 Salzbergin kaivosten läheltä suuren esihistoriallisen [[kalmiston]]. Hän kaivoi sitä 1800-luvun jälkipuoliskon ajan, ja kaivauksista tuli lopulta 1 045 hautaa. Löydöt toivat [[Hallstattin]] kaupungin kuuluisaksi kautta Euroopan ja antoivat nimen koko varhaisen [[rautakauden]] kulttuurille. Itse asuinpaikkaa ei ole kuitenkaan löydetty, ja se saattaa olla myöhemmän kylän alla. Ramsauerin tarkasta virka-asemasta en ole varma, joten jätän sen sanomatta. Aika monta hautaa yhdeltä mieheltä.
 JATKOT:
 Miten arkeologit kaivavat ja dokumentoivat hautoja?
 Mitä Hallstattin haudoista on löytynyt?

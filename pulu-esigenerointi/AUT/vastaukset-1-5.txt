@@ -46,7 +46,7 @@ PAIKKA: Zell am See | 47.32 | 12.80 | kaupunki
 
 ### 22.2
 KYSYMYS: Miksi kaupunki on hiihtokeskus?
-Sepä sattui: tästä minulla on näkemys. Zell am See sijaitsee Kitzbühelin Alpeilla, ja kaupungin kotivuori [[Schmittenhöhe]] kohoaa 1 965 metrin korkeuteen. Vuoristo tarjoaa rinteet ja Zellinjärven ranta kesän vetovoiman, joten kaupunki on tärkeä matkailukohde ympäri vuoden. Se on ollut Euroopan aateliston suosima talvi- ja kesäpaikka jo 1800-luvulta lähtien, mikä on vakiinnuttanut sen aseman lomakohteena.
+Sepä sattui: tästä minulla on näkemys. Zell am See sijaitsee Kitzbühelin Alpeilla, ja kaupungin kotivuori [[Schmittenhöhe]] kohoaa 1 965 metrin korkeuteen. Vuoristo tarjoaa rinteet ja [[Zellinjärven]] ranta kesän vetovoiman, joten kaupunki on tärkeä matkailukohde ympäri vuoden. Se on ollut Euroopan aateliston suosima talvi- ja kesäpaikka jo 1800-luvulta lähtien, mikä on vakiinnuttanut sen aseman lomakohteena.
 
 Minä pidän eniten kesästä, koska torilla pudonneet muruset ovat silloin suurempia. Mut hiihtäjiä katson kyllä mielelläni katolta, kun he laskevat rinnettä alas.
 JATKOT:
@@ -128,7 +128,7 @@ Mistä Ybbs-joki saa alkunsa?
 
 ### 24.3
 KYSYMYS: Mitä ovat Pohjoiset kalkkialpit?
-Tuota niin. [[Pohjoiset kalkkialpit]] ovat Itäisten Alppien vuoristoryhmä, joka kulkee Itävallan halki idästä länteen ja jonka kivilaji on pääosin kalkkikiveä. Kalkkikivi liukenee veteen hitaasti, mikä muovaa vuoristoon rotkoja, luolia ja karstimaisemia. Ötscher ja sen ympäristö kuuluvat tähän vyöhykkeeseen. Tarkat rajat ja huippujen määrät en ole varma, joten jätän ne mainitsematta. Siinä tuli kalkkia.
+Tuota niin. Pohjoiset kalkkialpit ovat [[Itäisten Alppien]] vuoristoryhmä, joka kulkee Itävallan halki idästä länteen ja jonka kivilaji on pääosin [[kalkkikiveä]]. Kalkkikivi liukenee veteen hitaasti, mikä muovaa vuoristoon rotkoja, luolia ja karstimaisemia. [[Ötscher]] ja sen ympäristö kuuluvat tähän vyöhykkeeseen. Tarkat rajat ja huippujen määrät en ole varma, joten jätän ne mainitsematta. Siinä tuli kalkkia.
 JATKOT:
 Miten karstimaisemat syntyvät?
 Mitä muita vuoristoja Itävallassa on?
@@ -142,7 +142,7 @@ Mikä erottaa Alppien korkeimmat huiput?
 
 ### 24.5
 KYSYMYS: Miksi Itävallassa on slaavilaisperäisiä paikannimiä?
-Hetkinen ny. Slaavilaisia paikannimiä esiintyy Itävallassa, koska slaavilaisia kieliä puhuvia ryhmiä asettui itäisten Alppien alueelle varhaiskeskiajalla. Myöhemmin alueen väestö siirtyi vähitellen saksankieliseksi, mutta paikannimet säilyivät. Ötscherin nimi on esimerkki tästä: sillä on slaavilaiset juuret. Tarkoista ajankohdista ja ryhmistä en ole varma, joten annan vain yleiskuvan. [[Ala-Itävalta]] on yksi alueista, joilla tällaisia nimiä on.
+Hetkinen ny. Slaavilaisia paikannimiä esiintyy Itävallassa, koska slaavilaisia kieliä puhuvia ryhmiä asettui itäisten Alppien alueelle varhaiskeskiajalla. Myöhemmin alueen väestö siirtyi vähitellen saksankieliseksi, mutta paikannimet säilyivät. [[Ötscherin]] nimi on esimerkki tästä: sillä on slaavilaiset juuret. Tarkoista ajankohdista ja ryhmistä en ole varma, joten annan vain yleiskuvan. [[Ala-Itävalta]] on yksi alueista, joilla tällaisia nimiä on.
 
 Minun sukuni on kantanut kirjeitä monen kielen alueilla, ja paikannimet ovat aina kertoneet enemmän kuin postimerkit. Mut sitä en uskalla sanoa, kuinka monta nimeä on slaavilaisia.
 JATKOT:
@@ -158,21 +158,21 @@ Mikä on Hohe Tauernin kansallispuisto?
 
 ### 25.2
 KYSYMYS: Kuka nousi huipulle ensimmäisenä?
-Joo, tän minä tiedän. Ensimmäinen onnistunut nousu Großvenedigerin huipulle tehtiin 3. syyskuuta 1841 Josef Schwabin johdolla. Mukana oli kirjailija ja vuorikiipeilijä [[Ignaz von Kürsinger]]. Vuori on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin ja Salzburgin rajalla, ja se on jäätikön peittämä. Aiemmista yrityksistä en ole varma, joten sanon vain onnistuneesta noususta. Ylhäältä kyyhky ei kiipeä, vaan lentää.
+Joo, tän minä tiedän. Ensimmäinen onnistunut nousu Großvenedigerin huipulle tehtiin 3. syyskuuta 1841 [[Josef Schwabin]] johdolla. Mukana oli kirjailija ja vuorikiipeilijä [[Ignaz von Kürsinger]]. Vuori on Venediger-ryhmän päähuippu [[Hohe Tauernin]] vuoristossa Tirolin ja Salzburgin rajalla, ja se on jäätikön peittämä. Aiemmista yrityksistä en ole varma, joten sanon vain onnistuneesta noususta. Ylhäältä kyyhky ei kiipeä, vaan lentää.
 JATKOT:
 Millainen on Großvenedigerin reitti huipulle?
 Mikä on Hohe Tauernin kansallispuisto?
 
 ### 25.3
 KYSYMYS: Kuinka korkea Großvenediger on?
-Katotaas. [[Großvenediger]] on noin 3 650 metriä korkea, ja sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena. Tarkan metrimäärän muistan hieman epävarmasti, joten sanon noin. Huippu on jäätikön peittämä ja kuuluu Hohe Tauernin kansallispuistoon. Vuori sijaitsee Itä-Tirolin ja Salzburgin rajalla. Kyllä tämä korkeus tuntuu siivissä.
+Katotaas. Großvenediger on noin 3 650 metriä korkea, ja sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena. Tarkan metrimäärän muistan hieman epävarmasti, joten sanon noin. Huippu on jäätikön peittämä ja kuuluu [[Hohe Tauernin kansallispuistoon]]. Vuori sijaitsee [[Itä-Tirolin]] ja [[Salzburgin]] rajalla. Kyllä tämä korkeus tuntuu siivissä.
 JATKOT:
 Mikä on Itävallan korkein vuori?
 Miten Alppien jäätiköt ovat muuttuneet?
 
 ### 25.4
 KYSYMYS: Mikä on Hohe Tauernin kansallispuisto?
-Tuota niin. [[Hohe Tauernin kansallispuisto]] on Itävallan Alpeilla sijaitseva suojelualue, johon kuuluu Großvenedigerin jäätikön peittämä huippu. Alue ulottuu Tirolin, Salzburgin ja Kärntenin osavaltioiden alueelle. Puisto suojelee korkeita vuoria, jäätiköitä ja alppiluontoa. Tarkasta pinta-alasta en ole varma. Tämä oli kyyhkylle sopivan kokoinen kokonaisuus.
+Tuota niin. Hohe Tauernin kansallispuisto on Itävallan Alpeilla sijaitseva suojelualue, johon kuuluu [[Großvenedigerin]] jäätikön peittämä huippu. Alue ulottuu [[Tirolin]], Salzburgin ja [[Kärntenin]] osavaltioiden alueelle. Puisto suojelee korkeita vuoria, jäätiköitä ja alppiluontoa. Tarkasta pinta-alasta en ole varma. Tämä oli kyyhkylle sopivan kokoinen kokonaisuus.
 JATKOT:
 Mitä eläimiä Hohe Tauernilla elää?
 Millaisia jäätiköitä Itävallassa on?
