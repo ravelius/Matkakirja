@@ -496,12 +496,14 @@ namespace Matkakirja.Natiivi
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
             var kuvan = KuvanPinta;
-            // S2 on kesäaineisto: vain lumettomina kausina (Iss.Vuodenaika.S2Nakyy), talvella BMNG (omistaja 1.10.); kuvan pinta aina.
+            // S2 kaikkina kausina (Iss.Vuodenaika.S2Nakyy); talvella vain Euroopan talvimosaiikki, muualla BMNG (9.10.); kuvan pinta aina.
             bool halutaan = kyydissa && ((S2Kaytossa && Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausiLisatty))) || kuvan.HasValue)
                 && kuukausiLisatty > 0;
             // Kauden Euroopan mosaiikki (syksy/v1 jne.; Laattapalvelin.S2EuroopanKausi): vaihtuessa S2-kerros lisätään uudelleen,
             // ettei Cesiumin muistiin jääneitä edellisen kauden laattoja näy (maailman URL-malli ei muutu).
             string kausi = Vuodenaika.S2EuroopanVersio(Vuodenaika.Kausi(kuukausiLisatty)) ?? Laattapalvelin.S2EuroopanVersio;
+            // Talvi: vain Euroopan lohko S2:na (talvi/v1), muualla BMNG; kausimerkkijono vaihtuu samalla, joten kerros lisätään uudelleen.
+            Laattapalvelin.S2VainEurooppa = Vuodenaika.S2VainEurooppa(Vuodenaika.Kausi(kuukausiLisatty));
             if (kausi != Laattapalvelin.S2EuroopanKausi)
             {
                 Laattapalvelin.S2EuroopanKausi = kausi;
