@@ -18,16 +18,11 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "pariisi-lapset|paris park children|20|200|by"
-          "pariisi-lapset|jardin enfants|20|200|by"
-          "pariisi-metro|paris metro|20|200|by"
-          "pariisi-raitiovaunu|paris tram|20|200|by"
           "tukholma-tori|stockholm market|20|200|by"
           "tukholma-tori|stockholm square|20|200|by"
           "tukholma-kahvila|stockholm cafe|20|200|by"
           "tukholma-lapset|stockholm park|20|200|by"
           "tukholma-metro|stockholm tunnelbana|20|200|by"
-          "tukholma-metro|stockholm subway|20|200|by"
           "tukholma-raitiovaunu|stockholm tram|20|200|by"
       - if: always()
         uses: actions/upload-artifact@v4
