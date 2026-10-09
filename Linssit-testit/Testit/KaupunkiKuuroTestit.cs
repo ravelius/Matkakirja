@@ -87,6 +87,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(c.Contains("KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM") && c.Contains("AluskerrosKorkeusM = 1200f"), "aluskerros korkealla");
         }
 
+        [Testi] static void OmienMallienValo()
+        {
+            // Omistaja 9.10.: omat mallit Googlen sävyyn ja illan valaistukseen (OmaMalli-varjostin Cesiumin opaqueMaterialina).
+            string U(string n) => System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", n));
+            string v = U("Resources/Varjostimet/OmaMalli.shader"), c = U("Unity/CesiumOmatMallit.cs");
+            foreach (var o in new[] { "_baseColorTexture", "_baseColorFactor", "_emissiveTexture", "_emissiveFactor", "_baseColorTextureCoordinateIndex" })
+                Oleta.Tosi(v.Contains(o + " ("), "Cesiumin ominaisuus " + o);
+            Oleta.Tosi(v.Contains("SampleSH(n)") && v.Contains("IlmIlmaperspektiivi") && v.Contains("_IlmMaailma.z"), "ympäristövalo, ilma ja ilta");
+            Oleta.Tosi(v.Contains("\"LightMode\" = \"DepthNormals\"") && v.Contains("\"LightMode\" = \"ShadowCaster\""), "syvyys ja varjot");
+            Oleta.Tosi(c.Contains("t.opaqueMaterial = om"), "materiaali tilesetille");
+        }
+
         [Testi] static void LaattojenLeikkausKutenCesium()
         {
             // CesiumUnlitTilesetShader: Alpha = 1 − peitteen R (Lerp mustasta alfalla), raja 0,5, oletuskuva musta (A/B 9.10. 05.0x).

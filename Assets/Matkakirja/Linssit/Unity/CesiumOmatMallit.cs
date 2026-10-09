@@ -42,6 +42,19 @@ namespace Matkakirja.Linssit
         public const int NayteYrityksia = 5;
         /// <summary>Omien mallien ruutuvirheraja (Googlen oma on 8–16): mallit tarkentuvat LOD0:aan pallon etäisyyksillä.</summary>
         public const float OmaSse = 4f;
+        /// <summary>OMIEN MALLIEN VALO (omistaja 9.10.: Notre-Dame ja Kuninkaanlinna "mahdollisimman hyviksi väreineen ja valaistuksineen"):
+        /// Varjostimet/OmaMalli (aurinko + kaupungin ympäristövalo + ilmaperspektiivi ja loppuilta kuten laatoissa, illalla julkisivuvalaistus
+        /// ja ikkunoiden/lasimaalausten hehku). Asetukset "omavalotus", "omajulkisivu", "omahehku", "omavarjo"; "omavalo 0" = Cesiumin oma.</summary>
+        public static float Valotus = 1f, Julkisivu = 0.9f, Hehku = 4f, VarjoNosto = 0.35f;
+        public static bool OmaValo = true;
+        static Material omaMat;
+        static readonly int IdOmaValo = Shader.PropertyToID("_OmaValo");
+        static Material OmaMateriaali()
+        {
+            if (!OmaValo) return null;
+            if (omaMat == null) { var s = Resources.Load<Shader>("Varjostimet/OmaMalli"); if (s != null && s.isSupported) omaMat = new Material(s) { name = "Oma malli" }; }
+            return omaMat;
+        }
 
         readonly Action<string> kirjaa;
         GameObject juuri;
@@ -108,6 +121,7 @@ namespace Matkakirja.Linssit
         /// <summary>Joka kehys (CesiumKaupunki.PidaMaski): kameran etäisyys lähimpään omaan malliin ohjaa leikkausta.</summary>
         public void Kamera(Vector3 kamera)
         {
+            Shader.SetGlobalVector(IdOmaValo, new Vector4(Valotus, Julkisivu, Hehku, VarjoNosto));
             if (leikkaus == null || mallit.Count == 0) return;
             float d = float.MaxValue;
             foreach (var m in mallit) if (m.polygoni != null) d = Mathf.Min(d, (m.polygoni.transform.position - kamera).magnitude);
@@ -158,6 +172,7 @@ namespace Matkakirja.Linssit
                 // Omat mallit tarkemmin kuin Googlen laatat (simu 9.10. 04.5x: Googlen SSE 16 piti 420 m:stä Notre-Damen karkeimmalla LOD2:lla,
                 // virhe 1,7 m → SSE ~15). Mallit ovat pieniä (LOD0 30–120 k), joten LOD0 jo noin 1 km:stä.
                 t.maximumScreenSpaceError = Mathf.Min(OmaSse, googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f);
+                var om = OmaMateriaali(); if (om != null) t.opaqueMaterial = om;   // ennen SetActivea (asetin luo tilesetin uudelleen)
                 var kohde = k;
                 t.OnTileGameObjectCreated += laatta => MalliLadattu(kohde, laatta);
                 go.SetActive(true);
