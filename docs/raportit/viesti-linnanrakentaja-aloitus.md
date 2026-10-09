@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 5.10.2026 klo 12.2x)
+# Linnanrakentajan aloitusviesti (päivitetty 9.10.2026 iltapäivä)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,8 +8,9 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261005b.md`** (UUSIN 5.10. klo 12.2x: Mixamo-laajennus 11 hahmolle,
-   rantametsä #3987 junaan 144 ilman osoitinvaihtoa, Tavli v2). Vanhempi: `…-20261005.md`.
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009.md`** (UUSIN 9.10.: ND v8 / KL v2b omistajan hyväksyttävinä,
+   LS2:n hiontalista, historian ranta-1499-täyttö v46g / arvio 6, PBR-pinnat ja kaukokuvan sävyerot). Päivän tarkka loki
+   (hashit, SHA:t) on tiedoston `…-20261005b.md` lopussa.
 
 ## Säännöt, jotka opittiin
 
@@ -25,3 +26,7 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 - **Junassa olevaan PR-haaraan ei pushata.**
 - **Viestit Päätoimittajalle:** vain valmis erä, jumi (JUMI) tai kysymys, enintään 8 riviä.
 - **Luovutus:** kun konteksti on yli 70 %, kirjoita luovutus ja päivitä tämä aloitusviesti.
+- **Unreal on auki vain työn ajan** (omistaja 9.10.).
+- **Ämpärilataus** (vie-blender.sh) vaatii `source ~/.zshrc` -komennon ensin.
+- **Kaupunkimallien osoitin** (LS2): versiokansioita ei ylikirjoiteta. Juna 173 ja uudemmat lukevat `uusin-3.json`:ia, ja vaihto
+  tehdään vasta omistajan hyväksynnän jälkeen.
