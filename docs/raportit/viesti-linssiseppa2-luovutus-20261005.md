@@ -35,7 +35,16 @@ Avoimet työt:
 ## 21.5x: raskaat poltot/paistot (kartta, Blender, ääni) eivät käynnisty junakäännöksen aikana (kaannospalvelun lukko varattu).
 ## 16.0x: EI omia käännöksiä (iOS/Mac); haaralle unity-tarkistus + testit; täysi käännös vain juna/TF; poikkeus vian selvitys + ilmoitus PT:lle.
 
-## TILA 9.10. klo 08.2x (uusin)
+## TILA 9.10. klo 09.0x (uusin)
+- JUNA 170: ea60457f9 KUITATTU (PT). Natiiviseppä tekee lopullisen.
+- 171 haarat (proto): ymparistovalo-171 b4a393994 (Trilight, v2 vahvempi; kuvat lokit/linssiseppa2-171z-*: ND +12–20 RGB, Kuninkaanlinnan
+  pohjoissivun ruskeus materiaalissa → LR) odottaa PT:n kuittausta; sade-171 145cc24c8 (sadepilvet, Sade kuuroon, Salama-API; LS1 yhdisti
+  kierros-170:een); kaukomaa-171 f67d04ef6 (testiasetukset sumukarsinta/aluskerros) → simu 12 km:stä jonossa (kaanna-ja-kuvaa-kaukomaa.sh)
+  + Seinen vaalea läikkä Pont Saint-Michelillä (vesi 0/1; veden korkeus tasainen 70,7, syy auki).
+- Notre-Dame v3 (vienti17) ehdotettu ämpäriin v6 PT:lle. Kuninkaanlinna v1.4 vienti17:ssä.
+- Simuskripteissä lämmityskäynnistys (ensimmäinen käynnistys asennuksen jälkeen epäonnistuu → Documents-mallit eivät latautuneet).
+
+## TILA 9.10. klo 08.2x
 - JUNA 170 PYSÄYTETTY YÖKUVISTA (PT, takaraja 13.00). Oma osuus valmis ja kuvattu: linssiseppa2/laivat-170 ea60457f9 → Natiiviseppä
   (c5d5fe101 revert + caf9a0506 vesi index-v4 + 86a4cf2d8 sininen hetki taivas/vesi + ea60457f9 laatat ja ReikaTayte loppuiltaan).
   Kuvat lokit/linssiseppa2-yotaivas3-pariisi/vertailu-pariisi-tukholma.png (käännös b1784bcea). Syy: fysikaalinen taivas −7°:ssa liian
