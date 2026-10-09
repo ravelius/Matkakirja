@@ -8,7 +8,7 @@ Kuka saa vierailla Athoksella?
 
 ### 46.2
 KYSYMYS: Kuka Athoksen luostareita hallitsee?
-Kato, tämän voi sanoa lyhyesti. Athoksen aluetta hallitsee munkkiyhteisö itse, ja alue on Kreikan sisällä autonominen hallintoalue. Kirkollisesti yhteisö kuuluu suoraan [[Konstantinopolin ekumeenisen patriarkan]] alaisuuteen, eli se ei ole minkään Kreikan oman kirkkoalueen alainen. Kreikan valtio vastaa alueen ulkosuhteista ja turvallisuudesta, mutta sisäiset asiat hoitaa munkkien oma hallinto, jossa luostarit ovat keskeisessä osassa. Tarkkaa rakennetta en ala tässä selittää, koska en ole siitä aivan varma. Kyyhkynä kunnioitan hallintoa, jossa kaikki tietävät oman paikkansa.
+Kato, tämän voi sanoa lyhyesti. Athoksen aluetta hallitsee [[munkkiyhteisö]] itse, ja alue on Kreikan sisällä autonominen hallintoalue. Kirkollisesti yhteisö kuuluu suoraan [[Konstantinopolin ekumeenisen patriarkan]] alaisuuteen, eli se ei ole minkään Kreikan oman kirkkoalueen alainen. [[Kreikan]] valtio vastaa alueen ulkosuhteista ja turvallisuudesta, mutta sisäiset asiat hoitaa munkkien oma hallinto, jossa luostarit ovat keskeisessä osassa. Tarkkaa rakennetta en ala tässä selittää, koska en ole siitä aivan varma. Kyyhkynä kunnioitan hallintoa, jossa kaikki tietävät oman paikkansa.
 
 JATKOT:
 Mitä Konstantinopolin ekumeeninen patriarkka tekee?
@@ -32,7 +32,7 @@ Milloin kirkko jakautui itään ja länteen?
 
 ### 46.5
 KYSYMYS: Voivatko miehet vierailla Athoksella?
-Selvä juttu. Miehet voivat vierailla Athoksella, mutta se vaatii luvan, jota haetaan etukäteen alueen viranomaisilta, ja vierailijoiden määrää rajoitetaan. Vierailu on tavallisesti luostareissa yöpymistä, jossa vieras noudattaa munkkien päivärytmiä, osallistuu halutessaan jumalanpalveluksiin ja syö luostarin yksinkertaista ruokaa. Pääsy alueelle tapahtuu merikuljetuksella, sillä tieyhteydet alueelle ovat rajalliset ja [[Athoksen niemimaalle]] ei kuljeta tavallisia matkailubusseja. Tarkkoja lupamääriä ja sääntöjä en ole varma, joten ne kannattaa tarkistaa ennen matkaa virallisista lähteistä. Pääsyn ehdot muuttuvat aika ajoin, ja uusin tieto on hyvä varmistaa.
+Selvä juttu. Miehet voivat vierailla Athoksella, mutta se vaatii luvan, jota haetaan etukäteen alueen viranomaisilta, ja vierailijoiden määrää rajoitetaan. Vierailu on tavallisesti [[luostareissa]] yöpymistä, jossa vieras noudattaa munkkien päivärytmiä, osallistuu halutessaan jumalanpalveluksiin ja syö luostarin yksinkertaista ruokaa. Pääsy alueelle tapahtuu merikuljetuksella, sillä tieyhteydet alueelle ovat rajalliset ja [[Athoksen niemimaalle]] ei kuljeta tavallisia matkailubusseja. Tarkkoja lupamääriä ja sääntöjä en ole varma, joten ne kannattaa tarkistaa ennen matkaa virallisista lähteistä. Pääsyn ehdot muuttuvat aika ajoin, ja uusin tieto on hyvä varmistaa.
 
 Minä lensin sen yli kerran, ja luostarit näyttivät ylhäältä kuin kivestä veistetyiltä linnoilta. Rauha tuntui kuuluvan jo ilmaan.
 
@@ -42,7 +42,7 @@ Miten Athokselle pääsee laivalla?
 
 ### 47.1
 KYSYMYS: Keitä aromanialaiset ovat?
-Joo, tän minä tiedän. Aromanialaiset eli vlahit ovat Balkanin alueella elävä kansa, jonka kieli kuuluu romaanisiin kieliin ja on sukua romanialle. Heitä asuu Kreikassa, Albaniassa, Pohjois-Makedoniassa, Bulgariassa ja Romaniassa, mutta he eivät ole oman valtionsa kansa. Perinteisesti monet aromanialaiset elivät paimentolaisina tai vuoristokylissä ja siirtyivät karjansa kanssa laitumelta toiselle vuodenajan mukaan. Myöhemmin heistä tuli myös kauppiaita ja käsityöläisiä. Kreikassa [[Metsovo]] on yksi heidän tunnetuista keskuksistaan Pindoksen vuoristossa. Väkilukuja en ala arvailla, koska arviot vaihtelevat paljon. Kyllä sen kyyhkykin muistaa, jos vuoria on tarpeeksi.
+Joo, tän minä tiedän. Aromanialaiset eli vlahit ovat Balkanin alueella elävä kansa, jonka kieli kuuluu romaanisiin kieliin ja on sukua romanialle. Heitä asuu Kreikassa, Albaniassa, Pohjois-Makedoniassa, Bulgariassa ja Romaniassa, mutta he eivät ole oman valtionsa kansa. Perinteisesti monet aromanialaiset elivät paimentolaisina tai vuoristokylissä ja siirtyivät karjansa kanssa laitumelta toiselle vuodenajan mukaan. Myöhemmin heistä tuli myös kauppiaita ja käsityöläisiä. Kreikassa [[Metsovo]] on yksi heidän tunnetuista keskuksistaan [[Pindoksen]] vuoristossa. Väkilukuja en ala arvailla, koska arviot vaihtelevat paljon. Kyllä sen kyyhkykin muistaa, jos vuoria on tarpeeksi.
 
 JATKOT:
 Mikä kieli aromanialaisilla on?
@@ -58,7 +58,7 @@ Mitä muita juustoja Kreikassa on?
 
 ### 47.3
 KYSYMYS: Mikä on Pindoksen vuoristo?
-Odotas vähän. Pindos on Pohjois-Kreikan pitkä vuoristo, joka kulkee maan läpi pohjoisesta etelään ja jota kutsutaan joskus Kreikan selkärangaksi. Se erottaa Epeiroksen alueen idempänä sijaitsevasta Thessaliasta, ja sen laaksot ja korkeat rinteet ovat historiassa eristäneet kyliä toisistaan. Alueella elää perinteisesti paimenia ja vuoristokylien väkeä, muun muassa aromanialaisia. [[Pindoksen]] luonto on myös suosittua vaellus- ja hiihtomaastoa, ja Metsovo sijaitsee juuri sen sylissä. Korkeimpia huippuja ja tarkkoja mittoja en ala muistinvaraisesti luetella, koska niissä arvaus on väärä vastaus.
+Odotas vähän. Pindos on Pohjois-Kreikan pitkä vuoristo, joka kulkee maan läpi pohjoisesta etelään ja jota kutsutaan joskus Kreikan selkärangaksi. Se erottaa [[Epeiroksen]] alueen idempänä sijaitsevasta [[Thessaliasta]], ja sen laaksot ja korkeat rinteet ovat historiassa eristäneet kyliä toisistaan. Alueella elää perinteisesti paimenia ja vuoristokylien väkeä, muun muassa aromanialaisia. [[Pindoksen]] luonto on myös suosittua vaellus- ja hiihtomaastoa, ja Metsovo sijaitsee juuri sen sylissä. Korkeimpia huippuja ja tarkkoja mittoja en ala muistinvaraisesti luetella, koska niissä arvaus on väärä vastaus.
 
 Ylhäältä katsottuna Pindos näyttää harmaalta aallokolta. Joka laakso on niin kapea, että lentäisin siellä mieluummin kuin kävelisin.
 
@@ -76,7 +76,7 @@ Mitkä olivat ensimmäiset nykyajan olympialaiset?
 
 ### 47.5
 KYSYMYS: Mikä kieli aromanialaisilla on?
-Ai tota. Aromanialaisten kieli on aromania, jota kutsutaan myös vlahin kieleksi. Se on romaaninen kieli, joten se polveutuu latinasta ja on sukua romanialle sekä kauempaa italialle ja ranskalle. Kieltä puhutaan Balkanilla Kreikassa, Albaniassa, Pohjois-Makedoniassa ja muualla, mutta sitä käytetään pääasiassa kotona ja kyläyhteisössä. Murteita on useita, ja kielen asema vaihtelee maittain. [[Aromanian kieli]] on pitkään elänyt enemmän suullisessa perinteessä kuin kirjoitetussa. Puhujamääristä arviot vaihtelevat suuresti, enkä tiedä niistä riittävän varmasti. Latinaa sain tässä sentään käyttää, ihan sukuni kunniaksi.
+Ai tota. Aromanialaisten kieli on aromania, jota kutsutaan myös vlahin kieleksi. Se on romaaninen kieli, joten se polveutuu [[latinasta]] ja on sukua romanialle sekä kauempaa italialle ja ranskalle. Kieltä puhutaan Balkanilla Kreikassa, Albaniassa, Pohjois-Makedoniassa ja muualla, mutta sitä käytetään pääasiassa kotona ja kyläyhteisössä. Murteita on useita, ja kielen asema vaihtelee maittain. [[Aromanian kieli]] on pitkään elänyt enemmän suullisessa perinteessä kuin kirjoitetussa. Puhujamääristä arviot vaihtelevat suuresti, enkä tiedä niistä riittävän varmasti. Latinaa sain tässä sentään käyttää, ihan sukuni kunniaksi.
 
 JATKOT:
 Mistä Balkanin kielet ovat peräisin?
@@ -92,7 +92,7 @@ Mitä Korfun vanhakaupungissa voi nähdä?
 
 ### 48.2
 KYSYMYS: Mikä on Kerkyra?
-Ai se. Kerkyra on Korfun kreikankielinen nimi, ja sillä tarkoitetaan sekä Joonianmeren saarta että sen pääkaupunkia, joka on saaren suurin kaupunki. Suomessa ja monissa muissa kielissä käytetään tavallisesti nimeä [[Korfu]], joka on peräisin Bysantin ajan nimestä ja levisi Euroopassa Venetsian vallan myötä. Kerkyra-nimi on kuitenkin vanha, ja se esiintyy antiikin kreikkalaisessa kirjallisuudessa sekä mytologiassa. Nimen alkuperää en ala selittää tarkemmin, koska siitä on useita tulkintoja enkä ole varma. Nimiä riittää, mutta saari on sama.
+Ai se. Kerkyra on Korfun kreikankielinen nimi, ja sillä tarkoitetaan sekä [[Joonianmeren]] saarta että sen pääkaupunkia, joka on saaren suurin kaupunki. Suomessa ja monissa muissa kielissä käytetään tavallisesti nimeä [[Korfu]], joka on peräisin Bysantin ajan nimestä ja levisi Euroopassa [[Venetsian]] vallan myötä. Kerkyra-nimi on kuitenkin vanha, ja se esiintyy antiikin kreikkalaisessa kirjallisuudessa sekä mytologiassa. Nimen alkuperää en ala selittää tarkemmin, koska siitä on useita tulkintoja enkä ole varma. Nimiä riittää, mutta saari on sama.
 
 JATKOT:
 Miksi Korfu-nimi on erilainen kuin Kerkyra?
@@ -100,7 +100,7 @@ Mitä Korfun mytologiassa kerrotaan?
 
 ### 48.3
 KYSYMYS: Mitkä ovat Joonian saaret?
-Kas vaan, saarilista tulossa. Joonian saaret ovat Kreikan länsirannikon edustalla Joonianmerellä sijaitseva saariryhmä, johon kuuluu perinteisesti seitsemän pääsaarta: [[Korfu]], Paxos, Lefkada, Ithaka, Kefalonia, Zakynthos ja Kythira. Kythira sijaitsee kauempana Peloponnesoksen eteläpuolella, mutta se luetaan perinteisesti ryhmään. Saaret ovat historiansa aikana kuuluneet pitkään Venetsian vaikutuspiiriin, ja siksi niiden kulttuurissa näkyy italialaista perintöä. Ryhmän nimitys on Heptanesos, joka tarkoittaa seitsemää saarta. Saarten tarkka järjestys ja koko vaihtelevat lähteistä riippuen. Pitkä luettelo, mutta ainakin lista oli helppo muistaa.
+Kas vaan, saarilista tulossa. Joonian saaret ovat Kreikan länsirannikon edustalla Joonianmerellä sijaitseva saariryhmä, johon kuuluu perinteisesti seitsemän pääsaarta: [[Korfu]], Paxos, Lefkada, [[Ithaka]], [[Kefalonia]], Zakynthos ja Kythira. Kythira sijaitsee kauempana Peloponnesoksen eteläpuolella, mutta se luetaan perinteisesti ryhmään. Saaret ovat historiansa aikana kuuluneet pitkään Venetsian vaikutuspiiriin, ja siksi niiden kulttuurissa näkyy italialaista perintöä. Ryhmän nimitys on Heptanesos, joka tarkoittaa seitsemää saarta. Saarten tarkka järjestys ja koko vaihtelevat lähteistä riippuen. Pitkä luettelo, mutta ainakin lista oli helppo muistaa.
 
 JATKOT:
 Miten Venetsia vaikutti Joonian saariin?
@@ -108,7 +108,7 @@ Mikä saari on Ithaka?
 
 ### 48.4
 KYSYMYS: Mikä on Korfun vanhakaupunki?
-Katotaas. Korfun vanhakaupunki sijaitsee saaren pääkaupungissa, ja se on UNESCOn maailmanperintökohde vuodesta 2007. Se on kehittynyt vuosisatojen kuluessa Venetsian tasavallan vallan aikana, ja siksi kaupungin ahtaat kujat ja korkeat talot muistuttavat Italian satamakaupunkeja. Vanhakaupunkia suojasivat vahvat linnoitukset, ja siellä on kaksi tunnettua linnoitusta, [[vanha linnoitus]] ja uusi linnoitus. Sen rakennuskantaan on vaikuttanut myös myöhempi ranskalainen ja brittiläinen hallinto, mikä näkyy sekä rakennuksissa että aukioilla. Tarkkoja rakennusvuosia en ala luetella, koska en ole niistä varma.
+Katotaas. Korfun vanhakaupunki sijaitsee saaren pääkaupungissa, ja se on [[UNESCOn]] maailmanperintökohde vuodesta 2007. Se on kehittynyt vuosisatojen kuluessa [[Venetsian]] tasavallan vallan aikana, ja siksi kaupungin ahtaat kujat ja korkeat talot muistuttavat Italian satamakaupunkeja. Vanhakaupunkia suojasivat vahvat linnoitukset, ja siellä on kaksi tunnettua linnoitusta, [[vanha linnoitus]] ja uusi linnoitus. Sen rakennuskantaan on vaikuttanut myös myöhempi ranskalainen ja brittiläinen hallinto, mikä näkyy sekä rakennuksissa että aukioilla. Tarkkoja rakennusvuosia en ala luetella, koska en ole niistä varma.
 
 Venetsialaiset kujat ovat kapeita ja kaikki tuoksuu kahvilta. Minä istuisin siellä mielelläni ikkunalaudalla, vaikka pullaa ei tarjottaisikaan.
 
@@ -152,7 +152,7 @@ Millaista bysanttilainen kirkkotaide on?
 
 ### 49.4
 KYSYMYS: Miksi kastorialaisia muutti New Yorkin seudulle?
-Tost minä osaan kertoo. Kreikan sisällissodan jälkeen suuri joukko kastorialaisia lähti ulkomaille, ja heistä monet asettuivat [[New Yorkin]] seudulle. Syynä olivat sodan jälkeinen taloudellinen niukkuus ja paremman toimeentulon toivo. Kastoriassa oli pitkä turkisalan perinne, joten monet muuttajat pystyivät työskentelemään turkkureina myös uudessa maassa, ja 1980-luvulla heitä oli seudulla noin 25 000. Ammattitaito helpotti työnsaantia ja sopeutumista, ja turkisala tarjosi toimeentulon vieraassa maassa. Tarkempia syitä eri perheiden kohdalla en tiedä, sillä muuttoon vaikuttivat monet tekijät. Pitkä matka merten yli, mutta kyllä sen kyyhkykin ymmärtää.
+Tost minä osaan kertoo. [[Kreikan sisällissodan]] jälkeen suuri joukko kastorialaisia lähti ulkomaille, ja heistä monet asettuivat [[New Yorkin]] seudulle. Syynä olivat sodan jälkeinen taloudellinen niukkuus ja paremman toimeentulon toivo. Kastoriassa oli pitkä turkisalan perinne, joten monet muuttajat pystyivät työskentelemään turkkureina myös uudessa maassa, ja 1980-luvulla heitä oli seudulla noin 25 000. Ammattitaito helpotti työnsaantia ja sopeutumista, ja turkisala tarjosi toimeentulon vieraassa maassa. Tarkempia syitä eri perheiden kohdalla en tiedä, sillä muuttoon vaikuttivat monet tekijät. Pitkä matka merten yli, mutta kyllä sen kyyhkykin ymmärtää.
 
 JATKOT:
 Mikä oli Kreikan sisällissota?
@@ -160,7 +160,7 @@ Miten turkis valmistetaan vaatteeksi?
 
 ### 49.5
 KYSYMYS: Mikä on Orestiada-järvi?
-Ai niin, se järvi. Orestiada-järvi on Pohjois-Kreikassa Länsi-Makedoniassa sijaitseva järvi, jonka länsirannalla Kastorian kaupunki sijaitsee niemellä. Järveä ympäröivät kalkkikivivuoret, ja kaupunki on rakentunut sen rannalle laaksoon. Järvi on vaikuttanut kaupungin nimeen, sillä sen rannoilla asui aikoinaan majavia, ja kreikan sana kastori tarkoittaa majavaa. [[Kastorian]] historia, kirkot ja vanhat asuinrakennukset liittyvät kaikki järven maisemaan. Järven tarkkaa pinta-alaa tai syvyyttä en ole varma, joten jätän ne mainitsematta. Hyvä paikka istua rannalla ja katsella vettä, vaikka majavat olisivat jo poissa.
+Ai niin, se järvi. Orestiada-järvi on [[Pohjois-Kreikassa]] Länsi-Makedoniassa sijaitseva järvi, jonka länsirannalla Kastorian kaupunki sijaitsee niemellä. Järveä ympäröivät kalkkikivivuoret, ja kaupunki on rakentunut sen rannalle laaksoon. Järvi on vaikuttanut kaupungin nimeen, sillä sen rannoilla asui aikoinaan majavia, ja kreikan sana kastori tarkoittaa majavaa. [[Kastorian]] historia, kirkot ja vanhat asuinrakennukset liittyvät kaikki järven maisemaan. Järven tarkkaa pinta-alaa tai syvyyttä en ole varma, joten jätän ne mainitsematta. Hyvä paikka istua rannalla ja katsella vettä, vaikka majavat olisivat jo poissa.
 
 JATKOT:
 Millaisia majavat ovat eläiminä?
@@ -184,7 +184,7 @@ Mikä oli antiikin Makedonia?
 
 ### 50.3
 KYSYMYS: Mikä on Naousan karnevaali?
-Nyt muistan: se karnevaali. Naousan karnevaali on kaupungin tunnetuimpia perinteitä, ja se kuuluu Kreikan värikkäimpiin kansanjuhliin. Siinä esiintyvät perinteiset hahmot, joista tunnetuimpia ovat genitsarot ja bouloes, jotka kulkevat kaduilla juhla-asuissaan musiikin säestyksellä. Perimätiedon mukaan perinne liittyy Naousan vapaussodan aikaiseen historiaan, mutta tarkkaa taustaa ja ajoitusta en ole varma. Karnevaali on [[Naousan]] asukkaille tärkeä yhteisön juhla, ja se houkuttelee myös vierailijoita muualta Kreikasta. Pukuja ja tapoja on varmasti enemmän kuin tähän mahtuu.
+Nyt muistan: se karnevaali. Naousan karnevaali on kaupungin tunnetuimpia perinteitä, ja se kuuluu Kreikan värikkäimpiin kansanjuhliin. Siinä esiintyvät perinteiset hahmot, joista tunnetuimpia ovat [[genitsarot]] ja bouloes, jotka kulkevat kaduilla juhla-asuissaan musiikin säestyksellä. Perimätiedon mukaan perinne liittyy Naousan vapaussodan aikaiseen historiaan, mutta tarkkaa taustaa ja ajoitusta en ole varma. Karnevaali on [[Naousan]] asukkaille tärkeä yhteisön juhla, ja se houkuttelee myös vierailijoita muualta Kreikasta. Pukuja ja tapoja on varmasti enemmän kuin tähän mahtuu.
 
 Katolta katsottuna kulkue näyttää väriläiskältä, joka liikkuu kadulla. Minä pysyn mieluummin kaiteella, jos soittajat ovat laiskoja.
 
@@ -202,7 +202,7 @@ Miten viinin tuotanto tapahtuu?
 
 ### 50.5
 KYSYMYS: Mitä Kreikan vapaussota oli?
-Annas ku mietin. Kreikan vapaussota oli Kreikan itsenäisyystaistelu [[Ottomaanien valtakuntaa]] vastaan, ja se alkoi vuonna 1821. Sodassa kreikkalaiset kapinalliset pyrkivät vapautumaan ottomaanien vallasta, ja taistelut kestivät usean vuoden ajan. Eurooppalaiset suurvallat, kuten Britannia, Ranska ja Venäjä, tukivat lopulta kreikkalaisia, ja 1830-luvulla syntyi itsenäinen Kreikan valtio. Sota vaati paljon uhreja, ja monet kaupungit kärsivät tuhoa, minkä vuoksi tapahtumat ovat edelleen tärkeä osa kreikkalaista muistia. Tarkat päivämäärät ja yksittäisten taistelujen yksityiskohdat jätän mainitsematta. Onneksi siitä on jo pitkä aika.
+Annas ku mietin. Kreikan vapaussota oli Kreikan itsenäisyystaistelu [[Ottomaanien valtakuntaa]] vastaan, ja se alkoi vuonna 1821. Sodassa kreikkalaiset kapinalliset pyrkivät vapautumaan ottomaanien vallasta, ja taistelut kestivät usean vuoden ajan. Eurooppalaiset suurvallat, kuten [[Britannia]], [[Ranska]] ja Venäjä, tukivat lopulta kreikkalaisia, ja 1830-luvulla syntyi itsenäinen Kreikan valtio. Sota vaati paljon uhreja, ja monet kaupungit kärsivät tuhoa, minkä vuoksi tapahtumat ovat edelleen tärkeä osa kreikkalaista muistia. Tarkat päivämäärät ja yksittäisten taistelujen yksityiskohdat jätän mainitsematta. Onneksi siitä on jo pitkä aika.
 
 JATKOT:
 Miten Kreikan valtio sai itsenäisyyden?

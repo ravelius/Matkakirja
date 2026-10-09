@@ -42,7 +42,7 @@ Kuka oli Ariadne?
 
 ### 12.2
 KYSYMYS: Miksi Egeanmerellä on niin paljon saaria?
-Kas vaan, tää on hyvä. Egeanmeren saaret ovat pääosin jäänteitä mantereen vuoristoista, joiden välinen alue on vajonnut meren alle: saaret ovat siis vuorten huippuja, jotka jäivät vedenpinnan yläpuolelle. Alueen muotoutumiseen ovat vaikuttaneet laattojen liikkeet, ja osa saarista, kuten [[Santorini]], on syntynyt tulivuoritoiminnan seurauksena. Merenpinta nousi myös viimeisen jääkauden jälkeen, mikä katkaisi vanhoja maayhteyksiä. Tarkkaa saarten lukumäärää ei ole helppo sanoa, koska se riippuu siitä, lasketaanko pienet luodot mukaan. Mukava yhtälö: mitä enemmän saaria, sitä enemmän lauttoja.
+Kas vaan, tää on hyvä. [[Egeanmeren]] saaret ovat pääosin jäänteitä mantereen vuoristoista, joiden välinen alue on vajonnut meren alle: saaret ovat siis vuorten huippuja, jotka jäivät vedenpinnan yläpuolelle. Alueen muotoutumiseen ovat vaikuttaneet laattojen liikkeet, ja osa saarista, kuten [[Santorini]], on syntynyt tulivuoritoiminnan seurauksena. Merenpinta nousi myös viimeisen [[jääkauden]] jälkeen, mikä katkaisi vanhoja maayhteyksiä. Tarkkaa saarten lukumäärää ei ole helppo sanoa, koska se riippuu siitä, lasketaanko pienet luodot mukaan. Mukava yhtälö: mitä enemmän saaria, sitä enemmän lauttoja.
 JATKOT:
 Miten Santorinin tulivuori on muokannut saarta?
 Mitkä ovat Egeanmeren suurimmat saaret?
@@ -121,7 +121,7 @@ Miten vedenalaista arkeologiaa tehdään?
 
 ### 14.3
 KYSYMYS: Kauanko lautalla kestää Pireuksesta Iraklioniin?
-Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. [[Iraklion]] on Kreetan suurin kaupunki ja saaren pääsatama.
+Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. Iraklion on Kreetan suurin kaupunki ja saaren pääsatama.
 
 Minä lentäisin sen paljon nopeammin, mutta lautalla ehtii sentään syödä pullaa. Tai ainakin simitin, jos Pireuksessa sattuu olemaan.
 JATKOT:
@@ -137,7 +137,7 @@ Mitä Balkanin sodat olivat?
 
 ### 14.5
 KYSYMYS: Mikä on Libyanmeri?
-Ai tota, Libyanmeri on Välimeren eteläosa, joka sijaitsee [[Kreetan]] ja Pohjois-Afrikan rannikon välissä. Se ulottuu Kreikan Kreetan eteläpuolelta aina Libyan ja Egyptin rannikoille asti, ja sen nimeäminen erilliseksi mereksi perustuu enemmän merenkulun ja kartografian perinteeseen kuin selkeään luonnolliseen rajaan. Meri on monin paikoin syvä, ja se yhdistää Itäisen Välimeren eri osat Länsi-Välimereen. Kreetanmeri jää sen pohjoispuolelle, ja saaren eteläranta on jyrkempi ja harvemmin asuttu kuin pohjoisranta. Tarkkaa pinta-alaa en ole varma, enkä siksi mainitse sitä. Mukava tuuli, mutta ei pullaa.
+Ai tota, Libyanmeri on [[Välimeren]] eteläosa, joka sijaitsee [[Kreetan]] ja Pohjois-Afrikan rannikon välissä. Se ulottuu Kreikan Kreetan eteläpuolelta aina Libyan ja Egyptin rannikoille asti, ja sen nimeäminen erilliseksi mereksi perustuu enemmän merenkulun ja kartografian perinteeseen kuin selkeään luonnolliseen rajaan. Meri on monin paikoin syvä, ja se yhdistää Itäisen Välimeren eri osat Länsi-Välimereen. [[Kreetanmeri]] jää sen pohjoispuolelle, ja saaren eteläranta on jyrkempi ja harvemmin asuttu kuin pohjoisranta. Tarkkaa pinta-alaa en ole varma, enkä siksi mainitse sitä. Mukava tuuli, mutta ei pullaa.
 JATKOT:
 Miten Välimeri jaetaan pienempiin osiin?
 Mitä Kreetan eteläranta on?
@@ -151,7 +151,7 @@ Miten Bosporin salmea käytetään nykyään?
 
 ### 15.2
 KYSYMYS: Millainen eläin on Mustanmeren pyöriäinen?
-Ai se. [[Mustanmeren pyöriäinen]] on pyöriäisten alalaji, joka elää Mustallamerellä, Marmaranmerellä ja osassa Egeanmeren pohjoisosaa, ja se on valaisiin kuuluva pieni hammasvalas. Kuten muutkin pyöriäiset, se on pyöreäpäinen ja nokaton, eli sillä ei ole delfiinin pitkää kuonoa, ja sen väritys on tummanharmaa selkäpuolelta ja vaaleampi vatsapuolelta. Alalaji on luokiteltu uhanalaiseksi, ja sen elämää uhkaavat muun muassa kalastus ja meren saastuminen. Tarkkaa yksilömäärää en tiedä. Ja kyllä pyöriäisiä on aina mukava katsoa ylhäältä.
+Ai se. [[Mustanmeren pyöriäinen]] on pyöriäisten alalaji, joka elää [[Mustallamerellä]], [[Marmaranmerellä]] ja osassa Egeanmeren pohjoisosaa, ja se on valaisiin kuuluva pieni hammasvalas. Kuten muutkin pyöriäiset, se on pyöreäpäinen ja nokaton, eli sillä ei ole delfiinin pitkää kuonoa, ja sen väritys on tummanharmaa selkäpuolelta ja vaaleampi vatsapuolelta. Alalaji on luokiteltu uhanalaiseksi, ja sen elämää uhkaavat muun muassa kalastus ja meren saastuminen. Tarkkaa yksilömäärää en tiedä. Ja kyllä pyöriäisiä on aina mukava katsoa ylhäältä.
 JATKOT:
 Miksi pyöriäiset ovat uhanalaisia Mustallamerellä?
 Miten pyöriäinen eroaa delfiinistä?
@@ -174,7 +174,7 @@ Miten Samothrakeen Nike päätyi Louvreen?
 
 ### 15.5
 KYSYMYS: Mikä joki Évros on?
-Nyt muistan: Évros on yksi Balkanin pitkistä joista, ja sen alkulähteet ovat Bulgariassa, jossa sitä kutsutaan nimellä [[Maritsa]]. Joki virtaa Traakian halki ja laskee Egeanmereen, ja sen alajuoksu muodostaa suuren osan Kreikan ja Turkin välisestä rajasta; Turkissa joen nimi on Meriç. Joki on Balkanin tärkeimpiä vesistöjä, ja sen suistoalue on tärkeä lintujen levähdyspaikka. Joen tarkkaa pituutta en ole varma. Tää on vihdoin aihe, jossa me kyyhkyt viihdymme.
+Nyt muistan: Évros on yksi Balkanin pitkistä joista, ja sen alkulähteet ovat Bulgariassa, jossa sitä kutsutaan nimellä [[Maritsa]]. Joki virtaa [[Traakian]] halki ja laskee [[Egeanmereen]], ja sen alajuoksu muodostaa suuren osan Kreikan ja Turkin välisestä rajasta; Turkissa joen nimi on Meriç. Joki on Balkanin tärkeimpiä vesistöjä, ja sen suistoalue on tärkeä lintujen levähdyspaikka. Joen tarkkaa pituutta en ole varma. Tää on vihdoin aihe, jossa me kyyhkyt viihdymme.
 JATKOT:
 Miksi Évrosin suisto on tärkeä lintualue?
 Mitä Traakia tarkoittaa historiassa?

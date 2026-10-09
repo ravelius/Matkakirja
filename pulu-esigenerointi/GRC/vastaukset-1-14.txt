@@ -69,7 +69,7 @@ Mitä Mykenen leijonaportista tiedetään?
 
 ### 67.5
 KYSYMYS: Miksi järviä kuivataan?
-Ai tota. Järviä kuivataan yleensä saadakseen viljelymaata tai rakennusmaata. Kuivatuksella voidaan myös torjua tulvia ja vähentää hyttysten lisääntymisaluetta, kuten malariaa levittäviä hyttysiä. Tunnettuja esimerkkejä ovat [[Alankomaiden]] polderit, joissa merta ja järviä on muutettu maaksi. Kuivatus muuttaa kuitenkin kosteikkojen luontoa, joten nykyään sitä arvioidaan tarkemmin kuin ennen.
+Ai tota. Järviä kuivataan yleensä saadakseen viljelymaata tai rakennusmaata. Kuivatuksella voidaan myös torjua tulvia ja vähentää hyttysten lisääntymisaluetta, kuten [[malariaa]] levittäviä hyttysiä. Tunnettuja esimerkkejä ovat [[Alankomaiden]] [[polderit]], joissa merta ja järviä on muutettu maaksi. Kuivatus muuttaa kuitenkin kosteikkojen luontoa, joten nykyään sitä arvioidaan tarkemmin kuin ennen.
 
 Minä pidän järvistä sillä tavalla, että niiden päällä on tilaa lentää. Peltoja ne eivät minun silmissäni ole.
 JATKOT:
@@ -94,7 +94,7 @@ Miten mosaiikkeja tehtiin antiikissa?
 
 ### 68.3
 KYSYMYS: Kuka Hefaistion oli?
-Kas vaan. Hefaistion oli [[Aleksanteri Suuren]] läheinen ystävä ja sotapäällikkö. Hän kuului Aleksanterin lähimpään piiriin ja nousi korkeisiin tehtäviin tämän sotaretkillä. Hänen kuolemansa ajoitetaan yleensä vuoteen 324 eaa., mutta en ole varma tarkasta ajankohdasta. Kastan haudan yhteydessä häntä pidetään yhtenä mahdollisena vainajana, ja asia on kiistanalainen. Siinä kaikki, mitä muistan.
+Kas vaan. Hefaistion oli [[Aleksanteri Suuren]] läheinen ystävä ja sotapäällikkö. Hän kuului Aleksanterin lähimpään piiriin ja nousi korkeisiin tehtäviin tämän sotaretkillä. Hänen kuolemansa ajoitetaan yleensä vuoteen 324 eaa., mutta en ole varma tarkasta ajankohdasta. [[Kastan haudan]] yhteydessä häntä pidetään yhtenä mahdollisena vainajana, ja asia on kiistanalainen. Siinä kaikki, mitä muistan.
 JATKOT:
 Mikä merkitys Aleksanterin ystävillä oli sotaretkillä?
 Mitä Aleksanterin äidistä Olympiaksesta tiedetään?
@@ -115,7 +115,7 @@ Miten Makedonia nousi Kreikan johtavaksi vallaksi?
 
 ### 69.1
 KYSYMYS: Mitä Gortynin laki sääti avioerosta?
-Ai se. Selvä juttu. Gortynin laki on [[Kreetalla]] hakattu siviililakien kokoelma, joka säätelee muun muassa avioeroa, perintöä ja adoptiota. Avioerosta laki säätää, että eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Muita avioeron yksityiskohtia en ole varma. Kivi on ainutlaatuinen lähde antiikin perheoikeuteen.
+Ai se. Selvä juttu. Gortynin laki on [[Kreetalla]] hakattu siviililakien kokoelma, joka säätelee muun muassa [[avioeroa]], perintöä ja adoptiota. Avioerosta laki säätää, että eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Muita avioeron yksityiskohtia en ole varma. Kivi on ainutlaatuinen lähde antiikin perheoikeuteen.
 JATKOT:
 Mitä laki sääti perinnöstä?
 Miten adoptio oli säädelty Gortynissa?
@@ -131,7 +131,7 @@ Miksi kivet päätyivät odeionin perustuksiin?
 
 ### 69.3
 KYSYMYS: Mikä on odeion?
-No niin. Odeion oli antiikin kaupungeissa pieni, usein katettu rakennus, jossa esitettiin musiikkia ja pidettiin kokouksia. Se muistuttaa teatteria mutta on pienempi ja sisätilaan sopivampi. Tunnettu esimerkki on Herodes Attikoksen odeion [[Ateenassa]]. Gortynissa roomalainen odeion rakennettiin myöhemmin, ja suurin osa lakikivistä käytettiin sen perustuksiin.
+No niin. Odeion oli antiikin kaupungeissa pieni, usein katettu rakennus, jossa esitettiin musiikkia ja pidettiin kokouksia. Se muistuttaa teatteria mutta on pienempi ja sisätilaan sopivampi. Tunnettu esimerkki on [[Herodes Attikoksen]] odeion [[Ateenassa]]. Gortynissa roomalainen odeion rakennettiin myöhemmin, ja suurin osa lakikivistä käytettiin sen perustuksiin.
 JATKOT:
 Mitä eroa odeionilla ja teatterilla on?
 Miksi roomalaiset käyttivät vanhoja kiviä uudelleen?
@@ -145,7 +145,7 @@ Miten Solon uudisti Ateenan lakeja?
 
 ### 69.5
 KYSYMYS: Mitä orjuus tarkoitti antiikin Kreikassa?
-Tuota niin. Orjuus oli yleistä antiikin [[kaupunkivaltioissa]], ja orjat työskentelivät kotitalouksissa, pelloilla ja kaivoksissa. Orjan asema vaihteli suuresti kaupungista ja ajasta toiseen. Gortynin laki säätelee muun muassa orjien asemaa, joten se on tärkeä lähde asiaan. Orjuus oli kovaa ja ihmisoikeuksia riistävää, mutta se oli aikansa yleinen yhteiskuntajärjestys. Onneksi siitä on jo pitkä aika.
+Tuota niin. Orjuus oli yleistä antiikin [[kaupunkivaltioissa]], ja orjat työskentelivät kotitalouksissa, pelloilla ja kaivoksissa. Orjan asema vaihteli suuresti kaupungista ja ajasta toiseen. [[Gortynin laki]] säätelee muun muassa orjien asemaa, joten se on tärkeä lähde asiaan. Orjuus oli kovaa ja ihmisoikeuksia riistävää, mutta se oli aikansa yleinen yhteiskuntajärjestys. Onneksi siitä on jo pitkä aika.
 JATKOT:
 Miten orjuus lopulta kiellettiin Euroopassa?
 Mitä muuta Gortynin laki kertoo yhteiskunnasta?

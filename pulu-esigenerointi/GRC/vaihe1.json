@@ -824,9 +824,11 @@
   "kohde": "kohde:egeanmeri",
   "kysymys": "Miksi Egeanmerellä on niin paljon saaria?",
   "uusi": false,
-  "vastaus": "Kas vaan, tää on hyvä. Egeanmeren saaret ovat pääosin jäänteitä mantereen vuoristoista, joiden välinen alue on vajonnut meren alle: saaret ovat siis vuorten huippuja, jotka jäivät vedenpinnan yläpuolelle. Alueen muotoutumiseen ovat vaikuttaneet laattojen liikkeet, ja osa saarista, kuten [[Santorini]], on syntynyt tulivuoritoiminnan seurauksena. Merenpinta nousi myös viimeisen jääkauden jälkeen, mikä katkaisi vanhoja maayhteyksiä. Tarkkaa saarten lukumäärää ei ole helppo sanoa, koska se riippuu siitä, lasketaanko pienet luodot mukaan. Mukava yhtälö: mitä enemmän saaria, sitä enemmän lauttoja.",
+  "vastaus": "Kas vaan, tää on hyvä. [[Egeanmeren]] saaret ovat pääosin jäänteitä mantereen vuoristoista, joiden välinen alue on vajonnut meren alle: saaret ovat siis vuorten huippuja, jotka jäivät vedenpinnan yläpuolelle. Alueen muotoutumiseen ovat vaikuttaneet laattojen liikkeet, ja osa saarista, kuten [[Santorini]], on syntynyt tulivuoritoiminnan seurauksena. Merenpinta nousi myös viimeisen [[jääkauden]] jälkeen, mikä katkaisi vanhoja maayhteyksiä. Tarkkaa saarten lukumäärää ei ole helppo sanoa, koska se riippuu siitä, lasketaanko pienet luodot mukaan. Mukava yhtälö: mitä enemmän saaria, sitä enemmän lauttoja.",
   "linkit": [
-   "Santorini"
+   "Egeanmeren",
+   "Santorini",
+   "jääkauden"
   ],
   "jatkot": [
    "Miten Santorinin tulivuori on muokannut saarta?",
@@ -996,11 +998,10 @@
   "kohde": "kohde:kreetanmeri",
   "kysymys": "Kauanko lautalla kestää Pireuksesta Iraklioniin?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. [[Iraklion]] on Kreetan suurin kaupunki ja saaren pääsatama.\n\nMinä lentäisin sen paljon nopeammin, mutta lautalla ehtii sentään syödä pullaa. Tai ainakin simitin, jos Pireuksessa sattuu olemaan.",
+  "vastaus": "Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. Iraklion on Kreetan suurin kaupunki ja saaren pääsatama.\n\nMinä lentäisin sen paljon nopeammin, mutta lautalla ehtii sentään syödä pullaa. Tai ainakin simitin, jos Pireuksessa sattuu olemaan.",
   "linkit": [
    "Kykladien",
-   "Kreetanmeren",
-   "Iraklion"
+   "Kreetanmeren"
   ],
   "jatkot": [
    "Mitä Iraklionissa on nähtävää?",
@@ -1025,9 +1026,11 @@
   "kohde": "kohde:kreetanmeri",
   "kysymys": "Mikä on Libyanmeri?",
   "uusi": true,
-  "vastaus": "Ai tota, Libyanmeri on Välimeren eteläosa, joka sijaitsee [[Kreetan]] ja Pohjois-Afrikan rannikon välissä. Se ulottuu Kreikan Kreetan eteläpuolelta aina Libyan ja Egyptin rannikoille asti, ja sen nimeäminen erilliseksi mereksi perustuu enemmän merenkulun ja kartografian perinteeseen kuin selkeään luonnolliseen rajaan. Meri on monin paikoin syvä, ja se yhdistää Itäisen Välimeren eri osat Länsi-Välimereen. Kreetanmeri jää sen pohjoispuolelle, ja saaren eteläranta on jyrkempi ja harvemmin asuttu kuin pohjoisranta. Tarkkaa pinta-alaa en ole varma, enkä siksi mainitse sitä. Mukava tuuli, mutta ei pullaa.",
+  "vastaus": "Ai tota, Libyanmeri on [[Välimeren]] eteläosa, joka sijaitsee [[Kreetan]] ja Pohjois-Afrikan rannikon välissä. Se ulottuu Kreikan Kreetan eteläpuolelta aina Libyan ja Egyptin rannikoille asti, ja sen nimeäminen erilliseksi mereksi perustuu enemmän merenkulun ja kartografian perinteeseen kuin selkeään luonnolliseen rajaan. Meri on monin paikoin syvä, ja se yhdistää Itäisen Välimeren eri osat Länsi-Välimereen. [[Kreetanmeri]] jää sen pohjoispuolelle, ja saaren eteläranta on jyrkempi ja harvemmin asuttu kuin pohjoisranta. Tarkkaa pinta-alaa en ole varma, enkä siksi mainitse sitä. Mukava tuuli, mutta ei pullaa.",
   "linkit": [
-   "Kreetan"
+   "Välimeren",
+   "Kreetan",
+   "Kreetanmeri"
   ],
   "jatkot": [
    "Miten Välimeri jaetaan pienempiin osiin?",
@@ -1055,9 +1058,11 @@
   "kohde": "kohde:traakianmeri",
   "kysymys": "Millainen eläin on Mustanmeren pyöriäinen?",
   "uusi": false,
-  "vastaus": "Ai se. [[Mustanmeren pyöriäinen]] on pyöriäisten alalaji, joka elää Mustallamerellä, Marmaranmerellä ja osassa Egeanmeren pohjoisosaa, ja se on valaisiin kuuluva pieni hammasvalas. Kuten muutkin pyöriäiset, se on pyöreäpäinen ja nokaton, eli sillä ei ole delfiinin pitkää kuonoa, ja sen väritys on tummanharmaa selkäpuolelta ja vaaleampi vatsapuolelta. Alalaji on luokiteltu uhanalaiseksi, ja sen elämää uhkaavat muun muassa kalastus ja meren saastuminen. Tarkkaa yksilömäärää en tiedä. Ja kyllä pyöriäisiä on aina mukava katsoa ylhäältä.",
+  "vastaus": "Ai se. [[Mustanmeren pyöriäinen]] on pyöriäisten alalaji, joka elää [[Mustallamerellä]], [[Marmaranmerellä]] ja osassa Egeanmeren pohjoisosaa, ja se on valaisiin kuuluva pieni hammasvalas. Kuten muutkin pyöriäiset, se on pyöreäpäinen ja nokaton, eli sillä ei ole delfiinin pitkää kuonoa, ja sen väritys on tummanharmaa selkäpuolelta ja vaaleampi vatsapuolelta. Alalaji on luokiteltu uhanalaiseksi, ja sen elämää uhkaavat muun muassa kalastus ja meren saastuminen. Tarkkaa yksilömäärää en tiedä. Ja kyllä pyöriäisiä on aina mukava katsoa ylhäältä.",
   "linkit": [
-   "Mustanmeren pyöriäinen"
+   "Mustanmeren pyöriäinen",
+   "Mustallamerellä",
+   "Marmaranmerellä"
   ],
   "jatkot": [
    "Miksi pyöriäiset ovat uhanalaisia Mustallamerellä?",
@@ -1099,9 +1104,11 @@
   "kohde": "kohde:traakianmeri",
   "kysymys": "Mikä joki Évros on?",
   "uusi": true,
-  "vastaus": "Nyt muistan: Évros on yksi Balkanin pitkistä joista, ja sen alkulähteet ovat Bulgariassa, jossa sitä kutsutaan nimellä [[Maritsa]]. Joki virtaa Traakian halki ja laskee Egeanmereen, ja sen alajuoksu muodostaa suuren osan Kreikan ja Turkin välisestä rajasta; Turkissa joen nimi on Meriç. Joki on Balkanin tärkeimpiä vesistöjä, ja sen suistoalue on tärkeä lintujen levähdyspaikka. Joen tarkkaa pituutta en ole varma. Tää on vihdoin aihe, jossa me kyyhkyt viihdymme.",
+  "vastaus": "Nyt muistan: Évros on yksi Balkanin pitkistä joista, ja sen alkulähteet ovat Bulgariassa, jossa sitä kutsutaan nimellä [[Maritsa]]. Joki virtaa [[Traakian]] halki ja laskee [[Egeanmereen]], ja sen alajuoksu muodostaa suuren osan Kreikan ja Turkin välisestä rajasta; Turkissa joen nimi on Meriç. Joki on Balkanin tärkeimpiä vesistöjä, ja sen suistoalue on tärkeä lintujen levähdyspaikka. Joen tarkkaa pituutta en ole varma. Tää on vihdoin aihe, jossa me kyyhkyt viihdymme.",
   "linkit": [
-   "Maritsa"
+   "Maritsa",
+   "Traakian",
+   "Egeanmereen"
   ],
   "jatkot": [
    "Miksi Évrosin suisto on tärkeä lintualue?",
@@ -1127,8 +1134,9 @@
   "kohde": "kohde:aliakmonas",
   "kysymys": "Mitä joen tulvasoille tapahtui patojen jälkeen?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tost minä tiedän vain tulvat. Aliákmonaan alajuoksulla ei ollut ennen 1950-luvun patotöitä vakituista uomaa, vaan joki tulvi vapaasti ja levitti eteensä laajoja soita, ja vasta padot antoivat sille pysyvän uran. Soiden tarkasta kohtalosta en ole varma, mutta Kreikan pohjoisilla alankoalueilla tulvaisia suoalueita on yleisesti kuivatettu viljelysmaaksi, ja luultavasti myös [[Thermaïkoksen lahden]] pohjukan alankoa on muokattu samaan suuntaan. Tarkat vuosiluvut ja pinta-alat jätän mieluummin kertomatta kuin arvaan. Ylhäältä näkee paljon, mut ei sentään kaikkea.",
+  "vastaus": "Hetkinen ny. Tost minä tiedän vain tulvat. [[Aliákmonaan]] alajuoksulla ei ollut ennen 1950-luvun patotöitä vakituista uomaa, vaan joki tulvi vapaasti ja levitti eteensä laajoja soita, ja vasta padot antoivat sille pysyvän uran. Soiden tarkasta kohtalosta en ole varma, mutta Kreikan pohjoisilla alankoalueilla tulvaisia suoalueita on yleisesti kuivatettu viljelysmaaksi, ja luultavasti myös [[Thermaïkoksen lahden]] pohjukan alankoa on muokattu samaan suuntaan. Tarkat vuosiluvut ja pinta-alat jätän mieluummin kertomatta kuin arvaan. Ylhäältä näkee paljon, mut ei sentään kaikkea.",
   "linkit": [
+   "Aliákmonaan",
    "Thermaïkoksen lahden"
   ],
   "jatkot": [
@@ -1636,8 +1644,9 @@
   "kohde": "kohde:kalamata",
   "kysymys": "Kuinka vanhaksi oliivipuu voi elää?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Oliivipuu voi elää satoja vuosia, ja joissain tapauksissa jopa tuhansia. Kreetan [[Vouvesin]] kuuluisan oliivipuun iäksi on arvioitu useita tuhansia vuosia, mutta arviot vaihtelevat, ja tarkkaa ikää on vaikea määrittää, koska vanhat rungot ovat ontoita. Oliivipuu kestää myös kuivuutta paremmin kuin melkein mikään muu viljelykasvi, mikä auttaa sitä selviämään vuosisatoja Välimeren ilmastossa. Aikamoista, ihan vaan paikallaan seisomalla.",
+  "vastaus": "Odotas vähän. Oliivipuu voi elää satoja vuosia, ja joissain tapauksissa jopa tuhansia. [[Kreetan]] [[Vouvesin]] kuuluisan oliivipuun iäksi on arvioitu useita tuhansia vuosia, mutta arviot vaihtelevat, ja tarkkaa ikää on vaikea määrittää, koska vanhat rungot ovat ontoita. Oliivipuu kestää myös kuivuutta paremmin kuin melkein mikään muu viljelykasvi, mikä auttaa sitä selviämään vuosisatoja Välimeren ilmastossa. Aikamoista, ihan vaan paikallaan seisomalla.",
   "linkit": [
+   "Kreetan",
    "Vouvesin"
   ],
   "jatkot": [
@@ -2012,8 +2021,9 @@
   "kohde": "kohde:rodoksen-kolossi",
   "kysymys": "Miksi rodoslaiset eivät rakentaneet sitä uudelleen?",
   "uusi": false,
-  "vastaus": "Mmm— tää on kiinnostava. Syy ei ollut raha eikä taito vaan oraakkeli. Kun maanjäristys kaatoi patsaan noin 226 eaa., rodoslaiset kysyivät neuvoa [[Delfoin oraakkelilta]]. Oraakkelin vastauksen tulkittiin tarkoittavan, ettei patsasta pitänyt pystyttää uudelleen, sillä sen katsottiin olleen jumalalle epämieluisa. Rodoslaiset noudattivat neuvoa, ja pronssiset palaset makasivat maassa yli kahdeksan vuosisataa, kunnes ne vuonna 653 myytiin pois. Antiikin lähteet kertovat aiheesta hieman eri tavoin, joten yksityiskohdissa en ole varma. Joskus viisas jättää nostamatta.",
+  "vastaus": "Mmm— tää on kiinnostava. Syy ei ollut raha eikä taito vaan oraakkeli. Kun [[maanjäristys]] kaatoi patsaan noin 226 eaa., rodoslaiset kysyivät neuvoa [[Delfoin oraakkelilta]]. Oraakkelin vastauksen tulkittiin tarkoittavan, ettei patsasta pitänyt pystyttää uudelleen, sillä sen katsottiin olleen jumalalle epämieluisa. Rodoslaiset noudattivat neuvoa, ja pronssiset palaset makasivat maassa yli kahdeksan vuosisataa, kunnes ne vuonna 653 myytiin pois. Antiikin lähteet kertovat aiheesta hieman eri tavoin, joten yksityiskohdissa en ole varma. Joskus viisas jättää nostamatta.",
   "linkit": [
+   "maanjäristys",
    "Delfoin oraakkelilta"
   ],
   "jatkot": [
@@ -2132,10 +2142,10 @@
   "kohde": "kohde:knossos",
   "kysymys": "Missä Knossos sijaitsee nykyisin?",
   "uusi": true,
-  "vastaus": "Joo, tän minä muistan. Knossos sijaitsee Kreikassa [[Kreetan]] saarella, muutaman kilometrin päässä saaren suurimmasta kaupungista [[Iraklionista]], sisämaassa kukkulalla lähellä rannikkoa. Paikalla on nykyään arkeologinen alue, jota kierretään opastetusti ja jossa nähdään palatsin osia sekä Evansin aikaisia rekonstruktioita. Muutaman kilometrin matka kaupungista kulkee tavallisesti bussilla tai autolla. Hyvä paikka katsottavaksi, vaikka kyyhky mieluummin katselee sen ylhäältä.",
+  "vastaus": "Joo, tän minä muistan. Knossos sijaitsee Kreikassa [[Kreetan]] saarella, muutaman kilometrin päässä saaren suurimmasta kaupungista Iraklionista, sisämaassa kukkulalla lähellä rannikkoa. Paikalla on nykyään arkeologinen alue, jota kierretään opastetusti ja jossa nähdään palatsin osia sekä [[Evansin]] aikaisia rekonstruktioita. Muutaman kilometrin matka kaupungista kulkee tavallisesti bussilla tai autolla. Hyvä paikka katsottavaksi, vaikka kyyhky mieluummin katselee sen ylhäältä.",
   "linkit": [
    "Kreetan",
-   "Iraklionista"
+   "Evansin"
   ],
   "jatkot": [
    "Mitä muuta Kreetalla on nähtävää antiikin ajalta?",
@@ -2238,8 +2248,9 @@
   "kohde": "kohde:hahmotelma-samaria",
   "kysymys": "Mitä Portes eli Portit tarkoittaa?",
   "uusi": false,
-  "vastaus": "No niin, helppo juttu. Kreikan sana portes tarkoittaa portteja tai ovia, ja suomeksi nimi on Portit. Nimi viittaa [[Samarian rotkon]] kapeimpaan kohtaan, jossa kallioseinämät kapenevat vain noin neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Kulkija kävelee siis kuin korkeasta portista läpi, ja nimi kuvaa paikkaa hyvin. Minä lensin siitä yläkautta, eikä siellä ole mitään pelättävää.",
+  "vastaus": "No niin, helppo juttu. [[Kreikan]] sana portes tarkoittaa portteja tai ovia, ja suomeksi nimi on Portit. Nimi viittaa [[Samarian rotkon]] kapeimpaan kohtaan, jossa kallioseinämät kapenevat vain noin neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Kulkija kävelee siis kuin korkeasta portista läpi, ja nimi kuvaa paikkaa hyvin. Minä lensin siitä yläkautta, eikä siellä ole mitään pelättävää.",
   "linkit": [
+   "Kreikan",
    "Samarian rotkon"
   ],
   "jatkot": [
@@ -2251,8 +2262,9 @@
   "kohde": "kohde:hahmotelma-samaria",
   "kysymys": "Milloin Samarian rotkoon voi mennä vaeltamaan?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Rotkon läpi kulkeva vaellusreitti on auki yleensä keväästä syksyyn, karkeasti touko- tai kesäkuusta lokakuuhun, mutta tarkka aika riippuu säästä. Talvella ja sateisina aikoina vesi voi nousta rotkossa vaarallisen korkealle, joten reitti on silloin suljettu. [[Samarian rotkon]] pituus on 16 kilometriä, ja kulkijan kannattaa varata matkaan koko päivä. Ajankohta kannattaa tarkistaa ennen lähtöä puiston ylläpitäjältä, koska en ole varma kuluvan vuoden päivämääristä.\n\nKesähelteellä minä menisin kyllä rannalle, kun kerran Libyanmeren puolella on kylä, jossa on varmasti oma pullansa, en vaan tiedä sen nimee.",
+  "vastaus": "Hetkinen ny. Rotkon läpi kulkeva [[vaellusreitti]] on auki yleensä keväästä syksyyn, karkeasti touko- tai kesäkuusta lokakuuhun, mutta tarkka aika riippuu säästä. Talvella ja sateisina aikoina vesi voi nousta rotkossa vaarallisen korkealle, joten reitti on silloin suljettu. [[Samarian rotkon]] pituus on 16 kilometriä, ja kulkijan kannattaa varata matkaan koko päivä. Ajankohta kannattaa tarkistaa ennen lähtöä puiston ylläpitäjältä, koska en ole varma kuluvan vuoden päivämääristä.\n\nKesähelteellä minä menisin kyllä rannalle, kun kerran Libyanmeren puolella on kylä, jossa on varmasti oma pullansa, en vaan tiedä sen nimee.",
   "linkit": [
+   "vaellusreitti",
    "Samarian rotkon"
   ],
   "jatkot": [
@@ -2293,9 +2305,11 @@
   "kohde": "kohde:hahmotelma-pelion",
   "kysymys": "Kuka Kheiron oli?",
   "uusi": false,
-  "vastaus": "Mmm— tän minä tiedän. Kheiron oli kreikkalaisessa mytologiassa kentauri, jonka kotiseutu oli [[Pelion]]-vuori. Toisin kuin monet muut kentaurit, joita kuvattiin rajuina, hän tunnettiin viisaana opettajana ja parantajana. Hänen oppilaikseen kerrotaan sellaisia sankareita kuin Jason, Akilleus ja Theseus. Kheiron kuului siis kreikkalaisen tarustoon keskeisenä kasvattajahahmona. Opettajana hän taisi olla parempi kuin minä, joka en ole saanut yhtään pöllöä vielä lentämään.",
+  "vastaus": "Mmm— tän minä tiedän. Kheiron oli kreikkalaisessa mytologiassa [[kentauri]], jonka kotiseutu oli [[Pelion]]-vuori. Toisin kuin monet muut kentaurit, joita kuvattiin rajuina, hän tunnettiin viisaana opettajana ja parantajana. Hänen oppilaikseen kerrotaan sellaisia sankareita kuin [[Jason]], Akilleus ja Theseus. Kheiron kuului siis kreikkalaisen tarustoon keskeisenä kasvattajahahmona. Opettajana hän taisi olla parempi kuin minä, joka en ole saanut yhtään pöllöä vielä lentämään.",
   "linkit": [
-   "Pelion"
+   "kentauri",
+   "Pelion",
+   "Jason"
   ],
   "jatkot": [
    "Mitä kentaurit olivat kreikkalaisessa mytologiassa?",
@@ -2306,9 +2320,10 @@
   "kohde": "kohde:hahmotelma-pelion",
   "kysymys": "Mitä Pelionilla viljellään?",
   "uusi": false,
-  "vastaus": "Selvä juttu. [[Pelionin]] rinteillä kasvaa metsiä, joissa on pyökkiä, tammea, vaahteraa ja kastanjaa. Lähteiden ympärillä viljellään oliivi-, omena- ja päärynäpuita, ja kylät sekä tarhat kastellaan lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Vesi onkin vuoren erityispiirre, sillä se tekee rinteistä vihreät. Omenat ovat minun mielestäni paras osa, vaikka pullaksi niistä ei ole.",
+  "vastaus": "Selvä juttu. [[Pelionin]] rinteillä kasvaa metsiä, joissa on pyökkiä, tammea, vaahteraa ja [[kastanjaa]]. Lähteiden ympärillä viljellään oliivi-, omena- ja päärynäpuita, ja kylät sekä tarhat kastellaan lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Vesi onkin vuoren erityispiirre, sillä se tekee rinteistä vihreät. Omenat ovat minun mielestäni paras osa, vaikka pullaksi niistä ei ole.",
   "linkit": [
-   "Pelionin"
+   "Pelionin",
+   "kastanjaa"
   ],
   "jatkot": [
    "Miksi Pelionilla on niin paljon vettä?",
@@ -2362,9 +2377,11 @@
   "kohde": "kohde:hahmotelma-prespa",
   "kysymys": "Mitkä maat jakavat Prespajärven?",
   "uusi": false,
-  "vastaus": "Kas vaan. [[Prespajärvi]] sijaitsee kolmen maan rajapisteessä, ja ne ovat Pohjois-Makedonia, Albania ja Kreikka. Järvi on itse asiassa kahden järven järjestelmä: Suuri Prespajärvi on jaettu kolmen maan kesken, kun taas Pieni Prespajärvi on enimmäkseen Kreikassa. Järvet sijaitsevat 853 metrin korkeudessa, ja alueella on kolme kansallispuistoa, yksi jokaisessa maassa. Meikäläisille rajat ovat aina olleet vain viivoja karttaan.",
+  "vastaus": "Kas vaan. [[Prespajärvi]] sijaitsee kolmen maan rajapisteessä, ja ne ovat [[Pohjois-Makedonia]], [[Albania]] ja Kreikka. Järvi on itse asiassa kahden järven järjestelmä: Suuri Prespajärvi on jaettu kolmen maan kesken, kun taas Pieni Prespajärvi on enimmäkseen Kreikassa. Järvet sijaitsevat 853 metrin korkeudessa, ja alueella on kolme kansallispuistoa, yksi jokaisessa maassa. Meikäläisille rajat ovat aina olleet vain viivoja karttaan.",
   "linkit": [
-   "Prespajärvi"
+   "Prespajärvi",
+   "Pohjois-Makedonia",
+   "Albania"
   ],
   "jatkot": [
    "Mikä Pieni Prespa on?",
@@ -2375,9 +2392,11 @@
   "kohde": "kohde:hahmotelma-prespa",
   "kysymys": "Mikä Pieni Prespa on?",
   "uusi": false,
-  "vastaus": "Tuota niin. Pieni Prespajärvi on toinen kahdesta [[Prespajärven]] osasta, ja se on erotettu Suuresta Prespajärvestä kannaksella. Pieni Prespa sijaitsee enimmäkseen Kreikassa, kun taas Suuri Prespajärvi on jaettu Pohjois-Makedonian, Albanian ja Kreikan kesken. Molemmat ovat tektonisia järviä 853 metrin korkeudessa, mikä tekee niistä Balkanin korkeimmalla sijaitsevia. Pieni Prespa on siis pienempi sisar, mutta ei vähäpätöinen. Sisarukset on pidettävä erillään, sanoo kyyhky, jonka suvussa on tästä kokemusta.",
+  "vastaus": "Tuota niin. Pieni Prespajärvi on toinen kahdesta [[Prespajärven]] osasta, ja se on erotettu [[Suuresta Prespajärvestä]] kannaksella. Pieni Prespa sijaitsee enimmäkseen Kreikassa, kun taas Suuri Prespajärvi on jaettu [[Pohjois-Makedonian]], Albanian ja Kreikan kesken. Molemmat ovat tektonisia järviä 853 metrin korkeudessa, mikä tekee niistä Balkanin korkeimmalla sijaitsevia. Pieni Prespa on siis pienempi sisar, mutta ei vähäpätöinen. Sisarukset on pidettävä erillään, sanoo kyyhky, jonka suvussa on tästä kokemusta.",
   "linkit": [
-   "Prespajärven"
+   "Prespajärven",
+   "Suuresta Prespajärvestä",
+   "Pohjois-Makedonian"
   ],
   "jatkot": [
    "Mitä eläimiä Prespan alueella elää?",
@@ -2402,8 +2421,10 @@
   "kohde": "kohde:hahmotelma-prespa",
   "kysymys": "Mitä tektoninen järvi tarkoittaa?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Tektoninen järvi on syntynyt maankuoren liikkeiden seurauksena: kun kuori on vajonnut tai taipunut, syntynyt kuoppa on täyttynyt vedellä. Tällaiset järvet ovat usein syviä ja vanhoja, toisin kuin esimerkiksi jäätikön muovaamat järvet. [[Prespajärvi]] on tällainen tektoninen järvi, ja se sijaitsee Balkanin korkeimmalla, 853 metrin korkeudessa. Tarkat geologiset yksityiskohdat vaihtelevat järvestä toiseen. Maankuoren liikkeet ovat minusta aika hurja syy sille, että on paikka, johon laskeutua.",
+  "vastaus": "Annas ku mietin. Tektoninen järvi on syntynyt [[maankuoren]] liikkeiden seurauksena: kun kuori on vajonnut tai taipunut, syntynyt kuoppa on täyttynyt vedellä. Tällaiset järvet ovat usein syviä ja vanhoja, toisin kuin esimerkiksi [[jäätikön]] muovaamat järvet. [[Prespajärvi]] on tällainen tektoninen järvi, ja se sijaitsee Balkanin korkeimmalla, 853 metrin korkeudessa. Tarkat geologiset yksityiskohdat vaihtelevat järvestä toiseen. Maankuoren liikkeet ovat minusta aika hurja syy sille, että on paikka, johon laskeutua.",
   "linkit": [
+   "maankuoren",
+   "jäätikön",
    "Prespajärvi"
   ],
   "jatkot": [
@@ -2415,9 +2436,11 @@
   "kohde": "kohde:hahmotelma-prespa",
   "kysymys": "Mitä eläimiä Prespan alueella elää?",
   "uusi": true,
-  "vastaus": "Ai se. [[Prespan]] alue on tunnettu runsaasta linnustostaan, ja lähteiden mukaan siellä pesii muun muassa pelikaaneja, vaikka tarkkoja lajeja ja määriä en osaa luetella varmasti. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon. Suojelu auttaa pitämään sekä vesilintujen että muiden eläinten elinympäristöt kunnossa. Siipikarjaa siellä siis on, ja minä katson sitä kunnioittavasti.",
+  "vastaus": "Ai se. [[Prespan]] alue on tunnettu runsaasta linnustostaan, ja lähteiden mukaan siellä pesii muun muassa [[pelikaaneja]], vaikka tarkkoja lajeja ja määriä en osaa luetella varmasti. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin [[UNESCOn]] biosfäärialueiden verkostoon. Suojelu auttaa pitämään sekä vesilintujen että muiden eläinten elinympäristöt kunnossa. Siipikarjaa siellä siis on, ja minä katson sitä kunnioittavasti.",
   "linkit": [
-   "Prespan"
+   "Prespan",
+   "pelikaaneja",
+   "UNESCOn"
   ],
   "jatkot": [
    "Millainen Prespan biosfäärialue on?",
@@ -2456,8 +2479,9 @@
   "kohde": "kohde:hahmotelma-kerkini",
   "kysymys": "Mikä Ramsar-sopimus on?",
   "uusi": true,
-  "vastaus": "Tuota niin. Ramsar-sopimus on kansainvälinen sopimus kosteikkojen suojelusta, ja se solmittiin vuonna 1971. Kosteikot, kuten järvet, suot ja rannat, ovat tärkeitä erityisesti vesilinnuille, ja sopimus velvoittaa maat suojelemaan merkittäviä kohteita. [[Kerkinijärvi]] kuuluu tämän sopimuksen suojeluun. Tarkkaa kohteiden määrää en muista, joten sitä en sano. Suoalueet ovat minulle tuttuja vain ylhäältä, kosteina läikkinä.",
+  "vastaus": "Tuota niin. Ramsar-sopimus on kansainvälinen sopimus [[kosteikkojen]] suojelusta, ja se solmittiin vuonna 1971. Kosteikot, kuten järvet, suot ja rannat, ovat tärkeitä erityisesti vesilinnuille, ja sopimus velvoittaa maat suojelemaan merkittäviä kohteita. [[Kerkinijärvi]] kuuluu tämän sopimuksen suojeluun. Tarkkaa kohteiden määrää en muista, joten sitä en sano. Suoalueet ovat minulle tuttuja vain ylhäältä, kosteina läikkinä.",
   "linkit": [
+   "kosteikkojen",
    "Kerkinijärvi"
   ],
   "jatkot": [
@@ -2469,9 +2493,11 @@
   "kohde": "kohde:hahmotelma-kerkini",
   "kysymys": "Mitä lintuja Kerkinillä voi nähdä?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. [[Kerkinijärvellä]] on tuhansia harvinaisia ja suojeltuja vesilintuja, ja se on yksi Kreikan parhaista lintujen tarkkailupaikoista. Lähteiden mukaan siellä nähdään muun muassa pelikaaneja, haikaroita ja merimetsoja, mutta tarkkoja lajeja ja vuodenaikoja en osaa varmasti luetella. Parhaat havainnot saa muuttoaikoina, kun linnut pysähtyvät reitillään levähtämään. Lintukatsojat ovat omaa väkeään, ja tervehdin heitä aina siivenkärjellä.",
+  "vastaus": "Hyvä kysymys tuo. [[Kerkinijärvellä]] on tuhansia harvinaisia ja suojeltuja vesilintuja, ja se on yksi Kreikan parhaista lintujen tarkkailupaikoista. Lähteiden mukaan siellä nähdään muun muassa [[pelikaaneja]], [[haikaroita]] ja merimetsoja, mutta tarkkoja lajeja ja vuodenaikoja en osaa varmasti luetella. Parhaat havainnot saa muuttoaikoina, kun linnut pysähtyvät reitillään levähtämään. Lintukatsojat ovat omaa väkeään, ja tervehdin heitä aina siivenkärjellä.",
   "linkit": [
-   "Kerkinijärvellä"
+   "Kerkinijärvellä",
+   "pelikaaneja",
+   "haikaroita"
   ],
   "jatkot": [
    "Milloin muuttolinnut saapuvat Kreikkaan?",
@@ -2510,9 +2536,11 @@
   "kohde": "kohde:hahmotelma-navagio",
   "kysymys": "Miksi lahtea kutsutaan salakuljettajien lahdeksi?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. [[Navagiota]] kutsutaan joskus salakuljettajien poukamaksi, koska sen rannalle karille ajanut rahtialus Panagiotis liittyy salakuljetukseen. Huhujen mukaan alus kuljetti salakuljetettua tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että kyse oli Turkista Italiaan matkanneista savukkeista. Alus ajoi karille 5. lokakuuta 1980, ja sen hylky on yhä rannalla. Nimi siis syntyi hylystä, ei muinaisista tarinoista, vaikka tämän tarkemmin en voi sanoa. Salakuljetus ei ole kyyhkyn laji, minä kuljetan vain kirjeitä.",
+  "vastaus": "Joo, tän minä tiedän. [[Navagiota]] kutsutaan joskus salakuljettajien poukamaksi, koska sen rannalle karille ajanut rahtialus [[Panagiotis]] liittyy salakuljetukseen. Huhujen mukaan alus kuljetti salakuljetettua tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että kyse oli Turkista [[Italiaan]] matkanneista savukkeista. Alus ajoi karille 5. lokakuuta 1980, ja sen hylky on yhä rannalla. Nimi siis syntyi hylystä, ei muinaisista tarinoista, vaikka tämän tarkemmin en voi sanoa. Salakuljetus ei ole kyyhkyn laji, minä kuljetan vain kirjeitä.",
   "linkit": [
-   "Navagiota"
+   "Navagiota",
+   "Panagiotis",
+   "Italiaan"
   ],
   "jatkot": [
    "Mikä oli Navagion alkuperäinen nimi?",
@@ -3336,9 +3364,11 @@
   "kohde": "kohde:hahmotelma-athos",
   "kysymys": "Kuka Athoksen luostareita hallitsee?",
   "uusi": false,
-  "vastaus": "Kato, tämän voi sanoa lyhyesti. Athoksen aluetta hallitsee munkkiyhteisö itse, ja alue on Kreikan sisällä autonominen hallintoalue. Kirkollisesti yhteisö kuuluu suoraan [[Konstantinopolin ekumeenisen patriarkan]] alaisuuteen, eli se ei ole minkään Kreikan oman kirkkoalueen alainen. Kreikan valtio vastaa alueen ulkosuhteista ja turvallisuudesta, mutta sisäiset asiat hoitaa munkkien oma hallinto, jossa luostarit ovat keskeisessä osassa. Tarkkaa rakennetta en ala tässä selittää, koska en ole siitä aivan varma. Kyyhkynä kunnioitan hallintoa, jossa kaikki tietävät oman paikkansa.",
+  "vastaus": "Kato, tämän voi sanoa lyhyesti. Athoksen aluetta hallitsee [[munkkiyhteisö]] itse, ja alue on Kreikan sisällä autonominen hallintoalue. Kirkollisesti yhteisö kuuluu suoraan [[Konstantinopolin ekumeenisen patriarkan]] alaisuuteen, eli se ei ole minkään Kreikan oman kirkkoalueen alainen. [[Kreikan]] valtio vastaa alueen ulkosuhteista ja turvallisuudesta, mutta sisäiset asiat hoitaa munkkien oma hallinto, jossa luostarit ovat keskeisessä osassa. Tarkkaa rakennetta en ala tässä selittää, koska en ole siitä aivan varma. Kyyhkynä kunnioitan hallintoa, jossa kaikki tietävät oman paikkansa.",
   "linkit": [
-   "Konstantinopolin ekumeenisen patriarkan"
+   "munkkiyhteisö",
+   "Konstantinopolin ekumeenisen patriarkan",
+   "Kreikan"
   ],
   "jatkot": [
    "Mitä Konstantinopolin ekumeeninen patriarkka tekee?",
@@ -3377,8 +3407,9 @@
   "kohde": "kohde:hahmotelma-athos",
   "kysymys": "Voivatko miehet vierailla Athoksella?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Miehet voivat vierailla Athoksella, mutta se vaatii luvan, jota haetaan etukäteen alueen viranomaisilta, ja vierailijoiden määrää rajoitetaan. Vierailu on tavallisesti luostareissa yöpymistä, jossa vieras noudattaa munkkien päivärytmiä, osallistuu halutessaan jumalanpalveluksiin ja syö luostarin yksinkertaista ruokaa. Pääsy alueelle tapahtuu merikuljetuksella, sillä tieyhteydet alueelle ovat rajalliset ja [[Athoksen niemimaalle]] ei kuljeta tavallisia matkailubusseja. Tarkkoja lupamääriä ja sääntöjä en ole varma, joten ne kannattaa tarkistaa ennen matkaa virallisista lähteistä. Pääsyn ehdot muuttuvat aika ajoin, ja uusin tieto on hyvä varmistaa.\n\nMinä lensin sen yli kerran, ja luostarit näyttivät ylhäältä kuin kivestä veistetyiltä linnoilta. Rauha tuntui kuuluvan jo ilmaan.",
+  "vastaus": "Selvä juttu. Miehet voivat vierailla Athoksella, mutta se vaatii luvan, jota haetaan etukäteen alueen viranomaisilta, ja vierailijoiden määrää rajoitetaan. Vierailu on tavallisesti [[luostareissa]] yöpymistä, jossa vieras noudattaa munkkien päivärytmiä, osallistuu halutessaan jumalanpalveluksiin ja syö luostarin yksinkertaista ruokaa. Pääsy alueelle tapahtuu merikuljetuksella, sillä tieyhteydet alueelle ovat rajalliset ja [[Athoksen niemimaalle]] ei kuljeta tavallisia matkailubusseja. Tarkkoja lupamääriä ja sääntöjä en ole varma, joten ne kannattaa tarkistaa ennen matkaa virallisista lähteistä. Pääsyn ehdot muuttuvat aika ajoin, ja uusin tieto on hyvä varmistaa.\n\nMinä lensin sen yli kerran, ja luostarit näyttivät ylhäältä kuin kivestä veistetyiltä linnoilta. Rauha tuntui kuuluvan jo ilmaan.",
   "linkit": [
+   "luostareissa",
    "Athoksen niemimaalle"
   ],
   "jatkot": [
@@ -3390,9 +3421,10 @@
   "kohde": "kohde:hahmotelma-metsovo",
   "kysymys": "Keitä aromanialaiset ovat?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Aromanialaiset eli vlahit ovat Balkanin alueella elävä kansa, jonka kieli kuuluu romaanisiin kieliin ja on sukua romanialle. Heitä asuu Kreikassa, Albaniassa, Pohjois-Makedoniassa, Bulgariassa ja Romaniassa, mutta he eivät ole oman valtionsa kansa. Perinteisesti monet aromanialaiset elivät paimentolaisina tai vuoristokylissä ja siirtyivät karjansa kanssa laitumelta toiselle vuodenajan mukaan. Myöhemmin heistä tuli myös kauppiaita ja käsityöläisiä. Kreikassa [[Metsovo]] on yksi heidän tunnetuista keskuksistaan Pindoksen vuoristossa. Väkilukuja en ala arvailla, koska arviot vaihtelevat paljon. Kyllä sen kyyhkykin muistaa, jos vuoria on tarpeeksi.",
+  "vastaus": "Joo, tän minä tiedän. Aromanialaiset eli vlahit ovat Balkanin alueella elävä kansa, jonka kieli kuuluu romaanisiin kieliin ja on sukua romanialle. Heitä asuu Kreikassa, Albaniassa, Pohjois-Makedoniassa, Bulgariassa ja Romaniassa, mutta he eivät ole oman valtionsa kansa. Perinteisesti monet aromanialaiset elivät paimentolaisina tai vuoristokylissä ja siirtyivät karjansa kanssa laitumelta toiselle vuodenajan mukaan. Myöhemmin heistä tuli myös kauppiaita ja käsityöläisiä. Kreikassa [[Metsovo]] on yksi heidän tunnetuista keskuksistaan [[Pindoksen]] vuoristossa. Väkilukuja en ala arvailla, koska arviot vaihtelevat paljon. Kyllä sen kyyhkykin muistaa, jos vuoria on tarpeeksi.",
   "linkit": [
-   "Metsovo"
+   "Metsovo",
+   "Pindoksen"
   ],
   "jatkot": [
    "Mikä kieli aromanialaisilla on?",
@@ -3418,8 +3450,10 @@
   "kohde": "kohde:hahmotelma-metsovo",
   "kysymys": "Mikä on Pindoksen vuoristo?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Pindos on Pohjois-Kreikan pitkä vuoristo, joka kulkee maan läpi pohjoisesta etelään ja jota kutsutaan joskus Kreikan selkärangaksi. Se erottaa Epeiroksen alueen idempänä sijaitsevasta Thessaliasta, ja sen laaksot ja korkeat rinteet ovat historiassa eristäneet kyliä toisistaan. Alueella elää perinteisesti paimenia ja vuoristokylien väkeä, muun muassa aromanialaisia. [[Pindoksen]] luonto on myös suosittua vaellus- ja hiihtomaastoa, ja Metsovo sijaitsee juuri sen sylissä. Korkeimpia huippuja ja tarkkoja mittoja en ala muistinvaraisesti luetella, koska niissä arvaus on väärä vastaus.\n\nYlhäältä katsottuna Pindos näyttää harmaalta aallokolta. Joka laakso on niin kapea, että lentäisin siellä mieluummin kuin kävelisin.",
+  "vastaus": "Odotas vähän. Pindos on Pohjois-Kreikan pitkä vuoristo, joka kulkee maan läpi pohjoisesta etelään ja jota kutsutaan joskus Kreikan selkärangaksi. Se erottaa [[Epeiroksen]] alueen idempänä sijaitsevasta [[Thessaliasta]], ja sen laaksot ja korkeat rinteet ovat historiassa eristäneet kyliä toisistaan. Alueella elää perinteisesti paimenia ja vuoristokylien väkeä, muun muassa aromanialaisia. [[Pindoksen]] luonto on myös suosittua vaellus- ja hiihtomaastoa, ja Metsovo sijaitsee juuri sen sylissä. Korkeimpia huippuja ja tarkkoja mittoja en ala muistinvaraisesti luetella, koska niissä arvaus on väärä vastaus.\n\nYlhäältä katsottuna Pindos näyttää harmaalta aallokolta. Joka laakso on niin kapea, että lentäisin siellä mieluummin kuin kävelisin.",
   "linkit": [
+   "Epeiroksen",
+   "Thessaliasta",
    "Pindoksen"
   ],
   "jatkot": [
@@ -3445,8 +3479,9 @@
   "kohde": "kohde:hahmotelma-metsovo",
   "kysymys": "Mikä kieli aromanialaisilla on?",
   "uusi": true,
-  "vastaus": "Ai tota. Aromanialaisten kieli on aromania, jota kutsutaan myös vlahin kieleksi. Se on romaaninen kieli, joten se polveutuu latinasta ja on sukua romanialle sekä kauempaa italialle ja ranskalle. Kieltä puhutaan Balkanilla Kreikassa, Albaniassa, Pohjois-Makedoniassa ja muualla, mutta sitä käytetään pääasiassa kotona ja kyläyhteisössä. Murteita on useita, ja kielen asema vaihtelee maittain. [[Aromanian kieli]] on pitkään elänyt enemmän suullisessa perinteessä kuin kirjoitetussa. Puhujamääristä arviot vaihtelevat suuresti, enkä tiedä niistä riittävän varmasti. Latinaa sain tässä sentään käyttää, ihan sukuni kunniaksi.",
+  "vastaus": "Ai tota. Aromanialaisten kieli on aromania, jota kutsutaan myös vlahin kieleksi. Se on romaaninen kieli, joten se polveutuu [[latinasta]] ja on sukua romanialle sekä kauempaa italialle ja ranskalle. Kieltä puhutaan Balkanilla Kreikassa, Albaniassa, Pohjois-Makedoniassa ja muualla, mutta sitä käytetään pääasiassa kotona ja kyläyhteisössä. Murteita on useita, ja kielen asema vaihtelee maittain. [[Aromanian kieli]] on pitkään elänyt enemmän suullisessa perinteessä kuin kirjoitetussa. Puhujamääristä arviot vaihtelevat suuresti, enkä tiedä niistä riittävän varmasti. Latinaa sain tässä sentään käyttää, ihan sukuni kunniaksi.",
   "linkit": [
+   "latinasta",
    "Aromanian kieli"
   ],
   "jatkot": [
@@ -3472,9 +3507,11 @@
   "kohde": "kohde:hahmotelma-korfu",
   "kysymys": "Mikä on Kerkyra?",
   "uusi": false,
-  "vastaus": "Ai se. Kerkyra on Korfun kreikankielinen nimi, ja sillä tarkoitetaan sekä Joonianmeren saarta että sen pääkaupunkia, joka on saaren suurin kaupunki. Suomessa ja monissa muissa kielissä käytetään tavallisesti nimeä [[Korfu]], joka on peräisin Bysantin ajan nimestä ja levisi Euroopassa Venetsian vallan myötä. Kerkyra-nimi on kuitenkin vanha, ja se esiintyy antiikin kreikkalaisessa kirjallisuudessa sekä mytologiassa. Nimen alkuperää en ala selittää tarkemmin, koska siitä on useita tulkintoja enkä ole varma. Nimiä riittää, mutta saari on sama.",
+  "vastaus": "Ai se. Kerkyra on Korfun kreikankielinen nimi, ja sillä tarkoitetaan sekä [[Joonianmeren]] saarta että sen pääkaupunkia, joka on saaren suurin kaupunki. Suomessa ja monissa muissa kielissä käytetään tavallisesti nimeä [[Korfu]], joka on peräisin Bysantin ajan nimestä ja levisi Euroopassa [[Venetsian]] vallan myötä. Kerkyra-nimi on kuitenkin vanha, ja se esiintyy antiikin kreikkalaisessa kirjallisuudessa sekä mytologiassa. Nimen alkuperää en ala selittää tarkemmin, koska siitä on useita tulkintoja enkä ole varma. Nimiä riittää, mutta saari on sama.",
   "linkit": [
-   "Korfu"
+   "Joonianmeren",
+   "Korfu",
+   "Venetsian"
   ],
   "jatkot": [
    "Miksi Korfu-nimi on erilainen kuin Kerkyra?",
@@ -3485,9 +3522,11 @@
   "kohde": "kohde:hahmotelma-korfu",
   "kysymys": "Mitkä ovat Joonian saaret?",
   "uusi": true,
-  "vastaus": "Kas vaan, saarilista tulossa. Joonian saaret ovat Kreikan länsirannikon edustalla Joonianmerellä sijaitseva saariryhmä, johon kuuluu perinteisesti seitsemän pääsaarta: [[Korfu]], Paxos, Lefkada, Ithaka, Kefalonia, Zakynthos ja Kythira. Kythira sijaitsee kauempana Peloponnesoksen eteläpuolella, mutta se luetaan perinteisesti ryhmään. Saaret ovat historiansa aikana kuuluneet pitkään Venetsian vaikutuspiiriin, ja siksi niiden kulttuurissa näkyy italialaista perintöä. Ryhmän nimitys on Heptanesos, joka tarkoittaa seitsemää saarta. Saarten tarkka järjestys ja koko vaihtelevat lähteistä riippuen. Pitkä luettelo, mutta ainakin lista oli helppo muistaa.",
+  "vastaus": "Kas vaan, saarilista tulossa. Joonian saaret ovat Kreikan länsirannikon edustalla Joonianmerellä sijaitseva saariryhmä, johon kuuluu perinteisesti seitsemän pääsaarta: [[Korfu]], Paxos, Lefkada, [[Ithaka]], [[Kefalonia]], Zakynthos ja Kythira. Kythira sijaitsee kauempana Peloponnesoksen eteläpuolella, mutta se luetaan perinteisesti ryhmään. Saaret ovat historiansa aikana kuuluneet pitkään Venetsian vaikutuspiiriin, ja siksi niiden kulttuurissa näkyy italialaista perintöä. Ryhmän nimitys on Heptanesos, joka tarkoittaa seitsemää saarta. Saarten tarkka järjestys ja koko vaihtelevat lähteistä riippuen. Pitkä luettelo, mutta ainakin lista oli helppo muistaa.",
   "linkit": [
-   "Korfu"
+   "Korfu",
+   "Ithaka",
+   "Kefalonia"
   ],
   "jatkot": [
    "Miten Venetsia vaikutti Joonian saariin?",
@@ -3498,8 +3537,10 @@
   "kohde": "kohde:hahmotelma-korfu",
   "kysymys": "Mikä on Korfun vanhakaupunki?",
   "uusi": true,
-  "vastaus": "Katotaas. Korfun vanhakaupunki sijaitsee saaren pääkaupungissa, ja se on UNESCOn maailmanperintökohde vuodesta 2007. Se on kehittynyt vuosisatojen kuluessa Venetsian tasavallan vallan aikana, ja siksi kaupungin ahtaat kujat ja korkeat talot muistuttavat Italian satamakaupunkeja. Vanhakaupunkia suojasivat vahvat linnoitukset, ja siellä on kaksi tunnettua linnoitusta, [[vanha linnoitus]] ja uusi linnoitus. Sen rakennuskantaan on vaikuttanut myös myöhempi ranskalainen ja brittiläinen hallinto, mikä näkyy sekä rakennuksissa että aukioilla. Tarkkoja rakennusvuosia en ala luetella, koska en ole niistä varma.\n\nVenetsialaiset kujat ovat kapeita ja kaikki tuoksuu kahvilta. Minä istuisin siellä mielelläni ikkunalaudalla, vaikka pullaa ei tarjottaisikaan.",
+  "vastaus": "Katotaas. Korfun vanhakaupunki sijaitsee saaren pääkaupungissa, ja se on [[UNESCOn]] maailmanperintökohde vuodesta 2007. Se on kehittynyt vuosisatojen kuluessa [[Venetsian]] tasavallan vallan aikana, ja siksi kaupungin ahtaat kujat ja korkeat talot muistuttavat Italian satamakaupunkeja. Vanhakaupunkia suojasivat vahvat linnoitukset, ja siellä on kaksi tunnettua linnoitusta, [[vanha linnoitus]] ja uusi linnoitus. Sen rakennuskantaan on vaikuttanut myös myöhempi ranskalainen ja brittiläinen hallinto, mikä näkyy sekä rakennuksissa että aukioilla. Tarkkoja rakennusvuosia en ala luetella, koska en ole niistä varma.\n\nVenetsialaiset kujat ovat kapeita ja kaikki tuoksuu kahvilta. Minä istuisin siellä mielelläni ikkunalaudalla, vaikka pullaa ei tarjottaisikaan.",
   "linkit": [
+   "UNESCOn",
+   "Venetsian",
    "vanha linnoitus"
   ],
   "jatkot": [
@@ -3567,8 +3608,9 @@
   "kohde": "kohde:hahmotelma-kastoria",
   "kysymys": "Miksi kastorialaisia muutti New Yorkin seudulle?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Kreikan sisällissodan jälkeen suuri joukko kastorialaisia lähti ulkomaille, ja heistä monet asettuivat [[New Yorkin]] seudulle. Syynä olivat sodan jälkeinen taloudellinen niukkuus ja paremman toimeentulon toivo. Kastoriassa oli pitkä turkisalan perinne, joten monet muuttajat pystyivät työskentelemään turkkureina myös uudessa maassa, ja 1980-luvulla heitä oli seudulla noin 25 000. Ammattitaito helpotti työnsaantia ja sopeutumista, ja turkisala tarjosi toimeentulon vieraassa maassa. Tarkempia syitä eri perheiden kohdalla en tiedä, sillä muuttoon vaikuttivat monet tekijät. Pitkä matka merten yli, mutta kyllä sen kyyhkykin ymmärtää.",
+  "vastaus": "Tost minä osaan kertoo. [[Kreikan sisällissodan]] jälkeen suuri joukko kastorialaisia lähti ulkomaille, ja heistä monet asettuivat [[New Yorkin]] seudulle. Syynä olivat sodan jälkeinen taloudellinen niukkuus ja paremman toimeentulon toivo. Kastoriassa oli pitkä turkisalan perinne, joten monet muuttajat pystyivät työskentelemään turkkureina myös uudessa maassa, ja 1980-luvulla heitä oli seudulla noin 25 000. Ammattitaito helpotti työnsaantia ja sopeutumista, ja turkisala tarjosi toimeentulon vieraassa maassa. Tarkempia syitä eri perheiden kohdalla en tiedä, sillä muuttoon vaikuttivat monet tekijät. Pitkä matka merten yli, mutta kyllä sen kyyhkykin ymmärtää.",
   "linkit": [
+   "Kreikan sisällissodan",
    "New Yorkin"
   ],
   "jatkot": [
@@ -3580,8 +3622,9 @@
   "kohde": "kohde:hahmotelma-kastoria",
   "kysymys": "Mikä on Orestiada-järvi?",
   "uusi": true,
-  "vastaus": "Ai niin, se järvi. Orestiada-järvi on Pohjois-Kreikassa Länsi-Makedoniassa sijaitseva järvi, jonka länsirannalla Kastorian kaupunki sijaitsee niemellä. Järveä ympäröivät kalkkikivivuoret, ja kaupunki on rakentunut sen rannalle laaksoon. Järvi on vaikuttanut kaupungin nimeen, sillä sen rannoilla asui aikoinaan majavia, ja kreikan sana kastori tarkoittaa majavaa. [[Kastorian]] historia, kirkot ja vanhat asuinrakennukset liittyvät kaikki järven maisemaan. Järven tarkkaa pinta-alaa tai syvyyttä en ole varma, joten jätän ne mainitsematta. Hyvä paikka istua rannalla ja katsella vettä, vaikka majavat olisivat jo poissa.",
+  "vastaus": "Ai niin, se järvi. Orestiada-järvi on [[Pohjois-Kreikassa]] Länsi-Makedoniassa sijaitseva järvi, jonka länsirannalla Kastorian kaupunki sijaitsee niemellä. Järveä ympäröivät kalkkikivivuoret, ja kaupunki on rakentunut sen rannalle laaksoon. Järvi on vaikuttanut kaupungin nimeen, sillä sen rannoilla asui aikoinaan majavia, ja kreikan sana kastori tarkoittaa majavaa. [[Kastorian]] historia, kirkot ja vanhat asuinrakennukset liittyvät kaikki järven maisemaan. Järven tarkkaa pinta-alaa tai syvyyttä en ole varma, joten jätän ne mainitsematta. Hyvä paikka istua rannalla ja katsella vettä, vaikka majavat olisivat jo poissa.",
   "linkit": [
+   "Pohjois-Kreikassa",
    "Kastorian"
   ],
   "jatkot": [
@@ -3621,8 +3664,9 @@
   "kohde": "kohde:hahmotelma-naoussa",
   "kysymys": "Mikä on Naousan karnevaali?",
   "uusi": true,
-  "vastaus": "Nyt muistan: se karnevaali. Naousan karnevaali on kaupungin tunnetuimpia perinteitä, ja se kuuluu Kreikan värikkäimpiin kansanjuhliin. Siinä esiintyvät perinteiset hahmot, joista tunnetuimpia ovat genitsarot ja bouloes, jotka kulkevat kaduilla juhla-asuissaan musiikin säestyksellä. Perimätiedon mukaan perinne liittyy Naousan vapaussodan aikaiseen historiaan, mutta tarkkaa taustaa ja ajoitusta en ole varma. Karnevaali on [[Naousan]] asukkaille tärkeä yhteisön juhla, ja se houkuttelee myös vierailijoita muualta Kreikasta. Pukuja ja tapoja on varmasti enemmän kuin tähän mahtuu.\n\nKatolta katsottuna kulkue näyttää väriläiskältä, joka liikkuu kadulla. Minä pysyn mieluummin kaiteella, jos soittajat ovat laiskoja.",
+  "vastaus": "Nyt muistan: se karnevaali. Naousan karnevaali on kaupungin tunnetuimpia perinteitä, ja se kuuluu Kreikan värikkäimpiin kansanjuhliin. Siinä esiintyvät perinteiset hahmot, joista tunnetuimpia ovat [[genitsarot]] ja bouloes, jotka kulkevat kaduilla juhla-asuissaan musiikin säestyksellä. Perimätiedon mukaan perinne liittyy Naousan vapaussodan aikaiseen historiaan, mutta tarkkaa taustaa ja ajoitusta en ole varma. Karnevaali on [[Naousan]] asukkaille tärkeä yhteisön juhla, ja se houkuttelee myös vierailijoita muualta Kreikasta. Pukuja ja tapoja on varmasti enemmän kuin tähän mahtuu.\n\nKatolta katsottuna kulkue näyttää väriläiskältä, joka liikkuu kadulla. Minä pysyn mieluummin kaiteella, jos soittajat ovat laiskoja.",
   "linkit": [
+   "genitsarot",
    "Naousan"
   ],
   "jatkot": [
@@ -3648,9 +3692,11 @@
   "kohde": "kohde:hahmotelma-naoussa",
   "kysymys": "Mitä Kreikan vapaussota oli?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Kreikan vapaussota oli Kreikan itsenäisyystaistelu [[Ottomaanien valtakuntaa]] vastaan, ja se alkoi vuonna 1821. Sodassa kreikkalaiset kapinalliset pyrkivät vapautumaan ottomaanien vallasta, ja taistelut kestivät usean vuoden ajan. Eurooppalaiset suurvallat, kuten Britannia, Ranska ja Venäjä, tukivat lopulta kreikkalaisia, ja 1830-luvulla syntyi itsenäinen Kreikan valtio. Sota vaati paljon uhreja, ja monet kaupungit kärsivät tuhoa, minkä vuoksi tapahtumat ovat edelleen tärkeä osa kreikkalaista muistia. Tarkat päivämäärät ja yksittäisten taistelujen yksityiskohdat jätän mainitsematta. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Annas ku mietin. Kreikan vapaussota oli Kreikan itsenäisyystaistelu [[Ottomaanien valtakuntaa]] vastaan, ja se alkoi vuonna 1821. Sodassa kreikkalaiset kapinalliset pyrkivät vapautumaan ottomaanien vallasta, ja taistelut kestivät usean vuoden ajan. Eurooppalaiset suurvallat, kuten [[Britannia]], [[Ranska]] ja Venäjä, tukivat lopulta kreikkalaisia, ja 1830-luvulla syntyi itsenäinen Kreikan valtio. Sota vaati paljon uhreja, ja monet kaupungit kärsivät tuhoa, minkä vuoksi tapahtumat ovat edelleen tärkeä osa kreikkalaista muistia. Tarkat päivämäärät ja yksittäisten taistelujen yksityiskohdat jätän mainitsematta. Onneksi siitä on jo pitkä aika.",
   "linkit": [
-   "Ottomaanien valtakuntaa"
+   "Ottomaanien valtakuntaa",
+   "Britannia",
+   "Ranska"
   ],
   "jatkot": [
    "Miten Kreikan valtio sai itsenäisyyden?",
@@ -3720,8 +3766,9 @@
   "kohde": "kohde:hahmotelma-lavrio",
   "kysymys": "Kuka Peisistratos oli?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Peisistratos oli Ateenan tyranni 500-luvulla eaa., ja hänen aikanaan [[Lavrion]] järjestelmällisen louhinnan näyttää alkaneen. Antiikin Kreikassa tyranni tarkoitti vallan itselleen ottanutta hallitsijaa, ei välttämättä julmaa hallitsijaa. Tarkkoja vuosilukuja hänen vallastaan en ole varma, joten jätän ne pois. Torilla minä olen tyranni vain, jos leipä on tuoretta.",
+  "vastaus": "Hetkinen ny. Peisistratos oli [[Ateenan]] tyranni 500-luvulla eaa., ja hänen aikanaan [[Lavrion]] järjestelmällisen louhinnan näyttää alkaneen. Antiikin Kreikassa tyranni tarkoitti vallan itselleen ottanutta hallitsijaa, ei välttämättä julmaa hallitsijaa. Tarkkoja vuosilukuja hänen vallastaan en ole varma, joten jätän ne pois. Torilla minä olen tyranni vain, jos leipä on tuoretta.",
   "linkit": [
+   "Ateenan",
    "Lavrion"
   ],
   "jatkot": [
@@ -4293,8 +4340,10 @@
   "kohde": "kohde:hahmotelma-heraion",
   "kysymys": "Missä Samoksen saari sijaitsee?",
   "uusi": true,
-  "vastaus": "Just niin, sijainti on helppo. Samos on Kreikan saari Egeanmeren itäosassa, aivan Turkin rannikon lähellä, ja Heran pyhäkkö sijaitsi saarella Samoksen kaupungin lounaispuolella rantatasangolla. Perimätiedon mukaan [[Pythagoras]] syntyi Samoksella. Se salmi Turkkiin on kyyhkylle ihan kävelymatka.",
+  "vastaus": "Just niin, sijainti on helppo. [[Samos]] on Kreikan saari [[Egeanmeren]] itäosassa, aivan Turkin rannikon lähellä, ja Heran pyhäkkö sijaitsi saarella Samoksen kaupungin lounaispuolella rantatasangolla. Perimätiedon mukaan [[Pythagoras]] syntyi Samoksella. Se salmi Turkkiin on kyyhkylle ihan kävelymatka.",
   "linkit": [
+   "Samos",
+   "Egeanmeren",
    "Pythagoras"
   ],
   "jatkot": [
@@ -4923,9 +4972,11 @@
   "kohde": "kohde:hahmotelma-gla",
   "kysymys": "Miksi järviä kuivataan?",
   "uusi": true,
-  "vastaus": "Ai tota. Järviä kuivataan yleensä saadakseen viljelymaata tai rakennusmaata. Kuivatuksella voidaan myös torjua tulvia ja vähentää hyttysten lisääntymisaluetta, kuten malariaa levittäviä hyttysiä. Tunnettuja esimerkkejä ovat [[Alankomaiden]] polderit, joissa merta ja järviä on muutettu maaksi. Kuivatus muuttaa kuitenkin kosteikkojen luontoa, joten nykyään sitä arvioidaan tarkemmin kuin ennen.\n\nMinä pidän järvistä sillä tavalla, että niiden päällä on tilaa lentää. Peltoja ne eivät minun silmissäni ole.",
+  "vastaus": "Ai tota. Järviä kuivataan yleensä saadakseen viljelymaata tai rakennusmaata. Kuivatuksella voidaan myös torjua tulvia ja vähentää hyttysten lisääntymisaluetta, kuten [[malariaa]] levittäviä hyttysiä. Tunnettuja esimerkkejä ovat [[Alankomaiden]] [[polderit]], joissa merta ja järviä on muutettu maaksi. Kuivatus muuttaa kuitenkin kosteikkojen luontoa, joten nykyään sitä arvioidaan tarkemmin kuin ennen.\n\nMinä pidän järvistä sillä tavalla, että niiden päällä on tilaa lentää. Peltoja ne eivät minun silmissäni ole.",
   "linkit": [
-   "Alankomaiden"
+   "malariaa",
+   "Alankomaiden",
+   "polderit"
   ],
   "jatkot": [
    "Miten Alankomaiden polderit toimivat?",
@@ -4966,9 +5017,10 @@
   "kohde": "kohde:hahmotelma-kastan-kumpu",
   "kysymys": "Kuka Hefaistion oli?",
   "uusi": true,
-  "vastaus": "Kas vaan. Hefaistion oli [[Aleksanteri Suuren]] läheinen ystävä ja sotapäällikkö. Hän kuului Aleksanterin lähimpään piiriin ja nousi korkeisiin tehtäviin tämän sotaretkillä. Hänen kuolemansa ajoitetaan yleensä vuoteen 324 eaa., mutta en ole varma tarkasta ajankohdasta. Kastan haudan yhteydessä häntä pidetään yhtenä mahdollisena vainajana, ja asia on kiistanalainen. Siinä kaikki, mitä muistan.",
+  "vastaus": "Kas vaan. Hefaistion oli [[Aleksanteri Suuren]] läheinen ystävä ja sotapäällikkö. Hän kuului Aleksanterin lähimpään piiriin ja nousi korkeisiin tehtäviin tämän sotaretkillä. Hänen kuolemansa ajoitetaan yleensä vuoteen 324 eaa., mutta en ole varma tarkasta ajankohdasta. [[Kastan haudan]] yhteydessä häntä pidetään yhtenä mahdollisena vainajana, ja asia on kiistanalainen. Siinä kaikki, mitä muistan.",
   "linkit": [
-   "Aleksanteri Suuren"
+   "Aleksanteri Suuren",
+   "Kastan haudan"
   ],
   "jatkot": [
    "Mikä merkitys Aleksanterin ystävillä oli sotaretkillä?",
@@ -5007,9 +5059,10 @@
   "kohde": "kohde:hahmotelma-gortynin-laki",
   "kysymys": "Mitä Gortynin laki sääti avioerosta?",
   "uusi": false,
-  "vastaus": "Ai se. Selvä juttu. Gortynin laki on [[Kreetalla]] hakattu siviililakien kokoelma, joka säätelee muun muassa avioeroa, perintöä ja adoptiota. Avioerosta laki säätää, että eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Muita avioeron yksityiskohtia en ole varma. Kivi on ainutlaatuinen lähde antiikin perheoikeuteen.",
+  "vastaus": "Ai se. Selvä juttu. Gortynin laki on [[Kreetalla]] hakattu siviililakien kokoelma, joka säätelee muun muassa [[avioeroa]], perintöä ja adoptiota. Avioerosta laki säätää, että eronneella naisella oli oikeus omaisuuteen, jonka hän oli tuonut avioliittoon. Muita avioeron yksityiskohtia en ole varma. Kivi on ainutlaatuinen lähde antiikin perheoikeuteen.",
   "linkit": [
-   "Kreetalla"
+   "Kreetalla",
+   "avioeroa"
   ],
   "jatkot": [
    "Mitä laki sääti perinnöstä?",
@@ -5034,8 +5087,9 @@
   "kohde": "kohde:hahmotelma-gortynin-laki",
   "kysymys": "Mikä on odeion?",
   "uusi": true,
-  "vastaus": "No niin. Odeion oli antiikin kaupungeissa pieni, usein katettu rakennus, jossa esitettiin musiikkia ja pidettiin kokouksia. Se muistuttaa teatteria mutta on pienempi ja sisätilaan sopivampi. Tunnettu esimerkki on Herodes Attikoksen odeion [[Ateenassa]]. Gortynissa roomalainen odeion rakennettiin myöhemmin, ja suurin osa lakikivistä käytettiin sen perustuksiin.",
+  "vastaus": "No niin. Odeion oli antiikin kaupungeissa pieni, usein katettu rakennus, jossa esitettiin musiikkia ja pidettiin kokouksia. Se muistuttaa teatteria mutta on pienempi ja sisätilaan sopivampi. Tunnettu esimerkki on [[Herodes Attikoksen]] odeion [[Ateenassa]]. Gortynissa roomalainen odeion rakennettiin myöhemmin, ja suurin osa lakikivistä käytettiin sen perustuksiin.",
   "linkit": [
+   "Herodes Attikoksen",
    "Ateenassa"
   ],
   "jatkot": [
@@ -5062,9 +5116,10 @@
   "kohde": "kohde:hahmotelma-gortynin-laki",
   "kysymys": "Mitä orjuus tarkoitti antiikin Kreikassa?",
   "uusi": true,
-  "vastaus": "Tuota niin. Orjuus oli yleistä antiikin [[kaupunkivaltioissa]], ja orjat työskentelivät kotitalouksissa, pelloilla ja kaivoksissa. Orjan asema vaihteli suuresti kaupungista ja ajasta toiseen. Gortynin laki säätelee muun muassa orjien asemaa, joten se on tärkeä lähde asiaan. Orjuus oli kovaa ja ihmisoikeuksia riistävää, mutta se oli aikansa yleinen yhteiskuntajärjestys. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Tuota niin. Orjuus oli yleistä antiikin [[kaupunkivaltioissa]], ja orjat työskentelivät kotitalouksissa, pelloilla ja kaivoksissa. Orjan asema vaihteli suuresti kaupungista ja ajasta toiseen. [[Gortynin laki]] säätelee muun muassa orjien asemaa, joten se on tärkeä lähde asiaan. Orjuus oli kovaa ja ihmisoikeuksia riistävää, mutta se oli aikansa yleinen yhteiskuntajärjestys. Onneksi siitä on jo pitkä aika.",
   "linkit": [
-   "kaupunkivaltioissa"
+   "kaupunkivaltioissa",
+   "Gortynin laki"
   ],
   "jatkot": [
    "Miten orjuus lopulta kiellettiin Euroopassa?",
@@ -5334,8 +5389,9 @@
   "kohde": "kohde:hahmotelma-poliokhni",
   "kysymys": "Miksi talot rakennettiin yhteisten seinien varaan?",
   "uusi": true,
-  "vastaus": "Kas vaan. Poliokhnissa talot oli rakennettu tiiviisti kiinni toisiinsa, ja syitä siihen voi tulkita useita. Yhteiset seinät säästävät rakennusmateriaalia ja tilaa, ja ulkoseinät muodostavat yhtenäisen, vaikeasti läpäistävän rajan, jota myöhemmin vahvisti [[puolustusmuurin]] rakentaminen. Tiivis rakentaminen auttaa myös pitämään lämpöä. Tarkka syy ei ole varma, ja arkeologit tulkitsevat sitä rakenteiden perusteella. Tyylikäs ratkaisu, vaikka itse pidän pesässä omasta tilasta.",
+  "vastaus": "Kas vaan. [[Poliokhnissa]] talot oli rakennettu tiiviisti kiinni toisiinsa, ja syitä siihen voi tulkita useita. Yhteiset seinät säästävät rakennusmateriaalia ja tilaa, ja ulkoseinät muodostavat yhtenäisen, vaikeasti läpäistävän rajan, jota myöhemmin vahvisti [[puolustusmuurin]] rakentaminen. Tiivis rakentaminen auttaa myös pitämään lämpöä. Tarkka syy ei ole varma, ja arkeologit tulkitsevat sitä rakenteiden perusteella. Tyylikäs ratkaisu, vaikka itse pidän pesässä omasta tilasta.",
   "linkit": [
+   "Poliokhnissa",
    "puolustusmuurin"
   ],
   "jatkot": [

@@ -81,7 +81,7 @@ Millaiset piiritysvälineet Demetrioksella oli?
 
 ### 28.2
 KYSYMYS: Miksi rodoslaiset eivät rakentaneet sitä uudelleen?
-Mmm— tää on kiinnostava. Syy ei ollut raha eikä taito vaan oraakkeli. Kun maanjäristys kaatoi patsaan noin 226 eaa., rodoslaiset kysyivät neuvoa [[Delfoin oraakkelilta]]. Oraakkelin vastauksen tulkittiin tarkoittavan, ettei patsasta pitänyt pystyttää uudelleen, sillä sen katsottiin olleen jumalalle epämieluisa. Rodoslaiset noudattivat neuvoa, ja pronssiset palaset makasivat maassa yli kahdeksan vuosisataa, kunnes ne vuonna 653 myytiin pois. Antiikin lähteet kertovat aiheesta hieman eri tavoin, joten yksityiskohdissa en ole varma. Joskus viisas jättää nostamatta.
+Mmm— tää on kiinnostava. Syy ei ollut raha eikä taito vaan oraakkeli. Kun [[maanjäristys]] kaatoi patsaan noin 226 eaa., rodoslaiset kysyivät neuvoa [[Delfoin oraakkelilta]]. Oraakkelin vastauksen tulkittiin tarkoittavan, ettei patsasta pitänyt pystyttää uudelleen, sillä sen katsottiin olleen jumalalle epämieluisa. Rodoslaiset noudattivat neuvoa, ja pronssiset palaset makasivat maassa yli kahdeksan vuosisataa, kunnes ne vuonna 653 myytiin pois. Antiikin lähteet kertovat aiheesta hieman eri tavoin, joten yksityiskohdissa en ole varma. Joskus viisas jättää nostamatta.
 JATKOT:
 Miten antiikin kreikkalaiset käyttivät oraakkeleita?
 Kuinka usein maanjäristykset ovat tuhonneet antiikin rakennuksia?
@@ -140,7 +140,7 @@ Miten arkeologit erottavat alkuperäisen osat rekonstruktioista?
 
 ### 29.5
 KYSYMYS: Missä Knossos sijaitsee nykyisin?
-Joo, tän minä muistan. Knossos sijaitsee Kreikassa [[Kreetan]] saarella, muutaman kilometrin päässä saaren suurimmasta kaupungista [[Iraklionista]], sisämaassa kukkulalla lähellä rannikkoa. Paikalla on nykyään arkeologinen alue, jota kierretään opastetusti ja jossa nähdään palatsin osia sekä Evansin aikaisia rekonstruktioita. Muutaman kilometrin matka kaupungista kulkee tavallisesti bussilla tai autolla. Hyvä paikka katsottavaksi, vaikka kyyhky mieluummin katselee sen ylhäältä.
+Joo, tän minä muistan. Knossos sijaitsee Kreikassa [[Kreetan]] saarella, muutaman kilometrin päässä saaren suurimmasta kaupungista Iraklionista, sisämaassa kukkulalla lähellä rannikkoa. Paikalla on nykyään arkeologinen alue, jota kierretään opastetusti ja jossa nähdään palatsin osia sekä [[Evansin]] aikaisia rekonstruktioita. Muutaman kilometrin matka kaupungista kulkee tavallisesti bussilla tai autolla. Hyvä paikka katsottavaksi, vaikka kyyhky mieluummin katselee sen ylhäältä.
 JATKOT:
 Mitä muuta Kreetalla on nähtävää antiikin ajalta?
 Mitä Iraklionin arkeologisessa museossa on esillä?
