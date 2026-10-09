@@ -647,6 +647,8 @@ namespace Matkakirja.Natiivi
             var valikonAikana = Linna != null && Linna.Auki ? (StyleEnum<Visibility>)Visibility.Hidden : StyleKeyword.Null;
             lauta.style.visibility = kuunteleNappi.style.visibility = pulu.style.visibility = puluAlue.style.visibility
                 = lappuKerros.style.visibility = valikonAikana;
+            // Linnan historia (Siirtoseppä, kuva-arkki 9.10. virhe 3): ei Pulua eikä huonekorttia historian aikana (ohjaajan suunnitelma).
+            if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa) pulu.style.visibility = puluAlue.style.visibility = lauta.style.visibility = Visibility.Hidden;
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).

@@ -410,6 +410,7 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"seikkailu: pelattava pala käynnistyy{(jatka != null ? " (jatko tallennuksesta)" : "")}");
             }
             palaOhi:
+            if (historiaPyydetty && rakennus != null && nayttamo != null && !SaapumisOdotus) { historiaPyydetty = false; o.StartCoroutine(Historia(null)); }
             var pelaaja = cm != null ? SeikkailuPelaaja.Aktiivinen : null;
             var vene = cm != null ? SeikkailuVene.Aktiivinen : null;
             // V2: vene etenee aina (myös kun pelaaja on jo laiturilla: vene jää kiinnitettynä); perillä pelaaja laiturille.
@@ -946,7 +947,7 @@ namespace Matkakirja.Natiivi
             if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v1/manifest.json");
         }
 
-        bool alkuValittu;
+        bool alkuValittu, historiaPyydetty;
         /// <summary>Alun valinta auki (kertoja ei soi korttien aikana).</summary>
         public static bool AlkuValintaAuki { get; private set; }
         /// <summary>Automaattiajot (botti, todistusajo): "poikki kavely alkuvalinta 0" ohittaa valinnan suoraan peliin.</summary>
@@ -969,7 +970,8 @@ namespace Matkakirja.Natiivi
         public static bool HistoriaKaynnissa => SeikkailuHistoria.Kaynnissa;
         /// <summary>Linnan historia käytettävissä: Olavinlinna ladattu, ei historiaa eikä alun valintaa auki (☰ › Linnan historia).</summary>
         public static bool HistoriaKaytettavissa => aktiivinenSovitin != null && aktiivinenSovitin.rakennus != null && aktiivinenSovitin.nayttamo != null
-            && RakennusId == Oletusrakennus && !SeikkailuHistoria.Kaynnissa && !AlkuValintaAuki && !SaapumisOdotus;
+            && RakennusId == Oletusrakennus && !SeikkailuHistoria.Kaynnissa && !AlkuValintaAuki && !SaapumisOdotus
+            && DioraamaLevyvalimuisti.TestiOsoitin == PelattavaPalaHash;   // vaihemallit ja vuodet vain pelattavan palan paketissa
 
         /// <summary>
         /// ☰ › Linnan historia (Natiivi-UI). Pelin aikana peli pysähtyy (aika 0, pelaajan ja vartijoiden ohjaus pois), historia soi,
@@ -1949,6 +1951,15 @@ namespace Matkakirja.Natiivi
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
+                // Kuva-arkki 9.10. (virhe 1): tuotantopaketissa ei ole vaihemalleja eikä vuosia → pelattavan palan paketti ensin.
+                if (DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+                {
+                    if (peiliPaalla) AsetaPeili("pois");
+                    DioraamaLevyvalimuisti.TestiOsoitin = PelattavaPalaHash;
+                    if (rakennus != null) LataaUudelleen();
+                    historiaPyydetty = true; o.Kirjaa("poikki: historia: pelattavan palan paketti ladataan ensin");
+                    return;
+                }
                 o.StartCoroutine(Historia(null));
                 return;
             }
