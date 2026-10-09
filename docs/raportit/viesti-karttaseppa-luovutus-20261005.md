@@ -705,3 +705,9 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 - Ilmakehä: kaupunki- ja kausikohtaiset taulukot (AERONET, `_tyo/karttaseppa/ilmakeha-aerosoli-20261009/`) LS2:n A/B-jonossa (varjokoe → KL:n AO → utu-A/B). Vienti vasta LS2:n hyväksynnän jälkeen. Työkalu PR #4256 (tools/ilmakeha).
 - Vesi 40 km (PT kuittaa suosituksen): koeverkot `_tyo/karttaseppa/vesi-40km-koe/`, ajot T7 vesimaski/aja-vesi-v5.sh (tukholma-v5, pariisi-v4). Odottaa LS2:n LOD-valintaa (kauko2 48 m vai 16 m) → index-v5 (6 m kopioidaan uudella nimellä, koska tiedosto-kenttä on yhteinen).
 - Kaukomaa v1 vienti käynnissä (Julkaisija), ja LS2 sai kytkentätiedot.
+
+## 9.10. 18.4x
+
+- Vesi index-v5 (40 km, Tukholma kauko2 48 m) ja kaukomaa v1 ovat ämpärissä. Kaukomaan yövalot (kaukomaa/yo-v1, 25 Mt) on Julkaisijalla vientiin (PT ja Natiiviseppä kuittasivat). LS2 kytkee myöhemmin Natiivisepän ehdoilla.
+- Kaukomaa v2 (vuodenajat) jätetty tekemättä: pallossa ei ole vuodenajan valintaa (PT samaa mieltä).
+- TEKOÄLYPINNAT (omistaja hyväksyi): T7 tekoalypinnat/ (ComfyUI + venv + mallit 14 Gt, LAHTEET.md, LUEMINUT.md, pinta.py). ComfyUI jää taustalle porttiin 8189 (pinta.py käynnisti sen). Sammutus vaatii killin, joten se vain omistajan luvalla. Koe LR:n kuninkaanlinnalla: noin 71 s per kuva, vertailut _tyo/karttaseppa/tekoalypinnat-koe/.
