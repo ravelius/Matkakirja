@@ -6,6 +6,7 @@ PILVIAJOT JA PILVIKREDIITTI + TILI ENNEN KÄYNNISTYSTÄ, KEHITYSTAHTI + MUISTIAJ
 KOKONAAN, scratchpad/tyojonot.md (Päivitetty-rivi, OMISTAJAN TOIMET KONEELLA, JUNA 173, PULU PILVESSÄ) ja scratchpad/kirjattavat-20261006.md viimeiset 10 riviä.
 Muistikansio /Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory/ (uusin fable-tila-20261009-ilta4).
 
+0) Omistaja on puhelimella, eikä hän ehkä nähnyt edellisen session viimeistä viestiä. Kerro hänelle heti yhdellä viestillä (ei nollauksesta): a) Pulun Kreikka, Saksa ja Italia jatkuvat nyt TÄMÄN tilin pilvisessioina, jotka on luotu sovelluksesta 22.2x; b) myös nykyinen TestFlight 172 kaatuu iPad Pro 13:lla Pariisissa samaan muistivikaan, ja korjaus testataan junassa 173b.
 1) get_session self, set_remote_control self päälle, nimi "PÄÄTOIMITTAJA (Opus, max)".
 2) CronList: luo JONOKIERROS (7,27,47) luovutuksen kohdan 7 mukaan.
 3) JUNA 173 PYSÄYTETTY iPad-jetsamin takia: odota Natiivisepän 173b-korjausta ja LS1:n A-polun todennusta (muistiajo-<N>.txt Julkaisijalla); BUILD 172 -regressio: jos nykyinen TF 172 kaatuu, kerro omistajalle.
