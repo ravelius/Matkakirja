@@ -14,7 +14,8 @@ Käyttö: omat_mallit_ktx2.py <omat-mallit/vX-kansio> <ulos-kansio> [--vain kohd
        [--atlakset etc1s|uastc] [--normaali-max 1024]
 Työkalut: gltf-transform (npm @gltf-transform/cli 4.5) ja toktx (KTX-Software 4.4); polut ympäristöstä GLTF_TRANSFORM ja KTX_BIN
 (oletus T7:n linssiseppa2-tyokalut). Muut tiedostot (tileset.json, mallit.json, helma.glb jos ei tekstuureja) kopioidaan sellaisinaan.
-Lopuksi taulukko: tiedostokoko ja GPU-arvio (tekstuurit, mipit mukana) ennen/jälkeen kohteittain.
+Lopuksi taulukko: tiedostokoko ja GPU-arvio (tekstuurit, mipit mukana) ennen/jälkeen kohteittain, ja automaattinen tarkistus.
+Pelkkä tarkistus: omat_mallit_ktx2.py --tarkista <lähde> <ulos> (paluuarvo 1, jos virheitä).
 """
 import argparse, io, json, os, shutil, struct, subprocess, sys, tempfile
 
@@ -115,7 +116,41 @@ def muunna(sisaan, ulos, a):
         shutil.copyfile(nyt, ulos)
 
 
+def tarkista(lahde, ulos):
+    """Automaattinen todennus (ei simua): jokainen kuva KTX2 + KHR_texture_basisu pakollisena, täysi mip-ketju, sivut 4:llä jaollisia,
+    geometria sama kuin lähteessä (kolmiot ja POSITION-rajat), glTF-validaattori 0 virhettä. Palauttaa virherivit."""
+    virheet = []; tiedoksi = []; n_glb = n_kuva = 0
+    for juuri, _, tiedostot in sorted(os.walk(ulos)):
+        for n in sorted(tiedostot):
+            if not n.endswith('.glb'): continue
+            u = os.path.join(juuri, n); s = os.path.join(lahde, os.path.relpath(u, ulos)); nimi = os.path.relpath(u, ulos); n_glb += 1
+            j, B = lue_glb(u); js, _ = lue_glb(s)
+            if j.get('images') and 'KHR_texture_basisu' not in (j.get('extensionsRequired') or []): virheet.append(f'{nimi}: KHR_texture_basisu ei pakollinen')
+            for t in j.get('textures', []):
+                if 'source' in t or 'KHR_texture_basisu' not in t.get('extensions', {}): virheet.append(f'{nimi}: tekstuuri ilman basisu-lähdettä')
+            for im in j.get('images', []):
+                n_kuva += 1; v = j['bufferViews'][im['bufferView']]; d = B[v.get('byteOffset', 0):v.get('byteOffset', 0) + v['byteLength']]
+                if im.get('mimeType') != 'image/ktx2' or d[:12] != b'\xabKTX 20\xbb\r\n\x1a\n': virheet.append(f'{nimi}/{im.get("name")}: ei KTX2'); continue
+                w, h = struct.unpack_from('<II', d, 20); tasot = struct.unpack_from('<I', d, 40)[0]
+                if w % 4 or h % 4: virheet.append(f'{nimi}/{im.get("name")}: {w}x{h} ei 4:llä jaollinen')
+                if tasot != max(w, h).bit_length(): virheet.append(f'{nimi}/{im.get("name")}: mip-tasoja {tasot}, pitäisi {max(w, h).bit_length()}')
+            kolmiot = lambda g: sum(g['accessors'][p_['indices']]['count'] // 3 for m in g['meshes'] for p_ in m['primitives'] if 'indices' in p_)
+            rajat = lambda g: [[round(f(x[k][i] for x in g['accessors'] if x.get('type') == 'VEC3' and 'min' in x and k == ('min' if f is min else 'max')), 2) for i in range(3)] for f, k in ((min, 'min'), (max, 'max'))]
+            draco = 'KHR_draco_mesh_compression' in (js.get('extensionsUsed') or [])
+            if kolmiot(j) > kolmiot(js) or (kolmiot(j) < kolmiot(js) and not draco): virheet.append(f'{nimi}: kolmiot {kolmiot(js)} → {kolmiot(j)}')
+            elif kolmiot(j) < kolmiot(js): tiedoksi.append(f'{nimi}: Draco poisti {kolmiot(js) - kolmiot(j)} surkastunutta kolmiota')   # Sfinksi 9.10.: 6204 nollapinta-alaista (Blender)
+            if any(abs(a_ - b_) > 0.05 for ra, rb in zip(rajat(j), rajat(js)) for a_, b_ in zip(ra, rb)): virheet.append(f'{nimi}: rajat {rajat(js)} → {rajat(j)}')
+            env = dict(os.environ, PATH=KTX_BIN + os.pathsep + os.environ.get('PATH', ''))
+            r = subprocess.run([GT, 'validate', u, '--format', 'csv'], env=env, capture_output=True, text=True)
+            import csv   # vakavuus 0 = virhe (1 varoitus: validaattori ei tunne KHR_texture_basisua → image/ktx2 varoituksena)
+            err = [r_['code'] + ' ' + r_['pointer'] for r_ in csv.DictReader(io.StringIO(r.stdout)) if r_.get('severity') == '0']
+            if r.returncode or err: virheet.append(f'{nimi}: validaattori {len(err)} virhettä {err[:2]} {r.stderr[-200:]}')
+    print(f'TARKISTUS {n_glb} glb, {n_kuva} kuvaa: {len(virheet)} virhettä, {len(tiedoksi)} tiedoksi'); [print('  ' + v) for v in virheet[:40] + tiedoksi[:40]]
+    return virheet
+
+
 def main():
+    if len(sys.argv) == 4 and sys.argv[1] == '--tarkista': sys.exit(1 if tarkista(sys.argv[2], sys.argv[3]) else 0)
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument('lahde'); p.add_argument('ulos'); p.add_argument('--vain', default='')
     p.add_argument('--uastc-taso', type=int, default=2); p.add_argument('--etc1s-laatu', type=int, default=192)
@@ -140,6 +175,7 @@ def main():
     print(f'YHTEENSÄ {len(rivit)} glb: tiedostot {yht[0] / 1e6:.1f} → {yht[1] / 1e6:.1f} Mt, GPU {yht[2] / 1e6:.1f} → {yht[3] / 1e6:.1f} Mt')
     json.dump({'glb': [dict(zip(('tiedosto', 'koko_ennen', 'koko_jalkeen', 'gpu_ennen', 'gpu_jalkeen'), r)) for r in rivit]},
               open(os.path.normpath(a.ulos) + '-ktx2-raportti.json', 'w'), indent=1)   # kansion viereen (ei ämpäriin)
+    if tarkista(a.lahde, a.ulos): sys.exit(1)
 
 
 if __name__ == '__main__':
