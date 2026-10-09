@@ -22,7 +22,7 @@ Shader "Matkakirja/Linssit/Nostokortti"
         {
             Name "Nostokortti"
             Tags { "LightMode" = "UniversalForward" }
-            Blend SrcAlpha OneMinusSrcAlpha
+            Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha   // alfa "over": KaupunkiKooste-RT esikerrottu (Linssiseppä 8.10.)
             ZWrite Off
             Cull Off
             HLSLPROGRAM

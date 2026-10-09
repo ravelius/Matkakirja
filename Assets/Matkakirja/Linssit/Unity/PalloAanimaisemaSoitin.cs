@@ -18,6 +18,9 @@ namespace Matkakirja.Natiivi
         public const string Juuri = KaupunkiAanimaisemaSoitin.Juuri + "pallo-aanimaisema-v1/";
         public static readonly string[] Juuret = { Juuri, KaupunkiAanimaisemaSoitin.Juuri + "pariisi-seine-v1/" };
         public const float OmaSilmukkaTaso = 0.45f;
+        /// <summary>Pallon tuuli korkealla (Pelikoodari 9.10., Sonniss, aanet/sonniss-tuulet-v1): kylmä, ohut ja puuskainen ilman lintuja;
+        /// korvaa kaupungin äänimaiseman tuulikerroksen kaikissa kaupungeissa (taso korkeuden mukaan ja ☰ Sää ennallaan).</summary>
+        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "sonniss-tuulet-v1/tuuli-korkea.mp3";
         readonly Dictionary<string, AudioSource> omat = new Dictionary<string, AudioSource>();
         static PalloAanimaisema manifesti; static bool haettu;
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>();
@@ -85,6 +88,7 @@ namespace Matkakirja.Natiivi
             // Silmukat kaupungin äänimaiseman kerroksiksi kehityskaupungeissa; muut kerrokset ennallaan (aanimaisema-v2).
             KaupunkiAanimaisemaSoitin.SilmukanUrl = kerros =>
             {
+                if (kerros == KaupunkiAanimaisema.Tuuli) return TuuliUrl;
                 string id = OpasSovitin.NykyinenKaupunkiId;
                 var a = id != null && Matkakirja.Linssit.Kehityskaupungit.On(id) ? manifesti.KerroksenAani(id, kerros) : null;
                 return a != null ? a.Osoite : KaupunkiAanimaisemaSoitin.Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";

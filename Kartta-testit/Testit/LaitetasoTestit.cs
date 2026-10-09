@@ -31,6 +31,19 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void AjallinenUltraJaHuippu()
+        {
+            Oleta.Tosi(Laitetaso.OnkoAjallinen("iPad14,3", "Apple", false), "M-iPad");
+            Oleta.Tosi(Laitetaso.OnkoAjallinen("Mac16,1", "Apple M4", true), "Apple-Mac");
+            Oleta.Tosi(Laitetaso.OnkoAjallinen("iPhone17,1", "Apple", false), "iPhone 16 Pro");
+            Oleta.Tosi(Laitetaso.OnkoAjallinen("iPhone18,2", "Apple", false), "iPhone 17 Pro Max");
+            Oleta.Tosi(!Laitetaso.OnkoAjallinen("iPhone16,1", "Apple", false), "iPhone 15 Pro");
+            Oleta.Tosi(!Laitetaso.OnkoAjallinen("iPad15,7", "Apple", false), "iPad A16");
+            Oleta.Tosi(!Laitetaso.OnkoAjallinen("MacBookPro16,1", "Intel(R) Core(TM) i9", true), "Intel-Mac");
+            Oleta.Tosi(!Laitetaso.OnkoAjallinen(null, null, false), "tuntematon");
+        }
+
+        [Testi]
         static void PakotusVainTunnetuille()
         {
             Oleta.Sama("Ultra", Laitetaso.Pakotus("Ultra"));
