@@ -57,11 +57,11 @@ namespace Matkakirja.Natiivi
 
         const int PullaVarmistusMs = 6000;   // web PULLA_VARMISTUS_MS
         const int SaateViiveMs = 450;        // web SAHKE_SAATE_VIIVE_MS
-        const string PullaKoyhaLivia = "Ei se mitään, kyllä minä ymmärrän. — Livia sanoo sen vähän liian nopeasti.";
-        const string PullaVarmistusOhje = "Toinen napautus maksaa. Muuten tarjous raukeaa.";
-        const string OdotusVara = "Vien tämän pöllölle, pieni hetki..";
-        const string VapaaTyhja = "Kirjoita ensin vastaus omin sanoin.";
-        const string ValitsinOletus = "— valitse luettelosta —";
+        static string PullaKoyhaLivia => Kieli.T("ui.sahke.pulla-koyha-livia");
+        static string PullaVarmistusOhje => Kieli.T("ui.sahke.pulla-varmistus-ohje");
+        static string OdotusVara => Kieli.T("ui.sahke.odotus-vara");
+        static string VapaaTyhja => Kieli.T("ui.sahke.vapaa-tyhja");
+        static string ValitsinOletus => Kieli.T("ui.sahke.valitsin-oletus");
 
         /// <summary>Web PULLA_NIMET (js/fokustehtavat.js): maan pullavastine, muuten "makea pulla".</summary>
         static readonly Dictionary<string, string> PullaNimet = new Dictionary<string, string>
@@ -133,7 +133,7 @@ namespace Matkakirja.Natiivi
 
             var paa = Rakenne.El("mk-st__paa", sisus, PickingMode.Ignore);
             var paateksti = Rakenne.El("mk-st__paateksti", paa, PickingMode.Ignore);
-            ylarivi = Rakenne.Teksti("SÄHKE", "mk-st__ylarivi", paateksti);
+            ylarivi = Rakenne.Teksti(Kieli.T("ui.sahke.ylarivi"), "mk-st__ylarivi", paateksti);
             Kirjasimet.Aseta(ylarivi, Kirjasin.Kone);
             otsikko = Rakenne.Teksti("", "mk-st__otsikko", paateksti);
             Kirjasimet.Aseta(otsikko, Kirjasin.KoneLihava);
@@ -267,8 +267,8 @@ namespace Matkakirja.Natiivi
             bool uusi = piilossa || avain != korttiAvain;
             if (uusi) viimeSahke = null;
             korttiAvain = avain;
-            ylarivi.text = SahkeTeksti.JsIsot(string.IsNullOrEmpty(k.Otsikko) ? "Sähke" : k.Otsikko);
-            otsikko.text = k.Hahmo ?? tehtava?.Hahmo ?? "Pöllöltä";
+            ylarivi.text = SahkeTeksti.JsIsot(string.IsNullOrEmpty(k.Otsikko) ? Kieli.T("ui.sahke.otsikko-oletus") : k.Otsikko);
+            otsikko.text = k.Hahmo ?? tehtava?.Hahmo ?? Kieli.T("ui.sahke.hahmo-oletus");
 
             vieritys.Clear();
             napit.Clear();
@@ -279,7 +279,7 @@ namespace Matkakirja.Natiivi
 
             if (k.Kuittaus) RakennaKuittaus(k, himmea);
             else if (!k.Lomake)
-                Ensisijainen("Selvä", () => { Tehoste("pulu.sahke"); Teko(toiminnot.Sulje); }, napit);
+                Ensisijainen(Kieli.T("ui.sahke.selva"), () => { Tehoste("pulu.sahke"); Teko(toiminnot.Sulje); }, napit);
             else RakennaLomake(k, himmea, oma);
 
             // Kirjoitus kerran istunnossa (Animoi); liikettä vähentävä asetus kumoaa (web liikeRajoitettu).
@@ -332,10 +332,10 @@ namespace Matkakirja.Natiivi
                 // Leima on koristetta (web aria-hidden): kaupunki ja "Sähköasema" pyöreässä musteleimassa.
                 var merkki = Rakenne.El("mk-st__leima", otsake, PickingMode.Ignore);
                 Kirjasimet.Aseta(Rakenne.Teksti(SahkeTeksti.JsIsot(leima), "mk-st__leima-nimi", merkki), Kirjasin.KoneLihava);
-                Kirjasimet.Aseta(Rakenne.Teksti("SÄHKÖASEMA", "mk-st__leima-asema", merkki), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.sahke.sahkoasema"), "mk-st__leima-asema", merkki), Kirjasin.Kone);
             }
-            Kirjasimet.Aseta(Rakenne.Teksti("SÄHKÖSANOMA", "mk-st__nimio", otsake), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Teksti("N:o " + Numero(teksti), "mk-st__numero", otsake), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.sahke.sahkosanoma"), "mk-st__nimio", otsake), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.sahke.numero", Numero(teksti)), "mk-st__numero", otsake), Kirjasin.Kone);
             Rakenne.El("mk-st__tuplaviiva", paperi, PickingMode.Ignore);
 
             var liuskat = Rakenne.El("mk-st__liuskat", paperi, PickingMode.Ignore);
@@ -436,7 +436,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(kuittaus, Kirjasin.Luku);
             foreach (var kappale in (k.Teksti ?? "").Split(new[] { "\n\n" }, StringSplitOptions.RemoveEmptyEntries))
                 Rakenne.Teksti(kappale.Trim(), "mk-st__kappale", kuittaus);
-            Ensisijainen(string.IsNullOrEmpty(k.Nappi) ? "Anna Livian mennä" : k.Nappi, () =>
+            Ensisijainen(string.IsNullOrEmpty(k.Nappi) ? Kieli.T("ui.sahke.anna-livian-menna") : k.Nappi, () =>
             {
                 Tehoste("pulu.sahke");
                 Teko(toiminnot.Sulje);
@@ -465,18 +465,18 @@ namespace Matkakirja.Natiivi
             if (k.Aukot != null && k.Aukot.Count > 0)
             {
                 var vapaa = Rakenne.El("mk-st__vapaa", isa, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti(SahkeTeksti.JsIsot(nakyva?.VapaaOtsake ?? tehtava?.VapaaOtsake ?? "Tai kirjoita vastaus omin sanoin"), "mk-st__vapaaotsake", vapaa), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(SahkeTeksti.JsIsot(nakyva?.VapaaOtsake ?? tehtava?.VapaaOtsake ?? Kieli.T("ui.sahke.vapaa-otsake")), "mk-st__vapaaotsake", vapaa), Kirjasin.Kone);
                 var kentta = new TextField { multiline = true, maxLength = 400 };
                 kentta.AddToClassList("mk-st__vapaakentta");
-                kentta.textEdition.placeholder = nakyva?.VapaaVihje ?? tehtava?.VapaaVihje ?? "Yhdellä lauseella, omin sanoin";
-                kentta.tooltip = "Vastaus omin sanoin";
+                kentta.textEdition.placeholder = nakyva?.VapaaVihje ?? tehtava?.VapaaVihje ?? Kieli.T("ui.sahke.vapaa-vihje");
+                kentta.tooltip = Kieli.T("ui.sahke.vapaa-tooltip");
                 if (vapaaAvain == avain && !string.IsNullOrEmpty(vapaaTeksti)) kentta.SetValueWithoutNotify(vapaaTeksti);
                 kentta.RegisterValueChangedCallback(e => { vapaaAvain = avain; vapaaTeksti = e.newValue; });
                 Kirjasimet.Aseta(kentta, Kirjasin.Kone);
                 vapaa.Add(kentta);
                 vapaaKentta = kentta;
                 var vapaanapit = Rakenne.El("mk-st__vapaanapit", vapaa, PickingMode.Ignore);
-                Toissijainen(nakyva?.LahetaVapaa ?? tehtava?.LahetaVapaa ?? "Lähetä omin sanoin", () => LahetaVapaa(avain), vapaanapit);
+                Toissijainen(nakyva?.LahetaVapaa ?? tehtava?.LahetaVapaa ?? Kieli.T("ui.sahke.laheta-vapaa"), () => LahetaVapaa(avain), vapaanapit);
             }
 
             tulos = Rakenne.Teksti("", "mk-st__tulos", isa);
@@ -496,8 +496,8 @@ namespace Matkakirja.Natiivi
 
             RakennaPullat(k, isa);
 
-            Ensisijainen(nakyva?.Laheta ?? tehtava?.Laheta ?? "Lähetä sähke", Laheta, napit);
-            Toissijainen("Myöhemmin", () => { Tehoste("pulu.sahke"); Teko(toiminnot.Sulje); }, napit);
+            Ensisijainen(nakyva?.Laheta ?? tehtava?.Laheta ?? Kieli.T("ui.sahke.laheta"), Laheta, napit);
+            Toissijainen(Kieli.T("ui.sahke.myohemmin"), () => { Tehoste("pulu.sahke"); Teko(toiminnot.Sulje); }, napit);
         }
 
         void RakennaLuku(SahkeAukko aukko, VisualElement rivi)
@@ -619,25 +619,25 @@ namespace Matkakirja.Natiivi
             var nimi = PullanNimi();
             if (vinkki)
                 Pulla(kotelo, k.VinkkiHinta, k.VinkkiOstettu, toiminnot.OstaVinkki,
-                    $"Osta {nimi} Livialle (£{k.VinkkiHinta}) — vinkki",
-                    $"Varmista: {nimi} Livialle, £{k.VinkkiHinta}",
-                    $"Kassa ei riitä: {nimi} £{k.VinkkiHinta}",
-                    $"Livia sai kokonaisen pullan ({nimi}) ja sanoi vinkkinsä.");
+                    Kieli.T("ui.sahke.osta-vinkki", nimi, k.VinkkiHinta),
+                    Kieli.T("ui.sahke.varmista-vinkki", nimi, k.VinkkiHinta),
+                    Kieli.T("ui.sahke.koyha-vinkki", nimi, k.VinkkiHinta),
+                    Kieli.T("ui.sahke.tehty-vinkki", nimi));
             if (!linkki) return;
             Pulla(kotelo, k.LinkkiHinta, k.LinkkiOstettu, toiminnot.OstaLinkki,
-                $"Osta puolikas {nimi} (£{k.LinkkiHinta}) — suora linkki",
-                $"Varmista: puolikas {nimi}, £{k.LinkkiHinta}",
-                $"Kassa ei riitä: puolikas {nimi} £{k.LinkkiHinta}",
-                $"Livia sai puolikkaan pullan ({nimi}) ja näytti linkin.");
+                Kieli.T("ui.sahke.osta-linkki", nimi, k.LinkkiHinta),
+                Kieli.T("ui.sahke.varmista-linkki", nimi, k.LinkkiHinta),
+                Kieli.T("ui.sahke.koyha-linkki", nimi, k.LinkkiHinta),
+                Kieli.T("ui.sahke.tehty-linkki", nimi));
             // Ostettu linkki säilyy: kortti avattiin uudelleen, nappi kuuluu sinne edelleen.
             if (k.LinkkiOstettu)
             {
                 var rivi = Rakenne.El("mk-st__linkki", kotelo, PickingMode.Ignore);
-                Ensisijainen(k.LinkkiNappi ?? "Avaa Livian linkki", () =>
+                Ensisijainen(k.LinkkiNappi ?? Kieli.T("ui.sahke.avaa-linkki"), () =>
                 {
                     Tehoste("pulu.sahke");
                     string virhe = null;
-                    try { virhe = toiminnot.AvaaLinkki?.Invoke(); } catch (Exception e) { Debug.LogException(e); virhe = "Linkki ei auennut."; }
+                    try { virhe = toiminnot.AvaaLinkki?.Invoke(); } catch (Exception e) { Debug.LogException(e); virhe = Kieli.T("ui.sahke.linkki-ei-auennut"); }
                     if (virhe != null && Auki) NaytaTulos(virhe, "mk-st__tulos--vaarin");
                 }, rivi);
             }
@@ -646,7 +646,7 @@ namespace Matkakirja.Natiivi
         string PullanNimi()
         {
             var maa = UiSisalto.Kaupunki(kaupunki)?.Maa ?? iso;
-            return maa != null && PullaNimet.TryGetValue(maa, out var n) ? n : "makea pulla";
+            return maa != null && PullaNimet.TryGetValue(maa, out var n) ? n : Kieli.T("ui.sahke.makea-pulla");
         }
 
         static int? Raha()
@@ -772,7 +772,7 @@ namespace Matkakirja.Natiivi
             tausta.RegisterCallback<PointerDownEvent>(e => { if (e.target == tausta) { e.StopPropagation(); SuljeValitsin(); } });
             var laatikko = Rakenne.El("mk-st__valitsin", tausta);
             Rakenne.Tausta(laatikko, Kuviot.Pergamentti);
-            var otsake = SahkeTeksti.JsIsot(aukko.Otsake ?? "Valitse");
+            var otsake = SahkeTeksti.JsIsot(aukko.Otsake ?? Kieli.T("ui.sahke.valitse"));
             Kirjasimet.Aseta(Rakenne.Teksti(otsake + (string.IsNullOrEmpty(aukko.Vihje) ? "" : "  " + aukko.Vihje), "mk-st__valitsin-otsikko", laatikko), Kirjasin.Kone);
             var lista = new ScrollView(ScrollViewMode.Vertical);
             lista.AddToClassList("mk-st__valitsin-lista");
@@ -780,7 +780,7 @@ namespace Matkakirja.Natiivi
             lista.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             laatikko.Add(lista);
             var valitsinNapit = Rakenne.El("mk-st__valitsin-napit", laatikko, PickingMode.Ignore);
-            Toissijainen("Peru", SuljeValitsin, valitsinNapit);
+            Toissijainen(Kieli.T("ui.sahke.peru"), SuljeValitsin, valitsinNapit);
 
             void Tayta()
             {
@@ -798,8 +798,8 @@ namespace Matkakirja.Natiivi
                     if (arvo == valittu) { b.AddToClassList("mk-st__vaihtoehto--valittu"); valittuEl = b; }
                 }
                 if (hakemisto.Count == 0)
-                    Kirjasimet.Aseta(Rakenne.Teksti(hakemistoHaussa ? "Luetteloa haetaan…"
-                        : "Luettelo on tyhjä. Kirjoita vastaus omin sanoin.", "mk-st__valitsin-tyhja", lista), Kirjasin.LukuKursiivi);
+                    Kirjasimet.Aseta(Rakenne.Teksti(hakemistoHaussa ? Kieli.T("ui.sahke.luetteloa-haetaan")
+                        : Kieli.T("ui.sahke.luettelo-tyhja"), "mk-st__valitsin-tyhja", lista), Kirjasin.LukuKursiivi);
                 if (valittuEl != null) Rakenne.Vierita(lista, valittuEl, 30);
             }
             Tayta();

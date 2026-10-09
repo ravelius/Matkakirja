@@ -118,7 +118,7 @@ namespace Matkakirja.Natiivi
             otsikko.style.position = Position.Absolute;
             Aloitusnakyma.Kapea(otsikko);
             Aloitusnakyma.Viiva(otsikko);
-            Aloitusnakyma.JulisteRivi(otsikko, "MYLLY", "mk-juliste__nimi");
+            Aloitusnakyma.JulisteRivi(otsikko, Kieli.T("ui.mylly.juliste"), "mk-juliste__nimi");
             otsikkoLauta = Aloitusnakyma.JulisteRivi(otsikko, "", "mk-juliste__osa");
             Aloitusnakyma.Viiva(otsikko);
             paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 11.0x: PAPERI
@@ -132,10 +132,10 @@ namespace Matkakirja.Natiivi
             ohje = Rakenne.Teksti("", "mk-peli__ohje", paneeli);
             Kirjasimet.Aseta(ohje, Tyylikirja.Kirjain.Apuri);
             var napit = Rakenne.El("mk-kortti__napit", paneeli, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Nappi("Säännöt", "mk-nappi--toiminto", NaytaSaannot, napit), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Nappi("Luovuta", "mk-nappi--toiminto", Luovuta, napit), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.saannot"), "mk-nappi--toiminto", NaytaSaannot, napit), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.luovuta"), "mk-nappi--toiminto", Luovuta, napit), Kirjasin.Kone);
             // ✕ pois (omistaja 4.10.): pelistä poistutaan nappirivin Poistu-napilla, toiminta kuten ✕:llä ennen.
-            Kirjasimet.Aseta(Rakenne.Nappi("Poistu", "mk-nappi--toiminto", Sulje, napit), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", Sulje, napit), Kirjasin.Kone);
             peliTaso.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
 
             // KORTIT (valinta, tulos, säännöt) himmennyksellä pelin päälle.
@@ -146,19 +146,19 @@ namespace Matkakirja.Natiivi
             valintaKortti = new Kortti("mk-peli__kortti", pohja: true);
             var vk = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-peli__valinta-kapiteeli", valintaKortti.Sisus);
             Kirjasimet.Aseta(vk, Tyylikirja.Kirjain.Kapiteeli);
-            Kirjasimet.Aseta(Rakenne.Teksti(Asetus.T("mylly.valinta.otsikko", "Pelataanko myllyä?"), "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
+            Kirjasimet.Aseta(Rakenne.Teksti(Asetus.T("mylly.valinta.otsikko", Kieli.T("ui.mylly.valinta-otsikko")), "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
             var ala = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__valinta-ala", valintaKortti.Sisus);
             Kirjasimet.Aseta(ala, Tyylikirja.Kirjain.Apuri);
-            Rakenne.Teksti("Kolme nappulaa samalla viivalla on mylly: saat poistaa yhden vastustajan nappulan. Se, jolta jää alle kolme, häviää.",
+            Rakenne.Teksti(Kieli.T("ui.mylly.valinta-selite"),
                 "mk-kortti__teksti", valintaKortti.Sisus);
-            var vo = Rakenne.Teksti("Vastustaja", "mk-peli__valiotsikko", valintaKortti.Sisus);
+            var vo = Rakenne.Teksti(Kieli.T("ui.pelit.vastustaja"), "mk-peli__valiotsikko", valintaKortti.Sisus);
             Kirjasimet.Aseta(vo, Tyylikirja.Kirjain.Valiotsikko);
             var ryhma = Rakenne.El("mk-peli__kytkinryhma", valintaKortti.Sisus);
-            foreach (var (teksti, v) in new[] { ("Helppo botti", Vastustaja.BottiHelppo), ("Normaali", Vastustaja.BottiNormaali), ("Vaikea", Vastustaja.BottiVaikea) })
+            foreach (var (teksti, v) in new[] { (Kieli.T("ui.pelit.botti-helppo"), Vastustaja.BottiHelppo), (Kieli.T("ui.pelit.botti-normaali"), Vastustaja.BottiNormaali), (Kieli.T("ui.pelit.botti-vaikea"), Vastustaja.BottiVaikea) })
                 tasoNapit.Add(Kirjasimet.Aseta(Rakenne.Nappi(teksti, "mk-peli__kytkin", () => ValitseVastustaja(v), ryhma), Kirjasin.Luku));
             var kaveriRyhma = Rakenne.El("mk-peli__kytkinryhma", valintaKortti.Sisus);
-            tasoNapit.Add(Kirjasimet.Aseta(Rakenne.Nappi("Kaveri samalla laitteella", "mk-peli__kytkin", () => ValitseVastustaja(Vastustaja.Kaveri), kaveriRyhma), Kirjasin.Luku));
-            var lo = Rakenne.Teksti("Lauta", "mk-peli__valiotsikko", valintaKortti.Sisus);
+            tasoNapit.Add(Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.kaveri-samalla-laitteella"), "mk-peli__kytkin", () => ValitseVastustaja(Vastustaja.Kaveri), kaveriRyhma), Kirjasin.Luku));
+            var lo = Rakenne.Teksti(Kieli.T("ui.pelit.lauta"), "mk-peli__valiotsikko", valintaKortti.Sisus);
             Kirjasimet.Aseta(lo, Tyylikirja.Kirjain.Valiotsikko);
             var lautaRyhma = Rakenne.El("mk-peli__kytkinryhma", valintaKortti.Sisus);
             for (int i = 0; i < Laudat.Length; i++)
@@ -169,8 +169,8 @@ namespace Matkakirja.Natiivi
             lautaHistoria = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__historia", valintaKortti.Sisus);
             Kirjasimet.Aseta(lautaHistoria, Tyylikirja.Kirjain.Apuri);
             var vn = Rakenne.El("mk-kortti__napit", valintaKortti.Sisus, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Nappi("Peruuta", "mk-nappi--toiminto", Sulje, vn), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Nappi("Aloita peli", "mk-nappi--kulta", AloitaPeli, vn), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.yleinen.peruuta"), "mk-nappi--toiminto", Sulje, vn), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.aloita-peli"), "mk-nappi--kulta", AloitaPeli, vn), Kirjasin.KoneLihava);
 
             tulosKortti = new Kortti("mk-peli__kortti", pohja: true);
             tulosKapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", tulosKortti.Sisus);
@@ -180,16 +180,16 @@ namespace Matkakirja.Natiivi
             tulosApuri = Rakenne.Teksti("", "mk-kortti__alaotsikko", tulosKortti.Sisus);
             Kirjasimet.Aseta(tulosApuri, Tyylikirja.Kirjain.Apuri);
             tulosPalkkioRivi = Rakenne.El("mk-peli__rivi", tulosKortti.Sisus, PickingMode.Ignore);
-            Rakenne.Teksti("Voittopalkkio", "mk-peli__rivi-nimi", tulosPalkkioRivi);
+            Rakenne.Teksti(Kieli.T("ui.pelit.voittopalkkio"), "mk-peli__rivi-nimi", tulosPalkkioRivi);
             tulosPalkkio = Rakenne.Teksti("", "mk-peli__palkkio", tulosPalkkioRivi);
             Kirjasimet.Aseta(tulosPalkkio, Tyylikirja.Kirjain.Valiotsikko);
             tulosLaudat = Rakenne.Teksti("", "mk-kortti__teksti mk-peli__ansaitut", tulosKortti.Sisus);
             Kirjasimet.Aseta(tulosLaudat, Kirjasin.LukuLihava);
-            tulosKirjattu = Rakenne.Teksti("Tulos kirjattiin matkakirjaan.", "mk-kortti__alaotsikko mk-peli__kirjattu", tulosKortti.Sisus);
+            tulosKirjattu = Rakenne.Teksti(Kieli.T("ui.pelit.tulos-kirjattu"), "mk-kortti__alaotsikko mk-peli__kirjattu", tulosKortti.Sisus);
             Kirjasimet.Aseta(tulosKirjattu, Tyylikirja.Kirjain.Apuri);
             var tn = Rakenne.El("mk-kortti__napit", tulosKortti.Sisus, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Nappi("Pelaa uudelleen", "mk-nappi--toiminto", () => NaytaKortti(valintaKortti), tn), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta", Sulje, tn), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.pelaa-uudelleen"), "mk-nappi--toiminto", () => NaytaKortti(valintaKortti), tn), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.jatka-matkaa"), "mk-nappi--kulta", Sulje, tn), Kirjasin.KoneLihava);
 
             Kirjasimet.Aseta(peliTaso, Kirjasin.Luku);
             Kirjasimet.Aseta(korttiTaso, Kirjasin.Luku);
@@ -328,10 +328,10 @@ namespace Matkakirja.Natiivi
             if (k == valintaKortti)
             {
                 // Kapiteeliin maa (Päätoimittaja: "Saksa · kohtaaminen"), apuriville paikallinen nimi; uusinnassa pelin nimet.
-                valintaKortti.Q<Label>(className: "mk-peli__valinta-kapiteeli").text = Maa != null ? Maa + " · kohtaaminen" : "Mylly · uusintapeli";
+                valintaKortti.Q<Label>(className: "mk-peli__valinta-kapiteeli").text = Maa != null ? Kieli.T("ui.pelit.kohtaaminen", Maa) : Kieli.T("ui.mylly.uusintapeli");
                 valintaKortti.Q<Label>(className: "mk-peli__valinta-ala").text = PaikallinenNimi != null
-                    ? $"Täällä peliä kutsutaan nimellä {PaikallinenNimi}."
-                    : "Sama peli tunnetaan nimillä Mühle, Nine Men's Morris, Mlin ja Moara.";
+                    ? Kieli.T("ui.pelit.paikallinen-nimi", PaikallinenNimi)
+                    : Kieli.T("ui.mylly.tunnetaan-nimilla");
                 ValitseVastustaja(vastustaja);
                 ValitseLauta(Lauta);
             }
@@ -480,19 +480,19 @@ namespace Matkakirja.Natiivi
             Paivita();
 
             bool kaveri = vastustaja == Vastustaja.Kaveri;
-            tulosKapiteeli.text = "Mylly · " + (voittaja == -1 ? "tasapeli" : voittaja == -2 ? "luovutus" : kaveri || voittaja == 0 ? "voitto" : "tappio");
-            tulosOtsikko.text = voittaja == -1 ? "Tasapeli" : voittaja == -2 ? "Luovutit tämän pelin"
-                : kaveri ? (voittaja == 0 ? "Vaalea voitti!" : "Tumma voitti!")
-                : voittaja == 0 ? "Mylly on sinun!" : "Botti voitti tällä kertaa";
+            tulosKapiteeli.text = Kieli.T(voittaja == -1 ? "ui.mylly.kapiteeli-tasapeli" : voittaja == -2 ? "ui.mylly.kapiteeli-luovutus" : kaveri || voittaja == 0 ? "ui.mylly.kapiteeli-voitto" : "ui.mylly.kapiteeli-tappio");
+            tulosOtsikko.text = voittaja == -1 ? Kieli.T("ui.mylly.tasapeli") : voittaja == -2 ? Kieli.T("ui.pelit.luovutit")
+                : kaveri ? Kieli.T(voittaja == 0 ? "ui.pelit.vaalea-voitti" : "ui.pelit.tumma-voitti")
+                : voittaja == 0 ? Kieli.T("ui.mylly.voitit") : Kieli.T("ui.pelit.botti-voitti");
             string vast = Pelikehys.VastustajanNimi(vastustaja);
-            tulosApuri.text = kaveri ? $"Kaveripeli, {peli.Siirtoja} siirtoa."
-                : voittaja == 0 ? $"Voitit {(vast.StartsWith("botti") ? "botin" + vast.Substring(5) : vast)} {peli.Siirtoja} siirrossa."
-                : $"Vastassa {vast}, {peli.Siirtoja} siirtoa.";
+            tulosApuri.text = kaveri ? Kieli.T("ui.mylly.kaveripeli", peli.Siirtoja)
+                : voittaja == 0 ? Kieli.T("ui.mylly.voitit-vastustajan", vast.StartsWith("botti") ? Kieli.T("ui.pelit.botin") + vast.Substring(5) : vast, peli.Siirtoja)
+                : Kieli.T("ui.mylly.vastassa", vast, peli.Siirtoja);
             tulosPalkkioRivi.style.display = palkkio > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             tulosPalkkio.text = $"+£{palkkio}";
             tulosKirjattu.style.display = matka != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Ansaitut laudat (omistaja 1.10.): uusi lauta auki / majatalon lauta Peleihin (4.10.: pelit pois Aarteista).
-            tulosLaudat.text = string.Join("\n", ansaitut.ConvertAll(l => l.Avautuu == null ? l.Esine + " tallentui Peleihin." : "Uusi lauta: " + l.Nimi + "."));
+            tulosLaudat.text = string.Join("\n", ansaitut.ConvertAll(l => l.Avautuu == null ? Kieli.T("ui.pelit.esine-tallentui", l.Esine) : Kieli.T("ui.pelit.uusi-lauta", l.Nimi)));
             tulosLaudat.style.display = ansaitut.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             Aanet.Tehoste(palkkio > 0 ? "coin" : voittaja == 0 || kaveri ? "correct" : "wrong");
             UiKerros.Hae().StartCoroutine(Viive());
@@ -501,11 +501,9 @@ namespace Matkakirja.Natiivi
 
         void NaytaSaannot()
         {
-            UiNakymat.Hae().Vahvistus.Kysy("Myllyn säännöt",
-                "Asetus: nappulat vuorotellen tyhjiin pisteisiin. Siirto: viivaa pitkin viereiseen tyhjään pisteeseen. Kun nappuloita on " +
-                "kolme, saa lentää mihin tahansa. Mylly (kolme samalla viivalla) poistaa yhden vastustajan nappulan, ei valmiista myllystä, " +
-                "jos muita on. Alle kolme nappulaa tai ei siirtoja: häviö.",
-                "Sulje", "Jatka peliä", null, "Mylly · Mühle · Mlin · Moara");
+            UiNakymat.Hae().Vahvistus.Kysy(Kieli.T("ui.mylly.saannot-otsikko"),
+                Kieli.T("ui.mylly.saannot-teksti"),
+                Kieli.T("ui.pelit.sulje"), Kieli.T("ui.pelit.jatka-peli"), null, Kieli.T("ui.mylly.saannot-kapiteeli"));
         }
 
         // --- näyttö ---------------------------------------------------------------------------------------------------
@@ -517,17 +515,17 @@ namespace Matkakirja.Natiivi
             kapiteeli.text = (PaikallinenNimi ?? "") + (PaikallinenNimi != null && Maa != null ? " · " : "") + (Maa ?? "");
             kapiteeli.style.display = string.IsNullOrEmpty(kapiteeli.text) ? DisplayStyle.None : DisplayStyle.Flex;
             otsikkoLauta.text = Laudat[Lauta].Nimi.ToUpperInvariant();
-            nimi0.text = kaveri ? "Vaalea" : "Sinä";
-            nimi1.text = kaveri ? "Tumma" : Pelikehys.VastustajanNimi(vastustaja).Replace("botti (", "Botti · ").TrimEnd(')');
+            nimi0.text = kaveri ? Kieli.T("ui.pelit.vaalea") : Kieli.T("ui.pelit.sina");
+            nimi1.text = kaveri ? Kieli.T("ui.pelit.tumma") : Pelikehys.VastustajanNimi(vastustaja).Replace("botti (", Kieli.T("ui.pelit.botti-etuliite")).TrimEnd(')');   // kieli: ei (Pelikehyksen nimen tunniste)
             lukema0.text = Lukema(0); lukema1.text = Lukema(1);
             int oma = peli.Vuorossa;
-            string kuka = kaveri ? (oma == 0 ? "Vaalea" : "Tumma") : "Sinun vuorosi";
-            if (paattynyt) { vuoroRivi.text = "Peli päättyi."; ohje.text = ""; }
-            else if (bottiMiettii) { vuoroRivi.text = "Botti miettii…"; ohje.text = ""; }
-            else if (poistoKohde >= 0) { vuoroRivi.text = $"Mylly! Valitse poistettava {(oma == 0 ? "tumma" : "vaalea")} nappula."; ohje.text = "Myllyssä olevaa ei saa poistaa, jos muita on."; }
-            else if (peli.Asetusvaihe(oma)) { vuoroRivi.text = $"{kuka}: aseta nappula."; ohje.text = $"Asetusvaihe: {peli.Kadessa(oma)} kädessä. Kolme samalla viivalla on mylly."; }
-            else if (peli.Lentaa(oma)) { vuoroRivi.text = $"{kuka}: lennä nappula."; ohje.text = "Kolme nappulaa jäljellä: saat siirtää mihin tahansa tyhjään pisteeseen."; }
-            else { vuoroRivi.text = $"{kuka}: {(valittu >= 0 ? "valitse kohde." : "valitse siirrettävä nappula.")}"; ohje.text = "Siirtovaihe: viivaa pitkin viereiseen tyhjään pisteeseen."; }
+            string kuka = kaveri ? (oma == 0 ? Kieli.T("ui.pelit.vaalea") : Kieli.T("ui.pelit.tumma")) : Kieli.T("ui.pelit.sinun-vuorosi");
+            if (paattynyt) { vuoroRivi.text = Kieli.T("ui.pelit.peli-paattyi"); ohje.text = ""; }
+            else if (bottiMiettii) { vuoroRivi.text = Kieli.T("ui.mylly.botti-miettii"); ohje.text = ""; }
+            else if (poistoKohde >= 0) { vuoroRivi.text = Kieli.T(oma == 0 ? "ui.mylly.poista-tumma" : "ui.mylly.poista-vaalea"); ohje.text = Kieli.T("ui.mylly.poista-ohje"); }
+            else if (peli.Asetusvaihe(oma)) { vuoroRivi.text = Kieli.T("ui.mylly.aseta-nappula", kuka); ohje.text = Kieli.T("ui.mylly.asetusvaihe", peli.Kadessa(oma)); }
+            else if (peli.Lentaa(oma)) { vuoroRivi.text = Kieli.T("ui.mylly.lenna-nappula", kuka); ohje.text = Kieli.T("ui.mylly.lentovaihe"); }
+            else { vuoroRivi.text = Kieli.T(valittu >= 0 ? "ui.mylly.valitse-kohde" : "ui.mylly.valitse-siirrettava", kuka); ohje.text = Kieli.T("ui.mylly.siirtovaihe"); }
             ohje.style.display = string.IsNullOrEmpty(ohje.text) ? DisplayStyle.None : DisplayStyle.Flex;
 
             // Laudan korostukset.
@@ -545,7 +543,7 @@ namespace Matkakirja.Natiivi
             lauta.Aseta(peli, valittu, poistoKohde, poistoLahde, kohteet, poistettavat, viim.HasValue ? viim.Value.Mihin : -1);
         }
 
-        string Lukema(int p) => peli.Kadessa(p) > 0 ? $"{peli.Kadessa(p)} kädessä · {peli.Laudalla(p)} laudalla" : $"{peli.Laudalla(p)} laudalla";
+        string Lukema(int p) => peli.Kadessa(p) > 0 ? Kieli.T("ui.mylly.lukema-kadessa", peli.Kadessa(p), peli.Laudalla(p)) : Kieli.T("ui.mylly.lukema-laudalla", peli.Laudalla(p));
 
         void Asettele()
         {
