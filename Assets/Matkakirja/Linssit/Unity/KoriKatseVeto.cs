@@ -29,7 +29,10 @@ namespace Matkakirja.Natiivi
         public void Paivita(bool korissa, Camera kam, PalloKierto pk)
         {
             kierto = pk ?? kierto; kamera = kam;
-            bool sallittu = Kaytossa && korissa && kam != null && !(pk != null && pk.SyoteEstetty);
+            // JUURISYY (Laitetestaaja BUILD 167, PT 00.30: kolme vetoa eivät muuttaneet kuvaa): opas itse estää pallon eleet
+            // (OpasSovitin: SyoteLukko.Esta), joten pk.SyoteEstetty on oppaassa aina tosi; ehto esti ylöskatseen kokonaan.
+            // Käyttöliittymän päältä alkava veto ohitetaan edelleen (SyoteLukko.Peittaa).
+            bool sallittu = Kaytossa && korissa && kam != null;
             if (pk != null && sallittu != vetoAsetettu) { pk.YhdenSormenVetoMuualla = sallittu; vetoAsetettu = sallittu; }
             double kulma = kam != null ? Mathf.Asin(Mathf.Clamp(kam.transform.forward.y, -1f, 1f)) * Mathf.Rad2Deg : 0;
             var sormet = Kosketus.activeTouches;

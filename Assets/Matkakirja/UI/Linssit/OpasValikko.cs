@@ -499,6 +499,8 @@ namespace Matkakirja.Natiivi
         {
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool nayta = nakyy && !Auki && !(chat?.Auki ?? false) && (metro.Testi || OpasSovitin.KierrosIndeksi >= 0);
+            // Historiaosion otsikko lennon aikana (LS1 c50c4dcc5, juna 170); testikomento ohittaa.
+            OpasMetrolinja.HistoriaOtsikko = testiHistoria ? testiHistoriaOtsikko : OpasSovitin.HistoriaOtsikko;
             float h = Juuri.layout.height, w = Juuri.layout.width;
             if (float.IsNaN(h) || h <= 0) return;
             // Omistaja 12.3x: iPhonella (pysty ja vaaka) vasempaan yläkulmaan, vuorokausinappi oikean ryhmän riviin; iPadilla
@@ -1155,27 +1157,26 @@ namespace Matkakirja.Natiivi
 
         // --- VAPAA LENTO ja PALUU KIERROKSELLE (omistaja 9.10.2026; logiikka LS1:n OpasSovitin, rajapinta sovittu 9.10.):
         //   bool VapaaLentoKaytettavissa, bool AloitaVapaaLento(), bool PaluuKierrokselleKaytettavissa, bool PalaaKierrokselle().
-        // Heijastuksella, jotta napit ovat piilossa, kunnes LS1:n osa on samassa junassa.
-        static readonly System.Reflection.BindingFlags Julkinen = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
-        static bool SovitinBool(string nimi) => typeof(OpasSovitin).GetProperty(nimi, Julkinen)?.GetValue(null) is bool b && b;
-        static void SovitinKutsu(string nimi) => typeof(OpasSovitin).GetMethod(nimi, Julkinen, null, Type.EmptyTypes, null)?.Invoke(null, null);
-        bool VapaaLentoKaytettavissa => testiVapaa ?? SovitinBool("VapaaLentoKaytettavissa");
-        bool PaluuKaytettavissa => testiPaluu ?? SovitinBool("PaluuKierrokselleKaytettavissa");
+        // Suoraan LS1:n rajapintaan (5b23a3b02, juna 170; heijastus pois: puuttuva rajapinta kaatuu käännökseen).
+        bool VapaaLentoKaytettavissa => testiVapaa ?? OpasSovitin.VapaaLentoKaytettavissa;
+        bool PaluuKaytettavissa => testiPaluu ?? OpasSovitin.PaluuKierrokselleKaytettavissa;
 
         void AloitaVapaaLento()
         {
             Debug.Log("MATKAKIRJA opas: vapaa lento");
             testiVapaa = null;
-            SovitinKutsu("AloitaVapaaLento");
+            OpasSovitin.AloitaVapaaLento();
         }
 
         void PalaaKierrokselle()
         {
             Debug.Log("MATKAKIRJA opas: palaa kierrokselle");
             testiPaluu = null;
-            SovitinKutsu("PalaaKierrokselle");
+            OpasSovitin.PalaaKierrokselle();
         }
         bool? testiJatka;
+        bool testiHistoria;
+        string testiHistoriaOtsikko;
         VisualElement mikaRivi, tahtain;
         Button mikaNappi;
         Label mikaTeksti;
@@ -1765,11 +1766,17 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Omat 3D-mallit (Päätoimittaja 9.10.2026: Concorde, Riddarholmen, Notre-Dame, Giza): mallit.json:n kohdekohtaiset
+                    // tekijärivit (LS2 0bf2ed7b2: CesiumOmatMallit.Lahderivit; tyhjä, kunnes json on saapunut).
+                    foreach (var m in Matkakirja.Linssit.CesiumOmatMallit.Lahderivit)
+                        if (!string.IsNullOrWhiteSpace(m)) Kirjasimet.Aseta(Rakenne.Teksti(m.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     Viiva();
                     Vieritys();
                     var lahteet = KuvaLahteet();
                     if (lahteet.Count == 0) Kirjasimet.Aseta(Rakenne.Teksti("Ei kuvalähteitä.", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     foreach (var l in lahteet) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
+                    // Historiaosioiden tekstilähteet osion nimellä (LS1 c50c4dcc5: OpasSovitin.HistoriaLahteet; kuvat ovat KuvaLahteissa).
+                    foreach (var l in HistoriaLahteet()) Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
                     break;
                 case Nakyma.Aanet:
                     Takaisin("Äänet", Nakyma.Lahteet);
@@ -2342,6 +2349,25 @@ namespace Matkakirja.Natiivi
             return tulos;
         }
 
+        /// <summary>Nykyisen kaupungin historiaosioiden lähteet "otsikko · url" (LS1: OpasSovitin.HistoriaLahteet); kukin kerran.</summary>
+        static List<string> HistoriaLahteet()
+        {
+            var tulos = new List<string>();
+            var lista = OpasSovitin.HistoriaLahteet;
+            if (lista == null) return tulos;
+            foreach (var (otsikko, urlit) in lista)
+            {
+                if (urlit == null) continue;
+                foreach (var u in urlit)
+                {
+                    if (string.IsNullOrWhiteSpace(u)) continue;
+                    string rivi = string.IsNullOrWhiteSpace(otsikko) ? u.Trim() : otsikko.Trim() + " · " + u.Trim();
+                    if (!tulos.Contains(rivi)) tulos.Add(rivi);
+                }
+            }
+            return tulos;
+        }
+
         /// <summary>LS1:n ElavaKaupunki.Krediitti suoraan (9.10.: heijastus pois, puuttuva rajapinta kaatuu käännökseen); null = ei riviä.</summary>
         static string ElavaKrediitti() => ElavaKaupunki.Krediitti;
 
@@ -2350,7 +2376,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Pelin kenttä-äänitysten nimeämiset (Pelikoodari 8.10.2026: 43 CC BY / BY-SA -äänitystä maisemakoreissa ja kaupunkien
-        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
+        /// äänissä sekä pallon äänimaiseman 3 CC BY -ääntä, yhteensä 46; 9.10. +5: proomu, sumutorvi ja Olavinlinnan läpipeluun luuta, varusteet ja yölinnut = 51; +3 elävän kaupungin lokit ja kyyhkyt = 54; lisenssikatselmus +19 Pulun tehosteet, äänimaisema v2 ja Ihmisen matka v2 = 73; lisenssiehto): "nimi · tekijä · lisenssi" kuten kuvalähteet. Data: kopio webin data/aanilahteet.json:sta
         /// (Resources/Lahteet), joten näkyy myös ilman verkkoa; päivitys kopioimalla tiedosto uudelleen.
         /// </summary>
         static List<string> AaniLahteet()
@@ -2501,8 +2527,8 @@ namespace Matkakirja.Natiivi
                 case "peitto": return Peitto();
                 case "tapit": return "opas: " + tapit.Kuvaus();
                 case "historia":
-                    // ui opasvalikko historia [otsikko…|pois]: historiaosion otsikko metrolinjaan (testi; LS1:n kytkennän tilalla).
-                    if (o.Length > 1) OpasMetrolinja.HistoriaOtsikko = o[1] == "pois" ? null : string.Join(" ", o, 1, o.Length - 1);
+                    // ui opasvalikko historia [otsikko…|pois]: historiaosion otsikko metrolinjaan (testi ohittaa LS1:n HistoriaOtsikon; pois = LS1).
+                    if (o.Length > 1) { testiHistoria = o[1] != "pois"; testiHistoriaOtsikko = testiHistoria ? string.Join(" ", o, 1, o.Length - 1) : null; }
                     return "opas: " + metro.HistoriaKuvaus();
                 case "vipu":
                     // ui opasvalikko vipu [asento −2…1]: vapaan lennon nopeusvipu (OpasTapit, juna 170).

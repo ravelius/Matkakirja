@@ -196,6 +196,39 @@ namespace Matkakirja.Linssit.Elava
             return r.Valmis(l, b, 0);
         }
 
+        /// <summary>Autojen korin värit (yleisiä: valkoinen, hopea, musta, tummansininen, punainen, harmaa).</summary>
+        public static readonly byte[][] AutoVarit =
+        {
+            new byte[] { 232, 232, 228, 255 }, new byte[] { 170, 174, 178, 255 }, new byte[] { 34, 36, 40, 255 },
+            new byte[] { 40, 56, 96, 255 }, new byte[] { 150, 36, 32, 255 }, new byte[] { 96, 100, 104, 255 },
+        };
+
+        /// <summary>Henkilöauto (~4,4 m, B4): kori, tummat ikkunat katossa, renkaat; origo maassa keskellä, keula +z.</summary>
+        public static VeneVerkko Auto(int vari)
+        {
+            var r = new Rakentaja(); var v = AutoVarit[((vari % AutoVarit.Length) + AutoVarit.Length) % AutoVarit.Length];
+            r.Laatikko(0, 0.3f, 0, 1.78f, 0.72f, 4.4f, v);
+            r.Laatikko(0, 1.02f, -0.25f, 1.6f, 0.52f, 2.3f, Ikkuna);
+            r.Laatikko(0, 1.5f, -0.25f, 1.56f, 0.06f, 2.1f, v);
+            foreach (var (x, z) in new[] { (0.82f, 1.35f), (-0.82f, 1.35f), (0.82f, -1.35f), (-0.82f, -1.35f) }) r.Laatikko(x, 0f, z, 0.24f, 0.62f, 0.62f, Musta);
+            return r.Valmis(4.4f, 1.78f, 1.56f);
+        }
+
+        /// <summary>Raitiovaunu (~30 m, B4): kolme nivelöityä osaa, ikkunanauha, vihreä vyö; origo maassa keskellä.</summary>
+        public static VeneVerkko Raitiovaunu()
+        {
+            var r = new Rakentaja(); byte[] vyo = { 40, 110, 70, 255 };
+            for (int i = -1; i <= 1; i++)
+            {
+                float z = i * 10.2f;
+                r.Laatikko(0, 0.35f, z, 2.65f, 2.9f, 9.8f, Valkoinen);
+                r.Laatikko(0, 1.45f, z, 2.69f, 1.1f, 9.4f, Ikkuna);
+                r.Laatikko(0, 0.55f, z, 2.68f, 0.35f, 9.82f, vyo);
+            }
+            r.Laatikko(0, 3.25f, 0, 0.6f, 0.4f, 1.6f, Harmaa);   // virroitin
+            return r.Valmis(30.4f, 2.69f, 3.65f);
+        }
+
         /// <summary>Muiden pallojen kuoren värit (raita A, raita B), yleisiä kuumailmapallojen sävyjä.</summary>
         public static readonly byte[][][] PalloVarit =
         {

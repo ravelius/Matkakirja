@@ -12,6 +12,7 @@ namespace Matkakirja.Linssit
         public const int Kerros = 21;
         const float Etaisyys = 1f, Fov = 60f;
         Camera perus, overlay;
+        bool koosteessa;   // TAA (Laatutaso.Ajallinen): Base-kamera KaupunkiKoosteeseen pinon sijaan
         Transform tasko;
         Material mat;
         static readonly int IdSade = Shader.PropertyToID("_Sade"), IdLumi = Shader.PropertyToID("_Lumi"), IdSalama = Shader.PropertyToID("_Salama"),
@@ -40,7 +41,7 @@ namespace Matkakirja.Linssit
 
         void Varmista(Camera kamera)
         {
-            if (overlay != null && perus == kamera) return;
+            if (overlay != null && perus == kamera && koosteessa == KaupunkiKooste.Kaytossa) return;
             Sulje();
             perus = kamera;
             var go = new GameObject("Pallon sääkerros (overlay)") { layer = Kerros };
@@ -50,9 +51,14 @@ namespace Matkakirja.Linssit
             overlay.cullingMask = 1 << Kerros;
             overlay.fieldOfView = Fov;
             overlay.nearClipPlane = 0.1f; overlay.farClipPlane = 10f;
-            overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
-            var pd = kamera.GetUniversalAdditionalCameraData();
-            if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
+            koosteessa = KaupunkiKooste.Kaytossa;
+            if (koosteessa) KaupunkiKooste.Lisaa(overlay, KaupunkiKooste.Saa);
+            else
+            {
+                overlay.GetUniversalAdditionalCameraData().renderType = CameraRenderType.Overlay;
+                var pd = kamera.GetUniversalAdditionalCameraData();
+                if (pd != null && !pd.cameraStack.Contains(overlay)) pd.cameraStack.Add(overlay);
+            }
             var sh = Resources.Load<Shader>("Varjostimet/SaaKerros");
             if (sh == null) { Debug.Log("MATKAKIRJA linssit: sääkerroksen varjostin puuttuu"); return; }
             mat = new Material(sh) { name = "SaaKerros" };
@@ -74,7 +80,7 @@ namespace Matkakirja.Linssit
                 var d = perus.GetUniversalAdditionalCameraData();
                 if (d != null) d.cameraStack.Remove(overlay);
             }
-            if (overlay != null) Object.Destroy(overlay.gameObject);
+            if (overlay != null) { KaupunkiKooste.Poista(overlay); Object.Destroy(overlay.gameObject); }
             if (mat != null) Object.Destroy(mat);
             overlay = null; perus = null; tasko = null; mat = null;
         }
