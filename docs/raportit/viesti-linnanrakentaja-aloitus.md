@@ -24,6 +24,12 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
      linkkeihin (31a21110b, haara v45b).
    - **Olavinlinnan kuoren viiden seinän Codex-ohjeet** ovat kansiossa `_valmiit/olavinlinna-codex-ohje/`. Työkalut ovat
      `kuori_ohje.py` ja `kuori_merkinnat.py`. Sisältökirjuri tilaa ne ND-pilotin jälkeen.
+   - **MetaHuman-vouti v3** (`linna-hahmot/metahuman-v1`) on Siirtosepällä koeajossa, eikä sitä ole vielä paketissa. Muutokset:
+     - Huppu on nostettu ja venytetty niskaan.
+     - Morph-painot ovat 0.
+     - Ilmeiden kartoitus on korjattu: indeksi, iho normaalin mukaan ja hampaat jäykkinä. jawOpen ei enää näytä piikkejä.
+     - Tarkistusarkki: `esikatselu/vouti_mh_v3_arkki.jpg`.
+   - **ND:n hiontalista** (etelärannan kaista, ikkunoiden tummuus) on tauolla, koska ND siirtyy Codex-pintoihin.
 
 ## Säännöt, jotka opittiin
 
