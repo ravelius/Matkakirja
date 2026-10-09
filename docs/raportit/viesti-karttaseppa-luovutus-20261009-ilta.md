@@ -36,6 +36,9 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **Kaukomaa (PT päätös B, 9.10. ilta):** S2-kaukomaata (v1p, yo-v1p) ei tuoda Googlen laattojen näkymään ("samassa näkymässä ei muuta karttaa"). Ämpärin kaukomaa-tiedostot jätettiin paikalleen, eikä niitä kytketä. Aluskerroksen täyte hoidetaan utu-taulukoilla.
+- **Yöajon jono 20.0x:** KL v2 → ND-loput v2 (aja-yo3) → Olavinlinnan seinät 1–5 (aja-yo4, `aja-olavinlinna.py`) → Olavinlinnan katot s6 palat (aja-yo5). Tulokset ovat LR:lle.
+
 - **Utu (PT 18.5x):** `_valmiit/ilmakeha-aerosoli-v1-vienti-20261009` (8 settiä → `ilmakeha/aerosoli-v1/{pariisi,tukholma}/{kausi}/`, LS2:n polku) on Julkaisijalla viennissä. Julkaisija ilmoittaa LS2:lle, kun polku antaa 200.
 
 - LR: Vasa-museon lähdepaketti (`_tyo/karttaseppa/vasamuseet/`, mastoja ei OSM:ssä).
