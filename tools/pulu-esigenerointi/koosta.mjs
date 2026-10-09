@@ -30,4 +30,9 @@ const paketti = {
 };
 const ulos = path.join(kansio, `${maa}.json`);
 fs.writeFileSync(ulos, JSON.stringify(paketti));
+// Hakemisto pulu/vastaukset/v1/maat.json (natiivi PuluValmiitLataus): maa → versio; versio vaihtuu, kun paketti tehdään uudelleen.
+const hakemistoP = path.join(kansio, '..', 'maat.json');
+const hakemisto = fs.existsSync(hakemistoP) ? JSON.parse(fs.readFileSync(hakemistoP, 'utf8')) : { maat: {} };
+hakemisto.maat[maa] = paketti.luotu.replace(/[^0-9]/g, '').slice(0, 12);
+fs.writeFileSync(hakemistoP, JSON.stringify(hakemisto, null, 1));
 console.log(`${ulos}: ${Object.keys(kohdat).length} kohtaa, ${v1.length} kysymysvastausta, ${v2.length} linkkivastausta`);

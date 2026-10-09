@@ -48,6 +48,7 @@ Virheelliset vastaukset kirjoitetaan uudelleen samaan tiedostoon, ja tarkistus a
 (`pulu/vastaukset/v1/FRA.json`; ämpäriin vienti ja natiivin kytkentä tehdään erikseen, ei vielä peliin):
 `{ $skeema, maa, sisalto, ohje, luotu, vastauksia, kohdat: { "<kohta>": { kysymykset: [{kysymys, vastaus, jatkot[2], paikka?}], lisaa: { "<käsite pienellä>": {kasite, vastaus, jatkot[2]} } } } }`.
 Vastauksessa [[käsite]]-merkinnät jäävät paikalleen, koska natiivi tekee niistä linkit.
+Samalla päivittyy `pulu-esigenerointi/maat.json` (`pulu/vastaukset/v1/maat.json`, maa → versio). Natiivi lukee sen ensin, joten se viedään ämpäriin paketin kanssa.
 
 Commitoi `FRA/vastaukset-*.txt`, `FRA/tehtavat-2*`, `FRA/vaihe1.json`, `FRA/vaihe2.json` ja `FRA/FRA.json` tähän haaraan ja pushaa.
 Viesti Päätoimittajalle sisältää: vastausten määrä (vaihe 1 + vaihe 2), kesto, tarkistuksen virheet ja paketin polku.
