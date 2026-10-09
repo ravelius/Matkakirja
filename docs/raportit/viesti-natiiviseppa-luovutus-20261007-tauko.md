@@ -32,8 +32,9 @@ Worktreet 9.10. 13.0x: vain wt/proto-natiiviseppa-j172 jäljellä (13 mergettyä
       libz.tbd Steam Audion BuildProcessor; Mac: proto3d-mac-testflight allekirjoittaa .bundlet jo (PT: ei Mac-poikkeusta)
   [x] LS2 omavalo-172 51799391e (omien mallien varjostin + kaukomaa) + laivat-171 657676845 (Pariisin jokilaivat + vana); malli v7 ämpärissä,
       OSOITIN uusin-2 → v7 vasta junan 172 mukana (Julkaisija); Seinen läikkä mahdollisesti erikseen
-  [ ] Siirtoseppä: lähteettömien äänten korvaus ("valmis 172:een" -rivi tulee); LR:n leikkauskorjaus erikseen
-  [ ] LR: Codex-pinnat
+  [-] Siirtosepän lähteettömät äänet: EI tarvita (PT: ElevenLabs SFX, oma tuotanto, c911053ee)
+  [ ] LR:n leikkauskorjaus v46d (Siirtosepän kytkentä)
+  [ ] LR:n prefektuuri (LS2:n vienti) + Codex-fotot (NUI)
   [x] Pelikoodari kaupunkijakso cf0a1547d (Pariisin saapumismusiikki; nopea kappale ämpärissä 12.58)
   LUKITUSEHDOT 172: (a) omistajan lupa (PT välittää) (b) Siirtosepän arvio 3 -laitekäännös ilman varjostinvirheitä (DioraamaValaistu
       alfaleikkaus) (c) LR:n prefektuuri, jos ehtii (d) Codex-fotot NUI:lta (loput minikuvat) (e) yksi simukäännös 0 varjostinvirhettä (Steam Audio,
