@@ -39,7 +39,18 @@ namespace Matkakirja.Editori
             "Mikä tehtävä katedraalin gargoileilla on?",
         };
 
-        enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Linna, OdotaLinna, Loyto, OdotaLoyto,
+        static readonly string[] TkOtsikot = { "Kalkki", "Pateeni", "Liuskekivi" };
+        static readonly string[] TkLyhyet = { "Messun malja linnan kappelista.", "Kalkin kansi, jolla ehtoollisleipä kannettiin.",
+            "Alttarin kivi, joka kulki pappien mukana." };
+        static readonly string[] TkTekstit =
+        {
+            "Kalkki oli linnan kappelin arvokkain esine. Kun linna vaihtoi isäntää, papit kätkivät sen liinaan ja muurin rakoon, ettei se joutuisi vieraisiin käsiin. Maljan jalassa on kaiverrus, josta näkee, kenen lahjoittama se oli.",
+            "Pateeni on matala lautanen, joka sopii kalkin kanneksi. Sen reunassa on risti ja kaksi kirjainta. Pateeni ja kalkki kuuluivat yhteen, ja ne käärittiin samaan liinaan.",
+            "Liuskekivi on kannettava alttari: pieni kivilaatta, jonka päällä messu voitiin pitää missä tahansa. Kiven keskellä on syvennys, johon pyhäinjäännös suljettiin vahalla.",
+        };
+
+        enum Vaihe { Aloita, OdotaPelia, Kysy, AvaaKysy, OdotaKysy, Napit, OdotaNapit, NytRivi, OdotaNytRivi, Mikseri, OdotaMikseri, Linna, OdotaLinna, Loyto, OdotaLoyto,
+            Tietokerros, AvaaTietokerros, OdotaTietokerros,
             Lopeta, OdotaLoppua, Valmis }
 
         static int kokoNro, kehyksia;
@@ -150,6 +161,20 @@ namespace Matkakirja.Editori
                     // Sää odottaa enintään NytRivi.SaanOdotusS; rivi näkyy ~3 s (Nimikyltti).
                     if (Kulunut < Matkakirja.Natiivi.NytRivi.SaanOdotusS + 0.8) return;
                     TarkistaNytRivi();
+                    Siirry(Vaihe.Mikseri);
+                    break;
+                case Vaihe.Mikseri:
+                    // Pallon mikseri (UI-kuva-arkki u06): demolähde ja paneeli auki (kuten `ui mikseri demo` + `ui mikseri auki`).
+                    MikseriPaneeli.LappuPiilossa = false;
+                    MikseriPaneeli.Lahde = new MikseriPaneeli.Demo();
+                    (MikseriPaneeli.Viimeisin ?? new MikseriPaneeli(UiKerros.Hae())).Avaa(true);
+                    Siirry(Vaihe.OdotaMikseri);
+                    break;
+                case Vaihe.OdotaMikseri:
+                    if (kehyksia < 20 || Kulunut < 0.5) return;
+                    TarkistaMikseri();
+                    MikseriPaneeli.Viimeisin?.Avaa(false);
+                    MikseriPaneeli.Lahde = null;
                     Siirry(Vaihe.Linna);
                     break;
                 case Vaihe.Linna:
@@ -182,6 +207,23 @@ namespace Matkakirja.Editori
                     if (kehyksia < 10) return;
                     TarkistaLoyto(paljastus);
                     paljastus.Sulje();
+                    Siirry(Vaihe.Tietokerros);
+                    break;
+                case Vaihe.Tietokerros:
+                    // Linnan tietokerroksen kortisto (UI-kuva-arkki u13): kolme pitkää korttia, jotta lista vierii ja Takaisin
+                    // on silti näkyvissä.
+                    SeikkailuTapit.NaytaTietokerros(TkOtsikot, TkTekstit, TkLyhyet);
+                    Siirry(Vaihe.AvaaTietokerros);
+                    break;
+                case Vaihe.AvaaTietokerros:
+                    if (kehyksia < 5) return;
+                    SeikkailuTapit.AvaaTietokerrosValikosta();
+                    Siirry(Vaihe.OdotaTietokerros);
+                    break;
+                case Vaihe.OdotaTietokerros:
+                    if (kehyksia < 20 || Kulunut < 0.6) return;
+                    TarkistaTietokerros();
+                    if (SeikkailuTapit.TestiTietokerros != null) Rakenne.Nayta(SeikkailuTapit.TestiTietokerros, false, 0);
                     linna?.Nayta(false);
                     Siirry(Vaihe.Lopeta);
                     break;
@@ -277,6 +319,31 @@ namespace Matkakirja.Editori
             Kokonaan(jatka, turva, "löytö: Jatka matkaa");
             var nimi = Etsi(jatka, "Liinanyytti");
             if (nimi == null) Virhe("löytö: nimi puuttuu"); else Kokonaan(nimi, turva, "löytö: nimi");
+        }
+
+        static void TarkistaMikseri()
+        {
+            var p = MikseriPaneeli.Viimeisin?.TestiPaneeli;
+            if (p?.panel == null) { Virhe("mikseri: paneeli puuttuu"); return; }
+            if (!Nakyvissa(p)) { Virhe("mikseri: paneeli ei aukea"); return; }
+            Kokonaan(p, TurvaAlue(p, MikseriPaneeli.Kerros), "mikseri: paneeli");
+            float peitto = Peitto(p, p);
+            if (peitto > 0.45f) Virhe($"mikseri: peitto {peitto:P0} > 45 %"); else Kirjaa($"OK mikseri: peitto {peitto:P0}");
+        }
+
+        static void TarkistaTietokerros()
+        {
+            var h = SeikkailuTapit.TestiTietokerros;
+            if (h?.panel == null || !Nakyvissa(h)) { Virhe("tietokerros: kortisto ei aukea"); return; }
+            var turva = TurvaAlue(h, UiKerros.Pelidialogit);
+            var kortti = h.Query<VisualElement>(className: "mk-kortti-kehys--tumma").First();
+            if (kortti != null) Kokonaan(kortti, turva, "tietokerros: kortti"); else Virhe("tietokerros: kortti puuttuu");
+            var otsikko = Etsi(h, TkOtsikot[0].ToUpperInvariant());
+            if (otsikko == null) Virhe("tietokerros: ensimmäinen kortti puuttuu");
+            else { Kokonaan(otsikko, turva, "tietokerros: " + TkOtsikot[0]); IlmanVieritysta(otsikko, "tietokerros: " + TkOtsikot[0]); }
+            var takaisin = Etsi(h, Kieli.T("ui.seikkailu.takaisin"));
+            if (takaisin == null) Virhe("tietokerros: Takaisin puuttuu");
+            else { Kokonaan(takaisin, turva, "tietokerros: Takaisin"); IlmanVieritysta(takaisin, "tietokerros: Takaisin"); }
         }
 
         // --- apurit ---------------------------------------------------------------------------------------------------

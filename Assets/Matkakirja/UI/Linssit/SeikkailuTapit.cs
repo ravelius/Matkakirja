@@ -439,6 +439,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tietokerros tarjolla (NaytaTietokerros kutsuttu, seikkailu käynnissä): linnan ☰-valikon Tietoa-rivi.</summary>
         public static bool TietokerrosTarjolla => tkOtsikot != null;
+        /// <summary>Asettelutesti: tietokerroksen kortiston himmennys (kortti ja Takaisin sen sisällä), null ennen avausta.</summary>
+        public static VisualElement TestiTietokerros => tkHimmennys;
 
         /// <summary>Linnan ☰ → Tietoa (ilman Pulua, Päätoimittaja 8.10.): sama kortisto kuin Pulun napautuksesta.</summary>
         public static void AvaaTietokerrosValikosta()
