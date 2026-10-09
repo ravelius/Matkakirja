@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "68caa2ba0747d2b4",
-  "kansio": "dioraama/olavinlinna/blender/68caa2ba0747d2b4/",
+  "hash": "f95e081c58cab245",
+  "kansio": "dioraama/olavinlinna/blender/f95e081c58cab245/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1420,8 +1420,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "082d6b097191735fb6d88364277008baa1e2863424954f2508c2c574740a8182",
-      "tavuja": 30973
+      "sha256": "0da0f48d06cda61fa7ddb0e3f0cd620a9bd3c965cb2528a34477bb42b88eb082",
+      "tavuja": 31102
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
