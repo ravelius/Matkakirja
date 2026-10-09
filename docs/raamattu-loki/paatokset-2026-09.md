@@ -12037,3 +12037,7 @@ Omistaja sanatarkasti: "Jos tulee kysymyksiä, niin anna aina kortit." (PT oli k
 ## KONE VAPAA TIISTAIHIN 13.10. (OMISTAJA 9.10.2026 KLO 18.5x) (9.10.2026 klo 18.53)
 
 Omistaja sanatarkasti: "Tarvitsen konetta seuraavan kerran vasta ensi viikon tiistaina, joten saat käyttää resursseja vapaasti." PT (Postivahti välitti rooleille): ma 12.10. asti simulaattoreita 2 yhtä aikaa (swap < 12 Gt, vapaata muistia > 20 Gt), Mac GUI -automaatio ilman joutoaikaehtoa, GPU-ajot täydellä teholla; nice 15, paistot yksi kerrallaan ja junan käännös etusijalla ennallaan; ennen ti 13.10. aamua GUI-ajot pois ja Unreal suljettu, levy > 100 Gi.
+
+## OMISTAJALLE VAIN HÄNTÄ KOSKEVAT ASIAT (OMISTAJA 9.10.2026 KLO 19.0x) (9.10.2026 klo 18.58)
+
+Omistaja sanatarkasti: "Raportoi jatkossa vain minua koskevat asiat." (PT oli raportoinut chattiin roolien nollaukset, laattavarjopäätöksen ja jonokierroksen.) Linja: chattiin vain omistajan päätöstä, tointa tai hyväksyntää vaativat asiat sekä hänelle valmiina näkyvät (TF valmis, hyväksyttävät pelikuvat, vastaukset hänen kysymyksiinsä); muu lokiin ja tyojonot.md:hen. Raamattu Ydinajatus kohta 2 E. Samalla: GOOGLEN LAATOILLE EI VARJOJA (PT 19.0x, LS2:n laattavarjokoe ce615b071): leivotut varjot eivät käänny kellonajan mukana; omien mallien varjot (varjot-173) riittävät.
