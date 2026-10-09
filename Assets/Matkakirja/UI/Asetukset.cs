@@ -13,6 +13,9 @@
 //   (avain matkakirja-dev-voima-<laji>, 0…1, tallennetaan vain oletuksesta poikkeava):
 //     tehosteet 1,0 · pulu 1,0 · lukija 0,9 · musiikki 0,35 · tausta 1,0
 // Äänimoottori ja kartta lukevat arvot täältä ja kuuntelevat Muuttui-tapahtumaa.
+// MIKSERI (omistaja 9.10.2026 klo 09.5x): äänentasot ovat konteksti- eli peli- ja linssikohtaisia (Ydin Aanimikseri.Yhteinen): Taso(Voima)
+// = nykyisen kontekstin ryhmän taso (perus = Oletus × kerroin; yhteiset kertoimet workerista, kehittäjän omat muutokset PlayerPrefsissä).
+// Vanhat matkakirja-dev-voima-*-avaimet eivät enää vaikuta; mikseri näkyy vain kehittäjäkoodilla (MikseriPalvelin).
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -29,6 +32,27 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Jokin asetus muuttui (kytkimen tai voiman nimi).</summary>
         public static event Action<string> Muuttui;
+
+        static Asetukset()
+        {
+            // Mikserin perustaso = koodin ja sisältöpaketin oletus; mikserin muutos (taso tai konteksti) → kaikki voimat muuttuivat.
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            m.PerusTaso = r => Oletus(VoimaRyhmasta(r));
+            m.Muuttui += () => { foreach (var v in VoimaJarjestys) Muuttui?.Invoke(v.ToString()); };
+        }
+
+        /// <summary>Voima ↔ mikserin ryhmä (Ydin Aanimikseri.Ryhmat).</summary>
+        public static string Ryhma(Voima v) => v switch
+        {
+            Voima.Tehosteet => "tehosteet", Voima.Pulu => "pulu", Voima.Lukija => "puhe", Voima.Musiikki => "musiikki",
+            Voima.Repliikit => "repliikit", Voima.Saa => "saa", _ => "maisema",
+        };
+
+        public static Voima VoimaRyhmasta(string ryhma)
+        {
+            foreach (Voima v in Enum.GetValues(typeof(Voima))) if (Ryhma(v) == ryhma) return v;
+            return Voima.Tehosteet;
+        }
 
         // --- kehittäjätila (webin js/main.js kytkeKehittaja) ------------------------------
         // Koodit vain SHA-256-tiivisteinä kuten webissä (sama pää- ja rajattu koodi).
@@ -216,14 +240,8 @@ namespace Matkakirja.Natiivi
             Muuttui?.Invoke(k.ToString());
         }
 
-        /// <summary>Äänentaso 0…1.</summary>
-        public static float Taso(Voima v)
-        {
-            string s = PlayerPrefs.GetString(Avain(v), null);
-            if (string.IsNullOrEmpty(s) || !float.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out var t))
-                return Oletus(v);
-            return Mathf.Clamp01(t);
-        }
+        /// <summary>Äänentaso 0…1 nykyisessä kontekstissa (mikserin ryhmä: perus × kerroin).</summary>
+        public static float Taso(Voima v) => Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Kerroin(Ryhma(v));
 
         /// <summary>
         /// Asettaa tason heti (äänimoottori kuulee Muuttui-tapahtumasta). tallenna = false
@@ -232,14 +250,20 @@ namespace Matkakirja.Natiivi
         public static void AsetaTaso(Voima v, float taso, bool tallenna = true)
         {
             taso = Mathf.Clamp01(Mathf.Round(taso * 100f) / 100f);
-            if (Mathf.Approximately(Taso(v), taso)) { if (tallenna) PlayerPrefs.Save(); return; }
-            if (Mathf.Approximately(taso, Oletus(v))) PlayerPrefs.DeleteKey(Avain(v));
-            else PlayerPrefs.SetString(Avain(v), taso.ToString("0.##", CultureInfo.InvariantCulture));
-            if (tallenna) PlayerPrefs.Save();
-            Muuttui?.Invoke(v.ToString());
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            float perus = Oletus(v);
+            m.Aseta(Matkakirja.Linssit.Aanet.Aanimikseri.RyhmaAvain(m.Nyt, Ryhma(v)), perus > 0.001f ? taso / perus : 1f);
+            if (tallenna) Tallenna();
         }
 
-        public static void Tallenna() => PlayerPrefs.Save();
+        /// <summary>Kehittäjän omat mikserimuutokset levylle (vain kehittäjätilassa; muille mikseriä ei näytetä).</summary>
+        public static void Tallenna()
+        {
+            if (Kehittaja) PlayerPrefs.SetString(MikseriOmatAvain, Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.OmatTalteen());
+            PlayerPrefs.Save();
+        }
+
+        public const string MikseriOmatAvain = "matkakirja-mikseri-omat-v1";
 
         /// <summary>Onko muutoksen nimi (Muuttui-tapahtuman argumentti) äänentaso.</summary>
         public static bool OnTaso(string nimi) => Enum.TryParse<Voima>(nimi, out _);

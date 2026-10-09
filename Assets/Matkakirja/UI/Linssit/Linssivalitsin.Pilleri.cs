@@ -123,9 +123,11 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti(teksti.ToUpperInvariant(), "mk-linssivalitsin__valiotsikko", isa ?? lisaosa);
 
         /// <summary>Äänentasojen liukusäätimet (Asetukset-näkymä; entinen Äänentasot-paneeli).</summary>
-        public void LisaSaatimet(VisualElement isa = null)
+        public void LisaSaatimet(VisualElement isa = null, VisualElement otsikko = null)
         {
             var kuori = Rakenne.El("mk-linssivalitsin__saatimet", isa ?? lisaosa, PickingMode.Ignore);
+            saadinOsat.Add(kuori);
+            if (otsikko != null) saadinOsat.Add(otsikko);
             foreach (var v in Asetukset.VoimaJarjestys)
             {
                 var (s, a) = Aanentasot.LuoSaadinrivi(kuori, v);
@@ -133,8 +135,13 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Äänentasojen osat (otsikko ja säätimet): näkyvät vain kehittäjäkoodilla (omistaja 9.10. 09.5x).</summary>
+        readonly System.Collections.Generic.List<VisualElement> saadinOsat = new System.Collections.Generic.List<VisualElement>();
+
         void PaivitaSaatimet()
         {
+            var nd = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            foreach (var e in saadinOsat) if (e.style.display != nd) e.style.display = nd;
             foreach (var (s, a, v) in saatimet)
             {
                 int p = Mathf.RoundToInt(Asetukset.Taso(v) * 100f);
