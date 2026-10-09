@@ -266,7 +266,9 @@ namespace Matkakirja.Natiivi
         /// puheaskeleen vaihto. t on SAMA hetki kuin nakyma laskettiin (pysäytettyT tai y.Aika) — kun se on jäädytetty
         /// ("poikki aika"), nakyma pysyy samana kehyksestä toiseen, joten mikään tässä metodissa ei havaitse reunaa
         /// eikä laukea uudelleen: ei tarvita erillistä pysäytys-lippua (ks. Aanimaisema.cs:n TehosteAjastin-kommentti).</summary>
-        public void Paivita(Rakennus rak, Nakyma nakyma, double t)
+        /// <param name="pelaajanHuone">Pelattavassa palassa (pelaaja ohjaimissa) pelaajan huoneen tila (KavelyData.AaniTila; null = piha tai
+        /// ulkoalue); huoneen äänet soivat siitä eivätkä kameran KohdeTilasta (Siirtoseppä 10.10., PT:n jono). Ilman pelaajaa ennallaan.</param>
+        public void Paivita(Rakennus rak, Nakyma nakyma, double t, bool pelaajaOhjaimissa = false, string pelaajanHuone = null)
         {
             rakennus = rak;
             SeuraaMuutaPuhetta();
@@ -284,22 +286,25 @@ namespace Matkakirja.Natiivi
             ehdokkaat.Clear();
             foreach (var tila in rak.Tilat)
             {
-                int taso = nakyma.Tasot != null && nakyma.Tasot.TryGetValue(tila.Id, out var ts) ? ts : 0;
+                // Pelaaja ohjaimissa: pelaajan huone täysillä (taso 2), muut hiljaa; kertojaa ei ole pelin aikana.
+                string kohde = pelaajaOhjaimissa ? pelaajanHuone : nakyma.KohdeTila;
+                int taso = pelaajaOhjaimissa ? (tila.Id == kohde ? 2 : 0) : nakyma.Tasot != null && nakyma.Tasot.TryGetValue(tila.Id, out var ts) ? ts : 0;
                 // SilmukanTavoitetaso on TILALLINEN (liuku/alkoi per tilaId) -- kutsutaan AINA, myös Paalla=false,
                 // ettei sen sisäinen liuku jää jälkeen; vain lopputulos (ehdokkaan Taso) nollataan kytkimellä.
-                double tavoite = aanimaisema.SilmukanTavoitetaso(tila.Id, taso, nakyma.KohdeTila, t);
+                double tavoite = aanimaisema.SilmukanTavoitetaso(tila.Id, taso, kohde, t);
                 // Yleisnäkymässä huoneiden silmukat vaimeina (× 0,3): linnan yleisäänet (massa: tuuli, laineet) johtavat, eikä
                 // kuuden kahvan raja pudota niitä (1.1 (75) -mittaus: jarvi-laineet 0,35 jäi keittiön silmukoiden alle).
                 // Omistaja 5.10. 00.5x ("Eikö kuoro yms äänet pitäisi tulla vasta myöhemmissä vaiheissa eikä yleisesittelyssä?"):
                 // yleisnäkymässä ja kertojan esittelyssä vain linnan yleisäänet (massa: tuuli, laineet); huoneen äänet vain, kun kamera
                 // on siinä huoneessa. Häivytys pehmeästi (Aanimaisema-liuku + kahvan 1,2 s:n liuku alla).
-                bool huoneenAanet = tila.Id == Aanimaisema.MassaTilaId || (nakyma.KohdeTila == tila.Id && nakyma.KertojaJakso < 0);
+                bool kertojaPuhuu = !pelaajaOhjaimissa && nakyma.KertojaJakso >= 0;
+                bool huoneenAanet = tila.Id == Aanimaisema.MassaTilaId || (kohde == tila.Id && !kertojaPuhuu);
                 if (!huoneenAanet) tavoite = 0;
                 foreach (var ap in tila.Aanet)
                 {
                     // Massan yleisäänissä on myös soihtujen rätinä ja keskushallin ambienssi: ne ovat huoneen ääniä, eivät
                     // "hiljaista ympäristöä" (tuuli, laineet), joten yleisnäkymässä ja esittelyssä ne vaikenevat.
-                    if (tila.Id == Aanimaisema.MassaTilaId && (nakyma.KohdeTila == null || nakyma.KertojaJakso >= 0)
+                    if (tila.Id == Aanimaisema.MassaTilaId && (kohde == null || kertojaPuhuu)
                         && (Ryhma(ap.AaniId, true) != "taustat" || ap.AaniId.EndsWith("-ambienssi", StringComparison.Ordinal))) continue;
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
                     double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus
@@ -332,7 +337,7 @@ namespace Matkakirja.Natiivi
                 n++;
             }
 
-            string huone = nakyma.KohdeTila;
+            string huone = pelaajaOhjaimissa ? pelaajanHuone : nakyma.KohdeTila;   // kaiku ja mikserin huonekohtaiset säädöt pelaajan huoneesta
             if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); aanettomat.Clear(); }
             bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu || MuuPuheSoi;
             // Sovittimen duckaus puheen ajaksi (0,15); mikserin VaistoKerroin skaalaa väistön (1 = nykyinen, 0 = ei väistöä).

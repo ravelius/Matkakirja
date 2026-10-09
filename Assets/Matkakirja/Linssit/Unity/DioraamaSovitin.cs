@@ -511,8 +511,26 @@ namespace Matkakirja.Natiivi
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
             syote.Paivita(rakennus, t);
-            aanet?.Paivita(rakennus, nakyma, t);
+            aanet?.Paivita(rakennus, nakyma, t, SeikkailuPelaaja.Aktiivinen != null, PelaajanHuone());
         }
+
+        /// <summary>Pelaajan huoneen tila äänimaisemalle (KavelyData.AaniTila; 4 kertaa sekunnissa, Siirtoseppä 10.10.); null = ei pelaajaa,
+        /// piha tai ulkoalue.</summary>
+        string PelaajanHuone()
+        {
+            var p = SeikkailuPelaaja.Aktiivinen; var d = SeikkailuKavely.Data;
+            if (p == null || d == null || rakennus == null) { pelaajanOsa = null; return pelaajanHuone = null; }
+            if (Time.unscaledTime < pelaajanHuoneAika) return pelaajanHuone;
+            pelaajanHuoneAika = Time.unscaledTime + 0.25f;
+            var pp = p.transform.position;
+            string osa = Matkakirja.Linssit.Seikkailu.Askelaani.Osa(d, pp.x, pp.y, -pp.z);
+            if (osa == pelaajanOsa) return pelaajanHuone;
+            pelaajanOsa = osa;
+            pelaajanHuone = d.AaniTila(osa, System.Linq.Enumerable.Select(rakennus.Tilat, x => x.Id));
+            o.Kirjaa($"seikkailu: äänimaisema {osa ?? "-"} → {pelaajanHuone ?? "linnan yleisäänet"}");
+            return pelaajanHuone;
+        }
+        string pelaajanHuone, pelaajanOsa; float pelaajanHuoneAika;
 
         public void Sulje()
         {
