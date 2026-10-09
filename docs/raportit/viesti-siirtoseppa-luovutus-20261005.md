@@ -35,6 +35,15 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 9.10. 03.5x — JUNA 170 kärki 778202265 (LS2:n muisti +0 Mt), JUNA 171 kärki 516ff1b32 (NUI:n yhdistys), JUNA 172 bcae96d0f
+
+- Juna 171 = 516ff1b32 (NUI yhdisti 90a93e5ad + a918d7e97; oma rinnakkainen 49786e8dc on sisällöltään sama, ei käytössä).
+  Sisältää: alkuvalinta suorin kutsuin (OlavinlinnaAlku), ☰ › Linnan historia (DioraamaSovitin.AloitaHistoria/HistoriaKaynnissa/
+  HistoriaKaytettavissa), tuuli-metsa (sonniss-aanet-v2, vain tämä tunnus), luuta lakaisu:-merkeistä.
+- Juna 172 (siirtoseppa/juna172, wt/proto-siirtoseppa-kello, 516ff1b32:n päällä): historian vuodet LR:n leikkausdatasta.
+  Odottaa LR:n vientiä (#4, lakaisumerkki, vaihemallit tyhja-saari / puuvarustus / palon-jaljet, blender.json "vaiheet") → kiinnitys.
+- LS2:n botin uusinta junalla 171 seuraavassa simuvuorossa ("poikki kavely alkuvalinta 0" ohittaa kortit).
+
 ## TILA 9.10. 03.0x — JUNA 171 kärki 778202265 (PT kuittasi ehdolla: LS2:n muistitesti v45x → junaan 170 kärkenä, muuten 171)
 
 - Juna 169 lisäkorjaus 56fda7154 (siirtoseppa/juna169-teksti, wt/proto-siirtoseppa-face): linnan esittelyn kertoja ei soi pelin
