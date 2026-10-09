@@ -9,7 +9,7 @@ Shader "Matkakirja/Linssit/VesiPinta"
         _Syva ("Syvän veden sävy", Color) = (0.015, 0.045, 0.06, 1)
         _Aalto ("Aaltojen voimakkuus", Float) = 0.12
         _AaltoM ("Aallonpituus m", Float) = 6
-        _Kimallus ("Kimallus", Float) = 30
+        _Kimallus ("Kimallus", Float) = 15
     }
     SubShader
     {
@@ -89,7 +89,10 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 // Välke (omistaja 9.10.): satunnaiset kimallukset laajemmassa heijastuskeilassa, vaihtuvat 8 kertaa sekunnissa.
                 // Solut 3 m (ei raitoja kaukaa), vain lähellä (alle 900 m) ja hillitysti.
                 float2 kk = floor(pm.xz / 3.0) + floor(t * 6.0); float kipina = step(0.992, frac(sin(dot(kk, float2(12.9898, 78.233))) * 43758.5453));
-                aurinko += pow(saturate(dot(r, _IlmAurinko.xyz)), 120.0) * kipina * 1.5 * (1.0 - saturate(et * m / 900.0)) * step(0.0, _IlmAurinko.y);
+                aurinko += pow(saturate(dot(r, _IlmAurinko.xyz)), 120.0) * kipina * 0.75 * (1.0 - saturate(et * m / 900.0)) * step(0.0, _IlmAurinko.y);
+                // PT 9.10. 07.0x (kuva kl 06.48: aurinkoa kohti isoja valkoisia läiskiä): heijastus puolitettu (_Kimallus 30 → 15,
+                // välke 1,5 → 0,75) ja pehmeä katto: kirkkaus lähestyy 1,2:ta, ei leikkaudu valkoiseksi, läiskän reuna liukuu.
+                aurinko = 1.2 * aurinko / (1.0 + aurinko);
                 float3 c = lerp(_Syva.rgb * saturate(_IlmAurinko.y * 3.0 + 0.15), taivas, fresnel) + aurinko * IlmLapaisy(_IlmParam.x, _IlmAurinko.y);
                 // Vaahto: valkoinen auringon ja taivaan valossa (näyttöavaruudessa kuten _Syva), vain lähellä (ei välkettä kaukana).
                 float vaahtoV = saturate(vaahto) * 0.75 * (1.0 - saturate(et * m / 2500.0));

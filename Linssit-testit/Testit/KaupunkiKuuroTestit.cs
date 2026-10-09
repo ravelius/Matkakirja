@@ -56,6 +56,7 @@ namespace Matkakirja.Linssit.Testit
             string v = V("VesiPinta.shader");
             Oleta.Tosi(v.Contains("Name \"VesiSumu\"") && v.Contains("_IlmSaa.z"), "aamusumukerros");
             Oleta.Tosi(v.Contains("kipina"), "välke");
+            Oleta.Tosi(v.Contains("_Kimallus (\"Kimallus\", Float) = 15") && v.Contains("aurinko = 1.2 * aurinko / (1.0 + aurinko);"), "auringon heijastus puolitettu ja pehmeä katto");
             Oleta.Tosi(V("IlmakehaLaatat.shader").Contains("_IlmSaa.x"), "märät kadut");
         }
 
