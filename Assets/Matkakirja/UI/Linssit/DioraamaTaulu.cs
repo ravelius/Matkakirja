@@ -610,6 +610,8 @@ namespace Matkakirja.Natiivi
                     avainsanaSanat.text = h.Sanat ?? "";
                 }
                 avainsana.style.opacity = h != null ? 1f : 0f;
+                // VoiceOver: vuosi ja sanat yhtenä nimenä historian aikana (Päätoimittaja 9.10., juna 171).
+                avainsana.tooltip = h != null ? ((h.VuosiTeksti ?? "") + " " + (h.Sanat ?? "")).Trim() : null;
             }
             if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa) return;
             Avainsana nyt = null;

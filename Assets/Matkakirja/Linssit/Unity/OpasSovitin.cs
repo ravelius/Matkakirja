@@ -1960,6 +1960,7 @@ namespace Matkakirja.Natiivi
             var v = Viimeisin;
             if (v.tauolla == paalle) return true;
             v.tauolla = paalle; v.silmukka.Tauolla = paalle;
+            if (v.kaupunki != null) v.kaupunki.Tauko = paalle;   // LS2 + PT 9.10.: laattojen lataus seis tauolla (TF 169 -kaatuminen)
             if (paalle)
             {
                 v.taukoAlku = Time.unscaledTime;
