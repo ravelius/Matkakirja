@@ -213,6 +213,16 @@ namespace Matkakirja.Editori
                 case Vaihe.OdotaPin:
                     if (kehyksia < 20 || Kulunut < 0.6) return;
                     TarkistaPaneeli(UiNakymat.Hae().Chat.TestiPaneeli, Pulu.Kerros, "chat pinnattu");
+                    {
+                        // Pinnattu chat nousee yläreunaan (omistaja 6.10.2026); iPhone vaaka (matala, chat sivulla) ennallaan.
+                        var cp = UiNakymat.Hae().Chat.TestiPaneeli;
+                        if (cp?.panel != null && Koot[kokoNro].Nimi != "iphone-vaaka")
+                        {
+                            float ph = cp.panel.visualTree.layout.height;
+                            if (cp.worldBound.yMin > ph / 3f) Virhe($"chat pinnattu: yläreuna y {cp.worldBound.yMin:0} ei ole ylimmässä kolmanneksessa ({ph / 3f:0})");
+                            else Kirjaa($"OK chat pinnattu yläreunassa (y {cp.worldBound.yMin:0})");
+                        }
+                    }
                     Pinnaus.Pienenna();   // kartan liike pienentää pinnatun chatin yhden rivin palkiksi
                     Siirry(Vaihe.Palkki);
                     break;
