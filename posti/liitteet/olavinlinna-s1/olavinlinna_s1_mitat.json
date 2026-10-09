@@ -1,0 +1,61 @@
+{
+ "seina": 1,
+ "ruutu_gltf_xz": [
+  -12.8,
+  6.3
+ ],
+ "atsimuutti": 253.1,
+ "etaisyys_m": 25.1,
+ "katsoo": "länteen",
+ "z": [
+  -2.3,
+  14.0
+ ],
+ "katselusuunta": [
+  0.9355473518371582,
+  0.3532011806964874,
+  0.0
+ ],
+ "oikea": [
+  0.3532012104988098,
+  -0.9355474710464478,
+  0.0
+ ],
+ "ylos": [
+  0,
+  0,
+  1
+ ],
+ "ppm": 160.0,
+ "leveys_px": 3697,
+ "korkeus_px": 3411,
+ "vasen_yla_tasossa": [
+  -3.5016326904296875,
+  9.275006294250488,
+  15.161213874816895
+ ],
+ "seinan_normaali_atsimuutti": 249.3,
+ "kohde_ala_m2": 250.9,
+ "kolmioita": 13857,
+ "kuori": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-blender-v44/ulkokuori/ulkokuori_huippu.glb",
+ "atlas": "/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-blender-v44/ulkokuori/ulkokuori-8k.jpg",
+ "kehys": "maailma(px, py) = vasen_yla_tasossa + oikea*(px+0.5)/ppm - ylos*(py+0.5)/ppm + katselusuunta*syvyys; Blender X itä, Y pohjoinen",
+ "syvyys_png": {
+  "min_m": -20.415008544921875,
+  "max_m": 83.43974304199219
+ },
+ "kohde_px": [
+  471,
+  495,
+  3254,
+  2889
+ ],
+ "kohde_m": [
+  17.39,
+  14.96
+ ],
+ "kohde_y": [
+  -2.89,
+  12.06
+ ]
+}
