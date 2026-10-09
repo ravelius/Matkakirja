@@ -10,7 +10,7 @@ ajo-id:llä (mac-tf-odottaja.sh 4. arg = ajo-id, korjattu 9.10.: peruttu yöajo 
 juna/b13 → e1386897 10.36. Taukokaatumisen syy: CesiumKaupunki.Muistivahti asetti SSE:n → Cesium RecreateTileset (Cesium3DTileset.cs:255);
 korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauolla). Hätätoisto: scratchpad hata-ajo.sh <app> <tunniste>.
 **JUNA 172 = YKSI ISO JUNA (omistaja 10.3x: 172–175 yhdessä, ei välijunia/TF:iä ennen PT:n ilmoitusta)** — runko natiiviseppa/juna-172
-(wt/proto-natiiviseppa-j172) **0e99bcbe6** BUILD 171:n päällä; 453/420/1197, unity 0, tarkista 0. TARKISTUSLISTA:
+(wt/proto-natiiviseppa-j172) **ac1335fd8** BUILD 171:n päällä; 453/420/1197, unity 0, tarkista 0. TARKISTUSLISTA:
   [x] 172 NUI cd4553c8d (⊇ Siirtoseppä 18227438d + pysty + krediitit + ef56acf4e)
   [x] 173 Siirtoseppä f5346bac4 (⊇ 5d8e362f7 ⊇ bed0c2d97, v45z, äänet; ⊇ 174:n Siirtoseppä-osa)
   [x] 173–175 NUI 1fce56a22 (⊇ 2bb472819 ⊇ 500126589 mikseri ⊇ c00f125a9 ⊇ 9ca6e2795 ⊇ 54182ab06 ⊇ 17ee84663 ⊇ becff9f1b); konfliktit
@@ -28,7 +28,8 @@ korjaus LS2 9e15ec414 (karkea laattavalinta, ei SSE-vaihtoa; suspendUpdate tauol
   [x] NUI 0f2a2cec1 (⊇ fe8d84616 katalogikuvat havainne-v2 + 7 foto-minikuvaa varusteille; loput NUI:lta Codexin erän mukana)
   [x] LS1 Steam Audio -koe 4869a5dc9 (kytkin oletuksena pois; AudioManager spatializer = Steam Audio) + OMA a1b13e5ee ENABLE_BITCODE NO;
       libz.tbd Steam Audion BuildProcessor; Mac: proto3d-mac-testflight allekirjoittaa .bundlet jo (PT: ei Mac-poikkeusta)
-  [ ] LS2 laivat-171 (vana 657676845 = 7f1a0c6f2 sisältö) + kaukomaa-171b
+  [x] LS2 omavalo-172 51799391e (omien mallien varjostin + kaukomaa) + laivat-171 657676845 (Pariisin jokilaivat + vana); malli v7 ämpärissä,
+      OSOITIN uusin-2 → v7 vasta junan 172 mukana (Julkaisija); Seinen läikkä mahdollisesti erikseen
   [ ] Siirtoseppä: historia-arvio 2:n korjaukset, v45-pinnat ("valmis 172:een" -rivi tulee)
   [ ] LR: Codex-pinnat
   [ ] Pelikoodari: musiikkisekvenssi
