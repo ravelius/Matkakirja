@@ -1,4 +1,4 @@
-# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026, Olavinlinnan aanet-fp-v2; 9.10. kaupunkien äänimaisema (PT, CC0)). Vain tämän haaran pushista; ei mergetä.
+# Kertaluonteinen Freesound-haku (Pelikoodari 8.10.2026, Olavinlinnan aanet-fp-v2; 9.10. kaupunkikohtainen sorina Tukholma ja Pariisi (PT: ei vieraskielistä puhetta)). Vain tämän haaran pushista; ei mergetä.
 name: Freesound-haku (Pelikoodari)
 on:
   push:
@@ -18,17 +18,21 @@ jobs:
           FREESOUND_API_KEY: ${{ secrets.FREESOUND_API }}
         run: >
           node tools/aanet/freesound-haku.mjs /tmp/fs
-          "raitiovaunu|tram passing distant|20|180"
-          "raitiovaunu|streetcar city ambience|20|180"
-          "metro|metro train distant underground|20|180"
-          "tori|market square crowd ambience|30|240"
-          "tori|outdoor market walla|30|240"
-          "lapset|children playing park distant|30|240"
-          "lapset|playground kids ambience|30|240"
-          "kahvila|cafe ambience cups clinking|30|240"
-          "kahvila|coffee shop walla dishes|30|240"
-          "laituri|water lapping quay|20|240"
-          "laituri|harbour pier waves boats|20|240"
+          "pariisi-tori|paris market|20|300|by"
+          "pariisi-tori|marche paris|20|300|by"
+          "pariisi-kahvila|paris cafe|20|300|by"
+          "pariisi-kahvila|cafe parisien terrasse|20|300|by"
+          "pariisi-lapset|paris park children|20|300|by"
+          "pariisi-lapset|jardin enfants paris|20|300|by"
+          "pariisi-metro|paris metro station|20|300|by"
+          "pariisi-raitiovaunu|paris tram|20|300|by"
+          "tukholma-tori|stockholm market|20|300|by"
+          "tukholma-tori|stockholm square people|20|300|by"
+          "tukholma-kahvila|stockholm cafe|20|300|by"
+          "tukholma-lapset|stockholm park children|20|300|by"
+          "tukholma-metro|stockholm tunnelbana|20|300|by"
+          "tukholma-metro|stockholm subway|20|300|by"
+          "tukholma-raitiovaunu|stockholm tram|20|300|by"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
