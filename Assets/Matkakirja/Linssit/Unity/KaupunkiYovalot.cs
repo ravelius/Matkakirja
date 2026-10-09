@@ -104,6 +104,7 @@ namespace Matkakirja.Natiivi
             if (!luotu && !Luo()) return;
             materiaali.SetTexture(IdValot, ruudukko);
             materiaali.SetMatrix(IdMatriisi, georef.transform.worldToLocalMatrix);
+            matriisiTila = georef.transform.worldToLocalMatrix.ValidTRS() ? "paikallinen ok" : $"paikallinen EI TRS (mittakaava {georef.transform.lossyScale})";
             materiaali.SetVector(IdAlue, new Vector4(kulma.Value.lon, kulma.Value.lat, (float)georef.latitude, (float)georef.longitude));
             materiaali.SetVector(IdParam, new Vector4((float)osuus, Hehku, Pisteet, Mathf.Max(5f, SoluM)));
             materiaali.SetVector(IdDebug, new Vector4(Diagnoosi, 1f, 0f, 0f));   // y = 1: passi jälkikäsittelyn jälkeen (ei valotuksen kompensointia)
@@ -289,13 +290,14 @@ namespace Matkakirja.Natiivi
         }
 
         static Camera viimeKamera;
+        static string matriisiTila;
         /// <summary>Diagnoosin tila (komento opas yovalot): passi, renderöijä, varjostin, ruudukko ja kamera.</summary>
         public static string Tila()
         {
             var urp = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
             var nyt = urp != null && urp.rendererDataList.Length > 0 ? urp.rendererDataList[0] : null;
             var ca = viimeKamera != null ? viimeKamera.GetComponent<UniversalAdditionalCameraData>() : null;
-            return $"passi {KaupunkiPassi.Tila("yövalot")}, putki {(urp != null ? urp.name : "-")}, " +
+            return $"passi {KaupunkiPassi.Tila("yövalot")}, {matriisiTila ?? "paikallinen -"}, putki {(urp != null ? urp.name : "-")}, " +
                 $"varjostin {(materiaali != null ? (materiaali.shader.isSupported ? "tuettu" : "EI tuettu") : "-")}, ruudukko {(ruudukko != null ? "on" : "ei")}, kulma {kulma}, " +
                 $"kamerat [{string.Join("; ", System.Array.ConvertAll(Camera.allCameras, k => { var d = k.GetComponent<UniversalAdditionalCameraData>(); return $"{k.name} d{k.depth:F0} {(d != null ? d.renderType.ToString() : "?")} rt {(k.targetTexture != null ? k.targetTexture.name + " " + k.targetTexture.width + "x" + k.targetTexture.height : "-")} msaa {k.allowMSAA} hdr {k.allowHDR} renderöijä {(d != null ? d.scriptableRenderer?.GetType().Name : "?")}"; }))}], " +
                 $"kamera {(viimeKamera != null ? viimeKamera.name : "-")} jälkik. {(ca != null ? ca.renderPostProcessing.ToString() : "?")} syvyys {(ca != null ? ca.requiresDepthOption.ToString() : "?")} tyyppi {(ca != null ? ca.renderType.ToString() : "?")} pino {(ca != null ? ca.cameraStack?.Count ?? 0 : 0)}";
