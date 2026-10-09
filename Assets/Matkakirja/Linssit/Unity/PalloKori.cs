@@ -170,7 +170,7 @@ namespace Matkakirja.Natiivi
             if (liekkiMat != null) Object.Destroy(liekkiMat);
             liekki = null; liekkiMat = null;
             overlay = null; juuri = null; perus = null; punos = nahka = koysi = null; fov = aspect = -1; aani = null;
-            sadeKangas = sadeKori = null;   // lähteet olivat overlayn oliossa
+            sadeKangas = sadeKori = palaaSilmukka = keinuntaSilmukka = null;   // lähteet olivat overlayn oliossa
         }
 
         void Luo(Camera kamera)
@@ -236,6 +236,8 @@ namespace Matkakirja.Natiivi
             RekisteroiAanet();
             sadeKangas = new ElavaSilmukka(go.transform, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKangas, false);
             sadeKori = new ElavaSilmukka(go.transform, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKori, false);
+            palaaSilmukka = new ElavaSilmukka(go.transform, Matkakirja.Linssit.Aanet.PalloLentoAanet.PalaaLahi, false);
+            keinuntaSilmukka = new ElavaSilmukka(go.transform, Matkakirja.Linssit.Aanet.PalloLentoAanet.Keinunta, false);
             KytkeAanimaisema(true);
         }
 
@@ -254,6 +256,34 @@ namespace Matkakirja.Natiivi
             float aika = (float)Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeHaivytysS;
             sadeKangas.Paivita(S(Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKangasTaso, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKangas), dt, aika);
             sadeKori.Paivita(S(Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKoriTaso, Matkakirja.Linssit.Aanet.PalloElavaAanet.SadeKori), dt, aika);
+        }
+
+        // LENTOÄÄNET (Linssiseppä 10.10., Soundly-erä 1c, Ydin PalloLentoAanet): humahdus neljästä vaihtoehdosta, liekin palaminen
+        // silmukkana liekin voimakkuuden mukaan ja korin keinunta silmukkana vain liikkeen muutoksessa (korvaa narinan, kun ladattu).
+        // Taso kuten Soita: OpasAanitasot.Kori(Voimakkuus, taso, TehosteKerroin, mikserin Kerroin, väistö). Puuttuva = vanhat äänet.
+        ElavaSilmukka palaaSilmukka, keinuntaSilmukka;
+        float viimeKiihtyvyys; string edHumahdus;
+        static readonly System.Random humahdusRnd = new System.Random(1873);
+        static float KoriTaso(double taso, string tunnus) => (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Kori(Voimakkuus, taso, TehosteKerroin, ElavaAaniPankki.Kerroin(tunnus), OpasSovitin.OpasAaniSoi);
+        void PaivitaLentoAanet(float dt)
+        {
+            if (palaaSilmukka == null || keinuntaSilmukka == null) return;
+            palaaSilmukka.Paivita(KoriTaso(Matkakirja.Linssit.Aanet.PalloLentoAanet.Palaa(poltin.Taso), Matkakirja.Linssit.Aanet.PalloLentoAanet.PalaaLahi), dt,
+                (float)Matkakirja.Linssit.Aanet.PalloLentoAanet.PalaaLiukuS);
+            keinuntaSilmukka.Paivita(KoriTaso(Matkakirja.Linssit.Aanet.PalloLentoAanet.KeinuntaKiihtyvyydesta(viimeKiihtyvyys, NarinaTaso), Matkakirja.Linssit.Aanet.PalloLentoAanet.Keinunta), dt,
+                (float)Matkakirja.Linssit.Aanet.PalloLentoAanet.KeinuntaLiukuS);
+        }
+        /// <summary>Soundly-humahdus (vaihtoehdot ilman peräkkäistä toistoa); false = ei ladattu → vanha Soita.</summary>
+        bool SoitaHumahdus(float taso)
+        {
+            var sarja = System.Array.FindAll(Matkakirja.Linssit.Aanet.PalloLentoAanet.Humahdukset, ElavaAaniPankki.Ladattu);
+            if (sarja.Length == 0 || aani == null) { ElavaAaniPankki.Kaynnista(); return false; }
+            edHumahdus = Matkakirja.Linssit.Elava.ElavaValinta.Vaihtoehto(sarja, humahdusRnd, edHumahdus);
+            var c = ElavaAaniPankki.Klippi(edHumahdus);
+            if (c == null) return false;
+            aani.PlayOneShot(c, KoriTaso(taso, edHumahdus));
+            Debug.Log($"MATKAKIRJA kaupunki: kori ääni {edHumahdus} (soundly, {taso:F2})");
+            return true;
         }
 
         static AudioClip Leike(string nimi)
@@ -693,16 +723,18 @@ namespace Matkakirja.Natiivi
             float nyt = Time.unscaledTime;
             if (historia < 2) return;
             bool yli = vaakaKiihtyvyys > NarinaKiihtyvyys, muutos = yli && !narinaRajanYli;
-            narinaRajanYli = yli;
+            narinaRajanYli = yli; viimeKiihtyvyys = vaakaKiihtyvyys;
+            bool keinuu = ElavaAaniPankki.Ladattu(Matkakirja.Linssit.Aanet.PalloLentoAanet.Keinunta);   // Soundly-keinunta korvaa narinan
             if (muutos && nyt - viimeNarina > NarinaValiS)
             {
                 viimeNarina = nyt;
                 float taso = (Mathf.Clamp01((vaakaKiihtyvyys - NarinaKiihtyvyys) / 4f) * 0.6f + 0.4f) * NarinaTaso;
-                Soita("korin-narina", taso);
+                if (!keinuu) Soita("korin-narina", taso);
                 Soita("koyden-kiristys", taso * 0.7f);
             }
             // Liekin humahdus samasta polttimesta kuin liekki ja valo (Poltin.Syttyi), ei omaa kynnystä.
-            if (poltin.Syttyi && nyt - viimeLiekki > PystyValiS) { viimeLiekki = nyt; Soita("liekin-humahdus", 0.8f); }
+            if (poltin.Syttyi && nyt - viimeLiekki > PystyValiS)
+            { viimeLiekki = nyt; if (!SoitaHumahdus((float)Matkakirja.Linssit.Aanet.PalloLentoAanet.HumahdusTaso)) Soita("liekin-humahdus", 0.8f); }
             int suunta = pystyNopeus > PystyRaja ? 1 : pystyNopeus < -PystyRaja ? -1 : 0;
             if (suunta != 0 && suunta != pystySuunta)
             {
@@ -978,6 +1010,7 @@ namespace Matkakirja.Natiivi
             PaivitaKompassi(dt);
             Aanet(new Vector2(aEteen, aOikea).magnitude, v.y);
             PaivitaSade(dt);
+            PaivitaLentoAanet(dt);
             var kKori = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);
             koriKaanto.localRotation = kKori; koysiKaanto.localRotation = kKoysi;
