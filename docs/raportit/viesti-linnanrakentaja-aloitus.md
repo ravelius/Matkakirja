@@ -15,6 +15,15 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
    valokuvamaiset pinnat. Ohjekuvat, kohdistus (`kohdista.py`) ja projektio + atlas + AO (`projisoi.py`) ovat valmiina:
    `docs/raportit/linnanrakentaja-codex-pinnat-projektio-20261009.md`. Pilotti (ND etelä + katot) on tilattu Sisältökirjurin kautta,
    ja kuvat tulevat nimillä `codex-ohje/<näkymä>/nd_<näkymä>_codex_v1.png`. Seuraavat vaiheet: kohdista → projisoi → LS2:n pelikuva.
+4. **Tila 9.10. klo 17:**
+   - **KL v3** on valmis ja odottaa PT:tä ja omistajaa. Muutokset: pilasterit, tumma sokkeli, kalteva harmaa pääkatto, siipien
+     vihreä kupari ja harmaanbeige rappaus 198/188/165. Vertailukuva: `kuninkaanlinna-v1/esikatselu/kl_v3_vertailu_valokuva.jpg`.
+     v2b on tallessa kansiossa `glb-v2b/`. KL:n Codex-ohjekuvat on tehty uudelleen v3:sta.
+   - **Olavinlinna v46i** on peilissä `e5e37a8b0cc6d215`: ranta-1499:n valoatlas korjattu (`korjaa_valoatlas.py`) ja
+     tunnelmavalot palautettu. v44:n linkit osoittivat poistettuun v19-kansioon, ja vie-blender.sh pysähtyy nyt rikkinäisiin
+     linkkeihin (31a21110b, haara v45b).
+   - **Olavinlinnan kuoren viiden seinän Codex-ohjeet** ovat kansiossa `_valmiit/olavinlinna-codex-ohje/`. Työkalut ovat
+     `kuori_ohje.py` ja `kuori_merkinnat.py`. Sisältökirjuri tilaa ne ND-pilotin jälkeen.
 
 ## Säännöt, jotka opittiin
 
