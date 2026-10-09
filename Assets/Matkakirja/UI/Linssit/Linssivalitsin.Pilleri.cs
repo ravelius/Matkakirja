@@ -196,7 +196,7 @@ namespace Matkakirja.Natiivi
             // yläriviä (viiva); valikko sulkeutuu ohinapautuksella (✕ poistettu kokonaan 5.10.2026, ✕-inventaario 20). Alinäkymissä
             // ‹ Takaisin ja otsikko jäävät.
             if (V2) ylarivi.style.display = D(!paa);
-            otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => V2 ? "TIETÄJÄTASO" : "MATKA", Nakyma.Asetukset => "ASETUKSET", Nakyma.Pelit => "PELIT", _ => "" };
+            otsikko.text = n switch { Nakyma.Linssit => Kieli.T("ui.pelit.valilehti-linssit"), Nakyma.Aarteet => Kieli.T("ui.valikko.aarteet-iso"), Nakyma.Matka => Kieli.T(V2 ? "ui.valikko.tietajataso-iso" : "ui.valikko.matka-iso"), Nakyma.Asetukset => Kieli.T("ui.valikko.asetukset-iso"), Nakyma.Pelit => Kieli.T("ui.pelit.valilehti-pelit"), _ => "" };
             NaytaValilehdet(n);
             if (n == Nakyma.Aarteet) RakennaAarteet();
             if (n == Nakyma.Pelit) RakennaPelit();
@@ -308,7 +308,7 @@ namespace Matkakirja.Natiivi
                     var a = ensimmainenAarre.Value;
                     sisalto = (a.Id, a.Kuva, a.Nimi, a.Selite, Ikonit.Laukku);
                 }
-                else sisalto = ("aarteet:tyhja", null, "Laukku on vielä tyhjä", "Löydetyt aarteet, tavarat ja julisteet kertyvät tänne.", Ikonit.Laukku);
+                else sisalto = ("aarteet:tyhja", null, Kieli.T("ui.aarteet.laukku-tyhja"), Kieli.T("ui.aarteet.laukku-tyhja-selite"), Ikonit.Laukku);
             }
             if (sisalto == null)
             {
@@ -334,32 +334,32 @@ namespace Matkakirja.Natiivi
             aarteet.Clear();
             ensimmainenAarre = null;
             var d = AarteetData?.Invoke();
-            if (d == null) { Rakenne.Teksti("Matka ei ole vielä alkanut.", "mk-linssivalitsin__tyhja", aarteet); return; }
+            if (d == null) { Rakenne.Teksti(Kieli.T("ui.aarteet.ei-alkanut"), "mk-linssivalitsin__tyhja", aarteet); return; }
             // Kehittäjätilassa kaikki aarteet näkyvät avattuina (omistaja 2.10.2026 klo 21.4x, kuten julisteet galleriassa).
             var loydetyt = d.AarninLuettelo.Where(a => a.Loydetty || Asetukset.Kehittaja).ToList();
             // Valikko v2 (web piirraKokoelma, #3877): tyhjät ryhmät pois, ja jos mitään ei ole, pelkkä "Ei vielä mitään kerättyä.".
             if (V2 && loydetyt.Count == 0 && d.Tavarat.Count == 0 && !(d.Matkamuistot?.Count > 0))
             {
-                Rakenne.Teksti("Ei vielä mitään kerättyä.", "mk-linssivalitsin__tyhja", aarteet);
+                Rakenne.Teksti(Kieli.T("ui.aarteet.ei-keratty"), "mk-linssivalitsin__tyhja", aarteet);
                 return;
             }
-            if (!V2 || loydetyt.Count > 0) Osio("Aarnin luettelo", loydetyt.Count, d.AarninLuettelo.Count);
+            if (!V2 || loydetyt.Count > 0) Osio(Kieli.T("ui.aarteet.aarnin-luettelo"), loydetyt.Count, d.AarninLuettelo.Count);
             foreach (var a in loydetyt)
                 AarreRivi("aarre:" + a.Id, a.Nimi, a.KuvaUrl, a.Manner, () => Suurenna(a.KuvaUrl, a.Nimi));
-            if (!V2 || d.Tavarat.Count > 0) Osio("Tavarat", d.Tavarat.Count, -1);
+            if (!V2 || d.Tavarat.Count > 0) Osio(Kieli.T("ui.aarteet.tavarat"), d.Tavarat.Count, -1);
             foreach (var t in d.Tavarat)
                 AarreRivi("tavara:" + t.Id, t.Teksti, t.KuvaUrl, null, () => Suurenna(t.KuvaUrl, t.Nimi));
             // MATKAMUISTOT (Pelikoodari 29.9.2026, elävän linnan etsinnät; Natiivi-UI:n kuittaus): vain kun jotain on löytynyt.
             if (d.Matkamuistot?.Count > 0)
             {
-                Osio("Matkamuistot", d.Matkamuistot.Count, -1);
+                Osio(Kieli.T("ui.aarteet.matkamuistot"), d.Matkamuistot.Count, -1);
                 foreach (var m in d.Matkamuistot) AarreRivi("muisto:" + m.Id, m.Nimi, m.KuvaUrl, m.Selite, () => Suurenna(m.KuvaUrl, m.Nimi));
             }
             // Pelatut ja avatut pelit eivät ole Aarteissa vaan kartan Linssit-napin Pelit-kategoriassa (omistaja 4.10.2026 klo 18.3x:
             // "Ota pelit pois aarteista"; Linssivalitsin.Pelit.cs).
             // Valikko v2: julisteilla on oma rivinsä ja ikkunansa (GALLERIA), joten Aarteet-ikkunassa vain aarteet (omistaja 21.4x).
             if (V2) return;
-            Osio("Julisteet", d.Julisteet.Count, d.JulisteitaKaikkiaan);
+            Osio(Kieli.T("ui.aarteet.julisteet"), d.Julisteet.Count, d.JulisteitaKaikkiaan);
             var avaimet = d.Julisteet.Select(j => j.Avain).ToList();
             foreach (var j in d.Julisteet)
             {
@@ -378,7 +378,7 @@ namespace Matkakirja.Natiivi
             var o = Rakenne.Teksti(nimi.ToUpperInvariant(), "mk-selite__otsikko mk-linssivalitsin__valiotsikko", r);
             Kirjasimet.Aseta(o, Kirjasin.Kone);
             if (n < 0) return; // ei lukua (Pelit: Lentopeli)
-            var l = Rakenne.Teksti(kaikki >= 0 ? $"{n} / {kaikki}" : n.ToString(), "mk-linssivalitsin__aarreluku", r);
+            var l = Rakenne.Teksti(kaikki >= 0 ? $"{n} / {kaikki}" : n.ToString(), "mk-linssivalitsin__aarreluku", r);   // kieli: ei (pelkkä luku)
             Kirjasimet.Aseta(l, Kirjasin.Kone);
         }
 
@@ -394,7 +394,7 @@ namespace Matkakirja.Natiivi
             b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi mk-linssirivi--aktivoi", () =>
             {
                 if (V2) { nayta?.Invoke(); return; } // yksi ikkuna: napautus avaa kuvan suoraan (omistaja 21.4x)
-                if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta, ikoni); return; }
+                if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, Kieli.T("ui.aarteet.nayta"), nayta, ikoni); return; }
                 nayta?.Invoke();
             }, isa ?? aarteet);
             b.tooltip = nimi;
