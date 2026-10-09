@@ -1,0 +1,1011 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mitä Espanjalainen ratsastuskoulu on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Espanjalainen ratsastuskoulu on Wienin Hofburgin palatsissa toimiva laitos, jossa harjoitetaan ja esitetään klassista ratsastustaitoa [[lipizzanhevosilla]]. Orit tuodaan kouluun nelivuotiaina Piberin siitostallilta Steiermarkista. Ne eivät ole silloin vielä valkoisia, sillä varsat syntyvät ruunikkoina tai mustina ja vaalenevat vähitellen, kunnes ovat noin 6–10 vuoden iässä valkoisia. Perinteen mukaan tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa [[Kaarle VI:n]] muotokuvaa ennen ratsastusta. Nimi viittaa Espanjasta peräisin oleviin hevosiin, joista rotu on polveutunut. Koulun kotipaikka on [[Wien]]. Onpas tää kehuttavaa väkeä.
+KYSYMYS: Kerro lisää: Kaarle VI:n
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+AIEMPI KYSYMYS: Mitä Espanjalainen ratsastuskoulu on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Espanjalainen ratsastuskoulu on Wienin Hofburgin palatsissa toimiva laitos, jossa harjoitetaan ja esitetään klassista ratsastustaitoa [[lipizzanhevosilla]]. Orit tuodaan kouluun nelivuotiaina Piberin siitostallilta Steiermarkista. Ne eivät ole silloin vielä valkoisia, sillä varsat syntyvät ruunikkoina tai mustina ja vaalenevat vähitellen, kunnes ovat noin 6–10 vuoden iässä valkoisia. Perinteen mukaan tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa [[Kaarle VI:n]] muotokuvaa ennen ratsastusta. Nimi viittaa Espanjasta peräisin oleviin hevosiin, joista rotu on polveutunut. Koulun kotipaikka on [[Wien]]. Onpas tää kehuttavaa väkeä.
+KYSYMYS: Kerro lisää: Wien
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Kolme porrasta, 380 metriä] nykyään — Krimmlin vesiputoukset ovat Itävallan korkeimmat. Krimmler Ache syöksyy alas kolmessa portaassa, jotka ovat 145, 100 ja 140 metriä. Vettä ei tule tasaisesti: kesäkuussa ja heinäkuussa virtaa noin 5 600 litraa sekunnissa, helmikuussa vain 140 litraa. Voimakkaimmillaan putous on myöhään illalla yhdeksän ja kahdentoista välillä, sillä jäätiköltä sulanut vesi kulkee 18 kilometriä putouksille ja on matkalla 9–12 tuntia. Vuonna 1899 putouksia yritettiin valjastaa tehtaan voimaksi, mutta hanke kaatui.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+AIEMPI KYSYMYS: Miksi lipizzaneja kasvatetaan Piberissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Piberin valtion siitoslaitos perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi siellä vuonna 1920. Nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Yksi laitoksen päätavoitteista on ylläpitää olennainen osa [[Itävallan]] kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan. Talli sijaitsee [[Steiermarkissa]] lähellä Köflachin kaupunkia, entisen luostarin tiloissa [[Piberin linnassa]]. Tää oli ihan mukava muistelu.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Kurpitsa, joka unohti kuoret siemenistään] 1870-luku — Steiermarkissa löytyi 1870-luvulla kurpitsa, jonka siemenistä puuttui kova kuori. Sitä ryhdyttiin viljelemään, ja siemenistä puristetaan kernöljyä. Yksi kurpitsa painaa 8–10 kiloa ja sisältää jopa tuhat siementä, mutta yhteen öljylitraan tarvitaan kolme kiloa siemeniä eli noin 35 kurpitsaa. Siemenet pestään, kuivataan, jauhetaan ja paahdetaan ennen puristusta. Ohuena kalvona öljy näyttää vihreältä ja paksuna kerroksena punaruskealta — samaa väriä ei saa valokuvaan.
+- [Itävalta — maalehti / Ruoka] Itävallan maakunnat maistuvat eri asioilta: Steiermarkissa puristetaan vihreää öljyä, Wachaussa keitetään aprikooseja taikinan sisällä ja Salzburgissa kastetaan palloja tikun nokassa.
+AIEMPI KYSYMYS: Miksi lipizzaneja kasvatetaan Piberissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Piberin valtion siitoslaitos perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi siellä vuonna 1920. Nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Yksi laitoksen päätavoitteista on ylläpitää olennainen osa [[Itävallan]] kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan. Talli sijaitsee [[Steiermarkissa]] lähellä Köflachin kaupunkia, entisen luostarin tiloissa [[Piberin linnassa]]. Tää oli ihan mukava muistelu.
+KYSYMYS: Kerro lisää: Steiermarkissa
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Lipizzanit] Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin ratsastavat.
+AIEMPI KYSYMYS: Miksi lipizzaneja kasvatetaan Piberissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Piberin valtion siitoslaitos perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi siellä vuonna 1920. Nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Yksi laitoksen päätavoitteista on ylläpitää olennainen osa [[Itävallan]] kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan. Talli sijaitsee [[Steiermarkissa]] lähellä Köflachin kaupunkia, entisen luostarin tiloissa [[Piberin linnassa]]. Tää oli ihan mukava muistelu.
+KYSYMYS: Kerro lisää: Piberin linnassa
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Herneet jotka pitää maistaa joulun aikaan] Joulu — Harmaat herneet silavan kanssa kuuluvat Latvian jouluaterialle lähes pakollisena: kuivatut, isot ja harmaansävyiset herneet liotetaan ja keitetään, minkä jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa edes kourallinen, sillä pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: herneet, ohra ja pavut olivat maaseudun perusruokaa satoja vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään harmaita herneitä tarjoillaan myös ravintoloissa hienostuneempina versioina, pekonin ja retiisin kanssa.
+- [Salomonsaaret — maalehti / Käsityö: Vyö, joka on tehty tuhansista sulista] Santa Cruzin saarilla rahana toimi punasulkavyö. Pohjana on ohut kaarnanauha, jonka päälle kiinnitetään harmaita tyynenmerenkyyhkyn sulkia ja niiden päälle pieninä suomuina punaisen mesikenttäkkään höyheniä, kunnes koko nauha on kirkkaanpunainen. Valmis vyö sidotaan kuitunauhalla ja koristellaan helmiäissimpukalla ja kaurikuorilla. Pieniä höyheniä kuluu yhteen vyöhön valtava määrä, ja työ vaatii sekä linnustajan että sitojan. Vyöt olivat saarten arvokkainta omaisuutta, ja niitä on nykyään museokokoelmissa ympäri maailman — esimerkiksi Honolulussa.
+AIEMPI KYSYMYS: Miksi lipizzanit syntyvät tummina mutta muuttuvat valkoisiksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Syy on hevosen perimässä: lipizzanit ovat värin puolesta [[harmaita]], ja harmaaksi periytyvä hevonen vaalenee vähitellen koko ikänsä. Varsa syntyy yleensä tummana, ruunikkona tai mustana, ja karvapeite muuttuu vuosi vuodelta vaaleammaksi. Täysin valkoiseksi lipizzani tulee yleensä noin 6–10 vuoden iässä. Perinteen mukaan [[Espanjalaisen ratsastuskoulun]] tallissa on aina myös yksi ruunikko. Ei se muutu kerralla vaan hitaasti, kuin pölyn alle jäävä kyyhkynsulka.
+KYSYMYS: Kerro lisää: harmaita
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+AIEMPI KYSYMYS: Miksi lipizzanit syntyvät tummina mutta muuttuvat valkoisiksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Syy on hevosen perimässä: lipizzanit ovat värin puolesta [[harmaita]], ja harmaaksi periytyvä hevonen vaalenee vähitellen koko ikänsä. Varsa syntyy yleensä tummana, ruunikkona tai mustana, ja karvapeite muuttuu vuosi vuodelta vaaleammaksi. Täysin valkoiseksi lipizzani tulee yleensä noin 6–10 vuoden iässä. Perinteen mukaan [[Espanjalaisen ratsastuskoulun]] tallissa on aina myös yksi ruunikko. Ei se muutu kerralla vaan hitaasti, kuin pölyn alle jäävä kyyhkynsulka.
+KYSYMYS: Kerro lisää: Espanjalaisen ratsastuskoulun
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+AIEMPI KYSYMYS: Mikä Steiermark on?
+AIEMPI VASTAUS (Livia):
+Mmm— Steiermark on Itävallan kaakkoisosan osavaltio, jonka pääkaupunki on [[Graz]]. Alue on tunnettu metsistään ja vihreästä maisemastaan, ja sitä kutsutaan usein Itävallan vihreäksi osavaltioksi. Siellä on vuoristoa, viinitiloja ja maataloutta. Piberin siitostalli sijaitsee sen länsiosassa, [[Köflachin]] kaupungin tuntumassa. Osavaltio rajoittuu Sloveniaan, ja [[Slovenian]] rajaseutu on tunnettua viinialuetta. Tarkkaa asukaslukua en ole varma. Pelkkä vihreys riittäisi kyyhkylle, mut kyl pullaa tarvittaisiin.
+KYSYMYS: Kerro lisää: Graz
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+AIEMPI KYSYMYS: Mikä Steiermark on?
+AIEMPI VASTAUS (Livia):
+Mmm— Steiermark on Itävallan kaakkoisosan osavaltio, jonka pääkaupunki on [[Graz]]. Alue on tunnettu metsistään ja vihreästä maisemastaan, ja sitä kutsutaan usein Itävallan vihreäksi osavaltioksi. Siellä on vuoristoa, viinitiloja ja maataloutta. Piberin siitostalli sijaitsee sen länsiosassa, [[Köflachin]] kaupungin tuntumassa. Osavaltio rajoittuu Sloveniaan, ja [[Slovenian]] rajaseutu on tunnettua viinialuetta. Tarkkaa asukaslukua en ole varma. Pelkkä vihreys riittäisi kyyhkylle, mut kyl pullaa tarvittaisiin.
+KYSYMYS: Kerro lisää: Köflachin
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Mikä Steiermark on?
+AIEMPI VASTAUS (Livia):
+Mmm— Steiermark on Itävallan kaakkoisosan osavaltio, jonka pääkaupunki on [[Graz]]. Alue on tunnettu metsistään ja vihreästä maisemastaan, ja sitä kutsutaan usein Itävallan vihreäksi osavaltioksi. Siellä on vuoristoa, viinitiloja ja maataloutta. Piberin siitostalli sijaitsee sen länsiosassa, [[Köflachin]] kaupungin tuntumassa. Osavaltio rajoittuu Sloveniaan, ja [[Slovenian]] rajaseutu on tunnettua viinialuetta. Tarkkaa asukaslukua en ole varma. Pelkkä vihreys riittäisi kyyhkylle, mut kyl pullaa tarvittaisiin.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä Itävalta-Unkari oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itävalta-Unkari oli vuonna 1867 syntynyt kaksoismonarkia, jossa [[Habsburgien]] hallitsija oli sekä Itävallan keisari että Unkarin kuningas. Valtion kaksi puoliskoa hoitivat suuren osan sisäisistä asioistaan itse, mutta ulkopolitiikka, puolustus ja niihin liittyvä rahoitus olivat yhteisiä. Valtio oli monikansallinen, ja sen hallintokielet ja kansallisuudet vaihtelivat. Se hajosi vuonna 1918 [[ensimmäisen maailmansodan]] päätyttyä. Piberin talli siirtyi vuonna 1867 keisarillisen maatalousministeriön hallintaan, samaan aikaan kuin järjestely syntyi. Kaupungeista tärkeimmät olivat [[Wien]] ja Budapest. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Mikä Itävalta-Unkari oli?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Itävalta-Unkari oli vuonna 1867 syntynyt kaksoismonarkia, jossa [[Habsburgien]] hallitsija oli sekä Itävallan keisari että Unkarin kuningas. Valtion kaksi puoliskoa hoitivat suuren osan sisäisistä asioistaan itse, mutta ulkopolitiikka, puolustus ja niihin liittyvä rahoitus olivat yhteisiä. Valtio oli monikansallinen, ja sen hallintokielet ja kansallisuudet vaihtelivat. Se hajosi vuonna 1918 [[ensimmäisen maailmansodan]] päätyttyä. Piberin talli siirtyi vuonna 1867 keisarillisen maatalousministeriön hallintaan, samaan aikaan kuin järjestely syntyi. Kaupungeista tärkeimmät olivat [[Wien]] ja Budapest. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: ensimmäisen maailmansodan
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Voiton Neitsyt tuomiokirkossa] Tuomiokirkon rakentaminen alkoi jo 1619, ja se vihittiin käyttöön 1622 – siis vain muutama vuosi sen jälkeen, kun portugalilaiset olivat karkottaneet ranskalaiset saarelta. Kirkko sai nimen Nossa Senhora da Vitória, Voiton Neitsyt, Guaxenduban taistelun kunniaksi: portugalilaisten vuonna 1615 käymä voitto kiihdytti ranskalaisten lopullista häätöä Maranhãosta. Nykyinen vaalean keltainen julkisivu kellotorneineen syntyi myöhemmin, kun kirkkoa laajennettiin 1700-luvun lopulla klassismin hengessä – lopputulos on portugalilaisen siirtomaabarokin ja uusklassismin yhdistelmä keskellä Praça Dom Pedro II:ta.
+- [Tampere — kaupunkilehti / Tampere: Neljä patsasta sillan kaiteella] Hämeensilta vie kaupungin pääkadun kosken yli. Sen kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta vuodelta 1929: metsästäjä, erämies, kauppias ja verontuoja. Patsaat ovat 1920-luvun klassismin tunnetuimpia töitä Suomessa, ja ne kuvaavat neljää elinkeinoa, joilla seudulla on eletty. Silta itse uusittiin vuonna 2019, mutta se rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin samalla punertavalla graniitilla — patsaat nostettiin takaisin paikoilleen.
+AIEMPI KYSYMYS: Kuka Joseph Haydn oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joseph Haydn eli 1732–1809, ja hän oli itävaltalainen säveltäjä, joka kuuluu [[klassismin]] suuriin nimiin. Hän kirjoitti runsaasti sinfonioita ja [[jousikvartettoja]], ja häntä kutsutaan usein sinfonian ja jousikvartetin isäksi. Eisenstadtissa hän työskenteli hovimuusikkona ja myöhemmin Hofkapellmeisterina [[Esterházyjen]] palveluksessa, kaikkiaan noin kolmekymmentä vuotta. Hän oli ystävä [[Mozartin]] kanssa ja opetti hetken nuorta [[Beethovenia]]. Hänen hautansa on Eisenstadtin Bergkirchessä. Yksi vuosiluku tarkistetaan vielä varmuuden vuoksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: klassismin
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+AIEMPI KYSYMYS: Kuka Joseph Haydn oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joseph Haydn eli 1732–1809, ja hän oli itävaltalainen säveltäjä, joka kuuluu [[klassismin]] suuriin nimiin. Hän kirjoitti runsaasti sinfonioita ja [[jousikvartettoja]], ja häntä kutsutaan usein sinfonian ja jousikvartetin isäksi. Eisenstadtissa hän työskenteli hovimuusikkona ja myöhemmin Hofkapellmeisterina [[Esterházyjen]] palveluksessa, kaikkiaan noin kolmekymmentä vuotta. Hän oli ystävä [[Mozartin]] kanssa ja opetti hetken nuorta [[Beethovenia]]. Hänen hautansa on Eisenstadtin Bergkirchessä. Yksi vuosiluku tarkistetaan vielä varmuuden vuoksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: jousikvartettoja
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+AIEMPI KYSYMYS: Kuka Joseph Haydn oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joseph Haydn eli 1732–1809, ja hän oli itävaltalainen säveltäjä, joka kuuluu [[klassismin]] suuriin nimiin. Hän kirjoitti runsaasti sinfonioita ja [[jousikvartettoja]], ja häntä kutsutaan usein sinfonian ja jousikvartetin isäksi. Eisenstadtissa hän työskenteli hovimuusikkona ja myöhemmin Hofkapellmeisterina [[Esterházyjen]] palveluksessa, kaikkiaan noin kolmekymmentä vuotta. Hän oli ystävä [[Mozartin]] kanssa ja opetti hetken nuorta [[Beethovenia]]. Hänen hautansa on Eisenstadtin Bergkirchessä. Yksi vuosiluku tarkistetaan vielä varmuuden vuoksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Esterházyjen
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Menovinkit] Itävalta on avannut verkkoon sen, mitä salissa ei näe: maalin alle jääneet luonnokset, Klimtin kultalehden lähikuvana, 28 miljoonaa sanomalehden sivua, Mozartin oman käsialan ja alppilaakson suorana kuvana.
+AIEMPI KYSYMYS: Kuka Joseph Haydn oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joseph Haydn eli 1732–1809, ja hän oli itävaltalainen säveltäjä, joka kuuluu [[klassismin]] suuriin nimiin. Hän kirjoitti runsaasti sinfonioita ja [[jousikvartettoja]], ja häntä kutsutaan usein sinfonian ja jousikvartetin isäksi. Eisenstadtissa hän työskenteli hovimuusikkona ja myöhemmin Hofkapellmeisterina [[Esterházyjen]] palveluksessa, kaikkiaan noin kolmekymmentä vuotta. Hän oli ystävä [[Mozartin]] kanssa ja opetti hetken nuorta [[Beethovenia]]. Hänen hautansa on Eisenstadtin Bergkirchessä. Yksi vuosiluku tarkistetaan vielä varmuuden vuoksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Mozartin
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+AIEMPI KYSYMYS: Kuka Joseph Haydn oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joseph Haydn eli 1732–1809, ja hän oli itävaltalainen säveltäjä, joka kuuluu [[klassismin]] suuriin nimiin. Hän kirjoitti runsaasti sinfonioita ja [[jousikvartettoja]], ja häntä kutsutaan usein sinfonian ja jousikvartetin isäksi. Eisenstadtissa hän työskenteli hovimuusikkona ja myöhemmin Hofkapellmeisterina [[Esterházyjen]] palveluksessa, kaikkiaan noin kolmekymmentä vuotta. Hän oli ystävä [[Mozartin]] kanssa ja opetti hetken nuorta [[Beethovenia]]. Hänen hautansa on Eisenstadtin Bergkirchessä. Yksi vuosiluku tarkistetaan vielä varmuuden vuoksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Beethovenia
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+AIEMPI KYSYMYS: Miksi Eisenstadt oli osa Unkaria?
+AIEMPI VASTAUS (Livia):
+No jopas. Kismarton eli Eisenstadtin seutu kuului vuosina 1648–1921 Habsburgien valtakunnan Unkarin kuningaskuntaan, ja kaupunki oli unkarilaisen [[Esterházy-suvun]] kotipaikka. Alue oli siis osa Unkarin kruunun maita, ja kuningaskunta puolestaan oli osa Habsburgien hallitsemaa valtakuntaa. Ensimmäisen maailmansodan jälkeen alue liitettiin vuonna 1921 Itävaltaan, ja siitä muodostui [[Burgenlandin]] osavaltio. Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925. Rajojen syntyyn vaikutti myös väestön kielijakauma, mutta sen yksityiskohdat en ole varma. Kyl rajat on ennenkin siirtyneet ja kyyhky on lentänyt perässä.
+KYSYMYS: Kerro lisää: Esterházy-suvun
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+AIEMPI KYSYMYS: Miksi Eisenstadt oli osa Unkaria?
+AIEMPI VASTAUS (Livia):
+No jopas. Kismarton eli Eisenstadtin seutu kuului vuosina 1648–1921 Habsburgien valtakunnan Unkarin kuningaskuntaan, ja kaupunki oli unkarilaisen [[Esterházy-suvun]] kotipaikka. Alue oli siis osa Unkarin kruunun maita, ja kuningaskunta puolestaan oli osa Habsburgien hallitsemaa valtakuntaa. Ensimmäisen maailmansodan jälkeen alue liitettiin vuonna 1921 Itävaltaan, ja siitä muodostui [[Burgenlandin]] osavaltio. Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925. Rajojen syntyyn vaikutti myös väestön kielijakauma, mutta sen yksityiskohdat en ole varma. Kyl rajat on ennenkin siirtyneet ja kyyhky on lentänyt perässä.
+KYSYMYS: Kerro lisää: Burgenlandin
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Keitä Esterházyt olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, annas ku mietin. Esterházyt olivat vaikutusvaltainen unkarilainen aatelissuku, joka kuului [[Habsburgien]] valtakunnan rikkaimpiin maanomistajiin. Suku tunnettiin taiteiden suojelijana, ja ruhtinaiden hoviin kuului oma kapelli, jossa [[Haydn]] työskenteli. Eisenstadtissa on yhä suvun entinen linna, jota kutsutaan Esterházyn linnaksi. Suvun varallisuuden tarkkoja lukuja en ole varma, enkä halua arvata. Sukua oli monta haaraa, ja niitä oli hankala pitää kirjoissa. Tää oli ihan mukava aihe.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Ehkä maailman vanhin sotilassoittokunta] Mehter on osmanien sotilassoittokunta, jota pidetään vanhimpana tunnettuna yhä toimivana marssivana soittokuntana maailmassa. Täydessä kokoonpanossa jokaista soitinta oli yhdeksän: yhdeksän rumpua, yhdeksän kimeää zurnaa, yhdeksän lautasparia. Jyminä kuului Euroopan puolelle asti, ja Haydn, Mozart ja Beethoven kirjoittivat kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin 1826, mutta Istanbulin sotilasmuseon johtaja herätti sen henkiin 1911. Museossa se marssii yhä.
+AIEMPI KYSYMYS: Keitä Esterházyt olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, annas ku mietin. Esterházyt olivat vaikutusvaltainen unkarilainen aatelissuku, joka kuului [[Habsburgien]] valtakunnan rikkaimpiin maanomistajiin. Suku tunnettiin taiteiden suojelijana, ja ruhtinaiden hoviin kuului oma kapelli, jossa [[Haydn]] työskenteli. Eisenstadtissa on yhä suvun entinen linna, jota kutsutaan Esterházyn linnaksi. Suvun varallisuuden tarkkoja lukuja en ole varma, enkä halua arvata. Sukua oli monta haaraa, ja niitä oli hankala pitää kirjoissa. Tää oli ihan mukava aihe.
+KYSYMYS: Kerro lisää: Haydn
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+AIEMPI KYSYMYS: Mitä hovikapellimestari teki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hovikapellimestari johti ruhtinaan tai kuninkaan hovin musiikkia. Hän vastasi orkesterin ja laulajien harjoituksista, esityksistä ja usein myös sävellystyöstä, koska hovin tilaisuuksiin tarvittiin jatkuvasti uutta musiikkia. Haydn työskenteli [[Esterházyjen]] palveluksessa juuri tässä tehtävässä, ja hänen ruhtinaansa kuuli hänen sävellyksensä ensimmäisenä. Hovikapellimestarin asema oli yleensä arvostettu mutta sidottu palvelussuhteeseen: sävellykset kuuluivat pitkälti työnantajalle. [[Eisenstadtin]] hovi oli näytteille asetettu hyvä esimerkki tästä. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: Eisenstadtin
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eisenstadt (kulttuuri)
+Tietoruudun teksti: Eisenstadt on Burgenlandin osavaltion pääkaupunki Itävallassa; kaupungissa asuu noin 16 100 ihmistä, ja se on Itävallan pienin osavaltion pääkaupunki. Se sijaitsee Leithavuorten juurella. Vuosina 1648–1921 Kismarton eli Eisenstadt kuului Habsburgien valtakunnan Unkarin kuningaskuntaan ja oli unkarilaisen Esterházy-aatelissuvun kotipaikka. Sinä aikana säveltäjä Joseph Haydn asui ja työskenteli Eisenstadtissa hovimuusikkona Esterházyjen suojeluksessa. Haydnin nimittäminen ruhtinaan Hofkapellmeisteriksi aloitti kaupungin suuren taiteellisen kauden. Kaupungin Bergkirchessä on Haydnin hauta. Burgenland liitettiin Itävaltaan vuonna 1921, ja Eisenstadtista tuli osavaltion pääkaupunki vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+AIEMPI KYSYMYS: Montako osavaltiota Itävallassa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Itävallassa on yhdeksän osavaltiota. Pääkaupunki [[Wien]] on yksi niistä, ja muut ovat Burgenland, Kärnten, Ala-Itävalta, Ylä-Itävalta, Salzburg, Steiermark, Tirol ja Vorarlberg. Osavaltiolla on oma maapäivänsä ja hallituksensa, ja Itävalta on liittovaltio. Eisenstadt on [[Burgenlandin]] pääkaupunki, ja sen asukasluku on noin 16 100, mikä tekee siitä pienimmän osavaltion pääkaupungin. Osavaltioiden tarkat valtasuhteet ovat monimutkaisia, joten jätän ne tähän. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Wien
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Missä Itä-Tirol on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Itä-Tirol on Itävallan Tirolin osavaltion itäinen osa, ja se kattaa [[Lienzin]] piirikunnan. Alue ei ole yhteydessä Tirolin pääosaan maanteitse Itävallan kautta, sillä välissä on [[Salzburgin]] osavaltion kaistale ja Italian puolella [[Etelä-Tirol]]. Pohjoisessa kohoaa Hohe Tauernin vuoristo ja idässä alkaa Kärnten. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa. Täsmällisiä raja-arvoja en ole varma, mutta yleiskuva pitää. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Lienzin
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Missä Itä-Tirol on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Itä-Tirol on Itävallan Tirolin osavaltion itäinen osa, ja se kattaa [[Lienzin]] piirikunnan. Alue ei ole yhteydessä Tirolin pääosaan maanteitse Itävallan kautta, sillä välissä on [[Salzburgin]] osavaltion kaistale ja Italian puolella [[Etelä-Tirol]]. Pohjoisessa kohoaa Hohe Tauernin vuoristo ja idässä alkaa Kärnten. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa. Täsmällisiä raja-arvoja en ole varma, mutta yleiskuva pitää. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Salzburgin
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Missä Itä-Tirol on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Itä-Tirol on Itävallan Tirolin osavaltion itäinen osa, ja se kattaa [[Lienzin]] piirikunnan. Alue ei ole yhteydessä Tirolin pääosaan maanteitse Itävallan kautta, sillä välissä on [[Salzburgin]] osavaltion kaistale ja Italian puolella [[Etelä-Tirol]]. Pohjoisessa kohoaa Hohe Tauernin vuoristo ja idässä alkaa Kärnten. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa. Täsmällisiä raja-arvoja en ole varma, mutta yleiskuva pitää. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Etelä-Tirol
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Mikä megafaani on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Megafaani eli suuri uomaviuhka on joen tai purojen kasaama viuhkamainen [[sedimenttikerros]], joka syntyy, kun vuoristosta virtaava vesi hidastuu laaksoon tullessaan ja pudottaa mukanaan kuljettamaa soraa, hiekkaa ja silttiä. Kerros leviää laakson pohjalle kaarevana kartiona. Kun tällainen viuhka on erityisen suuri, puhutaan megafaanista. [[Lienzin]] kaupunki sijaitsee yhden sellaisen juurella. Muoto ja koko riippuvat alueen kivilajeista, sateista ja jokien virtauksesta. Asia on selitettävissä, vaikka sana onkin vieras. Kyl tän selitti hyvin.
+KYSYMYS: Kerro lisää: sedimenttikerros
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Mikä on Hohe Tauern?
+AIEMPI VASTAUS (Livia):
+Mmm— Hohe Tauern on Itäalppien vuoristoalue Itävallassa, ja se kuuluu Salzburgin, Kärntenin ja Tirolin osavaltioiden alueille. Siellä sijaitsee [[Grossglockner]], Itävallan korkein vuori, jonka korkeus on noin 3 800 metriä. Alueella on laajoja luonnonsuojelualueita, ja [[Hohe Tauernin kansallispuisto]] on yksi Alppien suurimmista suojelualueista. Maisemaan kuuluu jäätiköitä, vuoristolaaksoja ja alppiniittyjä. Tarkkoja pinta-aloja en ole varma. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: Grossglockner
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Mikä on Hohe Tauern?
+AIEMPI VASTAUS (Livia):
+Mmm— Hohe Tauern on Itäalppien vuoristoalue Itävallassa, ja se kuuluu Salzburgin, Kärntenin ja Tirolin osavaltioiden alueille. Siellä sijaitsee [[Grossglockner]], Itävallan korkein vuori, jonka korkeus on noin 3 800 metriä. Alueella on laajoja luonnonsuojelualueita, ja [[Hohe Tauernin kansallispuisto]] on yksi Alppien suurimmista suojelualueista. Maisemaan kuuluu jäätiköitä, vuoristolaaksoja ja alppiniittyjä. Tarkkoja pinta-aloja en ole varma. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: Hohe Tauernin kansallispuisto
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Keitä kelttiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, kelttejä pitää kysyä aina uudestaan. Kelttiläiset olivat rautakauden Euroopassa asuneita kansoja, joita yhdisti pitkälti samankaltainen kieliperhe ja kulttuuri. Heidän alueensa ulottui Keski-Euroopasta laajalle länteen ja eteen, ja Alppien itäosissa heidän kuningaskuntansa tunnettiin nimellä [[Noricum]]. Itä-Tirolissa kelttejä asui noin vuodesta 300 eaa. alkaen. Kelttiläisiä tunnetaan esimerkiksi metallitöistä, kauppayhteyksistä ja [[rautakauden]] kylistä. Tarkkaa yhtenäistä valtiota heillä ei ollut. Tän kerroin yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: Noricum
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Keitä kelttiläiset olivat?
+AIEMPI VASTAUS (Livia):
+No niin, kelttejä pitää kysyä aina uudestaan. Kelttiläiset olivat rautakauden Euroopassa asuneita kansoja, joita yhdisti pitkälti samankaltainen kieliperhe ja kulttuuri. Heidän alueensa ulottui Keski-Euroopasta laajalle länteen ja eteen, ja Alppien itäosissa heidän kuningaskuntansa tunnettiin nimellä [[Noricum]]. Itä-Tirolissa kelttejä asui noin vuodesta 300 eaa. alkaen. Kelttiläisiä tunnetaan esimerkiksi metallitöistä, kauppayhteyksistä ja [[rautakauden]] kylistä. Tarkkaa yhtenäistä valtiota heillä ei ollut. Tän kerroin yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: rautakauden
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Mihin Drau-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Drau eli Drava saa alkunsa Italian ja Itävallan rajaseudulla, virtaa Itävallan läpi ja jatkaa [[Slovenian]] kautta [[Kroatiaan]]. Se yhtyy [[Tonavaan]] Kroatian itäosassa. Matkalla joki muodostaa osan Kroatian ja Unkarin rajaa. Joen pituutta en ole varma, joten jätän sen mainitsematta. Lienzissä se kohtaa Iselin, ja yhdessä ne ovat kaupungin tärkeimmät joet. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+AIEMPI KYSYMYS: Mihin Drau-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Drau eli Drava saa alkunsa Italian ja Itävallan rajaseudulla, virtaa Itävallan läpi ja jatkaa [[Slovenian]] kautta [[Kroatiaan]]. Se yhtyy [[Tonavaan]] Kroatian itäosassa. Matkalla joki muodostaa osan Kroatian ja Unkarin rajaa. Joen pituutta en ole varma, joten jätän sen mainitsematta. Lienzissä se kohtaa Iselin, ja yhdessä ne ovat kaupungin tärkeimmät joet. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Kroatiaan
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lienz (kulttuuri)
+Tietoruudun teksti: Lienz on keskiaikainen kaupunki Tirolin osavaltiossa Itävallassa. Se on Lienzin piirikunnan hallinnollinen keskus, joka kattaa koko Itä-Tirolin. Lienz sijaitsee Iselin ja Draun jokien yhtymäkohdassa Itäalpeilla, pohjoisessa olevan Hohe Tauernin vuoriston ja etelässä olevien Gailtalin Alppien välissä. Iselsbergin sola yhdistää sen Kärntenin Winklerniin. Lienzin alue on ollut asuttua pronssikaudelta noin vuodesta 2000 eaa. lähtien, ja kelttejä siellä asui noin vuodesta 300 eaa. Kaupunki sijaitsee yhden Alppien tai koko maailman suurimmista alppimegafaaneista juurella: se on 350 metriä korkea ja säteeltään 2,5 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mihin Drau-joki virtaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Drau eli Drava saa alkunsa Italian ja Itävallan rajaseudulla, virtaa Itävallan läpi ja jatkaa [[Slovenian]] kautta [[Kroatiaan]]. Se yhtyy [[Tonavaan]] Kroatian itäosassa. Matkalla joki muodostaa osan Kroatian ja Unkarin rajaa. Joen pituutta en ole varma, joten jätän sen mainitsematta. Lienzissä se kohtaa Iselin, ja yhdessä ne ovat kaupungin tärkeimmät joet. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Höyrytetty juusto ruusukkeena] 1800-luku — Parenica on slovakialainen juusto, joka valmistetaan höyryttämällä. Juusto tehdään kaistaleina, jotka kierretään kotilomaisiksi spiraaleiksi, ja tyypillinen kierre painaa noin sata grammaa. Nimi tulee slovakin sanasta höyryttää. Höyry tummentaa kermankeltaisen juuston väriä, ja usein se vielä savustetaan. 1800-luvulla parenicaa tehtiin vain pastöroimattomasta lampaanmaidosta, nykyään usein lehmänmaidosta tai maitoseoksista. Slovenská parenica on suojattu nimi EU:ssa.
+- [Puola — maalehti / Ruoka: Juusto jonka muoto on suojattu lailla] nykyään — Oscypek on savustettu lampaanmaitojuusto, jota valmistetaan vain Tatra-vuorten alueella Etelä-Puolassa, perinteisesti bacaksi kutsutun mestaripaimenen käsin. Juuston muoto — kapeneva sukkulan malli koristeellisine kuvioineen — on niin tunnusomainen, että se on suojattu Euroopan unionin alkuperänimityksellä: vain tietyllä alueella tehty juusto saa käyttää nimeä oscypek. Sitä syödään usein paistettuna ja tarjoillaan puolukkahillon kanssa.
+AIEMPI KYSYMYS: Mikä Bregenzerwaldin juustoreitti on?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on lempiaiheeni. Bregenzerwaldin juustoreitti on alueella kulkeva matkailureitti, joka yhdistää juustoa valmistavia tiloja, alppeja ja meijereitä. Perinne on vahva, sillä 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja [[juuston]] valmistusta. Alueen päämarkkinakaupunkina pidetään historiallisista syistä [[Bezauta]]. Reitin tarkkaa pituutta tai kaikkia kohteita en ole varma, joten niitä kannattaa tarkistaa paikan päältä. Kyl minä tän aina lentäisin.
+KYSYMYS: Kerro lisää: juuston
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+AIEMPI KYSYMYS: Mikä Bregenzerwaldin juustoreitti on?
+AIEMPI VASTAUS (Livia):
+Kas, tämä on lempiaiheeni. Bregenzerwaldin juustoreitti on alueella kulkeva matkailureitti, joka yhdistää juustoa valmistavia tiloja, alppeja ja meijereitä. Perinne on vahva, sillä 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja [[juuston]] valmistusta. Alueen päämarkkinakaupunkina pidetään historiallisista syistä [[Bezauta]]. Reitin tarkkaa pituutta tai kaikkia kohteita en ole varma, joten niitä kannattaa tarkistaa paikan päältä. Kyl minä tän aina lentäisin.
+KYSYMYS: Kerro lisää: Bezauta
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+AIEMPI KYSYMYS: Missä Bregenzerwaldin päälaakso on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bregenzerwaldin päälaakso on [[Bregenzer Ach]] -joen laakso Vorarlbergin osavaltiossa Itävallassa, ja joki laskee [[Bodenjärveen]] Bregenzin lähellä. Alue kuuluu Pohjoisiin kalkkialppeihin. Asukkaat jakavat sen usein alempaan Vorderwaldiin ja ylempään Hinterwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Pohjoisessa alue rajoittuu Saksaan ja Baijeriin. Laakson tarkkaa pituutta en ole varma. Nyt kyl taas näkyy vuoret.
+KYSYMYS: Kerro lisää: Bregenzer Ach
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+AIEMPI KYSYMYS: Missä Bregenzerwaldin päälaakso on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bregenzerwaldin päälaakso on [[Bregenzer Ach]] -joen laakso Vorarlbergin osavaltiossa Itävallassa, ja joki laskee [[Bodenjärveen]] Bregenzin lähellä. Alue kuuluu Pohjoisiin kalkkialppeihin. Asukkaat jakavat sen usein alempaan Vorderwaldiin ja ylempään Hinterwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Pohjoisessa alue rajoittuu Saksaan ja Baijeriin. Laakson tarkkaa pituutta en ole varma. Nyt kyl taas näkyy vuoret.
+KYSYMYS: Kerro lisää: Bodenjärveen
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+AIEMPI KYSYMYS: Mikä Vorarlberg on?
+AIEMPI VASTAUS (Livia):
+Ai se. Vorarlberg on Itävallan läntisin osavaltio, jonka pääkaupunki on [[Bregenz]]. Se rajoittuu Saksaan, Sveitsiin ja [[Liechtensteiniin]], ja sen länsiraja kulkee Reinin laaksossa. Siellä puhutaan saksaa, ja arkikielenä kuullaan alemannilaista murretta, joka muistuttaa enemmän Sveitsin saksaa kuin Wienin puhetta. Osavaltio on pinta-alaltaan pieni mutta tiheään asuttu. Bregenzerwald on yksi sen pääalueista. Tarkkoja lukuja en ole varma. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Bregenz
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+AIEMPI KYSYMYS: Mikä Vorarlberg on?
+AIEMPI VASTAUS (Livia):
+Ai se. Vorarlberg on Itävallan läntisin osavaltio, jonka pääkaupunki on [[Bregenz]]. Se rajoittuu Saksaan, Sveitsiin ja [[Liechtensteiniin]], ja sen länsiraja kulkee Reinin laaksossa. Siellä puhutaan saksaa, ja arkikielenä kuullaan alemannilaista murretta, joka muistuttaa enemmän Sveitsin saksaa kuin Wienin puhetta. Osavaltio on pinta-alaltaan pieni mutta tiheään asuttu. Bregenzerwald on yksi sen pääalueista. Tarkkoja lukuja en ole varma. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Liechtensteiniin
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Mikä Bodenjärvi on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bodenjärvi on yksi Keski-Euroopan suurimmista järvistä, ja sen rannoilla on kolme maata: [[Saksa]], Itävalta ja [[Sveitsi]]. Järven läpi virtaa [[Rein]], joka tulee siihen Alpeilta ja jatkaa ulos länsipäästä. Rannoilla on kaupunkeja, viinitarhoja ja hedelmätarhoja. Bregenzerwaldin vedet laskevat järveen Bregenzer Ach -joen kautta. Järven rajoista on historiassa ollut tulkintaa, mutta sen yksityiskohdat en ole varma. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: Saksa
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Mikä Bodenjärvi on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bodenjärvi on yksi Keski-Euroopan suurimmista järvistä, ja sen rannoilla on kolme maata: [[Saksa]], Itävalta ja [[Sveitsi]]. Järven läpi virtaa [[Rein]], joka tulee siihen Alpeilta ja jatkaa ulos länsipäästä. Rannoilla on kaupunkeja, viinitarhoja ja hedelmätarhoja. Bregenzerwaldin vedet laskevat järveen Bregenzer Ach -joen kautta. Järven rajoista on historiassa ollut tulkintaa, mutta sen yksityiskohdat en ole varma. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: Sveitsi
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Kolme suojelualuetta kaupungin sisällä] Dilin alueella on kolme suojeltua luonnon monimuotoisuuden aluetta. Cristo Rein suojelualue on vuoristossa, joka erottaa keskustan Heran kaupunginosasta idässä. Tasitolu on kaupungin länsilaidalla Liquiçán kunnan rajan tuntumassa ja kattaa sekä maata että rannikkovesiä; sitä kehitetään virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau kattaa suuren osan itäisen Dilin edustan merestä sekä rannikkoa Herassa ja siitä itään, ja se on ehdotuksista uusin — hallitus harkitsee sen korvaamista pienemmillä alueilla. BirdLife International on määrittänyt Cristo Rein alueen ja Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille alueille on mahdollista valtion luvalla.
+AIEMPI KYSYMYS: Mikä Bodenjärvi on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bodenjärvi on yksi Keski-Euroopan suurimmista järvistä, ja sen rannoilla on kolme maata: [[Saksa]], Itävalta ja [[Sveitsi]]. Järven läpi virtaa [[Rein]], joka tulee siihen Alpeilta ja jatkaa ulos länsipäästä. Rannoilla on kaupunkeja, viinitarhoja ja hedelmätarhoja. Bregenzerwaldin vedet laskevat järveen Bregenzer Ach -joen kautta. Järven rajoista on historiassa ollut tulkintaa, mutta sen yksityiskohdat en ole varma. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: Rein
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Ruoka: Valkoinen ruoka talven varalle] Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä tulee ateria.
+- [Izmir — kaupunkilehti / Arki: Sämpylä sai nimensä muodostaan] Kumru on turkiksi kyyhkynen, ja voileipä on saanut nimensä muodostaan. Alkuperäinen kumru oli renkaan muotoinen ja kokonaan seesaminsiementen peitossa. Nykyinen versio syntyi İzmirissä 1900-luvun puolivälissä ja levisi nopeasti muualle. Väliin pannaan juustoa, tomaattia ja sucukia eli tulista makkaraa, ja osa myyjistä lisää suolakurkkua, tulista paprikaa, majoneesia ja ketsuppia. Leipä on pehmeää, ja osa leipomoista ja ravintoloista nostattaa taikinan kikhernejuurella. Kumrua myydään katuruokana.
+AIEMPI KYSYMYS: Mitä alppilaiduntaminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Alppilaiduntaminen tarkoittaa sitä, että karja viedään kesäksi vuoristolaitumille ja tuodaan syksyllä takaisin laaksoon. Kesällä eläimet syövät korkealla kasvavaa ruohoa, ja maidosta valmistetaan paikan päällä esimerkiksi [[juustoa]]. Käytäntö on ollut tavallinen [[Alpeilla]] vuosisatojen ajan, ja Bregenzerwaldissa se on edelleen elävä perinne. Syksyn paluuta juhlitaan monin paikoin, mutta tapojen tarkkoja yksityiskohtia en ole varma. Kesäkarja on hyvin kasvatettu, siinä missä pulla on ainoa asia, johon minä itse laidunnan.
+KYSYMYS: Kerro lisää: juustoa
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bregenzerwald (kulttuuri)
+Tietoruudun teksti: Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin laaksossa ja pohjoisessa Saksaan ja Baijeriin. Asukkaat jakavat alueen usein kahteen osaan: Vorderwaldiin eli alempaan Bregenzerwaldiin ja Hinterwaldiin eli ylempään Bregenzerwaldiin, jossa vuoret nousevat jopa 2 000 metriin. Bezauta pidetään historiallisista syistä päämarkkinakaupunkina, ja alueella kulkee juustoreitti; 1900-luvun alussa lukemattomilla alpeilla ja tiloilla harjoitettiin maanviljelyä, karjanhoitoa ja juuston valmistusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Mitä alppilaiduntaminen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Alppilaiduntaminen tarkoittaa sitä, että karja viedään kesäksi vuoristolaitumille ja tuodaan syksyllä takaisin laaksoon. Kesällä eläimet syövät korkealla kasvavaa ruohoa, ja maidosta valmistetaan paikan päällä esimerkiksi [[juustoa]]. Käytäntö on ollut tavallinen [[Alpeilla]] vuosisatojen ajan, ja Bregenzerwaldissa se on edelleen elävä perinne. Syksyn paluuta juhlitaan monin paikoin, mutta tapojen tarkkoja yksityiskohtia en ole varma. Kesäkarja on hyvin kasvatettu, siinä missä pulla on ainoa asia, johon minä itse laidunnan.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+AIEMPI KYSYMYS: Mitä Steyr-Daimler-Puch oli?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan kertoa. Steyr-Daimler-Puch oli itävaltalainen teollisuuskonserni, jonka juuret ovat Steyrin kaupungissa ja joka valmisti 1900-luvulla muun muassa ajoneuvoja, kuten henkilöautoja, polkupyöriä, mopedeja ja traktoreita. Konserni syntyi useamman yhtiön yhdistymisestä, ja sen nimi viittaa Steyrin lisäksi Daimler- ja Puch-nimiin; yhdistymisen tarkkaa vuotta en ole varma, mutta se tapahtui joskus 1900-luvun alkupuoliskolla. Steyrin teollinen perinne on vielä vanhempaa: seppä [[Leopold Werndl]] perusti kaupunkiin asetehtaan vuonna 1830, ja siitä kehittyi vuodesta 1869 nimellä [[Österreichische Waffenfabriksgesellschaft]] tunnettu yritys. Konsernin toiminta on sittemmin jakautunut useisiin eri yhtiöihin, mutta yksityiskohdista en ole varma. Näin ylhäältä katsottuna tehtaat ovat edelleen osa Steyrin [[Ylä-Itävallan]] teollista ilmettä, ja pitkä vastaus tuli kuin tilauksesta.
+KYSYMYS: Kerro lisää: Leopold Werndl
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+AIEMPI KYSYMYS: Mitä Steyr-Daimler-Puch oli?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan kertoa. Steyr-Daimler-Puch oli itävaltalainen teollisuuskonserni, jonka juuret ovat Steyrin kaupungissa ja joka valmisti 1900-luvulla muun muassa ajoneuvoja, kuten henkilöautoja, polkupyöriä, mopedeja ja traktoreita. Konserni syntyi useamman yhtiön yhdistymisestä, ja sen nimi viittaa Steyrin lisäksi Daimler- ja Puch-nimiin; yhdistymisen tarkkaa vuotta en ole varma, mutta se tapahtui joskus 1900-luvun alkupuoliskolla. Steyrin teollinen perinne on vielä vanhempaa: seppä [[Leopold Werndl]] perusti kaupunkiin asetehtaan vuonna 1830, ja siitä kehittyi vuodesta 1869 nimellä [[Österreichische Waffenfabriksgesellschaft]] tunnettu yritys. Konsernin toiminta on sittemmin jakautunut useisiin eri yhtiöihin, mutta yksityiskohdista en ole varma. Näin ylhäältä katsottuna tehtaat ovat edelleen osa Steyrin [[Ylä-Itävallan]] teollista ilmettä, ja pitkä vastaus tuli kuin tilauksesta.
+KYSYMYS: Kerro lisää: Österreichische Waffenfabriksgesellschaft
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mitä Steyr-Daimler-Puch oli?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä osaan kertoa. Steyr-Daimler-Puch oli itävaltalainen teollisuuskonserni, jonka juuret ovat Steyrin kaupungissa ja joka valmisti 1900-luvulla muun muassa ajoneuvoja, kuten henkilöautoja, polkupyöriä, mopedeja ja traktoreita. Konserni syntyi useamman yhtiön yhdistymisestä, ja sen nimi viittaa Steyrin lisäksi Daimler- ja Puch-nimiin; yhdistymisen tarkkaa vuotta en ole varma, mutta se tapahtui joskus 1900-luvun alkupuoliskolla. Steyrin teollinen perinne on vielä vanhempaa: seppä [[Leopold Werndl]] perusti kaupunkiin asetehtaan vuonna 1830, ja siitä kehittyi vuodesta 1869 nimellä [[Österreichische Waffenfabriksgesellschaft]] tunnettu yritys. Konsernin toiminta on sittemmin jakautunut useisiin eri yhtiöihin, mutta yksityiskohdista en ole varma. Näin ylhäältä katsottuna tehtaat ovat edelleen osa Steyrin [[Ylä-Itävallan]] teollista ilmettä, ja pitkä vastaus tuli kuin tilauksesta.
+KYSYMYS: Kerro lisää: Ylä-Itävallan
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+AIEMPI KYSYMYS: Missä Steyr ja Enns kohtaavat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Steyr- ja [[Enns]]-joki kohtaavat kaupungin keskustan lähellä, [[Lambergin linnan]] ja [[Pyhän Mikaelin kirkon]] alla. Steyrin kaupunki on saanut nimensä edellisestä joesta, ja kaupungin vanha ydin sijoittuu juuri jokien yhtymäkohdan tuntumaan. Enns jatkaa matkaansa Tonavaa kohti, mutta sen tarkemmasta reitistä en ole varma. Näkymä kahden joen risteyksestä on kuulemma kaunis, ja minä katson sitä mieluiten kaiteelta.
+KYSYMYS: Kerro lisää: Enns
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+AIEMPI KYSYMYS: Missä Steyr ja Enns kohtaavat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Steyr- ja [[Enns]]-joki kohtaavat kaupungin keskustan lähellä, [[Lambergin linnan]] ja [[Pyhän Mikaelin kirkon]] alla. Steyrin kaupunki on saanut nimensä edellisestä joesta, ja kaupungin vanha ydin sijoittuu juuri jokien yhtymäkohdan tuntumaan. Enns jatkaa matkaansa Tonavaa kohti, mutta sen tarkemmasta reitistä en ole varma. Näkymä kahden joen risteyksestä on kuulemma kaunis, ja minä katson sitä mieluiten kaiteelta.
+KYSYMYS: Kerro lisää: Lambergin linnan
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+AIEMPI KYSYMYS: Missä Steyr ja Enns kohtaavat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Steyr- ja [[Enns]]-joki kohtaavat kaupungin keskustan lähellä, [[Lambergin linnan]] ja [[Pyhän Mikaelin kirkon]] alla. Steyrin kaupunki on saanut nimensä edellisestä joesta, ja kaupungin vanha ydin sijoittuu juuri jokien yhtymäkohdan tuntumaan. Enns jatkaa matkaansa Tonavaa kohti, mutta sen tarkemmasta reitistä en ole varma. Näkymä kahden joen risteyksestä on kuulemma kaunis, ja minä katson sitä mieluiten kaiteelta.
+KYSYMYS: Kerro lisää: Pyhän Mikaelin kirkon
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+AIEMPI KYSYMYS: Kuka perusti Steyrin asetehtaan ja milloin?
+AIEMPI VASTAUS (Livia):
+Joo, tost minä osaan kertoo. Steyrin asetehtaan perusti vuonna 1830 seppä [[Leopold Werndl]]. Hänen poikansa [[Josef Werndl]] ja Franz Werndl perustivat yrityksen uudelleen osakeyhtiöksi vuonna 1864, ja vuodesta 1869 sen nimi oli [[Österreichische Waffenfabriksgesellschaft]]. Yrityksen toiminta teki Steyristä pitkäksi aikaa tunnetun valmistuskeskuksen, ja myöhemmin kaupungin nimeä kantoivat monet sieltä lähteneet valmistajat. Sepän kaupunki on siis vanha juttu, ja minä muistin vuosiluvutkin.
+KYSYMYS: Kerro lisää: Josef Werndl
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+AIEMPI KYSYMYS: Kuinka suuri kaupunki Steyr on Itävallassa?
+AIEMPI VASTAUS (Livia):
+Ai se, kato tää on helppo. Steyr on Itävallan kahdestoista väkirikkain kaupunki ja [[Ylä-Itävallan]] kolmanneksi suurin. Ylä-Itävallan suurin kaupunki on [[Linz]], ja myös Wels on yleensä Steyriä suurempi. Asukasluvusta Steyrissä on noin 38 000 ihmistä, mutta tarkasta luvusta en ole varma. Kaupunki on siis keskikokoinen, mutta sen teollinen merkitys on ollut suurempi kuin koko antaisi odottaa. Mikä on tarkka luku, sitä ei kyyhky tiedä.
+KYSYMYS: Kerro lisää: Linz
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Steyr (tekniikka)
+Tietoruudun teksti: Steyr on Ylä-Itävallan osavaltion kaupunki, joka on Itävallan kahdestoista väkirikkain kaupunki ja Ylä-Itävallan kolmanneksi suurin. Sillä on pitkä historia valmistuskeskuksena, ja siitä on saanut nimensä useita siellä toimineita valmistajia, kuten entinen Steyr-Daimler-Puch-konserni. Kaupungin läpi virtaavat Steyr- ja Enns-joet, jotka kohtaavat keskustan lähellä Lambergin linnan ja Pyhän Mikaelin kirkon alla. Vuonna 1830 seppä Leopold Werndl perusti Steyriin asetehtaan, jonka hänen poikansa Josef ja Franz Werndl perustivat uudelleen osakeyhtiöksi vuonna 1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä Ylä-Itävalta on ja mikä on sen pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ylä-Itävalta on Itävallan osavaltio maan pohjoisosassa [[Tonavan]] varrella, ja sen pääkaupunki on [[Linz]]. Osavaltio rajoittuu pohjoisessa Tšekkiin ja luoteessa Saksan Baijeriin. Steyr kuuluu tähän osavaltioon ja on sen kolmanneksi suurin kaupunki. Osavaltion teollisuusperinne on vahva, ja Steyrin aseet ja ajoneuvot ovat osa sitä. Nyt olisi kyllä aika saada edes yksi pulla.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Mistä Hall-nimi tulee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suolainen kysymys. Hall-nimi johtuu keltinkielisestä suolaa tarkoittavasta sanasta, aivan kuten [[Hallein]], [[Hallstatt]] ja [[Schwäbisch Hall]]. Kaupunki mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256. Suola oli kaupungin pääelinkeino, ja Absamin suolakaivos Hall-laaksossa toimi pohjana sen vauraudelle. Nimi kantaa siis mukanaan koko kaupungin historiaa. Tuolla nimellä ei pitäisi olla nälkä, mutta onpa.
+KYSYMYS: Kerro lisää: Hallein
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Mistä Hall-nimi tulee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suolainen kysymys. Hall-nimi johtuu keltinkielisestä suolaa tarkoittavasta sanasta, aivan kuten [[Hallein]], [[Hallstatt]] ja [[Schwäbisch Hall]]. Kaupunki mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256. Suola oli kaupungin pääelinkeino, ja Absamin suolakaivos Hall-laaksossa toimi pohjana sen vauraudelle. Nimi kantaa siis mukanaan koko kaupungin historiaa. Tuolla nimellä ei pitäisi olla nälkä, mutta onpa.
+KYSYMYS: Kerro lisää: Hallstatt
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Historia: Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna] Primož Trubar oli protestanttinen uudistaja, joka saarnasi Ljubljanassa 1530-luvulta ja joutui lähtemään kaupungista vuonna 1547. Saksassa hän kirjoitti vuonna 1550 kaksi ensimmäistä sloveniankielistä kirjaa, Catechismuksen ja Abecedariumin, jotka painettiin Schwäbisch Hallissa. Kaikkiaan hän kirjoitti 22 sloveniankielistä kirjaa ja käänsi koko Uuden testamentin. Kirjakielen pohjaksi hän valitsi Ljubljanan puheen, koska piti sitä sopivimpana.
+AIEMPI KYSYMYS: Mistä Hall-nimi tulee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suolainen kysymys. Hall-nimi johtuu keltinkielisestä suolaa tarkoittavasta sanasta, aivan kuten [[Hallein]], [[Hallstatt]] ja [[Schwäbisch Hall]]. Kaupunki mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256. Suola oli kaupungin pääelinkeino, ja Absamin suolakaivos Hall-laaksossa toimi pohjana sen vauraudelle. Nimi kantaa siis mukanaan koko kaupungin historiaa. Tuolla nimellä ei pitäisi olla nälkä, mutta onpa.
+KYSYMYS: Kerro lisää: Schwäbisch Hall
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Miten suolavesi kulki kaivokselta kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suolavesi johdettiin [[Absamin suolakaivokselta]] noin kymmenen kilometrin pituista putkea pitkin haihdutusaltaalle. Ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi [[Meinhard II:n]] käskystä, ja kaivos oli kaupungin pääelinkeino 1200-luvulta alkaen. Haihdutuksen jälkeen jäljelle jäi suola, jota kaupattiin laajalle alueelle. Putken materiaalista ja tarkasta rakenteesta en ole varma. Kymmenen kilometriä putkea on kyyhkylle lyhyt matka, mutta vedelle se on pitkä.
+KYSYMYS: Kerro lisää: Absamin suolakaivokselta
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Miten suolavesi kulki kaivokselta kaupunkiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suolavesi johdettiin [[Absamin suolakaivokselta]] noin kymmenen kilometrin pituista putkea pitkin haihdutusaltaalle. Ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi [[Meinhard II:n]] käskystä, ja kaivos oli kaupungin pääelinkeino 1200-luvulta alkaen. Haihdutuksen jälkeen jäljelle jäi suola, jota kaupattiin laajalle alueelle. Putken materiaalista ja tarkasta rakenteesta en ole varma. Kymmenen kilometriä putkea on kyyhkylle lyhyt matka, mutta vedelle se on pitkä.
+KYSYMYS: Kerro lisää: Meinhard II:n
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Mäki, joka räjäytettiin ja rakennettiin uudelleen] 2002 — Innsbruckin Bergiselillä hypättiin ensimmäisen kerran 23. tammikuuta 1927. Vanha mäki räjäytettiin, ja tilalle nousi Zaha Hadidin suunnittelema torni, joka otettiin käyttöön 50. mäkiviikolle vuonna 2002. Rakennus maksoi 12 miljoonaa euroa. Tornin huipulla on kahvila ja näköalatasanne, joihin pääsee vinohissillä. Mäkiviikko perustettiin vuonna 1952, ja sen neljästä kilpailupaikasta kaksi on Itävallassa: Innsbruck ja Bischofshofen.
+AIEMPI KYSYMYS: Kuinka kaukana Hall on Innsbruckista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, katotaas. Hall in Tirol sijaitsee noin viisi kilometriä [[Innsbruckista]] itään [[Inn]]-laaksossa, 574 metrin korkeudessa. Kaupunki kuuluu Innsbruck-Landin piirikuntaan [[Tirolissa]], ja matka on lyhyt, joten kaupungit ovat käytännössä toistensa lähinaapureita. Tarkka matka riippuu siitä, mistä pisteestä mitataan, mutta suuruusluokka on tämä. Siipien kanssa matka on parissa minuutissa, ja jalan kauemmin.
+KYSYMYS: Kerro lisää: Innsbruckista
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — kaupunkilehti / Vapautettujen kaupunki: Kapteeni, joka rahoitti oman laivansa matkan] Paul Cuffee oli varakas afroamerikkalainen kveekari ja laivanvarustaja Massachusettsista, joka uskoi vapautettujen mustien tulevaisuuden olevan Afrikassa. Vuonna 1815 hän rahoitti omista varoistaan matkan, jolla hänen laivansa Traveller kuljetti 38 vapaata siirtolaista Yhdysvalloista Freetowniin — ensimmäinen tällainen yksityisrahoitteinen paluumuutto. Cuffee kuoli jo 1817 eikä nähnyt hankettaan jatkuvan suuressa mittakaavassa, mutta hänen esimerkkinsä innoitti myöhempiä siirtolaisliikkeitä, jotka toivat Freetowniin lisää vapaita afroamerikkalaisia asukkaita vuosikymmenten kuluessa.
+AIEMPI KYSYMYS: Kuinka kaukana Hall on Innsbruckista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, katotaas. Hall in Tirol sijaitsee noin viisi kilometriä [[Innsbruckista]] itään [[Inn]]-laaksossa, 574 metrin korkeudessa. Kaupunki kuuluu Innsbruck-Landin piirikuntaan [[Tirolissa]], ja matka on lyhyt, joten kaupungit ovat käytännössä toistensa lähinaapureita. Tarkka matka riippuu siitä, mistä pisteestä mitataan, mutta suuruusluokka on tämä. Siipien kanssa matka on parissa minuutissa, ja jalan kauemmin.
+KYSYMYS: Kerro lisää: Inn
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Kuinka kaukana Hall on Innsbruckista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, katotaas. Hall in Tirol sijaitsee noin viisi kilometriä [[Innsbruckista]] itään [[Inn]]-laaksossa, 574 metrin korkeudessa. Kaupunki kuuluu Innsbruck-Landin piirikuntaan [[Tirolissa]], ja matka on lyhyt, joten kaupungit ovat käytännössä toistensa lähinaapureita. Tarkka matka riippuu siitä, mistä pisteestä mitataan, mutta suuruusluokka on tämä. Siipien kanssa matka on parissa minuutissa, ja jalan kauemmin.
+KYSYMYS: Kerro lisää: Tirolissa
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Mihin Hallin suolakauppa vei tavaraa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hallin suolakauppa vei tavaraa aina [[Sveitsiin]], [[Mustaanmetsään]] ja [[Reinin]] laaksoon asti. Suola oli keskiajalla arvokas tavara, koska sillä säilytettiin ruokaa, ja siksi sen kauppa oli tärkeää. Tarkoista kauppareiteistä en ole varma, mutta Inn-laakso oli luonteva kulkuväylä. Suolavarasto riitti siis moneen leipään, vaikka pullasta ei puhuttu mitään.
+KYSYMYS: Kerro lisää: Sveitsiin
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Mihin Hallin suolakauppa vei tavaraa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hallin suolakauppa vei tavaraa aina [[Sveitsiin]], [[Mustaanmetsään]] ja [[Reinin]] laaksoon asti. Suola oli keskiajalla arvokas tavara, koska sillä säilytettiin ruokaa, ja siksi sen kauppa oli tärkeää. Tarkoista kauppareiteistä en ole varma, mutta Inn-laakso oli luonteva kulkuväylä. Suolavarasto riitti siis moneen leipään, vaikka pullasta ei puhuttu mitään.
+KYSYMYS: Kerro lisää: Mustaanmetsään
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+AIEMPI KYSYMYS: Mihin Hallin suolakauppa vei tavaraa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hallin suolakauppa vei tavaraa aina [[Sveitsiin]], [[Mustaanmetsään]] ja [[Reinin]] laaksoon asti. Suola oli keskiajalla arvokas tavara, koska sillä säilytettiin ruokaa, ja siksi sen kauppa oli tärkeää. Tarkoista kauppareiteistä en ole varma, mutta Inn-laakso oli luonteva kulkuväylä. Suolavarasto riitti siis moneen leipään, vaikka pullasta ei puhuttu mitään.
+KYSYMYS: Kerro lisää: Reinin
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Karachi — kaupunkilehti / Karachi: Halli keisarinnan nimellä] Empress Market rakennettiin 1884–1889 ja nimettiin Intian keisarinnaksi julistetun Victorian mukaan. Peruskiven laski Bombayn kuvernööri James Fergusson, suunnittelijana oli kaupungininsinööri James Strachan, perustukset teki englantilainen A. J. Attfield ja rakennuksen paikallinen Mahoomed Niwanin ja Dulloo Khejoon liike. Tontti valittiin tarkoituksella kaukaa näkyväksi, ja samalla valinta esti vuoden 1857 kapinaan liittyvän muistomerkin pystyttämisen samaan paikkaan. Halli nousi 130 × 100 jalan sisäpihan ympärille, ja neljässä 46 jalkaa leveässä galleriassa oli tilaa 280 kauppiaalle. Kellotorni on 140 jalkaa korkea ja koristeltu leopardinpäillä.
+AIEMPI KYSYMYS: Milloin Hall sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän minä muistan vastauksen. [[Hallista]] tuli kaupunki vuonna 1303. Paikka oli jo aiemmin tunnettu suolatehtaana, ja se mainitaan asiakirjassa vuodelta 1232, kun taas nykyinen nimi on vuodelta 1256. [[Absamin suolakaivoksen]] ensimmäinen käytävä tehtiin vuonna 1272, joten kaupunkioikeudet seurasivat suolantuotannon vakiintumista. Syy oikeuksien myöntämiseen oli todennäköisesti kaupan kasvu, mutta tarkkoja perusteita en ole varma. Pitkä historia mahtui kyyhkyn päähän, ja pää on pieni.
+KYSYMYS: Kerro lisää: Hallista
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hall in Tirol (kauppa)
+Tietoruudun teksti: Hall in Tirol on kaupunki Innsbruck-Landin piirikunnassa Tirolissa Itävallassa, noin viisi kilometriä Innsbruckista itään Inn-laaksossa 574 metrin korkeudessa. Hall mainitaan ensimmäisen kerran suolatehtaana Thaurin linnan lähellä vuoden 1232 asiakirjassa, ja nykyinen nimi on vuodelta 1256; kuten Halle, Hallein, Schwäbisch Hall ja Hallstatt, se johtuu keltinkielisestä suolaa tarkoittavasta sanasta. Absamin suolakaivos Hall-laaksossa oli 1200-luvulta alkaen kaupungin pääelinkeino: ensimmäinen kaivoskäytävä tehtiin vuonna 1272 kreivi Meinhard II:n käskystä, ja suolavesi johdettiin 10 kilometrin pituista putkea pitkin haihdutusaltaalle. Hallista tuli kaupunki vuonna 1303, ja suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon asti.
+AIEMPI KYSYMYS: Milloin Hall sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän minä muistan vastauksen. [[Hallista]] tuli kaupunki vuonna 1303. Paikka oli jo aiemmin tunnettu suolatehtaana, ja se mainitaan asiakirjassa vuodelta 1232, kun taas nykyinen nimi on vuodelta 1256. [[Absamin suolakaivoksen]] ensimmäinen käytävä tehtiin vuonna 1272, joten kaupunkioikeudet seurasivat suolantuotannon vakiintumista. Syy oikeuksien myöntämiseen oli todennäköisesti kaupan kasvu, mutta tarkkoja perusteita en ole varma. Pitkä historia mahtui kyyhkyn päähän, ja pää on pieni.
+KYSYMYS: Kerro lisää: Absamin suolakaivoksen
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Miksi Ferlachista tuli asesepänkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kärntenin herttuakunnan pääkaupunki siirrettiin lähellä olevaan [[Klagenfurtiin]] noin vuoden 1518 tienoilla, ja tämä edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna [[Maria Teresian]] aikana kaupungin asesepistä tuli [[Habsburgien]] monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat. Asesepänperinne on elänyt vuosisatoja, ja se on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Käsityötaito on siis periytynyt sukupolvelta toiselle. Pitkä historia tämä, mutta tuli tähän mennessä jo tutuksi.
+KYSYMYS: Kerro lisää: Klagenfurtiin
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Kuudentoista lapsen lukujärjestys] 1740–1780 — Maria Teresia hallitsi neljäkymmentä vuotta ja sai kuusitoista lasta. Hän laati heille lukujärjestyksen itse: tanssitunteja, näytelmiä, historiaa, maalausta, oikeinkirjoitusta, valtio-oppia, hiukan matematiikkaa ja vieraita kieliä. Tyttäret opettelivat lisäksi käsitöitä ja keskustelemista. Kotona puhuttiin ranskaa. Lapset olivat myös ulkopolitiikkaa: heitä naitettiin Euroopan hoveihin, ja nuorimmasta tyttärestä Marie Antoinettesta tuli Ranskan kuningatar. Kuusi lapsista kuoli äitinsä eläessä.
+AIEMPI KYSYMYS: Miksi Ferlachista tuli asesepänkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kärntenin herttuakunnan pääkaupunki siirrettiin lähellä olevaan [[Klagenfurtiin]] noin vuoden 1518 tienoilla, ja tämä edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna [[Maria Teresian]] aikana kaupungin asesepistä tuli [[Habsburgien]] monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat. Asesepänperinne on elänyt vuosisatoja, ja se on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Käsityötaito on siis periytynyt sukupolvelta toiselle. Pitkä historia tämä, mutta tuli tähän mennessä jo tutuksi.
+KYSYMYS: Kerro lisää: Maria Teresian
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Miksi Ferlachista tuli asesepänkaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kärntenin herttuakunnan pääkaupunki siirrettiin lähellä olevaan [[Klagenfurtiin]] noin vuoden 1518 tienoilla, ja tämä edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna [[Maria Teresian]] aikana kaupungin asesepistä tuli [[Habsburgien]] monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat. Asesepänperinne on elänyt vuosisatoja, ja se on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Käsityötaito on siis periytynyt sukupolvelta toiselle. Pitkä historia tämä, mutta tuli tähän mennessä jo tutuksi.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Missä Ferlach on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ferlach on Kärntenin osavaltiossa Klagenfurt-Landin piirikunnassa, ja se on Itävallan eteläisin kaupunki. Se sijaitsee [[Draun]] Rosental-laaksossa noin 17 kilometriä [[Klagenfurtista]] etelään. Etelässä [[Karavankien]] harja muodostaa rajan Slovenian kanssa, joten kaupunki on lähellä valtakunnan rajaa. Etelän puolella siis loppuu Itävalta, ja minä pysähdyn siihen myös.
+KYSYMYS: Kerro lisää: Draun
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Missä Ferlach on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ferlach on Kärntenin osavaltiossa Klagenfurt-Landin piirikunnassa, ja se on Itävallan eteläisin kaupunki. Se sijaitsee [[Draun]] Rosental-laaksossa noin 17 kilometriä [[Klagenfurtista]] etelään. Etelässä [[Karavankien]] harja muodostaa rajan Slovenian kanssa, joten kaupunki on lähellä valtakunnan rajaa. Etelän puolella siis loppuu Itävalta, ja minä pysähdyn siihen myös.
+KYSYMYS: Kerro lisää: Klagenfurtista
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Missä Ferlach on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ferlach on Kärntenin osavaltiossa Klagenfurt-Landin piirikunnassa, ja se on Itävallan eteläisin kaupunki. Se sijaitsee [[Draun]] Rosental-laaksossa noin 17 kilometriä [[Klagenfurtista]] etelään. Etelässä [[Karavankien]] harja muodostaa rajan Slovenian kanssa, joten kaupunki on lähellä valtakunnan rajaa. Etelän puolella siis loppuu Itävalta, ja minä pysähdyn siihen myös.
+KYSYMYS: Kerro lisää: Karavankien
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mitä ovat Karavankit?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karavankit ovat vuorijono Itävallan ja Slovenian rajalla, ja Ferlachin eteläpuolella niiden harja muodostaa valtioiden rajan. Vuorijono kuuluu [[Alppien]] eteläosaan, ja se erottaa [[Kärntenin]] [[Slovenian]] puolelta. Tarkasta pituudesta tai korkeimmasta huipusta en ole varma, joten ne jätän sanomatta. Raja on siis luonnon vetämä, ja vuoristo näkyy kauas. Minä tykkään korkeista paikoista, vaikka tämä onkin liian korkea nokkaunille.
+KYSYMYS: Kerro lisää: Alppien
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Mitä ovat Karavankit?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karavankit ovat vuorijono Itävallan ja Slovenian rajalla, ja Ferlachin eteläpuolella niiden harja muodostaa valtioiden rajan. Vuorijono kuuluu [[Alppien]] eteläosaan, ja se erottaa [[Kärntenin]] [[Slovenian]] puolelta. Tarkasta pituudesta tai korkeimmasta huipusta en ole varma, joten ne jätän sanomatta. Raja on siis luonnon vetämä, ja vuoristo näkyy kauas. Minä tykkään korkeista paikoista, vaikka tämä onkin liian korkea nokkaunille.
+KYSYMYS: Kerro lisää: Kärntenin
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Mitä ovat Karavankit?
+AIEMPI VASTAUS (Livia):
+Ai tota. Karavankit ovat vuorijono Itävallan ja Slovenian rajalla, ja Ferlachin eteläpuolella niiden harja muodostaa valtioiden rajan. Vuorijono kuuluu [[Alppien]] eteläosaan, ja se erottaa [[Kärntenin]] [[Slovenian]] puolelta. Tarkasta pituudesta tai korkeimmasta huipusta en ole varma, joten ne jätän sanomatta. Raja on siis luonnon vetämä, ja vuoristo näkyy kauas. Minä tykkään korkeista paikoista, vaikka tämä onkin liian korkea nokkaunille.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Serbia — maalehti / Tiede: Teslan huvila Krunska-kadulla] 1952 — Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa -rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa kultaisessa pallossa.
+AIEMPI KYSYMYS: Mikä Rosental-laakso on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on laaksokysymys. Rosental on Ferlachin sijaintipaikka [[Draun]] laaksossa Kärntenissä, ja nimi tarkoittaa saksaksi ruusulaaksoa. Joki tunnetaan Slovenian ja [[Kroatian]] puolella nimellä Drava, ja se virtaa lopulta Tonavaan. Laakso on Klagenfurtin eteläpuolella, ja sen eteläreunalla kohoavat Karavankit. Kasvillisuudesta tai ilmastosta en ole varma, joten niistä en väitä mitään. Ruusuja en ole itse nähnyt, mutta nimi kuulostaa hyvältä.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Mitä on Itävallan aineeton kulttuuriperintö?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Aineeton kulttuuriperintö]] tarkoittaa eläviä perinteitä, taitoja ja tapoja, joita ihmiset siirtävät sukupolvelta toiselle, kuten käsityötaitoja, juhlia ja esitystaidetta. Itävallalla on oma kansallinen luettelonsa, joka perustuu [[UNESCOn]] aineettoman kulttuuriperinnön yleissopimukseen. [[Ferlachin]] asesepänperinne on kuulunut tähän luetteloon vuodesta 2010. Muita luettelon kohteita en muista varmasti. Aineetonta se on, mutta kyllä minä sen silti kuulen.
+KYSYMYS: Kerro lisää: Aineeton kulttuuriperintö
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Mitä on Itävallan aineeton kulttuuriperintö?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Aineeton kulttuuriperintö]] tarkoittaa eläviä perinteitä, taitoja ja tapoja, joita ihmiset siirtävät sukupolvelta toiselle, kuten käsityötaitoja, juhlia ja esitystaidetta. Itävallalla on oma kansallinen luettelonsa, joka perustuu [[UNESCOn]] aineettoman kulttuuriperinnön yleissopimukseen. [[Ferlachin]] asesepänperinne on kuulunut tähän luetteloon vuodesta 2010. Muita luettelon kohteita en muista varmasti. Aineetonta se on, mutta kyllä minä sen silti kuulen.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ferlach (kauppa)
+Tietoruudun teksti: Ferlach on Klagenfurt-Landin piirikunnan kaupunki Kärntenissä ja Itävallan eteläisin kaupunki. Se on tunnettu vuosisatoja vanhasta asesepänperinteestään, joka on ollut osa Itävallan aineetonta kulttuuriperintöä vuodesta 2010. Kaupunki sijaitsee Draun Rosental-laaksossa noin 17 kilometriä Klagenfurtista etelään, ja Karavankien harja muodostaa etelässä rajan Slovenian kanssa. Kärntenin herttuakunnan pääkaupungin siirto lähellä olevaan Klagenfurtiin noin vuoden 1518 tienoilla edisti ratkaisevasti Ferlachin kehittymistä ampuma-asevalmistuksen keskukseksi. Keisarinna Maria Teresian aikana kaupungin asesepistä tuli Habsburgien monarkian pääasiallisia asetoimittajia, ja Ferlachin aseita käyttivät myös Espanjan, Ranskan ja Turkin armeijat.
+AIEMPI KYSYMYS: Mitä on Itävallan aineeton kulttuuriperintö?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Aineeton kulttuuriperintö]] tarkoittaa eläviä perinteitä, taitoja ja tapoja, joita ihmiset siirtävät sukupolvelta toiselle, kuten käsityötaitoja, juhlia ja esitystaidetta. Itävallalla on oma kansallinen luettelonsa, joka perustuu [[UNESCOn]] aineettoman kulttuuriperinnön yleissopimukseen. [[Ferlachin]] asesepänperinne on kuulunut tähän luetteloon vuodesta 2010. Muita luettelon kohteita en muista varmasti. Aineetonta se on, mutta kyllä minä sen silti kuulen.
+KYSYMYS: Kerro lisää: Ferlachin

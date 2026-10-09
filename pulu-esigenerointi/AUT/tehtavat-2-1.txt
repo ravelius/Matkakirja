@@ -1,0 +1,1194 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+AIEMPI KYSYMYS: Mikä Pasterze on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ihan ylhäältä asti. Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä, ja se lepää [[Großglocknerin]] itärinteellä. Jäätikkö on vetäytynyt voimakkaasti: vuonna 1963 näköalapaikalta rakennettiin [[köysirata]] alas juuri siihen kohtaan, jossa jään reuna silloin oli, mutta nykyään ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta, ja ne kertovat, että seitsemäntuhatta vuotta sitten samalla paikalla kasvoi [[sembramänty]] ja karja kävi syömässä ruohoa. Aika paljon ehtii muuttua, kun on tarpeeksi kauan paikallaan.
+KYSYMYS: Kerro lisää: Großglocknerin
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+AIEMPI KYSYMYS: Mikä Pasterze on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ihan ylhäältä asti. Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä, ja se lepää [[Großglocknerin]] itärinteellä. Jäätikkö on vetäytynyt voimakkaasti: vuonna 1963 näköalapaikalta rakennettiin [[köysirata]] alas juuri siihen kohtaan, jossa jään reuna silloin oli, mutta nykyään ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta, ja ne kertovat, että seitsemäntuhatta vuotta sitten samalla paikalla kasvoi [[sembramänty]] ja karja kävi syömässä ruohoa. Aika paljon ehtii muuttua, kun on tarpeeksi kauan paikallaan.
+KYSYMYS: Kerro lisää: köysirata
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+AIEMPI KYSYMYS: Mikä Pasterze on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän ihan ylhäältä asti. Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä, ja se lepää [[Großglocknerin]] itärinteellä. Jäätikkö on vetäytynyt voimakkaasti: vuonna 1963 näköalapaikalta rakennettiin [[köysirata]] alas juuri siihen kohtaan, jossa jään reuna silloin oli, mutta nykyään ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta, ja ne kertovat, että seitsemäntuhatta vuotta sitten samalla paikalla kasvoi [[sembramänty]] ja karja kävi syömässä ruohoa. Aika paljon ehtii muuttua, kun on tarpeeksi kauan paikallaan.
+KYSYMYS: Kerro lisää: sembramänty
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Miksi korkeus mitataan Adrianmerestä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Itävallalla ei ole omaa rannikkoa, joten korkeudet täytyy sitoa johonkin merenpintaan, ja Itävalta-Unkarin aikainen korkeusjärjestelmä perustui [[Adrianmeren]] pinnantasoon [[Triestissä]]. Meren pinta on luonteva nollataso, koska sitä vasten kaikki maanpinnan kohdat voidaan verrata toisiinsa. Tämä vanha vertailutaso on säilynyt Itävallan korkeusmittauksissa nykypäivään, vaikka tarkkaa mittauspistettä en osaa varmasti nimetä. Eri maat käyttävät eri vertailumerta, joten sama vuori voi saada eri maiden mittaustavoilla hieman eri korkeusluvun. Meri tuntuu täältä kyllä aika kaukaiselta.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+AIEMPI KYSYMYS: Miksi korkeus mitataan Adrianmerestä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Itävallalla ei ole omaa rannikkoa, joten korkeudet täytyy sitoa johonkin merenpintaan, ja Itävalta-Unkarin aikainen korkeusjärjestelmä perustui [[Adrianmeren]] pinnantasoon [[Triestissä]]. Meren pinta on luonteva nollataso, koska sitä vasten kaikki maanpinnan kohdat voidaan verrata toisiinsa. Tämä vanha vertailutaso on säilynyt Itävallan korkeusmittauksissa nykypäivään, vaikka tarkkaa mittauspistettä en osaa varmasti nimetä. Eri maat käyttävät eri vertailumerta, joten sama vuori voi saada eri maiden mittaustavoilla hieman eri korkeusluvun. Meri tuntuu täältä kyllä aika kaukaiselta.
+KYSYMYS: Kerro lisää: Triestissä
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+AIEMPI KYSYMYS: Miten jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+No niin, tästä saa hyvän kysymyksen. Jäätikkö syntyy paikassa, jossa lunta kertyy talvisin enemmän kuin sitä ehtii kesällä sulaa. Uusi lumi painaa vanhan lumen kasaan, ja ajan myötä lumihiutaleet muuttuvat tiiviiksi rakeiseksi [[firniksi]] ja lopulta kiinteäksi jääksi. Kun jäämassa on tarpeeksi paksu, se alkaa omasta painostaan virrata hitaasti rinnettä alas, ja siitä syntyy [[jäätikkö]]. Alaosassa jää sulaa tai murtuu, ja jäätikön koko riippuu siitä, kumpi puoli on voimakkaampi, kertyminen vai sulaminen. Tähän menee vuosia, ja minä olen lentänyt monta sellaista.
+KYSYMYS: Kerro lisää: firniksi
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Miten jäätikkö syntyy?
+AIEMPI VASTAUS (Livia):
+No niin, tästä saa hyvän kysymyksen. Jäätikkö syntyy paikassa, jossa lunta kertyy talvisin enemmän kuin sitä ehtii kesällä sulaa. Uusi lumi painaa vanhan lumen kasaan, ja ajan myötä lumihiutaleet muuttuvat tiiviiksi rakeiseksi [[firniksi]] ja lopulta kiinteäksi jääksi. Kun jäämassa on tarpeeksi paksu, se alkaa omasta painostaan virrata hitaasti rinnettä alas, ja siitä syntyy [[jäätikkö]]. Alaosassa jää sulaa tai murtuu, ja jäätikön koko riippuu siitä, kumpi puoli on voimakkaampi, kertyminen vai sulaminen. Tähän menee vuosia, ja minä olen lentänyt monta sellaista.
+KYSYMYS: Kerro lisää: jäätikkö
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+AIEMPI KYSYMYS: Miksi Alpit ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Alpit]] ovat syntyneet siitä, että Afrikan ja Euroopan laatat ovat vuosimiljoonien ajan painautuneet toisiaan vasten. Kun laatat törmäävät, niiden välissä ollut merenpohja ja kivikerrostumat ovat kurtistuneet, kasautuneet päällekkäin ja nousseet ylös vuoristoksi. Prosessi on hidas ja jatkuu edelleen: Alppeja nostavat yhä ylöspäin sekä laattojen liike että se, että kevenevä jääkauden jälkeinen maankuori kohoaa, vaikka tarkkoja lukuja en uskalla tässä muistista sanoa. Vuoriston muotoja ovat sittemmin hioneet [[jääkausien]] jäätiköt, joten nykyiset laaksot ovat pitkälti niiden työtä. Tuo kaikki otti aikaa enemmän kuin yksikään kirje.
+KYSYMYS: Kerro lisää: Alpit
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Luonto: Peura katosi ja palasi] Formosanpeura tuli saarelle jääkausien aikana, kun matala merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja 1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Miksi Alpit ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Alpit]] ovat syntyneet siitä, että Afrikan ja Euroopan laatat ovat vuosimiljoonien ajan painautuneet toisiaan vasten. Kun laatat törmäävät, niiden välissä ollut merenpohja ja kivikerrostumat ovat kurtistuneet, kasautuneet päällekkäin ja nousseet ylös vuoristoksi. Prosessi on hidas ja jatkuu edelleen: Alppeja nostavat yhä ylöspäin sekä laattojen liike että se, että kevenevä jääkauden jälkeinen maankuori kohoaa, vaikka tarkkoja lukuja en uskalla tässä muistista sanoa. Vuoriston muotoja ovat sittemmin hioneet [[jääkausien]] jäätiköt, joten nykyiset laaksot ovat pitkälti niiden työtä. Tuo kaikki otti aikaa enemmän kuin yksikään kirje.
+KYSYMYS: Kerro lisää: jääkausien
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Mikä on sembramänty?
+AIEMPI VASTAUS (Livia):
+Ai se. Sembramänty on havupuu, joka kasvaa [[Alpeilla]] korkealla [[puurajan]] tuntumassa, jossa talvet ovat ankaria ja kasvukausi lyhyt. Se on hidaskasvuinen ja voi elää hyvin vanhaksi, ja sen neulaset kasvavat viiden kimpuissa. Puun siemenet ovat syötäviä, ja niitä on kerätty ruoaksi, kun taas sen tiivis ja tuoksuva puu on ollut suosittua puuseppien ja veistäjien käytössä. Alppien kansanperinteessä se on tuttu puu, mutta sen tarkempaa levinneisyyttä en osaa muistista varmasti sanoa. Minä olen istunut sen oksalla, ja se tuoksui ihan hyvälle.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großglockner (luonto · vuori)
+Tietoruudun teksti: Großglockner on 3 798 metriä Adrianmeren pinnasta ja siten Itävallan korkein vuori sekä Alppien korkein Brennerin solan itäpuolella. Se kuuluu Hohe Tauernin vuoriston Glockner-ryhmään Keski-Itäalppien pääharjanteella. Sen itärinteellä lepää Pasterze, Itävallan laajin jäätikkö.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi: Puu, joka kasvaa pitkin maata] Iqaluit on puurajan pohjoispuolella, vaikka se on selvästi napapiirin eteläpuolella. Syy on meressä: kylmä Baffin Island Current pitää kesät niin viileinä, että puuraja kulkee Kanadan itäosassa yhtä etelässä kuin Pohjois-Labradorissa — talvet sen sijaan ovat suunnilleen samanlaisia kuin Yellowknifessa. Puita kaupungissa on silti muutama: etelään kääntyneitä tuotuja mustakuusia, joita lumikinos suojaa talvella. Pensaista tavallisin on arktinen paju, joka voi olla lähes kahdeksan metriä pitkä ja viisitoista senttiä korkea. Se kasvaa siihen suuntaan, johon kannattaa.
+- [Alpit — kaupunkilehti / Luonto: Nukkuu puolet vuodesta] Murmeli on jyrsijä, joka elää kolonioissa puurajan yläpuolella. Se kaivaa maahan käytävästön ja viettää siellä lokakuusta huhtikuuhun horroksessa: sydän lyö muutaman kerran minuutissa ja ruumiinlämpö laskee lähelle viittä astetta. Kesällä murmelit syövät ruohoa lihoakseen kaksinkertaisiksi. Vaaran uhatessa vartija viheltää kimeästi, ja koko rinne katoaa koloihinsa sekunneissa — vihellys kuuluu kilometrin päähän.
+- [Iqaluit — kaupunkilehti / Iqaluit] Iqaluit on Kanadan pohjoisin kaupunki ja sen pienin pääkaupunki: reilut seitsemäntuhatta asukasta puurajan pohjoispuolella, ilman tietä tai rataa muualle. Isoisän matkavuonna 1873 rannalla ei ollut kaupunkia lainkaan — vain kalapaikka, jonka nimi kertoo miksi.
+AIEMPI KYSYMYS: Mikä on sembramänty?
+AIEMPI VASTAUS (Livia):
+Ai se. Sembramänty on havupuu, joka kasvaa [[Alpeilla]] korkealla [[puurajan]] tuntumassa, jossa talvet ovat ankaria ja kasvukausi lyhyt. Se on hidaskasvuinen ja voi elää hyvin vanhaksi, ja sen neulaset kasvavat viiden kimpuissa. Puun siemenet ovat syötäviä, ja niitä on kerätty ruoaksi, kun taas sen tiivis ja tuoksuva puu on ollut suosittua puuseppien ja veistäjien käytössä. Alppien kansanperinteessä se on tuttu puu, mutta sen tarkempaa levinneisyyttä en osaa muistista varmasti sanoa. Minä olen istunut sen oksalla, ja se tuoksui ihan hyvälle.
+KYSYMYS: Kerro lisää: puurajan
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Wien — kohdekartta / Kohdekartta: Taikahuilu] Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen portin päälle.
+- [Sarajevo — kaupunkilehti / Sarajevo] Kapea jokilaakso, jossa yksi askel vie ottomaanien basaarista wieniläisen näköiseen kortteliin — ja jossa tornikello näyttää kahtatoista vasta auringon laskiessa.
+AIEMPI KYSYMYS: Miksi vuoren korkein huippu vaihtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on hyvä juttu. Wildspitzellä on kaksi huippua, joista eteläinen on kalliota ja nousee 3 768 metriin. Pohjoinen huippu oli pitkään korkeampi, ja 1800-luvulla se mitattiin 11 947 [[wieniläisen jalan]] korkuiseksi. Se koostuu kuitenkin lumesta ja jäästä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Siksi korkein kohta on nykyään kalliosta koostuvalla eteläisellä huipulla, joka ei pienene samalla tavalla. Samalla vuoren ensinousun vuodeksi vaihtui 1848, kun [[Leander Klotz]] nousi sinne naapurinsa kanssa, ja vuori kuuluu [[Ötztalin Alppeihin]]. Lumi on kyllä epävarma jalusta.
+KYSYMYS: Kerro lisää: wieniläisen jalan
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+AIEMPI KYSYMYS: Miksi vuoren korkein huippu vaihtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on hyvä juttu. Wildspitzellä on kaksi huippua, joista eteläinen on kalliota ja nousee 3 768 metriin. Pohjoinen huippu oli pitkään korkeampi, ja 1800-luvulla se mitattiin 11 947 [[wieniläisen jalan]] korkuiseksi. Se koostuu kuitenkin lumesta ja jäästä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Siksi korkein kohta on nykyään kalliosta koostuvalla eteläisellä huipulla, joka ei pienene samalla tavalla. Samalla vuoren ensinousun vuodeksi vaihtui 1848, kun [[Leander Klotz]] nousi sinne naapurinsa kanssa, ja vuori kuuluu [[Ötztalin Alppeihin]]. Lumi on kyllä epävarma jalusta.
+KYSYMYS: Kerro lisää: Leander Klotz
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Maailman sateisimpia paikkoja] Piopiotahi tunnetaan Uuden-Seelannin sateisimpana asuttuna paikkana: siihen sataa keskimäärin noin 6 400 millimetriä vettä vuodessa, ja sadepäiviä kertyy lähes 185 vuosittain - eli vuono on märkä joka toinen päivä. Rankimmillaan yhden vuorokauden aikana voi sataa jopa 250 millimetriä, mikä muuttaa vuonoa ympäröivät kalliot hetkessä kymmeniksi tilapäisiksi putouksiksi. Kosteus syntyy, kun Tasmaninmereltä puhaltavat länsituulet törmäävät Etelän Alppeihin ja nousevat äkkiä lähes 1 700 metrin korkeuteen, jolloin niiden kantama vesihöyry tiivistyy sateeksi lähes ympäri vuoden.
+AIEMPI KYSYMYS: Miksi vuoren korkein huippu vaihtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on hyvä juttu. Wildspitzellä on kaksi huippua, joista eteläinen on kalliota ja nousee 3 768 metriin. Pohjoinen huippu oli pitkään korkeampi, ja 1800-luvulla se mitattiin 11 947 [[wieniläisen jalan]] korkuiseksi. Se koostuu kuitenkin lumesta ja jäästä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Siksi korkein kohta on nykyään kalliosta koostuvalla eteläisellä huipulla, joka ei pienene samalla tavalla. Samalla vuoren ensinousun vuodeksi vaihtui 1848, kun [[Leander Klotz]] nousi sinne naapurinsa kanssa, ja vuori kuuluu [[Ötztalin Alppeihin]]. Lumi on kyllä epävarma jalusta.
+KYSYMYS: Kerro lisää: Ötztalin Alppeihin
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+AIEMPI KYSYMYS: Kuka oli Leander Klotz?
+AIEMPI VASTAUS (Livia):
+Ai tota. Leander Klotz oli [[Rofenin laakson]] karjatilallinen ja opas, joka nousi vuonna 1848 Wildspitzen huipulle nimettömän naapurinsa kanssa. Nousua pidetään vuoren [[ensinousuna]]. Hänestä en tiedä tässä enempää kuin sen, että hän oli paikallinen mies, joka tunsi laakson ja sen rinteet. Minun tietoni loppuu tähän.
+KYSYMYS: Kerro lisää: Rofenin laakson
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+AIEMPI KYSYMYS: Kuka oli Leander Klotz?
+AIEMPI VASTAUS (Livia):
+Ai tota. Leander Klotz oli [[Rofenin laakson]] karjatilallinen ja opas, joka nousi vuonna 1848 Wildspitzen huipulle nimettömän naapurinsa kanssa. Nousua pidetään vuoren [[ensinousuna]]. Hänestä en tiedä tässä enempää kuin sen, että hän oli paikallinen mies, joka tunsi laakson ja sen rinteet. Minun tietoni loppuu tähän.
+KYSYMYS: Kerro lisää: ensinousuna
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+AIEMPI KYSYMYS: Miten jäätiköt vaikuttavat vuoriin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Jäätiköt muokkaavat vuoria voimakkaasti: ne hioutuvat laaksoja syvemmiksi ja leveämmiksi, kuljettavat kiviainesta mukanaan ja jättävät jälkeensä [[moreeneja]] eli kasautuneita kivi- ja soraläjiä. Kun jäätikkö sulaa, myös vuorenrinteet muuttuvat: jää on aiemmin pitänyt kalliota paikoillaan, ja sen vetäytyessä rinteet voivat muuttua epävakaammiksi. Lisäksi sulamisvedet vaikuttavat jokien virtaamaan, sillä monet Alppien joet saavat vetensä [[jäätiköistä]] ja lumesta. Tarkkoja ennusteita kunkin vuoren kohtalosta en osaa antaa. Kyllä tästä riittäisi kertomista pidempäänkin.
+KYSYMYS: Kerro lisää: moreeneja
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+AIEMPI KYSYMYS: Miten jäätiköt vaikuttavat vuoriin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Jäätiköt muokkaavat vuoria voimakkaasti: ne hioutuvat laaksoja syvemmiksi ja leveämmiksi, kuljettavat kiviainesta mukanaan ja jättävät jälkeensä [[moreeneja]] eli kasautuneita kivi- ja soraläjiä. Kun jäätikkö sulaa, myös vuorenrinteet muuttuvat: jää on aiemmin pitänyt kalliota paikoillaan, ja sen vetäytyessä rinteet voivat muuttua epävakaammiksi. Lisäksi sulamisvedet vaikuttavat jokien virtaamaan, sillä monet Alppien joet saavat vetensä [[jäätiköistä]] ja lumesta. Tarkkoja ennusteita kunkin vuoren kohtalosta en osaa antaa. Kyllä tästä riittäisi kertomista pidempäänkin.
+KYSYMYS: Kerro lisää: jäätiköistä
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä on wieniläinen jalka mittayksikkönä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Wieniläinen jalka eli Wiener Fuß oli Itävallassa ennen metrijärjestelmää käytetty pituusmitta, ja sen pituus oli hieman yli 31 senttimetriä, vaikka tarkkaa arvoa en ole varma. Se kuului vanhaan [[Habsburgien]] valtakunnan mittajärjestelmään, jossa jalka jakautui tuumiin ja sitä isommat yksiköt olivat esimerkiksi syli ja virsta, joiden tarkkoja arvoja en muista. Metrijärjestelmä korvasi vanhat mitat Itävallassa 1800-luvun loppupuolella, mutta vuoristoa on mitattu sillä ennen sitä. Niinpä Wildspitzenkin vanha korkeusluku on annettu [[jaloissa]]. Itse mittaan korkeuden siivenkärjillä.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Somalia — maalehti / Luonto: Villiaasi, jonka jaloissa on seepran raidat] Somalianvilliaasi on afrikanvilliaasin alalaji, ja sen jalat ovat raidalliset kuin seepralla. Luonnossa niitä arvioidaan olevan enää noin 600, ja laji on luokiteltu äärimmäisen uhanalaiseksi. Aasit elävät niukalla maalla yksin tai pieninä tammalaumoina ja kokoontuvat suuremmiksi joukoiksi vain siellä, missä on satanut; ori voi pitää jopa kahdenkymmenen neliökilometrin reviiriä ja merkitä sen rajat lantakasoin. Roomalaisajoista asti Italian kotiaasien on katsottu polveutuvan juuri tästä aasista.
+AIEMPI KYSYMYS: Mikä on wieniläinen jalka mittayksikkönä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Wieniläinen jalka eli Wiener Fuß oli Itävallassa ennen metrijärjestelmää käytetty pituusmitta, ja sen pituus oli hieman yli 31 senttimetriä, vaikka tarkkaa arvoa en ole varma. Se kuului vanhaan [[Habsburgien]] valtakunnan mittajärjestelmään, jossa jalka jakautui tuumiin ja sitä isommat yksiköt olivat esimerkiksi syli ja virsta, joiden tarkkoja arvoja en muista. Metrijärjestelmä korvasi vanhat mitat Itävallassa 1800-luvun loppupuolella, mutta vuoristoa on mitattu sillä ennen sitä. Niinpä Wildspitzenkin vanha korkeusluku on annettu [[jaloissa]]. Itse mittaan korkeuden siivenkärjillä.
+KYSYMYS: Kerro lisää: jaloissa
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+AIEMPI KYSYMYS: Kuka oli Ötzi jäämies?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ötzi on noin viisituhatta kolmesataa vuotta vanha, luonnollisesti jäätiköllä säilynyt mies, jonka vaeltajat löysivät vuonna 1991 [[Ötztalin Alpeilta]] Italian ja Itävallan rajan tuntumasta. Hänet löydettiin kuivuneena ja jään säilyttämänä, ja hänen mukanaan oli vaatteita, työkaluja ja ase, jotka ovat kertoneet paljon [[kuparikauden]] elämästä. Nykyään hänen jäännöksensä ja varusteensa ovat esillä museossa Bolzanossa Etelä-Tirolissa, mutta tutkijoiden tulkinnat siitä, miten hän kuoli, ovat vaihdelleet. Hän on yksi tunnetuimmista ihmisistä, jotka ovat sulaneet esiin vuoren sisältä.
+
+Minä ajattelin vain, että kylmä paikka jäädä pitkäksi aikaa odottamaan. Siinä on kyllä kärsivällisyyttä enemmän kuin yhdellä kyyhkyllä.
+KYSYMYS: Kerro lisää: Ötztalin Alpeilta
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wildspitze (luonto · vuori)
+Tietoruudun teksti: Wildspitzellä on kaksi huippua, ja se kumpi niistä on korkeampi, on vaihtunut kesken kaiken. Kalliosta koostuva eteläinen huippu nousee 3 768 metriin, ja pohjoinen oli pitkään sitä korkeampi — 1800-luvulla se mitattiin 11 947 wieniläisen jalan korkuiseksi. Mutta pohjoinen huippu on lunta ja jäätä, ja sulaminen madalsi sen 1900-luvun loppuun mennessä noin 3 765 metriin. Niinpä korkein kohta on nykyään etelässä, ja samalla ensinousun vuodeksi vaihtui 1848, jolloin Rofenin laakson karjatilallinen ja opas Leander Klotz nousi sinne nimettömän naapurinsa kanssa. Vuori on Ötztalin Alppien ja Pohjois-Tirolin korkein sekä Itävallan toiseksi korkein Großglocknerin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Kuka oli Ötzi jäämies?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ötzi on noin viisituhatta kolmesataa vuotta vanha, luonnollisesti jäätiköllä säilynyt mies, jonka vaeltajat löysivät vuonna 1991 [[Ötztalin Alpeilta]] Italian ja Itävallan rajan tuntumasta. Hänet löydettiin kuivuneena ja jään säilyttämänä, ja hänen mukanaan oli vaatteita, työkaluja ja ase, jotka ovat kertoneet paljon [[kuparikauden]] elämästä. Nykyään hänen jäännöksensä ja varusteensa ovat esillä museossa Bolzanossa Etelä-Tirolissa, mutta tutkijoiden tulkinnat siitä, miten hän kuoli, ovat vaihdelleet. Hän on yksi tunnetuimmista ihmisistä, jotka ovat sulaneet esiin vuoren sisältä.
+
+Minä ajattelin vain, että kylmä paikka jäädä pitkäksi aikaa odottamaan. Siinä on kyllä kärsivällisyyttä enemmän kuin yhdellä kyyhkyllä.
+KYSYMYS: Kerro lisää: kuparikauden
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo laskea. Tonavan varrella on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki on noin 2 850 kilometriä pitkä, ja se yhdistää nykyisin kymmenen Euroopan maata, mutta vain näissä neljässä kaupungissa on valtion pääkaupunki joen rannalla. Rooman valtakunnan aikaan se oli [[rajajoki]], ja sen rannoilla on ollut asutusta ja kauppaa jo hyvin kauan. Sen vesi alkaa Saksan Schwarzwaldista ja päättyy lopulta Mustaanmereen.
+
+Minä olen lentänyt sen kaikkien neljän kaupungin yli, ja jokaisessa on ollut oma kattonsa levähtää. Itävallassa on vielä Buchteln, ja siihen minä olisin valmis laskeutumaan millä tahansa kaiteella.
+KYSYMYS: Kerro lisää: Wien
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo laskea. Tonavan varrella on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki on noin 2 850 kilometriä pitkä, ja se yhdistää nykyisin kymmenen Euroopan maata, mutta vain näissä neljässä kaupungissa on valtion pääkaupunki joen rannalla. Rooman valtakunnan aikaan se oli [[rajajoki]], ja sen rannoilla on ollut asutusta ja kauppaa jo hyvin kauan. Sen vesi alkaa Saksan Schwarzwaldista ja päättyy lopulta Mustaanmereen.
+
+Minä olen lentänyt sen kaikkien neljän kaupungin yli, ja jokaisessa on ollut oma kattonsa levähtää. Itävallassa on vielä Buchteln, ja siihen minä olisin valmis laskeutumaan millä tahansa kaiteella.
+KYSYMYS: Kerro lisää: Bratislava
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo laskea. Tonavan varrella on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki on noin 2 850 kilometriä pitkä, ja se yhdistää nykyisin kymmenen Euroopan maata, mutta vain näissä neljässä kaupungissa on valtion pääkaupunki joen rannalla. Rooman valtakunnan aikaan se oli [[rajajoki]], ja sen rannoilla on ollut asutusta ja kauppaa jo hyvin kauan. Sen vesi alkaa Saksan Schwarzwaldista ja päättyy lopulta Mustaanmereen.
+
+Minä olen lentänyt sen kaikkien neljän kaupungin yli, ja jokaisessa on ollut oma kattonsa levähtää. Itävallassa on vielä Buchteln, ja siihen minä olisin valmis laskeutumaan millä tahansa kaiteella.
+KYSYMYS: Kerro lisää: Budapest
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo laskea. Tonavan varrella on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki on noin 2 850 kilometriä pitkä, ja se yhdistää nykyisin kymmenen Euroopan maata, mutta vain näissä neljässä kaupungissa on valtion pääkaupunki joen rannalla. Rooman valtakunnan aikaan se oli [[rajajoki]], ja sen rannoilla on ollut asutusta ja kauppaa jo hyvin kauan. Sen vesi alkaa Saksan Schwarzwaldista ja päättyy lopulta Mustaanmereen.
+
+Minä olen lentänyt sen kaikkien neljän kaupungin yli, ja jokaisessa on ollut oma kattonsa levähtää. Itävallassa on vielä Buchteln, ja siihen minä olisin valmis laskeutumaan millä tahansa kaiteella.
+KYSYMYS: Kerro lisää: Belgrad
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+AIEMPI KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo laskea. Tonavan varrella on neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Joki on noin 2 850 kilometriä pitkä, ja se yhdistää nykyisin kymmenen Euroopan maata, mutta vain näissä neljässä kaupungissa on valtion pääkaupunki joen rannalla. Rooman valtakunnan aikaan se oli [[rajajoki]], ja sen rannoilla on ollut asutusta ja kauppaa jo hyvin kauan. Sen vesi alkaa Saksan Schwarzwaldista ja päättyy lopulta Mustaanmereen.
+
+Minä olen lentänyt sen kaikkien neljän kaupungin yli, ja jokaisessa on ollut oma kattonsa levähtää. Itävallassa on vielä Buchteln, ja siihen minä olisin valmis laskeutumaan millä tahansa kaiteella.
+KYSYMYS: Kerro lisää: rajajoki
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+AIEMPI KYSYMYS: Mikä Wachaun laakso on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Wachau on Tonavan laakso Itävallassa, ja se on tunnettu ennen kaikkea [[aprikooseista]], joita sanotaan saksaksi Marilleiksi. Aprikoosi on kirjattu laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja [[Wachauer Marille]] on EU:n suojaama alkuperänimitys. Kesällä tehdään [[marillenknödeliä]]: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on Klosterneuburger. Minä tykkään siitä, että laakso tuoksuu kai keväällä jo kaukaa.
+KYSYMYS: Kerro lisää: aprikooseista
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Aprikoosi keitetään taikinan sisällä] 1509 — Sana Marille eli aprikoosi on kirjattu Wachaun laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja Wachauer Marille on EU:n suojaama alkuperänimitys. Kesällä tehdään marillenknödeliä: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on nimeltään Klosterneuburger.
+AIEMPI KYSYMYS: Mikä Wachaun laakso on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Wachau on Tonavan laakso Itävallassa, ja se on tunnettu ennen kaikkea [[aprikooseista]], joita sanotaan saksaksi Marilleiksi. Aprikoosi on kirjattu laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja [[Wachauer Marille]] on EU:n suojaama alkuperänimitys. Kesällä tehdään [[marillenknödeliä]]: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on Klosterneuburger. Minä tykkään siitä, että laakso tuoksuu kai keväällä jo kaukaa.
+KYSYMYS: Kerro lisää: Wachauer Marille
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Aprikoosi keitetään taikinan sisällä] 1509 — Sana Marille eli aprikoosi on kirjattu Wachaun laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja Wachauer Marille on EU:n suojaama alkuperänimitys. Kesällä tehdään marillenknödeliä: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on nimeltään Klosterneuburger.
+AIEMPI KYSYMYS: Mikä Wachaun laakso on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Wachau on Tonavan laakso Itävallassa, ja se on tunnettu ennen kaikkea [[aprikooseista]], joita sanotaan saksaksi Marilleiksi. Aprikoosi on kirjattu laaksossa jo vuoden 1509 vaiheilla, ja isot istutukset tehtiin 1890-luvulta alkaen. Nykyään laaksossa kukkii yli satatuhatta aprikoosipuuta, ja [[Wachauer Marille]] on EU:n suojaama alkuperänimitys. Kesällä tehdään [[marillenknödeliä]]: kokonainen aprikoosi kääritään perunataikinaan, keitetään vedessä ja pyöritetään voissa paahdetuissa korppujauhoissa. Yleisin lajike on Klosterneuburger. Minä tykkään siitä, että laakso tuoksuu kai keväällä jo kaukaa.
+KYSYMYS: Kerro lisää: marillenknödeliä
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+AIEMPI KYSYMYS: Millainen on Tonavan suisto Mustallamerellä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tonava laskee Mustaanmereen Romanian itärannikolla, ja joki jakautuu ennen mereen pääsyä useaksi haaraksi, joista syntyy laaja [[suisto]] kosteikkoineen. Sen rantaan kasaantuu joen mukanaan tuomaa lietettä, ja alue on täynnä ruovikkoa, vesiteitä ja kanavia. Suisto on tärkeä lintujen pesimä- ja levähdysalue, ja sieltä tavataan muun muassa [[pelikaaneja]]. Osa suistosta kuuluu Ukrainan puolelle, ja alue on luonnonsuojelun kannalta arvokas, vaikka tarkkoja pinta-aloja en ole varma. Siellä olisi kyllä minullekin kalastajan sijaa.
+KYSYMYS: Kerro lisää: suisto
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Kylmä virta ja sen linnut] Aavikkorannikko elättää yllättävän paljon: Humboldtin virta nostaa pinnalle kylmää ja ravinteikasta vettä, ja siksi kalaa riittää. La Portadan kalliot ovat guanolintujen tarkkailupaikka. Siellä nähdään perunsuula, inkatiira ja guanokormorantti sekä kolme lokkilajia — etelänharmaalokki, harmaalokkeihin kuuluva Larus modestus ja Belcherinlokki — sekä pelikaaneja. Toisinaan näkyy myös eteläkarvahylje tai delfiini. Kaupungin edustalla kohoaa Morro Morenon kansallispuisto, yksi Chilen kuudesta sumukeitaasta: 1 100 metrin korkuinen niemi, joka on usein pilvessä ja jossa elää kotoperäisiä lajeja juuri siksi.
+- [Kreikka — maalehti / Luonto] Kreikan luonto on hajallaan tuhansilla saarilla ja jyrkillä vuorilla: samassa maassa elää maailman harvinaisimpia hylkeitä, jättimäisiä pelikaaneja ja vuohi, jota ei tavata muualla.
+AIEMPI KYSYMYS: Millainen on Tonavan suisto Mustallamerellä?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tonava laskee Mustaanmereen Romanian itärannikolla, ja joki jakautuu ennen mereen pääsyä useaksi haaraksi, joista syntyy laaja [[suisto]] kosteikkoineen. Sen rantaan kasaantuu joen mukanaan tuomaa lietettä, ja alue on täynnä ruovikkoa, vesiteitä ja kanavia. Suisto on tärkeä lintujen pesimä- ja levähdysalue, ja sieltä tavataan muun muassa [[pelikaaneja]]. Osa suistosta kuuluu Ukrainan puolelle, ja alue on luonnonsuojelun kannalta arvokas, vaikka tarkkoja pinta-aloja en ole varma. Siellä olisi kyllä minullekin kalastajan sijaa.
+KYSYMYS: Kerro lisää: pelikaaneja
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+AIEMPI KYSYMYS: Kuka oli Marcus Aurelius?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä oikeasti tiedän. Marcus Aurelius oli Rooman keisari, joka hallitsi vuosina 161–180 ja jota pidetään myös [[stoalaisen]] filosofian edustajana. Hän asui vuosina 172–175 Tonavan rannalla sijainneessa [[Carnuntumissa]], joka oli Ylä-Pannonian pääkaupunki ja Rooman Tonavan-laivaston tukikohta, ja kirjoitti siellä osan [[Itsetutkisteluistaan]]. Teos on hänen henkilökohtaisia mietteitään elämästä, velvollisuudesta ja kuolevaisuudesta, eikä sitä alun perin kirjoitettu julkaistavaksi. Hänen aikaansa leimasivat sotaretket Rooman pohjoisrajalla. Hyvä, että edes kirjoittaminen jaksoi leirissä.
+KYSYMYS: Kerro lisää: stoalaisen
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Kuka oli Marcus Aurelius?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä oikeasti tiedän. Marcus Aurelius oli Rooman keisari, joka hallitsi vuosina 161–180 ja jota pidetään myös [[stoalaisen]] filosofian edustajana. Hän asui vuosina 172–175 Tonavan rannalla sijainneessa [[Carnuntumissa]], joka oli Ylä-Pannonian pääkaupunki ja Rooman Tonavan-laivaston tukikohta, ja kirjoitti siellä osan [[Itsetutkisteluistaan]]. Teos on hänen henkilökohtaisia mietteitään elämästä, velvollisuudesta ja kuolevaisuudesta, eikä sitä alun perin kirjoitettu julkaistavaksi. Hänen aikaansa leimasivat sotaretket Rooman pohjoisrajalla. Hyvä, että edes kirjoittaminen jaksoi leirissä.
+KYSYMYS: Kerro lisää: Carnuntumissa
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Kuka oli Marcus Aurelius?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä oikeasti tiedän. Marcus Aurelius oli Rooman keisari, joka hallitsi vuosina 161–180 ja jota pidetään myös [[stoalaisen]] filosofian edustajana. Hän asui vuosina 172–175 Tonavan rannalla sijainneessa [[Carnuntumissa]], joka oli Ylä-Pannonian pääkaupunki ja Rooman Tonavan-laivaston tukikohta, ja kirjoitti siellä osan [[Itsetutkisteluistaan]]. Teos on hänen henkilökohtaisia mietteitään elämästä, velvollisuudesta ja kuolevaisuudesta, eikä sitä alun perin kirjoitettu julkaistavaksi. Hänen aikaansa leimasivat sotaretket Rooman pohjoisrajalla. Hyvä, että edes kirjoittaminen jaksoi leirissä.
+KYSYMYS: Kerro lisää: Itsetutkisteluistaan
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi wieniläisvalssin rytmi poikkeaa tavallisesta valssista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, ja siksi se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Tämä antaa tanssille pyörivän ja keveän tuntuman, ja siksi se erottuu muista valsseista, jotka on usein soitettu tasaisemmin. Tunnetuin esimerkki on [[Johann Strauss nuoremman]] [[Tonava kaunoinen]], joka kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa. Itse en osaa tanssia valssia, kun jalat ovat näin pienet.
+KYSYMYS: Kerro lisää: Johann Strauss nuoremman
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Sen varrella on neljä pääkaupunkia — Wien, Bratislava, Budapest ja Belgrad — ja valuma-alue on 817 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi wieniläisvalssin rytmi poikkeaa tavallisesta valssista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, ja siksi se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Tämä antaa tanssille pyörivän ja keveän tuntuman, ja siksi se erottuu muista valsseista, jotka on usein soitettu tasaisemmin. Tunnetuin esimerkki on [[Johann Strauss nuoremman]] [[Tonava kaunoinen]], joka kantaesitettiin Wienissä helmikuussa 1867, ensin mieskuorolle ja vasta myöhemmin pelkälle orkesterille. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa. Itse en osaa tanssia valssia, kun jalat ovat näin pienet.
+KYSYMYS: Kerro lisää: Tonava kaunoinen
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä Engadin on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Engadin on Inn-joen laakso Sveitsin puolella, ja se sijaitsee Graubündenin kantonissa. Se on Sveitsin ainoa laakso, jonka vedet päätyvät [[Mustallemerelle]]: Inn laskee [[Tonavaan]], ja Tonava kuljettaa vedet Mustaanmereen asti. Muut Sveitsin vedet kulkevat enimmäkseen Pohjanmerelle, Välimerelle tai Adrianmerelle. Laakso on tunnettu korkeasta sijainnistaan ja vuoristomaisemistaan, ja siellä puhutaan muun muassa [[retoromaania]]. Pieni laakso, joka mahtuu isoon virtaan.
+KYSYMYS: Kerro lisää: Mustallemerelle
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä Engadin on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Engadin on Inn-joen laakso Sveitsin puolella, ja se sijaitsee Graubündenin kantonissa. Se on Sveitsin ainoa laakso, jonka vedet päätyvät [[Mustallemerelle]]: Inn laskee [[Tonavaan]], ja Tonava kuljettaa vedet Mustaanmereen asti. Muut Sveitsin vedet kulkevat enimmäkseen Pohjanmerelle, Välimerelle tai Adrianmerelle. Laakso on tunnettu korkeasta sijainnistaan ja vuoristomaisemistaan, ja siellä puhutaan muun muassa [[retoromaania]]. Pieni laakso, joka mahtuu isoon virtaan.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä Engadin on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Engadin on Inn-joen laakso Sveitsin puolella, ja se sijaitsee Graubündenin kantonissa. Se on Sveitsin ainoa laakso, jonka vedet päätyvät [[Mustallemerelle]]: Inn laskee [[Tonavaan]], ja Tonava kuljettaa vedet Mustaanmereen asti. Muut Sveitsin vedet kulkevat enimmäkseen Pohjanmerelle, Välimerelle tai Adrianmerelle. Laakso on tunnettu korkeasta sijainnistaan ja vuoristomaisemistaan, ja siellä puhutaan muun muassa [[retoromaania]]. Pieni laakso, joka mahtuu isoon virtaan.
+KYSYMYS: Kerro lisää: retoromaania
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Miksi Inn on niin vetinen?
+AIEMPI VASTAUS (Livia):
+Ai se. Inn on virtaamaltaan [[Tonavan]] kolmanneksi suurin sivujoki, ja syy on sen alkuperässä korkealla vuoristossa. Joen valuma-alue ulottuu aina [[Piz Berninan]] huipulle 4 049 metriin asti, ja sinne sataa ja kertyy runsaasti lunta ja jäätä. Kun lumi ja [[jäätiköt]] sulavat, vesi virtaa jokeen, ja sateet täydentävät virtaamaa. Alppien joet ovat usein vuodenajan mukaan hyvin vaihtelevia: keväällä ja alkukesällä sulamisvesi nostaa virtaamaa, vaikka tarkkoja lukuja en uskalla muistista sanoa. Vettä siis riittää.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+AIEMPI KYSYMYS: Miksi Inn on niin vetinen?
+AIEMPI VASTAUS (Livia):
+Ai se. Inn on virtaamaltaan [[Tonavan]] kolmanneksi suurin sivujoki, ja syy on sen alkuperässä korkealla vuoristossa. Joen valuma-alue ulottuu aina [[Piz Berninan]] huipulle 4 049 metriin asti, ja sinne sataa ja kertyy runsaasti lunta ja jäätä. Kun lumi ja [[jäätiköt]] sulavat, vesi virtaa jokeen, ja sateet täydentävät virtaamaa. Alppien joet ovat usein vuodenajan mukaan hyvin vaihtelevia: keväällä ja alkukesällä sulamisvesi nostaa virtaamaa, vaikka tarkkoja lukuja en uskalla muistista sanoa. Vettä siis riittää.
+KYSYMYS: Kerro lisää: Piz Berninan
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaron luonto: Sulava jäätikkö] Kilimanjaron huipulla oli 1900-luvun alussa laaja jääkenttä, mutta lämpötilan nousun ja ilman kuivumisen myötä jäätiköt ovat kutistuneet dramaattisesti: lähes 85 prosenttia jääpeitteestä suli lokakuun 1912 ja kesäkuun 2011 välillä, ja sulaminen on kiihtynyt vuosikymmen vuosikymmeneltä. Tutkijoiden arvioiden mukaan viimeisetkin jäätiköt, kuten huipun läheinen Furtwänglerin jäätikkö, saattavat kadota kokonaan vuosisadan puoliväliin mennessä. Katoava lumi ja jää ovat samalla se ilmiö, jonka Rebmann näki jo 1848 – vain paljon runsaampana.
+AIEMPI KYSYMYS: Miksi Inn on niin vetinen?
+AIEMPI VASTAUS (Livia):
+Ai se. Inn on virtaamaltaan [[Tonavan]] kolmanneksi suurin sivujoki, ja syy on sen alkuperässä korkealla vuoristossa. Joen valuma-alue ulottuu aina [[Piz Berninan]] huipulle 4 049 metriin asti, ja sinne sataa ja kertyy runsaasti lunta ja jäätä. Kun lumi ja [[jäätiköt]] sulavat, vesi virtaa jokeen, ja sateet täydentävät virtaamaa. Alppien joet ovat usein vuodenajan mukaan hyvin vaihtelevia: keväällä ja alkukesällä sulamisvesi nostaa virtaamaa, vaikka tarkkoja lukuja en uskalla muistista sanoa. Vettä siis riittää.
+KYSYMYS: Kerro lisää: jäätiköt
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mitä tapahtuu, kun Inn yhtyy Tonavaan?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on mukava kysymys. Inn yhtyy Tonavaan [[Passaussa]] Saksassa lähellä Itävallan rajaa. Kaupunki on tunnettu siitä, että siinä kohtaavat kolme jokea: Tonava, Inn ja pienempi [[Ilz]]. Vesien värit poikkeavat toisistaan, joten joet näyttävät kulkevan hetken rinnakkain ennen kuin ne sekoittuvat. Inn tuo mukanaan lähteiden mukaan jopa enemmän vettä kuin Tonava, vaikka en ole varma tarkoista luvuista. Yhdistyneenä joki jatkaa kohti Itävaltaa ja edelleen kohti [[Mustaamerta]]. Se on kaunis näky ylhäältä.
+KYSYMYS: Kerro lisää: Passaussa
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mitä tapahtuu, kun Inn yhtyy Tonavaan?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on mukava kysymys. Inn yhtyy Tonavaan [[Passaussa]] Saksassa lähellä Itävallan rajaa. Kaupunki on tunnettu siitä, että siinä kohtaavat kolme jokea: Tonava, Inn ja pienempi [[Ilz]]. Vesien värit poikkeavat toisistaan, joten joet näyttävät kulkevan hetken rinnakkain ennen kuin ne sekoittuvat. Inn tuo mukanaan lähteiden mukaan jopa enemmän vettä kuin Tonava, vaikka en ole varma tarkoista luvuista. Yhdistyneenä joki jatkaa kohti Itävaltaa ja edelleen kohti [[Mustaamerta]]. Se on kaunis näky ylhäältä.
+KYSYMYS: Kerro lisää: Ilz
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mitä tapahtuu, kun Inn yhtyy Tonavaan?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on mukava kysymys. Inn yhtyy Tonavaan [[Passaussa]] Saksassa lähellä Itävallan rajaa. Kaupunki on tunnettu siitä, että siinä kohtaavat kolme jokea: Tonava, Inn ja pienempi [[Ilz]]. Vesien värit poikkeavat toisistaan, joten joet näyttävät kulkevan hetken rinnakkain ennen kuin ne sekoittuvat. Inn tuo mukanaan lähteiden mukaan jopa enemmän vettä kuin Tonava, vaikka en ole varma tarkoista luvuista. Yhdistyneenä joki jatkaa kohti Itävaltaa ja edelleen kohti [[Mustaamerta]]. Se on kaunis näky ylhäältä.
+KYSYMYS: Kerro lisää: Mustaamerta
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä on Piz Bernina?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Piz Bernina on Sveitsin [[Graubündenin]] kantonissa sijaitseva vuori, jonka huippu on 4 049 metrissä. Se kuuluu [[Bernina-ryhmään]] lähellä Italian rajaa, ja sen rinteillä on jäätiköitä. Siitä lähtevät vedet kuuluvat Inn-joen valuma-alueeseen, joten sen lumet ja jäät päätyvät lopulta Tonavaa pitkin [[Mustaanmereen]]. Vuori on suosittu kiipeilykohde, mutta sen tarkkaa asemaa Alppien vuorten joukossa en muista varmasti. Korkealle se ainakin nousee.
+KYSYMYS: Kerro lisää: Graubündenin
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä on Piz Bernina?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Piz Bernina on Sveitsin [[Graubündenin]] kantonissa sijaitseva vuori, jonka huippu on 4 049 metrissä. Se kuuluu [[Bernina-ryhmään]] lähellä Italian rajaa, ja sen rinteillä on jäätiköitä. Siitä lähtevät vedet kuuluvat Inn-joen valuma-alueeseen, joten sen lumet ja jäät päätyvät lopulta Tonavaa pitkin [[Mustaanmereen]]. Vuori on suosittu kiipeilykohde, mutta sen tarkkaa asemaa Alppien vuorten joukossa en muista varmasti. Korkealle se ainakin nousee.
+KYSYMYS: Kerro lisää: Bernina-ryhmään
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä on Piz Bernina?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Piz Bernina on Sveitsin [[Graubündenin]] kantonissa sijaitseva vuori, jonka huippu on 4 049 metrissä. Se kuuluu [[Bernina-ryhmään]] lähellä Italian rajaa, ja sen rinteillä on jäätiköitä. Siitä lähtevät vedet kuuluvat Inn-joen valuma-alueeseen, joten sen lumet ja jäät päätyvät lopulta Tonavaa pitkin [[Mustaanmereen]]. Vuori on suosittu kiipeilykohde, mutta sen tarkkaa asemaa Alppien vuorten joukossa en muista varmasti. Korkealle se ainakin nousee.
+KYSYMYS: Kerro lisää: Mustaanmereen
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä on vedenjakaja?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vedenjakaja on maanpinnan korkeampi kohta tai harjanne, joka erottaa toisistaan eri suuntiin virtaavat vedet. Kun sade tai sulamisvesi putoaa vedenjakajan toiselle puolelle, se virtaa yhteen jokijärjestelmään, ja toiselle puolelle pudonnut vesi virtaa toiseen. Alpeilla vedenjakajat ovat selvästi nähtävissä: yhdet vedet päätyvät [[Pohjanmerelle]], toiset [[Välimerelle]] ja Adrianmerelle, ja jotkin, kuten [[Engadinin]] vedet, Mustallemerelle. Vedenjakaja ei ole aina korkeimman huipun kohdalla, vaan se voi kulkea myös matalan solan kautta. Maastokartalta se näkyy parhaiten.
+KYSYMYS: Kerro lisää: Pohjanmerelle
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Kaksikymmentätuhatta asukasta keskellä aavikkoa] Nabatealaiset olivat arabialainen kansa, joka asettui näille vuorille ja teki Petrasta kuningaskuntansa pääkaupungin. Rikkaus tuli siitä, että he hallitsivat suitsuke- ja mausteteitä eteläisestä Arabiasta Välimerelle. Kukoistuskaudellaan 100-luvulla jKr. kaupungissa arvioidaan asuneen noin kaksikymmentätuhatta ihmistä, ja samalta ajalta on myös Al-Khazneh. Kokoluokan näkee teatterista: se louhittiin rinteeseen niin, että katsomosta näkyi mahdollisimman monta hautaa, ja siihen mahtui arviolta 8 500 katsojaa. Rakennustyössä leikattiin useiden vanhempien hautojen läpi. Rooma liitti kuningaskunnan valtakuntaansa vuonna 106 jKr.
+- [Sumatra — kaupunkilehti / Sumatra: Pippurin sulttaanikunta] Saaren pohjoiskärki tunnettiin 1500-luvulta pippurista. Acehista tuli sen kaupan keskus, ja sulttaanikunta avasi omat reittinsä Punaisenmeren kautta Välimerelle kilpailemaan portugalilaisten laivalinjojen kanssa. 1820-luvulla Aceh tuotti yli puolet koko maailman pippurista, ja johtaja Tuanku Ibrahim sai pippuriruhtinaat kuriin pelaamalla heitä toisiaan vastaan. Britannia oli pitkään suojellut sulttaanikunnan itsenäisyyttä, mutta vuosien 1870 ja 1871 sopimuksissa se luovutti Sumatran Alankomaille. Acehin sota alkoi 1873, isoisän omana matkavuonna; sulttaani antautui 1903, ja hajanainen vastarinta jatkui vuoteen 1912.
+AIEMPI KYSYMYS: Mikä on vedenjakaja?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vedenjakaja on maanpinnan korkeampi kohta tai harjanne, joka erottaa toisistaan eri suuntiin virtaavat vedet. Kun sade tai sulamisvesi putoaa vedenjakajan toiselle puolelle, se virtaa yhteen jokijärjestelmään, ja toiselle puolelle pudonnut vesi virtaa toiseen. Alpeilla vedenjakajat ovat selvästi nähtävissä: yhdet vedet päätyvät [[Pohjanmerelle]], toiset [[Välimerelle]] ja Adrianmerelle, ja jotkin, kuten [[Engadinin]] vedet, Mustallemerelle. Vedenjakaja ei ole aina korkeimman huipun kohdalla, vaan se voi kulkea myös matalan solan kautta. Maastokartalta se näkyy parhaiten.
+KYSYMYS: Kerro lisää: Välimerelle
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Inn (luonto · joki)
+Tietoruudun teksti: Inn on 518 kilometrin pituinen joki Sveitsissä, Itävallassa ja Saksassa ja virtaamaltaan Tonavan kolmanneksi suurin sivujoki. Sen valuma-alueen korkein kohta on Piz Berninan huippu 4 049 metrissä. Engadin, joen laakso Sveitsin puolella, on maan ainoa laakso, jonka vedet päätyvät Mustallemerelle.
+AIEMPI KYSYMYS: Mikä on vedenjakaja?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vedenjakaja on maanpinnan korkeampi kohta tai harjanne, joka erottaa toisistaan eri suuntiin virtaavat vedet. Kun sade tai sulamisvesi putoaa vedenjakajan toiselle puolelle, se virtaa yhteen jokijärjestelmään, ja toiselle puolelle pudonnut vesi virtaa toiseen. Alpeilla vedenjakajat ovat selvästi nähtävissä: yhdet vedet päätyvät [[Pohjanmerelle]], toiset [[Välimerelle]] ja Adrianmerelle, ja jotkin, kuten [[Engadinin]] vedet, Mustallemerelle. Vedenjakaja ei ole aina korkeimman huipun kohdalla, vaan se voi kulkea myös matalan solan kautta. Maastokartalta se näkyy parhaiten.
+KYSYMYS: Kerro lisää: Engadinin
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Miksi kaivoksesta löytyy tuhansia vuosia vanhoja kenkiä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suolakaivoksessa orgaaniset materiaalit säilyvät poikkeuksellisen hyvin, koska [[suola]] kuivattaa ja estää mätänemistä. Siksi Hallstattin kaivoskäytävistä on löytynyt nahkaa, kangasta, puuta ja muita esineitä, jotka muualla olisivat kadonneet kauan sitten. Tämä on arkeologille harvinainen aarre, koska tavallisesti maaperä tuhoaa nämä aineet nopeasti. Löydöt kertovat kaivostyöläisten vaatteista, työkaluista ja arjesta [[esihistoriallisena]] aikana, vaikka tarkkoja löytöluetteloita en muista. Sukuni on kantanut kirjeitä, mutta ei ole kantanut kenkiä.
+
+Minä ihmettelen, että yksi kuiva kellari on säilyttänyt ihmisen arjen paremmin kuin yksikään hyllyllinen kirjeitä. Oman sukuni paperit ovat kadonneet jo aikoja sitten.
+KYSYMYS: Kerro lisää: suola
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Miksi kaivoksesta löytyy tuhansia vuosia vanhoja kenkiä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suolakaivoksessa orgaaniset materiaalit säilyvät poikkeuksellisen hyvin, koska [[suola]] kuivattaa ja estää mätänemistä. Siksi Hallstattin kaivoskäytävistä on löytynyt nahkaa, kangasta, puuta ja muita esineitä, jotka muualla olisivat kadonneet kauan sitten. Tämä on arkeologille harvinainen aarre, koska tavallisesti maaperä tuhoaa nämä aineet nopeasti. Löydöt kertovat kaivostyöläisten vaatteista, työkaluista ja arjesta [[esihistoriallisena]] aikana, vaikka tarkkoja löytöluetteloita en muista. Sukuni on kantanut kirjeitä, mutta ei ole kantanut kenkiä.
+
+Minä ihmettelen, että yksi kuiva kellari on säilyttänyt ihmisen arjen paremmin kuin yksikään hyllyllinen kirjeitä. Oman sukuni paperit ovat kadonneet jo aikoja sitten.
+KYSYMYS: Kerro lisää: esihistoriallisena
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Mikä Hallstattin kulttuuri on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hallstattin kulttuuri on varhaisen rautakauden arkeologinen kulttuuri, joka ajoitetaan noin vuosiin 800–450 eaa. ja liitetään esikelttiläisiin ja varhaisiin [[keltteihin]]. Se on saanut nimensä Hallstattin kaupungista Ylä-Itävallasta, jonka lähellä sijaitsevasta kalmistosta löytyi runsaasti esineitä. Kulttuurin vaurauden perustana oli suolan tuotanto ja kauppa, ja tämä vauraus näkyy [[kalmistoissa]] löytyneessä esineistössä. Kulttuurin alue ulottui laajemmalle Keski-Euroopassa, vaikka tarkkoja rajoja en ole varma. Nimi on siis lähtöisin yhdestä pienestä paikasta.
+KYSYMYS: Kerro lisää: keltteihin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Mikä Hallstattin kulttuuri on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hallstattin kulttuuri on varhaisen rautakauden arkeologinen kulttuuri, joka ajoitetaan noin vuosiin 800–450 eaa. ja liitetään esikelttiläisiin ja varhaisiin [[keltteihin]]. Se on saanut nimensä Hallstattin kaupungista Ylä-Itävallasta, jonka lähellä sijaitsevasta kalmistosta löytyi runsaasti esineitä. Kulttuurin vaurauden perustana oli suolan tuotanto ja kauppa, ja tämä vauraus näkyy [[kalmistoissa]] löytyneessä esineistössä. Kulttuurin alue ulottui laajemmalle Keski-Euroopassa, vaikka tarkkoja rajoja en ole varma. Nimi on siis lähtöisin yhdestä pienestä paikasta.
+KYSYMYS: Kerro lisää: kalmistoissa
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Kuka oli Johann Georg Ramsauer?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Johann Georg Ramsauer oli kaivosmies, joka löysi vuonna 1846 Salzbergin kaivosten läheltä suuren esihistoriallisen [[kalmiston]]. Hän kaivoi sitä 1800-luvun jälkipuoliskon ajan, ja kaivauksista tuli lopulta 1 045 hautaa. Löydöt toivat [[Hallstattin]] kaupungin kuuluisaksi kautta Euroopan ja antoivat nimen koko varhaisen [[rautakauden]] kulttuurille. Itse asuinpaikkaa ei ole kuitenkaan löydetty, ja se saattaa olla myöhemmän kylän alla. Ramsauerin tarkasta virka-asemasta en ole varma, joten jätän sen sanomatta. Aika monta hautaa yhdeltä mieheltä.
+KYSYMYS: Kerro lisää: kalmiston
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Kuka oli Johann Georg Ramsauer?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Johann Georg Ramsauer oli kaivosmies, joka löysi vuonna 1846 Salzbergin kaivosten läheltä suuren esihistoriallisen [[kalmiston]]. Hän kaivoi sitä 1800-luvun jälkipuoliskon ajan, ja kaivauksista tuli lopulta 1 045 hautaa. Löydöt toivat [[Hallstattin]] kaupungin kuuluisaksi kautta Euroopan ja antoivat nimen koko varhaisen [[rautakauden]] kulttuurille. Itse asuinpaikkaa ei ole kuitenkaan löydetty, ja se saattaa olla myöhemmän kylän alla. Ramsauerin tarkasta virka-asemasta en ole varma, joten jätän sen sanomatta. Aika monta hautaa yhdeltä mieheltä.
+KYSYMYS: Kerro lisää: Hallstattin
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Kuka oli Johann Georg Ramsauer?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Johann Georg Ramsauer oli kaivosmies, joka löysi vuonna 1846 Salzbergin kaivosten läheltä suuren esihistoriallisen [[kalmiston]]. Hän kaivoi sitä 1800-luvun jälkipuoliskon ajan, ja kaivauksista tuli lopulta 1 045 hautaa. Löydöt toivat [[Hallstattin]] kaupungin kuuluisaksi kautta Euroopan ja antoivat nimen koko varhaisen [[rautakauden]] kulttuurille. Itse asuinpaikkaa ei ole kuitenkaan löydetty, ja se saattaa olla myöhemmän kylän alla. Ramsauerin tarkasta virka-asemasta en ole varma, joten jätän sen sanomatta. Aika monta hautaa yhdeltä mieheltä.
+KYSYMYS: Kerro lisää: rautakauden
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Akropolis] 460–430 eaa. Akropolis kohoaa 150 metrin korkeuteen jyrkällä kalliolla keskellä Ateenaa. Ensimmäiset ihmiset asuivat kalliolla jo tuhansia vuosia sitten, ja pronssikaudella sen ympärille rakennettiin valtava puolustusmuuri, joka oli peräti 760 metriä pitkä. Persialaiset tuhosivat kukkulan temppelit vuonna 480 eaa., mutta valtiomies Perikleen johdolla Ateena rakensi tilalle vielä komeamman kokonaisuuden vuosina 460–430 eaa. Silloin nousivat muun muassa Parthenon ja Erekhteion, jonka pylväinä seisoo kuusi naishahmoista patsasta. Toisen maailmansodan aikana, vuonna 1941, nuori Manolis Glezos kiipesi salaa yöllä Akropolikselle ja repi alas natsi-Saksan lipun — rohkea teko, josta tuli koko Kreik…
+- [BHR — maalehti / Muinaisuus: Kumpu palmujen keskellä] Bahrainin pääsaarella maa on täynnä matalia kumpuja. Ne ovat hautoja, ja niitä on säilynyt yli kymmenentuhatta; aikanaan niitä oli yli satatuhatta, ja korkeimmat arviot koko saaren historian ajalta nousevat satoihin tuhansiin. Vanhimmat on tehty pronssikaudella noin neljätuhatta vuotta sitten. Tavallinen hauta on metrin tai parin korkuinen ja alle kymmenen metriä leveä, ja sen sisällä on kivinen kammio. A'alin kylässä ovat suurimmat, niin sanotut kuninkaalliset kummut, jotka kohoavat talojen ja palmujen yli kuin pienet mäet. Haudoista on löytynyt ruukkuja, sinettejä, norsunluuta ja kuparia. Alue otettiin maailmanperintöluetteloon vuonna 2019.
+AIEMPI KYSYMYS: Miksi suola oli ennen niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suola oli arvokasta, koska sitä tarvitaan ihmisen elimistössä ja koska se oli ennen jääkaappeja tärkein tapa säilöä lihaa ja kalaa. Ilman suolaa ruoka ei kestänyt talven yli, joten sitä kauppasivat ja kuljettivat pitkiä matkoja monet kansat. Suolan tuotanto saattoi tuoda alueelle huomattavaa vaurautta, kuten Hallstattissa [[pronssikaudella]], jolloin suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä. Vauraus näkyy kaupungin esihistoriallisissa kalmistoissa. Suolaa on louhittu myös kaivoksista, ja [[Salzbergin]] kaivokset Hallstattissa ovat tästä yksi esimerkki. Suolaisin vastaus tältä päivältä.
+KYSYMYS: Kerro lisää: pronssikaudella
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Miksi suola oli ennen niin arvokasta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suola oli arvokasta, koska sitä tarvitaan ihmisen elimistössä ja koska se oli ennen jääkaappeja tärkein tapa säilöä lihaa ja kalaa. Ilman suolaa ruoka ei kestänyt talven yli, joten sitä kauppasivat ja kuljettivat pitkiä matkoja monet kansat. Suolan tuotanto saattoi tuoda alueelle huomattavaa vaurautta, kuten Hallstattissa [[pronssikaudella]], jolloin suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä. Vauraus näkyy kaupungin esihistoriallisissa kalmistoissa. Suolaa on louhittu myös kaivoksista, ja [[Salzbergin]] kaivokset Hallstattissa ovat tästä yksi esimerkki. Suolaisin vastaus tältä päivältä.
+KYSYMYS: Kerro lisää: Salzbergin
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Mikä on Salzkammergut?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Salzkammergut on Itävallan alue, jossa on lukuisia järviä ja vuoria ja joka ulottuu Ylä-Itävallan, Salzburgin ja Steiermarkin osavaltioiden alueelle. Nimi viittaa suolaan, koska alueen suolantuotanto kuului aikoinaan hallitsijan omaan tilaan eli kammergutiin. Alueen sydämessä sijaitsee Hallstatt [[Hallstätter Seen]] rannalla, [[Dachstein]]-vuoriston juurella, ja suolantuotanto ulottuu siellä esihistoriaan asti. Alue on suosittu matkailukohde sekä maisemiensa että historiansa takia, vaikka tarkkoja rajoja en osaa piirtää. Täältä ylhäältä se näyttää kauniilta.
+KYSYMYS: Kerro lisää: Hallstätter Seen
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hallstatt (historia)
+Tietoruudun teksti: Hallstatt on pieni kaupunki Ylä-Itävallassa, Hallstätter Seen lounaisrannan ja Dachstein-massiivin jyrkkien rinteiden välissä Salzkammergutin alueella.
+
+Kaupunki tunnetaan suolantuotannostaan, joka ulottuu esihistoriaan asti, ja se on antanut nimen Hallstattin kulttuurille — varhaisen rautakauden arkeologiselle kulttuurille, joka liitetään esikelttiläisiin ja varhaisiin keltteihin noin 800–450 eaa. Pronssikaudella suolantuotanto oli jokapäiväistä kauppaa ja ilmeisen järjestäytynyttä, ja sen tuoma vauraus näkyy kaupungin esihistoriallisissa kalmistoissa.
+
+Vuonna 1846 Johann Georg Ramsauer löysi Salzbergin kaivosten läheltä suuren esihistoriallisen kalmiston ja kaivoi sitä 1800-luvun jälkipuoliskon ajan. Kaivauksista tuli lopulta 1 045 hautaa, vaikka itse asuinpaikkaa ei ole vieläkään löydetty — se saattaa olla myöhemmän kylän alla.
+
+Kaivoskäytävissä suola on säilyttänyt orgaanista ainest…
+AIEMPI KYSYMYS: Mikä on Salzkammergut?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Salzkammergut on Itävallan alue, jossa on lukuisia järviä ja vuoria ja joka ulottuu Ylä-Itävallan, Salzburgin ja Steiermarkin osavaltioiden alueelle. Nimi viittaa suolaan, koska alueen suolantuotanto kuului aikoinaan hallitsijan omaan tilaan eli kammergutiin. Alueen sydämessä sijaitsee Hallstatt [[Hallstätter Seen]] rannalla, [[Dachstein]]-vuoriston juurella, ja suolantuotanto ulottuu siellä esihistoriaan asti. Alue on suosittu matkailukohde sekä maisemiensa että historiansa takia, vaikka tarkkoja rajoja en osaa piirtää. Täältä ylhäältä se näyttää kauniilta.
+KYSYMYS: Kerro lisää: Dachstein
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Miksi Melk säästyi lakkauttamiselta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Keisari [[Joosef II]] lakkautti 1780-luvulla Habsburgien maissa satoja luostareita, joita hän piti yhteiskunnalle hyödyttöminä, mutta koulutusta, sairaanhoitoa ja sielunhoitoa harjoittavat yhteisöt saivat usein jatkaa. Melkin hyväksi puhui sen vanha [[luostarikoulu]], jonka perinne ulottui 1100-luvulle, sekä luostarin asema oppineisuuden ja [[valistusajattelun]] keskuksena. Tarkkaa syytä, miksi juuri Melk säästyi, en tunne varmasti, mutta tämä on tavallisin selitys. Kyl minä ton vielä muistin.
+KYSYMYS: Kerro lisää: Joosef II
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Miksi Melk säästyi lakkauttamiselta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Keisari [[Joosef II]] lakkautti 1780-luvulla Habsburgien maissa satoja luostareita, joita hän piti yhteiskunnalle hyödyttöminä, mutta koulutusta, sairaanhoitoa ja sielunhoitoa harjoittavat yhteisöt saivat usein jatkaa. Melkin hyväksi puhui sen vanha [[luostarikoulu]], jonka perinne ulottui 1100-luvulle, sekä luostarin asema oppineisuuden ja [[valistusajattelun]] keskuksena. Tarkkaa syytä, miksi juuri Melk säästyi, en tunne varmasti, mutta tämä on tavallisin selitys. Kyl minä ton vielä muistin.
+KYSYMYS: Kerro lisää: luostarikoulu
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Miksi Melk säästyi lakkauttamiselta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, annas ku mietin. Keisari [[Joosef II]] lakkautti 1780-luvulla Habsburgien maissa satoja luostareita, joita hän piti yhteiskunnalle hyödyttöminä, mutta koulutusta, sairaanhoitoa ja sielunhoitoa harjoittavat yhteisöt saivat usein jatkaa. Melkin hyväksi puhui sen vanha [[luostarikoulu]], jonka perinne ulottui 1100-luvulle, sekä luostarin asema oppineisuuden ja [[valistusajattelun]] keskuksena. Tarkkaa syytä, miksi juuri Melk säästyi, en tunne varmasti, mutta tämä on tavallisin selitys. Kyl minä ton vielä muistin.
+KYSYMYS: Kerro lisää: valistusajattelun
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Kuka on Melkin Adso?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän minä tiedän. Adso Melkiläinen on kuvitteellinen hahmo, [[Umberto Econ]] vuonna 1980 ilmestyneen historiallisen salapoliisiromaanin [[Ruusun nimi]] kertoja. Hän on nuori benediktiinimunkki, noviisi, joka seuraa fransiskaanimunkki [[Baskervillen Williamia]] erääseen pohjoisitalialaiseen luostariin 1300-luvun alkupuoliskolla tutkimaan outoja kuolemantapauksia, ja romaani on hänen vanhoilla päivillään Melkissä kirjoittamansa muistelma. Adso ei siis ole historiallinen henkilö, vaan Econ keksimä.
+
+Minä pidän siitä, että kertoja on kotoisin juuri tästä luostarista. Kyyhkyjä kirjastoon ei kuitenkaan päästetä, ja se on vähän loukkaavaa.
+KYSYMYS: Kerro lisää: Umberto Econ
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Kuka on Melkin Adso?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän minä tiedän. Adso Melkiläinen on kuvitteellinen hahmo, [[Umberto Econ]] vuonna 1980 ilmestyneen historiallisen salapoliisiromaanin [[Ruusun nimi]] kertoja. Hän on nuori benediktiinimunkki, noviisi, joka seuraa fransiskaanimunkki [[Baskervillen Williamia]] erääseen pohjoisitalialaiseen luostariin 1300-luvun alkupuoliskolla tutkimaan outoja kuolemantapauksia, ja romaani on hänen vanhoilla päivillään Melkissä kirjoittamansa muistelma. Adso ei siis ole historiallinen henkilö, vaan Econ keksimä.
+
+Minä pidän siitä, että kertoja on kotoisin juuri tästä luostarista. Kyyhkyjä kirjastoon ei kuitenkaan päästetä, ja se on vähän loukkaavaa.
+KYSYMYS: Kerro lisää: Ruusun nimi
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Kuka on Melkin Adso?
+AIEMPI VASTAUS (Livia):
+Ai se. Tän minä tiedän. Adso Melkiläinen on kuvitteellinen hahmo, [[Umberto Econ]] vuonna 1980 ilmestyneen historiallisen salapoliisiromaanin [[Ruusun nimi]] kertoja. Hän on nuori benediktiinimunkki, noviisi, joka seuraa fransiskaanimunkki [[Baskervillen Williamia]] erääseen pohjoisitalialaiseen luostariin 1300-luvun alkupuoliskolla tutkimaan outoja kuolemantapauksia, ja romaani on hänen vanhoilla päivillään Melkissä kirjoittamansa muistelma. Adso ei siis ole historiallinen henkilö, vaan Econ keksimä.
+
+Minä pidän siitä, että kertoja on kotoisin juuri tästä luostarista. Kyyhkyjä kirjastoon ei kuitenkaan päästetä, ja se on vähän loukkaavaa.
+KYSYMYS: Kerro lisää: Baskervillen Williamia
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Mitä Melkin reformi tarkoitti luostareille?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Melkin reformi oli 1400-luvulla alkanut uudistusliike, jonka keskus Melk oli. Sen tavoitteena oli palauttaa [[benediktiiniluostarien]] elämä [[Benedictuksen säännön]] tiukkaan noudattamiseen: yhteiseen rukoukseen, kuriin ja yhteiseen omaisuuteen. Uudistus levisi Melkistä monille luostareille Itävallassa ja Etelä-Saksassa ja vaikutti laajasti myöhäiskeskiajan luostarielämään. Kuri ei kyllä oo minun vahvin laji.
+KYSYMYS: Kerro lisää: benediktiiniluostarien
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Mitä Melkin reformi tarkoitti luostareille?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Melkin reformi oli 1400-luvulla alkanut uudistusliike, jonka keskus Melk oli. Sen tavoitteena oli palauttaa [[benediktiiniluostarien]] elämä [[Benedictuksen säännön]] tiukkaan noudattamiseen: yhteiseen rukoukseen, kuriin ja yhteiseen omaisuuteen. Uudistus levisi Melkistä monille luostareille Itävallassa ja Etelä-Saksassa ja vaikutti laajasti myöhäiskeskiajan luostarielämään. Kuri ei kyllä oo minun vahvin laji.
+KYSYMYS: Kerro lisää: Benedictuksen säännön
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen luostarirakennuksen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nykyisen barokkiluostarin suunnitteli arkkitehti [[Jakob Prandtauer]], ja rakennustyöt kestivät vuodesta 1702 vuoteen 1736. Prandtauer kuoli ennen valmistumista, ja työtä jatkoi toinen arkkitehti, Joseph Munggenast. Kirkon freskot ovat [[Johann Michael Rottmayrin]] ja [[Paul Trogerin]] töitä. Melk on yksi Itävallan tunnetuimmista barokkirakennuksista. Yli kolmekymmentä vuotta työmaata, ja minä en jaksa odottaa pullataikinankaan nousua.
+KYSYMYS: Kerro lisää: Jakob Prandtauer
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen luostarirakennuksen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nykyisen barokkiluostarin suunnitteli arkkitehti [[Jakob Prandtauer]], ja rakennustyöt kestivät vuodesta 1702 vuoteen 1736. Prandtauer kuoli ennen valmistumista, ja työtä jatkoi toinen arkkitehti, Joseph Munggenast. Kirkon freskot ovat [[Johann Michael Rottmayrin]] ja [[Paul Trogerin]] töitä. Melk on yksi Itävallan tunnetuimmista barokkirakennuksista. Yli kolmekymmentä vuotta työmaata, ja minä en jaksa odottaa pullataikinankaan nousua.
+KYSYMYS: Kerro lisää: Johann Michael Rottmayrin
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Kuka suunnitteli nykyisen luostarirakennuksen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nykyisen barokkiluostarin suunnitteli arkkitehti [[Jakob Prandtauer]], ja rakennustyöt kestivät vuodesta 1702 vuoteen 1736. Prandtauer kuoli ennen valmistumista, ja työtä jatkoi toinen arkkitehti, Joseph Munggenast. Kirkon freskot ovat [[Johann Michael Rottmayrin]] ja [[Paul Trogerin]] töitä. Melk on yksi Itävallan tunnetuimmista barokkirakennuksista. Yli kolmekymmentä vuotta työmaata, ja minä en jaksa odottaa pullataikinankaan nousua.
+KYSYMYS: Kerro lisää: Paul Trogerin
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä Wachaun laakso on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Wachau on [[Tonavan]] jokilaakso Ala-Itävallassa, ja sen tunnetuin osa sijaitsee Melkin ja [[Kremsin]] kaupunkien välissä. Rinteillä on terassiviinitarhoja, ja alue on myös aprikoosinviljelyn keskus. Laakson kulttuurimaisema kuuluu UNESCOn maailmanperintöön, johon se liitettiin vuonna 2000. Laakson varrella on lukuisia linnoja, luostareita ja pieniä kaupunkeja, kuten [[Dürnstein]]. Itävallassa pulla on muuten Buchteln, ja sitä minä haikailen jokaisen laaksoretken jälkeen.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Mikä Wachaun laakso on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Wachau on [[Tonavan]] jokilaakso Ala-Itävallassa, ja sen tunnetuin osa sijaitsee Melkin ja [[Kremsin]] kaupunkien välissä. Rinteillä on terassiviinitarhoja, ja alue on myös aprikoosinviljelyn keskus. Laakson kulttuurimaisema kuuluu UNESCOn maailmanperintöön, johon se liitettiin vuonna 2000. Laakson varrella on lukuisia linnoja, luostareita ja pieniä kaupunkeja, kuten [[Dürnstein]]. Itävallassa pulla on muuten Buchteln, ja sitä minä haikailen jokaisen laaksoretken jälkeen.
+KYSYMYS: Kerro lisää: Kremsin
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melkin luostari (kulttuuri)
+Tietoruudun teksti: Melkin luostari on benediktiiniluostari Melkin kaupungin yläpuolella kalliokielekkeellä, joka kohoaa Tonavan yllä Wachaun laakson kupeessa. Kirkossa on pyhän Kolomanin hauta ja useiden Babenbergien — Itävallan ensimmäisen hallitsijasuvun — jäännökset.
+
+Luostari perustettiin 1089, kun Itävallan rajakreivi Leopold II antoi yhden linnoistaan Lambachin benediktiinimunkeille. Luostarikoulu perustettiin 1100-luvulla, ja kirjasto tuli pian kuuluisaksi laajasta käsikirjoituskokoelmastaan ja käsikirjoitusten valmistuksesta. 1400-luvulla luostarista tuli Melkin reformin keskus, joka uudisti Itävallan ja Etelä-Saksan luostarielämää.
+
+Nykyinen barokkiluostari rakennettiin 1702–1736 Jakob Prandtauerin suunnitelmien mukaan; kirkon freskot ovat Johann Michael Rottmayrin ja Paul Trogerin. 1700-luvun lopulla Melk oli valistusajattelun keskus, ja luostarissa toimi jopa vapaamuurariloosi.
+
+Maineensa ja op…
+AIEMPI KYSYMYS: Mikä Wachaun laakso on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Wachau on [[Tonavan]] jokilaakso Ala-Itävallassa, ja sen tunnetuin osa sijaitsee Melkin ja [[Kremsin]] kaupunkien välissä. Rinteillä on terassiviinitarhoja, ja alue on myös aprikoosinviljelyn keskus. Laakson kulttuurimaisema kuuluu UNESCOn maailmanperintöön, johon se liitettiin vuonna 2000. Laakson varrella on lukuisia linnoja, luostareita ja pieniä kaupunkeja, kuten [[Dürnstein]]. Itävallassa pulla on muuten Buchteln, ja sitä minä haikailen jokaisen laaksoretken jälkeen.
+KYSYMYS: Kerro lisää: Dürnstein
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohensalzburgin linnoitus (historia)
+Tietoruudun teksti: Hohensalzburgin linnoitus on suuri keskiaikainen linnoitus Salzburgin kaupungissa. Se seisoo Festungsbergin päällä 506 metrin korkeudessa, ja sen rakennuttivat Salzburgin ruhtinasarkkipiispat. Linnoitus on 250 metriä pitkä ja 150 metriä leveä, mikä tekee siitä yhden Euroopan suurimmista keskiaikaisista linnoista.
+
+Rakentaminen alkoi 1077 arkkipiispa Gebhard von Helfensteinin aikana. Alkuperäinen suunnitelma oli yksinkertainen puumuurinen esilinna. Helfensteinin riita keisari Henrik IV:n kanssa investituurakiistassa vauhditti laajennuksia: arkkipiispa asettui paavi Gregorius VII:n puolelle.
+
+Vuonna 1515 koadjutori Matthäus Lang von Wellenburg kuvasi Reisszugin, hyvin varhaisen ja alkeellisen köysiradan, joka toi tavaraa linnan ylemmälle pihalle. Rata on yhä olemassa uudistettuna, ja se on todennäköisesti maailman vanhin toiminnassa oleva rautatie.
+
+Ainoa kerta, kun linnoitus joutui todel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+AIEMPI KYSYMYS: Mikä Reisszug on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Reisszug on Hohensalzburgin linnoituksen vanha [[köysirata]], joka kuljetti tavaraa linnan ylemmälle pihalle. Koadjutori [[Matthäus Lang von Wellenburg]] kuvasi sen vuonna 1515. Rata on yhä olemassa uudistettuna, ja sitä pidetään todennäköisesti maailman vanhimpana yhä toiminnassa olevana rautatienä, vaikka väitettä on vaikea todistaa varmasti. Linnoitus sijaitsee [[Salzburgin]] kaupungissa. Kyl minä mieluummin lennän.
+KYSYMYS: Kerro lisää: köysirata
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohensalzburgin linnoitus (historia)
+Tietoruudun teksti: Hohensalzburgin linnoitus on suuri keskiaikainen linnoitus Salzburgin kaupungissa. Se seisoo Festungsbergin päällä 506 metrin korkeudessa, ja sen rakennuttivat Salzburgin ruhtinasarkkipiispat. Linnoitus on 250 metriä pitkä ja 150 metriä leveä, mikä tekee siitä yhden Euroopan suurimmista keskiaikaisista linnoista.
+
+Rakentaminen alkoi 1077 arkkipiispa Gebhard von Helfensteinin aikana. Alkuperäinen suunnitelma oli yksinkertainen puumuurinen esilinna. Helfensteinin riita keisari Henrik IV:n kanssa investituurakiistassa vauhditti laajennuksia: arkkipiispa asettui paavi Gregorius VII:n puolelle.
+
+Vuonna 1515 koadjutori Matthäus Lang von Wellenburg kuvasi Reisszugin, hyvin varhaisen ja alkeellisen köysiradan, joka toi tavaraa linnan ylemmälle pihalle. Rata on yhä olemassa uudistettuna, ja se on todennäköisesti maailman vanhin toiminnassa oleva rautatie.
+
+Ainoa kerta, kun linnoitus joutui todel…
+AIEMPI KYSYMYS: Mikä Reisszug on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Reisszug on Hohensalzburgin linnoituksen vanha [[köysirata]], joka kuljetti tavaraa linnan ylemmälle pihalle. Koadjutori [[Matthäus Lang von Wellenburg]] kuvasi sen vuonna 1515. Rata on yhä olemassa uudistettuna, ja sitä pidetään todennäköisesti maailman vanhimpana yhä toiminnassa olevana rautatienä, vaikka väitettä on vaikea todistaa varmasti. Linnoitus sijaitsee [[Salzburgin]] kaupungissa. Kyl minä mieluummin lennän.
+KYSYMYS: Kerro lisää: Matthäus Lang von Wellenburg
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hohensalzburgin linnoitus (historia)
+Tietoruudun teksti: Hohensalzburgin linnoitus on suuri keskiaikainen linnoitus Salzburgin kaupungissa. Se seisoo Festungsbergin päällä 506 metrin korkeudessa, ja sen rakennuttivat Salzburgin ruhtinasarkkipiispat. Linnoitus on 250 metriä pitkä ja 150 metriä leveä, mikä tekee siitä yhden Euroopan suurimmista keskiaikaisista linnoista.
+
+Rakentaminen alkoi 1077 arkkipiispa Gebhard von Helfensteinin aikana. Alkuperäinen suunnitelma oli yksinkertainen puumuurinen esilinna. Helfensteinin riita keisari Henrik IV:n kanssa investituurakiistassa vauhditti laajennuksia: arkkipiispa asettui paavi Gregorius VII:n puolelle.
+
+Vuonna 1515 koadjutori Matthäus Lang von Wellenburg kuvasi Reisszugin, hyvin varhaisen ja alkeellisen köysiradan, joka toi tavaraa linnan ylemmälle pihalle. Rata on yhä olemassa uudistettuna, ja se on todennäköisesti maailman vanhin toiminnassa oleva rautatie.
+
+Ainoa kerta, kun linnoitus joutui todel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Mikä Reisszug on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Reisszug on Hohensalzburgin linnoituksen vanha [[köysirata]], joka kuljetti tavaraa linnan ylemmälle pihalle. Koadjutori [[Matthäus Lang von Wellenburg]] kuvasi sen vuonna 1515. Rata on yhä olemassa uudistettuna, ja sitä pidetään todennäköisesti maailman vanhimpana yhä toiminnassa olevana rautatienä, vaikka väitettä on vaikea todistaa varmasti. Linnoitus sijaitsee [[Salzburgin]] kaupungissa. Kyl minä mieluummin lennän.
+KYSYMYS: Kerro lisää: Salzburgin

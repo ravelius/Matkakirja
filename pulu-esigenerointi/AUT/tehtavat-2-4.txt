@@ -1,0 +1,1074 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zell am See (luonto · järvi)
+Tietoruudun teksti: Zell am See on Zell am Seen piirikunnan hallinnollinen keskus Salzburgin osavaltiossa Itävallassa. Se sijaitsee Kitzbühelin Alpeilla, ja se on tärkeä matkailukohde hiihtokeskustensa ja Zellinjärven rannan vuoksi. Zell am See on ollut Euroopan aateliston suosima talvi- ja kesäpaikka 1800-luvulta lähtien. Kaupunki on noin 80 kilometriä Salzburgista etelään ja 30 kilometriä Itävallan korkeimmasta vuoresta Großglocknerista pohjoiseen, ja sen historiallinen keskusta on 68 metriä syvän Zellinjärven läntisellä rannalla. Kaupungin oma kotivuori on 1 965 metrin korkuinen Schmittenhöhe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Mikä on Großglockner?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Großglockner]] on Itävallan korkein vuori, noin 3 800 metriä korkea, ja se kohoaa Hohe Tauernin vuoristossa. Se sijaitsee noin 30 kilometrin päässä Zell am Seestä etelään. Vuoren lähellä kulkee kuuluisa korkeiden Alppien panoraamatie, ja ympäristö kuuluu [[Hohe Tauernin kansallispuistoon]]. Tarkan metrimäärän muistan hieman epävarmasti, joten sanon noin.
+KYSYMYS: Kerro lisää: Hohe Tauernin kansallispuistoon
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zell am See (luonto · järvi)
+Tietoruudun teksti: Zell am See on Zell am Seen piirikunnan hallinnollinen keskus Salzburgin osavaltiossa Itävallassa. Se sijaitsee Kitzbühelin Alpeilla, ja se on tärkeä matkailukohde hiihtokeskustensa ja Zellinjärven rannan vuoksi. Zell am See on ollut Euroopan aateliston suosima talvi- ja kesäpaikka 1800-luvulta lähtien. Kaupunki on noin 80 kilometriä Salzburgista etelään ja 30 kilometriä Itävallan korkeimmasta vuoresta Großglocknerista pohjoiseen, ja sen historiallinen keskusta on 68 metriä syvän Zellinjärven läntisellä rannalla. Kaupungin oma kotivuori on 1 965 metrin korkuinen Schmittenhöhe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Rinne, jossa lennetään kuusikymmentä metriä] 1937 — Kitzbühelin Streif on maailman pelätyin syöksylaskurata. Se alkaa 1 665 metristä ja päättyy 805 metriin kaupungin laidalla, ja pituutta on 3 312 metriä. Heti lähdön jälkeen tulee Mausefalle, hiirenloukku, jonka kaltevuus on 85 prosenttia. Siinä laskijat lentävät nykyisin jopa 60 metriä, 1970-luvulla lennettiin 80. Alastulossa kuljettajaan kohdistuu hetkeksi kolminkertainen paino. Loppusuoralla vauhti nousee 140 kilometriin tunnissa. Ennätys on Fritz Stroblin 1.51,58 vuodelta 1997.
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+AIEMPI KYSYMYS: Mitä ovat Kitzbühelin Alpit?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. [[Kitzbühelin Alpit]] ovat Itäisten Alppien vuoristoryhmä, joka ulottuu Tirolin ja Salzburgin osavaltioiden alueelle. Vuoret ovat muodoiltaan pehmeämpiä ja ruohoisempia kuin korkeimmat Alppien huiput, ja ne sopivat siksi hyvin hiihtoon ja vaellukseen. Zell am See sijaitsee ryhmän alueella, ja [[Kitzbühel]] antaa vuoristolle nimensä. Tuntuu siltä, että tämä oli lyhyt vastaus kyyhkyn standardeilla.
+KYSYMYS: Kerro lisää: Kitzbühelin Alpit
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zell am See (luonto · järvi)
+Tietoruudun teksti: Zell am See on Zell am Seen piirikunnan hallinnollinen keskus Salzburgin osavaltiossa Itävallassa. Se sijaitsee Kitzbühelin Alpeilla, ja se on tärkeä matkailukohde hiihtokeskustensa ja Zellinjärven rannan vuoksi. Zell am See on ollut Euroopan aateliston suosima talvi- ja kesäpaikka 1800-luvulta lähtien. Kaupunki on noin 80 kilometriä Salzburgista etelään ja 30 kilometriä Itävallan korkeimmasta vuoresta Großglocknerista pohjoiseen, ja sen historiallinen keskusta on 68 metriä syvän Zellinjärven läntisellä rannalla. Kaupungin oma kotivuori on 1 965 metrin korkuinen Schmittenhöhe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Rinne, jossa lennetään kuusikymmentä metriä] 1937 — Kitzbühelin Streif on maailman pelätyin syöksylaskurata. Se alkaa 1 665 metristä ja päättyy 805 metriin kaupungin laidalla, ja pituutta on 3 312 metriä. Heti lähdön jälkeen tulee Mausefalle, hiirenloukku, jonka kaltevuus on 85 prosenttia. Siinä laskijat lentävät nykyisin jopa 60 metriä, 1970-luvulla lennettiin 80. Alastulossa kuljettajaan kohdistuu hetkeksi kolminkertainen paino. Loppusuoralla vauhti nousee 140 kilometriin tunnissa. Ennätys on Fritz Stroblin 1.51,58 vuodelta 1997.
+AIEMPI KYSYMYS: Mitä ovat Kitzbühelin Alpit?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys. [[Kitzbühelin Alpit]] ovat Itäisten Alppien vuoristoryhmä, joka ulottuu Tirolin ja Salzburgin osavaltioiden alueelle. Vuoret ovat muodoiltaan pehmeämpiä ja ruohoisempia kuin korkeimmat Alppien huiput, ja ne sopivat siksi hyvin hiihtoon ja vaellukseen. Zell am See sijaitsee ryhmän alueella, ja [[Kitzbühel]] antaa vuoristolle nimensä. Tuntuu siltä, että tämä oli lyhyt vastaus kyyhkyn standardeilla.
+KYSYMYS: Kerro lisää: Kitzbühel
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Miksi järvi on niin syvä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Millstätter See on syvä, koska se sijaitsee jyrkkärantaisessa laaksossa Gurktalin Alpeilla, ja sen syvyys on 142 metriä. Jyrkkien rantojensa vuoksi järveä kuvataan vuonomaiseksi. Alppien järvialtaat ovat yleensä muotoutuneet jääkausina, kun jäätiköt ovat kuluttaneet laaksoja syvemmäksi, mutta tarkasta syntyhistoriasta en ole varma. Järvi on [[Kärntenin]] toiseksi suurin [[Wörthersee]]n jälkeen, mutta tilavuudeltaan selvästi suurin. Kyllä tämä kyyhkyltä sujui.
+KYSYMYS: Kerro lisää: Kärntenin
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Miksi järvi on niin syvä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Millstätter See on syvä, koska se sijaitsee jyrkkärantaisessa laaksossa Gurktalin Alpeilla, ja sen syvyys on 142 metriä. Jyrkkien rantojensa vuoksi järveä kuvataan vuonomaiseksi. Alppien järvialtaat ovat yleensä muotoutuneet jääkausina, kun jäätiköt ovat kuluttaneet laaksoja syvemmäksi, mutta tarkasta syntyhistoriasta en ole varma. Järvi on [[Kärntenin]] toiseksi suurin [[Wörthersee]]n jälkeen, mutta tilavuudeltaan selvästi suurin. Kyllä tämä kyyhkyltä sujui.
+KYSYMYS: Kerro lisää: Wörthersee
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Miksi vesi on lämmintä kesällä?
+AIEMPI VASTAUS (Livia):
+Ai se. Millstätter Seen vesi voi lämmetä kesällä jopa 25 asteeseen, koska järven pohjoispuolella kohoavat jopa 2 100 metrin korkuiset [[Millstätter Alpe]] -vuoret suojaavat sitä kylmiltä tuulilta. Suojaisa asento ja runsas auringonvalo lämmittävät pintavettä, vaikka järvi sijaitsee 588 metrin korkeudessa. Pinta lämpenee, kun taas syvemmällä vesi pysyy viileänä. Järvi on [[Kärntenissä]] Itävallassa. Lämmin vesi on kyyhkyn mielestä paras keksintö.
+KYSYMYS: Kerro lisää: Millstätter Alpe
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Miksi vesi on lämmintä kesällä?
+AIEMPI VASTAUS (Livia):
+Ai se. Millstätter Seen vesi voi lämmetä kesällä jopa 25 asteeseen, koska järven pohjoispuolella kohoavat jopa 2 100 metrin korkuiset [[Millstätter Alpe]] -vuoret suojaavat sitä kylmiltä tuulilta. Suojaisa asento ja runsas auringonvalo lämmittävät pintavettä, vaikka järvi sijaitsee 588 metrin korkeudessa. Pinta lämpenee, kun taas syvemmällä vesi pysyy viileänä. Järvi on [[Kärntenissä]] Itävallassa. Lämmin vesi on kyyhkyn mielestä paras keksintö.
+KYSYMYS: Kerro lisää: Kärntenissä
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Mikä on Wörthersee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Wörthersee]] on Kärntenin suurin järvi, ja se sijaitsee Klagenfurtin lähellä Itävallan eteläosassa. Millstätter See on pinta-alaltaan sen jälkeen toiseksi suurin Kärntenin järvistä. Wörthersee on tunnettu kesämatkailustaan ja lämpimästä vedestään. Tarkkaa pinta-alaa en ole varma, joten jätän sen mainitsematta. [[Klagenfurt]] on Kärntenin pääkaupunki. Ylhäältä se on kyllä komea järvi.
+KYSYMYS: Kerro lisää: Klagenfurt
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Hylkeenpyytäjä nimeää vuonon] Vuonna 1823 englantilainen hylkeenpyytäjä John Grono purjehti veneellään Uuden-Seelannin lounaisrannikon tuntemattomille vesille etsimässä hylkeitä. Kapea, jyrkkien vuorten ympäröimä vuono teki häneen niin vahvan vaikutuksen, että hän nimesi sen kotiseutunsa mukaan Milford Havenin, walesilaisen satamakaupungin, muistoksi. Nimi jäi käyttöön eurooppalaisilla kartoilla vuosikymmeniksi, vaikka paikalla ei vielä ollut yhtään pysyvää asukasta. Vasta vuonna 1998 Ngāi Tahu -heimon kanssa solmittu sopimus vahvisti virallisesti myös alkuperäisen māorinkielisen nimen Piopiotahi vuonon rinnalle.
+AIEMPI KYSYMYS: Mikä on vuono?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Vuono]] on kapea ja syvä merenlahti, jonka jäätikkö on kaivertanut jääkausina ja jonka rannat ovat jyrkät. Tyypillisiä vuonoja on esimerkiksi [[Norjassa]]. Kun Millstätter Seeta kutsutaan vuonomaiseksi, tarkoitetaan, että sen jyrkät rannat ja syvä, kapea muoto muistuttavat vuonoa. Järvi on kuitenkin sisämaan järvi, ei merenlahti.
+
+Serkkuni asuvat Norjan vuonoilla, ja minä olen kuullut heidän kehuvan maisemaa joka viikko. Mut Alpeilla on sama kauneus pienemmässä koossa.
+KYSYMYS: Kerro lisää: Vuono
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mikä on vuono?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Vuono]] on kapea ja syvä merenlahti, jonka jäätikkö on kaivertanut jääkausina ja jonka rannat ovat jyrkät. Tyypillisiä vuonoja on esimerkiksi [[Norjassa]]. Kun Millstätter Seeta kutsutaan vuonomaiseksi, tarkoitetaan, että sen jyrkät rannat ja syvä, kapea muoto muistuttavat vuonoa. Järvi on kuitenkin sisämaan järvi, ei merenlahti.
+
+Serkkuni asuvat Norjan vuonoilla, ja minä olen kuullut heidän kehuvan maisemaa joka viikko. Mut Alpeilla on sama kauneus pienemmässä koossa.
+KYSYMYS: Kerro lisää: Norjassa
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Missä Spittal an der Drau sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Spittal an der Drau]] on kaupunki Kärntenin osavaltiossa Itävallan eteläosassa, lähellä Millstätter Seetä. Kaupunki sijaitsee [[Drau-joen]] varrella Gurktalin Alppien tuntumassa. Alue kuuluu Itävallan vuoristoisiin osiin, ja kaupunki toimii seudun asutuskeskuksena. Tarkkaa asukaslukua en ole varma, joten jätän sen pois. Minä katson sitä aina mielelläni ylhäältä.
+KYSYMYS: Kerro lisää: Spittal an der Drau
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Millstätter See (luonto · järvi)
+Tietoruudun teksti: Millstätter See eli Millstattin järvi on järvi Kärntenissä Itävallassa. Se sijaitsee 588 metrin korkeudessa Gurktalin Alpeilla Spittal an der Draun kaupungin lähellä, ja sen pinta-ala on 13,3 neliökilometriä. Se on Kärntenin toiseksi suurin järvi Wörthersee jälkeen, mutta 142 metrin syvyydellään selvästi tilavin. Jyrkkien rantojensa vuoksi järvi on vuonomainen. Pohjoisessa kohoavat jopa 2 100 metrin korkuiset Millstätter Alpe -vuoret suojaavat järveä kylmiltä tuulilta, joten veden lämpötila voi nousta kesällä 25 asteeseen. Järven nimi tulee pohjoisrannalla olevasta Millstattin kauppalasta, ja lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.
+AIEMPI KYSYMYS: Missä Spittal an der Drau sijaitsee?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Spittal an der Drau]] on kaupunki Kärntenin osavaltiossa Itävallan eteläosassa, lähellä Millstätter Seetä. Kaupunki sijaitsee [[Drau-joen]] varrella Gurktalin Alppien tuntumassa. Alue kuuluu Itävallan vuoristoisiin osiin, ja kaupunki toimii seudun asutuskeskuksena. Tarkkaa asukaslukua en ole varma, joten jätän sen pois. Minä katson sitä aina mielelläni ylhäältä.
+KYSYMYS: Kerro lisää: Drau-joen
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+AIEMPI KYSYMYS: Mistä Ötscherin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hmm, kas vaan. Ötscherin nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Nimi on siis peräisin siltä ajalta, jolloin seudulla puhuttiin slaavilaista kieltä. [[Ötscher]] on 1 893 metriä korkea huippu Ala-Itävallan lounaisosassa, ja se kuuluu [[Ybbstalin Alppeihin]]. Isä on siis pienennettynä. Sepä sattui.
+KYSYMYS: Kerro lisää: Ötscher
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Maailman sateisimpia paikkoja] Piopiotahi tunnetaan Uuden-Seelannin sateisimpana asuttuna paikkana: siihen sataa keskimäärin noin 6 400 millimetriä vettä vuodessa, ja sadepäiviä kertyy lähes 185 vuosittain - eli vuono on märkä joka toinen päivä. Rankimmillaan yhden vuorokauden aikana voi sataa jopa 250 millimetriä, mikä muuttaa vuonoa ympäröivät kalliot hetkessä kymmeniksi tilapäisiksi putouksiksi. Kosteus syntyy, kun Tasmaninmereltä puhaltavat länsituulet törmäävät Etelän Alppeihin ja nousevat äkkiä lähes 1 700 metrin korkeuteen, jolloin niiden kantama vesihöyry tiivistyy sateeksi lähes ympäri vuoden.
+AIEMPI KYSYMYS: Mistä Ötscherin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hmm, kas vaan. Ötscherin nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Nimi on siis peräisin siltä ajalta, jolloin seudulla puhuttiin slaavilaista kieltä. [[Ötscher]] on 1 893 metriä korkea huippu Ala-Itävallan lounaisosassa, ja se kuuluu [[Ybbstalin Alppeihin]]. Isä on siis pienennettynä. Sepä sattui.
+KYSYMYS: Kerro lisää: Ybbstalin Alppeihin
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+AIEMPI KYSYMYS: Missä Ybbstalin Alpit sijaitsevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ybbstalin Alpit sijaitsevat Ala-Itävallan lounaisosassa, ja ne ovat osa [[Pohjoisia kalkkialppeja]]. Ryhmään kuuluu [[Ötscher]], jonka huippu on 1 893 metriä korkealla. Alue on vuoristoista ja kalkkikivipainotteista, ja sen nimi tulee [[Ybbs-joesta]], joka virtaa seudun halki. Tarkat rajat en ole varma, joten annan vain yleisen sijainnin.
+KYSYMYS: Kerro lisää: Pohjoisia kalkkialppeja
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+AIEMPI KYSYMYS: Missä Ybbstalin Alpit sijaitsevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ybbstalin Alpit sijaitsevat Ala-Itävallan lounaisosassa, ja ne ovat osa [[Pohjoisia kalkkialppeja]]. Ryhmään kuuluu [[Ötscher]], jonka huippu on 1 893 metriä korkealla. Alue on vuoristoista ja kalkkikivipainotteista, ja sen nimi tulee [[Ybbs-joesta]], joka virtaa seudun halki. Tarkat rajat en ole varma, joten annan vain yleisen sijainnin.
+KYSYMYS: Kerro lisää: Ybbs-joesta
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Denver — kaupunkilehti / Vuoret ja ohut ilma: Seinä, jonka takaa vedet kääntyvät] Denver on Front Rangen kaupunkikäytävän keskellä, Kalliovuorten ja itäisten ylätasankojen välissä. Keskustan liikekortteli on noin yhdeksäntoista kilometrin päässä vuorten juurelta, ja maasto on keskellä tasankoa mutta kumpuilee pohjoisessa, lännessä ja etelässä. Front Range on Kalliovuorten itäisin jono ja ulottuu Wyomingin eteläosista Coloradon keskiosiin. Sen harjanne on mannerjakaja: lännestä vedet virtaavat Tyynellemerelle, idästä Atlantille. Kaupungin panoraamassa näkyy lumihuippuinen Mount Blue Sky.
+AIEMPI KYSYMYS: Mitä ovat Pohjoiset kalkkialpit?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Pohjoiset kalkkialpit ovat [[Itäisten Alppien]] vuoristoryhmä, joka kulkee Itävallan halki idästä länteen ja jonka kivilaji on pääosin [[kalkkikiveä]]. Kalkkikivi liukenee veteen hitaasti, mikä muovaa vuoristoon rotkoja, luolia ja karstimaisemia. [[Ötscher]] ja sen ympäristö kuuluvat tähän vyöhykkeeseen. Tarkat rajat ja huippujen määrät en ole varma, joten jätän ne mainitsematta. Siinä tuli kalkkia.
+KYSYMYS: Kerro lisää: Itäisten Alppien
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mitä ovat Pohjoiset kalkkialpit?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Pohjoiset kalkkialpit ovat [[Itäisten Alppien]] vuoristoryhmä, joka kulkee Itävallan halki idästä länteen ja jonka kivilaji on pääosin [[kalkkikiveä]]. Kalkkikivi liukenee veteen hitaasti, mikä muovaa vuoristoon rotkoja, luolia ja karstimaisemia. [[Ötscher]] ja sen ympäristö kuuluvat tähän vyöhykkeeseen. Tarkat rajat ja huippujen määrät en ole varma, joten jätän ne mainitsematta. Siinä tuli kalkkia.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+AIEMPI KYSYMYS: Miksi Itävallassa on slaavilaisperäisiä paikannimiä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Slaavilaisia paikannimiä esiintyy Itävallassa, koska slaavilaisia kieliä puhuvia ryhmiä asettui itäisten Alppien alueelle varhaiskeskiajalla. Myöhemmin alueen väestö siirtyi vähitellen saksankieliseksi, mutta paikannimet säilyivät. [[Ötscherin]] nimi on esimerkki tästä: sillä on slaavilaiset juuret. Tarkoista ajankohdista ja ryhmistä en ole varma, joten annan vain yleiskuvan. [[Ala-Itävalta]] on yksi alueista, joilla tällaisia nimiä on.
+
+Minun sukuni on kantanut kirjeitä monen kielen alueilla, ja paikannimet ovat aina kertoneet enemmän kuin postimerkit. Mut sitä en uskalla sanoa, kuinka monta nimeä on slaavilaisia.
+KYSYMYS: Kerro lisää: Ötscherin
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ötscher (luonto · vuori)
+Tietoruudun teksti: Ötscher on 1 893 metriä korkea huomattava huippu Ala-Itävallan lounaisosassa. Sen nimellä on slaavilaiset juuret, ja se tarkoittaa suunnilleen sanan isä pienennösmuotoa. Ötscherin seutu kuuluu Ybbstalin Alppeihin, jotka ovat osa Pohjoisia kalkkialppeja. Lilienfeldin ja Scheibbsin piirikuntien raja kulkee suoraan sen huipulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Kortti, jonka postimieskin sai lukea] 1869 — Kirje maksoi Itävalta-Unkarissa viisi kreutzeria, ja moni asia oli sen hinnan arvoiseksi liian pieni. Kansantalouden professori Emanuel Herrmann ehdotti tammikuussa 1869 lehtiartikkelissa korttia, joka lähetettäisiin ilman kuorta ja johon saisi kirjoittaa enintään kaksikymmentä sanaa, kuten sähkeeseen. Posti innostui. Lokakuun 1. päivänä 1869 myyntiin tuli Correspondenz-Karte, kooltaan 8,5 kertaa 12,2 senttiä ja hinnaltaan kaksi kreutzeria. Sanarajan posti jätti pois. Ensimmäisessä kuukaudessa kortteja myytiin 1,4 miljoonaa.
+- [Itävalta — maalehti / Menovinkit] Itävalta on avannut verkkoon sen, mitä salissa ei näe: maalin alle jääneet luonnokset, Klimtin kultalehden lähikuvana, 28 miljoonaa sanomalehden sivua, Mozartin oman käsialan ja alppilaakson suorana kuvana.
+AIEMPI KYSYMYS: Miksi Itävallassa on slaavilaisperäisiä paikannimiä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Slaavilaisia paikannimiä esiintyy Itävallassa, koska slaavilaisia kieliä puhuvia ryhmiä asettui itäisten Alppien alueelle varhaiskeskiajalla. Myöhemmin alueen väestö siirtyi vähitellen saksankieliseksi, mutta paikannimet säilyivät. [[Ötscherin]] nimi on esimerkki tästä: sillä on slaavilaiset juuret. Tarkoista ajankohdista ja ryhmistä en ole varma, joten annan vain yleiskuvan. [[Ala-Itävalta]] on yksi alueista, joilla tällaisia nimiä on.
+
+Minun sukuni on kantanut kirjeitä monen kielen alueilla, ja paikannimet ovat aina kertoneet enemmän kuin postimerkit. Mut sitä en uskalla sanoa, kuinka monta nimeä on slaavilaisia.
+KYSYMYS: Kerro lisää: Ala-Itävalta
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Miksi vuorta kutsutaan nimellä Suuri venetsialainen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimen Großvenediger eli suuri venetsialainen alkuperä on epäselvä, mutta todennäköisesti se juontuu solia ylittäneistä venetsialaisista kauppiaista. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nykyinen nimi on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta. [[Großvenediger]] on Venediger-ryhmän päähuippu [[Hohe Tauernin]] vuoristossa Tirolin ja Salzburgin rajalla. Venetsialaiset ovat kulkeneet kauas. No olipas tarina.
+KYSYMYS: Kerro lisää: Großvenediger
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Miksi vuorta kutsutaan nimellä Suuri venetsialainen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimen Großvenediger eli suuri venetsialainen alkuperä on epäselvä, mutta todennäköisesti se juontuu solia ylittäneistä venetsialaisista kauppiaista. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nykyinen nimi on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta. [[Großvenediger]] on Venediger-ryhmän päähuippu [[Hohe Tauernin]] vuoristossa Tirolin ja Salzburgin rajalla. Venetsialaiset ovat kulkeneet kauas. No olipas tarina.
+KYSYMYS: Kerro lisää: Hohe Tauernin
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Kuka nousi huipulle ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ensimmäinen onnistunut nousu Großvenedigerin huipulle tehtiin 3. syyskuuta 1841 [[Josef Schwabin]] johdolla. Mukana oli kirjailija ja vuorikiipeilijä [[Ignaz von Kürsinger]]. Vuori on Venediger-ryhmän päähuippu [[Hohe Tauernin]] vuoristossa Tirolin ja Salzburgin rajalla, ja se on jäätikön peittämä. Aiemmista yrityksistä en ole varma, joten sanon vain onnistuneesta noususta. Ylhäältä kyyhky ei kiipeä, vaan lentää.
+KYSYMYS: Kerro lisää: Josef Schwabin
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Kuka nousi huipulle ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ensimmäinen onnistunut nousu Großvenedigerin huipulle tehtiin 3. syyskuuta 1841 [[Josef Schwabin]] johdolla. Mukana oli kirjailija ja vuorikiipeilijä [[Ignaz von Kürsinger]]. Vuori on Venediger-ryhmän päähuippu [[Hohe Tauernin]] vuoristossa Tirolin ja Salzburgin rajalla, ja se on jäätikön peittämä. Aiemmista yrityksistä en ole varma, joten sanon vain onnistuneesta noususta. Ylhäältä kyyhky ei kiipeä, vaan lentää.
+KYSYMYS: Kerro lisää: Ignaz von Kürsinger
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Kuinka korkea Großvenediger on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Großvenediger on noin 3 650 metriä korkea, ja sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena. Tarkan metrimäärän muistan hieman epävarmasti, joten sanon noin. Huippu on jäätikön peittämä ja kuuluu [[Hohe Tauernin kansallispuistoon]]. Vuori sijaitsee [[Itä-Tirolin]] ja [[Salzburgin]] rajalla. Kyllä tämä korkeus tuntuu siivissä.
+KYSYMYS: Kerro lisää: Hohe Tauernin kansallispuistoon
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Kuinka korkea Großvenediger on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Großvenediger on noin 3 650 metriä korkea, ja sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena. Tarkan metrimäärän muistan hieman epävarmasti, joten sanon noin. Huippu on jäätikön peittämä ja kuuluu [[Hohe Tauernin kansallispuistoon]]. Vuori sijaitsee [[Itä-Tirolin]] ja [[Salzburgin]] rajalla. Kyllä tämä korkeus tuntuu siivissä.
+KYSYMYS: Kerro lisää: Itä-Tirolin
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+AIEMPI KYSYMYS: Kuinka korkea Großvenediger on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Großvenediger on noin 3 650 metriä korkea, ja sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena. Tarkan metrimäärän muistan hieman epävarmasti, joten sanon noin. Huippu on jäätikön peittämä ja kuuluu [[Hohe Tauernin kansallispuistoon]]. Vuori sijaitsee [[Itä-Tirolin]] ja [[Salzburgin]] rajalla. Kyllä tämä korkeus tuntuu siivissä.
+KYSYMYS: Kerro lisää: Salzburgin
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Mikä on Hohe Tauernin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hohe Tauernin kansallispuisto on Itävallan Alpeilla sijaitseva suojelualue, johon kuuluu [[Großvenedigerin]] jäätikön peittämä huippu. Alue ulottuu [[Tirolin]], Salzburgin ja [[Kärntenin]] osavaltioiden alueelle. Puisto suojelee korkeita vuoria, jäätiköitä ja alppiluontoa. Tarkasta pinta-alasta en ole varma. Tämä oli kyyhkylle sopivan kokoinen kokonaisuus.
+KYSYMYS: Kerro lisää: Großvenedigerin
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Mikä on Hohe Tauernin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hohe Tauernin kansallispuisto on Itävallan Alpeilla sijaitseva suojelualue, johon kuuluu [[Großvenedigerin]] jäätikön peittämä huippu. Alue ulottuu [[Tirolin]], Salzburgin ja [[Kärntenin]] osavaltioiden alueelle. Puisto suojelee korkeita vuoria, jäätiköitä ja alppiluontoa. Tarkasta pinta-alasta en ole varma. Tämä oli kyyhkylle sopivan kokoinen kokonaisuus.
+KYSYMYS: Kerro lisää: Tirolin
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Großvenediger (luonto · vuori)
+Tietoruudun teksti: Großvenediger on Venediger-ryhmän päähuippu Hohe Tauernin vuoristossa Tirolin (Itä-Tirol) ja Salzburgin rajalla. Sitä pidetään yleensä Itävallan neljänneksi korkeimpana vuorena, ja jäätikön peittämä huippu kuuluu Hohe Tauernin kansallispuistoon. Alun perin vuorta kutsuttiin nimellä Stützerkopf, ja nimi Großvenediger, suuri venetsialainen, on ensimmäisen kerran kirjattu vuoden 1797 rajamittauksesta; nimen alkuperä on epäselvä, ja se juontuu todennäköisesti solia ylittäneistä venetsialaisista kauppiaista. Ensimmäinen onnistunut nousu tehtiin 3. syyskuuta 1841 Josef Schwabin johtamana, ja mukana oli kirjailija ja vuorikiipeilijä Ignaz von Kürsinger.
+AIEMPI KYSYMYS: Mikä on Hohe Tauernin kansallispuisto?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hohe Tauernin kansallispuisto on Itävallan Alpeilla sijaitseva suojelualue, johon kuuluu [[Großvenedigerin]] jäätikön peittämä huippu. Alue ulottuu [[Tirolin]], Salzburgin ja [[Kärntenin]] osavaltioiden alueelle. Puisto suojelee korkeita vuoria, jäätiköitä ja alppiluontoa. Tarkasta pinta-alasta en ole varma. Tämä oli kyyhkylle sopivan kokoinen kokonaisuus.
+KYSYMYS: Kerro lisää: Kärntenin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Mikä Mariazellin ihmekuva on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Mariazellin ihmekuva on lehmuspuuhun veistetty kuva [[Neitsyt Marian]] hahmosta, jonka uskotaan tekevän ihmeitä. Perimätiedon mukaan se tuotiin paikalle vuonna 1157, ja nykyään se on kappelissa, jota koristavat hopeaesineet. Kappeli kuuluu suureen kirkkoon, ja sinne tulee [[pyhiinvaeltajia]] Itävallasta ja naapurimaista. Kuvan tarkasta iästä ja alkuperästä en ole varma, sillä perimätieto ja tutkimus eivät välttämättä kulje käsi kädessä. Kyl se kuva silti on ollut paikallaan pidempään kuin yksikään kyyhkysuku.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat: Minareetti joka kutsui pyhiinvaeltajia] Kun pohjoisempana sijainnut pyhiinvaellussatama Aydhab hylättiin 1400-luvulla, Suakinista tuli tärkein lähtösatama muslimeille, jotka matkasivat Länsi- ja Keski-Afrikasta laivalla Punaisenmeren yli Mekkaan. Shafi'in moskeijan minareetista kuulutettiin rukoukset päivittäin, ja se opasti saapuvat pyhiinvaeltajat kaupungin sydämeen ennen laivaan nousua. Osa pyhiinvaeltajista jäi kaupunkiin viikoiksi tai kuukausiksi odottamaan suotuisia tuulia tai vapaata laivapaikkaa, mikä piti Suakinin majatalot ja torit jatkuvasti täynnä matkalaisia.
+AIEMPI KYSYMYS: Mikä Mariazellin ihmekuva on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä tiedän. Mariazellin ihmekuva on lehmuspuuhun veistetty kuva [[Neitsyt Marian]] hahmosta, jonka uskotaan tekevän ihmeitä. Perimätiedon mukaan se tuotiin paikalle vuonna 1157, ja nykyään se on kappelissa, jota koristavat hopeaesineet. Kappeli kuuluu suureen kirkkoon, ja sinne tulee [[pyhiinvaeltajia]] Itävallasta ja naapurimaista. Kuvan tarkasta iästä ja alkuperästä en ole varma, sillä perimätieto ja tutkimus eivät välttämättä kulje käsi kädessä. Kyl se kuva silti on ollut paikallaan pidempään kuin yksikään kyyhkysuku.
+KYSYMYS: Kerro lisää: pyhiinvaeltajia
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Milloin kirkko laajennettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tost on kaks vuosilukua. Nykyisen suuren kirkon rakentaminen laajennukseksi aiemmalle, pienemmälle kirkolle alkoi lähteiden mukaan vuonna 1644. Perimätiedon mukaan pienemmän kirkon rakennutti [[Ludvig I:n]] aikaan Unkarin kuningas voitettuaan ottomaanit vuonna 1363, mutta tämän kertomuksen tarkkuudesta en ole varma. Laajennus liittyy Mariazellin kasvaneeseen asemaan [[pyhiinvaelluskohteena]], ja rakennustyöt jatkuivat 1600-luvun aikana, tarkasta valmistumisvuodesta en ole varma. Pitkä projekti, ja minä sain kerrottua sen yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: Ludvig I:n
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Historia: Käytävät täynnä vuosisatoja] Luolakäytävät ovat kapeita, vain metrin tai puolitoista leveitä, ja niiden seiniin on kaiverrettu pieniä koppeja munkeille ja hautanišejä. Lähiluolissa lepää noin kahdeksankymmentä ja kaukoluolissa noin neljäkymmentäviisi pyhäksi julistettua munkkia, ja kuiva luolailma on säilyttänyt monet heidän jäännöksensä vuosisatojen ajan. Käytävät toimivat yhä hautausmaana ja pyhiinvaelluskohteena, ja kynttilät ovat ainoa valonlähde niiden mutkittelevissa kaarissa.
+AIEMPI KYSYMYS: Milloin kirkko laajennettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tost on kaks vuosilukua. Nykyisen suuren kirkon rakentaminen laajennukseksi aiemmalle, pienemmälle kirkolle alkoi lähteiden mukaan vuonna 1644. Perimätiedon mukaan pienemmän kirkon rakennutti [[Ludvig I:n]] aikaan Unkarin kuningas voitettuaan ottomaanit vuonna 1363, mutta tämän kertomuksen tarkkuudesta en ole varma. Laajennus liittyy Mariazellin kasvaneeseen asemaan [[pyhiinvaelluskohteena]], ja rakennustyöt jatkuivat 1600-luvun aikana, tarkasta valmistumisvuodesta en ole varma. Pitkä projekti, ja minä sain kerrottua sen yhdellä hengenvedolla.
+KYSYMYS: Kerro lisää: pyhiinvaelluskohteena
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+AIEMPI KYSYMYS: Miksi Mariazelliin pyhiinvaelletaan?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Mariazell on [[katolilaisten]] tärkeä pyhiinvaelluskohde, koska siellä säilytetään lehmuspuuhun veistettyä [[Neitsyt Marian]] kuvaa, jonka uskotaan tekevän ihmeitä. Pyhiinvaeltajat saapuvat paikalle [[Itävallasta]] ja naapurimaista rukoilemaan, kiittämään tai etsimään lohtua. Pyhiinvaellukseen on pitkään kuulunut kävelymatka perille, ja moni kulkee yhä osan matkasta jalan; tarkkoja kävijämääriä en ole varma. Kauniin paikan päälle ne ovat rakentaneet, ja minä näen sen vielä ylhäältäkin.
+KYSYMYS: Kerro lisää: katolilaisten
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BHR — maalehti / Rakennukset: Kupoli on lasikuitua] Manaman al-Fatehin moskeija valmistui vuonna 1987, ja siihen mahtuu yli seitsemäntuhatta ihmistä. Erikoisin osa on kupoli: se ei ole kiveä eikä betonia vaan lasikuitua, ja se painaa noin viisikymmentäneljä tonnia. Aikanaan se oli maailman suurin lasikuitukupoli. Materiaalit tuotiin kaukaa: lattian marmori Italiasta, kattokruunu Itävallasta ja ovet Intian tiikistä. Seinillä kiertää kulmikasta kufi-kirjoitusta. Vuodesta 2006 rakennuksessa on toiminut myös Bahrainin kansalliskirjasto.
+AIEMPI KYSYMYS: Miksi Mariazelliin pyhiinvaelletaan?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Mariazell on [[katolilaisten]] tärkeä pyhiinvaelluskohde, koska siellä säilytetään lehmuspuuhun veistettyä [[Neitsyt Marian]] kuvaa, jonka uskotaan tekevän ihmeitä. Pyhiinvaeltajat saapuvat paikalle [[Itävallasta]] ja naapurimaista rukoilemaan, kiittämään tai etsimään lohtua. Pyhiinvaellukseen on pitkään kuulunut kävelymatka perille, ja moni kulkee yhä osan matkasta jalan; tarkkoja kävijämääriä en ole varma. Kauniin paikan päälle ne ovat rakentaneet, ja minä näen sen vielä ylhäältäkin.
+KYSYMYS: Kerro lisää: Itävallasta
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+AIEMPI KYSYMYS: Mikä Salza on?
+AIEMPI VASTAUS (Livia):
+Ai se. Salza on joki Pohjois-[[Steiermarkin]] [[Alpeilla]], ja Mariazell sijaitsee sen laaksossa. Joki virtaa vuoristoisessa maastossa, ja sen vedet päätyvät lopulta [[Enns-jokeen]]; tästä reitistä en kuitenkaan ole täysin varma. Alppilaaksot ovat historiallisesti olleet tärkeitä kulkureittejä ja asutuksen paikkoja, ja Mariazellin pyhiinvaelluskin on kulkenut niiden kautta. Joet ne vaan mutkittelee, vaikka lentäisi suoraan.
+KYSYMYS: Kerro lisää: Steiermarkin
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Mikä Salza on?
+AIEMPI VASTAUS (Livia):
+Ai se. Salza on joki Pohjois-[[Steiermarkin]] [[Alpeilla]], ja Mariazell sijaitsee sen laaksossa. Joki virtaa vuoristoisessa maastossa, ja sen vedet päätyvät lopulta [[Enns-jokeen]]; tästä reitistä en kuitenkaan ole täysin varma. Alppilaaksot ovat historiallisesti olleet tärkeitä kulkureittejä ja asutuksen paikkoja, ja Mariazellin pyhiinvaelluskin on kulkenut niiden kautta. Joet ne vaan mutkittelee, vaikka lentäisi suoraan.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+AIEMPI KYSYMYS: Mikä Salza on?
+AIEMPI VASTAUS (Livia):
+Ai se. Salza on joki Pohjois-[[Steiermarkin]] [[Alpeilla]], ja Mariazell sijaitsee sen laaksossa. Joki virtaa vuoristoisessa maastossa, ja sen vedet päätyvät lopulta [[Enns-jokeen]]; tästä reitistä en kuitenkaan ole täysin varma. Alppilaaksot ovat historiallisesti olleet tärkeitä kulkureittejä ja asutuksen paikkoja, ja Mariazellin pyhiinvaelluskin on kulkenut niiden kautta. Joet ne vaan mutkittelee, vaikka lentäisi suoraan.
+KYSYMYS: Kerro lisää: Enns-jokeen
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Kolme porrasta, 380 metriä] nykyään — Krimmlin vesiputoukset ovat Itävallan korkeimmat. Krimmler Ache syöksyy alas kolmessa portaassa, jotka ovat 145, 100 ja 140 metriä. Vettä ei tule tasaisesti: kesäkuussa ja heinäkuussa virtaa noin 5 600 litraa sekunnissa, helmikuussa vain 140 litraa. Voimakkaimmillaan putous on myöhään illalla yhdeksän ja kahdentoista välillä, sillä jäätiköltä sulanut vesi kulkee 18 kilometriä putouksille ja on matkalla 9–12 tuntia. Vuonna 1899 putouksia yritettiin valjastaa tehtaan voimaksi, mutta hanke kaatui.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+AIEMPI KYSYMYS: Mikä Steiermark on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Steiermark on [[Itävallan]] osavaltio maan kaakkoisosassa, ja sen pääkaupunki on [[Graz]]. Alue tunnetaan vuorista, metsistä ja viljelysmaista, ja siellä sijaitsevat muun muassa Mariazell ja Admont. Osavaltion nimi tulee tunnetusti vihreästä metsäisyydestä, eikä sitä ole juuri kukaan epäillyt; tarkan etymologian taustat tosin en ole varma. Pohjoisosa on vuoristoista Alppien aluetta, ja eteläosa on leudompaa [[viinimaata]]. Maisemia riittää, ja kyyhkyn näkökulmasta ne on hyvä katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+AIEMPI KYSYMYS: Mikä Steiermark on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Steiermark on [[Itävallan]] osavaltio maan kaakkoisosassa, ja sen pääkaupunki on [[Graz]]. Alue tunnetaan vuorista, metsistä ja viljelysmaista, ja siellä sijaitsevat muun muassa Mariazell ja Admont. Osavaltion nimi tulee tunnetusti vihreästä metsäisyydestä, eikä sitä ole juuri kukaan epäillyt; tarkan etymologian taustat tosin en ole varma. Pohjoisosa on vuoristoista Alppien aluetta, ja eteläosa on leudompaa [[viinimaata]]. Maisemia riittää, ja kyyhkyn näkökulmasta ne on hyvä katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Graz
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariazell (historia)
+Tietoruudun teksti: Mariazell on itävaltalainen kaupunki Steiermarkin kaakkoisosassa, ja se on tunnettu talviurheilun keskuksena ja pyhiinvaelluskohteena. Se sijaitsee 143 kilometriä Grazista pohjoiseen Salza-joen laaksossa Pohjois-Steiermarkin Alppien keskellä. Kaupunki on katolilaisten pyhiinvaelluskohde Itävallasta ja naapurimaista. Palvonnan kohteena on lehmuspuuhun veistetty Neitsyt Marian kuva, jonka uskotaan tekevän ihmeitä; se tuotiin paikalle vuonna 1157 ja on nykyään kappelissa, jota koristavat hopeaesineet. Kappeli on osa suurta kirkkoa, joka rakennettiin vuonna 1644 laajennukseksi Unkarin kuningas Ludvig I:n pienemmälle kirkolle, jonka hän rakennutti voitettuaan ottomaanit vuonna 1363.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Ruoka: Viinimaa, joka lakkasi olemasta] 1930–1970-luku — Viininviljely alkoi Algeriassa foinikialaisten ja roomalaisten aikana ja hiipui islamin tultua. Ranskan vallan alettua 1830 tarhat istutettiin uudelleen, ja kun viinikirva tuhosi Ranskan omat viinitarhat 1800-luvun puolivälissä, algerialainen viini täytti aukon: tuotanto kasvoi 25 000 hehtolitrasta vuonna 1854 kymmeneen miljoonaan vuonna 1915. Huipulla 1930-luvun lopulla tarhoja oli yli neljätuhatta neliökilometriä. Ennen itsenäisyyttä Algeria oli maailman suurin viininviejä, ja sen tumma, väkevä punaviini päätyi sekoitukseksi Etelä-Ranskan viineihin. Itsenäistymisen jälkeen markkina katosi, ja tarhat vaihdettiin viljaan ja syötäviin rypäleisiin.
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+AIEMPI KYSYMYS: Mikä Steiermark on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Steiermark on [[Itävallan]] osavaltio maan kaakkoisosassa, ja sen pääkaupunki on [[Graz]]. Alue tunnetaan vuorista, metsistä ja viljelysmaista, ja siellä sijaitsevat muun muassa Mariazell ja Admont. Osavaltion nimi tulee tunnetusti vihreästä metsäisyydestä, eikä sitä ole juuri kukaan epäillyt; tarkan etymologian taustat tosin en ole varma. Pohjoisosa on vuoristoista Alppien aluetta, ja eteläosa on leudompaa [[viinimaata]]. Maisemia riittää, ja kyyhkyn näkökulmasta ne on hyvä katsoa ylhäältä.
+KYSYMYS: Kerro lisää: viinimaata
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [Bryssel — kohdekartta / Kohdekartta: Galeries Royales Saint-Hubert] 1846–1847 Galeries Royales Saint-Hubert on kolmen lasikattoisen kauppakäytävän kokonaisuus: Kuninkaan galleria, Kuningattaren galleria ja Prinssien galleria. Nuori hollantilainen arkkitehti Jean-Pierre Cluysenaar halusi pyyhkiä pois hämärien kujien sokkelon, jonne porvarit tuskin uskalsivat, ja korvata sen yli 200 metrin katetulla ostoskadulla. Idea syntyi 1836, kaupunki hyväksyi sen 1845, ja rakentaminen kesti kolmetoista kuukautta. Kuningas Leopold I poikineen avasi 213 metrin käytävän 20. kesäkuuta 1847. Tonttien lunastaminen oli kestänyt yhdeksän vuotta. Kerrotaan, että yksi talonomistaja kuoli halvaukseen ja että eräs parturi viilsi kurkkunsa, kun naapuritaloa purettiin. Viranomaisten …
+AIEMPI KYSYMYS: Kuka perusti Heiligenkreuzin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Heiligenkreuzin luostarin perusti vuonna 1133 Itävallan markkreivi [[Leopold III]], poikansa Otton pyynnöstä. Ensimmäiset kaksitoista munkkia ja apotti Gottschalk saapuivat Burgundin [[Morimondin]] luostarista, ja luostari kuuluu [[sisterssiläisluostareihin]]. Se vihittiin 11. syyskuuta 1133. Nimensä se sai Pyhän Ristin kautta tapahtuvasta lunastuksesta, ja sama nimi liittyy luostarin Pyhän Ristin reliikkiin. Wienin metsän laidalla tuo on seissyt jo yli kahdeksan vuosisataa, ja niin olen minäkin, ainakin suvun puolesta.
+KYSYMYS: Kerro lisää: Leopold III
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+AIEMPI KYSYMYS: Kuka perusti Heiligenkreuzin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Heiligenkreuzin luostarin perusti vuonna 1133 Itävallan markkreivi [[Leopold III]], poikansa Otton pyynnöstä. Ensimmäiset kaksitoista munkkia ja apotti Gottschalk saapuivat Burgundin [[Morimondin]] luostarista, ja luostari kuuluu [[sisterssiläisluostareihin]]. Se vihittiin 11. syyskuuta 1133. Nimensä se sai Pyhän Ristin kautta tapahtuvasta lunastuksesta, ja sama nimi liittyy luostarin Pyhän Ristin reliikkiin. Wienin metsän laidalla tuo on seissyt jo yli kahdeksan vuosisataa, ja niin olen minäkin, ainakin suvun puolesta.
+KYSYMYS: Kerro lisää: Morimondin
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+AIEMPI KYSYMYS: Kuka perusti Heiligenkreuzin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Heiligenkreuzin luostarin perusti vuonna 1133 Itävallan markkreivi [[Leopold III]], poikansa Otton pyynnöstä. Ensimmäiset kaksitoista munkkia ja apotti Gottschalk saapuivat Burgundin [[Morimondin]] luostarista, ja luostari kuuluu [[sisterssiläisluostareihin]]. Se vihittiin 11. syyskuuta 1133. Nimensä se sai Pyhän Ristin kautta tapahtuvasta lunastuksesta, ja sama nimi liittyy luostarin Pyhän Ristin reliikkiin. Wienin metsän laidalla tuo on seissyt jo yli kahdeksan vuosisataa, ja niin olen minäkin, ainakin suvun puolesta.
+KYSYMYS: Kerro lisää: sisterssiläisluostareihin
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [Bryssel — kohdekartta / Kohdekartta: Galeries Royales Saint-Hubert] 1846–1847 Galeries Royales Saint-Hubert on kolmen lasikattoisen kauppakäytävän kokonaisuus: Kuninkaan galleria, Kuningattaren galleria ja Prinssien galleria. Nuori hollantilainen arkkitehti Jean-Pierre Cluysenaar halusi pyyhkiä pois hämärien kujien sokkelon, jonne porvarit tuskin uskalsivat, ja korvata sen yli 200 metrin katetulla ostoskadulla. Idea syntyi 1836, kaupunki hyväksyi sen 1845, ja rakentaminen kesti kolmetoista kuukautta. Kuningas Leopold I poikineen avasi 213 metrin käytävän 20. kesäkuuta 1847. Tonttien lunastaminen oli kestänyt yhdeksän vuotta. Kerrotaan, että yksi talonomistaja kuoli halvaukseen ja että eräs parturi viilsi kurkkunsa, kun naapuritaloa purettiin. Viranomaisten …
+AIEMPI KYSYMYS: Mikä on Pyhän Ristin reliikki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Reliikki on pyhänä pidetty esine tai jäänne, ja Pyhän Ristin reliikit ovat kristillisen perinteen mukaan palasia Jeesuksen ristiinnaulitsemisessa käytetystä rististä. Heiligenkreuzin reliikin lahjoitti luostarille [[Leopold V]] vuonna 1188, ja se on edelleen nähtävillä. Palasen tarkasta alkuperästä tai ulkomuodosta en ole varma, ja reliikkien aitoutta on aina arvioitu uskon, perimätiedon ja tutkimuksen kautta eri tavoin. Luostarin nimikin tulee [[Pyhän Ristin]] kunnioituksesta. Pienikin palanen on kuulemma kantanut isoa merkitystä, ja sen tiedän ihan omasta kokemuksesta.
+KYSYMYS: Kerro lisää: Leopold V
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Pyhän ristin kirkko] 1679–1696 Pyhän ristin kirkko rakennettiin Krakowskie Przedmieście -kadun varrelle vuosina 1679–1696 komeaan barokkityyliin, pääsuunnittelijanaan Józef Szymon Bellotti. Julkisivun koristeelliset huiput lisättiin vielä 1720- ja 1730-luvuilla. Kirkon pilariin muurattiin vuonna 1882 pieni uurna, jossa säilytetään säveltäjä Fryderyk Chopinin sydäntä. Chopinin sisar oli salakuljettanut sydämen Pariisista Varsovaan jo vuonna 1849 veljensä toiveen mukaisesti - vaikka ruumis haudattiin Ranskaan, sydän sai levätä kotimaassa. Sodan aikana vuonna 1944 saksalaiset joukot räjäyttivät kirkon pahoin, mutta Chopinin sydän ehdittiin siirtää turvaan ennen räjäytyksiä. Kirkko rakennettiin uudelleen vuosina 19…
+- [Valletta — kaupunkilehti / Historia: Saari, joka sai George-ristin] Kesäkuusta 1940 marraskuuhun 1942 Saksan ja Italian ilmavoimat yrittivät pommittaa ja näännyttää brittien Maltan antautumaan, sillä saarelta käsin iskettiin Pohjois-Afrikkaan kulkeviin huoltokuljetuksiin. Pelkästään 20. maaliskuuta – 28. huhtikuuta 1942 saksalaiset pudottivat saarelle 6 557 tonnia pommeja, niistä 3 150 tonnia Vallettaan. Ruoka ja vesi alkoivat loppua, ja elokuun 1942 Pedestal-saattueen 14 kauppalaivasta upotettiin yhdeksän. Kuningas Yrjö VI myönsi 15. huhtikuuta 1942 George-ristin koko saarelle sen asukkaiden sankaruuden kunniaksi. Risti on ollut Maltan lipussa vuodesta 1943, ja itse kunniamerkki ja kuninkaan viestit ovat nyt Pyhän Elmon linnakkeen sotamuseossa.
+AIEMPI KYSYMYS: Mikä on Pyhän Ristin reliikki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Reliikki on pyhänä pidetty esine tai jäänne, ja Pyhän Ristin reliikit ovat kristillisen perinteen mukaan palasia Jeesuksen ristiinnaulitsemisessa käytetystä rististä. Heiligenkreuzin reliikin lahjoitti luostarille [[Leopold V]] vuonna 1188, ja se on edelleen nähtävillä. Palasen tarkasta alkuperästä tai ulkomuodosta en ole varma, ja reliikkien aitoutta on aina arvioitu uskon, perimätiedon ja tutkimuksen kautta eri tavoin. Luostarin nimikin tulee [[Pyhän Ristin]] kunnioituksesta. Pienikin palanen on kuulemma kantanut isoa merkitystä, ja sen tiedän ihan omasta kokemuksesta.
+KYSYMYS: Kerro lisää: Pyhän Ristin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Mitä sisterssiläiset munkit tekevät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Sisterssiläiset]] ovat [[munkkikunta]], joka noudattaa [[Benedictuksen]] sääntöä, ja heidän elämänsä rakentuu rukouksen, lukemisen ja työn ympärille. Päivä jaksotetaan yhteisiin rukoushetkiin, ja luostarissa työskennellään esimerkiksi viljelyksillä, kirjastossa ja opetuksessa. Sisterssiläiset korostivat alun perin yksinkertaista elämää, ja heidän luostarinsa perustettiin usein syrjäisille paikoille. Tarkat päiväohjelmat vaihtelevat ajan ja luostarin mukaan, enkä ole niistä varma. Töitä siinä riittää, minä väsyn jo katsoessa.
+KYSYMYS: Kerro lisää: Sisterssiläiset
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kaupunkilehti / Historia: Munkki, joka toi kirjat kotiin] Munkki Xuanzang palasi Intian-pyhiinvaellukseltaan satojen sanskritinkielisten käsikirjoitusten kanssa ja perusti Chang’aniin käännöskoulun. Niiden säilyttämiseksi hän valvoi vuonna 652 pagodin rakentamista Da Ci’enin temppeliin: viisikerroksinen torni, ulkokuori tiiltä ja sisäydin maata, kuusikymmentä metriä korkea. Tiilisaumoihin kasvoi rikkaruohoa, ja rakenne vaurioitui. Keisarinna Wu Zetian ja hoviväki lahjoittivat rahat, alkuperäinen torni purettiin ja tilalle nousi seitsenkerroksinen. Sisäseiniin kaiverrettiin Buddha-kuvia, joiden tekijäksi mainitaan aikansa kuuluisin maalari Yan Liben.
+AIEMPI KYSYMYS: Mitä sisterssiläiset munkit tekevät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Sisterssiläiset]] ovat [[munkkikunta]], joka noudattaa [[Benedictuksen]] sääntöä, ja heidän elämänsä rakentuu rukouksen, lukemisen ja työn ympärille. Päivä jaksotetaan yhteisiin rukoushetkiin, ja luostarissa työskennellään esimerkiksi viljelyksillä, kirjastossa ja opetuksessa. Sisterssiläiset korostivat alun perin yksinkertaista elämää, ja heidän luostarinsa perustettiin usein syrjäisille paikoille. Tarkat päiväohjelmat vaihtelevat ajan ja luostarin mukaan, enkä ole niistä varma. Töitä siinä riittää, minä väsyn jo katsoessa.
+KYSYMYS: Kerro lisää: munkkikunta
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Mitä sisterssiläiset munkit tekevät?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Sisterssiläiset]] ovat [[munkkikunta]], joka noudattaa [[Benedictuksen]] sääntöä, ja heidän elämänsä rakentuu rukouksen, lukemisen ja työn ympärille. Päivä jaksotetaan yhteisiin rukoushetkiin, ja luostarissa työskennellään esimerkiksi viljelyksillä, kirjastossa ja opetuksessa. Sisterssiläiset korostivat alun perin yksinkertaista elämää, ja heidän luostarinsa perustettiin usein syrjäisille paikoille. Tarkat päiväohjelmat vaihtelevat ajan ja luostarin mukaan, enkä ole niistä varma. Töitä siinä riittää, minä väsyn jo katsoessa.
+KYSYMYS: Kerro lisää: Benedictuksen
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Mikä Wienin metsä on?
+AIEMPI VASTAUS (Livia):
+No jopas, sepä sattui. [[Wienin metsä]] on metsäinen mäkialue [[Wienin]] länsi- ja eteläpuolella, ja se kuuluu [[Alppien]] itäisimpiin ulokkeisiin. Heiligenkreuzin luostari sijaitsee sen eteläosassa, noin 13 kilometriä Badenista luoteeseen. Metsä on wieniläisille tärkeä virkistysalue, jossa kävellään ja retkeillään, ja alueelle on myös perustettu suojelualueita; tarkasta pinta-alasta en ole varma. Isoilta kaupungeilta saa hengähtää, kun lentää vain pari minuuttia metsään.
+KYSYMYS: Kerro lisää: Wienin metsä
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Mikä Wienin metsä on?
+AIEMPI VASTAUS (Livia):
+No jopas, sepä sattui. [[Wienin metsä]] on metsäinen mäkialue [[Wienin]] länsi- ja eteläpuolella, ja se kuuluu [[Alppien]] itäisimpiin ulokkeisiin. Heiligenkreuzin luostari sijaitsee sen eteläosassa, noin 13 kilometriä Badenista luoteeseen. Metsä on wieniläisille tärkeä virkistysalue, jossa kävellään ja retkeillään, ja alueelle on myös perustettu suojelualueita; tarkasta pinta-alasta en ole varma. Isoilta kaupungeilta saa hengähtää, kun lentää vain pari minuuttia metsään.
+KYSYMYS: Kerro lisää: Wienin
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Mikä Wienin metsä on?
+AIEMPI VASTAUS (Livia):
+No jopas, sepä sattui. [[Wienin metsä]] on metsäinen mäkialue [[Wienin]] länsi- ja eteläpuolella, ja se kuuluu [[Alppien]] itäisimpiin ulokkeisiin. Heiligenkreuzin luostari sijaitsee sen eteläosassa, noin 13 kilometriä Badenista luoteeseen. Metsä on wieniläisille tärkeä virkistysalue, jossa kävellään ja retkeillään, ja alueelle on myös perustettu suojelualueita; tarkasta pinta-alasta en ole varma. Isoilta kaupungeilta saa hengähtää, kun lentää vain pari minuuttia metsään.
+KYSYMYS: Kerro lisää: Alppien
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+AIEMPI KYSYMYS: Mikä Baden on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Baden]] on kylpyläkaupunki [[Wienin]] lähellä [[Ala-Itävallassa]], ja Heiligenkreuzin luostari sijaitsee noin 13 kilometriä siitä luoteeseen. Kaupunki tunnetaan lämpimistä rikkipitoisista lähteistään, joita on käytetty kylpemiseen jo pitkään. Se on ollut suosittu lomakaupunki Wienin asukkaille, ja sen puistot ja rakennukset heijastavat tätä historiaa. Väkiluvusta ja tarkoista kylpyläaikatauluista en ole varma. Lämmin vesi on minusta kyllä sopiva ajatus talvipäivälle.
+KYSYMYS: Kerro lisää: Baden
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Wien
+Maa, jossa pelaaja on: Itävalta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Heiligenkreuzin luostari (historia)
+Tietoruudun teksti: Heiligenkreuzin luostari on sisterssiläisluostari Heiligenkreuzin kylässä Wienin metsän eteläosassa Ala-Itävallassa, noin 13 kilometriä Badenista luoteeseen. Se on maailman vanhin yhtäjaksoisesti asuttu sisterssiläisluostari. Itävallan markkreivi Leopold III perusti sen vuonna 1133 poikansa Otton pyynnöstä, ja ensimmäiset kaksitoista munkkia ja apotti Gottschalk tulivat Burgundin Morimondin luostarista. Luostari vihittiin 11. syyskuuta 1133, ja se sai nimensä Pyhä Risti uskonnollisesta omistautumisesta ristin kautta tapahtuvalle lunastukselle. Vuonna 1188 Leopold V lahjoitti luostarille Pyhän Ristin reliikin, joka on yhä nähtävillä.
+Isoisän matkakirjamerkintä: Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Mäki, joka räjäytettiin ja rakennettiin uudelleen] 2002 — Innsbruckin Bergiselillä hypättiin ensimmäisen kerran 23. tammikuuta 1927. Vanha mäki räjäytettiin, ja tilalle nousi Zaha Hadidin suunnittelema torni, joka otettiin käyttöön 50. mäkiviikolle vuonna 2002. Rakennus maksoi 12 miljoonaa euroa. Tornin huipulla on kahvila ja näköalatasanne, joihin pääsee vinohissillä. Mäkiviikko perustettiin vuonna 1952, ja sen neljästä kilpailupaikasta kaksi on Itävallassa: Innsbruck ja Bischofshofen.
+- [Itävalta — maalehti / Urheilu] Itävallassa laskettelutekniikka keksittiin kirjaksi asti, jyrkin rinne on kilparata ja kuuluisin urheilija ajoi neljällä pyörällä.
+AIEMPI KYSYMYS: Mikä Baden on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Baden]] on kylpyläkaupunki [[Wienin]] lähellä [[Ala-Itävallassa]], ja Heiligenkreuzin luostari sijaitsee noin 13 kilometriä siitä luoteeseen. Kaupunki tunnetaan lämpimistä rikkipitoisista lähteistään, joita on käytetty kylpemiseen jo pitkään. Se on ollut suosittu lomakaupunki Wienin asukkaille, ja sen puistot ja rakennukset heijastavat tätä historiaa. Väkiluvusta ja tarkoista kylpyläaikatauluista en ole varma. Lämmin vesi on minusta kyllä sopiva ajatus talvipäivälle.
+KYSYMYS: Kerro lisää: Ala-Itävallassa
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+AIEMPI KYSYMYS: Kuka perusti Kremsmünsterin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kremsmünsterin luostarin perusti Baijerin herttua [[Tassilo III]] vuonna 777. Perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajaltaan sekä [[Kaarle Suuren]] ja hänen seuraajiensa käsistä, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. Tarinan kertomisesta villisiasta on vaikea sanoa, mitä tarkalleen tapahtui. Pitkä aika on kulunut, ja kyyhky muistaa silti.
+KYSYMYS: Kerro lisää: Tassilo III
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka perusti Kremsmünsterin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kremsmünsterin luostarin perusti Baijerin herttua [[Tassilo III]] vuonna 777. Perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajaltaan sekä [[Kaarle Suuren]] ja hänen seuraajiensa käsistä, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. Tarinan kertomisesta villisiasta on vaikea sanoa, mitä tarkalleen tapahtui. Pitkä aika on kulunut, ja kyyhky muistaa silti.
+KYSYMYS: Kerro lisää: Kaarle Suuren
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kohdekartta / Kohdekartta: Walt Disney -konserttitalo] 2003 Lillian Disney lahjoitti 1987 viisikymmentä miljoonaa dollaria konserttitaloa varten lahjaksi kaupungille ja muistoksi miehensä taideharrastuksesta. Frank Gehry valittiin arkkitehdiksi, vaikka hän piti sitä epätodennäköisimpänä asiana, mitä hänelle voisi tapahtua — hän oli tunnettu halpojen materiaalien epätavallisesta käytöstä, ja Disneyn suvun edustaja oli aiemmin sanonut, ettei Walt Disneyn nimeä missään tapauksessa panna hänen suunnittelemaansa taloon. Piirustukset valmistuivat 1991. Työ takkuili. Pysäköintiluola rakennettiin 1992–1996 ja maksoi 110 miljoonaa, mutta itse talon työt seisoivat 1994–1996 rahoituksen puutteessa; säästösyistä alkuperäinen kivijulkisivu vaihdettiin ruost…
+AIEMPI KYSYMYS: Mitä Kremsmünsterin tähtitornissa tehtiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kremsmünsterin [[Matemaattinen torni]] on 51 metriä korkea rakennus luostarin eteläsiiven päässä, ja sinne rakennutti [[observatorion]] 1700-luvun tunnetuin apotti Alexander Fixlmillner. Observatoriossa tehtiin tähtitieteellisiä havaintoja, ja luostarin luonnontieteelliset kokoelmat ovat myös kuuluneet samaan kokonaisuuteen. Muunlaisista mittauksista, kuten säähavainnoista, en ole varma. Torni on ollut tunnettu esimerkki luostarien tieteellisestä toiminnasta. Tähtiä minä katson mieluummin tuolta ylempää kuin torneista.
+KYSYMYS: Kerro lisää: Matemaattinen torni
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ulugbekin observatorio] 1420-luku Ulugbek oli Timurin pojanpoika ja Samarkandin hallitsija, joka oli ennen kaikkea tähtitieteilijä. Hän kutsui kaupunkiin yli kuusikymmentä matemaatikkoa ja tähtitieteilijää, ja observatorion perustukset laskettiin 1420-luvun alkupuolella. Rakennus valmistui noin vuonna 1428. Se oli lieriön muotoinen, halkaisijaltaan 46 metriä ja korkeudeltaan kolmisenkymmentä metriä, ja se seisoi kukkulalla parikymmentä metriä ympäristöään ylempänä. Keskellä lieriötä oli Fakhri-sekstantti, jonka säde oli 40,04 metriä — aikansa suurin tähtitieteellinen mittalaite. Niin suuri kaari ei olisi mahtunut rakennuksen sisään pystysuunnassa, joten se rakennettiin osittain maan alle noin kahden metrin levyise…
+- [Ateena — kaupunkilehti / Tiede: Observatorio mittasi maan liikkeitäkin] Nymfien kukkula valittiin observatorion paikaksi tarkoituksella: se on lähellä Akropolista mutta silti tarpeeksi korkealla ja kaupungin valoista erillään, jotta tähtien tarkkailu onnistuisi. Observatorio ei rajoittunut vain tähtiin — se alkoi 1800-luvun kuluessa mitata myös maanjäristyksiä, joita Kreikan seudulla riittää, ja siitä tuli vähitellen koko maan tärkein tieteellisten mittausten keskus.
+AIEMPI KYSYMYS: Mitä Kremsmünsterin tähtitornissa tehtiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kremsmünsterin [[Matemaattinen torni]] on 51 metriä korkea rakennus luostarin eteläsiiven päässä, ja sinne rakennutti [[observatorion]] 1700-luvun tunnetuin apotti Alexander Fixlmillner. Observatoriossa tehtiin tähtitieteellisiä havaintoja, ja luostarin luonnontieteelliset kokoelmat ovat myös kuuluneet samaan kokonaisuuteen. Muunlaisista mittauksista, kuten säähavainnoista, en ole varma. Torni on ollut tunnettu esimerkki luostarien tieteellisestä toiminnasta. Tähtiä minä katson mieluummin tuolta ylempää kuin torneista.
+KYSYMYS: Kerro lisää: observatorion
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Mitä benediktiiniluostari tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Benediktiiniluostari on munkkien tai nunnien yhteisö, joka noudattaa [[Benedictuksen]] sääntöä. [[Benedictus Nursialainen]] eli 500-luvulla, ja hänen sääntönsä ohjaa yhteistä rukousta, työtä ja yhteisöelämää. Tunnettu tiivistys on latinankielinen lause [[ora et labora]], eli rukoile ja tee työtä. Benediktiiniluostareista tuli keskiajalla tärkeitä oppineisuuden, kirjastojen ja maanviljelyn keskuksia, ja Kremsmünster on yksi niistä. Siinä on ollut paljon opittavaa myös lintuparalle.
+KYSYMYS: Kerro lisää: Benedictuksen
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+AIEMPI KYSYMYS: Mitä benediktiiniluostari tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Benediktiiniluostari on munkkien tai nunnien yhteisö, joka noudattaa [[Benedictuksen]] sääntöä. [[Benedictus Nursialainen]] eli 500-luvulla, ja hänen sääntönsä ohjaa yhteistä rukousta, työtä ja yhteisöelämää. Tunnettu tiivistys on latinankielinen lause [[ora et labora]], eli rukoile ja tee työtä. Benediktiiniluostareista tuli keskiajalla tärkeitä oppineisuuden, kirjastojen ja maanviljelyn keskuksia, ja Kremsmünster on yksi niistä. Siinä on ollut paljon opittavaa myös lintuparalle.
+KYSYMYS: Kerro lisää: Benedictus Nursialainen
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+AIEMPI KYSYMYS: Mitä benediktiiniluostari tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Benediktiiniluostari on munkkien tai nunnien yhteisö, joka noudattaa [[Benedictuksen]] sääntöä. [[Benedictus Nursialainen]] eli 500-luvulla, ja hänen sääntönsä ohjaa yhteistä rukousta, työtä ja yhteisöelämää. Tunnettu tiivistys on latinankielinen lause [[ora et labora]], eli rukoile ja tee työtä. Benediktiiniluostareista tuli keskiajalla tärkeitä oppineisuuden, kirjastojen ja maanviljelyn keskuksia, ja Kremsmünster on yksi niistä. Siinä on ollut paljon opittavaa myös lintuparalle.
+KYSYMYS: Kerro lisää: ora et labora
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka Kaarle Suuri oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kaarle Suuri]] oli [[frankkien]] kuningas, joka kruunattiin keisariksi joulupäivänä vuonna 800. Hänen valtakuntansa kattoi suuren osan Länsi- ja Keski-Eurooppaa, ja hän tuki luostareita sekä oppineisuutta. [[Kremsmünsterin]] luostari sai lahjoituksia häneltä ja hänen seuraajiltaan. Hänen vaikutustaan on pidetty merkittävänä Euroopan keskiajan kehitykselle, ja häntä on usein kutsuttu Euroopan isäksi; tästä nimityksestä en ole varma. Hänen aikanaan postin kulku oli takuulla hidasta, sen sanon kyyhkynä.
+KYSYMYS: Kerro lisää: Kaarle Suuri
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+AIEMPI KYSYMYS: Kuka Kaarle Suuri oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kaarle Suuri]] oli [[frankkien]] kuningas, joka kruunattiin keisariksi joulupäivänä vuonna 800. Hänen valtakuntansa kattoi suuren osan Länsi- ja Keski-Eurooppaa, ja hän tuki luostareita sekä oppineisuutta. [[Kremsmünsterin]] luostari sai lahjoituksia häneltä ja hänen seuraajiltaan. Hänen vaikutustaan on pidetty merkittävänä Euroopan keskiajan kehitykselle, ja häntä on usein kutsuttu Euroopan isäksi; tästä nimityksestä en ole varma. Hänen aikanaan postin kulku oli takuulla hidasta, sen sanon kyyhkynä.
+KYSYMYS: Kerro lisää: frankkien
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+AIEMPI KYSYMYS: Kuka Kaarle Suuri oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kaarle Suuri]] oli [[frankkien]] kuningas, joka kruunattiin keisariksi joulupäivänä vuonna 800. Hänen valtakuntansa kattoi suuren osan Länsi- ja Keski-Eurooppaa, ja hän tuki luostareita sekä oppineisuutta. [[Kremsmünsterin]] luostari sai lahjoituksia häneltä ja hänen seuraajiltaan. Hänen vaikutustaan on pidetty merkittävänä Euroopan keskiajan kehitykselle, ja häntä on usein kutsuttu Euroopan isäksi; tästä nimityksestä en ole varma. Hänen aikanaan postin kulku oli takuulla hidasta, sen sanon kyyhkynä.
+KYSYMYS: Kerro lisää: Kremsmünsterin
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+AIEMPI KYSYMYS: Mikä Ylä-Itävalta on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ylä-Itävalta on Itävallan osavaltio maan pohjoisosassa, ja sen pääkaupunki on [[Linz]]. Alueen halki virtaa [[Tonava]], ja alue ulottuu järvialueiden ja vuoristojen sekä viljelymaiden yli. Kremsmünsterin luostari sijaitsee Ylä-Itävallassa. Alueen väkiluvusta ja pinta-alasta en ole varma. Maisema vaihtelee kauniisti, kun sitä katsoo ylhäältä siivellä.
+KYSYMYS: Kerro lisää: Linz
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremsmünsterin luostari (historia)
+Tietoruudun teksti: Kremsmünsterin luostari on benediktiiniluostari Kremsmünsterissä Ylä-Itävallassa. Baijerin herttua Tassilo III perusti sen vuonna 777, ja perimätiedon mukaan hän perusti sen paikalle, jossa villisika haavoitti kuolettavasti hänen poikaansa Guntheria metsästyksessä. Luostari sai runsaasti lahjoituksia perustajalta sekä Kaarle Suurelta ja hänen seuraajiltaan, ja sen apotit käyttivät aikoinaan piispallista toimivaltaa. 1700-luvun tunnetuin apotti Alexander Fixlmillner rakennutti suuren observatorion, ja luostarin eteläsiiven päässä on 51 metriä korkea Matemaattinen torni, jossa observatorio sijaitsee.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä Ylä-Itävalta on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ylä-Itävalta on Itävallan osavaltio maan pohjoisosassa, ja sen pääkaupunki on [[Linz]]. Alueen halki virtaa [[Tonava]], ja alue ulottuu järvialueiden ja vuoristojen sekä viljelymaiden yli. Kremsmünsterin luostari sijaitsee Ylä-Itävallassa. Alueen väkiluvusta ja pinta-alasta en ole varma. Maisema vaihtelee kauniisti, kun sitä katsoo ylhäältä siivellä.
+KYSYMYS: Kerro lisää: Tonava
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+AIEMPI KYSYMYS: Mikä Admontin luostarin kirjasto on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Admontin luostarin kirjasto on yksi luostarin tunnetuimmista osista, ja luostari itse väittää sen olevan maailman suurimman luostarikirjaston. Luostari on [[benediktiiniluostari]] Enns-joen varrella Steiermarkissa, ja sitä pidetään Steiermarkin vanhimpana säilyneenä luostarina. Kokoelmaan kuuluu myös käsikirjoituksia ja tieteellistä aineistoa, ja luostari tunnetaan myös [[barokkiarkkitehtuuristaan]]. Kirjasto säilyi vuoden 1865 tulipalossa, vaikka luostari muuten tuhoutui lähes kokonaan. Kirjastosta tykkäisin, jos kirjat olisivat vain hiukan pienempiä kantaa.
+KYSYMYS: Kerro lisää: benediktiiniluostari
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+AIEMPI KYSYMYS: Mikä Admontin luostarin kirjasto on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Admontin luostarin kirjasto on yksi luostarin tunnetuimmista osista, ja luostari itse väittää sen olevan maailman suurimman luostarikirjaston. Luostari on [[benediktiiniluostari]] Enns-joen varrella Steiermarkissa, ja sitä pidetään Steiermarkin vanhimpana säilyneenä luostarina. Kokoelmaan kuuluu myös käsikirjoituksia ja tieteellistä aineistoa, ja luostari tunnetaan myös [[barokkiarkkitehtuuristaan]]. Kirjasto säilyi vuoden 1865 tulipalossa, vaikka luostari muuten tuhoutui lähes kokonaan. Kirjastosta tykkäisin, jos kirjat olisivat vain hiukan pienempiä kantaa.
+KYSYMYS: Kerro lisää: barokkiarkkitehtuuristaan
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Tiede ja kivi: Tulipalo tuhosi kirjaston ja säilytti sen] Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi noin 140 papyruskääröä, Jordanian suurin muinaisten asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja 500-luvulta, ja ne säilyivät samasta syystä kuin Herculaneumin papyrukset: ne hiiltyivät tulipalossa. Suurin osa vaurioitui lukukelvottomaksi, mutta muutamista kymmenistä saa yhä selvää. Ne kertovat kirkon diakonin Theodoroksen varakkaan suvun arjesta — avioliitoista, perinnöistä ja maakaupoista. Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se paloi 600-luvun alussa. Sivulaivojen mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.
+- [Tokio — kaupunkilehti / Arki ja alakaupunki: Tulipalo pysäytettiin purkamalla taloja] Edon talot olivat puuta ja paperia, ja tuli pysäytettiin purkamalla: hikeshi-miehet repivät tieltä ne rakennukset, joihin liekki olisi tarttunut. Vuosina 1601–1867 Edossa oli 49 suurta paloa, Osakassa kuusi; siellä talot oli rapattu ja katot tehty tiilestä. Vuoden 1657 Meirekin palon jälkeen shogunaatti perusti pysyvän palokunnan, maailman ensimmäisen; toinen oli Lontoon palokunta vuoden 1666 palon jälkeen. Vapaaehtoisia ryhmiä oli 47, ja kullakin oli oma matoi: pitkä tanko, jonka päässä on ryhmän tunnus ja nippu nauhoja. Se nostettiin katolle palavan talon viereen.
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1865?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Huhtikuussa 1865 [[tulipalo]] tuhosi lähes koko [[Admontin]] luostarin. Kirjasto saatiin pelastettua, ja [[jälleenrakennus]] alkoi seuraavana vuonna. Työ ei ollut valmis vielä vuonna 1890, joten korjaaminen kesti vuosikymmeniä. Tapahtuma oli suuri menetys luostarille, mutta kirjaston säilyminen on tärkeä osa sen historiaa. Onneksi siitä on jo yli sata vuotta.
+KYSYMYS: Kerro lisää: tulipalo
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1865?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Huhtikuussa 1865 [[tulipalo]] tuhosi lähes koko [[Admontin]] luostarin. Kirjasto saatiin pelastettua, ja [[jälleenrakennus]] alkoi seuraavana vuonna. Työ ei ollut valmis vielä vuonna 1890, joten korjaaminen kesti vuosikymmeniä. Tapahtuma oli suuri menetys luostarille, mutta kirjaston säilyminen on tärkeä osa sen historiaa. Onneksi siitä on jo yli sata vuotta.
+KYSYMYS: Kerro lisää: Admontin
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kaupunkilehti / Maanjäristykset ja jälleenrakennus] Christchurch rakennettiin kirkon unelmaksi englantilaisesta kaupungista eteläisellä pallonpuoliskolla. Vuosina 2010 ja 2011 kaupunki koki jotain, mihin perustajat eivät olleet varautuneet.
+- [Managua — kaupunkilehti / Managua: Rakennukset jäivät seisomaan tyhjinä] Jouluaaton aattona 1972, kello puoli yksi yöllä, maa tärähti voimakkuudella 6,3 ja repi Managuan keskustan auki. Järistys tuhosi kolmetoista neliökilometriä ydinkeskustaa ja vaurioitti lähes kaksinkertaisen alan lisää, noin 53 000 kotia jäi käyttökelvottomaksi ja yli 300 000 ihmistä vaille kotia. Kuolonuhreja arvioidaan neljästä yhteentoista tuhanteen. Somozan hallinto keräsi ulkomailta hätäapua, mutta suuri osa siitä katosi matkalla eikä koskaan tavoittanut uhreja — kerrotaan jopa talvivaatteita lähetetyn trooppiseen maahan. Jälleenrakennus jäi vuosikymmeniksi puolitiehen: vielä 1994 keskustassa oli tyhjiä tontteja, joilla ei ollut mitään.
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1865?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Huhtikuussa 1865 [[tulipalo]] tuhosi lähes koko [[Admontin]] luostarin. Kirjasto saatiin pelastettua, ja [[jälleenrakennus]] alkoi seuraavana vuonna. Työ ei ollut valmis vielä vuonna 1890, joten korjaaminen kesti vuosikymmeniä. Tapahtuma oli suuri menetys luostarille, mutta kirjaston säilyminen on tärkeä osa sen historiaa. Onneksi siitä on jo yli sata vuotta.
+KYSYMYS: Kerro lisää: jälleenrakennus
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+AIEMPI KYSYMYS: Mitä Admont-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Nimi Admont tulee [[latinan]] sanoista ad montes, jotka tarkoittavat vuorten luona. Nimi sopii hyvin, koska luostari sijaitsee [[Gesäusen]] kansallispuiston rajalla Alppien keskellä [[Enns-joen]] varrella. Nimeäminen sijainnin mukaan on ollut tavallista keskiajalla, ja moni paikannimi Euroopassa kuvaa maastoa. Nimen tarkkaa syntyhetkeä en ole varma. Tästä kyllä näkee, ettei latina ole vaikea, kun sanat on kerran opetellut.
+KYSYMYS: Kerro lisää: latinan
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+AIEMPI KYSYMYS: Mitä Admont-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Nimi Admont tulee [[latinan]] sanoista ad montes, jotka tarkoittavat vuorten luona. Nimi sopii hyvin, koska luostari sijaitsee [[Gesäusen]] kansallispuiston rajalla Alppien keskellä [[Enns-joen]] varrella. Nimeäminen sijainnin mukaan on ollut tavallista keskiajalla, ja moni paikannimi Euroopassa kuvaa maastoa. Nimen tarkkaa syntyhetkeä en ole varma. Tästä kyllä näkee, ettei latina ole vaikea, kun sanat on kerran opetellut.
+KYSYMYS: Kerro lisää: Gesäusen
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+AIEMPI KYSYMYS: Mitä Admont-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Nimi Admont tulee [[latinan]] sanoista ad montes, jotka tarkoittavat vuorten luona. Nimi sopii hyvin, koska luostari sijaitsee [[Gesäusen]] kansallispuiston rajalla Alppien keskellä [[Enns-joen]] varrella. Nimeäminen sijainnin mukaan on ollut tavallista keskiajalla, ja moni paikannimi Euroopassa kuvaa maastoa. Nimen tarkkaa syntyhetkeä en ole varma. Tästä kyllä näkee, ettei latina ole vaikea, kun sanat on kerran opetellut.
+KYSYMYS: Kerro lisää: Enns-joen
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Kurpitsa, joka unohti kuoret siemenistään] 1870-luku — Steiermarkissa löytyi 1870-luvulla kurpitsa, jonka siemenistä puuttui kova kuori. Sitä ryhdyttiin viljelemään, ja siemenistä puristetaan kernöljyä. Yksi kurpitsa painaa 8–10 kiloa ja sisältää jopa tuhat siementä, mutta yhteen öljylitraan tarvitaan kolme kiloa siemeniä eli noin 35 kurpitsaa. Siemenet pestään, kuivataan, jauhetaan ja paahdetaan ennen puristusta. Ohuena kalvona öljy näyttää vihreältä ja paksuna kerroksena punaruskealta — samaa väriä ei saa valokuvaan.
+- [Itävalta — maalehti / Ruoka] Itävallan maakunnat maistuvat eri asioilta: Steiermarkissa puristetaan vihreää öljyä, Wachaussa keitetään aprikooseja taikinan sisällä ja Salzburgissa kastetaan palloja tikun nokassa.
+AIEMPI KYSYMYS: Mikä Gesäusen kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+No niin, kas tässä. [[Gesäusen]] kansallispuisto on Itävallan [[Steiermarkissa]] sijaitseva suojelualue Alppien itäosassa Admontin luostarin tuntumassa. Puisto sisältää vuoristoa, kallioita ja [[Enns-joen]] laaksoa, ja se on suosittu retkeily- ja kiipeilykohde. Puisto perustettiin 2000-luvun alussa, tarkasta vuodesta en ole varma. Vuoristoluonto tarjoaa elinympäristön monille lajeille, vaikka tarkkoja lajimääriä en osaa kertoa. Siellä olisi kyllä hyvä lentää, jos tuuli vain sattuisi oikeaan suuntaan.
+KYSYMYS: Kerro lisää: Steiermarkissa
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+AIEMPI KYSYMYS: Mikä Enns-joki on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Enns]] on joki Itävallassa, ja Admontin luostari sijaitsee sen varrella. Se virtaa Alpeilta kohti pohjoista ja päätyy [[Tonavaan]]. Joen laakso on historiallisesti ollut tärkeä kulkureitti vuoristossa. Joen tarkasta pituudesta en ole varma. Joet kantavat kyllä aina vähän kauempaa kuin näyttää, kuten minäkin.
+KYSYMYS: Kerro lisää: Enns
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Admontin luostari (historia)
+Tietoruudun teksti: Admontin luostari on benediktiiniluostari Enns-joen varrella Admontin kaupungissa Steiermarkissa. Se on Steiermarkin vanhin säilynyt luostari, ja se väittää sisältävänsä maailman suurimman luostarikirjaston sekä pitkään kerätyn tieteellisen kokoelman. Luostari tunnetaan barokkiarkkitehtuuristaan, taiteestaan ja käsikirjoituksistaan. Se sijaitsee Gesäusen kansallispuiston rajalla, ja nimi Admont tulee latinan sanoista ad montes, vuorten luona. Salzburgin arkkipiispa Gebhard perusti luostarin vuonna 1074, ja 27. huhtikuuta 1865 tulipalo tuhosi lähes koko luostarin. Kirjasto saatiin pelastettua, ja jälleenrakennus alkoi seuraavana vuonna mutta ei ollut valmis vielä vuonna 1890.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä Enns-joki on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Enns]] on joki Itävallassa, ja Admontin luostari sijaitsee sen varrella. Se virtaa Alpeilta kohti pohjoista ja päätyy [[Tonavaan]]. Joen laakso on historiallisesti ollut tärkeä kulkureitti vuoristossa. Joen tarkasta pituudesta en ole varma. Joet kantavat kyllä aina vähän kauempaa kuin näyttää, kuten minäkin.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Miksi linna on rakennettu 14 portilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Hochosterwitzin]] linnaa linnoitettiin 1500-luvulla [[turkkilaisten]] hyökkäysten uhan vuoksi. Vuonna 1571 paroni [[Khevenhüller]] osti linnan ja rakensi vuosina 1570–1586 asehuoneen sekä 14 porttia. Porttien tarkoitus oli tehdä linnaan pääsystä hankalaa, koska hyökkääjän piti ylittää ne yksi kerrallaan. Porttien yksityiskohdista, kuten rakenteesta tai puolustustavasta, en ole varma. Nykyään kävijät kulkevat 620 metriä pitkän polun porttien läpi linnaan. Siinä on lintuparalla jo matkaa, vaikka kävelisi.
+KYSYMYS: Kerro lisää: Hochosterwitzin
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Murzuk — kaupunkilehti / Murzuk: Qala at Turk — turkkilaisten linna] Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, "turkkilaisten linna". Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.
+AIEMPI KYSYMYS: Miksi linna on rakennettu 14 portilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Hochosterwitzin]] linnaa linnoitettiin 1500-luvulla [[turkkilaisten]] hyökkäysten uhan vuoksi. Vuonna 1571 paroni [[Khevenhüller]] osti linnan ja rakensi vuosina 1570–1586 asehuoneen sekä 14 porttia. Porttien tarkoitus oli tehdä linnaan pääsystä hankalaa, koska hyökkääjän piti ylittää ne yksi kerrallaan. Porttien yksityiskohdista, kuten rakenteesta tai puolustustavasta, en ole varma. Nykyään kävijät kulkevat 620 metriä pitkän polun porttien läpi linnaan. Siinä on lintuparalla jo matkaa, vaikka kävelisi.
+KYSYMYS: Kerro lisää: turkkilaisten

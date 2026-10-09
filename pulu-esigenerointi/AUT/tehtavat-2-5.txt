@@ -1,0 +1,979 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Miksi linna on rakennettu 14 portilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Hochosterwitzin]] linnaa linnoitettiin 1500-luvulla [[turkkilaisten]] hyökkäysten uhan vuoksi. Vuonna 1571 paroni [[Khevenhüller]] osti linnan ja rakensi vuosina 1570–1586 asehuoneen sekä 14 porttia. Porttien tarkoitus oli tehdä linnaan pääsystä hankalaa, koska hyökkääjän piti ylittää ne yksi kerrallaan. Porttien yksityiskohdista, kuten rakenteesta tai puolustustavasta, en ole varma. Nykyään kävijät kulkevat 620 metriä pitkän polun porttien läpi linnaan. Siinä on lintuparalla jo matkaa, vaikka kävelisi.
+KYSYMYS: Kerro lisää: Khevenhüller
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Kuka Khevenhüller oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Khevenhüller on [[Kärntenin]] aatelissuku, ja paroni [[George Khevenhüller]] osti [[Hochosterwitzin]] linnan vuonna 1571. Hän linnoitti linnan turkkilaisten hyökkäysten uhan vuoksi ja rakennutti siihen asehuoneen sekä 14 porttia. Suvun asemasta ja George Khevenhüllerin muista tehtävistä en ole varma. Uskoakseni suku on yhä linnan omistaja, mutta siitä en ole varma. Pitkä suku, ja minä tiedän, millaista on kantaa perinteitä.
+KYSYMYS: Kerro lisää: Kärntenin
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Kuka Khevenhüller oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Khevenhüller on [[Kärntenin]] aatelissuku, ja paroni [[George Khevenhüller]] osti [[Hochosterwitzin]] linnan vuonna 1571. Hän linnoitti linnan turkkilaisten hyökkäysten uhan vuoksi ja rakennutti siihen asehuoneen sekä 14 porttia. Suvun asemasta ja George Khevenhüllerin muista tehtävistä en ole varma. Uskoakseni suku on yhä linnan omistaja, mutta siitä en ole varma. Pitkä suku, ja minä tiedän, millaista on kantaa perinteitä.
+KYSYMYS: Kerro lisää: George Khevenhüller
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Mikä dolomiitti on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Dolomiitti on kivilaji, joka koostuu pääosin mineraalista [[dolomiitista]] eli kalsiumin ja magnesiumin karbonaatista. Se muistuttaa [[kalkkikiveä]], mutta on yleensä sitä kovempaa ja kestävämpää. Hochosterwitzin linna on rakennettu dolomiittikalliolle, joka kohoaa linnan ympärillä. Kivi on kerrostunut meriympäristössä miljoonien vuosien aikana, ja tarkasta iästä en ole varma. Kallio kantaa linnaa hienosti, minä en kanna edes pientä pullaa.
+KYSYMYS: Kerro lisää: dolomiitista
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä dolomiitti on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Dolomiitti on kivilaji, joka koostuu pääosin mineraalista [[dolomiitista]] eli kalsiumin ja magnesiumin karbonaatista. Se muistuttaa [[kalkkikiveä]], mutta on yleensä sitä kovempaa ja kestävämpää. Hochosterwitzin linna on rakennettu dolomiittikalliolle, joka kohoaa linnan ympärillä. Kivi on kerrostunut meriympäristössä miljoonien vuosien aikana, ja tarkasta iästä en ole varma. Kallio kantaa linnaa hienosti, minä en kanna edes pientä pullaa.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Mikä Kärnten on?
+AIEMPI VASTAUS (Livia):
+Mmm— selvä juttu. [[Kärnten]] on Itävallan eteläisin osavaltio, jonka naapureita ovat [[Italia]] ja Slovenia. Pääkaupunki on [[Klagenfurt]], ja alue tunnetaan vuorista sekä järvistä. Hochosterwitzin linna sijaitsee Kärntenissä Sankt Veit an der Glanin itäpuolella. Kärnten on ollut rajaseutua, ja siellä on käyty erilaisia kauppa- ja puolustusasioita. Väkiluvusta ja pinta-alasta en ole varma. Kyllä siellä on kauniit maisemat katsoa katolta.
+KYSYMYS: Kerro lisää: Kärnten
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Mikä Kärnten on?
+AIEMPI VASTAUS (Livia):
+Mmm— selvä juttu. [[Kärnten]] on Itävallan eteläisin osavaltio, jonka naapureita ovat [[Italia]] ja Slovenia. Pääkaupunki on [[Klagenfurt]], ja alue tunnetaan vuorista sekä järvistä. Hochosterwitzin linna sijaitsee Kärntenissä Sankt Veit an der Glanin itäpuolella. Kärnten on ollut rajaseutua, ja siellä on käyty erilaisia kauppa- ja puolustusasioita. Väkiluvusta ja pinta-alasta en ole varma. Kyllä siellä on kauniit maisemat katsoa katolta.
+KYSYMYS: Kerro lisää: Italia
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+AIEMPI KYSYMYS: Mikä Kärnten on?
+AIEMPI VASTAUS (Livia):
+Mmm— selvä juttu. [[Kärnten]] on Itävallan eteläisin osavaltio, jonka naapureita ovat [[Italia]] ja Slovenia. Pääkaupunki on [[Klagenfurt]], ja alue tunnetaan vuorista sekä järvistä. Hochosterwitzin linna sijaitsee Kärntenissä Sankt Veit an der Glanin itäpuolella. Kärnten on ollut rajaseutua, ja siellä on käyty erilaisia kauppa- ja puolustusasioita. Väkiluvusta ja pinta-alasta en ole varma. Kyllä siellä on kauniit maisemat katsoa katolta.
+KYSYMYS: Kerro lisää: Klagenfurt
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Miksi turkkilaiset uhkasivat Kärntenia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ottomaanien valtakunta laajeni Balkanille 1300-luvulta lähtien, ja 1400- ja 1500-luvuilla [[ottomaanien]] joukot tekivät hyökkäys- ja ryöstöretkiä Itävallan alueille. [[Wienin piiritys]] vuonna 1529 oli yksi tunnetuimmista tapahtumista, ja Kärnten oli osa tätä rajaseutua. Itävallan [[Habsburgien]] hallitsijat vastasivat linnoittamalla alueita, kuten Hochosterwitzin. Tarkasta hyökkäysten ajoituksesta Kärntenissä en ole varma. Vanhat uhat ovat onneksi pitkälti historiaa.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+AIEMPI KYSYMYS: Miksi turkkilaiset uhkasivat Kärntenia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ottomaanien valtakunta laajeni Balkanille 1300-luvulta lähtien, ja 1400- ja 1500-luvuilla [[ottomaanien]] joukot tekivät hyökkäys- ja ryöstöretkiä Itävallan alueille. [[Wienin piiritys]] vuonna 1529 oli yksi tunnetuimmista tapahtumista, ja Kärnten oli osa tätä rajaseutua. Itävallan [[Habsburgien]] hallitsijat vastasivat linnoittamalla alueita, kuten Hochosterwitzin. Tarkasta hyökkäysten ajoituksesta Kärntenissä en ole varma. Vanhat uhat ovat onneksi pitkälti historiaa.
+KYSYMYS: Kerro lisää: Wienin piiritys
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hochosterwitz (historia)
+Tietoruudun teksti: Hochosterwitzin linna on Itävallan vaikuttavimpiin keskiaikaisiin linnoihin luettu linna 172 metriä korkealla dolomiittikalliolla Sankt Georgen am Längsee -kunnan lähellä Sankt Veit an der Glanin itäpuolella Kärntenissä. Se sijaitsee 664 metrin korkeudessa Zollfeldin tasangon reunalla, ja se näkyy selkeällä säällä jopa 30 kilometrin päähän. Kalliolla on ollut asutusta pronssikaudesta lähtien, ja se mainitaan ensimmäisen kerran vuoden 860 asiakirjassa. Vuonna 1571 paroni George Khevenhüller osti linnan ja linnoitti sen turkkilaisten hyökkäysten uhan vuoksi rakentaen asehuoneen ja 14 porttia vuosina 1570–1586. Turistit saavat kävellä 620 metriä pitkän polun porttien läpi linnaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Miksi turkkilaiset uhkasivat Kärntenia?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ottomaanien valtakunta laajeni Balkanille 1300-luvulta lähtien, ja 1400- ja 1500-luvuilla [[ottomaanien]] joukot tekivät hyökkäys- ja ryöstöretkiä Itävallan alueille. [[Wienin piiritys]] vuonna 1529 oli yksi tunnetuimmista tapahtumista, ja Kärnten oli osa tätä rajaseutua. Itävallan [[Habsburgien]] hallitsijat vastasivat linnoittamalla alueita, kuten Hochosterwitzin. Tarkasta hyökkäysten ajoituksesta Kärntenissä en ole varma. Vanhat uhat ovat onneksi pitkälti historiaa.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Miksi linna on tulivuoren päällä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on mun lempparityyppisiä kysymyksiä. Riegersburgin linna seisoo kukkulalla, joka on suuren [[kerrostulivuoren]] kiinteytyneen sisuksen jäänne: tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja sen kova ydin jäi näkyviin. Kukkulan huippu on 482 metrin korkeudessa, joten paikka on luontevasti helposti puolustettava ja näkee kauas ympäristöön. Kallio antoi myös rakennusaineen, sillä linnan rakentamiseen on käytetty kukkulan muinaista [[basalttia]]. Linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari [[Rudiger von Hohenberg]]. Ylhäältä katsottuna valinta ei yllätä ketään siivekästä.
+KYSYMYS: Kerro lisää: kerrostulivuoren
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Miksi linna on tulivuoren päällä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on mun lempparityyppisiä kysymyksiä. Riegersburgin linna seisoo kukkulalla, joka on suuren [[kerrostulivuoren]] kiinteytyneen sisuksen jäänne: tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja sen kova ydin jäi näkyviin. Kukkulan huippu on 482 metrin korkeudessa, joten paikka on luontevasti helposti puolustettava ja näkee kauas ympäristöön. Kallio antoi myös rakennusaineen, sillä linnan rakentamiseen on käytetty kukkulan muinaista [[basalttia]]. Linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari [[Rudiger von Hohenberg]]. Ylhäältä katsottuna valinta ei yllätä ketään siivekästä.
+KYSYMYS: Kerro lisää: basalttia
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Miksi linna on tulivuoren päällä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on mun lempparityyppisiä kysymyksiä. Riegersburgin linna seisoo kukkulalla, joka on suuren [[kerrostulivuoren]] kiinteytyneen sisuksen jäänne: tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja sen kova ydin jäi näkyviin. Kukkulan huippu on 482 metrin korkeudessa, joten paikka on luontevasti helposti puolustettava ja näkee kauas ympäristöön. Kallio antoi myös rakennusaineen, sillä linnan rakentamiseen on käytetty kukkulan muinaista [[basalttia]]. Linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari [[Rudiger von Hohenberg]]. Ylhäältä katsottuna valinta ei yllätä ketään siivekästä.
+KYSYMYS: Kerro lisää: Rudiger von Hohenberg
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Kuka omistaa Riegersburgin?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on selvä vastaus. [[Riegersburgin]] linnan omistaa [[Liechtensteinin]] ruhtinassuku. Linnassa toimii museo, jossa on vaihtuvia näyttelyjä, joten sinne pääsee tutustumaan myös tavallinen matkailija. Linna sijaitsee [[Steiermarkin]] osavaltiossa Itävallassa Riegersburgin kaupungin yläpuolella. Ei paha, että tää pysyi mielessä ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Riegersburgin
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Kuka omistaa Riegersburgin?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on selvä vastaus. [[Riegersburgin]] linnan omistaa [[Liechtensteinin]] ruhtinassuku. Linnassa toimii museo, jossa on vaihtuvia näyttelyjä, joten sinne pääsee tutustumaan myös tavallinen matkailija. Linna sijaitsee [[Steiermarkin]] osavaltiossa Itävallassa Riegersburgin kaupungin yläpuolella. Ei paha, että tää pysyi mielessä ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Liechtensteinin
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Kuka omistaa Riegersburgin?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on selvä vastaus. [[Riegersburgin]] linnan omistaa [[Liechtensteinin]] ruhtinassuku. Linnassa toimii museo, jossa on vaihtuvia näyttelyjä, joten sinne pääsee tutustumaan myös tavallinen matkailija. Linna sijaitsee [[Steiermarkin]] osavaltiossa Itävallassa Riegersburgin kaupungin yläpuolella. Ei paha, että tää pysyi mielessä ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Steiermarkin
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Mikä on kerrostulivuori?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. [[Kerrostulivuori]] on tulivuori, joka kasvaa korkeaksi kartioksi, kun purkaukset kerrostavat laavaa ja tuhkaa vuorotellen toistensa päälle. Tulivuoren sammuttua sen ulkokuori voi kulua pois, ja jäljelle jää usein kova sisus, kuten Riegersburgin kukkula, jonka huippu on 482 metriä merenpinnan yläpuolella. Tulivuoren sisuksen kivi on usein [[basalttia]] tai muuta kovaa kiveä, joka kestää kulumista paremmin kuin ympäröivä maa. Sammunut tulivuori on kyyhkyn mielestä paras mahdollinen lepopaikka.
+KYSYMYS: Kerro lisää: Kerrostulivuori
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mikä basaltti on?
+AIEMPI VASTAUS (Livia):
+Mmm— tän tiedän. [[Basaltti]] on tumma, hienorakeinen kivilaji, joka syntyy laavan jähmettyessä. Se on tavallinen [[tulivuorikivi]], ja sitä on käytetty rakennusaineena eri puolilla maailmaa, koska se on tiheää ja kestävää. [[Riegersburgin]] kukkulan muinaista basalttia on käytetty linnan rakentamiseen, ja siksi linna on aivan kirjaimellisesti tehty tulivuoresta. Kivi on kyyhkyn mielestä melko ankea alusta pullataikinalle.
+KYSYMYS: Kerro lisää: Basaltti
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Osorno-tulivuori] Llanquihuen järven yli kohoaa Osorno, 2652 metriä korkea ja lähes täydellisen symmetrinen jäätikköhuippuinen tulivuori, jota on verrattu Japanin Fuji-vuoreen. Osorno on purkautunut ainakin yksitoista kertaa vuosien 1575 ja 1869 välillä, ja viimeisin purkaus tapahtui juuri 1869 - vain neljä vuotta ennen kuin isoisä kulki samalla seudulla vuonna 1873. Luonnontutkija Charles Darwin näki vuonna 1835 Osornon purkautuvan Beagle-aluksen kannelta lähellä Ancudia ja pohti päiväkirjassaan, liittyvätkö kaukaiset tulivuoret toisiinsa maan alla. Yli sadan vuoden ajan Osorno on ollut hiljaa, ja nykyään sen rinteillä hiihdetään ja vaelletaan.
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+AIEMPI KYSYMYS: Mikä basaltti on?
+AIEMPI VASTAUS (Livia):
+Mmm— tän tiedän. [[Basaltti]] on tumma, hienorakeinen kivilaji, joka syntyy laavan jähmettyessä. Se on tavallinen [[tulivuorikivi]], ja sitä on käytetty rakennusaineena eri puolilla maailmaa, koska se on tiheää ja kestävää. [[Riegersburgin]] kukkulan muinaista basalttia on käytetty linnan rakentamiseen, ja siksi linna on aivan kirjaimellisesti tehty tulivuoresta. Kivi on kyyhkyn mielestä melko ankea alusta pullataikinalle.
+KYSYMYS: Kerro lisää: tulivuorikivi
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Kurpitsa, joka unohti kuoret siemenistään] 1870-luku — Steiermarkissa löytyi 1870-luvulla kurpitsa, jonka siemenistä puuttui kova kuori. Sitä ryhdyttiin viljelemään, ja siemenistä puristetaan kernöljyä. Yksi kurpitsa painaa 8–10 kiloa ja sisältää jopa tuhat siementä, mutta yhteen öljylitraan tarvitaan kolme kiloa siemeniä eli noin 35 kurpitsaa. Siemenet pestään, kuivataan, jauhetaan ja paahdetaan ennen puristusta. Ohuena kalvona öljy näyttää vihreältä ja paksuna kerroksena punaruskealta — samaa väriä ei saa valokuvaan.
+- [Itävalta — maalehti / Ruoka] Itävallan maakunnat maistuvat eri asioilta: Steiermarkissa puristetaan vihreää öljyä, Wachaussa keitetään aprikooseja taikinan sisällä ja Salzburgissa kastetaan palloja tikun nokassa.
+AIEMPI KYSYMYS: Millainen alue Steiermark on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tosta voi kertoa vaikka mitä. [[Steiermark]] on Itävallan kaakkoisosassa sijaitseva osavaltio, jonka pääkaupunki on [[Graz]]. Alue on pitkälti metsäistä ja kukkulaista, ja sen pohjoisosassa on vuoria. Sieltä löytyy myös linnoja, kuten Riegersburg, joka seisoo sammuneen tulivuoren päällä. En ole varma kaikista alueen paikallisista erikoisuuksista, joten jätän ne kertomatta. Ruokapuolta olisin kyllä mielelläni tutkinut pidempäänkin.
+KYSYMYS: Kerro lisää: Steiermark
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riegersburg (historia)
+Tietoruudun teksti: Riegersburgin linna on keskiaikainen linna sammuneen tulivuoren päällä Riegersburgin kaupungin yläpuolella Steiermarkin osavaltiossa Itävallassa. Linnan omistaa Liechtensteinin ruhtinassuku, ja siinä on museo, jossa on vaihtuvia näyttelyjä. Linna on rakennettu kukkulalle, joka on suuren kerrostulivuoren kiinteytyneen sisuksen jäänne; tulivuori sammui todennäköisesti noin kaksi miljoonaa vuotta sitten, ja linnan rakentamiseen on käytetty kukkulan muinaista basalttia. Kukkulan huippu on 482 metriä merenpinnan yläpuolella. Alueella on asuttu tuhansia vuosia, ja linnan historia alkaa vuodesta 1122, jolloin ensimmäinen tunnettu asukas oli ritari Rudiger von Hohenberg.
+AIEMPI KYSYMYS: Millainen alue Steiermark on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tosta voi kertoa vaikka mitä. [[Steiermark]] on Itävallan kaakkoisosassa sijaitseva osavaltio, jonka pääkaupunki on [[Graz]]. Alue on pitkälti metsäistä ja kukkulaista, ja sen pohjoisosassa on vuoria. Sieltä löytyy myös linnoja, kuten Riegersburg, joka seisoo sammuneen tulivuoren päällä. En ole varma kaikista alueen paikallisista erikoisuuksista, joten jätän ne kertomatta. Ruokapuolta olisin kyllä mielelläni tutkinut pidempäänkin.
+KYSYMYS: Kerro lisää: Graz
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Miksi Kreuzenstein on sekä uus- että alkuperäinen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Burg Kreuzenstein rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu [[kolmikymmenvuotisen sodan]] aikana. Kreivi [[Johann Nepomuk Wilczek]] aloitti jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Hän osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi. Siksi sitä voidaan pitää sekä uusrakennuksena että alkuperäisenä keskiaikaisena rakenteena: itse rakennus on uusi, mutta monet sen osat ovat aitoa keskiaikaa. Tää oli kyyhkyltä melko tarkka selitys.
+KYSYMYS: Kerro lisää: kolmikymmenvuotisen sodan
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Miksi Kreuzenstein on sekä uus- että alkuperäinen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Burg Kreuzenstein rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu [[kolmikymmenvuotisen sodan]] aikana. Kreivi [[Johann Nepomuk Wilczek]] aloitti jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Hän osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi. Siksi sitä voidaan pitää sekä uusrakennuksena että alkuperäisenä keskiaikaisena rakenteena: itse rakennus on uusi, mutta monet sen osat ovat aitoa keskiaikaa. Tää oli kyyhkyltä melko tarkka selitys.
+KYSYMYS: Kerro lisää: Johann Nepomuk Wilczek
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Kuka Wilczek oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Johann Nepomuk [[Wilczek]] oli itävaltalainen kreivi ja tunnettu napa-alueiden tutkimusmatkailija. Hän aloitti [[Burg Kreuzensteinin]] jälleenrakennuksen vuonna 1874 [[Sleesian]] hiilikaivostensa tuotoilla, ja linna oli tarkoitettu hänen sukunsa sukuhaudaksi. Muistini mukaan hän tuki rahallisesti myös napa-alueiden tutkimusretkiä 1870-luvulla, mutta en ole varma yksityiskohdista. Hän osti eri puolilta Eurooppaa keskiaikaisia rakennuksen osia linnan kokoamiseen. Kreivillä oli selvästi enemmän rahaa kuin tavallisella kyyhkyllä.
+KYSYMYS: Kerro lisää: Wilczek
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Kuka Wilczek oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Johann Nepomuk [[Wilczek]] oli itävaltalainen kreivi ja tunnettu napa-alueiden tutkimusmatkailija. Hän aloitti [[Burg Kreuzensteinin]] jälleenrakennuksen vuonna 1874 [[Sleesian]] hiilikaivostensa tuotoilla, ja linna oli tarkoitettu hänen sukunsa sukuhaudaksi. Muistini mukaan hän tuki rahallisesti myös napa-alueiden tutkimusretkiä 1870-luvulla, mutta en ole varma yksityiskohdista. Hän osti eri puolilta Eurooppaa keskiaikaisia rakennuksen osia linnan kokoamiseen. Kreivillä oli selvästi enemmän rahaa kuin tavallisella kyyhkyllä.
+KYSYMYS: Kerro lisää: Burg Kreuzensteinin
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Kuka Wilczek oli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Johann Nepomuk [[Wilczek]] oli itävaltalainen kreivi ja tunnettu napa-alueiden tutkimusmatkailija. Hän aloitti [[Burg Kreuzensteinin]] jälleenrakennuksen vuonna 1874 [[Sleesian]] hiilikaivostensa tuotoilla, ja linna oli tarkoitettu hänen sukunsa sukuhaudaksi. Muistini mukaan hän tuki rahallisesti myös napa-alueiden tutkimusretkiä 1870-luvulla, mutta en ole varma yksityiskohdista. Hän osti eri puolilta Eurooppaa keskiaikaisia rakennuksen osia linnan kokoamiseen. Kreivillä oli selvästi enemmän rahaa kuin tavallisella kyyhkyllä.
+KYSYMYS: Kerro lisää: Sleesian
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Mikä oli kolmikymmenvuotinen sota?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kolmikymmenvuotinen sota]] oli Euroopassa vuosina 1618–1648 käyty laaja sota, jossa taisteltiin uskonnollisista ja poliittisista syistä. Sen keskus oli [[Pyhän saksalais-roomalaisen keisarikunnan]] alueella, mutta mukana oli monia muita Euroopan valtioita. Sodan aikana tuhoutui paljon rakennuksia, ja [[Burg Kreuzensteinin]] keskiaikainen linna oli rappeutunut ja purettu juuri tämän sodan aikana. Aiheena se on tuhoisa, joten pidän tään tiiviinä.
+KYSYMYS: Kerro lisää: Kolmikymmenvuotinen sota
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Mikä oli kolmikymmenvuotinen sota?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kolmikymmenvuotinen sota]] oli Euroopassa vuosina 1618–1648 käyty laaja sota, jossa taisteltiin uskonnollisista ja poliittisista syistä. Sen keskus oli [[Pyhän saksalais-roomalaisen keisarikunnan]] alueella, mutta mukana oli monia muita Euroopan valtioita. Sodan aikana tuhoutui paljon rakennuksia, ja [[Burg Kreuzensteinin]] keskiaikainen linna oli rappeutunut ja purettu juuri tämän sodan aikana. Aiheena se on tuhoisa, joten pidän tään tiiviinä.
+KYSYMYS: Kerro lisää: Pyhän saksalais-roomalaisen keisarikunnan
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Mitä uusgotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Uusgotiikka]] on 1800-luvulla suosittu rakennus- ja koristetyyli, joka jäljittelee keskiajan goottilaista rakentamista, esimerkiksi suippokaarineen ja torneineen. Tyylin suosio liittyi aikakauden [[romanttiseen]] kiinnostukseen keskiaikaa kohtaan. [[Burg Kreuzenstein]] on tästä hyvä esimerkki, sillä se rakennettiin 1870-luvulla keskiaikaisen linnan jäänteille ja koottiin eri puolilta Eurooppaa ostetuista keskiaikaisista osista. Mulle riittäisi kyllä pelkkä pieni kellotorni.
+KYSYMYS: Kerro lisää: Uusgotiikka
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Mitä uusgotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Uusgotiikka]] on 1800-luvulla suosittu rakennus- ja koristetyyli, joka jäljittelee keskiajan goottilaista rakentamista, esimerkiksi suippokaarineen ja torneineen. Tyylin suosio liittyi aikakauden [[romanttiseen]] kiinnostukseen keskiaikaa kohtaan. [[Burg Kreuzenstein]] on tästä hyvä esimerkki, sillä se rakennettiin 1870-luvulla keskiaikaisen linnan jäänteille ja koottiin eri puolilta Eurooppaa ostetuista keskiaikaisista osista. Mulle riittäisi kyllä pelkkä pieni kellotorni.
+KYSYMYS: Kerro lisää: romanttiseen
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Mitä uusgotiikka tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Uusgotiikka]] on 1800-luvulla suosittu rakennus- ja koristetyyli, joka jäljittelee keskiajan goottilaista rakentamista, esimerkiksi suippokaarineen ja torneineen. Tyylin suosio liittyi aikakauden [[romanttiseen]] kiinnostukseen keskiaikaa kohtaan. [[Burg Kreuzenstein]] on tästä hyvä esimerkki, sillä se rakennettiin 1870-luvulla keskiaikaisen linnan jäänteille ja koottiin eri puolilta Eurooppaa ostetuista keskiaikaisista osista. Mulle riittäisi kyllä pelkkä pieni kellotorni.
+KYSYMYS: Kerro lisää: Burg Kreuzenstein
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Burg Kreuzenstein (historia)
+Tietoruudun teksti: Burg Kreuzenstein on linna Leobendorfin lähellä Ala-Itävallassa, 265 metrin korkeudessa merenpinnasta. Se rakennettiin keskiaikaisen linnan jäänteille, joka oli rappeutunut ja purettu kolmikymmenvuotisen sodan aikana. Linna oli tarkoitettu Wilczekin suvun sukuhaudaksi, ja kreivi Johann Nepomuk Wilczek, tunnettu napa-alueiden tutkimusmatkailija, aloitti sen jälleenrakennuksen vuonna 1874 Sleesian hiilikaivostensa tuotoilla. Kreivi osti eri puolilta Eurooppaa keskiaikaisten rakennusten osia, joista linna koottiin uskottavan näköiseksi, joten sitä voidaan pitää sekä uus- että alkuperäisenä keskiaikaisena rakenteena. Linna sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.
+AIEMPI KYSYMYS: Mikä on Sleesia?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Sleesia]] on historiallinen alue Keski-Euroopassa, ja sen suurin osa kuuluu nykyisin Puolalle, pienempiä osia Tšekille ja Saksalle. Alue on tunnettu vahvasta kaivosteollisuudestaan ja erityisesti hiilestä. Kreivi [[Wilczek]] rahoitti Burg Kreuzensteinin jälleenrakennuksen juuri Sleesian hiilikaivostensa tuotoilla. Aluejako on muuttunut vuosisatojen aikana useita kertoja, joten tarkat rajat riippuvat aikakaudesta. Rajat on kyyhkyn päänvaiva, koska ylhäältä ei näe viivoja.
+KYSYMYS: Kerro lisää: Sleesia
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Keitä Esterházyt olivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on isoja nimiä. [[Esterházy]] oli vaikutusvaltainen aatelissuku, jonka jäsen Nikolaus Esterházy sai [[Forchtensteinin]] linnan keisari Ferdinand II:lta vuonna 1622. Suku vahvisti ja koristeli linnaa, ja sen aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden niin sanottujen ihmeiden säilytyspaikka. Ennen heitä linna oli kuulunut [[Habsburgeille]] noin 170 vuotta. Muistini mukaan suku on tunnettu myös Unkarin ja Itävallan historiassa, mutta en ole varma yksityiskohdista. Aatelisten sukujen vaiheet venyvät kyyhkyltä aina pitkälle.
+KYSYMYS: Kerro lisää: Esterházy
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Keitä Esterházyt olivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on isoja nimiä. [[Esterházy]] oli vaikutusvaltainen aatelissuku, jonka jäsen Nikolaus Esterházy sai [[Forchtensteinin]] linnan keisari Ferdinand II:lta vuonna 1622. Suku vahvisti ja koristeli linnaa, ja sen aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden niin sanottujen ihmeiden säilytyspaikka. Ennen heitä linna oli kuulunut [[Habsburgeille]] noin 170 vuotta. Muistini mukaan suku on tunnettu myös Unkarin ja Itävallan historiassa, mutta en ole varma yksityiskohdista. Aatelisten sukujen vaiheet venyvät kyyhkyltä aina pitkälle.
+KYSYMYS: Kerro lisää: Forchtensteinin
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+AIEMPI KYSYMYS: Keitä Esterházyt olivat?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tää on isoja nimiä. [[Esterházy]] oli vaikutusvaltainen aatelissuku, jonka jäsen Nikolaus Esterházy sai [[Forchtensteinin]] linnan keisari Ferdinand II:lta vuonna 1622. Suku vahvisti ja koristeli linnaa, ja sen aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden niin sanottujen ihmeiden säilytyspaikka. Ennen heitä linna oli kuulunut [[Habsburgeille]] noin 170 vuotta. Muistini mukaan suku on tunnettu myös Unkarin ja Itävallan historiassa, mutta en ole varma yksityiskohdista. Aatelisten sukujen vaiheet venyvät kyyhkyltä aina pitkälle.
+KYSYMYS: Kerro lisää: Habsburgeille
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Mitä aarrekammiossa säilytettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Forchtensteinin]] aarrekammioon pääsi vain salaisen käytävän kautta. Esterházy-suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden niin sanottujen ihmeiden säilytyspaikka. Tarkempaa luetteloa kammion sisällöstä en ole varma, joten en lähde arvailemaan yksittäisiä esineitä. [[Kronometri]] tarkoittaa erittäin tarkkaa kelloa, jollaisia käytettiin muun muassa merenkulussa. Aarteista voisi haaveilla pidempäänkin, mutta hyvä pysyä faktoissa.
+KYSYMYS: Kerro lisää: Kronometri
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Mikä on Burgenland?
+AIEMPI VASTAUS (Livia):
+Ai tota, helppo kysymys. [[Burgenland]] on Itävallan itäisin osavaltio, ja se rajoittuu [[Unkariin]]. Alue kuului aiemmin Unkarin kuningaskuntaan, ja se liitettiin Itävaltaan 1920-luvun alussa. [[Forchtensteinin]] linna sijaitsee Pohjois-Burgenlandissa Mattersburgin eteläpuolella Wulka-laakson yläpuolella, 511 metrin korkeudessa. Nimi tarkoittaa linnojen maata, ja se sopii hyvin alueelle. Tarkat päivämäärät olen jättänyt pois, koska en ole niistä täysin varma.
+KYSYMYS: Kerro lisää: Burgenland
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Mikä on Burgenland?
+AIEMPI VASTAUS (Livia):
+Ai tota, helppo kysymys. [[Burgenland]] on Itävallan itäisin osavaltio, ja se rajoittuu [[Unkariin]]. Alue kuului aiemmin Unkarin kuningaskuntaan, ja se liitettiin Itävaltaan 1920-luvun alussa. [[Forchtensteinin]] linna sijaitsee Pohjois-Burgenlandissa Mattersburgin eteläpuolella Wulka-laakson yläpuolella, 511 metrin korkeudessa. Nimi tarkoittaa linnojen maata, ja se sopii hyvin alueelle. Tarkat päivämäärät olen jättänyt pois, koska en ole niistä täysin varma.
+KYSYMYS: Kerro lisää: Unkariin
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Gellértinvuori] 1850–1854 Gellértinvuori kohoaa 235 metrin korkeuteen Tonavan yllä, ja sen nimi tulee piispa Gellertistä, joka surmattiin kukkulalla kansannousussa vuonna 1046 — tarinan mukaan hänet suljettiin piikkitynnyriin ja vieritettiin alas rinnettä. Kukkulan sisällä on kuumien lähteiden muovaamia luolia; vuonna 2007 sieltä löytyi kokonainen kristallien peittämä luola, joka on syntynyt jo 300 000–500 000 vuotta sitten. Huipulla seisoo Citadella-linnoitus, jonka Habsburgit rakensivat 1850-luvulla vuoden 1848 kansannousun jälkeen pitääkseen kaupunkia kurissa. Sen vieressä kohoaa iso pronssipatsas, jonka neuvostojoukot pystyttivät toisen maailmansodan jälkeen voiton muistoksi — patsas näkyy lähes joka p…
+AIEMPI KYSYMYS: Mikä Habsburgien suku oli?
+AIEMPI VASTAUS (Livia):
+No niin, iso aihe. [[Habsburgit]] olivat Euroopan merkittävimpiä hallitsijasukuja, ja heidän valtansa keskus oli pitkään Itävalta. [[Forchtensteinin]] linna siirtyi noin vuonna 1450 Habsburgeille, jotka omistivat sen 170 vuotta, kunnes keisari [[Ferdinand II]] antoi sen vuonna 1622 Nikolaus Esterházylle. Suvun jäseniä oli muun muassa Pyhän saksalais-roomalaisen keisarikunnan keisareina ja Itävallan hallitsijoina. Tarkat hallituskaudet jätän tässä kertomatta, ettei kyyhky erehdy. Pitkä suku vaatii pitkän vastauksen, ja tää venyi jo.
+KYSYMYS: Kerro lisää: Habsburgit
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Mikä Habsburgien suku oli?
+AIEMPI VASTAUS (Livia):
+No niin, iso aihe. [[Habsburgit]] olivat Euroopan merkittävimpiä hallitsijasukuja, ja heidän valtansa keskus oli pitkään Itävalta. [[Forchtensteinin]] linna siirtyi noin vuonna 1450 Habsburgeille, jotka omistivat sen 170 vuotta, kunnes keisari [[Ferdinand II]] antoi sen vuonna 1622 Nikolaus Esterházylle. Suvun jäseniä oli muun muassa Pyhän saksalais-roomalaisen keisarikunnan keisareina ja Itävallan hallitsijoina. Tarkat hallituskaudet jätän tässä kertomatta, ettei kyyhky erehdy. Pitkä suku vaatii pitkän vastauksen, ja tää venyi jo.
+KYSYMYS: Kerro lisää: Ferdinand II
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Ehkä maailman vanhin sotilassoittokunta] Mehter on osmanien sotilassoittokunta, jota pidetään vanhimpana tunnettuna yhä toimivana marssivana soittokuntana maailmassa. Täydessä kokoonpanossa jokaista soitinta oli yhdeksän: yhdeksän rumpua, yhdeksän kimeää zurnaa, yhdeksän lautasparia. Jyminä kuului Euroopan puolelle asti, ja Haydn, Mozart ja Beethoven kirjoittivat kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin 1826, mutta Istanbulin sotilasmuseon johtaja herätti sen henkiin 1911. Museossa se marssii yhä.
+AIEMPI KYSYMYS: Miten Haydn liittyy Esterházyihin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Joseph Haydn]] oli itävaltalainen säveltäjä, joka palveli [[Esterházyn]] ruhtinassukua pitkään hovisäveltäjänä ja kapellimestarina. Suku oli kuuluisa taiteen ja musiikin tukijana, ja sen hovissa Haydnilla oli käytössään oma orkesteri. Esterházyjen linnoista tunnetuin Haydnin työpaikka oli muistini mukaan Eisenstadt, mutta en ole varma kaikista yksityiskohdista. Säveltäjän ja hänen työnantajansa suhde antaa hyvän esimerkin aatelisen holhouksen vaikutuksesta musiikkiin. Orkesterin soitto kuulostaa varmasti paremmalta kuin kyyhkyn kurnutus.
+KYSYMYS: Kerro lisää: Joseph Haydn
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forchtenstein (historia)
+Tietoruudun teksti: Forchtensteinin linna on myöhäiskeskiajalla rakennettu linna Forchtensteinin kunnan lähellä Pohjois-Burgenlandissa Itävallassa, 511 metrin korkeudessa. Linna on Mattersburgin eteläpuolella Wulka-laakson yläpuolella. Sen ensimmäisen osan, 50 metriä korkean päätornin, rakensivat 1400-luvun alussa Mattersburgin herrat, jotka nimittivät itseään myöhemmin Forchtensteinin herroiksi. Noin vuonna 1450 suku kuoli sukupuuttoon, ja linna siirtyi Habsburgeille, jotka omistivat sen 170 vuotta. Vuonna 1622 Nikolaus Esterházy sai linnan keisari Ferdinand II:lta, ja Esterházy-suku vahvisti ja koristeli sitä; suvun aikana linnasta tuli aseiden, arkistojen, kronometrien, koneiden ja muiden "ihmeiden" säilytyspaikka, ja aarrekammioon pääsi vain salaisen käytävän kautta.
+AIEMPI KYSYMYS: Miten Haydn liittyy Esterházyihin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Joseph Haydn]] oli itävaltalainen säveltäjä, joka palveli [[Esterházyn]] ruhtinassukua pitkään hovisäveltäjänä ja kapellimestarina. Suku oli kuuluisa taiteen ja musiikin tukijana, ja sen hovissa Haydnilla oli käytössään oma orkesteri. Esterházyjen linnoista tunnetuin Haydnin työpaikka oli muistini mukaan Eisenstadt, mutta en ole varma kaikista yksityiskohdista. Säveltäjän ja hänen työnantajansa suhde antaa hyvän esimerkin aatelisen holhouksen vaikutuksesta musiikkiin. Orkesterin soitto kuulostaa varmasti paremmalta kuin kyyhkyn kurnutus.
+KYSYMYS: Kerro lisää: Esterházyn
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Miksi keisari valitsi Bad Ischlin kesäpaikakseen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Bad Ischl]] oli 1800-luvun alussa noussut muodikkaaksi kylpyläkaupungiksi, kun suolavesi tuli lääketieteellisesti suosituksi. Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari [[Frans Joosef I]] valitsi kaupungin kesäasunnokseen. Syistä, joiden vuoksi juuri tämä paikka tuli keisarille tärkeäksi, en ole varma, mutta kaupungin kylpylähistoria ja Salzkammergutin vuoristomaisema tekivät siitä houkuttelevan. Kaiservilla toimi sittemmin hallitsijoiden kesäasuntona. Kyyhky ei kyllä tarvitse virallista syytä hyvälle kesäpaikalle.
+KYSYMYS: Kerro lisää: Bad Ischl
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Ruoka: Jälkiruoka, joka syntyi vahingosta] 1854 — Kaiserschmarrn tehdään ohukaistaikinasta, johon vatkataan valkuaisvaahto. Paistettu levy revitään pannussa paloiksi, päälle siivilöidään tomusokeria ja viereen tulee zwetschkenröster eli haudutetut luumut, joskus omenasose. Nimi tarkoittaa suunnilleen keisarin sotkua. Tarinan mukaan annos tarjottiin ensimmäisen kerran vuonna 1854 keisarinna Elisabetille ja repesi tarjolle pantaessa vahingossa rikki. Vasta sen jälkeen se nimettiin uudelleen keisari Frans Joosefin mukaan.
+AIEMPI KYSYMYS: Miksi keisari valitsi Bad Ischlin kesäpaikakseen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Bad Ischl]] oli 1800-luvun alussa noussut muodikkaaksi kylpyläkaupungiksi, kun suolavesi tuli lääketieteellisesti suosituksi. Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari [[Frans Joosef I]] valitsi kaupungin kesäasunnokseen. Syistä, joiden vuoksi juuri tämä paikka tuli keisarille tärkeäksi, en ole varma, mutta kaupungin kylpylähistoria ja Salzkammergutin vuoristomaisema tekivät siitä houkuttelevan. Kaiservilla toimi sittemmin hallitsijoiden kesäasuntona. Kyyhky ei kyllä tarvitse virallista syytä hyvälle kesäpaikalle.
+KYSYMYS: Kerro lisää: Frans Joosef I
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Miten suola liittyy Ischliin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suolaa on riittänyt. Ischlin seudulla [[suola]] on ollut tärkeää jo pitkään: ensimmäinen suolakaivos avattiin vuonna 1563 ja suolan haihdutusallas vuonna 1571. Asutus alueella ulottuu esihistoriallisen [[Hallstatt-kulttuurin]] aikaan. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi. Näin suolan louhinta ja kylpylähoidot kulkivat käsi kädessä kaupungin kehityksessä. Hyvä, että edes joku sai suolasta hyötyä, minä en syö sitä.
+KYSYMYS: Kerro lisää: suola
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Miten suola liittyy Ischliin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, suolaa on riittänyt. Ischlin seudulla [[suola]] on ollut tärkeää jo pitkään: ensimmäinen suolakaivos avattiin vuonna 1563 ja suolan haihdutusallas vuonna 1571. Asutus alueella ulottuu esihistoriallisen [[Hallstatt-kulttuurin]] aikaan. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi. Näin suolan louhinta ja kylpylähoidot kulkivat käsi kädessä kaupungin kehityksessä. Hyvä, että edes joku sai suolasta hyötyä, minä en syö sitä.
+KYSYMYS: Kerro lisää: Hallstatt-kulttuurin
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Mikä oli Hallstatt-kulttuuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Hallstatt-kulttuuri]] oli Keski-Euroopassa rautakauden alussa vaikuttanut kulttuuri, joka on saanut nimensä [[Hallstattin]] paikkakunnalta Itävallasta. Sen löydöt liittyvät muun muassa hautalöytöihin ja suolan louhintaan. [[Ischlin]] seudulla on asuttu jo Hallstatt-kulttuurin aikana. Tarkat vuosiluvut jätän pois, koska en ole niistä täysin varma. Ihmiset olivat siis suolan perässä jo paljon ennen keisareita.
+KYSYMYS: Kerro lisää: Hallstatt-kulttuuri
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Mikä oli Hallstatt-kulttuuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Hallstatt-kulttuuri]] oli Keski-Euroopassa rautakauden alussa vaikuttanut kulttuuri, joka on saanut nimensä [[Hallstattin]] paikkakunnalta Itävallasta. Sen löydöt liittyvät muun muassa hautalöytöihin ja suolan louhintaan. [[Ischlin]] seudulla on asuttu jo Hallstatt-kulttuurin aikana. Tarkat vuosiluvut jätän pois, koska en ole niistä täysin varma. Ihmiset olivat siis suolan perässä jo paljon ennen keisareita.
+KYSYMYS: Kerro lisää: Hallstattin
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Mikä oli Hallstatt-kulttuuri?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Hallstatt-kulttuuri]] oli Keski-Euroopassa rautakauden alussa vaikuttanut kulttuuri, joka on saanut nimensä [[Hallstattin]] paikkakunnalta Itävallasta. Sen löydöt liittyvät muun muassa hautalöytöihin ja suolan louhintaan. [[Ischlin]] seudulla on asuttu jo Hallstatt-kulttuurin aikana. Tarkat vuosiluvut jätän pois, koska en ole niistä täysin varma. Ihmiset olivat siis suolan perässä jo paljon ennen keisareita.
+KYSYMYS: Kerro lisää: Ischlin
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Mikä on Salzkammergut?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Salzkammergut]] on Itävallan alppialue, joka tunnetaan järvistään, vuoristomaisemistaan ja pitkästä suolanlouhinnan historiastaan. [[Bad Ischl]] sijaitsee alueen keskellä [[Traun-joen]] varrella. Alueen nimi viittaa suolaan, joka on ollut seudun elinkeinon perusta jo vuosisatoja. Alue ulottuu useamman osavaltion alueelle, mutta tarkat rajat riippuvat siitä, kenelle puhuu. Tää oli melkein yhtä helppo kuin lentäminen kotiin.
+KYSYMYS: Kerro lisää: Salzkammergut
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+AIEMPI KYSYMYS: Mikä on Salzkammergut?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Salzkammergut]] on Itävallan alppialue, joka tunnetaan järvistään, vuoristomaisemistaan ja pitkästä suolanlouhinnan historiastaan. [[Bad Ischl]] sijaitsee alueen keskellä [[Traun-joen]] varrella. Alueen nimi viittaa suolaan, joka on ollut seudun elinkeinon perusta jo vuosisatoja. Alue ulottuu useamman osavaltion alueelle, mutta tarkat rajat riippuvat siitä, kenelle puhuu. Tää oli melkein yhtä helppo kuin lentäminen kotiin.
+KYSYMYS: Kerro lisää: Traun-joen
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: MuCEM] 2013 MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo avattiin vuonna 2013, samana vuonna kun Marseille oli Euroopan kulttuuripääkaupunki. Se seisoo aivan meren rannalla Vanhansataman suulla. Rakennus on harmaa kivikuutio, jota ympäröi musta, pitsimäinen betoniverkko — se muistuttaa hieman kalaverkkoa tai koralliriuttaa. 130 metriä pitkä silta yhdistää museon vieressä kohoavaan vanhaan Saint-Jeanin linnaan. Museossa kerrotaan Euroopan ja Välimeren kansojen historiasta muinaisajasta nykypäivään. Jo kolmen ensimmäisen vuoden aikana museossa kävi 8,5 miljoonaa vierailijaa. "Rakensimme sen kivestä, vedestä ja tuulesta." — Arkkitehdit Rudy Ricciotti ja Roland Carta kuvailivat näin MuCEMia
+AIEMPI KYSYMYS: Mikä on Euroopan kulttuuripääkaupunki?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Euroopan kulttuuripääkaupunki]] on nimitys, jonka [[Euroopan unioni]] myöntää kaupungille tai seudulle yleensä vuodeksi kerrallaan. Valittu kaupunki esittelee kulttuuriaan ja järjestää vuoden aikana tapahtumia ja hankkeita. Vuonna 2024 [[Bad Ischl]] oli yksi Euroopan kulttuuripääkaupungeista. Tarkat valintaperusteet en ole täysin varma, mutta idea on korostaa Euroopan kulttuurien yhteistä perintöä ja monimuotoisuutta. Kulttuurivuosi kuulostaa mun korvaan hyvältä tekosyyltä leipoa.
+KYSYMYS: Kerro lisää: Euroopan kulttuuripääkaupunki
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bad Ischl (kulttuuri)
+Tietoruudun teksti: Bad Ischl on kylpylä Ylä-Itävallan eteläosassa Traun-joen varrella Salzkammergutin keskellä. Sen Kaiservilla oli Itävalta-Unkarin hallitsijoiden, keisari Frans Joosefin ja keisarinna Elisabethin, kesäasunto. Ihmiset ovat asuneet Ischlin seudulla jo esihistoriallisen Hallstatt-kulttuurin ajasta lähtien. Vuonna 1563 avattiin ensimmäinen suolakaivos ja vuonna 1571 suolan haihdutusallas. Kun suolavesi tuli 1800-luvun alussa lääketieteellisesti suosituksi, Ischl muuttui muodikkaaksi kylpyläkaupungiksi; Hotel Post avattiin vuonna 1828, ja vuonna 1849 keisari Frans Joosef I valitsi kaupungin kesäasunnokseen. Vuonna 2024 Bad Ischl oli yksi Euroopan kulttuuripääkaupungeista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+- [Liettua — maalehti / Ruoka: Makkara joka kypsyy kuukausia savussa] 1500-luvulta — Skilandis on liettualainen kylmäsavustettu makkara, joka täytetään karkeaksi jauhetulla sianlihalla, suolalla, pippurilla ja valkosipulilla ja jonka kuorena käytetään perinteisesti sian mahalaukkua tai virtsarakkoa. Se kypsyy savussa ja kuivuu useita kuukausia, jolloin siitä tulee tiivis ja voimakkaan makuinen. Reseptejä tunnetaan jo 1500-luvulta, ja erityisesti Suvalkijan alue on tunnettu skilandiksestaan. Euroopan unioni myönsi liettualaiselle skilandikselle suojatun maantieteellisen merkinnän 2009 ja erillisen aidon perinteisen tuotteen aseman 2016.
+AIEMPI KYSYMYS: Mikä on Euroopan kulttuuripääkaupunki?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Euroopan kulttuuripääkaupunki]] on nimitys, jonka [[Euroopan unioni]] myöntää kaupungille tai seudulle yleensä vuodeksi kerrallaan. Valittu kaupunki esittelee kulttuuriaan ja järjestää vuoden aikana tapahtumia ja hankkeita. Vuonna 2024 [[Bad Ischl]] oli yksi Euroopan kulttuuripääkaupungeista. Tarkat valintaperusteet en ole täysin varma, mutta idea on korostaa Euroopan kulttuurien yhteistä perintöä ja monimuotoisuutta. Kulttuurivuosi kuulostaa mun korvaan hyvältä tekosyyltä leipoa.
+KYSYMYS: Kerro lisää: Euroopan unioni
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Gmundner Keramik on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Gmundner Keramik]] on [[Gmundenin]] kaupungissa Ylä-Itävallassa valmistettavan keramiikan nimi. Keramiikkatehdas kuuluu kaupungin tunnetuimpiin nähtävyyksiin [[Traunin putouksen]], Schloss Ort -linnan ja kaupungintalon ohella. Tarkempia yksityiskohtia valmistustavoista tai tuotteiden kuvioista en ole täysin varma, joten jätän ne mainitsematta. Keramiikka on kyllä kaunista, vaikka pullataikinaa ei sillä voi muotoilla.
+KYSYMYS: Kerro lisää: Gmundner Keramik
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Gmundner Keramik on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Gmundner Keramik]] on [[Gmundenin]] kaupungissa Ylä-Itävallassa valmistettavan keramiikan nimi. Keramiikkatehdas kuuluu kaupungin tunnetuimpiin nähtävyyksiin [[Traunin putouksen]], Schloss Ort -linnan ja kaupungintalon ohella. Tarkempia yksityiskohtia valmistustavoista tai tuotteiden kuvioista en ole täysin varma, joten jätän ne mainitsematta. Keramiikka on kyllä kaunista, vaikka pullataikinaa ei sillä voi muotoilla.
+KYSYMYS: Kerro lisää: Gmundenin
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Gmundner Keramik on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Gmundner Keramik]] on [[Gmundenin]] kaupungissa Ylä-Itävallassa valmistettavan keramiikan nimi. Keramiikkatehdas kuuluu kaupungin tunnetuimpiin nähtävyyksiin [[Traunin putouksen]], Schloss Ort -linnan ja kaupungintalon ohella. Tarkempia yksityiskohtia valmistustavoista tai tuotteiden kuvioista en ole täysin varma, joten jätän ne mainitsematta. Keramiikka on kyllä kaunista, vaikka pullataikinaa ei sillä voi muotoilla.
+KYSYMYS: Kerro lisää: Traunin putouksen
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Traunstein on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Traunstein]] on [[Gmundenin]] ympärillä kohoava vuori, jonka korkeus on noin 1 660 metriä. Se on yksi niistä korkeista vuorista, jotka ympäröivät kaupunkia, ja muita ovat Erlakogel, Wilder Kogel ja [[Höllengebirge]]. Gmunden sijaitsee Traunsee-järven ja Traun-joen äärellä. Retkeilyreiteistä tai muista yksityiskohdista en ole varma, joten jätän ne kertomatta. Vuoren huipulta näkyy varmasti kauas, vaikka kyyhky näkee kauemmas.
+KYSYMYS: Kerro lisää: Traunstein
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Traunstein on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Traunstein]] on [[Gmundenin]] ympärillä kohoava vuori, jonka korkeus on noin 1 660 metriä. Se on yksi niistä korkeista vuorista, jotka ympäröivät kaupunkia, ja muita ovat Erlakogel, Wilder Kogel ja [[Höllengebirge]]. Gmunden sijaitsee Traunsee-järven ja Traun-joen äärellä. Retkeilyreiteistä tai muista yksityiskohdista en ole varma, joten jätän ne kertomatta. Vuoren huipulta näkyy varmasti kauas, vaikka kyyhky näkee kauemmas.
+KYSYMYS: Kerro lisää: Höllengebirge
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Traunsee on?
+AIEMPI VASTAUS (Livia):
+Joo, kerron mielelläni. [[Traunsee]] on Ylä-Itävallan alppijärvi, jonka rannalla [[Gmunden]] sijaitsee. Järveen laskee Traun-joki, ja ympäröivät vuoret, kuten Traunstein, antavat maisemalle ilmeensä. Alue kuuluu laajemmin [[Salzkammergutin]] seutuun. Järven syvyydestä tai pinta-alasta en ole täysin varma, joten niitä en lähde arvailemaan. Rannalta katsottuna maisema on ylhäältä vielä kauniimpi.
+KYSYMYS: Kerro lisää: Traunsee
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Traunsee on?
+AIEMPI VASTAUS (Livia):
+Joo, kerron mielelläni. [[Traunsee]] on Ylä-Itävallan alppijärvi, jonka rannalla [[Gmunden]] sijaitsee. Järveen laskee Traun-joki, ja ympäröivät vuoret, kuten Traunstein, antavat maisemalle ilmeensä. Alue kuuluu laajemmin [[Salzkammergutin]] seutuun. Järven syvyydestä tai pinta-alasta en ole täysin varma, joten niitä en lähde arvailemaan. Rannalta katsottuna maisema on ylhäältä vielä kauniimpi.
+KYSYMYS: Kerro lisää: Gmunden
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Mikä Traunsee on?
+AIEMPI VASTAUS (Livia):
+Joo, kerron mielelläni. [[Traunsee]] on Ylä-Itävallan alppijärvi, jonka rannalla [[Gmunden]] sijaitsee. Järveen laskee Traun-joki, ja ympäröivät vuoret, kuten Traunstein, antavat maisemalle ilmeensä. Alue kuuluu laajemmin [[Salzkammergutin]] seutuun. Järven syvyydestä tai pinta-alasta en ole täysin varma, joten niitä en lähde arvailemaan. Rannalta katsottuna maisema on ylhäältä vielä kauniimpi.
+KYSYMYS: Kerro lisää: Salzkammergutin
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+AIEMPI KYSYMYS: Keitä illyyrialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— vanhaa väkeä. [[Illyyrialaiset]] olivat muinaisia kansoja, jotka asuivat pääosin [[Balkanin]] länsiosissa [[Adrianmeren]] itärannikon seudulla. Gmundenin seudun suolanlouhintaan he liittyvät vain epäsuorasti, ja varmaa yhteyttä en osaa vahvistaa. Muinaisten kansojen sijainnit ja siirtymät ovat tutkijoille vaikeita, ja eri lähteet kertovat eri tavoin. Itävallan suolakaivosten varhaisin historia onkin täynnä kysymysmerkkejä, joten rehellisin vastaus on, että en ole varma. Vanhat kansat ovat kyyhkyn mielestä vaikeampia kuin reittilennot.
+KYSYMYS: Kerro lisää: Illyyrialaiset
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Keitä illyyrialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— vanhaa väkeä. [[Illyyrialaiset]] olivat muinaisia kansoja, jotka asuivat pääosin [[Balkanin]] länsiosissa [[Adrianmeren]] itärannikon seudulla. Gmundenin seudun suolanlouhintaan he liittyvät vain epäsuorasti, ja varmaa yhteyttä en osaa vahvistaa. Muinaisten kansojen sijainnit ja siirtymät ovat tutkijoille vaikeita, ja eri lähteet kertovat eri tavoin. Itävallan suolakaivosten varhaisin historia onkin täynnä kysymysmerkkejä, joten rehellisin vastaus on, että en ole varma. Vanhat kansat ovat kyyhkyn mielestä vaikeampia kuin reittilennot.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Keitä illyyrialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Mmm— vanhaa väkeä. [[Illyyrialaiset]] olivat muinaisia kansoja, jotka asuivat pääosin [[Balkanin]] länsiosissa [[Adrianmeren]] itärannikon seudulla. Gmundenin seudun suolanlouhintaan he liittyvät vain epäsuorasti, ja varmaa yhteyttä en osaa vahvistaa. Muinaisten kansojen sijainnit ja siirtymät ovat tutkijoille vaikeita, ja eri lähteet kertovat eri tavoin. Itävallan suolakaivosten varhaisin historia onkin täynnä kysymysmerkkejä, joten rehellisin vastaus on, että en ole varma. Vanhat kansat ovat kyyhkyn mielestä vaikeampia kuin reittilennot.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Miksi suolaa louhittiin ennen niin ahkerasti?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mausta puhutaan. [[Suola]] oli ennen nykyaikaisia [[kylmäsäilytysmenetelmiä]] tärkeä aine ruoan säilyttämisessä, ja se oli myös välttämätön ravinnon osa. Siksi suolaa louhittiin ahkerasti, ja sillä kävi kauppaa. [[Gmundenin]] ja [[Salzkammergutin]] seudulla suolan louhinta on vanhaa perua, ja Gmundenin seudulla suolaa kerrotaan louhitun jo noin vuonna 1000 eaa. Tämä ajoitus on kuitenkin vanhaa tietoa, ja tarkkuudesta en ole varma. Jos minä saisin valita, ottaisin mieluummin vähän pullaa.
+KYSYMYS: Kerro lisää: Suola
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gmunden (kulttuuri)
+Tietoruudun teksti: Gmunden on kaupunki Ylä-Itävallassa, ja siellä asuu noin 13 200 ihmistä. Se sijaitsee Traunseen ja Traun-joen äärellä, ja sitä ympäröivät korkeat vuoret, joihin kuuluvat Traunstein (1 660 metriä), Erlakogel (1 570 metriä), Wilder Kogel (2 090 metriä) ja Höllengebirge. Kaupungin ympäristön nähtävyyksiin kuuluvat Traunin putous 16 kilometriä pohjoiseen, Schloss Ort -linna ja keramiikkatehdas, joka valmistaa Gmundner Keramik -nimistä keramiikkaa. Myös kaupungintalo on suosittu kohde. Gmundenin seudulla illyyrialaiset louhivat suolaa jo vuonna 1000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Peru — maalehti / Luonto: Kylmä meri keskellä tropiikkia] Perun rannikkoa pitkin virtaa pohjoiseen kylmä ja vähäsuolainen Humboldtin merivirta, joka ulottuu tuhannen kilometrin päähän merelle. Pintavesi jäähtyy Perun edustalla kuuteentoista asteeseen, kun trooppisilla merillä ollaan yleensä yli kahdessakymmenessäviidessä. Kumpuaminen nostaa ravinteet pintaan, ja virrasta saadaan 18–20 prosenttia koko maailman merikalansaaliista. Kalan päällä elää valtava merilintu- ja hyljekanta. Virran nimesi Alexander von Humboldt, vaikka José de Acosta kuvasi sen 250 vuotta aiemmin.
+AIEMPI KYSYMYS: Miksi suolaa louhittiin ennen niin ahkerasti?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mausta puhutaan. [[Suola]] oli ennen nykyaikaisia [[kylmäsäilytysmenetelmiä]] tärkeä aine ruoan säilyttämisessä, ja se oli myös välttämätön ravinnon osa. Siksi suolaa louhittiin ahkerasti, ja sillä kävi kauppaa. [[Gmundenin]] ja [[Salzkammergutin]] seudulla suolan louhinta on vanhaa perua, ja Gmundenin seudulla suolaa kerrotaan louhitun jo noin vuonna 1000 eaa. Tämä ajoitus on kuitenkin vanhaa tietoa, ja tarkkuudesta en ole varma. Jos minä saisin valita, ottaisin mieluummin vähän pullaa.
+KYSYMYS: Kerro lisää: kylmäsäilytysmenetelmiä
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kaupunkilehti / Granada: Aamulla hiihtoa, iltapäivällä merta] Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä Välimeren rannalle, joten saman päivän aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli kolmen kilometrin korkeuteen, ja vieressä kohoaa Mulhacén, 3 479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
+AIEMPI KYSYMYS: Mikä Hahnenkamm-kilpailu on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Hahnenkamm-kilpailu on vuosittain Kitzbühelissä järjestettävä [[alppihiihdon]] kilpailu, jota pidetään yhtenä maailman vaikeimmista hiihtokilpailuista. Nimi tulee kaupungin tuntumassa kohoavasta vuoresta, ja tunnetuin osuus on jyrkistä kohdistaan kuuluisa [[Streif]]-rinne. Kisaviikko järjestetään yleensä tammikuussa, ja se tuo Kitzbüheliin runsaasti katsojia ympäri [[Euroopan]]. Täsmällisiä rinteen mittoja en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: alppihiihdon
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Rinne, jossa lennetään kuusikymmentä metriä] 1937 — Kitzbühelin Streif on maailman pelätyin syöksylaskurata. Se alkaa 1 665 metristä ja päättyy 805 metriin kaupungin laidalla, ja pituutta on 3 312 metriä. Heti lähdön jälkeen tulee Mausefalle, hiirenloukku, jonka kaltevuus on 85 prosenttia. Siinä laskijat lentävät nykyisin jopa 60 metriä, 1970-luvulla lennettiin 80. Alastulossa kuljettajaan kohdistuu hetkeksi kolminkertainen paino. Loppusuoralla vauhti nousee 140 kilometriin tunnissa. Ennätys on Fritz Stroblin 1.51,58 vuodelta 1997.
+AIEMPI KYSYMYS: Mikä Hahnenkamm-kilpailu on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Hahnenkamm-kilpailu on vuosittain Kitzbühelissä järjestettävä [[alppihiihdon]] kilpailu, jota pidetään yhtenä maailman vaikeimmista hiihtokilpailuista. Nimi tulee kaupungin tuntumassa kohoavasta vuoresta, ja tunnetuin osuus on jyrkistä kohdistaan kuuluisa [[Streif]]-rinne. Kisaviikko järjestetään yleensä tammikuussa, ja se tuo Kitzbüheliin runsaasti katsojia ympäri [[Euroopan]]. Täsmällisiä rinteen mittoja en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Streif
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä Hahnenkamm-kilpailu on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tost minä osaan kertoo. Hahnenkamm-kilpailu on vuosittain Kitzbühelissä järjestettävä [[alppihiihdon]] kilpailu, jota pidetään yhtenä maailman vaikeimmista hiihtokilpailuista. Nimi tulee kaupungin tuntumassa kohoavasta vuoresta, ja tunnetuin osuus on jyrkistä kohdistaan kuuluisa [[Streif]]-rinne. Kisaviikko järjestetään yleensä tammikuussa, ja se tuo Kitzbüheliin runsaasti katsojia ympäri [[Euroopan]]. Täsmällisiä rinteen mittoja en ole varma, joten jätän ne kertomatta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+AIEMPI KYSYMYS: Milloin Kitzbühelissä louhittiin kuparia?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katotaas. Kuparia louhittiin Kitzbühelin ympäristön kukkuloilla noin vuosien 1100 ja 800 eaa. välillä. Louhijat olivat [[illyyrialaiset]], jotka ovat alueen ensimmäisiä tunnettuja asukkaita. Kupari oli pronssikaudella arvokas raaka-aine, koska sitä tarvittiin [[pronssin]] valmistukseen yhdessä tinan kanssa. Louhinta jätti jälkensä myös [[Alppien]] kaivosperinteeseen, mutta sen tarkemmista vaiheista en ole varma. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: illyyrialaiset
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Gamelan – pronssin puhetta] Gamelan-musiikki syntyi Jaavalla, mutta löysi Balilla oman äänensä 1400-luvulla, kun Majapahit-valtakunnan sortuessa aateliset, taiteilijat ja papit pakenivat saarelle tuoden mukanaan gongit ja metallilaatat. Hovin juhlagamelaneita, gong gedeä, soitettiin jo 1400–1500-luvun kuninkaskuntien temppelijuhlissa, ja soittajat oppivat ohjelmiston korvakuulolta sukupolvi toisensa jälkeen ilman nuotteja. 1800-luvun lopulla balilaiskylissä syntyi nopeatempoisempi gong kebyar, joka räjähti suosioon Jagaragan kylän kilpailussa joulukuussa 1915 – silminnäkijöiden mukaan sidotut karjaeläimetkin repivät itsensä irti kuullessaan uuden tyylin rytmin ensi kertaa.
+AIEMPI KYSYMYS: Milloin Kitzbühelissä louhittiin kuparia?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katotaas. Kuparia louhittiin Kitzbühelin ympäristön kukkuloilla noin vuosien 1100 ja 800 eaa. välillä. Louhijat olivat [[illyyrialaiset]], jotka ovat alueen ensimmäisiä tunnettuja asukkaita. Kupari oli pronssikaudella arvokas raaka-aine, koska sitä tarvittiin [[pronssin]] valmistukseen yhdessä tinan kanssa. Louhinta jätti jälkensä myös [[Alppien]] kaivosperinteeseen, mutta sen tarkemmista vaiheista en ole varma. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: pronssin
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Norsut yli Alppien] Toisessa puunilaissodassa (218–201 eaa.) Karthagon sotapäällikkö Hannibal Barkas marssitti armeijansa – mukana lukuisia sotanorsuja – Espanjasta Alppien yli Italian niemimaalle ja piti roomalaisia pelossa lähes viisitoista vuotta ilman että Rooma pystyi ajamaan häntä maastaan. Vasta kun Publius Cornelius Scipio hyökkäsi suoraan Pohjois-Afrikkaan ja pakotti Hannibalin palaamaan kotiaan puolustamaan, roomalaiset kukistivat hänet Zaman taistelussa vuonna 202 eaa. Tämä pysähdyttävän lähellä ollut voitto teki Hannibalista Rooman pelätyimmän vihollisen kautta aikojen, ja hänen kasvonsa toistuivat myöhemmin lukuisissa patsaissa ja rintakuvissa.
+AIEMPI KYSYMYS: Milloin Kitzbühelissä louhittiin kuparia?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, katotaas. Kuparia louhittiin Kitzbühelin ympäristön kukkuloilla noin vuosien 1100 ja 800 eaa. välillä. Louhijat olivat [[illyyrialaiset]], jotka ovat alueen ensimmäisiä tunnettuja asukkaita. Kupari oli pronssikaudella arvokas raaka-aine, koska sitä tarvittiin [[pronssin]] valmistukseen yhdessä tinan kanssa. Louhinta jätti jälkensä myös [[Alppien]] kaivosperinteeseen, mutta sen tarkemmista vaiheista en ole varma. Onpas siit pitkä aika.
+KYSYMYS: Kerro lisää: Alppien
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Urheilu: Mäki, joka räjäytettiin ja rakennettiin uudelleen] 2002 — Innsbruckin Bergiselillä hypättiin ensimmäisen kerran 23. tammikuuta 1927. Vanha mäki räjäytettiin, ja tilalle nousi Zaha Hadidin suunnittelema torni, joka otettiin käyttöön 50. mäkiviikolle vuonna 2002. Rakennus maksoi 12 miljoonaa euroa. Tornin huipulla on kahvila ja näköalatasanne, joihin pääsee vinohissillä. Mäkiviikko perustettiin vuonna 1952, ja sen neljästä kilpailupaikasta kaksi on Itävallassa: Innsbruck ja Bischofshofen.
+AIEMPI KYSYMYS: Mikä on Tirolin osavaltio ja mitä kieltä siellä puhutaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tirol on Itävallan länsiosan osavaltio, jonka pääkaupunki on [[Innsbruck]]. Siellä puhutaan saksaa, ja arkikielenä kuullaan baijerilais-itävaltalaista murretta, joka eroaa selvästi kirjakielestä. Alue tunnetaan [[Alppien]] vuoristomaisemista, talvimatkailusta ja vahvoista paikallisista perinteistä. Historiallinen Tirol ulottui myös nykyisen [[Etelä-Tirolin]] alueelle Italiassa, mutta sen rajojen vaiheet olisi syytä tarkistaa tarkemmasta lähteestä. Tän jälkeen kyl haluaisin pullaa.
+KYSYMYS: Kerro lisää: Innsbruck
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+AIEMPI KYSYMYS: Mikä on Tirolin osavaltio ja mitä kieltä siellä puhutaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tirol on Itävallan länsiosan osavaltio, jonka pääkaupunki on [[Innsbruck]]. Siellä puhutaan saksaa, ja arkikielenä kuullaan baijerilais-itävaltalaista murretta, joka eroaa selvästi kirjakielestä. Alue tunnetaan [[Alppien]] vuoristomaisemista, talvimatkailusta ja vahvoista paikallisista perinteistä. Historiallinen Tirol ulottui myös nykyisen [[Etelä-Tirolin]] alueelle Italiassa, mutta sen rajojen vaiheet olisi syytä tarkistaa tarkemmasta lähteestä. Tän jälkeen kyl haluaisin pullaa.
+KYSYMYS: Kerro lisää: Etelä-Tirolin
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+AIEMPI KYSYMYS: Miksi Alpeilla on niin paljon hiihtokeskuksia?
+AIEMPI VASTAUS (Livia):
+No niin, tämän kysyjä on selvästi katsonut karttaa. [[Alppien]] vuoristo on Euroopan suurimpia, ja siellä on runsaasti korkeita rinteitä, joille lunta kertyy luotettavasti talven ajaksi. Hiihtomatkailu kasvoi voimakkaasti 1900-luvulla, kun [[hiihtohissit]] ja hyvät tiet helpottivat pääsyä vuorille. Monissa kylissä talvimatkailu täydensi perinteistä karjataloutta, ja niin alueelle syntyi paljon keskuksia. Tarkkaa lukumäärää en ole varma. Pitkäksi venähti.
+KYSYMYS: Kerro lisää: hiihtohissit
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Historia: Buddha valettiin pronssista kerralla] 752 — Nara oli Japanin pääkaupunki, kun keisari Shōmu antoi vuonna 741 käskyn perustaa temppeleitä ympäri maata: kulkutaudit ja katovuodet olivat runnelleet valtakuntaa. Tōdai-jin työ oli alkanut jo 738, ja temppeli vihittiin vuonna 752. Sen suureen saliin valettiin pronssinen Vairocana-buddha, maailman suurin pronssinen buddhankuva. Kuvaa on korjattu useasti, pahimmat vauriot vuonna 1692, ja nykyinen sali on vuodelta 1709. Salin oma katto kävi 1800-luvun lopulla niin raskaaksi, että rakennus oli romahtaa: se tuettiin vuosina 1904–1913 ja sai lopulta sisäänsä teräsrungon 1974–1980.
+AIEMPI KYSYMYS: Mikä on pronssikausi?
+AIEMPI VASTAUS (Livia):
+Ai se. Pronssikausi on esihistoriallinen ajanjakso, jolloin työkalut ja aseet valmistettiin [[pronssista]], kuparin ja tinan seoksesta. Euroopassa se alkoi eri alueilla eri aikoina, karkeasti kolmannella vuosituhannella eaa., ja päättyi noin vuoden 800 eaa. tienoilla [[rautakauden]] alkaessa. Pronssi vaati kaukaisia kauppayhteyksiä, koska tina ja kupari löytyivät harvoin samalta seudulta. Siksi kauppareitit ja [[kaivokset]] olivat tärkeitä. Tarkat vuosiluvut vaihtelevat alueittain. Kyl minä muistin hyvin.
+KYSYMYS: Kerro lisää: pronssista
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+AIEMPI KYSYMYS: Mikä on pronssikausi?
+AIEMPI VASTAUS (Livia):
+Ai se. Pronssikausi on esihistoriallinen ajanjakso, jolloin työkalut ja aseet valmistettiin [[pronssista]], kuparin ja tinan seoksesta. Euroopassa se alkoi eri alueilla eri aikoina, karkeasti kolmannella vuosituhannella eaa., ja päättyi noin vuoden 800 eaa. tienoilla [[rautakauden]] alkaessa. Pronssi vaati kaukaisia kauppayhteyksiä, koska tina ja kupari löytyivät harvoin samalta seudulta. Siksi kauppareitit ja [[kaivokset]] olivat tärkeitä. Tarkat vuosiluvut vaihtelevat alueittain. Kyl minä muistin hyvin.
+KYSYMYS: Kerro lisää: rautakauden
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kitzbühel (kulttuuri)
+Tietoruudun teksti: Kitzbühel on keskiaikainen kaupunki Kitzbühelin Alpeilla Tirolissa Itävallassa, noin 100 kilometriä Innsbruckista itään ja Kitzbühelin piirikunnan hallinnollinen keskus. Se on yksi maailman kuuluisimmista ja eksklusiivisimmista hiihtokeskuksista, jossa vierailee kansainvälistä ylintä seurapiiriä. Vuosittain järjestettävä Hahnenkamm-kilpailu on maailman vaikeimpana pidetty hiihtokilpailu. Kitzbühel sijaitsee Zell am Seen ja Innsbruckin välissä Leukentalin laaksossa Kitzbüheler Ache -joen varrella. Ensimmäiset tunnetut asukkaat olivat illyyrialaiset, jotka louhivat kuparia kukkuloilla vuosien 1100 ja 800 eaa. välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+- [Košice — kaupunkilehti / Luonto: Kylpylälle kaivettiin kaivo, ja maasta purkautui geysiiri] 1870 — Herľanyn kylässä, noin 20 kilometriä Košicesta koilliseen, porattiin vuonna 1870 kaivoa kivennäisvedelle. Yli 400 metrin syvyydestä löytyi hiilihapon kyllästämä vesikerros, ja kaivosta alkoi purkautua kylmää vettä useiden metrien korkeuteen — ilman minkäänlaista maanalaista kuumuutta, toisin kuin tavallisissa geysiireissä. Purkaus toistuu edelleen säännöllisin väliajoin, ja se on yksi harvoista maailman poraamalla syntyneistä kylmistä geysiireistä. Isoisän matkan aikaan kaivo on vasta muutaman vuoden ikäinen uteliaisuuden aihe, ei vielä nykyisenlainen nähtävyys.
+AIEMPI KYSYMYS: Mikä on pronssikausi?
+AIEMPI VASTAUS (Livia):
+Ai se. Pronssikausi on esihistoriallinen ajanjakso, jolloin työkalut ja aseet valmistettiin [[pronssista]], kuparin ja tinan seoksesta. Euroopassa se alkoi eri alueilla eri aikoina, karkeasti kolmannella vuosituhannella eaa., ja päättyi noin vuoden 800 eaa. tienoilla [[rautakauden]] alkaessa. Pronssi vaati kaukaisia kauppayhteyksiä, koska tina ja kupari löytyivät harvoin samalta seudulta. Siksi kauppareitit ja [[kaivokset]] olivat tärkeitä. Tarkat vuosiluvut vaihtelevat alueittain. Kyl minä muistin hyvin.
+KYSYMYS: Kerro lisää: kaivokset
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piber (ruoka)
+Tietoruudun teksti: Piberin valtion siitoslaitos eli Bundesgestüt Piber on lipizzanhevosten kasvatukseen omistettu talli Piberin kylässä lähellä Köflachin kaupunkia Länsi-Steiermarkissa. Talli perustettiin vuonna 1798 sotahevosten kasvatusta varten, ja lipizzanien kasvatus alkoi vuonna 1920; nykyisin se on pääasiallinen laitos, joka tuottaa Espanjalaisen ratsastuskoulun käyttämät orit. Piberin linna oli aiemmin Pyhän Lambrechtin luostari. Vuonna 1867 talli siirtyi Itävalta-Unkarin keisarillisen maatalousministeriön hallintaan. Yksi Piberin päätavoitteista on ylläpitää olennainen osa Itävallan kulttuuriperintöä ja säilyttää yksi kauneimmista hevosroduista alkuperäisessä muodossaan.
+AIEMPI KYSYMYS: Mitä Espanjalainen ratsastuskoulu on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Espanjalainen ratsastuskoulu on Wienin Hofburgin palatsissa toimiva laitos, jossa harjoitetaan ja esitetään klassista ratsastustaitoa [[lipizzanhevosilla]]. Orit tuodaan kouluun nelivuotiaina Piberin siitostallilta Steiermarkista. Ne eivät ole silloin vielä valkoisia, sillä varsat syntyvät ruunikkoina tai mustina ja vaalenevat vähitellen, kunnes ovat noin 6–10 vuoden iässä valkoisia. Perinteen mukaan tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät salin seinällä olevaa [[Kaarle VI:n]] muotokuvaa ennen ratsastusta. Nimi viittaa Espanjasta peräisin oleviin hevosiin, joista rotu on polveutunut. Koulun kotipaikka on [[Wien]]. Onpas tää kehuttavaa väkeä.
+KYSYMYS: Kerro lisää: lipizzanhevosilla
