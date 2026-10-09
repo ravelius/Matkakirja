@@ -53,7 +53,13 @@ export const RAKENNUS = {
   lisaHenkilot: ['portinvartija-1500'],
   otsikko: 'Olavinlinna – elävä linna',
   versio: 1,
-  lahteet: [{ nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' }],
+  // 9.10.2026 (Siirtoseppä): CC BY 4.0 -aineistojen nimeäminen historia-animaation vaihemalleista (restaurointikuvat,
+  // MML:n korkeusmalli tyhjässä saaressa ja puuvarustuksessa).
+  lahteet: [
+    { nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' },
+    { nimi: 'Restaurointikuvat 1961–1975: Museovirasto, CC BY 4.0', osoite: 'https://www.finna.fi/Search/Results?lookfor=Olavinlinna+restaurointi&filter%5B%5D=building%3A%220%2FMV%2F%22' },
+    { nimi: 'Korkeusmalli 2 m: Maanmittauslaitos, CC BY 4.0', osoite: 'https://www.maanmittauslaitos.fi/avoindata-lisenssi-cc40' },
+  ],
   geoAnkkuri: { lat: 61.8639, lon: 28.9011, suuntima: 0 },
   aikakerros: { id: 'n1500', nimi: '1500-luvun alku (tulkinta)' },
   // Valaistus (erä 2b, omistajan valo-päätös 29.9. "B + tummempi valo"): korkea lounaisaurinko, tumma
