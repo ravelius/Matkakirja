@@ -35,6 +35,18 @@ kappeli). Lue tämä osio ja alin TILA-loki (päivän loppu), sitten CLAUDE.md j
   Jos aika loppuu, pois tässä järjestyksessä: K1, renki, portinvartija, torkkuva vartija (EI varoitussääntö, tyrmä, kappeli, tallennus).
 - Kädet v44l on jo kytketty (2b88ec9a).
 
+## TILA 9.10. 03.0x — JUNA 171 kärki 778202265 (PT kuittasi ehdolla: LS2:n muistitesti v45x → junaan 170 kärkenä, muuten 171)
+
+- Juna 169 lisäkorjaus 56fda7154 (siirtoseppa/juna169-teksti, wt/proto-siirtoseppa-face): linnan esittelyn kertoja ei soi pelin
+  aikana (LS2:n botti BUILD 169). SHA Natiivisepälle 02.4x (PT: ennen 06.30, omistaja testaa TF 169:n aamulla).
+- Juna 170 lisäys 290f5d4ae (PT kuittasi): sama kertojakorjaus + botti kirjaa jumin (sijainti, osa, PathPartial) ja siirtää eteenpäin.
+  Botin pysähdys pelaaja-8:ssa = NavMesh-saari (porttikäytävä → pikkupiha), selvitetään seuraavalla botilla.
+- Juna 171 (siirtoseppa/juna171, wt/proto-siirtoseppa-kello): Ydin Historiajana (vuodet lukittu Sisältökirjurin #4249:llä),
+  SeikkailuHistoria ("poikki historia", ~2:50, avainsanat vain historiassa, ei kertojaa), K2-lyhennys 8 s (leikkauslaatikoiden
+  kasvu SeikkailuKavely.AsetaKasvu), Pelikoodarin aanet-lapi-v1 (luuta odottaa LR:n lakaisumerkkiä), PelattavaPala v45x 6ae3c7f5544feab3.
+- Seuraavaksi: NUI:n alkuvalinta (natiivi-ui/olavinlinna-alku-171 f1a459e2f) → SeikkailuHistoria.Aloita; LS2:n muistitesti ja botti;
+  LR:n vaihemallit (extras vuodesta/vuoteen); kertoja vasta omistajan luvalla.
+
 ## TILA 9.10. 01.4x — JUNA 169 = f68c05428 (⊇ siirtoseppa/juna169 7cb1335bc), lähtee aamulla; JUNA 170 siirtoseppa/juna170 7b8b4353f
 
 - BUILD 167 = proto master 7f0dcae51 (runko C + repliikit-v4). BUILD 168 = 6a67a9b1 (juna168-v45o d4c3bf1f4): EI sisällä latausvian
