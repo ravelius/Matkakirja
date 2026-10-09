@@ -60,6 +60,12 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261009-ilta.md`. Aloitusv
 - Karttaseppä on saanut paanu- ja lautakehotteen ja kiellon (metalli, vihreä, kupari). Projisointi tehdään `kuori_projisoi.py`:llä kuten
   seinille.
 
+## Lisäys 9.10. klo 21 (PT: voudin kumarrus liian syvä)
+
+- Vouti v4b: `ele_kumarrus` 60 %:iin (lantio → pää 30°). Peilissä Olavinlinna v46k `035562fc890cd285` (blender e94eefb2d2a22fe6).
+- Uusi worktree `wt/linnanrakentaja-linna-v45c` (pohja v45b, haara pushattu 7db694814). Poista se, kun Siirtoseppä on kytkenyt.
+- faceit-vouti on ennallaan (peli käyttää mh-voutia). Siirtoseppä kertoo, jos sitä tarvitaan.
+
 ## Työkalut (`_valmiit/kaupunkipinnat-v1/lahde/`)
 
 - **`tekoaly_syotteet.py <näkymä> [--pxm 25 --ulos <kansio>]`** tuottaa:
