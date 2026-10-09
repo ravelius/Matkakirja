@@ -49,19 +49,19 @@ namespace Matkakirja.Natiivi
         /// <summary>LIVIAN AVAUSREPLIIKIT — KAANONIA (päätoimittaja 29.8.2026). Sanatarkkoja: ei muokata täällä.</summary>
         public static readonly string[] Repliikit =
         {
-            "Hei, odotas kaveri. Sinähän olet ihan hiessä.",
-            "Minä olen Livia. Pöllö luki isoisäsi kirjan, ja minä kannoin ne sähkeet.",
-            "Valitse rauhassa mistä aloitat — vaikka se maanosa, joka kutkuttaa eniten.",
-            "Ai niin, ja anteeksi valikoima: pöllö on tarkistanut vasta yhden reitin. Ateenasta se alkaa.",
-            "Perillä sinua odottaa Viisas Pöllö. Minä olen vain viestinviejä.",
+            "ui.livia.avaus-1",
+            "ui.livia.avaus-2",
+            "ui.livia.avaus-3",
+            "ui.livia.avaus-4",
+            "ui.livia.avaus-5",
         };
 
         /// <summary>Uuden matkan lyhyet tervehdykset (web LIVIAN_UUSI_MATKA #3440, Fable hyväksyi 27.9.).</summary>
         public static readonly string[] UusiMatka =
         {
-            "Taas matkaan? Hyvä. Aarnin luettelossa on vielä rivejä ilman rastia.",
-            "Uusi matka, uudet sähkeet. Valitse lähtö — minä hoidan postin.",
-            "Sinä taas — hyvä. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.",
+            "ui.livia.uusi-matka-1",
+            "ui.livia.uusi-matka-2",
+            "ui.livia.uusi-matka-3",
         };
 
         /// <summary>Lyhyen tervehdyksen kierto (web LIVIA_UUSI_MATKA_TALLE): seuraavan repliikin numero.</summary>
@@ -73,7 +73,7 @@ namespace Matkakirja.Natiivi
             int n = UusiMatka.Length, i = ((PlayerPrefs.GetInt(UusiMatkaAvain, 0) % n) + n) % n;
             PlayerPrefs.SetInt(UusiMatkaAvain, (i + 1) % n);
             PlayerPrefs.Save();
-            return UusiMatka[i];
+            return Kieli.T(UusiMatka[i]);
         }
 
         /// <summary>Äänitteiden versiokysely (web LIVIAN_AANITETYT + LIVIAN_AANIERAT, avaus-1…5).</summary>
@@ -118,7 +118,7 @@ namespace Matkakirja.Natiivi
         {
             var t = new List<(string, int)>();
             for (int i = 0; i < Repliikit.Length; i++)
-                if (kohteita <= 1 || i != YhdenReitinKupla) t.Add((Repliikit[i], i));
+                if (kohteita <= 1 || i != YhdenReitinKupla) t.Add((Kieli.T(Repliikit[i]), i));
             return t;
         }
 

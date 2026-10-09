@@ -36,7 +36,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuinka kauan saapuminen saa odottaa karttaa (traileri, välikortti).</summary>
         const float KarttaOdotusS = 240f;
 
-        const string OhjeToinen = "Klikkaa kaupungin kultaista merkkiä kartalla.";
+        static string OhjeToinen => Kieli.T("ui.livia.ohje-toinen");
 
         /// <summary>Äänitetty variantti (web LIVIAN_AANITETTY_PALJASTUS) ja äänitteiden versiot (paljastus-1, -2).</summary>
         const string AanitettyPaikkaan = "Ateenaan";
@@ -45,11 +45,11 @@ namespace Matkakirja.Natiivi
         /// <summary>LIVIAN PALJASTUS — KAANONIA (web livianPaljastus, kaksi ensimmäistä; sanatarkkoja).</summary>
         public static string[] Repliikit(string paikkaan)
         {
-            string tervetuloa = string.IsNullOrEmpty(paikkaan) ? "Tervetuloa." : "Tervetuloa " + paikkaan + ".";
+            string tervetuloa = string.IsNullOrEmpty(paikkaan) ? Kieli.T("ui.livia.tervetuloa") : Kieli.T("ui.livia.tervetuloa-paikkaan", paikkaan);
             return new[]
             {
-                "Kääk, apua! Pöllö on matkoilla, mutta ei hätää, tuuraan häntä sen aikaa.",
-                tervetuloa + " Kuunnellaan, mitä isoisä on kirjoittanut tästä paikasta.",
+                Kieli.T("ui.livia.paljastus-1"),
+                Kieli.T("ui.livia.paljastus-2", tervetuloa),
             };
         }
 
@@ -170,7 +170,7 @@ namespace Matkakirja.Natiivi
             ohjain.AloitaLykattyLuenta();
             string maa = tiedot?.MaaNimi, paikka = Sijamuodot.Paikassa(nimi);
             string tervetuloa = !string.IsNullOrEmpty(maa) && paikka.Length > 0
-                ? "Tervetuloa " + Sijamuodot.Maahan(maa) + ". Sinun on ratkaistava tehtävä " + paikka + " ennen kuin voit etsiä aarretta."
+                ? Kieli.T("ui.livia.tervetuloa-tehtava", Sijamuodot.Maahan(maa), paikka)
                 : "";
             Ohjekuplat(v, tervetuloa);
         }

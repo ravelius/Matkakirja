@@ -82,7 +82,7 @@ namespace Matkakirja.Natiivi
             var otsikkorivi = Rakenne.El("mk-nahtavyys__otsikkorivi", ylaosa, PickingMode.Ignore);
             otsikko = Rakenne.Teksti("", "mk-nahtavyys__otsikko", otsikkorivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
-            lukija = new KortinLukija(otsikkorivi, "Lue ääneen", "mk-nahtavyys__lukija", saatimet: true, rajaus: () => arkki.worldBound);
+            lukija = new KortinLukija(otsikkorivi, Kieli.T("ui.nahtavyys.lue-aaneen"), "mk-nahtavyys__lukija", saatimet: true, rajaus: () => arkki.worldBound);
             lukija.Lahde = () => luettavat;
 
             vieritys = new ScrollView(ScrollViewMode.Vertical);
@@ -93,20 +93,20 @@ namespace Matkakirja.Natiivi
             sisus = vieritys.contentContainer;
 
             var napit = Rakenne.El("mk-nahtavyys__napit", arkki, PickingMode.Ignore);
-            var sulje = Rakenne.Nappi("Sulje", "mk-nappi--kulta mk-nahtavyys__sulje", Sulje, napit);
+            var sulje = Rakenne.Nappi(Kieli.T("ui.pelit.sulje"), "mk-nappi--kulta mk-nahtavyys__sulje", Sulje, napit);
             Rakenne.Tausta(sulje, Kuviot.Kulta);
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
 
             // ☰ ja ‹ ›: kortin sisaruksia (eivät vieri sisällön mukana).
             // ☰ OHJAUSNAPPInä paperiteemalla, sama 40 pt kuin sähkeen ✕ (Päätoimittaja 3.10.: korttien sisänapit yhtä suuriksi).
-            valikkoNappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Kaupungin nähtävyydet", VaihdaValikko, arkki, "paperi");
+            valikkoNappi = Ohjausnappi.Nappi(Ikonit.Valikko, Kieli.T("ui.nahtavyys.kaupungin-nahtavyydet"), VaihdaValikko, arkki, "paperi");
             valikkoNappi.AddToClassList("mk-nahtavyys__valikkonappi");
             valikko = Rakenne.El("mk-nahtavyys__valikko", arkki);
             valikko.style.display = DisplayStyle.None;
             // ‹ › OHJAUSNAPPI-neliöinä paperiteemalla kortin reunoilla (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).
-            edellinen = Ohjausnappi.Nappi(Ikonit.Takaisin, "Edellinen nähtävyys", () => Selaa(-1), arkki, "paperi");
+            edellinen = Ohjausnappi.Nappi(Ikonit.Takaisin, Kieli.T("ui.nahtavyys.edellinen"), () => Selaa(-1), arkki, "paperi");
             edellinen.AddToClassList("mk-nahtavyys__nuoli"); edellinen.AddToClassList("mk-nahtavyys__nuoli--vasen");
-            seuraava = Ohjausnappi.Nappi(Ikonit.NuoliOikea, "Seuraava nähtävyys", () => Selaa(1), arkki, "paperi");
+            seuraava = Ohjausnappi.Nappi(Ikonit.NuoliOikea, Kieli.T("ui.nahtavyys.seuraava"), () => Selaa(1), arkki, "paperi");
             seuraava.AddToClassList("mk-nahtavyys__nuoli"); seuraava.AddToClassList("mk-nahtavyys__nuoli--oikea");
             Vector2 vetoAlku = default;
             bool veto = false;
@@ -200,7 +200,7 @@ namespace Matkakirja.Natiivi
         void AvaaJuttu(NahtavyysKohde k, int? numero)
         {
             if (k == null) return;
-            Aloita(false, string.Join(" · ", new[] { numero.HasValue ? "Kohde " + numero : null, k.Aika }.Where(x => !string.IsNullOrEmpty(x))), k.Nimi);
+            Aloita(false, string.Join(" · ", new[] { numero.HasValue ? Kieli.T("ui.nahtavyys.kohde", numero.Value) : null, k.Aika }.Where(x => !string.IsNullOrEmpty(x))), k.Nimi);
             opasTiedot = null;
             arkki.schedule.Execute(() => TaitaJuttu(k));
         }
@@ -329,7 +329,7 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(k.Wiki))
             {
                 string wiki = k.Wiki, nimi = k.Nimi;
-                var b = Rakenne.Nappi("Lue lisää aiheesta", "mk-nahtavyys__wiki", () => UiNakymat.Hae()?.Wiki.Avaa(wiki, nimi), sisus);
+                var b = Rakenne.Nappi(Kieli.T("ui.lehti.lue-lisaa-aiheesta"), "mk-nahtavyys__wiki", () => UiNakymat.Hae()?.Wiki.Avaa(wiki, nimi), sisus);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
             else Lahderivi(sisus, k.Lahde);
@@ -392,7 +392,7 @@ namespace Matkakirja.Natiivi
         static void Lahderivi(VisualElement isa, string lahde)
         {
             if (string.IsNullOrEmpty(lahde)) return;
-            string t = lahde == "Wikipedia" ? "Matkakirjan oma teksti · lähteenä Wikipedia" : lahde;
+            string t = lahde == "Wikipedia" ? Kieli.T("ui.nahtavyys.oma-teksti-wikipedia") : lahde;
             Kirjasimet.Aseta(Rakenne.Teksti(t, "mk-nahtavyys__lahderivi", isa), Kirjasin.Kone);
         }
 
@@ -475,13 +475,13 @@ namespace Matkakirja.Natiivi
                     if (r.Tahdet.HasValue)
                     {
                         int n = Mathf.Clamp(r.Tahdet.Value, 0, 3);
-                        var t = Rakenne.Teksti($"{new string('★', n)}<alpha=#42>{new string('★', 3 - n)}", "mk-opas__tahdet", rivi);
+                        var t = Rakenne.Teksti($"{new string('★', n)}<alpha=#42>{new string('★', 3 - n)}", "mk-opas__tahdet", rivi);   // kieli: ei (tähtimerkit, ei sanoja)
                         t.enableRichText = true;
                     }
                 }
             }
-            Vyo("mk-opas__vyo--lammin", "PARASTA TÄÄLLÄ", o.Parasta);
-            Vyo("mk-opas__vyo--viilea", "HYVÄ TIETÄÄ", o.HyvaTietaa);
+            Vyo("mk-opas__vyo--lammin", Kieli.T("ui.nahtavyys.parasta-taalla"), o.Parasta);
+            Vyo("mk-opas__vyo--viilea", Kieli.T("ui.nahtavyys.hyva-tietaa"), o.HyvaTietaa);
             return taulu;
         }
 
@@ -494,7 +494,7 @@ namespace Matkakirja.Natiivi
 
         VisualElement Kaudet(OpasArtikkeli o)
         {
-            var l = Laatikko("MILLOIN MATKAAN?", "mk-opas__saa");
+            var l = Laatikko(Kieli.T("ui.nahtavyys.milloin-matkaan"), "mk-opas__saa");
             var rivi = Rakenne.El(Levea ? "mk-opas__rinnakkain" : "mk-opas__pino", l, PickingMode.Ignore);
             var palsta = Rakenne.El("mk-opas__palsta", rivi, PickingMode.Ignore);
             // Säägraafi (Saagraafi.cs) oikealle leveällä, kapealla tekstin yläpuolelle.
@@ -505,7 +505,7 @@ namespace Matkakirja.Natiivi
             Saatiedot.Hae(o.Kaupunki, t =>
             {
                 if (t == null || graafipaikka.panel == null) return;
-                var kuvaaja = Saagraafi.OppaanKuvaaja(t, "Sää vuoden mittaan" + (kaupunkiNimi != null ? " — " + kaupunkiNimi : ""));
+                var kuvaaja = Saagraafi.OppaanKuvaaja(t, kaupunkiNimi != null ? Kieli.T("ui.lehti.saa.vuosi-otsikko", kaupunkiNimi) : Kieli.T("ui.nahtavyys.saa-vuoden-mittaan"));
                 if (kuvaaja == null) return;
                 graafipaikka.Add(kuvaaja);
                 graafipaikka.style.display = DisplayStyle.Flex;
@@ -533,7 +533,7 @@ namespace Matkakirja.Natiivi
 
         VisualElement Linkit(OpasArtikkeli o)
         {
-            var l = Laatikko("SUUNNITTELE MATKA", "mk-opas__suunnittele");
+            var l = Laatikko(Kieli.T("ui.nahtavyys.suunnittele-matka"), "mk-opas__suunnittele");
             foreach (var (nimi, url) in o.Linkit)
             {
                 string u = url;

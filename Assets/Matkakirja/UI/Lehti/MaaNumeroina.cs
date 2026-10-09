@@ -26,9 +26,9 @@ namespace Matkakirja.Natiivi
 {
     public static class MaaNumeroina
     {
-        const string Haetaan = "Haetaan tilastoja…";
-        const string EiVerkkoa = "Tämä sivu tarvitsee verkkoyhteyden ensimmäisellä avauksella — luvut haetaan silloin talteen.";
-        const string EiSarjoja = "Tästä maasta ei ole vielä tilastosarjoja.";
+        static string Haetaan => Kieli.T("ui.maanumeroina.haetaan");
+        static string EiVerkkoa => Kieli.T("ui.maanumeroina.ei-verkkoa");
+        static string EiSarjoja => Kieli.T("ui.maanumeroina.ei-sarjoja");
 
         /// <summary>
         /// Rakentaa sivun sisällön isaan: otsikko (webin h3.aihe-nimi), ingressi, johdanto,
@@ -448,7 +448,7 @@ namespace Matkakirja.Natiivi
                 vuodet.Add(X(v));
             }
             if (ennusteAlku > 0)
-                LisaaTeksti("ennuste", "mk-numerot__ennusteteksti", X(Math.Min(ennusteAlku + 2, loppu)), Yla + 6f, 0f);
+                LisaaTeksti(Kieli.T("ui.maanumeroina.ennuste"), "mk-numerot__ennusteteksti", X(Math.Min(ennusteAlku + 2, loppu)), Yla + 6f, 0f);
             if (silloinVuosi > 0)
                 LisaaTeksti(silloinVuosi.ToString(CultureInfo.InvariantCulture), "mk-numerot__silloinvuosi",
                     Vasen + 5f, Mathf.Max(Yla + 6f, Y(silloinArvo) - 4f), 0f, Pienikoko);
@@ -568,8 +568,8 @@ namespace Matkakirja.Natiivi
                 foreach (var a in t.Naiset) isoin = Math.Max(isoin, a / kaikki);
             }
 
-            LisaaTeksti("miehet", "", Keski - 12f, Yla - 6f, 1f);
-            LisaaTeksti("naiset", "", Keski + 12f, Yla - 6f, 0f);
+            LisaaTeksti(Kieli.T("ui.maanumeroina.miehet"), "", Keski - 12f, Yla - 6f, 1f);
+            LisaaTeksti(Kieli.T("ui.maanumeroina.naiset"), "", Keski + 12f, Yla - 6f, 0f);
             for (int i = 0; i < this.ryhmia; i += 4)
                 LisaaTeksti((i * 5).ToString(CultureInfo.InvariantCulture), "mk-numerot__ika",
                     Keski, Ala - i * riviVali - palkki / 2f + 2.4f, 0.5f, Pienikoko);

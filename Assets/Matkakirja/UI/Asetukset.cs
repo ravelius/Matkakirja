@@ -279,31 +279,31 @@ namespace Matkakirja.Natiivi
 
         public static string Nimi(Kytkin k) => k switch
         {
-            Kytkin.Kertoja => "Kertoja",
-            Kytkin.Musiikki => "Musiikki",
-            Kytkin.Aanimaisema => "Tila", // valikossa "Tila" (omistaja 2.10.2026 klo 15.0x: "muuta äänimaisema muotoon tila"; web main.js)
-            Kytkin.KuljettuReitti => "Kuljettu reitti",
-            _ => "Pieni liike",
+            Kytkin.Kertoja => Kieli.T("ui.asetukset.kytkin.kertoja"),
+            Kytkin.Musiikki => Kieli.T("ui.asetukset.kytkin.musiikki"),
+            Kytkin.Aanimaisema => Kieli.T("ui.asetukset.kytkin.tila"), // valikossa "Tila" (omistaja 2.10.2026 klo 15.0x: "muuta äänimaisema muotoon tila"; web main.js)
+            Kytkin.KuljettuReitti => Kieli.T("ui.asetukset.kytkin.kuljettu-reitti"),
+            _ => Kieli.T("ui.asetukset.kytkin.pieni-liike"),
         };
 
         public static string Seloste(Kytkin k) => k switch
         {
-            Kytkin.Kertoja => "Kertoja lukee matkakirjan merkinnät ja avaustekstin",
-            Kytkin.Musiikki => "Pelin omat raidat: pohjavire, kaupunkien kappaleet, matkat ja visa",
-            Kytkin.Aanimaisema => "Paikkojen äänitykset ja tehosteet — myös koko pelin mykistys",
-            Kytkin.KuljettuReitti => "Jo kuljettu matka viivana kartalla",
-            _ => "Pulu, pilven varjo ja kellonajan sävy kartalla",
+            Kytkin.Kertoja => Kieli.T("ui.asetukset.seloste.kertoja"),
+            Kytkin.Musiikki => Kieli.T("ui.asetukset.seloste.musiikki"),
+            Kytkin.Aanimaisema => Kieli.T("ui.asetukset.seloste.tila"),
+            Kytkin.KuljettuReitti => Kieli.T("ui.asetukset.seloste.kuljettu-reitti"),
+            _ => Kieli.T("ui.asetukset.seloste.pieni-liike"),
         };
 
         public static string Nimi(Voima v) => v switch
         {
-            Voima.Tehosteet => "Tehosteet",
-            Voima.Pulu => "Pulu",
-            Voima.Lukija => "Kertoja ja puhe",
-            Voima.Musiikki => "Musiikki",
-            Voima.Repliikit => "Hahmojen repliikit",
-            Voima.Saa => "Sää",
-            _ => "Äänimaisema",
+            Voima.Tehosteet => Kieli.T("ui.asetukset.voima.tehosteet"),
+            Voima.Pulu => Kieli.T("ui.asetukset.voima.pulu"),
+            Voima.Lukija => Kieli.T("ui.asetukset.voima.kertoja-ja-puhe"),
+            Voima.Musiikki => Kieli.T("ui.asetukset.voima.musiikki"),
+            Voima.Repliikit => Kieli.T("ui.asetukset.voima.repliikit"),
+            Voima.Saa => Kieli.T("ui.asetukset.voima.saa"),
+            _ => Kieli.T("ui.asetukset.voima.aanimaisema"),
         };
 
         /// <summary>Mikserin järjestys (omistaja 8.10. 17.5x): kertoja ja puhe, repliikit, musiikki, tehosteet, äänimaisema, sää, Pulu.</summary>
