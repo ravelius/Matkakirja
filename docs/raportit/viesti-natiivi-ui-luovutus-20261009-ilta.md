@@ -42,3 +42,25 @@ natiivi-ui-tila-20261009.md.
 ## Omat ajot
 
 Ei käynnissä olevia ajoja, käännöksiä eikä simulaattoreita (molemmat vapautettu Julkaisijalle 15.13).
+
+## Lisäys 9.10. ilta: käännettävyys (kielivahti) valmis UI-kansiossa
+
+- Juna 174: erät 773d7e09e → f0f2e436f → d2e46ee50 → 174cd9b73 → fa777a580 → 7d1bf4a63 (kärki natiivi-ui/kieli-era6-174).
+  ui.fi.json 1304 avainta, 1050 tekstiä siirretty, tyokalut/kielisiirto-vertailu.py <perusviite> todistaa tekstit merkki merkiltä samoiksi.
+- Kielivahti kattaa koko Assets/Matkakirja/UI/**/*.cs (197 tiedostoa); POIS-lista syineen tyokalut/kielivahti.py:ssä (testikomennot,
+  Työhuone/Lukijoilta/Tilastot, generoitu Tyylikirja, viennit, Sijamuodot).
+- Juna 173: nyt-rivi väkäsen yläpuolelle b08c47595; tähtien ja ihmisen matka II:n foto-v3 9de8361f9 (tähtien iso v3 pysyy PT:n
+  päätöksellä kunnes v4; palautus d00e429f8 EI junaan).
+
+### Odottaa englantipäätöstä (PT 9.10.: jätetään toistaiseksi, muiden roolien aktiivisia alueita)
+
+UI-kansion ulkopuolella pelaajalle näkyvää suomea (Ydin/Peli):
+- Linssit/Ydin: Vuodenaika.Nimet, Vuorokausi.Nimet, RadioLinssi (VIRITTÄÄ…, EI ASEMAA, EI KUULU), VertailuLinssi (ohjeet, napit),
+  PulunTaulu (rivit, selitteet), PuluRealtimeLogiikka.NappiTeksti, MaapallonVuosi (kuukaudet, kerrokset, lähderivi),
+  OmaSijaintiHaku.Rivi, KyydinTeksti.Tietorivi, Aika.Ylilento, avaruuskävelyn tilakoneen ohjeet ja Pulun repliikit.
+- Peli: Tavli.Murtoluku, Pelikehys.VastustajanNimi ("botti (helppo)"; UI vertaa "botti ("), SahkeVakiot.EiVastaa, PeliOhjaimen
+  heittoteksti ("Heitä noppaa · …"; Matkavalinta tunnistaa nopan tekstin alusta → vaihdettava tunnisteeseen käännettäessä),
+  RahaSyyt (pulla Livialle ym.).
+- Pulun kielipaketti: odotusrepliikit (PuluChat), kielimallille lähtevä konteksti, Livian repliikkien Sekoilu-regex (LivianAvaus).
+- Sisältöpaketin varatekstit (Aloitusnakyma IntroText ym., Apuraha.Lippurivi paketista).
+- Kielikohtainen logiikka: Sijamuodot, Kappalejako (tavutus), PuluHaku (pysäytyssanat), NostotKartalla.Lyhenna.
