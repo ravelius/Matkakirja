@@ -78,7 +78,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         /// <summary>Kurinalainen kiipeilijä: paikallaan varoitusten, puuskan, lyhdyn ja himmennyksen ajan, muuten eteen.</summary>
-        static int Kurinalainen(Kiipeily k) => k.PuuskaVaroittaa || k.Puuska || k.LyhtyVaroittaa || k.LyhtyValaisee || k.Himmenee ? 0 : 1;
+        static int Kurinalainen(Kiipeily k) => k.PuuskaVaroittaa || k.Puuska || k.LyhtyVaroittaa || k.LyhtyValaisee || k.Himmenee || k.KapeaOdottaa
+            || k.Siirtyy == 0 && k.Lepo(k.Ote) && k.Voima < 0.95 ? 0 : 1;
 
         [Testi] static void SatunnaisetSyotteetEivatJumitaEikaPudotaIlmanKahtaLipsahdusta()
         {
@@ -86,21 +87,31 @@ namespace Matkakirja.Linssit.Testit
             for (int ajo = 0; ajo < 1000; ajo++)
             {
                 int n = 4 + r.Next(9); var puuskat = new List<int>(); for (int i = 1; i < n; i++) if (r.Next(4) == 0) puuskat.Add(i);
-                var k = new Kiipeily(n, puuskat); int lipsuja = 0;
+                // Lepo-ote joka kolmas (kuten LR:n seinässä puolivälissä): voima riittää kurinalaiselle puuskista riippumatta.
+                var levot = new List<int>(); for (int i = 3; i < n; i += 3) levot.Add(i);
+                var k = new Kiipeily(n, puuskat, null, levot); int lipsuja = 0;
                 for (double t = 0; t < 20; t += Dt)
                 {
                     if (r.Next(400) == 0) k.LyhtyYlla();
                     int s = r.Next(3) - 1;
                     k.Paivita(Dt, s);
                     if (k.Lipsahti) { k.Lipsahti = false; lipsuja++; Oleta.Tosi(k.Puuska || k.Himmenee, $"ajo {ajo}: lipsahdus vain puuskassa"); }
-                    if (k.Putosi) { k.Putosi = false; pudotuksia++; Oleta.Tosi(lipsuja >= 2, $"ajo {ajo}: putosi {lipsuja} lipsahduksella"); }
+                    if (k.Putosi) { k.Putosi = false; pudotuksia++; Oleta.Tosi(lipsuja >= 2 || k.VoimaLoppui, $"ajo {ajo}: putosi {lipsuja} lipsahduksella"); k.VoimaLoppui = false; }
                     if (!k.Puuska && !k.Himmenee) lipsuja = 0;
                     Oleta.Tosi(k.Ote >= 0 && k.Ote < n, $"ajo {ajo}: ote rajoissa ({k.Ote})");
                 }
                 k.Havaittu = false;
                 // Mistä tahansa tilasta kurinalainen pääsee perille ilman pudotusta ja havaintoa.
                 // Satunnaisen osan kesken jäänyt siirtymä viedään loppuun (≤ 0,6 s): sen aikana lyhdyn havainto on oikein (hälytys → tyrmä).
-                for (double t = 0; t < 60 && !k.Perilla; t += Dt) { k.Paivita(Dt, Kurinalainen(k)); Oleta.Tosi(!k.Putosi && (!k.Havaittu || t < Kiipeily.OteS), $"ajo {ajo}: kurinalainen putosi {k.Putosi} tai havaittiin {t:F2} s:ssa (ote {k.Ote}, siirtyy {k.Siirtyy})"); }
+                // Voima (PT 9.10.): satunnaisosan kuluttama voima voi loppua kesken; silloin alkuun täydellä voimalla ja uusi yritys.
+                int yrityksia = 0;
+                for (double t = 0; t < 120 && !k.Perilla && yrityksia < 3; t += Dt)
+                {
+                    k.Paivita(Dt, Kurinalainen(k));
+                    Oleta.Tosi((!k.Putosi || k.VoimaLoppui) && (!k.Havaittu || t < Kiipeily.OteS), $"ajo {ajo}: kurinalainen putosi {k.Putosi} tai havaittiin {t:F2} s:ssa (ote {k.Ote}, siirtyy {k.Siirtyy})");
+                    if (k.Putosi) { k.Putosi = false; k.VoimaLoppui = false; k.Havaittu = false; t = 0; yrityksia++; }
+                }
+                Oleta.Tosi(yrityksia <= 1, $"ajo {ajo}: täydellä voimalla kurinalainen ei pudonnut ({yrityksia})");
                 Oleta.Tosi(k.Perilla, $"ajo {ajo}: jumi (ote {k.Ote}/{n}, puuska {k.Puuska}, himmenee {k.Himmenee})");
             }
             Oleta.Tosi(pudotuksia > 50, $"satunnaiset putosivat joskus ({pudotuksia})");

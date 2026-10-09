@@ -60,6 +60,7 @@ namespace Matkakirja.Natiivi
         sealed class Ovi { public KavelyMerkki M; public GameObject Go; public bool Auki; public Vector3 Paikka; }
         // Huone 8: köysi sakaraan (koysi:sakara, köysikieppi kädessä) → ote-kiipeily ote:kellotorni-1…N takakuvassa, puuskat tuuli:puuska-N.
         Vector3? sakara; readonly List<(Vector3 P, Vector3 Ulos)> otteet = new List<(Vector3, Vector3)>(); readonly List<int> puuskat = new List<int>();
+        readonly List<int> kapeatOtteet = new List<int>(), lepoOtteet = new List<int>();
         public const string Koysikieppi = "koysikieppi";
 
         void LuoKiipeily(KavelyData d)
@@ -70,6 +71,8 @@ namespace Matkakirja.Natiivi
             ot.Sort((a, b) => Numero(a.Tunnus).CompareTo(Numero(b.Tunnus)));
             foreach (var m in ot)
             {
+                if (m.Kapea) kapeatOtteet.Add(otteet.Count);
+                if (m.Tyyppi == "lepo") lepoOtteet.Add(otteet.Count);
                 var n = m.Ulkonormaali ?? new[] { 0.0, 0.0, 1.0 };
                 otteet.Add((new Vector3((float)m.X, (float)m.Y, (float)-m.Z), new Vector3((float)n[0], 0f, (float)-n[2])));
             }
@@ -102,7 +105,7 @@ namespace Matkakirja.Natiivi
         void AloitaSeinakiipeily(SeikkailuPelaaja p)
         {
             kirjaa?.Invoke($"seikkailu: ote-kiipeily ({otteet.Count} otetta, puuskat {string.Join(",", puuskat)})");
-            p.AloitaOteKiipeily(otteet, puuskat, ok => kirjaa?.Invoke("seikkailu: komeron kynnyksellä (huone 9)"));
+            p.AloitaOteKiipeily(otteet, puuskat, ok => kirjaa?.Invoke("seikkailu: komeron kynnyksellä (huone 9)"), null, kapeatOtteet, lepoOtteet);
         }
         bool koysiKiinni;
         readonly Dictionary<string, Transform> solmut = new Dictionary<string, Transform>(StringComparer.Ordinal);

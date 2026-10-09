@@ -90,7 +90,7 @@ namespace Matkakirja.Natiivi
         public const float TakaM = 2.5f, TakaYlos = 0.4f, TakaSiirtymaS = 0.6f, OteRiippuu = 1.55f, OteIrti = 0.35f;
         public Transform TakakuvaHahmo { get; private set; }
         Kiipeily oteKiipeily; List<(Vector3 P, Vector3 Ulos)> otteet; Action<bool> oteValmis;
-        string oteLeike; float lipsahdusAsti; bool puuskaKuului;
+        string oteLeike; float lipsahdusAsti; bool puuskaKuului, levossa;
         static void KiipeilyAanetPois(Vector3 p) { SeikkailuAanet.Silmukka("koysi-lasku", false, p); SeikkailuAanet.Silmukka("tuuli-muuri", false, p); }
         float takaPaino; Vector3 takaPaikka; Quaternion takaKierto = Quaternion.identity; bool himmensi, lyhtyKayty;
         public Kiipeily OteKiipeily => oteKiipeily;
@@ -99,10 +99,11 @@ namespace Matkakirja.Natiivi
         public static event Action OteHavaittu;
 
         /// <summary>Aloita ote-kiipeily (otteet Unityssa, ulospäin = seinän ulkonormaali); valmis(true) perillä komeron kynnyksellä.</summary>
-        public void AloitaOteKiipeily(List<(Vector3 P, Vector3 Ulos)> o, IEnumerable<int> puuskat, Action<bool> valmis, string leikeNimi = null)
+        public void AloitaOteKiipeily(List<(Vector3 P, Vector3 Ulos)> o, IEnumerable<int> puuskat, Action<bool> valmis, string leikeNimi = null,
+            IEnumerable<int> kapeat = null, IEnumerable<int> levot = null)
         {
             if (o == null || o.Count == 0) return;
-            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat); oteValmis = valmis; lyhtyKayty = false; oteLeike = leikeNimi;
+            otteet = o; oteKiipeily = new Kiipeily(o.Count, puuskat, kapeat, levot); oteValmis = valmis; lyhtyKayty = false; oteLeike = leikeNimi;
             cc.enabled = false; pysty = 0; kavely.NopeusX = kavely.NopeusZ = 0; napautusReitti.Clear();
             takaPaikka = olka.position; takaKierto = olka.rotation;
             NaytaTakakuvaHahmo(true);
@@ -156,20 +157,25 @@ namespace Matkakirja.Natiivi
             if (k.PuuskaVaroittaa && !puuskaKuului) SeikkailuAanet.Soita("tuuli-puuska", transform.position + Vector3.up * 1.5f, 0.9f);
             puuskaKuului = k.PuuskaVaroittaa;
             if (k.Lipsahti) { k.Lipsahti = false; lipsahdusAsti = Time.time + (float)Kiipeily.ToipuminenS; SeikkailuAanet.Soita("kivi-irtoaa", transform.position + Vector3.up * OteRiippuu, 0.7f, 1.2f); Debug.Log($"MATKAKIRJA seikkailu: ote lipsahti ({k.Ote + 1})"); }
-            if (k.Putosi) { k.Putosi = false; Debug.Log("MATKAKIRJA seikkailu: ote petti, kiipeilyn alkuun"); }
+            if (k.Putosi) { k.Putosi = false; Debug.Log($"MATKAKIRJA seikkailu: ote petti{(k.VoimaLoppui ? " (voimat loppuivat)" : "")}, kiipeilyn alkuun"); k.VoimaLoppui = false; }
+            // Voima (LR v45y, PT 9.10.): lepo-otteella hengähdys (loki kerran), heikkenevä ote tärisee alle 35 %:n.
+            bool lepaa = k.Siirtyy == 0 && k.Lepo(k.Ote);
+            if (lepaa && !levossa) Debug.Log($"MATKAKIRJA seikkailu: lepo-ote ({k.Ote + 1}), voima {k.Voima:P0}");
+            levossa = lepaa;
             if (k.Himmenee != himmensi) { himmensi = k.Himmenee; SeikkailuNakyvyys.Himmennys = himmensi ? 1f : 0f; }
             if (k.Havaittu) { k.Havaittu = false; Debug.Log("MATKAKIRJA seikkailu: lyhdyn valossa liikkui"); OteHavaittu?.Invoke(); }
             int i = Mathf.Clamp(k.Ote, 0, otteet.Count - 1), j = Mathf.Clamp(k.Ote + k.Siirtyy, 0, otteet.Count - 1);
             float u = (float)k.Osuus;
             var ote = Vector3.Lerp(otteet[i].P, otteet[j].P, u);
             var ulos = Vector3.Slerp(otteet[i].Ulos, otteet[j].Ulos, u); ulos.y = 0; ulos = ulos.sqrMagnitude > 1e-4f ? ulos.normalized : -hahmo.forward;
-            transform.position = ote + ulos * OteIrti - Vector3.up * OteRiippuu;
+            float tarina = k.Voima < 0.35 ? (float)((0.35 - k.Voima) / 0.35) * 0.015f : 0f;
+            transform.position = ote + ulos * OteIrti - Vector3.up * OteRiippuu + (tarina > 0 ? Vector3.up * tarina * Mathf.Sin(Time.time * 37f) : Vector3.zero);
             kavely.HahmoYaw = Mathf.Atan2(-ulos.x, -ulos.z) * Mathf.Rad2Deg;   // kasvot seinään
             hahmo.localRotation = Quaternion.Euler(0, (float)kavely.HahmoYaw, 0);
             // Takakuvan hahmon leike (LR pyydetty 8.10.: ote_idle, ote_siirto 0,6 s; puuttuessa Hahmot3D:n varaketju idleen).
             string ol = oteLeike ?? (Time.time < lipsahdusAsti ? "ote_lipsahdus" : k.Siirtyy != 0 ? "ote_siirto" : "ote_idle");   // LR v44u
             if (ol != leike) { leike = ol; leikeAika = 0; }
-            leikeAika += dt;
+            leikeAika += dt * (k.Siirtyy != 0 && k.Kapea(k.Ote + k.Siirtyy) ? (float)(Kiipeily.OteS / Kiipeily.KapeaOteS) : 1f);   // kapea: hitaampi siirto
             takaPaino = Mathf.MoveTowards(takaPaino, 1f, dt / TakaSiirtymaS);
             var taka = transform.position + ulos * TakaM + Vector3.up * (Korkeus + TakaYlos);
             takaPaikka = taka; takaKierto = Quaternion.LookRotation(transform.position + Vector3.up * 1.2f - taka);
