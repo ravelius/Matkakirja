@@ -1706,15 +1706,17 @@
     "byteExactReadback": true
   },
   "matrixProof": {
-    "file": "vertailu-24.jpg",
-    "r2Key": "julisteet/vertailusarja/20261009/vertailu-24.jpg",
-    "url": "https://media.matkakirja.app/julisteet/vertailusarja/20261009/vertailu-24.jpg",
-    "sha256": "6f4ee16f3ec846a37da113fce8d0ebfe34f6d0679653892b2bee1966fe0d1abc",
-    "bytes": 768214,
+    "file": "vertailu-24-fi.jpg",
+    "r2Key": "julisteet/vertailusarja/20261009/vertailu-24-fi.jpg",
+    "url": "https://media.matkakirja.app/julisteet/vertailusarja/20261009/vertailu-24-fi.jpg",
+    "sha256": "ce3f24776964d387c0d84c31ac84a13fa4a58605a50971f49680a8fe82c1e2dc",
+    "bytes": 769489,
     "http": 200,
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",
-    "byteExactReadback": true
+    "byteExactReadback": true,
+    "correctedFinnishFont": true,
+    "supersedesComparisonKey": "julisteet/vertailusarja/20261009/vertailu-24.jpg"
   },
   "matrixAssets": [
     {

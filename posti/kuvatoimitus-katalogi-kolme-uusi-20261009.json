@@ -1,0 +1,531 @@
+{
+  "task": "katalogi-kolme-uusi-20261009",
+  "taskNumber": 48,
+  "source": {
+    "sourcePath": "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md",
+    "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+    "sourceBlob": "7073be66bb1bdd8ed7acb45b2e97fd878625f462"
+  },
+  "sourceReadInFull": true,
+  "generationCalls": 3,
+  "generationLimit": 3,
+  "imageCount": 3,
+  "requestedImages": 3,
+  "partialDelivery": false,
+  "productionComplete": true,
+  "sampleDeliveryMandatory": true,
+  "allContentConstraintsPassed": false,
+  "assets": [
+    {
+      "id": "yokartta",
+      "subject": "yokartta",
+      "taskNumber": 48,
+      "style": "F",
+      "form": "iso",
+      "file": "yokartta-havainne-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/yokartta/yokartta-havainne-v2.jpg",
+      "sha256": "84b85fe5b3ced9360532ddc52305c0114d62ae10a98901f23472b9ff819abfa6",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3/exec-87e355d2-acb3-4070-9e6f-3dfb68a434b0.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/yokartta/original-generation.png",
+      "originalSHA256": "dfcbaa01c92bc15f8fdd1a8a8c3833779bd6f5d2ef5b8c5bc9e20aebcc12622f",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: scientific-educational\nAsset type: Matkakirja catalog, large photorealistic illustrative image\nPrimary request (verbatim Finnish production brief):\n1. **`yokartta` (Y5)**: kuin ISS:n ikkunasta otettu yökuva Euroopasta ja Pohjois-Afrikasta. **Kaupunkien valot ERILLISINÄ VALORYKELMINÄ** (Lontoo, Pariisi, Ruhrin alue, Po-laakso, Rooma, Madrid, Istanbul eroteltavissa pistemäisinä hehkuina), **EI jatkuvia valoketjuja rannikkoja pitkin** (rannikko ja meri tummia, valo vain taajamissa; harvaa maaseutua, pienet haalit kylärykelmät); ohut ilmakehän hehku horisontissa, muutama pilvilaikku, luonnollinen kamerakuvan rae, ei ylikylläisyyttä, ei viivoja eikä rajoja.\nStyle/medium: A completely new text-only generated photorealistic educational illustrative image (HAVAINNEKUVA), convincing photographic exposure, natural real-world material detail and subdued color. This is not an authentic photograph or a Commons photograph. Generate the entire scene afresh; no input images, no existing pixels, no collage.\nComposition/framing: Landscape 16:9 intended final size 1600 × 900; principal subject centered, complete important subject with safe crop margin. Opaque image. Photograph-like, not a labeled diagram, not a poster.\nConstraints: No readable text, no numerals, no letters, no logos, no watermark, no frame or border, no identifiable people or faces. The quoted brief is an instruction and must not be printed into the scene.\nCamera and scene: Orbital night photography from a clear ISS window, looking obliquely toward western and central Europe and northern Africa, with a gently curved Earth horizon and a very thin blue atmospheric rim. No window frame or spacecraft structure. Resolve recognizable land shapes naturally through sparse lights, dark coastlines and dark sea. London, Paris, the Ruhr, the Po valley, Rome, Madrid and Istanbul should each be compact separate urban light clusters with dark gaps between them. Small faint inland villages, rural land predominantly dark; Mediterranean, Atlantic and every shoreline remain dark and unlit, absolutely no continuous coastal strings or edge tracing. No artificial grid or links between cities. A few soft sparse cloud patches, physically restrained amber-white urban lights, natural low-light camera grain, no oversaturation or exaggerated bloom.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "7073be66bb1bdd8ed7acb45b2e97fd878625f462"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md"
+      ],
+      "kuvateksti": "Euroopan ja Pohjois-Afrikan kaupunkivalot yöpuolella avaruudesta nähtyinä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "viewsInspected": [
+          "native generated 1672×941",
+          "final 480×270"
+        ],
+        "visualStyle": "Photorealistic orbital night illustrative scene; no people, text, logos, watermark or frame observed.",
+        "checks": {
+          "europeAndNorthAfrica": true,
+          "curvedHorizon": true,
+          "thinAtmosphericGlow": true,
+          "sparseClouds": true,
+          "darkSea": true,
+          "cityLightsSeparateClusters": false,
+          "coastlinesDark": false,
+          "naturalCameraGrain": "Fine low-light texture, but prominent exaggerated starburst urban highlights."
+        },
+        "observedLightClusterAssessment": {
+          "primaryBrightNodes": "At least seven conspicuous bright urban cores are visible in broadly recognizable UK, France, central Europe, northern Italy, central Italy, central Spain and Bosporus areas; their precise city identity is approximate and not a verified map.",
+          "individualCities": {
+            "London": "Bright UK core visible, linked to surrounding light network.",
+            "Paris": "Bright northern-France core visible, radiating connected lights.",
+            "Ruhr": "Dense central-European lighting network rather than an isolated compact cluster.",
+            "PoValley": "Broad elongated dense northern-Italian light band.",
+            "Rome": "Bright central-Italian node with adjacent lit coastline.",
+            "Madrid": "Central-Spanish bright node, linked by lit lines.",
+            "Istanbul": "Bright Bosporus-region node; geographically approximate."
+          },
+          "darkGaps": "Dark Mediterranean water is broad and clear; rural interiors have dark gaps, but extensive connecting light lines remain.",
+          "coastalDefects": "Nearly continuous or frequently connected bright strings follow parts of Portugal, Spanish Mediterranean coast, southern France, Italian coastline and northern-African coast.",
+          "constraintResult": "Fails the mandatory separate urban clusters / no continuous coastal chains condition."
+        },
+        "defects": [
+          "Coastlines are traced by dense strings of light in several regions.",
+          "Road-like connected luminous lines join cities.",
+          "Overlarge starburst highlights and broad Po/Ruhr bands reduce isolated point-cluster fidelity."
+        ],
+        "disposition": "Mandatory best-sample delivery under new #48 one-call authorization; no retry.",
+        "technicalValidation": {
+          "formatJPEG": true,
+          "dimensionsCorrect": true,
+          "opaqueRGB": true,
+          "sRGBICCEmbeddedAndVerified": true,
+          "JPEGQuality90QuantizationVerified": true,
+          "XMPExactUnicodeDescription": true,
+          "XMPExactUnicodeSource": true,
+          "EXIFExactUnicodeUserComment": true,
+          "byteExactNativePreserved": true,
+          "verbatimBriefInSavedPrompt": true,
+          "captionEndingHavainnekuva": true,
+          "finalSHA256MatchesRecord": true,
+          "nativeSHA256MatchesRecord": true
+        },
+        "technicalConstraintsPass": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/yokartta/yokartta-havainne-v2.jpg",
+      "sampleDeliveryEligible": true,
+      "fullContentConstraintsPass": false,
+      "generationMode": "builtin-image_gen",
+      "generationOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3 as /Users/samireivinen/.codex/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3/exec-87e355d2-acb3-4070-9e6f-3dfb68a434b0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reviewState": "mandatory-best-sample-ready-with-content-defects",
+      "r2Key": "linssikatalogi/yokartta-havainne-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "84b85fe5b3ced9360532ddc52305c0114d62ae10a98901f23472b9ff819abfa6",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Kaupunkeja yhdistäviä/rannikon valoketjuja edelleen näkyvissä."
+        ],
+        "reviewState": "root-visual-and-technical-proof-reviewed-sample-approved",
+        "editorAcceptance": false,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/qa/root3-catalog.jpg"
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/yokartta-havainne-v2.jpg",
+      "bytes": 376118,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "maapallon-vuosi",
+      "subject": "maapallon-vuosi",
+      "taskNumber": 48,
+      "style": "F",
+      "form": "iso",
+      "file": "maapallon-vuosi-havainne-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/maapallon-vuosi/maapallon-vuosi-havainne-v2.jpg",
+      "sha256": "6494c6b86cbe16c5222db23412eb94854d92e5fa775dd460ddf27b04783a084c",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3/exec-1656fa62-9ce5-4c61-9be4-44e2c435ce81.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/maapallon-vuosi/original-generation.png",
+      "originalSHA256": "94ba8a291617ae4c551fdf67223c643fa1769a6f42e0085237e154e9c0c1dd7d",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: scientific-educational\nAsset type: Matkakirja catalog, large photorealistic illustrative image\nPrimary request (verbatim Finnish production brief):\n2. **`maapallon-vuosi`**: Maa avaruudesta **pohjoisen kesäpäivänseisauksen valaistuksessa**: aurinko oikealta, **maapallon akseli selvästi kallellaan (n. 23,4°) pohjoisnapa kohti aurinkoa: napa-alue kokonaan valaistuna (keskiyön aurinko, kirkas jäämeri), etelänapa kokonaan varjossa**; päivän/yön raja vinosti napojen ohi niin, että kallistus on yksiselitteisesti luettavissa; ohut ilmakehähohde; ei viivoja, ei piirrettyä akselia, ei tekstiä.\nStyle/medium: A completely new text-only generated photorealistic educational illustrative image (HAVAINNEKUVA), convincing photographic exposure, natural real-world material detail and subdued color. This is not an authentic photograph or a Commons photograph. Generate the entire scene afresh; no input images, no existing pixels, no collage.\nComposition/framing: Landscape 16:9 intended final size 1600 × 900; principal subject centered, complete important subject with safe crop margin. Opaque image. Photograph-like, not a labeled diagram, not a poster.\nConstraints: No readable text, no numerals, no letters, no logos, no watermark, no frame or border, no identifiable people or faces. The quoted brief is an instruction and must not be printed into the scene.\nCamera and scene: Full Earth sphere centered with ample empty black space around the entire globe, realistic space-camera image, physically coherent terrestrial geography, ocean, clouds and polar ice. The Sun is outside the frame on the RIGHT, and all illumination arrives from the RIGHT. Northern summer solstice geometry: the north geographic pole is at the upper-right of the globe, the south geographic pole at the lower-left, the geographic pole-to-pole orientation tilted clockwise about 23.4 degrees toward the sunlight. Show this through the orientation of real geography and ice caps ONLY, never with a drawn axis. The entire visible Arctic polar cap and bright Arctic Ocean are in continuous sunlight, while the entire Antarctic south polar region is deep in night shadow. The oblique curved day/night terminator passes away from both poles, below the northern polar cap and above the southern polar region; neither cap is bisected by shadow. Bright side to the right, dark side to the left. Thin realistic atmospheric limb glow, natural cloud detail, gentle exposure preserving the readable polar lighting and orientation. No glow on the night-side Antarctic pole; no second Earth, no Sun disk, no orbit lines.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "7073be66bb1bdd8ed7acb45b2e97fd878625f462"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md"
+      ],
+      "kuvateksti": "Maapallo avaruudesta nähtynä, valo oikealta ja pohjoinen jääalue kirkkaana. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "viewsInspected": [
+          "native generated 1672×941",
+          "final 480×270"
+        ],
+        "visualStyle": "Photorealistic full globe in space, sharp natural cloud and terrain detail; no people, text, logos, watermark, border, drawn axis or orbit lines observed.",
+        "checks": {
+          "fullEarthVisible": true,
+          "lightFromRight": true,
+          "thinAtmosphericGlow": true,
+          "noDrawnAxis": true,
+          "northernIceRegionBright": true,
+          "entireArcticRegionUnambiguouslySunlit": false,
+          "southPoleUnambiguouslyEntirelyShadowed": false,
+          "axisTilt23_4UnambiguouslyReadable": false,
+          "solsticeTerminatorGeometryUnambiguous": false
+        },
+        "observedPolarGeometry": {
+          "illuminationDirection": "The right side containing Europe and Africa is bright; the Americas on the left are substantially dark.",
+          "north": "Large bright Greenland/northern ice area is visible near the top, slightly right of center. The geographic north pole is not clearly locatable from the displayed ice/geography and the complete Arctic cap is not shown as an unambiguously bounded fully sunlit region.",
+          "south": "Lower-left / bottom region is dark, but an identifiable Antarctic cap or exact south-pole position is absent. Cannot verify the entire Antarctic south-polar region in shadow.",
+          "axis": "No axis line is drawn, as requested. The geographic pole-to-pole tilt is visually ambiguous; the intended approximately 23.4-degree tilt toward the right is not independently readable.",
+          "terminator": "Curved day/night shading is visible, but the geometry does not make both polar relationships and the northern solstice uniquely clear.",
+          "constraintResult": "Right-hand lighting and bright northern ice support the request, but exact seasonal/polar geometry fails the unambiguous verification requirement."
+        },
+        "defects": [
+          "North-pole position and approximately 23.4-degree orientation are not clearly readable.",
+          "Entire Arctic cap fully illuminated is not verifiable from the generated geography.",
+          "Antarctic cap is not distinctly identifiable; complete south-pole shadow cannot be confirmed."
+        ],
+        "disposition": "Mandatory best-sample delivery under new #48 one-call authorization; no retry.",
+        "technicalValidation": {
+          "formatJPEG": true,
+          "dimensionsCorrect": true,
+          "opaqueRGB": true,
+          "sRGBICCEmbeddedAndVerified": true,
+          "JPEGQuality90QuantizationVerified": true,
+          "XMPExactUnicodeDescription": true,
+          "XMPExactUnicodeSource": true,
+          "EXIFExactUnicodeUserComment": true,
+          "byteExactNativePreserved": true,
+          "verbatimBriefInSavedPrompt": true,
+          "captionEndingHavainnekuva": true,
+          "finalSHA256MatchesRecord": true,
+          "nativeSHA256MatchesRecord": true
+        },
+        "technicalConstraintsPass": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/maapallon-vuosi/maapallon-vuosi-havainne-v2.jpg",
+      "sampleDeliveryEligible": true,
+      "fullContentConstraintsPass": false,
+      "generationMode": "builtin-image_gen",
+      "generationOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3 as /Users/samireivinen/.codex/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3/exec-1656fa62-9ce5-4c61-9be4-44e2c435ce81.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reviewState": "mandatory-best-sample-ready-with-content-defects",
+      "r2Key": "linssikatalogi/maapallon-vuosi-havainne-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "6494c6b86cbe16c5222db23412eb94854d92e5fa775dd460ddf27b04783a084c",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Valo tulee oikealta; akselin noin 23,4° kallistus ja napojen tarkka valaistus eivät ole yksiselitteisesti todennettavissa."
+        ],
+        "reviewState": "root-visual-and-technical-proof-reviewed-sample-approved",
+        "editorAcceptance": false,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/qa/root3-catalog.jpg"
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/maapallon-vuosi-havainne-v2.jpg",
+      "bytes": 277194,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    },
+    {
+      "id": "tavli",
+      "subject": "tavli",
+      "taskNumber": 48,
+      "style": "F",
+      "form": "iso",
+      "file": "tavli-havainne-v2.jpg",
+      "localPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/tavli/tavli-havainne-v2.jpg",
+      "sha256": "fa488fe71e702266d9ec28bc0996170931e41e552fb1141bc91f4d12aa771002",
+      "originalGeneratedPath": "/Volumes/NAS-Homes/koodaus/Chat GPT/Aktiiviset/CodexApp/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3/exec-f5da9c03-db2e-4143-8b9d-ba7b92a2b621.png",
+      "preservedOriginalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/tavli/original-generation.png",
+      "originalSHA256": "e01c54b29bce2f6016b9fa9d4dd4df3a5fdd0230a4ab0ac5b3e02307a5d3bd58",
+      "nativeGeneratedSize": [
+        1672,
+        941
+      ],
+      "dimensions": [
+        1600,
+        900
+      ],
+      "mode": "RGB",
+      "sRGB": true,
+      "generationCalls": 1,
+      "generationLimit": 1,
+      "generationPrompt": "Use case: product-mockup\nAsset type: Matkakirja catalog, large photorealistic illustrative image\nPrimary request (verbatim Finnish production brief):\n3. **`tavli`**: avattu puinen, intarsiakoristeinen tavlalauta kahvilapöydällä **YLÄKULMASTA TASAISESTI, KOKO LAUTA NÄKYVISSÄ, täsmälleen 24 kolmiota (12 per puoli, kussakin neljänneksessä tasan 6, vuorotellen tumma ja vaalea), keskipalkki, 15 + 15 nappulaa (norsunluunvalkoinen ja tummanruskea) pelin alkuasetelmassa ja kaksi noppaa**; selkeä, laskettava, ei muita esineitä paitsi pieni teekuppi syrjässä; lämmin Välimeren iltavalo. Älä käytä vinoa kuvakulmaa, joka peittää kolmioita.\nStyle/medium: A completely new text-only generated photorealistic educational illustrative image (HAVAINNEKUVA), convincing photographic exposure, natural real-world material detail and subdued color. This is not an authentic photograph or a Commons photograph. Generate the entire scene afresh; no input images, no existing pixels, no collage.\nComposition/framing: Landscape 16:9 intended final size 1600 × 900; principal subject centered, complete important subject with safe crop margin. Opaque image. Photograph-like, not a labeled diagram, not a poster.\nConstraints: No readable text, no numerals, no letters, no logos, no watermark, no frame or border, no identifiable people or faces. The quoted brief is an instruction and must not be printed into the scene.\nCamera and scene: Carefully composed documentary product photograph of a real open inlaid wooden tavli / backgammon board on a Mediterranean cafe table, viewed from directly overhead with only minimal even perspective, board horizontal in the image, all four outside edges fully visible and no foreshortened or occluded corner. The exact playable layout is crucial: a central wooden bar divides left and right halves; each half has one upper row of SIX pointed triangles and one lower row of SIX pointed triangles, so there are FOUR quadrants of SIX, EXACTLY TWENTY-FOUR triangles total. Alternating light and dark wood triangles within each quadrant, six tips clearly separable and countable, no extra ornamental triangles mistaken for points. Use a standard backgammon starting layout, visibly countable checker stacks placed flat in rows along the point length: white checkers total FIFTEEN in groups 2, 5, 3, 5; dark brown checkers total FIFTEEN in groups 2, 5, 3, 5 on the opposing mirrored points. Clockwise point orientation viewed from above: bottom right quadrant points1–6 run right to left, bottom left points7–12 run right to left, top left points13–18 run left to right, top right points19–24 run left to right. White: 2 on24, 5 on13, 3 on8, 5 on6. Brown: 2 on1, 5 on12, 3 on17, 5 on19. The number names are instructions only, no numbering on the board. Keep the full width of all24 points visible and enough point tips exposed to count. Two small cubic ivory dice with black PIPS only in free central board space, no doubling cube. One small simple Turkish tea cup with dark tea at the side, away from the board. These are the only objects. Warm restrained Mediterranean evening light, natural wood grain and intarsia detail; sharp focus across the whole board and all checkers, no cinematic shallow depth of field, no steep diagonal angle.\n",
+      "source": {
+        "sourcePath": "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md",
+        "sourceCommit": "486ce82d535f458f74136bc4738089592e479066",
+        "sourceBlob": "7073be66bb1bdd8ed7acb45b2e97fd878625f462"
+      },
+      "sourceReadInFull": true,
+      "sourceImagePixelsCopied": false,
+      "viitteet": [
+        "posti/sisaltokirjuri-codex-katalogi-kolme-uusi-tilaus-20261009.md"
+      ],
+      "kuvateksti": "Puinen intarsiakoristeinen tavlalauta nappuloineen, kaksi noppaa ja pieni teekuppi kahvilapöydällä. Havainnekuva.",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "technicalProcessing": {
+        "cropBox": [
+          0,
+          0,
+          1672,
+          940
+        ],
+        "resizeTo": [
+          1600,
+          900
+        ],
+        "method": "Technical centeredcrop/Lanczos resize; optional requested fixedpalette quantization",
+        "jpegQuality": 90,
+        "jpegSubsampling": 0,
+        "colorSpace": "sRGB",
+        "XMPDescription": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "XMPSource": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+        "EXIFDescriptionNote": "ASCII supplemental text; exact Finnish Unicode is in XMP andUserComment"
+      },
+      "palette": null,
+      "QA": {
+        "workerVisualReviewPending": false,
+        "rootIndependentReviewPending": true,
+        "sampleDeliveryEligible": true,
+        "fullContentConstraintsPass": false,
+        "viewsInspected": [
+          "native generated 1672×941, complete board",
+          "final 480×270"
+        ],
+        "visualStyle": "Warm photorealistic overhead cafe-table photograph-like illustration, wooden intarsia board; no readable text, numerals, logos, watermark or people.",
+        "checks": {
+          "completeBoardVisible": true,
+          "evenOverheadView": true,
+          "centralBar": true,
+          "inlaidWood": true,
+          "trianglesExactly24": false,
+          "trianglesFourGroupsOf6": false,
+          "alternatingDarkAndLight": true,
+          "whiteCheckers15": true,
+          "brownCheckers15": true,
+          "standardValidStartingPosition": false,
+          "pipDiceExactly2": true,
+          "oneTeaCup": true,
+          "noExtraTabletopProps": true
+        },
+        "observedCounts": {
+          "countMethod": "Manually counted playable long triangles in the full native image; decorative star intarsia pieces are excluded. All checker discs are separated and counted by visible rows.",
+          "triangles": {
+            "upperLeft": 7,
+            "upperRight": 7,
+            "lowerLeft": 7,
+            "lowerRight": 7,
+            "total": 28,
+            "expectedPerQuadrant": 6,
+            "expectedTotal": 24
+          },
+          "triangleTipApproxNativeX": {
+            "upperLeft": [
+              346,
+              412,
+              476,
+              540,
+              606,
+              671,
+              737
+            ],
+            "upperRight": [
+              901,
+              973,
+              1041,
+              1108,
+              1176,
+              1242,
+              1310
+            ],
+            "lowerLeft": [
+              331,
+              400,
+              466,
+              532,
+              598,
+              664,
+              731
+            ],
+            "lowerRight": [
+              906,
+              978,
+              1047,
+              1117,
+              1186,
+              1254,
+              1334
+            ]
+          },
+          "checkers": {
+            "white": {
+              "upperLeft": 5,
+              "upperRight": 2,
+              "lowerLeft": 3,
+              "lowerRight": 5,
+              "total": 15
+            },
+            "brown": {
+              "upperLeft": 3,
+              "upperRight": 5,
+              "lowerLeft": 5,
+              "lowerRight": 2,
+              "total": 15
+            }
+          },
+          "startingPosition": "Checker group sizes match 5/2/3/5 and opposing 3/5/5/2 visual layout, but a 28-point board is not a valid 24-point tavli/backgammon starting position and the point numbers cannot conform to the requested layout.",
+          "dice": {
+            "count": 2,
+            "markings": "black pips, no numerals or doubling cube observed"
+          },
+          "tea": {
+            "count": 1,
+            "position": "beside upper-right board corner; glass with saucer"
+          },
+          "otherVisibleObjects": "No extra objects on the tabletop. Partial wicker cafe-chair furniture and paving are visible beyond the tabletop."
+        },
+        "defects": [
+          "28 playable triangles: 7 in each quadrant, instead of the required 24: 6 in each quadrant.",
+          "The 28-point board prevents a valid standard 24-point starting position despite correctly counted 15 + 15 checker totals."
+        ],
+        "disposition": "Mandatory best-sample delivery under new #48 one-call authorization; no retry.",
+        "technicalValidation": {
+          "formatJPEG": true,
+          "dimensionsCorrect": true,
+          "opaqueRGB": true,
+          "sRGBICCEmbeddedAndVerified": true,
+          "JPEGQuality90QuantizationVerified": true,
+          "XMPExactUnicodeDescription": true,
+          "XMPExactUnicodeSource": true,
+          "EXIFExactUnicodeUserComment": true,
+          "byteExactNativePreserved": true,
+          "verbatimBriefInSavedPrompt": true,
+          "captionEndingHavainnekuva": true,
+          "finalSHA256MatchesRecord": true,
+          "nativeSHA256MatchesRecord": true
+        },
+        "technicalConstraintsPass": true
+      },
+      "absoluteLocalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/production/tavli/tavli-havainne-v2.jpg",
+      "sampleDeliveryEligible": true,
+      "fullContentConstraintsPass": false,
+      "generationMode": "builtin-image_gen",
+      "generationOutputHint": "Generated images are saved to /Users/samireivinen/.codex/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3 as /Users/samireivinen/.codex/generated_images/01a11f93-de3c-7ca1-898f-218ee979f6b3/exec-f5da9c03-db2e-4143-8b9d-ba7b92a2b621.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "reviewState": "mandatory-best-sample-ready-with-content-defects",
+      "r2Key": "linssikatalogi/tavli-havainne-v2.jpg",
+      "rootVisualReview": {
+        "sampleDeliveryApproved": true,
+        "sha256": "fa488fe71e702266d9ec28bc0996170931e41e552fb1141bc91f4d12aa771002",
+        "fullContentConstraintsPass": false,
+        "findings": [
+          "Laudassa on 28 kolmiota (7 × 4), kun pyyntö on 24. Nappuloita 15 + 15 ja kaksi pistenoppaa."
+        ],
+        "reviewState": "root-visual-and-technical-proof-reviewed-sample-approved",
+        "editorAcceptance": false,
+        "viewedProof": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/kuvat-erien48-50-20261009/katalogi-kolme-uusi/qa/root3-catalog.jpg"
+      },
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false,
+      "url": "https://media.matkakirja.app/linssikatalogi/tavli-havainne-v2.jpg",
+      "bytes": 456398,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true
+    }
+  ],
+  "comparison": {
+    "file": "toimitetut-3-katalogi.jpg",
+    "r2Key": "linssikatalogi/20261009-toimitetut-3-katalogi.jpg",
+    "url": "https://media.matkakirja.app/linssikatalogi/20261009-toimitetut-3-katalogi.jpg",
+    "sha256": "28827377dfb5ba2d21b08f3ec144f163615d798acc883c0cd14515096bc8b069",
+    "bytes": 93474,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  },
+  "matrixProof": null,
+  "matrixAssets": [],
+  "reusedAssets": [],
+  "palette": null,
+  "exactPaletteProofs": [],
+  "inheritedCompositionLimitations": [],
+  "allR2ReadbacksByteExact": true,
+  "deliveryStatus": "R2verified-prepared-for-normal-mailbox-push",
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false,
+  "updatedAt": "2026-10-09T07:59:17.539417+00:00"
+}
