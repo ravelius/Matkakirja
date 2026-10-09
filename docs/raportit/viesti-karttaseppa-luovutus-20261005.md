@@ -679,3 +679,10 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 - Bahaman suurten matalikkojen turkoosi puuttuu. PT toivoo batymetriaan perustuvaa ratkaisua myöhemmin.
 - Aluekohtainen tci_lut (aavikko) tehdään LS2:n esimerkkikuvien perusteella.
 - Saaret-haara ja Euroopan pyramidi z11: ennallaan, ks. 2.10. luovutus.
+
+## 9.10. 07.3x
+
+- Vasa-museon lähdepaketti LR:lle: `_tyo/karttaseppa/vasamuseet/` (OSM 150 m, 20 building:partia, mastoja ei OSM:ssä, maa GLO-30 noin 2–3 m EGM).
+- Työkalut-PR #4256 (kohde-korkeus, giza-korkeudet, concorde-ign, vesipinta --pienet-pois). Merge → poista wt/karttaseppa-tyokalut3.
+- Vesi pariisi3 + tukholma3 (LS2: pienet erilliset altaat pois) valmiina `_tyo/karttaseppa/vesi/`; vienti index-v4:llä odottaa LS2:n vastausta (koodiin v4-haku). Ajot: scratchpad aja-vesi-v4.sh, T7 vesimaski/pariisi-v3, tukholma-v4.
+- Talvi3-loput: 27/33 klo 07.35, valmis noin 08.45 → ennen/jälkeen-kuvat PT:lle → paketti.
