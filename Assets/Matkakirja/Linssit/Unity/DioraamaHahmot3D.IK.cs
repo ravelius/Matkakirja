@@ -117,7 +117,7 @@ namespace Matkakirja.Natiivi
                 if (k.Tyyppi != "tartu" || !Voimassa(e, k)) continue;
                 var eff = k.Kasi == "l" ? e.Ik.solver.leftHandEffector : e.Ik.solver.rightHandEffector;
                 Vector3 paikkaC; Quaternion? kammenC = k.Kierto != null ? Kanoninen(k.Kierto) : (Quaternion?)null;
-                if (!string.IsNullOrEmpty(k.Esine))
+                if (Kannettu(kadet, k))
                 {
                     // Tartu kannettuun esineeseen (rukouskirja): paikka ja kierto esineen kehyksessä, esineen asento edellisestä ruudusta.
                     if (!e.KannettavaValmis) continue;
@@ -139,6 +139,14 @@ namespace Matkakirja.Natiivi
             e.Ik.solver.leftHandEffector.rotationWeight = kiertoL ? e.KasiPainoL : 0f;
         }
         static bool SetRot(IKEffector eff, Quaternion q) { eff.rotation = q; return true; }
+        /// <summary>Tartu-rivi kannettuun esineeseen: saman hahmon kanna-rivin esine (LR 9.10.: muut esineet, esim. hoitajan-pulpetti,
+        /// ovat sijoitettuja maailman paikkoja).</summary>
+        static bool Kannettu(List<KasiKohde> kadet, KasiKohde k)
+        {
+            if (string.IsNullOrEmpty(k.Esine)) return false;
+            foreach (var x in kadet) if (x != k && x.Tyyppi == "kanna" && x.Esine == k.Esine) return true;
+            return false;
+        }
         static bool Voimassa(Esiintyma e, KasiKohde k) => k.Milloin == "aina" || k.Milloin == e.Silmukka || (k.Milloin == "puhe" && e.EleNimi != null);
 
         /// <summary>Kämmenen kierto datasta ("poikki kadet kierto 0|1"; PT 9.10., juna 174: kädet kirjalle ja pulpetille).</summary>

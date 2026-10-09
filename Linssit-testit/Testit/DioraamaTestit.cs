@@ -35,6 +35,21 @@ namespace Matkakirja.Linssit.Testit
             Lahella(odotettu.Z, saatu.Z, mita + ".Z", tol);
         }
 
+        /// <summary>Kappalaisen rukouskirja (LR 9.10., PelattavaPala-paketti): kanna oikeaan käteen glb:n ja kämmenkehyksen kanssa,
+        /// vasen käsi tarttuu samaan esineeseen.</summary>
+        [Testi] static void KappalainenKantaaKirjaa()
+        {
+            string json = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "olavinlinna-" + Matkakirja.Linssit.Seikkailu.PelattavaPala.Versio + "-rakennus.json"));
+            var kappalainen = DioraamaData.Lue(json).Tila("kappeli").Hahmot.Find(h => h.Id == "kappalainen");
+            var kanna = kappalainen.Kadet.Find(k => k.Tyyppi == "kanna");
+            Oleta.Tosi(kanna != null && kanna.Kasi == "r" && kanna.Esine == "rukouskirja", "kanna oikeaan käteen");
+            Oleta.Sama("blender/hahmot/rukouskirja.glb", kanna.Glb);
+            Oleta.Sama("kammen", kanna.Kehys);
+            Oleta.Tosi(kanna.Kierto != null && kanna.Kierto.Length == 4, "kanna-kierto");
+            var tartu = kappalainen.Kadet.Find(k => k.Tyyppi == "tartu");
+            Oleta.Tosi(tartu != null && tartu.Kasi == "l" && tartu.Esine == "rukouskirja", "vasen käsi samaan kirjaan");
+        }
+
         static void SamaV3(V3 odotettu, V3 saatu, string mita) => LahellaV3(odotettu, saatu, mita, 1e-9);
 
         // ═══════════════════════════════════════════════════════════════════
@@ -160,6 +175,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.0, kokki.Kadet[1].Paino);
             Oleta.Tosi(kokki.Kadet[1].Kierto == null, "kanna ilman kiertoa");
             SamaV3(new V3(0.05, 0, 0.1), kokki.Kadet[1].Siirto, "kanna-siirto");
+
+            Oleta.Tosi(kokki.Kadet[0].Glb == null && kokki.Kadet[0].Kehys == null, "glb ja kehys puuttuvat → null");
 
             var apulainen = keittio.Hahmot[1];
             Oleta.Tosi(apulainen.Peilattu, "apulainen peilattu");
