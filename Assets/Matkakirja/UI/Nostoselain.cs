@@ -72,10 +72,10 @@ namespace Matkakirja.Natiivi
         {
             get
             {
-                if (rivi.style.display == DisplayStyle.None) return "selain ei näy";
+                if (rivi.style.display == DisplayStyle.None) return "selain ei näy";   // kieli: ei (testilokin kuvaus (Kuvaus), ei pelaajan UI)
                 int i = jarjestys.FindIndex(x => x.Id == nykyinen);
                 var (l, k) = Maarat(aihe);
-                return $"selain {i + 1}/{jarjestys.Count} · {aihe} ({l}/{k})" + (PaneeliAuki ? " · paneeli" : "")
+                return $"selain {i + 1}/{jarjestys.Count} · {aihe} ({l}/{k})" + (PaneeliAuki ? " · paneeli" : "")   // kieli: ei (testilokin kuvaus (Kuvaus))
                        + (Auto ? " · auto" : "") + (SiirtoKaynnissa ? " · siirto" : "");
             }
         }
@@ -121,11 +121,11 @@ namespace Matkakirja.Natiivi
             rivi.EnableInClassList("mk-nostoselain--tiivis2", tiivis >= 2);
             rivi.EnableInClassList("mk-nostoselain--tiivis3", tiivis >= 3);
             rivi.EnableInClassList("mk-nostoselain--tiivis4", tiivis >= 4);
-            Debug.Log($"MATKAKIRJA nostoselain: ylärivi tiivis {tiivis} (pienin väli {vali:0.0} pt, leveys {lev:0} pt)");
+            Debug.Log($"MATKAKIRJA nostoselain: ylärivi tiivis {tiivis} (pienin väli {vali:0.0} pt, leveys {lev:0} pt)");   // kieli: ei (loki)
         }
 
         /// <summary>Testi: ylärivin leveys, tiivistys ja pienin väli.</summary>
-        public string YlariviKuvaus() => $"ylärivi {rivi.layout.width:0} pt, tiivis {tiivis}, pienin väli {PieninVali():0.0} pt";
+        public string YlariviKuvaus() => $"ylärivi {rivi.layout.width:0} pt, tiivis {tiivis}, pienin väli {PieninVali():0.0} pt";   // kieli: ei (testikomennon diagnostiikka (YlariviKuvaus))
 
         public Nostoselain(VisualElement kortti, VisualElement ennen, Action<string> avaa, Action autoVaihtui)
         {
@@ -143,7 +143,7 @@ namespace Matkakirja.Natiivi
             edellinen = Rakenne.Nappi(null, "mk-nostoselain__askel", () => Askel(-1), rivi, Ikonit.Takaisin);
             // Nostopaneelin ylärivi (omistaja 2.10. klo 13.53): ‹ NOSTOT ▾ › ja AUTO samalla rivillä HISTORIA-kapiteelin
             // kirjasimella, molemmat kevyinä suorakulmioina (ei ovaalia; web #3849 AUTO:n malli).
-            avaaja = Rakenne.Nappi("NOSTOT", "mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
+            avaaja = Rakenne.Nappi(Kieli.T("ui.nostoselain.nostot"), "mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
             avaajaTeksti = avaaja.Q<Label>();
             // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
             Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
@@ -159,8 +159,8 @@ namespace Matkakirja.Natiivi
             // Rivin leveys ei muutu, kun avaajan teksti (NOSTOT → MAAKUNNAT) tai oikean ryhmän sisältö vaihtuu: tarkistus myös niistä.
             avaaja.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
             Oikea.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
-            edellinen.tooltip = "Edellinen nosto";
-            seuraava.tooltip = "Seuraava nosto";
+            edellinen.tooltip = Kieli.T("ui.nostoselain.edellinen");
+            seuraava.tooltip = Kieli.T("ui.nostoselain.seuraava");
             Kirjasimet.Aseta(avaaja, Kirjasin.Kone);
             // Teksti perii HISTORIA-rivin koon ja harvennuksen (ei .mk-nappi__teksti-kokoa 15 px).
             avaaja.Q<Label>(className: "mk-nappi__teksti")?.RemoveFromClassList("mk-nappi__teksti");
@@ -190,12 +190,12 @@ namespace Matkakirja.Natiivi
             lappu = Rakenne.El("mk-nostoselain__lappu", kortti);
             lappu.style.display = DisplayStyle.None;
             var teksti = Rakenne.El("mk-nostoselain__lapputeksti", lappu, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("Seuraava:", "mk-nostoselain__lappuohje", teksti), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.nostoselain.seuraava-ohje"), "mk-nostoselain__lappuohje", teksti), Kirjasin.Kone);
             lappuNimi = Rakenne.Teksti("", "mk-nostoselain__lappunimi", teksti);
             lappuAika = Rakenne.Teksti("", "mk-nostoselain__lappuaika", teksti);
             Kirjasimet.Aseta(lappuNimi, Kirjasin.Kone);
             Kirjasimet.Aseta(lappuAika, Kirjasin.KoneBold);
-            pysayta = Rakenne.Nappi("Pysäytä", "mk-nostoselain__pysayta", LopetaSiirto, lappu);
+            pysayta = Rakenne.Nappi(Kieli.T("ui.nostoselain.pysayta"), "mk-nostoselain__pysayta", LopetaSiirto, lappu);
             Kirjasimet.Aseta(pysayta, Kirjasin.KoneBold);
             palkki = Rakenne.El("mk-nostoselain__palkki", lappu, PickingMode.Ignore);
 
@@ -208,8 +208,8 @@ namespace Matkakirja.Natiivi
         {
             autoNappi = Rakenne.Nappi(null, "mk-nostoselain__auto", () => { AsetaAuto(!Auto); }, null);
             Rakenne.El("mk-nostoselain__autopiste", autoNappi, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nostoselain__autoteksti", autoNappi), Kirjasin.Kone);
-            autoNappi.tooltip = "Auto: lukee avautuvat nostot ja siirtyy seuraavaan";
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.nostoselain.auto"), "mk-nostoselain__autoteksti", autoNappi), Kirjasin.Kone);
+            autoNappi.tooltip = Kieli.T("ui.nostoselain.auto-tooltip");
             // Juna 153 (omistaja 6.10. 19.2x, Kronborg): AUTO oikean ryhmän alkuun (AUTO, pin, ≡, kaiutin tasaväleillä).
             Oikea.Insert(0, autoNappi);
             PaivitaAuto();
@@ -232,7 +232,7 @@ namespace Matkakirja.Natiivi
             nykyinen = valoId;
             jarjestys.Clear();
             muu = valoId != null ? MuuLista?.Invoke(valoId) : null;
-            string avaajaUusi = muu?.Avaaja ?? "NOSTOT";
+            string avaajaUusi = muu?.Avaaja ?? Kieli.T("ui.nostoselain.nostot");
             if (avaajaTeksti.text != avaajaUusi)
             {
                 avaajaTeksti.text = avaajaUusi;
@@ -353,7 +353,7 @@ namespace Matkakirja.Natiivi
         void RakennaPaneeli()
         {
             var nimi = UiSisalto.Maa(maa)?.Nimi ?? maa ?? "";
-            otsikko.text = muu != null ? muu.Otsikko.ToUpperInvariant() : (nimi + " · Nostot").ToUpperInvariant();
+            otsikko.text = muu != null ? muu.Otsikko.ToUpperInvariant() : Kieli.T("ui.nostoselain.maan-nostot", nimi).ToUpperInvariant();
             siruRivi.Clear();
             Button valittu = null;
             if (muu != null)
@@ -422,7 +422,7 @@ namespace Matkakirja.Natiivi
             var x = Naapuri(1);
             if (x == null) return false;
             lappuNimi.text = Nimi(x);
-            lappuAika.text = Mathf.CeilToInt(SiirtoS) + " s";
+            lappuAika.text = Kieli.T("ui.nostoselain.sekuntia", Mathf.CeilToInt(SiirtoS));
             palkki.style.width = Length.Percent(0);
             lappu.BringToFront();
             Rakenne.NaytaHeti(lappu);
@@ -432,7 +432,7 @@ namespace Matkakirja.Natiivi
             {
                 float t = Time.unscaledTime - siirtoAlku;
                 if (t >= SiirtoS) { Siirry(x); return; }
-                lappuAika.text = Mathf.CeilToInt(SiirtoS - t) + " s";
+                lappuAika.text = Kieli.T("ui.nostoselain.sekuntia", Mathf.CeilToInt(SiirtoS - t));
                 palkki.style.width = Length.Percent(100f * t / SiirtoS);
             }).Every(0);
             return true;
@@ -458,16 +458,16 @@ namespace Matkakirja.Natiivi
         {
             if (nappi == "selain") { VaihdaPaneeli(); return null; }
             if (nappi == "selain-ylarivi") return YlariviKuvaus();   // ui nosto <id> selain-ylarivi: leveysbudjetti lokiin
-            if (nappi == "selain-seuraava") return Askel(1) ? null : "ei seuraavaa nostoa";
-            if (nappi == "selain-edellinen") return Askel(-1) ? null : "ei edellistä nostoa";
+            if (nappi == "selain-seuraava") return Askel(1) ? null : "ei seuraavaa nostoa";   // kieli: ei (testikomennon palaute (Testaa))
+            if (nappi == "selain-edellinen") return Askel(-1) ? null : "ei edellistä nostoa";   // kieli: ei (testikomennon palaute (Testaa))
             if (nappi == "auto") { AsetaAuto(true); return null; }
             if (nappi == "auto-pois") { AsetaAuto(false); return null; }
-            if (nappi == "siirto") return AloitaSiirto() ? null : "ei seuraavaa nostoa";
+            if (nappi == "siirto") return AloitaSiirto() ? null : "ei seuraavaa nostoa";   // kieli: ei (testikomennon palaute (Testaa))
             if (nappi == "pysayta") { LopetaSiirto(); return null; }
             if (nappi.StartsWith("selain-siru:"))
             {
                 var a = nappi.Substring(12);
-                if (Maarat(a).Kaikki == 0) return "ei aihetta " + a;
+                if (Maarat(a).Kaikki == 0) return "ei aihetta " + a;   // kieli: ei (testikomennon palaute (Testaa))
                 if (!PaneeliAuki) VaihdaPaneeli();
                 ValitseAihe(a);
                 return null;
@@ -475,11 +475,11 @@ namespace Matkakirja.Natiivi
             if (nappi.StartsWith("selain-rivi:") && int.TryParse(nappi.Substring(12), out var n))
             {
                 var r = lista.contentContainer.Q<Button>("rivi-" + n);
-                if (!PaneeliAuki || r == null) return "paneelissa ei riviä " + n;
+                if (!PaneeliAuki || r == null) return "paneelissa ei riviä " + n;   // kieli: ei (testikomennon palaute (Testaa))
                 using (var s = NavigationSubmitEvent.GetPooled()) { s.target = r; r.SendEvent(s); }
                 return null;
             }
-            return "selaimella ei ole nappia " + nappi;
+            return "selaimella ei ole nappia " + nappi;   // kieli: ei (testikomennon palaute (Testaa))
         }
     }
 }

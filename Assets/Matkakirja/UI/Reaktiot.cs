@@ -60,12 +60,11 @@ namespace Matkakirja.Natiivi
         // Web LIVIAN_KIITOKSET ja LIVIAN_JATKOKYSYMYS (Livian puhekieli, Raamattu v1270).
         internal static readonly string[] Kiitokset =
         {
-            "Kiitos. Minä merkitsen tän ylös. — Livia katsoo hetken tosi tarkasti muualle.",
-            "Ohhoh. No kiitos, nyt se virhe on ainakin matkalla oikeaan osoitteeseen. — Livia painottaa sanaa oikeaan.",
-            "Kiitos. Ei tää muuten ollut minun vika. — Livia sanoo sen vähän liian nopeasti.",
+            "ui.reaktiot.kiitos-1",   // Kieli.T-avaimet; luku Kieli.T(...) käyttökohdassa
+            "ui.reaktiot.kiitos-2",
+            "ui.reaktiot.kiitos-3",
         };
-        internal const string Jatkokysymys = "Livia kallistaa päätään: no mikä kohta siinä "
-            + "oli väärin? Yks rivi riittää — muuten minä en löydä sitä.";
+        internal const string Jatkokysymys = "ui.reaktiot.jatkokysymys";   // Kieli.T-avain
 
         static readonly HashSet<string> ilmoitetut = new HashSet<string>();
         static readonly Dictionary<string, Dictionary<string, int>> valimuisti = new Dictionary<string, Dictionary<string, int>>();
@@ -435,15 +434,15 @@ namespace Matkakirja.Natiivi
         {
             int h = Reaktiot.RyhmanAanet(aanet, "hyva"), p = Reaktiot.RyhmanAanet(aanet, "huono");
             string ryhma = Reaktiot.Ryhma(oma);
-            string nimi = otsikko.Length > 0 ? " — " + otsikko : "";
+            string nimi = otsikko.Length > 0 ? Kieli.T("ui.reaktiot.nimi-liite", otsikko) : "";
             hyvaLuku.text = h > 0 ? h.ToString() : "";
             hyvaLuku.style.display = h > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             hyva.EnableInClassList("mk-reaktionappi--oma", ryhma == "hyva");
-            hyva.tooltip = "Hyvä" + nimi + (h > 0 ? $", {h} {(h == 1 ? "ääni" : "ääntä")}" : "");
+            hyva.tooltip = Kieli.T("ui.reaktiot.hyva") + nimi + (h > 0 ? Kieli.T(h == 1 ? "ui.reaktiot.aani-yksi" : "ui.reaktiot.aani-monta", h) : "");
             huonoLuku.text = p > 0 ? p.ToString() : "";
             huonoLuku.style.display = p > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             huono.EnableInClassList("mk-reaktionappi--oma", ryhma == "huono");
-            huono.tooltip = "Huono" + nimi + (p > 0 ? $", {p} {(p == 1 ? "ääni" : "ääntä")}" : "");
+            huono.tooltip = Kieli.T("ui.reaktiot.huono") + nimi + (p > 0 ? Kieli.T(p == 1 ? "ui.reaktiot.aani-yksi" : "ui.reaktiot.aani-monta", p) : "");
         }
 
         void Sano(string teksti, bool pysyva = false)
@@ -486,22 +485,22 @@ namespace Matkakirja.Natiivi
         public void AvaaKysymys()
         {
             Minipopup m = null;
-            m = Minipopup.Avaa(otsikko.Length > 0 ? "Mikä oli vialla? — " + otsikko : "Mikä oli vialla?", s =>
+            m = Minipopup.Avaa(otsikko.Length > 0 ? Kieli.T("ui.reaktiot.mika-vialla-otsikolla", otsikko) : Kieli.T("ui.reaktiot.mika-vialla"), s =>
             {
-                Kirjasimet.Aseta(Rakenne.Teksti("Mikä oli vialla?", "mk-reaktio__ohje", s), Kirjasin.Luku);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.reaktiot.mika-vialla"), "mk-reaktio__ohje", s), Kirjasin.Luku);
                 void Vaihtoehto(string teksti, Action a)
                 {
                     var b = Rakenne.Nappi(teksti, "mk-reaktio__vaihtoehto", () => { m?.Sulje(); a(); }, s);
                     Kirjasimet.Aseta(b, Kirjasin.Luku);
                 }
-                Vaihtoehto("Tylsä", () => Aanesta(Reaktiot.HuonoMuuAani));
-                Vaihtoehto("Virhe tiedoissa", () =>
+                Vaihtoehto(Kieli.T("ui.reaktiot.tylsa"), () => Aanesta(Reaktiot.HuonoMuuAani));
+                Vaihtoehto(Kieli.T("ui.reaktiot.virhe-tiedoissa"), () =>
                 {
                     // Kenttä ei aukea toista kertaa samalle sisällölle, mutta ääni kirjautuu silti.
                     if (Reaktiot.Ilmoitettu(avain) || oma == "virhe") { Aanesta("virhe"); return; }
                     AvaaVirheikkuna();
                 });
-                Vaihtoehto("Muu", () => Aanesta(Reaktiot.HuonoMuuAani));
+                Vaihtoehto(Kieli.T("ui.reaktiot.muu"), () => Aanesta(Reaktiot.HuonoMuuAani));
             }, "mk-minipopup--reaktio-kysymys", UiKerros.Traileri);
         }
 
@@ -510,14 +509,13 @@ namespace Matkakirja.Natiivi
         {
             TextField kentta = null;
             Minipopup m = null;
-            m = Minipopup.Avaa(otsikko.Length > 0 ? "Virheilmoitus — " + otsikko : "Virheilmoitus", s =>
+            m = Minipopup.Avaa(otsikko.Length > 0 ? Kieli.T("ui.reaktiot.virheilmoitus-otsikolla", otsikko) : Kieli.T("ui.reaktiot.virheilmoitus"), s =>
             {
-                Kirjasimet.Aseta(Rakenne.Teksti("Mikä tässä on väärin? Kirjoita lyhyesti — vuosiluku, nimi, "
-                    + "paikka tai mikä tahansa, mikä ei täsmää.", "mk-reaktio__ohje", s), Kirjasin.Luku);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.reaktiot.mika-vaarin"), "mk-reaktio__ohje", s), Kirjasin.Luku);
                 kentta = new TextField { multiline = true, maxLength = Reaktiot.TekstinKatto };
                 kentta.AddToClassList("mk-reaktio__kentta");
-                kentta.textEdition.placeholder = "Esimerkiksi: silta valmistui 1894, ei 1849.";
-                kentta.tooltip = "Virheen kuvaus";
+                kentta.textEdition.placeholder = Kieli.T("ui.reaktiot.esimerkki");
+                kentta.tooltip = Kieli.T("ui.reaktiot.virheen-kuvaus");
                 Kirjasimet.Aseta(kentta, Kirjasin.Luku);
                 s.Add(kentta);
                 var livia = Rakenne.Teksti("", "mk-reaktio__livia", s);
@@ -526,14 +524,14 @@ namespace Matkakirja.Natiivi
                 var napit = Rakenne.El("mk-reaktio__napit", s, PickingMode.Ignore);
                 Button laheta = null, peru = null;
                 bool kysytty = false;
-                laheta = Rakenne.Nappi("Lähetä Livialle", "mk-reaktio__nappi", () =>
+                laheta = Rakenne.Nappi(Kieli.T("ui.reaktiot.laheta-livialle"), "mk-reaktio__nappi", () =>
                 {
                     string teksti = (kentta.value ?? "").Trim();
                     // Jatkokysymys kerran: toinen tyhjä lähetys lähtee sellaisenaan.
                     if (teksti.Length == 0 && !kysytty)
                     {
                         kysytty = true;
-                        livia.text = Reaktiot.Jatkokysymys;
+                        livia.text = Kieli.T(Reaktiot.Jatkokysymys);
                         livia.style.display = DisplayStyle.Flex;
                         kentta.Focus();
                         return;
@@ -542,15 +540,15 @@ namespace Matkakirja.Natiivi
                     // Tahra on ääni siinä missä muutkin: sama polku, samat laskurit.
                     if (oma != "virhe") Aanesta("virhe"); else Paivita();
                     Reaktiot.LahetaVirhe(avain, teksti, otsikko);
-                    livia.text = Reaktiot.Kiitokset[Reaktiot.Arpa.Next(Reaktiot.Kiitokset.Length)];
+                    livia.text = Kieli.T(Reaktiot.Kiitokset[Reaktiot.Arpa.Next(Reaktiot.Kiitokset.Length)]);
                     livia.style.display = DisplayStyle.Flex;
                     kentta.SetEnabled(false);
                     laheta.SetEnabled(false);
                     var pt = peru.Q<Label>(className: "mk-nappi__teksti");
-                    if (pt != null) pt.text = "Sulje";
-                    Sano("Kiitos — ilmoitus lähti.", true);
+                    if (pt != null) pt.text = Kieli.T("ui.reaktiot.sulje");
+                    Sano(Kieli.T("ui.reaktiot.ilmoitus-lahti"), true);
                 }, napit);
-                peru = Rakenne.Nappi("Peru", "mk-reaktio__nappi", () => m?.Sulje(), napit);
+                peru = Rakenne.Nappi(Kieli.T("ui.reaktiot.peru"), "mk-reaktio__nappi", () => m?.Sulje(), napit);
                 Kirjasimet.Aseta(napit, Kirjasin.Luku);
             }, "mk-minipopup--reaktio", UiKerros.Traileri);
             kentta?.schedule.Execute(() => kentta.Focus()).StartingIn(50);

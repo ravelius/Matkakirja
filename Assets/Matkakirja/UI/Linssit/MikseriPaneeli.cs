@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
             lappu.style.borderBottomLeftRadius = 22; lappu.style.borderBottomRightRadius = 22;
             lappu.style.alignItems = Align.Center; lappu.style.justifyContent = Justify.Center;
             lappu.style.color = Kulta;
-            lappu.tooltip = "Mikseri";
+            lappu.tooltip = "Mikseri";   // kieli: ei (kehittäjätyökalu)
             lappu.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
 
             paneeli = Rakenne.El("mk-mikseri__paneeli", juuri, PickingMode.Position);
@@ -97,7 +97,7 @@ namespace Matkakirja.Natiivi
             var yla = Rakenne.El("mk-mikseri__yla", paneeli, PickingMode.Position);
             yla.style.flexDirection = FlexDirection.Row; yla.style.alignItems = Align.Center;
             yla.style.height = 36;
-            otsikko = Rakenne.Teksti("Mikseri", "mk-mikseri__otsikko", yla);
+            otsikko = Rakenne.Teksti("Mikseri", "mk-mikseri__otsikko", yla);   // kieli: ei (kehittäjätyökalu)
             Kirjasimet.Aseta(otsikko, Kirjasin.KoneBold);
             otsikko.style.color = Kulta; otsikko.style.fontSize = 13; otsikko.style.flexGrow = 1;
             otsikko.pickingMode = PickingMode.Ignore;
@@ -172,7 +172,7 @@ namespace Matkakirja.Natiivi
             lappu.style.color = auki ? Lasi : Kulta;
             paneeli.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             if (!auki) return;
-            otsikko.text = l.Otsikko ?? "Mikseri";
+            otsikko.text = l.Otsikko ?? "Mikseri";   // kieli: ei (kehittäjätyökalu)
             bool b = l.B;
             aNappi.style.backgroundColor = !b ? Kulta : new Color(1f, 1f, 1f, 0.08f);
             bNappi.style.backgroundColor = b ? Kulta : new Color(1f, 1f, 1f, 0.08f);
@@ -218,7 +218,7 @@ namespace Matkakirja.Natiivi
             var nimi = Rakenne.Teksti(k.Nimi ?? k.Id, "mk-saadinrivi__nimi", rivi);
             nimi.style.color = Paperi; nimi.style.flexGrow = 1;
             Button nappi = null;
-            void Nayta() { var l = nappi.Q<Label>(); if (l != null) l.text = k.Arvo >= 0.5f ? "päällä" : "pois";
+            void Nayta() { var l = nappi.Q<Label>(); if (l != null) l.text = k.Arvo >= 0.5f ? "päällä" : "pois";   // kieli: ei (kehittäjätyökalu)
                 nappi.style.backgroundColor = k.Arvo >= 0.5f ? Kulta : new Color(1f, 1f, 1f, 0.08f); }
             nappi = Nappi("", rivi, () =>
             {
@@ -239,7 +239,7 @@ namespace Matkakirja.Natiivi
         {
             if (kytketty == null) return;
             kytketty.B = b;
-            tila.text = b ? "B: muokatut arvot" : "A: tallennetut arvot";
+            tila.text = b ? "B: muokatut arvot" : "A: tallennetut arvot";   // kieli: ei (kehittäjätyökalu)
         }
 
         void Tallenna()

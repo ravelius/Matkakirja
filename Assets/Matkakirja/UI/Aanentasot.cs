@@ -59,7 +59,7 @@ namespace Matkakirja.Natiivi
             AukiMuuttui += auki => { if (!auki) osa = Osa.Kaikki; };
             // MIKSERI (omistaja 9.10.2026 klo 09.5x): vain kehittäjäkoodilla; tasot nykyisen kontekstin (pallo, linna, ISS …) mukaan,
             // ryhmän rivillä väkänen avaa ryhmän rekisteröidyt äänet omin säätimin; "Tallenna kaikille" vie kontekstin tasot workeriin.
-            otsikko = Otsikko("Äänentasot");
+            otsikko = Otsikko(Kieli.T("ui.aanentasot.otsikko"));
             otsikko.AddToClassList("mk-aanentasot__otsikko");
             foreach (var v in Asetukset.VoimaJarjestys) Saadinrivi(v);
             var napit = Rakenne.El("mk-saadinrivi", Sisalto, PickingMode.Ignore);
@@ -69,11 +69,11 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Muuttui += () => { if (Auki && kontekstiNaytetty != Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen.Nyt) Paivita(); };
 
             offlineOsio = Rakenne.El("mk-offline", Sisalto, PickingMode.Ignore);
-            Rakenne.Teksti("LATAA OFFLINE-KÄYTTÖÖN", "mk-pudotus__otsikko", offlineOsio);
-            Rakenne.Teksti("Kartat ja lehdet tulevat verkosta. Ladatut maanosat toimivat ilman yhteyttä.", "mk-offline__selite", offlineOsio);
+            Rakenne.Teksti(Kieli.T("ui.offline.otsikko"), "mk-pudotus__otsikko", offlineOsio);
+            Rakenne.Teksti(Kieli.T("ui.offline.selite"), "mk-offline__selite", offlineOsio);
             AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
             offlineLista = Rakenne.El("mk-offline__lista", offlineOsio, PickingMode.Ignore);
-            offlineTyhja = Rakenne.Teksti("Ladattavia maita ei ole vielä saatavilla. Kartat ja lehdet tulevat verkosta.", "mk-offline__selite", offlineOsio);
+            offlineTyhja = Rakenne.Teksti(Kieli.T("ui.offline.tyhja"), "mk-offline__selite", offlineOsio);
             offlineTyhja.style.display = DisplayStyle.None;
             vapaaTila = Rakenne.Teksti("", "mk-offline__vapaa", offlineOsio);
             // Omat liukusäätimet päivittävät arvonsa itse; muut muutokset (Uusi peli nollaa) päivittävät kaiken.
@@ -228,7 +228,7 @@ namespace Matkakirja.Natiivi
             // Paketissa ei vielä offline-luetteloa (tuotannon v3): selitys tyhjän listan tilalle.
             offlineTyhja.style.display = nahty.Count == 0 ? DisplayStyle.Flex : DisplayStyle.None;
             long vapaa = palvelu.VapaaTila;
-            vapaaTila.text = vapaa >= 0 ? "vapaata " + Koko(vapaa) : "";
+            vapaaTila.text = vapaa >= 0 ? Kieli.T("ui.offline.vapaata", Koko(vapaa)) : "";
         }
 
         void OfflineMuuttui()
@@ -264,13 +264,13 @@ namespace Matkakirja.Natiivi
             string teksti, nappi;
             switch (m.Tila)
             {
-                case OfflineTila.Jonossa: teksti = "jonossa · " + Koko(m.Tavut); nappi = "Peru"; break;
-                case OfflineTila.Latautuu: teksti = Mathf.RoundToInt(osuus * 100) + " % · " + Koko(m.Ladattu) + " / " + Koko(m.Tavut); nappi = "Peru"; break;
-                case OfflineTila.Valmis: teksti = "ladattu · " + Koko(m.Tavut); nappi = "Poista"; break;
-                case OfflineTila.Virhe: teksti = (osittain ? "osittain · " : "") + "ei onnistunut" + (string.IsNullOrEmpty(m.Virhe) ? "" : ": " + m.Virhe); nappi = "Yritä uudelleen"; break;
+                case OfflineTila.Jonossa: teksti = Kieli.T("ui.offline.jonossa", Koko(m.Tavut)); nappi = Kieli.T("ui.offline.peru"); break;
+                case OfflineTila.Latautuu: teksti = Mathf.RoundToInt(osuus * 100) + " % · " + Koko(m.Ladattu) + " / " + Koko(m.Tavut); nappi = Kieli.T("ui.offline.peru"); break;
+                case OfflineTila.Valmis: teksti = Kieli.T("ui.offline.ladattu", Koko(m.Tavut)); nappi = Kieli.T("ui.offline.poista"); break;
+                case OfflineTila.Virhe: teksti = Kieli.T(osittain ? "ui.offline.osittain-ei-onnistunut" : "ui.offline.ei-onnistunut") + (string.IsNullOrEmpty(m.Virhe) ? "" : ": " + m.Virhe); nappi = Kieli.T("ui.offline.yrita-uudelleen"); break;
                 default:
-                    teksti = osittain ? "osittain · " + Koko(m.Ladattu) + " / " + Koko(m.Tavut) : "ei ladattu · " + Koko(m.Tavut);
-                    nappi = "Lataa"; break;
+                    teksti = osittain ? Kieli.T("ui.offline.osittain", Koko(m.Ladattu), Koko(m.Tavut)) : Kieli.T("ui.offline.ei-ladattu", Koko(m.Tavut));
+                    nappi = Kieli.T("ui.offline.lataa"); break;
             }
             r.Tieto.text = teksti;
             ((Label)r.Nappi.Q<Label>(className: "mk-nappi__teksti")).text = nappi;
@@ -278,10 +278,10 @@ namespace Matkakirja.Natiivi
 
         // --- maanosat --------------------------------------------------------------
 
-        static readonly (string Id, string Nimi)[] Maanosat =
+        static readonly (string Id, string Avain)[] Maanosat =   // nimi Kieli.T:llä (ui.manner.*)
         {
-            ("europe", "Eurooppa"), ("middleeast", "Lähi-itä"), ("africa", "Afrikka"), ("asia", "Aasia"),
-            ("northamerica", "Pohjois-Amerikka"), ("southamerica", "Etelä-Amerikka"), ("oceania", "Oseania"),
+            ("europe", "ui.manner.eurooppa"), ("middleeast", "ui.manner.lahi-ita"), ("africa", "ui.manner.afrikka"), ("asia", "ui.manner.aasia"),
+            ("northamerica", "ui.manner.pohjois-amerikka"), ("southamerica", "ui.manner.etela-amerikka"), ("oceania", "ui.manner.oseania"),
         };
         const string Kaikki = "kaikki";
 
@@ -303,7 +303,7 @@ namespace Matkakirja.Natiivi
         {
             var tulos = new List<(string, string, List<OfflineMaa>)>();
             if (maat == null || maat.Count == 0) return tulos;
-            tulos.Add((Kaikki, "Kaikki", new List<OfflineMaa>(maat)));
+            tulos.Add((Kaikki, Kieli.T("ui.offline.kaikki"), new List<OfflineMaa>(maat)));
             var jaot = new Dictionary<string, List<OfflineMaa>>();
             foreach (var m in maat)
             {
@@ -312,8 +312,8 @@ namespace Matkakirja.Natiivi
                 if (!jaot.TryGetValue(mn, out var l)) jaot[mn] = l = new List<OfflineMaa>();
                 l.Add(m);
             }
-            foreach (var (id, nimi) in Maanosat)
-                if (jaot.TryGetValue(id, out var l)) tulos.Add((id, nimi, l));
+            foreach (var (id, avain) in Maanosat)
+                if (jaot.TryGetValue(id, out var l)) tulos.Add((id, Kieli.T(avain), l));
             return tulos;
         }
 

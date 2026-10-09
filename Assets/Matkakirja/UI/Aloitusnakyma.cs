@@ -56,18 +56,18 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Aloitusnakyma
     {
-        public const string IntroText = "Vintiltä löytyi isoisän matkalaukku ja kulunut "
+        public const string IntroText = "Vintiltä löytyi isoisän matkalaukku ja kulunut "   // kieli: ei (sisältöpaketin vara-teksti (const; ui-tekstit.json INTRO_TEXT korvaa; avausteksti on tarinakaanonia))
             + "matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko "
             + "oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen "
             + "sivun?";
-        public const string IntroPaikka = "Heathrow, Lontoo";
-        public const string IntroValinta = "Valitse aloituskaupunki";
+        public const string IntroPaikka = "Heathrow, Lontoo";   // kieli: ei (sisältöpaketin vara-teksti (const; INTRO_PAIKKA korvaa))
+        public const string IntroValinta = "Valitse aloituskaupunki";   // kieli: ei (sisältöpaketin vara-teksti (const; INTRO_VALINTA korvaa))
         public const string IntroPuhe = "https://media.matkakirja.app/audio/intro-puhe.mp3?v=2";
         /// <summary>
         /// Avauslennon ainoa rivi (web js/packs/maailma.js flightFirst, luenta puhe-lento-alku.mp3 = luennat "lento-alku";
         /// omistaja 24.9.2026 löydös 23a). Paketin ui-tekstit FLIGHT_FIRST korvaa; tämä on vara.
         /// </summary>
-        public const string LentoTeksti = "Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.";
+        public const string LentoTeksti = "Kone nousee. Isoisän kirja aukeaa sylissäni kuin se olisi odottanut tätä hetkeä.";   // kieli: ei (sisältöpaketin vara-teksti (const; FLIGHT_FIRST korvaa))
         /// <summary>Lennon luennan tunniste Puhe.SoivaUrl:ssa (Pelikoodari soittaa luennat "lento-alku" koneen lähtiessä).</summary>
         public const string LentoPuheTunniste = "puhe-lento-alku";
         public const string LentoPuhe = "https://media.matkakirja.app/audio/puhe-lento-alku.mp3?v=2";
@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
         };
 
         const int Tahti = 190;
-        static readonly (Regex Osuu, int Tauko, int Huojunta)[] Tauot =
+        static readonly (Regex Osuu, int Tauko, int Huojunta)[] Tauot =   // kieli: ei (säännölliset lausekkeet välimerkeille, ei näkyvä teksti)
         {
             (new Regex("…\"?$"), 1200, 500),
             (new Regex("[.!?]$"), 620, 320),
@@ -157,10 +157,10 @@ namespace Matkakirja.Natiivi
             var juliste = Rakenne.El("mk-juliste", ylaosa, PickingMode.Ignore);
             Kapea(juliste);
             Viiva(juliste);
-            JulisteRivi(juliste, "MATKAKIRJA", "mk-juliste__nimi");
-            JulisteRivi(juliste, "MAAILMAN YMPÄRI", "mk-juliste__yla");
-            JulisteRivi(juliste, "KAHDEKSASSAKYMMENESSÄ PÄIVÄSSÄ", "mk-juliste__ala");
-            JulisteRivi(juliste, "OSA II · UNOHDETTU AARRE", "mk-juliste__osa");
+            JulisteRivi(juliste, Kieli.T("ui.aloitus.juliste.nimi"), "mk-juliste__nimi");
+            JulisteRivi(juliste, Kieli.T("ui.aloitus.juliste.yla"), "mk-juliste__yla");
+            JulisteRivi(juliste, Kieli.T("ui.aloitus.juliste.ala"), "mk-juliste__ala");
+            JulisteRivi(juliste, Kieli.T("ui.aloitus.juliste.osa"), "mk-juliste__osa");
             Viiva(juliste);
 
             arkki = Rakenne.El("mk-aloitus__arkki", intro);
@@ -209,10 +209,10 @@ namespace Matkakirja.Natiivi
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
             Kapea(porttiJuliste);
             Viiva(porttiJuliste);
-            JulisteRivi(porttiJuliste, "MATKAKIRJA", "mk-juliste__nimi");
-            JulisteRivi(porttiJuliste, "MAAILMAN YMPÄRI", "mk-juliste__yla");
-            JulisteRivi(porttiJuliste, "KAHDEKSASSAKYMMENESSÄ PÄIVÄSSÄ", "mk-juliste__ala");
-            JulisteRivi(porttiJuliste, "OSA II · UNOHDETTU AARRE", "mk-juliste__osa");
+            JulisteRivi(porttiJuliste, Kieli.T("ui.aloitus.juliste.nimi"), "mk-juliste__nimi");
+            JulisteRivi(porttiJuliste, Kieli.T("ui.aloitus.juliste.yla"), "mk-juliste__yla");
+            JulisteRivi(porttiJuliste, Kieli.T("ui.aloitus.juliste.ala"), "mk-juliste__ala");
+            JulisteRivi(porttiJuliste, Kieli.T("ui.aloitus.juliste.osa"), "mk-juliste__osa");
             Viiva(porttiJuliste);
             porttiLause = Rakenne.Teksti(PorttiLause, "mk-aloitus__porttilause", porttiYla);
             Kirjasimet.Aseta(porttiLause, Kirjasin.LukuKursiivi);
@@ -220,13 +220,13 @@ namespace Matkakirja.Natiivi
             porttiLause.style.display = DisplayStyle.None;
             var keskus = porttiKeskus = Rakenne.El("mk-aloitus__keskus", portti, PickingMode.Ignore);
             aaniNappi = Rakenne.Nappi(null, "mk-aloitus__aanet", AanetPaalle, keskus);
-            aaniTeksti = Rakenne.Teksti("Laita äänet päälle", "mk-aloitus__aaniteksti", aaniNappi);
+            aaniTeksti = Rakenne.Teksti(Kieli.T("ui.aloitus.aanet-paalle"), "mk-aloitus__aaniteksti", aaniNappi);
             Kirjasimet.Aseta(aaniTeksti, Kirjasin.Kone);
             aaniNappi.Add(new SvgIkoni(Ikonit.Viiva["kaiutin"]));
-            jatkaNappi = Rakenne.Nappi("Jatka matkaa", "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
+            jatkaNappi = Rakenne.Nappi(Kieli.T("ui.aloitus.jatka-matkaa"), "mk-nappi--kulta mk-aloitus__aloita", Jatka, keskus);
             Rakenne.Tausta(jatkaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(jatkaNappi, Kirjasin.KoneLihava);
-            aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
+            aloitaNappi = Rakenne.Nappi(Kieli.T("ui.aloitus.aloita-seikkailu"), "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
             // Apurahan arvioijalle (omistaja 30.9.2026, Apuraha.cs): kevyt nappi päänappien alle, näkyy kun esittely on ladattu.
@@ -244,7 +244,7 @@ namespace Matkakirja.Natiivi
 
 
             // 4 OHITA (löydös 83): lennon ajan alareunassa, turva-alueen sisällä, kaistaleen yläpuolella.
-            ohitaNappi = Rakenne.Nappi("Ohita", "mk-aloitus__ohita", Ohita, kerros.Turva(UiKerros.Traileri));
+            ohitaNappi = Rakenne.Nappi(Kieli.T("ui.aloitus.ohita"), "mk-aloitus__ohita", Ohita, kerros.Turva(UiKerros.Traileri));
             Kirjasimet.Aseta(ohitaNappi.Q<Label>(), Kirjasin.KoneLihava); // löydös 123: kuten Liiku (600)
             ohitaNappi.Add(new SvgIkoni(Ikonit.OhitaLento));
             ohitaNappi.style.display = DisplayStyle.None;
@@ -312,7 +312,7 @@ namespace Matkakirja.Natiivi
         internal static float PorttiPeitto = 0.45f, PorttiPeittoReuna = 0.8f;
 
         // Fablen kaanonlause (23.9.2026); webin meta description päivitetään samaksi.
-        const string PorttiLause = "Seuraa isoisän matkakirjaa vuodelta 1873 ja etsi Aarnin luettelon unohdetut aarteet.";
+        const string PorttiLause = "Seuraa isoisän matkakirjaa vuodelta 1873 ja etsi Aarnin luettelon unohdetut aarteet.";   // kieli: ei (piilotettu (display none), kaanonlause; const)
         Label porttiLause, aaniTeksti;
         /// <summary>Portin napit ja alalinkki (löydös 118: häipyvät, kun avausteksti alkaa portin ruudulla).</summary>
         VisualElement porttiKeskus, porttiLinkki, porttiYla;
@@ -334,14 +334,14 @@ namespace Matkakirja.Natiivi
         void AanetPaalle()
         {
             Asetukset.Aseta(Kytkin.Aanimaisema, true);
-            aaniTeksti.text = "Äänet päällä";
+            aaniTeksti.text = Kieli.T("ui.aloitus.aanet-paalla");
             aaniNappi.AddToClassList("mk-valittu");
             Aanet.PulunTehoste("paper");
         }
 
         void PaivitaAaniNappi()
         {
-            aaniTeksti.text = "Laita äänet päälle";
+            aaniTeksti.text = Kieli.T("ui.aloitus.aanet-paalle");
             aaniNappi.RemoveFromClassList("mk-valittu");
         }
 
@@ -437,7 +437,7 @@ namespace Matkakirja.Natiivi
             aloitaNappi.EnableInClassList("mk-nappi--kulta", jatka == null);
             aloitaNappi.style.backgroundImage = jatka != null ? new StyleBackground(StyleKeyword.None) : new StyleBackground(Kuviot.Kulta);
             AvausPortissa(false);
-            ((Label)aloitaNappi.Q<Label>()).text = jatka != null ? "Uusi matka" : "Aloita seikkailu";
+            ((Label)aloitaNappi.Q<Label>()).text = Kieli.T(jatka != null ? "ui.aloitus.uusi-matka" : "ui.aloitus.aloita-seikkailu");
             AsetaAuki(true);
             juuri.style.display = DisplayStyle.Flex;
             juuri.style.opacity = 1f;
@@ -574,7 +574,7 @@ namespace Matkakirja.Natiivi
             if (o != null) o.SoitaIntro(); else Puhe.Hae()?.Soita(IntroPuhe);
             var nyt = DateTime.Now;
             // Web introPaikkaTeksti = `${introPaikkarivi()}:` (kaksoispiste perään).
-            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year + ":", IntroPuhe, false);
+            AloitaKirjoitus(introText, introPaikka + ", " + nyt.ToString("MMMM", new CultureInfo("fi-FI")) + " " + nyt.Year + ":", IntroPuhe, false);   // kieli: ei (paikkarivi kuukausineen fi-FI-kulttuurilla (sisältöpaketin paikka + päiväys); ei avaimeksi)
         }
 
         /// <summary>
@@ -1079,16 +1079,8 @@ namespace Matkakirja.Natiivi
     {
         VisualElement napit;
         // Kaanon: docs/moduulit/huipennus-teksti.md (Fable 23.9.2026; myöhemmin paketin kautta).
-        const string Otsikko = "Aarnin luettelo on täynnä";
-        const string Teksti =
-            "Viimeinen sivu on kirjoitettu. Aarnin luettelossa ei ole enää yhtään "
-            + "aarretta, josta vain kerrotaan — jokaisen olen nähnyt omin silmin.\n\n"
-            + "Isoisä lähti tälle matkalle vuonna 1873 ja jätti sen kesken. Nyt tiedän, "
-            + "ettei se jäänyt kesken siksi, ettei hän olisi löytänyt. Hän löysi jotain, "
-            + "mistä revitty sivu ei kerro. Ehkä hän tahtoi, että löydän sen itse.\n\n"
-            + "{paivat} päivää, {kaupungit} kaupunkia, {loydot} unohdettua aarretta. "
-            + "Matkakirja on täynnä, mutta maailma ei ole. Isoisä kirjoitti kerran: "
-            + "\"Matka ei lopu siihen, että saapuu.\"";
+        static string Otsikko => Kieli.T("ui.aloitus.huipennus.otsikko");
+        // Teksti: Kieli ui.aloitus.huipennus.teksti ({0} päivät, {1} kaupungit, {2} löydöt).
 
         readonly VisualElement himmennys;
         readonly Label otsikko, teksti, jatkaTeksti;
@@ -1113,29 +1105,26 @@ namespace Matkakirja.Natiivi
             teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
             napit = Rakenne.El("mk-kortti__napit mk-huipennus__napit", kortti.Sisus, PickingMode.Ignore);
             // Voitossa "Jatka vaeltamista" (sulkee); loppukortissa "Jatka viimeisestä tallennuksesta" (web winner-roam).
-            jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--toiminto", () => { var j = jatkaPainettu; Sulje(); j?.Invoke(); }, napit, Ikonit.Viiva["kompassi"]);
+            jatka = Rakenne.Nappi(Kieli.T("ui.aloitus.huipennus.jatka-vaeltamista"), "mk-nappi--toiminto", () => { var j = jatkaPainettu; Sulje(); j?.Invoke(); }, napit, Ikonit.Viiva["kompassi"]);
             jatkaTeksti = jatka.Q<Label>(className: "mk-nappi__teksti");
             Kirjasimet.Aseta(jatka, Kirjasin.Kone);
             // "Jaa matka" (web #winner-jaa, paivitaJakonappi): vain kun jakoarkki on saatavilla (iOS-laite),
             // muualla nappia ei ole lainkaan. Teksti web natiiviMatkaTeksti = MatkanYhteenveto.Teksti.
-            jaa = Rakenne.Nappi("Jaa matka", "mk-nappi--toiminto", () => { if (jaettava != null) Jakaminen.JaaTeksti(jaettava); }, napit, JaaIkoni);
+            jaa = Rakenne.Nappi(Kieli.T("ui.aloitus.huipennus.jaa-matka"), "mk-nappi--toiminto", () => { if (jaettava != null) Jakaminen.JaaTeksti(jaettava); }, napit, JaaIkoni);
             Kirjasimet.Aseta(jaa, Kirjasin.Kone);
             jaa.style.display = Jakaminen.Saatavilla ? DisplayStyle.Flex : DisplayStyle.None;
-            var uusi = Rakenne.Nappi("Uusi peli", "mk-nappi--kulta", () => { Sulje(); uusiMatka?.Invoke(); }, napit);
+            var uusi = Rakenne.Nappi(Kieli.T("ui.aloitus.huipennus.uusi-peli"), "mk-nappi--kulta", () => { Sulje(); uusiMatka?.Invoke(); }, napit);
             Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
         }
 
         public void Nayta(MatkanYhteenveto yv, Action uusiMatka)
         {
             otsikko.text = Otsikko;
-            jatkaTeksti.text = "Jatka vaeltamista";
+            jatkaTeksti.text = Kieli.T("ui.aloitus.huipennus.jatka-vaeltamista");
             jatka.style.display = DisplayStyle.Flex;
             napit.RemoveFromClassList("mk-kortti__napit--pysty");
             jatkaPainettu = null;
-            Avaa(Teksti
-                .Replace("{paivat}", (yv?.Paivat ?? 0).ToString())
-                .Replace("{kaupungit}", (yv?.Kaupungit ?? 0).ToString())
-                .Replace("{loydot}", (yv?.Aarteet ?? 0).ToString()), yv?.Teksti, uusiMatka);
+            Avaa(Kieli.T("ui.aloitus.huipennus.teksti", yv?.Paivat ?? 0, yv?.Kaupungit ?? 0, yv?.Aarteet ?? 0), yv?.Teksti, uusiMatka);
         }
 
         /// <summary>
@@ -1144,8 +1133,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void NaytaLoppu(string loppuTeksti, string jaettava, Action jatka, Action uusiMatka)
         {
-            otsikko.text = "Matka päättyi";
-            jatkaTeksti.text = "Jatka viimeisestä tallennuksesta";
+            otsikko.text = Kieli.T("ui.aloitus.huipennus.loppu-otsikko");
+            jatkaTeksti.text = Kieli.T("ui.aloitus.huipennus.jatka-tallennuksesta");
             this.jatka.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;
             // KORTTI-pohja (web #3798): pitkä nimi ei mahdu vierekkäin → napit pystyriviksi, nimeä ei lyhennetä.
             napit.EnableInClassList("mk-kortti__napit--pysty", jatka != null);
