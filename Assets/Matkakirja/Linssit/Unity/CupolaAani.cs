@@ -83,6 +83,8 @@ namespace Matkakirja.Natiivi
             m.Rekisteroi("iss", "maisema", "cupola-humina", "Cupolan humina", "cupola-humina-gen-90s");
             // Radiosilmukkaa ei rekisteröidä: omistaja poisti sen 3.10. (rätinä), RadioKaytossa = false (PT 9.10.: ei kytketä).
             m.Rekisteroi("linssit", "maisema", "cupola-humina", "Linssin humina (Cupola)", "cupola-humina-gen-90s");
+            // Astronautin humina (linssin taustaääni; Cupolan humina korvaa sen ISS:ssä, mutta taso säädettävissä): Aanisoitin.LinssiTausta.
+            m.Rekisteroi("iss", "maisema", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina, "Astronautin humina", Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
             return true;
         }
 
