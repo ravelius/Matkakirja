@@ -215,3 +215,9 @@ Seuraavaksi:
   (σ 3/1/1,5/0,5 m) on vain veden yläpuolella. Vanha versio on `ranta1499_v1.py`. Koe v24-kuorella: `ranta1499-v2-koe-v24kuori.json`,
   vertailu `linna-laatu/ranta1499-v2-vertailu.jpg`. Yli veden ala on 6 660 → 4 200 ruutua.
   - Ehdotettu PT:lle: rantakivet.glb-kiviä rinteeseen (odottaa vastausta).
+- **ranta-1499 v2 + kivet** (PT hyväksyi muodon):
+  - `ranta1499.py` tuottaa jsoniin `kivet` (13 kpl, h −7,2…−5,8, väli ≥ 4 m, koko 0,9–2,2 m, kolmannes puoliksi veden alla).
+  - `rantakivet_mallit.py` erottelee rantakivet.glb:stä 6 mallia.
+  - `kavely.py` lisää kivet kallio-pintaan ilman törmäystä. Varmuuskopio `kavely_ennen_kivia.py`.
+  - Vertailu `linna-laatu/ranta1499-v2-kallio-vertailu.jpg`.
+  - Vienti v25:n kanssa: ranta1499.py v25-kuorta vasten → kavely.py → valoatlas → `"asu": "1499"` → peili.
