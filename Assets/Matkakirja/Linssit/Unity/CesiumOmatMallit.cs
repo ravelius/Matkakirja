@@ -71,6 +71,8 @@ namespace Matkakirja.Linssit
         /// <summary>Diagnostiikka (juna 173 jetsam-mittaus 10.10.): asetus "leikkaus 0" = ei Googlen leikkausmaskia (rasterikerros SSE 0,5 /
         /// 4096 px) omien mallien kohdalla.</summary>
         public static bool LeikkausSallittu = true;
+        /// <summary>Asetus "leikkaustarkka 1": pienelläkin muistilla entinen tarkka maski (SSE 0,5, 4096 px) vertailuun.</summary>
+        public static bool LeikkausTarkka;
 
         /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
         /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä
@@ -257,8 +259,12 @@ namespace Matkakirja.Linssit
                 leikkaus.excludeSelectedTiles = true;
                 // Simu 7.10. 09.33: kaukaa (1,4–5 km) maski rasteroitui karkean Google-tiilen kokoiselle tekstuurille, ja reikä paisui
                 // lähes kaksinkertaiseksi (lähellä tarkka). Hienompi maski: pienempi ruutuvirhe ja suurempi tekstuuri.
-                leikkaus.maximumScreenSpaceError = 0.5f;
-                leikkaus.maximumTextureSize = 4096;
+                // PIENI MUISTI (juna 173, Natiiviseppä 10.10. iPad-mittaus): SSE 0,5 / 4096 px -maski vei kierroksella ~0,3 Gt (rasterikerroksen
+                // tekstuurit Googlen laatoilla) ja laukaisi muistihädän → lataus seis. Pienellä muistilla Cesiumin oletustarkkuus (SSE 2,
+                // 1024 px): kaukaa reikä on karkeampi, lähellä tarkka. Asetus "leikkaustarkka 1" palauttaa entisen (vertailu).
+                bool kevytMaski = Matkakirja.Natiivi.KaupunkiKuva.PieniMuisti && !LeikkausTarkka;
+                leikkaus.maximumScreenSpaceError = kevytMaski ? 2f : 0.5f;
+                leikkaus.maximumTextureSize = kevytMaski ? 1024 : 4096;
             }
             var lista = new List<CesiumCartographicPolygon>();
             foreach (var m in mallit) if (m.polygoni != null) lista.Add(m.polygoni);
