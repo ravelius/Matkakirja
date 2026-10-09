@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "95aa0371cf569c04",
-  "kansio": "dioraama/olavinlinna/blender/95aa0371cf569c04/",
+  "hash": "af2f13bfbff521a7",
+  "kansio": "dioraama/olavinlinna/blender/af2f13bfbff521a7/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -772,6 +772,66 @@
       "polku": "hahmot/vouti-1500-faceit.glb",
       "sha256": "ed96eceb005841b2ee83e7e6959a4ee951e378afd308f128794ea1eaf809885e",
       "tavuja": 3762640
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-0-6x6.astcm",
+      "sha256": "8c5ccf885b9b25af00c9119e17deadc068b589fecac8d85d8eb71ee2ca439d1e",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-1-6x6.astcm",
+      "sha256": "9c46f1515713add972a393d794ff568e77dd2ca3727492f99f20ff4629edace1",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-10-6x6.astcm",
+      "sha256": "739d398d15b28ffca46744550eccf2d440cf75e0bf4c90198f5a48338c4358d7",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-2-6x6.astcm",
+      "sha256": "7db4c97d70d79b02ca18087259c1e986a76daf0e5f42fc752480f6a147a6205a",
+      "tavuja": 158448
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-3-6x6.astcm",
+      "sha256": "d8d7229d69690f05778cd9a590d31514c421b73547f4513946760d16ec88e106",
+      "tavuja": 626304
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-4-6x6.astcm",
+      "sha256": "c1d694a598de35393887d41b7b42596436d1dd07ce391161672c34b0438551c9",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-5-6x6.astcm",
+      "sha256": "7db664e0408745325cd5d5233616de8f414074184324d776efe2301820e8fffd",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-6-6x6.astcm",
+      "sha256": "1c98811518d203e6ed4bcd4ca5fe894130e3899118851e003c2d5cade2c0e22b",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-7-6x6.astcm",
+      "sha256": "3ad6fb6a03f754edb24d4442aacddcddd4f4a6438e5ba02f22c53526f5d521b4",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-8-6x6.astcm",
+      "sha256": "b57d08b3dc3d593866fbb465d159be930b3310f3fc22ec3a210eee3a39e6d843",
+      "tavuja": 626304
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh-9-6x6.astcm",
+      "sha256": "e0fdf4694a82af813ca7fd56d31cec1e557e84a0b57192fa0584130a704ffb7e",
+      "tavuja": 2497728
+    },
+    {
+      "polku": "hahmot/vouti-1500-mh.glb",
+      "sha256": "b0faef1e7dfb6b5f167fc916ac16134f642b980574d34f78adcd724331627167",
+      "tavuja": 12694468
     },
     {
       "polku": "hahmot/vouti-1500.glb",
