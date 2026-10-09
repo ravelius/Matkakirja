@@ -711,7 +711,43 @@ namespace Matkakirja.Editori
             AsetaIos(iOSSdkVersion.SimulatorSDK);
             // MATKAKIRJA_KEHITYS=1: Development-käännös (Profilerin skriptimerkit CpuMittarille), kuten laitteelle.
             bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
-            Kaanna("Build/iOS-sim", kehitys ? BuildOptions.Development : BuildOptions.None);
+            // Steam Audion iOS-kirjastot (phonon, audioplugin_phonon, mysofa, pffft) ovat vain laitteen arm64:ää →
+            // simulaattorin linkitys kaatuu ("building for iOS-simulator, but linking … built for iOS"; juna 173).
+            // Simulaattorissa Steam Audio pois kokonaan: määrite MATKAKIRJA_EI_STEAMAUDIO (SteamAudioUnity- ja
+            // -Editor-asmdefien defineConstraints, SteamAudioKoe.cs:n tynkä) ja Binaries/iOS pois iOS-käännöksestä.
+            // Palautus finallyssä; Kaanna kutsuu virheessä EditorApplication.Exit(1), jolloin palautus ei aja
+            // (käännöskopio resetoidaan gitillä joka kerta).
+            var kohde = UnityEditor.Build.NamedBuildTarget.iOS;
+            string maaritteet = PlayerSettings.GetScriptingDefineSymbols(kohde);
+            var steamAudio = SteamAudioIos(false);
+            PlayerSettings.SetScriptingDefineSymbols(kohde, (maaritteet + ";" + EiSteamAudio).Trim(';'));
+            try { Kaanna("Build/iOS-sim", kehitys ? BuildOptions.Development : BuildOptions.None); }
+            finally
+            {
+                PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet);
+                foreach (var p in steamAudio) { p.SetCompatibleWithPlatform(BuildTarget.iOS, true); p.SaveAndReimport(); }
+            }
+        }
+
+        /// <summary>Simulaattorikäännöksen määrite: Steam Audio pois (laitekirjastot eivät linkity simulaattoriin).</summary>
+        public const string EiSteamAudio = "MATKAKIRJA_EI_STEAMAUDIO";
+        const string SteamAudioIosKansio = "Assets/Plugins/SteamAudio/Binaries/iOS";
+
+        /// <summary>Steam Audion iOS-liitännäiset (.a + AppController.mm) iOS-käännökseen tai pois; palauttaa muutetut.</summary>
+        static System.Collections.Generic.List<PluginImporter> SteamAudioIos(bool mukaan)
+        {
+            var muutetut = new System.Collections.Generic.List<PluginImporter>();
+            if (!AssetDatabase.IsValidFolder(SteamAudioIosKansio)) return muutetut;
+            foreach (var guid in AssetDatabase.FindAssets("", new[] { SteamAudioIosKansio }))
+            {
+                if (AssetImporter.GetAtPath(AssetDatabase.GUIDToAssetPath(guid)) is not PluginImporter p) continue;
+                if (p.GetCompatibleWithPlatform(BuildTarget.iOS) == mukaan) continue;
+                p.SetCompatibleWithPlatform(BuildTarget.iOS, mukaan);
+                p.SaveAndReimport();
+                muutetut.Add(p);
+            }
+            Debug.Log($"MATKAKIRJA: Steam Audion iOS-liitännäiset {(mukaan ? "mukaan" : "pois")}: {muutetut.Count}");
+            return muutetut;
         }
 
         /// <summary>
@@ -822,6 +858,7 @@ namespace Matkakirja.Editori
             try { Kaanna(Path.Combine(kansio, "Matkakirja 3D.app"), BuildOptions.None, BuildTarget.StandaloneOSX); }
             finally { if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, maaritteet); }
             MacKuvake(Path.Combine(kansio, "Matkakirja 3D.app"));
+            MacNayttonimi(Path.Combine(kansio, "Matkakirja 3D.app"));
             Debug.Log($"MATKAKIRJA: Mac-vienti {PlayerSettings.GetApplicationIdentifier(kohde)} {PlayerSettings.bundleVersion} " +
                       $"({PlayerSettings.macOS.buildNumber}), {PlayerSettings.GetScriptingBackend(kohde)}");
         }
@@ -831,6 +868,26 @@ namespace Matkakirja.Editori
         /// PlayerIcon.icns:ää lainkaan, vaikka Info.plist viittaa siihen). Kuvake-1024.png → iconset (16–512 pt, @1x ja @2x) → iconutil
         /// → Contents/Resources/PlayerIcon.icns. Käännös tapahtuu aina Macilla (sips ja iconutil kuuluvat macOS:ään).
         /// </summary>
+        /// <summary>
+        /// NÄYTTÖNIMI "Matkakirja" (omistaja 9.10.2026 10.4x: "Natiivi versio näkyy nyt nimellä Matkakirja 3D. Voisiko sen muuttaa pelkäksi
+        /// matkakirjaksi?"; Päätoimittaja: kotinäytön nimi iOS, iPad ja Mac, bundle-tunnus ennallaan; Natiiviseppä, juna 172).
+        /// productName "Matkakirja 3D" pysyy (.app-nimi, käännöstyökalut ja polut), vain Info.plistin näkyvät nimet vaihtuvat.
+        /// </summary>
+        public const string Nayttonimi = "Matkakirja";
+
+        static void MacNayttonimi(string app)
+        {
+            string plist = Path.Combine(app, "Contents", "Info.plist");
+            foreach (var avain in new[] { "CFBundleDisplayName", "CFBundleName" })
+            {
+                var p = System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("/usr/bin/plutil",
+                    $"-replace {avain} -string \"{Nayttonimi}\" \"{plist}\"") { UseShellExecute = false, RedirectStandardError = true });
+                p.WaitForExit();
+                if (p.ExitCode != 0) throw new Exception($"Mac-näyttönimi: plutil {avain} → {p.ExitCode}: {p.StandardError.ReadToEnd()}");
+            }
+            Debug.Log($"MATKAKIRJA: Mac-näyttönimi {Nayttonimi} ({plist})");
+        }
+
         static void MacKuvake(string app)
         {
             string lahde = Path.GetFullPath(KuvakeTiedosto);
@@ -958,6 +1015,9 @@ namespace Matkakirja.Editori
             // (PHPhotoLibrary .addOnly), kirjastoa ei lueta.
             plist.root.SetString("NSPhotoLibraryAddUsageDescription",
                 "Matkakirja tallentaa ottamasi ISS-kuvat Kuviin, jotta ne säilyvät.");
+            // Kotinäytön nimi (omistaja 9.10.2026: "Matkakirja", ei "Matkakirja 3D"); productName ja bundle-tunnus ennallaan.
+            plist.root.SetString("CFBundleDisplayName", Nayttonimi);
+            plist.root.SetString("CFBundleName", Nayttonimi);
             plist.WriteToFile(plistPolku);
         }
 
@@ -980,6 +1040,10 @@ namespace Matkakirja.Editori
             // ISS-kuvan tallennus Kuviin (LS2:n MatkakirjaValokuva.mm, PHPhotoLibrary .addOnly).
             projekti.AddFrameworkToProject(kehys, "Photos.framework", false);
             projekti.SetBuildProperty(kehys, "SWIFT_VERSION", "5.0");
+            // Steam Audio -koe (Linssiseppä 9.10.2026, juna 172; PT: iOS-asetukset samaan erään): staattiset arm64-kirjastot
+            // (libphonon, libaudioplugin_phonon, libmysofa, libpffft) ilman bitcodea; libz.tbd lisää Steam Audion oma BuildProcessor.
+            foreach (var k in new[] { kehys, projekti.GetUnityMainTargetGuid() })
+                projekti.SetBuildProperty(k, "ENABLE_BITCODE", "NO");
             projekti.WriteToFile(projektiPolku);
         }
 

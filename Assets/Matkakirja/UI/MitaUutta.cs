@@ -49,26 +49,26 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Napin teksti tilan mukaan (avattaessa).</summary>
         void PaivitaKehittajaNappi() =>
-            kehittajaNappi.Q<Label>().text = Asetukset.Kehittaja ? "Kehittäjätila päällä" : Asetukset.Testaaja ? "Testaajatila päällä" : "Kehittäjätila";
+            kehittajaNappi.Q<Label>().text = Asetukset.Kehittaja ? Kieli.T("ui.mitauutta.kehittajatila-paalla") : Asetukset.Testaaja ? Kieli.T("ui.mitauutta.testaajatila-paalla") : Kieli.T("ui.kehittaja.otsikko");
         public bool Auki { get; private set; }
 
         public MitaUutta(UiKerros kerros, Action avaaKehittaja)
         {
             this.avaaKehittaja = avaaKehittaja;
-            (himmennys, lista) = Dialogi(kerros.Juuri(UiKerros.Valikot), "Mitä uutta", out var napit);
+            (himmennys, lista) = Dialogi(kerros.Juuri(UiKerros.Valikot), Kieli.T("ui.mitauutta.otsikko"), out var napit);
             // KEHITTÄJÄTILA-nappi (omistaja 7.10. 12.5x): versionumero → Mitä uutta → tämä nappi → koodi-ikkuna; nappi kertoo tilan
             // (kehittäjä / testaaja) ja koodi-ikkuna kytkee sen pois. Kaikissa käännöksissä, myös App Storessa.
-            kehittajaNappi = Rakenne.Nappi("Kehittäjätila", "mk-nappi--toiminto", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
-            kehittajaNappi.tooltip = "Kehittäjätila";
+            kehittajaNappi = Rakenne.Nappi(Kieli.T("ui.kehittaja.otsikko"), "mk-nappi--toiminto", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
+            kehittajaNappi.tooltip = Kieli.T("ui.kehittaja.otsikko");
             if (avaaKehittaja == null) kehittajaNappi.style.display = DisplayStyle.None;
-            Nappi(napit, "Sulje", Sulje);
+            Nappi(napit, Kieli.T("ui.mitauutta.sulje"), Sulje);
 
             // Päivitysilmoitus kaiken päälle (myös aloitusnäkymän, joka on Traileri-kerroksessa).
             // Esc sulkee (UI-pohjat: yksi sulkupino; savuke 1102). Päivitysilmoitus on päällimmäisenä, joten korkeampi prioriteetti.
             Nappaimisto.Rekisteroi("mitauutta", 55, () => Auki, null, null, Sulje);
             Nappaimisto.Rekisteroi("paivittyi", 56, () => paivitys != null && paivitys.style.display == DisplayStyle.Flex, null, null, SuljePaivitys);
-            (paivitys, paivitysLista) = Dialogi(kerros.Juuri(UiKerros.Traileri), "Peli päivittyi", out var pnapit);
-            Nappi(pnapit, "Jatka", SuljePaivitys);
+            (paivitys, paivitysLista) = Dialogi(kerros.Juuri(UiKerros.Traileri), Kieli.T("ui.mitauutta.paivittyi"), out var pnapit);
+            Nappi(pnapit, Kieli.T("ui.yleinen.jatka"), SuljePaivitys);
         }
 
         readonly List<Label> versiot = new List<Label>();
@@ -184,7 +184,7 @@ namespace Matkakirja.Natiivi
         public static string AsennettuVersio()
         {
             string b = Build();
-            return "Versio " + Application.version + (b != null ? " (" + b + ")" : "");
+            return Kieli.T(b != null ? "ui.mitauutta.versio-build" : "ui.mitauutta.versio", Application.version, b);
         }
 
         /// <summary>Versio + build (Fable 24.9.: myös pelkkä build-numeron vaihto 1.0.0 (2) → (3) on päivitys).</summary>
@@ -318,7 +318,7 @@ namespace Matkakirja.Natiivi
                     rivit.Insert(0, new Rivi
                     {
                         Versio = nyt,
-                        Teksti = rivit.Count == 0 ? "Ensimmäinen natiiviversio." : "Uusi versio asennettu. Tämän version muutokset päivittyvät tähän pian.",
+                        Teksti = rivit.Count == 0 ? Kieli.T("ui.mitauutta.ensimmainen-versio") : Kieli.T("ui.mitauutta.uusi-versio"),
                     });
             }
 
@@ -331,7 +331,7 @@ namespace Matkakirja.Natiivi
                 var nro = MiniJson.Luku(osoitin, "versio");
                 rivit.Insert(0, new Rivi
                 {
-                    Otsake = nro.HasValue ? "sisältö " + (int)nro.Value : "sisältö",
+                    Otsake = nro.HasValue ? Kieli.T("ui.mitauutta.sisalto-nro", (int)nro.Value) : Kieli.T("ui.mitauutta.sisalto"),
                     Paiva = MiniJson.Teksti(m, "paiva"), Teksti = mt,
                 });
             }

@@ -106,7 +106,7 @@ namespace Matkakirja.Peli.Testit
                 var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
                 tila.Paikka(kaupunki, "kaupunki");
                 tila.UusiKaupunki(kaupunki);
-                Oleta.Tosi(tila.Toive(Kanava.Aarre).Url?.EndsWith("/musa-saapuminen-" + maanosa + "-lyria.mp3") == true,
+                Oleta.Tosi(tila.Toive(Kanava.Aarre).Url?.EndsWith("/musa-saapuminen-" + maanosa + "-lyria-v2.mp3") == true,
                     kaupunki + " → " + tila.Toive(Kanava.Aarre).Url);
             }
             // Paketin musiikkiaihe-rivi saapuminen-<maanosa> korvaa oletuksen; ratkaisu ja epäonnistuminen samoin.
@@ -148,34 +148,34 @@ namespace Matkakirja.Peli.Testit
             var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
             tila.Paikka("wien", "kaupunki");
             string Pohja() => tila.Toive(Kanava.Pohja).Url;
-            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria.mp3") == true, "alueraita: " + Pohja());
+            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria-v2.mp3") == true, "alueraita: " + Pohja());
             tila.Kohtaaminen(true);
-            Oleta.Tosi(Pohja()?.EndsWith("/musa-kohtaaminen-lyria.mp3") == true, "kohtaaminen: " + Pohja());
+            Oleta.Tosi(Pohja()?.EndsWith("/musa-kohtaaminen-lyria-v2.mp3") == true, "kohtaaminen: " + Pohja());
             Oleta.Sama("[kohtaaminen]", Yhdista(tila.Musiikkitilat));
             tila.Visa(true);
             Oleta.Tosi(tila.Toive(Kanava.Visa).Url != null, "visan oma raita soi");
             Oleta.Tosi(tila.Voimassa < 1, "pohja väistyy visan alta");
-            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria.mp3") == true, "visan alla ilman kohtaamista: " + Pohja());
+            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria-v2.mp3") == true, "visan alla ilman kohtaamista: " + Pohja());
             Oleta.Sama("[kohtaaminen]", Yhdista(tila.Musiikkitilat), "tila ei katoa visan ajaksi");
             tila.Visa(false);
             Oleta.Tosi(tila.Voimassa == 1, "väistö purkautuu");
-            Oleta.Tosi(Pohja()?.EndsWith("/musa-kohtaaminen-lyria.mp3") == true, "kohtaaminen palaa: " + Pohja());
+            Oleta.Tosi(Pohja()?.EndsWith("/musa-kohtaaminen-lyria-v2.mp3") == true, "kohtaaminen palaa: " + Pohja());
             tila.Kohtaaminen(false);
-            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria.mp3") == true, "paikan raita palaa: " + Pohja());
+            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria-v2.mp3") == true, "paikan raita palaa: " + Pohja());
 
             // Koukut (web visa.js): tervehdyssivu = kohtaaminen ilman visaa, kysymyssivu = visa, tulos = kohtaaminen.
             var koukut = new Aanikoukut(tila, t);
             Aanitilanne S(bool auki, bool kohtaaminen, bool odottaa) =>
                 new Aanitilanne { Valmis = true, Kaupunki = "wien", KysymysAuki = auki, Kohtaaminen = kohtaaminen, VisaOdottaa = odottaa };
             koukut.Paivita(S(true, true, true));
-            Oleta.Tosi(!tila.VisaAuki && Pohja()?.EndsWith("/musa-kohtaaminen-lyria.mp3") == true, "tervehdyssivu: " + Pohja());
+            Oleta.Tosi(!tila.VisaAuki && Pohja()?.EndsWith("/musa-kohtaaminen-lyria-v2.mp3") == true, "tervehdyssivu: " + Pohja());
             koukut.Paivita(S(true, true, false));
-            Oleta.Tosi(tila.VisaAuki && Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria.mp3") == true, "kysymyssivu: " + Pohja());
+            Oleta.Tosi(tila.VisaAuki && Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria-v2.mp3") == true, "kysymyssivu: " + Pohja());
             koukut.Paivita(S(true, true, true));
-            Oleta.Tosi(!tila.VisaAuki && Pohja()?.EndsWith("/musa-kohtaaminen-lyria.mp3") == true, "tulos: " + Pohja());
+            Oleta.Tosi(!tila.VisaAuki && Pohja()?.EndsWith("/musa-kohtaaminen-lyria-v2.mp3") == true, "tulos: " + Pohja());
             koukut.Paivita(S(false, false, false));
             Oleta.Tosi(!tila.VisaAuki && !tila.Musiikkitilat.Contains("kohtaaminen"), "koukku sulkee");
-            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria.mp3") == true, "sulun jälkeen: " + Pohja());
+            Oleta.Tosi(Pohja()?.EndsWith("/musa-kaupunki-keski-eurooppa-lyria-v2.mp3") == true, "sulun jälkeen: " + Pohja());
             // Tavallinen visa: visa soi koko ajan, kohtaamista ei ole.
             koukut.Paivita(S(true, false, false));
             Oleta.Tosi(tila.VisaAuki && tila.Musiikkitilat.Count == 0, "tavallinen visa");
@@ -188,16 +188,16 @@ namespace Matkakirja.Peli.Testit
             tila.Paikka("wien", "kaupunki");
             string Aihe() => tila.Toive(Kanava.Aarre).Url;
             tila.TehtavanTulos(true);
-            Oleta.Tosi(Aihe()?.EndsWith("/musa-ratkaisu-lyria.mp3") == true, "ratkaisu: " + Aihe());
+            Oleta.Tosi(Aihe()?.EndsWith("/musa-ratkaisu-lyria-v2.mp3") == true, "ratkaisu: " + Aihe());
             tila.AarreLoppui();
             tila.TehtavanTulos(false);
-            Oleta.Tosi(Aihe()?.EndsWith("/musa-epaonnistuminen-lyria.mp3") == true, "epäonnistuminen: " + Aihe());
+            Oleta.Tosi(Aihe()?.EndsWith("/musa-epaonnistuminen-lyria-v2.mp3") == true, "epäonnistuminen: " + Aihe());
             tila.TehtavanTulos(true);
-            Oleta.Tosi(Aihe()?.EndsWith("/musa-epaonnistuminen-lyria.mp3") == true, "ei katkaise soivaa aihetta");
+            Oleta.Tosi(Aihe()?.EndsWith("/musa-epaonnistuminen-lyria-v2.mp3") == true, "ei katkaise soivaa aihetta");
             tila.AarrePaljastui("pieniAarre");
-            Oleta.Tosi(Aihe()?.EndsWith("/musa-aarre-lyria.mp3") == true, "aarreaihe katkaisee: " + Aihe());
+            Oleta.Tosi(Aihe()?.EndsWith("/musa-aarre-lyria-v2.mp3") == true, "aarreaihe katkaisee: " + Aihe());
             tila.TehtavanTulos(true);
-            Oleta.Tosi(Aihe()?.EndsWith("/musa-aarre-lyria.mp3") == true, "ratkaisu jää pois aarteen alla");
+            Oleta.Tosi(Aihe()?.EndsWith("/musa-aarre-lyria-v2.mp3") == true, "ratkaisu jää pois aarteen alla");
             tila.MusiikkiPaalle(false);
             tila.AarreLoppui();
             tila.TehtavanTulos(true);

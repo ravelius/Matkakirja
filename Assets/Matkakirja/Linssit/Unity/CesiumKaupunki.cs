@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Lennon, siirron tai avauksen alussa: laatat karkealla kameralla (saapuminen yhtä nopea kuin 1,71:llä).</summary>
         public void Karkeaksi()
         {
-            if (!auki || hallinta == null || kamera == null || KarkeaSkaala >= 0.999f || karkeaKaytossa) return;
+            if (!auki || hallinta == null || kamera == null || KarkeaNyt >= 0.999f || karkeaKaytossa) return;
             if (karkea == null)
             {
                 karkea = new GameObject("Kaupunki karkea valinta").AddComponent<Camera>();
@@ -97,7 +97,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Laatat ≥ 99 % ja kamera paikallaan: valinta pääkameraan (tarkentuu tavoitekertoimeen).</summary>
         public void Tarkenna()
         {
-            if (!karkeaKaytossa || hallinta == null) return;
+            if (!karkeaKaytossa || hallinta == null || muistiPysaytys) return;   // muistihädässä valinta jää karkealle
             if (MacKuorma > KuormaRaja) kuormaValinta = true;   // Mac kuormassa: valinta jää karkealle (1/Kuorma)
             else
             {
@@ -157,7 +157,7 @@ namespace Matkakirja.Natiivi
             if (!(karkeaKaytossa || kuormaValinta) || karkea == null || kamera == null) return;
             karkea.fieldOfView = kamera.fieldOfView;
             karkea.nearClipPlane = kamera.nearClipPlane; karkea.farClipPlane = kamera.farClipPlane;
-            var r0 = kamera.pixelRect; float sk = KarkeaSkaala;
+            var r0 = kamera.pixelRect; float sk = KarkeaNyt;
             karkea.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
             karkea.aspect = kamera.aspect;
         }
@@ -217,7 +217,7 @@ namespace Matkakirja.Natiivi
         /// laattojen ja tekstuurien mitattu riippuvuus (1396 → 743 laattaa, 1450 → 942 Mt kertoimella 1,71). Hätävahti: jos
         /// vapaa muisti laskee alle HataGt:n näkymän aikana, kerroin nousee kerran ×1,3 (laatat latautuvat uudelleen, ei kaatumista).
         /// </summary>
-        public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8, HataGt = 0.7;
+        public const double MarginaaliGt = 1.5, KaupunkiGt = 2.4, Eksponentti = 0.8, HataGt = 1.0;   // HataGt 0,7 → 1,0 (juna 173, PT: kaupungissa aina ~0,8–1 Gt vapaata)
 
         /// <summary>Prosessin vapaa muisti ennen jetsam-rajaa (tavua); −1 = ei tiedossa (editori, simu palauttaa 0).</summary>
         public static long VapaaMuisti()
@@ -265,10 +265,21 @@ namespace Matkakirja.Natiivi
         }
 
         float muistiTarkistettu, muistiKirjattu;
-        bool hataKaytetty;
+        bool hataKaytetty, muistiPysaytys, pysaytettyTassa;
         long minVapaa = long.MaxValue;
+        /// <summary>Oppaan tauko (OpasSovitin.Tauko): laatat valmiina → lataus seis tauon ajaksi (muisti ei kasva).</summary>
+        public bool Tauko;
+        /// <summary>Muistihädän vapautusraja: lataus jatkuu, kun vapaata on taas HataGt + tämä (Gt).</summary>
+        public const double HataPalautusGt = 0.3;
+        /// <summary>Karkean valinnan pikselikerroin muistihädässä (myös iPadilla, jossa KarkeaSkaala voi olla 1).</summary>
+        public const float HataSkaala = 0.5f;   // 0,6 → 0,5 (juna 173: 0,6 ei vapauttanut tarpeeksi ennen jetsamia)
+        float KarkeaNyt => muistiPysaytys ? Mathf.Min(KarkeaSkaala, HataSkaala) : KarkeaSkaala;
 
-        /// <summary>Kerran 2 s:ssa näkymän aikana: vapaa muisti alle HataGt → kerroin ×1,3 kerran (Cesium lataa laatat uudelleen).</summary>
+        /// <summary>Kerran 2 s:ssa näkymän aikana. MUISTIHÄTÄ (omistaja TF 169 10.0x: tauolla Kuninkaanlinnan kohdalla koko näkymä katosi,
+        /// rakentui hitaasti ja peli kaatui; LS2 + PT 9.10.): EI SSE:n eikä välimuistin vaihtoa — Cesium3DTileset-asettimet kutsuvat
+        /// RecreateTileset():iä (koko tileset ladataan alusta, muistipiikki). Sen sijaan vapaa muisti alle HataGt → laattavalinta karkealle
+        /// kameralle (pikselit × HataSkaala, Natiiviseppä: hienot laatat vapautuvat välimuistin rajoissa, ei recreatea) ja lähikamera pois;
+        /// yli HataGt + HataPalautusGt → tarkentuu normaalisti. Testi: Documents/kaupunki-vapaa-muisti.txt "0.5".</summary>
         void Muistivahti()
         {
             if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
@@ -278,11 +289,28 @@ namespace Matkakirja.Natiivi
             // Laitemittaus (Päätoimittaja: huippu ja vapaa muisti ennen/jälkeen): vapaa nyt ja pienin 15 s välein.
             if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
             { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
-            if (hataKaytetty || v <= 0 || v / 1e9 >= HataGt) return;
-            hataKaytetty = true;
-            kerroin = SseKerroin * 1.3f;
-            maasto.maximumScreenSpaceError = (Kaytossa == Lahde.Google ? GoogleSse : MaastoSse) * kerroin;
-            kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → kerroin {kerroin:F2}, SSE {maasto.maximumScreenSpaceError:F1}");
+            if (v <= 0) return;
+            if (!muistiPysaytys && v / 1e9 < HataGt)
+            {
+                muistiPysaytys = hataKaytetty = true;
+                karkeaKaytossa = false; Karkeaksi();   // karkea valinta (HataSkaala) ja lähikamera pois; Tarkenna ei palauta hädän aikana
+                kirjaa($"kaupunki: MUISTIHÄTÄ vapaa {v / 1e9:F2} Gt → laattavalinta karkea (pikselit ×{KarkeaNyt:F2}; ei SSE-vaihtoa)");
+            }
+            else if (muistiPysaytys && v / 1e9 > HataGt + HataPalautusGt)
+            { muistiPysaytys = false; kirjaa($"kaupunki: muisti vapaa {v / 1e9:F2} Gt → hätä ohi, tarkentuu normaalisti"); }
+        }
+
+        /// <summary>Joka kehys: laattojen päivitys seis tauolla, kun laatat ovat valmiit ja kamera paikallaan (tauko pysäyttää lennon ja kierron),
+        /// ei muistihädässä (karkea valinta tarvitsee päivityksen vapauttaakseen hienot laatat).</summary>
+        void PaivitaPysaytys()
+        {
+            if (!auki || maasto == null) return;
+            bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;
+            if (halu == pysaytettyTassa) return;
+            pysaytettyTassa = halu;
+            maasto.suspendUpdate = halu;
+            if (rakennukset != null) rakennukset.suspendUpdate = halu;
+            kirjaa($"kaupunki: laattojen päivitys {(halu ? "seis" : "jatkuu")} ({(muistiPysaytys ? "muistihätä" : Tauko ? "tauko" : "normaali")})");
         }
         public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
@@ -384,6 +412,8 @@ namespace Matkakirja.Natiivi
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
             if (auki && kamera != null) omat.Kamera(kamera.transform.position);
             Muistivahti();
+            PaivitaPysaytys();
+            if (KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM) TarkistaReiat();   // kaukomaa myös kiinteällä kameralla (simu 9.10. 10.4x: ei laukeamista)
             PaivitaKarkea();
             SeuraaTarkentumista();
         }
@@ -452,6 +482,10 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
             avausAika = Time.realtimeSinceStartup;
+            // Juna 174 (iPad-jetsam 9.10.): taustan esilataus seis ja muiden kohdekaupunkien saapumislaatat perutaan kaupungin ajaksi.
+            Matkakirja.Esilataaja.KaupunkiAuki = true;
+            int perutut = Matkakirja.KarttaKerrokset.PeruTaustaSaapumiset();
+            if (perutut > 0) kirjaa($"kaupunki: taustan saapumislaatat peruttu ({perutut} erää), esilataus seis kaupungin ajaksi");
             googleUusinnat = 0;
             // Tarkkuus muistin mukaan ennen tilesettien luontia (LuoTileset käyttää SseKerrointa).
             long vapaa = VapaaMuisti();
@@ -460,7 +494,9 @@ namespace Matkakirja.Natiivi
             // Täysi laiteluokka (omistaja 8.10. 19.5x "lisää muistin käyttöä"; juna 170): lattia 0,5 (SSE 8) ja välimuisti ylijäämästä
             // (KaupunkiMuistibudjetti, Ydin; muut laitteet ja tuntematon vapaa täsmälleen ennallaan).
             // A3 (Linssiseppä): lähikamera samasta budjetista (KaupunkiMuistibudjetti.ValitseLahella; yksi muistibudjetti, PT 22.4x).
-            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.ValitseLahella(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka);
+            // Juna 174: kehityskaupungin oma sisältö (omat mallit, vesi, ilmakehä, äänet, intro) kiinteänä eränä budjetista.
+            double omaGt = Kehityskaupungit.Lahella(origoLat, origoLon) != null ? Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.OmaSisaltoGt : 0;
+            var valinta = Matkakirja.Linssit.Kierros.KaupunkiMuistibudjetti.ValitseLahella(vapaa / 1e9, NayttoKerroin, DioraamaLaatu.Laiteluokka, -1, omaGt);
             kerroin = pakotettu > 0 ? pakotettu : (float)valinta.Kerroin;
             googleValimuisti = valinta.Valimuisti;
             lahiBudjetti = pakotettu > 0 ? 1f : (float)valinta.Lahi;
@@ -469,7 +505,7 @@ namespace Matkakirja.Natiivi
             if (Mac && pakotettu <= 0 && Matkakirja.MacLaatu.GoogleSse > 0) kerroin = Matkakirja.MacLaatu.GoogleSse / GoogleSse;
 #endif
             karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
-            hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
+            hataKaytetty = muistiPysaytys = pysaytettyTassa = Tauko = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
             kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}, välimuisti {GoogleValimuistiNyt >> 20} Mt{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
@@ -590,6 +626,14 @@ namespace Matkakirja.Natiivi
         Material aluskerrosMat;
         static readonly int IdVari = Shader.PropertyToID("_Vari");
         public const float AluskerrosSse = 24f, AluskerrosSyvyysM = 15f;
+        /// <summary>KAUKOMAA (PT 9.10.: Tukholma korkealta → Googlen laattojen ulkopuolella maa puuttuu, taivas näkyy ja omat vedet leijuvat;
+        /// vapaan lennon katto 12 km). Testiasetukset: "sumukarsinta 0|1" (Cesiumin enableFogCulling Googlen tilesetille, null = oletus)
+        /// ja "aluskerros 1" (aluskerros päälle ilman reikiä).</summary>
+        public static bool? SumuKarsinta;
+        public static bool AluskerrosPakotettu;
+        /// <summary>Aluskerros päälle, kun kamera nousee tämän yli (m maasta): korkealta näkyy Googlen 3D-laattojen latausalueen reuna, jonka
+        /// takana ei ollut maata (PT 9.10.). Kerran luotuna se jää (ei välkettä noustessa ja laskiessa).</summary>
+        public static float AluskerrosKorkeusM = 1200f;
         public bool AluskerrosPaalla => aluskerros != null;
         void LokiRivi(string viesti, string pino, LogType tyyppi) => reiat.Kirjaa(viesti);
 
@@ -597,7 +641,9 @@ namespace Matkakirja.Natiivi
         public void TarkistaReiat()
         {
             if (aluskerrosMat != null && kamera != null) aluskerrosMat.SetColor(IdVari, RenderSettings.fog ? RenderSettings.fogColor : kamera.backgroundColor);
-            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !reiat.AluskerrosTarvitaan) return;
+            if (maasto != null && SumuKarsinta.HasValue && maasto.enableFogCulling != SumuKarsinta.Value)
+            { maasto.enableFogCulling = SumuKarsinta.Value; kirjaa($"kaupunki: sumukarsinta {(SumuKarsinta.Value ? "päällä" : "pois")} (kaukomaan testi)"); }
+            if (aluskerros != null || !auki || Kaytossa != Lahde.Google || string.IsNullOrEmpty(tunnus) || juuri == null || !(reiat.AluskerrosTarvitaan || AluskerrosPakotettu || KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM)) return;
             var sh = Resources.Load<Shader>("Varjostimet/ReikaTayte");
             if (sh == null) { kirjaa("kaupunki: reikätäytteen varjostin puuttuu"); return; }
             aluskerrosMat = new Material(sh) { name = "ReikaTayte" };
@@ -606,7 +652,7 @@ namespace Matkakirja.Natiivi
             aluskerros.opaqueMaterial = aluskerrosMat;   // vain muoto, tasainen sävy, ei kuvaa
             aluskerros.transform.localPosition = new Vector3(0f, -AluskerrosSyvyysM, 0f);   // georeferenssin paikallinen ylös = y origossa
             aluskerros.gameObject.SetActive(true);
-            kirjaa($"kaupunki: Googlen 404-tiiliä {reiat.Maara} → aluskerros (maastomuoto ilman kuvaa, sumun sävy, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
+            kirjaa($"kaupunki: {(reiat.AluskerrosTarvitaan ? $"Googlen 404-tiiliä {reiat.Maara}" : $"kamera {KaupunkiIlmakeha.KameraKorkeusM:F0} m")} → aluskerros (maastomuoto ilman kuvaa, sumun sävy, {AluskerrosSyvyysM:F0} m alla) täyttää reiät");
         }
 
         void PoistaAluskerros()
@@ -878,11 +924,36 @@ namespace Matkakirja.Natiivi
                    $"meshejä {Resources.FindObjectsOfTypeAll<Mesh>().Length}, kaupungin laattoja {laattoja}, äänileikkeitä {Resources.FindObjectsOfTypeAll<AudioClip>().Length}";
         }
 
+        /// <summary>Suurimmat tekstuurit lokiin (juna 173, iPad-jetsam: kaupungin avauksessa +760 Mt tekstuureja ennen laattoja): tyypeittäin
+        /// summat (Texture2D, RenderTexture, Texture3D, Cubemap, muut) ja n suurinta (nimi, koko, mitat, muoto, MSAA). Komento "opas tekstuurit [n]".</summary>
+        public static string Tekstuurit(int n = 20)
+        {
+            var kaikki = Resources.FindObjectsOfTypeAll<Texture>();
+            var rivit = new System.Collections.Generic.List<(long Tavut, string Kuvaus)>(kaikki.Length);
+            var tyypit = new System.Collections.Generic.Dictionary<string, long>();
+            foreach (var t in kaikki)
+            {
+                if (t == null) continue;
+                long b = UnityEngine.Profiling.Profiler.GetRuntimeMemorySizeLong(t);
+                string tyyppi = t.GetType().Name;
+                tyypit[tyyppi] = (tyypit.TryGetValue(tyyppi, out var v) ? v : 0) + b;
+                string muoto = t is RenderTexture rt ? $"{rt.graphicsFormat}/{rt.depthStencilFormat} msaa{rt.antiAliasing}" : t is Texture2D t2 ? t2.format.ToString() : t.graphicsFormat.ToString();
+                rivit.Add((b, $"{(t.name.Length > 0 ? t.name : "(nimetön)")} {t.width}×{t.height} {muoto} {b >> 20} Mt"));
+            }
+            rivit.Sort((x, y) => y.Tavut.CompareTo(x.Tavut));
+            var sb = new System.Text.StringBuilder($"tekstuurit: {kaikki.Length} kpl, ");
+            foreach (var kv in System.Linq.Enumerable.OrderByDescending(tyypit, x => x.Value)) sb.Append($"{kv.Key} {kv.Value >> 20} Mt, ");
+            sb.Append($"currentTextureMemory {(long)Texture.currentTextureMemory >> 20} Mt; suurimmat:");
+            for (int i = 0; i < Mathf.Min(n, rivit.Count); i++) sb.Append(" | ").Append(rivit[i].Kuvaus);
+            return sb.ToString();
+        }
+
         public void Sulje()
         {
             if (!auki) return;
             Suljettu?.Invoke(this);
             auki = false;
+            Matkakirja.Esilataaja.KaupunkiAuki = false;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
             Application.logMessageReceivedThreaded -= LokiRivi;
             PoistaAluskerros();

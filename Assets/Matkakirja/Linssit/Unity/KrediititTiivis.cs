@@ -263,9 +263,13 @@ namespace Matkakirja.Natiivi
                 if (Mathf.Abs(t.resolvedStyle.fontSize - RiviPt * pt) > 0.5f) t.style.fontSize = RiviPt * pt;
             float vali = 6f * pt;
             osm.style.marginLeft = vali;
+            // © OpenStreetMap vain, kun näkymässä on OSM-dataa (OpasSovitin asettaa OsmNakyvissa koko kaupunkinäkymän ajaksi; LS1:n katselmointi
+            // 9.10.: kaupunkikierroksella ei OSM-sisältöä).
+            var osmd = OsmNakyvissa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (osm.style.display != osmd) osm.style.display = osmd;
             float koko = tekstit.Count == 0 ? 0f : tiivis.MeasureTextSize(tiivis.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined).x;
             float osmLev = osm.MeasureTextSize(osm.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined).x;
-            KokoRivi = tekstit.Count > 0 && koko > 0f && koko + vali + osmLev <= lev;
+            KokoRivi = tekstit.Count > 0 && koko > 0f && koko + (OsmNakyvissa ? vali + osmLev : 0f) <= lev;
             var td = KokoRivi ? DisplayStyle.Flex : DisplayStyle.None;
             if (tiivis.style.display != td) tiivis.style.display = td;
             var dd = !KokoRivi && tekstit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;

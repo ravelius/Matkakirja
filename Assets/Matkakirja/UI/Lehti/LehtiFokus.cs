@@ -54,18 +54,18 @@ namespace Matkakirja.Natiivi
     public sealed class LehtiFokus
     {
         // Webin tekstit (js/fokustehtavat.js), Fablen ja omistajan hyväksymät.
-        const string AarteenVihje = "oikea vastaus paljastaa aarteen jäljen kartalle";
-        const string JulisteenVihje = "oikea vastaus tuo julisteen kokoelmaasi";
-        const string AarreAukiOtsake = "LEHDEN KYSYMYS";
-        const string AarreAukiVihje = "oikeasta vastauksesta rahaa";
-        const string Ratkaistu = "Tämän sivun minitehtävä on jo ratkaistu.";
-        const string AarreSyttyi = "Aarteen jälki syttyi: vihreä piste kartalla näyttää paikan.";
-        const string AarreRahaa = "Oikein. Puntia matkakassaan — niitä ei laske kukaan muu kuin minä.";
-        const string AarreRahaaLyhyt = "Oikein, puntia matkakassaan.";
-        const string JulisteTalteen = "Juliste talteen matkalaukkuun.";
-        const string JulisteKehu = "Laitetaanpa tää matkalaukkuun talteen, kun on noin hieno. Hyvä silmä.";
-        const string PullaKoyhaLivia = "Ei se mitään, kyllä minä ymmärrän. — Livia sanoo sen vähän liian nopeasti.";
-        const string PullaVarmistusOhje = "Toinen napautus maksaa. Muuten tarjous raukeaa.";
+        static string AarteenVihje => Kieli.T("ui.lehtifokus.aarteen-vihje");
+        static string JulisteenVihje => Kieli.T("ui.lehtifokus.julisteen-vihje");
+        static string AarreAukiOtsake => Kieli.T("ui.lehtifokus.aarre-auki-otsake");
+        static string AarreAukiVihje => Kieli.T("ui.lehtifokus.aarre-auki-vihje");
+        static string Ratkaistu => Kieli.T("ui.lehtifokus.ratkaistu");
+        static string AarreSyttyi => Kieli.T("ui.lehtifokus.aarre-syttyi");
+        static string AarreRahaa => Kieli.T("ui.lehtifokus.aarre-rahaa");
+        static string AarreRahaaLyhyt => Kieli.T("ui.lehtifokus.aarre-rahaa-lyhyt");
+        static string JulisteTalteen => Kieli.T("ui.lehtifokus.juliste-talteen");
+        static string JulisteKehu => Kieli.T("ui.lehtifokus.juliste-kehu");
+        static string PullaKoyhaLivia => Kieli.T("ui.sahke.pulla-koyha-livia");
+        static string PullaVarmistusOhje => Kieli.T("ui.sahke.pulla-varmistus-ohje");
         const long PullaVarmistusMs = 6000;
 
         // --- data (kerran istunnossa) ---------------------------------------------------------
@@ -328,7 +328,7 @@ namespace Matkakirja.Natiivi
                     if (r != null && !r.Ok) return;
                     vihje.RemoveFromHierarchy();
                     vaihtoehdot.Clear();
-                    tulos.text = (oikein ? $"Oikein! +£{t.Palkkio}. " : $"Oikea vastaus: {t.Visa.Vaihtoehdot[t.Visa.Oikea]}. ") + (t.Visa.Fakta ?? "");
+                    tulos.text = (oikein ? Kieli.T("ui.lehtifokus.oikein", t.Palkkio) : Kieli.T("ui.lehtifokus.oikea-vastaus", t.Visa.Vaihtoehdot[t.Visa.Oikea])) + (t.Visa.Fakta ?? "");
                     tulos.EnableInClassList("mk-oikein", oikein);
                     tulos.EnableInClassList("mk-vaarin", !oikein);
                     tulos.style.display = DisplayStyle.Flex;
@@ -338,7 +338,7 @@ namespace Matkakirja.Natiivi
                         // Juliste kokoelmaan heti, katselu vasta napista (omistaja 22.8.2026).
                         teko(new LehtiTeko { Laji = LehtiTekoLaji.JulisteMyonto, Avain = julisteAvain, Kaupunki = kaupunki });
                         voita?.Invoke();
-                        var lunasta = Rakenne.Nappi("Lunasta juliste", "mk-lehti__lunastus", () => NaytaJuliste(juliste), palsta);
+                        var lunasta = Rakenne.Nappi(Kieli.T("ui.nosto.lunasta-juliste"), "mk-lehti__lunastus", () => NaytaJuliste(juliste), palsta);
                         Kirjasimet.Aseta(lunasta, Kirjasin.LukuLihava);
                     }
                     // Aarteen avaajan oikea vastaus: pulla ei ole enää tarjolla (jälki syttyi).
@@ -365,14 +365,14 @@ namespace Matkakirja.Natiivi
             {
                 var juliste = kaikki.FirstOrDefault(x => x.Palkinto == "juliste" && !Vastattu(kaupunki, x.Aihe));
                 if (juliste == null) return auki ? AarreRahaa : AarreSyttyi;
-                return $"{(auki ? AarreRahaaLyhyt : AarreSyttyi)} {Suunta(t, juliste)}{juliste.Otsake}-tehtävästä irtoaa vielä juliste.";
+                return Kieli.T("ui.lehtifokus.kuittaus-juliste", auki ? AarreRahaaLyhyt : AarreSyttyi, Suunta(t, juliste), juliste.Otsake);
             }
             var aarre = auki ? null : kaikki.FirstOrDefault(x => x.AvaaAarteen && !Vastattu(kaupunki, x.Aihe));
-            return aarre == null ? JulisteKehu : $"{JulisteTalteen} Aarteen jäljen paljastaa {aarre.Otsake} -tehtävä.";
+            return aarre == null ? JulisteKehu : Kieli.T("ui.lehtifokus.kuittaus-aarre", JulisteTalteen, aarre.Otsake);
         }
 
         static string Suunta(Lehtitehtava t, Lehtitehtava kohde) =>
-            t.Sivu < 0 || kohde.Sivu < 0 ? "Lehden " : kohde.Sivu > t.Sivu ? "Seuraavan sivun " : "Edellisen sivun ";
+            Kieli.T(t.Sivu < 0 || kohde.Sivu < 0 ? "ui.lehtifokus.suunta-lehden" : kohde.Sivu > t.Sivu ? "ui.lehtifokus.suunta-seuraavan" : "ui.lehtifokus.suunta-edellisen");
 
         // --- pulla Livialle --------------------------------------------------------------------
 
@@ -402,7 +402,7 @@ namespace Matkakirja.Natiivi
                     nappi.EnableInClassList("mk-fokus__pullanappi--varmistus", false);
                     nappi.EnableInClassList("mk-fokus__pullanappi--koyha", true);
                     nappi.pickingMode = PickingMode.Ignore;
-                    teksti.text = $"Kassa ei riitä: {nimi} £{hinta}";
+                    teksti.text = Kieli.T("ui.sahke.koyha-vinkki", nimi, hinta);
                     huomio.text = PullaKoyhaLivia;
                     huomio.style.display = DisplayStyle.Flex;
                     return;
@@ -410,7 +410,7 @@ namespace Matkakirja.Natiivi
                 nappi.EnableInClassList("mk-fokus__pullanappi--koyha", false);
                 nappi.pickingMode = PickingMode.Position;
                 nappi.EnableInClassList("mk-fokus__pullanappi--varmistus", odottaa);
-                teksti.text = odottaa ? $"Varmista: {nimi} Livialle, £{hinta}" : $"Osta {nimi} Livialle (£{hinta})";
+                teksti.text = odottaa ? Kieli.T("ui.sahke.varmista-vinkki", nimi, hinta) : Kieli.T("ui.lehtifokus.osta-pulla", nimi, hinta);
                 huomio.text = odottaa ? PullaVarmistusOhje : "";
                 huomio.style.display = odottaa ? DisplayStyle.Flex : DisplayStyle.None;
             }
@@ -427,7 +427,7 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 ajastin?.Pause();
-                var r = teko(new LehtiTeko { Laji = LehtiTekoLaji.PullaVinkki, Kaupunki = kaupunki, Selite = nimi + " Livialle" });
+                var r = teko(new LehtiTeko { Laji = LehtiTekoLaji.PullaVinkki, Kaupunki = kaupunki, Selite = Kieli.T("ui.lehtifokus.pulla-livialle", nimi) });
                 if (r != null && !r.Ok)
                 {
                     // Kassa ehti tyhjentyä tai ostos on jo tehty: nappi kertoo tilanteen.
@@ -436,11 +436,11 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 rivi.Clear();
-                Kirjasimet.Aseta(Rakenne.Teksti($"Livia sai maksunsa ({nimi}, £{hinta}) ja näytti paikan kartalta.", "mk-fokus__pullatehty", rivi), Kirjasin.LukuKursiivi);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.lehtifokus.pulla-tehty", nimi, hinta), "mk-fokus__pullatehty", rivi), Kirjasin.LukuKursiivi);
                 aarreAvattiin?.Invoke();
                 // Kiitos ja vinkki yhdessä kuplassa, sitten pullariemu (web kuittausPinta → bunGranted).
                 var pulu = Pulu.Hae();
-                pulu.Sano($"{char.ToUpperInvariant(nimi[0])}{nimi.Substring(1)}. Sukuni kantoi kuninkaiden kirjeitä, mut kyllä tämä kelpaa maksuksi — aarteen jälki syttyi, ja se vihreä piste kartalla näyttää paikan.");
+                pulu.Sano(Kieli.T("ui.lehtifokus.pulla-kiitos", char.ToUpperInvariant(nimi[0]) + nimi.Substring(1)));
                 pulu.Tilanne("bunGranted");
             };
             Paivita();
@@ -469,7 +469,7 @@ namespace Matkakirja.Natiivi
             void Aseta(bool v)
             {
                 kotelo.EnableInClassList("mk-voitettu", v);
-                merkki.text = v ? "VOITETTU" : "PALKINTO";
+                merkki.text = Kieli.T(v ? "ui.lehtifokus.voitettu" : "ui.lehtifokus.palkinto");
             }
             Aseta(voitettu);
             kotelo.RegisterCallback<ClickEvent>(_ => { if (kotelo.ClassListContains("mk-voitettu")) NaytaJuliste(j); });
@@ -482,7 +482,7 @@ namespace Matkakirja.Natiivi
                 new LehtiKuva
                 {
                     Lahde = j.Url, Otsikko = j.Otsikko, Lyhyt = j.Lyhyt, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko,
-                    LahdeRivi = "Matkakirjan oma paino",
+                    LahdeRivi = Kieli.T("ui.nosto.oma-paino"),
                 },
             });
 

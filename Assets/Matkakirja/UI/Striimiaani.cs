@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Pelinimet = new[]
         {
-            ("ara", "Aino"), ("aurora", "Aamu"), ("carina", "Kerttu"), ("celeste", "Siiri"), ("eve", "Helmi"),
+            ("ara", "Aino"), ("aurora", "Aamu"), ("carina", "Kerttu"), ("celeste", "Siiri"), ("eve", "Helmi"),   // kieli: ei (erisnimet (äänten pelinimet, suomalaisia etunimiä; ei käännetä))
             ("iris", "Ilta"), ("liora", "Lyyli"), ("luna", "Vieno"), ("ursa", "Saima"), ("altair", "Aarne"),
             ("atlas", "Antero"), ("castor", "Kalle"), ("cosmo", "Kosti"), ("helios", "Heikki"), ("helix", "Herman"),
             ("kepler", "Kaarlo"), ("leo", "Lauri"), ("lumen", "Lassi"), ("lux", "Luukas"), ("naksh", "Niilo"),
@@ -57,24 +57,24 @@ namespace Matkakirja.Natiivi
         // (-2), jotta aiemmat kokeiluvalinnat (esim. Viisas kertoja) eivät ohita uutta oletusta.
         public const string MoottoriAvain = "matkakirja-puhe-moottori", ElevenAaniAvain = "matkakirja-puhe-eleven-aani-2";
         public const string Eleven = "eleven";
-        public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Moottorit = new[] { (Eleven, "ElevenLabs v4") };
+        public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Moottorit = new[] { (Eleven, "ElevenLabs v4") };   // kieli: ei (tuotenimi)
 
         /// <summary>
         /// ElevenLabsin lukijaäänet (workerin LUKIJA_ELEVEN_AANET-näyttökopio, oletus ensin): omistaja 30.9.2026 klo 23.1x "aina v4
         /// ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä" — jaetun kirjaston 23 eniten käytettyä, ei suomeksi merkattuja.
         /// Poikkeus (omistaja 23.5x): isoisän ääni Viisas kertoja ensimmäisenä ja oletuksena; worker ajaa sen v3:lla (LUKIJA_ELEVEN_MALLIT).
         /// </summary>
-        public static readonly IReadOnlyList<(string Tunnus, string Nimi)> ElevenAanet = new[]
+        public static IReadOnlyList<(string Tunnus, string Nimi)> ElevenAanet => new[]
         {
-            ("oae6GCCzwoEbfc5FHdEu", "William, rauhallinen kertoja"), ("Sz0tRTEpybtDJ9ru2kgD", "Viisas kertoja (isoisä)"),
-            ("MFZUKuGQUsGJPQjTS4wC", "Lämmin mieskertoja"), ("G17SuINrv2H9FC6nvetn", "Lempeä brittimies"), ("UgBBYS2sOqTuMpoF3BR0", "Rento keskustelija, mies"),
-            ("6OzrBCQf8cjERkYgzSg8", "Nuori rento mies"), ("ZthjuvLPty3kTMaNKVKb", "Varma mieskertoja"), ("EkK5I93UQWFDigLMpZcX", "Käheä syvä mies"),
-            ("uju3wxzG5OhpWcoi3SMy", "Ilmeikäs mieskertoja"), ("NNl6r8mD7vthiJatiJt1", "Eloisa brittikertoja"), ("NFG5qt843uXKj4pFvR7C", "Syvä rauhallinen mies"),
-            ("j9jfwdrw7BRfcR43Qohk", "Samettinen brittimies"), ("XjLkpWUlnhS8i7gGz3lZ", "Uutistenlukija, mies"), ("wBXNqKUATyqu0RtYt25i", "Radiokuuluttaja, mies"),
-            ("Se2Vw1WbHmGbBbyWTuu4", "Samettinen naiskertoja"), ("tnSpp4vdxKPjI9w0GnoV", "Pirteä kirkas nainen"), ("jqcCZkN6Knx8BJ5TBdYR", "Lämmin arkinen nainen"),
-            ("ZF6FPAbjXT4488VcRRnw", "Innostunut brittinainen"), ("g6xIsTj2HwM6VR4iXFCw", "Juttuseura, nainen"), ("lxYfHSkYm1EzQzGhdbfc", "Ammattilukija, nainen"),
-            ("yj30vwTGJxSHezdAGsv9", "Rento naiskertoja"), ("19STyYD15bswVz51nqLf", "Tyylikäs brittinainen"), ("Z3R5wn05IrDiVCyEkUrK", "Salaperäinen naiskertoja"),
-            ("DLsHlh26Ugcm6ELvS0qi", "Rauhoittava etelän nainen"), ("wJqPPQ618aTW29mptyoc", "Pehmeä brittinainen"),
+            ("oae6GCCzwoEbfc5FHdEu", Kieli.T("ui.lukija.aani-william-rauhallinen-kertoja")), ("Sz0tRTEpybtDJ9ru2kgD", Kieli.T("ui.lukija.aani-viisas-kertoja-isoisa")),
+            ("MFZUKuGQUsGJPQjTS4wC", Kieli.T("ui.lukija.aani-lammin-mieskertoja")), ("G17SuINrv2H9FC6nvetn", Kieli.T("ui.lukija.aani-lempea-brittimies")), ("UgBBYS2sOqTuMpoF3BR0", Kieli.T("ui.lukija.aani-rento-keskustelija-mies")),
+            ("6OzrBCQf8cjERkYgzSg8", Kieli.T("ui.lukija.aani-nuori-rento-mies")), ("ZthjuvLPty3kTMaNKVKb", Kieli.T("ui.lukija.aani-varma-mieskertoja")), ("EkK5I93UQWFDigLMpZcX", Kieli.T("ui.lukija.aani-kahea-syva-mies")),
+            ("uju3wxzG5OhpWcoi3SMy", Kieli.T("ui.lukija.aani-ilmeikas-mieskertoja")), ("NNl6r8mD7vthiJatiJt1", Kieli.T("ui.lukija.aani-eloisa-brittikertoja")), ("NFG5qt843uXKj4pFvR7C", Kieli.T("ui.lukija.aani-syva-rauhallinen-mies")),
+            ("j9jfwdrw7BRfcR43Qohk", Kieli.T("ui.lukija.aani-samettinen-brittimies")), ("XjLkpWUlnhS8i7gGz3lZ", Kieli.T("ui.lukija.aani-uutistenlukija-mies")), ("wBXNqKUATyqu0RtYt25i", Kieli.T("ui.lukija.aani-radiokuuluttaja-mies")),
+            ("Se2Vw1WbHmGbBbyWTuu4", Kieli.T("ui.lukija.aani-samettinen-naiskertoja")), ("tnSpp4vdxKPjI9w0GnoV", Kieli.T("ui.lukija.aani-pirtea-kirkas-nainen")), ("jqcCZkN6Knx8BJ5TBdYR", Kieli.T("ui.lukija.aani-lammin-arkinen-nainen")),
+            ("ZF6FPAbjXT4488VcRRnw", Kieli.T("ui.lukija.aani-innostunut-brittinainen")), ("g6xIsTj2HwM6VR4iXFCw", Kieli.T("ui.lukija.aani-juttuseura-nainen")), ("lxYfHSkYm1EzQzGhdbfc", Kieli.T("ui.lukija.aani-ammattilukija-nainen")),
+            ("yj30vwTGJxSHezdAGsv9", Kieli.T("ui.lukija.aani-rento-naiskertoja")), ("19STyYD15bswVz51nqLf", Kieli.T("ui.lukija.aani-tyylikas-brittinainen")), ("Z3R5wn05IrDiVCyEkUrK", Kieli.T("ui.lukija.aani-salaperainen-naiskertoja")),
+            ("DLsHlh26Ugcm6ELvS0qi", Kieli.T("ui.lukija.aani-rauhoittava-etelan-nainen")), ("wJqPPQ618aTW29mptyoc", Kieli.T("ui.lukija.aani-pehmea-brittinainen")),
         };
 
         /// <summary>

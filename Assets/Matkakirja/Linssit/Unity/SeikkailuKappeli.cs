@@ -104,7 +104,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < k.hehkuPolku.Count; i++) k.hehkuPolku[i] += Vector3.up * 1.4f;
             var hg = new GameObject("Voudin hehku"); hg.transform.SetParent(go.transform, false); hg.transform.position = k.portaikkoYla;
             k.hehku = hg.AddComponent<Light>(); k.hehku.type = LightType.Point; k.hehku.range = 3f; k.hehku.color = new Color(1f, 0.75f, 0.45f); k.hehku.intensity = 0f; k.hehku.shadows = LightShadows.None;
-            k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; k.voudinAskeleet.volume = 0.7f * SeikkailuAanet.Taso("tehosteet", VoudinAskeleet);
+            k.voudinAskeleet = SeikkailuKuulija.Lahde("Voudin askeleet", 3f, 25f); k.voudinAskeleet.loop = true; SaumatonSilmukka.Kiinnita(k.voudinAskeleet); k.voudinAskeleet.volume = 0.7f * SeikkailuAanet.Taso("tehosteet", VoudinAskeleet);
             SeikkailuPako.Valmis -= k.PakoValmis; SeikkailuPako.Valmis += k.PakoValmis;   // M-osa: nousu pakon jälkeen (myös jatkossa tallennuksesta)
             SeikkailuEsineet.Kolahti += k.Kova; SeikkailuEsineet.Aanteli += k.Tavallinen; SeikkailuEsineet.Raapaistiin += k.Raapaisu; SeikkailuEsineet.Nostettiin += k.Nosto; SeikkailuKynttilat.LuukkuAani += k.Tavallinen; SeikkailuEsineet.AsetettiinAlttarille += k.Asetettu;
             SeikkailuEsineet.Aanteli += k.Koputus;

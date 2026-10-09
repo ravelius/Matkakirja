@@ -65,12 +65,12 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(UiKerros.Tilarivi);
 
             nappi = Rakenne.Nappi(null, "mk-seliteNappi", Vaihda, turva, NostoMerkit.SeliteNappi);
-            nappi.tooltip = MaakuntaKartta ? "Maakuntakartta" : "Karttaselitteet";
+            nappi.tooltip = Kieli.T(MaakuntaKartta ? "ui.karttaselite.maakuntakartta" : "ui.karttaselite.karttaselitteet");
             nappi.style.top = Ylapalkki.Varaus + 8;
             // LINSSIT-KARTTANAPPI (omistaja 2.10.2026 klo 13.56 ja 18.3x, web #3859): OHJAUSNAPPI-neliö suurennuslasilla kartan
             // oikeaan yläkulmaan (webissä selitenapin ≡ vasemmalla puolella; natiivissa selite on automaattinen eikä nappia ole,
             // joten Linssit on kulmassa); napautus avaa pillerivalikon suoraan Linssit-näkymään. Näkyy, kun linssejä on.
-            linssit = Ohjausnappi.Nappi(Ikonit.Viiva["suurennuslasi"], "Linssit", AvaaLinssit, turva, "paperi");
+            linssit = Ohjausnappi.Nappi(Ikonit.Viiva["suurennuslasi"], Kieli.T("ui.linssi.linssit"), AvaaLinssit, turva, "paperi");
             linssit.AddToClassList("mk-linssitNappi");
             linssit.style.position = Position.Absolute;
             linssit.style.display = DisplayStyle.None;
@@ -88,8 +88,8 @@ namespace Matkakirja.Natiivi
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
             var valilehdet = Rakenne.El("mk-selite__valilehdet", ylarivi, PickingMode.Ignore);
-            valilehtiNostot = Rakenne.Nappi("NOSTOT", "mk-selite__valilehti", () => VaihdaValilehti(false), valilehdet);
-            valilehtiMaakunnat = Rakenne.Nappi("MAAKUNNAT", "mk-selite__valilehti", () => VaihdaValilehti(true), valilehdet);
+            valilehtiNostot = Rakenne.Nappi(Kieli.T("ui.karttaselite.nostot"), "mk-selite__valilehti", () => VaihdaValilehti(false), valilehdet);
+            valilehtiMaakunnat = Rakenne.Nappi(Kieli.T("ui.karttaselite.maakunnat"), "mk-selite__valilehti", () => VaihdaValilehti(true), valilehdet);
             // Ei ✕:ää (✕-inventaario 5.10.2026; ylärivi on maakuntakarttatilassa piilossa, ohinapautus sulkee vanhan paneelin).
 
             paneeliNostot = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);

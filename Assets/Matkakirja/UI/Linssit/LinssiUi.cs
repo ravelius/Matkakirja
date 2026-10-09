@@ -505,6 +505,8 @@ namespace Matkakirja.Natiivi
             Valitsin.Sulje();
             Maat.SuljeArkki();
             Aikajana.Valikko.Sulje();
+            // Oppaan ☰- ja Kysy-lista (UI-kuva-arkki 9.10.2026: `ui sulje` jätti Kysy-listan auki tietokortiston ja mikserin eteen).
+            OpasValikko.Viimeisin?.Sulje();
         }
 
         // --- linssi-oliot sovittimien takaa ---------------------------------------------

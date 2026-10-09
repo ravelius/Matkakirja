@@ -32,6 +32,11 @@ namespace Matkakirja
     [DefaultExecutionOrder(10000)]
     public sealed class Ruudunpaivitys : MonoBehaviour
     {
+        /// <summary>MSAA-katto Ultralla (juna 173: kaupunki pienellä muistilla 2, KaupunkiKuva asettaa ja palauttaa 4); lämpövaihdos ei
+        /// saa kirjoittaa 4×:ää kesken kaupunkinäkymän.</summary>
+        public static int MsaaKatto = 4;
+        /// <summary>renderScale-katto (juna 173: kaupunki pienellä muistilla, kytkin kaupunki.PieniSkaala; KaupunkiKuva palauttaa 1).</summary>
+        public static float SkaalaKatto = 1f;
         public const float TaysiPitoS = 0.5f;
         public const int LepoFps = 30, KuumaFps = 30, KriittinenFps = 20;
         /// <summary>PAIKALLAAN-tilan piirtoväli kehyksinä (30 fps:llä 2 s).</summary>
@@ -335,9 +340,9 @@ namespace Matkakirja
             // PalloSumennus (portti, kuvasumennus) palauttaa tähän arvoon; sen aikana renderScalea ei kirjoiteta.
             // Myös normaalilämmössä perusarvo, jottei jäähtyminen kesken sumennuksen jätä kuumaa 0,7:ää (Natiiviseppä 25.9.).
             PalloSumennus.PerusSkaala = kuuma ? KuumaSkaala : (perusSkaala > 0f ? perusSkaala : (float?)null);
-            if (asetus != null && skaala > 0f && !PalloKierto.PorttiSumea && !PalloKierto.KuvaSumea) asetus.renderScale = skaala;
+            if (asetus != null && skaala > 0f && !PalloKierto.PorttiSumea && !PalloKierto.KuvaSumea) asetus.renderScale = Mathf.Min(skaala, SkaalaKatto);
             // Ultra (Natiiviseppä 8.10.2026, juna 169): kuumana MSAA 4× → pois (tasoa ei vaihdeta ajon aikana, ks. Laatutaso.cs).
-            if (asetus != null && Laatutaso.Ultra) asetus.msaaSampleCount = kuuma ? 1 : 4;
+            if (asetus != null && Laatutaso.Ultra) asetus.msaaSampleCount = kuuma ? 1 : Mathf.Min(4, MsaaKatto);
             Laatutaso.AsetaKuuma(kuuma);   // ajallinen reunanpehmennys (TAA) pois kuumana (juna 169)
             if (bloom == null && Filmipino.Instanssi != null && Filmipino.Instanssi.volyymi != null
                 && Filmipino.Instanssi.volyymi.profile != null && Filmipino.Instanssi.volyymi.profile.TryGet(out bloom))

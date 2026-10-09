@@ -64,7 +64,7 @@ namespace Matkakirja.Natiivi
             sisus = Rakenne.El("mk-sahke-liuska__sisus", liuska, PickingMode.Ignore);
             // ✕ puuttuu kirjasimista: kertomerkki.
             var sulje = Rakenne.Nappi("×", "mk-sahke-liuska__sulje", () => SuljeKayttajana(), liuska);
-            sulje.tooltip = "Sulje sähke";
+            sulje.tooltip = Kieli.T("ui.sahke.sulje-tooltip");
             kerros.JokaRuutu += SeuraaRuutua;
 
             if (valikko?.Retkikunta != null)
@@ -72,7 +72,7 @@ namespace Matkakirja.Natiivi
                 osio = valikko.Retkikunta;
                 osio.Clear();
                 osio.style.display = DisplayStyle.None;
-                Rakenne.Teksti("RETKIKUNTA", "mk-pudotus__otsikko", osio);
+                Rakenne.Teksti(Kieli.T("ui.sahke.retkikunta-otsikko"), "mk-pudotus__otsikko", osio);
                 osioSisus = Rakenne.El("mk-sahke", osio, PickingMode.Ignore);
             }
         }
@@ -171,7 +171,7 @@ namespace Matkakirja.Natiivi
                 kaikki.Add(nappi);
             }
             var ohita = Rakenne.Nappi(null, "mk-sahke-liuska__ohita", SuljeKayttajana, paperi);
-            Rakenne.Teksti("En osaa auttaa", "mk-sahke-liuska__ohitateksti", ohita);
+            Rakenne.Teksti(Kieli.T("ui.sahke.en-osaa-auttaa"), "mk-sahke-liuska__ohitateksti", ohita);
             kaikki.Add(ohita);
         }
 
@@ -257,7 +257,7 @@ namespace Matkakirja.Natiivi
         {
             var s = osioSisus;
             Teksti(tila.Teksti, s);
-            Huomio("Valitse nimimerkkisi:", s);
+            Huomio(Kieli.T("ui.sahke.valitse-nimimerkki"), s);
             var nimirivi = Rakenne.El("mk-sahke__sirut", s, PickingMode.Ignore);
             string valittu = null;
             Label huomio = null;
@@ -275,20 +275,20 @@ namespace Matkakirja.Natiivi
                     {
                         valittu = nimi;
                         Valitse(nimirivi, b);
-                        huomio.text = $"Nimimerkkisi on {nimi}.";
+                        huomio.text = Kieli.T("ui.sahke.nimimerkki-on", nimi);
                     });
                 }
             }
 
-            Toiminto("Arvo uudet nimet", ArvoNimet, s);
+            Toiminto(Kieli.T("ui.sahke.arvo-nimet"), ArvoNimet, s);
 
             Button perusta = null, liity = null;
-            perusta = Toiminto("Perusta retkikunta", () =>
+            perusta = Toiminto(Kieli.T("ui.sahke.perusta"), () =>
             {
-                if (valittu == null) { huomio.text = "Valitse ensin nimimerkki."; return; }
+                if (valittu == null) { huomio.text = Kieli.T("ui.sahke.valitse-ensin-nimimerkki"); return; }
                 if (toiminnot.Perusta == null) return;
                 perusta.SetEnabled(false);
-                huomio.text = "Perustetaan…";
+                huomio.text = Kieli.T("ui.sahke.perustetaan");
                 var valmis = Tuore<string>(rivi =>
                 {
                     // null = onnistui: ohjain piirtää jäsennäkymän NaytaRetkikunnalla.
@@ -296,15 +296,15 @@ namespace Matkakirja.Natiivi
                     huomio.text = rivi ?? "";
                 });
                 try { toiminnot.Perusta(valittu, valmis); }
-                catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut: " + SahkeVakiot.EiVastaa); } // web sahkePiirraLiittyminen: `Ei onnistunut: ${syy.message}`
+                catch (Exception e) { Debug.LogException(e); valmis(Kieli.T("ui.sahke.ei-onnistunut", SahkeVakiot.EiVastaa)); } // web sahkePiirraLiittyminen: `Ei onnistunut: ${syy.message}`
             }, s);
 
-            Huomio("Tai liity kaverin koodilla:", s);
+            Huomio(Kieli.T("ui.sahke.liity-koodilla"), s);
             var koodi = new TextField { maxLength = SahkeVakiot.KoodinPituus };
             koodi.AddToClassList("mk-sahke__koodi");
-            koodi.textEdition.placeholder = $"Koodi ({SahkeVakiot.KoodinPituus} merkkiä)";
+            koodi.textEdition.placeholder = Kieli.T("ui.sahke.koodi-vihje", SahkeVakiot.KoodinPituus);
             koodi.keyboardType = TouchScreenKeyboardType.ASCIICapable;
-            koodi.tooltip = "Retkikunnan liittymiskoodi";
+            koodi.tooltip = Kieli.T("ui.sahke.koodi-tooltip");
             // Ei vapaa tekstikenttä: jokainen näppäily suodatetaan koodiaakkostoon.
             koodi.RegisterValueChangedCallback(e =>
             {
@@ -314,22 +314,22 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(koodi, Kirjasin.Kone);
             s.Add(koodi);
 
-            liity = Toiminto("Liity retkikuntaan", () =>
+            liity = Toiminto(Kieli.T("ui.sahke.liity"), () =>
             {
-                if (valittu == null) { huomio.text = "Valitse ensin nimimerkki."; return; }
+                if (valittu == null) { huomio.text = Kieli.T("ui.sahke.valitse-ensin-nimimerkki"); return; }
                 var arvo = Siisti(koodi.value);
-                if (arvo.Length != SahkeVakiot.KoodinPituus) { huomio.text = $"Koodissa on {SahkeVakiot.KoodinPituus} merkkiä."; return; }
+                if (arvo.Length != SahkeVakiot.KoodinPituus) { huomio.text = Kieli.T("ui.sahke.koodi-pituus", SahkeVakiot.KoodinPituus); return; }
                 if (toiminnot.Liity == null) return;
                 koodi.Blur();
                 liity.SetEnabled(false);
-                huomio.text = "Liitytään…";
+                huomio.text = Kieli.T("ui.sahke.liitytaan");
                 var valmis = Tuore<string>(rivi =>
                 {
                     liity.SetEnabled(true);
                     huomio.text = rivi ?? "";
                 });
                 try { toiminnot.Liity(arvo, valittu, valmis); }
-                catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut: " + SahkeVakiot.EiVastaa); } // web sahkePiirraLiittyminen: `Ei onnistunut: ${syy.message}`
+                catch (Exception e) { Debug.LogException(e); valmis(Kieli.T("ui.sahke.ei-onnistunut", SahkeVakiot.EiVastaa)); } // web sahkePiirraLiittyminen: `Ei onnistunut: ${syy.message}`
             }, s);
 
             huomio = Huomio("", s);
@@ -351,11 +351,11 @@ namespace Matkakirja.Natiivi
             Teksti(tila.Teksti, s);
 
             var koodirivi = Rakenne.El("mk-sahke__koodirivi", s, PickingMode.Ignore);
-            Huomio("Liittymiskoodi:", koodirivi);
+            Huomio(Kieli.T("ui.sahke.liittymiskoodi"), koodirivi);
             var arvo = Rakenne.Teksti(tila.Koodi ?? "", "mk-sahke__koodiarvo", koodirivi);
             Kirjasimet.Aseta(arvo, Kirjasin.KoneLihava);
 
-            Huomio("Lähetä sähke retkikunnalle:", s);
+            Huomio(Kieli.T("ui.sahke.laheta-retkikunnalle"), s);
             var pohjarivi = Rakenne.El("mk-sahke__sirut", s, PickingMode.Ignore);
             var paikkarivi = Rakenne.El("mk-sahke__sirut", s, PickingMode.Ignore);
             Label huomio = null;
@@ -378,7 +378,7 @@ namespace Matkakirja.Natiivi
                     {
                         if (toiminnot.Laheta == null) return;
                         foreach (var c in paikkarivi.Children()) c.SetEnabled(false);
-                        huomio.text = "Lähetetään…";
+                        huomio.text = Kieli.T("ui.sahke.lahetetaan");
                         var valmis = Tuore<bool, string>((ok, rivi) =>
                         {
                             huomio.text = rivi ?? "";
@@ -387,7 +387,7 @@ namespace Matkakirja.Natiivi
                             Valitse(pohjarivi, null);
                         });
                         try { toiminnot.Laheta(pohja.Id, p.PaikkaId, valmis); }
-                        catch (Exception e) { Debug.LogException(e); valmis(false, "Ei onnistunut: " + SahkeVakiot.EiVastaa); } // web sahkePiirraJasen: sama muoto
+                        catch (Exception e) { Debug.LogException(e); valmis(false, Kieli.T("ui.sahke.ei-onnistunut", SahkeVakiot.EiVastaa)); } // web sahkePiirraJasen: sama muoto
                     });
                 }
             }
@@ -405,7 +405,7 @@ namespace Matkakirja.Natiivi
             }
 
             huomio = Huomio("", s);
-            Toiminto("Eroa retkikunnasta", () =>
+            Toiminto(Kieli.T("ui.sahke.eroa"), () =>
             {
                 try { toiminnot.Eroa?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
             }, s);

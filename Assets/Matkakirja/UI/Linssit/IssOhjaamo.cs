@@ -160,7 +160,7 @@ namespace Matkakirja.Natiivi
 
             // --- joystick: plus-muoto, neljä vartta ja napa --------------------------------------------------------
             joystick = Rakenne.El("mk-issohjaamo__joystick", paneeli);
-            joystick.tooltip = "Ohjaa aluksen asentoa";
+            joystick.tooltip = Kieli.T("ui.iss.ohjaa-asentoa");
             Rakenne.El("mk-issohjaamo__keski", joystick, PickingMode.Ignore);
             string[] nimet = { "napa", "ylos", "alas", "vasen", "oikea" };
             for (int i = 1; i < 5; i++)
@@ -202,12 +202,12 @@ namespace Matkakirja.Natiivi
             IssKameraKuva.Aloitettu += () => UiKerros.PaaSaikeessa(() => { valmisAsti = -1f; Paivita(); });
             IssKameraKuva.Valmis += _ => UiKerros.PaaSaikeessa(() => { valmisAsti = Time.unscaledTime + ValmisS; Paivita(); });
             lcd.RegisterCallback<GeometryChangedEvent>(_ => SovitaKohde());
-            lcd.tooltip = "Näytön asetukset";
+            lcd.tooltip = Kieli.T("ui.iss.nayton-asetukset");
             lcd.AddManipulator(new Clickable(() => AsetaLaajennus(true)));
 
             // --- kamera ja kaasu ------------------------------------------------------------------------------------
             kamera = Rakenne.Nappi(null, "mk-issohjaamo__kamera", Laukaise, paneeli, Kamera);
-            kamera.tooltip = "Ota tarkka ISS-kuva";
+            kamera.tooltip = Kieli.T("ui.iss.ota-kuva");
             kamera.SetEnabled(false);
             kamera.RegisterCallback<PointerDownEvent>(_ => PaivitaNahkaTila(true), TrickleDown.TrickleDown);
             kamera.RegisterCallback<PointerUpEvent>(_ => PaivitaNahkaTila(false), TrickleDown.TrickleDown);
@@ -215,11 +215,11 @@ namespace Matkakirja.Natiivi
             objektiivi = Rakenne.El("mk-issohjaamo__objektiivi", paneeli, PickingMode.Ignore);
             objektiivi.style.position = Position.Absolute;
             objektiivi.style.flexDirection = FlexDirection.Row;
-            laajaNappi = ObjektiiviNappi("LAAJA", true);
-            teleNappi = ObjektiiviNappi("TELE", false);
+            laajaNappi = ObjektiiviNappi(Kieli.T("ui.iss.laaja-iso"), true);
+            teleNappi = ObjektiiviNappi(Kieli.T("ui.iss.tele-iso"), false);
             PaivitaObjektiivi();
             kaasu = Rakenne.El("mk-issohjaamo__kaasu", paneeli);
-            kaasu.tooltip = "Kaasu: ajan nopeus";
+            kaasu.tooltip = Kieli.T("ui.iss.kaasu");
             ura = Rakenne.El("mk-issohjaamo__ura", kaasu, PickingMode.Ignore);
             for (int i = 0; i < Kertoimet.Length; i++) Rakenne.El("mk-issohjaamo__pykala", ura, PickingMode.Ignore);
             kahva = Rakenne.El("mk-issohjaamo__kahva", ura, PickingMode.Ignore);
@@ -240,7 +240,7 @@ namespace Matkakirja.Natiivi
 
             // --- mininäyttö --------------------------------------------------------------------------------------
             mini = Rakenne.El("mk-issohjaamo__mini", Juuri);
-            mini.tooltip = "Avaa ohjaamo";
+            mini.tooltip = Kieli.T("ui.iss.avaa-ohjaamo");
             Matriisi(mini);
             miniTeksti = Rakenne.Teksti("", "mk-issohjaamo__miniteksti", mini);
             miniTeksti.pickingMode = PickingMode.Ignore;
@@ -364,8 +364,8 @@ namespace Matkakirja.Natiivi
         {
             laajennus = Rakenne.El("mk-issohjaamo__laajennus", paneeli);
             laajennus.style.display = DisplayStyle.None;
-            var sijainti = Nappi("SIJAINTI", "mk-issohjaamo__iso", laajennus, () => AvaaSijainti?.Invoke());
-            sijainti.tooltip = "Valitse kohde listalta";
+            var sijainti = Nappi(Kieli.T("ui.iss.sijainti-iso"), "mk-issohjaamo__iso", laajennus, () => AvaaSijainti?.Invoke());
+            sijainti.tooltip = Kieli.T("ui.iss.valitse-kohde-listalta");
             var rivit = Rakenne.El("mk-issohjaamo__rivit", laajennus, PickingMode.Ignore);
             var r1 = Rakenne.El("mk-issohjaamo__rivi", rivit, PickingMode.Ignore);
             var r2 = Rakenne.El("mk-issohjaamo__rivi mk-issohjaamo__rivi--toinen", rivit, PickingMode.Ignore);
@@ -375,7 +375,7 @@ namespace Matkakirja.Natiivi
                 kausiNapit[i] = Nappi(Vuodenaika.Nimet[i].ToUpperInvariant(), null, r1, () => { AsetaKausi?.Invoke(k); PaivitaLaajennus(); });
                 vuorokausiNapit[i] = Nappi(Vuorokausi.Nimet[i].ToUpperInvariant(), null, r2, () => { AsetaVuorokausi?.Invoke(k); PaivitaLaajennus(); });
             }
-            Nappi("OK", "mk-issohjaamo__iso", laajennus, () => AsetaLaajennus(false)).tooltip = "Takaisin sijaintiin";
+            Nappi(Kieli.T("ui.iss.ok"), "mk-issohjaamo__iso", laajennus, () => AsetaLaajennus(false)).tooltip = Kieli.T("ui.iss.takaisin-sijaintiin");
         }
 
         /// <summary>Objektiivin nappi: osuma-ala (läpinäkyvä, 48 pt korkea) ja sen sisällä LCD-nappi (pohja .mk-issohjaamo__lcdnappi).</summary>
@@ -384,7 +384,7 @@ namespace Matkakirja.Natiivi
             var osa = Rakenne.El(null, objektiivi);
             osa.style.flexGrow = 1; osa.style.flexBasis = 0; osa.style.justifyContent = Justify.FlexEnd;
             if (!laaja) osa.style.marginLeft = LaajennusVali;   // sama väli kuin laajennuksen napeilla (omistaja 6.10.)
-            osa.tooltip = laaja ? "Laaja objektiivi" : "Teleobjektiivi";
+            osa.tooltip = Kieli.T(laaja ? "ui.iss.laaja-objektiivi" : "ui.iss.teleobjektiivi");
             osa.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             osa.AddManipulator(new Clickable(() => ValitseObjektiivi(laaja)));
             var b = Nappi(teksti, null, osa, null);
@@ -852,16 +852,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Oikea nopeus tekstinä: alle miljoonan "275 700 km/h", sitten "9,37 milj. km/h" / "27,6 milj. km/h".</summary>
         public static string NopeusTeksti(double kmh)
         {
-            if (kmh < 1e6) return (Math.Round(kmh / 10.0) * 10.0).ToString("#,0", Fi) + " km/h";
+            if (kmh < 1e6) return Kieli.T("ui.iss.nopeus-kmh", (Math.Round(kmh / 10.0) * 10.0).ToString("#,0", Fi));
             double milj = kmh / 1e6;
-            return milj.ToString(milj < 10 ? "0.00" : "0.0", Fi) + " milj. km/h";
+            return Kieli.T("ui.iss.nopeus-milj-kmh", milj.ToString(milj < 10 ? "0.00" : "0.0", Fi));
         }
 
         /// <summary>Osuus valon nopeudesta ("2,6 % valon nopeudesta") tai null alle 0,1 %:n.</summary>
         public static string ValoTeksti(double kmh)
         {
             double p = kmh / ValoKmh * 100.0;
-            return p < 0.1 ? null : p.ToString("0.0", Fi) + " % valon nopeudesta";
+            return p < 0.1 ? null : Kieli.T("ui.iss.valon-nopeudesta", p.ToString("0.0", Fi));
         }
 
         /// <summary>Cupolan kehys (IssKyytiNakyma.kupu), joka tärisee paneelin kanssa täydellä teholla.</summary>
@@ -967,9 +967,9 @@ namespace Matkakirja.Natiivi
             {
                 syy = IssKameraKuva.Tila switch
                 {
-                    "ei maata" => "EI MAATA KUVASSA",
-                    "ei kuvauspaikkaa" => "EI KUVA-AINEISTOA",
-                    "keskeytyi" => "KUVAUS KESKEYTYI",
+                    "ei maata" => Kieli.T("ui.iss.ei-maata-kuvassa"),
+                    "ei kuvauspaikkaa" => Kieli.T("ui.iss.ei-kuva-aineistoa"),
+                    "keskeytyi" => Kieli.T("ui.iss.kuvaus-keskeytyi"),
                     _ => null,
                 };
                 if (syy != null) { syyAsti = Time.unscaledTime + ValmisS; Debug.Log("MATKAKIRJA linssit: ohjaamon LCD " + syy); }
@@ -982,8 +982,8 @@ namespace Matkakirja.Natiivi
                 int paalla = Mathf.CeilToInt(e * Segmentteja - 0.001f);
                 for (int i = 0; i < Segmentteja; i++) segmentti[i].EnableInClassList("mk-issohjaamo__segmentti--paalla", i < paalla);
             }
-            if (kaynnissa) return "KEHITETÄÄN…";
-            if (Time.unscaledTime < valmisAsti) return "KUVA VALMIS";
+            if (kaynnissa) return Kieli.T("ui.iss.kehitetaan");
+            if (Time.unscaledTime < valmisAsti) return Kieli.T("ui.iss.kuva-valmis");
             if (syy != null && Time.unscaledTime < syyAsti) return syy;
             return null;
         }

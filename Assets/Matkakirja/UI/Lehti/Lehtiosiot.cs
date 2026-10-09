@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
 {
     public static class Lehtiosiot
     {
-        public const string Otsikko = "LEHDEN OSIOT";
+        public static string Otsikko => Kieli.T("ui.lehti.osiot-otsikko");
         /// <summary>Jutun nimiä osion alla (omistaja 11.2x: 1–2; web OSIOHAKEMISTON_OTSIKOITA 4).</summary>
         public const int Otsikoita = 2;
 
@@ -77,7 +77,7 @@ namespace Matkakirja.Natiivi
                 if (s.Laji != LehtiSivuLaji.Aihe || s.Aihe == null || s.Aihe.Id == "kaupunki") continue;
                 string id = s.Aihe.Id ?? "";
                 bool hetki = id.StartsWith("hetki-", StringComparison.Ordinal);
-                var o = Hae(hetki ? "hetket" : id, hetki ? "Historian hetket" : s.Aihe.Nimi ?? s.Lyhyt ?? id);
+                var o = Hae(hetki ? "hetket" : id, hetki ? Kieli.T("ui.nostomerkit.hetket-koko") : s.Aihe.Nimi ?? s.Lyhyt ?? id);
                 if (o.Sivu < 0) o.Sivu = i;
                 foreach (var n in s.Aihe.Nostot)
                 {
@@ -135,7 +135,7 @@ namespace Matkakirja.Natiivi
                 var tekstit = Rakenne.El("mk-lehti__osio-tekstit", rivi, PickingMode.Ignore);
                 var ensimmainen = o.Jutut.FirstOrDefault();
                 var osio = o;
-                var linkki = Rakenne.Nappi(o.Nimi + " →", "mk-lehti__osio-linkki", () =>
+                var linkki = Rakenne.Nappi(Kieli.T("ui.lehti.osio-linkki", o.Nimi), "mk-lehti__osio-linkki", () =>
                 {
                     if (osio.Sivu >= 0) kaanna(osio.Sivu);
                     else if (ensimmainen != null) Avaa(ensimmainen, kaanna, avaaNosto);

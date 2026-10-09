@@ -1,0 +1,22 @@
+{
+    "name": "SteamAudioUnity",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "!MATKAKIRJA_EI_STEAMAUDIO"
+    ],
+    "versionDefines": [
+        {
+            "name": "Unity",
+            "expression": "2021.2",
+            "define": "STEAMAUDIO_ENABLED"
+        }
+    ],
+    "noEngineReferences": false
+}

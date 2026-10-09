@@ -522,7 +522,15 @@ namespace Matkakirja.Natiivi
                 {
                     PalaNyt = "valmis";
                     Kirjaa($"valmis kappale {teksti.Length} mrk ← {Path.GetFileName(valmis)}");
-                    lataus = StartCoroutine(LataaJaSoita(valmis, () => new UnityWebRequest(valmis, UnityWebRequest.kHttpVerbGET), viiveS, oma, false, true));
+                    // Varareitti (juna 173): valmis ei latautunut → osoite pois istunnon manifestista ja sama kappale palavirtana.
+                    void Varalla()
+                    {
+                        Kirjaa($"valmis kappale ei latautunut ({Valmisluennat.Petti(valmis)} avainta pois) → palavirta");
+                        PalaNyt = null;
+                        lataus = StartCoroutine(SoitaPalat(PyyntoPalat(teksti, sailo, loppuTagi), persoona, lohko, 0f, oma, sailo));
+                    }
+                    lataus = StartCoroutine(LataaJaSoita(valmis, () => new UnityWebRequest(valmis, UnityWebRequest.kHttpVerbGET), viiveS, oma, false, true,
+                        varalla: Varalla));
                     return true;
                 }
             }
@@ -932,7 +940,7 @@ namespace Matkakirja.Natiivi
         }
 
         IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool synteesi, bool sailo,
-            bool viimeinen = true, bool jatko = false)
+            bool viimeinen = true, bool jatko = false, Action varalla = null)
         {
             float alku = Time.unscaledTime;
             // Buildiin mukana (Mukana, löydös 118: avausluenta ilman verkkoa) → suoraan sieltä.
@@ -979,6 +987,7 @@ namespace Matkakirja.Natiivi
                 {
                     ViimeVirhe = virhe;
                     Debug.LogWarning($"MATKAKIRJA puhe: {url} ei latautunut: {virhe}");
+                    if (varalla != null) { varalla(); yield break; }   // valmis kappale → palavirta (juna 173)
                     LatausPetti();
                     yield break;
                 }

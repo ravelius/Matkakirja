@@ -40,6 +40,21 @@ namespace Matkakirja.Linssit
         static string lahdeJson; static List<string> lahdeRivit = new List<string>();
         /// <summary>Tyhjä näyte (Googlen laatat eivät vielä ladattu): uusi yritys näin monta kertaa 3 s välein.</summary>
         public const int NayteYrityksia = 5;
+        /// <summary>Omien mallien ruutuvirheraja (Googlen oma on 8–16): mallit tarkentuvat LOD0:aan pallon etäisyyksillä.</summary>
+        public const float OmaSse = 4f;
+        /// <summary>OMIEN MALLIEN VALO (omistaja 9.10.: Notre-Dame ja Kuninkaanlinna "mahdollisimman hyviksi väreineen ja valaistuksineen"):
+        /// Varjostimet/OmaMalli (aurinko + kaupungin ympäristövalo + ilmaperspektiivi ja loppuilta kuten laatoissa, illalla julkisivuvalaistus
+        /// ja ikkunoiden/lasimaalausten hehku). Asetukset "omavalotus", "omajulkisivu", "omahehku", "omavarjo"; "omavalo 0" = Cesiumin oma.</summary>
+        public static float Valotus = 1f, Julkisivu = 0.9f, Hehku = 4f, VarjoNosto = 0.35f;
+        public static bool OmaValo = true;
+        static Material omaMat;
+        static readonly int IdOmaValo = Shader.PropertyToID("_OmaValo");
+        static Material OmaMateriaali()
+        {
+            if (!OmaValo) return null;
+            if (omaMat == null) { var s = Resources.Load<Shader>("Varjostimet/OmaMalli"); if (s != null && s.isSupported) omaMat = new Material(s) { name = "Oma malli" }; }
+            return omaMat;
+        }
 
         readonly Action<string> kirjaa;
         GameObject juuri;
@@ -57,7 +72,10 @@ namespace Matkakirja.Linssit
         /// <summary>uusin-2.json (9.10., juna 170): kaupunkien omat mallit (Riddarholmen, Concorde) vain buildeille, joissa ilmakehän
         /// laattavarjostimen leikkaus on oikein päin (fa5efa25c); vanhat buildit lukevat uusin.json:ia (vain Giza), muuten niissä
         /// kehityskaupungin koko Googlen kaupunki katoaisi leikkauksen kohdalla.</summary>
-        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-2.json";
+        /// <summary>uusin-3.json (9.10., juna 173; PT/LR: uusi data vain sitä lukeville buildeille): mallit, jotka tarvitsevat
+        /// OmaMallin PBR-kartat, kaupungin auringon ja alfaleikkauksen (ND v5+ korttipuut, COLOR_0-sävyerot). uusin-2 jää vanhoille
+        /// (170–172, nyt v6b), joten niihin ei päädy dataa, jota niiden varjostin ei osaa piirtää.</summary>
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-3.json";
         static string verkkoJson, verkkoJuuri;
         static bool verkkoHaettu, verkkoHaussa;
         /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
@@ -106,6 +124,8 @@ namespace Matkakirja.Linssit
         /// <summary>Joka kehys (CesiumKaupunki.PidaMaski): kameran etäisyys lähimpään omaan malliin ohjaa leikkausta.</summary>
         public void Kamera(Vector3 kamera)
         {
+            Shader.SetGlobalVector(IdOmaValo, new Vector4(Valotus, Julkisivu, Hehku, VarjoNosto));
+            OmatVarjot.Paivita(juuri != null ? juuri.transform : null, mallit.Count > 0, kirjaa);
             if (leikkaus == null || mallit.Count == 0) return;
             float d = float.MaxValue;
             foreach (var m in mallit) if (m.polygoni != null) d = Mathf.Min(d, (m.polygoni.transform.position - kamera).magnitude);
@@ -153,7 +173,10 @@ namespace Matkakirja.Linssit
                 t.showCreditsOnScreen = false;   // oma tekijärivi Tekijat-kentästä
                 t.createPhysicsMeshes = false;
                 t.forbidHoles = true;
-                t.maximumScreenSpaceError = googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f;
+                // Omat mallit tarkemmin kuin Googlen laatat (simu 9.10. 04.5x: Googlen SSE 16 piti 420 m:stä Notre-Damen karkeimmalla LOD2:lla,
+                // virhe 1,7 m → SSE ~15). Mallit ovat pieniä (LOD0 30–120 k), joten LOD0 jo noin 1 km:stä.
+                t.maximumScreenSpaceError = Mathf.Min(OmaSse, googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f);
+                var om = OmaMateriaali(); if (om != null) t.opaqueMaterial = om;   // ennen SetActivea (asetin luo tilesetin uudelleen)
                 var kohde = k;
                 t.OnTileGameObjectCreated += laatta => MalliLadattu(kohde, laatta);
                 go.SetActive(true);
@@ -167,6 +190,7 @@ namespace Matkakirja.Linssit
         public void Sulje()
         {
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
+            OmatVarjot.Pois();
             if (leikkaus != null) UnityEngine.Object.Destroy(leikkaus);
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             leikkaus = null; juuri = null; google = null; mallit.Clear(); Tekijat = null; avattu = null;

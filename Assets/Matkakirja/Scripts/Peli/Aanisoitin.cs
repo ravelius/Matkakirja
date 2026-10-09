@@ -156,7 +156,13 @@ namespace Matkakirja.Natiivi
             if (tunnus != null && Matkakirja.Natiivi.CupolaAani.KorvaaLinssinTaustan(tunnus)) tunnus = null;
             if (tunnus == null) { s.Tila.LinssiTausta(null, 0, 0); return; }
             if (!LinssiTaustat.TryGetValue(tunnus, out var t)) { Debug.Log("MATKAKIRJA aani: tuntematon linssin taustaääni " + tunnus); return; }
-            s.Tila.LinssiTausta(t.Url, t.Voima, t.NousuMs);
+            // Mikseri (PT 9.10.: ISS-äänet rekisteriin): linssin taustaääni omalla tunnuksellaan maisema-ryhmässä (astro-humina iss).
+            // AaniTila.MaisemaTaso kertoo jo TaustanKerroin = maisemaryhmä (Natiivi-UI), joten tässä vain äänen oma kerroin; konteksti
+            // eksplisiittisesti (Aanimikseri.Nyt päivittyy vasta seuraavassa ruudussa linssin avautuessa). Taso luetaan avauksessa.
+            var mik = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            string kon = tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina ? "iss" : "linssit";
+            if (!mik.Rekisteroity(tunnus)) mik.Rekisteroi(kon, "maisema", tunnus, kon == "iss" ? "Astronautin humina" : tunnus, tunnus);
+            s.Tila.LinssiTausta(t.Url, t.Voima * mik.AaniKerroin(kon, tunnus), t.NousuMs);
         }
 
         /// <summary>Linssin raidan himmennys (kellon pysäytys 0,5; jatko 1).</summary>
@@ -227,6 +233,8 @@ namespace Matkakirja.Natiivi
             public bool SilmukkaPyydetty, LoppuIlmoitettu, OdottaaVerkkoa;
             public float KaynnistysAika, Uusinta;
             public int AlkuNayte, Vuoro;
+            /// <summary>Äänimikserin tunnus (maisema/&lt;tiedosto&gt;), rekisteröity ensimmäisellä tasolla; null = ei vielä.</summary>
+            public string MikseriId;
         }
 
         sealed class Latausvirhe { public long Http; public bool Verkko, Aika, Purku; }
@@ -467,6 +475,29 @@ namespace Matkakirja.Natiivi
             return null;
         }
 
+        static HashSet<string> linssiTaustaUrlit;
+        static bool OnLinssiTausta(string url)
+        {
+            if (linssiTaustaUrlit == null)
+            {
+                linssiTaustaUrlit = new HashSet<string>(StringComparer.Ordinal);
+                foreach (var t in LinssiTaustat.Values) { linssiTaustaUrlit.Add(t.Url); linssiTaustaUrlit.Add(AaniOsoite.Url(t.Url)); }
+            }
+            return linssiTaustaUrlit.Contains(url) || linssiTaustaUrlit.Contains(AaniOsoite.Url(url));
+        }
+
+        static double MaisemaKerroin(Lahde l)
+        {
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            if (l.MikseriId == null)
+            {
+                string tiedosto = Path.GetFileNameWithoutExtension(Aanilataus.LevyNimi(l.Url) ?? "maisema");
+                l.MikseriId = Matkakirja.Natiivi.Aanet.MikseriId("maisema/", tiedosto);
+                m.Rekisteroi(m.Nyt, "maisema", l.MikseriId, "Äänimaisema: " + tiedosto, l.A.clip != null ? l.A.clip.name : l.MikseriId);
+            }
+            return m.AaniKerroin(m.Nyt, l.MikseriId);
+        }
+
         /// <summary>
         /// Lähteen taso: maisemalla kompressorin jälkeen suodattimessa (volume 1, ei leikkausta, web-gain),
         /// muilla AudioSource.volume = min(1, taso).
@@ -474,6 +505,10 @@ namespace Matkakirja.Natiivi
         static void AsetaTaso(Lahde l, double taso)
         {
             if (l.A == null) return;
+            // Äänimikseri (Natiivi-UI:n rekisteri, juna 172): kartan äänimaisemakorin äänite omalla tunnuksellaan ryhmään maisema
+            // soittohetken kontekstissa; taso × äänen kerroin (ryhmätaso tulee jo Tausta-voimasta AaniTilan kautta).
+            // Linssin taustaääni (LinssiTaustat) on myös Maisema-kanavalla, mutta sillä on linssin oma tunnus ja kerroin (LS2) → ohi.
+            if (l.Kanava == Kanava.Maisema && taso > 0 && !string.IsNullOrEmpty(l.Url) && !OnLinssiTausta(l.Url)) taso *= MaisemaKerroin(l);
             if (l.Komp != null) { l.A.volume = 1f; l.Komp.Taso = (float)taso; }
             else l.A.volume = (float)Math.Min(1.0, taso);
         }
@@ -591,6 +626,59 @@ namespace Matkakirja.Natiivi
             l.AlkuNayte = a.timeSamples;
         }
 
+        int jaksoTaukoNahty;
+        float jaksoTaukoLoppuu;
+
+        // --- KAUPUNKI-INTRO (Pariisin nykyintro, kohta 4): musiikin ajoitus intron kohtaukseen 1 ---------------------------
+        /// <summary>
+        /// Intron musiikkitahti alkaa: nopea kappale soi (t0 = sen todellinen alku, myös jo soivasta laskettuna). Intro aloittaa
+        /// kohtauksen 1 tästä ruudusta. Argumentti: kaupunki ja nopean kappaleen kohta sekunteina (0 = juuri alkoi).
+        /// </summary>
+        public static event Action<string, float> KaupunkiIntroAlkoi;
+        readonly KaupunkiIntroKello intro = new KaupunkiIntroKello();
+        string introUrl;
+
+        /// <summary>
+        /// Intro pyytää kaupunkijakson ajoitusta: nopea katkeaa katkoS:ssä (häivytys haivytysS) ja hidas alkaa hidasS:ssä ilman
+        /// jakson taukoa. Kutsutaan saapumisen yhteydessä (ennen tai jälkeen Paikka-tapahtuman) tai linssin ollessa auki
+        /// (AaniTila.JaksonIntroAlusta: nopea alkaa heti pidon ohi, hitaan loppu palauttaa pidon). Jos musiikki ei voi soida
+        /// (musiikki tai äänimaisema pois), kello käy hiljaa ja KaupunkiIntroAlkoi(k, 0) laukeaa heti. false = kaupungilla ei jaksoa.
+        /// </summary>
+        public bool KaupunkiIntro(string kaupunki, float katkoS = 31f, float haivytysS = 2f, float hidasS = 32f)
+        {
+            var polku = Tila?.JaksonNopea(kaupunki);
+            if (polku == null) return false;
+            introUrl = AaniOsoite.Url(polku);
+            bool hiljainen = !Tila.JaksoVoiSoida(kaupunki);
+            intro.Aloita(kaupunki, katkoS, haivytysS, hidasS, hiljainen);
+            if (!hiljainen) Tila.JaksonIntroAlusta(kaupunki); // linssi auki (pallon opas): nopea alusta pidon ohi; muuten Paikka käynnistää jakson
+            else Debug.Log($"MATKAKIRJA aani: kaupunki-intro {kaupunki} hiljaisella kellolla (musiikki pois)");
+            return true;
+        }
+
+        /// <summary>
+        /// Intron ohitus (napautus hyppää kohtaukseen 7 eli siirtymään vanhaan): musiikki tekee heti saman kuin katkoS:ssä, eli
+        /// nopean häivytys alkaa nyt ja hidas alkaa (hidasS − katkoS) myöhemmin. Toimii missä tahansa intron kohdassa, myös ennen
+        /// kuin nopea on alkanut soida (KaupunkiIntroAlkoi ei silloin enää laukea). false = intro ei ole käynnissä.
+        /// </summary>
+        public bool KaupunkiIntroOhita()
+        {
+            if (!intro.Ohita()) return false;
+            Debug.Log($"MATKAKIRJA aani: kaupunki-intro {intro.Kaupunki} ohitettu");
+            return true;
+        }
+
+        void PaivitaIntro(float nyt, Action<Action> tee)
+        {
+            if (!intro.Kaynnissa) return;
+            var l = nykyiset[(int)Kanava.Pohja];
+            float? kohta = l != null && l.Kaynnistetty && l.A != null && l.Url == introUrl ? l.A.time : (float?)null;
+            intro.Paivita(nyt, kohta,
+                (k, t) => { tee(() => KaupunkiIntroAlkoi?.Invoke(k, t)); Debug.Log($"MATKAKIRJA aani: kaupunki-intro {k} alkoi (nopea {t:0.00} s)"); },
+                ms => tee(() => Tila.JaksonIntroKatko(ms)),
+                () => tee(() => Tila.JaksonIntroHidas()));
+        }
+
         void Update()
         {
             if (jaassa || Tila == null) return;
@@ -599,6 +687,10 @@ namespace Matkakirja.Natiivi
             List<Action> teot = null;
             void Tee(Action a) => (teot ??= new List<Action>()).Add(a);
             PaivitaPooli(dt);
+            // Kaupunkijakson tauko (AaniTila.JaksonTaukoNro/Ms): ajastus täällä, siirtymä hitaaseen kappaleeseen koneessa.
+            if (Tila.JaksonTaukoNro != jaksoTaukoNahty) { jaksoTaukoNahty = Tila.JaksonTaukoNro; jaksoTaukoLoppuu = nyt + Tila.JaksonTaukoMs / 1000f; }
+            if (jaksoTaukoLoppuu > 0 && nyt >= jaksoTaukoLoppuu) { jaksoTaukoLoppuu = 0; int nro = jaksoTaukoNahty; Tee(() => Tila.JaksonTaukoOhi(nro)); }
+            PaivitaIntro(nyt, Tee);
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
             for (int i = elavat.Count - 1; i >= 0; i--)

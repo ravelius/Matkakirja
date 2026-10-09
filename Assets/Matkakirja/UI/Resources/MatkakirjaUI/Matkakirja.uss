@@ -1090,6 +1090,8 @@
 .mk-saadin {
     flex-grow: 1;
     flex-shrink: 1;
+    /* Sisällön mittainen paneeli (mikseri pallon päällä, TF 172): ilman vähimmäisleveyttä ura sai 0 px ja nupit olivat päällekkäin. */
+    min-width: 96px;
     height: 26px;
     margin: -5px 8px;
 }
@@ -1161,6 +1163,7 @@
    kosketusala 26, korkeus 120; Unity asettaa nupin top-arvon itse, joten vaakasäätimen top/margin-top nollataan. */
 .mk-saadin.mk-saadin--pysty {
     flex-grow: 0;
+    min-width: 0;
     width: 26px;
     height: 120px;
     margin: 0;

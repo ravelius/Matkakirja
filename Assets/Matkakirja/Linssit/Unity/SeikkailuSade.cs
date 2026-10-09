@@ -101,6 +101,7 @@ namespace Matkakirja.Natiivi
                     l = gameObject.AddComponent<AudioSource>();
                     l.clip = klippi; l.loop = true; l.spatialBlend = 0f; l.playOnAwake = false; l.volume = 0f;
                     l.time = UnityEngine.Random.Range(0f, Mathf.Max(0f, klippi.length - 0.1f));   // silmukat eri kohdista, ei yhtäaikaisia saumoja
+                    SaumatonSilmukka.Kiinnita(l);   // saumaton: iOS-FMOD:n kooderiviive ja täyte eivät soi (juna 174)
                     l.Play(); lahteet[t] = l;
                 }
                 float nyt = l.volume / Mathf.Max(taso, 1e-4f);

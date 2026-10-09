@@ -188,7 +188,7 @@ namespace Matkakirja.Natiivi
                     Uppoutunut = seisoo && eka.Tunnus.StartsWith("harja", StringComparison.Ordinal),   // huone 8: katsovat järvelle
                     Torkkuu = istuu && eka.Profiili != null, Syo = istuu && (eka.Tunnus.StartsWith("linnavaki", StringComparison.Ordinal) || eka.Tunnus.StartsWith("noppa", StringComparison.Ordinal)) }, Agentti = ag, Osa = eka.Osa ?? kv.Key, Nimi = kv.Key, Henkilo = henkilo, Askeleet = SeikkailuKuulija.Lahde("Askeleet:" + kv.Key, 2f, 28f) };
                 foreach (var pm in d.Lajia("piilo")) v.Aivot.Piilot.Add((pm.X, -pm.Z));   // vaihe 3: piilot ja varjot etsintään
-                v.Askeleet.loop = true; v.Askeleet.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet);
+                v.Askeleet.loop = true; SaumatonSilmukka.Kiinnita(v.Askeleet); v.Askeleet.volume = 0.9f * SeikkailuAanet.Taso("tehosteet", VartijanAskeleet);
                 // Kannettu valo (pelattavuusmalli 8.1: portinvartijan lyhty, portaiden vastaantulijan soihtu): oikea pistevalo ilman varjoja,
                 // joten valo kasvaa kierreportaan kaarevalla seinällä ennen kuin kantaja tulee näkyviin; liekki käden kohdalle, hehku laatutasolla.
                 var kantaja = kv.Value.Find(x => x.Lyhty || x.Soihtu);
@@ -482,7 +482,7 @@ namespace Matkakirja.Natiivi
         /// silmukkana jalkojen kohdalta, voimakkuus pinnan ja liiketavan mukaan, tahti nopeudesta. Hiivintä kuuluu itselle hiljaa.</summary>
         void OmatAskeleet(SeikkailuPelaaja p, string pinta, Vector3 jalat, double markyys = 0)
         {
-            if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; }
+            if (omatAskeleet == null) { omatAskeleet = SeikkailuKuulija.Lahde("Askeleet:pelaaja", 1f, 12f); omatAskeleet.loop = true; SaumatonSilmukka.Kiinnita(omatAskeleet); }
             var (tunnukset, voima) = Askelaani.OmaAskel(pinta, p.Tila.Tapa, markyys);
             // SOUNDLY-ASKELEET (olavinlinna-soundly-v1, Siirtoseppä 9.10.): pinnalle, jolla on pankissa kertaääniä, yksi askel askelpituuden
             // välein (hiipiminen 0,55, kävely 0,75, juoksu 1,1 m), muunnelma satunnaisesti, hiivinnässä vaatteen kahina päälle; puu ja laituri
@@ -493,6 +493,9 @@ namespace Matkakirja.Natiivi
             if (SeikkailuAanet.Askel(pintaN, marka) != null)
             {
                 if (omatAskeleet.isPlaying) omatAskeleet.Stop();
+                // Kertaäänet omasta lähteestä: silmukan ohjauslähde on mykistetty (SaumatonSilmukka soittaa kaksoslähteillä).
+                if (omatKerta == null) omatKerta = SeikkailuKuulija.Lahde("Askeleet:pelaaja-kerta", 1f, 12f);
+                SeikkailuKuulija.Aseta(omatKerta, jalat + Vector3.up * 0.05f);
                 var vaaka = new Vector3(jalat.x, 0f, jalat.z);
                 if (!liikkeessa || edellinenJalka is not Vector3 ed) { edellinenJalka = vaaka; askelMatka = 0f; return; }
                 askelMatka += Vector3.Distance(ed, vaaka); edellinenJalka = vaaka;
@@ -502,9 +505,9 @@ namespace Matkakirja.Natiivi
                 var k = SeikkailuAanet.Askel(pintaN, marka);
                 SeikkailuAanet.KirjaaPankki("askel-" + (marka ? "marka" : pintaN), k);
                 float taso = voima * SeikkailuAanet.Taso("tehosteet", PelaajanAskeleet);
-                omatAskeleet.volume = 1f; omatAskeleet.pitch = 1f;
-                omatAskeleet.PlayOneShot(k, taso * UnityEngine.Random.Range(0.85f, 1f));
-                if (p.Tila.Tapa == Liiketapa.Hiipiminen && SeikkailuAanet.Kahina() is AudioClip kh) omatAskeleet.PlayOneShot(kh, taso * 0.6f);
+                omatKerta.volume = 1f; omatKerta.pitch = 1f;
+                omatKerta.PlayOneShot(k, taso * UnityEngine.Random.Range(0.85f, 1f));
+                if (p.Tila.Tapa == Liiketapa.Hiipiminen && SeikkailuAanet.Kahina() is AudioClip kh) omatKerta.PlayOneShot(kh, taso * 0.6f);
                 return;
             }
             edellinenJalka = null;
@@ -521,7 +524,7 @@ namespace Matkakirja.Natiivi
             if (!omatAskeleet.isPlaying) omatAskeleet.Play();
         }
 
-        Vector3? edellinenJalka; float askelMatka;
+        Vector3? edellinenJalka; float askelMatka; AudioSource omatKerta;
         const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f;
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
@@ -795,6 +798,7 @@ namespace Matkakirja.Natiivi
             foreach (var h in henkilot) { hahmot?.PoistaIrralliset(h); DioraamaHahmot3D.PiilotetutHenkilot.Remove(h); }
             foreach (var v in vartijat) if (v.Askeleet != null) Destroy(v.Askeleet.gameObject);
             if (omatAskeleet != null) Destroy(omatAskeleet.gameObject);
+            if (omatKerta != null) Destroy(omatKerta.gameObject);
             if (navi.valid) NavMesh.RemoveNavMeshData(navi);
             if (data != null) Destroy(data);
         }

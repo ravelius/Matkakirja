@@ -926,6 +926,20 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "nytrivi":
+                {
+                    // "ui nytrivi [kaupunki]": Pariisin intron nyt-rivi (NytRivi.cs) testiksi, oletus pariisi.
+                    var nk = UiSisalto.Kaupunki(string.IsNullOrWhiteSpace(loput) ? "pariisi" : loput.Trim());
+                    if (nk == null) return "=nytrivi: tuntematon kaupunki";
+                    NytRivi.Nayta(nk.Nimi, nk.Lat, nk.Lon, nk.Id);
+                    return "=nytrivi: " + nk.Nimi;
+                }
+                case "puluvienti":
+                    // "ui puluvienti [europe|ISO3,ISO3…] | tila": Kysy-kohdat konteksteineen Pulun esigenerointiin (omistaja 9.10.2026).
+                    return "=" + (loput.Trim() == "tila" ? "puluvienti: " + PuluVienti.Tila : PuluVienti.Aloita(loput));
+                case "nostoluennat":
+                    // "ui nostoluennat [europe|ISO3,ISO3…] | tila": nostojen luettavat palat esigenerointiin (Pelikoodari 9.10.2026).
+                    return "=" + (loput.Trim() == "tila" ? "nostoluennat: " + NostoluentaVienti.Tila : NostoluentaVienti.Aloita(loput));
                 case "aanet":
                 {
                     // "ui aanet vahti | tila | konteksti <nimi>": äänirekisteri ja konteksti-mikseri (omistaja 9.10.2026 klo 09.5x).

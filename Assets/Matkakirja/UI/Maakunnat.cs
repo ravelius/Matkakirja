@@ -150,8 +150,8 @@ namespace Matkakirja.Natiivi
             peukalo = Rakenne.El("mk-peukalo mk-peukalo--tyhja", lista, PickingMode.Ignore);
             peukalo.style.display = DisplayStyle.None;
             lista.RegisterCallback<GeometryChangedEvent>(_ => SiirraPeukalo());
-            tila = Rakenne.Teksti("Ladataan…", "mk-maakunnat__tila", lista);
-            eiMaakuntia = Rakenne.Teksti("Tälle maalle ei ole vielä maakuntia", "mk-maakunnat__tila", lista);
+            tila = Rakenne.Teksti(Kieli.T("ui.maakunnat.ladataan"), "mk-maakunnat__tila", lista);
+            eiMaakuntia = Rakenne.Teksti(Kieli.T("ui.maakunnat.ei-maakuntia"), "mk-maakunnat__tila", lista);
             eiMaakuntia.style.display = DisplayStyle.None;
 
             kuvaus = Rakenne.El("mk-maakunnat__luonnehdinta", juuri);
@@ -167,7 +167,7 @@ namespace Matkakirja.Natiivi
         {
             if (rakennettu || haussa) { if (rakennettu) { SovitaMaa(); SiirraPeukalo(); } return; }
             haussa = true;
-            tila.text = "Ladataan…";
+            tila.text = Kieli.T("ui.maakunnat.ladataan");
             UiKerros.Hae().StartCoroutine(Lataa());
         }
 
@@ -220,12 +220,12 @@ namespace Matkakirja.Natiivi
             string nimi = Nimi(avain), maaNimi = MaanNimi(avain), pitka = data.Pitka ?? data.Lyhyt;
             var n = new Nosto
             {
-                Laji = NostoLaji.Maakunta, Id = valo, Iso = Jaa(avain).Iso, Luokka = "MAAKUNTA", Otsikko = nimi, Teksti = pitka,
+                Laji = NostoLaji.Maakunta, Id = valo, Iso = Jaa(avain).Iso, Luokka = Kieli.T("ui.maakunnat.luokka"), Otsikko = nimi, Teksti = pitka,
                 Kylkikartta = MaakuntaMinikartta.Hae(avain),
                 ValmiitKysymykset = HaePulu(avain),
                 PuluAihe = new PuluChat.Aihe
                 {
-                    Otsake = "Maakuntakortti, josta pelaaja kysyy",
+                    Otsake = "Maakuntakortti, josta pelaaja kysyy",   // kieli: ei (kielimallille lähtevä data (PuluChat.Aihe.Otsake))
                     Nimi = string.IsNullOrEmpty(maaNimi) ? nimi : $"{nimi} ({maaNimi})",
                     Tyyppi = "maakunta",
                     Teksti = pitka,
@@ -245,7 +245,7 @@ namespace Matkakirja.Natiivi
             var iso = Jaa(valo.Substring(Nostokortti.MaakuntaEtuliite.Length)).Iso;
             var m = maat?.FirstOrDefault(x => x.Iso == iso);
             if (m == null) return null;
-            var l = new Nostoselain.Lista { Otsikko = m.Nimi + " · Maakunnat", Siru = "Maakunnat", Avaaja = "MAAKUNNAT", Luettu = luetut.Contains };
+            var l = new Nostoselain.Lista { Otsikko = Kieli.T("ui.maakunnat.lista-otsikko", m.Nimi), Siru = Kieli.T("ui.maakunnat.siru"), Avaaja = Kieli.T("ui.maakunnat.avaaja"), Luettu = luetut.Contains };
             foreach (var (tunnus, nimi) in m.Alueet)
                 if (HaeLuonnehdinta(iso + ":" + tunnus) != null) l.Rivit.Add((Nostokortti.MaakuntaEtuliite + iso + ":" + tunnus, nimi));
             return l;
@@ -302,7 +302,7 @@ namespace Matkakirja.Natiivi
             }
             if (maat == null || maat.Count == 0)
             {
-                tila.text = "Maakuntia ei saatu ladattua.";
+                tila.text = Kieli.T("ui.maakunnat.ei-ladattu");
                 yield break;
             }
             Rakenna();
@@ -413,15 +413,15 @@ namespace Matkakirja.Natiivi
                     valinnat.userData = ValinnatLuokka;
                     string kaikkiAvain = iso + KaikkiTunnus;
                     var kaikkiRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois mk-maakunnat__rivi--kaikki", () => Valitse(kaikkiAvain), valinnat);
-                    Kirjasimet.Aseta(Rakenne.Teksti("Kaikki", "mk-maakunnat__nimi", kaikkiRivi), Kirjasin.Luku);
-                    kaikkiRivi.tooltip = "Koko maa, ei rajausta";
+                    Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.maakunnat.kaikki"), "mk-maakunnat__nimi", kaikkiRivi), Kirjasin.Luku);
+                    kaikkiRivi.tooltip = Kieli.T("ui.maakunnat.koko-maa");
                     kaikkiRivi.pickingMode = PickingMode.Ignore;
                     kaikkiRivi.userData = kaikkiAvain;
                     rivit[kaikkiAvain] = kaikkiRivi;
                     string poisAvain = iso + PoisTunnus;
                     var poisRivi = Rakenne.Nappi(null, "mk-maakunnat__rivi mk-maakunnat__rivi--pois", () => Valitse(poisAvain), valinnat);
-                    Kirjasimet.Aseta(Rakenne.Teksti("Pois", "mk-maakunnat__nimi", poisRivi), Kirjasin.Luku);
-                    poisRivi.tooltip = "Maakunnat pois kartalta";
+                    Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.maakunnat.pois"), "mk-maakunnat__nimi", poisRivi), Kirjasin.Luku);
+                    poisRivi.tooltip = Kieli.T("ui.maakunnat.pois-kartalta");
                     poisRivi.pickingMode = PickingMode.Ignore;
                     poisRivi.userData = poisAvain;
                     rivit[poisAvain] = poisRivi;
@@ -684,7 +684,7 @@ namespace Matkakirja.Natiivi
             {
                 // Maakuntakartta ilman valintaa: ohje, mistä valitaan.
                 kuvaus.style.display = DisplayStyle.Flex;
-                Kirjasimet.Aseta(Rakenne.Teksti("Napauta maakuntaa kartalla.", "mk-maakunnat__lteksti mk-maakunnat__ohje", kuvaus), Kirjasin.Luku);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.maakunnat.napauta-kartalla"), "mk-maakunnat__lteksti mk-maakunnat__ohje", kuvaus), Kirjasin.Luku);
                 return;
             }
             if (ValittuAvain == null) { kuvaus.style.display = DisplayStyle.None; return; }
@@ -713,16 +713,16 @@ namespace Matkakirja.Natiivi
                     paikka.RemoveFromHierarchy();
                 });
             if (data != null) kuva.RegisterCallback<ClickEvent>(_ => AvaaKortti(avain));
-            var t = Rakenne.Teksti(data?.Lyhyt ?? "Luonnehdinta tulossa.", "mk-maakunnat__lteksti", rivi);
+            var t = Rakenne.Teksti(data?.Lyhyt ?? Kieli.T("ui.maakunnat.tulossa"), "mk-maakunnat__lteksti", rivi);
             Kirjasimet.Aseta(t, Kirjasin.Luku);
             if (data != null)
             {
                 // Löydös 116 (omistaja, build 14; Fablen valinta): ⊕ pois, tekstin loppuun "Lue lisää". Koko teksti on
                 // napautettava (pieni linkki yksinään olisi liian pieni osuma).
                 t.enableRichText = true;
-                t.text = (data.Lyhyt ?? "") + " <color=#7a5514><u>Lue lisää</u></color>";
+                t.text = (data.Lyhyt ?? "") + " <color=#7a5514><u>" + Kieli.T("ui.maakunnat.lue-lisaa") + "</u></color>";   // kieli: ei (rich text -merkintä, sana avaimena)
                 t.pickingMode = PickingMode.Position;
-                t.tooltip = "Lisää alueesta";
+                t.tooltip = Kieli.T("ui.maakunnat.lisaa-alueesta");
                 t.RegisterCallback<ClickEvent>(_ => AvaaKortti(avain));
             }
         }

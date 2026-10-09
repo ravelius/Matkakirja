@@ -42,18 +42,21 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(UiKerros.Tilarivi);
             palkki = Rakenne.Nappi(null, "tk-teema-paperi mk-pinpalkki", Palauta, turva);
             palkki.style.display = DisplayStyle.None;
-            palkki.tooltip = "Palauta pinnattu ikkuna";
+            palkki.tooltip = Kieli.T("ui.pinnaus.palauta");
             var rivi = Rakenne.El("mk-pinpalkki__rivi", palkki, PickingMode.Ignore);
             Rakenne.Ikoni(Ikonit.Viiva["pin"], "mk-pinpalkki__pin", rivi);
             otsikko = Rakenne.Teksti("", "mk-pinpalkki__otsikko", rivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.Kone);
             tauko = Rakenne.Nappi(null, "mk-pinpalkki__tauko", VaihdaTauko, rivi, Ikonit.Tauko);
-            tauko.tooltip = "Tauko";
+            tauko.tooltip = Kieli.T("ui.yleinen.tauko");
             raita = Rakenne.El("mk-edistyminen mk-pinpalkki__edistyminen", palkki, PickingMode.Ignore);
             taytto = Rakenne.El("mk-edistyminen__taytto", raita, PickingMode.Ignore);
             // Uuden noston ensimmäinen kuva palkin alla 3 s (omistaja 6.10. 23.0x), palkin levyisenä ilman kehystä ja tekstiä.
             kuva = Rakenne.El("mk-pinpalkki__kuva", turva, PickingMode.Ignore);
             kuva.style.display = DisplayStyle.None;
+            // AUTOlla kuva pysyy ja napautus sulkee sen tältä nostolta (omistaja 9.10.2026 klo 10.1x).
+            kuva.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); SuljeKuva(); });
+            kuva.tooltip = Kieli.T("ui.pinnaus.sulje-kuva");
             Puhe.PinnattuMuuttui += PuheMuuttui;
             // Omistaja 6.10. 23.0x: "tilapalkki saisi näyttää koko noston pituutta ei kappaleen": kortin luennalla koko
             // luennan eteneminen (KortinLukija.KokoEdistyminen), muuten (Pulun chat) soivan palan.
@@ -166,6 +169,9 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Uuden pinnatun noston ensimmäinen kuva palkin alle 3 s:ksi, sitten häivytys (--tk-kesto-sulku 200 ms). null = ei kuvaa
         /// (mitään ei näytetä). Leveys palkin, korkeus kuvan suhteesta; kulmat kulma.nappi, ei kehystä eikä tekstiä.
+        /// AUTO PÄÄLLÄ (omistaja 9.10.2026 klo 10.1x: "kuva saisi pysyä näkyvissä kokoajan, kunnes uusi kuva tulee sen tilalle. käyttäjä
+        /// voi sulkea kuvan klikkaamalla sitä. uusi kuva tulee kuitenkin näkyville taas pysyvästi sitten kun siirrytään seuraavaan kuvaan
+        /// auton ollessa päällä"): kuva pysyy, kunnes seuraavan noston kuva korvaa sen; napautus sulkee sen vain tältä nostolta.
         /// </summary>
         public static void NaytaKuva(string url)
         {
@@ -186,8 +192,10 @@ namespace Matkakirja.Natiivi
                     if (v != p.kuvaVersio) return;
                     p.SijoitaKuva(suhde);
                     p.kuva.style.display = DisplayStyle.Flex;
+                    p.kuva.pickingMode = Nostoselain.Auto ? PickingMode.Position : PickingMode.Ignore;
                     p.kuva.schedule.Execute(() => { if (v == p.kuvaVersio) p.kuva.style.opacity = 1f; });
                 }).StartingIn(50);
+                if (Nostoselain.Auto) { Debug.Log("MATKAKIRJA ui pinnaus: kuva pysyy (AUTO)"); return; }
                 p.kuva.schedule.Execute(() =>
                 {
                     if (v != p.kuvaVersio) return;
@@ -207,6 +215,16 @@ namespace Matkakirja.Natiivi
             kuva.style.top = r.yMax + Tyylikirja.Vali.Xs;
             kuva.style.width = r.width;
             kuva.style.height = Mathf.Round(r.width * Mathf.Clamp(suhde, 0.4f, 1f));
+        }
+
+        /// <summary>Kuvan napautus (AUTO): kuva pois tältä nostolta; seuraava nosto tuo uuden kuvan taas pysyvästi.</summary>
+        void SuljeKuva()
+        {
+            int v = ++kuvaVersio;
+            kuva.pickingMode = PickingMode.Ignore;
+            kuva.style.opacity = 0f;
+            kuva.schedule.Execute(() => { if (v == kuvaVersio) kuva.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+            Debug.Log("MATKAKIRJA ui pinnaus: kuva suljettu napautuksella");
         }
 
         void NaytaPalkki(bool nayta)
@@ -341,7 +359,7 @@ namespace Matkakirja.Natiivi
                 tauko.EnableInClassList("mk-pinpalkki__tauko--jatka", tauolla);
                 tauko.Clear();
                 tauko.Add(new SvgIkoni(tauolla ? Ikonit.Toista : Ikonit.Tauko));
-                tauko.tooltip = tauolla ? "Jatka" : "Tauko";
+                tauko.tooltip = Kieli.T(tauolla ? "ui.yleinen.jatka" : "ui.yleinen.tauko");
             }
         }
 

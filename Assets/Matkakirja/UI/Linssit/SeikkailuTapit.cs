@@ -62,6 +62,13 @@ namespace Matkakirja.Natiivi
         }
         /// <summary>Testi `ui seikkailutapit toiminto poimi|heita|auto`: napin tila ilman SeikkailuEsineitä.</summary>
         public static string TestiToiminto;
+        /// <summary>Asettelutesti: tapit (levossa näkymättöminä paikallaan) ja toimintonappi nimineen.</summary>
+        public static IEnumerable<(string Nimi, VisualElement E)> TestiAvainnapit()
+        {
+            yield return ("liiketappi", vasen?.Juuri);
+            yield return ("katsetappi", oikea?.Juuri);
+            yield return ("toimintonappi", viimeisin?.toimintoNappi);
+        }
         readonly UiKerros kerros;
         readonly int kerrosNro;
 
@@ -432,6 +439,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tietokerros tarjolla (NaytaTietokerros kutsuttu, seikkailu käynnissä): linnan ☰-valikon Tietoa-rivi.</summary>
         public static bool TietokerrosTarjolla => tkOtsikot != null;
+        /// <summary>Asettelutesti: tietokerroksen kortiston himmennys (kortti ja Takaisin sen sisällä), null ennen avausta.</summary>
+        public static VisualElement TestiTietokerros => tkHimmennys;
 
         /// <summary>Linnan ☰ → Tietoa (ilman Pulua, Päätoimittaja 8.10.): sama kortisto kuin Pulun napautuksesta.</summary>
         public static void AvaaTietokerrosValikosta()

@@ -113,8 +113,8 @@ namespace Matkakirja.Natiivi
         public void LisaaOhita(Kupla k)
         {
             if (k == null) return;
-            var nappi = Rakenne.Nappi("<u>Ohita</u>", "mk-kupla__ohita", () => Kuittaa(k));
-            nappi.tooltip = "Ohita Livian tervehdys";
+            var nappi = Rakenne.Nappi("<u>" + Kieli.T("ui.aloitus.ohita") + "</u>", "mk-kupla__ohita", () => Kuittaa(k));
+            nappi.tooltip = Kieli.T("ui.pulu.ohita-livian-tervehdys");
             var hanta = k.El.Q(className: "mk-kupla__hanta");
             if (hanta != null) k.El.Insert(k.El.IndexOf(hanta), nappi); else k.El.Add(nappi);
         }

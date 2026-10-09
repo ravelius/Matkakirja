@@ -22,19 +22,19 @@ namespace Matkakirja.Natiivi
     public static class Kuvavinkki
     {
         /// <summary>Käyttöluvat: sama suljettu lista kuin workerissa (KAYTTOLUVAT).</summary>
-        public static readonly (string Arvo, string Nimi)[] Kayttoluvat =
+        public static (string Arvo, string Nimi)[] Kayttoluvat => new (string Arvo, string Nimi)[]
         {
-            ("sellaisenaan", "Kuvaa saa käyttää pelissä sellaisenaan"),
-            ("taustatieto", "Vain taustatiedoksi kohteesta — kuvaa ei julkaista"),
+            ("sellaisenaan", Kieli.T("ui.kuvavinkki.kayttolupa-sellaisenaan")),
+            ("taustatieto", Kieli.T("ui.kuvavinkki.kayttolupa-taustatieto")),
         };
 
         /// <summary>Web kuvavinkkiOsio: väkänen, lomake rakennetaan vasta avattaessa (pro-tarkistus on verkkopyyntö).</summary>
         public static Vakalohko Osio(VisualElement isa, string sivu) =>
-            Lomake.Vakanen(isa, "Vinkkaa paikasta kuvalla", s => Rakenna(s, sivu: sivu));
+            Lomake.Vakanen(isa, Kieli.T("ui.kuvavinkki.vinkkaa"), s => Rakenna(s, sivu: sivu));
 
         /// <summary>Web avaaKuvapalaute: sama lomake minipopupissa havainnekuvan tunnuksella.</summary>
         public static Minipopup AvaaKuvapalaute(string kuvatunnus, string kuvalahde, string sivu, int kerros = UiKerros.Valikot) =>
-            Minipopup.Avaa("Lähetä palautetta tästä kuvasta", s => Rakenna(s, kuvatunnus, kuvalahde, sivu), "mk-kuvapalaute", kerros);
+            Minipopup.Avaa(Kieli.T("ui.kuvavinkki.palaute-otsikko"), s => Rakenna(s, kuvatunnus, kuvalahde, sivu), "mk-kuvapalaute", kerros);
 
         /// <summary>Web kuvavinkkiLomake: ilman kuvatunnusta paikkavinkki, sen kanssa kuvapalaute.</summary>
         public static VisualElement Rakenna(VisualElement isa, string kuvatunnus = "", string kuvalahde = "", string sivu = "", Action onnistui = null)
@@ -43,42 +43,37 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-palaute__kuvavinkki", isa, PickingMode.Ignore);
 
             Lomake.Teksti(lohko, palaute
-                ? "Kerro, mikä kuvassa on pielessä — tai lähetä oma valokuvasi "
-                  + "kohteesta. Molemmat auttavat: teksti kertoo mitä korjata, kuva "
-                  + "näyttää sen."
-                : "Näitkö paikan, joka kuuluisi peliin? Muistolaatta, patsas, "
-                  + "rakennus tai näkymä — lähetä kuva ja kerro, missä se on. "
-                  + "Tiimi käy vinkit läpi.");
+                ? Kieli.T("ui.kuvavinkki.johdanto-palaute")
+                : Kieli.T("ui.kuvavinkki.johdanto-vinkki"));
             if (palaute && !string.IsNullOrEmpty(kuvalahde))
-                Lomake.Huomio(lohko, "Palaute koskee kuvaa: " + kuvalahde).AddToClassList("mk-palaute__kursiivi");
+                Lomake.Huomio(lohko, Kieli.T("ui.kuvavinkki.palaute-koskee", kuvalahde)).AddToClassList("mk-palaute__kursiivi");
 
             var kuvat = new Kuvavalinta(lohko, palaute
-                ? $"Oma valokuvasi kohteesta (vapaaehtoinen, enintään {Palautekanava.Kuvia})"
-                : $"Kuva paikasta (enintään {Palautekanava.Kuvia})", Palautekanava.Kuvia, Palautekanava.KuvavinkinSivu);
+                ? Kieli.T("ui.kuvavinkki.oma-kuva-palaute", Palautekanava.Kuvia)
+                : Kieli.T("ui.kuvavinkki.kuva-paikasta", Palautekanava.Kuvia), Palautekanava.Kuvia, Palautekanava.KuvavinkinSivu);
             var paikka = Lomake.Kentta(lohko, palaute
-                ? "Paikka tai kaupunki (vapaaehtoinen)"
-                : "Paikka ja kaupunki — esim. \"Ritavuoren muistolaatta, Helsinki\"");
+                ? Kieli.T("ui.kuvavinkki.paikka-palaute")
+                : Kieli.T("ui.kuvavinkki.paikka-vinkki"));
             var teksti = Lomake.Kentta(lohko, palaute
-                ? "Mikä kuvassa ei vastaa todellisuutta?"
-                : "Mikä paikka tämä on ja miksi se kiinnostaisi? (vapaaehtoinen)", Kenttalaji.Monirivi);
+                ? Kieli.T("ui.kuvavinkki.teksti-palaute")
+                : Kieli.T("ui.kuvavinkki.teksti-vinkki"), Kenttalaji.Monirivi);
 
             // OIKEUDET: molemmat pakollisia, kun kuvia on mukana.
             var oikeudet = Rakenne.El("mk-palaute__oikeudet", lohko, PickingMode.Ignore);
-            Lomake.Valiotsikko(oikeudet, "Kuvan oikeudet").AddToClassList("mk-palaute__valiotsikko--alku");
-            var oma = new Rasti(oikeudet, "Kuva on itse ottamani ja omistan siihen oikeudet.");
-            Lomake.Nimio(oikeudet, "Käyttölupa");
+            Lomake.Valiotsikko(oikeudet, Kieli.T("ui.kuvavinkki.oikeudet")).AddToClassList("mk-palaute__valiotsikko--alku");
+            var oma = new Rasti(oikeudet, Kieli.T("ui.kuvavinkki.oma-kuva-rasti"));
+            Lomake.Nimio(oikeudet, Kieli.T("ui.kuvavinkki.kayttolupa"));
             // Tyhjä ensimmäisenä, jotta valinta on oikeasti valinta (web "Valitse…").
-            var luvat = new List<string> { "Valitse…" };
+            var luvat = new List<string> { Kieli.T("ui.kuvavinkki.valitse") };
             foreach (var l in Kayttoluvat) luvat.Add(l.Nimi);
             var lupa = Lomake.Valinta(oikeudet, luvat, 0);
             oikeudet.style.display = palaute ? DisplayStyle.None : DisplayStyle.Flex;
             string LupaArvo() => lupa.index > 0 ? Kayttoluvat[lupa.index - 1].Arvo : "";
 
-            var nimimerkki = Lomake.Kentta(lohko, "Nimi tai nimimerkki (vapaaehtoinen)");
-            var krediitti = new Rasti(lohko, "Nimeni saa näkyä pelin krediiteissä");
-            var posti = Lomake.Kentta(lohko, "Sähköposti (vapaaehtoinen)", Kenttalaji.Sahkoposti);
-            Lomake.Huomio(lohko, "Sähköposti on vain ilmoitusta varten — sitä ei julkaista eikä "
-                + "käytetä mihinkään muuhun.");
+            var nimimerkki = Lomake.Kentta(lohko, Kieli.T("ui.palaute.nimimerkki"));
+            var krediitti = new Rasti(lohko, Kieli.T("ui.palaute.krediitti"));
+            var posti = Lomake.Kentta(lohko, Kieli.T("ui.palaute.sahkoposti"), Kenttalaji.Sahkoposti);
+            Lomake.Huomio(lohko, Kieli.T("ui.palaute.sahkoposti-seloste"));
             var proRivi = Lomake.Huomio(lohko, "");
             proRivi.style.display = DisplayStyle.None;
 
@@ -97,7 +92,7 @@ namespace Matkakirja.Natiivi
                     string nimi = MiniJson.Teksti(t.Data, "nimi") ?? "";
                     proKoodi = mk;
                     proRivi.style.display = DisplayStyle.Flex;
-                    proRivi.text = $"Lähetät pro-tuottajana: {(nimi.Length > 0 ? nimi : mp)}. Kuva merkitään pro-lähteeksi.";
+                    proRivi.text = Kieli.T("ui.kuvavinkki.pro-rivi", nimi.Length > 0 ? nimi : mp);
                     if (posti.value.Length == 0) posti.value = mp;
                     if (nimimerkki.value.Length == 0 && nimi.Length > 0) nimimerkki.value = nimi;
                 });
@@ -109,18 +104,18 @@ namespace Matkakirja.Natiivi
                 else if (palaute) oikeudet.style.display = DisplayStyle.None;
             };
 
-            nappi = Lomake.Laheta(lohko, palaute ? "Lähetä palaute" : "Lähetä vinkki", () =>
+            nappi = Lomake.Laheta(lohko, Kieli.T(palaute ? "ui.kuvavinkki.laheta-palaute" : "ui.kuvavinkki.laheta-vinkki"), () =>
             {
                 // Puutteet lomakkeen järjestyksessä ylhäältä alas.
                 bool onKuvia = kuvat.Valitut.Count > 0;
-                if (!onKuvia && !palaute) { huomio.text = "Valitse kuva paikasta, josta haluat vinkata."; return; }
-                if (palaute && !onKuvia && teksti.value.Trim().Length == 0) { huomio.text = "Kirjoita palaute tai liitä kuva."; teksti.Focus(); return; }
-                if (!palaute && paikka.value.Trim().Length == 0) { huomio.text = "Kerro, missä paikka on."; paikka.Focus(); return; }
-                if (onKuvia && !oma.Arvo) { huomio.text = "Vahvista vielä, että kuva on itse ottamasi ja omistat oikeudet."; return; }
-                if (onKuvia && LupaArvo().Length == 0) { huomio.text = "Valitse, saako kuvaa käyttää pelissä vai onko se vain taustatietoa."; return; }
+                if (!onKuvia && !palaute) { huomio.text = Kieli.T("ui.kuvavinkki.puute-kuva"); return; }
+                if (palaute && !onKuvia && teksti.value.Trim().Length == 0) { huomio.text = Kieli.T("ui.kuvavinkki.puute-palaute"); teksti.Focus(); return; }
+                if (!palaute && paikka.value.Trim().Length == 0) { huomio.text = Kieli.T("ui.kuvavinkki.puute-paikka"); paikka.Focus(); return; }
+                if (onKuvia && !oma.Arvo) { huomio.text = Kieli.T("ui.kuvavinkki.puute-oikeudet"); return; }
+                if (onKuvia && LupaArvo().Length == 0) { huomio.text = Kieli.T("ui.kuvavinkki.puute-lupa"); return; }
 
                 nappi.SetEnabled(false);
-                huomio.text = "Lähetetään…";
+                huomio.text = Kieli.T("ui.pulu.lahetetaan");
                 var lahde = new List<string>();
                 if (!string.IsNullOrEmpty(kuvalahde)) lahde.Add(kuvalahde);
                 if (!string.IsNullOrEmpty(sivu)) lahde.Add(sivu);
@@ -152,11 +147,10 @@ namespace Matkakirja.Natiivi
                     oma.Arvo = false;
                     lupa.index = 0;
                     if (palaute) oikeudet.style.display = DisplayStyle.None;
-                    Lomake.Nimi(nappi, "Lähetetty");
+                    Lomake.Nimi(nappi, Kieli.T("ui.palaute.lahetetty"));
                     huomio.text = palaute
-                        ? "Kiitos! Palaute on perillä ja se luetaan. Jos kuva on pielessä, se korjataan."
-                        : "Kiitos! Vinkki on perillä. Tiimi käy sen läpi — jätä sähköpostisi, "
-                          + "niin kuulet jos paikka päätyy peliin.";
+                        ? Kieli.T("ui.kuvavinkki.kiitos-palaute")
+                        : Kieli.T("ui.kuvavinkki.kiitos-vinkki");
                     onnistui?.Invoke();
                 });
             });

@@ -48,7 +48,7 @@ namespace Matkakirja.Natiivi
         public const int EhdotuksenSivu = 2048, KuvavinkinSivu = 2400, ProMateriaalinSivu = 2000, ProKuvanSivu = 1024;
 
         const string ProAvain = "matkakirja-pro-tunnus";
-        public const string EiNatiivissa = "Lähetys ei vielä ole auki tässä sovelluksessa.";
+        public static string EiNatiivissa => Kieli.T("ui.palautekanava.ei-natiivissa");
 
         /// <summary>
         /// Kuvanvalitsin: (enintään, pisin sivu px, valmis). valmis(null tai tyhjä) = peruttu.
@@ -70,7 +70,7 @@ namespace Matkakirja.Natiivi
             public bool Estetty;
 
             /// <summary>Virheen syy pelaajan kielellä ilman etuliitettä.</summary>
-            public string Syy => Estetty ? null : Verkoton ? "yhteyttä ei saatu" : Virhe;
+            public string Syy => Estetty ? null : Verkoton ? Kieli.T("ui.palautekanava.syy-ei-yhteytta") : Virhe;
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Matkakirja.Natiivi
         public static string Virheviesti(Tulos t, bool kokeile = true)
         {
             if (t.Estetty) return EiNatiivissa;
-            return "Lähetys ei onnistunut: " + t.Syy + (kokeile ? ". Kokeile hetken päästä uudelleen." : "");
+            return Kieli.T(kokeile ? "ui.palautekanava.virhe-kokeile" : "ui.palautekanava.virhe", t.Syy);
         }
 
         // --- lähetys ---------------------------------------------------------------------
@@ -101,7 +101,7 @@ namespace Matkakirja.Natiivi
                         osat.Add(new MultipartFormFileSection(nimi, kuva.Tavut, kuva.Nimi ?? "kuva.jpg", kuva.Tyyppi ?? "image/jpeg"));
             if (osat.Count == 0)
             {
-                valmis?.Invoke(new Tulos { Virhe = "lähetys on tyhjä" });
+                valmis?.Invoke(new Tulos { Virhe = Kieli.T("ui.palautekanava.syy-tyhja") });
                 yield break;
             }
             using (var r = UnityWebRequest.Post(Osoite + polku, osat))

@@ -37,6 +37,25 @@ namespace Matkakirja.Peli
 
         static readonly Regex OmaKuvio = new Regex(@"(?:^|/)assets/audio/([^/?#]+)", RegexOptions.CultureInvariant);
 
+        /// <summary>
+        /// LYRIA-MUSIIKIN VERSIO (PT 9.10.2026, säröskannaus): 16 raitaa korjattiin (declip + true peak ≤ −1 dBTP) ja
+        /// kaikki 50 vietiin uusiin nimiin &lt;tunnus&gt;-lyria-v2.mp3 (ämpäriä ei ylikirjoiteta). Paketti, oletustaulut ja
+        /// Paljastus antavat yhä nimet -lyria.mp3; tämä vaihtaa päätteen ämpärin osoitteessa yhdessä paikassa (vanhat appit
+        /// jatkavat vanhoilla tiedostoilla). Pääte vain tiedostonimen lopussa (ennen ?/# tai loppua).
+        /// </summary>
+        public const string LyriaVanha = "-lyria.mp3";
+        public static string LyriaPaate = "-lyria-v2.mp3";
+
+        public static string Musiikkiversio(string url)
+        {
+            if (string.IsNullOrEmpty(url)) return url;
+            int loppu = url.IndexOfAny(new[] { '?', '#' });
+            if (loppu < 0) loppu = url.Length;
+            int i = loppu - LyriaVanha.Length;
+            return i >= 0 && string.CompareOrdinal(url, i, LyriaVanha, 0, LyriaVanha.Length) == 0
+                ? url.Substring(0, i) + LyriaPaate + url.Substring(loppu) : url;
+        }
+
         /// <summary>Webin omaAaniPolku: assets/audio/&lt;nimi&gt; → nimi, muuten null.</summary>
         public static string OmaPolku(string polku)
         {
@@ -48,7 +67,7 @@ namespace Matkakirja.Peli
         /// <summary>Webin aaniUrl: oma äänite ämpärin audio/-kansioon, muu sellaisenaan.</summary>
         public static string AaniUrl(string polku)
         {
-            var nimi = OmaPolku(polku);
+            var nimi = Musiikkiversio(OmaPolku(polku));
             if (nimi == null) return polku;
             return Juuri + AaniAlipolku + nimi + (Uusitut.TryGetValue(nimi, out var v) && v != 0 ? "?v=" + v.ToString(CultureInfo.InvariantCulture) : "");
         }
@@ -58,6 +77,7 @@ namespace Matkakirja.Peli
         {
             if (string.IsNullOrEmpty(url)) return url;
             if (OmaPolku(url) != null) return AaniUrl(url);
+            if (url.StartsWith(Juuri, StringComparison.Ordinal)) return Musiikkiversio(url);
             var polku = PeiliPolku(url);
             return polku != null ? Juuri + polku : url;
         }

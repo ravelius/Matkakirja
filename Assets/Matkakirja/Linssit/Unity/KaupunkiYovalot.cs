@@ -25,6 +25,9 @@ namespace Matkakirja.Natiivi
         /// "yoikkunat" = ikkunoiden voima, "yoikkunaosuus" = palavien ikkunoiden osuus enintään). v2 simun 21.5x kuvista.</summary>
         public static bool Kaytossa = true;
         // v4 (Päätoimittaja 22.3x): valosaaste kevyeksi, katuvalot OSM-katujen mukaan (ei satunnaisia pisteitä), ikkunat harvoiksi.
+        /// <summary>Diagnoosi (komento opas yovalot N): 0 normaali, 1 passi violettina, 2 maailmanpaikka, 3 Black Marble, 4 lisävalo × 5.</summary>
+        public static float Diagnoosi;
+        static readonly int IdDebug = Shader.PropertyToID("_ValoDebug");
         public static float Hehku = 0.04f, Pisteet = 1.4f, SoluM = 18f, Ikkunat = 0.8f, IkkunaOsuus = 0.25f;
         /// <summary>Kohteen valaistus (v4): oppaan nykyinen kohde (lat, lon, maan korkeus ellipsoidista m, säde m) saa yöllä lämpimän
         /// valonheiton (Eiffel kultaisena). OpasSovitin asettaa joka kehys; null = ei kohdetta.</summary>
@@ -51,7 +54,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Natrium-oranssi (omistaja) ja valkoisten LED-pisteiden osuus.</summary>
         public static Color Vari = new Color(1.0f, 0.62f, 0.28f, 0.25f);
 
-        static FullScreenPassRendererFeature feature;
+        static bool luotu;
         static Material materiaali;
         static ScriptableRendererData data;
         static Texture2D ruudukko;
@@ -76,10 +79,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Kerran kehyksessä kaupunkinäkymässä. osuus 0–1 (hämärä → yö); isanta ajaa latauskorutiinit.</summary>
         /// <summary>Yön osuus 0–1 viimeisimmästä päivityksestä (KohdeKorostus: julkisivuvalo yöllä).</summary>
         public static float Osuus { get; private set; }
-        public static void Paivita(MonoBehaviour isanta, CesiumGeoreference georef, Camera kamera, double osuus)
+        /// <summary>Ikkunavalojen osuus 0–1 (iltaikkunat: syttyvät ennen katuvaloja).</summary>
+        public static float IkkunaOsuusNyt { get; private set; }
+        public static void Paivita(MonoBehaviour isanta, CesiumGeoreference georef, Camera kamera, double osuus, double ikkunaOsuus = -1)
         {
+            if (ikkunaOsuus < 0) ikkunaOsuus = osuus;
+            IkkunaOsuusNyt = Kaytossa ? (float)System.Math.Max(0, System.Math.Min(1, System.Math.Max(osuus, ikkunaOsuus))) : 0f;
             Osuus = Kaytossa && georef != null ? (float)System.Math.Max(0, System.Math.Min(1, osuus)) : 0f;
-            if (!Kaytossa || osuus <= 0.001 || georef == null || kamera == null) { Pois(); return; }
+            viimeKamera = kamera; KaupunkiPassi.Kamera = kamera;
+            if (!Kaytossa || System.Math.Max(osuus, ikkunaOsuus) <= 0.001 || georef == null || kamera == null) { Pois(); return; }
             var ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed(new double3(kamera.transform.position.x, kamera.transform.position.y, kamera.transform.position.z));
             var llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
             double lat = llh.y, lon = llh.x;
@@ -93,13 +101,15 @@ namespace Matkakirja.Natiivi
             if (!tietHaussa && isanta != null && tieId != (KaupunkiId ?? ""))
             { tietHaussa = true; isanta.StartCoroutine(LataaTiet(KaupunkiId, lat, lon)); }
             if (ruudukko == null || kulma == null) return;
-            if (feature == null && !Luo()) return;
+            if (!luotu && !Luo()) return;
             materiaali.SetTexture(IdValot, ruudukko);
             materiaali.SetMatrix(IdMatriisi, georef.transform.worldToLocalMatrix);
+            matriisiTila = georef.transform.worldToLocalMatrix.ValidTRS() ? "paikallinen ok" : $"paikallinen EI TRS (mittakaava {georef.transform.lossyScale})";
             materiaali.SetVector(IdAlue, new Vector4(kulma.Value.lon, kulma.Value.lat, (float)georef.latitude, (float)georef.longitude));
             materiaali.SetVector(IdParam, new Vector4((float)osuus, Hehku, Pisteet, Mathf.Max(5f, SoluM)));
+            materiaali.SetVector(IdDebug, new Vector4(Diagnoosi, 1f, 0f, 0f));   // y = 1: passi jälkikäsittelyn jälkeen (ei valotuksen kompensointia)
             materiaali.SetVector(IdVari, new Vector4(Vari.r, Vari.g, Vari.b, Vari.a));
-            materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), 0f, 0f));
+            materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), IkkunaOsuusNyt, 0f));   // z = iltaikkunoiden osuus
             materiaali.SetTexture(IdTiet, tiet != null ? tiet : Texture2D.blackTexture);
             materiaali.SetVector(IdTieAlue, tieKeskus is (double, double) tk ? new Vector4((float)tk.lat, (float)tk.lon, tieSivu, 1f) : Vector4.zero);
             if (Kohde is (double, double, double, double) ko)
@@ -279,23 +289,28 @@ namespace Matkakirja.Natiivi
             valmis(tavut);
         }
 
+        static Camera viimeKamera;
+        static string matriisiTila;
+        /// <summary>Diagnoosin tila (komento opas yovalot): passi, renderöijä, varjostin, ruudukko ja kamera.</summary>
+        public static string Tila()
+        {
+            var urp = GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset;
+            var nyt = urp != null && urp.rendererDataList.Length > 0 ? urp.rendererDataList[0] : null;
+            var ca = viimeKamera != null ? viimeKamera.GetComponent<UniversalAdditionalCameraData>() : null;
+            return $"passi {KaupunkiPassi.Tila("yövalot")}, {matriisiTila ?? "paikallinen -"}, putki {(urp != null ? urp.name : "-")}, " +
+                $"varjostin {(materiaali != null ? (materiaali.shader.isSupported ? "tuettu" : "EI tuettu") : "-")}, ruudukko {(ruudukko != null ? "on" : "ei")}, kulma {kulma}, " +
+                $"kamerat [{string.Join("; ", System.Array.ConvertAll(Camera.allCameras, k => { var d = k.GetComponent<UniversalAdditionalCameraData>(); return $"{k.name} d{k.depth:F0} {(d != null ? d.renderType.ToString() : "?")} rt {(k.targetTexture != null ? k.targetTexture.name + " " + k.targetTexture.width + "x" + k.targetTexture.height : "-")} msaa {k.allowMSAA} hdr {k.allowHDR} renderöijä {(d != null ? d.scriptableRenderer?.GetType().Name : "?")}"; }))}], " +
+                $"kamera {(viimeKamera != null ? viimeKamera.name : "-")} jälkik. {(ca != null ? ca.renderPostProcessing.ToString() : "?")} syvyys {(ca != null ? ca.requiresDepthOption.ToString() : "?")} tyyppi {(ca != null ? ca.renderType.ToString() : "?")} pino {(ca != null ? ca.cameraStack?.Count ?? 0 : 0)}";
+        }
+
+
         static bool Luo()
         {
             var varjostin = Shader.Find("Matkakirja/Linssit/KaupunkiYovalot");
-            if (varjostin == null || !(GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset urp) || urp.rendererDataList.Length == 0)
-            { Debug.Log("MATKAKIRJA kaupunki: yövalot ei käytettävissä (varjostin tai URP puuttuu)"); Kaytossa = false; return false; }
-            data = urp.rendererDataList[0];
-            if (data == null) return false;
+            if (varjostin == null) { Debug.Log("MATKAKIRJA kaupunki: yövalot ei käytettävissä (varjostin puuttuu)"); Kaytossa = false; return false; }
             materiaali = new Material(varjostin) { name = "KaupunkiYovalot" };
-            feature = ScriptableObject.CreateInstance<FullScreenPassRendererFeature>();
-            feature.name = "Matkakirja kaupunki yövalot";
-            feature.injectionPoint = FullScreenPassRendererFeature.InjectionPoint.AfterRenderingPostProcessing;
-            feature.fetchColorBuffer = true;
-            feature.requirements = ScriptableRenderPassInput.Depth;
-            feature.passMaterial = materiaali;
-            feature.passIndex = 0;
-            data.rendererFeatures.Add(feature);
-            data.SetDirty();
+            luotu = true;
+            KaupunkiPassi.Aseta("yövalot", materiaali);   // oma passi vain kaupungin peruskameralle (9.10. juurisyy, ks. KaupunkiPassi)
             Debug.Log("MATKAKIRJA kaupunki: yövalot päällä");
             return true;
         }
@@ -308,12 +323,11 @@ namespace Matkakirja.Natiivi
                 ladataan = null; tietHaussa = false; tieKeskus = null; tieId = null;
                 if (tiet != null) { Object.Destroy(tiet); tiet = null; }
             }
-            if (feature != null)
+            if (luotu)
             {
-                if (data != null) { data.rendererFeatures.Remove(feature); data.SetDirty(); }
-                Object.Destroy(feature);
+                KaupunkiPassi.Aseta("yövalot", null);
                 if (materiaali != null) Object.Destroy(materiaali);
-                feature = null; materiaali = null; data = null;
+                luotu = false; materiaali = null;
                 Debug.Log("MATKAKIRJA kaupunki: yövalot pois");
             }
             if (ruudukko != null && ladataan == null) { Object.Destroy(ruudukko); ruudukko = null; kulma = null; }

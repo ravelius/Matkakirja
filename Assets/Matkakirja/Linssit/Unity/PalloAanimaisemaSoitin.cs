@@ -5,6 +5,9 @@
 // (PalloAanimaisema.Korkeudella). Äänimaisema-kytkin pois → ei kerta-ääniä. Tekijät (CC BY) Lähteissä: data/aanilahteet.json (NUI).
 // SEINE (Pelikoodari 8.10., pariisi-seine-v1): toinen manifesti yhdistetään Pariisiin; kyyhkyjen kujerrus on kaupungin oma silmukka
 // (ei korvaa kerrosta), joka soi hiljaa (OmaSilmukkaTaso) omana lähteenään; jokiproomu, laivan torvi ja kyyhkyparven lähtö kerta-ääninä.
+// ÄÄNIREKISTERI (Natiivi-UI 9.10., Ydin Aanimikseri): manifestin kerta-äänet ja omat silmukat pallon Äänimaisema-ryhmään tunnuksella
+// <kaupunki>.<tunnus> (klipin nimi = tunnus); kerroksen korvaavat silmukat ja korkean tuulen soittaa ja rekisteröi KaupunkiAanimaisemaSoitin
+// kerroksen tunnuksella. Taso = Kerroin("maisema", tunnus), joka sisältää ryhmän tason nykyisessä kontekstissa (korvaa Asetukset.Taso(Voima.Tausta)).
 using System.Collections;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aanet;
@@ -18,16 +21,46 @@ namespace Matkakirja.Natiivi
         public const string Juuri = KaupunkiAanimaisemaSoitin.Juuri + "pallo-aanimaisema-v1/";
         public static readonly string[] Juuret = { Juuri, KaupunkiAanimaisemaSoitin.Juuri + "pariisi-seine-v1/" };
         public const float OmaSilmukkaTaso = 0.45f;
-        /// <summary>Pallon tuuli korkealla (Pelikoodari 9.10., Sonniss, aanet/sonniss-tuulet-v1): kylmä, ohut ja puuskainen ilman lintuja;
-        /// korvaa kaupungin äänimaiseman tuulikerroksen kaikissa kaupungeissa (taso korkeuden mukaan ja ☰ Sää ennallaan).</summary>
-        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "sonniss-tuulet-v1/tuuli-korkea.mp3";
+        /// <summary>Pallon tuuli (Pelikoodari 9.10. 16.0x, Soundly, aanet/pallo-tuuli-soundly-v3 = v1 + ylipäästö 280 Hz 24 dB/okt, PT 9.10. junaan 174: 100–200 Hz −8 dB, ei peitä Williamin äänen pohjaa; korvaa Sonnissin tuuli-korkean 20 s:n
+        /// silmukan): puhdas tasainen tuuli ilman lehtiä ja mikrofonijyrinää, kaksi 50 s:n jaksoa samasta äänitteestä (−23 LUFS kuten ennen,
+        /// joten tasot ennallaan). Soitin vuorottelee ne ristihäivytyksellä (SilmukanPari: 01 → 02 → 01), joten toistojakso on 100 s.
+        /// Korvaa kaupungin äänimaiseman tuulikerroksen kaikissa kaupungeissa (taso korkeuden mukaan ja ☰ Sää ennallaan).</summary>
+        public const string TuuliUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v3/tuuli-puhdas-01.mp3",
+            TuuliPariUrl = KaupunkiAanimaisemaSoitin.Juuri + "pallo-tuuli-soundly-v3/tuuli-puhdas-02.mp3";
         readonly Dictionary<string, AudioSource> omat = new Dictionary<string, AudioSource>();
         static PalloAanimaisema manifesti; static bool haettu;
         readonly Dictionary<string, AudioClip> klipit = new Dictionary<string, AudioClip>();
         readonly HashSet<string> ladataan = new HashSet<string>();
         readonly Dictionary<string, double> seuraava = new Dictionary<string, double>();
         readonly System.Random rnd = new System.Random(20261008);
-        AudioSource lahde; float perus;
+        AudioSource lahde; float perus; string lahdeOsoite;
+        static readonly Dictionary<string, string> osoitteenId = new Dictionary<string, string>();
+
+        static string AaniId(string kaupunki, string tunnus)
+        {
+            var sb = new System.Text.StringBuilder();
+            foreach (char c in (kaupunki + "." + tunnus).ToLowerInvariant()) sb.Append((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '.' || c == '-' ? c : '-');
+            return sb.ToString();
+        }
+
+        static string Nakyva(string kaupunki, string tunnus) =>
+            (kaupunki.Length > 0 ? char.ToUpperInvariant(kaupunki[0]) + kaupunki.Substring(1) : kaupunki) + ": " + tunnus.Replace('-', ' ').Replace('_', ' ');
+
+        /// <summary>Manifestin kerta-äänet ja omat silmukat rekisteriin (jokaisen manifestin jälkeen; Rekisteroi on idempotentti).</summary>
+        static void Rekisteroi(PalloAanimaisema m)
+        {
+            foreach (var kv in m.Kaupungit)
+                foreach (var a in kv.Value)
+                {
+                    if (a.Silmukka && PalloAanimaisema.Korvaa.ContainsKey(a.Tunnus)) continue;   // kerroksen korvaava: KaupunkiAanimaisemaSoitin
+                    string id = AaniId(kv.Key, a.Tunnus);
+                    osoitteenId[a.Osoite] = id;
+                    Aanimikseri.Yhteinen.Rekisteroi("pallo", "maisema", id, Nakyva(kv.Key, a.Tunnus));
+                }
+        }
+
+        static float Kerroin(string osoite) =>
+            Aanimikseri.Yhteinen.Kerroin("maisema", osoite != null && osoitteenId.TryGetValue(osoite, out var id) ? id : null);
         string kaupunki;
 
         /// <summary>Joka kehys oppaasta: kaupunki (null = ei kaupunkitilaa), kameran korkeus maasta (m).</summary>
@@ -36,8 +69,8 @@ namespace Matkakirja.Natiivi
             if (!haettu && isanta != null) { haettu = true; foreach (var j in Juuret) isanta.StartCoroutine(HaeManifesti(j)); }
             kaupunki = kaupunkiId != null && Matkakirja.Linssit.Kehityskaupungit.On(kaupunkiId) ? kaupunkiId : null;
             if (manifesti == null || isanta == null) return;
-            float voima = (float)(OpasAanitasot.Maisema(PalloAanimaisema.Korkeudella(korkeusM), OpasSovitin.OpasAaniSoi) * Asetukset.Taso(Voima.Tausta));
-            if (lahde != null && lahde.isPlaying) lahde.volume = (float)OpasAanitasot.Liuku(lahde.volume, voima * perus, Time.unscaledDeltaTime);
+            float voima = (float)OpasAanitasot.Maisema(PalloAanimaisema.Korkeudella(korkeusM), OpasSovitin.OpasAaniSoi);
+            if (lahde != null && lahde.isPlaying) lahde.volume = (float)OpasAanitasot.Liuku(lahde.volume, voima * perus * Kerroin(lahdeOsoite), Time.unscaledDeltaTime);
             bool soi = kaupunki != null && Asetukset.Paalla(Kytkin.Aanimaisema);
             // Kaupungin omat silmukat (kujerrus): päälle tässä kaupungissa, muut hiljenevät ja vapautuvat.
             var halutut = new HashSet<string>();
@@ -45,7 +78,7 @@ namespace Matkakirja.Natiivi
             foreach (var kv in new List<KeyValuePair<string, AudioSource>>(omat))
             {
                 if (kv.Value == null) { omat.Remove(kv.Key); continue; }
-                float tavoite = halutut.Contains(kv.Key) ? voima * OmaSilmukkaTaso : 0f;
+                float tavoite = halutut.Contains(kv.Key) ? voima * OmaSilmukkaTaso * Kerroin(kv.Key) : 0f;
                 kv.Value.volume = (float)OpasAanitasot.Liuku(kv.Value.volume, tavoite, Time.unscaledDeltaTime);
                 if (tavoite <= 0f && kv.Value.volume < 0.002f) { Object.Destroy(kv.Value); omat.Remove(kv.Key); }
             }
@@ -55,7 +88,7 @@ namespace Matkakirja.Natiivi
                 if (!klipit.TryGetValue(u, out var sc)) { if (ladataan.Add(u)) isanta.StartCoroutine(Lataa(u)); continue; }
                 if (sc == null) continue;
                 var ol = isanta.gameObject.AddComponent<AudioSource>(); ol.playOnAwake = false; ol.spatialBlend = 0; ol.loop = true; ol.clip = sc; ol.volume = 0f;
-                ol.time = Random.Range(0f, sc.length * 0.9f); ol.Play(); omat[u] = ol;
+                ol.time = Random.Range(0f, sc.length * 0.9f); SaumatonSilmukka.Kiinnita(ol); ol.Play(); omat[u] = ol;   // saumaton (juna 174)
             }
             if (!soi || !manifesti.Kaupungit.TryGetValue(kaupunki, out var l)) return;
             double nyt = Time.unscaledTimeAsDouble;
@@ -70,7 +103,8 @@ namespace Matkakirja.Natiivi
                 if (c == null || (lahde != null && lahde.isPlaying)) continue;   // yksi kerta-ääni kerrallaan
                 if (lahde == null) { lahde = isanta.gameObject.AddComponent<AudioSource>(); lahde.playOnAwake = false; lahde.spatialBlend = 0; lahde.loop = false; }
                 perus = a.Tunnus == "hoyrypilli" || a.Tunnus == "laivan-torvi" ? 0.7f : 0.85f;
-                lahde.clip = c; lahde.volume = voima * perus; lahde.Play();
+                lahdeOsoite = a.Osoite;
+                lahde.clip = c; lahde.volume = voima * perus * Kerroin(lahdeOsoite); lahde.Play();
                 Debug.Log($"MATKAKIRJA kaupunki: pallon äänimaisema {avain} ({lahde.volume:F2})");
             }
         }
@@ -83,6 +117,7 @@ namespace Matkakirja.Natiivi
             if (r.result != UnityWebRequest.Result.Success) { Debug.Log($"MATKAKIRJA kaupunki: pallon äänimaisema: {juuri} manifesti ei latautunut ({r.responseCode})"); yield break; }
             PalloAanimaisema uusi;
             try { uusi = PalloAanimaisema.Lue(r.downloadHandler.text, juuri); } catch (System.Exception e) { Debug.Log("MATKAKIRJA kaupunki: pallon äänimaisema: " + e.Message); yield break; }
+            Rekisteroi(uusi);
             if (manifesti != null) { manifesti.Yhdista(uusi); Debug.Log($"MATKAKIRJA kaupunki: pallon äänimaisema: lisätty {juuri}"); yield break; }
             manifesti = uusi;
             // Silmukat kaupungin äänimaiseman kerroksiksi kehityskaupungeissa; muut kerrokset ennallaan (aanimaisema-v2).
@@ -93,6 +128,7 @@ namespace Matkakirja.Natiivi
                 var a = id != null && Matkakirja.Linssit.Kehityskaupungit.On(id) ? manifesti.KerroksenAani(id, kerros) : null;
                 return a != null ? a.Osoite : KaupunkiAanimaisemaSoitin.Juuri + "aanimaisema-v2/" + kerros + "-01.mp3";
             };
+            KaupunkiAanimaisemaSoitin.SilmukanPari = url => url == TuuliUrl ? TuuliPariUrl : null;
             Debug.Log($"MATKAKIRJA kaupunki: pallon äänimaisema: {manifesti.Kaupungit.Count} kaupunkia");
         }
 
@@ -104,6 +140,8 @@ namespace Matkakirja.Natiivi
             yield return r.SendWebRequest();
             ladataan.Remove(polku);
             klipit[polku] = r.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(r) : null;
+            if (klipit[polku] != null && osoitteenId.TryGetValue(polku, out var id)) klipit[polku].name = id;
+            if (klipit[polku] != null) yield return SaumatonSilmukka.HaeTagi(osoite, klipit[polku]);
         }
 
         public void Sulje()

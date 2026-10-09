@@ -34,7 +34,9 @@ namespace Matkakirja.Natiivi
     public sealed class KortinLukija
     {
         public const int Vahimmais = 80;
-        const string SaadinOtsikko = "Luennan valikko — kappaleet, kelaus, nopeus ja ääni", JatkaOtsikko = "Jatka kuuntelua", KeskeytaOtsikko = "Keskeytä kuuntelu";
+        static string SaadinOtsikko => Kieli.T("ui.lukija.saadin-otsikko");
+        static string JatkaOtsikko => Kieli.T("ui.lukija.jatka");
+        static string KeskeytaOtsikko => Kieli.T("ui.lukija.keskeyta");
         // Sama kaiutin kuin isoisän luennassa (Matkakirjakortti): runko ja kolme kaarta, jotka ovat VU-mittari.
         const string KaiutinRunko = "M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z";
         static readonly string[] Kaaret =
@@ -143,13 +145,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         readonly Action loppui;
 
-        public KortinLukija(VisualElement isa, string otsikko = "Kuuntele kortti", string luokka = null, bool saatimet = false,
+        public KortinLukija(VisualElement isa, string otsikko = null, string luokka = null, bool saatimet = false,
             Func<Rect> rajaus = null, string persoona = "kertoja", Action<VisualElement> aaniRivi = null,
             Action<VisualElement> lisaRivi = null, Action loppui = null)
         {
             this.lisaRivi = lisaRivi;
             this.loppui = loppui;
-            this.otsikko = otsikko;
+            this.otsikko = otsikko ?? Kieli.T("ui.nosto.kuuntele-kortti");
             this.persoona = persoona;
             korvaavaAaniRivi = aaniRivi;
             this.saatimet = saatimet;
@@ -518,7 +520,7 @@ namespace Matkakirja.Natiivi
                     var t = Rakenne.Teksti(ots, "mk-lukija-valikko__alku", b);
                     t.enableRichText = false;
                     Kirjasimet.Aseta(t, Kirjasin.LukuLihava);
-                    b.tooltip = "Kuuntele otsikosta: " + Lyhenna(ots, 40);
+                    b.tooltip = Kieli.T("ui.lukija.kuuntele-otsikosta", Lyhenna(ots, 40));
                 }
                 else
                 {
@@ -527,7 +529,7 @@ namespace Matkakirja.Natiivi
                     var t = Rakenne.Teksti(leipa, "mk-lukija-valikko__alku", b);
                     t.enableRichText = false;
                     Kirjasimet.Aseta(t, Kirjasin.Luku);
-                    b.tooltip = $"Kuuntele kappaleesta {numero}";
+                    b.tooltip = Kieli.T("ui.lukija.kuuntele-kappaleesta", numero);
                 }
                 valikkoRivit.Add((b, kohde, ots == null));
             }
@@ -536,7 +538,7 @@ namespace Matkakirja.Natiivi
             // 2. nopeus ja ääni (entinen säätöratas).
             var saadot = Rakenne.El("mk-lukija-valikko__saadot", paneeli, PickingMode.Ignore);
             var nopeusRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("Nopeus", "mk-lukija-saadot__nimi", nopeusRivi), Kirjasin.Luku);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.lukija.nopeus"), "mk-lukija-saadot__nimi", nopeusRivi), Kirjasin.Luku);
             // Äänentasojen liukutyyli (mk-saadin: kultainen täyttö ja nuppi, Aanentasot.LuoSaadinrivi).
             var liuku = new Slider(Puhe.NopeusMin, Puhe.NopeusMax) { value = Puhe.Nopeus, pageSize = 0, fill = true };
             liuku.AddToClassList("mk-saadin");
@@ -568,10 +570,10 @@ namespace Matkakirja.Natiivi
                 if (ikoni != null) Rakenne.Ikoni(ikoni, "mk-lukija-valikko__kelausikoni", b);
                 kelausnapit.Add(b);
             }
-            Kelausnappi(taakse, "Edellinen kappale", null, EdellinenIkoni, () => SiirryKappale(-1));
-            Kelausnappi(taakse, $"{KelausS:0} sekuntia taaksepäin", $"−{KelausS:0} s", null, () => SiirryAika(-KelausS));
-            Kelausnappi(eteen, $"{KelausS:0} sekuntia eteenpäin", $"+{KelausS:0} s", null, () => SiirryAika(KelausS));
-            Kelausnappi(eteen, "Seuraava kappale", null, SeuraavaIkoni, () => SiirryKappale(1));
+            Kelausnappi(taakse, Kieli.T("ui.lukija.edellinen-kappale"), null, EdellinenIkoni, () => SiirryKappale(-1));
+            Kelausnappi(taakse, Kieli.T("ui.lukija.sekuntia-taakse", KelausS.ToString("0")), Kieli.T("ui.lukija.sekuntia-taakse-lyhyt", KelausS.ToString("0")), null, () => SiirryAika(-KelausS));
+            Kelausnappi(eteen, Kieli.T("ui.lukija.sekuntia-eteen", KelausS.ToString("0")), Kieli.T("ui.lukija.sekuntia-eteen-lyhyt", KelausS.ToString("0")), null, () => SiirryAika(KelausS));
+            Kelausnappi(eteen, Kieli.T("ui.lukija.seuraava-kappale"), null, SeuraavaIkoni, () => SiirryKappale(1));
 
             nykyinenRivi = -1;
             PaivitaValikko();
@@ -614,7 +616,7 @@ namespace Matkakirja.Natiivi
                 var nimet = new List<string>();
                 foreach (var m in Striimiaani.Moottorit) nimet.Add(m.Nimi);
                 VisualElement aanet = null;
-                ValintaRivi(saadot, "Moottori", nimet, Striimiaani.Moottori == Striimiaani.Eleven ? 1 : 0, "moottori", k =>
+                ValintaRivi(saadot, "Moottori", nimet, Striimiaani.Moottori == Striimiaani.Eleven ? 1 : 0, "moottori", k =>   // kieli: ei (avain ja testikomennon tunniste; näkyvä otsikko tulee ValintaRivissä mika-parametrista)
                 {
                     Striimiaani.Moottori = Striimiaani.Moottorit[k].Tunnus;
                     Debug.Log("MATKAKIRJA lukija: moottori " + Striimiaani.Moottori);
@@ -651,12 +653,12 @@ namespace Matkakirja.Natiivi
             bool eleven = Striimiaani.Moottori == Striimiaani.Eleven;   // aina (xAI pois, omistaja 5.10.2026)
             var lista = eleven ? Striimiaani.ElevenAanet : Striimiaani.Pelinimet;
             // Pelinimet: näytössä nimi, pyynnössä tunnus (web AANTEN_PELINIMET). Oletus ensin "Aino (oletus)".
-            var nimet = new List<string> { lista[0].Nimi + " (oletus)" };
+            var nimet = new List<string> { Kieli.T("ui.lukija.oletus-nimi", lista[0].Nimi) };
             for (int i = 1; i < lista.Count; i++) nimet.Add(lista[i].Nimi);
             string valittu = eleven ? Striimiaani.ElevenAani : Striimiaani.Valittu;
             int indeksi = 0;
             for (int i = 1; i < lista.Count; i++) if (lista[i].Tunnus == valittu) indeksi = i;
-            return ValintaRivi(saadot, "Ääni", nimet, indeksi, "ääni", k =>
+            return ValintaRivi(saadot, "Ääni", nimet, indeksi, "ääni", k =>   // kieli: ei (avain ja testikomennon tunniste; näkyvä otsikko tulee ValintaRivissä mika-parametrista)
             {
                 if (eleven) Striimiaani.ElevenAani = lista[k].Tunnus;
                 else Striimiaani.Aseta(k > 0 ? lista[k].Tunnus : null);
@@ -679,7 +681,7 @@ namespace Matkakirja.Natiivi
         {
             var kotelo = Rakenne.El("mk-lukija-saadot__valintakotelo", saadot, PickingMode.Ignore);
             var rivi = Rakenne.El("mk-lukija-saadot__rivi", kotelo, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-lukija-saadot__nimi", rivi), Kirjasin.Luku);
+            Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T(mika == "moottori" ? "ui.lukija.moottori" : "ui.lukija.aani"), "mk-lukija-saadot__nimi", rivi), Kirjasin.Luku);
             int nyt = Mathf.Clamp(indeksi, 0, nimet.Count - 1);
             Button arvo = null;
             Label arvoTeksti = null;
@@ -699,7 +701,7 @@ namespace Matkakirja.Natiivi
                 valittu?.Invoke(nyt);
             }
             // Kulmakuvakkeet kuten kelausnappien ikonit (Ikonit.Takaisin / NuoliOikea, mk-lukija-valikko__kelausikoni).
-            foreach (var (ikoni, suunta, nimi) in new[] { (Ikonit.Takaisin, -1, "Edellinen " + mika), (Ikonit.NuoliOikea, 1, "Seuraava " + mika) })
+            foreach (var (ikoni, suunta, nimi) in new[] { (Ikonit.Takaisin, -1, Kieli.T(mika == "moottori" ? "ui.lukija.edellinen-moottori" : "ui.lukija.edellinen-aani")), (Ikonit.NuoliOikea, 1, Kieli.T(mika == "moottori" ? "ui.lukija.seuraava-moottori" : "ui.lukija.seuraava-aani")) })
             {
                 var b = Rakenne.Nappi(null, "mk-lukija-valikko__kelausnappi mk-lukija-saadot__selaus", () => Valitse(nyt + suunta, false), rivi);
                 b.tooltip = nimi;
@@ -712,7 +714,7 @@ namespace Matkakirja.Natiivi
                 if (auki) lista.schedule.Execute(() => lista.ScrollTo(rivit[nyt])).StartingIn(16);
                 Ruudunpaivitys.Herata(0.3f);
             }, rivi);
-            arvo.tooltip = $"Valitse {mika} listasta";
+            arvo.tooltip = Kieli.T(mika == "moottori" ? "ui.lukija.valitse-moottori" : "ui.lukija.valitse-aani");
             // Arvo täyttää rivin loppuun ja katkeaa "…":lla kuten kappalerivi (ei uutta tyyliä: sama tekstiluokka).
             arvo.style.flexGrow = 1;
             arvo.style.flexShrink = 1;

@@ -1,0 +1,19 @@
+{
+ "mitattu": "2026-10-09 ffmpeg ebur128 (Linssiseppä); lähteet: aanet/pallo-kaupunki-v1 (Pelikoodari, Sonniss), aanet/sonniss-aanet-v4/satama-vesi ja aanet/pallo-soundly-v1 (Soundly-erä 1: sarjoista suurin momentaarihuippu ja huippu)",
+ "kirkonkello": { "integroitu_lufs": -23.2, "momentaari_max_lufs": -14.7, "huippu_db": -8.9 },
+ "vene_ohi": { "integroitu_lufs": -23.2, "momentaari_max_lufs": -16.5, "huippu_db": -9.2 },
+ "maitovaahdotin": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -22.6, "huippu_db": -16.0 },
+ "kahvila": { "integroitu_lufs": -23.2, "momentaari_max_lufs": -15.1, "huippu_db": -3.7 },
+ "tori": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -17.1, "huippu_db": -5.4 },
+ "suihkulahde": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -20.8, "huippu_db": -2.7 },
+ "satama": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -14.5, "huippu_db": -4.7 },
+ "halli": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -17.2, "huippu_db": -4.1 },
+ "lokki_huuto": { "integroitu_lufs": -23.2, "momentaari_max_lufs": -18.8, "huippu_db": -12.7 },
+ "lokki_parvi": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -18.7, "huippu_db": -8.4 },
+ "kyyhky_kujerrus": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -20.1, "huippu_db": -16.5 },
+ "kyyhky_siivet": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -18.9, "huippu_db": -2.6 },
+ "kello_lyonti": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -16.3, "huippu_db": -6.2 },
+ "raitiovaunu_kello": { "integroitu_lufs": -23.2, "momentaari_max_lufs": -16.1, "huippu_db": -4.3 },
+ "pyora_kello": { "integroitu_lufs": -23.2, "momentaari_max_lufs": -17.3, "huippu_db": -2.3 },
+ "laivan_torvi": { "integroitu_lufs": -23.3, "momentaari_max_lufs": -18.8, "huippu_db": -11.3 }
+}
