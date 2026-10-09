@@ -40,6 +40,17 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261009-ilta.md`. Aloitusv
    - Vienti tehdään myöhemmin: uusi kuori + atlas → ASTC (8k, 4k, 2k + hämärä) → uusi Olavinlinna-paketti.
    - Seinän 2 keltainen rapattu rakennus odottaa PT:n päätöstä.
 
+## Lisäys 9.10. klo 20 (PT: seinän 2 keltainen rakennus pois 1499-kuoresta)
+
+- Seinän 2 julkisivu (kehys x 1480–3140, y 1760–3560) on tasoitettu kuoreen `ulkokuori-v25-koe`
+  (`kuori_tasoita.py --taso-alue --molemmat --pois 1980 2320 2900 3480`, kaariportti jätetty). Merkitty TULKINNAKSI, koska Siirtosepän
+  mukaan historialla ei ole tähän lähdettä.
+- Ohjeet v25: `olavinlinna-codex-ohje-v25/seina1` ja `seina2`. Reunoista on pyyhitty syöksytorvi (s1) ja julkisivun sisäreunat
+  (s2). **Jos tekoaly_syotteet.py ajetaan uudelleen, pyyhinnät on tehtävä uudestaan** (koodi on kamera.json:n "huom"-kentässä).
+- Karttaseppä on saanut seinän 2 kehotteen ja kiellon.
+- **Vienti:** 1499-kuori (v25) ja nykyasu (v24, drone-loppukuva) tarvitsevat pelissä kumpikin oman tiedostonsa. Sovi Siirtosepän kanssa,
+  miten peli valitsee kuoren.
+
 ## Työkalut (`_valmiit/kaupunkipinnat-v1/lahde/`)
 
 - **`tekoaly_syotteet.py <näkymä> [--pxm 25 --ulos <kansio>]`** tuottaa:
