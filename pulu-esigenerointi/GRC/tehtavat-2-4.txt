@@ -1,0 +1,1004 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Kuinka pitkä Korintin kanava on ja kuinka syvälle se on kaivettu?
+AIEMPI VASTAUS (Livia):
+Kato, mittoja. Korintin kanava on noin 6,3 kilometriä pitkä ja kaivettu [[Korintin kannaksen]] kalliosta, ja se erottaa [[Peloponnesoksen]] mantereesta. Sen seinämät kohoavat korkeimmillaan noin 80 metrin korkeuteen, ja pohjalta kanava on vain noin 21 metriä leveä. Veden syvyys on lähteiden mukaan noin kahdeksan metriä, mutta en ole varma luvusta. Mittoja riitti, ja minä muistin ne kaikki.
+KYSYMYS: Kerro lisää: Korintin kannaksen
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Miten kanavan yli pääsee, kun laivat kulkevat sen läpi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Silta ja laiva samaan paikkaan, ei ihan helppoa. Kanavan yli kulkee korkeita tie- ja rautatiesiltoja, jotka ylittävät kallioleikkauksen. Kanavan kummassakin päässä on lisäksi [[upotettavat sillat]], jotka laskeutuvat veden alle laivan tullessa ja nousevat jälleen pinnalle sen ohitettua. Näin sekä laivat että autot pääsevät kulkemaan, ja ihmiset pääsevät [[Peloponnesokselle]]. Minä ylitän sen siivin, ei tarvii sillasta huolehtia.
+KYSYMYS: Kerro lisää: upotettavat sillat
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Miten kanavan yli pääsee, kun laivat kulkevat sen läpi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Silta ja laiva samaan paikkaan, ei ihan helppoa. Kanavan yli kulkee korkeita tie- ja rautatiesiltoja, jotka ylittävät kallioleikkauksen. Kanavan kummassakin päässä on lisäksi [[upotettavat sillat]], jotka laskeutuvat veden alle laivan tullessa ja nousevat jälleen pinnalle sen ohitettua. Näin sekä laivat että autot pääsevät kulkemaan, ja ihmiset pääsevät [[Peloponnesokselle]]. Minä ylitän sen siivin, ei tarvii sillasta huolehtia.
+KYSYMYS: Kerro lisää: Peloponnesokselle
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Kreeta] Saari, jossa hypättiin härän yli neljätuhatta vuotta sitten, soitin lepää polvella eikä olkapäällä, ja oliivipuita on enemmän kuin ihmisiä.
+AIEMPI KYSYMYS: Kuinka laajalle purkauksen tuhka levisi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tässä pitää olla tarkka. Noin 3 600 vuotta sitten tapahtunut purkaus levitti tuhkaa laajalle Itä-Välimeren alueelle: tuhkakerroksia on löydetty muun muassa [[Kreetalta]], [[Kykladeilta]], Vähän Aasian rannikolta ja merenpohjan sedimenteistä. Tarkasta laajuudesta ja kerrosten paksuudesta lähteet esittävät erilaisia arvioita, enkä ole varma yksityiskohdista. Purkaus hautasi minolaisen [[Akrotirin]] kaupungin tuhkaan ja jätti saaren keskelle kalderan. Onneksi siit on jo aikaa kulunut vaikka kuinka paljon.
+KYSYMYS: Kerro lisää: Kreetalta
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Kuinka laajalle purkauksen tuhka levisi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tässä pitää olla tarkka. Noin 3 600 vuotta sitten tapahtunut purkaus levitti tuhkaa laajalle Itä-Välimeren alueelle: tuhkakerroksia on löydetty muun muassa [[Kreetalta]], [[Kykladeilta]], Vähän Aasian rannikolta ja merenpohjan sedimenteistä. Tarkasta laajuudesta ja kerrosten paksuudesta lähteet esittävät erilaisia arvioita, enkä ole varma yksityiskohdista. Purkaus hautasi minolaisen [[Akrotirin]] kaupungin tuhkaan ja jätti saaren keskelle kalderan. Onneksi siit on jo aikaa kulunut vaikka kuinka paljon.
+KYSYMYS: Kerro lisää: Kykladeilta
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Kuinka laajalle purkauksen tuhka levisi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tässä pitää olla tarkka. Noin 3 600 vuotta sitten tapahtunut purkaus levitti tuhkaa laajalle Itä-Välimeren alueelle: tuhkakerroksia on löydetty muun muassa [[Kreetalta]], [[Kykladeilta]], Vähän Aasian rannikolta ja merenpohjan sedimenteistä. Tarkasta laajuudesta ja kerrosten paksuudesta lähteet esittävät erilaisia arvioita, enkä ole varma yksityiskohdista. Purkaus hautasi minolaisen [[Akrotirin]] kaupungin tuhkaan ja jätti saaren keskelle kalderan. Onneksi siit on jo aikaa kulunut vaikka kuinka paljon.
+KYSYMYS: Kerro lisää: Akrotirin
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Kaksi vuotta laguunin rannalla] n. 345 eaa. — Aristoteles vietti kaksi vuotta Lesboksen saarella ja tutki Pyrrhan laguunin eläimiä sekä kalastajien saaliita. Hän katsoi, avasi ja kuvasi tarkasti — ja oli ensimmäinen, joka tutki eliöitä järjestelmällisesti. Siitä alkoi biologia. Kaikkea ei uskottu: hän kertoi kalastajien kertoneen, että mustekalan yksi lonkero on lisääntymiselintä. Vasta 1800-luvun tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.
+AIEMPI KYSYMYS: Miksi Atlantis-tarua yhdistetään Santoriniin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Atlantis, siis. Atlantiksesta kertovat antiikin filosofin [[Platonin]] kirjoitukset, joiden mukaan mahtava saarivaltio upposi mereen yhdessä päivässä ja yössä. Santoriniin yhteys on tehty, koska noin 3 600 vuotta sitten tapahtunut purkaus tuhosi minolaisen asutuksen [[Akrotirissa]] ja romahdutti saaren keskiosan [[kalderaksi]]. Osa tutkijoista pitää purkausta mahdollisena innoittajana, mutta toisten mukaan Atlantis on Platonin keksimä vertauskuvallinen kertomus, eikä yhteyttä voida todistaa. Hyvä tarina on silti hyvä tarina, vaikka se olisi pelkkä tarina.
+KYSYMYS: Kerro lisää: Platonin
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Miksi Atlantis-tarua yhdistetään Santoriniin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Atlantis, siis. Atlantiksesta kertovat antiikin filosofin [[Platonin]] kirjoitukset, joiden mukaan mahtava saarivaltio upposi mereen yhdessä päivässä ja yössä. Santoriniin yhteys on tehty, koska noin 3 600 vuotta sitten tapahtunut purkaus tuhosi minolaisen asutuksen [[Akrotirissa]] ja romahdutti saaren keskiosan [[kalderaksi]]. Osa tutkijoista pitää purkausta mahdollisena innoittajana, mutta toisten mukaan Atlantis on Platonin keksimä vertauskuvallinen kertomus, eikä yhteyttä voida todistaa. Hyvä tarina on silti hyvä tarina, vaikka se olisi pelkkä tarina.
+KYSYMYS: Kerro lisää: Akrotirissa
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Miksi Atlantis-tarua yhdistetään Santoriniin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Atlantis, siis. Atlantiksesta kertovat antiikin filosofin [[Platonin]] kirjoitukset, joiden mukaan mahtava saarivaltio upposi mereen yhdessä päivässä ja yössä. Santoriniin yhteys on tehty, koska noin 3 600 vuotta sitten tapahtunut purkaus tuhosi minolaisen asutuksen [[Akrotirissa]] ja romahdutti saaren keskiosan [[kalderaksi]]. Osa tutkijoista pitää purkausta mahdollisena innoittajana, mutta toisten mukaan Atlantis on Platonin keksimä vertauskuvallinen kertomus, eikä yhteyttä voida todistaa. Hyvä tarina on silti hyvä tarina, vaikka se olisi pelkkä tarina.
+KYSYMYS: Kerro lisää: kalderaksi
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Arki ja vuodenajat: Kevät tuoksuu kurkulta] Kuore nousee keväällä Nevaan kutemaan, ja tuoreena se tuoksuu tuoreelta kurkulta — sen tunnistaa torilla nenällä ennen kuin näkee. Kala pyöritetään jauhoissa ja paistetaan kokonaisena. Pietarissa kevään katsotaan alkavan siitä, kun kuore ilmestyy myyntiin, ja kaupungissa on 2000-luvun alusta järjestetty sille oma juhla. Suomessa sama kala tunnetaan myös nimellä norssi.
+AIEMPI KYSYMYS: Millaisia maalauksia Akrotirista on löytynyt?
+AIEMPI VASTAUS (Livia):
+Mmm— värejä. Akrotirista on löytynyt hyvin säilyneitä seinämaalauksia eli freskoja, koska tuhka peitti talot ja suojasi niitä. Tunnetuimpiin kuuluvat [[Kevät-fresko]], jossa kukkivat liljat ja pääskyset, sekä [[nyrkkeilevät pojat]] ja kalastajia esittävä maalaus. Maalaukset kertovat vauraasta ja taitavasta yhteisöstä, jossa luontoa ja arkea kuvattiin eloisin värein, ja talot olivat jopa kolmikerroksisia. Minä kyl etsisin seinältä kyyhkyä, mut taitaa olla pääskynen.
+KYSYMYS: Kerro lisää: Kevät-fresko
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Millaisia maalauksia Akrotirista on löytynyt?
+AIEMPI VASTAUS (Livia):
+Mmm— värejä. Akrotirista on löytynyt hyvin säilyneitä seinämaalauksia eli freskoja, koska tuhka peitti talot ja suojasi niitä. Tunnetuimpiin kuuluvat [[Kevät-fresko]], jossa kukkivat liljat ja pääskyset, sekä [[nyrkkeilevät pojat]] ja kalastajia esittävä maalaus. Maalaukset kertovat vauraasta ja taitavasta yhteisöstä, jossa luontoa ja arkea kuvattiin eloisin värein, ja talot olivat jopa kolmikerroksisia. Minä kyl etsisin seinältä kyyhkyä, mut taitaa olla pääskynen.
+KYSYMYS: Kerro lisää: nyrkkeilevät pojat
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Supertulivuori kaiken alla] Yellowstonen geysirit ja kuumat lähteet kertovat siitä, mitä maan alla piilee: koko puisto lepää valtavan supertulivuoren, Yellowstonen kalderan, päällä. Sen alla oleva magmasäiliö on noin 80 kilometriä pitkä ja 20 kilometriä leveä, ja siitä 6–8 prosenttia on sulaa kiveä. Alueella on ollut kolme jättimäistä purkausta — noin 2,1 miljoonaa, 1,3 miljoonaa ja 631 000 vuotta sitten — joista viimeisin muovasi nykyisen kalderan muodon. Tutkijoiden mukaan seuraava valtapurkaus ei ole "myöhässä": purkausten välit eivät ole säännöllisiä, ja tulivuoriobservatorio seuraa aluetta jatkuvasti mittalaittein ilman merkkejä lähestyvästä katastrofista.
+AIEMPI KYSYMYS: Onko Santorinin tulivuori vieläkin aktiivinen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tähän vastaan varovasti. Kyllä, Santorinin tulivuorta pidetään edelleen aktiivisena. [[Kalderan]] sisällä sijaitsee [[Nea Kameni]] -saari, joka on kasvanut tulivuoren myöhemmissä purkauksissa 1700-luvulta alkaen. Viimeisin purkaus oli lähteiden mukaan vuonna 1950, ja viime vuosina alueella on ollut maanjäristysparvia, joten tulivuorta seurataan jatkuvasti.
+
+Kun kuulee, että sen alla on yhä magmaa, kyyhky miettii kahdesti ennen kuin laskeutuu laavakivelle. Mutta ihmiset rakentavat sinne yhä valkoisia taloja, ja se on oikeastaan aika kaunista.
+KYSYMYS: Kerro lisää: Kalderan
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Hahmojen nimet ladottiin kiveen] Nea Pafos perustettiin 300-luvun eaa. lopulla, ja roomalaisajalla se oli saaren hallinnollinen keskus. Varakkaiden talojen lattiat päällystettiin mosaiikilla. Aionin talon lattia löytyi vasta vuonna 1983, kun puolalainen retkikunta kaivoi esiin 68 neliömetrin huoneen; kuvakenttää siitä on 16 neliömetriä, ja se jakautuu viiteen kohtaukseen. Kivenpalat eli tesserat ovat 2–5 millimetrin kokoisia. Talo on saanut nimensä keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan jumala, ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia kilpailee merenneitoja vastaan. Aihe on harvinainen — muita esityksiä tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on se, että lähes jokaisen hahm…
+AIEMPI KYSYMYS: Onko Santorinin tulivuori vieläkin aktiivinen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tähän vastaan varovasti. Kyllä, Santorinin tulivuorta pidetään edelleen aktiivisena. [[Kalderan]] sisällä sijaitsee [[Nea Kameni]] -saari, joka on kasvanut tulivuoren myöhemmissä purkauksissa 1700-luvulta alkaen. Viimeisin purkaus oli lähteiden mukaan vuonna 1950, ja viime vuosina alueella on ollut maanjäristysparvia, joten tulivuorta seurataan jatkuvasti.
+
+Kun kuulee, että sen alla on yhä magmaa, kyyhky miettii kahdesti ennen kuin laskeutuu laavakivelle. Mutta ihmiset rakentavat sinne yhä valkoisia taloja, ja se on oikeastaan aika kaunista.
+KYSYMYS: Kerro lisää: Nea Kameni
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Mistä Santorinin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimessä on yllättävä tarina. Santorini-nimi juontuu keskiajan latinalaisten ajasta ja viittaa [[Pyhän Irenen]] mukaan, jonka mukaan saarta alettiin kutsua nimellä Santa Irini. Saaren antiikin ajan nimi oli [[Thera]], ja perimätiedon mukaan sen sai nimensä spartalaisesta Theraksesta, joka johti asukkaita saarelle. Kahdella nimellä kelpaa kyl lentää.
+KYSYMYS: Kerro lisää: Pyhän Irenen
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santoríni (luonto · saari)
+Tietoruudun teksti: Noin 3 600 vuotta sitten Santorini räjähti yhdessä historian suurimmista tulivuorenpurkauksista, joka hautasi minolaisen kaupungin Akrotirin tuhkaan — ja loi saaren keskelle avautuvan, yhä näkyvän kalderan. Purkausta on esitetty myös kadonneen Atlantiksen tarun innoittajaksi. Akrotirin kaivauksissa 1967 alkaen on löytynyt kolmikerroksisia taloja ja hyvin säilyneitä freskoja, jotka paljastavat yllättävän vauraan yhteisön.
+AIEMPI KYSYMYS: Mistä Santorinin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimessä on yllättävä tarina. Santorini-nimi juontuu keskiajan latinalaisten ajasta ja viittaa [[Pyhän Irenen]] mukaan, jonka mukaan saarta alettiin kutsua nimellä Santa Irini. Saaren antiikin ajan nimi oli [[Thera]], ja perimätiedon mukaan sen sai nimensä spartalaisesta Theraksesta, joka johti asukkaita saarelle. Kahdella nimellä kelpaa kyl lentää.
+KYSYMYS: Kerro lisää: Thera
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miksi oraakkelin vastaukset olivat niin moniselitteisiä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost on kiistelty kauan. [[Pythian]] sanat välittyivät kysyjille usein papiston tulkitsemina ja runomuotoon sovittamina, ja vastaukset olivat tyypillisesti niin väljiä, että ne sopivat useaan lopputulokseen. Tunnetuin esimerkki on Lyydian kuningas Kroisos, jolle kerrotaan ennustetun, että hyökätessään persialaisia vastaan hän tuhoaisi suuren valtakunnan; valtakunta oli hänen oma. Tarinan välittää kreikkalainen historioitsija [[Herodotos]], eikä sen tarkkuutta voi pitää varmana. Moniselitteisyys suojasi oraakkelin mainetta, koska virheellinen ennustus voitiin aina selittää kysyjän huonoksi tulkinnaksi. Ja tän minä muistin ihan ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Pythian
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Ruoka: Juoma, jonka Herodotos kuvasi] Airag on hapatettua tammanmaitoa. Lypsykausi kestää kesäkuun puolivälistä lokakuun alkuun, ja tamma antaa kaudessa tuhannesta tuhanteenkahteensataan litraa maitoa, josta noin puolet jätetään varsalle. Lypsäjä on toinen polvi maassa ja ämpäri toisen polven päällä; varsa päästetään aloittamaan maidon tulo ja vedetään sitten sivuun mutta jätetään koskettamaan emäänsä. Maito hapatettiin ennen hevosennahkaisessa säkissä, joka nostettiin gerin katolle tai sidottiin satulaan päivän ratsastuksen ajaksi. Herodotos kuvasi skyyttien tekevän samaa jo 400-luvulla eaa.
+AIEMPI KYSYMYS: Miksi oraakkelin vastaukset olivat niin moniselitteisiä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost on kiistelty kauan. [[Pythian]] sanat välittyivät kysyjille usein papiston tulkitsemina ja runomuotoon sovittamina, ja vastaukset olivat tyypillisesti niin väljiä, että ne sopivat useaan lopputulokseen. Tunnetuin esimerkki on Lyydian kuningas Kroisos, jolle kerrotaan ennustetun, että hyökätessään persialaisia vastaan hän tuhoaisi suuren valtakunnan; valtakunta oli hänen oma. Tarinan välittää kreikkalainen historioitsija [[Herodotos]], eikä sen tarkkuutta voi pitää varmana. Moniselitteisyys suojasi oraakkelin mainetta, koska virheellinen ennustus voitiin aina selittää kysyjän huonoksi tulkinnaksi. Ja tän minä muistin ihan ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Herodotos
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Käärmepylväs] Isoisäsi näki oikein: pylväs ei ole tästä kaupungista. Se pystytettiin Delfoihin vuonna 478 eaa. voitonlahjaksi Apollonille sen jälkeen, kun kreikkalaiset kaupunkivaltiot olivat lyöneet persialaiset Plataian taistelussa. Konstantinus Suuri siirsi sen uuteen pääkaupunkiinsa vuonna 324. Kolme käärmeenpäätä pysyivät paikoillaan 1600-luvun loppuun asti, ja kerrotaan, että sulttaani Mehmed II löi yhden alaleuan irti nuijallaan voimannäytöksi — mutta ottomaanikirjoittajat nimeävät tekijäksi myös kolme muuta hallitsijaa, ja lopulta kaikki kolme päätä putosivat samana päivänä lokakuussa 1700. Vuonna 1855 pylvään jalusta kaivettiin esiin, ja kierteistä paljastui kaiverrus: kolmenkymmenenyhden kreikk…
+- [Istanbul — kaupunkilehti / Historia: Käärmepylväs ja kadonneet päät] Sultanahmetin aukion pronssipylväs ei ole tästä kaupungista. Se pystytettiin Delfoihin vuonna 478 eaa. voitonlahjaksi Apollonille sen jälkeen, kun kreikkalaiset kaupunkivaltiot olivat lyöneet persialaiset Plataian taistelussa, ja Konstantinus Suuri siirsi sen uuteen pääkaupunkiinsa vuonna 324. Kolme käärmeenpäätä pysyivät paikoillaan 1600-luvun loppuun asti, ja lopulta kaikki kolme putosivat samana päivänä lokakuussa 1700. Vuonna 1855 pylvään jalusta kaivettiin esiin, ja kierteistä paljastui kaiverrus: kolmenkymmenenyhden kreikkalaisen kaupungin nimet.
+AIEMPI KYSYMYS: Kuka sai tulla kysymään neuvoa Delfoista?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on helppo vastata. Periaatteessa oraakkelilta saattoi kysyä kuka tahansa: yksityishenkilöt, kaupunkivaltioiden lähettiläät ja ulkomaiset hallitsijat, kuten Lyydian kuningas Kroisos. Kysyjän oli tavallisesti maksettava pyhäkölle maksu ja uhrattava eläin [[Apollonille]], ja koska jono oli pitkä, vuoroaan piti odottaa; joillakin kaupungeilla oli etuoikeus päästä jonon ohi. [[Pythia]] vastasi perinteisesti vain tiettyinä päivinä kuukaudessa eikä talvella lainkaan, mutta en ole varma yksityiskohdista. Naisten asemasta kysyjinä tietoni ovat epävarmat. Jonotus ei oo muuttunut miksikään.
+KYSYMYS: Kerro lisää: Apollonille
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Kuka sai tulla kysymään neuvoa Delfoista?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on helppo vastata. Periaatteessa oraakkelilta saattoi kysyä kuka tahansa: yksityishenkilöt, kaupunkivaltioiden lähettiläät ja ulkomaiset hallitsijat, kuten Lyydian kuningas Kroisos. Kysyjän oli tavallisesti maksettava pyhäkölle maksu ja uhrattava eläin [[Apollonille]], ja koska jono oli pitkä, vuoroaan piti odottaa; joillakin kaupungeilla oli etuoikeus päästä jonon ohi. [[Pythia]] vastasi perinteisesti vain tiettyinä päivinä kuukaudessa eikä talvella lainkaan, mutta en ole varma yksityiskohdista. Naisten asemasta kysyjinä tietoni ovat epävarmat. Jonotus ei oo muuttunut miksikään.
+KYSYMYS: Kerro lisää: Pythia
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mistä Omfalos-kivi löytyy nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Delfoin arkeologisessa museossa on esillä omfalos-kivi, mutta en ole varma, onko esillä oleva kappale alkuperäinen vai antiikin aikainen jäljennös. Tarun mukaan [[Zeus]] päästi maailman vastakkaisista laidoista liikkeelle kaksi kotkaa, ja ne kohtasivat Delfoissa, mistä paikka sai asemansa maailman keskipisteenä. Pyhäkkö on osa [[Unescon]] maailmanperintökohteita, ja sinne on mahdollista tutustua paikan päällä. Kotkat saavat aina kaiken huomion, vaikka perillä ensin ois ollut kyyhky.
+KYSYMYS: Kerro lisää: Zeus
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Mistä Omfalos-kivi löytyy nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Delfoin arkeologisessa museossa on esillä omfalos-kivi, mutta en ole varma, onko esillä oleva kappale alkuperäinen vai antiikin aikainen jäljennös. Tarun mukaan [[Zeus]] päästi maailman vastakkaisista laidoista liikkeelle kaksi kotkaa, ja ne kohtasivat Delfoissa, mistä paikka sai asemansa maailman keskipisteenä. Pyhäkkö on osa [[Unescon]] maailmanperintökohteita, ja sinne on mahdollista tutustua paikan päällä. Kotkat saavat aina kaiken huomion, vaikka perillä ensin ois ollut kyyhky.
+KYSYMYS: Kerro lisää: Unescon
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miten Delfoihin pääsee Ateenasta nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Delfoi sijaitsee Keski-Kreikassa [[Parnassos-vuoren]] rinteellä, Ateenasta noin 180 kilometrin päässä. Linja-autolla matka kestää tavallisesti noin kolme tuntia, ja omalla autolla pääsee suunnilleen yhtä nopeasti; aikataulut kannattaa tarkistaa ennen lähtöä, sillä tietoni voivat olla vanhentuneita. Pyhäkön lähellä sijaitsee Delfoin arkeologinen museo, ja matkan varrella on vuoristokylä [[Arachova]].
+
+Vuoristotie on kuulemma mutkainen, ja ylhäältä katsottuna se näyttää nauhalta. Minä lentäisin sen tunnissa, vaikka pullataukoa en saisi mahtumaan väliin: tsourekia kai myydään jossain matkan varrella, en vaan tiedä missä.
+KYSYMYS: Kerro lisää: Parnassos-vuoren
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Miten Delfoihin pääsee Ateenasta nykyään?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Delfoi sijaitsee Keski-Kreikassa [[Parnassos-vuoren]] rinteellä, Ateenasta noin 180 kilometrin päässä. Linja-autolla matka kestää tavallisesti noin kolme tuntia, ja omalla autolla pääsee suunnilleen yhtä nopeasti; aikataulut kannattaa tarkistaa ennen lähtöä, sillä tietoni voivat olla vanhentuneita. Pyhäkön lähellä sijaitsee Delfoin arkeologinen museo, ja matkan varrella on vuoristokylä [[Arachova]].
+
+Vuoristotie on kuulemma mutkainen, ja ylhäältä katsottuna se näyttää nauhalta. Minä lentäisin sen tunnissa, vaikka pullataukoa en saisi mahtumaan väliin: tsourekia kai myydään jossain matkan varrella, en vaan tiedä missä.
+KYSYMYS: Kerro lisää: Arachova
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+AIEMPI KYSYMYS: Millaisia kisoja Delfoissa järjestettiin Apollonin kunniaksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Delfoin [[pythiakisat]] pidettiin Apollonin kunniaksi noin neljän vuoden välein, ja ne olivat yksi antiikin Kreikan suurista kisoista [[Olympian]] kisojen rinnalla. Alkuun ohjelmassa oli ennen muuta musiikkia, kuten laulua kitaran säestyksellä, ja urheilulajit sekä vaunukilpailut lisättiin myöhemmin. Voittaja sai palkinnoksi laakeriseppeleen. En ole varma kisojen alkuajankohdasta, jonka lähteet antavat eri tavoin. Seppele olis kyllä sopinut minun päähäni.
+KYSYMYS: Kerro lisää: pythiakisat
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Delfoi (historia)
+Tietoruudun teksti: Muinaiset kreikkalaiset pitivät Delfoita koko maailman keskipisteenä — paikkaa merkitsi Omfalos-kivi, "maailman napa". Täällä toimi Pythia, oraakkeli, jota kysyttiin tärkeistä päätöksistä kaikkialta antiikin maailmasta. Legendan mukaan nimi juontuu käärmeolento Delfynestä, jonka jumala Apollon surmasi. Pyhäkkö sijaitsee Parnassos-vuoren lounaisrinteellä ja on nykyään Unescon maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Olympia-teatteri] 1926 Olympia-teatterin suunnitteli John Eberson, ja se avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. Eberson oli erikoistunut niin sanottuun ilmapiiriteatteriin: sali on rakennettu näyttämään espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. Floridassa on jäljellä enää neljä tällaista salia. Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja B. B. King. Elokuussa 1956 Elvis Presley esiintyi talossa viisitoista kertaa loppuunmyydylle salille. 1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin purettavaksi parkkipaikaksi. Liikemies Maurice Gusman osti talon…
+AIEMPI KYSYMYS: Millaisia kisoja Delfoissa järjestettiin Apollonin kunniaksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Delfoin [[pythiakisat]] pidettiin Apollonin kunniaksi noin neljän vuoden välein, ja ne olivat yksi antiikin Kreikan suurista kisoista [[Olympian]] kisojen rinnalla. Alkuun ohjelmassa oli ennen muuta musiikkia, kuten laulua kitaran säestyksellä, ja urheilulajit sekä vaunukilpailut lisättiin myöhemmin. Voittaja sai palkinnoksi laakeriseppeleen. En ole varma kisojen alkuajankohdasta, jonka lähteet antavat eri tavoin. Seppele olis kyllä sopinut minun päähäni.
+KYSYMYS: Kerro lisää: Olympian
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Mitä lajeja antiikin kisoissa kilpailtiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kisojen alkuvaiheessa ohjelmassa oli vain yksi laji, stadionjuoksu, mutta ohjelma laajeni vuosisatojen kuluessa. Mukaan tulivat kaksoisjuoksu, pitkän matkan juoksu, paini, nyrkkeily ja vapaapainin kaltainen [[pankration]], sekä viisiottelu eli [[viisiottelu]], johon kuuluivat juoksu, kaukohyppy, kiekonheitto, keihäänheitto ja paini. Lisäksi kilpailtiin hevos- ja [[vaunukilpailuissa]] sekä aseellisessa juoksussa, jossa urheilijoilla oli kilpi mukanaan. Lajivalikoima ja sen järjestys vaihtelivat eri aikoina.
+
+Minä olisin kyllä ilmoittautunut juoksuun, sillä kilpakyyhky lentää enemmän kuin juoksee. Sääntöjä ei kuitenkaan ole kirjoitettu siivekkäille, joten jäin katsomoon.
+KYSYMYS: Kerro lisää: pankration
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Mitä lajeja antiikin kisoissa kilpailtiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kisojen alkuvaiheessa ohjelmassa oli vain yksi laji, stadionjuoksu, mutta ohjelma laajeni vuosisatojen kuluessa. Mukaan tulivat kaksoisjuoksu, pitkän matkan juoksu, paini, nyrkkeily ja vapaapainin kaltainen [[pankration]], sekä viisiottelu eli [[viisiottelu]], johon kuuluivat juoksu, kaukohyppy, kiekonheitto, keihäänheitto ja paini. Lisäksi kilpailtiin hevos- ja [[vaunukilpailuissa]] sekä aseellisessa juoksussa, jossa urheilijoilla oli kilpi mukanaan. Lajivalikoima ja sen järjestys vaihtelivat eri aikoina.
+
+Minä olisin kyllä ilmoittautunut juoksuun, sillä kilpakyyhky lentää enemmän kuin juoksee. Sääntöjä ei kuitenkaan ole kirjoitettu siivekkäille, joten jäin katsomoon.
+KYSYMYS: Kerro lisää: viisiottelu
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Jumalten vaunu] Noin vuonna 500 eaa. karthagolainen merenkulkija Hanno purjehti Länsi-Afrikan rannikkoa pitkin ja näki kaukaa merellä vuoren, joka syöksi öisin liekkejä taivaalle. Hänen pelästyneet miehensä antoivat sille nimen "jumalten vaunu", Theon Ochema. Tutkijat eivät ole täysin varmoja, mikä vuori kertomuksessa oli kyseessä, mutta monien mielestä paras ehdokas on juuri Kamerunvuori – jolloin Hannon matkakertomus olisi ihmiskunnan vanhin säilynyt kuvaus tulivuorenpurkauksesta.
+AIEMPI KYSYMYS: Mitä lajeja antiikin kisoissa kilpailtiin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kisojen alkuvaiheessa ohjelmassa oli vain yksi laji, stadionjuoksu, mutta ohjelma laajeni vuosisatojen kuluessa. Mukaan tulivat kaksoisjuoksu, pitkän matkan juoksu, paini, nyrkkeily ja vapaapainin kaltainen [[pankration]], sekä viisiottelu eli [[viisiottelu]], johon kuuluivat juoksu, kaukohyppy, kiekonheitto, keihäänheitto ja paini. Lisäksi kilpailtiin hevos- ja [[vaunukilpailuissa]] sekä aseellisessa juoksussa, jossa urheilijoilla oli kilpi mukanaan. Lajivalikoima ja sen järjestys vaihtelivat eri aikoina.
+
+Minä olisin kyllä ilmoittautunut juoksuun, sillä kilpakyyhky lentää enemmän kuin juoksee. Sääntöjä ei kuitenkaan ole kirjoitettu siivekkäille, joten jäin katsomoon.
+KYSYMYS: Kerro lisää: vaunukilpailuissa
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+- [Sofia — kaupunkilehti / Sofia: Serdica on minun Roomani] Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.
+AIEMPI KYSYMYS: Miksi kisat aikanaan loppuivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Perinteisesti kisojen loppu yhdistetään [[Rooman]] keisari [[Theodosiuksen]] 390-luvulla antamiin pakanallisten kulttien kieltoihin; usein mainitaan vuosi 393, mutta tarkka vuosi ja se, järjestettiinkö kisoja vielä sen jälkeen, on tutkijoiden kesken epäselvää. Myöhemmin Olympian pyhäkkö kärsi tulipaloista, maanjäristyksistä ja jokitulvista, ja alue peittyi vähitellen hiekan ja mudan alle. Rauniot kaivettiin esiin vasta 1800-luvulla. No siinä meni aikaa, kyl minäkin sen huomaan.
+KYSYMYS: Kerro lisää: Rooman
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Miksi kisat aikanaan loppuivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Perinteisesti kisojen loppu yhdistetään [[Rooman]] keisari [[Theodosiuksen]] 390-luvulla antamiin pakanallisten kulttien kieltoihin; usein mainitaan vuosi 393, mutta tarkka vuosi ja se, järjestettiinkö kisoja vielä sen jälkeen, on tutkijoiden kesken epäselvää. Myöhemmin Olympian pyhäkkö kärsi tulipaloista, maanjäristyksistä ja jokitulvista, ja alue peittyi vähitellen hiekan ja mudan alle. Rauniot kaivettiin esiin vasta 1800-luvulla. No siinä meni aikaa, kyl minäkin sen huomaan.
+KYSYMYS: Kerro lisää: Theodosiuksen
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Mitä olympiarauha tarkoitti antiikin Kreikassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Olympiarauha eli [[ekecheiria]] oli kisojen ajaksi julistettu pyhä aselepo, jonka tarkoituksena oli turvata kisavieraiden ja urheilijoiden matkat [[Zeuksen]] kunniaksi järjestettyihin kisoihin, vaikka kaupunkivaltiot olisivat muuten olleet keskenään sodassa. Rauhaa julistamaan lähetettiin kuuluttajia Kreikan kaupunkeihin, ja se koski nimenomaan matkustajia ja pyhäkköaluetta, ei kaikkia Kreikan sotia. Rauhan rikkojalle saattoi koitua rangaistus: Thukydideen mukaan [[Sparta]] sai sakon 400-luvulla eaa. Käytännössä rauha ei kuitenkaan aina pitänyt. Aselepo ja urheilu, parempaa yhdistelmää saa hakea.
+KYSYMYS: Kerro lisää: ekecheiria
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+AIEMPI KYSYMYS: Mitä olympiarauha tarkoitti antiikin Kreikassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Olympiarauha eli [[ekecheiria]] oli kisojen ajaksi julistettu pyhä aselepo, jonka tarkoituksena oli turvata kisavieraiden ja urheilijoiden matkat [[Zeuksen]] kunniaksi järjestettyihin kisoihin, vaikka kaupunkivaltiot olisivat muuten olleet keskenään sodassa. Rauhaa julistamaan lähetettiin kuuluttajia Kreikan kaupunkeihin, ja se koski nimenomaan matkustajia ja pyhäkköaluetta, ei kaikkia Kreikan sotia. Rauhan rikkojalle saattoi koitua rangaistus: Thukydideen mukaan [[Sparta]] sai sakon 400-luvulla eaa. Käytännössä rauha ei kuitenkaan aina pitänyt. Aselepo ja urheilu, parempaa yhdistelmää saa hakea.
+KYSYMYS: Kerro lisää: Zeuksen
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Mitä olympiarauha tarkoitti antiikin Kreikassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Olympiarauha eli [[ekecheiria]] oli kisojen ajaksi julistettu pyhä aselepo, jonka tarkoituksena oli turvata kisavieraiden ja urheilijoiden matkat [[Zeuksen]] kunniaksi järjestettyihin kisoihin, vaikka kaupunkivaltiot olisivat muuten olleet keskenään sodassa. Rauhaa julistamaan lähetettiin kuuluttajia Kreikan kaupunkeihin, ja se koski nimenomaan matkustajia ja pyhäkköaluetta, ei kaikkia Kreikan sotia. Rauhan rikkojalle saattoi koitua rangaistus: Thukydideen mukaan [[Sparta]] sai sakon 400-luvulla eaa. Käytännössä rauha ei kuitenkaan aina pitänyt. Aselepo ja urheilu, parempaa yhdistelmää saa hakea.
+KYSYMYS: Kerro lisää: Sparta
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Olympia-teatteri] 1926 Olympia-teatterin suunnitteli John Eberson, ja se avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. Eberson oli erikoistunut niin sanottuun ilmapiiriteatteriin: sali on rakennettu näyttämään espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. Floridassa on jäljellä enää neljä tällaista salia. Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja B. B. King. Elokuussa 1956 Elvis Presley esiintyi talossa viisitoista kertaa loppuunmyydylle salille. 1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin purettavaksi parkkipaikaksi. Liikemies Maurice Gusman osti talon…
+AIEMPI KYSYMYS: Kuinka pitkä antiikin stadion oli metreinä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mittayksikkönä stadion vastasi kisakentän pituutta, ja [[Olympiassa]] sen arvioidaan olleen noin 192 metriä. Muualla Kreikassa stadionien pituudet vaihtelivat jonkin verran, koska jalan mittaa ei ollut vakioitu samalla tavalla kaikkialla, enkä ole varma jokaisen kaupungin luvusta. Tarun mukaan [[Herakles]] mittasi kentän omilla askelillaan kuusisataa jalan mittaa pitkäksi. Nykyinen sana stadion juontuu tästä mitasta, sillä urheilukenttää alettiin kutsua mittansa mukaan.
+
+Minä mittaan matkani siipiniskuilla, ja kuusisataa jalkaa on niissä yllättävän lyhyt pätkä. Silti ymmärrän, miksi mitta jäi elämään: se on tarpeeksi pieni muistettavaksi.
+KYSYMYS: Kerro lisää: Olympiassa
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Kuinka pitkä antiikin stadion oli metreinä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mittayksikkönä stadion vastasi kisakentän pituutta, ja [[Olympiassa]] sen arvioidaan olleen noin 192 metriä. Muualla Kreikassa stadionien pituudet vaihtelivat jonkin verran, koska jalan mittaa ei ollut vakioitu samalla tavalla kaikkialla, enkä ole varma jokaisen kaupungin luvusta. Tarun mukaan [[Herakles]] mittasi kentän omilla askelillaan kuusisataa jalan mittaa pitkäksi. Nykyinen sana stadion juontuu tästä mitasta, sillä urheilukenttää alettiin kutsua mittansa mukaan.
+
+Minä mittaan matkani siipiniskuilla, ja kuusisataa jalkaa on niissä yllättävän lyhyt pätkä. Silti ymmärrän, miksi mitta jäi elämään: se on tarpeeksi pieni muistettavaksi.
+KYSYMYS: Kerro lisää: Herakles
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+AIEMPI KYSYMYS: Kuka herätti olympiakisat henkiin ja missä ne järjestettiin ensin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ranskalainen aatelismies [[Pierre de Coubertin]] ajoi ajatusta antiikin kisojen uudelleen herättämisestä, ja 1894 perustettiin [[Kansainvälinen olympiakomitea]]. Ensimmäiset nykyaikaiset olympialaiset pidettiin [[Ateenassa]] vuonna 1896, ja mukana oli urheilijoita useista maista. Kisat järjestettiin kesällä marmorisessa stadionissa, joka oli rakennettu antiikin kentän esikuvan mukaan. Viisas Pöllö osaisi päivämäärät ulkoa, mut hän on parantelemassa siipeään.
+KYSYMYS: Kerro lisää: Pierre de Coubertin
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Olympia-teatteri] 1926 Olympia-teatterin suunnitteli John Eberson, ja se avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. Eberson oli erikoistunut niin sanottuun ilmapiiriteatteriin: sali on rakennettu näyttämään espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. Floridassa on jäljellä enää neljä tällaista salia. Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja B. B. King. Elokuussa 1956 Elvis Presley esiintyi talossa viisitoista kertaa loppuunmyydylle salille. 1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin purettavaksi parkkipaikaksi. Liikemies Maurice Gusman osti talon…
+AIEMPI KYSYMYS: Kuka herätti olympiakisat henkiin ja missä ne järjestettiin ensin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ranskalainen aatelismies [[Pierre de Coubertin]] ajoi ajatusta antiikin kisojen uudelleen herättämisestä, ja 1894 perustettiin [[Kansainvälinen olympiakomitea]]. Ensimmäiset nykyaikaiset olympialaiset pidettiin [[Ateenassa]] vuonna 1896, ja mukana oli urheilijoita useista maista. Kisat järjestettiin kesällä marmorisessa stadionissa, joka oli rakennettu antiikin kentän esikuvan mukaan. Viisas Pöllö osaisi päivämäärät ulkoa, mut hän on parantelemassa siipeään.
+KYSYMYS: Kerro lisää: Kansainvälinen olympiakomitea
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Olympia (urheilu)
+Tietoruudun teksti: Antiikin olympialaiset käytiin Olympian pyhäkköalueella joka neljäs vuosi Zeuksen kunniaksi 700-luvulta eaa. aina 300-luvulle jaa., ja hänen temppelissään seisoi Feidiaan kullasta ja norsunluusta veistämä Zeus-patsas, yksi antiikin seitsemästä ihmeestä. Stadionin kentän pituudesta tuli kreikkalaisten matkamitta, stadion. Isoisän matkan aikaan rauniot olivat vielä suurelta osin kaivamatta: saksalaisten suurkaivaus alkoi 1875 ja kirjasi kaikkiaan 14 000 esinettä. Kisojen aate herätettiin henkiin 1894.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Kaksi vuotta laguunin rannalla] n. 345 eaa. — Aristoteles vietti kaksi vuotta Lesboksen saarella ja tutki Pyrrhan laguunin eläimiä sekä kalastajien saaliita. Hän katsoi, avasi ja kuvasi tarkasti — ja oli ensimmäinen, joka tutki eliöitä järjestelmällisesti. Siitä alkoi biologia. Kaikkea ei uskottu: hän kertoi kalastajien kertoneen, että mustekalan yksi lonkero on lisääntymiselintä. Vasta 1800-luvun tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.
+AIEMPI KYSYMYS: Kuka herätti olympiakisat henkiin ja missä ne järjestettiin ensin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ranskalainen aatelismies [[Pierre de Coubertin]] ajoi ajatusta antiikin kisojen uudelleen herättämisestä, ja 1894 perustettiin [[Kansainvälinen olympiakomitea]]. Ensimmäiset nykyaikaiset olympialaiset pidettiin [[Ateenassa]] vuonna 1896, ja mukana oli urheilijoita useista maista. Kisat järjestettiin kesällä marmorisessa stadionissa, joka oli rakennettu antiikin kentän esikuvan mukaan. Viisas Pöllö osaisi päivämäärät ulkoa, mut hän on parantelemassa siipeään.
+KYSYMYS: Kerro lisää: Ateenassa
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+AIEMPI KYSYMYS: Kuinka vanhaksi oliivipuu voi elää?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Oliivipuu voi elää satoja vuosia, ja joissain tapauksissa jopa tuhansia. Kreetan [[Vouvesin]] kuuluisan oliivipuun iäksi on arvioitu useita tuhansia vuosia, mutta arviot vaihtelevat, ja tarkkaa ikää on vaikea määrittää, koska vanhat rungot ovat ontoita. Oliivipuu kestää myös kuivuutta paremmin kuin melkein mikään muu viljelykasvi, mikä auttaa sitä selviämään vuosisatoja Välimeren ilmastossa. Aikamoista, ihan vaan paikallaan seisomalla.
+KYSYMYS: Kerro lisää: Vouvesin
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+AIEMPI KYSYMYS: Miksi tuore oliivi ei kelpaa syötäväksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kokeilemaan ei kannata lähteä. Tuore oliivi sisältää [[oleuropeiinia]], kitkerää yhdistettä, joka tekee hedelmästä syömäkelvottoman karvaan. Siksi oliivit käsitellään ennen syömistä: ne liotetaan suolavedessä tai lipeässä tai suolataan, jolloin karvaus hajoaa tai liukenee pois, ja käsittelytavat vaihtelevat alueittain. Kalamata-oliivit säilötään perinteisesti [[viinietikassa]] tai oliiviöljyssä. Tän olisi Viisas Pöllö kertonut lyhyemmin, mut hän on kutsuttu puhumaan johonkin.
+KYSYMYS: Kerro lisää: oleuropeiinia
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Miksi tuore oliivi ei kelpaa syötäväksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kokeilemaan ei kannata lähteä. Tuore oliivi sisältää [[oleuropeiinia]], kitkerää yhdistettä, joka tekee hedelmästä syömäkelvottoman karvaan. Siksi oliivit käsitellään ennen syömistä: ne liotetaan suolavedessä tai lipeässä tai suolataan, jolloin karvaus hajoaa tai liukenee pois, ja käsittelytavat vaihtelevat alueittain. Kalamata-oliivit säilötään perinteisesti [[viinietikassa]] tai oliiviöljyssä. Tän olisi Viisas Pöllö kertonut lyhyemmin, mut hän on kutsuttu puhumaan johonkin.
+KYSYMYS: Kerro lisää: viinietikassa
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Medhane Alem] 1100–1200-luku Maailman Vapahtajan taloa pidetään maailman suurimpana monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka ympäriltä kallio on louhittu pois. Se rakennettiin Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus on tehty samasta kivestä kuin sen katto ja lattia. Täällä säilytetään Lalibelan ristiä, Etiopian arvokkaimpia uskonnollisia perintöesineitä. Kirkko on myös yksi niistä viidestä, joiden päälle pystytettiin 2008 Euroopan unionin rahoituksella suojakatokset. Ne oli tarkoitettu väliaikaisiksi siihen asti, kunnes pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä paikoillaan — ja niiden paino on nyt oma ongelman…
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Mitä eroa on neitsytoliiviöljyllä ja tavallisella oliiviöljyllä?
+AIEMPI VASTAUS (Livia):
+Mmm— Neitsytoliiviöljy valmistetaan puristamalla oliiveista öljy mekaanisesti ilman kemiallista käsittelyä. [[Euroopan unionin]] määritelmän mukaan [[ekstraneitsytoliiviöljyn]] vapaan rasvahapon pitoisuus saa olla enintään 0,8 prosenttia, ja lisäksi maun ja tuoksun on oltava virheetön. Tavallinen oliiviöljy sisältää puhdistettua öljyä, johon on sekoitettu neitsytöljyä, joten sen maku on mietompi.
+
+Ylhäältä katsottuna kaikki oliivilehdot ovat samaa hopeanharmaata, joten laatu ei näy minun korkeudestani. Pullassa taas laatu näkyy heti, ja siitä minä olen aika pätevä.
+KYSYMYS: Kerro lisää: Euroopan unionin
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+AIEMPI KYSYMYS: Mitä eroa on neitsytoliiviöljyllä ja tavallisella oliiviöljyllä?
+AIEMPI VASTAUS (Livia):
+Mmm— Neitsytoliiviöljy valmistetaan puristamalla oliiveista öljy mekaanisesti ilman kemiallista käsittelyä. [[Euroopan unionin]] määritelmän mukaan [[ekstraneitsytoliiviöljyn]] vapaan rasvahapon pitoisuus saa olla enintään 0,8 prosenttia, ja lisäksi maun ja tuoksun on oltava virheetön. Tavallinen oliiviöljy sisältää puhdistettua öljyä, johon on sekoitettu neitsytöljyä, joten sen maku on mietompi.
+
+Ylhäältä katsottuna kaikki oliivilehdot ovat samaa hopeanharmaata, joten laatu ei näy minun korkeudestani. Pullassa taas laatu näkyy heti, ja siitä minä olen aika pätevä.
+KYSYMYS: Kerro lisää: ekstraneitsytoliiviöljyn
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+AIEMPI KYSYMYS: Mitä kuuluu perinteiseen kreikkalaiseen salaattiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Perinteistä kreikkalaista salaattia kutsutaan nimellä [[horiatiki]], ja siihen kuuluu tavallisesti tomaattia, kurkkua, punasipulia, [[Kalamata-oliiveja]], fetajuustoa, oreganoa ja oliiviöljyä. Salaatissa ei yleensä ole salaattilehtiä, ja juusto tarjoillaan usein paksuna siivuna ainesten päällä. Tarkka koostumus vaihtelee ravintolasta ja alueesta riippuen. Pulla puuttuu tästä listasta, valitettavasti.
+KYSYMYS: Kerro lisää: horiatiki
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+AIEMPI KYSYMYS: Mitä kuuluu perinteiseen kreikkalaiseen salaattiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Perinteistä kreikkalaista salaattia kutsutaan nimellä [[horiatiki]], ja siihen kuuluu tavallisesti tomaattia, kurkkua, punasipulia, [[Kalamata-oliiveja]], fetajuustoa, oreganoa ja oliiviöljyä. Salaatissa ei yleensä ole salaattilehtiä, ja juusto tarjoillaan usein paksuna siivuna ainesten päällä. Tarkka koostumus vaihtelee ravintolasta ja alueesta riippuen. Pulla puuttuu tästä listasta, valitettavasti.
+KYSYMYS: Kerro lisää: Kalamata-oliiveja
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Kaksi vuotta laguunin rannalla] n. 345 eaa. — Aristoteles vietti kaksi vuotta Lesboksen saarella ja tutki Pyrrhan laguunin eläimiä sekä kalastajien saaliita. Hän katsoi, avasi ja kuvasi tarkasti — ja oli ensimmäinen, joka tutki eliöitä järjestelmällisesti. Siitä alkoi biologia. Kaikkea ei uskottu: hän kertoi kalastajien kertoneen, että mustekalan yksi lonkero on lisääntymiselintä. Vasta 1800-luvun tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.
+AIEMPI KYSYMYS: Miten oliiviöljyä käytettiin antiikin Kreikassa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: antiikin Kreikassa öljyä käytettiin ruoanlaittoon, valaisuun öljylampuissa ja ihon hoitoon, ja urheilijat sivelivät sitä ihoonsa harjoitellessaan ja kilpaillessaan. [[Ateenassa]] pidetyissä [[Panathenaia]]-juhlakisoissa voittajan palkintona oli suuri savikruukku täynnä oliiviöljyä. Öljy oli siis sekä arkinen että arvokas tuote. Ja minä kun luulin öljyn olevan vain salaattia varten.
+KYSYMYS: Kerro lisää: Ateenassa
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalamata (ruoka)
+Tietoruudun teksti: Kalamata on antanut nimensä suurelle, tummanvioletille ja mantelinmuotoiselle pöytäoliiville, jota säilötään perinteisesti viinietikassa tai oliiviöljyssä. Lajiketta viljeltiin alun perin kaupungin ympäristössä Messeniassa ja naapurissa Lakoniassa. Kalamata-oliivia ei voi korjata vihreänä, ja se poimitaan käsin, jotta hedelmä ei kolhiinnu. EU:ssa nimi on suojattu: Kalamataksi saa kutsua vain seudun omia oliiveja, ja muualla kasvatetut myydään nimellä Kalamon.
+AIEMPI KYSYMYS: Miten oliiviöljyä käytettiin antiikin Kreikassa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: antiikin Kreikassa öljyä käytettiin ruoanlaittoon, valaisuun öljylampuissa ja ihon hoitoon, ja urheilijat sivelivät sitä ihoonsa harjoitellessaan ja kilpaillessaan. [[Ateenassa]] pidetyissä [[Panathenaia]]-juhlakisoissa voittajan palkintona oli suuri savikruukku täynnä oliiviöljyä. Öljy oli siis sekä arkinen että arvokas tuote. Ja minä kun luulin öljyn olevan vain salaattia varten.
+KYSYMYS: Kerro lisää: Panathenaia
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+- [Kreikka — maalehti / Tiede ja keksinnöt: Plataani, jonka oksat lepäävät tolppien päällä] n. 460 eaa. — Hippokrates syntyi Kosin saarella noin vuonna 460 eaa. Hänen mukaansa on nimetty lääkärinvala, vaikka teksti kirjoitettiin todennäköisesti vasta hänen kuolemansa jälkeen. Kosin kaupungin keskellä kasvaa plataani, jonka juurella hänen kerrotaan opettaneen oppilaitaan. Puun oksat ovat käyneet niin painaviksi, että ne on jouduttu tukemaan metallitolpilla. Hippokrates matkusti potilaiden luo ainakin Thessaliaan, Traakiaan ja Marmaranmerelle asti. Hän on myös ensimmäinen, joka mainitsee kirjoituksissaan Khioksen mastiksin kyyneleet.
+AIEMPI KYSYMYS: Mistä saarille paenneet ihmiset tulivat?
+AIEMPI VASTAUS (Livia):
+Ai niin. Kreikan vapaussodan aikana 1820-luvulla pakolaisia tuli erityisesti [[Khioksen]] ja [[Psaran]] saarilta sekä Vähän-Aasian rannikolta, jossa taistelut ja väkivalta ajoivat ihmisiä pakoon. Syros oli sodan aikana lähteiden mukaan puolueeton, ja sen katolinen väestö oli Ranskan suojeluksessa, mikä teki saaresta turvallisen paikan asettua. Tapahtumista on kulunut noin kaksi vuosisataa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Khioksen
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Mistä saarille paenneet ihmiset tulivat?
+AIEMPI VASTAUS (Livia):
+Ai niin. Kreikan vapaussodan aikana 1820-luvulla pakolaisia tuli erityisesti [[Khioksen]] ja [[Psaran]] saarilta sekä Vähän-Aasian rannikolta, jossa taistelut ja väkivalta ajoivat ihmisiä pakoon. Syros oli sodan aikana lähteiden mukaan puolueeton, ja sen katolinen väestö oli Ranskan suojeluksessa, mikä teki saaresta turvallisen paikan asettua. Tapahtumista on kulunut noin kaksi vuosisataa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Psaran
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Mitä telakoilla rakennetaan nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen vielä. Käsittääkseni Ermoupolin [[Neorion]]-telakalla keskitytään nykyään lähinnä laivojen korjaukseen ja kunnostukseen eikä uusien laivojen rakentamiseen. Telakka on yksi saaren tärkeistä työnantajista, ja sen toiminta on vaihdellut taloudellisten olojen mukaan. En ole varma ajantasaisesta tilanteesta, koska tällaiset tiedot vanhenevat nopeasti, ja [[Syroksen]] telakkaperinne on silti edelleen elävä. Tää on kyl sellainen asia, joka vanhenee nopeasti.
+KYSYMYS: Kerro lisää: Neorion
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Mitä telakoilla rakennetaan nykyään?
+AIEMPI VASTAUS (Livia):
+Hetkinen vielä. Käsittääkseni Ermoupolin [[Neorion]]-telakalla keskitytään nykyään lähinnä laivojen korjaukseen ja kunnostukseen eikä uusien laivojen rakentamiseen. Telakka on yksi saaren tärkeistä työnantajista, ja sen toiminta on vaihdellut taloudellisten olojen mukaan. En ole varma ajantasaisesta tilanteesta, koska tällaiset tiedot vanhenevat nopeasti, ja [[Syroksen]] telakkaperinne on silti edelleen elävä. Tää on kyl sellainen asia, joka vanhenee nopeasti.
+KYSYMYS: Kerro lisää: Syroksen
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Kuka suunnitteli Ermoupolin komeat uusklassiset rakennukset?
+AIEMPI VASTAUS (Livia):
+Just niin, kaupungin julkisia rakennuksia on suunnitellut osin saksalaissyntyinen arkkitehti [[Ernst Ziller]], joka työskenteli Kreikassa 1800-luvun lopulla. Käsittääkseni myös Ermoupolin kaupungintalo on hänen käsialaansa, ja se sijaitsee kaupungin keskeisen [[Miaoulin aukion]] laidalla. En ole varma kaikista rakennuksista, jotka hänelle on kirjattu. Ziller on nimi, jonka minä muistin ihan itse.
+KYSYMYS: Kerro lisää: Ernst Ziller
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Kuka suunnitteli Ermoupolin komeat uusklassiset rakennukset?
+AIEMPI VASTAUS (Livia):
+Just niin, kaupungin julkisia rakennuksia on suunnitellut osin saksalaissyntyinen arkkitehti [[Ernst Ziller]], joka työskenteli Kreikassa 1800-luvun lopulla. Käsittääkseni myös Ermoupolin kaupungintalo on hänen käsialaansa, ja se sijaitsee kaupungin keskeisen [[Miaoulin aukion]] laidalla. En ole varma kaikista rakennuksista, jotka hänelle on kirjattu. Ziller on nimi, jonka minä muistin ihan itse.
+KYSYMYS: Kerro lisää: Miaoulin aukion
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Millainen ruoka kuuluu Syroksen saaren perinteeseen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Syros tunnetaan ennen kaikkea makeisesta nimeltä [[loukoumi]], joka on hyytelömäinen, tärkkelyspohjainen herkku, sekä juustosta nimeltä [[San Michali]], joka on saaren oma erikoisuus. Saarella tehdään myös halvaa sisältäviä leivonnaisia, ja kapris on tuttu ainesosa paikallisissa salaateissa; en ole varma kaikkien ruokien tarkasta nimestä.
+
+Makeinen ja juusto samalla saarella, minä olisin lentänyt sinne jo aamulla. Pullaa en löydä listalta, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: loukoumi
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Millainen ruoka kuuluu Syroksen saaren perinteeseen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Syros tunnetaan ennen kaikkea makeisesta nimeltä [[loukoumi]], joka on hyytelömäinen, tärkkelyspohjainen herkku, sekä juustosta nimeltä [[San Michali]], joka on saaren oma erikoisuus. Saarella tehdään myös halvaa sisältäviä leivonnaisia, ja kapris on tuttu ainesosa paikallisissa salaateissa; en ole varma kaikkien ruokien tarkasta nimestä.
+
+Makeinen ja juusto samalla saarella, minä olisin lentänyt sinne jo aamulla. Pullaa en löydä listalta, mutta täällä on varmasti oma versionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: San Michali
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Miksi Kykladeja kutsutaan Kykladeiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimi tulee kreikan sanasta kyklos, joka tarkoittaa ympyrää. Saaret asettuvat ympyrän tavoin pyhän [[Deloksen]] saaren ympärille, jota pidettiin [[Apollonin]] ja hänen sisarensa syntymäpaikkana. Syros kuuluu myös tähän saariryhmään. Tarkkaa saarten lukumäärää en ole varma, koska se riippuu siitä, lasketaanko pienet kalliosaaret mukaan. Ihan kuin kyyhkyn kaarros kaupungin yllä, sanon vain.
+KYSYMYS: Kerro lisää: Deloksen
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ermoupoli (merenkulku)
+Tietoruudun teksti: Hermeksen kaupungiksi nimetty Ermoupoli perustettiin Syroksen saarelle 1820-luvulla, kun vapaussodan pakolaiset muilta saarilta asettuivat sinne. Siitä kasvoi nopeasti Kreikan johtava kauppa- ja teollisuuskaupunki ja maan pääsatama: Kreikan höyrylaivayhtiö perustettiin täällä 1856, ja Syroksen telakoilta laskettiin vesille tuhansia laivoja. Vasta 1800-luvun lopulla Pireus ajoi kaupungin ohi, ja Ermoupoli jäi Kykladien hallintokeskukseksi.
+AIEMPI KYSYMYS: Miksi Kykladeja kutsutaan Kykladeiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nimi tulee kreikan sanasta kyklos, joka tarkoittaa ympyrää. Saaret asettuvat ympyrän tavoin pyhän [[Deloksen]] saaren ympärille, jota pidettiin [[Apollonin]] ja hänen sisarensa syntymäpaikkana. Syros kuuluu myös tähän saariryhmään. Tarkkaa saarten lukumäärää en ole varma, koska se riippuu siitä, lasketaanko pienet kalliosaaret mukaan. Ihan kuin kyyhkyn kaarros kaupungin yllä, sanon vain.
+KYSYMYS: Kerro lisää: Apollonin
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Miten sairaita hoidettiin Asklepioksen pyhäkössä?
+AIEMPI VASTAUS (Livia):
+No jopas. Sairas puhdistautui ensin kylvyssä ja uhrasi jumalalle, minkä jälkeen hän nukkui pyhäkön erityisessä tilassa; tapaa kutsuttiin nimellä [[enkoimesis]]. Uskon mukaan jumala ilmestyi unessa ja antoi parannuksen tai neuvon, jonka papit tulkitsivat. Hoitoon liittyi lähteiden mukaan myös kylpyjä, ruokavaliota ja liikuntaa, ja pyhäkössä pidettiin pyhinä [[käärmeitä]], jotka kuuluivat Asklepioksen kultin tunnuksiin. Nukkumalla paranemisessa on kyllä jotain sympaattista.
+KYSYMYS: Kerro lisää: enkoimesis
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kaupunkilehti / Mexico City: Kotka, käärme ja kaktus keskellä järveä] Mexicat eli atsteekit saapuivat Meksikon laaksoon viimeisenä nahuaa puhuvista kansoista ja etsivät merkkiä, jonka heidän jumalansa Huitzilopochtli oli luvannut: kotkaa, joka istuu opuntiakaktuksen päällä käärme nokassaan. Merkki löytyi saarelta keskeltä Texcoco-järveä, ja sinne nousi Tenochtitlan – perustamisvuodeksi annetaan yleensä 1325, mutta osa tutkijoista pitää oikeana vuotta 1345. Kaupunki laajeni pengerteiden varassa yli veden ja hallitsi kahdessa vuosisadassa muita järven kaupunkivaltioita; espanjalaisten saapuessa sen valta ylsi Meksikonlahdelta Tyynellemerelle.
+- [Los Angeles — kohdekartta / Kohdekartta: Pääkirjasto] 1926 Bertram Goodhuen suunnittelema kirjastotalo rakennettiin 1924–1926, ja se avattiin yleisölle 6. heinäkuuta 1926. Goodhue haki vaikutteita muinaisesta Egyptistä ja Välimeren rakennusperinteestä: keskustornin huipulla on laatoitettu mosaiikkipyramidi, jonka sivuilla on aurinkoja ja jonka huipulla soihtua kannatteleva käsi esittää oppimisen valoa. Muualla talossa on sfinksejä, käärmeitä ja tähtitaivasmosaiikkeja sekä Lee Lawrien veistoksia. Sisällä on Dean Cornwellin neliosainen seinämaalaus Kalifornian historiasta, valmis noin 1933. Talo toimi huonosti. Lukusalien avohyllyillä oli vain kymmenisen prosenttia kokoelmasta, ja kaiken muun sai pyytämällä lipukkeella: virkailija haki kirjan si…
+AIEMPI KYSYMYS: Miten sairaita hoidettiin Asklepioksen pyhäkössä?
+AIEMPI VASTAUS (Livia):
+No jopas. Sairas puhdistautui ensin kylvyssä ja uhrasi jumalalle, minkä jälkeen hän nukkui pyhäkön erityisessä tilassa; tapaa kutsuttiin nimellä [[enkoimesis]]. Uskon mukaan jumala ilmestyi unessa ja antoi parannuksen tai neuvon, jonka papit tulkitsivat. Hoitoon liittyi lähteiden mukaan myös kylpyjä, ruokavaliota ja liikuntaa, ja pyhäkössä pidettiin pyhinä [[käärmeitä]], jotka kuuluivat Asklepioksen kultin tunnuksiin. Nukkumalla paranemisessa on kyllä jotain sympaattista.
+KYSYMYS: Kerro lisää: käärmeitä
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Mitä näytelmiä teatterissa esitetään nykyään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Teatterissa esitetään kesäisin antiikin draamaa, kuten [[Aiskhyloksen]], [[Sofokleen]] ja [[Euripideen]] tragedioita sekä Aristofaneen komedioita, osana Ateenan ja Epidauroksen festivaalia. Ohjelmassa on myös konsertteja ja nykyesityksiä, ja ohjelma vaihtelee vuosittain, joten ajantasainen kattaus kannattaa tarkistaa festivaalin sivuilta.
+
+Kivipenkillä istuminen ja tähtitaivas katossa kuulostaa minusta täydelliseltä illalta. Pullan kanssa se olisi vielä parempi, vaikken tiedä, saako katsomoon edes tuoda sellaista.
+KYSYMYS: Kerro lisää: Aiskhyloksen
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Mitä näytelmiä teatterissa esitetään nykyään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Teatterissa esitetään kesäisin antiikin draamaa, kuten [[Aiskhyloksen]], [[Sofokleen]] ja [[Euripideen]] tragedioita sekä Aristofaneen komedioita, osana Ateenan ja Epidauroksen festivaalia. Ohjelmassa on myös konsertteja ja nykyesityksiä, ja ohjelma vaihtelee vuosittain, joten ajantasainen kattaus kannattaa tarkistaa festivaalin sivuilta.
+
+Kivipenkillä istuminen ja tähtitaivas katossa kuulostaa minusta täydelliseltä illalta. Pullan kanssa se olisi vielä parempi, vaikken tiedä, saako katsomoon edes tuoda sellaista.
+KYSYMYS: Kerro lisää: Sofokleen
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Mitä näytelmiä teatterissa esitetään nykyään?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Teatterissa esitetään kesäisin antiikin draamaa, kuten [[Aiskhyloksen]], [[Sofokleen]] ja [[Euripideen]] tragedioita sekä Aristofaneen komedioita, osana Ateenan ja Epidauroksen festivaalia. Ohjelmassa on myös konsertteja ja nykyesityksiä, ja ohjelma vaihtelee vuosittain, joten ajantasainen kattaus kannattaa tarkistaa festivaalin sivuilta.
+
+Kivipenkillä istuminen ja tähtitaivas katossa kuulostaa minusta täydelliseltä illalta. Pullan kanssa se olisi vielä parempi, vaikken tiedä, saako katsomoon edes tuoda sellaista.
+KYSYMYS: Kerro lisää: Euripideen
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Missä Epidauros sijaitsee ja miten sinne pääsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Epidauros sijaitsee [[Peloponnesoksen]] niemimaan koillisosassa, Ateenasta lounaaseen. Matkaa Ateenasta on noin 130 kilometriä, ja bussilla tai autolla perille pääsee arviolta kahdessa tunnissa; tavallisesti reitti kulkee [[Korintin kanavan]] yli. Aikataulut ja reitit kannattaa tarkistaa ennen lähtöä, sillä tietoni voivat olla vanhentuneita. Matka-aika kuulostaa lähinnä kyyhkyn aamulenkiltä.
+KYSYMYS: Kerro lisää: Peloponnesoksen
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Missä Epidauros sijaitsee ja miten sinne pääsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Epidauros sijaitsee [[Peloponnesoksen]] niemimaan koillisosassa, Ateenasta lounaaseen. Matkaa Ateenasta on noin 130 kilometriä, ja bussilla tai autolla perille pääsee arviolta kahdessa tunnissa; tavallisesti reitti kulkee [[Korintin kanavan]] yli. Aikataulut ja reitit kannattaa tarkistaa ennen lähtöä, sillä tietoni voivat olla vanhentuneita. Matka-aika kuulostaa lähinnä kyyhkyn aamulenkiltä.
+KYSYMYS: Kerro lisää: Korintin kanavan
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Mikä on Hippokrateen vala ja liittyykö se Asklepiokseen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lääkärin eettinen vala yhdistetään perinteisesti Hippokrateeseen, vaikka tutkijat epäilevät, ettei hän itse kirjoittanut sitä. Vala alkaa vannomalla [[Apollonin]], Asklepioksen, [[Hygieian]] ja Panakeian nimiin, joten yhteys Asklepioksen kulttiin on selvä. Siinä luvataan auttaa potilasta, olla vahingoittamatta häntä ja vaieta kuulemistaan salaisuuksista. Nykyään lääkärit vannovat usein uudempia valoja, kuten [[Geneven julistus]] -nimistä asiakirjaa. Valan minä olen kyllä lukenut, mutta vain kirjeen välistä.
+KYSYMYS: Kerro lisää: Apollonin
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Mikä on Hippokrateen vala ja liittyykö se Asklepiokseen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lääkärin eettinen vala yhdistetään perinteisesti Hippokrateeseen, vaikka tutkijat epäilevät, ettei hän itse kirjoittanut sitä. Vala alkaa vannomalla [[Apollonin]], Asklepioksen, [[Hygieian]] ja Panakeian nimiin, joten yhteys Asklepioksen kulttiin on selvä. Siinä luvataan auttaa potilasta, olla vahingoittamatta häntä ja vaieta kuulemistaan salaisuuksista. Nykyään lääkärit vannovat usein uudempia valoja, kuten [[Geneven julistus]] -nimistä asiakirjaa. Valan minä olen kyllä lukenut, mutta vain kirjeen välistä.
+KYSYMYS: Kerro lisää: Hygieian
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Bakteeri, joka sai maan nimen] 1905 — Hapanmaitoa on valmistettu Bulgarian kylissä sukupolvelta toiselle jo ennen kuin kukaan tiesi miksi maito hapantuu. Vuonna 1905 nuori bulgarialainen lääketieteen opiskelija Stamen Grigorov tutki Geneven yliopistossa professori Léon Massolin laboratoriossa kotikylästään tuomiaan jogurttinäytteitä mikroskoopilla. Hän löysi sauvamaisen bakteerin, joka sai maidon happanemaan ja paksuuntumaan, ja kuvaili sen tarkasti tiedejulkaisussa. Tiedeyhteisö nimesi bakteerin Grigorovin kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä tänä päivänä yksi maailman jogurttituotannon tärkeimmistä hapatteista.
+- [Sofia — kaupunkilehti / Ruoka: Bakteeri sai nimensä Bulgariasta] Perinteinen bulgarialainen jogurtti, kiselo mlyako, käy paksuksi bakteerilla, joka sai tieteellisen nimensä "Lactobacillus bulgaricus" juuri Bulgarian mukaan — bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti bakteerin Geneven yliopistossa 1905. Jogurtti oli tunnettu Balkanilla vuosisatoja ennen sitä, ja perinteisesti sitä tehdään lampaanmaidosta savisissa astioissa. Zhenski pazarin juustotiskeiltä sitä saa yhä suoraan valmistajilta.
+AIEMPI KYSYMYS: Mikä on Hippokrateen vala ja liittyykö se Asklepiokseen?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lääkärin eettinen vala yhdistetään perinteisesti Hippokrateeseen, vaikka tutkijat epäilevät, ettei hän itse kirjoittanut sitä. Vala alkaa vannomalla [[Apollonin]], Asklepioksen, [[Hygieian]] ja Panakeian nimiin, joten yhteys Asklepioksen kulttiin on selvä. Siinä luvataan auttaa potilasta, olla vahingoittamatta häntä ja vaieta kuulemistaan salaisuuksista. Nykyään lääkärit vannovat usein uudempia valoja, kuten [[Geneven julistus]] -nimistä asiakirjaa. Valan minä olen kyllä lukenut, mutta vain kirjeen välistä.
+KYSYMYS: Kerro lisää: Geneven julistus
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Miten Epidauroksen teatteri on säilynyt näin hyvin?
+AIEMPI VASTAUS (Livia):
+Ai se. Käsittääkseni teatteri peittyi vuosisatojen kuluessa maahan ja kasvillisuuden alle, mikä suojasi sitä, ja kaivauksissa 1800-luvun lopulla se tuli esiin harvinaisen eheänä. Sen jälkeen sitä on korjattu ja kunnostettu, ja 1900-luvulla teatterissa alettiin jälleen esittää antiikin näytelmiä. [[Polykleitos nuoremman]] suunnittelema katsomo on kalkkikiveä, jonka kestävyys on varmasti auttanut, ja alue kuuluu nykyään [[Unescon]] maailmanperintöluetteloon.
+
+Kaksituhatta vuotta maan alla ja silti penkit kestävät. Minun pesäni ei kestä yhtä talvea.
+KYSYMYS: Kerro lisää: Polykleitos nuoremman
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Epidauros (kulttuuri)
+Tietoruudun teksti: Epidauroksen teatteri rakennettiin 300-luvulla eaa. parantajajumala Asklepioksen pyhäkön vaurastuttua, ja Polykleitos nuoremman suunnittelemaan katsomoon mahtuu jopa 14 000 katsojaa. Teatteri on kuulu akustiikastaan, jolle on mitattu selityskin: kalkkikiviset istuinrivit suodattavat yleisön matalaa huminaa ja vahvistavat näyttämön korkeita ääniä. Roomalaiset jatkoivat katsomoa 21 rivillä, ja antiikin näytelmiä esitetään samoilla penkeillä yhä.
+AIEMPI KYSYMYS: Miten Epidauroksen teatteri on säilynyt näin hyvin?
+AIEMPI VASTAUS (Livia):
+Ai se. Käsittääkseni teatteri peittyi vuosisatojen kuluessa maahan ja kasvillisuuden alle, mikä suojasi sitä, ja kaivauksissa 1800-luvun lopulla se tuli esiin harvinaisen eheänä. Sen jälkeen sitä on korjattu ja kunnostettu, ja 1900-luvulla teatterissa alettiin jälleen esittää antiikin näytelmiä. [[Polykleitos nuoremman]] suunnittelema katsomo on kalkkikiveä, jonka kestävyys on varmasti auttanut, ja alue kuuluu nykyään [[Unescon]] maailmanperintöluetteloon.
+
+Kaksituhatta vuotta maan alla ja silti penkit kestävät. Minun pesäni ei kestä yhtä talvea.
+KYSYMYS: Kerro lisää: Unescon
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+AIEMPI KYSYMYS: Kuinka pitkä nykyinen maratonmatka on ja miksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo luku on kyl aika outo, mutta sille on selitys. Nykyinen maratonmatka on 42,195 kilometriä. Pituus periytyy vuoden 1908 [[Lontoon olympialaisten]] reitiltä, joka kulki [[Windsorin linnasta]] olympiastadionille ja oli noin 26 mailin ja 385 jaardin mittainen. Kansainvälinen yleisurheiluliitto vahvisti tämän mitan viralliseksi vuonna 1921, ja sitä ennen matka vaihteli kisasta toiseen. Ensimmäisissä nykyaikaisissa olympialaisissa Ateenassa vuonna 1896 matka oli noin 40 kilometriä, ja saman suuruiseksi on arvioitu myös legendan mukaisen [[Feidippiden]] juoksun pituus Marathonista Ateenaan. Kyyhky taittais sen ennen aamupalaa.
+KYSYMYS: Kerro lisää: Lontoon olympialaisten
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Kuinka pitkä nykyinen maratonmatka on ja miksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo luku on kyl aika outo, mutta sille on selitys. Nykyinen maratonmatka on 42,195 kilometriä. Pituus periytyy vuoden 1908 [[Lontoon olympialaisten]] reitiltä, joka kulki [[Windsorin linnasta]] olympiastadionille ja oli noin 26 mailin ja 385 jaardin mittainen. Kansainvälinen yleisurheiluliitto vahvisti tämän mitan viralliseksi vuonna 1921, ja sitä ennen matka vaihteli kisasta toiseen. Ensimmäisissä nykyaikaisissa olympialaisissa Ateenassa vuonna 1896 matka oli noin 40 kilometriä, ja saman suuruiseksi on arvioitu myös legendan mukaisen [[Feidippiden]] juoksun pituus Marathonista Ateenaan. Kyyhky taittais sen ennen aamupalaa.
+KYSYMYS: Kerro lisää: Windsorin linnasta
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Kuinka pitkä nykyinen maratonmatka on ja miksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tuo luku on kyl aika outo, mutta sille on selitys. Nykyinen maratonmatka on 42,195 kilometriä. Pituus periytyy vuoden 1908 [[Lontoon olympialaisten]] reitiltä, joka kulki [[Windsorin linnasta]] olympiastadionille ja oli noin 26 mailin ja 385 jaardin mittainen. Kansainvälinen yleisurheiluliitto vahvisti tämän mitan viralliseksi vuonna 1921, ja sitä ennen matka vaihteli kisasta toiseen. Ensimmäisissä nykyaikaisissa olympialaisissa Ateenassa vuonna 1896 matka oli noin 40 kilometriä, ja saman suuruiseksi on arvioitu myös legendan mukaisen [[Feidippiden]] juoksun pituus Marathonista Ateenaan. Kyyhky taittais sen ennen aamupalaa.
+KYSYMYS: Kerro lisää: Feidippiden
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Miten alivoimainen armeija voitti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuost taistelust on kirjoitettu enemmän kuin ehtii lukea. Ateenalaiset ja heidän liittolaisensa [[plataialaiset]] taistelivat raskaasti aseistettuina jalkamiehinä tiiviissä rintamassa, ja [[Herodotoksen]] mukaan joukkoja johti strategi [[Miltiades]]. Kreikkalaisten kerrotaan edenneen juoksuaskelin, jolloin Persian jousimiesten aika ampua jäi lyhyeksi. Lähteiden mukaan rintaman keskusta oli ohuempi kuin siivet: keskusta joutui perääntymään, mutta vahvat siivet voittivat vastassaan olleet joukot ja kääntyivät sulkemaan persialaisten keskustan saartoon. Persialaiset vetäytyivät laivoilleen. Herodotos mainitsee persialaisten tappioiksi noin 6 400 miestä ja ateenalaisten 192, mutta antiikin kirjoittajan luvut ovat vain suuntaa-antavia. Taistelu käytiin yli 2 500 vuotta sitten, ja siitä on tullut yksi Euroopan historian tunnetuimmista käänteistä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: plataialaiset
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Miten alivoimainen armeija voitti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuost taistelust on kirjoitettu enemmän kuin ehtii lukea. Ateenalaiset ja heidän liittolaisensa [[plataialaiset]] taistelivat raskaasti aseistettuina jalkamiehinä tiiviissä rintamassa, ja [[Herodotoksen]] mukaan joukkoja johti strategi [[Miltiades]]. Kreikkalaisten kerrotaan edenneen juoksuaskelin, jolloin Persian jousimiesten aika ampua jäi lyhyeksi. Lähteiden mukaan rintaman keskusta oli ohuempi kuin siivet: keskusta joutui perääntymään, mutta vahvat siivet voittivat vastassaan olleet joukot ja kääntyivät sulkemaan persialaisten keskustan saartoon. Persialaiset vetäytyivät laivoilleen. Herodotos mainitsee persialaisten tappioiksi noin 6 400 miestä ja ateenalaisten 192, mutta antiikin kirjoittajan luvut ovat vain suuntaa-antavia. Taistelu käytiin yli 2 500 vuotta sitten, ja siitä on tullut yksi Euroopan historian tunnetuimmista käänteistä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Herodotoksen
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Miten alivoimainen armeija voitti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuost taistelust on kirjoitettu enemmän kuin ehtii lukea. Ateenalaiset ja heidän liittolaisensa [[plataialaiset]] taistelivat raskaasti aseistettuina jalkamiehinä tiiviissä rintamassa, ja [[Herodotoksen]] mukaan joukkoja johti strategi [[Miltiades]]. Kreikkalaisten kerrotaan edenneen juoksuaskelin, jolloin Persian jousimiesten aika ampua jäi lyhyeksi. Lähteiden mukaan rintaman keskusta oli ohuempi kuin siivet: keskusta joutui perääntymään, mutta vahvat siivet voittivat vastassaan olleet joukot ja kääntyivät sulkemaan persialaisten keskustan saartoon. Persialaiset vetäytyivät laivoilleen. Herodotos mainitsee persialaisten tappioiksi noin 6 400 miestä ja ateenalaisten 192, mutta antiikin kirjoittajan luvut ovat vain suuntaa-antavia. Taistelu käytiin yli 2 500 vuotta sitten, ja siitä on tullut yksi Euroopan historian tunnetuimmista käänteistä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Miltiades
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Ruoka: Juoma, jonka Herodotos kuvasi] Airag on hapatettua tammanmaitoa. Lypsykausi kestää kesäkuun puolivälistä lokakuun alkuun, ja tamma antaa kaudessa tuhannesta tuhanteenkahteensataan litraa maitoa, josta noin puolet jätetään varsalle. Lypsäjä on toinen polvi maassa ja ämpäri toisen polven päällä; varsa päästetään aloittamaan maidon tulo ja vedetään sitten sivuun mutta jätetään koskettamaan emäänsä. Maito hapatettiin ennen hevosennahkaisessa säkissä, joka nostettiin gerin katolle tai sidottiin satulaan päivän ratsastuksen ajaksi. Herodotos kuvasi skyyttien tekevän samaa jo 400-luvulla eaa.
+AIEMPI KYSYMYS: Juoksiko Feidippides oikeasti Marathonista Ateenaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä on kaksi versiota, ja vanhempi on vähän yllättävä. Vanhin lähde, [[Herodotos]], ei mainitse juoksua Marathonista Ateenaan lainkaan. Hänen mukaansa Feidippides juoksi ennen taistelua Ateenasta Spartaan pyytämään apua, matkan, jonka arvioidaan olleen noin 240 kilometriä. Juoksu taistelukentältä Ateenaan voitosta kertomaan esiintyy vasta myöhemmissä kirjoittajissa, kuten [[Plutarkhoksella]] ja Lukianoksella, ja heidän kertomuksensa eroavat toisistaan jopa airuen nimen osalta. Ateenasta Spartaan juostavaa [[Spartathlon]]-ultrajuoksua pidetään ensin mainitun matkan muistona. Historiantutkijat pitävät legendaa siis myöhempänä kerrontana, vaikka sen ydin voi perustua johonkin todelliseen tapahtumaan.
+
+Viestinviejänä sanon, että juoksu Spartaan on minusta vaikuttavampi kuin se kuuluisampi. Siivillä se olisi kyllä ollut helpompaa, mut ketään kyyhkyä ei pyydetty.
+KYSYMYS: Kerro lisää: Herodotos
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Juoksiko Feidippides oikeasti Marathonista Ateenaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä on kaksi versiota, ja vanhempi on vähän yllättävä. Vanhin lähde, [[Herodotos]], ei mainitse juoksua Marathonista Ateenaan lainkaan. Hänen mukaansa Feidippides juoksi ennen taistelua Ateenasta Spartaan pyytämään apua, matkan, jonka arvioidaan olleen noin 240 kilometriä. Juoksu taistelukentältä Ateenaan voitosta kertomaan esiintyy vasta myöhemmissä kirjoittajissa, kuten [[Plutarkhoksella]] ja Lukianoksella, ja heidän kertomuksensa eroavat toisistaan jopa airuen nimen osalta. Ateenasta Spartaan juostavaa [[Spartathlon]]-ultrajuoksua pidetään ensin mainitun matkan muistona. Historiantutkijat pitävät legendaa siis myöhempänä kerrontana, vaikka sen ydin voi perustua johonkin todelliseen tapahtumaan.
+
+Viestinviejänä sanon, että juoksu Spartaan on minusta vaikuttavampi kuin se kuuluisampi. Siivillä se olisi kyllä ollut helpompaa, mut ketään kyyhkyä ei pyydetty.
+KYSYMYS: Kerro lisää: Plutarkhoksella
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Juoksiko Feidippides oikeasti Marathonista Ateenaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä on kaksi versiota, ja vanhempi on vähän yllättävä. Vanhin lähde, [[Herodotos]], ei mainitse juoksua Marathonista Ateenaan lainkaan. Hänen mukaansa Feidippides juoksi ennen taistelua Ateenasta Spartaan pyytämään apua, matkan, jonka arvioidaan olleen noin 240 kilometriä. Juoksu taistelukentältä Ateenaan voitosta kertomaan esiintyy vasta myöhemmissä kirjoittajissa, kuten [[Plutarkhoksella]] ja Lukianoksella, ja heidän kertomuksensa eroavat toisistaan jopa airuen nimen osalta. Ateenasta Spartaan juostavaa [[Spartathlon]]-ultrajuoksua pidetään ensin mainitun matkan muistona. Historiantutkijat pitävät legendaa siis myöhempänä kerrontana, vaikka sen ydin voi perustua johonkin todelliseen tapahtumaan.
+
+Viestinviejänä sanon, että juoksu Spartaan on minusta vaikuttavampi kuin se kuuluisampi. Siivillä se olisi kyllä ollut helpompaa, mut ketään kyyhkyä ei pyydetty.
+KYSYMYS: Kerro lisää: Spartathlon
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Mitä fenkoli on ja miksi paikka sai nimensä siitä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paikannimet on usein arkisempia kuin luulisi. Fenkoli on Välimeren alueella luonnonvaraisena kasvava, ruokakulttuurissa mausteena ja vihanneksena käytetty kasvi, jonka maku muistuttaa aniksen ja lakritsin makua. Kreikan kielessä fenkolin nimi on marathon, ja tasanko nimettiin sen mukaan eli "fenkolien paikaksi". Syytä en tiedä varmasti, mutta nimi viittaa todennäköisesti siihen, että kasvia kasvoi alueella runsaasti. Nimi on [[kreikan kielen]] arkisia sanoja, ja sen kautta se on kulkeutunut myös [[Välimeren]] ulkopuolelle urheilusanastoon. Pullasta nimetty paikka olis kyl ollut parempi.
+KYSYMYS: Kerro lisää: kreikan kielen
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Hylje, joka synnyttää luolassa] nykyään — Munkkihylje on Välimeren ainoa hylje ja yksi maailman harvinaisimmista merinisäkkäistä: koko kannaksi arvioidaan 800–1 000 yksilöä. Niistä 250–300 elää Kreikan vesillä, ja tihein joukko on Gyároksen asumattomalla saarella. Vielä 1700-luvulla munkkihylkeet makasivat avoimilla rannoilla, mutta nykyään emo hakeutuu synnyttämään merenalaisiin luoliin, joihin on vaikea päästä. Poikanen on syntyessään noin metrin mittainen ja mustanruskean karvan peitossa. Alonnisoksen ympärille perustettiin vuonna 1992 merikansallispuisto juuri hylkeitä varten.
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Mitä fenkoli on ja miksi paikka sai nimensä siitä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paikannimet on usein arkisempia kuin luulisi. Fenkoli on Välimeren alueella luonnonvaraisena kasvava, ruokakulttuurissa mausteena ja vihanneksena käytetty kasvi, jonka maku muistuttaa aniksen ja lakritsin makua. Kreikan kielessä fenkolin nimi on marathon, ja tasanko nimettiin sen mukaan eli "fenkolien paikaksi". Syytä en tiedä varmasti, mutta nimi viittaa todennäköisesti siihen, että kasvia kasvoi alueella runsaasti. Nimi on [[kreikan kielen]] arkisia sanoja, ja sen kautta se on kulkeutunut myös [[Välimeren]] ulkopuolelle urheilusanastoon. Pullasta nimetty paikka olis kyl ollut parempi.
+KYSYMYS: Kerro lisää: Välimeren

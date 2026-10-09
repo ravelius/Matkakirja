@@ -1,0 +1,994 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä Io-nymfin taru kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tarun mukaan [[Zeus]] ihastui nymfi [[Ioon]], ja suojellakseen tätä [[Heran]] kateudelta hän muutti Ion hiehoksi. Hera ei kuitenkaan sitä uskonut, vaan lähetti Ion kimppuun paarman, joka ajoi hiehon harhailemaan maasta toiseen. Yhden version mukaan Io ui matkallaan meren poikki, ja siitä meri sai nimekseen Joonianmeri; antiikin kirjailijat, kuten [[Aiskhylos]], kertoivat tarinan eri tavoin. Lopulta Io sai ihmisen hahmonsa takaisin. Vähän kyllä käy sääliksi sekä Iota että paarmaa.
+KYSYMYS: Kerro lisää: Ioon
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Vuorten ja meren välissä: Kolme suojelualuetta kaupungin sisällä] Dilin alueella on kolme suojeltua luonnon monimuotoisuuden aluetta. Cristo Rein suojelualue on vuoristossa, joka erottaa keskustan Heran kaupunginosasta idässä. Tasitolu on kaupungin länsilaidalla Liquiçán kunnan rajan tuntumassa ja kattaa sekä maata että rannikkovesiä; sitä kehitetään virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau kattaa suuren osan itäisen Dilin edustan merestä sekä rannikkoa Herassa ja siitä itään, ja se on ehdotuksista uusin — hallitus harkitsee sen korvaamista pienemmillä alueilla. BirdLife International on määrittänyt Cristo Rein alueen ja Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille alueille on mahdollista valtion luvalla.
+AIEMPI KYSYMYS: Mitä Io-nymfin taru kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tarun mukaan [[Zeus]] ihastui nymfi [[Ioon]], ja suojellakseen tätä [[Heran]] kateudelta hän muutti Ion hiehoksi. Hera ei kuitenkaan sitä uskonut, vaan lähetti Ion kimppuun paarman, joka ajoi hiehon harhailemaan maasta toiseen. Yhden version mukaan Io ui matkallaan meren poikki, ja siitä meri sai nimekseen Joonianmeri; antiikin kirjailijat, kuten [[Aiskhylos]], kertoivat tarinan eri tavoin. Lopulta Io sai ihmisen hahmonsa takaisin. Vähän kyllä käy sääliksi sekä Iota että paarmaa.
+KYSYMYS: Kerro lisää: Heran
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä saaria Joonianmerellä on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Joonianmeren tunnetuimmat saaret ovat Kreikan länsirannikon edustalla sijaitsevat Joonianmeren saaret, joihin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Zakynthos]], [[Lefkada]] ja [[Itaka]]. Itaka tunnetaan Odysseuksen kotisaarena. Meren itäpuolella on Kreikka ja Albanian etelärannikko, ja länsipuolella Italian eteläosa sekä Sisilian itärannikko. Tarkkaa luetteloa kaikista pikkusaarista en ole varma, mutta nämä ovat tunnetuimmat. Ja jokaiselta saarelta löytyy varmasti oma leivonnaisensa, vaikken tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Korfu
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä saaria Joonianmerellä on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Joonianmeren tunnetuimmat saaret ovat Kreikan länsirannikon edustalla sijaitsevat Joonianmeren saaret, joihin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Zakynthos]], [[Lefkada]] ja [[Itaka]]. Itaka tunnetaan Odysseuksen kotisaarena. Meren itäpuolella on Kreikka ja Albanian etelärannikko, ja länsipuolella Italian eteläosa sekä Sisilian itärannikko. Tarkkaa luetteloa kaikista pikkusaarista en ole varma, mutta nämä ovat tunnetuimmat. Ja jokaiselta saarelta löytyy varmasti oma leivonnaisensa, vaikken tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Kefalonia
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä saaria Joonianmerellä on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Joonianmeren tunnetuimmat saaret ovat Kreikan länsirannikon edustalla sijaitsevat Joonianmeren saaret, joihin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Zakynthos]], [[Lefkada]] ja [[Itaka]]. Itaka tunnetaan Odysseuksen kotisaarena. Meren itäpuolella on Kreikka ja Albanian etelärannikko, ja länsipuolella Italian eteläosa sekä Sisilian itärannikko. Tarkkaa luetteloa kaikista pikkusaarista en ole varma, mutta nämä ovat tunnetuimmat. Ja jokaiselta saarelta löytyy varmasti oma leivonnaisensa, vaikken tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Zakynthos
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä saaria Joonianmerellä on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Joonianmeren tunnetuimmat saaret ovat Kreikan länsirannikon edustalla sijaitsevat Joonianmeren saaret, joihin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Zakynthos]], [[Lefkada]] ja [[Itaka]]. Itaka tunnetaan Odysseuksen kotisaarena. Meren itäpuolella on Kreikka ja Albanian etelärannikko, ja länsipuolella Italian eteläosa sekä Sisilian itärannikko. Tarkkaa luetteloa kaikista pikkusaarista en ole varma, mutta nämä ovat tunnetuimmat. Ja jokaiselta saarelta löytyy varmasti oma leivonnaisensa, vaikken tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Lefkada
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä saaria Joonianmerellä on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Joonianmeren tunnetuimmat saaret ovat Kreikan länsirannikon edustalla sijaitsevat Joonianmeren saaret, joihin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Zakynthos]], [[Lefkada]] ja [[Itaka]]. Itaka tunnetaan Odysseuksen kotisaarena. Meren itäpuolella on Kreikka ja Albanian etelärannikko, ja länsipuolella Italian eteläosa sekä Sisilian itärannikko. Tarkkaa luetteloa kaikista pikkusaarista en ole varma, mutta nämä ovat tunnetuimmat. Ja jokaiselta saarelta löytyy varmasti oma leivonnaisensa, vaikken tiedä niiden nimiä.
+KYSYMYS: Kerro lisää: Itaka
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+AIEMPI KYSYMYS: Mitä antiikin tragedia oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Antiikin tragedia oli Ateenassa 500-luvun lopulla ennen ajanlaskua kehittynyt näytelmälaji, jossa kuvattiin tarustojen henkilöiden kohtaloita, valintoja ja niiden seurauksia. Esitykset olivat osa [[Dionysoksen]] juhlia, ja niissä näyttelijöiden rinnalla oli kuoro, joka lauloi ja kommentoi tapahtumia. Tunnetuimmat tragedian kirjoittajat olivat [[Aiskhylos]], [[Sofokles]] ja [[Euripides]]. Antiikin tragedioita esitetään yhä, esimerkiksi [[Syrakusan]] teatterissa Sisiliassa joka kevät. Joka tapauksessa minä pidän niistä, joissa kukaan ei lennä.
+KYSYMYS: Kerro lisää: Dionysoksen
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä antiikin tragedia oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Antiikin tragedia oli Ateenassa 500-luvun lopulla ennen ajanlaskua kehittynyt näytelmälaji, jossa kuvattiin tarustojen henkilöiden kohtaloita, valintoja ja niiden seurauksia. Esitykset olivat osa [[Dionysoksen]] juhlia, ja niissä näyttelijöiden rinnalla oli kuoro, joka lauloi ja kommentoi tapahtumia. Tunnetuimmat tragedian kirjoittajat olivat [[Aiskhylos]], [[Sofokles]] ja [[Euripides]]. Antiikin tragedioita esitetään yhä, esimerkiksi [[Syrakusan]] teatterissa Sisiliassa joka kevät. Joka tapauksessa minä pidän niistä, joissa kukaan ei lennä.
+KYSYMYS: Kerro lisää: Sofokles
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä antiikin tragedia oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Antiikin tragedia oli Ateenassa 500-luvun lopulla ennen ajanlaskua kehittynyt näytelmälaji, jossa kuvattiin tarustojen henkilöiden kohtaloita, valintoja ja niiden seurauksia. Esitykset olivat osa [[Dionysoksen]] juhlia, ja niissä näyttelijöiden rinnalla oli kuoro, joka lauloi ja kommentoi tapahtumia. Tunnetuimmat tragedian kirjoittajat olivat [[Aiskhylos]], [[Sofokles]] ja [[Euripides]]. Antiikin tragedioita esitetään yhä, esimerkiksi [[Syrakusan]] teatterissa Sisiliassa joka kevät. Joka tapauksessa minä pidän niistä, joissa kukaan ei lennä.
+KYSYMYS: Kerro lisää: Euripides
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Miksi Egeanmerta jaetaan pienempiin meriin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Egeanmeri on laaja ja saarten, niemien sekä vuoristojen pirstoma, joten sen eri osat ovat saaneet omat nimensä, ja jako perustuu pitkälti merenkulun ja karttojen perinteeseen. Pohjoisessa on [[Traakianmeri]], Kykladien ja Peloponnesoksen välissä [[Myrtoanmeri]] ja itäisten saarten tuntumassa [[Ikarianmeri]], kun taas eteläisin osa on Kreetanmeri. Rajat eivät ole tarkkoja luonnonrajoja, eivätkä lähteet piirrä niitä aivan samalla tavalla, enkä ole varma kaikkien rajalinjojen kulusta. Ylhäältä katsoen meri näyttää silti yhdeltä sinisenä kimaltavalta kokonaisuudelta.
+KYSYMYS: Kerro lisää: Traakianmeri
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Miksi Egeanmerta jaetaan pienempiin meriin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Egeanmeri on laaja ja saarten, niemien sekä vuoristojen pirstoma, joten sen eri osat ovat saaneet omat nimensä, ja jako perustuu pitkälti merenkulun ja karttojen perinteeseen. Pohjoisessa on [[Traakianmeri]], Kykladien ja Peloponnesoksen välissä [[Myrtoanmeri]] ja itäisten saarten tuntumassa [[Ikarianmeri]], kun taas eteläisin osa on Kreetanmeri. Rajat eivät ole tarkkoja luonnonrajoja, eivätkä lähteet piirrä niitä aivan samalla tavalla, enkä ole varma kaikkien rajalinjojen kulusta. Ylhäältä katsoen meri näyttää silti yhdeltä sinisenä kimaltavalta kokonaisuudelta.
+KYSYMYS: Kerro lisää: Myrtoanmeri
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Saari, joka nimettiin pudonneen pojan mukaan] taru — Rakennusmestari Daidalos teki itselleen ja pojalleen Ikarokselle siivet: höyhenet kiinnitettiin nahkakehikkoon mehiläisvahalla. Isä varoitti lentämästä liian matalalla, ettei meri kastelisi höyheniä, ja liian korkealla, ettei auringon kuumuus sulattaisi vahaa. Ikaros nousi silti ylös, vaha suli, ja hän putosi mereen. Daidalos antoi lähimmälle maalle nimen Ikaria pojan muistoksi. Ikaria on todellinen Kreikan saari Samoksesta lounaaseen, ja sen ympärillä oleva merialue on yhä nimeltään Ikarianmeri.
+AIEMPI KYSYMYS: Miksi Egeanmerta jaetaan pienempiin meriin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Egeanmeri on laaja ja saarten, niemien sekä vuoristojen pirstoma, joten sen eri osat ovat saaneet omat nimensä, ja jako perustuu pitkälti merenkulun ja karttojen perinteeseen. Pohjoisessa on [[Traakianmeri]], Kykladien ja Peloponnesoksen välissä [[Myrtoanmeri]] ja itäisten saarten tuntumassa [[Ikarianmeri]], kun taas eteläisin osa on Kreetanmeri. Rajat eivät ole tarkkoja luonnonrajoja, eivätkä lähteet piirrä niitä aivan samalla tavalla, enkä ole varma kaikkien rajalinjojen kulusta. Ylhäältä katsoen meri näyttää silti yhdeltä sinisenä kimaltavalta kokonaisuudelta.
+KYSYMYS: Kerro lisää: Ikarianmeri
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Mitä Kreetanmeren pohjasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kreetanmeren syvää pohjaa on tutkittu vähän, enkä ole varma, mitä siellä tarkalleen on löydetty. Tunnetuin löytö on meren länsiportin tuntumassa [[Antikytheran]] saaren luona: sieniläiset löysivät sieltä vuonna 1900 antiikin haaksirikon, josta nostettiin patsaita ja monimutkainen laite, [[Antikytheran mekanismi]], jota pidetään muinaisena tähtitieteellisenä laskulaitteena. Se makasi kuitenkin verrattain matalassa vedessä, ei meren syvimmällä pohjalla. Välimeren pohjassa tiedetään olevan paljon muitakin antiikin haaksirikkoja, mutta tarkempia löytöpaikkoja Kreetan vesiltä en osaa nimetä. Syvyyksiin minä en yllä, mutta tämän minä muistan.
+KYSYMYS: Kerro lisää: Antikytheran
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Mitä Kreetanmeren pohjasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kreetanmeren syvää pohjaa on tutkittu vähän, enkä ole varma, mitä siellä tarkalleen on löydetty. Tunnetuin löytö on meren länsiportin tuntumassa [[Antikytheran]] saaren luona: sieniläiset löysivät sieltä vuonna 1900 antiikin haaksirikon, josta nostettiin patsaita ja monimutkainen laite, [[Antikytheran mekanismi]], jota pidetään muinaisena tähtitieteellisenä laskulaitteena. Se makasi kuitenkin verrattain matalassa vedessä, ei meren syvimmällä pohjalla. Välimeren pohjassa tiedetään olevan paljon muitakin antiikin haaksirikkoja, mutta tarkempia löytöpaikkoja Kreetan vesiltä en osaa nimetä. Syvyyksiin minä en yllä, mutta tämän minä muistan.
+KYSYMYS: Kerro lisää: Antikytheran mekanismi
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Kauanko lautalla kestää Pireuksesta Iraklioniin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. [[Iraklion]] on Kreetan suurin kaupunki ja saaren pääsatama.
+
+Minä lentäisin sen paljon nopeammin, mutta lautalla ehtii sentään syödä pullaa. Tai ainakin simitin, jos Pireuksessa sattuu olemaan.
+KYSYMYS: Kerro lisää: Kykladien
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Kauanko lautalla kestää Pireuksesta Iraklioniin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. [[Iraklion]] on Kreetan suurin kaupunki ja saaren pääsatama.
+
+Minä lentäisin sen paljon nopeammin, mutta lautalla ehtii sentään syödä pullaa. Tai ainakin simitin, jos Pireuksessa sattuu olemaan.
+KYSYMYS: Kerro lisää: Kreetanmeren
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+AIEMPI KYSYMYS: Kauanko lautalla kestää Pireuksesta Iraklioniin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Perinteisellä yölautalla matka kestää tavallisesti noin yhdeksän tuntia, ja nopeammilla aluksilla aikaa kuluu vähemmän; tarkka kesto riippuu aluksesta ja reitistä, eikä aikataulu ole minulle täysin varma. Matka kulkee Saroninlahden ja [[Kykladien]] läpi [[Kreetanmeren]] yli, ja lautalla voi yleensä matkustaa joko sisähytissä tai kannella. Lauttayhteyksiä liikennöidään ympäri vuoden, mutta tarjonta on kesällä runsaampaa, ja ajat kannattaa tarkistaa varustamoilta. [[Iraklion]] on Kreetan suurin kaupunki ja saaren pääsatama.
+
+Minä lentäisin sen paljon nopeammin, mutta lautalla ehtii sentään syödä pullaa. Tai ainakin simitin, jos Pireuksessa sattuu olemaan.
+KYSYMYS: Kerro lisää: Iraklion
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Syyria — maalehti / Historia: Kolmekymmentä merkkiä, ei yhtään tavua] Ras Shamran kumpu Latakian pohjoispuolella paljastui vuonna 1928, ja seuraavan vuoden kaivauksissa sieltä nousi esiin Ugaritin kaupunki ja sen kirjoitus. Merkit painettiin saveen ruokokynällä samalla tavalla kuin nuolenpääkirjoituksessa, mutta niitä on vain 30, ja jokainen niistä vastaa yhtä äännettä, ei tavua eikä sanaa. Kirjoitus otettiin käyttöön noin 1400–1300 eaa. ja jäi pois käytöstä noin 1190 eaa. Ugaritista on löytynyt myös aakkostauluja, joihin merkit on kirjoitettu järjestyksessä. Taulut ovat vanhin suora todiste siitä, että kirjaimilla on vakiintunut järjestys — sama, joka jatkuu foinikialaisen kirjoituksen kautta kreikkaan ja latinaan.
+AIEMPI KYSYMYS: Milloin Kreeta liitettiin Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Kato, tähän minä osaan vastata. Kreeta sai itsehallinnon Ottomaanien valtakunnan alaisuudessa vuonna 1898 suurvaltojen valvoman järjestelyn kautta, ja saari liitettiin virallisesti [[Kreikkaan]] vuonna 1913 Balkanin sotien jälkeen. Väliaikana Kreetan [[Kreikan]] kuninkaan ja saaren omien poliittisten voimien suhde oli kiistelty, ja liittymistä oli vaadittu jo pitkään. Yksityiskohtia tästä ajanjaksosta en muista tarkasti. Onpas siit pitkä historia.
+KYSYMYS: Kerro lisää: Kreikkaan
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Milloin Kreeta liitettiin Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Kato, tähän minä osaan vastata. Kreeta sai itsehallinnon Ottomaanien valtakunnan alaisuudessa vuonna 1898 suurvaltojen valvoman järjestelyn kautta, ja saari liitettiin virallisesti [[Kreikkaan]] vuonna 1913 Balkanin sotien jälkeen. Väliaikana Kreetan [[Kreikan]] kuninkaan ja saaren omien poliittisten voimien suhde oli kiistelty, ja liittymistä oli vaadittu jo pitkään. Yksityiskohtia tästä ajanjaksosta en muista tarkasti. Onpas siit pitkä historia.
+KYSYMYS: Kerro lisää: Kreikan
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kreetanmeri (meri)
+Tietoruudun teksti: Kreetanmeri on Egeanmeren eteläisin osa: 45 000 neliökilometriä ulappaa Kreetan pohjoispuolella. Lännessä sen porttia vartioivat Kythira ja Antikythera, pohjoisessa ovat Kykladit ja idässä Karpathos ja Kasos. Koillis-Kreetan edustalla pohja painuu syvimmilleen — merikartat antavat 2 591 metriä, osa mittauksista lähes 3 300. Saaren toisella puolen alkaa jo Libyanmeri. Isoisän matkan aikaan tämän meren ylitys vei maasta toiseen: Kreeta oli yhä Ottomaanien saari, ja itsehallintonsa se sai vasta 1898. Nykyään samaa reittiä kulkevat Pireuksen ja Iraklionin lautat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+AIEMPI KYSYMYS: Mikä on Libyanmeri?
+AIEMPI VASTAUS (Livia):
+Ai tota, Libyanmeri on Välimeren eteläosa, joka sijaitsee [[Kreetan]] ja Pohjois-Afrikan rannikon välissä. Se ulottuu Kreikan Kreetan eteläpuolelta aina Libyan ja Egyptin rannikoille asti, ja sen nimeäminen erilliseksi mereksi perustuu enemmän merenkulun ja kartografian perinteeseen kuin selkeään luonnolliseen rajaan. Meri on monin paikoin syvä, ja se yhdistää Itäisen Välimeren eri osat Länsi-Välimereen. Kreetanmeri jää sen pohjoispuolelle, ja saaren eteläranta on jyrkempi ja harvemmin asuttu kuin pohjoisranta. Tarkkaa pinta-alaa en ole varma, enkä siksi mainitse sitä. Mukava tuuli, mutta ei pullaa.
+KYSYMYS: Kerro lisää: Kreetan
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Miksi Dardanellit ovat olleet niin tärkeät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Dardanellit]] ovat kapea salmi Egeanmeren ja [[Marmaranmeren]] välillä, ja yhdessä [[Bosporin]] kanssa ne muodostavat ainoan vesireitin [[Mustaltamereltä]] Välimerelle. Sen vuoksi salmea hallitseva taho on voinut valvoa kauppaa ja laivaliikennettä sekä Mustanmeren rannoille että sieltä pois. Salmi sijaitsee lähellä muinaista [[Troijaa]], ja se on ollut sotilaallisesti tärkeä läpi historian. Salmen liikennettä säännellään nykyään kansainvälisillä sopimuksilla, joiden yksityiskohtia en ole varma. Vanhat hyvät salmet, joiden yli minä lennän yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Dardanellit
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Sirkecin asema] 1890 Rata Euroopasta Istanbuliin valmistui vaiheittain: ensimmäiset viisitoista kilometriä Halkalıin rakennettiin 1870–1871, ja jatke Sirkeciin valmistui heinäkuussa 1872. Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin "väliaikainen" asema. Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli preussilainen August Jasmund, jonka Saksan hallitus oli lähettänyt Istanbuliin tutkimaan osmanilaista arkkitehtuuria. Tulos on tunnetuimpia esimerkkejä eurooppalaisesta orientalismista: 1 200 neliömetriä, kaasuvalaistus ja t…
+AIEMPI KYSYMYS: Miksi Dardanellit ovat olleet niin tärkeät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Dardanellit]] ovat kapea salmi Egeanmeren ja [[Marmaranmeren]] välillä, ja yhdessä [[Bosporin]] kanssa ne muodostavat ainoan vesireitin [[Mustaltamereltä]] Välimerelle. Sen vuoksi salmea hallitseva taho on voinut valvoa kauppaa ja laivaliikennettä sekä Mustanmeren rannoille että sieltä pois. Salmi sijaitsee lähellä muinaista [[Troijaa]], ja se on ollut sotilaallisesti tärkeä läpi historian. Salmen liikennettä säännellään nykyään kansainvälisillä sopimuksilla, joiden yksityiskohtia en ole varma. Vanhat hyvät salmet, joiden yli minä lennän yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Marmaranmeren
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Neitsyttorni] 1110 Torni seisoo pienellä luodolla Bosporin eteläsuulla, kahdensadan metrin päässä Üsküdarin rannasta. Ateenalainen sotapäällikkö Alkibiades rakensi kalliolle luultavasti jo vuonna 408 eaa. tarkastusaseman Mustaltamereltä tuleville laivoille. Keisari Aleksios Komnenos pystytti paikalle puutornin vuonna 1110, ja siitä vedettiin rautaketju salmen yli toiseen torniin Euroopan puolella — ketjulla suljettiin väylä. Rakennus on tuhoutunut ja noussut yhä uudelleen: maanjäristys kaatoi sen 1509, tulipalo tuhosi sen 1721, ja suurvisiiri Damad İbrahim Pasha rakennutti tilalle majakan. Muureja korjattiin 1731 ja 1734, ja vuonna 1763 torni muurattiin kestävämmästä kivestä. Vuodesta 1829 se toimi karan…
+- [Istanbul — kohdekartta / Kohdekartta: Sirkecin asema] 1890 Rata Euroopasta Istanbuliin valmistui vaiheittain: ensimmäiset viisitoista kilometriä Halkalıin rakennettiin 1870–1871, ja jatke Sirkeciin valmistui heinäkuussa 1872. Sulttaani Abdülaziz oli itse päättänyt linjauksen — rata kiertää Marmaranmeren rantaa Topkapın palatsin alapuutarhan muurien vierestä. Vuonna 1873 päätepysäkiksi tehtiin "väliaikainen" asema. Lopullisen asemarakennuksen työt alkoivat helmikuussa 1888, ja talo avattiin 3. marraskuuta 1890. Piirtäjä oli preussilainen August Jasmund, jonka Saksan hallitus oli lähettänyt Istanbuliin tutkimaan osmanilaista arkkitehtuuria. Tulos on tunnetuimpia esimerkkejä eurooppalaisesta orientalismista: 1 200 neliömetriä, kaasuvalaistus ja t…
+AIEMPI KYSYMYS: Miksi Dardanellit ovat olleet niin tärkeät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Dardanellit]] ovat kapea salmi Egeanmeren ja [[Marmaranmeren]] välillä, ja yhdessä [[Bosporin]] kanssa ne muodostavat ainoan vesireitin [[Mustaltamereltä]] Välimerelle. Sen vuoksi salmea hallitseva taho on voinut valvoa kauppaa ja laivaliikennettä sekä Mustanmeren rannoille että sieltä pois. Salmi sijaitsee lähellä muinaista [[Troijaa]], ja se on ollut sotilaallisesti tärkeä läpi historian. Salmen liikennettä säännellään nykyään kansainvälisillä sopimuksilla, joiden yksityiskohtia en ole varma. Vanhat hyvät salmet, joiden yli minä lennän yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Bosporin
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Miksi Dardanellit ovat olleet niin tärkeät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Dardanellit]] ovat kapea salmi Egeanmeren ja [[Marmaranmeren]] välillä, ja yhdessä [[Bosporin]] kanssa ne muodostavat ainoan vesireitin [[Mustaltamereltä]] Välimerelle. Sen vuoksi salmea hallitseva taho on voinut valvoa kauppaa ja laivaliikennettä sekä Mustanmeren rannoille että sieltä pois. Salmi sijaitsee lähellä muinaista [[Troijaa]], ja se on ollut sotilaallisesti tärkeä läpi historian. Salmen liikennettä säännellään nykyään kansainvälisillä sopimuksilla, joiden yksityiskohtia en ole varma. Vanhat hyvät salmet, joiden yli minä lennän yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Mustaltamereltä
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Yhdeksän kaupunkia päällekkäin] 1873 — Homeroksen Troijaa pidettiin pitkään pelkkänä taruna, kunnes Länsi-Turkin rannikolta kaivettiin esiin Hisarlıkin kumpu. Kummussa on yhdeksän kaupunkia päällekkäin: aina kun kaupunki tuhoutui, uusi rakennettiin raunioiden päälle, ja kumpu kasvoi kerros kerrokselta. Heinrich Schliemann aloitti kaivaukset 1870-luvulla ja kaivoi kummun läpi suuren kuilun. Vuonna 1873 hän löysi kultaesineitä, joita hän kutsui Priamoksen aarteeksi — mutta esineet olivat yli tuhat vuotta vanhempia kuin kerrottu sota. Kiireessä hän tuhosi juuri sen kerroksen, jota etsi.
+AIEMPI KYSYMYS: Miksi Dardanellit ovat olleet niin tärkeät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Dardanellit]] ovat kapea salmi Egeanmeren ja [[Marmaranmeren]] välillä, ja yhdessä [[Bosporin]] kanssa ne muodostavat ainoan vesireitin [[Mustaltamereltä]] Välimerelle. Sen vuoksi salmea hallitseva taho on voinut valvoa kauppaa ja laivaliikennettä sekä Mustanmeren rannoille että sieltä pois. Salmi sijaitsee lähellä muinaista [[Troijaa]], ja se on ollut sotilaallisesti tärkeä läpi historian. Salmen liikennettä säännellään nykyään kansainvälisillä sopimuksilla, joiden yksityiskohtia en ole varma. Vanhat hyvät salmet, joiden yli minä lennän yhdellä siiven lyönnillä.
+KYSYMYS: Kerro lisää: Troijaa
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Millainen eläin on Mustanmeren pyöriäinen?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Mustanmeren pyöriäinen]] on pyöriäisten alalaji, joka elää Mustallamerellä, Marmaranmerellä ja osassa Egeanmeren pohjoisosaa, ja se on valaisiin kuuluva pieni hammasvalas. Kuten muutkin pyöriäiset, se on pyöreäpäinen ja nokaton, eli sillä ei ole delfiinin pitkää kuonoa, ja sen väritys on tummanharmaa selkäpuolelta ja vaaleampi vatsapuolelta. Alalaji on luokiteltu uhanalaiseksi, ja sen elämää uhkaavat muun muassa kalastus ja meren saastuminen. Tarkkaa yksilömäärää en tiedä. Ja kyllä pyöriäisiä on aina mukava katsoa ylhäältä.
+KYSYMYS: Kerro lisää: Mustanmeren pyöriäinen
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Millainen saari Thasos on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Thasos]] on Kreikkaan kuuluva saari Egeanmeren pohjoisosassa, aivan [[Traakianmeren]] rannikon edustalla. Saari on vuorinen ja metsäinen, ja siellä on pitkät hiekkarannat. Antiikin aikana Thasos tunnettiin marmoristaan, ja sen tiedetään olleen myös kaivosseutu; tarkempia tietoja kaivostoiminnasta en ole varma. Saarelle pääsee lautalla mantereen satamista, ja tuntemani tiedon mukaan matka on lyhyt. Siinä missä Thasos vihertää, minä istun mielelläni oliivipuun oksalla.
+KYSYMYS: Kerro lisää: Thasos
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Millainen saari Thasos on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Thasos]] on Kreikkaan kuuluva saari Egeanmeren pohjoisosassa, aivan [[Traakianmeren]] rannikon edustalla. Saari on vuorinen ja metsäinen, ja siellä on pitkät hiekkarannat. Antiikin aikana Thasos tunnettiin marmoristaan, ja sen tiedetään olleen myös kaivosseutu; tarkempia tietoja kaivostoiminnasta en ole varma. Saarelle pääsee lautalla mantereen satamista, ja tuntemani tiedon mukaan matka on lyhyt. Siinä missä Thasos vihertää, minä istun mielelläni oliivipuun oksalla.
+KYSYMYS: Kerro lisää: Traakianmeren
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Mistä Samothraki on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Samothraki]] on Traakianmeren saari, joka tunnetaan antiikin ajoista pyhäkköstään, jossa palvottiin [[kabeireja]] eli salaperäisiä jumaluuksia ja jossa vietettiin vihkimysjuhlia. Saarelta löydettiin 1800-luvulla [[Samothrakeen Nike]] -patsas, joka on nykyään esillä [[Louvressa]] Pariisissa. Saaren korkein huippu, [[Fengari]], kohoaa yli tuhannen metrin korkeuteen, ja tarkkaa korkeutta en muista. Saaren pyhäkkökompleksi on nykyään arkeologinen alue.
+
+Pariisi, patsas ja minun sukuni: isoäitini lensi sinne kerran kyyhkypostina, joten tavallaan tämä on meidän juttu. Olen sitä mieltä, että kunnioitettava siipi kuuluu patsaaseen.
+KYSYMYS: Kerro lisää: Samothraki
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Mistä Samothraki on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Samothraki]] on Traakianmeren saari, joka tunnetaan antiikin ajoista pyhäkköstään, jossa palvottiin [[kabeireja]] eli salaperäisiä jumaluuksia ja jossa vietettiin vihkimysjuhlia. Saarelta löydettiin 1800-luvulla [[Samothrakeen Nike]] -patsas, joka on nykyään esillä [[Louvressa]] Pariisissa. Saaren korkein huippu, [[Fengari]], kohoaa yli tuhannen metrin korkeuteen, ja tarkkaa korkeutta en muista. Saaren pyhäkkökompleksi on nykyään arkeologinen alue.
+
+Pariisi, patsas ja minun sukuni: isoäitini lensi sinne kerran kyyhkypostina, joten tavallaan tämä on meidän juttu. Olen sitä mieltä, että kunnioitettava siipi kuuluu patsaaseen.
+KYSYMYS: Kerro lisää: kabeireja
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Mistä Samothraki on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Samothraki]] on Traakianmeren saari, joka tunnetaan antiikin ajoista pyhäkköstään, jossa palvottiin [[kabeireja]] eli salaperäisiä jumaluuksia ja jossa vietettiin vihkimysjuhlia. Saarelta löydettiin 1800-luvulla [[Samothrakeen Nike]] -patsas, joka on nykyään esillä [[Louvressa]] Pariisissa. Saaren korkein huippu, [[Fengari]], kohoaa yli tuhannen metrin korkeuteen, ja tarkkaa korkeutta en muista. Saaren pyhäkkökompleksi on nykyään arkeologinen alue.
+
+Pariisi, patsas ja minun sukuni: isoäitini lensi sinne kerran kyyhkypostina, joten tavallaan tämä on meidän juttu. Olen sitä mieltä, että kunnioitettava siipi kuuluu patsaaseen.
+KYSYMYS: Kerro lisää: Samothrakeen Nike
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Musiikki: Ensimmäinen latinalaisamerikkalainen Louvressa] 1964 — Violeta Parra (1917–1967) kiersi Chilen keräämässä kansanlauluja ja perinnetaitoja: samalla matkalla syntyivät hänen keramiikkansa, maalauksensa ja arpillera-kuvakirjontansa. Huhtikuussa 1964 Louvren koristetaiteen museo avasi näyttelyn hänen arpilleroistaan, öljymaalauksistaan ja rautalankaveistoksistaan — ensimmäinen latinalaisamerikkalaisen taiteilijan yksityisnäyttely siellä. Laulu "Gracias a la vida" syntyi La Pazissa 1966. Parran syntymäpäivä 4. lokakuuta on Chilen muusikoiden päivä.
+- [Pariisi — kohdekartta / Kohdekartta: Louvre] 1793 Louvre ei ollut alun perin museo vaan linnoitus: kuningas Filip II rakennutti sen 1100-luvun lopulla puolustamaan Pariisia. Vuosisatojen kuluessa siitä tehtiin kuninkaallinen palatsi, kunnes Ranskan vallankumouksen jälkeen se avattiin kaikille kansalaisille museona elokuussa 1793. Nykyään Louvressa on esillä noin 35 000 taideteosta, ja koko kokoelmassa on peräti 500 000 esinettä. Museo on maailman suurin, ja sen käytävät ovat kilometrien mittaiset. Vuonna 1989 palatsin sisäpihalle nousi yllättävä uutuus: arkkitehti I. M. Pein suunnittelema lasinen pyramidi, josta tuli museon pääsisäänkäynti. Aluksi moni pariisilainen paheksui lasirakennelmaa vanhan palatsin edessä, mutta siitä tuli pia…
+AIEMPI KYSYMYS: Mistä Samothraki on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Samothraki]] on Traakianmeren saari, joka tunnetaan antiikin ajoista pyhäkköstään, jossa palvottiin [[kabeireja]] eli salaperäisiä jumaluuksia ja jossa vietettiin vihkimysjuhlia. Saarelta löydettiin 1800-luvulla [[Samothrakeen Nike]] -patsas, joka on nykyään esillä [[Louvressa]] Pariisissa. Saaren korkein huippu, [[Fengari]], kohoaa yli tuhannen metrin korkeuteen, ja tarkkaa korkeutta en muista. Saaren pyhäkkökompleksi on nykyään arkeologinen alue.
+
+Pariisi, patsas ja minun sukuni: isoäitini lensi sinne kerran kyyhkypostina, joten tavallaan tämä on meidän juttu. Olen sitä mieltä, että kunnioitettava siipi kuuluu patsaaseen.
+KYSYMYS: Kerro lisää: Louvressa
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Mistä Samothraki on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Samothraki]] on Traakianmeren saari, joka tunnetaan antiikin ajoista pyhäkköstään, jossa palvottiin [[kabeireja]] eli salaperäisiä jumaluuksia ja jossa vietettiin vihkimysjuhlia. Saarelta löydettiin 1800-luvulla [[Samothrakeen Nike]] -patsas, joka on nykyään esillä [[Louvressa]] Pariisissa. Saaren korkein huippu, [[Fengari]], kohoaa yli tuhannen metrin korkeuteen, ja tarkkaa korkeutta en muista. Saaren pyhäkkökompleksi on nykyään arkeologinen alue.
+
+Pariisi, patsas ja minun sukuni: isoäitini lensi sinne kerran kyyhkypostina, joten tavallaan tämä on meidän juttu. Olen sitä mieltä, että kunnioitettava siipi kuuluu patsaaseen.
+KYSYMYS: Kerro lisää: Fengari
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Traakianmeri (meri)
+Tietoruudun teksti: Traakianmeri on Egeanmeren pohjoisin osa, ja koko sen ulappa jää 40. leveyspiirin pohjoispuolelle. Se rajautuu Itä-Makedoniaan, Etelä-Traakiaan ja Luoteis-Anatoliaan; saarina siinä ovat Thasos, Samothraki ja Gökçeada, ja etelässä se päättyy Limnoksen pohjoisrantaan. Nestos ja Évros laskevat siihen, ja Dardanellien salmi vie siitä Marmaranmeren ja Bosporin kautta Mustallemerelle — sitä kapeaa reittiä pitkin 1800-luvun laivat purjehtivat Egeanmereltä Konstantinopoliin. Meren pohjoisosassa elää yhä uhanalainen Mustanmeren pyöriäinen.
+AIEMPI KYSYMYS: Mikä joki Évros on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Évros on yksi Balkanin pitkistä joista, ja sen alkulähteet ovat Bulgariassa, jossa sitä kutsutaan nimellä [[Maritsa]]. Joki virtaa Traakian halki ja laskee Egeanmereen, ja sen alajuoksu muodostaa suuren osan Kreikan ja Turkin välisestä rajasta; Turkissa joen nimi on Meriç. Joki on Balkanin tärkeimpiä vesistöjä, ja sen suistoalue on tärkeä lintujen levähdyspaikka. Joen tarkkaa pituutta en ole varma. Tää on vihdoin aihe, jossa me kyyhkyt viihdymme.
+KYSYMYS: Kerro lisää: Maritsa
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+AIEMPI KYSYMYS: Kuka Plinius vanhempi oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämän nimen minä tunnen kirjeistä. Plinius vanhempi oli ensimmäisellä vuosisadalla elänyt roomalainen kirjailija, tutkija ja laivaston komentaja. Hänen tunnetuin teoksensa on [[Naturalis historia]], laaja tietokokoelma luonnosta, maista, eläimistä ja kasveista, ja siihen hän kirjasi muun muassa Makedonian lampaiden juottamisen tavan. Hän kuoli vuonna 79 [[Stabiaen]] rannalla, kun hän oli lähtenyt laivalla auttamaan ihmisiä [[Vesuviuksen]] purkauksen aikana. Tapahtumista kertoi myöhemmin hänen veljenpoikansa, nuorempi Plinius, kirjeessään Tacitukselle. Onpas siit jo pitkä aika, ja hyvä että kirjeet säilyi.
+KYSYMYS: Kerro lisää: Naturalis historia
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+AIEMPI KYSYMYS: Kuka Plinius vanhempi oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämän nimen minä tunnen kirjeistä. Plinius vanhempi oli ensimmäisellä vuosisadalla elänyt roomalainen kirjailija, tutkija ja laivaston komentaja. Hänen tunnetuin teoksensa on [[Naturalis historia]], laaja tietokokoelma luonnosta, maista, eläimistä ja kasveista, ja siihen hän kirjasi muun muassa Makedonian lampaiden juottamisen tavan. Hän kuoli vuonna 79 [[Stabiaen]] rannalla, kun hän oli lähtenyt laivalla auttamaan ihmisiä [[Vesuviuksen]] purkauksen aikana. Tapahtumista kertoi myöhemmin hänen veljenpoikansa, nuorempi Plinius, kirjeessään Tacitukselle. Onpas siit jo pitkä aika, ja hyvä että kirjeet säilyi.
+KYSYMYS: Kerro lisää: Stabiaen
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Kuka Plinius vanhempi oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Tämän nimen minä tunnen kirjeistä. Plinius vanhempi oli ensimmäisellä vuosisadalla elänyt roomalainen kirjailija, tutkija ja laivaston komentaja. Hänen tunnetuin teoksensa on [[Naturalis historia]], laaja tietokokoelma luonnosta, maista, eläimistä ja kasveista, ja siihen hän kirjasi muun muassa Makedonian lampaiden juottamisen tavan. Hän kuoli vuonna 79 [[Stabiaen]] rannalla, kun hän oli lähtenyt laivalla auttamaan ihmisiä [[Vesuviuksen]] purkauksen aikana. Tapahtumista kertoi myöhemmin hänen veljenpoikansa, nuorempi Plinius, kirjeessään Tacitukselle. Onpas siit jo pitkä aika, ja hyvä että kirjeet säilyi.
+KYSYMYS: Kerro lisää: Vesuviuksen
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mitä joen tulvasoille tapahtui patojen jälkeen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä tiedän vain tulvat. Aliákmonaan alajuoksulla ei ollut ennen 1950-luvun patotöitä vakituista uomaa, vaan joki tulvi vapaasti ja levitti eteensä laajoja soita, ja vasta padot antoivat sille pysyvän uran. Soiden tarkasta kohtalosta en ole varma, mutta Kreikan pohjoisilla alankoalueilla tulvaisia suoalueita on yleisesti kuivatettu viljelysmaaksi, ja luultavasti myös [[Thermaïkoksen lahden]] pohjukan alankoa on muokattu samaan suuntaan. Tarkat vuosiluvut ja pinta-alat jätän mieluummin kertomatta kuin arvaan. Ylhäältä näkee paljon, mut ei sentään kaikkea.
+KYSYMYS: Kerro lisää: Thermaïkoksen lahden
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mistä Aliákmonas saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pohjoiseen tässä pitää lentää. Aliákmonas saa alkunsa [[Grámoksen]] vuorilta aivan Albanian rajan tuntumasta. Sieltä joki kiertää laajan kaaren [[Vourinoksen]] vuorten ympäri ja laskee lopulta [[Thermaïkoksen lahteen]]. Matkaa kertyy 297 kilometriä, ja joki on Kreikan pisin, joka virtaa kokonaan maan omalla puolella rajaa. Nimi on antiikin kreikkaa ja yhdistää sanat álas, suola tai meri, ja ákmon, alasin. Kyl siinä ois siivillä tekemistä.
+KYSYMYS: Kerro lisää: Grámoksen
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mistä Aliákmonas saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pohjoiseen tässä pitää lentää. Aliákmonas saa alkunsa [[Grámoksen]] vuorilta aivan Albanian rajan tuntumasta. Sieltä joki kiertää laajan kaaren [[Vourinoksen]] vuorten ympäri ja laskee lopulta [[Thermaïkoksen lahteen]]. Matkaa kertyy 297 kilometriä, ja joki on Kreikan pisin, joka virtaa kokonaan maan omalla puolella rajaa. Nimi on antiikin kreikkaa ja yhdistää sanat álas, suola tai meri, ja ákmon, alasin. Kyl siinä ois siivillä tekemistä.
+KYSYMYS: Kerro lisää: Vourinoksen
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mistä Aliákmonas saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pohjoiseen tässä pitää lentää. Aliákmonas saa alkunsa [[Grámoksen]] vuorilta aivan Albanian rajan tuntumasta. Sieltä joki kiertää laajan kaaren [[Vourinoksen]] vuorten ympäri ja laskee lopulta [[Thermaïkoksen lahteen]]. Matkaa kertyy 297 kilometriä, ja joki on Kreikan pisin, joka virtaa kokonaan maan omalla puolella rajaa. Nimi on antiikin kreikkaa ja yhdistää sanat álas, suola tai meri, ja ákmon, alasin. Kyl siinä ois siivillä tekemistä.
+KYSYMYS: Kerro lisää: Thermaïkoksen lahteen
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mistä Axiós-joki virtaa Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Naapurin joki, siis. Axiós on kreikkalainen nimi joelle, jota pohjoisessa kutsutaan [[Vardariksi]]. Se saa alkunsa [[Pohjois-Makedoniasta]], virtaa Kreikan puolelle ja laskee Thermaïkoksen lahteen. Kokonaisuutena joki on pidempi kuin Aliákmonas, mutta sen Kreikan puolinen osuus ei yllä Aliákmonaan mittaan. Roomalaisen [[Pliniuksen]] mukaan makedonialaisen tavan mukaan mustia lampaita haluava juotti laumansa juuri Axiósissa. Mustat lampaat minä kyl haluaisin nähdä.
+KYSYMYS: Kerro lisää: Vardariksi
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mistä Axiós-joki virtaa Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Naapurin joki, siis. Axiós on kreikkalainen nimi joelle, jota pohjoisessa kutsutaan [[Vardariksi]]. Se saa alkunsa [[Pohjois-Makedoniasta]], virtaa Kreikan puolelle ja laskee Thermaïkoksen lahteen. Kokonaisuutena joki on pidempi kuin Aliákmonas, mutta sen Kreikan puolinen osuus ei yllä Aliákmonaan mittaan. Roomalaisen [[Pliniuksen]] mukaan makedonialaisen tavan mukaan mustia lampaita haluava juotti laumansa juuri Axiósissa. Mustat lampaat minä kyl haluaisin nähdä.
+KYSYMYS: Kerro lisää: Pohjois-Makedoniasta
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mistä Axiós-joki virtaa Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Naapurin joki, siis. Axiós on kreikkalainen nimi joelle, jota pohjoisessa kutsutaan [[Vardariksi]]. Se saa alkunsa [[Pohjois-Makedoniasta]], virtaa Kreikan puolelle ja laskee Thermaïkoksen lahteen. Kokonaisuutena joki on pidempi kuin Aliákmonas, mutta sen Kreikan puolinen osuus ei yllä Aliákmonaan mittaan. Roomalaisen [[Pliniuksen]] mukaan makedonialaisen tavan mukaan mustia lampaita haluava juotti laumansa juuri Axiósissa. Mustat lampaat minä kyl haluaisin nähdä.
+KYSYMYS: Kerro lisää: Pliniuksen
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+AIEMPI KYSYMYS: Mikä suurkaupunki on Thermaïkoksen lahden pohjukassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sinne minä tiedän tien. Thermaïkoksen lahden pohjukassa sijaitsee [[Thessaloniki]], Kreikan toiseksi suurin kaupunki. Lähteiden mukaan sen perusti noin 300-luvun lopulla eaa. Makedonian kuningas [[Kassandros]], joka antoi sille vaimonsa Thessalonikén nimen. Samaan lahteen laskevat muun muassa Axiós ja Aliákmonas. Tsoureki-pullaa siel varmasti riittää.
+KYSYMYS: Kerro lisää: Thessaloniki
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aliákmonas (luonto · joki)
+Tietoruudun teksti: Aliákmonas on 297 kilometrin pituinen ja Kreikan pisin joki, joka virtaa alusta loppuun maan omalla puolella rajaa: Évros, Strymónas ja Axiós ovat kokonaisuutena pidempiä, mutta ne tulevat naapurimaista, eikä yksikään niistä yllä Kreikan puolella tämän mittaan. Nimi on antiikin kreikkaa ja rakentuu sanoista álas, suola tai meri, ja ákmon, alasin. Roomalainen Plinius vanhempi kirjasi Makedoniasta tavan, jonka mukaan valkoisia lampaita haluava juotti laumansa Aliákmonaassa ja mustia haluava Axióksessa. Joki nousee Grámoksen vuorilta aivan Albanian rajan tuntumasta, kiertää laajan kaaren Vourinoksen vuorten ympäri ja laskee Thermaïkoksen lahteen. Isoisän matkan aikaan sen alajuoksulla ei ollut vakituista uomaa lainkaan: joki tulvi vapaasti ja levitti eteensä laajoja soita, ja pysyvän uransa se sai vasta 1950-luvun patotöissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+- [Albania — maalehti / Historia: Valkoinen kaupunki tuhannella ikkunalla] 314 eaa. – 2008 — Makedonialainen kenraali Kassandros perusti kaupungin nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi jo silloin sen valkoisia taloja. Osmanit valtasivat kaupungin 1417. Nykyisin Osum-joen kahta rantaa reunustavat Mangalemin ja Gorican korttelit, joiden rinteille kiipeävissä taloissa on niin paljon ikkunoita, että albaanit kutsuvat kaupunkia tuhannen ikkunan kaupungiksi. Unesco liitti Beratin maailmanperintöluetteloon 2008 yhdessä Gjirokastërin kanssa.
+AIEMPI KYSYMYS: Mikä suurkaupunki on Thermaïkoksen lahden pohjukassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Sinne minä tiedän tien. Thermaïkoksen lahden pohjukassa sijaitsee [[Thessaloniki]], Kreikan toiseksi suurin kaupunki. Lähteiden mukaan sen perusti noin 300-luvun lopulla eaa. Makedonian kuningas [[Kassandros]], joka antoi sille vaimonsa Thessalonikén nimen. Samaan lahteen laskevat muun muassa Axiós ja Aliákmonas. Tsoureki-pullaa siel varmasti riittää.
+KYSYMYS: Kerro lisää: Kassandros
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+AIEMPI KYSYMYS: Mitä Amfipoliista on kaivettu esiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Siellä on kaivettu paljon. Amfipolin muinaisesta kaupungista on kaivettu esiin muun muassa kaupunginmuureja, varhaiskristillisten kirkkojen perustuksia ja mosaiikkeja. Kaupungin lähellä seisoo myös [[Amfipolin leijona]], antiikin ajan leijonapatsas, joka on koottu uudelleen palasista. Vuonna 2012 alkaneissa kaivauksissa on tullut esiin [[Kasta-hauta]], lähteiden mukaan 300-luvun lopulle eaa. ajoitettu valtava hautakumpu, jonka löytö herätti kansainvälistä huomiota. Siitä, kenelle hauta oli tarkoitettu, tutkijat eivät ole yhtä mieltä.
+
+Kaivaukset muistuttavat minua siitä, miten paljon maan alla on aina ollut. Katolta se ei näy, ja siksi kaivajat ovat välillä viisaampia kuin kyyhky.
+KYSYMYS: Kerro lisää: Amfipolin leijona
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+AIEMPI KYSYMYS: Mitä Amfipoliista on kaivettu esiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Siellä on kaivettu paljon. Amfipolin muinaisesta kaupungista on kaivettu esiin muun muassa kaupunginmuureja, varhaiskristillisten kirkkojen perustuksia ja mosaiikkeja. Kaupungin lähellä seisoo myös [[Amfipolin leijona]], antiikin ajan leijonapatsas, joka on koottu uudelleen palasista. Vuonna 2012 alkaneissa kaivauksissa on tullut esiin [[Kasta-hauta]], lähteiden mukaan 300-luvun lopulle eaa. ajoitettu valtava hautakumpu, jonka löytö herätti kansainvälistä huomiota. Siitä, kenelle hauta oli tarkoitettu, tutkijat eivät ole yhtä mieltä.
+
+Kaivaukset muistuttavat minua siitä, miten paljon maan alla on aina ollut. Katolta se ei näy, ja siksi kaivajat ovat välillä viisaampia kuin kyyhky.
+KYSYMYS: Kerro lisää: Kasta-hauta
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+AIEMPI KYSYMYS: Mitä lintuja Kerkinillä talvehtii?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä aiheesta minä en pysty olemaan puolueeton. [[Kerkinin tekojärvi]] on yksi Kreikan parhaista lintupaikoista, ja alueelta on tavattu yli kolmesataa lajia. Talvehtijoista en pysty antamaan täsmällistä luetteloa, ja se jää mieluummin sanomatta kuin arvatuksi. Alue tunnetaan kuitenkin vesilinnuista: siellä on tavattu muun muassa [[pelikaaneja]], [[merimetsoja]], haikaroita sekä hanhia ja sorsia, joille laaja kosteikko tarjoaa suojaa ja ravintoa. Tarkemmin sen tietää kyl joku lintubongari.
+KYSYMYS: Kerro lisää: Kerkinin tekojärvi
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto] Kreikan luonto on hajallaan tuhansilla saarilla ja jyrkillä vuorilla: samassa maassa elää maailman harvinaisimpia hylkeitä, jättimäisiä pelikaaneja ja vuohi, jota ei tavata muualla.
+AIEMPI KYSYMYS: Mitä lintuja Kerkinillä talvehtii?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä aiheesta minä en pysty olemaan puolueeton. [[Kerkinin tekojärvi]] on yksi Kreikan parhaista lintupaikoista, ja alueelta on tavattu yli kolmesataa lajia. Talvehtijoista en pysty antamaan täsmällistä luetteloa, ja se jää mieluummin sanomatta kuin arvatuksi. Alue tunnetaan kuitenkin vesilinnuista: siellä on tavattu muun muassa [[pelikaaneja]], [[merimetsoja]], haikaroita sekä hanhia ja sorsia, joille laaja kosteikko tarjoaa suojaa ja ravintoa. Tarkemmin sen tietää kyl joku lintubongari.
+KYSYMYS: Kerro lisää: pelikaaneja
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+AIEMPI KYSYMYS: Mitä lintuja Kerkinillä talvehtii?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä aiheesta minä en pysty olemaan puolueeton. [[Kerkinin tekojärvi]] on yksi Kreikan parhaista lintupaikoista, ja alueelta on tavattu yli kolmesataa lajia. Talvehtijoista en pysty antamaan täsmällistä luetteloa, ja se jää mieluummin sanomatta kuin arvatuksi. Alue tunnetaan kuitenkin vesilinnuista: siellä on tavattu muun muassa [[pelikaaneja]], [[merimetsoja]], haikaroita sekä hanhia ja sorsia, joille laaja kosteikko tarjoaa suojaa ja ravintoa. Tarkemmin sen tietää kyl joku lintubongari.
+KYSYMYS: Kerro lisää: merimetsoja
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Sofia — kohdekartta / Kohdekartta: Sofian katedraali] 1882–1924 Sofian kukkulalla kohoaa valtava kultakupolinen katedraali, joka näkyy kauas yli kattojen. Se rakennettiin kiitokseksi venäläisille sotilaille, jotka kaatuivat taistellessaan Bulgarian vapauttamiseksi osmanien vallasta vuosien 1877–1878 sodassa. Peruskivi muurattiin vuonna 1882, mutta varsinainen rakentaminen valmistui vasta 1912, ja katedraali vihittiin käyttöön vuonna 1924. Rakennus on valtavan kokoinen: se on yli 73 metriä pitkä, ja sisään mahtuu jopa 5000 ihmistä kerralla. Kultapäällysteinen keskuskupoli kohoaa 45 metrin korkeuteen. Tornissa soi 12 kellon sarja, joista painavin painaa 12 tonnia ja kevyin vain 10 kiloa – suunnilleen yhtä paljon kuin keskikokoinen koira! Sisällä…
+AIEMPI KYSYMYS: Missä Vitošan vuori sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä voin paikantaa. Vitoša on Bulgarian vuori heti [[Sofian]] eteläpuolella, niin lähellä pääkaupunkia, että se näkyy kaupungin kaduilta. Sen korkein huippu [[Tšerni Vrah]] kohoaa noin 2 290 metriin. Vuori on sofialaisten lähiretkikohde, ja sieltä Strymónas-joki saa alkunsa. Pääkaupungin takapihalla on siis vuori, kyl se kelpaa.
+KYSYMYS: Kerro lisää: Sofian
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+AIEMPI KYSYMYS: Missä Vitošan vuori sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämän minä voin paikantaa. Vitoša on Bulgarian vuori heti [[Sofian]] eteläpuolella, niin lähellä pääkaupunkia, että se näkyy kaupungin kaduilta. Sen korkein huippu [[Tšerni Vrah]] kohoaa noin 2 290 metriin. Vuori on sofialaisten lähiretkikohde, ja sieltä Strymónas-joki saa alkunsa. Pääkaupungin takapihalla on siis vuori, kyl se kelpaa.
+KYSYMYS: Kerro lisää: Tšerni Vrah
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Miksi Bulgarian ruhtinaskunta syntyi vuonna 1878?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän tarvitaan vähän taustaa. Bulgarian ruhtinaskunta syntyi Venäjän ja Ottomaanien valtakunnan välisen sodan 1877–1878 jälkeen. [[Berliinin kongressi]] vahvisti vuonna 1878 ratkaisun, jossa Bulgaria sai autonomisen ruhtinaskunnan aseman, mutta pysyi muodollisesti Ottomaanien yliherruuden alaisena. Etelä-Bulgaria jäi aluksi erilliseksi [[Itä-Rumelian]] maakunnaksi ja yhdistyi ruhtinaskuntaan vuonna 1885. Isoisän matkan aikaan, vuonna 1873, ruhtinaskuntaa ei siis vielä ollut, vaan alue kuului [[Ottomaanien valtakuntaan]]. No olipas siin vuosilukuja.
+KYSYMYS: Kerro lisää: Berliinin kongressi
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+AIEMPI KYSYMYS: Miksi Bulgarian ruhtinaskunta syntyi vuonna 1878?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän tarvitaan vähän taustaa. Bulgarian ruhtinaskunta syntyi Venäjän ja Ottomaanien valtakunnan välisen sodan 1877–1878 jälkeen. [[Berliinin kongressi]] vahvisti vuonna 1878 ratkaisun, jossa Bulgaria sai autonomisen ruhtinaskunnan aseman, mutta pysyi muodollisesti Ottomaanien yliherruuden alaisena. Etelä-Bulgaria jäi aluksi erilliseksi [[Itä-Rumelian]] maakunnaksi ja yhdistyi ruhtinaskuntaan vuonna 1885. Isoisän matkan aikaan, vuonna 1873, ruhtinaskuntaa ei siis vielä ollut, vaan alue kuului [[Ottomaanien valtakuntaan]]. No olipas siin vuosilukuja.
+KYSYMYS: Kerro lisää: Itä-Rumelian
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Miksi Bulgarian ruhtinaskunta syntyi vuonna 1878?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän tarvitaan vähän taustaa. Bulgarian ruhtinaskunta syntyi Venäjän ja Ottomaanien valtakunnan välisen sodan 1877–1878 jälkeen. [[Berliinin kongressi]] vahvisti vuonna 1878 ratkaisun, jossa Bulgaria sai autonomisen ruhtinaskunnan aseman, mutta pysyi muodollisesti Ottomaanien yliherruuden alaisena. Etelä-Bulgaria jäi aluksi erilliseksi [[Itä-Rumelian]] maakunnaksi ja yhdistyi ruhtinaskuntaan vuonna 1885. Isoisän matkan aikaan, vuonna 1873, ruhtinaskuntaa ei siis vielä ollut, vaan alue kuului [[Ottomaanien valtakuntaan]]. No olipas siin vuosilukuja.
+KYSYMYS: Kerro lisää: Ottomaanien valtakuntaan
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strymónas (luonto · joki)
+Tietoruudun teksti: Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee 415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi on traakialaista perua ja juontuu kantaindoeurooppalaisesta sanasta srew-, "virrata" — samasta juuresta tulee englannin sana stream. Antiikissa joki oli purjehduskelpoinen suulta sisämaan Kerkinitis-järvelle asti, ja se oli tärkeä väylä Strymonin lahden ja Traakian sisämaan välillä melkein Serresin kaupunkiin saakka; tuo järvi on sittemmin kuivunut. Nykyään joki täyttää ja tyhjentää Kerkinin tekojärveä, joka padottiin 1932 laajan suoalueen paikalle ja on nyt yksi Kreikan parhaista lintupaikoista: alueelta on tavattu yli kolmesataa lintulajia. Isoisän matkan aikaan joki ei ylittänyt yhtään valtakunnanrajaa — sekä nykyisen Bulgarian että Kreikan puoleiset rannat kuuluivat Ottomaanien valtakuntaan, ja Bulgarian ruhtinaskunta perustettiin vasta 1878.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+AIEMPI KYSYMYS: Onko Kerkinin järvi suojeltu alue?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnut kiittävät. Kyllä, [[Kerkinin tekojärvi]] kuuluu kansainvälisesti suojeltuihin kosteikkoihin, ja lähteiden mukaan se on liitetty [[Ramsar-sopimuksen]] kosteikkoluetteloon jo 1970-luvulla, vaikka en ole varma tarkasta vuodesta. Järvi syntyi, kun laaja suoalue padottiin vuonna 1932, ja nykyään Strymónas-joki täyttää ja tyhjentää sitä. Alueelta on tavattu yli kolmesataa lintulajia, mikä tekee siitä tärkeän kosteikon. Hyvä että joku suojelee, minä pystyn vaan katsomaan.
+KYSYMYS: Kerro lisää: Ramsar-sopimuksen
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Miksi Edirne oli ottomaaneille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Adrianopoli, siis. Edirne oli ottomaaneille tärkeä, koska se sijaitsee Balkanin ja Konstantinopolin välisen reitin varrella, siinä missä Tundža ja Arda yhtyvät [[Maricajokeen]]. Ottomaanit valtasivat kaupungin 1300-luvun jälkipuoliskolla, ja siitä tuli heidän pääkaupunkinsa, kunnes [[Konstantinopolin]] valtaus vuonna 1453 siirsi pääkaupungin sinne. Kaupunki pysyi silti sulttaanien suosiossa, ja sen merkittävin rakennus on arkkitehti [[Sinanin]] suunnittelema [[Selimiye-moskeija]], joka valmistui 1500-luvun jälkipuoliskolla. Kaupungilla on kaksi nimeä, ja minä käytin molempia.
+KYSYMYS: Kerro lisää: Maricajokeen
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Miksi Edirne oli ottomaaneille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Adrianopoli, siis. Edirne oli ottomaaneille tärkeä, koska se sijaitsee Balkanin ja Konstantinopolin välisen reitin varrella, siinä missä Tundža ja Arda yhtyvät [[Maricajokeen]]. Ottomaanit valtasivat kaupungin 1300-luvun jälkipuoliskolla, ja siitä tuli heidän pääkaupunkinsa, kunnes [[Konstantinopolin]] valtaus vuonna 1453 siirsi pääkaupungin sinne. Kaupunki pysyi silti sulttaanien suosiossa, ja sen merkittävin rakennus on arkkitehti [[Sinanin]] suunnittelema [[Selimiye-moskeija]], joka valmistui 1500-luvun jälkipuoliskolla. Kaupungilla on kaksi nimeä, ja minä käytin molempia.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Üsküdar] 600-luku eaa. Üsküdar sijaitsee Istanbulin Aasian-puoleisella rannalla, vastapäätä vanhaa kaupunkia. Kreikkalaiset siirtolaiset Megarasta perustivat sen jo 600-luvulla eaa. ja antoivat sille nimen Khrysopolis, "Kultainen kaupunki". Osmanit valtasivat sen jo vuonna 1338 — yli sata vuotta ennen kuin Konstantinopoli itse kaatui vuonna 1453. Nykyään Üsküdar on Istanbulin vilkkaimpia liikenteen solmukohtia: laivat kuljettavat matkustajia Bosporin yli Eurooppaan, ja Marmaray-junat kulkevat salmen alittavassa tunnelissa. Aivan lauttarannan edustalla, omalla pienellä saarellaan, kohoaa Kız Kulesi eli Neitsyttorni — se on toiminut muun muassa majakkana ja tullitalona. Üsküdaria kutsutaan joskus mosk…
+AIEMPI KYSYMYS: Miksi Edirne oli ottomaaneille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Adrianopoli, siis. Edirne oli ottomaaneille tärkeä, koska se sijaitsee Balkanin ja Konstantinopolin välisen reitin varrella, siinä missä Tundža ja Arda yhtyvät [[Maricajokeen]]. Ottomaanit valtasivat kaupungin 1300-luvun jälkipuoliskolla, ja siitä tuli heidän pääkaupunkinsa, kunnes [[Konstantinopolin]] valtaus vuonna 1453 siirsi pääkaupungin sinne. Kaupunki pysyi silti sulttaanien suosiossa, ja sen merkittävin rakennus on arkkitehti [[Sinanin]] suunnittelema [[Selimiye-moskeija]], joka valmistui 1500-luvun jälkipuoliskolla. Kaupungilla on kaksi nimeä, ja minä käytin molempia.
+KYSYMYS: Kerro lisää: Sinanin
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Selimiyen moskeija] 1570 Perustuskivi laskettiin 1209, ja vihkiminen ehti vasta vuoteen 1326. Väliin osui kaksi maanjäristystä, 1267 ja 1303, ja keskilaiva ja länsijulkisivu valmistuivat vasta arkkipiispa Giovanni del Conten aikana 1319–1326. Sisämitat ovat 66 × 21 metriä, ja rakennus on Kyproksen vanhin ja suurin säilynyt goottilainen kirkko. Pohjakaava on lainattu Pariisista: kuoria kiertää käytävä eikä apsidiin tehty kappeleita, kuten Notre-Damessa. Ranskalaisen Lusignan-suvun kuninkaat kruunattiin täällä. Syyskuussa 1570 rakennus sai toisen elämän. Ensimmäinen perjantairukous pidettiin 15. syyskuuta, ja samana vuonna länsipäätyyn nousi kaksi minareettia. Sisällä muutos oli käytännöllinen: patsaat ja kirkon…
+- [Mekka — kohdekartta / Kohdekartta: Suuri moskeija] 638 alkaen Moskeija ei ole rakennettu Kaaban ympärille kerralla vaan kerroksittain. Aluksi Kaaba seisoi avoimella aukiolla. Kalifi Umar laajensi paikkaa vuonna 637 puolellatoista tuhannella neliömetrillä, jolloin ala nousi kolmeen ja puoleen tuhanteen; Uthmanin aikana tehtiin ensimmäiset katetut pylväskäytävät. Abd Allah ibn al-Zubayr venytti alan vuonna 682 lähes seitsemään ja puoleen tuhanteen neliömetriin, ja kalifi al-Mahdin vuonna 779 aloittama työ nosti sen kahteenkymmeneenkahdeksaantuhanteen — suurempaa laajennusta ei tehty ennen Saudi-Arabian aikaa. Se moskeija, jonka 1800-luvun matkalainen näki, oli osmanien työtä. Vuonna 1570 sulttaani Selim II tilasi korjauksen pääarkkitehti Mima…
+AIEMPI KYSYMYS: Miksi Edirne oli ottomaaneille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Adrianopoli, siis. Edirne oli ottomaaneille tärkeä, koska se sijaitsee Balkanin ja Konstantinopolin välisen reitin varrella, siinä missä Tundža ja Arda yhtyvät [[Maricajokeen]]. Ottomaanit valtasivat kaupungin 1300-luvun jälkipuoliskolla, ja siitä tuli heidän pääkaupunkinsa, kunnes [[Konstantinopolin]] valtaus vuonna 1453 siirsi pääkaupungin sinne. Kaupunki pysyi silti sulttaanien suosiossa, ja sen merkittävin rakennus on arkkitehti [[Sinanin]] suunnittelema [[Selimiye-moskeija]], joka valmistui 1500-luvun jälkipuoliskolla. Kaupungilla on kaksi nimeä, ja minä käytin molempia.
+KYSYMYS: Kerro lisää: Selimiye-moskeija
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Miten Orfeuksen taru päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä tarina on surullinen. Antiikin taruston mukaan Orfeus oli laulaja ja lyyran soittaja, joka meni tuonelaan hakemaan kuolleen vaimonsa [[Eurydiken]] takaisin. Hän sai luvan viedä vaimon elävien maailmaan, mutta menetti hänet toisen kerran, kun katsoi taakseen ennen perille pääsyä. Orfeus vaelsi Traakiassa surun murtamana, kunnes yleisimmän version mukaan [[Dionysoksen]] seuraajat tappoivat hänet. Hänen päänsä ja lyyransa kelluivat Hébros-jokea pitkin mereen ja ajautuivat [[Lesboksen]] saarelle. Muusat hautasivat hänet, ja lyyra sijoitettiin taivaalle tähtikuvioksi, jota kutsutaan [[Lyyraksi]]. Hyvä tarina silti, vaikka loppu on raskas.
+KYSYMYS: Kerro lisää: Eurydiken
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+AIEMPI KYSYMYS: Miten Orfeuksen taru päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä tarina on surullinen. Antiikin taruston mukaan Orfeus oli laulaja ja lyyran soittaja, joka meni tuonelaan hakemaan kuolleen vaimonsa [[Eurydiken]] takaisin. Hän sai luvan viedä vaimon elävien maailmaan, mutta menetti hänet toisen kerran, kun katsoi taakseen ennen perille pääsyä. Orfeus vaelsi Traakiassa surun murtamana, kunnes yleisimmän version mukaan [[Dionysoksen]] seuraajat tappoivat hänet. Hänen päänsä ja lyyransa kelluivat Hébros-jokea pitkin mereen ja ajautuivat [[Lesboksen]] saarelle. Muusat hautasivat hänet, ja lyyra sijoitettiin taivaalle tähtikuvioksi, jota kutsutaan [[Lyyraksi]]. Hyvä tarina silti, vaikka loppu on raskas.
+KYSYMYS: Kerro lisää: Dionysoksen
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tiede ja keksinnöt: Kaksi vuotta laguunin rannalla] n. 345 eaa. — Aristoteles vietti kaksi vuotta Lesboksen saarella ja tutki Pyrrhan laguunin eläimiä sekä kalastajien saaliita. Hän katsoi, avasi ja kuvasi tarkasti — ja oli ensimmäinen, joka tutki eliöitä järjestelmällisesti. Siitä alkoi biologia. Kaikkea ei uskottu: hän kertoi kalastajien kertoneen, että mustekalan yksi lonkero on lisääntymiselintä. Vasta 1800-luvun tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.
+AIEMPI KYSYMYS: Miten Orfeuksen taru päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä tarina on surullinen. Antiikin taruston mukaan Orfeus oli laulaja ja lyyran soittaja, joka meni tuonelaan hakemaan kuolleen vaimonsa [[Eurydiken]] takaisin. Hän sai luvan viedä vaimon elävien maailmaan, mutta menetti hänet toisen kerran, kun katsoi taakseen ennen perille pääsyä. Orfeus vaelsi Traakiassa surun murtamana, kunnes yleisimmän version mukaan [[Dionysoksen]] seuraajat tappoivat hänet. Hänen päänsä ja lyyransa kelluivat Hébros-jokea pitkin mereen ja ajautuivat [[Lesboksen]] saarelle. Muusat hautasivat hänet, ja lyyra sijoitettiin taivaalle tähtikuvioksi, jota kutsutaan [[Lyyraksi]]. Hyvä tarina silti, vaikka loppu on raskas.
+KYSYMYS: Kerro lisää: Lesboksen
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Musiikki: Lyyra, jota soitetaan varpaalla] Nyatiti on luolaisten kahdeksankielinen lyyra Siayasta Kisumun pohjoispuolelta: veistetty kulhokaikupohja, jonka päälle on pingotettu lehmännahka. Soittaja istuu matalalla orindi-jakkaralla, pujottaa oikean ison varpaan ympärille takoraudasta tehdyn oduongo-renkaan ja sitoo säärelle gara-kulkuset. Renkaalla hän lyö tahtia soittimen alapuuta vasten, joten yksi mies on samaan aikaan laulaja, kitaristi ja rumpali. Kielet tehtiin ennen naudan jänteistä, nykyään siimasta. Nyatitin lyömä syke on benga-musiikin lähtökohta.
+- [Sudan — maalehti / Musiikki: Lyyra, joka soi henkien parannusmenoissa] Tanbura eli kissar on Itä-Afrikan tyypillisimpiä soittimia: kuppimainen lyyra, jonka kieliä näppäillään laulun säestykseksi. Nubialaisessa musiikissa se oli laulajan vakiosoitin, kunnes arabialainen oud syrjäytti sen 1900-luvun kuluessa. Tanburaa soitetaan yhä zar-menoissa, joissa naiset kutsuvat ja karkottavat henkiä musiikin ja tanssin avulla. Sudanilaisen musiikin perusta pysyi tästä huolimatta omanaan: viisisävelinen asteikko, päällekkäiset rytmit ja vuorolaulu erottavat sen arabimaailman melodiaperinteestä.
+- [Kreeta — kaupunkilehti / Kreeta: Lyyra soi polvella] Kreetalainen lyyra on kolmikielinen jousisoitin, jota pidetään pystyssä polvella eikä leuan alla. Sitä soitetaan häissä ja kylän juhlissa, usein läpi yön: tanssi kestää niin kauan kuin soittajaa jaksaa.
+AIEMPI KYSYMYS: Miten Orfeuksen taru päättyi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä tarina on surullinen. Antiikin taruston mukaan Orfeus oli laulaja ja lyyran soittaja, joka meni tuonelaan hakemaan kuolleen vaimonsa [[Eurydiken]] takaisin. Hän sai luvan viedä vaimon elävien maailmaan, mutta menetti hänet toisen kerran, kun katsoi taakseen ennen perille pääsyä. Orfeus vaelsi Traakiassa surun murtamana, kunnes yleisimmän version mukaan [[Dionysoksen]] seuraajat tappoivat hänet. Hänen päänsä ja lyyransa kelluivat Hébros-jokea pitkin mereen ja ajautuivat [[Lesboksen]] saarelle. Muusat hautasivat hänet, ja lyyra sijoitettiin taivaalle tähtikuvioksi, jota kutsutaan [[Lyyraksi]]. Hyvä tarina silti, vaikka loppu on raskas.
+KYSYMYS: Kerro lisää: Lyyraksi
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Missä Rilan vuoristo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sinne lentää korkealle. Rilan vuoristo sijaitsee Lounais-Bulgariassa, Sofian eteläpuolella. Se on Balkanin niemimaan korkein vuoristo, ja sen korkein huippu [[Musala]] kohoaa noin 2 925 metriin. Vuoristosta saavat alkunsa useat joet, ja Marica nousee sen Maričini-järvistä. Alueella on myös [[Rilan luostari]], Bulgarian ortodoksisen kirkon tärkeä luostari. Korkealla on kyl ohutta ilmaa, mut maisema palkitsee.
+KYSYMYS: Kerro lisää: Musala
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Missä Rilan vuoristo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sinne lentää korkealle. Rilan vuoristo sijaitsee Lounais-Bulgariassa, Sofian eteläpuolella. Se on Balkanin niemimaan korkein vuoristo, ja sen korkein huippu [[Musala]] kohoaa noin 2 925 metriin. Vuoristosta saavat alkunsa useat joet, ja Marica nousee sen Maričini-järvistä. Alueella on myös [[Rilan luostari]], Bulgarian ortodoksisen kirkon tärkeä luostari. Korkealla on kyl ohutta ilmaa, mut maisema palkitsee.
+KYSYMYS: Kerro lisää: Rilan luostari
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Miten Évrosista tuli Kreikan ja Turkin rajajoki?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: raja on joelle uusi. Évrosista tuli Kreikan ja Turkin rajajoki vuonna 1923, kun [[Lausannen rauhansopimus]] vahvisti maiden välisen rajan Itä-Traakiassa. Sopimuksen yhteydessä toteutettiin laaja [[väestönvaihto]] Kreikan ja Turkin välillä, mikä muutti alueen asukaskuntaa pysyvästi. Isoisän matkan aikaan, vuonna 1873, koko laakso kuului Ottomaanien valtakuntaan. Siit on reilu sata vuotta, ja joki virtaa yhä.
+KYSYMYS: Kerro lisää: Lausannen rauhansopimus
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Miten Évrosista tuli Kreikan ja Turkin rajajoki?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: raja on joelle uusi. Évrosista tuli Kreikan ja Turkin rajajoki vuonna 1923, kun [[Lausannen rauhansopimus]] vahvisti maiden välisen rajan Itä-Traakiassa. Sopimuksen yhteydessä toteutettiin laaja [[väestönvaihto]] Kreikan ja Turkin välillä, mikä muutti alueen asukaskuntaa pysyvästi. Isoisän matkan aikaan, vuonna 1873, koko laakso kuului Ottomaanien valtakuntaan. Siit on reilu sata vuotta, ja joki virtaa yhä.
+KYSYMYS: Kerro lisää: väestönvaihto
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Mihin Évros laskee ja millainen suisto sillä on?
+AIEMPI VASTAUS (Livia):
+Mmm— kohta ollaan merellä. Évros laskee [[Egeanmereen]] Kreikan ja Turkin rajalla, lähellä turkkilaista [[Enezin]] kaupunkia. Joen suistoon muodostuu laaja kosteikko, joka tunnetaan lintupaikkana, mutta tarkkaa pinta-alaa en tiedä. Koko matka Rilan vuorilta [[Edirnen]] kautta Egeanmerelle on 480 kilometriä. Joen reitin erottaa ylhäältä kyl helposti.
+KYSYMYS: Kerro lisää: Egeanmereen
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Mihin Évros laskee ja millainen suisto sillä on?
+AIEMPI VASTAUS (Livia):
+Mmm— kohta ollaan merellä. Évros laskee [[Egeanmereen]] Kreikan ja Turkin rajalla, lähellä turkkilaista [[Enezin]] kaupunkia. Joen suistoon muodostuu laaja kosteikko, joka tunnetaan lintupaikkana, mutta tarkkaa pinta-alaa en tiedä. Koko matka Rilan vuorilta [[Edirnen]] kautta Egeanmerelle on 480 kilometriä. Joen reitin erottaa ylhäältä kyl helposti.
+KYSYMYS: Kerro lisää: Enezin
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Évros (luonto · joki)
+Tietoruudun teksti: Samalla joella on kolme nimeä: bulgariaksi Marica, kreikaksi Évros ja turkiksi Meriç. Se on 480 kilometriä pitkä ja Balkanin niemimaan pisin kokonaan sisämaassa kulkeva joki, ja se saa alkunsa Rilan vuoriston Maričini-järvistä. Vanhin tunnettu nimi on Éuros, jonka runoilija Alkman kirjoitti muistiin 700–600-luvuilla eaa.; se tarkoitti "leveää", ja traakian kielessä siitä tuli Ebros, kreikassa Hébros. Antiikin taru kertoo, että laulaja Orfeuksen kuoltua hänen päänsä ja lyyransa kelluivat Hébrosta pitkin mereen ja tuuli kantoi ne Lesboksen saarelle asti. Edirnessä — isoisän kartoissa Adrianopoli — jokeen yhtyvät sen kaksi suurinta sivujokea Tundža ja Arda, ja sieltä se kääntyy etelään kohti Egeanmerta. Isoisän matkan aikaan laaksossa kulki jo juna: Konstantinopolista Edirnen kautta pohjoiseen johtava rata haaroineen oli liikenteessä vuoteen 1874 mennessä. Rajajoeksi Évros tuli vasta 1923.
+AIEMPI KYSYMYS: Mihin Évros laskee ja millainen suisto sillä on?
+AIEMPI VASTAUS (Livia):
+Mmm— kohta ollaan merellä. Évros laskee [[Egeanmereen]] Kreikan ja Turkin rajalla, lähellä turkkilaista [[Enezin]] kaupunkia. Joen suistoon muodostuu laaja kosteikko, joka tunnetaan lintupaikkana, mutta tarkkaa pinta-alaa en tiedä. Koko matka Rilan vuorilta [[Edirnen]] kautta Egeanmerelle on 480 kilometriä. Joen reitin erottaa ylhäältä kyl helposti.
+KYSYMYS: Kerro lisää: Edirnen
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Kuljetaanko kanavan läpi vielä nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas. Kapea kanava, kapea. Kyllä, kanavan läpi kuljetaan edelleen, mutta liikenne on pientä. Kanava yhdistää [[Korintinlahden]] ja [[Saroninlahden]] ja oikaisee [[Peloponnesoksen]] ympäri kulkevaa reittiä satoja kilometrejä. Se on kuitenkin pohjalta vain noin 21 metriä leveä, joten useimmat nykyajan suuret alukset eivät mahdu sen läpi. Käytännössä kanavaa käyttävät pienemmät alukset, purjeveneet ja matkailualukset, ja se on ollut ajoittain suljettuna maanvyörymien vuoksi. Minä kyl lentäisin ylitse, ei tarvii odottaa vuoroa.
+KYSYMYS: Kerro lisää: Korintinlahden
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Kuljetaanko kanavan läpi vielä nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas. Kapea kanava, kapea. Kyllä, kanavan läpi kuljetaan edelleen, mutta liikenne on pientä. Kanava yhdistää [[Korintinlahden]] ja [[Saroninlahden]] ja oikaisee [[Peloponnesoksen]] ympäri kulkevaa reittiä satoja kilometrejä. Se on kuitenkin pohjalta vain noin 21 metriä leveä, joten useimmat nykyajan suuret alukset eivät mahdu sen läpi. Käytännössä kanavaa käyttävät pienemmät alukset, purjeveneet ja matkailualukset, ja se on ollut ajoittain suljettuna maanvyörymien vuoksi. Minä kyl lentäisin ylitse, ei tarvii odottaa vuoroa.
+KYSYMYS: Kerro lisää: Saroninlahden
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Kuljetaanko kanavan läpi vielä nykyään?
+AIEMPI VASTAUS (Livia):
+No jopas. Kapea kanava, kapea. Kyllä, kanavan läpi kuljetaan edelleen, mutta liikenne on pientä. Kanava yhdistää [[Korintinlahden]] ja [[Saroninlahden]] ja oikaisee [[Peloponnesoksen]] ympäri kulkevaa reittiä satoja kilometrejä. Se on kuitenkin pohjalta vain noin 21 metriä leveä, joten useimmat nykyajan suuret alukset eivät mahdu sen läpi. Käytännössä kanavaa käyttävät pienemmät alukset, purjeveneet ja matkailualukset, ja se on ollut ajoittain suljettuna maanvyörymien vuoksi. Minä kyl lentäisin ylitse, ei tarvii odottaa vuoroa.
+KYSYMYS: Kerro lisää: Peloponnesoksen
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Miksi kaivaminen onnistui vasta 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Just niin, tähän on selvä syy. Kanavan kaivaminen vaati tekniikkaa, jollaista antiikissa ei ollut. Kannas on noin kuusi kilometriä leveä, ja sen läpi piti leikata syvä kallioleikkaus. 1800-luvulla käytössä olivat räjähdysaineet, kuten [[dynamiitti]], sekä höyrykäyttöiset työkoneet, joilla suuria kivimääriä pystyttiin siirtämään. Antiikin hankkeet jäivät kesken, kun hallitsijat kuolivat, eikä Neron aloittama työ edennyt pitkälle. Kanavaa rakennettiin vuosina 1881–1893, ja mukana oli unkarilainen [[István Türr]]; rahoitusongelmat viivästyttivät työtä.
+
+Kolme hallitsijaa kuoli ennen kuin kanavaa saatiin edes alkuun. Minusta se vetotie oli lopulta aika järkevä ratkaisu, kyl.
+KYSYMYS: Kerro lisää: dynamiitti
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+AIEMPI KYSYMYS: Miksi kaivaminen onnistui vasta 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Just niin, tähän on selvä syy. Kanavan kaivaminen vaati tekniikkaa, jollaista antiikissa ei ollut. Kannas on noin kuusi kilometriä leveä, ja sen läpi piti leikata syvä kallioleikkaus. 1800-luvulla käytössä olivat räjähdysaineet, kuten [[dynamiitti]], sekä höyrykäyttöiset työkoneet, joilla suuria kivimääriä pystyttiin siirtämään. Antiikin hankkeet jäivät kesken, kun hallitsijat kuolivat, eikä Neron aloittama työ edennyt pitkälle. Kanavaa rakennettiin vuosina 1881–1893, ja mukana oli unkarilainen [[István Türr]]; rahoitusongelmat viivästyttivät työtä.
+
+Kolme hallitsijaa kuoli ennen kuin kanavaa saatiin edes alkuun. Minusta se vetotie oli lopulta aika järkevä ratkaisu, kyl.
+KYSYMYS: Kerro lisää: István Türr
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Mikä oli Periandroksen rakentama kivetty vetotie?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se kivetty tie, juu. [[Diolkos]] oli kannaksen yli rakennettu kivetty vetotie, jota pitkin laivoja tai niiden lasteja kuljetettiin [[Korintinlahden]] ja Saroninlahden välillä. Perimätiedon mukaan sen rakennutti tyranni [[Periandros]] 600-luvulla eaa., mutta tarkka ajoitus on tutkijoiden kesken kiistanalainen. Tietä käytettiin vuosisatoja, ja osia sen kivetyistä urista on yhä nähtävissä kannaksella. Minä kyl lennän mieluummin kuin raahaan laivaa.
+KYSYMYS: Kerro lisää: Diolkos
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Korintin kanava (tekniikka)
+Tietoruudun teksti: Katso Ateenasta länteen, Korintin kannakselle. Isoisäsi matkan aikaan siellä ei ollut kanavaa. Tyranni Periandros harkitsi sitä jo 600-luvulla eaa., mutta rakensi sen sijaan laivoille kivetyn vetotien. Kolme roomalaishallitsijaa halusi kanavan ja kuoli kaikki väkivaltaisesti: Caesar ja Caligula ennen kuin pääsivät edes alkuun, Nero pian sen jälkeen, kun oli 67 jaa. itse lyönyt kuokalla ensimmäisen kuopan. Kanava valmistui vasta 1881–1893, isoisäsi matkan jälkeen.
+AIEMPI KYSYMYS: Mikä oli Periandroksen rakentama kivetty vetotie?
+AIEMPI VASTAUS (Livia):
+Ai tota. Se kivetty tie, juu. [[Diolkos]] oli kannaksen yli rakennettu kivetty vetotie, jota pitkin laivoja tai niiden lasteja kuljetettiin [[Korintinlahden]] ja Saroninlahden välillä. Perimätiedon mukaan sen rakennutti tyranni [[Periandros]] 600-luvulla eaa., mutta tarkka ajoitus on tutkijoiden kesken kiistanalainen. Tietä käytettiin vuosisatoja, ja osia sen kivetyistä urista on yhä nähtävissä kannaksella. Minä kyl lennän mieluummin kuin raahaan laivaa.
+KYSYMYS: Kerro lisää: Periandros

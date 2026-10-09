@@ -1,0 +1,5246 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "sefardit",
+  "kysymys": "Kerro lisää: sefardit"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "Ottomaanien valtakunnan",
+  "kysymys": "Kerro lisää: Ottomaanien valtakunnan"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "ladinon",
+  "kysymys": "Kerro lisää: ladinon"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "diadokeista",
+  "kysymys": "Kerro lisää: diadokeista"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "Kassandreia",
+  "kysymys": "Kerro lisää: Kassandreia"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "Egeanmeren",
+  "kysymys": "Kerro lisää: Egeanmeren"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "Uuden testamentin",
+  "kysymys": "Kerro lisää: Uuden testamentin"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "Kristuksen",
+  "kysymys": "Kerro lisää: Kristuksen"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "bougatsa",
+  "kysymys": "Kerro lisää: bougatsa"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "koulouri",
+  "kysymys": "Kerro lisää: koulouri"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:thessaloniki",
+  "kasite": "tsoureki",
+  "kysymys": "Kerro lisää: tsoureki"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:patras",
+  "kasite": "metropoliitta Germanos",
+  "kysymys": "Kerro lisää: metropoliitta Germanos"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:patras",
+  "kasite": "Filiki Eteria",
+  "kysymys": "Kerro lisää: Filiki Eteria"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:patras",
+  "kasite": "Brindisiin",
+  "kysymys": "Kerro lisää: Brindisiin"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:patras",
+  "kasite": "Rio–Antirrion silta",
+  "kysymys": "Kerro lisää: Rio–Antirrion silta"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:patras",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:patras",
+  "kasite": "suurta paastoa",
+  "kysymys": "Kerro lisää: suurta paastoa"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:patras",
+  "kasite": "pääsiäisen",
+  "kysymys": "Kerro lisää: pääsiäisen"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:patras",
+  "kasite": "Korintinlahden",
+  "kysymys": "Kerro lisää: Korintinlahden"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:patras",
+  "kasite": "Pyhän Andreaksen kirkko",
+  "kysymys": "Kerro lisää: Pyhän Andreaksen kirkko"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:patras",
+  "kasite": "Roomasta",
+  "kysymys": "Kerro lisää: Roomasta"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:ioannina",
+  "kasite": "Tepelenën",
+  "kysymys": "Kerro lisää: Tepelenën"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:ioannina",
+  "kasite": "Epeiroksen",
+  "kysymys": "Kerro lisää: Epeiroksen"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:ioannina",
+  "kasite": "Byron",
+  "kysymys": "Kerro lisää: Byron"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:ioannina",
+  "kasite": "Its Kalessa",
+  "kysymys": "Kerro lisää: Its Kalessa"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:ioannina",
+  "kasite": "Fethiye-moskeija",
+  "kysymys": "Kerro lisää: Fethiye-moskeija"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:ioannina",
+  "kasite": "Pamvotis-järven",
+  "kysymys": "Kerro lisää: Pamvotis-järven"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:ioannina",
+  "kasite": "Pamvotis-järvi",
+  "kysymys": "Kerro lisää: Pamvotis-järvi"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:ioannina",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:ioannina",
+  "kasite": "hopeasepät",
+  "kysymys": "Kerro lisää: hopeasepät"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:ioannina",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:ioannina",
+  "kasite": "sefardien",
+  "kysymys": "Kerro lisää: sefardien"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:ioannina",
+  "kasite": "Kahal Kadosh Yashan",
+  "kysymys": "Kerro lisää: Kahal Kadosh Yashan"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:nafplio",
+  "kasite": "Ateenan",
+  "kysymys": "Kerro lisää: Ateenan"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:nafplio",
+  "kasite": "Peloponnesoksella",
+  "kysymys": "Kerro lisää: Peloponnesoksella"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:nafplio",
+  "kasite": "Baijerista",
+  "kysymys": "Kerro lisää: Baijerista"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:nafplio",
+  "kasite": "Ludvig I:n",
+  "kysymys": "Kerro lisää: Ludvig I:n"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:nafplio",
+  "kasite": "venetsialaiset",
+  "kysymys": "Kerro lisää: venetsialaiset"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:nafplio",
+  "kasite": "Argoksenlahden",
+  "kysymys": "Kerro lisää: Argoksenlahden"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:nafplio",
+  "kasite": "Bourtzi",
+  "kysymys": "Kerro lisää: Bourtzi"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:nafplio",
+  "kasite": "Korfun",
+  "kysymys": "Kerro lisää: Korfun"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:nafplio",
+  "kasite": "Venäjän",
+  "kysymys": "Kerro lisää: Venäjän"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:nafplio",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:iraklion",
+  "kasite": "Kreetan",
+  "kysymys": "Kerro lisää: Kreetan"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:iraklion",
+  "kasite": "Arthur Evans",
+  "kysymys": "Kerro lisää: Arthur Evans"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:iraklion",
+  "kasite": "Knossos",
+  "kysymys": "Kerro lisää: Knossos"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:iraklion",
+  "kasite": "lineaari A",
+  "kysymys": "Kerro lisää: lineaari A"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:iraklion",
+  "kasite": "Minos Kalokairinos",
+  "kysymys": "Kerro lisää: Minos Kalokairinos"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:iraklion",
+  "kasite": "lineaari B",
+  "kysymys": "Kerro lisää: lineaari B"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:iraklion",
+  "kasite": "Knossoksesta",
+  "kysymys": "Kerro lisää: Knossoksesta"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:iraklion",
+  "kasite": "Faistoksen kiekko",
+  "kysymys": "Kerro lisää: Faistoksen kiekko"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:iraklion",
+  "kasite": "Herakleeseen",
+  "kysymys": "Kerro lisää: Herakleeseen"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:iraklion",
+  "kasite": "Candia",
+  "kysymys": "Kerro lisää: Candia"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:iraklion",
+  "kasite": "Venetsian",
+  "kysymys": "Kerro lisää: Venetsian"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:olympos",
+  "kasite": "Frédéric Boissonnas",
+  "kysymys": "Kerro lisää: Frédéric Boissonnas"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:olympos",
+  "kasite": "Daniel Baud-Bovy",
+  "kysymys": "Kerro lisää: Daniel Baud-Bovy"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:olympos",
+  "kasite": "Christos Kakkalos",
+  "kysymys": "Kerro lisää: Christos Kakkalos"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:olympos",
+  "kasite": "Mytikas",
+  "kysymys": "Kerro lisää: Mytikas"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:olympos",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:olympos",
+  "kasite": "Homeroksen",
+  "kysymys": "Kerro lisää: Homeroksen"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:olympos",
+  "kasite": "kansallispuiston",
+  "kysymys": "Kerro lisää: kansallispuiston"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:olympos",
+  "kasite": "endeemisiä kasveja",
+  "kysymys": "Kerro lisää: endeemisiä kasveja"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:olympos",
+  "kasite": "Zeus",
+  "kysymys": "Kerro lisää: Zeus"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:olympos",
+  "kasite": "Poseidon",
+  "kysymys": "Kerro lisää: Poseidon"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:olympos",
+  "kasite": "Athene",
+  "kysymys": "Kerro lisää: Athene"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:olympos",
+  "kasite": "Apollon",
+  "kysymys": "Kerro lisää: Apollon"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:olympos",
+  "kasite": "Hermes",
+  "kysymys": "Kerro lisää: Hermes"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:olympos",
+  "kasite": "Litochoron",
+  "kysymys": "Kerro lisää: Litochoron"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:olympos",
+  "kasite": "Mytikakselle",
+  "kysymys": "Kerro lisää: Mytikakselle"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:parnassos",
+  "kasite": "Delfoissa",
+  "kysymys": "Kerro lisää: Delfoissa"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:parnassos",
+  "kasite": "tyiadit",
+  "kysymys": "Kerro lisää: tyiadit"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:parnassos",
+  "kasite": "Dionysia-juhlissa",
+  "kysymys": "Kerro lisää: Dionysia-juhlissa"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:parnassos",
+  "kasite": "Iliaassa",
+  "kysymys": "Kerro lisää: Iliaassa"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:parnassos",
+  "kasite": "Odysseiassa",
+  "kysymys": "Kerro lisää: Odysseiassa"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:parnassos",
+  "kasite": "Odysseuksen",
+  "kysymys": "Kerro lisää: Odysseuksen"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:parnassos",
+  "kasite": "Apollonin",
+  "kysymys": "Kerro lisää: Apollonin"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:parnassos",
+  "kasite": "Pythia",
+  "kysymys": "Kerro lisää: Pythia"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:parnassos",
+  "kasite": "Tunne itsesi",
+  "kysymys": "Kerro lisää: Tunne itsesi"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:parnassos",
+  "kasite": "alumiinia",
+  "kysymys": "Kerro lisää: alumiinia"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:parnassos",
+  "kasite": "Bayerin menetelmällä",
+  "kysymys": "Kerro lisää: Bayerin menetelmällä"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:parnassos",
+  "kasite": "Välimeren ilmasto",
+  "kysymys": "Kerro lisää: Välimeren ilmasto"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:parnassos",
+  "kasite": "hiihtokeskus",
+  "kysymys": "Kerro lisää: hiihtokeskus"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:taygetos",
+  "kasite": "nymfi",
+  "kysymys": "Kerro lisää: nymfi"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:taygetos",
+  "kasite": "Plejadeista",
+  "kysymys": "Kerro lisää: Plejadeista"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:taygetos",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:taygetos",
+  "kasite": "Lakedaimonin",
+  "kysymys": "Kerro lisää: Lakedaimonin"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:taygetos",
+  "kasite": "Spartaan",
+  "kysymys": "Kerro lisää: Spartaan"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:taygetos",
+  "kasite": "Kalamataan",
+  "kysymys": "Kerro lisää: Kalamataan"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:taygetos",
+  "kasite": "Moreian despotaatin",
+  "kysymys": "Kerro lisää: Moreian despotaatin"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:taygetos",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:taygetos",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:taygetos",
+  "kasite": "Pentadaktylos",
+  "kysymys": "Kerro lisää: Pentadaktylos"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:taygetos",
+  "kasite": "Taygetoksen",
+  "kysymys": "Kerro lisää: Taygetoksen"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:taygetos",
+  "kasite": "Korintin kannaksen",
+  "kysymys": "Kerro lisää: Korintin kannaksen"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:taygetos",
+  "kasite": "Korintin kanava",
+  "kysymys": "Kerro lisää: Korintin kanava"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:pindos",
+  "kasite": "vlahit",
+  "kysymys": "Kerro lisää: vlahit"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:pindos",
+  "kasite": "sarakatsanit",
+  "kysymys": "Kerro lisää: sarakatsanit"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:pindos",
+  "kasite": "Zagorin",
+  "kysymys": "Kerro lisää: Zagorin"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:pindos",
+  "kasite": "Ottomaanien",
+  "kysymys": "Kerro lisää: Ottomaanien"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:pindos",
+  "kasite": "Balkanin sotien",
+  "kysymys": "Kerro lisää: Balkanin sotien"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:pindos",
+  "kasite": "Pyrrhos",
+  "kysymys": "Kerro lisää: Pyrrhos"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:pindos",
+  "kasite": "aromaanit",
+  "kysymys": "Kerro lisää: aromaanit"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:pindos",
+  "kasite": "Metsovo",
+  "kysymys": "Kerro lisää: Metsovo"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:pindos",
+  "kasite": "Samarina",
+  "kysymys": "Kerro lisää: Samarina"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:pindos",
+  "kasite": "Sloveniasta",
+  "kysymys": "Kerro lisää: Sloveniasta"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:pindos",
+  "kasite": "Albanian",
+  "kysymys": "Kerro lisää: Albanian"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:pindos",
+  "kasite": "karstimaastoksi",
+  "kysymys": "Kerro lisää: karstimaastoksi"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:pindos",
+  "kasite": "ruskeakarhun",
+  "kysymys": "Kerro lisää: ruskeakarhun"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:pindos",
+  "kasite": "Rodopien",
+  "kysymys": "Kerro lisää: Rodopien"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:pindos",
+  "kasite": "sudet",
+  "kysymys": "Kerro lisää: sudet"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:smolikas",
+  "kasite": "Tethys",
+  "kysymys": "Kerro lisää: Tethys"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:smolikas",
+  "kasite": "obduktioksi",
+  "kysymys": "Kerro lisää: obduktioksi"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:smolikas",
+  "kasite": "ofioliittia",
+  "kysymys": "Kerro lisää: ofioliittia"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:smolikas",
+  "kasite": "Drakolimni",
+  "kysymys": "Kerro lisää: Drakolimni"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:smolikas",
+  "kasite": "vesiliskoja",
+  "kysymys": "Kerro lisää: vesiliskoja"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:smolikas",
+  "kasite": "satelliittipaikannukseen",
+  "kysymys": "Kerro lisää: satelliittipaikannukseen"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:smolikas",
+  "kasite": "Pindoksen",
+  "kysymys": "Kerro lisää: Pindoksen"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:smolikas",
+  "kasite": "Balkanin sotien",
+  "kysymys": "Kerro lisää: Balkanin sotien"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:smolikas",
+  "kasite": "Ioanninan",
+  "kysymys": "Kerro lisää: Ioanninan"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:smolikas",
+  "kasite": "vuoristojäätiköitä",
+  "kysymys": "Kerro lisää: vuoristojäätiköitä"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:smolikas",
+  "kasite": "mannerjäätikköjä",
+  "kysymys": "Kerro lisää: mannerjäätikköjä"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:smolikas",
+  "kasite": "Pindoksella",
+  "kysymys": "Kerro lisää: Pindoksella"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Psiloritiksen",
+  "kysymys": "Kerro lisää: Psiloritiksen"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:psiloritis",
+  "kasite": "minolaisella",
+  "kysymys": "Kerro lisää: minolaisella"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Rhea",
+  "kysymys": "Kerro lisää: Rhea"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Kronos",
+  "kysymys": "Kerro lisää: Kronos"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Idan luola",
+  "kysymys": "Kerro lisää: Idan luola"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Nidan tasangolle",
+  "kysymys": "Kerro lisää: Nidan tasangolle"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:psiloritis",
+  "kasite": "vaelluspaimentolaisuudeksi",
+  "kysymys": "Kerro lisää: vaelluspaimentolaisuudeksi"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Knossos",
+  "kysymys": "Kerro lisää: Knossos"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Minos",
+  "kysymys": "Kerro lisää: Minos"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:psiloritis",
+  "kasite": "Kronoksen",
+  "kysymys": "Kerro lisää: Kronoksen"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Theseus",
+  "kysymys": "Kerro lisää: Theseus"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Minotauroksen",
+  "kysymys": "Kerro lisää: Minotauroksen"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Aigeus",
+  "kysymys": "Kerro lisää: Aigeus"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Egeanmereksi",
+  "kysymys": "Kerro lisää: Egeanmereksi"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Santorini",
+  "kysymys": "Kerro lisää: Santorini"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Naxos",
+  "kysymys": "Kerro lisää: Naxos"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Paros",
+  "kysymys": "Kerro lisää: Paros"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Mykonos",
+  "kysymys": "Kerro lisää: Mykonos"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Deloksen",
+  "kysymys": "Kerro lisää: Deloksen"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Minotauros",
+  "kysymys": "Kerro lisää: Minotauros"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Minos",
+  "kysymys": "Kerro lisää: Minos"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "labyrinttiin",
+  "kysymys": "Kerro lisää: labyrinttiin"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Ateenasta",
+  "kysymys": "Kerro lisää: Ateenasta"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Dardanellien",
+  "kysymys": "Kerro lisää: Dardanellien"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Konstantinopoliin",
+  "kysymys": "Kerro lisää: Konstantinopoliin"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:egeanmeri",
+  "kasite": "Ateena",
+  "kysymys": "Kerro lisää: Ateena"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Aiskhylos",
+  "kysymys": "Kerro lisää: Aiskhylos"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Sofokleen",
+  "kysymys": "Kerro lisää: Sofokleen"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Euripideen",
+  "kysymys": "Kerro lisää: Euripideen"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Oresteia",
+  "kysymys": "Kerro lisää: Oresteia"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Syrakusan",
+  "kysymys": "Kerro lisää: Syrakusan"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Euraasian laatan",
+  "kysymys": "Kerro lisää: Euraasian laatan"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Joonianmeren saarilla",
+  "kysymys": "Kerro lisää: Joonianmeren saarilla"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Kalypson syvänne",
+  "kysymys": "Kerro lisää: Kalypson syvänne"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Zeus",
+  "kysymys": "Kerro lisää: Zeus"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Ioon",
+  "kysymys": "Kerro lisää: Ioon"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Heran",
+  "kysymys": "Kerro lisää: Heran"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Korfu",
+  "kysymys": "Kerro lisää: Korfu"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Kefalonia",
+  "kysymys": "Kerro lisää: Kefalonia"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Zakynthos",
+  "kysymys": "Kerro lisää: Zakynthos"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Lefkada",
+  "kysymys": "Kerro lisää: Lefkada"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Itaka",
+  "kysymys": "Kerro lisää: Itaka"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Dionysoksen",
+  "kysymys": "Kerro lisää: Dionysoksen"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Sofokles",
+  "kysymys": "Kerro lisää: Sofokles"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:joonianmeri",
+  "kasite": "Euripides",
+  "kysymys": "Kerro lisää: Euripides"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Traakianmeri",
+  "kysymys": "Kerro lisää: Traakianmeri"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Myrtoanmeri",
+  "kysymys": "Kerro lisää: Myrtoanmeri"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Ikarianmeri",
+  "kysymys": "Kerro lisää: Ikarianmeri"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Antikytheran",
+  "kysymys": "Kerro lisää: Antikytheran"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Antikytheran mekanismi",
+  "kysymys": "Kerro lisää: Antikytheran mekanismi"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Kykladien",
+  "kysymys": "Kerro lisää: Kykladien"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Kreetanmeren",
+  "kysymys": "Kerro lisää: Kreetanmeren"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Iraklion",
+  "kysymys": "Kerro lisää: Iraklion"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Kreikkaan",
+  "kysymys": "Kerro lisää: Kreikkaan"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Kreikan",
+  "kysymys": "Kerro lisää: Kreikan"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:kreetanmeri",
+  "kasite": "Kreetan",
+  "kysymys": "Kerro lisää: Kreetan"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Dardanellit",
+  "kysymys": "Kerro lisää: Dardanellit"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Marmaranmeren",
+  "kysymys": "Kerro lisää: Marmaranmeren"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Bosporin",
+  "kysymys": "Kerro lisää: Bosporin"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Mustaltamereltä",
+  "kysymys": "Kerro lisää: Mustaltamereltä"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Troijaa",
+  "kysymys": "Kerro lisää: Troijaa"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Mustanmeren pyöriäinen",
+  "kysymys": "Kerro lisää: Mustanmeren pyöriäinen"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Thasos",
+  "kysymys": "Kerro lisää: Thasos"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Traakianmeren",
+  "kysymys": "Kerro lisää: Traakianmeren"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Samothraki",
+  "kysymys": "Kerro lisää: Samothraki"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "kabeireja",
+  "kysymys": "Kerro lisää: kabeireja"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Samothrakeen Nike",
+  "kysymys": "Kerro lisää: Samothrakeen Nike"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Louvressa",
+  "kysymys": "Kerro lisää: Louvressa"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Fengari",
+  "kysymys": "Kerro lisää: Fengari"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:traakianmeri",
+  "kasite": "Maritsa",
+  "kysymys": "Kerro lisää: Maritsa"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Naturalis historia",
+  "kysymys": "Kerro lisää: Naturalis historia"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Stabiaen",
+  "kysymys": "Kerro lisää: Stabiaen"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Vesuviuksen",
+  "kysymys": "Kerro lisää: Vesuviuksen"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Thermaïkoksen lahden",
+  "kysymys": "Kerro lisää: Thermaïkoksen lahden"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Grámoksen",
+  "kysymys": "Kerro lisää: Grámoksen"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Vourinoksen",
+  "kysymys": "Kerro lisää: Vourinoksen"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Thermaïkoksen lahteen",
+  "kysymys": "Kerro lisää: Thermaïkoksen lahteen"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Vardariksi",
+  "kysymys": "Kerro lisää: Vardariksi"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Pohjois-Makedoniasta",
+  "kysymys": "Kerro lisää: Pohjois-Makedoniasta"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Pliniuksen",
+  "kysymys": "Kerro lisää: Pliniuksen"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Thessaloniki",
+  "kysymys": "Kerro lisää: Thessaloniki"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:aliakmonas",
+  "kasite": "Kassandros",
+  "kysymys": "Kerro lisää: Kassandros"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:strymonas",
+  "kasite": "Amfipolin leijona",
+  "kysymys": "Kerro lisää: Amfipolin leijona"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:strymonas",
+  "kasite": "Kasta-hauta",
+  "kysymys": "Kerro lisää: Kasta-hauta"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:strymonas",
+  "kasite": "Kerkinin tekojärvi",
+  "kysymys": "Kerro lisää: Kerkinin tekojärvi"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:strymonas",
+  "kasite": "pelikaaneja",
+  "kysymys": "Kerro lisää: pelikaaneja"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:strymonas",
+  "kasite": "merimetsoja",
+  "kysymys": "Kerro lisää: merimetsoja"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:strymonas",
+  "kasite": "Sofian",
+  "kysymys": "Kerro lisää: Sofian"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:strymonas",
+  "kasite": "Tšerni Vrah",
+  "kysymys": "Kerro lisää: Tšerni Vrah"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:strymonas",
+  "kasite": "Berliinin kongressi",
+  "kysymys": "Kerro lisää: Berliinin kongressi"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:strymonas",
+  "kasite": "Itä-Rumelian",
+  "kysymys": "Kerro lisää: Itä-Rumelian"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:strymonas",
+  "kasite": "Ottomaanien valtakuntaan",
+  "kysymys": "Kerro lisää: Ottomaanien valtakuntaan"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:strymonas",
+  "kasite": "Ramsar-sopimuksen",
+  "kysymys": "Kerro lisää: Ramsar-sopimuksen"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:evros",
+  "kasite": "Maricajokeen",
+  "kysymys": "Kerro lisää: Maricajokeen"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:evros",
+  "kasite": "Konstantinopolin",
+  "kysymys": "Kerro lisää: Konstantinopolin"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:evros",
+  "kasite": "Sinanin",
+  "kysymys": "Kerro lisää: Sinanin"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:evros",
+  "kasite": "Selimiye-moskeija",
+  "kysymys": "Kerro lisää: Selimiye-moskeija"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:evros",
+  "kasite": "Eurydiken",
+  "kysymys": "Kerro lisää: Eurydiken"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:evros",
+  "kasite": "Dionysoksen",
+  "kysymys": "Kerro lisää: Dionysoksen"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:evros",
+  "kasite": "Lesboksen",
+  "kysymys": "Kerro lisää: Lesboksen"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:evros",
+  "kasite": "Lyyraksi",
+  "kysymys": "Kerro lisää: Lyyraksi"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:evros",
+  "kasite": "Musala",
+  "kysymys": "Kerro lisää: Musala"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:evros",
+  "kasite": "Rilan luostari",
+  "kysymys": "Kerro lisää: Rilan luostari"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:evros",
+  "kasite": "Lausannen rauhansopimus",
+  "kysymys": "Kerro lisää: Lausannen rauhansopimus"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:evros",
+  "kasite": "väestönvaihto",
+  "kysymys": "Kerro lisää: väestönvaihto"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:evros",
+  "kasite": "Egeanmereen",
+  "kysymys": "Kerro lisää: Egeanmereen"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:evros",
+  "kasite": "Enezin",
+  "kysymys": "Kerro lisää: Enezin"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:evros",
+  "kasite": "Edirnen",
+  "kysymys": "Kerro lisää: Edirnen"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Korintinlahden",
+  "kysymys": "Kerro lisää: Korintinlahden"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Saroninlahden",
+  "kysymys": "Kerro lisää: Saroninlahden"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "dynamiitti",
+  "kysymys": "Kerro lisää: dynamiitti"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "István Türr",
+  "kysymys": "Kerro lisää: István Türr"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Diolkos",
+  "kysymys": "Kerro lisää: Diolkos"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Periandros",
+  "kysymys": "Kerro lisää: Periandros"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Korintin kannaksen",
+  "kysymys": "Kerro lisää: Korintin kannaksen"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "upotettavat sillat",
+  "kysymys": "Kerro lisää: upotettavat sillat"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:korintin-kanava",
+  "kasite": "Peloponnesokselle",
+  "kysymys": "Kerro lisää: Peloponnesokselle"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:santorini",
+  "kasite": "Kreetalta",
+  "kysymys": "Kerro lisää: Kreetalta"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:santorini",
+  "kasite": "Kykladeilta",
+  "kysymys": "Kerro lisää: Kykladeilta"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:santorini",
+  "kasite": "Akrotirin",
+  "kysymys": "Kerro lisää: Akrotirin"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:santorini",
+  "kasite": "Platonin",
+  "kysymys": "Kerro lisää: Platonin"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:santorini",
+  "kasite": "Akrotirissa",
+  "kysymys": "Kerro lisää: Akrotirissa"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:santorini",
+  "kasite": "kalderaksi",
+  "kysymys": "Kerro lisää: kalderaksi"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:santorini",
+  "kasite": "Kevät-fresko",
+  "kysymys": "Kerro lisää: Kevät-fresko"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:santorini",
+  "kasite": "nyrkkeilevät pojat",
+  "kysymys": "Kerro lisää: nyrkkeilevät pojat"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:santorini",
+  "kasite": "Kalderan",
+  "kysymys": "Kerro lisää: Kalderan"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:santorini",
+  "kasite": "Nea Kameni",
+  "kysymys": "Kerro lisää: Nea Kameni"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:santorini",
+  "kasite": "Pyhän Irenen",
+  "kysymys": "Kerro lisää: Pyhän Irenen"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:santorini",
+  "kasite": "Thera",
+  "kysymys": "Kerro lisää: Thera"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:delfoi",
+  "kasite": "Pythian",
+  "kysymys": "Kerro lisää: Pythian"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:delfoi",
+  "kasite": "Herodotos",
+  "kysymys": "Kerro lisää: Herodotos"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:delfoi",
+  "kasite": "Apollonille",
+  "kysymys": "Kerro lisää: Apollonille"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:delfoi",
+  "kasite": "Pythia",
+  "kysymys": "Kerro lisää: Pythia"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:delfoi",
+  "kasite": "Zeus",
+  "kysymys": "Kerro lisää: Zeus"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:delfoi",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:delfoi",
+  "kasite": "Parnassos-vuoren",
+  "kysymys": "Kerro lisää: Parnassos-vuoren"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:delfoi",
+  "kasite": "Arachova",
+  "kysymys": "Kerro lisää: Arachova"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:delfoi",
+  "kasite": "pythiakisat",
+  "kysymys": "Kerro lisää: pythiakisat"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:delfoi",
+  "kasite": "Olympian",
+  "kysymys": "Kerro lisää: Olympian"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:olympia",
+  "kasite": "pankration",
+  "kysymys": "Kerro lisää: pankration"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:olympia",
+  "kasite": "viisiottelu",
+  "kysymys": "Kerro lisää: viisiottelu"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:olympia",
+  "kasite": "vaunukilpailuissa",
+  "kysymys": "Kerro lisää: vaunukilpailuissa"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:olympia",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:olympia",
+  "kasite": "Theodosiuksen",
+  "kysymys": "Kerro lisää: Theodosiuksen"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:olympia",
+  "kasite": "ekecheiria",
+  "kysymys": "Kerro lisää: ekecheiria"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:olympia",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:olympia",
+  "kasite": "Sparta",
+  "kysymys": "Kerro lisää: Sparta"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:olympia",
+  "kasite": "Olympiassa",
+  "kysymys": "Kerro lisää: Olympiassa"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:olympia",
+  "kasite": "Herakles",
+  "kysymys": "Kerro lisää: Herakles"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:olympia",
+  "kasite": "Pierre de Coubertin",
+  "kysymys": "Kerro lisää: Pierre de Coubertin"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:olympia",
+  "kasite": "Kansainvälinen olympiakomitea",
+  "kysymys": "Kerro lisää: Kansainvälinen olympiakomitea"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:olympia",
+  "kasite": "Ateenassa",
+  "kysymys": "Kerro lisää: Ateenassa"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:kalamata",
+  "kasite": "Vouvesin",
+  "kysymys": "Kerro lisää: Vouvesin"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:kalamata",
+  "kasite": "oleuropeiinia",
+  "kysymys": "Kerro lisää: oleuropeiinia"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:kalamata",
+  "kasite": "viinietikassa",
+  "kysymys": "Kerro lisää: viinietikassa"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:kalamata",
+  "kasite": "Euroopan unionin",
+  "kysymys": "Kerro lisää: Euroopan unionin"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:kalamata",
+  "kasite": "ekstraneitsytoliiviöljyn",
+  "kysymys": "Kerro lisää: ekstraneitsytoliiviöljyn"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:kalamata",
+  "kasite": "horiatiki",
+  "kysymys": "Kerro lisää: horiatiki"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:kalamata",
+  "kasite": "Kalamata-oliiveja",
+  "kysymys": "Kerro lisää: Kalamata-oliiveja"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:kalamata",
+  "kasite": "Ateenassa",
+  "kysymys": "Kerro lisää: Ateenassa"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:kalamata",
+  "kasite": "Panathenaia",
+  "kysymys": "Kerro lisää: Panathenaia"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Khioksen",
+  "kysymys": "Kerro lisää: Khioksen"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Psaran",
+  "kysymys": "Kerro lisää: Psaran"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Neorion",
+  "kysymys": "Kerro lisää: Neorion"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Syroksen",
+  "kysymys": "Kerro lisää: Syroksen"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Ernst Ziller",
+  "kysymys": "Kerro lisää: Ernst Ziller"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Miaoulin aukion",
+  "kysymys": "Kerro lisää: Miaoulin aukion"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "loukoumi",
+  "kysymys": "Kerro lisää: loukoumi"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "San Michali",
+  "kysymys": "Kerro lisää: San Michali"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Deloksen",
+  "kysymys": "Kerro lisää: Deloksen"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:ermoupoli",
+  "kasite": "Apollonin",
+  "kysymys": "Kerro lisää: Apollonin"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:epidauros",
+  "kasite": "enkoimesis",
+  "kysymys": "Kerro lisää: enkoimesis"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:epidauros",
+  "kasite": "käärmeitä",
+  "kysymys": "Kerro lisää: käärmeitä"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:epidauros",
+  "kasite": "Aiskhyloksen",
+  "kysymys": "Kerro lisää: Aiskhyloksen"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:epidauros",
+  "kasite": "Sofokleen",
+  "kysymys": "Kerro lisää: Sofokleen"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:epidauros",
+  "kasite": "Euripideen",
+  "kysymys": "Kerro lisää: Euripideen"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:epidauros",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:epidauros",
+  "kasite": "Korintin kanavan",
+  "kysymys": "Kerro lisää: Korintin kanavan"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:epidauros",
+  "kasite": "Apollonin",
+  "kysymys": "Kerro lisää: Apollonin"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:epidauros",
+  "kasite": "Hygieian",
+  "kysymys": "Kerro lisää: Hygieian"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:epidauros",
+  "kasite": "Geneven julistus",
+  "kysymys": "Kerro lisää: Geneven julistus"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:epidauros",
+  "kasite": "Polykleitos nuoremman",
+  "kysymys": "Kerro lisää: Polykleitos nuoremman"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:epidauros",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:marathon",
+  "kasite": "Lontoon olympialaisten",
+  "kysymys": "Kerro lisää: Lontoon olympialaisten"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:marathon",
+  "kasite": "Windsorin linnasta",
+  "kysymys": "Kerro lisää: Windsorin linnasta"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:marathon",
+  "kasite": "Feidippiden",
+  "kysymys": "Kerro lisää: Feidippiden"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:marathon",
+  "kasite": "plataialaiset",
+  "kysymys": "Kerro lisää: plataialaiset"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:marathon",
+  "kasite": "Herodotoksen",
+  "kysymys": "Kerro lisää: Herodotoksen"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:marathon",
+  "kasite": "Miltiades",
+  "kysymys": "Kerro lisää: Miltiades"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:marathon",
+  "kasite": "Herodotos",
+  "kysymys": "Kerro lisää: Herodotos"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:marathon",
+  "kasite": "Plutarkhoksella",
+  "kysymys": "Kerro lisää: Plutarkhoksella"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:marathon",
+  "kasite": "Spartathlon",
+  "kysymys": "Kerro lisää: Spartathlon"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:marathon",
+  "kasite": "kreikan kielen",
+  "kysymys": "Kerro lisää: kreikan kielen"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:marathon",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:marathon",
+  "kasite": "Soros",
+  "kysymys": "Kerro lisää: Soros"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:marathon",
+  "kasite": "kumpuhauta",
+  "kysymys": "Kerro lisää: kumpuhauta"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:antikythera",
+  "kasite": "Rodoksella",
+  "kysymys": "Kerro lisää: Rodoksella"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:antikythera",
+  "kasite": "Hipparkhos",
+  "kysymys": "Kerro lisää: Hipparkhos"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:antikythera",
+  "kasite": "Syrakusassa",
+  "kysymys": "Kerro lisää: Syrakusassa"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:antikythera",
+  "kasite": "Antikytheran nuorukainen",
+  "kysymys": "Kerro lisää: Antikytheran nuorukainen"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:antikythera",
+  "kasite": "amforoita",
+  "kysymys": "Kerro lisää: amforoita"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:antikythera",
+  "kasite": "Saros-jakson",
+  "kysymys": "Kerro lisää: Saros-jakson"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:antikythera",
+  "kasite": "Metonin",
+  "kysymys": "Kerro lisää: Metonin"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:antikythera",
+  "kasite": "Derek de Solla Price",
+  "kysymys": "Kerro lisää: Derek de Solla Price"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:antikythera",
+  "kasite": "röntgentomografialla",
+  "kysymys": "Kerro lisää: röntgentomografialla"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:antikythera",
+  "kasite": "Auringon",
+  "kysymys": "Kerro lisää: Auringon"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:antikythera",
+  "kasite": "eläinradan",
+  "kysymys": "Kerro lisää: eläinradan"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Philon Bysanttilaisen",
+  "kysymys": "Kerro lisää: Philon Bysanttilaisen"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Khareksen",
+  "kysymys": "Kerro lisää: Khareksen"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "piiritysvälineiden",
+  "kysymys": "Kerro lisää: piiritysvälineiden"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Delfoin oraakkelilta",
+  "kysymys": "Kerro lisää: Delfoin oraakkelilta"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Mandrakin",
+  "kysymys": "Kerro lisää: Mandrakin"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "akropolilla",
+  "kysymys": "Kerro lisää: akropolilla"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Antigonos Yksisilmäisen",
+  "kysymys": "Kerro lisää: Antigonos Yksisilmäisen"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Helepolis",
+  "kysymys": "Kerro lisää: Helepolis"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Pindaroksen",
+  "kysymys": "Kerro lisää: Pindaroksen"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:rodoksen-kolossi",
+  "kasite": "Zeus",
+  "kysymys": "Kerro lisää: Zeus"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:knossos",
+  "kasite": "Pandora",
+  "kysymys": "Kerro lisää: Pandora"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:knossos",
+  "kasite": "Erasmus",
+  "kysymys": "Kerro lisää: Erasmus"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:knossos",
+  "kasite": "Santorinin",
+  "kysymys": "Kerro lisää: Santorinin"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:knossos",
+  "kasite": "mykeneläiset",
+  "kysymys": "Kerro lisää: mykeneläiset"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:knossos",
+  "kasite": "Minos",
+  "kysymys": "Kerro lisää: Minos"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:knossos",
+  "kasite": "Daidaloksen",
+  "kysymys": "Kerro lisää: Daidaloksen"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:knossos",
+  "kasite": "Minotauros",
+  "kysymys": "Kerro lisää: Minotauros"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:knossos",
+  "kasite": "Theseuksen",
+  "kysymys": "Kerro lisää: Theseuksen"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:knossos",
+  "kasite": "Kalokairinoksen",
+  "kysymys": "Kerro lisää: Kalokairinoksen"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:knossos",
+  "kasite": "minolaiseksi",
+  "kysymys": "Kerro lisää: minolaiseksi"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:knossos",
+  "kasite": "Kreetan",
+  "kysymys": "Kerro lisää: Kreetan"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:knossos",
+  "kasite": "Iraklionista",
+  "kysymys": "Kerro lisää: Iraklionista"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "Guinnessin ennätyskirjan",
+  "kysymys": "Kerro lisää: Guinnessin ennätyskirjan"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "Vikos–Aoos-kansallispuiston",
+  "kysymys": "Kerro lisää: Vikos–Aoos-kansallispuiston"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "slaavilaisesta",
+  "kysymys": "Kerro lisää: slaavilaisesta"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "albanian kielen",
+  "kysymys": "Kerro lisää: albanian kielen"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "Epeiroksen",
+  "kysymys": "Kerro lisää: Epeiroksen"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "kivisillat",
+  "kysymys": "Kerro lisää: kivisillat"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "Voidomatis-joki",
+  "kysymys": "Kerro lisää: Voidomatis-joki"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "karstiksi",
+  "kysymys": "Kerro lisää: karstiksi"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "ruskeakarhuja",
+  "kysymys": "Kerro lisää: ruskeakarhuja"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "susia",
+  "kysymys": "Kerro lisää: susia"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-vikos",
+  "kasite": "gemssejä",
+  "kysymys": "Kerro lisää: gemssejä"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Kreetan",
+  "kysymys": "Kerro lisää: Kreetan"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Samarian rotko",
+  "kysymys": "Kerro lisää: Samarian rotko"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Samarian rotkon",
+  "kysymys": "Kerro lisää: Samarian rotkon"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Chora Sfakioniin",
+  "kysymys": "Kerro lisää: Chora Sfakioniin"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Sougiaan",
+  "kysymys": "Kerro lisää: Sougiaan"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Chaniaan",
+  "kysymys": "Kerro lisää: Chaniaan"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Psiloritis",
+  "kysymys": "Kerro lisää: Psiloritis"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-samaria",
+  "kasite": "Valkoisten vuorten",
+  "kysymys": "Kerro lisää: Valkoisten vuorten"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-pelion",
+  "kasite": "Pelion",
+  "kysymys": "Kerro lisää: Pelion"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-pelion",
+  "kasite": "Pelionin",
+  "kysymys": "Kerro lisää: Pelionin"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-pelion",
+  "kasite": "Kheiron",
+  "kysymys": "Kerro lisää: Kheiron"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-pelion",
+  "kasite": "Pagasitin lahden",
+  "kysymys": "Kerro lisää: Pagasitin lahden"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-pelion",
+  "kasite": "Egeanmeren",
+  "kysymys": "Kerro lisää: Egeanmeren"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-prespa",
+  "kasite": "Prespajärvi",
+  "kysymys": "Kerro lisää: Prespajärvi"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-prespa",
+  "kasite": "Prespajärven",
+  "kysymys": "Kerro lisää: Prespajärven"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-prespa",
+  "kasite": "Ohridjärvi",
+  "kysymys": "Kerro lisää: Ohridjärvi"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-prespa",
+  "kasite": "Prespajärveä",
+  "kysymys": "Kerro lisää: Prespajärveä"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-prespa",
+  "kasite": "Prespan",
+  "kysymys": "Kerro lisää: Prespan"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-kerkini",
+  "kasite": "Kerkinijärvi",
+  "kysymys": "Kerro lisää: Kerkinijärvi"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-kerkini",
+  "kasite": "Ramsar-sopimuksen",
+  "kysymys": "Kerro lisää: Ramsar-sopimuksen"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-kerkini",
+  "kasite": "Strymón",
+  "kysymys": "Kerro lisää: Strymón"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-kerkini",
+  "kasite": "Kerkinijärvellä",
+  "kysymys": "Kerro lisää: Kerkinijärvellä"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-kerkini",
+  "kasite": "Kerkinijärven",
+  "kysymys": "Kerro lisää: Kerkinijärven"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Navagion",
+  "kysymys": "Kerro lisää: Navagion"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Zakynthoksella",
+  "kysymys": "Kerro lisää: Zakynthoksella"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Navagiota",
+  "kysymys": "Kerro lisää: Navagiota"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Zakynthos",
+  "kysymys": "Kerro lisää: Zakynthos"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Navagio",
+  "kysymys": "Kerro lisää: Navagio"
+ },
+ {
+  "n": 398,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Zakynthoksen",
+  "kysymys": "Kerro lisää: Zakynthoksen"
+ },
+ {
+  "n": 399,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Korfu",
+  "kysymys": "Kerro lisää: Korfu"
+ },
+ {
+  "n": 400,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Kefalonia",
+  "kysymys": "Kerro lisää: Kefalonia"
+ },
+ {
+  "n": 401,
+  "kohta": "kohde:hahmotelma-navagio",
+  "kasite": "Lefkada",
+  "kysymys": "Kerro lisää: Lefkada"
+ },
+ {
+  "n": 402,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Afroditea",
+  "kysymys": "Kerro lisää: Afroditea"
+ },
+ {
+  "n": 403,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Louvressa",
+  "kysymys": "Kerro lisää: Louvressa"
+ },
+ {
+  "n": 404,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "hellenistiseltä",
+  "kysymys": "Kerro lisää: hellenistiseltä"
+ },
+ {
+  "n": 405,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "maanviljelyn",
+  "kysymys": "Kerro lisää: maanviljelyn"
+ },
+ {
+  "n": 406,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Milosin",
+  "kysymys": "Kerro lisää: Milosin"
+ },
+ {
+  "n": 407,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Egeanmeren",
+  "kysymys": "Kerro lisää: Egeanmeren"
+ },
+ {
+  "n": 408,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Antimilosin",
+  "kysymys": "Kerro lisää: Antimilosin"
+ },
+ {
+  "n": 409,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Kykladien",
+  "kysymys": "Kerro lisää: Kykladien"
+ },
+ {
+  "n": 410,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Egeanmerellä",
+  "kysymys": "Kerro lisää: Egeanmerellä"
+ },
+ {
+  "n": 411,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Delos",
+  "kysymys": "Kerro lisää: Delos"
+ },
+ {
+  "n": 412,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Mykonos",
+  "kysymys": "Kerro lisää: Mykonos"
+ },
+ {
+  "n": 413,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Santorini",
+  "kysymys": "Kerro lisää: Santorini"
+ },
+ {
+  "n": 414,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Poseidon",
+  "kysymys": "Kerro lisää: Poseidon"
+ },
+ {
+  "n": 415,
+  "kohta": "kohde:hahmotelma-milos",
+  "kasite": "Ateenan kansallisessa arkeologisessa museossa",
+  "kysymys": "Kerro lisää: Ateenan kansallisessa arkeologisessa museossa"
+ },
+ {
+  "n": 416,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Makedonian",
+  "kysymys": "Kerro lisää: Makedonian"
+ },
+ {
+  "n": 417,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Khaironeian taistelussa",
+  "kysymys": "Kerro lisää: Khaironeian taistelussa"
+ },
+ {
+  "n": 418,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Aleksanteri Suuri",
+  "kysymys": "Kerro lisää: Aleksanteri Suuri"
+ },
+ {
+  "n": 419,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Verginan",
+  "kysymys": "Kerro lisää: Verginan"
+ },
+ {
+  "n": 420,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Pellaan",
+  "kysymys": "Kerro lisää: Pellaan"
+ },
+ {
+  "n": 421,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 422,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Manolis Andronikos",
+  "kysymys": "Kerro lisää: Manolis Andronikos"
+ },
+ {
+  "n": 423,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Suuressa Kumpuseudussa",
+  "kysymys": "Kerro lisää: Suuressa Kumpuseudussa"
+ },
+ {
+  "n": 424,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Filippos II:n",
+  "kysymys": "Kerro lisää: Filippos II:n"
+ },
+ {
+  "n": 425,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Aigain",
+  "kysymys": "Kerro lisää: Aigain"
+ },
+ {
+  "n": 426,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "hellenistiseen",
+  "kysymys": "Kerro lisää: hellenistiseen"
+ },
+ {
+  "n": 427,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Pellassa",
+  "kysymys": "Kerro lisää: Pellassa"
+ },
+ {
+  "n": 428,
+  "kohta": "kohde:hahmotelma-vergina",
+  "kasite": "Aristoteleen",
+  "kysymys": "Kerro lisää: Aristoteleen"
+ },
+ {
+  "n": 429,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Filippos II",
+  "kysymys": "Kerro lisää: Filippos II"
+ },
+ {
+  "n": 430,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Aleksanteri Suuri",
+  "kysymys": "Kerro lisää: Aleksanteri Suuri"
+ },
+ {
+  "n": 431,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Makedonian",
+  "kysymys": "Kerro lisää: Makedonian"
+ },
+ {
+  "n": 432,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "roomalaiset",
+  "kysymys": "Kerro lisää: roomalaiset"
+ },
+ {
+  "n": 433,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "kolmannessa Makedonian sodassa",
+  "kysymys": "Kerro lisää: kolmannessa Makedonian sodassa"
+ },
+ {
+  "n": 434,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Thessalonike",
+  "kysymys": "Kerro lisää: Thessalonike"
+ },
+ {
+  "n": 435,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Arkelaos I",
+  "kysymys": "Kerro lisää: Arkelaos I"
+ },
+ {
+  "n": 436,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Aigain",
+  "kysymys": "Kerro lisää: Aigain"
+ },
+ {
+  "n": 437,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Perseus",
+  "kysymys": "Kerro lisää: Perseus"
+ },
+ {
+  "n": 438,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Pydnan",
+  "kysymys": "Kerro lisää: Pydnan"
+ },
+ {
+  "n": 439,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 440,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Kassandros",
+  "kysymys": "Kerro lisää: Kassandros"
+ },
+ {
+  "n": 441,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 442,
+  "kohta": "kohde:hahmotelma-pella",
+  "kasite": "Thessalonikin",
+  "kysymys": "Kerro lisää: Thessalonikin"
+ },
+ {
+  "n": 443,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Marcus Antonius",
+  "kysymys": "Kerro lisää: Marcus Antonius"
+ },
+ {
+  "n": 444,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Octavianus",
+  "kysymys": "Kerro lisää: Octavianus"
+ },
+ {
+  "n": 445,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Brutus",
+  "kysymys": "Kerro lisää: Brutus"
+ },
+ {
+  "n": 446,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Makedoniaan",
+  "kysymys": "Kerro lisää: Makedoniaan"
+ },
+ {
+  "n": 447,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Lydian",
+  "kysymys": "Kerro lisää: Lydian"
+ },
+ {
+  "n": 448,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Filippiläiskirje",
+  "kysymys": "Kerro lisää: Filippiläiskirje"
+ },
+ {
+  "n": 449,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Pangaion-vuoren",
+  "kysymys": "Kerro lisää: Pangaion-vuoren"
+ },
+ {
+  "n": 450,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Filippos II",
+  "kysymys": "Kerro lisää: Filippos II"
+ },
+ {
+  "n": 451,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Makedonian",
+  "kysymys": "Kerro lisää: Makedonian"
+ },
+ {
+  "n": 452,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Adrianmeren",
+  "kysymys": "Kerro lisää: Adrianmeren"
+ },
+ {
+  "n": 453,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Bysantiumiin",
+  "kysymys": "Kerro lisää: Bysantiumiin"
+ },
+ {
+  "n": 454,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Filippoin",
+  "kysymys": "Kerro lisää: Filippoin"
+ },
+ {
+  "n": 455,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 456,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Kavalan",
+  "kysymys": "Kerro lisää: Kavalan"
+ },
+ {
+  "n": 457,
+  "kohta": "kohde:hahmotelma-philippi",
+  "kasite": "Traakian",
+  "kysymys": "Kerro lisää: Traakian"
+ },
+ {
+  "n": 458,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Apollon Epikurioksen",
+  "kysymys": "Kerro lisää: Apollon Epikurioksen"
+ },
+ {
+  "n": 459,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "doorilaisen",
+  "kysymys": "Kerro lisää: doorilaisen"
+ },
+ {
+  "n": 460,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "korinttilaista",
+  "kysymys": "Kerro lisää: korinttilaista"
+ },
+ {
+  "n": 461,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "joonialaisen",
+  "kysymys": "Kerro lisää: joonialaisen"
+ },
+ {
+  "n": 462,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "akantuksenlehdet",
+  "kysymys": "Kerro lisää: akantuksenlehdet"
+ },
+ {
+  "n": 463,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 464,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Messenian",
+  "kysymys": "Kerro lisää: Messenian"
+ },
+ {
+  "n": 465,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Arkadiaan",
+  "kysymys": "Kerro lisää: Arkadiaan"
+ },
+ {
+  "n": 466,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Pausanias",
+  "kysymys": "Kerro lisää: Pausanias"
+ },
+ {
+  "n": 467,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Iktinos",
+  "kysymys": "Kerro lisää: Iktinos"
+ },
+ {
+  "n": 468,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Parthenonin",
+  "kysymys": "Kerro lisää: Parthenonin"
+ },
+ {
+  "n": 469,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Parthenon",
+  "kysymys": "Kerro lisää: Parthenon"
+ },
+ {
+  "n": 470,
+  "kohta": "kohde:hahmotelma-bassae",
+  "kasite": "Erechtheion",
+  "kysymys": "Kerro lisää: Erechtheion"
+ },
+ {
+  "n": 471,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Apollonin",
+  "kysymys": "Kerro lisää: Apollonin"
+ },
+ {
+  "n": 472,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Artemiin",
+  "kysymys": "Kerro lisää: Artemiin"
+ },
+ {
+  "n": 473,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Kykladien",
+  "kysymys": "Kerro lisää: Kykladien"
+ },
+ {
+  "n": 474,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Mykonoksen",
+  "kysymys": "Kerro lisää: Mykonoksen"
+ },
+ {
+  "n": 475,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "mosaiikkilattioineen",
+  "kysymys": "Kerro lisää: mosaiikkilattioineen"
+ },
+ {
+  "n": 476,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Leijonaterassi",
+  "kysymys": "Kerro lisää: Leijonaterassi"
+ },
+ {
+  "n": 477,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Ateenan kansallisessa arkeologisessa museossa",
+  "kysymys": "Kerro lisää: Ateenan kansallisessa arkeologisessa museossa"
+ },
+ {
+  "n": 478,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "maailmanperintöluetteloon",
+  "kysymys": "Kerro lisää: maailmanperintöluetteloon"
+ },
+ {
+  "n": 479,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 480,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Leton",
+  "kysymys": "Kerro lisää: Leton"
+ },
+ {
+  "n": 481,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Delfoi",
+  "kysymys": "Kerro lisää: Delfoi"
+ },
+ {
+  "n": 482,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Egeanmeren",
+  "kysymys": "Kerro lisää: Egeanmeren"
+ },
+ {
+  "n": 483,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Mykonos",
+  "kysymys": "Kerro lisää: Mykonos"
+ },
+ {
+  "n": 484,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Naxos",
+  "kysymys": "Kerro lisää: Naxos"
+ },
+ {
+  "n": 485,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Santorini",
+  "kysymys": "Kerro lisää: Santorini"
+ },
+ {
+  "n": 486,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Yhdistyneiden kansakuntien",
+  "kysymys": "Kerro lisää: Yhdistyneiden kansakuntien"
+ },
+ {
+  "n": 487,
+  "kohta": "kohde:hahmotelma-delos",
+  "kasite": "Pariisissa",
+  "kysymys": "Kerro lisää: Pariisissa"
+ },
+ {
+  "n": 488,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "hiekkakannasta",
+  "kysymys": "Kerro lisää: hiekkakannasta"
+ },
+ {
+  "n": 489,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "malvasiaviinille",
+  "kysymys": "Kerro lisää: malvasiaviinille"
+ },
+ {
+  "n": 490,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Gibraltariksi",
+  "kysymys": "Kerro lisää: Gibraltariksi"
+ },
+ {
+  "n": 491,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Monemvasian",
+  "kysymys": "Kerro lisää: Monemvasian"
+ },
+ {
+  "n": 492,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Malmsey",
+  "kysymys": "Kerro lisää: Malmsey"
+ },
+ {
+  "n": 493,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "rypälelajikkeiden",
+  "kysymys": "Kerro lisää: rypälelajikkeiden"
+ },
+ {
+  "n": 494,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Korintin kanava",
+  "kysymys": "Kerro lisää: Korintin kanava"
+ },
+ {
+  "n": 495,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Sparta",
+  "kysymys": "Kerro lisää: Sparta"
+ },
+ {
+  "n": 496,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Olympia",
+  "kysymys": "Kerro lisää: Olympia"
+ },
+ {
+  "n": 497,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Mykene",
+  "kysymys": "Kerro lisää: Mykene"
+ },
+ {
+  "n": 498,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Konstantinopoli",
+  "kysymys": "Kerro lisää: Konstantinopoli"
+ },
+ {
+  "n": 499,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "ortodoksinen",
+  "kysymys": "Kerro lisää: ortodoksinen"
+ },
+ {
+  "n": 500,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "ikoneista",
+  "kysymys": "Kerro lisää: ikoneista"
+ },
+ {
+  "n": 501,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Itä-Välimeren",
+  "kysymys": "Kerro lisää: Itä-Välimeren"
+ },
+ {
+  "n": 502,
+  "kohta": "kohde:hahmotelma-monemvasia",
+  "kasite": "Myrtoanmeren",
+  "kysymys": "Kerro lisää: Myrtoanmeren"
+ },
+ {
+  "n": 503,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Parthenon",
+  "kysymys": "Kerro lisää: Parthenon"
+ },
+ {
+  "n": 504,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Peloponnesoksen sodan",
+  "kysymys": "Kerro lisää: Peloponnesoksen sodan"
+ },
+ {
+  "n": 505,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Poseidonin",
+  "kysymys": "Kerro lisää: Poseidonin"
+ },
+ {
+  "n": 506,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Ateenan kansallisessa arkeologisessa museossa",
+  "kysymys": "Kerro lisää: Ateenan kansallisessa arkeologisessa museossa"
+ },
+ {
+  "n": 507,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Kronoksen",
+  "kysymys": "Kerro lisää: Kronoksen"
+ },
+ {
+  "n": 508,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 509,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Neptunus",
+  "kysymys": "Kerro lisää: Neptunus"
+ },
+ {
+  "n": 510,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Akropoliin",
+  "kysymys": "Kerro lisää: Akropoliin"
+ },
+ {
+  "n": 511,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Athenalle",
+  "kysymys": "Kerro lisää: Athenalle"
+ },
+ {
+  "n": 512,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Iktinosta",
+  "kysymys": "Kerro lisää: Iktinosta"
+ },
+ {
+  "n": 513,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "demokratia",
+  "kysymys": "Kerro lisää: demokratia"
+ },
+ {
+  "n": 514,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Sofokleen",
+  "kysymys": "Kerro lisää: Sofokleen"
+ },
+ {
+  "n": 515,
+  "kohta": "kohde:hahmotelma-sounion",
+  "kasite": "Sokrates",
+  "kysymys": "Kerro lisää: Sokrates"
+ },
+ {
+  "n": 516,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Samothraken",
+  "kysymys": "Kerro lisää: Samothraken"
+ },
+ {
+  "n": 517,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Louvressa",
+  "kysymys": "Kerro lisää: Louvressa"
+ },
+ {
+  "n": 518,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Akropoliin",
+  "kysymys": "Kerro lisää: Akropoliin"
+ },
+ {
+  "n": 519,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "mysteerit",
+  "kysymys": "Kerro lisää: mysteerit"
+ },
+ {
+  "n": 520,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Samothraken Nike",
+  "kysymys": "Kerro lisää: Samothraken Nike"
+ },
+ {
+  "n": 521,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Ottomaanien valtakuntaan",
+  "kysymys": "Kerro lisää: Ottomaanien valtakuntaan"
+ },
+ {
+  "n": 522,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Bulgarian",
+  "kysymys": "Kerro lisää: Bulgarian"
+ },
+ {
+  "n": 523,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Evroksen",
+  "kysymys": "Kerro lisää: Evroksen"
+ },
+ {
+  "n": 524,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "traakialaisia",
+  "kysymys": "Kerro lisää: traakialaisia"
+ },
+ {
+  "n": 525,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 526,
+  "kohta": "kohde:hahmotelma-samothrace",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 527,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Suuri Meteoron",
+  "kysymys": "Kerro lisää: Suuri Meteoron"
+ },
+ {
+  "n": 528,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Thessalian",
+  "kysymys": "Kerro lisää: Thessalian"
+ },
+ {
+  "n": 529,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Halkidikin",
+  "kysymys": "Kerro lisää: Halkidikin"
+ },
+ {
+  "n": 530,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "ortodoksisen kirkon",
+  "kysymys": "Kerro lisää: ortodoksisen kirkon"
+ },
+ {
+  "n": 531,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Simeon Uroksen",
+  "kysymys": "Kerro lisää: Simeon Uroksen"
+ },
+ {
+  "n": 532,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "jumalanpalvelukset",
+  "kysymys": "Kerro lisää: jumalanpalvelukset"
+ },
+ {
+  "n": 533,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "paasto",
+  "kysymys": "Kerro lisää: paasto"
+ },
+ {
+  "n": 534,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Stefan Dušanin",
+  "kysymys": "Kerro lisää: Stefan Dušanin"
+ },
+ {
+  "n": 535,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Thessaliassa",
+  "kysymys": "Kerro lisää: Thessaliassa"
+ },
+ {
+  "n": 536,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Larisa",
+  "kysymys": "Kerro lisää: Larisa"
+ },
+ {
+  "n": 537,
+  "kohta": "kohde:hahmotelma-meteora",
+  "kasite": "Pindos",
+  "kysymys": "Kerro lisää: Pindos"
+ },
+ {
+  "n": 538,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "Neitsyt Maria",
+  "kysymys": "Kerro lisää: Neitsyt Maria"
+ },
+ {
+  "n": 539,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "luostarielämän",
+  "kysymys": "Kerro lisää: luostarielämän"
+ },
+ {
+  "n": 540,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "Konstantinopolin ekumeenisen patriarkan",
+  "kysymys": "Kerro lisää: Konstantinopolin ekumeenisen patriarkan"
+ },
+ {
+  "n": 541,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "UNESCO",
+  "kysymys": "Kerro lisää: UNESCO"
+ },
+ {
+  "n": 542,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "Athoksen niemimaan",
+  "kysymys": "Kerro lisää: Athoksen niemimaan"
+ },
+ {
+  "n": 543,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 544,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "katolisessa kirkossa",
+  "kysymys": "Kerro lisää: katolisessa kirkossa"
+ },
+ {
+  "n": 545,
+  "kohta": "kohde:hahmotelma-athos",
+  "kasite": "Athoksen niemimaalle",
+  "kysymys": "Kerro lisää: Athoksen niemimaalle"
+ },
+ {
+  "n": 546,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Metsovo",
+  "kysymys": "Kerro lisää: Metsovo"
+ },
+ {
+  "n": 547,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Metsovone",
+  "kysymys": "Kerro lisää: Metsovone"
+ },
+ {
+  "n": 548,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Metsovela",
+  "kysymys": "Kerro lisää: Metsovela"
+ },
+ {
+  "n": 549,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Pindoksen",
+  "kysymys": "Kerro lisää: Pindoksen"
+ },
+ {
+  "n": 550,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Metsovosta",
+  "kysymys": "Kerro lisää: Metsovosta"
+ },
+ {
+  "n": 551,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Georgios Averof",
+  "kysymys": "Kerro lisää: Georgios Averof"
+ },
+ {
+  "n": 552,
+  "kohta": "kohde:hahmotelma-metsovo",
+  "kasite": "Aromanian kieli",
+  "kysymys": "Kerro lisää: Aromanian kieli"
+ },
+ {
+  "n": 553,
+  "kohta": "kohde:hahmotelma-korfu",
+  "kasite": "Venetsian tasavaltaan",
+  "kysymys": "Kerro lisää: Venetsian tasavaltaan"
+ },
+ {
+  "n": 554,
+  "kohta": "kohde:hahmotelma-korfu",
+  "kasite": "vanhakaupunki",
+  "kysymys": "Kerro lisää: vanhakaupunki"
+ },
+ {
+  "n": 555,
+  "kohta": "kohde:hahmotelma-korfu",
+  "kasite": "Korfu",
+  "kysymys": "Kerro lisää: Korfu"
+ },
+ {
+  "n": 556,
+  "kohta": "kohde:hahmotelma-korfu",
+  "kasite": "vanha linnoitus",
+  "kysymys": "Kerro lisää: vanha linnoitus"
+ },
+ {
+  "n": 557,
+  "kohta": "kohde:hahmotelma-korfu",
+  "kasite": "linnoitukset",
+  "kysymys": "Kerro lisää: linnoitukset"
+ },
+ {
+  "n": 558,
+  "kohta": "kohde:hahmotelma-korfu",
+  "kasite": "Venetsian tasavalta",
+  "kysymys": "Kerro lisää: Venetsian tasavalta"
+ },
+ {
+  "n": 559,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "Orestiada-järven",
+  "kysymys": "Kerro lisää: Orestiada-järven"
+ },
+ {
+  "n": 560,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "turkisteollisuudestaan",
+  "kysymys": "Kerro lisää: turkisteollisuudestaan"
+ },
+ {
+  "n": 561,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "New Yorkin",
+  "kysymys": "Kerro lisää: New Yorkin"
+ },
+ {
+  "n": 562,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "turkisalan",
+  "kysymys": "Kerro lisää: turkisalan"
+ },
+ {
+  "n": 563,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "freskoja",
+  "kysymys": "Kerro lisää: freskoja"
+ },
+ {
+  "n": 564,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "bysanttilaista",
+  "kysymys": "Kerro lisää: bysanttilaista"
+ },
+ {
+  "n": 565,
+  "kohta": "kohde:hahmotelma-kastoria",
+  "kasite": "Kastorian",
+  "kysymys": "Kerro lisää: Kastorian"
+ },
+ {
+  "n": 566,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Kreikan vapaussodassa",
+  "kysymys": "Kerro lisää: Kreikan vapaussodassa"
+ },
+ {
+  "n": 567,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Naousa",
+  "kysymys": "Kerro lisää: Naousa"
+ },
+ {
+  "n": 568,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Aristoteleen",
+  "kysymys": "Kerro lisää: Aristoteleen"
+ },
+ {
+  "n": 569,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Mieza",
+  "kysymys": "Kerro lisää: Mieza"
+ },
+ {
+  "n": 570,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Naousan",
+  "kysymys": "Kerro lisää: Naousan"
+ },
+ {
+  "n": 571,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "xinomavro",
+  "kysymys": "Kerro lisää: xinomavro"
+ },
+ {
+  "n": 572,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Vermion-vuorten",
+  "kysymys": "Kerro lisää: Vermion-vuorten"
+ },
+ {
+  "n": 573,
+  "kohta": "kohde:hahmotelma-naoussa",
+  "kasite": "Ottomaanien valtakuntaa",
+  "kysymys": "Kerro lisää: Ottomaanien valtakuntaa"
+ },
+ {
+  "n": 574,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "Lavrion",
+  "kysymys": "Kerro lisää: Lavrion"
+ },
+ {
+  "n": 575,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "Themistokles",
+  "kysymys": "Kerro lisää: Themistokles"
+ },
+ {
+  "n": 576,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "trireemiin",
+  "kysymys": "Kerro lisää: trireemiin"
+ },
+ {
+  "n": 577,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "Marathonin",
+  "kysymys": "Kerro lisää: Marathonin"
+ },
+ {
+  "n": 578,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "trireemiä",
+  "kysymys": "Kerro lisää: trireemiä"
+ },
+ {
+  "n": 579,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "Salamiin",
+  "kysymys": "Kerro lisää: Salamiin"
+ },
+ {
+  "n": 580,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "Attikassa",
+  "kysymys": "Kerro lisää: Attikassa"
+ },
+ {
+  "n": 581,
+  "kohta": "kohde:hahmotelma-lavrio",
+  "kasite": "maratonjuoksu",
+  "kysymys": "Kerro lisää: maratonjuoksu"
+ },
+ {
+  "n": 582,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Diakoptosta",
+  "kysymys": "Kerro lisää: Diakoptosta"
+ },
+ {
+  "n": 583,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Kalavrytaan",
+  "kysymys": "Kerro lisää: Kalavrytaan"
+ },
+ {
+  "n": 584,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Vanhan Patran",
+  "kysymys": "Kerro lisää: Vanhan Patran"
+ },
+ {
+  "n": 585,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Germanos III",
+  "kysymys": "Kerro lisää: Germanos III"
+ },
+ {
+  "n": 586,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Kreikan vapaussodan",
+  "kysymys": "Kerro lisää: Kreikan vapaussodan"
+ },
+ {
+  "n": 587,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Peloponnesoksella",
+  "kysymys": "Kerro lisää: Peloponnesoksella"
+ },
+ {
+  "n": 588,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "neljännen ristiretken",
+  "kysymys": "Kerro lisää: neljännen ristiretken"
+ },
+ {
+  "n": 589,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "bysanttilaisille",
+  "kysymys": "Kerro lisää: bysanttilaisille"
+ },
+ {
+  "n": 590,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Ottomaanien valtakunnan",
+  "kysymys": "Kerro lisää: Ottomaanien valtakunnan"
+ },
+ {
+  "n": 591,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Navarinon",
+  "kysymys": "Kerro lisää: Navarinon"
+ },
+ {
+  "n": 592,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Patrasin karnevaalista",
+  "kysymys": "Kerro lisää: Patrasin karnevaalista"
+ },
+ {
+  "n": 593,
+  "kohta": "kohde:hahmotelma-kalavryta",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 594,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "mastiksipuun",
+  "kysymys": "Kerro lisää: mastiksipuun"
+ },
+ {
+  "n": 595,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Mastichochória",
+  "kysymys": "Kerro lisää: Mastichochória"
+ },
+ {
+  "n": 596,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 597,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 598,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "mosaiikeistaan",
+  "kysymys": "Kerro lisää: mosaiikeistaan"
+ },
+ {
+  "n": 599,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Ottomaanien",
+  "kysymys": "Kerro lisää: Ottomaanien"
+ },
+ {
+  "n": 600,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Eugène Delacroix'n",
+  "kysymys": "Kerro lisää: Eugène Delacroix'n"
+ },
+ {
+  "n": 601,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "YK:n",
+  "kysymys": "Kerro lisää: YK:n"
+ },
+ {
+  "n": 602,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Nea Monin",
+  "kysymys": "Kerro lisää: Nea Monin"
+ },
+ {
+  "n": 603,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 604,
+  "kohta": "kohde:hahmotelma-chios",
+  "kasite": "Kykladit",
+  "kysymys": "Kerro lisää: Kykladit"
+ },
+ {
+  "n": 605,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "Pindoksen",
+  "kysymys": "Kerro lisää: Pindoksen"
+ },
+ {
+  "n": 606,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 607,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "diasporaan",
+  "kysymys": "Kerro lisää: diasporaan"
+ },
+ {
+  "n": 608,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "Eurooppaa",
+  "kysymys": "Kerro lisää: Eurooppaa"
+ },
+ {
+  "n": 609,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "Aoos-joen",
+  "kysymys": "Kerro lisää: Aoos-joen"
+ },
+ {
+  "n": 610,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "Albaniaan",
+  "kysymys": "Kerro lisää: Albaniaan"
+ },
+ {
+  "n": 611,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "Epeiroksen",
+  "kysymys": "Kerro lisää: Epeiroksen"
+ },
+ {
+  "n": 612,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "roomalaiset",
+  "kysymys": "Kerro lisää: roomalaiset"
+ },
+ {
+  "n": 613,
+  "kohta": "kohde:hahmotelma-zagori",
+  "kasite": "Zagorin",
+  "kysymys": "Kerro lisää: Zagorin"
+ },
+ {
+  "n": 614,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "sananparsia",
+  "kysymys": "Kerro lisää: sananparsia"
+ },
+ {
+  "n": 615,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Arachthos-joen",
+  "kysymys": "Kerro lisää: Arachthos-joen"
+ },
+ {
+  "n": 616,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Epeiroksen despotaatin",
+  "kysymys": "Kerro lisää: Epeiroksen despotaatin"
+ },
+ {
+  "n": 617,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 618,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 619,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "neljännen ristiretken",
+  "kysymys": "Kerro lisää: neljännen ristiretken"
+ },
+ {
+  "n": 620,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Pindoksen",
+  "kysymys": "Kerro lisää: Pindoksen"
+ },
+ {
+  "n": 621,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Ambrakianlahteen",
+  "kysymys": "Kerro lisää: Ambrakianlahteen"
+ },
+ {
+  "n": 622,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Balkanista",
+  "kysymys": "Kerro lisää: Balkanista"
+ },
+ {
+  "n": 623,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Istanbul",
+  "kysymys": "Kerro lisää: Istanbul"
+ },
+ {
+  "n": 624,
+  "kohta": "kohde:hahmotelma-arta",
+  "kasite": "Turkkia",
+  "kysymys": "Kerro lisää: Turkkia"
+ },
+ {
+  "n": 625,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "persialaiset",
+  "kysymys": "Kerro lisää: persialaiset"
+ },
+ {
+  "n": 626,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Leonidas",
+  "kysymys": "Kerro lisää: Leonidas"
+ },
+ {
+  "n": 627,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Simonideen",
+  "kysymys": "Kerro lisää: Simonideen"
+ },
+ {
+  "n": 628,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "spartalaisille",
+  "kysymys": "Kerro lisää: spartalaisille"
+ },
+ {
+  "n": 629,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Thermopylain taistelussa",
+  "kysymys": "Kerro lisää: Thermopylain taistelussa"
+ },
+ {
+  "n": 630,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Spartan",
+  "kysymys": "Kerro lisää: Spartan"
+ },
+ {
+  "n": 631,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "persialaisia",
+  "kysymys": "Kerro lisää: persialaisia"
+ },
+ {
+  "n": 632,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "rikkilähteistä",
+  "kysymys": "Kerro lisää: rikkilähteistä"
+ },
+ {
+  "n": 633,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Haadeksen",
+  "kysymys": "Kerro lisää: Haadeksen"
+ },
+ {
+  "n": 634,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Phthiotiksen",
+  "kysymys": "Kerro lisää: Phthiotiksen"
+ },
+ {
+  "n": 635,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Lamian",
+  "kysymys": "Kerro lisää: Lamian"
+ },
+ {
+  "n": 636,
+  "kohta": "kohde:hahmotelma-thermopylae",
+  "kasite": "Lokriin",
+  "kysymys": "Kerro lisää: Lokriin"
+ },
+ {
+  "n": 637,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Hiera Polis",
+  "kysymys": "Kerro lisää: Hiera Polis"
+ },
+ {
+  "n": 638,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 639,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Kreikan vapaussotaa",
+  "kysymys": "Kerro lisää: Kreikan vapaussotaa"
+ },
+ {
+  "n": 640,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "filhellenismin",
+  "kysymys": "Kerro lisää: filhellenismin"
+ },
+ {
+  "n": 641,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Mesolongiin",
+  "kysymys": "Kerro lisää: Mesolongiin"
+ },
+ {
+  "n": 642,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Patrasin",
+  "kysymys": "Kerro lisää: Patrasin"
+ },
+ {
+  "n": 643,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Achelooksen",
+  "kysymys": "Kerro lisää: Achelooksen"
+ },
+ {
+  "n": 644,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Evinoksen",
+  "kysymys": "Kerro lisää: Evinoksen"
+ },
+ {
+  "n": 645,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Aitolia-Akarnanian",
+  "kysymys": "Kerro lisää: Aitolia-Akarnanian"
+ },
+ {
+  "n": 646,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Mesolongin piiritys",
+  "kysymys": "Kerro lisää: Mesolongin piiritys"
+ },
+ {
+  "n": 647,
+  "kohta": "kohde:hahmotelma-missolonghi",
+  "kasite": "Navarinon taistelu",
+  "kysymys": "Kerro lisää: Navarinon taistelu"
+ },
+ {
+  "n": 648,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 649,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Kreikan itsenäisyydestä",
+  "kysymys": "Kerro lisää: Kreikan itsenäisyydestä"
+ },
+ {
+  "n": 650,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "purjelaivoilla",
+  "kysymys": "Kerro lisää: purjelaivoilla"
+ },
+ {
+  "n": 651,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Britannian",
+  "kysymys": "Kerro lisää: Britannian"
+ },
+ {
+  "n": 652,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Ranskan",
+  "kysymys": "Kerro lisää: Ranskan"
+ },
+ {
+  "n": 653,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Venäjän",
+  "kysymys": "Kerro lisää: Venäjän"
+ },
+ {
+  "n": 654,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 655,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Joonianmeren",
+  "kysymys": "Kerro lisää: Joonianmeren"
+ },
+ {
+  "n": 656,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Navarinon lahti",
+  "kysymys": "Kerro lisää: Navarinon lahti"
+ },
+ {
+  "n": 657,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 658,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Sisilian",
+  "kysymys": "Kerro lisää: Sisilian"
+ },
+ {
+  "n": 659,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Konstantinopolista",
+  "kysymys": "Kerro lisää: Konstantinopolista"
+ },
+ {
+  "n": 660,
+  "kohta": "kohde:hahmotelma-navarino",
+  "kasite": "Balkanista",
+  "kysymys": "Kerro lisää: Balkanista"
+ },
+ {
+  "n": 661,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "Herodotos",
+  "kysymys": "Kerro lisää: Herodotos"
+ },
+ {
+  "n": 662,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "Samoksella",
+  "kysymys": "Kerro lisää: Samoksella"
+ },
+ {
+  "n": 663,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "Polykrates",
+  "kysymys": "Kerro lisää: Polykrates"
+ },
+ {
+  "n": 664,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "Heran pyhäkön",
+  "kysymys": "Kerro lisää: Heran pyhäkön"
+ },
+ {
+  "n": 665,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 666,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "Pythagoras",
+  "kysymys": "Kerro lisää: Pythagoras"
+ },
+ {
+  "n": 667,
+  "kohta": "kohde:hahmotelma-heraion",
+  "kasite": "kaupunkivaltiossa",
+  "kysymys": "Kerro lisää: kaupunkivaltiossa"
+ },
+ {
+  "n": 668,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Apollon",
+  "kysymys": "Kerro lisää: Apollon"
+ },
+ {
+  "n": 669,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "kalkkikivilohkareesta",
+  "kysymys": "Kerro lisää: kalkkikivilohkareesta"
+ },
+ {
+  "n": 670,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Acrocorinthin",
+  "kysymys": "Kerro lisää: Acrocorinthin"
+ },
+ {
+  "n": 671,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Lucius Mummius",
+  "kysymys": "Kerro lisää: Lucius Mummius"
+ },
+ {
+  "n": 672,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Rooma",
+  "kysymys": "Kerro lisää: Rooma"
+ },
+ {
+  "n": 673,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 674,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Korintin",
+  "kysymys": "Kerro lisää: Korintin"
+ },
+ {
+  "n": 675,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "Apollon temppelin",
+  "kysymys": "Kerro lisää: Apollon temppelin"
+ },
+ {
+  "n": 676,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "joonialainen",
+  "kysymys": "Kerro lisää: joonialainen"
+ },
+ {
+  "n": 677,
+  "kohta": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "kasite": "korinttilainen",
+  "kysymys": "Kerro lisää: korinttilainen"
+ },
+ {
+  "n": 678,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 679,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Vitruvius",
+  "kysymys": "Kerro lisää: Vitruvius"
+ },
+ {
+  "n": 680,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Athos-vuoren",
+  "kysymys": "Kerro lisää: Athos-vuoren"
+ },
+ {
+  "n": 681,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Deinokrates",
+  "kysymys": "Kerro lisää: Deinokrates"
+ },
+ {
+  "n": 682,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Athos-vuorta",
+  "kysymys": "Kerro lisää: Athos-vuorta"
+ },
+ {
+  "n": 683,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Halkidikin",
+  "kysymys": "Kerro lisää: Halkidikin"
+ },
+ {
+  "n": 684,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "endeemisiksi",
+  "kysymys": "Kerro lisää: endeemisiksi"
+ },
+ {
+  "n": 685,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Kreikassa",
+  "kysymys": "Kerro lisää: Kreikassa"
+ },
+ {
+  "n": 686,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "De architectura",
+  "kysymys": "Kerro lisää: De architectura"
+ },
+ {
+  "n": 687,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Augustukselle",
+  "kysymys": "Kerro lisää: Augustukselle"
+ },
+ {
+  "n": 688,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "Kreikan",
+  "kysymys": "Kerro lisää: Kreikan"
+ },
+ {
+  "n": 689,
+  "kohta": "kohde:hahmotelma-deinokrateen-vuori",
+  "kasite": "ortodoksisia luostareita",
+  "kysymys": "Kerro lisää: ortodoksisia luostareita"
+ },
+ {
+  "n": 690,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Demeterin",
+  "kysymys": "Kerro lisää: Demeterin"
+ },
+ {
+  "n": 691,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Persefoneen",
+  "kysymys": "Kerro lisää: Persefoneen"
+ },
+ {
+  "n": 692,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Pyhää tietä",
+  "kysymys": "Kerro lisää: Pyhää tietä"
+ },
+ {
+  "n": 693,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Telesterion",
+  "kysymys": "Kerro lisää: Telesterion"
+ },
+ {
+  "n": 694,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Theodosius I",
+  "kysymys": "Kerro lisää: Theodosius I"
+ },
+ {
+  "n": 695,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Alarikin",
+  "kysymys": "Kerro lisää: Alarikin"
+ },
+ {
+  "n": 696,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Hades",
+  "kysymys": "Kerro lisää: Hades"
+ },
+ {
+  "n": 697,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "vuodenaikojen",
+  "kysymys": "Kerro lisää: vuodenaikojen"
+ },
+ {
+  "n": 698,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Eleusiin",
+  "kysymys": "Kerro lisää: Eleusiin"
+ },
+ {
+  "n": 699,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Ateenan",
+  "kysymys": "Kerro lisää: Ateenan"
+ },
+ {
+  "n": 700,
+  "kohta": "kohde:hahmotelma-eleusiin-mysteerit",
+  "kasite": "Attikassa",
+  "kysymys": "Kerro lisää: Attikassa"
+ },
+ {
+  "n": 701,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Epeiroksessa",
+  "kysymys": "Kerro lisää: Epeiroksessa"
+ },
+ {
+  "n": 702,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Akheron",
+  "kysymys": "Kerro lisää: Akheron"
+ },
+ {
+  "n": 703,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Herodotoksen",
+  "kysymys": "Kerro lisää: Herodotoksen"
+ },
+ {
+  "n": 704,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Periandros",
+  "kysymys": "Kerro lisää: Periandros"
+ },
+ {
+  "n": 705,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Odysseus",
+  "kysymys": "Kerro lisää: Odysseus"
+ },
+ {
+  "n": 706,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Sotirios Dakaris",
+  "kysymys": "Kerro lisää: Sotirios Dakaris"
+ },
+ {
+  "n": 707,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "katapulttien",
+  "kysymys": "Kerro lisää: katapulttien"
+ },
+ {
+  "n": 708,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Mesopotamoksen",
+  "kysymys": "Kerro lisää: Mesopotamoksen"
+ },
+ {
+  "n": 709,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Melissalta",
+  "kysymys": "Kerro lisää: Melissalta"
+ },
+ {
+  "n": 710,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "seitsemän viisaan",
+  "kysymys": "Kerro lisää: seitsemän viisaan"
+ },
+ {
+  "n": 711,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Epeiroksen",
+  "kysymys": "Kerro lisää: Epeiroksen"
+ },
+ {
+  "n": 712,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Joonianmereen",
+  "kysymys": "Kerro lisää: Joonianmereen"
+ },
+ {
+  "n": 713,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Nekromanteion",
+  "kysymys": "Kerro lisää: Nekromanteion"
+ },
+ {
+  "n": 714,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Kirke",
+  "kysymys": "Kerro lisää: Kirke"
+ },
+ {
+  "n": 715,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Teiresiaan",
+  "kysymys": "Kerro lisää: Teiresiaan"
+ },
+ {
+  "n": 716,
+  "kohta": "kohde:hahmotelma-nekromanteion",
+  "kasite": "Ithakalle",
+  "kysymys": "Kerro lisää: Ithakalle"
+ },
+ {
+  "n": 717,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Kykladien",
+  "kysymys": "Kerro lisää: Kykladien"
+ },
+ {
+  "n": 718,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Naxoksesta",
+  "kysymys": "Kerro lisää: Naxoksesta"
+ },
+ {
+  "n": 719,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Kavoksen",
+  "kysymys": "Kerro lisää: Kavoksen"
+ },
+ {
+  "n": 720,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Cambridgen yliopiston",
+  "kysymys": "Kerro lisää: Cambridgen yliopiston"
+ },
+ {
+  "n": 721,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "rituaalia",
+  "kysymys": "Kerro lisää: rituaalia"
+ },
+ {
+  "n": 722,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Keroksessa",
+  "kysymys": "Kerro lisää: Keroksessa"
+ },
+ {
+  "n": 723,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "pronssikaudella",
+  "kysymys": "Kerro lisää: pronssikaudella"
+ },
+ {
+  "n": 724,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Kykladeilta",
+  "kysymys": "Kerro lisää: Kykladeilta"
+ },
+ {
+  "n": 725,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "hautalahjoina",
+  "kysymys": "Kerro lisää: hautalahjoina"
+ },
+ {
+  "n": 726,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Naxos",
+  "kysymys": "Kerro lisää: Naxos"
+ },
+ {
+  "n": 727,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Santorini",
+  "kysymys": "Kerro lisää: Santorini"
+ },
+ {
+  "n": 728,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Mykonos",
+  "kysymys": "Kerro lisää: Mykonos"
+ },
+ {
+  "n": 729,
+  "kohta": "kohde:hahmotelma-keros",
+  "kasite": "Delos",
+  "kysymys": "Kerro lisää: Delos"
+ },
+ {
+  "n": 730,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Thasoksen",
+  "kysymys": "Kerro lisää: Thasoksen"
+ },
+ {
+  "n": 731,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Cicero",
+  "kysymys": "Kerro lisää: Cicero"
+ },
+ {
+  "n": 732,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Philogeloksessa",
+  "kysymys": "Kerro lisää: Philogeloksessa"
+ },
+ {
+  "n": 733,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Demokritos",
+  "kysymys": "Kerro lisää: Demokritos"
+ },
+ {
+  "n": 734,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Protagoras",
+  "kysymys": "Kerro lisää: Protagoras"
+ },
+ {
+  "n": 735,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Abderasta",
+  "kysymys": "Kerro lisää: Abderasta"
+ },
+ {
+  "n": 736,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "atomiteoriastaan",
+  "kysymys": "Kerro lisää: atomiteoriastaan"
+ },
+ {
+  "n": 737,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "nauravaksi filosofiksi",
+  "kysymys": "Kerro lisää: nauravaksi filosofiksi"
+ },
+ {
+  "n": 738,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "sofisti",
+  "kysymys": "Kerro lisää: sofisti"
+ },
+ {
+  "n": 739,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Ateenassa",
+  "kysymys": "Kerro lisää: Ateenassa"
+ },
+ {
+  "n": 740,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Traakian",
+  "kysymys": "Kerro lisää: Traakian"
+ },
+ {
+  "n": 741,
+  "kohta": "kohde:hahmotelma-abdera",
+  "kasite": "Xanthin",
+  "kysymys": "Kerro lisää: Xanthin"
+ },
+ {
+  "n": 742,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "katavothres-nieluihin",
+  "kysymys": "Kerro lisää: katavothres-nieluihin"
+ },
+ {
+  "n": 743,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "Melissanin",
+  "kysymys": "Kerro lisää: Melissanin"
+ },
+ {
+  "n": 744,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "pohjaveden",
+  "kysymys": "Kerro lisää: pohjaveden"
+ },
+ {
+  "n": 745,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "merivesi",
+  "kysymys": "Kerro lisää: merivesi"
+ },
+ {
+  "n": 746,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "Kalkkikivi",
+  "kysymys": "Kerro lisää: Kalkkikivi"
+ },
+ {
+  "n": 747,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "pohjavettä",
+  "kysymys": "Kerro lisää: pohjavettä"
+ },
+ {
+  "n": 748,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "kreikkalaisessa mytologiassa",
+  "kysymys": "Kerro lisää: kreikkalaisessa mytologiassa"
+ },
+ {
+  "n": 749,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "lähteisiin",
+  "kysymys": "Kerro lisää: lähteisiin"
+ },
+ {
+  "n": 750,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "mannerlaattojen",
+  "kysymys": "Kerro lisää: mannerlaattojen"
+ },
+ {
+  "n": 751,
+  "kohta": "kohde:hahmotelma-melissani",
+  "kasite": "Joonianmeren",
+  "kysymys": "Kerro lisää: Joonianmeren"
+ },
+ {
+  "n": 752,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "mykeneläiset",
+  "kysymys": "Kerro lisää: mykeneläiset"
+ },
+ {
+  "n": 753,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Glan",
+  "kysymys": "Kerro lisää: Glan"
+ },
+ {
+  "n": 754,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Iliaan",
+  "kysymys": "Kerro lisää: Iliaan"
+ },
+ {
+  "n": 755,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "mykeneläinen",
+  "kysymys": "Kerro lisää: mykeneläinen"
+ },
+ {
+  "n": 756,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "kyklooppien",
+  "kysymys": "Kerro lisää: kyklooppien"
+ },
+ {
+  "n": 757,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Mykenen",
+  "kysymys": "Kerro lisää: Mykenen"
+ },
+ {
+  "n": 758,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Tirynsin",
+  "kysymys": "Kerro lisää: Tirynsin"
+ },
+ {
+  "n": 759,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Mykene",
+  "kysymys": "Kerro lisää: Mykene"
+ },
+ {
+  "n": 760,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Linear B",
+  "kysymys": "Kerro lisää: Linear B"
+ },
+ {
+  "n": 761,
+  "kohta": "kohde:hahmotelma-gla",
+  "kasite": "Alankomaiden",
+  "kysymys": "Kerro lisää: Alankomaiden"
+ },
+ {
+  "n": 762,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Aleksanteri Suuren",
+  "kysymys": "Kerro lisää: Aleksanteri Suuren"
+ },
+ {
+  "n": 763,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Hefaistionille",
+  "kysymys": "Kerro lisää: Hefaistionille"
+ },
+ {
+  "n": 764,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Olympiakselle",
+  "kysymys": "Kerro lisää: Olympiakselle"
+ },
+ {
+  "n": 765,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Hades",
+  "kysymys": "Kerro lisää: Hades"
+ },
+ {
+  "n": 766,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Persefoneen",
+  "kysymys": "Kerro lisää: Persefoneen"
+ },
+ {
+  "n": 767,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "karyatidia",
+  "kysymys": "Kerro lisää: karyatidia"
+ },
+ {
+  "n": 768,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Akropoliksella",
+  "kysymys": "Kerro lisää: Akropoliksella"
+ },
+ {
+  "n": 769,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Erechtheionin",
+  "kysymys": "Kerro lisää: Erechtheionin"
+ },
+ {
+  "n": 770,
+  "kohta": "kohde:hahmotelma-kastan-kumpu",
+  "kasite": "Makedonian",
+  "kysymys": "Kerro lisää: Makedonian"
+ },
+ {
+  "n": 771,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "Kreetalla",
+  "kysymys": "Kerro lisää: Kreetalla"
+ },
+ {
+  "n": 772,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "boustrofedoniksi",
+  "kysymys": "Kerro lisää: boustrofedoniksi"
+ },
+ {
+  "n": 773,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "odeionin",
+  "kysymys": "Kerro lisää: odeionin"
+ },
+ {
+  "n": 774,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "Ateenassa",
+  "kysymys": "Kerro lisää: Ateenassa"
+ },
+ {
+  "n": 775,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "Drakonin",
+  "kysymys": "Kerro lisää: Drakonin"
+ },
+ {
+  "n": 776,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "Solonin",
+  "kysymys": "Kerro lisää: Solonin"
+ },
+ {
+  "n": 777,
+  "kohta": "kohde:hahmotelma-gortynin-laki",
+  "kasite": "kaupunkivaltioissa",
+  "kysymys": "Kerro lisää: kaupunkivaltioissa"
+ },
+ {
+  "n": 778,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "Akhaian ruhtinaskunnan",
+  "kysymys": "Kerro lisää: Akhaian ruhtinaskunnan"
+ },
+ {
+  "n": 779,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "Geoffroi I de Villehardouin",
+  "kysymys": "Kerro lisää: Geoffroi I de Villehardouin"
+ },
+ {
+  "n": 780,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "kirkon",
+  "kysymys": "Kerro lisää: kirkon"
+ },
+ {
+  "n": 781,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "Glarentzan",
+  "kysymys": "Kerro lisää: Glarentzan"
+ },
+ {
+  "n": 782,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "rahapajan",
+  "kysymys": "Kerro lisää: rahapajan"
+ },
+ {
+  "n": 783,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "tornese-hopearahoja",
+  "kysymys": "Kerro lisää: tornese-hopearahoja"
+ },
+ {
+  "n": 784,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "neljännen ristiretken",
+  "kysymys": "Kerro lisää: neljännen ristiretken"
+ },
+ {
+  "n": 785,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 786,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "lunnaiden",
+  "kysymys": "Kerro lisää: lunnaiden"
+ },
+ {
+  "n": 787,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "vankilana",
+  "kysymys": "Kerro lisää: vankilana"
+ },
+ {
+  "n": 788,
+  "kohta": "kohde:hahmotelma-chlemoutsi",
+  "kasite": "hopeasta",
+  "kysymys": "Kerro lisää: hopeasta"
+ },
+ {
+  "n": 789,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "paalukylän",
+  "kysymys": "Kerro lisää: paalukylän"
+ },
+ {
+  "n": 790,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "Kastorianjärven",
+  "kysymys": "Kerro lisää: Kastorianjärven"
+ },
+ {
+  "n": 791,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "Georgios Hourmouziadisin",
+  "kysymys": "Kerro lisää: Georgios Hourmouziadisin"
+ },
+ {
+  "n": 792,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "tekosaarella",
+  "kysymys": "Kerro lisää: tekosaarella"
+ },
+ {
+  "n": 793,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "paalukylä",
+  "kysymys": "Kerro lisää: paalukylä"
+ },
+ {
+  "n": 794,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "neoliittisen",
+  "kysymys": "Kerro lisää: neoliittisen"
+ },
+ {
+  "n": 795,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "maanviljelyyn",
+  "kysymys": "Kerro lisää: maanviljelyyn"
+ },
+ {
+  "n": 796,
+  "kohta": "kohde:hahmotelma-dispilio",
+  "kasite": "Eurooppaan",
+  "kysymys": "Kerro lisää: Eurooppaan"
+ },
+ {
+  "n": 797,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "maanjäristykset",
+  "kysymys": "Kerro lisää: maanjäristykset"
+ },
+ {
+  "n": 798,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "merenpinnan",
+  "kysymys": "Kerro lisää: merenpinnan"
+ },
+ {
+  "n": 799,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "Vatikan lahdella",
+  "kysymys": "Kerro lisää: Vatikan lahdella"
+ },
+ {
+  "n": 800,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "Lakonian",
+  "kysymys": "Kerro lisää: Lakonian"
+ },
+ {
+  "n": 801,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "asemakaava",
+  "kysymys": "Kerro lisää: asemakaava"
+ },
+ {
+  "n": 802,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "Elafonisoksen",
+  "kysymys": "Kerro lisää: Elafonisoksen"
+ },
+ {
+  "n": 803,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "kaikuluotaimia",
+  "kysymys": "Kerro lisää: kaikuluotaimia"
+ },
+ {
+  "n": 804,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "kartoitus",
+  "kysymys": "Kerro lisää: kartoitus"
+ },
+ {
+  "n": 805,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 806,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "Peloponnesoksen",
+  "kysymys": "Kerro lisää: Peloponnesoksen"
+ },
+ {
+  "n": 807,
+  "kohta": "kohde:hahmotelma-pavlopetri",
+  "kasite": "Sparta",
+  "kysymys": "Kerro lisää: Sparta"
+ },
+ {
+  "n": 808,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "Limnoksen",
+  "kysymys": "Kerro lisää: Limnoksen"
+ },
+ {
+  "n": 809,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "Luigi Bernabò Brea",
+  "kysymys": "Kerro lisää: Luigi Bernabò Brea"
+ },
+ {
+  "n": 810,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "kultakoruja",
+  "kysymys": "Kerro lisää: kultakoruja"
+ },
+ {
+  "n": 811,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "Poliokhnin",
+  "kysymys": "Kerro lisää: Poliokhnin"
+ },
+ {
+  "n": 812,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "Luigi Bernabò Brean",
+  "kysymys": "Kerro lisää: Luigi Bernabò Brean"
+ },
+ {
+  "n": 813,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "Egeanmerellä",
+  "kysymys": "Kerro lisää: Egeanmerellä"
+ },
+ {
+  "n": 814,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "Poliokhni",
+  "kysymys": "Kerro lisää: Poliokhni"
+ },
+ {
+  "n": 815,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "puolustusmuurin",
+  "kysymys": "Kerro lisää: puolustusmuurin"
+ },
+ {
+  "n": 816,
+  "kohta": "kohde:hahmotelma-poliokhni",
+  "kasite": "stratigrafiaksi",
+  "kysymys": "Kerro lisää: stratigrafiaksi"
+ },
+ {
+  "n": 817,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "välimerenmunkkihylkeen",
+  "kysymys": "Kerro lisää: välimerenmunkkihylkeen"
+ },
+ {
+  "n": 818,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Thomas Schultze-Westrum",
+  "kysymys": "Kerro lisää: Thomas Schultze-Westrum"
+ },
+ {
+  "n": 819,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Alonnisoksen",
+  "kysymys": "Kerro lisää: Alonnisoksen"
+ },
+ {
+  "n": 820,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Peristera",
+  "kysymys": "Kerro lisää: Peristera"
+ },
+ {
+  "n": 821,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Kyra Panagia",
+  "kysymys": "Kerro lisää: Kyra Panagia"
+ },
+ {
+  "n": 822,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Egeanmerellä",
+  "kysymys": "Kerro lisää: Egeanmerellä"
+ },
+ {
+  "n": 823,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Alonnisokselle",
+  "kysymys": "Kerro lisää: Alonnisokselle"
+ },
+ {
+  "n": 824,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "meripuiston",
+  "kysymys": "Kerro lisää: meripuiston"
+ },
+ {
+  "n": 825,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Sporadien",
+  "kysymys": "Kerro lisää: Sporadien"
+ },
+ {
+  "n": 826,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "Skopelos",
+  "kysymys": "Kerro lisää: Skopelos"
+ },
+ {
+  "n": 827,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "välimerenmunkkihylkeitä",
+  "kysymys": "Kerro lisää: välimerenmunkkihylkeitä"
+ },
+ {
+  "n": 828,
+  "kohta": "kohde:hahmotelma-sporadien-meripuisto",
+  "kasite": "kalakantoja",
+  "kysymys": "Kerro lisää: kalakantoja"
+ },
+ {
+  "n": 829,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "voiteita",
+  "kysymys": "Kerro lisää: voiteita"
+ },
+ {
+  "n": 830,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "Akropoliin",
+  "kysymys": "Kerro lisää: Akropoliin"
+ },
+ {
+  "n": 831,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "Pyhän Yrjön",
+  "kysymys": "Kerro lisää: Pyhän Yrjön"
+ },
+ {
+  "n": 832,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "Ateenan",
+  "kysymys": "Kerro lisää: Ateenan"
+ },
+ {
+  "n": 833,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "apostoli Paavali",
+  "kysymys": "Kerro lisää: apostoli Paavali"
+ },
+ {
+  "n": 834,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "sepäntyön",
+  "kysymys": "Kerro lisää: sepäntyön"
+ },
+ {
+  "n": 835,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "Agoraios Kolonos",
+  "kysymys": "Kerro lisää: Agoraios Kolonos"
+ },
+ {
+  "n": 836,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "Athenen",
+  "kysymys": "Kerro lisää: Athenen"
+ },
+ {
+  "n": 837,
+  "kohta": "kohde:antiikin-agora",
+  "kasite": "Parthenon",
+  "kysymys": "Kerro lisää: Parthenon"
+ },
+ {
+  "n": 838,
+  "kohta": "kohde:akropolis",
+  "kasite": "pronssikaudella",
+  "kysymys": "Kerro lisää: pronssikaudella"
+ },
+ {
+  "n": 839,
+  "kohta": "kohde:akropolis",
+  "kasite": "Persialaiset",
+  "kysymys": "Kerro lisää: Persialaiset"
+ },
+ {
+  "n": 840,
+  "kohta": "kohde:akropolis",
+  "kasite": "Perikleen",
+  "kysymys": "Kerro lisää: Perikleen"
+ },
+ {
+  "n": 841,
+  "kohta": "kohde:akropolis",
+  "kasite": "puolustusmuuri",
+  "kysymys": "Kerro lisää: puolustusmuuri"
+ },
+ {
+  "n": 842,
+  "kohta": "kohde:akropolis",
+  "kasite": "karyatidit",
+  "kysymys": "Kerro lisää: karyatidit"
+ },
+ {
+  "n": 843,
+  "kohta": "kohde:akropolis",
+  "kasite": "Elginin",
+  "kysymys": "Kerro lisää: Elginin"
+ },
+ {
+  "n": 844,
+  "kohta": "kohde:akropolis",
+  "kasite": "Akropolis-museossa",
+  "kysymys": "Kerro lisää: Akropolis-museossa"
+ },
+ {
+  "n": 845,
+  "kohta": "kohde:akropolis",
+  "kasite": "Athena Niken",
+  "kysymys": "Kerro lisää: Athena Niken"
+ },
+ {
+  "n": 846,
+  "kohta": "kohde:akropolis",
+  "kasite": "Panathenaia-juhlan",
+  "kysymys": "Kerro lisää: Panathenaia-juhlan"
+ },
+ {
+  "n": 847,
+  "kohta": "kohde:akropolis",
+  "kasite": "miehityksen",
+  "kysymys": "Kerro lisää: miehityksen"
+ },
+ {
+  "n": 848,
+  "kohta": "kohde:akropolis",
+  "kasite": "Apostolos Santaksen",
+  "kysymys": "Kerro lisää: Apostolos Santaksen"
+ },
+ {
+  "n": 849,
+  "kohta": "kohde:akropolis",
+  "kasite": "vastarinnan",
+  "kysymys": "Kerro lisää: vastarinnan"
+ },
+ {
+  "n": 850,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "Parthenonin",
+  "kysymys": "Kerro lisää: Parthenonin"
+ },
+ {
+  "n": 851,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "pronssikaudelta",
+  "kysymys": "Kerro lisää: pronssikaudelta"
+ },
+ {
+  "n": 852,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin"
+ },
+ {
+  "n": 853,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "antiikin kaupunginosan",
+  "kysymys": "Kerro lisää: antiikin kaupunginosan"
+ },
+ {
+  "n": 854,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "kaivaus",
+  "kysymys": "Kerro lisää: kaivaus"
+ },
+ {
+  "n": 855,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "Athenan",
+  "kysymys": "Kerro lisää: Athenan"
+ },
+ {
+  "n": 856,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "Poseidonin",
+  "kysymys": "Kerro lisää: Poseidonin"
+ },
+ {
+  "n": 857,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "Panathenaia-juhlan",
+  "kysymys": "Kerro lisää: Panathenaia-juhlan"
+ },
+ {
+  "n": 858,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "Pentelikon-vuoren",
+  "kysymys": "Kerro lisää: Pentelikon-vuoren"
+ },
+ {
+  "n": 859,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "pentelinmarmoriksi",
+  "kysymys": "Kerro lisää: pentelinmarmoriksi"
+ },
+ {
+  "n": 860,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "osmanien",
+  "kysymys": "Kerro lisää: osmanien"
+ },
+ {
+  "n": 861,
+  "kohta": "kohde:akropolis-museo",
+  "kasite": "venetsialaisten",
+  "kysymys": "Kerro lisää: venetsialaisten"
+ },
+ {
+  "n": 862,
+  "kohta": "kohde:olympieion",
+  "kasite": "Olympieionin",
+  "kysymys": "Kerro lisää: Olympieionin"
+ },
+ {
+  "n": 863,
+  "kohta": "kohde:olympieion",
+  "kasite": "herulit",
+  "kysymys": "Kerro lisää: herulit"
+ },
+ {
+  "n": 864,
+  "kohta": "kohde:olympieion",
+  "kasite": "Hadrianuksen kirjaston",
+  "kysymys": "Kerro lisää: Hadrianuksen kirjaston"
+ },
+ {
+  "n": 865,
+  "kohta": "kohde:olympieion",
+  "kasite": "Hadrianuksen portin",
+  "kysymys": "Kerro lisää: Hadrianuksen portin"
+ },
+ {
+  "n": 866,
+  "kohta": "kohde:olympieion",
+  "kasite": "Zeuksen",
+  "kysymys": "Kerro lisää: Zeuksen"
+ },
+ {
+  "n": 867,
+  "kohta": "kohde:olympieion",
+  "kasite": "akantuksen",
+  "kysymys": "Kerro lisää: akantuksen"
+ },
+ {
+  "n": 868,
+  "kohta": "kohde:olympieion",
+  "kasite": "Parthenon",
+  "kysymys": "Kerro lisää: Parthenon"
+ },
+ {
+  "n": 869,
+  "kohta": "kohde:olympieion",
+  "kasite": "Antiokhos neljäs",
+  "kysymys": "Kerro lisää: Antiokhos neljäs"
+ },
+ {
+  "n": 870,
+  "kohta": "kohde:olympieion",
+  "kasite": "Peisistratoksen",
+  "kysymys": "Kerro lisää: Peisistratoksen"
+ },
+ {
+  "n": 871,
+  "kohta": "kohde:olympieion",
+  "kasite": "Hadrianus",
+  "kysymys": "Kerro lisää: Hadrianus"
+ },
+ {
+  "n": 872,
+  "kohta": "kohde:olympieion",
+  "kasite": "Feidias",
+  "kysymys": "Kerro lisää: Feidias"
+ },
+ {
+  "n": 873,
+  "kohta": "kohde:olympieion",
+  "kasite": "Olympian",
+  "kysymys": "Kerro lisää: Olympian"
+ },
+ {
+  "n": 874,
+  "kohta": "kohde:olympieion",
+  "kasite": "seitsemästä ihmeestä",
+  "kysymys": "Kerro lisää: seitsemästä ihmeestä"
+ }
+]

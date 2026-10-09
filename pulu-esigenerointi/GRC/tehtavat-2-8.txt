@@ -1,0 +1,1002 @@
+### 561
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: New Yorkin kaupungintalo] 1803–1812 Kaupunki järjesti 1802 suunnittelukilpailun uudesta kaupungintalosta. Kolmensadanviidenkymmenen dollarin ensimmäisen palkinnon saivat ranskalaissyntyinen Joseph-François Mangin ja newyorkilainen John McComb nuorempi, joka oli suunnitellut myös Battery Parkin linnakkeen. Paikaksi valittiin vanha yhteismaa kaupungin pohjoisrajalla. Peruskivi laskettiin 26. toukokuuta 1803. Valtuusto piti suunnitelmaa liian ylellisenä, joten McComb pienensi taloa ja verhosi takaseinän halvemmalla ruskealla hiekkakivellä; etujulkisivuun tuli marmoria Alfordista Massachusettsista. Työriidat ja keltakuumeen puhkeaminen hidastivat rakentamista, ja talo vihittiin vasta 1811 ja avattiin 1812. Se on Yhdysva…
+- [New York — kaupunkilehti / New York: Enkeli, joka siunaa vettä] Central Park ei ollut isoisän aikaan valmis: rakennustyöt alkoivat 1857, ensimmäiset osat avattiin yleisölle joulukuussa 1858 ja valmiiksi puisto julistettiin vasta 1876. Juuri vuonna 1873 paljastettiin puiston sydämessä Bethesda-terassilla pronssinen suihkulähdepatsas Angel of the Waters. Sen suunnitteli 1868 Emma Stebbins, ensimmäinen nainen, joka sai New Yorkin kaupungilta tilauksen suureen julkiseen taideteokseen. Enkeli siunaa vettä muistona Croton-vesijohdosta, joka toi kaupunkiin ensimmäisen puhtaan juomaveden 1842.
+AIEMPI KYSYMYS: Miksi Kastoria tunnetaan turkiksista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kastorian turkisteollisuus on ollut kaupungin tunnetuimpia elinkeinoja, ja kaupunkia on pitkään pidetty Kreikan turkiskaupan keskuksena. Alueella on perinteisesti valmistettu ja kaupattu turkisvaatteita, ja kaupungin turkkurit ovat tunnettuja ammattitaidostaan. Kreikan sisällissodan jälkeen suuri joukko kastorialaisia muutti ulkomaille, ja heistä monet työskentelivät turkkureina. Esimerkiksi 1980-luvulla [[New Yorkin]] seudulla heitä oli noin 25 000. Näin [[turkisalan]] taidot kulkivat kaupungista maailmalle. Tarkkaa nykytilannetta en tiedä, sillä ala on muuttunut vuosikymmenten aikana.
+
+Minulla on vain höyhenet, ja niissä on se hyvä puoli, että ne kasvavat takaisin. Turkkurin ammatti näyttää minusta silti aika kunnioitettavalta.
+KYSYMYS: Kerro lisää: New Yorkin
+
+### 562
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+AIEMPI KYSYMYS: Miksi Kastoria tunnetaan turkiksista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kastorian turkisteollisuus on ollut kaupungin tunnetuimpia elinkeinoja, ja kaupunkia on pitkään pidetty Kreikan turkiskaupan keskuksena. Alueella on perinteisesti valmistettu ja kaupattu turkisvaatteita, ja kaupungin turkkurit ovat tunnettuja ammattitaidostaan. Kreikan sisällissodan jälkeen suuri joukko kastorialaisia muutti ulkomaille, ja heistä monet työskentelivät turkkureina. Esimerkiksi 1980-luvulla [[New Yorkin]] seudulla heitä oli noin 25 000. Näin [[turkisalan]] taidot kulkivat kaupungista maailmalle. Tarkkaa nykytilannetta en tiedä, sillä ala on muuttunut vuosikymmenten aikana.
+
+Minulla on vain höyhenet, ja niissä on se hyvä puoli, että ne kasvavat takaisin. Turkkurin ammatti näyttää minusta silti aika kunnioitettavalta.
+KYSYMYS: Kerro lisää: turkisalan
+
+### 563
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Astana — kohdekartta / Kohdekartta: Astana Opera] 2010–2013 Oopperatalo nousi Vasemmalle rannalle yhdeksän hehtaarin tontille. Rakentaminen alkoi 6. heinäkuuta 2010, ja talo avattiin vuonna 2013 kazakstanilaisella oopperalla Birzhan ja Sara. Suunnittelusta vastasi italialainen arkkitehtitoimisto ABDR ja rakentamisesta Mabetex-yhtiö. Harjakorkeus on 32 metriä ja kerrosala 64 163 neliömetriä; pelkkää näyttämöalaa on 3 000 neliömetriä. Saleja on kaksi. Pääsalissa on 1 250 paikkaa ja orkesterisyvennys, johon mahtuu 120 soittajaa; kamarimusiikkisalissa on 250 paikkaa. Aulassa riippuu kolmentoista metrin korkeudessa kruunu, joka painaa 1,6 tonnia. Akustiikan suunnittelivat italialaiset Enrico Moretti ja Maria Cairoli. Julkisivu on antiikin kreik…
+AIEMPI KYSYMYS: Millaisia Kastorian bysanttilaiset kirkot ovat?
+AIEMPI VASTAUS (Livia):
+Just niin, ne kirkot. Kastoria tunnetaan monista bysanttilaisista kirkoistaan, joista useat ovat pieniä ja rakennettu keskiajalla. Niiden seinillä on säilynyt [[freskoja]], jotka kertovat bysanttilaisen kirkkotaiteen kehityksestä eri vuosisatoina. Kirkot sijaitsevat ympäri kaupunkia, ja monien ulkomuoto on vaatimaton, vaikka sisätilat ovat värikkäät ja koristeelliset. Niiden tarkkaa lukumäärää ja rakennusajankohtia en ole varma, mutta kirkkoja on useita kymmeniä. Ne ovat osa [[bysanttilaista]] perintöä, joka on tehnyt kaupungista tärkeän kulttuurikohteen Pohjois-Kreikassa. Ylhäältä ne näyttävät pieniltä kivilaatikoilta, mutta sisältä ne ovat toista maailmaa.
+KYSYMYS: Kerro lisää: freskoja
+
+### 564
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: an-Naqan moskeija] 973 an-Naqa on Tripolin vanhin islamilaisen ajan rakennus. Sen historiaa ei tunneta hyvin eikä kaikkia korjauksia osata ajoittaa, mutta se rakennettiin todennäköisesti vuonna 973 fatimidikalifi al-Muizzin käskystä: kalifi oleskeli kaupungissa juuri silloin siirtäessään hovinsa Ifriqiyasta Egyptiin. Nimi tarkoittaa naaraskamelia, ja siitä kerrotaan kaksi toisilleen sukua olevaa tarinaa. Toisen mukaan kaupungin asukkaat tarjosivat Amr ibn al-Aasille 600-luvulla aarteilla kuormatun naaraskamelin, jotta hän säästäisi kaupungin; hän kieltäytyi lahjasta ja käski rakentaa rahoilla moskeijan. Toisen mukaan kalifi al-Muizz antoi kaupunkilaisille kullalla kuormatun naaraskamelin kiitokseksi vieraanva…
+- [Jerusalem — kohdekartta / Kohdekartta: Kalliomoskeija] 691–692 Kalliomoskeija on kahdeksankulmainen rakennus temppelivuoren keskellä, ja sen rakennutti umaijadikalifi Abd al-Malik vuosina 691–692. Se ei ole moskeija siinä mielessä kuin viereinen Al-Aqsa, vaan pyhäkkö, joka on rakennettu kallion ympärille: kahdeksankulmainen kehä kiertää paljasta kalliopaljastumaa, joka jää kupolin alle. Kahdeksankulmainen pohjakaava ei ole islamilaisen arkkitehtuurin vakiomuoto, ja sen esikuvaksi on esitetty bysanttilaista kirkkoa, joka rakennettiin 400-luvulla Jerusalemin ja Betlehemin väliselle tielle. Alkuperäinen kupoli romahti vuonna 1015, ja se rakennettiin uudelleen vuosina 1022–1023. Ulkoseinien siniset ja vihreät laatat ovat myöhempää ottomaaniaikaa; k…
+AIEMPI KYSYMYS: Millaisia Kastorian bysanttilaiset kirkot ovat?
+AIEMPI VASTAUS (Livia):
+Just niin, ne kirkot. Kastoria tunnetaan monista bysanttilaisista kirkoistaan, joista useat ovat pieniä ja rakennettu keskiajalla. Niiden seinillä on säilynyt [[freskoja]], jotka kertovat bysanttilaisen kirkkotaiteen kehityksestä eri vuosisatoina. Kirkot sijaitsevat ympäri kaupunkia, ja monien ulkomuoto on vaatimaton, vaikka sisätilat ovat värikkäät ja koristeelliset. Niiden tarkkaa lukumäärää ja rakennusajankohtia en ole varma, mutta kirkkoja on useita kymmeniä. Ne ovat osa [[bysanttilaista]] perintöä, joka on tehnyt kaupungista tärkeän kulttuurikohteen Pohjois-Kreikassa. Ylhäältä ne näyttävät pieniltä kivilaatikoilta, mutta sisältä ne ovat toista maailmaa.
+KYSYMYS: Kerro lisää: bysanttilaista
+
+### 565
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastoria (kulttuuri)
+Tietoruudun teksti: Kastoria on kaupunki Pohjois-Kreikassa Länsi-Makedoniassa, Kastorian alueen pääkaupunki. Se sijaitsee niemellä Orestiada-järven läntisellä rannalla laaksossa, jota ympäröivät kalkkikivivuoret. Kaupunki on tunnettu monista bysanttilaisista kirkoistaan, bysanttilaisesta ja ottomaanien ajan asuinarkkitehtuuristaan, järvestään ja turkisteollisuudestaan. Nimi Kastoria tarkoittaa majavien paikkaa, ja se johtuu kreikan sanasta kastori, majava, joka oli eläin, jota asui järven rannoilla. Ensimmäisen kerran kaupunki mainitaan historioitsija Ioannes Skylitzeksen kirjoituksessa 900-luvun lopulta. Kreikan sisällissodan jälkeen suuri joukko Kastorian kreikkalaisia muutti ulkomaille, ja 1980-luvulla New Yorkin seudulla heitä oli 25 000, ja he työskentelivät turkkureina.
+AIEMPI KYSYMYS: Mikä on Orestiada-järvi?
+AIEMPI VASTAUS (Livia):
+Ai niin, se järvi. Orestiada-järvi on Pohjois-Kreikassa Länsi-Makedoniassa sijaitseva järvi, jonka länsirannalla Kastorian kaupunki sijaitsee niemellä. Järveä ympäröivät kalkkikivivuoret, ja kaupunki on rakentunut sen rannalle laaksoon. Järvi on vaikuttanut kaupungin nimeen, sillä sen rannoilla asui aikoinaan majavia, ja kreikan sana kastori tarkoittaa majavaa. [[Kastorian]] historia, kirkot ja vanhat asuinrakennukset liittyvät kaikki järven maisemaan. Järven tarkkaa pinta-alaa tai syvyyttä en ole varma, joten jätän ne mainitsematta. Hyvä paikka istua rannalla ja katsella vettä, vaikka majavat olisivat jo poissa.
+KYSYMYS: Kerro lisää: Kastorian
+
+### 566
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / San Juan: Vapaus vuonna 1873] Isoisän matkavuonna 1873 Espanjan kansalliskokous päätti 22. maaliskuuta lakkauttaa orjuuden Puerto Ricossa. Päätös vapautti noin 29 000 orjaa, mikä oli tuolloin noin viisi prosenttia koko saaren väestöstä. Vapaus ei ollut ehdoton: entiset omistajat saivat korvauksen, ja vapautetut velvoitettiin jatkamaan työtä entisillä tiloillaan vielä kolme vuotta, minkä lisäksi täysiä kansalaisoikeuksia sai odottaa viisi vuotta. Päätöstä ajoi pitkäjänteinen orjuudenvastainen liike, ja lopullinen sysäys tuli, kun Espanjaan julistettiin tasavalta pari kuukautta aiemmin. Puerto Rico on sittemmin muistanut tapahtumaa vuosittaisena juhlapäivänä.
+- [Venezuela — maalehti / Historia: Lippu, joka nostettiin ensin väärässä satamassa] 1806–1821 — Francisco de Miranda oli ehtinyt palvella Espanjan armeijassa, taistella Yhdysvaltain vapaussodassa ja komentaa joukkoja Ranskan vallankumouksessa, kun hän 1806 nousi maihin La Vela de Coron satamassa. Paikalliset ottivat retkikunnan vastaan kylmästi, mutta mukana ollut kolmivärilippu nostettiin salkoon ensi kertaa Venezuelan maalla, ja siitä tuli myöhemmin kolmen valtion lipun pohja. Miranda johti Caracasia 1810–1812, mutta espanjalaiset saivat vallan takaisin ja hänet luovutettiin. Itsenäisyys ratkesi vasta Carabobossa 24. kesäkuuta 1821.
+AIEMPI KYSYMYS: Miksi Naoussa on Sankarikaupunki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on vakava aihe. Naousan kunnan virallinen nimi on Naousan sankarikaupunki, koska kuninkaallinen asetus nimesi sen sankarikaupungiksi vuonna 1955. Nimi kunnioittaa kaupungin asukkaiden taistelua [[Kreikan vapaussodassa]], joka alkoi vuonna 1821 ja jossa kreikkalaiset kamppailivat ottomaanien vallan päättämiseksi. Naousa oli yksi seudun kapinallisista kaupungeista, ja sen asukkaat kärsivät sodan aikana raskaita tappioita. Tapahtumien yksityiskohtia en ala käydä läpi tässä, mutta nimitys on säilynyt muistona asukkaiden uhrauksista. [[Naousa]] on siis nykyisinkin kaupunki, jonka nimessä muistetaan menneisyyttä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Kreikan vapaussodassa
+
+### 567
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+AIEMPI KYSYMYS: Miksi Naoussa on Sankarikaupunki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tämä on vakava aihe. Naousan kunnan virallinen nimi on Naousan sankarikaupunki, koska kuninkaallinen asetus nimesi sen sankarikaupungiksi vuonna 1955. Nimi kunnioittaa kaupungin asukkaiden taistelua [[Kreikan vapaussodassa]], joka alkoi vuonna 1821 ja jossa kreikkalaiset kamppailivat ottomaanien vallan päättämiseksi. Naousa oli yksi seudun kapinallisista kaupungeista, ja sen asukkaat kärsivät sodan aikana raskaita tappioita. Tapahtumien yksityiskohtia en ala käydä läpi tässä, mutta nimitys on säilynyt muistona asukkaiden uhrauksista. [[Naousa]] on siis nykyisinkin kaupunki, jonka nimessä muistetaan menneisyyttä. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Naousa
+
+### 568
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uzbekistan — maalehti / Tiede: Kahdeksantoista kysymystä naapurille] n. 980–1037 — Ibn Sina syntyi noin vuonna 980 Afshanan kylässä Buharan liepeillä. Kymmenvuotiaana hän osasi Koraanin ulkoa, ja seitsemäntoistavuotiaana hänestä tuli hallitsijan lääkäri. Hänen viisiosainen Lääketieteen kaanoninsa oli Euroopan yliopistoissa oppikirjana vielä 1600-luvun puolivälissä; siinä hän arveli näkymättömien pieneliöiden liittyvän tauteihin ja suositteli sairaiden eristämistä. Hänen ja al-Birunin kirjeenvaihto on säilynyt: al-Biruni aloitti kahdeksallatoista kysymyksellä, joista kymmenen oli Aristoteleen taivaita käsittelevän kirjan arvostelua.
+AIEMPI KYSYMYS: Mikä Mieza oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mieza oli antiikin kaupunki Keski-Makedoniassa Naousan lähellä, ja sen alueelta on löydetty arkeologisia kohteita. Alue liitetään Aleksanteri Suureen, jonka kerrotaan opiskelleen siellä [[Aristoteleen]] opissa nuorena. Kohdetta on myöhemmin tutkittu arkeologisesti, ja alueella on muun muassa hautoja sekä koulun paikaksi tulkittuja rakennuksia. Tarkkoja löytöjä ja ajoitusta en ole varma, koska tutkimus on jatkunut vuosikymmeniä. [[Mieza]] kuuluu osana Makedonian antiikin historiaan ja kertoo alueen merkityksestä jo ennen roomalaisaikaa. Kyllä siitä kelpaa kertoa, vaikka tuuli veikin osan muistista.
+KYSYMYS: Kerro lisää: Aristoteleen
+
+### 569
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+AIEMPI KYSYMYS: Mikä Mieza oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mieza oli antiikin kaupunki Keski-Makedoniassa Naousan lähellä, ja sen alueelta on löydetty arkeologisia kohteita. Alue liitetään Aleksanteri Suureen, jonka kerrotaan opiskelleen siellä [[Aristoteleen]] opissa nuorena. Kohdetta on myöhemmin tutkittu arkeologisesti, ja alueella on muun muassa hautoja sekä koulun paikaksi tulkittuja rakennuksia. Tarkkoja löytöjä ja ajoitusta en ole varma, koska tutkimus on jatkunut vuosikymmeniä. [[Mieza]] kuuluu osana Makedonian antiikin historiaan ja kertoo alueen merkityksestä jo ennen roomalaisaikaa. Kyllä siitä kelpaa kertoa, vaikka tuuli veikin osan muistista.
+KYSYMYS: Kerro lisää: Mieza
+
+### 570
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+AIEMPI KYSYMYS: Mikä on Naousan karnevaali?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se karnevaali. Naousan karnevaali on kaupungin tunnetuimpia perinteitä, ja se kuuluu Kreikan värikkäimpiin kansanjuhliin. Siinä esiintyvät perinteiset hahmot, joista tunnetuimpia ovat genitsarot ja bouloes, jotka kulkevat kaduilla juhla-asuissaan musiikin säestyksellä. Perimätiedon mukaan perinne liittyy Naousan vapaussodan aikaiseen historiaan, mutta tarkkaa taustaa ja ajoitusta en ole varma. Karnevaali on [[Naousan]] asukkaille tärkeä yhteisön juhla, ja se houkuttelee myös vierailijoita muualta Kreikasta. Pukuja ja tapoja on varmasti enemmän kuin tähän mahtuu.
+
+Katolta katsottuna kulkue näyttää väriläiskältä, joka liikkuu kadulla. Minä pysyn mieluummin kaiteella, jos soittajat ovat laiskoja.
+KYSYMYS: Kerro lisää: Naousan
+
+### 571
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+AIEMPI KYSYMYS: Millaista viiniä Naousan seudulla tehdään?
+AIEMPI VASTAUS (Livia):
+Kato, viini on tärkeä asia. Naousan seudulla tehdään pääasiassa punaviiniä, ja sen tunnetuin rypälelajike on [[xinomavro]]. Alue on virallisesti rajattu viininviljelyalue Kreikassa, ja viinit kantavat suojattua alkuperänimitystä. Naousan viinit tunnetaan happamuudestaan ja tanniineistaan, ja niiden sanotaan ikääntyvän hyvin. Viinitarhat sijaitsevat [[Vermion-vuorten]] rinteillä, missä korkeus ja ilmasto antavat rypäleille omaleimaisen luonteen. Tarkkoja tuotantomääriä en tiedä, enkä ala arvailla. Itse en juo viiniä, mutta kyllä minä sen tuoksun tunnistan.
+KYSYMYS: Kerro lisää: xinomavro
+
+### 572
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+AIEMPI KYSYMYS: Millaista viiniä Naousan seudulla tehdään?
+AIEMPI VASTAUS (Livia):
+Kato, viini on tärkeä asia. Naousan seudulla tehdään pääasiassa punaviiniä, ja sen tunnetuin rypälelajike on [[xinomavro]]. Alue on virallisesti rajattu viininviljelyalue Kreikassa, ja viinit kantavat suojattua alkuperänimitystä. Naousan viinit tunnetaan happamuudestaan ja tanniineistaan, ja niiden sanotaan ikääntyvän hyvin. Viinitarhat sijaitsevat [[Vermion-vuorten]] rinteillä, missä korkeus ja ilmasto antavat rypäleille omaleimaisen luonteen. Tarkkoja tuotantomääriä en tiedä, enkä ala arvailla. Itse en juo viiniä, mutta kyllä minä sen tuoksun tunnistan.
+KYSYMYS: Kerro lisää: Vermion-vuorten
+
+### 573
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Naoussa (ruoka)
+Tietoruudun teksti: Naousa on kaupunki Imathian alueella Keski-Makedoniassa Kreikassa Vermion-vuorten juurella. Vuoden 2021 väestönlaskennan mukaan kaupungissa asui 19 706 ihmistä ja saman niminen metropolialue 30 054. Vuonna 1955 kuninkaallinen asetus nimesi Naousan sankarikaupungiksi, ja sen jälkeen kunnan virallinen nimi on ollut Naousan sankarikaupunki, kunnioittamaan asukkaiden taistelua Kreikan vapaussodassa. Naousa on kuuluisa karnevaalistaan, hiihtokeskuksestaan ja viininvalmistuksestaan sekä antiikin Miezan alueella löydetyistä arkeologisista kohteista. Kaupunki sai sadassa vuodessa väkilukunsa lähes kaksinkertaiseksi, ja sen maine perustui sekä viineihin että koulutustoimintaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Mitä Kreikan vapaussota oli?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kreikan vapaussota oli Kreikan itsenäisyystaistelu [[Ottomaanien valtakuntaa]] vastaan, ja se alkoi vuonna 1821. Sodassa kreikkalaiset kapinalliset pyrkivät vapautumaan ottomaanien vallasta, ja taistelut kestivät usean vuoden ajan. Eurooppalaiset suurvallat, kuten Britannia, Ranska ja Venäjä, tukivat lopulta kreikkalaisia, ja 1830-luvulla syntyi itsenäinen Kreikan valtio. Sota vaati paljon uhreja, ja monet kaupungit kärsivät tuhoa, minkä vuoksi tapahtumat ovat edelleen tärkeä osa kreikkalaista muistia. Tarkat päivämäärät ja yksittäisten taistelujen yksityiskohdat jätän mainitsematta. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ottomaanien valtakuntaa
+
+### 574
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+AIEMPI KYSYMYS: Miksi hopea oli Ateenalle tärkeää?
+AIEMPI VASTAUS (Livia):
+Kato, rahasta puhutaan. Hopea oli Ateenalle tärkeää, koska [[Lavrion]] hopeakaivokset olivat yksi kaupunkivaltion tärkeimmistä tulonlähteistä ja hopeaa käytettiin pääasiassa rahoihin. Kun noin vuonna 483 eaa. löydettiin suuri hopeasuoni, [[Themistokles]] sai ateenalaiset käyttämään sen tuotot laivaston laajentamiseen kahteensataan [[trireemiin]]. Hopea rahoitti siis sekä kaupankäyntiä että puolustusta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Lavrion
+
+### 575
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+AIEMPI KYSYMYS: Miksi hopea oli Ateenalle tärkeää?
+AIEMPI VASTAUS (Livia):
+Kato, rahasta puhutaan. Hopea oli Ateenalle tärkeää, koska [[Lavrion]] hopeakaivokset olivat yksi kaupunkivaltion tärkeimmistä tulonlähteistä ja hopeaa käytettiin pääasiassa rahoihin. Kun noin vuonna 483 eaa. löydettiin suuri hopeasuoni, [[Themistokles]] sai ateenalaiset käyttämään sen tuotot laivaston laajentamiseen kahteensataan [[trireemiin]]. Hopea rahoitti siis sekä kaupankäyntiä että puolustusta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Themistokles
+
+### 576
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+AIEMPI KYSYMYS: Miksi hopea oli Ateenalle tärkeää?
+AIEMPI VASTAUS (Livia):
+Kato, rahasta puhutaan. Hopea oli Ateenalle tärkeää, koska [[Lavrion]] hopeakaivokset olivat yksi kaupunkivaltion tärkeimmistä tulonlähteistä ja hopeaa käytettiin pääasiassa rahoihin. Kun noin vuonna 483 eaa. löydettiin suuri hopeasuoni, [[Themistokles]] sai ateenalaiset käyttämään sen tuotot laivaston laajentamiseen kahteensataan [[trireemiin]]. Hopea rahoitti siis sekä kaupankäyntiä että puolustusta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: trireemiin
+
+### 577
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Historian hetki: Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä] 10.4.1896 — Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hop…
+- [Ateena — kohdekartta / Kohdekartta: Louis 1896] Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä Marathonin kylästä ja saapuu 10. huhtikuuta 1896 Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti voittajalle hopeamaljan. Kr…
+AIEMPI KYSYMYS: Mitä Themistokles teki hopealla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Marathonin]] taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. löytyneen suuren hopeasuonen tuotot laivaston laajentamiseen. Tavoitteena oli kaksisataa [[trireemiä]], ja hopea tuli [[Lavrion]] kaivoksista. Näin Ateenalle rakentui laivasto, jota se tarvitsi puolustuksessaan. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Marathonin
+
+### 578
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+AIEMPI KYSYMYS: Mitä Themistokles teki hopealla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Marathonin]] taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. löytyneen suuren hopeasuonen tuotot laivaston laajentamiseen. Tavoitteena oli kaksisataa [[trireemiä]], ja hopea tuli [[Lavrion]] kaivoksista. Näin Ateenalle rakentui laivasto, jota se tarvitsi puolustuksessaan. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: trireemiä
+
+### 579
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+AIEMPI KYSYMYS: Mitä trireemi oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Trireemi oli antiikin Kreikassa käytetty soutusotalaiva, jossa oli kolme riviä airoja päällekkäin. Sen keulassa oli vahvistettu kokka, jolla vihollisen alus yritettiin törmäyksellä vahingoittaa. Ateena rakennutti niitä runsaasti [[Lavrion]] hopealla, ja niistä tuli sen merivallan selkäranka esimerkiksi [[Salamiin]] meritaistelussa. Kolme kerrosta soutajia, ja minä valitan jo yhdestä siivestä.
+KYSYMYS: Kerro lisää: Salamiin
+
+### 580
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+AIEMPI KYSYMYS: Mikä Marathonin taistelu oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Marathonin taistelu käytiin vuonna 490 eaa. [[Attikassa]], ja siinä ateenalaiset joukot voittivat maihin nousseen persialaisarmeijan. Tarinan mukaan sanansaattaja juoksi voitosta kertomaan Ateenaan, ja siitä on peräisin nykyinen [[maratonjuoksu]]; kertomus on kuitenkin pikemmin legenda kuin varma historia. Taistelun jälkeen [[Themistokles]] sai ateenalaiset suuntaamaan hopeatulot laivastoon. Pitkä juttu, mutta lyhyempi kuin se juoksu.
+KYSYMYS: Kerro lisää: Attikassa
+
+### 581
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavrion hopeakaivokset (kauppa)
+Tietoruudun teksti: Lavrio on kaupunki Attikan kaakkoisosassa Kreikassa, ja se kuuluu Ateenan suurkaupunkialueeseen. Laurium tunnettiin antiikissa hopeakaivoksistaan, jotka olivat yksi Ateenan valtion tärkeimmistä tulonlähteistä, ja hopeaa käytettiin pääasiassa rahoihin. Kaupunki on noin 60 kilometriä Ateenan keskustasta kaakkoon lahdella, josta näkee Makronisos-saaren. Varhaisimmat todisteet louhinnasta ovat pronssikauden alusta, noin vuodelta 3200 eaa., ja järjestelmällinen louhinta näyttää alkaneen 500-luvulla eaa. Peisistratoksen aikana. Marathonin taistelun jälkeen Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Košice: Euroopan vanhin maraton] Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin maraton ja yksi maailman vanhimmista, heti Bostonin maratonin jälkeen. Sen järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä Vojtech Bukovský Pariisin olympialaisten innoittamana. Kisan ovat voittaneet muun muassa Juan Carlos Zabala 1931, joka voitti seuraavana vuonna olympiamaratonin, sekä Abebe Bikila 1961. Reitti on tasainen ja kulkee kahtena kierroksena kaupungin keskustassa.
+- [Tromssa — kaupunkilehti / Valo: Kesällä aurinko ei laske ollenkaan] Toukokuun 20. päivästä heinäkuun 22. päivään aurinko ei käy Tromssassa horisontin alapuolella lainkaan. Se kiertää taivasta ympäri ja on yölläkin ylhäällä, joten kello ei kerro mitään valosta. Ihmiset tekevät töitä puutarhassa keskiyöllä, ja lapset kysyvät, milloin on ilta. Monessa ikkunassa on pimennysverho. Kaupungissa järjestetään keskiyön aurinkoon ajoitettuja konsertteja ja maratonjuoksu, joka lähtee vasta puoli yhdeltätoista illalla.
+AIEMPI KYSYMYS: Mikä Marathonin taistelu oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. Marathonin taistelu käytiin vuonna 490 eaa. [[Attikassa]], ja siinä ateenalaiset joukot voittivat maihin nousseen persialaisarmeijan. Tarinan mukaan sanansaattaja juoksi voitosta kertomaan Ateenaan, ja siitä on peräisin nykyinen [[maratonjuoksu]]; kertomus on kuitenkin pikemmin legenda kuin varma historia. Taistelun jälkeen [[Themistokles]] sai ateenalaiset suuntaamaan hopeatulot laivastoon. Pitkä juttu, mutta lyhyempi kuin se juoksu.
+KYSYMYS: Kerro lisää: maratonjuoksu
+
+### 582
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mikä hammasraide on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tekniikkaa. Hammasraide on rautatie, jossa kiskojen välissä on hammastettu kisko, johon veturin tai vaunun hammaspyörä tarttuu, jotta juna pystyy kulkemaan hyvin jyrkkiä rinteitä ilman luistamista. Kreikassa [[Diakoptosta]] [[Kalavrytaan]] kulkeva hammasraide rakennettiin italialaisten insinöörien toimesta vuosina 1885–1895. Minä lennän, mutta jyrkkä mäki kuulostaa kyllä raskaalta.
+KYSYMYS: Kerro lisää: Diakoptosta
+
+### 583
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mikä hammasraide on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tekniikkaa. Hammasraide on rautatie, jossa kiskojen välissä on hammastettu kisko, johon veturin tai vaunun hammaspyörä tarttuu, jotta juna pystyy kulkemaan hyvin jyrkkiä rinteitä ilman luistamista. Kreikassa [[Diakoptosta]] [[Kalavrytaan]] kulkeva hammasraide rakennettiin italialaisten insinöörien toimesta vuosina 1885–1895. Minä lennän, mutta jyrkkä mäki kuulostaa kyllä raskaalta.
+KYSYMYS: Kerro lisää: Kalavrytaan
+
+### 584
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mitä Agia Lavrassa tapahtui vuonna 1821?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kreikan vapaussodan alussa [[Vanhan Patran]] piispa [[Germanos III]] nosti Agia Lavran luostarissa kapinan lipun 21. maaliskuuta 1821. Tapahtuma liitetään perinteisesti [[Kreikan vapaussodan]] alkuun, vaikka historioitsijat pitävät kertomusta osin kansallisena legendana; en ole tästä aivan varma. Lippu ylös, kyyhky alas, vähän lepäämään.
+KYSYMYS: Kerro lisää: Vanhan Patran
+
+### 585
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Rio Grande do Sulin taidemuseo] 1954 Osavaltion taidemuseo MARGS perustettiin asetuksella vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. Kulttuuriasioista vastannut José Mariano de Freitas Beck pyysi työhön São Paulossa syntyneen taidemaalarin Ado Malagolin, joka oli juuri saapunut kaupunkiin opettamaan taideinstituuttiin. Malagoli kokosi ensin osavaltion virastoihin hajaantuneet maalaukset yhteen ja osti sitten lisää São Paulosta ja paikallisilta taiteilijoilta. Museo avattiin yleisölle 1955, ja sen ensimmäinen näyttelytila oli Theatro São Pedron lämpiö. Esillä oli noin 120 teosta. 1960-luvulla kokoelma muutti huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen taloonsa. Osavaltion rahoitus loppui, kun Malagoli ero…
+AIEMPI KYSYMYS: Mitä Agia Lavrassa tapahtui vuonna 1821?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kreikan vapaussodan alussa [[Vanhan Patran]] piispa [[Germanos III]] nosti Agia Lavran luostarissa kapinan lipun 21. maaliskuuta 1821. Tapahtuma liitetään perinteisesti [[Kreikan vapaussodan]] alkuun, vaikka historioitsijat pitävät kertomusta osin kansallisena legendana; en ole tästä aivan varma. Lippu ylös, kyyhky alas, vähän lepäämään.
+KYSYMYS: Kerro lisää: Germanos III
+
+### 586
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / San Juan: Vapaus vuonna 1873] Isoisän matkavuonna 1873 Espanjan kansalliskokous päätti 22. maaliskuuta lakkauttaa orjuuden Puerto Ricossa. Päätös vapautti noin 29 000 orjaa, mikä oli tuolloin noin viisi prosenttia koko saaren väestöstä. Vapaus ei ollut ehdoton: entiset omistajat saivat korvauksen, ja vapautetut velvoitettiin jatkamaan työtä entisillä tiloillaan vielä kolme vuotta, minkä lisäksi täysiä kansalaisoikeuksia sai odottaa viisi vuotta. Päätöstä ajoi pitkäjänteinen orjuudenvastainen liike, ja lopullinen sysäys tuli, kun Espanjaan julistettiin tasavalta pari kuukautta aiemmin. Puerto Rico on sittemmin muistanut tapahtumaa vuosittaisena juhlapäivänä.
+- [Ouro Preto — kaupunkilehti / Salaliitto vuoristokaupungissa: Kultaveron uhka joka suututti eliitin] Portugalin kruunu vaati viidenneksen, "quinton", kaikesta löydetystä kullasta, ja kun kaivokset alkoivat 1780-luvulla ehtyä, siirtomaahallinto uhkasi periä puuttuvan osuuden pakkoverolla nimeltä derrama. Uhka raivostutti Minas Geraisin varakasta eliittiä, joka oli jo kyllästynyt Portugalin kireään talouspolitiikkaan ja verotukseen. Vuosina 1788–1789 joukko lakimiehiä, upseereita ja runoilijoita alkoi salaa suunnitella provinssin itsenäistämistä Portugalista Yhdysvaltain vapaussodan innoittamana; Vila Rica, kaupungeista rikkain ja koulutetuin, oli suunnitelman luonnollinen keskus.
+AIEMPI KYSYMYS: Mitä Agia Lavrassa tapahtui vuonna 1821?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kreikan vapaussodan alussa [[Vanhan Patran]] piispa [[Germanos III]] nosti Agia Lavran luostarissa kapinan lipun 21. maaliskuuta 1821. Tapahtuma liitetään perinteisesti [[Kreikan vapaussodan]] alkuun, vaikka historioitsijat pitävät kertomusta osin kansallisena legendana; en ole tästä aivan varma. Lippu ylös, kyyhky alas, vähän lepäämään.
+KYSYMYS: Kerro lisää: Kreikan vapaussodan
+
+### 587
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mikä oli Achaian frankkiruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Achaian frankkiruhtinaskunta oli läntisten ristiretkeläisten perustama valtio [[Peloponnesoksella]] 1200-luvun alussa, [[neljännen ristiretken]] jälkeisessä sekasorrossa. Kalavrytan paronikunta oli yksi sen alueista, ja 1270-luvulla kaupunki valloitettiin takaisin [[bysanttilaisille]]. Paronit tulivat ja menivät, kyyhkyt pysyivät.
+KYSYMYS: Kerro lisää: Peloponnesoksella
+
+### 588
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mikä oli Achaian frankkiruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Achaian frankkiruhtinaskunta oli läntisten ristiretkeläisten perustama valtio [[Peloponnesoksella]] 1200-luvun alussa, [[neljännen ristiretken]] jälkeisessä sekasorrossa. Kalavrytan paronikunta oli yksi sen alueista, ja 1270-luvulla kaupunki valloitettiin takaisin [[bysanttilaisille]]. Paronit tulivat ja menivät, kyyhkyt pysyivät.
+KYSYMYS: Kerro lisää: neljännen ristiretken
+
+### 589
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mikä oli Achaian frankkiruhtinaskunta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Achaian frankkiruhtinaskunta oli läntisten ristiretkeläisten perustama valtio [[Peloponnesoksella]] 1200-luvun alussa, [[neljännen ristiretken]] jälkeisessä sekasorrossa. Kalavrytan paronikunta oli yksi sen alueista, ja 1270-luvulla kaupunki valloitettiin takaisin [[bysanttilaisille]]. Paronit tulivat ja menivät, kyyhkyt pysyivät.
+KYSYMYS: Kerro lisää: bysanttilaisille
+
+### 590
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Mitä Kreikan vapaussota oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kreikan vapaussota oli 1820-luvulla käyty kapina, jossa kreikkalaiset pyrkivät irrottautumaan [[Ottomaanien valtakunnan]] vallasta. Se alkoi vuonna 1821, ja sen käänteisiin kuului muun muassa [[Navarinon]] meritaistelu vuonna 1827, jossa Britannian, Ranskan ja Venäjän laivasto tuki kreikkalaisia. Lopulta Kreikasta tuli itsenäinen valtio, jonka itsenäisyys vahvistui 1830-luvun alkuun mennessä. Pitkä sota, lyhyt tiivistys, ja minä ansaitsen jyvän.
+KYSYMYS: Kerro lisää: Ottomaanien valtakunnan
+
+### 591
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mitä Kreikan vapaussota oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kreikan vapaussota oli 1820-luvulla käyty kapina, jossa kreikkalaiset pyrkivät irrottautumaan [[Ottomaanien valtakunnan]] vallasta. Se alkoi vuonna 1821, ja sen käänteisiin kuului muun muassa [[Navarinon]] meritaistelu vuonna 1827, jossa Britannian, Ranskan ja Venäjän laivasto tuki kreikkalaisia. Lopulta Kreikasta tuli itsenäinen valtio, jonka itsenäisyys vahvistui 1830-luvun alkuun mennessä. Pitkä sota, lyhyt tiivistys, ja minä ansaitsen jyvän.
+KYSYMYS: Kerro lisää: Navarinon
+
+### 592
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mikä Patras on?
+AIEMPI VASTAUS (Livia):
+No niin, Patras. Patras on Peloponnesoksen luoteiskulmassa sijaitseva satamakaupunki ja yksi Kreikan suurimmista kaupungeista. Se tunnetaan vilkkaasta satamastaan, josta kulkee yhteyksiä Italiaan, sekä [[Patrasin karnevaalista]]. Kalavryta sijaitsee noin 40 kilometriä kaupungista kaakkoon, ja alue kuuluu [[Peloponnesoksen]] pohjoisosaan. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Patrasin karnevaalista
+
+### 593
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalavryta (tekniikka)
+Tietoruudun teksti: Kalavryta on kaupunki ja kunta Achaian alueen vuoristoisessa itä-keskiosassa Kreikassa. Kaupunki on Vouraikos-joen oikealla rannalla, 24 kilometriä Aigiosta etelään, 40 kilometriä Patrasista kaakkoon ja 62 kilometriä Tripolista luoteeseen. Kalavryta on Diakopto–Kalavryta-hammasraiteen eteläinen päätepiste, jonka italialaiset insinöörit rakensivat vuosina 1885–1895. Keskiajan lopulla kaupunki oli Achaian frankkiruhtinaskunnan Kalavrytan paronikunnan keskus, ja se valloitettiin uudelleen bysanttilaisille 1270-luvulla. Kreikan vapaussodan alussa Kalavryta oli merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III nosti kapinan lipun 21. maaliskuuta 1821.
+AIEMPI KYSYMYS: Mikä Patras on?
+AIEMPI VASTAUS (Livia):
+No niin, Patras. Patras on Peloponnesoksen luoteiskulmassa sijaitseva satamakaupunki ja yksi Kreikan suurimmista kaupungeista. Se tunnetaan vilkkaasta satamastaan, josta kulkee yhteyksiä Italiaan, sekä [[Patrasin karnevaalista]]. Kalavryta sijaitsee noin 40 kilometriä kaupungista kaakkoon, ja alue kuuluu [[Peloponnesoksen]] pohjoisosaan. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Peloponnesoksen
+
+### 594
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+AIEMPI KYSYMYS: Mitä mastiksi on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mastiksi on [[mastiksipuun]] kuorta viiltämällä saatava hartsi, joka kovettuu läpikuultaviksi pisaroiksi. Sitä tuotetaan Chioksen eteläosassa [[Mastichochória]]-alueella, ja sitä käytetään mausteena leivonnaisissa ja makeisissa, juomissa sekä perinteisesti myös purukumina. Tsourekissakin sitä kuulemma joskus on, ja siitä minä unelmoin.
+KYSYMYS: Kerro lisää: mastiksipuun
+
+### 595
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+AIEMPI KYSYMYS: Mitä mastiksi on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mastiksi on [[mastiksipuun]] kuorta viiltämällä saatava hartsi, joka kovettuu läpikuultaviksi pisaroiksi. Sitä tuotetaan Chioksen eteläosassa [[Mastichochória]]-alueella, ja sitä käytetään mausteena leivonnaisissa ja makeisissa, juomissa sekä perinteisesti myös purukumina. Tsourekissakin sitä kuulemma joskus on, ja siitä minä unelmoin.
+KYSYMYS: Kerro lisää: Mastichochória
+
+### 596
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä Nea Moni on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nea Moni on Chioksen saarella sijaitseva [[Bysantin]] ajan luostari, joka perustettiin 1000-luvulla ja joka kuuluu [[UNESCOn]] maailmanperintökohteisiin. Se tunnetaan erityisesti keskiaikaisista [[mosaiikeistaan]]. Luostari on yksi saaren tärkeimmistä nähtävyyksistä. Mosaiikit ovat siivekkäällekin vaikuttavia, vaikka ylhäältä näkee vain kattoa.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 597
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+AIEMPI KYSYMYS: Mikä Nea Moni on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nea Moni on Chioksen saarella sijaitseva [[Bysantin]] ajan luostari, joka perustettiin 1000-luvulla ja joka kuuluu [[UNESCOn]] maailmanperintökohteisiin. Se tunnetaan erityisesti keskiaikaisista [[mosaiikeistaan]]. Luostari on yksi saaren tärkeimmistä nähtävyyksistä. Mosaiikit ovat siivekkäällekin vaikuttavia, vaikka ylhäältä näkee vain kattoa.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 598
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+AIEMPI KYSYMYS: Mikä Nea Moni on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nea Moni on Chioksen saarella sijaitseva [[Bysantin]] ajan luostari, joka perustettiin 1000-luvulla ja joka kuuluu [[UNESCOn]] maailmanperintökohteisiin. Se tunnetaan erityisesti keskiaikaisista [[mosaiikeistaan]]. Luostari on yksi saaren tärkeimmistä nähtävyyksistä. Mosaiikit ovat siivekkäällekin vaikuttavia, vaikka ylhäältä näkee vain kattoa.
+KYSYMYS: Kerro lisää: mosaiikeistaan
+
+### 599
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Mikä Chioksen verilöyly oli?
+AIEMPI VASTAUS (Livia):
+Hmm, tää on raskas aihe. Chioksen verilöyly tapahtui vuonna 1822 Kreikan vapaussodan aikana, kun saari oli osa [[Ottomaanien]] valtakuntaa. Ottomaanien joukkojen iskun seurauksena suuri osa saaren asukkaista surmattiin, pakeni tai joutui orjuutetuiksi, ja lähteiden välillä uhriluvuissa on suurta vaihtelua. Tapahtuma järkytti eurooppalaista yleisöä, ja siitä syntyi muun muassa [[Eugène Delacroix'n]] tunnettu maalaus. Siitä on yli kaksisataa vuotta, ja saari on sittemmin ollut osa Kreikkaa. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ottomaanien
+
+### 600
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Matisse ja Tangerin valo] Eugène Delacroix tuli Marokkoon 1832 kreivi de Mornayn seurueessa ja palasi luonnoksiinsa loppuiäkseen; noin kahdeksankymmentä öljyvärityötä avasi eurooppalaisille pohjoisafrikkalaisen valon. Cézannen mukaan se meni silmään kuin lasillinen viiniä kurkkuun ja humallutti heti. Perässä tuli Henri Matisse, joka majoittui aina Grand Hôtel Villa de Franceen ja työskenteli kaupungissa talvina 1912–1913. Hän kirjoitti löytäneensä Marokosta täsmälleen ne maisemat, jotka Delacroix oli maalannut. Hotellin ikkunasta syntyi sininen La Fenêtre à Tanger.
+AIEMPI KYSYMYS: Mikä Chioksen verilöyly oli?
+AIEMPI VASTAUS (Livia):
+Hmm, tää on raskas aihe. Chioksen verilöyly tapahtui vuonna 1822 Kreikan vapaussodan aikana, kun saari oli osa [[Ottomaanien]] valtakuntaa. Ottomaanien joukkojen iskun seurauksena suuri osa saaren asukkaista surmattiin, pakeni tai joutui orjuutetuiksi, ja lähteiden välillä uhriluvuissa on suurta vaihtelua. Tapahtuma järkytti eurooppalaista yleisöä, ja siitä syntyi muun muassa [[Eugène Delacroix'n]] tunnettu maalaus. Siitä on yli kaksisataa vuotta, ja saari on sittemmin ollut osa Kreikkaa. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Eugène Delacroix'n
+
+### 601
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+AIEMPI KYSYMYS: Mitä UNESCOn maailmanperintö tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— UNESCOn maailmanperintö tarkoittaa [[YK:n]] kasvatus-, tiede- ja kulttuurijärjestön ylläpitämää luetteloa kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Kohteet voivat olla kulttuuri- tai luontokohteita, ja luetteloon hyväksytty kohde on kansainvälisen suojelun piirissä, jolloin valtio sitoutuu huolehtimaan sen säilymisestä. Chioksella tällainen kohde on [[Nea Monin]] luostari. Eihän ne kyyhkyjä lue, mutta kohteita kannattaa katsoa.
+KYSYMYS: Kerro lisää: YK:n
+
+### 602
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Muinaisuus: Hahmojen nimet ladottiin kiveen] Nea Pafos perustettiin 300-luvun eaa. lopulla, ja roomalaisajalla se oli saaren hallinnollinen keskus. Varakkaiden talojen lattiat päällystettiin mosaiikilla. Aionin talon lattia löytyi vasta vuonna 1983, kun puolalainen retkikunta kaivoi esiin 68 neliömetrin huoneen; kuvakenttää siitä on 16 neliömetriä, ja se jakautuu viiteen kohtaukseen. Kivenpalat eli tesserat ovat 2–5 millimetrin kokoisia. Talo on saanut nimensä keskimmäisen kohtauksen tuomarista: Aion on ikuisen ajan jumala, ja hän ratkaisee kauneuskilpailun, jossa Kassiopeia kilpailee merenneitoja vastaan. Aihe on harvinainen — muita esityksiä tunnetaan vain kaksi, molemmat Syyriasta. Lattian erikoisuus on se, että lähes jokaisen hahm…
+AIEMPI KYSYMYS: Mitä UNESCOn maailmanperintö tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— UNESCOn maailmanperintö tarkoittaa [[YK:n]] kasvatus-, tiede- ja kulttuurijärjestön ylläpitämää luetteloa kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Kohteet voivat olla kulttuuri- tai luontokohteita, ja luetteloon hyväksytty kohde on kansainvälisen suojelun piirissä, jolloin valtio sitoutuu huolehtimaan sen säilymisestä. Chioksella tällainen kohde on [[Nea Monin]] luostari. Eihän ne kyyhkyjä lue, mutta kohteita kannattaa katsoa.
+KYSYMYS: Kerro lisää: Nea Monin
+
+### 603
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Hylje, joka synnyttää luolassa] nykyään — Munkkihylje on Välimeren ainoa hylje ja yksi maailman harvinaisimmista merinisäkkäistä: koko kannaksi arvioidaan 800–1 000 yksilöä. Niistä 250–300 elää Kreikan vesillä, ja tihein joukko on Gyároksen asumattomalla saarella. Vielä 1700-luvulla munkkihylkeet makasivat avoimilla rannoilla, mutta nykyään emo hakeutuu synnyttämään merenalaisiin luoliin, joihin on vaikea päästä. Poikanen on syntyessään noin metrin mittainen ja mustanruskean karvan peitossa. Alonnisoksen ympärille perustettiin vuonna 1992 merikansallispuisto juuri hylkeitä varten.
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Mitä Egeanmeri on?
+AIEMPI VASTAUS (Livia):
+Ai se. Egeanmeri on [[Välimeren]] osa Kreikan ja Turkin välissä. Siellä on tuhansia saaria, joista tunnettuja ovat esimerkiksi [[Kykladit]], ja merialue on ollut antiikista asti tärkeä kauppa- ja merenkulkureitti. Chios sijaitsee sen pohjoisosassa. Ylhäältä se on kyllä parasta katseltavaa, ihan sama mitä kartta sanoo.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 604
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chios ja mastiksi (kauppa)
+Tietoruudun teksti: Chios eli Scio on Kreikan viidenneksi suurin saari, ja se sijaitsee pohjoisella Egeanmerellä. Saarta erottaa Anatolian mantereesta Chioksen salmi. Chios on tunnettu mastiksihartsin viennistä, ja sen lempinimi on mastiksisaari. Nähtävyyksiin kuuluvat keskiaikaiset kylät ja 1000-luvun Nea Monin luostari, joka on UNESCOn maailmanperintökohde. Saaren pääkaupunki on Chios eli Chora, ja mastiksia tuottava eteläinen alue on Mastichochória. Saari kuului Ottomaanien valtakuntaan vuoteen 1912 asti. Vapaussodan aikana vuonna 1822 saari koki Chioksen verilöylyn.
+AIEMPI KYSYMYS: Mitä Egeanmeri on?
+AIEMPI VASTAUS (Livia):
+Ai se. Egeanmeri on [[Välimeren]] osa Kreikan ja Turkin välissä. Siellä on tuhansia saaria, joista tunnettuja ovat esimerkiksi [[Kykladit]], ja merialue on ollut antiikista asti tärkeä kauppa- ja merenkulkureitti. Chios sijaitsee sen pohjoisosassa. Ylhäältä se on kyllä parasta katseltavaa, ihan sama mitä kartta sanoo.
+KYSYMYS: Kerro lisää: Kykladit
+
+### 605
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Miksi Zagorin kylät oli yhdistetty kivisilloilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zagori sijaitsee [[Pindoksen]] vuoristossa, ja sen 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. Syy oli käytännöllinen: vuoristossa joet ja purot katkaisevat kulkuväylät, ja kaarevat kivisillat kestävät virtaavaa vettä, joten ne mahdollistivat liikkumisen ja kaupan kylien välillä. Alue kuuluu nykyään [[UNESCOn]] maailmanperintöön. Minä ylitän purot lentämällä, mutta kiitos silloille silti.
+KYSYMYS: Kerro lisää: Pindoksen
+
+### 606
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Miksi Zagorin kylät oli yhdistetty kivisilloilla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Zagori sijaitsee [[Pindoksen]] vuoristossa, ja sen 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. Syy oli käytännöllinen: vuoristossa joet ja purot katkaisevat kulkuväylät, ja kaarevat kivisillat kestävät virtaavaa vettä, joten ne mahdollistivat liikkumisen ja kaupan kylien välillä. Alue kuuluu nykyään [[UNESCOn]] maailmanperintöön. Minä ylitän purot lentämällä, mutta kiitos silloille silti.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 607
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Mitä Zagorin ulkomaankauppa oli?
+AIEMPI VASTAUS (Livia):
+Tuota, tää on vähän hankala. Tarkkaa ulkomaankaupan sisältöä en tunne varmasti. Tiedetään, että 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden zagorilaisten lähettämiin rahoihin ja testamentteihin, ja muuttajat kuuluivat laajaan kreikkalaiseen [[diasporaan]] eri puolilla [[Eurooppaa]]; tarkemmista kauppakohteista en ole varma. Näissä asioissa kyyhky pysyy mieluummin varovaisena.
+KYSYMYS: Kerro lisää: diasporaan
+
+### 608
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Clausenin poika, joka ehdotti yhteistä Eurooppaa] Robert Schuman syntyi 29. kesäkuuta 1886 Luxemburgin Clausenissa, talossa, jota hänen vanhempansa vuokrasivat rue Jules Wilhelmin varrelta. Isä oli kotoisin Lotaringiasta ja äiti luxemburgilainen; poika puhui äidinkielenään luxemburgia ja kävi koulua Luxemburgin Athénée-lyseossa. Ranskan ulkoministerinä hän ehdotti 9. toukokuuta 1950, että Ranskan ja Länsi-Saksan hiili ja teräs asetetaan yhteisen viranomaisen alle, jotta sota maiden välillä kävisi aineellisesti mahdottomaksi. Päivää juhlitaan nykyään EU:ssa Eurooppa-päivänä. Valtio osti syntymätalon 1985, ja Euroopan parlamentti on kunnostanut sen.
+- [Etiopia — maalehti / Musiikki: Mies, joka keksi nuotit ennen Eurooppaa] 505–571 — Pyhä Yared syntyi Aksumissa 505 ja sävelsi zeman, Etiopian kirkon kirkkolaulun, sekä merkintätavan, jolla se kirjoitettiin muistiin. Perimätiedon mukaan poikana hän ei oppinut mitään, kunnes näki toukan yrittävän puuhun yhä uudelleen ja alkoi lukea. Kuningas Gebre Meskelin hovissa hänestä tuli kuuluisa, mutta hän pyysi lupaa lähteä opettamaan ja rukoilemaan. Yared kokosi Deggua-laulukirjan ja kuoli 66-vuotiaana 571 luolassa Simien-vuorilla. Hänen laulunsa kaikuvat kirkoissa yhä.
+- [Saksa — maalehti / Musiikki: Pianotähti kiersi Eurooppaa jo lapsena] Clara Wieck soitti ensimmäisen julkisen konserttinsa Leipzigissa yhdeksänvuotiaana ja kiersi teini-ikäisenä Euroopan konserttisaleja kuin tähti ainakin — Wienissä hänen kunniakseen leivottiin kakkuja. Hän sävelsi itse, soitti ulkomuistista aikana jolloin se oli ennenkuulumatonta, ja jatkoi esiintymistä kuusikymmentä vuotta samalla kun kasvatti kahdeksan lasta. Saksa painoi hänen kuvansa sadan markan seteliin 1989 — harva pianisti on päätynyt rahaan.
+AIEMPI KYSYMYS: Mitä Zagorin ulkomaankauppa oli?
+AIEMPI VASTAUS (Livia):
+Tuota, tää on vähän hankala. Tarkkaa ulkomaankaupan sisältöä en tunne varmasti. Tiedetään, että 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden zagorilaisten lähettämiin rahoihin ja testamentteihin, ja muuttajat kuuluivat laajaan kreikkalaiseen [[diasporaan]] eri puolilla [[Eurooppaa]]; tarkemmista kauppakohteista en ole varma. Näissä asioissa kyyhky pysyy mieluummin varovaisena.
+KYSYMYS: Kerro lisää: Eurooppaa
+
+### 609
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Mikä Vikosin rotko on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo vähän. Vikosin rotko on [[Pindoksen]] vuoristossa Zagorin alueella sijaitseva syvä rotko, joka kuuluu [[Aoos-joen]] ja Vikosin rotkon kansallispuistoon. Se on suosittu vaellus- ja luontokohde. Tarkkoja syvyys- ja pituuslukuja en ole varma, joten en kerro niitä. Rotkon yllä lentäminen on minun lajiani, vaellus ei.
+KYSYMYS: Kerro lisää: Aoos-joen
+
+### 610
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Mikä Pindos on?
+AIEMPI VASTAUS (Livia):
+Just niin, Pindos. Pindos on Luoteis-Kreikassa kulkeva vuoristoketju, joka ulottuu myös [[Albaniaan]] ja jota voi kutsua Kreikan eräänlaiseksi selkärangaksi. Zagori sijaitsee sen [[Epeiroksen]] puoleisessa osassa, ja alueella on jyrkkiä rinteitä, rotkoja ja kaksi kansallispuistoa. Selkäranka kuulostaa vakavalta, mutta ylhäältä se kyllä näyttää siltä.
+KYSYMYS: Kerro lisää: Albaniaan
+
+### 611
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Mikä Pindos on?
+AIEMPI VASTAUS (Livia):
+Just niin, Pindos. Pindos on Luoteis-Kreikassa kulkeva vuoristoketju, joka ulottuu myös [[Albaniaan]] ja jota voi kutsua Kreikan eräänlaiseksi selkärangaksi. Zagori sijaitsee sen [[Epeiroksen]] puoleisessa osassa, ja alueella on jyrkkiä rinteitä, rotkoja ja kaksi kansallispuistoa. Selkäranka kuulostaa vakavalta, mutta ylhäältä se kyllä näyttää siltä.
+KYSYMYS: Kerro lisää: Epeiroksen
+
+### 612
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Miten kivinen kaarisilta pysyy pystyssä?
+AIEMPI VASTAUS (Livia):
+No jopas, insinöörikysymys. Kaarisilta kantaa kuormansa kaarimuodon avulla: paino ohjautuu kaarta pitkin alas ja ulospäin kohti tukia, jolloin kivet puristuvat toisiaan vasten. Kivi kestää puristusta hyvin mutta vetoa huonosti, ja kaari pitää rasituksen puristuksena, minkä vuoksi perinteiset kivisillat voivat kestää vuosisatoja. Rakennetta käyttivät laajasti jo [[roomalaiset]], ja se näkyy myös [[Zagorin]] silloissa. Painovoimaa minä kunnioitan, vaikka se ei kyyhkyä kovin usein vaivaa.
+KYSYMYS: Kerro lisää: roomalaiset
+
+### 613
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zagorin kivisillat (tekniikka)
+Tietoruudun teksti: Zagori on alue, kunta ja UNESCOn maailmanperintökohde Pindoksen vuoristossa Epeiroksessa Luoteis-Kreikassa. Sen pinta-ala on noin tuhat neliökilometriä ja siihen kuuluu 46 kylää, joita kutsutaan Zagorin kyliksi. Väkeä alueella on noin 3 400, eli asukastiheys on 3,4 asukasta neliökilometrillä. Zagori on erittäin kaunista luontoa, jossa on näyttävä geologia ja kaksi kansallispuistoa: toinen käsittää Aoos-joen ja Vikosin rotkon, toinen Valia Kaldan. Zagorin 46 kylää oli yhdistetty toisiinsa vuoristoteillä ja perinteisillä kaarevilla kivisilloilla. 1600-luvulta alkaen alueen talous perustui pääasiassa ulkomaille muuttaneiden lähettämiin rahoihin ja testamentteihin.
+AIEMPI KYSYMYS: Miten kivinen kaarisilta pysyy pystyssä?
+AIEMPI VASTAUS (Livia):
+No jopas, insinöörikysymys. Kaarisilta kantaa kuormansa kaarimuodon avulla: paino ohjautuu kaarta pitkin alas ja ulospäin kohti tukia, jolloin kivet puristuvat toisiaan vasten. Kivi kestää puristusta hyvin mutta vetoa huonosti, ja kaari pitää rasituksen puristuksena, minkä vuoksi perinteiset kivisillat voivat kestää vuosisatoja. Rakennetta käyttivät laajasti jo [[roomalaiset]], ja se näkyy myös [[Zagorin]] silloissa. Painovoimaa minä kunnioitan, vaikka se ei kyyhkyä kovin usein vaivaa.
+KYSYMYS: Kerro lisää: Zagorin
+
+### 614
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Historia: Kultainen naula ja yhden sanan sähke] 1869 — Toukokuun 10. päivänä 1869 kaksi rautatietä kohtasi Utahin autiomaassa Promontory Summitissa. Vasarat ja viimeinen naula oli kytketty lennätinlankaan, jotta jokainen isku kuuluisi naksahduksena lennätinasemilla ympäri maata; kun lyönnit menivät ohi, virkailija napautti merkit itse ja lähetti perään yhden sanan: DONE. Lännestä nousseen radan louhivat suurelta osin kiinalaiset siirtotyöläiset, jotka saivat 31 dollaria kuussa ja majoituksen mutta laittoivat ruokansa itse; lakon jälkeen vuonna 1867 palkka nousi 35 dollariin. Matka rannikolta rannikolle lyheni puolesta vuodesta viikkoon.
+AIEMPI KYSYMYS: Mitä Artan sillan kansanlaulu kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tää tarina on vanha. Artan sillan kansanballadin mukaan siltaa rakennettaessa uhrattiin ihminen: päivällä rakennettu osa romahti yöllä, kunnes rakentajat päättivät uhrata jonkun, jotta silta pysyisi pystyssä. Monissa versioissa uhriksi joutuu päärakentajan vaimo. Ballaadista on syntynyt useita kreikkalaisia [[sananparsia]], jotka liittyvät loputtomiin viivytyksiin, ja silta ylittää [[Arachthos-joen]]. Onneksi se on vain vanha tarina, ja silta seisoo.
+KYSYMYS: Kerro lisää: sananparsia
+
+### 615
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+AIEMPI KYSYMYS: Mitä Artan sillan kansanlaulu kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tää tarina on vanha. Artan sillan kansanballadin mukaan siltaa rakennettaessa uhrattiin ihminen: päivällä rakennettu osa romahti yöllä, kunnes rakentajat päättivät uhrata jonkun, jotta silta pysyisi pystyssä. Monissa versioissa uhriksi joutuu päärakentajan vaimo. Ballaadista on syntynyt useita kreikkalaisia [[sananparsia]], jotka liittyvät loputtomiin viivytyksiin, ja silta ylittää [[Arachthos-joen]]. Onneksi se on vain vanha tarina, ja silta seisoo.
+KYSYMYS: Kerro lisää: Arachthos-joen
+
+### 616
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+AIEMPI KYSYMYS: Miksi silta rakennettiin monta kertaa?
+AIEMPI VASTAUS (Livia):
+Kas, tuo on hyvä. Artan silta on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajalta tai mahdollisesti vanhemmista perustuksista. Tarkkoja syitä kuhunkin uudelleenrakennukseen en tiedä, mutta tulvat ja sodat ovat tavallisia syitä siltojen tuhoutumiseen joen yli. Perimätiedon mukaan silta rakennettiin uudelleen, kun Arta tuli [[Epeiroksen despotaatin]] pääkaupungiksi, ja nykyinen silta on luultavasti 1600-luvulla [[ottomaanien]] rakentama. Pitkä historia, ja silta vain seisoo.
+KYSYMYS: Kerro lisää: Epeiroksen despotaatin
+
+### 617
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Miksi silta rakennettiin monta kertaa?
+AIEMPI VASTAUS (Livia):
+Kas, tuo on hyvä. Artan silta on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajalta tai mahdollisesti vanhemmista perustuksista. Tarkkoja syitä kuhunkin uudelleenrakennukseen en tiedä, mutta tulvat ja sodat ovat tavallisia syitä siltojen tuhoutumiseen joen yli. Perimätiedon mukaan silta rakennettiin uudelleen, kun Arta tuli [[Epeiroksen despotaatin]] pääkaupungiksi, ja nykyinen silta on luultavasti 1600-luvulla [[ottomaanien]] rakentama. Pitkä historia, ja silta vain seisoo.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 618
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä on Epeiroksen despotaatti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, historiaa. Epeiroksen despotaatti oli [[Bysantin]] valtakunnan seuraajavaltio, joka syntyi 1200-luvun alussa [[neljännen ristiretken]] jälkeen Luoteis-Kreikassa ja Albanian eteläosissa. Sen pääkaupunki oli Arta, ja sen hallitsijoilla oli despootin arvonimi. Tarkkoja vuosilukuja ja hallitsijoiden järjestystä en ole varma, joten niitä en luettele. Despootti kuulostaa minusta liian kovalta titteliltä.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 619
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mikä on Epeiroksen despotaatti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, historiaa. Epeiroksen despotaatti oli [[Bysantin]] valtakunnan seuraajavaltio, joka syntyi 1200-luvun alussa [[neljännen ristiretken]] jälkeen Luoteis-Kreikassa ja Albanian eteläosissa. Sen pääkaupunki oli Arta, ja sen hallitsijoilla oli despootin arvonimi. Tarkkoja vuosilukuja ja hallitsijoiden järjestystä en ole varma, joten niitä en luettele. Despootti kuulostaa minusta liian kovalta titteliltä.
+KYSYMYS: Kerro lisää: neljännen ristiretken
+
+### 620
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+AIEMPI KYSYMYS: Mikä Arachthos-joki on?
+AIEMPI VASTAUS (Livia):
+Mmm— Arachthos on Luoteis-Kreikassa virtaava joki, joka saa alkunsa [[Pindoksen]] vuoristosta ja laskee [[Ambrakianlahteen]]. Artan kaupunki sijaitsee sen rannalla, ja joen ylittää kuuluisa Artan silta. Tarkkoja pituus- ja virtaamalukuja en ole varma, joten jätän ne pois. Joet ovat kyyhkyn mielestä parhaita suuntaviittoja.
+KYSYMYS: Kerro lisää: Pindoksen
+
+### 621
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+AIEMPI KYSYMYS: Mikä Arachthos-joki on?
+AIEMPI VASTAUS (Livia):
+Mmm— Arachthos on Luoteis-Kreikassa virtaava joki, joka saa alkunsa [[Pindoksen]] vuoristosta ja laskee [[Ambrakianlahteen]]. Artan kaupunki sijaitsee sen rannalla, ja joen ylittää kuuluisa Artan silta. Tarkkoja pituus- ja virtaamalukuja en ole varma, joten jätän ne pois. Joet ovat kyyhkyn mielestä parhaita suuntaviittoja.
+KYSYMYS: Kerro lisää: Ambrakianlahteen
+
+### 622
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+AIEMPI KYSYMYS: Mitä Ottomaanien valtakunta oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ottomaanien valtakunta oli 1300-luvun alusta 1900-luvun alkuun kestänyt monikansallinen suurvalta, joka hallitsi pitkään suurta osaa [[Balkanista]] ja Kreikan alueita. Sen pääkaupunki oli myöhemmin [[Istanbul]], ja sen perillisenä pidetään nykyistä [[Turkkia]]. Artan alue oli ottomaanien hallinnassa, ja raja valtakunnan ja Kreikan välillä kulki vuoden 1881 jälkeen Artan sillan korkeimmassa kohdassa vuoteen 1912 asti. Siinä meni aikaa, ja minä jaksoin silti muistaa.
+KYSYMYS: Kerro lisää: Balkanista
+
+### 623
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul] Kaupunki kahdella mantereella, jonka alla on pylväiden kannattama vesisäiliö, keskellä faaraon obeliski ja joka kadunkulmassa oma kissa.
+AIEMPI KYSYMYS: Mitä Ottomaanien valtakunta oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ottomaanien valtakunta oli 1300-luvun alusta 1900-luvun alkuun kestänyt monikansallinen suurvalta, joka hallitsi pitkään suurta osaa [[Balkanista]] ja Kreikan alueita. Sen pääkaupunki oli myöhemmin [[Istanbul]], ja sen perillisenä pidetään nykyistä [[Turkkia]]. Artan alue oli ottomaanien hallinnassa, ja raja valtakunnan ja Kreikan välillä kulki vuoden 1881 jälkeen Artan sillan korkeimmassa kohdassa vuoteen 1912 asti. Siinä meni aikaa, ja minä jaksoin silti muistaa.
+KYSYMYS: Kerro lisää: Istanbul
+
+### 624
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Artan silta (tekniikka)
+Tietoruudun teksti: Artan silta on kivisilta, joka ylittää Arachthos-joen Artan kaupungin länsipuolella Luoteis-Kreikassa. Se on rakennettu uudelleen monta kertaa vuosisatojen kuluessa, alkaen roomalaisajan tai ehkä vanhemmista perustuksista, ja nykyinen silta on luultavasti 1600-luvun ottomaanien rakentama. Artan sillan kansanballadi kertoo ihmisuhrista sillan rakentamisen aikana, ja ballaadista on syntynyt useita kreikkalaisia sananparsia, jotka liittyvät loputtomiin viivytyksiin: päivällä rakennettiin, ja yöllä se romahti. Perinteen mukaan silta rakennettiin uudelleen, kun Arta tuli Epeiroksen despotaatin pääkaupungiksi. Kun Arta liitettiin Kreikkaan vuonna 1881, sillan korkein kohta oli vuoteen 1912 asti Ottomaanien valtakunnan ja Kreikan kuningaskunnan raja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Labrador — kaupunkilehti / Labrador: Turkkia kruunulle] Hudson's Bay -yhtiö perusti kauppapaikan Rigolet'in kylään vuonna 1836 ostaakseen inuiteilta ja rannikon asukkailta turkiksia – erityisesti kettua, saukkoa ja nahkiaishylkeen taljaa – brittiläisten hattutehtaiden tarpeisiin. Postille rakennettiin varastoja, asuinrakennuksia ja lopulta myös verkkovaja, ja se pysyi seudun tärkeimpänä kauppapaikkana vuosikymmenien ajan. Isoisän matkavuonna 1873 tällaiset postit olivat rannikon ainoa yhteys ulkomaailman rahatalouteen: turkiksilla maksettiin jauhoista, ammuksista ja työkaluista, käteistä nähtiin harvoin.
+AIEMPI KYSYMYS: Mitä Ottomaanien valtakunta oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ottomaanien valtakunta oli 1300-luvun alusta 1900-luvun alkuun kestänyt monikansallinen suurvalta, joka hallitsi pitkään suurta osaa [[Balkanista]] ja Kreikan alueita. Sen pääkaupunki oli myöhemmin [[Istanbul]], ja sen perillisenä pidetään nykyistä [[Turkkia]]. Artan alue oli ottomaanien hallinnassa, ja raja valtakunnan ja Kreikan välillä kulki vuoden 1881 jälkeen Artan sillan korkeimmassa kohdassa vuoteen 1912 asti. Siinä meni aikaa, ja minä jaksoin silti muistaa.
+KYSYMYS: Kerro lisää: Turkkia
+
+### 625
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Mubarakiyan tori] Souq Al-Mubarakiya on ollut samalla paikalla ainakin kaksisataa vuotta, ja se oli kaupungin kauppapaikka jo kauan ennen öljyä. Vuonna 1952 valtio hyväksyi ensimmäisen asemakaavansa, jonka laati brittiläinen toimisto Minoprio, Spenceley & Macfarlane. Kaava pyyhki vanhan kaupungin: savitiilitalot purettiin kortteli kerrallaan. Tori jäi: se oli purkutöiden aikaan yhä paikka, jossa kaupunki kävi kauppaa, eikä kauppa keskeytynyt. Kujat on jaettu ammatin mukaan, ja risteyksessä kyltti luettelee suunnat. Kultakujalla kulta ja hopea ovat samoissa vitriineissä, kangaskujalla riippuvat perinnepuvut ja persialaiset silkkimatot, mausteiden kujalla säkkien vieressä myydään myskiä ja oudia. Vihanneksilla…
+- [Ankara — kohdekartta / Kohdekartta: Ankaran linna] Linnassa on kaksi muurikehää. Ulomman kehän tornit ovat noin 40 metrin välein. Sisempi kehä on paljon tiheämpi: siinä tornit seuraavat toisiaan lyhyin välein, ja muurin sisään jää alue, joka on noin 350 metriä pitkä ja 150 metriä leveä. Pohjana on laavakieleke, joka kohoaa selvästi vanhan kaupungin yläpuolelle. Tarkkoja rakennusvuosia ei tiedetä. Molemmat kehät ovat kuitenkin vuotta 622 nuorempia: silloin persialaiset valtasivat ja hävittivät kaupungin, ja muurit nousivat vasta sen jälkeen. Tutkija Clive Foss on arvioinut sisemmän kehän keisari Konstans II:n ajalta — hän hallitsi Bysantissa vuosina 641–668 — ja ulompaa kehää pidetään hieman nuorempana. Kukkula oli linnoitettu jo kauan ennen…
+AIEMPI KYSYMYS: Mitä Thermopylain taistelussa tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on vakava aihe. Vuonna 480 eaa. kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat Thermopylain kapeassa solassa hyökkäävät [[persialaiset]], ja spartalaisia johti kuningas [[Leonidas]]. Sola oli niin kapea, ettei persialaisten suuri joukko päässyt käyttämään määrällistä ylivoimaansa, ja kreikkalaiset pitivät paikkansa useita päiviä. Lähteiden mukaan persialaiset löysivät lopulta kiertotien vuoren yli, jolloin puolustajat uhkasivat jäädä saarroksiin. Leonidas ja hänen miehensä jäivät torjumaan etenemistä, jotta muut ehtivät vetäytyä, ja suurin osa heistä kaatui. Taistelua muistetaan [[Simonideen]] epitafilla, ja tapahtumasta on noin 2 500 vuotta, jolloin sotia käytiin kaupunkivaltioiden ja kuninkaiden voimin. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: persialaiset
+
+### 626
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suva — kaupunkilehti / Suva: Laiva, joka toi 61 000 uutta asukasta] Höyrylaiva Leonidas laski ankkurin Levukassa 14. toukokuuta 1879 ja purki 498 intialaista sopimustyöläistä — ensimmäiset niistä yli 61 000:sta, jotka saapuivat seuraavien 37 vuoden aikana viljelemään sokeriruokoa. Sopimus, jota kutsuttiin girmitiksi englannin sanasta agreement, sitoi työntekijän viideksi vuodeksi kerrallaan, ja valtaosa jäi Fidžiin sopimuskauden päätyttyä. Järjestelmä lakkautettiin virallisesti 1920. Sen perintö elää: vuoden 2017 väestönlaskennassa indofidžiläisiä oli 289 237 eli 32,7 prosenttia koko maan väestöstä.
+AIEMPI KYSYMYS: Mitä Thermopylain taistelussa tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on vakava aihe. Vuonna 480 eaa. kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat Thermopylain kapeassa solassa hyökkäävät [[persialaiset]], ja spartalaisia johti kuningas [[Leonidas]]. Sola oli niin kapea, ettei persialaisten suuri joukko päässyt käyttämään määrällistä ylivoimaansa, ja kreikkalaiset pitivät paikkansa useita päiviä. Lähteiden mukaan persialaiset löysivät lopulta kiertotien vuoren yli, jolloin puolustajat uhkasivat jäädä saarroksiin. Leonidas ja hänen miehensä jäivät torjumaan etenemistä, jotta muut ehtivät vetäytyä, ja suurin osa heistä kaatui. Taistelua muistetaan [[Simonideen]] epitafilla, ja tapahtumasta on noin 2 500 vuotta, jolloin sotia käytiin kaupunkivaltioiden ja kuninkaiden voimin. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Leonidas
+
+### 627
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Mitä Thermopylain taistelussa tapahtui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tää on vakava aihe. Vuonna 480 eaa. kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat Thermopylain kapeassa solassa hyökkäävät [[persialaiset]], ja spartalaisia johti kuningas [[Leonidas]]. Sola oli niin kapea, ettei persialaisten suuri joukko päässyt käyttämään määrällistä ylivoimaansa, ja kreikkalaiset pitivät paikkansa useita päiviä. Lähteiden mukaan persialaiset löysivät lopulta kiertotien vuoren yli, jolloin puolustajat uhkasivat jäädä saarroksiin. Leonidas ja hänen miehensä jäivät torjumaan etenemistä, jotta muut ehtivät vetäytyä, ja suurin osa heistä kaatui. Taistelua muistetaan [[Simonideen]] epitafilla, ja tapahtumasta on noin 2 500 vuotta, jolloin sotia käytiin kaupunkivaltioiden ja kuninkaiden voimin. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Simonideen
+
+### 628
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Mitä Simonideen epitafi sanoo?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ohikulkijan tulee kertoa [[spartalaisille]], että täällä he makaavat noudattaen lakeja. Epitafin kirjoittajana pidetään Keoksen runoilijaa Simonidesta, ja se on liitetty [[Thermopylain taistelussa]] kaatuneiden muistoon. Sanat painottavat sitä, että kaatuneet pysyivät uskollisina kotikaupunkinsa laeille loppuun asti.
+
+Viesti, joka pitää viedä perille sanatarkasti, on juuri sitä työtä, jota suvussani on tehty vuosisatoja. Tämän kantaisin hiljaa ja ilman omia lisäyksiäni.
+KYSYMYS: Kerro lisää: spartalaisille
+
+### 629
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Mitä Simonideen epitafi sanoo?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ohikulkijan tulee kertoa [[spartalaisille]], että täällä he makaavat noudattaen lakeja. Epitafin kirjoittajana pidetään Keoksen runoilijaa Simonidesta, ja se on liitetty [[Thermopylain taistelussa]] kaatuneiden muistoon. Sanat painottavat sitä, että kaatuneet pysyivät uskollisina kotikaupunkinsa laeille loppuun asti.
+
+Viesti, joka pitää viedä perille sanatarkasti, on juuri sitä työtä, jota suvussani on tehty vuosisatoja. Tämän kantaisin hiljaa ja ilman omia lisäyksiäni.
+KYSYMYS: Kerro lisää: Thermopylain taistelussa
+
+### 630
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Kuka oli Leonidas I?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Spartan]] kuningas Leonidas I johti kreikkalaisjoukkoja [[persialaisia]] vastaan [[Thermopylain taistelussa]] vuonna 480 eaa. ja kaatui siinä yhdessä miestensä kanssa. Hänet muistetaan edelleen puolustajien johtajana, ja Thermopylain nykyisen moottoritien itäpuolella on hänen muistomerkkinsä. Tapahtumasta on noin 2 500 vuotta.
+KYSYMYS: Kerro lisää: Spartan
+
+### 631
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Julianuksen pylväs] 362 Uluksen hallintokorttelissa seisoo yksinään noin viisitoista metriä korkea kivipylväs. Sitä ei ole veistetty yhdestä kivestä vaan muurattu kappaleista päällekkäin, ja varren pinta on uurrettu tiheiksi vaakarenkaiksi juuresta latvaan. Ylimpänä on lehtikoristeinen kapiteeli, jonka yläreunasta on lohjennut paloja. Turkiksi pylväs on Julianus Sütunu, mutta ankaralaisten oma nimi sille on Belkıs Minaresi, Belkısin minareetti. Keisari Julianus julisti sodan persialaisia vastaan vuonna 362 ja määräsi sotaretkelle reitin, joka kulki Ankaran kautta. Kun kaupunkiin tuli tieto, että keisari pysähtyy siellä matkallaan, valmistelut aloitettiin koko kaupungissa ja pylväs pystytettiin hänen kunniaksee…
+- [Dubai — kohdekartta / Kohdekartta: Bastakian kaupunginosa] 1890-luku Kortteli rakennettiin 1890-luvulta alkaen, ja rakentajat olivat varakkaita persialaisia kauppiaita, jotka Dubain kauppaedut olivat houkutelleet lahden yli. Alue sai nimensä Bastakin kaupungista Etelä-Iranista. Parhaimmillaan taloja oli noin 60, ja useimpien välissä kulki vain kapea mutkitteleva kuja. 1980-luvulla puolet Bastakiasta purettiin toimistokompleksin tieltä, ja jäljelle jääneet talot päätyivät varastoiksi. Vuonna 1989 Dubain kaupunki määräsi lopunkin purettavaksi. Alueella asunut brittiarkkitehti Rayner Otter oli kunnostanut oman talonsa perusteellisesti, ja hän aloitti kampanjan korttelin puolesta ja kirjoitti kirjeen prinssi Charlesille, joka oli tulossa Dubaihin saman…
+AIEMPI KYSYMYS: Kuka oli Leonidas I?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Spartan]] kuningas Leonidas I johti kreikkalaisjoukkoja [[persialaisia]] vastaan [[Thermopylain taistelussa]] vuonna 480 eaa. ja kaatui siinä yhdessä miestensä kanssa. Hänet muistetaan edelleen puolustajien johtajana, ja Thermopylain nykyisen moottoritien itäpuolella on hänen muistomerkkinsä. Tapahtumasta on noin 2 500 vuotta.
+KYSYMYS: Kerro lisää: persialaisia
+
+### 632
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Mistä Thermopylain nimi tulee?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hauska yksityiskohta. Nimi Thermopylai tarkoittaa kuumia portteja, ja se tulee paikan kuumista [[rikkilähteistä]]. Kreikkalaisessa mytologiassa Kuumat portit olivat lisäksi yksi [[Haadeksen]] sisäänkäynneistä, eli tuonelan porteista. Paikka on myös kuuluisa vuoden 480 eaa. taistelusta. Kuumat lähteet kuulostaa kyl kyyhkyn korvaan ihan kylpylältä.
+KYSYMYS: Kerro lisää: rikkilähteistä
+
+### 633
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Mistä Thermopylain nimi tulee?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hauska yksityiskohta. Nimi Thermopylai tarkoittaa kuumia portteja, ja se tulee paikan kuumista [[rikkilähteistä]]. Kreikkalaisessa mytologiassa Kuumat portit olivat lisäksi yksi [[Haadeksen]] sisäänkäynneistä, eli tuonelan porteista. Paikka on myös kuuluisa vuoden 480 eaa. taistelusta. Kuumat lähteet kuulostaa kyl kyyhkyn korvaan ihan kylpylältä.
+KYSYMYS: Kerro lisää: Haadeksen
+
+### 634
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Missä Thermopylai sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Thermopylai sijaitsee Keski-Kreikassa [[Phthiotiksen]] alueella lähellä [[Lamian]] kaupunkia, ja se on kapea solakohta, joka on ainoa riittävän suuri maayhteys [[Lokriin]] ja Thessalian välillä. Paikalla on nykyaikainen kaupunki, ja kuningas Leonidas I:n muistomerkki on nykyisen moottoritien itäpuolella. Sijainti on ainakin kyyhkyn päässä tallessa.
+KYSYMYS: Kerro lisää: Phthiotiksen
+
+### 635
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Ruoka: Yhdestä kimpaleesta sata lankaa] Lamian tarkoittaa vedettyä nuudelia. Taikinaa venytetään käsin: kokki ottaa vehnätaikinakimpaleen, kiertää sitä, venyttää käsivarsien mitan ja taittaa kahtia. Joka taitto kaksinkertaistaa lankojen määrän ja puolittaa paksuuden, joten kymmenen taittoa riittää tuhanteen säikeeseen. Veistä ei tarvita lainkaan. Vanhin kuvaus tekniikasta on vuoden 1504 ruokavalio-oppaassa. Japanin ramen ei polveudu lamianista, mutta sen nimi on lainattu siitä — ja korean ramyeon taas japanista.
+AIEMPI KYSYMYS: Missä Thermopylai sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Thermopylai sijaitsee Keski-Kreikassa [[Phthiotiksen]] alueella lähellä [[Lamian]] kaupunkia, ja se on kapea solakohta, joka on ainoa riittävän suuri maayhteys [[Lokriin]] ja Thessalian välillä. Paikalla on nykyaikainen kaupunki, ja kuningas Leonidas I:n muistomerkki on nykyisen moottoritien itäpuolella. Sijainti on ainakin kyyhkyn päässä tallessa.
+KYSYMYS: Kerro lisää: Lamian
+
+### 636
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thermopylai (historia)
+Tietoruudun teksti: Thermopylai on kapea solakohta ja nykyaikainen kaupunki Lamian alueella Phthiotiksessa Kreikassa. Nimi tarkoittaa kuumia portteja, ja se tulee paikan kuumista rikkilähteistä; kreikkalaisessa mytologiassa Kuumat portit olivat yksi Haadeksen sisäänkäynneistä. Paikka on kuuluisa vuoden 480 eaa. taistelusta, jossa kreikkalaisjoukot, joiden joukossa oli 300 spartalaista, kohtasivat hyökkäävät persialaiset. Taistelua muistetaan Keoksen Simonideen epitafilla, jossa sanotaan, että ohikulkijan tulee kertoa spartalaisille, että täällä he makaavat noudattaen lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.
+AIEMPI KYSYMYS: Missä Thermopylai sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Thermopylai sijaitsee Keski-Kreikassa [[Phthiotiksen]] alueella lähellä [[Lamian]] kaupunkia, ja se on kapea solakohta, joka on ainoa riittävän suuri maayhteys [[Lokriin]] ja Thessalian välillä. Paikalla on nykyaikainen kaupunki, ja kuningas Leonidas I:n muistomerkki on nykyisen moottoritien itäpuolella. Sijainti on ainakin kyyhkyn päässä tallessa.
+KYSYMYS: Kerro lisää: Lokriin
+
+### 637
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+AIEMPI KYSYMYS: Miksi Mesolongi sai nimen Pyhä kaupunki?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on raskas aihe, joten kerron sen tyynesti. Mesolongi sai kunnianimen [[Hiera Polis]] eli Pyhä kaupunki Kreikan vapaussodan aikaisen piirityksen vuoksi: asukkaat puolustautuivat sankarillisesti, ja kaupungin lopulta kaaduttua kaupunkilaisia teurastettiin suuri määrä. Tapahtumat sijoittuvat vuosiin 1825–1826, jolloin kreikkalaiset taistelivat itsenäisyydestä [[ottomaanien]] vallan alla, ja niistä on noin 200 vuotta. Kunnianimi on ainutlaatuinen Kreikan kaupunkien joukossa.
+KYSYMYS: Kerro lisää: Hiera Polis
+
+### 638
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Miksi Mesolongi sai nimen Pyhä kaupunki?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on raskas aihe, joten kerron sen tyynesti. Mesolongi sai kunnianimen [[Hiera Polis]] eli Pyhä kaupunki Kreikan vapaussodan aikaisen piirityksen vuoksi: asukkaat puolustautuivat sankarillisesti, ja kaupungin lopulta kaaduttua kaupunkilaisia teurastettiin suuri määrä. Tapahtumat sijoittuvat vuosiin 1825–1826, jolloin kreikkalaiset taistelivat itsenäisyydestä [[ottomaanien]] vallan alla, ja niistä on noin 200 vuotta. Kunnianimi on ainutlaatuinen Kreikan kaupunkien joukossa.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 639
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Juan — kaupunkilehti / San Juan: Vapaus vuonna 1873] Isoisän matkavuonna 1873 Espanjan kansalliskokous päätti 22. maaliskuuta lakkauttaa orjuuden Puerto Ricossa. Päätös vapautti noin 29 000 orjaa, mikä oli tuolloin noin viisi prosenttia koko saaren väestöstä. Vapaus ei ollut ehdoton: entiset omistajat saivat korvauksen, ja vapautetut velvoitettiin jatkamaan työtä entisillä tiloillaan vielä kolme vuotta, minkä lisäksi täysiä kansalaisoikeuksia sai odottaa viisi vuotta. Päätöstä ajoi pitkäjänteinen orjuudenvastainen liike, ja lopullinen sysäys tuli, kun Espanjaan julistettiin tasavalta pari kuukautta aiemmin. Puerto Rico on sittemmin muistanut tapahtumaa vuosittaisena juhlapäivänä.
+AIEMPI KYSYMYS: Miksi Byron tuli Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän muistan hyvin. Brittiläinen runoilija Lord Byron matkusti Kreikkaan vuonna 1823 tukemaan [[Kreikan vapaussotaa]] ja kreikkalaisten pyrkimystä itsenäisyyteen. Hän kuului [[filhellenismin]] eli kreikkalaisten tukemisen ja antiikin Kreikan ihailun liikkeen tunnetuimpiin nimiin ja käytti omaa varallisuuttaan ja vaikutusvaltaansa joukkojen järjestämiseen ja rahoittamiseen. Hän saapui [[Mesolongiin]] tammikuussa 1824 ja kuoli siellä sairauteen huhtikuussa 1824.
+KYSYMYS: Kerro lisää: Kreikan vapaussotaa
+
+### 640
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mesolongi (historia)
+Tietoruudun teksti: Mesolongi eli Missolonghi on kaupunki Länsi-Kreikassa ja Aitolia-Akarnanian alueen pääkaupunki. Vuoden 2021 väestönlaskennan mukaan kunnassa asuu 32 048 ihmistä, joista 13 965 kaupungissa. Kaupunki on Achelooksen ja Evinoksen jokien välissä ja sillä on satama Patrasin lahdella; sen kauppatavaroita ovat kala, viini ja tupakka. Läheinen Mesolongin–Aitolikon laguuniryhmä on osa aluetta. Mesolongi tunnetaan Kreikan vapaussodan aikaisesta dramaattisesta piirityksestä, jossa myös runoilija Lord Byron kuoli. Asukkaiden sankarillisen vastarinnan ja sen jälkeisen kaupunkilaisten teurastuksen vuoksi Mesolongi sai kunnianimen Hiera Polis eli Pyhä kaupunki, joka on ainutlaatuinen Kreikan kaupunkien joukossa.
+AIEMPI KYSYMYS: Miksi Byron tuli Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän muistan hyvin. Brittiläinen runoilija Lord Byron matkusti Kreikkaan vuonna 1823 tukemaan [[Kreikan vapaussotaa]] ja kreikkalaisten pyrkimystä itsenäisyyteen. Hän kuului [[filhellenismin]] eli kreikkalaisten tukemisen ja antiikin Kreikan ihailun liikkeen tunnetuimpiin nimiin ja käytti omaa varallisuuttaan ja vaikutusvaltaansa joukkojen järjestämiseen ja rahoittamiseen. Hän saapui [[Mesolongiin]] tammikuussa 1824 ja kuoli siellä sairauteen huhtikuussa 1824.
+KYSYMYS: Kerro lisää: filhellenismin

@@ -1,0 +1,973 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+AIEMPI KYSYMYS: Miksi ateenalaiset haudattiin juuri taistelukentälle?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tää on kunnioitettava aihe. Ateenalaiset hautasivat sodissa kaatuneensa tavallisesti kaupunkinsa julkiselle hautausmaalle, mutta Marathonin kaatuneista tehtiin poikkeus. Antiikin kirjoittajien mukaan heidän katsottiin ansainneen erityisen kunnian rohkeutensa vuoksi, ja niin heidät haudattiin taistelupaikalle. Siellä kohoaa yhä [[Soros]], [[kumpuhauta]], johon on perinteisesti luettu 192 kaatunutta ateenalaista. Kaatuneita kunnioitettiin sankareina, ja haudalla pidettiin muistotilaisuuksia vielä pitkään taistelun jälkeen. Onneksi siit on jo niin pitkä aika.
+KYSYMYS: Kerro lisää: Soros
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marathon (sana)
+Tietoruudun teksti: Marathonin tasangolla Ateenan alivoimainen armeija löi Persian suurvallan joukot 490 eaa. Tarun mukaan airut Feidippides juoksi taistelukentältä Ateenaan asti ilmoittamaan voitosta — ja tästä legendasta maratonjuoksu sai uudella ajalla nimensä. Itse paikannimi on arkisempi: se tulee fenkolia tarkoittavasta kreikan sanasta ja merkitsee "fenkolien paikkaa". Tasangolla kohoaa yhä Soros, kumpuhauta taistelussa kaatuneille 192 ateenalaiselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Kuyunjikin kumpu] pääkaupunki noin 700–612 eKr. Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna 700 eKr., ja rakennustyö oli mittava: kaupungista tuli suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon kuin Babylonissa. Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa lampaan deminutiivia; arabit tunsivat kummun myös nimellä Armousheeah. Kumpu …
+- [Mosul — kohdekartta / Kohdekartta: Nabi Yunusin kumpu] assyrialainen asevarasto, moskeija 1365 Nabi Yunusin kumpu on Niniven toinen kumpu, kilometrin verran Kuyunjikista etelään Khosr-joen toisella puolella. Sanheribin tekstien perusteella sitä on pidetty Niniven asevarastona, ja kummun alla on Asarhaddonin ja Assurbanipalin palatsi. Vuoden 1990 kaivauksissa paljastui monumentaalinen sisäänkäynti: suuria kaiverrettuja orthostaatteja ja härkämiespatsaita, joista osa oli jäänyt kesken. Kummun päällä oli pitkään kristillinen luostari. Vuonna 1349 idän kirkon jäsenet kaivoivat siellä esiin patriarkka Hnanisho I:n jäännökset. Historioitsija Amr, joka näki ruumiin omin silmin, kertoi sen olleen plataanipuisessa arkussa hämmästyttävän hyvin säilynyt, …
+AIEMPI KYSYMYS: Miksi ateenalaiset haudattiin juuri taistelukentälle?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tää on kunnioitettava aihe. Ateenalaiset hautasivat sodissa kaatuneensa tavallisesti kaupunkinsa julkiselle hautausmaalle, mutta Marathonin kaatuneista tehtiin poikkeus. Antiikin kirjoittajien mukaan heidän katsottiin ansainneen erityisen kunnian rohkeutensa vuoksi, ja niin heidät haudattiin taistelupaikalle. Siellä kohoaa yhä [[Soros]], [[kumpuhauta]], johon on perinteisesti luettu 192 kaatunutta ateenalaista. Kaatuneita kunnioitettiin sankareina, ja haudalla pidettiin muistotilaisuuksia vielä pitkään taistelun jälkeen. Onneksi siit on jo niin pitkä aika.
+KYSYMYS: Kerro lisää: kumpuhauta
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Saari, jonka vuokra oli yksi haukka] 1530 — Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. Suurmestari Philippe Villiers de L'Isle-Adam purjehti Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi.
+AIEMPI KYSYMYS: Kuka laitteen rakensi ja missä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän ei oo varmaa vastausta, ja se on tässä tarinan paras osa. Laitteen tekijää ei tunneta, eikä mikään säilynyt kirjoitus nimeä häntä. Tutkijat ovat esittäneet useita ehdokkaita rakennuspaikaksi, ja mikään niistä ei ole täysin varma. Yhden ehdotuksen mukaan laite syntyi [[Rodoksella]], jossa vaikutti tähtitieteilijä [[Hipparkhos]], toisen mukaan Korintin siirtokunnassa [[Syrakusassa]], sillä mekanismin kalenterissa käytetyt kuukausien nimet viittaavat korinttilaiseen perinteeseen. Ajoitus on 100-luvulla eaa. tai lähimain sen tienoilla, ja hylky itse on tavallisesti ajoitettu 1. vuosisadalle eaa. En ole varma, kumpi ehdotus on vahvempi. Nimetön mestari, ja minä kun luulin tuntevani kaikki.
+KYSYMYS: Kerro lisää: Rodoksella
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Kuka laitteen rakensi ja missä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän ei oo varmaa vastausta, ja se on tässä tarinan paras osa. Laitteen tekijää ei tunneta, eikä mikään säilynyt kirjoitus nimeä häntä. Tutkijat ovat esittäneet useita ehdokkaita rakennuspaikaksi, ja mikään niistä ei ole täysin varma. Yhden ehdotuksen mukaan laite syntyi [[Rodoksella]], jossa vaikutti tähtitieteilijä [[Hipparkhos]], toisen mukaan Korintin siirtokunnassa [[Syrakusassa]], sillä mekanismin kalenterissa käytetyt kuukausien nimet viittaavat korinttilaiseen perinteeseen. Ajoitus on 100-luvulla eaa. tai lähimain sen tienoilla, ja hylky itse on tavallisesti ajoitettu 1. vuosisadalle eaa. En ole varma, kumpi ehdotus on vahvempi. Nimetön mestari, ja minä kun luulin tuntevani kaikki.
+KYSYMYS: Kerro lisää: Hipparkhos
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Kuka laitteen rakensi ja missä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän ei oo varmaa vastausta, ja se on tässä tarinan paras osa. Laitteen tekijää ei tunneta, eikä mikään säilynyt kirjoitus nimeä häntä. Tutkijat ovat esittäneet useita ehdokkaita rakennuspaikaksi, ja mikään niistä ei ole täysin varma. Yhden ehdotuksen mukaan laite syntyi [[Rodoksella]], jossa vaikutti tähtitieteilijä [[Hipparkhos]], toisen mukaan Korintin siirtokunnassa [[Syrakusassa]], sillä mekanismin kalenterissa käytetyt kuukausien nimet viittaavat korinttilaiseen perinteeseen. Ajoitus on 100-luvulla eaa. tai lähimain sen tienoilla, ja hylky itse on tavallisesti ajoitettu 1. vuosisadalle eaa. En ole varma, kumpi ehdotus on vahvempi. Nimetön mestari, ja minä kun luulin tuntevani kaikki.
+KYSYMYS: Kerro lisää: Syrakusassa
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Mitä muuta hylystä nostettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hylystä riitti nostettavaa muuhunkin kuin siihen yhteen koneeseen. Antikytheran hylystä on nostettu marmori- ja pronssipatsaita, joista tunnetuin on [[Antikytheran nuorukainen]], sekä lasiesineitä, keramiikkaa, [[amforoita]], koruja ja kolikoita. Lastin arvellaan olleen matkalla Rooman suuntaan, ja se viittaa varakkaaseen ostajaan tai kokoelmaan. Hylkyä on tutkittu useissa vaiheissa ensimmäisen sukelluksen jälkeen, ja uusilla tutkimuksilla on löydetty lisää esineitä. Ois riittäny tarinaa vaikka koko päiväksi.
+KYSYMYS: Kerro lisää: Antikytheran nuorukainen
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Mitä muuta hylystä nostettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hylystä riitti nostettavaa muuhunkin kuin siihen yhteen koneeseen. Antikytheran hylystä on nostettu marmori- ja pronssipatsaita, joista tunnetuin on [[Antikytheran nuorukainen]], sekä lasiesineitä, keramiikkaa, [[amforoita]], koruja ja kolikoita. Lastin arvellaan olleen matkalla Rooman suuntaan, ja se viittaa varakkaaseen ostajaan tai kokoelmaan. Hylkyä on tutkittu useissa vaiheissa ensimmäisen sukelluksen jälkeen, ja uusilla tutkimuksilla on löydetty lisää esineitä. Ois riittäny tarinaa vaikka koko päiväksi.
+KYSYMYS: Kerro lisää: amforoita
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Miksi mekanismia kutsutaan analogiatietokoneeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen kuullut. Sana kuulostaa nykyaikaiselta, mutta se kuvaa hyvin mitä laite teki. Analogiatietokone mallintaa jatkuvasti muuttuvaa ilmiötä fyysisten osien avulla eikä laske numeroina niin kuin digitaalinen tietokone. Antikytheran mekanismissa ilmiöinä olivat taivaankappaleiden kierrot, joita kuvasivat toisiinsa kytketyt hammaspyörät, joiden hammasluvut vastasivat tähtitieteellisiä jaksoja. Kampea kääntämällä laite esitti aurinkoa, kuuta ja pimennysten ajankohtia. Mukana oli esimerkiksi [[Saros-jakson]] mukainen pimennysten ennustus, jossa 223 kuunkiertoa vastaa noin 18 vuotta, sekä 19 vuoden [[Metonin]] jakso. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Saros-jakson
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Miksi mekanismia kutsutaan analogiatietokoneeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen kuullut. Sana kuulostaa nykyaikaiselta, mutta se kuvaa hyvin mitä laite teki. Analogiatietokone mallintaa jatkuvasti muuttuvaa ilmiötä fyysisten osien avulla eikä laske numeroina niin kuin digitaalinen tietokone. Antikytheran mekanismissa ilmiöinä olivat taivaankappaleiden kierrot, joita kuvasivat toisiinsa kytketyt hammaspyörät, joiden hammasluvut vastasivat tähtitieteellisiä jaksoja. Kampea kääntämällä laite esitti aurinkoa, kuuta ja pimennysten ajankohtia. Mukana oli esimerkiksi [[Saros-jakson]] mukainen pimennysten ennustus, jossa 223 kuunkiertoa vastaa noin 18 vuotta, sekä 19 vuoden [[Metonin]] jakso. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Metonin
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Miten mekanismin sisus saatiin tutkittua rikkomatta?
+AIEMPI VASTAUS (Livia):
+Ai se. Siinä on kiva tarina. Hylystä nostettu laite oli kovasti syöpynyt ja jakaantunut palasiin, joten sitä ei voitu avata ilman että se olisi vaurioitunut. Tutkija [[Derek de Solla Price]] kuvasi sitä röntgensäteillä jo 1900-luvun puolivälin jälkeen, ja tulokset paljastivat rattaiden rakenteen. Uudempi läpimurto tuli, kun laite kuvattiin [[röntgentomografialla]] 2000-luvun alussa aloitetussa tutkimushankkeessa, jolloin palasten sisäpuoli saatiin näkyviin kolmiulotteisena. Kuvista voitiin lukea myös pronssin pintaan kirjoitettua tekstiä, vaikka se oli aiemmin täysin piilossa.
+
+Minusta tuo on viestinviejän unelma: kirje, joka aukeaa vasta kahdentuhannen vuoden jälkeen. Ei se oo urkkimista, jos kone lukee.
+KYSYMYS: Kerro lisää: Derek de Solla Price
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+AIEMPI KYSYMYS: Miten mekanismin sisus saatiin tutkittua rikkomatta?
+AIEMPI VASTAUS (Livia):
+Ai se. Siinä on kiva tarina. Hylystä nostettu laite oli kovasti syöpynyt ja jakaantunut palasiin, joten sitä ei voitu avata ilman että se olisi vaurioitunut. Tutkija [[Derek de Solla Price]] kuvasi sitä röntgensäteillä jo 1900-luvun puolivälin jälkeen, ja tulokset paljastivat rattaiden rakenteen. Uudempi läpimurto tuli, kun laite kuvattiin [[röntgentomografialla]] 2000-luvun alussa aloitetussa tutkimushankkeessa, jolloin palasten sisäpuoli saatiin näkyviin kolmiulotteisena. Kuvista voitiin lukea myös pronssin pintaan kirjoitettua tekstiä, vaikka se oli aiemmin täysin piilossa.
+
+Minusta tuo on viestinviejän unelma: kirje, joka aukeaa vasta kahdentuhannen vuoden jälkeen. Ei se oo urkkimista, jos kone lukee.
+KYSYMYS: Kerro lisää: röntgentomografialla
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon pyhä saari] Auringon saareksi kutsuttu Isla del Sol on Titicacan suurin saari ja oli inkoille tärkein pyhiinvaelluskohde. Saarella on yli 80 rauniota, joista suurin osa ajoittuu 1400-luvulle ja inkavallan huippukauteen: kivisiä temppeleitä, labyrinttimäinen Chinkana-rakennus sekä jyrkkiä viljelysterasseja, jotka yhä kannattelevat maissi- ja perunapeltoja. Saarella ei ole moottoriajoneuvoja lainkaan, vaan kapeat polut kulkevat kylästä toiseen kukkuloiden yli. Nykyään saarella asuu noin 800 perhettä maanviljelystä, kalastuksesta ja yhä enemmän matkailusta – veneet Copacabanan rannalta tuovat vierailijoita rantaan, jota pidettiin kerran auringon syntysijana.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon lapset nousevat järvestä] Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.
+AIEMPI KYSYMYS: Mitä taivaankappaleita mekanismi osasi seurata?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tähän vastaan mielelläni, mutta pienellä varauksella. Mekanismi seurasi ainakin [[Auringon]] ja Kuun asemaa sekä Kuun vaiheita, ja siinä oli asteikko [[eläinradan]] merkeille. Lisäksi se ennusti pimennyksiä ja näytti kalenterin, jossa olivat mukana kuukaudet ja vuoden jaksot. Eräs asteikko seurasi myös neljän vuoden jaksoa, johon liittyivät antiikin kisat. Planeettojen osalta tilanne on epävarma: mekanismin etupuolen osat ovat pahoin vahingoittuneet, ja tuoreempi tutkimus on esittänyt, että mukana olisi voinut olla myös planeettojen liikkeitä, mutta en ole varma, onko asia lopullisesti ratkaistu. Hyvin mekaaninen vastaus kyyhkyltä.
+KYSYMYS: Kerro lisää: Auringon
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antikythera (tekniikka)
+Tietoruudun teksti: Symin sienisukeltajat löysivät Antikytheran edustalta roomalaisen rahtilaivan hylyn vuonna 1900 — isoisän aikaan meri piti salaisuutensa vielä visusti. Nostetun lastin joukosta paljastui pronssinen laite, Antikytheran mekanismi: 100-luvulla eaa. rakennettu käsikäyttöinen taivaankoneisto ja vanhin tunnettu analogiatietokone, joka ennusti taivaankappaleiden asemat ja pimennykset vuosikymmeniksi eteenpäin. Suurimmassa rattaassa oli 223 hammasta. Yhtä monimutkaisia koneita tehtiin seuraavan kerran vasta 1300-luvun Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Luonto: Eläin, jota pidettiin huijauksena] 1799 — Kun kuvernööri John Hunter lähetti 1798 Britanniaan vesinokkaeläimen nahan ja piirroksen, tiedemiesten ensimmäinen arvaus oli huijaus. George Shaw kirjoitti ensimmäisen kuvauksen 1799 ja myönsi suoraan epäilevänsä eläimen aitoutta, ja Robert Knox arveli sen olevan kiinalaisten merimiesten ompelema. Eläin on kuitenkin todellinen ja yksi vain viidestä munivasta nisäkäslajista maailmassa; muut neljä ovat nokkasiilejä. Koiraan takajalan kannuksesta ruiskuaa myrkkyä, ja saaliinsa eläin löytää veden alla sähköaistilla silmät, korvat ja sieraimet suljettuina.
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+AIEMPI KYSYMYS: Mitä taivaankappaleita mekanismi osasi seurata?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tähän vastaan mielelläni, mutta pienellä varauksella. Mekanismi seurasi ainakin [[Auringon]] ja Kuun asemaa sekä Kuun vaiheita, ja siinä oli asteikko [[eläinradan]] merkeille. Lisäksi se ennusti pimennyksiä ja näytti kalenterin, jossa olivat mukana kuukaudet ja vuoden jaksot. Eräs asteikko seurasi myös neljän vuoden jaksoa, johon liittyivät antiikin kisat. Planeettojen osalta tilanne on epävarma: mekanismin etupuolen osat ovat pahoin vahingoittuneet, ja tuoreempi tutkimus on esittänyt, että mukana olisi voinut olla myös planeettojen liikkeitä, mutta en ole varma, onko asia lopullisesti ratkaistu. Hyvin mekaaninen vastaus kyyhkyltä.
+KYSYMYS: Kerro lisää: eläinradan
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Miten noin iso pronssipatsas ylipäätään rakennettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä insinöörikysymys. Rakennustavasta on säilynyt kuvauksia, mutta kaikki yksityiskohdat eivät ole varmoja. Lähteiden mukaan patsas rakennettiin pronssilaattoina valettuina osina, jotka kiinnitettiin sisällä olevaan rautaiseen tukirakenteeseen ja kiviosiin. [[Philon Bysanttilaisen]] kuvauksen mukaan työtä tehtiin vaiheittain alhaalta ylöspäin, ja rakennuksen aikana patsas peitettiin maapenkereeseen, jotta sen osat saatiin nostettua paikoilleen. Tekijän, [[Khareksen]], työn arvioidaan kestäneen noin kaksitoista vuotta. Rahoituksen kerrotaan tulleen osittain Demetrioksen jättämien [[piiritysvälineiden]] myynnistä. Enpä usko että kantaisin edes yhtä sormea.
+KYSYMYS: Kerro lisää: Philon Bysanttilaisen
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Miten noin iso pronssipatsas ylipäätään rakennettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä insinöörikysymys. Rakennustavasta on säilynyt kuvauksia, mutta kaikki yksityiskohdat eivät ole varmoja. Lähteiden mukaan patsas rakennettiin pronssilaattoina valettuina osina, jotka kiinnitettiin sisällä olevaan rautaiseen tukirakenteeseen ja kiviosiin. [[Philon Bysanttilaisen]] kuvauksen mukaan työtä tehtiin vaiheittain alhaalta ylöspäin, ja rakennuksen aikana patsas peitettiin maapenkereeseen, jotta sen osat saatiin nostettua paikoilleen. Tekijän, [[Khareksen]], työn arvioidaan kestäneen noin kaksitoista vuotta. Rahoituksen kerrotaan tulleen osittain Demetrioksen jättämien [[piiritysvälineiden]] myynnistä. Enpä usko että kantaisin edes yhtä sormea.
+KYSYMYS: Kerro lisää: Khareksen
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+- [PRI — maalehti / Historia: Piiritys joka synnytti jättiläisen] 1634 — Vuonna 1625 hollantilainen amiraali Boudewijn Hendricksz piiritti San Juanin ja poltti suuren osan kaupungista, vaikka El Morron linnoitusta ei saatukaan valtaan. Piiritys paljasti aukon: kaupunki oli suojaton maan puolelta. Espanjan kruunu päätti rakentaa toisen linnakkeen, Castillo San Cristóbalin, jonka työt alkoivat vuonna 1634 ja jatkuivat runsaat sata vuotta, valmistuen 1790. Valmiina se oli suurin espanjalaisten koskaan Uuteen maailmaan rakentama linnoitus. Sen kuivat vallihaudat, tunnelit ja toisiinsa kytketyt bastionit tekivät siitä lähes valloittamattoman, eikä yksikään vihollinen onnistunut koskaan valtaamaan sitä väkisin.
+AIEMPI KYSYMYS: Miten noin iso pronssipatsas ylipäätään rakennettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä insinöörikysymys. Rakennustavasta on säilynyt kuvauksia, mutta kaikki yksityiskohdat eivät ole varmoja. Lähteiden mukaan patsas rakennettiin pronssilaattoina valettuina osina, jotka kiinnitettiin sisällä olevaan rautaiseen tukirakenteeseen ja kiviosiin. [[Philon Bysanttilaisen]] kuvauksen mukaan työtä tehtiin vaiheittain alhaalta ylöspäin, ja rakennuksen aikana patsas peitettiin maapenkereeseen, jotta sen osat saatiin nostettua paikoilleen. Tekijän, [[Khareksen]], työn arvioidaan kestäneen noin kaksitoista vuotta. Rahoituksen kerrotaan tulleen osittain Demetrioksen jättämien [[piiritysvälineiden]] myynnistä. Enpä usko että kantaisin edes yhtä sormea.
+KYSYMYS: Kerro lisää: piiritysvälineiden
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Miksi rodoslaiset eivät rakentaneet sitä uudelleen?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiinnostava. Syy ei ollut raha eikä taito vaan oraakkeli. Kun maanjäristys kaatoi patsaan noin 226 eaa., rodoslaiset kysyivät neuvoa [[Delfoin oraakkelilta]]. Oraakkelin vastauksen tulkittiin tarkoittavan, ettei patsasta pitänyt pystyttää uudelleen, sillä sen katsottiin olleen jumalalle epämieluisa. Rodoslaiset noudattivat neuvoa, ja pronssiset palaset makasivat maassa yli kahdeksan vuosisataa, kunnes ne vuonna 653 myytiin pois. Antiikin lähteet kertovat aiheesta hieman eri tavoin, joten yksityiskohdissa en ole varma. Joskus viisas jättää nostamatta.
+KYSYMYS: Kerro lisää: Delfoin oraakkelilta
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Missä kolossi tarkalleen seisoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, tai oikeastaan en. Tarkkaa paikkaa ei tiedetä, ja siitä kiistellään yhä. Suosituin mielikuva on, että patsas seisoi jalat haarallaan [[Mandrakin]] sataman suulla, ja sen alta olisivat purjehtineet laivat. Kuva on kuitenkin vasta myöhempää perua, eikä tutkijoiden mukaan sellainen rakenne olisi ollut mahdollinen: kaatuessaan patsas olisi tukkinut satamasuun. Toisen ehdotuksen mukaan patsas seisoi kaupungin [[akropolilla]], korkealla kukkulalla, ja kolmannen mukaan jonkin temppelialueen vieressä. En ole varma, mikä vaihtoehto on vahvin. Eipä ole kyyhkykään ollut paikalla.
+KYSYMYS: Kerro lisää: Mandrakin
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Missä kolossi tarkalleen seisoi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, tai oikeastaan en. Tarkkaa paikkaa ei tiedetä, ja siitä kiistellään yhä. Suosituin mielikuva on, että patsas seisoi jalat haarallaan [[Mandrakin]] sataman suulla, ja sen alta olisivat purjehtineet laivat. Kuva on kuitenkin vasta myöhempää perua, eikä tutkijoiden mukaan sellainen rakenne olisi ollut mahdollinen: kaatuessaan patsas olisi tukkinut satamasuun. Toisen ehdotuksen mukaan patsas seisoi kaupungin [[akropolilla]], korkealla kukkulalla, ja kolmannen mukaan jonkin temppelialueen vieressä. En ole varma, mikä vaihtoehto on vahvin. Eipä ole kyyhkykään ollut paikalla.
+KYSYMYS: Kerro lisää: akropolilla
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Kuka oli Demetrios Makedonialainen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä miehestä on tarinaa. Demetrios I, jota kutsuttiin liikanimellä Poliorketes eli kaupunginvalloittaja, oli makedonialainen sotapäällikkö ja myöhemmin Makedonian kuningas. Hän oli [[Antigonos Yksisilmäisen]] poika ja yksi [[Aleksanteri Suuren]] seuraajien eli diadokien aikakauden sotapäälliköistä. Hän piiritti Rodosta noin vuosina 305–304 eaa. käyttäen muun muassa valtavaa [[Helepolis]]-piiritystornia, mutta kaupunki kesti. Rauhan tultua Demetrios jätti piiritysvälineensä, ja rodoslaiset käyttivät niiden arvoa patsaan rahoittamiseen. Hänen myöhempi uransa oli vaihteleva, eikä sitä voi tiivistää yhteen virkkeeseen. Aika vauhdikas mies, kyyhkyn silmin katsottuna.
+KYSYMYS: Kerro lisää: Antigonos Yksisilmäisen
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+- [Kreikka — maalehti / Tiede ja keksinnöt: Kaksi vuotta laguunin rannalla] n. 345 eaa. — Aristoteles vietti kaksi vuotta Lesboksen saarella ja tutki Pyrrhan laguunin eläimiä sekä kalastajien saaliita. Hän katsoi, avasi ja kuvasi tarkasti — ja oli ensimmäinen, joka tutki eliöitä järjestelmällisesti. Siitä alkoi biologia. Kaikkea ei uskottu: hän kertoi kalastajien kertoneen, että mustekalan yksi lonkero on lisääntymiselintä. Vasta 1800-luvun tutkijat totesivat sen pitävän paikkansa. Aristoteles syntyi Stageirassa Pohjois-Kreikassa, opiskeli Ateenassa Platonin koulussa ja opetti myöhemmin nuorta Aleksanteri Suurta.
+AIEMPI KYSYMYS: Kuka oli Demetrios Makedonialainen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä miehestä on tarinaa. Demetrios I, jota kutsuttiin liikanimellä Poliorketes eli kaupunginvalloittaja, oli makedonialainen sotapäällikkö ja myöhemmin Makedonian kuningas. Hän oli [[Antigonos Yksisilmäisen]] poika ja yksi [[Aleksanteri Suuren]] seuraajien eli diadokien aikakauden sotapäälliköistä. Hän piiritti Rodosta noin vuosina 305–304 eaa. käyttäen muun muassa valtavaa [[Helepolis]]-piiritystornia, mutta kaupunki kesti. Rauhan tultua Demetrios jätti piiritysvälineensä, ja rodoslaiset käyttivät niiden arvoa patsaan rahoittamiseen. Hänen myöhempi uransa oli vaihteleva, eikä sitä voi tiivistää yhteen virkkeeseen. Aika vauhdikas mies, kyyhkyn silmin katsottuna.
+KYSYMYS: Kerro lisää: Aleksanteri Suuren
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Kuka oli Demetrios Makedonialainen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä miehestä on tarinaa. Demetrios I, jota kutsuttiin liikanimellä Poliorketes eli kaupunginvalloittaja, oli makedonialainen sotapäällikkö ja myöhemmin Makedonian kuningas. Hän oli [[Antigonos Yksisilmäisen]] poika ja yksi [[Aleksanteri Suuren]] seuraajien eli diadokien aikakauden sotapäälliköistä. Hän piiritti Rodosta noin vuosina 305–304 eaa. käyttäen muun muassa valtavaa [[Helepolis]]-piiritystornia, mutta kaupunki kesti. Rauhan tultua Demetrios jätti piiritysvälineensä, ja rodoslaiset käyttivät niiden arvoa patsaan rahoittamiseen. Hänen myöhempi uransa oli vaihteleva, eikä sitä voi tiivistää yhteen virkkeeseen. Aika vauhdikas mies, kyyhkyn silmin katsottuna.
+KYSYMYS: Kerro lisää: Helepolis
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Miksi Helios oli Rodoksen suojelusjumala?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tähän löytyy ihan oikea myytti. Antiikin kreikkalaisessa uskossa Helios oli auringon jumala, ja Rodoksen asukkaat pitivät häntä saaren suojelijana. Runoilija [[Pindaroksen]] mukaan [[Zeus]] jakoi maailmaa jumalten kesken eikä Helios ollut paikalla, joten hän jäi ilman osuutta. Kun saari nousi merestä, Helios sai sen omakseen. Hänen kunniakseen vietettiin juhlia, ja hänen päänsä näkyi saaren kolikoissa. Siksi oli luontevaa, että piirityksestä selvinnyt kaupunki pystytti juhlapatsaan juuri hänelle. En ole varma, mitkä juhlien yksityiskohdat ovat täsmälleen oikein, mutta Helios-kultti oli Rodoksella vahva.
+
+Auringonjumalasta tykkään itsekin: ylhäältä katsottuna aamuvalo on parasta, mitä tämä työ tarjoaa. Se on pieni asia, mutta se on minun.
+KYSYMYS: Kerro lisää: Pindaroksen
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rodoksen kolossi (historia)
+Tietoruudun teksti: Rodoksen kaupunkiin pystytettiin vuonna 280 eaa. pronssinen patsas auringonjumala Helioksesta. Sen teki Khares Lindoslainen juhlistamaan sitä, että saari oli kestänyt Demetrios Makedonialaisen vuoden mittaisen piirityksen. Patsas oli noin 33 metriä korkea — antiikin maailman korkein — ja se kuului seitsemään ihmeeseen. Maanjäristys kaatoi sen jo 226 eaa., ja Delfoin oraakkelin neuvosta rodoslaiset jättivät sen rakentamatta uudelleen. Palaset makasivat maassa vuosisatoja, kunnes ne vuonna 653 myytiin pois. Patsaan tarkasta paikasta kiistellään yhä.
+AIEMPI KYSYMYS: Miksi Helios oli Rodoksen suojelusjumala?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tähän löytyy ihan oikea myytti. Antiikin kreikkalaisessa uskossa Helios oli auringon jumala, ja Rodoksen asukkaat pitivät häntä saaren suojelijana. Runoilija [[Pindaroksen]] mukaan [[Zeus]] jakoi maailmaa jumalten kesken eikä Helios ollut paikalla, joten hän jäi ilman osuutta. Kun saari nousi merestä, Helios sai sen omakseen. Hänen kunniakseen vietettiin juhlia, ja hänen päänsä näkyi saaren kolikoissa. Siksi oli luontevaa, että piirityksestä selvinnyt kaupunki pystytti juhlapatsaan juuri hänelle. En ole varma, mitkä juhlien yksityiskohdat ovat täsmälleen oikein, mutta Helios-kultti oli Rodoksella vahva.
+
+Auringonjumalasta tykkään itsekin: ylhäältä katsottuna aamuvalo on parasta, mitä tämä työ tarjoaa. Se on pieni asia, mutta se on minun.
+KYSYMYS: Kerro lisää: Zeus
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Käännösvirhe, joka on elänyt viisisataa vuotta] 1508 — Hesiodoksen tarinassa Pandora on maailman ensimmäinen nainen, muotoiltu savesta. Hän avaa astian, josta pääsevät maailmalle kaikki vitsaukset, ja pohjalle jää vain Toivo. Kreikaksi astia on pithos: ihmisen kokoinen saviruukku, jollaisia kaivettiin maahan viljan, viinin ja öljyn säilytystä varten. Hollantilainen oppinut Erasmus käänsi vuoden 1508 sananlaskukokoelmassaan sanan pithos latinan sanaksi pyxis, joka tarkoittaa pientä rasiaa. Virhe jäi elämään, ja suomeksikin puhutaan yhä Pandoran lippaasta.
+AIEMPI KYSYMYS: Mihin palatsin valtavia saviruukkuja käytettiin?
+AIEMPI VASTAUS (Livia):
+Kato, nämä ruukut on mun lemppareita. Ne olivat arjen tärkein varastointiväline. Palatsin kreikaksi pithos-nimiset saviruukut olivat ihmisen kokoisia, ja niitä kaivettiin maahan tai asetettiin varastohuoneisiin säilyttämään viljaa, viiniä ja oliiviöljyä. Ne kertovat palatsin merkityksestä: keskus keräsi ja jakoi ruokaa laajalle alueelle. Sama sana tunnetaan myös Pandoran taruista. Hesiodoksen kertomuksessa [[Pandora]] avaa astian, josta pääsevät vitsaukset, ja astia oli alun perin juuri pithos eli suuri saviruukku. Hollantilainen oppinut [[Erasmus]] käänsi sanan vuonna 1508 latinan sanaksi pyxis eli pieneksi rasiaksi, ja virhe jäi elämään, joten suomeksikin puhutaan yhä Pandoran lippaasta. Pienestä käännösvirheestä sitä lähdetään.
+KYSYMYS: Kerro lisää: Pandora
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Tarut ja sadut: Käännösvirhe, joka on elänyt viisisataa vuotta] 1508 — Hesiodoksen tarinassa Pandora on maailman ensimmäinen nainen, muotoiltu savesta. Hän avaa astian, josta pääsevät maailmalle kaikki vitsaukset, ja pohjalle jää vain Toivo. Kreikaksi astia on pithos: ihmisen kokoinen saviruukku, jollaisia kaivettiin maahan viljan, viinin ja öljyn säilytystä varten. Hollantilainen oppinut Erasmus käänsi vuoden 1508 sananlaskukokoelmassaan sanan pithos latinan sanaksi pyxis, joka tarkoittaa pientä rasiaa. Virhe jäi elämään, ja suomeksikin puhutaan yhä Pandoran lippaasta.
+AIEMPI KYSYMYS: Mihin palatsin valtavia saviruukkuja käytettiin?
+AIEMPI VASTAUS (Livia):
+Kato, nämä ruukut on mun lemppareita. Ne olivat arjen tärkein varastointiväline. Palatsin kreikaksi pithos-nimiset saviruukut olivat ihmisen kokoisia, ja niitä kaivettiin maahan tai asetettiin varastohuoneisiin säilyttämään viljaa, viiniä ja oliiviöljyä. Ne kertovat palatsin merkityksestä: keskus keräsi ja jakoi ruokaa laajalle alueelle. Sama sana tunnetaan myös Pandoran taruista. Hesiodoksen kertomuksessa [[Pandora]] avaa astian, josta pääsevät vitsaukset, ja astia oli alun perin juuri pithos eli suuri saviruukku. Hollantilainen oppinut [[Erasmus]] käänsi sanan vuonna 1508 latinan sanaksi pyxis eli pieneksi rasiaksi, ja virhe jäi elämään, joten suomeksikin puhutaan yhä Pandoran lippaasta. Pienestä käännösvirheestä sitä lähdetään.
+KYSYMYS: Kerro lisää: Erasmus
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Miksi palatsi tuhoutui?
+AIEMPI VASTAUS (Livia):
+Hmm. Tähän ei ole yhtä varmaa vastausta. Knossoksen palatsi kärsi tuhoja useammin kuin kerran, ja viimeinen tuho ajoitetaan noin vuoteen 1350 eaa., yli 3 300 vuotta sitten. Aiempia vahinkoja on selitetty maanjäristyksillä ja kenties [[Santorinin]] suurella tulivuorenpurkauksella, jonka ajoituksesta tutkijat kiistelevät. Noin 1450 eaa. jälkeen Knossosta hallitsivat todennäköisesti [[mykeneläiset]], kun mantereen kreikkalaiset olivat saaneet vallan Kreetalla. Viimeisen tuhon syystä tutkijat eivät ole yksimielisiä: tulipalo, maanjäristys ja sota ovat esitettyjä syitä, mutta varmaa selitystä ei ole. Onpas siit hirmu kauan.
+KYSYMYS: Kerro lisää: Santorinin
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Miksi palatsi tuhoutui?
+AIEMPI VASTAUS (Livia):
+Hmm. Tähän ei ole yhtä varmaa vastausta. Knossoksen palatsi kärsi tuhoja useammin kuin kerran, ja viimeinen tuho ajoitetaan noin vuoteen 1350 eaa., yli 3 300 vuotta sitten. Aiempia vahinkoja on selitetty maanjäristyksillä ja kenties [[Santorinin]] suurella tulivuorenpurkauksella, jonka ajoituksesta tutkijat kiistelevät. Noin 1450 eaa. jälkeen Knossosta hallitsivat todennäköisesti [[mykeneläiset]], kun mantereen kreikkalaiset olivat saaneet vallan Kreetalla. Viimeisen tuhon syystä tutkijat eivät ole yksimielisiä: tulipalo, maanjäristys ja sota ovat esitettyjä syitä, mutta varmaa selitystä ei ole. Onpas siit hirmu kauan.
+KYSYMYS: Kerro lisää: mykeneläiset
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Miten Knossos liittyy Minotauroksen taruun?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarun mukaan Kreetan kuningas [[Minos]] määräsi rakennuttajansa [[Daidaloksen]] tekemään sokkelon eli labyrintin, jonka sisään suljettiin ihmisruumiinen, härän päinen hirviö [[Minotauros]]. Ateenalaisen sankarin [[Theseuksen]] kerrotaan lopulta voittaneen hirviön ja löytäneen tien ulos. Tarulla ei ole todistettua yhteyttä kaivauksiin, mutta Knossoksen palatsin mutkikas rakenne, jossa oli lukemattomia pihoja, portaikkoja ja huoneita, on usein yhdistetty labyrintin mielikuvaan. Sana labyrintti on myös arveltu liittyvän kaksiteräiseen kirveeseen eli sanaan labrys, joka oli minolaisessa kulttuurissa tärkeä symboli, mutta tämä selitys ei ole varma. Minos puolestaan antoi nimensä koko minolaiselle kulttuurille. Sokkelo, jonka kyyhky selvittäisi ylhäältä käsin.
+KYSYMYS: Kerro lisää: Minos
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Miten Knossos liittyy Minotauroksen taruun?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarun mukaan Kreetan kuningas [[Minos]] määräsi rakennuttajansa [[Daidaloksen]] tekemään sokkelon eli labyrintin, jonka sisään suljettiin ihmisruumiinen, härän päinen hirviö [[Minotauros]]. Ateenalaisen sankarin [[Theseuksen]] kerrotaan lopulta voittaneen hirviön ja löytäneen tien ulos. Tarulla ei ole todistettua yhteyttä kaivauksiin, mutta Knossoksen palatsin mutkikas rakenne, jossa oli lukemattomia pihoja, portaikkoja ja huoneita, on usein yhdistetty labyrintin mielikuvaan. Sana labyrintti on myös arveltu liittyvän kaksiteräiseen kirveeseen eli sanaan labrys, joka oli minolaisessa kulttuurissa tärkeä symboli, mutta tämä selitys ei ole varma. Minos puolestaan antoi nimensä koko minolaiselle kulttuurille. Sokkelo, jonka kyyhky selvittäisi ylhäältä käsin.
+KYSYMYS: Kerro lisää: Daidaloksen
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Miten Knossos liittyy Minotauroksen taruun?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarun mukaan Kreetan kuningas [[Minos]] määräsi rakennuttajansa [[Daidaloksen]] tekemään sokkelon eli labyrintin, jonka sisään suljettiin ihmisruumiinen, härän päinen hirviö [[Minotauros]]. Ateenalaisen sankarin [[Theseuksen]] kerrotaan lopulta voittaneen hirviön ja löytäneen tien ulos. Tarulla ei ole todistettua yhteyttä kaivauksiin, mutta Knossoksen palatsin mutkikas rakenne, jossa oli lukemattomia pihoja, portaikkoja ja huoneita, on usein yhdistetty labyrintin mielikuvaan. Sana labyrintti on myös arveltu liittyvän kaksiteräiseen kirveeseen eli sanaan labrys, joka oli minolaisessa kulttuurissa tärkeä symboli, mutta tämä selitys ei ole varma. Minos puolestaan antoi nimensä koko minolaiselle kulttuurille. Sokkelo, jonka kyyhky selvittäisi ylhäältä käsin.
+KYSYMYS: Kerro lisää: Minotauros
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Miten Knossos liittyy Minotauroksen taruun?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tarun mukaan Kreetan kuningas [[Minos]] määräsi rakennuttajansa [[Daidaloksen]] tekemään sokkelon eli labyrintin, jonka sisään suljettiin ihmisruumiinen, härän päinen hirviö [[Minotauros]]. Ateenalaisen sankarin [[Theseuksen]] kerrotaan lopulta voittaneen hirviön ja löytäneen tien ulos. Tarulla ei ole todistettua yhteyttä kaivauksiin, mutta Knossoksen palatsin mutkikas rakenne, jossa oli lukemattomia pihoja, portaikkoja ja huoneita, on usein yhdistetty labyrintin mielikuvaan. Sana labyrintti on myös arveltu liittyvän kaksiteräiseen kirveeseen eli sanaan labrys, joka oli minolaisessa kulttuurissa tärkeä symboli, mutta tämä selitys ei ole varma. Minos puolestaan antoi nimensä koko minolaiselle kulttuurille. Sokkelo, jonka kyyhky selvittäisi ylhäältä käsin.
+KYSYMYS: Kerro lisää: Theseuksen
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Kuka Arthur Evans oli ja mitä hän Knossoksessa teki?
+AIEMPI VASTAUS (Livia):
+Just niin, Evans. Hänestä puhutaan Knossoksessa melkein jokaisessa lauseessa. Arthur Evans oli brittiläinen arkeologi, joka osti Knossoksen kukkulan alueen ja aloitti systemaattiset kaivaukset vuonna 1900, ensimmäisten [[Kalokairinoksen]] tekemien kaivausten jälkeen. Työt jatkuivat vuosikymmeniä. Evans paljasti palatsin laajat tilat ja nimesi kulttuurin [[minolaiseksi]] myyttisen kuningas Minoksen mukaan. Hän myös rekonstruoi osia palatsista osin teräsbetonilla ja maalasi seinät uudelleen sen mukaan, millaisiksi hän ne kuvitteli. Tämä on herättänyt kritiikkiä, sillä osa kriitikoista pitää rekonstruktioita enemmän Evansin omina käsityksinä kuin todisteina siitä, miltä palatsi oikeasti näytti. Betoni ja pronssikausi, kyl se on outo pari.
+KYSYMYS: Kerro lisää: Kalokairinoksen
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Kuka Arthur Evans oli ja mitä hän Knossoksessa teki?
+AIEMPI VASTAUS (Livia):
+Just niin, Evans. Hänestä puhutaan Knossoksessa melkein jokaisessa lauseessa. Arthur Evans oli brittiläinen arkeologi, joka osti Knossoksen kukkulan alueen ja aloitti systemaattiset kaivaukset vuonna 1900, ensimmäisten [[Kalokairinoksen]] tekemien kaivausten jälkeen. Työt jatkuivat vuosikymmeniä. Evans paljasti palatsin laajat tilat ja nimesi kulttuurin [[minolaiseksi]] myyttisen kuningas Minoksen mukaan. Hän myös rekonstruoi osia palatsista osin teräsbetonilla ja maalasi seinät uudelleen sen mukaan, millaisiksi hän ne kuvitteli. Tämä on herättänyt kritiikkiä, sillä osa kriitikoista pitää rekonstruktioita enemmän Evansin omina käsityksinä kuin todisteina siitä, miltä palatsi oikeasti näytti. Betoni ja pronssikausi, kyl se on outo pari.
+KYSYMYS: Kerro lisää: minolaiseksi
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+AIEMPI KYSYMYS: Missä Knossos sijaitsee nykyisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Knossos sijaitsee Kreikassa [[Kreetan]] saarella, muutaman kilometrin päässä saaren suurimmasta kaupungista [[Iraklionista]], sisämaassa kukkulalla lähellä rannikkoa. Paikalla on nykyään arkeologinen alue, jota kierretään opastetusti ja jossa nähdään palatsin osia sekä Evansin aikaisia rekonstruktioita. Muutaman kilometrin matka kaupungista kulkee tavallisesti bussilla tai autolla. Hyvä paikka katsottavaksi, vaikka kyyhky mieluummin katselee sen ylhäältä.
+KYSYMYS: Kerro lisää: Kreetan
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Knossoksen palatsi (historia)
+Tietoruudun teksti: Knossos on minolaisen kulttuurin suurin keskus ja usein Euroopan vanhimmaksi kaupungiksi kutsuttu paikka: kukkulaa on asuttu noin vuodesta 7000 eaa., ensimmäinen palatsi nousi noin 1900 eaa. ja lopullinen tuhoutui noin 1350 eaa. Palatsi oli noin 14 000 neliömetriä — sokkeloinen rypäs pihoja, portaikkoja ja varastoja, joissa seisoi ihmisen kokoisia pithos-ruukkuja. Isoisäsi matkan aikaan siitä ei näkynyt maan päälle mitään: ensimmäiset kaivaukset teki iraklionilainen kauppias ja muinaistutkija Minos Kalokairinos vasta 1878–1879 omalla maallaan.
+AIEMPI KYSYMYS: Missä Knossos sijaitsee nykyisin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Knossos sijaitsee Kreikassa [[Kreetan]] saarella, muutaman kilometrin päässä saaren suurimmasta kaupungista [[Iraklionista]], sisämaassa kukkulalla lähellä rannikkoa. Paikalla on nykyään arkeologinen alue, jota kierretään opastetusti ja jossa nähdään palatsin osia sekä Evansin aikaisia rekonstruktioita. Muutaman kilometrin matka kaupungista kulkee tavallisesti bussilla tai autolla. Hyvä paikka katsottavaksi, vaikka kyyhky mieluummin katselee sen ylhäältä.
+KYSYMYS: Kerro lisää: Iraklionista
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+- [Bangkok — kaupunkilehti / Bangkok: Nimi, joka ei mahdu kylttiin] Thaimaalaiset kutsuvat pääkaupunkiaan nimellä Krung Thep Maha Nakhon, mutta juhlallinen täysi nimi on 168 kirjainta pitkä ja Guinnessin ennätyskirjan mukaan maailman pisin paikannimi. Se on koottu paalin ja sanskritin sanoista ja alkaa suunnilleen: enkelten kaupunki, kuolemattomien suuri kaupunki. Nimi Bangkok oli alun perin joen länsirannan kylän nimi, ja ulkomaalaiset jäivät käyttämään sitä silloinkin, kun uusi pääkaupunki oli jo perustettu ja saanut oman, pidemmän nimensä.
+- [Salvador — kaupunkilehti / Musta Rooma: Katujuhla joka soi Afrikan rytmiä] Bahian karnevaali on Guinnessin ennätyskirjan mukaan maailman suurin katujuhla: viikon ajan lähes neljä miljoonaa ihmistä juhlii 25 kilometrin matkalla katuja ja aukioita, ja pelkkä järjestäminen työllistää yli satatuhatta. Juhlan sydämessä soivat blocos afro -ryhmät – Ilê Aiyê, Olodum, Timbalada ja Filhos de Gandhy – jotka syntyivät nostamaan afrobrasilialaisen kulttuurin esiin karnevaalin valtavirrasta. Niiden luoma axé ja samba-reggae soivat nykyään koko Brasiliassa.
+AIEMPI KYSYMYS: Miksi Vikosin rotko on ennätys?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mutta ennätys onkin vähän erikoisella tavalla mitattu. Vikosin rotko on noin 32 kilometriä pitkä, ja sen syvyys vaihtelee 120 metristä 1 350 metriin. Leveys on 2 500 metristä kapeimmillaan vain muutamaan metriin. [[Guinnessin ennätyskirjan]] ja muiden lähteiden mukaan se on maailman syvin rotko suhteessa leveyteensä. Ennätys ei siis tarkoita, että se olisi maailman syvin tai pisin rotko, vaan että syvyyden ja leveyden suhde on poikkeuksellinen. Rotko sijaitsee Pindoksen vuoristossa ja kuuluu [[Vikos–Aoos-kansallispuiston]] ydinalueeseen. Tää on kyl hurjan kapea ja syvä.
+KYSYMYS: Kerro lisää: Guinnessin ennätyskirjan
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Miksi Vikosin rotko on ennätys?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Mutta ennätys onkin vähän erikoisella tavalla mitattu. Vikosin rotko on noin 32 kilometriä pitkä, ja sen syvyys vaihtelee 120 metristä 1 350 metriin. Leveys on 2 500 metristä kapeimmillaan vain muutamaan metriin. [[Guinnessin ennätyskirjan]] ja muiden lähteiden mukaan se on maailman syvin rotko suhteessa leveyteensä. Ennätys ei siis tarkoita, että se olisi maailman syvin tai pisin rotko, vaan että syvyyden ja leveyden suhde on poikkeuksellinen. Rotko sijaitsee Pindoksen vuoristossa ja kuuluu [[Vikos–Aoos-kansallispuiston]] ydinalueeseen. Tää on kyl hurjan kapea ja syvä.
+KYSYMYS: Kerro lisää: Vikos–Aoos-kansallispuiston
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Maa jossa joet virtaavat makeaa keittoa] 1800-luku — Kisseli on hapatetusta tai tärkkelyksellä sakeutetusta marjasta, hedelmästä tai viljasta keitetty jälkiruoka, jonka nimi juontuu vanhasta slaavilaisesta hapan-sanasta. Alkuperäiset kisselit tehtiin kaurasta tai rukiista ilman perunatärkkelystä, ja makea marjaversio yleistyi vasta 1800-luvulla, kun halpaa perunatärkkelystä alkoi olla kaikkien saatavilla. Venäläisissä saduissa ihannemaata kuvataan sanonnalla "maidonjoet, kisselirannat", ja kaukaista sukulaista sanotaan leikillään "seitsemänneksi vedeksi kisselin jälkeen" — niin ohuena serkkuus siinä näyttäytyy. Karpalosta keitetty kisseli on yksi suosituimmista versioista, ja sen paksu, kiiltävä pinta muistuttaa enemmän hyytelöä k…
+AIEMPI KYSYMYS: Mistä rotkon nimi tulee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä on useampi selitys, eikä mikään niistä ole varma. Yhden arvion mukaan nimi tulee [[slaavilaisesta]] sanasta rotko. Toisen mukaan se tulee kreikan sanasta vikos, joka tarkoittaa korvallista astiaa. Kolmannen mukaan nimen alkuperä on [[albanian kielen]] sana, joka tarkoittaa siltaa. Tutkijat eivät ole päässeet yksimielisyyteen, ja nimen alkuperä voi olla vanhempi kuin mikään näistä kielistä. Kolme selitystä ja yksi rotko, tyypillistä.
+KYSYMYS: Kerro lisää: slaavilaisesta
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Yhdeksän kiloa lintua ilmassa] keväällä — Kiharapelikaani on pelikaaneista suurin ja maailman raskaimpia lentäviä lintuja: siipiväli on 2,7–3,2 metriä ja paino keskimäärin noin 9,5 kiloa. Maailman suurin tunnettu pesimäsiirtokunta on Prespajärvellä, jonka pienemmän altaan rannoilla pesii noin 1 600 paria. Järvi jakautuu Kreikan ja Albanian kesken, joten lintujen laskeminen vaatii kahden maan yhteistyötä. Kiharapelikaani ei syöksy veteen ylhäältä, vaan ui pinnalla ja kurottaa nokkansa pinnan alle. Kreikassa nopeat moottoriveneet häiritsevät parvien ruokailua.
+AIEMPI KYSYMYS: Mistä rotkon nimi tulee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tästä on useampi selitys, eikä mikään niistä ole varma. Yhden arvion mukaan nimi tulee [[slaavilaisesta]] sanasta rotko. Toisen mukaan se tulee kreikan sanasta vikos, joka tarkoittaa korvallista astiaa. Kolmannen mukaan nimen alkuperä on [[albanian kielen]] sana, joka tarkoittaa siltaa. Tutkijat eivät ole päässeet yksimielisyyteen, ja nimen alkuperä voi olla vanhempi kuin mikään näistä kielistä. Kolme selitystä ja yksi rotko, tyypillistä.
+KYSYMYS: Kerro lisää: albanian kielen
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Millainen alue Zagori on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zagori on vuoristoinen alue [[Epeiroksen]] seudulla Luoteis-Kreikassa, Pindoksen vuoriston kupeessa. Alueella on noin neljäkymmentäkuusi pientä kylää, joiden talot ja kadut on rakennettu paikallisesta kivestä. Seudulle ovat ominaisia myös [[kivisillat]], joiden avulla ylitettiin jokia ja puroja aikana, jolloin kylien välillä kuljettiin jalan tai muuleilla. Muistini mukaan alueen kulttuurimaisema on liitetty [[Unescon]] maailmanperintöluetteloon vuonna 2023, mutta en ole varma vuodesta. Seutu on tunnettu vaelluspoluistaan ja Vikosin rotkosta. Kyyhky kiittää kivisiltoja: ei tarvitse lentää kierroksen kautta.
+KYSYMYS: Kerro lisää: Epeiroksen
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Millainen alue Zagori on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zagori on vuoristoinen alue [[Epeiroksen]] seudulla Luoteis-Kreikassa, Pindoksen vuoriston kupeessa. Alueella on noin neljäkymmentäkuusi pientä kylää, joiden talot ja kadut on rakennettu paikallisesta kivestä. Seudulle ovat ominaisia myös [[kivisillat]], joiden avulla ylitettiin jokia ja puroja aikana, jolloin kylien välillä kuljettiin jalan tai muuleilla. Muistini mukaan alueen kulttuurimaisema on liitetty [[Unescon]] maailmanperintöluetteloon vuonna 2023, mutta en ole varma vuodesta. Seutu on tunnettu vaelluspoluistaan ja Vikosin rotkosta. Kyyhky kiittää kivisiltoja: ei tarvitse lentää kierroksen kautta.
+KYSYMYS: Kerro lisää: kivisillat
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Millainen alue Zagori on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Zagori on vuoristoinen alue [[Epeiroksen]] seudulla Luoteis-Kreikassa, Pindoksen vuoriston kupeessa. Alueella on noin neljäkymmentäkuusi pientä kylää, joiden talot ja kadut on rakennettu paikallisesta kivestä. Seudulle ovat ominaisia myös [[kivisillat]], joiden avulla ylitettiin jokia ja puroja aikana, jolloin kylien välillä kuljettiin jalan tai muuleilla. Muistini mukaan alueen kulttuurimaisema on liitetty [[Unescon]] maailmanperintöluetteloon vuonna 2023, mutta en ole varma vuodesta. Seutu on tunnettu vaelluspoluistaan ja Vikosin rotkosta. Kyyhky kiittää kivisiltoja: ei tarvitse lentää kierroksen kautta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Miten Vikosin rotko on syntynyt?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rotkon synty on hidas tarina. Vikosin rotko on muodostunut miljoonien vuosien kuluessa pääosin kalkkikiveen, jonka vesi liuottaa ja kuluttaa helposti. Pindoksen vuoristo on kohonnut maankuoren liikkeiden seurauksena, ja nousseeseen vuoristoon [[Voidomatis-joki]] ja sadevedet ovat kaivertaneet syvää uomaa. Tällaista kalkkikiviseutua kutsutaan [[karstiksi]], ja siinä vesi virtaa usein maan alla ja syöpyy luolia ja kapeita rotkoja. Tarkka ikä ja kehitysvaiheet vaativat geologien tutkimusta, enkä ole varma yksityiskohdista. Pitkä aika, ja kyyhkykin väsyy ajatellessaan.
+KYSYMYS: Kerro lisää: Voidomatis-joki
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Miten Vikosin rotko on syntynyt?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rotkon synty on hidas tarina. Vikosin rotko on muodostunut miljoonien vuosien kuluessa pääosin kalkkikiveen, jonka vesi liuottaa ja kuluttaa helposti. Pindoksen vuoristo on kohonnut maankuoren liikkeiden seurauksena, ja nousseeseen vuoristoon [[Voidomatis-joki]] ja sadevedet ovat kaivertaneet syvää uomaa. Tällaista kalkkikiviseutua kutsutaan [[karstiksi]], ja siinä vesi virtaa usein maan alla ja syöpyy luolia ja kapeita rotkoja. Tarkka ikä ja kehitysvaiheet vaativat geologien tutkimusta, enkä ole varma yksityiskohdista. Pitkä aika, ja kyyhkykin väsyy ajatellessaan.
+KYSYMYS: Kerro lisää: karstiksi
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+AIEMPI KYSYMYS: Mitä eläimiä Vikosin rotkon seudulla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Seutu on villiä, ja se näkyy eläimistössä. Vikos–Aoos-kansallispuiston alueella ja Pindoksen vuoristossa elää muun muassa [[ruskeakarhuja]], [[susia]] ja [[gemssejä]], jotka viihtyvät kalliojyrkänteillä. Taivaalla näkee suuria petolintuja, kuten kotkia ja haukkoja, mutta en ole varma, mitkä lajit ovat seudulla yleisimpiä. Rotkon vesistöissä elää kaloja ja sammakkoeläimiä, ja kasvillisuus vaihtelee kosteista metsistä kallioiden harvaan pensaikkoon. Täydellisen lajiluettelon saa luontoviranomaisilta. Karhut jättäisin kyl siipien ulottumattomiin.
+KYSYMYS: Kerro lisää: ruskeakarhuja
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Anchorage — kaupunkilehti / Eläimet kaupungissa: Susia, valkovalaita ja dallinlampaita] Hirvi ja karhu eivät ole ainoat. Anchoragen seudulla elää noin kolmekymmentä sisämaan alaskansutta, ja vuonna 2007 sudet tappoivat useita koiria lenkillä omistajiensa kanssa. Puroissa ja järvissä on majavanpatoja, ja keväisin kettuja poikasineen näkee metsien viereisillä parkkipaikoilla. Ilveksiäkin havaitaan. Sewardin valtatiellä Kenain suuntaan Turnagain Armissa nähdään usein valkovalaita, ja Windy Pointissa dallinlampaat seisovat toisinaan aivan tien vierellä. Kaupungin itäpuolella alkaa Chugach State Park, jonka korkein kohta Bashful Peak on 8 005 jalkaa.
+AIEMPI KYSYMYS: Mitä eläimiä Vikosin rotkon seudulla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Seutu on villiä, ja se näkyy eläimistössä. Vikos–Aoos-kansallispuiston alueella ja Pindoksen vuoristossa elää muun muassa [[ruskeakarhuja]], [[susia]] ja [[gemssejä]], jotka viihtyvät kalliojyrkänteillä. Taivaalla näkee suuria petolintuja, kuten kotkia ja haukkoja, mutta en ole varma, mitkä lajit ovat seudulla yleisimpiä. Rotkon vesistöissä elää kaloja ja sammakkoeläimiä, ja kasvillisuus vaihtelee kosteista metsistä kallioiden harvaan pensaikkoon. Täydellisen lajiluettelon saa luontoviranomaisilta. Karhut jättäisin kyl siipien ulottumattomiin.
+KYSYMYS: Kerro lisää: susia
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vikosin rotko (luonto · vuori)
+Tietoruudun teksti: Vikosin rotko on rotko Pindoksen vuoristossa Luoteis-Kreikassa. Se sijaitsee Tymphe-vuoren eteläisillä rinteillä, ja sen pituus on noin 32 kilometriä, syvyys 120–1 350 metriä ja leveys 2 500 metristä vain muutamaan metriin kapeimmassa kohdassa. Guinnessin ennätyskirja ja muut lähteet luettelevat Vikosin maailman "syvimmäksi suhteessa leveyteensä" olevaksi rotkoksi. Rotkon pääosa on Vikos–Aoos-kansallispuiston ydinalueella Zagorin seudulla. Nimen alkuperästä on useita selityksiä: sen on arveltu tulevan slaavilaisesta sanasta rotko, kreikan sanasta vikos eli korvallinen astia tai albaniasta ja sanasta silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Vuoristo, josta tuli ensimmäinen] 1935 — Retezatin kansallispuisto Hunedoaran alueella oli Romanian ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli 2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita puisto perustettiin alun perin suojelemaan. Retezatista tuli myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi mallin kaikille Romanian myöhemmille suojelualueille.
+AIEMPI KYSYMYS: Mitä eläimiä Vikosin rotkon seudulla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Seutu on villiä, ja se näkyy eläimistössä. Vikos–Aoos-kansallispuiston alueella ja Pindoksen vuoristossa elää muun muassa [[ruskeakarhuja]], [[susia]] ja [[gemssejä]], jotka viihtyvät kalliojyrkänteillä. Taivaalla näkee suuria petolintuja, kuten kotkia ja haukkoja, mutta en ole varma, mitkä lajit ovat seudulla yleisimpiä. Rotkon vesistöissä elää kaloja ja sammakkoeläimiä, ja kasvillisuus vaihtelee kosteista metsistä kallioiden harvaan pensaikkoon. Täydellisen lajiluettelon saa luontoviranomaisilta. Karhut jättäisin kyl siipien ulottumattomiin.
+KYSYMYS: Kerro lisää: gemssejä
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+AIEMPI KYSYMYS: Mikä kri-kri on?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Kri-kri on [[Kreetan]] villivuohi, jota pidetään saaren omana lajinaan: urokset ovat kookkaita ja kantavat taaksepäin kaartuvia sarvia, ja eläin elää vuoristoisilla ja kallioisilla seuduilla. Se on harvinainen, ja juuri sen turvaamiseksi [[Samarian rotko]] on perustettu kansallispuistoksi. Eläin on arka, joten sitä näkee harvoin, vaikka rotkon läpi kulkisi paljon väkeä. Ei paha kyyhkyltä, vaikken ole koskaan päässyt sen kanssa samalle kalliolle.
+KYSYMYS: Kerro lisää: Kreetan
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Rotko, jonka läpi kävellään päivässä] Samarian rotko halkaisee Valkoiset vuoret ja laskee kuudentoista kilometrin matkalla noin 1 200 metrin korkeudesta merenrantaan. Kävely kestää aamusta iltapäivään, ja se tehdään aina alamäkeen: ylös kiipeäminen olisi kohtuutonta. Kapeimmassa kohdassa seinien väliin jää vain kolmisen metriä, ja siellä kalliot nousevat molemmin puolin satoja metrejä. Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä kulkee tuhansia kävijöitä päivässä.
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+AIEMPI KYSYMYS: Mikä kri-kri on?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Kri-kri on [[Kreetan]] villivuohi, jota pidetään saaren omana lajinaan: urokset ovat kookkaita ja kantavat taaksepäin kaartuvia sarvia, ja eläin elää vuoristoisilla ja kallioisilla seuduilla. Se on harvinainen, ja juuri sen turvaamiseksi [[Samarian rotko]] on perustettu kansallispuistoksi. Eläin on arka, joten sitä näkee harvoin, vaikka rotkon läpi kulkisi paljon väkeä. Ei paha kyyhkyltä, vaikken ole koskaan päässyt sen kanssa samalle kalliolle.
+KYSYMYS: Kerro lisää: Samarian rotko
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+- [Kreeta — kaupunkilehti / Maasto: Rotko, jonka läpi kävellään päivässä] Samarian rotko halkaisee Valkoiset vuoret ja laskee kuudentoista kilometrin matkalla noin 1 200 metrin korkeudesta merenrantaan. Kävely kestää aamusta iltapäivään, ja se tehdään aina alamäkeen: ylös kiipeäminen olisi kohtuutonta. Kapeimmassa kohdassa seinien väliin jää vain kolmisen metriä, ja siellä kalliot nousevat molemmin puolin satoja metrejä. Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä kulkee tuhansia kävijöitä päivässä.
+AIEMPI KYSYMYS: Mitä Portes eli Portit tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, helppo juttu. Kreikan sana portes tarkoittaa portteja tai ovia, ja suomeksi nimi on Portit. Nimi viittaa [[Samarian rotkon]] kapeimpaan kohtaan, jossa kallioseinämät kapenevat vain noin neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Kulkija kävelee siis kuin korkeasta portista läpi, ja nimi kuvaa paikkaa hyvin. Minä lensin siitä yläkautta, eikä siellä ole mitään pelättävää.
+KYSYMYS: Kerro lisää: Samarian rotkon
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+AIEMPI KYSYMYS: Miten Agia Roumelista pääsee pois rotkon jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Agia Roumeli on rannikkokylä, johon ei yleensä tule tietä, joten vaeltajat jatkavat sieltä yleensä laivalla. Lautat kulkevat rannikkoa pitkin esimerkiksi [[Chora Sfakioniin]] tai [[Sougiaan]], ja sieltä pääsee bussilla takaisin pohjoisrannikon kaupunkeihin, kuten [[Chaniaan]]. Aikataulut vaihtelevat vuodenajan mukaan, joten en ole varma tarkoista lähtöajoista. Pitkän kävelyn jälkeen merimatka on varmaan kiva.
+KYSYMYS: Kerro lisää: Chora Sfakioniin
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+AIEMPI KYSYMYS: Miten Agia Roumelista pääsee pois rotkon jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Agia Roumeli on rannikkokylä, johon ei yleensä tule tietä, joten vaeltajat jatkavat sieltä yleensä laivalla. Lautat kulkevat rannikkoa pitkin esimerkiksi [[Chora Sfakioniin]] tai [[Sougiaan]], ja sieltä pääsee bussilla takaisin pohjoisrannikon kaupunkeihin, kuten [[Chaniaan]]. Aikataulut vaihtelevat vuodenajan mukaan, joten en ole varma tarkoista lähtöajoista. Pitkän kävelyn jälkeen merimatka on varmaan kiva.
+KYSYMYS: Kerro lisää: Sougiaan
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+AIEMPI KYSYMYS: Miten Agia Roumelista pääsee pois rotkon jälkeen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Agia Roumeli on rannikkokylä, johon ei yleensä tule tietä, joten vaeltajat jatkavat sieltä yleensä laivalla. Lautat kulkevat rannikkoa pitkin esimerkiksi [[Chora Sfakioniin]] tai [[Sougiaan]], ja sieltä pääsee bussilla takaisin pohjoisrannikon kaupunkeihin, kuten [[Chaniaan]]. Aikataulut vaihtelevat vuodenajan mukaan, joten en ole varma tarkoista lähtöajoista. Pitkän kävelyn jälkeen merimatka on varmaan kiva.
+KYSYMYS: Kerro lisää: Chaniaan
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+AIEMPI KYSYMYS: Mikä on Kreetan korkein vuori?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kreetan korkein vuori on [[Psiloritis]], jota kutsutaan myös Idaksi, ja sen huippu on noin 2 450 metrin korkeudessa. Vuori sijaitsee saaren keskiosassa, ja se on korkeampi kuin [[Valkoisten vuorten]] huiput lännessä. Kreikkalaisessa myytissä Ida-vuoren luolan kerrotaan liittyvän Zeuksen lapsuuteen, mutta tarkat yksityiskohdat vaihtelevat kertojan mukaan. Tarkan korkeuden kohdalla en ole täysin varma, joten sen voi tarkistaa kartasta.
+
+Kreetalla on siis korkeutta sekä rotkoissa että huipuilla, ja se on kyyhkyn silmin aika vaikuttavaa. Tuolla ylhäällä tuulee, mutta ei se minua haittaa.
+KYSYMYS: Kerro lisää: Psiloritis
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samarian rotko (luonto · vuori)
+Tietoruudun teksti: Samarian rotko on Kreetan saarella ja Kreikan kansallispuisto vuodesta 1962, saaren suuri matkailunähtävyys ja maailman biosfäärialue. Rotko sijaitsee Kreetan lounaisosassa Chanían alueella, ja sen on kaivanut pieni joki Valkoisten vuorten ja Volakiaksen vuoren väliin. Rotko on 16 kilometriä pitkä, ja se alkaa 1 250 metrin korkeudessa pohjoisesta sisäänkäynniltä ja päättyy Libyanmeren rannalle Agia Roumelin kylään. Tunnetuin osa on Portit, jossa rotkon seinämät kapenevat vain neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Lippu, joka voitti äänin 14–11] 1985 — Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna 1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama kuvio. Seura oli vanhempi, ja se antoi luvan.
+- [New Orleans — kohdekartta / Kohdekartta: St. Augustinen kirkko] 1842 Kirkon perustivat vapaat värilliset. He järjestäytyivät 1830-luvulla ja saivat piispa Antoine Blancilta luvan rakentaa oman kirkon; ursuliinisisaret lahjoittivat tontin ehdolla, että kirkko nimetään heidän suojeluspyhänsä Augustinuksen mukaan. Tontti oli osa Claude Tremén vanhaa plantaasia, ja kirkon piirsi ranskalainen arkkitehti J. N. B. de Pouilly. Kirkko vihittiin 9. lokakuuta 1842, ja sitä pidetään Yhdysvaltain vanhimpana mustana katolisena seurakuntana. Vihkiäisiä edelsi tapaus, jota kutsutaan penkkisodaksi. Penkeistä maksettiin siihen aikaan vuokraa, ja kun vapaat värilliset alkoivat ostaa penkkejä perheilleen, seudun valkoiset ryhtyivät ostamaan niitä enemmän. Vapaat värilliset…
+AIEMPI KYSYMYS: Mikä on Kreetan korkein vuori?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kreetan korkein vuori on [[Psiloritis]], jota kutsutaan myös Idaksi, ja sen huippu on noin 2 450 metrin korkeudessa. Vuori sijaitsee saaren keskiosassa, ja se on korkeampi kuin [[Valkoisten vuorten]] huiput lännessä. Kreikkalaisessa myytissä Ida-vuoren luolan kerrotaan liittyvän Zeuksen lapsuuteen, mutta tarkat yksityiskohdat vaihtelevat kertojan mukaan. Tarkan korkeuden kohdalla en ole täysin varma, joten sen voi tarkistaa kartasta.
+
+Kreetalla on siis korkeutta sekä rotkoissa että huipuilla, ja se on kyyhkyn silmin aika vaikuttavaa. Tuolla ylhäällä tuulee, mutta ei se minua haittaa.
+KYSYMYS: Kerro lisää: Valkoisten vuorten
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelion (luonto · vuori)
+Tietoruudun teksti: Pelion on vuori Thessalian kaakkoisosassa Pohjois-Kreikassa, ja se muodostaa koukkumaisen niemimaan Pagasitin lahden ja Egeanmeren väliin. Sen korkein huippu Pourianos Stavros on 1 624 metriä. Vuori on paksun metsän peittämä, ja siellä kasvaa pyökkiä, tammea, vaahteraa ja kastanjaa sekä oliivi-, omena- ja päärynäpuita lähteiden ympärillä. Kylät ja tarhat on kastettu lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Kreikkalaisessa mytologiassa Pelion oli kentauri Kheironin, Jasonin, Akilleen ja Theseuksen opettajan, kotiseutu.
+AIEMPI KYSYMYS: Kuka Kheiron oli?
+AIEMPI VASTAUS (Livia):
+Mmm— tän minä tiedän. Kheiron oli kreikkalaisessa mytologiassa kentauri, jonka kotiseutu oli [[Pelion]]-vuori. Toisin kuin monet muut kentaurit, joita kuvattiin rajuina, hän tunnettiin viisaana opettajana ja parantajana. Hänen oppilaikseen kerrotaan sellaisia sankareita kuin Jason, Akilleus ja Theseus. Kheiron kuului siis kreikkalaisen tarustoon keskeisenä kasvattajahahmona. Opettajana hän taisi olla parempi kuin minä, joka en ole saanut yhtään pöllöä vielä lentämään.
+KYSYMYS: Kerro lisää: Pelion
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelion (luonto · vuori)
+Tietoruudun teksti: Pelion on vuori Thessalian kaakkoisosassa Pohjois-Kreikassa, ja se muodostaa koukkumaisen niemimaan Pagasitin lahden ja Egeanmeren väliin. Sen korkein huippu Pourianos Stavros on 1 624 metriä. Vuori on paksun metsän peittämä, ja siellä kasvaa pyökkiä, tammea, vaahteraa ja kastanjaa sekä oliivi-, omena- ja päärynäpuita lähteiden ympärillä. Kylät ja tarhat on kastettu lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Kreikkalaisessa mytologiassa Pelion oli kentauri Kheironin, Jasonin, Akilleen ja Theseuksen opettajan, kotiseutu.
+AIEMPI KYSYMYS: Mitä Pelionilla viljellään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Pelionin]] rinteillä kasvaa metsiä, joissa on pyökkiä, tammea, vaahteraa ja kastanjaa. Lähteiden ympärillä viljellään oliivi-, omena- ja päärynäpuita, ja kylät sekä tarhat kastellaan lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Vesi onkin vuoren erityispiirre, sillä se tekee rinteistä vihreät. Omenat ovat minun mielestäni paras osa, vaikka pullaksi niistä ei ole.
+KYSYMYS: Kerro lisää: Pelionin
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelion (luonto · vuori)
+Tietoruudun teksti: Pelion on vuori Thessalian kaakkoisosassa Pohjois-Kreikassa, ja se muodostaa koukkumaisen niemimaan Pagasitin lahden ja Egeanmeren väliin. Sen korkein huippu Pourianos Stavros on 1 624 metriä. Vuori on paksun metsän peittämä, ja siellä kasvaa pyökkiä, tammea, vaahteraa ja kastanjaa sekä oliivi-, omena- ja päärynäpuita lähteiden ympärillä. Kylät ja tarhat on kastettu lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Kreikkalaisessa mytologiassa Pelion oli kentauri Kheironin, Jasonin, Akilleen ja Theseuksen opettajan, kotiseutu.
+AIEMPI KYSYMYS: Mitä kentaurit olivat kreikkalaisessa mytologiassa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä kysytään usein. Kentaurit olivat tarustollisia olentoja, joilla oli ihmisen yläruumis ja hevosen alaruumis. Useimmat kentaurit kuvattiin villeinä ja arvaamattomina, mutta [[Kheiron]] oli poikkeus: hän oli viisas opettaja, jonka kotiseutu oli [[Pelion]]-vuori. Tarinoita kentaureista on useita, ja ne vaihtelevat lähteen mukaan, joten yksityiskohdissa en ole täysin varma. Hevosia minä en ole koskaan oikein ymmärtänyt, vaikka nekin kantavat viestejä.
+KYSYMYS: Kerro lisää: Kheiron
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelion (luonto · vuori)
+Tietoruudun teksti: Pelion on vuori Thessalian kaakkoisosassa Pohjois-Kreikassa, ja se muodostaa koukkumaisen niemimaan Pagasitin lahden ja Egeanmeren väliin. Sen korkein huippu Pourianos Stavros on 1 624 metriä. Vuori on paksun metsän peittämä, ja siellä kasvaa pyökkiä, tammea, vaahteraa ja kastanjaa sekä oliivi-, omena- ja päärynäpuita lähteiden ympärillä. Kylät ja tarhat on kastettu lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Kreikkalaisessa mytologiassa Pelion oli kentauri Kheironin, Jasonin, Akilleen ja Theseuksen opettajan, kotiseutu.
+AIEMPI KYSYMYS: Miksi Pelionilla on niin runsaasti vettä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuoret kokoavat usein kosteutta ympärillä olevasta merestä, ja [[Pelion]] sijaitsee niemimaalla [[Pagasitin lahden]] ja [[Egeanmeren]] välissä, joten ilma on kosteaa ja sade sekä lumi ruokkivat lähteitä. Juuri lähteet tekevät rinteistä vehreät: paksu metsä kasvaa vuorella, ja lähteiden vesi johdetaan kylissä kivestä hakattuja uomia pitkin tarhoille. Syytä ei kaikilta osin voi varmasti selittää ilman paikallista hydrologiaa, joten tämä on yleisselitys. Hyvä paikka kyyhkyn juomatauolle, sanon minä.
+KYSYMYS: Kerro lisää: Pagasitin lahden
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelion (luonto · vuori)
+Tietoruudun teksti: Pelion on vuori Thessalian kaakkoisosassa Pohjois-Kreikassa, ja se muodostaa koukkumaisen niemimaan Pagasitin lahden ja Egeanmeren väliin. Sen korkein huippu Pourianos Stavros on 1 624 metriä. Vuori on paksun metsän peittämä, ja siellä kasvaa pyökkiä, tammea, vaahteraa ja kastanjaa sekä oliivi-, omena- ja päärynäpuita lähteiden ympärillä. Kylät ja tarhat on kastettu lähteiden vedellä, joka on johdettu kivestä hakattuja uomia pitkin. Kreikkalaisessa mytologiassa Pelion oli kentauri Kheironin, Jasonin, Akilleen ja Theseuksen opettajan, kotiseutu.
+AIEMPI KYSYMYS: Miksi Pelionilla on niin runsaasti vettä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuoret kokoavat usein kosteutta ympärillä olevasta merestä, ja [[Pelion]] sijaitsee niemimaalla [[Pagasitin lahden]] ja [[Egeanmeren]] välissä, joten ilma on kosteaa ja sade sekä lumi ruokkivat lähteitä. Juuri lähteet tekevät rinteistä vehreät: paksu metsä kasvaa vuorella, ja lähteiden vesi johdetaan kylissä kivestä hakattuja uomia pitkin tarhoille. Syytä ei kaikilta osin voi varmasti selittää ilman paikallista hydrologiaa, joten tämä on yleisselitys. Hyvä paikka kyyhkyn juomatauolle, sanon minä.
+KYSYMYS: Kerro lisää: Egeanmeren
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prespajärvi (luonto · järvi)
+Tietoruudun teksti: Prespajärvi sijaitsee Pohjois-Makedonian, Albanian ja Kreikan kolmen maan rajapisteessä. Se on kahden järven järjestelmä, jonka erottaa kannas: Suuri Prespajärvi on jaettu kolmen maan kesken, ja Pieni Prespajärvi on enimmäkseen Kreikassa. Ne ovat Balkanin korkeimmalla, 853 metrin korkeudessa sijaitsevat tektoniset järvet. Suuren Prespajärven pinta-ala on 259 neliökilometriä, josta Kreikan osuus on 36,4 neliökilometriä. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Prespajärvi ja sen Maligradin saari] vuodesta 1999 — Suuri Prespajärvi lepää 853 metrin korkeudessa kolmen maan rajalla, ja Albanian osuus sen 259 neliökilometrin pinta-alasta on 46,3 neliökilometriä. Albanian puolella järven rannat kuuluvat vuonna 1999 perustettuun Prespan kansallispuistoon, jonka pinta-ala on noin 276 neliökilometriä. Pieneltä Maligradin saarelta löytyy paikallisen aatelismiehen vuonna 1369 rakennuttama Pyhän Marian kirkko. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Ohridjärven Albanian puolella sijaitsee Pogradec, ja UNESCO ulotti järven suojelualueen Albanian rannalle vuonna 2019.
+AIEMPI KYSYMYS: Mitkä maat jakavat Prespajärven?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Prespajärvi]] sijaitsee kolmen maan rajapisteessä, ja ne ovat Pohjois-Makedonia, Albania ja Kreikka. Järvi on itse asiassa kahden järven järjestelmä: Suuri Prespajärvi on jaettu kolmen maan kesken, kun taas Pieni Prespajärvi on enimmäkseen Kreikassa. Järvet sijaitsevat 853 metrin korkeudessa, ja alueella on kolme kansallispuistoa, yksi jokaisessa maassa. Meikäläisille rajat ovat aina olleet vain viivoja karttaan.
+KYSYMYS: Kerro lisää: Prespajärvi
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prespajärvi (luonto · järvi)
+Tietoruudun teksti: Prespajärvi sijaitsee Pohjois-Makedonian, Albanian ja Kreikan kolmen maan rajapisteessä. Se on kahden järven järjestelmä, jonka erottaa kannas: Suuri Prespajärvi on jaettu kolmen maan kesken, ja Pieni Prespajärvi on enimmäkseen Kreikassa. Ne ovat Balkanin korkeimmalla, 853 metrin korkeudessa sijaitsevat tektoniset järvet. Suuren Prespajärven pinta-ala on 259 neliökilometriä, josta Kreikan osuus on 36,4 neliökilometriä. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon.
+AIEMPI KYSYMYS: Mikä Pieni Prespa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Pieni Prespajärvi on toinen kahdesta [[Prespajärven]] osasta, ja se on erotettu Suuresta Prespajärvestä kannaksella. Pieni Prespa sijaitsee enimmäkseen Kreikassa, kun taas Suuri Prespajärvi on jaettu Pohjois-Makedonian, Albanian ja Kreikan kesken. Molemmat ovat tektonisia järviä 853 metrin korkeudessa, mikä tekee niistä Balkanin korkeimmalla sijaitsevia. Pieni Prespa on siis pienempi sisar, mutta ei vähäpätöinen. Sisarukset on pidettävä erillään, sanoo kyyhky, jonka suvussa on tästä kokemusta.
+KYSYMYS: Kerro lisää: Prespajärven
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prespajärvi (luonto · järvi)
+Tietoruudun teksti: Prespajärvi sijaitsee Pohjois-Makedonian, Albanian ja Kreikan kolmen maan rajapisteessä. Se on kahden järven järjestelmä, jonka erottaa kannas: Suuri Prespajärvi on jaettu kolmen maan kesken, ja Pieni Prespajärvi on enimmäkseen Kreikassa. Ne ovat Balkanin korkeimmalla, 853 metrin korkeudessa sijaitsevat tektoniset järvet. Suuren Prespajärven pinta-ala on 259 neliökilometriä, josta Kreikan osuus on 36,4 neliökilometriä. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon.
+AIEMPI KYSYMYS: Mikä Ohridjärvi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Ohridjärvi]] sijaitsee Pohjois-Makedonian ja Albanian rajalla, lähellä [[Prespajärveä]]. Se on kuuluisa kirkkaasta vedestään ja syvyydestään, ja sitä pidetään yhtenä Euroopan vanhimmista järvistä, mutta tarkan iän kohdalla en ole varma. Järven suojelualue on UNESCOn suojeluksessa, ja se on maailmanperintökohde. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Pogradec on kaupunki Albanian puolella rannalla.
+
+Ohridin seudulla on varmasti omat leivonnaisensa, mutta en tiedä niiden nimeä. Hyvä syy mennä kerran paikan päälle.
+KYSYMYS: Kerro lisää: Ohridjärvi
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prespajärvi (luonto · järvi)
+Tietoruudun teksti: Prespajärvi sijaitsee Pohjois-Makedonian, Albanian ja Kreikan kolmen maan rajapisteessä. Se on kahden järven järjestelmä, jonka erottaa kannas: Suuri Prespajärvi on jaettu kolmen maan kesken, ja Pieni Prespajärvi on enimmäkseen Kreikassa. Ne ovat Balkanin korkeimmalla, 853 metrin korkeudessa sijaitsevat tektoniset järvet. Suuren Prespajärven pinta-ala on 259 neliökilometriä, josta Kreikan osuus on 36,4 neliökilometriä. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon.
+AIEMPI KYSYMYS: Mikä Ohridjärvi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Ohridjärvi]] sijaitsee Pohjois-Makedonian ja Albanian rajalla, lähellä [[Prespajärveä]]. Se on kuuluisa kirkkaasta vedestään ja syvyydestään, ja sitä pidetään yhtenä Euroopan vanhimmista järvistä, mutta tarkan iän kohdalla en ole varma. Järven suojelualue on UNESCOn suojeluksessa, ja se on maailmanperintökohde. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Pogradec on kaupunki Albanian puolella rannalla.
+
+Ohridin seudulla on varmasti omat leivonnaisensa, mutta en tiedä niiden nimeä. Hyvä syy mennä kerran paikan päälle.
+KYSYMYS: Kerro lisää: Prespajärveä
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prespajärvi (luonto · järvi)
+Tietoruudun teksti: Prespajärvi sijaitsee Pohjois-Makedonian, Albanian ja Kreikan kolmen maan rajapisteessä. Se on kahden järven järjestelmä, jonka erottaa kannas: Suuri Prespajärvi on jaettu kolmen maan kesken, ja Pieni Prespajärvi on enimmäkseen Kreikassa. Ne ovat Balkanin korkeimmalla, 853 metrin korkeudessa sijaitsevat tektoniset järvet. Suuren Prespajärven pinta-ala on 259 neliökilometriä, josta Kreikan osuus on 36,4 neliökilometriä. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Prespajärvi ja sen Maligradin saari] vuodesta 1999 — Suuri Prespajärvi lepää 853 metrin korkeudessa kolmen maan rajalla, ja Albanian osuus sen 259 neliökilometrin pinta-alasta on 46,3 neliökilometriä. Albanian puolella järven rannat kuuluvat vuonna 1999 perustettuun Prespan kansallispuistoon, jonka pinta-ala on noin 276 neliökilometriä. Pieneltä Maligradin saarelta löytyy paikallisen aatelismiehen vuonna 1369 rakennuttama Pyhän Marian kirkko. Prespan vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä Ohridjärveen, jonka pinta on noin 150 metriä alempana. Ohridjärven Albanian puolella sijaitsee Pogradec, ja UNESCO ulotti järven suojelualueen Albanian rannalle vuonna 2019.
+- [Pohjois-Makedonia — maalehti / Historia: Ratsastava soturi torilla] 2011 — Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka täytti kaupungin sadoilla uusilla patsailla.
+AIEMPI KYSYMYS: Mitä eläimiä Prespan alueella elää?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Prespan]] alue on tunnettu runsaasta linnustostaan, ja lähteiden mukaan siellä pesii muun muassa pelikaaneja, vaikka tarkkoja lajeja ja määriä en osaa luetella varmasti. Alueella on kolme kansallispuistoa, yksi jokaisessa maassa, ja vuonna 2014 Ohrid–Prespa-rajat ylittävä biosfäärialue liitettiin UNESCOn biosfäärialueiden verkostoon. Suojelu auttaa pitämään sekä vesilintujen että muiden eläinten elinympäristöt kunnossa. Siipikarjaa siellä siis on, ja minä katson sitä kunnioittavasti.
+KYSYMYS: Kerro lisää: Prespan
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerkinijärvi (luonto · järvi)
+Tietoruudun teksti: Kerkinijärvi on Keski-Makedoniassa Kreikassa sijaitseva tekojärvi, joka tehtiin vuonna 1932 ja uudistettiin 1980-luvulla aiemman laajan suoalueen paikalle. Ennen vuotta 1932 Strymón-joella oli epäsäännöllisiä suojärviä. Nykyisin järvi on yksi Kreikan parhaista lintujen tarkkailupaikoista, sillä se sijaitsee Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille suuntaavien muuttolintujen reitillä. Järven pääasiallinen vesilähde on Strymón-joki, ja sen koko vaihtelee 54 ja 72 neliökilometrin välillä. Alue kuuluu Ramsar-sopimuksen suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja.
+AIEMPI KYSYMYS: Miksi linnut pysähtyvät Kerkinillä?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Kerkinijärvi]] sijaitsee muuttolintujen reitillä, joka suuntaa Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille. Järvi on vesilinnuille hyvä lepo- ja ruokailupaikka, ja siksi se on yksi Kreikan parhaista lintujen tarkkailupaikoista. Alue kuuluu [[Ramsar-sopimuksen]] suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja. Pysähtyvät ne siksi, että pitkällä lennolla tarvitaan taukopaikka, ja sen minä ymmärrän. Itse pysähdyn vain pullan perässä.
+KYSYMYS: Kerro lisää: Kerkinijärvi
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerkinijärvi (luonto · järvi)
+Tietoruudun teksti: Kerkinijärvi on Keski-Makedoniassa Kreikassa sijaitseva tekojärvi, joka tehtiin vuonna 1932 ja uudistettiin 1980-luvulla aiemman laajan suoalueen paikalle. Ennen vuotta 1932 Strymón-joella oli epäsäännöllisiä suojärviä. Nykyisin järvi on yksi Kreikan parhaista lintujen tarkkailupaikoista, sillä se sijaitsee Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille suuntaavien muuttolintujen reitillä. Järven pääasiallinen vesilähde on Strymón-joki, ja sen koko vaihtelee 54 ja 72 neliökilometrin välillä. Alue kuuluu Ramsar-sopimuksen suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+AIEMPI KYSYMYS: Miksi linnut pysähtyvät Kerkinillä?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Kerkinijärvi]] sijaitsee muuttolintujen reitillä, joka suuntaa Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille. Järvi on vesilinnuille hyvä lepo- ja ruokailupaikka, ja siksi se on yksi Kreikan parhaista lintujen tarkkailupaikoista. Alue kuuluu [[Ramsar-sopimuksen]] suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja. Pysähtyvät ne siksi, että pitkällä lennolla tarvitaan taukopaikka, ja sen minä ymmärrän. Itse pysähdyn vain pullan perässä.
+KYSYMYS: Kerro lisää: Ramsar-sopimuksen
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerkinijärvi (luonto · järvi)
+Tietoruudun teksti: Kerkinijärvi on Keski-Makedoniassa Kreikassa sijaitseva tekojärvi, joka tehtiin vuonna 1932 ja uudistettiin 1980-luvulla aiemman laajan suoalueen paikalle. Ennen vuotta 1932 Strymón-joella oli epäsäännöllisiä suojärviä. Nykyisin järvi on yksi Kreikan parhaista lintujen tarkkailupaikoista, sillä se sijaitsee Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille suuntaavien muuttolintujen reitillä. Järven pääasiallinen vesilähde on Strymón-joki, ja sen koko vaihtelee 54 ja 72 neliökilometrin välillä. Alue kuuluu Ramsar-sopimuksen suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja.
+AIEMPI KYSYMYS: Miksi järvi tehtiin tekojärveksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Syytä ei sanota yksiselitteisesti, mutta tiedetään, että [[Kerkinijärvi]] tehtiin vuonna 1932 aiemman laajan suoalueen paikalle, jossa [[Strymón]]-joella oli ennen sitä epäsäännöllisiä suojärviä. Tekojärven tarkoitus oli yleensä hallita veden juoksua, joten tässäkin on todennäköisesti kyse tulvien ja vesivarojen säätelystä, mutta en ole varma tarkasta syystä. Järvi uudistettiin 1980-luvulla. Nykyisin se on tärkeä lintuvesi, joten rakennelma on tuonut luonnolle uuden elämän.
+KYSYMYS: Kerro lisää: Strymón
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerkinijärvi (luonto · järvi)
+Tietoruudun teksti: Kerkinijärvi on Keski-Makedoniassa Kreikassa sijaitseva tekojärvi, joka tehtiin vuonna 1932 ja uudistettiin 1980-luvulla aiemman laajan suoalueen paikalle. Ennen vuotta 1932 Strymón-joella oli epäsäännöllisiä suojärviä. Nykyisin järvi on yksi Kreikan parhaista lintujen tarkkailupaikoista, sillä se sijaitsee Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille suuntaavien muuttolintujen reitillä. Järven pääasiallinen vesilähde on Strymón-joki, ja sen koko vaihtelee 54 ja 72 neliökilometrin välillä. Alue kuuluu Ramsar-sopimuksen suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja.
+AIEMPI KYSYMYS: Mitä lintuja Kerkinillä voi nähdä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Kerkinijärvellä]] on tuhansia harvinaisia ja suojeltuja vesilintuja, ja se on yksi Kreikan parhaista lintujen tarkkailupaikoista. Lähteiden mukaan siellä nähdään muun muassa pelikaaneja, haikaroita ja merimetsoja, mutta tarkkoja lajeja ja vuodenaikoja en osaa varmasti luetella. Parhaat havainnot saa muuttoaikoina, kun linnut pysähtyvät reitillään levähtämään. Lintukatsojat ovat omaa väkeään, ja tervehdin heitä aina siivenkärjellä.
+KYSYMYS: Kerro lisää: Kerkinijärvellä
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kerkinijärvi (luonto · järvi)
+Tietoruudun teksti: Kerkinijärvi on Keski-Makedoniassa Kreikassa sijaitseva tekojärvi, joka tehtiin vuonna 1932 ja uudistettiin 1980-luvulla aiemman laajan suoalueen paikalle. Ennen vuotta 1932 Strymón-joella oli epäsäännöllisiä suojärviä. Nykyisin järvi on yksi Kreikan parhaista lintujen tarkkailupaikoista, sillä se sijaitsee Egeanmerelle, Balkanille, Mustallemerelle ja Unkarin aroille suuntaavien muuttolintujen reitillä. Järven pääasiallinen vesilähde on Strymón-joki, ja sen koko vaihtelee 54 ja 72 neliökilometrin välillä. Alue kuuluu Ramsar-sopimuksen suojeluun, ja siellä on tuhansia harvinaisia ja suojeltuja vesilintuja.
+AIEMPI KYSYMYS: Mikä Strymón-joki on?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. [[Strymón]] on joki, joka virtaa Kreikan Keski-Makedoniassa ja on [[Kerkinijärven]] pääasiallinen vesilähde. Joen alkuperä on Bulgariassa, jossa sitä kutsutaan nimellä Struma, ja se laskee lopulta Egeanmereen. Ennen vuotta 1932 joella oli alueella epäsäännöllisiä suojärviä, ja nykyään sen vedet täyttävät tekojärven. Joen pituudesta en ole varma, joten sitä en sano. Kyyhky seuraa mielellään jokia, koska ne näyttävät aina suunnan.
+KYSYMYS: Kerro lisää: Kerkinijärven
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Mitä Navagiolla tapahtui vuonna 1980?
+AIEMPI VASTAUS (Livia):
+Kääk, nyt muistan. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille [[Navagion]] rannalle [[Zakynthoksella]]. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa. Onneksi siitä on jo yli neljäkymmentä vuotta.
+KYSYMYS: Kerro lisää: Navagion
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Mitä Navagiolla tapahtui vuonna 1980?
+AIEMPI VASTAUS (Livia):
+Kääk, nyt muistan. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille [[Navagion]] rannalle [[Zakynthoksella]]. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa. Onneksi siitä on jo yli neljäkymmentä vuotta.
+KYSYMYS: Kerro lisää: Zakynthoksella
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Miksi lahtea kutsutaan salakuljettajien lahdeksi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Navagiota]] kutsutaan joskus salakuljettajien poukamaksi, koska sen rannalle karille ajanut rahtialus Panagiotis liittyy salakuljetukseen. Huhujen mukaan alus kuljetti salakuljetettua tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että kyse oli Turkista Italiaan matkanneista savukkeista. Alus ajoi karille 5. lokakuuta 1980, ja sen hylky on yhä rannalla. Nimi siis syntyi hylystä, ei muinaisista tarinoista, vaikka tämän tarkemmin en voi sanoa. Salakuljetus ei ole kyyhkyn laji, minä kuljetan vain kirjeitä.
+KYSYMYS: Kerro lisää: Navagiota
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Missä Zakynthos sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Zakynthos]] on Kreikan saari Joonianmerellä, [[Peloponnesoksen]] länsipuolella, ja se kuuluu Joonianmeren saariin. Saarella sijaitsee [[Navagio]], jota kutsutaan Haaksirikkorannaksi ja joka on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Tarkkaa etäisyyttä mantereeseen en ole varma, mutta saari on kartalla selvästi mantereen edustalla. Ylhäältä katsottuna se näyttää kauniilta, ja sen tuntee heti hylystä.
+KYSYMYS: Kerro lisää: Zakynthos
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Missä Zakynthos sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Zakynthos]] on Kreikan saari Joonianmerellä, [[Peloponnesoksen]] länsipuolella, ja se kuuluu Joonianmeren saariin. Saarella sijaitsee [[Navagio]], jota kutsutaan Haaksirikkorannaksi ja joka on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Tarkkaa etäisyyttä mantereeseen en ole varma, mutta saari on kartalla selvästi mantereen edustalla. Ylhäältä katsottuna se näyttää kauniilta, ja sen tuntee heti hylystä.
+KYSYMYS: Kerro lisää: Peloponnesoksen
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Missä Zakynthos sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Zakynthos]] on Kreikan saari Joonianmerellä, [[Peloponnesoksen]] länsipuolella, ja se kuuluu Joonianmeren saariin. Saarella sijaitsee [[Navagio]], jota kutsutaan Haaksirikkorannaksi ja joka on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Tarkkaa etäisyyttä mantereeseen en ole varma, mutta saari on kartalla selvästi mantereen edustalla. Ylhäältä katsottuna se näyttää kauniilta, ja sen tuntee heti hylystä.
+KYSYMYS: Kerro lisää: Navagio
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Saari, jossa koneet eivät lennä pimeällä] kesällä — Valekarettikilpikonna nousee kesäöinä Kreikan rannoille kaivamaan pesäkuoppaa hiekkaan. Kreikassa on yli 3 000 pesää vuodessa, enemmän kuin missään muualla Välimerellä, ja eniten niitä on Zakynthoksen Laganaksen lahdella, jonne perustettiin maan ensimmäinen merikansallispuisto. Poikaset kaivautuvat ulos pimeällä ja suunnistavat kohti kirkkainta horisonttia, joten rannan lamput voivat viedä ne väärään suuntaan. Siksi Zakynthoksen lentokentältä ei saa nousta eikä sinne laskeutua yöllä. Toiseksi tärkein pesimäranta on Kyparissian lahti.
+AIEMPI KYSYMYS: Miten Navagion rannalle pääsee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Navagion]] ranta on poukamassa, jota ympäröivät korkeat kalkkikivijyrkänteet, joten rannalle pääsee yleensä veneellä [[Zakynthoksen]] satamista. Ylhäältä rantaa voi katsella näköalapaikalta, mutta alas jyrkänteeltä ei ole tavallista polkua, ja yksityiskohdat voivat muuttua. Tarkkoja reittejä ja aikatauluja en ole varma, joten ne kannattaa tarkistaa paikan päältä. Minulle ranta on helppo, koska laskeudun siihen ilmasta.
+KYSYMYS: Kerro lisää: Zakynthoksen
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Mitä Joonianmeren saaria Kreikassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joonianmeren saariin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Lefkada]], Ithaka ja [[Zakynthos]], mutta lista on pidempi. Saaret sijaitsevat Kreikan länsirannikon edustalla, ja ne ovat tunnettuja vehreydestään ja rannoistaan. Zakynthoksella sijaitsee [[Navagio]], eli Haaksirikkoranta. Saarten tarkkaa lukumäärää en ole varma, ja eri lähteet laskevat ne eri tavoin. Saarilta löytyy varmasti omia leivonnaisia, mutta en tiedä niiden nimeä.
+KYSYMYS: Kerro lisää: Korfu
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Navagio (Zakynthos) (luonto · saari)
+Tietoruudun teksti: Navagio eli Haaksirikkoranta on avoin poukama Zakynthoksen saaren rannikolla Joonianmeren saarilla Kreikassa. Sitä kutsutaan joskus salakuljettajien poukamaksi, ja se on yksi maailman kuuluisimmista ja eniten kuvatuista rannoista. Poukaman alkuperäinen nimi oli Agios Georgios eli Pyhä Yrjö. Lokakuun 5. päivänä 1980 rahtialus Panagiotis ajoi myrskyssä ja huonossa näkyvyydessä karille Navagion rannalle. Huhujen mukaan alus salakuljetti tavaraa, ja myöhemmin julkaistut oikeusasiakirjat viittaavat siihen, että se kuljetti Turkista Italiaan salakuljetettuja savukkeita. Miehistö hylkäsi aluksen, ja se lepää yhä kalkkikivisoran seassa.
+AIEMPI KYSYMYS: Mitä Joonianmeren saaria Kreikassa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joonianmeren saariin kuuluvat muun muassa [[Korfu]], [[Kefalonia]], [[Lefkada]], Ithaka ja [[Zakynthos]], mutta lista on pidempi. Saaret sijaitsevat Kreikan länsirannikon edustalla, ja ne ovat tunnettuja vehreydestään ja rannoistaan. Zakynthoksella sijaitsee [[Navagio]], eli Haaksirikkoranta. Saarten tarkkaa lukumäärää en ole varma, ja eri lähteet laskevat ne eri tavoin. Saarilta löytyy varmasti omia leivonnaisia, mutta en tiedä niiden nimeä.
+KYSYMYS: Kerro lisää: Kefalonia

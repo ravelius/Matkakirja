@@ -1,0 +1,989 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Ontarion kuninkaallinen museo] 1914 Museo perustettiin 16. huhtikuuta 1912, ja sen avasi yleisölle 19. maaliskuuta 1914 Connaughtin herttua, silloinen Kanadan kenraalikuvernööri. Hallinto oli jaettu Ontarion provinssin ja Toronton yliopiston kesken, ja käytännössä museo oli yliopiston suorassa ohjauksessa vuoteen 1968, jolloin siitä tuli itsenäinen provinssin laitos. Paikka valittiin yliopiston läheisyyden takia, vaikka se oli tuolloin kaupungin rakennetun alueen laidalla kaukana liikekeskustasta. Vanhimman osan — nykyisen länsisiiven — piirsivät torontolaiset arkkitehdit Frank Darling ja John A. Pearson, ja tyyli on italialaisvaikutteisen ja uusromaanisen sekoitus: raskaita massoja, pyöreitä ja kaarevia ikkunoita paksui…
+AIEMPI KYSYMYS: Mitä bauksiitista valmistetaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Bauksiitti on tärkein raaka-aine, josta valmistetaan [[alumiinia]]. Malmi käsitellään ensin kemiallisesti alumiinioksidiksi niin sanotulla [[Bayerin menetelmällä]], ja oksidista erotetaan metalli sähkön avulla. Alumiinista tehdään esimerkiksi juomatölkkejä, lentokoneiden rakenteita ja ikkunakehyksiä, koska se on kevyttä ja ruostumatonta. Sitä voi myös kierrättää uudelleen ja uudelleen.
+
+Tölkit kimaltavat katoilla ja kaduilla, ja ylhäältä katsottuna ne ovat niitä kiiltäviä pisteitä, joiden perään kyyhky haluaisi lentää. Siksi minä tiedän, että alumiini on todella hyvä keksintö.
+KYSYMYS: Kerro lisää: alumiinia
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+AIEMPI KYSYMYS: Mitä bauksiitista valmistetaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Bauksiitti on tärkein raaka-aine, josta valmistetaan [[alumiinia]]. Malmi käsitellään ensin kemiallisesti alumiinioksidiksi niin sanotulla [[Bayerin menetelmällä]], ja oksidista erotetaan metalli sähkön avulla. Alumiinista tehdään esimerkiksi juomatölkkejä, lentokoneiden rakenteita ja ikkunakehyksiä, koska se on kevyttä ja ruostumatonta. Sitä voi myös kierrättää uudelleen ja uudelleen.
+
+Tölkit kimaltavat katoilla ja kaduilla, ja ylhäältä katsottuna ne ovat niitä kiiltäviä pisteitä, joiden perään kyyhky haluaisi lentää. Siksi minä tiedän, että alumiini on todella hyvä keksintö.
+KYSYMYS: Kerro lisää: Bayerin menetelmällä
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Hylje, joka synnyttää luolassa] nykyään — Munkkihylje on Välimeren ainoa hylje ja yksi maailman harvinaisimmista merinisäkkäistä: koko kannaksi arvioidaan 800–1 000 yksilöä. Niistä 250–300 elää Kreikan vesillä, ja tihein joukko on Gyároksen asumattomalla saarella. Vielä 1700-luvulla munkkihylkeet makasivat avoimilla rannoilla, mutta nykyään emo hakeutuu synnyttämään merenalaisiin luoliin, joihin on vaikea päästä. Poikanen on syntyessään noin metrin mittainen ja mustanruskean karvan peitossa. Alonnisoksen ympärille perustettiin vuonna 1992 merikansallispuisto juuri hylkeitä varten.
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Miksi Parnassoksella voi hiihtää, vaikka Kreikka on lämmin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Parnassoksen huiput kohoavat reilusti yli kahden kilometrin korkeuteen, ja lämpötila laskee ylöspäin mentäessä noin kuusi astetta kilometriä kohti. Kreikan [[Välimeren ilmasto]] on lämmin ja kuiva kesällä, mutta talvella sateinen, ja kylmät ilmamassat tuovat vuorille lunta. Parnassoksella toimii [[hiihtokeskus]], joka on kuulemani mukaan suosittu päiväretkikohde, vaikka en ole varma sen tarkoista rinteistä. Hiihdon jälkeen minä ottaisin kyl lämpimän tsourekin.
+KYSYMYS: Kerro lisää: Välimeren ilmasto
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Parnassós (luonto · vuori)
+Tietoruudun teksti: Muinaiset kreikkalaiset pyhittivät Parnassoksen kahdelle jumalalle kerralla: Apollonille, jonka oraakkeli sijaitsi vuoren eteläisellä rinteellä Delfoissa, ja Dionysokselle, jonka riemujuhlia vietettiin vuoren huipuilla. Homeroksen Iliaassa mainitaan useita vuoren kylistä, ja sen kalkkikivessä on myös bauksiittia — alumiinimalmia, jota louhitaan yhä. Talvella samat rinteet täyttyvät hiihtäjistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+AIEMPI KYSYMYS: Miksi Parnassoksella voi hiihtää, vaikka Kreikka on lämmin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Parnassoksen huiput kohoavat reilusti yli kahden kilometrin korkeuteen, ja lämpötila laskee ylöspäin mentäessä noin kuusi astetta kilometriä kohti. Kreikan [[Välimeren ilmasto]] on lämmin ja kuiva kesällä, mutta talvella sateinen, ja kylmät ilmamassat tuovat vuorille lunta. Parnassoksella toimii [[hiihtokeskus]], joka on kuulemani mukaan suosittu päiväretkikohde, vaikka en ole varma sen tarkoista rinteistä. Hiihdon jälkeen minä ottaisin kyl lämpimän tsourekin.
+KYSYMYS: Kerro lisää: hiihtokeskus
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Kuka oli Taygete?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Taygete oli kreikkalaisessa mytologiassa [[nymfi]], yksi [[Plejadeista]] eli Atlaksen tyttäristä. Tarun mukaan hän sai [[Zeuksen]] kanssa pojan [[Lakedaimonin]], jonka mukaan Spartan seutua kutsuttiin Lakedaimoniaksi. Vuoren nimen kerrotaan tulleen hänestä.
+
+Nimi on säilynyt vuoressa jo tuhansia vuosia, ja sitä minä kutsun kunnon maineeksi. Minun nimeni on Columba Livia, ja sekin on vanhaa roomalaista perua.
+KYSYMYS: Kerro lisää: nymfi
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Kuka oli Taygete?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Taygete oli kreikkalaisessa mytologiassa [[nymfi]], yksi [[Plejadeista]] eli Atlaksen tyttäristä. Tarun mukaan hän sai [[Zeuksen]] kanssa pojan [[Lakedaimonin]], jonka mukaan Spartan seutua kutsuttiin Lakedaimoniaksi. Vuoren nimen kerrotaan tulleen hänestä.
+
+Nimi on säilynyt vuoressa jo tuhansia vuosia, ja sitä minä kutsun kunnon maineeksi. Minun nimeni on Columba Livia, ja sekin on vanhaa roomalaista perua.
+KYSYMYS: Kerro lisää: Plejadeista
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+AIEMPI KYSYMYS: Kuka oli Taygete?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Taygete oli kreikkalaisessa mytologiassa [[nymfi]], yksi [[Plejadeista]] eli Atlaksen tyttäristä. Tarun mukaan hän sai [[Zeuksen]] kanssa pojan [[Lakedaimonin]], jonka mukaan Spartan seutua kutsuttiin Lakedaimoniaksi. Vuoren nimen kerrotaan tulleen hänestä.
+
+Nimi on säilynyt vuoressa jo tuhansia vuosia, ja sitä minä kutsun kunnon maineeksi. Minun nimeni on Columba Livia, ja sekin on vanhaa roomalaista perua.
+KYSYMYS: Kerro lisää: Zeuksen
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Kuka oli Taygete?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Taygete oli kreikkalaisessa mytologiassa [[nymfi]], yksi [[Plejadeista]] eli Atlaksen tyttäristä. Tarun mukaan hän sai [[Zeuksen]] kanssa pojan [[Lakedaimonin]], jonka mukaan Spartan seutua kutsuttiin Lakedaimoniaksi. Vuoren nimen kerrotaan tulleen hänestä.
+
+Nimi on säilynyt vuoressa jo tuhansia vuosia, ja sitä minä kutsun kunnon maineeksi. Minun nimeni on Columba Livia, ja sekin on vanhaa roomalaista perua.
+KYSYMYS: Kerro lisää: Lakedaimonin
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Millaista elämä on vuoren kylissä nykyään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuoren kylät ovat pieniä, ja monet niistä ovat menettäneet asukkaita, kun nuoret ovat muuttaneet työn perässä [[Spartaan]], [[Kalamataan]] ja Ateenaan. Kylissä pidetään perinteisesti lampaita ja vuohia ja viljellään oliiveja, ja kesäisin sekä viikonloppuisin ne täyttyvät kotiin palaavista sukulaisista ja vaeltajista. Tarkkoja nykyisiä asukaslukuja en ole varma, joten jätän ne sanomatta. Maaseudun hiljaisuus on kyl katolta kuultuna aika kaunista.
+KYSYMYS: Kerro lisää: Spartaan
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Millaista elämä on vuoren kylissä nykyään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuoren kylät ovat pieniä, ja monet niistä ovat menettäneet asukkaita, kun nuoret ovat muuttaneet työn perässä [[Spartaan]], [[Kalamataan]] ja Ateenaan. Kylissä pidetään perinteisesti lampaita ja vuohia ja viljellään oliiveja, ja kesäisin sekä viikonloppuisin ne täyttyvät kotiin palaavista sukulaisista ja vaeltajista. Tarkkoja nykyisiä asukaslukuja en ole varma, joten jätän ne sanomatta. Maaseudun hiljaisuus on kyl katolta kuultuna aika kaunista.
+KYSYMYS: Kerro lisää: Kalamataan
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Mikä on Mystras, vuoren juurella oleva kaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, Viisas Pöllö lupasi palata jo Konstantinopolissa, joten vastaan minä. Mystras on keskiaikainen linnoitettu kaupunki Spartan lähellä Taygetoksen rinteellä. Sen linnan rakennutti 1200-luvun puolivälissä frankkiruhtinas, ja myöhemmin siitä tuli [[Moreian despotaatin]] keskus [[Bysantin]] valtakunnan viimeisinä vuosisatoina. Nykyään kaupunki on rauniokaupunki, jossa on säilynyt kirkkoja ja freskoja, ja se kuuluu [[Unescon]] maailmanperintökohteisiin. Kuulemma sieltä näkyy kauas, ja kyllä minä uskon.
+KYSYMYS: Kerro lisää: Moreian despotaatin
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä on Mystras, vuoren juurella oleva kaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, Viisas Pöllö lupasi palata jo Konstantinopolissa, joten vastaan minä. Mystras on keskiaikainen linnoitettu kaupunki Spartan lähellä Taygetoksen rinteellä. Sen linnan rakennutti 1200-luvun puolivälissä frankkiruhtinas, ja myöhemmin siitä tuli [[Moreian despotaatin]] keskus [[Bysantin]] valtakunnan viimeisinä vuosisatoina. Nykyään kaupunki on rauniokaupunki, jossa on säilynyt kirkkoja ja freskoja, ja se kuuluu [[Unescon]] maailmanperintökohteisiin. Kuulemma sieltä näkyy kauas, ja kyllä minä uskon.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Mikä on Mystras, vuoren juurella oleva kaupunki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, Viisas Pöllö lupasi palata jo Konstantinopolissa, joten vastaan minä. Mystras on keskiaikainen linnoitettu kaupunki Spartan lähellä Taygetoksen rinteellä. Sen linnan rakennutti 1200-luvun puolivälissä frankkiruhtinas, ja myöhemmin siitä tuli [[Moreian despotaatin]] keskus [[Bysantin]] valtakunnan viimeisinä vuosisatoina. Nykyään kaupunki on rauniokaupunki, jossa on säilynyt kirkkoja ja freskoja, ja se kuuluu [[Unescon]] maailmanperintökohteisiin. Kuulemma sieltä näkyy kauas, ja kyllä minä uskon.
+KYSYMYS: Kerro lisää: Unescon
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Miksi vuorta kutsuttiin viisisormeksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Nimi [[Pentadaktylos]] tarkoittaa kreikaksi viittä sormea. Yleisin selitys on, että [[Taygetoksen]] harjanteen viisi huippua muistuttavat kauempaa katsottuna kämmentä sormineen. En ole varma, mitkä huiput tarkalleen tarkoitetaan, eikä nimen alkuperää voi varmistaa. Nimeä käytettiin [[Bysantin]] ajalta aina 1800-luvulle asti. Kyyhkyllä ei oo sormia lainkaan, joten laskin siivenkärjillä.
+KYSYMYS: Kerro lisää: Pentadaktylos
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Miksi vuorta kutsuttiin viisisormeksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Nimi [[Pentadaktylos]] tarkoittaa kreikaksi viittä sormea. Yleisin selitys on, että [[Taygetoksen]] harjanteen viisi huippua muistuttavat kauempaa katsottuna kämmentä sormineen. En ole varma, mitkä huiput tarkalleen tarkoitetaan, eikä nimen alkuperää voi varmistaa. Nimeä käytettiin [[Bysantin]] ajalta aina 1800-luvulle asti. Kyyhkyllä ei oo sormia lainkaan, joten laskin siivenkärjillä.
+KYSYMYS: Kerro lisää: Taygetoksen
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Mikä tekee Peloponnesoksesta melkein saaren?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: [[Korintin kannaksen]] kapea maakaista yhdistää Peloponnesoksen Kreikan mantereeseen. Kannaksen halki on kaivettu [[Korintin kanava]], joka valmistui vuonna 1893 ja on pituudeltaan noin kuusi kilometriä. Kanavan myötä niemimaa on käytännössä saari, vaikka sitä kutsutaan yleensä niemimaaksi.
+
+Minulle kanava on yhdentekevä, koska siivin merellä ja maalla on aika sama merkitys. Laivoille se kuitenkin säästi pitkän kierroksen koko niemimaan ympäri.
+KYSYMYS: Kerro lisää: Korintin kannaksen
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taÿ́getos (luonto · vuori)
+Tietoruudun teksti: Taygetos on yksi Euroopan vanhimmista muistiin merkityistä paikannimistä — se mainitaan jo Homeroksen Odysseiassa, ja kreikkalaisen taruston mukaan vuori on nimetty Taygete-nymfin mukaan. Bysantin ajalta 1800-luvulle asti sitä kutsuttiin myös nimellä Pentadaktylos, "viisisormi". Korkein huippu, Profitis Ilias (2 405 m), on koko Peloponnesoksen korkein kohta, ja vuori hallitsee yhä Spartan ja Kalamatan kaupunkien taivasrajaa.
+AIEMPI KYSYMYS: Mikä tekee Peloponnesoksesta melkein saaren?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: [[Korintin kannaksen]] kapea maakaista yhdistää Peloponnesoksen Kreikan mantereeseen. Kannaksen halki on kaivettu [[Korintin kanava]], joka valmistui vuonna 1893 ja on pituudeltaan noin kuusi kilometriä. Kanavan myötä niemimaa on käytännössä saari, vaikka sitä kutsutaan yleensä niemimaaksi.
+
+Minulle kanava on yhdentekevä, koska siivin merellä ja maalla on aika sama merkitys. Laivoille se kuitenkin säästi pitkän kierroksen koko niemimaan ympäri.
+KYSYMYS: Kerro lisää: Korintin kanava
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Asuuko vuoristossa yhä ihmisiä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kyllä, Pindoksella asuu yhä ihmisiä, vaikka monet vuoristokylät ovat autioituneet nuorten muutettua kaupunkeihin. Perinteisesti seutua ovat asuttaneet esimerkiksi [[vlahit]] eli aromaanit ja [[sarakatsanit]], jotka kuljettivat laumojaan talvilaitumille ja kesälaitumille. Alueen kivikylät, kuten [[Zagorin]] kylät, houkuttelevat nykyään matkailijoita. Tarkkoja asukaslukuja en ole varma, joten jätän ne sanomatta. Varmaan sielläkin on oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: vlahit
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Asuuko vuoristossa yhä ihmisiä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kyllä, Pindoksella asuu yhä ihmisiä, vaikka monet vuoristokylät ovat autioituneet nuorten muutettua kaupunkeihin. Perinteisesti seutua ovat asuttaneet esimerkiksi [[vlahit]] eli aromaanit ja [[sarakatsanit]], jotka kuljettivat laumojaan talvilaitumille ja kesälaitumille. Alueen kivikylät, kuten [[Zagorin]] kylät, houkuttelevat nykyään matkailijoita. Tarkkoja asukaslukuja en ole varma, joten jätän ne sanomatta. Varmaan sielläkin on oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: sarakatsanit
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Asuuko vuoristossa yhä ihmisiä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kyllä, Pindoksella asuu yhä ihmisiä, vaikka monet vuoristokylät ovat autioituneet nuorten muutettua kaupunkeihin. Perinteisesti seutua ovat asuttaneet esimerkiksi [[vlahit]] eli aromaanit ja [[sarakatsanit]], jotka kuljettivat laumojaan talvilaitumille ja kesälaitumille. Alueen kivikylät, kuten [[Zagorin]] kylät, houkuttelevat nykyään matkailijoita. Tarkkoja asukaslukuja en ole varma, joten jätän ne sanomatta. Varmaan sielläkin on oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Zagorin
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Kreikka — maalehti / Ruoka ja juhlapöytä: Puut, jotka itkevät] heinä–lokakuu — Khioksen saaren eteläosassa kasvaa mastiksipistaasi, ja sen pihkasta elää 24 kylää. Sadonkorjuu alkaa heinäkuussa: maa puun alta puhdistetaan ja siihen ripotellaan valkoista kalkkijauhetta. Sitten kaarnaan viilletään 4–5 päivän välein 5–10 viiltoa. Pisarat valuvat, kovettuvat parissa viikossa kirkkaiksi kiteiksi ja putoavat valkealle maalle. Talvi kuluu kiteitä puhdistaessa ja hiekasta erotellessa. Mastiksia pureskellaan purukumin tapaan. Ottomaanien aikaan se oli painonsa arvoista kultaa, ja kylät rakennettiin linnoituksiksi ilman katutason ovia.
+AIEMPI KYSYMYS: Miksi Epeiros jäi muusta Kreikasta erilleen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pindoksen vuorijono muodostaa korkean ja vaikeakulkuisen esteen Epeiroksen ja muun Kreikan välille, ja yhteydet kulkivat pitkään vain harvojen solien kautta. Historia vahvisti eroa: Epeiros kuului [[Ottomaanien]] valtakuntaan ja liitettiin Kreikkaan vasta vuonna 1913 [[Balkanin sotien]] jälkeen. Antiikin aikana alueella oli oma kuningaskuntansa, jonka tunnettuja hallitsijoita oli [[Pyrrhos]].
+
+Isoisän matkakirja on vuodelta 1873, joten hänen aikaansa raja kulki aivan toisessa paikassa. Rajaviivoja ei ylhäältä kuitenkaan näe, ne näkee vain karttaa vertaamalla.
+KYSYMYS: Kerro lisää: Ottomaanien
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Miksi Epeiros jäi muusta Kreikasta erilleen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pindoksen vuorijono muodostaa korkean ja vaikeakulkuisen esteen Epeiroksen ja muun Kreikan välille, ja yhteydet kulkivat pitkään vain harvojen solien kautta. Historia vahvisti eroa: Epeiros kuului [[Ottomaanien]] valtakuntaan ja liitettiin Kreikkaan vasta vuonna 1913 [[Balkanin sotien]] jälkeen. Antiikin aikana alueella oli oma kuningaskuntansa, jonka tunnettuja hallitsijoita oli [[Pyrrhos]].
+
+Isoisän matkakirja on vuodelta 1873, joten hänen aikaansa raja kulki aivan toisessa paikassa. Rajaviivoja ei ylhäältä kuitenkaan näe, ne näkee vain karttaa vertaamalla.
+KYSYMYS: Kerro lisää: Balkanin sotien
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Miksi Epeiros jäi muusta Kreikasta erilleen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pindoksen vuorijono muodostaa korkean ja vaikeakulkuisen esteen Epeiroksen ja muun Kreikan välille, ja yhteydet kulkivat pitkään vain harvojen solien kautta. Historia vahvisti eroa: Epeiros kuului [[Ottomaanien]] valtakuntaan ja liitettiin Kreikkaan vasta vuonna 1913 [[Balkanin sotien]] jälkeen. Antiikin aikana alueella oli oma kuningaskuntansa, jonka tunnettuja hallitsijoita oli [[Pyrrhos]].
+
+Isoisän matkakirja on vuodelta 1873, joten hänen aikaansa raja kulki aivan toisessa paikassa. Rajaviivoja ei ylhäältä kuitenkaan näe, ne näkee vain karttaa vertaamalla.
+KYSYMYS: Kerro lisää: Pyrrhos
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Keitä ovat vlahit?
+AIEMPI VASTAUS (Livia):
+Hei, Viisas Pöllö on kutsuttu puhumaan jonnekin, joten vastaan minä. Vlahit eli [[aromaanit]] ovat Balkanin vuoristoissa asuva kansa, jonka kieli on romaaninen kieli ja sukua romanian kielelle. Pindoksella heidät tunnetaan perinteisinä paimenina, jotka siirsivät laumojaan vuodenaikojen mukaan, ja tunnettuja aromaanikyliä ovat esimerkiksi [[Metsovo]] ja [[Samarina]]. Tarkkoja lukumääriä en ole varma, koska laskentatavat vaihtelevat. Paimenet näkevät kyl enemmän vuoria kuin minä.
+KYSYMYS: Kerro lisää: aromaanit
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Keitä ovat vlahit?
+AIEMPI VASTAUS (Livia):
+Hei, Viisas Pöllö on kutsuttu puhumaan jonnekin, joten vastaan minä. Vlahit eli [[aromaanit]] ovat Balkanin vuoristoissa asuva kansa, jonka kieli on romaaninen kieli ja sukua romanian kielelle. Pindoksella heidät tunnetaan perinteisinä paimenina, jotka siirsivät laumojaan vuodenaikojen mukaan, ja tunnettuja aromaanikyliä ovat esimerkiksi [[Metsovo]] ja [[Samarina]]. Tarkkoja lukumääriä en ole varma, koska laskentatavat vaihtelevat. Paimenet näkevät kyl enemmän vuoria kuin minä.
+KYSYMYS: Kerro lisää: Metsovo
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Keitä ovat vlahit?
+AIEMPI VASTAUS (Livia):
+Hei, Viisas Pöllö on kutsuttu puhumaan jonnekin, joten vastaan minä. Vlahit eli [[aromaanit]] ovat Balkanin vuoristoissa asuva kansa, jonka kieli on romaaninen kieli ja sukua romanian kielelle. Pindoksella heidät tunnetaan perinteisinä paimenina, jotka siirsivät laumojaan vuodenaikojen mukaan, ja tunnettuja aromaanikyliä ovat esimerkiksi [[Metsovo]] ja [[Samarina]]. Tarkkoja lukumääriä en ole varma, koska laskentatavat vaihtelevat. Paimenet näkevät kyl enemmän vuoria kuin minä.
+KYSYMYS: Kerro lisää: Samarina
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Millainen vuorijono Dinaariset Alpit ovat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dinaariset Alpit ovat Adrianmeren itärannikon suuntaisesti kulkeva vuorijono, joka alkaa [[Sloveniasta]] ja jatkuu Kroatian sekä Bosnia ja Hertsegovinan kautta Montenegroon ja [[Albanian]] vuoristoihin. Pindos jatkaa samaa vuorijonoa Kreikassa. Maasto on suurelta osin kalkkikiveä, johon on syntynyt luolia ja kuoppia, ja tällaista aluetta kutsutaan [[karstimaastoksi]]. Sana periytyy kuulemma Sloveniassa sijaitsevan Karst-alueen nimestä. Ylhäältä katsoen ne ovat kyl yksi pitkä harmaa harjanne.
+KYSYMYS: Kerro lisää: Sloveniasta
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Yhdeksän kiloa lintua ilmassa] keväällä — Kiharapelikaani on pelikaaneista suurin ja maailman raskaimpia lentäviä lintuja: siipiväli on 2,7–3,2 metriä ja paino keskimäärin noin 9,5 kiloa. Maailman suurin tunnettu pesimäsiirtokunta on Prespajärvellä, jonka pienemmän altaan rannoilla pesii noin 1 600 paria. Järvi jakautuu Kreikan ja Albanian kesken, joten lintujen laskeminen vaatii kahden maan yhteistyötä. Kiharapelikaani ei syöksy veteen ylhäältä, vaan ui pinnalla ja kurottaa nokkansa pinnan alle. Kreikassa nopeat moottoriveneet häiritsevät parvien ruokailua.
+AIEMPI KYSYMYS: Millainen vuorijono Dinaariset Alpit ovat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dinaariset Alpit ovat Adrianmeren itärannikon suuntaisesti kulkeva vuorijono, joka alkaa [[Sloveniasta]] ja jatkuu Kroatian sekä Bosnia ja Hertsegovinan kautta Montenegroon ja [[Albanian]] vuoristoihin. Pindos jatkaa samaa vuorijonoa Kreikassa. Maasto on suurelta osin kalkkikiveä, johon on syntynyt luolia ja kuoppia, ja tällaista aluetta kutsutaan [[karstimaastoksi]]. Sana periytyy kuulemma Sloveniassa sijaitsevan Karst-alueen nimestä. Ylhäältä katsoen ne ovat kyl yksi pitkä harmaa harjanne.
+KYSYMYS: Kerro lisää: Albanian
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Millainen vuorijono Dinaariset Alpit ovat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dinaariset Alpit ovat Adrianmeren itärannikon suuntaisesti kulkeva vuorijono, joka alkaa [[Sloveniasta]] ja jatkuu Kroatian sekä Bosnia ja Hertsegovinan kautta Montenegroon ja [[Albanian]] vuoristoihin. Pindos jatkaa samaa vuorijonoa Kreikassa. Maasto on suurelta osin kalkkikiveä, johon on syntynyt luolia ja kuoppia, ja tällaista aluetta kutsutaan [[karstimaastoksi]]. Sana periytyy kuulemma Sloveniassa sijaitsevan Karst-alueen nimestä. Ylhäältä katsoen ne ovat kyl yksi pitkä harmaa harjanne.
+KYSYMYS: Kerro lisää: karstimaastoksi
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Elääkö Pindoksella karhuja?
+AIEMPI VASTAUS (Livia):
+Ai karhuja. Kyllä, Pindos on yksi Kreikan tärkeimmistä [[ruskeakarhun]] elinalueista, ja karhuja elää myös [[Rodopien]] vuoristossa. Kanta on pieni ja suojeltu, mutta tarkkaa yksilömäärää en ole varma. Metsissä elää myös [[sudet]], ja korkeammilla rinteillä on lähteiden mukaan gemssejä. Karhun ohi minä lentäisin kyl nopeasti.
+KYSYMYS: Kerro lisää: ruskeakarhun
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+AIEMPI KYSYMYS: Elääkö Pindoksella karhuja?
+AIEMPI VASTAUS (Livia):
+Ai karhuja. Kyllä, Pindos on yksi Kreikan tärkeimmistä [[ruskeakarhun]] elinalueista, ja karhuja elää myös [[Rodopien]] vuoristossa. Kanta on pieni ja suojeltu, mutta tarkkaa yksilömäärää en ole varma. Metsissä elää myös [[sudet]], ja korkeammilla rinteillä on lähteiden mukaan gemssejä. Karhun ohi minä lentäisin kyl nopeasti.
+KYSYMYS: Kerro lisää: Rodopien
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Píndos (luonto · vuori)
+Tietoruudun teksti: Noin 160 kilometrin pituinen Pindos kulkee pohjoisesta etelään pitkin Kreikan mannerta ja tunnetaan puhekielessä "Kreikan selkärankana". Vuoristo on geologisesti Dinaaristen Alppien jatke ja ulottuu Albanian rajalta aina Peloponnesoksen pohjoisosiin asti. Korkein huippu on Smolikas (2 637 m), ja vuoristo erottaa perinteisesti Epeiroksen alueen muusta Kreikan mantereesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Sudet takaisin erämaahan] Harmaasudet metsästettiin Yellowstonesta sukupuuttoon: viimeiset puiston sisällä ammuttiin vuonna 1926, eikä alueella kuultu susien ulvontaa lähes seitsemään vuosikymmeneen. Tilanne muuttui tammikuussa 1995, kun Albertasta, Kanadasta, tuotiin 14 tainnutettua sutta ja vapautettiin puiston erämaahan; vuonna 1996 seurasi vielä 17 sutta lisää, yhteensä 31 yksilöä. Palanneet sudet alkoivat pitää hirvikannan kurissa, mikä antoi pajukoille ja haavoille tilaa toipua vuosikymmenten laidunnuksesta. Nykyisin puistossa elää noin 124 sutta reilussa kymmenessä laumassa — osa siitä yli 300 suden kannasta, joka asuttaa koko Yellowstonen ympäristöä.
+- [Saksa — maalehti / Luonto: Sudet palasivat sadan vuoden tauon jälkeen] Viimeinen Saksan susi ammuttiin 1900-luvun alussa, ja sata vuotta maa oli sudeton. Vuonna 2000 Lausitzin seudulle Itä-Saksaan syntyi ensimmäinen uusi pentue, kun sudet vaelsivat rajan yli Puolasta — ne asettuivat armeijan vanhalle harjoitusalueelle, jossa kukaan ei häirinnyt. Nykyään Saksassa elää taas noin kaksisataa laumaa. Paluu jakaa mielipiteitä: lammasfarmarit suojaavat katraitaan aidoin ja koirin, ja susikannan kasvua seurataan tarkasti.
+AIEMPI KYSYMYS: Elääkö Pindoksella karhuja?
+AIEMPI VASTAUS (Livia):
+Ai karhuja. Kyllä, Pindos on yksi Kreikan tärkeimmistä [[ruskeakarhun]] elinalueista, ja karhuja elää myös [[Rodopien]] vuoristossa. Kanta on pieni ja suojeltu, mutta tarkkaa yksilömäärää en ole varma. Metsissä elää myös [[sudet]], ja korkeammilla rinteillä on lähteiden mukaan gemssejä. Karhun ohi minä lentäisin kyl nopeasti.
+KYSYMYS: Kerro lisää: sudet
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Luonto: Kivet, joiden sisällä on meri] Kali Gandakin rotko kulkee kahden kahdeksantuhattisen välistä: lännessä on Dhaulagiri, idässä Annapurna. Tukuchen alapuolella jokiuoma on 2 520 metrissä eli 5 571 metriä Annapurna I:n huippua alempana. Joki on vanhempi kuin vuoret — kun laattojen törmäys nosti Himalajaa, vesi sahasi kohoavan kallion läpi. Uomasta poimitaan shaligrameja, muinaisen Tethys-meren ammoniittifossiileja, joita hindut pitävät yhtenä Vishnun viidestä elottomasta muodosta. Palvontaan riittää tulsin lehti ja vesi, ei kultaa eikä pukuja, joten kiven saattoi ottaa mukaan köyhäkin talo.
+AIEMPI KYSYMYS: Miten merenpohja päätyy vuoren huipulle?
+AIEMPI VASTAUS (Livia):
+Hmm— hyvä kysymys. Ilmiö liittyy mantereiden törmäykseen. Muinainen valtameri, [[Tethys]], sulkeutui, kun Afrikan ja Euraasian laatat lähestyivät toisiaan, ja osa valtameren pohjan kuoresta työntyi mantereen reunan päälle sen sijaan, että olisi painunut sen alle. Tätä kutsutaan [[obduktioksi]]. Näin syntynyt kivilaji on [[ofioliittia]], ja vuorten kohoaminen on sittemmin nostanut sen yli kahden kilometrin korkeuteen.
+
+Tuntuu hassulta, että tämä huippu oli joskus meren pohjalla ja nyt minä lennän sen yläpuolella. Kyllä pienessä kyyhkyssäkin herää kunnioitus maata kohtaan.
+KYSYMYS: Kerro lisää: Tethys
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miten merenpohja päätyy vuoren huipulle?
+AIEMPI VASTAUS (Livia):
+Hmm— hyvä kysymys. Ilmiö liittyy mantereiden törmäykseen. Muinainen valtameri, [[Tethys]], sulkeutui, kun Afrikan ja Euraasian laatat lähestyivät toisiaan, ja osa valtameren pohjan kuoresta työntyi mantereen reunan päälle sen sijaan, että olisi painunut sen alle. Tätä kutsutaan [[obduktioksi]]. Näin syntynyt kivilaji on [[ofioliittia]], ja vuorten kohoaminen on sittemmin nostanut sen yli kahden kilometrin korkeuteen.
+
+Tuntuu hassulta, että tämä huippu oli joskus meren pohjalla ja nyt minä lennän sen yläpuolella. Kyllä pienessä kyyhkyssäkin herää kunnioitus maata kohtaan.
+KYSYMYS: Kerro lisää: obduktioksi
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miten merenpohja päätyy vuoren huipulle?
+AIEMPI VASTAUS (Livia):
+Hmm— hyvä kysymys. Ilmiö liittyy mantereiden törmäykseen. Muinainen valtameri, [[Tethys]], sulkeutui, kun Afrikan ja Euraasian laatat lähestyivät toisiaan, ja osa valtameren pohjan kuoresta työntyi mantereen reunan päälle sen sijaan, että olisi painunut sen alle. Tätä kutsutaan [[obduktioksi]]. Näin syntynyt kivilaji on [[ofioliittia]], ja vuorten kohoaminen on sittemmin nostanut sen yli kahden kilometrin korkeuteen.
+
+Tuntuu hassulta, että tämä huippu oli joskus meren pohjalla ja nyt minä lennän sen yläpuolella. Kyllä pienessä kyyhkyssäkin herää kunnioitus maata kohtaan.
+KYSYMYS: Kerro lisää: ofioliittia
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Elääkö lohikäärmejärvessä mitään?
+AIEMPI VASTAUS (Livia):
+No niin, tässä pitää olla tarkka. En ole aivan varma, mitä [[Drakolimni]] tarkalleen sisältää, joten kerron vain yleisen havainnon: Pindoksen korkeilla vuoristolammilla elää usein sammakkoeläimiä, kuten [[vesiliskoja]]. Pienet, sisiliskoa muistuttavat eläimet ovat voineet synnyttää lohikäärmetaruja, mutta tämä on oletus, ei varmistettu tieto. Lohikäärmeitä en ole nähnyt, mut katolta en ole ees yrittänyt etsiä.
+KYSYMYS: Kerro lisää: Drakolimni
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Elääkö lohikäärmejärvessä mitään?
+AIEMPI VASTAUS (Livia):
+No niin, tässä pitää olla tarkka. En ole aivan varma, mitä [[Drakolimni]] tarkalleen sisältää, joten kerron vain yleisen havainnon: Pindoksen korkeilla vuoristolammilla elää usein sammakkoeläimiä, kuten [[vesiliskoja]]. Pienet, sisiliskoa muistuttavat eläimet ovat voineet synnyttää lohikäärmetaruja, mutta tämä on oletus, ei varmistettu tieto. Lohikäärmeitä en ole nähnyt, mut katolta en ole ees yrittänyt etsiä.
+KYSYMYS: Kerro lisää: vesiliskoja
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miksi Smolikaksen korkeudesta on kaksi lukemaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vanhempi lukema on 2 637 metriä ja uudempi mittaus antaa huipulle 2 631,4 metriä. Ero on noin viisi ja puoli metriä, ja sellaista syntyy, kun mittaustekniikat kehittyvät: vanhat korkeudet perustuivat perinteiseen maanmittaukseen, uudemmat taas usein [[satelliittipaikannukseen]]. En ole varma, millä menetelmällä kumpikin lukema on saatu. [[Pindoksen]] korkein huippu on joka tapauksessa sama vuori kummallakin lukemalla. Viisi metriä on kyl kyyhkyn mittakaavassa aika paljon.
+KYSYMYS: Kerro lisää: satelliittipaikannukseen
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miksi Smolikaksen korkeudesta on kaksi lukemaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vanhempi lukema on 2 637 metriä ja uudempi mittaus antaa huipulle 2 631,4 metriä. Ero on noin viisi ja puoli metriä, ja sellaista syntyy, kun mittaustekniikat kehittyvät: vanhat korkeudet perustuivat perinteiseen maanmittaukseen, uudemmat taas usein [[satelliittipaikannukseen]]. En ole varma, millä menetelmällä kumpikin lukema on saatu. [[Pindoksen]] korkein huippu on joka tapauksessa sama vuori kummallakin lukemalla. Viisi metriä on kyl kyyhkyn mittakaavassa aika paljon.
+KYSYMYS: Kerro lisää: Pindoksen
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Milloin Epeiros liitettiin Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Epeiros liitettiin Kreikkaan vuonna 1913. Kreikan armeija valtasi seudun [[Balkanin sotien]] aikana, ja [[Ioanninan]] kaupunki siirtyi Kreikalle alkuvuodesta 1913. Alueen pohjoisosan raja Albanian kanssa vedettiin suurvaltojen päätöksillä, ja siitä käytiin kiistoja. Tarkasta rajan vahvistamisen ajankohdasta en ole täysin varma.
+
+Rajoja minä en ylhäältä näe, mutta postimaksun muutoksen kyllä huomaan. Meikäläisten muistiinpanojen mukaan raja on aina ensin kirjeenkantajan huoli.
+KYSYMYS: Kerro lisää: Balkanin sotien
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Milloin Epeiros liitettiin Kreikkaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Epeiros liitettiin Kreikkaan vuonna 1913. Kreikan armeija valtasi seudun [[Balkanin sotien]] aikana, ja [[Ioanninan]] kaupunki siirtyi Kreikalle alkuvuodesta 1913. Alueen pohjoisosan raja Albanian kanssa vedettiin suurvaltojen päätöksillä, ja siitä käytiin kiistoja. Tarkasta rajan vahvistamisen ajankohdasta en ole täysin varma.
+
+Rajoja minä en ylhäältä näe, mutta postimaksun muutoksen kyllä huomaan. Meikäläisten muistiinpanojen mukaan raja on aina ensin kirjeenkantajan huoli.
+KYSYMYS: Kerro lisää: Ioanninan
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miksi Kreikassa oli jäätiköitä jääkaudella?
+AIEMPI VASTAUS (Livia):
+Kas, selvä asia. Jääkaudella ilmasto oli koko Euroopassa nykyistä kylmempi, ja korkeilla vuorilla lumi ei sulanut kesälläkään vaan kertyi jäätiköiksi. Kreikassa ne olivat [[vuoristojäätiköitä]], eivät [[mannerjäätikköjä]], ja niitä oli korkeimmilla vuorilla, esimerkiksi [[Pindoksella]]. Smolikaksen rinteiltä jäätiköt sulivat noin 11 500 vuotta sitten. Tää kaikki oli ennen jäässä, ajatella.
+KYSYMYS: Kerro lisää: vuoristojäätiköitä
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miksi Kreikassa oli jäätiköitä jääkaudella?
+AIEMPI VASTAUS (Livia):
+Kas, selvä asia. Jääkaudella ilmasto oli koko Euroopassa nykyistä kylmempi, ja korkeilla vuorilla lumi ei sulanut kesälläkään vaan kertyi jäätiköiksi. Kreikassa ne olivat [[vuoristojäätiköitä]], eivät [[mannerjäätikköjä]], ja niitä oli korkeimmilla vuorilla, esimerkiksi [[Pindoksella]]. Smolikaksen rinteiltä jäätiköt sulivat noin 11 500 vuotta sitten. Tää kaikki oli ennen jäässä, ajatella.
+KYSYMYS: Kerro lisää: mannerjäätikköjä
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smólikas (luonto · vuori)
+Tietoruudun teksti: Smólikas on Píndoksen korkein huippu ja Kreikan toiseksi korkein vuori heti Olympoksen jälkeen. Lehteen painettu lukema 2 637 metriä on vanhaa perua; uudempi mittaus antaa huipulle 2 631,4 metriä. Vuori on ofioliittia, vanhaa merenpohjan kuorta, jonka maankuoren liike on nostanut yli kahden kilometrin korkeuteen, ja jäätiköt sulivat sen pohjois- ja itärinteiltä vasta noin 11 500 vuotta sitten. Länsirinteellä lepää pieni vuoristojärvi Drakolímni eli "lohikäärmejärvi": paikallisen tarun mukaan järvien lohikäärmeet tappelivat heittelemällä toisiaan männyillä ja kivillä ja muotoilivat siinä koko maiseman. Isoisän matkan aikaan vuori ei ollut Kreikassa lainkaan — Epeiros kuului yhä Ottomaanien valtakuntaan, ja raja siirtyi tänne vasta 1913.
+AIEMPI KYSYMYS: Miksi Kreikassa oli jäätiköitä jääkaudella?
+AIEMPI VASTAUS (Livia):
+Kas, selvä asia. Jääkaudella ilmasto oli koko Euroopassa nykyistä kylmempi, ja korkeilla vuorilla lumi ei sulanut kesälläkään vaan kertyi jäätiköiksi. Kreikassa ne olivat [[vuoristojäätiköitä]], eivät [[mannerjäätikköjä]], ja niitä oli korkeimmilla vuorilla, esimerkiksi [[Pindoksella]]. Smolikaksen rinteiltä jäätiköt sulivat noin 11 500 vuotta sitten. Tää kaikki oli ennen jäässä, ajatella.
+KYSYMYS: Kerro lisää: Pindoksella
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+AIEMPI KYSYMYS: Mitä Idan luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Idan luolasta on kaivettu esiin uhrilahjoja, joita sinne on tuotu tuhansien vuosien ajan, muun muassa pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luola sijaitsee [[Psiloritiksen]] kyljessä noin 1 500 metrin korkeudessa, ja se oli merkittävä pyhäkkö jo [[minolaisella]] ajalla. Tarun mukaan [[Rhea]] kätki sinne vastasyntyneen [[Zeuksen]]. Ja nämä kaikki minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Psiloritiksen
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Mitä Idan luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Idan luolasta on kaivettu esiin uhrilahjoja, joita sinne on tuotu tuhansien vuosien ajan, muun muassa pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luola sijaitsee [[Psiloritiksen]] kyljessä noin 1 500 metrin korkeudessa, ja se oli merkittävä pyhäkkö jo [[minolaisella]] ajalla. Tarun mukaan [[Rhea]] kätki sinne vastasyntyneen [[Zeuksen]]. Ja nämä kaikki minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: minolaisella
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Mitä Idan luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Idan luolasta on kaivettu esiin uhrilahjoja, joita sinne on tuotu tuhansien vuosien ajan, muun muassa pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luola sijaitsee [[Psiloritiksen]] kyljessä noin 1 500 metrin korkeudessa, ja se oli merkittävä pyhäkkö jo [[minolaisella]] ajalla. Tarun mukaan [[Rhea]] kätki sinne vastasyntyneen [[Zeuksen]]. Ja nämä kaikki minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Rhea
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Zeuksen temppeli] 561 eaa. – 131 jaa. Zeuksen temppeli on yksi antiikin ajan suurimmista rakennushankkeista — ja hitaimmista. Sen rakentaminen aloitettiin jo 500-luvulla eaa., mutta työt keskeytyivät moneen kertaan. Temppeli valmistui vasta vuonna 131 jaa., kun Rooman keisari Hadrianus vihki sen käyttöön — rakentamiseen meni siis yli 600 vuotta! Valmiina temppeli oli valtava: yli 110 metriä pitkä, ja sitä ympäröi 104 jättimäistä korinttilaista pylvästä, joista jokainen oli 17 metriä korkea. Sisällä seisoi kultaa ja norsunluuta oleva jättipatsas itse Zeuksesta. Nykyään pystyssä on enää 15 pylvästä. Yhden pylvään ottomaanihallitsija tuhotti vuonna 1759 kalkin polttamista varten, ja toinen kaatui myrskyssä vuon…
+AIEMPI KYSYMYS: Mitä Idan luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Idan luolasta on kaivettu esiin uhrilahjoja, joita sinne on tuotu tuhansien vuosien ajan, muun muassa pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luola sijaitsee [[Psiloritiksen]] kyljessä noin 1 500 metrin korkeudessa, ja se oli merkittävä pyhäkkö jo [[minolaisella]] ajalla. Tarun mukaan [[Rhea]] kätki sinne vastasyntyneen [[Zeuksen]]. Ja nämä kaikki minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Zeuksen
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Miksi Zeus piilotettiin juuri Kreetalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vanha ja rakas tarina. Taruston mukaan [[Kronos]] nieli lapsensa, koska pelkäsi yhden heistä syöksevän hänet vallasta, ja siksi [[Rhea]] vei vastasyntyneen Zeuksen piiloon Kreetalle, isänsä ulottumattomiin. Tarinan kertojat eivät anna yksiselitteistä syytä sille, miksi valittiin juuri Kreeta, mutta vuoristoiset luolat ja minolaisen ajan pyhäkkö, kuten [[Idan luola]], sitoivat Zeuksen lapsuuden vahvasti tähän saareen. Myös toista Kreetan luolaa on esitetty hänen syntymäpaikakseen, enkä ole varma, kumpi tarinoista on vanhempi. No, ei paha kyyhkyltä näin pitkä kertomus.
+KYSYMYS: Kerro lisää: Kronos
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+AIEMPI KYSYMYS: Miksi Zeus piilotettiin juuri Kreetalle?
+AIEMPI VASTAUS (Livia):
+Kato, tää on vanha ja rakas tarina. Taruston mukaan [[Kronos]] nieli lapsensa, koska pelkäsi yhden heistä syöksevän hänet vallasta, ja siksi [[Rhea]] vei vastasyntyneen Zeuksen piiloon Kreetalle, isänsä ulottumattomiin. Tarinan kertojat eivät anna yksiselitteistä syytä sille, miksi valittiin juuri Kreeta, mutta vuoristoiset luolat ja minolaisen ajan pyhäkkö, kuten [[Idan luola]], sitoivat Zeuksen lapsuuden vahvasti tähän saareen. Myös toista Kreetan luolaa on esitetty hänen syntymäpaikakseen, enkä ole varma, kumpi tarinoista on vanhempi. No, ei paha kyyhkyltä näin pitkä kertomus.
+KYSYMYS: Kerro lisää: Idan luola
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Luola vuoren kyljessä] Kreetan korkeimman vuoren Psiloritiksen kyljessä, noin 1 500 metrin korkeudessa, aukeaa Idan luola. Sinne on tuotu uhrilahjoja tuhansia vuosia, ja kaivauksissa on löydetty pronssisia kilpiä 700-luvulta ennen ajanlaskua. Luolan edessä avautuu Nidan tasanko, jonne paimenet vievät lampaansa yhä kesäksi. Luola on kolea ja pimeä myös helteellä, ja sisään mennään taskulampun kanssa.
+AIEMPI KYSYMYS: Miksi paimenet vievät lampaat vuorille kesäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Kreetalla kesä on kuuma ja kuiva, ja alangoilla laidunmaat ruskistuvat, kun taas korkeammalla vuoristossa ruoho säilyy tuoreempana ja ilma on viileämpää. Siksi paimenet ovat perinteisesti siirtäneet laumansa kesäksi vuoristolaitumille, esimerkiksi [[Nidan tasangolle]] [[Psiloritiksen]] juurelle, ja palanneet alemmas syksyn tullen. Tällaista kausittaista laidunkiertoa kutsutaan [[vaelluspaimentolaisuudeksi]], ja sitä tunnetaan monin paikoin Euroopan vuoristoissa. Eikä tää paimenen työ kyllä kuulosta pahalta ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Nidan tasangolle
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Miksi paimenet vievät lampaat vuorille kesäksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Kreetalla kesä on kuuma ja kuiva, ja alangoilla laidunmaat ruskistuvat, kun taas korkeammalla vuoristossa ruoho säilyy tuoreempana ja ilma on viileämpää. Siksi paimenet ovat perinteisesti siirtäneet laumansa kesäksi vuoristolaitumille, esimerkiksi [[Nidan tasangolle]] [[Psiloritiksen]] juurelle, ja palanneet alemmas syksyn tullen. Tällaista kausittaista laidunkiertoa kutsutaan [[vaelluspaimentolaisuudeksi]], ja sitä tunnetaan monin paikoin Euroopan vuoristoissa. Eikä tää paimenen työ kyllä kuulosta pahalta ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: vaelluspaimentolaisuudeksi
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Keitä minolaiset olivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Minolaiset olivat pronssikauden kulttuuri Kreetalla, ja heidän kukoistuskautensa ajoitetaan noin vuosien 2000 ja 1450 eaa. välille, tosin tarkat vuosiluvut vaihtelevat lähteittäin. He rakensivat suuria palatseja, joista tunnetuin on [[Knossos]], kävivät laajaa kauppaa Välimerellä ja jättivät jälkeensä värikkäitä seinämaalauksia sekä keramiikkaa. Nimen kulttuurille antoi tarustoinen kuningas [[Minos]], ja kreikkalaista kirjoitusta edeltänyt minolainen kirjoitus on yhä osittain tulkitsematta. Ei ole helppoa tiivistää tuhatta vuotta kahteen virkkeeseen.
+KYSYMYS: Kerro lisää: Knossos
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Keitä minolaiset olivat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Minolaiset olivat pronssikauden kulttuuri Kreetalla, ja heidän kukoistuskautensa ajoitetaan noin vuosien 2000 ja 1450 eaa. välille, tosin tarkat vuosiluvut vaihtelevat lähteittäin. He rakensivat suuria palatseja, joista tunnetuin on [[Knossos]], kävivät laajaa kauppaa Välimerellä ja jättivät jälkeensä värikkäitä seinämaalauksia sekä keramiikkaa. Nimen kulttuurille antoi tarustoinen kuningas [[Minos]], ja kreikkalaista kirjoitusta edeltänyt minolainen kirjoitus on yhä osittain tulkitsematta. Ei ole helppoa tiivistää tuhatta vuotta kahteen virkkeeseen.
+KYSYMYS: Kerro lisää: Minos
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Psilorítis (luonto · vuori)
+Tietoruudun teksti: Psilorítis eli Ida on Kreetan korkein vuori, 2 456 metriä, ja se kohoaa saaren keskiosassa Iraklionin lounaispuolella. Vuoren pohjoisrinteessä noin 1 500 metrin korkeudessa on Idan luola, jossa taruston mukaan Rhea kätki vastasyntyneen Zeuksen isänsä Kronoksen ulottumattomiin. Luolasta on kaivettu esiin pronssikautisia uhrilahjoja, ja se oli merkittävä pyhäkkö jo minolaisella ajalla. Huipulla seisoo Ristin kappeli, ja lampaita paimennetaan rinteillä yhä samaan tapaan kuin vuosisatoja sitten.
+AIEMPI KYSYMYS: Mikä on Rhea kreikkalaisessa tarustossa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tost minä osaan kertoo. [[Rhea]] oli titaanitar, [[Kronoksen]] puoliso ja [[Zeuksen]] äiti, ja häntä pidettiin jumalten äitinä. Hän synnytti Kronokselle useita lapsia, joista Zeus pelastui, kun Rhea antoi miehelleen nieltäväksi kiveen käärityn vaatekimpun lapsen sijaan. Myöhemmin Rheaa on kreikkalaisessa perinteessä yhdistetty muihin äitijumaliin, kuten Kybeleeseen. Eikä kukaan kysy koskaan siitä, miltä äidin matka Kreetalle ilmasta näytti.
+KYSYMYS: Kerro lisää: Kronoksen
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Miksi Theseus unohti vaihtaa purjeet?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tarussa ei kerrota unohdukselle varsinaista syytä, vaan sen esitetään yksinkertaisesti tapahtuneen. Yleisimmin kerrotaan, että [[Theseus]] oli ottanut mukaansa Ariadnen ja palasi [[Minotauroksen]] surmattuaan, mutta jumalten tahto tai Theseuksen mielen täyttäneet muut tapahtumat veivät huomion pois lupauksesta; eri kertojat selittävät asian eri tavoin. Seurauksena [[Aigeus]] näki laivan mustin purjein ja heittäytyi mereen, ja merta kutsutaan siitä lähtien [[Egeanmereksi]]. En ole varma, mikä selitys on vanhin. Ja näin surullisen kyydin jälkeen tekisi mieli yksi pulla.
+KYSYMYS: Kerro lisää: Theseus
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Miksi Theseus unohti vaihtaa purjeet?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tarussa ei kerrota unohdukselle varsinaista syytä, vaan sen esitetään yksinkertaisesti tapahtuneen. Yleisimmin kerrotaan, että [[Theseus]] oli ottanut mukaansa Ariadnen ja palasi [[Minotauroksen]] surmattuaan, mutta jumalten tahto tai Theseuksen mielen täyttäneet muut tapahtumat veivät huomion pois lupauksesta; eri kertojat selittävät asian eri tavoin. Seurauksena [[Aigeus]] näki laivan mustin purjein ja heittäytyi mereen, ja merta kutsutaan siitä lähtien [[Egeanmereksi]]. En ole varma, mikä selitys on vanhin. Ja näin surullisen kyydin jälkeen tekisi mieli yksi pulla.
+KYSYMYS: Kerro lisää: Minotauroksen
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Miksi Theseus unohti vaihtaa purjeet?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tarussa ei kerrota unohdukselle varsinaista syytä, vaan sen esitetään yksinkertaisesti tapahtuneen. Yleisimmin kerrotaan, että [[Theseus]] oli ottanut mukaansa Ariadnen ja palasi [[Minotauroksen]] surmattuaan, mutta jumalten tahto tai Theseuksen mielen täyttäneet muut tapahtumat veivät huomion pois lupauksesta; eri kertojat selittävät asian eri tavoin. Seurauksena [[Aigeus]] näki laivan mustin purjein ja heittäytyi mereen, ja merta kutsutaan siitä lähtien [[Egeanmereksi]]. En ole varma, mikä selitys on vanhin. Ja näin surullisen kyydin jälkeen tekisi mieli yksi pulla.
+KYSYMYS: Kerro lisää: Aigeus
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Miksi Theseus unohti vaihtaa purjeet?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tarussa ei kerrota unohdukselle varsinaista syytä, vaan sen esitetään yksinkertaisesti tapahtuneen. Yleisimmin kerrotaan, että [[Theseus]] oli ottanut mukaansa Ariadnen ja palasi [[Minotauroksen]] surmattuaan, mutta jumalten tahto tai Theseuksen mielen täyttäneet muut tapahtumat veivät huomion pois lupauksesta; eri kertojat selittävät asian eri tavoin. Seurauksena [[Aigeus]] näki laivan mustin purjein ja heittäytyi mereen, ja merta kutsutaan siitä lähtien [[Egeanmereksi]]. En ole varma, mikä selitys on vanhin. Ja näin surullisen kyydin jälkeen tekisi mieli yksi pulla.
+KYSYMYS: Kerro lisää: Egeanmereksi
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Miksi Egeanmerellä on niin paljon saaria?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on hyvä. Egeanmeren saaret ovat pääosin jäänteitä mantereen vuoristoista, joiden välinen alue on vajonnut meren alle: saaret ovat siis vuorten huippuja, jotka jäivät vedenpinnan yläpuolelle. Alueen muotoutumiseen ovat vaikuttaneet laattojen liikkeet, ja osa saarista, kuten [[Santorini]], on syntynyt tulivuoritoiminnan seurauksena. Merenpinta nousi myös viimeisen jääkauden jälkeen, mikä katkaisi vanhoja maayhteyksiä. Tarkkaa saarten lukumäärää ei ole helppo sanoa, koska se riippuu siitä, lasketaanko pienet luodot mukaan. Mukava yhtälö: mitä enemmän saaria, sitä enemmän lauttoja.
+KYSYMYS: Kerro lisää: Santorini
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Mitä Kykladit ovat?
+AIEMPI VASTAUS (Livia):
+Mmm— Kykladit ovat Egeanmeren keskiosassa sijaitseva saariryhmä, johon kuuluvat muun muassa [[Naxos]], [[Paros]], [[Mykonos]] ja Santorini. Nimi tulee kreikan sanasta, joka tarkoittaa rengasta tai kehää, ja sen on selitetty viittaavan siihen, että saaret ryhmittyvät pyhän [[Deloksen]] ympärille. Kykladien alueella kehittyi jo pronssikaudella omaleimainen kulttuuri, joka tunnetaan marmorisista, yksinkertaisen puhtaista idoleista. Tänä päivänä saaret ovat suosittuja matkakohteita ja kuuluvat Kreikkaan. Mukavia paikkoja laskeutua kaiteelle.
+KYSYMYS: Kerro lisää: Naxos
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Mitä Kykladit ovat?
+AIEMPI VASTAUS (Livia):
+Mmm— Kykladit ovat Egeanmeren keskiosassa sijaitseva saariryhmä, johon kuuluvat muun muassa [[Naxos]], [[Paros]], [[Mykonos]] ja Santorini. Nimi tulee kreikan sanasta, joka tarkoittaa rengasta tai kehää, ja sen on selitetty viittaavan siihen, että saaret ryhmittyvät pyhän [[Deloksen]] ympärille. Kykladien alueella kehittyi jo pronssikaudella omaleimainen kulttuuri, joka tunnetaan marmorisista, yksinkertaisen puhtaista idoleista. Tänä päivänä saaret ovat suosittuja matkakohteita ja kuuluvat Kreikkaan. Mukavia paikkoja laskeutua kaiteelle.
+KYSYMYS: Kerro lisää: Paros
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Mitä Kykladit ovat?
+AIEMPI VASTAUS (Livia):
+Mmm— Kykladit ovat Egeanmeren keskiosassa sijaitseva saariryhmä, johon kuuluvat muun muassa [[Naxos]], [[Paros]], [[Mykonos]] ja Santorini. Nimi tulee kreikan sanasta, joka tarkoittaa rengasta tai kehää, ja sen on selitetty viittaavan siihen, että saaret ryhmittyvät pyhän [[Deloksen]] ympärille. Kykladien alueella kehittyi jo pronssikaudella omaleimainen kulttuuri, joka tunnetaan marmorisista, yksinkertaisen puhtaista idoleista. Tänä päivänä saaret ovat suosittuja matkakohteita ja kuuluvat Kreikkaan. Mukavia paikkoja laskeutua kaiteelle.
+KYSYMYS: Kerro lisää: Mykonos
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Mitä Kykladit ovat?
+AIEMPI VASTAUS (Livia):
+Mmm— Kykladit ovat Egeanmeren keskiosassa sijaitseva saariryhmä, johon kuuluvat muun muassa [[Naxos]], [[Paros]], [[Mykonos]] ja Santorini. Nimi tulee kreikan sanasta, joka tarkoittaa rengasta tai kehää, ja sen on selitetty viittaavan siihen, että saaret ryhmittyvät pyhän [[Deloksen]] ympärille. Kykladien alueella kehittyi jo pronssikaudella omaleimainen kulttuuri, joka tunnetaan marmorisista, yksinkertaisen puhtaista idoleista. Tänä päivänä saaret ovat suosittuja matkakohteita ja kuuluvat Kreikkaan. Mukavia paikkoja laskeutua kaiteelle.
+KYSYMYS: Kerro lisää: Deloksen
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Millainen olento Minotauros oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Minotauros]] oli kreikkalaisen tarun hirviö, jolla oli ihmisen vartalo ja härän pää. Tarun mukaan kuningas [[Minos]] sulki sen [[labyrinttiin]] Knossoksessa, ja [[Ateenasta]] lähetettiin sille uhrina nuoria, kunnes [[Theseus]] surmasi sen. Theseus löysi ulos sokkelosta Ariadnen antaman langan avulla. Kyseessä on myytti, jonka yhteys todelliseen minolaiseen kulttuuriin on tutkijoiden pohdinnan kohde, eikä selitystä ole yksiselitteisesti varmistettu.
+
+Sokkelossa minä olisin eksynyt heti, vaikka katolta näen kaiken. Ihmiset ne vaan kulkevat sisällä ja luulevat tietävänsä missä ovat.
+KYSYMYS: Kerro lisää: Minotauros
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Millainen olento Minotauros oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Minotauros]] oli kreikkalaisen tarun hirviö, jolla oli ihmisen vartalo ja härän pää. Tarun mukaan kuningas [[Minos]] sulki sen [[labyrinttiin]] Knossoksessa, ja [[Ateenasta]] lähetettiin sille uhrina nuoria, kunnes [[Theseus]] surmasi sen. Theseus löysi ulos sokkelosta Ariadnen antaman langan avulla. Kyseessä on myytti, jonka yhteys todelliseen minolaiseen kulttuuriin on tutkijoiden pohdinnan kohde, eikä selitystä ole yksiselitteisesti varmistettu.
+
+Sokkelossa minä olisin eksynyt heti, vaikka katolta näen kaiken. Ihmiset ne vaan kulkevat sisällä ja luulevat tietävänsä missä ovat.
+KYSYMYS: Kerro lisää: Minos
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Millainen olento Minotauros oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Minotauros]] oli kreikkalaisen tarun hirviö, jolla oli ihmisen vartalo ja härän pää. Tarun mukaan kuningas [[Minos]] sulki sen [[labyrinttiin]] Knossoksessa, ja [[Ateenasta]] lähetettiin sille uhrina nuoria, kunnes [[Theseus]] surmasi sen. Theseus löysi ulos sokkelosta Ariadnen antaman langan avulla. Kyseessä on myytti, jonka yhteys todelliseen minolaiseen kulttuuriin on tutkijoiden pohdinnan kohde, eikä selitystä ole yksiselitteisesti varmistettu.
+
+Sokkelossa minä olisin eksynyt heti, vaikka katolta näen kaiken. Ihmiset ne vaan kulkevat sisällä ja luulevat tietävänsä missä ovat.
+KYSYMYS: Kerro lisää: labyrinttiin
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Elginin marmorit] 1801– Parthenonin friisi lähti Ateenasta laivalla 1800-luvun alussa, eikä ole vieläkään palannut. Lupapaperista kiistellään kohta kolmatta vuosisataa — harvasta kuitista on väännetty näin pitkään. Ateenassa marmoreille on varattu museosali valmiiksi, varmuuden vuoksi.
+AIEMPI KYSYMYS: Millainen olento Minotauros oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Minotauros]] oli kreikkalaisen tarun hirviö, jolla oli ihmisen vartalo ja härän pää. Tarun mukaan kuningas [[Minos]] sulki sen [[labyrinttiin]] Knossoksessa, ja [[Ateenasta]] lähetettiin sille uhrina nuoria, kunnes [[Theseus]] surmasi sen. Theseus löysi ulos sokkelosta Ariadnen antaman langan avulla. Kyseessä on myytti, jonka yhteys todelliseen minolaiseen kulttuuriin on tutkijoiden pohdinnan kohde, eikä selitystä ole yksiselitteisesti varmistettu.
+
+Sokkelossa minä olisin eksynyt heti, vaikka katolta näen kaiken. Ihmiset ne vaan kulkevat sisällä ja luulevat tietävänsä missä ovat.
+KYSYMYS: Kerro lisää: Ateenasta
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+AIEMPI KYSYMYS: Miksi Egeanmeri on ollut tärkeä kauppareitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Egeanmeri on tihein saarin ja suojaisin lahdin täytetty meri, jossa purjehtiminen onnistui antiikin aikanakin niin, että maa oli lähes aina näkyvissä. Tämä helpotti suunnistamista ja tarjosi satamia sääsuojaksi, minkä vuoksi alueella kehittyi vilkas meriliikenne jo pronssikaudella. Meri yhdistää Kreikan mantereen, saaret ja Vähän-Aasian rannikon, ja sen pohjoisosasta [[Dardanellien]] kautta pääsee [[Konstantinopoliin]] ja Mustallemerelle. Siksi kaupunkivaltiot, kuten [[Ateena]], kasvoivat meren varrella. Noin tuhat vuotta kauppaa ja kyyhky ehti nähdä vain murun siitä.
+KYSYMYS: Kerro lisää: Dardanellien
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Istanbul: Faaraon kivi Sultanahmetin aukiolla] Sultanahmetin aukio oli ennen hippodromi, hevosvaunujen kilparata. Sen keskellä seisoo yhä punagraniittinen obeliski, joka veistettiin Egyptissä faarao Thutmosis III:n aikana noin 1450 eaa. Mikään muu kaupungissa pystyssä oleva ei ole yhtä vanhaa tekoa. Keisari Theodosius toi sen Konstantinopoliin vuonna 390, ja jalustaan hakattiin kaksi kertomusta pystyttämisestä: latinankielinen kehuu työn kestäneen kolmekymmentä päivää, kreikankielisessä lukee kolmekymmentäkaksi.
+AIEMPI KYSYMYS: Miksi Egeanmeri on ollut tärkeä kauppareitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Egeanmeri on tihein saarin ja suojaisin lahdin täytetty meri, jossa purjehtiminen onnistui antiikin aikanakin niin, että maa oli lähes aina näkyvissä. Tämä helpotti suunnistamista ja tarjosi satamia sääsuojaksi, minkä vuoksi alueella kehittyi vilkas meriliikenne jo pronssikaudella. Meri yhdistää Kreikan mantereen, saaret ja Vähän-Aasian rannikon, ja sen pohjoisosasta [[Dardanellien]] kautta pääsee [[Konstantinopoliin]] ja Mustallemerelle. Siksi kaupunkivaltiot, kuten [[Ateena]], kasvoivat meren varrella. Noin tuhat vuotta kauppaa ja kyyhky ehti nähdä vain murun siitä.
+KYSYMYS: Kerro lisää: Konstantinopoliin
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeanmeri (meri)
+Tietoruudun teksti: Vanhan tarun mukaan Egeanmeri sai nimensä kuningas Aigeuksesta, Theseuksen isästä. Theseus lähti tappamaan Minotaurosta ja lupasi nostaa valkoiset purjeet onnistuessaan — mutta unohti sen. Kun Aigeus näki laivan palaavan mustin purjein, hän uskoi poikansa kuolleen ja heittäytyi mereen. Legenda selittää yhä, miksi tämä Kreikan ja Vähän-Aasian välinen meri kantaa hänen nimeään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena] Kaupunki, jossa marmoritorni mittasi aikaa vedellä ja jossa vesikantaja voitti maailman ensimmäisen olympiamaratonin.
+AIEMPI KYSYMYS: Miksi Egeanmeri on ollut tärkeä kauppareitti?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Egeanmeri on tihein saarin ja suojaisin lahdin täytetty meri, jossa purjehtiminen onnistui antiikin aikanakin niin, että maa oli lähes aina näkyvissä. Tämä helpotti suunnistamista ja tarjosi satamia sääsuojaksi, minkä vuoksi alueella kehittyi vilkas meriliikenne jo pronssikaudella. Meri yhdistää Kreikan mantereen, saaret ja Vähän-Aasian rannikon, ja sen pohjoisosasta [[Dardanellien]] kautta pääsee [[Konstantinopoliin]] ja Mustallemerelle. Siksi kaupunkivaltiot, kuten [[Ateena]], kasvoivat meren varrella. Noin tuhat vuotta kauppaa ja kyyhky ehti nähdä vain murun siitä.
+KYSYMYS: Kerro lisää: Ateena
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+AIEMPI KYSYMYS: Kuka oli Aiskhylos?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu mies teatterin puolelta. [[Aiskhylos]] oli ateenalainen näytelmäkirjailija, joka eli 400-luvun alussa ennen ajanlaskua ja jota pidetään yhtenä kolmesta suuresta kreikkalaisesta tragedian kirjoittajasta [[Sofokleen]] ja [[Euripideen]] ohella. Hänen tunnetuin säilynyt teoksensa on näytelmäsarja [[Oresteia]]. Hän kirjoitti myös näytelmän, jossa esiintyy Io, jonka tarun mukaan Joonianmeri on saanut nimensä. Aiskhylos vieraili Sisiliassa, ja [[Syrakusan]] kreikkalaisessa teatterissa hänen näytelmiään esitettiin. Näin pitkä esitelmä kyyhkyltä, ja silti jäi varmasti jotain pois.
+KYSYMYS: Kerro lisää: Aiskhylos
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Kuka oli Aiskhylos?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu mies teatterin puolelta. [[Aiskhylos]] oli ateenalainen näytelmäkirjailija, joka eli 400-luvun alussa ennen ajanlaskua ja jota pidetään yhtenä kolmesta suuresta kreikkalaisesta tragedian kirjoittajasta [[Sofokleen]] ja [[Euripideen]] ohella. Hänen tunnetuin säilynyt teoksensa on näytelmäsarja [[Oresteia]]. Hän kirjoitti myös näytelmän, jossa esiintyy Io, jonka tarun mukaan Joonianmeri on saanut nimensä. Aiskhylos vieraili Sisiliassa, ja [[Syrakusan]] kreikkalaisessa teatterissa hänen näytelmiään esitettiin. Näin pitkä esitelmä kyyhkyltä, ja silti jäi varmasti jotain pois.
+KYSYMYS: Kerro lisää: Sofokleen
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Kuka oli Aiskhylos?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu mies teatterin puolelta. [[Aiskhylos]] oli ateenalainen näytelmäkirjailija, joka eli 400-luvun alussa ennen ajanlaskua ja jota pidetään yhtenä kolmesta suuresta kreikkalaisesta tragedian kirjoittajasta [[Sofokleen]] ja [[Euripideen]] ohella. Hänen tunnetuin säilynyt teoksensa on näytelmäsarja [[Oresteia]]. Hän kirjoitti myös näytelmän, jossa esiintyy Io, jonka tarun mukaan Joonianmeri on saanut nimensä. Aiskhylos vieraili Sisiliassa, ja [[Syrakusan]] kreikkalaisessa teatterissa hänen näytelmiään esitettiin. Näin pitkä esitelmä kyyhkyltä, ja silti jäi varmasti jotain pois.
+KYSYMYS: Kerro lisää: Euripideen
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Kuka oli Aiskhylos?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu mies teatterin puolelta. [[Aiskhylos]] oli ateenalainen näytelmäkirjailija, joka eli 400-luvun alussa ennen ajanlaskua ja jota pidetään yhtenä kolmesta suuresta kreikkalaisesta tragedian kirjoittajasta [[Sofokleen]] ja [[Euripideen]] ohella. Hänen tunnetuin säilynyt teoksensa on näytelmäsarja [[Oresteia]]. Hän kirjoitti myös näytelmän, jossa esiintyy Io, jonka tarun mukaan Joonianmeri on saanut nimensä. Aiskhylos vieraili Sisiliassa, ja [[Syrakusan]] kreikkalaisessa teatterissa hänen näytelmiään esitettiin. Näin pitkä esitelmä kyyhkyltä, ja silti jäi varmasti jotain pois.
+KYSYMYS: Kerro lisää: Oresteia
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Teatteri, jossa esitetään yhä] Syrakusan kreikkalainen teatteri on hakattu suoraan kallioon 400-luvulla ennen ajanlaskua, ja katsomoon mahtui noin viisitoistatuhatta ihmistä. Näytelmäkirjailija Aiskhylos näki omia näytelmiään ensi-illassa juuri täällä. Teatteri ei ole museokohde vaan käytössä: joka kevät siellä esitetään antiikin tragedioita, ja yleisö istuu samoilla kiviportailla kuin kaksituhatta neljäsataa vuotta sitten. Kesällä kivi kuumenee niin, että mukaan otetaan tyyny.
+AIEMPI KYSYMYS: Kuka oli Aiskhylos?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuttu mies teatterin puolelta. [[Aiskhylos]] oli ateenalainen näytelmäkirjailija, joka eli 400-luvun alussa ennen ajanlaskua ja jota pidetään yhtenä kolmesta suuresta kreikkalaisesta tragedian kirjoittajasta [[Sofokleen]] ja [[Euripideen]] ohella. Hänen tunnetuin säilynyt teoksensa on näytelmäsarja [[Oresteia]]. Hän kirjoitti myös näytelmän, jossa esiintyy Io, jonka tarun mukaan Joonianmeri on saanut nimensä. Aiskhylos vieraili Sisiliassa, ja [[Syrakusan]] kreikkalaisessa teatterissa hänen näytelmiään esitettiin. Näin pitkä esitelmä kyyhkyltä, ja silti jäi varmasti jotain pois.
+KYSYMYS: Kerro lisää: Syrakusan
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+AIEMPI KYSYMYS: Miksi meri järisee juuri täällä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joonianmeren alue on seisminen, koska Afrikan laatta työntyy hitaasti [[Euraasian laatan]] alle ja Egeanmeren laatta liikkuu samalla suhteessa niihin, mikä kerää jännitettä maankuoreen. Jännite purkautuu ajoittain maanjäristyksinä, jotka ovat tavallisia Kreikan länsirannikolla ja [[Joonianmeren saarilla]]. Tämän alueen syvänne [[Kalypson syvänne]], 5 109 metriä, kertoo samasta laattojen kohtaamisesta, joskin tarkat tektoniset yksityiskohdat ovat monimutkaisia, enkä ole niistä varma. Eikä kyyhkyn pää ole tarkoitettu laattatektoniikkaan.
+KYSYMYS: Kerro lisää: Euraasian laatan
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Llogaran sola Joonianmeren yllä] vuodesta 1966 — Llogaran solassa tie nousee 1 027 metrin korkeuteen Ceraunian-vuoristossa, ja kohdalta avautuu näkymä Albanian Rivieralle ja meren saarille. Ympäröivä Llogaran kansallispuisto perustettiin vuonna 1966, ja sen pinta-ala on 17,7 neliökilometriä. Puiston korkeus vaihtelee noin 200 metristä yli 2 000 metriin, ja Maja e Çikës nousee 2 045 metriin. Metsissä kasvaa mustamäntyä ja hopeakuusta sekä lehtipuita, ja seudulla elää muun muassa maakotkia, korppikotkia, metsäkauriita ja susia. Lähellä oleva Caesarin sola viittaa siihen, että Julius Caesar ajoi Pompeiusta takaa seudun halki.
+AIEMPI KYSYMYS: Miksi meri järisee juuri täällä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joonianmeren alue on seisminen, koska Afrikan laatta työntyy hitaasti [[Euraasian laatan]] alle ja Egeanmeren laatta liikkuu samalla suhteessa niihin, mikä kerää jännitettä maankuoreen. Jännite purkautuu ajoittain maanjäristyksinä, jotka ovat tavallisia Kreikan länsirannikolla ja [[Joonianmeren saarilla]]. Tämän alueen syvänne [[Kalypson syvänne]], 5 109 metriä, kertoo samasta laattojen kohtaamisesta, joskin tarkat tektoniset yksityiskohdat ovat monimutkaisia, enkä ole niistä varma. Eikä kyyhkyn pää ole tarkoitettu laattatektoniikkaan.
+KYSYMYS: Kerro lisää: Joonianmeren saarilla
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Miksi meri järisee juuri täällä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joonianmeren alue on seisminen, koska Afrikan laatta työntyy hitaasti [[Euraasian laatan]] alle ja Egeanmeren laatta liikkuu samalla suhteessa niihin, mikä kerää jännitettä maankuoreen. Jännite purkautuu ajoittain maanjäristyksinä, jotka ovat tavallisia Kreikan länsirannikolla ja [[Joonianmeren saarilla]]. Tämän alueen syvänne [[Kalypson syvänne]], 5 109 metriä, kertoo samasta laattojen kohtaamisesta, joskin tarkat tektoniset yksityiskohdat ovat monimutkaisia, enkä ole niistä varma. Eikä kyyhkyn pää ole tarkoitettu laattatektoniikkaan.
+KYSYMYS: Kerro lisää: Kalypson syvänne
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Joonianmeri (meri)
+Tietoruudun teksti: Joonianmeren nimen alkuperä on hämärän peitossa, mutta antiikin kirjailijat — etenkin Aiskhylos — yhdistivät sen Io-nymfin taruun: Io ui tämän meren yli, ja siitä meri sai nimensä. Meri on yksi Välimeren seismisesti aktiivisimmista alueista, ja sen syvin kohta, Kalypson syvänne (5 109 m), on koko Välimeren syvin paikka.
+AIEMPI KYSYMYS: Mitä Io-nymfin taru kertoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tarun mukaan [[Zeus]] ihastui nymfi [[Ioon]], ja suojellakseen tätä [[Heran]] kateudelta hän muutti Ion hiehoksi. Hera ei kuitenkaan sitä uskonut, vaan lähetti Ion kimppuun paarman, joka ajoi hiehon harhailemaan maasta toiseen. Yhden version mukaan Io ui matkallaan meren poikki, ja siitä meri sai nimekseen Joonianmeri; antiikin kirjailijat, kuten [[Aiskhylos]], kertoivat tarinan eri tavoin. Lopulta Io sai ihmisen hahmonsa takaisin. Vähän kyllä käy sääliksi sekä Iota että paarmaa.
+KYSYMYS: Kerro lisää: Zeus
