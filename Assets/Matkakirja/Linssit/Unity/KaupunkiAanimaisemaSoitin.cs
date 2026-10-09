@@ -309,7 +309,8 @@ namespace Matkakirja.Natiivi
             }
             // Tasatunti: lyönnit hajautettuina kirkoittain (vain kun maisema kuuluu).
             int h = (int)Math.Floor(tunti);
-            if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue)
+            // Juna 173 (Soundly-erä 1): elävässä kaupungissa lähimmän kirkon omat 3D-lyönnit (ElavaKaupunki, Ydin KaupunkiAanet) korvaavat nämä.
+            if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue && !ElavaKaupunki.OmatLyonnit)
             {
                 int kirkkoja = KirkkojaLahella?.Invoke(k.Value.Lat, k.Value.Lon) ?? kartta?.KirkkojaLahella(k.Value.Lat, k.Value.Lon) ?? 0;
                 foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(h, Math.Min(kirkkoja, 3), (int)(karttaLat * 1000)))

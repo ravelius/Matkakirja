@@ -11,6 +11,9 @@
 //  IHMISET: OSM-paikat elava-<id>.json:sta (aukiot: tyokalut/elava_ihmiset.py; kadut ja vesiliikenteen reittien päät = laiturit).
 //    Vain kun kamera on alle KorkeusRajaM maasta ja paikka alle EtaisyysRajaM:n päässä. Väli 1–3 min, katusoittaja omalla kellolla
 //    3–6 min vain toreilla (place=square tai iso aukio); sama ääni ei peräkkäin; voimakkuus ja sävelkorkeus ±5 %.
+//    SOUNDLY-ERÄ 1 (juna 173): pyörän kelloon lisävaihtoehdot pyora-kello-01…04, laivan torveen laivan-torvi-03…04 (lautat) ja isolla
+//    vedellä (saaristo- ja höyrylaivojen tai yli IsoVesiM:n reittien päät) myös 01…02 (valtamerilaiva, Hurtigruten kaukaa); torvi
+//    enintään TorviValiMinS välein (harvoin). Saatavilla suodattaa lataamattomat klipit pois (null = kaikki).
 // Puhdas C#: ElavatAanetTestit.
 using System;
 using System.Collections.Generic;
@@ -145,13 +148,20 @@ namespace Matkakirja.Linssit.Elava
     {
         public enum Paikka { Aukio, Tori, Katu, Laituri }
         public const double KorkeusRajaM = 150, EtaisyysRajaM = 200, TaysiM = 30, HiljaM = 260, ValiMinS = 60, ValiMaxS = 180,
-            SoittajaMinS = 180, SoittajaMaxS = 360, Vaihtelu = 0.05, ToriAlaM2 = 1000, KatuValiM = 60, LaituriYhdistysM = 40;
+            SoittajaMinS = 180, SoittajaMaxS = 360, Vaihtelu = 0.05, ToriAlaM2 = 1000, KatuValiM = 60, LaituriYhdistysM = 40, TorviValiMinS = 600, IsoVesiM = 8000;
         public const double SorinaTaso = 0.6, NauruTaso = 0.5, LapsiTaso = 0.5, KelloTaso = 0.45, SoittajaTaso = 0.55, TorviTaso = 0.7;
         public sealed class Tapahtuma { public string Tunnus; public Paikka Laji; public double X, Z, Taso, Savel, EtaisyysM; }
 
         public readonly List<(double X, double Z, Paikka Laji)> Paikat = new List<(double, double, Paikka)>();
+        /// <summary>Isolla vedellä olevat laiturit (Paikat-indeksit): torvet 01–02 kaukaa.</summary>
+        public readonly HashSet<int> IsoVesi = new HashSet<int>();
+        /// <summary>Onko klippi saatavilla (Unity: ladattu); null = kaikki. Suodattaa sarjan, tyhjä → alkuperäinen.</summary>
+        public Predicate<string> Saatavilla;
+        public static readonly string[] PyoranKellot = Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello),
+            Torvet = Yhdista(PalloElavaAanet.LaivanTorvi, PalloSoundlyAanet.TorviLautta), TorvetIso = Yhdista(Torvet, PalloSoundlyAanet.TorviIso);
+        static string[] Yhdista(string[] a, string[] b) { var c = new string[a.Length + b.Length]; a.CopyTo(c, 0); b.CopyTo(c, a.Length); return c; }
         readonly Random rnd;
-        double seuraava = double.NaN, soittajaSeuraava = double.NaN;
+        double seuraava = double.NaN, soittajaSeuraava = double.NaN, torviSeuraava = double.NegativeInfinity, nytS;
         string edellinen;
 
         // Luokat: sarja, sallitut paikat, paino, taso.
@@ -160,8 +170,8 @@ namespace Matkakirja.Linssit.Elava
             (PalloElavaAanet.Sorina, new[] { Paikka.Aukio, Paikka.Tori }, 4, SorinaTaso),
             (PalloElavaAanet.Nauru, new[] { Paikka.Aukio, Paikka.Tori }, 2, NauruTaso),
             (PalloElavaAanet.Lapsi, new[] { Paikka.Aukio, Paikka.Tori }, 1.5, LapsiTaso),
-            (PalloElavaAanet.PyoranKello, new[] { Paikka.Katu }, 2, KelloTaso),
-            (PalloElavaAanet.LaivanTorvi, new[] { Paikka.Laituri }, 1, TorviTaso),
+            (PyoranKellot, new[] { Paikka.Katu }, 2, KelloTaso),
+            (Torvet, new[] { Paikka.Laituri }, 1, TorviTaso),
         };
 
         public IhmisAanet(int siemen) { rnd = new Random(siemen); }
@@ -193,15 +203,21 @@ namespace Matkakirja.Linssit.Elava
                     kertyma += l;
                 }
             }
-            var laiturit = new List<(double x, double z)>();
+            var laiturit = new List<(double x, double z, bool iso)>();
             foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "reitit")))
             {
                 var r = MiniJson.ObjektiTaiNull(o); if (r == null || MiniJson.Kentta(r, "kiertava") is bool k && k) continue;
                 var p = Pisteet(r); if (p.Count < 2) continue;
+                double pituus = 0; for (int i = 1; i < p.Count; i++) pituus += Math.Sqrt((p[i].x - p[i - 1].x) * (p[i].x - p[i - 1].x) + (p[i].z - p[i - 1].z) * (p[i].z - p[i - 1].z));
+                string tyyppi = MiniJson.Teksti(r, "tyyppi");
+                bool iso = tyyppi == "saaristolaiva" || tyyppi == "hoyrylaiva" || pituus > IsoVesiM;
                 foreach (var q in new[] { p[0], p[p.Count - 1] })
-                    if (!laiturit.Exists(l => (l.x - q.x) * (l.x - q.x) + (l.z - q.z) * (l.z - q.z) < LaituriYhdistysM * LaituriYhdistysM)) laiturit.Add(q);
+                {
+                    int ix = laiturit.FindIndex(l => (l.x - q.x) * (l.x - q.x) + (l.z - q.z) * (l.z - q.z) < LaituriYhdistysM * LaituriYhdistysM);
+                    if (ix < 0) laiturit.Add((q.x, q.z, iso)); else if (iso) laiturit[ix] = (laiturit[ix].x, laiturit[ix].z, true);
+                }
             }
-            foreach (var l in laiturit) e.Paikat.Add((l.x, l.z, Paikka.Laituri));
+            foreach (var l in laiturit) { if (l.iso) e.IsoVesi.Add(e.Paikat.Count); e.Paikat.Add((l.x, l.z, Paikka.Laituri)); }
             return e;
         }
 
@@ -225,6 +241,7 @@ namespace Matkakirja.Linssit.Elava
         /// <summary>Joka kehys: kamera paketin ENU:ssa (vaaka) ja korkeus maasta (m; NaN = ei tiedossa). Enintään yksi tapahtuma.</summary>
         public Tapahtuma Paivita(double nyt, double kx, double kz, double korkeusMaasta)
         {
+            nytS = nyt;
             if (double.IsNaN(seuraava)) { seuraava = nyt + 20 + 40 * rnd.NextDouble(); soittajaSeuraava = nyt + SoittajaMinS + (SoittajaMaxS - SoittajaMinS) * rnd.NextDouble(); }
             if (double.IsNaN(korkeusMaasta) || korkeusMaasta > KorkeusRajaM || Paikat.Count == 0) return null;
             if (nyt >= soittajaSeuraava)
@@ -254,15 +271,22 @@ namespace Matkakirja.Linssit.Elava
             }
             double yht = 0; var mahd = new List<int>();
             for (int c = 0; c < luokat.Length; c++)
+            {
+                if (luokat[c].Sarja == Torvet && nytS < torviSeuraava) continue;   // torvi harvoin
                 foreach (var pl in luokat[c].Paikat) if (lahella.ContainsKey(pl)) { mahd.Add(c); yht += luokat[c].Paino; break; }
+            }
             if (mahd.Count == 0) return null;
             double u = rnd.NextDouble() * yht; int valittu = mahd[mahd.Count - 1];
             foreach (int c in mahd) { u -= luokat[c].Paino; if (u < 0) { valittu = c; break; } }
             var luokka = luokat[valittu];
             var ehdokkaat = new List<int>();
             foreach (var pl in luokka.Paikat) if (lahella.TryGetValue(pl, out var l)) ehdokkaat.AddRange(l);
-            var p = Paikat[ehdokkaat[rnd.Next(ehdokkaat.Count)]];
-            string tunnus = ElavaValinta.Vaihtoehto(luokka.Sarja, rnd, edellinen);
+            int pi = ehdokkaat[rnd.Next(ehdokkaat.Count)];
+            var p = Paikat[pi];
+            var sarja = luokka.Sarja == Torvet && IsoVesi.Contains(pi) ? TorvetIso : luokka.Sarja;
+            if (luokka.Sarja == Torvet) torviSeuraava = nytS + TorviValiMinS;
+            if (Saatavilla != null) { var s = Array.FindAll(sarja, x => Saatavilla(x)); if (s.Length > 0) sarja = s; }
+            string tunnus = ElavaValinta.Vaihtoehto(sarja, rnd, edellinen);
             edellinen = tunnus;
             double vx = p.X - kx, vz = p.Z - kz, d3 = Math.Sqrt(vx * vx + vz * vz + korkeus * korkeus);
             double vaihtelu = 1 + Vaihtelu * (2 * rnd.NextDouble() - 1), savel = 1 + Vaihtelu * (2 * rnd.NextDouble() - 1);

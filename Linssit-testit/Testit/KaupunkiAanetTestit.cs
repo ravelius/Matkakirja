@@ -91,7 +91,7 @@ namespace Matkakirja.Linssit.Testit
             var tul = AjaKellot(a, 0, 30, 900, t => 11.95 + t / 3600);
             var tasa = tul.FindAll(x => x.K.Tasatunti);
             Oleta.Sama(1, tasa.Count, "tasatunnilla kerran");
-            double odotus = 180 + KaupunkiAanet.LyontienJalkeenS(12);
+            double odotus = 180 + KaupunkiAanet.LyontienJalkeenS(12, PalloSoundlyAanet.LyontiVali(60, 0, 9));
             Oleta.Tosi(Math.Abs(tasa[0].T - odotus) <= 2 * Dt, $"tasatunnin kello {tasa[0].T:F1} s (odotus {odotus:F1})");
             Oleta.Tosi(KaupunkiAanet.LyontienJalkeenS(12) > 12 * 2.6 && KaupunkiAanet.LyontienJalkeenS(1) < KaupunkiAanet.LyontienJalkeenS(12), "lyöntien jälkeen");
             foreach (var (t, k) in tul) if (!k.Tasatunti && t > tasa[0].T) Oleta.Tosi(t - tasa[0].T >= KaupunkiAanet.KelloValiMinS - 1e-6, "satunnainen ≥ 3 min tasatunnin jälkeen");
@@ -362,8 +362,13 @@ namespace Matkakirja.Linssit.Testit
             double L(Dictionary<string, object> d, string lahde, string kentta) => Convert.ToDouble(((Dictionary<string, object>)d[lahde])[kentta], System.Globalization.CultureInfo.InvariantCulture);
             double Db(double x) => 20 * Math.Log10(Math.Max(1e-9, x));
             double kertoja = L(k, "kertoja", "integroitu_lufs") + Db(OpasAanitasot.Kertoja(0.9));
-            var tapahtumat = new[] { ("kirkonkello", PalloKaupunkiAanet.KirkkoTaso), ("vene_ohi", PalloKaupunkiAanet.VeneTaso), ("maitovaahdotin", PalloKaupunkiAanet.MaitoTaso) };
-            var taustat = new[] { ("kahvila", PalloKaupunkiAanet.KahvilaTaso), ("tori", PalloKaupunkiAanet.ToriTaso), ("suihkulahde", PalloKaupunkiAanet.SuihkuTaso), ("satama", PalloKaupunkiAanet.SatamaTaso), ("halli", PalloKaupunkiAanet.HalliTaso) };
+            double ihm = 1 + IhmisAanet.Vaihtelu;   // IhmisAanet: taso ±5 %
+            var tapahtumat = new[] { ("kirkonkello", PalloKaupunkiAanet.KirkkoTaso), ("vene_ohi", PalloKaupunkiAanet.VeneTaso), ("maitovaahdotin", PalloKaupunkiAanet.MaitoTaso),
+                // Soundly-erä 1 (juna 173); lyönnit soivat päällekkäin edellisen soimisen kanssa → varaus LyontiPaallekkainDb.
+                ("lokki_huuto", PalloSoundlyAanet.LokkiTaso), ("kyyhky_kujerrus", PalloSoundlyAanet.KujerrusTaso), ("kyyhky_siivet", PalloSoundlyAanet.SiivetTaso),
+                ("kello_lyonti", PalloSoundlyAanet.LyontiTaso * Math.Pow(10, PalloSoundlyAanet.LyontiPaallekkainDb / 20)), ("raitiovaunu_kello", PalloSoundlyAanet.RaitioKelloTaso),
+                ("pyora_kello", IhmisAanet.KelloTaso * ihm), ("laivan_torvi", IhmisAanet.TorviTaso * ihm) };
+            var taustat = new[] { ("lokki_parvi", PalloSoundlyAanet.LokkiParviTaso), ("kahvila", PalloKaupunkiAanet.KahvilaTaso), ("tori", PalloKaupunkiAanet.ToriTaso), ("suihkulahde", PalloKaupunkiAanet.SuihkuTaso), ("satama", PalloKaupunkiAanet.SatamaTaso), ("halli", PalloKaupunkiAanet.HalliTaso) };
             foreach (var (n, taso) in tapahtumat)
             {
                 double m = kertoja - (L(g, n, "momentaari_max_lufs") + Db(OpasAanitasot.Maisema(taso, true)));
@@ -376,6 +381,169 @@ namespace Matkakirja.Linssit.Testit
                 Console.WriteLine($"      {n}: {m:F1} dB kertojan alla (tausta, ≥ 10)");
                 Oleta.Tosi(m >= 10, $"{n}: {m:F1} dB kertojan alla (≥ 10)");
             }
+        }
+        // ---- SOUNDLY-ERÄ 1 (juna 173) ----
+
+        [Testi] static void SoundlyManifestiJaTunnukset()
+        {
+            var m = PalloSoundlyAanet.Lue("{\"aanet\":[{\"tunnus\":\"laivan-torvi-01\",\"aani\":\"laivan-torvi-01.mp3\",\"silmukka\":false,\"aihe\":\"laivan-torvi\",\"tyyppi\":\"pisteaani\"}," +
+                "{\"tunnus\":\"lokki-parvi\",\"aani\":\"lokki-parvi.mp3\",\"silmukka\":true,\"kesto_s\":25},{\"tunnus\":\"pyora-kello-04\",\"aani\":\"pyora-kello-04.mp3\"}]}");
+            Oleta.Tosi(m.Aanet.ContainsKey("soundly-laivan-torvi-01") && !m.Aanet.ContainsKey("laivan-torvi-01"), "v2:n kanssa päällekkäinen tunnus etuliitteellä");
+            Oleta.Sama(PalloSoundlyAanet.Juuri + "laivan-torvi-01.mp3", m.Aanet["soundly-laivan-torvi-01"].Osoite, "tiedosto alkuperäisellä nimellä");
+            Oleta.Tosi(m.Aanet["lokki-parvi"].Silmukka && m.Aanet.ContainsKey("pyora-kello-04"), "muut sellaisenaan");
+            var kaikki = new HashSet<string>(PalloSoundlyAanet.Tunnukset());
+            Oleta.Sama(28, kaikki.Count, "28 ääntä");
+            var muut = new HashSet<string>(PalloElavaAanet.Tunnukset()); muut.UnionWith(PalloKaupunkiAanet.Tunnukset());
+            foreach (var t in kaikki) { Oleta.Tosi(!muut.Contains(t), "ei päällekkäin: " + t); Oleta.Sama("maisema", PalloSoundlyAanet.MikseriAani(t).Ryhma, t); }
+            Oleta.Sama("elava.pyoran-kello", PalloSoundlyAanet.MikseriAani("pyora-kello-02").Id, "pyörän kello samaan ääneen kuin v2");
+            Oleta.Sama("elava.laivan-torvi", PalloSoundlyAanet.MikseriAani("soundly-laivan-torvi-03").Id);
+            Oleta.Sama("kaupunki.kello", PalloSoundlyAanet.MikseriAani("kello-lyonti-c-01").Id, "lyönnit kaupungin kellonlyönteihin");
+        }
+
+        [Testi] static void TuntilyonnitNKertaaKirkonKellolla()
+        {
+            const int S = 9;
+            foreach (var (alku, n) in new[] { (14.95, 3), (11.95, 12), (0.95, 1) })
+            {
+                var a = Tyhja(S); a.Kirkot.Add((60, 0)); a.Indeksoi();
+                var l = new List<(double T, KaupunkiAanet.Kerta K)>(); double heiluva = double.NaN;
+                for (double t = 0; t < 300; t += Dt)
+                {
+                    a.Paivita(t, Dt, 0, 0, 30, alku + t / 3600, false);
+                    foreach (var k in a.Kerrat)
+                    {
+                        if (k.Lyonti > 0) l.Add((t, k));
+                        else if (k.Tasatunti) heiluva = t;
+                    }
+                }
+                double vali = PalloSoundlyAanet.LyontiVali(60, 0, S);
+                Oleta.Sama(n, l.Count, $"klo {alku + 0.05:F0}: {n} lyöntiä");
+                for (int i = 0; i < l.Count; i++)
+                {
+                    Oleta.Sama(i + 1, l[i].K.Lyonti);
+                    Oleta.Sama(PalloSoundlyAanet.KirkonKello(60, 0, S), l[i].K.Tunnus, "kirkon oma kello");
+                    Oleta.Tosi(l[i].K.X == 60 && l[i].K.Taso > 0, "lähimmästä kirkosta");
+                    if (i > 0) Oleta.Tosi(Math.Abs(l[i].T - l[i - 1].T - vali) <= Dt + 1e-9, $"väli {l[i].T - l[i - 1].T:F2} s (kirkon {vali:F2} s)");
+                }
+                Oleta.Tosi(vali >= 2.5 && vali <= 3.0, "väli 2,5–3 s");
+                Oleta.Tosi(heiluva >= l[l.Count - 1].T + KaupunkiAanet.LyontiSoiS - 3 * vali - Dt && heiluva > l[l.Count - 1].T, $"heiluvat kellot lyöntien jälkeen ({heiluva:F1} s)");
+            }
+            var kaukana = Tyhja(S); kaukana.Kirkot.Add((60, 0)); kaukana.Indeksoi();
+            for (double t = 0; t < 300; t += Dt) { kaukana.Paivita(t, Dt, 400, 0, 30, 11.95 + t / 3600, false); foreach (var k in kaukana.Kerrat) Oleta.Tosi(k.Lyonti == 0, "kirkko yli 250 m: ei lyöntejä"); }
+            // Kello a–d paikan siemenestä: kaikki neljä esiintyvät, sama kirkko = sama kello.
+            var kellot = new Dictionary<string, int>();
+            for (int i = 0; i < 200; i++) { string k = PalloSoundlyAanet.KirkonKello(i * 137.3, -i * 71.9, S); kellot[k] = kellot.TryGetValue(k, out var c) ? c + 1 : 1; Oleta.Sama(k, PalloSoundlyAanet.KirkonKello(i * 137.3, -i * 71.9, S)); }
+            Oleta.Sama(4, kellot.Count, "kellot a–d");
+            foreach (var kv in kellot) Oleta.Tosi(kv.Value >= 25, $"{kv.Key}: {kv.Value}/200");
+        }
+
+        static (List<(double, double, double)> L, List<(double, double)> A) Linnut => (new List<(double, double, double)> { (0, 90, 2), (2000, 0, 2) }, new List<(double, double)> { (20, -10), (3000, 0) });
+
+        static List<(double T, SoundlyAanet.Tapahtuma E)> AjaLinnut(int siemen, double korkeus, Func<double, (double X, double Y, double Z, bool K)?> parvi, Func<double, (double X, double Z)?> raitio = null, double kesto = 1800)
+        {
+            var (l, a) = Linnut; var s = new SoundlyAanet(siemen, l, a); var tul = new List<(double, SoundlyAanet.Tapahtuma)>();
+            for (double t = 0; t < kesto; t += Dt)
+            {
+                s.Aloita(t, 0, korkeus, 0, korkeus);
+                var p = parvi(t); if (p.HasValue) s.Parvi(7, p.Value.X, p.Value.Y, p.Value.Z, p.Value.K);
+                var r = raitio?.Invoke(t); if (r.HasValue) s.Raitio(3, r.Value.X, 0, r.Value.Z);
+                s.Valitse(Dt);
+                foreach (var e in s.Kerrat) tul.Add((t, e));
+            }
+            return tul;
+        }
+
+        static void Valit(List<(double T, SoundlyAanet.Tapahtuma E)> l, double min, double max, string nimi)
+        {
+            string ed = null;
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (i > 0) Oleta.Tosi(l[i].T - l[i - 1].T >= min - 1e-6 && l[i].T - l[i - 1].T <= max + Dt, $"{nimi}: väli {l[i].T - l[i - 1].T:F1} s");
+                Oleta.Tosi(l[i].E.Tunnus != ed && l[i].E.Taso > 0, $"{nimi}: ei samaa peräkkäin, taso"); ed = l[i].E.Tunnus;
+            }
+        }
+
+        [Testi] static void LokkihuudotParvissaJaLaitureilla()
+        {
+            // Lokkiparvi kiertää 80 m:n päässä 30 m:n korkeudella: huudot parvessa (Avain), väli 6–20 s.
+            var p = AjaLinnut(5, 20, t => (80 * Math.Cos(t / 30), 30, 80 * Math.Sin(t / 30), false));
+            var lokit = p.FindAll(x => x.E.Laji == SoundlyAanet.Laji.Lokki);
+            Oleta.Tosi(lokit.Count >= 90 && lokit.Count <= 300, $"30 min: {lokit.Count} huutoa");
+            Valit(lokit, SoundlyAanet.LokkiValiMinS, SoundlyAanet.LokkiValiMaxS, "lokki");
+            foreach (var (_, e) in lokit) Oleta.Tosi(e.Avain == 7 && Array.IndexOf(PalloSoundlyAanet.LokkiHuuto, e.Tunnus) >= 0, "parvessa");
+            // Ei parvea: laiturilla (0, 90), vain matalalla; korkealla ja kaukana ei mitään.
+            var la = AjaLinnut(5, 20, t => null).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Lokki);
+            Oleta.Tosi(la.Count >= 90 && la.TrueForAll(x => x.E.Avain == -1 && x.E.X == 0 && x.E.Z == 90), $"laiturilla {la.Count}");
+            Oleta.Sama(0, AjaLinnut(5, 200, t => null, null, 600).Count, "kamera 200 m: ei lintuja");
+            Oleta.Sama(0, AjaLinnut(5, 20, t => (900.0, 30.0, 0.0, false), null, 600).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Lokki && x.E.Avain == 7).Count, "parvi 900 m: ei huutoja parvesta");
+            // lokki-parvi-tausta: matalalla veden äärellä hiljaa, korkealla ei.
+            var (l, a) = Linnut;
+            foreach (var (k, odotus) in new[] { (20.0, true), (120.0, false) })
+            {
+                var s = new SoundlyAanet(5, l, a); double ed = 0, maxAskel = 0;
+                for (double t = 0; t < 20; t += Dt) { s.Aloita(t, 0, k, 0, k); s.Valitse(Dt); maxAskel = Math.Max(maxAskel, Math.Abs(s.LokkiParvi - ed)); ed = s.LokkiParvi; }
+                Oleta.Tosi(odotus ? s.LokkiParvi > 0.05 && s.LokkiParvi <= PalloSoundlyAanet.LokkiParviTaso : s.LokkiParvi == 0, $"lokki-parvi {k} m: {s.LokkiParvi:F3}");
+                Oleta.Tosi(maxAskel <= Dt / KaupunkiAanet.TaustaLiukuS + 1e-9, "liukuu");
+            }
+        }
+
+        [Testi] static void KyyhkytAukioillaJaParvissa()
+        {
+            var au = AjaLinnut(8, 15, t => null).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Kyyhky);
+            Oleta.Tosi(au.Count >= 50 && au.Count <= 150, $"aukio 30 min: {au.Count}");
+            Valit(au, SoundlyAanet.KyyhkyValiMinS, SoundlyAanet.KyyhkyValiMaxS, "kyyhky");
+            int siivet = au.FindAll(x => Array.IndexOf(PalloSoundlyAanet.KyyhkySiivet, x.E.Tunnus) >= 0).Count;
+            Oleta.Tosi(au.TrueForAll(x => x.E.Avain == -1 && x.E.X == 20) && siivet > 0 && siivet < au.Count / 2, $"aukiolla, kujerrus useimmiten ({siivet}/{au.Count} siivet)");
+            var pa = AjaLinnut(8, 15, t => (5.0, 8.0, 10.0, true)).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Kyyhky);
+            int ps = pa.FindAll(x => Array.IndexOf(PalloSoundlyAanet.KyyhkySiivet, x.E.Tunnus) >= 0).Count;
+            Oleta.Tosi(pa.TrueForAll(x => x.E.Avain == 7) && ps > siivet * pa.Count / (double)au.Count, $"parvessa siivet useammin ({ps}/{pa.Count})");
+            Oleta.Sama(0, AjaLinnut(8, 80, t => null).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Kyyhky).Count, "kamera 80 m: ei kyyhkyjä");
+        }
+
+        [Testi] static void RaitiovaununKelloHarvoin()
+        {
+            // Raitiovaunu kulkee edestakaisin 40 m:n päässä; kello 1–3 min välein, vain alle 150 m.
+            var r = AjaLinnut(2, 20, t => null, t => (300 * Math.Sin(t / 60), 40.0), 3600).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Raitio);
+            Oleta.Tosi(r.Count >= 12 && r.Count <= 70, $"tunnissa {r.Count} raitiovaunun kelloa");
+            for (int i = 1; i < r.Count; i++) Oleta.Tosi(r[i].T - r[i - 1].T >= SoundlyAanet.RaitioValiMinS - 1e-6, "väli ≥ 1 min");
+            foreach (var (_, e) in r) Oleta.Tosi(e.Avain == 3 && e.EtaisyysM < SoundlyAanet.RaitioKelloM && Array.IndexOf(PalloSoundlyAanet.RaitioKello, e.Tunnus) >= 0, "näkyvässä raitiovaunussa, lähellä");
+            Oleta.Sama(0, AjaLinnut(2, 20, t => null, t => (400.0, 0.0), 1200).FindAll(x => x.E.Laji == SoundlyAanet.Laji.Raitio).Count, "400 m: ei kelloa");
+        }
+
+        [Testi] static void TorvetHarvoinJaIsoVesiPyoranKellot()
+        {
+            string json = "{\"kadut\":[{\"t\":\"tertiary\",\"p\":[[0,-50],[300,-50]]}],\"reitit\":[" +
+                "{\"tyyppi\":\"saaristolaiva\",\"kiertava\":false,\"p\":[[0,100,1],[20000,100,1]]},{\"tyyppi\":\"lautta\",\"kiertava\":false,\"p\":[[-100,0,1],[-900,0,1]]}]}";
+            var h = IhmisAanet.Lue(json, 4);
+            Oleta.Sama(2, h.IsoVesi.Count, "saaristolaivan reitin päät isoa vettä");
+            var torvet = new List<(double T, IhmisAanet.Tapahtuma E)>(); int soundlyKello = 0, kelloja = 0;
+            for (double t = 0; t < 4 * 3600; t += 0.5)
+            {
+                var e = h.Paivita(t, 0, 0, 50); if (e == null) continue;
+                if (Array.IndexOf(IhmisAanet.TorvetIso, e.Tunnus) >= 0) torvet.Add((t, e));
+                if (Array.IndexOf(IhmisAanet.PyoranKellot, e.Tunnus) >= 0) { kelloja++; if (Array.IndexOf(PalloSoundlyAanet.PyoraKello, e.Tunnus) >= 0) soundlyKello++; }
+            }
+            Oleta.Tosi(torvet.Count >= 6 && torvet.Count <= 24, $"4 h: {torvet.Count} torvea");
+            for (int i = 1; i < torvet.Count; i++) Oleta.Tosi(torvet[i].T - torvet[i - 1].T >= IhmisAanet.TorviValiMinS - 1e-6, "torvi ≥ 10 min välein");
+            foreach (var (_, e) in torvet)
+                if (Array.IndexOf(PalloSoundlyAanet.TorviIso, e.Tunnus) >= 0) Oleta.Tosi(e.Z == 100, "torvet 01–02 vain isolla vedellä");
+            Oleta.Tosi(torvet.Exists(x => Array.IndexOf(PalloSoundlyAanet.TorviIso, x.E.Tunnus) >= 0), "iso torvi kuuluu");
+            Oleta.Tosi(soundlyKello > 0 && soundlyKello < kelloja, $"pyörän kellot sekaisin ({soundlyKello}/{kelloja} Soundly)");
+            var s = IhmisAanet.Lue(json, 4); s.Saatavilla = t => !t.StartsWith(PalloSoundlyAanet.Etuliite) && !t.StartsWith("pyora-");
+            for (double t = 0; t < 3600; t += 0.5) { var e = s.Paivita(t, 0, 0, 50); if (e != null) Oleta.Tosi(!e.Tunnus.StartsWith(PalloSoundlyAanet.Etuliite) && !e.Tunnus.StartsWith("pyora-"), "lataamaton suodatetaan: " + e.Tunnus); }
+        }
+
+        [Testi] static void SoundlyDeterministinen()
+        {
+            string Kulku(int siemen)
+            {
+                var sb = new System.Text.StringBuilder();
+                foreach (var (t, e) in AjaLinnut(siemen, 15, x => (60 * Math.Cos(x / 20), 25, 60 * Math.Sin(x / 20), (int)(x / 300) % 2 == 0), x => (200 * Math.Sin(x / 40), 30.0), 1200))
+                    sb.Append($"{t:F1}:{e.Tunnus}@{e.Avain}:{e.Taso:F4};");
+                return sb.ToString();
+            }
+            string a = Kulku(31), b = Kulku(31), c = Kulku(32);
+            Oleta.Tosi(a.Length > 200 && a == b && a != c, "sama siemen → sama kulku, eri siemen → eri");
         }
     }
 }

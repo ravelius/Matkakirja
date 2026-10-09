@@ -20,6 +20,10 @@
 // maitovaahdotin 3D-poolista (nyt 8 lähdettä) OSM-pisteissä, suihkulähteet ja satamat (laiturit, satama-vesi) 3D-silmukoina, kahvila-, tori- ja hallitaustat 2D-stereona,
 // vene-ohi pienissä veneissä (Ydin Ohiajot vesi). Paikallinen kello kuten KaupunkiKuva (opas tunti pakottaa). Diagnoosi
 // `opas kaupunkiaanet tila`, kuuntelu `opas kaupunkiaanet kello|maito`.
+// SOUNDLY-ERÄ 1 (juna 173; Ydin SoundlyAanet, PalloSoundlyAanet): lokkien huudot näkyvissä lokkiparvissa (muuten laitureilla) ja
+// lokki-parvi hiljaisena 2D-taustana matalalla veden äärellä, kyyhkyt aukioilla ja kyyhkyparvissa, raitiovaunun kello näkyvissä
+// raitiovaunuissa, tuntilyönnit lähimmästä kirkosta (OmatLyonnit: KaupunkiAanimaisemaSoittimen 2D-lyönnit pois). Kun uudet klipit on
+// ladattu, vanha lokkiparven silmukka ja kyyhkyjen 2D-siivet (elava-kaupunki-v1) vaikenevat, ettei samaa lintua kuulu kahdesti.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit;
@@ -126,6 +130,8 @@ namespace Matkakirja.Natiivi
                 }
             }
             if (l != null) e2.veneOhi = new Ohiajot(siemen + 4, true);
+            if (e2.ihmiset != null) e2.ihmiset.Saatavilla = ElavaAaniPankki.Ladattu;
+            e2.soundly = new SoundlyAanet(siemen + 5, e2.kaupunkiAanet?.Laiturit, e2.kaupunkiAanet?.Aukiot);
             e2.taso = taso; e2.varaTuuliAst = siemen % 360;   // savu ja liput samaan suuntaan kuin muut pallot, kun LIVE-säätä ei ole
             if (kj != null && (kj.Contains("\"piiput\"") || kj.Contains("\"liput\"")))
             {
@@ -588,12 +594,13 @@ namespace Matkakirja.Natiivi
             var mk = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;   // TF 169: kaikki pallon äänet mikserin ryhmiin; 9.10. äänikohtaisesti
             float lokkiK = mk.Kerroin("maisema", LokitId), kyyhkyK = mk.Kerroin("maisema", KyyhkytId), koneK = mk.Kerroin("maisema", LentokoneId);
             float lokkiOsuus = Mathf.Clamp01(1f - lokkiD / LokkiKuuluuM);
-            float lokkiTavoite = paalla && lokkiKlippi != null ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) * lokkiK : 0f;
+            bool uudetLinnut = ElavaAaniPankki.Ladattu(PalloSoundlyAanet.LokkiParvi);   // Soundly-erä: vanha silmukka ja 2D-siivet pois
+            float lokkiTavoite = paalla && lokkiKlippi != null && !uudetLinnut ? (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Maisema(LokkiTaso * lokkiOsuus * lokkiOsuus, vaisto) * lokkiK : 0f;
             if (lokkiTavoite > 0.001f && !lokkiLahde.isPlaying) { lokkiLahde.clip = lokkiKlippi; lokkiLahde.Play(); }
             lokkiLahde.volume = (float)Matkakirja.Linssit.Aanet.OpasAanitasot.Liuku(lokkiLahde.volume, lokkiTavoite, Time.unscaledDeltaTime);
             if (lokkiLahde.isPlaying && lokkiLahde.volume < 0.0005f && lokkiTavoite <= 0) lokkiLahde.Stop();
             float tu = Time.unscaledTime;
-            if (paalla && kyyhkyD < KyyhkyKuuluuM && tu > seuraavaKyyhky && kyyhky2Klippi != null)
+            if (paalla && kyyhkyD < KyyhkyKuuluuM && tu > seuraavaKyyhky && kyyhky2Klippi != null && !ElavaAaniPankki.Ladattu(PalloSoundlyAanet.KyyhkySiivet[0]))
             {
                 seuraavaKyyhky = tu + UnityEngine.Random.Range(15f, 35f);
                 var klippi = kyyhky1Klippi != null && UnityEngine.Random.value < 0.3f ? kyyhky1Klippi : kyyhky2Klippi;
@@ -619,7 +626,7 @@ namespace Matkakirja.Natiivi
         {
             ElavaAaniPankki.Kaynnista();
             bool paalla = Matkakirja.Natiivi.Asetukset.Paalla(Matkakirja.Natiivi.Kytkin.Aanimaisema) && OpasSovitin.Auki, vaisto = OpasSovitin.OpasAaniSoi;
-            pooli ??= new ElavaAaniPooli(transform, 8);   // juna 173: kirkonkellot (8 s), vene-ohi (9 s) ja maitovaahdotin lisää
+            pooli ??= new ElavaAaniPooli(transform, 12);   // juna 173: kirkonkellot (8 s), vene-ohi (9 s), maitovaahdotin, tuntilyönnit päällekkäin (9 s), linnut
             pooli.Paivita(paalla, vaisto);
             // Kameran nopeus paketin ENU:ssa (suhteellinen liike ohiajoille); hyppy (siirtymä, origo) ei ole nopeutta.
             Vector3 kv = edKameraOn && dt > 1e-4f ? (c - edKamera) / dt : Vector3.zero;
@@ -644,7 +651,7 @@ namespace Matkakirja.Natiivi
                 if (p != null && paalla) pooli.Soita(p.Tunnus, (float)p.Taso, 1f, palloT[p.Pallo].localPosition, palloT[p.Pallo], vaisto);
             }
             // Kameran korkeus omasta maasta (puolen sekunnin välein; NaN, kunnes korkeusmalli on muistissa → ei ihmis- eikä kaupunkiääniä).
-            if ((ihmiset != null || kaupunkiAanet != null) && Time.unscaledTime - korkeusHaettu > 0.5f) { korkeusHaettu = Time.unscaledTime; double m = Maa(c.x, c.z); kameraKorkeus = double.IsNaN(m) ? double.NaN : c.y - m; }
+            if ((ihmiset != null || kaupunkiAanet != null || soundly != null) && Time.unscaledTime - korkeusHaettu > 0.5f) { korkeusHaettu = Time.unscaledTime; double m = Maa(c.x, c.z); kameraKorkeus = double.IsNaN(m) ? double.NaN : c.y - m; }
             if (ihmiset != null)
             {
                 var t = ihmiset.Paivita(nyt, c.x, c.z, kameraKorkeus);
@@ -698,6 +705,7 @@ namespace Matkakirja.Natiivi
                 var o = veneOhi.Valitse(pooli.Soi(veneKahva));
                 if (o != null && paalla) { var tt = veneet[o.Avain].T; veneKahva = pooli.Soita(o.Tunnus, (float)o.Taso, 1f, tt.localPosition, tt, vaisto); }
             }
+            PaivitaSoundly(c, nyt, dt, paalla, vaisto);
             if (kaupunkiAanet == null) return;
             float pakko = KaupunkiKuva.TuntiNyt;   // paikallinen kello kuten valaistus (opas tunti pakottaa)
             double tunti = pakko >= 0 ? pakko : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon0);
@@ -708,7 +716,7 @@ namespace Matkakirja.Natiivi
                 {
                     double m = Maa(k.X, k.Z); if (double.IsNaN(m)) m = maaKamera;
                     pooli.Soita(k.Tunnus, (float)k.Taso, 1f, new Vector3((float)k.X, (float)(m + k.Y), (float)k.Z), null, vaisto);
-                    if (k.Tunnus != PalloKaupunkiAanet.Maitovaahdotin) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {k.Tunnus}{(k.Tasatunti ? " (tasatunti)" : "")} {k.EtaisyysM:F0} m, taso {k.Taso:F2}");
+                    if (k.Tunnus != PalloKaupunkiAanet.Maitovaahdotin && k.Lyonti <= 1) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {k.Tunnus}{(k.Lyonti == 1 ? " (tuntilyönnit)" : k.Tasatunti ? " (tasatunti)" : "")} {k.EtaisyysM:F0} m, taso {k.Taso:F2}");
                 }
             // Suihkulähteet ja satamat: 3D-silmukka pisteessä; Ydin häivyttää valinnan vaihtuessa, poistuva soi nollaan ennen kierrätystä.
             float nosto = kaupunki != null && kaupunki.Vesi?.Juuri != null ? KaupunkiVesi.NostoM : VesiNostoM;
@@ -759,6 +767,33 @@ namespace Matkakirja.Natiivi
             foreach (int p in suihkuPois) { var sl = silmukat[p]; sl.Hiljaa(); vapaatSuihkut[sl.Tunnus].Push(sl); silmukat.Remove(p); }
         }
 
+        // ---- SOUNDLY-ERÄ 1 (juna 173): linnut ja raitiovaunun kello ----
+        SoundlyAanet soundly; ElavaSilmukka lokkiParviSilmukka;
+
+        /// <summary>Kaupunkiäänien omat tuntilyönnit käytössä (kirkot paketissa ja Soundly-kellot ladattu): soitin ei lyö omiaan.</summary>
+        public static bool OmatLyonnit => Nykyinen != null && Nykyinen.kaupunkiAanet != null && Nykyinen.kaupunkiAanet.Kirkot.Count > 0
+            && ElavaAaniPankki.Ladattu(PalloSoundlyAanet.Lyonnit[0]);
+
+        void PaivitaSoundly(Vector3 c, double nyt, float dt, bool paalla, bool vaisto)
+        {
+            if (soundly == null) return;
+            soundly.Aloita(nyt, c.x, c.y, c.z, kameraKorkeus);
+            for (int i = 0; i < parvet.Count; i++)
+                if (parvet[i].Juuri.activeSelf && parvet[i].Lokit.Length > 0) { var p = parvet[i].Lokit[0].localPosition; soundly.Parvi(i, p.x, p.y, p.z, parvet[i].Paikka.Kyyhky); }
+            for (int i = 0; i < raitioT.Count; i++)
+                if (raitioT[i].gameObject.activeSelf) { var p = raitioT[i].localPosition; soundly.Raitio(i, p.x, p.y, p.z); }
+            soundly.Valitse(dt);
+            if (paalla)
+                foreach (var t in soundly.Kerrat)
+                {
+                    Transform seuraa = t.Avain < 0 ? null : t.Laji == SoundlyAanet.Laji.Raitio ? raitioT[t.Avain] : parvet[t.Avain].Lokit[0];
+                    pooli.Soita(t.Tunnus, (float)t.Taso, 1f, new Vector3((float)t.X, (float)t.Y, (float)t.Z), seuraa, vaisto);
+                }
+            lokkiParviSilmukka ??= new ElavaSilmukka(transform, PalloSoundlyAanet.LokkiParvi, false);
+            float lt = paalla ? (float)OpasAanitasot.Maisema(soundly.LokkiParvi, vaisto) * ElavaAaniPankki.Kerroin(PalloSoundlyAanet.LokkiParvi) : 0f;
+            lokkiParviSilmukka.Paivita(lt, Time.unscaledDeltaTime, paalla ? KaupunkiLiukuS : (float)PalloElavaAanet.SilmukkaHaivytysS);
+        }
+
         /// <summary>Diagnoosi (`opas kaupunkiaanet tila`): Ytimen tila, manifestit ja soivat kaupunkisilmukat.</summary>
         public static string KaupunkiAanetTila()
         {
@@ -768,7 +803,8 @@ namespace Matkakirja.Natiivi
             if (n?.taustaSilmukat != null) foreach (var t in n.taustaSilmukat) if (t.Taso > 0.001f) soi.Add($"{t.Tunnus} {t.Taso:F3}");
             if (n != null) foreach (var s in n.suihkuSilmukat.Values) if (s.Taso > 0.001f) soi.Add($"{s.Tunnus} {s.Taso:F3}");
             if (n != null) foreach (var s in n.satamaSilmukat.Values) if (s.Taso > 0.001f) soi.Add($"{s.Tunnus} {s.Taso:F3}");
-            return $"{ydin}; soi [{string.Join(", ", soi)}]; vene-ohi {(n?.veneOhi != null ? $"{n.veneet.FindAll(v => v.Pieni).Count} pientä venettä" : "-")}; {ElavaAaniPankki.Tila()}";
+            if (n?.lokkiParviSilmukka != null && n.lokkiParviSilmukka.Taso > 0.001f) soi.Add($"{PalloSoundlyAanet.LokkiParvi} {n.lokkiParviSilmukka.Taso:F3}");
+            return $"{ydin}; {n?.soundly?.Tila() ?? "linnut -"}; omat lyönnit {(OmatLyonnit ? "kyllä" : "ei")}; soi [{string.Join(", ", soi)}]; vene-ohi {(n?.veneOhi != null ? $"{n.veneet.FindAll(v => v.Pieni).Count} pientä venettä" : "-")}; {ElavaAaniPankki.Tila()}";
         }
 
         /// <summary>Kuuntelu: seuraava kirkonkello tai maitovaahdotin heti, kun ehdot täyttyvät (kamera matalalla, kirkko/café lähellä).</summary>
