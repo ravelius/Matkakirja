@@ -160,10 +160,12 @@ namespace Matkakirja.Natiivi
             var p = pilleri?.Invoke();
             var juuri = Paneeli.parent;
             if (p == null || juuri == null || float.IsNaN(p.worldBound.x)) return;
-            // Vasen reuna pillerin kohdalla, kokonaan ruudulla (web asemoiLaukku, VARA 8).
-            float leveys = Mathf.Min(520f, juuri.resolvedStyle.width - 16f);
+            // Vasen reuna pillerin kohdalla, kokonaan ruudulla (web asemoiLaukku, VARA 8) ja sivujen turva-alueella (asettelutesti
+            // 10.10.2026: iPhone vaaka, sisältö x 40 Dynamic Islandin puolella; muualla reunat 0).
+            var r = UiKerros.Hae().Reunat(UiKerros.Valikot);
+            float leveys = Mathf.Min(520f, juuri.resolvedStyle.width - 16f - r.x - r.z);
             float vasen = juuri.WorldToLocal(p.worldBound.position).x;
-            vasen = Mathf.Clamp(vasen, 8f, Mathf.Max(8f, juuri.resolvedStyle.width - leveys - 8f));
+            vasen = Mathf.Clamp(vasen, 8f + r.x, Mathf.Max(8f + r.x, juuri.resolvedStyle.width - leveys - 8f - r.z));
             Paneeli.style.right = StyleKeyword.Auto;
             Paneeli.style.left = vasen;
             Paneeli.style.width = leveys;
