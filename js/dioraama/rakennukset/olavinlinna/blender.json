@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "dce1939b72af62b9",
-  "kansio": "dioraama/olavinlinna/blender/dce1939b72af62b9/",
+  "hash": "c1d088353c667fb6",
+  "kansio": "dioraama/olavinlinna/blender/c1d088353c667fb6/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1355,7 +1355,7 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "f86d8c027a1173b9ca769d52f6c02ac217828c3db2dce3021ee5adeca2c782e4",
+      "sha256": "d4126f10fd17a68c6fabb98c73bb6d39b7eda9f673521a13b93aa95fe5352a1e",
       "tavuja": 30975
     },
     {
@@ -1455,8 +1455,8 @@
     },
     {
       "polku": "kavely/ranta-1499.glb",
-      "sha256": "c79768fb4e272cb081549774eefd9ce6eaece15f40b9e2c1b36b82fc324f1065",
-      "tavuja": 1131964
+      "sha256": "50de796e869d0a58b01e9b88dc7fdeb925ef0f9097318862860660288031f29c",
+      "tavuja": 1132120
     },
     {
       "polku": "kavely/rekvisiitta-Barrel_01-normaali-6x6.astcm",
@@ -2330,23 +2330,23 @@
     },
     {
       "polku": "kavely/valot/ranta-1499-4x4.astcm",
-      "sha256": "54005ee20df6eff1aa8e0cc10062098666c8cf6788f0d4aa0bf0f4597af9f770",
+      "sha256": "2f43543dbadd7666076e6905f1cf2030611e09fd19203578e5f44a46c1312db9",
       "tavuja": 1398144
     },
     {
       "polku": "kavely/valot/ranta-1499-512-4x4.astcm",
-      "sha256": "c9228a93a14b9fb6cde6eebaec891437da79aff8cc34a266fe9f69028dd90943",
+      "sha256": "7e17f307e078493549c081ea73181ff11a11e3ed059af283406a2578dcbb14c3",
       "tavuja": 349568
     },
     {
       "polku": "kavely/valot/ranta-1499-512.jpg",
-      "sha256": "df769620e1b31c788e71ff984dbddec981d272a3e6326e56e665a42fa8c7860b",
-      "tavuja": 141639
+      "sha256": "53066e2be28d87030430ee260bf5168ef7bb4972fe0930c7e06564a49c32470f",
+      "tavuja": 112412
     },
     {
       "polku": "kavely/valot/ranta-1499.jpg",
-      "sha256": "b6473b51d9e74d15a2357e9d2ab70209bb890a2a572867acd7f0919e1be7b328",
-      "tavuja": 513241
+      "sha256": "304c897bfe56699190f1bac23c3f067395e2ce389f54e5d322a62e363f0a905d",
+      "tavuja": 406006
     },
     {
       "polku": "kavely/valot/tyrma-E101-4x4.astcm",
