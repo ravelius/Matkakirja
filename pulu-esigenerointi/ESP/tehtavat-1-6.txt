@@ -1,0 +1,209 @@
+================ KOHTA 26 (kohde:hahmotelma-roncesvalles) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mali — maalehti / Historia: Pyhiinvaellus, joka painoi kullan hinnan alas] 1324 — Mansa Musa lähti 1324 pyhiinvaellukselle Mekkaan ja pysähtyi matkalla Kairoon kolmeksi kuukaudeksi. Arabiankieliset kronikat kertovat saattueesta, jossa kulki tuhansia ihmisiä — suuri osa heistä orjia — ja kymmeniä kultaa kantavia kameleita; nykyhistorian tutkijat pitävät lukuja pikemmin kertomataiteena kuin laskelmana. Yhdestä asiasta lähteet ovat yhtä mieltä: Musa jakoi kultaa niin auliisti, että sen arvo laski Egyptissä vuosiksi. Paluumatkalla rahat loppuivat ja mansan oli lainattava kairolaisilta kauppiailta. Mukaan Maliin lähti oppineita, ja Timbuktu merkittiin eurooppalaisiin karttoihin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Pyhiinvaellus, joka toi kultaa Kairoon] Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.
+
+### 26.1
+KYSYMYS: Kuka Roland oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: MuCEM] 2013 MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo avattiin vuonna 2013, samana vuonna kun Marseille oli Euroopan kulttuuripääkaupunki. Se seisoo aivan meren rannalla Vanhansataman suulla. Rakennus on harmaa kivikuutio, jota ympäröi musta, pitsimäinen betoniverkko — se muistuttaa hieman kalaverkkoa tai koralliriuttaa. 130 metriä pitkä silta yhdistää museon vieressä kohoavaan vanhaan Saint-Jeanin linnaan. Museossa kerrotaan Euroopan ja Välimeren kansojen historiasta muinaisajasta nykypäivään. Jo kolmen ensimmäisen vuoden aikana museossa kävi 8,5 miljoonaa vierailijaa. "Rakensimme sen kivestä, vedestä ja tuulesta." — Arkkitehdit Rudy Ricciotti ja Roland Carta kuvailivat näin MuCEMia
+- [Ranska — maalehti / Urheilu: Tenniskisa on nimetty lentäjän mukaan] 1928 — Roland Garros ei ollut tennispelaaja vaan lentäjä: hän lensi ensimmäisenä yksin Välimeren yli ja kuoli ensimmäisessä maailmansodassa. Kun Pariisiin rakennettiin 1928 stadion Davis Cupia varten, se nimettiin hänen mukaansa, ja samaa nimeä kantaa yhä Ranskan avoin tennisturnaus. Kentän kuuluisa punainen pinta ei ole savea vaan kalkkikiveä, jonka päälle on jyrätty muutaman millimetrin kerros jauhettua tiiltä ja kasteltu se vedellä. Otteluiden välissä pintaa tasoitetaan raahaamalla sen yli ketjumattoa.
+
+### 26.2
+KYSYMYS: Miksi pyhiinvaellus alkaa täältä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roncesvalles (historia)
+Tietoruudun teksti: Roncesvalles on pieni kylä Navarrassa Pohjois-Espanjassa, Pyreneillä noin 900 metrin korkeudessa ja linnuntietä neljän kilometrin päässä Ranskan rajasta. Se tunnetaan historiassa ja legendassa Rolandin kuolemasta vuonna 778, kun baskiheimot tuhosivat Kaarle Suuren jälkijoukon. Santa María de Roncesvallesin kollegiaattikirkko, entinen pyhiinvaeltajien hospitaali, rakennettiin 1100-luvun lopulla ja 1200-luvun alussa, ja vanhin rakennus on romaaninen Sancti Spiritus -kappeli eli Kaarle Suuren siilo. Joka vuosi tuhannet pyhiinvaeltajat aloittavat täältä tiensä Santiago de Compostelaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mali — maalehti / Historia: Pyhiinvaellus, joka painoi kullan hinnan alas] 1324 — Mansa Musa lähti 1324 pyhiinvaellukselle Mekkaan ja pysähtyi matkalla Kairoon kolmeksi kuukaudeksi. Arabiankieliset kronikat kertovat saattueesta, jossa kulki tuhansia ihmisiä — suuri osa heistä orjia — ja kymmeniä kultaa kantavia kameleita; nykyhistorian tutkijat pitävät lukuja pikemmin kertomataiteena kuin laskelmana. Yhdestä asiasta lähteet ovat yhtä mieltä: Musa jakoi kultaa niin auliisti, että sen arvo laski Egyptissä vuosiksi. Paluumatkalla rahat loppuivat ja mansan oli lainattava kairolaisilta kauppiailta. Mukaan Maliin lähti oppineita, ja Timbuktu merkittiin eurooppalaisiin karttoihin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Pyhiinvaellus, joka toi kultaa Kairoon] Vuosina 1497-1498 Askia Muhammad teki pyhiinvaelluksen Mekkaan mukanaan huikeat 300 000 kultarahaa ja saattueena 500 ratsumiestä sekä 1000 jalkaväen sotilasta. Matka kulki tuhansien kilometrien halki Saharan hiekkadyynejä ja kuivia tasankoja, samanlaista maisemaa kuin Gaon liepeillä yhä näkee. Matkalla hän tapasi Kairon kalifin, joka nimitti hänet koko Länsi-Sudanin islamilaisen alueen käskynhaltijaksi. Paluumatkalla Askia toi mukanaan myös oppineita miehiä, jotka asettuivat opettamaan Timbuktun Sankore-moskeijaan ja tekivät kaupungista islamilaisen oppineisuuden keskuksen koko Länsi-Afrikassa.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-numancia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+### 27.1
+KYSYMYS: Kuinka monta asukasta Numanciassa oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+### 27.2
+KYSYMYS: Kuka Scipio Aemilianus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Numancia (historia)
+Tietoruudun teksti: Numancia oli keltiberialainen asutus, jonka rauniot ovat Cerro de la Muela -kukkulalla Garrayn kunnassa Sorian maakunnassa. Se tunnetaan keltiberisodista: ensimmäinen vakava yhteenotto Rooman kanssa oli vuonna 153 eaa., ja vuonna 133 eaa. Rooman senaatti antoi Scipio Aemilianus Africanukselle tehtäväksi tuhota kaupunki. Scipio rakensi sen ympärille yhdeksän kilometrin saartomuurin torneineen ja vallihautoineen. Kahdeksan kuukauden jälkeen suurin osa asukkaista päätti kuolla mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden piirityksen jälkeen.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-trujillo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+
+### 28.1
+KYSYMYS: Kuka Francisco Pizarro oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+- [Lima — kaupunkilehti / Lima: Loppiaisen kaupunki] Francisco Pizarro valitsi kaupungin paikan Rímac-joen laaksosta ja perusti sen 6. tammikuuta 1535. Päivä oli loppiainen, ja siitä tuli nimi Ciudad de los Reyes, Kuninkaiden kaupunki. Pizarro mittasi Plaza Mayorin ja koko ruutukaavan itse kolmen avustajansa kanssa ja laski omin käsin tuomiokirkon peruskiven. Virallinen nimi jäi asiakirjoihin, mutta arkikielessä kaupunkia sanottiin pian Limaksi – nimi juontuu joko ketšuan sanasta limaq, "puhuja", joka oli laakson oraakkelin nimi, tai aimaran sanoista lima-limaq, "keltainen kukka". Ruutukaava rakennettiin paikallisen kuraakan Taulichuscon maille.
+
+### 28.2
+KYSYMYS: Mikä Plaza Mayor on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trujillo (historia)
+Tietoruudun teksti: Trujillo on kunta Cáceresin maakunnassa Extremaduran alueella. Se syntyi alun perin helposti linnoitettavalle graniittikukkulalle, ja sen vanhassa kaupungissa on paljon keskiaikaisia ja renessanssin rakennuksia. Roomalaisaikana paikka tunnettiin nimellä Turgalium. Kaupunki vallattiin lopullisesti takaisin muslimeilta 25. tammikuuta 1232, ja legendan mukaan kristityt saivat taistelussa rohkeutta nähtyään Neitsyt Marian linnan tornien välissä. Plaza Mayorilla on ratsastajapatsas conquistador Francisco Pizarrosta, joka oli Trujillon poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Plaza Mayor] 1619 Espanjan kuningas halusi kaupungille kunnon aukion toreja ja juhlia varten. Nykyinen Plaza Mayor valmistui 1619 arkkitehti Juan Gómez de Moran suunnitelmien mukaan. Se on 129 metriä pitkä ja 94 metriä leveä, ja sitä ympäröivissä taloissa on peräti 237 parveketta, joilta väki katseli aikoinaan tapahtumia alhaalla. Aukiolla nähtiin myös synkempiä hetkiä: kesäkuussa 1680 inkvisitio tuomitsi siellä 117 ihmistä, ja 21 heistä poltettiin roviolla. Aukio itsekin paloi kolmesti, pahiten vuonna 1790. Keskellä ratsastaa pronssinen kuningas Filip III, valettu jo 1616 mutta nostettu paikalleen vasta 1848. Nykyään aukiolla pidetään joulutoria ja viikonloppuisin postimerkki- ja kolikkomarkkinoita.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-el-escorial) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Sevilla: Tehdas, jossa vauvat nukkuivat työpöytien vieressä] Kuninkaallisen tupakkatehtaan rakentaminen alkoi 1728 kaupunginmuurien ulkopuolella vanhalla roomalaisella hautausmaalla, ja työ eteni katkoen kolme vuosikymmentä. Valmis rakennus mittasi 185 kertaa 147 metriä ja oli Espanjan toiseksi suurin heti El Escorialin jälkeen. Sikareita tekivät ensin pelkät miehet, mutta vuoden 1811 sulkemisen jälkeen työ siirtyi naisille, ja 1880-luvun huipussaan tehtaassa työskenteli noin 6 000 naista. Keksijä Hiram Maxim kertoi muistelmissaan, että noin kolmasosalla nuorista työntekijöistä oli vauva hoidettavanaan kesken työpäivän.
+
+### 29.1
+KYSYMYS: Miksi Filip II rakennutti El Escorialin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Sevilla: Tehdas, jossa vauvat nukkuivat työpöytien vieressä] Kuninkaallisen tupakkatehtaan rakentaminen alkoi 1728 kaupunginmuurien ulkopuolella vanhalla roomalaisella hautausmaalla, ja työ eteni katkoen kolme vuosikymmentä. Valmis rakennus mittasi 185 kertaa 147 metriä ja oli Espanjan toiseksi suurin heti El Escorialin jälkeen. Sikareita tekivät ensin pelkät miehet, mutta vuoden 1811 sulkemisen jälkeen työ siirtyi naisille, ja 1880-luvun huipussaan tehtaassa työskenteli noin 6 000 naista. Keksijä Hiram Maxim kertoi muistelmissaan, että noin kolmasosalla nuorista työntekijöistä oli vauva hoidettavanaan kesken työpäivän.
+
+### 29.2
+KYSYMYS: Mitä kaikkea El Escorialissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: El Escorial (historia)
+Tietoruudun teksti: San Lorenzo de El Escorialin kuninkaallinen paikka on Espanjan kuninkaan historiallinen residenssi noin 45 kilometriä Madridista luoteeseen. Filip II:n käskystä vuosina 1563–1584 rakennettu El Escorial on maailman suurin renessanssirakennus. Se on samalla luostari, basilika, palatsi, hautakammio, kirjasto, museo, yliopisto, koulu ja sairaala. Kompleksiin kuuluu myös noin viiden kilometrin päässä oleva La Granjilla de La Fresneda, kuninkaan metsästysmaja ja munkkien retriitti. Luostarin perustivat hieronymiittimunkit, ja nykyisin se on augustinolaisen ritarikunnan luostari.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-yuste) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Historia: Runoilija, joka luopui vallasta itse] 1906–2001 — Léopold Sédar Senghor syntyi Joalissa sereeriperheeseen ja opiskeli Pariisissa, jossa hän kehitti 1930-luvulla ystäviensä kanssa négritude-ajattelun: mustan kulttuurin omanarvontunnon, joka ei hae hyväksyntää Euroopalta. Hän oli runoilija ennen kaikkea muuta ja toimi Senegalin ensimmäisenä presidenttinä 1960–1980. Vuosikymmeniin mahtuu myös yksipuoluekausi ja pääministerin vangitseminen; oppositiopuolueet sallittiin uudelleen 1976. Senghor luopui vallasta itse 1980 ja luovutti sen seuraajalleen — harvinaista siihen aikaan. Hänet valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.
+
+### 30.1
+KYSYMYS: Miksi Kaarle V luopui vallasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Historia: Runoilija, joka luopui vallasta itse] 1906–2001 — Léopold Sédar Senghor syntyi Joalissa sereeriperheeseen ja opiskeli Pariisissa, jossa hän kehitti 1930-luvulla ystäviensä kanssa négritude-ajattelun: mustan kulttuurin omanarvontunnon, joka ei hae hyväksyntää Euroopalta. Hän oli runoilija ennen kaikkea muuta ja toimi Senegalin ensimmäisenä presidenttinä 1960–1980. Vuosikymmeniin mahtuu myös yksipuoluekausi ja pääministerin vangitseminen; oppositiopuolueet sallittiin uudelleen 1976. Senghor luopui vallasta itse 1980 ja luovutti sen seuraajalleen — harvinaista siihen aikaan. Hänet valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.
+
+### 30.2
+KYSYMYS: Mitä Yusten luostarille tapahtui vuonna 1809?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yusten luostari (historia)
+Tietoruudun teksti: Yusten luostari on Cuacos de Yusten kylässä Cáceresin maakunnassa Extremadurassa, ja hieronymiittimunkit perustivat sen vuonna 1402. Vuonna 1556 keisari Kaarle V luopui Espanjan kruunusta poikansa Filip II:n hyväksi ja keisarikruunusta veljensä Ferdinand I:n hyväksi. Hän vetäytyi tähän syrjäiseen luostariin rukoilemaan, vaikka rakennusta piti laajentaa 50–60 hengen seurueelle. Kaarle kuoli siellä 21. syyskuuta 1558. Ranskalaisten joukot polttivat luostarin vuonna 1809, ja rauniona se oli vuoteen 1949, jolloin Espanjan valtio kunnosti sen.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

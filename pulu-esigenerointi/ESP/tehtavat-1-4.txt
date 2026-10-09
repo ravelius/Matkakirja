@@ -1,0 +1,210 @@
+================ KOHTA 16 (kohde:hahmotelma-buen-retiro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palacio del Buen Retiro (historia)
+Tietoruudun teksti: Buen Retiro oli Filip IV:lle 1630-luvulla rakennettu yli kahdenkymmenen rakennuksen palatsikokonaisuus. Napoleonin joukot vaurioittivat sitä vuonna 1808, minkä jälkeen suurin osa purettiin. Vain kaksi sivurakennusta säilyi.
+
+### 16.1
+KYSYMYS: Miltä Palacio del Buen Retiro näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palacio del Buen Retiro (historia)
+Tietoruudun teksti: Buen Retiro oli Filip IV:lle 1630-luvulla rakennettu yli kahdenkymmenen rakennuksen palatsikokonaisuus. Napoleonin joukot vaurioittivat sitä vuonna 1808, minkä jälkeen suurin osa purettiin. Vain kaksi sivurakennusta säilyi.
+
+### 16.2
+KYSYMYS: Miksi Palacio del Buen Retiro katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palacio del Buen Retiro (historia)
+Tietoruudun teksti: Buen Retiro oli Filip IV:lle 1630-luvulla rakennettu yli kahdenkymmenen rakennuksen palatsikokonaisuus. Napoleonin joukot vaurioittivat sitä vuonna 1808, minkä jälkeen suurin osa purettiin. Vain kaksi sivurakennusta säilyi.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-picos-de-europa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Picos de Europa (luonto · vuori)
+Tietoruudun teksti: Picos de Europa eli Euroopan huiput on noin 20 kilometriä pitkä vuoristo Kantabrian vuorten osana Pohjois-Espanjassa. Se ulottuu Asturian, Kantabrian ja Kastilia ja Leónin alueille, ja sen korkein huippu on 2 650 metriä korkea Torre de Cerredo. Lähes kaikki kallio on kalkkikiveä, jota jäätiköt ovat muovanneet karstimaisemaksi, ja 1,5 kilometriä syvä Caresin rotko erottaa keski- ja länsimassiivin toisistaan. Nimen tunnetuin selitys on, että vuoret olivat Amerikasta purjehtivien laivojen ensimmäinen näky Euroopasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Luonto: Sammunut vuori, jonka laella on oma metsänsä] 1570 — Mombacho on 1 344 metriä korkea kerrostulivuori Granadan kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä sitä aiemmista ole historiallista tietoa. Huippu on niin korkealla ja kostea, että siellä kasvaa sumumetsää ja kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta kuin tältä vuorelta. Rinteiltä on laskettu yli 700 kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma -polulle pääsee vain oppaan kanssa.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 17.1
+KYSYMYS: Miksi vuoria sanotaan Euroopan huipuiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Picos de Europa (luonto · vuori)
+Tietoruudun teksti: Picos de Europa eli Euroopan huiput on noin 20 kilometriä pitkä vuoristo Kantabrian vuorten osana Pohjois-Espanjassa. Se ulottuu Asturian, Kantabrian ja Kastilia ja Leónin alueille, ja sen korkein huippu on 2 650 metriä korkea Torre de Cerredo. Lähes kaikki kallio on kalkkikiveä, jota jäätiköt ovat muovanneet karstimaisemaksi, ja 1,5 kilometriä syvä Caresin rotko erottaa keski- ja länsimassiivin toisistaan. Nimen tunnetuin selitys on, että vuoret olivat Amerikasta purjehtivien laivojen ensimmäinen näky Euroopasta.
+
+### 17.2
+KYSYMYS: Mitä eläimiä vuorilla elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Picos de Europa (luonto · vuori)
+Tietoruudun teksti: Picos de Europa eli Euroopan huiput on noin 20 kilometriä pitkä vuoristo Kantabrian vuorten osana Pohjois-Espanjassa. Se ulottuu Asturian, Kantabrian ja Kastilia ja Leónin alueille, ja sen korkein huippu on 2 650 metriä korkea Torre de Cerredo. Lähes kaikki kallio on kalkkikiveä, jota jäätiköt ovat muovanneet karstimaisemaksi, ja 1,5 kilometriä syvä Caresin rotko erottaa keski- ja länsimassiivin toisistaan. Nimen tunnetuin selitys on, että vuoret olivat Amerikasta purjehtivien laivojen ensimmäinen näky Euroopasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Luonto: Sammunut vuori, jonka laella on oma metsänsä] 1570 — Mombacho on 1 344 metriä korkea kerrostulivuori Granadan kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä sitä aiemmista ole historiallista tietoa. Huippu on niin korkealla ja kostea, että siellä kasvaa sumumetsää ja kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta kuin tältä vuorelta. Rinteiltä on laskettu yli 700 kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma -polulle pääsee vain oppaan kanssa.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-cabo-de-finisterre) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Finisterren niemi (meri)
+Tietoruudun teksti: Finisterren niemi on kallioinen niemimaa Galician länsirannikolla. Roomalaisten aikaan sitä pidettiin tunnetun maailman äärenä, ja nimi tulee latinan sanoista finis terrae, maan pää. Joskus sitä sanotaan Iberian niemimaan läntisimmäksi pisteeksi, mutta Portugalin Cabo da Roca on noin 16,5 kilometriä ja Espanjan Cabo Touriñán runsaat sata metriä länsipuolempana. Niemellä kohoaa 238 metrin korkuinen Monte Facho, jonka laella on majakka, ja lähellä on Fisterran kalastajakaupunki. Antiikin aikaan seudulla asui keltteihin kuuluva artabrien heimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+- [Dubai — kohdekartta / Kohdekartta: Al Ahmadiyan koulu] 1912 Ennen kouluja lapset opiskelivat Dubaissa moskeijoiden yhteydessä. Vuonna 1912 helmikaupalla rikastunut Sheikh Ahmed Bin Dalmouk rakennutti Deiran Al Rasiin talon, joka oli tarkoitettu pelkkään opetukseen — se on Dubain vanhin tunnettu muodollinen oppilaitos. Perustaja ei ehtinyt nähdä työtään valmiina: hänen poikansa Mohammed viimeisteli rakennuksen ja antoi koululle isänsä nimen. Opettajiksi saatiin aikansa tunnetuimpia dubailaisia lakioppineita ja islamin tutkijoita, ja koulun penkeiltä nousi sukupolvi, joka myöhemmin rakensi emiraatin liike-elämän: oppilaina olivat muun muassa Easa Al-Gurg, Majid Al Futtaim ja Abdulla Al Ghurair. Talo säilyi, ja Dubain hallitus alkoi kunnostaa sitä…
+
+### 18.1
+KYSYMYS: Onko Finisterre todella Euroopan läntisin kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Finisterren niemi (meri)
+Tietoruudun teksti: Finisterren niemi on kallioinen niemimaa Galician länsirannikolla. Roomalaisten aikaan sitä pidettiin tunnetun maailman äärenä, ja nimi tulee latinan sanoista finis terrae, maan pää. Joskus sitä sanotaan Iberian niemimaan läntisimmäksi pisteeksi, mutta Portugalin Cabo da Roca on noin 16,5 kilometriä ja Espanjan Cabo Touriñán runsaat sata metriä länsipuolempana. Niemellä kohoaa 238 metrin korkuinen Monte Facho, jonka laella on majakka, ja lähellä on Fisterran kalastajakaupunki. Antiikin aikaan seudulla asui keltteihin kuuluva artabrien heimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+- [Dubai — kohdekartta / Kohdekartta: Al Ahmadiyan koulu] 1912 Ennen kouluja lapset opiskelivat Dubaissa moskeijoiden yhteydessä. Vuonna 1912 helmikaupalla rikastunut Sheikh Ahmed Bin Dalmouk rakennutti Deiran Al Rasiin talon, joka oli tarkoitettu pelkkään opetukseen — se on Dubain vanhin tunnettu muodollinen oppilaitos. Perustaja ei ehtinyt nähdä työtään valmiina: hänen poikansa Mohammed viimeisteli rakennuksen ja antoi koululle isänsä nimen. Opettajiksi saatiin aikansa tunnetuimpia dubailaisia lakioppineita ja islamin tutkijoita, ja koulun penkeiltä nousi sukupolvi, joka myöhemmin rakensi emiraatin liike-elämän: oppilaina olivat muun muassa Easa Al-Gurg, Majid Al Futtaim ja Abdulla Al Ghurair. Talo säilyi, ja Dubain hallitus alkoi kunnostaa sitä…
+
+### 18.2
+KYSYMYS: Mitä nimi Finisterre tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Finisterren niemi (meri)
+Tietoruudun teksti: Finisterren niemi on kallioinen niemimaa Galician länsirannikolla. Roomalaisten aikaan sitä pidettiin tunnetun maailman äärenä, ja nimi tulee latinan sanoista finis terrae, maan pää. Joskus sitä sanotaan Iberian niemimaan läntisimmäksi pisteeksi, mutta Portugalin Cabo da Roca on noin 16,5 kilometriä ja Espanjan Cabo Touriñán runsaat sata metriä länsipuolempana. Niemellä kohoaa 238 metrin korkuinen Monte Facho, jonka laella on majakka, ja lähellä on Fisterran kalastajakaupunki. Antiikin aikaan seudulla asui keltteihin kuuluva artabrien heimo.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-bardenas-reales) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardenas Reales (luonto · vuori)
+Tietoruudun teksti: Bardenas Reales on noin 42 000 hehtaarin puoliaavikko ja badlands-maisema Kaakkois-Navarrassa. Maaperä on savea, liitua ja hiekkakiveä, ja vesi ja tuuli ovat kuluttaneet siitä kanjoneita, ylätasanteita ja yksittäisiä kumpuja, joita kutsutaan cabezoiksi. Alueella ei ole taajamia, kasvillisuutta on niukasti ja monet purot ovat kuivillaan suurimman osan vuotta. Keskeinen Valkoinen Bardena on saanut nimensä pinnalla näkyvästä valkoisesta suolasta, jota kipsipitoinen maa tuottaa, ja kaakkoinen Musta Bardena on kasvillisuuden peittämä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Eliöstö ja maasto] Sahara vaikuttaa elottomalta, mutta hiekan alla ja kivikoiden seassa elää eliöitä, jotka ovat sopeutuneet äärimmäiseen kuivuuteen ja kuumuuteen. Maasto vaihtelee laakeista dyynimeristä suolajärviin ja tuulen kuluttamiin vuoriin.
+- [Siinai — kaupunkilehti / Maasto] Punaista graniittia, kallioon louhittuja kaivoksia ja koralliriuttoja saman niemimaan sisällä: Siinain maasto vaihtuu kahdessakymmenessä kilometrissä vuorilta meren pohjaan.
+
+### 19.1
+KYSYMYS: Miksi maasto on niin autio?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardenas Reales (luonto · vuori)
+Tietoruudun teksti: Bardenas Reales on noin 42 000 hehtaarin puoliaavikko ja badlands-maisema Kaakkois-Navarrassa. Maaperä on savea, liitua ja hiekkakiveä, ja vesi ja tuuli ovat kuluttaneet siitä kanjoneita, ylätasanteita ja yksittäisiä kumpuja, joita kutsutaan cabezoiksi. Alueella ei ole taajamia, kasvillisuutta on niukasti ja monet purot ovat kuivillaan suurimman osan vuotta. Keskeinen Valkoinen Bardena on saanut nimensä pinnalla näkyvästä valkoisesta suolasta, jota kipsipitoinen maa tuottaa, ja kaakkoinen Musta Bardena on kasvillisuuden peittämä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Eliöstö ja maasto] Sahara vaikuttaa elottomalta, mutta hiekan alla ja kivikoiden seassa elää eliöitä, jotka ovat sopeutuneet äärimmäiseen kuivuuteen ja kuumuuteen. Maasto vaihtelee laakeista dyynimeristä suolajärviin ja tuulen kuluttamiin vuoriin.
+- [Siinai — kaupunkilehti / Maasto] Punaista graniittia, kallioon louhittuja kaivoksia ja koralliriuttoja saman niemimaan sisällä: Siinain maasto vaihtuu kahdessakymmenessä kilometrissä vuorilta meren pohjaan.
+
+### 19.2
+KYSYMYS: Mistä Valkoinen Bardena on saanut nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardenas Reales (luonto · vuori)
+Tietoruudun teksti: Bardenas Reales on noin 42 000 hehtaarin puoliaavikko ja badlands-maisema Kaakkois-Navarrassa. Maaperä on savea, liitua ja hiekkakiveä, ja vesi ja tuuli ovat kuluttaneet siitä kanjoneita, ylätasanteita ja yksittäisiä kumpuja, joita kutsutaan cabezoiksi. Alueella ei ole taajamia, kasvillisuutta on niukasti ja monet purot ovat kuivillaan suurimman osan vuotta. Keskeinen Valkoinen Bardena on saanut nimensä pinnalla näkyvästä valkoisesta suolasta, jota kipsipitoinen maa tuottaa, ja kaakkoinen Musta Bardena on kasvillisuuden peittämä.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-tablas-de-daimiel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tablas de Daimiel (luonto · järvi)
+Tietoruudun teksti: Tablas de Daimiel on kosteikko La Manchan tasangolla Ciudad Realin maakunnassa, alueella joka on muuten enimmäkseen kuivaa. Noin 3 000 hehtaarin kansallispuisto on Espanjan viidestätoista kansallispuistosta pienin. Kosteikko kuuluu Ramsar-sopimuksen suojelukohteisiin, on Mancha Húmeda -biosfäärialueen ydin ja lintujen erityissuojelualue. Veden liikakäyttö on vahingoittanut kosteikkoa, ja suojelualuetta on laajentamassa ympäröiville kuivaviljelymaille, jotta sen tila paranisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+
+### 20.1
+KYSYMYS: Miksi kosteikko on vaarassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tablas de Daimiel (luonto · järvi)
+Tietoruudun teksti: Tablas de Daimiel on kosteikko La Manchan tasangolla Ciudad Realin maakunnassa, alueella joka on muuten enimmäkseen kuivaa. Noin 3 000 hehtaarin kansallispuisto on Espanjan viidestätoista kansallispuistosta pienin. Kosteikko kuuluu Ramsar-sopimuksen suojelukohteisiin, on Mancha Húmeda -biosfäärialueen ydin ja lintujen erityissuojelualue. Veden liikakäyttö on vahingoittanut kosteikkoa, ja suojelualuetta on laajentamassa ympäröiville kuivaviljelymaille, jotta sen tila paranisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Machu Picchu — kaupunkilehti / Machu Picchu: Maailmanperintöä ja miljoonajonoja] Peru julisti 325,92 neliökilometrin alueen Machu Picchun ympärillä historialliseksi pyhäkköalueeksi 1981, ja Unesco lisäsi sen maailmanperintöluetteloon 1983 kuvaillen sitä taiteen, kaupunkisuunnittelun ja tekniikan mestariteokseksi. Vuonna 2007 äänestyskampanja nosti Machu Picchun myös uusien maailmanihmeiden joukkoon. Suosio on kasvanut valtavaksi: kävijöitä on nykyään yli 1,5 miljoonaa vuodessa, ja päivittäistä kävijämäärää on jouduttu rajoittamaan – vuoden 2011 2 500 kävijän katosta on noustu 4 500:aan, ruuhka-aikoina jopa 5 600:aan. Unesco harkitsi 2017 paikan siirtämistä vaarassa olevien listalle, mutta päätti olla tekemättä niin.
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Kielen ja väen paluu] Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.
+
+### 20.2
+KYSYMYS: Mikä Ramsar-sopimus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tablas de Daimiel (luonto · järvi)
+Tietoruudun teksti: Tablas de Daimiel on kosteikko La Manchan tasangolla Ciudad Realin maakunnassa, alueella joka on muuten enimmäkseen kuivaa. Noin 3 000 hehtaarin kansallispuisto on Espanjan viidestätoista kansallispuistosta pienin. Kosteikko kuuluu Ramsar-sopimuksen suojelukohteisiin, on Mancha Húmeda -biosfäärialueen ydin ja lintujen erityissuojelualue. Veden liikakäyttö on vahingoittanut kosteikkoa, ja suojelualuetta on laajentamassa ympäröiville kuivaviljelymaille, jotta sen tila paranisi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Koko järvi katoaa kesäksi] Larnakan suolajärvi on suurin neljän järven ryhmästä kaupungin laidalla. Vettä siinä on vain myöhäisestä syksystä alkukesään: sadetta tulee vähän, ja haihdunta hoitaa loput. Enimmilläänkin syvyys on noin metri, ja 60 prosentilla pinta-alasta alle 30 senttimetriä. Kun vesi vetäytyy, suolapitoisuus nousee moninkertaiseksi mereen verrattuna, ja kesällä pohja on paljas. Koko ravintoketju lepää kahden lajin varassa: yksisoluinen viherlevä ja sitä syövä suolalehtijalkainen Artemia salina, joka on flamingojen pääruokaa. Linnut saapuvat marraskuussa Turkin ja Iranin pesimäalueilta ja viipyvät helmikuun loppuun; määrä vaihtelee parista tuhannesta yli kymmeneen tuhanteen. Alue on Ramsar-kosteikko ja …
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

@@ -1,0 +1,226 @@
+================ KOHTA 41 (kohde:hahmotelma-alcantaran-silta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kaupunkilehti / Historian hetki: East River 1883 — kuka tämän sillan rakensi?] 24.5.1883 — Kuka tämän sillan oikeastaan rakensi? Kysymys leijuu 24. toukokuuta 1883 avajaisten yllä, vaikka kukaan ei sano sitä ääneen. Suunnittelija John A. Roebling kuoli jalkavammaan jo 1869 ennen töiden alkua. Hänen poikansa Washington Roebling johti työtä, kunnes sukeltajantauti, joka syntyi kaivettaessa tornien perustuksia paineilmakaissoneissa, lamautti hänet 1870-luvun alussa; sen jälkeen hän seurasi työmaata kaukoputkella makuuhuoneestaan Columbia Heightsilta. Hänen vaimonsa Emily Warren Roebling opetteli lujuusopin ja köysikäyrien matematiikan, kuljetti ohjeet insinööreille ja vastasi viranomaisille yli kymmenen vuotta. Tänään hän ylittää sillan ensimmäisenä vaunuissa, ja preside…
+- [Brisbane — kaupunkilehti / Historia: Tulva, joka vei sillan mukanaan] Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan tilalle järjestettiin väliaikainen lauttayhteys, mutta se päättyi onnettomuuteen kolme vuotta myöhemmin, kun Pearl-lautta kaatui helmikuussa 1896; arviolta puolet kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, ja jokainen niistä on muuttanut sitä, miten Brisbane varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle rakennettiin Wivenhoen pato.
+
+### 41.1
+KYSYMYS: Kuka rakennutti sillan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kaupunkilehti / Historian hetki: East River 1883 — kuka tämän sillan rakensi?] 24.5.1883 — Kuka tämän sillan oikeastaan rakensi? Kysymys leijuu 24. toukokuuta 1883 avajaisten yllä, vaikka kukaan ei sano sitä ääneen. Suunnittelija John A. Roebling kuoli jalkavammaan jo 1869 ennen töiden alkua. Hänen poikansa Washington Roebling johti työtä, kunnes sukeltajantauti, joka syntyi kaivettaessa tornien perustuksia paineilmakaissoneissa, lamautti hänet 1870-luvun alussa; sen jälkeen hän seurasi työmaata kaukoputkella makuuhuoneestaan Columbia Heightsilta. Hänen vaimonsa Emily Warren Roebling opetteli lujuusopin ja köysikäyrien matematiikan, kuljetti ohjeet insinööreille ja vastasi viranomaisille yli kymmenen vuotta. Tänään hän ylittää sillan ensimmäisenä vaunuissa, ja preside…
+- [Brisbane — kaupunkilehti / Historia: Tulva, joka vei sillan mukanaan] Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan tilalle järjestettiin väliaikainen lauttayhteys, mutta se päättyi onnettomuuteen kolme vuotta myöhemmin, kun Pearl-lautta kaatui helmikuussa 1896; arviolta puolet kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, ja jokainen niistä on muuttanut sitä, miten Brisbane varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle rakennettiin Wivenhoen pato.
+
+### 41.2
+KYSYMYS: Miksi siltaa on räjäytetty monta kertaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alcántaran silta (tekniikka)
+Tietoruudun teksti: Alcántaran silta on roomalainen kivikaarisilta Extremaduran Alcántarassa, ja se rakennettiin Tejo-joen yli vuosina 104–106 keisari Trajanuksen määräyksestä. Alcántara tulee arabian sanasta al-Qanṭarah, kaari. Silta on kärsinyt sodista enemmän kuin säästä: maurit tuhosivat yhden pienimmistä kaarista vuonna 1214, espanjalaiset räjäyttivät yhden kaaren vuonna 1760 pysäyttääkseen portugalilaiset, Wellingtonin joukot vuonna 1809 ja karlistit vuonna 1836. Se rakennettiin uudelleen laastimuurauksella vuonna 1860. Alkuperäinen pituus oli 190 metriä, nykyisin 181,7 metriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Temppeliaukion kirkko] 1968–1969 Temppeliaukion kirkko on louhittu suoraan Töölön kalliomäkeen. Sitä alettiin rakentaa helmikuussa 1968, ja se vihittiin käyttöön syyskuussa 1969. Suunnittelijat, veljekset Timo ja Tuomo Suomalainen, eivät aluksi uskaltaneet edes ehdottaa kilpailussa niin rohkeaa ideaa kuin paljas, räjäytetty kalliopinta sisäseininä — lopulta juuri se teki kirkosta ainutlaatuisen. Katossa kiertää kupariholvi, jota reunustava ikkunarengas päästää päivänvalon virtaamaan sisään pitkin karkeaa kiveä. Kirkossa ei ole lainkaan oikeita kelloja: kellojen ääni kuuluu kaiuttimista nauhalta. Kalliopinnat tekevät tilasta niin kaikuisan, että urkujen 3001 pilliä ja konsertit kuulostavat siellä poikkeuksellisen …
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-canal-de-castilla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Tunturi: Ennen porolla kuljetettiin kaikki] Ennen moottorikelkkoja poro oli Lapin kulkuneuvo: se veti ahkiota, kapeaa venemäistä rekeä, joka liukui hangella tavaroiden ja ihmisten kanssa. Karavaanissa porot kulkivat jonossa toisiinsa sidottuina, ja päivämatka oli kymmeniä kilometrejä. Kuvan piirsi Gunnar Berndtson vuonna 1894 — samaan aikaan kun isoisä kirjoitti omaa päiväkirjaansa. Nykyään ahkiota vedetään kelkalla, mutta poroajot ovat yhä laji: kilpaa ajetaan jäällä suksilla perässä.
+- [Afganistan — maalehti / Kirjallisuus: Runoilija, jonka kastelusuunnitelmia yhä käytetään] 1414–1492 — Jami muutti perheineen Heratiin pikkulapsena ja jäi sinne loppuiäkseen. Häntä pidetään klassisen persialaisen runouden viimeisenä suurena nimenä, ja hän kirjoitti noin 87 kirjaa ja kirjettä. Pääteos Haft Awrang, seitsemän valtaistuinta, on seitsemän pitkän kertomarunon sarja. Jami oli myös insinööri: hänen Heratissa laatimansa kasteluopas piirroksineen ja laskelmineen on yhä kastelusta vastaavan viraston käsikirja. Oppilaalle, joka kehui ettei ollut koskaan rakastanut ketään, hän vastasi: mene ensin rakastamaan, ja tule sitten takaisin, niin näytän sinulle tien.
+- [Valparaíso — kaupunkilehti / Valparaíso: Kanava joka vei aseman] Panaman kanavan avaaminen 1914 käänsi kaiken: laivat alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, sataman liikenne väheni ja kaupungin talous taantui. 1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat perheet muuttivat pois. 2000-luvulla San Antonion satama ohitti sen käsitellyssä konttimäärässä. Laituri on silti vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.
+
+### 42.1
+KYSYMYS: Miksi vehnä kuljetettiin kanavalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Tunturi: Ennen porolla kuljetettiin kaikki] Ennen moottorikelkkoja poro oli Lapin kulkuneuvo: se veti ahkiota, kapeaa venemäistä rekeä, joka liukui hangella tavaroiden ja ihmisten kanssa. Karavaanissa porot kulkivat jonossa toisiinsa sidottuina, ja päivämatka oli kymmeniä kilometrejä. Kuvan piirsi Gunnar Berndtson vuonna 1894 — samaan aikaan kun isoisä kirjoitti omaa päiväkirjaansa. Nykyään ahkiota vedetään kelkalla, mutta poroajot ovat yhä laji: kilpaa ajetaan jäällä suksilla perässä.
+
+### 42.2
+KYSYMYS: Mihin kanavaa käytetään nyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kastilian kanava (tekniikka)
+Tietoruudun teksti: Kastilian kanava on 207 kilometriä pitkä kanava Pohjois-Espanjassa Burgosin, Palencian ja Valladolidin maakunnissa. Se rakennettiin 1700-luvun jälkipuoliskolta 1800-luvun alkupuoliskolle helpottamaan vehnän kuljetusta Kastiliasta Biskajanlahden satamiin vientiä varten. Kanavaa käytettiin eniten vuosina 1850–1870, mutta rautateiden kilpailu muutti sen käytön kasteluun ja myllyjen voimanlähteeksi 1800-luvun lopulla. Purjehdus loppui vuonna 1959. Nykyisin osa kanavasta on yhä käytössä, ja se kastelee 23 000 hehtaaria 48 kunnassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kirjallisuus: Runoilija, jonka kastelusuunnitelmia yhä käytetään] 1414–1492 — Jami muutti perheineen Heratiin pikkulapsena ja jäi sinne loppuiäkseen. Häntä pidetään klassisen persialaisen runouden viimeisenä suurena nimenä, ja hän kirjoitti noin 87 kirjaa ja kirjettä. Pääteos Haft Awrang, seitsemän valtaistuinta, on seitsemän pitkän kertomarunon sarja. Jami oli myös insinööri: hänen Heratissa laatimansa kasteluopas piirroksineen ja laskelmineen on yhä kastelusta vastaavan viraston käsikirja. Oppilaalle, joka kehui ettei ollut koskaan rakastanut ketään, hän vastasi: mene ensin rakastamaan, ja tule sitten takaisin, niin näytän sinulle tien.
+- [Valparaíso — kaupunkilehti / Valparaíso: Kanava joka vei aseman] Panaman kanavan avaaminen 1914 käänsi kaiken: laivat alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, sataman liikenne väheni ja kaupungin talous taantui. 1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat perheet muuttivat pois. 2000-luvulla San Antonion satama ohitti sen käsitellyssä konttimäärässä. Laituri on silti vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.
+- [Siinai — kaupunkilehti / Siinai: Kanava, joka teki niemimaasta Aasiaa] Vuonna 1859 alkoi työ, joka muutti Siinain aseman kartalla. Ranskalaisen Ferdinand de Lessepsin yhtiö alkoi kaivaa kanavaa Välimereltä Punaisellemerelle, ja urakka kesti kymmenen vuotta. Osa työstä tehtiin pakkotyönä, kunnes se lopetettiin kesken hankkeen. Kanava avattiin 17. marraskuuta 1869 — neljä vuotta ennen isoisän matkaa — ja se on 193 kilometriä pitkä. Sen jälkeen Siinai on ollut käytännössä oma saarensa: kanava vetää rajan Afrikan ja Aasian väliin, ja Siinai jää Aasian puolelle.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-gernikako-arbola) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+- [Darwin — kohdekartta / Kohdekartta: Vic-hotelli] 1890 Hotellin rakennutti Ellen Ryan, yksi territorion varakkaimmista naisista, joka omisti maata ja useita kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta lupaa arvokkaalle hotellille Smith Streetin numeroon 27 keskellä kaupunkia, joka tunnettiin silloin Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, ja siitä tuli Darwinin ensimmäinen kivirakennus: kaksikerroksinen, paikallista monivärista porselaniittia, julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, muutamaa päivää myöhemmin North Australian Hotel ja 1896 Victoria Hotel. Talo menetti kattonsa kolmesti alle sadassa vuodessa. Ensimmäinen kerta oli 6. tamm…
+
+### 43.1
+KYSYMYS: Miksi tammi on baskeille tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Water Street] 1500-luvulta Water Street kulkee sataman rantaa pitkin, ja se on kaupungin vanhin katulinja: siitä tuli kauppapaikka baskeille, ranskalaisille, espanjalaisille, portugalilaisille ja englantilaisille jo silloin, kun St. John’s oli kalastuskausien leiripaikka eikä vielä kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska kaikki tuli ja meni satamasta. Kadun varren liikerakennukset muodostavat Water Street Historic Districtin, joka nimettiin kansalliseksi historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun kauppahuoneita, Newfoundlandin kalastusta ja Atlantin kauppaa — ja useimmat ovat vuoden 1892 suurpalon jälkeisiä, koska palo söi koko itäpään. Katu on yhä kaupungin kaupallinen ydin…
+
+### 43.2
+KYSYMYS: Mitä tapahtui vuonna 1937?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Guernican tammi (historia)
+Tietoruudun teksti: Gernikako Arbola eli Guernican puu on tammi, joka symboloi biskajalaisten ja laajemmin koko baskikansan perinteisiä vapauksia. Biskajan herrat, myös Kastilian kuninkaat ja karlistien kruununvaatijat, vannoivat sen alla kunnioittavansa biskajalaisten oikeuksia. Keskiajalla kylien edustajat kokoontuivat suurten puiden alla, ja vuonna 1512 perustetun Guernican yleiskokouksen aikana tammesta tuli symboli; kokouksia pidettiin sitä varten rakennetussa talossa, jonka nykyinen rakennus on vuodelta 1833. Regentti María Cristina oli viimeinen espanjalaishallitsija, joka vannoi valan tammen alla vuonna 1839. Puu nousi tunnetuksi ensimmäisessä ja kolmannessa karlistisodassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Vic-hotelli] 1890 Hotellin rakennutti Ellen Ryan, yksi territorion varakkaimmista naisista, joka omisti maata ja useita kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta lupaa arvokkaalle hotellille Smith Streetin numeroon 27 keskellä kaupunkia, joka tunnettiin silloin Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, ja siitä tuli Darwinin ensimmäinen kivirakennus: kaksikerroksinen, paikallista monivärista porselaniittia, julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, muutamaa päivää myöhemmin North Australian Hotel ja 1896 Victoria Hotel. Talo menetti kattonsa kolmesti alle sadassa vuodessa. Ensimmäinen kerta oli 6. tamm…
+- [Adelaide — kohdekartta / Kohdekartta: Eläintarha] 1883 Adelaiden eläintarha avattiin 23. toukokuuta 1883 ja on Australian toiseksi vanhin Melbournen jälkeen. Sen perusti Etelä-Australian kotouttamis- ja eläintieteellinen seura valtiolta saadulle maalle. Seurasta tuli kuninkaallinen 1937, kun Yrjö VI myönsi sille kuninkaallisen peruskirjan. Ensimmäinen johtaja oli R. E. Minchin 1882–1893; häntä seurasi poika A. C. Minchin 1893–1934 ja tätä pojanpoika R. R. L. Minchin 1935–1940 — kolme sukupolvea samassa virassa. Viisi rakennusta on suojeltu, niiden joukossa Frome Roadin pääportti ja vuoden 1900 norsutalo. Norsutalossa ei enää pidetä eläimiä, vaan siellä on opasteita; viimeinen norsu Samorn siirrettiin 1991 Monarton laajaan puistoon, jossa s…
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-tordesillas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+
+### 44.1
+KYSYMYS: Mitä Tordesillasin sopimus jakoi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+
+### 44.2
+KYSYMYS: Mitä alkuperäiskansat sopimuksesta ajattelivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tordesillas (historia)
+Tietoruudun teksti: Tordesillasin sopimus allekirjoitettiin Espanjan Tordesillasissa 7. kesäkuuta 1494, ja se ratifioitiin Portugalin Setúbalissa. Sopimus jakoi Euroopan ulkopuoliset äskettäin löydetyt maat Portugalin kuningaskunnan ja Kastilian kruunun kesken meridiaania pitkin, joka kulki 370 leguaa eli noin 2 100 kilometriä Kap Verden saarten länsipuolella. Itäpuoli kuului Portugalille ja länsipuoli Kastilialle, ja sopimus muutti aiempaa paavin bullaa. Maapallon toinen puoli jaettiin vuosikymmeniä myöhemmin Zaragozan sopimuksella vuonna 1529. Amerikan alkuperäiskansat eivät tunnustaneet sopimuksia.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-aranjuez) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+- [Asunción — kohdekartta / Kohdekartta: Kansallinen taidemuseo] 1909 Paraguayn kansallinen taidemuseo syntyi yhden miehen kokoelmasta. Juan Silvano Godoi (1850–1926) oli varakkaan poliittisen suvun jäsen, ja maan levottomat olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan hän osti taidetta: kokoelmassa on töitä Courbet’lta, Murillolta ja Tintorettolta, ja painopiste on 1800-luvun lopun maalauksessa. Godoista tuli Paraguayn ensimmäinen museoiden ja arkistojen pääjohtaja. Valtio toivoi 1900-luvun alussa, että kaikki hänen teoksensa koottaisiin yhteen laitokseen. Museo Godoy perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; vuonna 1939 valtio vahvisti sen kansalliseksi taidemuseoksi. Nykyään esillä on yli 650 teosta — maalauksia, veistoksia,…
+
+### 45.1
+KYSYMYS: Mitä Aranjuezin kapinassa tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Musiikki: Puutarha, jota säveltäjä ei nähnyt] Joaquín Rodrigo sokeutui kolmivuotiaana kurkkumädän jälkitautiin. Hän sävelsi koko elämänsä pistekirjoituksella ja saneli nuotit kopistille. Vuonna 1939 hän kirjoitti Concierto de Aranjuezin, kitarakonserton, jonka aiheena ovat Aranjuezin kuninkaalliset puutarhat Madridin eteläpuolella — paikka, jota hän ei ollut koskaan nähnyt. Hitaan osan englannintorvimelodiasta tuli maailman soitetuin espanjalainen sävelmä. Rodrigo kertoi myöhemmin sen kertovan surusta: pariskunnan menettämästä esikoisesta.
+
+### 45.2
+KYSYMYS: Mikä Godoy oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aranjuez (historia)
+Tietoruudun teksti: Aranjuez on kaupunki Madridin autonomisen alueen eteläkärjessä Tejo-joen vasemmalla rannalla. Se tuli Espanjan kruunun kuninkaalliseksi tilaksi vuonna 1560 Filip II:n aikana, ja vuoteen 1752 asti siellä saivat asua vain kuninkaalliset ja aatelisto. UNESCO julisti sen kulttuurimaiseman maailmanperintökohteeksi vuonna 2001. Aranjuezin kapina tapahtui 17. maaliskuuta 1808, kun kuninkaallinen perhe ja hallitus odottivat siellä ranskalaista hyökkäystä: sotilaat, talonpojat ja kansa hyökkäsivät Manuel Godoyn asunnolle ja vangitsivat hänet. Kapinalliset pakottivat Kaarle IV:n erottamaan Godoyn, ja kaksi päivää myöhemmin hänen itsensä täytyi luopua kruunusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Kansallinen taidemuseo] 1909 Paraguayn kansallinen taidemuseo syntyi yhden miehen kokoelmasta. Juan Silvano Godoi (1850–1926) oli varakkaan poliittisen suvun jäsen, ja maan levottomat olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan hän osti taidetta: kokoelmassa on töitä Courbet’lta, Murillolta ja Tintorettolta, ja painopiste on 1800-luvun lopun maalauksessa. Godoista tuli Paraguayn ensimmäinen museoiden ja arkistojen pääjohtaja. Valtio toivoi 1900-luvun alussa, että kaikki hänen teoksensa koottaisiin yhteen laitokseen. Museo Godoy perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; vuonna 1939 valtio vahvisti sen kansalliseksi taidemuseoksi. Nykyään esillä on yli 650 teosta — maalauksia, veistoksia,…
+- [Antofagasta — kohdekartta / Kohdekartta: Kaupunginteatteri] 1966—1981 Colónin aukion koilliskulmaan piti tulla paljon suurempi talo. Vuoden 1963 kansallisen kilpailun voitti viiden arkkitehdin ryhmä — Vicente Bruna, Iván Godoy, Alberto Sartori, Sergio Seguel ja Germán Wijnant — ja suunnitelmassa oli 1 500 hengen teatteri, 500 hengen kamariteatteri, kaupungintalo, kirjasto ja taidesali kahdentoistatuhannen neliömetrin tontilla. Työt alkoivat 1966, mutta rahat loppuivat ja hanke keskeytyi 1970-luvun alussa vuosiksi. Rakentaminen jatkui 1975, ja teatteri vihittiin 11. syyskuuta 1981 siinä muodossa, jossa se yhä on: kaksi suorakaiteista teräsbetonirakennetta ja niiden välissä puolikovera keskusosa, jota kiertävät L:n muotoiset parvekkeet. Ensimmäiset 89…
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

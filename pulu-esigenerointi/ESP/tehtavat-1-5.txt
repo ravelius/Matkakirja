@@ -1,0 +1,200 @@
+================ KOHTA 21 (kohde:hahmotelma-sierra-de-gredos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Gredos (luonto · vuori)
+Tietoruudun teksti: Sierra de Gredos on vuoristo Keski-Espanjassa, ja se ulottuu Ávilan, Salamancan, Cáceresin, Madridin ja Toledon maakuntiin. Se kuuluu laajempaan Sistema Central -vuoristoon, ja sen korkein kohta on 2 592 metrin Pico Almanzor. Kastilia ja Leónin autonominen alue on julistanut osan vuoristosta luonnonpuistoksi. Vuoristosta laskee viisi jokilaaksoa, muun muassa Alto Tormes, Alto Alberche ja La Vera. Tunnetuista ensimmäisistä asukkaista vettonit olivat roomalaisia edeltänyt keltteihin kuuluva kansa.
+
+### 21.1
+KYSYMYS: Keitä vettonit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Gredos (luonto · vuori)
+Tietoruudun teksti: Sierra de Gredos on vuoristo Keski-Espanjassa, ja se ulottuu Ávilan, Salamancan, Cáceresin, Madridin ja Toledon maakuntiin. Se kuuluu laajempaan Sistema Central -vuoristoon, ja sen korkein kohta on 2 592 metrin Pico Almanzor. Kastilia ja Leónin autonominen alue on julistanut osan vuoristosta luonnonpuistoksi. Vuoristosta laskee viisi jokilaaksoa, muun muassa Alto Tormes, Alto Alberche ja La Vera. Tunnetuista ensimmäisistä asukkaista vettonit olivat roomalaisia edeltänyt keltteihin kuuluva kansa.
+
+### 21.2
+KYSYMYS: Mikä on Gredosin korkein huippu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Gredos (luonto · vuori)
+Tietoruudun teksti: Sierra de Gredos on vuoristo Keski-Espanjassa, ja se ulottuu Ávilan, Salamancan, Cáceresin, Madridin ja Toledon maakuntiin. Se kuuluu laajempaan Sistema Central -vuoristoon, ja sen korkein kohta on 2 592 metrin Pico Almanzor. Kastilia ja Leónin autonominen alue on julistanut osan vuoristosta luonnonpuistoksi. Vuoristosta laskee viisi jokilaaksoa, muun muassa Alto Tormes, Alto Alberche ja La Vera. Tunnetuista ensimmäisistä asukkaista vettonit olivat roomalaisia edeltänyt keltteihin kuuluva kansa.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-tabernas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tabernasin autiomaa (luonto · vuori)
+Tietoruudun teksti: Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista Almeríasta pohjoiseen. Sitä pidetään Euroopan ainoana aavikkona, koska suurimmalla osalla aluetta vallitsee aavikkoilmasto. Korkean ja vuorisen sijaintinsa vuoksi siellä sataa rannikkoa enemmän, yli 220 millimetriä vuodessa. Luonnonsuojelualue on 280 neliökilometrin laajuinen, ja sitä rajaavat pohjoisessa Sierra de los Filabres, kaakossa Sierra Alhamilla ja lännessä Sierra Nevada. Alueella on kuvattu 1950-luvun lopulta lähtien yli 300 elokuvaa, useimmat lännenelokuvia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kaupunkilehti / Sansibar: Linnake, jossa näytetään elokuvia] Vanha linnake on Kivikaupungin vanhin rakennus: portugalilaiset aloittivat sen 1600-luvulla, omanilaiset saivat sen valmiiksi vuosisadan lopulla ja rakensivat uudelleen 1700-luvulla. Se on korkeamuurinen neliö, ja sisäpihalla on yhä jäänteitä portugalilaisesta kirkosta. 1800-luvulla linnake oli varuskunta ja vankila, ja vuosina 1905—1928 se toimi Sansibarin rautatien pääteasemana. Amfiteatteri lisättiin 1990-luvulla, ja nykyään pihalla on kulttuurikeskus, jonka ulkoilmalava täyttyy lähes joka ilta. Linnake on Sansibarin elokuvajuhlan päänäyttämö: juhla perustettiin 1997, ja sen palkinnot ovat Kultainen ja Hopeinen dhow.
+
+### 22.1
+KYSYMYS: Onko Tabernas todella Euroopan ainoa aavikko?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tabernasin autiomaa (luonto · vuori)
+Tietoruudun teksti: Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista Almeríasta pohjoiseen. Sitä pidetään Euroopan ainoana aavikkona, koska suurimmalla osalla aluetta vallitsee aavikkoilmasto. Korkean ja vuorisen sijaintinsa vuoksi siellä sataa rannikkoa enemmän, yli 220 millimetriä vuodessa. Luonnonsuojelualue on 280 neliökilometrin laajuinen, ja sitä rajaavat pohjoisessa Sierra de los Filabres, kaakossa Sierra Alhamilla ja lännessä Sierra Nevada. Alueella on kuvattu 1950-luvun lopulta lähtien yli 300 elokuvaa, useimmat lännenelokuvia.
+
+### 22.2
+KYSYMYS: Mitä elokuvia täällä on kuvattu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tabernasin autiomaa (luonto · vuori)
+Tietoruudun teksti: Tabernasin autiomaa sijaitsee Almerían maakunnassa Kaakkois-Espanjassa, noin 30 kilometriä maakunnan pääkaupungista Almeríasta pohjoiseen. Sitä pidetään Euroopan ainoana aavikkona, koska suurimmalla osalla aluetta vallitsee aavikkoilmasto. Korkean ja vuorisen sijaintinsa vuoksi siellä sataa rannikkoa enemmän, yli 220 millimetriä vuodessa. Luonnonsuojelualue on 280 neliökilometrin laajuinen, ja sitä rajaavat pohjoisessa Sierra de los Filabres, kaakossa Sierra Alhamilla ja lännessä Sierra Nevada. Alueella on kuvattu 1950-luvun lopulta lähtien yli 300 elokuvaa, useimmat lännenelokuvia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kaupunkilehti / Sansibar: Linnake, jossa näytetään elokuvia] Vanha linnake on Kivikaupungin vanhin rakennus: portugalilaiset aloittivat sen 1600-luvulla, omanilaiset saivat sen valmiiksi vuosisadan lopulla ja rakensivat uudelleen 1700-luvulla. Se on korkeamuurinen neliö, ja sisäpihalla on yhä jäänteitä portugalilaisesta kirkosta. 1800-luvulla linnake oli varuskunta ja vankila, ja vuosina 1905—1928 se toimi Sansibarin rautatien pääteasemana. Amfiteatteri lisättiin 1990-luvulla, ja nykyään pihalla on kulttuurikeskus, jonka ulkoilmalava täyttyy lähes joka ilta. Linnake on Sansibarin elokuvajuhlan päänäyttämö: juhla perustettiin 1997, ja sen palkinnot ovat Kultainen ja Hopeinen dhow.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-sierra-de-cazorla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+- [Nepal — maalehti / Luonto: Yhdeksänkymmentäviisi jäljellä] 1950–2015 — Vuonna 1950 Chitwanin metsissä ja ruohostoissa eli noin 800 panssarisarvikuonoa. Sitten malaria hävitettiin, ylängön viljelijät muuttivat laaksoon, seitsemänkymmentä prosenttia viidakosta raivattiin ja salametsästys riistäytyi: 1960-luvun lopulla eläimiä oli 95. Hallitus kokosi Gaida Gasti -partion, 130 aseistettua miestä ja vartioasemien verkon, ja alue julistettiin 1973 Nepalin ensimmäiseksi kansallispuistoksi — rajojen sisään jääneet tharu-kylät purettiin ja asukkaat siirrettiin pois. Vuonna 2015 puistossa laskettiin 605 sarvikuonoa.
+
+### 23.1
+KYSYMYS: Mistä Guadalquivirin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Luonto: Kosteikko, jossa Eurooppa vaihtaa mannerta] Doñana on Guadalquivirin suistoon jäänyt matala kosteikko Andalusian rannikolla, ja se on Länsi-Euroopan muuttolintujen tärkein levähdyspaikka: täällä sadattuhannet linnut lepäävät ja syövät ennen Saharan ylitystä tai sen jälkeen. Talvella vesilintuja voi olla yhtä aikaa yli puoli miljoonaa. Alue on samalla varoitus: pohjaveden pumppaus marjapelloille ja kuivat vuodet ovat kutistaneet lammikoita niin, että osa niistä ei enää täyty joka vuosi.
+
+### 23.2
+KYSYMYS: Mitä eläimiä puistossa elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sierra de Cazorla (luonto · vuori)
+Tietoruudun teksti: Sierra de Cazorla on Prebaetic-järjestelmään kuuluva vuorijono Jaénin maakunnassa Etelä-Espanjassa, ja se on nimetty Cazorlan kaupungin mukaan. Korkein huippu on 1 847 metrin Gilillo. Vuorten välisissä laaksoissa ovat muun muassa Guadalquivir-joen latvat: joki kulkee ensin noin 50 kilometriä koilliseen ja kääntyy sitten länteen kohti Atlanttia. Seutu kuuluu Cazorlan, Segura ja Las Villasin luonnonpuistoon, joka perustettiin 1986. Sen 2 099 neliökilometriä tekevät siitä Espanjan suurimman ja Euroopan toiseksi suurimman suojelualueen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+- [Nepal — maalehti / Luonto: Yhdeksänkymmentäviisi jäljellä] 1950–2015 — Vuonna 1950 Chitwanin metsissä ja ruohostoissa eli noin 800 panssarisarvikuonoa. Sitten malaria hävitettiin, ylängön viljelijät muuttivat laaksoon, seitsemänkymmentä prosenttia viidakosta raivattiin ja salametsästys riistäytyi: 1960-luvun lopulla eläimiä oli 95. Hallitus kokosi Gaida Gasti -partion, 130 aseistettua miestä ja vartioasemien verkon, ja alue julistettiin 1973 Nepalin ensimmäiseksi kansallispuistoksi — rajojen sisään jääneet tharu-kylät purettiin ja asukkaat siirrettiin pois. Vuonna 2015 puistossa laskettiin 605 sarvikuonoa.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-atapuerca) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: Prince of Walesin museo] peruskivi 1905, avattu 1922 Vuonna 1904 joukko kaupungin vaikuttajia päätti pystyttää museon Walesin prinssin — tulevan kuningas Yrjö V:n — vierailun muistoksi. Peruskiven laski prinssi itse 11. marraskuuta 1905, ja laitos sai nimen Prince of Wales Museum of Western India. Rahat tulivat vierailun muistorahastosta sekä hallinnon, kaupungin ja yksityisten lahjoituksista; museo perustettiin lailla 1909. Rakennuksen suunnitteli George Wittet, sama arkkitehti kuin Gateway of Indian. Tyyli on indosaraseeninen: keskellä on valkosinisin laatoin katettu kupoli, jonka esikuva on Golcondan linnassa, ja sisällä holvikaaret Bijapurin Gol Gumbazin mukaan. Sisätiloissa on 1700-luvun maratalaistalon pylväi…
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+
+### 24.1
+KYSYMYS: Mikä Homo antecessor oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+
+### 24.2
+KYSYMYS: Mitä luolista on löydetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Atapuerca (historia)
+Tietoruudun teksti: Atapuercan vuoret ovat karstikukkuloiden ryhmä Atapuercan kylän lähellä Burgosin maakunnassa Pohjois-Espanjassa. Yhä jatkuvissa kaivauksissa on löytynyt fossiileja ja kivityökaluja, jotka kuuluvat Länsi-Euroopan vanhimmille tunnetuille ihmisasukkaille. Alueella ovat asuneet Homo erectus, Homo antecessor, Homo heidelbergensis ja neandertalinihminen. Varmimmin ajoitetut vanhimmat löydöt ovat 1,2 miljoonan ja 630 000 vuoden ikäisiä. Osa löydöistä on esillä lähellä Burgosin Ihmisen evoluution museossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: Prince of Walesin museo] peruskivi 1905, avattu 1922 Vuonna 1904 joukko kaupungin vaikuttajia päätti pystyttää museon Walesin prinssin — tulevan kuningas Yrjö V:n — vierailun muistoksi. Peruskiven laski prinssi itse 11. marraskuuta 1905, ja laitos sai nimen Prince of Wales Museum of Western India. Rahat tulivat vierailun muistorahastosta sekä hallinnon, kaupungin ja yksityisten lahjoituksista; museo perustettiin lailla 1909. Rakennuksen suunnitteli George Wittet, sama arkkitehti kuin Gateway of Indian. Tyyli on indosaraseeninen: keskellä on valkosinisin laatoin katettu kupoli, jonka esikuva on Golcondan linnassa, ja sisällä holvikaaret Bijapurin Gol Gumbazin mukaan. Sisätiloissa on 1700-luvun maratalaistalon pylväi…
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-covadonga) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+
+### 25.1
+KYSYMYS: Kuka Pelayo oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+
+### 25.2
+KYSYMYS: Mikä Reconquista oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Covadonga (historia)
+Tietoruudun teksti: Covadongan taistelu käytiin vuonna 722 Asturian Pelayon joukkojen ja Umayyad-kalifaatin komentajien Alqaman ja Munuzan armeijan välillä Picos de Europan vuoristossa. Kristityt voittivat. Tapahtumaa pidetään perinteisesti Asturian kuningaskunnan perustavana hetkenä ja siksi kristittyjen takaisinvalloituksen, Reconquistan, alkupisteenä sen jälkeen, kun umayyadit olivat vallanneet Iberian vuonna 711. Yhdeksännen vuosisadan lopun mozarabikirjoitusten mukaan visigootit valitsivat Pelayon johtajakseen vuonna 718, ja hän aloitti kapinan pääpaikkanaan Cangas de Onís.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

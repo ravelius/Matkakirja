@@ -1,0 +1,203 @@
+================ KOHTA 31 (kohde:hahmotelma-las-navas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Historia: Itsenäisyys julistettiin taistelun vuosipäivänä] 1810–1818 — Ensimmäinen hallitusjuntta kokoontui 18. syyskuuta 1810, mutta vapaussota kesti vielä vuosia. Andit ylittänyt armeija voitti Chacabucon taistelun 12. helmikuuta 1817. José de San Martín kieltäytyi ylimmän johtajan paikasta ja antoi sen Bernardo O’Higginsille, joka julisti maan itsenäiseksi täsmälleen vuotta myöhemmin, 12. helmikuuta 1818. Maipún taistelu 5. huhtikuuta 1818 ratkaisi sodan. Viimeiset kuninkaanmieliset antautuivat vasta Chiloéssa 1826, ja Espanja tunnusti Chilen vuonna 1844.
+- [Churchill — kaupunkilehti / Churchill: Linnake antautuu ilman taistelua] Elokuun 8. päivänä 1782 kolme ranskalaista sotalaivaa ja noin 290 sotilasta komentaja Jean-François de La Pérousen johdolla ilmestyi Hudsoninlahdelle. Fort Prince of Walesin kuvernöörinä tuolloin toiminut Samuel Hearne komensi vain kourallista miehiä eikä nähnyt järkeä puolustautua toivottomia lukuja vastaan: hän antautui ilman yhtään laukausta. Ranskalaiset yrittivät tuhota linnoituksen räjäyttämällä sen muureja, mutta paksu kivi kesti pahimman, ja rauniot seisovat paikallaan yhä tänäänkin. Turkiskaupasta riippuvaiset alkuperäiskansat kärsivät pahiten: kun kauppatavaraa ei enää saapunut, monet joutuivat nälänhätään sinä talvena.
+
+### 31.1
+KYSYMYS: Miksi taistelua sanottiin ristiretkeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnake antautuu ilman taistelua] Elokuun 8. päivänä 1782 kolme ranskalaista sotalaivaa ja noin 290 sotilasta komentaja Jean-François de La Pérousen johdolla ilmestyi Hudsoninlahdelle. Fort Prince of Walesin kuvernöörinä tuolloin toiminut Samuel Hearne komensi vain kourallista miehiä eikä nähnyt järkeä puolustautua toivottomia lukuja vastaan: hän antautui ilman yhtään laukausta. Ranskalaiset yrittivät tuhota linnoituksen räjäyttämällä sen muureja, mutta paksu kivi kesti pahimman, ja rauniot seisovat paikallaan yhä tänäänkin. Turkiskaupasta riippuvaiset alkuperäiskansat kärsivät pahiten: kun kauppatavaraa ei enää saapunut, monet joutuivat nälänhätään sinä talvena.
+- [Marokko — maalehti / Historia: Taistelu, jossa kuoli kolme kuningasta] 4.8.1578 — Syrjäytetty sulttaani Abu Abdallah Mohammed II pyysi apua Portugalin kuninkaalta Sebastian I:ltä saadakseen valtaistuimensa takaisin sedältään Abd al-Malikilta. Armeijat kohtasivat Ksar el-Kebirin lähellä 4. elokuuta 1578. Päivä päättyi niin, että kaikki kolme johtajaa olivat kuolleet: Abd al-Malik kuoli kesken taistelun, Abu Abdallah hukkui jokeen paetessaan ja 24-vuotias Sebastian kaatui kentälle jättämättä perillistä. Marokossa taistelua sanotaan kolmen kuninkaan taisteluksi. Vangituista portugalilaisaatelisista maksetut lunnaat veivät Portugalin lähes vararikkoon, ja kaksi vuotta myöhemmin Espanjan Filip II otti maan haltuunsa.
+
+### 31.2
+KYSYMYS: Mitä taistelun jälkeen tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Navas de Tolosa (historia)
+Tietoruudun teksti: Las Navas de Tolosan taistelu käytiin 16. heinäkuuta 1212, ja se oli tärkeä käännekohta Reconquistassa. Kristittyjä joukkoja johti Kastilian kuningas Alfonso VIII, ja mukana olivat Navarran Sancho VII ja Aragonian Pedro II. Vastassa oli almohadikalifi al-Nasirin armeija, joka hallitsi Iberian niemimaan eteläpuoliskoa ja Marokkoa. Taistelua kutsuttiin ristiretkeksi, ja siksi mukaan tuli ritareita eri puolilta Eurooppaa. Espanjalaisen Wikipedian mukaan taistelun sotilaalliset seuraukset jäivät rajallisiksi, ja Guadalquivirin laakson valtaus alkoi vasta noin kolmekymmentä vuotta myöhemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Historia: Itsenäisyys julistettiin taistelun vuosipäivänä] 1810–1818 — Ensimmäinen hallitusjuntta kokoontui 18. syyskuuta 1810, mutta vapaussota kesti vielä vuosia. Andit ylittänyt armeija voitti Chacabucon taistelun 12. helmikuuta 1817. José de San Martín kieltäytyi ylimmän johtajan paikasta ja antoi sen Bernardo O’Higginsille, joka julisti maan itsenäiseksi täsmälleen vuotta myöhemmin, 12. helmikuuta 1818. Maipún taistelu 5. huhtikuuta 1818 ratkaisi sodan. Viimeiset kuninkaanmieliset antautuivat vasta Chiloéssa 1826, ja Espanja tunnusti Chilen vuonna 1844.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-campo-de-criptana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+
+### 32.1
+KYSYMYS: Mitä Don Quijote tuulimyllyille teki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Menovinkit] Espanjan museot ovat vieneet kokoelmansa verkkoon: Pyreneiden kirkkojen maalaukset, iberialainen kivikasvo, Mirón värit ja Don Quijoten ensipainos aukeavat kaikki ilman lippujonoa.
+
+### 32.2
+KYSYMYS: Miten myllyt toimivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Campo de Criptanan tuulimyllyt (kulttuuri)
+Tietoruudun teksti: Campo de Criptana on kaupunki La Manchan alueella Ciudad Realin maakunnassa. Sen tunnusmaisema on tuulimyllyjen rivi Sierra de los Molinosin ja Cerro de la Pazin rinteillä, ja Don Quijoten kahdeksannen luvun alku kertoo kolmestakymmenestä tai neljästäkymmenestä tuulimyllystä tasangolla. Markiisi de la Ensenadan tilaamaan maarekisteriin oli merkitty 34 myllyä, ja alun perin niitä oli ollut selvästi enemmän. Nykyisin kymmenen myllyä näkyy kauas alkuperäisine rakenteineen ja koneistoineen, jotkin on muutettu museoiksi, ja kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-albufera) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Puolet maan sahoista] Metsä ei jää kaupungin ulkopuolelle vaan tulee sisään: puolet koko Ghanan puunjalostuksesta tapahtuu Kumasissa. Kaupungin varallisuus tulee kahdesta asiasta, siitä että se on maan pääteiden risteys ja siitä että sen takamaastossa viljellään kaakaota. Ashantin alue tuotti 2014 viidenneksen Ghanan tuotannosta, ja siitä lähes puolet syntyi tässä kaupungissa. Kasvulla on hintansa. Wiwi ja Subin, kaupungin läpi kulkevat joet, ovat uhattuina, ja 2024 julkaistun raportin mukaan niiden rannoilla oli enemmän teollisuutta, asumista ja liiketiloja kuin viheralaa; tutkijat esittivät kolmenkymmenen metrin suojavyöhykettä.
+- [Mexico City — kaupunkilehti / Atsteekkien perintö: Viljelysaaret, jotka ruokkivat imperiumin] Chinampa tarkoittaa nahuatliksi ruokoaidan sisällä olevaa. Matalikkoon lyötiin paaluja, väliin punottiin aitaa ja sisus täytettiin järvimudalla ja kasvijätteellä, kunnes saareke nousi vedenpinnan yläpuolelle; kulmiin istutetut pajut sitoivat sen paikoilleen. Ravinteikas muta nostettiin kanavien pohjasta pelloille yhä uudelleen, ja satoja saatiin jopa seitsemän vuodessa. Ensimmäiset tällaiset pellot rakennettiin noin vuonna 1100, ja Xochimilcossa niitä viljellään yhä: keskustan alueella niitä on noin 200 ja kanavia 170 kilometriä. Yhdistyneet kansakunnat nimesi järjestelmän tärkeäksi maatalousperinnöksi 2018.
+
+### 33.1
+KYSYMYS: Miksi riisiä viljellään laguunin rannalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Puolet maan sahoista] Metsä ei jää kaupungin ulkopuolelle vaan tulee sisään: puolet koko Ghanan puunjalostuksesta tapahtuu Kumasissa. Kaupungin varallisuus tulee kahdesta asiasta, siitä että se on maan pääteiden risteys ja siitä että sen takamaastossa viljellään kaakaota. Ashantin alue tuotti 2014 viidenneksen Ghanan tuotannosta, ja siitä lähes puolet syntyi tässä kaupungissa. Kasvulla on hintansa. Wiwi ja Subin, kaupungin läpi kulkevat joet, ovat uhattuina, ja 2024 julkaistun raportin mukaan niiden rannoilla oli enemmän teollisuutta, asumista ja liiketiloja kuin viheralaa; tutkijat esittivät kolmenkymmenen metrin suojavyöhykettä.
+- [Mexico City — kaupunkilehti / Atsteekkien perintö: Viljelysaaret, jotka ruokkivat imperiumin] Chinampa tarkoittaa nahuatliksi ruokoaidan sisällä olevaa. Matalikkoon lyötiin paaluja, väliin punottiin aitaa ja sisus täytettiin järvimudalla ja kasvijätteellä, kunnes saareke nousi vedenpinnan yläpuolelle; kulmiin istutetut pajut sitoivat sen paikoilleen. Ravinteikas muta nostettiin kanavien pohjasta pelloille yhä uudelleen, ja satoja saatiin jopa seitsemän vuodessa. Ensimmäiset tällaiset pellot rakennettiin noin vuonna 1100, ja Xochimilcossa niitä viljellään yhä: keskustan alueella niitä on noin 200 ja kanavia 170 kilometriä. Yhdistyneet kansakunnat nimesi järjestelmän tärkeäksi maatalousperinnöksi 2018.
+
+### 33.2
+KYSYMYS: Mitä lintuja Albuferalla näkee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albufera (ruoka)
+Tietoruudun teksti: Albufera de València on makeanveden laguuni ja jokisuisto Valencian lahden rannikolla Itä-Espanjassa. Se on Albuferan luonnonpuiston pääosa, ja sen pinta-ala on 21 120 hehtaaria. Laguuni oli aikoinaan suolavetinen, mutta kastelusta ja kanavista tulleet vedet ja kasvavat hiekkasärkät tekivät siitä makeanvetisen jo 1600-luvulla. Kalastus tunnustettiin laillisesti vuonna 1250. Riisinviljely on vanha perinne mutta nuorempi kuin kalastus, sillä se alkoi 1700-luvulta lähtien, ja riisipelloilla elää lintuja ja lajeja, jotka ovat kadonneet itse laguunista.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-la-tomatina) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+
+### 34.1
+KYSYMYS: Miksi tomaatteja heitetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+
+### 34.2
+KYSYMYS: Miksi Franco kielsi La Tomatinan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Tomatina, Buñol (ruoka)
+Tietoruudun teksti: La Tomatina on Buñolin kylässä pidettävä espanjalainen festivaali, jossa osallistujat heittelevät toisiaan tomaateilla; sitä sanotaan maailman suurimmaksi ruokataisteluksi. Perinne sai alkunsa elokuun viimeisenä keskiviikkona 1945, kun nuoret seurasivat jättiläishahmojen kulkuetta ja yhden osallistujan iso pääpuku putosi. Raivostunut mies alkoi lyödä ympärilleen ja kaatoi vihanneskojun, ja väki heitteli toisiaan tomaateilla. Seuraavana vuonna nuoret toivat tomaatit mukanaan kotoa, ja vuosittainen perinne oli syntynyt. Franco kielsi tapahtuman 1950-luvun alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin uudelleen.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-rioja-haro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+
+### 35.1
+KYSYMYS: Mikä tekee Haron viinistä tunnettua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+
+### 35.2
+KYSYMYS: Mitä bodega tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rioja ja Haro (ruoka)
+Tietoruudun teksti: Haro on kaupunki La Riojan maakunnan luoteisosassa Pohjois-Espanjassa, ja se on 1800-luvun alusta lähtien ollut Rioja-viinialueen tärkein viinikaupunki. Sen vuosittaisilla viinifestivaaleilla juhlitaan punaviiniä. Barrio Estación -kaupunginosassa on seitsemän parasta Rioja-bodegaa, muun muassa vuonna 1859 perustettu Bodegas Bilbaínas, vuonna 1877 perustettu R. López de Heredia ja vuoden 1879 CVNE, ja Martínez Lacuesta perustettiin vuonna 1873. Haro oli myös ensimmäinen espanjalainen kaupunki, jossa oli sähköinen katuvalaistus, ja sen vanhakaupunki julistettiin historiallis-taiteelliseksi kohteeksi 1975.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

@@ -1,0 +1,333 @@
+================ KOHTA 51 (nosto:madridin-tapaskierros) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jossa syödään seisten
+Tietoruudun teksti: Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tapaskierros] Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+- [Espanja — maalehti / Herkut: Tapas kuuluu hintaan] Nykyisin — Granadassa juoman mukana tulee tapas ilman eri maksua. Annosta ei saa valita: se on baarin valinta eikä asiakkaan, ja se vaihtuu joka kierroksella — monessa paikassa annokset myös kasvavat, mitä pitempään istut. Muualla Espanjassa ilmainen tapas on jo harvinaisuus, ja granadalaiset puolustavat omaansa kiivaasti. Ruokalistaa ei siis kannata pyytää: illan syö helpoiten kävelemällä baarista toiseen ja katsomalla, mitä eteen tuodaan.
+
+### 51.1
+KYSYMYS: Miksi Madridissa syödään illallinen vasta yhdeksän jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jossa syödään seisten
+Tietoruudun teksti: Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tapaskierros] Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+
+### 51.2
+KYSYMYS: Miten tapeo-kierros käytännössä kulkee baarista toiseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jossa syödään seisten
+Tietoruudun teksti: Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tapaskierros] Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+- [Espanja — maalehti / Herkut: Tapas kuuluu hintaan] Nykyisin — Granadassa juoman mukana tulee tapas ilman eri maksua. Annosta ei saa valita: se on baarin valinta eikä asiakkaan, ja se vaihtuu joka kierroksella — monessa paikassa annokset myös kasvavat, mitä pitempään istut. Muualla Espanjassa ilmainen tapas on jo harvinaisuus, ja granadalaiset puolustavat omaansa kiivaasti. Ruokalistaa ei siis kannata pyytää: illan syö helpoiten kävelemällä baarista toiseen ja katsomalla, mitä eteen tuodaan.
+
+### 51.3
+KYSYMYS: Millaisia tapaksia madridilaisessa baarissa tarjotaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jossa syödään seisten
+Tietoruudun teksti: Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Tapaskierros] Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on kierroksen tunnetuin pysäkki.
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (nosto:goyan-kansankuvat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Goya maalasi madridilaisten vapaapäivät
+Tietoruudun teksti: Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Goyan kansankuvat] Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+- [Madrid — kohdekartta / Kohdekartta: Prado-museo] 1819 Arkkitehti Juan de Villanueva suunnitteli rakennuksen jo vuonna 1785 kuningas Kaarle III:n tilauksesta luonnontieteiden museoksi. Suunnitelmat viivästyivät sotien takia, ja lopulta kuningas Ferdinand VII päätti tehdä siitä taidemuseon. Prado avasi ovensa marraskuussa 1819. Museossa on maailman hienoimpia maalauksia: Velázquezin Las Meninas, Boschin Maallisten ilojen puutarha ja Goyan synkät niin kutsutut mustat maalaukset. Goya on museon eniten esillä oleva taiteilija. Kokoelmiin kuuluu nykyään noin 7 600 maalausta ja tuhansia piirustuksia ja veistoksia. Rakennusta laajennettiin maan alle 2007, ja vuonna 2023 museossa kävi yli 3,3 miljoonaa kävijää.
+- [Tampere — kaupunkilehti / Historia: Valo syttyi kutomosalissa] Maaliskuussa 1882 Finlaysonin uuteen kutomosaliin sytytettiin sähkövalot. Ne olivat ensimmäiset koko Pohjolassa — aiemmin kuin Tukholmassa, Kööpenhaminassa tai Oslossa. Virta tuli tehtaan omasta voimalaitoksesta Tammerkoskessa, ja syy oli käytännöllinen: kutojan on nähtävä lanka myös pimeällä, ja avoliekki oli puuvillasalissa jatkuva palonvaara. Sali sai nimekseen Plevna, ja siinä toimii nykyään elokuvateatteri.
+
+### 52.1
+KYSYMYS: Millaisia seinävaatteita kuninkaallinen kutomo valmisti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Goya maalasi madridilaisten vapaapäivät
+Tietoruudun teksti: Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Historia: Valo syttyi kutomosalissa] Maaliskuussa 1882 Finlaysonin uuteen kutomosaliin sytytettiin sähkövalot. Ne olivat ensimmäiset koko Pohjolassa — aiemmin kuin Tukholmassa, Kööpenhaminassa tai Oslossa. Virta tuli tehtaan omasta voimalaitoksesta Tammerkoskessa, ja syy oli käytännöllinen: kutojan on nähtävä lanka myös pimeällä, ja avoliekki oli puuvillasalissa jatkuva palonvaara. Sali sai nimekseen Plevna, ja siinä toimii nykyään elokuvateatteri.
+
+### 52.2
+KYSYMYS: Mitä madridilaiset tekivät vapaapäivinään 1700-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Goya maalasi madridilaisten vapaapäivät
+Tietoruudun teksti: Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Goyan kansankuvat] Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+
+### 52.3
+KYSYMYS: Miksi Goyan myöhemmät maalaukset ovat niin toisenlaisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Goya maalasi madridilaisten vapaapäivät
+Tietoruudun teksti: Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Goyan kansankuvat] Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei kuninkaista vaan kaupungista.
+- [Madrid — kohdekartta / Kohdekartta: Prado-museo] 1819 Arkkitehti Juan de Villanueva suunnitteli rakennuksen jo vuonna 1785 kuningas Kaarle III:n tilauksesta luonnontieteiden museoksi. Suunnitelmat viivästyivät sotien takia, ja lopulta kuningas Ferdinand VII päätti tehdä siitä taidemuseon. Prado avasi ovensa marraskuussa 1819. Museossa on maailman hienoimpia maalauksia: Velázquezin Las Meninas, Boschin Maallisten ilojen puutarha ja Goyan synkät niin kutsutut mustat maalaukset. Goya on museon eniten esillä oleva taiteilija. Kokoelmiin kuuluu nykyään noin 7 600 maalausta ja tuhansia piirustuksia ja veistoksia. Rakennusta laajennettiin maan alle 2007, ja vuonna 2023 museossa kävi yli 3,3 miljoonaa kävijää.
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (nosto:chotis-laatalla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+
+### 53.1
+KYSYMYS: Mistä chotis tuli Madridiin ja miten se muuttui perillä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+
+### 53.2
+KYSYMYS: Mitä verbena-juhlissa tapahtuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+
+### 53.3
+KYSYMYS: Mikä erottaa zarzuelan oopperasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Chotis tanssitaan yhden laatan päällä
+Tietoruudun teksti: Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mérida — kohdekartta / Kohdekartta: Peón Contrerasin teatteri] 1908 Méridan vanhin näyttämö on ollut samalla paikalla kolmella nimellä ja kolmessa rakennuksessa. Ensimmäisen, Teatro San Carlosin, valinta alkoi 1806. Vuonna 1877 Antonino Bolio Guzmán osti sen ja nimesi Teatro Bolioksi, ja jo seuraavan näytäntökauden jälkeen se vaihtoi omistajaa uudestaan. Nykyisen nimensä se sai 27. joulukuuta 1878 kahden sanomalehden aloitteesta yucatánilaisen lääkärin ja näytelmäkirjailijan José Peón Contrerasin mukaan. Vuonna 1897 saliin asennettiin Lumièren veljesten tekniikka, ja liikkuvia kuvia alettiin esittää samassa talossa oopperan ja zarzuelan kanssa. Vuonna 1899 perustettu teatteriyhtiö osti tontin ja purki vanhan rakennuksen. Nykyinen talo rakennettiin 1900…
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (nosto:madridin-kaksi-joukkuetta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Cibeleen aukio] 1780 Aukion keskellä kohoava Cibeles-suihkulähde on Madridin tunnetuimpia näkymiä. Arkkitehti Ventura Rodríguez suunnitteli sen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Sitä ympäröi neljä komeaa rakennusta kolmesta eri kaupunginosasta, joista suurin on entinen postipalatsi — nykyään Madridin kaupungintalo. Suihkulähteestä on tullut myös jalkapallon juhlapaikka: kun Real Madrid voittaa mestaruuden, joukkueen kapteeni ripustaa lipun patsaan kaulaan. Innostus on mennyt liiallisuuksiin kahdesti — jumalattarelta katkesi käsi sekä 1994 että 2002.
+- [Kano — kohdekartta / Kohdekartta: Sani Abachan stadion] 2000 ja 2009 Kanon monitoimistadion on Kano Pillarsin koti, ja katsojia siihen mahtuu kuusitoistatuhatta. Se on nimetty entisen valtionpäämiehen, kenraali Sani Abachan mukaan. Stadion on nähnyt enemmän kansainvälistä jalkapalloa kuin moni suurempi areena. Se isännöi vuoden 1999 nuorten maailmanmestaruuskisojen otteluita, vuoden 2000 Afrikan cupia ja vuoden 2009 alle 17-vuotiaiden MM-kisoja. Kotiyleisö on tehnyt oman ennätyksensä. Kaudella 2017 Kano Pillarsin kotiotteluissa oli keskimäärin kymmenentuhatta katsojaa — korkein keskiarvo, joka Nigerian liigassa on koskaan kirjattu.
+
+### 54.1
+KYSYMYS: Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Tiede: Kellotorni, joka näytti taivaan] 1092 — Su Song oli virkamies ja monialainen tutkija, joka rakensi Kaifengiin vesikäyttöisen tähtitieteellisen kellotornin. Se valmistui vuonna 1092. Tornissa oli säätelymekanismi, joka päästi vesipyörän liikkumaan aina saman verran kerrallaan, ja sen voima siirtyi ylös ketjulla, jota Su Song kutsui taivaan tikkaiksi. Ylimpänä pyöri armillaarisfääri tähtien mukana, ja torni näytti tunnit 133 pienen liikkuvan hahmon avulla. Kun pääkaupunkia siirrettiin vuonna 1127, torni purettiin eikä sitä saatu enää koskaan kokoon.
+- [Filippiinit — maalehti / Luonto: Silmät eivät liiku, mutta pää kääntyy] Filippiinientarsierin silmät ovat suhteessa ruumiin painoon nisäkkäiden suurimmat — niin suuret, etteivät ne mahdu liikkumaan kuopissaan. Sen sijaan niska kääntää pyöreän pään puoli kierrosta kumpaankin suuntaan. Eläin on yöeläin, joka nukkuu päivät tiheikössä lähellä maata ja saalistaa pimeällä sirkkoja ja heinäsirkkoja, molemmin käsin suuhun vieden. Suku sai nimen Carlito bohololaisen suojelijan Carlito Pizarrasin mukaan. Boholin saarella yksilöitä arvioidaan olevan enää noin seitsemänsataa.
+- [Kazakstan — maalehti / Historia] Kazakstanin historia kulkee hevosen selässä: aro kesytti hevosen tuhansia vuosia ennen muita, ja sen jälkeen aron valtakunnat syntyivät ja hajosivat sen mukaan, kuka pystyi liikkumaan nopeimmin.
+
+### 54.2
+KYSYMYS: Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Cibeleen aukio] 1780 Aukion keskellä kohoava Cibeles-suihkulähde on Madridin tunnetuimpia näkymiä. Arkkitehti Ventura Rodríguez suunnitteli sen vuonna 1780: valkoisesta marmorista veistetty jumalatar Cibele ajaa vaunuilla, joita vetävät kaksi leijonaa. Suihkulähde siirrettiin nykyiselle paikalleen vuonna 1895. Sitä ympäröi neljä komeaa rakennusta kolmesta eri kaupunginosasta, joista suurin on entinen postipalatsi — nykyään Madridin kaupungintalo. Suihkulähteestä on tullut myös jalkapallon juhlapaikka: kun Real Madrid voittaa mestaruuden, joukkueen kapteeni ripustaa lipun patsaan kaulaan. Innostus on mennyt liiallisuuksiin kahdesti — jumalattarelta katkesi käsi sekä 1994 että 2002.
+
+### 54.3
+KYSYMYS: Mitä muuta suurilla stadioneilla tehdään kuin pelataan jalkapalloa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka vaihtoi joukkuetta
+Tietoruudun teksti: Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.
+
+Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhline…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kohdekartta / Kohdekartta: Sani Abachan stadion] 2000 ja 2009 Kanon monitoimistadion on Kano Pillarsin koti, ja katsojia siihen mahtuu kuusitoistatuhatta. Se on nimetty entisen valtionpäämiehen, kenraali Sani Abachan mukaan. Stadion on nähnyt enemmän kansainvälistä jalkapalloa kuin moni suurempi areena. Se isännöi vuoden 1999 nuorten maailmanmestaruuskisojen otteluita, vuoden 2000 Afrikan cupia ja vuoden 2009 alle 17-vuotiaiden MM-kisoja. Kotiyleisö on tehnyt oman ennätyksensä. Kaudella 2017 Kano Pillarsin kotiotteluissa oli keskimäärin kymmenentuhatta katsojaa — korkein keskiarvo, joka Nigerian liigassa on koskaan kirjattu.
+- [Ulan Bator — kohdekartta / Kohdekartta: Kansallisstadion] valmistui 1958 Stadion rakennettiin 1958 venäläisenä rakennustyönä teräsbetonista ja tiilestä, ja mongolialaiset viimeistelivät keskuskatoksen 1971. Katsomoon mahtuu jalkapallo-otteluissa 12 500 katsojaa, ja kenttä on tavanomaiset 105 kertaa 68 metriä. Stadionyhtiön maat kattavat noin 27 hehtaaria, joista itse stadion vie kahdeksan. Ainoa vuosittainen pakollinen tapahtuma on Naadam, joka alkaa 11. heinäkuuta. Juhla avataan kulkueella, jossa Tšingis-kaanin yhdeksän hevosenhäntästandaaria kannetaan Sükhbaatarin aukiolta stadionille; hännät edustavat yhdeksää mongoliheimoa. Avajaisissa ja päätöksessä stadionille marssivat ratsastajat, urheilijat ja munkit. Katsomon ulkopuolella myydään khuushu…
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (nosto:palamaton-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kuninkaanlinna] 1755 Jouluaattona 1734 vanha Alcázar-linna paloi neljä vuorokautta, ja suuri osa siitä tuhoutui kokonaan. Osa taideaarteista oli onneksi jo siirretty toiseen palatsiin, mutta yksi Velázquezin maalaus katosi liekeissä. Kuningas Filip V käski rakentaa palon paikalle upouuden linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli sille ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua — hänen oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta rakennetun linnan, ja työt kestivät vuodesta 1738 vuoteen 1755. Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. Nykyään siellä pidetään valtiovierailuja, ja kokoelmiin kuul…
+- [Madrid — kohdekartta / Kohdekartta: Palamaton linna] Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+
+### 55.1
+KYSYMYS: Miten 1700-luvun rakentaja teki talosta palamattoman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+### 55.2
+KYSYMYS: Mitä vanhan Alcázarin palossa menetettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historian hetki: Palos de la Frontera 1492 — kolme laivaa laskuveden mukana] 3.8.1492 — Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja Niñaa luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, ja miehistö on värvätty naapureista Palosista ja Moguerista. Laiturilla seisova väki tuntee lähtijät nimeltä, ja se on pojan onni ja pelko yhtä aikaa. Aamu on juuri valjennut. Río Tinton suistossa vesi laskee, ja juuri sitä on odotettu: laskuvesi vie laivat merelle ilman soutua. Suurin aluksista on Santa María, pyöreärunkoinen nao, jonka omistaa Juan de la Cosa ja jota Kolumbus itse komentaa. …
+
+### 55.3
+KYSYMYS: Miksi kuningas ei asu Länsi-Euroopan suurimmassa palatsissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Linna rakennettiin palamattomaksi
+Tietoruudun teksti: Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Kuninkaanlinna] 1755 Jouluaattona 1734 vanha Alcázar-linna paloi neljä vuorokautta, ja suuri osa siitä tuhoutui kokonaan. Osa taideaarteista oli onneksi jo siirretty toiseen palatsiin, mutta yksi Velázquezin maalaus katosi liekeissä. Kuningas Filip V käski rakentaa palon paikalle upouuden linnan. Italialainen arkkitehti Filippo Juvarra suunnitteli sille ensin hahmotelman, mutta kuoli ennen rakennustöiden alkua — hänen oppilaansa Giovanni Battista Sacchetti suunnitteli lopulta rakennetun linnan, ja työt kestivät vuodesta 1738 vuoteen 1755. Linnassa on 3 418 huonetta ja yli 135 000 neliömetriä lattiapinta-alaa — se on Länsi-Euroopan suurin palatsi. Nykyään siellä pidetään valtiovierailuja, ja kokoelmiin kuul…
+- [Madrid — kohdekartta / Kohdekartta: Palamaton linna] Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin laidalla.
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI

@@ -1,0 +1,246 @@
+================ KOHTA 11 (kohde:las-medulas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Médulas (tekniikka)
+Tietoruudun teksti: Las Médulas on roomalainen kultakaivosalue lähellä Ponferradaa El Bierzon seudulla Leónin maakunnassa. Se oli koko Rooman valtakunnan tärkein kultakaivos ja sen suurin avolouhos. Alue kuuluu Unescon maailmanperintöluetteloon, ja vuonna 2014 tehdyt laserkeilaukset ovat vahvistaneet, kuinka laajalle roomalaiset työt ulottuivat.
+
+Maiseman muodon selittää menetelmä nimeltä ruina montium eli vuorten hajottaminen. Plinius vanhempi kuvasi sen vuonna 77 jaa. Kyse oli vesivoimalla louhimisesta: vuori kaivettiin ontoksi ja huuhdottiin sitten suurella vesimäärällä. Vesi tuotiin toisesta vesistöstä pitkin ainakin seitsemää akveduktia, jotka keräsivät virtoja La Cabreran seudulta eri korkeuksilta. Samoilla akvedukteilla pestiin myös maaperän kultahiekka.
+
+Augustus valloitti alueen vuonna 25 eaa. Ennen roomalaisia paikalliset asukkaat keräsivät kultaa jokisorasta, ja laajamittainen tuotanto alkoi vas…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Pilvi vei mittauksen, matka tuotti menetelmän] 1761–1765 — Royal Society lähetti 1760 pappi Nevil Maskelynen ja matemaatikko Robert Waddingtonin Saint Helenalle havaitsemaan Venuksen ylikulkua — juuri sitä mittausta, jota Halley oli samalta saarelta käsin ehdottanut. Havaintopäivä oli pilvinen, eikä ylikulusta saatu mitään. Maskelyne käytti kuitenkin pitkän merimatkan kuuetäisyysmenetelmän koetteluun: Kuun paikasta voi laskea pituusasteen ilman tarkkaa kelloa. Hän julkaisi menetelmän taulukoineen 1763 ja esitti, että kuuetäisyydet laskettaisiin valmiiksi joka vuodelle. Ehdotuksesta syntyi Nautical Almanac, ja sen mukana Greenwichistä tuli merenkulun nollameridiaani.
+
+### 11.1
+KYSYMYS: Mitä ruina montium tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Médulas (tekniikka)
+Tietoruudun teksti: Las Médulas on roomalainen kultakaivosalue lähellä Ponferradaa El Bierzon seudulla Leónin maakunnassa. Se oli koko Rooman valtakunnan tärkein kultakaivos ja sen suurin avolouhos. Alue kuuluu Unescon maailmanperintöluetteloon, ja vuonna 2014 tehdyt laserkeilaukset ovat vahvistaneet, kuinka laajalle roomalaiset työt ulottuivat.
+
+Maiseman muodon selittää menetelmä nimeltä ruina montium eli vuorten hajottaminen. Plinius vanhempi kuvasi sen vuonna 77 jaa. Kyse oli vesivoimalla louhimisesta: vuori kaivettiin ontoksi ja huuhdottiin sitten suurella vesimäärällä. Vesi tuotiin toisesta vesistöstä pitkin ainakin seitsemää akveduktia, jotka keräsivät virtoja La Cabreran seudulta eri korkeuksilta. Samoilla akvedukteilla pestiin myös maaperän kultahiekka.
+
+Augustus valloitti alueen vuonna 25 eaa. Ennen roomalaisia paikalliset asukkaat keräsivät kultaa jokisorasta, ja laajamittainen tuotanto alkoi vas…
+
+### 11.2
+KYSYMYS: Kuka kuvasi menetelmän ensimmäisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Las Médulas (tekniikka)
+Tietoruudun teksti: Las Médulas on roomalainen kultakaivosalue lähellä Ponferradaa El Bierzon seudulla Leónin maakunnassa. Se oli koko Rooman valtakunnan tärkein kultakaivos ja sen suurin avolouhos. Alue kuuluu Unescon maailmanperintöluetteloon, ja vuonna 2014 tehdyt laserkeilaukset ovat vahvistaneet, kuinka laajalle roomalaiset työt ulottuivat.
+
+Maiseman muodon selittää menetelmä nimeltä ruina montium eli vuorten hajottaminen. Plinius vanhempi kuvasi sen vuonna 77 jaa. Kyse oli vesivoimalla louhimisesta: vuori kaivettiin ontoksi ja huuhdottiin sitten suurella vesimäärällä. Vesi tuotiin toisesta vesistöstä pitkin ainakin seitsemää akveduktia, jotka keräsivät virtoja La Cabreran seudulta eri korkeuksilta. Samoilla akvedukteilla pestiin myös maaperän kultahiekka.
+
+Augustus valloitti alueen vuonna 25 eaa. Ennen roomalaisia paikalliset asukkaat keräsivät kultaa jokisorasta, ja laajamittainen tuotanto alkoi vas…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Tiede: Pilvi vei mittauksen, matka tuotti menetelmän] 1761–1765 — Royal Society lähetti 1760 pappi Nevil Maskelynen ja matemaatikko Robert Waddingtonin Saint Helenalle havaitsemaan Venuksen ylikulkua — juuri sitä mittausta, jota Halley oli samalta saarelta käsin ehdottanut. Havaintopäivä oli pilvinen, eikä ylikulusta saatu mitään. Maskelyne käytti kuitenkin pitkän merimatkan kuuetäisyysmenetelmän koetteluun: Kuun paikasta voi laskea pituusasteen ilman tarkkaa kelloa. Hän julkaisi menetelmän taulukoineen 1763 ja esitti, että kuuetäisyydet laskettaisiin valmiiksi joka vuodelle. Ehdotuksesta syntyi Nautical Almanac, ja sen mukana Greenwichistä tuli merenkulun nollameridiaani.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:meridan-roomalainen-teatteri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Méridan roomalainen teatteri (historia)
+Tietoruudun teksti: Méridan roomalainen teatteri rakennettiin Emerita Augustan siirtokuntaan, joka oli Rooman Lusitanian maakunnan pääkaupunki ja on nykyään Mérida. Konsuli Vipsanius Agrippa vauhditti hanketta, ja teatteri valmistui vuosina 16–15 eaa. Se rakennettiin viihdekokonaisuudeksi yhdessä kaupungin amfiteatterin kanssa, ja sen mitat noudattavat Vitruviuksen ohjeita.
+
+Teatteria uudistettiin ainakin kahdesti. Ensimmäisen ja toisen vuosisadan vaihteessa, mahdollisesti Traianuksen aikana, pystytettiin nykyinen näyttämön taustaseinä eli scaenae frons. Konstantinus Suuren aikana vuosina 330–340 lisättiin uusia koristeaiheita ja rakennusta kiertävä kulkuväylä.
+
+Myöhäisantiikissa teatteri hylättiin ja hautautui vähitellen maan alle niin, että vain katsomon ylimmät penkkirivit jäivät näkyviin. Paikallinen perimätieto kutsui paikkaa seitsemäksi tuoliksi ja kertoi, että niillä maurien kuninkaat istuivat päätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — maalehti / Urheilu: Lounas, jolla viisitoista muuttui seitsemäksi] 1976– — Hongkongin seiskarugbyturnaus syntyi lounaalla, jolla mainostaja Rodney Bentham-Wood ehdotti rugbyliiton puheenjohtajalle Tokkie Smithille viidentoista miehen kansainvälistä turnausta. Se olisi tullut liian kalliiksi, joten joukkueiden kooksi sovittiin seitsemän. Cathay Pacificin Jock Campbell tarjoutui maksamaan matkat, ja ensimmäinen turnaus pelattiin 28. maaliskuuta 1976 Hong Kong Football Clubilla. Mukana olivat muun muassa Fidži, Japani, Etelä-Korea, Malesia, Sri Lanka, Thaimaa ja Tonga; finaalissa kohtasivat australialainen ja uusiseelantilainen seura, ja Cantabrians voitti 24–8.
+- [Winnipeg — kohdekartta / Kohdekartta: Burton Cummings -teatteri] 1907 Teatterin rakennutti paikallinen impressaario Corliss Powers Walker, ja sata vuotta se tunnettiin Walkerin teatterina. Tontit ostettiin heinäkuussa 1905, talo rakennettiin 1906–07, ja avajaiset pidettiin 18. helmikuuta 1907 Puccinin Madame Butterflyllä. Katsomoon mahtui 1 798 ihmistä, holvikatto nousee kuuteenkymmeneen jalkaan, ja kaksi parveketta rakennettiin ilman tukipylväitä, jotta ylhäältäkin näkisi näyttämölle. Lippu maksoi parvekkeella 25 senttiä ja permannolla kaksi dollaria. Walker oli nähnyt Chicagon Iroquois-teatterin palon 1903 ja tilasi montrealilaiselta Howard C. Stonelta paloturvallisen talon: teräshäkki, betoniin ja terrakottaan valetut rakenteet, betonilattiat, palo-ov…
+
+### 12.1
+KYSYMYS: Kuka rakennutti teatterin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Méridan roomalainen teatteri (historia)
+Tietoruudun teksti: Méridan roomalainen teatteri rakennettiin Emerita Augustan siirtokuntaan, joka oli Rooman Lusitanian maakunnan pääkaupunki ja on nykyään Mérida. Konsuli Vipsanius Agrippa vauhditti hanketta, ja teatteri valmistui vuosina 16–15 eaa. Se rakennettiin viihdekokonaisuudeksi yhdessä kaupungin amfiteatterin kanssa, ja sen mitat noudattavat Vitruviuksen ohjeita.
+
+Teatteria uudistettiin ainakin kahdesti. Ensimmäisen ja toisen vuosisadan vaihteessa, mahdollisesti Traianuksen aikana, pystytettiin nykyinen näyttämön taustaseinä eli scaenae frons. Konstantinus Suuren aikana vuosina 330–340 lisättiin uusia koristeaiheita ja rakennusta kiertävä kulkuväylä.
+
+Myöhäisantiikissa teatteri hylättiin ja hautautui vähitellen maan alle niin, että vain katsomon ylimmät penkkirivit jäivät näkyviin. Paikallinen perimätieto kutsui paikkaa seitsemäksi tuoliksi ja kertoi, että niillä maurien kuninkaat istuivat päätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Burton Cummings -teatteri] 1907 Teatterin rakennutti paikallinen impressaario Corliss Powers Walker, ja sata vuotta se tunnettiin Walkerin teatterina. Tontit ostettiin heinäkuussa 1905, talo rakennettiin 1906–07, ja avajaiset pidettiin 18. helmikuuta 1907 Puccinin Madame Butterflyllä. Katsomoon mahtui 1 798 ihmistä, holvikatto nousee kuuteenkymmeneen jalkaan, ja kaksi parveketta rakennettiin ilman tukipylväitä, jotta ylhäältäkin näkisi näyttämölle. Lippu maksoi parvekkeella 25 senttiä ja permannolla kaksi dollaria. Walker oli nähnyt Chicagon Iroquois-teatterin palon 1903 ja tilasi montrealilaiselta Howard C. Stonelta paloturvallisen talon: teräshäkki, betoniin ja terrakottaan valetut rakenteet, betonilattiat, palo-ov…
+- [Miami — kohdekartta / Kohdekartta: Lyric-teatteri] 1913 Lyric-teatterin rakennutti ja omisti georgialainen liikemies Geder Walker, ja se avattiin 1913 Overtownissa, jota tuolloin kutsuttiin nimellä Colored Town. Salissa oli neljäsataa paikkaa. Miami News kuvasi taloa 1915 sanoin, että se on mahdollisesti kaunein ja kallein mustien omistama teatteri koko etelässä. Teatteri oli osa korttelia, jota sanottiin Little Broadwayksi: hotellit, ravintolat ja yökerhot vetivät sekä mustia että valkoisia vieraita, ja alue sai lempinimen etelän Harlem. Lyricissä esiintyivät ja puhuivat muun muassa W. E. B. Du Bois, Mary McLeod Bethune, Marian Anderson, Bessie Smith, Ethel Waters ja Fisk Jubilee Singers. Walkerin kuoltua 1919 talo siirtyi hänen vaimolleen…
+
+### 12.2
+KYSYMYS: Miksi paikkaa kutsuttiin seitsemäksi tuoliksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Méridan roomalainen teatteri (historia)
+Tietoruudun teksti: Méridan roomalainen teatteri rakennettiin Emerita Augustan siirtokuntaan, joka oli Rooman Lusitanian maakunnan pääkaupunki ja on nykyään Mérida. Konsuli Vipsanius Agrippa vauhditti hanketta, ja teatteri valmistui vuosina 16–15 eaa. Se rakennettiin viihdekokonaisuudeksi yhdessä kaupungin amfiteatterin kanssa, ja sen mitat noudattavat Vitruviuksen ohjeita.
+
+Teatteria uudistettiin ainakin kahdesti. Ensimmäisen ja toisen vuosisadan vaihteessa, mahdollisesti Traianuksen aikana, pystytettiin nykyinen näyttämön taustaseinä eli scaenae frons. Konstantinus Suuren aikana vuosina 330–340 lisättiin uusia koristeaiheita ja rakennusta kiertävä kulkuväylä.
+
+Myöhäisantiikissa teatteri hylättiin ja hautautui vähitellen maan alle niin, että vain katsomon ylimmät penkkirivit jäivät näkyviin. Paikallinen perimätieto kutsui paikkaa seitsemäksi tuoliksi ja kertoi, että niillä maurien kuninkaat istuivat päätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — maalehti / Urheilu: Lounas, jolla viisitoista muuttui seitsemäksi] 1976– — Hongkongin seiskarugbyturnaus syntyi lounaalla, jolla mainostaja Rodney Bentham-Wood ehdotti rugbyliiton puheenjohtajalle Tokkie Smithille viidentoista miehen kansainvälistä turnausta. Se olisi tullut liian kalliiksi, joten joukkueiden kooksi sovittiin seitsemän. Cathay Pacificin Jock Campbell tarjoutui maksamaan matkat, ja ensimmäinen turnaus pelattiin 28. maaliskuuta 1976 Hong Kong Football Clubilla. Mukana olivat muun muassa Fidži, Japani, Etelä-Korea, Malesia, Sri Lanka, Thaimaa ja Tonga; finaalissa kohtasivat australialainen ja uusiseelantilainen seura, ja Cantabrians voitti 24–8.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:salamancan-yliopisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salamancan yliopisto (kulttuuri)
+Tietoruudun teksti: Salamancan yliopisto on julkinen tutkimusyliopisto Salamancassa Länsi-Espanjassa. Sen perusti kuningas Alfonso IX vuonna 1218, ja se on espanjankielisen maailman vanhin ja koko maailman neljänneksi vanhin yhtäjaksoisesti toiminut yliopisto. Opiskelijoita on yli 30 000 viidestäkymmenestä maasta.
+
+Ennen yliopistoa Salamancassa toimi tuomiokirkkokoulu, joka tiedetään olleen olemassa jo 1130. Vuonna 1218 siitä muodostettiin studium generale nimellä scholas Salamanticae. Alfonso X:n 8. toukokuuta 1254 antama kuninkaallinen kirja määräsi yliopiston järjestyksestä ja rahoituksesta ja käytti ensimmäisen kerran sen nykyistä nimeä. Paavi Aleksanteri IV vahvisti kirjan bullallaan 1255 ja antoi yliopiston tutkinnoille yleisen tunnustuksen.
+
+Yliopiston maine näkyy vanhoissa sanonnoissa. Quod natura non dat, Salmantica non praestat — mitä luonto ei anna, sitä Salamanca ei lainaa. Toinen kuuluu Multos…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Yliopiston aukio] 1857 Yliopiston aukio syntyi vuonna 1857 samaan aikaan kun Bukarestin yliopisto perustettiin. Aukio sijaitsee keskellä kaupunkia metroaseman vieressä. Paikka on ollut tärkeä risteyskohta jo satoja vuosia, sillä jo 1400-luvulla siitä kulki kaupungin raja. Aukiolla seisoo neljä patsasta tärkeistä romanialaisista henkilöistä: hallitsija Mihai Rohkean patsas pystytettiin vuonna 1874, runoilija Ion Heliade Rădulescun vuonna 1879, opettaja Gheorghe Lazărin vuonna 1889 ja tiedemies Spiru Haretin vuonna 1932. Vieressä kohoaa myös Intercontinental-hotelli, yksi Bukarestin korkeimmista rakennuksista. Vuonna 1990 aukiolla järjestettiin rauhanomainen opiskelijamielenosoitus, joka muuttui väkivaltaiseks…
+- [Iso-Britannia — maalehti / Tiede: Rutto sulki yliopiston ja avasi maailman] Kun rutto sulki Cambridgen yliopiston 1665, 23-vuotias Isaac Newton palasi kotitilalleen Woolsthorpeen. Siellä vietetyn puolentoista vuoden aikana hän kehitti differentiaalilaskennan, selvitti valon jakautumisen väreiksi prisman avulla ja muotoili painovoiman lain. Hän itse kertoi myöhemmin, että ajatus lähti puutarhan omenapuusta: miksi omena putoaa aina suoraan alas? Newton oli myös rahapajan johtaja ja jahtasi väärentäjiä katujen kapakoissa — hän lähetti heistä useita hirsipuuhun.
+- [Vilna — kaupunkilehti / Oppi: Tähtitorni yliopiston pihan laidalla] Yliopiston tähtitorni perustettiin vuonna 1753. Sen sai aikaan matematiikan opettaja Tomas Žebrauskas, ja rahat lahjoitti liettualainen aatelisnainen Elžbieta Oginskienė-Puzynina. Tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu latinankielisiä lauseita ja eläinradan merkkejä. Nykyään kaupungin valot ovat niin kirkkaita, ettei taivasta voi enää tarkkailla keskustasta, mutta tutkimustyö jatkuu yhä.
+
+### 13.1
+KYSYMYS: Kuka perusti yliopiston?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salamancan yliopisto (kulttuuri)
+Tietoruudun teksti: Salamancan yliopisto on julkinen tutkimusyliopisto Salamancassa Länsi-Espanjassa. Sen perusti kuningas Alfonso IX vuonna 1218, ja se on espanjankielisen maailman vanhin ja koko maailman neljänneksi vanhin yhtäjaksoisesti toiminut yliopisto. Opiskelijoita on yli 30 000 viidestäkymmenestä maasta.
+
+Ennen yliopistoa Salamancassa toimi tuomiokirkkokoulu, joka tiedetään olleen olemassa jo 1130. Vuonna 1218 siitä muodostettiin studium generale nimellä scholas Salamanticae. Alfonso X:n 8. toukokuuta 1254 antama kuninkaallinen kirja määräsi yliopiston järjestyksestä ja rahoituksesta ja käytti ensimmäisen kerran sen nykyistä nimeä. Paavi Aleksanteri IV vahvisti kirjan bullallaan 1255 ja antoi yliopiston tutkinnoille yleisen tunnustuksen.
+
+Yliopiston maine näkyy vanhoissa sanonnoissa. Quod natura non dat, Salmantica non praestat — mitä luonto ei anna, sitä Salamanca ei lainaa. Toinen kuuluu Multos…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Yliopiston aukio] 1857 Yliopiston aukio syntyi vuonna 1857 samaan aikaan kun Bukarestin yliopisto perustettiin. Aukio sijaitsee keskellä kaupunkia metroaseman vieressä. Paikka on ollut tärkeä risteyskohta jo satoja vuosia, sillä jo 1400-luvulla siitä kulki kaupungin raja. Aukiolla seisoo neljä patsasta tärkeistä romanialaisista henkilöistä: hallitsija Mihai Rohkean patsas pystytettiin vuonna 1874, runoilija Ion Heliade Rădulescun vuonna 1879, opettaja Gheorghe Lazărin vuonna 1889 ja tiedemies Spiru Haretin vuonna 1932. Vieressä kohoaa myös Intercontinental-hotelli, yksi Bukarestin korkeimmista rakennuksista. Vuonna 1990 aukiolla järjestettiin rauhanomainen opiskelijamielenosoitus, joka muuttui väkivaltaiseks…
+- [Iso-Britannia — maalehti / Tiede: Rutto sulki yliopiston ja avasi maailman] Kun rutto sulki Cambridgen yliopiston 1665, 23-vuotias Isaac Newton palasi kotitilalleen Woolsthorpeen. Siellä vietetyn puolentoista vuoden aikana hän kehitti differentiaalilaskennan, selvitti valon jakautumisen väreiksi prisman avulla ja muotoili painovoiman lain. Hän itse kertoi myöhemmin, että ajatus lähti puutarhan omenapuusta: miksi omena putoaa aina suoraan alas? Newton oli myös rahapajan johtaja ja jahtasi väärentäjiä katujen kapakoissa — hän lähetti heistä useita hirsipuuhun.
+- [Vilna — kaupunkilehti / Oppi: Tähtitorni yliopiston pihan laidalla] Yliopiston tähtitorni perustettiin vuonna 1753. Sen sai aikaan matematiikan opettaja Tomas Žebrauskas, ja rahat lahjoitti liettualainen aatelisnainen Elžbieta Oginskienė-Puzynina. Tähtitorni on Euroopan neljänneksi vanhin, ja sen julkisivuun on kaiverrettu latinankielisiä lauseita ja eläinradan merkkejä. Nykyään kaupungin valot ovat niin kirkkaita, ettei taivasta voi enää tarkkailla keskustasta, mutta tutkimustyö jatkuu yhä.
+
+### 13.2
+KYSYMYS: Mitä sanonta Quod natura non dat tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Salamancan yliopisto (kulttuuri)
+Tietoruudun teksti: Salamancan yliopisto on julkinen tutkimusyliopisto Salamancassa Länsi-Espanjassa. Sen perusti kuningas Alfonso IX vuonna 1218, ja se on espanjankielisen maailman vanhin ja koko maailman neljänneksi vanhin yhtäjaksoisesti toiminut yliopisto. Opiskelijoita on yli 30 000 viidestäkymmenestä maasta.
+
+Ennen yliopistoa Salamancassa toimi tuomiokirkkokoulu, joka tiedetään olleen olemassa jo 1130. Vuonna 1218 siitä muodostettiin studium generale nimellä scholas Salamanticae. Alfonso X:n 8. toukokuuta 1254 antama kuninkaallinen kirja määräsi yliopiston järjestyksestä ja rahoituksesta ja käytti ensimmäisen kerran sen nykyistä nimeä. Paavi Aleksanteri IV vahvisti kirjan bullallaan 1255 ja antoi yliopiston tutkinnoille yleisen tunnustuksen.
+
+Yliopiston maine näkyy vanhoissa sanonnoissa. Quod natura non dat, Salmantica non praestat — mitä luonto ei anna, sitä Salamanca ei lainaa. Toinen kuuluu Multos…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:serra-de-tramuntana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Serra de Tramuntana (luonto · vuori)
+Tietoruudun teksti: Serra de Tramuntana on vuoristo Mallorcan pohjoisrannikolla, ja se muodostaa saaren pohjoisen selkärangan. Korkein huippu Puig Major nousee 1 436 metriin, ja se on Baleaarien korkein vuori. UNESCO liitti alueen maailmanperintöluetteloon kulttuurimaisemana vuonna 2011, sillä vuosituhansien maanviljely niukassa ympäristössä on synnyttänyt viljelyterasseja, vesimyllyjä ja vedenhallinnan verkoston. Nykyisin alueella kannustetaan kestävään matkailuun: vaeltamiseen, pyöräilyyn ja lintujen katseluun.
+
+### 14.1
+KYSYMYS: Kuinka korkea on Baleaarien korkein vuori?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Serra de Tramuntana (luonto · vuori)
+Tietoruudun teksti: Serra de Tramuntana on vuoristo Mallorcan pohjoisrannikolla, ja se muodostaa saaren pohjoisen selkärangan. Korkein huippu Puig Major nousee 1 436 metriin, ja se on Baleaarien korkein vuori. UNESCO liitti alueen maailmanperintöluetteloon kulttuurimaisemana vuonna 2011, sillä vuosituhansien maanviljely niukassa ympäristössä on synnyttänyt viljelyterasseja, vesimyllyjä ja vedenhallinnan verkoston. Nykyisin alueella kannustetaan kestävään matkailuun: vaeltamiseen, pyöräilyyn ja lintujen katseluun.
+
+### 14.2
+KYSYMYS: Miksi viljelyterassit ja vesimyllyt tekivät alueesta maailmanperintökohteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Serra de Tramuntana (luonto · vuori)
+Tietoruudun teksti: Serra de Tramuntana on vuoristo Mallorcan pohjoisrannikolla, ja se muodostaa saaren pohjoisen selkärangan. Korkein huippu Puig Major nousee 1 436 metriin, ja se on Baleaarien korkein vuori. UNESCO liitti alueen maailmanperintöluetteloon kulttuurimaisemana vuonna 2011, sillä vuosituhansien maanviljely niukassa ympäristössä on synnyttänyt viljelyterasseja, vesimyllyjä ja vedenhallinnan verkoston. Nykyisin alueella kannustetaan kestävään matkailuun: vaeltamiseen, pyöräilyyn ja lintujen katseluun.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-real-alcazar-madrid) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Madridin Real Alcázar (historia)
+Tietoruudun teksti: Madridin maurilainen linnoitus kasvoi Habsburgien kuninkaanlinnaksi, jossa säilytettiin noin kahta tuhatta maalausta. Jouluaattona 1734 syttynyt tulipalo raivosi neljä päivää. Nykyinen Palacio Real rakennettiin sen paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Palatsi, jonka seinät puhuvat kahta kieltä] Kastilian kuningas Pedro I rakennutti 1360-luvulla Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366 — todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä "Sultan Don Bidru". Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen Muhammad V, Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua Alhambraa.
+
+### 15.1
+KYSYMYS: Miltä Madridin Real Alcázar näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Madridin Real Alcázar (historia)
+Tietoruudun teksti: Madridin maurilainen linnoitus kasvoi Habsburgien kuninkaanlinnaksi, jossa säilytettiin noin kahta tuhatta maalausta. Jouluaattona 1734 syttynyt tulipalo raivosi neljä päivää. Nykyinen Palacio Real rakennettiin sen paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Palatsi, jonka seinät puhuvat kahta kieltä] Kastilian kuningas Pedro I rakennutti 1360-luvulla Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366 — todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä "Sultan Don Bidru". Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen Muhammad V, Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua Alhambraa.
+
+### 15.2
+KYSYMYS: Miksi Madridin Real Alcázar katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Madridin Real Alcázar (historia)
+Tietoruudun teksti: Madridin maurilainen linnoitus kasvoi Habsburgien kuninkaanlinnaksi, jossa säilytettiin noin kahta tuhatta maalausta. Jouluaattona 1734 syttynyt tulipalo raivosi neljä päivää. Nykyinen Palacio Real rakennettiin sen paikalle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Palatsi, jonka seinät puhuvat kahta kieltä] Kastilian kuningas Pedro I rakennutti 1360-luvulla Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366 — todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä "Sultan Don Bidru". Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen Muhammad V, Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua Alhambraa.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

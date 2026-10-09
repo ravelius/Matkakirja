@@ -1,0 +1,202 @@
+================ KOHTA 36 (kohde:hahmotelma-jabugo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+
+### 36.1
+KYSYMYS: Miksi ibérico-kinkku on niin arvostettua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+
+### 36.2
+KYSYMYS: Mitä tarkoittaa jamón de bellota?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jabugo (ruoka)
+Tietoruudun teksti: Jabugo on noin 2 200 asukkaan kaupunki Huelvan maakunnassa, ja seutu tunnetaan tunnusomaisesta kinkustaan, jamón ibéricosta. Sitä valmistetaan pääosin mustista ibérico-sioista, jotka laiduntavat dehesa-metsissä syöden ruohoa, yrttejä, tammenterhoja, kastanjoita ja juuria. Parhaan luokan, jamón ibérico de bellota, kinkku tulee vapaasti laiduntavilta sioilta, jotka syövät viimeisinä kuukausinaan pelkkiä tammenterhoja. Jabugo-nimisen alkuperäsuojatun kinkun tuotantoalue on Sierra de Aracenan ja Picos de Arochen luonnonpuistossa, ja Jabugon pääaukio on nimeltään Kinkkuaukio.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-ronda) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kohdekartta / Kohdekartta: Nuevo Leónin hallintopalatsi] 1895 Vanha hallintopalatsi seisoi Morelosin ja Escobedon kulmassa ja toimi osavaltion hallintotalona vuodesta 1817 1900-luvun alkuun. Se oli myös Benito Juárezin työhuone, ja se kärsi vaurioita Monterreyn taistelussa — siitä syntyi ajatus uudesta palatsista. Kuvernööri Bernardo Reyes valitsi uudelle talolle tontin, joka oli ollut kaupungin alkuperäinen pääaukio. Työt alkoivat 8. elokuuta 1895 insinööri Francisco Beltránin suunnitelmalla ja Martín Peñan työnjohdolla. Rahaa ei ollut: osa saatiin myymällä vanha palatsi 1897 seitsemälläkymmenellätuhannella pesolla. Arvioitu kulu oli satatuhatta pesoa ja rakennusaika viisi vuotta — todellisuudessa siihen meni kolmetoista. Rakennus on 51 metriä l…
+
+### 37.1
+KYSYMYS: Miten Puente Nuevo on rakennettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kohdekartta / Kohdekartta: Nuevo Leónin hallintopalatsi] 1895 Vanha hallintopalatsi seisoi Morelosin ja Escobedon kulmassa ja toimi osavaltion hallintotalona vuodesta 1817 1900-luvun alkuun. Se oli myös Benito Juárezin työhuone, ja se kärsi vaurioita Monterreyn taistelussa — siitä syntyi ajatus uudesta palatsista. Kuvernööri Bernardo Reyes valitsi uudelle talolle tontin, joka oli ollut kaupungin alkuperäinen pääaukio. Työt alkoivat 8. elokuuta 1895 insinööri Francisco Beltránin suunnitelmalla ja Martín Peñan työnjohdolla. Rahaa ei ollut: osa saatiin myymällä vanha palatsi 1897 seitsemälläkymmenellätuhannella pesolla. Arvioitu kulu oli satatuhatta pesoa ja rakennusaika viisi vuotta — todellisuudessa siihen meni kolmetoista. Rakennus on 51 metriä l…
+
+### 37.2
+KYSYMYS: Mitä corridas goyescas tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ronda (kulttuuri)
+Tietoruudun teksti: Ronda on kunta Málagan maakunnassa Andalusiassa, mioseeniaikaisella tasangolla noin 600–800 metrin korkeudessa. Ympäristön hedelmällinen maa sopii vehnän, oliivien ja viinin viljelyyn. Syvä Tajo-rotko, jonka pohjalla virtaa Guadalevín-joki, halkaisee kaupungin kahtia. Ronda tunnistetaan antiikin Arundaksi, ja islamilaisen vallan aikana se oli oman hallintoalueensa pääkaupunki. Kastilian kruunu valtasi sen väkisin vuonna 1485. Nykyisin Rondaan tullaan katsomaan Tajo-rotkoa ja Puente Nuevo -siltaa sekä corridas goyescas -härkätaisteluita.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-riotinto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Joki, joka on neljä kuukautta punainen] 1969 — Serranía de la Macarena on ylätasanko, jonka kvartsiitti syntyi noin 1,2 miljardia vuotta sitten. Sen halki virtaa Caño Cristales, jonka karjatilalliset löysivät 1969. Heinäkuun lopusta marraskuuhun uoma on keltainen, vihreä, sininen, musta ja ennen kaikkea punainen: värin tekee vesikasvi Macarenia clavigera, joka kasvaa kiinni kalliossa virran alla. Jokea kutsutaan viiden värin joeksi. Ylätasanko on Andien, llanosin ja Amazonin rajalla, ja siellä elää noin 420 lintulajia.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria: Kun Punainen joki nousee] Kaupunki on Punaisenjoen laakson pohjalla, ja tulvatasanko on niin tasainen, ettei vedellä ole minne mennä. Joki nousi korkeimmilleen 1826. Vuoden 1950 suurtulva pakotti joukkoevakuointeihin, ja liittovaltio arvioi vahingot yli 26 miljoonaksi dollariksi — maakunnan mukaan vähintään kaksinkertaisiksi. Se sai pääministeri Duff Roblinin ajamaan tulvakanavan rakentamista kaupungin ohi. Vuonna 1997 patoja korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin vahingoin, kun taas padoton Grand Forks rajan takana ei. Tulvia oli myös 2009 ja 2011.
+- [Salvador — kaupunkilehti / Ruoka: Naiset jotka ostivat vapautensa myyntitulolla] Acarajéta on myyty Salvadorin kaduilla 1800-luvulta lähtien, ja myyjät – valkopukuiset baianat – tunnistaa jo kaukaa. Nimikin syntyi kaupankäynnistä: brasilianportugalin acarajé tulee joruban ilmauksesta àkàrà n'jẹ, "tule syömään akaraa", jolla myyjät kutsuivat ohikulkijoita. Myyntitulot eivät olleet pelkkää arjen leipärahaa vaan monelle naiselle ainoa keino koota summa, jolla osti orjuutetun perheenjäsenensä vapaaksi. Kaupungissa toimii yhä yli 500 myyjää, ja kulttuuriperintövirasto IPHAN listasi 2004 sekä ruoan että baianojen ammatin kansallisperinnöksi.
+
+### 38.1
+KYSYMYS: Miksi joki on punainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Joki, joka on neljä kuukautta punainen] 1969 — Serranía de la Macarena on ylätasanko, jonka kvartsiitti syntyi noin 1,2 miljardia vuotta sitten. Sen halki virtaa Caño Cristales, jonka karjatilalliset löysivät 1969. Heinäkuun lopusta marraskuuhun uoma on keltainen, vihreä, sininen, musta ja ennen kaikkea punainen: värin tekee vesikasvi Macarenia clavigera, joka kasvaa kiinni kalliossa virran alla. Jokea kutsutaan viiden värin joeksi. Ylätasanko on Andien, llanosin ja Amazonin rajalla, ja siellä elää noin 420 lintulajia.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria: Kun Punainen joki nousee] Kaupunki on Punaisenjoen laakson pohjalla, ja tulvatasanko on niin tasainen, ettei vedellä ole minne mennä. Joki nousi korkeimmilleen 1826. Vuoden 1950 suurtulva pakotti joukkoevakuointeihin, ja liittovaltio arvioi vahingot yli 26 miljoonaksi dollariksi — maakunnan mukaan vähintään kaksinkertaisiksi. Se sai pääministeri Duff Roblinin ajamaan tulvakanavan rakentamista kaupungin ohi. Vuonna 1997 patoja korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin vahingoin, kun taas padoton Grand Forks rajan takana ei. Tulvia oli myös 2009 ja 2011.
+
+### 38.2
+KYSYMYS: Miksi britit ostivat kaivoksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riotinton kaivokset (tekniikka)
+Tietoruudun teksti: Riotinto-Nervan kaivosalue on Huelvan maakunnan koillisosassa Andalusiassa, ja se kuuluu Iberian pyriittivyöhykkeeseen. Aluetta on hyödynnetty jo esihistoriallisina aikoina, mutta järjestäytynyt louhinta alkoi roomalaisaikana. Vuonna 1873 Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa 1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa maailmanlaajuinen esikuva.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Ruoka: Naiset jotka ostivat vapautensa myyntitulolla] Acarajéta on myyty Salvadorin kaduilla 1800-luvulta lähtien, ja myyjät – valkopukuiset baianat – tunnistaa jo kaukaa. Nimikin syntyi kaupankäynnistä: brasilianportugalin acarajé tulee joruban ilmauksesta àkàrà n'jẹ, "tule syömään akaraa", jolla myyjät kutsuivat ohikulkijoita. Myyntitulot eivät olleet pelkkää arjen leipärahaa vaan monelle naiselle ainoa keino koota summa, jolla osti orjuutetun perheenjäsenensä vapaaksi. Kaupungissa toimii yhä yli 500 myyjää, ja kulttuuriperintövirasto IPHAN listasi 2004 sekä ruoan että baianojen ammatin kansallisperinnöksi.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-almaden) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Historia: Kaivos, joka maksoi itsenäisyyden ja sulki itsensä] 1972–1998 — Bougainvillen saaren Crown Prince -vuoristosta löytyi 1960-luvulla valtava kuparimalmiesiintymä, ja Pangunan kaivos aloitti tuotannon 1972. Se oli tuolloin maailman suurin kuparin ja kullan avolouhos, tuotti 12 prosenttia maan bruttokansantuotteesta ja yli 45 prosenttia vientituloista, ja sen voitoilla rahoitettiin osaltaan Papua-Uuden-Guinean itsenäistyminen 1975. Bougainvillelaiset saivat voitosta 0,5–1,25 prosenttia, ja rikastushiekka laskettiin suoraan Jaba-jokeen. Vuonna 1988 alkoi kapina, kaivos suljettiin 1989, ja kymmenvuotinen konflikti päättyi 1998 rauhansopimukseen ja autonomiseen hallintoon.
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+
+### 39.1
+KYSYMYS: Mihin elohopeaa käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Saavin pohjalla kimalsi elohopea] 1490 — Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin kanssa Unescon maailmanperintölistalle.
+
+### 39.2
+KYSYMYS: Miksi kaivos suljettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Almadénin elohopeakaivos (kauppa)
+Tietoruudun teksti: Almadén on kaupunki Ciudad Realin maakunnassa Sierra Morenan vuorilla, 589 metrin korkeudessa. Sen nimi tulee arabian sanasta al-maʻdin, joka tarkoittaa kaivosta. Paikka oli ensin roomalainen ja sitten maurien kaivosasutus, ja kuningas Alfonso VII valtasi sen kristityille vuonna 1151 ja antoi sen Calatravan ritarikunnalle. Almadénin esiintymät ovat tuottaneet suurimman osan maailman nestemäisestä elohopeasta, noin 250 000 tonnia kahdessa tuhannessa vuodessa. Kaivos suljettiin vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian Idrija julistettiin yhdessä maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Papua-Uusi-Guinea — maalehti / Historia: Kaivos, joka maksoi itsenäisyyden ja sulki itsensä] 1972–1998 — Bougainvillen saaren Crown Prince -vuoristosta löytyi 1960-luvulla valtava kuparimalmiesiintymä, ja Pangunan kaivos aloitti tuotannon 1972. Se oli tuolloin maailman suurin kuparin ja kullan avolouhos, tuotti 12 prosenttia maan bruttokansantuotteesta ja yli 45 prosenttia vientituloista, ja sen voitoilla rahoitettiin osaltaan Papua-Uuden-Guinean itsenäistyminen 1975. Bougainvillelaiset saivat voitosta 0,5–1,25 prosenttia, ja rikastushiekka laskettiin suoraan Jaba-jokeen. Vuonna 1988 alkoi kapina, kaivos suljettiin 1989, ja kymmenvuotinen konflikti päättyi 1998 rauhansopimukseen ja autonomiseen hallintoon.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-vizcayan-silta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+### 40.1
+KYSYMYS: Miten siirtosilta toimii?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+### 40.2
+KYSYMYS: Miksi siltaa sanotaan Puente Colgantiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vizcayan silta (tekniikka)
+Tietoruudun teksti: Vizcayan silta yhdistää Portugaleten ja Las Arenasin, joka kuuluu Getxoon, Biskajan maakunnassa Nervión-joen suulla. Se on maailman vanhin siirtosilta, ja se rakennettiin vuonna 1893 Alberto Palacion suunnitelmasta; Palacio oli Gustave Eiffelin oppilas. Siltaratkaisu yhdisti rannat ilman, että Bilbaon sataman laivaliikenne häiriintyi, eikä sen tarvinnut olla pitkine ramppeineen valtava rakennelma. Silta on yhä käytössä: sen 164 metriä pitkä gondoli kuljettaa kuusi autoa ja kymmeniä matkustajia puolessatoista minuutissa. UNESCO julisti sen maailmanperintökohteeksi vuonna 2006.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

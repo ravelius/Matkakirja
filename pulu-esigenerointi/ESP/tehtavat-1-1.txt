@@ -1,0 +1,196 @@
+================ KOHTA 1 (kohde:mulhacen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mulhacén (luonto · vuori)
+Tietoruudun teksti: Mulhacén kohoaa 3 479 metriin ja on mannermaisen Espanjan sekä koko Iberian niemimaan korkein vuori. Se kuuluu Sierra Nevadan vuoristoon Penibeettisessä järjestelmässä. Nimi tulee Granadan toiseksi viimeiseltä muslimihallitsijalta Abu'l-Hasan Alilta, jota espanjaksi kutsuttiin Muley Hacéniksi ja joka tarun mukaan haudattiin vuoren huipulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [Kolumbia — maalehti / Musiikki: Kolme soitinta, kolme maanosaa] Vallenato tarkoittaa laaksossa syntynyttä, ja laakso on Sierra Nevada de Santa Martan ja Serranía de Periján välissä Valleduparin ympärillä. Laji sai alkunsa laulajista, jotka kulkivat karjan kanssa kylästä toiseen ja veivät samalla uutiset — he lauloivat viestinsä. Kokoonpanon kolme soitinta tulevat kolmelta mantereelta: nappihaitari Saksasta, caja-rumpu Afrikasta ja guacharaca-raaputin alkuperäiskansoilta. Rytmejä eli "ilmoja" on neljä: son, paseo, merengue ja puya. Unesco pitää lajia kiireellistä suojelua vaativana perintönä.
+
+### 1.1
+KYSYMYS: Kuka oli Muley Hacén?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mulhacén (luonto · vuori)
+Tietoruudun teksti: Mulhacén kohoaa 3 479 metriin ja on mannermaisen Espanjan sekä koko Iberian niemimaan korkein vuori. Se kuuluu Sierra Nevadan vuoristoon Penibeettisessä järjestelmässä. Nimi tulee Granadan toiseksi viimeiseltä muslimihallitsijalta Abu'l-Hasan Alilta, jota espanjaksi kutsuttiin Muley Hacéniksi ja joka tarun mukaan haudattiin vuoren huipulle.
+
+### 1.2
+KYSYMYS: Miksi Sierra Nevadassa on lunta niin etelässä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mulhacén (luonto · vuori)
+Tietoruudun teksti: Mulhacén kohoaa 3 479 metriin ja on mannermaisen Espanjan sekä koko Iberian niemimaan korkein vuori. Se kuuluu Sierra Nevadan vuoristoon Penibeettisessä järjestelmässä. Nimi tulee Granadan toiseksi viimeiseltä muslimihallitsijalta Abu'l-Hasan Alilta, jota espanjaksi kutsuttiin Muley Hacéniksi ja joka tarun mukaan haudattiin vuoren huipulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [Kolumbia — maalehti / Musiikki: Kolme soitinta, kolme maanosaa] Vallenato tarkoittaa laaksossa syntynyttä, ja laakso on Sierra Nevada de Santa Martan ja Serranía de Periján välissä Valleduparin ympärillä. Laji sai alkunsa laulajista, jotka kulkivat karjan kanssa kylästä toiseen ja veivät samalla uutiset — he lauloivat viestinsä. Kokoonpanon kolme soitinta tulevat kolmelta mantereelta: nappihaitari Saksasta, caja-rumpu Afrikasta ja guacharaca-raaputin alkuperäiskansoilta. Rytmejä eli "ilmoja" on neljä: son, paseo, merengue ja puya. Unesco pitää lajia kiireellistä suojelua vaativana perintönä.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:aneto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aneto (luonto · vuori)
+Tietoruudun teksti: Pyreneiden korkeimmalla huipulla ei pitkään aikaan ollut nimeä. Eteläisten laaksojen paimenet puhuivat Malhetasta tai vain Puntasta, ja ensimmäinen matkailija, joka näki vuoren Benasquen solasta vuonna 1787, kuvasi sitä jääneuloiksi. Vielä sen jälkeenkin Pyreneiden korkeimpana pidettiin naapuria Maladetaa — vasta kun Friedrich von Parrot nousi Maladetan huipulle 1817, huomattiin että Aneto on korkeampi. Sitten alkoivat onnettomuudet: kun seudun tunnetuin opas putosi jäätikön railoon ja kuoli, paikalliset alkoivat pitää vuorta kirottuna eivätkä menneet jäälle. Nykyinen nimi vakiintui vasta 1890-luvulla. Aneton pohjoisrinteellä on yhä Pyreneiden suurin jäätikkö, mutta se on kutistunut yli kahdestasadasta hehtaarista 48 hehtaariin ja saattaa kadota 2050-luvulle tultaessa.
+
+### 2.1
+KYSYMYS: Miksi Anetoa pidettiin kirottuna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aneto (luonto · vuori)
+Tietoruudun teksti: Pyreneiden korkeimmalla huipulla ei pitkään aikaan ollut nimeä. Eteläisten laaksojen paimenet puhuivat Malhetasta tai vain Puntasta, ja ensimmäinen matkailija, joka näki vuoren Benasquen solasta vuonna 1787, kuvasi sitä jääneuloiksi. Vielä sen jälkeenkin Pyreneiden korkeimpana pidettiin naapuria Maladetaa — vasta kun Friedrich von Parrot nousi Maladetan huipulle 1817, huomattiin että Aneto on korkeampi. Sitten alkoivat onnettomuudet: kun seudun tunnetuin opas putosi jäätikön railoon ja kuoli, paikalliset alkoivat pitää vuorta kirottuna eivätkä menneet jäälle. Nykyinen nimi vakiintui vasta 1890-luvulla. Aneton pohjoisrinteellä on yhä Pyreneiden suurin jäätikkö, mutta se on kutistunut yli kahdestasadasta hehtaarista 48 hehtaariin ja saattaa kadota 2050-luvulle tultaessa.
+
+### 2.2
+KYSYMYS: Onko Anetolla vielä jäätikköä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aneto (luonto · vuori)
+Tietoruudun teksti: Pyreneiden korkeimmalla huipulla ei pitkään aikaan ollut nimeä. Eteläisten laaksojen paimenet puhuivat Malhetasta tai vain Puntasta, ja ensimmäinen matkailija, joka näki vuoren Benasquen solasta vuonna 1787, kuvasi sitä jääneuloiksi. Vielä sen jälkeenkin Pyreneiden korkeimpana pidettiin naapuria Maladetaa — vasta kun Friedrich von Parrot nousi Maladetan huipulle 1817, huomattiin että Aneto on korkeampi. Sitten alkoivat onnettomuudet: kun seudun tunnetuin opas putosi jäätikön railoon ja kuoli, paikalliset alkoivat pitää vuorta kirottuna eivätkä menneet jäälle. Nykyinen nimi vakiintui vasta 1890-luvulla. Aneton pohjoisrinteellä on yhä Pyreneiden suurin jäätikkö, mutta se on kutistunut yli kahdestasadasta hehtaarista 48 hehtaariin ja saattaa kadota 2050-luvulle tultaessa.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:valimeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Espanja on ainoa maa, jolla on rantaa sekä tällä merellä että Atlantilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktoria Nyanza — kaupunkilehti / Evoluution laboratorio: Saalis joka ruokkii ja jakaa] Niiliahvenen tulo mullisti myös ihmisten elämän järven rannoilla: kalasta tuli yhtäkkiä paljon suurempaa ja arvokkaampaa, ja sen ympärille syntyi tehtaita, jotka fileoivat kalan pakastettavaksi ja lennätettäväksi Euroopan markkinoille asti. Monet kalastajakylät vaurastuivat, mutta samalla paikallinen ruokaturva heikkeni, kun arvokkain saalis alkoi kulkea vientiin sen sijaan, että se olisi jäänyt lähiruokapöytiin. Perinteiset puuveneet lähtevät yhä joka ilta vedelle lyhtyjen valossa, sillä niiliahventa kalastetaan usein yöllä, jolloin kala nousee lähemmäs pintaa syömään pienempiä kaloja valon houkuttelemana.
+- [Tunisia — maalehti / Meri: Aita, joka rakennetaan mereen joka vuosi] 2020 — Kerkennahin saarilla kalastetaan charfialla. Se on kiinteä pyydys: palmunlehtiä lyödään merenpohjaan kolmioksi, joka katkaisee laskuveden mukana liikkuvien kalojen tien ja ohjaa ne kammioihin ja lopulta verkkoon. Toisin kuin pohjatroolaus, pyydys ei raavi pohjaa, ja kalat pysyvät elossa nostoon asti. Charfia pidetään toiminnassa vain syyspäiväntasauksen ja kesäkuun välillä, jotta meri saa lepoajan, ja aidat rakennetaan joka vuosi uudelleen yhteisellä aterialla ja rukouksilla. Pyyntipaikka periytyy usein isältä vanhimmalle pojalle. Unesco merkitsi tavan luetteloonsa 2020.
+
+### 3.1
+KYSYMYS: Kuinka kapea Gibraltarinsalmi todella on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Espanja on ainoa maa, jolla on rantaa sekä tällä merellä että Atlantilla.
+
+### 3.2
+KYSYMYS: Mitä Espanjan Välimeren rannikolla kalastetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Välimeri (meri)
+Tietoruudun teksti: Välimeri on maanosien välinen meri Euroopan, Aasian ja Afrikan keskellä, ja maa ympäröi sen lähes kokonaan. Lännessä se yhtyy Atlanttiin Gibraltarinsalmen kautta, joka erottaa Iberian niemimaan Marokosta vain neljäntoista kilometrin levyisenä. Espanja on ainoa maa, jolla on rantaa sekä tällä merellä että Atlantilla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktoria Nyanza — kaupunkilehti / Evoluution laboratorio: Saalis joka ruokkii ja jakaa] Niiliahvenen tulo mullisti myös ihmisten elämän järven rannoilla: kalasta tuli yhtäkkiä paljon suurempaa ja arvokkaampaa, ja sen ympärille syntyi tehtaita, jotka fileoivat kalan pakastettavaksi ja lennätettäväksi Euroopan markkinoille asti. Monet kalastajakylät vaurastuivat, mutta samalla paikallinen ruokaturva heikkeni, kun arvokkain saalis alkoi kulkea vientiin sen sijaan, että se olisi jäänyt lähiruokapöytiin. Perinteiset puuveneet lähtevät yhä joka ilta vedelle lyhtyjen valossa, sillä niiliahventa kalastetaan usein yöllä, jolloin kala nousee lähemmäs pintaa syömään pienempiä kaloja valon houkuttelemana.
+- [Tunisia — maalehti / Meri: Aita, joka rakennetaan mereen joka vuosi] 2020 — Kerkennahin saarilla kalastetaan charfialla. Se on kiinteä pyydys: palmunlehtiä lyödään merenpohjaan kolmioksi, joka katkaisee laskuveden mukana liikkuvien kalojen tien ja ohjaa ne kammioihin ja lopulta verkkoon. Toisin kuin pohjatroolaus, pyydys ei raavi pohjaa, ja kalat pysyvät elossa nostoon asti. Charfia pidetään toiminnassa vain syyspäiväntasauksen ja kesäkuun välillä, jotta meri saa lepoajan, ja aidat rakennetaan joka vuosi uudelleen yhteisellä aterialla ja rukouksilla. Pyyntipaikka periytyy usein isältä vanhimmalle pojalle. Unesco merkitsi tavan luetteloonsa 2020.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:tajo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tajo (luonto · joki)
+Tietoruudun teksti: Iberian pisimmän joen alku mahtuu yhteen lähteeseen. Fuente García pulppuaa 1 593 metrin korkeudessa Sierra de Albarracínin ylängöllä, kahden lähes 1 850-metrisen huipun välissä, ja siitä alkaa Tajon 1 007 kilometrin matka Atlantille. Espanjan puolella jokea on 816 kilometriä: se kulkee Aragonian, Kastilia-La Manchan, Madridin ja Extremaduran halki, ohittaa Aranjuezin, Toledon ja Talavera de la Reinan ja muodostaa lopulta 47 kilometrin mittaisen rajan Portugalia vasten. Siitä eteenpäin joen nimi on Tejo. Vesistöalue on koko niemimaan asutuin — yli kymmenen miljoonaa ihmistä Madridin seutu ja Lissabon mukaan luettuina — ja sen patoaltaisiin mahtuu noin 14 500 kuutiohehtometriä vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 4.1
+KYSYMYS: Mikä Sierra de Albarracín on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tajo (luonto · joki)
+Tietoruudun teksti: Iberian pisimmän joen alku mahtuu yhteen lähteeseen. Fuente García pulppuaa 1 593 metrin korkeudessa Sierra de Albarracínin ylängöllä, kahden lähes 1 850-metrisen huipun välissä, ja siitä alkaa Tajon 1 007 kilometrin matka Atlantille. Espanjan puolella jokea on 816 kilometriä: se kulkee Aragonian, Kastilia-La Manchan, Madridin ja Extremaduran halki, ohittaa Aranjuezin, Toledon ja Talavera de la Reinan ja muodostaa lopulta 47 kilometrin mittaisen rajan Portugalia vasten. Siitä eteenpäin joen nimi on Tejo. Vesistöalue on koko niemimaan asutuin — yli kymmenen miljoonaa ihmistä Madridin seutu ja Lissabon mukaan luettuina — ja sen patoaltaisiin mahtuu noin 14 500 kuutiohehtometriä vettä.
+
+### 4.2
+KYSYMYS: Millä nimellä joki tunnetaan Portugalissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tajo (luonto · joki)
+Tietoruudun teksti: Iberian pisimmän joen alku mahtuu yhteen lähteeseen. Fuente García pulppuaa 1 593 metrin korkeudessa Sierra de Albarracínin ylängöllä, kahden lähes 1 850-metrisen huipun välissä, ja siitä alkaa Tajon 1 007 kilometrin matka Atlantille. Espanjan puolella jokea on 816 kilometriä: se kulkee Aragonian, Kastilia-La Manchan, Madridin ja Extremaduran halki, ohittaa Aranjuezin, Toledon ja Talavera de la Reinan ja muodostaa lopulta 47 kilometrin mittaisen rajan Portugalia vasten. Siitä eteenpäin joen nimi on Tejo. Vesistöalue on koko niemimaan asutuin — yli kymmenen miljoonaa ihmistä Madridin seutu ja Lissabon mukaan luettuina — ja sen patoaltaisiin mahtuu noin 14 500 kuutiohehtometriä vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:ebro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebro (luonto · joki)
+Tietoruudun teksti: Ebro nousee Kantabriasta ja virtaa 930 kilometriä lähes koko matkan itäkaakkoon, kunnes laskee Välimereen ja muodostaa suiston Etelä-Kataloniaan. Iberian niemimaalla se on pituudeltaan toinen Tajon jälkeen sekä virtaamaltaan ja valuma-alueeltaan toinen Douron jälkeen. Se on kuitenkin pisin kokonaan Espanjan sisällä virtaava joki: kaksi muuta jatkavat Portugaliin.
+
+### 5.1
+KYSYMYS: Miksi Ebron suisto on niin laaja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebro (luonto · joki)
+Tietoruudun teksti: Ebro nousee Kantabriasta ja virtaa 930 kilometriä lähes koko matkan itäkaakkoon, kunnes laskee Välimereen ja muodostaa suiston Etelä-Kataloniaan. Iberian niemimaalla se on pituudeltaan toinen Tajon jälkeen sekä virtaamaltaan ja valuma-alueeltaan toinen Douron jälkeen. Se on kuitenkin pisin kokonaan Espanjan sisällä virtaava joki: kaksi muuta jatkavat Portugaliin.
+
+### 5.2
+KYSYMYS: Mitä Ebron laaksossa kasvatetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebro (luonto · joki)
+Tietoruudun teksti: Ebro nousee Kantabriasta ja virtaa 930 kilometriä lähes koko matkan itäkaakkoon, kunnes laskee Välimereen ja muodostaa suiston Etelä-Kataloniaan. Iberian niemimaalla se on pituudeltaan toinen Tajon jälkeen sekä virtaamaltaan ja valuma-alueeltaan toinen Douron jälkeen. Se on kuitenkin pisin kokonaan Espanjan sisällä virtaava joki: kaksi muuta jatkavat Portugaliin.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

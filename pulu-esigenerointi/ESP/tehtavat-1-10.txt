@@ -1,0 +1,297 @@
+================ KOHTA 46 (kohde:hahmotelma-poblet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobletin luostari (historia)
+Tietoruudun teksti: Pobletin kuninkaallinen luostari on vuonna 1151 perustettu kistertsiläisluostari Prades-vuorten juurella Katalonian Conca de Barberàssa. Sen perustivat Ranskasta tulleet kistertsiläismunkit, ja pääarkkitehti oli Arnau Bargués. Poblet oli yksi Aragonian kruunun kuninkaiden hautapaikoista Jaakko I:stä alkaen, ja suurimmillaan luostarissa asui yli 300 munkkia. Vuonna 1835 Mendizábalin kirkonomaisuuden pakkolunastus päätti luostarielämän: 24. heinäkuuta luostari ryöstettiin ja osin poltettiin, ja kuninkaiden haudat häpäistiin. Luostari perustettiin uudelleen vuonna 1940 italialaisten munkkien voimin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ishratkhanan mausoleumi] 1463 Ishratkhana on timuridien loppuajan hautarakennus, ja se valmistui toukokuussa 1463 kolmessa tai neljässä vuodessa. Vuoden 1464 vakuf-asiakirjan mukaan hallitsija Abu Saidin puoliso Habiba Sultan rakennutti kupolin varhain kuolleen tyttärensä haudan päälle. Vähitellen kahdeksankulmaisesta salista tuli suvun hautapaikka, ja sinne haudattiin 23 naista ja lasta. Nimi tarkoittaa persiaksi ilon ja huvin taloa, ja se on 1800-luvun samarkandilaista kansanperinnettä: tarinan mukaan Timur rakennutti paikalle huvilan. Asiantuntijoiden mukaan nimi on väännös arabian ilmauksesta, joka tarkoittaa kymmentä huonetta. Rakennuksen nimestä on kiistelty siitä asti, kun siitä julkaistiin ensimmäinen kuva …
+- [Aden — kohdekartta / Kohdekartta: Kansallismuseo] museo vuodesta 1966 Adenin kansallismuseo ei ole museoksi rakennettu vaan palatsiksi: rakennus on Lahejin sulttaanikunnan entinen palatsi, ja museo perustettiin siihen vuonna 1966. Lahej oli se sulttaanikunta, joka luovutti briteille Adenin maat vuonna 1838, ja jonka kanssa britit olivat tehneet ensimmäisen sopimuksensa jo 1802. Kokoelma on yhä yksi Jemenin suurimmista, vaikka museo ryöstettiin vuoden 1994 sisällissodan aikana. Talo itse on osa kokoelmaa: pitkä kaksikerroksinen julkisivu on jäsennetty holvikaarikäytävillä ja pylväsverannoilla, seinäpinta on tummaa vulkaanista kiveä ja koristeet vaaleaa kiveä — sama vuorottelu, jolla koko kaupunki on rakennettu, koska Adenissa toinen aine on…
+
+### 46.1
+KYSYMYS: Keitä Pobletiin on haudattu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobletin luostari (historia)
+Tietoruudun teksti: Pobletin kuninkaallinen luostari on vuonna 1151 perustettu kistertsiläisluostari Prades-vuorten juurella Katalonian Conca de Barberàssa. Sen perustivat Ranskasta tulleet kistertsiläismunkit, ja pääarkkitehti oli Arnau Bargués. Poblet oli yksi Aragonian kruunun kuninkaiden hautapaikoista Jaakko I:stä alkaen, ja suurimmillaan luostarissa asui yli 300 munkkia. Vuonna 1835 Mendizábalin kirkonomaisuuden pakkolunastus päätti luostarielämän: 24. heinäkuuta luostari ryöstettiin ja osin poltettiin, ja kuninkaiden haudat häpäistiin. Luostari perustettiin uudelleen vuonna 1940 italialaisten munkkien voimin.
+
+### 46.2
+KYSYMYS: Miksi luostari ryöstettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobletin luostari (historia)
+Tietoruudun teksti: Pobletin kuninkaallinen luostari on vuonna 1151 perustettu kistertsiläisluostari Prades-vuorten juurella Katalonian Conca de Barberàssa. Sen perustivat Ranskasta tulleet kistertsiläismunkit, ja pääarkkitehti oli Arnau Bargués. Poblet oli yksi Aragonian kruunun kuninkaiden hautapaikoista Jaakko I:stä alkaen, ja suurimmillaan luostarissa asui yli 300 munkkia. Vuonna 1835 Mendizábalin kirkonomaisuuden pakkolunastus päätti luostarielämän: 24. heinäkuuta luostari ryöstettiin ja osin poltettiin, ja kuninkaiden haudat häpäistiin. Luostari perustettiin uudelleen vuonna 1940 italialaisten munkkien voimin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Ishratkhanan mausoleumi] 1463 Ishratkhana on timuridien loppuajan hautarakennus, ja se valmistui toukokuussa 1463 kolmessa tai neljässä vuodessa. Vuoden 1464 vakuf-asiakirjan mukaan hallitsija Abu Saidin puoliso Habiba Sultan rakennutti kupolin varhain kuolleen tyttärensä haudan päälle. Vähitellen kahdeksankulmaisesta salista tuli suvun hautapaikka, ja sinne haudattiin 23 naista ja lasta. Nimi tarkoittaa persiaksi ilon ja huvin taloa, ja se on 1800-luvun samarkandilaista kansanperinnettä: tarinan mukaan Timur rakennutti paikalle huvilan. Asiantuntijoiden mukaan nimi on väännös arabian ilmauksesta, joka tarkoittaa kymmentä huonetta. Rakennuksen nimestä on kiistelty siitä asti, kun siitä julkaistiin ensimmäinen kuva …
+- [Aden — kohdekartta / Kohdekartta: Kansallismuseo] museo vuodesta 1966 Adenin kansallismuseo ei ole museoksi rakennettu vaan palatsiksi: rakennus on Lahejin sulttaanikunnan entinen palatsi, ja museo perustettiin siihen vuonna 1966. Lahej oli se sulttaanikunta, joka luovutti briteille Adenin maat vuonna 1838, ja jonka kanssa britit olivat tehneet ensimmäisen sopimuksensa jo 1802. Kokoelma on yhä yksi Jemenin suurimmista, vaikka museo ryöstettiin vuoden 1994 sisällissodan aikana. Talo itse on osa kokoelmaa: pitkä kaksikerroksinen julkisivu on jäsennetty holvikaarikäytävillä ja pylväsverannoilla, seinäpinta on tummaa vulkaanista kiveä ja koristeet vaaleaa kiveä — sama vuorottelu, jolla koko kaupunki on rakennettu, koska Adenissa toinen aine on…
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-medina-azahara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medina Azahara (historia)
+Tietoruudun teksti: Umayyad-kalifi Abd ar-Rahman III perusti Madinat al-Zahran eli Medina Azaharan vuosina 936–940 Córdoban länsipuolelle uudeksi hallintokeskukseksi, kun hän oli julistautunut kalifiksi 929 ja halusi vallalleen symbolin Fatimidien ja Abbasidien kalifikuntia vastaan. Linnoitettu palatsikaupunki käsitti juhlasaleja, suuren moskeijan, hallintorakennuksia, aatelisasuntoja, puutarhoja, rahapajan ja kylpylöitä, joita vesijohdot syöttivät. Kaupungin asema hallintokeskuksena päättyi Al-Hakam II:n kuoleman jälkeen, ja sisällissodassa 1010–1013 se ryöstettiin ja jätettiin raunioiksi. Kaivaukset alkoivat 1911, mutta alkuperäisestä 112 hehtaarista on kaivettu esiin ja osin kunnostettu vain noin 10 hehtaaria. UNESCO listasi kohteen maailmanperintöluetteloon vuonna 2018 nimellä "Caliphate City of Medina Azahara".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+- [Persepolis — kohdekartta / Kohdekartta: Aarrekammio] Dareios I:n aikaa; kaivettu 1934–1939 Aarrekammio on terassin kaakkoisosassa, ja se on yksi Dareios I:n kolmesta alkuperäisestä tilauksesta. Nimi ei ole antiikista vaan kaivauksilta: kun Erich Schmidtin ryhmä kaivoi tätä rakennusryhmää 1930-luvulla, sieltä löytyi ohuita kultalehtiä, ja sen mukaan koko kortteli ja sieltä löytyneet savitaulut nimettiin. Taulut kertovat palkanmaksusta. Suurin osa niistä koskee hopeaa, joka maksettiin työläisille ja käsityöläisille kokonaan tai osittain sen sijaan, että heille olisi annettu luvattu annos lampaita, viiniä tai viljaa. Osa on hallinnon kirjeitä, joissa määrätään maksu suoritettavaksi, ja osa kuittauksia siitä, että maksu on tehty. Aineisto kattaa …
+
+### 47.1
+KYSYMYS: Kuinka suuri osa alkuperäisestä kaupungista on kaivettu esiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medina Azahara (historia)
+Tietoruudun teksti: Umayyad-kalifi Abd ar-Rahman III perusti Madinat al-Zahran eli Medina Azaharan vuosina 936–940 Córdoban länsipuolelle uudeksi hallintokeskukseksi, kun hän oli julistautunut kalifiksi 929 ja halusi vallalleen symbolin Fatimidien ja Abbasidien kalifikuntia vastaan. Linnoitettu palatsikaupunki käsitti juhlasaleja, suuren moskeijan, hallintorakennuksia, aatelisasuntoja, puutarhoja, rahapajan ja kylpylöitä, joita vesijohdot syöttivät. Kaupungin asema hallintokeskuksena päättyi Al-Hakam II:n kuoleman jälkeen, ja sisällissodassa 1010–1013 se ryöstettiin ja jätettiin raunioiksi. Kaivaukset alkoivat 1911, mutta alkuperäisestä 112 hehtaarista on kaivettu esiin ja osin kunnostettu vain noin 10 hehtaaria. UNESCO listasi kohteen maailmanperintöluetteloon vuonna 2018 nimellä "Caliphate City of Medina Azahara".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kohdekartta / Kohdekartta: Aarrekammio] Dareios I:n aikaa; kaivettu 1934–1939 Aarrekammio on terassin kaakkoisosassa, ja se on yksi Dareios I:n kolmesta alkuperäisestä tilauksesta. Nimi ei ole antiikista vaan kaivauksilta: kun Erich Schmidtin ryhmä kaivoi tätä rakennusryhmää 1930-luvulla, sieltä löytyi ohuita kultalehtiä, ja sen mukaan koko kortteli ja sieltä löytyneet savitaulut nimettiin. Taulut kertovat palkanmaksusta. Suurin osa niistä koskee hopeaa, joka maksettiin työläisille ja käsityöläisille kokonaan tai osittain sen sijaan, että heille olisi annettu luvattu annos lampaita, viiniä tai viljaa. Osa on hallinnon kirjeitä, joissa määrätään maksu suoritettavaksi, ja osa kuittauksia siitä, että maksu on tehty. Aineisto kattaa …
+
+### 47.2
+KYSYMYS: Miksi kaupunki hylättiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medina Azahara (historia)
+Tietoruudun teksti: Umayyad-kalifi Abd ar-Rahman III perusti Madinat al-Zahran eli Medina Azaharan vuosina 936–940 Córdoban länsipuolelle uudeksi hallintokeskukseksi, kun hän oli julistautunut kalifiksi 929 ja halusi vallalleen symbolin Fatimidien ja Abbasidien kalifikuntia vastaan. Linnoitettu palatsikaupunki käsitti juhlasaleja, suuren moskeijan, hallintorakennuksia, aatelisasuntoja, puutarhoja, rahapajan ja kylpylöitä, joita vesijohdot syöttivät. Kaupungin asema hallintokeskuksena päättyi Al-Hakam II:n kuoleman jälkeen, ja sisällissodassa 1010–1013 se ryöstettiin ja jätettiin raunioiksi. Kaivaukset alkoivat 1911, mutta alkuperäisestä 112 hehtaarista on kaivettu esiin ja osin kunnostettu vain noin 10 hehtaaria. UNESCO listasi kohteen maailmanperintöluetteloon vuonna 2018 nimellä "Caliphate City of Medina Azahara".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (nosto:altamira) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Löytäjää naurettiin väärentäjäksi — anteeksipyyntö tuli, kun hän oli ollut kuolleena neljätoista vuotta
+Tietoruudun teksti: Luolan löysi 1868 tiilentekijä Modesto Cubillas, mutta kukaan ei katsonut kattoon. Vuonna 1879 harrastelija-arkeologi Marcelino Sanz de Sautuola meni luolaan kahdeksanvuotiaan tyttärensä Marían kanssa, ja tyttö vei isänsä katsomaan seinien merkkejä. Isä tajusi, että ne olivat piirroksia: katossa oli lauma sukupuuttoon kuolleita arobiisoneja, kaksi hevosta, iso naaraspeura ja mahdollisesti villisika.
+
+Sautuola julkaisi löytönsä 1880 professori Juan Vilanova y Pieran tuella. Ranskalaiset asiantuntijat Gabriel de Mortillet ja Émile Cartailhac kiistivät sen jyrkästi: heidän mielestään esihistorialliset ihmiset eivät kyenneet abstraktiin ajatteluun, ja Lissabonin esihistorian kongressissa löytöä naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta 1902, kun vastaavia luolamaalauksia oli löytynyt lisää, Cartailhac perui jul…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Luola, jota kukaan ei uskonut] 1879 — Kun Marcelino Sanz de Sautuola vuonna 1879 kaivoi Altamiran luolassa Kantabriassa, hänen kahdeksanvuotias tyttärensä María kyllästyi ja lähti kierrelemään lyhty kädessä. Hän katsoi ylös ja huusi: "Katso, isä, härkiä!" Katossa oli parikymmentä biisonia punaisella ja mustalla, ja isä ymmärsi ne jääkautisiksi. Tiedemiehet pitivät häntä väärentäjänä kaksikymmentä vuotta — maalaukset olivat heidän mielestään aivan liian taitavia kivikauden ihmiselle. Sautuola kuoli ennen kuin hänet uskottiin. Maalaukset ovat noin 15 000 vuotta vanhoja.
+
+### 48.1
+KYSYMYS: Miksi tutkijat eivät uskoneet Altamiran maalauksia aidoiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Löytäjää naurettiin väärentäjäksi — anteeksipyyntö tuli, kun hän oli ollut kuolleena neljätoista vuotta
+Tietoruudun teksti: Luolan löysi 1868 tiilentekijä Modesto Cubillas, mutta kukaan ei katsonut kattoon. Vuonna 1879 harrastelija-arkeologi Marcelino Sanz de Sautuola meni luolaan kahdeksanvuotiaan tyttärensä Marían kanssa, ja tyttö vei isänsä katsomaan seinien merkkejä. Isä tajusi, että ne olivat piirroksia: katossa oli lauma sukupuuttoon kuolleita arobiisoneja, kaksi hevosta, iso naaraspeura ja mahdollisesti villisika.
+
+Sautuola julkaisi löytönsä 1880 professori Juan Vilanova y Pieran tuella. Ranskalaiset asiantuntijat Gabriel de Mortillet ja Émile Cartailhac kiistivät sen jyrkästi: heidän mielestään esihistorialliset ihmiset eivät kyenneet abstraktiin ajatteluun, ja Lissabonin esihistorian kongressissa löytöä naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta 1902, kun vastaavia luolamaalauksia oli löytynyt lisää, Cartailhac perui jul…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+### 48.2
+KYSYMYS: Mitä eläimiä Altamiran kattoon on maalattu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Löytäjää naurettiin väärentäjäksi — anteeksipyyntö tuli, kun hän oli ollut kuolleena neljätoista vuotta
+Tietoruudun teksti: Luolan löysi 1868 tiilentekijä Modesto Cubillas, mutta kukaan ei katsonut kattoon. Vuonna 1879 harrastelija-arkeologi Marcelino Sanz de Sautuola meni luolaan kahdeksanvuotiaan tyttärensä Marían kanssa, ja tyttö vei isänsä katsomaan seinien merkkejä. Isä tajusi, että ne olivat piirroksia: katossa oli lauma sukupuuttoon kuolleita arobiisoneja, kaksi hevosta, iso naaraspeura ja mahdollisesti villisika.
+
+Sautuola julkaisi löytönsä 1880 professori Juan Vilanova y Pieran tuella. Ranskalaiset asiantuntijat Gabriel de Mortillet ja Émile Cartailhac kiistivät sen jyrkästi: heidän mielestään esihistorialliset ihmiset eivät kyenneet abstraktiin ajatteluun, ja Lissabonin esihistorian kongressissa löytöä naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta 1902, kun vastaavia luolamaalauksia oli löytynyt lisää, Cartailhac perui jul…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Luola, jota kukaan ei uskonut] 1879 — Kun Marcelino Sanz de Sautuola vuonna 1879 kaivoi Altamiran luolassa Kantabriassa, hänen kahdeksanvuotias tyttärensä María kyllästyi ja lähti kierrelemään lyhty kädessä. Hän katsoi ylös ja huusi: "Katso, isä, härkiä!" Katossa oli parikymmentä biisonia punaisella ja mustalla, ja isä ymmärsi ne jääkautisiksi. Tiedemiehet pitivät häntä väärentäjänä kaksikymmentä vuotta — maalaukset olivat heidän mielestään aivan liian taitavia kivikauden ihmiselle. Sautuola kuoli ennen kuin hänet uskottiin. Maalaukset ovat noin 15 000 vuotta vanhoja.
+
+### 48.3
+KYSYMYS: Miten luolamaalausten ikä nykyään selvitetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Löytäjää naurettiin väärentäjäksi — anteeksipyyntö tuli, kun hän oli ollut kuolleena neljätoista vuotta
+Tietoruudun teksti: Luolan löysi 1868 tiilentekijä Modesto Cubillas, mutta kukaan ei katsonut kattoon. Vuonna 1879 harrastelija-arkeologi Marcelino Sanz de Sautuola meni luolaan kahdeksanvuotiaan tyttärensä Marían kanssa, ja tyttö vei isänsä katsomaan seinien merkkejä. Isä tajusi, että ne olivat piirroksia: katossa oli lauma sukupuuttoon kuolleita arobiisoneja, kaksi hevosta, iso naaraspeura ja mahdollisesti villisika.
+
+Sautuola julkaisi löytönsä 1880 professori Juan Vilanova y Pieran tuella. Ranskalaiset asiantuntijat Gabriel de Mortillet ja Émile Cartailhac kiistivät sen jyrkästi: heidän mielestään esihistorialliset ihmiset eivät kyenneet abstraktiin ajatteluun, ja Lissabonin esihistorian kongressissa löytöä naurettiin ääneen. Sautuolaa syytettiin väärennöksestä, koska hän ei osannut selittää, miksi katossa ei ollut nokea. Vasta 1902, kun vastaavia luolamaalauksia oli löytynyt lisää, Cartailhac perui jul…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (nosto:munkkiaratit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin puistoissa asuu tuhansia villejä papukaijoja — ja niiden pesät kasvavat pikkuauton kokoisiksi
+Tietoruudun teksti: Laji on munkkiaratti, kotoisin Etelä-Amerikasta. Espanjassa elää yli 80 prosenttia koko Euroopan villistä kannasta, ja Madridissa niitä laskettiin kesäkuussa 2015 kymmenentuhatta kahdeksansataa — enemmän kuin missään muualla Euroopassa. Barcelonassa oli samaan aikaan noin 5 000, Sevillassa 6 300 vuonna 2021.
+
+Munkkiaratti on ainoa papukaija, joka rakentaa oksista oikean pesän eikä tyydy puunkoloon. Yhdyskunta kutoo yhteen jättipesän, jossa jokaisella parilla on oma sisäänkäynti ja oma huoneisto. Pesä voi kasvaa pienen auton kokoiseksi, ja siihen muuttaa alivuokralaisia: kyyhkyjä, varpusia, jopa oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Casa de Fieras] Retiron puistossa oli kuninkaallinen eläintarha, Casa de Fieras. Kaarle III käski rakentaa sen 1774, ja Wienin jälkeen se oli Euroopan toiseksi vanhin. Filippiinien varakuningas lähetti kuninkaan suosiota tavoitellakseen norsun, joka käveli Cádizista Madridiin — sinne se oli purettu laivasta. Häkkirykelmää sanottiin nimellä La Leonera: alakerrassa tiikereitä, pantteri, kaksi hyeenaa ja sakaali, yläkerrassa huoneet kuninkaalliselle perheelle. Muualla oli apinakioski, norsutarha, karhukuoppa ja häkkejä, joissa asui riikinkukkoja, laamoja ja gaselleja. Vuoden 1868 vallankumouksen jälkeen puisto avattiin yleisölle ja kaupunki otti tarhan hoitoonsa, joten isoisäsi pääsi sisään maksamatta hoville…
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+
+### 49.1
+KYSYMYS: Miten eteläamerikkalaiset papukaijat päätyivät Madridiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin puistoissa asuu tuhansia villejä papukaijoja — ja niiden pesät kasvavat pikkuauton kokoisiksi
+Tietoruudun teksti: Laji on munkkiaratti, kotoisin Etelä-Amerikasta. Espanjassa elää yli 80 prosenttia koko Euroopan villistä kannasta, ja Madridissa niitä laskettiin kesäkuussa 2015 kymmenentuhatta kahdeksansataa — enemmän kuin missään muualla Euroopassa. Barcelonassa oli samaan aikaan noin 5 000, Sevillassa 6 300 vuonna 2021.
+
+Munkkiaratti on ainoa papukaija, joka rakentaa oksista oikean pesän eikä tyydy puunkoloon. Yhdyskunta kutoo yhteen jättipesän, jossa jokaisella parilla on oma sisäänkäynti ja oma huoneisto. Pesä voi kasvaa pienen auton kokoiseksi, ja siihen muuttaa alivuokralaisia: kyyhkyjä, varpusia, jopa oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Casa de Fieras] Retiron puistossa oli kuninkaallinen eläintarha, Casa de Fieras. Kaarle III käski rakentaa sen 1774, ja Wienin jälkeen se oli Euroopan toiseksi vanhin. Filippiinien varakuningas lähetti kuninkaan suosiota tavoitellakseen norsun, joka käveli Cádizista Madridiin — sinne se oli purettu laivasta. Häkkirykelmää sanottiin nimellä La Leonera: alakerrassa tiikereitä, pantteri, kaksi hyeenaa ja sakaali, yläkerrassa huoneet kuninkaalliselle perheelle. Muualla oli apinakioski, norsutarha, karhukuoppa ja häkkejä, joissa asui riikinkukkoja, laamoja ja gaselleja. Vuoden 1868 vallankumouksen jälkeen puisto avattiin yleisölle ja kaupunki otti tarhan hoitoonsa, joten isoisäsi pääsi sisään maksamatta hoville…
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+
+### 49.2
+KYSYMYS: Millainen on munkkiaratin yhteispesä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin puistoissa asuu tuhansia villejä papukaijoja — ja niiden pesät kasvavat pikkuauton kokoisiksi
+Tietoruudun teksti: Laji on munkkiaratti, kotoisin Etelä-Amerikasta. Espanjassa elää yli 80 prosenttia koko Euroopan villistä kannasta, ja Madridissa niitä laskettiin kesäkuussa 2015 kymmenentuhatta kahdeksansataa — enemmän kuin missään muualla Euroopassa. Barcelonassa oli samaan aikaan noin 5 000, Sevillassa 6 300 vuonna 2021.
+
+Munkkiaratti on ainoa papukaija, joka rakentaa oksista oikean pesän eikä tyydy puunkoloon. Yhdyskunta kutoo yhteen jättipesän, jossa jokaisella parilla on oma sisäänkäynti ja oma huoneisto. Pesä voi kasvaa pienen auton kokoiseksi, ja siihen muuttaa alivuokralaisia: kyyhkyjä, varpusia, jopa oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+### 49.3
+KYSYMYS: Mitä haittaa vieraslajista on kaupungille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Madridin puistoissa asuu tuhansia villejä papukaijoja — ja niiden pesät kasvavat pikkuauton kokoisiksi
+Tietoruudun teksti: Laji on munkkiaratti, kotoisin Etelä-Amerikasta. Espanjassa elää yli 80 prosenttia koko Euroopan villistä kannasta, ja Madridissa niitä laskettiin kesäkuussa 2015 kymmenentuhatta kahdeksansataa — enemmän kuin missään muualla Euroopassa. Barcelonassa oli samaan aikaan noin 5 000, Sevillassa 6 300 vuonna 2021.
+
+Munkkiaratti on ainoa papukaija, joka rakentaa oksista oikean pesän eikä tyydy puunkoloon. Yhdyskunta kutoo yhteen jättipesän, jossa jokaisella parilla on oma sisäänkäynti ja oma huoneisto. Pesä voi kasvaa pienen auton kokoiseksi, ja siihen muuttaa alivuokralaisia: kyyhkyjä, varpusia, jopa oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Baikal: Kala, joka paloi lampussa] Baikalin runsain kala on samalla sen oudoin: järven kaloista arviolta 70 prosenttia on golomjankoja, eikä lajia tapaa mistään muualta. Vedestä nostettuna se on lähes läpikuultava, suomuton ja pitkäeväinen. Suuremman lajin 21-senttisen ruumiin painosta lähes 39 prosenttia on rasvaa; se ja huokoiset luut tekevät kalasta vedessä lähes painottoman, ja koska uimarakkoa ei ole, paineen vaihtelu syvyydestä toiseen ei haittaa. Mätiä golomjanka ei laske lainkaan: naaras synnyttää kerralla 2 000–3 000 elävää poikasta ja kuolee useimmiten siihen. Pyyntiä ei ole, mutta rantaan huuhtoutuneiden kalojen rasva paloi ennen lampuissa ja kelpasi lääkkeeksi.
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (nosto:cartagenan-kantoni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki julistautui omaksi valtioksi — ja oma hallitus julisti sen laivaston merirosvoiksi
+Tietoruudun teksti: Kun Espanjan tasavalta ei saanut ohjia käsiinsä, Cartagena — maan Välimeren päälaivastotukikohta — nousi aseelliseen kapinaan 12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. Kapinalliset saivat puolelleen sataman sota-alukset, jotka olivat Espanjan parhaita. Kantonin laivasto lähti keräämään rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei maksanut, se pommitettiin. Madridin hallitus julisti kantonin johtajan merirosvoksi ja pani hänen päästään palkkion.
+
+Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, mutta ei espanjalaisten toimesta: kiinniottajat olivat brittiläinen HMS Swiftsure ja saksalainen SMS Friedrich Karl. Kantoni kesti puoli vuotta, löi omaa rahaa ja otti loppuvaiheessa vastaan keskimäärin 1 200 kranaattia päivässä. 16. joulukuuta 1873 sen johtaja Roque Barcia kirjoitti Yhdysvaltain presidentille Ulysses S. Grantille ja pyysi lupaa…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kohdekartta / Kohdekartta: Market Squaren puisto] 1854 Kaupungin alkuperäisessä mittauksessa tämä kortteli sai nimen Congress Square. Se vaihtui Market Squareksi, kun Augustus Allen valitsi 1837 parlamenttitalon paikaksi Main Streetin ja Texas Avenuen luoteiskulman. Kaupungin valtuusto tilasi 1840 aukiolle ensimmäisen kauppahallin ja ensimmäisen kaupungintalon, ja urakoitsija sai molemmat valmiiksi seuraavana vuonna. Allen lahjoitti aukion kaupungille 1854, ja siitä tuli avoin torikauppapaikka. Se oli aivan Allenin maihinnousupaikan eli kaupungin ensimmäisen sataman vieressä, ja liikekeskusta kasvoi torin ympärille. Kaupungintaloja nousi ja paloi tälle samalle korttelille useita peräkkäin. Pormestari Thomas Scanlan kiersi 1871 itärannikkoa…
+- [Espanja — maalehti / Herkut: Tapas kuuluu hintaan] Nykyisin — Granadassa juoman mukana tulee tapas ilman eri maksua. Annosta ei saa valita: se on baarin valinta eikä asiakkaan, ja se vaihtuu joka kierroksella — monessa paikassa annokset myös kasvavat, mitä pitempään istut. Muualla Espanjassa ilmainen tapas on jo harvinaisuus, ja granadalaiset puolustavat omaansa kiivaasti. Ruokalistaa ei siis kannata pyytää: illan syö helpoiten kävelemällä baarista toiseen ja katsomalla, mitä eteen tuodaan.
+- [Espanja — maalehti / Ruoka] Espanjassa ruoka-aika on eri kuin muualla Euroopassa ja ruoan tahti eri kuin muualla maailmassa: pata kaadetaan pöytään kolmesti, sika syö kolme kuukautta pelkkiä tammenterhoja, ja vuosi vaihtuu kahdessatoista rypäleessä.
+
+### 50.1
+KYSYMYS: Mikä oli Cartagenan kantoni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki julistautui omaksi valtioksi — ja oma hallitus julisti sen laivaston merirosvoiksi
+Tietoruudun teksti: Kun Espanjan tasavalta ei saanut ohjia käsiinsä, Cartagena — maan Välimeren päälaivastotukikohta — nousi aseelliseen kapinaan 12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. Kapinalliset saivat puolelleen sataman sota-alukset, jotka olivat Espanjan parhaita. Kantonin laivasto lähti keräämään rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei maksanut, se pommitettiin. Madridin hallitus julisti kantonin johtajan merirosvoksi ja pani hänen päästään palkkion.
+
+Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, mutta ei espanjalaisten toimesta: kiinniottajat olivat brittiläinen HMS Swiftsure ja saksalainen SMS Friedrich Karl. Kantoni kesti puoli vuotta, löi omaa rahaa ja otti loppuvaiheessa vastaan keskimäärin 1 200 kranaattia päivässä. 16. joulukuuta 1873 sen johtaja Roque Barcia kirjoitti Yhdysvaltain presidentille Ulysses S. Grantille ja pyysi lupaa…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Linnoitukset: La Cabaña – tappion jälkeen rakennettu jättiläinen] Brittien valtaus paljasti, että Morro oli haavoittuva maan puolelta. Kun Espanja sai kaupungin takaisin, kuningas Kaarle III aloitti 1763 lahden itärannan kukkulalle San Carlos de la Cabañan linnoituksen, joka valmistui 1774 insinöörieverstin Silvestre Abarca y Aznarin johdolla. Koosta lähteet ovat eri mieltä: Havannan artikkeli sanoo sitä Uuden maailman kolmanneksi suurimmaksi espanjalaislinnoitukseksi San Juanin kahden linnan jälkeen, kun taas linnoituksen oma artikkeli sanoo yhdessä kohdassa samaa ja toisessa toiseksi suurimmaksi Cartagenan San Felipe de Barajasin jälkeen.
+
+### 50.2
+KYSYMYS: Miksi Espanjassa oli vuonna 1873 useita hallituksia peräkkäin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki julistautui omaksi valtioksi — ja oma hallitus julisti sen laivaston merirosvoiksi
+Tietoruudun teksti: Kun Espanjan tasavalta ei saanut ohjia käsiinsä, Cartagena — maan Välimeren päälaivastotukikohta — nousi aseelliseen kapinaan 12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. Kapinalliset saivat puolelleen sataman sota-alukset, jotka olivat Espanjan parhaita. Kantonin laivasto lähti keräämään rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei maksanut, se pommitettiin. Madridin hallitus julisti kantonin johtajan merirosvoksi ja pani hänen päästään palkkion.
+
+Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, mutta ei espanjalaisten toimesta: kiinniottajat olivat brittiläinen HMS Swiftsure ja saksalainen SMS Friedrich Karl. Kantoni kesti puoli vuotta, löi omaa rahaa ja otti loppuvaiheessa vastaan keskimäärin 1 200 kranaattia päivässä. 16. joulukuuta 1873 sen johtaja Roque Barcia kirjoitti Yhdysvaltain presidentille Ulysses S. Grantille ja pyysi lupaa…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kohdekartta / Kohdekartta: Market Squaren puisto] 1854 Kaupungin alkuperäisessä mittauksessa tämä kortteli sai nimen Congress Square. Se vaihtui Market Squareksi, kun Augustus Allen valitsi 1837 parlamenttitalon paikaksi Main Streetin ja Texas Avenuen luoteiskulman. Kaupungin valtuusto tilasi 1840 aukiolle ensimmäisen kauppahallin ja ensimmäisen kaupungintalon, ja urakoitsija sai molemmat valmiiksi seuraavana vuonna. Allen lahjoitti aukion kaupungille 1854, ja siitä tuli avoin torikauppapaikka. Se oli aivan Allenin maihinnousupaikan eli kaupungin ensimmäisen sataman vieressä, ja liikekeskusta kasvoi torin ympärille. Kaupungintaloja nousi ja paloi tälle samalle korttelille useita peräkkäin. Pormestari Thomas Scanlan kiersi 1871 itärannikkoa…
+- [Espanja — maalehti / Herkut: Tapas kuuluu hintaan] Nykyisin — Granadassa juoman mukana tulee tapas ilman eri maksua. Annosta ei saa valita: se on baarin valinta eikä asiakkaan, ja se vaihtuu joka kierroksella — monessa paikassa annokset myös kasvavat, mitä pitempään istut. Muualla Espanjassa ilmainen tapas on jo harvinaisuus, ja granadalaiset puolustavat omaansa kiivaasti. Ruokalistaa ei siis kannata pyytää: illan syö helpoiten kävelemällä baarista toiseen ja katsomalla, mitä eteen tuodaan.
+- [Espanja — maalehti / Ruoka] Espanjassa ruoka-aika on eri kuin muualla Euroopassa ja ruoan tahti eri kuin muualla maailmassa: pata kaadetaan pöytään kolmesti, sika syö kolme kuukautta pelkkiä tammenterhoja, ja vuosi vaihtuu kahdessatoista rypäleessä.
+
+### 50.3
+KYSYMYS: Miten kaupunki pystyi lyömään omaa rahaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki julistautui omaksi valtioksi — ja oma hallitus julisti sen laivaston merirosvoiksi
+Tietoruudun teksti: Kun Espanjan tasavalta ei saanut ohjia käsiinsä, Cartagena — maan Välimeren päälaivastotukikohta — nousi aseelliseen kapinaan 12. heinäkuuta 1873 ja julistautui itsenäiseksi kantoniksi. Kapinalliset saivat puolelleen sataman sota-alukset, jotka olivat Espanjan parhaita. Kantonin laivasto lähti keräämään rahaa "ulkovallalta", Almerían kaupungilta, ja kun kaupunki ei maksanut, se pommitettiin. Madridin hallitus julisti kantonin johtajan merirosvoksi ja pani hänen päästään palkkion.
+
+Fregatit Almansa ja Vitoria otettiin lopulta kiinni merirosvoina, mutta ei espanjalaisten toimesta: kiinniottajat olivat brittiläinen HMS Swiftsure ja saksalainen SMS Friedrich Karl. Kantoni kesti puoli vuotta, löi omaa rahaa ja otti loppuvaiheessa vastaan keskimäärin 1 200 kranaattia päivässä. 16. joulukuuta 1873 sen johtaja Roque Barcia kirjoitti Yhdysvaltain presidentille Ulysses S. Grantille ja pyysi lupaa…
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Urheilu: Viisitoista syöttövuoroa, jotka muuttivat lajin] 1996 — Vuoden 1996 maailmancupissa Arjuna Ranatungan joukkue teki jotain, mitä kukaan ei ollut kokeillut: se lähetti avaajiksi Sanath Jayasuriyan ja Romesh Kaluwitharanan lyömään täysillä heti ensimmäisistä viidestätoista syöttövuorosta, joiden ajan kenttäpelaajat on pakko pitää lähellä. Kun viittäkymmentä juoksua pidettiin tuolloin hyvänä alkuna, Sri Lanka teki Intiaa vastaan 117 ja Englantia vastaan 121. Finaalissa Lahoressa Australia teki 241, ja Aravinda de Silva otti kolme kettoa ja löi 107 ilman poistoa. Isäntämaa voitti maailmanmestaruuden ensimmäistä kertaa lajin historiassa.
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

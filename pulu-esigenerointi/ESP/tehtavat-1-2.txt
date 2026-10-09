@@ -1,0 +1,276 @@
+================ KOHTA 6 (kohde:santiago-de-compostela) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santiago de Compostela (kulttuuri)
+Tietoruudun teksti: Santiago de Compostela on Galician pääkaupunki Iberian niemimaan luoteiskulmassa. Kaupunki sai alkunsa apostoli Jaakobin pyhäköstä, jonka paikalla on nykyään Santiago de Compostelan katedraali. Se on Jaakobin tien päätepiste — yksi katolisen maailman tärkeimmistä pyhiinvaellusreiteistä 800-luvulta lähtien. Vanhakaupunki on ollut maailmanperintökohde vuodesta 1985.
+
+Nimen alkuperästä on kaksi selitystä. Tutkijat johtavat Compostelan latinan sanoista compositum tella, hyvin järjestetty hautausmaa, mikä viittaisi kirkkoa vanhempaan hautausmaahan. Kansanetymologia taas johtaa nimen sanoista campus stellae, tähden kenttä. Santiago puolestaan on galician kielen muoto latinan nimestä Sanctus Iacobus.
+
+Keskiaikaisen tarun mukaan apostoli Jaakobin jäännökset tuotiin Galiciaan haudattaviksi, mutta hauta unohtui. Kahdeksansataa vuotta myöhemmin kirkas tähti johdatti paimen Pelagiuksen paikalle, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+- [Astana — kohdekartta / Kohdekartta: Hazrat Sultanin moskeija] 2009–2012 Moskeija on nimetty Hazrat Sultanin mukaan. Se on yksi sufilaisen šeikin Khoja Ahmed Yasavin lisänimistä; hänen mausoleuminsa on Turkistanissa Etelä-Kazakstanissa. Rakentaminen alkoi kesäkuussa 2009, ja työmaalla oli eri vaiheissa tuhannesta puoleentoista tuhanteen työntekijää. Talo avattiin 6. heinäkuuta 2012. Tyyli on klassinen islamilainen, mutta koristeaiheet ovat kazakstanilaisia. Päälaen kupoli on maan suurin: korkeutta 51 metriä ja halkaisijaa juurella 28,1 metriä. Pienempiä kupoleita on kahdeksan, ja nurkissa nousee neljä 77 metrin minareettia. Tontti on yli yksitoista hehtaaria ja rakennettu ala 17 700 neliömetriä. Rukoilijoita mahtuu viisituhatta ja juhlapyhinä kymmenent…
+
+### 6.1
+KYSYMYS: Mistä nimi Compostela tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santiago de Compostela (kulttuuri)
+Tietoruudun teksti: Santiago de Compostela on Galician pääkaupunki Iberian niemimaan luoteiskulmassa. Kaupunki sai alkunsa apostoli Jaakobin pyhäköstä, jonka paikalla on nykyään Santiago de Compostelan katedraali. Se on Jaakobin tien päätepiste — yksi katolisen maailman tärkeimmistä pyhiinvaellusreiteistä 800-luvulta lähtien. Vanhakaupunki on ollut maailmanperintökohde vuodesta 1985.
+
+Nimen alkuperästä on kaksi selitystä. Tutkijat johtavat Compostelan latinan sanoista compositum tella, hyvin järjestetty hautausmaa, mikä viittaisi kirkkoa vanhempaan hautausmaahan. Kansanetymologia taas johtaa nimen sanoista campus stellae, tähden kenttä. Santiago puolestaan on galician kielen muoto latinan nimestä Sanctus Iacobus.
+
+Keskiaikaisen tarun mukaan apostoli Jaakobin jäännökset tuotiin Galiciaan haudattaviksi, mutta hauta unohtui. Kahdeksansataa vuotta myöhemmin kirkas tähti johdatti paimen Pelagiuksen paikalle, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+
+### 6.2
+KYSYMYS: Kuka löysi haudan tarun mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Santiago de Compostela (kulttuuri)
+Tietoruudun teksti: Santiago de Compostela on Galician pääkaupunki Iberian niemimaan luoteiskulmassa. Kaupunki sai alkunsa apostoli Jaakobin pyhäköstä, jonka paikalla on nykyään Santiago de Compostelan katedraali. Se on Jaakobin tien päätepiste — yksi katolisen maailman tärkeimmistä pyhiinvaellusreiteistä 800-luvulta lähtien. Vanhakaupunki on ollut maailmanperintökohde vuodesta 1985.
+
+Nimen alkuperästä on kaksi selitystä. Tutkijat johtavat Compostelan latinan sanoista compositum tella, hyvin järjestetty hautausmaa, mikä viittaisi kirkkoa vanhempaan hautausmaahan. Kansanetymologia taas johtaa nimen sanoista campus stellae, tähden kenttä. Santiago puolestaan on galician kielen muoto latinan nimestä Sanctus Iacobus.
+
+Keskiaikaisen tarun mukaan apostoli Jaakobin jäännökset tuotiin Galiciaan haudattaviksi, mutta hauta unohtui. Kahdeksansataa vuotta myöhemmin kirkas tähti johdatti paimen Pelagiuksen paikalle, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Hazrat Sultanin moskeija] 2009–2012 Moskeija on nimetty Hazrat Sultanin mukaan. Se on yksi sufilaisen šeikin Khoja Ahmed Yasavin lisänimistä; hänen mausoleuminsa on Turkistanissa Etelä-Kazakstanissa. Rakentaminen alkoi kesäkuussa 2009, ja työmaalla oli eri vaiheissa tuhannesta puoleentoista tuhanteen työntekijää. Talo avattiin 6. heinäkuuta 2012. Tyyli on klassinen islamilainen, mutta koristeaiheet ovat kazakstanilaisia. Päälaen kupoli on maan suurin: korkeutta 51 metriä ja halkaisijaa juurella 28,1 metriä. Pienempiä kupoleita on kahdeksan, ja nurkissa nousee neljä 77 metrin minareettia. Tontti on yli yksitoista hehtaaria ja rakennettu ala 17 700 neliömetriä. Rukoilijoita mahtuu viisituhatta ja juhlapyhinä kymmenent…
+- [Astana — kohdekartta / Kohdekartta: Bajterek] 1996–2002 Nimi tarkoittaa kazakiksi korkeaa poppelia. Torni rakennettiin 25. lokakuuta 1996 alkaen ja valmistui 30. elokuuta 2002; suunnittelija oli kazakstanilainen arkkitehti Akmurza Rustembekov ja päärakennesuunnittelija Mark Vaynshtein. Vuonna 2017 torni peruskorjattiin. Korkeutta on 105 metriä. Rakenne on kapea sylinterimäinen kuilu, jota kiertävät valkoiset oksamaiset ristikkopalkit. Ylhäällä oksat levittäytyvät ja kannattelevat 22 metriä leveää kultapeilipintaista palloa. Kuilussa kulkee kaksi hissiä näköalatasanteelle, joka on 97 metrin korkeudessa ja jossa on kaksi kerrosta: alemmalta näkee ympäri kaupungin, ylemmälle noustaan portaita. Sisäänkäynnit on upotettu aukion pinnan alle,…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:segovian-akvedukti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Segovian akvedukti (tekniikka)
+Tietoruudun teksti: Segovian akvedukti on roomalainen vesijohto, joka rakennettiin noin ensimmäisellä vuosisadalla jaa. tuomaan vettä seitsemäntoista kilometrin päässä olevilta vuorilähteiltä Segovian suihkulähteisiin, yleisiin kylpylöihin ja koteihin. Se oli käytössä aina vuoteen 1973. Korkealla kulkevassa osassa on 167 kaarta, ja rakennelma on kaupungin tunnus: se on Segovian vaakunassa. Vanhakaupunki ja akvedukti otettiin maailmanperintöluetteloon 1985.
+
+Rakennusaika oli pitkään arvoitus, koska luettavaa piirtokirjoitusta ei ole. 1900-luvun lopulla Géza Alföldy tulkitsi omistuskirjoituksen tutkimalla kiinnikkeitä, joilla kadonneet pronssikirjaimet oli aikanaan kiinnitetty. Hänen mukaansa keisari Domitianus määräsi työn ja se valmistui todennäköisesti vuonna 98. Vuonna 2016 julkaistu arkeologinen aineisto siirtää ajoitusta hieman myöhemmäksi, vuoden 112 jälkeen Traianuksen tai varhaisen Hadrianuksen aika…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 7.1
+KYSYMYS: Miten akveduktin ikä selvitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Segovian akvedukti (tekniikka)
+Tietoruudun teksti: Segovian akvedukti on roomalainen vesijohto, joka rakennettiin noin ensimmäisellä vuosisadalla jaa. tuomaan vettä seitsemäntoista kilometrin päässä olevilta vuorilähteiltä Segovian suihkulähteisiin, yleisiin kylpylöihin ja koteihin. Se oli käytössä aina vuoteen 1973. Korkealla kulkevassa osassa on 167 kaarta, ja rakennelma on kaupungin tunnus: se on Segovian vaakunassa. Vanhakaupunki ja akvedukti otettiin maailmanperintöluetteloon 1985.
+
+Rakennusaika oli pitkään arvoitus, koska luettavaa piirtokirjoitusta ei ole. 1900-luvun lopulla Géza Alföldy tulkitsi omistuskirjoituksen tutkimalla kiinnikkeitä, joilla kadonneet pronssikirjaimet oli aikanaan kiinnitetty. Hänen mukaansa keisari Domitianus määräsi työn ja se valmistui todennäköisesti vuonna 98. Vuonna 2016 julkaistu arkeologinen aineisto siirtää ajoitusta hieman myöhemmäksi, vuoden 112 jälkeen Traianuksen tai varhaisen Hadrianuksen aika…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 7.2
+KYSYMYS: Kuinka kauan akvedukti oli käytössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Segovian akvedukti (tekniikka)
+Tietoruudun teksti: Segovian akvedukti on roomalainen vesijohto, joka rakennettiin noin ensimmäisellä vuosisadalla jaa. tuomaan vettä seitsemäntoista kilometrin päässä olevilta vuorilähteiltä Segovian suihkulähteisiin, yleisiin kylpylöihin ja koteihin. Se oli käytössä aina vuoteen 1973. Korkealla kulkevassa osassa on 167 kaarta, ja rakennelma on kaupungin tunnus: se on Segovian vaakunassa. Vanhakaupunki ja akvedukti otettiin maailmanperintöluetteloon 1985.
+
+Rakennusaika oli pitkään arvoitus, koska luettavaa piirtokirjoitusta ei ole. 1900-luvun lopulla Géza Alföldy tulkitsi omistuskirjoituksen tutkimalla kiinnikkeitä, joilla kadonneet pronssikirjaimet oli aikanaan kiinnitetty. Hänen mukaansa keisari Domitianus määräsi työn ja se valmistui todennäköisesti vuonna 98. Vuonna 2016 julkaistu arkeologinen aineisto siirtää ajoitusta hieman myöhemmäksi, vuoden 112 jälkeen Traianuksen tai varhaisen Hadrianuksen aika…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:altamiran-luola) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altamiran luola (historia)
+Tietoruudun teksti: Altamiran luola on luolasto lähellä Santillana del Marin vanhaa kaupunkia Kantabriassa Pohjois-Espanjassa. Se tunnetaan esihistoriallisesta luolataiteesta: hiilipiirroksista ja monivärimaalauksista, joissa on aikakauden paikallisia eläimiä ja ihmisen käsiä. Vanhimmat maalaukset tehtiin ylemmällä paleoliittisella kaudella noin 36 000 vuotta sitten.
+
+Luolan löysi 1868 Modesto Cubillas, ja sitä tutki Marcelino Sanz de Sautuola, joka julkaisi tutkimuksensa 1880 Juan de Vilanova y Pieran tuella. Julkaisu johti katkeraan riitaan: osa asiantuntijoista kiisti maalausten esihistoriallisen alkuperän sillä perusteella, ettei esihistoriallinen ihminen kyennyt abstraktiin ajatteluun. Kiista jatkui vuoteen 1902, jolloin vastaavia löytöjä Ranskan ja Espanjan rajaseudulta oli kertynyt niin paljon, ettei todistusaineistoa voinut enää sivuuttaa.
+
+Altamira otettiin maailmanperintöluetteloon 1985. Luolaan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+- [Nicaragua — maalehti / Kansanperinne: Prinsessa, joka kätki aarteen ja jäi luolaan] La Mocuana on Nicaraguan kuuluisin kansantarina, ja sen uskotaan pohjautuvan tositapahtumiin. Päällikkö otti espanjalaiset ensin vieraanvaraisesti vastaan mutta käski heidät sitten pois. Kun nämä palasivat aarteen perässä, päällikkö piilotti sen, ja ainoa toinen paikan tietäjä oli hänen tyttärensä. Tytär rakastui myöhemmin erään espanjalaissotilaan poikaan ja antoi tälle isänsä aarteen yhteistä tulevaisuutta varten — ja mies sulki hänet luolaan ja pakeni kullan kanssa. Tyttö pääsi ulos luolan takakautta ja jäi vaeltamaan metsiin.
+
+### 8.1
+KYSYMYS: Miksi maalauksia ei ensin uskottu esihistoriallisiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altamiran luola (historia)
+Tietoruudun teksti: Altamiran luola on luolasto lähellä Santillana del Marin vanhaa kaupunkia Kantabriassa Pohjois-Espanjassa. Se tunnetaan esihistoriallisesta luolataiteesta: hiilipiirroksista ja monivärimaalauksista, joissa on aikakauden paikallisia eläimiä ja ihmisen käsiä. Vanhimmat maalaukset tehtiin ylemmällä paleoliittisella kaudella noin 36 000 vuotta sitten.
+
+Luolan löysi 1868 Modesto Cubillas, ja sitä tutki Marcelino Sanz de Sautuola, joka julkaisi tutkimuksensa 1880 Juan de Vilanova y Pieran tuella. Julkaisu johti katkeraan riitaan: osa asiantuntijoista kiisti maalausten esihistoriallisen alkuperän sillä perusteella, ettei esihistoriallinen ihminen kyennyt abstraktiin ajatteluun. Kiista jatkui vuoteen 1902, jolloin vastaavia löytöjä Ranskan ja Espanjan rajaseudulta oli kertynyt niin paljon, ettei todistusaineistoa voinut enää sivuuttaa.
+
+Altamira otettiin maailmanperintöluetteloon 1985. Luolaan …
+
+### 8.2
+KYSYMYS: Miksi luolaan ei enää pääse?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altamiran luola (historia)
+Tietoruudun teksti: Altamiran luola on luolasto lähellä Santillana del Marin vanhaa kaupunkia Kantabriassa Pohjois-Espanjassa. Se tunnetaan esihistoriallisesta luolataiteesta: hiilipiirroksista ja monivärimaalauksista, joissa on aikakauden paikallisia eläimiä ja ihmisen käsiä. Vanhimmat maalaukset tehtiin ylemmällä paleoliittisella kaudella noin 36 000 vuotta sitten.
+
+Luolan löysi 1868 Modesto Cubillas, ja sitä tutki Marcelino Sanz de Sautuola, joka julkaisi tutkimuksensa 1880 Juan de Vilanova y Pieran tuella. Julkaisu johti katkeraan riitaan: osa asiantuntijoista kiisti maalausten esihistoriallisen alkuperän sillä perusteella, ettei esihistoriallinen ihminen kyennyt abstraktiin ajatteluun. Kiista jatkui vuoteen 1902, jolloin vastaavia löytöjä Ranskan ja Espanjan rajaseudulta oli kertynyt niin paljon, ettei todistusaineistoa voinut enää sivuuttaa.
+
+Altamira otettiin maailmanperintöluetteloon 1985. Luolaan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+- [Nicaragua — maalehti / Kansanperinne: Prinsessa, joka kätki aarteen ja jäi luolaan] La Mocuana on Nicaraguan kuuluisin kansantarina, ja sen uskotaan pohjautuvan tositapahtumiin. Päällikkö otti espanjalaiset ensin vieraanvaraisesti vastaan mutta käski heidät sitten pois. Kun nämä palasivat aarteen perässä, päällikkö piilotti sen, ja ainoa toinen paikan tietäjä oli hänen tyttärensä. Tytär rakastui myöhemmin erään espanjalaissotilaan poikaan ja antoi tälle isänsä aarteen yhteistä tulevaisuutta varten — ja mies sulki hänet luolaan ja pakeni kullan kanssa. Tyttö pääsi ulos luolan takakautta ja jäi vaeltamaan metsiin.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:toledo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toledo (kaupungit)
+Tietoruudun teksti: Toledo on kaupunki Keski-Espanjassa Tajon oikealla rannalla, joen mutkan syleilyssä. Se on Toledon maakunnan pääkaupunki ja Kastilia-La Manchan hallituksen ja parlamentin virallinen sijaintipaikka; asukkaita on noin 86 500. Vuosisatojen aikana kaupunki on tunnettu monella nimellä: latinaksi Toletum, arabiaksi Tulaytula ja juutalaisespanjaksi Toldoth.
+
+Karpetaanien asuinpaikalle noussut Toledo kasvoi merkittäväksi roomalaiskaupungiksi ja myöhemmin visigoottien valtakunnan pääkaupungiksi ja mahtavan arkkihiippakunnan istuimeksi. Islamilaisen kauden aikana se niskoitteli usein umaijadien keskusvaltaa vastaan, mutta samalla siitä tuli kulttuurikeskus, jossa islamilainen maailma ja latinalainen kristikunta vaihtoivat oppia keskenään.
+
+Kristityt valtasivat kaupungin 1085, ja se säilytti asemansa Kastilian kruunun sisällä ja pysyi kahden seuraavan vuosisadan ajan avoimena muslimien ja juutalai…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Kreikkalainen, joka maalasi Toledossa] Doménikos Theotokópoulos syntyi Kreetalla, opiskeli Venetsiassa ja päätyi Toledoon, jossa häntä sanottiin yksinkertaisesti El Grecoksi, kreikkalaiseksi. Hänen hahmonsa venyvät pitkiksi ja värit hehkuvat kylmästi — aikalaiset pitivät sitä outona, ja vuosisatoja myöhemmin siitä tuli syy pitää häntä nykytaiteen esi-isänä. Orgazin kreivin hautaus on yhä siinä kirkossa, jota varten se maalattiin 1586: alaosassa Toledon herrat mustissa kauluksissaan, yläosassa taivas.
+
+### 9.1
+KYSYMYS: Minkä valtakunnan pääkaupunki Toledo oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toledo (kaupungit)
+Tietoruudun teksti: Toledo on kaupunki Keski-Espanjassa Tajon oikealla rannalla, joen mutkan syleilyssä. Se on Toledon maakunnan pääkaupunki ja Kastilia-La Manchan hallituksen ja parlamentin virallinen sijaintipaikka; asukkaita on noin 86 500. Vuosisatojen aikana kaupunki on tunnettu monella nimellä: latinaksi Toletum, arabiaksi Tulaytula ja juutalaisespanjaksi Toldoth.
+
+Karpetaanien asuinpaikalle noussut Toledo kasvoi merkittäväksi roomalaiskaupungiksi ja myöhemmin visigoottien valtakunnan pääkaupungiksi ja mahtavan arkkihiippakunnan istuimeksi. Islamilaisen kauden aikana se niskoitteli usein umaijadien keskusvaltaa vastaan, mutta samalla siitä tuli kulttuurikeskus, jossa islamilainen maailma ja latinalainen kristikunta vaihtoivat oppia keskenään.
+
+Kristityt valtasivat kaupungin 1085, ja se säilytti asemansa Kastilian kruunun sisällä ja pysyi kahden seuraavan vuosisadan ajan avoimena muslimien ja juutalai…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Kreikkalainen, joka maalasi Toledossa] Doménikos Theotokópoulos syntyi Kreetalla, opiskeli Venetsiassa ja päätyi Toledoon, jossa häntä sanottiin yksinkertaisesti El Grecoksi, kreikkalaiseksi. Hänen hahmonsa venyvät pitkiksi ja värit hehkuvat kylmästi — aikalaiset pitivät sitä outona, ja vuosisatoja myöhemmin siitä tuli syy pitää häntä nykytaiteen esi-isänä. Orgazin kreivin hautaus on yhä siinä kirkossa, jota varten se maalattiin 1586: alaosassa Toledon herrat mustissa kauluksissaan, yläosassa taivas.
+
+### 9.2
+KYSYMYS: Mistä käsityöstä Toledo on tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toledo (kaupungit)
+Tietoruudun teksti: Toledo on kaupunki Keski-Espanjassa Tajon oikealla rannalla, joen mutkan syleilyssä. Se on Toledon maakunnan pääkaupunki ja Kastilia-La Manchan hallituksen ja parlamentin virallinen sijaintipaikka; asukkaita on noin 86 500. Vuosisatojen aikana kaupunki on tunnettu monella nimellä: latinaksi Toletum, arabiaksi Tulaytula ja juutalaisespanjaksi Toldoth.
+
+Karpetaanien asuinpaikalle noussut Toledo kasvoi merkittäväksi roomalaiskaupungiksi ja myöhemmin visigoottien valtakunnan pääkaupungiksi ja mahtavan arkkihiippakunnan istuimeksi. Islamilaisen kauden aikana se niskoitteli usein umaijadien keskusvaltaa vastaan, mutta samalla siitä tuli kulttuurikeskus, jossa islamilainen maailma ja latinalainen kristikunta vaihtoivat oppia keskenään.
+
+Kristityt valtasivat kaupungin 1085, ja se säilytti asemansa Kastilian kruunun sisällä ja pysyi kahden seuraavan vuosisadan ajan avoimena muslimien ja juutalai…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Kuvataide: Kreikkalainen, joka maalasi Toledossa] Doménikos Theotokópoulos syntyi Kreetalla, opiskeli Venetsiassa ja päätyi Toledoon, jossa häntä sanottiin yksinkertaisesti El Grecoksi, kreikkalaiseksi. Hänen hahmonsa venyvät pitkiksi ja värit hehkuvat kylmästi — aikalaiset pitivät sitä outona, ja vuosisatoja myöhemmin siitä tuli syy pitää häntä nykytaiteen esi-isänä. Orgazin kreivin hautaus on yhä siinä kirkossa, jota varten se maalattiin 1586: alaosassa Toledon herrat mustissa kauluksissaan, yläosassa taivas.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:cordoban-moskeijakatedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Córdoban moskeijakatedraali (kulttuuri)
+Tietoruudun teksti: Córdoban moskeijakatedraali on Córdoban hiippakunnan katedraali Andalusiassa. Sen virallinen nimi on Neitsyt Marian taivaaseenottamisen katedraali, mutta se tunnetaan yleisesti Mezquitana eli moskeijana ja historiallisesti Córdoban suurena moskeijana.
+
+Suuri moskeija rakennettiin vuonna 785 Córdoban emiirikunnan perustajan Abd ar-Rahman I:n käskystä. Perimätiedon mukaan paikalla oli sitä ennen visigoottien kirkko, mutta asiasta kiistellään yhä. Seuraajat laajensivat rakennusta useaan otteeseen 900-luvun loppuun asti: Abd ar-Rahman III rakennutti minareetin, joka valmistui 958, ja hänen poikansa al-Hakam II koristeellisen mihrabin ja sitä ympäröivän maqsuran, joka valmistui 971.
+
+Kun Kastilian joukot valtasivat Córdoban 1236, moskeija muutettiin katedraaliksi. Rakennukseen tehtiin vain pieniä muutoksia siihen asti, kun 1500-luvulla sen keskelle rakennettiin renessanssityylinen kirkkolaiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Moskeija, jonka sisään rakennettiin katedraali] 1236 — Córdoban Mezquitassa on 856 pylvästä ja niiden päällä kaksi kaarikerrosta punavalkoisin raidoin. Ratkaisu on käytännöllinen: pylväät olivat vanhoja roomalaisia ja liian lyhyitä, joten kaaret ladottiin päällekkäin korkeuden saamiseksi. Tuloksena on metsä, jonka läpi katse ei kanna. Kun Córdoba vallattiin 1236, moskeijaa ei purettu vaan sen keskelle rakennettiin katedraali — kaupunki pyysi kuningas Kaarle V:tä estämään työn, ja tämän kerrotaan katuneen lupaansa nähtyään lopputuloksen.
+- [Xi’an — kohdekartta / Kohdekartta: Suuri moskeija] 742, nykyinen muoto 1392 Tang-keisari Xuanzong määräsi noin vuonna 742 rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja käsityöläisille. Song-kaudelta on säilynyt keisarillinen kilpi, joka todistaa paikan olleen silloin käytössä. Moskeija on rakennettu uudelleen ainakin neljä kertaa; 1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella lisättiin etuportti, kunniaportti ja vesipiste. Alaa kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli kaksikymmentä. Pohjakaava on kiinalainen: neljä muurein erotettua pihaa peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi jälkimmäistä rakennusten aluetta. Jokaisen p…
+
+### 10.1
+KYSYMYS: Kuka määräsi suuren moskeijan rakennettavaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Córdoban moskeijakatedraali (kulttuuri)
+Tietoruudun teksti: Córdoban moskeijakatedraali on Córdoban hiippakunnan katedraali Andalusiassa. Sen virallinen nimi on Neitsyt Marian taivaaseenottamisen katedraali, mutta se tunnetaan yleisesti Mezquitana eli moskeijana ja historiallisesti Córdoban suurena moskeijana.
+
+Suuri moskeija rakennettiin vuonna 785 Córdoban emiirikunnan perustajan Abd ar-Rahman I:n käskystä. Perimätiedon mukaan paikalla oli sitä ennen visigoottien kirkko, mutta asiasta kiistellään yhä. Seuraajat laajensivat rakennusta useaan otteeseen 900-luvun loppuun asti: Abd ar-Rahman III rakennutti minareetin, joka valmistui 958, ja hänen poikansa al-Hakam II koristeellisen mihrabin ja sitä ympäröivän maqsuran, joka valmistui 971.
+
+Kun Kastilian joukot valtasivat Córdoban 1236, moskeija muutettiin katedraaliksi. Rakennukseen tehtiin vain pieniä muutoksia siihen asti, kun 1500-luvulla sen keskelle rakennettiin renessanssityylinen kirkkolaiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Suuri moskeija] 742, nykyinen muoto 1392 Tang-keisari Xuanzong määräsi noin vuonna 742 rakennettavaksi rukouspaikan kaupungin muslimikauppiaille ja käsityöläisille. Song-kaudelta on säilynyt keisarillinen kilpi, joka todistaa paikan olleen silloin käytössä. Moskeija on rakennettu uudelleen ainakin neljä kertaa; 1260-luvulla sen kunnosti Yuan-hallinto, ja nykyinen muoto on Ming-keisari Hongwun ajalta vuodelta 1392. Qing-kaudella lisättiin etuportti, kunniaportti ja vesipiste. Alaa kokonaisuudella on 1,23 hehtaaria ja rakennuksia yli kaksikymmentä. Pohjakaava on kiinalainen: neljä muurein erotettua pihaa peräkkäin, joista kaksi ensimmäistä ovat puutarhoja ja kaksi jälkimmäistä rakennusten aluetta. Jokaisen p…
+- [Izmir — kohdekartta / Kohdekartta: Smyrnan agora] 178 Torin lattiaa kannattaa kolmikerroksinen suorakaiteen muotoinen rakennus, joka on ladottu pylväiden ja kaarien varaan suuren sisäpihan ympärille ja jonka etusivulla nousevat portaat. Saksalainen arkeologi Rudolf Naumann ja İzmirin ja Efesoksen museoiden johtaja Selâhattin Kantar kaivoivat sen esiin vuosina 1931–1942. Läntisen pylväshallin korinttilaiset pylväät seisovat yhä rivissä, ja hallin toisessa kaaressa on keisarin vaimon Faustinan rintakuva. Kreikkalaiset rakensivat torin 300-luvulla eaa. Pagos-kukkulan pohjoisrinteen juurelle. Se oli kaupungin kaupan, oikeudenkäytön ja hallinnon keskus sekä opetuksen paikka. Vuoden 178 maanjäristys tuhosi sen, ja keisari Marcus Aurelius määräsi…
+
+### 10.2
+KYSYMYS: Mitä 1500-luvulla rakennettiin rakennuksen keskelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Córdoban moskeijakatedraali (kulttuuri)
+Tietoruudun teksti: Córdoban moskeijakatedraali on Córdoban hiippakunnan katedraali Andalusiassa. Sen virallinen nimi on Neitsyt Marian taivaaseenottamisen katedraali, mutta se tunnetaan yleisesti Mezquitana eli moskeijana ja historiallisesti Córdoban suurena moskeijana.
+
+Suuri moskeija rakennettiin vuonna 785 Córdoban emiirikunnan perustajan Abd ar-Rahman I:n käskystä. Perimätiedon mukaan paikalla oli sitä ennen visigoottien kirkko, mutta asiasta kiistellään yhä. Seuraajat laajensivat rakennusta useaan otteeseen 900-luvun loppuun asti: Abd ar-Rahman III rakennutti minareetin, joka valmistui 958, ja hänen poikansa al-Hakam II koristeellisen mihrabin ja sitä ympäröivän maqsuran, joka valmistui 971.
+
+Kun Kastilian joukot valtasivat Córdoban 1236, moskeija muutettiin katedraaliksi. Rakennukseen tehtiin vain pieniä muutoksia siihen asti, kun 1500-luvulla sen keskelle rakennettiin renessanssityylinen kirkkolaiv…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Moskeija, jonka sisään rakennettiin katedraali] 1236 — Córdoban Mezquitassa on 856 pylvästä ja niiden päällä kaksi kaarikerrosta punavalkoisin raidoin. Ratkaisu on käytännöllinen: pylväät olivat vanhoja roomalaisia ja liian lyhyitä, joten kaaret ladottiin päällekkäin korkeuden saamiseksi. Tuloksena on metsä, jonka läpi katse ei kanna. Kun Córdoba vallattiin 1236, moskeijaa ei purettu vaan sen keskelle rakennettiin katedraali — kaupunki pyysi kuningas Kaarle V:tä estämään työn, ja tämän kerrotaan katuneen lupaansa nähtyään lopputuloksen.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

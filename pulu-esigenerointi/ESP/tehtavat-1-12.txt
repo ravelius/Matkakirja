@@ -1,0 +1,64 @@
+================ KOHTA 56 (nosto:gran-vian-murto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+- [Madrid — kaupunkilehti / Kadut ja talot] Kaupungin läpi murrettiin katu hopeisella hakulla, ja palaneen linnan tilalle rakennettiin sellainen, joka ei voisi palaa. Katu ja linna ovat nyt kaupungin kartalla, kumpikin omalla paikallaan.
+
+### 56.1
+KYSYMYS: Miten 312 talon asukkaille kävi, kun katu murrettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+- [Madrid — kaupunkilehti / Kadut ja talot] Kaupungin läpi murrettiin katu hopeisella hakulla, ja palaneen linnan tilalle rakennettiin sellainen, joka ei voisi palaa. Katu ja linna ovat nyt kaupungin kartalla, kumpikin omalla paikallaan.
+
+### 56.2
+KYSYMYS: Miksi vanhan keskustan kadut olivat niin kapeita ja mutkaisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+
+### 56.3
+KYSYMYS: Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Madrid
+Maa, jossa pelaaja on: Espanja
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Katu, joka murrettiin talojen läpi
+Tietoruudun teksti: Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+Isoisän matkakirjamerkintä: Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Gran Vía] Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja tykit ampuivat sitä kohti.
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
