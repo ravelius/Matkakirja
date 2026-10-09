@@ -766,6 +766,77 @@ namespace Matkakirja.Linssit.Dioraama
             return pm;
         }
 
+        /// <summary>
+        /// Linnan esittelyn näkyvät ja puhutut tekstit avaimineen (PT 9.10.2026, käännettävyys): rakennus, taulu, etsinnät, kertojan
+        /// nimilaput ja tilat (nimi, taulu, Pulu, infotaulu, kuunnelma ja vuorot, hahmojen repliikit ja reaktiot, etsinnän vaiheet).
+        /// Avain &lt;rakennus&gt;.&lt;ryhmä&gt;.… (tyokalut/tekstit_olavinlinna.py laskee samat; OlavinlinnaTekstitTestit vertaa paketin
+        /// rakennus.json-kopioon). Aseta korvaa tekstin (Lokalisoi).
+        /// </summary>
+        public static List<(string Avain, string Teksti, Action<string> Aseta)> Tekstikohteet(Rakennus r)
+        {
+            var l = new List<(string, string, Action<string>)>();
+            string a0 = TekstiAvain(r.Id, "x", "").Split('.')[0];
+            string A(params object[] osat) { var b = new System.Text.StringBuilder(a0); foreach (var o in osat) b.Append('.').Append(o is int n ? n.ToString(System.Globalization.CultureInfo.InvariantCulture) : TekstiAvain("x", "x", o as string).Substring(4)); return b.ToString(); }
+            void L(string avain, string teksti, Action<string> aseta) { if (!string.IsNullOrEmpty(teksti)) l.Add((avain, teksti, aseta)); }
+            void Taulu(Taulu t, params object[] etu)
+            {
+                if (t == null) return;
+                L(A(Liita(etu, "otsikko")), t.Otsikko, v => t.Otsikko = v);
+                for (int i = 0; i < t.Kohdat.Count; i++) { var k = t.Kohdat[i]; L(A(Liita(etu, "kohta", i)), k.Teksti, v => k.Teksti = v); }
+            }
+            L(A("rakennus", "nimi"), r.Nimi, v => r.Nimi = v);
+            L(A("rakennus", "otsikko"), r.Otsikko, v => r.Otsikko = v);
+            Taulu(r.Taulu, "taulu");
+            L(A("pulu"), r.PuluTeksti, v => r.PuluTeksti = v);
+            foreach (var e in r.Etsinnat)
+            {
+                L(A("etsinta", e.Id, "nimi"), e.Nimi, v => e.Nimi = v);
+                L(A("etsinta", e.Id, "kuvaus"), e.Kuvaus, v => e.Kuvaus = v);
+                for (int i = 0; i < e.Kortti.Count; i++) { int ii = i; L(A("etsinta", e.Id, "kortti", i), e.Kortti[i].Teksti, v => e.Kortti[ii] = (v, e.Kortti[ii].Lahde)); }
+            }
+            foreach (var j in r.Kertoja)
+                for (int i = 0; i < j.Nimet.Count; i++) { var n = j.Nimet[i]; L(A("kertoja", j.Id, "nimi", i), n.Teksti, v => n.Teksti = v); }
+            foreach (var t in r.Tilat)
+            {
+                L(A("tila", t.Id, "nimi"), t.Nimi, v => t.Nimi = v);
+                Taulu(t.Taulu, "tila", t.Id, "taulu");
+                L(A("tila", t.Id, "pulu"), t.PuluTeksti, v => t.PuluTeksti = v);
+                if (t.Infotaulu is Infotaulu it)
+                {
+                    L(A("tila", t.Id, "infotaulu", "nimi"), it.Nimi, v => it.Nimi = v);
+                    for (int i = 0; i < it.Rivit.Count; i++) { int ii = i; L(A("tila", t.Id, "infotaulu", "rivi", i), it.Rivit[i].Teksti, v => it.Rivit[ii] = (v, it.Rivit[ii].Lahde)); }
+                }
+                foreach (var k in t.Kuunnelma)
+                {
+                    L(A("tila", t.Id, "kuunnelma", k.Id, "nimi"), k.Nimi, v => k.Nimi = v);
+                    L(A("tila", t.Id, "kuunnelma", k.Id, "teksti"), k.Teksti, v => k.Teksti = v);
+                    for (int i = 0; i < k.Vuorot.Count; i++) { var vu = k.Vuorot[i]; L(A("tila", t.Id, "kuunnelma", k.Id, "vuoro", i), vu.Teksti, v => vu.Teksti = v); }
+                }
+                foreach (var h in t.Hahmot)
+                {
+                    for (int i = 0; i < h.Repliikit.Count; i++) { var rp = h.Repliikit[i]; L(A("tila", t.Id, "hahmo", h.Id, "repliikki", i), rp.Teksti, v => rp.Teksti = v); }
+                    if (h.Reaktio is Repliikki re) L(A("tila", t.Id, "hahmo", h.Id, "reaktio"), re.Teksti, v => re.Teksti = v);
+                }
+                for (int i = 0; i < t.Etsinta.Count; i++)
+                {
+                    var ev = t.Etsinta[i];
+                    L(A("tila", t.Id, "etsinta", i, "teksti"), ev.Teksti, v => ev.Teksti = v);
+                    L(A("tila", t.Id, "etsinta", i, "pulu"), ev.Pulu, v => ev.Pulu = v);
+                    L(A("tila", t.Id, "etsinta", i, "rivi"), ev.Rivi, v => ev.Rivi = v);
+                }
+            }
+            return l;
+        }
+
+        static object[] Liita(object[] a, params object[] b) { var c = new object[a.Length + b.Length]; a.CopyTo(c, 0); b.CopyTo(c, a.Length); return c; }
+
+        /// <summary>Esittelyn tekstit taulusta (avain löytyy) tai data sellaisenaan.</summary>
+        public static void Lokalisoi(Rakennus r)
+        {
+            if (r == null || Kielitaulu.Perus == null) return;
+            foreach (var (avain, teksti, aseta) in Tekstikohteet(r)) { var u = Kielitaulu.TaiData(avain, teksti); if (!ReferenceEquals(u, teksti)) aseta(u); }
+        }
+
         /// <summary>Tekstiavain (Peli/Tekstit.cs): &lt;alue&gt;.&lt;ryhmä&gt;.&lt;id&gt; pienin kirjaimin, muut merkit väliviivoiksi (tyokalut/tekstit_olavinlinna.py).</summary>
         public static string TekstiAvain(string alue, string ryhma, string id)
         {
@@ -1016,6 +1087,7 @@ namespace Matkakirja.Linssit.Dioraama
             }
             // Elävät reittihahmot vasta nyt, kun henkilöt tunnetaan (tuntematon henkilö ohitetaan, ei kaatumista).
             foreach (var tila in r.Tilat) ElavaReittiHahmoksi(tila, r);
+            Lokalisoi(r);   // tekstit avaimilla (PT 9.10.): taulu voittaa, data varalla
             return r;
         }
 

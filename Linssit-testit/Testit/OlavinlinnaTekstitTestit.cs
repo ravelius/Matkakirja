@@ -104,6 +104,33 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(loydot.Count == 0, $"kovakoodattuja suomenkielisiä merkkijonoja {loydot.Count} (avain Tekstit/olavinlinna.fi.json:iin ja Kieli.T, tai \"// kieli: ei (syy)\", jos ei näy pelaajalle)");
         }
 
+        [Testi] static void EsittelynTekstitOvatTaulussa()
+        {
+            // Paketin rakennus.json-kopio (tyokalut/tekstit_olavinlinna.py kirjoittaa sen): jokainen DioraamaData.Tekstikohteet-avain
+            // on taulussa samalla tekstillä (generaattori ja C# laskevat avaimet samoin), ja Lokalisoi vaihtaa tekstin taulusta.
+            var t = Taulu();
+            string kopio = File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "olavinlinna-" + Matkakirja.Linssit.Seikkailu.PelattavaPala.Versio + "-rakennus.json"));
+            var (p0, v0) = (Kielitaulu.Perus, Kielitaulu.Valittu);
+            try
+            {
+                Kielitaulu.Perus = null; Kielitaulu.Valittu = null;
+                var r = Matkakirja.Linssit.Dioraama.DioraamaData.Lue(kopio);
+                var kohteet = Matkakirja.Linssit.Dioraama.DioraamaData.Tekstikohteet(r);
+                Oleta.Tosi(kohteet.Count >= 150, $"esittelyn tekstejä {kohteet.Count}");
+                int pulu = 0;
+                foreach (var (avain, teksti, _) in kohteet)
+                {
+                    Oleta.Tosi(t.TryGetValue(avain, out var x) && x as string == teksti, $"{avain}: taulussa sama teksti");
+                    if (avain.Contains(".pulu")) pulu++;
+                }
+                Console.WriteLine($"      esittely: {kohteet.Count} tekstiä, joista Pulun {pulu}");
+                Kielitaulu.Perus = Kielitaulu.Lue("{\"" + kohteet[0].Avain + "\": \"KÄÄNNETTY\"}");
+                var r2 = Matkakirja.Linssit.Dioraama.DioraamaData.Lue(kopio);
+                Oleta.Sama("KÄÄNNETTY", Matkakirja.Linssit.Dioraama.DioraamaData.Tekstikohteet(r2)[0].Teksti);
+            }
+            finally { Kielitaulu.Perus = p0; Kielitaulu.Valittu = v0; }
+        }
+
         [Testi] static void TauluKattaaDatanTekstit()
         {
             var t = Taulu();
