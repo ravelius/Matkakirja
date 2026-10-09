@@ -407,6 +407,7 @@ namespace Matkakirja.Natiivi
             var kamera = FindKamera();
             if (kamera == null) yield break;
             DioraamaSovitin.KameraVapaa = true;
+            SeikkailuLoppumusiikki.Aloita(transform.parent, kirjaa);   // loppumusiikki K2-dronesta lopputekstien loppuun (omistaja 9.10.)
             var t = typeof(SeikkailuKappeli).Assembly.GetType("Matkakirja.Natiivi.SeikkailuNousu");
             var m = t?.GetMethod("Aloita", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             StartCoroutine(K2Kasvu(m != null ? (float)(NousuReitti.NousuS + NousuReitti.LeijuntaS) : 1f));

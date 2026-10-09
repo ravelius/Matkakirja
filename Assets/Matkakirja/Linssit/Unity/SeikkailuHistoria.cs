@@ -52,6 +52,8 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<int, AudioClip> kertojaKlipit = new Dictionary<int, AudioClip>();
         readonly HashSet<int> kertojaHaettu = new HashSet<int>();
         AudioSource kertoja;
+        /// <summary>Historian kertoja puhuu (loppumusiikin väistö).</summary>
+        public static bool KertojaSoi => ajossa != null && ajossa.kertoja != null && ajossa.kertoja.isPlaying;
 
         static string KertojaUrl(HistoriaVaihe v)
         {

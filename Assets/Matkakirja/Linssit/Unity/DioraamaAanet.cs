@@ -681,6 +681,8 @@ namespace Matkakirja.Natiivi
         bool katkaiseeMuita;
 
         /// <summary>Soiko linnan puhe (repliikki, kertoja, Pulun kertomus, kuunnelma).</summary>
+        /// <summary>Linnan puhelähde soi (loppumusiikin väistö, SeikkailuLoppumusiikki).</summary>
+        public static bool PuheSoiNyt => aktiivinen != null && aktiivinen.PuheSoi;
         public bool PuheSoi => (puheKuiva != null && puheKuiva.isPlaying) || (puheKaiku != null && puheKaiku.isPlaying)
                                || Time.unscaledTime < puheLoppuu || puheTauolla;
 
