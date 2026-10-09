@@ -421,6 +421,7 @@ namespace Matkakirja.Natiivi
             if (KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM) TarkistaReiat();   // kaukomaa myös kiinteällä kameralla (simu 9.10. 10.4x: ei laukeamista)
             PaivitaKarkea();
             SeuraaTarkentumista();
+            LaattaTekstuurit.Seuraa(maasto);   // diagnostiikka 15 s välein vain asetuksella tai tasolla > 0
         }
         public Cesium3DTileset Rakennukset => rakennukset;
 
@@ -686,6 +687,7 @@ namespace Matkakirja.Natiivi
             t.forbidHoles = true;
             t.createPhysicsMeshes = false;
             t.showCreditsOnScreen = true;
+            LaattaTekstuurit.Kytke(t);   // proto 9.10.: perusvärikuvien pienennys (oletus pois; "laattapienennys" asetuksissa)
             return t;
         }
 
@@ -973,6 +975,7 @@ namespace Matkakirja.Natiivi
             if (lahi != null) UnityEngine.Object.Destroy(lahi.gameObject);
             lahi = null; lahiKaytossa = false;
             omat.Sulje(); vesi.Sulje();
+            LaattaTekstuurit.Nollaa();
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;

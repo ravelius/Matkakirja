@@ -263,6 +263,7 @@ namespace Matkakirja.Natiivi
                         case "msaa": Msaa = (int)v; break;
                         case "pienimsaa": PieniMsaaPakko = (int)v; break;   // juna 173: pienen muistin MSAA-katto (testi)
                         case "pieniskaala": PieniSkaalaPakko = v; break;   // juna 173: pienen muistin renderScale (testi)
+                        case "laattapienennys": LaattaTekstuurit.Pakotettu = (int)v; break;   // proto 9.10.: Googlen laattakuvat 0 pois, 1 puolikas, 2 neljännes (uudet laatat)
                         case "sumu": Sumu = v != 0; break;
                         case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
