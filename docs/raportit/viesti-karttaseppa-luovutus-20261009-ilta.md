@@ -2,6 +2,8 @@
 
 ## 1. AJOSSA: tekoälypintojen yöajo (T7, irrotettu)
 
+**PÄIVITYS 18.59: v1 pysäytetty, nyt ajossa `aja-yo2.sh` (tunniste v2).** LR:n palakokeen mukaan denoise 0,5 / tile 0,4 tuotti käytännössä suurennoksen, joten v2:ssa palat ajetaan denoise 0,7 / tile 0,28 / reunat 0,9 (`palat.py` = LR:n tekoaly_palat.py + `--tile-voima`/`--palakansio`, palat `palat-v2/`), ND:n koko-vaiheessa on lyijykehote ja kiellossa "dark bands, shadow under balcony". Vanha versio on `aja-nakymat-v1.py`. Pysäytys ilman killiä: `touch STOP_NYT` → pinta.py päättyy heti (koodi 3); `touch STOP` = tauko mallien välissä. aja-yo2 poistaa molemmat alussa. Loki sama (`ALKU v2` … `YÖAJO v2 VALMIS`).
+
 - `aja-yo.sh` (PID 48086, setsid, PPID 1) odottaa, että LR:n ND-etelän palakoe (`tekoaly_palat.py`, PID 96175) ja kaikki `pinta.py`-ajot päättyvät. Sen jälkeen se ajaa
   `aja-nakymat.py`: **ND** etela, katot, pohjoinen, lansi, apsis, spiira → **KL** etela, ita, lansi, pohjoinen, katot (tunniste v1).
 - Polut (kaikki T7:llä, `/Volumes/T7 4TB/Matkakirja-karttaseppa/tekoalypinnat/`):
@@ -33,6 +35,8 @@
 - **Julkaisijalla viennissä:** kaukomaa/v1p ja yo-v1p (LS2:n paikallinen tiling scheme, sisältö tavulleen sama). Kerro LS2:lle, kun ne ovat valmiit.
 
 ## 4. Muut tämän päivän toimitukset
+
+- **Utu (PT 18.5x):** `_valmiit/ilmakeha-aerosoli-v1-vienti-20261009` (8 settiä → `ilmakeha/aerosoli-v1/{pariisi,tukholma}/{kausi}/`, LS2:n polku) on Julkaisijalla viennissä. Julkaisija ilmoittaa LS2:lle, kun polku antaa 200.
 
 - LR: Vasa-museon lähdepaketti (`_tyo/karttaseppa/vasamuseet/`, mastoja ei OSM:ssä).
 - LS1: liput-<id>.json (lipputangot) ja kohteet-<id>.json:iin kirkot, kahvilat ja hallit (junaan 173).
