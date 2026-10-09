@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
         public static bool NostoAsetettu;
         static bool nostoIndeksista;
         /// <summary>Uusia paloja enintään näin monta kehyksessä (ei nykäystä pallon lennossa; LS1:n katselmointi).</summary>
-        public const int PalojaKehyksessa = 2;
+        public const int PalojaKehyksessa = 4;   // 9.10.: 2 jätti lähipaloja puuttumaan vielä 15 s:n kohdalla (Googlen vesi näkyi terävinä monikulmioina)
         readonly Queue<(bool, int)> jono = new Queue<(bool, int)>();
         /// <summary>Veden juuri (paikalliset akselit itä, ylös, pohjoinen; m), null ennen latausta (LS1:n veneet).</summary>
         public Transform Juuri => juuri != null ? juuri.transform : null;

@@ -152,13 +152,14 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float b00 = frac(sin(dot(i2, float2(127.1, 311.7))) * 43758.5453), b10 = frac(sin(dot(i2 + float2(1, 0), float2(127.1, 311.7))) * 43758.5453);
                 float b01 = frac(sin(dot(i2 + float2(0, 1), float2(127.1, 311.7))) * 43758.5453), b11 = frac(sin(dot(i2 + float2(1, 1), float2(127.1, 311.7))) * 43758.5453);
                 float n2 = lerp(lerp(b00, b10, f2.x), lerp(b01, b11, f2.x), f2.y);
-                float laikku = smoothstep(0.45, 0.85, n * 0.65 + n2 * 0.35);
-                float alfa = _IlmSaa.z * 0.75 * laikku * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
+                // PT 9.10.: pienessä kuvassa tummat läiskät → yhtenäisempi, läpikuultava harso (pohja 0,25) ja paksummat laikut päällä.
+                float laikku = 0.35 + 0.65 * smoothstep(0.3, 0.8, n * 0.65 + n2 * 0.35);
+                float alfa = _IlmSaa.z * 0.55 * laikku * smoothstep(0.0, 25.0, v.ranta) * smoothstep(60.0, 300.0, et);
                 // Sumun väri (simu 9.10.: liian tumma tummalla vedellä): sumu sirottaa matalaa aurinkoa, joten valo tulee auringon
                 // puoleiselta taivaanrannalta ja suoraan auringosta (lämmin), vähän lakitaivaalta; sävytettynä kuten taivas.
                 float3 sh = normalize(float3(_IlmAurinko.x, 0.06, _IlmAurinko.z));
                 float3 c = IlmSavytys((IlmTaivas(sh) * 1.4 + IlmTaivas(float3(0, 1, 0)) * 0.6 + IlmLapaisy(_IlmParam.x, max(0.02, _IlmAurinko.y)) * 0.5) * _IlmParam.y);
-                c = lerp(c, float3(0.86, 0.87, 0.9) * saturate(0.4 + _IlmAurinko.y * 3.0), 0.45);   // sumu vaaleaa (ei ruskeaa)
+                c = lerp(c, float3(0.9, 0.91, 0.94) * saturate(0.55 + _IlmAurinko.y * 3.0), 0.65);   // sumu vaaleaa ja neutraalia (ei ruskeaa)
                 return half4(MixFog((half3)c, v.sumu), alfa);
             }
             ENDHLSL
