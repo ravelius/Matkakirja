@@ -2834,7 +2834,7 @@ namespace Matkakirja.Natiivi
             var llh = CesiumForUnity.CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(
                 g.TransformUnityPositionToEarthCenteredEarthFixed((double3)(float3)kam.transform.position));
             double vaaka = KierrosLento.EtaisyysM(llh.y, llh.x, k.Lat, k.Lon);
-            o.Kirjaa($"opas: kamera {milloin} {k.Nimi}: kehys et {kh.EtaisyysM:F0} m, kallistus {kh.Kallistus:F0}°, maa {kh.MaaM:F0}, nosto {kh.NostoM:F0}, korkeus_m {k.KorkeusM:F0}, koko {k.KokoM:F0} " +
+            o.Kirjaa($"opas: kamera {milloin} {k.Nimi}: kehys et {kh.EtaisyysM:F0} m, kallistus {kh.Kallistus:F0}°, maa {kh.MaaM:F0}, nosto {kh.NostoM:F0}, korkeus_m {k.KorkeusM:F0}, koko {k.KokoM:F0}, katse {(double.IsNaN(k.KatseSuunta) ? "-" : k.KatseSuunta.ToString("F0"))}, suuntima {kh.Suuntima:F0} " +
                 $"| silmä {llh.z - kh.MaaM:F0} m maasta, {vaaka:F0} m kohteesta, kallistus käytössä {kierto.KaytettyKallistus:F0}°");
         }
         IEnumerator KameraLokiMyohemmin(OpasKohde k, float s) { yield return new WaitForSecondsRealtime(s); if (silmukka?.Nykyinen == k) KameraLoki(k, $"{s:F0} s"); }

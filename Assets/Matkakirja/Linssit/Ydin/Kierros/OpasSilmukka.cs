@@ -351,6 +351,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             lentoKaari = 0; lentoKaariLoppuW = 0;
             if (!PalloLento || !KierrosKaynnissa || siirto || suoraLasku || kohdeKehys == null || k?.Id == null || LentoKestoS < 8 || lahto.EtaisyysM > 1500) return;   // ei yleiskuvasta laskeutuessa
+            if (!double.IsNaN(k.KatseSuunta)) return;   // kohteen oma katsesuunta (Vasa): kaari seuraavaa kohti kääntäisi sen pois
             (double lat, double lon)? seur = null;
             for (int i = 0; i + 1 < kierrosJono.Count; i++)
                 if (KierrosLento.EtaisyysM(kierrosJono[i].lat, kierrosJono[i].lon, k.Lat, k.Lon) < 80) { seur = (kierrosJono[i + 1].lat, kierrosJono[i + 1].lon); break; }
@@ -1434,6 +1435,15 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kaaren suunta kohti seuraavan kohteen puolta: seuraava, odotettu tai kierroslistan seuraava; muuten myötäpäivään.</summary>
         int KaariSuunta(Kuvakulma perus)
         {
+            // KOHTEEN OMA KATSESUUNTA (Vasa-arkki 9.10.: kääntöraja piti saapumisen lentosuunnassa, 99° → 88°): kaari kiertää
+            // pysähdyksen aikana katsesuuntaan ja pysähtyy siihen (Spiraali: +kulma kiertää silmää vastapäivään, suuntima pienenee).
+            if (Nykyinen != null && !double.IsNaN(Nykyinen.KatseSuunta)
+                && KierrosLento.EtaisyysM(Nykyinen.Lat, Nykyinen.Lon, perus.Lat, perus.Lon) < 80)
+            {
+                double d = KierrosLento.Kiedo(perus.Suuntima - Nykyinen.KatseSuunta);
+                kaariRaja = Math.Abs(d);
+                return d >= 0 ? 1 : -1;
+            }
             (double, double)? kohti = Seuraava != null && !Seuraava.Kysymys ? (Seuraava.Lat, Seuraava.Lon) : OdotettuPaikka;
             if (kohti == null && NykyinenKehys != null)
                 for (int i = 0; i + 1 < kierrosJono.Count; i++)
