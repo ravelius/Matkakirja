@@ -16,6 +16,7 @@ float4 _IlmPilviParam;  // x peitto 0–1, y varjon voima, z jakso m (uv1), w pi
 float4 _IlmTuuli;       // xy pilvikentän siirtymä m (tuuli × aika)
 float4 _IlmMaailma;     // x metriä maailmayksikköä kohden (georeferenssin skaala), y kauko-udun kerroin (≥ 1; KaupunkiIlmakeha.KaukoUtu), z kaupungin valot 0–1, w taivaan hämärävalotus (≥ 1)
 float4 _IlmPilviKerros; // x pilvikerros 0/1 (KaupunkiIlmakeha.Pilvet), y pohja m, z paksuus m (pallon pilvet, raportin kohta 6a)
+float4 _IlmHamara;      // x sinisen hetken voima 0–1 (aurinko −2…−7°), y valotuksen kompensointi (2^−EV; KaupunkiIlmakeha)
 float4 _IlmSaa;         // x katujen märkyys 0–1, y pilvien tummuus 0–1 (Ydin KaupunkiKuuro; LS1:n kuurot), z aamusumu veden yllä 0–1, w sateenkaari 0–1
 
 static const float IlmR = 6360.0, IlmRT = 6460.0, IlmApKm = 200.0;
@@ -140,6 +141,24 @@ float3 IlmSavytys(float3 x) { return 1.0 - exp(-x); }
 
 /// SATEENKAARI (Ydin KaupunkiKuuro.Sateenkaari, _IlmSaa.w): pääkaari 40,6–42,4° vastapäätä aurinkoa, punainen ulkona, violetti sisällä;
 /// vain pala kaaresta (kulma kaaren ympäri), hento, horisontin yläpuolella. Palauttaa radianssin lisäyksen (auringon irradianssi 1).
+// SININEN HETKI (PT 9.10.: omistajan linja "yö = loppuilta", junan 170 yökuvissa taivas musta): fysikaalinen taivas auringon ollessa
+// −7°:ssa on ~1/100 päivästä, eikä hämärävalotus ×18 riitä, kun Googlen laatat (unlit) pysyvät päivän kirkkaina. Siksi taivaalle
+// lisätään taiteellinen gradientti: syvänsininen laki, violetti taivaanranta ja lämmin iltarusko auringon puolella. Näyttöarvoina
+// (sävytyksen jälkeen), kerrottuna jälkikäsittelyn valotuksen kompensoinnilla, jotta loppuillan −1,5 EV ei tummenna sitä mustaksi.
+float3 IlmSininenHetki(float3 d)
+{
+    if (_IlmHamara.x <= 0.0) return 0.0;
+    float h = saturate(d.y), alla = saturate(-d.y * 6.0);
+    float3 laki = float3(0.07, 0.10, 0.24), keski = float3(0.15, 0.15, 0.32), ranta = float3(0.36, 0.24, 0.36), rusko = float3(0.85, 0.40, 0.16);
+    float3 c = lerp(ranta, keski, smoothstep(0.0, 0.18, h));
+    c = lerp(c, laki, smoothstep(0.12, 0.75, h));
+    float2 dv = normalize(d.xz + 1e-5), av = normalize(_IlmAurinko.xz + 1e-5);
+    float puoli = pow(saturate(dot(dv, av) * 0.5 + 0.5), 3.0);
+    c += rusko * puoli * pow(1.0 - h, 6.0) * (1.0 - alla);
+    c = lerp(c, ranta * 0.6, alla);
+    return c * _IlmHamara.x * _IlmHamara.y;
+}
+
 float3 IlmSateenkaari(float3 d)
 {
     if (_IlmSaa.w <= 0.001) return 0;

@@ -34,6 +34,8 @@ namespace Matkakirja.Natiivi
         public static float IltaAurinkoAst = -7f;
         /// <summary>Valotuksen kerroin hämärässä (aurinko −7°): taivaan purppura ja iltarusko näkyviin (LUT:n radianssi on pieni).</summary>
         public static float HamaraValotus = 18f;
+        /// <summary>Sinisen hetken gradientin voima (asetus "sininenhetki"; 0 = vain fysikaalinen taivas).</summary>
+        public static float SininenHetki = 1f;
         static float taivasValotus = 1f;
         public static bool IltaYolla = true;
         /// <summary>Kaupungin valojen osuus 0–1 (KaupunkiKuva, LS1:n KaupunkiYovalot): valojen heijastus omaan veteen (Natiiviseppä 9.10.:
@@ -53,7 +55,7 @@ namespace Matkakirja.Natiivi
         static readonly int IdLapaisy = Shader.PropertyToID("_IlmLapaisy"), IdTaivas = Shader.PropertyToID("_IlmTaivas"), IdAp = Shader.PropertyToID("_IlmAp"),
             IdApLapaisy = Shader.PropertyToID("_IlmApLapaisy"), IdPilvet = Shader.PropertyToID("_IlmPilvet"), IdAurinko = Shader.PropertyToID("_IlmAurinko"),
             IdParam = Shader.PropertyToID("_IlmParam"), IdPilviParam = Shader.PropertyToID("_IlmPilviParam"), IdTuuli = Shader.PropertyToID("_IlmTuuli"),
-            IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros"), IdSaa = Shader.PropertyToID("_IlmSaa");
+            IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros"), IdSaa = Shader.PropertyToID("_IlmSaa"), IdHamara = Shader.PropertyToID("_IlmHamara");
 
         static Texture3D Lue3D(string nimi, int w, int h, int d)
         {
@@ -100,6 +102,7 @@ namespace Matkakirja.Natiivi
             Kaupunki(lat, lon);
             if (IltaYolla && KaupunkiKuva.Nyt == "yo") aurinkoKorkeusAst = Mathf.Max(aurinkoKorkeusAst, IltaAurinkoAst);
             voima = Mathf.MoveTowards(voima, Paalla ? 1f : 0f, Time.unscaledDeltaTime);
+            Shader.SetGlobalVector(IdHamara, Vector4.zero);   // varhaisessa paluussa ei vanhaa sinistä hetkeä
             if (voima <= 0f && !Paalla && !KaupunkiVesi.Nakyvissa) return;   // vesi tarvitsee taivaan arvot heijastukseen
             if (!Lataa()) { voima = 0f; return; }
             float k = aurinkoKorkeusAst * Mathf.Deg2Rad, a = aurinkoAtsimuuttiAst * Mathf.Deg2Rad;
@@ -120,6 +123,10 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdTuuli, new Vector4(tuuliM.x, tuuliM.y, 0f, 0f));
             Shader.SetGlobalVector(IdMaailma, new Vector4(1f / Mathf.Max(1e-6f, mitta), Mathf.Max(1f, KaukoUtu), YoOsuus, taivasValotus));
             Shader.SetGlobalVector(IdPilviKerros, new Vector4(Pilvet && Paalla ? 1f : 0f, PilviKorkeusM, PilviPaksuusM, 0f));
+            // Sininen hetki (PT 9.10., Ilmakeha.hlsl IlmSininenHetki): täysi auringon ollessa ≤ −7° (yö-valinta = loppuilta), valotuksen
+            // kompensointi jälkikäsittelyn EV:stä (KaupunkiKuva.KoriValotusEV, loppuillalla ~−1,5), rajattu 1–4.
+            float sininen = Mathf.Clamp01((-aurinkoKorkeusAst - 2f) / 5f) * SininenHetki * voima;
+            Shader.SetGlobalVector(IdHamara, new Vector4(sininen, Mathf.Clamp(Mathf.Pow(2f, -KaupunkiKuva.KoriValotusEV), 1f, 4f), 0f, 0f));
         }
 
         /// <summary>Kupolin materiaali (IlmakehaTaivas), null jos pois tai LUTit puuttuvat (silloin vanha DioraamaTaivas).</summary>

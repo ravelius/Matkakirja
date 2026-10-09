@@ -60,6 +60,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(V("IlmakehaLaatat.shader").Contains("_IlmSaa.x"), "märät kadut");
         }
 
+        [Testi] static void SininenHetkiTaivaassaJaVedessa()
+        {
+            // PT 9.10.: junan 170 yökuvissa taivas musta → loppuillan sininen hetki taivaan ja veden heijastuksen gradienttina.
+            string V(string n) => System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", n));
+            Oleta.Tosi(V("Ilmakeha.hlsl").Contains("float3 IlmSininenHetki(float3 d)") && V("Ilmakeha.hlsl").Contains("float4 _IlmHamara;"), "funktio ja globaali");
+            Oleta.Tosi(V("IlmakehaTaivas.shader").Contains("c += IlmSininenHetki(d)"), "taivas");
+            Oleta.Tosi(V("VesiPinta.shader").Contains("+ IlmSininenHetki(r)"), "veden heijastus");
+        }
+
         [Testi] static void LaattojenLeikkausKutenCesium()
         {
             // CesiumUnlitTilesetShader: Alpha = 1 − peitteen R (Lerp mustasta alfalla), raja 0,5, oletuskuva musta (A/B 9.10. 05.0x).

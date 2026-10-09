@@ -84,7 +84,7 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float3 n = normalize(float3(-g.x * f, 1.0, -g.y * f));
                 float3 r = reflect(d, n); r.y = abs(r.y);
                 float cosv = saturate(dot(-d, n)), fresnel = 0.02 + 0.98 * pow(1.0 - cosv, 5.0);
-                float3 taivas = IlmSavytys(IlmTaivas(r) * _IlmParam.y * max(1.0, _IlmMaailma.w));
+                float3 taivas = IlmSavytys(IlmTaivas(r) * _IlmParam.y * max(1.0, _IlmMaailma.w)) + IlmSininenHetki(r);   // sama sininen hetki heijastuksessa
                 float aurinko = pow(saturate(dot(r, _IlmAurinko.xyz)), 900.0) * _Kimallus * step(0.0, _IlmAurinko.y);
                 // Välke (omistaja 9.10.): satunnaiset kimallukset laajemmassa heijastuskeilassa, vaihtuvat 8 kertaa sekunnissa.
                 // Solut 3 m (ei raitoja kaukaa), vain lähellä (alle 900 m) ja hillitysti.

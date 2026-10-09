@@ -67,6 +67,9 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 float m = _IlmMaailma.x;
                 float3 kohti = v.w - _WorldSpaceCameraPos;
                 float etM = length(kohti) * m;
+                // LOPPUILTA (PT 9.10.: laatat eivät saa erottua päivänkirkkaina sinistä hetkeä vasten): unlit-laatat himmenevät ja
+                // viilenevät sinisen hetken voimalla (_IlmHamara.x).
+                c *= lerp((float3)1.0, float3(0.55, 0.60, 0.78), _IlmHamara.x);
                 // Pilvien varjot: kenttä auringon suunnassa pisteen yllä, häipyy auringon laskiessa.
                 float varjo = IlmPilvi(v.w * m) * _IlmPilviParam.y * saturate(_IlmAurinko.y * 4.0);
                 c *= 1.0 - varjo;
@@ -87,6 +90,14 @@ Shader "Matkakirja/Linssit/IlmakehaLaatat"
                 float3 sironta, lapaisy; IlmIlmaperspektiivi(etM, kohti / max(1e-4, length(kohti)), sironta, lapaisy);
                 float3 ap = c * lapaisy + IlmSavytys(sironta * _IlmParam.y);
                 c = lerp(c, ap, _IlmParam.z);
+                // Loppuillan kaukoutu: 2,5–14 km:n laatat liukuvat taivaanrannan sävyyn (yhtenäinen ilta, karkeiden kaukolaattojen
+                // sahalaita ei piirry tummana taivasta vasten; PT 9.10. Tukholma).
+                if (_IlmHamara.x > 0.001)
+                {
+                    float3 dv = kohti / max(1e-4, length(kohti));
+                    float3 ranta = IlmSininenHetki(normalize(float3(dv.x, 0.02, dv.z))) / _IlmHamara.x;
+                    c = lerp(c, ranta, saturate((etM - 2500.0) / 11500.0) * 0.85 * _IlmHamara.x);
+                }
                 return half4(MixFog((half3)c, v.sumu), 1);
             }
             ENDHLSL
