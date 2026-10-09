@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "aaa593cef0c39c72",
-  "kansio": "dioraama/olavinlinna/blender/aaa593cef0c39c72/",
+  "hash": "8e2fb63c11487a69",
+  "kansio": "dioraama/olavinlinna/blender/8e2fb63c11487a69/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1350,13 +1350,13 @@
     },
     {
       "polku": "kavely/muurikaytava.glb",
-      "sha256": "5cd9eac825b368cb7008d9cfa74214d652e8c903d2d1c610630a25268570026d",
-      "tavuja": 73196
+      "sha256": "608432bf2af2606424edb5f75d3660c8f2201d00a1b82622959166f5b2d86796",
+      "tavuja": 74844
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "2e5b2dcf059c2c8c7282aecd690ec02a4f24d3d094dfb08a1ad46f8060c8c827",
-      "tavuja": 30597
+      "sha256": "f86d8c027a1173b9ca769d52f6c02ac217828c3db2dce3021ee5adeca2c782e4",
+      "tavuja": 30975
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
@@ -2250,23 +2250,23 @@
     },
     {
       "polku": "kavely/valot/muurikaytava-4x4.astcm",
-      "sha256": "2af296fbbbb14ce07b157fe694a226b3bf4de37b8374aa069ba8fc5a7fc60954",
+      "sha256": "c7a55e102a1fb4d90188aee15185f20160338a1e279807b8c57f4a1f4f2a265a",
       "tavuja": 1398144
     },
     {
       "polku": "kavely/valot/muurikaytava-512-4x4.astcm",
-      "sha256": "8c076ec4b82fc780a25dc53a2b81e443aead496054adfa0a8fb488f4afd5743c",
+      "sha256": "c5c617c375f845e6dfa6956cc5d840e7e30208643d77b3a94cca6289419ab2a8",
       "tavuja": 349568
     },
     {
       "polku": "kavely/valot/muurikaytava-512.jpg",
-      "sha256": "34a87815384514fcd61e4675cc90e40782da488e22519a4bb4f968ae7328ca94",
-      "tavuja": 48314
+      "sha256": "8cac8ddc714c023b4bf3231ecee7ef5b986fab8d48fe91aa114ef6bdc34bb2b2",
+      "tavuja": 45981
     },
     {
       "polku": "kavely/valot/muurikaytava.jpg",
-      "sha256": "136786d4ae1609bab30e71350319315eb4e0670d1ca4ef59ef090f290f07eb77",
-      "tavuja": 135037
+      "sha256": "9581eee363b9a9a01c932774a678138efac151fdd0a2c614ac226eb0a685ef1f",
+      "tavuja": 128484
     },
     {
       "polku": "kavely/valot/palatsi-4x4.astcm",
