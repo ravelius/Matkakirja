@@ -40,6 +40,8 @@ namespace Matkakirja.Linssit
         static string lahdeJson; static List<string> lahdeRivit = new List<string>();
         /// <summary>Tyhjä näyte (Googlen laatat eivät vielä ladattu): uusi yritys näin monta kertaa 3 s välein.</summary>
         public const int NayteYrityksia = 5;
+        /// <summary>Omien mallien ruutuvirheraja (Googlen oma on 8–16): mallit tarkentuvat LOD0:aan pallon etäisyyksillä.</summary>
+        public const float OmaSse = 4f;
 
         readonly Action<string> kirjaa;
         GameObject juuri;
@@ -153,7 +155,9 @@ namespace Matkakirja.Linssit
                 t.showCreditsOnScreen = false;   // oma tekijärivi Tekijat-kentästä
                 t.createPhysicsMeshes = false;
                 t.forbidHoles = true;
-                t.maximumScreenSpaceError = googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f;
+                // Omat mallit tarkemmin kuin Googlen laatat (simu 9.10. 04.5x: Googlen SSE 16 piti 420 m:stä Notre-Damen karkeimmalla LOD2:lla,
+                // virhe 1,7 m → SSE ~15). Mallit ovat pieniä (LOD0 30–120 k), joten LOD0 jo noin 1 km:stä.
+                t.maximumScreenSpaceError = Mathf.Min(OmaSse, googleTileset != null ? googleTileset.maximumScreenSpaceError : 16f);
                 var kohde = k;
                 t.OnTileGameObjectCreated += laatta => MalliLadattu(kohde, laatta);
                 go.SetActive(true);
