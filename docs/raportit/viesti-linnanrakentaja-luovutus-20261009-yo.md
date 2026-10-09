@@ -158,3 +158,21 @@ Seuraavaksi:
 1. Täysi ajo (lod0–2 + AO) → `glb/`, kun muisti sallii (vapaata vähintään 20 Gt ja swap alle 2 Gt).
 2. `codex-ohje` → `codex-ohje-v9/` ja uudet ohjauskuvat (`ortho_ohje.py nd`, `ortho_merkinnat.py`, `tekoaly_syotteet.py`).
 3. Karttaseppä generoi tunnisteella v3.
+
+### Jatko 9.10. iltaa kohti 21: PT:n palaute vaiheisiin 3–4 ja länsijulkisivun syvyyskierros (tehty, vertailut `vaihe3b_4b_*.jpg`, `vaihe5b_*.jpg`)
+- **Tukikaaret:**
+  - `kaari_ohut()` tekee 0,8 m leveät kaaret, joissa on suora vino yläpinta ja avoin alapinta. Laivassa ne kulkevat 28,6 → 31,8 m.
+    Kuorissa ja apsiksessa kaaret kulkevat 25,2 → 32 m, ja niillä on `kaarre` 3,2.
+  - `culee()` tekee laivan tukipilarit, jotka ulkonevat 0,9 m kappelin seinästä ja porrastuvat 10,5 ja 19 m:n kohdalla vesilistoin.
+    Piikit ovat 19–23 m ja pinaakkelit 28–34 m.
+  - Kaikki 28 OSM-kaarta ovat tallella. Vain tukikaaret()-funktion kaksoiskappaleet on poistettu.
+- **Kappelien pulpettikatto** kulkee 10,5 → 13 m (`tribuunin_katot()`).
+- **`ikkunat()`** tekee nyt ikkunat myös kaarevilla seinillä (`_kaariketjut()`: ketju alle 3 m:n sivuja, joiden kulma on alle 25°).
+  Ikkunan normaali tulee kiertosuunnasta.
+- **Länsijulkisivu** (`_lansikehys()` + uusi `julkisivu()`):
+  - Osa 9 on ERIKOISET-listalla, ja julkisivu() rakentaa sen itse: etupinta reikineen, portaalit syvinä porrastettuina aukkoina
+    (4 × 0,55 m), pielipatsaat, kuninkaiden galleria arkadin takana ja Neitsyen galleria terassina 20,3 m.
+  - Osa 5 on 37 m (KORVAUS). Suuri galleria on tornien välissä avoin kaksoisarkadi.
+  - Ruusu, sokeakaaret ja listat ovat nyt ruusutasossa `sb(t)` ≈ s 3. v9:ssä ne leijuivat 3 m edessä.
+- **Kolmiot lod0** (ilman maata ja puita): 90,8 k.
+- **Täysi ajo odottaa PT:n lupaa:** vapaata on 24 Gt, mutta swap pysyy 23 Gt:ssa, joten muistisäännön ehto swap alle 2 Gt ei täyty.
