@@ -17,7 +17,7 @@
 
 ## Muutokset (Siirtoseppä 8.10.2026)
 
-- URP 17 (Unity 6.1+): vanhentunut `_FORWARD_PLUS` / `USE_FORWARD_PLUS` / `FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK` korvattu nimillä `_CLUSTER_LIGHT_LOOP` / `USE_CLUSTER_LIGHT_LOOP` / `CLUSTER_LIGHT_LOOP_SUBTRACTIVE_LIGHT_CHECK` viidessä varjostimessa (Candle VFX URP: Wax, Wax_VC, Wick, Glass, Extra Grid), jotta vaha ja lasi saavat lisävalot Forward+-renderöijissä (Ultra, Mac PC_Renderer). Ei muita muutoksia.
+- URP 17 (Unity 6.1+): vanhentunut `_FORWARD_PLUS` / `USE_FORWARD_PLUS` / `FORWARD_PLUS_SUBTRACTIVE_LIGHT_CHECK` korvattu nimillä `_CLUSTER_LIGHT_LOOP` / `USE_CLUSTER_LIGHT_LOOP` / `CLUSTER_LIGHT_LOOP_SUBTRACTIVE_LIGHT_CHECK` viidessä varjostimessa (Candle VFX URP: Wax, Wax_VC, Wick, Glass, Extra Grid), jotta vaha ja lasi saavat lisävalot Forward+-renderöijissä (Ultra, Mac PC_Renderer). Ei muita varjostinmuutoksia.
 - Ääni (Pelikoodari 8.10.2026, f059db199; laaduntarkistus docs/raportit/aanten-laatu-20261008.md osa 2): `Audio/SFX_Vefects_Candle_Crackling_Loop_01.wav`
   silmukan sauma naksahti (41 kertaa, +9,8 dB) → 0,2 s:n ristihäivytetty sauma (kesto 30,0 → 29,8 s), sama tiedostonimi ja .meta. Asset Store EULA
   sallii muokkauksen sovelluksen sisällä; muokattua klippiä ei jaeta erikseen (lisenssikatselmus #4255).
