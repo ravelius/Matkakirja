@@ -53,7 +53,7 @@ PAKETIT=""
 for f in "$KIRJASTOT"/*.dll; do
   n=$(basename "$f" .dll)
   case "$n" in
-    Assembly-CSharp*|Matkakirja.*|*Editor*|*.Tests|*TestRunner*|*TestFramework*|*CodeGen*|*DocCodeSamples*|*DocCodeExamples*|PPv2URPConverters|Unity.PerformanceTesting*|Unity.AI.Navigation.Updater) ;;
+    Assembly-CSharp*|Matkakirja.*|SteamAudio*|*Editor*|*.Tests|*TestRunner*|*TestFramework*|*CodeGen*|*DocCodeSamples*|*DocCodeExamples*|PPv2URPConverters|Unity.PerformanceTesting*|Unity.AI.Navigation.Updater) ;;
     *) PAKETIT="$PAKETIT -r:$f" ;;
   esac
 done
