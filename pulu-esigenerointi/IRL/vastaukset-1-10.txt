@@ -1,0 +1,187 @@
+### 46.1
+KYSYMYS: Milloin kristallin valmistus Waterfordissa alkoi?
+Kato, tän minä tiedän. Kristallin valmistus Waterfordissa alkoi vuonna 1783, kun [[George Penrose]] ja William Penrose perustivat [[Waterford Glassworksin]]. Yritys tuotti erittäin hienoa [[piikivilasia]], josta tuli maailmankuulua, ja valmistaja on nimetty Waterfordin kaupungin mukaan. Ei hassumpi tieto kyyhkyn päähän.
+JATKOT:
+Miten piikivilasi eroaa tavallisesta lasista?
+Missä Waterfordin kristallia valmistetaan nykyään?
+
+### 46.2
+KYSYMYS: Milloin alkuperäinen lasitehdas suljettiin?
+Hetkinen ny. Alkuperäinen Waterfordin lasitehdas suljettiin vuonna 1851, ja tuotannon elvyttämiseksi tehtiin yrityksiä 1900-luvun alusta lähtien. Vuonna 2010 tuotanto siirtyi kaupungin keskustaan [[Mallille]], jossa toimii vieraskeskus. Siellä on esillä kerrotun mukaan maailman suurin [[Waterford-kristallien]] kokoelma. Pitkä katko, mut kyl lasi voitti lopulta.
+JATKOT:
+Millaisia esineitä Waterfordin vieraskeskuksessa on?
+Miten Waterfordin kristallituotanto elvytettiin?
+
+### 46.3
+KYSYMYS: Missä päin Irlantia Waterfordin kaupunki sijaitsee?
+Joo, tän minä muistan. Waterford sijaitsee Irlannin kaakkoisosassa [[Suir-joen]] rannalla, ja se on [[Waterfordin kreivikunnan]] keskus. Kaupunki on lähellä Irlannin etelärannikkoa. Tarkkaa etäisyyttä Dubliniin en lähde arvaamaan. Lyhyt vastaus, ja sellaiset kyyhky tykkää.
+JATKOT:
+Mitä muuta Waterfordin kaupungissa on nähtävää?
+Kuinka pitkä Suir-joki on?
+PAIKKA: Waterford | 52.26 | -7.11 | kaupunki
+
+### 46.4
+KYSYMYS: Mitä eroa kristallilla ja tavallisella lasilla on?
+Annas ku mietin. Kristalli on lasia, johon on lisätty metallioksideja, ja perinteisessä [[lyijykristallissa]] se on lyijyoksidia. Lisäaine tekee lasista tavallista raskaampaa ja kirkkaampaa, ja valo taittuu siinä voimakkaammin, minkä vuoksi hiottu pinta kimaltaa. Kristallilasi myös kilahtaa kirkkaasti, kun sitä napauttaa kevyesti. Tarkkoja pitoisuusrajoja en ole varma, ja ne vaihtelevat maittain. Pitkä selitys lasista, vaikka mieli teki pullaa.
+JATKOT:
+Miksi kristalli kuulostaa kilisevältä?
+Onko lyijykristalli terveydelle haitallista?
+
+### 46.5
+KYSYMYS: Miten kristallilasiin kaiverretaan kuvioita?
+Ai se. [[Kristallilasin]] kuvioita tehdään perinteisesti käsin hiomalla ja kaivertamalla: [[lasimestari]] painaa lasia pyörivää hioma- tai kaiverrusterää vasten ja työstää kuvion pintaan viiva viivalta. Taito vaatii pitkän harjoittelun ja tarkan käden, koska virhettä ei voi korjata. Hiottu pinta taittaa valoa, ja siksi kuviot kimaltavat.
+
+Minä katson sellaista työtä mielelläni ylhäältä. Sormeni eivät sopisi siihen hommaan, mut ihailen silti.
+JATKOT:
+Kuinka kauan lasinhiojaksi opiskellaan?
+Mitä kuvioita Waterfordin kristallissa on?
+
+### 47.1
+KYSYMYS: Minkä kaapelin itäpää Valentia oli?
+Ai se. Valentia oli Atlantin lennätinkaapelin itäpää, jonka läntinen pääte oli Heart's Content Newfoundlandilla. Kaapeli vedettiin maihin heinäkuussa 1866 useiden epäonnistuneiden yritysten jälkeen, ja sen toi paikalle höyrylaiva [[Great Eastern]]. Ensimmäiset viestit lähetettiin [[morsella]], ja asema suljettiin vuonna 1965, kun [[puhelinkaapelit]] ja satelliitit tekivät lennättimen tarpeettomaksi. Isoisän matkavuonna 1873 yhteys oli vasta seitsemän vuotta vanha ja yhä ihme.
+
+Viesti kulki meren yli nopeammin kuin yksikään kyyhky. Se vähän kirpaisee, mut myönnän sen.
+JATKOT:
+Miten ensimmäiset viestit kulkivat Atlantin yli?
+Kauanko Atlantin lennätinkaapeli oli käytössä?
+
+### 47.2
+KYSYMYS: Mitä varten saarelle rakennettiin observatorio vuonna 1866?
+Hetkinen ny. Vuonna 1866 Yhdysvaltain rannikkomittauslaitos teki saarella [[pituuspiirimittauksen]], jonka tarkoituksena oli yhdistää Yhdysvaltojen ja [[Greenwichin]] pituuspiirit. Mittauksia varten rakennettiin väliaikainen observatorio. Pituusero määritetään vertaamalla paikallisia kellonaikoja, ja [[lennätinkaapelin]] ansiosta aikasignaalit kulkivat valtameren yli lähes silmänräpäyksessä. Aika tarkkaa puuhaa kyyhkyn mittapuulla.
+JATKOT:
+Miten pituuspiiri määritellään?
+Miksi Greenwichin pituuspiiri valittiin nollapiiriksi?
+
+### 47.3
+KYSYMYS: Missä päin Irlantia Valentian saari sijaitsee?
+Katotaas. Valentia on saari Irlannin lounaisrannikolla Kerryn kreivikunnassa, Dinglen lahdessa [[Iveraghin]] niemimaan edustalla. Saaren ja mantereen yhdistää [[Portmageen]] silta. Saari on noin 11 kilometriä pitkä ja lähes kolme kilometriä leveä, ja se on yksi Irlannin läntisimmistä kohdista. Ylhäältä se näyttää reunalta, jonka jälkeen alkaa vaan meri.
+JATKOT:
+Mitä muuta Valentian saarella on nähtävää?
+Mikä on Irlannin läntisin kohta?
+PAIKKA: Valentia | 51.91 | -10.32 | alue
+
+### 47.4
+KYSYMYS: Miten lennätin toimi morsekoodin avulla?
+Nyt muistan: lennätin lähetti viestejä [[sähköpulsseina]] johtoa pitkin. Lähettäjä painoi avainta, ja koodi muutti kirjaimet lyhyiden ja pitkien signaalien yhdistelmiksi, pisteiksi ja viivoiksi. Vastaanottaja kuuli tai luki signaalit ja muutti ne takaisin kirjaimiksi. [[Merenalaisessa kaapelissa]] sama periaate toimi, mutta signaalit olivat heikkoja, joten viestit kulkivat hitaasti. Piste ja viiva, siinä koko kyyhkyn rytmitaju.
+JATKOT:
+Kuka keksi morsekoodin?
+Miten viestit lähetettiin ennen lennätintä?
+
+### 47.5
+KYSYMYS: Miksi Atlantin kaapelin laskeminen oli niin vaikeaa?
+Tuota niin. Atlantin ylittäminen kaapelilla oli vaikeaa, koska matka oli pitkä, meri syvä ja kaapelin piti kestää sekä oman painonsa että aallokon. Lisäksi heikko sähköinen signaali vaimeni pitkällä matkalla. Ensimmäinen yritys vuonna 1857 epäonnistui, ja myös kaapelit vuosina 1858 ja 1865 epäonnistuivat, kunnes vuonna 1866 kaapeli saatiin toimimaan. Höyrylaiva [[Great Eastern]] toi sen silloin paikalle, ja se oli aikansa suuria laivoja. Neljä yritystä, mut ei se kyyhkyä lannistaisi.
+JATKOT:
+Millainen laiva Great Eastern oli?
+Kuinka nopeasti viesti kulki Atlantin yli?
+
+### 48.1
+KYSYMYS: Mikä nimi Birrin suurella teleskoopilla on?
+Kas vaan. Birrin suuren teleskoopin nimi on [[Leviathan]]. Sen 183 senttimetrin peili valmistui vuonna 1845, ja teleskooppi oli aikanaan maailman suurin. Sen rakennutti linnan puistoon [[Rossen 3. jaarli]]. Sellaista nimeä kyyhky ei kanna, mut kunnioitan.
+JATKOT:
+Mistä Leviathan-teleskooppi on saanut nimensä?
+Onko Birrin teleskooppi yhä olemassa?
+
+### 48.2
+KYSYMYS: Kuka rakennutti teleskoopin linnan puistoon?
+Selvä juttu. Teleskoopin rakennutti linnan puistoon Rossen 3. jaarli [[William Parsons]]. Hänen isänsä, Rossen 2. jaarli, oli goottilaistanut itse [[Birrin linnaa]] 1800-luvun alussa. Teleskooppi tunnetaan nimellä [[Leviathan]], ja sen 183 senttimetrin peili valmistui vuonna 1845. Kyl siinä kelpasi katsoa tähtiä, jos oli sitä sorttia.
+JATKOT:
+Millainen tiedemies Rossen kolmas jaarli oli?
+Mitä muuta Birrin linnassa voi nähdä?
+
+### 48.3
+KYSYMYS: Mikä on heijastava teleskooppi ja miten se toimii?
+Hyvä kysymys tuo. Heijastava teleskooppi eli [[peiliteleskooppi]] kerää valon suurella kaarevalla peilillä, joka heijastaa sen yhteen pisteeseen. Sieltä kuva ohjataan okulaariin tai kameraan. Mitä suurempi peili on, sitä enemmän valoa se kerää ja sitä himmeämpiä kohteita voi nähdä. [[Leviathanin]] peili oli halkaisijaltaan 183 senttimetriä. Aika teknistä, mut selvisin.
+JATKOT:
+Mikä on taittava teleskooppi?
+Miksi suuremmasta peilistä on hyötyä?
+
+### 48.4
+KYSYMYS: Mitä Rossen jaarli havaitsi suurella teleskoopillaan?
+Mmm— Rossen jaarli havaitsi Leviathanilla, että eräät sumumaiset kohteet taivaalla ovat [[spiraaligalakseja]]. Tunnetuin tapaus on [[Pyörregalaksi]], jonka spiraalirakenteen hän kertomusten mukaan piirsi jo vuonna 1845. Havainto oli merkittävä, koska galaksien luonne oli tuolloin vielä tuntematon. Nyt minä katson tähtiä vähän toisin silmin.
+JATKOT:
+Mikä on galaksi?
+Mistä Pyörregalaksin nimi tulee?
+
+### 48.5
+KYSYMYS: Miksi teleskoopit rakennetaan usein kauas kaupungeista?
+Joo, tän minä tiedän. Tähtitieteilijät etsivät observatoriolle paikkaa kaukaa kaupungeista, koska kaupunkien valot himmentävät yötaivasta, ja ilmiötä sanotaan [[valosaasteeksi]]. Lisäksi korkealla ja kuivalla paikalla ilma on tyynempää ja kirkkaampaa, ja ilmakehän pyörteet sumentavat kuvaa vähemmän. Siksi suuret [[kaukoputket]] sijoitetaan usein vuorille. Maaseudulla taivas on kyl komeampi.
+JATKOT:
+Mikä on valosaaste?
+Missä maailman suurimmat observatoriot sijaitsevat?
+
+### 49.1
+KYSYMYS: Minä vuonna Mellifontin luostari perustettiin?
+Tuota niin. Mellifontin luostari perustettiin vuonna 1142, kun Armaghin arkkipiispa pyhä [[Malakia]] perusti sen ranskalaisten munkkien avulla. Se oli Irlannin ensimmäinen [[sistersiläisluostari]]. Luostarin kahdeksankulmainen [[lavabo]], jossa munkit pesivät kätensä ennen aterioita, oli ainutlaatuinen Irlannissa, ja se on yhä nähtävissä rauniona. Käsienpesu ennen ruokaa, siinä kyl jotain opittavaa.
+JATKOT:
+Mitä sistersiläiset olivat?
+Kuka oli pyhä Malakia?
+
+### 49.2
+KYSYMYS: Mitä luostarin kivistä rakennettiin lakkauttamisen jälkeen?
+Odotas vähän. Henrik VIII:n [[luostarien lakkautus]] päätti luostarin uskonnollisen käytön vuonna 1539. Vuonna 1556 [[Edward Moore]] rakensi paikalle linnoitetun kartanon ja käytti rakennusaineena vanhan luostarin kiviä. Kartano toimi myöhemmin muun muassa [[Vilhelm Oranialaisen]] päämajana [[Boynen taistelun]] aikaan vuonna 1690. Lopulta koko paikka hylättiin, ja nykyisin siellä näkyy keskiaikaisia raunioita. Aika kierrätystä, sanoisin.
+JATKOT:
+Mitä Mellifontin raunioista on jäljellä?
+Kuka oli Vilhelm Oranialainen?
+
+### 49.3
+KYSYMYS: Mitä sistersiläismunkit tekivät luostarissa päivittäin?
+Ai tota. [[Sistersiläiset]] noudattivat [[Benedictuksen sääntöä]], jossa päivä jakautui rukoukseen, työhön ja lepoon. Munkit kokoontuivat yhteisiin rukoushetkiin useita kertoja vuorokaudessa, ja välillä tehtiin ruumiillista työtä, kuten viljelyä ja rakentamista. Sistersiläisiä kutsutaan myös valkoisiksi munkeiksi heidän valkoisen asunsa vuoksi. Täsmällistä päiväohjelmaa en ole varma, ja se vaihteli vuodenajan mukaan.
+
+Yhteinen ateria ja kuuma leipä kuulostavat minusta oikein hyviltä. Pullaa en tosin keksi sieltä, mut elän toivossa.
+JATKOT:
+Mikä on Benedictuksen sääntö?
+Miksi sistersiläiset pukeutuivat valkoiseen?
+
+### 49.4
+KYSYMYS: Miksi Henrik VIII lakkautti luostarit?
+Mmm— Henrik VIII erosi 1530-luvulla [[Rooman kirkosta]], ja kuninkaasta tuli [[Englannin kirkon]] pää. Luostarien lakkautus kuului tähän muutokseen: kruunu otti luostarien maat ja rikkaudet haltuunsa ja myi tai lahjoitti ne eteenpäin. Syynä oli sekä uskonnollinen uudistus että rahan tarve. Irlannissa lakkautus ulottui pääasiassa kruunun hallitsemille alueille, ja Mellifont suljettiin vuonna 1539. Kuninkaat ovat aina olleet kiinnostuneita kiinteistöistä.
+JATKOT:
+Mikä on Englannin kirkko?
+Mitä luostareille tapahtui lakkautuksen jälkeen?
+
+### 49.5
+KYSYMYS: Mikä oli Boynen taistelu vuonna 1690?
+Hmm, tää on vähän raskaampi aihe. Boynen taistelu käytiin heinäkuussa 1690 [[Boyne-joen]] varrella lähellä [[Droghedaa]] Irlannin itärannikolla. Siinä Vilhelm Oranialaisen joukot voittivat syrjäytetyn kuningas [[Jaakko II:n]] joukot, ja kyse oli kruunusta ja valtasuhteista kolmessa valtakunnassa. Siitä on yli kolmesataa vuotta, ja Irlannin valtasuhteet ovat sittemmin muuttuneet monta kertaa. Mellifontin entinen kartano toimi Vilhelmin päämajana taistelun aikaan. Onpas siit onneksi pitkä aika.
+JATKOT:
+Kuka oli Jaakko II?
+Mitä Boynen taistelun jälkeen tapahtui?
+
+### 50.1
+KYSYMYS: Mitä Ardaghin maljan sisältä löytyi?
+No jopas. Ardaghin maljan sisältä löytyi muita esineitä: koruttomampi jalallinen kuppi ja neljä [[solkea]]. Löydön tekivät syyskuun lopulla 1868 [[Jim Quin]] ja [[Paddy Flanagan]], jotka kaivoivat perunapeltoa Ardaghin kylän vieressä [[Limerickin]] kreivikunnassa. Maasta tuli ensin esiin kivilaatta ja sen alta malja, joka piti sisällään muut esineet. Malja on koottu 354 erillisestä osasta, ja sen kupin ympäri kiertävät apostolien nimet. Quinin äiti myi löydön Limerickin piispalle. Perunapellosta siis muutakin kuin perunaa.
+JATKOT:
+Miten Ardaghin malja päätyi museoon?
+Mitä apostolien nimet maljassa kertovat?
+
+### 50.2
+KYSYMYS: Miksi Derrynaflanin löydöstä käräjöitiin seitsemän vuotta?
+Annas ku mietin. Derrynaflanin löydöstä käräjöitiin, koska siitä syntyi kiista omistuksesta. Löytö tehtiin helmikuussa 1980, ja löytäjät, [[Michael Webb]] ja hänen poikansa, vaativat oikeutta löytöön tai korvausta, mutta valtio väitti omistavansa sen. Asia eteni aina [[korkeimpaan oikeuteen]], joka linjasi vuonna 1987, että valtio omistaa Irlannissa maasta löytyneen arvokkaan muinaisesineen. Tämä linjaus muutti maan lakia. Tarkkoja oikeudenkäyntivaiheita en ole varma muistamaan. Seitsemän vuotta riitaa, kyl siinä ois kyyhkyltä kärsivällisyys loppunut.
+JATKOT:
+Mikä on Irlannin kansallismuseo?
+Mitä Derrynaflanin löytö sisälsi?
+
+### 50.3
+KYSYMYS: Kuka omistaa Irlannissa maasta löytyvän aarteen?
+Selvä juttu. Irlannissa maasta löytyneet muinaisesineet, joilla ei ole tiedossa olevaa omistajaa, kuuluvat valtiolle. Löydöstä on ilmoitettava viranomaisille, ja löytäjä voi saada siitä palkkion. Linjaus vahvistui [[Derrynaflanin]] oikeudenkäynnin jälkeen vuonna 1987, ja nykyisin myös [[metallinilmaisimen]] käyttö muinaisesineiden etsimiseen vaatii luvan. Löydöt päätyvät yleensä [[Irlannin kansallismuseoon]]. Tarkkoja pykäliä en muista.
+
+Ardaghin pojat ehtivät myydä löytönsä ennen nykyisiä sääntöjä, ja Derrynaflanin tapaus muutti sen. Posti on postia ja aarre on aarre, mut kummallakin pitää olla osoite.
+JATKOT:
+Voiko metallinilmaisimella etsiä aarteita Irlannissa?
+Mitä pitää tehdä, jos löytää muinaisesineen?
+
+### 50.4
+KYSYMYS: Mitä solki on ja mihin sitä käytettiin?
+Mmm— [[Solki]] on esine, jolla vaatteen osat kiinnitetään yhteen, esimerkiksi [[viitta]] olkapäältä. Soljet valmistettiin metallista, usein pronssista tai hopeasta, ja varhaiskeskiajan Irlannissa niitä koristeltiin runsaasti, jolloin ne olivat myös statusesineitä. Tunnettu esimerkki on varhaiskeskiajalta peräisin oleva [[Tara-solki]]. Kyyhkyllä ei ole viittaa, mut höyhenpuku ajaa saman asian.
+JATKOT:
+Mikä on Tara-solki?
+Miten pronssia valmistetaan?
+
+### 50.5
+KYSYMYS: Missä Guinnessin panimo sijaitsee Dublinissa?
+Katotaas. Guinnessin panimo sijaitsee Dublinissa [[St. James's Gate]] -alueella kaupungin keskustan länsipuolella. Panimon perusti [[Arthur Guinness]] vuonna 1759, ja hän teki sopimuksen alueen vuokraamisesta yhdeksäksi tuhanneksi vuodeksi. Panimo on yksi Dublinin tunnetuimmista paikoista.
+
+Isoisä oli tässä kerrankin täsmälleen oikeassa, ja sen sanominen vähän vihlaisee. Yhdeksäntuhatta vuotta on kyllä pitkä vuokra, mut kai se maksetaan.
+JATKOT:
+Mitä Guinnessin panimon vierailukeskuksessa on?
+Millaista olutta Guinness on?
+PAIKKA: Guinnessin panimo | 53.34 | -6.29 | kaupunki
