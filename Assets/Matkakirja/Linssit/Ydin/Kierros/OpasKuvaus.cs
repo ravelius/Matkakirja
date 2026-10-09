@@ -107,11 +107,15 @@ namespace Matkakirja.Linssit.Kierros
             if (OpasSilmukka.PalloLento && !double.IsNaN(k.YmparysM))
             {
                 kattoYla = Math.Max(PalloKattoMinM, k.YmparysM + KattoVaraM);
-                if (l != Luokka.Alue)
                 {
                     const double A = Math.PI / 180;
                     double vaaka = et * Math.Sin(kall * A), silma = nosto + et * Math.Cos(kall * A);
-                    double tavoite = Math.Max(kattoYla, korkeus > 0 ? EsittelyOsuus * korkeus : kattoYla);
+                    // ALUE (kuva-arkki 9.10., P3/T3: Louvre, Concorde, Champs-Élysées, Gamla stan, Kuninkaanlinna saapuivat 64°:n
+                    // kartta-asennossa, koska alue jäi esittelykorkeuden ulkopuolelle): suuri kohde katsotaan kattojen yläpuolelta
+                    // viistosti, kallistus enintään AlueEsittelyKallistus (koko alue pysyy kuvassa; spiraali laskee loppua kohti).
+                    double tavoite = l == Luokka.Alue
+                        ? Math.Max(kattoYla, nosto + vaaka / Math.Tan(AlueEsittelyKallistus * A))
+                        : Math.Max(kattoYla, korkeus > 0 ? EsittelyOsuus * korkeus : kattoYla);
                     if (tavoite < silma)
                     {
                         double h = Math.Max(tavoite - nosto, vaaka / Math.Tan((OpasOhjaus.KallistusMax - 1) * A));
@@ -231,6 +235,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kaaren silmänopeus (m/s) kulmanopeuden rajoin (°/s), spiraalin aikavakio (s), lähestyminen ja lasku (osuus).</summary>
         /// <summary>Esittelykorkeus (omistaja TF 169): silmä osuus × kohteen korkeus maasta; kattojen yläpuolella vähintään vara (m), pallossa katto vähintään (m).</summary>
         public const double EsittelyOsuus = 0.6, KattoVaraM = 12, PalloKattoMinM = 15;
+        /// <summary>Alueen (suuri kohde, ei korkeutta) esittelyn kallistus pystysuorasta (°): kattojen yläpuolella, viistosti.</summary>
+        public const double AlueEsittelyKallistus = 75;
         public const double KaariNopeusMS = 10, KaariAlkuS = 3, KaariMaxAstS = 5, SpiraaliAikaS = 14, SpiraaliLahesty = 0.0, SpiraaliLasku = 0.35, SpiraaliLaskuPallo = 0.5, SpiraaliMinKorkeusM = 60, SpiraaliMaxMS = 2.5, KaariOsuusSeuraavaan = 0.5;
 
         /// <summary>Lipumisen huippunopeus (m/s), S-käyrän kesto (s) ja pehmeä katto (osuus välimatkasta, enintään m; tanh).</summary>

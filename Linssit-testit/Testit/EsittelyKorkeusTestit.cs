@@ -33,5 +33,29 @@ namespace Matkakirja.Linssit.Testit
             }
             finally { OpasSilmukka.PalloLento = vanha; }
         }
+
+        /// <summary>Alue (kuva-arkki 9.10., P3/T3): korkeudeton suuri kohde viistosti kattojen yläpuolelta, ei 64°:n kartta-asennossa.</summary>
+        [Testi] static void AlueViistostiKattojenYlapuolelta()
+        {
+            bool vanha = OpasSilmukka.PalloLento;
+            try
+            {
+                OpasSilmukka.PalloLento = true;
+                foreach (var (nimi, koko, katot) in new[] { ("Louvre", 700.0, 30.0), ("Concorden aukio", 360.0, 11.0), ("Champs-Élysées", 1900.0, 26.0), ("Gamla stan", 600.0, 18.0) })
+                {
+                    var k = new OpasKohde { Id = nimi, Nimi = nimi, Lat = 48.86, Lon = 2.33, KokoM = koko, KorkeusM = 0 };
+                    var ilman = OpasKuvaus.Kehysta(k, 35, 0);
+                    k.YmparysM = katot;
+                    var p = OpasKuvaus.Kehysta(k, 35, 0);
+                    Oleta.Tosi(OpasKuvaus.Luokittele(k) == OpasKuvaus.Luokka.Alue, $"{nimi}: alue");
+                    Oleta.Tosi(Math.Abs(p.Kallistus - OpasKuvaus.AlueEsittelyKallistus) < 0.5 || Silma(p) <= katot + OpasKuvaus.KattoVaraM + 1,
+                        $"{nimi}: kallistus {p.Kallistus:F0}° (ennen {ilman.Kallistus:F0}°), silmä {Silma(p):F0} m (ennen {Silma(ilman):F0})");
+                    Oleta.Tosi(Silma(p) >= katot + OpasKuvaus.KattoVaraM - 1, $"{nimi}: silmä kattojen yläpuolella ({Silma(p):F0} m)");
+                    double vaaka(Pysahdys x) => x.EtaisyysM * Math.Sin(x.Kallistus * Math.PI / 180);
+                    Oleta.Tosi(Math.Abs(vaaka(p) - vaaka(ilman)) < 0.5, $"{nimi}: vaakaetäisyys pysyy");
+                }
+            }
+            finally { OpasSilmukka.PalloLento = vanha; }
+        }
     }
 }
