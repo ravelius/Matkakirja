@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "b51d67e98e7acc63",
-  "kansio": "dioraama/olavinlinna/blender/b51d67e98e7acc63/",
+  "hash": "a9838ab14798895b",
+  "kansio": "dioraama/olavinlinna/blender/a9838ab14798895b/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1335,8 +1335,8 @@
     },
     {
       "polku": "kavely/merkit.json",
-      "sha256": "7176e2bbfa7bc673bbe57ce33f358f71429ca1625d0d1af3c77f2ee7734fc52d",
-      "tavuja": 71427
+      "sha256": "de06e7c7dc29db63069507a71d92a124d877810b7bca4ffcf242a14b79698fcb",
+      "tavuja": 74016
     },
     {
       "polku": "kavely/muurikaytava-kavely.glb",
@@ -1357,6 +1357,46 @@
       "polku": "kavely/osat.json",
       "sha256": "6b3561d9843552ca36137d334c45ac5291993694dc791029338e16932b127083",
       "tavuja": 30600
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
+      "sha256": "9e703823205b7504e05e631e5753e62683f687459fe7838637b1afe7135a0a55",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x190-orm-6x6.astcm",
+      "sha256": "30331d34260eedd9a392b4032319568efa9ca69f673e7e918daaee61d02e72db",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x190-vari-6x6.astcm",
+      "sha256": "54dba8d5300386d05f0eed98543532017a1005e71eed06615f358f3268c6bf3f",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x190.glb",
+      "sha256": "4fdb887dcf22b9c3de8e8fe15138f8619bfd086eecad53f1aa22a197ce2aa477",
+      "tavuja": 279588
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x200-normaali-6x6.astcm",
+      "sha256": "9e703823205b7504e05e631e5753e62683f687459fe7838637b1afe7135a0a55",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x200-orm-6x6.astcm",
+      "sha256": "30331d34260eedd9a392b4032319568efa9ca69f673e7e918daaee61d02e72db",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x200-vari-6x6.astcm",
+      "sha256": "54dba8d5300386d05f0eed98543532017a1005e71eed06615f358f3268c6bf3f",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/ovi-tammi-100x200.glb",
+      "sha256": "e6dd10ed98019302d5499d19445dcd6eec3c96e83e6a47910798eb1ad3fc91a5",
+      "tavuja": 279572
     },
     {
       "polku": "kavely/palatsi-kavely.glb",
@@ -1522,6 +1562,306 @@
       "polku": "kavely/rekvisiitta-ceramic_pot.glb",
       "sha256": "7d7b63d2b5ce7f2f07267bd9a4f16e7a8a718e00bf3188b023b1de70d134a476",
       "tavuja": 397556
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-alttarikaappi-normaali-6x6.astcm",
+      "sha256": "c05ca3a8980ea9f2bb755cf30a2b4fc395eabd87f5d09e59fef8514404556fee",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-alttarikaappi-orm-6x6.astcm",
+      "sha256": "032d0f17a9376f198db9fe09131b45f321d0e35f9f36b8d023e9976b1101737a",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-alttarikaappi-vari-6x6.astcm",
+      "sha256": "758e9004aa8831d66616b931509d2d6e6008babeed934a9bcf953841922ab578",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-alttarikaappi.glb",
+      "sha256": "2b56efbebb5ca0649a0e64f25af5d851ffbcaba0831c1bb7d7c6f7a03ab7b6bd",
+      "tavuja": 688660
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-asiakirja-normaali-6x6.astcm",
+      "sha256": "0d606d9d5df680941c4116077b25fd0db4fd585d65c7ab934d8646d0e61f9df9",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-asiakirja-orm-6x6.astcm",
+      "sha256": "ad2c3fd73665e967ae33fc4464387304ae86005002349b42469c3967e5cad3ac",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-asiakirja-vari-6x6.astcm",
+      "sha256": "f17befd501840c10d33a4a9f005f5e5a15b54f96725943844bcfb251e7d465dd",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-asiakirja.glb",
+      "sha256": "3b9d407b11b1cca580e36435dd2c5f14e6b810c0da7fd0ed535e8340759b30d7",
+      "tavuja": 287392
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-brokadi-normaali-6x6.astcm",
+      "sha256": "1ed45baf13660cbd9f14bb94a8872953dc2ac430bc007601534f0e1aba4ced0f",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-brokadi-orm-6x6.astcm",
+      "sha256": "1627d343248ada3342977855e0e210de11a52758cf5cb61ab9dbae7a9c915f72",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-brokadi-vari-6x6.astcm",
+      "sha256": "144666e3c1fda2af54e6a198870e897ec9de7d04132d45686bb2df15b5721e67",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-brokadi.glb",
+      "sha256": "cb4c920e69c8d35482c8c887c9215ce1f6f37f19e86d9e0d9f47621cc559f916",
+      "tavuja": 239732
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-kuvakudos-normaali-6x6.astcm",
+      "sha256": "4d9a03bb05424f04d8b6f40cc74d1156ef01e41f93af542626c3127bfd426be9",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-kuvakudos-orm-6x6.astcm",
+      "sha256": "3f5921bde3a09b3e835f24052487e9805666f55aa08a32994d3ab0193d2ee541",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-kuvakudos-vari-6x6.astcm",
+      "sha256": "0274551e1f70689c7ba023fae83d4441c81f56436f5aa1ddcf6079790b87ccfb",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-kuvakudos.glb",
+      "sha256": "37777ec22d93a3dcfc139e7846ba758dc1205f111e37dbfc230769ee14ad0025",
+      "tavuja": 869972
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-liina-normaali-6x6.astcm",
+      "sha256": "c9f45b0a76a3c822084e778574f0890259eb93a0a5c49f8bca023b455422b748",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-liina-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-liina-vari-6x6.astcm",
+      "sha256": "74f96d292ad7364b8ee4da08944feefde228329fdf41c8610c9731f1127a325e",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-liina.glb",
+      "sha256": "00e1afb95fae1c36723691bf0099e6c37249845d05f42d2ec4266cac6e16c945",
+      "tavuja": 477096
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-lippu-sture-normaali-6x6.astcm",
+      "sha256": "9c75c23b87e2d61b2f366be4f09f8680e2d69df14a6543b038ddf04fcacab6e9",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-lippu-sture-orm-6x6.astcm",
+      "sha256": "3f5921bde3a09b3e835f24052487e9805666f55aa08a32994d3ab0193d2ee541",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-lippu-sture-vari-6x6.astcm",
+      "sha256": "d8c41039df7a229059423b521d129ecd9e583c55939079ac25477f4660199cfe",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-lippu-sture.glb",
+      "sha256": "7c970a0149dc14e77c57d33e66e80f1c3089e6c9100433ed923367bcf9e724ec",
+      "tavuja": 750672
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-noki-normaali-6x6.astcm",
+      "sha256": "5d67a23a88912a43c7d9ed1cc1a3a494943483edb43fa5d983df203160ce5ab1",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-noki-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-noki-vari-6x6.astcm",
+      "sha256": "102d00658d0cbd87c9cfc91e6adb34ae533f3ed82f495d37e114be902d861b44",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-noki.glb",
+      "sha256": "cfa89e609b46b8b7107ae7658fe5f012cda14ecd0bf265ecd8daa2b282625c37",
+      "tavuja": 501744
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-raapustukset-normaali-6x6.astcm",
+      "sha256": "9a3af3236dedd78991341120ed65dfc5851ffea642c49fcdc79156f7ee94a1e9",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-raapustukset-orm-6x6.astcm",
+      "sha256": "aabfae146921ff01aca1aa2f60d16c1ebe73716770211ba6d6616cc2cabcb83d",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-raapustukset-vari-6x6.astcm",
+      "sha256": "f5c45c38ae64cdd251327ba707e27aacee2d8f7acac0b2b8ba708878f55381c9",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-raapustukset.glb",
+      "sha256": "4e3e24d35e6a8613598dbde930b13b3c9c4d6911731a3b790b49530d85301f86",
+      "tavuja": 3611864
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-1-normaali-6x6.astcm",
+      "sha256": "218d56f1c667148dbd5ebca0e732c1cfcaac463bc3e60a4510fe227ea1970bc0",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-1-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-1-vari-6x6.astcm",
+      "sha256": "939f53548be576929308ae015359b587d911bf760ce93c9a330bf582bfc738df",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-1.glb",
+      "sha256": "695b192a4647c4e47ed46bd0d3e3cfe62dbf298552c89ca803c6f42fe43e9100",
+      "tavuja": 661384
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-2-normaali-6x6.astcm",
+      "sha256": "218d56f1c667148dbd5ebca0e732c1cfcaac463bc3e60a4510fe227ea1970bc0",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-2-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-2-vari-6x6.astcm",
+      "sha256": "939f53548be576929308ae015359b587d911bf760ce93c9a330bf582bfc738df",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-saakki-2.glb",
+      "sha256": "41ee962f6221a49582107780dfc58b1f52ec001db84ccd41dceaa9a1d5c70ab2",
+      "tavuja": 661380
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tilikirja-normaali-6x6.astcm",
+      "sha256": "80cda657edbe65acabf68e515f3b16cb0d66fb247f7f48a3c1e75277c0d2dc7b",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tilikirja-orm-6x6.astcm",
+      "sha256": "fdd90eaea482f40597e55f976661a8edf015f62250a88865af6b5f0a6ad7f925",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tilikirja-vari-6x6.astcm",
+      "sha256": "71b0db535a40c4fbcd882dc35867d98149b918675c82e5198657d4b3d3cf7555",
+      "tavuja": 315008
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tilikirja.glb",
+      "sha256": "5d49c5dd2592e653ae4d74037f9d3bf8bfa2718dd37f0a9b3ecf7ccd6ff2b436",
+      "tavuja": 650544
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tott-vaakuna-normaali-6x6.astcm",
+      "sha256": "aa153a47afd4b5bc07781c138cda684227bccff5c8ca7d0cf071368b17cc9550",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tott-vaakuna-orm-6x6.astcm",
+      "sha256": "aabfae146921ff01aca1aa2f60d16c1ebe73716770211ba6d6616cc2cabcb83d",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tott-vaakuna-vari-6x6.astcm",
+      "sha256": "a1e0995126d4024c35faf1a68d14c566c0082badc0257d4055b9edf42a0507ee",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-tott-vaakuna.glb",
+      "sha256": "aa73db9b127a16f797fc2ca1e7e25c4f66f8f50b52f698b9be6feaa45fdf7681",
+      "tavuja": 2040948
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-punainen-normaali-6x6.astcm",
+      "sha256": "c10e163f288a882027e8bdf32b5babfaf4b79f6af4f3440753926088ee5a673c",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-punainen-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-punainen-vari-6x6.astcm",
+      "sha256": "6317be1ac2945ea9c62e9314cf592c5cab0c07db2a7655ef6b19f680282ca6f9",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-punainen.glb",
+      "sha256": "63f688d2d3e21984df702f52e9c980170ca3d12567695b4ffd60efe0509f501b",
+      "tavuja": 463208
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-ruskea-normaali-6x6.astcm",
+      "sha256": "a89057c116a3833557972cfcd441c45258d1660c7a1d48595febf9ec45bdbe93",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-ruskea-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-ruskea-vari-6x6.astcm",
+      "sha256": "17c8a82a10d6ca2f6fa96bbec3f78478e86126818d4c8d0c718ccdd9108b7e4f",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-ruskea.glb",
+      "sha256": "b95e3f723e215b6deb094ab0fc6b7803b0dc7b2a3df6031953dd915460474fbf",
+      "tavuja": 516732
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-sininen-normaali-6x6.astcm",
+      "sha256": "aa3b85ebd8d34f06a5fb274a53c3b9989aeab64495c3ec9980627760bc0ce22e",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-sininen-orm-6x6.astcm",
+      "sha256": "01fd0c10ff340ce5f55fd5b7888c4f146f2b2e157713102ad5095f69681fa199",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-sininen-vari-6x6.astcm",
+      "sha256": "aa243323399c9d053485308935c65a7762e901a348e68fc8a2edaf21e783cd5e",
+      "tavuja": 626304
+    },
+    {
+      "polku": "kavely/rekvisiitta-codex-viltti-sininen.glb",
+      "sha256": "a4cbfdf3a783f0be69c44c3fc799555f78b68f8648cd04016decc1eb555d839f",
+      "tavuja": 575340
     },
     {
       "polku": "kavely/rekvisiitta-food_apple_01-normaali-6x6.astcm",
