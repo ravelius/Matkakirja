@@ -11,7 +11,8 @@ namespace Matkakirja.Linssit.Aanet
     {
         public const string Kansio = "kaupunkisilmukat-v1/";
 
-        /// <summary>Vanha polku aanet/-juuren alla → uusi tiedosto kaupunkisilmukat-v1:ssä.</summary>
+        /// <summary>Vanha polku aanet/-juuren alla → uusi tiedosto kaupunkisilmukat-v1:ssä (tai täysi polku, jos siinä on kauttaviiva).
+        /// Laatu-korvaajat (Pelikoodari 9.10., laatu-korvaajat-v1 ja silmukat-korjaukset-v1): Tukholman lapset, kanava ja laituri.</summary>
         public static readonly (string Vanha, string Uusi)[] Korvaajat =
         {
             ("kaupunkimaisema-v2/pariisi/metro.mp3", "pariisi-metro-02.mp3"),
@@ -21,6 +22,9 @@ namespace Matkakirja.Linssit.Aanet
             ("kaupunkimaisema-v1/raitiovaunu-02.mp3", "raitiovaunu-03.mp3"),
             ("pariisi-seine-v1/pariisi/kyyhkyt-kujerrus.mp3", "pariisi-kyyhkyt-02.mp3"),
             ("elava-kaupunki-v1/lokkiparvi.mp3", "lokkiparvi-02.mp3"),
+            ("kaupunkimaisema-v2/tukholma/lapset.mp3", "laatu-korvaajat-v1/lapset-puisto-01.mp3"),
+            ("aanimaisema-v2/kanava-01.mp3", "laatu-korvaajat-v1/kanava-liplatus-01.mp3"),
+            ("kaupunkimaisema-v1/laituri-01.mp3", "silmukat-korjaukset-v1/laituri-02.mp3"),   // 90 s, sama lähde ilman saumaa
         };
 
         /// <summary>Kaupunkikohtaiset lähikerrokset kaupunkisilmukoista (Pelikoodari 9.10., PT: paikka ennen lajia), polku aanet/-juuren alla.
@@ -42,7 +46,7 @@ namespace Matkakirja.Linssit.Aanet
             if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(juuri) || !url.StartsWith(juuri, StringComparison.Ordinal)) return url;
             string polku = url.Substring(juuri.Length);
             foreach (var (vanha, uusi) in Korvaajat)
-                if (polku == vanha) return juuri + Kansio + uusi;
+                if (polku == vanha) return juuri + (uusi.Contains("/") ? uusi : Kansio + uusi);
             return url;
         }
     }
