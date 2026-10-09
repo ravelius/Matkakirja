@@ -19,7 +19,7 @@
 
 Avoimet epävarmuudet (ei käytetä teksteissä): Paksun tornin räjähdysvuosi (1791 / ennen 1788), 1600-luvun linnanpalo (1631 / 1654), 1499 piirityksen kuukausi, varuskunnan lähtö (1847 / 1836), Pyhän Eerikin tornin purun vuosi (1714 / myöhemmin), restaurointi 1912–16 (vain RKY).
 
-## 2. Kertojan tekstit (9 riviä, yhteensä 1065 merkkiä)
+## 2. Kertojan tekstit (9 riviä, yhteensä 1069 merkkiä)
 
 Sävy: rauhallinen, konkreettinen kertoja; 13+ ja aikuisille; ei kaanonmuutoksia (ei Foggia, isoisää eikä tarinan henkilöitä); vain tarkistetut faktat (varmat tai kahdesta lähteestä), epävarmat vuodet jätetty pois.
 
@@ -30,7 +30,7 @@ Sävy: rauhallinen, konkreettinen kertoja; 13+ ja aikuisille; ei kaanonmuutoksia
 | 3 | 1475 Tott ja rakennustyö | Vuonna 1475 Erik Akselinpoika Tott alkoi rakentaa salmen kalliolle linnaa Pyhän Olavin nimiin. Ensin nousi puuvarustus, kivi vasta 1477. | 136 |
 | 4 | 1480-luvun päälinna ja tornit | Kun ulkomaiset muurarit olivat tehneet työnsä, kolme tornia ja niiden väliset muurit seisoivat valmiina 1480-luvun puolivälin tienoilla. | 136 |
 | 5 | 1499 | Vuonna 1499 linnan haltijaksi tuli Erik Turesson Bielke, ja linna kesti vielä yhden hyökkäyksen. | 96 |
-| 6 | 1500–1600-luvut | Kustaa Vaasan aikana tornit korotettiin ja esilinna vahvistui, ja 1600-luvun alussa rakennettiin uusi esilinna ja Kijlin torni. | 127 |
+| 6 | 1500–1600-luvut | Kustaa Vaasan aikana tornit korotettiin ja esilinna vahvistui, ja 1600-luvun vaihteessa rakennettiin uusi esilinna ja Kijlin torni. | 131 |
 | 7 | 1700-luvun venäläinen kausi | Pikkuvihan jälkeen Turun rauha 1743 liitti linnan Venäjään, ja 1750-luvulla sen ympärille nousivat bastionit. | 109 |
 | 8 | 1800-luvun palo ja rapistuminen | Venäläinen varuskunta lähti 1847, ja linna autioitui. Palot 1868 ja 1869 tuhosivat sen puuosia ja esilinnan rakennuksia. | 120 |
 | 9 | Restaurointi ja oopperajuhlat | Korjaukset alkoivat 1870-luvulla, ja suuri restaurointi 1961–1975 avasi linnan yleisölle. Vuodesta 1967 linnan pihalla on järjestetty oopperajuhlat kesäisin. | 157 |
@@ -44,7 +44,7 @@ Sävy: rauhallinen, konkreettinen kertoja; 13+ ja aikuisille; ei kaanonmuutoksia
 | 3 | Aloitus 1475 [1][2][5][23]; kivirakentaminen 1477, ensin puuvarustus [1][4][7]; dendro 1475 [28]. **Telineistä ei ole lähdettä; ei väitetä.** |
 | 4 | Kuusitoista ulkomaista muurarimestaria [1][7]; päälinna valmis 1483 (Pirinen) / n. 1485 (fi/en-wiki) / 1490-luvulle (Museovirasto) [5][7][2][3] → "1480-luvun puolivälin tienoilla" on suuruusluokka ±2 v. |
 | 5 | Bielke haltijaksi 1499 (SBL) [22b]; Pentti Pentinpoika luovutti kaluston 14.9.1499 [1][7]; venäläisten piiritys 1499 torjuttiin [22b][7]. Piirityksen kuukausi (elokuu/syyskuu) [EPÄVARMA], ei mainita. |
-| 6 | Tornien korotus ja esilinnan vahvistus 1500-luvun puolivälissä (RKY, Museovirasto) [2][5][6]; uusi esilinna 1602–03 [1]; Kijlin torni 1604–08 [1][5]. |
+| 6 | Tornien korotus ja esilinnan vahvistus 1500-luvun puolivälissä (RKY, Museovirasto) [2][5][6]; uusi esilinna 1602–03 [1]; Kijlin torni 1604–08 [1][5] (Sadan vuoden satoa antaa 1595; PT 9.10.: "1600-luvun vaihteessa" kattaa molemmat). |
 | 7 | Linna antautui venäläisille 8.8.1742 [1][4]; Turun rauha 1743 [2][3][5]; Vesiportin bastionin ja kurtiinien työt 1749–55, Museovirasto 1750-luku [5][10][11]. |
 | 8 | Varuskunta 1847 (useimmat lähteet; Rekolan tiivistelmä 1836 [EPÄVARMA]) [2][4][12]; palot 1868 (höyrylaivojen kipinät, iso linnapiha) ja 1869 (esilinnat) [1][2][11]. |
 | 9 | Ensimmäinen restaurointi 1872–78 (Kiseleff) [12][24]; suuri restaurointi 1961–75, avattu yleisölle 1975 [2][5][6]; oopperajuhlat uudelleen 1967 ja vuosittain siitä lähtien (ensimmäinen 1912) [2][26]. Alkuvuosi 1959/1961 vaihtelee, ei mainita. |
