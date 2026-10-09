@@ -80,6 +80,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(vahti.Contains("Karkeaksi()") && c.Contains("bool halu = Tauko && !muistiPysaytys && Latausaste >= ValmisProsentti;"), "karkea valinta hädässä, suspendUpdate tauolla");
         }
 
+        [Testi] static void AluskerrosKorkealla()
+        {
+            // PT 9.10.: korkealta (vapaan lennon katto 12 km) Googlen laattojen takana ei ollut maata → aluskerros yli 1200 m:ssä.
+            string c = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "CesiumKaupunki.cs"));
+            Oleta.Tosi(c.Contains("KaupunkiIlmakeha.KameraKorkeusM > AluskerrosKorkeusM") && c.Contains("AluskerrosKorkeusM = 1200f"), "aluskerros korkealla");
+        }
+
+        [Testi] static void OmienMallienValo()
+        {
+            // Omistaja 9.10.: omat mallit Googlen sävyyn ja illan valaistukseen (OmaMalli-varjostin Cesiumin opaqueMaterialina).
+            string U(string n) => System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", n));
+            string v = U("Resources/Varjostimet/OmaMalli.shader"), c = U("Unity/CesiumOmatMallit.cs");
+            foreach (var o in new[] { "_baseColorTexture", "_baseColorFactor", "_emissiveTexture", "_emissiveFactor", "_baseColorTextureCoordinateIndex" })
+                Oleta.Tosi(v.Contains(o + " ("), "Cesiumin ominaisuus " + o);
+            Oleta.Tosi(v.Contains("SampleSH(n)") && v.Contains("IlmIlmaperspektiivi") && v.Contains("_IlmMaailma.z"), "ympäristövalo, ilma ja ilta");
+            Oleta.Tosi(v.Contains("\"LightMode\" = \"DepthNormals\"") && v.Contains("\"LightMode\" = \"ShadowCaster\""), "syvyys ja varjot");
+            Oleta.Tosi(c.Contains("t.opaqueMaterial = om"), "materiaali tilesetille");
+        }
+
         [Testi] static void SadepilvetJaSalama()
         {
             // PT junaan 171: sade = tummat matalat pilvet (kuuron tummuus laskee pohjan ja paksuntaa) + LS1:n salaman välähdys pilviin.

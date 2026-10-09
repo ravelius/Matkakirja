@@ -228,6 +228,8 @@ namespace Matkakirja.Natiivi
                         case "ilmakeha": KaupunkiIlmakeha.Pakotettu = v != 0; break;   // LS2 8.10.: fysikaalinen taivas, ilmaperspektiivi, pilvien varjot
                         case "ilmvalotus": KaupunkiIlmakeha.Valotus = v; break;
                         case "hamaravalotus": KaupunkiIlmakeha.HamaraValotus = v; break;
+                        case "sumukarsinta": CesiumKaupunki.SumuKarsinta = v != 0; break;   // LS2 9.10.: kaukomaan testi (PT)
+                        case "aluskerros": CesiumKaupunki.AluskerrosPakotettu = v != 0; break;
                         case "sininenhetki": KaupunkiIlmakeha.SininenHetki = v; break;
                         case "pilvet": KaupunkiIlmakeha.PilvetPakotettu = v != 0; break;   // LS2: pallon pilvikerros (kohta 6a), oletus kehityskaupungeissa
                         case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
@@ -251,6 +253,11 @@ namespace Matkakirja.Natiivi
                         case "tunti": Tunti = v; break;
                         case "kupoli": Kupoli = v != 0; break;
                         case "ymparistovalo": Ymparistovalo = v != 0; break;
+                        case "omavalo": CesiumOmatMallit.OmaValo = v != 0; break;   // LS2 9.10.: omien mallien valo (seuraava avaus)
+                        case "omavalotus": CesiumOmatMallit.Valotus = v; break;
+                        case "omajulkisivu": CesiumOmatMallit.Julkisivu = v; break;
+                        case "omahehku": CesiumOmatMallit.Hehku = v; break;
+                        case "omavarjo": CesiumOmatMallit.VarjoNosto = v; break;
                         case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                         case "yovalot": KaupunkiYovalot.Kaytossa = v != 0; break;
                         case "yohehku": KaupunkiYovalot.Hehku = v; break;
