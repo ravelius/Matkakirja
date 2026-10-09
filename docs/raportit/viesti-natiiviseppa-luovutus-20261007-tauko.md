@@ -3,7 +3,20 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005-iltapaiva.md (käytännöt voimassa).
 Tarkempi lokirivistö: muisti natiiviseppa-tila-20261003.md (uusin rivi ylimpänä).
 
-## TILA 9.10. 02.5x (UUSIN)
+## TILA 9.10. 03.0x (UUSIN)
+**JUNA 169 LOPULLINEN runko natiiviseppa/juna-169 d9c848fa0** = 71dbfba87 + Siirtoseppä 56fda7154 (kertoja vaikenee pelattavan palan aikana, ⊇ b8a0e4133)
++ NUI 9b7bb7134 cherry-pick (äänilähteet 51; jokiproomu ja laivan torvi soivat jo 169:n pallossa → nimeäminen samaan versioon); testit 453/419/1093,
+unity 0, tarkista 0. LS1:n kierron lisäkorjaus → 170 (PT: ei odoteta). ODOTTAA: Julkaisijan KÄÄNNÖS NYT (LS2:n simu 02.57–~03.22) → simukäännös
+→ BUILD 169 -merge masterin 6a67a9b19 päälle PT:n muutoslokilla (273 merkkiä, PT 9.10. 02.5x: "Olavinlinna aukeaa taas, kertoja ei puhu pelin päälle …
+mikseri löytyy pallosta.") → SHA Julkaisijalle (TF sisäisille) → Mac TF -odottaja + juna/b13.
+FILMI-170 **8309c2f47** (PT: ero liian hienovarainen → vahvistettu maltillisesti: varjot −0,16 viileämmät, keskisävyt −0,09, saturaatio −12, rae Medium4
+0,45 vaste 0,5, vinjetti 0,24; Linssit 1090/1090). Kuvapari VAAKA + horisontti: skenaarioissa `linssi opas pysayta 1` + `linssi opas katse ylos 40`;
+simu tallentaa vaakanäkymän pystyruudulle → `filmi-kuvapari.sh <app> <sha8>` kiertää kuvat ja kokoaa arkit (filmi-arkki.py) lokit/filmi170-arkki-<kaupunki>-<sha8>.png.
+Käännös + simu pyydetty Julkaisijalta 169:n jälkeen. Sitten arkit PT:lle.
+JUNA 170 kärjet: LS1 avaus-170 db9ad39ca, NUI 9b7bb7134 (⊇ 570917a6e), Siirtoseppä 290f5d4ae (⊇ 28c65e98e), LS2 laivat-170 0a40a8165 (⊇ fa5efa25c, e5edd5e60,
+f50d2980e; varjostimet kääntyivät 84bd41d56) + omat-mallit-korkeus 8a23d6508 (ehto data), OMA filmi-170 8309c2f47, + LS1 kierron lisäkorjaus (tulossa).
+
+## TILA 9.10. 02.5x
 **JUNA 169 runko natiiviseppa/juna-169 71dbfba87** (+ LS1 kierros-169 a3ad152f5 ⊇ avaus/sumennus, NUI b58981d4a cherry-pick); testit 453/419/1093,
 simukäännös 6657f002d 02.52 0 shader erroria (app lokit/natiiviseppa-app-169-71dbfba87). ODOTTAA: PT:n muutosloki → BUILD 169 -merge masterin 6a67a9b19
 päälle → SHA Julkaisijalle; takaraja 06.30 (herätys 06.25). TF aamulla.
