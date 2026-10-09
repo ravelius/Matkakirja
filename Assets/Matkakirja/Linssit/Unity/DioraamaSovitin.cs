@@ -836,6 +836,16 @@ namespace Matkakirja.Natiivi
             // Vakaa kääntymisviite hahmoille: lepokameran suunta (kanoninen (sin a, −cos a) → Unity (sin a, 0, cos a)).
             if (tila != null && lepo.Avain == "tila:" + tila) { double la = lepo.Perus.Atsimuutti * Math.PI / 180; DioraamaHahmot3D.LepoKameraSuunta = new Vector3((float)Math.Sin(la), 0f, (float)Math.Cos(la)); }
             else DioraamaHahmot3D.LepoKameraSuunta = null;
+            // VUORONVAIHTO KASVOJEN PUOLELTA (PT 9.10., juna 174: kamera siirtyi uuteen puhujaan ~1 s ennen kuin tämä kääntyi, selkäkuva):
+            // kamera pysyy edellisessä puhujassa, kunnes uuden puhujan kasvot ovat kameran puolella, enintään VuoroOdotusS.
+            string tuleva = puhuja;
+            if (tuleva == null) kameranPuhuja = null;
+            else if (tuleva != kameranPuhuja)
+            {
+                if (kameranPuhuja != null && SelinKameraan(tuleva) && Time.unscaledTime - vuoroOdotusAlku < VuoroOdotusS) puhuja = kameranPuhuja;
+                else kameranPuhuja = tuleva;
+            }
+            if (tuleva == kameranPuhuja) vuoroOdotusAlku = Time.unscaledTime;   // odotus alkaa vasta, kun tuleva puhuja vaihtuu
             if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
             Hahmo h = null;
             foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
@@ -878,6 +888,21 @@ namespace Matkakirja.Natiivi
             double leveydesta = (vali + 1.6) / (2 * tanPuoli * RuudunSuhde * 0.8);
             double etaisyys = Math.Clamp(Math.Max(korkeudesta, leveydesta), p.Etaisyys * 0.3, p.Etaisyys * 0.88);
             return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, etaisyys, p.Fov, p.Aukko, p.Kierto), 0.2, false);
+        }
+        string kameranPuhuja;
+        float vuoroOdotusAlku;
+        const float VuoroOdotusS = 2f, SelinAst = 100f;
+        /// <summary>Hahmon kasvot yli SelinAst lepokameran suunnasta (DioraamaHahmot3D.TilanHahmot, tämä kehys); tuntematon = ei selin.</summary>
+        static bool SelinKameraan(string id)
+        {
+            if (DioraamaHahmot3D.LepoKameraSuunta is not Vector3 kd) return false;
+            foreach (var th in DioraamaHahmot3D.TilanHahmot)
+                if (th.Id == id)
+                {
+                    var k = new Vector3(th.Kasvot.x, 0f, th.Kasvot.z);
+                    return k.sqrMagnitude > 1e-4f && Vector3.Angle(k, kd) > SelinAst;
+                }
+            return false;
         }
         /// <summary>
         /// PUOLILÄHIKUVA (Päätoimittaja 7.10. 03.0x, omistajan linja 6.10. "kamera puhujan mukaan, rauhallisesti", ~1 s blendi, ei
