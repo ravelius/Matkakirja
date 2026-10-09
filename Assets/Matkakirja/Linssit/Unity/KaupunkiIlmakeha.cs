@@ -48,17 +48,35 @@ namespace Matkakirja.Natiivi
             if (avain == aerosoliAvain || avain == aerosoliPyydetty) return;
             aerosoliPyydetty = avain;
             var nimet = new[] { "lapaisy", "taivas", "ilmaperspektiivi", "ilmaperspektiivi-lapaisy" };
+            var koot = new[] { 256 * 64 * 8, 96 * 64 * 96 * 8, 32 * 32 * 96 * 8, 32 * 32 * 96 * 8 };
             var tavut = new byte[nimet.Length][]; int valmiit = 0;
+            // LEVYVÄLIMUISTI (Natiivisepän ehto junaan 174): versioitu polku (aerosoli-v1 muuttumaton), ladataan vain kerran per laite.
+            string kansio = System.IO.Path.Combine(Application.persistentDataPath, "ilmakeha", "aerosoli-v1", avain);
             for (int i = 0; i < nimet.Length; i++)
             {
                 int n = i;
+                string tiedosto = System.IO.Path.Combine(kansio, nimet[n] + ".bytes");
+                try { if (System.IO.File.Exists(tiedosto) && new System.IO.FileInfo(tiedosto).Length == koot[n]) tavut[n] = System.IO.File.ReadAllBytes(tiedosto); }
+                catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: ilmakehä: välimuisti {nimet[n]}: {e.Message}"); }
+                if (tavut[n] != null) { if (++valmiit == nimet.Length) Valmis(); continue; }
                 var r = UnityEngine.Networking.UnityWebRequest.Get(AerosoliJuuri + avain + "/" + nimet[n] + ".bytes");
                 r.timeout = 30;
                 r.SendWebRequest().completed += _ =>
                 {
-                    if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success) tavut[n] = r.downloadHandler.data;
+                    if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                    {
+                        tavut[n] = r.downloadHandler.data;
+                        if (tavut[n]?.Length == koot[n])
+                            try { System.IO.Directory.CreateDirectory(kansio); System.IO.File.WriteAllBytes(tiedosto, tavut[n]); }
+                            catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: ilmakehä: välimuistiin {nimet[n]}: {e.Message}"); }
+                    }
                     r.Dispose();
-                    if (++valmiit < nimet.Length || aerosoliPyydetty != avain) return;
+                    if (++valmiit == nimet.Length) Valmis();
+                };
+            }
+            void Valmis()
+            {
+                    if (aerosoliPyydetty != avain) return;
                     if (tavut[0]?.Length != 256 * 64 * 8 || tavut[1]?.Length != 96 * 64 * 96 * 8 || tavut[2]?.Length != 32 * 32 * 96 * 8 || tavut[3]?.Length != 32 * 32 * 96 * 8)
                     { Debug.Log($"MATKAKIRJA kaupunki: ilmakehä: mitattu utu {avain} ei latautunut, Resourcesin taulukot"); aerosoliPyydetty = null; return; }
                     PoistaAerosoli();
@@ -67,7 +85,6 @@ namespace Matkakirja.Natiivi
                     aTaivas = Tee3D(tavut[1], 96, 64, 96, "taivas:" + avain); aAp = Tee3D(tavut[2], 32, 32, 96, "ap:" + avain); aApLapaisy = Tee3D(tavut[3], 32, 32, 96, "ap-lapaisy:" + avain);
                     aerosoliAvain = avain; AsetaTaulukot();
                     Debug.Log($"MATKAKIRJA kaupunki: ilmakehä: mitattu utu {avain} (AERONET), kaukoutu {KaukoUtuMitattu:F1}, ilmaperspektiivi {ApVoimaMitattu:F1}");
-                };
             }
         }
 
