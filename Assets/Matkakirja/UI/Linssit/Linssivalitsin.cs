@@ -387,7 +387,9 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
         /// <summary>KESKENERÄISET-osio auki (oletuksena kiinni; istunnon ajan, testikomento ui pilleri kesken).</summary>
         public static bool KeskenAuki;
-        static string EsikatselunKuva(LinssiTiedot t) => !string.IsNullOrEmpty(t.Havainnekuva) ? t.Havainnekuva
+        // Fotorealistinen iso varustekuva voittaa linssin oman katalogikuvan (omistaja 9.10.2026, Raamattu #4280).
+        static string EsikatselunKuva(LinssiTiedot t) => FotoIsot.TryGetValue(t.Id, out var f) ? f
+            : !string.IsNullOrEmpty(t.Havainnekuva) ? t.Havainnekuva
             : KatalogiKuvat.TryGetValue(t.Id, out var k) ? k : Matkalaukku.VarusteKuva(t.Id);
 
         /// <summary>
@@ -405,19 +407,41 @@ namespace Matkakirja.Natiivi
         };
         const string KatalogiJuuri = "https://media.matkakirja.app/linssikatalogi/";
 
+        /// <summary>Alustetaan ennen FotoMinit/FotoIsot-tauluja (staattiset kentät tekstijärjestyksessä). Codexin 10 linssin fotot (linssikatalogi/&lt;id&gt;-foto-mini|iso.jpg, Sisältökirjurin avainkartta).</summary>
+        static readonly string[] CodexFotot = { "ajattelijat", "ihmisen-matka", "keksinnot", "maatiedot", "opas", "radio", "satelliitti", "topografia", "vertailu", "vesistot" };
+
         /// <summary>
         /// VARUSTEKUVAT FOTOREALISTISINA (omistaja 9.10.2026 klo 12.0x, Raamattu #4280; Sisältökirjurin avainkartta
         /// varustekuvat-foto-kartta-20261009.json): minikuva listan rivikuvakkeeksi ja laukun ruutuun, iso kuva esikatseluun
-        /// (KatalogiKuvat). Uusinnat tulevat uusilla -v2-avaimilla; tahdet, yokartta ja poikkileikkaus odottavat v2-minejä.
+        /// (FotoIsot). Uusinnat uusilla -v2-avaimilla (CDN), Codexin 10 linssiä linssikatalogi/<id>-foto-mini.jpg.
         /// </summary>
-        internal static readonly Dictionary<string, string> FotoMinit = new Dictionary<string, string>
+        internal static readonly Dictionary<string, string> FotoMinit = Taydenna(new Dictionary<string, string>
         {
             ["ihmisen-matka-2"] = FotoMiniJuuri + "varuste-ihmisen-matka-2-foto.jpg", ["lentopeli"] = FotoMiniJuuri + "varuste-lentopeli-foto.jpg",
             ["lontoo"] = FotoMiniJuuri + "varuste-lontoo-foto.jpg", ["mylly"] = FotoMiniJuuri + "varuste-mylly-foto.jpg",
             ["maapallon-vuosi"] = FotoMiniJuuri + "varuste-maapallon-vuosi-foto.jpg", ["tavli"] = FotoMiniJuuri + "varuste-tavli-foto.jpg",
             ["isoisa-1873"] = FotoMiniJuuri + "varuste-isoisa-1873-foto.jpg",
-        };
+            // Uusinnat (-v2: CDN, vanha jää) ja Codexin toimitus (Sisältökirjuri tarkisti).
+            ["tahdet"] = KatalogiJuuri + "tahdet-foto-mini-v2.jpg", ["yokartta"] = KatalogiJuuri + "yokartta-foto-mini-v2.jpg",
+            ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-mini-v2.jpg",
+        }, "-foto-mini.jpg");
         const string FotoMiniJuuri = "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/";
+
+        /// <summary>Iso fotorealistinen varustekuva esikatseluun (ennen aktivointia); voittaa katalogikuvan ja linssin oman havainnekuvan.</summary>
+        internal static readonly Dictionary<string, string> FotoIsot = Taydenna(new Dictionary<string, string>
+        {
+            ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
+            ["tavli"] = KatalogiJuuri + "tavli-havainne-v2.jpg", ["yokartta"] = KatalogiJuuri + "yokartta-havainne-v2.jpg",
+            ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-iso-v2.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-foto-iso-v2.jpg",
+            ["mylly"] = KatalogiJuuri + "mylly-foto-iso-v2.jpg", ["tahdet"] = KatalogiJuuri + "tahdet-foto-iso-v2.jpg",
+            ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-iso-v2.jpg", ["isoisa-1873"] = KatalogiJuuri + "isoisa-1873-foto-iso.jpg",
+        }, "-foto-iso.jpg");
+
+        static Dictionary<string, string> Taydenna(Dictionary<string, string> d, string paate)
+        {
+            foreach (var id in CodexFotot) d[id] = KatalogiJuuri + id + paate;
+            return d;
+        }
 
         /// <summary>Rivin pieni kuva: fotorealistinen minikuva, jos sellainen on, muuten sama kuin esikatselussa.</summary>
         internal static string RivinKuva(string id, string iso) => id != null && FotoMinit.TryGetValue(id, out var m) ? m : iso;

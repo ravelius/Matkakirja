@@ -96,7 +96,7 @@ namespace Matkakirja.Natiivi
                 {
                     // Omistaja 4.10. 22.5x: "Mylly saisi näkyä yhtenä pelinä valikossa. Ei kolmena eri lautana" → yksi rivi per peli;
                     // lauta valitaan valintakortin lautavalinnasta (kehittäjällä kaikki laudat auki siellä).
-                    AarreRivi("peli:" + m.Id, m.Nimi, KatalogiKuvat.TryGetValue(m.Id, out var kk) ? kk : null, string.Join(" · ", laudat.Select(l => l.Nimi)),
+                    AarreRivi("peli:" + m.Id, m.Nimi, FotoIsot.TryGetValue(m.Id, out var kk) || KatalogiKuvat.TryGetValue(m.Id, out kk) ? kk : null, string.Join(" · ", laudat.Select(l => l.Nimi)),
                         () => { Sulje(); avaa(m.Id); }, pelit, Ikonit.Viiva.TryGetValue(m.Id, out var pk) ? pk : Ikonit.Viiva["noppa"], RivinKuva(m.Id, kk));
                 }
             }
@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
                     var avaa = v.Avaa;
                     AarreRivi("peli:" + v.Id, Kieli.T(v.Nimi), v.KuvaUrl, Kieli.T(v.Selite), () => { Sulje(); Debug.Log("MATKAKIRJA ui pelit: keskeneräinen " + v.Id); avaa(); }, pelit, Ikonit.Viiva[v.Ikoni]);
                 }
-                AarreRivi("peli:lentopeli", Kieli.T("ui.pelit.lentopeli"), KatalogiKuvat["lentopeli"], null, AloitaLentopeli, pelit, Ikonit.Viiva["lentopeli"],
+                AarreRivi("peli:lentopeli", Kieli.T("ui.pelit.lentopeli"), FotoIsot["lentopeli"], null, AloitaLentopeli, pelit, Ikonit.Viiva["lentopeli"],
                     RivinKuva("lentopeli", null));
             }
             if (lauta.Count == 0 && !Asetukset.Kehittaja)
