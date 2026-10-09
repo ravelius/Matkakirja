@@ -14,7 +14,10 @@ namespace Matkakirja.Natiivi
     public sealed class SeikkailuAanet : MonoBehaviour
     {
         public static SeikkailuAanet Aktiivinen { get; private set; }
-        sealed class Aani { public string Tunnus, Polku; public bool Silmukka, Pakattu; public AudioClip Klippi; public bool Haussa; }
+        sealed class Aani { public string Tunnus, Polku; public bool Silmukka, Pakattu; public double KestoS; public AudioClip Klippi; public bool Haussa; }
+        /// <summary>Silmukka vähintään tämän pituinen (manifestin kesto_s) → pakattuna muistiin (PT 9.10., juna 174: Olavinlinnan sää ja taustat
+        /// PCM:nä ~95 Mt). SaumatonSilmukka jatkaa pakatun silmukan hakuttomasti LAME-tagin mukaan. Ilman kesto_s:ää PCM kuten ennen.</summary>
+        public const double PakattuSilmukkaS = 10;
         readonly Dictionary<string, Aani> aanet = new Dictionary<string, Aani>(StringComparer.Ordinal);
         readonly Dictionary<string, AudioSource> silmukat = new Dictionary<string, AudioSource>(StringComparer.Ordinal);
         string juuri; Action<string> kirjaa;
@@ -64,7 +67,7 @@ namespace Matkakirja.Natiivi
                 string polku = MiniJson.Teksti(o, "aani");
                 if (!string.IsNullOrEmpty(t) && !aanet.ContainsKey(t) && !string.IsNullOrEmpty(polku) && (vain == null || vain.Contains(t)))
                 {
-                    aanet[t] = new Aani { Tunnus = t, Polku = pohja + polku, Silmukka = MiniJson.Kentta(o, "silmukka") is bool b && b, Pakattu = pankki };
+                    aanet[t] = new Aani { Tunnus = t, Polku = pohja + polku, Silmukka = MiniJson.Kentta(o, "silmukka") is bool b && b, Pakattu = pankki, KestoS = MiniJson.Luku(o, "kesto_s") ?? 0 };
                     if (!pankki) Rekisteroi(Ryhma(t), t, "Tehoste:" + t);
                 }
             }
@@ -86,7 +89,7 @@ namespace Matkakirja.Natiivi
             if (a.Klippi != null || a.Haussa || string.IsNullOrEmpty(a.Polku)) yield break;
             a.Haussa = true;
             using var p = UnityWebRequestMultimedia.GetAudioClip(a.Polku, AudioType.MPEG);
-            var dh = (DownloadHandlerAudioClip)p.downloadHandler; dh.streamAudio = false; dh.compressed = a.Pakattu;
+            var dh = (DownloadHandlerAudioClip)p.downloadHandler; dh.streamAudio = false; dh.compressed = a.Pakattu || a.Silmukka && a.KestoS >= PakattuSilmukkaS;
             yield return p.SendWebRequest();
             var c = p.result == UnityWebRequest.Result.Success ? DownloadHandlerAudioClip.GetContent(p) : null;
             if (c != null) c.name = "Tehoste:" + a.Tunnus;
