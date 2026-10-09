@@ -47,6 +47,18 @@ namespace Matkakirja.Natiivi
         public static bool Paalla = true;
         /// <summary>Katseen nosto korista (°, KoriKatseVeto): kori ja köydet kääntyvät saman verran alas, eli pysyvät kehyksen asennossa.</summary>
         public static float KatseYlos;
+        /// <summary>Kompassin merkki (OpasSovitin): suunta seuraavaan kohteeseen (°, 0 = pohjoinen, myötäpäivään), null = ei kohdetta.</summary>
+        public static double? SeuraavaSuunta;
+        // KORIN KOMPASSI (omistaja 9.10. "teetä", PT 00.45; Ydin KoriKompassi): messinkinen nestekompassi korin reunalla oikealla.
+        // Runko keinuu korin mukana, kardaani kompensoi keinunnan, ruusu osoittaa pohjoiseen ja merkki seuraavaan kohteeseen.
+        // Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_runko, _kardaani, _ruusu, _merkki, _lasi) korvaa väliaikaisen mallin.
+        readonly KoriKompassi kompassi = new KoriKompassi();
+        Transform kompassiJuuri, kompassiKardaani, kompassiRuusu, kompassiMerkki;
+        static readonly Vector3 KompassiPaikka = new Vector3(0.30f, 1.122f, 0.84f);   // korin reunalla oikealla (mallin koordinaatit)
+        public const string KompassiOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kompassi_nakyma.glb";
+        static GlbMalli kompassiMalli; static bool kompassiHaussa;
+        static readonly System.Collections.Generic.Dictionary<int, Texture2D> kompassiTekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
+        bool kompassiGlb;
         /// <summary>Äänisarja (A/B): "eleven" tai "kirjasto".</summary>
         public static string AaniSarja = "eleven";
         // Omistaja 18.5x: äänet kuuluviin mutta säästeliäästi (TF 161: 0,55 jäi kaupungin äänimaiseman alle).
@@ -151,6 +163,7 @@ namespace Matkakirja.Natiivi
             foreach (var m in new[] { punos, nahka, koysi }) if (m != null) Object.Destroy(m);
             KytkeAanimaisema(false);
             VasenKoysiNorm = default;
+            kompassiJuuri = null; kompassiKardaani = null; kompassiRuusu = null; kompassiMerkki = null; kompassiGlb = false;
             malliJuuri = null; malliKori = null; kupuJuuri = null; poltinPiste = null; kupuLiekki = null;
             Shader.SetGlobalVector(IdPoltinP, Vector4.zero); malliKoydet.Clear(); malliKoysiAlku.Clear(); koysiVerkot.Clear();
             if (liekkiMat != null) Object.Destroy(liekkiMat);
@@ -264,7 +277,15 @@ namespace Matkakirja.Natiivi
             var ohjain = Matkakirja.Natiivi.LinssiOhjain.Instanssi;
             if (kupuMalli == null && !kupuHaussa && ohjain != null)
                 ohjain.StartCoroutine(HaeGlb("kupu_nakyma.glb", "pallokupu-v1.glb", KupuOsoite, h => kupuHaussa = h, m => kupuMalli = m));
-            if (malli != null) { if (malliJuuri == null) RakennaMalli(); if (kupuMalli != null && kupuJuuri == null) RakennaKupu(); return; }
+            if (kompassiMalli == null && !kompassiHaussa && ohjain != null)
+                ohjain.StartCoroutine(HaeGlb("kompassi_nakyma.glb", "pallokompassi-v1.glb", KompassiOsoite, h => kompassiHaussa = h, m => kompassiMalli = m));
+            if (malli != null)
+            {
+                if (malliJuuri == null) RakennaMalli();
+                if (kupuMalli != null && kupuJuuri == null) RakennaKupu();
+                if (kompassiMalli != null && !kompassiGlb && malliJuuri != null) RakennaKompassi(malliJuuri);
+                return;
+            }
             if (!malliHaussa && ohjain != null) ohjain.StartCoroutine(HaeGlb("kori_nakyma.glb", "pallokori-v1.glb", MalliOsoite, h => malliHaussa = h, m => malli = m));
             float h = EtaisyysM * Mathf.Tan(fov * 0.5f * Mathf.Deg2Rad), w = h * aspect;
             float yla = -h + 2 * h * ReunaOsuus, nahkaK = 0.05f * h;
@@ -322,6 +343,65 @@ namespace Matkakirja.Natiivi
                 else if (nimi.StartsWith("koysi")) { malliKoydet.Add(solmut[i]); malliKoysiAlku.Add(solmut[i].localRotation); }
             }
             RakennaKoysiVerkot();
+            RakennaKompassi(malliJuuri);
+        }
+
+        /// <summary>Kompassi korin reunalle: Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_kardaani → kompassi_ruusu,
+        /// kompassi_merkki, lasi läpikuultavana), tai väliaikainen messinkimalli, kunnes GLB on ladattu.</summary>
+        void RakennaKompassi(Transform v)
+        {
+            if (kompassiJuuri != null) Object.Destroy(kompassiJuuri.gameObject);
+            if (kompassiMalli != null)
+            {
+                kompassiJuuri = new GameObject("kompassi") { layer = Kerros }.transform;
+                kompassiJuuri.SetParent(v, false); kompassiJuuri.localPosition = KompassiPaikka;
+                var solmut = Solmut(kompassiMalli, kompassiJuuri, kompassiTekstuurit);
+                kompassiKardaani = kompassiRuusu = kompassiMerkki = null;
+                for (int i = 0; i < solmut.Length; i++)
+                    switch (kompassiMalli.Solmut[i].Nimi)
+                    {
+                        case "kompassi_kardaani": kompassiKardaani = solmut[i]; break;
+                        case "kompassi_ruusu": kompassiRuusu = solmut[i]; break;
+                        case "kompassi_merkki": kompassiMerkki = solmut[i]; break;
+                    }
+                kompassiGlb = kompassiKardaani != null && kompassiRuusu != null && kompassiMerkki != null;
+                if (kompassiGlb) { Debug.Log("MATKAKIRJA kaupunki: kori: kompassi_nakyma.glb käytössä"); return; }
+                Object.Destroy(kompassiJuuri.gameObject);   // solmut puuttuvat → väliaikainen malli
+            }
+            var sh = Shader.Find("Matkakirja/Linssit/PalloKori");
+            Material M(Color c) => Materiaali(sh, c, 0, Vector4.one);
+            Transform Osa(string nimi, Transform vh, PrimitiveType t, Vector3 p, Vector3 koko, Material m)
+            {
+                var g = GameObject.CreatePrimitive(t); Object.Destroy(g.GetComponent<Collider>());
+                g.name = nimi; g.layer = Kerros; g.transform.SetParent(vh, false); g.transform.localPosition = p; g.transform.localScale = koko;
+                var rr = g.GetComponent<MeshRenderer>(); rr.sharedMaterial = m; rr.shadowCastingMode = ShadowCastingMode.Off; rr.receiveShadows = false;
+                return g.transform;
+            }
+            Transform Tyhja(string nimi, Transform vh) { var g = new GameObject(nimi) { layer = Kerros }; g.transform.SetParent(vh, false); return g.transform; }
+            var messinki = M(new Color(0.72f, 0.55f, 0.24f)); var kerma = M(new Color(0.93f, 0.89f, 0.78f)); var pun = M(new Color(0.65f, 0.12f, 0.1f)); var tumma = M(new Color(0.15f, 0.13f, 0.1f));
+            kompassiJuuri = Tyhja("kompassi", v); kompassiJuuri.localPosition = KompassiPaikka;
+            Osa("kompassi_runko", kompassiJuuri, PrimitiveType.Cylinder, new Vector3(0, 0.012f, 0), new Vector3(0.11f, 0.012f, 0.11f), messinki);
+            kompassiKardaani = Tyhja("kompassi_kardaani", kompassiJuuri); kompassiKardaani.localPosition = new Vector3(0, 0.03f, 0);
+            kompassiRuusu = Tyhja("kompassi_ruusu", kompassiKardaani);
+            Osa("ruusu", kompassiRuusu, PrimitiveType.Cylinder, Vector3.zero, new Vector3(0.09f, 0.002f, 0.09f), kerma);
+            Osa("pohjoinen", kompassiRuusu, PrimitiveType.Cube, new Vector3(0, 0.003f, 0.025f), new Vector3(0.008f, 0.002f, 0.04f), pun);
+            Osa("etela", kompassiRuusu, PrimitiveType.Cube, new Vector3(0, 0.003f, -0.025f), new Vector3(0.006f, 0.002f, 0.035f), tumma);
+            kompassiMerkki = Tyhja("kompassi_merkki", kompassiKardaani);
+            Osa("merkki", kompassiMerkki, PrimitiveType.Cube, new Vector3(0, 0.006f, 0.05f), new Vector3(0.012f, 0.01f, 0.008f), messinki);
+        }
+
+        void PaivitaKompassi(float dt)
+        {
+            if (kompassiJuuri == null || perus == null) return;
+            var f = perus.transform.forward; f.y = 0;
+            double suuntima = f.sqrMagnitude > 1e-6f ? Mathf.Atan2(f.x, f.z) * Mathf.Rad2Deg : 0;
+            kompassi.Paivita(dt, suuntima, SeuraavaSuunta, liike.Nyokkays, -liike.Kallistus);
+            kompassiJuuri.localRotation = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);   // runko korin mukana
+            kompassiKardaani.localRotation = Quaternion.Euler((float)kompassi.KardaaniX, 0, (float)kompassi.KardaaniZ);
+            kompassiRuusu.localRotation = Quaternion.Euler(0, (float)kompassi.Ruusu, 0);
+            kompassiMerkki.localRotation = Quaternion.Euler(0, (float)kompassi.Merkki, 0);
+            bool m = kompassi.MerkkiNakyy > 0.05;
+            if (kompassiMerkki.gameObject.activeSelf != m) kompassiMerkki.gameObject.SetActive(m);
         }
 
         /// <summary>GLB:n solmut ja osat juuren alle (glTF-hierarkia, TRS).</summary>
@@ -451,6 +531,16 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(v, false);
             go.AddComponent<MeshFilter>().sharedMesh = mesh;
             var r = go.AddComponent<MeshRenderer>(); r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
+            var pintaNimi = osa.Pinta ?? "";
+            if (pintaNimi.Contains("lasi"))
+            {
+                // Kompassin lasikupu (alphaMode BLEND, alfa ~0,16): läpikuultava, ei valaistusta.
+                var sp = Shader.Find("Sprites/Default");
+                var lm = new Material(sp != null ? sp : Shader.Find("Universal Render Pipeline/Unlit")) { name = "Kompassin lasi", renderQueue = 3000 };
+                float al = osa.Vari != null && osa.Vari.Length >= 4 ? osa.Vari[3] : 0.16f;
+                lm.color = new Color(0.9f, 0.93f, 0.96f, Mathf.Clamp(al, 0.08f, 0.35f));
+                r.sharedMaterial = lm; return;
+            }
             var m = Materiaali(Shader.Find("Matkakirja/Linssit/PalloKori"), Color.white, 3, new Vector4(1, 1, 0, 0));
             // Kupu (8.10.): kaksipuolinen kangas ja nauhat (Cull Off, takapinnan normaali käännetään varjostimessa), auringon läpikuulto.
             if (osa.KaksiPuolinen) m.SetFloat("_Cull", (float)CullMode.Off);
@@ -784,6 +874,7 @@ namespace Matkakirja.Natiivi
             float aEteen = Vector3.Dot(kiihtyvyys, eteen), aOikea = Vector3.Dot(kiihtyvyys, oikea);
             liike.Paivita(dt, aEteen, aOikea);
             PaivitaKoydet(dt, aOikea, aEteen);
+            PaivitaKompassi(dt);
             Aanet(new Vector2(aEteen, aOikea).magnitude, v.y);
             var kKori = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             var kKoysi = Quaternion.Euler((float)liike.KoysiNyokkays, 0, -(float)liike.KoysiKallistus);

@@ -377,6 +377,11 @@ namespace Matkakirja.Natiivi
             // (aloitusvalikko → Pariisi, ei kaupunkitilaa) eikä nähnyt koria eikä köysiä.
             kori.Kayta(nakymaAuki, kaupunki.Kamera);
             koriKatse.Paivita(kori.Nakyy, kaupunki.Kamera, kierto);
+            // Kompassin merkki: lennolla kohti määränpäätä, pysähdyksellä kohti seuraavaa kohdetta (katsepisteestä).
+            {
+                var mk = silmukka.Vaihe == OpasVaihe.Lentaa ? silmukka.Nykyinen : silmukka.Seuraava; var asento = silmukka.Asento;
+                PalloKori.SeuraavaSuunta = mk != null && !mk.Kysymys ? OpasSilmukka.Suunta(asento.Lat, asento.Lon, mk.Lat, mk.Lon) : (double?)null;
+            }
             IlmoitaKierros();
             // Esilataus latauskuvan aikana: esityksen ensimmäinen kohde heti, kun kierroslista on haettu (omistaja 12.5x).
             // Linssireitti (omistaja 8.10. ~09.0x): sama esilataus siirtoruudun aikana (palkki kattaa myös 1. kohteen), ilman avausnäkymän kohdistusta.
@@ -474,14 +479,30 @@ namespace Matkakirja.Natiivi
             }
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %"
                 + (silmukka.Vaihe == OpasVaihe.Lentaa && silmukka.LahtoOdottiS > 0 ? $", lähtö odotti laattoja {silmukka.LahtoOdottiS:F1} s" : ""));
-            if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
+            if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) { OpasKorostusKuva.Piilota(); KohdeKorostus.Piilota(); }
             y.Kuvaa(silmukka.Asento);
             PaivitaKameraTila();
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
             KaupunkiYovalot.KaupunkiId = NykyinenKaupunkiId;
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
             // Kohde vasta korostuksen syttyessä (video4 14,3–16,2 s: varjostin muutti kohdealuetta nollavoimallakin lennon alussa).
-            KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
+            KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys && silmukka.KorostusOsuus > 0.001 && !KohdeKorostus.Kaytossa ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
+            KohdeKorostus.Paivita(kaupunki.Georef);
+            // Yövalot v6 (kehityskaupungit): kierroksen muut kohteet valaistuina, maa omasta korkeusmallista (päivitys kerran sekunnissa).
+            if (Time.unscaledTime - maamerkitAika > 1f)
+            {
+                maamerkitAika = Time.unscaledTime;
+                KaupunkiYovalot.Maamerkit.Clear();
+                string kid = NykyinenKaupunkiId;
+                if (kid != null && Kehityskaupungit.On(kid) && (kierrosKohteet ?? kohteet) is List<OpasTaky> mk)
+                    foreach (var t in mk)
+                    {
+                        if (yk != null && Math.Abs(t.Lat - yk.Lat) < 1e-5 && Math.Abs(t.Lon - yk.Lon) < 1e-5) continue;   // nykyinen kohde: oma valo
+                        double h = MaaPisteessa(t.Lat, t.Lon);   // kehyksen maa (kehän näytteistä), jos kohteessa on käyty
+                        if (double.IsNaN(h)) h = OmaMaaKehalla(t.Lat, t.Lon);
+                        if (!double.IsNaN(h)) KaupunkiYovalot.Maamerkit.Add((t.Lat, t.Lon, h, 60));
+                    }
+            }
             // Kohdevalo ja rengas häivyttyvät silmukan korostusosuuden mukaan (sammuvat ennen lähtöä, syttyvät saapumisesta).
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = (float)silmukka.KorostusOsuus;
             // A3 lähitarkkuus: pysähdyksellä (ei lento eikä siirto) kohteen ympärille tarkemmat laatat, kun valinta on tarkentunut.
@@ -512,6 +533,7 @@ namespace Matkakirja.Natiivi
         }
 
         readonly Kuvakulma[] reittiNakymat = new Kuvakulma[OpasSilmukka.ReittiNaytteet.Length];
+        float maamerkitAika = -9f;
         double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
         double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
         static string PisteAvain(double lat, double lon) => lat.ToString("F4") + "," + lon.ToString("F4");
@@ -2340,6 +2362,19 @@ namespace Matkakirja.Natiivi
             return id != null && korkeusMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
         }
 
+        /// <summary>Maa kohteen ympäriltä: pienin pinta keskeltä ja 8 pisteestä 70 m:n kehältä (tornin huippu ei ole maa; Eiffel).</summary>
+        public static double OmaMaaKehalla(double lat, double lon)
+        {
+            double h = OmaMaa(lat, lon);
+            if (double.IsNaN(h)) return h;
+            for (int i = 0; i < 8; i++)
+            {
+                double a = i * Math.PI / 4, la = lat + 70 * Math.Cos(a) / 111132.0, lo = lon + 70 * Math.Sin(a) / (111320.0 * Math.Cos(lat * Math.PI / 180));
+                double hk = OmaMaa(la, lo); if (!double.IsNaN(hk)) h = Math.Min(h, hk);
+            }
+            return h;
+        }
+
         static string KorkeusId(double lat, double lon)
         {
             string paras = null; double lahin = double.MaxValue;
@@ -2558,7 +2593,11 @@ namespace Matkakirja.Natiivi
                 LatausKuvaVaihtui?.Invoke(latausKuva);
             }
             o.Kirjaa($"opas: kuvat {k.Kuvat?.Length ?? 0} (tekijällä {System.Linq.Enumerable.Count(k.Kuvat ?? Array.Empty<OpasKuva>(), x => !string.IsNullOrEmpty(x.Tekija))}), hylätty yhteensä {OpasKuva.Hylatyt}");
-            OpasKorostusKuva.Nayta(k, silmukka?.NykyinenKehys?.MaaM ?? (MaaKorkeus(k) is double mk && !double.IsNaN(mk) ? mk : 45), kaupunki.Georef);   // Siirtoseppä: korostus (juna 145)
+            {
+                double maaK = silmukka?.NykyinenKehys?.MaaM ?? (MaaKorkeus(k) is double mk && !double.IsNaN(mk) ? mk : 45);
+                // Muotoa seuraava korostus (omistaja 9.10., juna 170), jos kohteella on pohjapiirros; muuten Siirtosepän rengas (juna 145).
+                if (!KohdeKorostus.Nayta(NykyinenKaupunkiId, k, maaK)) OpasKorostusKuva.Nayta(k, maaK, kaupunki.Georef);
+            }
         }
 
         /// <summary>Kappale tai kysymys ääneen; ilman ääntä (testi, Kertoja pois, lataus kesken) teksti ruudulle kestoksi.</summary>
@@ -2762,7 +2801,7 @@ namespace Matkakirja.Natiivi
         {
             YksPois(); kortti?.Sulje(); kortti = null; tekstiAvasiChatin = false; Nosto?.Piilota();
             luotain?.Dispose(); luotain = null;
-            OpasKorostusKuva.Piilota(true);
+            OpasKorostusKuva.Piilota(true); KohdeKorostus.Piilota(true);
             KaupunkiYovalot.Kohde = null;
             KaupunkiYovalot.KohdeOsuus = OpasKorostusKuva.Osuus = 1f;
             saaKerros?.Sulje(); saaKerros = null; KaupunkiKuva.Saa = default; KaupunkiKuva.Salama = 0;

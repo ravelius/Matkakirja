@@ -7,6 +7,8 @@
 // KEHITYSKAUPUNGIT (omistaja 20.4x, PT 21.58): elävä kaupunki vain Kehityskaupungit-listan kaupungeissa (Tukholma, Pariisi).
 // MUUT PALLOT (B3, kehityskaupungeissa, myös ilman vesipakettia): Ydin MuutPallot 2/4/6 palloa 300–800 m:n korkeudella
 // georeferenssin maan korkeudesta, ajelehtivat tuulen mukana PallotSadeM:n alueella; piilossa alle PalloLahinM:n päässä kamerasta.
+// KATULIIKENNE (B4, 9.10.): autot pääkaduilla ja raitiovaunut (Ydin KatuLiikenne), kun oma korkeusmalli on muistissa
+// (OpasSovitin.OmaMaa; maa kolmen pisteen pienimmästä, ettei katupuu nosta autoa); oikea kaista kaksisuuntaisilla, päissä piilossa.
 // Näkyvyys: veneet NakyvaM ja parvet ParviNakyvaM kameran ympäriltä. Määrä muistin mukaan (15 / 40 / 100). Krediitti: Krediitti
 // (© OpenStreetMap contributors, ODbL) Lähteet-näkymään. Kytkin: asetukset.json "elava.Paalla" (oletus 1), komento `opas elava 0|1`.
 using System.Collections.Generic;
@@ -30,7 +32,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Näkyvillä olevan paketin krediitti (null = ei elävää kaupunkia).</summary>
         public static string Krediitti { get; private set; }
         public static ElavaKaupunki Nykyinen { get; private set; }
-        public const float NakyvaM = 6000f, ParviNakyvaM = 1500f, PallotSadeM = 3500f, PalloLahinM = 400f;   // PT 22.35: muut pallot vähintään 400 m:n päässä kamerasta
+        public const float NakyvaM = 6000f, ParviNakyvaM = 1500f, PallotSadeM = 3500f, PalloLahinM = 400f, AutoNakyvaM = 2500f, RaitioNakyvaM = 4000f, KaistaM = 1.8f;   // PT 22.35: muut pallot vähintään 400 m:n päässä kamerasta
         /// <summary>Paketit (id, origo): lisätään, kun tyokalut/elava_kaupunki.py on ajettu kaupungille.</summary>
         static readonly (string Id, double Lat, double Lon, double SadeM)[] Paketit = { ("tukholma", 59.3299, 18.07382, 15000), ("pariisi", 48.86122, 2.35092, 15000) };
 
@@ -39,6 +41,9 @@ namespace Matkakirja.Natiivi
         static Mesh lokki, siipiO, siipiV, kyyhky, kSiipiO, kSiipiV;
         static readonly Dictionary<int, Mesh> palloVerkot = new Dictionary<int, Mesh>();
         MuutPallot pallot; Transform[] palloT; float maaM;
+        string katuJson; KatuLiikenne katu; int autoRaja; float katuYritys = -9f; double lat0, lon0;
+        static readonly Dictionary<int, Mesh> autoVerkot = new Dictionary<int, Mesh>(); static Mesh raitioVerkko;
+        readonly List<Transform> autoT = new List<Transform>(), raitioT = new List<Transform>();
 
         VesiLiikenne liikenne;
         sealed class VeneOlio { public Transform T; public ReittiLiike.Kulkija K; public float Vaihe; }
@@ -75,8 +80,10 @@ namespace Matkakirja.Natiivi
             VesiLiikenne l = null;
             var ta = id != null ? Resources.Load<TextAsset>("Elava/elava-" + id) : null;
             if (id != null && ta == null) Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: paketti puuttuu");
+            string kj = null;
             if (ta != null)
             {
+                kj = ta.text;
                 try { l = VesiLiikenne.Lue(ta.text, raja, 20261008); }
                 catch (System.Exception e) { Debug.Log($"MATKAKIRJA kaupunki: elävä {id}: paketti virheellinen ({e.Message})"); }
                 finally { Resources.UnloadAsset(ta); }
@@ -90,6 +97,7 @@ namespace Matkakirja.Natiivi
             ankkuri.rotationEastUpNorth = quaternion.identity;
             var e2 = go.AddComponent<ElavaKaupunki>();
             e2.liikenne = l; e2.kerros = CesiumKaupunki.Kerros; e2.kaupunki = k;
+            e2.katuJson = kj != null && kj.Contains("\"kadut\"") ? kj : null; e2.autoRaja = new[] { 80, 200, 500 }[taso]; e2.lat0 = lat; e2.lon0 = lon;
             // Muiden pallojen korkeus georeferenssin origon korkeudesta (kohteen maa, ei luettu Googlen laatoista tässä).
             e2.maaM = (float)gr.height;
             int siemen = Mathf.Abs((int)(lat * 1000) * 31 + (int)(lon * 1000));
@@ -195,12 +203,67 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdAla, new Vector4((float)k.TaivasAla[0], (float)k.TaivasAla[1], (float)k.TaivasAla[2], 0));
         }
 
+        /// <summary>Maan korkeus paikallisessa ENU:ssa omasta korkeusmallista (NaN = ei muistissa): pienin kolmesta pisteestä.</summary>
+        double Maa(double x, double z)
+        {
+            double cl = System.Math.Cos(lat0 * System.Math.PI / 180), h = double.NaN;
+            foreach (var (dx, dz) in new[] { (0.0, 0.0), (4.0, 0.0), (0.0, 4.0) })
+            {
+                double hh = OpasSovitin.OmaMaa(lat0 + (z + dz) / 111132.0, lon0 + (x + dx) / (111320.0 * cl));
+                if (!double.IsNaN(hh)) h = double.IsNaN(h) ? hh : System.Math.Min(h, hh);
+            }
+            return double.IsNaN(h) ? h : h - (x * x + z * z) / (2 * 6371000.0);
+        }
+
+        void RakennaKatu()
+        {
+            if (katuJson == null || katu != null || Time.unscaledTime - katuYritys < 2f) return;
+            katuYritys = Time.unscaledTime;
+            if (double.IsNaN(OpasSovitin.OmaMaa(lat0, lon0))) return;   // korkeusmalli ei vielä muistissa
+            try { katu = KatuLiikenne.Lue(katuJson, Maa, autoRaja, 20261009); }
+            catch (System.Exception e) { Debug.Log("MATKAKIRJA kaupunki: katuliikenne virhe " + e.Message); katuJson = null; return; }
+            katuJson = null;
+            int i = 0;
+            foreach (var k in katu.Autot.Kulkijat)
+            {
+                int v = (i++ * 7 + 3) % VeneMallit.AutoVarit.Length;
+                if (!autoVerkot.TryGetValue(v, out var m)) autoVerkot[v] = m = Verkko(VeneMallit.Auto(v), "Auto " + v);
+                autoT.Add(Olio("auto", transform, m, kohdeMat).transform);
+            }
+            raitioVerkko ??= Verkko(VeneMallit.Raitiovaunu(), "Raitiovaunu");
+            foreach (var k in katu.Raitiot.Kulkijat) raitioT.Add(Olio("raitiovaunu", transform, raitioVerkko, kohdeMat).transform);
+            Debug.Log($"MATKAKIRJA kaupunki: katuliikenne {katu.Autot.Kulkijat.Count} autoa {katu.Autot.Reitit.Count} kadulla, {katu.Raitiot.Kulkijat.Count} raitiovaunua");
+        }
+
+        void PaivitaKatu(ReittiLiike l, List<Transform> tt, Vector3 c, float nakyva, bool kaistat)
+        {
+            for (int i = 0; i < tt.Count && i < l.Kulkijat.Count; i++)
+            {
+                var k = l.Kulkijat[i];
+                float dx = (float)k.X - c.x, dz = (float)k.Z - c.z;
+                bool nakyy = dx * dx + dz * dz < nakyva * nakyva && !KatuLiikenne.Piilossa(l, k);
+                if (tt[i].gameObject.activeSelf != nakyy) tt[i].gameObject.SetActive(nakyy);
+                if (!nakyy) continue;
+                float h = (float)k.Suuntima * Mathf.Deg2Rad;
+                float siirto = kaistat && !l.Reitit[k.Reitti].Yksisuunta ? KaistaM : 0f;   // oikea kaista
+                tt[i].localPosition = new Vector3((float)k.X + Mathf.Cos(h) * siirto, (float)k.Y, (float)k.Z - Mathf.Sin(h) * siirto);
+                tt[i].localRotation = Quaternion.Euler(0, (float)k.Suuntima, 0);
+            }
+        }
+
         void LateUpdate()
         {
             if (kamera == null || !kamera.isActiveAndEnabled) kamera = Camera.main;
             float dt = Time.deltaTime, t = Time.time;
             AsetaValo();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
+            RakennaKatu();
+            if (katu != null)
+            {
+                katu.Autot.Paivita(dt); katu.Raitiot.Paivita(dt);
+                PaivitaKatu(katu.Autot, autoT, c, AutoNakyvaM, true);
+                PaivitaKatu(katu.Raitiot, raitioT, c, RaitioNakyvaM, false);
+            }
             if (pallot != null)
             {
                 pallot.Paivita(dt);
