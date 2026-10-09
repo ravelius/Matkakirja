@@ -1,21 +1,20 @@
-# Natiivisepän aloitusviesti (5.10.2026 klo 13.0x, BUILD 143; luovutus -20261005-iltapaiva)
+# Natiivisepän aloitusviesti (9.10.2026 klo 23.3x, juna 173 auki; luovutus -20261009-yo)
 
-Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
-/Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus (ensin TILA HETI):
-`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20261005-iltapaiva.md`.
-Muisti: natiiviseppa-tila-20261003, huonesiirtymat-napautuksin, tarkistus-laitteella-aanen-kanssa, juna-avaus-julkaisijan-kuittauksella,
-kaannos-vika-merge-vanha-app, ei-poistoja-oman-tyotilan-ulkopuolelta.
-Päätoimittajan sessio: "Päätoimittaja (Opus, max)". Vertaisille SendMessage NIMELLÄ (ListAgents); tavoittamattomalle
-mcp__ccd_session_mgmt__send_message session id:llä.
+Olet Natiiviseppä (Opus; PT: tämä juurisyy effort MAX, sitten high), Macin käyttäjä koodaus. Checkout
+/Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo /Users/Shared/Claude/proto-3d (junan worktree
+/Users/Shared/Claude/wt/proto-natiiviseppa-j173). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (vain se) ja luovutus KOKONAAN:
+`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20261009-yo.md`.
+Muisti: muistijuna-ipad-ajo-ennen-vie, testaus-vain-automaattiset, ei-shell-c-eika-evalia, sha-vain-git-logista.
+Päätoimittaja: "PÄÄTOIMITTAJA (Opus, max)". Vertaisille SendMessage session id:llä (local_…); 10 viestin rajalla ei kierretä,
+vaan kirjoitetaan docs/raportit/posti-natiiviseppa-<pvm>.md ja pushataan.
 
 ## KÄRKI
-1. BUILD 143 = proto master cc57dde7 (käännös 81ac41ea); TF Julkaisijalla. Master nyt a5a18288 (todistusajo-työkalu).
-2. Datasiirto vaihe 1: natiiviseppa/asetukset 89ba8062 → käännös + todistusajo (skripti proto-3d/lokit/natiiviseppa-skriptit/
-   ajo-asetus.sh) → kuva + ääni Päätoimittajalle → kuittaus → seuraava VIE-ikkuna (12/20).
-3. Juna 144: vain Päätoimittajan suoraan kuittaamat erät.
+1. Junan 173 iPad Pro 13 -jetsamin juurisyy MITTAAMALLA ennen uutta korjausta (luovutuksen "HETI TEHTÄVÄ"): piikin hetki luokittain
+   (Memory Profiler tai 100 ms loki), sama BUILD 172:lla; tarvittaessa puolitushaku kytkimillä. Kerroin 4,25 pois (kaupunki näkyviin).
+   Tulos + suositus PT:lle ennen korjausta. LS1 ajaa laitteella (laite-sha.sh Julkaisijan NYT:llä).
+2. Juna 173 lähtee vasta, kun iPad-ajo on läpi (ei jetsamia, vapaa ≥ 0,5 Gt, kuvapari) → muutosloki (luovutuksessa) Julkaisijalle.
+3. Sitten juna 174 (jono luovutuksessa) ja Unity 6.7 -iPad-ABAB.
 
 ## SÄÄNNÖT
-- Viestit Päätoimittajalle vain valmis erä / jumi / kysymys (≤ 8 riviä).
-- Juna/käännös/simulaattori/iPad vain Julkaisijan NYT:llä; jaetun infran muutokset omistajan kortilla. Ei latauksia ilman lupaa.
-- Itsetarkistus pelissä: oikeat napautukset, ääniraita äänet päällä + positiivinen verrokki. Agentit vain Opus/Sonnet.
-- Aikaleimat date-komennolla. Kontekstin 70 %:ssa luovutus.
+- Viestit PT:lle vain valmis erä / jumi / kysymys (≤ 8 riviä); jokaiseen runkoriviin "lisää muistia: kyllä/ei".
+- Juna/käännös/simulaattori/iPad vain Julkaisijan NYT:llä. Agentit vain Opus/Sonnet. Aikaleimat date-komennolla. 70 %:ssa luovutus.
