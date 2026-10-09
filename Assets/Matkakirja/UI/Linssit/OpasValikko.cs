@@ -275,6 +275,8 @@ namespace Matkakirja.Natiivi
             ryhmaVasen = Ohjausnappi.Ryhma(Juuri);
             ryhmaVasen.AddToClassList("mk-ohjausryhma--vasen");
             ryhmaVasen.style.display = DisplayStyle.None;
+            // Kartan "© OpenStreetMap" -maininnan napautus avaa ☰ › Lähteet (omistaja 9.10. 09.5x, KrediititTiivis).
+            KrediititTiivis.AvaaLahteet = () => { Avaa(Nakyma.Lahteet); };
             LueSaatila();
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
@@ -1816,6 +1818,9 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Oma vesipinta (LS2: OSM, ESA WorldCover) kartan ruudulta tänne (omistaja 9.10. 09.5x: ruudulla vain © OpenStreetMap).
+                    string vesi = KaupunkiVesi.KrediittiNyt;
+                    if (!string.IsNullOrWhiteSpace(vesi)) Kirjasimet.Aseta(Rakenne.Teksti(vesi.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     // Omat 3D-mallit (Päätoimittaja 9.10.2026: Concorde, Riddarholmen, Notre-Dame, Giza): mallit.json:n kohdekohtaiset
                     // tekijärivit (LS2 0bf2ed7b2: CesiumOmatMallit.Lahderivit; tyhjä, kunnes json on saapunut).
                     foreach (var m in Matkakirja.Linssit.CesiumOmatMallit.Lahderivit)
