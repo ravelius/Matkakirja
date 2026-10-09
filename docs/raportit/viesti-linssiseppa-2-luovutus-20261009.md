@@ -8,6 +8,8 @@ Testit: `Linssit-testit/kaanna.sh`, `tyokalut/tarkista.sh` (virheitä 0). Kään
 ## TILA 13.3x (iltapäivä)
 - omavalo-172 ja laivat-171 ovat junassa 172 (Natiivisepän juna-172 sisältää ne). Tarvearvio on PR #4283 (worktree wt/linssiseppa2-tarvearvio, poisto mergen jälkeen).
 - Omistajan kuvat: lokit/linssiseppa2-omistaja2-20261009/omistajalle/ (ND v5c + prefektuuri v1, KL v1.8; app 172c = 3d42614c) ovat PT:llä.
+- PT 13.4x: junan 172 mukana osoitin EI vaihdu (uusin-2 pysyy v6:ssa, v8 ämpärissä); vaihto vain PT:n erillisellä päätöksellä.
+- Kuvauusinta odottaa LR:n KL-korjausta: scratchpad omistaja3.sh (VIENTI=vientiN), ND lähi + ND 150 m (länsijulkisivu) + ND yleis + KL lähi + KL yleis.
 - SEURAAVA: omat mallit v9 = v8 + ND v5c + KL v1.8 + prefektuuri v1, ILMAN vasamuseet (PT: Googlen Vasa parempi). Tehdään VASTA PT:n luvalla
   (ND/KL-tarkistus kesken). Putki: sijainnit.json sisältää prefektuurin (varmuus sijainnit-ennen-prefektuuri.json); työkalu ajetaan proto-päächeckoutista
   (korkeus-worktree poistettu): python3 -I tyokalut/omat_mallit_tileset.py <putki> <putki>/vientiN. Uusin vienti24 (vielä Vasan kanssa).
