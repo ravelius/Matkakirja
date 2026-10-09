@@ -2005,6 +2005,8 @@ namespace Matkakirja.Natiivi
             if (mita == "historia")
             {
                 if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
+                // "poikki historia saari 0|1" (arvio 10 virhe 1, koe): tyhjän saaren maa näkyy linnan alla koko historian ajan.
+                if (arvo == "saari") { SeikkailuHistoria.SaariAlla = osat.Length > 3 && osat[3] == "1"; o.Kirjaa("poikki: historia saari " + (SeikkailuHistoria.SaariAlla ? "alla" : "vain alussa")); return; }
                 // Kuva-arkki 9.10. (virhe 1): tuotantopaketissa ei ole vaihemalleja eikä vuosia → pelattavan palan paketti ensin.
                 if (DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
                 {

@@ -189,6 +189,8 @@ namespace Matkakirja.Natiivi
         static Vector4 MustaKorvaus => Hamara ? new Vector4(0.045f, 0.047f, 0.05f, 4f) : new Vector4(0.27f, 0.28f, 0.29f, 4f);
         /// <summary>Kuori hämäräkuvalla (DioraamaTunnelma.Hamara; DioraamaSovitin asettaa ennen Aloita-kutsua).</summary>
         public static bool Hamara;
+        /// <summary>Koe (arvio 10 virhe 1, "poikki historia saari 1"): tyhjän saaren maa linnan alla koko historian ajan (lounaispuolen aukot).</summary>
+        public static bool SaariAlla;
         static Texture2D rantaSavy; static MaterialPropertyBlock rantaLohko;
         static void TasainenRanta(Renderer r)
         {
@@ -251,7 +253,7 @@ namespace Matkakirja.Natiivi
                 if (vaiheet != null)
                     foreach (var vm in vaiheet.Vaiheet)
                     {
-                        bool maa = vm.Malli.Vuodesta == null && h.MaaNakyy(t);   // tyhjä saari kunnes kuoren kallio on noussut (arvio 3)
+                        bool maa = vm.Malli.Vuodesta == null && (h.MaaNakyy(t) || SaariAlla && linnaNakyy);   // tyhjä saari kunnes kuoren kallio on noussut (arvio 3); koe: koko ajan
                         bool nakyy = maa || vm.Nakyy(vuosi);
                         if (vm.Go != null && vm.Go.activeSelf != nakyy) kirjaa?.Invoke($"seikkailu: historia vaihe {vm.Malli.Id} {(nakyy ? "näkyviin" : "pois")} ({vuosi:F0})");
                         if (maa) { if (vm.Go != null && !vm.Go.activeSelf) vm.Go.SetActive(true); } else vm.Nayta(vuosi);
