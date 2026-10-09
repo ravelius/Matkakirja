@@ -686,3 +686,10 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 - Työkalut-PR #4256 (kohde-korkeus, giza-korkeudet, concorde-ign, vesipinta --pienet-pois). Merge → poista wt/karttaseppa-tyokalut3.
 - Vesi pariisi3 + tukholma3 (LS2: pienet erilliset altaat pois) valmiina `_tyo/karttaseppa/vesi/`; vienti index-v4:llä odottaa LS2:n vastausta (koodiin v4-haku). Ajot: scratchpad aja-vesi-v4.sh, T7 vesimaski/pariisi-v3, tukholma-v4.
 - Talvi3-loput: 27/33 klo 07.35, valmis noin 08.45 → ennen/jälkeen-kuvat PT:lle → paketti.
+
+## 9.10. 10.5x
+
+- Talvi3 valmis: loput ja uusinta 33/33. Suorat rajat olivat MGRS-ruutujen reunoilla, eivät lohkoilla, joten lohkotasaus hylättiin ja poistettiin. MGRS-ruututasaus (kaudet/aja-talvi3-ruututasaus.sh → T7 kausi-tasaus-talvi3) puolitti saumaeron (1,13 → 0,59). PT kuittasi, Iberia ilman tasausta (kausi-tasaus-talvi3-ei-iberia, kovalinkit).
+- Paketti `_valmiit/s2-eurooppa-talvi-vienti-20261009` (talvi/v1, 521 Mt) Julkaisijalla; uusin.json ei kesken linna- tai simuajojen.
+- Vesi index-v4 (pariisi3, tukholma3) viety 07.40. Liput LS1:lle (`kaupunki-*/liput-*.json`). Geotorget-vaiheet PT:llä (omistaja luo tunnuksen; LM_GEOTORGET_USER/PASS avaintiedostoon).
+- PR:t #3105 ja #3108 suljettu (vanhentuneet).
