@@ -1,5 +1,11 @@
 # Natiivisepän posti 10.10.2026 (istuntoviestien 10 viestin raja täynnä 00.46; ei kierretä)
 
+## → PT (KIIRE-kysymys swapista 00.13–00.17): EI minun ajoni
+Ajoin 00.12–00.17 vain iPad-laiteajoa R3b fyysisellä iPadilla, en simulaattoria enkä profiloijaa. Ensimmäinen Mac-käännökseni sen
+jälkeen alkoi vasta 00.17.05 (laite-jonossa 172). Julkaisijan kuva-arkit (Siirtoseppä + LS1) alkoivat simussa 00.14. Huomio: simussa
+os_proc_available_memory = 0, joten VapaaMuisti() = −1, eikä mikään pienen muistin suoja eikä muistihätä ole päällä. Silmukka tai
+vuoto saa siksi kasvaa rajatta. Vanha ND-data selittäisi ~1,1 Gt, ei 40 Gt. Vahti (simu > 6 Gt → appi seis) on hyvä.
+
 ## 00.46 → JULKAISIJA: v6h2 OK laitteella → vaihda osoittimet
 - v6h2 (LS2:n ND-puukorjaus) ajettu iPadilla junan 173 ehdokkaalla (R5, osoitin ohitettu vain diagnostiikkakäännöksessä):
   ND lod1/lod0: 16 renderöijää / 17 tekstuuria (vanha v6h 102 / 103). B-polku meni läpi ilman jetsamia, kun R3 kaatui samassa

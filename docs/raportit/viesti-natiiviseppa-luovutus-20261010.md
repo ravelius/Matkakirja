@@ -22,6 +22,16 @@ docs/raportit/posti-natiiviseppa-20261010.md (lue kokonaan). Raportti: docs/rapo
 - `natiiviseppa/omat-katto-173` ff22f4763 (omien mallien SSE 64 -katto + varoitus > 32 tekstuuria; EI ehdokkaassa, varalla).
 - Mittaushaarat: muistitarkka-173 b5b927bda, muistitarkka-172 65db09ce5 (172 + loki), omat-katto-173-mt 99846bdb3.
 
+## PT:n päätökset (jonossa olleet viestit, luettu 02.2x)
+- "KYLLÄ b + c junaan 173 (omien mallien kevyt lataus pienellä muistilla, PieniKarkeinLisa 1,6), kerroin 4,25 pois". a = LS2:n data,
+  osoitinvaihto korjaa myös TF 172:n. Portti: **LS1:n iPad-ajo korjatulla datalla + b + c**. Effort takaisin highiin portin jälkeen.
+- Lisäksi b-puolustus: **omien mallien SSE-katto pienellä muistilla budjettina** (jos omien mallien GPU-tekstuurit > ~250 Mt →
+  karkeampi LOD, ettei tuleva datavirhe kaada). Muuten ND enintään lod1 korjatulla ja lod2 vanhalla datalla. EI TOTEUTETTU vielä:
+  ff22f4763 on kiinteä SSE 64, ei budjetti. Ehdotus: MalliLadattu laskee omien laattojen tekstuurit, ja kun summa > 250 Mt pienellä
+  muistilla, kyseisen mallin tileset saa SSE 64 (asetin luo tilesetin uudelleen, kertaluonteinen) + lokirivi.
+- Mittaukseni 01.1x–02.0x (posti) näyttävät, että b + c yksin jäädyttää kaupungin (hätä 1,0). Tarvitaan myös d + e (ehdokas
+  1ef5bd1dc). PT ei ollut vielä nähnyt näitä: kerro portin yhteydessä.
+
 ## Odottaa PT:tä
 1. Junan 173 muistisarja ja portti: B läpi; A 0,35–0,43 Gt. Vaihtoehdot: f = pienen muistin hätä uusiksi (taso 1 esilatauskamerat
    pois päivityksen jatkuessa, taso 2 seis; tarvitsee mittauksen ~30 min), tai portiksi B-polku + "ei jetsamia" ja A 174:ään.
@@ -29,7 +39,15 @@ docs/raportit/posti-natiiviseppa-20261010.md (lue kokonaan). Raportti: docs/rapo
    kaupunkisilmukat-174:n; LS1:n kärki 6e7c12b11 mukana), LS1 katse-kaari-174 b812d51b0, LS1 osm-yovalot-174 bbaaf0092 (GPU 0 Mt),
    LS2 ktx2-174 4ffe2aa0c (uusin-4 → v6hk3; 2cc5880df vain työkaluja), Siirtoseppä juna174-soundly-v2 b4efe8e32 (korvaa d7dc17f07)
    + LR linnanrakentaja-linna-v45d fbffee576, Pelikoodari pulu-valmiit-testi a4826d2fe (NUI nosto-kerro-174 569ffce3d pohjana).
-   loppumusiikki-esilataus 1ffa074a1 ei vielä kuitattu (+1,4–6,5 Mt). Edellisen luovutuksen 174-jono (NUI kysy-viiva/chat-pin/
+   loppumusiikki-esilataus 1ffa074a1 ei vielä kuitattu (+1,4–6,5 Mt).
+   PÄIVITYKSET 02.2x (viestit): Pelikoodari **muisti-174 e48dae34a** = yläjoukko (Siirtosepän juna174-silmukat d7dc17f07 + silmukat-
+   ristihaivytys f1f3fc15c + Olavinlinnan pakkaus + AanimuistivahtiTestit; ääni-PCM Pariisi 45 → 0 Mt, Olavinlinna 102 → 31 Mt).
+   LS1 7863be925:n yhden rivin ristiriita PalloAanimaisemaSoitin.Lataa: pidä LS1:n GetAudioClip(KaupunkiSilmukat.Osoite(…)) ja
+   Pelikoodarin perässä olevat rivit. Siirtoseppä juna174-soundly-v2 b4efe8e32 (korvaa d7dc17f07). NUI: turva-sivut-174 6c6c54687,
+   aanentasot-174 5324d7b22, laukku-mylly-174 e0d51dfb6, peli-kortti-174 de35270f8, nosto-kerro-174 569ffce3d (korvaa 5c8c4e5e6),
+   asettelutesti-174 **259426778** (korvaa aiemmat). HUOM: Pelikoodarin pulu-valmiit-testi (c18460a25/a4826d2fe):
+   TunnetutRikkinaisetJatkot kaatuu tarkoituksella 569ffce3d:n kanssa → Pelikoodari poistaa rivit. Tarkista kaikki SHA:t
+   git logista ennen yhdistämistä (useita korvauksia yön aikana). Edellisen luovutuksen 174-jono (NUI kysy-viiva/chat-pin/
    asettelutesti, pelikoodari silmukat) on edelleen voimassa.
 3. Siivous (PT, ei kiireellinen, junan 173 jälkeen): wt/:ssä 11 proto-natiiviseppa-worktreetä (raja 3). Poistettavat: j172, m174,
    lt174, mt172, mt173, okmt, ok173 (varmista ensin `grep -r` skripteistä). unity67 on jo T7:llä (tarkista symlinkki ja 44 muutosta).
