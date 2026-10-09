@@ -1398,7 +1398,7 @@ export const RAAMATTU = {
         'KUVAT — TYYLI JA TUOTANTO: kaikki generoidut kuvat (kohtaamiset, hetket, '
           + 'ennen/nyt, nostot, eläintäkyt, aarteet, ihmeet, kannet, kuvitukset) '
           + 'fotorealistisia valokuvia, ei piirroksia eikä maalauksia; poikkeus '
-          + 'miniatyyrit; piirrosmainen tulos on hylkäysperuste (28.8., 2.9.). Sama koskee Codexin havainnekuvia ja historiallisia hetkiä (omistaja 7.10.2026 klo 13.2x, kortti "Kaikki fotorealistisina"; myös Olavinlinna 1499, Kielletty kaupunki 1923 ja Giza): jokaisessa kuvatekstissä ja metatiedoissa on merkintä havainnekuva, kartan nähtävyysminiatyyrit pysyvät ennallaan (käyttöliittymän kuvakkeita), ja Codexilta tilataan mahdollisimman paljon, koska sillä on käyttämättömiä krediittejä (13.1x). Kaksi '
+          + 'miniatyyrit; piirrosmainen tulos on hylkäysperuste (28.8., 2.9.). Sama koskee Codexin havainnekuvia ja historiallisia hetkiä (omistaja 7.10.2026 klo 13.2x, kortti "Kaikki fotorealistisina"; myös Olavinlinna 1499, Kielletty kaupunki 1923 ja Giza): jokaisessa kuvatekstissä ja metatiedoissa on merkintä havainnekuva, kartan nähtävyysminiatyyrit ja matkalaukun varustekuvat (assets/varusteet/) pysyvät nykyisen akvarellisarjan tyylissä (käyttöliittymän kuvakkeita; varustekuvat omistaja 9.10.2026 klo 08.4x Codexin kysymykseen), ja Codexilta tilataan mahdollisimman paljon, koska sillä on käyttämättömiä krediittejä (13.1x). Kaksi '
           + 'kastia: generoidut kuvat tunnelmaan, pulmiin ja hahmoihin; '
           + 'faktatehtävissä ja valokuvakysymyksissä aina aito tarkistettu valokuva. '
           + 'Loistoaikakuvat puhtaasti omassa ajassaan — aikasiirtymän hoitaa kortin '
