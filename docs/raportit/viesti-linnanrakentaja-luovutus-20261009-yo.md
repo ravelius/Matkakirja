@@ -201,3 +201,7 @@ Seuraavaksi:
   - Data ja `sijoitus.mjs`: haara `linnanrakentaja-kadet-sijoitus` (99f620972). Kanna on kämmenen kehyksessä (`kehys: 'kammen'`),
     ja tartu l on kirjan kehyksessä.
   - Siirtoseppä tekee pelin puolen.
+- **Jono (PT 21.3x):** Siirtoseppä piilottaa ranta-1499:n historiassa Kellobastionin (1745) jälkeen (b3ddc20a6). Tämä käy vain v24-kuoren
+  ajan. v25:n (1499-kuori) mukana ranta-1499 tehdään kallion näköiseksi, muoto ja pinta, ei litteää laattaa. Työ on
+  `olavinlinna-kavely-v1/lahde/ranta1499.py`:ssä: etuvarustuksen ympäryksen ankkuri −5,8 tuottaa terassin, joten tilalle kalliorinne,
+  kohinaa ja kallion pinta.
