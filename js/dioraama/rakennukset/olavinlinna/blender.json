@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "c1d088353c667fb6",
-  "kansio": "dioraama/olavinlinna/blender/c1d088353c667fb6/",
+  "hash": "479d1c874a6e6a93",
+  "kansio": "dioraama/olavinlinna/blender/479d1c874a6e6a93/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1355,8 +1355,8 @@
     },
     {
       "polku": "kavely/osat.json",
-      "sha256": "d4126f10fd17a68c6fabb98c73bb6d39b7eda9f673521a13b93aa95fe5352a1e",
-      "tavuja": 30975
+      "sha256": "c4966b9ea67460832364b5fb7647113b2238933a38bdafa1250ea12b5c162c7a",
+      "tavuja": 30976
     },
     {
       "polku": "kavely/ovi-tammi-100x190-normaali-6x6.astcm",
@@ -1445,18 +1445,18 @@
     },
     {
       "polku": "kavely/ranta-1499-kavely.glb",
-      "sha256": "71c6a39261c12e2004efda883b2acef226ff207a081833bd72305184ca65efc0",
-      "tavuja": 125996
+      "sha256": "fae9258cd9aa9acc596281b66d69a300ae3addcc02b0a7b07fdd37563cfbe9cb",
+      "tavuja": 140180
     },
     {
       "polku": "kavely/ranta-1499-tormays.glb",
-      "sha256": "335b54d1c5f4c690d458be83a12e6ea3ebb9b74949f3d750013a37200bdb933a",
-      "tavuja": 166164
+      "sha256": "611cc84545f17ba67e628e9e750dd8854acfc3f1129999d157de45ccc41d163f",
+      "tavuja": 184476
     },
     {
       "polku": "kavely/ranta-1499.glb",
-      "sha256": "50de796e869d0a58b01e9b88dc7fdeb925ef0f9097318862860660288031f29c",
-      "tavuja": 1132120
+      "sha256": "7709f077462fc5499a8b0a11dfdc549a9dcbdffc76a283f23f12071233e2c423",
+      "tavuja": 1250524
     },
     {
       "polku": "kavely/rekvisiitta-Barrel_01-normaali-6x6.astcm",
@@ -2330,23 +2330,23 @@
     },
     {
       "polku": "kavely/valot/ranta-1499-4x4.astcm",
-      "sha256": "2f43543dbadd7666076e6905f1cf2030611e09fd19203578e5f44a46c1312db9",
+      "sha256": "deb531c2ff633b0531ae5b07a2e8383003733da63b7bc691eb840814b7abcb7b",
       "tavuja": 1398144
     },
     {
       "polku": "kavely/valot/ranta-1499-512-4x4.astcm",
-      "sha256": "7e17f307e078493549c081ea73181ff11a11e3ed059af283406a2578dcbb14c3",
+      "sha256": "dd56f6de6a275438c5f4e33323f1dc177de8da2b80a001daac424718f18ad5c7",
       "tavuja": 349568
     },
     {
       "polku": "kavely/valot/ranta-1499-512.jpg",
-      "sha256": "53066e2be28d87030430ee260bf5168ef7bb4972fe0930c7e06564a49c32470f",
-      "tavuja": 112412
+      "sha256": "a2cd999e442967f028fd74da2f6e2e8565a660b85d8caed0c7e3b59b93b7b496",
+      "tavuja": 115865
     },
     {
       "polku": "kavely/valot/ranta-1499.jpg",
-      "sha256": "304c897bfe56699190f1bac23c3f067395e2ce389f54e5d322a62e363f0a905d",
-      "tavuja": 406006
+      "sha256": "18db83cebafbf9bcad7a40e52ed96f476acd1f32d0a33f22e24b83facce1b559",
+      "tavuja": 422761
     },
     {
       "polku": "kavely/valot/tyrma-E101-4x4.astcm",
