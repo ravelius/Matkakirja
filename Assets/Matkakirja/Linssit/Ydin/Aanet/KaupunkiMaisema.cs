@@ -3,7 +3,8 @@
 // ja aanet/kaupunkimaisema-v2 (kaupunkikohtainen sorina: tori, kahvila, lapset; Pariisissa myös metro ja raitiovaunun kerta-ohiajo).
 //  - kerros → ääni: v2:n kaupungin oma (silmukka; kerta-ääni = ei silmukkaa, soitin soittaa harvakseltaan), muuten v1:n yleinen
 //    (raitiovaunu, metro, laituri). Vain Tukholma ja Pariisi (Kehityskaupungit); muualla ei mitään → ei latauksia olemattomiin.
-//  - taso = Tausta × kerroin × äänikartan paino × korkeusvaimennus (soitin ohittaa maiseman Taso-kertoimen ja mikserin korkeuskertoimen).
+//  - taso = Tausta × maiseman Taso (0,55) × kerroin × äänikartan paino × korkeusvaimennus (soitin ohittaa mikserin korkeuskertoimen;
+//    kertoimet suhteellisia samaan maisemaan, Pelikoodari 9.10.).
 //  - painot: tori, kahvila, raitiovaunu kartasta; lapset = puisto 8–20; metro = rautatie × 0,5; laituri = max(kanava, aallot, satama).
 using System;
 using System.Collections.Generic;

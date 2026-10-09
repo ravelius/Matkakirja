@@ -9,7 +9,7 @@
 //    kytkin ja testimykistys hiljentävät.
 // Syötteet asetetaan ulkoa: Kamera (LS1: korkeus, nopeus, kohteen lat/lon), Aanikartta ja SilmukanUrl (Pelikoodari), Sade (COZY).
 //  - lähikerrokset (9.10., Ydin KaupunkiMaisema): kehityskaupungeissa raitiovaunu, metro, tori, lapset, kahvila ja laituri
-//    kaupunkimaisema-v1/-v2:sta tasolla Tausta × kerroin × paino × korkeus; Pariisin raitiovaunu kerta-ohiajona. Muualla ennallaan.
+//    kaupunkimaisema-v1/-v2:sta tasolla Tausta × maiseman Taso × kerroin × paino × korkeus; Pariisin raitiovaunu kerta-ohiajona. Muualla ennallaan.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -127,7 +127,7 @@ namespace Matkakirja.Natiivi
         }
 
         // PARIISIN RAITIOVAUNU (v2, kerta-ohiajo 36 s): kun raitiovaunun paino > 0, ohiajo 1–3 min välein (PalloAanimaisema.Vali);
-        // taso (kerroin × paino × korkeus × vuorokausi × väistö × Tausta) seuraa soinnin ajan.
+        // taso (kerroin × paino × korkeus × vuorokausi × väistö × maiseman Taso × Tausta) seuraa soinnin ajan.
         AudioSource kertaLahde; AudioClip kertaKlippi; string kertaUrl; bool kertaLadataan; double kertaSeuraava = -1;
         readonly System.Random kertaRnd = new System.Random(20261009);
 
@@ -136,7 +136,7 @@ namespace Matkakirja.Natiivi
             const string R = KaupunkiAanimaisema.Raitiovaunu;
             var a = Lahi ? maisema.KertaAani(nykyId, R) : null;
             double paino = a != null ? KaupunkiMaisema.Paino(R, painot, tunti, korkeusM) * KaupunkiAanimaisema.Vuorokausi(R, tunti) : 0;
-            float taso = (float)(paino * mikseri.Kokonais) * tausta;
+            float taso = (float)(paino * mikseri.Kokonais) * Taso * tausta;
             if (kertaLahde != null && kertaLahde.isPlaying) kertaLahde.volume = taso;
             if (a == null || paino <= 0 || !soi) { kertaSeuraava = -1; return; }
             if (kertaUrl != a.Osoite) { kertaUrl = a.Osoite; kertaKlippi = null; }
@@ -232,8 +232,8 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < lahteet.Length; i++)
             {
                 string kerros = KaupunkiAanimaisema.Kerrokset[i];
-                // Lähikerrokset: Tausta × kerroin (painossa) ilman maiseman Taso-kerrointa (äänisuunnittelijan tasot).
-                float t = (float)mikseri.Tasot[i] * (lahi && KaupunkiMaisema.On(kerros) ? (float)mikseri.Kokonais : kokonais) * (kerros == KaupunkiAanimaisema.Sade || kerros == KaupunkiAanimaisema.Tuuli ? saa : tausta);
+                // Lähikerrokset: kerroin (painossa) suhteellinen samaan maisemaan, joten myös maiseman Taso (Pelikoodari 9.10.: muuten ~5 dB yli).
+                float t = (float)mikseri.Tasot[i] * kokonais * (kerros == KaupunkiAanimaisema.Sade || kerros == KaupunkiAanimaisema.Tuuli ? saa : tausta);
                 var l = lahteet[i];
                 if (t > 0.001f && l == null) { Avaa(i); continue; }
                 if (l == null) continue;
