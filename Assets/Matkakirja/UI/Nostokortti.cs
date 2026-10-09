@@ -478,7 +478,7 @@ namespace Matkakirja.Natiivi
             alunEsihaku = puhe.EsihaeAlku(palat[0], "kertoja", tagit[0]);
         }
 
-        static IEnumerable<string> LuennanTekstit(Nosto n) =>
+        internal static IEnumerable<string> LuennanTekstit(Nosto n) =>
             new[] { n.Otsikko, n.Ingressi }.Concat(Kappaleet(n.Teksti)).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim());
 
         // --- koko ja paikka (löydökset 130, 131, 135) --------------------------------------------
