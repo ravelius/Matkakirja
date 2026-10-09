@@ -417,12 +417,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         internal static readonly Dictionary<string, string> FotoMinit = Taydenna(new Dictionary<string, string>
         {
-            ["ihmisen-matka-2"] = FotoMiniJuuri + "varuste-ihmisen-matka-2-foto.jpg", ["lentopeli"] = FotoMiniJuuri + "varuste-lentopeli-foto.jpg",
+            ["lentopeli"] = FotoMiniJuuri + "varuste-lentopeli-foto.jpg",
             ["lontoo"] = FotoMiniJuuri + "varuste-lontoo-foto.jpg", ["mylly"] = FotoMiniJuuri + "varuste-mylly-foto.jpg",
             ["maapallon-vuosi"] = FotoMiniJuuri + "varuste-maapallon-vuosi-foto.jpg", ["tavli"] = FotoMiniJuuri + "varuste-tavli-foto.jpg",
             ["isoisa-1873"] = FotoMiniJuuri + "varuste-isoisa-1873-foto.jpg",
-            // Uusinnat (-v2: CDN, vanha jää) ja Codexin toimitus (Sisältökirjuri tarkisti).
-            ["tahdet"] = KatalogiJuuri + "tahdet-foto-mini-v2.jpg", ["yokartta"] = KatalogiJuuri + "yokartta-foto-mini-v2.jpg",
+            // Uusinnat (-v2/-v3: CDN, vanha jää) ja Codexin toimitus (Sisältökirjuri tarkisti).
+            ["tahdet"] = KatalogiJuuri + "tahdet-foto-mini-v3.jpg", ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-mini-v3.jpg",
+            ["yokartta"] = KatalogiJuuri + "yokartta-foto-mini-v2.jpg",
             ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-mini-v2.jpg",
         }, "-foto-mini.jpg");
         const string FotoMiniJuuri = "https://media.matkakirja.app/julisteet/varustekuvat-foto/20261009/";
@@ -432,8 +433,8 @@ namespace Matkakirja.Natiivi
         {
             ["lentopeli"] = KatalogiJuuri + "lentopeli-havainne.jpg", ["lontoo"] = KatalogiJuuri + "lontoo-havainne.jpg",
             ["tavli"] = KatalogiJuuri + "tavli-havainne-v2.jpg", ["yokartta"] = KatalogiJuuri + "yokartta-havainne-v2.jpg",
-            ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-iso-v2.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-foto-iso-v2.jpg",
-            ["mylly"] = KatalogiJuuri + "mylly-foto-iso-v2.jpg", ["tahdet"] = KatalogiJuuri + "tahdet-foto-iso-v2.jpg",
+            ["ihmisen-matka-2"] = KatalogiJuuri + "ihmisen-matka-2-foto-iso-v3.jpg", ["maapallon-vuosi"] = KatalogiJuuri + "maapallon-vuosi-foto-iso-v2.jpg",
+            ["mylly"] = KatalogiJuuri + "mylly-foto-iso-v2.jpg", ["tahdet"] = KatalogiJuuri + "tahdet-foto-iso-v3.jpg",
             ["poikkileikkaus"] = KatalogiJuuri + "poikkileikkaus-foto-iso-v2.jpg", ["isoisa-1873"] = KatalogiJuuri + "isoisa-1873-foto-iso.jpg",
         }, "-foto-iso.jpg");
 
