@@ -547,8 +547,12 @@ namespace Matkakirja.Editori
         {
             linna ??= new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
             OpasValikko.Hae().Nayta(false);
+            bool naytetty = linna.Juuri.resolvedStyle.display != DisplayStyle.None && linna.Juuri.panel != null;
             linna.Nayta(true);
-            linna.Komento(mita);
+            // Valikko sijoittuu ☰:n alle sen worldBoundista: juuri näytetyllä ☰:llä ei ole vielä asettelua (laitteella pelaaja
+            // näkee ☰:n ennen napautusta), joten avaus seuraavassa ruudussa.
+            if (naytetty) linna.Komento(mita);
+            else linna.Juuri.schedule.Execute(() => linna.Komento(mita)).StartingIn(200);
         }
 
         static void SuljeLinna() { linna?.Komento("sulje"); linna?.Nayta(false); }
@@ -605,6 +609,8 @@ namespace Matkakirja.Editori
                 var turva = RuudunTurva(koko);
                 const float Vara = 0.5f;
                 if (b.xMin >= turva.xMin - Vara && b.xMax <= turva.xMax + Vara && b.yMin >= turva.yMin - Vara && b.yMax <= turva.yMax + Vara) { ok++; continue; }
+                // iPhone pystyssä oppaan ☀ ja ☰ Islandin vierellä tarkoituksella (TarkistaNapit, EiIslandilla).
+                if (Koot[kokoNro].Nimi == "iphone-pysty" && OpasValikko.Hae().TestiAvainnapit().Any(n => n.E == e && (n.Nimi == "☰" || n.Nimi == "☀/☾"))) { ok++; continue; }
                 if (++viat <= 6)
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
