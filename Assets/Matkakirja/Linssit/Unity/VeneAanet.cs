@@ -3,7 +3,6 @@
 // jokilaivat lautan moottori, pikkuveneet moottorivene; silmukat satunnaisesta kohdasta ja hieman eri sävelkorkeudella (ei kaikuja).
 // Etäisyys: lineaarinen 40–900 m (pallo 100–800 m:n päässä), taso mikserin Kerroin("maisema", laiva.<tunnus>) × LaivaTaso; enintään 24
 // ääntä kerrallaan (prioriteetti). Äänirekisteri (Natiivi-UI 9.10.): kolme laivaääntä pallon Äänimaisema-ryhmään, klipin nimi = tunnus.
-// Steam Audio -koe (9.10., oletus pois): lähteet SteamAudioKoe.Rekisteroi-kutsulla, kytkin pallo.SteamAudio / "opas steamaudio".
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,7 +52,6 @@ namespace Matkakirja.Natiivi
             a.loop = true; a.playOnAwake = false; a.dopplerLevel = 0f; a.pitch = Random.Range(0.92f, 1.08f); a.volume = 0f;
             a.priority = 200;
             lahteet.Add((a, t));
-            SteamAudioKoe.Rekisteroi(a);   // HRTF-koe (kehittäjäkytkin pallo.SteamAudio, oletus pois)
         }
 
         static IEnumerator Lataa(string t)
@@ -70,7 +68,6 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka kehys (ElavaKaupunki): klipit lähteisiin, taso mikseristä (Äänimaisema × laivan ääni); tuhoutuneet pois.</summary>
         public static void Paivita()
         {
-            SteamAudioKoe.Paivita();
             var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
             for (int j = 0; j < Tunnukset.Length; j++) tasot[j] = m.Kerroin("maisema", AaniId(Tunnukset[j])) * LaivaTaso;
             for (int i = lahteet.Count - 1; i >= 0; i--)

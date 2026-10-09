@@ -26,7 +26,7 @@
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
 // Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | data google|ion|oma | tila"; elävälle
-// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | steamaudio 0|1|tila | tila" (LontooSovitin; kehitystunnus
+// oppaalle "linssi opas" ja "opas testi 0|1 | testiotsake 0|1 | pysayta 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | tila" (LontooSovitin; kehitystunnus
 // Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -2219,8 +2219,6 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "elava") { ElavaKaupunki.Pakko = osat[2] == "1"; Kirjaa($"opas: elävä kaupunki {(ElavaKaupunki.Paalla ? "päällä" : "pois")} (seuraava kaupungin avaus)"); }
                     // Savu piipuista ja liput (B8, juna 171): heti voimaan; "tila" vain tulostaa.
                     else if (osat.Length > 2 && osat[1] == "savu") { if (osat[2] != "tila") ElavaSavuLiput.SavuPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
-                    // Steam Audio HRTF -koe (9.10., oletus pois): 0|1 ohittaa asetuksen pallo.SteamAudio istunnon ajaksi; tila = diagnoosi.
-                    else if (osat.Length > 2 && osat[1] == "steamaudio") Kirjaa("opas: " + SteamAudioKoe.Komento(osat[2]));
                     else if (osat.Length > 2 && osat[1] == "liput") { if (osat[2] != "tila") ElavaSavuLiput.LiputPaalla = osat[2] == "1"; Kirjaa("opas: " + ElavaKaupunki.Tila()); }
                     else if (osat.Length > 3 && osat[1] == "pinta")
                     {
