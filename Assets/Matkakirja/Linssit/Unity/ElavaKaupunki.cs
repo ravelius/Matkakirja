@@ -565,7 +565,7 @@ namespace Matkakirja.Natiivi
             var nimet = AaniNimet;
             var klipit = new AudioClip[nimet.Length];
             for (int i = 0; i < nimet.Length; i++)
-                using (var r = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(AaniJuuri + nimet[i] + ".mp3", AudioType.MPEG))
+                using (var r = UnityEngine.Networking.UnityWebRequestMultimedia.GetAudioClip(Matkakirja.Linssit.Aanet.KaupunkiSilmukat.Osoite(AaniJuuri + nimet[i] + ".mp3", KaupunkiAanimaisemaSoitin.Juuri), AudioType.MPEG))   // lokkiparvi → kaupunkisilmukat-v1
                 {
                     r.timeout = 20;
                     yield return r.SendWebRequest();
