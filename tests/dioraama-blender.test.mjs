@@ -97,6 +97,16 @@ test('kuoren huippu-taso: 8k-atlas vain jos se on blender.json:ssa, muuten 4k (l
   assert.match(kanssa.ulkokuori.tekstuurit.normaali, /ulkokuori-4k-4x4\.astcm$/);
 });
 
+test('kuoren asu: ulkokuori/asu-1499.txt → ulkokuori.asu "1499", ilman merkkiä ei kenttää (PT 9.10.)', () => {
+  const ilman = kopio(RAKENNUS);
+  lisaaBlender(ilman, { ...B, tiedostot: B.tiedostot.filter((t) => t.polku !== 'ulkokuori/asu-1499.txt') });
+  assert.equal(ilman.ulkokuori.asu, undefined);
+  const kanssa = kopio(RAKENNUS);
+  lisaaBlender(kanssa, { ...B, tiedostot: [...B.tiedostot.filter((t) => t.polku !== 'ulkokuori/asu-1499.txt'),
+    { polku: 'ulkokuori/asu-1499.txt', sha256: 'a'.repeat(64), tavuja: 5 }] });
+  assert.equal(kanssa.ulkokuori.asu, '1499');
+});
+
 test('kuoren detalji (hybridi-PBR, menetelmä B): vain jos maski ja 4 kirjastomateriaalia ovat blender.json:ssa', () => {
   const ilman = kopio(RAKENNUS);
   const perus = B.tiedostot.filter((t) => !t.polku.startsWith('kirjasto/') && !t.polku.includes('hybridi/'));
