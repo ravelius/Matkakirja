@@ -5,7 +5,7 @@ namespace Matkakirja.Linssit.Seikkailu
 {
     public static class PelattavaPala
     {
-        public const string Hash = "0b3bc7df34670313";
-        public const string Versio = "v45v";   // v45u + kappeli leivottu uudelleen kivikehysten kanssa (kaari-ovi, ikkuna, hagioskooppi, syvennys; LR 9.10.)
+        public const string Hash = "6ae3c7f5544feab3";
+        public const string Versio = "v45x";   // v45v + Kellotornin otteet 24 (0,7 m, kaari, krampit 18–24), puuskat 3, kamera:K3, kivikehykset keittiö/Linnantupa/Voudin sali (LR 9.10.)
     }
 }

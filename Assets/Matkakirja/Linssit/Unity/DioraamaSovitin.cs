@@ -1157,6 +1157,7 @@ namespace Matkakirja.Natiivi
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-fp-v3/manifest.json");   // M-osa: tiilet, köysi, kello, uinti, airot … (v3: sukellus ja köysi uusittu, Pelikoodari 8.10.)
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-saa-v3/manifest.json");   // Pelikoodari 8.10.: sade, tippuminen, ukkonen, märät askeleet, vihje-kimallus
                 SeikkailuAanet.LisaaManifest(MediaJuuri + "/aanet/sonniss-tuulet-v1/manifest.json");   // Pelikoodari 9.10.: tuuli-korkea, tuuli-kostea
+                SeikkailuAanet.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/aanet-lapi-v1/manifest.json");   // Pelikoodari 9.10. (maksuttomat): vesisanko, viitta, savipurkki, patapino, luuta, varusteet, yolinnut, koira
                 SeikkailuSade.Luo(nayttamo.transform);
             }
         }
@@ -1840,6 +1841,13 @@ namespace Matkakirja.Natiivi
             // "poikki seikkailu botti [alku-N]": vianselvitys (pelattavuusmalli 11, EI ennen junaa/TF:ää) — kävelee reitti:pelaaja-N -merkit
             // napautuskävelyllä, kirjaa saapumiset, kiinnijäämiset ja ajat sekä lopuksi Natiivi-UI:n Tekstivahdin (ei näkyvää tekstiä).
             // "poikki valot volumetriset 0|1 | liekit 0|1": laatutaso (PT 7.10.: volumetriset Mac + M-iPad, liekit kaikilla).
+            // "poikki historia [pois]": linnan historia (Historiajana, juna 171; PT 9.10.) drone-kameralla ilman kertojaa.
+            if (mita == "historia")
+            {
+                if (arvo == "pois") { SeikkailuHistoria.Lopeta(); return; }
+                SeikkailuHistoria.Aloita(nayttamo != null && nayttamo.Kamera != null ? nayttamo.Kamera.transform : null, null, o.Kirjaa);
+                return;
+            }
             if (mita == "valot")
             {
                 bool p1 = osat.Length <= 3 || osat[3] != "0";

@@ -595,8 +595,23 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        Matkakirja.Linssit.Dioraama.HistoriaVaihe historiaNyt;
         void PaivitaAvainsana(Rakennus rakennus, Nakyma nakyma)
         {
+            // Linnan historia (SeikkailuHistoria, juna 171): vuosiluku ja muutama sana vaiheen alussa — vain historiassa (PT:n ehto 2).
+            var h = Matkakirja.Natiivi.SeikkailuHistoria.Avainsana;
+            if (h != historiaNyt || (h != null && avainsanaNyt != null))
+            {
+                historiaNyt = h; avainsanaNyt = null;
+                if (h != null)
+                {
+                    avainsanaVuosi.text = h.VuosiTeksti ?? "";
+                    avainsanaVuosi.style.display = string.IsNullOrEmpty(h.VuosiTeksti) ? DisplayStyle.None : DisplayStyle.Flex;
+                    avainsanaSanat.text = h.Sanat ?? "";
+                }
+                avainsana.style.opacity = h != null ? 1f : 0f;
+            }
+            if (Matkakirja.Natiivi.SeikkailuHistoria.Kaynnissa) return;
             Avainsana nyt = null;
             // Ei tekstiä pelissä (omistajan linja; PT 9.10. BUILD 169 -still: "Erik Akselinpoika Tott" vasemmassa alakulmassa
             // seikkailun aikana): kertojan avainsanat vain linnan esittelyssä, ei pelattavan palan aikana (vene, kävely, yö).
