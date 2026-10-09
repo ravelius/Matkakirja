@@ -300,7 +300,7 @@ namespace Matkakirja.Editori
                     OpasValikko.Hae().Komento("esitys auto");
                     OpasValikko.Hae().Komento("sulje");
                     OpasValikko.Hae().Nayta(false);
-                    linna = new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
+                    linna ??= new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
                     linna.Nayta(true);
                     SeikkailuTapit.TestiNakyy = true;
                     SeikkailuTapit.TestiToiminto = "poimi";
@@ -531,9 +531,27 @@ namespace Matkakirja.Editori
             ("sähke", () => UiNakymat.Hae().Sahke.Testaa("liuska"), SuljeKaikki, 1.5),
             ("mylly", () => MyllyNakyma.Hae().Avaa(), SuljeKaikki, 1.5),
             ("tavli", () => TavliNakyma.Hae().Avaa(), SuljeKaikki, 1.5),
+            // Olavinlinnan ☰-valikko auki (PT 10.10.2026): pää, huoneet, äänet ja lähteet.
+            ("linnan valikko", () => LinnanValikko("valikko"), SuljeLinna, 1.0),
+            ("linnan huoneet", () => LinnanValikko("huoneet"), SuljeLinna, 1.0),
+            ("linnan äänet", () => LinnanValikko("aanet"), SuljeLinna, 1.0),
+            ("linnan lähteet", () => LinnanValikko("lahteet"), SuljeLinna, 1.0),
+            // Pallon vapaa lento: Mikä tämä on, vapaan lennon nappi ja tapit (testikytkimet kuten `ui opasvalikko mika|vapaalento`).
+            ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
+                () => { var o = OpasValikko.Hae(); o.Komento("mika pois"); o.Komento("vapaalento pois"); o.Komento("sulje"); }, 1.0),
         };
 
         static void SuljeKaikki() => UiNakymat.Hae().SuljeKaikki();
+
+        static void LinnanValikko(string mita)
+        {
+            linna ??= new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
+            OpasValikko.Hae().Nayta(false);
+            linna.Nayta(true);
+            linna.Komento(mita);
+        }
+
+        static void SuljeLinna() { linna?.Komento("sulje"); linna?.Nayta(false); }
 
         /// <summary>Näkymän paneeli, jonka sisällä kaikkien sen nappien pitää olla (myös ruudun ulkopuolelle valuneiden).</summary>
         static VisualElement NakymanPaneeli(string nimi) => nimi == "asetukset" ? UiNakymat.Hae().Aanentasot.TestiPaneeli : null;
