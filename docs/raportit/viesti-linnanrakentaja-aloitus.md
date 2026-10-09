@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 9.10.2026 iltapäivä)
+# Linnanrakentajan aloitusviesti (päivitetty 9.10.2026 ilta)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009.md`** (UUSIN 9.10.: ND v8 / KL v2b omistajan hyväksyttävinä,
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009-ilta.md`** (UUSIN: Codex-pinnat, KL v3b, Riddarholmen v2b, vouti v3, v46i).
+   Sitä edeltävä luovutus: **`docs/raportit/viesti-linnanrakentaja-luovutus-20261009.md`** (UUSIN 9.10.: ND v8 / KL v2b omistajan hyväksyttävinä,
    LS2:n hiontalista, historian ranta-1499-täyttö v46g / arvio 6, PBR-pinnat ja kaukokuvan sävyerot). Päivän tarkka loki
    (hashit, SHA:t) on tiedoston `…-20261005b.md` lopussa.
 3. **UUSI LINJA PT 15.0x (9.10.):** ND v8 ja KL v2b hylättiin (erottuvat Googlesta), ja osoitin jää ennalleen. Codex tekee
