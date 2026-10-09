@@ -1155,25 +1155,22 @@ namespace Matkakirja.Natiivi
 
         // --- VAPAA LENTO ja PALUU KIERROKSELLE (omistaja 9.10.2026; logiikka LS1:n OpasSovitin, rajapinta sovittu 9.10.):
         //   bool VapaaLentoKaytettavissa, bool AloitaVapaaLento(), bool PaluuKierrokselleKaytettavissa, bool PalaaKierrokselle().
-        // Heijastuksella, jotta napit ovat piilossa, kunnes LS1:n osa on samassa junassa.
-        static readonly System.Reflection.BindingFlags Julkinen = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
-        static bool SovitinBool(string nimi) => typeof(OpasSovitin).GetProperty(nimi, Julkinen)?.GetValue(null) is bool b && b;
-        static void SovitinKutsu(string nimi) => typeof(OpasSovitin).GetMethod(nimi, Julkinen, null, Type.EmptyTypes, null)?.Invoke(null, null);
-        bool VapaaLentoKaytettavissa => testiVapaa ?? SovitinBool("VapaaLentoKaytettavissa");
-        bool PaluuKaytettavissa => testiPaluu ?? SovitinBool("PaluuKierrokselleKaytettavissa");
+        // Suoraan LS1:n rajapintaan (5b23a3b02, juna 170; heijastus pois: puuttuva rajapinta kaatuu käännökseen).
+        bool VapaaLentoKaytettavissa => testiVapaa ?? OpasSovitin.VapaaLentoKaytettavissa;
+        bool PaluuKaytettavissa => testiPaluu ?? OpasSovitin.PaluuKierrokselleKaytettavissa;
 
         void AloitaVapaaLento()
         {
             Debug.Log("MATKAKIRJA opas: vapaa lento");
             testiVapaa = null;
-            SovitinKutsu("AloitaVapaaLento");
+            OpasSovitin.AloitaVapaaLento();
         }
 
         void PalaaKierrokselle()
         {
             Debug.Log("MATKAKIRJA opas: palaa kierrokselle");
             testiPaluu = null;
-            SovitinKutsu("PalaaKierrokselle");
+            OpasSovitin.PalaaKierrokselle();
         }
         bool? testiJatka;
         VisualElement mikaRivi, tahtain;
