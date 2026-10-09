@@ -1,0 +1,185 @@
+### 1.1
+KYSYMYS: Mikä Saba on?
+Ai Saba, joo. Saba on Karibianmerellä sijaitseva pieni tulivuorisaari, jolla on noin kaksituhatta asukasta ja jonka korkein kohta Mount Scenery kohoaa 887 metrin korkeuteen. Saari kuuluu Alankomaiden kuningaskuntaan: se liitettiin vuonna 2010 osaksi [[Alankomaiden]] valtiota erityiskuntana, joten sillä on Hollannin kunnan kaltainen asema, vaikka se sijaitsee Atlantin toisella puolella. Virallinen kieli on hollanti, ja arjessa puhutaan paljon myös englantia. Saaren tulivuori on samalla syy siihen, että [[Vaalserberg]] on enää maan Euroopan-puoleisen osan korkein kohta eikä koko kuningaskunnan. Minulle riittää ihan hyvin tämä kaiteen korkeus.
+JATKOT:
+Mikä on Alankomaiden erityiskunta?
+Miten Alankomaiden Antillit hajosivat vuonna 2010?
+
+### 1.2
+KYSYMYS: Mitä NAP tarkoittaa?
+Hetkinen ny. NAP on lyhenne sanoista Normaal Amsterdams Peil eli Amsterdamin normaalitaso, ja se on Alankomaissa käytetty korkeuden vertailutaso. Taso perustuu [[Amsterdamin]] vedenkorkeuteen, ja sen alkuperä johdetaan 1600-luvun lopun mittauksista; nykyisin se on lähellä keskimääräistä merenpintaa Pohjanmeren rannikolla. Sen mukaan ilmoitetaan sekä [[Alankomaiden]] korkeudet että merenpinnan alapuolella olevat alueet, ja esimerkiksi [[Vaalserbergin]] huippu, 322,4 metriä, mitataan juuri tästä tasosta. Pieni lyhenne, mut iso homma.
+JATKOT:
+Miten merenpinnan korkeus mitataan?
+Kuinka kauan Amsterdamin vedenkorkeutta on seurattu?
+
+### 1.3
+KYSYMYS: Missä Alankomaat, Belgia ja Saksa kohtaavat?
+Joo, tän minä tiedän. Kolmen maan rajapiste, hollanniksi Drielandenpunt, sijaitsee Vaalserbergin huipun tuntumassa Limburgin kaakkoiskulmassa. Siinä kohtaavat [[Alankomaat]], [[Belgia]] ja [[Saksa]], ja lähin kaupunki Alankomaiden puolella on Vaals, kun taas saksalainen [[Aachen]] on aivan lähellä. Paikalla on näkötorni, ja kävijä voi yhdellä kävelyllä ylittää useita rajoja. Kolme maata yhdellä reissulla, eikä passia tarvii.
+JATKOT:
+Mikä on Schengen-alue?
+Mikä Aachen on?
+PAIKKA: Vaalserberg | 50.75 | 6.02 | kaupunki
+
+### 1.4
+KYSYMYS: Kuinka suuri osa Alankomaista on merenpinnan alapuolella?
+Annas ku mietin. Noin neljännes Alankomaiden maa-alasta on merenpinnan alapuolella, ja yli puolet maasta olisi tulvaherkkää ilman suojarakenteita. Maata suojaavat [[patojen]] ja dyynien lisäksi [[polderien]] pumppaamot sekä [[vesilautakunnat]], joiden vanhimmat edeltäjät perustettiin keskiajalla, ja niiden tehtävä on pitää vedenpinta hallinnassa. Rakenteet on suunniteltu niin, että väestön tiheimmät alueet pysyvät kuivina myös myrskyjen aikana.
+
+Ylhäältä katsoen kanavien vedenpinta on monin paikoin korkeammalla kuin viereiset pellot, ja silti kukaan ei näytä huolestuvan. Sellaiseen luottamukseen tarvitaan kyllä paljon pumppuja.
+JATKOT:
+Miten vesilautakunnat toimivat Alankomaissa?
+Mitä tapahtuisi, jos padot pettäisivät?
+
+### 1.5
+KYSYMYS: Mikä on Alankomaiden alin kohta?
+Katotaas. Alankomaiden alimpana kohtana mainitaan yleensä Zuidplaspolder, joka sijaitsee [[Rotterdamin]] ja [[Goudan]] välissä noin seitsemän metriä merenpinnan alapuolella. Alue oli ennen järvi, ja se kuivatettiin pumppaamalla 1800-luvulla, minkä jälkeen siitä tuli viljelysmaata ja nykyään osin myös asuin- ja liikennealuetta. Lähteet antavat tarkan luvun hieman eri tavoin, joten kyse on noin seitsemästä metristä. Pöllö on taas matkoilla, mut tän minä muistin yksinkin.
+JATKOT:
+Mikä on Alankomaiden korkein kohta?
+Miten Zuidplaspolder kuivatettiin?
+
+### 2.1
+KYSYMYS: Miten hollantilaiset ovat vallanneet maata mereltä?
+Kato, tästä minä tiedän vähän. Hollantilaiset ovat saaneet maata mereltä rakentamalla ensin asuinkumpuja, sitten penkereitä ja lopulta patoja, joiden suojaan on muodostettu polderia eli kuivatettua maata. Keskiajalta lähtien vettä pumpattiin pois [[tuulimyllyillä]], ja 1800-luvulla höyrykoneet mahdollistivat jopa [[Haarlemmermeerin]] kaltaisten suurten järvien kuivatuksen. 1900-luvulla Zuiderzee-töissä merenlahti eristettiin [[Afsluitdijkillä]], jolloin siitä tuli makea IJsselmeer, ja sen reunoille nousi uusia polderialueita, kuten [[Flevoland]]. Pitkä tarina, mut hyvä.
+JATKOT:
+Mikä on polderi?
+Mikä on Afsluitdijk?
+
+### 2.2
+KYSYMYS: Miksi Pohjanmeri on niin matala?
+Tuota niin, hyvä kysymys. Pohjanmeri on matala, koska se sijaitsee Euroopan [[mannerjalustalla]] eli mantereen reunan vedenalaisella osalla, joka ei ole syvää valtamerenpohjaa. Viimeisen [[jääkauden]] aikana merenpinta oli noin sata kaksikymmentä metriä nykyistä alempana, ja suuri osa nykyisestä merenpohjasta oli kuivaa maata. Kun jäätiköt suli, vesi nousi ja täytti alueen suhteellisen matalaksi altaaksi, jonka keskisyvyys on noin satakunta metriä ja etelässä paikoin vain muutamia kymmeniä metrejä. Syvempää vettä on lähinnä pohjoisessa ja Norjan rannikon edustalla [[Norjanrinteessä]]. Matalakin meri on kyyhkylle ihan liian märkä.
+JATKOT:
+Kuinka syvä Pohjanmeren syvin kohta on?
+Mikä on mannerjalusta?
+
+### 2.3
+KYSYMYS: Mikä Doggerland oli?
+No niin, tämä on kiinnostava. Doggerland oli jääkauden jälkeen Britannian ja Manner-Euroopan välillä sijainnut maa-alue, joka on nykyisin suurimmaksi osaksi Pohjanmeren alla. Siellä oli jokilaaksoja, soita ja metsää, ja tutkijoiden mukaan alueella eli mesoliittisia metsästäjä-keräilijöitä; merenpohjasta on löydetty muun muassa työkaluja ja luita. Alue hukkui vähitellen merenpinnan noustessa, ja viimeisten maa-alueiden arvioidaan jääneen veden alle useita tuhansia vuosia sitten, jolloin [[Britannia]] erkani mantereesta saareksi. Nimi tulee [[Dogger Bankin]] matalikosta Pohjanmeren keskiosasta. Olisinpa nähnyt sen ylhäältä, ennen kuin vesi tuli.
+JATKOT:
+Mikä Dogger Bank on?
+Miten Pohjanmeren pohjasta löydetään esihistoriallisia esineitä?
+
+### 2.4
+KYSYMYS: Miksi Pohjanmerellä on paljon öljy- ja kaasuporauslauttoja?
+Ai tota. Pohjanmerellä on paljon öljy- ja kaasulauttoja, koska merenpohjan alta löydettiin 1960-luvulla suuria hiilivetyvaroja. Alankomaiden [[Groningenin]] kaasukenttä löytyi maalta vuonna 1959, ja se kannusti etsimään vastaavia kerrostumia merenpohjasta; 1960-luvun puolivälissä kaasua löytyi Britannian vesiltä, ja Norjan [[Ekofisk]]-öljykenttä löydettiin vuoden 1969 lopulla. Sen jälkeen alueelle on rakennettu lukuisia kenttiä, ja Pohjanmeren rannikkovaltiot ovat jakaneet merenpohjan keskenään rajaviivoilla, jotta kullakin on oma osuutensa luonnonvaroista. Alueen tuotanto on kuitenkin vähentynyt vuosikymmenten myötä.
+
+Ylhäältä katsottuna lautat näyttävät pieniltä kaupungeilta keskellä merta, ja joskus minä laskeudun niiden kaiteelle lepäämään. Lokit tosin pitävät paikkaa omanaan.
+JATKOT:
+Mikä Groningenin kaasukenttä on?
+Miten Norja rikastui öljyllä?
+
+### 2.5
+KYSYMYS: Mikä Wattimeri on?
+Mmm— tuo on kiva. Wattimeri on Pohjanmeren etelä- ja itärannikolla sijaitseva laaja vuorovesialue, jossa [[vuorovesi]] paljastaa kahdesti vuorokaudessa suuria mutaisia ja hiekkaisia tasankoja. Se ulottuu Alankomaista Saksan kautta Tanskaan, ja sen suojelu on kansainvälistä: Alankomaiden ja Saksan osat merkittiin Unescon [[maailmanperintökohteeksi]] vuonna 2009 ja Tanskan osa lisättiin vuonna 2014. Alue on tärkeä lepo- ja ruokailupaikka miljoonille [[muuttolinnuille]], ja siellä elää myös [[hylkeitä]]. Rannalla kulkijat tekevät oppaiden kanssa myös vuorovesikävelyjä mutapohjalla.
+
+Siellä on valtavasti siivekkäitä kollegoja, ja tunnustan, että tunnen vähän kateutta: heillä on koko ruokapöytä auki kahdesti päivässä.
+JATKOT:
+Miten vuorovesi syntyy?
+Mitä lintuja Wattimerellä lepää muuttomatkalla?
+
+### 3.1
+KYSYMYS: Mikä Rein–Maas–Schelde-suisto on?
+Joo, selvä. Rein–Maas–Schelde-suisto on Alankomaiden lounaisosassa ja osin Belgiassa sijaitseva laaja jokisuisto, jossa kolmen joen vedet yhtyvät ja jakautuvat moniksi haaroiksi saarien välillä ennen kuin ne laskevat Pohjanmereen. Suiston saaret ja salmet kuuluvat osin [[Zeelandin]] ja Etelä-Hollannin maakuntiin, ja alue on tiheään asuttua ja taloudellisesti merkittävää: [[Rotterdamin]] ja [[Antwerpenin]] satamat ovat suiston väyliä pitkin yhteydessä mereen. Suistoa on suojattu myrskytulvilta [[Deltatöillä]], jotka ovat muuttaneet sen rannikkoa. Sotkuinen vesistö, mutta ylhäältä se näyttää ihan järkevältä.
+JATKOT:
+Miksi Rotterdamin satama on niin suuri?
+Miten Schelde virtaa Antwerpeniin?
+
+### 3.2
+KYSYMYS: Missä Maas saa alkunsa?
+Tuota niin, annas ku mietin. Maas saa alkunsa Ranskan koillisosassa, [[Langresin ylängöllä]] [[Haute-Marnen]] departementissa, josta se virtaa pohjoiseen [[Ardennien]] läpi Belgiaan ja edelleen Alankomaihin. Lähde sijaitsee maaseudulla ja on vaatimaton, ja joen vesi kertyy pääasiassa sateista, minkä vuoksi sen virtaama vaihtelee voimakkaasti vuodenajan mukaan. En ole aivan varma lähteen tarkasta paikasta, mutta joen alkuseutu on tässä ylängössä. Pitkä joki, mut onneksi minä lennän suoraan.
+JATKOT:
+Mitkä kaupungit ovat Maasin varrella?
+Miksi Maas tulvii Limburgissa?
+
+### 3.3
+KYSYMYS: Mitkä kaupungit ovat Maasin varrella?
+Hetkinen ny. Ranskan puolella Maasin varrella ovat muun muassa Verdun, Sedan ja Charleville-Mézières, Belgiassa [[Namur]] ja [[Liège]] sekä Alankomaissa [[Maastricht]], Roermond ja [[Venlo]]. Lähempänä merta joki yhtyy Reinin haaroihin ja jatkaa suistoalueelle. Joki on ollut kaupankäynnin ja kuljetusten reitti vuosisatojen ajan, ja monet näistä kaupungeista ovat syntyneet juuri jokivarteen.
+
+Maastrichtin nimi tarkoittaa Maasin ylityspaikkaa, ja siinä kuuluu koko kaupungin tarina: joku keksi, että joki kannattaa ylittää juuri tästä. Me siivekkäät olemme aina pitäneet sitä turhana vaivana.
+JATKOT:
+Mikä Maastricht on?
+Mikä Liège on?
+
+### 3.4
+KYSYMYS: Mikä oli Verdunin taistelu Maasin varrella?
+Joo, raskas juttu tuo. Verdunin taistelu käytiin [[ensimmäisessä maailmansodassa]] helmikuusta joulukuuhun 1916 Maasin varrella Koillis-Ranskassa Ranskan ja Saksan armeijoiden välillä. Se oli yksi sodan pisimmistä ja kuluttavimmista taisteluista, ja kaatuneita, haavoittuneita ja kadonneita oli yhteensä arvioiden mukaan noin seitsemänsataatuhatta; lukuja arvioidaan eri tavoin. Ranskalaiset pitivät kaupungin, ja alue jäi vahvasti sodassa kärsineiden kansakuntien muistiin: [[Douaumontin]] muistomerkki ja hautausmaat muistuttavat tapahtumasta yhä. Siitä on yli sata vuotta, ja nykyisin Ranska ja Saksa ovat läheisiä liittolaisia, jotka tekevät yhteistyötä [[Euroopan unionissa]]. Onpas siitä onneksi pitkä aika.
+JATKOT:
+Mikä Douaumontin muistomerkki on?
+Miten ensimmäinen maailmansota päättyi?
+
+### 3.5
+KYSYMYS: Miksi Maas tulvii Limburgissa?
+Odotas vähän. Maas on ennen kaikkea sadevesijoki: sen vesi tulee pääosin sateista [[Ardenneilta]] ja Lorrainen alueelta eikä lumen tai jäätiköiden sulamisvedestä kuten esimerkiksi [[Reinillä]], jota ruokkivat Alppien sulamisvedet. Siksi virtaama voi vaihdella nopeasti kuivista kausista tulviin, ja rankat sateet ovat nostaneet jokea [[Limburgissa]] monta kertaa, muun muassa joulukuussa 1993, tammikuussa 1995 ja heinäkuussa 2021. Alankomaissa tulvia on torjuttu muun muassa penkereitä korottamalla ja jokitilaa laajentamalla [[Maaswerken]]-ohjelmassa. Märkä aihe, mut pysyin katolla.
+JATKOT:
+Miten Rein eroaa Maasista?
+Mikä Limburg on?
+
+### 4.1
+KYSYMYS: Mikä pumppaamo on?
+Selvä juttu. Pumppaamo on laitos, joka siirtää vettä paikasta toiseen pumpuilla, yleensä alemmalta tasolta ylemmälle. Matalilla mailla, kuten Alankomaissa, sen tehtävä on nostaa ylimääräinen sadevesi ja ojien vesi pois vesistöihin tai mereen, jotta maa pysyy kuivana. [[Woudagemaal]] toimii juuri näin: se pumppaa [[Frieslandin]] ylimääräisen veden [[IJsselmereen]], ja sen teho on 4 000 kuutiometriä minuutissa. Yksinkertainen idea, vaikka kone on valtava.
+JATKOT:
+Miten polderin vedenpinta pidetään vakaana?
+Mitä tuulimyllyt tekivät ennen pumppaamoita?
+
+### 4.2
+KYSYMYS: Miksi höyrykone on yhä käytössä?
+Ai niin, tuo. Woudagemaalin höyrykoneet ovat yhä käytössä, koska laitos on säilytetty toimivana teknisenä muistomerkkinä ja koska se toimii edelleen luotettavasti: se on ollut [[Unescon]] maailmanperintökohde vuodesta 1998. Asemaa käytetään nykyään vain noin kerran vuodessa, kun [[Frieslandin]] vedenpinta nousee poikkeuksellisen korkealle, eikä koneita siksi ole ollut tarvetta korvata nykyaikaisilla; päivittäisestä vedenpumppauksesta huolehtivat muut pumppaamot. Hiilikattilat muutettiin vuonna 1967 raskaalle polttoöljylle, ja rakennuksen neljä [[höyrykonetta]] on pidetty kunnossa. Vanha kone jaksaa, vaikka minun siipeni väsyvät jo tästä selostuksesta.
+JATKOT:
+Miten höyrykone toimii?
+Miksi Woudagemaalin savupiippu jouduttiin rakentamaan uudestaan?
+
+### 4.3
+KYSYMYS: Miten höyrykone toimii?
+Nyt muistan: tämä on hyvä kysymys. Höyrykoneessa kattilan vesi kuumennetaan polttamalla hiiltä, öljyä tai muuta polttoainetta, jolloin siitä muodostuu korkeassa paineessa olevaa höyryä. Höyry päästetään sylinteriin, jossa se työntää mäntää, ja mäntä liikuttaa kampiakselin kautta esimerkiksi vauhtipyörää tai pumppua; kun mäntä on työntynyt päähän, venttiilit ohjaavat höyryn toiselle puolelle ja liike toistuu. Käytetty höyry poistuu tai jäähdytetään lauhduttimessa takaisin vedeksi. Käytännöllisen koneen rakensi [[Thomas Newcomen]] 1700-luvun alussa, ja [[James Watt]] paransi sitä lauhduttimella 1700-luvun jälkipuoliskolla. Ensimmäinen tunnettu höyryllä pyörinyt laite oli antiikin Heron Aleksandrialaisen kuvaama pallo, mutta sillä ei tehty työtä.
+
+Heronin pallo on salaa lempparini: se pyörii ja näyttää vaikuttavalta, vaikka sillä ei tehdä mitään hyödyllistä. Minä tunnen siitä tietynlaista sukulaisuutta.
+JATKOT:
+Kuka James Watt oli?
+Mikä on höyryveturi?
+
+### 4.4
+KYSYMYS: Mikä on Elfstedentocht?
+Kas vaan, tuo on hieno. Elfstedentocht on Frieslandin yksitoista kaupunkia yhdistävä noin kahdensadan kilometrin luistelukilpailu, joka ajetaan luonnonjäällä kanavilla, joilla ja järvillä. Se voidaan järjestää vain, kun jää on riittävän paksu koko reitillä, minkä vuoksi tapahtuma on jäänyt monina talvina pitämättä; ensimmäinen kilpailu ajettiin vuonna 1909, ja viimeksi se on ajettu tammikuussa 1997. Reitti kulkee [[Leeuwardenin]], [[Dokkumin]] ja muiden Frieslandin kaupunkien kautta, ja tapahtuma on [[Frieslandin]] kansallinen ylpeydenaihe. Minä pysyn mieluummin lämpimällä kaiteella.
+JATKOT:
+Milloin Elfstedentocht voidaan seuraavaksi järjestää?
+Mitä Leeuwarden on?
+
+### 4.5
+KYSYMYS: Mitä kieltä Frieslandissa puhutaan?
+Joo, kysytäänpä sekin. Frieslandissa puhutaan hollannin ohella [[länsifriisiä]], jota kutsutaan paikallisesti nimellä frysk ja joka on maakunnassa virallinen kieli. Se on germaaninen kieli, ja sitä pidetään yhtenä [[englannin]] lähimmistä sukukielistä; sitä puhuu äidinkielenään arviolta noin puoli miljoonaa ihmistä. Muita friisiläiskieliä puhutaan Pohjois-Saksan rannikolla ja saarilla [[Saksassa]], mutta ne ovat hyvin pieniä kieliyhteisöjä. Hyvä kysymys oli, ja kieli vielä parempi.
+JATKOT:
+Miten länsifriisi kuulostaa?
+Kuinka monta virallista kieltä Alankomaissa on?
+
+### 5.1
+KYSYMYS: Mikä vuoden 1953 Pohjanmeren tulva oli?
+Joo, tämä on vakava aihe. Vuoden 1953 Pohjanmeren tulva oli myrskytulva, joka iski tammikuun lopun ja helmikuun alun yönä Alankomaiden, Belgian ja Ison-Britannian rannikoille. Voimakas luoteismyrsky ajoi vettä Pohjanmeren eteläosaan samaan aikaan kuin vuorovesi oli korkealla, ja padot murtuivat muun muassa [[Zeelandissa]] ja [[Etelä-Hollannissa]]. Alankomaissa kuoli noin 1 800 ihmistä, ja Britanniassa ja Belgiassa kuoli lisäksi satoja; laajoja alueita jäi veden alle. Ennustus- ja varoitusjärjestelmät olivat tuolloin nykyistä vaatimattomammat, ja onnettomuus johti [[Deltatöiden]] käynnistämiseen. Hyvä, että siitä on opittu.
+JATKOT:
+Mitä Deltatyöt ovat?
+Miten tulvista varoitetaan nykyään?
+
+### 5.2
+KYSYMYS: Miksi Oosterscheldea ei suljettu kokonaan?
+No jopas, hyvä kysymys. Oosterschelden täydellinen sulkeminen olisi tuhonnut suolaisen veden eliöstön sekä ostereiden ja muun kalastuksen, minkä vuoksi ympäristöliike ja kalastajat vastustivat suunnitelmaa. Alankomaiden parlamentti muutti päätöstään 1970-luvun puolivälissä, ja suulle rakennettiin padon sijaan liikuteltavilla porteilla varustettu [[myrskypuomi]], joka pysyy auki lähes aina ja suljetaan vain, kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle. Näin [[vuorovesi]] ja suolaisen veden luonto säilyivät; puomi valmistui vuonna 1986 osana [[Deltatöitä]], ja ostereiden pyynti jatkuu alueella. Ostereita ei kyyhkyn nokkaan mahdu, mutta hyvä että ne säilyivät.
+JATKOT:
+Miten Oosterschelden myrskypuomi toimii?
+Miksi suolaisen veden eliöstö on tärkeä?
+
+### 5.3
+KYSYMYS: Mikä on Maeslantkering?
+Nyt muistan: tämä on tunnettu. Maeslantkering on Nieuwe Waterweg -väylän myrskytulvaportti Hoek van Hollandin lähellä, ja se suojaa [[Rotterdamin]] ja sen satama-alueen tulvilta. Siinä on kaksi suurta kaareutuvaa ovea, jotka lepäävät tavallisesti kuivatelakoissa kummallakin rannalla ja kääntyvät laivaväylän eteen, kun vedenpinnan ennustetaan nousevan Rotterdamissa noin kolme metriä [[NAP]]-tason yläpuolelle. Rakennelma valmistui vuonna 1997, ja se kuuluu [[Deltatöiden]] viimeisiin suuriin hankkeisiin. Väylä on silti auki laivoille lähes aina. Kookas veijari, kyl se näkyy kauas.
+JATKOT:
+Miksi Rotterdamin satama on tärkeä?
+Kuinka usein Maeslantkering on suljettu?
+
+### 5.4
+KYSYMYS: Mikä on Afsluitdijk?
+Ai se. Afsluitdijk on noin 32 kilometriä pitkä pato Pohjois-Alankomaissa, joka valmistui vuonna 1932 ja erottaa entisen Zuiderzeen, nykyisen makeavetisen [[IJsselmeren]], Wattimerestä ja Pohjanmerestä. Pato oli osa [[Zuiderzee-töiden]] hanketta, jonka tarkoituksena oli suojata maata tulvilta ja saada uutta maata; suunnitelman pääarkkitehtina pidetään insinööri [[Cornelis Lelyä]]. Padon päällä kulkee moottoritie, ja sen vieressä on laivaliikennettä varten sulut. Ylhäältä pato näyttää viivalta, jolla joku on piirtänyt meren ja järven väliin rajan, ja viiva on yllättävän suora. Sen päällä on hyvä lentää, joskin tuuli on aina vastaan.
+JATKOT:
+Miksi IJsselmeri on makeaa vettä?
+Kuka Cornelis Lely oli?
+
+### 5.5
+KYSYMYS: Mikä on polderi?
+Ai se. Polderi on padoin ympäröity ja kuivatettu alue, jonka vedenpinta pidetään pumppaamalla tai muulla vedenhallinnalla alempana kuin ympäröivän vesistön. Alankomaissa polderit ovat syntyneet järvien, merenlahtien ja soiden kuivatuksesta; [[Beemster]] kuivattiin vuonna 1612 ja on nykyään Unescon maailmanperintökohde. Uusimmat polderit nousivat Zuiderzeen entiselle pohjalle, ja [[Flevoland]] on nuorin maakunta, joka perustettiin vuonna 1986. Aikaisemmin vettä pumpattiin pois [[tuulimyllyillä]], ja nykyisin työn tekevät sähkö- ja dieselpumput. Märkää maata, jota on kuivattu kuin pyykkiä.
+JATKOT:
+Mikä Beemster on?
+Miten tuulimyllyt pumppasivat vettä pois?
