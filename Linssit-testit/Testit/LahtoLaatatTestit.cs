@@ -321,6 +321,66 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(kanssa.silmaMin >= kanssa.silmaSaapui - 6, $"kierre ei laske saapumiskorkeutta alemmas: {kanssa.silmaSaapui:F0} → min {kanssa.silmaMin:F0} m (ilman kenttää {ilman.silmaSaapui:F0} → {ilman.silmaMin:F0} m)");
         }
 
+        public static (double kiihd, double jarru, double nyk, double kesto, double vmax) LentoProfiili((string n, double la, double lo, double koko, double kor) a, (string n, double la, double lo, double koko, double kor) b, (string n, double la, double lo, double koko, double kor) c)
+        {
+            bool p0 = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
+            try
+            {
+                var jono = new List<(string, double, double)> { (a.n, a.la, a.lo), (b.n, b.la, b.lo), (c.n, c.la, c.lo) };
+                var tied = new[] { a, b, c };
+                var s = new OpasSilmukka(new Kuvakulma(a.la, a.lo, 420, 58, 290, 76));
+                var pyynnot = new List<(int n, string t)>();
+                s.Pyyda += (n, t) => pyynnot.Add((n, t));
+                double puheAlkoi = -1, t = 0; s.AlkaaPuhua += k => puheAlkoi = t;
+                s.Aloita("Testi"); s.AloitaKierros(jono);
+                const double dt = 1 / 60.0; int vastattu = 0;
+                var p = new List<(double e, double n, double u)>();
+                for (; t < 400; t += dt)
+                {
+                    while (vastattu < pyynnot.Count)
+                    {
+                        var (n, nimi) = pyynnot[vastattu++]; int i0 = Array.FindIndex(tied, x => x.n == nimi);
+                        if (i0 < 0) continue; var x0 = tied[i0];
+                        s.Vastaus(n, new OpasKohde { Id = x0.n, Nimi = x0.n, Lat = x0.la, Lon = x0.lo, KokoM = x0.koko, KorkeusM = x0.kor, KestoS = 5, Kierros = true });
+                    }
+                    s.Paivita(dt, _ => 35);
+                    if (s.Vaihe == OpasVaihe.Lentaa && s.Nykyinen?.Id == b.n) { var k = OpasKuvaus.KameraPaikka(s.Asento, a.la, a.lo); p.Add((k.e, k.n, k.u)); }
+                    else if (p.Count > 0) break;
+                    if (s.Vaihe == OpasVaihe.Puhuu && puheAlkoi >= 0 && t - puheAlkoi > 5) { s.AaniLoppui(); puheAlkoi = -1; }
+                }
+                var v = new List<double>(); var acc = new List<double>();
+                for (int i = 1; i < p.Count; i++) v.Add(Math.Sqrt(Math.Pow(p[i].e - p[i - 1].e, 2) + Math.Pow(p[i].n - p[i - 1].n, 2) + Math.Pow(p[i].u - p[i - 1].u, 2)) / dt);
+                for (int i = 2; i < p.Count; i++)
+                {
+                    double ax = (p[i].e - 2 * p[i - 1].e + p[i - 2].e) / (dt * dt), ay = (p[i].n - 2 * p[i - 1].n + p[i - 2].n) / (dt * dt), az = (p[i].u - 2 * p[i - 1].u + p[i - 2].u) / (dt * dt);
+                    acc.Add(Math.Sqrt(ax * ax + ay * ay + az * az));
+                }
+                int iv = 0; for (int i = 0; i < v.Count; i++) if (v[i] > v[iv]) iv = i;
+                double ki = 0, ja = 0, ny = 0;
+                for (int i = 0; i < acc.Count; i++) { if (i < iv) ki = Math.Max(ki, acc[i]); else ja = Math.Max(ja, acc[i]); if (i > 0) ny = Math.Max(ny, Math.Abs(acc[i] - acc[i - 1]) / dt); }
+                return (ki, ja, ny, p.Count * dt, v.Count > 0 ? v[iv] : 0);
+            }
+            finally { OpasSilmukka.PalloLento = p0; }
+        }
+        public static readonly (string, double, double, double, double) PConcorde = ("Concorden aukio", 48.8656, 2.3212, 360, 0), PEiffel = ("Eiffel-torni", 48.8583, 2.2945, 125, 330),
+            PRiemu = ("Riemukaari", 48.8738, 2.2950, 50, 50), PChamps = ("Champs-Élysées", 48.8698, 2.3078, 1900, 0), PSacre = ("Sacré-Cœur", 48.8867, 2.3431, 85, 83), PBastille = ("Bastille", 48.8532, 2.3691, 100, 50);
+
+        // PEHMEÄ JARRUTUS (PT 9.10., Pariisin kulma-arkki: Eiffelin lennolla jarrutus 63 vs kiihdytys 35 m/s², Riemukaari ja
+        // Sacré-Cœur 115/102 m/s² kiihdytyksessä): pitkät pallolennot kaarenpituuden mukaan 7. asteen S-käyrällä. Ruuduittain 60 Hz
+        // (ennen → jälkeen): Eiffel 35/63/27 → 47/39/17, Riemukaari 115/82/71 → 52/50/19, Sacré-Cœur 102/67/41 → 80/68/30
+        // (kiihdytys/jarrutus m/s², nykäys m/s³); kesto ennallaan.
+        [Testi] static void PitkatPallolennotJarruttavatPehmeasti()
+        {
+            foreach (var (a, b, d) in new[] { (PConcorde, PEiffel, PRiemu), (PEiffel, PRiemu, PChamps), (PChamps, PSacre, PBastille) })
+            {
+                var r = LentoProfiili(a, b, d);
+                string m = $"{b.Item1}: kiihdytys {r.kiihd:F0}, jarrutus {r.jarru:F0} m/s², nykäys {r.nyk:F0} m/s³, kesto {r.kesto:F1} s";
+                Oleta.Tosi(r.jarru <= r.kiihd + 1, "jarrutus enintään kiihdytys: " + m);
+                Oleta.Tosi(Math.Max(r.kiihd, r.jarru) <= 85 && r.nyk <= 40, "huippu ja nykäys: " + m);
+                Oleta.Tosi(Math.Abs(r.kesto - 18) < 0.5, "kesto ennallaan: " + m);
+            }
+        }
+
         // Video8 8.10.: siirron maanäyte pyydettiin ennen kuin kaupunki oli auki (hylättiin hiljaa) → siirto aina aikarajaan.
         [Testi] static void SiirtoPyytaaMaanNaytteenUudelleen()
         {

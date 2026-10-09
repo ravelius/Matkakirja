@@ -372,9 +372,69 @@ namespace Matkakirja.Linssit.Kierros
             return suurin;
         }
 
-        static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka, double rhoMin = 0)
+        // PEHMEÄ JARRUTUS PITKILLÄ PALLOLENNOILLA (PT 9.10., Raamattu: pallo ei "mätkähdä maahan", TF 144; Pariisin kulma-arkki:
+        // Eiffelin lennolla jarrutus 63 m/s² vs kiihdytys 35, Riemukaari ja Sacré-Cœur päinvastoin 115/102 vs 82/67): van Wijk–Nuij-
+        // polun silmän nopeus riippuu polun muodosta (korkeus, kaari), joten ajan S-käyrä ei yksin pidä kiihdytystä ja jarrutusta
+        // tasapainossa. Pitkällä lennolla (≥ PalloTasainenRajaM) polku parametroidaan silmän kaarenpituuden mukaan: silmä kulkee
+        // saman reitin, mutta kuljettu matka seuraa 7. asteen S-käyrää S(τ), τ = t + PalloJarruVino·t·(1 − t) eli loppuhidastus
+        // on hieman alkukiihdytystä pidempi. Kesto ennallaan; kääntö, kallistus ja zoomaus seuraavat samaa parametria.
+        public const double PalloTasainenRajaM = 1500, PalloJarruVino = 0.15;
+        const int TasainenN = 96;
+        static readonly double[] tasainenP = new double[TasainenN + 1], tasainenS = new double[TasainenN + 1], tasainenM = new double[TasainenN + 1];
+        static Kuvakulma tasainenA, tasainenB; static double tasainenRho = double.NaN;
+
+        static double TasainenParametri(Kuvakulma a, Kuvakulma b, double t, double matka, double rhoMin)
         {
-            double p = Eteneminen(t, matka);
+            if (!(SamaKulma(a, tasainenA) && SamaKulma(b, tasainenB) && rhoMin == tasainenRho))
+            {
+                tasainenA = a; tasainenB = b; tasainenRho = rhoMin;
+                (double e, double n, double u) ed = default;
+                for (int i = 0; i <= TasainenN; i++)
+                {
+                    double p = (double)i / TasainenN;
+                    var k = KameraPaikka(PalloPolku(a, b, p, matka, rhoMin), a.Lat, a.Lon);
+                    tasainenP[i] = p;
+                    tasainenS[i] = i == 0 ? 0 : tasainenS[i - 1] + Math.Sqrt((k.e - ed.e) * (k.e - ed.e) + (k.n - ed.n) * (k.n - ed.n) + (k.u - ed.u) * (k.u - ed.u));
+                    ed = k;
+                }
+                // p(s) luonnollisena kuutiosplinina (toiset derivaatat M): lineaarinen tulkinta portaisti nopeuden solmukohdissa
+                // (kiihtyvyyspiikit), spline pitää nopeuden ja kiihtyvyyden jatkuvina.
+                var c = new double[TasainenN + 1]; var dd = new double[TasainenN + 1];
+                tasainenM[0] = tasainenM[TasainenN] = 0; c[0] = 0; dd[0] = 0;
+                for (int i = 1; i < TasainenN; i++)
+                {
+                    double h0 = Math.Max(1e-9, tasainenS[i] - tasainenS[i - 1]), h1 = Math.Max(1e-9, tasainenS[i + 1] - tasainenS[i]);
+                    double r = 6 * ((tasainenP[i + 1] - tasainenP[i]) / h1 - (tasainenP[i] - tasainenP[i - 1]) / h0);
+                    double m = 2 * (h0 + h1) - h0 * c[i - 1];
+                    c[i] = h1 / m; dd[i] = (r - h0 * dd[i - 1]) / m;
+                }
+                for (int i = TasainenN - 1; i >= 1; i--) tasainenM[i] = dd[i] - c[i] * tasainenM[i + 1];
+            }
+            double kokonais = tasainenS[TasainenN];
+            if (kokonais < 1) return Eteneminen(t, matka);
+            double tau = t + PalloJarruVino * t * (1 - t);
+            double x = Math.Max(0, Math.Min(1, tau)), x4 = x * x * x * x;
+            // 7. asteen S-käyrä (C3): myös nykäys alkaa ja loppuu nollasta, joten kiihtyvyys kasvaa saumoissa pehmeästi
+            // (PalloKierrosTestit: smootherstepillä lähtösauman kiihtyvyys hyppäsi 1,3 m/s² kolmessa ruudussa).
+            double kohde = x4 * (35 - 84 * x + 70 * x * x - 20 * x * x * x) * kokonais;
+            int lo = 0, hi = TasainenN;
+            while (hi - lo > 1) { int m = (lo + hi) / 2; if (tasainenS[m] <= kohde) lo = m; else hi = m; }
+            double hh = tasainenS[hi] - tasainenS[lo];
+            if (hh < 1e-9) return tasainenP[lo];
+            double A1 = (tasainenS[hi] - kohde) / hh, B1 = 1 - A1;
+            double tulos = A1 * tasainenP[lo] + B1 * tasainenP[hi] + ((A1 * A1 * A1 - A1) * tasainenM[lo] + (B1 * B1 * B1 - B1) * tasainenM[hi]) * hh * hh / 6;
+            return Math.Max(0, Math.Min(1, tulos));
+        }
+
+        static bool SamaKulma(Kuvakulma x, Kuvakulma y) =>
+            x.Lat == y.Lat && x.Lon == y.Lon && x.EtaisyysM == y.EtaisyysM && x.Kallistus == y.Kallistus && x.Suuntima == y.Suuntima && x.KatseKorkeusM == y.KatseKorkeusM;
+
+        static Kuvakulma PalloLennossa(Kuvakulma a, Kuvakulma b, double t, double matka, double rhoMin = 0) =>
+            PalloPolku(a, b, matka >= PalloTasainenRajaM ? TasainenParametri(a, b, t, matka, rhoMin) : Eteneminen(t, matka), matka, rhoMin);
+
+        /// <summary>Pallolennon asento polun parametrilla p (0–1; van Wijk–Nuij-zoomauspolku).</summary>
+        static Kuvakulma PalloPolku(Kuvakulma a, Kuvakulma b, double p, double matka, double rhoMin)
+        {
             double w0 = Math.Max(1, a.EtaisyysM), w1 = Math.Max(1, b.EtaisyysM);
             var (sv, et) = ZoomPolku(w0, w1, matka, p);
             double V(double x, double y) => x + (y - x) * sv;
