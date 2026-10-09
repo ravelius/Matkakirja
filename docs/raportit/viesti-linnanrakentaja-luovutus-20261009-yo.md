@@ -123,7 +123,7 @@ Diagnoosi 9.10.:
 - Fotogrammetrian kuoressa kolmioiden kiertosuunta on sekalainen, joten n·v-testi ei kerro takapinnoista mitään.
 - Kevennetyt LOD-tasot eivät läpäise lod0:n syvyyskuvan 0,25 m:n näkyvyystestiä, joten LOD-tasoille käytetään löysempää toleranssia.
 
-## Lisäys 9.10. klo 21.3x: ND:n muotokorjaus, vaiheet 2–6 tehty (lähde v10, ei vielä vientiä)
+## Lisäys 9.10. klo 20.5x: ND:n muotokorjaus, vaiheet 2–6 tehty (lähde v10, ei vielä vientiä)
 
 Lähde on `notre-dame-v1/lahde/notre_dame.py` (v10). v9 on tallessa kansioissa `lahde-v9-ennen-muotoa/` ja `glb-v9/`.
 Pikaesikatselu: `Blender -b --factory-startup -P lahde/notre_dame.py -- --nopea` (6 s, Workbench, ei maata, puita eikä AO:ta).
