@@ -1,0 +1,188 @@
+================ KOHTA 61 (nosto:minervan-norsu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+
+### 61.1
+KYSYMYS: Miten viisi ja puoli metriä korkea obeliski nostettiin norsun selkään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+
+### 61.2
+KYSYMYS: Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+### 61.3
+KYSYMYS: Miksi roomalaisten mielestä marmorinorsu muistutti enemmän possua kuin norsua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Norsu kantaa obeliskia
+Tietoruudun teksti: Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kaupunkilehti / Rooma: Norsu kantaa obeliskia] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+- [Rooma — kohdekartta / Kohdekartta: Norsu ja obeliski] Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista muinaisobeliskista pienin, viisi ja puoli metriä — ja muinaisobeliskeja on Roomassa enemmän kuin missään muussa kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli heidän mielestään pieni ja pyöreä.
+
+### 61.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+### 61.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 61 YHTEINEN KONTEKSTI
+
+================ KOHTA 62 (nosto:aqua-virgo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Aqua Virgo] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 62.1
+KYSYMYS: Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin ilman nykyvälineitä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+### 62.2
+KYSYMYS: Mitä Rooman yhdestätoista akveduktista on yhä käytössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 62.3
+KYSYMYS: Miksi Aqua Virgo vedettiin melkein koko matkaltaan maan alle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Vesi kulkee yhä
+Tietoruudun teksti: Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Aqua Virgo] Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille lähteen, josta vesi otettiin.
+
+### 62.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+### 62.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 62 YHTEINEN KONTEKSTI
+
+================ KOHTA 63 (nosto:rooman-nasone) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Nasone] Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+- [Hongkong — maalehti / Luonto: Kuusikulmaiset pylväät ja ensimmäiset dinosauruksen luut] 2009–2024 — Hongkongin geopuisto avattiin 3. marraskuuta 2009, ja Unesco liitti sen maailmanlaajuiseen geopuistoverkostoon 18. syyskuuta 2011. Alaa on yli 150 neliökilometriä Uusien alueiden itä- ja koillisosassa. Sai Kungin puolella maa on purkauksissa syntynyttä tuffia, joka jäähtyessään halkeili pystysuoriksi pylväiksi: High Islandilla ne ovat suoria ja yhdensuuntaisia, Ninepin-saarilla jopa kolmen metrin paksuisia. Koillisessa kivi on sedimenttiä, ja Tolo-salmen vanhin kerros on noin 400 miljoonaa vuotta vanha. Vuonna 2024 Port Islandilta löytyivät Hongkongin ensimmäiset dinosauruksen luut.
+
+### 63.1
+KYSYMYS: Miksi nasoneiden annetaan juosta yötä päivää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Nasone] Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+
+### 63.2
+KYSYMYS: Mistä nasoneiden vesi tulee kaupunkiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Nasone] Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+
+### 63.3
+KYSYMYS: Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Iso nenä joka kulmassa
+Tietoruudun teksti: Rooman kaduilla seisoo valurautaisia pylväitä, joiden koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — maalehti / Luonto: Kuusikulmaiset pylväät ja ensimmäiset dinosauruksen luut] 2009–2024 — Hongkongin geopuisto avattiin 3. marraskuuta 2009, ja Unesco liitti sen maailmanlaajuiseen geopuistoverkostoon 18. syyskuuta 2011. Alaa on yli 150 neliökilometriä Uusien alueiden itä- ja koillisosassa. Sai Kungin puolella maa on purkauksissa syntynyttä tuffia, joka jäähtyessään halkeili pystysuoriksi pylväiksi: High Islandilla ne ovat suoria ja yhdensuuntaisia, Ninepin-saarilla jopa kolmen metrin paksuisia. Koillisessa kivi on sedimenttiä, ja Tolo-salmen vanhin kerros on noin 400 miljoonaa vuotta vanha. Vuonna 2024 Port Islandilta löytyivät Hongkongin ensimmäiset dinosauruksen luut.
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Pylväät jotka kertovat suvusta] Tlingit-kansa jakautuu kahteen puoliskoon, Korppiin ja Kotkaan, jotka jakautuvat edelleen lukuisiin sukuihin; suku ja omaisuus periytyvät äidin kautta, ja jokainen lapsi kuuluu äitinsä puoliskoon. Suvun tunnukset — korppi, kotka, susi, karhu tai muu eläinolento — veistettiin totemipylväisiin, kanoottien kylkiin ja hirsitalojen seinäpylväisiin kertomaan katsojalle, kenen suvun ja puoliskon alueella tämä oli. Sitkan alkuperäinen väestö tunnetaan nimellä Sheetʼká Ḵwáan, ja juuri Kiksʼádi-suku puolusti vuonna 1804 aluettaan venäläisiä vastaan. Pylväät eivät olleet jumalankuvia vaan sukujen kirjoittamatonta historiaa ja omistusoikeutta puuhun kaiverrettuna.
+
+### 63.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI
+
+### 63.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 63 YHTEINEN KONTEKSTI

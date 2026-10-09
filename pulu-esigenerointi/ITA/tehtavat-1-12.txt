@@ -1,0 +1,270 @@
+================ KOHTA 56 (kohde:hahmotelma-teano) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+
+### 56.1
+KYSYMYS: Miksi Garibaldi luovutti vallan kuninkaalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Italia on nuorempi kuin luulisi] 1861 — Saapasmaa oli vuosisatoja tilkkutäkki kuningaskuntia, herttuakuntia ja kaupunkivaltioita, jotka sotivat keskenään ja puhuivat eri murteita. Yhtenäinen Italia syntyi vasta 1861, ja sen kokosi punapaitainen sissipäällikkö Giuseppe Garibaldi, joka valtasi tuhannen vapaaehtoisen voimin puoli niemimaata ja luovutti sen sitten kuninkaalle kädenpuristuksella. Kun valtio syntyi, vain harva osasi yhteistä italiaa — kieli opittiin vasta koulusta, radiosta ja televisiosta.
+
+### 56.2
+KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Teano (historia)
+Tietoruudun teksti: Teano on Campanian Casertan maakunnassa sijaitseva kaupunki noin 30 kilometriä Casertasta luoteeseen Napolin ja Rooman välisen pääradan varrella. Se sijaitsee sammuneen Rocca Monfina -tulivuoren kaakkoisrinteellä. Kaupunki on kuuluisa Teanon kädenpuristuksesta 26. lokakuuta 1860: Giuseppe Garibaldi, joka oli vallannut Kahden Sisilian kuningaskunnan Napolin Bourboneilta, puristi Sardinian kuninkaan Viktor Emanuel II:n kättä ja tervehti häntä Italian kuninkaana. Näin Garibaldi uhrasi tasavaltalaiset toiveensa Italian yhtenäisyyden vuoksi. Tapahtuma on suosittu aihe italialaisissa isänmaallisissa patsaissa ja maalauksissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+
+### 56.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+================ KOHTA 57 (kohde:forum-romanum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+
+### 57.1
+KYSYMYS: Miksi Forum jäi lopulta autioksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+
+### 57.2
+KYSYMYS: Mitä Forumin aukiolla tehtiin tavallisena päivänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Forum Romanum (historia)
+Tietoruudun teksti: Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Forum Romanum] Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.
+
+### 57.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+### 57.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 57 YHTEINEN KONTEKSTI
+
+================ KOHTA 58 (kohde:colosseum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+
+### 58.1
+KYSYMYS: Kuka maksoi Colosseumin rakentamisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+
+### 58.2
+KYSYMYS: Miksi rakennusta alettiin kutsua Colosseumiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colosseum (urheilu)
+Tietoruudun teksti: Colosseum eli Flaviusten amfiteatteri rakennettiin Neron tekojärven paikalle keskelle Roomaa: Vespasianus aloitti työn vuonna 72 ja Titus vihki rakennuksen vuonna 80. Se on suurin koskaan rakennettu antiikin amfiteatteri — soikio, joka on 189 metriä pitkä ja 156 metriä leveä ja jonka ulkomuuri on 48 metriä korkea. Katsomoon mahtui arvioiden mukaan 50 000–80 000 katsojaa, ja sisään päästiin kahdeksastakymmenestä numeroidusta portista. Areenan alla oli kaksikerroksinen käytävä- ja häkkiverkosto hypogeum, jossa hissit ja väkipyörät nostivat eläimiä ja lavasteita hiekalle. Ylimmän kerroksen 240 mastonpidikettä kannattivat velariumia, köysiverkon varassa lepäävää purjekangaskatosta, joka piti auringon ja sateen poissa yleisön päältä. Keskiajalla holveissa asuttiin ja tehtiin työtä, ja vuoden 1349 maanjäristys kaatoi eteläisen ulkomuurin: sen kivet kannettiin muualle Roomaan ja marmori poltet…
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+
+### 58.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+### 58.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 58 YHTEINEN KONTEKSTI
+
+================ KOHTA 59 (nosto:rooman-kolikko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Kolikko olan yli] Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+
+### 59.1
+KYSYMYS: Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Kolikko olan yli] Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+
+### 59.2
+KYSYMYS: Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta talteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Kolikko olan yli] Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+
+### 59.3
+KYSYMYS: Mihin Caritaksen ruoka-apu Roomassa menee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kolikko olan yli
+Tietoruudun teksti: Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä jää säännöllisesti kiinni.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+### 59.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+### 59.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 59 YHTEINEN KONTEKSTI
+
+================ KOHTA 60 (nosto:colosseumin-kellari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Areenan kellari] Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+
+### 60.1
+KYSYMYS: Miten kaksikerroksinen kellari käytävineen rakennettiin areenan alle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+### 60.2
+KYSYMYS: Miksi puulattian päälle levitettiin hiekkaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Areenan kellari] Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+
+### 60.3
+KYSYMYS: Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Rooma
+Maa, jossa pelaaja on: Italia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Leijona nousi lattian alta
+Tietoruudun teksti: Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+Isoisän matkakirjamerkintä: Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Areenan kellari] Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.
+
+### 60.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI
+
+### 60.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 60 YHTEINEN KONTEKSTI

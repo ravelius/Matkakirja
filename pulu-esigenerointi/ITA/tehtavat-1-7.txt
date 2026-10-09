@@ -1,0 +1,201 @@
+================ KOHTA 31 (kohde:hahmotelma-garda) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gardajärvi (luonto · järvi)
+Tietoruudun teksti: Gardajärvi on Italian suurin järvi ja suosittu lomakohde Pohjois-Italiassa, Brescian ja Milanon itäpuolella sekä Veronan ja Venetsian länsipuolella. Järvi leikkaa Alppien reunaan, ja jäätiköt muovasivat seudun viime jääkauden lopulla. Sen ranta jakautuu Brescian, Veronan ja Trenton maakuntien kesken. Roomalaisaikana järvi tunnettiin nimellä Benacus, ja jotkut palvoivat järven henkilöitynyttä jumalaa. Nykyinen nimi on germaanista alkuperää ja tulee sanasta warda, vartiopaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Kapaleeshwararin temppeli] 600-luvulta Shivalle omistettu temppeli on Mylaporessa, ja sen arvellaan olevan 600-luvulta ja pallavien rakennuttama. Päätelmä perustuu siihen, että temppeli mainitaan nayanar-pyhimysten hymneissä; 600-luvun Tevaram-kokoelma ylistää sen jumalaa, ja temppeli luetaan Paadal Petra Sthalam -pyhäkköjen joukkoon. Runoilijat Sambandar ja Arunagirinathar kuitenkin sijoittavat temppelin selvästi meren rantaan, kun nykyinen rakennus on kortteleiden sisällä. Nimi tulee sanoista kapala eli pää ja Ishvara, Shivan lisänimi. Puraanien mukaan Brahma jätti Kailasvuorella osoittamatta Shivalle kunnioitusta, jolloin Shiva irrotti yhden hänen viidestä päästään; katumuksekseen Brahma tuli Mylaporeen ja pystytt…
+- [Kano — kohdekartta / Kohdekartta: Dala-kukkula] 600-luku Kaupunki tunnettiin alun perin nimellä Dala tämän kukkulan mukaan, ja bornulaiset lähteet käyttivät sitä nimeä 1400-luvun loppuun asti. Kukkula kohoaa 534 metriin merenpinnasta, ja huipulle nousee 101 porrasta. (Wikipedia merkitsee korkeusluvun itse epäselväksi: sadalla portaalla ei nousta puolta kilometriä.) 600-luvulla kukkulalla asui metsästäjien ja keräilijöiden yhteisö, joka teki rautatöitä. Perimätieto kertoo Barbushesta, kookkaasta ja voimakkaasta miehestä, joka metsästi norsuja kepillään ja kantoi ne selässään kukkulalle. Hän rakensi sinne pyhäkön Tsumburbura-nimiselle jumaluudelle, jota hausat palvoivat ennen islamia. Vain Barbushe sai käydä pyhäkössä, ja hän laskeutui kuk…
+
+### 31.1
+KYSYMYS: Miksi roomalaiset palvoivat järven jumalaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gardajärvi (luonto · järvi)
+Tietoruudun teksti: Gardajärvi on Italian suurin järvi ja suosittu lomakohde Pohjois-Italiassa, Brescian ja Milanon itäpuolella sekä Veronan ja Venetsian länsipuolella. Järvi leikkaa Alppien reunaan, ja jäätiköt muovasivat seudun viime jääkauden lopulla. Sen ranta jakautuu Brescian, Veronan ja Trenton maakuntien kesken. Roomalaisaikana järvi tunnettiin nimellä Benacus, ja jotkut palvoivat järven henkilöitynyttä jumalaa. Nykyinen nimi on germaanista alkuperää ja tulee sanasta warda, vartiopaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Kapaleeshwararin temppeli] 600-luvulta Shivalle omistettu temppeli on Mylaporessa, ja sen arvellaan olevan 600-luvulta ja pallavien rakennuttama. Päätelmä perustuu siihen, että temppeli mainitaan nayanar-pyhimysten hymneissä; 600-luvun Tevaram-kokoelma ylistää sen jumalaa, ja temppeli luetaan Paadal Petra Sthalam -pyhäkköjen joukkoon. Runoilijat Sambandar ja Arunagirinathar kuitenkin sijoittavat temppelin selvästi meren rantaan, kun nykyinen rakennus on kortteleiden sisällä. Nimi tulee sanoista kapala eli pää ja Ishvara, Shivan lisänimi. Puraanien mukaan Brahma jätti Kailasvuorella osoittamatta Shivalle kunnioitusta, jolloin Shiva irrotti yhden hänen viidestä päästään; katumuksekseen Brahma tuli Mylaporeen ja pystytt…
+- [Kano — kohdekartta / Kohdekartta: Dala-kukkula] 600-luku Kaupunki tunnettiin alun perin nimellä Dala tämän kukkulan mukaan, ja bornulaiset lähteet käyttivät sitä nimeä 1400-luvun loppuun asti. Kukkula kohoaa 534 metriin merenpinnasta, ja huipulle nousee 101 porrasta. (Wikipedia merkitsee korkeusluvun itse epäselväksi: sadalla portaalla ei nousta puolta kilometriä.) 600-luvulla kukkulalla asui metsästäjien ja keräilijöiden yhteisö, joka teki rautatöitä. Perimätieto kertoo Barbushesta, kookkaasta ja voimakkaasta miehestä, joka metsästi norsuja kepillään ja kantoi ne selässään kukkulalle. Hän rakensi sinne pyhäkön Tsumburbura-nimiselle jumaluudelle, jota hausat palvoivat ennen islamia. Vain Barbushe sai käydä pyhäkössä, ja hän laskeutui kuk…
+
+### 31.2
+KYSYMYS: Mistä Gardajärven nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gardajärvi (luonto · järvi)
+Tietoruudun teksti: Gardajärvi on Italian suurin järvi ja suosittu lomakohde Pohjois-Italiassa, Brescian ja Milanon itäpuolella sekä Veronan ja Venetsian länsipuolella. Järvi leikkaa Alppien reunaan, ja jäätiköt muovasivat seudun viime jääkauden lopulla. Sen ranta jakautuu Brescian, Veronan ja Trenton maakuntien kesken. Roomalaisaikana järvi tunnettiin nimellä Benacus, ja jotkut palvoivat järven henkilöitynyttä jumalaa. Nykyinen nimi on germaanista alkuperää ja tulee sanasta warda, vartiopaikka.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-stromboli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stromboli (luonto · vuori)
+Tietoruudun teksti: Stromboli on Tyrrhenanmeren saari Sisilian pohjoisrannikon edustalla ja yksi seitsemästä Liparinsaaresta. Sen tulivuori on yksi Italian neljästä toimivasta tulivuoresta, ja se purkautuu lähes jatkuvasti lievin purkauksin, minkä vuoksi saarta kutsutaan Välimeren majakaksi. Tulivuori kohoaa 926 metriä merenpinnan yläpuolelle ja yli 2 700 metriä merenpohjan yläpuolelle. Kartion luoteisrinteellä on hevosenkengän muotoinen Sciara del Fuoco eli tulen virta. Viimeisin vakava purkaus oli 11. syyskuuta 1930, ja siinä kuoli kuusi ihmistä.
+
+### 32.1
+KYSYMYS: Miksi Stromboli purkautuu jatkuvasti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stromboli (luonto · vuori)
+Tietoruudun teksti: Stromboli on Tyrrhenanmeren saari Sisilian pohjoisrannikon edustalla ja yksi seitsemästä Liparinsaaresta. Sen tulivuori on yksi Italian neljästä toimivasta tulivuoresta, ja se purkautuu lähes jatkuvasti lievin purkauksin, minkä vuoksi saarta kutsutaan Välimeren majakaksi. Tulivuori kohoaa 926 metriä merenpinnan yläpuolelle ja yli 2 700 metriä merenpohjan yläpuolelle. Kartion luoteisrinteellä on hevosenkengän muotoinen Sciara del Fuoco eli tulen virta. Viimeisin vakava purkaus oli 11. syyskuuta 1930, ja siinä kuoli kuusi ihmistä.
+
+### 32.2
+KYSYMYS: Mitä Sciara del Fuoco on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stromboli (luonto · vuori)
+Tietoruudun teksti: Stromboli on Tyrrhenanmeren saari Sisilian pohjoisrannikon edustalla ja yksi seitsemästä Liparinsaaresta. Sen tulivuori on yksi Italian neljästä toimivasta tulivuoresta, ja se purkautuu lähes jatkuvasti lievin purkauksin, minkä vuoksi saarta kutsutaan Välimeren majakaksi. Tulivuori kohoaa 926 metriä merenpinnan yläpuolelle ja yli 2 700 metriä merenpohjan yläpuolelle. Kartion luoteisrinteellä on hevosenkengän muotoinen Sciara del Fuoco eli tulen virta. Viimeisin vakava purkaus oli 11. syyskuuta 1930, ja siinä kuoli kuusi ihmistä.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-elba) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elban saari (luonto · saari)
+Tietoruudun teksti: Elba on Toscanan rannikon edustalla oleva Välimeren saari, noin kymmenen kilometrin päässä Piombinon kaupungista. Se on Toscanan saariston suurin saari ja Italian kolmanneksi suurin Sisilian ja Sardinian jälkeen. Saarella on seitsemän kuntaa, ja pääkaupunki on Portoferraio. Elba on kuuluisa siitä, että Napoleon karkotettiin sinne ensimmäisen kerran vuosiksi 1814–1815. Antiikin aikaan saari tunnettiin nimellä Ilva, ja se oli jo silloin tunnettu rautavaroistaan ja arvostetuista kaivoksistaan.
+
+### 33.1
+KYSYMYS: Miksi Napoleon karkotettiin Elballe?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elban saari (luonto · saari)
+Tietoruudun teksti: Elba on Toscanan rannikon edustalla oleva Välimeren saari, noin kymmenen kilometrin päässä Piombinon kaupungista. Se on Toscanan saariston suurin saari ja Italian kolmanneksi suurin Sisilian ja Sardinian jälkeen. Saarella on seitsemän kuntaa, ja pääkaupunki on Portoferraio. Elba on kuuluisa siitä, että Napoleon karkotettiin sinne ensimmäisen kerran vuosiksi 1814–1815. Antiikin aikaan saari tunnettiin nimellä Ilva, ja se oli jo silloin tunnettu rautavaroistaan ja arvostetuista kaivoksistaan.
+
+### 33.2
+KYSYMYS: Mitä rautakaivoksilla tehtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elban saari (luonto · saari)
+Tietoruudun teksti: Elba on Toscanan rannikon edustalla oleva Välimeren saari, noin kymmenen kilometrin päässä Piombinon kaupungista. Se on Toscanan saariston suurin saari ja Italian kolmanneksi suurin Sisilian ja Sardinian jälkeen. Saarella on seitsemän kuntaa, ja pääkaupunki on Portoferraio. Elba on kuuluisa siitä, että Napoleon karkotettiin sinne ensimmäisen kerran vuosiksi 1814–1815. Antiikin aikaan saari tunnettiin nimellä Ilva, ja se oli jo silloin tunnettu rautavaroistaan ja arvostetuista kaivoksistaan.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-villa-adriana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+
+### 34.1
+KYSYMYS: Miksi Hadrianus rakennutti huvilan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+- [Rooma — kohdekartta / Kohdekartta: Castel Sant’Angelo] 135–139 Linna ei ollut alkujaan linna lainkaan, vaan valtava hauta. Keisari Hadrianus rakennutti sen itselleen ja perheelleen mausoleumiksi vuosina 135–139 — hänen vaimonsa Sabina ja ottopoikansa Lucius Aelius haudattiin sinne ensimmäisinä. Vuosisatoja myöhemmin paavit muuttivat rakennuksen linnoitukseksi, ja siitä rakennettiin suoraan Pietarinkirkolle johtava salainen katettu käytävä, Passetto di Borgo, jota pitkin paavi pääsi tarvittaessa pakenemaan vaaran uhatessa. Linnan huipulla seisoo pronssinen enkelipatsas. Legendan mukaan arkkienkeli Mikael ilmestyi katolle, tuppesi miekkansa ja lopetti näin kauhean ruttoepidemian. Ensimmäinen enkelipatsas nousi katolle 1536, ja nykyinen pronssiver…
+
+### 34.2
+KYSYMYS: Mitä nymfaeumi tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villa Adriana (historia)
+Tietoruudun teksti: Hadrianuksen huvila oli monumentaalinen huvila- ja palatsikompleksi, jonka keisari Hadrianus (hallitsi 117–138) rakennutti noin vuonna 120 Tivolin lähelle, noin 20 kilometrin päähän Roomasta. Kompleksissa on yli 30 monumentaalista rakennusta, jotka on sijoitettu keinotekoisille tasanteille puutarhojen, vesialtaiden ja suihkulähteiden eli nymfaeumien ympärille. Alue kattaa vähintään neliökilometrin, enemmän kuin Pompeijin kaupunki. Monet rakennuksista ovat roomalaisen arkkitehtuurin mestariteoksia, ja niiden näyttävät kaarevat muodot olivat mahdollisia betonin ansiosta. Suuri osa alueesta on vielä kaivamatta, ja se kuuluu UNESCOn maailmanperintökohteisiin.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-paestum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Bergen: Sali, jonka tehtävä unohtui] Kuningas Håkon Håkonssonin (1217–1263) aikana 1200-luvun puolivälissä rakennettu kivisali oli Bergenin kuninkaankartanon suurin rakennus, ja se on yhä Norjan suurin keskiaikainen maallinen rakennus. Sen alkuperäinen tehtävä oli 1700-luvulle tultaessa suurelta osin unohtunut. Vuonna 1840 todistettiin, että kyseessä oli kuningas Håkonin vanha juhlasali, ja seuraavan puolen vuosisadan ajan kaupungissa väiteltiin sen ennallistamisesta. Henrik Ibsen kirjoitti salin kunniaksi runon, ja runoilija Henrik Wergeland otti ensimmäisenä käyttöön nimen Haakons hall.
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+
+### 35.1
+KYSYMYS: Mitä doorilainen temppeli tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+- [Colombo — kohdekartta / Kohdekartta: Wolvendaalin kirkko] 1749–1757 Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei tullut, ja pattitilanne aukesi vasta kuvernööri Julius Valentyn Stein van Gollenessen tultua virkaan 1743: hän päätti, että uusi kirkko nousee muurien ulkopuolelle suomaalle. Eurooppalaiset luulivat seudun sakaaleja susiksi, ja alue sai nimen Wolvendaal eli suden laakso. Perustukset laskettiin 1749, ja rakentaminen kesti kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. Rakennus on doorilainen ja pohjaltaan tasavartinen risti. Seinät ovat lähes puolitoista metri…
+
+### 35.2
+KYSYMYS: Miksi kaupunki unohtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paestum (historia)
+Tietoruudun teksti: Paestum oli suuri antiikin kreikkalainen kaupunki Tyrrhenanmeren rannikolla Magna Graecian alueella. Sen rauniot ovat kuuluisia kolmesta kreikkalaisesta doorilaista temppelistä, jotka ovat noin vuosilta 550–450 eaa. ja säilyneet erinomaisessa kunnossa. Kaupungin perustivat noin vuonna 600 eaa. Sybariksen uudisasukkaat nimellä Poseidonia. Lukaanit valtasivat kaupungin vuonna 400 eaa. ja roomalaiset vuonna 273 eaa., jolloin se sai nykyisen nimensä. Kauppareittien muutokset, tulvat ja soistuminen ajoivat kaupungin rappioon, ja varhaiskeskiajalla se hylättiin ja unohtui lähes kokonaan 1700-luvulle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Bergen: Sali, jonka tehtävä unohtui] Kuningas Håkon Håkonssonin (1217–1263) aikana 1200-luvun puolivälissä rakennettu kivisali oli Bergenin kuninkaankartanon suurin rakennus, ja se on yhä Norjan suurin keskiaikainen maallinen rakennus. Sen alkuperäinen tehtävä oli 1700-luvulle tultaessa suurelta osin unohtunut. Vuonna 1840 todistettiin, että kyseessä oli kuningas Håkonin vanha juhlasali, ja seuraavan puolen vuosisadan ajan kaupungissa väiteltiin sen ennallistamisesta. Henrik Ibsen kirjoitti salin kunniaksi runon, ja runoilija Henrik Wergeland otti ensimmäisenä käyttöön nimen Haakons hall.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

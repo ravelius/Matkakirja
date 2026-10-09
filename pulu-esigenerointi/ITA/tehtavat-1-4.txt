@@ -1,0 +1,204 @@
+================ KOHTA 16 (kohde:tyrrhenanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Rivi tulivuoria luultiin kaivosjätteeksi] 1750-luku — Auvergnessa kohoaa neljänkymmenen kilometrin matkalla yli seitsemänkymmentä tulivuorta peräkkäin: 48 kuonakartiota, kahdeksan laavakupolia ja viisitoista räjähdyskraatteria. Korkein on Puy de Dôme, 1 465 metriä. Vielä 1700-luvun puoliväliin asti kummuista kiisteltiin: monet pitivät niitä ihmisen kasaamina kaivoskasoina tai roomalaisten sulattouuneina, kunnes tutkijat tunnistivat ne tulivuoriksi. Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. Alue pääsi Unescon maailmanperintöluetteloon 2018.
+- [Guatemala — maalehti / Luonto: Väli-Amerikan korkein vuoristo ilman tulivuoria] Sierra de los Cuchumatanes Länsi-Guatemalassa on Väli-Amerikan korkein vuoristo, jossa ei ole yhtään tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja kattaa noin 16 350 neliökilometriä; siitä 1 500 neliökilometriä on yli kolmen kilometrin korkeudessa, mikä tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on karstia ja sedimenttikiveä mesotsooiselta liitukaudelta. Nimi tulee mamin sanoista cuchuj ja matán, "se joka koottiin ylivoimalla".
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Kuuma piste joka rakensi saariketjun] Havaijin saaret eivät synny mannerlaattojen reunoilla niin kuin useimmat tulivuoret, vaan keskellä Tyynenmeren laattaa kytevän kuuman pisteen yllä. Laatta liikkuu hitaasti, muutaman senttimetrin vuodessa, kuuman pisteen pysyessä paikoillaan syvällä vaipassa – tulos on yli 80 miljoonan vuoden aikana syntynyt Havaiji–Keisari-vuorijono, jossa vanhimmat, jo veden alle vajonneet tulivuoret ulottuvat aina Aleuteille asti. Nykyinen Iso saari on ketjun nuorin ja siksi ainoa, jolla on vielä aktiivisia tulivuoria; seuraava saari kasvaa jo salaa meren alla sen kaakkoispuolella.
+
+### 16.1
+KYSYMYS: Keitä tyrrhenialaiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+### 16.2
+KYSYMYS: Miksi meren pohjassa on tulivuoria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tyrrhenanmeri (meri)
+Tietoruudun teksti: Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Luonto: Rivi tulivuoria luultiin kaivosjätteeksi] 1750-luku — Auvergnessa kohoaa neljänkymmenen kilometrin matkalla yli seitsemänkymmentä tulivuorta peräkkäin: 48 kuonakartiota, kahdeksan laavakupolia ja viisitoista räjähdyskraatteria. Korkein on Puy de Dôme, 1 465 metriä. Vielä 1700-luvun puoliväliin asti kummuista kiisteltiin: monet pitivät niitä ihmisen kasaamina kaivoskasoina tai roomalaisten sulattouuneina, kunnes tutkijat tunnistivat ne tulivuoriksi. Viimeisin purkaus tapahtui noin kuusituhatta vuotta sitten. Alue pääsi Unescon maailmanperintöluetteloon 2018.
+- [Guatemala — maalehti / Luonto: Väli-Amerikan korkein vuoristo ilman tulivuoria] Sierra de los Cuchumatanes Länsi-Guatemalassa on Väli-Amerikan korkein vuoristo, jossa ei ole yhtään tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja kattaa noin 16 350 neliökilometriä; siitä 1 500 neliökilometriä on yli kolmen kilometrin korkeudessa, mikä tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on karstia ja sedimenttikiveä mesotsooiselta liitukaudelta. Nimi tulee mamin sanoista cuchuj ja matán, "se joka koottiin ylivoimalla".
+- [Havaiji — kaupunkilehti / Tulivuoret ja Pele: Kuuma piste joka rakensi saariketjun] Havaijin saaret eivät synny mannerlaattojen reunoilla niin kuin useimmat tulivuoret, vaan keskellä Tyynenmeren laattaa kytevän kuuman pisteen yllä. Laatta liikkuu hitaasti, muutaman senttimetrin vuodessa, kuuman pisteen pysyessä paikoillaan syvällä vaipassa – tulos on yli 80 miljoonan vuoden aikana syntynyt Havaiji–Keisari-vuorijono, jossa vanhimmat, jo veden alle vajonneet tulivuoret ulottuvat aina Aleuteille asti. Nykyinen Iso saari on ketjun nuorin ja siksi ainoa, jolla on vielä aktiivisia tulivuoria; seuraava saari kasvaa jo salaa meren alla sen kaakkoispuolella.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:ligurianmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+### 17.1
+KYSYMYS: Keitä liguurit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+### 17.2
+KYSYMYS: Mikä Välimeren valassuojelualue on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ligurianmeri (meri)
+Tietoruudun teksti: Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on yli 2 800 metriä Korsikan luoteispuolella.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:messinansalmi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan silta] 1960 Tromssan silta on jättimäinen betoninen kaari, joka yhdistää Tromsøyan saaren mantereeseen yli Tromsøysundetin salmen. Se on peräti 1036 metriä pitkä - siinä on 58 erillistä siltakaarta peräkkäin! Sillan pisin yksittäinen jänneväli on 80 metriä, ja laivat mahtuvat kulkemaan sen alta jopa 38 metrin korkeudessa. Sillan rakentaminen alkoi vuonna 1958, ja se avattiin liikenteelle 3. heinäkuuta 1960. Valmistuessaan se oli koko Pohjois-Euroopan pisin silta - ja samalla ensimmäinen ulokerakenteinen (konsoli-) silta koko Norjassa! Ennen siltaa saarelle pääsi vain lautalla, joten silta muutti koko kaupungin elämän ja kasvun. Nykyään silta on niin arvokas rakennelma, että Norjan muinaismuistovir…
+
+### 18.1
+KYSYMYS: Mikä oli Kharybdis?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+### 18.2
+KYSYMYS: Miksi salmen yli ei vieläkään kulje siltaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Messinansalmi (meri)
+Tietoruudun teksti: Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla 7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen vesillä pyydetään yhä miekkakalaa harppuunalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan silta] 1960 Tromssan silta on jättimäinen betoninen kaari, joka yhdistää Tromsøyan saaren mantereeseen yli Tromsøysundetin salmen. Se on peräti 1036 metriä pitkä - siinä on 58 erillistä siltakaarta peräkkäin! Sillan pisin yksittäinen jänneväli on 80 metriä, ja laivat mahtuvat kulkemaan sen alta jopa 38 metrin korkeudessa. Sillan rakentaminen alkoi vuonna 1958, ja se avattiin liikenteelle 3. heinäkuuta 1960. Valmistuessaan se oli koko Pohjois-Euroopan pisin silta - ja samalla ensimmäinen ulokerakenteinen (konsoli-) silta koko Norjassa! Ennen siltaa saarelle pääsi vain lautalla, joten silta muutti koko kaupungin elämän ja kasvun. Nykyään silta on niin arvokas rakennelma, että Norjan muinaismuistovir…
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:aquileia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kaupunkilehti / Los Angeles: Kuvernöörin hotelli pikkukaupungissa] Pío Pico, Meksikon Alta Californian viimeinen kuvernööri, tilasi 1869 arkkitehti Ezra F. Kysorilta kolmikerroksisen luksushotellin vanhan plazan laidalle. Italialaistyylinen Pico House avautui 1870 kaupunkiin, jossa saman vuoden väestönlaskenta laski 5 700 asukasta: huoneita oli aluksi 33 ja myöhemmin lähes 80, ja sisäpihalla oli suihkulähde ja lintutarha. Loisto jäi lyhyeksi. Kun Southern Pacific -rautatie saapui 1876, liike-elämä alkoi siirtyä etelämmäs, ja Pico menetti hotellinsa sanfranciscolaiselle säästöpankille.
+
+### 19.1
+KYSYMYS: Miksi pikkukaupungissa on niin suuri basilika?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kaupunkilehti / Los Angeles: Kuvernöörin hotelli pikkukaupungissa] Pío Pico, Meksikon Alta Californian viimeinen kuvernööri, tilasi 1869 arkkitehti Ezra F. Kysorilta kolmikerroksisen luksushotellin vanhan plazan laidalle. Italialaistyylinen Pico House avautui 1870 kaupunkiin, jossa saman vuoden väestönlaskenta laski 5 700 asukasta: huoneita oli aluksi 33 ja myöhemmin lähes 80, ja sisäpihalla oli suihkulähde ja lintutarha. Loisto jäi lyhyeksi. Kun Southern Pacific -rautatie saapui 1876, liike-elämä alkoi siirtyä etelämmäs, ja Pico menetti hotellinsa sanfranciscolaiselle säästöpankille.
+
+### 19.2
+KYSYMYS: Milloin roomalaiset perustivat Aquileian?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aquileia (historia)
+Tietoruudun teksti: Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:amalfin-rannikko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Stephansdom] 1359–1433 Stephansdomin historia alkoi jo vuonna 1137, mutta suuri tulipalo tuhosi kirkon vuonna 1258. Nykyisen goottilaisen kirkon rakentaminen alkoi vuonna 1359, ja eteläinen torni, jota wieniläiset kutsuvat hellästi nimellä Steffl, valmistui vuonna 1433. Se kohoaa 137 metrin korkeuteen. Tornissa vartioitiin öitäkin myöten aina vuoteen 1955 asti — vartijat tähyilivät ylhäältä tulipaloja ja jopa vihollisjoukkoja. Katto on vielä hurjempi näky: se on peitetty 230 000 värikkäällä kattotiilellä, jotka muodostavat yhdessä valtavan kaksoiskotkan kuvion. Kirkon pohjoistornissa riippuu Itävallan suurin kello, lempinimeltään Pummerin, joka painaa yli 20 000 kiloa. Kirkon alla kiemurtelevissa katako…
+
+### 20.1
+KYSYMYS: Mistä limoncellon sitruunat tulevat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+### 20.2
+KYSYMYS: Kuka ryösti Amalfin vuonna 1137?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Amalfin rannikko (meri)
+Tietoruudun teksti: Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Stephansdom] 1359–1433 Stephansdomin historia alkoi jo vuonna 1137, mutta suuri tulipalo tuhosi kirkon vuonna 1258. Nykyisen goottilaisen kirkon rakentaminen alkoi vuonna 1359, ja eteläinen torni, jota wieniläiset kutsuvat hellästi nimellä Steffl, valmistui vuonna 1433. Se kohoaa 137 metrin korkeuteen. Tornissa vartioitiin öitäkin myöten aina vuoteen 1955 asti — vartijat tähyilivät ylhäältä tulipaloja ja jopa vihollisjoukkoja. Katto on vielä hurjempi näky: se on peitetty 230 000 värikkäällä kattotiilellä, jotka muodostavat yhdessä valtavan kaksoiskotkan kuvion. Kirkon pohjoistornissa riippuu Itävallan suurin kello, lempinimeltään Pummerin, joka painaa yli 20 000 kiloa. Kirkon alla kiemurtelevissa katako…
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

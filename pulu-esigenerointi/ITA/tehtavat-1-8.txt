@@ -1,0 +1,215 @@
+================ KOHTA 36 (kohde:hahmotelma-agrigento) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+
+### 36.1
+KYSYMYS: Miksi temppeli sai nimen Concordia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+
+### 36.2
+KYSYMYS: Miksi Concordian temppeli säilyi ehjänä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Agrigenton temppelilaakso (historia)
+Tietoruudun teksti: Concordian temppeli on antiikin kreikkalainen temppeli Agrigenton Valle dei Templi -laaksossa Sisilian etelärannikolla. Se on Sisilian suurin ja parhaiten säilynyt doorilainen temppeli ja yksi parhaiten säilyneistä kreikkalaisista temppeleistä ylipäätään. Se rakennettiin noin vuosina 440–430 eaa., ja sen ympäri kulkee kuuden kertaa kolmentoista pylvään rivi. Nimi tulee roomalaisen harmonian jumalattaren Concordian mukaan läheltä löydetystä latinankielisestä kirjoituksesta, joka ei kuitenkaan liity temppeliin. Temppeli muutettiin 500-luvulla kristilliseksi basilikaksi, minkä vuoksi se selvisi pakanallisten palvontapaikkojen tuhosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-castel-del-monte) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+- [Sepik — kaupunkilehti / Henkien talot: Ei kenen tahansa taloon] Haus tambaranin sisään pääsevät vain initioidut miehet: siellä säilytetään pyhiä veistoksia, esi-isien patsaita ja niin kutsuttuja tambu-esineitä, joiden näkeminen on naisilta ja initioimattomilta pojilta kiellettyä. Rakennus toimii samalla arkistona ja koulutuspaikkana – sinne kootaan klaanin historia veistoksina ja lauluina, jotka opetetaan seuraavalle sukupolvelle vasta initiaation jälkeen. Ulkopuolisille vierailijoillekin monet talot ovat edelleen vain osittain avoimia, ja kuvaaminen sisältä on usein kielletty tai rajoitettua. Rakennus on siis paljon enemmän kuin kylän kokoustila – se on koko yhteisön pyhäkkö ja muistiorganisaatio.
+
+### 37.1
+KYSYMYS: Miksi linna on kahdeksankulmainen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Rosenborgin linna] 1606–1633 Rosenborgin linna alkoi huvilana kaupungin ulkopuolella. Christian IV osti vuonna 1606 joukon tontteja silloisen Nørrevoldin takaa: sinne mahtui hänen lystilinnansa lisäksi puutarha ja kyökkimaa, joka ruokki hovia. Rakennus lähti liikkeelle vaatimattomana erakkomajana, mutta se laajeni 28 vuoden aikana neljässä vaiheessa ja seisoi 1633 valmiina sellaisena kuin se on yhä: hollantilaista renessanssia, punatiiltä ja hiekkakiveä, tornit patinoituneen vihreinä. Linna oli kuninkaan lempipaikka, ja se näkyi loppuun asti. Kuolemansairaana Frederiksborgissa Christian IV käski kuljettaa itsensä reellä Rosenborgiin päättääkseen päivänsä siellä. Hän kuoli linnassa helmikuussa 1648. Kuninkaanl…
+- [Kioto — kohdekartta / Kohdekartta: Nijō-linna] 1601–1626 Tokugawa Ieyasu määräsi 1601 Länsi-Japanin läänitysherrat osallistumaan linnan rakentamiseen, ja valmiiksi se tuli hänen pojanpoikansa Tokugawa Iemitsun aikana 1626. Fushimin linnasta siirrettiin tänne osia, muun muassa päätorni ja karamon-portti. Linna oli shōgunien Kioton-asunto: valta oli Edossa, mutta keisari asui täällä, ja shōgunin oli syytä olla näkyvillä. Aluetta on 275 000 neliömetriä, ja sitä kiertää kaksi muuri- ja vallihautarengasta. Ninomaru-palatsi on 3 300 neliömetriä ja rakennettu lähes kokonaan hinoki-sypressistä. Seinät ja liukuovet on maalannut Kanō-koulun taiteilijat, ja kultalehteä ja puuveistoksia on käytetty niin runsaasti, että vierailija ymmärtäisi asian i…
+
+### 37.2
+KYSYMYS: Kenen käytössä linna oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel del Monte (historia)
+Tietoruudun teksti: Castel del Monte on 1200-luvun linnoitus ja linna Andrian kaupungin alueella Apulian kukkulalla, 540 metrin korkeudessa. Kuningas Fredrik II rakennutti sen 1240-luvulla, ja se on kuuluisa rohkeasta kahdeksankulmaisesta pohjakaavastaan ja antiikkia jäljittelevistä yksityiskohdistaan. Linnassa ei ole vallihautaa eikä nostosiltaa, ja jotkut ovat pitäneet sitä alun perinkin muuna kuin puolustuslinnana. Se jäi keskeneräiseksi, eikä ole todisteita siitä, että Fredrik olisi käyttänyt sitä metsästysmajana, kuten usein oletetaan. UNESCO merkitsi linnan maailmanperintökohteeksi vuonna 1996.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+- [Sepik — kaupunkilehti / Henkien talot: Ei kenen tahansa taloon] Haus tambaranin sisään pääsevät vain initioidut miehet: siellä säilytetään pyhiä veistoksia, esi-isien patsaita ja niin kutsuttuja tambu-esineitä, joiden näkeminen on naisilta ja initioimattomilta pojilta kiellettyä. Rakennus toimii samalla arkistona ja koulutuspaikkana – sinne kootaan klaanin historia veistoksina ja lauluina, jotka opetetaan seuraavalle sukupolvelle vasta initiaation jälkeen. Ulkopuolisille vierailijoillekin monet talot ovat edelleen vain osittain avoimia, ja kuvaaminen sisältä on usein kielletty tai rajoitettua. Rakennus on siis paljon enemmän kuin kylän kokoustila – se on koko yhteisön pyhäkkö ja muistiorganisaatio.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-tarquinia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+
+### 38.1
+KYSYMYS: Keitä etruskit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+
+### 38.2
+KYSYMYS: Mitä hautakammioiden seinillä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarquinia (historia)
+Tietoruudun teksti: Tarquinia, entiseltä nimeltään Corneto, on kaupunki Latiumin alueella Keski-Italiassa. Se on kuuluisa laajoista etruskien hautausmaistaan, joissa on antiikin maailman tärkeimpiä maalattuja hautoja. Hautausmaat ovat rautakaudelta, 800-luvulta eaa., roomalaisaikaan, ja ne sijaitsevat viereisillä niemekkeillä. Nykyinen kaupunki sai nimensä vuonna 1922 antiikin Tarquinii-kaupungin mukaan. Tarquinii oli yksi muinaisista tärkeimmistä etruskikaupungeista, vaikka sen jäänteitä on maan päällä vähän ja kaivaukset paljastavat yhä uutta. Etruskien hautausmaat kuuluvat UNESCOn maailmanperintöön.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Salalah — kohdekartta / Kohdekartta: Nabi Umranin hauta] perimätieto, ajoittamaton Salalahia on kutsuttu profeettojen kaupungiksi. Seudulla on neljä hautaa, joita perimätieto pitää islamin profeettojen leposijoina: Nabi Imran, Nabi Ayoub eli Raamatun Job, Nabi Houd ja Nabi Salih. Näistä Imranin hauta on ainoa, joka on kaupungin sisällä — muut ovat vuorilla ja rannikolla kymmenien kilometrien päässä. Kuka Imran oli, siitä ei olla yksimielisiä. Osa pitää häntä Neitsyt Marian isänä eli kristillisen perinteen Joakimina, osa Mooseksen isänä. Koraanin kolmas suura on nimeltään Al Imran, Imranin suku, ja siinä kerrotaan Marian syntymästä. Salalahin oma artikkeli pitää todennäköisimpänä, että kyseessä on paikallinen profeetta, jonka nimi on myöhemmin yhd…
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-monte-cassino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+
+### 39.1
+KYSYMYS: Kuka Benedictus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+### 39.2
+KYSYMYS: Mitä luostarille tapahtui vuonna 1944?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monte Cassino (historia)
+Tietoruudun teksti: Monte Cassinon luostari on benediktiiniluostari kalliokukkulalla noin 130 kilometriä Roomasta kaakkoon. Se on benediktiiniläisluostarikunnan ensimmäinen talo: Nursian Benedictus perusti sen noin vuonna 529, ja juuri tämän yhteisön käyttöön Pyhän Benedictuksen sääntö kirjoitettiin. Langobardit ryöstivät ensimmäisen luostarin noin vuonna 570, saraseenit ryöstivät sen vuonna 883 ja ranskalaiset joukot vielä vuonna 1799. Italian valtio lakkautti luostarin vuonna 1866, ja rakennuksesta tuli kansallismonumentti, jonka aarteiden vartijoina munkit toimivat. Toisessa maailmansodassa vuonna 1944 liittoutuneiden pommitukset tuhosivat rakennuksen, ja se rakennettiin sodan jälkeen uudelleen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Gandantegchinlenin luostari] perustettu 1809 Nimi on tiibetiä ja tarkoittaa täydellistä riemua; se tulee Tiibetin Gandenin luostarista, jonka perusti gelug-koulukunnan alkuunpanija Tsongkhapa. Ulan Batorin Gandan sai alkunsa 1809, kun Khüreen länsipuoliselle kukkulalle rakennettiin Sharin temppeli. Lamrinin sali nousi 1824, ja viides Jebtsundamba Khutuktu rakennutti kukkulalle vuosina 1834–1838 palatsin nimeltä Gandantegchinlen — nimi siirtyi siitä koko luostarille. Ochirdarin temppeliin vuodelta 1840 sijoitettiin Zanabazarin vuonna 1683 tekemä hopea- ja kultapatsas. Alueen korkein rakennus on Megzed Janraisegin temppeli. Kahdeksas Jebtsundamba määräsi sen rakennettavaksi itsenäistymisen kunniaksi, ja se valmistui 1913…
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-chianti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Uskonto: Nero, jonka mukaan museo on nimetty] Elijah ben Salomon Zalman, tunnetumpi nimellä Vilnan Gaon, oli 1700-luvun kuuluisin juutalainen oppinut: hän osasi Talmudin ulkoa ja kirjoitti kommentaareja lähes jokaiseen juutalaisen kirjallisuuden osa-alueeseen. Hänen kotinsa oli osa suuren synagogan ympärille kasvanutta pihapiiriä, johon kuului myös kirjasto ja kylpylä. Nykyään paikalla on muistolaatta, ja arkeologit ovat 2020-luvulla kaivaneet pihapiirin perustuksia esiin maan alta.
+
+### 40.1
+KYSYMYS: Miksi Chianti-pullo oli olkikorissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+### 40.2
+KYSYMYS: Mikä on gallo nero?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chianti (ruoka)
+Tietoruudun teksti: Chianti on Toscanan keskiosan viinialue ja samanniminen punaviini, joka tehdään pääosin Sangiovese-rypäleestä. Viiniä on perinteisesti pakattu pulleaan, olkikoriin käärittyyn pulloon, jota kutsutaan nimellä fiasco. Ensimmäinen viinialueen määritelmä nimellä Chianti tehtiin vuonna 1716, ja se koski Gaiolen, Castellinan ja Raddan kylien seutua. Vain Chianti Classico -alueen viini saa kantaa kaulassaan mustan kukon eli gallo neron tunnuksen. Castellina in Chianti on noin 2 800 asukkaan kunta Firenzen eteläpuolella, ja sen keskiaikaisessa linnoituksessa on 1300-luvun torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kaupunkilehti / Uskonto: Nero, jonka mukaan museo on nimetty] Elijah ben Salomon Zalman, tunnetumpi nimellä Vilnan Gaon, oli 1700-luvun kuuluisin juutalainen oppinut: hän osasi Talmudin ulkoa ja kirjoitti kommentaareja lähes jokaiseen juutalaisen kirjallisuuden osa-alueeseen. Hänen kotinsa oli osa suuren synagogan ympärille kasvanutta pihapiiriä, johon kuului myös kirjasto ja kylpylä. Nykyään paikalla on muistolaatta, ja arkeologit ovat 2020-luvulla kaivaneet pihapiirin perustuksia esiin maan alta.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

@@ -1,0 +1,228 @@
+================ KOHTA 1 (kohde:vesuvius) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+- [Tansania — maalehti / Luonto: Kattila, jonka pohjalla asutaan] Ngorongoro on maailman suurin ehjä ja täyttymätön tulivuoren romahduskattila. Se syntyi kahdesta kolmeen miljoonaa vuotta sitten, kun suuri tulivuori purkautui ja luhistui itsensä päälle; ennen romahdusta huippu oli arviolta 4 500–5 800 metrin korkeudessa. Reunalta pohjalle on 610 metriä ja pohjaa on 260 neliökilometriä. Keskellä väreilee matala suolajärvi Magadi. Nimi on maasain ääntä jäljittelevä sana lehmänkellon kilinästä. Ensimmäinen eurooppalainen laskeutui kattilaan 1892, ja maasait paimentavat karjaansa alueella yhä.
+
+### 1.1
+KYSYMYS: Miksi vuoren juurella asutaan yhä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Luonto: Kattila, jonka pohjalla asutaan] Ngorongoro on maailman suurin ehjä ja täyttymätön tulivuoren romahduskattila. Se syntyi kahdesta kolmeen miljoonaa vuotta sitten, kun suuri tulivuori purkautui ja luhistui itsensä päälle; ennen romahdusta huippu oli arviolta 4 500–5 800 metrin korkeudessa. Reunalta pohjalle on 610 metriä ja pohjaa on 260 neliökilometriä. Keskellä väreilee matala suolajärvi Magadi. Nimi on maasain ääntä jäljittelevä sana lehmänkellon kilinästä. Ensimmäinen eurooppalainen laskeutui kattilaan 1892, ja maasait paimentavat karjaansa alueella yhä.
+
+### 1.2
+KYSYMYS: Mistä laulu Funiculì, Funiculà kertoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesuvius (luonto · vuori)
+Tietoruudun teksti: Vesuvius on purkautunut monta kertaa vuoden 79 jaa. tuhon jälkeen: vuonna 1631 laava hautasi kyliä ja tappoi noin 3 000 ihmistä, ja 1800-luvulla purkauksia oli kahdeksan. Niistä viimeinen ennen isoisän matkaa oli vuonna 1872 — vuosi ennen kuin hän tuli katsomaan vuorta. Huipulle rakennettiin vuonna 1880 köysirata, jonka avajaisiksi sepitettiin laulu "Funiculì, Funiculà". Viimeksi vuori purkautui 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Napolin laulut kiersivät maailman] Kun miljoonat italialaiset lähtivät 1800- ja 1900-luvuilla siirtolaisiksi valtameren taakse, laulut lähtivät mukana. Napolin laulut — O sole mio, Funiculì funiculà, Santa Lucia — levisivät satamakaupungista koko maailman lauluiksi, joita esittävät niin oopperatähdet kuin jäätelöautot. O sole mio tarkoittaa "minun aurinkoni", ja se sävellettiin 1898 — ei Napolissa vaan Odessassa, jossa napolilainen säveltäjä oli kiertueella ja ikävöi kotiin.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:pompeji) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Kauppa ja karavaanit: Etappikaupungin kadut kulkevat talojen alla] Karavaanitien ensimmäinen suuri etappi Tripolista lounaaseen oli Ghadamesin keidas 462 kilometrin päässä — aavikon helmeksi sanottu kaupunki, joka on Saharan laidan vanhimpia. Sen vanha osa on rakennettu helteen ehdoilla: kadut kulkevat talojen alla katettuina käytävinä, joihin aurinko ei yllä. Talo jakautuu kerroksiin — pohjakerros on varasto, jonne karavaanin kuorma laskettiin, keskikerros kuuluu perheelle, ja kattoterassit muodostavat naisten oman kulkureitistön kaupungin yli. Vanhakaupunki on maailmanperintökohde, ja se palveli Saharan-kaupan tukikohtana 1800-luvulle asti.
+- [Jemen — maalehti / Historia: Kumpu on vanhojen talojen tekemä] Vanha Marib on savitiilikylä kummun päällä, mutta kumpu ei ole luonnon tekemä. Savitiilitalo kestää muutaman sukupolven, ja kun se sortuu, seuraava rakennetaan raunion päälle. Kun tämä toistuu riittävän monta kertaa, maanpinta nousee talojen mukana. Kummun sisään on hautautunut Saban valtakunnan pääkaupunki eli sama paikka, josta patoa aikanaan hallinnoitiin. Kylä tyhjeni 1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät paikoilleen ilman kattoja.
+
+### 2.1
+KYSYMYS: Mitä kaivauksissa on löytynyt talojen sisältä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Kauppa ja karavaanit: Etappikaupungin kadut kulkevat talojen alla] Karavaanitien ensimmäinen suuri etappi Tripolista lounaaseen oli Ghadamesin keidas 462 kilometrin päässä — aavikon helmeksi sanottu kaupunki, joka on Saharan laidan vanhimpia. Sen vanha osa on rakennettu helteen ehdoilla: kadut kulkevat talojen alla katettuina käytävinä, joihin aurinko ei yllä. Talo jakautuu kerroksiin — pohjakerros on varasto, jonne karavaanin kuorma laskettiin, keskikerros kuuluu perheelle, ja kattoterassit muodostavat naisten oman kulkureitistön kaupungin yli. Vanhakaupunki on maailmanperintökohde, ja se palveli Saharan-kaupan tukikohtana 1800-luvulle asti.
+- [Jemen — maalehti / Historia: Kumpu on vanhojen talojen tekemä] Vanha Marib on savitiilikylä kummun päällä, mutta kumpu ei ole luonnon tekemä. Savitiilitalo kestää muutaman sukupolven, ja kun se sortuu, seuraava rakennetaan raunion päälle. Kun tämä toistuu riittävän monta kertaa, maanpinta nousee talojen mukana. Kummun sisään on hautautunut Saban valtakunnan pääkaupunki eli sama paikka, josta patoa aikanaan hallinnoitiin. Kylä tyhjeni 1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät paikoilleen ilman kattoja.
+
+### 2.2
+KYSYMYS: Kaivetaanko Pompejia vielä nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pompeji (historia)
+Tietoruudun teksti: Tuhkan alle jäänyt kaupunki alkoi puhua vasta 1800-luvulla. Kun Giuseppe Fiorelli otti kaivaukset johtoonsa 1863, hän tajusi, mitä tuhkakerroksen tyhjät onkalot olivat: hajonneiden ruumiiden jättämiä muotteja. Hän kehitti tavan valaa niihin kipsiä, ja niin uhrit saivat jälleen hahmon. Fiorelli myös numeroi korttelit ja ovet ja rakensi kaivauksen oman museon vuosina 1873–1874 — juuri isoisän matkavuonna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:napoli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+
+### 3.1
+KYSYMYS: Mitä Kahden Sisilian kuningaskunta oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+
+### 3.2
+KYSYMYS: Millainen on oikea napolilainen pizza?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Napoli (kaupungit)
+Tietoruudun teksti: Napolin perustivat kreikkalaiset: ensin Parthenope 700-luvulla eaa., sitten uudelleen nimellä Neápolis, "uusi kaupunki". Se oli oman valtakuntansa pääkaupunki lähes yhtäjaksoisesti 1200-luvulta vuoteen 1861 asti, jolloin Kahden Sisilian kuningaskunta liitettiin Italiaan — isoisän matkasta vain kaksitoista vuotta taaksepäin. Teatro di San Carlo vuodelta 1737 on Euroopan vanhin yhä toimiva oopperatalo, ja kaupunkia pidetään pizzan kotina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Ruoka: Pizza on Napolin lahja] Pizza syntyi Napolin köyhien kortteleiden katuruokana: litteä leipä, jonka päälle pantiin mitä oli. Tarinan mukaan napolilainen leipuri teki vuonna 1889 kuningatar Margheritalle pizzan Italian lipun väreissä — tomaattia, mozzarellaa ja basilikaa — ja nimesi sen kuningattaren mukaan. Aito napolilainen pizza paistuu puu-uunissa alle kahdessa minuutissa, ja sen reuna on pehmeä, ei rapea. Unesco otti napolilaisen pizzanpaiston aineettoman kulttuuriperinnön luetteloonsa 2017.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:pisa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+- [Suva — kaupunkilehti / Kuningaskunnasta pääkaupungiksi: Aukio, jolla itsenäisyys julistettiin] Prinssi Charles luovutti Fidžin itsenäisyysasiakirjat pääministeri Ratu Sir Kamisese Maralle 10. lokakuuta 1970 suuren väkijoukon edessä Albert Parkissa. Uusi Fidžin lippu oli nostettu salkoon samalla aukiolla edellisenä päivänä. Aukio oli ehtinyt olla otsikoissa jo kerran: lentäjä Charles Kingsford Smith laskeutui tänne 1928 ensimmäisellä Tyynenmeren ylittäneellä lennolla. Nimensä puisto on saanut prinssi Albertilta, kuningatar Viktorian puolisolta — samalta hallitsijalta, jolle saaret oli aikanaan luovutettu.
+
+### 4.1
+KYSYMYS: Miksi tornia ei suoristettu kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+
+### 4.2
+KYSYMYS: Mitä muuta samalla aukiolla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pisa (kaupungit)
+Tietoruudun teksti: Pisan tuomiokirkon kellotorni alkoi kallistua jo rakennusaikana 1100-luvulla, koska maaperä ei kantanut sen painoa, ja kallistuma paheni 1300-luvulle asti. Vuonna 1990 se oli 5,5 astetta, ja torni suljettiin. Pelastustyö kesti vuodesta 1993 vuoteen 2001: alta kaivettiin pois 38 kuutiometriä maata korkeammalta puolelta, ja torni palautui vuoden 1838 asentoonsa, 3,97 asteeseen. Sen sanotaan kestävän nyt ainakin 300 vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+- [Suva — kaupunkilehti / Kuningaskunnasta pääkaupungiksi: Aukio, jolla itsenäisyys julistettiin] Prinssi Charles luovutti Fidžin itsenäisyysasiakirjat pääministeri Ratu Sir Kamisese Maralle 10. lokakuuta 1970 suuren väkijoukon edessä Albert Parkissa. Uusi Fidžin lippu oli nostettu salkoon samalla aukiolla edellisenä päivänä. Aukio oli ehtinyt olla otsikoissa jo kerran: lentäjä Charles Kingsford Smith laskeutui tänne 1928 ensimmäisellä Tyynenmeren ylittäneellä lennolla. Nimensä puisto on saanut prinssi Albertilta, kuningatar Viktorian puolisolta — samalta hallitsijalta, jolle saaret oli aikanaan luovutettu.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:capri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Bryssel: Pieni poika, jolla on tuhat asua] Manneken Pis on vain 55,5 senttiä korkea pronssipatsas: alaston poika, joka virtsaa suihkulähteen altaaseen. Kaivo mainitaan jo 1400-luvun puolivälin asiakirjassa, ja nykyisen patsaan veisti brabantilainen kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Poika saa päälleen vaatteita useita kertoja viikossa: pukukokoelmassa on noin tuhat asua, ja niille avattiin oma museo vuonna 2017. Kadun kulmassa seisova patsas on kopio vuodelta 1965, sillä alkuperäinen on Brysselin kaupunginmuseossa.
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+
+### 5.1
+KYSYMYS: Miten luolaan pääsee sisään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+- [Nicaragua — maalehti / Kansanperinne: Prinsessa, joka kätki aarteen ja jäi luolaan] La Mocuana on Nicaraguan kuuluisin kansantarina, ja sen uskotaan pohjautuvan tositapahtumiin. Päällikkö otti espanjalaiset ensin vieraanvaraisesti vastaan mutta käski heidät sitten pois. Kun nämä palasivat aarteen perässä, päällikkö piilotti sen, ja ainoa toinen paikan tietäjä oli hänen tyttärensä. Tytär rakastui myöhemmin erään espanjalaissotilaan poikaan ja antoi tälle isänsä aarteen yhteistä tulevaisuutta varten — ja mies sulki hänet luolaan ja pakeni kullan kanssa. Tyttö pääsi ulos luolan takakautta ja jäi vaeltamaan metsiin.
+
+### 5.2
+KYSYMYS: Miksi keisari halusi asua saarella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Capri ja Sininen luola (luonto · saari)
+Tietoruudun teksti: Keisari Tiberius muutti Caprille pysyvästi vuonna 27 jaa. ja hallitsi Rooman valtakuntaa saarelta kuolemaansa asti; Villa Jovis on yhä Italian parhaiten säilyneitä keisariajan huviloita. Saaren kuuluisin nähtävyys on kuitenkin merenalainen: Sininen luola, jonka vedenalaisesta aukosta tuleva valo heijastuu ylöspäin ja saa veden hehkumaan siniseltä. Saksalainen August Kopisch löysi luolan uudelleen 1826, ja siitä tuli saaren maine.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Bryssel: Pieni poika, jolla on tuhat asua] Manneken Pis on vain 55,5 senttiä korkea pronssipatsas: alaston poika, joka virtsaa suihkulähteen altaaseen. Kaivo mainitaan jo 1400-luvun puolivälin asiakirjassa, ja nykyisen patsaan veisti brabantilainen kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Poika saa päälleen vaatteita useita kertoja viikossa: pukukokoelmassa on noin tuhat asua, ja niille avattiin oma museo vuonna 2017. Kadun kulmassa seisova patsas on kopio vuodelta 1965, sillä alkuperäinen on Brysselin kaupunginmuseossa.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

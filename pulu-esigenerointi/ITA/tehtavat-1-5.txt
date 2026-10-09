@@ -1,0 +1,190 @@
+================ KOHTA 21 (kohde:tropea) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+
+### 21.1
+KYSYMYS: Millä rannikolla Tropea sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+
+### 21.2
+KYSYMYS: Millaisella kalliolla Santa Maria dell'Isola on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tropea (meri)
+Tietoruudun teksti: Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, Sant'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell'Isola, kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien kylien yhdistykseen.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:gerace) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kaupunkilehti / Fès: Kaksi kaupunkia, jotka riitelivät joen yli] Idris I perusti kaupunkinsa Fèsjoen rannalle vuonna 789, ja hänen poikansa Idris II toisen vastarannalle 809. Kaupungit kasvoivat erikseen. Ensimmäinen väestö oli berberejä ja satoja Kairouanista tulleita arabisotilaita; vuosina 817–818 Córdobasta karkotetut andalusialaisperheet muuttivat toiselle puolelle, ja kaupunginosat saivat nimensä tulijoidensa mukaan. Vuosina 1059–1061 rantoja hallitsi kaksi riitelevää veljestä, Al-Gisa ja Al-Fetouh, jotka linnoittivat kumpikin omansa. Heidän nimensä ovat yhä kahdessa kaupunginportissa: Bab Guissa pohjoisessa, Bab Ftouh etelässä.
+
+### 22.1
+KYSYMYS: Mistä Geracen tuomiokirkon 13 pylvästä on peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+
+### 22.2
+KYSYMYS: Minkä valloittajan käsiin kaupunki joutui vuonna 1059?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gerace (kulttuuri)
+Tietoruudun teksti: Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää kokonaisuutta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kaupunkilehti / Fès: Kaksi kaupunkia, jotka riitelivät joen yli] Idris I perusti kaupunkinsa Fèsjoen rannalle vuonna 789, ja hänen poikansa Idris II toisen vastarannalle 809. Kaupungit kasvoivat erikseen. Ensimmäinen väestö oli berberejä ja satoja Kairouanista tulleita arabisotilaita; vuosina 817–818 Córdobasta karkotetut andalusialaisperheet muuttivat toiselle puolelle, ja kaupunginosat saivat nimensä tulijoidensa mukaan. Vuosina 1059–1061 rantoja hallitsi kaksi riitelevää veljestä, Al-Gisa ja Al-Fetouh, jotka linnoittivat kumpikin omansa. Heidän nimensä ovat yhä kahdessa kaupunginportissa: Bab Guissa pohjoisessa, Bab Ftouh etelässä.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:saepinum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+### 23.1
+KYSYMYS: Minä vuonna roomalaiset valtasivat Saepinumin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+### 23.2
+KYSYMYS: Millä tekniikalla Saepinumin alakaupungin muurit rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saepinum (Altilia) (historia)
+Tietoruudun teksti: Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului muun muassa teatteri ja foorumi.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:termolin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Bash Tapian linna] 1100-luku Bash Tapia on rakennettu 1100-luvulla, ja se oli yksi Mosulin kaupunginmuurin seitsemästä linnakkeesta. Se seisoo Tigriin länsirannalla siinä kohdassa, jossa muuri kääntyy joen mukana, eli se puolusti sekä muuria että rantaa. Linnakkeista se on ainoa, josta on jäljellä nähtävää: pyöreä hammastettu torni ja pätkä muuria sen vieressä. Linnan tärkein hetki oli syksyllä 1743. Persian shaahi Nader Shah saapui kaupungin edustalle 14. syyskuuta ja aloitti piirityksen. Mosulin pasha Hajji Hossein al-Jalili puolusti kaupunkia, ja piiritys purettiin saman vuoden 23. lokakuuta — kuusi viikkoa. Bash Tapialla oli puolustuksessa keskeinen osa, ja al-Jalilin suvusta tuli sen jälkeen kaupungin ma…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 24.1
+KYSYMYS: Kuka rakennutti linnan 1000-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 24.2
+KYSYMYS: Mikä vahingoitti linnaa ennen vuoden 1240 kunnostusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Termolin linna (historia)
+Tietoruudun teksti: Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Bash Tapian linna] 1100-luku Bash Tapia on rakennettu 1100-luvulla, ja se oli yksi Mosulin kaupunginmuurin seitsemästä linnakkeesta. Se seisoo Tigriin länsirannalla siinä kohdassa, jossa muuri kääntyy joen mukana, eli se puolusti sekä muuria että rantaa. Linnakkeista se on ainoa, josta on jäljellä nähtävää: pyöreä hammastettu torni ja pätkä muuria sen vieressä. Linnan tärkein hetki oli syksyllä 1743. Persian shaahi Nader Shah saapui kaupungin edustalle 14. syyskuuta ja aloitti piirityksen. Mosulin pasha Hajji Hossein al-Jalili puolusti kaupunkia, ja piiritys purettiin saman vuoden 23. lokakuuta — kuusi viikkoa. Bash Tapialla oli puolustuksessa keskeinen osa, ja al-Jalilin suvusta tuli sen jälkeen kaupungin ma…
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-circus-maximus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+
+### 25.1
+KYSYMYS: Miltä Circus Maximus näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+
+### 25.2
+KYSYMYS: Miksi Circus Maximus katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Circus Maximus (historia)
+Tietoruudun teksti: Circus Maximus oli Rooman ensimmäinen ja suurin vaunukilparata, jonka katsomoihin mahtui yli 150 000 ihmistä. Kilpailuja järjestettiin lähes tuhannen vuoden ajan. Viimeisten kisojen jälkeen vuonna 549 rakenteet muuttuivat kivilouhokseksi.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

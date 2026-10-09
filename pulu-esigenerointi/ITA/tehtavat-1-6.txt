@@ -1,0 +1,209 @@
+================ KOHTA 26 (kohde:hahmotelma-vanha-pietarinkirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pietarinkirkko] 1506–1626 Nykyisen kirkon paikalla seisoi ennen toinen, paljon vanhempi kirkko, jonka roomalainen keisari Konstantinus rakennutti jo 300-luvulla. Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. Monta kuuluisaa arkkitehtia ehti työstää sitä matkan varrella: Michelangelo suunnitteli kirkon jättimäisen kupolin, ja Bernini rakensi eteen aukion, jota kiertävät pylväskäytävät kuin avoimet käsivarret. Kupoli kohoaa lähes 137 metrin korkeuteen ja on maailman korkein kirkonkupoli. Sisään mahtuu seisomaan jopa 60 000 ihmistä yhtä aikaa. Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen…
+
+### 26.1
+KYSYMYS: Miltä Vanha Pietarinkirkko näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+### 26.2
+KYSYMYS: Miksi Vanha Pietarinkirkko katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Pietarinkirkko (historia)
+Tietoruudun teksti: Konstantinus I rakennutti vanhan Pietarinkirkon 300-luvulla apostoli Pietarin haudan päälle. Basilika seisoi yli tuhat vuotta ja siellä kruunattiin Kaarle Suuri vuonna 800. Se purettiin vaiheittain uuden Pietarinkirkon tieltä vuoteen 1605 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pietarinkirkko] 1506–1626 Nykyisen kirkon paikalla seisoi ennen toinen, paljon vanhempi kirkko, jonka roomalainen keisari Konstantinus rakennutti jo 300-luvulla. Uuden, valtavan kirkon rakentaminen alkoi vuonna 1506 ja kesti yli 120 vuotta — se valmistui vasta 1626. Monta kuuluisaa arkkitehtia ehti työstää sitä matkan varrella: Michelangelo suunnitteli kirkon jättimäisen kupolin, ja Bernini rakensi eteen aukion, jota kiertävät pylväskäytävät kuin avoimet käsivarret. Kupoli kohoaa lähes 137 metrin korkeuteen ja on maailman korkein kirkonkupoli. Sisään mahtuu seisomaan jopa 60 000 ihmistä yhtä aikaa. Vuonna 1950 kirkon alta kaivettiin esiin muinainen hauta, jonka uskotaan olevan apostoli Pietarin oma — hänen…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-domus-aurea) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domus Aurea (historia)
+Tietoruudun teksti: Nero rakennutti Domus Aurean Rooman suurpalon jälkeen vuosina 64–68. Palatsialueeseen kuului satoja huoneita, puutarhoja, järvi ja valtava pronssipatsas. Neron kuoleman jälkeen rakennukset riisuttiin ja peitettiin uusien rakennusten alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthago: Kristityn Afrikan suurin basilika] Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, "laupeuden talo". Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.
+
+### 27.1
+KYSYMYS: Miltä Domus Aurea näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domus Aurea (historia)
+Tietoruudun teksti: Nero rakennutti Domus Aurean Rooman suurpalon jälkeen vuosina 64–68. Palatsialueeseen kuului satoja huoneita, puutarhoja, järvi ja valtava pronssipatsas. Neron kuoleman jälkeen rakennukset riisuttiin ja peitettiin uusien rakennusten alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthago: Kristityn Afrikan suurin basilika] Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, "laupeuden talo". Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.
+
+### 27.2
+KYSYMYS: Miksi Domus Aurea katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Domus Aurea (historia)
+Tietoruudun teksti: Nero rakennutti Domus Aurean Rooman suurpalon jälkeen vuosina 64–68. Palatsialueeseen kuului satoja huoneita, puutarhoja, järvi ja valtava pronssipatsas. Neron kuoleman jälkeen rakennukset riisuttiin ja peitettiin uusien rakennusten alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthago: Kristityn Afrikan suurin basilika] Karthagon suurin tunnettu kristillinen pyhäkkö ei ollut yksittäinen kirkko vaan kokonainen 15 000 neliömetrin rakennusryhmä: pääbasilikan mitat olivat 65 x 45 metriä, ja sen sisällä kulki peräti yhdeksästä yhteentoista pylväsriviä, joiden korinttilaispäät kannattelivat kattoa. Nimi Damous el Karita juontuu latinan sanoista domus caritatis, "laupeuden talo". Kompleksiin kuului myös maanalainen pyöreä huone, jonka sisähalkaisija oli yli yhdeksän metriä ja jonka terrakottakatto on säilynyt osittain tähän päivään asti – vaikka koko aluetta ei ole koskaan kaivettu loppuun asti tutkijoiden toimesta.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-monviso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monviso (luonto · vuori)
+Tietoruudun teksti: Monte Viso eli Monviso on Cottian-Alppien korkein vuori Piemontessa lähellä Ranskan rajaa. Se tunnetaan pyramidimaisesta muodostaan, ja koska se kohoaa naapurihuippujaan noin 500 metriä korkeammalle, sen voi nähdä kaukaa, hyvänä päivänä jopa Milanon tuomiokirkon huipuilta. Italiassa sitä kutsutaan nimellä il Re di Pietra, kivikuningas. Vuoren pohjoisrinteellä, Pian del Re -tasangolla 2 020 metrin korkeudessa, ovat Italian pisimmän joen, Po:n, latvat. Vuoren rinteillä on ollut myös neoliittinen jadeiittilouhos 2 000–2 400 metrin korkeudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Arki: Saaren pisin joki kulkee kuivana] Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa Troodoksen Machairas-metsästä samannimisen luostarin läheltä, virtaa koilliseen Mesaorian tasangon poikki Nikosian halki ja kääntyy sitten itään kohti Famagustan lahtea. Uoma on siirretty pois vanhankaupungin vierestä 1500-luvulla. Suurin osa saaren 35 joesta ja purosta on tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 kilometrin matkalta.
+- [Siinai — kaupunkilehti / Maasto: Riutta alkaa siitä mihin aavikko loppuu] Siinain eteläkärjessä autiomaa ja koralliriutta ovat muutaman metrin päässä toisistaan. Ras Muhammadin kansallispuistossa kalkkikiviniemi päättyy jyrkkään reunaan, ja sen alta alkaa riutta, joka laskeutuu nopeasti syvyyteen. Punaisenmeren riutat ovat poikkeuksellisen lajirikkaita, koska vesi on lämmintä ja kirkasta eikä jokia tuo siihen sameutta — samasta syystä, josta rannikko on autiomaata. Riutan vieressä ei siis ole viljelysmaata vaan kalliota ja hiekkaa.
+- [Uzbekistan — maalehti / Musiikki: Tanssi, joka alkaa sormenpäistä] Lazgi on Khorezmin kansantanssi ja -musiikki, ja Unesco otti sen luetteloonsa joulukuussa 2019. Musiikki kulkee 6/8-tahdissa: lyhyt alkusoitto ja kolme osaa, joiden aikana vauhti kiihtyy ja loppu katkeaa äkisti. Tanssi alkaa sormista, siirtyy ranteisiin ja kyynärpäihin ja leviää vasta sitten koko vartaloon. Perimätiedon mukaan se kertoo sielun tulosta savesta tehtyyn ruumiiseen: sielu pelkäsi eikä suostunut, kunnes kuuli musiikin ja meni sisään huomaamattaan. Muotoja on kahdeksan, muun muassa qayroq-, dutor-, surnay- ja Khiva-lazgi.
+
+### 28.1
+KYSYMYS: Miksi Monviso näkyy niin kauas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monviso (luonto · vuori)
+Tietoruudun teksti: Monte Viso eli Monviso on Cottian-Alppien korkein vuori Piemontessa lähellä Ranskan rajaa. Se tunnetaan pyramidimaisesta muodostaan, ja koska se kohoaa naapurihuippujaan noin 500 metriä korkeammalle, sen voi nähdä kaukaa, hyvänä päivänä jopa Milanon tuomiokirkon huipuilta. Italiassa sitä kutsutaan nimellä il Re di Pietra, kivikuningas. Vuoren pohjoisrinteellä, Pian del Re -tasangolla 2 020 metrin korkeudessa, ovat Italian pisimmän joen, Po:n, latvat. Vuoren rinteillä on ollut myös neoliittinen jadeiittilouhos 2 000–2 400 metrin korkeudessa.
+
+### 28.2
+KYSYMYS: Mistä Po-joki alkaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Monviso (luonto · vuori)
+Tietoruudun teksti: Monte Viso eli Monviso on Cottian-Alppien korkein vuori Piemontessa lähellä Ranskan rajaa. Se tunnetaan pyramidimaisesta muodostaan, ja koska se kohoaa naapurihuippujaan noin 500 metriä korkeammalle, sen voi nähdä kaukaa, hyvänä päivänä jopa Milanon tuomiokirkon huipuilta. Italiassa sitä kutsutaan nimellä il Re di Pietra, kivikuningas. Vuoren pohjoisrinteellä, Pian del Re -tasangolla 2 020 metrin korkeudessa, ovat Italian pisimmän joen, Po:n, latvat. Vuoren rinteillä on ollut myös neoliittinen jadeiittilouhos 2 000–2 400 metrin korkeudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kaupunkilehti / Arki: Saaren pisin joki kulkee kuivana] Pedieos on Kyproksen pisin joki, 98 kilometriä. Se alkaa Troodoksen Machairas-metsästä samannimisen luostarin läheltä, virtaa koilliseen Mesaorian tasangon poikki Nikosian halki ja kääntyy sitten itään kohti Famagustan lahtea. Uoma on siirretty pois vanhankaupungin vierestä 1500-luvulla. Suurin osa saaren 35 joesta ja purosta on tilapäisiä ja kuivuu kesäksi, ja Nikosiassa mitattiin 4. syyskuuta 2020 lämpötila 46,2 astetta, koko Kyproksen korkein lukema. Jokivartta on muutettu kävelyreitiksi 18 kilometrin matkalta.
+- [Siinai — kaupunkilehti / Maasto: Riutta alkaa siitä mihin aavikko loppuu] Siinain eteläkärjessä autiomaa ja koralliriutta ovat muutaman metrin päässä toisistaan. Ras Muhammadin kansallispuistossa kalkkikiviniemi päättyy jyrkkään reunaan, ja sen alta alkaa riutta, joka laskeutuu nopeasti syvyyteen. Punaisenmeren riutat ovat poikkeuksellisen lajirikkaita, koska vesi on lämmintä ja kirkasta eikä jokia tuo siihen sameutta — samasta syystä, josta rannikko on autiomaata. Riutan vieressä ei siis ole viljelysmaata vaan kalliota ja hiekkaa.
+- [Uzbekistan — maalehti / Musiikki: Tanssi, joka alkaa sormenpäistä] Lazgi on Khorezmin kansantanssi ja -musiikki, ja Unesco otti sen luetteloonsa joulukuussa 2019. Musiikki kulkee 6/8-tahdissa: lyhyt alkusoitto ja kolme osaa, joiden aikana vauhti kiihtyy ja loppu katkeaa äkisti. Tanssi alkaa sormista, siirtyy ranteisiin ja kyynärpäihin ja leviää vasta sitten koko vartaloon. Perimätiedon mukaan se kertoo sielun tulosta savesta tehtyyn ruumiiseen: sielu pelkäsi eikä suostunut, kunnes kuuli musiikin ja meni sisään huomaamattaan. Muotoja on kahdeksan, muun muassa qayroq-, dutor-, surnay- ja Khiva-lazgi.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-gran-sasso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gran Sasso (luonto · vuori)
+Tietoruudun teksti: Gran Sasso d'Italia, Italian suuri kallio, on Apenniinien vuoristomassiivi. Sen korkein huippu Corno Grande on 2 912 metriä eli Apenniinien korkein ja Italian toiseksi korkein vuori Alppien ulkopuolella, ja vuori kuuluu Gran Sasson ja Monti della Lagan kansallispuistoon. Corno Granden ja Corno Piccolon harmaa väri tulee kalkkikivestä ja dolomiitista, ja huiput ovat lumen peitossa suuren osan vuodesta. Corno Granden huipun alla on Calderonen jäätikkö, joka on kutistunut selvästi. Alarinteillä laiduntaa lampaita ja karjaa, ja puistossa elää harvinaisia lajeja, kuten Apenniinien susi ja marsikaninkarhu.
+
+### 29.1
+KYSYMYS: Onko Calderonen jäätikkö säilymässä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gran Sasso (luonto · vuori)
+Tietoruudun teksti: Gran Sasso d'Italia, Italian suuri kallio, on Apenniinien vuoristomassiivi. Sen korkein huippu Corno Grande on 2 912 metriä eli Apenniinien korkein ja Italian toiseksi korkein vuori Alppien ulkopuolella, ja vuori kuuluu Gran Sasson ja Monti della Lagan kansallispuistoon. Corno Granden ja Corno Piccolon harmaa väri tulee kalkkikivestä ja dolomiitista, ja huiput ovat lumen peitossa suuren osan vuodesta. Corno Granden huipun alla on Calderonen jäätikkö, joka on kutistunut selvästi. Alarinteillä laiduntaa lampaita ja karjaa, ja puistossa elää harvinaisia lajeja, kuten Apenniinien susi ja marsikaninkarhu.
+
+### 29.2
+KYSYMYS: Mitä eläimiä Gran Sasson puistossa elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gran Sasso (luonto · vuori)
+Tietoruudun teksti: Gran Sasso d'Italia, Italian suuri kallio, on Apenniinien vuoristomassiivi. Sen korkein huippu Corno Grande on 2 912 metriä eli Apenniinien korkein ja Italian toiseksi korkein vuori Alppien ulkopuolella, ja vuori kuuluu Gran Sasson ja Monti della Lagan kansallispuistoon. Corno Granden ja Corno Piccolon harmaa väri tulee kalkkikivestä ja dolomiitista, ja huiput ovat lumen peitossa suuren osan vuodesta. Corno Granden huipun alla on Calderonen jäätikkö, joka on kutistunut selvästi. Alarinteillä laiduntaa lampaita ja karjaa, ja puistossa elää harvinaisia lajeja, kuten Apenniinien susi ja marsikaninkarhu.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-gran-paradiso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gran Paradiso (luonto · vuori)
+Tietoruudun teksti: Gran Paradiso on Graian-Alppien vuori Aostalaakson ja Piemontin alueiden välissä. Sen huippu on 4 061 metrin korkeudessa, ja se on ainoa yli 4 000 metrin vuori, joka on kokonaan Italian alueella; Mont Blancin massiivi taas jakautuu Ranskan ja Italian kesken. Nimi tulee ranskan kautta virheellisesti käännetystä Aostalaakson murteen sanasta Granta Parey, joka tarkoittaa suurta seinämää. Kuningas Viktor Emanuel II perusti alueelle kuninkaallisen suojelualueen vuonna 1856, ja siinä on nykyisin Gran Paradison kansallispuisto. Huippu on suosittu aloitteleville vuorikiipeilijöille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+- [Namibia — maalehti / Tiede: Suojelualue, jonka aarre on pimeys] 1984–2012 — Namibiassa on yli kolmesataa aurinkoista päivää vuodessa, ja sama kuiva ja pilvetön ilma tekee öistä poikkeuksellisen pimeitä, kun lähin kaupunki on kaukana. J. A. Brückner perusti 1984 aavikon laidalle yksityisen suojelualueen, joka on kasvanut yli 2 150 neliökilometriin ja jolla on sadan kilometrin yhteinen raja Namib-Naukluftin kansallispuiston kanssa; alue elää vähän kuormittavan matkailun maksuilla. Vuonna 2012 International Dark-Sky Association julisti NamibRandin kansainväliseksi pimeän taivaan suojelualueeksi — suojelukohde ei ole eläin eikä kasvi vaan yötaivas.
+
+### 30.1
+KYSYMYS: Mistä Gran Paradison nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gran Paradiso (luonto · vuori)
+Tietoruudun teksti: Gran Paradiso on Graian-Alppien vuori Aostalaakson ja Piemontin alueiden välissä. Sen huippu on 4 061 metrin korkeudessa, ja se on ainoa yli 4 000 metrin vuori, joka on kokonaan Italian alueella; Mont Blancin massiivi taas jakautuu Ranskan ja Italian kesken. Nimi tulee ranskan kautta virheellisesti käännetystä Aostalaakson murteen sanasta Granta Parey, joka tarkoittaa suurta seinämää. Kuningas Viktor Emanuel II perusti alueelle kuninkaallisen suojelualueen vuonna 1856, ja siinä on nykyisin Gran Paradison kansallispuisto. Huippu on suosittu aloitteleville vuorikiipeilijöille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+
+### 30.2
+KYSYMYS: Miksi kuningas perusti suojelualueen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gran Paradiso (luonto · vuori)
+Tietoruudun teksti: Gran Paradiso on Graian-Alppien vuori Aostalaakson ja Piemontin alueiden välissä. Sen huippu on 4 061 metrin korkeudessa, ja se on ainoa yli 4 000 metrin vuori, joka on kokonaan Italian alueella; Mont Blancin massiivi taas jakautuu Ranskan ja Italian kesken. Nimi tulee ranskan kautta virheellisesti käännetystä Aostalaakson murteen sanasta Granta Parey, joka tarkoittaa suurta seinämää. Kuningas Viktor Emanuel II perusti alueelle kuninkaallisen suojelualueen vuonna 1856, ja siinä on nykyisin Gran Paradison kansallispuisto. Huippu on suosittu aloitteleville vuorikiipeilijöille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Suojelualue, jonka aarre on pimeys] 1984–2012 — Namibiassa on yli kolmesataa aurinkoista päivää vuodessa, ja sama kuiva ja pilvetön ilma tekee öistä poikkeuksellisen pimeitä, kun lähin kaupunki on kaukana. J. A. Brückner perusti 1984 aavikon laidalle yksityisen suojelualueen, joka on kasvanut yli 2 150 neliökilometriin ja jolla on sadan kilometrin yhteinen raja Namib-Naukluftin kansallispuiston kanssa; alue elää vähän kuormittavan matkailun maksuilla. Vuonna 2012 International Dark-Sky Association julisti NamibRandin kansainväliseksi pimeän taivaan suojelualueeksi — suojelukohde ei ole eläin eikä kasvi vaan yötaivas.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

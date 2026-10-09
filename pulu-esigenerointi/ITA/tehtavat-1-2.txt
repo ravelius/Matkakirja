@@ -1,0 +1,218 @@
+================ KOHTA 6 (kohde:cinque-terre) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [St. Helena — kaupunkilehti / St. Helena: Jamestown ahtaassa laaksossa] Saaren ainoa kaupunki Jamestown on rakennettu kapeaan, jyrkkien kallioseinämien väliin puristuvaan laaksoon aivan meren rannalla. Itä-Intian kauppakomppania perusti asutuksen 1600-luvulla, ja 1700-luvulla satamaan pysähtyi vuosittain jopa tuhat laivaa täydentämään vesi- ja ruokavarastojaan matkalla Aasiaan tai sieltä pois. Kapeat kadut, siirtomaa-ajan rakennukset ja jyrkät rinteet ovat säilyneet lähes ennallaan isoisän vuoden 1873 vierailusta lähtien: kaupunki on yhä ainoa tapa nousta laivasta kuivalle maalle satojen kilometrien säteellä.
+- [PRI — maalehti / Rakennukset] Vanha San Juan on Karibian parhaiten säilynyt siirtomaakaupunki: sitä vartioi kaksi linnoitusta, sen kadut kimaltavat sinisistä laivan painolastikivistä ja sen parvekkeet ovat säilyneet lähes ennallaan viisi vuosisataa.
+
+### 6.1
+KYSYMYS: Mitä terasseilla kasvatetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+### 6.2
+KYSYMYS: Miten kylät ovat säilyneet ennallaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cinque Terre (luonto)
+Tietoruudun teksti: "Viisi maata" on viisi kylää Ligurian jyrkällä rannikolla: Monterosso al Mare, Vernazza, Corniglia, Manarola ja Riomaggiore. Vuosisatojen ajan ihmiset ovat rakentaneet rinteisiin terasseja aivan merenrannan kallioille asti. Kyliin pääsee polkuja, junalla ja veneellä — autolla vain vaivoin, kapeita ja huteria vuoristoteitä pitkin. Alue on Unescon maailmanperintökohde ja kansallispuisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [St. Helena — kaupunkilehti / St. Helena: Jamestown ahtaassa laaksossa] Saaren ainoa kaupunki Jamestown on rakennettu kapeaan, jyrkkien kallioseinämien väliin puristuvaan laaksoon aivan meren rannalla. Itä-Intian kauppakomppania perusti asutuksen 1600-luvulla, ja 1700-luvulla satamaan pysähtyi vuosittain jopa tuhat laivaa täydentämään vesi- ja ruokavarastojaan matkalla Aasiaan tai sieltä pois. Kapeat kadut, siirtomaa-ajan rakennukset ja jyrkät rinteet ovat säilyneet lähes ennallaan isoisän vuoden 1873 vierailusta lähtien: kaupunki on yhä ainoa tapa nousta laivasta kuivalle maalle satojen kilometrien säteellä.
+- [PRI — maalehti / Rakennukset] Vanha San Juan on Karibian parhaiten säilynyt siirtomaakaupunki: sitä vartioi kaksi linnoitusta, sen kadut kimaltavat sinisistä laivan painolastikivistä ja sen parvekkeet ovat säilyneet lähes ennallaan viisi vuosisataa.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:matera) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matera (kaupungit)
+Tietoruudun teksti: Materan vanhin osa on kaiverrettu kallioon: Sassit ovat noin kahdellatoista tasolla kiemurtelevia luolakoteja, portaita ja pihoja rotkon reunalla. Asutus jatkuu esihistoriasta asti, ja 1700-luvun lopulla kaupunki oli jakautunut kahtia — köyhät Sassien luolissa, varakkaat ylätasangolla. 1950-luvulla luolat julistettiin kelvottomiksi asua ja asukkaat siirrettiin pois; 1993 Sassit nimettiin maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sepik — kaupunkilehti / Henkien talot: Talo jossa henget asuvat] Haus tambaran on tok pisin -kielinen nimitys henkien talolle, Itä-Sepikin kylien yhteiselle rakennukselle, jossa asuvat esi-isien henget ja jota käytetään kokouksiin, rituaaleihin ja poikien initiaatioon. Rakennus on lähes yksinomaan miesten aluetta: naiset osallistuvat vain juhla-aterioiden valmistajina ja ulkopuolisina katsojina. Katto kohoaa jyrkkänä terävään huippuun ja laskeutuu takaosassa lähes maahan asti – muoto joka toistuu jopa Papua-Uuden-Guinean parlamenttitalon arkkitehtuurissa. Kristinuskon leviäminen on tehnyt perinteisistä henkien taloista harvinaisempia kuin ennen.
+
+### 7.1
+KYSYMYS: Missä luolakotien asukkaat asuvat nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matera (kaupungit)
+Tietoruudun teksti: Materan vanhin osa on kaiverrettu kallioon: Sassit ovat noin kahdellatoista tasolla kiemurtelevia luolakoteja, portaita ja pihoja rotkon reunalla. Asutus jatkuu esihistoriasta asti, ja 1700-luvun lopulla kaupunki oli jakautunut kahtia — köyhät Sassien luolissa, varakkaat ylätasangolla. 1950-luvulla luolat julistettiin kelvottomiksi asua ja asukkaat siirrettiin pois; 1993 Sassit nimettiin maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sepik — kaupunkilehti / Henkien talot: Talo jossa henget asuvat] Haus tambaran on tok pisin -kielinen nimitys henkien talolle, Itä-Sepikin kylien yhteiselle rakennukselle, jossa asuvat esi-isien henget ja jota käytetään kokouksiin, rituaaleihin ja poikien initiaatioon. Rakennus on lähes yksinomaan miesten aluetta: naiset osallistuvat vain juhla-aterioiden valmistajina ja ulkopuolisina katsojina. Katto kohoaa jyrkkänä terävään huippuun ja laskeutuu takaosassa lähes maahan asti – muoto joka toistuu jopa Papua-Uuden-Guinean parlamenttitalon arkkitehtuurissa. Kristinuskon leviäminen on tehnyt perinteisistä henkien taloista harvinaisempia kuin ennen.
+
+### 7.2
+KYSYMYS: Asutaanko Sasseissa enää lainkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matera (kaupungit)
+Tietoruudun teksti: Materan vanhin osa on kaiverrettu kallioon: Sassit ovat noin kahdellatoista tasolla kiemurtelevia luolakoteja, portaita ja pihoja rotkon reunalla. Asutus jatkuu esihistoriasta asti, ja 1700-luvun lopulla kaupunki oli jakautunut kahtia — köyhät Sassien luolissa, varakkaat ylätasangolla. 1950-luvulla luolat julistettiin kelvottomiksi asua ja asukkaat siirrettiin pois; 1993 Sassit nimettiin maailmanperintökohteeksi.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:dolomiitit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dolomiitit (luonto · vuori)
+Tietoruudun teksti: Koillis-Italian vuorijono on saanut nimensä kivilajistaan, ja kivilaji puolestaan ranskalaiselta mineralogilta: Déodat Gratet de Dolomieu (1750–1801) kuvasi mineraalin ensimmäisenä. Sitä ennen paikalliset kutsuivat vuoria nimellä Monti Pallidi, "kalpeat vuoret", koska karbonaattikallio heijastaa auringonlaskussa punertavan ja purppuraisen hehkun. Dolomiitit ovat olleet Unescon maailmanperintökohde vuodesta 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kaupunkilehti / Kašgar: Parhaiten säilynyt islamilainen kaupunki] Kašgarin vanhaakaupunkia on kuvailtu parhaiten säilyneeksi esimerkiksi perinteisestä islamilaisesta kaupungista koko Keski-Aasiassa. Sanat ovat taidehistorioitsija George Michellin kirjasta Kashgar: Oasis City on China’s Old Silk Road vuodelta 2008. Kortteleita ei ole kaavoitettu vaan ne ovat kasvaneet vuosisatojen kuluessa: mutkittelevia kujia, savitiilestä muurattuja seiniä ja sisäpihan ympärille rakennettuja taloja loessikukkulan päällä. Kaupunginosa on ollut yli miljoonan vuosittaisen matkailijan kohde, ja 2000-luvun alussa siellä asui kaksi viidesosaa koko kaupungin väestöstä.
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Vuorten eristäytynyt kansa] Solan kautta saapuneista uudisasukkaista suuri osa oli škotti-irlantilaisia siirtolaisia, jotka pakenivat uskonnollista sortoa ja taloudellista ahdinkoa ja asettuivat Appalakkien syrjäisiin laaksoihin. Vaikeakulkuinen maasto ja teiden puute eristivät monet kylät vuosikymmeniksi rannikkoseutujen elämästä, mikä pakotti perheet omavaraisuuteen: kotipuutarhat, metsästys ja kotikutoiset tarvikkeet olivat arjen perusta. Tyypillinen koti oli yksihuoneinen hirsimökki kivipiipuineen, samanlainen kuin Blue Ridge -vuorten historiallisilla tiloilla yhä pystyssä olevat rakennukset.
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa] Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.
+
+### 8.1
+KYSYMYS: Mitä dolomiittikivi oikeastaan on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dolomiitit (luonto · vuori)
+Tietoruudun teksti: Koillis-Italian vuorijono on saanut nimensä kivilajistaan, ja kivilaji puolestaan ranskalaiselta mineralogilta: Déodat Gratet de Dolomieu (1750–1801) kuvasi mineraalin ensimmäisenä. Sitä ennen paikalliset kutsuivat vuoria nimellä Monti Pallidi, "kalpeat vuoret", koska karbonaattikallio heijastaa auringonlaskussa punertavan ja purppuraisen hehkun. Dolomiitit ovat olleet Unescon maailmanperintökohde vuodesta 2009.
+
+### 8.2
+KYSYMYS: Milloin vuorten punainen hehku näkyy parhaiten?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dolomiitit (luonto · vuori)
+Tietoruudun teksti: Koillis-Italian vuorijono on saanut nimensä kivilajistaan, ja kivilaji puolestaan ranskalaiselta mineralogilta: Déodat Gratet de Dolomieu (1750–1801) kuvasi mineraalin ensimmäisenä. Sitä ennen paikalliset kutsuivat vuoria nimellä Monti Pallidi, "kalpeat vuoret", koska karbonaattikallio heijastaa auringonlaskussa punertavan ja purppuraisen hehkun. Dolomiitit ovat olleet Unescon maailmanperintökohde vuodesta 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kaupunkilehti / Kašgar: Parhaiten säilynyt islamilainen kaupunki] Kašgarin vanhaakaupunkia on kuvailtu parhaiten säilyneeksi esimerkiksi perinteisestä islamilaisesta kaupungista koko Keski-Aasiassa. Sanat ovat taidehistorioitsija George Michellin kirjasta Kashgar: Oasis City on China’s Old Silk Road vuodelta 2008. Kortteleita ei ole kaavoitettu vaan ne ovat kasvaneet vuosisatojen kuluessa: mutkittelevia kujia, savitiilestä muurattuja seiniä ja sisäpihan ympärille rakennettuja taloja loessikukkulan päällä. Kaupunginosa on ollut yli miljoonan vuosittaisen matkailijan kohde, ja 2000-luvun alussa siellä asui kaksi viidesosaa koko kaupungin väestöstä.
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Vuorten eristäytynyt kansa] Solan kautta saapuneista uudisasukkaista suuri osa oli škotti-irlantilaisia siirtolaisia, jotka pakenivat uskonnollista sortoa ja taloudellista ahdinkoa ja asettuivat Appalakkien syrjäisiin laaksoihin. Vaikeakulkuinen maasto ja teiden puute eristivät monet kylät vuosikymmeniksi rannikkoseutujen elämästä, mikä pakotti perheet omavaraisuuteen: kotipuutarhat, metsästys ja kotikutoiset tarvikkeet olivat arjen perusta. Tyypillinen koti oli yksihuoneinen hirsimökki kivipiipuineen, samanlainen kuin Blue Ridge -vuorten historiallisilla tiloilla yhä pystyssä olevat rakennukset.
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa] Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:etna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etna (luonto · vuori)
+Tietoruudun teksti: Etna on Italian neljästä aktiivisesta tulivuoresta ylivoimaisesti suurin: noin kaksi ja puoli kertaa Vesuviuksen korkuinen ja lähes 1 200 neliökilometrin laajuinen. Se on lähes jatkuvasti liikkeessä, ja sen korkeus muuttuu purkausten mukana — syyskuussa 2024 huippu oli 3 403 metriä. Tuhkasta syntyy hedelmällistä multaa, ja rinteet ovat täynnä viinitarhoja ja hedelmätarhoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+
+### 9.1
+KYSYMYS: Kuinka usein Etna purkautuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etna (luonto · vuori)
+Tietoruudun teksti: Etna on Italian neljästä aktiivisesta tulivuoresta ylivoimaisesti suurin: noin kaksi ja puoli kertaa Vesuviuksen korkuinen ja lähes 1 200 neliökilometrin laajuinen. Se on lähes jatkuvasti liikkeessä, ja sen korkeus muuttuu purkausten mukana — syyskuussa 2024 huippu oli 3 403 metriä. Tuhkasta syntyy hedelmällistä multaa, ja rinteet ovat täynnä viinitarhoja ja hedelmätarhoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Etna ei nuku koskaan] Sisilian Etna on Euroopan korkein ja ahkerin tulivuori: se purkautuu lähes joka vuosi, ja tuhkavana näkyy avaruudesta asti. Purkaukset ovat harvoin vaarallisia — laava valuu hitaasti ja ennustettavasti — ja rinteiden tuhkamaa on niin ravinteikasta, että sillä kasvatetaan viiniä, appelsiineja ja pistaaseja. Paikalliset elävät tulivuorensa kanssa kuin ison eläimen: sitä kunnioitetaan, kuunnellaan ja kiitetään sadosta.
+
+### 9.2
+KYSYMYS: Miten vuoren rinteillä uskalletaan viljellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etna (luonto · vuori)
+Tietoruudun teksti: Etna on Italian neljästä aktiivisesta tulivuoresta ylivoimaisesti suurin: noin kaksi ja puoli kertaa Vesuviuksen korkuinen ja lähes 1 200 neliökilometrin laajuinen. Se on lähes jatkuvasti liikkeessä, ja sen korkeus muuttuu purkausten mukana — syyskuussa 2024 huippu oli 3 403 metriä. Tuhkasta syntyy hedelmällistä multaa, ja rinteet ovat täynnä viinitarhoja ja hedelmätarhoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:milano) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milano (kaupungit)
+Tietoruudun teksti: Milanon perusti kelttiheimo noin 590 eaa., ja roomalaiset valloittivat sen 222 eaa. ja latinalaistivat nimen muotoon Mediolanum. Vuosina 284–402 jaa. kaupunki oli Rooman valtakunnan läntisen puoliskon pääkaupunki. Keskiajan lopulla Milanon herttuakunta oli yksi renessanssin suurista rahoittajista, ja 1800-luvulta lähtien kaupunki on vetänyt Italian teollisuutta ja rahaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Metropolitan-museo] 1870–1880 New Yorkin osavaltion lakiasäätävä kokous myönsi museolle perustamiskirjan 13. huhtikuuta 1870. Tarkoitus kirjattiin asiakirjaan: kaupunkiin oli perustettava taidemuseo ja -kirjasto, kehitettävä kuvataiteiden opiskelua ja annettava kansanomaista opetusta. Perustajissa oli liikemiehiä ja rahoittajia, muiden muassa Theodore Roosevelt vanhempi, sekä aikansa taiteilijoita ja ajattelijoita. Ensimmäiseksi johtokunnan puheenjohtajaksi tuli rautatiejohtaja John Taylor Johnston, jonka oma kokoelma oli museon siemen. Museo avattiin 20. helmikuuta 1872 vuokratiloissa osoitteessa 681 Fifth Avenue. Kokoelmana oli roomalainen kivisarkofagi ja 174 pääosin eurooppalaista maalausta, ja tila loppui…
+- [Tabriz — kohdekartta / Kohdekartta: Perustuslakitalo] 1868 Talon rakennutti vuonna 1868 Haj Mehdi Koozekonani, Tabrizin basaarin kauppias; rakentajaksi mainitaan Haj Vali Me’mar-e Tabrizi. Se on tavallinen qajar-kauden asuintalo aivan basaarin kyljessä: kaksi kerrosta ja tyylin mukaan erilliset sisä- ja ulko-osat. Perustuslakivallankumous alkoi 1905 ja päättyi 1911, ja Tabriz oli sen keskuksia. Mozaffar ad-Din Shah antoi 5. elokuuta 1906 julistuksen, joka teki maasta perustuslaillisen monarkian, ja allekirjoitti perustuslain vähän ennen kuolemaansa; teksti on päivätty 30. joulukuuta 1906. Koozekonani liittyi liikkeeseen ja oli sen suurimpia rahoittajia; aikalaiset kutsuivat häntä nimellä Abolmele, kansan isä. Talossa kokoontuivat liikkeen joht…
+
+### 10.1
+KYSYMYS: Mikä kelttiheimo kaupungin perusti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milano (kaupungit)
+Tietoruudun teksti: Milanon perusti kelttiheimo noin 590 eaa., ja roomalaiset valloittivat sen 222 eaa. ja latinalaistivat nimen muotoon Mediolanum. Vuosina 284–402 jaa. kaupunki oli Rooman valtakunnan läntisen puoliskon pääkaupunki. Keskiajan lopulla Milanon herttuakunta oli yksi renessanssin suurista rahoittajista, ja 1800-luvulta lähtien kaupunki on vetänyt Italian teollisuutta ja rahaa.
+
+### 10.2
+KYSYMYS: Miksi renessanssi tarvitsi rahoittajia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Milano (kaupungit)
+Tietoruudun teksti: Milanon perusti kelttiheimo noin 590 eaa., ja roomalaiset valloittivat sen 222 eaa. ja latinalaistivat nimen muotoon Mediolanum. Vuosina 284–402 jaa. kaupunki oli Rooman valtakunnan läntisen puoliskon pääkaupunki. Keskiajan lopulla Milanon herttuakunta oli yksi renessanssin suurista rahoittajista, ja 1800-luvulta lähtien kaupunki on vetänyt Italian teollisuutta ja rahaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Metropolitan-museo] 1870–1880 New Yorkin osavaltion lakiasäätävä kokous myönsi museolle perustamiskirjan 13. huhtikuuta 1870. Tarkoitus kirjattiin asiakirjaan: kaupunkiin oli perustettava taidemuseo ja -kirjasto, kehitettävä kuvataiteiden opiskelua ja annettava kansanomaista opetusta. Perustajissa oli liikemiehiä ja rahoittajia, muiden muassa Theodore Roosevelt vanhempi, sekä aikansa taiteilijoita ja ajattelijoita. Ensimmäiseksi johtokunnan puheenjohtajaksi tuli rautatiejohtaja John Taylor Johnston, jonka oma kokoelma oli museon siemen. Museo avattiin 20. helmikuuta 1872 vuokratiloissa osoitteessa 681 Fifth Avenue. Kokoelmana oli roomalainen kivisarkofagi ja 174 pääosin eurooppalaista maalausta, ja tila loppui…
+- [Tabriz — kohdekartta / Kohdekartta: Perustuslakitalo] 1868 Talon rakennutti vuonna 1868 Haj Mehdi Koozekonani, Tabrizin basaarin kauppias; rakentajaksi mainitaan Haj Vali Me’mar-e Tabrizi. Se on tavallinen qajar-kauden asuintalo aivan basaarin kyljessä: kaksi kerrosta ja tyylin mukaan erilliset sisä- ja ulko-osat. Perustuslakivallankumous alkoi 1905 ja päättyi 1911, ja Tabriz oli sen keskuksia. Mozaffar ad-Din Shah antoi 5. elokuuta 1906 julistuksen, joka teki maasta perustuslaillisen monarkian, ja allekirjoitti perustuslain vähän ennen kuolemaansa; teksti on päivätty 30. joulukuuta 1906. Koozekonani liittyi liikkeeseen ja oli sen suurimpia rahoittajia; aikalaiset kutsuivat häntä nimellä Abolmele, kansan isä. Talossa kokoontuivat liikkeen joht…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

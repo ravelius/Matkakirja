@@ -1,0 +1,204 @@
+================ KOHTA 41 (kohde:hahmotelma-val-d-orcia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+### 41.1
+KYSYMYS: Mikä Pienza on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+### 41.2
+KYSYMYS: Kuka Ghino di Tacco oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Val d'Orcia (kulttuuri)
+Tietoruudun teksti: Val d'Orcia on Toscanan alue, joka ulottuu Sienan eteläpuolisilta kukkuloilta Monte Amiatalle Sienan ja Grosseton maakuntien välissä. Sen loivia, viljeltyjä kukkuloita rikkovat vain uomat sekä kaupungit ja kylät. Pienzan paavi Pius II rakennutti uudelleen "ihannekaupungiksi" 1400-luvulla, Radicofanissa asui rosvosankariksi kutsuttu Ghino di Tacco, ja Montalcinon Brunello-viini on Italian arvostetuimpia viinejä. Alueen maisemaa on kuvattu taiteessa renessanssin maalauksista nykyvalokuvaan. UNESCO merkitsi Val d'Orcian maailmanperintökohteeksi vuonna 2004.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-alba) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio Barolo] 1923 Talon tilasi italialainen siirtolainen Luis Barolo, joka oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja sen suunnitteli italialainen arkkitehti Mario Palanti. Rakennus noudattaa Danten Jumalaisen näytelmän maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen osaan niin, että kellari ja katutaso ovat helvetti, kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on sata metriä, yksi metri runoelman jokaista laulua kohden, ja huipun majakka vastaa enkelien yhdeksää kuoroa. Kärkikoriste esittää Etelän ristiä. Valmistuessaan 1923 talo oli sekä kaupungin että koko Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle — Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Aveni…
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+
+### 42.1
+KYSYMYS: Miksi Alban valkoinen tryffeli on niin arvokas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Tuoksuva timantti Motovunin metsästä] 1999 — Istrian metsissä Mirna-joen varrella kasvaa valkotryffeliä, samaa lajia kuin Italian kuuluisassa Alban tryffelissä. Vuonna 1999 paikallinen tryffelinmetsästäjä Giancarlo Zigante löysi koiransa Dianan avulla Motovunin metsästä lähes 1,3 kilon painoisen valkotryffelin — sen ajan suurimman koskaan löydetyn. Löytö teki pienestä kukkulakaupungista Motovunista maailmankuulun, ja siitä lähtien siellä on joka syksy järjestetty kansainvälinen tryffelifestivaali. Tryffeliä etsitään yhä samalla tavalla kuin sata vuotta sitten: koulutetulla koiralla, joka haistaa maan alla kasvavan sienen tuoksun.
+
+### 42.2
+KYSYMYS: Mitä Barolo on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba (ruoka)
+Tietoruudun teksti: Alba on Piemontin kaupunki Cuneon maakunnassa, ja se kuuluu Piemontin viinimaiseman (Langhe-Roero ja Monferrato) UNESCO-kohteen tärkeimpiin kaupunkeihin. Kaupunki on kuuluisa valkoisesta tryffelistään ja viinintuotannostaan, ja sen alueen DOCG-viinejä ovat Barbaresco, Barolo ja Moscato. Roomalaisaikana paikka oli Alba Pompeia, ja täällä syntyi Publius Helvius Pertinax, josta tuli vuonna 193 hetkeksi Rooman keisari. Alba oli 1000-luvulta vapaa kaupunkivaltio ja Lombardian liiton jäsen, ja Cheraskon sopimus vuonna 1631 antoi sen lopullisesti Savoijille. Nykyisin kaupungissa on konditoriakonserni Ferreron kotipaikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio Barolo] 1923 Talon tilasi italialainen siirtolainen Luis Barolo, joka oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja sen suunnitteli italialainen arkkitehti Mario Palanti. Rakennus noudattaa Danten Jumalaisen näytelmän maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen osaan niin, että kellari ja katutaso ovat helvetti, kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on sata metriä, yksi metri runoelman jokaista laulua kohden, ja huipun majakka vastaa enkelien yhdeksää kuoroa. Kärkikoriste esittää Etelän ristiä. Valmistuessaan 1923 talo oli sekä kaupungin että koko Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle — Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Aveni…
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-valdobbiadene) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+### 43.1
+KYSYMYS: Mikä on Prosecco?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+### 43.2
+KYSYMYS: Mitä Glera tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valdobbiadene (ruoka)
+Tietoruudun teksti: Valdobbiadene on kaupunki Trevison maakunnassa Venetossa. Alppien ja Dolomiittien juurella sijaitsevan seudun ilmasto sopii Glera-rypäleen viljelyyn, ja Conegliano–Valdobbiadene on parhaan Proseccon, kuivan kuohuvan valkoviinin, kotiseutu. Kaupunki kuului Trevison alaisuuteen vuoteen 1178 asti, sitten Ezzelinojen hallussa vuoteen 1260, ja 1300-luvun puolivälin tienoilla se siirtyi Venetsian vallan alle. Pyhä Venantius Fortunatus syntyi kaupungissa 500-luvulla. Vuonna 2019 Coneglianon ja Valdobbiadenen Proseccokukkulat kirjattiin UNESCOn maailmanperintöluetteloon.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-assisi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Havanna — kohdekartta / Kohdekartta: San Franciscon basilika] 1548–1591 Fransiskaanien luostarikirkon rakentaminen alkoi 1548 ja kesti vuoteen 1591, vaikka kirkko vihittiin käyttöön jo 1575. Myrskyt vaurioittivat sitä 1680 ja 1692, ja hirmumyrsky katkaisi tornin 1694. Nykyinen muoto on aloitettu 1716, ja rakenteita uusittiin 1731–1738. Pikkubasilikan arvon kirkko sai 1739. Julkisivu on Oficios-kadun puolella, ja siinä on kolme kivipatsasta: Neitsyt Marian tahraton sikiäminen, Franciscus Assisilainen ja pyhä Dominicus. Kirkon edessä oleva Plaza de San Francisco perustettiin 2. kesäkuuta 1628, ja se on Havannan vanhimpia aukioita. Vuonna 1761 kaupungin pormestari José Martín Félix de Arrate piti sitä kaupungin parhaana paikkana, ja siihen aikaan aukioll…
+
+### 44.1
+KYSYMYS: Kuka Pyhä Franciscus oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Havanna — kohdekartta / Kohdekartta: San Franciscon basilika] 1548–1591 Fransiskaanien luostarikirkon rakentaminen alkoi 1548 ja kesti vuoteen 1591, vaikka kirkko vihittiin käyttöön jo 1575. Myrskyt vaurioittivat sitä 1680 ja 1692, ja hirmumyrsky katkaisi tornin 1694. Nykyinen muoto on aloitettu 1716, ja rakenteita uusittiin 1731–1738. Pikkubasilikan arvon kirkko sai 1739. Julkisivu on Oficios-kadun puolella, ja siinä on kolme kivipatsasta: Neitsyt Marian tahraton sikiäminen, Franciscus Assisilainen ja pyhä Dominicus. Kirkon edessä oleva Plaza de San Francisco perustettiin 2. kesäkuuta 1628, ja se on Havannan vanhimpia aukioita. Vuonna 1761 kaupungin pormestari José Martín Félix de Arrate piti sitä kaupungin parhaana paikkana, ja siihen aikaan aukioll…
+
+### 44.2
+KYSYMYS: Ketkä maalasivat basilikan freskot?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Assisin basilika (kulttuuri)
+Tietoruudun teksti: Pyhän Franciscuksen basilika on minoriittien veljeskunnan äitikirkko Assisissa Umbriassa, kaupungissa, jossa Franciscus syntyi ja kuoli. Se on yksi Italian tärkeimmistä pyhiinvaelluskohteista ja UNESCOn maailmanperintökohde vuodesta 2000. Rakentaminen alkoi vuonna 1228, ja kukkulan rinteeseen rakennetussa basilikassa on ylä- ja alakirkko sekä krypta, jossa pyhimyksen jäännökset ovat. Kirkkojen freskot ovat myöhäiskeskiajan maalareiden työtä, ja tekijöiden joukossa ovat muun muassa Cimabue, Giotto, Simone Martini ja Pietro Lorenzetti. Paavi Gregorius IX julisti Franciscuksen pyhimykseksi 16. heinäkuuta 1228.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+- [Tampere — kohdekartta / Kohdekartta: Tuomiokirkko] Isoisäsi ei nähnyt tätä kirkkoa: se rakennettiin vasta vuosina 1902–1907, kun tehdaskaupungilla oli varaa rakentaa itselleen jotain muuta kuin tehdas. Lars Sonck piirsi sen Uudenkaupungin harmaasta graniitista, ja maalaustyöhön kutsuttiin Hugo Simberg. Alttarin kahta puolta hän maalasi Haavoittuneen enkelin ja Kuoleman puutarhan. Lehterin kaidetta pitkin kiertää Köynnöksenkantajat, jossa kaksitoista alastonta pikkupoikaa kannattelee ruusuköynnöstä. Ja aivan kirkkosalin kunniapaikalle, pääholvin kattoon, hän maalasi kiemurtelevan paratiisikäärmeen, jolla on suussaan hyvän ja pahan tiedon omena. Vastaanotto oli äänekäs. Luurangot ja alastomat pojat olivat monien mielestä kirkkoon kuulumattomi…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-urbino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Marseille — kaupunkilehti / Marseille: Monte Criston linnasaari] Sataman suulla olevalle kalliosaarelle rakennettiin 1500-luvulla linnoitus, josta tuli pian vankila. Alexandre Dumas sijoitti sinne romaaninsa Monte Criston kreivi, ja kirjasta tuli niin kuuluisa, että saarelle tehtiin turisteja varten Faria-isän selli, vaikka romaanin pappi on Dumas’n keksintöä eikä koskaan istunut siellä. Oikeat vangit eivät päässeet minnekään: saarelta ei tiettävästi ole koskaan paennut kukaan.
+
+### 45.1
+KYSYMYS: Kuka Federico da Montefeltro oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Marseille — kaupunkilehti / Marseille: Monte Criston linnasaari] Sataman suulla olevalle kalliosaarelle rakennettiin 1500-luvulla linnoitus, josta tuli pian vankila. Alexandre Dumas sijoitti sinne romaaninsa Monte Criston kreivi, ja kirjasta tuli niin kuuluisa, että saarelle tehtiin turisteja varten Faria-isän selli, vaikka romaanin pappi on Dumas’n keksintöä eikä koskaan istunut siellä. Oikeat vangit eivät päässeet minnekään: saarelta ei tiettävästi ole koskaan paennut kukaan.
+
+### 45.2
+KYSYMYS: Miksi Urbino on maailmanperintökohde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Urbino (kulttuuri)
+Tietoruudun teksti: Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle rinteelle rakennettu kaupunki on säilyttänyt paljon keskiaikaista ilmettään. Sen tunnetuin rakennus on Luciano Lauranan uudelleen rakentama Palazzo Ducale. Urbinon yliopisto perustettiin vuonna 1506, ja kaupunki on arkkipiispan kotipaikka. Roomalaisaikana pieni Urbinum Mataurense oli 500-luvulla goottisotien tärkeä linnake.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

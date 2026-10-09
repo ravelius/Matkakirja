@@ -1,0 +1,202 @@
+================ KOHTA 11 (kohde:torino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torino (kaupungit)
+Tietoruudun teksti: Torino oli yhdistyneen Italian ensimmäinen pääkaupunki vuosina 1861–1865 — sitä ennen Savoijin herttuakunnan ja Sardinian kuningaskunnan keskus, ja siksi sitä on kutsuttu Italian vapauden kehdoksi. Kaupungin tunnus, Mole Antonelliana, oli isoisän matkavuonna vasta työmaa: se aloitettiin 1863 synagogaksi ja valmistui vasta 1889, arkkitehtinsa kuoltua. Nykyään siinä toimii elokuvamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+- [Kano — kaupunkilehti / Kauppa ja käsityö: Torin toinen elämä savikojuissa] Vuonna 1904 vanha tori purettiin, jotta Kanon natiivihallinto saisi siitä enemmän verotuloja. Uusi tori avattiin 1909, ja siinä oli 755 savikojua sekä moskeija ja oikeustalo; katuja levennettiin ja osa karjakauppiaista siirrettiin muualle. Samaan aikaan kaupan suunta kääntyi: Saharan sijasta katsottiin etelään, naapureihin ja eurooppalaisiin. Vuonna 1969 hallinto siirtyi kaupungin paikallishallinnolle, ja sen jälkeen erikoistuneet torit ovat vieneet osan kaupasta — Yan Kaba vihannekset ja Kantin Kwari tekstiilit. Kurmi palvelee nykyään enimmäkseen omia kaupunkilaisiaan.
+
+### 11.1
+KYSYMYS: Miksi pääkaupunki siirrettiin pois Torinosta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torino (kaupungit)
+Tietoruudun teksti: Torino oli yhdistyneen Italian ensimmäinen pääkaupunki vuosina 1861–1865 — sitä ennen Savoijin herttuakunnan ja Sardinian kuningaskunnan keskus, ja siksi sitä on kutsuttu Italian vapauden kehdoksi. Kaupungin tunnus, Mole Antonelliana, oli isoisän matkavuonna vasta työmaa: se aloitettiin 1863 synagogaksi ja valmistui vasta 1889, arkkitehtinsa kuoltua. Nykyään siinä toimii elokuvamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+- [Kano — kaupunkilehti / Kauppa ja käsityö: Torin toinen elämä savikojuissa] Vuonna 1904 vanha tori purettiin, jotta Kanon natiivihallinto saisi siitä enemmän verotuloja. Uusi tori avattiin 1909, ja siinä oli 755 savikojua sekä moskeija ja oikeustalo; katuja levennettiin ja osa karjakauppiaista siirrettiin muualle. Samaan aikaan kaupan suunta kääntyi: Saharan sijasta katsottiin etelään, naapureihin ja eurooppalaisiin. Vuonna 1969 hallinto siirtyi kaupungin paikallishallinnolle, ja sen jälkeen erikoistuneet torit ovat vieneet osan kaupasta — Yan Kaba vihannekset ja Kantin Kwari tekstiilit. Kurmi palvelee nykyään enimmäkseen omia kaupunkilaisiaan.
+
+### 11.2
+KYSYMYS: Kuka Mole Antonellianan suunnitteli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Torino (kaupungit)
+Tietoruudun teksti: Torino oli yhdistyneen Italian ensimmäinen pääkaupunki vuosina 1861–1865 — sitä ennen Savoijin herttuakunnan ja Sardinian kuningaskunnan keskus, ja siksi sitä on kutsuttu Italian vapauden kehdoksi. Kaupungin tunnus, Mole Antonelliana, oli isoisän matkavuonna vasta työmaa: se aloitettiin 1863 synagogaksi ja valmistui vasta 1889, arkkitehtinsa kuoltua. Nykyään siinä toimii elokuvamuseo.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:comojarvi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comojärvi (luonto)
+Tietoruudun teksti: Comojärvi on jääkauden työtä: Adda-jäätikkö törmäsi vuoristoon, haarautui ja kaiversi järvelle sen tunnusomaisen Y-muodon. Se on Italian kolmanneksi suurin järvi ja yli 400 metriä syvä, siis Euroopan syvimpiä. Rannat ovat olleet varakkaiden lepopaikka roomalaisajoista asti, ja huviloita reunustaa yhä. 1800-luvulla seutu rikastui silkkiteollisuudesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Irkutsk: Tee ja silkki tulivat Kjahtan kautta] Ensimmäinen maantie Moskovasta Irkutskiin, Siperian valtatie, valmistui vuonna 1760, ja se vauhditti kaupungin taloutta. Samaan aikaan Kjahtan rajakauppapaikan kautta Kiinasta tuodut tavarat — tee ja silkki etunenässä — tulivat Irkutskissa ensi kertaa laajalti saataville; Kjahta oli perustettu vuonna 1727. Vuonna 1821 Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin, ja vuoden 1897 väenlaskussa asukkaita oli 51 473. Sähköt vedettiin 1896, draamateatteri sai kivitalonsa 1897 ja ensimmäinen juna saapui kaupunkiin 16. elokuuta 1898.
+- [Timbuktu — kohdekartta / Kohdekartta: Heinrich Barthin talo] 1853–1854 Saksalainen Heinrich Barth saapui Timbuktuun 7. syyskuuta 1853. Hän oli lähtenyt liikkeelle kolmen miehen retkikunnassa, mutta Richardson kuoli maaliskuussa 1851 ja Overweg syyskuussa 1852, joten Barth jatkoi yksin. Kun hän palasi Tripoliin syyskuussa 1855, matka oli ulottunut kahdenkymmenenneljän leveysasteen ja kahdenkymmenen pituusasteen yli — Tripolista Kameruniin ja Tšad-järveltä Timbuktuun, yli kaksitoistatuhatta mailia. Hän puhui sujuvasti arabiaa sekä fulania, hausaa ja kanuria ja tutki erityisesti Songhain historiaa. Timbuktussa hän asui kunta-suvun sheikin Ahmad al-Bakkai al-Kuntin talossa. Al-Bakkai (1803–1865) oli esikoloniaalisen Länsi-Sudanin viimeisiä merkittäviä so…
+
+### 12.1
+KYSYMYS: Mikä Adda-jäätikkö oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comojärvi (luonto)
+Tietoruudun teksti: Comojärvi on jääkauden työtä: Adda-jäätikkö törmäsi vuoristoon, haarautui ja kaiversi järvelle sen tunnusomaisen Y-muodon. Se on Italian kolmanneksi suurin järvi ja yli 400 metriä syvä, siis Euroopan syvimpiä. Rannat ovat olleet varakkaiden lepopaikka roomalaisajoista asti, ja huviloita reunustaa yhä. 1800-luvulla seutu rikastui silkkiteollisuudesta.
+
+### 12.2
+KYSYMYS: Mihin silkkiteollisuus järveltä katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Comojärvi (luonto)
+Tietoruudun teksti: Comojärvi on jääkauden työtä: Adda-jäätikkö törmäsi vuoristoon, haarautui ja kaiversi järvelle sen tunnusomaisen Y-muodon. Se on Italian kolmanneksi suurin järvi ja yli 400 metriä syvä, siis Euroopan syvimpiä. Rannat ovat olleet varakkaiden lepopaikka roomalaisajoista asti, ja huviloita reunustaa yhä. 1800-luvulla seutu rikastui silkkiteollisuudesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Irkutsk: Tee ja silkki tulivat Kjahtan kautta] Ensimmäinen maantie Moskovasta Irkutskiin, Siperian valtatie, valmistui vuonna 1760, ja se vauhditti kaupungin taloutta. Samaan aikaan Kjahtan rajakauppapaikan kautta Kiinasta tuodut tavarat — tee ja silkki etunenässä — tulivat Irkutskissa ensi kertaa laajalti saataville; Kjahta oli perustettu vuonna 1727. Vuonna 1821 Irkutskista tuli Itä-Siperian kenraalikuvernöörin istuin, ja vuoden 1897 väenlaskussa asukkaita oli 51 473. Sähköt vedettiin 1896, draamateatteri sai kivitalonsa 1897 ja ensimmäinen juna saapui kaupunkiin 16. elokuuta 1898.
+- [Timbuktu — kohdekartta / Kohdekartta: Heinrich Barthin talo] 1853–1854 Saksalainen Heinrich Barth saapui Timbuktuun 7. syyskuuta 1853. Hän oli lähtenyt liikkeelle kolmen miehen retkikunnassa, mutta Richardson kuoli maaliskuussa 1851 ja Overweg syyskuussa 1852, joten Barth jatkoi yksin. Kun hän palasi Tripoliin syyskuussa 1855, matka oli ulottunut kahdenkymmenenneljän leveysasteen ja kahdenkymmenen pituusasteen yli — Tripolista Kameruniin ja Tšad-järveltä Timbuktuun, yli kaksitoistatuhatta mailia. Hän puhui sujuvasti arabiaa sekä fulania, hausaa ja kanuria ja tutki erityisesti Songhain historiaa. Timbuktussa hän asui kunta-suvun sheikin Ahmad al-Bakkai al-Kuntin talossa. Al-Bakkai (1803–1865) oli esikoloniaalisen Länsi-Sudanin viimeisiä merkittäviä so…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:po) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Po (luonto · joki)
+Tietoruudun teksti: Po on Italian pisin joki, 652 kilometriä. Se alkaa Cottian Alpeilla kivisestä rinteestä pulppuavana lähteenä Monviso-vuoren alta ja päätyy leveään suistoon Adrianmerellä. Vesimäärältään se on Rhônen ja Niilin ohella Välimeren suurimpia jokia — ja siksi myös tulvii, minkä takia yli puolet uomasta on penkereiden välissä. Milanoon Po on yhdistetty kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kaupunkilehti / Novosibirsk: Ainoa kohta, jossa joki on putkessa] Radan piti alun perin kulkea Kolyvanin ja Tomskin kautta, mutta siellä Ob tulvii keväisin leveälle. Retkikuntaa johtanut Nikolai Garin-Mihailovski perusteli toista paikkaa näin: sadankuudenkymmenen virstan matkalla tämä on ainoa kohta, jossa joki on talonpoikien sanoin putkessa, sillä molemmat rannat ja uoma ovat kalliota. Kolyvanissa joki leviää tulvalla kahdentoista virstan levyiseksi, tässä vain neljänsadan sylen. Elokuussa 1891 Bolšoje Krivoštšokovon kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin lukkoon. Osa tutkijoista antaa kunnian retkikunnan kenttäinsinöörille Vikenti Roetskille.
+
+### 13.1
+KYSYMYS: Mitä navigli-kanavat ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Po (luonto · joki)
+Tietoruudun teksti: Po on Italian pisin joki, 652 kilometriä. Se alkaa Cottian Alpeilla kivisestä rinteestä pulppuavana lähteenä Monviso-vuoren alta ja päätyy leveään suistoon Adrianmerellä. Vesimäärältään se on Rhônen ja Niilin ohella Välimeren suurimpia jokia — ja siksi myös tulvii, minkä takia yli puolet uomasta on penkereiden välissä. Milanoon Po on yhdistetty kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.
+
+### 13.2
+KYSYMYS: Miksi joki tulvii yhä nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Po (luonto · joki)
+Tietoruudun teksti: Po on Italian pisin joki, 652 kilometriä. Se alkaa Cottian Alpeilla kivisestä rinteestä pulppuavana lähteenä Monviso-vuoren alta ja päätyy leveään suistoon Adrianmerellä. Vesimäärältään se on Rhônen ja Niilin ohella Välimeren suurimpia jokia — ja siksi myös tulvii, minkä takia yli puolet uomasta on penkereiden välissä. Milanoon Po on yhdistetty kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kaupunkilehti / Novosibirsk: Ainoa kohta, jossa joki on putkessa] Radan piti alun perin kulkea Kolyvanin ja Tomskin kautta, mutta siellä Ob tulvii keväisin leveälle. Retkikuntaa johtanut Nikolai Garin-Mihailovski perusteli toista paikkaa näin: sadankuudenkymmenen virstan matkalla tämä on ainoa kohta, jossa joki on talonpoikien sanoin putkessa, sillä molemmat rannat ja uoma ovat kalliota. Kolyvanissa joki leviää tulvalla kahdentoista virstan levyiseksi, tässä vain neljänsadan sylen. Elokuussa 1891 Bolšoje Krivoštšokovon kylässä pidettiin maastokokous, jossa ylityspaikka lyötiin lukkoon. Osa tutkijoista antaa kunnian retkikunnan kenttäinsinöörille Vikenti Roetskille.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:sardinia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+
+### 14.1
+KYSYMYS: Ketkä nuraghe-tornit rakensivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+
+### 14.2
+KYSYMYS: Miten sardin kieli eroaa italiasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sardinia (luonto · saari)
+Tietoruudun teksti: Sardinia on Sisilian jälkeen Välimeren toiseksi suurin saari, ja sitä on kuvattu mikromantereeksi: vuoria, metsiä, tasankoja, kallioisia rantoja ja pitkiä hiekkarantoja samassa paikassa. Saarella puhutaan omaa kieltä, sardia, joka on Italian lain tunnustama vähemmistökieli. Maisemassa seisoo yhä esihistoriallisen nuraghe-kulttuurin kivitorneja ympäri saarta.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:adrianmeri~3) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+
+### 15.1
+KYSYMYS: Miksi Venetsia rakennettiin juuri tänne?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+
+### 15.2
+KYSYMYS: Mikä Otranton salmi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla: Albanialla, Bosnia ja Hertsegovinalla, Kroatialla, Italialla, Montenegrolla ja Slovenialla.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

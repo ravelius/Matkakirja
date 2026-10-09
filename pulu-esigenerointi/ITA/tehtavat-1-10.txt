@@ -1,0 +1,219 @@
+================ KOHTA 46 (kohde:hahmotelma-cremona) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Cremonan viuluja ei ole ylitetty] Pienessä Cremonan kaupungissa rakennettiin 1600- ja 1700-luvuilla maailman parhaat viulut, eikä kukaan ole sen jälkeen tehnyt parempia. Antonio Stradivari valmisti työpajassaan yli tuhat soitinta, joista noin 650 on säilynyt — ja niillä soitetaan yhä, sillä parhaat maksavat enemmän kuin kerrostalo. Salaisuutta on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Cremonassa on edelleen yli sata viulunrakentajan verstasta, ja käsityö jatkuu.
+
+### 46.1
+KYSYMYS: Kuka Antonio Stradivari oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Cremonan viuluja ei ole ylitetty] Pienessä Cremonan kaupungissa rakennettiin 1600- ja 1700-luvuilla maailman parhaat viulut, eikä kukaan ole sen jälkeen tehnyt parempia. Antonio Stradivari valmisti työpajassaan yli tuhat soitinta, joista noin 650 on säilynyt — ja niillä soitetaan yhä, sillä parhaat maksavat enemmän kuin kerrostalo. Salaisuutta on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Cremonassa on edelleen yli sata viulunrakentajan verstasta, ja käsityö jatkuu.
+
+### 46.2
+KYSYMYS: Miksi viulut tehtiin juuri Cremonassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cremona (kulttuuri)
+Tietoruudun teksti: Cremona on Lombardian kaupunki Po-joen vasemmalla rannalla keskellä Po-tasankoa. Se on erityisen tunnettu musiikkiperinteestään ja varhaisimmista ja arvostetuimmista viulunrakentajista, joihin kuuluvat muun muassa Giuseppe Guarneri, Antonio Stradivari, Francesco ja Vincenzo Rugeri sekä useat Amatin suvun jäsenet. Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja Amatin ja Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat. Roomalaiset perustivat kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Cremonan viuluja ei ole ylitetty] Pienessä Cremonan kaupungissa rakennettiin 1600- ja 1700-luvuilla maailman parhaat viulut, eikä kukaan ole sen jälkeen tehnyt parempia. Antonio Stradivari valmisti työpajassaan yli tuhat soitinta, joista noin 650 on säilynyt — ja niillä soitetaan yhä, sillä parhaat maksavat enemmän kuin kerrostalo. Salaisuutta on etsitty puusta, lakasta ja liimasta, mutta varmaa vastausta ei tiedä kukaan. Cremonassa on edelleen yli sata viulunrakentajan verstasta, ja käsityö jatkuu.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-portofino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Porto Velho] Porto Velho versoi Rio Madeiran rantaan sademetsän keskelle vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen tulvista, kumista, tinasta ja soijasta.
+- [Barcelona — kohdekartta / Kohdekartta: Musiikkipalatsi] 1905–1908 Palau de la Música Catalana eli Musiikkipalatsi on Barcelonan konserttitalo, jonka arkkitehti Lluís Domènech i Montaner suunnitteli 1900-luvun alussa. Rakennus valmistui vuosina 1905–1908, ja se avattiin yleisölle helmikuussa vuonna 1908. Konserttisalin katossa roikkuu jättimäinen, ylösalaisin oleva lasimaalattu kupoli, joka hehkuu kullan- ja sinisenvärisenä päivänvalon osuessa siihen. Salin seinillä on 18 muusaa esittävää veistosta, joiden alaosa on koristeltu värikkäällä mosaiikilla, ja katossa liitää siivekkäitä hevosia antiikin Pegasos-tarun hengessä. Rakennuksen julkisivu on täynnä värikkäitä laattoja, punatiiltä ja rautakoristeita, ja konserttisaliin mahtuu jopa noin 2 200 k…
+- [Bukarest — kohdekartta / Kohdekartta: Antipan museo] 1908 Antipan museo on Bukarestin suuri luonnontieteellinen museo. Sen juuret ulottuvat vuoteen 1834, mutta nykyinen komea rakennus valmistui vuonna 1908, ja kuningas Carol I avasi sen juhlallisesti. Museo sai nykyisen nimensä vuonna 1933 tutkija Grigore Antipan mukaan, joka johti museota peräti 51 vuotta. Museon kokoelmissa on yli 2 miljoonaa näytettä eläimistä, kasveista ja kivistä. Erikoisuutena on maailman ainoa täydellinen luuranko sukupuuttoon kuolleesta jättimäisestä Deinotherium-norsueläimestä. Museossa on myös oma huone täynnä värikkäitä perhosia. Vuonna 2011 museo remontoitiin perusteellisesti 14 miljoonalla dollarilla, ja se avattiin uudelleen nykyaikaisena näyttelytilana. Antipan…
+
+### 47.1
+KYSYMYS: Mistä Portofinon nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Porto Velho] Porto Velho versoi Rio Madeiran rantaan sademetsän keskelle vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen tulvista, kumista, tinasta ja soijasta.
+
+### 47.2
+KYSYMYS: Miksi talot ovat värikkäitä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Portofino (kulttuuri)
+Tietoruudun teksti: Portofino on kunta Italian Rivieralla Genovan suurkaupunkialueella. Kylä sijaitsee pienen satamansa ympärillä, ja sen tunnusmerkki ovat rantaa reunustavat värikkäiksi maalatut talot. Plinius Vanhempi mainitsi paikan nimellä Portus Delphini eli Delfiinin satama. Vuoden 986 asiakirjassa kylä liitettiin San Fruttuoso di Capodimonten luostarille, ja vuoden 1229 jälkeen se kuului Genovan tasavallalle. Luonnonsatama tuki kalastusvenekuntaa, mutta se oli liian ahdas Genovan kasvavalle kauppalaivastolle. Vuodesta 1815 kylä kuului Sardinian kuningaskuntaan ja vuodesta 1861 yhtenäiseen Italiaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Musiikkipalatsi] 1905–1908 Palau de la Música Catalana eli Musiikkipalatsi on Barcelonan konserttitalo, jonka arkkitehti Lluís Domènech i Montaner suunnitteli 1900-luvun alussa. Rakennus valmistui vuosina 1905–1908, ja se avattiin yleisölle helmikuussa vuonna 1908. Konserttisalin katossa roikkuu jättimäinen, ylösalaisin oleva lasimaalattu kupoli, joka hehkuu kullan- ja sinisenvärisenä päivänvalon osuessa siihen. Salin seinillä on 18 muusaa esittävää veistosta, joiden alaosa on koristeltu värikkäällä mosaiikilla, ja katossa liitää siivekkäitä hevosia antiikin Pegasos-tarun hengessä. Rakennuksen julkisivu on täynnä värikkäitä laattoja, punatiiltä ja rautakoristeita, ja konserttisaliin mahtuu jopa noin 2 200 k…
+- [Bukarest — kohdekartta / Kohdekartta: Antipan museo] 1908 Antipan museo on Bukarestin suuri luonnontieteellinen museo. Sen juuret ulottuvat vuoteen 1834, mutta nykyinen komea rakennus valmistui vuonna 1908, ja kuningas Carol I avasi sen juhlallisesti. Museo sai nykyisen nimensä vuonna 1933 tutkija Grigore Antipan mukaan, joka johti museota peräti 51 vuotta. Museon kokoelmissa on yli 2 miljoonaa näytettä eläimistä, kasveista ja kivistä. Erikoisuutena on maailman ainoa täydellinen luuranko sukupuuttoon kuolleesta jättimäisestä Deinotherium-norsueläimestä. Museossa on myös oma huone täynnä värikkäitä perhosia. Vuonna 2011 museo remontoitiin perusteellisesti 14 miljoonalla dollarilla, ja se avattiin uudelleen nykyaikaisena näyttelytilana. Antipan…
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-carrara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Plaza Vieja] 1559 Aukio avattiin 1559 kolmantena Plaza de Armasin ja San Franciscon jälkeen, ja sen nimi oli aluksi Plaza Nueva eli Uusi aukio: se oli kansanomainen vaihtoehto sotilaiden ja hallinnon aukiolle. Nimi vaihtui vasta, kun kaupunkiin syntyi vielä uudempi aukio, Plaza del Santo Cristo. Siirtomaa-aikana korttelit aukion ympärillä olivat kreoliylimystön asuinaluetta, ja aukiolla nähtiin teloituksia, kulkueita, härkätaisteluja ja juhlia — kaupungin varakkaimmat katselivat niitä parvekkeiltaan. 1700-luvulla aukiosta tuli tori ja sen nimi oli Plaza del Mercado, kaupungin kaupallinen keskus. Kun Santo Criston aukiolle avattiin 1814 uusi tori, Mercado Nuevo, vanha sai nimekseen Plaza Vieja erotukseks…
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+
+### 48.1
+KYSYMYS: Mitä Carraran marmorista on tehty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Plaza Vieja] 1559 Aukio avattiin 1559 kolmantena Plaza de Armasin ja San Franciscon jälkeen, ja sen nimi oli aluksi Plaza Nueva eli Uusi aukio: se oli kansanomainen vaihtoehto sotilaiden ja hallinnon aukiolle. Nimi vaihtui vasta, kun kaupunkiin syntyi vielä uudempi aukio, Plaza del Santo Cristo. Siirtomaa-aikana korttelit aukion ympärillä olivat kreoliylimystön asuinaluetta, ja aukiolla nähtiin teloituksia, kulkueita, härkätaisteluja ja juhlia — kaupungin varakkaimmat katselivat niitä parvekkeiltaan. 1700-luvulla aukiosta tuli tori ja sen nimi oli Plaza del Mercado, kaupungin kaupallinen keskus. Kun Santo Criston aukiolle avattiin 1814 uusi tori, Mercado Nuevo, vanha sai nimekseen Plaza Vieja erotukseks…
+
+### 48.2
+KYSYMYS: Miksi kaupungin tunnuksessa on pyörä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carraran marmorilouhokset (kauppa)
+Tietoruudun teksti: Carrara on kaupunki Toscanassa, noin sata kilometriä Firenzestä länsi-luoteeseen, ja se on tunnettu valkoisesta tai sinertävänharmaasta marmorista, jota sen ympäristössä louhitaan. Kaupungin motto Fortitudo mea in rota, voimani on pyörässä, viittaa marmorin kuljetukseen roomalaisajoista lähtien. Nykyinen kaupunki sai alkunsa työläisten asuinkylänä roomalaisten louhoksille, jotka perustettiin Ligurian valloituksen jälkeen 100-luvun alussa eaa. Carraran marmoria on käytetty Rooman Pantheonissa ja Trajanuksen pylväässä, ja monet renessanssin veistokset veistettiin siitä. 1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden keskuudessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (kohde:hahmotelma-larderello) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Luonto: Apinat laskeutuivat kuumaan altaaseen] Jigokudani tarkoittaa helvetin laaksoa. Nimi tulee höyrystä, joka nousee jäätyneen maan raoista Yokoyu-joen jyrkkäseinäisessä laaksossa Naganon maakunnassa. Japaninmakakit asuivat ennen ylempänä, mutta 1950-luvulla vuorten metsiä hakattiin ja rinteille rakennettiin hiihtokeskuksia, ja apinat siirtyivät alas ihmisten liepeille. Laakson puisto on 850 metrin korkeudella, ja lunta on maassa neljä kuukautta vuodessa. Talvella apinat tulevat istumaan kuumaan altaaseen. Paikalle pääsee vain kahden kilometrin polkua pitkin metsän läpi.
+
+### 49.1
+KYSYMYS: Miten maan höyrystä saadaan sähköä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Luonto: Apinat laskeutuivat kuumaan altaaseen] Jigokudani tarkoittaa helvetin laaksoa. Nimi tulee höyrystä, joka nousee jäätyneen maan raoista Yokoyu-joen jyrkkäseinäisessä laaksossa Naganon maakunnassa. Japaninmakakit asuivat ennen ylempänä, mutta 1950-luvulla vuorten metsiä hakattiin ja rinteille rakennettiin hiihtokeskuksia, ja apinat siirtyivät alas ihmisten liepeille. Laakson puisto on 850 metrin korkeudella, ja lunta on maassa neljä kuukautta vuodessa. Talvella apinat tulevat istumaan kuumaan altaaseen. Paikalle pääsee vain kahden kilometrin polkua pitkin metsän läpi.
+
+### 49.2
+KYSYMYS: Mihin boorihappoa käytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larderello (tekniikka)
+Tietoruudun teksti: Larderello on Pomaranceen kuuluva kylä Toscanassa, joka tunnetaan geotermisestä tuottavuudestaan. Alueella purkautuu maasta kuumaa höyryä lähteistä, ja se tuottaa nykyisin kymmenen prosenttia maailman geotermisestä sähköstä. Roomalaiset käyttivät alueen rikkilähteitä kylpemiseen. Vuonna 1827 ranskalainen François Jacques de Larderel keksi tavan erottaa boorihappoa mudasta lämmittämällä sitä höyryllä, ja työläisten asuttamiseksi perustettiin hänen mukaansa nimetty Larderello. Vuonna 1904 alueella sytytettiin höyryn tuottamalla sähköllä lamppuja ensimmäistä kertaa käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (kohde:hahmotelma-brennero) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Rotherhithe 1827 — 36 lokeroa joen alla] toukokuu 1827 — Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen…
+- [Lontoo — kohdekartta / Kohdekartta: Tunneli 1827] Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy …
+
+### 50.1
+KYSYMYS: Miksi Brennerin sola on tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+### 50.2
+KYSYMYS: Miksi rautatiessä ei ole suurta tunnelia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brenner (tekniikka)
+Tietoruudun teksti: Brennerin sola on Alppien ylikulkusola, joka muodostaa Italian ja Itävallan rajan, ja se on alueen Itäalppien solista matalin. Solan keskiosassa kulkee nykyisin nelikaistainen moottoritie ja rautatiekäytävä, joka yhdistää Bolzanon ja Innsbruckin. Roomalaiset tasoittivat solan reitin, ja Itävallan keisarikunnan aikana rakennettiin Brennerin rautatie, joka valmistui vaiheittain vuosina 1853–1867. Se oli ensimmäinen Alppien ylittävä rautatie, jossa ei ollut suurta tunnelia ja joka kulki korkealla, 1 371 metrin korkeudessa. Rautatie antoi itävaltalaisten siirtää joukkojaan tehokkaammin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Rotherhithe 1827 — 36 lokeroa joen alla] toukokuu 1827 — Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen…
+- [Lontoo — kohdekartta / Kohdekartta: Tunneli 1827] Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen jätevesi tihkuu tunneliin, sen metaani syttyy …
+
+### 50.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

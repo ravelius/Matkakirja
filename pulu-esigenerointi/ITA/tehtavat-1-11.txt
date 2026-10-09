@@ -1,0 +1,214 @@
+================ KOHTA 51 (kohde:hahmotelma-stelvio) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Kielen ja väen paluu] Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.
+- [Myanmar — maalehti / Kirjallisuus: Kivi, joka avasi kadonneen kielen] 1113 — Myazedin piirtokirjoitus vuodelta 1113 kertoo saman julistuksen neljällä kielellä: muinaisburmaksi, paliksi, muinaismoniksi ja pyuksi. Sveitsiläinen palintutkija Emanuel Forchhammer löysi kaksi lähes samanlaista pilaria 1886–1887 Myinkabasta Baganin liepeiltä; toinen niistä on 142 senttiä korkea, ja siinä on 39 riviä muinaisburmaa, 41 riviä palia, 33 riviä muinaismonia ja 26 riviä pyuta. Juuri tämä kivi avasi pyun kielen ja kirjoituksen tutkijoille. Teksti on lahjoitus, toivomus ja kirous: joka kohtelee kaltoin lahjoitettuja palvelijoita, ei saa nähdä tulevaa Buddhaa.
+
+### 51.1
+KYSYMYS: Kuinka jyrkkä Stelvion tie on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+
+### 51.2
+KYSYMYS: Mitä Kolmen kielen huippu tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stelvion sola (tekniikka)
+Tietoruudun teksti: Stelvion sola on Pohjois-Italian vuoristosola Sveitsin rajalla, 2 757 metrin korkeudessa. Se on Itäalppien korkein päällystetty sola ja Alppien toiseksi korkein, seitsemän metriä Ranskan Col de l'Iseranin alapuolella. Sola sijaitsee Ortlerin Alpeilla Etelä-Tirolin Stilfsin ja Sondrion maakunnan Bormion välissä. Alkuperäisen tien rakennutti Itävallan keisarikunta vuosina 1820–1825 yhdistämään Lombardian Itävaltaan, ja nousua tiellä on 1 871 metriä; insinöörinä ja projektipäällikkönä toimi Carlo Donegani. Solan yläpuolella oleva Kolmen kielen huippu on nimetty siitä, että italian, saksan ja retoromaanin puhealueet kohtaavat siinä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sitka — kaupunkilehti / Tlingit ja Sitkan taistelu: Kielen ja väen paluu] Vuosina 1903–1905 Alaskan silloinen kuvernööri John G. Brady kokosi kaakkoisalaskalaisilta päälliköiltä totemipylväitä, joita esiteltiin muun muassa vuoden 1904 maailmannäyttelyssä St. Louisissa ennen kuin ne tuotiin pysyvästi Sitkaan. Kokoelma muistuttaa, ettei Tlingit-kansa hävinnyt 1804 tappion jälkeen: vuoden 2020 väestönlaskennan mukaan Alaskassa asuu yhä noin 22 600 tlingitiä. Kieli sen sijaan on vaarassa kadota — sitä puhuu äidinkielenään enää parisataa ihmistä — minkä vuoksi muun muassa Sealaska Heritage Institute järjestää tlingitin kielikursseja eri puolilla Kaakkois-Alaskaa kielen pelastamiseksi.
+- [Myanmar — maalehti / Kirjallisuus: Kivi, joka avasi kadonneen kielen] 1113 — Myazedin piirtokirjoitus vuodelta 1113 kertoo saman julistuksen neljällä kielellä: muinaisburmaksi, paliksi, muinaismoniksi ja pyuksi. Sveitsiläinen palintutkija Emanuel Forchhammer löysi kaksi lähes samanlaista pilaria 1886–1887 Myinkabasta Baganin liepeiltä; toinen niistä on 142 senttiä korkea, ja siinä on 39 riviä muinaisburmaa, 41 riviä palia, 33 riviä muinaismonia ja 26 riviä pyuta. Juuri tämä kivi avasi pyun kielen ja kirjoituksen tutkijoille. Teksti on lahjoitus, toivomus ja kirous: joka kohtelee kaltoin lahjoitettuja palvelijoita, ei saa nähdä tulevaa Buddhaa.
+
+### 51.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (kohde:hahmotelma-ivrea) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kohdekartta / Kohdekartta: Olive Pinkin puutarha] 1956 Olive Pinkin kasvitieteellinen puutarha on kuudentoista hehtaarin alue Todd-joen itäpuolella kaupungin keskustan eteläreunassa, ja se on erikoistunut Keski-Australian kuivan alueen kasveihin. Alue määrättiin 1956 Australian kuivien alueiden kasvistoreserviksi sen jälkeen, kun sen perustaja ja ensimmäinen kunniakuraattori Olive Muriel Pink oli lobannut asiaa sitkeästi. Ennen vuotta 1956 maa oli ollut käyttämätöntä ja siellä olivat laiduntaneet villivuohet, kanit ja karja, niin että tulvatasangon kasvillisuus oli muuttunut perusteellisesti eikä puita tai pensaita ollut jäljellä. Pink ja hänen warlpiri-avustajansa käyttivät seuraavat kaksi vuosikymmentä kuivuutta ja lähes olematonta rahoi…
+
+### 52.1
+KYSYMYS: Mitä Olivetti valmisti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alice Springs — kohdekartta / Kohdekartta: Olive Pinkin puutarha] 1956 Olive Pinkin kasvitieteellinen puutarha on kuudentoista hehtaarin alue Todd-joen itäpuolella kaupungin keskustan eteläreunassa, ja se on erikoistunut Keski-Australian kuivan alueen kasveihin. Alue määrättiin 1956 Australian kuivien alueiden kasvistoreserviksi sen jälkeen, kun sen perustaja ja ensimmäinen kunniakuraattori Olive Muriel Pink oli lobannut asiaa sitkeästi. Ennen vuotta 1956 maa oli ollut käyttämätöntä ja siellä olivat laiduntaneet villivuohet, kanit ja karja, niin että tulvatasangon kasvillisuus oli muuttunut perusteellisesti eikä puita tai pensaita ollut jäljellä. Pink ja hänen warlpiri-avustajansa käyttivät seuraavat kaksi vuosikymmentä kuivuutta ja lähes olematonta rahoi…
+
+### 52.2
+KYSYMYS: Mikä on Appelsiinitaistelu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ivrea (kauppa)
+Tietoruudun teksti: Ivrea on Torinon suurkaupunkialueeseen kuuluva kaupunki Piemontessa Luoteis-Italiassa, Dora Baltea -joen molemmin puolin. Roomalaiset perustivat sen nimellä Eporedia, ja keskiajalla siitä tuli Ivrean marssin keskus ja 1000-luvulla hetkeksi Italian kuningaskunnan pääkaupunki. Myöhemmin kaupunki siirtyi Savoijin suvun omistukseen. 1900-luvulla Ivrea tuli kansainvälisesti tunnetuksi Olivettin pääkonttorina; yritys valmisti kirjoituskoneita, mekaanisia laskukoneita ja myöhemmin tietokoneita. Olivetti-alue "Industrial City of the 20th Century" merkittiin UNESCOn maailmanperintöluetteloon vuonna 2018. Kaupunki tunnetaan myös karnevaalistaan ja sen Appelsiinitaistelusta.
+
+### 52.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (kohde:hahmotelma-canossa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Highwic] 1862 Highwic rakennettiin 1862 Alfred Bucklandille, varakkaalle uudisasukkaalle ja maanomistajalle. Tontin osti 1861 hänen ensimmäinen vaimonsa Eliza tuhannella punnalla, ja perhe muutti taloon seitsemän lapsen kanssa seuraavana vuonna. Rakennus on suurikokoinen esimerkki kirvesmiesgotiikasta, ja se pystytettiin korkealle paikalle Newmarketin taajaman yläpuolelle. Eliza ehti saada talossa vielä kaksi lasta ja kuoli keuhkokuumeeseen heinäkuussa 1866. Alfred meni toukokuussa 1867 naimisiin kaksikymmentä vuotta nuoremman Matilda Jane Frodshamin kanssa, ja tämä sai yksitoista lasta, joista yhdeksän eli aikuisiksi; Matilda eli miestään vanhemmaksi ja vietti vanhuutensa Highwicissä. Alkuperäistä …
+- [Mexico City — kohdekartta / Kohdekartta: Santo Domingon aukio] 1590 Kolme korttelia katedraalista pohjoiseen on aukio ja sen kirkko, ja kirkko on kaikki mitä on jäljellä yhdestä Uuden Espanjan ensimmäisistä luostareista. Dominikaanit saapuivat 1526 ja muuttivat Guerreron suvun lahjoittamiin taloihin — samalle tontille, jolle myöhemmin rakennettiin inkvisition palatsi. Talojen tilalle tuli kirkko, asuintilat ja vankila. Paikan ensimmäinen kirkko vihittiin 1590, ja Filip II rahoitti sen ympärille luostarin, jossa oli neljä sisäpihaa, sali, ruokala, kirjasto ja sairastupa. Huono rakennustyö, pehmeä maa ja maanjäristykset pakottivat rakentamaan uudelleen. Nykyinen kirkko luetaan tyylinsä perusteella Pedro de Arrietan työksi. Julkisivu on verhoiltu tezontle…
+
+### 53.1
+KYSYMYS: Mitä Canossan matka tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+
+### 53.2
+KYSYMYS: Kuka Matilda Toscanalainen oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canossan linna (historia)
+Tietoruudun teksti: Canossan linna on Reggio Emilian maakunnassa Pohjois-Italiassa, ja se tunnetaan paikkana, jossa keisari Henrik IV ja paavi Gregorius VII sopivat välirikon vuonna 1077 investituuririidan aikana. Linnan rakennutti noin vuonna 940 Adalbert Atto, Beggian ja Manturan kreivi, kalliokukkulan huipulle. Sitä suojasi kolminkertainen muurirengas, ja keskiajalla se oli yksi Italian mahtavimmista linnoista. Paavin ystävä, linnan silloinen omistaja Matilda Toscanalainen, määräsi maansa kuolemansa (1115) jälkeen kirkolle. Reggion joukot tuhosivat linnan vuonna 1255, ja Este-suku omisti sen vuoteen 1796 asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Highwic] 1862 Highwic rakennettiin 1862 Alfred Bucklandille, varakkaalle uudisasukkaalle ja maanomistajalle. Tontin osti 1861 hänen ensimmäinen vaimonsa Eliza tuhannella punnalla, ja perhe muutti taloon seitsemän lapsen kanssa seuraavana vuonna. Rakennus on suurikokoinen esimerkki kirvesmiesgotiikasta, ja se pystytettiin korkealle paikalle Newmarketin taajaman yläpuolelle. Eliza ehti saada talossa vielä kaksi lasta ja kuoli keuhkokuumeeseen heinäkuussa 1866. Alfred meni toukokuussa 1867 naimisiin kaksikymmentä vuotta nuoremman Matilda Jane Frodshamin kanssa, ja tämä sai yksitoista lasta, joista yhdeksän eli aikuisiksi; Matilda eli miestään vanhemmaksi ja vietti vanhuutensa Highwicissä. Alkuperäistä …
+- [Mexico City — kohdekartta / Kohdekartta: Santo Domingon aukio] 1590 Kolme korttelia katedraalista pohjoiseen on aukio ja sen kirkko, ja kirkko on kaikki mitä on jäljellä yhdestä Uuden Espanjan ensimmäisistä luostareista. Dominikaanit saapuivat 1526 ja muuttivat Guerreron suvun lahjoittamiin taloihin — samalle tontille, jolle myöhemmin rakennettiin inkvisition palatsi. Talojen tilalle tuli kirkko, asuintilat ja vankila. Paikan ensimmäinen kirkko vihittiin 1590, ja Filip II rahoitti sen ympärille luostarin, jossa oli neljä sisäpihaa, sali, ruokala, kirjasto ja sairastupa. Huono rakennustyö, pehmeä maa ja maanjäristykset pakottivat rakentamaan uudelleen. Nykyinen kirkko luetaan tyylinsä perusteella Pedro de Arrietan työksi. Julkisivu on verhoiltu tezontle…
+
+### 53.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (kohde:hahmotelma-cannae) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Historia: Itsenäisyys julistettiin taistelun vuosipäivänä] 1810–1818 — Ensimmäinen hallitusjuntta kokoontui 18. syyskuuta 1810, mutta vapaussota kesti vielä vuosia. Andit ylittänyt armeija voitti Chacabucon taistelun 12. helmikuuta 1817. José de San Martín kieltäytyi ylimmän johtajan paikasta ja antoi sen Bernardo O’Higginsille, joka julisti maan itsenäiseksi täsmälleen vuotta myöhemmin, 12. helmikuuta 1818. Maipún taistelu 5. huhtikuuta 1818 ratkaisi sodan. Viimeiset kuninkaanmieliset antautuivat vasta Chiloéssa 1826, ja Espanja tunnusti Chilen vuonna 1844.
+- [Alpit — kaupunkilehti / Historia: Kenraali, joka vei norsut vuorten yli] Karthagolainen kenraali Hannibal ylitti Alpit armeijoineen vuonna 218 eaa. yllättääkseen roomalaiset hyökkäämällä Italiaan pohjoisesta, mistä kukaan ei odottanut vihollista tulevan. Mukana kulki myös sotanorsuja — täsmällistä reittiä ei tiedetä varmuudella, ja historioitsijat ovat väitelleet siitä yli kaksi vuosituhatta. Ylitys maksoi kalliisti: osa historioitsijoista arvioi, että Hannibal menetti puolet armeijastaan matkalla kylmään, korkeuteen ja paikallisten heimojen väijytyksiin. Silti hän saapui Italiaan ja voitti roomalaiset useissa taisteluissa seuraavien vuosien aikana — rohkea reitti, jota kukaan ei ollut aavistanut.
+
+### 54.1
+KYSYMYS: Miten Hannibal voitti suuremman armeijan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Kenraali, joka vei norsut vuorten yli] Karthagolainen kenraali Hannibal ylitti Alpit armeijoineen vuonna 218 eaa. yllättääkseen roomalaiset hyökkäämällä Italiaan pohjoisesta, mistä kukaan ei odottanut vihollista tulevan. Mukana kulki myös sotanorsuja — täsmällistä reittiä ei tiedetä varmuudella, ja historioitsijat ovat väitelleet siitä yli kaksi vuosituhatta. Ylitys maksoi kalliisti: osa historioitsijoista arvioi, että Hannibal menetti puolet armeijastaan matkalla kylmään, korkeuteen ja paikallisten heimojen väijytyksiin. Silti hän saapui Italiaan ja voitti roomalaiset useissa taisteluissa seuraavien vuosien aikana — rohkea reitti, jota kukaan ei ollut aavistanut.
+
+### 54.2
+KYSYMYS: Mitä taistelun jälkeen tapahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cannae (historia)
+Tietoruudun teksti: Cannae eli nykyisin Canne della Battaglia on muinainen kylä Apulian alueella Kaakkois-Italiassa, Barletan kunnan osa Ofanto-joen oikealla rannalla noin yhdeksän kilometriä Barletasta lounaaseen. Se on tunnettu ennen kaikkea Cannaen taistelusta 2. elokuuta 216 eaa., joka oli toisen puunilaissodan ratkaiseva yhteenotto. Hannibalin johtamat karthagolaiset ja heidän liittolaisensa saartoivat ja lähes tuhosivat suuremman rooma- ja italialaisarmeijan, jota johtivat konsulit Lucius Aemilius Paullus ja Gaius Terentius Varro. Taistelua pidetään yhtenä sotataidon suurimmista taktisista saavutuksista ja yhtenä Rooman pahimmista tappioista. Historioitsijat kiistelevät yhä siitä, käytiinkö taistelu joen oikealla vai vasemmalla rannalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Historia: Itsenäisyys julistettiin taistelun vuosipäivänä] 1810–1818 — Ensimmäinen hallitusjuntta kokoontui 18. syyskuuta 1810, mutta vapaussota kesti vielä vuosia. Andit ylittänyt armeija voitti Chacabucon taistelun 12. helmikuuta 1817. José de San Martín kieltäytyi ylimmän johtajan paikasta ja antoi sen Bernardo O’Higginsille, joka julisti maan itsenäiseksi täsmälleen vuotta myöhemmin, 12. helmikuuta 1818. Maipún taistelu 5. huhtikuuta 1818 ratkaisi sodan. Viimeiset kuninkaanmieliset antautuivat vasta Chiloéssa 1826, ja Espanja tunnusti Chilen vuonna 1844.
+
+### 54.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (kohde:hahmotelma-solferino) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Joki, joka on neljä kuukautta punainen] 1969 — Serranía de la Macarena on ylätasanko, jonka kvartsiitti syntyi noin 1,2 miljardia vuotta sitten. Sen halki virtaa Caño Cristales, jonka karjatilalliset löysivät 1969. Heinäkuun lopusta marraskuuhun uoma on keltainen, vihreä, sininen, musta ja ennen kaikkea punainen: värin tekee vesikasvi Macarenia clavigera, joka kasvaa kiinni kalliossa virran alla. Jokea kutsutaan viiden värin joeksi. Ylätasanko on Andien, llanosin ja Amazonin rajalla, ja siellä elää noin 420 lintulajia.
+- [Taipei — kohdekartta / Kohdekartta: Punainen talo] rakennettu 1908 Punainen talo valmistui 1908, ja sen suunnitteli japanilainen arkkitehti Kondo Juro. Se ei ollut alun perin teatteri vaan markkinahalli, jonka pohjakerroksessa toimi tavaratalo. Rakennus on kahden osan yhdistelmä: kahdeksankulmainen etuosa ja sen takana ristin muotoinen halli. Tyyli sekoittaa länsimaista ja Meiji-kauden japanilaista rakennustapaa — arkkitehti oli opiskellut Tokion keisarillisessa yliopistossa. Vuodesta 1945 talossa toimi teatteri, jossa esitettiin pekingiläisoopperaa. Rakennus merkittiin kolmannen luokan historialliseksi kohteeksi 1997. Ristirakennus kunnostettiin 2015 niin, että saaren ensimmäinen markkinahalli tuli taas näkyviin, ja kahdeksankulmainen osa …
+
+### 55.1
+KYSYMYS: Kuka Henry Dunant oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+### 55.2
+KYSYMYS: Mitä Punainen Risti tekee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solferino (historia)
+Tietoruudun teksti: Solferinon taistelu käytiin 24. kesäkuuta 1859 Italian toisen itsenäisyyssodan ratkaisevana taisteluna, ja siinä Napoleon III:n johtama Ranskan armeija ja Viktor Emanuel II:n Piemonte-Sardinian armeija voittivat Itävallan keisari Frans Joosefin armeijan. Se oli viimeinen suuri taistelu maailmanhistoriassa, jossa kaikki armeijat olivat hallitsijoidensa henkilökohtaisessa johdossa. Sotilaita oli yhteensä noin 300 000. Sveitsiläinen Henry Dunant kiersi taistelukentän jälkeenpäin ja järkyttyi haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti Geneven sopimuksiin ja Punaisen Ristin perustamiseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Joki, joka on neljä kuukautta punainen] 1969 — Serranía de la Macarena on ylätasanko, jonka kvartsiitti syntyi noin 1,2 miljardia vuotta sitten. Sen halki virtaa Caño Cristales, jonka karjatilalliset löysivät 1969. Heinäkuun lopusta marraskuuhun uoma on keltainen, vihreä, sininen, musta ja ennen kaikkea punainen: värin tekee vesikasvi Macarenia clavigera, joka kasvaa kiinni kalliossa virran alla. Jokea kutsutaan viiden värin joeksi. Ylätasanko on Andien, llanosin ja Amazonin rajalla, ja siellä elää noin 420 lintulajia.
+- [Taipei — kohdekartta / Kohdekartta: Punainen talo] rakennettu 1908 Punainen talo valmistui 1908, ja sen suunnitteli japanilainen arkkitehti Kondo Juro. Se ei ollut alun perin teatteri vaan markkinahalli, jonka pohjakerroksessa toimi tavaratalo. Rakennus on kahden osan yhdistelmä: kahdeksankulmainen etuosa ja sen takana ristin muotoinen halli. Tyyli sekoittaa länsimaista ja Meiji-kauden japanilaista rakennustapaa — arkkitehti oli opiskellut Tokion keisarillisessa yliopistossa. Vuodesta 1945 talossa toimi teatteri, jossa esitettiin pekingiläisoopperaa. Rakennus merkittiin kolmannen luokan historialliseksi kohteeksi 1997. Ristirakennus kunnostettiin 2015 niin, että saaren ensimmäinen markkinahalli tuli taas näkyviin, ja kahdeksankulmainen osa …
+
+### 55.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
