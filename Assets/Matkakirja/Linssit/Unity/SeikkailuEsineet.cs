@@ -679,6 +679,9 @@ namespace Matkakirja.Natiivi
                         v.Mat.SetFloat(IdTila, 1f); if (v.Kuva != null) v.Mat.SetTexture(IdPohjaKuva, v.Kuva);
                         if (v.Normaali != null) { v.Mat.SetTexture("_NormaaliKuva", v.Normaali); v.Mat.SetFloat("_NormaaliPaalla", 1f); }
                         if (v.Orm != null) { v.Mat.SetTexture("_OrmKuva", v.Orm); v.Mat.SetFloat("_OrmPaalla", 1f); }
+                        // Alfaleikkaus (LR v46b noki: alphaMode BLEND/MASK) → _AlfaRaja; kuva (ASTC tai PNG) kantaa alfan.
+                        float alfa = 0f; foreach (var so in v.Malli.Solmut) foreach (var o in so.Osat) alfa = Mathf.Max(alfa, o.AlfaRaja);
+                        if (alfa > 0f) v.Mat.SetFloat("_AlfaRaja", alfa);
                     }
                     else if (v.Kuva != null) v.Mat.SetTexture(IdKuva, v.Kuva);
                 }

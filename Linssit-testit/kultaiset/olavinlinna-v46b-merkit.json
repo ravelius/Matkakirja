@@ -4458,5 +4458,40 @@
   "glb": "rekvisiitta-codex-raapustukset.glb",
   "osa": "tyrma-E101",
   "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:kappeli-codex-alttarikaappi-1",
+  "paikka": [
+   -11.676,
+   10.571,
+   -15.306
+  ],
+  "kierto_y": -1.3956,
+  "glb": "rekvisiitta-codex-alttarikaappi.glb",
+  "osa": "kappeli-kavely"
+ },
+ {
+  "nimi": "rekvisiitta:kappeli-codex-brokadi-1",
+  "paikka": [
+   -12.288,
+   9.6,
+   -15.198
+  ],
+  "kierto_y": -1.3956,
+  "glb": "rekvisiitta-codex-brokadi.glb",
+  "osa": "kappeli-kavely",
+  "seina": true
+ },
+ {
+  "nimi": "rekvisiitta:keittio-codex-noki-1",
+  "paikka": [
+   -22.224,
+   -1.748,
+   14.591
+  ],
+  "kierto_y": 2.7202,
+  "glb": "rekvisiitta-codex-noki.glb",
+  "osa": "keittio-G102",
+  "seina": true
  }
 ]
