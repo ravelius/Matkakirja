@@ -1,0 +1,201 @@
+================ KOHTA 16 (kohde:tonava~5) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 16.1
+KYSYMYS: Mikä Tonavan suisto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+
+### 16.2
+KYSYMYS: Kuinka monen pääkaupungin läpi Tonava virtaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Volgan jälkeen Euroopan toiseksi pisin joki: 2 850 kilometriä Saksan Schwarzwaldista Romanian suiston kautta Mustallemerelle. Se yhdistää nykyisin kymmenen Euroopan maata ja oli aikoinaan Rooman valtakunnan rajajoki. Romaniassa se muodostaa pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan viimeinen ja laajin osa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:oradean-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kairo — kohdekartta / Kohdekartta: Sulttaani Hassanin moskeija] 1356–1363 Sulttaani Hasan aloitti moskeijansa vuonna 1356 keskellä ruttoaaltojen runtelemaa Kairoa. Hankkeesta tuli keskiaikaisen kaupungin kallein: työ nieli aikalaiskirjuri al-Maqrizin mukaan 30 000 dirhamia joka päivä, ja rahasta osa tuli ruttoon kuolleiden emiirien omaisuuksista, jotka olivat siirtyneet valtiolle. Jättiläinen on 150 metriä pitkä ja 36 metriä korkea, ja sisällä toimi neljä koulua — yksi kullekin sunnalaisen lainopin koulukunnalle. Rakentajaansa hanke ei tuonut onnea. Vuonna 1361 yksi rakenteilla olevista minareeteista sortui ja alle jäi noin kolmesataa ihmistä; samana vuonna sulttaani murhattiin, eikä hänen ruumistaan koskaan löydetty. Komeaan hautakammioon haudattiin lo…
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Kotivuoret kaupungin takana] Petropavlovskilaiset kutsuvat kaupungin takana kohoavia tulivuoria kotitulivuoriksi. Korjakskaja sopka on 3 456 metriä korkea ja noin 35 kilometriä kaupungista pohjoiseen, Avatšinskaja sopka 2 741 metriä ja sammunut Kozelskaja 2 189 metriä; viimeksi mainitun rinteiltä on venäläisten lähteiden mukaan löytynyt harvinaista mustaa timanttia eli karbonadoa. Cookin viimeisellä matkalla mukana ollut John Ledyard kutsui kahta vuorta Pietariksi ja Paavaliksi ja kirjasi päiväkirjaansa Avatšinskajan purkauksen 15. kesäkuuta 1779.
+
+### 17.1
+KYSYMYS: Minä vuonna linnan tiedetään mainitun ensimmäisen kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Kotivuoret kaupungin takana] Petropavlovskilaiset kutsuvat kaupungin takana kohoavia tulivuoria kotitulivuoriksi. Korjakskaja sopka on 3 456 metriä korkea ja noin 35 kilometriä kaupungista pohjoiseen, Avatšinskaja sopka 2 741 metriä ja sammunut Kozelskaja 2 189 metriä; viimeksi mainitun rinteiltä on venäläisten lähteiden mukaan löytynyt harvinaista mustaa timanttia eli karbonadoa. Cookin viimeisellä matkalla mukana ollut John Ledyard kutsui kahta vuorta Pietariksi ja Paavaliksi ja kirjasi päiväkirjaansa Avatšinskajan purkauksen 15. kesäkuuta 1779.
+
+### 17.2
+KYSYMYS: Kuinka monta päivää ottomaanien piiritys kesti vuonna 1660?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oradean linnoitus (historia)
+Tietoruudun teksti: Oradean linnoitus on viisikulmainen linnoitus Oradean kaupungin sisällä, ja sen alkuperä ulottuu 1000-luvun piispanresidenssiin. Linna mainitaan lähteissä ensimmäisen kerran vuonna 1241 mongolien hyökkäyksen aikana. Vuonna 1660 noin 850 puolustajaa piti kaupunkia ottomaanien piirityksessä 46 päivää, kunnes se antautui 27. elokuuta. Habsburgit valtasivat kaupungin vuonna 1692, ja linnoituksen sotilaskäyttö päättyi 1792. Nykyisin sen tiloissa toimii kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kairo — kohdekartta / Kohdekartta: Sulttaani Hassanin moskeija] 1356–1363 Sulttaani Hasan aloitti moskeijansa vuonna 1356 keskellä ruttoaaltojen runtelemaa Kairoa. Hankkeesta tuli keskiaikaisen kaupungin kallein: työ nieli aikalaiskirjuri al-Maqrizin mukaan 30 000 dirhamia joka päivä, ja rahasta osa tuli ruttoon kuolleiden emiirien omaisuuksista, jotka olivat siirtyneet valtiolle. Jättiläinen on 150 metriä pitkä ja 36 metriä korkea, ja sisällä toimi neljä koulua — yksi kullekin sunnalaisen lainopin koulukunnalle. Rakentajaansa hanke ei tuonut onnea. Vuonna 1361 yksi rakenteilla olevista minareeteista sortui ja alle jäi noin kolmesataa ihmistä; samana vuonna sulttaani murhattiin, eikä hänen ruumistaan koskaan löydetty. Komeaan hautakammioon haudattiin lo…
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:targu-jiun-brancusi-kokonaisuus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+
+### 18.1
+KYSYMYS: Kuka tilasi muistomerkkisarjan Brâncușilta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+
+### 18.2
+KYSYMYS: Kuinka korkea Päättymätön pylväs on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgu Jiun Brâncuși-kokonaisuus (kulttuuri)
+Tietoruudun teksti: Târgu Jiun Brâncuși-kokonaisuus on kuvanveistäjä Constantin Brâncușin vuosina 1937–1938 tekemä muistomerkkisarja niille sotilaille, jotka puolustivat kaupunkia ensimmäisessä maailmansodassa. Tilauksen teki Gorjin naisten kansallisliitto. Kolme teosta, Pöytä hiljaisuudelle, Suudelman portti ja Päättymätön pylväs, sijaitsee noin 1,3 kilometrin pituisella länsi–itä-akselilla kahdessa puistossa. Pylväs on 29,3 metriä korkea, ja pöytää ympäröi kaksitoista tiimalasin muotoista istuinta.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:tismanan-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+### 19.1
+KYSYMYS: Kuka perusti Tismanan luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+### 19.2
+KYSYMYS: Kuinka monta vuotta Ierusalima Gligor johti yhteisöä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tismanan luostari (kulttuuri)
+Tietoruudun teksti: Tismanan luostari sijaitsee Gorjin läänissä Oltenian alueella, ja sitä pidetään yhtenä Valakian vanhimpia luostareita. Sen perusti 1300-luvulla munkki Nikodim Tismanalainen (noin 1320–1406), joka toi seudulle hesykastisen luostarielämän, ja luostari on omistettu Neitsyt Marialle. Luostarin tukijoihin kuuluivat useat hallitsijat, muun muassa Mircea I ja Radu I. Kommunismin aikana abbedissa Ierusalima Gligor johti yhteisöä 51 vuotta; liturgia vietiin koko ajan, ja nunnat pitivät maatilaa ja mattopajaa. Romanian ortodoksinen kirkko julisti Nikodimin pyhimykseksi vuonna 1955.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:ipotestin-muistomuseo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipoteștin muistomuseo (kulttuuri)
+Tietoruudun teksti: Ipotești on Botoșanin läänin kylä, jossa runoilija Mihai Eminescu (1850–1889) vietti varhaislapsuuttaan vanhempiensa kotona. Hänen isänsä Gheorghe Eminovici asettui Moldovaan Botoșanin lähelle. Runoilijan sisar väitti myöhemmin, että Eminescu syntyi nimenomaan Ipoteștissa, vaikka virallisten tietojen mukaan syntymäpaikka on Botoșani. Kylän muistotalo toimii museona, ja siellä on myös Eminescu-tutkimuksen kansallinen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kaupunkilehti / Historia: Kolme kylää ja kiistelty perustaja] Ennen kaupunkia joen rannalla oli kolme kylää: kalastajien Kalikata, kutojien Sutanuti ja kauppiaiden Gobindapur. Ne kuuluivat Sabarna Roy Choudhuryn suvun zamindari-tiluksiin. Englannin Itä-Intian kauppakomppania vakiinnutti kauppansa alueella 1690, ja kaupungin perustajaksi on perinteisesti mainittu komppanian kauppias Job Charnock — Kalkutan korkein oikeus kuitenkin totesi vuonna 2003 julkisen vetoomuksen johdosta, ettei kaupungilla ole yhtä perustajaa. Kylien tilukset myytiin komppanialle 1698. Nimi juontuu Kalikatasta, ja sen taustalla arvellaan olevan jumalatar Kalille pyhitetty kenttä.
+
+### 20.1
+KYSYMYS: Missä Mihai Eminescu vietti lapsuutensa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipoteștin muistomuseo (kulttuuri)
+Tietoruudun teksti: Ipotești on Botoșanin läänin kylä, jossa runoilija Mihai Eminescu (1850–1889) vietti varhaislapsuuttaan vanhempiensa kotona. Hänen isänsä Gheorghe Eminovici asettui Moldovaan Botoșanin lähelle. Runoilijan sisar väitti myöhemmin, että Eminescu syntyi nimenomaan Ipoteștissa, vaikka virallisten tietojen mukaan syntymäpaikka on Botoșani. Kylän muistotalo toimii museona, ja siellä on myös Eminescu-tutkimuksen kansallinen keskus.
+
+### 20.2
+KYSYMYS: Missä runoilijan syntymäpaikasta on kiistelty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipoteștin muistomuseo (kulttuuri)
+Tietoruudun teksti: Ipotești on Botoșanin läänin kylä, jossa runoilija Mihai Eminescu (1850–1889) vietti varhaislapsuuttaan vanhempiensa kotona. Hänen isänsä Gheorghe Eminovici asettui Moldovaan Botoșanin lähelle. Runoilijan sisar väitti myöhemmin, että Eminescu syntyi nimenomaan Ipoteștissa, vaikka virallisten tietojen mukaan syntymäpaikka on Botoșani. Kylän muistotalo toimii museona, ja siellä on myös Eminescu-tutkimuksen kansallinen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kaupunkilehti / Historia: Kolme kylää ja kiistelty perustaja] Ennen kaupunkia joen rannalla oli kolme kylää: kalastajien Kalikata, kutojien Sutanuti ja kauppiaiden Gobindapur. Ne kuuluivat Sabarna Roy Choudhuryn suvun zamindari-tiluksiin. Englannin Itä-Intian kauppakomppania vakiinnutti kauppansa alueella 1690, ja kaupungin perustajaksi on perinteisesti mainittu komppanian kauppias Job Charnock — Kalkutan korkein oikeus kuitenkin totesi vuonna 2003 julkisen vetoomuksen johdosta, ettei kaupungilla ole yhtä perustajaa. Kylien tilukset myytiin komppanialle 1698. Nimi juontuu Kalikatasta, ja sen taustalla arvellaan olevan jumalatar Kalille pyhitetty kenttä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

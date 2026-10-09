@@ -1,0 +1,211 @@
+================ KOHTA 36 (kohde:hahmotelma-prejmer) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prejmer (historia)
+Tietoruudun teksti: Prejmer on Brașovin läänissä Transilvaniassa, noin 18 kilometriä Brașovista koilliseen. Saksalaisritarit rakensivat linnakkeen vuosina 1212–1213 osana Burzenlandin asuttamista, ja sen vieressä kasvanut kylä oli Transilvanian saksalaisten itäisin asutus. Kirkkoa ympäröi 1400-luvulla 12 metriä korkea muuri, jota vahvistivat neljä hevosenkengän muotoista tornia, ja muurin sisäpuolen neljässä kerroksessa oli varastoja ja huoneita kyläläisille. Linnoitusta uhkasivat keskiajalla monet hyökkääjät, mutta se valloitettiin vain kerran, kun Gabriel Báthory otti sen vuonna 1611. Kirkko on yksi Itä-Euroopan parhaiten säilyneistä omassa lajissaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kaupunkilehti / Xi’an: Muuri, jonka päällä on tie] Ming-dynastian ensimmäinen keisari Zhu Yuanzhang sai neuvon rakentaa kaupungin ympärille korkea muuri, täyttää viljavarastot ja vasta sitten yhdistää valtakunta. Työ alkoi 1370 ja kesti kahdeksan vuotta: lännessä ja etelässä pohjaksi otettiin Sui- ja Tang-ajan vallit, idässä ja pohjoisessa kehää laajennettiin. Tuloksena on neljäntoista kilometrin suorakaide, joka on kaksitoista metriä korkea ja juureltaan viisitoista–kahdeksantoista metriä leveä. Harjalla kulkee kävelytie, jonka kierrokseen menee neljä tuntia, ja ulkopuolella kiertää kahdeksantoista metriä leveä vallihauta. Muuri oli ensin survottua maata; siniset tiilet ladottiin päälle 1568.
+- [Venäjä — maalehti / Taide ja teatteri: Kirkko rakennettiin kadun ympärille] 1881 — Maaliskuussa 1881 keisari Aleksanteri II haavoittui kuolettavasti pommi-iskussa Gribojedovin kanavan rantakadulla. Hänen poikansa määräsi, että surmapaikan on jäätävä muistokirkon seinien sisäpuolelle, joten kirkon perällä on katos, jonka alla näkyy yhä vanhan kadun mukulakivi. Kirkkoa rakennettiin 24 vuotta. Seiniä ja kattoja peittää yli 7 000 neliömetriä mosaiikkia, ja valaistus oli alusta asti sähköinen: hehkulamppuja oli 1 689.
+- [Kroatia — maalehti / Historia: Muuri, jota ei koskaan murrettu] 1400-luku — Dubrovnikin kaupunkia kiertää lähes kahden kilometrin mittainen muuri, joka on paikoin viisi metriä paksu ja kaksikymmentäviisi metriä korkea. Sitä vahvistettiin vuosisatojen ajan, eikä sitä koskaan valloitettu piirittämällä. Kaupunki oli oma pieni tasavaltansa ja säilytti itsenäisyytensä ostamalla rauhan: se maksoi veroa naapureilleen ja lähetti lahjoja sulttaanille. Muurin päällä kulkee kävelytie, jota pitkin kiertää koko kaupungin ympäri katot allaan.
+
+### 36.1
+KYSYMYS: Keitä saksalaisritarit olivat ja miksi he asuttivat Burzenlandia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prejmer (historia)
+Tietoruudun teksti: Prejmer on Brașovin läänissä Transilvaniassa, noin 18 kilometriä Brașovista koilliseen. Saksalaisritarit rakensivat linnakkeen vuosina 1212–1213 osana Burzenlandin asuttamista, ja sen vieressä kasvanut kylä oli Transilvanian saksalaisten itäisin asutus. Kirkkoa ympäröi 1400-luvulla 12 metriä korkea muuri, jota vahvistivat neljä hevosenkengän muotoista tornia, ja muurin sisäpuolen neljässä kerroksessa oli varastoja ja huoneita kyläläisille. Linnoitusta uhkasivat keskiajalla monet hyökkääjät, mutta se valloitettiin vain kerran, kun Gabriel Báthory otti sen vuonna 1611. Kirkko on yksi Itä-Euroopan parhaiten säilyneistä omassa lajissaan.
+
+### 36.2
+KYSYMYS: Miksi kirkon ympärille rakennettiin 12 metriä korkea muuri ja tornit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prejmer (historia)
+Tietoruudun teksti: Prejmer on Brașovin läänissä Transilvaniassa, noin 18 kilometriä Brașovista koilliseen. Saksalaisritarit rakensivat linnakkeen vuosina 1212–1213 osana Burzenlandin asuttamista, ja sen vieressä kasvanut kylä oli Transilvanian saksalaisten itäisin asutus. Kirkkoa ympäröi 1400-luvulla 12 metriä korkea muuri, jota vahvistivat neljä hevosenkengän muotoista tornia, ja muurin sisäpuolen neljässä kerroksessa oli varastoja ja huoneita kyläläisille. Linnoitusta uhkasivat keskiajalla monet hyökkääjät, mutta se valloitettiin vain kerran, kun Gabriel Báthory otti sen vuonna 1611. Kirkko on yksi Itä-Euroopan parhaiten säilyneistä omassa lajissaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kaupunkilehti / Xi’an: Muuri, jonka päällä on tie] Ming-dynastian ensimmäinen keisari Zhu Yuanzhang sai neuvon rakentaa kaupungin ympärille korkea muuri, täyttää viljavarastot ja vasta sitten yhdistää valtakunta. Työ alkoi 1370 ja kesti kahdeksan vuotta: lännessä ja etelässä pohjaksi otettiin Sui- ja Tang-ajan vallit, idässä ja pohjoisessa kehää laajennettiin. Tuloksena on neljäntoista kilometrin suorakaide, joka on kaksitoista metriä korkea ja juureltaan viisitoista–kahdeksantoista metriä leveä. Harjalla kulkee kävelytie, jonka kierrokseen menee neljä tuntia, ja ulkopuolella kiertää kahdeksantoista metriä leveä vallihauta. Muuri oli ensin survottua maata; siniset tiilet ladottiin päälle 1568.
+- [Venäjä — maalehti / Taide ja teatteri: Kirkko rakennettiin kadun ympärille] 1881 — Maaliskuussa 1881 keisari Aleksanteri II haavoittui kuolettavasti pommi-iskussa Gribojedovin kanavan rantakadulla. Hänen poikansa määräsi, että surmapaikan on jäätävä muistokirkon seinien sisäpuolelle, joten kirkon perällä on katos, jonka alla näkyy yhä vanhan kadun mukulakivi. Kirkkoa rakennettiin 24 vuotta. Seiniä ja kattoja peittää yli 7 000 neliömetriä mosaiikkia, ja valaistus oli alusta asti sähköinen: hehkulamppuja oli 1 689.
+- [Kroatia — maalehti / Historia: Muuri, jota ei koskaan murrettu] 1400-luku — Dubrovnikin kaupunkia kiertää lähes kahden kilometrin mittainen muuri, joka on paikoin viisi metriä paksu ja kaksikymmentäviisi metriä korkea. Sitä vahvistettiin vuosisatojen ajan, eikä sitä koskaan valloitettu piirittämällä. Kaupunki oli oma pieni tasavaltansa ja säilytti itsenäisyytensä ostamalla rauhan: se maksoi veroa naapureilleen ja lähetti lahjoja sulttaanille. Muurin päällä kulkee kävelytie, jota pitkin kiertää koko kaupungin ympäri katot allaan.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-alba-iulia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba Carolina -linnoitus (historia)
+Tietoruudun teksti: Alba Carolina on tähtimuotoinen linnoitus Alba Iulian keskustassa Transilvaniassa, ja se on tunnettu esimerkki Vaubanin linnoitusarkkitehtuurista. Habsburgien aikana sen rakentaminen alkoi 4. marraskuuta 1715 ja valmistui vuonna 1738; suunnittelijana pidetään arkkitehti Giovanni Morando Viscontia. Työssä oli mukana noin 20 000 maaorjaa, ja kustannuksiksi arvioidaan noin kolme miljoonaa floriinia. Linnoitus nousi kahden vanhemman linnoituksen paikalle: roomalaisen Legio XIII Geminan Apulum-leirin ja keskiaikaisen Belgradin linnoituksen. Nimensä se sai keisari Kaarle VI:n mukaan, joka hallitsi rakennusaikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Meren tähden katedraali] 1962 Darwinin hiippakunnan piispankirkko on kaupungin katolisen seurakuntaelämän keskus. Sen edeltäjä, ensimmäinen St Maryn kirkko, toimi toisen maailmansodan aikana kaupunkiin sijoitettujen australialaisten joukkojen sotilaspappien tukikohtana. Sodan jälkeen seurakunta oli kasvanut niin, että tarvittiin isompi talo. Kirkon piirsi brisbanelainen arkkitehti Ian Ferrier, joka työskenteli tuolloin toimistossa Donoghue Cusick & Edwards; toimisto vei työn loppuun hänen lähdettyään 1957. Ensimmäinen kivi louhittiin Rum Junglesta eli territorion ensimmäisen uraanikaivoksen paikalta, ja piispa O'Loughlin siunasi sen 13. heinäkuuta 1958. Rakennustyötä johti Carl Johansson vuoteen 1962, jolloin hänen…
+- [Serbia — maalehti / Historia] Serbian historia kulkee luostarin valkoisesta marmorista linnoituksen väärinpäin käyvään kelloon ja lopulta pimeään museohuoneeseen, jossa loistaa kultainen pallo. Neljä pysähdystä näyttävät, miten keskiajan kuningaskunta, Habsburgien raja-linnoitus ja nykyaikaisen tieteen sankari kietoutuvat samaan tarinaan Tonavan rannalla.
+
+### 37.1
+KYSYMYS: Miksi linnoitus rakennettiin tähden muotoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba Carolina -linnoitus (historia)
+Tietoruudun teksti: Alba Carolina on tähtimuotoinen linnoitus Alba Iulian keskustassa Transilvaniassa, ja se on tunnettu esimerkki Vaubanin linnoitusarkkitehtuurista. Habsburgien aikana sen rakentaminen alkoi 4. marraskuuta 1715 ja valmistui vuonna 1738; suunnittelijana pidetään arkkitehti Giovanni Morando Viscontia. Työssä oli mukana noin 20 000 maaorjaa, ja kustannuksiksi arvioidaan noin kolme miljoonaa floriinia. Linnoitus nousi kahden vanhemman linnoituksen paikalle: roomalaisen Legio XIII Geminan Apulum-leirin ja keskiaikaisen Belgradin linnoituksen. Nimensä se sai keisari Kaarle VI:n mukaan, joka hallitsi rakennusaikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Meren tähden katedraali] 1962 Darwinin hiippakunnan piispankirkko on kaupungin katolisen seurakuntaelämän keskus. Sen edeltäjä, ensimmäinen St Maryn kirkko, toimi toisen maailmansodan aikana kaupunkiin sijoitettujen australialaisten joukkojen sotilaspappien tukikohtana. Sodan jälkeen seurakunta oli kasvanut niin, että tarvittiin isompi talo. Kirkon piirsi brisbanelainen arkkitehti Ian Ferrier, joka työskenteli tuolloin toimistossa Donoghue Cusick & Edwards; toimisto vei työn loppuun hänen lähdettyään 1957. Ensimmäinen kivi louhittiin Rum Junglesta eli territorion ensimmäisen uraanikaivoksen paikalta, ja piispa O'Loughlin siunasi sen 13. heinäkuuta 1958. Rakennustyötä johti Carl Johansson vuoteen 1962, jolloin hänen…
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+
+### 37.2
+KYSYMYS: Mitä linnoituksen paikalla oli ennen Habsburgien aikaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alba Carolina -linnoitus (historia)
+Tietoruudun teksti: Alba Carolina on tähtimuotoinen linnoitus Alba Iulian keskustassa Transilvaniassa, ja se on tunnettu esimerkki Vaubanin linnoitusarkkitehtuurista. Habsburgien aikana sen rakentaminen alkoi 4. marraskuuta 1715 ja valmistui vuonna 1738; suunnittelijana pidetään arkkitehti Giovanni Morando Viscontia. Työssä oli mukana noin 20 000 maaorjaa, ja kustannuksiksi arvioidaan noin kolme miljoonaa floriinia. Linnoitus nousi kahden vanhemman linnoituksen paikalle: roomalaisen Legio XIII Geminan Apulum-leirin ja keskiaikaisen Belgradin linnoituksen. Nimensä se sai keisari Kaarle VI:n mukaan, joka hallitsi rakennusaikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia] Serbian historia kulkee luostarin valkoisesta marmorista linnoituksen väärinpäin käyvään kelloon ja lopulta pimeään museohuoneeseen, jossa loistaa kultainen pallo. Neljä pysähdystä näyttävät, miten keskiajan kuningaskunta, Habsburgien raja-linnoitus ja nykyaikaisen tieteen sankari kietoutuvat samaan tarinaan Tonavan rannalla.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-targoviste) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgoviște (historia)
+Tietoruudun teksti: Târgoviște on kaupunki Dâmbovițan läänissä noin 80 kilometriä Bukarestista luoteeseen. Se oli Valakian ruhtinaskunnan pääkaupunki vuosina 1418–1659 ja 1400- ja 1500-luvuilla tärkeä kauppakeskus, etenkin Puolan, Brașovin ja Sibiun suuntaan. Ruhtinaan hovialuetta ympäröivät kivimuurit ja vallihauta, ja sinne rakennettiin uusi kirkko ja torni. Vlad III Dracula lisäsi hovialueelle myöhemmin Chindia-tornin, josta on tullut kaupungin tunnus. Kun pääkaupungin asema lopulta siirtyi Bukarestiin, Târgoviște menetti merkityksensä ja sen väkiluku väheni.
+
+### 38.1
+KYSYMYS: Miksi Târgoviște oli aikoinaan Valakian pääkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgoviște (historia)
+Tietoruudun teksti: Târgoviște on kaupunki Dâmbovițan läänissä noin 80 kilometriä Bukarestista luoteeseen. Se oli Valakian ruhtinaskunnan pääkaupunki vuosina 1418–1659 ja 1400- ja 1500-luvuilla tärkeä kauppakeskus, etenkin Puolan, Brașovin ja Sibiun suuntaan. Ruhtinaan hovialuetta ympäröivät kivimuurit ja vallihauta, ja sinne rakennettiin uusi kirkko ja torni. Vlad III Dracula lisäsi hovialueelle myöhemmin Chindia-tornin, josta on tullut kaupungin tunnus. Kun pääkaupungin asema lopulta siirtyi Bukarestiin, Târgoviște menetti merkityksensä ja sen väkiluku väheni.
+
+### 38.2
+KYSYMYS: Miksi Chindia-torni on nykyään kaupungin tunnus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Târgoviște (historia)
+Tietoruudun teksti: Târgoviște on kaupunki Dâmbovițan läänissä noin 80 kilometriä Bukarestista luoteeseen. Se oli Valakian ruhtinaskunnan pääkaupunki vuosina 1418–1659 ja 1400- ja 1500-luvuilla tärkeä kauppakeskus, etenkin Puolan, Brașovin ja Sibiun suuntaan. Ruhtinaan hovialuetta ympäröivät kivimuurit ja vallihauta, ja sinne rakennettiin uusi kirkko ja torni. Vlad III Dracula lisäsi hovialueelle myöhemmin Chindia-tornin, josta on tullut kaupungin tunnus. Kun pääkaupungin asema lopulta siirtyi Bukarestiin, Târgoviște menetti merkityksensä ja sen väkiluku väheni.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-poenari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poenarin linna (historia)
+Tietoruudun teksti: Poenarin linna on rauniolinna Romaniassa, Argeș-joen kanjonin äyräällä Cetatea-vuoren tasanteella Făgăraș-vuorten lähellä. Linnalle noustaan 1 480 betoniportaan kautta. Alueella oli jo 1200-luvun alussa valakialaisten rakentama linnoitus, josta tuli 1300-luvun puolivälissä Basarab-suvun päälinna, mutta se hylättiin ja jäi rauniolle. Vuonna 1459 ruhtinas Vlad Seivästäjä korjasi ja vahvisti linnan yhdeksi tärkeimmistä linnoistaan; sen koko ja sijainti tekivät siitä vaikean valloittaa. Linna hylättiin uudelleen 1500-luvun alkupuoliskolla ja oli raunio 1600-luvulla. Vuoden 1913 maanjäristyksen laukaisema maanvyörymä pudotti osia linnasta jokeen, ja järistykset 1940 ja 1977 vahingoittivat sitä lisää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Christchurch — kaupunkilehti / Maanjäristykset ja jälleenrakennus] Christchurch rakennettiin kirkon unelmaksi englantilaisesta kaupungista eteläisellä pallonpuoliskolla. Vuosina 2010 ja 2011 kaupunki koki jotain, mihin perustajat eivät olleet varautuneet.
+
+### 39.1
+KYSYMYS: Miksi Poenarin linnaa oli vaikea valloittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poenarin linna (historia)
+Tietoruudun teksti: Poenarin linna on rauniolinna Romaniassa, Argeș-joen kanjonin äyräällä Cetatea-vuoren tasanteella Făgăraș-vuorten lähellä. Linnalle noustaan 1 480 betoniportaan kautta. Alueella oli jo 1200-luvun alussa valakialaisten rakentama linnoitus, josta tuli 1300-luvun puolivälissä Basarab-suvun päälinna, mutta se hylättiin ja jäi rauniolle. Vuonna 1459 ruhtinas Vlad Seivästäjä korjasi ja vahvisti linnan yhdeksi tärkeimmistä linnoistaan; sen koko ja sijainti tekivät siitä vaikean valloittaa. Linna hylättiin uudelleen 1500-luvun alkupuoliskolla ja oli raunio 1600-luvulla. Vuoden 1913 maanjäristyksen laukaisema maanvyörymä pudotti osia linnasta jokeen, ja järistykset 1940 ja 1977 vahingoittivat sitä lisää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 39.2
+KYSYMYS: Mitä maanjäristykset ovat tehneet linnalle 1900-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poenarin linna (historia)
+Tietoruudun teksti: Poenarin linna on rauniolinna Romaniassa, Argeș-joen kanjonin äyräällä Cetatea-vuoren tasanteella Făgăraș-vuorten lähellä. Linnalle noustaan 1 480 betoniportaan kautta. Alueella oli jo 1200-luvun alussa valakialaisten rakentama linnoitus, josta tuli 1300-luvun puolivälissä Basarab-suvun päälinna, mutta se hylättiin ja jäi rauniolle. Vuonna 1459 ruhtinas Vlad Seivästäjä korjasi ja vahvisti linnan yhdeksi tärkeimmistä linnoistaan; sen koko ja sijainti tekivät siitä vaikean valloittaa. Linna hylättiin uudelleen 1500-luvun alkupuoliskolla ja oli raunio 1600-luvulla. Vuoden 1913 maanjäristyksen laukaisema maanvyörymä pudotti osia linnasta jokeen, ja järistykset 1940 ja 1977 vahingoittivat sitä lisää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kaupunkilehti / Maanjäristykset ja jälleenrakennus] Christchurch rakennettiin kirkon unelmaksi englantilaisesta kaupungista eteläisellä pallonpuoliskolla. Vuosina 2010 ja 2011 kaupunki koki jotain, mihin perustajat eivät olleet varautuneet.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-curtea-de-arges) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea de Argeșin luostari (historia)
+Tietoruudun teksti: Curtea de Argeșin luostarin katedraali on romanialaisortodoksinen kirkko, joka on valmistunut 1500-luvun alussa ja omistettu Jumalansynnyttäjän kuolonunelle. Julkisivu on vaaleaa harmaata kalkkikiveä, joka oli helppo veistää ja kovettui ilmassa, ja sitä koristavat arabeskit. Kirjoitusten mukaan rakennuttajia olivat ruhtinas Neagoe Basarab ja hänen puolisonsa Milica Despina, ja Radu Afumați sai työn valmiiksi vuonna 1526. Kirkko rakennettiin uudelleen vuosina 1875–1885 ja vihittiin käyttöön 1886. Sinne on haudattu Romanian kuninkaita, esimerkiksi Carol I ja Mikael I. Kansantarina kertoo mestari Manolesta, joka uhrasi rakkaimpansa rakennuksen vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Luostari, joka vaati uhrin] 1517 — Curtea de Argeșin luostarikirkko rakennettiin ruhtinas Neagoe Basarabin määräyksestä vuosina 1512–1517, ja sen kierteiset kupolit ja koristeellinen kivijulkisivu tekevät siitä yhden Romanian omaperäisimmistä rakennuksista. Kansanrunossa kerrotaan mestari Manolesta, jonka rakennelma sortui joka yö, kunnes hän näki unessa, että se pysyisi pystyssä vain, jos joku rakas muurattaisiin sen seinään. Tarina päättyy synkästi, ja se tunnetaan Romaniassa laajasti kansanperinteenä. Todellisuudessa kirkosta tuli 1880-luvulla kuningas Carol I:n aikana kuninkaallinen hautaluostari, jonne on haudattu useita Romanian hallitsijoita.
+
+### 40.1
+KYSYMYS: Miksi pehmeä kalkkikivi sopi kirkon koristeluun niin hyvin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea de Argeșin luostari (historia)
+Tietoruudun teksti: Curtea de Argeșin luostarin katedraali on romanialaisortodoksinen kirkko, joka on valmistunut 1500-luvun alussa ja omistettu Jumalansynnyttäjän kuolonunelle. Julkisivu on vaaleaa harmaata kalkkikiveä, joka oli helppo veistää ja kovettui ilmassa, ja sitä koristavat arabeskit. Kirjoitusten mukaan rakennuttajia olivat ruhtinas Neagoe Basarab ja hänen puolisonsa Milica Despina, ja Radu Afumați sai työn valmiiksi vuonna 1526. Kirkko rakennettiin uudelleen vuosina 1875–1885 ja vihittiin käyttöön 1886. Sinne on haudattu Romanian kuninkaita, esimerkiksi Carol I ja Mikael I. Kansantarina kertoo mestari Manolesta, joka uhrasi rakkaimpansa rakennuksen vuoksi.
+
+### 40.2
+KYSYMYS: Mitä legenda kertoo mestari Manolesta ja kirkon rakentamisesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea de Argeșin luostari (historia)
+Tietoruudun teksti: Curtea de Argeșin luostarin katedraali on romanialaisortodoksinen kirkko, joka on valmistunut 1500-luvun alussa ja omistettu Jumalansynnyttäjän kuolonunelle. Julkisivu on vaaleaa harmaata kalkkikiveä, joka oli helppo veistää ja kovettui ilmassa, ja sitä koristavat arabeskit. Kirjoitusten mukaan rakennuttajia olivat ruhtinas Neagoe Basarab ja hänen puolisonsa Milica Despina, ja Radu Afumați sai työn valmiiksi vuonna 1526. Kirkko rakennettiin uudelleen vuosina 1875–1885 ja vihittiin käyttöön 1886. Sinne on haudattu Romanian kuninkaita, esimerkiksi Carol I ja Mikael I. Kansantarina kertoo mestari Manolesta, joka uhrasi rakkaimpansa rakennuksen vuoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Luostari, joka vaati uhrin] 1517 — Curtea de Argeșin luostarikirkko rakennettiin ruhtinas Neagoe Basarabin määräyksestä vuosina 1512–1517, ja sen kierteiset kupolit ja koristeellinen kivijulkisivu tekevät siitä yhden Romanian omaperäisimmistä rakennuksista. Kansanrunossa kerrotaan mestari Manolesta, jonka rakennelma sortui joka yö, kunnes hän näki unessa, että se pysyisi pystyssä vain, jos joku rakas muurattaisiin sen seinään. Tarina päättyy synkästi, ja se tunnetaan Romaniassa laajasti kansanperinteenä. Todellisuudessa kirkosta tuli 1880-luvulla kuningas Carol I:n aikana kuninkaallinen hautaluostari, jonne on haudattu useita Romanian hallitsijoita.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

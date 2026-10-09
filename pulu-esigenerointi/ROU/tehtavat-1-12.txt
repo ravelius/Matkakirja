@@ -1,0 +1,54 @@
+================ KOHTA 56 (kohde:hahmotelma-curtea-veche) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Kioto — kohdekartta / Kohdekartta: Keisarillinen palatsi] 1331–1869 Nykyinen palatsi ei ole Heian-kauden alkuperäinen. Vanha Heian-palatsi oli kauempana lännessä, ja kun se hylättiin 1100-luvun lopulla, keisarit asuivat aatelissukujen tarjoamissa väliaikaisissa residensseissä. Nykyinen palatsi polveutuu yhdestä niistä, Fujiwara-suvun Tsuchimikado-donosta, ja se on ollut keisarien kotina vuodesta 1331 aina Meiji-restauraatioon asti. Tärkein rakennus on Shishinden, seremoniasali, joka on 33 metriä leveä ja 23 metriä syvä. Portaiden itäpuolella kasvaa kirsikkapuu ja länsipuolella tachibana-appelsiinipuu, ja edessä on valkoinen sorapiha, jolla seremoniat pidettiin. Täällä julistettiin vuonna 1868 viiden artiklan valaksi kutsuttu uudistusohjelma, ja tä…
+
+### 56.1
+KYSYMYS: Miksi Vlad Seivästäjän vuoden 1459 asiakirja on Bukarestille niin tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 56.2
+KYSYMYS: Miksi vanha hovi lopulta hylättiin ja myytiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Bukarest
+Maa, jossa pelaaja on: Romania
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Curtea Veche (historia)
+Tietoruudun teksti: Curtea Veche eli Vanha ruhtinaanhovi on Bukarestin alkuperäinen hallitsijan residenssi, jonka Vlad III Seivästäjä rakennutti Dâmbovița-joen rannalle 1459. Hänen syyskuussa 1459 antamansa asiakirja, jossa hän mainitsee "linnoituksensa" Bukarestissa, on kaupungin varhaisin tunnettu maininta, ja siksi vuotta 1459 pidetään Bukarestin perustamisvuotena. Myöhemmät hallitsijat, muun muassa Mircea Ciobanul ja Matei Basarab, korjasivat ja laajensivat hovia, ja Constantin Brâncoveanu rakensi sen ympärille muun muassa marmoriportaikon. Hovi menetti asemansa, kun Alexander Ypsilantis rakennutti uuden ruhtinaanhovin 1775, ja vanha hovi huutokaupattiin 1798 ja rapistui vähitellen raunioiksi. Kaivaukset alkoivat 1953, ja nykyään alueella toimii avoin museo Bukarestin vanhassakaupungissa.
+Isoisän matkakirjamerkintä: Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kohdekartta / Kohdekartta: Keisarillinen palatsi] 1331–1869 Nykyinen palatsi ei ole Heian-kauden alkuperäinen. Vanha Heian-palatsi oli kauempana lännessä, ja kun se hylättiin 1100-luvun lopulla, keisarit asuivat aatelissukujen tarjoamissa väliaikaisissa residensseissä. Nykyinen palatsi polveutuu yhdestä niistä, Fujiwara-suvun Tsuchimikado-donosta, ja se on ollut keisarien kotina vuodesta 1331 aina Meiji-restauraatioon asti. Tärkein rakennus on Shishinden, seremoniasali, joka on 33 metriä leveä ja 23 metriä syvä. Portaiden itäpuolella kasvaa kirsikkapuu ja länsipuolella tachibana-appelsiinipuu, ja edessä on valkoinen sorapiha, jolla seremoniat pidettiin. Täällä julistettiin vuonna 1868 viiden artiklan valaksi kutsuttu uudistusohjelma, ja tä…
+- [BMU — maalehti / Rakennukset: Kirkko joka jäi ikuisesti kesken] 1874– — Vuonna 1874 St. Georgeen alettiin rakentaa uutta, 650 hengelle mitoitettua goottilaistyylistä kirkkoa arkkitehti William Hayn piirustusten mukaan. Sen piti korvata vanha St. Peter's Church, mutta hanke sai heti vastatuulta: seurakunta hajosi riidoissa, ja osa jäsenistä lähti perustamaan omaa kirkkoaan. Vuonna 1884 tulipalo tuhosi katedraalin Hamiltonissa, ja rahat suunnattiin sen jälleenrakennukseen St. Georgen kirkon sijaan. Työmaa jäi vaille kattoa ja hylättiin lopulta kokonaan, ja vuoden 1926 hirmumyrsky tuhosi vielä osan valmiista muureista. Kalkkikivinen kuori seisoo yhä Government Hillillä, ja siitä tuli suojeltu muistomerkki vuonna 1992.
+
+### 56.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI
+
+### 56.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 56 YHTEINEN KONTEKSTI

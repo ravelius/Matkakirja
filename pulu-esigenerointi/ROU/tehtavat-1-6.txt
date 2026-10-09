@@ -1,0 +1,218 @@
+================ KOHTA 26 (kohde:hahmotelma-coltea-torni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colțea-torni (historia)
+Tietoruudun teksti: Colțea-torni valmistui Bukarestiin vuonna 1714 ja oli 54-metrisenä kaupungin korkein rakennelma lähes 175 vuotta. Maanjäristykset vaurioittivat tornia, mutta se seisoi vuoteen 1888, jolloin se purettiin bulevardin tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Ruoka: Salaisuus, joka katosi karkotuksen mukana] 1650–1770 — Guaranit käyttivät yerba matea kauan ennen eurooppalaisia, ja kulutus keskittyi Amambayn ja Alto Paranán seuduille. Kun jesuiitat huomasivat kasvin kaupallisen arvon, he onnistuivat 1600-luvun puolivälissä kesyttämään sen ja perustivat viljelmiä reduktioihinsa — mikä sai villikantoja korjaavat paraguaylaiset raivon partaalle. Kun kunta karkotettiin 1770-luvulla, viljelmät rappeutuivat ja itämisen salaisuus katosi. Kasvi kesytettiin uudelleen vasta yli sata vuotta myöhemmin. Nykyisin Paraguayn osuus maailman tuotannosta on kymmenesosa.
+
+### 26.1
+KYSYMYS: Miltä Colțea-torni näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colțea-torni (historia)
+Tietoruudun teksti: Colțea-torni valmistui Bukarestiin vuonna 1714 ja oli 54-metrisenä kaupungin korkein rakennelma lähes 175 vuotta. Maanjäristykset vaurioittivat tornia, mutta se seisoi vuoteen 1888, jolloin se purettiin bulevardin tieltä.
+
+### 26.2
+KYSYMYS: Miksi Colțea-torni katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Colțea-torni (historia)
+Tietoruudun teksti: Colțea-torni valmistui Bukarestiin vuonna 1714 ja oli 54-metrisenä kaupungin korkein rakennelma lähes 175 vuotta. Maanjäristykset vaurioittivat tornia, mutta se seisoi vuoteen 1888, jolloin se purettiin bulevardin tieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Ruoka: Salaisuus, joka katosi karkotuksen mukana] 1650–1770 — Guaranit käyttivät yerba matea kauan ennen eurooppalaisia, ja kulutus keskittyi Amambayn ja Alto Paranán seuduille. Kun jesuiitat huomasivat kasvin kaupallisen arvon, he onnistuivat 1600-luvun puolivälissä kesyttämään sen ja perustivat viljelmiä reduktioihinsa — mikä sai villikantoja korjaavat paraguaylaiset raivon partaalle. Kun kunta karkotettiin 1770-luvulla, viljelmät rappeutuivat ja itämisen salaisuus katosi. Kasvi kesytettiin uudelleen vasta yli sata vuotta myöhemmin. Nykyisin Paraguayn osuus maailman tuotannosta on kymmenesosa.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-retezat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Retezatin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Retezatin kansallispuisto sijaitsee Retezat-vuoristossa Hunedoaran läänissä, ja se on Romanian vanhin kansallispuisto: se perustettiin vuonna 1935. Puistossa on yli kuusikymmentä yli 2 300 metrin huippua ja noin kahdeksankymmentä jäätikköjärveä, ja korkein huippu Peleaga kohoaa 2 509 metriin. Kasvilajeja on noin 1 190, mikä on yli kolmannes koko Romanian kasvistosta, ja Gemenelen suojelualueella on 1 800 hehtaaria koskematonta vanhaa metsää. Alueella elää muun muassa ruskeakarhu, susi ja ilves sekä kotkia, joista kultakotka on puiston tunnuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Sepik — kaupunkilehti / Sepik: Kylä joka seisoo vedessä] Sepikin alajuoksulla joki ei koskaan muodosta suistoa vaan hajoaa laajaksi, paikoin 70 kilometriä leveäksi tulva-alueeksi, jonka halki mutkittelee noin 1 500 hylättyä jokimutkaa. Kylät, kuten tässä näkyvä Kambaramba, on siksi rakennettu paalujen varaan veden päälle: talot, kirkot ja koulut lepäävät puupilarien varassa aivan kuin laiturit. Aluetta on kutsuttu Aasian ja Tyynenmeren laajimmaksi koskemattomaksi makean veden kosteikoksi. Vedenpinta vaihtelee sadekauden mukaan niin paljon, että moni kylä joutuu ajan mittaan pystyttämään rakennuksensa uudelleen.
+
+### 27.1
+KYSYMYS: Miksi Retezatia kutsutaan usein Euroopan viimeiseksi koskemattomaksi metsäksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Retezatin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Retezatin kansallispuisto sijaitsee Retezat-vuoristossa Hunedoaran läänissä, ja se on Romanian vanhin kansallispuisto: se perustettiin vuonna 1935. Puistossa on yli kuusikymmentä yli 2 300 metrin huippua ja noin kahdeksankymmentä jäätikköjärveä, ja korkein huippu Peleaga kohoaa 2 509 metriin. Kasvilajeja on noin 1 190, mikä on yli kolmannes koko Romanian kasvistosta, ja Gemenelen suojelualueella on 1 800 hehtaaria koskematonta vanhaa metsää. Alueella elää muun muassa ruskeakarhu, susi ja ilves sekä kotkia, joista kultakotka on puiston tunnuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sepik — kaupunkilehti / Sepik: Kylä joka seisoo vedessä] Sepikin alajuoksulla joki ei koskaan muodosta suistoa vaan hajoaa laajaksi, paikoin 70 kilometriä leveäksi tulva-alueeksi, jonka halki mutkittelee noin 1 500 hylättyä jokimutkaa. Kylät, kuten tässä näkyvä Kambaramba, on siksi rakennettu paalujen varaan veden päälle: talot, kirkot ja koulut lepäävät puupilarien varassa aivan kuin laiturit. Aluetta on kutsuttu Aasian ja Tyynenmeren laajimmaksi koskemattomaksi makean veden kosteikoksi. Vedenpinta vaihtelee sadekauden mukaan niin paljon, että moni kylä joutuu ajan mittaan pystyttämään rakennuksensa uudelleen.
+
+### 27.2
+KYSYMYS: Mitä tarkoittaa "vanha metsä", ja miksi sellaista on Euroopassa jäljellä niin vähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Retezatin kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Retezatin kansallispuisto sijaitsee Retezat-vuoristossa Hunedoaran läänissä, ja se on Romanian vanhin kansallispuisto: se perustettiin vuonna 1935. Puistossa on yli kuusikymmentä yli 2 300 metrin huippua ja noin kahdeksankymmentä jäätikköjärveä, ja korkein huippu Peleaga kohoaa 2 509 metriin. Kasvilajeja on noin 1 190, mikä on yli kolmannes koko Romanian kasvistosta, ja Gemenelen suojelualueella on 1 800 hehtaaria koskematonta vanhaa metsää. Alueella elää muun muassa ruskeakarhu, susi ja ilves sekä kotkia, joista kultakotka on puiston tunnuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-bicaz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bicazin rotko (luonto · vuori)
+Tietoruudun teksti: Bicazin rotko (romaniaksi Cheile Bicazului, unkariksi Békás-szoros) on rotko Koillis-Romaniassa, Neamțin ja Harghitan läänien alueella Hășmaș-vuorten keskiosassa. Bicaz-joen vedet ovat kaivertaneet sen jurakauden kalkkikiveen, ja se on kulkuväylä Moldovan ja Transilvanian välillä. Valtatie DN12C kulkee rotkon jyrkkien seinämien välissä noin kahdeksan kilometrin matkan. Rotkon yhteydessä on myös Punainen järvi eli Lacu Roșu. Koko alue kuuluu Cheile Bicazului–Hășmașin kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka] Moldovan pöydässä maissipuuro, käärityt piirakat ja kukkuloiden viinit kuuluvat yhteen. Neljä nostoa kulkee valurautapadan ääreltä lautaselle, ja sieltä viinitilan linnamaisen rakennuksen kautta viinitarhojen rinteille.
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+
+### 28.1
+KYSYMYS: Miksi joki pystyy kaivertamaan kalkkikiveen näin syvän rotkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bicazin rotko (luonto · vuori)
+Tietoruudun teksti: Bicazin rotko (romaniaksi Cheile Bicazului, unkariksi Békás-szoros) on rotko Koillis-Romaniassa, Neamțin ja Harghitan läänien alueella Hășmaș-vuorten keskiosassa. Bicaz-joen vedet ovat kaivertaneet sen jurakauden kalkkikiveen, ja se on kulkuväylä Moldovan ja Transilvanian välillä. Valtatie DN12C kulkee rotkon jyrkkien seinämien välissä noin kahdeksan kilometrin matkan. Rotkon yhteydessä on myös Punainen järvi eli Lacu Roșu. Koko alue kuuluu Cheile Bicazului–Hășmașin kansallispuistoon.
+
+### 28.2
+KYSYMYS: Miksi Moldovan ja Transilvanian välinen tie kulkee juuri rotkon kautta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bicazin rotko (luonto · vuori)
+Tietoruudun teksti: Bicazin rotko (romaniaksi Cheile Bicazului, unkariksi Békás-szoros) on rotko Koillis-Romaniassa, Neamțin ja Harghitan läänien alueella Hășmaș-vuorten keskiosassa. Bicaz-joen vedet ovat kaivertaneet sen jurakauden kalkkikiveen, ja se on kulkuväylä Moldovan ja Transilvanian välillä. Valtatie DN12C kulkee rotkon jyrkkien seinämien välissä noin kahdeksan kilometrin matkan. Rotkon yhteydessä on myös Punainen järvi eli Lacu Roșu. Koko alue kuuluu Cheile Bicazului–Hășmașin kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka] Moldovan pöydässä maissipuuro, käärityt piirakat ja kukkuloiden viinit kuuluvat yhteen. Neljä nostoa kulkee valurautapadan ääreltä lautaselle, ja sieltä viinitilan linnamaisen rakennuksen kautta viinitarhojen rinteille.
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-ceahlau) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ceahlău-massiivi (luonto · vuori)
+Tietoruudun teksti: Ceahlău-massiivi on yksi Romanian tunnetuimmista vuorista, ja se kuuluu Itäkarpaattien Bistrița-vuorten ryhmään Neamțin läänissä Moldovassa. Tärkeimmät huiput ovat Ocolașul Mare (1 907 metriä) ja Toaca (1 904 metriä). Vuoren itäpuolella virtaa Bistrița-joki ja etelässä Bicaz-joki. Alueen nähtävyyksiin kuuluvat kaksiportainen, noin 30 metriä korkea Duruitoarea-vesiputous ja Panaghia-kallio. Toacan sääasemalla vuoden keskilämpötila on vain noin 1,3 °C, ja vuorelle johtaa seitsemän merkittyä patikkareittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Appalakit: Enemmän puulajeja kuin koko Euroopassa] Appalakkien vuorimetsät kuuluvat maailman monimuotoisimpiin lauhkean vyöhykkeen metsiin: eteläisillä rinteillä kasvaa enemmän puulajeja kuin koko Euroopan mantereella, ja alueelta tunnetaan lähes 10 000 eliölajia. Korkeimmilla huipuilla kuusi- ja pihtakuusimetsät muistuttavat kaukaista Kanadaa, ja niiden vihreiden latvusten seassa seisoo usein harmaita, lehdettömiä pystyyn kuolleita runkoja. Puron- ja lähdevesissä piileskelee myös maailman lajirikkain salamanteriyhteisö, joka viihtyy juuri tällaisessa kosteassa vuoristometsässä.
+- [Tanganjika — kaupunkilehti / Tanganjikan kirjoahvenet: Sadat lajit, jotka syntyivät samassa järvessä] Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.
+
+### 29.1
+KYSYMYS: Miksi vuoren huipuilla on niin paljon kylmempää kuin sen juurella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ceahlău-massiivi (luonto · vuori)
+Tietoruudun teksti: Ceahlău-massiivi on yksi Romanian tunnetuimmista vuorista, ja se kuuluu Itäkarpaattien Bistrița-vuorten ryhmään Neamțin läänissä Moldovassa. Tärkeimmät huiput ovat Ocolașul Mare (1 907 metriä) ja Toaca (1 904 metriä). Vuoren itäpuolella virtaa Bistrița-joki ja etelässä Bicaz-joki. Alueen nähtävyyksiin kuuluvat kaksiportainen, noin 30 metriä korkea Duruitoarea-vesiputous ja Panaghia-kallio. Toacan sääasemalla vuoden keskilämpötila on vain noin 1,3 °C, ja vuorelle johtaa seitsemän merkittyä patikkareittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Appalakit: Enemmän puulajeja kuin koko Euroopassa] Appalakkien vuorimetsät kuuluvat maailman monimuotoisimpiin lauhkean vyöhykkeen metsiin: eteläisillä rinteillä kasvaa enemmän puulajeja kuin koko Euroopan mantereella, ja alueelta tunnetaan lähes 10 000 eliölajia. Korkeimmilla huipuilla kuusi- ja pihtakuusimetsät muistuttavat kaukaista Kanadaa, ja niiden vihreiden latvusten seassa seisoo usein harmaita, lehdettömiä pystyyn kuolleita runkoja. Puron- ja lähdevesissä piileskelee myös maailman lajirikkain salamanteriyhteisö, joka viihtyy juuri tällaisessa kosteassa vuoristometsässä.
+
+### 29.2
+KYSYMYS: Mitä tarkoittaa, että kansallispuisto suojelee "endeemisiä" lajeja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ceahlău-massiivi (luonto · vuori)
+Tietoruudun teksti: Ceahlău-massiivi on yksi Romanian tunnetuimmista vuorista, ja se kuuluu Itäkarpaattien Bistrița-vuorten ryhmään Neamțin läänissä Moldovassa. Tärkeimmät huiput ovat Ocolașul Mare (1 907 metriä) ja Toaca (1 904 metriä). Vuoren itäpuolella virtaa Bistrița-joki ja etelässä Bicaz-joki. Alueen nähtävyyksiin kuuluvat kaksiportainen, noin 30 metriä korkea Duruitoarea-vesiputous ja Panaghia-kallio. Toacan sääasemalla vuoden keskilämpötila on vain noin 1,3 °C, ja vuorelle johtaa seitsemän merkittyä patikkareittiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanganjika — kaupunkilehti / Tanganjikan kirjoahvenet: Sadat lajit, jotka syntyivät samassa järvessä] Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-berca) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bercan mutatulivuoret (luonto · vuori)
+Tietoruudun teksti: Bercan mutatulivuoret (romaniaksi Noroioși de la Pâclele Mici) ovat geologinen ja kasvitieteellinen suojelualue Buzăun läänissä Scorțoasan kunnassa. Tulivuorta muistuttavat kartiot, jotka ovat tavallisesti muutaman metrin korkuisia, syntyvät kolmen kilometrin syvyydestä nousevasta kaasusta, joka työntää suolaista vettä ja mutaa pintaan. Kaasu on enimmäkseen metaania. Muta on kylmää, koska se tulee maankuoren kerroksista eikä vaipasta, ja pinnalla se kuivuu kiinteäksi kartioksi. Maaperä on niin suolaista, että kasvillisuutta on vähän, ja maisema muistuttaa kuunpintaa. Romaniassa alue on ainoa laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uganda — maalehti / Luonto: Järvi, jonka syvyydestä ei olla yksimielisiä] Bunyonyi tarkoittaa monen pienen linnun paikkaa. Järvi syntyi noin 18 000 vuotta sitten, kun tulivuorenpurkaus tukki laakson Kigezin ylängöllä. Se on 22 kilometriä pitkä ja leveimmillään kuusi, ja pinta on lähes kahden kilometrin korkeudessa; ympärillä nousee vuoria vielä kuusisataa metriä järven yläpuolelle. Saaria on 29. Syvyydestä kiistellään: tutkimuskirjallisuus antaa neljäkymmentä metriä, paikalliset ja matkaoppaat väittävät yhdeksääsataa, mikä tekisi siitä Afrikan toiseksi syvimmän. Järvi oli Ugandan 5 000 shillingin setelin kuvana vuosina 2004–2009.
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 30.1
+KYSYMYS: Miksi mutakartioiden ympärillä ei kasva juuri mitään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bercan mutatulivuoret (luonto · vuori)
+Tietoruudun teksti: Bercan mutatulivuoret (romaniaksi Noroioși de la Pâclele Mici) ovat geologinen ja kasvitieteellinen suojelualue Buzăun läänissä Scorțoasan kunnassa. Tulivuorta muistuttavat kartiot, jotka ovat tavallisesti muutaman metrin korkuisia, syntyvät kolmen kilometrin syvyydestä nousevasta kaasusta, joka työntää suolaista vettä ja mutaa pintaan. Kaasu on enimmäkseen metaania. Muta on kylmää, koska se tulee maankuoren kerroksista eikä vaipasta, ja pinnalla se kuivuu kiinteäksi kartioksi. Maaperä on niin suolaista, että kasvillisuutta on vähän, ja maisema muistuttaa kuunpintaa. Romaniassa alue on ainoa laatuaan.
+
+### 30.2
+KYSYMYS: Mistä kaasu ja muta oikein tulevat kolmen kilometrin syvyydestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bercan mutatulivuoret (luonto · vuori)
+Tietoruudun teksti: Bercan mutatulivuoret (romaniaksi Noroioși de la Pâclele Mici) ovat geologinen ja kasvitieteellinen suojelualue Buzăun läänissä Scorțoasan kunnassa. Tulivuorta muistuttavat kartiot, jotka ovat tavallisesti muutaman metrin korkuisia, syntyvät kolmen kilometrin syvyydestä nousevasta kaasusta, joka työntää suolaista vettä ja mutaa pintaan. Kaasu on enimmäkseen metaania. Muta on kylmää, koska se tulee maankuoren kerroksista eikä vaipasta, ja pinnalla se kuivuu kiinteäksi kartioksi. Maaperä on niin suolaista, että kasvillisuutta on vähän, ja maisema muistuttaa kuunpintaa. Romaniassa alue on ainoa laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uganda — maalehti / Luonto: Järvi, jonka syvyydestä ei olla yksimielisiä] Bunyonyi tarkoittaa monen pienen linnun paikkaa. Järvi syntyi noin 18 000 vuotta sitten, kun tulivuorenpurkaus tukki laakson Kigezin ylängöllä. Se on 22 kilometriä pitkä ja leveimmillään kuusi, ja pinta on lähes kahden kilometrin korkeudessa; ympärillä nousee vuoria vielä kuusisataa metriä järven yläpuolelle. Saaria on 29. Syvyydestä kiistellään: tutkimuskirjallisuus antaa neljäkymmentä metriä, paikalliset ja matkaoppaat väittävät yhdeksääsataa, mikä tekisi siitä Afrikan toiseksi syvimmän. Järvi oli Ugandan 5 000 shillingin setelin kuvana vuosina 2004–2009.
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

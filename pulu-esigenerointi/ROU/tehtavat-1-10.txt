@@ -1,0 +1,204 @@
+================ KOHTA 46 (kohde:hahmotelma-horezu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Horezun luostari (kulttuuri)
+Tietoruudun teksti: Horezun eli Hurezin luostarin perusti Valakian ruhtinas Constantin Brâncoveanu vuonna 1690, ja pääkirkko vihittiin käyttöön syyskuussa 1693. Luostari on Romanian suurin luostarikokonaisuus, ja sitä pidetään Brâncoveanun tyylin mestariteoksena. Tyylin tuntomerkkejä ovat arkkitehtuurin selkeys ja tasapaino, runsas kiviveistos sekä koristeelliset maalaukset ja lahjoittajien muotokuvat. Pääkirkon kuistia kannattelee kymmenen kivipylvästä, joissa on myöhäisrenessanssin koristeita. Paikan nimen kerrotaan tulevan pöllöstä, jonka huhuilu rikkoo laakson hiljaisuuden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Stavropoleoksen kirkko] 1724 Stavropoleoksen kirkko on pieni mutta kaunis luostarikirkko Bukarestin vanhassa keskustassa. Kreikkalainen munkki Ioannikios Stratonikeas rakennutti sen vuonna 1724 ruhtinas Nicholas Mavrocordatoksen aikana. Nimi tulee kreikan sanoista "Stavropolis", joka tarkoittaa "Ristin kaupunkia". Kirkon arkkitehtuuri edustaa niin sanottua brâncoveanu-tyyliä, jossa on koristeellisia kiviveistoksia ja kaiverruksia. Luostarin kirjastossa on yli 8000 kirjaa teologiasta, taiteesta ja historiasta, ja siellä säilytetään myös yli 80 vanhaa käsikirjoitusta. Luostarissa on Romanian suurin bysanttilaisen kirkkomusiikin kokoelma, ja vuonna 1994 perustettu kuoro laulaa yhä vanhoja psalmisävelmiä. Kirkko on tä…
+
+### 46.1
+KYSYMYS: Miksi Brâncoveanun tyyliä pidetään niin erityisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Horezun luostari (kulttuuri)
+Tietoruudun teksti: Horezun eli Hurezin luostarin perusti Valakian ruhtinas Constantin Brâncoveanu vuonna 1690, ja pääkirkko vihittiin käyttöön syyskuussa 1693. Luostari on Romanian suurin luostarikokonaisuus, ja sitä pidetään Brâncoveanun tyylin mestariteoksena. Tyylin tuntomerkkejä ovat arkkitehtuurin selkeys ja tasapaino, runsas kiviveistos sekä koristeelliset maalaukset ja lahjoittajien muotokuvat. Pääkirkon kuistia kannattelee kymmenen kivipylvästä, joissa on myöhäisrenessanssin koristeita. Paikan nimen kerrotaan tulevan pöllöstä, jonka huhuilu rikkoo laakson hiljaisuuden.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Stavropoleoksen kirkko] 1724 Stavropoleoksen kirkko on pieni mutta kaunis luostarikirkko Bukarestin vanhassa keskustassa. Kreikkalainen munkki Ioannikios Stratonikeas rakennutti sen vuonna 1724 ruhtinas Nicholas Mavrocordatoksen aikana. Nimi tulee kreikan sanoista "Stavropolis", joka tarkoittaa "Ristin kaupunkia". Kirkon arkkitehtuuri edustaa niin sanottua brâncoveanu-tyyliä, jossa on koristeellisia kiviveistoksia ja kaiverruksia. Luostarin kirjastossa on yli 8000 kirjaa teologiasta, taiteesta ja historiasta, ja siellä säilytetään myös yli 80 vanhaa käsikirjoitusta. Luostarissa on Romanian suurin bysanttilaisen kirkkomusiikin kokoelma, ja vuonna 1994 perustettu kuoro laulaa yhä vanhoja psalmisävelmiä. Kirkko on tä…
+
+### 46.2
+KYSYMYS: Mikä lintu on antanut paikalle Hurezin nimen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Horezun luostari (kulttuuri)
+Tietoruudun teksti: Horezun eli Hurezin luostarin perusti Valakian ruhtinas Constantin Brâncoveanu vuonna 1690, ja pääkirkko vihittiin käyttöön syyskuussa 1693. Luostari on Romanian suurin luostarikokonaisuus, ja sitä pidetään Brâncoveanun tyylin mestariteoksena. Tyylin tuntomerkkejä ovat arkkitehtuurin selkeys ja tasapaino, runsas kiviveistos sekä koristeelliset maalaukset ja lahjoittajien muotokuvat. Pääkirkon kuistia kannattelee kymmenen kivipylvästä, joissa on myöhäisrenessanssin koristeita. Paikan nimen kerrotaan tulevan pöllöstä, jonka huhuilu rikkoo laakson hiljaisuuden.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-sucevita) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sucevițan luostari (kulttuuri)
+Tietoruudun teksti: Sucevițan luostari on ortodoksinen luostari Bukovinassa, Romanian koillisosassa, noin 18 kilometrin päässä Rădăuțin kaupungista. Sen rakennuttivat Movilă-suvun veljekset Ieremia, Gheorghe ja Simion vuonna 1585. Kirkon sisä- ja ulkoseinät on peitetty raamatullisilla kuvakertomuksilla Vanhasta ja Uudesta testamentista, ja maalaukset ovat noin vuodelta 1601, joten Sucevița oli viimeisiä Moldovan tyyliin ulkoa maalattuja luostareita. Luostaria ympäröi lähes neliönmuotoinen, kuuden metrin korkuinen ja kolme metriä paksu muuri kulmatorneineen, sillä paikka oli sekä linnoitettu luostari että ruhtinaiden asuinpaikka. Muurien sisällä on museo, jossa on hopealangalla kirjailtuja hautakansia ja vanhoja käsikirjoituksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [Ghana — maalehti / Musiikki: Nimi tuli oven ulkopuolelta] 1920-luku — Highlife syntyi 1800-luvun lopulla rannikkokaupungeissa, kun paikalliset muusikot yhdistivät omat rytminsä merimiesten tuomiin soittimiin. Nimen antoi yleisö, joka ei päässyt sisään: 1920-luvulla hienot klubit perivät seitsemän shillingin ja kuuden pennyn pääsymaksun ja vaativat iltapukua ja silinteriä, joten ulkona seisojat kutsuivat sisältä kuuluvaa musiikkia korkeaksi elämäksi. Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar Babies ja Accra Orchestra. Unesco otti highlifen aineettoman kulttuuriperinnön luetteloon 2025.
+- [Irak — maalehti / Rakennukset: Kierre nousee ulkopuolelta] Samarran suuren moskeijan minareetti tunnetaan nimellä Malwiya eli kierre. Se on 52 metriä korkea ja pohjaltaan 33 metriä leveä, ja huipulle noustaan ulkopintaa kiertävää ramppia pitkin — sisällä ei ole portaita lainkaan. Torni valmistui kalifi al-Mutawakkilin käskystä vuosina 848–852. Itse moskeija oli aikanaan valtava: sen ala oli noin 166 000 neliömetriä. Samarran arkeologinen kaupunki otettiin maailmanperintöluetteloon vuonna 2007.
+
+### 47.1
+KYSYMYS: Miksi luostarin ympärillä on niin korkea ja paksu muuri?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sucevițan luostari (kulttuuri)
+Tietoruudun teksti: Sucevițan luostari on ortodoksinen luostari Bukovinassa, Romanian koillisosassa, noin 18 kilometrin päässä Rădăuțin kaupungista. Sen rakennuttivat Movilă-suvun veljekset Ieremia, Gheorghe ja Simion vuonna 1585. Kirkon sisä- ja ulkoseinät on peitetty raamatullisilla kuvakertomuksilla Vanhasta ja Uudesta testamentista, ja maalaukset ovat noin vuodelta 1601, joten Sucevița oli viimeisiä Moldovan tyyliin ulkoa maalattuja luostareita. Luostaria ympäröi lähes neliönmuotoinen, kuuden metrin korkuinen ja kolme metriä paksu muuri kulmatorneineen, sillä paikka oli sekä linnoitettu luostari että ruhtinaiden asuinpaikka. Muurien sisällä on museo, jossa on hopealangalla kirjailtuja hautakansia ja vanhoja käsikirjoituksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 47.2
+KYSYMYS: Miksi luostarin seinät on maalattu myös ulkopuolelta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sucevițan luostari (kulttuuri)
+Tietoruudun teksti: Sucevițan luostari on ortodoksinen luostari Bukovinassa, Romanian koillisosassa, noin 18 kilometrin päässä Rădăuțin kaupungista. Sen rakennuttivat Movilă-suvun veljekset Ieremia, Gheorghe ja Simion vuonna 1585. Kirkon sisä- ja ulkoseinät on peitetty raamatullisilla kuvakertomuksilla Vanhasta ja Uudesta testamentista, ja maalaukset ovat noin vuodelta 1601, joten Sucevița oli viimeisiä Moldovan tyyliin ulkoa maalattuja luostareita. Luostaria ympäröi lähes neliönmuotoinen, kuuden metrin korkuinen ja kolme metriä paksu muuri kulmatorneineen, sillä paikka oli sekä linnoitettu luostari että ruhtinaiden asuinpaikka. Muurien sisällä on museo, jossa on hopealangalla kirjailtuja hautakansia ja vanhoja käsikirjoituksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Musiikki: Nimi tuli oven ulkopuolelta] 1920-luku — Highlife syntyi 1800-luvun lopulla rannikkokaupungeissa, kun paikalliset muusikot yhdistivät omat rytminsä merimiesten tuomiin soittimiin. Nimen antoi yleisö, joka ei päässyt sisään: 1920-luvulla hienot klubit perivät seitsemän shillingin ja kuuden pennyn pääsymaksun ja vaativat iltapukua ja silinteriä, joten ulkona seisojat kutsuivat sisältä kuuluvaa musiikkia korkeaksi elämäksi. Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar Babies ja Accra Orchestra. Unesco otti highlifen aineettoman kulttuuriperinnön luetteloon 2025.
+- [Irak — maalehti / Rakennukset: Kierre nousee ulkopuolelta] Samarran suuren moskeijan minareetti tunnetaan nimellä Malwiya eli kierre. Se on 52 metriä korkea ja pohjaltaan 33 metriä leveä, ja huipulle noustaan ulkopintaa kiertävää ramppia pitkin — sisällä ei ole portaita lainkaan. Torni valmistui kalifi al-Mutawakkilin käskystä vuosina 848–852. Itse moskeija oli aikanaan valtava: sen ala oli noin 166 000 neliömetriä. Samarran arkeologinen kaupunki otettiin maailmanperintöluetteloon vuonna 2007.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (kohde:hahmotelma-cotnari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cotnari (ruoka)
+Tietoruudun teksti: Cotnari on kylä Iașin läänissä Moldovan länsiosassa, luoteeseen Iașista, ja se tunnetaan viinialueena sekä Grasă de Cotnari -viinilajikkeesta. Alueella on asuttu jo Cucuteni-kulttuurin ajoista, ja läheiseltä Cătălinan kukkulalta on löydetty linnoitus 500- tai 400-luvulta eaa. Kylä mainitaan asiakirjoissa ensimmäisen kerran vuonna 1448, ja siellä asui vahva katolinen yhteisö, jonka muodostivat lähinnä saksalaiset ja unkarilaiset. Paikallisen perimätiedon mukaan viinitarhat perustettiin ruhtinas Tapani Suuren aloitteesta. Reformaation aikaan 1560-luvulla ruhtinas Heraclid perusti kylään latinankielisen koulun, ja sen paikalle rakennettu kirkko palveli katolista yhteisöä, kunnes se paloi vuonna 1873.
+
+### 48.1
+KYSYMYS: Miksi Cotnarin seutu sopii viininviljelyyn, vaikka talvet ovat kylmiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cotnari (ruoka)
+Tietoruudun teksti: Cotnari on kylä Iașin läänissä Moldovan länsiosassa, luoteeseen Iașista, ja se tunnetaan viinialueena sekä Grasă de Cotnari -viinilajikkeesta. Alueella on asuttu jo Cucuteni-kulttuurin ajoista, ja läheiseltä Cătălinan kukkulalta on löydetty linnoitus 500- tai 400-luvulta eaa. Kylä mainitaan asiakirjoissa ensimmäisen kerran vuonna 1448, ja siellä asui vahva katolinen yhteisö, jonka muodostivat lähinnä saksalaiset ja unkarilaiset. Paikallisen perimätiedon mukaan viinitarhat perustettiin ruhtinas Tapani Suuren aloitteesta. Reformaation aikaan 1560-luvulla ruhtinas Heraclid perusti kylään latinankielisen koulun, ja sen paikalle rakennettu kirkko palveli katolista yhteisöä, kunnes se paloi vuonna 1873.
+
+### 48.2
+KYSYMYS: Mitä Cotnarin katolisen yhteisön kirkolle tapahtui vuonna 1873?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cotnari (ruoka)
+Tietoruudun teksti: Cotnari on kylä Iașin läänissä Moldovan länsiosassa, luoteeseen Iașista, ja se tunnetaan viinialueena sekä Grasă de Cotnari -viinilajikkeesta. Alueella on asuttu jo Cucuteni-kulttuurin ajoista, ja läheiseltä Cătălinan kukkulalta on löydetty linnoitus 500- tai 400-luvulta eaa. Kylä mainitaan asiakirjoissa ensimmäisen kerran vuonna 1448, ja siellä asui vahva katolinen yhteisö, jonka muodostivat lähinnä saksalaiset ja unkarilaiset. Paikallisen perimätiedon mukaan viinitarhat perustettiin ruhtinas Tapani Suuren aloitteesta. Reformaation aikaan 1560-luvulla ruhtinas Heraclid perusti kylään latinankielisen koulun, ja sen paikalle rakennettu kirkko palveli katolista yhteisöä, kunnes se paloi vuonna 1873.
+
+### 48.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+================ KOHTA 49 (kohde:hahmotelma-iasi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iași (kulttuuri)
+Tietoruudun teksti: Iași on Romanian kolmanneksi suurin kaupunki Moldovan historiallisella alueella. Se oli Moldovan ruhtinaskunnan pääkaupunki vuodesta 1564 vuoteen 1859, ja vaikka pääkaupunki siirrettiin Bukarestiin, Iași jäi romanialaisen kulttuurin ja koulutuksen keskukseksi. Kaupungissa perustettiin vuonna 1860 Romanian ensimmäinen yliopisto, ja Junimea-kirjallisuusseuran julkaisussa Convorbiri Literare julkaistiin vuodesta 1867 muun muassa Mihai Eminescun runoja. Tunnettuja rakennuksia ovat Trei Ierarhin luostari 1630-luvulta ja keskiaikaisen ruhtinaanlinnan raunioille rakennettu Kulttuuripalatsi. Iașissa ilmestyi myös maailman ensimmäinen jiddišinkielinen sanomalehti vuonna 1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+
+### 49.1
+KYSYMYS: Miksi Iașia kutsutaan Romanian kulttuuripääkaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iași (kulttuuri)
+Tietoruudun teksti: Iași on Romanian kolmanneksi suurin kaupunki Moldovan historiallisella alueella. Se oli Moldovan ruhtinaskunnan pääkaupunki vuodesta 1564 vuoteen 1859, ja vaikka pääkaupunki siirrettiin Bukarestiin, Iași jäi romanialaisen kulttuurin ja koulutuksen keskukseksi. Kaupungissa perustettiin vuonna 1860 Romanian ensimmäinen yliopisto, ja Junimea-kirjallisuusseuran julkaisussa Convorbiri Literare julkaistiin vuodesta 1867 muun muassa Mihai Eminescun runoja. Tunnettuja rakennuksia ovat Trei Ierarhin luostari 1630-luvulta ja keskiaikaisen ruhtinaanlinnan raunioille rakennettu Kulttuuripalatsi. Iașissa ilmestyi myös maailman ensimmäinen jiddišinkielinen sanomalehti vuonna 1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+
+### 49.2
+KYSYMYS: Mikä Junimea oli ja miksi sen julkaisu Convorbiri Literare oli tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iași (kulttuuri)
+Tietoruudun teksti: Iași on Romanian kolmanneksi suurin kaupunki Moldovan historiallisella alueella. Se oli Moldovan ruhtinaskunnan pääkaupunki vuodesta 1564 vuoteen 1859, ja vaikka pääkaupunki siirrettiin Bukarestiin, Iași jäi romanialaisen kulttuurin ja koulutuksen keskukseksi. Kaupungissa perustettiin vuonna 1860 Romanian ensimmäinen yliopisto, ja Junimea-kirjallisuusseuran julkaisussa Convorbiri Literare julkaistiin vuodesta 1867 muun muassa Mihai Eminescun runoja. Tunnettuja rakennuksia ovat Trei Ierarhin luostari 1630-luvulta ja keskiaikaisen ruhtinaanlinnan raunioille rakennettu Kulttuuripalatsi. Iașissa ilmestyi myös maailman ensimmäinen jiddišinkielinen sanomalehti vuonna 1855.
+
+### 49.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+### 49.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 49 YHTEINEN KONTEKSTI
+
+================ KOHTA 50 (kohde:hahmotelma-ploiesti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ploiești (tekniikka)
+Tietoruudun teksti: Ploiești on Prahovan piirikunnan keskus Muntenian alueella, noin 56 kilometriä Bukarestista pohjoiseen. Kaupunki alkoi kasvaa 1500-luvun lopulla Mikael Urhean perustamalle tilalle, ja vuonna 1597 ruhtinas antoi sille virallisen markkinakaupungin aseman. Kauppareitit Transilvaniasta Tonavalle toivat sinne vaurautta, ja 1600- ja 1700-luvuilla siitä tuli tärkeä kaupan ja käsityön keskus. Käänne tuli 1850-luvun puolivälissä, kun Mehedințeanun veljekset perustivat sinne maailman ensimmäisen laajamittaisen öljynjalostamon, joka toimi täydellä teholla vuosina 1856–1857. Sen jälkeen kaupunki on ollut Euroopan öljynjalostuksen keskus ja saanut lempinimen "Mustan kullan pääkaupunki".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+
+### 50.1
+KYSYMYS: Miksi juuri Ploieștissa syntyi maailman ensimmäinen suuri öljynjalostamo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ploiești (tekniikka)
+Tietoruudun teksti: Ploiești on Prahovan piirikunnan keskus Muntenian alueella, noin 56 kilometriä Bukarestista pohjoiseen. Kaupunki alkoi kasvaa 1500-luvun lopulla Mikael Urhean perustamalle tilalle, ja vuonna 1597 ruhtinas antoi sille virallisen markkinakaupungin aseman. Kauppareitit Transilvaniasta Tonavalle toivat sinne vaurautta, ja 1600- ja 1700-luvuilla siitä tuli tärkeä kaupan ja käsityön keskus. Käänne tuli 1850-luvun puolivälissä, kun Mehedințeanun veljekset perustivat sinne maailman ensimmäisen laajamittaisen öljynjalostamon, joka toimi täydellä teholla vuosina 1856–1857. Sen jälkeen kaupunki on ollut Euroopan öljynjalostuksen keskus ja saanut lempinimen "Mustan kullan pääkaupunki".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+
+### 50.2
+KYSYMYS: Mitä Ploieștin lempinimi "Mustan kullan pääkaupunki" tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ploiești (tekniikka)
+Tietoruudun teksti: Ploiești on Prahovan piirikunnan keskus Muntenian alueella, noin 56 kilometriä Bukarestista pohjoiseen. Kaupunki alkoi kasvaa 1500-luvun lopulla Mikael Urhean perustamalle tilalle, ja vuonna 1597 ruhtinas antoi sille virallisen markkinakaupungin aseman. Kauppareitit Transilvaniasta Tonavalle toivat sinne vaurautta, ja 1600- ja 1700-luvuilla siitä tuli tärkeä kaupan ja käsityön keskus. Käänne tuli 1850-luvun puolivälissä, kun Mehedințeanun veljekset perustivat sinne maailman ensimmäisen laajamittaisen öljynjalostamon, joka toimi täydellä teholla vuosina 1856–1857. Sen jälkeen kaupunki on ollut Euroopan öljynjalostuksen keskus ja saanut lempinimen "Mustan kullan pääkaupunki".
+
+### 50.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI
+
+### 50.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 50 YHTEINEN KONTEKSTI

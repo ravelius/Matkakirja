@@ -1,0 +1,220 @@
+================ KOHTA 31 (kohde:hahmotelma-scarisoara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scărișoaran jääluola (luonto · vuori)
+Tietoruudun teksti: Scărișoaran jääluola on yksi Apuseni-vuorten suurimmista jääluolista Romanian länsiosassa, ja se on esittelyluola sekä yksi maan luonnonihmeistä. Sisäänkäyntikuilu on halkaisijaltaan 60 metriä ja syvyydeltään 50 metriä, ja metalliportaat johtavat sen kautta suureen saliin. Salissa on lähes 18 metriä korkea jääseinämä, ja luolan jäätä arvioidaan olevan noin 75 000 kuutiometriä. Kesällä lämpötila nousee enintään yhteen plusasteeseen ja talvella laskee noin seitsemään pakkasasteeseen. Luolassa elää lepakoita sekä pieniä, 2–3 millimetrin mittaisia Pholeuon prozerpinae glaciale -hyönteisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vietnam — maalehti / Luonto: Luolan pohjalla kasvaa metsä] Ho Khanh löysi luolan suun joulukuussa 1990 etsiessään agarpuuta, mutta aukosta puhalsi kova viima ja alta kuului veden pauhu, joten hän kääntyi takaisin — ja unohti paikan. Hän löysi sen uudelleen vasta 2008, ja brittiläinen luolatutkimusretkikunta mittasi luolan huhtikuussa 2009. Son Doongin pääkäytävä on yli viisi kilometriä pitkä, kaksisataa metriä korkea ja sataviisikymmentä metriä leveä. Kahdessa kohdassa katto on romahtanut, ja aukoista tulviva päivänvalo on kasvattanut luolan pohjalle metsän. Korkeimmat tippukivipatsaat yltävät 80 metriin.
+- [Qatar — maalehti / Luonto: Luolan seinät hohtavat heikosti] Keskellä Qatarin kivikkoista tasankoa aukeaa maahan kuilu. Dahl Al Misfirin luolan suu on noin kaksitoista metriä pitkä ja neljä ja puoli leveä, ja pohja on ainakin neljänkymmenen metrin syvyydessä. Seinissä on kuitumaista kipsiä, joka hohtaa hämärässä heikosti — siitä luola tunnetaan. Kipsi on peräisin kalkkikivikerroksista, jotka ovat noin neljä-viisikymmentä miljoonaa vuotta vanhoja; luola itse on niitä nuorempi. Alas pääsee vain kiipeämällä kivikkoista rinnettä pitkin.
+
+### 31.1
+KYSYMYS: Miksi luolan jää ei sula kesälläkään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scărișoaran jääluola (luonto · vuori)
+Tietoruudun teksti: Scărișoaran jääluola on yksi Apuseni-vuorten suurimmista jääluolista Romanian länsiosassa, ja se on esittelyluola sekä yksi maan luonnonihmeistä. Sisäänkäyntikuilu on halkaisijaltaan 60 metriä ja syvyydeltään 50 metriä, ja metalliportaat johtavat sen kautta suureen saliin. Salissa on lähes 18 metriä korkea jääseinämä, ja luolan jäätä arvioidaan olevan noin 75 000 kuutiometriä. Kesällä lämpötila nousee enintään yhteen plusasteeseen ja talvella laskee noin seitsemään pakkasasteeseen. Luolassa elää lepakoita sekä pieniä, 2–3 millimetrin mittaisia Pholeuon prozerpinae glaciale -hyönteisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vietnam — maalehti / Luonto: Luolan pohjalla kasvaa metsä] Ho Khanh löysi luolan suun joulukuussa 1990 etsiessään agarpuuta, mutta aukosta puhalsi kova viima ja alta kuului veden pauhu, joten hän kääntyi takaisin — ja unohti paikan. Hän löysi sen uudelleen vasta 2008, ja brittiläinen luolatutkimusretkikunta mittasi luolan huhtikuussa 2009. Son Doongin pääkäytävä on yli viisi kilometriä pitkä, kaksisataa metriä korkea ja sataviisikymmentä metriä leveä. Kahdessa kohdassa katto on romahtanut, ja aukoista tulviva päivänvalo on kasvattanut luolan pohjalle metsän. Korkeimmat tippukivipatsaat yltävät 80 metriin.
+- [Qatar — maalehti / Luonto: Luolan seinät hohtavat heikosti] Keskellä Qatarin kivikkoista tasankoa aukeaa maahan kuilu. Dahl Al Misfirin luolan suu on noin kaksitoista metriä pitkä ja neljä ja puoli leveä, ja pohja on ainakin neljänkymmenen metrin syvyydessä. Seinissä on kuitumaista kipsiä, joka hohtaa hämärässä heikosti — siitä luola tunnetaan. Kipsi on peräisin kalkkikivikerroksista, jotka ovat noin neljä-viisikymmentä miljoonaa vuotta vanhoja; luola itse on niitä nuorempi. Alas pääsee vain kiipeämällä kivikkoista rinnettä pitkin.
+- [Ranska — maalehti / Historia: Neljä poikaa ja koira löysivät luolan] n. 17 000 vuotta sitten — Syyskuussa 1940 neljä teini-ikäistä poikaa etsi koiraansa Dordognen metsässä ja putosi kuoppaan. Alta paljastui luolasto, jonka seinät olivat täynnä maalattuja hevosia, hirviä ja alkuhärkiä. Maalaukset ovat noin 17 000 vuotta vanhoja. Luola avattiin yleisölle sodan jälkeen, mutta kävijöiden hengitys alkoi tuhota värejä, ja se suljettiin vuonna 1963. Viereen rakennettiin tarkka jäljennös, jossa käydään yhä.
+
+### 31.2
+KYSYMYS: Miten kalkkikiveen voi syntyä näin suuri luola?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scărișoaran jääluola (luonto · vuori)
+Tietoruudun teksti: Scărișoaran jääluola on yksi Apuseni-vuorten suurimmista jääluolista Romanian länsiosassa, ja se on esittelyluola sekä yksi maan luonnonihmeistä. Sisäänkäyntikuilu on halkaisijaltaan 60 metriä ja syvyydeltään 50 metriä, ja metalliportaat johtavat sen kautta suureen saliin. Salissa on lähes 18 metriä korkea jääseinämä, ja luolan jäätä arvioidaan olevan noin 75 000 kuutiometriä. Kesällä lämpötila nousee enintään yhteen plusasteeseen ja talvella laskee noin seitsemään pakkasasteeseen. Luolassa elää lepakoita sekä pieniä, 2–3 millimetrin mittaisia Pholeuon prozerpinae glaciale -hyönteisiä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Aavikon selviytyjät: Afrikan suurin suojelualue] Namib-Naukluft on Afrikan suurin luonnonsuojelualue, lähes 50 000 neliökilometriä – suurempi kuin Sveitsi. Puisto ulottuu punaisista Sossusvlein dyyneistä pohjoisemmas kivikkoisille soratasangoille ja Naukluft-vuorten rotkoihin, joissa kausivedet ovat kaivertaneet syviä kanjoneita kovaan kalkkikiveen. Yhdellä suojelualueella yhdistyvät näin aavikon täysin erilaiset maisematyypit: liikkuva hiekkameri, paljas kivierämaa ja vuoristo, joissa jokaisessa elää omat, tiukasti sopeutuneet lajinsa. Alueen laajuus ja moni-ilmeisyys ovat yksi syy siihen, miksi Namibia pystyy suojelemaan näin suuren osan maailman ainoasta aidosti aavikkoon sopeutuneesta eliöstöstä.
+- [Exmouth — kaupunkilehti / Exmouth: Muinainen riutta nousi vuoriksi] Exmouthin niemimaan selkärankana kohoava Cape Range ei ole tavallinen kukkulajono, vaan miljoonien vuosien takainen koralliriutta, joka on työntynyt ilmaan. Kalkkikivi syntyi meren pohjalle kertyneistä koralli- ja simpukkajäänteistä, ja kun Australian ja Aasian mannerlaatat alkoivat myöhäisellä mioseenikaudella puristua toisiaan vasten, alue kohosi hitaasti merestä kukkuloiksi. Vuosimiljoonien sadevedet ovat sittemmin uurtaneet kalkkikiveen syviä rotkoja, joiden seinämistä voi yhä löytää muinaisten riutaneliöiden fossiileja. Cape Range onkin Australian ainoa esimerkki näin vuorenpoimutuksen nostamasta karstialueesta.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-sovata) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sovata (luonto · järvi)
+Tietoruudun teksti: Sovata on kylpyläkaupunki Transilvaniassa Mureșin läänissä, noin 60 kilometrin päässä läänin pääkaupungista Târgu Mureșista. Se sijaitsee Gurghiu-vuorten juurella Székelyföldin alueella. Ensimmäiset tiedot kylästä ovat vuodelta 1578, ja kaupungin aseman se sai vuonna 1952. Suolaisten järvien ja lämpimän veden ansiosta paikasta tuli 1800-luvun lopulla ja 1900-luvulla yhä suositumpi terveyskylpylä. Ursu-järvi eli Karhujärvi syntyi geologisten tapahtumien seurauksena vuonna 1875; sen vesi on suolaista ja auringon lämmittämää, ja sillä uskotaan olevan hoitavia vaikutuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Historia: Kaupunki, joka mahtui härännahan sisään] 814 eaa. — Kreikkalais-roomalaisen taruston mukaan Karthagon perusti Tyroksen kuningatar, jota kutsutaan nimillä Dido ja Elissa. Hän pakeni veljeään Pygmalionia ja purjehti Luoteis-Afrikkaan, jossa hänelle luvattiin maata sen verran kuin härännahalla saa peitettyä; hän leikkasi nahan hiuksenohuiksi suikaleiksi ja piiritti niillä kokonaisen kukkulan. Vanhin tunnettu maininta on sisilialaisen Timaioksen kadonneissa teksteissä, joiden mukaan kaupunki syntyi 814 eaa., suunnilleen samaan aikaan kuin Rooma. Kertomukset on kirjoitettu satoja vuosia tapahtumien jälkeen, eikä paikalta ole löytynyt asutusta 700-luvun eaa. viimeistä neljännestä kauempaa.
+
+### 32.1
+KYSYMYS: Miksi suolaiset järvet houkuttelivat 1800-luvun lopulla kylpylävieraita Sovataan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sovata (luonto · järvi)
+Tietoruudun teksti: Sovata on kylpyläkaupunki Transilvaniassa Mureșin läänissä, noin 60 kilometrin päässä läänin pääkaupungista Târgu Mureșista. Se sijaitsee Gurghiu-vuorten juurella Székelyföldin alueella. Ensimmäiset tiedot kylästä ovat vuodelta 1578, ja kaupungin aseman se sai vuonna 1952. Suolaisten järvien ja lämpimän veden ansiosta paikasta tuli 1800-luvun lopulla ja 1900-luvulla yhä suositumpi terveyskylpylä. Ursu-järvi eli Karhujärvi syntyi geologisten tapahtumien seurauksena vuonna 1875; sen vesi on suolaista ja auringon lämmittämää, ja sillä uskotaan olevan hoitavia vaikutuksia.
+
+### 32.2
+KYSYMYS: Miten järvi voi syntyä "geologisten tapahtumien" seurauksena?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sovata (luonto · järvi)
+Tietoruudun teksti: Sovata on kylpyläkaupunki Transilvaniassa Mureșin läänissä, noin 60 kilometrin päässä läänin pääkaupungista Târgu Mureșista. Se sijaitsee Gurghiu-vuorten juurella Székelyföldin alueella. Ensimmäiset tiedot kylästä ovat vuodelta 1578, ja kaupungin aseman se sai vuonna 1952. Suolaisten järvien ja lämpimän veden ansiosta paikasta tuli 1800-luvun lopulla ja 1900-luvulla yhä suositumpi terveyskylpylä. Ursu-järvi eli Karhujärvi syntyi geologisten tapahtumien seurauksena vuonna 1875; sen vesi on suolaista ja auringon lämmittämää, ja sillä uskotaan olevan hoitavia vaikutuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Historia: Kaupunki, joka mahtui härännahan sisään] 814 eaa. — Kreikkalais-roomalaisen taruston mukaan Karthagon perusti Tyroksen kuningatar, jota kutsutaan nimillä Dido ja Elissa. Hän pakeni veljeään Pygmalionia ja purjehti Luoteis-Afrikkaan, jossa hänelle luvattiin maata sen verran kuin härännahalla saa peitettyä; hän leikkasi nahan hiuksenohuiksi suikaleiksi ja piiritti niillä kokonaisen kukkulan. Vanhin tunnettu maininta on sisilialaisen Timaioksen kadonneissa teksteissä, joiden mukaan kaupunki syntyi 814 eaa., suunnilleen samaan aikaan kuin Rooma. Kertomukset on kirjoitettu satoja vuosia tapahtumien jälkeen, eikä paikalta ole löytynyt asutusta 700-luvun eaa. viimeistä neljännestä kauempaa.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-sfanta-ana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pyhän Annan järvi (luonto · järvi)
+Tietoruudun teksti: Pyhän Annan järvi on Romanian ainoa kraatterijärvi, ja se täyttää Ciomad-tulivuoren kraatterin Itäisillä Karpaateilla Tușnadin lähellä. Lähes pyöreä järvi on noin 620 metriä pitkä ja 460 metriä leveä, ja se sijaitsee 946 metrin korkeudessa. Vettä tulee vain sateesta, joten se on hyvin vähämineraalista ja puhtaudeltaan lähes tislatun veden luokkaa. Tutkijat arvioivat tulivuoren viimeisen purkauksen tapahtuneen 9 800–32 000 vuotta sitten, eikä tarkkaa ikää tiedetä. Järvi madaltuu jatkuvasti: vuonna 1867 sen syvyys oli 12 metriä, nykyään alle seitsemän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Järvi, joka putosi maan alle] Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen uhanalaista korppikotkalajia.
+- [Managua — kaupunkilehti / Järvi ja tulivuoret] Managuan ympärillä maa on elossa: kaupunki lepää järven rannalla ja tulivuorten varjossa, ja sen alla kytee sama voima, joka tasaisin väliajoin ravistelee sitä. Täältä löytyvät järvi, kraatteri ja kaksi tulivuorta.
+
+### 33.1
+KYSYMYS: Miten tulivuoren kraatteriin voi syntyä järvi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pyhän Annan järvi (luonto · järvi)
+Tietoruudun teksti: Pyhän Annan järvi on Romanian ainoa kraatterijärvi, ja se täyttää Ciomad-tulivuoren kraatterin Itäisillä Karpaateilla Tușnadin lähellä. Lähes pyöreä järvi on noin 620 metriä pitkä ja 460 metriä leveä, ja se sijaitsee 946 metrin korkeudessa. Vettä tulee vain sateesta, joten se on hyvin vähämineraalista ja puhtaudeltaan lähes tislatun veden luokkaa. Tutkijat arvioivat tulivuoren viimeisen purkauksen tapahtuneen 9 800–32 000 vuotta sitten, eikä tarkkaa ikää tiedetä. Järvi madaltuu jatkuvasti: vuonna 1867 sen syvyys oli 12 metriä, nykyään alle seitsemän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Järvi, joka putosi maan alle] Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen uhanalaista korppikotkalajia.
+- [Managua — kaupunkilehti / Järvi ja tulivuoret] Managuan ympärillä maa on elossa: kaupunki lepää järven rannalla ja tulivuorten varjossa, ja sen alla kytee sama voima, joka tasaisin väliajoin ravistelee sitä. Täältä löytyvät järvi, kraatteri ja kaksi tulivuorta.
+
+### 33.2
+KYSYMYS: Miksi Pyhän Annan järven vesi on lähes tislatun veden puhdasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pyhän Annan järvi (luonto · järvi)
+Tietoruudun teksti: Pyhän Annan järvi on Romanian ainoa kraatterijärvi, ja se täyttää Ciomad-tulivuoren kraatterin Itäisillä Karpaateilla Tușnadin lähellä. Lähes pyöreä järvi on noin 620 metriä pitkä ja 460 metriä leveä, ja se sijaitsee 946 metrin korkeudessa. Vettä tulee vain sateesta, joten se on hyvin vähämineraalista ja puhtaudeltaan lähes tislatun veden luokkaa. Tutkijat arvioivat tulivuoren viimeisen purkauksen tapahtuneen 9 800–32 000 vuotta sitten, eikä tarkkaa ikää tiedetä. Järvi madaltuu jatkuvasti: vuonna 1867 sen syvyys oli 12 metriä, nykyään alle seitsemän.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-bigar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bigărin vesiputous (luonto · joki)
+Tietoruudun teksti: Bigărin vesiputous sijaitsee Caraș-Severinin läänissä Lounais-Romaniassa Aninan vuorilla, Cheile Nerei–Beușnițan kansallispuistossa. Sen ruokkijana on voimakas karstilähde, jonka vesi virtaa maanalaista reittiä saman nimisen luolan läpi. Noin 200 metrin päässä lähteestä kalkkipitoinen vesi putoaa kalliokynnykseltä Minișjokeen ja on kasvattanut travertiinista eli kalkkitufasta putouksen, jossa vesi leviää ohuiksi suihkuiksi. Putous on aivan 45. leveyspiirin tuntumassa, suunnilleen puolivälissä päiväntasaajaa ja pohjoisnapaa. Kesäkuussa 2021 osa putouksesta romahti, kun travertiinin ja sammalen paino oli kasvanut liian suureksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Maailman suurin vesiverho] Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.
+
+### 34.1
+KYSYMYS: Mitä travertiini on ja miten siitä voi kasvaa vesiputous?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bigărin vesiputous (luonto · joki)
+Tietoruudun teksti: Bigărin vesiputous sijaitsee Caraș-Severinin läänissä Lounais-Romaniassa Aninan vuorilla, Cheile Nerei–Beușnițan kansallispuistossa. Sen ruokkijana on voimakas karstilähde, jonka vesi virtaa maanalaista reittiä saman nimisen luolan läpi. Noin 200 metrin päässä lähteestä kalkkipitoinen vesi putoaa kalliokynnykseltä Minișjokeen ja on kasvattanut travertiinista eli kalkkitufasta putouksen, jossa vesi leviää ohuiksi suihkuiksi. Putous on aivan 45. leveyspiirin tuntumassa, suunnilleen puolivälissä päiväntasaajaa ja pohjoisnapaa. Kesäkuussa 2021 osa putouksesta romahti, kun travertiinin ja sammalen paino oli kasvanut liian suureksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Luonto: Puuvillalinna kasvaa vedestä] 190 eaa — Lounais-Turkissa maasta purkautuu lämmintä vettä, jossa on liuenneena kalkkia. Kun vesi valuu rinnettä alas ja jäähtyy, kalkki jää kiinni kiveen ja kovettuu travertiiniksi. Vuosituhansien aikana rinteeseen on kasvanut portaikko valkoisia altaita, joissa seisoo lämmintä sinertävää vettä. Turkiksi paikan nimi on Pamukkale, puuvillalinna. Rinteen päälle perustettiin noin vuonna 190 eaa. kaupunki Hierapolis, jonne tultiin kylpemään terveyden vuoksi. Nykyään altailla saa kävellä vain paljain jaloin, ettei valkoinen pinta likaannu.
+
+### 34.2
+KYSYMYS: Miksi osa Bigărin putouksesta romahti kesäkuussa 2021?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bigărin vesiputous (luonto · joki)
+Tietoruudun teksti: Bigărin vesiputous sijaitsee Caraș-Severinin läänissä Lounais-Romaniassa Aninan vuorilla, Cheile Nerei–Beușnițan kansallispuistossa. Sen ruokkijana on voimakas karstilähde, jonka vesi virtaa maanalaista reittiä saman nimisen luolan läpi. Noin 200 metrin päässä lähteestä kalkkipitoinen vesi putoaa kalliokynnykseltä Minișjokeen ja on kasvattanut travertiinista eli kalkkitufasta putouksen, jossa vesi leviää ohuiksi suihkuiksi. Putous on aivan 45. leveyspiirin tuntumassa, suunnilleen puolivälissä päiväntasaajaa ja pohjoisnapaa. Kesäkuussa 2021 osa putouksesta romahti, kun travertiinin ja sammalen paino oli kasvanut liian suureksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Maailman suurin vesiverho] Viktorian putoukset syöksyvät alas 108 metrin korkeudesta lähes 1 700 metriä leveänä rintamana, ja korkeuden ja leveyden tulona laskettuna niitä pidetään maailman suurimpana yhtenäisenä vesiverhona. Zambezi-joki virtaa tasaista ylänköä pitkin, kunnes se osuu äkisti kapeaan halkeamaan basalttikalliossa ja syöksyy suoraan kapeaan rotkoon. Runsasvetisenä aikana putouksesta nousevan sumun näkee ja jyminän kuulee kymmenien kilometrien päähän, minkä ansiosta seudun asukkaat tunsivat ihmeen kauan ennen kuin yksikään ulkomaalainen astui sen äärelle.
+- [Viktorian putoukset — kaupunkilehti / Sumun synnyttämä sademetsä: Sademetsä jota sade ei koskaan jätä] Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi "jylisevä savu". Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-biertan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biertan (historia)
+Tietoruudun teksti: Biertan on kylä Sibiun läänissä Transilvaniassa, ja sen linnoitettu kirkko on kuulunut Unescon maailmanperintökohteisiin vuodesta 1993. Kylän perustivat Transilvanian saksalaiset joskus vuosien 1224 ja 1283 välillä, ja siitä kasvoi nopeasti tärkeä kauppapaikka: vuonna 1510 asukkaita oli noin 5 000. Pieni kirkkolinnoitus rakennettiin ja laajennettiin vuodesta 1468 alkaen 1500-luvulle. Kirkko oli Transilvanian evankelis-luterilaisen piispan istuin vuosina 1572–1867. Nykyään Biertanissa asuu noin 1 600 ihmistä, ja se on yksi Transilvanian eniten vierailluista kylistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Medhane Alem] 1100–1200-luku Maailman Vapahtajan taloa pidetään maailman suurimpana monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka ympäriltä kallio on louhittu pois. Se rakennettiin Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus on tehty samasta kivestä kuin sen katto ja lattia. Täällä säilytetään Lalibelan ristiä, Etiopian arvokkaimpia uskonnollisia perintöesineitä. Kirkko on myös yksi niistä viidestä, joiden päälle pystytettiin 2008 Euroopan unionin rahoituksella suojakatokset. Ne oli tarkoitettu väliaikaisiksi siihen asti, kunnes pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä paikoillaan — ja niiden paino on nyt oma ongelman…
+- [Nuuk — kaupunkilehti / Nuuk: 1873: kaksi kylää, jotka eivät puhuneet toisilleen] Isoisän matkavuonna Godthåb oli Etelä-Grönlannin siirtomaan hallintopaikka; pohjoisella puoliskolla oli oma pääkaupunkinsa Godhavnissa aina vuoteen 1940, jolloin hallinto yhdistettiin tänne. Aivan vieressä oli toinen asutus. Herrnhutilaiset lähetyssaarnaajat olivat saaneet luvan 1733, ja käännynnäisiä kertyi niin paljon, että vuonna 1747 perustettiin Uusi Herrnhut ja rakennettiin lähetystalo — Grönlannin ensimmäinen varsinainen kirkko, sillä luterilainen lähetys tuli siihen asti toimeen päärakennuksen kappelilla. Kaksi lähetystä toimivat eri tavoin ja pysyivät erillisinä asutuksina, kunnes herrnhutilaiset lähtivät maasta 1900.
+
+### 35.1
+KYSYMYS: Keitä transilvanian saksalaiset olivat ja miten he päätyivät Transilvaniaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biertan (historia)
+Tietoruudun teksti: Biertan on kylä Sibiun läänissä Transilvaniassa, ja sen linnoitettu kirkko on kuulunut Unescon maailmanperintökohteisiin vuodesta 1993. Kylän perustivat Transilvanian saksalaiset joskus vuosien 1224 ja 1283 välillä, ja siitä kasvoi nopeasti tärkeä kauppapaikka: vuonna 1510 asukkaita oli noin 5 000. Pieni kirkkolinnoitus rakennettiin ja laajennettiin vuodesta 1468 alkaen 1500-luvulle. Kirkko oli Transilvanian evankelis-luterilaisen piispan istuin vuosina 1572–1867. Nykyään Biertanissa asuu noin 1 600 ihmistä, ja se on yksi Transilvanian eniten vierailluista kylistä.
+
+### 35.2
+KYSYMYS: Miksi kirkko rakennettiin linnoituksen tavoin muurien ja tornien suojaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biertan (historia)
+Tietoruudun teksti: Biertan on kylä Sibiun läänissä Transilvaniassa, ja sen linnoitettu kirkko on kuulunut Unescon maailmanperintökohteisiin vuodesta 1993. Kylän perustivat Transilvanian saksalaiset joskus vuosien 1224 ja 1283 välillä, ja siitä kasvoi nopeasti tärkeä kauppapaikka: vuonna 1510 asukkaita oli noin 5 000. Pieni kirkkolinnoitus rakennettiin ja laajennettiin vuodesta 1468 alkaen 1500-luvulle. Kirkko oli Transilvanian evankelis-luterilaisen piispan istuin vuosina 1572–1867. Nykyään Biertanissa asuu noin 1 600 ihmistä, ja se on yksi Transilvanian eniten vierailluista kylistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Medhane Alem] 1100–1200-luku Maailman Vapahtajan taloa pidetään maailman suurimpana monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka ympäriltä kallio on louhittu pois. Se rakennettiin Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus on tehty samasta kivestä kuin sen katto ja lattia. Täällä säilytetään Lalibelan ristiä, Etiopian arvokkaimpia uskonnollisia perintöesineitä. Kirkko on myös yksi niistä viidestä, joiden päälle pystytettiin 2008 Euroopan unionin rahoituksella suojakatokset. Ne oli tarkoitettu väliaikaisiksi siihen asti, kunnes pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä paikoillaan — ja niiden paino on nyt oma ongelman…
+- [Nuuk — kaupunkilehti / Nuuk: 1873: kaksi kylää, jotka eivät puhuneet toisilleen] Isoisän matkavuonna Godthåb oli Etelä-Grönlannin siirtomaan hallintopaikka; pohjoisella puoliskolla oli oma pääkaupunkinsa Godhavnissa aina vuoteen 1940, jolloin hallinto yhdistettiin tänne. Aivan vieressä oli toinen asutus. Herrnhutilaiset lähetyssaarnaajat olivat saaneet luvan 1733, ja käännynnäisiä kertyi niin paljon, että vuonna 1747 perustettiin Uusi Herrnhut ja rakennettiin lähetystalo — Grönlannin ensimmäinen varsinainen kirkko, sillä luterilainen lähetys tuli siihen asti toimeen päärakennuksen kappelilla. Kaksi lähetystä toimivat eri tavoin ja pysyivät erillisinä asutuksina, kunnes herrnhutilaiset lähtivät maasta 1900.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

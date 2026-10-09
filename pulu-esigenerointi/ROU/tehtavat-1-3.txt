@@ -1,0 +1,218 @@
+================ KOHTA 11 (kohde:turda) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+- [Košice — kaupunkilehti / Luonto: Kylpylälle kaivettiin kaivo, ja maasta purkautui geysiiri] 1870 — Herľanyn kylässä, noin 20 kilometriä Košicesta koilliseen, porattiin vuonna 1870 kaivoa kivennäisvedelle. Yli 400 metrin syvyydestä löytyi hiilihapon kyllästämä vesikerros, ja kaivosta alkoi purkautua kylmää vettä useiden metrien korkeuteen — ilman minkäänlaista maanalaista kuumuutta, toisin kuin tavallisissa geysiireissä. Purkaus toistuu edelleen säännöllisin väliajoin, ja se on yksi harvoista maailman poraamalla syntyneistä kylmistä geysiireistä. Isoisän matkan aikaan kaivo on vasta muutaman vuoden ikäinen uteliaisuuden aihe, ei vielä nykyisenlainen nähtävyys.
+
+### 11.1
+KYSYMYS: Kuinka syvällä maanalainen järvi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kivi joka on lähes kaksi miljardia vuotta vanha] Kanjonin pohjalla, siellä missä Coloradojoki on kaivautunut syvimmälle, paljastuu tummaa, juovikasta kiveä nimeltä Vishnu-liuske. Se syntyi noin 1 745 miljoonaa vuotta sitten valtavien paineiden ja kuumuuden muokatessa alkuperäistä laavaa ja sedimenttiä syvällä maankuoressa – kauan ennen monisoluista elämää. Kivilajin ja sitä 270 miljoonaa vuotta nuoremman reunakerroksen, Kaibab-kalkkikiven, väliin jää niin sanottu Suuri epäjatkuvuus: yli 500 miljoonan vuoden aukko kerrostumissa, sillä eroosio on kuluttanut välissä olleen kiviaineksen pois. Geologit kutsuvatkin kanjonia paikaksi, jossa voi kävellä läpi suuren osan maapallon historiaa.
+
+### 11.2
+KYSYMYS: Millaista kaivoksessa on käydä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turdan suolakaivos (tekniikka)
+Tietoruudun teksti: Turdan suolakaivos Durgău-Valea Sărată -alueella avattiin turisteille vasta vuonna 1992, ja siitä tuli nopeasti yksi Transilvanian oudoimmista käyntikohteista: vanhojen kaivoskuilujen pohjalla on maanalainen järvi, jolla soudetaan, ja valaistuja rakennelmia luolan katosta riippumassa. Vuonna 2017 kaivoksessa kävi noin 618 000 vierasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+- [Košice — kaupunkilehti / Luonto: Kylpylälle kaivettiin kaivo, ja maasta purkautui geysiiri] 1870 — Herľanyn kylässä, noin 20 kilometriä Košicesta koilliseen, porattiin vuonna 1870 kaivoa kivennäisvedelle. Yli 400 metrin syvyydestä löytyi hiilihapon kyllästämä vesikerros, ja kaivosta alkoi purkautua kylmää vettä useiden metrien korkeuteen — ilman minkäänlaista maanalaista kuumuutta, toisin kuin tavallisissa geysiireissä. Purkaus toistuu edelleen säännöllisin väliajoin, ja se on yksi harvoista maailman poraamalla syntyneistä kylmistä geysiireistä. Isoisän matkan aikaan kaivo on vasta muutaman vuoden ikäinen uteliaisuuden aihe, ei vielä nykyisenlainen nähtävyys.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:corvin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Wien — kohdekartta / Kohdekartta: Vuoristovesijohto] Isoisäsi käynnin aikaan kaupungissa kaivettiin jo toista ihmettä, joka valmistui vasta lokakuussa. Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen metriin: sitä korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat nykyään suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: urakoitsija Antonio Gabrielli tarjoutui itse, että hänen palkkiostaan vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100…
+
+### 12.1
+KYSYMYS: Mitkä ovat Romanian seitsemän ihmettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Vuoristovesijohto] Isoisäsi käynnin aikaan kaupungissa kaivettiin jo toista ihmettä, joka valmistui vasta lokakuussa. Wienin ensimmäinen vuoristovesijohto avattiin 24. lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen metriin: sitä korkeammalle vesi ei olisi noussut itsestään. Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne kaikki ovat nykyään suojeltuja. Rahoituksesta sovittiin poikkeuksellisesti: urakoitsija Antonio Gabrielli tarjoutui itse, että hänen palkkiostaan vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100…
+
+### 12.2
+KYSYMYS: Kuka linnan rakennutti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Corvinin linna (historia)
+Tietoruudun teksti: Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi "Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:voronet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Grand Café 1895 — miten seinä voi liikkua?] 28.12.1895 — Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja si…
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+
+### 13.1
+KYSYMYS: Miten seinämaalaukset ovat kestäneet ulkona?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Grand Café 1895 — miten seinä voi liikkua?] 28.12.1895 — Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja si…
+- [Pohjois-Makedonia — maalehti / Historia: Linnoitus maanjäristysten raunioilla] 6. vuosisata – — Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren maanjäristyksen vuonna 1963.
+
+### 13.2
+KYSYMYS: Mikä Bukovina on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Voronețin luostari (kulttuuri)
+Tietoruudun teksti: Voronețin luostari on keskiaikainen luostari Voronețin kylässä, joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, ja työhön meni kolme kuukautta ja kolme viikkoa.
+
+Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit keltaisia,…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:negoiu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+### 14.1
+KYSYMYS: Mikä Transfăgărășan on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+### 14.2
+KYSYMYS: Miksi Negoiuta sanotaan säänvaihtelun navaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Negoiu (luonto · vuori)
+Tietoruudun teksti: Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta kohtaa kutsutaan nimellä Kolme askelta kuolemasta.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:mustameri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Luonto: Meri-iguaanit — ainoat sukeltavat liskot] Meri-iguaani on maailman ainoa lisko, joka hakee ravintonsa merestä. Se ui litteän, sivuttain puristuneen häntänsä avulla ja raapii tylpällä kuonollaan levää vedenalaisilta kiviltä — lähes koko ruokavalio on punaista ja vihreää levää. Suurimmat urokset sukeltavat jopa 30 metrin syvyyteen ja pysyvät veden alla lähes tunnin, naaraat ja pienemmät yksilöt tyytyvät matalan veden paljastamiin levämattoihin. Ylimääräinen suola erittyy sieraimista pieninä aivastuksina, mikä jättää päälaelle valkoisen suolakuorrutuksen. Koko vaihtelee saarittain: Genovesan pienet yksilöt ovat reilut 19 senttiä, Santa Cruzin ja Fernandinan iguaanit lähes kaksinkertaisia.
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+
+### 15.1
+KYSYMYS: Miksi Mustanmeren syvyys on hapeton?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+### 15.2
+KYSYMYS: Mistä meri sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Luonto: Meri-iguaanit — ainoat sukeltavat liskot] Meri-iguaani on maailman ainoa lisko, joka hakee ravintonsa merestä. Se ui litteän, sivuttain puristuneen häntänsä avulla ja raapii tylpällä kuonollaan levää vedenalaisilta kiviltä — lähes koko ruokavalio on punaista ja vihreää levää. Suurimmat urokset sukeltavat jopa 30 metrin syvyyteen ja pysyvät veden alla lähes tunnin, naaraat ja pienemmät yksilöt tyytyvät matalan veden paljastamiin levämattoihin. Ylimääräinen suola erittyy sieraimista pieninä aivastuksina, mikä jättää päälaelle valkoisen suolakuorrutuksen. Koko vaihtelee saarittain: Genovesan pienet yksilöt ovat reilut 19 senttiä, Santa Cruzin ja Fernandinan iguaanit lähes kaksinkertaisia.
+- [Odessa — kaupunkilehti / Odessa: Lahti, joka on suolaisempi kuin meri] Kahdeksan kilometrin päässä keskustasta pohjoiseen on vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja noin 1300-luvulla hiekka kasautui sen ja meren väliin kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 ja 269 promillen välillä. Näin suolaisessa vedessä elää bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy punertavaksi. Kylpylä perustettiin rannalle jo 1834.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

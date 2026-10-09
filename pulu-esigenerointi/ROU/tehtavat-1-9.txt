@@ -1,0 +1,194 @@
+================ KOHTA 41 (kohde:hahmotelma-neamt) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neamțin linnoitus (historia)
+Tietoruudun teksti: Neamțin linnoitus on keskiaikainen linna Koillis-Romaniassa lähellä Târgu Neamțin kaupunkia. Se rakennettiin Moldovan ruhtinaskunnassa ruhtinas Pietari II:n aikana 1300-luvulla ja sitä laajennettiin 1400-luvulla. Linnoitus kuului Tapani Suuren puolustusjärjestelmään yhdessä Suceavan ja muiden linnojen kanssa. Tapani korotti muureja ja katkaisi vuoren harjanteen linnasta puolustusojalla, jonka yli kulki nostettava silta. Vanha oletus saksalaisritarien 1200-luvun linnasta on kumottu, sillä kaivauksissa ei löytynyt merkkejä linnoituksesta ennen Pietari II:n aikaa. Linnoitus kesti vuonna 1476 sulttaani Mehmed Valloittajan piirityksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+
+### 41.1
+KYSYMYS: Miksi linnoituksen nimi Neamț liitetään saksalaisiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neamțin linnoitus (historia)
+Tietoruudun teksti: Neamțin linnoitus on keskiaikainen linna Koillis-Romaniassa lähellä Târgu Neamțin kaupunkia. Se rakennettiin Moldovan ruhtinaskunnassa ruhtinas Pietari II:n aikana 1300-luvulla ja sitä laajennettiin 1400-luvulla. Linnoitus kuului Tapani Suuren puolustusjärjestelmään yhdessä Suceavan ja muiden linnojen kanssa. Tapani korotti muureja ja katkaisi vuoren harjanteen linnasta puolustusojalla, jonka yli kulki nostettava silta. Vanha oletus saksalaisritarien 1200-luvun linnasta on kumottu, sillä kaivauksissa ei löytynyt merkkejä linnoituksesta ennen Pietari II:n aikaa. Linnoitus kesti vuonna 1476 sulttaani Mehmed Valloittajan piirityksen.
+
+### 41.2
+KYSYMYS: Miten Tapani Suuri vahvisti linnoitusta piirityksiä vastaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neamțin linnoitus (historia)
+Tietoruudun teksti: Neamțin linnoitus on keskiaikainen linna Koillis-Romaniassa lähellä Târgu Neamțin kaupunkia. Se rakennettiin Moldovan ruhtinaskunnassa ruhtinas Pietari II:n aikana 1300-luvulla ja sitä laajennettiin 1400-luvulla. Linnoitus kuului Tapani Suuren puolustusjärjestelmään yhdessä Suceavan ja muiden linnojen kanssa. Tapani korotti muureja ja katkaisi vuoren harjanteen linnasta puolustusojalla, jonka yli kulki nostettava silta. Vanha oletus saksalaisritarien 1200-luvun linnasta on kumottu, sillä kaivauksissa ei löytynyt merkkejä linnoituksesta ennen Pietari II:n aikaa. Linnoitus kesti vuonna 1476 sulttaani Mehmed Valloittajan piirityksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-suceava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suceavan linnoitus (historia)
+Tietoruudun teksti: Suceavan istuinlinnoitus (Cetatea de Scaun) on keskiaikainen linna kaupungin itälaidalla. Sen rakennutti Moldovan ruhtinas Petru Mușat 1300-luvun lopulla osana linnoitusjärjestelmää, jota alettiin rakentaa ottomaanien uhkaa vastaan. Aleksanteri I ja Tapani Suuri laajensivat sitä: sisempi suorakaiteen muotoinen linnake on Mușatin ajalta, ja Tapani lisäsi sen ympärille pyöreän ulkolinnan sekä suuren puolustusojan. Linna kesti sulttaani Mehmed II:n hyökkäyksen vuonna 1476. Suceava oli Moldovan pääkaupunki vuosina 1388–1565, ja linna toimi ruhtinaan asuinpaikkana. Kun pääkaupunki siirrettiin Iașiin, linna rappeutui, ja vuonna 1675 se tuhottiin. Laaja jälleenrakennus käynnistyi 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+
+### 42.1
+KYSYMYS: Miksi Moldovan ruhtinaat rakensivat linnoituksia 1300-luvun lopulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suceavan linnoitus (historia)
+Tietoruudun teksti: Suceavan istuinlinnoitus (Cetatea de Scaun) on keskiaikainen linna kaupungin itälaidalla. Sen rakennutti Moldovan ruhtinas Petru Mușat 1300-luvun lopulla osana linnoitusjärjestelmää, jota alettiin rakentaa ottomaanien uhkaa vastaan. Aleksanteri I ja Tapani Suuri laajensivat sitä: sisempi suorakaiteen muotoinen linnake on Mușatin ajalta, ja Tapani lisäsi sen ympärille pyöreän ulkolinnan sekä suuren puolustusojan. Linna kesti sulttaani Mehmed II:n hyökkäyksen vuonna 1476. Suceava oli Moldovan pääkaupunki vuosina 1388–1565, ja linna toimi ruhtinaan asuinpaikkana. Kun pääkaupunki siirrettiin Iașiin, linna rappeutui, ja vuonna 1675 se tuhottiin. Laaja jälleenrakennus käynnistyi 2013.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Yksi mies, kaksi valtaistuinta] 1859 — Tammikuussa 1859 Moldova ja Valakia olivat yhä erillisiä ruhtinaskuntia, joilla Pariisin rauhansopimuksen mukaan piti olla omat hallitsijansa. Unionistit keksivät kiertotien: molemmat maat valitsisivat saman miehen ruhtinaakseen. Moldovan edustajat valitsivat eversti Alexandru Ioan Cuzan 5. tammikuuta, ja Valakian edustajat seurasivat perässä 24. tammikuuta. Osmanien hovi vastusti aluksi kaksoisvaalia, mutta hyväksyi lopulta tosiasian. Cuza yhdisti maiden hallinnon, rahan ja armeijan vuoteen 1862 mennessä, jolloin syntyi Romanian ruhtinaskunta.
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+
+### 42.2
+KYSYMYS: Miksi Suceavan linnoituksessa on kaksi sisäkkäistä linnaketta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suceavan linnoitus (historia)
+Tietoruudun teksti: Suceavan istuinlinnoitus (Cetatea de Scaun) on keskiaikainen linna kaupungin itälaidalla. Sen rakennutti Moldovan ruhtinas Petru Mușat 1300-luvun lopulla osana linnoitusjärjestelmää, jota alettiin rakentaa ottomaanien uhkaa vastaan. Aleksanteri I ja Tapani Suuri laajensivat sitä: sisempi suorakaiteen muotoinen linnake on Mușatin ajalta, ja Tapani lisäsi sen ympärille pyöreän ulkolinnan sekä suuren puolustusojan. Linna kesti sulttaani Mehmed II:n hyökkäyksen vuonna 1476. Suceava oli Moldovan pääkaupunki vuosina 1388–1565, ja linna toimi ruhtinaan asuinpaikkana. Kun pääkaupunki siirrettiin Iașiin, linna rappeutui, ja vuonna 1675 se tuhottiin. Laaja jälleenrakennus käynnistyi 2013.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-sibiu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sibiu (kulttuuri)
+Tietoruudun teksti: Sibiu (saksaksi Hermannstadt, unkariksi Nagyszeben) on kaupunki Transilvaniassa Romanian keskiosassa Cibin-joen varrella. Sen perustivat saksalaiset uudisasukkaat, jotka Unkarin kuningas Géza II toi alueelle 1100-luvun puolivälissä. Keskiajalla Hermannstadt oli transilvaniansaksalaisten tärkein kulttuuri- ja hallintokeskus ja tärkein niistä seitsemästä kaupungista, joista Transilvanian saksankielinen nimi Siebenbürgen tulee. Kaupunkia kutsutaan lempinimellä "kaupunki, jolla on silmät", koska monien vanhojen talojen kattoikkunat näyttävät silmiltä. Brukenthalin kansallismuseo toimii kaupungissa, ja sen Brukenthalin palatsissa on taidegalleria ja vanha kirjasto. Sibiu oli Euroopan kulttuuripääkaupunki vuonna 2007.
+
+### 43.1
+KYSYMYS: Miksi Sibiulla on kolme nimeä: Sibiu, Hermannstadt ja Nagyszeben?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sibiu (kulttuuri)
+Tietoruudun teksti: Sibiu (saksaksi Hermannstadt, unkariksi Nagyszeben) on kaupunki Transilvaniassa Romanian keskiosassa Cibin-joen varrella. Sen perustivat saksalaiset uudisasukkaat, jotka Unkarin kuningas Géza II toi alueelle 1100-luvun puolivälissä. Keskiajalla Hermannstadt oli transilvaniansaksalaisten tärkein kulttuuri- ja hallintokeskus ja tärkein niistä seitsemästä kaupungista, joista Transilvanian saksankielinen nimi Siebenbürgen tulee. Kaupunkia kutsutaan lempinimellä "kaupunki, jolla on silmät", koska monien vanhojen talojen kattoikkunat näyttävät silmiltä. Brukenthalin kansallismuseo toimii kaupungissa, ja sen Brukenthalin palatsissa on taidegalleria ja vanha kirjasto. Sibiu oli Euroopan kulttuuripääkaupunki vuonna 2007.
+
+### 43.2
+KYSYMYS: Keitä transilvaniansaksalaiset olivat ja miten he päätyivät Transilvaniaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sibiu (kulttuuri)
+Tietoruudun teksti: Sibiu (saksaksi Hermannstadt, unkariksi Nagyszeben) on kaupunki Transilvaniassa Romanian keskiosassa Cibin-joen varrella. Sen perustivat saksalaiset uudisasukkaat, jotka Unkarin kuningas Géza II toi alueelle 1100-luvun puolivälissä. Keskiajalla Hermannstadt oli transilvaniansaksalaisten tärkein kulttuuri- ja hallintokeskus ja tärkein niistä seitsemästä kaupungista, joista Transilvanian saksankielinen nimi Siebenbürgen tulee. Kaupunkia kutsutaan lempinimellä "kaupunki, jolla on silmät", koska monien vanhojen talojen kattoikkunat näyttävät silmiltä. Brukenthalin kansallismuseo toimii kaupungissa, ja sen Brukenthalin palatsissa on taidegalleria ja vanha kirjasto. Sibiu oli Euroopan kulttuuripääkaupunki vuonna 2007.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-brasov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brașov (kulttuuri)
+Tietoruudun teksti: Brașov on Transilvanian kaupunki Etelä-Karpaattien ympäröimänä, noin 166 kilometrin päässä Bukarestista pohjoiseen. Saksalaisnimeltään Kronstadt tunnettu kaupunki oli Burzenlandin keskus, jossa transilvaniansaksalaiset kauppiaat vaurastuivat, sillä se sijaitsi Itävallan ja Osmanien valtakunnan välisten kauppareittien risteyksessä. Vanhaa kaupunkia suojasivat linnoitusmuurit ja tornit, joista eri käsityöläisten killat pitivät huolta, ja keskustassa on entisen kaupungintalon, Casa Sfatuluin, ympäröimä tori. Goottilainen Mustakirkko on vuodelta 1477, ja se sai nimensä vuoden 1689 suuren tulipalon noesta. Saksalaisten lisäksi kaupungissa asui romanialaisia Șchein kaupunginosassa sekä unkarilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Spasskin luostari] arkkimandriitta Feofan 1714–1719 Kurašovin kadun luostari on Jakutskin vanhin kirkollinen laitos, ja sen varhaisin nimeltä tunnettu johtaja on arkkimandriitta Feofan, joka oli luostarin esimiehenä vuosina 1714–1719. Kaupungin venäläinen kirkollinen elämä on siis lähes yhtä vanhaa kuin linnoitus itse: hirsivarustus pystytettiin 1632, ja sata vuotta myöhemmin paikalla oli jo luostari arkkimandriittoineen. Luostarin rakennukset ovat puuta, ja se on Jakutskissa sääntö eikä poikkeus. Ikiroudan päällä hirsi on käyttökelpoinen materiaali: se on kevyt, joustaa maan liikkeiden mukana ja on korjattavissa hirsi kerrallaan. Kaupungin vanhin säilynyt rakennuskanta on juuri hirsitaloja, ja niiden joukoss…
+
+### 44.1
+KYSYMYS: Miksi Mustakirkko on saanut niin synkän nimen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brașov (kulttuuri)
+Tietoruudun teksti: Brașov on Transilvanian kaupunki Etelä-Karpaattien ympäröimänä, noin 166 kilometrin päässä Bukarestista pohjoiseen. Saksalaisnimeltään Kronstadt tunnettu kaupunki oli Burzenlandin keskus, jossa transilvaniansaksalaiset kauppiaat vaurastuivat, sillä se sijaitsi Itävallan ja Osmanien valtakunnan välisten kauppareittien risteyksessä. Vanhaa kaupunkia suojasivat linnoitusmuurit ja tornit, joista eri käsityöläisten killat pitivät huolta, ja keskustassa on entisen kaupungintalon, Casa Sfatuluin, ympäröimä tori. Goottilainen Mustakirkko on vuodelta 1477, ja se sai nimensä vuoden 1689 suuren tulipalon noesta. Saksalaisten lisäksi kaupungissa asui romanialaisia Șchein kaupunginosassa sekä unkarilaisia.
+
+### 44.2
+KYSYMYS: Miksi juuri Brașovin kauppiaat vaurastuivat niin hyvin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Brașov (kulttuuri)
+Tietoruudun teksti: Brașov on Transilvanian kaupunki Etelä-Karpaattien ympäröimänä, noin 166 kilometrin päässä Bukarestista pohjoiseen. Saksalaisnimeltään Kronstadt tunnettu kaupunki oli Burzenlandin keskus, jossa transilvaniansaksalaiset kauppiaat vaurastuivat, sillä se sijaitsi Itävallan ja Osmanien valtakunnan välisten kauppareittien risteyksessä. Vanhaa kaupunkia suojasivat linnoitusmuurit ja tornit, joista eri käsityöläisten killat pitivät huolta, ja keskustassa on entisen kaupungintalon, Casa Sfatuluin, ympäröimä tori. Goottilainen Mustakirkko on vuodelta 1477, ja se sai nimensä vuoden 1689 suuren tulipalon noesta. Saksalaisten lisäksi kaupungissa asui romanialaisia Șchein kaupunginosassa sekä unkarilaisia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Spasskin luostari] arkkimandriitta Feofan 1714–1719 Kurašovin kadun luostari on Jakutskin vanhin kirkollinen laitos, ja sen varhaisin nimeltä tunnettu johtaja on arkkimandriitta Feofan, joka oli luostarin esimiehenä vuosina 1714–1719. Kaupungin venäläinen kirkollinen elämä on siis lähes yhtä vanhaa kuin linnoitus itse: hirsivarustus pystytettiin 1632, ja sata vuotta myöhemmin paikalla oli jo luostari arkkimandriittoineen. Luostarin rakennukset ovat puuta, ja se on Jakutskissa sääntö eikä poikkeus. Ikiroudan päällä hirsi on käyttökelpoinen materiaali: se on kevyt, joustaa maan liikkeiden mukana ja on korjattavissa hirsi kerrallaan. Kaupungin vanhin säilynyt rakennuskanta on juuri hirsitaloja, ja niiden joukoss…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-ieud) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ieud (kulttuuri)
+Tietoruudun teksti: Ieud on kylä Pohjois-Transilvanian Maramureșissa, Iza-joen sivujoen varrella. Kylä mainitaan jo keskiajan asiakirjoissa, ja sen kirkoissa säilyi Ieudin koodeksi, käsikirjoituskokoelma, jossa on 1600-luvun alkupuolella kirjoitettuja romaniankielisiä tekstejä. Jumalansynnyttäjän syntymälle omistettu rinteen puukirkko rakennettiin vuosina 1610–1621, ja se on vanhin kahdeksasta Maramureșin puukirkosta, jotka UNESCO merkitsi maailmanperintökohteiksi vuonna 1999. Korkeat hirsikirkot kapeine kellotorneineen syntyivät osin siksi, että katoliset Itävalta-Unkarin (Habsburgien) viranomaiset kielsivät ortodoksisten kivikirkkojen rakentamisen. Kylässä on toinenkin puukirkko, laakson kirkko, joka on 1710-luvulta.
+
+### 45.1
+KYSYMYS: Miksi Maramureșissa rakennettiin ortodoksikirkkoja puusta eikä kivestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ieud (kulttuuri)
+Tietoruudun teksti: Ieud on kylä Pohjois-Transilvanian Maramureșissa, Iza-joen sivujoen varrella. Kylä mainitaan jo keskiajan asiakirjoissa, ja sen kirkoissa säilyi Ieudin koodeksi, käsikirjoituskokoelma, jossa on 1600-luvun alkupuolella kirjoitettuja romaniankielisiä tekstejä. Jumalansynnyttäjän syntymälle omistettu rinteen puukirkko rakennettiin vuosina 1610–1621, ja se on vanhin kahdeksasta Maramureșin puukirkosta, jotka UNESCO merkitsi maailmanperintökohteiksi vuonna 1999. Korkeat hirsikirkot kapeine kellotorneineen syntyivät osin siksi, että katoliset Itävalta-Unkarin (Habsburgien) viranomaiset kielsivät ortodoksisten kivikirkkojen rakentamisen. Kylässä on toinenkin puukirkko, laakson kirkko, joka on 1710-luvulta.
+
+### 45.2
+KYSYMYS: Mitä Ieudin koodeksi on ja miksi se on tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ieud (kulttuuri)
+Tietoruudun teksti: Ieud on kylä Pohjois-Transilvanian Maramureșissa, Iza-joen sivujoen varrella. Kylä mainitaan jo keskiajan asiakirjoissa, ja sen kirkoissa säilyi Ieudin koodeksi, käsikirjoituskokoelma, jossa on 1600-luvun alkupuolella kirjoitettuja romaniankielisiä tekstejä. Jumalansynnyttäjän syntymälle omistettu rinteen puukirkko rakennettiin vuosina 1610–1621, ja se on vanhin kahdeksasta Maramureșin puukirkosta, jotka UNESCO merkitsi maailmanperintökohteiksi vuonna 1999. Korkeat hirsikirkot kapeine kellotorneineen syntyivät osin siksi, että katoliset Itävalta-Unkarin (Habsburgien) viranomaiset kielsivät ortodoksisten kivikirkkojen rakentamisen. Kylässä on toinenkin puukirkko, laakson kirkko, joka on 1710-luvulta.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

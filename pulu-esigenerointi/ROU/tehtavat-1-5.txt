@@ -1,0 +1,220 @@
+================ KOHTA 21 (kohde:timisoaran-vanhakaupunki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Timișoaran vanhakaupunki ja Piața Victoriei (kulttuuri)
+Tietoruudun teksti: Timișoara on Romanian viidenneksi väkirikkain kaupunki, ja vuoden 2021 väestönlaskennassa siellä oli 250 849 asukasta. Kaupunki kuuluu Euroopan ensimmäisiä kaupunkeja, joissa oli sähköinen katuvalaistus (1884). Sen keskustassa Piața Victoriei -aukion päässä kohoaa ortodoksinen metropoliittakatedraali, ja aukio tunnettiin aiemmin kuningas Ferdinandin bulevardina. Joulukuussa 1989 Timișoarassa alkoivat joukkomielenosoitukset, jotka johtivat Romanian vallankumoukseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+- [Pariisi — kohdekartta / Kohdekartta: Place des Vosges] 1612 Place des Vosges on Pariisin vanhin aukio. Se rakennettiin kuningas Henrik IV:n määräyksestä hovielämän julkiseksi keskukseksi, mutta valmistui vasta kuninkaan kuoleman jälkeen — vihkiäisiä vietettiin 1612 Ludvig XIII:n ja Anna Itävaltalaisen häiden yhteydessä, eikä kuningaspari koskaan asunut siellä. Aukiota ympäröi 36 kolmikerroksista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja aumakatto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia. Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin Vosgesin departementin mukaan. Aukion laidalla asui kuusitoista v…
+
+### 21.1
+KYSYMYS: Minä vuonna Timișoarassa otettiin käyttöön sähköinen katuvalaistus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Timișoaran vanhakaupunki ja Piața Victoriei (kulttuuri)
+Tietoruudun teksti: Timișoara on Romanian viidenneksi väkirikkain kaupunki, ja vuoden 2021 väestönlaskennassa siellä oli 250 849 asukasta. Kaupunki kuuluu Euroopan ensimmäisiä kaupunkeja, joissa oli sähköinen katuvalaistus (1884). Sen keskustassa Piața Victoriei -aukion päässä kohoaa ortodoksinen metropoliittakatedraali, ja aukio tunnettiin aiemmin kuningas Ferdinandin bulevardina. Joulukuussa 1989 Timișoarassa alkoivat joukkomielenosoitukset, jotka johtivat Romanian vallankumoukseen.
+
+### 21.2
+KYSYMYS: Mikä rakennus kohoaa Piața Victoriei -aukion päässä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Timișoaran vanhakaupunki ja Piața Victoriei (kulttuuri)
+Tietoruudun teksti: Timișoara on Romanian viidenneksi väkirikkain kaupunki, ja vuoden 2021 väestönlaskennassa siellä oli 250 849 asukasta. Kaupunki kuuluu Euroopan ensimmäisiä kaupunkeja, joissa oli sähköinen katuvalaistus (1884). Sen keskustassa Piața Victoriei -aukion päässä kohoaa ortodoksinen metropoliittakatedraali, ja aukio tunnettiin aiemmin kuningas Ferdinandin bulevardina. Joulukuussa 1989 Timișoarassa alkoivat joukkomielenosoitukset, jotka johtivat Romanian vallankumoukseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+- [Pariisi — kohdekartta / Kohdekartta: Place des Vosges] 1612 Place des Vosges on Pariisin vanhin aukio. Se rakennettiin kuningas Henrik IV:n määräyksestä hovielämän julkiseksi keskukseksi, mutta valmistui vasta kuninkaan kuoleman jälkeen — vihkiäisiä vietettiin 1612 Ludvig XIII:n ja Anna Itävaltalaisen häiden yhteydessä, eikä kuningaspari koskaan asunut siellä. Aukiota ympäröi 36 kolmikerroksista taloa, yhdeksän joka sivulla, ja kaikilla on samanlainen punatiilinen julkisivu ja aumakatto. Korkeampina erottuvat kuninkaan ja kuningattaren paviljongit etelä- ja pohjoislaidalla. 1600-luvulla aukiolla järjestettiin turnajaisia. Nimi oli Place Royale vuoteen 1800, jolloin se vaihdettiin Vosgesin departementin mukaan. Aukion laidalla asui kuusitoista v…
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:porolissum) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porolissum (historia)
+Tietoruudun teksti: Porolissum on Rooman Dacian pohjoisrajalla sijainnut linnoitus- ja kaupunkialue Sălajin läänissä, noin kahdeksan kilometrin päässä Zalăusta. Trajanus perusti paikan vuonna 106 toisen Dacian sodan aikana, ja Hadrianus teki siitä vuonna 124 Dacia Porolissensis -provinssin pääkaupungin. Alue toimi myös tulliasemana kauppareitillä Tonavalta barbaarien maille. Pomet-kukkulan leiri oli 226 × 294 metrin kokoinen, ja amfiteatteriin mahtui 5000–5500 katsojaa; se rakennettiin ensin puusta ja uusittiin kivestä vuonna 157. Raunioalue on osin rekonstruoitu, ja kaivauksia on tehty vuodesta 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+
+### 22.1
+KYSYMYS: Kuka perusti Porolissumin ja milloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porolissum (historia)
+Tietoruudun teksti: Porolissum on Rooman Dacian pohjoisrajalla sijainnut linnoitus- ja kaupunkialue Sălajin läänissä, noin kahdeksan kilometrin päässä Zalăusta. Trajanus perusti paikan vuonna 106 toisen Dacian sodan aikana, ja Hadrianus teki siitä vuonna 124 Dacia Porolissensis -provinssin pääkaupungin. Alue toimi myös tulliasemana kauppareitillä Tonavalta barbaarien maille. Pomet-kukkulan leiri oli 226 × 294 metrin kokoinen, ja amfiteatteriin mahtui 5000–5500 katsojaa; se rakennettiin ensin puusta ja uusittiin kivestä vuonna 157. Raunioalue on osin rekonstruoitu, ja kaivauksia on tehty vuodesta 2009.
+
+### 22.2
+KYSYMYS: Kuinka monta katsojaa amfiteatteriin mahtui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Porolissum (historia)
+Tietoruudun teksti: Porolissum on Rooman Dacian pohjoisrajalla sijainnut linnoitus- ja kaupunkialue Sălajin läänissä, noin kahdeksan kilometrin päässä Zalăusta. Trajanus perusti paikan vuonna 106 toisen Dacian sodan aikana, ja Hadrianus teki siitä vuonna 124 Dacia Porolissensis -provinssin pääkaupungin. Alue toimi myös tulliasemana kauppareitillä Tonavalta barbaarien maille. Pomet-kukkulan leiri oli 226 × 294 metrin kokoinen, ja amfiteatteriin mahtui 5000–5500 katsojaa; se rakennettiin ensin puusta ja uusittiin kivestä vuonna 157. Raunioalue on osin rekonstruoitu, ja kaivauksia on tehty vuodesta 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Colosseum] 72–80 Keisari Vespasianus aloitti jättimäisen areenan rakentamisen vuonna 72, ja hänen poikansa Titus vihki sen käyttöön kahdeksan vuotta myöhemmin, vuonna 80. Avajaisia juhlittiin peräti 100 päivän ajan erilaisin näytöksin. Rakennuksen oikea nimi oli Flavolaisten amfiteatteri — lempinimi 'Colosseum' tulee sen vierestä kohonneesta jättiläismäisestä Colossus-patsaasta, ei areenasta itsestään. Katsomoon mahtui kerralla 50 000–80 000 katsojaa, enemmän kuin moneen nykyaikaiseen jalkapallostadioniin. Areenalla nähtiin gladiaattoritaisteluita ja villieläinten metsästyksiä — sinne tuotiin leijonia, norsuja ja jopa sarvikuonoja kaukaa Afrikasta. Areena voitiin jopa täyttää vedellä ja lavastaa siell…
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:carein-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carein Károlyin linna (historia)
+Tietoruudun teksti: Károlyin linna sijaitsee Careissa Satu Maren piirikunnassa. László Károlyi Lancz aloitti paikalla linnoituksen rakentamisen vuonna 1482, ja nykyisen ilmeensä rakennus sai vuosina 1893–1896 saksilaisen arkkitehti Arthur Meinigin suunnitelmien mukaan uusgoottilaisena, vallihaudan ympäröimänä seitsemän tornin ritarilinnana. Linnaa ympäröi 12 hehtaarin arboretum, jonka vanhin puu on vuonna 1810 istutettu plataani. Nykyään rakennuksessa toimivat kaupunginmuseo, näyttelysali, kirjasto ja kulttuurikeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Porto Alegre — kohdekartta / Kohdekartta: Nosso Senhor dos Passosin kappeli] 1819–1825 Santa Casa de Misericórdia, kaupungin vanha laupeudensairaala, perustettiin 1803, mutta oma kirkko sen sisälle syntyi hitaasti. Veljeskunnan päätöskirjan ensimmäinen merkintä 24. tammikuuta 1814 kertoo Senhor dos Passos -pyhäinkuvasta ja tarpeesta saada sairaalaan kappeli, jossa säilytettäisiin ehtoollista sairaita varten. Lupa tuli saman vuoden heinäkuussa kapteenikunnan kuvernööriltä Diogo de Souzalta, mutta työ ei silti alkanut: uusi anomus tehtiin 1818, ja vasta 1819 rakennettiin. Vuonna 1825 vihittiin runko ja alttari ja pyhäinkuva siirrettiin paikalleen seurakuntakirkosta. Ensimmäinen kappeli purettiin 1858 uuden tieltä. Vuosina 1866–1868 mestari João do Couto e Silva teki u…
+
+### 23.1
+KYSYMYS: Kuka suunnitteli linnan nykyisen uusgoottilaisen ilmeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carein Károlyin linna (historia)
+Tietoruudun teksti: Károlyin linna sijaitsee Careissa Satu Maren piirikunnassa. László Károlyi Lancz aloitti paikalla linnoituksen rakentamisen vuonna 1482, ja nykyisen ilmeensä rakennus sai vuosina 1893–1896 saksilaisen arkkitehti Arthur Meinigin suunnitelmien mukaan uusgoottilaisena, vallihaudan ympäröimänä seitsemän tornin ritarilinnana. Linnaa ympäröi 12 hehtaarin arboretum, jonka vanhin puu on vuonna 1810 istutettu plataani. Nykyään rakennuksessa toimivat kaupunginmuseo, näyttelysali, kirjasto ja kulttuurikeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kohdekartta / Kohdekartta: Nosso Senhor dos Passosin kappeli] 1819–1825 Santa Casa de Misericórdia, kaupungin vanha laupeudensairaala, perustettiin 1803, mutta oma kirkko sen sisälle syntyi hitaasti. Veljeskunnan päätöskirjan ensimmäinen merkintä 24. tammikuuta 1814 kertoo Senhor dos Passos -pyhäinkuvasta ja tarpeesta saada sairaalaan kappeli, jossa säilytettäisiin ehtoollista sairaita varten. Lupa tuli saman vuoden heinäkuussa kapteenikunnan kuvernööriltä Diogo de Souzalta, mutta työ ei silti alkanut: uusi anomus tehtiin 1818, ja vasta 1819 rakennettiin. Vuonna 1825 vihittiin runko ja alttari ja pyhäinkuva siirrettiin paikalleen seurakuntakirkosta. Ensimmäinen kappeli purettiin 1858 uuden tieltä. Vuosina 1866–1868 mestari João do Couto e Silva teki u…
+- [Santa Fe — kohdekartta / Kohdekartta: Loreton kappeli] 1878 Loreton sisaret tilasivat kappelin tyttökoulunsa Loretto Academyn viereen 1873. Arkkipiispa Lamy oli tuonut kaupunkiin ranskalaisarkkitehdit Antoine Moulyn ja tämän pojan Projectuksen katedraalityötä varten ja ehdotti, että sisaret voisivat käyttää heitä sivutyönä. Projectus suunnitteli uusgoottilaisen kappelin Pariisin Sainte-Chapellen mukaan, ja lasimaalaukset tuotiin Ranskasta Santa Fe Trailia pitkin. Rakentaminen kesti viisi vuotta, ja kappeli vihittiin 1878. Kuuluisa on portaikko. Se kiertää kuoriparvelle noin kuuden metrin korkeuteen kaksi täyttä kierrosta ilman keskipylvästä tai tolppaa, ja se on koottu puusta ja puutapeista — ei liimaa, ei nauloja. Sisempi jalas on seitsemästä …
+
+### 23.2
+KYSYMYS: Mitä linnassa on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carein Károlyin linna (historia)
+Tietoruudun teksti: Károlyin linna sijaitsee Careissa Satu Maren piirikunnassa. László Károlyi Lancz aloitti paikalla linnoituksen rakentamisen vuonna 1482, ja nykyisen ilmeensä rakennus sai vuosina 1893–1896 saksilaisen arkkitehti Arthur Meinigin suunnitelmien mukaan uusgoottilaisena, vallihaudan ympäröimänä seitsemän tornin ritarilinnana. Linnaa ympäröi 12 hehtaarin arboretum, jonka vanhin puu on vuonna 1810 istutettu plataani. Nykyään rakennuksessa toimivat kaupunginmuseo, näyttelysali, kirjasto ja kulttuurikeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:aradin-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aradin linnoitus (historia)
+Tietoruudun teksti: Aradin linnoitus on Mureș-joen vasemmalla rannalla sijaitseva Vauban-tyylinen bastionilinnoitus. Se rakennettiin vuosina 1763–1783, ja sen suunnitteli sotilasarkkitehti Ferdinand Philipp von Harsch. Kuusikärkisen tähden muotoisessa linnoituksessa on kuusi bastionia ja 296 tykkiaukkoa, ja sen muurien ympärysmitta on 3180 metriä. Kasarmeihin mahtui tavallisesti 2940 sotilasta, enimmillään 4030. Linnoituksessa teloitettiin 6. lokakuuta 1849 kolmetoista unkarilaista kenraalia. Nykyään alue on Romanian maavoimien käytössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Damaskoksen linnoitus] Keskiaikainen linna rakennettiin yleensä kukkulalle. Damaskoksen linnoitus seisoo tasamaalla, samassa tasossa kuin muu kaupunki. Se on vanhankaupungin luoteiskulmassa, ja kaupunginmuuri liittyy siihen kiinni lounais- ja koillisnurkasta. Muoto on epätasainen suorakaide, 230 × 150 metriä, ja portteja on kolme: pohjoisessa, idässä ja lännessä. Nykyinen rakennus on ajjubidien työtä. Saladinin veli al-Adil purki vanhemman linnoituksen ja rakensi tilalle suuremman vuosina 1203–1216. Syy oli uusi ase: vastapainoheittokone mursi paksunkin kivimuurin. Tornit tehtiin pyöreiden sijaan neliömäisiksi, ja niiden päälle tuli tasanteet omille heittokoneille, jotka korkealta kantoivat piirittäjän koneita ka…
+- [Dubai — kohdekartta / Kohdekartta: Al Fahidin linnoitus] 1787 Linnoituksen vanhin torni rakennettiin noin vuonna 1787, ja se on Dubain vanhin yhä pystyssä oleva rakennus. Linnoitus on neliön muotoinen, ja kolmessa sen kulmassa on torni. Muurit ovat korallikiveä ja laastia, ja ne nousivat useassa vaiheessa. Linnoitus vartioi kaupunkiin johtavia maareittejä ja toimi vuoroin hallitsijan asuntona, varuskuntana ja vankilana. Itämuurin pääportilla seisoo kaksi tykkiä. Vuonna 1969 sheikki Hamdan bin Rashid Al Maktoum pyysi kirjeitse Kuwaitista museoasiantuntijaa Dubaihin, ja museo avattiin linnoitukseen vuonna 1971. Tilaa on 4 000 neliömetriä. Vuonna 2007 kävijöitä oli 1 800 päivässä ja 611 840 koko vuonna; vuonna 2013 ylittyi miljoonan raja. Rakennus k…
+
+### 24.1
+KYSYMYS: Minkä muotoinen Aradin linnoitus on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aradin linnoitus (historia)
+Tietoruudun teksti: Aradin linnoitus on Mureș-joen vasemmalla rannalla sijaitseva Vauban-tyylinen bastionilinnoitus. Se rakennettiin vuosina 1763–1783, ja sen suunnitteli sotilasarkkitehti Ferdinand Philipp von Harsch. Kuusikärkisen tähden muotoisessa linnoituksessa on kuusi bastionia ja 296 tykkiaukkoa, ja sen muurien ympärysmitta on 3180 metriä. Kasarmeihin mahtui tavallisesti 2940 sotilasta, enimmillään 4030. Linnoituksessa teloitettiin 6. lokakuuta 1849 kolmetoista unkarilaista kenraalia. Nykyään alue on Romanian maavoimien käytössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BHR — maalehti / Rakennukset: Linnake muurattiin merestä nostetusta kivestä] Aradin linnake on 1400-luvun lopulta. Se on neliön muotoinen, ja jokaisessa kulmassa on lieriömäinen torni; ympärillä on matala hauta, johon johdettiin vettä varta vasten kaivetuista kaivoista. Rakennusaine on korallikiveä, jota irrotettiin matalikoilta, sekä kalkkia ja palmunrunkoja. Kunnostuksessa 1980-luvulla vanhat aineet analysoitiin ensin ja käytettiin sitten samoja: sementtiä ei laitettu lainkaan, koska se olisi sulkenut kosteuden muurin sisään. Linnake seisoi ennen omalla saarellaan, mutta maantäyttö on liittänyt sen Muharraqiin.
+
+### 24.2
+KYSYMYS: Milloin linnoitus rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aradin linnoitus (historia)
+Tietoruudun teksti: Aradin linnoitus on Mureș-joen vasemmalla rannalla sijaitseva Vauban-tyylinen bastionilinnoitus. Se rakennettiin vuosina 1763–1783, ja sen suunnitteli sotilasarkkitehti Ferdinand Philipp von Harsch. Kuusikärkisen tähden muotoisessa linnoituksessa on kuusi bastionia ja 296 tykkiaukkoa, ja sen muurien ympärysmitta on 3180 metriä. Kasarmeihin mahtui tavallisesti 2940 sotilasta, enimmillään 4030. Linnoituksessa teloitettiin 6. lokakuuta 1849 kolmetoista unkarilaista kenraalia. Nykyään alue on Romanian maavoimien käytössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Damaskoksen linnoitus] Keskiaikainen linna rakennettiin yleensä kukkulalle. Damaskoksen linnoitus seisoo tasamaalla, samassa tasossa kuin muu kaupunki. Se on vanhankaupungin luoteiskulmassa, ja kaupunginmuuri liittyy siihen kiinni lounais- ja koillisnurkasta. Muoto on epätasainen suorakaide, 230 × 150 metriä, ja portteja on kolme: pohjoisessa, idässä ja lännessä. Nykyinen rakennus on ajjubidien työtä. Saladinin veli al-Adil purki vanhemman linnoituksen ja rakensi tilalle suuremman vuosina 1203–1216. Syy oli uusi ase: vastapainoheittokone mursi paksunkin kivimuurin. Tornit tehtiin pyöreiden sijaan neliömäisiksi, ja niiden päälle tuli tasanteet omille heittokoneille, jotka korkealta kantoivat piirittäjän koneita ka…
+- [Dubai — kohdekartta / Kohdekartta: Al Fahidin linnoitus] 1787 Linnoituksen vanhin torni rakennettiin noin vuonna 1787, ja se on Dubain vanhin yhä pystyssä oleva rakennus. Linnoitus on neliön muotoinen, ja kolmessa sen kulmassa on torni. Muurit ovat korallikiveä ja laastia, ja ne nousivat useassa vaiheessa. Linnoitus vartioi kaupunkiin johtavia maareittejä ja toimi vuoroin hallitsijan asuntona, varuskuntana ja vankilana. Itämuurin pääportilla seisoo kaksi tykkiä. Vuonna 1969 sheikki Hamdan bin Rashid Al Maktoum pyysi kirjeitse Kuwaitista museoasiantuntijaa Dubaihin, ja museo avattiin linnoitukseen vuonna 1971. Tilaa on 4 000 neliömetriä. Vuonna 2007 kävijöitä oli 1 800 päivässä ja 611 840 koko vuonna; vuonna 2013 ylittyi miljoonan raja. Rakennus k…
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:bistritan-evankelinen-kirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bistrițan evankelinen kirkko (kulttuuri)
+Tietoruudun teksti: Bistrițan evankelinen kirkko on kaupungin keskusaukion päänähtävyys Bistrița-Năsăudin piirikunnassa. Transilvanian saksalaiset rakensivat sen alun perin 1300-luvulla goottilaiseen tyyliin, ja vuosina 1559–1563 Petrus Italus antoi kirkolle renessanssipiirteitä. Kesäkuun 11. päivänä 2008 kolme kuparia varastamaan mennyttä lasta sytytti leikkiessään tornin ja katon tuleen. Pääkirkkotilan vauriot jäivät vähäisiksi ja sisätilat säilyivät. Kirkko on sittemmin korjattu mittavasti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kaupunkilehti / Varsova: Kello käynnistettiin siitä minuutista, mihin se pysähtyi] Kuninkaanlinnan kellotornin viisarit pysähtyivät 17. syyskuuta 1939 kello 11.15, kun pommitus sytytti tornin. Loppu linnasta räjäytettiin 1944. Kun linnaa alettiin rakentaa takaisin, varsovalaisten kulta- ja kelloseppien ammattikunta teki uuden koneiston talkootyönä: 1 700 osaa. Neljä kellotaulua nostettiin paikoilleen kesäkuussa 1974, ja 19. heinäkuuta kello käynnistettiin — ajasta 11.15. Vuodesta 2008 tornista soitetaan joka päivä samalla minuutilla torvisoitto.
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+
+### 25.1
+KYSYMYS: Ketkä rakensivat Bistrițan evankelisen kirkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bistrițan evankelinen kirkko (kulttuuri)
+Tietoruudun teksti: Bistrițan evankelinen kirkko on kaupungin keskusaukion päänähtävyys Bistrița-Năsăudin piirikunnassa. Transilvanian saksalaiset rakensivat sen alun perin 1300-luvulla goottilaiseen tyyliin, ja vuosina 1559–1563 Petrus Italus antoi kirkolle renessanssipiirteitä. Kesäkuun 11. päivänä 2008 kolme kuparia varastamaan mennyttä lasta sytytti leikkiessään tornin ja katon tuleen. Pääkirkkotilan vauriot jäivät vähäisiksi ja sisätilat säilyivät. Kirkko on sittemmin korjattu mittavasti.
+
+### 25.2
+KYSYMYS: Mikä sytytti kirkon tornin tuleen vuonna 2008?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bistrițan evankelinen kirkko (kulttuuri)
+Tietoruudun teksti: Bistrițan evankelinen kirkko on kaupungin keskusaukion päänähtävyys Bistrița-Năsăudin piirikunnassa. Transilvanian saksalaiset rakensivat sen alun perin 1300-luvulla goottilaiseen tyyliin, ja vuosina 1559–1563 Petrus Italus antoi kirkolle renessanssipiirteitä. Kesäkuun 11. päivänä 2008 kolme kuparia varastamaan mennyttä lasta sytytti leikkiessään tornin ja katon tuleen. Pääkirkkotilan vauriot jäivät vähäisiksi ja sisätilat säilyivät. Kirkko on sittemmin korjattu mittavasti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kaupunkilehti / Varsova: Kello käynnistettiin siitä minuutista, mihin se pysähtyi] Kuninkaanlinnan kellotornin viisarit pysähtyivät 17. syyskuuta 1939 kello 11.15, kun pommitus sytytti tornin. Loppu linnasta räjäytettiin 1944. Kun linnaa alettiin rakentaa takaisin, varsovalaisten kulta- ja kelloseppien ammattikunta teki uuden koneiston talkootyönä: 1 700 osaa. Neljä kellotaulua nostettiin paikoilleen kesäkuussa 1974, ja 19. heinäkuuta kello käynnistettiin — ajasta 11.15. Vuodesta 2008 tornista soitetaan joka päivä samalla minuutilla torvisoitto.
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

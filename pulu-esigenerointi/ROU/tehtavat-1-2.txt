@@ -1,0 +1,216 @@
+================ KOHTA 6 (kohde:iloinen-hautausmaa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Kuvataide: Kylä, joka veistää yhä samalla puukolla] Tobatí tunnetaan koko Paraguayssa puutöistä, keramiikasta ja veistoksista. Kylän veistäjät tekevät pyhimyksiä, seimiä ja arkiesineitä paikallisesta puusta, ja työtapa juontuu suoraan reduktioiden veistämöistä: kuva hahmotellaan kirveellä ja viimeistellään puukolla, eikä malli ole koskaan aivan sama kuin edellinen. Tunnetuin nimi on Don Zenón Páez. Samaa perinnettä jatkavat naapurikylät omilla erikoisaloillaan, ja käsityö myydään edelleen kadunvarsikojuista ostajan katsellessa vieressä.
+- [Filippiinit — maalehti / Luonto: Kartio, jonka sade veistää] Mayon on maan aktiivisin tulivuori: purkauksia on kirjattu yli viisikymmentä viidensadan vuoden ajalta. Kartio tunnetaan tasaisuudestaan, ja muoto syntyy tasapainosta — purkaus kasaa tuhkaa rinteille, sade ja virtaava vesi kuluttavat sitä pois. Ylärinne on jyrkkä, alaosa lähes tasainen, ja huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin 1938 maan ensimmäiseksi kansallispuistoksi.
+- [Afganistan — maalehti / Kirjallisuus: Kaksi riviä ja kaksikymmentäkaksi tavua] Landay on pashtunkielinen kansanruno, jossa on täsmälleen kaksi riviä: ensimmäisessä yhdeksän tavua, toisessa kolmetoista. Rivit eivät riimity, ja pashtuksi runo päättyy ma- tai na-tavuun. Sana landay tarkoittaa lyhyttä myrkkykäärmettä, mikä viittaa sekä mittaan että siihen, kuinka pisteliäitä runot ovat. Ne ovat lähes aina nimettömiä ja ne lauletaan ääneen, usein naisten kesken. Aiheet toistuvat: rakkaus, ero, koti-ikävä, suru ja sota. Moni landay arvostelee suoraan tapoja ja sitä, mitä naiselta odotetaan — nimettömyys tekee siitä mahdollista.
+
+### 6.1
+KYSYMYS: Kuka ristit veistää nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Kuvataide: Kylä, joka veistää yhä samalla puukolla] Tobatí tunnetaan koko Paraguayssa puutöistä, keramiikasta ja veistoksista. Kylän veistäjät tekevät pyhimyksiä, seimiä ja arkiesineitä paikallisesta puusta, ja työtapa juontuu suoraan reduktioiden veistämöistä: kuva hahmotellaan kirveellä ja viimeistellään puukolla, eikä malli ole koskaan aivan sama kuin edellinen. Tunnetuin nimi on Don Zenón Páez. Samaa perinnettä jatkavat naapurikylät omilla erikoisaloillaan, ja käsityö myydään edelleen kadunvarsikojuista ostajan katsellessa vieressä.
+- [Filippiinit — maalehti / Luonto: Kartio, jonka sade veistää] Mayon on maan aktiivisin tulivuori: purkauksia on kirjattu yli viisikymmentä viidensadan vuoden ajalta. Kartio tunnetaan tasaisuudestaan, ja muoto syntyy tasapainosta — purkaus kasaa tuhkaa rinteille, sade ja virtaava vesi kuluttavat sitä pois. Ylärinne on jyrkkä, alaosa lähes tasainen, ja huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin 1938 maan ensimmäiseksi kansallispuistoksi.
+
+### 6.2
+KYSYMYS: Millaisia runot ovat sanoiltaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iloinen hautausmaa (kulttuuri)
+Tietoruudun teksti: Săpânțan kylässä haudat ovat kirkkaanvärisiä puuristejä, joihin on maalattu naiivi kuva vainajan elämästä ja kirjoitettu runo hänestä — usein huumorilla. Ensimmäisen ristin veisti paikallinen taiteilija Stan Ioan Pătraș vuonna 1935, ja 1960-luvulta lähtien tammiristejä on kertynyt yli 800. Hautausmaa poikkeaa tietoisesti eurooppalaisesta tavasta pitää kuolemaa yksinomaan juhlallisena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Kirjallisuus: Kaksi riviä ja kaksikymmentäkaksi tavua] Landay on pashtunkielinen kansanruno, jossa on täsmälleen kaksi riviä: ensimmäisessä yhdeksän tavua, toisessa kolmetoista. Rivit eivät riimity, ja pashtuksi runo päättyy ma- tai na-tavuun. Sana landay tarkoittaa lyhyttä myrkkykäärmettä, mikä viittaa sekä mittaan että siihen, kuinka pisteliäitä runot ovat. Ne ovat lähes aina nimettömiä ja ne lauletaan ääneen, usein naisten kesken. Aiheet toistuvat: rakkaus, ero, koti-ikävä, suru ja sota. Moni landay arvostelee suoraan tapoja ja sitä, mitä naiselta odotetaan — nimettömyys tekee siitä mahdollista.
+- [Uruguay — maalehti / Kirjallisuus: Runoilija, jolle annettiin koko maanosan nimi] 1892–1979 — Juana Fernández Morales julkaisi ensimmäisen kokoelmansa Las lenguas de diamante vuonna 1919 nimellä Juana de Ibarbourou. Runot olivat suoria ja aistivoimaisia, ja ne levisivät nopeasti koko espanjankieliseen maailmaan. Vuonna 1929 hänelle annettiin Montevideon lainsäädäntöpalatsissa juhlallisesti nimi Juana de América — arvonimi, jota ei ollut ennen eikä jälkeen annettu kenellekään. Hän kirjoitti myös lastenkirjoja ja oli yksi ensimmäisiä latinalaisamerikkalaisia naisia, jotka saattoivat elää kirjoittamisella.
+- [Irak — maalehti / Muinaisuus: Kahdentoista taulun runoelma] Gilgamesh-eepos on maailman vanhimpia säilyneitä kertomuksia. Vanhimmat sumerinkieliset runot ajoittuvat noin 2100-luvulle eaa., ja akkadinkielinen vakioversio koottiin kahdelletoista savitaululle noin vuosina 1300–1000 eaa.; kokoajaksi mainitaan Sin-leqi-unninni. Kuvan kappale on eepoksen viides taulu, ja se on Sulaymaniyahin museossa. Kirjoitus on nuolenpääkirjoitusta: kiilanmuotoisia painaumia, jotka syntyvät painamalla ruokokynän kulmaa kosteaan saveen.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:moldoveanu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+
+### 7.1
+KYSYMYS: Mitä eläimiä Făgărașin vuorilla elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Luonto: Sammunut vuori, jonka laella on oma metsänsä] 1570 — Mombacho on 1 344 metriä korkea kerrostulivuori Granadan kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä sitä aiemmista ole historiallista tietoa. Huippu on niin korkealla ja kostea, että siellä kasvaa sumumetsää ja kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta kuin tältä vuorelta. Rinteiltä on laskettu yli 700 kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma -polulle pääsee vain oppaan kanssa.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 7.2
+KYSYMYS: Miksi tähti nimettiin vuoren mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moldoveanu (luonto · vuori)
+Tietoruudun teksti: Moldoveanu on Romanian korkein huippu, 2 545 metriä, ja se kohoaa Etelä-Karpaattien Făgărașin vuoristossa. Suosituimmat reitit nousevat viereisen Viștea Maren (2 527 m) kautta, ja lähimmät kylät ovat Victoria pohjoisessa ja Câmpulung etelässä. Vuoden 2019 joulukuussa Moldoveanun mukaan nimettiin tähti: XO-1, 536 valovuoden päässä Pohjankruunun tähdistössä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Algeria — maalehti / Kirjallisuus: Tähti, joka oli myös serkku] 1956 — Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. Koululaisena hän osallistui 8. toukokuuta 1945 mielenosoituksiin ja joutui kolme päivää myöhemmin pidätetyksi kahdeksi kuukaudeksi; koulusta hänet erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä hän tapasi naimisissa olevan serkkunsa, jota hän kutsui nimellä Nedjma, tähti, ja jonka kanssa hän eli omien sanojensa mukaan ehkä kahdeksan kuukautta. Samalla nimellä ilmestyi 1956 romaani, josta tuli Algerian tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja kirjoitti algerianarabiaksi ja puolusti berberikielten asemaa.
+- [Teheran — kaupunkilehti / Teheran: Pylvään poikkileikkaus on kolmisakarainen tähti] Daneshjoo-puiston kulmassa korokkeen päällä seisoo Teatr-e Shahr, kaupunginteatteri. Rakennus on lieriö: halkaisijaa 34 metriä, korkeutta 15 metriä, tonttia noin 3 000 neliömetriä ja kerrosalaa noin 5 600. Suunnittelija oli Ali Sardar Afkhami, ja työ tehtiin vuosina 1967–1972. Aukot on nostettu ylös julkisivuun, jottei sisältä ole suoraa näköyhteyttä puistoon. Katsomo on oma lieriönsä ison lieriön sisällä, ja niiden väliin jäävä rengas on lämpiö. Ulkona kiertää pylväsrivi, jonka pylväiden poikkileikkaus on kolmisakarainen tähti; pylväät kannattavat kaartuvia palkkeja, jotka muodostavat ulkonevan katoksen. Pinta on turkoosia laattaa ja tiiltä.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:rautaportti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Rotko, jonka läpi kävellään päivässä] Samarian rotko halkaisee Valkoiset vuoret ja laskee kuudentoista kilometrin matkalla noin 1 200 metrin korkeudesta merenrantaan. Kävely kestää aamusta iltapäivään, ja se tehdään aina alamäkeen: ylös kiipeäminen olisi kohtuutonta. Kapeimmassa kohdassa seinien väliin jää vain kolmisen metriä, ja siellä kalliot nousevat molemmin puolin satoja metrejä. Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä kulkee tuhansia kävijöitä päivässä.
+
+### 8.1
+KYSYMYS: Minne Ada Kalehin asukkaat muuttivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+### 8.2
+KYSYMYS: Kulkevatko laivat rotkon läpi nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rautaportti (luonto)
+Tietoruudun teksti: Tonava kaivautuu tässä Karpaattien ja Balkanin vuorten väliin, ja virta oli vuosisatoja niin vaarallinen, että laivat tarvitsivat paikallisen luotsin — ottomaanien aikaan luotsia kutsuttiin nimellä kalauz, "opas". Vielä 1900-luvulla laivat vedettiin kanavan läpi veturilla. Kun patoja rakennettiin 1960–70-luvulla, vedenpinta nousi 35 metriä ja Ada Kalehin saari jäi pinnan alle: entinen turkkilainen erillisalue, moskeija ja tuhat kujaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Rotko, jonka läpi kävellään päivässä] Samarian rotko halkaisee Valkoiset vuoret ja laskee kuudentoista kilometrin matkalla noin 1 200 metrin korkeudesta merenrantaan. Kävely kestää aamusta iltapäivään, ja se tehdään aina alamäkeen: ylös kiipeäminen olisi kohtuutonta. Kapeimmassa kohdassa seinien väliin jää vain kolmisen metriä, ja siellä kalliot nousevat molemmin puolin satoja metrejä. Alue on ollut kansallispuisto vuodesta 1962, ja kesällä siellä kulkee tuhansia kävijöitä päivässä.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:constanta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+### 9.1
+KYSYMYS: Miksi Augustus karkotti Ovidiuksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+### 9.2
+KYSYMYS: Millainen satama Constanța on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Constanța (kaupungit)
+Tietoruudun teksti: Romanian vanhin yhtäjaksoisesti asuttu kaupunki, perustettu kreikkalaisena siirtokuntana Tomis noin 600 eaa. Vuonna 8 jaa. keisari Augustus karkotti tänne runoilija Ovidiuksen, joka vietti elämänsä kahdeksan viimeistä vuotta valittaen kohtaloaan runoissaan Tristia ja Epistulae ex Ponto — hänen mukaansa kaupunki oli "sodan runtelema kulttuurierämaa valtakunnan kaukaisimmalla laidalla". Isoisän aikaan 1873 Constanța oli yhä ottomaanien kaupunki; Romanialle se siirtyi vasta 1878.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:sarmizegetusa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kaupunkilehti / Varanasi: Aurinkokello ghatin päällä] Man Mandir -ghatin yläpuolella, aivan Dashashwamedhin naapurissa, seisoo kivinen tähtitorni. Sen rakennutti vuonna 1737 mogulihallitsija Muhammad Shah, ja tehtävä oli tarkka: löytää kalenterista virheet ja korjata käytössä olleet tähtitieteelliset taulukot. Rakennus on Jaipurin maharadžan Jai Singh II:n palatsin kupeessa, ja se on varustukseltaan vaatimattomampi kuin observatoriot Jaipurissa ja Delhissä. Yksi laite on silti ainutlaatuinen: päiväntasaajan tasoon asetettu aurinkokello, joka toimii yhä ja jonka lukemat yksi ihminen ehtii seurata ja kirjata.
+- [Perth — kaupunkilehti / Luonto: Vuosi, jossa on kuusi aikaa] Whadjukit jakavat vuoden kuuteen vuodenaikaan, joita ei mitata kalenterista vaan siitä, mitä maassa tapahtuu. Birak marras-joulukuussa on hedelmän aika ja kuumien itätuulten kausi, jolloin pensaikkoa poltettiin mosaiikkina metsästyksen ja itämisen helpottamiseksi. Bunuru tammi-helmikuussa on kuuma ja kuiva, ja perheet siirtyivät rannikon jokisuille kalaan. Djeran tuo ensimmäiset sateet, makuru vie ihmiset sisämaahan jyrkänteelle, djilba on kylmä ja märkä, ja kambarang syys-lokakuussa on kukinnan huippu.
+- [Miami — kaupunkilehti / Ruohojoki ja lahti: Kaksi vuodenaikaa, ei neljä] Miamissa on kuuma ja märkä kausi toukokuusta lokakuuhun sekä lämmin ja kuiva kausi marraskuusta huhtikuuhun. Märkä kausi määritellään kosteudesta eikä kalenterista: se alkaa, kun vuorokauden keskikastepiste nousee yli 21 asteen. Vuosina 1956–1997 kesä alkoi aikaisimmillaan 16. huhtikuuta ja myöhimmillään 3. kesäkuuta, mediaanipäivä oli 21. toukokuuta. Kesällä iltapäivän ukkoskuuro tai merituuli katkaisee helteen lähes päivittäin, ja suurin osa vuoden 1 572 millimetrin sateesta tulee juuri silloin.
+
+### 10.1
+KYSYMYS: Keitä daakialaiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+### 10.2
+KYSYMYS: Mitä pyhäkön kalenterista tiedetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sarmizegetusa Regia (historia)
+Tietoruudun teksti: Daakialaisten pääkaupunki ennen Rooman sotia: kuusi linnoitusta 1 200 metrin korkuisen vuoren päällä Orăștien vuoristossa, linnoitusala lähes 30 000 neliömetriä. Muurit on ladottu tekniikalla, jolla on oma nimensä, murus dacicus. Pyhällä alueella on suuri pyöreä pyhäkkö, jota kutsutaan usein kalenteriksi: puupylväitä D-kirjaimen muotoon, ympärillä puinen kehä ja kivireunus — asetelma muistuttaa jonkin verran englantilaista Stonehengeä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kaupunkilehti / Varanasi: Aurinkokello ghatin päällä] Man Mandir -ghatin yläpuolella, aivan Dashashwamedhin naapurissa, seisoo kivinen tähtitorni. Sen rakennutti vuonna 1737 mogulihallitsija Muhammad Shah, ja tehtävä oli tarkka: löytää kalenterista virheet ja korjata käytössä olleet tähtitieteelliset taulukot. Rakennus on Jaipurin maharadžan Jai Singh II:n palatsin kupeessa, ja se on varustukseltaan vaatimattomampi kuin observatoriot Jaipurissa ja Delhissä. Yksi laite on silti ainutlaatuinen: päiväntasaajan tasoon asetettu aurinkokello, joka toimii yhä ja jonka lukemat yksi ihminen ehtii seurata ja kirjata.
+- [Perth — kaupunkilehti / Luonto: Vuosi, jossa on kuusi aikaa] Whadjukit jakavat vuoden kuuteen vuodenaikaan, joita ei mitata kalenterista vaan siitä, mitä maassa tapahtuu. Birak marras-joulukuussa on hedelmän aika ja kuumien itätuulten kausi, jolloin pensaikkoa poltettiin mosaiikkina metsästyksen ja itämisen helpottamiseksi. Bunuru tammi-helmikuussa on kuuma ja kuiva, ja perheet siirtyivät rannikon jokisuille kalaan. Djeran tuo ensimmäiset sateet, makuru vie ihmiset sisämaahan jyrkänteelle, djilba on kylmä ja märkä, ja kambarang syys-lokakuussa on kukinnan huippu.
+- [Miami — kaupunkilehti / Ruohojoki ja lahti: Kaksi vuodenaikaa, ei neljä] Miamissa on kuuma ja märkä kausi toukokuusta lokakuuhun sekä lämmin ja kuiva kausi marraskuusta huhtikuuhun. Märkä kausi määritellään kosteudesta eikä kalenterista: se alkaa, kun vuorokauden keskikastepiste nousee yli 21 asteen. Vuosina 1956–1997 kesä alkoi aikaisimmillaan 16. huhtikuuta ja myöhimmillään 3. kesäkuuta, mediaanipäivä oli 21. toukokuuta. Kesällä iltapäivän ukkoskuuro tai merituuli katkaisee helteen lähes päivittäin, ja suurin osa vuoden 1 572 millimetrin sateesta tulee juuri silloin.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

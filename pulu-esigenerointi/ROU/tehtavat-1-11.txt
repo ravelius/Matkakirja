@@ -1,0 +1,228 @@
+================ KOHTA 51 (kohde:hahmotelma-rosia-montana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roșia Montană (tekniikka)
+Tietoruudun teksti: Roșia Montană on kunta Apuseni-vuoristossa Transilvanian länsiosassa Alban piirikunnassa. Alueen runsaita kultaesiintymiä on hyödynnetty jo roomalaisajoista tai sitäkin aiemmin. Roomalaiset perustivat Trajanuksen aikana paikalle kaivoskaupungin nimeltä Alburnus Maior, ja varhaisin maininta on vahatauluun merkitty päivämäärä 6. helmikuuta 131. Arkeologit ovat löytäneet asuinrakennuksia, hautausmaita, kaivoskäytäviä, työkaluja, 25 vahataulua sekä paljon kreikan- ja latinankielisiä kirjoituksia. Kaivostoiminta jatkui keskiajalla ja laajeni Itävallan keisarikunnan aikana, jolloin Kaarle VI rahoitti vuonna 1733 kaivosalueen tekoaltaiden rakentamisen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Aavikon kaivoskaupungin arki: Kaivosmiehet louhivat oman sairaalansa] Kun Darwiniin pudotettiin pommeja helmikuussa 1942, Mount Isassa pelättiin sisämaahan etenevän hyökkäyksen tavoittelevan juuri kaupungin arvokkaita malmivarantoja. Sairaalan ylilääkäri Edward Ryan suunnitteli kolmesta rinnakkaisesta tunnelista ja niitä yhdistävästä poikkikäytävästä koostuvan maanalaisen varasairaalan, ja vapaaehtoiset kaivosmiehet louhivat sen liuskekallioon parissa viikossa Mount Isa Minesin lainatuilla koneilla. Leikkaussali, synnytyshuone ja potilasosastot kalustettiin kevään 1942 aikana, mutta hyökkäystä ei koskaan tullut eikä sairaalaa koskaan tarvittu hoitoon. Tunnelit avattiin museona vuonna 2001.
+- [Tallinna — kohdekartta / Kohdekartta: Virun portti] 1446 Virun portin kaksi pyöreää, punakattoista tornia ovat yksi Tallinnan vanhan kaupungin tunnetuimmista näkymistä. Ne vartioivat yhä paikkaa, jossa Virun katu, Vana-Virun katu ja Vallin katu kohtaavat. Paikalla oli portti jo vuodesta 1345 lähtien, mutta nykyisin näkyvät tornit rakennettiin vuonna 1446, kun vanha porttirakennus purettiin ja tilalle nousi uusi kaksikerroksinen porttitalo hoikkine kulmatorneineen. Portin nimi juontuu alueella sijainneista savikuopista - viroksi Savivärav, saksaksi Lehmporte. Aikanaan koko porttijärjestelmä oli paljon nykyistä laajempi, ja siihen kuului myös suuri neliskulmainen torni kauempana kadun varrella. Vuonna 1888 suurin osa porttirakennuksista purett…
+
+### 51.1
+KYSYMYS: Mistä tiedämme, että roomalaiset louhivat kultaa täällä lähes kaksituhatta vuotta sitten?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roșia Montană (tekniikka)
+Tietoruudun teksti: Roșia Montană on kunta Apuseni-vuoristossa Transilvanian länsiosassa Alban piirikunnassa. Alueen runsaita kultaesiintymiä on hyödynnetty jo roomalaisajoista tai sitäkin aiemmin. Roomalaiset perustivat Trajanuksen aikana paikalle kaivoskaupungin nimeltä Alburnus Maior, ja varhaisin maininta on vahatauluun merkitty päivämäärä 6. helmikuuta 131. Arkeologit ovat löytäneet asuinrakennuksia, hautausmaita, kaivoskäytäviä, työkaluja, 25 vahataulua sekä paljon kreikan- ja latinankielisiä kirjoituksia. Kaivostoiminta jatkui keskiajalla ja laajeni Itävallan keisarikunnan aikana, jolloin Kaarle VI rahoitti vuonna 1733 kaivosalueen tekoaltaiden rakentamisen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Aavikon kaivoskaupungin arki: Kaivosmiehet louhivat oman sairaalansa] Kun Darwiniin pudotettiin pommeja helmikuussa 1942, Mount Isassa pelättiin sisämaahan etenevän hyökkäyksen tavoittelevan juuri kaupungin arvokkaita malmivarantoja. Sairaalan ylilääkäri Edward Ryan suunnitteli kolmesta rinnakkaisesta tunnelista ja niitä yhdistävästä poikkikäytävästä koostuvan maanalaisen varasairaalan, ja vapaaehtoiset kaivosmiehet louhivat sen liuskekallioon parissa viikossa Mount Isa Minesin lainatuilla koneilla. Leikkaussali, synnytyshuone ja potilasosastot kalustettiin kevään 1942 aikana, mutta hyökkäystä ei koskaan tullut eikä sairaalaa koskaan tarvittu hoitoon. Tunnelit avattiin museona vuonna 2001.
+
+### 51.2
+KYSYMYS: Miksi Roșia Montanăn vanhoja kaivoskäytäviä pidetään niin arvokkaina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roșia Montană (tekniikka)
+Tietoruudun teksti: Roșia Montană on kunta Apuseni-vuoristossa Transilvanian länsiosassa Alban piirikunnassa. Alueen runsaita kultaesiintymiä on hyödynnetty jo roomalaisajoista tai sitäkin aiemmin. Roomalaiset perustivat Trajanuksen aikana paikalle kaivoskaupungin nimeltä Alburnus Maior, ja varhaisin maininta on vahatauluun merkitty päivämäärä 6. helmikuuta 131. Arkeologit ovat löytäneet asuinrakennuksia, hautausmaita, kaivoskäytäviä, työkaluja, 25 vahataulua sekä paljon kreikan- ja latinankielisiä kirjoituksia. Kaivostoiminta jatkui keskiajalla ja laajeni Itävallan keisarikunnan aikana, jolloin Kaarle VI rahoitti vuonna 1733 kaivosalueen tekoaltaiden rakentamisen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Virun portti] 1446 Virun portin kaksi pyöreää, punakattoista tornia ovat yksi Tallinnan vanhan kaupungin tunnetuimmista näkymistä. Ne vartioivat yhä paikkaa, jossa Virun katu, Vana-Virun katu ja Vallin katu kohtaavat. Paikalla oli portti jo vuodesta 1345 lähtien, mutta nykyisin näkyvät tornit rakennettiin vuonna 1446, kun vanha porttirakennus purettiin ja tilalle nousi uusi kaksikerroksinen porttitalo hoikkine kulmatorneineen. Portin nimi juontuu alueella sijainneista savikuopista - viroksi Savivärav, saksaksi Lehmporte. Aikanaan koko porttijärjestelmä oli paljon nykyistä laajempi, ja siihen kuului myös suuri neliskulmainen torni kauempana kadun varrella. Vuonna 1888 suurin osa porttirakennuksista purett…
+
+### 51.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+### 51.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 51 YHTEINEN KONTEKSTI
+
+================ KOHTA 52 (kohde:hahmotelma-resita) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reșița (tekniikka)
+Tietoruudun teksti: Reșița on Caraș-Severinin piirikunnan pääkaupunki Banatin alueella Länsi-Romaniassa, Bârzava-joen varrella. Teollinen Reșița sai alkunsa 3. heinäkuuta 1771, kun Habsburgien keisarinna Maria Teresian aikana alueesta tuli tärkeä metallinvalmistuksen keskus. Tehtaiden ympärille tarvittiin väkeä: vuonna 1776 Reșițaan asettui 70 saksalaista perhettä, ja vuoden 1880 väestönlaskennassa saksalaiset olivat kaupungin enemmistö. Reșițassa valmistettiin vuonna 1872 Romanian ensimmäinen kotimainen veturi, joka on nykyään esillä kaupungin ulkoilmaveturimuseossa. Reșițaa on pitkään pidetty Romanian toiseksi suurimpana teollisuuskeskuksena, ja se on tärkeä teräksen valmistuksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa] Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+- [Romania — maalehti / Ruoka: Puuro, joka tuli laivalla] 1700-luku — Mämäligä on maissijauhosta keitetty puuro, joka korvasi Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja Valakiasta vuodelta 1723. Tonavan laakso sopi maissille erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja käännetään lautaselle kuin kakku, ja perinteisesti kyljestä leikataan siivuja langalla. Sitä syödään juuston ja smetanan kanssa tai lisäkkeenä lihalle ja kaalikääryleille.
+
+### 52.1
+KYSYMYS: Miksi Reșițaan muutti 1700-luvulla saksalaisia uudisasukkaita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reșița (tekniikka)
+Tietoruudun teksti: Reșița on Caraș-Severinin piirikunnan pääkaupunki Banatin alueella Länsi-Romaniassa, Bârzava-joen varrella. Teollinen Reșița sai alkunsa 3. heinäkuuta 1771, kun Habsburgien keisarinna Maria Teresian aikana alueesta tuli tärkeä metallinvalmistuksen keskus. Tehtaiden ympärille tarvittiin väkeä: vuonna 1776 Reșițaan asettui 70 saksalaista perhettä, ja vuoden 1880 väestönlaskennassa saksalaiset olivat kaupungin enemmistö. Reșițassa valmistettiin vuonna 1872 Romanian ensimmäinen kotimainen veturi, joka on nykyään esillä kaupungin ulkoilmaveturimuseossa. Reșițaa on pitkään pidetty Romanian toiseksi suurimpana teollisuuskeskuksena, ja se on tärkeä teräksen valmistuksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa] Appalakkien halki kulkeva Cumberlandin sola oli 1700-luvulla lähes ainoa helppokulkuinen reitti länteen, ja sen kautta vaelsi satojatuhansia uudisasukkaita kohti Kentuckya. Vuorten sisään kätkeytyi myös toinen aarre: hiili.
+
+### 52.2
+KYSYMYS: Millainen oli ensimmäinen Romaniassa valmistettu höyryveturi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reșița (tekniikka)
+Tietoruudun teksti: Reșița on Caraș-Severinin piirikunnan pääkaupunki Banatin alueella Länsi-Romaniassa, Bârzava-joen varrella. Teollinen Reșița sai alkunsa 3. heinäkuuta 1771, kun Habsburgien keisarinna Maria Teresian aikana alueesta tuli tärkeä metallinvalmistuksen keskus. Tehtaiden ympärille tarvittiin väkeä: vuonna 1776 Reșițaan asettui 70 saksalaista perhettä, ja vuoden 1880 väestönlaskennassa saksalaiset olivat kaupungin enemmistö. Reșițassa valmistettiin vuonna 1872 Romanian ensimmäinen kotimainen veturi, joka on nykyään esillä kaupungin ulkoilmaveturimuseossa. Reșițaa on pitkään pidetty Romanian toiseksi suurimpana teollisuuskeskuksena, ja se on tärkeä teräksen valmistuksen keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+- [Romania — maalehti / Ruoka: Puuro, joka tuli laivalla] 1700-luku — Mämäligä on maissijauhosta keitetty puuro, joka korvasi Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja Valakiasta vuodelta 1723. Tonavan laakso sopi maissille erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja käännetään lautaselle kuin kakku, ja perinteisesti kyljestä leikataan siivuja langalla. Sitä syödään juuston ja smetanan kanssa tai lisäkkeenä lihalle ja kaalikääryleille.
+
+### 52.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+### 52.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 52 YHTEINEN KONTEKSTI
+
+================ KOHTA 53 (kohde:hahmotelma-slanic) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slănic Prahovan suolakaivos (tekniikka)
+Tietoruudun teksti: Slănic on kaupunki Prahovan piirikunnassa Muntenian alueella, ja sen nimi tarkoittaa slaavilaisella kielellä suolaa. Suolan louhinta alkoi noin vuonna 1685, kun Mihail Cantacuzino huomasi maan alla suolaesiintymän ja osti Slănicin tilan; ensimmäinen kaivos avattiin vuonna 1688. Myöhemmin louhintaa uudistettiin: Carol I -kaivos avattiin vuonna 1867 ja se oli käytössä vuoteen 1937 asti. Nykyään Vanha suolakaivos on yleisölle avoinna oleva museo, kylpylä ja elämyskeskus, ja suolaa louhitaan yhä Uudessa kaivoksessa. Kaupunki tunnetaan myös suolajärvistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+
+### 53.1
+KYSYMYS: Miksi suola oli aikoinaan niin arvokasta, että sen vuoksi ostettiin kokonainen tila?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slănic Prahovan suolakaivos (tekniikka)
+Tietoruudun teksti: Slănic on kaupunki Prahovan piirikunnassa Muntenian alueella, ja sen nimi tarkoittaa slaavilaisella kielellä suolaa. Suolan louhinta alkoi noin vuonna 1685, kun Mihail Cantacuzino huomasi maan alla suolaesiintymän ja osti Slănicin tilan; ensimmäinen kaivos avattiin vuonna 1688. Myöhemmin louhintaa uudistettiin: Carol I -kaivos avattiin vuonna 1867 ja se oli käytössä vuoteen 1937 asti. Nykyään Vanha suolakaivos on yleisölle avoinna oleva museo, kylpylä ja elämyskeskus, ja suolaa louhitaan yhä Uudessa kaivoksessa. Kaupunki tunnetaan myös suolajärvistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+
+### 53.2
+KYSYMYS: Miksi vanhasta suolakaivoksesta tehtiin myöhemmin kylpylä ja museo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slănic Prahovan suolakaivos (tekniikka)
+Tietoruudun teksti: Slănic on kaupunki Prahovan piirikunnassa Muntenian alueella, ja sen nimi tarkoittaa slaavilaisella kielellä suolaa. Suolan louhinta alkoi noin vuonna 1685, kun Mihail Cantacuzino huomasi maan alla suolaesiintymän ja osti Slănicin tilan; ensimmäinen kaivos avattiin vuonna 1688. Myöhemmin louhintaa uudistettiin: Carol I -kaivos avattiin vuonna 1867 ja se oli käytössä vuoteen 1937 asti. Nykyään Vanha suolakaivos on yleisölle avoinna oleva museo, kylpylä ja elämyskeskus, ja suolaa louhitaan yhä Uudessa kaivoksessa. Kaupunki tunnetaan myös suolajärvistään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+
+### 53.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+### 53.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 53 YHTEINEN KONTEKSTI
+
+================ KOHTA 54 (kohde:hahmotelma-herculane) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Băile Herculane (kulttuuri)
+Tietoruudun teksti: Băile Herculane on kylpyläkaupunki Banatissa, Caraș-Severinin piirikunnassa Cerna-joen laaksossa vuorten välissä. Roomalaiset perustivat paikalle Ad Aquas Herculis -kaupungin legendan innoittamina: sen mukaan väsynyt Herkules pysähtyi laaksoon kylpemään ja lepäämään. Roomalaiset aatelisherrat tekivät siitä vapaa-ajan keskuksen, ja alueelta on löydetty kuusi Herkules-patsasta. Vuoden 1718 jälkeen paikka kuului Itävallalle, jonka arkkitehdit ottivat roomalaisen amfiteatterin rauniot huomioon suunnitellessaan keskustan puistoa terasseineen. Keisari Franz Joseph kuului kylpylän vieraisiin, ja Itävallan keisarin kerrotaan vuonna 1852 pitäneen paikkaa mantereen kauneimpana kylpyläkaupunkina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Vuoristo, josta tuli ensimmäinen] 1935 — Retezatin kansallispuisto Hunedoaran alueella oli Romanian ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli 2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita puisto perustettiin alun perin suojelemaan. Retezatista tuli myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi mallin kaikille Romanian myöhemmille suojelualueille.
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio Barolo] 1923 Talon tilasi italialainen siirtolainen Luis Barolo, joka oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja sen suunnitteli italialainen arkkitehti Mario Palanti. Rakennus noudattaa Danten Jumalaisen näytelmän maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen osaan niin, että kellari ja katutaso ovat helvetti, kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on sata metriä, yksi metri runoelman jokaista laulua kohden, ja huipun majakka vastaa enkelien yhdeksää kuoroa. Kärkikoriste esittää Etelän ristiä. Valmistuessaan 1923 talo oli sekä kaupungin että koko Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle — Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Aveni…
+
+### 54.1
+KYSYMYS: Miksi roomalaiset nimesivät kylpyläkaupunkinsa Herkuleen mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Băile Herculane (kulttuuri)
+Tietoruudun teksti: Băile Herculane on kylpyläkaupunki Banatissa, Caraș-Severinin piirikunnassa Cerna-joen laaksossa vuorten välissä. Roomalaiset perustivat paikalle Ad Aquas Herculis -kaupungin legendan innoittamina: sen mukaan väsynyt Herkules pysähtyi laaksoon kylpemään ja lepäämään. Roomalaiset aatelisherrat tekivät siitä vapaa-ajan keskuksen, ja alueelta on löydetty kuusi Herkules-patsasta. Vuoden 1718 jälkeen paikka kuului Itävallalle, jonka arkkitehdit ottivat roomalaisen amfiteatterin rauniot huomioon suunnitellessaan keskustan puistoa terasseineen. Keisari Franz Joseph kuului kylpylän vieraisiin, ja Itävallan keisarin kerrotaan vuonna 1852 pitäneen paikkaa mantereen kauneimpana kylpyläkaupunkina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio Barolo] 1923 Talon tilasi italialainen siirtolainen Luis Barolo, joka oli tullut maahan 1890 ja rikastunut neuletehtaalla, ja sen suunnitteli italialainen arkkitehti Mario Palanti. Rakennus noudattaa Danten Jumalaisen näytelmän maailmankuvaa: kerroksia on 22 ja ne jakautuvat kolmeen osaan niin, että kellari ja katutaso ovat helvetti, kerrokset 1–14 kiirastuli ja 15–22 taivas. Korkeutta on sata metriä, yksi metri runoelman jokaista laulua kohden, ja huipun majakka vastaa enkelien yhdeksää kuoroa. Kärkikoriste esittää Etelän ristiä. Valmistuessaan 1923 talo oli sekä kaupungin että koko Etelä-Amerikan korkein. Aseman se menetti Kavanagh-talolle — Wikipedia antaa siitä kaksi vuotta, 1935 ja 1936. Aveni…
+- [Tanger — kohdekartta / Kohdekartta: Tangerin suurmoskeija] 1818 Paikalla uskotaan olleen ensin roomalainen Herkuleen temppeli ja sen jälkeen 400-luvun kirkko. Perjantaimoskeija perustettiin marinidien aikaan, mutta portugalilaiset muuttivat sen katedraaliksi vallattuaan kaupungin 1471. Kun englantilaiset lähtivät 1684, Moulay Ismail käski uuden kuvernöörin muuttaa rakennuksen takaisin moskeijaksi. Tulos oli karu, ja matkustavat oppineet moittivat sen puutteita. Sulttaani Moulay Slimane järkyttyi rakennuksen kunnosta nähdessään sen 1815 ja määräsi sen rakennettavaksi kokonaan uudelleen; työhön haettiin käsityöläisiä muualta, ja se valmistui 1817–18. Nykyinen muoto on tuosta työstä: nelikulmainen minareetti vihrein laatoin ja pääportti, jonka geometr…
+
+### 54.2
+KYSYMYS: Mitä hyötyä kuumista lähteistä oli roomalaisille ja myöhemmille kylpyläkävijöille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Băile Herculane (kulttuuri)
+Tietoruudun teksti: Băile Herculane on kylpyläkaupunki Banatissa, Caraș-Severinin piirikunnassa Cerna-joen laaksossa vuorten välissä. Roomalaiset perustivat paikalle Ad Aquas Herculis -kaupungin legendan innoittamina: sen mukaan väsynyt Herkules pysähtyi laaksoon kylpemään ja lepäämään. Roomalaiset aatelisherrat tekivät siitä vapaa-ajan keskuksen, ja alueelta on löydetty kuusi Herkules-patsasta. Vuoden 1718 jälkeen paikka kuului Itävallalle, jonka arkkitehdit ottivat roomalaisen amfiteatterin rauniot huomioon suunnitellessaan keskustan puistoa terasseineen. Keisari Franz Joseph kuului kylpylän vieraisiin, ja Itävallan keisarin kerrotaan vuonna 1852 pitäneen paikkaa mantereen kauneimpana kylpyläkaupunkina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Vuoristo, josta tuli ensimmäinen] 1935 — Retezatin kansallispuisto Hunedoaran alueella oli Romanian ensimmäinen kansallispuisto: hallitus perusti sen vuonna 1935 tiedemiesten Emil Racovițăn ja Alexandru Borzan aloitteesta, ja aluksi suojeltiin sata neliökilometriä vuoristoa. Puistossa on kymmeniä jäätikköjärviä, joista suurin, Bucuran järvi, on koko Romanian suurin luonnonjärvi. Jyrkin huippu, Peleaga, kohoaa yli 2500 metriin, ja rinteillä laiduntaa gemssejä eli piikkivuohia, joita puisto perustettiin alun perin suojelemaan. Retezatista tuli myöhemmin myös Unescon biosfäärialue, ja sen lainsäädäntö loi mallin kaikille Romanian myöhemmille suojelualueille.
+
+### 54.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+### 54.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 54 YHTEINEN KONTEKSTI
+
+================ KOHTA 55 (kohde:hahmotelma-deva) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kaupunkilehti / Lalibela: Vesi, joka nousee harjanteen laelle] Lalibela seisoo vuorenharjanteella 2 500 metrin korkeudessa, eikä vesi kulje sinne itsestään. Silti kirkot liittyvät kaikki veteen: monen vieressä on kaivo, joka täyttyy artesisesta geologisesta järjestelmästä nostaen vettä harjanteen laelle. Kirkkojen väliin hakatut kaivannot ja tunnelit yhdistävät ryhmät toisiinsa, ja niiden louhinta tehtiin ylhäältä alaspäin vasaroin ja taltoin. Kaupungin vesiuoma kantaa nimeä Jordan; viisi kirkkoa on sen pohjoispuolella, viisi eteläpuolella ja yksi jää kummankin ryhmän ulkopuolelle.
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 55.1
+KYSYMYS: Miksi linna rakennettiin juuri tulivuorimäen laelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kaupunkilehti / Lalibela: Vesi, joka nousee harjanteen laelle] Lalibela seisoo vuorenharjanteella 2 500 metrin korkeudessa, eikä vesi kulje sinne itsestään. Silti kirkot liittyvät kaikki veteen: monen vieressä on kaivo, joka täyttyy artesisesta geologisesta järjestelmästä nostaen vettä harjanteen laelle. Kirkkojen väliin hakatut kaivannot ja tunnelit yhdistävät ryhmät toisiinsa, ja niiden louhinta tehtiin ylhäältä alaspäin vasaroin ja taltoin. Kaupungin vesiuoma kantaa nimeä Jordan; viisi kirkkoa on sen pohjoispuolella, viisi eteläpuolella ja yksi jää kummankin ryhmän ulkopuolelle.
+
+### 55.2
+KYSYMYS: Miksi ruutivarasto räjähti linnan omilla muureilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devan linna (historia)
+Tietoruudun teksti: Devan linna kohoaa tulivuoren muovaaman basalttikukkulan laella Deva-kaupungin yllä Läntisillä Karpaateilla, Poiana Ruscă -vuorten reunalla. Ensimmäinen kirjallinen maininta linnasta on vuodelta 1269, kun Unkarin kuningas Stefan lahjoitti sen kreivi Chylille. Linna oli 1400-luvulla Transilvanian voivodien ja myöhemmin ruhtinaiden hallussa, ja Transilvanian ruhtinas Gabriel Bethlen laajensi sitä 1600-luvun alussa, muun muassa rakentamalla juurelle renessanssityylisen Magna Curia -palatsin. Vuoden 1848–1849 Unkarin vallankumouksen aikana linnaa hallussaan pitäneet unkarilaiset vallankumoukselliset kokivat 13. elokuuta 1849 katastrofin, kun linnan ruutivarasto räjähti ja tuhosi suuren osan sen itäisestä siivestä yhdessä varusväen kanssa; viisi päivää myöhemmin kenraali Bem antautui täällä Habsburgien joukoille. Rauniot on nykyään osittain kunnostettu, ja niihin nousee köysirata.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 55.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI
+
+### 55.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 55 YHTEINEN KONTEKSTI

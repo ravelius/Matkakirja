@@ -1,0 +1,233 @@
+================ KOHTA 1 (kohde:bran) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+
+### 1.1
+KYSYMYS: Missä Vlad Seivästäjä sitten asui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+
+### 1.2
+KYSYMYS: Kuka linnassa on oikeasti asunut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Branin linna (sana)
+Tietoruudun teksti: Linnan rakensivat Kronstadtin eli Brașovin saksalaiset omalla kustannuksellaan ja omalla työvoimallaan, kun Unkarin kuningas Ludvig I antoi siihen luvan 19. marraskuuta 1377. Se vartioi Transilvanian ja Valakian välistä vuoristosolaa ja toimi myöhemmin tullipaikkana. Maailmalla sitä markkinoidaan Draculan linnana — mutta Vlad Seivästäjä ei asunut täällä, eikä Bram Stoker tiettävästi tiennyt linnasta mitään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:sighisoara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Dracula syntyi alaviitteestä] Bram Stoker kiersi teatterikiertueilla maailmaa muttei koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli sijoitettu Styriaan ja kreivin nimi oli Count Wampyr. Nimen Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja Moldavian historiasta ja kopioi kirjasta alaviitteen, jonka mukaan Dracula tarkoittaa paholaista. Vlad Seivästäjää ei mainita muistiinpanoissa lainkaan.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Nepal — maalehti / Ruoka: Herkku, jolla on oma täysikuu] Yomari on newarien talviherkku: tahmeasta riisijauhosta muotoiltu kärkevä kotelo, jonka sisällä on chakua eli ruokosokerisiirappia tai khuwaa, kokoon keitettyä maitoa. Kotelo höyrytetään ja syödään Thinla-kuun täydenkuun päivänä juhlassa nimeltä Yomari Punhi, joka päättää riisinkorjuun ja jossa palvotaan viljan jumalatarta Annapurnaa. Nimi tarkoittaa nepal bhasaksi mieluista leipää. Vanhemmissa asiakirjoissa ruoka kulkee muilla nimillä: Pashupatin kivikirjoituksessa vuodelta 1440 se on irhamadhe. Juhlailtana lapset kiertävät naapurustossa laulaen ja pyytävät yomareita.
+
+### 2.1
+KYSYMYS: Miksi Vlad Dracul oli maanpaossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kaupunkilehti / Bukarest: Dracula syntyi alaviitteestä] Bram Stoker kiersi teatterikiertueilla maailmaa muttei koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli sijoitettu Styriaan ja kreivin nimi oli Count Wampyr. Nimen Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja Moldavian historiasta ja kopioi kirjasta alaviitteen, jonka mukaan Dracula tarkoittaa paholaista. Vlad Seivästäjää ei mainita muistiinpanoissa lainkaan.
+
+### 2.2
+KYSYMYS: Millä muilla nimillä kaupunki tunnetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sighișoara (kaupungit)
+Tietoruudun teksti: Sighișoara on yksi harvoista yhä asutuista keskiaikaisista linnoituskaupungeista Itä-Euroopassa, ja sen vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999. Kaupungissa asui maanpaossa Vlad Dracul — Vlad Seivästäjän isä — joka löi täällä omia kolikoitaan, vaikka rahanlyönti kuului Unkarin kuninkaille. Hänen asiakirjassaan esiintyy myös kaupungin romanialainen nimi ensimmäistä kertaa, vuonna 1435.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Nepal — maalehti / Ruoka: Herkku, jolla on oma täysikuu] Yomari on newarien talviherkku: tahmeasta riisijauhosta muotoiltu kärkevä kotelo, jonka sisällä on chakua eli ruokosokerisiirappia tai khuwaa, kokoon keitettyä maitoa. Kotelo höyrytetään ja syödään Thinla-kuun täydenkuun päivänä juhlassa nimeltä Yomari Punhi, joka päättää riisinkorjuun ja jossa palvotaan viljan jumalatarta Annapurnaa. Nimi tarkoittaa nepal bhasaksi mieluista leipää. Vanhemmissa asiakirjoissa ruoka kulkee muilla nimillä: Pashupatin kivikirjoituksessa vuodelta 1440 se on irhamadhe. Juhlailtana lapset kiertävät naapurustossa laulaen ja pyytävät yomareita.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:peles) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Kaupungintalo] 1941 1930-luvulla julistettiin kilpailu talosta, johon saataisiin Montevideon silloiset toimeenpano- ja lainsäädäntöelimet, johtokunta ja edustajakokous — perustuslakiuudistukset muuttivat noita elimiä myöhemmin. Tontiksi annettiin vanhan englantilaisen hautausmaan maa, jonka valtio oli hankkinut vuosia aiemmin aikoen rakentaa siihen talon hallitukselle ja oikeuslaitokselle. Suunnittelijaksi valittiin uruguaylainen arkkitehti Mauricio Cravotto. Rakentaminen alkoi 1935, ja talo vihittiin 16. heinäkuuta 1941. Valmis rakennus ei vastaa Cravotton vuoden 1929 mallia: päätorni oli piirretty 114-metriseksi, jolloin siitä olisi tullut kaupungin korkein rakennus, mutta rahan puutteessa se nousi vain…
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+
+### 3.1
+KYSYMYS: Mistä linnan oma sähkö tuotettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bolivia — maalehti / Ruoka: Siemen, jonka linnut jättävät rauhaan] Kinua kesytettiin Titicacajärven ympäristössä, ja se kasvaa yli neljän kilometrin korkeudessa. Siementen pinnalla on kitkerää saponiinia, joka karkottaa linnut, joten peltoa ei juuri tarvitse vartioida; kauppaan tuleva kinua on huuhdeltu kerroksesta puhtaaksi. YK:n yleiskokous julisti vuoden 2013 kansainväliseksi kinuavuodeksi andilaisten viljelijöiden perinteen kunniaksi. Vuonna 2023 maailmassa tuotettiin 112 251 tonnia kinuaa, ja siitä Perun osuus oli 62 ja Bolivian 37 prosenttia. Hintanousu 2004–2011 toi ylängölle rahaa mutta myös yksipuolisti viljelyä.
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Oponen kuuluisin vientitavara] Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.
+- [Somalia — maalehti / Luonto: Kameli on pankki ja maitokannu] Somalian keskuspankin arvion mukaan noin 80 prosenttia maan väestöstä on paimentolaisia tai puolipaimentolaisia, jotka pitävät vuohia, lampaita, kameleita ja nautoja ja täydentävät tulojaan keräämällä hartseja. Kamelinmaitoa tuotettiin maailmassa vuonna 2017 noin 2,85 miljoonaa tonnia, ja siitä 64 prosenttia lypsettiin Somaliassa ja Keniassa. Paimen voi elää pitkiä jaksoja pelkällä kamelinmaidolla: siitä syntyy helposti jogurttia, mutta voita tai juustoa siitä ei juuri saa.
+
+### 3.2
+KYSYMYS: Ketkä työmaalla noita kieliä puhuivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peleșin linna (historia)
+Tietoruudun teksti: Peruskivi laskettiin 22. elokuuta 1873 — täsmälleen isoisän matkavuonna. Carol I oli ihastunut vuoristomaisemaan jo 1866 ja osti Kruunulle viisi neliökilometriä maata 1872; linna valmistui lopullisesti vasta 1914, ja vihkiäisiä vietettiin 1883. Siitä tuli maailman ensimmäinen linna, joka toimi kokonaan omalla, paikan päällä tuotetulla sähköllä. Työmaalla puhuttiin kuningattaren mukaan neljäätoista kieltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Kaupungintalo] 1941 1930-luvulla julistettiin kilpailu talosta, johon saataisiin Montevideon silloiset toimeenpano- ja lainsäädäntöelimet, johtokunta ja edustajakokous — perustuslakiuudistukset muuttivat noita elimiä myöhemmin. Tontiksi annettiin vanhan englantilaisen hautausmaan maa, jonka valtio oli hankkinut vuosia aiemmin aikoen rakentaa siihen talon hallitukselle ja oikeuslaitokselle. Suunnittelijaksi valittiin uruguaylainen arkkitehti Mauricio Cravotto. Rakentaminen alkoi 1935, ja talo vihittiin 16. heinäkuuta 1941. Valmis rakennus ei vastaa Cravotton vuoden 1929 mallia: päätorni oli piirretty 114-metriseksi, jolloin siitä olisi tullut kaupungin korkein rakennus, mutta rahan puutteessa se nousi vain…
+- [Kreikka — maalehti / Tarut ja sadut: Seireenit olivat lintuja, eivät merenneitoja] n. 480 eaa. — Odysseiassa noita Kirke varoittaa Odysseusta: seireenien laulua ei voi kuunnella ja jäädä henkiin. Miehistö tukkii korvansa mehiläisvahalla, ja Odysseus sidotaan mastoon, jotta hän kuulisi laulun mutta ei pääsisi hyppäämään mereen. Vanhimmissa kuvissa seireeni ei ole merenneito vaan lintu, jolla on naisen pää — sellaisia ne olivat kreikkalaisessa taiteessa jo 600-luvulla eaa. Merenneidon hahmon ne saivat vasta keskiajalla. Erään myöhemmän tarinan mukaan seireenit heittäytyivät mereen, kun laiva pääsi ohi.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:transfagarasan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+- [Asunción — kaupunkilehti / Asunción: Raitiovaunu, joka ehti juuri isoisän aikaan] Asunciónissa alkoi kulkea raitiovaunu vuonna 1871 — kaksi vuotta ennen isoisän matkaa. Ensimmäiset vaunut vedettiin hevosilla ja höyryllä, ja sähköraitiovaunut otettiin käyttöön 1913. Verkosto ajoi yli sata vuotta: viimeinen linja lopetettiin 1990-luvun puolivälissä ja liikenne suljettiin virallisesti marraskuussa 1997. Viimeiset vaunut olivat tulleet käytettyinä Brysselistä. Kulkumuoto, jonka isoisä olisi juuri ehtinyt nähdä syntyvän, katosi kaupungista kokonaan ennen 2000-lukua.
+
+### 4.1
+KYSYMYS: Mikä linna tien varrella on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Historian hetki: Machu Picchu 1911 — poika, joka näytti tien] 24.7.1911 — Polku on märkä ja jyrkkä, ja edellä kulkee yksitoistavuotias Pablito Richarte, joka on kulkenut sen sata kertaa. Hänen perässään hengästyy Yalen yliopiston historianlehtori Hiram Bingham, 35, joka on maksanut Urubamban laaksossa asuvalle Melchor Arteagalle yhden solin oppaan palkkiona ja saanut kuulla, että vuoren harjanteella on vanhoja raunioita. Harjanteella asuu kaksi perhettä, Richarte ja Álvarez; he viljelevät inkojen terasseja, ja lapset leikkivät köynnösten peittämien muurien välissä. Bingham näkee sinä päivänä graniittiseinät, jotka on hakattu niin tarkasti, ettei saumaan mahdu veistä, ja kirjoittaa päiväkirjaansa, että paikka on ihmeellinen. Hän uskoo löytäneensä inkoj…
+- [Salta — kaupunkilehti / Salta: Kaupunki, joka perustettiin tien varteen] 1582 — Perun varakuningas Francisco Álvarez de Toledo kirjoitti maaliskuussa 1576 kuninkaalle lähettäneensä väkeä perustamaan asutusta Calchaquín laaksoon ja Saltaan, jotta Tucumánin provinssi voisi yhdistyä ja käydä kauppaa Charcasin kanssa. Hernando de Lerma perusti kaupungin 16. huhtikuuta 1582 nimellä San Felipe y Santiago de Lerma en el valle de Salta. Se oli etappi Liman ja kaksi vuotta aiemmin uudelleen perustetun Buenos Airesin välillä. Kaava oli yhdeksän kertaa viisi korttelia: pohjoisessa rajana Tineon suo, etelässä Sauce-joki. Nimi tulee alueella asuneen Salta-kansan nimestä, eikä sen merkityksestä ole päästy yksimielisyyteen.
+
+### 4.2
+KYSYMYS: Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Transfăgărășan (tekniikka)
+Tietoruudun teksti: Yhdeksänkymmenen kilometrin vuoristotie rakennettiin 1970–1974 Nicolae Ceaușescun käskystä, vastauksena Neuvostoliiton hyökkäykseen Tšekkoslovakiaan 1968: hän halusi reitin, jota vihollinen ei voisi tukkia jokilaaksossa. Työhön kului noin kuusi miljoonaa kiloa dynamiittia 2 000 metrin korkeudessa, ja hinta oli kova. Tie kiipeää 2 042 metriin ja on lumen takia auki vain kesäkuun lopusta lokakuulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Portugali — maalehti / Historia: Kartalle vedettiin viiva] 1494 — Vuonna 1494 Portugali ja Espanja sopivat Tordesillasin kaupungissa, miten ne jakavat löytämänsä maailman. Kartalle vedettiin rajaviiva Atlantin poikki: viivan itäpuoli kuului Portugalille ja länsipuoli Espanjalle. Kumpikaan ei tiennyt, mitä viivan takana oikeasti oli. Kuusi vuotta myöhemmin portugalilainen laivasto ajautui Etelä-Amerikan rannikolle, ja Brasilia sattui jäämään viivan itäpuolelle. Siksi siellä puhutaan yhä portugalia eikä espanjaa.
+- [Asunción — kaupunkilehti / Asunción: Raitiovaunu, joka ehti juuri isoisän aikaan] Asunciónissa alkoi kulkea raitiovaunu vuonna 1871 — kaksi vuotta ennen isoisän matkaa. Ensimmäiset vaunut vedettiin hevosilla ja höyryllä, ja sähköraitiovaunut otettiin käyttöön 1913. Verkosto ajoi yli sata vuotta: viimeinen linja lopetettiin 1990-luvun puolivälissä ja liikenne suljettiin virallisesti marraskuussa 1997. Viimeiset vaunut olivat tulleet käytettyinä Brysselistä. Kulkumuoto, jonka isoisä olisi juuri ehtinyt nähdä syntyvän, katosi kaupungista kokonaan ennen 2000-lukua.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:tonavan-suisto) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+- [Qatar — maalehti / Luonto: Ainoa metsä kasvaa rantavedessä] Qatarin ainoa varsinainen metsä on mangrove. Al Thakiran matalassa lahdessa kasvaa harmaamangrovea, ja se on maan laajin yhtenäinen kasvusto. Puiden juuristo pidättää mutaa ja hidastaa aallokkoa, ja juurten suojassa kasvaa kalanpoikasia ja katkarapuja — sama saalis, jota kalastajat myöhemmin nostavat lahdelta. Rantavedessä ruokailee lintuja: haikaroita, kahlaajia ja talvisin flamingoja. Alue on suojeltu, ja siellä liikutaan kajakilla, koska vettä on paikoin vain vaaksan verran.
+- [Kööpenhamina — kaupunkilehti / Kööpenhamina] Tanskan pääkaupunki on rakennettu kahden saaren kupeeseen salmen rannalle. Se on matala kaupunki, jossa liikutaan pyörällä ja jossa vesi on aina lähellä.
+
+### 5.1
+KYSYMYS: Milloin pelikaanit saapuvat suistoon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Luonto: Karavastan laguuni ja pelikaanit] vuodesta 2007 — Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta elää täällä.
+
+### 5.2
+KYSYMYS: Miten suistossa liikutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonavan suisto (luonto)
+Tietoruudun teksti: Euroopan toiseksi suurin jokisuisto ja maanosan parhaiten säilynyt: yli 4 000 neliökilometriä ruovikkoa, kanavia ja hiekkasärkkiä. Kesäisin täällä on yli 320 lintulajia ja talvella yli miljoona lintua, ja yli puolet koko Euraasian pelikaanikannasta pesii juuri täällä. Asukkaita on kaksi neliökilometriä kohti — vähemmän kuin melkein missään muualla lauhkeassa Euroopassa. Isoisän aikaan 1873 suisto kuului yhä Ottomaanien valtakuntaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Qatar — maalehti / Luonto: Ainoa metsä kasvaa rantavedessä] Qatarin ainoa varsinainen metsä on mangrove. Al Thakiran matalassa lahdessa kasvaa harmaamangrovea, ja se on maan laajin yhtenäinen kasvusto. Puiden juuristo pidättää mutaa ja hidastaa aallokkoa, ja juurten suojassa kasvaa kalanpoikasia ja katkarapuja — sama saalis, jota kalastajat myöhemmin nostavat lahdelta. Rantavedessä ruokailee lintuja: haikaroita, kahlaajia ja talvisin flamingoja. Alue on suojeltu, ja siellä liikutaan kajakilla, koska vettä on paikoin vain vaaksan verran.
+- [Kööpenhamina — kaupunkilehti / Kööpenhamina] Tanskan pääkaupunki on rakennettu kahden saaren kupeeseen salmen rannalle. Se on matala kaupunki, jossa liikutaan pyörällä ja jossa vesi on aina lähellä.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
