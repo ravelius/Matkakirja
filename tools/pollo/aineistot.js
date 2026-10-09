@@ -35,6 +35,7 @@ export const OPAS_AINEISTOT = Object.freeze({
   // Poikkeavat esittelypolut (ämpäri muuttumaton): Praha ja Wien avauksen ja kierros-kentän kanssa 7.10. (-20261007c).
   // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
   esittely_polut: {
+    pariisi: 'opas/esittely-v1c/pariisi.json',   // 9.10. Concorden 5. kysymys: "… kesällä 2024?" (Sisältökirjuri, PT), muuten v1
     praha: 'opas/esittely-v1b/praha.json', wien: 'opas/esittely-v1b/wien.json',
     amsterdam: 'opas/esittely-aaneton-v3/amsterdam.json',
     ateena: 'opas/esittely-aaneton-v3/ateena.json',
