@@ -250,11 +250,11 @@ namespace Matkakirja.Natiivi
             var kansi = aiheet.FirstOrDefault(a => a.Id == "kaupunki");
             if (kansi != null)
             {
-                l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Etusivu, Aihe = kansi, Otsikko = l.Nimi, Lyhyt = "Etusivu" });
+                l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Etusivu, Aihe = kansi, Otsikko = l.Nimi, Lyhyt = Kieli.T("ui.lehti.etusivu") });
                 l.Sivut.Add(new LehtiSivu
                 {
                     Laji = LehtiSivuLaji.Aihe, Aihe = kansi, TehtavaAihe = kansi.Id,
-                    Otsikko = kansi.Otsikko ?? l.Nimi + " pintaa syvemmältä", Lyhyt = kansi.Nimi ?? l.Nimi,
+                    Otsikko = kansi.Otsikko ?? Kieli.T("ui.lehtisisalto.pintaa-syvemmalta", l.Nimi), Lyhyt = kansi.Nimi ?? l.Nimi,
                 });
             }
             foreach (var a in aiheet.Where(a => a != kansi))
@@ -290,7 +290,7 @@ namespace Matkakirja.Natiivi
                         l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.MaaEtusivu, Aihe = new LehtiAihe { Id = id }, Otsikko = l.Nimi, Lyhyt = l.Nimi });
                     else if (id == "maa-numeroina" && m?.Numeroina != null)
                     {
-                        string ots = MiniJson.Teksti(m.Numeroina, "otsikko") ?? l.Nimi + " numeroina";
+                        string ots = MiniJson.Teksti(m.Numeroina, "otsikko") ?? Kieli.T("ui.lehtisisalto.numeroina", l.Nimi);
                         l.Sivut.Add(new LehtiSivu { Laji = LehtiSivuLaji.Numeroina, Aihe = new LehtiAihe { Id = id }, Otsikko = ots, Lyhyt = ots });
                     }
                     else if (aiheet.FirstOrDefault(a => a.Id == id) is LehtiAihe a) l.Sivut.Add(AiheSivu(a));
@@ -336,10 +336,10 @@ namespace Matkakirja.Natiivi
                     Esikuuntelu = T(n, "esikuuntelu"),
                     LinkkiNimi = T(n, "linkkiNimi") ?? T(Ob(MiniJson.Kentta(n, "linkki")), "nimi"),
                 };
-                if (nosto.Musiikki != null) nosto.Musiikkilinkit.Add((nosto.Musiikki, "Apple Music", nosto.MusiikkiNimi));
+                if (nosto.Musiikki != null) nosto.Musiikkilinkit.Add((nosto.Musiikki, Kieli.T("ui.lehtisisalto.apple-music"), nosto.MusiikkiNimi));
                 else foreach (var m in (Rakenne.Lista(MiniJson.Kentta(n, "musiikki")) ?? new List<object>()).Select(Ob).Where(x => x != null))
                     if (T(m, "url") is string mu && mu.Length > 0)
-                        nosto.Musiikkilinkit.Add((mu, T(m, "nimi") ?? "Apple Music", T(m, "otsake") ?? ((T(m, "nimi") ?? "") + " Apple Musicissa").Trim()));
+                        nosto.Musiikkilinkit.Add((mu, T(m, "nimi") ?? Kieli.T("ui.lehtisisalto.apple-music"), T(m, "otsake") ?? Kieli.T("ui.lehtisisalto.apple-musicissa", T(m, "nimi") ?? "").Trim()));
                 foreach (var g in (Rakenne.Lista(MiniJson.Kentta(n, "galleria")) ?? new List<object>()).Select(Ob).Where(x => x != null))
                     if (Kuva(g) is LehtiKuva gk) nosto.Galleria.Add(gk);
                 a.Nostot.Add(nosto);

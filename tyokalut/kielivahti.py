@@ -27,7 +27,11 @@ KOHTEET = ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
           ['Assets/Matkakirja/UI/Linssit/' + n + '.cs' for n in
            ('Kuvanakyma', 'RadioNakyma', 'AikajanaNakyma', 'MaidenNakyma', 'MaapallonVuosiNakyma', 'IssKyytiNakyma', 'IssKytkinpoyta',
             'IssOhjaamo', 'IssOmatKuvat', 'AvaruuskavelyNakyma', 'AstronautinNakyma', 'IhmisenNostokortti', 'AjattelijaNakyma',
-            'Tiedeliitenakyma', 'Sijaintipallo', 'Puhujakuva')] + ['Assets/Matkakirja/UI/AjattelijaPaat.cs']   # erä 4 (linssien näkymät)   # sisääntuloreitti, pallon reitti ja erä 2 (juna 174)
+            'Tiedeliitenakyma', 'Sijaintipallo', 'Puhujakuva')] + ['Assets/Matkakirja/UI/AjattelijaPaat.cs'] + \
+          ['Assets/Matkakirja/UI/' + n + '.cs' for n in
+           ('ProOsio', 'Tietoja', 'MitaUutta', 'Apuraha', 'Lehti/LehtiFokus', 'Lehti/Mediarivi', 'Lehti/Uutiset', 'Lehti/LehtiSisalto',
+            'Lehti/MaaNumeroina', 'UiNakymat', 'Paljastus', 'Asetukset', 'Maakunnat', 'KortinLukija', 'Ylapalkki', 'Pulu/Pulu',
+            'Pulu/LivianAvaus', 'Pulu/Matkakirjamerkinnat', 'Pulu/LivianPaljastus', 'Pulu/Saapumisesitys', 'WikiIkkuna', 'Nahtavyysarkki')]   # erä 4–5   # sisääntuloreitti, pallon reitti ja erä 2 (juna 174)
 NIELU = re.compile(r'Rakenne\.Teksti\(|Rakenne\.Nappi\(|Ohjausnappi\.Nappi\(|\bKomento\(|\bAlanakyma\(|\bTakaisin\(|tooltip\s*=|\.text\s*=|'
                    r'\bKysy\(|KorttiValinta\(|\bOpasNappi\(|\bKytkin\(|\bTyhja\(|\bKytkinrivi\(|placeholder')
 LIT = re.compile(r'(?<![\$@\w])"((?:[^"\\\n]|\\.)*)"')

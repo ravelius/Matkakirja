@@ -61,22 +61,22 @@ namespace Matkakirja.Natiivi
             if (vanha != null)
             {
                 rivi.AddToClassList("mk-lehti__media--pari");
-                var puoli = Puoli(rivi, "Ennen");
+                var puoli = Puoli(rivi, Kieli.T("ui.mediarivi.ennen"));
                 var b = Nappi(puoli, vanha.Nimi, "mk-lehti__kuuntele--vanha", false, out var tila);
-                var vuosi = Rakenne.Teksti("· " + vanha.Vuosi, "mk-lehti__kuuntele-vuosi");
+                var vuosi = Rakenne.Teksti(Kieli.T("ui.mediarivi.vuosi", vanha.Vuosi), "mk-lehti__kuuntele-vuosi");
                 b.Insert(b.IndexOf(tila.Nimi) + 1, vuosi);
                 Kirjasimet.Aseta(vuosi, Kirjasin.Kone);
-                b.tooltip = $"{vanha.Nimi} — {vanha.Esittaja}, {vanha.Vuosi}";
+                b.tooltip = Kieli.T("ui.mediarivi.tallenne-tooltip", vanha.Nimi, vanha.Esittaja, vanha.Vuosi);
                 string url = vanha.Url;
                 b.clicked += () => Painettu(tila, null, url);
-                Kirjasimet.Aseta(Rakenne.Teksti($"{vanha.Esittaja} · {vanha.Lahde}", "mk-lehti__kuuntele-lahde", puoli), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.mediarivi.tallenne-lahde", vanha.Esittaja, vanha.Lahde), "mk-lehti__kuuntele-lahde", puoli), Kirjasin.Kone);
             }
             if (radio == null && nayte == null) return;
             // Napissa aseman nimi, ei "Kuuntele kieltä" (web: nimi tekee napista houkuttelevan).
-            string nimi = radio != null ? radio.Nimi : (nayteNimi ?? "Kaupungissa nauhoitettu näyte");
-            var isa = vanha != null ? Puoli(rivi, "Nyt") : rivi;
+            string nimi = radio != null ? radio.Nimi : (nayteNimi ?? Kieli.T("ui.mediarivi.kaupunkinayte"));
+            var isa = vanha != null ? Puoli(rivi, Kieli.T("ui.mediarivi.nyt")) : rivi;
             var n = Nappi(isa, nimi, null, radio != null, out var t);
-            n.tooltip = radio != null ? nimi + " — suora lähetys" : nimi;
+            n.tooltip = radio != null ? Kieli.T("ui.mediarivi.suora-lahetys", nimi) : nimi;
             string radioUrl = radio?.Url, vara = nayte;
             n.clicked += () => Painettu(t, radioUrl, radioUrl != null ? vara : nayte);
         }
@@ -114,7 +114,7 @@ namespace Matkakirja.Natiivi
             {
                 if (soiva != null || haeVirta == null) { Painettu(t, null, tallenne); return; }
                 if (virtaUrl != null) { Painettu(t, virtaUrl, null); return; }
-                t.Nimi.text = "Haetaan…";
+                t.Nimi.text = Kieli.T("ui.opas.haetaan");
                 b.SetEnabled(false);
                 haeVirta(url =>
                 {
@@ -123,8 +123,8 @@ namespace Matkakirja.Natiivi
                     // E19 (web ui.js esikuuntelu): nappi kertoo syyn 2,5 s eikä jää jumiin.
                     if (string.IsNullOrEmpty(url))
                     {
-                        t.Nimi.text = "Ei yhteyttä";
-                        b.schedule.Execute(() => { if (t.Nimi.text == "Ei yhteyttä") t.Nimi.text = kehotus; }).StartingIn(2500);
+                        t.Nimi.text = Kieli.T("ui.mediarivi.ei-yhteytta");
+                        b.schedule.Execute(() => { if (t.Nimi.text == Kieli.T("ui.mediarivi.ei-yhteytta")) t.Nimi.text = kehotus; }).StartingIn(2500);
                         return;
                     }
                     virtaUrl = url;
@@ -145,7 +145,7 @@ namespace Matkakirja.Natiivi
             {
                 tila.Live = Rakenne.El("mk-lehti__live", b, PickingMode.Ignore);
                 Rakenne.El("mk-lehti__live-piste", tila.Live, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti("LIVE", "mk-lehti__live-teksti", tila.Live), Kirjasin.KoneLihava);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.opas.live"), "mk-lehti__live-teksti", tila.Live), Kirjasin.KoneLihava);
             }
             tila.Aika = Rakenne.Teksti("", "mk-lehti__kuuntele-aika", b);
             tila.Aika.style.display = DisplayStyle.None;
@@ -168,7 +168,7 @@ namespace Matkakirja.Natiivi
             t.Merkki = Rakenne.Ikoni(Soita, "mk-piilo", b);
             t.Merkki.style.display = DisplayStyle.None;
             Rakenne.El("mk-kartuscha__radiovalo", b, PickingMode.Ignore);
-            t.Nimi = Rakenne.Teksti("radio", "mk-kartuscha__radionimi", b);
+            t.Nimi = Rakenne.Teksti(Kieli.T("ui.mediarivi.radio"), "mk-kartuscha__radionimi", b);
             Kirjasimet.Aseta(t.Nimi, Kirjasin.Kone);
             t.Aika = Rakenne.Teksti("", "mk-piilo", b);
             t.Aika.style.display = DisplayStyle.None;
@@ -221,7 +221,7 @@ namespace Matkakirja.Natiivi
             soiva = t;
             t.Nappi.AddToClassList("mk-lehti__kuuntele--soi");
             t.Merkki.Polku = Seis;
-            if (t.Kehotus != null) t.Nimi.text = "Pysäytä näyte";
+            if (t.Kehotus != null) t.Nimi.text = Kieli.T("ui.mediarivi.pysayta-nayte");
             Aanisoitin.Nayte(true);
             if (radio != null)
             {

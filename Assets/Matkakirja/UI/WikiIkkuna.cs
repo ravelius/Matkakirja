@@ -51,10 +51,10 @@ namespace Matkakirja.Natiivi
             var kortti = new Kortti("mk-tietoja mk-wiki");
             himmennys.Add(kortti);
             var ylarivi = Rakenne.El("mk-wiki__ylarivi", kortti.Sisus, PickingMode.Ignore);
-            otsikko = Rakenne.Teksti("Lue lisää", "mk-kortti__otsikko mk-wiki__otsikko", ylarivi);
+            otsikko = Rakenne.Teksti(Kieli.T("ui.ihmisenmatka.lue-lisaa"), "mk-kortti__otsikko mk-wiki__otsikko", ylarivi);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             // Kaiutin artikkelin ylälaidassa (web varustaLukija, seuraa korttia).
-            lukija = new KortinLukija(ylarivi, "Kuuntele artikkeli", "mk-wiki__lukija", saatimet: true, rajaus: () => kortti.worldBound);
+            lukija = new KortinLukija(ylarivi, Kieli.T("ui.wiki.kuuntele-artikkeli"), "mk-wiki__lukija", saatimet: true, rajaus: () => kortti.worldBound);
 
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
@@ -81,7 +81,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(lahdeLinkki, Kirjasin.Luku);
 
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var sulje = Rakenne.Nappi("Sulje", "mk-nappi--kulta", Sulje, napit);
+            var sulje = Rakenne.Nappi(Kieli.T("ui.pelit.sulje"), "mk-nappi--kulta", Sulje, napit);
             Rakenne.Tausta(sulje, Kuviot.Kulta);
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
             // Suurennos himmennyksen sisällä: nousee ikkunan kanssa muiden päälle (web: katselin dialogin sisällä).
@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             NaytaKuva();
             lukija.Pysayta();
             AsetaLahde(null, null, null);
-            Kappaleet(new[] { "Haetaan…" });
+            Kappaleet(new[] { Kieli.T("ui.opas.haetaan") });
             vieritys.scrollOffset = Vector2.zero;
             if (!Auki)
             {
@@ -117,7 +117,7 @@ namespace Matkakirja.Natiivi
                 if (omaTeksti != null)
                 {
                     Renderoi(omaTeksti);
-                    AsetaLahde("Unohdetun aarteen oma artikkeli, kirjoitettu Wikipedian pohjalta (CC BY-SA)", null, null);
+                    AsetaLahde(Kieli.T("ui.wiki.oma-artikkeli"), null, null);
                 }
                 UiKerros.Hae().StartCoroutine(Hae(wikiOtsikko, nimi, omaTeksti != null, oma));
             });
@@ -142,7 +142,7 @@ namespace Matkakirja.Natiivi
             if (y == null)
             {
                 // Oma selitys on parempi kuin pahoittelu (web): oma artikkeli jää, muuten lyhyt ilmoitus.
-                if (!omaArtikkeli) Kappaleet(new[] { "Tietoja ei saatu haettua. Matka jatkuu." });
+                if (!omaArtikkeli) Kappaleet(new[] { Kieli.T("ui.wiki.ei-haettu") });
                 yield break;
             }
             if (!omaArtikkeli) otsikko.text = y.Otsikko ?? nimi ?? wikiOtsikko;
@@ -150,11 +150,11 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(HaeGalleria(y, oma));
             if (omaArtikkeli)
             {
-                AsetaLahde("Unohdetun aarteen oma artikkeli, kirjoitettu Wikipedian pohjalta (CC BY-SA) — ", "lue alkuperäinen", y.Osoite);
+                AsetaLahde(Kieli.T("ui.wiki.oma-artikkeli-alkuperainen"), Kieli.T("ui.wiki.lue-alkuperainen"), y.Osoite);
                 yield break;
             }
             Kappaleet(new[] { y.Tiivistelma });
-            AsetaLahde("Lähde: Wikipedia (CC BY-SA) — ", "lue artikkeli", y.Osoite);
+            AsetaLahde(Kieli.T("ui.wiki.lahde-wikipedia"), Kieli.T("ui.wiki.lue-artikkeli"), y.Osoite);
             // Koko artikkeli tiivistelmän perään; tiivistelmä jää, jos hakua ei saada tehtyä.
             string url = $"https://{y.Kieli}.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&redirects=1&format=json&titles={Uri.EscapeDataString(y.Otsikko ?? wikiOtsikko)}";
             using (var r = UnityWebRequest.Get(url))
@@ -256,7 +256,7 @@ namespace Matkakirja.Natiivi
         void AvaaSuurennos()
         {
             if (kuvat.Count == 0) return;
-            var lista = kuvat.Select(k => new LehtiKuva { Lahde = k.Src, Selite = k.Kuvateksti ?? otsikko.text, LahdeRivi = "Wikimedia Commons" }).ToList();
+            var lista = kuvat.Select(k => new LehtiKuva { Lahde = k.Src, Selite = k.Kuvateksti ?? otsikko.text, LahdeRivi = Kieli.T("ui.wiki.wikimedia-commons") }).ToList();
             suurennos.Avaa(lista, kuvaKohdalla);
         }
 
@@ -281,7 +281,7 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(Rakenne.Teksti(k, "mk-wiki__p", teksti), Kirjasin.Luku);
                 luettavat.Add(k);
             }
-            lukija.Aseta(luettavat, "Kuuntele artikkeli");
+            lukija.Aseta(luettavat, Kieli.T("ui.wiki.kuuntele-artikkeli"));
         }
 
         /// <summary>
@@ -313,7 +313,7 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(Rakenne.Teksti(m.Groups[2].Value, paa ? "mk-wiki__h2" : "mk-wiki__h3", this.teksti), Kirjasin.LukuLihava);
             }
             Tyhjenna();
-            lukija.Aseta(luettavat, "Kuuntele artikkeli");
+            lukija.Aseta(luettavat, Kieli.T("ui.wiki.kuuntele-artikkeli"));
         }
     }
 

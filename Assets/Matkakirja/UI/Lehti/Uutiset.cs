@@ -79,7 +79,7 @@ namespace Matkakirja.Natiivi
                 UiKerros.Hae().StartCoroutine(HaeUutiset(iso, lahde, lista =>
                 {
                     if (lista.Count == 0 || lohko.panel == null) return;
-                    Kirjasimet.Aseta(Rakenne.Teksti($"Uutisissa tänään ({lahde.Nimi})", "mk-uutiset__nimio", lohko), Kirjasin.Kone);
+                    Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.uutiset.otsikko", lahde.Nimi), "mk-uutiset__nimio", lohko), Kirjasin.Kone);
                     foreach (var u in lista.Take(3))
                     {
                         var uutinen = u;
@@ -120,7 +120,7 @@ namespace Matkakirja.Natiivi
                 string paiva = DateTime.TryParse(u.Aika, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out var aika)
                     ? $"{aika.Day}.{aika.Month}.{aika.Year}" : "";
                 Kirjasimet.Aseta(Rakenne.Teksti(paiva, "mk-uutinen__paivays", ylarivi), Kirjasin.Kone);
-                var kaanna = Rakenne.Nappi("Käännä", "mk-uutinen__kaanna", null, ylarivi);
+                var kaanna = Rakenne.Nappi(Kieli.T("ui.uutiset.kaanna"), "mk-uutinen__kaanna", null, ylarivi);
                 Kirjasimet.Aseta(kaanna, Kirjasin.Kone);
                 Kirjasimet.Aseta(Rakenne.Teksti(lahde.Nimi, "mk-uutinen__masto", c), Kirjasin.KoneLihava);
                 var otsikko = Rakenne.Teksti(u.Otsikko, "mk-uutinen__otsikko", c);
@@ -181,7 +181,7 @@ namespace Matkakirja.Natiivi
                         suomeksi = false;
                         otsikko.text = u.Otsikko;
                         Kappaleet(alkuperaiset);
-                        kaannaTeksti.text = "Käännä";
+                        kaannaTeksti.text = Kieli.T("ui.uutiset.kaanna");
                         return;
                     }
                     if (suomennos != null)
@@ -189,21 +189,21 @@ namespace Matkakirja.Natiivi
                         suomeksi = true;
                         otsikko.text = suomennos.Value.Otsikko;
                         Kappaleet(suomennos.Value.Kappaleet);
-                        kaannaTeksti.text = "Palauta";
+                        kaannaTeksti.text = Kieli.T("ui.uutiset.palauta");
                         return;
                     }
-                    kaannaTeksti.text = "Käännetään…";
+                    kaannaTeksti.text = Kieli.T("ui.uutiset.kaannetaan");
                     kaanna.SetEnabled(false);
                     UiKerros.Hae().StartCoroutine(KaannaKaikki(k =>
                     {
                         if (runko.panel == null) return;
                         kaanna.SetEnabled(true);
-                        if (k == null) { kaannaTeksti.text = "Yritä uudelleen"; return; }
+                        if (k == null) { kaannaTeksti.text = Kieli.T("ui.uutiset.yrita-uudelleen"); return; }
                         suomennos = k;
                         suomeksi = true;
                         otsikko.text = k.Value.Item1;
                         Kappaleet(k.Value.Item2);
-                        kaannaTeksti.text = "Palauta";
+                        kaannaTeksti.text = Kieli.T("ui.uutiset.palauta");
                     }));
                 };
             }, "mk-minipopup--uutinen", UiKerros.Traileri);

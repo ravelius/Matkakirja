@@ -113,6 +113,8 @@ for p in tiedostot:
         if l.strip() and any(l.strip() == o.strip() for o in osat): continue
         if jonona(l, osat): continue
         if PAIKKA.sub('\x00', l) in normit: continue
+        ilman = re.sub(r'<[^>]+>', '', l).strip()   # rich text: merkinnät jäävät koodiin, sana avaimeen
+        if ilman != l.strip() and (not suomea(ilman) or ilman in osat or any(ilman == o.strip() for o in osat)): continue
         lain = re.findall(r"'([^']+)'", l)   # DateTime-muoto: lainatut sanat löytyvät avaimen arvosta
         if lain and all(any(x in v for v in arvot) for x in lain): continue   # nimetyt paikkamerkit ({paivat} → {0}, .Replace-kaava)
         virheet.append(f'{p}: {l!r} poistui koodista eikä löydy ui.fi.json:sta')

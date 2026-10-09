@@ -173,8 +173,8 @@ namespace Matkakirja.Natiivi
         // moduulit/js/packs/lippu-tekijat.json (web js/packs/lippu-tekijat.js, tools/lisaa-tekijat.mjs).
         /// <summary>"Palaute ja mukaan" -lohko kortin lopussa (pois apurahakierroksen ajan, omistaja 14.5x).</summary>
         const bool PalauteKortissa = false;
-        public static string Lippurivi = "Lippukuvat ovat Wikimedia Commonsista. Lisenssi edellyttää näiden tekijöiden mainitsemista: ";   // Päätoimittaja 7.10. kielikorjaus
-        const string Oikeudet = "© Visuaaliviestinnän Instituutti Tampere Oy";
+        public static string Lippurivi;   // Päätoimittaja 7.10. kielikorjaus
+        const string Oikeudet = "© Visuaaliviestinnän Instituutti Tampere Oy";   // kieli: ei (oikeudenhaltijan nimi ja ©-merkintä)
         static List<(string Tekija, string Lisenssi)> lippuTekijat;
         Label lippuEl;
         VisualElement palaute;
@@ -197,7 +197,7 @@ namespace Matkakirja.Natiivi
             if (lippuEl == null) return;
             bool on = lippuTekijat != null && lippuTekijat.Count > 0;
             lippuEl.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
-            if (on) lippuEl.text = Lippurivi + string.Join(", ", lippuTekijat.Select(l => $"{l.Tekija} ({l.Lisenssi})")) + ".";
+            if (on) lippuEl.text = (Lippurivi ?? Kieli.T("ui.apuraha.lippurivi")) + string.Join(", ", lippuTekijat.Select(l => $"{l.Tekija} ({l.Lisenssi})")) + ".";
         }
 
         System.Collections.IEnumerator LataaLippuTekijat()
@@ -361,7 +361,7 @@ namespace Matkakirja.Natiivi
             Loppuosa(vieritys);
             kortti.Sisus.Add(vieritys);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", Sulje, napit), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.apuraha.takaisin"), "mk-nappi--toiminto", Sulje, napit), Kirjasin.KoneLihava);
             return h;
         }
 
