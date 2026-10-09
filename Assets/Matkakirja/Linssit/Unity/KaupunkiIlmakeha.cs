@@ -20,10 +20,33 @@ namespace Matkakirja.Natiivi
         /// <summary>Nykyinen kaupunki (kameran georeferenssi): kehityskaupungissa oletus päällä.</summary>
         public static void Kaupunki(double lat, double lon)
         {
-            bool k = Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon) != null;
+            kaupunkiId = Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon);
+            bool k = kaupunkiId != null;
             if (k != kehitys || !kaupunkiKirjattu) { kaupunkiKirjattu = true; Debug.Log($"MATKAKIRJA kaupunki: ilmakehä kaupunki {lat:F4},{lon:F4} → kehityskaupunki {k}, pakotettu {(Pakotettu?.ToString() ?? "-")}"); }
             kehitys = k;
             LataaAerosoli(Matkakirja.Linssit.Kehityskaupungit.Lahella(lat, lon));
+        }
+
+        static string kaupunkiId;
+
+        // OMIEN MALLIEN AURINKO (LS2 10.10.; PT laattavarjo-KOE: klo 16 omien mallien varjopuoli kääntyi, Googlen laatat pysyivät
+        // kuvauslennon valossa). Laattojen valo on leivottu kuvauslennon auringosta, joten omat mallit (OmaMalli.shader, OmatVarjot)
+        // valaistaan sen atsimuutista, mitattu kaupungeittain laattojen varjoista ylhäältä (laattavarjo-KOE 3a); vain korkeus seuraa
+        // vuorokautta. Taivas, ilmaperspektiivi, pilvet ja vesi käyttävät todellista aurinkoa (_IlmAurinko).
+        // Asetukset "omaleivottu 0|1" ja "omaatsimuutti <°>" (< 0 = kaupungin mitattu).
+        public static bool OmaLeivottu = true;
+        public static float OmaAtsimuuttiPakotettu = -1f;
+        // Mittaus 10.10. 02.5x (ylhäältä 1°, pohjoinen ylös): Tukholma kaupungintalo ja Riddarholmen, varjot luoteeseen, pihojen eteläosa
+        // varjossa → aurinko ~145° (±15°). Pariisi: varjot heikot (kesäillan kuvaus), pihojen länsi- ja pohjoisosa varjossa, etelään
+        // antavat julkisivut tummia, Panthéonin kupoli valoisa luoteesta → ~300° (±20°).
+        static readonly (string Id, float Atsimuutti)[] LeivottuAtsimuutti = { ("pariisi", 300f), ("tukholma", 145f) };
+        /// <summary>Omien mallien auringon atsimuutti (°, 0 pohjoinen, 90 itä): leivottu kaupungissa, muuten todellinen.</summary>
+        public static float OmaAtsimuutti(float todellinen)
+        {
+            if (OmaAtsimuuttiPakotettu >= 0f) return OmaAtsimuuttiPakotettu;
+            if (!OmaLeivottu) return todellinen;
+            foreach (var l in LeivottuAtsimuutti) if (l.Id == kaupunkiId) return l.Atsimuutti;
+            return todellinen;
         }
 
         // MITATTU UTU (PT 9.10. ilta hyväksyi utu-A/B:n suosituksen; Karttaseppä ilmakeha-aerosoli-20261009): kaupungin ja vuodenajan
@@ -155,6 +178,7 @@ namespace Matkakirja.Natiivi
         static bool ladattu, puuttuu;
         static readonly int IdLapaisy = Shader.PropertyToID("_IlmLapaisy"), IdTaivas = Shader.PropertyToID("_IlmTaivas"), IdAp = Shader.PropertyToID("_IlmAp"),
             IdApLapaisy = Shader.PropertyToID("_IlmApLapaisy"), IdPilvet = Shader.PropertyToID("_IlmPilvet"), IdAurinko = Shader.PropertyToID("_IlmAurinko"),
+            IdOmaAurinko = Shader.PropertyToID("_OmaAurinko"),
             IdParam = Shader.PropertyToID("_IlmParam"), IdPilviParam = Shader.PropertyToID("_IlmPilviParam"), IdTuuli = Shader.PropertyToID("_IlmTuuli"),
             IdMaailma = Shader.PropertyToID("_IlmMaailma"), IdPilviKerros = Shader.PropertyToID("_IlmPilviKerros"), IdSaa = Shader.PropertyToID("_IlmSaa"), IdHamara = Shader.PropertyToID("_IlmHamara"), IdSalama = Shader.PropertyToID("_IlmSalama");
 
@@ -208,6 +232,8 @@ namespace Matkakirja.Natiivi
             float k = aurinkoKorkeusAst * Mathf.Deg2Rad, a = aurinkoAtsimuuttiAst * Mathf.Deg2Rad;
             var s = new Vector3(Mathf.Cos(k) * Mathf.Sin(a), Mathf.Sin(k), Mathf.Cos(k) * Mathf.Cos(a));
             Shader.SetGlobalVector(IdAurinko, new Vector4(s.x, s.y, s.z, 90f - aurinkoKorkeusAst));
+            float oa = OmaAtsimuutti(aurinkoAtsimuuttiAst) * Mathf.Deg2Rad;   // omat mallit: leivottu atsimuutti, sama korkeus
+            Shader.SetGlobalVector(IdOmaAurinko, new Vector4(Mathf.Cos(k) * Mathf.Sin(oa), s.y, Mathf.Cos(k) * Mathf.Cos(oa), 90f - aurinkoKorkeusAst));
             // Hämärän valotus (simu 9.10. 03.5x: loppuillan taivas täysin musta): silmä sopeutuu, joten valotus kasvaa auringon laskiessa
             // horisontin alle (−7°: ×HamaraValotus), muuten hämärätaivaan radianssi (~1/100 päivästä) häviää mustaan.
             float hamara = Mathf.Clamp01(-aurinkoKorkeusAst / 7f);
