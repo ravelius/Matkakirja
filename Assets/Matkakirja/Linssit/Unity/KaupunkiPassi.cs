@@ -117,11 +117,7 @@ namespace Matkakirja.Natiivi
         static readonly Dictionary<string, Vaihe> aktiiviset = new Dictionary<string, Vaihe>();
         /// <summary>Kaupungin peruskamera (KaupunkiYovalot.Paivita asettaa joka kehys).</summary>
         public static Camera Kamera;
-        /// <summary>Diagnoosi: passin tapahtuma (opas yovalotvaihe N); null = AfterRenderingPostProcessing.</summary>
-        public static RenderPassEvent? Tapahtuma;
         static bool kytketty;
-        /// <summary>Diagnoosi (opas passi &lt;nimi&gt; 0|1): passit, joita ei lisätä vaikka aktiivisia.</summary>
-        public static readonly HashSet<string> Estetyt = new HashSet<string>();
 
         /// <summary>Passi (nimi) päälle tällä materiaalilla seuraavista kehyksistä alkaen; null = pois.</summary>
         public static void Aseta(string nimi, Material m)
@@ -138,7 +134,7 @@ namespace Matkakirja.Natiivi
             var r = c.GetUniversalAdditionalCameraData()?.scriptableRenderer;
             if (r == null) return;
             r.EnqueuePass(syvyysVaihe);
-            foreach (var v in aktiiviset.Values) { if (Estetyt.Contains(v.nimi)) continue; if (Tapahtuma.HasValue) v.renderPassEvent = Tapahtuma.Value; r.EnqueuePass(v); }
+            foreach (var v in aktiiviset.Values) r.EnqueuePass(v);
         }
 
         /// <summary>Diagnoosi (opas ssao 0|1): nykyisen renderöijän SSAO-ominaisuus päälle/pois; palauttaa tilan.</summary>
