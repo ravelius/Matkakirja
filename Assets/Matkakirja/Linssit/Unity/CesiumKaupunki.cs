@@ -941,6 +941,27 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Suurimmat tekstuurit lokiin (juna 173, iPad-jetsam: kaupungin avauksessa +760 Mt tekstuureja ennen laattoja): tyypeittäin
         /// summat (Texture2D, RenderTexture, Texture3D, Cubemap, muut) ja n suurinta (nimi, koko, mitat, muoto, MSAA). Komento "opas tekstuurit [n]".</summary>
+        /// <summary>Koko mitoista ja muodosta (laitteella GetRuntimeMemorySizeLong antaa GPU-tekstuureille liian vähän): lohkokoko,
+        /// mipit ×4/3, RenderTexturen MSAA ja syvyys.</summary>
+        static long Arvio(Texture t)
+        {
+            try
+            {
+                var f = t.graphicsFormat;
+                long w = Math.Max(1, t.width), h = Math.Max(1, t.height), d = t is Texture3D t3 ? t3.depth : t is Texture2DArray ta ? ta.depth : t is Cubemap ? 6 : 1;
+                long b = 0;
+                if (f != UnityEngine.Experimental.Rendering.GraphicsFormat.None)
+                {
+                    uint bw = UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockWidth(f), bh = UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockHeight(f);
+                    b = (w + bw - 1) / bw * ((h + bh - 1) / bh) * UnityEngine.Experimental.Rendering.GraphicsFormatUtility.GetBlockSize(f) * d;
+                }
+                if (t.mipmapCount > 1) b = b * 4 / 3;
+                if (t is RenderTexture rt) { b *= Math.Max(1, rt.antiAliasing); if (rt.depthStencilFormat != UnityEngine.Experimental.Rendering.GraphicsFormat.None) b += w * h * 5 * Math.Max(1, rt.antiAliasing); }
+                return b;
+            }
+            catch (Exception) { return 0; }
+        }
+
         public static string Tekstuurit(int n = 20)
         {
             var kaikki = Resources.FindObjectsOfTypeAll<Texture>();
@@ -949,8 +970,8 @@ namespace Matkakirja.Natiivi
             foreach (var t in kaikki)
             {
                 if (t == null) continue;
-                long b = UnityEngine.Profiling.Profiler.GetRuntimeMemorySizeLong(t);
-                string tyyppi = t.GetType().Name;
+                long b = Math.Max(UnityEngine.Profiling.Profiler.GetRuntimeMemorySizeLong(t), Arvio(t));
+                string tyyppi = t.GetType().Name + ((t.hideFlags & HideFlags.HideAndDontSave) == HideFlags.HideAndDontSave ? "(piilo)" : "");
                 tyypit[tyyppi] = (tyypit.TryGetValue(tyyppi, out var v) ? v : 0) + b;
                 string muoto = t is RenderTexture rt ? $"{rt.graphicsFormat}/{rt.depthStencilFormat} msaa{rt.antiAliasing}" : t is Texture2D t2 ? t2.format.ToString() : t.graphicsFormat.ToString();
                 rivit.Add((b, $"{(t.name.Length > 0 ? t.name : "(nimetön)")} {t.width}×{t.height} {muoto} {b >> 20} Mt"));
