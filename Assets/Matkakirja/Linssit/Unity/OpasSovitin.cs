@@ -1086,6 +1086,7 @@ namespace Matkakirja.Natiivi
             var avausK = new OpasKohde { Id = "avaus", Teksti = teksti };
             tekstina = avausK; tekstiKulunut = 0;
             YksAloitaTeksti("avaus", teksti, kesto, () => tekstina == avausK);
+            silmukka?.AsetaAvausKesto(kesto + (OpastusKuultu ? 0 : OpastusArvioS) + AvausLepoS);
             double t = 0;
             while (t < kesto && silmukka != null && Kaupunkitila && tekstina == avausK) { if (!tauolla) t += Time.unscaledDeltaTime; tekstiKulunut = t; yield return null; }
             if (tekstina == avausK) tekstina = null;
@@ -1094,6 +1095,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Hiljainen hetki avauksen (ja opastuksen) jälkeen ennen kierroksen ensimmäistä lentoa.</summary>
         public const float AvausLepoS = 2.5f;
+        /// <summary>Opastuksen (yleiset-v1) arvioitu kesto avauksen kierron mitoitukseen (s; mitattu 12,5 s).</summary>
+        public const float OpastusArvioS = 12.5f;
 
         IEnumerator EsitysAvaus(string kaupunkiId)
         {
@@ -1150,6 +1153,8 @@ namespace Matkakirja.Natiivi
             if (p.result != UnityWebRequest.Result.Success || silmukka == null) { o.Kirjaa($"opas: esitys {mika} ei latautunut ({p.responseCode})"); yield break; }
             var klippi = DownloadHandlerAudioClip.GetContent(p);
             silta.clip = Nimea(klippi, SiltaId); silta.volume = SiltaTaso; silta.Play();
+            // Avauskehyksen kierto koko avauksen ajan (kuva-arkki 9.10., T2): avaus + opastus (ensimmäisellä kyydillä) + lepo.
+            if (mika == "avaus" && silmukka != null) silmukka.AsetaAvausKesto(klippi.length + (OpastusKuultu ? 0 : OpastusArvioS) + AvausLepoS);
             // Avauksen sana-ajat avauksen äänen rinnalla (.mp3 → .ajat.json, Pelikoodari #4152); puuttuessa varapolku.
             if (teksti != null) YksAloita("avaus", teksti, silta, klippi, url.EndsWith(".mp3") ? url.Substring(0, url.Length - 4) + ".ajat.json" : null, klippi.length);
             o.Kirjaa($"opas: esitys {mika} soi ({klippi.length:F1} s, lataus {Time.realtimeSinceStartup - t0:F1} s)");
