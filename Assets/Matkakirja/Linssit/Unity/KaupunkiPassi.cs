@@ -45,6 +45,7 @@ namespace Matkakirja.Natiivi
                     b.UseTexture(kopio, AccessFlags.Read);
                     if (res.cameraDepthTexture.IsValid()) b.UseTexture(res.cameraDepthTexture, AccessFlags.Read);
                     b.UseAllGlobalTextures(true);
+                    b.AllowPassCulling(false);   // 9.10. simu: passi kirjattiin peruskameralle (syvyys ok), mutta tulos ei näkynyt → ei karsintaa
                     b.SetRenderAttachment(res.activeColorTexture, 0, AccessFlags.Write);
                     b.SetRenderFunc((Data x, RasterGraphContext c) =>
                     {
